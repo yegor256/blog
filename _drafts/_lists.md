@@ -5,9 +5,9 @@ date: 2017-10-05
 place: Odessa, Ukraine
 tags: java
 description: |
-  Streams from Java 8 help manipulate with collections,
+  Streams from Java 8 help us manipulate collections,
   but they ruin the idea of objects; decorators, on the
-  other hand, do the same in an object-oriented way.
+  other hand, do the same but in an object-oriented way.
 keywords:
   - streams API
   - decorators vs streams
@@ -19,22 +19,22 @@ jb_picture:
   caption:
 ---
 
-[Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
-was introduced in Java&nbsp;8 together with
+The [Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
+was introduced in Java&nbsp;8, together with
 [lambda expressions](http://openjdk.java.net/projects/lambda/), just a few
 years ago. I, as a disciplined Java adept, tried to use this new feature
-in a few projects of mine, for example
+in a few of my projects, for example
 [here](https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/dynamo/DyUser.java#L85-L88) and
 [here](https://github.com/yegor256/wring/blob/0.17.2/src/main/java/io/wring/dynamo/DyEvents.java#L95-L98).
-I didn't really like it and got back to good old decorators. Moreover,
-created [Cactoos](http://www.cactoos.org), a library of them, to replace
-[Guava](https://github.com/google/guava), which is not so perfect in so many places.
+I didn't really like it and went back to good old decorators. Moreover, I
+created [Cactoos](http://www.cactoos.org), a library of decorators, to replace
+[Guava](https://github.com/google/guava), which is not so good in so many places.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Here is a primitive example. Let's say, we have a collection of measurements
+Here is a primitive example. Let's say we have a collection of measurements
 coming in from some data source, they are all numbers between zero and one:
 
 {% highlight java %}
@@ -43,7 +43,7 @@ Iterable<Double> probes;
 
 Now we need to show only the first 10 of them, ignoring zeros and ones,
 and rescaling them to `(0..100)`. Sounds like an easy task, right? There
-are three ways to do it: procedural, object-oriented, and Java&nbsp;8 way. Let's
+are three ways to do it: procedural, object-oriented, and the Java&nbsp;8 way. Let's
 start with the procedural one:
 
 {% highlight java %}
@@ -61,16 +61,16 @@ for (Double probe : probes) {
 }
 {% endhighlight %}
 
-Why this is a procedural way? Because it's imperative. Why it's imperative?
+Why is this a procedural way? Because it's imperative. Why is it imperative?
 Because it's procedural. Nah, I'm kidding. It's imperative because we're
-giving instuctions to the computer what data to put where and how to
-iterate through them. We're not declaring the result, but imperatively
-build it. It works, but it's not really scalable. We can't take part of this
-algorithm and apply to another use case. We can't really modify it easily,
+giving instructions to the computer about what data to put where and how to
+iterate through it. We're not declaring the result, but imperatively
+building it. It works, but it's not really scalable. We can't take part of this
+algorithm and apply it to another use case. We can't really modify it easily,
 for example to take numbers from two sources instead of one, etc.
-It is procedural, enough said. Don't do it this way.
+It's procedural. Enough said. Don't do it this way.
 
-Now, Java&nbsp;8 gives us
+Now, Java&nbsp;8 gives us the
 [Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html),
 which is supposed to offer a
 functional way to do the same. Let's try to use it.
@@ -80,7 +80,7 @@ First, we need to create an instance of
 which
 [`Iterable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)
 [doesn't](https://stackoverflow.com/questions/23114015/)
-let us obtain directly. Then, we will use stream API and do the job:
+let us obtain directly. Then we use the stream API to do the job:
 
 {% highlight java %}
 StreamSupport.stream(probes.spliterator(), false)
@@ -115,7 +115,7 @@ StreamSupport.stream(probes.spliterator(), false)
   );
 {% endhighlight %}
 
-What's wrong with this, you may ask? First, see how easily we got into
+"What's wrong with that?" you may ask. First, see how easily we got into
 trouble when we didn't find the right method in the `Stream` interface. We
 immediately fell off the "streaming" paradigm and got back to the
 good old procedural global variable (the counter). Second, we don't
@@ -161,9 +161,9 @@ new And(
 Let's see what's going on here. First,
 [`Filtered`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html)
 decorates our iterable `probes` to take certain items out of it.
-Pay attention that `Filtered` implements `Iterable`. Then,
+Notice that `Filtered` implements `Iterable`. Then
 [`Limited`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html),
-also being an `Iterable`, takes only first ten items out. Then,
+also being an `Iterable`, takes only the first ten items out. Then
 [`Mapped`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html)
 converts each probe into an instance of
 [`Scalar<Boolean>`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html),
@@ -202,13 +202,13 @@ Instead of `Scalar<Boolean>` we now map our probes to
 to let them accept the index.
 
 The beauty of this approach is that all classes and interfaces are small
-and that's why very composable. To make an iterable of probes limited
+and that's why they're very composable. To make an iterable of probes limited
 we decorate it with `Limited`; to make it filtered we decorate it with
 `Filtered`; to do something else we create a new decorator and use it. We're
-not stick to one single interface like `Stream`.
+not stuck to one single interface like `Stream`.
 
-The bottom line is that decorators is an object-oriented instrument to
-modify the behavior of collections, while streams is something else, which
+The bottom line is that decorators are an object-oriented instrument to
+modify the behavior of collections, while streams is something else which
 I can't even find the name for.
 
 P.S. By the way, this is how the same algorithm can be implemented
