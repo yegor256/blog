@@ -17,9 +17,16 @@ nospell: true
 
 {% badge /images/angry-testimonials.png 220 %}
 
+<strong class='red'>WARNING</strong>:
+The text you are about to read is of a mature matter.
+Please be advised that the content may not be suitable for those
+under the age of 18.
+
 This is what _some_ of my readers think about me. The list is
 sorted by my personal preference, the most interesting comments
 are at the top.
+
+"Self-opinionated intellectually-correct only-code-focusing high-ego moron"&mdash;[José](http://www.yegor256.com/2014/10/03/di-containers-are-evil.html#comment-3212271221)
 
 "You're a self opinionated asshole and I hope you suffocate
 under the weight of your giant ego, you clueless asshole."&mdash;anonymous (by email)
@@ -44,8 +51,6 @@ of coward/sociopath hybrid. Would be laughable if it wasn't pathetic."&mdash;[No
 "That may be the most stupid use of object orientation I have ever seen"&mdash;[Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
 
 " ... insightless nonsense"&mdash;[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
-
-"Self-opinionated intellectually-correct only-code-focusing high-ego moron"&mdash;[José](http://www.yegor256.com/2014/10/03/di-containers-are-evil.html#comment-3212271221)
 
 "I have still a good opinion of you but some posts are just holy crap"&mdash;[Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
 

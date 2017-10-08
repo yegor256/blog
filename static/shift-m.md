@@ -36,6 +36,9 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Previous episodes:
 
+&#35;9: [Padding vs. Risk Management](/shift-m/2017/9.html)<br/>
+9 October 2017; 43 min.
+
 &#35;8: [How to pay programmers less?](/shift-m/2017/8.html)<br/>
 28 August 2017; 63 min.
 
