@@ -64,7 +64,7 @@ in the Financial Times.
 
 Indeed, the key attribute of a pyramid scheme is right there:
 the product being sold has no value aside from the demand-generated one,
-just like [Twitter stocks](https://www.google.com/finance?q=TWTR).
+just like [Twitter stocks](https://www.google.com/finance?q=TWTR) (it's a joke).
 Should we blame Bitcoin for that? I don't think so.
 
 I think that what Coinbase (and similar traders like
