@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "StackOverflow Is Your Mandatory Tool"
+title: "StackOverflow Is Your Mandatory&nbsp;Tool"
 date: 2017-02-14
 place: Odessa, Ukraine
 tags: career

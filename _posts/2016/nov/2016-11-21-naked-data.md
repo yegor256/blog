@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Encapsulation Covers Up Naked Data"
+title: "Encapsulation Covers Up Naked&nbsp;Data"
 date: 2016-11-21
 tags: oop java
 place: Moscow, Russia
