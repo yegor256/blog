@@ -41,10 +41,10 @@ coming in from some data source, they are all numbers between zero and one:
 Iterable<Double> probes;
 {% endhighlight %}
 
-Now we need to show only the first 10 of them, ignoring zeros and ones,
+Now, we need to show only the first 10 of them, ignoring zeros and ones,
 and rescaling them to `(0..100)`. Sounds like an easy task, right? There
 are three ways to do it: procedural, object-oriented, and the Java&nbsp;8 way. Let's
-start with the procedural one:
+start with the procedural way:
 
 {% highlight java %}
 int pos = 0;
