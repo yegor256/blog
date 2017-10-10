@@ -1,4 +1,213 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-10-10T10:26:16+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Java 9: The Good, The Bad, and Private Interface Methods</title><link href="http://www.yegor256.com/2017/10/03/java9.html" rel="alternate" type="text/html" title="Java 9: The Good, The Bad, and Private Interface Methods" /><published>2017-10-03T00:00:00+00:00</published><updated>2017-10-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/03/java9</id><content type="html" xml:base="http://www.yegor256.com/2017/10/03/java9.html">&lt;p&gt;Java 9 &lt;a href=&quot;https://blogs.oracle.com/java/java-9-release-now-available&quot;&gt;was released&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-10-10T15:19:10+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Streams vs. Decorators</title><link href="http://www.yegor256.com/2017/10/10/streams-vs-decorators.html" rel="alternate" type="text/html" title="Streams vs. Decorators" /><published>2017-10-10T00:00:00+00:00</published><updated>2017-10-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/10/streams-vs-decorators</id><content type="html" xml:base="http://www.yegor256.com/2017/10/10/streams-vs-decorators.html">&lt;p&gt;The &lt;a href=&quot;http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html&quot;&gt;Streams API&lt;/a&gt;
+was introduced in Java&amp;nbsp;8, together with
+&lt;a href=&quot;http://openjdk.java.net/projects/lambda/&quot;&gt;lambda expressions&lt;/a&gt;, just a few
+years ago. I, as a disciplined Java adept, tried to use this new feature
+in a few of my projects, for example
+&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/dynamo/DyUser.java#L85-L88&quot;&gt;here&lt;/a&gt; and
+&lt;a href=&quot;https://github.com/yegor256/wring/blob/0.17.2/src/main/java/io/wring/dynamo/DyEvents.java#L95-L98&quot;&gt;here&lt;/a&gt;.
+I didn&amp;#39;t really like it and went back to good old decorators. Moreover, I
+created &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt;, a library of decorators, to replace
+&lt;a href=&quot;https://github.com/google/guava&quot;&gt;Guava&lt;/a&gt;, which is not so good in so many places.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La Haine (1995) by Mathieu Kassovitz&#39; src=&#39;/images/2017/10/la-haine.jpg&#39; longdesc=&#39;#f2d417e0&#39;/&gt;&lt;figcaption id=&#39;f2d417e0&#39;&gt;La Haine (1995) by Mathieu Kassovitz&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is a primitive example. Let&amp;#39;s say we have a collection of measurements
+coming in from some data source, they are all numbers between zero and one:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, we need to show only the first 10 of them, ignoring zeros and ones,
+and re-scaling them to &lt;code&gt;(0..100)&lt;/code&gt;. Sounds like an easy task, right? There
+are three ways to do it: procedural, object-oriented, and the Java&amp;nbsp;8 way. Let&amp;#39;s
+start with the procedural way:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;Probe #%d: %f&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0d&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Why is this a procedural way? Because it&amp;#39;s imperative. Why is it imperative?
+Because it&amp;#39;s procedural. Nah, I&amp;#39;m kidding.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s imperative because we&amp;#39;re
+giving instructions to the computer about what data to put where and how to
+iterate through it. We&amp;#39;re not declaring the result, but imperatively
+building it. It works, but it&amp;#39;s not really scalable. We can&amp;#39;t take part of this
+algorithm and apply it to another use case. We can&amp;#39;t really modify it easily,
+for example to take numbers from two sources instead of one, etc.
+It&amp;#39;s procedural. Enough said. Don&amp;#39;t do it this way.&lt;/p&gt;
+
+&lt;p&gt;Now, Java&amp;nbsp;8 gives us the
+&lt;a href=&quot;http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html&quot;&gt;Streams API&lt;/a&gt;,
+which is supposed to offer a
+functional way to do the same. Let&amp;#39;s try to use it.&lt;/p&gt;
+
+&lt;p&gt;First, we need to create an instance of
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html&quot;&gt;&lt;code&gt;Stream&lt;/code&gt;&lt;/a&gt;,
+which
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html&quot;&gt;&lt;code&gt;Iterable&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;https://stackoverflow.com/questions/23114015/&quot;&gt;doesn&amp;#39;t&lt;/a&gt;
+let us obtain directly. Then we use the stream API to do the job:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StreamSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spliterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;Probe #%d: %f&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0d&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This will work, but will say &lt;code&gt;Probe #0&lt;/code&gt; for all probes, because &lt;code&gt;forEach()&lt;/code&gt;
+doesn&amp;#39;t work with indexes. There is no such thing as &lt;code&gt;forEachWithIndex()&lt;/code&gt;
+in the &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html&quot;&gt;&lt;code&gt;Stream&lt;/code&gt;&lt;/a&gt;
+interface as of Java&amp;nbsp;8 (and Java&amp;nbsp;9
+&lt;a href=&quot;http://download.java.net/java/jdk9/docs/api/java/util/stream/Stream.html&quot;&gt;too&lt;/a&gt;).
+Here is a &lt;a href=&quot;https://stackoverflow.com/a/18552071/187141&quot;&gt;workaround&lt;/a&gt; with
+an atomic counter:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AtomicInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AtomicInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;StreamSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spliterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s&quot;&gt;&amp;quot;Probe #%d: %f&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAndIncrement&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0d&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&amp;quot;What&amp;#39;s wrong with that?&amp;quot; you may ask. First, see how easily we got into
+trouble when we didn&amp;#39;t find the right method in the &lt;code&gt;Stream&lt;/code&gt; interface. We
+immediately fell off the &amp;quot;streaming&amp;quot; paradigm and got back to the
+good old procedural global variable (the counter). Second, we don&amp;#39;t
+really see what&amp;#39;s going on inside those &lt;code&gt;filter()&lt;/code&gt;, &lt;code&gt;limit()&lt;/code&gt;, and &lt;code&gt;forEach()&lt;/code&gt;
+methods. How exactly do they work? The documentation says that this
+approach is &amp;quot;declarative&amp;quot; and each method in the &lt;code&gt;Stream&lt;/code&gt; interface returns
+an instance of some class. What classes are they? We have no idea by
+just looking at this code.&lt;/p&gt;
+
+&lt;p&gt;These two problems are connected. The biggest issue with this streaming API
+is the very interface &lt;code&gt;Stream&lt;/code&gt;&amp;mdash;it&amp;#39;s huge. At the time of writing
+there are 43 methods. Forty three, in a single interface! This is against
+each and every
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;principle&lt;/a&gt;
+of object-oriented programming, starting with
+&lt;a href=&quot;/2017/03/28/solid.html&quot;&gt;SOLID&lt;/a&gt; and then up to more serious
+ones.&lt;/p&gt;
+
+&lt;p&gt;What is the object-oriented way to implement the same algorithm? Here
+is how I would do it with &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt;, which is just a collection of
+&lt;del&gt;primitive&lt;/del&gt; simple Java classes:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;And&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mapped&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Scalar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Limited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Filtered&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0d&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;Probe #%d: %f&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0d&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s see what&amp;#39;s going on here. First,
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html&quot;&gt;&lt;code&gt;Filtered&lt;/code&gt;&lt;/a&gt;
+decorates our iterable &lt;code&gt;probes&lt;/code&gt; to take certain items out of it.
+Notice that &lt;code&gt;Filtered&lt;/code&gt; implements &lt;code&gt;Iterable&lt;/code&gt;. Then
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html&quot;&gt;&lt;code&gt;Limited&lt;/code&gt;&lt;/a&gt;,
+also being an &lt;code&gt;Iterable&lt;/code&gt;, takes only the first ten items out. Then
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html&quot;&gt;&lt;code&gt;Mapped&lt;/code&gt;&lt;/a&gt;
+converts each probe into an instance of
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html&quot;&gt;&lt;code&gt;Scalar&amp;lt;Boolean&amp;gt;&lt;/code&gt;&lt;/a&gt;,
+which does the line printing.&lt;/p&gt;
+
+&lt;p&gt;Finally, the instance of &lt;code&gt;And&lt;/code&gt; goes through the list of &amp;quot;scalars&amp;quot; and ask
+each of them to return &lt;code&gt;boolean&lt;/code&gt;. They print the line and return &lt;code&gt;true&lt;/code&gt;. Since
+it&amp;#39;s &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;And&lt;/code&gt; makes the next attempt with the next scalar. Finally,
+its method &lt;code&gt;value()&lt;/code&gt; returns &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;But wait, there are no indexes. Let&amp;#39;s add them. In order to do that we
+just use another class, called &lt;code&gt;AndWithIndex&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AndWithIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mapped&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Func&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Limited&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Filtered&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0d&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&amp;quot;Probe #%d: %f&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0d&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Instead of &lt;code&gt;Scalar&amp;lt;Boolean&amp;gt;&lt;/code&gt; we now map our probes to
+&lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html&quot;&gt;&lt;code&gt;Func&amp;lt;Integer, Boolean&amp;gt;&lt;/code&gt;&lt;/a&gt;
+to let them accept the index.&lt;/p&gt;
+
+&lt;p&gt;The beauty of this approach is that all classes and interfaces are small
+and that&amp;#39;s why they&amp;#39;re very composable. To make an iterable of probes limited
+we decorate it with &lt;code&gt;Limited&lt;/code&gt;; to make it filtered we decorate it with
+&lt;code&gt;Filtered&lt;/code&gt;; to do something else we create a new decorator and use it. We&amp;#39;re
+not stuck to one single interface like &lt;code&gt;Stream&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The bottom line is that decorators are an object-oriented instrument to
+modify the behavior of collections, while streams is something else which
+I can&amp;#39;t even find the name for.&lt;/p&gt;
+
+&lt;p&gt;P.S. By the way, this is how the same algorithm can be implemented
+with the help of Guava&amp;#39;s
+&lt;a href=&quot;https://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Iterables.html&quot;&gt;&lt;code&gt;Iterables&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ready&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Iterables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;limit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Iterables&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.0d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0d&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;Probe #%d: %f&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;probe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0d&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is some weird combination of object-oriented and functional styles.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><summary type="html">The Streams API
+was introduced in Java&amp;nbsp;8, together with
+lambda expressions, just a few
+years ago. I, as a disciplined Java adept, tried to use this new feature
+in a few of my projects, for example
+here and
+here.
+I didn&amp;#39;t really like it and went back to good old decorators. Moreover, I
+created Cactoos, a library of decorators, to replace
+Guava, which is not so good in so many places.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/10/la-haine.jpg" /></entry><entry><title type="html">Java 9: The Good, The Bad, and Private Interface Methods</title><link href="http://www.yegor256.com/2017/10/03/java9.html" rel="alternate" type="text/html" title="Java 9: The Good, The Bad, and Private Interface Methods" /><published>2017-10-03T00:00:00+00:00</published><updated>2017-10-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/03/java9</id><content type="html" xml:base="http://www.yegor256.com/2017/10/03/java9.html">&lt;p&gt;Java 9 &lt;a href=&quot;https://blogs.oracle.com/java/java-9-release-now-available&quot;&gt;was released&lt;/a&gt;
 a few weeks ago. Check the
 &lt;a href=&quot;https://docs.oracle.com/javase/9/whatsnew/toc.htm&quot;&gt;release notes&lt;/a&gt;,
 they include many interesting features. However, I think that
@@ -1105,117 +1314,4 @@ for exception-safe resource management.
 Thanks to garbage collection Java
 doesn&amp;#39;t have this feature,
 but we can implement something similar, using
-try-with-resources.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/at-sachem-farm.jpg" /></entry><entry><title type="html">How to Manage a Manager?</title><link href="http://www.yegor256.com/2017/08/01/how-to-manage-a-manager.html" rel="alternate" type="text/html" title="How to Manage a Manager?" /><published>2017-08-01T00:00:00+00:00</published><updated>2017-08-01T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/01/how-to-manage-a-manager</id><content type="html" xml:base="http://www.yegor256.com/2017/08/01/how-to-manage-a-manager.html">&lt;p&gt;No secret, &lt;del&gt;we&lt;/del&gt; you all have managers. Some of them are
-great, while many are simply idiots. What do you do if you happen
-to have a boss that fits perfectly into this dominating category?
-Quit and try to find a better place? This may sound like good
-advice, but you know as well as I do that a new boss most likely won&amp;#39;t
-be any better. Don&amp;#39;t quit. Stay. Manage the manager. Most of them are
-manageable.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Intouchables (2011) by  Olivier Nakache&#39; src=&#39;/images/2017/07/intouchables.jpg&#39; longdesc=&#39;#ae07a826&#39;/&gt;&lt;figcaption id=&#39;ae07a826&#39;&gt;The Intouchables (2011) by  Olivier Nakache&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;First of all, remember your goal: do &lt;em&gt;nothing&lt;/em&gt; and &lt;em&gt;get paid&lt;/em&gt;. It&amp;#39;s hardly
-achievable to its full extent, but you can get very close.
-Doing something useful two hours a week and collecting a paycheck
-for forty hours is what a professional engineer must aim for. The other
-38 hours you will spend on your own projects, your open source
-ideas, your education, your dreams.&lt;/p&gt;
-
-&lt;p&gt;The biggest problem on the road to this success is the manager, who
-is hired exactly to prevent this from happening. Managers use multiple
-instruments to catch you and force you to give them your &lt;em&gt;time&lt;/em&gt;. Here
-is what I did in these situations against a really annoying
-manager I once had:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tasks&lt;/strong&gt;.
-Believe it or not he would assign some coding tasks to me.
-I would do them very slowly or not do them at all. With a serious
-shortage of programmers on the market and my relatively good profile
-he wasn&amp;#39;t able to fire me. So he had to put up with the fact that I
-simply didn&amp;#39;t write any code, no matter how many tasks were assigned. Very
-soon he gave up this idea and stopped giving me anything. I basically
-created an image of a very skilled engineer who didn&amp;#39;t write code. No matter
-how much you asked.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Guilt is a very powerful management instrument.&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Meetings&lt;/strong&gt;.
-At the beginning he was calling me to all possible meetings,
-because he thought that I was very smart. I was even smarter than he thought:
-in each meeting I expressed my opinions in a very aggressive and conflict-provoking
-way. And I always had enough opinions to express. Very soon he stopped
-calling me to those hours-long meetings because I was simply ruining them,
-making strong points, and never &amp;quot;being nice.&amp;quot; Then, when he stopped
-calling, I pretended to be offended, as if I really wanted to
-contribute and yet they were all ignoring me. Guilt is a very powerful management
-instrument, you know.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Reports&lt;/strong&gt;.
-From time to time he was interested to know what was going on, mostly
-by email or in Slack chat. I always had a very long list of things I was
-&amp;quot;working on,&amp;quot; which were absolutely cryptic to him. He was not a programmer
-and didn&amp;#39;t have enough courage to verify my claims. Any time he asked
-what I was busy with, I sent him something like
-&amp;quot;HDFS reconfig for Docker image&amp;quot; or &amp;quot;Integration tests for JAX-RS endpoints.&amp;quot;
-He was happy to see that I was very busy and he left me alone for another
-week or two. Actually, I would recommend you send such reports to your managers
-pro-actively, before they even ask. This will make them feel even more comfortable.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Morning Stand-ups&lt;/strong&gt;.
-These are annoying and very dangerous, because
-other programmers may catch your lies about &amp;quot;HDFS and Docker.&amp;quot; The best
-defense is offense: I always acted very interested in what other
-people were working on. I always asked additional questions too, making
-them afraid of me. It worked. They never bothered me with their suspicions.
-Try not to avoid the stand-up meetings&amp;mdash;if a manager sees you there
-they assume that you&amp;#39;re actually working.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Advice&lt;/strong&gt;.
-He would ask me for technical advice, to help him make his decisions. This is
-rather risky, because eventually you have to be responsible for the
-advice you give, especially if you are a lead developer or an architect.
-The best way to avoid this risk is to transfer responsibility to someone else.
-I was always trying to ask somebody in the team to help me: to analyze the
-problem and create a short email/report with pros and cons. Junior programmers
-are usually very interested in doing such a favor for someone more senior.
-Then, I just forwarded that email to the manager. Very soon he stopped
-coming to me for the analysis and asked the junior guys directly.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Emails&lt;/strong&gt;.
-Long email threads are very annoying especially in big teams. I never read
-them. You should not read them either, if you value your time. However,
-you can&amp;#39;t just ignore them because everybody will feel that you are either
-lazy or a sociopath. Neither of which is in your favor. What I always did
-was pick up on any message from the thread and reply to it, with a question.
-It&amp;#39;s called &lt;em&gt;trolling&lt;/em&gt;. You provoke others to keep the conversation going,
-even though you&amp;#39;re not interested in it at all. A few emails like that a day and
-people will think that you&amp;#39;re on top of everything in the team.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Coaching&lt;/strong&gt;.
-My manager would ask me every now and then to train new programmers and to help them out. This
-too was very risky, since the new guys usually decided that I was their friend and
-would talk to me about everything, consuming my time. To prevent this
-from happening I would always try to introduce them to somebody else&amp;mdash;their
-new friend. Everybody, if they don&amp;#39;t understand the consequences,
-is happy to talk to junior programmers and to patronize them. I just had to forward
-those juniors immediately to the right person.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Personal meetings&lt;/strong&gt;.
-This was the most annoying part of all: face-to-face meetings with the manager. He
-asked me how happy I was in the team, what my plans were, what problems
-I saw, etc. I was not able to say &amp;quot;Well, I&amp;#39;m happy that you guys are
-still paying me and my biggest problem is that you annoy me far too often.&amp;quot;
-Instead I had to invent plans, ideas, problems, and things that I wasn&amp;#39;t happy about.
-I always kept a list of such things ready, in case a manager ever called
-me for a meeting.&lt;/p&gt;
-
-&lt;p&gt;That was my strategy. How do you manage your managers?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">No secret, we you all have managers. Some of them are
-great, while many are simply idiots. What do you do if you happen
-to have a boss that fits perfectly into this dominating category?
-Quit and try to find a better place? This may sound like good
-advice, but you know as well as I do that a new boss most likely won&amp;#39;t
-be any better. Don&amp;#39;t quit. Stay. Manage the manager. Most of them are
-manageable.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/07/intouchables.jpg" /></entry></feed>
+try-with-resources.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/at-sachem-farm.jpg" /></entry></feed>

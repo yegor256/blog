@@ -92,6 +92,7 @@ address
 addressed
 addressing
 adds
+adept
 adepts
 adequate
 adhere
@@ -4026,6 +4027,7 @@ measurable
 measure
 measured
 measurement
+measurements
 measures
 measuring
 meat
