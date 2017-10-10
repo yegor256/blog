@@ -20,7 +20,7 @@ nospell: true
 
 Here they are, in chronological order:
 
-Sun Tzu, _孫子兵法_, 5th century BC, [Buy](http://amzn.to/2y8hu3O).
+孫子, _兵法_, 5th century BC, [Buy](http://amzn.to/2y8hu3O).
 
 Niccolò Machiavelli, _Il Principe_, 1513. [Buy](http://amzn.to/2xeLKtt).
 
