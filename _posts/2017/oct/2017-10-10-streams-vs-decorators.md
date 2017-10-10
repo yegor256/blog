@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Streams vs. Decorators"
-date: 2017-10-05
+date: 2017-10-10
 place: Odessa, Ukraine
 tags: java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - guava vs streams
   - java streams
   - streams
-image: /images/2017/02/...
+image: /images/2017/10/la-haine.jpg
 jb_picture:
-  caption:
+  caption: La Haine (1995) by Mathieu Kassovitz
 ---
 
 The [Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
@@ -62,7 +62,9 @@ for (Double probe : probes) {
 {% endhighlight %}
 
 Why is this a procedural way? Because it's imperative. Why is it imperative?
-Because it's procedural. Nah, I'm kidding. It's imperative because we're
+Because it's procedural. Nah, I'm kidding.
+
+It's imperative because we're
 giving instructions to the computer about what data to put where and how to
 iterate through it. We're not declaring the result, but imperatively
 building it. It works, but it's not really scalable. We can't take part of this
