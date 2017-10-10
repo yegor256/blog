@@ -42,7 +42,7 @@ Iterable<Double> probes;
 {% endhighlight %}
 
 Now, we need to show only the first 10 of them, ignoring zeros and ones,
-and rescaling them to `(0..100)`. Sounds like an easy task, right? There
+and re-scaling them to `(0..100)`. Sounds like an easy task, right? There
 are three ways to do it: procedural, object-oriented, and the Java&nbsp;8 way. Let's
 start with the procedural way:
 
@@ -129,7 +129,7 @@ just looking at this code.
 
 These two problems are connected. The biggest issue with this streaming API
 is the very interface `Stream`&mdash;it's huge. At the time of writing
-there are 43 methods. Fourty three, in a single interface! This is against
+there are 43 methods. Forty three, in a single interface! This is against
 each and every
 [principle]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 of object-oriented programming, starting with
