@@ -127,6 +127,8 @@ approach is "declarative" and each method in the `Stream` interface returns
 an instance of some class. What classes are they? We have no idea by
 just looking at this code.
 
+{% quote The biggest issue with this streaming API is the very interface Stream, it's huge! %}
+
 These two problems are connected. The biggest issue with this streaming API
 is the very interface `Stream`&mdash;it's huge. At the time of writing
 there are 43 methods. Forty three, in a single interface! This is against
