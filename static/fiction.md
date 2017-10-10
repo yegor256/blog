@@ -20,6 +20,8 @@ nospell: true
 
 Here they are, in chronological order:
 
+Sun Tzu, _孫子兵法_, 5th century BC, [Buy](http://amzn.to/2y8hu3O).
+
 Niccolò Machiavelli, _Il Principe_, 1513. [Buy](http://amzn.to/2xeLKtt).
 
 Donatien Alphonse François de Sade, _Histoire de Juliette_, 1801. [Buy](http://amzn.to/2ylYb6Z).
