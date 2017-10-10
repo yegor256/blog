@@ -18,7 +18,7 @@ redcarpet:
     - tables
     - with_toc_data
 permalink: :year/:month/:day/:title.html
-paginate: 10
+paginate: 20
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 exclude:
