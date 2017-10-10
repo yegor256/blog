@@ -58,6 +58,17 @@ shairart.com - form doesn't work
 
 In order of creation:
 
+{% picture /images/paintings/2017/not-in-love.jpg 350 %}
+
+_Not in love_<br/>
+October 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine.
+"When he is not in love, she doesn't know what to do with him;
+she doesn't understand him; she doesn't feel him; she doesn't know
+what to expect; she loves him more."
+
 {% picture /images/paintings/2017/in-love.jpg 350 %}
 
 _In love_<br/>
