@@ -36,6 +36,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Previous episodes:
 
+<!--
+&#35;10: [Johanna Rothman about hiring issues](/shift-m/2017/10.html)<br/>
+11 October 2017; 64 min.
+-->
+
 &#35;9: [Padding vs. Risk Management](/shift-m/2017/9.html)<br/>
 9 October 2017; 43 min.
 
