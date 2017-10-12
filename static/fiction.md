@@ -92,6 +92,8 @@ Chuck Palahniuk, _Invisible Monsters_, 1999. [Buy](http://amzn.to/2xdWSXA).
 
 Mario Puzo, _Omerta_, 2000. [Buy](http://amzn.to/2xiShoM).
 
+Павел Крусанов, _Укус ангела_, 2000.
+
 Frédéric Beigbeder, _99 francs_, 2000.
 
 Татьяна Толстая, _Кысь_, 2001.
