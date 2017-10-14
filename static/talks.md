@@ -98,19 +98,12 @@ OK, I'm kidding about the limo.
 
 <!--
 <div class="talk-event"/>
-<img src="/images/2017/qafest.png" class="future-talk" alt="QAFest 2017"/>
-**We Pay for Bugs**<br/>
-[QAFest 2017](http://qafest.com/)<br/>
-Kiev, Ukraine<br/>
-22-23 September 2017
--->
-
-<div class="talk-event"/>
 <img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
 **16 Don'ts of Career Growth**<br/>
 [JavaDay 2017](http://javaday.org.ua/)<br/>
 Kiev, Ukraine<br/>
 4-5 November 2017
+-->
 
 <div class="talk-event"/>
 <img src="/images/2017/dotnext.png" class="future-talk" alt="DotNext 2017"/>
