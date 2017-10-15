@@ -158,7 +158,7 @@ new And(
       );
       return true;
     }
-  ),
+  )
 ).value();
 {% endhighlight %}
 
@@ -197,7 +197,7 @@ new AndWithIndex(
       );
       return true;
     }
-  ),
+  )
 ).value();
 {% endhighlight %}
 
