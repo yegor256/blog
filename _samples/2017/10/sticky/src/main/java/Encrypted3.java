@@ -21,22 +21,21 @@
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 
 class Encrypted3 implements Encrypted {
-    private byte[] data;
+    private String text;
     private final InputStream input;
     Encrypted3(InputStream stream) {
-        this.data = null;
+        this.text = null;
         this.input = stream;
     }
     Encrypted3(String txt) {
-        this.data = txt.getBytes(StandardCharsets.UTF_8);
+        this.text = txt;
         this.input = null;
     }
     @Override
     public String asString() throws IOException {
-        if (this.data == null) {
+        if (this.text == null) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             while (true) {
                 int one = input.read();
@@ -45,12 +44,13 @@ class Encrypted3 implements Encrypted {
                 }
                 baos.write(one);
             }
-            this.data = baos.toByteArray();
+            this.text = new String(baos.toByteArray());
         }
-        final byte[] out = new byte[this.data.length];
-        for (int i = 0; i < this.data.length; ++i) {
-            out[i] = (byte) (this.data[i] + 1);
+        final byte[] in = this.text.getBytes();
+        final byte[] out = new byte[in.length];
+        for (int i = 0; i < in.length; ++i) {
+            out[i] = (byte) (in[i] + 1);
         }
-        return new String(out, StandardCharsets.UTF_8);
+        return new String(out);
     }
 }

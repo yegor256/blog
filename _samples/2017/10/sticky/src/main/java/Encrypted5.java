@@ -27,7 +27,7 @@ import org.cactoos.scalar.IoCheckedScalar;
 import org.cactoos.scalar.StickyScalar;
 
 class Encrypted5 implements Encrypted {
-    private final IoCheckedScalar<byte[]> data;
+    private final IoCheckedScalar<String> text;
     Encrypted5(InputStream stream) {
         this(
             () -> {
@@ -40,19 +40,19 @@ class Encrypted5 implements Encrypted {
                     }
                     baos.write(one);
                 }
-                return baos.toByteArray();
+                return new String(baos.toByteArray());
             }
         );
     }
     Encrypted5(String txt) {
-        this(() -> txt.getBytes(StandardCharsets.UTF_8));
+        this(() -> txt);
     }
-    Encrypted5(Scalar<byte[]> source) {
-        this.data = new IoCheckedScalar<>(new StickyScalar<>(source));
+    Encrypted5(Scalar<String> source) {
+        this.text = new IoCheckedScalar<>(new StickyScalar<>(source));
     }
     @Override
     public String asString() throws IOException {
-        final byte[] input = this.data.value();
+        final byte[] input = this.text.value().getBytes();
         final byte[] out = new byte[input.length];
         for (int i = 0; i < input.length; ++i) {
             out[i] = (byte) (input[i] + 1);

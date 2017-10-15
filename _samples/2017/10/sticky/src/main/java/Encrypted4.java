@@ -21,12 +21,11 @@
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import org.cactoos.Scalar;
 import org.cactoos.scalar.IoCheckedScalar;
 
 class Encrypted4 implements Encrypted {
-    private final IoCheckedScalar<byte[]> data;
+    private final IoCheckedScalar<String> text;
     Encrypted4(InputStream stream) {
         this(
             () -> {
@@ -39,23 +38,23 @@ class Encrypted4 implements Encrypted {
                     }
                     baos.write(one);
                 }
-                return baos.toByteArray();
+                return new String(baos.toByteArray());
             }
         );
     }
     Encrypted4(String txt) {
-        this(() -> txt.getBytes(StandardCharsets.UTF_8));
+        this(() -> txt);
     }
-    Encrypted4(Scalar<byte[]> source) {
-        this.data = new IoCheckedScalar<>(source);
+    Encrypted4(Scalar<String> source) {
+        this.text = new IoCheckedScalar<>(source);
     }
     @Override
     public String asString() throws IOException {
-        final byte[] input = this.data.value();
-        final byte[] out = new byte[input.length];
-        for (int i = 0; i < input.length; ++i) {
-            out[i] = (byte) (input[i] + 1);
+        final byte[] in = this.text.value().getBytes();
+        final byte[] out = new byte[in.length];
+        for (int i = 0; i < in.length; ++i) {
+            out[i] = (byte) (in[i] + 1);
         }
-        return new String(out, StandardCharsets.UTF_8);
+        return new String(out);
     }
 }
