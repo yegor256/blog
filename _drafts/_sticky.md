@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lazy Loading and Caching through Sticky Cactoos Primitives"
+title: "Lazy Loading and Caching via Sticky Cactoos Primitives"
 date: 2017-10-05
 place: Odessa, Ukraine
 tags: java
@@ -28,8 +28,8 @@ is what I found for myself with the help of Cactoos primitives.
 
 {% jb_picture_body %}
 
-Let's say, we need an object that will encrypt the data. Speaking in
-a more object-oriented way, it will encapsulate the data and become its
+Let's say, we need an object that will encrypt the text. Speaking in
+a more object-oriented way, it will encapsulate the text and _become_ its
 encrypted form. Here is how we will use it (let's create
 [tests first]({% pst 2017/mar/2017-03-24-tdd-that-works %})):
 
@@ -44,45 +44,52 @@ System.out.println(enc.asString());
 Now, let's implement it, in a very primitive way, with one
 [primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
 constructor. The encryption mechanism
-will just add `+1` to each byte in the incoming data:
+will just add `+1` to each byte in the incoming data, assuming
+the encryption won't break anything (a very stupid
+assumption, but for the sake of this example it will work):
 
 {% highlight java %}
 class Encrypted1 implements Encrypted {
-  private final byte[] data;
+  private final String text;
   Encrypted1(String txt) {
-    this.data = txt.getBytes(StandardCharsets.UTF_8);
+    this.data = txt;
   }
   @Override
   public String asString() {
-    final byte[] out = new byte[this.data.length];
-    for (int i = 0; i < this.data.length; ++i) {
-      out[i] = (byte) (this.data[i] + 1);
+    final byte in = this.text.getBytes();
+    final byte[] out = new byte[in.length];
+    for (int i = 0; i < in.length; ++i) {
+      out[i] = (byte) (in[i] + 1);
     }
-    return new String(out, StandardCharsets.UTF_8);
+    return new String(out);
   }
 }
 {% endhighlight %}
 
-Looks correct so far? I [tested it]()
+Looks correct so far? I [tested it](https://github.com/yegor256/blog/tree/master/_samples/2017/10/sticky)
 and it works. If the input is `"Hello, world!"`,
 the output will be `"Ifmmp-!xpsme\""`.
 
-Next, let's say we want our class to accept an `InputStream` aside
-from `String`.
+Next, let's say we want our class to accept an
+[`InputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)
+aside from
+[`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html).
 We want to call it like this, for example:
 
 {% highlight java %}
-Encrypted enc = new Encrypted(
+Encrypted enc = new Encrypted2(
   new FileInputStream("/tmp/hello.txt")
 );
 System.out.println(enc.toString());
 {% endhighlight %}
 
-Here is the most obvious implementation, with two primary constructors:
+Here is the most obvious implementation, with two
+[primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
+constructors (again, the implementation is primitive, but works):
 
 {% highlight java %}
 class Encrypted2 implements Encrypted {
-  private final byte[] data;
+  private final String text;
   Encrypted2(InputStream input) throws IOException {
     ByteArrayOutputStream baos =
       new ByteArrayOutputStream();
@@ -93,10 +100,10 @@ class Encrypted2 implements Encrypted {
       }
       baos.write(one);
     }
-    this.data = baos.toByteArray();
+    this.data = new String(baos.toByteArray());
   }
   Encrypted2(String txt) {
-    this.data = txt.getBytes(StandardCharsets.UTF_8);
+    this.text = txt;
   }
   // asString() is exactly the same as in Encrypted1
 }
@@ -105,26 +112,26 @@ class Encrypted2 implements Encrypted {
 Technically it works, but stream reading is right inside the constructor,
 which is a [bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
 [Primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
-constructors must not do anything else but attributes assignments, while secondary
+constructors must not do anything else but attribute assignments, while secondary
 ones may only create new objects.
 
 Let's try to refactor and introduce lazy loading:
 
 {% highlight java %}
 class Encrypted3 {
-  private byte[] data;
+  private String text;
   private final InputStream input;
   Encrypted3(InputStream stream) {
-    this.data = null;
+    this.text = null;
     this.input = stream;
   }
   Encrypted3(String txt) {
-    this.data = txt.getBytes(StandardCharsets.UTF_8);
+    this.text = txt;
     this.input = null;
   }
   @Override
   public String asString() throws IOException {
-    if (this.data == null) {
+    if (this.text == null) {
       ByteArrayOutputStream baos =
         new ByteArrayOutputStream();
       while (true) {
@@ -134,29 +141,31 @@ class Encrypted3 {
         }
         baos.write(one);
       }
-      this.data = baos.toByteArray();
+      this.text = new String(baos.toByteArray());
     }
-    final byte[] out = new byte[this.data.length];
-    for (int i = 0; i < this.data.length; ++i) {
-      out[i] = (byte) (this.data[i] + 1);
+    final byte in = this.text.getBytes();
+    final byte[] out = new byte[in.length];
+    for (int i = 0; i < in.length; ++i) {
+      out[i] = (byte) (in[i] + 1);
     }
-    return new String(out, StandardCharsets.UTF_8);
+    return new String(out);
   }
 }
 {% endhighlight %}
 
-Works great, but looks ugly. The ugliest part is these two lines, of course:
+Works great, but looks ugly. The ugliest part is in these two lines, of course:
 
 {% highlight java %}
-this.data = null;
+this.text = null;
 this.input = null;
 {% endhighlight %}
 
 It makes the object
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 and it's [NULL]({% pst 2014/may/2014-05-13-why-null-is-bad %}). It's ugly,
-trust me. Lazy loading and NULL references always come together in classic
-examples, unfortunately. However, there is a better way to implement it.
+trust me. Unfortunately, azy loading and NULL references always come together in
+[classic examples](https://stackoverflow.com/a/2192271/187141).
+However, there is a better way to implement it.
 Let's refactor our class, this time using
 [`Scalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html)
 from
@@ -164,7 +173,7 @@ from
 
 {% highlight java %}
 class Encrypted4 implements Encrypted {
-  private final IoCheckedScalar<byte[]> data;
+  private final IoCheckedScalar<String> text;
   Encrypted4(InputStream stream) {
     this(
       () -> {
@@ -177,49 +186,55 @@ class Encrypted4 implements Encrypted {
           }
           baos.write(one);
         }
-        return baos.toByteArray();
+        return new String(baos.toByteArray());
       }
     );
   }
   Encrypted4(String txt) {
-    this(() -> txt.getBytes(StandardCharsets.UTF_8));
+    this(() -> txt);
   }
-  Encrypted4(Scalar<byte[]> source) {
-    this.data = new IoCheckedScalar<>(source);
+  Encrypted4(Scalar<String> source) {
+    this.text = new IoCheckedScalar<>(source);
   }
   @Override
   public String asString() throws IOException {
-    final byte[] input = this.data.value();
-    final byte[] out = new byte[input.length];
-    for (int i = 0; i < input.length; ++i) {
-      out[i] = (byte) (input[i] + 1);
+    final byte[] in = this.text.value().getBytes();
+    final byte[] out = new byte[in.length];
+    for (int i = 0; i < in.length; ++i) {
+      out[i] = (byte) (in[i] + 1);
     }
-    return new String(out, StandardCharsets.UTF_8);
+    return new String(out);
   }
 {% endhighlight %}
 
 Now it looks way better. First of all, there is only one primary constructor and
-two secondary ones. Second, the object is immutable. Third, there is a lot
-of room for improvement: we can add more constructors, which will accept
-any other sources of data, for example `java.io.File` or a byte array.
+two secondary ones. Second, the object is
+[immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
+Third, there is a lot
+of room for
+[improvement]({% pst 2014/nov/2014-11-07-how-immutability-helps %}):
+we can add more constructors, which will accept
+any other sources of data, for example
+[`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html) or a byte array.
 
 In a nutshell, the attribute that is supposed to be loaded in a "lazy" way
-is represented inside an object as a "function" (lambda expression in
+is represented inside an object as a "function"
+([lambda expression](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) in
 Java&nbsp;8). Until we touch that attribute, it's not loaded. Once we need
 to work with it, the function gets executed and we have the result.
 
 There is one problem with this code though. It will read the input stream
 every time we call `asString()`, which will obviously not work, since only
 the first time the stream will have the data. On every next call the stream
-will simply be empty. Thus, we need to make sure that `this.data.value()`
+will simply be empty. Thus, we need to make sure that `this.text.value()`
 executes the encapsulated `Scalar` only once. All consecutive calls must return
-previously calculated value. We need to __cache__ them. Here is how:
+previously calculated value. We need to _cache_ them. Here is how:
 
 {% highlight java %}
 class Encrypted5 implements Encrypted {
-  private final IoCheckedScalar<byte[]> data;
+  private final IoCheckedScalar<String> text;
   // same as above in Encrypted4
-  Encrypted5(Scalar<byte[]> source) {
+  Encrypted5(Scalar<String> source) {
     this.data = new IoCheckedScalar<>(
       new StickyScalar<>(source)
     );
@@ -242,9 +257,9 @@ is not thread-safe. There is another primitive to help us, it's called
 
 {% highlight java %}
 class Encrypted5 implements Encrypted {
-  private final IoCheckedScalar<byte[]> data;
+  private final IoCheckedScalar<String> text;
   // same as above in Encrypted4
-  Encrypted5(Scalar<byte[]> source) {
+  Encrypted5(Scalar<String> source) {
     this.data = new IoCheckedScalar<>(
       new SyncScalar<>(
         new StickyScalar<>(source)
@@ -255,3 +270,6 @@ class Encrypted5 implements Encrypted {
 {% endhighlight %}
 
 Now we're safe and the design is elegant. It includes lazy loading and caching.
+
+I'm using this approach in many projects now and it seems rather convenient,
+obvious, and object-oriented.
