@@ -49,7 +49,7 @@ start with the procedural way:
 {% highlight java %}
 int pos = 0;
 for (Double probe : probes) {
-  if (probe == 0.0d || probe == 1.0d) {
+  if (probe != 0.0d && probe != 1.0d) {
     continue;
   }
   if (++pos > 10) {
@@ -106,7 +106,7 @@ an atomic counter:
 {% highlight java %}
 AtomicInteger index = new AtomicInteger();
 StreamSupport.stream(probes.spliterator(), false)
-  .filter(probe -> probe == 0.0d || probe == 1.0d)
+  .filter(probe -> probe != 0.0d && probe != 1.0d)
   .limit(10L)
   .forEach(
     probe -> System.out.printf(
@@ -148,7 +148,7 @@ new And(
     new Limited<Double>(
       new Filtered<Double>(
         probes,
-        probe -> probe == 0.0d || probe == 1.0d
+        probe -> probe != 0.0d && probe != 1.0d
       ),
       10
     ),
@@ -187,7 +187,7 @@ new AndWithIndex(
     new Limited<Double>(
       new Filtered<Double>(
         probes,
-        probe -> probe == 0.0d || probe == 1.0d
+        probe -> probe != 0.0d && probe != 1.0d
       ),
       10
     ),
@@ -223,7 +223,7 @@ with the help of Guava's
 Iterable<Double> ready = Iterables.limit(
   Iterables.filter(
     probes,
-    probe -> probe == 0.0d || probe == 1.0d
+    probe -> probe != 0.0d && probe != 1.0d
   ),
   10
 );
