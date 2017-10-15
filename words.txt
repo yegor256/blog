@@ -233,6 +233,7 @@ ancient
 and
 andreea
 android
+andronache
 anemic
 angel
 angle
@@ -476,6 +477,7 @@ avoidance
 avoided
 avoiding
 award
+award-
 awards
 aware
 away
@@ -787,6 +789,7 @@ building
 builds
 built
 built-in
+bukharov
 bullet
 bullet-fast
 bullshit
@@ -2501,6 +2504,7 @@ file
 filed
 files
 filing
+filipe
 fill
 fille
 filling
@@ -2663,6 +2667,7 @@ freelancers
 freely
 freeman
 freemarker
+freire
 french
 frequency
 frequently
@@ -3142,6 +3147,7 @@ IEEE
 if
 if-then-else
 iff
+ignatyev
 ignorance
 ignorant
 ignore
@@ -3425,6 +3431,7 @@ investors'
 invests
 invisible
 invite
+invited
 invites
 inviting
 invoice
@@ -3597,6 +3604,7 @@ justified
 JVM
 kalanick
 kanban
+kapralov
 karachi
 karl
 katakuris
@@ -4123,6 +4131,7 @@ middlemen
 might
 migrate
 migration
+mihai
 mile
 milestone
 milestones
@@ -5951,6 +5960,7 @@ september
 sequential
 sequentially
 seratch
+sergey
 sergio
 serializers
 series
@@ -6944,6 +6954,7 @@ twitter
 two
 two-year-old
 txr
+txt
 type
 types
 typescript
@@ -7110,6 +7121,8 @@ vacation
 vacations
 vaccine
 vague
+vakhobov
+valentin
 valid
 validate
 validated
@@ -7469,6 +7482,7 @@ zero-stress
 ZeroCI
 zi
 zillow
+ziyavuddin
 zombie
 zombies
 zone

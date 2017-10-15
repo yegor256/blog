@@ -1,0 +1,804 @@
+http://www.yegor256.com/2016/10/23/award-2017.html
+
+
+
+# SimonKagstrom/kcov (C++)
+
++ Travis CI
++ Github issue tracking - pretty much all commits lead to issues in Github, linked to issues
++ Github release management - lots of releases, lots of tags
++ Changelog with Github issues that entered each release
++ > 1year project (since 2010)
++ > 10.000 LOC
++ Code coverage and coverage report (https://coveralls.io/github/SimonKagstrom/kcov)
+
+- Github release management, BUT, older releases have no linkage to issues
+- Not clear if release process is automated, seems manual, even with Github
+release management
+- Code indentation/format, way comments are presented, doesn't seem to be very
+uniform across project, but could be because there are big differences between
+in terms of date specific classes have been last edited
+- Recurrent build failures for OSX compilers (even though linux compilers pass)
+- Not clear if using "Elegant" OO approach. Files with implementation
+of more than 1 class, many lines of code per file. Code looks a bit procedural
+on some parts.
+- quite a few big "chained" if statements and switches
+
+Comments:
+.Feels strange that the test folder seems a bit... un-updated
+.Test folder needs cleanup, and found some test files that don't seem to be actually
+testing anything
+
+
+
+# JnRouvignac/AutoRefactor
+
+! I failed to build the project (tried to build with oraclejdk7, oraclejdk8, openjdk8 on tag "1.1.0")
+
+Issue tracking
++ GitHub issues
++ GitHub pull requests
+- not all commits are traceable to issues.
+- untracked issues (comment in travis states that jdk8 is commented out till the version 1.1, but 1.1 is released already and jdk8 is still commented out)
+
+Release management
++ GitHub releases
+- very rare and occasional releases
+- cannot reprodice release build at tagged commit
+
+CI
++ Travis
+- CI is failing on master
+
+Code coverage
++ cobertura/coveralls (according travis config)
+- code coverage is not integrated to build pipeline
+- didn't manage to build the project, so coverage is not clear for me
+
+Static analysis
++ checkstyle
+
+Tests
++ JUnit unit testing
+- unit tests are failing build at tag 1.1
+
+Antipatterns:
+- utility classes (org.autorefactor.util.Utils, org.autorefactor.cfg.ASTPrintHelper, quite many of them)
+- static methods (org.autorefactor.ui.AutoRefactorHandler, more)
+- -ERs (org.autorefactor.environment.JobManager, org.autorefactor.cfg.CFGBuilder, lots of them)
+- getters/DTO (org.autorefactor.environment.Environment)
+- Constants (org.autorefactor.preferences.PreferenceConstants)
+? Implementation inheritance (lots of org.eclipse.jdt.core.dom.ASTVisitor children, lots of org.autorefactor.refactoring.rules.AbstractRefactoringRule children. Probably forced by a dependency.)
+- Lots of instanceof reasoning (search by "instanceof" in repository)
+
+Other remarks:
+- Supporting only outdated version of Java (according travis configuration)
+- lots of commented out code
+- tight coupling (example: org.autorefactor.cfg.CFGBasicBlock has package-scoped methods, used by several of the classes from the same package)
+- lots of large complex multi-responsible classes with many private methods.
+
+
+
+# javaslang/javaslang (vavr-io/vavr)
+
+! It's former javaslang. See http://blog.vavr.io/javaslang-changes-name-to-vavr/. Blame Oracle for this confusion.
+
+Issue tracking
++ GitHub issues
++ GitHub pull requests
+- strange way of tracking changes. Instead of mentioning issue number in commits, they mention the number of pull request. The latter in turn is not nesessarily linked with the issue.
+
+Release management
++ GitHub releases
++ Maven Central
+
+CI
++ Travis
+
+Code coverage
++ Jacoco
++ Codecov
+
+Static analysis
++ Sputnik
+
+Tests
++ JUnit unit tests
++ Basic JMH benchmarks
+
+Antipatterns:
+- Fluent API just everywhere.
+- Lots of statics in interfaces
+- Lots of default implementations in interfaces
+- Implementation inheritance (io.vavr.collection.Traversable children)
+? Annotations (@Unapply, @Patterns)
+- Instanceof reasoning (search by "instanceof" in repository)
+
+Other remarks:
++ excellent documentation
+- large LoC per module
+- there is not actually much of OOP there.
+
+
+
+# HDouss/jeometry
+
+Issue tracking
++ GitHub issues
++ GitHub pull requests
+- issue tracking is almost missing (project of one developer?)
+- commits are spontaneous
+- pull requests are not used
+
+Release management
+- project is not ever released
+
+CI
++ Travis
+
+Code coverage
++ Jacoco
++ Coveralls
+
+Static analysis
+- none
+
+Tests
++ JUnit unit tests
+- There are also some integration tests in jeometry-double, but they aren't integrated to build pipeline.
+
+Antipatterns:
+- Static methods (com.aljebra.matrix.Sum, com.aljebra.matrix.TransposeMatrix)
+- Implementation inheritance (com.jeometry.twod.point.XyPoint, com.aljebra.vector.FixedVector, quite enough of them in jeometry-api - mixin inheritance style)
+- Instanceof reasoning (search by "instanceof" in repository)
+- Couple of -ERs (com.aljebra.field.impl.doubles.DecimalRandomizer)
+? Annotations (@DimensionsEqual)
+
+Other remarks
++ good documentation
+- default methods in interfaces (com.aljebra.scalar.Scalar)
+
+
+
+# php-ai/php-ml
+
+Summary
+  +
+  The project is well documented. Each functionality have good examples.
+  The coding style is Clean and Understandable.
+  The project is versioned.
+  Lots of helpful comments.
+  Github issue tracking.
+  Github release management.
+  Deployment is automated for git and composer.
+  The project have tests for each functionality.
+  Null return is avoided.
+
+  -
+  The project uses Getter and Setters.
+  The project uses "Traits" instead of Composition.
+  Some classes use Static methods.
+  In GIT history the messages do not describe what exactly was changed. Messages are not descriptive.
+  Some classes like DecisionTree are have too long and have lots of methods.
+
+  These are the example Classes where I mostly found these issues:
+
+-- KernelIPCA.php
+  use of getters and setters
+  use of Static methods
+-- All Exception classes
+  use of Static methods
+-- DecisionStump.php
+  use of traits
+  use of setters
+-- ClassificationReport.php
+  use of Static methods
+  use of getters and setters
+-- DataTransformer.php
+  use of static methods
+
+
+
+# LobbyOS/lobby
+
+Summary:
+  +
+  Github issue tracking.
+  Github release management. but only 4 release.
+  Good documentation and comments.
+  Travic CI.
+
+  -
+  Lots of code in admin module is written in Procedural programming.
+  Lots of Utility classes.
+  Lots of Static methods.
+  Git history messages are not descriptive.  They are shallow.
+  Core classes are big, more than +500 lines.
+  Lots of Null checking and Null returning.
+
+  These are the example Classes where I mostly found these issues:
+
+--DB.php
+  This is Utility class.
+  Lots of Static methods.
+  Getters are used.
+--FS.php
+  This is utility class.
+  Lots of Static methods.
+--Modules.php
+  Losts of Static methods.
+--Router.php
+  Use of Static methods.
+--Response.php
+  Use of Static methods.
+  Use of Getters and Setters.
+--Request.php
+  Utitlity class
+  Use of Static methods.
+  Use of Getters and Setters.
+--Hooks.php
+  Utility class.
+  Use of Static methods.
+  Use of Getters and Setters.
+
+
+
+# onqtam/doctest (C++)
+
++ Travis CI
++ Clean documentation
++ Github release management, releases + git tags
++ Code coverage and coverage report
++ > 1year project
+
+- Squashing git history?
+https://github.com/onqtam/doctest/commit/b1e7e147a8a71d67e38dbcc20687399bd73e563a
+- Unclear Github issue tracking, no clear linkage between most commit messages and issues
+- Files with thousands of lines of code, though the some classes seem "Elegant"
+everything is thrown together into files
+- Not clear if release process is automated, seems manual
+- most PRs getting merged with CI failing
+- quite a few big "chained" if statements and switches
+- Where are the Unit Test files and where is Static analysis, how 99% coverage is
+a bit of a mystery for me ?!
+
+Comments:
+.Overall feels very strange in terms of maintainability, few big thousand lines files
+.The number of LOC itself seems strange, because most code is placed in C++ header files,
+with thousands of LOC, but when I run a counter, only 9122 LOC for C++ header files
+(less than 10.000)
+. Overall documentation is good, but the code doesn't seem elegant or maintainable
+
+
+
+# iboB/dynamix (C++)
+
++ Travis CI
++ Clean documentation, very organized, https://ibob.github.io/dynamix/
+
+? Poor Release management, 2 releases for 1.1.0 and 1.2.0, with change-log but
+there's no linkage to actual issues on Github or links between commits and issues
+? Seems to have quantity in terms of unit tests, but no clear Code coverage and coverage
+reports.
+
+- "It lets the user compose and modify types at run time".
+- No Github issue tracking, no clear linkage between all commit messages and issues
+- Commit history seems lost -> readme says project has been around since 2013, but commit
+history starts on June 19 2016 with version 1.0.1
+
+Comments:
+I'm not investing more time on this one, "compose and modify types at run time"
+lost it for me.
+
+
+
+# atk4/data
+
+Summary:
+  +
+  Github issue tracking.
+  Github release management. 32 releases.
+  Good documendation and Comments.
+  Travic CI.
+  Covered with Tests.
+  Project consists of +10K lines of code, but half of them are tests. Pure core project consist of less than 10K lines of code.
+
+  -
+  Lots of null checks.
+  Some classes have more than +800 lines of code, and class Model is like God object
+  Some methods are also big, they need to be divided into smaller one.
+  Use of Getters abd Setters.
+  Use of Traits in some classes.
+  The messages in git history are also not descriptive.
+
+  These are the example Classes where I mostly found these issues:
+
+--Field.php
+  Class is quite long. +400 lines.
+  The function normilize has +130 lines.
+  Use of Getters and Setters.
+--Join.php
+  Use of traits instead of Composition.
+  Class is big, and have lots of methods.
+--Model.php
+  Use of traits instead of Composition.
+  This class has +1800 lines of code. It is God object.
+  The functions save and set have more than +120 lines of code.
+--Persistence.php
+  Use of traits instead of composition.
+  Use of static methods.
+--Persistence_SQL.php
+  The class is huge. +900 lines of code.
+
+Summary:
+  +
+  The project is well documented and covered with tests.
+  The coding is clean and understandable.
+  The project is versioned.
+  Lots of comments a used that is helpful.
+  Github issue tracking.
+  Github release management.
+  Deployment is automated, for Docker, Git and Composer.
+
+  -
+  Project Depends on Silex and Symfony components.
+  So, If we do not count Silex and Symfony Components, the project itself is about 2K lines of code.
+  The project uses lots of Getters and Setters.
+  Some functions return Null instead of Throwing Exception
+  Some Classes instantiated from Depricated Classes of Silex and Symfony.
+  Reflection is used.
+  In git history the commit messages do not describe what actually was changed. The messages are shallow.
+  Project uses God objects of Silex and Symfony that have classes more that 500 lines of code.
+
+
+
+# laravel/framework
+
+Summary:
+  +
+  Github issue tracking.
+  The project has 285 releases.
+  The project is versioned.
+  The project has great documentation and code comments.
+  Travic CI.
+  Deployment is automated, for  Git and Composer.
+  Covered with tests.
+  Clean Code.
+  The project is huge.
+
+  -
+  The project uses traits in lots of classes.
+  Lots of Null checking and Null returning.
+  Anti-patterns like Singleton, ORM and God object is used.
+  OOP and Functional programming concepts mixed.
+  Reflection is used.
+  Getters and Setter used in lots of classes.
+  Lost of Static methods used.
+  Lots of Utility Classes used.
+
+  These are the example Classes where I mostly found these issues. There are more, but I list some of them:
+/Auth
+  //Access
+  --Illuminate\Auth\Access\Gate.php
+    Use of traits instead of Composition.
+    Use of Getters
+    OOP and Functional programming concepts are mixed.
+  //Console
+  --Illuminate\Auth\Console\AuthMakeCommand.php
+    Use of traits instead of Composition.
+
+  //Event
+  --Illuminate\Auth\Events\Authenticated.php
+    Use of traits instead of Composition.
+
+  --Illuminate\Auth\Events\Login.php
+    Use of traits instead of Composition.
+
+  --Illuminate\Auth\Events\Logout.php
+    Use of traits instead of Composition.
+
+  --Illuminate\Auth\Events\PasswordReset.php
+    Use of traits instead of Composition.
+
+  --Illuminate\Auth\Events\Registered.php
+    Use of traits instead of Composition.
+  //Password
+  --Illuminate\Auth\Passwords\DatabaseTokenRepository.php
+    Use of Getters.
+    Static methods used.
+  //
+  --Illuminate\Auth\Passwords\AuthManager.php
+    Use of Getters.
+    OOP and Functional programming concepts mixed.
+
+  --Illuminate\Auth\EloquentUserProvider
+    Null returning.
+    Reflection is used in createModel method.
+    Use of Getters and Setters.
+  --Illuminate\Auth\SessionGuard.php
+    Use of traits instead of composition.
+    Some methods return null.
+    Lots of null checking.
+    Use of Getters and Setters.
+    Class is quite long, it has +700 lines of code.
+//Broadcasting
+  //Broadcasters
+  --Illuminate\Broadcasting\Broadcasters\Broadcaster.php
+    Use of reflection.
+    Use of Static methods inside methods.
+  -Illuminate\Broadcasting\Broadcasters\PusherBroadcaster.php
+    Use of Static functions.
+    Use of Getters.
+//Cache
+  --Illuminate\Cache\Repository.php
+    Use of traits instead of composition.
+    Lost of Null checking and Null returning.
+    Use of Getters and Setters.
+    Use of Static methods.
+    Use of Reflection.
+
+//Container
+  --Illuminate\Container\BoundMethod.php
+    Use of static methods.
+    Use of Reflection.
+  --Illuminate\Container\Container.php
+    OOP and Functional programming concepts mixed.
+    Null checking and Null returning.
+    Use of Static methods.
+    Use of Getters and Setters.
+    Class is long, It has +1200 lines of code.
+//Databse
+  --Illuminate\Database\Capsule\Manager.php
+    Use of traits.
+    Use of static methods.
+    Use of Getters and Setters.
+
+  --Illuminate\Database\Eloquent\Model.php
+    Use of traits.
+    Use of static methods.
+    Lots of Null checking and Null returning.
+    Use of Getters and Setters.
+    Class is big. It has +1400 lines of code. It is like God object.
+  --Illuminate\Database\Eloquent\Builder.php
+    Same comments like in Model.php.
+
+  --Illuminate\Database\Connection.php
+    Same comments like in Classes.
+
+//File System
+  -- Illuminate\Filesystem\Filesystem.php
+    Use of traits.
+    Use of Static methods.
+
+//HTTP
+  --Illuminate\Http\Request.php
+    Use of traits.
+    Use of Static methods.
+    Use of Getters and Setters.
+    Bull checking and Null returning.
+//Routing
+  --Illuminate\Routing\Route.php
+    Use of traits.
+    Use of Reflection.
+    Null return and Null checking.
+    Use of Getters and Setters.
+    Class is big, It has more than 800 lines of code.
+
+  --Illuminate\Routing\Router.php
+    Same comments like in Route.php class
+
+
+
+# zetaops/ulakbus (Python)
+
+About 25K lines of python code
+
++ Github issues
++ Really extensive contribution guide (http://www.ulakbus.org/wiki/wiki.html)
++ Code extensively documented, in Turkish though
++ Short release cycle
++ Both low-level and high-level tests (with selenium)
++ Usually files aren't too long (about 300 on average), only 13 files are more than 500 loc, and only 2 have more than 1K loc (1057 and 1283)
++ Haven't found really huge methods, longest methods are about 30 loc
+
+- Changelog is outdated
+- Code style is stated in docs (PEP8), but it's not enforced and I've found violations
+- Test coverage is unknown
+- No CI (there's only .sh script which runs tests (but it's non-blocking to failing tests, e.g. there is no `set -e` in it)
+- About 90 None usages, mostly due to framework interface (seems that they've written this framework themselves), but some of them really unnecessary
+- Couple of silent error passing (except: pass is a nasty Python antipattern)
+- There are really big models (ulakbus/models/ogrenci.py)
+- 74 static methods, I've found the only one which is used as a secondary constructor.
+- About 370 getters (methods starts with get_, not counting Python built-ins) and 92 setters (mostly ORM methods). Some of those getters don't even return anything, so I suppose they're storing some global or class variables which are being accessed outside then. (BankaBorcGetir.get_data for example)
+- Implementation inheritance everywhere
+- Whole utility module called "lib"
+
+As a summary, it's an MVC app without easily distinguishable purpose unless you
+look up the docs or dig into the code (but due to really good dev-docs you can
+start to contribute very fast). It is written quite good for such kind of app
+(no GOD classes, no huge methods), but it's heavily influenced by its non-OOP
+framework and ORM.
+
+
+
+# mgramin/sql-boot
+
+(more details here: https://gist.github.com/amihaiemil/239169ef959fc064307e06aef6d30fd4)
+
+The code base is too small! (less than 3000 LoC)
+
+Quick overview (+/- mean ups and downs)
+
+(+) Ticketing + ticket referencing
+(+) milestone set on each ticket
+(+) Code coverage calculated and decent (> 70 %)
+(+) Knowledge of the used framework; doesn't confuse it with JavaEE
+(+) Every class has an interface
+(+) No getters/setters POJOs
+(+) Class naming
+(+) Quick user guide and live demo options. Also, a lot of badges dislaying various states.
+(-) project has less than 10k LOC
+(-) no PRs, writing on master
+(-) There are 3 releases so far, but no automation for them/
+(-) Even though there is a Maven profile for qulice, it is not run during CI builds
+(-) Packaging of the classes.
+(-) No technical documentation and no proper javadocs
+
+1) Traceable changes/Github tickets: There are tickets in the github repo, most
+of them opened by the owner for tracking purposes. However, there are no Pull
+Requests, the author simply commits on master and adds the commit message fixes
+#123 -- this references the issue and closes it automatically, it's a Github
+feature.
+
+2) Release process: The project has 3 releases (1 after 94 commits, 1 after 76
+commits and 1 after 34 commits) -- they seem regular, but I didnt notice any
+automatisation of the process. It seems that he simply uses the Github release
+button.
+
+3) Static analysis: The project has a Maven profile for qulice (see here), but I
+do not see it being used neither in .travis.yml, nor in appveyor.yml
+
+4) Test coverage: The project calculates its code coverage using Jacoco maven
+plugion and sends the report to Coveralls, via the coveralls Maven plugin. The
+coverage is only calculated in one of the CIs (which makes sense), in Travis.
+Also, there is a coverage badge on the main README.md file
+
+5) Non Stop development: The project seems to be well structured, all the
+tickets have the milestone set. Also, there are 3 releases so far, seemed to be
+done at a more or less equal amount of commits. Also, the tickets are referenced
+in the commit messages.
+
+6) Patterns used: Framework: The main framework is Spring Boot, which is
+basically an alternative to JavaEE. To this regard, the author understands what
+Spring Boot is and uses it right, since the app is properly packaged with Maven
+Assembly Plugin, and run with Docker. There is a Dockerfile to run the
+application. This is very good, since I wouldn't have been surprised to see a
+Spring webapp ran on a JavaEE platform like Glassfish. Code: As far as I can
+tell, every class implements an interface, which is very good. I've also noticed
+Fake implementations for the respective interfaces. There are no POJO classes
+either, didn't notice getters and setters. However, there are a few JsonProperty
+annotations, in order for Jackson (JSON library) to be able to parse the objects
+into JSON. Lombok is used for overriding toString. Naming of the classes is also
+ok -- just a few Controller classes, which are used by Spring to expose the REST
+api. What I don't like, however, is the package structuring: each interfaces
+seems to have its package and then a child impl package, which holds the
+implementation. This seems too granular, and it's a sign to me that the
+developer wanted to just clearly structure the classes, without thinking of
+access modifiers and how these classes will access each other's methods, for
+instance. E.g.: Interface FileSystem is in package:
+com.github.mgramin.sqlboot.tools.files.file_system, while its implementations
+are in package com.github.mgramin.sqlboot.tools.files.file_system.impl -- this
+is mostly the pattern for all the interfaces.
+
+7) Documentation: The project has a short, but fair documentation for the users,
+on the README.md (including options to try the project directly on Heroku). It
+also has a demo db and you can use Docker to spin up a demo. However, I didn't
+find any technical documentation and the javadocs of the classes are rather
+poorn (some of them are even empty, only the @author tag is present). For me, as
+a developer, it would be very hard to start working on this, I have no clue of
+the overall architecture, how all those classes work together for instance. The
+only thing I understood was the entry point, which are those controller classes
+and Application class. For instance, I have no idea what is it with the folder
+config -- it only contains a tree of subfolders and some README.md files
+pointing to Wikipedia technical articles about topics such as Stored Procedures.
+I would love to see an archirecture.md file, containing a quick overview of the
+codebase, maintypes, terminology etc.
+
+
+
+# klapuch/Remembrall
+
+Summary:
+  +
+  Github issue tracking.
+  The coding is clean and understandable.
+  "This is cleanest OOP code that I ever seen in PHP".
+  No Traits,Null return is used.
+  Classes are small and have a few methods. Not any God objects.
+  Doployent is automated for Docker.
+  Covered with tests.
+  Travis CI.
+  Static Methods are avoided.
+  ORM is avoided.
+
+  -
+  In some classes the OOP and the functional programming consepts are mixed. But still code is clean.
+  I found getters in two classes.
+  In some classes, functions are called using call_user_func_array, which is like Reflection.
+  Not enough Documentation and Comments.
+  Project has 904 commits on github, but does not have any release or version.
+
+  These are the example Classes where I mostly found these issues:
+
+--ParticipatedUsers x
+  Use of functional programming with OOP.
+--ApiErrorCallback
+  calling function via call_user_func_array. It is also like Reflection.
+--EmailSubscription.php
+  Use of functional programming.
+--CollectiveParts.php
+  Use of functional programming.
+--FakePage.php
+  Use of Getters.
+--FakePart.php
+  Use of Getters.
+
+
+
+# DrBookings/drbookings:
+
+(more details here: https://gist.github.com/amihaiemil/29b5ccd6902e243cce29ee0dec2c857d)
+
+Quick overview (+/- mean ups and downs):
+
+(+) over 10k LOC
+(+) ticketing (started later in the project's life)
+(+) code coverage calculated and displayed in a badge.
+(+) multiple releases containing latest fixes
+(+) code seems to be well organized
+(+) class naming
+(-) no PRs, writing on master
+(-) really low code coverate, according to the badge (< 10%)
+(-) no automation of the release process
+(-) poor release descriptions and no milestones on open tickets
+(-) no static analysis check
+(-) "Test" classes in the codebase
+(-) No interfaces
+(-) No javadocs
+(-) No technical documentation
+
+1) Traceable changes/Github tickets: There are about a dozen tickets, in total,
+in the repo, meaning the owner started ticketing rather late in the project's
+development. There are no Pull Requests, the author simply commits on master and
+adds the commit message fixes #123 -- this references the issue and closes it
+automatically, it's a Github feature.
+
+2) Release process: The project has 21 releases so far, but it doesnt seem to be
+an automatic process. All of them are done by the developer, with titles such as
+"Awesome", "Good", "Try it out".
+
+3) Static analysis: I didn't find any static analysis checker. There is one
+single pom.xml, under the folder simple. The codebase seems to be under that
+folder, while all the others all build/configuration/plugin folders? The build
+script from .travis.yml is mvn clean package -Dheadless
+
+4) Test coverage: Code coverage is calculated and displayed with a badge on the
+README.md page. However, it is really low.
+
+5) Non Stop development: While there are a lot of releases, I see no (or poor)
+release notes and no milestones set on the open issues
+
+6) Patterns used: The application is developed with JavaFX and comes as a
+desktop application (.jar file to run). It doesn't seem to work with a database,
+but rather with XML files on disk. JAXB and its annotations are used to
+serialize/deserialize objects. The codebase well organized, but I noticed all
+sorts of *Test classes, which I don't think should be there. Most classes do not
+implement interfaces, and of those which do, most of them are javafx. specific
+interfaces, the classes implementing them probably do so for convension or
+because it is required by the framework. There are absolutely no javadocs.
+However, the class names seem to be OK.
+
+7) Documentation: The project has a User Wiki here, but absolutely no technical
+documentation. Besides that, the repository is very polluted with IDE/workspace
+specific files, which should have been gitignored (e.g. Eclipse's .project and
+.classpath files). I would have no clue where to start if I were to contribute
+on this project. I don't understand why the repository can't have a simple maven
+project in it, instead of having all sorts of folders and plugins etc. In this
+particular project, with such an old framework as JavaFX, I would clearly expect
+some strong technical overview/documentation + javadocs on every class.
+
+
+
+# flyimg/flyimg
+
+  These are the example Classes where I mostly found these issues:
+
+--ControllerResolver
+  use of instanceof
+  Class extendes Depricated Class Silex\ControllerResolver, which also uses depricated function like doGetArguments();
+--InputImage
+  use of Getters and Setters
+  Null or Empty string return
+--OutputImage
+  use of Getters and Setters
+  Null or Empty string return
+--CorController
+  PHP file content is created using ob_start and ob_end_clean;
+    "ob_start();
+        include(ROOT_DIR.'/src/Core/Views/'.$templateName.'.php');
+        $body = ob_get_contents();
+        ob_end_clean()";
+  use of Getters and Setters
+
+--ImageMetaInfo
+  Use of Getter and Setter;
+--OptionsBag
+  use of Getters and Setters
+
+--ImageHandler
+  Null return
+  use of Getters and Setters
+--ImageProcessor
+  use of Getters and Setters
+  Null return and Null checking
+  use of Reflection
+
+
+
+# miso-belica/sumy
+
+Project is too small (cloc says it has only 4K lines of all files in total)
+
+
+
+# pmed/v8pp (C++)
+
++ Travis CI
+
+- < 10.000 LOC (Sum is 5392)
+- singletons, statics, getter
+- Purpose is to "bind from C++ code such items as variables, functions,
+constants with a function set(name, item)"
+- Coverage ? Static analysis
+
+Comments:
+I'm not investing more time on this one, it's clearly not "Elegant" OOP
+
+
+
+# ribtoks/xpiks (C++)
+
++ Clear milestones
++ Clear issue organization, bug tracking, and labelling
++ Github release management - lots of releases, lots of tags, properly linked to issues
++ Travis CI
++ Organized suite of tests
++ > 1year project (since 2010)
++ > 10.000 LOC
+
+? Unclear Github issue tracking - Some commits have no reference to issues, but almost
+all issues link to commits.
+? Code coverage? Static analysis?
+? Written Coding guidelines, but doesn't seem to be automated
+
+- Getters, setters.
+- Classes with lots of different methods that do different things
+
+Comments:
+This seems to be by far the most maintainable and well organized.
+I think maybe it needs more automation, but it's, of all projects, the one I could simply
+grab and start contributing.
+Read my Overall conclusions at the beginning.
+
+
+
+
+
+
+
+"My money" would be on ribtoks/xpiks (C++) or SimonKagstrom/kcov (C++) in that order.
+Had, overall, more "intangible" quality than the others.
+Overall I'm also left with the feeling "are there any more other projects to review"?
+If I had to pick one it would be ribtoks/xpiks.
+As for the other projects, they're good efforts on different fronts
+but not "winner material" for the contest.
