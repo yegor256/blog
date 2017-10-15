@@ -101,7 +101,7 @@ start with the procedural way:</p>
 
 <pre>int pos = 0;
 for (Double probe : probes) {
-  if (probe == 0.0d || probe == 1.0d) {
+  if (probe != 0.0d &amp;&amp; probe != 1.0d) {
     continue;
   }
   if (++pos &gt; 10) {
@@ -154,7 +154,7 @@ an atomic counter:</p>
 
 <pre>AtomicInteger index = new AtomicInteger();
 StreamSupport.stream(probes.spliterator(), false)
-  .filter(probe -&gt; probe == 0.0d || probe == 1.0d)
+  .filter(probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d)
   .limit(10L)
   .forEach(
     probe -&gt; System.out.printf(
@@ -194,7 +194,7 @@ is how I would do it with <a href="http://www.cactoos.org">Cactoos</a>, which is
     new Limited&lt;Double&gt;(
       new Filtered&lt;Double&gt;(
         probes,
-        probe -&gt; probe == 0.0d || probe == 1.0d
+        probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d
       ),
       10
     ),
@@ -204,7 +204,7 @@ is how I would do it with <a href="http://www.cactoos.org">Cactoos</a>, which is
       );
       return true;
     }
-  ),
+  )
 ).value();</pre>
 
 <p>Let's see what's going on here. First,
@@ -231,7 +231,7 @@ just use another class, called <code>AndWithIndex</code>:</p>
     new Limited&lt;Double&gt;(
       new Filtered&lt;Double&gt;(
         probes,
-        probe -&gt; probe == 0.0d || probe == 1.0d
+        probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d
       ),
       10
     ),
@@ -241,7 +241,7 @@ just use another class, called <code>AndWithIndex</code>:</p>
       );
       return true;
     }
-  ),
+  )
 ).value();</pre>
 
 <p>Instead of <code>Scalar&lt;Boolean&gt;</code> we now map our probes to
@@ -265,7 +265,7 @@ with the help of Guava's
 <pre>Iterable&lt;Double&gt; ready = Iterables.limit(
   Iterables.filter(
     probes,
-    probe -&gt; probe == 0.0d || probe == 1.0d
+    probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d
   ),
   10
 );
