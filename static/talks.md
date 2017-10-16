@@ -127,6 +127,13 @@ Riga, Latvia<br/>
 Voronezh, Russia<br/>
 20 December 2017
 
+<div class="talk-event"/>
+<img src="http://devexperience.ro/images/logo_black_green_white.png" class="future-talk" alt="DevExperience 2018"/>
+Keynote about something...<br/>
+[DevExperience 2018](http://devexperience.ro/)<br/>
+Iasi, Romania<br/>
+20 April 2018
+
 <!--
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2018"/>
