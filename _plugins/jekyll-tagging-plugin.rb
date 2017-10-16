@@ -64,6 +64,8 @@ module Jekyll
       prefix = case tag
       when 'oop'
         "<img src='/images/books/elegant-objects/cactus.svg' alt='OOP'/>"
+      when 'java'
+        "<img src='/images/java-icon.svg' alt='Java'/>"
       else
         ""
       end
