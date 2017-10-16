@@ -5,7 +5,7 @@ date: 2017-10-05
 place: Odessa, Ukraine
 tags: java
 description: |
-  Lazy loading is a popular technique in OOP, which usually is
+  Lazy loading is a popular technique in OOP, which is usually
   done through NULL references; Cactoos offers a better way,
   with the help of a few Java primitives.
 keywords:
@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 You obviously know what [lazy loading](https://en.wikipedia.org/wiki/Lazy_loading)
-is, right? And you also know what is [caching](https://en.wikipedia.org/wiki/Cache_%28computing%29).
+is, right? And you no doubt know about [caching](https://en.wikipedia.org/wiki/Cache_%28computing%29).
 To my knowledge, there is no elegant way in Java to implement them. Here
 is what I found for myself with the help of Cactoos primitives.
 
@@ -28,7 +28,7 @@ is what I found for myself with the help of Cactoos primitives.
 
 {% jb_picture_body %}
 
-Let's say, we need an object that will encrypt the text. Speaking in
+Let's say we need an object that will encrypt some text. Speaking in
 a more object-oriented way, it will encapsulate the text and _become_ its
 encrypted form. Here is how we will use it (let's create
 [tests first]({% pst 2017/mar/2017-03-24-tdd-that-works %})):
@@ -41,10 +41,10 @@ Encrypted enc = new EncryptedX("Hello, world!");
 System.out.println(enc.asString());
 {% endhighlight %}
 
-Now, let's implement it, in a very primitive way, with one
+Now let's implement it, in a very primitive way, with one
 [primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
 constructor. The encryption mechanism
-will just add `+1` to each byte in the incoming data, assuming
+will just add `+1` to each byte in the incoming data, and will assume that
 the encryption won't break anything (a very stupid
 assumption, but for the sake of this example it will work):
 
@@ -70,9 +70,9 @@ Looks correct so far? I [tested it](https://github.com/yegor256/blog/tree/master
 and it works. If the input is `"Hello, world!"`,
 the output will be `"Ifmmp-!xpsme\""`.
 
-Next, let's say we want our class to accept an
+Next, let's say that we want our class to accept an
 [`InputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html)
-aside from
+as well as a
 [`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html).
 We want to call it like this, for example:
 
@@ -110,7 +110,7 @@ class Encrypted2 implements Encrypted {
 {% endhighlight %}
 
 Technically it works, but stream reading is right inside the constructor,
-which is a [bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
+which is [bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
 [Primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
 constructors must not do anything else but attribute assignments, while secondary
 ones may only create new objects.
@@ -153,7 +153,7 @@ class Encrypted3 {
 }
 {% endhighlight %}
 
-Works great, but looks ugly. The ugliest part is in these two lines, of course:
+Works great, but looks ugly. The ugliest part is in these two lines of course:
 
 {% highlight java %}
 this.text = null;
@@ -163,9 +163,9 @@ this.input = null;
 It makes the object
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 and it's [NULL]({% pst 2014/may/2014-05-13-why-null-is-bad %}). It's ugly,
-trust me. Unfortunately, azy loading and NULL references always come together in
+trust me. Unfortunately, lazy loading and NULL references always come together in
 [classic examples](https://stackoverflow.com/a/2192271/187141).
-However, there is a better way to implement it.
+However there is a better way to implement it.
 Let's refactor our class, this time using
 [`Scalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html)
 from
@@ -225,9 +225,9 @@ to work with it, the function gets executed and we have the result.
 
 There is one problem with this code though. It will read the input stream
 every time we call `asString()`, which will obviously not work, since only
-the first time the stream will have the data. On every next call the stream
+the first time will the stream have the data. On every subsequent call the stream
 will simply be empty. Thus, we need to make sure that `this.text.value()`
-executes the encapsulated `Scalar` only once. All consecutive calls must return
+executes the encapsulated `Scalar` only once. All later calls must return the
 previously calculated value. We need to _cache_ them. Here is how:
 
 {% highlight java %}
@@ -271,5 +271,5 @@ class Encrypted5 implements Encrypted {
 
 Now we're safe and the design is elegant. It includes lazy loading and caching.
 
-I'm using this approach in many projects now and it seems rather convenient,
-obvious, and object-oriented.
+I'm using this approach in many projects now and it seems convenient,
+clear, and object-oriented.
