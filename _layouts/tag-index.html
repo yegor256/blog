@@ -19,6 +19,11 @@ description: |
           Also, join my <a href="https://gitter.im/yegor256/elegantobjects">Gitter chat</a>,
           where we discuss things urgently and frequently.
         </p>
+      {% elsif page.title == 'java' %}
+        <h1>{{ page.posts.size }} posts about Java</h1>
+        <p>
+          <img alt="Java logo" src="/images/java-icon.jpg" style="width:125px;height:150px;float:right;margin-left:1em"/></a>
+        </p>
       {% elsif page.title == 'unknown' %}
         <h1>unknown</h1>
       {% else %}
