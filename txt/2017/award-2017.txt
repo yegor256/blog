@@ -606,6 +606,52 @@ codebase, maintypes, terminology etc.
 
 
 
+# mafagafogigante/dungeon
+
+Quick overview (+/- mean ups and downs)
+
+(+) over 10k LOC
+(+) Development via issues and PRs.
+(+) No monster classes -- The only bigger classes I noticed where the entry points (classes Game and GameWindow). The rest seem to be < 150 loc.
+(+) Javadocs are present on most classes.
+(+) Regular releases
+(+) Automation of some release tasks.
+(+) Static analysis check with Checkstyle
+(+) Fine overall documentation of the versioning, build and contributing schemes
+(+) Milestones attached to issues
+(-) Very low test coverage (25%)
+(-) No interfaces. There are almost no interfaces in the codebase.
+
+1) Traceable changes/Github tickets: Changes seem to be implemented in an
+organized way, via open issues and PRs (240 closed issues, 50 open issues and
+112 closed PRs) -- it is the best project I've reviewd, from this point of view.
+
+2) Release process: The project has many releases and they seem to be done on a
+regulat basis. THere also seems to be an automation involved in the process,
+which adds a new tag in the repository, updates the pom.xml version and some
+information in the wiki:
+https://github.com/mafagafogigante/dungeon/blob/master/release.sh
+
+3) Static analysis: The project uses Checkstyle for static analysis check.
+
+4) Test coverage: Test coverage is calculated and displayed via
+https://codecov.io. However, it is very low (25%)
+
+5) Non Stop development: Development iterations seem well documented via
+milestones set on issues. Also, versioning of the releases is well documented
+here: https://github.com/mafagafogigante/dungeon#versioning-scheme.
+
+6) Patterns used: This is a desktop application. It is, in fact, a game.
+Framework: Desktop application, UI written with Java Swing.
+
+7) Documentation: This project is really well documented -- it has both
+README.md and a wiki. The versioning and build schemes are explained well, and
+the project ran smoothly on my machine from the first trial. Even the final jar
+ran fine and the game started. There is also a detailed CONTRIBUTING.md
+
+
+
+
 # klapuch/Remembrall
 
 Summary:
@@ -784,17 +830,10 @@ all issues link to commits.
 - Getters, setters.
 - Classes with lots of different methods that do different things
 
-Comments:
 This seems to be by far the most maintainable and well organized.
 I think maybe it needs more automation, but it's, of all projects, the one I could simply
 grab and start contributing.
 Read my Overall conclusions at the beginning.
-
-
-
-
-
-
 
 "My money" would be on ribtoks/xpiks (C++) or SimonKagstrom/kcov (C++) in that order.
 Had, overall, more "intangible" quality than the others.
@@ -802,3 +841,5 @@ Overall I'm also left with the feeling "are there any more other projects to rev
 If I had to pick one it would be ribtoks/xpiks.
 As for the other projects, they're good efforts on different fronts
 but not "winner material" for the contest.
+
+
