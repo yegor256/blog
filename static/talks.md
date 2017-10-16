@@ -119,6 +119,14 @@ Moscow, Russia<br/>
 Riga, Latvia<br/>
 1 December 2017
 
+<div class="talk-event"/>
+<img src="http://deeprefactoring.ru/apple-touch-icon.png" class="future-talk" alt="DeepRefactoring 2017"/>
+**TDD наоборот или как срезать углы**<br/>
+**Почему меня не взяли в Amazon**<br/>
+[DeepRefactoring 2017](http://deeprefactoring.ru/about/)<br/>
+Voronezh, Russia<br/>
+20 December 2017
+
 <!--
 <div class="talk-event"/>
 <img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2018"/>
