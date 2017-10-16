@@ -21,8 +21,8 @@ jb_picture:
 
 You obviously know what [lazy loading](https://en.wikipedia.org/wiki/Lazy_loading)
 is, right? And you no doubt know about [caching](https://en.wikipedia.org/wiki/Cache_%28computing%29).
-To my knowledge, there is no elegant way in Java to implement them. Here
-is what I found for myself with the help of Cactoos primitives.
+To my knowledge, there is no elegant way in Java to implement either of them. Here
+is what I found out for myself with the help of Cactoos primitives.
 
 <!--more-->
 
@@ -112,7 +112,7 @@ class Encrypted2 implements Encrypted {
 Technically it works, but stream reading is right inside the constructor,
 which is [bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
 [Primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
-constructors must not do anything else but attribute assignments, while secondary
+constructors must not do anything but attribute assignments, while secondary
 ones may only create new objects.
 
 Let's try to refactor and introduce lazy loading:
@@ -153,16 +153,16 @@ class Encrypted3 {
 }
 {% endhighlight %}
 
-Works great, but looks ugly. The ugliest part is in these two lines of course:
+Works great, but looks ugly. The ugliest part is these two lines of course:
 
 {% highlight java %}
 this.text = null;
 this.input = null;
 {% endhighlight %}
 
-It makes the object
+They make the object
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
-and it's [NULL]({% pst 2014/may/2014-05-13-why-null-is-bad %}). It's ugly,
+and they're using [NULL]({% pst 2014/may/2014-05-13-why-null-is-bad %}). It's ugly,
 trust me. Unfortunately, lazy loading and NULL references always come together in
 [classic examples](https://stackoverflow.com/a/2192271/187141).
 However there is a better way to implement it.
@@ -210,11 +210,11 @@ class Encrypted4 implements Encrypted {
 Now it looks way better. First of all, there is only one primary constructor and
 two secondary ones. Second, the object is
 [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
-Third, there is a lot
+Third, there is still a lot
 of room for
 [improvement]({% pst 2014/nov/2014-11-07-how-immutability-helps %}):
-we can add more constructors, which will accept
-any other sources of data, for example
+we can add more constructors which will accept
+other sources of data, for example
 [`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html) or a byte array.
 
 In a nutshell, the attribute that is supposed to be loaded in a "lazy" way
@@ -228,7 +228,7 @@ every time we call `asString()`, which will obviously not work, since only
 the first time will the stream have the data. On every subsequent call the stream
 will simply be empty. Thus, we need to make sure that `this.text.value()`
 executes the encapsulated `Scalar` only once. All later calls must return the
-previously calculated value. We need to _cache_ them. Here is how:
+previously calculated value. So we need to _cache_ it. Here is how:
 
 {% highlight java %}
 class Encrypted5 implements Encrypted {
@@ -249,10 +249,10 @@ the result of the first call.
 
 The last problem to solve is about concurrency. The code we have above is not
 thread safe. If I create an instance of `Encrypted5` and pass it to two threads,
-which will call `asString()` simultaneously, the result will be unpredictable,
+which call `asString()` simultaneously, the result will be unpredictable,
 simply because
 [`StickyScalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html)
-is not thread-safe. There is another primitive to help us, it's called
+is not thread-safe. There is another primitive to help us out though, called
 [`SyncScalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html):
 
 {% highlight java %}
