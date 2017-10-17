@@ -29,6 +29,7 @@ module Yegor
           on <time itemprop='dateModified' datetime='#{date.strftime('%Y-%m-%dT%H:%M:%S%z')}'>#{date.strftime('%-d %B %Y')}</time></li>"
         end
       end
+      print '.'
     end
   end
 end
