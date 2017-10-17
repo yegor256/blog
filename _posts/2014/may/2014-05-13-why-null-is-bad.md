@@ -259,7 +259,7 @@ with immutability in mind. This means that an object gets
 all necessary knowledge during its instantiating and never
 changes its state during the entire life-cycle.
 
-Very often, `NULL` values are used in [lazy loading](http://en.wikipedia.org/wiki/Lazy_loading),
+Very often, `NULL` values are used in [lazy loading]({% pst 2017/oct/2017-10-17-lazy-loading-caching-sticky-cactoos %}),
 to make objects incomplete and mutable. For example:
 
 {% highlight java %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lazy Loading and Caching via Sticky Cactoos Primitives"
-date: 2017-10-05
+date: 2017-10-17
 place: Odessa, Ukraine
 tags: java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - java cache in memory
   - java cactoos
   - cactoos
-image: /images/2017/02/...
+image: /images/2017/10/reality.jpg
 jb_picture:
-  caption:
+  caption: Reality (2012) by Matteo Garrone
 ---
 
 You obviously know what [lazy loading](https://en.wikipedia.org/wiki/Lazy_loading)
