@@ -49,4 +49,4 @@ script:
   - set -e
   - rake
   - export JEKYLL_ENV=production
-  - jgd -u git@github.com:yegor256/blog.git
+  - travis_wait 30 jgd -u git@github.com:yegor256/blog.git
