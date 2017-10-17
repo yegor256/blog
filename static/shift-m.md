@@ -36,6 +36,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Previous episodes:
 
+<!--
+&#35;12: [Bert Heymans about their LeanCoffee meetup](/shift-m/2017/12.html)<br/>
+17 October 2017; 44 min.
+-->
+
 &#35;10: [Johanna Rothman about hiring issues](/shift-m/2017/10.html)<br/>
 11 October 2017; 64 min.
 
