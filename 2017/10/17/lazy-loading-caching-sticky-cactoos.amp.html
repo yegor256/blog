@@ -108,7 +108,7 @@ assumption, but for the sake of this example it will work):</p>
   }
   @Override
   public String asString() {
-    final byte in = this.text.getBytes();
+    final byte[] in = this.text.getBytes();
     final byte[] out = new byte[in.length];
     for (int i = 0; i &lt; in.length; ++i) {
       out[i] = (byte) (in[i] + 1);
@@ -189,7 +189,7 @@ ones may only create new objects.</p>
       }
       this.text = new String(baos.toByteArray());
     }
-    final byte in = this.text.getBytes();
+    final byte[] in = this.text.getBytes();
     final byte[] out = new byte[in.length];
     for (int i = 0; i &lt; in.length; ++i) {
       out[i] = (byte) (in[i] + 1);
