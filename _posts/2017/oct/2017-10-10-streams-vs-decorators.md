@@ -49,7 +49,7 @@ start with the procedural way:
 {% highlight java %}
 int pos = 0;
 for (Double probe : probes) {
-  if (probe != 0.0d && probe != 1.0d) {
+  if (probe == 0.0d || probe == 1.0d) {
     continue;
   }
   if (++pos > 10) {
