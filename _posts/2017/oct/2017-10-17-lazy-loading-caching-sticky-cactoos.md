@@ -56,7 +56,7 @@ class Encrypted1 implements Encrypted {
   }
   @Override
   public String asString() {
-    final byte in = this.text.getBytes();
+    final byte[] in = this.text.getBytes();
     final byte[] out = new byte[in.length];
     for (int i = 0; i < in.length; ++i) {
       out[i] = (byte) (in[i] + 1);
@@ -143,7 +143,7 @@ class Encrypted3 {
       }
       this.text = new String(baos.toByteArray());
     }
-    final byte in = this.text.getBytes();
+    final byte[] in = this.text.getBytes();
     final byte[] out = new byte[in.length];
     for (int i = 0; i < in.length; ++i) {
       out[i] = (byte) (in[i] + 1);
