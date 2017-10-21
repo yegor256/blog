@@ -33,7 +33,7 @@ testing anything
 
 # JnRouvignac/AutoRefactor
 
-! I failed to build the project (tried to build with oraclejdk7, oraclejdk8, openjdk8 on tag "1.1.0")
+I failed to build the project (tried to build with oraclejdk7, oraclejdk8, openjdk8 on tag "1.1.0")
 
 Issue tracking
 + GitHub issues
@@ -81,7 +81,7 @@ Other remarks:
 
 # javaslang/javaslang (vavr-io/vavr)
 
-! It's former javaslang. See http://blog.vavr.io/javaslang-changes-name-to-vavr/. Blame Oracle for this confusion.
+It's former javaslang. See http://blog.vavr.io/javaslang-changes-name-to-vavr/. Blame Oracle for this confusion.
 
 Issue tracking
 + GitHub issues
@@ -157,6 +157,29 @@ Antipatterns:
 Other remarks
 + good documentation
 - default methods in interfaces (com.aljebra.scalar.Scalar)
+
+
+
+# ntpsec/ntpsec
+
++ Project is > 1 year old (seems it's maintained since around 1997)
++ Project is > 10.000 LOC (49535 lines of C, 72297 LOC in total)
+
+? Code itself is well documented for the most part, but it's not OOP
+? There seem to be quite an ammount of unit tests, but no clear coverage indicators
+? Project is both on Github and on Gitlab, Issue tracking only on Gitlab
+? There are rules documented in terms of, Code style, Git commit messages format, Versioning,
+among other rules, but most are not automated.
+
+- There are releases on GitHub, but each release on Github has no
+description of what went to release.
+- No displayable signs of automated releases (event though there are scripts for it)
+- No displayable signs of any CI setup
+- No displayable signs static analysis
+- No displayable signs of automated Coverage reports
+- 0 Pull requests on Github
+- 0 Issues tracked on Github
+- A considerable part of commit history is unlinked from issues
 
 
 
@@ -606,6 +629,80 @@ codebase, maintypes, terminology etc.
 
 
 
+# goreleaser/goreleaser
+
+Summary
+  +Github issue tracking.
+  +The project has 168 releases.
+  +The project is versioned.
+  +The project has great documentation and code comments.
+  +Travic CI.
+
+  -It seems that project is File Oriented rather than Object Oriented.
+  -Lots of Structs(Classes) are in the same file.
+  -Functions are created out of the Classes which makes then Global.
+  -Null checking
+  -Coding style is like in Procedural Porgramming.
+  -Some varaibles are created out of the methods or Objects.
+  -Project is less than 10K lines.
+
+
+-gooleaser\checksum\checksum.go
+  These methods(functions) (SHA256, calculate, doCalculate) are used like in procedural programming. They need to be converted or wrapped into Struct(Classes).
+  Null checking is used.
+-gooleaser\config\config.go
+  Lots of Structs(Classes) are inside one file. Move them into seperate.
+  Some methods(functions) need to be converted into struct(Class) beacuse they are used like in procedural programming.
+  Null checking is used.
+-gooleaser\internal\context.go
+  Varables are declared outof function and objects.
+  Lots of Null checking.
+--All other files are almost same problems as above.
+
+
+
+# kogoia/MRTD.NET
+
+  +Coding style is Clean.
+  +Dependency injection  is avaoided.
+  +Classes and Methods are small, and Named Correctly.
+  +Among C# projects it has cleanest code followed by OOP concept.
+
+  -309 commits but do not have any releases.
+  -No github Issue tracking.
+  -Static Class and Static methods are used.
+  -I found one Null checking.
+  -OOP and Functional Programming concepts mixed.
+
+  These are the example Classes where I mostly found these issues:
+
+-SmartCardApi.Infrastructure.LinqExtensions.cs
+  Class and Method are Static.
+
+-SmartCardApi.Infrastructure.Cache.cs
+  Null checking is used.
+
+-SmartCardApi.MRZ.CheckedDigit.cs
+  Functional programming concept is used.
+     (a, b) => new Product(a, b)
+-SmartCardApi.Infrastructure.Sum.cs
+  Functional programming concept is used.
+     (prev, next) => plus(prev, next.Value())
+
+-SmartCardApi.SecureMessaging.Pipe.SecureMessagingPipe.cs
+  Functional programming concept is used.
+    (prev, next) =>
+                        {
+                            Console.WriteLine("{0} - {1}", next.StartIndex.Value(), next.Count.Value());
+                            return prev.Concat(
+                                _securedReader.Transmit(new ReadBinaryCommandApdu(next.StartIndex, next.Count))
+                                    .Bytes()
+                            ).ToArray();
+                        });
+  Lambda expression is used.
+
+
+
 # mafagafogigante/dungeon
 
 Quick overview (+/- mean ups and downs)
@@ -651,6 +748,11 @@ ran fine and the game started. There is also a detailed CONTRIBUTING.md
 
 
 
+# javascript-obfuscator/javascript-obfuscator
+
+Nobody volunteered to review it. So, I will review it myself. Yegor.
+
+
 
 # klapuch/Remembrall
 
@@ -688,6 +790,43 @@ Summary:
   Use of Getters.
 --FakePart.php
   Use of Getters.
+
+
+
+# zahasoft/repository
+
+  +The project has comments.
+  +Covered with tests
+
+  -Project is young and to small, first commit was made Jun 18, 2017.
+  -The Project Has 31 commits but does not have any realises.
+  -No issue tracking.
+  -No documentation.
+  -The project has less than 2K lines of code.
+  -Naming of Classes are not properly managed. Some classes consist of 4 nouns which makes difficult to read.
+
+  These are the example Classes where I mostly found these issues:
+--Zahasoft.Repository.SelectManyModel.cs
+  The method SelectManyModel takes 5 params put them into one object.
+  Null return is used.
+--Zahasoft.Repository.EntityFramework.DependencyExtensions.cs
+  The class and all methods inside of it are static.
+  In the methods called AddRepository it is used lots of checks for typeof.
+
+--Zahasoft.Repository.EntityFrameworkCommandRepository.cs
+  Null checking is used.
+  The method GetDateTimeNow is static.
+
+--Zahasoft.Repository.EntityFrameworkQueryRepository.cs
+  Class has long name.
+  I found lots of static methods, null checking and null returning.
+--Zahasoft.Repository.EntityFrameworkUnitOfWork.cs
+  Class name consists of 5 words, make it shorter.
+  OOP and functional programming concepts are mixed.
+  Checking for typeof, which is bad.
+  Null checking.
+  Use of static method.
+-- Other classes are too small to say something.
 
 
 
@@ -757,10 +896,30 @@ some strong technical overview/documentation + javadocs on every class.
 
 # flyimg/flyimg
 
-  These are the example Classes where I mostly found these issues:
+Summary:
+  +
+  The project is well documented and covered with tests.
+  The coding is clean and understandable.
+  The project is versioned.
+  Lots of comments are used.
+  Github issue tracking.
+  Github release management.
+  Deployment is automated, for Docker, Git and Composer.
+
+  -
+  Project Depends on Silex and Symfony components.
+  So, If we do not count Silex and Symfony Components, the project itself is about 2K lines of code.
+  The project uses lots of Getters and Setters.
+  Some functions return Null instead of Throwing Exception
+  Some Classes instantiated from Depricated Classes of Silex and Symfony.
+  Reflection is used.
+  In git history the commit messages do not describe what actually was changed. The messages are shallow.
+  The Project uses God objects of Silex and Symfony that have classes more that 500 lines of code.
+
+These are the example Classes where I mostly found these issues:
 
 --ControllerResolver
-  use of instanceof
+  Chenking for (instance of)
   Class extendes Depricated Class Silex\ControllerResolver, which also uses depricated function like doGetArguments();
 --InputImage
   use of Getters and Setters
@@ -794,6 +953,102 @@ some strong technical overview/documentation + javadocs on every class.
 # miso-belica/sumy
 
 Project is too small (cloc says it has only 4K lines of all files in total)
+
+
+
+# simplcommerce/SimplCommerce
+
+Summary
+
+  +Github issue tracking.
+  +Github release management. but only 3 release.
+  +Covered with tests.
+  +Deployment automated for Docker.
+  +Travis
+
+  -Naming of Classes, Properties and Methods not properly done. They are confusing.
+  -Anti patterns like Repository, Dependency injection and ORM are used.
+  -Some methods are too long.
+  -OOP and Functional Programming concepts mixed.
+  -Lambda expressions are used.
+  -Null checking.
+  -Lots of Annotaions are used.
+
+These are the example Classes where I mostly found these issues:
+
+--SimplCommerce.Module.ActivityLog.Controllers. MostViewedEntityController.cs
+  Dependency Injection is Used.
+  Annotaions are used.
+  Lambda expression is used.
+
+--SimplCommerce.Module.ActivityLog.Data.ActivityRepository.cs
+  Lambda expression is used.
+
+--SimplCommerce.Module.Catalog.Components.CategoryBreadcrumbViewComponent.cs
+  Class name is too long.
+  Lambda expression is used.
+  Dependency Injection is Used.
+--SimplCommerce.Module.Catalog.Components.CategoryMenuViewComponent.cs
+  Dependency Injection is Used.
+  Lamda expression is used.
+--SimplCommerce.Module.Catalog.Components.CategoryWidgetViewComponent.cs
+  Samething like in above classes.
+
+--SimplCommerce.Module.Catalog.Controllers.BrandApiController.cs
+  Dependency injection is used.
+  Null checking is used.
+  Anotations are used.
+  Lamda expression is used.
+--SimplCommerce.Module.Catalog.Controllers.BrandController.cs
+  Lambda expression is used.
+  Some methods are too long.
+-SimplCommerce.Module.Catalog.Controllers.CategoryApiController.cs
+  Anotations are used.
+  Dependency injection is used.
+  Null checking is used.
+  Lambda expression is used.
+
+-SimplCommerce.Module.Catalog.Controllers.CategoryController.cs
+  Samething like in class CategoryApiController.cs
+
+--The same for all controllers in SimplCommerce.Module.Catalog.
+
+-SimplCommerce.Module.Contacts.Controllers.ContactApiController.cs
+  Lots of Annotaions.
+  Lots of Null checking.
+
+
+
+# dkhmelenko/Varis-Android
+
+Android client for travis CI.
+
+Overview
+I can`t find out any reason for this application to get quality award. This code has been written in fully procedural way. A bunch of utility classes. I can`t find out at least one immutable class.
+
+Let's look at some details:
+Some Cons:
+Test names does not explain what we expect to test. As example testParseXmlDateTime.
+Mocking in tests.
+Project structure does not divided to infrastructure entities (for android sdk) and core or business entities.
+I can`t find out some core domains!
+Package Common\constants will be a rubbish dump in the future. But now it contains not bounded to each other constants.
+Bunch of utility classes.
+Function arguments must be final.
+One pros:
+I Can find out one OOP thing. This is `log` package. But there are mutable objects without any hierarchy. Also i can`t find out any interfaces.
+
+Ci & automation
+Project use travis-CI.
+Project maintain code coverage. But code coverage is 17%.
+Project does not maintains static code analysis.
+Also:
+Project has releases,
+I can`t find out changelog
+Commits are small.
+I can`t find out how to build the project into readme file.
+
+Rating: 2\10
 
 
 
@@ -843,3 +1098,85 @@ As for the other projects, they're good efforts on different fronts
 but not "winner material" for the contest.
 
 
+
+# octaviospain/Musicott
+
+Audioplayer and playlist manager.
+
+Overview:
+Project has a domain core. Core contains obvious abstractions: Player, Playlist, MusicLibrary and etc. It seems like true oop but it is not true. Objects are not immutable living organisms in this world. Objects are puppets with getters and setters in this world.
+
+Let's look at some details:
+Codestyle
+`If` expression must be with {}
+It is not defined what code style is used.
+True OOP
+Project has a domain core: Player, playlist and etc.
+Domain core contains classes instead of interfaces
+Too many responsibility for each of them.
+Objects are simply data containers. They uses for transferring data between runners and tasks.
+Objects are not immutable. Too many getters and setters.
+Not null safety.
+Classes must be final\abstract.
+I can`t find out static methods.
+Too few tests.
+Domain classes has a few documentation.
+
+Also:
+It has release history, changelog and a few issues.
+Commits are not small.
+
+CI & automation:
+It uses travis CI.
+Project maintains code coverage. But it only 28%
+It uses sonarcloud.io for static analysis.
+
+Rating: 3\10 + 0,5 for AC\DC in readme.
+
+
+
+# ev3dev-lang-java/ev3dev-lang-java
+
+This project designed to build Software for Robots with EV3Dev hardware.
+
+Overview:
+Most classes is interlayer for reading data and writing commands to the bus. This classes looks like true OOP classes. They make some abstraction (may be good abstraction for users) for interaction with command bus. But this classes do not encapsulate some state. They do not have some behavior. They encapsulate only knowledge how to properly send command to the bus. They are utility classes, nothing more unfortunately.
+
+Let's look at some details:
+Tests:
+There are some mocks in tests.
+Tests names does not transparent.
+Too few tests.
+Tests contains word `name` two times. Example: testEV3DevPlatformOnBrickPi3Test(). Ideally, `test` must be omitted at all.
+Some tests do nothing.
+Test code coverage not defined.
+
+Style:
+Code formatting is not perfect.
+It is not defined what code style is used.
+
+True OOP:
+Project has a domain core.
+Domain core contains classes instead of interfaces
+Domain core classes are utility classes.
+There are too many getters and setters in the project
+Too many magic numbers. it's terrible. Example:
+public SensorMode getGyroMode() {
+        return getMode(2);
+ }
+Classes must be final or abstract
+Sysfs is a static. Other classes uses Sysfs silently. This class must be decidedly injected to other classes.
+Most classes implements some interface. Also i find out some interface segregation.
+
+Also:
+I like readme in this project. It contains examples, quick introduction how to create first Project and deploy it. And even some videos!
+It has release history, issues. It contains Release notes. Awesome!
+Commits are small, but is not self described.
+Do not defined rules for static code analysis.
+
+CI & automation:
+Project use travis-CI.
+Ci only build project and run tests. No test coverage, no  code static analysis.
+It contains several gradle files. Good idea!
+
+Rating: 4\10
