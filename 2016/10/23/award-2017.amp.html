@@ -207,7 +207,8 @@ I invited six people to help me review the projects. Their names are:</p>
 <a href="https://github.com/skapral">Sergey Kapralov</a> (Java, 3 projects)</li>
 <li>
 <a href="https://github.com/amihaiemil">Mihai Andronache</a> (Java, 3 projects)</li>
-<li>Sergey Bukharov (Java, 3 projects)</li>
+<li>
+<a href="https://github.com/Bukharovsi">Sergey Bukharov</a> (Java, 3 projects)</li>
 <li>
 <a href="https://github.com/valentjedi">Valentin Ignatyev</a>: (Python, 2 projects)</li>
 </ul>
@@ -218,17 +219,137 @@ This is the summary of everything they sent me:
 the next few days, stay tuned!</p>
 
 <p>[21 Oct 2017]
-My short list includes these 8 projects:
-<code>vavr-io/vavr</code>,
+My short list includes these six projects (in random order):
 <code>php-ai/php-ml</code>,
+<code>vavr-io/vavr</code>,
 <code>zetaops/ulakbus</code>,
-<code>mgramin/sql-boot</code>,
-<code>kogoia/MRTD.NET</code>,
 <code>mafagafogigante/dungeon</code>,
-<code>klapuch/Remembrall</code>,
-<code>ribtoks/xpiks</code>. Tomorrow I will decide how to split $4096.</p>
+<code>ribtoks/xpiks</code>,
+<code>javascript-obfuscator/javascript-obfuscator</code>.
+Tomorrow (hopefully) I will decide how to split $4096.</p>
 
+<p>[23 Oct 2017]
+These are my own observations per project from the short list. I will
+only mention negative things, since all projects are pretty good, no need
+to say how good they are. I listed problems in order of importance (most critical on top).</p>
 
+<p><a href="https://github.com/php-ai/php-ml"><code>php-ai/php-ml</code></a> (9.8K LoC PHP, 29K <a href="/2014/11/14/hits-of-code.html">HoC</a>):</p>
+
+<ul>
+<li>How do you release it?</li>
+<li>Getters, setters and mutability in many places</li>
+<li>NULL is in many places (again, I know that no method overloading in PHP)</li>
+<li>
+<a href="/2015/03/09/objects-end-with-er.html">-ER</a>: Estimator, Classifier, Clusterer, Optimizer, etc.</li>
+<li>
+<a href="/2015/05/07/ctors-must-be-code-free.html">code in constructors</a> (yes, I understand that it's PHP)</li>
+<li>
+<a href="/2014/11/03/empty-line-code-smell.html">empty lines</a> in method bodies</li>
+<li>Score: 5</li>
+</ul>
+
+<p><a href="https://github.com/vavr-io/vavr"><code>vavr-io/vavr</code></a> (70K LoC Java, 834K HoC):</p>
+
+<ul>
+<li>How do you release it?</li>
+<li>There are really big "classes", they are huge in <code>io.vavr.collection</code> package</li>
+<li>Interface <code>Seq</code> has 120+ methods! <a href="/2016/04/26/why-inputstream-design-is-wrong.html">What is going on?</a>
+</li>
+<li>Utility classes, static methods</li>
+<li>Some <code>.java</code> files have a few Java classes. Why?</li>
+<li>Could not build master: <a href="https://github.com/vavr-io/vavr/issues/2147">#2147</a>
+</li>
+<li>Score: 4</li>
+</ul>
+
+<p><a href="https://github.com/zetaops/ulakbus"><code>zetaops/ulakbus</code></a> (25K LoC Python, 707K HoC):</p>
+
+<ul>
+<li>How do you release it?</li>
+<li>No CI, no test coverage, no static analysis automation?</li>
+<li>See the comments from the reviewer</li>
+<li>Score: 2</li>
+</ul>
+
+<p><a href="https://github.com/mafagafogigante/dungeon"><code>mafagafogigante/dungeon</code></a> (14K LoC Java, 88K HoC):</p>
+
+<ul>
+<li>Release automated but only for one person</li>
+<li>Static methods, getters, setters, mutability</li>
+<li>Commits don't link to issues and PRs</li>
+<li>In-method-body comments are in many places, it's a bad practice</li>
+<li>Score: 5</li>
+</ul>
+
+<p><a href="https://github.com/ribtoks/xpiks"><code>ribtoks/xpiks</code></a> (180K+ LoC C/C++, 739K HoC):</p>
+
+<ul>
+<li>No coverage, no static analysis</li>
+<li>Types are rather big, with many methods</li>
+<li>Util classes, helpers</li>
+<li>-ERs: CommandManager, SpellCheckWorker, etc.</li>
+<li>I didn't really find much documentation inside the code</li>
+<li>Commits are not linked to issues/PRs</li>
+<li>Score: 4</li>
+</ul>
+
+<p><a href="https://github.com/javascript-obfuscator/javascript-obfuscator"><code>javascript-obfuscator/javascript-obfuscator</code></a> (72K LoC JS/TS, 400K HoC):</p>
+
+<ul>
+<li>Utils and just global functions</li>
+<li>Annotation-driven <a href="/2014/10/03/di-containers-are-evil.html">injectable dependencies</a>
+</li>
+<li>-ERs: reader, sanitizer, emitter</li>
+<li>Public attributes in classes</li>
+<li>I believe many "objects" are just DTOs here</li>
+<li>Interfaces are prefixed with <code>I</code>, it's an anti-pattern</li>
+<li>Score: 4</li>
+</ul>
+
+<p>My overall impression this year is that I'm getting much less garbage. There
+are fewer projects submitted, but the quality of them is much higher
+than in the previous two years. I'm glad to see this tendency. It means to
+me that I'm doing the right thing.</p>
+
+<p>This time I paid more attention to the elegance of OOP and maintainability
+of the code base. Key factors for the maintainability were:</p>
+
+<ul>
+<li>Automated releases</li>
+<li>Automated static analysis</li>
+<li>Automated builds (CI)</li>
+<li>Automated tests</li>
+<li>Disciplined commits, via issues and PRs</li>
+</ul>
+
+<p>For the elegance of OOP, as usual, I paid attention to the absence of
+anti-patterns, including NULL, getters, setters, static, mutability, etc.</p>
+
+<p>There are two winners this year: <code>php-ai/php-ml</code> and <code>mafagafogigante/dungeon</code>.
+But I don't really like the code I found in these repositories. It's obviously
+better than everybody else, but not perfect at all.</p>
+
+<p>That's why, here is my decision: I will give just $1,024 to each winner,
+instead of $2,048.</p>
+
+<p>Congratulations to
+<a href="https://github.com/itcraftsmanpl"><code>@itcraftsmanpl</code></a> for <a href="https://github.com/php-ai/php-ml"><code>php-ml</code></a> ($1,024)
+and to
+<a href="https://github.com/mafagafogigante"><code>@mafagafogigante</code></a> for <a href="https://github.com/mafagafogigante/dungeon"><code>dungeon</code></a> ($1,024).</p>
+
+<p>Here are your badges:</p>
+
+<p>
+ 
+</p>
+
+<p>Put this code into GitHub <code>README</code> (replace <code>???</code> with your GitHub name in the URL):</p>
+
+<pre>&lt;a href="http://www.yegor256.com/2016/10/23/award-2017.html"&gt;
+  &lt;img src="http://www.yegor256.com/images/award/2017/winner-???.png"
+  style="width:203px;height:45px;"/&gt;&lt;/a&gt;</pre>
+
+<p>Thanks to everybody for your participation! See you next year.</p>
 
 
 

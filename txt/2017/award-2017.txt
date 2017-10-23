@@ -632,7 +632,13 @@ ran fine and the game started. There is also a detailed CONTRIBUTING.md
 # javascript-obfuscator/javascript-obfuscator
 
 Nobody volunteered to review it. So, I will review it myself. Yegor.
-
+- commits are not linked to issues/PRs in most cases
++ Travis CI
++ code coverage 98%
++ issues and PRs
+- releases seem to be done manually
++ tslint for static analysis of TypeScript
+The project seems to be interesting.
 
 
 # klapuch/Remembrall

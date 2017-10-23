@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>yegor256</ShortName>
-  <Description>search yegor256.com</Description>
+  <Description>Search yegor256.com</Description>
   <Tags>programming oop agile java</Tags>
   <Contact>me@yegor256.com</Contact>
-  <Url type="application/atom+xml" template="http://www.yegor256.com/?q={searchTerms}&amp;format=atom"/>
-  <Url type="application/rss+xml" template="http://www.yegor256.com/?q={searchTerms}&amp;format=rss"/>
-  <Url type="text/html" template="http://www.yegor256.com/?q={searchTerms}"/>
+  <Url type="application/atom+xml" template="http://www.yegor256.com/opensearch.html?q={searchTerms}&amp;format=atom"/>
+  <Url type="application/rss+xml" template="http://www.yegor256.com/opensearch.html?q={searchTerms}&amp;format=rss"/>
+  <Url type="text/html" template="http://www.yegor256.com/opensearch.html?q={searchTerms}"/>
   <LongName>Blog About Computers</LongName>
   <Image height="128" width="128" type="image/png">http://www.yegor256.com/favicon.ico</Image>
   <Developer>Yegor Bugayenko</Developer>
