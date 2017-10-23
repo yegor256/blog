@@ -1,0 +1,83 @@
+---
+layout: post
+title: "Software Quality Award, 2018"
+date: 2017-10-23
+place: Dnipro, Ukraine
+tags: testing
+description: |
+  A software quality award, recognizing the
+  most disciplined and properly organized
+  open source project; year 2018.
+keywords:
+  - best open source projects
+  - open source donation
+  - get donation for open source
+  - open source award
+  - open source project award
+noindex: true
+---
+
+This is the forth year of the
+[Software Quality Award](/award.html). The prize
+is still the same&mdash;**$4,096**.
+The rules are still the same. Read on.
+Previous years are here:
+[2015]({% pst 2015/apr/2015-04-16-award %}),
+[2016]({% pst 2015/oct/2015-10-17-award-2016 %}),
+[2017]({% pst 2016/oct/2016-10-23-award-2017 %}).
+
+Fill
+[**THIS FORM**]()
+to submit.
+
+<!--more-->
+
+Rules:
+
+  * One person can submit only one project.
+
+  * Submissions are accepted until September 1, 2018.
+
+  * I will check the commit history to make sure you're the main contributor to the project.
+
+  * I reserve the right to reject any submission without explanation.
+
+  * All submissions will be published on this page (including rejected ones).
+
+  * Results will be announced October 15, 2018 on this page and by email.
+
+  * The best project will receive $4,096 (I may split this amount amoung a few projects).
+
+  * Final decisions will be made by me and are not negotiable
+    (although I may invite other people to help me make the right decision).
+
+  * Winners that received any cash prizes in previous years can't submit again.
+
+Each project must be:
+
+  * Open source (in GitHub).
+
+  * At least 10,000 lines of code.
+
+  * At least one year old.
+
+  * Object-oriented (that's the only thing I understand).
+
+The best project is selected using this [criteria]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %}).
+
+What doesn't matter:
+
+  * Popularity. Even if nobody is using your
+    product, it is still eligible for this award. I don't care about
+    popularity; quality is the key.
+
+  * Programming language. I believe that any language, used correctly,
+    can be applied to design a high-quality product.
+
+  * Buzz and trends. Even if your project is yet another parser of command
+    line arguments, it's still eligible for the award. I don't care about
+    your marketing position; quality is all.
+
+By the way, if you want to sponsor this award and increase the bonus,
+[email me](mailto:me@yegor256.com).
+

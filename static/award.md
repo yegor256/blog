@@ -15,7 +15,20 @@ keywords:
   - open source project award
 ---
 
-Submission to 2017 is [closed]({% pst 2016/oct/2016-10-23-award-2017 %}).
+Submission to 2018 will be open tomorrow.
+
+<img src="http://www.yegor256.com/images/award/2016/winner-itcraftsmanpl.png"
+  style="width:203px;height:45px;"/>
+&nbsp;
+<img src="http://www.yegor256.com/images/award/2016/winner-mafagafogigante.png"
+  style="width:203px;height:45px;"/>
+
+[`@itcraftsmanpl`](https://github.com/itcraftsmanpl) and [`@mafagafogigante`](https://github.com/mafagafogigante)
+were the winners in 2017
+with [`php-ml`](https://github.com/php-ai/php-ml) (PHP)
+and [`dungeon`](https://github.com/mafagafogigante/dungeon) (Java) projects. They
+received a cash prize of **$1,024** each.
+[More details]({% pst 2016/oct/2016-10-23-award-2017 %}).
 
 <img src="http://www.yegor256.com/images/award/2016/winner-pholser.png"
   style="width:203px;height:45px;"/>
