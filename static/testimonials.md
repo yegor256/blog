@@ -90,4 +90,9 @@ I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/
 
 "I quickly lost interest in your blog because you clearly are a dick."&mdash;[Philippe](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697848370)
 
+"If it's a conference talk then people just leave the room, if it's a project
+then it's a just messy bunch of libraries that he puts together in the dirtiest way,
+and if it's a podcast interview he can't provide a good technical explanation
+of his point of view..."&mdash;[@heldev](https://github.com/heldev)
+
 Ready to add something? :) Just [email](mailto:me@yegor256.com).
