@@ -41,19 +41,19 @@ before_install: |
     done
   }
   keep_alive &
-install: |
-  set -e
-  'travis_retry sudo _travis/install_cmake.sh && sudo apt-get install -y libxml2-utils'
-  travis_retry npm install cssshrink@0.0.5
-  travis_retry sudo _travis/install_plantuml.sh
-  travis_retry sudo _travis/install_sfnt2woff.sh
-  travis_retry sudo _travis/install_tidy.sh
-  travis_retry bundle install
-  fontcustom --version
-  travis_retry gem install jgd -v 1.6.5
-  gnuplot --version
-script: |
-  set -e
-  export JEKYLL_ENV=production
-  rake
-  jgd -u git@github.com:yegor256/blog.git
+install:
+  - set -e
+  - 'travis_retry sudo _travis/install_cmake.sh && sudo apt-get install -y libxml2-utils'
+  - travis_retry npm install cssshrink@0.0.5
+  - travis_retry sudo _travis/install_plantuml.sh
+  - travis_retry sudo _travis/install_sfnt2woff.sh
+  - travis_retry sudo _travis/install_tidy.sh
+  - travis_retry bundle install
+  - fontcustom --version
+  - travis_retry gem install jgd -v 1.6.5
+  - gnuplot --version
+script:
+  - set -e
+  - export JEKYLL_ENV=production
+  - rake
+  - jgd -u git@github.com:yegor256/blog.git
