@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-10-24T05:45:57+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Lazy Loading and Caching via Sticky Cactoos Primitives</title><link href="http://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos.html" rel="alternate" type="text/html" title="Lazy Loading and Caching via Sticky Cactoos Primitives" /><published>2017-10-17T00:00:00+00:00</published><updated>2017-10-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos.html">&lt;p&gt;You obviously know what &lt;a href=&quot;https://en.wikipedia.org/wiki/Lazy_loading&quot;&gt;lazy loading&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-10-24T11:37:04+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2018</title><link href="http://www.yegor256.com/2017/10/24/award-2018.html" rel="alternate" type="text/html" title="Software Quality Award, 2018" /><published>2017-10-24T00:00:00+00:00</published><updated>2017-10-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/24/award-2018</id><content type="html" xml:base="http://www.yegor256.com/2017/10/24/award-2018.html">&lt;p&gt;This is the forth year of the
+&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
+is still the same&amp;mdash;&lt;strong&gt;$4,096&lt;/strong&gt;.
+The rules are still the same. Read on.
+Previous years are here:
+&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
+&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
+&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fill
+&lt;a href=&quot;https://docs.google.com/forms/d/1bPgbvs9Y6fWlmvdqGPSxMXXCCRQWPSU2UuItNjSCgQg&quot;&gt;&lt;strong&gt;THIS FORM&lt;/strong&gt;&lt;/a&gt;
+to submit.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Rules:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;One person can submit only one project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Submissions are accepted until September 1, 2018.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I will check the commit history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Results will be announced October 15, 2018 on this page and by email.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The best project will receive $4,096 (I may split this amount among a few projects).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
+(although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Winners that received any cash prizes in previous years can&amp;#39;t submit again.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each project must be:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Open source (in GitHub).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least 10,000 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What doesn&amp;#39;t matter:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Popularity. Even if nobody is using your
+product, it is still eligible for this award. I don&amp;#39;t care about
+popularity; quality is the key.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Programming language. I believe that any language, used correctly,
+can be applied to design a high-quality product.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
+line arguments, it&amp;#39;s still eligible for the award. I don&amp;#39;t care about
+your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">This is the forth year of the
+Software Quality Award. The prize
+is still the same&amp;mdash;$4,096.
+The rules are still the same. Read on.
+Previous years are here:
+2015,
+2016,
+2017.
+
+Fill
+THIS FORM
+to submit.</summary></entry><entry><title type="html">Lazy Loading and Caching via Sticky Cactoos Primitives</title><link href="http://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos.html" rel="alternate" type="text/html" title="Lazy Loading and Caching via Sticky Cactoos Primitives" /><published>2017-10-17T00:00:00+00:00</published><updated>2017-10-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos</id><content type="html" xml:base="http://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos.html">&lt;p&gt;You obviously know what &lt;a href=&quot;https://en.wikipedia.org/wiki/Lazy_loading&quot;&gt;lazy loading&lt;/a&gt;
 is, right? And you no doubt know about &lt;a href=&quot;https://en.wikipedia.org/wiki/Cache_%28computing%29&quot;&gt;caching&lt;/a&gt;.
 To my knowledge, there is no elegant way in Java to implement either of them. Here
 is what I found out for myself with the help of Cactoos primitives.&lt;/p&gt;
@@ -1308,93 +1374,4 @@ written by Paul Graham
 and I decided to explain why I disagree. Not that I think we shouldn&amp;#39;t
 be nice. Not at all. But I do think that &amp;quot;being nice&amp;quot; is not a solution for organizational,
 management, marketing, sales, or business development problems. Moreover,
-in most cases it is actually not safe for founders to be nice.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/scarecrow.jpg" /></entry><entry><title type="html">Bitcoin Is Not a Pyramid. Coinbase Is.</title><link href="http://www.yegor256.com/2017/08/15/bitcoin-pyramid.html" rel="alternate" type="text/html" title="Bitcoin Is Not a Pyramid. Coinbase&amp;nbsp;Is." /><published>2017-08-15T00:00:00+00:00</published><updated>2017-08-15T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/08/15/bitcoin-pyramid</id><content type="html" xml:base="http://www.yegor256.com/2017/08/15/bitcoin-pyramid.html">&lt;p&gt;In September 2016 I paid &lt;a href=&quot;http://www.coinbase.com&quot;&gt;Coinbase&lt;/a&gt;
-$1,222 for two BTCs, $611 each. Seven months later, in April 2017,
-they paid me back $2,490, which was $1,245 for each BTC. My profit before
-tax was $1,268, over 100% of the investment, in just seven months.
-Moreover, if I had waited until today, I would have made
-$6,800 profit instead. Actually, I still have a few BTCs in my Coinbase account
-and I can make that 750% profit, if I sell now. Should I? The
-BTC price is
-&lt;a href=&quot;https://www.cnbc.com/2017/08/12/bitcoin-vaults-to-new-record-above-4k-boosted-by-japan-and-multiplying-its-value-fourfold.html&quot;&gt;over $4,000&lt;/a&gt;.
-Will it go up? Or down? What would you do?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Two and a Half Men (2011) by Chuck Lorre&#39; src=&#39;/images/2017/08/two-and-a-half-men.jpg&#39; longdesc=&#39;#e9d79173&#39;/&gt;&lt;figcaption id=&#39;e9d79173&#39;&gt;Two and a Half Men (2011) by Chuck Lorre&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Where did that profit come from?
-How can Coinbase pay me eight times more now than I paid them less than a year ago?
-Where did they get that cash?&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2017/08/coinbase-1.jpg&#39; style=&#39;width:200px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Obviously you know what a &lt;a href=&quot;https://en.wikipedia.org/wiki/Ponzi_scheme&quot;&gt;Ponzi scheme&lt;/a&gt; is, right?
-If you don&amp;#39;t, watch
-&lt;a href=&quot;http://www.imdb.com/title/tt1811261/&quot;&gt;Episode 16&lt;/a&gt;
-of the 8th Season of
-&lt;a href=&quot;http://www.imdb.com/title/tt0369179/&quot;&gt;Two and a Half Men&lt;/a&gt;.
-In a nutshell, I&amp;#39;m getting my investment and my profit from other people, who are
-paying Coinbase for my BTCs. If there were no demand,
-my entire investment would disappear and I would only have the BTC bits
-and bytes in my virtual wallet. I would lose my $1,222.&lt;/p&gt;
-
-&lt;p&gt;Some recent articles call &lt;a href=&quot;https://en.wikipedia.org/wiki/Bitcoin&quot;&gt;Bitcoin&lt;/a&gt; and other
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Cryptocurrency&quot;&gt;altcoins&lt;/a&gt;,
-like
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Ethereum&quot;&gt;Etherium&lt;/a&gt; or
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Litecoin&quot;&gt;Litecoin&lt;/a&gt;, Ponzi schemes,
-for example,
-&lt;a href=&quot;https://www.theatlantic.com/technology/archive/2017/05/cryptocurrency-ponzi-schemes/528624/&quot;&gt;&lt;em&gt;The Rise of Cryptocurrency Ponzi Schemes&lt;/em&gt;&lt;/a&gt;
-in The Atlantic
-and
-&lt;a href=&quot;https://www.ft.com/content/b5d66ed8-d1b3-11e6-b06b-680c49b4b4c0&quot;&gt;&lt;em&gt;Bitcoin passes $1,000 but only number that matters is zero&lt;/em&gt;&lt;/a&gt;
-in the Financial Times.&lt;/p&gt;
-
-&lt;p&gt;Indeed, the key attribute of a pyramid scheme is right there:
-the product being sold has no value aside from the demand-generated one,
-just like &lt;a href=&quot;https://www.google.com/finance?q=TWTR&quot;&gt;Twitter stocks&lt;/a&gt; (it&amp;#39;s a joke).
-Should we blame Bitcoin for that? I don&amp;#39;t think so.&lt;/p&gt;
-
-&lt;p&gt;I think that what Coinbase (and similar traders like
-&lt;a href=&quot;http://www.coinmama.com&quot;&gt;CoinMama&lt;/a&gt; or &lt;a href=&quot;http://www.cex.io&quot;&gt;CEX.io&lt;/a&gt;) are doing is definitely
-a pyramid and must be stopped by the government, sooner rather than later.&lt;/p&gt;
-
-&lt;p&gt;Imagine, I start a company tomorrow. I call it YegorBase.
-It will buy and sell YegorCoins, which I will also create.
-The price will be $100 a piece. Some of you
-may buy that, especially because it will be possible to sell them the next day,
-when the price will be $101. Initially I will create some fuss to promote
-the product and the trading will begin. I will make my commission.&lt;/p&gt;
-
-&lt;p&gt;Will this be legal? I seriously doubt that &lt;a href=&quot;http://www.stripe.com&quot;&gt;Stripe&lt;/a&gt;,
-for example, would approve my account if I told them my business plan.&lt;/p&gt;
-
-&lt;p&gt;And the problem is not the YegorCoin itself&amp;mdash;there is nothing wrong in
-creating your own crypto-electronic-whatever-product. The problem is that I&amp;#39;ll
-be trading something that has a very questionable value, being completely
-unregulated by the government. The trading of my YegorCoin,
-just like shares of stocks, bonds, options, gold, and Bitcoin, must be
-regulated by the people we&amp;#39;re paying our taxes to&amp;mdash;the police.&lt;/p&gt;
-
-&lt;p&gt;You may say that Coinbase is not issuing those Bitcoins and only trading
-them&amp;mdash;and that&amp;#39;s why it&amp;#39;s not a pyramid. Not true. In my YegorBase shop
-I won&amp;#39;t need to issue my YegorCoins for very long. As soon as the total volume
-of YegorCoins is big enough, the situation will control itself
-and the price will jump and fall somehow. I will make profit on the trading
-commission and the owners of YegorCoin will hope that they can manage
-to sell everything before my shop gets busted.&lt;/p&gt;
-
-&lt;p&gt;Why the police are still closing their eyes to what Coinbase is doing,
-I simply can&amp;#39;t understand. Maybe because NYSE and A16Z are among their
-&lt;a href=&quot;https://www.crunchbase.com/organization/coinbase/investors&quot;&gt;long list&lt;/a&gt;
-of investors?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="economics" /><summary type="html">In September 2016 I paid Coinbase
-$1,222 for two BTCs, $611 each. Seven months later, in April 2017,
-they paid me back $2,490, which was $1,245 for each BTC. My profit before
-tax was $1,268, over 100% of the investment, in just seven months.
-Moreover, if I had waited until today, I would have made
-$6,800 profit instead. Actually, I still have a few BTCs in my Coinbase account
-and I can make that 750% profit, if I sell now. Should I? The
-BTC price is
-over $4,000.
-Will it go up? Or down? What would you do?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/two-and-a-half-men.jpg" /></entry></feed>
+in most cases it is actually not safe for founders to be nice.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/08/scarecrow.jpg" /></entry></feed>

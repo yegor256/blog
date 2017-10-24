@@ -287,9 +287,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '465.4,230.0 475.3,230.0 475.3,199.4 465.4,199.4 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M465.4,230.0 L465.4,199.5 L475.2,199.5 L475.2,230.0 L465.4,230.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '478.4,230.0 488.3,230.0 488.3,210.1 478.4,210.1 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '478.4,230.0 488.3,230.0 488.3,212.8 478.4,212.8 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M478.4,230.0 L478.4,210.2 L488.2,210.2 L488.2,230.0 L478.4,230.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M478.4,230.0 L478.4,212.9 L488.2,212.9 L488.2,230.0 L478.4,230.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '491.5,230.0 501.4,230.0 501.4,204.7 491.5,204.7 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M491.5,230.0 L491.5,204.8 L501.3,204.8 L501.3,230.0 L491.5,230.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
@@ -323,9 +323,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '621.5,230.0 631.4,230.0 631.4,172.4 621.5,172.4 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M621.5,230.0 L621.5,172.5 L631.3,172.5 L631.3,230.0 L621.5,230.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '634.5,230.0 644.2,230.0 644.2,209.5 634.5,209.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '634.5,230.0 644.2,230.0 644.2,203.8 634.5,203.8 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M634.5,230.0 L634.5,209.6 L644.1,209.6 L644.1,230.0 L634.5,230.0 Z  h0.01'/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M634.5,230.0 L634.5,203.9 L644.1,203.9 L644.1,230.0 L634.5,230.0 Z  h0.01'/></g>
 	</g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<path stroke='black'  d='M53.5,14.1 L53.5,230.0 L678.9,230.0 L678.9,14.1 L53.5,14.1 Z  h0.01'/></g>
