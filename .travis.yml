@@ -26,14 +26,21 @@ addons:
       - s3cmd
       - fontforge
       - liblapack-dev
-before_install:
-  - set -e
-  - git config --global user.email "travis@yegor256.com"
-  - git config --global user.name "travis"
-  - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in s3cfg.enc -out s3cfg -d
-  - openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
-  - mv id_rsa ~/.ssh
-  - chmod 600 ~/.ssh/id_rsa
+before_install: |
+  set -e
+  git config --global user.email "travis@yegor256.com"
+  git config --global user.name "travis"
+  openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in s3cfg.enc -out s3cfg -d
+  openssl aes-256-cbc -K $encrypted_b3d57c6f91bb_key -iv $encrypted_b3d57c6f91bb_iv -in id_rsa.enc -out id_rsa -d
+  mv id_rsa ~/.ssh
+  chmod 600 ~/.ssh/id_rsa
+  function keep_alive() {
+    while true; do
+      echo -en "\a"
+      sleep 5
+    done
+  }
+  keep_alive &
 install:
   - set -e
   - 'travis_retry sudo _travis/install_cmake.sh && sudo apt-get install -y libxml2-utils'
