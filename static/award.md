@@ -17,6 +17,8 @@ keywords:
 
 Submission to 2018 [is open]({% pst 2017/oct/2017-10-24-award-2018 %}).
 
+<hr/>
+
 <img src="http://www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png"
   style="width:203px;height:45px;"/>
 &nbsp;
@@ -30,6 +32,8 @@ and [`dungeon`](https://github.com/mafagafogigante/dungeon) (Java) projects. The
 received a cash prize of **$1,024** each.
 [More details]({% pst 2016/oct/2016-10-23-award-2017 %}).
 
+<hr/>
+
 <img src="http://www.yegor256.com/images/award/2016/winner-pholser.png"
   style="width:203px;height:45px;"/>
 &nbsp;
@@ -41,6 +45,8 @@ with [`pholser/junit-quickcheck`](https://github.com/pholser/junit-quickcheck) (
 and [`coala/coala`](https://github.com/coala/coala) (Python) projects. They
 received a cash prize of **$2,048** each.
 [More details]({% pst 2015/oct/2015-10-17-award-2016 %}).
+
+<hr/>
 
 <img src="http://www.yegor256.com/images/award/2015/winner.png"
   style="width:203px;height:45px;"/>
