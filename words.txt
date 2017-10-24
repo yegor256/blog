@@ -487,6 +487,7 @@ aws
 axes
 axioms
 ba
+babel
 baby
 back
 back-end
@@ -1193,6 +1194,7 @@ communities
 community
 compact
 companies
+companion
 company
 company's
 comparable
@@ -2133,6 +2135,7 @@ embarrass
 embarrassing
 embarrassment
 emerge
+emergency
 emitter
 emoji
 emojis
@@ -3123,6 +3126,7 @@ hurtful
 hurting
 hurts
 hyperlinear
+hyphenation
 hysteria
 i'd
 i'll
@@ -3826,6 +3830,7 @@ live
 lives
 living
 load
+loaded
 loaders
 loading
 loads
@@ -4033,6 +4038,7 @@ mcclure
 mcconnell
 mccullough
 mcdonald's
+md
 me
 mean
 meaning
@@ -4295,6 +4301,7 @@ multi-release
 multi-resolution
 multi-threading
 multi-tier
+multiletter
 multiple
 multiply
 multiplying
@@ -4800,6 +4807,8 @@ pays
 PBS
 PDD
 PDF
+pdflatex
+pdftex
 PDU
 peace
 peaceful
@@ -5067,6 +5076,7 @@ prefix
 prefixed
 prefixes
 preliminary
+preloaded
 premium
 prep
 preparation
@@ -5970,6 +5980,7 @@ separating
 separation
 separator
 september
+sequences
 sequential
 sequentially
 seratch
@@ -6320,6 +6331,7 @@ SQLite
 square
 squeeze
 SRS
+ssd
 SSH
 st
 stab
@@ -6711,6 +6723,7 @@ testers
 testing
 tests
 tex
+tex's
 text
 textmate
 texts
