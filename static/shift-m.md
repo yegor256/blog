@@ -41,10 +41,8 @@ Previous episodes:
 17 October 2017; 44 min.
 -->
 
-<!--
 &#35;11: [How to do stakeholders management right?](/shift-m/2017/11.html)<br/>
 20 October 2017; 40 min.
--->
 
 &#35;10: [Johanna Rothman about hiring issues](/shift-m/2017/10.html)<br/>
 11 October 2017; 64 min.
