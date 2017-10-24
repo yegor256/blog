@@ -15,12 +15,12 @@ keywords:
   - open source project award
 ---
 
-Submission to 2018 will be open tomorrow.
+Submission to 2018 [is open]({% pst 2017/oct/2017-10-24-award-2018 %}).
 
-<img src="http://www.yegor256.com/images/award/2016/winner-itcraftsmanpl.png"
+<img src="http://www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png"
   style="width:203px;height:45px;"/>
 &nbsp;
-<img src="http://www.yegor256.com/images/award/2016/winner-mafagafogigante.png"
+<img src="http://www.yegor256.com/images/award/2017/winner-mafagafogigante.png"
   style="width:203px;height:45px;"/>
 
 [`@itcraftsmanpl`](https://github.com/itcraftsmanpl) and [`@mafagafogigante`](https://github.com/mafagafogigante)
