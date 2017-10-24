@@ -20,7 +20,9 @@ style: |
     width: 64px;
     height: 64px;
     display: inline-block;
-    margin-right: 1em;
+    margin-right: .5em;
+    margin-top: 1em;
+    border-radius: 50%;
   }
 ---
 
