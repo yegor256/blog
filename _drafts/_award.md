@@ -27,7 +27,7 @@ Previous years are here:
 [2017]({% pst 2016/oct/2016-10-23-award-2017 %}).
 
 Fill
-[**THIS FORM**]()
+[**THIS FORM**](https://docs.google.com/forms/d/1bPgbvs9Y6fWlmvdqGPSxMXXCCRQWPSU2UuItNjSCgQg)
 to submit.
 
 <!--more-->
@@ -57,7 +57,7 @@ Each project must be:
 
   * Open source (in GitHub).
 
-  * At least 10,000 lines of code.
+  * At least 10,000 lines of code ([cloc](https://www.npmjs.com/package/cloc) without any arguments).
 
   * At least one year old.
 
