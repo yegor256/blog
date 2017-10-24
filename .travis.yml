@@ -46,7 +46,6 @@ install:
   - travis_retry gem install jgd -v 1.6.5
   - gnuplot --version
 script:
-  - set -e
-  - travis_wait 30 rake
   - export JEKYLL_ENV=production
+  - travis_wait 30 rake
   - travis_wait 30 jgd -u git@github.com:yegor256/blog.git
