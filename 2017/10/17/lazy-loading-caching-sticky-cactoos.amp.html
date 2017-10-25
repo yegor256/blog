@@ -104,7 +104,7 @@ assumption, but for the sake of this example it will work):</p>
 <pre>class Encrypted1 implements Encrypted {
   private final String text;
   Encrypted1(String txt) {
-    this.data = txt;
+    this.text = txt;
   }
   @Override
   public String asString() {
@@ -148,7 +148,7 @@ constructors (again, the implementation is primitive, but works):</p>
       }
       baos.write(one);
     }
-    this.data = new String(baos.toByteArray());
+    this.text = new String(baos.toByteArray());
   }
   Encrypted2(String txt) {
     this.text = txt;
@@ -164,7 +164,7 @@ ones may only create new objects.</p>
 
 <p>Let's try to refactor and introduce lazy loading:</p>
 
-<pre>class Encrypted3 {
+<pre>class Encrypted3 implements Encrypted {
   private String text;
   private final InputStream input;
   Encrypted3(InputStream stream) {
@@ -275,7 +275,7 @@ previously calculated value. So we need to <em>cache</em> it. Here is how:</p>
   private final IoCheckedScalar&lt;String&gt; text;
   // same as above in Encrypted4
   Encrypted5(Scalar&lt;String&gt; source) {
-    this.data = new IoCheckedScalar&lt;&gt;(
+    this.text = new IoCheckedScalar&lt;&gt;(
       new StickyScalar&lt;&gt;(source)
     );
   }
@@ -298,7 +298,7 @@ is not thread-safe. There is another primitive to help us out though, called
   private final IoCheckedScalar&lt;String&gt; text;
   // same as above in Encrypted4
   Encrypted5(Scalar&lt;String&gt; source) {
-    this.data = new IoCheckedScalar&lt;&gt;(
+    this.text = new IoCheckedScalar&lt;&gt;(
       new SyncScalar&lt;&gt;(
         new StickyScalar&lt;&gt;(source)
       )
