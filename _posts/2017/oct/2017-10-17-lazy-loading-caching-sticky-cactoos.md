@@ -118,7 +118,7 @@ ones may only create new objects.
 Let's try to refactor and introduce lazy loading:
 
 {% highlight java %}
-class Encrypted3 {
+class Encrypted3 implements Encrypted {
   private String text;
   private final InputStream input;
   Encrypted3(InputStream stream) {
