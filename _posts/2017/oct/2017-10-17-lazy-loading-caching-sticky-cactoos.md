@@ -52,7 +52,7 @@ assumption, but for the sake of this example it will work):
 class Encrypted1 implements Encrypted {
   private final String text;
   Encrypted1(String txt) {
-    this.data = txt;
+    this.text = txt;
   }
   @Override
   public String asString() {
@@ -100,7 +100,7 @@ class Encrypted2 implements Encrypted {
       }
       baos.write(one);
     }
-    this.data = new String(baos.toByteArray());
+    this.text = new String(baos.toByteArray());
   }
   Encrypted2(String txt) {
     this.text = txt;
@@ -235,7 +235,7 @@ class Encrypted5 implements Encrypted {
   private final IoCheckedScalar<String> text;
   // same as above in Encrypted4
   Encrypted5(Scalar<String> source) {
-    this.data = new IoCheckedScalar<>(
+    this.text = new IoCheckedScalar<>(
       new StickyScalar<>(source)
     );
   }
@@ -260,7 +260,7 @@ class Encrypted5 implements Encrypted {
   private final IoCheckedScalar<String> text;
   // same as above in Encrypted4
   Encrypted5(Scalar<String> source) {
-    this.data = new IoCheckedScalar<>(
+    this.text = new IoCheckedScalar<>(
       new SyncScalar<>(
         new StickyScalar<>(source)
       )
