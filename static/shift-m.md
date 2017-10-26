@@ -7,7 +7,7 @@ description: |
   Weekly podcast about project management
   in software development, hosted and recorded
   by Yegor Bugayenko.
-image: /images/yegor-is-presenting.png
+image: /images/podcast.png
 keywords:
   - podcast
   - project management podcast
