@@ -43,6 +43,24 @@ Subscribe at
 
 If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com).
 
+Coming episodes:
+
+<img src="/images/shift-m/jose-barato.png" class="guest-face"/>
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;16: Jose Barato on Indian Outsourcing and Catalonia issues<br/>
+30 October 2017; 53 min.
+
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;15: not yet recorded
+
+<img src="/images/shift-m/bart-vermijlen.png" class="guest-face"/>
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;14: Bart Vermijlen about Sociocracy, Gamestorming and Agile<br/>
+24 October 2017; 54 min.
+
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;13: not yet recorded...
+
 Previous episodes:
 
 <img src="/images/shift-m/bert-heymans.png" class="guest-face"/>
