@@ -24,7 +24,7 @@ image: /images/podcast.png
 
 Check Bert's [Twitter](https://twitter.com/bertheymans).
 
-Do you need help with organizing your own LeadCoffee meetup?
+Do you need help with organizing your own LeanCoffee meetup?
 Don't hesitate to email Bert: [bert@heymans.org](mailto:bert@heymans.org).
 
 Read more about [LeanCoffee](http://leancoffee.org/).
