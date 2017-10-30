@@ -2966,6 +2966,7 @@ hates
 have
 haven't
 having
+HD
 HDD
 HDFS
 hdous
@@ -2977,6 +2978,7 @@ header
 heading
 headless
 headline
+headphones
 heads
 heal
 health
@@ -5957,6 +5959,7 @@ sender's
 sending
 sends
 senior
+sennheiser
 sense
 sensitive
 sent
@@ -6159,7 +6162,7 @@ slick
 slide
 slides
 slightly
-slik
+SLIK
 slippage
 SLoC
 slogans
