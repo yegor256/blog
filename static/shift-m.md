@@ -45,12 +45,10 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Previous episodes:
 
-<!--
 <img src="/images/shift-m/bert-heymans.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;12: [Bert Heymans about their LeanCoffee meetup](/shift-m/2017/12.html)<br/>
 17 October 2017; 44 min.
--->
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;11: [How to do stakeholders management right?](/shift-m/2017/11.html)<br/>
