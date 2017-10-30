@@ -30,11 +30,15 @@ style: |
 
 Shift-M is a weekly podcast about project management. I'm <del>recording</del> publishing
 every Monday. If you want to be a guest, please email to
-[podcast@yegor256.com](mailto:podcast@yegor256.com). If you just
+[podcast@yegor256.com](mailto:podcast@yegor256.com).
+
+<!--
+If you just
 want to join and say a few words, come into this
 [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
+-->
 
-This is our [RSS](http://feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
+This is the [RSS](http://feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
 Subscribe at
 [SoundCloud](https://soundcloud.com/yegor256),
 [iTunes](https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721),
