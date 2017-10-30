@@ -38,8 +38,9 @@ its quality is very low. My smartphone is
 [iPhone&nbsp;6s](https://www.apple.com/shop/buy-iphone/iphone6s).
 For video and podcast recording I'm using [Zoom&nbsp;H6](http://amzn.to/2tjPebw)
 together with
-[Movo LV4-O2](http://amzn.to/2tkdA4G) microphone and
-[Slik Sprint 150](http://amzn.to/2v6YJyD) tripod.
+[Movo LV4-O2](http://amzn.to/2tkdA4G) microphone,
+[Sennheiser HD 380 PRO](http://amzn.to/2ienJf9) headphones, and
+[SLIK Sprint 150](http://amzn.to/2xy2ivL) tripod.
 
 <img src="/images/2017/06/env-intellij-idea.jpg" class="env-ico"/><br/>
 [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (<del>$499</del> free)
