@@ -4,7 +4,7 @@ title: "My Pet Projects"
 description: |
   Full list of my hobby projects and some projects
   I'm only planning to start, email me if interested
-  to join
+  to join.
 permalink: pets.html
 keywords:
   - hobby projects
@@ -136,6 +136,7 @@ More about it in this article:
 Founded 21-Feb-2016.
 
 Others (less stable or successful):
+[jpeek](https://github.com/yegor256/jpeek),
 [tacit](https://github.com/yegor256/tacit),
 [qulice](https://github.com/teamed/qulice),
 [jcabi](https://github.com/jcabi),
