@@ -120,7 +120,7 @@ Riga, Latvia<br/>
 1 December 2017
 
 <div class="talk-event"/>
-<img src="http://deeprefactoring.ru/apple-touch-icon.png" class="future-talk" alt="DeepRefactoring 2017"/>
+<img src="http://deeprefactoring.ru/assets/img/square_50_50.png" class="future-talk" alt="DeepRefactoring 2017"/>
 **TDD наоборот или как срезать углы**<br/>
 **Почему меня не взяли в Amazon**<br/>
 [DeepRefactoring 2017](http://deeprefactoring.ru/about/)<br/>
