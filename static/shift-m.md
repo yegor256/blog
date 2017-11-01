@@ -26,7 +26,9 @@ style: |
   }
 ---
 
-{% badge /images/shift-m-logo.svg 92 %}
+{% badge /images/podcast.svg 300 %}
+
+<!-- {% badge /images/shift-m-logo.svg 92 %} -->
 
 Shift-M is a weekly podcast about project management. I'm <del>recording</del> publishing
 every Monday. If you want to be a guest, please email to
