@@ -29,13 +29,13 @@ development, object-oriented programming and project management.
 
 ## 2017
 
-{% webinar 01-11-2017 29 Z70PMGaxGhY How to win $4096 in the next year Quality Award? %}
+<!-- {% webinar 01-11-2017 29 Z70PMGaxGhY How to win $4096 in the next year Quality Award? %} -->
 
 <a href="https://www.youtube.com/watch?v=Z70PMGaxGhY"><img src="https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg" class="wnr" alt="Webinar no.29 by Yegor Bugayenko"/></a>
 November 1, 2017<br/>
 &#35;29: **How to win $4096 in the next year Quality Award?**<br/>
-I will show by examples what quality means for me when I'm deciding
-which project deserves to be the winner in the annual Quality Award.
+I've shown by examples what quality meant for me when I was deciding
+which project deserved to be the winner in the annual Quality Award.
 
 <a href="https://www.youtube.com/watch?v=KYd24FN58wg"><img src="https://i.ytimg.com/vi/KYd24FN58wg/mqdefault.jpg" class="wnr" alt="Webinar no.28 by Yegor Bugayenko"/></a>
 October 4, 2017<br/>
