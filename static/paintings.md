@@ -12,6 +12,7 @@ keywords:
   - paintings to buy
   - modern paintings to sell
   - for sale paintings
+image: /images/andreea/paintings.png
 style: |
   figure { margin-top: 4em; }
   .art-logo {
@@ -25,6 +26,8 @@ style: |
     max-width: 100%;
   }
 ---
+
+{% badge /images/andreea/paintings.svg 300 %}
 
 This is the full list of my paintings, which are for sale. You can buy
 them, paying via PayPal (you will also have to pay for shipment,

@@ -15,7 +15,7 @@ keywords:
   - podcast software management
   - podcast programming
 nospell: true
-image: /images/podcast.png
+image: /images/andreea/podcast.png
 ---
 
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347308428%3Fsecret_token%3Ds-4WCnW&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>

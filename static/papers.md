@@ -6,7 +6,7 @@ description: |
   not here on the blog, including conference proceedings,
   journal articles, patents, etc.
 permalink: papers.html
-image: /images/yegor-is-presenting.png
+image: /images/andreea/academic-writing.png
 keywords:
   - publications
   - papers
@@ -14,6 +14,8 @@ keywords:
   - yegor bugayenko
   - yegor256 papers
 ---
+
+{% badge /images/andreea/academic-writing.svg 300 %}
 
 It's a full list of academic publications under my name,
 conference proceedings, journals, patents, etc.

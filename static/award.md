@@ -6,7 +6,7 @@ description: |
   and properly organized open source project;
   don't hesitate to submit your application now.
 permalink: award.html
-image: /images/about/yegor-speaking.jpg
+image: /images/andreea/quality-award.png
 keywords:
   - best open source projects
   - open source donation
@@ -14,6 +14,8 @@ keywords:
   - open source award
   - open source project award
 ---
+
+{% badge /images/andreea/quality-award.svg 300 %}
 
 Submission to 2018 [is open]({% pst 2017/oct/2017-10-24-award-2018 %}).
 

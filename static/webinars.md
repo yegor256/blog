@@ -12,7 +12,7 @@ keywords:
   - webinars about software development
   - webinars about programming
   - software engineers webinars
-image: /images/yegor-is-presenting.png
+image: /images/andreea/webinar.png
 style: |
   .wnr {
     width: 192px;
@@ -22,6 +22,8 @@ style: |
     filter: grayscale(100%);
   }
 ---
+
+{% badge /images/andreea/webinar.svg 300 %}
 
 On the first Wednesday of each month, at 11am PST, I organize
 a webinar. For about an hour we talk about software

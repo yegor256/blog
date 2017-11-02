@@ -6,7 +6,7 @@ description: |
   future, this page will summarize my efforts; all
   books will be available on Amazon.
 permalink: books.html
-image: /images/books/elegant-objects/cover.png
+image: /images/andreea/writing.png
 keywords:
   - books about object-oriented programming
   - books about oop
@@ -14,6 +14,8 @@ keywords:
   - books on project management
   - books about management
 ---
+
+{% badge /images/andreea/writing.svg 300 %}
 
 If you already purchased and read my books, please review them on Amazon and/or
 [GoodReads](https://www.goodreads.com/author/list/15033289.Yegor_Bugayenko).

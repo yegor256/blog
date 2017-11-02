@@ -12,7 +12,7 @@ keywords:
   - workshops about software development
   - conferences about programming
   - software engineers conferences
-image: /images/yegor-is-presenting.png
+image: /images/andreea/yegor-is-presenting.png
 style: |
   .talk-event {
     clear: both;
@@ -64,7 +64,7 @@ script: |
   });
 ---
 
-{% badge /images/yegor-is-presenting.png 300 %}
+{% badge /images/andreea/yegor-is-presenting.png 300 %}
 
 Here is where I'll be speaking soon.
 I update this list very often, but
