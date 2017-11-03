@@ -17,6 +17,21 @@ keywords:
 
 {% badge /images/andreea/quality-award.svg 300 %}
 
+I'm a big fan of rules and discipline in software development; as an example, see
+[Are You a Hacker or a Designer?]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
+Also, I'm a big fan of object-oriented programming in its purest form; for example, see
+[Seven Virtues of a Good Object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
+I'm also a co-founder and the CEO of [Zerocracy](http://www.zerocracy.com), a software development
+company through which I put my admiration of discipline and clean design into practice.
+
+I want to encourage you to share my passion&mdash;not just by reading this blog
+but through making real
+[open source software]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}) in a disciplined way.
+This award is for those who are brave enough to swim against the current and
+value quality above everything else.
+
+<!--more-->
+
 Submission to 2018 [is open]({% pst 2017/oct/2017-10-24-award-2018 %}).
 
 <hr/>

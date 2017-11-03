@@ -15,7 +15,7 @@ keywords:
   - yegor256 papers
 ---
 
-{% badge /images/andreea/academic-writing.svg 300 %}
+{% badge /images/andreea/academic-writing.svg 200 %}
 
 It's a full list of academic publications under my name,
 conference proceedings, journals, patents, etc.
