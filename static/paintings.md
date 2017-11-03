@@ -14,7 +14,7 @@ keywords:
   - for sale paintings
 image: /images/andreea/paintings.png
 style: |
-  figure { margin-top: 4em; }
+  .picture { margin-top: 4em; }
   .art-logo {
     width: 26%;
     min-width: 120px;
