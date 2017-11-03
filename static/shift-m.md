@@ -54,17 +54,25 @@ Already recorded but not yet published episodes:
 <img src="/images/shift-m/vincent-birlouez.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;20: Vincent Birlouez about PMBOK and project managers<br/>
-3 November 2017; 47 min.
+3 November 2017; 47 min.<br/>
+To be published: 11 December 2017.
 
 <img src="/images/shift-m/henrik-martensson.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;18: Henrik Mårtensson about HR troubles<br/>
-3 November 2017; 58 min.
+3 November 2017; 58 min.<br/>
+To be published: 4 December 2017.
+
+<!--
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;17: not yet recorded
+-->
 
 <img src="/images/shift-m/jose-barato.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;16: Jose Barato on Indian Outsourcing and Catalonia issues<br/>
-30 October 2017; 53 min.
+30 October 2017; 53 min.<br/>
+To be published: 27 November 2017.
 
 <!--
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
@@ -74,7 +82,8 @@ Already recorded but not yet published episodes:
 <img src="/images/shift-m/bart-vermijlen.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;14: Bart Vermijlen about Sociocracy, Gamestorming and Agile<br/>
-24 October 2017; 54 min.
+24 October 2017; 54 min.<br/>
+To be published: 13 November 2017.
 
 <!--
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
