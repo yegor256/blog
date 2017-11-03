@@ -441,7 +441,9 @@ another source of data, in the form of an iterator. I hope this example will hel
       <item>
         <title>Software Quality Award, 2015</title>
         
-          <description>&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
+          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/andreea/quality-award.svg&#39; style=&#39;width:300px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+
+&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
 Also, I&amp;#39;m a big fan of object-oriented programming in its purest form; for example, see
 &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Seven Virtues of a Good Object&lt;/a&gt;.
