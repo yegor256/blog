@@ -51,6 +51,16 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Already recorded but not yet published episodes:
 
+<img src="/images/shift-m/vincent-birlouez.png" class="guest-face"/>
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;20: Vincent Birlouez about PMBOK and project managers<br/>
+3 November 2017; 47 min.
+
+<img src="/images/shift-m/henrik-martensson.png" class="guest-face"/>
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;18: Henrik Mårtensson about HR troubles<br/>
+3 November 2017; 58 min.
+
 <img src="/images/shift-m/jose-barato.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;16: Jose Barato on Indian Outsourcing and Catalonia issues<br/>
