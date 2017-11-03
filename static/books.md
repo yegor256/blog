@@ -17,13 +17,17 @@ keywords:
 
 {% badge /images/andreea/writing.svg 200 %}
 
+I started to write books in July 2016 and have big plans to publish at least
+one book a year. I'm going to write about object-oriented programming
+([Elegant Objects](/elegant-objects.html) series), project management,
+philosophy of software engineering ([Code Ahead](/code-ahead.html) series,
+blogging, lifestyle, and philosophy.
+
 If you already purchased and read my books, please review them on Amazon and/or
 [GoodReads](https://www.goodreads.com/author/list/15033289.Yegor_Bugayenko).
 Those reviews really make a difference and new readers are paying attention to them. You will
 help me a lot if you post them. Please, make them honest and as detailed
 as you can.
-
-<div style="clear:both;"/>
 
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 [Elegant Objects](/elegant-objects.html) (Volume 1)
