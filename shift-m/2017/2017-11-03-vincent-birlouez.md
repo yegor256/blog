@@ -23,6 +23,8 @@ image: /images/andreea/podcast.png
 [Vincent Birlouez](https://www.linkedin.com/in/vincentbirlouez/)
 was a special guest.
 
+We discussed [SAFe framework](https://www.scaledagileframework.com/).
+
 ## Transcript
 
 To be published soon...

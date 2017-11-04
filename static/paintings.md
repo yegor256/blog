@@ -61,6 +61,28 @@ shairart.com - form doesn't work
 
 In order of creation:
 
+{% picture /images/paintings/2017/fall.jpg 350 %}
+
+_Fall_<br/>
+November 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine.
+"Small and big losses seem to be the essense of anyone's life;
+we can learn to enjoy them or we can resent the even fact of losing;
+it seems that the Nature itself invented this drama."
+
+{% picture /images/paintings/2017/obsession.jpg 350 %}
+
+_Obsession_<br/>
+October 2017;
+31.5 x 31.5 x 0.8 in;
+Acrylic on canvas;
+Ukraine.
+"I'm trying to understand the mystery of simplicity; obviously,
+the most powerful images are the most simple and even primitive;
+what do these three simple colors mean for you?"
+
 {% picture /images/paintings/2017/not-in-love.jpg 350 %}
 
 _Not in love_<br/>
