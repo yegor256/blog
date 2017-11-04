@@ -68,9 +68,9 @@ November 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
 Ukraine.
-"Small and big losses seem to be the essense of anyone's life;
+"Small and big losses seem to be the essence of anyone's life;
 we can learn to enjoy them or we can resent the even fact of losing;
-it seems that the Nature itself invented this drama."
+it seems that Nature itself invented this drama."
 
 {% picture /images/paintings/2017/obsession.jpg 350 %}
 
