@@ -18,15 +18,18 @@ jb_picture:
 ---
 
 I believe Joshua Bloch said it first in his very good book
-["Effective Java"](): static factory methods are a more preferred
+["Effective Java"](http://amzn.to/2zgpiRI): static factory methods are a more preferred
 way to instantiate objects comparing with constructors. I disagree.
 Not only because I belive that static methods are pure evil, but
 mostly because in this particular case they pretend to be good
-and make us think that they we have to love them.
+and make us think that we have to love them.
 
 <!--more-->
 
 {% jb_picture_body %}
+
+Let's analyze the reasoning and see why it's wrong, from
+an object-oriented point of view.
 
 This is a class with a primary and two secondary constructors:
 
@@ -70,14 +73,16 @@ Which one do you like better?
 
 According to Joshua Bloch, there are three basic advantages
 of using static factory methods instead of constructors (there
-are actually four, but the forth one is not applicable to Java anymore):
+are actually four, but the forth one is not applicable to Java
+[anymore](https://docs.oracle.com/javase/7/docs/technotes/guides/language/type-inference-generic-instance-creation.html)):
 
   * They have names.
   * They can cache.
   * They can subtype.
 
-I believe that all four make perfect sense ... if the design is bad. They are
-good excuses for workarounds. Let's go one by one.
+I believe that all three make perfect sense ... if the design is wrong.
+They are good excuses for workarounds.
+Let's go one by one.
 
 ## They Have Names
 
@@ -100,7 +105,37 @@ right? Well, yes. Who knows what that three numbers mean if we just pass
 them to the constructor. But the word "palette" helps us figure everthing
 out immediately.
 
-tbd...
+True.
+
+However, the right solution would be to use polymorphism and encapsulation,
+to decompose the problem into a few semantically rich classes:
+
+{% highlight java %}
+interface Color {
+}
+class HexColor implements Color {
+  private final int hex;
+  HexColor(int h) {
+    this.hex = h;
+  }
+}
+class RGBColor implements Color {
+  private final Color origin;
+  RGBColor(int red, int green, int blue) {
+    this.origing = new HexColor(
+      red << 16 + green << 8 + blue
+    );
+  }
+}
+{% endhighlight %}
+
+Now, we use the right constructor of the right class:
+
+{% highlight java %}
+Color tomato = new RGBColor(255, 99, 71);
+{% endhighlight %}
+
+See, Joshua?
 
 ## They Can Cache
 
@@ -123,7 +158,7 @@ Color tomato = Color.makeFromPalette(255, 99, 71);
 Color red = Color.makeFromPalette(255, 99, 71);
 {% endhighlight %}
 
-Then, somewhere inside `Color` we keep a private static `Map` with all
+Then, somewhere inside the `Color` we keep a private static `Map` with all
 objects already instantiated:
 
 {% highlight java %}
@@ -134,7 +169,7 @@ class Color {
   static Color makeFromPalette(int red,
     int green, int blue) {
     final int hex = red << 16 + green << 8 + blue;
-    return Color.CACHE.computerIfAbsent(
+    return Color.CACHE.computeIfAbsent(
       hex, h -> new Color(h)
     );
   }
@@ -144,7 +179,38 @@ class Color {
 }
 {% endhighlight %}
 
-tbd...
+It is very effective performance wise. With such a small object like our
+`Color` the problem may not be so obvious, but when objects are bigger, their
+instantiation and garbage collection may waste a lot of time.
+
+True.
+
+However, there is an object-oriented way to solve this problem. We just
+introduce a new class `Palette`, which becomes a storage of colors:
+
+{% highlight java %}
+class Palette {
+  private final Map<Integer, Color> colors =
+    new HashMap<>();
+  Color take(int red, int green, int blue) {
+    final int hex = red << 16 + green << 8 + blue;
+    return this.computerIfAbsent(
+      hex, h -> new Color(h)
+    );
+  }
+}
+{% endhighlight %}
+
+Now, we make an instance of `Palette` once and ask it to return a color
+to us every time we need it:
+
+{% highlight java %}
+Color tomato = palette.take(255, 99, 71);
+// Later we will get the same instance:
+Color red = palette.take(255, 99, 71);
+{% endhighlight %}
+
+See, Joshua? I'm sure you knew it too.
 
 ## They Can Subtype
 
