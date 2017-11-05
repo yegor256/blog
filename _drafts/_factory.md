@@ -5,7 +5,9 @@ date: 2017-11-01
 place: Odessa, Ukraine
 tags: testing
 description: |
-  ...
+  Static factory methods are supposed to be a convenient
+  replacement of object constructors; however, I disagree
+  with this idea and explain why.
 keywords:
   - constructors
   - factory methods
@@ -210,8 +212,160 @@ Color tomato = palette.take(255, 99, 71);
 Color red = palette.take(255, 99, 71);
 {% endhighlight %}
 
-See, Joshua? I'm sure you knew it too.
+See, Joshua, no static methods, no static attributes.
 
 ## They Can Subtype
 
-Let's say, our class `Color` has a method
+Let's say, our class `Color` has a method `lighter()`, which is supposed
+to shift the color to the next available lighter one:
+
+{% highlight java %}
+class Color {
+  protected final int hex;
+  Color(int h) {
+    this.hex = h;
+  }
+  public Color lighter() {
+    return new Color(hex + 0x111);
+  }
+}
+{% endhighlight %}
+
+However, sometimes it's more desirable to pick the next lighter color
+through a set of available
+[Pantone](https://en.wikipedia.org/wiki/Pantone) colors:
+
+{% highlight java %}
+class PantoneColor extends Color {
+  private final PantoneName pantone;
+  PantoneColor(String name) {
+    this(new PantoneName(name));
+  }
+  PantoneColor(PantoneName name) {
+    this.pantone = name;
+  }
+  @Override
+  public Color lighter() {
+    return new PantoneColor(this.pantone.up());
+  }
+}
+{% endhighlight %}
+
+Then, we create a static factory method, which will make the decision
+which `Color` implementation is the most suitable for us:
+
+{% highlight java %}
+class Color {
+  private final String code;
+  static Color make(int h) {
+    if (h == 0xBF1932) {
+      return new PantoneColor("19-1664 TPX");
+    }
+    return new RGBColor(h);
+  }
+}
+{% endhighlight %}
+
+If the [true red](https://www.pantone.com/color-finder/19-1664-TPX) color
+is requested, we return an instance of `PantoneColor`. In all other cases it's
+just a standard `RGBColor`. The decision is made by the static factory
+method. This is how we will call it:
+
+{% highlight java %}
+Color color = Color.make(0xBF1932);
+{% endhighlight %}
+
+It would not be possible to do the same "forking" with a constructor, since
+it can only return the class it is declared in. A static method has all the
+necessary freedom to return any subtype of `Color`.
+
+True.
+
+However, in an object-oriented world we can and must do it all differently.
+First, we would make `Color` an interface:
+
+{% highlight java %}
+interface Color {
+  Color lighter();
+}
+{% endhighlight %}
+
+Next, we would move this decision making process to its own class `Colors`, just
+like we did in the previous example:
+
+{% highlight java %}
+class Colors {
+  Color make(int h) {
+    if (h == 0xBF1932) {
+      return new PantoneColor("19-1664-TPX");
+    }
+    return new RGBColor(h);
+  }
+}
+{% endhighlight %}
+
+And would use an instance of class `Colors` instead of a static faсtory
+method inside `Color`:
+
+{% highlight java %}
+colors.make(0xBF1932);
+{% endhighlight %}
+
+However, this still is not really an object-oriented way of thinking, because
+we're taking the decision making away from the object it belongs to. Either
+through a static factory method `make()` or a new class `Colors`&mdash;doesn't
+really matter how&mdash;we tear our objects into pieces. The first
+piece is the one that is the object and the second one is the decision
+making algorithm that stays somewhere else.
+
+A much more object-oriented design would be to put that logic into the
+object of class `PantoneColor`, which would be decorating
+the original `RGBColor`:
+
+{% highlight java %}
+class PantoneColor {
+  private final Color origin;
+  PantoneColor(Color color) {
+    this.origin = color;
+  }
+  @Override
+  public Color lighter() {
+    final Color next;
+    if (this.origin.hex() == 0xBF1932) {
+      next = new RGBColor(0xD12631);
+    } else {
+      next = this.origin.lighter();
+    }
+    return new PantoneColor(next);
+  }
+)
+{% endhighlight %}
+
+Then, we make an instance of `RGBColor` and decorate it with `PantoneColor`:
+
+{% highlight java %}
+Color truered = new PantoneColor(
+  new RGBColor(0xBF1932)
+);
+{% endhighlight %}
+
+Then, we ask it to return a lighter color and it returns the one from
+the Pantone palette, not the one that is just lighter in RGB coordinates:
+
+{% highlight java %}
+Color lighter = color.lighter(); // 0xD12631
+{% endhighlight %}
+
+Of course, the example is rather primitive and needs further improvement
+if we really want it to be applicable to all Pantone colors, but I hope
+you got the idea. The logic must stay inside the class, not somewhere outside
+of it in static factory methods or even in some other supplementary classes.
+I mean the logic that belongs to the class, of course. If it's something
+related to the management of class instances, there could be containers
+and storages, like in the previous example above.
+
+To summarize, I would strongly recommend to never use static methods, especially
+when they are going to replace object constructors. Giving birth to an
+object through its constructor is the most "sacred" moment in any object-oriented
+software, don't miss the beauty of it.
+
