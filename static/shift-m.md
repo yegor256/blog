@@ -85,12 +85,12 @@ To be published: 27 November 2017.
 24 October 2017; 54 min.<br/>
 To be published: 13 November 2017.
 
-<!--
-<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
-&#35;13: not yet recorded...
--->
 
 Previous episodes:
+
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;13: [What is the difference between Quality Assurance and Testing?](/shift-m/2017/13.html)<br/>
+6 November 2017; 44 min.
 
 <img src="/images/shift-m/bert-heymans.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
