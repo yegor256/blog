@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How Much Do You Pay Per Line of Code?"
+title: "How Much Do You Pay Per&nbsp;Line&nbsp;of&nbsp;Code?"
 date: 2014-04-11
 tags: xdsd management
 categories: jcg
