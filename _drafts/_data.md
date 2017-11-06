@@ -20,11 +20,11 @@ jb_picture:
 ---
 
 I stumbled upon [this proposal](http://cr.openjdk.java.net/~briangoetz/amber/datum.html)
-of [Brian Goetz](https://twitter.com/BrianGoetz)
+by [Brian Goetz](https://twitter.com/BrianGoetz)
 for data classes in Java, and immediately
-realized that I also have a few ideas how to make Java better
-as a language. I actually have many of them, but this is a short list of the most
-important five.
+realized that I also have a few ideas about how to make Java better
+as a language. I actually have many of them, but this is a short list of the five most
+important.
 
 <!--more-->
 
@@ -35,9 +35,9 @@ There are [Singletons](https://en.wikipedia.org/wiki/Singleton_pattern)
 in Java,
 which, as we all know, are nothing but
 [global variables](https://en.wikipedia.org/wiki/Global_variable).
-Would be great to enable global variables in Java and get rid of
+Wouldn't it be great to enable global variables in Java and get rid of
 Singletons. PHP, JavaScript, Ruby and many other languages
-have them, why Java doesn't? Look at this code:
+have them, why doesn't Java? Look at this code:
 
 {% highlight java %}
 class User {
@@ -65,7 +65,7 @@ String name = User.getInstance().getName();
 
 This is a Singleton. See how verbose it is?
 We can simply replace it with a global variable (`global` is the keyword
-I'm suggesting to use):
+I'm suggesting we use):
 
 {% highlight java %}
 global User user;
@@ -77,15 +77,15 @@ And then:
 user.getName();
 {% endhighlight %}
 
-Much less code to write, way easier to read!
+Much less code to write, and way easier to read!
 
 ## Global Functions and Namespaces
 
 To group static methods together we create
 [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
 where we have to define private constructors, to prevent their instantiation.
-Also, we have to remember where that static methods are, in which utility
-class. It's just an extra hassle. I'm suggesting to add global functions
+Also, we have to remember which particular utility class a static method is in.
+It's just extra hassle. I'm suggesting we add global functions
 to Java and optional "namespaces" to group them. Take a look at this
 utility class:
 
@@ -101,7 +101,7 @@ class TextUtils {
 }
 {% endhighlight %}
 
-Now, look at this global function with a namespace:
+Now look at this global function with a namespace:
 
 {% highlight java %}
 namespace TextUtils {
@@ -115,14 +115,14 @@ namespace TextUtils {
 {% endhighlight %}
 
 My point is that since we are already using classes as collections
-of functions, let's make it more convenient. In some applications even
-namespaces won't be needed, just global functions, as in C/C++.
+of functions, let's make it more convenient. In some applications we
+won't even need namespaces, just global functions, as in C/C++.
 
 ## Full Access to Private Attributes and Methods
 
 In order to access a private attribute or a method of an object from outside we
-have to use [Reflection API](https://docs.oracle.com/javase/tutorial/reflect/).
-It's not so difficult, but takes a few lines
+have to use the [Reflection API](https://docs.oracle.com/javase/tutorial/reflect/).
+It's not so difficult, but it does take a few lines
 of code, which are not so easy to read and understand:
 
 {% highlight java %}
@@ -136,7 +136,7 @@ field.setAccessible(true);
 int x = (int) field.get(point);
 {% endhighlight %}
 
-I'm suggesting to allow any object to access any attributes and methods
+I'm suggesting we allow any object to access any of the attributes and methods
 of another object:
 
 {% highlight java %}
@@ -147,22 +147,22 @@ int x = point.x;
 Of course, if they are private, the compiler will issue a warning.
 At compile time you simply ignore the warning and move on. If you really care
 about encapsulation, pay attention to the warning and do something else. But
-in most cases programmers will ignore it, since they would use
-Reflection API anyway.
+in most cases programmers will ignore it, since they would happily use
+the Reflection API anyway.
 
 ## NULL by Default
 
 It would be convenient to let us call constructors and methods with an
 incomplete set of arguments. The arguments we don't provide will be set
 to `null` by default. Also, when a method has to return something, but
-there is no `return` statement, Java has to return `null`. This is almost exactly how
-it works in PHP, Ruby, and many other languages. I believe,
+there is no `return` statement, Java should return `null`. This is almost exactly how
+it works in PHP, Ruby, and many other languages. I believe
 it would be a convenient feature for Java <del>monkeys</del> developers too.
 
-We won't need to define a few methods, when some arguments are optional. This
-[method overloading](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
+We won't need to define so many methods when some of the arguments are optional.
+[Method overloading](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
 is very verbose and difficult to understand. Instead, we
-will have one method with a long list of arguments. Some of them will be
+should have one method with a long list of arguments. Some of them will be
 provided by the caller, others will be set to `null`. The method will
 decide what to do, for example:
 
@@ -174,7 +174,7 @@ void save(File file, String encoding) {
 }
 {% endhighlight %}
 
-Then, we just either call `save(f)` or `save(f, "UTF-16")`. The method will
+Then we just call either `save(f)` or `save(f, "UTF-16")`. The method will
 understand what we mean. We can also make it even more convenient, like it's
 done in Ruby, providing method arguments by names:
 
@@ -196,7 +196,7 @@ String load(File file) {
 
 It's obvious from this code that if the file exists, the method loads
 and returns its content. If not, it returns `null`, which will be a good
-indicator for the caller that something is not right and the content
+indication for the caller that something is not right and the content
 of the file is not available.
 
 ## Getters and Setters
@@ -209,9 +209,9 @@ to create them, Java will provide them out-of-the-box, just like
 [Kotlin](https://kotlinlang.org/docs/reference/properties.html)
 and [Ruby](http://www.rubyist.net/~slagell/ruby/accessors.html) do.
 What is the point of having an attribute if there are no getters and setters
-to read and modify it, right?
+to read it and to modify it, right?
 
-With this new feature we won't need help of
+With this new feature we won't need the help of
 [Lombok](https://projectlombok.org/features/GetterSetter),
 or [IntelliJ IDEA](https://www.jetbrains.com/help/idea/generating-getters-and-setters.html).
 
