@@ -14,9 +14,9 @@ keywords:
   - data classes in java
   - data structures in java
   - java getters setters
-image: /images/2017/02/...
+image: /images/2017/11/idiocracy.jpg
 jb_picture:
-  caption:
+  caption: Idiocracy (2006) by Mike Judge
 ---
 
 I stumbled upon [this proposal](http://cr.openjdk.java.net/~briangoetz/amber/datum.html)
