@@ -844,6 +844,7 @@ california
 californian
 call
 called
+caller
 calling
 calls
 calm
@@ -2153,6 +2154,7 @@ employing
 employment
 employs
 empty
+enable
 enabled
 enables
 enabling
@@ -3536,6 +3538,7 @@ jcabi-s
 jcabi-simpledb
 jcabi-w
 jcabi-xml
+JCP
 JCS
 JDBC
 JDK
@@ -3669,6 +3672,7 @@ known
 knows
 knuth
 korean
+kotlin
 krakow
 kristina
 krubner
@@ -3856,6 +3860,7 @@ login
 logo
 logout
 logs
+lombok
 lone
 lonely
 long
@@ -4651,6 +4656,7 @@ ours
 ourselves
 out
 out-dated
+out-of-the-box
 outcome
 outcomes
 outdated
@@ -5218,6 +5224,8 @@ property
 prophesy
 prophet
 proportionally
+proposal
+proposals
 propose
 proposed
 proposing
