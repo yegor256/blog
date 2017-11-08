@@ -75,7 +75,6 @@ for the latest news.
 Here are topics I haven't spoken about yet but am planning to soon:
 
   * [Puzzle-Driven Development]({% pst 2009/mar/2009-03-04-pdd %})
-  * [TDD That Works for Me]({% pst 2017/mar/2017-03-24-tdd-that-works %})
   * [SOLID Is OOP for Dummies]({% pst 2017/mar/2017-03-28-solid %})
   * [We Pay for Bugs]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
   * [Why I Don't Talk to Google Recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})

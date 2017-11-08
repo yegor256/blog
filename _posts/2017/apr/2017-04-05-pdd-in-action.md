@@ -36,7 +36,7 @@ It is available as [0pdd](http://www.0pdd.com)&mdash;a GitHub-based chat bot.
 Here is how you configure it, in two steps. First, you
 [grant](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
 read-only access to [@0pdd](https://github.com/0pdd) in GitHub
-(either private or public repository)
+(either private or public repository).
 
 Second, you add a [webhook](https://help.github.com/articles/about-webhooks/)
 to your GitHub repository: `http://www.0pdd.com/hook/github` (with just `push` event
@@ -59,7 +59,7 @@ Also, when you remove markers from your code base,
 
 Now, when an issue is assigned to a programmer, we allow him or her
 to [cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
-and return incomplete code back to the `master.` If and when the code is
+and return incomplete code back to the `master`. If and when the code is
 not complete, we ask the programmer to leave `@todo` markers in the code, called
 "puzzles." Later, these puzzles will be assigned to other programmers,
 and so on. Eventually, the problem will be fixed when _most_ puzzles are
