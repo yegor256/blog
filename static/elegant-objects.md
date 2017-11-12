@@ -54,10 +54,21 @@ point of view. There are 23 independent recommendations for
 a practical OOP designer on how to make code cleaner, classes
 more solid, and architecture more visible. It is available for sale
 on [Amazon](http://goo.gl/W2WVMk) (Please don't forget to review it there!),
-ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobjects).<br/>
+ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobjects).
+
+Volume 1:<br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
+Volume 2:<br/>
+<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+
 <!--more-->
+
+Nov 12, 2017:
+I decided to make a list of _positive_ reviews of the book. The list of
+negative ones you can find in my list of
+[testimonials](/testimonials.html). Now it's time to put together all
+positive reviews I have. Here [it is](/eo-reviews.html).
 
 <a name="stickers"></a>
 May 11, 2017:
