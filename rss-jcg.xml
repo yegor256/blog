@@ -308,7 +308,8 @@ multiple exception types are a bad idea too.&lt;/p&gt;
         
           <description>&lt;p&gt;&amp;quot;We don&amp;#39;t have time to write unit tests&amp;quot; or &amp;quot;We don&amp;#39;t have the
 budget for unit testing&amp;quot; are complaints I hear very often. Sometimes it
-may sound like, &amp;quot;We don&amp;#39;t use TDD, so that&amp;#39;s why there are no unit tests,&amp;quot; or even
+may sound like, &amp;quot;We don&amp;#39;t use
+&lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;TDD&lt;/a&gt;, so that&amp;#39;s why there are no unit tests,&amp;quot; or even
 &amp;quot;TDD is too expensive for us now.&amp;quot; I&amp;#39;m sure you&amp;#39;ve heard this or even
 said it yourself. It doesn&amp;#39;t make any sense to me. I don&amp;#39;t get the
 logic. In my understanding, unit testing is not
