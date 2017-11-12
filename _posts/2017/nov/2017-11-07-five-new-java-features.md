@@ -14,6 +14,8 @@ keywords:
   - data classes in java
   - data structures in java
   - java getters setters
+social:
+  - dzone: https://dzone.com/articles/five-features-to-make-java-even-better
 image: /images/2017/11/idiocracy.jpg
 jb_picture:
   caption: Idiocracy (2006) by Mike Judge

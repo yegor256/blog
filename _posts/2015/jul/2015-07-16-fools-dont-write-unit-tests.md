@@ -22,7 +22,8 @@ jb_picture:
 
 "We don't have time to write unit tests" or "We don't have the
 budget for unit testing" are complaints I hear very often. Sometimes it
-may sound like, "We don't use TDD, so that's why there are no unit tests," or even
+may sound like, "We don't use
+[TDD]({% pst 2017/mar/2017-03-24-tdd-that-works %}), so that's why there are no unit tests," or even
 "TDD is too expensive for us now." I'm sure you've heard this or even
 said it yourself. It doesn't make any sense to me. I don't get the
 logic. In my understanding, unit testing is not
@@ -34,7 +35,8 @@ the tool that makes your work faster? Let me show you how.
 
 {% jb_picture_body %}
 
-TDD or not, a unit test is a unit test. Either you create it before
+[TDD or not]({% pst 2017/mar/2017-03-24-tdd-that-works %}),
+a unit test is a unit test. Either you create it before
 the main piece of code or after it.
 
 A unit test is a **tool** that helps you, a developer of software,

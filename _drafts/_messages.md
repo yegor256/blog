@@ -24,13 +24,13 @@ Later, however, in 1998
 [he said](http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html)
 that the very term "object" was misleading and a more appropriate one
 would be "messaging."
-What do I think about that?
+I respectfully disagree and here is why.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-With all due respect to Mr. Kay, I believe he was wrong. Let me
+Let me
 [quote]()http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html:
 
 > The key in making great and growable systems is much more to design how
