@@ -58,8 +58,7 @@ class Color {
   static Color makeFromRGB(String rgb) {
     return new Color(Integer.parseInt(rgb, 16));
   }
-  static Color makeFromPalette(int red,
-    int green, int blue) {
+  static Color makeFromPalette(int red, int green, int blue) {
     return new Color(red << 16 + green << 8 + blue);
   }
   static Color makeFromHex(int h) {
@@ -124,7 +123,7 @@ class HexColor implements Color {
 class RGBColor implements Color {
   private final Color origin;
   RGBColor(int red, int green, int blue) {
-    this.origing = new HexColor(
+    this.origin = new HexColor(
       red << 16 + green << 8 + blue
     );
   }
@@ -168,8 +167,7 @@ class Color {
   private static final Map<Integer, Color> CACHE =
     new HashMap<>();
   private final int hex;
-  static Color makeFromPalette(int red,
-    int green, int blue) {
+  static Color makeFromPalette(int red, int green, int blue) {
     final int hex = red << 16 + green << 8 + blue;
     return Color.CACHE.computeIfAbsent(
       hex, h -> new Color(h)
@@ -221,7 +219,7 @@ to shift the color to the next available lighter one:
 
 {% highlight java %}
 class Color {
-  protected final int hex;
+  private final int hex;
   Color(int h) {
     this.hex = h;
   }
