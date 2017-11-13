@@ -105,13 +105,6 @@ Kiev, Ukraine<br/>
 -->
 
 <div class="talk-event"/>
-<img src="/images/2017/dotnext.png" class="future-talk" alt="DotNext 2017"/>
-**TDD Upside Down**<br/>
-[DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/)<br/>
-Moscow, Russia<br/>
-12-13 November 2017
-
-<div class="talk-event"/>
 <img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
 **How Much Do You Cost?**<br/>
 [DevTernity 2017](https://devternity.com/)<br/>
@@ -150,6 +143,14 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/dotnext.png" class="past-talk" alt="DotNext 2017"/>
+TDD Upside Down;
+[DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/);
+Moscow, Russia;
+12-13 November 2017;
+[видео](https://www.youtube.com/watch?v=H54xf66c5-0).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/VQtdNQd7wIU/mqdefault.jpg" class="past-talk" alt="Семинар в ДНУ"/>
