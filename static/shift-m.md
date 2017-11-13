@@ -79,14 +79,12 @@ To be published: 27 November 2017.
 &#35;15: not yet recorded
 -->
 
+Previous episodes:
+
 <img src="/images/shift-m/bart-vermijlen.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
-&#35;14: Bart Vermijlen about Sociocracy, Gamestorming and Agile<br/>
-24 October 2017; 54 min.<br/>
-To be published: 13 November 2017.
-
-
-Previous episodes:
+&#35;14: [Bart Vermijlen about Sociocracy, Gamestorming and Agile](/shift-m/2017/14.html)<br/>
+24 October 2017; 54 min.
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;13: [What is the difference between Quality Assurance and Testing?](/shift-m/2017/13.html)<br/>

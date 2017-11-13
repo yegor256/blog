@@ -44,3 +44,10 @@ Co-founder of [DevTernity](http://devternity.com/):
 Founder of [The Art of Programming](https://theartofprogramming.podbean.com/):
 "It is one of the best books if you have a lot of experience in different projects."
 
+
+
+"Probably the most practical book about OOP I've read so far." - Anton Arhipov, Java Champion, Developer Advocate at ZeroTurnaround.
+"I definitely enjoyed this book and will be re-reading it again soon." - Ben Nadel, Co-founder at InVision.
+"It's facinating." - Baruch Sadogursky, Developer Advocate of JFrog.
+"Well-written, entertaining, practical, bold and marginal at times." - Eduards Sizovs, Co-founder of DevTernity.
+"It is one of the best books if you have a lot of experience in different projects." - Anton Chernousov, Founder of "The Art of Programming" podcast.
