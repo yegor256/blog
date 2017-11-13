@@ -18,7 +18,7 @@ image: /images/2017/03/la-grande-bellezza.jpg
 jb_picture:
   caption: La grande bellezza (2013) by Paolo Sorrentino
 youtube:
-  - H54xf66c5-0
+  - "H54xf66c5-0"
 ---
 
 [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) (a.k.a. TDD)
