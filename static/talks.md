@@ -149,8 +149,7 @@ so why shouldn't we rate them, right? The best grade is
 TDD Upside Down;
 [DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/);
 Moscow, Russia;
-12-13 November 2017;
-[видео](https://www.youtube.com/watch?v=H54xf66c5-0).
+12-13 November 2017.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/VQtdNQd7wIU/mqdefault.jpg" class="past-talk" alt="Семинар в ДНУ"/>
