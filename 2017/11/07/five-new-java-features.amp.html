@@ -95,7 +95,7 @@ Singletons. PHP, JavaScript, Ruby and many other languages
 have them, why doesn't Java? Look at this code:</p>
 
 <pre>class User {
-  private static final User INSTANCE;
+  private static User INSTANCE;
   private User() {}
   public static User getInstance() {
     synchronized (User.INSTANCE) {
