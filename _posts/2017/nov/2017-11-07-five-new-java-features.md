@@ -43,7 +43,7 @@ have them, why doesn't Java? Look at this code:
 
 {% highlight java %}
 class User {
-  private static final User INSTANCE;
+  private static User INSTANCE;
   private User() {}
   public static User getInstance() {
     synchronized (User.INSTANCE) {
