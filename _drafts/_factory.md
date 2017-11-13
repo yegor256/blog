@@ -20,9 +20,9 @@ jb_picture:
 ---
 
 I believe Joshua Bloch said it first in his very good book
-["Effective Java"](http://amzn.to/2zgpiRI): static factory methods are a more preferred
-way to instantiate objects comparing with constructors. I disagree.
-Not only because I belive that static methods are pure evil, but
+["Effective Java"](http://amzn.to/2zgpiRI): static factory methods are the preferred
+way to instantiate objects compared with constructors. I disagree.
+Not only because I believe that static methods are pure evil, but
 mostly because in this particular case they pretend to be good
 and make us think that we have to love them.
 
@@ -33,7 +33,7 @@ and make us think that we have to love them.
 Let's analyze the reasoning and see why it's wrong, from
 an object-oriented point of view.
 
-This is a class with a primary and two secondary constructors:
+This is a class with one primary and two secondary constructors:
 
 {% highlight java %}
 class Color {
@@ -74,8 +74,8 @@ class Color {
 Which one do you like better?
 
 According to Joshua Bloch, there are three basic advantages
-of using static factory methods instead of constructors (there
-are actually four, but the forth one is not applicable to Java
+to using static factory methods instead of constructors (there
+are actually four, but the fourth one is not applicable to Java
 [anymore](https://docs.oracle.com/javase/7/docs/technotes/guides/language/type-inference-generic-instance-creation.html)):
 
   * They have names.
@@ -84,7 +84,7 @@ are actually four, but the forth one is not applicable to Java
 
 I believe that all three make perfect sense ... if the design is wrong.
 They are good excuses for workarounds.
-Let's go one by one.
+Let's take them one by one.
 
 ## They Have Names
 
@@ -102,8 +102,8 @@ This is how you do it with a static factory method:
 Color tomato = Color.makeFromPalette(255, 99, 71);
 {% endhighlight %}
 
-It seems that `makeFromPalette()` is sematically richer than just `new Color()`,
-right? Well, yes. Who knows what that three numbers mean if we just pass
+It seems that `makeFromPalette()` is semantically richer than just `new Color()`,
+right? Well, yes. Who knows what those three numbers mean if we just pass
 them to the constructor. But the word "palette" helps us figure everthing
 out immediately.
 
@@ -141,7 +141,7 @@ See, Joshua?
 
 ## They Can Cache
 
-Let's say I need a red tomato color in multiple places of the application:
+Let's say I need a red tomato color in multiple places in the application:
 
 {% highlight java %}
 Color tomato = new Color(255, 99, 71);
@@ -150,8 +150,8 @@ Color red = new Color(255, 99, 71);
 {% endhighlight %}
 
 Two objects will be created, which is obviously inefficient, since they are
-identical. Would be better to keep the first instance somewhere in memory
-and return it when the second call arrives. Static factory method makes
+identical. It would be better to keep the first instance somewhere in memory
+and return it when the second call arrives. Static factory methods make
 it possible to solve this very problem:
 
 {% highlight java %}
@@ -160,7 +160,7 @@ Color tomato = Color.makeFromPalette(255, 99, 71);
 Color red = Color.makeFromPalette(255, 99, 71);
 {% endhighlight %}
 
-Then, somewhere inside the `Color` we keep a private static `Map` with all
+Then somewhere inside the `Color` we keep a private static `Map` with all the
 objects already instantiated:
 
 {% highlight java %}
@@ -181,14 +181,14 @@ class Color {
 }
 {% endhighlight %}
 
-It is very effective performance wise. With such a small object like our
+It is very effective performance-wise. With such a small object like our
 `Color` the problem may not be so obvious, but when objects are bigger, their
 instantiation and garbage collection may waste a lot of time.
 
 True.
 
 However, there is an object-oriented way to solve this problem. We just
-introduce a new class `Palette`, which becomes a storage of colors:
+introduce a new class `Palette`, which becomes a store of colors:
 
 {% highlight java %}
 class Palette {
@@ -216,7 +216,7 @@ See, Joshua, no static methods, no static attributes.
 
 ## They Can Subtype
 
-Let's say, our class `Color` has a method `lighter()`, which is supposed
+Let's say our class `Color` has a method `lighter()`, which is supposed
 to shift the color to the next available lighter one:
 
 {% highlight java %}
@@ -304,22 +304,22 @@ class Colors {
 }
 {% endhighlight %}
 
-And would use an instance of class `Colors` instead of a static faсtory
+And we would use an instance of class `Colors` instead of a static faсtory
 method inside `Color`:
 
 {% highlight java %}
 colors.make(0xBF1932);
 {% endhighlight %}
 
-However, this still is not really an object-oriented way of thinking, because
-we're taking the decision making away from the object it belongs to. Either
-through a static factory method `make()` or a new class `Colors`&mdash;doesn't
-really matter how&mdash;we tear our objects into pieces. The first
-piece is the one that is the object and the second one is the decision
+However, this is still not really an object-oriented way of thinking, because
+we're taking the decision-making away from the object it belongs to. Either
+through a static factory method `make()` or a new class `Colors`&mdash;it doesn't
+really matter how&mdash;we tear our objects into two pieces. The first
+piece is the the object itself and the second one is the decision
 making algorithm that stays somewhere else.
 
-A much more object-oriented design would be to put that logic into the
-object of class `PantoneColor`, which would be decorating
+A much more object-oriented design would be to put the logic into an
+object of class `PantoneColor` which would decorate
 the original `RGBColor`:
 
 {% highlight java %}
@@ -349,22 +349,22 @@ Color truered = new PantoneColor(
 );
 {% endhighlight %}
 
-Then, we ask it to return a lighter color and it returns the one from
-the Pantone palette, not the one that is just lighter in RGB coordinates:
+We ask it to return a lighter color and it returns the one from
+the Pantone palette, not the one that is merely lighter in RGB coordinates:
 
 {% highlight java %}
 Color lighter = color.lighter(); // 0xD12631
 {% endhighlight %}
 
-Of course, the example is rather primitive and needs further improvement
+Of course, this example is rather primitive and needs further improvement
 if we really want it to be applicable to all Pantone colors, but I hope
-you got the idea. The logic must stay inside the class, not somewhere outside
-of it in static factory methods or even in some other supplementary classes.
-I mean the logic that belongs to the class, of course. If it's something
-related to the management of class instances, there could be containers
-and storages, like in the previous example above.
+you get the idea. The logic must stay inside the class, not somewhere outside,
+not in static factory methods or even in some other supplementary class.
+I'm talking about the logic that belongs to this particular class, of course.
+If it's something related to the management of class instances, then there can
+be containers and stores, just like in the previous example above.
 
-To summarize, I would strongly recommend to never use static methods, especially
+To summarize, I would strongly recommend you never use static methods, especially
 when they are going to replace object constructors. Giving birth to an
 object through its constructor is the most "sacred" moment in any object-oriented
 software, don't miss the beauty of it.
