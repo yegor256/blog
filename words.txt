@@ -4728,6 +4728,7 @@ paired
 pakistan
 panel
 panic
+pantone
 paper
 papers
 papertrail
@@ -5804,6 +5805,7 @@ ruthless
 rutracker
 s-class
 sacca
+sacred
 sacrifice
 sacrificed
 sad
