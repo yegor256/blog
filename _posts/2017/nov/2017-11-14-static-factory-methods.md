@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Constructors or Static Factory Methods?"
-date: 2017-11-01
+date: 2017-11-14
 place: Odessa, Ukraine
 tags: testing
 description: |
@@ -14,9 +14,9 @@ keywords:
   - factory method
   - constructor or factory
   - factories vs constructiors
-image: /images/2017/02/...
+image: /images/2017/11/extract.jpg
 jb_picture:
-  caption:
+  caption: Extract (2009) by Mike Judge
 ---
 
 I believe Joshua Bloch said it first in his very good book
@@ -342,28 +342,31 @@ class PantoneColor {
 Then, we make an instance of `RGBColor` and decorate it with `PantoneColor`:
 
 {% highlight java %}
-Color truered = new PantoneColor(
+Color red = new PantoneColor(
   new RGBColor(0xBF1932)
 );
 {% endhighlight %}
 
-We ask it to return a lighter color and it returns the one from
+We ask `red` to return a lighter color and it returns the one from
 the Pantone palette, not the one that is merely lighter in RGB coordinates:
 
 {% highlight java %}
-Color lighter = color.lighter(); // 0xD12631
+Color lighter = red.lighter(); // 0xD12631
 {% endhighlight %}
 
-Of course, this example is rather primitive and needs further improvement
+Of course, this example is rather primitive and needs
+[further improvement]({% pst 2016/dec/2016-12-20-can-objects-be-friends %})
 if we really want it to be applicable to all Pantone colors, but I hope
-you get the idea. The logic must stay inside the class, not somewhere outside,
+you get the idea. The logic must stay _inside_ the class, not somewhere outside,
 not in static factory methods or even in some other supplementary class.
 I'm talking about the logic that belongs to this particular class, of course.
 If it's something related to the management of class instances, then there can
 be containers and stores, just like in the previous example above.
 
-To summarize, I would strongly recommend you never use static methods, especially
+To summarize, I would strongly recommend you _never_ use static methods, especially
 when they are going to replace object constructors. Giving birth to an
-object through its constructor is the most "sacred" moment in any object-oriented
+object through its constructor is
+[the most]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
+"sacred" moment in any object-oriented
 software, don't miss the beauty of it.
 
