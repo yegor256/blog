@@ -103,7 +103,7 @@ Color tomato = Color.makeFromPalette(255, 99, 71);
 
 It seems that `makeFromPalette()` is semantically richer than just `new Color()`,
 right? Well, yes. Who knows what those three numbers mean if we just pass
-them to the constructor. But the word "palette" helps us figure everthing
+them to the constructor. But the word "palette" helps us figure everything
 out immediately.
 
 True.
@@ -179,7 +179,7 @@ class Color {
 }
 {% endhighlight %}
 
-It is very effective performance-wise. With such a small object like our
+It is very effective performance-wise. With a small object like our
 `Color` the problem may not be so obvious, but when objects are bigger, their
 instantiation and garbage collection may waste a lot of time.
 
@@ -249,7 +249,7 @@ class PantoneColor extends Color {
 }
 {% endhighlight %}
 
-Then, we create a static factory method, which will make the decision
+Then, we create a static factory method, which will decide
 which `Color` implementation is the most suitable for us:
 
 {% highlight java %}
@@ -313,7 +313,7 @@ However, this is still not really an object-oriented way of thinking, because
 we're taking the decision-making away from the object it belongs to. Either
 through a static factory method `make()` or a new class `Colors`&mdash;it doesn't
 really matter how&mdash;we tear our objects into two pieces. The first
-piece is the the object itself and the second one is the decision
+piece is the object itself and the second one is the decision
 making algorithm that stays somewhere else.
 
 A much more object-oriented design would be to put the logic into an
