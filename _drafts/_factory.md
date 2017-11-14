@@ -219,7 +219,7 @@ to shift the color to the next available lighter one:
 
 {% highlight java %}
 class Color {
-  private final int hex;
+  protected final int hex;
   Color(int h) {
     this.hex = h;
   }
