@@ -369,4 +369,3 @@ object through its constructor is
 [the most]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 "sacred" moment in any object-oriented
 software, don't miss the beauty of it.
-
