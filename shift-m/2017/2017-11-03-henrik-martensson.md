@@ -26,6 +26,9 @@ was a special guest.
 This is the blog post we've been talking about:
 [Why HR Can't Hire Pilots](https://www.linkedin.com/pulse/why-hr-cant-hire-pilots-henrik-m%C3%A5rtensson/).
 
+This is the book mentioned:
+[Thinking in Systems: A Primer](http://amzn.to/2zHEBoO) by Donella H. Meadows.
+
 ## Transcript
 
 To be published soon...
