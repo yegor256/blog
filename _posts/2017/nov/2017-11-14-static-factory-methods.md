@@ -65,7 +65,7 @@ class Color {
     return new Color(h);
   }
   private Color(int h) {
-    return new Color(h);
+    this.hex = h;
   }
 }
 {% endhighlight %}
