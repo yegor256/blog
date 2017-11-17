@@ -52,6 +52,7 @@ module Jekyll
   class PlacesGenerator < Generator
     priority :low
     def generate(site)
+      FileUtils.mkdir_p('_temp/stats')
       File.write(
         File.join(site.config['source'], '_temp/stats/places.txt'),
         Jekyll.places(site.posts.docs).sort_by{ |k,v| v }.reverse.map{ |k,v| "#{k}: #{v}" }.join("\n")
