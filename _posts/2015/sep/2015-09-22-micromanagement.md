@@ -52,7 +52,7 @@ of control a manager exerts over subordinates. Instead, it is all about
 _how_ the details are observed and control is exercised. A micromanager
 gives instructions while a good manager defines goals and rules.
 
-Micromanagers define _algorithms_ for achieving results and insist
+Micro-managers define _algorithms_ for achieving results and insist
 on them being implemented according to their will. This is what
 a micromanager would sound like:
 
@@ -74,7 +74,7 @@ However, it's obvious that the first one is extremely annoying while
 the second doesn't irritate us at all. Because it's all about how
 the task is defined&mdash;as an _algorithm_ or as a _goal with rules_.
 
-Micromanagers treat me as a dumb executor of their will. A micromanager
+Micro-managers treat me as a dumb executor of their will. A micromanager
 is [_imperative_](https://en.wikipedia.org/wiki/Imperative_programming).
 A good manager, on the other hand, is
 [_declarative_](https://en.wikipedia.org/wiki/Declarative_programming). A good manager
