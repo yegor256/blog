@@ -92,7 +92,9 @@ All tags (alphabetic order):
 
 {{ site.tags | tag_cloud }}
 
-Intensity of writing ({% wordcount %}):
+Intensity of writing:
+{% wordcount %},
+written in {% placescount %}.
 
 {% figure /stats.svg 600 %}
 

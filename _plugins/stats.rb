@@ -44,6 +44,22 @@ module Jekyll
       num.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     end
   end
+  class PlacesCountBlock < Liquid::Tag
+    def render(context)
+      "<a href='/places.txt'>#{Jekyll.places(context['site'].posts).length}</a> places"
+    end
+  end
+  class PlacesGenerator < Generator
+    priority :low
+    def generate(site)
+      File.write(
+        File.join(site.config['source'], '_temp/stats/places.txt'),
+        Jekyll.places(site.posts.docs).sort_by{ |k,v| v }.reverse.map{ |k,v| "#{k}: #{v}" }.join("\n")
+      )
+      site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'places.txt')
+      puts "places.txt generated"
+    end
+  end
   class AStatsGenerator < Generator
     priority :low
     def generate(site)
@@ -86,6 +102,17 @@ module Jekyll
     end
   end
 
+  def self.places(docs)
+    places = {}
+    docs.each do |doc|
+      place = doc['place']
+      next if place.nil? || place.empty?
+      places[place] = 0 if places[place].nil?
+      places[place] += 1
+    end
+    places
+  end
+
   def self.all_words(text)
     text
       .gsub(/\{% highlight .+ endhighlight %\}/m, ' ')
@@ -109,3 +136,4 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('wordcount', Jekyll::WordCountBlock)
+Liquid::Template.register_tag('placescount', Jekyll::PlacesCountBlock)

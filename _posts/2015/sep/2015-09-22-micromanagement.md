@@ -22,10 +22,12 @@ jb_picture:
 
 [Micromanagement](https://en.wikipedia.org/wiki/Micromanagement),
 according to Wikipedia at the time of this writing, is "a management style
-whereby a manager closely **observes** or **controls** the work of subordinates
+whereby a manager closely _observes_ or _controls_ the work of subordinates
 or employees." Everyone knows micromanagement is evil, but what
 could be wrong with closely observing or controlling people's work? Nothing.
-Observing and controlling is not what's so bad about micromanagement. It
+Observing and
+[controlling]({% pst 2016/sep/2016-09-27-command-control-innovate %})
+is not what's so bad about micromanagement. It
 is something completely different.
 
 <!--more-->
@@ -39,7 +41,7 @@ about the small stuff while a micromanager employs
 "excessive control or attention to details," as
 [Merriam-Webster](http://www.merriam-webster.com/dictionary/micromanage) says.
 
-{% quote A good manager declares what needs to be done, never telling me how I must achieve it %}
+{% quote A good manager declares what needs to be done, never telling me how I must achieve it. %}
 
 It seems that in order to become a good manager, one should just
 stop paying attention to details. Huh?
@@ -47,11 +49,11 @@ What could be worse than a manager who doesn't pay attention to details?
 
 Micromanagement has nothing to do with the details observed or the amount
 of control a manager exerts over subordinates. Instead, it is all about
-**how** the details are observed and control is exercised. A micromanager
+_how_ the details are observed and control is exercised. A micromanager
 gives instructions while a good manager defines goals and rules.
 
-A micromanager defines **algorithms** for achieving results and insists
-on them being implemented according to his or her will. This is what
+Micromanagers define _algorithms_ for achieving results and insist
+on them being implemented according to their will. This is what
 a micromanager would sound like:
 
 {% highlight text %}
@@ -70,12 +72,12 @@ This is how a good manager would delegate a similar task:
 Pay attention to how polite our micromanager is and how rude the good manager is.
 However, it's obvious that the first one is extremely annoying while
 the second doesn't irritate us at all. Because it's all about how
-the task is defined&mdash;as an **algorithm** or as a **goal with rules**.
+the task is defined&mdash;as an _algorithm_ or as a _goal with rules_.
 
-A micromanager treats me as a dumb executor of his or her will. A micromanager
-is [**imperative**](https://en.wikipedia.org/wiki/Imperative_programming).
+Micromanagers treat me as a dumb executor of their will. A micromanager
+is [_imperative_](https://en.wikipedia.org/wiki/Imperative_programming).
 A good manager, on the other hand, is
-[**declarative**](https://en.wikipedia.org/wiki/Declarative_programming). A good manager
+[_declarative_](https://en.wikipedia.org/wiki/Declarative_programming). A good manager
 declares what needs to be done, never telling me how I must achieve it.
 
 By the way, there is&mdash;surprisingly&mdash;a lot in common between management and
@@ -84,19 +86,20 @@ object-oriented programming :) Good object-oriented programming is
 not imperative.
 
 Thus, this "micro" prefix is not really about the size of the tasks a manager
-keeps under control. It is about what a manager wants to see inside them&mdash;a black box or a glass box under a **microscope**.
+keeps under control. It is about what a manager wants to see
+inside them&mdash;a black box or a glass box under a _microscope_.
 
-{% quote A good manager pays extreme attention to defining quality standards for my work %}
+{% quote A good manager pays extreme attention to defining quality standards for my work. %}
 
 A good manager doesn't care about what I'm doing now, what tasks I'm working on,
 or what my plans, problems, and risks are. Instead, a good manager cares about my
-**results**, to a very specific level of details. A good manager pays extreme
+_results_, to a very specific level of details. A good manager pays extreme
 attention to defining quality standards for my work, clearly explaining
 expectations to me, and explicitly defining the rules of failure and success. A good
 manager makes the path ahead of me very clear. With a good manager, I know
 exactly what results are expected and what will happen if I fail or
 succeed.
 
-Thus, to be a good manager, you should never tell your subordinates **how**
-to complete their tasks. Instead, you should define **what** solutions and results
+Thus, to be a good manager, you should never tell your subordinates _how_
+to complete their tasks. Instead, you should define _what_ solutions and results
 are expected. And, of course, what will happen in the case of success or failure.
