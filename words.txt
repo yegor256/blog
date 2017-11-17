@@ -4129,6 +4129,7 @@ micro-manage
 micro-managed
 micro-management
 micro-manager
+micro-managers
 micro-manages
 micro-step
 micro-tasks
