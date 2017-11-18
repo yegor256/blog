@@ -15,6 +15,8 @@ keywords:
   - inheritance vs composition
   - composition over inheritance
 book: elegant-objects-2 5.7
+translated:
+  - Polish: https://bulldogjob.pl/news/288-dziedziczenie-to-technika-proceduralna
 image: /images/2016/09/death-at-a-funeral.jpg
 jb_picture:
   caption: Death at a Funeral (2007) by Frank Oz
