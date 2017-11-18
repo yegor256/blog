@@ -14,6 +14,8 @@ keywords:
   - factory method
   - constructor or factory
   - factories vs constructiors
+social:
+  - dzone: https://dzone.com/articles/constructors-or-static-factory-methods
 image: /images/2017/11/extract.jpg
 jb_picture:
   caption: Extract (2009) by Mike Judge

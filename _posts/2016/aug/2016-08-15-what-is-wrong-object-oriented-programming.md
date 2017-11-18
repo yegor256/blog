@@ -14,6 +14,8 @@ keywords:
   - criticism of object-oriented programming
   - why oop is bad
   - oop vs functional programming
+social:
+  - dzone: https://dzone.com/articles/whats-wrong-with-object-oriented-programming
 style: |
   .quote-author {
     width: 125px;

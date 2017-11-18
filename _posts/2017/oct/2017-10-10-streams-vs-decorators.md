@@ -14,6 +14,8 @@ keywords:
   - guava vs streams
   - java streams
   - streams
+social:
+  - dzone: https://dzone.com/articles/streams-vs-decorators
 image: /images/2017/10/la-haine.jpg
 jb_picture:
   caption: La Haine (1995) by Mathieu Kassovitz

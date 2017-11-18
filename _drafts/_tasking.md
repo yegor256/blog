@@ -208,15 +208,18 @@ down of it.
 
   * **Money works**.
     When tasks are very small, we can use good old dollar bills
-    to motivate programmers. We can throw away literally all other
-    motivational instruments.
+    to motivate programmers. We can throw away literally
+    [all other]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
+    instruments.
 
   * **We pay less**.
     We seriously cut our expensenses, while hourly rates of our programmers
-    are higher than many other projects can afford. I did a more or less
+    are
+    [higher]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
+    than many other projects can afford. I did a more or less
     [detailed analysis]({% pst 2014/apr/2014-04-11-cost-of-loc %})
-    a few years ago, which demonstrated that our projects
-    are 30 (!) times more cost efficient than traditional ones.
+    a few years ago, which demonstrated that our project
+    were 30 (!) times more cost efficient than a traditional one.
 
   * **Movitation is high**.
     Despite the

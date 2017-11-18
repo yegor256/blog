@@ -46,7 +46,7 @@ module Jekyll
   end
   class PlacesCountBlock < Liquid::Tag
     def render(context)
-      "<a href='/places.txt'>#{Jekyll.places(context['site'].posts).length}</a> places"
+      "<a href='/places.txt'>#{Jekyll.places(context['site'].posts).length}</a> geographic places"
     end
   end
   class PlacesGenerator < Generator
