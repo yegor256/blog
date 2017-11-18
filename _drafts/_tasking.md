@@ -5,9 +5,11 @@ date: 2017-11-20
 place: Moscow, Russia
 tags: management
 description: |
-  ...
+  Micro-tasking is a management paradigm we've been
+  practicing for over eight years, to the benefit
+  of our programmers and project sponsors.
 keywords:
-  - microtasking
+  - micro-tasking
   - micromanagement
   - xdsd micro tasking
   - micro management
@@ -64,12 +66,12 @@ The more aggressive you are, the higher the chances to win.
 And it's not because you are evil. You're not evil, you're stupid
 (not you personally, my dear and respected reader, but you get the point).
 
-The problem is that the project is not manageable. That's why you will
+The problem is that the project is not manageable. That's why you
 have to resort to the last possible measure&mdash;micromanagement. Why the
 project is not manageable? Because its scope is not broken down into
 pieces. It contains a large single job, called "Redesign The Apartment."
 
-One of the key factors of managability is the famous 0/100 rule, which
+One of the key success factors for managability is the famous 0/100 rule, which
 requires any task to be either "in progress" or "complete." There could be
 nothing in the middle. When such a rule is in place, the task can be
 delegated to its performer and they can become responsible for its completion,
@@ -77,7 +79,7 @@ they can be trusted.
 
 We can't "trust" our single large task to the performer, simply because it's too
 big to be trusted. If they fail, the cost of failure will be too high. We have
-to take a _micro-scope_ and go _into_ the task to manage it from the inside,
+to take a _micro_-scope_ and go into the task to manage it from the inside,
 annoying its performers, who we are supposed to trust. The micromanagement
 we will do is _inevitable_, because the scope is not broken down.
 
@@ -92,16 +94,15 @@ The smaller the tasks we can break the scope into, the better.
 
 In our projects we break project scope to tasks of 30 minutes each.
 This may sound too extreme for you, but it works for us. We call them micro-tasks.
-We started to practice microtasking about six years ago. We experimented
+We started to practice micro-tasking about seven years ago. We experimented
 with different task sizes, from 10 hours to 15 minutes, but eventually
 came down to 30 minutes.
 
 When tasks are bigger, we lose the manageability and simply get back to
-macro-tasking.
-When tasks are smaller, say, 15 minutes, the context switching overhead
+macro-tasking. When tasks are smaller, the context switching overhead
 becomes too annoying.
 
-In our experience, programmers, if being fully dedicated to a project, complete
+In our experience, a senior programmer, if being fully dedicated to a project, completes
 6-10 tasks per day. This means that they spend 3-5 hours to work, while
 the rest of the time is spent on doing something else. This is a much more
 effective usage of work time than we can achieve in a traditional macro-tasking
@@ -110,7 +111,7 @@ the rest of them time on something else (my personal observation).
 
 ## What obstacles did we have?
 
-If you decide to go for microtasking, you will most likely have same or similar
+If you decide to go for micro-tasking, you will most likely have same or similar
 obstacles we've had. Here is a short list of them and my advice, which
 may help if one day you decide to break a "Develop a Mobile App" task
 to, say, 2,500+ micro tasks:
@@ -126,14 +127,14 @@ to, say, 2,500+ micro tasks:
     [PDD]({% pst 2009/mar/2009-03-04-pdd %}).
 
   * **Distraction**.
-    Programmers are used to many different things at the same time:
-    writing code, helping others, watching YouTube, scrolling Facebook,
-    swearing at Reddit, and reading my blog. Initially most of them
-    won't like the idea of having explicit and small tasks in front of them,
+    Programmers are used to do many different things at the same time:
+    write code, help others, watch YouTube, scroll Facebook,
+    swear at Reddit, and read my blog. Initially most of them
+    won't like the idea of having explicit tasks in front of them,
     simply because they put a structure on their work time, making it
     much more visible to the management. They will tell you that they
     have many other things to do aside from your bloody tasks.
-    We solved that by
+    We solve that by
     [paying by result]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}) and
     [prohibition of chitchats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
@@ -143,28 +144,29 @@ to, say, 2,500+ micro tasks:
     work is more complicated than you think, that they need much more time,
     that they need to investigate the problem first, that reading
     documentation also takes a lot of time, etc. They are simply spoiled
-    by the traditional macro-tasking where they are paid by the month and nobody
-    really controls their results. They are used to be lazy.
-    We solved that by
+    by the [traditional macro-tasking]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
+    where they are paid by the month and nobody
+    really controls their results. They are used to be <del>office slaves</del> lazy.
+    We solve that by
     [paying by result]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
     and the lazy ones simply quit.
 
   * **Responsibility**.
-    Microtasking will make individual results visible. When tasks are large
+    Micro-tasking will make individual results visible. When tasks are large
     people tend to work with them in groups and it's unclear namely who is responsible
-    for failures and successes. Smaller tasks make emphasize mistakes
-    and make people "pay" for them. Not necessarily with cash (like we do),
+    for failures and successes. Smaller tasks emphasize mistakes
+    and make people "pay" for them. Not necessarily with cash,
     but definitely somehow else. Most programmers will find this concept
-    very new and disturbing&mdash;they almost never paid for their own
+    very new and disturbing&mdash;they've almost never paid for their own
     mistakes before and never had their own tasks. Their responsibility was
     always spread accross the group.
-    We solved that by
+    We solve that by
     [monetary rewards and punishments]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}),
-    which made them very movitated and failure tolerant.
+    which make them very movitated and failure-ready.
 
   * **Resentment**.
     This is one of the most popular and the most annoying problem: they
-    will tell you that they are not monkeys. They will actually combine
+    will tell you that they are "not monkeys." They will actually combine
     all problems listed above and say that the right way to solve them
     is to give programmers freedom and let them do their job, since they
     are smart enough and don't need any management on top of them. And they
@@ -174,11 +176,11 @@ to, say, 2,500+ micro tasks:
     I'm trying to solve this by writing this very blog post.
 
 There could be something else, but this is a more or less exhaustive list
-of problems we were faced to.
+of problems we were faced with.
 
 ## Where micro-tasking didn't work?
 
-Obviously, any approach has its pros and cons. Microtasking seems to be
+Obviously, any approach has its pros and cons. Micro-tasking seems to be
 the most effective management paradigm for us. However, it's not applicable
 everywhere, according to our experience. There are territories where
 we failed to apply it.
@@ -192,8 +194,8 @@ we failed to apply it.
 
   * **UI/UX**.
     We were mostly working with server-side Java/Ruby/C++ projects for the last
-    few years and didn't have many opportunities to apply microtasking to the
-    UI/UX jobs. However, where we tried nothing really worked: graphic
+    few years and didn't have many opportunities to apply micro-tasking to the
+    UI/UX jobs. However, whatever we tried nothing really worked: graphic
     designers weren't able to decompose their tasks to smaller parts.
 
   * **Customers**.
@@ -205,30 +207,30 @@ we failed to apply it.
     work, without any decomposition.
 
   * **Fire-fighting**.
-    When the speed of delivery was the most important concern, micro-tasking
-    didn't work for us. The overhead for tasks dispatching and specifying
-    was taking too much time. When something is really urgent, we had
+    When the speed of delivery is the most important concern, micro-tasking
+    doesn't work for us. The overhead for tasks dispatching and specifying
+    is taking too much time. When something is really urgent, we have
     to do the traditional macro-tasking and just "make it work." Then
-    we were getting back to micro-tasking.
+    we are getting back to micro-tasking.
 
 Everything else, including programming, unit testing, manual testing,
 performance/load testing, integration testing, deployment, code review,
 documentation, and even training can and must be managed via micro tasks.
 
-## What benefits did we get?
+## What benefits do we get?
 
-The most important benefit of microtasking is that the project becomes
+The most important benefit of micro-tasking is that the project becomes
 more manageable, as was mentioned above. Here is a more detailed break
-down of it.
+down of it:
 
   * **Money works**.
     When tasks are very small, we can use good old dollar bills
-    to motivate programmers. We can throw away literally
+    to motivate programmers. We can literally throw away
     [all other]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
     instruments.
 
   * **We pay less**.
-    We seriously cut our expensenses, while hourly rates of our programmers
+    We seriously lower our expensenses, while hourly rates of our programmers
     are
     [higher]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
     than many other projects can afford. I did a more or less
@@ -238,8 +240,8 @@ down of it.
 
   * **Movitation is high**.
     Despite a very common sterotype that small and isolated tasks demotivate
-    their performers, we've seen quite the opposite reaction: programmers
-    were excited when it finally became possible to work within well-defined
+    their performers, we see quite the opposite reaction: programmers
+    are excited when it finally become possible to work within well-defined
     and explicit borders, independently, and in isolation. Not all of them, though.
     My personal observation is: only 25% of them can understand and enjoy
     micro-tasking. Others are either not professional enough or spoiled
@@ -279,11 +281,11 @@ down of it.
     It's impossible to accept the risk of the entire apartment redesign failure,
     since its cost is too high&mdash;a few thousand dollars. However,
     it is absolutely affordable to accept a risk of a kitchen lamp installation.
-    Even if it will fall and break, we will spend a few dollars and buy a new one.
+    Even if it falls and breaks, we will spend a few dollars and buy a new one.
     We don't need to control the "lamp person"&mdash;we have a luxury
     to delegate and trust.
 
-The benefits programmers get are overlapping with our benefits. If they
+The benefits programmers get overlap with our benefits. If they
 are professional and motivated enough they find it effective and productive
 to work with micro tasks, which are always well defined and properly paid.
 
@@ -292,11 +294,8 @@ to work with micro tasks, which are always well defined and properly paid.
 Now the most typical complain we hear about micro-tasking: "It is for
 junior programmers who are OK with being coding monkeys." To be honest,
 I also thought so a few years ago, when we started to experiment with
-[XDSD]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}). Whan I quickly
+[XDSD]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}). What I quickly
 found out is that the most professional and self-motivated developers
-enjoy micro-tasking, while their less mature and skilled colleagues find
-it difficult to keep up.
-
-Why?
-
+were enjoying micro-tasking, while their less mature and skilled colleagues
+were finding it difficult to keep up.
 
