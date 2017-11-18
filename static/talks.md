@@ -70,7 +70,7 @@ Here is where I'll be speaking soon.
 I update this list very often, but
 follow me [on Twitter](https://www.twitter.com/yegor256) and
 [Lanyrd](http://lanyrd.com/profile/yegor256/)
-for the latest news.
+for the latest news. I'm also seen [somewhere else](/seen.html) sometimes.
 
 Here are topics I haven't spoken about yet but am planning to soon:
 
