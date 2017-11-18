@@ -107,7 +107,7 @@ module Jekyll
     places = {}
     docs.each do |doc|
       place = doc['place']
-      next if place.nil? || place.empty?
+      place = 'Unknown' if place.nil? || place.empty?
       places[place] = 0 if places[place].nil?
       places[place] += 1
     end
