@@ -88,7 +88,7 @@ script: |
   }
 ---
 
-All tags (alphabetic order):
+All tags in alphabetic order (see their [presence stats](/tags.txt)):
 
 {{ site.tags | tag_cloud }}
 

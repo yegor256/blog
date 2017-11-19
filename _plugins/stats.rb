@@ -30,6 +30,7 @@ module Jekyll
       true
     end
   end
+
   class WordCountBlock < Liquid::Tag
     def render(context)
       words = []
@@ -44,23 +45,41 @@ module Jekyll
       num.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     end
   end
+
   class PlacesCountBlock < Liquid::Tag
     def render(context)
       "<a href='/places.txt'>#{Jekyll.places(context['site'].posts).length}</a> geographic places"
     end
   end
+
   class PlacesGenerator < Generator
     priority :low
     def generate(site)
       FileUtils.mkdir_p('_temp/stats')
+      sorted = Jekyll.places(site.posts.docs).sort_by{ |k,v| v }.reverse
       File.write(
         File.join(site.config['source'], '_temp/stats/places.txt'),
-        Jekyll.places(site.posts.docs).sort_by{ |k,v| v }.reverse.map{ |k,v| "#{k}: #{v}" }.join("\n")
+        sorted.map{ |k,v| "#{k}: #{v} (#{'%.2f' % (100.0 * v/site.posts.docs.length)}%)" }.join("\n")
       )
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'places.txt')
       puts "places.txt generated"
     end
   end
+
+  class TagsGenerator < Generator
+    priority :low
+    def generate(site)
+      FileUtils.mkdir_p('_temp/stats')
+      sorted = site.tags.sort_by{ |k,v| v.length }.reverse
+      File.write(
+        File.join(site.config['source'], '_temp/stats/tags.txt'),
+        sorted.map { |k,v| "#{k}: #{v.length} (#{'%.2f' % (100.0 * v.length/site.posts.docs.length)}%)" }.join("\n")
+      )
+      site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'tags.txt')
+      puts "tags.txt generated"
+    end
+  end
+
   class AStatsGenerator < Generator
     priority :low
     def generate(site)
