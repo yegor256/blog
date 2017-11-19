@@ -7,16 +7,15 @@ Tallinn, Estonia: 4
 Los Angeles, CA: 4
 Dnipro, Ukraine: 4
 Kharkiv, Ukraine: 2
+Copenhagen, Denmark: 2
 Milan, Italy: 2
 Frankfurt, Germany: 2
 Seattle, WA: 2
 Washington, D.C.: 2
 Riga, Latvia: 1
 Saint Petersburg, Russia: 1
-Copenhagen, Denmark: 1
 Lviv, Ukraine: 1
 Vilnius, Lithuania: 1
-Copenhagen, Sweden: 1
 Las Vegas, NV: 1
 New York, NY: 1
 Atlanta, GA: 1
