@@ -15,6 +15,9 @@ keywords:
   - private static final java
   - code duplication
   - coupling and cohesion
+image: /images/2016/05/old-boy.png
+jb_picture:
+  caption: Oldeuboi (2003) by Chan-wook Park
 ---
 
 Constants... I wrote about them
@@ -29,6 +32,8 @@ that there are too many similar literals in the same file, the best way
 to get rid of them is via a private static literal. This is just wrong.
 
 <!--more-->
+
+{% jb_picture_body %}
 
 Unit tests, naturally, duplicate a lot of code. Test methods contain
 similar or almost identical functionality and this is almost inevitable. Well,
