@@ -3,7 +3,7 @@ layout: post
 title: "Why I Don't Publish E-Books"
 date: 2016-11-09
 tags: mood
-place: Copenhagen, Sweden
+place: Copenhagen, Denmark
 description: |
   There are a number of reasons why I don't publish
   my books in digital format, but rather only on paper; here
