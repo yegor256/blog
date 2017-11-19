@@ -46,7 +46,8 @@ share.
 It's obvious: Don't let them discuss
 [salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}). They must keep this information
 secret. Warn them or even sign
-[NDAs]({% pst 2015/may/2015-05-04-how-to-protect-business-idea %}) prohibiting any talks about wages, bonuses,
+[NDAs]({% pst 2015/may/2015-05-04-how-to-protect-business-idea %})
+prohibiting any talks about wages, bonuses,
 compensation plans, etc. They must feel that this information is toxic and
 never even talk to each other about salaries. If they don't know how much
 their coworkers are getting, they won't raise salary questions for much longer.
