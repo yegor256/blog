@@ -20,6 +20,9 @@ youtube:
   - g1ctRcW214w
   - oV6Utb5Jows
   - WSgP85kr6eU
+image: /images/2016/04/gomorrah.jpg
+jb_picture:
+  caption: Gomorra (2008) by Matteo Garrone)
 ---
 
 [Annotations](https://en.wikipedia.org/wiki/Java_annotation)
@@ -35,6 +38,8 @@ for example. However, I'm not excited any more. Moreover, I believe that
 annotations are a big mistake in Java design.
 
 <!--more-->
+
+{% jb_picture_body %}
 
 Long story short, there is one big problem with annotations&mdash;they encourage us to implement
 [object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
