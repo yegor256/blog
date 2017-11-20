@@ -15,7 +15,7 @@ keywords:
   - private static final java
   - code duplication
   - coupling and cohesion
-image: /images/2016/05/old-boy.png
+image: /images/2016/05/old-boy.jpg
 jb_picture:
   caption: Oldeuboi (2003) by Chan-wook Park
 ---
