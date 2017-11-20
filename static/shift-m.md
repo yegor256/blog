@@ -78,6 +78,7 @@ Previous episodes:
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;15: [How not to trust programmers right](/shift-m/2017/15.html)<br/>
+20 November 2017; 45 min.
 
 <img src="/images/shift-m/bart-vermijlen.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
