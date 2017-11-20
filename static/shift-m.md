@@ -74,12 +74,10 @@ To be published: 4 December 2017.
 30 October 2017; 53 min.<br/>
 To be published: 27 November 2017.
 
-<!--
-<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
-&#35;15: not yet recorded
--->
-
 Previous episodes:
+
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;15: [How not to trust programmers right](/shift-m/2017/15.html)<br/>
 
 <img src="/images/shift-m/bart-vermijlen.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
