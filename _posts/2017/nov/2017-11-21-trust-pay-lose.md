@@ -74,7 +74,7 @@ Don't trust.
 
 Instead, before you start a project, hire an
 [independent expert]({% pst 2014/dec/2014-12-18-independent-technical-reviews %}),
-who will regularly (ideally, twice-weekly) review everything
+who will regularly (ideally, every two weeks) review everything
 these guys are doing and tell you where and how you _may_ lose.
 This expert will maintain a Risk List for you. You will take necessary
 preemptive actions.
