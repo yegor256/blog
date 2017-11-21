@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-11-20T21:41:53+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Constructors or Static Factory Methods?</title><link href="http://www.yegor256.com/2017/11/14/static-factory-methods.html" rel="alternate" type="text/html" title="Constructors or Static Factory Methods?" /><published>2017-11-14T00:00:00+00:00</published><updated>2017-11-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/14/static-factory-methods</id><content type="html" xml:base="http://www.yegor256.com/2017/11/14/static-factory-methods.html">&lt;p&gt;I believe Joshua Bloch said it first in his very good book
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-11-21T14:31:48+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Trust. Pay. Lose.</title><link href="http://www.yegor256.com/2017/11/21/trust-pay-lose.html" rel="alternate" type="text/html" title="Trust. Pay. Lose." /><published>2017-11-21T00:00:00+00:00</published><updated>2017-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/21/trust-pay-lose</id><content type="html" xml:base="http://www.yegor256.com/2017/11/21/trust-pay-lose.html">&lt;p&gt;&amp;quot;Listen up, dude,&amp;quot; a friend of mine said when he called yesterday, &amp;quot;I trusted them
+for over a year&amp;mdash;we&amp;#39;ve been partners. They&amp;#39;ve been programming it all
+and I was busy doing business development. Now they&amp;#39;ve quit and
+I&amp;#39;m left with nothing! What am I supposed to do with all these
+JavaScript files? How do I even know they are mine? Moreover, they don&amp;#39;t even
+want to cooperate. I feel like a hostage. Please, help me out!&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;What could I say? &amp;quot;It&amp;#39;s too late, dude,&amp;quot; was my answer, &amp;quot;but the
+good news is&amp;mdash;you are not the first to have this problem.&amp;quot;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Godfather (1972) by Francis Ford Coppola&#39; src=&#39;/images/2017/11/godfather.jpg&#39; longdesc=&#39;#d7b7beb5&#39;/&gt;&lt;figcaption id=&#39;d7b7beb5&#39;&gt;The Godfather (1972) by Francis Ford Coppola&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&amp;quot;Trust, pay, lose&amp;quot; is what I would call this very typical scenario.&lt;/p&gt;
+
+&lt;p&gt;First, you &lt;strong&gt;trust&lt;/strong&gt; your programmers. You call them partners.
+You believe in them. You are sure that you picked the best ones. They seem
+to be very reliable. You look at their
+&lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;resumes&lt;/a&gt; and feel excited. They
+know JavaScript, and DevOps, and GitHub, and even Big Data. They definitely
+are the best. Moreover, they&amp;#39;ve been in this business for ten years. What else
+do you need, right?&lt;/p&gt;
+
+&lt;p&gt;Second, you &lt;strong&gt;pay&lt;/strong&gt; them. How else would they work, right? True talent
+is expensive, we all &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;know that&lt;/a&gt;.
+They bill you &lt;a href=&quot;/2014/10/21/incremental-billing.html&quot;&gt;regularly&lt;/a&gt;
+for &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;the time&lt;/a&gt; they
+spend working on your project. You
+&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;feel excited&lt;/a&gt;
+to see how your money
+turns into the software that works. They
+demonstrate new versions regularly. There are bugs, of course, but this is how it
+&lt;a href=&quot;/2015/06/18/good-programmers-bug-free.html&quot;&gt;should be&lt;/a&gt;,
+right? They &lt;a href=&quot;/2017/01/10/how-to-teach-customers.html&quot;&gt;explain&lt;/a&gt;
+everything to you and you keep paying.&lt;/p&gt;
+
+&lt;p&gt;Finally, you &lt;strong&gt;lose&lt;/strong&gt; when you realize that it&amp;#39;s their software,
+&lt;a href=&quot;/2015/05/04/how-to-protect-business-idea.html&quot;&gt;not yours&lt;/a&gt;.
+They quit because of some business reasons and you&amp;#39;re left with nothing.
+You can&amp;#39;t understand those files. You don&amp;#39;t even have them, since they
+are somewhere in the programmers&amp;#39; Git repository. You hire some more people
+to help you save what&amp;#39;s left, but they say that it&amp;#39;s time to start
+everything from scratch. Your frustration is enormous and you&amp;#39;re ready
+to go back to the first step&amp;mdash;you trust these new guys, because they
+definitely seem legit, not like those previous crooks.&lt;/p&gt;
+
+&lt;p&gt;Seems familiar?&lt;/p&gt;
+
+&lt;p&gt;What is the alternative, you ask?&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t trust.&lt;/p&gt;
+
+&lt;p&gt;Instead, before you start a project, hire an
+&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;independent expert&lt;/a&gt;,
+who will regularly (ideally, twice-weekly) review everything
+these guys are doing and tell you where and how you &lt;em&gt;may&lt;/em&gt; lose.
+This expert will maintain a Risk List for you. You will take necessary
+preemptive actions.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t trust us programmers. We are smart, lazy and spoiled.&lt;/p&gt;
+
+&lt;p&gt;You will lose.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">&amp;quot;Listen up, dude,&amp;quot; a friend of mine said when he called yesterday, &amp;quot;I trusted them
+for over a year&amp;mdash;we&amp;#39;ve been partners. They&amp;#39;ve been programming it all
+and I was busy doing business development. Now they&amp;#39;ve quit and
+I&amp;#39;m left with nothing! What am I supposed to do with all these
+JavaScript files? How do I even know they are mine? Moreover, they don&amp;#39;t even
+want to cooperate. I feel like a hostage. Please, help me out!&amp;quot;
+
+What could I say? &amp;quot;It&amp;#39;s too late, dude,&amp;quot; was my answer, &amp;quot;but the
+good news is&amp;mdash;you are not the first to have this problem.&amp;quot;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/11/godfather.jpg" /></entry><entry><title type="html">Constructors or Static Factory Methods?</title><link href="http://www.yegor256.com/2017/11/14/static-factory-methods.html" rel="alternate" type="text/html" title="Constructors or Static Factory Methods?" /><published>2017-11-14T00:00:00+00:00</published><updated>2017-11-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/14/static-factory-methods</id><content type="html" xml:base="http://www.yegor256.com/2017/11/14/static-factory-methods.html">&lt;p&gt;I believe Joshua Bloch said it first in his very good book
 &lt;a href=&quot;http://amzn.to/2zgpiRI&quot;&gt;&amp;quot;Effective Java&amp;quot;&lt;/a&gt;: static factory methods are the preferred
 way to instantiate objects compared with constructors. I disagree.
 Not only because I believe that static methods are pure evil, but
@@ -1631,65 +1701,4 @@ about &amp;quot;-ER&amp;quot; suffixes in object and class
 names. We agreed that they were evil and must be avoided if we want
 our code to be truly object-oriented and our objects to be objects instead
 of collections of procedures. Now I&amp;#39;m ready to introduce a new evil suffix:
-Client.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/dont-tempt-me.jpg" /></entry><entry><title type="html">ReHTTP.net—HTTP Repeater</title><link href="http://www.yegor256.com/2017/09/05/rehttp-http-repeater.html" rel="alternate" type="text/html" title="ReHTTP.net&amp;mdash;HTTP Repeater" /><published>2017-09-05T00:00:00+00:00</published><updated>2017-09-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/05/rehttp-http-repeater</id><content type="html" xml:base="http://www.yegor256.com/2017/09/05/rehttp-http-repeater.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.rehttp.net&#39;&gt;&lt;img src=&#39;http://www.rehttp.net/images/logo.svg&#39; style=&#39;width:92px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;I faced a problem a few weeks ago with
-&lt;a href=&quot;http://www.0pdd.com&quot;&gt;0pdd.com&lt;/a&gt;, one of my web apps that is
-supposed to receive HTTP requests (known as
-&lt;a href=&quot;https://developer.github.com/webhooks/&quot;&gt;webhooks&lt;/a&gt;) from GitHub:
-sometimes the app is down, GitHub gets an HTTP error, and never
-sends the request again. The request simply gets lost. There is absolutely
-no way to receive it again once the app is back up. I realized that I needed
-a &lt;a href=&quot;https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/&quot;&gt;service mesh&lt;/a&gt;
-between GitHub and my web app, to accept HTTP
-requests and repeat them later if they can&amp;#39;t be delivered immediately.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;I created &lt;a href=&quot;http://www.rehttp.net&quot;&gt;rehttp.net&lt;/a&gt; to do exactly that.&lt;/p&gt;
-
-&lt;p&gt;See, the URL I&amp;#39;ve been giving to GitHub is this one:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;http://www.0pdd.com/hook/github&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;From now on a new URL has to be used:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;http://p.rehttp.net/http://www.0pdd.com/hook/github&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It looks very similar, but starts with &lt;code&gt;http://p.rehttp.net&lt;/code&gt;. GitHub sends
-all webhook PUT/POST requests to the ReHTTP server, which stores
-them in a temporary database (I&amp;#39;m using AWS DynamoDB).&lt;/p&gt;
-
-&lt;p&gt;ReHTTP attempts to deliver them immediately. If something goes wrong and
-the server HTTP response code is not in the 200-299 range, the next attempt is made
-in about an hour. Then it retries every hour for about a day. If all
-attempts fail, it abandons the request and that&amp;#39;s it.&lt;/p&gt;
-
-&lt;p&gt;What is interesting is that now I can see a summary of my API
-&lt;a href=&quot;http://www.rehttp.net/i?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub&quot;&gt;here&lt;/a&gt;.
-I see how many requests were processed successfully over the last 24 hours
-and how many of them failed. Also, I have this cute button:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.rehttp.net/b?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub&quot;/&gt;&lt;/p&gt;
-
-&lt;p&gt;And I have a URL for checking the status of the entire API:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;http://www.rehttp.net/s?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I gave this URL to &lt;a href=&quot;https://www.statuscake.com/&quot;&gt;StatusCake&lt;/a&gt; to
-ping it every five minutes. If and when
-something goes wrong, StatusCake will email me and drop me a message
-on the phone.&lt;/p&gt;
-
-&lt;p&gt;ReHTTP is absolutely free. It is written in Java and the code is open.
-See its &lt;a href=&quot;https://github.com/yegor256/rehttp&quot;&gt;GitHub repository&lt;/a&gt;
-and contribute if you find any bugs or just want to add a feature.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pet" /><summary type="html">I faced a problem a few weeks ago with
-0pdd.com, one of my web apps that is
-supposed to receive HTTP requests (known as
-webhooks) from GitHub:
-sometimes the app is down, GitHub gets an HTTP error, and never
-sends the request again. The request simply gets lost. There is absolutely
-no way to receive it again once the app is back up. I realized that I needed
-a service mesh
-between GitHub and my web app, to accept HTTP
-requests and repeat them later if they can&amp;#39;t be delivered immediately.</summary></entry></feed>
+Client.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/dont-tempt-me.jpg" /></entry></feed>

@@ -1424,6 +1424,7 @@ cookies
 cooking
 cooks
 cool
+cooperate
 cooperation
 coordinates
 coordinating
@@ -1529,6 +1530,7 @@ criticized
 critiques
 CRMs
 cron
+crooks
 cross
 cross-browser
 crossed-out
@@ -3759,6 +3761,7 @@ legalization
 legalized
 legally
 legible
+legit
 lending
 length
 lengthy
@@ -5066,6 +5069,7 @@ predicting
 prediction
 predicts
 predisposition
+preemptive
 prefer
 preferable
 preferably
@@ -6309,6 +6313,7 @@ spin-wait
 spirit
 split
 splitting
+spoiled
 sponsor
 sponsor's
 sponsored
@@ -6980,6 +6985,7 @@ tweeted
 twelve
 twenty
 twice
+twice-weekly
 twist
 twitter
 two
