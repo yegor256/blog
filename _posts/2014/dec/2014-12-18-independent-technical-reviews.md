@@ -28,7 +28,9 @@ they live and breathe all those features, releases, continuous delivery, user
 experience, etc. Are you sure they are developing the product **correctly**?
 Well, yes, you're pretty sure; why wouldn't they? ...
 
-Does this sound familiar? I can't count how many times I've heard
+Does this sound
+[familiar]({% pst 2017/nov/2017-11-21-trust-pay-lose %})?
+I can't count how many times I've heard
 these stories told by startup founders. Most of them are in love with their teams ...
 until that day when it's time to [hire]({% pst 2016/jun/2016-06-21-how-to-hire-programmer %})
 **a new one**. There could be many

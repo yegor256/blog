@@ -40,7 +40,7 @@ Let me ask you something else: **Why do you need an estimate?**
 Yes, I mean it&mdash;why do you ask me how much it will cost
 to develop the software for you? I can tell you why.
 
-Because you don't trust me.
+Because you don't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) me.
 
 {% quote Any software, no matter how big or good it is, always needs more and more improvements and bug fixes %}
 

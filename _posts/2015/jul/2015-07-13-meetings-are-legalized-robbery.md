@@ -99,7 +99,8 @@ Now I have a draft and I'm taking the next step. I ask
 Monica to take a look at it and suggest changes. Again, it's another
 hour and I've got back a pull request with changes, corrections,
 new assumptions, new risks, and new concerns. I'm not talking to Monica&mdash;there is no need for that. She has all the information she needs
-to work with the DB schema. She is a good engineer, and I trust
+to work with the DB schema. She is a good engineer, and I
+[trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
 her ability to formulate her opinion in a written format.
 
 There's no need to sit together in the same room or stand at a whiteboard.

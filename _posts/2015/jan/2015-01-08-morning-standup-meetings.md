@@ -122,7 +122,8 @@ decision-making meetings, pair programming, etc.
 **A Bad Manager Micro-Manages**.
 This guy knows very little about project management, and that's why
 he feels very insecure. He is afraid of losing control of the team; he
-doesn't trust his own people; and he always feels under-informed and shakes
+doesn't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
+his own people; and he always feels under-informed and shakes
 when his own boss asks him, "What's going on?" Because of all this, he
 uses his people as anti-depressant pills&mdash;when they are doing what
 he says, he feels more secure and stable. A daily stand-up meeting is a great

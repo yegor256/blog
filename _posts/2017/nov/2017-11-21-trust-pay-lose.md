@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trust. Pay. Lose."
-date: 2017-11-20
+date: 2017-11-21
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - trust in management
   - management and trust
   - trust programmers
-image: /images/2017/02/...
+image: /images/2017/11/godfather.jpg
 jb_picture:
-  caption:
+  caption: The Godfather (1972) by Francis Ford Coppola
 ---
 
 "Listen up, dude," a friend of mine said when he called yesterday, "I trusted them
@@ -74,7 +74,7 @@ Don't trust.
 
 Instead, before you start a project, hire an
 [independent expert]({% pst 2014/dec/2014-12-18-independent-technical-reviews %}),
-who will regularly (ideally, bi-weekly) review everything
+who will regularly (ideally, twice-weekly) review everything
 these guys are doing and tell you where and how you _may_ lose.
 This expert will maintain a Risk List for you. You will take necessary
 preemptive actions.

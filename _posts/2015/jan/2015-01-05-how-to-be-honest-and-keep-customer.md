@@ -152,7 +152,8 @@ us do ours. He [hired]({% pst 2016/jun/2016-06-21-how-to-hire-programmer %})
 us because we're professional enough to develop the
 software according to his requirements. If he questions our capabilities,
 he is free to **change** the contractor. But until then, he has
-to trust our decisions. Will this work? I doubt it. It's the same as
+to [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
+our decisions. Will this work? I doubt it. It's the same as
 giving him the finger. He will get offended, and you won't get anything.
 
 The solution here is to turn the client's demands into project requirements.
