@@ -27,7 +27,7 @@ GoodReads, email, chats, etc. There is no particular order in this list.
 
 [David West](http://davewest.us/),
 Author of [Object Thinking](http://amzn.to/2ass77O):<br/>
-"Yegor Bugayenko's books, Elegant Objects I & II, shows you how to
+"Yegor Bugayenko's books, Elegant Objects I & II, show you how to
 correctly and elegantly implement the object concept in code; while all
 other books show you how to use code to warp and corrupt the object concept."
 
