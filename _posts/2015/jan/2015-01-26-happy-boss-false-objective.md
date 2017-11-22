@@ -52,7 +52,7 @@ either a CTO, a co-founder, a
 
 The project is the source of our checks. Not the CFO.
 
-{% quote A true professional team player feels himself equal to all other members of the project, no matter how high they are in the hierarchy %}
+{% quote A true professional team player feels himself equal to all other members of the project, no matter how high they are in the hierarchy. %}
 
 The CFO is a stakeholder, like everyone else. The project gives him more
 power than others because it's necessary for the whole mechanism to
@@ -106,7 +106,7 @@ information to help you do your job. Your real boss is the project;
 the boss you interact with is just a hired manager who translates
 project objectives into plans, instructions, schedules, etc.
 
-{% quote Being a professional team player requires a constant readiness to resist each and every instruction %}
+{% quote Being a professional team player requires a constant readiness to resist each and every instruction. %}
 
 This boss is your colleague who does management while you're
 writing code. You're both equal. You and he are in the same boat. Your
