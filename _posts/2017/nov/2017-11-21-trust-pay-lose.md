@@ -25,7 +25,6 @@ and I was busy doing business development. Now they've quit and
 I'm left with nothing! What am I supposed to do with all these
 JavaScript files? How do I even know they are mine? Moreover, they don't even
 want to cooperate. I feel like a hostage. Please, help me out!"
-
 What could I say? "It's too late, dude," was my answer, "but the
 good news is&mdash;you are not the first to have this problem."
 
