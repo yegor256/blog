@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-11-21T18:23:04+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Trust. Pay. Lose.</title><link href="http://www.yegor256.com/2017/11/21/trust-pay-lose.html" rel="alternate" type="text/html" title="Trust. Pay. Lose." /><published>2017-11-21T00:00:00+00:00</published><updated>2017-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/21/trust-pay-lose</id><content type="html" xml:base="http://www.yegor256.com/2017/11/21/trust-pay-lose.html">&lt;p&gt;&amp;quot;Listen up, dude,&amp;quot; a friend of mine said when he called yesterday, &amp;quot;I trusted them
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-11-22T08:12:08+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Trust. Pay. Lose.</title><link href="http://www.yegor256.com/2017/11/21/trust-pay-lose.html" rel="alternate" type="text/html" title="Trust. Pay. Lose." /><published>2017-11-21T00:00:00+00:00</published><updated>2017-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/21/trust-pay-lose</id><content type="html" xml:base="http://www.yegor256.com/2017/11/21/trust-pay-lose.html">&lt;p&gt;&amp;quot;Listen up, dude,&amp;quot; a friend of mine said when he called yesterday, &amp;quot;I trusted them
 for over a year&amp;mdash;we&amp;#39;ve been partners. They&amp;#39;ve been programming it all
 and I was busy doing business development. Now they&amp;#39;ve quit and
 I&amp;#39;m left with nothing! What am I supposed to do with all these
 JavaScript files? How do I even know they are mine? Moreover, they don&amp;#39;t even
-want to cooperate. I feel like a hostage. Please, help me out!&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;What could I say? &amp;quot;It&amp;#39;s too late, dude,&amp;quot; was my answer, &amp;quot;but the
+want to cooperate. I feel like a hostage. Please, help me out!&amp;quot;
+What could I say? &amp;quot;It&amp;#39;s too late, dude,&amp;quot; was my answer, &amp;quot;but the
 good news is&amp;mdash;you are not the first to have this problem.&amp;quot;&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -66,7 +65,6 @@ and I was busy doing business development. Now they&amp;#39;ve quit and
 I&amp;#39;m left with nothing! What am I supposed to do with all these
 JavaScript files? How do I even know they are mine? Moreover, they don&amp;#39;t even
 want to cooperate. I feel like a hostage. Please, help me out!&amp;quot;
-
 What could I say? &amp;quot;It&amp;#39;s too late, dude,&amp;quot; was my answer, &amp;quot;but the
 good news is&amp;mdash;you are not the first to have this problem.&amp;quot;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/11/godfather.jpg" /></entry><entry><title type="html">Constructors or Static Factory Methods?</title><link href="http://www.yegor256.com/2017/11/14/static-factory-methods.html" rel="alternate" type="text/html" title="Constructors or Static Factory Methods?" /><published>2017-11-14T00:00:00+00:00</published><updated>2017-11-14T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/14/static-factory-methods</id><content type="html" xml:base="http://www.yegor256.com/2017/11/14/static-factory-methods.html">&lt;p&gt;I believe Joshua Bloch said it first in his very good book
 &lt;a href=&quot;http://amzn.to/2zgpiRI&quot;&gt;&amp;quot;Effective Java&amp;quot;&lt;/a&gt;: static factory methods are the preferred
