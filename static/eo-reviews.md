@@ -25,6 +25,12 @@ contains some of the reviews readers were ever sending me. I try to put the most
 interesting ones here, from all possible sources, including Amazon,
 GoodReads, email, chats, etc. There is no particular order in this list.
 
+[David West](http://davewest.us/),
+Author of [Object Thinking](http://amzn.to/2ass77O):<br/>
+"Yegor Bugayenko's books, Elegant Objects I & II, shows you how to
+correctly and elegantly implement the object concept in code; while all
+other books show you how to use code to warp and corrupt the object concept."
+
 [Anton Arhipov](https://www.goodreads.com/review/show/1724551901),
 Java Champion, Developer Advocate at [ZeroTurnaround](https://zeroturnaround.com/):<br/>
 "Probably the most practical book about OOP I've read so far."
