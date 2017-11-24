@@ -64,11 +64,23 @@ Volume 2:<br/>
 
 <!--more-->
 
+Nov 17, 2017:
+I signed a contract with [I-manager Publications](http://www.imanagerpublications.com/),
+an academic book/magazine publisher in India. They will re-print the first
+volume of the book and distribute it among universities and colleges in
+India.
+
 Nov 12, 2017:
 I decided to make a list of _positive_ reviews of the book. The list of
 negative ones you can find in my list of
 [testimonials](/testimonials.html). Now it's time to put together all
 positive reviews I have. Here [it is](/eo-reviews.html).
+
+Oct 27, 2017:
+I signed a contract with [Ji &amp; Son](http://jiandson.co.kr/),
+a book publisher in Seoul.
+They will translate the first volume of the book to Korean and publish
+it South Korea.
 
 <a name="stickers"></a>
 May 11, 2017:
