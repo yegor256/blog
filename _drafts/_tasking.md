@@ -187,16 +187,16 @@ we failed to apply it.
 
   * **Prototyping**.
     Every project or a new big feature starts with a prototype, which
-    requires one-two persons sitting next to each other, thinking, and
-    experimenting. We tried to break this piece of work to smaller
+    requires one or two people sitting next to each other, thinking, and
+    experimenting. We tried to break this piece of work into smaller
     parts, but failed. It seems that this process has to be done as a single
     solid work package.
 
   * **UI/UX**.
     We were mostly working with server-side Java/Ruby/C++ projects for the last
     few years and didn't have many opportunities to apply micro-tasking to the
-    UI/UX jobs. However, whatever we tried nothing really worked: graphic
-    designers weren't able to decompose their tasks to smaller parts.
+    UI/UX jobs. However, whatever we did try never really worked: graphic
+    designers weren't able to decompose their tasks into smaller parts.
 
   * **Customers**.
     We tried to decompose the task of eliciting requirements from our
@@ -208,58 +208,58 @@ we failed to apply it.
 
   * **Fire-fighting**.
     When the speed of delivery is the most important concern, micro-tasking
-    doesn't work for us. The overhead for tasks dispatching and specifying
-    is taking too much time. When something is really urgent, we have
+    doesn't work for us. The overhead for dispatching and specifying tasks
+    was taking too much time. When something is really urgent, we have
     to do the traditional macro-tasking and just "make it work." Then
-    we are getting back to micro-tasking.
+    we get back to micro-tasking.
 
 Everything else, including programming, unit testing, manual testing,
 performance/load testing, integration testing, deployment, code review,
-documentation, and even training can and must be managed via micro tasks.
+documentation, and even training, can and must be managed via micro tasks.
 
 ## What benefits do we get?
 
 The most important benefit of micro-tasking is that the project becomes
 more manageable, as was mentioned above. Here is a more detailed break
-down of it:
+down:
 
   * **Money works**.
     When tasks are very small, we can use good old dollar bills
-    to motivate programmers. We can literally throw away
+    to motivate programmers. We can throw away literally
     [all other]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
     instruments.
 
   * **We pay less**.
-    We seriously lower our expensenses, while hourly rates of our programmers
+    We seriously lower our expensenses, even though hourly rates of our programmers
     are
     [higher]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
     than many other projects can afford. I did a more or less
     [detailed analysis]({% pst 2014/apr/2014-04-11-cost-of-loc %})
-    a few years ago, which demonstrated that our project
-    were 30 (!) times more cost efficient than a traditional one.
+    a few years ago, which demonstrated that our projects
+    were 30 (!) times more cost efficient than traditional ones.
 
   * **Movitation is high**.
-    Despite a very common sterotype that small and isolated tasks demotivate
+    Despite a very common stereotype that small and isolated tasks demotivate
     their performers, we see quite the opposite reaction: programmers
-    are excited when it finally become possible to work within well-defined
-    and explicit borders, independently, and in isolation. Not all of them, though.
+    are excited when it finally becomes possible to work within well-defined
+    and explicit boundaries, independently, and in isolation. Not all of them, though.
     My personal observation is: only 25% of them can understand and enjoy
     micro-tasking. Others are either not professional enough or spoiled
     by [office slavery]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
-    where it's possible to do almost nothing and stay very respected and rewarded.
+    where it's possible to do almost nothing and stay very respected and well rewarded.
 
   * **Turnover is not painful**.
     To make micro-tasking possible the management has to learn how to
     specify them: explicitly, unambiguously, and fast. When such a high
     level of transparency, formality, and agility (at the same time) is
-    achieved, the project becomes less depending on
+    achieved, the project becomes less dependent on
     [experts]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainability %}).
     We lose the fear of losing people, because almost everything
     we need to know about the project is inside our task tracking system
     and project documentation.
 
   * **Easier to parallel**.
-    Smaller tasks are easier to delegate to a bigger amount of programmers.
+    Smaller tasks are easier to delegate to a larger amount of programmers.
     In some projects we sometimes have over 40 programmers at the same time, while
     the amount of tasks is relatively small (up to 200).
 
@@ -271,10 +271,10 @@ down of it:
     really work.
 
   * **Quality is enforcable**.
-    Big amount of small tasks implies that we constantly and frequently
-    close them. Each closure is a important point for quality control. That's
-    exactly where we have an ability to say "No" and reject the deliverables
-    that violate our quality standards. With bigger tasks this "No" is much more
+    Large amounts of small tasks implies that we constantly and frequently
+    close them. Each closure is an important point for quality control. That's
+    exactly where we have the ability to say "No" and reject the deliverables
+    that violate our quality standards. With big tasks this "No" is much more
     painful for programmers.
 
   * **Risks are acceptable**.
@@ -291,11 +291,10 @@ to work with micro tasks, which are always well defined and properly paid.
 
 ## Are we monkeys or not?
 
-Now the most typical complain we hear about micro-tasking: "It is for
-junior programmers who are OK with being coding monkeys." To be honest,
+Now the most typical complaint we hear about micro-tasking is: "It is for
+junior programmers who are OK with being code monkeys." To be honest,
 I also thought so a few years ago, when we started to experiment with
 [XDSD]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}). What I quickly
 found out is that the most professional and self-motivated developers
-were enjoying micro-tasking, while their less mature and skilled colleagues
+were enjoying micro-tasking, while their less mature and less skilled colleagues
 were finding it difficult to keep up.
-
