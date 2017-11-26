@@ -3,7 +3,7 @@ layout: post
 title: "Constructors or Static Factory Methods?"
 date: 2017-11-14
 place: Odessa, Ukraine
-tags: testing
+tags: java oop
 description: |
   Static factory methods are supposed to be a convenient
   replacement of object constructors; however, I disagree
