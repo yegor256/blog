@@ -68,13 +68,13 @@ To be published: 4 December 2017.
 &#35;17: not yet recorded
 -->
 
-<img src="/images/shift-m/jose-barato.png" class="guest-face"/>
-<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
-&#35;16: Jose Barato on Indian Outsourcing and Catalonia issues<br/>
-30 October 2017; 53 min.<br/>
-To be published: 27 November 2017.
 
 Previous episodes:
+
+<img src="/images/shift-m/jose-barato.png" class="guest-face"/>
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;16: [Jose Barato on Indian Outsourcing and Catalonia issues](/shift-m/2017/16.html)<br/>
+30 October 2017; 53 min.
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;15: [How not to trust programmers right](/shift-m/2017/15.html)<br/>
