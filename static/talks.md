@@ -145,12 +145,13 @@ so why shouldn't we rate them, right? The best grade is
 ### 2017
 
 <div class="talk-event"/>
-<img src="/images/2017/dotnext.png" class="past-talk" alt="DotNext 2017"/>
+<img src="https://i.ytimg.com/vi/R_2AvKDHAWI/mqdefault.jpg" class="past-talk" alt="DotNext 2017"/>
 TDD Upside Down;
 [DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/);
 Moscow, Russia;
 12-13 November 2017;
-[slides](https://www.slideshare.net/secret/cUPqyS0ZwPhKL6).
+[slides](https://www.slideshare.net/secret/cUPqyS0ZwPhKL6),
+[видео](https://www.youtube.com/watch?v=R_2AvKDHAWI).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/VQtdNQd7wIU/mqdefault.jpg" class="past-talk" alt="Семинар в ДНУ"/>
