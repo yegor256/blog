@@ -71,7 +71,7 @@ have to resort to the last possible measure&mdash;micromanagement. Why is the
 project not manageable? Because its scope is not broken down into
 pieces. It contains a large single job called "Redesign The Apartment."
 
-One of the key success factors for managability is the famous 0/100 rule, which
+One of the key success factors for manageability is the famous 0/100 rule, which
 requires any task to be either "in progress" or "complete." There can be
 nothing in the middle. When such a rule is in place, the task can be
 delegated to its performer and they can become responsible for its completion,
@@ -162,7 +162,7 @@ into, say, 2,500+ micro tasks:
     always spread across the group.
     We solve that by
     [monetary rewards and punishments]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}),
-    which make them very movitated and failure-ready.
+    which make them very motivated and failure-ready.
 
   * **Resentment**.
     This is one of the most popular and the most annoying of problems: they
@@ -230,7 +230,7 @@ down:
     instruments.
 
   * **We pay less**.
-    We seriously lower our expensenses, even though hourly rates of our programmers
+    We seriously lower our expenses, even though hourly rates of our programmers
     are
     [higher]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
     than many other projects can afford. I did a more or less
@@ -270,7 +270,7 @@ down:
     and discipline decisions. In a macro-tasking environment almost no HR metrics
     really work.
 
-  * **Quality is enforcable**.
+  * **Quality is enforceable**.
     Large amounts of small tasks implies that we constantly and frequently
     close them. Each closure is an important point for quality control. That's
     exactly where we have the ability to say "No" and reject the deliverables
