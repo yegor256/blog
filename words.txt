@@ -121,6 +121,7 @@ affected
 affecting
 affects
 afford
+affordable
 afraid
 after
 afterward
@@ -284,6 +285,7 @@ anywhere
 AOP
 apache
 apart
+apartment
 API
 API-s
 APIs
@@ -1013,6 +1015,7 @@ childhood
 children
 china
 chit-chats
+chitchats
 chocolate
 choice
 choices
@@ -1223,6 +1226,7 @@ compiles
 complain
 complaining
 complains
+complaint
 complaints
 complete
 completed
@@ -1624,6 +1628,7 @@ deal
 dealing
 deals
 dealt
+dear
 death
 debate
 debates
@@ -1720,6 +1725,7 @@ demeter
 democracy
 democratic
 demonstrate
+demonstrated
 demonstrates
 demonstrating
 demonstration
@@ -1737,6 +1743,7 @@ dependable
 dependencies
 dependency
 dependency-free
+dependent
 depending
 depends
 deploy
@@ -1916,6 +1923,7 @@ disorder
 dispatch
 dispatcher
 dispatchers
+dispatching
 display
 displays
 disposal
@@ -2120,6 +2128,7 @@ elements
 elevator
 eleven
 eleven-page
+eliciting
 eligible
 eliminating
 elimination
@@ -2186,6 +2195,7 @@ enemies
 energetic
 energy
 enforce
+enforceable
 enforced
 enforcement
 enforces
@@ -2357,6 +2367,9 @@ experienced
 experiencing
 experiment
 experimentally
+experimented
+experimenting
+experiments
 expert
 expertise
 experts
@@ -2404,6 +2417,7 @@ extrovert
 extroverted
 eye
 eyes
+fabrics
 facade
 facades
 face
@@ -2424,6 +2438,7 @@ failed
 failing
 fails
 failure
+failure-ready
 failure-resilient
 failures
 fair
@@ -3396,6 +3411,7 @@ interests
 interface
 interfaces
 interfere
+interior
 internal
 internally
 internals
@@ -3697,6 +3713,7 @@ lag
 laissez-faire
 lake
 lambda
+lamp
 landed
 language
 languages
@@ -3705,6 +3722,7 @@ laptop
 laptops
 large
 largely
+larger
 larkin
 larry
 las
@@ -3924,6 +3942,7 @@ machine
 machines
 MacOS
 macports
+macro-tasking
 made
 magic
 Magnum-CI
@@ -4135,7 +4154,9 @@ micro-manager
 micro-managers
 micro-manages
 micro-step
+micro-tasking
 micro-tasks
+micromanage
 micromanagement
 micromanager
 micromanages
@@ -4603,6 +4624,7 @@ operators
 opinion
 opinions
 opponent
+opportunities
 opportunity
 opposing
 opposite
@@ -4686,6 +4708,7 @@ overestimated
 overflow
 overflows
 overhead
+overlap
 overload
 overloaded
 overloading
@@ -5202,6 +5225,7 @@ progress
 prohibit
 prohibited
 prohibiting
+prohibition
 prohibits
 project
 project's
@@ -5392,6 +5416,7 @@ RDF
 rdquo
 re
 re-deploy
+re-design
 re-designed
 re-do
 re-estimated
@@ -5638,6 +5663,7 @@ resell
 resemble
 resembles
 resent
+resentment
 reserve
 reserved
 reserves
@@ -6147,6 +6173,7 @@ situations
 six
 sixnines
 size
+sizes
 skateboard
 skeet
 skeleton
@@ -6299,6 +6326,7 @@ specified
 specifier
 specifies
 specify
+specifying
 specs
 speech
 speeches
@@ -6411,6 +6439,7 @@ step
 step-by-step
 step-dad
 steps
+stereotype
 stereotypes
 steve
 steven
@@ -6715,6 +6744,7 @@ terrain
 terrible
 terribly
 terrific
+territories
 territory
 tesla
 test
@@ -7018,6 +7048,7 @@ un-preventable
 un-testable
 unacceptable
 unambiguous
+unambiguously
 unannounced
 unanswered
 unaware
@@ -7076,6 +7107,7 @@ universe
 university
 UNIX
 unknown
+unknowns
 unless
 unlike
 unlikely
@@ -7122,6 +7154,7 @@ upside
 upvotes
 upwork
 urgency
+urgent
 urgently
 URI
 URL
@@ -7158,6 +7191,7 @@ vacation
 vacations
 vaccine
 vague
+vagueness
 vakhobov
 valentin
 valid
@@ -7339,6 +7373,7 @@ welcomed
 welcomes
 well
 well-connected
+well-defined
 well-designed
 well-developed
 well-educated

@@ -1,4 +1,284 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-11-28T07:58:41+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Trust. Pay. Lose.</title><link href="http://www.yegor256.com/2017/11/21/trust-pay-lose.html" rel="alternate" type="text/html" title="Trust. Pay. Lose." /><published>2017-11-21T00:00:00+00:00</published><updated>2017-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/21/trust-pay-lose</id><content type="html" xml:base="http://www.yegor256.com/2017/11/21/trust-pay-lose.html">&lt;p&gt;&amp;quot;Listen up, dude,&amp;quot; a friend of mine said when he called yesterday, &amp;quot;I trusted them
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-11-28T10:56:54+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How Micro Is Your Tasking?</title><link href="http://www.yegor256.com/2017/11/28/microtasking.html" rel="alternate" type="text/html" title="How Micro Is Your Tasking?" /><published>2017-11-28T00:00:00+00:00</published><updated>2017-11-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/28/microtasking</id><content type="html" xml:base="http://www.yegor256.com/2017/11/28/microtasking.html">&lt;p&gt;&amp;quot;What are you doing now?&amp;quot;&amp;mdash;when you hear this question
+from your boss, be aware: you&amp;#39;re dealing with a
+&lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;micromanager&lt;/a&gt;.
+Keeping us busy is the key objective of these creatures and this
+is what makes them so annoying. To the contrary,
+&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;effective managers&lt;/a&gt;
+make sure we are &lt;em&gt;productive&lt;/em&gt;, meaning that our results satisfy
+their expectations. They are not interested in knowing what we are
+doing to deliver them&amp;mdash;they manage the project, instead of managing us.
+And the first step to making the project manageable is to decompose its
+scope into smaller pieces.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Carlito&amp;#39;s Way (1993) by Brian De Palma&#39; src=&#39;/images/2017/11/carlitos-way.jpg&#39; longdesc=&#39;#fa318a0d&#39;/&gt;&lt;figcaption id=&#39;fa318a0d&#39;&gt;Carlito&amp;#39;s Way (1993) by Brian De Palma&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Imagine you want to re-design your apartment, having a few thousand
+dollars for this job. You hire a group of people and give them all your
+money up front. They ask you to come back in two months, when everything will
+be ready. You say &amp;quot;OK&amp;quot; and wait for two months. I&amp;#39;m sure you already know
+what I&amp;#39;m getting at&amp;mdash;this project most probably will be a failure, to
+some extent. In the worst case you won&amp;#39;t see these guys ever, they will just
+steal your money. In the best case, they will do something that will
+look &amp;quot;nice,&amp;quot; but not as nice as you expected.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-do-we-micromanage&quot;&gt;Why do we micromanage?&lt;/h2&gt;
+
+&lt;p&gt;What do you do in order to increase your chances of getting the best case scenario?
+That&amp;#39;s right, you micromanage them: you visit them every day, you ask them
+the famous &amp;quot;What are you doing now?&amp;quot; question, you push them when they are
+getting lazy, you control, you dominate, you annoy, you
+&amp;quot;stay on top,&amp;quot; you play the guilt card when they miss or forget,
+you &lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;punish&lt;/a&gt;
+them every way you can.&lt;/p&gt;
+
+&lt;p&gt;You don&amp;#39;t do that because you&amp;#39;re evil. You just know that otherwise they
+will trash your apartment, will forget things, will miss
+something, will make mistakes, will spend more time and money than they are
+supposed to, will choose wrong fabrics, will purchase the furniture
+you don&amp;#39;t like, and will do many other things you&amp;#39;re well aware of if you&amp;#39;ve
+ever dealt with interior designers and house builders.&lt;/p&gt;
+
+&lt;p&gt;The more aggressive you are, the higher the chances you win.&lt;/p&gt;
+
+&lt;p&gt;And it&amp;#39;s not because you are evil. You&amp;#39;re not evil, you&amp;#39;re stupid
+(not you personally, my dear and respected reader, but you get the point).&lt;/p&gt;
+
+&lt;p&gt;The problem is that the project is not manageable. That&amp;#39;s why you
+have to resort to the last possible measure&amp;mdash;micromanagement. Why is the
+project not manageable? Because its scope is not broken down into
+pieces. It contains a large single job called &amp;quot;Redesign The Apartment.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;One of the key success factors for manageability is the famous 0/100 rule, which
+requires any task to be either &amp;quot;in progress&amp;quot; or &amp;quot;complete.&amp;quot; There can be
+nothing in the middle. When such a rule is in place, the task can be
+delegated to its performer and they can become responsible for its completion,
+they can be trusted.&lt;/p&gt;
+
+&lt;p&gt;We can&amp;#39;t &amp;quot;trust&amp;quot; our single large task to the performer, simply because it&amp;#39;s too
+big to be trusted. If they fail, the cost of failure will be too high. We have
+to take a &lt;em&gt;micro&lt;/em&gt;-scope and get into the task to manage it from the inside,
+annoying its performers, whom we are supposed to trust. The micromanagement
+we do is &lt;em&gt;inevitable&lt;/em&gt;, because the scope is not broken down.&lt;/p&gt;
+
+&lt;p&gt;Scope decomposition was invented mostly in order to solve this very problem:
+to make the project more manageable. We need small tasks in the scope in order
+to be able to delegate them and never go inside in order to check what&amp;#39;s going on
+there, who is doing what, why, and where.&lt;/p&gt;
+
+&lt;p&gt;The smaller the tasks we can break the scope into, the better.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-small-can-tasks-be&quot;&gt;How small can tasks be?&lt;/h2&gt;
+
+&lt;p&gt;In our projects we break project scope into tasks of 30 minutes each.
+This may sound too extreme for you, but it works for us. We call them micro-tasks.
+We started to practice micro-tasking about seven years ago. We experimented
+with different task sizes, from 10 hours to 15 minutes, but eventually
+came down to 30 minutes.&lt;/p&gt;
+
+&lt;p&gt;When tasks are bigger, we lose the manageability and simply get back to
+macro-tasking. When tasks are smaller, the context switching overhead
+becomes too annoying.&lt;/p&gt;
+
+&lt;p&gt;In our experience, a senior programmer, if fully dedicated to a project, completes
+6-10 tasks a day. This means that they spend 3-5 hours working, while
+the rest of the time is spent on doing something else. This is a much more
+effective use of work time than we can achieve with traditional macro-tasking
+management, where programmers barely work for two hours a day, spending
+the rest of their time on something else (my personal observation).&lt;/p&gt;
+
+&lt;h2 id=&quot;what-obstacles-did-we-have&quot;&gt;What obstacles did we have?&lt;/h2&gt;
+
+&lt;p&gt;If you decide to go for micro-tasking, you will most likely have the same or similar
+obstacles that we&amp;#39;ve had. Here is a short list of them and my advice, which
+may help if one day you decide to break a &amp;quot;Develop a Mobile App&amp;quot; task
+into, say, 2,500+ micro tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Vagueness&lt;/strong&gt;.
+Definition of done, exit criteria, requirements, expectations&amp;mdash;there
+are many names, which are all about our inability to define
+what exactly we expect programmers to do. Software development
+by definition includes a lot of unknowns, creativity, experiments,
+and risks. Programmers will tell you that they can&amp;#39;t guarantee anything
+in most cases, and can&amp;#39;t really give any valid promises.
+We solve that by
+&lt;a href=&quot;/2009/03/04/pdd.html&quot;&gt;PDD&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Distraction&lt;/strong&gt;.
+Programmers are used to doing many different things at the same time:
+they write code, help others, watch YouTube, scroll Facebook,
+swear at Reddit, and read my blog. Initially most of them
+won&amp;#39;t like the idea of having explicit tasks in front of them,
+simply because they put a structure on their work time, making it
+much more visible to the management. They will tell you that they
+have many other things to do aside from your bloody tasks.
+We solve that by
+&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;paying by result&lt;/a&gt; and
+&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;prohibition of chitchats&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Laziness&lt;/strong&gt;.
+Just like that apartment designers, programmers also love to get paid
+and do nothing. Who doesn&amp;#39;t, right? They will tell you that their
+work is more complicated than you think, that they need much more time,
+that they need to investigate the problem first, that reading
+documentation also takes a lot of time, etc. They are simply spoiled
+by the &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;traditional macro-tasking&lt;/a&gt;
+where they are paid by the month and nobody
+really controls their results. They are used to being &lt;del&gt;office slaves&lt;/del&gt; lazy.
+We solve that by
+&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;paying by result&lt;/a&gt;
+and the lazy ones simply quit.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Responsibility&lt;/strong&gt;.
+Micro-tasking will make individual results visible. When tasks are large
+people tend to work with them in groups and it&amp;#39;s unclear exactly who is responsible
+for failures and successes. Smaller tasks emphasize mistakes
+and make people &amp;quot;pay&amp;quot; for them. Not necessarily with cash,
+but definitely some way or other. Most programmers will find this concept
+very new and disturbing&amp;mdash;they&amp;#39;ve almost never paid for their own
+mistakes before and never had their own tasks. The responsibility was
+always spread across the group.
+We solve that by
+&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;monetary rewards and punishments&lt;/a&gt;,
+which make them very motivated and failure-ready.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Resentment&lt;/strong&gt;.
+This is one of the most popular and the most annoying of problems: they
+will tell you that they are &amp;quot;not monkeys.&amp;quot; They will actually combine
+all problems listed above and say that the right way to solve them
+is to give programmers freedom and let them do their job, since they
+are smart enough and don&amp;#39;t need any management from the top. And they
+will mostly be saying it quite honestly, with no intent to manipulate. The thing
+is that they are used to macro-tasking and believe that this is the
+only and the right way.
+I&amp;#39;m trying to solve this by writing this very blog post.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There could be something else, but this is a more or less an exhaustive list
+of the problems we were faced with.&lt;/p&gt;
+
+&lt;h2 id=&quot;where-micro-tasking-didnt-work&quot;&gt;Where micro-tasking didn&amp;#39;t work&lt;/h2&gt;
+
+&lt;p&gt;Obviously, any approach has its pros and cons. Micro-tasking seems to be
+the most effective management paradigm for us. However, it&amp;#39;s not applicable
+everywhere, according to our experience. There are territories where
+we failed to apply it.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Prototyping&lt;/strong&gt;.
+Every project or a new big feature starts with a prototype, which
+requires one or two people sitting next to each other, thinking, and
+experimenting. We tried to break this piece of work into smaller
+parts, but failed. It seems that this process has to be done as a single
+solid work package.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;UI/UX&lt;/strong&gt;.
+We were mostly working with server-side Java/Ruby/C++ projects for the last
+few years and didn&amp;#39;t have many opportunities to apply micro-tasking to the
+UI/UX jobs. However, whatever we did try never really worked: graphic
+designers weren&amp;#39;t able to decompose their tasks into smaller parts.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Customers&lt;/strong&gt;.
+We tried to decompose the task of eliciting requirements from our
+clients and failed a few times. Maybe our clients were stupid
+(I doubt that), maybe requirements were too complex, or maybe
+our system analysts were not professional enough. The bottom line
+is that we realized that such a task must be done as a solid piece of
+work, without any decomposition.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fire-fighting&lt;/strong&gt;.
+When the speed of delivery is the most important concern, micro-tasking
+doesn&amp;#39;t work for us. The overhead for dispatching and specifying tasks
+was taking too much time. When something is really urgent, we have
+to do the traditional macro-tasking and just &amp;quot;make it work.&amp;quot; Then
+we get back to micro-tasking.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Everything else, including programming, unit testing, manual testing,
+performance/load testing, integration testing, deployment, code review,
+documentation, and even training, can and must be managed via micro tasks.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-benefits-do-we-get&quot;&gt;What benefits do we get?&lt;/h2&gt;
+
+&lt;p&gt;The most important benefit of micro-tasking is that the project becomes
+more manageable, as was mentioned above. Here is a more detailed break
+down:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Money works&lt;/strong&gt;.
+When tasks are very small, we can use good old dollar bills
+to motivate programmers. We can throw away literally
+&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;all other&lt;/a&gt;
+instruments.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;We pay less&lt;/strong&gt;.
+We seriously lower our expenses, even though hourly rates of our programmers
+are
+&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;higher&lt;/a&gt;
+than many other projects can afford. I did a more or less
+&lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;detailed analysis&lt;/a&gt;
+a few years ago, which demonstrated that our projects
+were 30 (!) times more cost efficient than traditional ones.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Motivation is high&lt;/strong&gt;.
+Despite a very common stereotype that small and isolated tasks demotivate
+their performers, we see quite the opposite reaction: programmers
+are excited when it finally becomes possible to work within well-defined
+and explicit boundaries, independently, and in isolation. Not all of them, though.
+My personal observation is: only 25% of them can understand and enjoy
+micro-tasking. Others are either not professional enough or spoiled
+by &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slavery&lt;/a&gt;,
+where it&amp;#39;s possible to do almost nothing and stay very respected and well rewarded.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Turnover is not painful&lt;/strong&gt;.
+To make micro-tasking possible the management has to learn how to
+specify them: explicitly, unambiguously, and fast. When such a high
+level of transparency, formality, and agility (at the same time) is
+achieved, the project becomes less dependent on
+&lt;a href=&quot;/2015/12/29/turnover-is-good-for-maintainability.html&quot;&gt;experts&lt;/a&gt;.
+We lose the fear of losing people, because almost everything
+we need to know about the project is inside our task tracking system
+and project documentation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Easier to parallel&lt;/strong&gt;.
+Smaller tasks are easier to delegate to a larger amount of programmers.
+In some projects we sometimes have over 40 programmers at the same time, while
+the amount of tasks is relatively small (up to 200).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Metrics work&lt;/strong&gt;.
+When one programmer closes 40-50 tasks per week and another one closes
+5-10, it does mean something, keeping in mind that all tasks are almost
+equal in size. We use this metric (and a few others) to make organizational
+and discipline decisions. In a macro-tasking environment almost no HR metrics
+really work.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Quality is enforceable&lt;/strong&gt;.
+Large amounts of small tasks implies that we constantly and frequently
+close them. Each closure is an important point for quality control. That&amp;#39;s
+exactly where we have the ability to say &amp;quot;No&amp;quot; and reject the deliverables
+that violate our quality standards. With big tasks this &amp;quot;No&amp;quot; is much more
+painful for programmers.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Risks are acceptable&lt;/strong&gt;.
+It&amp;#39;s impossible to accept the risk of the entire apartment redesign failure,
+since its cost is too high&amp;mdash;a few thousand dollars. However,
+it is absolutely affordable to accept a risk of a kitchen lamp installation.
+Even if it falls and breaks, we will spend a few dollars and buy a new one.
+We don&amp;#39;t need to control the &amp;quot;lamp person&amp;quot;&amp;mdash;we have a luxury
+to delegate and trust.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The benefits programmers get overlap with our benefits. If they
+are professional and motivated enough they find it effective and productive
+to work with micro tasks, which are always well defined and properly paid.&lt;/p&gt;
+
+&lt;h2 id=&quot;are-we-monkeys-or-not&quot;&gt;Are we monkeys or not?&lt;/h2&gt;
+
+&lt;p&gt;Now the most typical complaint we hear about micro-tasking is: &amp;quot;It is for
+junior programmers who are OK with being code monkeys.&amp;quot; To be honest,
+I also thought so a few years ago, when we started to experiment with
+&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;XDSD&lt;/a&gt;. What I quickly
+found out is that the most professional and self-motivated developers
+were enjoying micro-tasking, while their less mature and less skilled colleagues
+were finding it difficult to keep up.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">&amp;quot;What are you doing now?&amp;quot;&amp;mdash;when you hear this question
+from your boss, be aware: you&amp;#39;re dealing with a
+micromanager.
+Keeping us busy is the key objective of these creatures and this
+is what makes them so annoying. To the contrary,
+effective managers
+make sure we are productive, meaning that our results satisfy
+their expectations. They are not interested in knowing what we are
+doing to deliver them&amp;mdash;they manage the project, instead of managing us.
+And the first step to making the project manageable is to decompose its
+scope into smaller pieces.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/11/carlitos-way.jpg" /></entry><entry><title type="html">Trust. Pay. Lose.</title><link href="http://www.yegor256.com/2017/11/21/trust-pay-lose.html" rel="alternate" type="text/html" title="Trust. Pay. Lose." /><published>2017-11-21T00:00:00+00:00</published><updated>2017-11-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/21/trust-pay-lose</id><content type="html" xml:base="http://www.yegor256.com/2017/11/21/trust-pay-lose.html">&lt;p&gt;&amp;quot;Listen up, dude,&amp;quot; a friend of mine said when he called yesterday, &amp;quot;I trusted them
 for over a year&amp;mdash;we&amp;#39;ve been partners. They&amp;#39;ve been programming it all
 and I was busy doing business development. Now they&amp;#39;ve quit and
 I&amp;#39;m left with nothing! What am I supposed to do with all these
@@ -1564,139 +1844,4 @@ practices were criticized. Now I&amp;#39;ve decided to think it all over
 and summarize what actually motivates me as a programmer when I&amp;#39;m
 working for someone else. Let&amp;#39;s say you hire me tomorrow as a Java coder
 and ask &amp;quot;What do you want us to do for you so
-that you will be most productive?&amp;quot; This would be my wish list.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/300.jpg" /></entry><entry><title type="html">Yet Another Evil Suffix For Object Names: Client</title><link href="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html" rel="alternate" type="text/html" title="Yet Another Evil Suffix For Object Names: Client" /><published>2017-09-12T00:00:00+00:00</published><updated>2017-09-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client</id><content type="html" xml:base="http://www.yegor256.com/2017/09/12/evil-object-name-suffix-client.html">&lt;p&gt;Some time ago we &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;were talking&lt;/a&gt;
-about &amp;quot;-ER&amp;quot; suffixes in object and class
-names. We agreed that they were evil and must be avoided if we want
-our code to be truly object-oriented and our objects to be objects instead
-of collections of procedures. Now I&amp;#39;m ready to introduce a new evil suffix:
-&lt;code&gt;Client&lt;/code&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Sin noticias de Dios (2001) by Agustín Díaz Yanes&#39; src=&#39;/images/2017/09/dont-tempt-me.jpg&#39; longdesc=&#39;#467f4c9d&#39;/&gt;&lt;figcaption id=&#39;467f4c9d&#39;&gt;Sin noticias de Dios (2001) by Agustín Díaz Yanes&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let me give an example first. This is what an object with such a suffix may look like
-(it&amp;#39;s a pseudo-code version of the
-&lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html&quot;&gt;&lt;code&gt;AmazonS3Client&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;https://aws.amazon.com/sdk-for-java/&quot;&gt;AWS Java SDK&lt;/a&gt;):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AmazonS3Client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;createBucket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;deleteBucket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;doesBucketExist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;getBucketAcl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;getBucketPolicy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;listBuckets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 160+ more methods here&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;All &amp;quot;clients&amp;quot; look similar: they encapsulate the destination URL
-with some access credentials and expose a number of methods, which
-transport the data to/from the &amp;quot;server.&amp;quot; Even though this design
-looks like a &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;proper object&lt;/a&gt;,
-it doesn&amp;#39;t really follow the true spirit of object-orientation.
-That&amp;#39;s why it&amp;#39;s not as maintainable as it should be, for two reasons:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Its scope is too broad&lt;/strong&gt;.
-Since the client is an abstraction of a server, it inevitably has to
-represent the server&amp;#39;s &lt;em&gt;entire&lt;/em&gt; functionality. When the functionality
-is rather limited there is no issue. Take
-&lt;a href=&quot;https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/HttpClient.html&quot;&gt;&lt;code&gt;HttpClient&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;https://hc.apache.org/&quot;&gt;Apache HttpComponents&lt;/a&gt; as an example.
-However, when the server is more complex, the size of the client also
-grows. There are over 160 (!) methods in &lt;code&gt;AmazonS3Client&lt;/code&gt; at the time of writing, while
-it started with only a few dozen just a few &lt;del&gt;years&lt;/del&gt; hundred versions ago.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;It is data focused&lt;/strong&gt;.
-The very idea of a client-server relationship is about transferring
-data. Take the HTTP RESTful API of the AWS S3 service as
-an example. There are entities on the AWS side: buckets, objects, versions,
-access control policies, etc., and the server turns them into JSON/XML
-data. Then the &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;data&lt;/a&gt;
-comes to us and the client on our side deals
-with JSON or XML. It inevitably remains &lt;em&gt;data&lt;/em&gt; for us and never really becomes
-buckets, objects, or versions.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The consequences depend on the situation, but these are the most probable:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Procedural code&lt;/strong&gt;.
-Since the client returns the data, the code that works with that
-data will &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;most likely&lt;/a&gt;
-be procedural. Look at the results AWS SDK methods
-return, they all look like
-&lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;objects&lt;/a&gt;, but in reality they are just
-data structures:
-&lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/S3Object.html&quot;&gt;&lt;code&gt;S3Object&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html&quot;&gt;&lt;code&gt;ObjectMetadata&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/BucketPolicy.html&quot;&gt;&lt;code&gt;BucketPolicy&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/PutObjectResult.html&quot;&gt;&lt;code&gt;PutObjectResult&lt;/code&gt;&lt;/a&gt;, etc.
-They are all &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;Data Transfer Objects&lt;/a&gt;
-with only
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters and setters&lt;/a&gt;
-inside.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Duplicated code&lt;/strong&gt;.
-If we actually decide to stay object-oriented we will have to
-turn the data the client returns to us into
-&lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;objects&lt;/a&gt;. Most likely this
-will lead to code duplication in multiple projects. I had that too,
-when I started to work with S3 SDK. Very soon I realized that in order
-to avoid duplication I&amp;#39;d better create a library that does the job
-of converting S3 SDK data into objects: &lt;a href=&quot;https://github.com/jcabi/jcabi-s3&quot;&gt;jcabi-s3&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Difficulties with testing&lt;/strong&gt;.
-Since the client is in most cases a rather big class/interface, mocking
-it in unit tests or creating its &lt;a href=&quot;/2014/09/23/built-in-fake-objects.html&quot;&gt;test doubles/fakes&lt;/a&gt;
-is a rather complex task.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Static problems&lt;/strong&gt;.
-Client classes, even though their methods are not static, look very similar to
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility classes&lt;/a&gt;,
-which are well known for being
-&lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;anti-OOP&lt;/a&gt;. The issues we have
-with utility classes are almost the same as those we have with &amp;quot;client&amp;quot; classes.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Extendability issues&lt;/strong&gt;.
-Needless to say, it&amp;#39;s almost impossible to
-&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;decorate&lt;/a&gt; a client
-object when it has 160+ methods and keeps on growing. The only possible
-way to add new functionality to it is by creating new methods. Eventually
-we get a &lt;a href=&quot;https://en.wikipedia.org/wiki/God_object&quot;&gt;monster class&lt;/a&gt;
-that can&amp;#39;t be re-used anyhow without modification.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What is the alternative?&lt;/p&gt;
-
-&lt;p&gt;The right design would be to replace &amp;quot;clients&amp;quot; with client-side objects
-that represent &lt;em&gt;entities&lt;/em&gt; of the server side, not the entire server. For example, with the S3 SDK,
-that could be &lt;code&gt;Bucket&lt;/code&gt;, &lt;code&gt;Object&lt;/code&gt;, &lt;code&gt;Version&lt;/code&gt;, &lt;code&gt;Policy&lt;/code&gt;, etc. Each of them
-exposes the functionality of real
-&lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html&quot;&gt;buckets&lt;/a&gt;,
-&lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html&quot;&gt;objects&lt;/a&gt; and
-&lt;a href=&quot;http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html&quot;&gt;versions&lt;/a&gt;,
-which the AWS S3 can expose.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;The right design would be to replace clients with client-side objects that represent entities of the server side.&lt;/aside&gt;
-
-&lt;p&gt;Of course, we will need a high-level object that somehow represents the
-entire API/server, but it should be small. For example, in the S3 SDK example
-it could be called &lt;code&gt;Region&lt;/code&gt;, which means the entire
-&lt;a href=&quot;http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region&quot;&gt;AWS region&lt;/a&gt; with buckets.
-Then we could retrieve a bucket from it and won&amp;#39;t need a region anymore. Then,
-to list objects in the bucket we ask the bucket to do it for us. No need to communicate
-with the entire &amp;quot;server object&amp;quot; every time, even though technically such a communication
-happens, of course.&lt;/p&gt;
-
-&lt;p&gt;To summarize, the trouble is not exactly in the name suffix, but in the very idea
-of representing the entire server on the client side rather than its &lt;em&gt;entities&lt;/em&gt;. Such
-an abstraction is 1) too big and 2) very data driven.&lt;/p&gt;
-
-&lt;p&gt;BTW, check out some of the &lt;a href=&quot;http://www.jcabi.com&quot;&gt;JCabi libraries&lt;/a&gt; (Java) for examples
-of object-oriented clients without &amp;quot;client&amp;quot; objects:
-&lt;a href=&quot;http://github.jcabi.com&quot;&gt;jcabi-github&lt;/a&gt;,
-&lt;a href=&quot;http://dynamo.jcabi.com&quot;&gt;jcabi-dynamo&lt;/a&gt;,
-&lt;a href=&quot;http://s3.jcabi.com&quot;&gt;jcabi-s3&lt;/a&gt;,
-or &lt;a href=&quot;http://simpledb.jcabi.com&quot;&gt;jcabi-simpledb&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Some time ago we were talking
-about &amp;quot;-ER&amp;quot; suffixes in object and class
-names. We agreed that they were evil and must be avoided if we want
-our code to be truly object-oriented and our objects to be objects instead
-of collections of procedures. Now I&amp;#39;m ready to introduce a new evil suffix:
-Client.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/dont-tempt-me.jpg" /></entry></feed>
+that you will be most productive?&amp;quot; This would be my wish list.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/300.jpg" /></entry></feed>
