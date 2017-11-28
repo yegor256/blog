@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Micro Is Your Tasking?"
-date: 2017-11-20
+date: 2017-11-28
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - xdsd micro tasking
   - micro management
   - management tasking
-image: /images/2017/11/...
+image: /images/2017/11/carlitos-way.jpg
 jb_picture:
-  caption:
+  caption: Carlito's Way (1993) by Brian De Palma
 ---
 
 "What are you doing now?"&mdash;when you hear this question
