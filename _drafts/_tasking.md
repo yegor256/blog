@@ -42,7 +42,7 @@ be ready. You say "OK" and wait for two months. I'm sure you already know
 what I'm getting at&mdash;this project most probably will be a failure, to
 some extent. In the worst case you won't see these guys ever, they will just
 steal your money. In the best case, they will do something that will
-look "nice," but not as nice as you expected it.
+look "nice," but not as nice as you expected.
 
 ## Why do we micromanage?
 
@@ -58,7 +58,7 @@ You don't do that because you're evil. You just know that otherwise they
 will trash your apartment, will forget things, will miss
 something, will make mistakes, will spend more time and money than they are
 supposed to, will choose wrong fabrics, will purchase the furniture
-you don't like, will do many other things you're well aware of, if you've
+you don't like, and will do many other things you're well aware of if you've
 ever dealt with interior designers and house builders.
 
 The more aggressive you are, the higher the chances you win.
