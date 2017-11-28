@@ -238,7 +238,7 @@ down:
     a few years ago, which demonstrated that our projects
     were 30 (!) times more cost efficient than traditional ones.
 
-  * **Movitation is high**.
+  * **Motivation is high**.
     Despite a very common stereotype that small and isolated tasks demotivate
     their performers, we see quite the opposite reaction: programmers
     are excited when it finally becomes possible to work within well-defined
