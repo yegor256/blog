@@ -80,7 +80,7 @@ Oct 27, 2017:
 I signed a contract with [Ji &amp; Son](http://jiandson.co.kr/),
 a book publisher in Seoul.
 They will translate the first volume of the book to Korean and publish
-it South Korea.
+it in South Korea.
 
 <a name="stickers"></a>
 May 11, 2017:
