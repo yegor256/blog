@@ -22,7 +22,7 @@ jb_picture:
 I stumbled upon this two-year-old article
 [_Why It's Safe for Founders to Be Nice_](http://www.paulgraham.com/safe.html),
 written by [Paul Graham](https://twitter.com/paulg)
-(a co-founder or [Y Combinator](http://www.ycombinator.com/)), whom I honestly respect,
+(a co-founder of [Y Combinator](http://www.ycombinator.com/)), whom I honestly respect,
 and I decided to explain why I disagree. Not that I think we shouldn't
 be nice. Not at all. But I do think that "being nice" is not a solution for organizational,
 management, marketing, sales, or business development problems. Moreover,
