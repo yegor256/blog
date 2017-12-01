@@ -105,13 +105,6 @@ Kiev, Ukraine<br/>
 -->
 
 <div class="talk-event"/>
-<img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
-**How Much Do You Cost?**<br/>
-[DevTernity 2017](https://devternity.com/)<br/>
-Riga, Latvia<br/>
-1 December 2017
-
-<div class="talk-event"/>
 <img src="http://deeprefactoring.ru/assets/img/square_50_50.png" class="future-talk" alt="DeepRefactoring 2017"/>
 **TDD наоборот или как срезать углы**<br/>
 **Почему меня не взяли в Amazon**<br/>
@@ -143,6 +136,14 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
+How Much Do You Cost?
+[DevTernity 2017](https://devternity.com/);
+Riga, Latvia;
+1 December 2017;
+[slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost-83117011).
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/R_2AvKDHAWI/mqdefault.jpg" class="past-talk" alt="DotNext 2017"/>
