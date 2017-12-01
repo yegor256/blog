@@ -103,7 +103,7 @@ and use this URL for the webhook:
 <p>Now, your repository is being watched by <a href="http://www.0pdd.com">0pdd</a>. Every
 time you <code>git push</code> something new, it does a <code>git pull</code> and retrieves your changes
 from GitHub. Then it runs <a href="http://github.com/yegor256/pdd">pdd</a>, a command line tool
-that scans the entire code base and finds all occurrences of <code>@todo</code>
+that scans the entire code base (only the <code>master</code> branch) and finds all occurrences of <code>@todo</code>
 markers.</p>
 
 <p>For all newly found markers, <a href="http://www.0pdd.com">0pdd</a> will submit new
