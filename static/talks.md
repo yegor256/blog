@@ -138,14 +138,23 @@ so why shouldn't we rate them, right? The best grade is
 ### 2017
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B+</aside>
 <img src="/images/2017/devternity.png" class="future-talk" alt="DevTernity 2017"/>
 How Much Do You Cost?
 [DevTernity 2017](https://devternity.com/);
 Riga, Latvia;
 1 December 2017;
 [slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost-83117011).
+It was my second year with these guys and I liked it more than in 2016.
+The travel, the food, the equipment, the venue were very good. What they still
+are missing, I believe, is the interaction between speakers and the audience
+outside of the presentation rooms. They need to work harder, I believe, to
+connect me with my listeners before the show and after it. Also, to connect
+me with other speakers. Aside from that, they are definitely growing, I will
+try to attend next year.
 
 <div class="talk-event"/>
+<aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/R_2AvKDHAWI/mqdefault.jpg" class="past-talk" alt="DotNext 2017"/>
 TDD Upside Down;
 [DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/);
@@ -153,6 +162,12 @@ Moscow, Russia;
 12-13 November 2017;
 [slides](https://www.slideshare.net/secret/cUPqyS0ZwPhKL6),
 [видео](https://www.youtube.com/watch?v=R_2AvKDHAWI).
+The event was organized by JUG.ru guys (authors of JPoint and Joker) and
+it was rather good, as usual. Maybe because it was not Java community, I didn't
+get as much value from the event as I was getting from JPoint, but the
+overall impression was good. The accomodation, the venue, the equipment,
+the food were perfect. What I missed was the promotional part and the social
+activity around the talks.
 
 <div class="talk-event"/>
 <img src="https://i.ytimg.com/vi/VQtdNQd7wIU/mqdefault.jpg" class="past-talk" alt="Семинар в ДНУ"/>
