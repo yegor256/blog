@@ -20,7 +20,12 @@ jb_picture:
 ---
 
 Someone asked me what I think about DAO and I realized that, even
-though I wrote about ORM, DTO, and getters, I haven't had a change
+though I wrote about
+[ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
+[DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
+and
+[getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
+I haven't had a change
 yet to mention DAO. Here is my take on it&mdash;it's as much of a shame
 as its friends&mdash;ORM, DTO, and getters. In a nutshell,
 [Data Access Object](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
