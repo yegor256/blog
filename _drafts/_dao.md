@@ -5,9 +5,9 @@ date: 2017-11-20
 place: Odessa, Ukraine
 tags: oop
 description: |
-  Data Access Objects (DAO) is a design pattern
+  Data Access Object (DAO) is a design pattern
   that is supposed to abstract a persistence layer
-  from a business one; I find its implementation very wrong.
+  from a business one; its implementation is very wrong.
 keywords:
   - dao
   - data access objects
@@ -25,10 +25,10 @@ though I wrote about
 [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
 and
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
-I haven't had a change
-yet to mention DAO. Here is my take on it&mdash;it's as much of a shame
+I haven't had a chance
+yet to mention DAO. Here is my take on it: it's as much of a shame
 as its friends&mdash;ORM, DTO, and getters. In a nutshell,
-[Data Access Object](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
+a [Data Access Object](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
 is an object [that](https://en.wikipedia.org/wiki/Data_access_object)
 "provides an abstract interface to some type of database or other
 persistence mechanism." The purpose is noble, but the implementation
@@ -59,17 +59,17 @@ book.setTitle("Don Quixote");
 dao.update(book);
 {% endhighlight %}
 
-What is wrong, you ask? Everything that was wrong with the
+What is wrong, you ask? Everything that was wrong with
 [ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
 but instead of a "session" we have this DAO. The problem remains the
 same: the `book` is not an object, but a data container. I quote
-my own three years old statement from the [ORM article]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
+my own three-year-old statement from the [ORM article]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
 with a slight change in the name:
 "DAO, instead of encapsulating database interaction inside an object,
 extracts it away, literally tearing a solid and cohesive living organism apart."
 For more details, please check that article.
 
-However, I have to say that I have something like DAO in most of my
+However, I have to say that I have something like DAOs in most of my
 [pet projects](/pets.html), but they
 don't return or accept DTOs. Instead, they return objects and sometimes accept
 operations on them. Here are a few examples. Look at this
@@ -91,15 +91,15 @@ returns a single object from the collection. The
 [`Pipe`](https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java)
 is not a DTO, it is
 a normal object that is fully capable of doing all necessary database
-operations, without any help of any DAO. For example, there is
+operations, without any help from a DAO. For example, there is
 [`Pipe.status(String)`](https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java#L63)
-method to update its status. I'm not going to `Pipes` for that, I just do
+method to update its status. I'm not going to use `Pipes` for that, I just do
 `pipe.status("Hello, world!)`.
 
 Here is yet another example from
 [Jare.io]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}): interface
 [`Base`](https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Base.java)
-that returns a list of objects of type
+which returns a list of objects of type
 [`Domain`](https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java).
 Then, when we want to delete a domain, we just call
 [`domain.delete()`](https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java#L54).
@@ -107,7 +107,7 @@ The domain is fully capable of doing all necessary database manipulations.
 
 The problem with DAO is right in its name, I believe. It says that we are
 accessing "data" and does exactly that: goes to the database, retrieves
-some data, and returns _data_. Not an object, but data, also known as
+some data, and returns _data_. Not an object, but data, also known as a
 "data transfer object." As we [discussed before]({% pst 2016/nov/2016-11-21-naked-data %}),
 direct data manipulations are what break encapsulation and make
 object-oriented code procedural and unmaintainable.
