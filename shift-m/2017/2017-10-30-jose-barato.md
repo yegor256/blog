@@ -26,6 +26,9 @@ Check Jose's [Twitter](https://twitter.com/jose_barato?lang=en).
 
 [PMPeople](https://pmpeople.org/) is the company Jose founded.
 
+The blog post mentioned:
+[Tools to Manage a Software Project](https://medium.com/@pmpeople/tools-to-manage-a-software-project-b94c5dce1170).
+
 ## Transcript
 
 To be published soon...
