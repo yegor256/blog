@@ -71,6 +71,10 @@ To be published: 11 December 2017.
 
 Previous episodes:
 
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;17: [When micro-tasking doesn't work?](/shift-m/2017/17.html)<br/>
+4 December 2017; 55 min.
+
 <img src="/images/shift-m/jose-barato.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;16: [Jose Barato on Indian Outsourcing and Catalonia issues](/shift-m/2017/16.html)<br/>
