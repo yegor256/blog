@@ -28,7 +28,7 @@ and
 I haven't had a chance
 yet to mention DAO. Here is my take on it: it's as much of a shame
 as its friends&mdash;ORM, DTO, and getters. In a nutshell,
-[Data Access Object](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
+a [Data Access Object](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
 is an object [that](https://en.wikipedia.org/wiki/Data_access_object)
 "provides an abstract interface to some type of database or other
 persistence mechanism." The purpose is noble, but the implementation
@@ -63,7 +63,7 @@ What is wrong, you ask? Everything that was wrong with
 [ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
 but instead of a "session" we have this DAO. The problem remains the
 same: the `book` is not an object, but a data container. I quote
-my own three year old statement from the [ORM article]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
+my own three-year-old statement from the [ORM article]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
 with a slight change in the name:
 "DAO, instead of encapsulating database interaction inside an object,
 extracts it away, literally tearing a solid and cohesive living organism apart."
