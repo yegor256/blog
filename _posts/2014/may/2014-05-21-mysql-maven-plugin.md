@@ -20,7 +20,8 @@ keywords:
 
 I was using MySQL in a few Java web projects and
 found out there was no Maven plugin that would help me to
-test my DAO classes against a real MySQL server. There are plenty
+test my [DAOs]({% pst 2017/dec/2017-12-05-data-access-object %})
+against a real MySQL server. There are plenty
 of mechanisms to mock a database persistence layer both in
 memory and on disc. However, it is always good to make sure
 that your classes are tested against a database identical

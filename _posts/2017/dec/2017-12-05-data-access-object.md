@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "DAO is Yet Another OOP Shame"
-date: 2017-11-20
+date: 2017-12-05
 place: Odessa, Ukraine
 tags: oop
 description: |
