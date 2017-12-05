@@ -35,8 +35,8 @@ It is available as [0pdd](http://www.0pdd.com)&mdash;a GitHub-based chat bot.
 
 Here is how you configure it, in two steps. First, you
 [grant](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
-read-only access to [@0pdd](https://github.com/0pdd) in GitHub
-(either private or public repository).
+access to [@0pdd](https://github.com/0pdd) in GitHub
+(if your repository is private).
 
 Second, you add a [webhook](https://help.github.com/articles/about-webhooks/)
 to your GitHub repository: `http://www.0pdd.com/hook/github` (with just `push` event
