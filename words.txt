@@ -1593,6 +1593,7 @@ dance
 dancing
 dangerous
 DAO
+DAOs
 dark
 darker
 dashboard

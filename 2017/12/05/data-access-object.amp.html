@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>DAO is Yet Another OOP Shame</title>
+    <link rel="canonical" href="http://www.yegor256.com/2017/12/05/data-access-object.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2017/12/05/data-access-object.html"
+        },
+        "headline": "DAO is Yet Another OOP Shame",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/12/requiem-for-a-dream.jpg",
+          "height": 748,
+          "width": 1330
+        },
+        "datePublished": "2017-12-05",
+        "dateModified": "2017-12-05",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Data Access Object (DAO) is a design pattern
+that is supposed to abstract a persistence layer
+from a business one; its implementation is very wrong.
+",
+        "keywords": ["dao", "data access objects", "data access object", "database access object", "dao in oop"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('http://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="http://www.yegor256.com/2017/12/05/data-access-object.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/yegor-bugayenko-192x192.png" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>5 December 2017</p>
+      <h1>DAO is Yet Another OOP Shame</h1>
+      <p>Someone asked me what I think about DAO and I realized that, even
+though I wrote about
+<a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM</a>,
+<a href="/2016/07/06/data-transfer-object.html">DTO</a>,
+and
+<a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>,
+I haven't had a chance
+yet to mention DAO. Here is my take on it: it's as much of a shame
+as its friends—ORM, DTO, and getters. In a nutshell,
+a <a href="http://www.oracle.com/technetwork/java/dataaccessobject-138824.html">Data Access Object</a>
+is an object <a href="https://en.wikipedia.org/wiki/Data_access_object">that</a>
+"provides an abstract interface to some type of database or other
+persistence mechanism." The purpose is noble, but the implementation
+is terrible.</p>
+
+
+
+<amp-img src="/images/2017/12/requiem-for-a-dream.jpg" alt="Requiem for a Dream (2000) by Darren Aronofsky" height="748" width="1330" layout="responsive"></amp-img>
+
+<p>Here is how it <a href="https://stackoverflow.com/a/19154487/187141">may look</a>:</p>
+
+<pre>class BookDAO {
+  Book find(int id);
+  void update(Book book);
+  // Other methods here ...
+}</pre>
+
+<p>The idea is simple—method <code>find()</code> creates
+a <a href="/2016/07/06/data-transfer-object.html">DTO</a>
+<code>Book</code>, someone else injects new data into it and calls <code>update()</code>:</p>
+
+<pre>BookDAO dao = BookDAOFactory.getBookDAO();
+Book book = dao.find(123);
+book.setTitle("Don Quixote");
+dao.update(book);</pre>
+
+<p>What is wrong, you ask? Everything that was wrong with
+<a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM</a>,
+but instead of a "session" we have this DAO. The problem remains the
+same: the <code>book</code> is not an object, but a data container. I quote
+my own three-year-old statement from the <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM article</a>,
+with a slight change in the name:
+"DAO, instead of encapsulating database interaction inside an object,
+extracts it away, literally tearing a solid and cohesive living organism apart."
+For more details, please check that article.</p>
+
+<p>However, I have to say that I have something like DAOs in most of my
+<a href="/pets.html">pet projects</a>, but they
+don't return or accept DTOs. Instead, they return objects and sometimes accept
+operations on them. Here are a few examples. Look at this
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java"><code>Pipes</code></a>
+interface from
+<a href="/2016/03/15/wring-dispatcher-github-notifications.html">Wring.io</a>:</p>
+
+<pre>interface Pipes {
+  void add(String json);
+  Pipe pipe(long number);
+}</pre>
+
+<p>Its method <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L55"><code>add()</code></a>
+creates a new item in the "collection" and method
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L62"><code>pipe()</code></a>
+returns a single object from the collection. The
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java"><code>Pipe</code></a>
+is not a DTO, it is
+a normal object that is fully capable of doing all necessary database
+operations, without any help from a DAO. For example, there is
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java#L63"><code>Pipe.status(String)</code></a>
+method to update its status. I'm not going to use <code>Pipes</code> for that, I just do
+<code>pipe.status("Hello, world!)</code>.</p>
+
+<p>Here is yet another example from
+<a href="/2016/03/30/jare-instant-free-cdn.html">Jare.io</a>: interface
+<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Base.java"><code>Base</code></a>
+which returns a list of objects of type
+<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java"><code>Domain</code></a>.
+Then, when we want to delete a domain, we just call
+<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java#L54"><code>domain.delete()</code></a>.
+The domain is fully capable of doing all necessary database manipulations.</p>
+
+<p>The problem with DAO is right in its name, I believe. It says that we are
+accessing "data" and does exactly that: goes to the database, retrieves
+some data, and returns <em>data</em>. Not an object, but data, also known as a
+"data transfer object." As we <a href="/2016/11/21/naked-data.html">discussed before</a>,
+direct data manipulations are what break encapsulation and make
+object-oriented code procedural and unmaintainable.</p>
+
+    </article>
+  </body>
+</html>
