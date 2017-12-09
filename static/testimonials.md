@@ -95,4 +95,6 @@ then it's a just messy bunch of libraries that he puts together in the dirtiest 
 and if it's a podcast interview he can't provide a good technical explanation
 of his point of view..."&mdash;[@heldev](https://github.com/heldev)
 
+"You're a weird individual"&mdash;[Andriy](http://www.yegor256.com/2017/12/05/data-access-object.html#comment-3650742133)
+
 Ready to add something? :) Just [email](mailto:me@yegor256.com).
