@@ -34,7 +34,13 @@ to the channel).
 
 ## 2017
 
-<!-- {% webinar 01-11-2017 29 Z70PMGaxGhY How to win $4096 in the next year Quality Award? %} -->
+{% webinar 13-12-2017 30 7WmsiV22IXM Lazy Loading via Java Lambda %}
+
+<a href="https://www.youtube.com/watch?v=7WmsiV22IXM"><img src="https://i.ytimg.com/vi/7WmsiV22IXM/mqdefault.jpg" class="wnr" alt="Webinar no.30 by Yegor Bugayenko"/></a>
+December 13, 2017<br/>
+&#35;30: **Lazy Loading via Java Lambda**<br/>
+We will go through a number of functional interfaces and classes of Cactoos library and will
+see how they can be used in order to implement Lazy Loading in an object-oriented way.
 
 <a href="https://www.youtube.com/watch?v=Z70PMGaxGhY"><img src="https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg" class="wnr" alt="Webinar no.29 by Yegor Bugayenko"/></a>
 November 1, 2017<br/>
