@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "The Toxic Operator new()"
+title: "Operator new() is Toxic"
 date: 2017-11-20
 place: Moscow, Russia
 tags: oop
 description: |
-  ...
+  Instantiating objects via operation NEW is what we
+  have to do in order to have that objects; however, it's
+  important where this is happening.
 keywords:
   - operator new
   - alan kay about oop
@@ -29,8 +31,8 @@ I would recommend to be more careful with this rather toxic operator.
 {% jb_picture_body %}
 
 I'm sure you understand that the problem with this operator is that
-it couples objects making testing and reuse very difficult or even impossible.
-Say, there is a stroy in a file that we need to read as a UTF-8 string
+it couples objects, making testing and reuse very difficult or even impossible.
+Say, there is a story in a file that we need to read as a UTF-8 text
 (I'm using
 [`TextOf`](http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html)
 from [Cactoos](http://www.cactoos.org)):
@@ -65,7 +67,13 @@ class Story {
 }
 {% endhighlight %}
 
-Now, each user of the `Story` has to know the name of the file. It's not really
+Now, each user of the `Story` has to know the name of the file:
+
+{% highlight java %}
+new Story(new File("/tmp/story.txt"));
+{% endhighlight %}
+
+It's not really
 convenient, especially for those users who were using `Story` before, knowing
 nothing about the file path. To help them we introduce
 a [secondary constructor]({% pst 2015/may/2015-05-28-one-primary-constructor %}):
@@ -85,9 +93,16 @@ class Story {
 }
 {% endhighlight %}
 
+Now we just make an instance through a no-args constructor, just like
+we did before:
+
+{% highlight java %}
+new Story();
+{% endhighlight %}
+
 I'm sure you're well aware of this technique, which is also known
 as [dependency injection](http://martinfowler.com/articles/injection.html).
-I'm not saying anything new. What I want you to pay attention here for is
+I'm actually not saying anything new. What I want you to pay attention here for is
 the location and the amount of operators `new` in all three code snippets.
 
 In the first snippet both `new` operators are in the method `text()`.
@@ -96,7 +111,7 @@ is in the method, while the second one moved up, to the constructor.
 
 Remember this fact and let's move on.
 
-What happens if the file is not in UTF-8 but in [KOI8-R](https://en.wikipedia.org/wiki/KOI8-R)?
+What if the file is not in UTF-8 encoding but in [KOI8-R](https://en.wikipedia.org/wiki/KOI8-R)?
 Class `TextOf` and then method `Story.text()` will throw an exception.
 However, class `TextOf` is capable of reading in any encoding, it just
 needs to have a secondary argument for its constructor:
@@ -130,11 +145,16 @@ class Story {
 }
 {% endhighlight %}
 
-There is nothing new in this technique, it's just dependency injection,
-but pay attention to the location of operators `new`. They all are in the
+It's just dependency injection, but pay attention to the locations
+of the operator `new`. They all are in the
 constructors now and none of them left in the method `text()`.
 
+The tendency here is obvious to me: the more operators `new` stay in the
+methods, the less reusable and testable is the class.
 
+In other words, operator `new` is a rather toxic thing, try to keep its
+usage to the minimum in your methods. Make sure you instantiate everything
+or almost everything in your secondary constructors.
 
 
 
