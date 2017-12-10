@@ -142,6 +142,7 @@ Others (less stable or successful):
 [jcabi](https://github.com/jcabi),
 [xembly](https://github.com/yegor256/xembly),
 [xcop](https://github.com/yegor256/xcop),
+[phpRack](http://www.phpRack.com/),
 [netbout](http://www.netbout.com),
 [thindeck](http://www.thindeck.com),
 [h12](http://www.h12.co).
