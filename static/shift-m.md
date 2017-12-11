@@ -61,7 +61,7 @@ Previous episodes:
 
 <img src="/images/shift-m/henrik-martensson.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
-&#35;18: Henrik Mårtensson about HR troubles<br/>
+&#35;18: [Henrik Mårtensson about HR troubles](/shift-m/2017/18.html)<br/>
 3 November 2017; 58 min.
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
