@@ -90,7 +90,7 @@ to the AWS client. It is a perfect class as far as SRP is concerned. But it
 is not an object anymore.
 
 The same will happen with any class if you apply the SRP principle to its
-full extent: it will become a holder of data or other objects, with a
+full extent: it will become a holder of data or of other objects, with a
 collection of setters and getters on top of them. Maybe with one extra
 method in addition to those.
 
