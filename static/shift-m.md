@@ -57,19 +57,12 @@ Already recorded but not yet published episodes:
 3 November 2017; 47 min.<br/>
 To be published: 25 December 2017.
 
+Previous episodes:
+
 <img src="/images/shift-m/henrik-martensson.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;18: Henrik Mårtensson about HR troubles<br/>
-3 November 2017; 58 min.<br/>
-To be published: 11 December 2017.
-
-<!--
-<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
-&#35;17: not yet recorded
--->
-
-
-Previous episodes:
+3 November 2017; 58 min.
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;17: [When micro-tasking doesn't work?](/shift-m/2017/17.html)<br/>
