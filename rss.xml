@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-12-11T21:38:19+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">DAO is Yet Another OOP Shame</title><link href="http://www.yegor256.com/2017/12/05/data-access-object.html" rel="alternate" type="text/html" title="DAO is Yet Another OOP Shame" /><published>2017-12-05T00:00:00+00:00</published><updated>2017-12-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/05/data-access-object</id><content type="html" xml:base="http://www.yegor256.com/2017/12/05/data-access-object.html">&lt;p&gt;Someone asked me what I think about DAO and I realized that, even
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-12-12T08:09:56+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Alan Kay Was Wrong About Him Being Wrong</title><link href="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html" rel="alternate" type="text/html" title="Alan Kay Was Wrong About Him Being Wrong" /><published>2017-12-12T00:00:00+00:00</published><updated>2017-12-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/12/alan-kay-was-wrong</id><content type="html" xml:base="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html">&lt;p&gt;Time to time someone is asking me what I think about what
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan Kay&lt;/a&gt;, the father of OOP,
+the designer of &lt;a href=&quot;https://en.wikipedia.org/wiki/Smalltalk&quot;&gt;Smalltalk&lt;/a&gt;,
+the first object-oriented language,
+&lt;a href=&quot;http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html&quot;&gt;said&lt;/a&gt;
+in 1998 about OOP. He literally said that the very
+term &amp;quot;object&amp;quot; was misleading and a more appropriate one would be &amp;quot;messaging.&amp;quot;
+Here is what I think.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Rain Man (1988) by Barry Levinson&#39; src=&#39;/images/2017/12/rain-man.jpg&#39; longdesc=&#39;#7b3f07bb&#39;/&gt;&lt;figcaption id=&#39;7b3f07bb&#39;&gt;Rain Man (1988) by Barry Levinson&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I believe that there are two orthogonal means of interaction between objects:
+messaging and composition. Let&amp;#39;s say, we have a point and a canvas:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Canvas&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Canvas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is how messaging would look:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The problem with messaging is that it keeps objects on the same
+level of abstraction. They communicate
+as equal and independent &amp;quot;modules,&amp;quot; sending
+&lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;data messages&lt;/a&gt; to each other.
+Even though they look object-oriented, the entire communication pattern
+is very procedural. We try to encapsulate as much as we can inside a single
+object, however inevitably still having to expose a lot of its data in order to
+be able to &amp;quot;connect&amp;quot; it with other objects.&lt;/p&gt;
+
+&lt;p&gt;We turn objects into &amp;quot;little computers,&amp;quot; as &lt;a href=&quot;http://amzn.to/2npiZZQ&quot;&gt;some books&lt;/a&gt; refer to them. They
+expect data to come it, process the data, and return back some new data.
+The maintainability problem is not really solved with this approach&amp;mdash;we
+still have to deal with a lot of data, remembering its semantic outside of
+the objects. In other words, there is no true encapsulation.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, this is how composition would look instead:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrintedOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Every time we need objects to communicate we create a bigger object that
+encapsulates more primitive ones, letting them interact inside. Of course,
+the data will also go from object to object, but that will happen
+inside a bigger object. We can even make the encapsulator
+and the encapsulatee &amp;quot;friends&amp;quot;, as &lt;a href=&quot;/2016/12/20/can-objects-be-friends.html&quot;&gt;I suggested before&lt;/a&gt;,
+to make that interaction more transparent and avoid data exposure through
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt; or
+even
+&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;printers&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let me
+&lt;a href=&quot;http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html&quot;&gt;quote&lt;/a&gt;
+Alan Kay again:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The key in making great and growable systems is much more to design how
+  its modules communicate rather than what their internal properties
+  and behaviors should be.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It seems to me that he means &lt;em&gt;modules&lt;/em&gt;, which are not objects. These are
+different things. Modules are elements of the architecture, while objects
+are elements of the design. These are two different levels. At the level of
+architecture we obviously need messages and Kay&amp;#39;s statement is perfectly correct.
+However, at the level of design we need composable structures,
+to increase maintainability and messaging is not what can help us achive
+this goal.&lt;/p&gt;
+
+&lt;p&gt;Thus, I believe Alan Kay was right when he invented objects, called them
+objects, and gave their programming style &amp;quot;object-oriented&amp;quot; title.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><summary type="html">Time to time someone is asking me what I think about what
+Alan Kay, the father of OOP,
+the designer of Smalltalk,
+the first object-oriented language,
+said
+in 1998 about OOP. He literally said that the very
+term &amp;quot;object&amp;quot; was misleading and a more appropriate one would be &amp;quot;messaging.&amp;quot;
+Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/rain-man.jpg" /></entry><entry><title type="html">DAO is Yet Another OOP Shame</title><link href="http://www.yegor256.com/2017/12/05/data-access-object.html" rel="alternate" type="text/html" title="DAO is Yet Another OOP Shame" /><published>2017-12-05T00:00:00+00:00</published><updated>2017-12-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/05/data-access-object</id><content type="html" xml:base="http://www.yegor256.com/2017/12/05/data-access-object.html">&lt;p&gt;Someone asked me what I think about DAO and I realized that, even
 though I wrote about
 &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM&lt;/a&gt;,
 &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTO&lt;/a&gt;,
@@ -1664,98 +1742,4 @@ they include many interesting features. However, I think that
 not everything is as good as Oracle and Java adepts
 seem to picture it.
 I see three trends in the Java world, which are good, bad, and ugly,
-respectively. Let&amp;#39;s start with the good one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/10/birdman.jpg" /></entry><entry><title type="html">ThreeCopies.com—Server-Side Data Backup Service</title><link href="http://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html" rel="alternate" type="text/html" title="ThreeCopies.com&amp;mdash;Server-Side Data Backup Service" /><published>2017-09-26T00:00:00+00:00</published><updated>2017-09-26T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/09/26/threecopies-server-data-backup</id><content type="html" xml:base="http://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html">&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.threecopies.com&#39;&gt;&lt;img src=&#39;http://www.threecopies.com/images/logo.png&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;I have a number of data resources which exist in one place only and which
-I don&amp;#39;t really want to lose. For example, I have a hosted PHP website,
-and a MySQL database hosted at the same place. I also have
-a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
-Heroku, and also... Well, there are many of them. How to back them up was always a
-question for me.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Main picture&#39; src=&#39;/images/2017/09/threecopies.jpg&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;The most straightforward way is to rent a cheap $15/mo server
-(or use an existing one) and configure Cron to run a custom bash
-script, which will pull the data from the MySQL database, package it,
-and upload it to some place where it will be safe, such as Amazon S3
-bucket. Then, I would need another script for the PostgreSQL database, and another one
-for the FTP file archive, etc.&lt;/p&gt;
-
-&lt;p&gt;This is actually how I was doing it for years. The drawbacks
-of this solution were always the same:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I needed to pay for the server.&lt;/li&gt;
-&lt;li&gt;I needed to make sure the server was always up and running (Linux is far from reliable).&lt;/li&gt;
-&lt;li&gt;I needed to back up my scripts too.&lt;/li&gt;
-&lt;li&gt;I needed to SSH to the server every time I wanted to change a script, remember where they were, how they start, etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The biggest issue is that every single owner of a data source faces
-exactly the same set of problems. &amp;quot;Why can&amp;#39;t I create a hosted solution for
-these scripts, to help everybody to back up their data,&amp;quot; I was asking myself
-for years. &amp;quot;Well, I can,&amp;quot; was the answer just a few weeks ago, and
-I created &lt;a href=&quot;http://www.threecopies.com&quot;&gt;ThreeCopies&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s a very simple hosted executor of bash scripts, which you edit
-through a web interface. Then one of our servers starts a Docker
-container (&lt;a href=&quot;https://hub.docker.com/r/yegor256/threecopies/&quot;&gt;yegor256/threecopies&lt;/a&gt; is the image, here is the
-&lt;a href=&quot;https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile&quot;&gt;&lt;code&gt;Dockerfile&lt;/code&gt;&lt;/a&gt;)
-and runs your script inside.&lt;/p&gt;
-
-&lt;p&gt;The script starts every hour, every day and every week.
-Hence the name: &amp;quot;three copies.&amp;quot; It&amp;#39;s good practice for data backup
-to create separate copies with different regularities. Also, you might want to put
-different data into different copies. To help your script understand which
-copy is running at any particular time we pass the &lt;code&gt;$period&lt;/code&gt; environment variable into it, with
-the value of either &lt;code&gt;hour&lt;/code&gt;, &lt;code&gt;day&lt;/code&gt;, or &lt;code&gt;week&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;How your script pulls the data, packages it, and archives it, depends on the
-data. I created a short cheat sheet for most common scenarios. This is how
-I backup the MySQL database for &lt;a href=&quot;http://www.thepmp.com&quot;&gt;thePMP&lt;/a&gt;, for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# I don&amp;#39;t want to back up every hour&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;period&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;hour&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# I dump the entire database into the file&lt;/span&gt;
-mysqldump --lock-tables&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; --host&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;db.thepmp.com &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  --user&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;thepmp --password&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;********* &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  --databases thepmp &amp;gt; thepmp.sql
-
-&lt;span class=&quot;c1&quot;&gt;# I compress the file&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date &lt;span class=&quot;s2&quot;&gt;&amp;quot;+%Y-%m-%d-%H-%M&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.tgz&amp;quot;&lt;/span&gt;
-tar czf &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; thepmp.sql
-
-&lt;span class=&quot;c1&quot;&gt;# I upload it to Amazon S3 bucket&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[default]&amp;quot;&lt;/span&gt; &amp;gt; ~/.s3cfg
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;access_key=AKIAICJKH*****CVLAFA&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.s3cfg
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;secret_key=yQv3g3ao654Ns**********H1xQSfZlTkseA0haG&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.s3cfg
-s3cmd --no-progress put &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;s3://backup.yegor256.com/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tgz&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The output of the script is available through the web interface and this
-is yet another benefit of this solution. It&amp;#39;s easy to monitor what went
-wrong and restart the script. All logs are available through the browser. No
-SSH, no terminals.&lt;/p&gt;
-
-&lt;p&gt;I would say that it&amp;#39;s a light version of
-&lt;a href=&quot;https://aws.amazon.com/datapipeline/&quot;&gt;AWS Data Pipeline&lt;/a&gt;. &lt;a href=&quot;http://www.threecopies.com&quot;&gt;ThreeCopies&lt;/a&gt;
-does exactly the same, but it&amp;#39;s easier to configure, and it&amp;#39;s cheaper.
-I&amp;#39;m charging $0.01 per script execution hour. And I actually charge
-per second, while AWS always charges for a full hour. For $5.00 you get
-500 hours. For example, the script you see above takes about 5 minutes
-to complete (the database is not huge). If you skip the hourly executions, like I did above, you
-will consume 170 minutes of server time every month, which will cost you about
-&lt;strong&gt;$0.34 per year&lt;/strong&gt;! This is much cheaper than a server and
-its monitoring, I believe.&lt;/p&gt;
-
-&lt;p&gt;One more thing before you go. ThreeCopies is written in Java&amp;nbsp;8 and is open source,
-find it &lt;a href=&quot;https://github.com/yegor256/threecopies&quot;&gt;in GitHub&lt;/a&gt;. Feel free to
-inspect the code, find bugs, and contribute with fixes or improvements.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">I have a number of data resources which exist in one place only and which
-I don&amp;#39;t really want to lose. For example, I have a hosted PHP website,
-and a MySQL database hosted at the same place. I also have
-a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
-Heroku, and also... Well, there are many of them. How to back them up was always a
-question for me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/09/threecopies.jpg" /></entry></feed>
+respectively. Let&amp;#39;s start with the good one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/10/birdman.jpg" /></entry></feed>

@@ -53,6 +53,7 @@ achievement
 achievements
 achieves
 achieving
+achive
 ACM
 acquire
 acquires
@@ -2173,8 +2174,10 @@ enabling
 enamored
 encapsulate
 encapsulated
+encapsulatee
 encapsulates
 encapsulation
+encapsulator
 encoded
 encoder
 encounter
@@ -2468,6 +2471,7 @@ fast
 faster
 fastest
 fatal
+father
 fault
 faults
 favor
@@ -2889,6 +2893,7 @@ grouped
 grouping
 groups
 grow
+growable
 growing
 grown-ups
 grows
@@ -3645,6 +3650,7 @@ katakuris
 katie
 kawasaki
 kay
+kay's
 kb
 keep
 keeping
@@ -6216,6 +6222,7 @@ slowly
 slows
 small
 smaller
+smalltalk
 smalltalk-
 smart
 smart-asses
