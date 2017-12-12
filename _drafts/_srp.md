@@ -5,9 +5,9 @@ date: 2017-11-20
 place: Moscow, Russia
 tags: oop
 description: |
-  Single responsibility principle is very popular among
+  The single responsibility principle is very popular among
   object-oriented programmers, but how practical and
-  valid it really is?
+  valid is it really?
 keywords:
   - srp
   - single responsibility principle
@@ -19,7 +19,7 @@ jb_picture:
   caption:
 ---
 
-[Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) says,
+The [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle),
 according to [Robert Martin](https://en.wikipedia.org/wiki/Robert_Cecil_Martin)'s
 [Clean Code](http://amzn.to/2m7LmaA),
 means that "a class should have only one reason to change."
@@ -39,8 +39,8 @@ back in 1974. Now let's see it by example and analyze how we can
 improve a class, with the SRP in mind, and whether it will become
 [more object-oriented]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
 
-Let's try class [`AwsOcket`](https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java)
-from [jcabi-s3](http://s3.jcabi.com) (I simplified the code):
+Let's try the class [`AwsOcket`](https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java)
+from [jcabi-s3](http://s3.jcabi.com) (I've simplified the code):
 
 {% highlight java %}
 class AwsOcket {
@@ -54,14 +54,14 @@ Correct me if I'm wrong, but according to SRP this class is responsible for
 too many things:
 1) checking the existence of an object in AWS S3,
 2) reading its content, and
-3) modifying the content.
+3) modifying its content.
 Right? It's not a good design and it must be changed.
 
-In order to change it and make responsible for just one thing we must introduce
+In order to change it and make it responsible for just one thing we must introduce
 a getter, which will return an AWS client and then create three new classes:
 `ExistenceChecker`, `ContentReader`, and `ContentWriter`. They will check,
 read, and write. Now, in order to read the content and print it to the
-console I'm doing this:
+console I'm currently doing this:
 
 {% highlight java %}
 if (ocket.exists()) {
@@ -85,14 +85,14 @@ that is coming from it is decrypted or decoded on the fly. We simply can't
 decorate it. It is not an object anymore, but a holder of an AWS client,
 which is used by some other classes somewhere.
 
-Yes, now it is responsible for only one thing: encapsulating the referenced
+Yes, now it is responsible for only one thing: encapsulating the reference
 to the AWS client. It is a perfect class as far as SRP is concerned. But it
 is not an object anymore.
 
-The same will happen with any class if you apply that SRP principle, to its
-full extent: it will become a holder of data or other objects, with a
+The same will happen with any class if you apply the SRP principle to its
+full extent: it will become a holder of data or of other objects, with a
 collection of setters and getters on top of them. Maybe with one extra
-method on top of them.
+method in addition to those.
 
 My point is that SRP is a wrong idea.
 
@@ -106,9 +106,9 @@ In our fight for this fake SRP idea we lose a much more important principle,
 which really is about true object-oriented programming and thinking:
 encapsulation. It is much less important how many things an object is
 responsible for than how tightly it protects the entities it encapsulates.
-A monster object with a hundred methods is much less of a problem than an DTO with five pairs of
-getters and setters! Because a DTO spreads the problem all over the code,
+A monster object with a hundred methods is much less of a problem than a DTO with five pairs of
+getters and setters! This is because a DTO spreads the problem all over the code,
 where we can't even find it, while the monster object is always right in front
-of us and we can always refactor it to smaller pieces.
+of us and we can always refactor it into smaller pieces.
 
 Encapsulation comes first, size goes next, if ever.
