@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Alan Kay Was Wrong About Him Being Wrong"
-date: 2017-11-20
+date: 2017-12-12
 place: Moscow, Russia
 tags: java
 description: |
