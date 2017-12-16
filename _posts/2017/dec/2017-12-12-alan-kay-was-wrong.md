@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: java
 description: |
   Alan Kay said in 1998 that object-oriented programming
-  should have been called message-oriented one instead;
+  should have been called message-oriented programming instead;
   I disagree.
 keywords:
   - alan kay oop
@@ -19,7 +19,7 @@ jb_picture:
   caption: Rain Man (1988) by Barry Levinson
 ---
 
-Time to time someone is asking me what I think about what
+From time to time someone asks me what I think about what
 [Alan Kay](https://en.wikipedia.org/wiki/Alan_Kay), the father of OOP,
 the designer of [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk),
 the first object-oriented language,
@@ -56,7 +56,7 @@ object, however inevitably still having to expose a lot of its data in order to
 be able to "connect" it with other objects.
 
 We turn objects into "little computers," as [some books](http://amzn.to/2npiZZQ) refer to them. They
-expect data to come it, process the data, and return back some new data.
+expect data to come in, they process the data, and return back some new data.
 The maintainability problem is not really solved with this approach&mdash;we
 still have to deal with a lot of data, remembering its semantic outside of
 the objects. In other words, there is no true encapsulation.
@@ -71,7 +71,7 @@ Every time we need objects to communicate we create a bigger object that
 encapsulates more primitive ones, letting them interact inside. Of course,
 the data will also go from object to object, but that will happen
 inside a bigger object. We can even make the encapsulator
-and the encapsulatee "friends", as [I suggested before]({% pst 2016/dec/2016-12-20-can-objects-be-friends %}),
+and the encapsulated "friends", as [I suggested before]({% pst 2016/dec/2016-12-20-can-objects-be-friends %}),
 to make that interaction more transparent and avoid data exposure through
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}) or
 even
@@ -90,8 +90,8 @@ different things. Modules are elements of the architecture, while objects
 are elements of the design. These are two different levels. At the level of
 architecture we obviously need messages and Kay's statement is perfectly correct.
 However, at the level of design we need composable structures,
-to increase maintainability and messaging is not what can help us achive
+to increase maintainability and messaging is not what can help us achieve
 this goal.
 
 Thus, I believe Alan Kay was right when he invented objects, called them
-objects, and gave their programming style "object-oriented" title.
+objects, and gave their programming style the "object-oriented" title.
