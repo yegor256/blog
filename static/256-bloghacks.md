@@ -33,6 +33,9 @@ ISBN: 1537688669.<br/>
 
 <!-- Reviews for Google -->
 
+Dec 17, 2017:
+Added [Google social profile](https://developers.google.com/search/docs/data-types/social-profile).
+
 Mar 5, 2017:
 Added unique words counter [here](/contents.html). It seems that
 my vocabulary is 8,679 words. Not bad.
