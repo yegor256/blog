@@ -66,6 +66,8 @@ module Jekyll
         "<img src='/images/books/elegant-objects/cactus.svg' alt='OOP'/>"
       when 'java'
         "<img src='/images/java-icon.svg' alt='Java'/>"
+      when 'xdsd'
+        "<img src='http://www.xdsd.org/images/logo.svg' alt='XDSD'/>"
       else
         ""
       end
