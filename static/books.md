@@ -56,7 +56,7 @@ Published: 6 Nov 2016.
 
 <div class="clear"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
-The second volume of [Elegant Objects](/elegant-objects.html)
+The **2nd Volume** of [Elegant Objects](/elegant-objects.html)
 covers more object-oriented patterns and anti-patterns,
 including MVC, ORM, annotations, printers, validators, inheritance and subtyping,
 dependency injection, reflection, and others.
@@ -72,7 +72,18 @@ propose a number of best practices for organizing software development
 process. What will be interesting is that it will be fiction book, with
 characters, plot, jokes, dialogs, etc.
 <br/>
-To be published in <del>February</del> <del>November</del> December 2017.
+To be published in <del>February</del> <del>November</del> <del>December 2017</del> February 2018.
+
+<div class="clear"></div>
+{% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
+The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
+will contain practical object-oriented design patterns, just like
+those GoF book suggested. The book will not critize bad practices, like
+previous two volumes did, but will suggest what to do instead.
+<br/>
+To be published: end of 2018.
+<br/>
+<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
 <div class="clear"></div>
 To be continued...
