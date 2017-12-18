@@ -14,6 +14,8 @@ keywords:
   - server-side backup service
   - threecopies
 image: /images/2017/09/threecopies.jpg
+youtube:
+  - KYd24FN58wg
 ---
 
 {% badge http://www.threecopies.com/images/logo.png 64 http://www.threecopies.com %}
