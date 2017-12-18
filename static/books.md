@@ -78,7 +78,7 @@ To be published in <del>February</del> <del>November</del> <del>December 2017</d
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
 will contain practical object-oriented design patterns, just like
-those GoF book suggested. The book will not critize bad practices, like
+those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
 To be published: end of 2018.
