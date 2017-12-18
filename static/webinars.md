@@ -38,7 +38,14 @@ informed about everything I do publicly, including these webinars.
 
 ## 2017
 
-<!-- {% webinar 13-12-2017 30 7WmsiV22IXM Lazy Loading via Java Lambda %} -->
+{% webinar 03-01-2018 31 Wcy53ZSF78o Decorating Envelopes %}
+
+<a href="https://www.youtube.com/watch?v=Wcy53ZSF78o"><img src="https://i.ytimg.com/vi/Wcy53ZSF78o/mqdefault.jpg" class="wnr" alt="Webinar no.31 by Yegor Bugayenko"/></a>
+January 3, 2018<br/>
+&#35;31: **Decorating Envelopes**<br/>
+We will discuss a simple object-oriented technique I keep using in my projects and find very convenient,
+it was discussed in [this blog post]({% pst 2017/jan/2017-01-31-decorating-envelopes %})
+earlier.
 
 <a href="https://www.youtube.com/watch?v=7WmsiV22IXM"><img src="https://i.ytimg.com/vi/7WmsiV22IXM/mqdefault.jpg" class="wnr" alt="Webinar no.30 by Yegor Bugayenko"/></a>
 December 13, 2017<br/>
