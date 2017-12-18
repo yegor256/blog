@@ -71,7 +71,7 @@ Every time we need objects to communicate we create a bigger object that
 encapsulates more primitive ones, letting them interact inside. Of course,
 the data will also go from object to object, but that will happen
 inside a bigger object. We can even make the encapsulator
-and the encapsulated "friends", as [I suggested before]({% pst 2016/dec/2016-12-20-can-objects-be-friends %}),
+and the encapsulated "friends," as [I suggested before]({% pst 2016/dec/2016-12-20-can-objects-be-friends %}),
 to make that interaction more transparent and avoid data exposure through
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}) or
 even
