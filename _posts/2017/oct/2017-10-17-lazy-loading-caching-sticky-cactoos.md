@@ -17,6 +17,8 @@ keywords:
 image: /images/2017/10/reality.jpg
 jb_picture:
   caption: Reality (2012) by Matteo Garrone
+youtube:
+  - 7WmsiV22IXM
 ---
 
 You obviously know what [lazy loading](https://en.wikipedia.org/wiki/Lazy_loading)
