@@ -53,7 +53,6 @@ achievement
 achievements
 achieves
 achieving
-achive
 ACM
 acquire
 acquires
@@ -2174,7 +2173,6 @@ enabling
 enamored
 encapsulate
 encapsulated
-encapsulatee
 encapsulates
 encapsulation
 encapsulator
