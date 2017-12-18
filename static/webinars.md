@@ -32,6 +32,10 @@ Here is a full list of all webinars on [YouTube](https://www.youtube.com/playlis
 (don't forget [to subscribe](https://www.youtube.com/c/yegor256?sub_confirmation=1)
 to the channel).
 
+Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
+feel free to import it (to Google Calendar or iCal) and stay
+informed about everything I do publicly, including these webinars.
+
 ## 2017
 
 <!-- {% webinar 13-12-2017 30 7WmsiV22IXM Lazy Loading via Java Lambda %} -->

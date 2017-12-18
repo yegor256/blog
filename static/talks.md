@@ -93,6 +93,10 @@ You will just have to pay for business-class airfare,
 a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
 
+Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
+feel free to import it (to Google Calendar or iCal) and stay
+informed about everything I do publicly.
+
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <!--
