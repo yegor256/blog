@@ -59,6 +59,10 @@ To be published: 25 December 2017.
 
 Previous episodes:
 
+<img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
+&#35;19: [Typical mistakes we make in bug tracking](/shift-m/2017/19.html)<br/>
+18 December 2017; 47 min.
+
 <img src="/images/shift-m/henrik-martensson.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;18: [Henrik Mårtensson about HR troubles](/shift-m/2017/18.html)<br/>
