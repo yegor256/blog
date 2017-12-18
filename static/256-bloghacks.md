@@ -33,6 +33,9 @@ ISBN: 1537688669.<br/>
 
 <!-- Reviews for Google -->
 
+Dec 18, 2017:
+Created and published my [calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics).
+
 Dec 17, 2017:
 Added [Google social profile](https://developers.google.com/search/docs/data-types/social-profile).
 
