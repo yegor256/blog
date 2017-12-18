@@ -148,7 +148,8 @@ How Much Do You Cost?
 [DevTernity 2017](https://devternity.com/);
 Riga, Latvia;
 1 December 2017;
-[slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost-83117011).
+[slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost-83117011),
+[video](https://www.youtube.com/watch?v=6mfo_FHL3PE).
 It was my second year with these guys and I liked it more than in 2016.
 The travel, the food, the equipment, the venue were very good. What they still
 are missing, I believe, is the interaction between speakers and the audience
