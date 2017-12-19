@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-12-19T10:10:48+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Alan Kay Was Wrong About Him Being Wrong</title><link href="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html" rel="alternate" type="text/html" title="Alan Kay Was Wrong About Him Being Wrong" /><published>2017-12-12T00:00:00+00:00</published><updated>2017-12-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/12/alan-kay-was-wrong</id><content type="html" xml:base="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html">&lt;p&gt;From time to time someone asks me what I think about what
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2017-12-19T11:27:06+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SRP is a Hoax</title><link href="http://www.yegor256.com/2017/12/19/srp-is-hoax.html" rel="alternate" type="text/html" title="SRP is a Hoax" /><published>2017-12-19T00:00:00+00:00</published><updated>2017-12-19T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/19/srp-is-hoax</id><content type="html" xml:base="http://www.yegor256.com/2017/12/19/srp-is-hoax.html">&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;Single Responsibility Principle&lt;/a&gt;,
+according to &lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&quot;&gt;Robert Martin&lt;/a&gt;&amp;#39;s
+&lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;Clean Code&lt;/a&gt;,
+means that &amp;quot;a class should have only one reason to change.&amp;quot;
+Let&amp;#39;s try to decrypt this rather vague statement and see how it
+helps us design better object-oriented software. If it does.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Thomas Crown Affair (1999) by John McTiernan&#39; src=&#39;/images/2017/12/the-thomas-crown-affair.jpg&#39; longdesc=&#39;#e55eaeb4&#39;/&gt;&lt;figcaption id=&#39;e55eaeb4&#39;&gt;The Thomas Crown Affair (1999) by John McTiernan&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I mentioned SRP once in &lt;a href=&quot;/2017/03/28/solid.html&quot;&gt;my post about SOLID&lt;/a&gt;,
+saying that it doesn&amp;#39;t really help programmers understand the good old
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;&amp;quot;high cohesion&amp;quot;&lt;/a&gt;
+concept, which was introduced by
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Larry_Constantine&quot;&gt;Larry Constantine&lt;/a&gt;
+back in 1974. Now let&amp;#39;s see it by example and analyze how we can
+improve a class, with the SRP in mind, and whether it will become
+&lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;more object-oriented&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s try the class &lt;a href=&quot;https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java&quot;&gt;&lt;code&gt;AwsOcket&lt;/code&gt;&lt;/a&gt;
+from &lt;a href=&quot;http://s3.jcabi.com&quot;&gt;jcabi-s3&lt;/a&gt; (I&amp;#39;ve simplified the code):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AwsOcket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* ... */&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* ... */&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* ... */&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Correct me if I&amp;#39;m wrong, but according to SRP this class is responsible for
+too many things:
+1) checking the existence of an object in AWS S3,
+2) reading its content, and
+3) modifying its content.
+Right? It&amp;#39;s not a good design and it must be changed.&lt;/p&gt;
+
+&lt;p&gt;In order to change it and make it responsible for just one thing we must introduce
+a getter, which will return an AWS client and then create three new classes:
+&lt;code&gt;ExistenceChecker&lt;/code&gt;, &lt;code&gt;ContentReader&lt;/code&gt;, and &lt;code&gt;ContentWriter&lt;/code&gt;. They will check,
+read, and write. Now, in order to read the content and print it to the
+console I&amp;#39;m currently doing this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ocket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ocket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Tomorrow, if I refactor the class, I will be doing this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ExistenceChecker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ocket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ContentReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ocket&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Aside from the fact that these checkers, readers, and writers are not really
+classes, but pure holders of procedures, the usage of this &lt;code&gt;ocket&lt;/code&gt; turns
+into a nightmare. We can&amp;#39;t really know anymore what will happen with it
+when we pass it somewhere. We can&amp;#39;t, for example, guarantee that the content
+that is coming from it is decrypted or decoded on the fly. We simply can&amp;#39;t
+decorate it. It is not an object anymore, but a holder of an AWS client,
+which is used by some other classes somewhere.&lt;/p&gt;
+
+&lt;p&gt;Yes, now it is responsible for only one thing: encapsulating the reference
+to the AWS client. It is a perfect class as far as SRP is concerned. But it
+is not an object anymore.&lt;/p&gt;
+
+&lt;p&gt;The same will happen with any class if you apply the SRP principle to its
+full extent: it will become a holder of data or of other objects, with a
+collection of setters and getters on top of them. Maybe with one extra
+method in addition to those.&lt;/p&gt;
+
+&lt;p&gt;My point is that SRP is a wrong idea.&lt;/p&gt;
+
+&lt;p&gt;Making classes small and cohesive is a good
+idea, but making them responsible &amp;quot;for one thing&amp;quot; is a misleading simplification
+of a &amp;quot;high cohesion&amp;quot; concept. It only turns them into dumb carriers of something
+else, instead of being encapsulators and decorators of smaller entities, to
+construct bigger ones.&lt;/p&gt;
+
+&lt;p&gt;In our fight for this fake SRP idea we lose a much more important principle,
+which really is about true object-oriented programming and thinking:
+encapsulation. It is much less important how many things an object is
+responsible for than how tightly it protects the entities it encapsulates.
+A monster object with a hundred methods is much less of a problem than a DTO with five pairs of
+getters and setters! This is because a DTO spreads the problem all over the code,
+where we can&amp;#39;t even find it, while the monster object is always right in front
+of us and we can always refactor it into smaller pieces.&lt;/p&gt;
+
+&lt;p&gt;Encapsulation comes first, size goes next, if ever.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">The Single Responsibility Principle,
+according to Robert Martin&amp;#39;s
+Clean Code,
+means that &amp;quot;a class should have only one reason to change.&amp;quot;
+Let&amp;#39;s try to decrypt this rather vague statement and see how it
+helps us design better object-oriented software. If it does.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/the-thomas-crown-affair.jpg" /></entry><entry><title type="html">Alan Kay Was Wrong About Him Being Wrong</title><link href="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html" rel="alternate" type="text/html" title="Alan Kay Was Wrong About Him Being Wrong" /><published>2017-12-12T00:00:00+00:00</published><updated>2017-12-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/12/alan-kay-was-wrong</id><content type="html" xml:base="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html">&lt;p&gt;From time to time someone asks me what I think about what
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan Kay&lt;/a&gt;, the father of OOP,
 the designer of &lt;a href=&quot;https://en.wikipedia.org/wiki/Smalltalk&quot;&gt;Smalltalk&lt;/a&gt;,
 the first object-oriented language,
@@ -1535,211 +1626,4 @@ here and
 here.
 I didn&amp;#39;t really like it and went back to good old decorators. Moreover, I
 created Cactoos, a library of decorators, to replace
-Guava, which is not so good in so many places.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/10/la-haine.jpg" /></entry><entry><title type="html">Java 9: The Good, The Bad, and Private Interface Methods</title><link href="http://www.yegor256.com/2017/10/03/java9.html" rel="alternate" type="text/html" title="Java 9: The Good, The Bad, and Private Interface Methods" /><published>2017-10-03T00:00:00+00:00</published><updated>2017-10-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/03/java9</id><content type="html" xml:base="http://www.yegor256.com/2017/10/03/java9.html">&lt;p&gt;Java 9 &lt;a href=&quot;https://blogs.oracle.com/java/java-9-release-now-available&quot;&gt;was released&lt;/a&gt;
-a few weeks ago. Check the
-&lt;a href=&quot;https://docs.oracle.com/javase/9/whatsnew/toc.htm&quot;&gt;release notes&lt;/a&gt;,
-they include many interesting features. However, I think that
-not everything is as good as Oracle and Java adepts
-&lt;a href=&quot;https://www.reddit.com/r/programming/comments/71ls99/java_9_released/&quot;&gt;seem to picture it&lt;/a&gt;.
-I see three trends in the Java world, which are good, bad, and ugly,
-respectively. Let&amp;#39;s start with the good one.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Birdman (2014) by Alejandro G. Iñárritu&#39; src=&#39;/images/2017/10/birdman.jpg&#39; longdesc=&#39;#e53725ca&#39;/&gt;&lt;figcaption id=&#39;e53725ca&#39;&gt;Birdman (2014) by Alejandro G. Iñárritu&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;the-platform&quot;&gt;The Platform&lt;/h2&gt;
-
-&lt;p&gt;The first trend is an obvious improvement of the platform that compiles Java,
-packages JARs, and runs the bytecode. It definitely becomes better with every
-new Java release. Here is a list of improvements Java&amp;nbsp;9 made, which are
-very useful, without doubt:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/projects/jigsaw/spec/&quot;&gt;JSR 376&lt;/a&gt;: Module System a.k.a. &lt;a href=&quot;http://openjdk.java.net/projects/jigsaw/&quot;&gt;Jigsaw&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/222&quot;&gt;JEP 222&lt;/a&gt;: &lt;a href=&quot;http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html&quot;&gt;&lt;code&gt;jshell&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/238&quot;&gt;JEP 238&lt;/a&gt;: Multi-release JARs&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/282&quot;&gt;JEP 282&lt;/a&gt;: &lt;a href=&quot;https://blog.idrsolutions.com/2017/05/java-9-jlink-explained-in-5-minutes/&quot;&gt;&lt;code&gt;jlink&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/158&quot;&gt;JEP 158&lt;/a&gt;: Unified logging&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The platform is obviously becoming more mature. This is a &lt;strong&gt;good&lt;/strong&gt; trend.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-jdk&quot;&gt;The JDK&lt;/h2&gt;
-
-&lt;p&gt;The second trend, which I&amp;#39;ve observed since
-&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/features-141434.html&quot;&gt;Java&amp;nbsp;6&lt;/a&gt;,
-shows that the JDK, which is essentially a collection of
-classes and interfaces designed, developed, and maintained by
-&lt;a href=&quot;https://www.oracle.com/java/index.html&quot;&gt;Oracle&lt;/a&gt;,
-gets bigger with every new release. In Java&amp;nbsp;9 they added and extended,
-besides others, the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;JEP &lt;a href=&quot;http://openjdk.java.net/jeps/221&quot;&gt;221&lt;/a&gt;,
-&lt;a href=&quot;http://openjdk.java.net/jeps/224&quot;&gt;224&lt;/a&gt;
-&lt;a href=&quot;http://openjdk.java.net/jeps/225&quot;&gt;225&lt;/a&gt;,
-&lt;a href=&quot;http://openjdk.java.net/jeps/261&quot;&gt;261&lt;/a&gt;: Javadoc processing (extended)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/268&quot;&gt;JEP 268&lt;/a&gt;: XML Catalogs (new)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/262&quot;&gt;JEP 262&lt;/a&gt;: TIFF image I/O (new)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/251&quot;&gt;JEP 251&lt;/a&gt;: multi-resolution images (new)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/110&quot;&gt;JEP 110&lt;/a&gt;: HTTP 2.0 client (new)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://openjdk.java.net/jeps/236&quot;&gt;JEP 236&lt;/a&gt;: Parser for Nashorn (extended)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Of course some features must be implemented in the JDK itself, like
-Unicode support (&lt;a href=&quot;http://openjdk.java.net/jeps/267&quot;&gt;JEP 267&lt;/a&gt;),
-platform-specific Desktop features (&lt;a href=&quot;http://openjdk.java.net/jeps/272&quot;&gt;JEP 272&lt;/a&gt;),
-Spin-Wait Hints (&lt;a href=&quot;http://openjdk.java.net/jeps/285&quot;&gt;JEP 285&lt;/a&gt;),
-compact strings (&lt;a href=&quot;http://openjdk.java.net/jeps/254&quot;&gt;JEP 254&lt;/a&gt;),
-and the process API (&lt;a href=&quot;http://openjdk.java.net/jeps/102&quot;&gt;JEP 102&lt;/a&gt;).
-Their implementation depends on the underlying platform and has
-to be provided together with the JVM.&lt;/p&gt;
-
-&lt;p&gt;But what is HTTP 2.0 client doing in the JDK, together with
-&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=311&quot;&gt;JAX-RS&lt;/a&gt;,
-&lt;a href=&quot;https://www.jcp.org/en/jsr/detail?id=338&quot;&gt;JPA&lt;/a&gt;,
-&lt;a href=&quot;https://jcp.org/en/jsr/detail?id=224&quot;&gt;JAX-WS&lt;/a&gt;,
-&lt;a href=&quot;https://www.jcp.org/en/jsr/detail?id=221&quot;&gt;JDBC&lt;/a&gt;,
-and many other things that, in my opinion,
-should stay as far away from Oracle as possible?
-They are not platform specific and they can be, in a much better way, designed
-by the open source community as independent packages.
-Aggregating them under one monster umbrella brand is a mistake, I believe.&lt;/p&gt;
-
-&lt;p&gt;I think that big corporations are only killing the software market,
-instead of making it better, because of the financial and political motives
-they expose it to. That&amp;#39;s exactly what is happening with JDK. Thanks to
-the Oracle monopoly it lacks flexibility and dynamicity in growth. In other
-words, we&amp;#39;re stuck with what Oracle and its big friends
-&lt;a href=&quot;https://news.ycombinator.com/item?id=14301531&quot;&gt;think is right&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thus, making JDK bigger is a &lt;strong&gt;bad&lt;/strong&gt; trend. Instead, I believe,
-Oracle would only benefit from making it smaller,
-delegating everything that is not platform-specific to the open
-source community, supporting programmers somehow and promoting open and effective
-standardization processes on the market.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-language&quot;&gt;The Language&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_%28programming_language%29&quot;&gt;Java&lt;/a&gt;
-was developed by
-&lt;a href=&quot;https://en.wikipedia.org/wiki/James_Gosling&quot;&gt;James Gosling&lt;/a&gt; in
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Sun_Microsystems&quot;&gt;Sun Microsystems&lt;/a&gt;
-in 1995 as an object-oriented language. There were
-&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;many concerns&lt;/a&gt;
-about this claim of object-orientation and I&amp;#39;m also not sure that Java
-is more OO than it is procedural. However it is officially object-oriented.&lt;/p&gt;
-
-&lt;p&gt;There were many procedural features inherited by Java from C/C++, since
-its first version, including
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;static methods&lt;/a&gt;,
-&lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;NULL&lt;/a&gt;,
-&lt;a href=&quot;/2016/09/13/inheritance-is-procedural.html&quot;&gt;implementation inheritance&lt;/a&gt;,
-etc. It was not a perfect object-oriented language and it was not going
-to be one, as I understand it. The key idea was to create something that could
-be &lt;a href=&quot;https://en.wikipedia.org/wiki/Write_once,_run_anywhere&quot;&gt;written once and ran anywhere&lt;/a&gt;.
-However the language was a big deal also, not just the JVM. It was simple and sexy.&lt;/p&gt;
-
-&lt;p&gt;Java&amp;nbsp;5 made a serious step forward in 2004 and improved the language by
-adding
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Generics_in_Java&quot;&gt;generics&lt;/a&gt;,
-for-each loop,
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_syntax#Varargs&quot;&gt;varargs&lt;/a&gt;,
-and static import. However, &lt;a href=&quot;/2016/04/12/java-annotations-are-evil.html&quot;&gt;annotations&lt;/a&gt;
-and enumerations were introduced, which helped the language to divert
-from the object paradigm to something completely different and procedural.&lt;/p&gt;
-
-&lt;p&gt;Java&amp;nbsp;7 added &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/technotes/guides/language/try-with-resources.html&quot;&gt;try-with-resource&lt;/a&gt;
-in 2011, which was a good move, in line with the OOP paradigm.&lt;/p&gt;
-
-&lt;p&gt;Java&amp;nbsp;8 added &lt;a href=&quot;http://openjdk.java.net/projects/lambda/&quot;&gt;lambda expressions&lt;/a&gt; in 2014,
-which was a great feature, but absolutely irrelevant to OOP. Lambda and
-&lt;a href=&quot;http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html&quot;&gt;Streams API&lt;/a&gt;
-turned Java into a mix of the object, procedural, and functional
-paradigms. &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html&quot;&gt;Default methods&lt;/a&gt;
-were also added to interfaces, which turned types into libraries of code. Types into libraries!
-It&amp;#39;s even worse than
-&lt;a href=&quot;/2016/09/13/inheritance-is-procedural.html&quot;&gt;implementation inheritance&lt;/a&gt;,
-if you ask me.&lt;/p&gt;
-
-&lt;p&gt;Now Java&amp;nbsp;9 made the next &amp;quot;improvement&amp;quot; to interfaces, allowing them to have
-private methods. Private static methods in types! Can you believe it? What will
-be the next step? Attributes, in Java&amp;nbsp;10, I guess.&lt;/p&gt;
-
-&lt;p&gt;Also, let&amp;#39;s take a look at what was done to some core classes in the JDK,
-to understand where the language is heading. Just two examples.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Factory methods for collections&lt;/strong&gt;
-(&lt;a href=&quot;http://openjdk.java.net/jeps/269&quot;&gt;JEP 269&lt;/a&gt;).
-Instead of introducing new constructors and allowing us to do this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;...in Java&amp;nbsp;9 they created more
-&lt;a href=&quot;/2017/11/14/static-factory-methods.html&quot;&gt;static factory methods&lt;/a&gt;
-and made us do this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&amp;quot;Fewer constructors, more static methods!&amp;quot; seems to be the philosophy of those who
-introduced this JEP. Needless to say that this is completely against the
-very spirit of object-oriented programming. Objects must be created by
-constructors, not static methods, no matter what Joshua Bloch
-&lt;a href=&quot;http://amzn.to/2crH5tW&quot;&gt;says&lt;/a&gt;. Static methods make the moment of operator
-&lt;code&gt;new&lt;/code&gt; usage invisible for us and that&amp;#39;s why the code is way less
-maintainable&amp;mdash;we simply don&amp;#39;t know exactly what class is instantiated and
-what the real arguments of its ctor are.&lt;/p&gt;
-
-&lt;p&gt;By the way, with &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; you can do it the right way:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ListOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is OOP.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;New methods in &lt;code&gt;InputStream&lt;/code&gt;&lt;/strong&gt;.
-Three new methods were added to the
-already &lt;a href=&quot;/2016/04/26/why-inputstream-design-is-wrong.html&quot;&gt;over bloated&lt;/a&gt; class
-&lt;a href=&quot;http://download.java.net/java/jdk9/docs/api/java/io/InputStream.html&quot;&gt;&lt;code&gt;InputStream&lt;/code&gt;&lt;/a&gt;:
-&lt;code&gt;transferTo()&lt;/code&gt;, &lt;code&gt;readNBytes()&lt;/code&gt;, and &lt;code&gt;readAllBytes()&lt;/code&gt;.
-Now we are supposed to do this, when we want input stream to
-copy to an output stream:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;transferTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It&amp;#39;s one of the most typical mistakes young OOP programmers are making: they
-make their interfaces big. Just because they need more functionality. I guess the
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Interface_segregation_principle&quot;&gt;interface segregation principle&lt;/a&gt;
-is part of the famous &lt;a href=&quot;/2017/03/28/solid.html&quot;&gt;SOLID&lt;/a&gt;
-and is many years old. What&amp;#39;s wrong with you, Oracle?
-What will the next step be? In Java&amp;nbsp;10 we will also have
-&lt;code&gt;saveToFile()&lt;/code&gt; and &lt;code&gt;printToConsole()&lt;/code&gt;? How about &lt;code&gt;emailToAFriend()&lt;/code&gt;?&lt;/p&gt;
-
-&lt;p&gt;This is how you would do the same with the
-&lt;a href=&quot;https://commons.apache.org/proper/commons-io/javadocs/api-2.4/org/apache/commons/io/IOUtils.html&quot;&gt;&lt;code&gt;IOUtils&lt;/code&gt;&lt;/a&gt;
-utility class from
-&lt;a href=&quot;https://commons.apache.org/proper/commons-io/&quot;&gt;commons-io&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It&amp;#39;s &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;not perfect&lt;/a&gt;,
-but it&amp;#39;s better. The most object-oriented way is to use objects, not
-utility classes and static methods. This is how it works in
-&lt;a href=&quot;/2017/06/22/object-oriented-input-output-in-cactoos.html&quot;&gt;Cactoos&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LengthOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TeeInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is OOP.&lt;/p&gt;
-
-&lt;hr/&gt;
-
-&lt;p&gt;In my opinion, Java is getting &lt;strong&gt;uglier&lt;/strong&gt;, and this is a trend. Does it mean
-that it&amp;#39;s time to quit? No! No matter how ugly you are, we will always love you
-Java!&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><summary type="html">Java 9 was released
-a few weeks ago. Check the
-release notes,
-they include many interesting features. However, I think that
-not everything is as good as Oracle and Java adepts
-seem to picture it.
-I see three trends in the Java world, which are good, bad, and ugly,
-respectively. Let&amp;#39;s start with the good one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/10/birdman.jpg" /></entry></feed>
+Guava, which is not so good in so many places.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/10/la-haine.jpg" /></entry></feed>

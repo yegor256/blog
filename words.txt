@@ -886,6 +886,7 @@ careless
 cares
 carlo
 carried
+carriers
 carrot
 carrot-and-stick
 carrots
@@ -1653,6 +1654,7 @@ declared
 declares
 declaring
 decode
+decoded
 decoder
 decompose
 decomposed
@@ -1669,6 +1671,8 @@ decreased
 decreases
 decreasing
 decrements
+decrypt
+decrypted
 dedicate
 dedicated
 deem
@@ -2174,8 +2178,10 @@ enamored
 encapsulate
 encapsulated
 encapsulates
+encapsulating
 encapsulation
 encapsulator
+encapsulators
 encoded
 encoder
 encounter
@@ -4757,6 +4763,7 @@ painstaking
 painting
 pair
 paired
+pairs
 pakistan
 panel
 panic
@@ -6150,6 +6157,7 @@ simplecov
 simpler
 simplest
 simplicity
+simplification
 simplified
 simplifies
 simplify
@@ -6360,6 +6368,7 @@ spot
 spouse
 spouses
 spread
+spreads
 spreadsheets
 spring
 sprint
@@ -6372,6 +6381,7 @@ SQLAlchemy
 SQLite
 square
 squeeze
+SRP
 SRS
 SSH
 st
