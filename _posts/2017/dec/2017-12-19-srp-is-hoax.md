@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SRP is a Hoax"
-date: 2017-11-20
+date: 2017-12-19
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - srp is fake
   - srp java
   - srp oop
-image: /images/2017/12/
+image: /images/2017/12/the-thomas-crown-affair.jpg
 jb_picture:
-  caption:
+  caption: The Thomas Crown Affair (1999) by John McTiernan
 ---
 
 The [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle),

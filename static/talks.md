@@ -143,7 +143,7 @@ so why shouldn't we rate them, right? The best grade is
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
-<img src="/images/2017/devternity.png" class="past-talk" alt="DevTernity 2017"/>
+<img src="https://i.ytimg.com/vi/6mfo_FHL3PE/mqdefault.jpg" class="past-talk" alt="DevTernity 2017"/>
 How Much Do You Cost?
 [DevTernity 2017](https://devternity.com/);
 Riga, Latvia;
