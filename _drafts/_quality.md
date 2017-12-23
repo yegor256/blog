@@ -50,7 +50,7 @@ Thus, the quality of a product can be measured as:
 {% eqtn Q = \frac{F}{F + U} %}
 
 We simply divide the amount of bugs found by the total amount of bugs
-visible. Thus, the more bugs we managed to find before our users do, the higher the
+visible. Thus, the more bugs we manage to find before our users see them, the higher the
 quality.
 
 A quality of 100% means that no bugs are found by the users. A quality
