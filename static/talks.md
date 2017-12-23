@@ -109,14 +109,6 @@ Kiev, Ukraine<br/>
 -->
 
 <div class="talk-event"/>
-<img src="http://deeprefactoring.ru/assets/img/square_50_50.png" class="future-talk" alt="DeepRefactoring 2017"/>
-**TDD наоборот или как срезать углы**<br/>
-**Почему меня не взяли в Amazon**<br/>
-[DeepRefactoring 2017](http://deeprefactoring.ru/yegor256)<br/>
-Voronezh, Russia<br/>
-20 December 2017
-
-<div class="talk-event"/>
 <img src="http://devexperience.ro/images/logo_black_green_white.png" class="future-talk" alt="DevExperience 2018"/>
 Keynote about something...<br/>
 [DevExperience 2018](http://devexperience.ro/)<br/>
@@ -140,6 +132,16 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2017
+
+<div class="talk-event"/>
+<img src="https://i.ytimg.com/vi/B1MkVQb-hy0/mqdefault.jpg" class="future-talk" alt="DeepRefactoring 2017"/>
+TDD наоборот или как срезать углы;
+Почему меня не взяли в Amazon;
+[DeepRefactoring 2017](http://deeprefactoring.ru/yegor256);
+Voronezh, Russia;
+20 December 2017;
+[видео-1](https://www.youtube.com/watch?v=B1MkVQb-hy0),
+[видео-2](https://www.youtube.com/watch?v=ZhWOlaMqppM).
 
 <div class="talk-event"/>
 <aside class="venue-rate green">B+</aside>
