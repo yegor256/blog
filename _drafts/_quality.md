@@ -23,8 +23,8 @@ How do you define the quality of a software product? There is definitely an
 intrinsic emotional component to it, which means satisfaction for the user,
 willingness to pay, appreciation, positive attitude, and all that. However,
 if we put emotions aside, how can we really measure it?
-IEEE [says](https://standards.ieee.org/findstds/standard/610.12-1990.html) that
-the quality is the degree to which a product meets its requirements or
+The IEEE [says](https://standards.ieee.org/findstds/standard/610.12-1990.html) that
+quality is the degree to which a product meets its requirements or
 user expectations. But what is the formula? Can we say that it
 satisfies requirements and expectations to, say, 73%?
 
