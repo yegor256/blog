@@ -41,33 +41,27 @@ module Jekyll
         maker.channel.updated = Time.now.to_s
         maker.channel.about = "For buffer.com only"
         maker.channel.title = "yegor256.com for buffer.com only"
+        articles = []
         site.posts.docs.each do |p|
           tags = p['tags'] ? " #{p['tags'].map {|t| "##{t}"}.join(' ')}" : ''
           if p['buffer']
             p['buffer'].each do |quote|
               raise "Quote too log in #{p.url}" if quote.length > 200
-              maker.items.new_item do |item|
-                item.id = SecureRandom.uuid
-                item.link = home + p.url
-                item.title = quote + tags
-                item.updated = Time.now.to_s
-              end
+              article << { link: home + p.url, title: quote + tags }
             end
           end
           months = ((Time.now - p['date']) / (30 * 24 * 60 * 60)).to_i
           if months > 3
-            maker.items.new_item do |item|
-              item.id = SecureRandom.uuid
-              item.link = home + p.url
-              if months < 6
-                item.title = "I wrote this #{months} months ago: \"#{p['title']}\"#{tags}"
+            article << {
+              link: home + p.url,
+              title: if months < 6
+                "I wrote this #{months} months ago: \"#{p['title']}\"#{tags}"
               elsif months < 12
-                item.title = "I wrote this almost a year ago: \"#{p['title']}\"#{tags}"
+                "I wrote this almost a year ago: \"#{p['title']}\"#{tags}"
               else
-                item.title = "I wrote this over a year ago: \"#{p['title']}\"#{tags}"
+                "I wrote this over a year ago: \"#{p['title']}\"#{tags}"
               end
-              item.updated = Time.now.to_s
-            end
+            }
           end
         end
         key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
@@ -75,12 +69,10 @@ module Jekyll
           uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=50&key=#{key}")
           JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
             date = Time.parse(video['snippet']['publishedAt'])
-            maker.items.new_item do |item|
-              item.id = SecureRandom.uuid
-              item.link = "https://www.youtube.com/watch?v=#{video['snippet']['resourceId']['videoId']}"
-              item.title = "Watch it again: \"#{video['snippet']['title']}\""
-              item.updated = Time.now.to_s
-            end
+            article << {
+              link: "https://www.youtube.com/watch?v=#{video['snippet']['resourceId']['videoId']}",
+              title: "Watch it again: \"#{video['snippet']['title']}\""
+            }
           end
         end
         {
@@ -89,12 +81,7 @@ module Jekyll
           'Don\'t forget to follow my Angel.co account, if you are also there': 'https://angel.co/yegor256',
           'BTW, here is my GitHub account, don\'t hesitate to follow it': 'https://github.com/yegor256?tab=followers'
         }.each do |tweet, link|
-          maker.items.new_item do |item|
-            item.id = SecureRandom.uuid
-            item.link = link
-            item.title = tweet
-            item.updated = Time.now.to_s
-          end
+          article << { link: link, title: tweet }
         end
         {
           'yegor256/xembly': 'Xembly is an XML building and manipulation language and a library',
@@ -104,12 +91,15 @@ module Jekyll
           'teamed/qulice': 'Qulice is an aggregator of Java static analyzers',
           'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives'
         }.each do |repo, tweet|
-          maker.items.new_item do |item|
-            item.id = SecureRandom.uuid
-            item.link = "https://github.com/#{repo}"
-            item.title = "#{tweet}. Please, add your GitHub star, help the project:"
-            item.updated = Time.now.to_s
-          end
+          article << { link: "https://github.com/#{repo}", title: "#{tweet}. Please, add your GitHub star, help the project:" }
+        end
+      end
+      articles.shuffle.each do |a|
+        maker.items.new_item do |item|
+          item.id = SecureRandom.uuid
+          item.link = a[:link]
+          item.title = a[:title]
+          item.updated = Time.now.to_s
         end
       end
       FileUtils.mkdir_p('_temp')
