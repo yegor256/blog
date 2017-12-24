@@ -47,12 +47,12 @@ module Jekyll
           if p['buffer']
             p['buffer'].each do |quote|
               raise "Quote too log in #{p.url}" if quote.length > 200
-              article << { link: home + p.url, title: quote + tags }
+              articles << { link: home + p.url, title: quote + tags }
             end
           end
           months = ((Time.now - p['date']) / (30 * 24 * 60 * 60)).to_i
           if months > 3
-            article << {
+            articles << {
               link: home + p.url,
               title: if months < 6
                 "I wrote this #{months} months ago: \"#{p['title']}\"#{tags}"
@@ -69,7 +69,7 @@ module Jekyll
           uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=50&key=#{key}")
           JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
             date = Time.parse(video['snippet']['publishedAt'])
-            article << {
+            articles << {
               link: "https://www.youtube.com/watch?v=#{video['snippet']['resourceId']['videoId']}",
               title: "Watch it again: \"#{video['snippet']['title']}\""
             }
@@ -81,7 +81,7 @@ module Jekyll
           'Don\'t forget to follow my Angel.co account, if you are also there': 'https://angel.co/yegor256',
           'BTW, here is my GitHub account, don\'t hesitate to follow it': 'https://github.com/yegor256?tab=followers'
         }.each do |tweet, link|
-          article << { link: link, title: tweet }
+          articles << { link: link, title: tweet }
         end
         {
           'yegor256/xembly': 'Xembly is an XML building and manipulation language and a library',
@@ -92,7 +92,7 @@ module Jekyll
           'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives',
           'jcabi/jcabi-http': 'jcabi-http is an object-oriented Java HTTP client',
         }.each do |repo, tweet|
-          article << { link: "https://github.com/#{repo}", title: "#{tweet}. Please, add your GitHub star, help the project:" }
+          articles << { link: "https://github.com/#{repo}", title: "#{tweet}. Please, add your GitHub star, help the project:" }
         end
       end
       articles.shuffle.each do |a|
