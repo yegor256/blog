@@ -1,0 +1,2223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <author>
+    <name>yegor256</name>
+  </author>
+  <id>For buffer.com only</id>
+  <title>yegor256.com for buffer.com only</title>
+  <updated>2017-12-24T14:07:20+00:00</updated>
+  <entry>
+    <id>1b9f5268-6364-45a1-8b00-a834f38c0468</id>
+    <link href="http://www.yegor256.com/2009/03/04/pdd.html"/>
+    <title>I wrote this over a year ago: &quot;Puzzle Driven Development&quot; #pdd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b41883e0-1c88-43e3-b2c2-510ab11d1b34</id>
+    <link href="http://www.yegor256.com/2013/12/29/proto.html"/>
+    <title>I wrote this over a year ago: &quot;D29, a prototype&quot; #programming</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>829ec04f-bcc5-44c0-8f24-a3a39b01b122</id>
+    <link href="http://www.yegor256.com/2014/04/06/introduction.html"/>
+    <title>I wrote this over a year ago: &quot;First Post&quot; </title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>45fca472-eeda-49a3-af15-352be3c9a7c1</id>
+    <link href="http://www.yegor256.com/2014/04/06/movies-for-thanasis.html"/>
+    <title>I wrote this over a year ago: &quot;Movies for Thanasis&quot; #movies</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2b8ec21e-fe96-44d8-8e6e-fac07135ffc4</id>
+    <link href="http://www.yegor256.com/2014/04/06/phandom.html"/>
+    <title>I wrote this over a year ago: &quot;PhantomJS as an HTML Validator&quot; #phandom #phantomjs #testing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>5475ba81-818a-4c92-9a2c-f0264aaf0ffc</id>
+    <link href="http://www.yegor256.com/2014/04/09/xembly-intro.html"/>
+    <title>I wrote this over a year ago: &quot;Xembly, an Assembly for XML&quot; #xembly #xml #xsl #xsd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b4661a89-bb3b-452b-9ee6-522cc73afb97</id>
+    <link href="http://www.yegor256.com/2014/04/11/cost-of-loc.html"/>
+    <title>I wrote this over a year ago: &quot;How Much Do You Pay Per&amp;nbsp;Line&amp;nbsp;of&amp;nbsp;Code?&quot; #xdsd #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f84bda18-d120-44a8-a46f-075313cd5238</id>
+    <link href="http://www.yegor256.com/2014/04/11/jcabi-http-intro.html"/>
+    <title>I wrote this over a year ago: &quot;Fluent Java HTTP Client&quot; #jcabi #http #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6ad99834-d935-4a63-8f7e-14a2126f57d6</id>
+    <link href="http://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html"/>
+    <title>I wrote this over a year ago: &quot;PDD by Roles&quot; #xdsd #pdd #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f865a198-2eea-4013-b4c9-429b5c8aedb6</id>
+    <link href="http://www.yegor256.com/2014/04/13/bugs-are-welcome.html"/>
+    <title>I wrote this over a year ago: &quot;Bugs Are Welcome&quot; #testing #xdsd #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f1d9f01f-9939-47f5-9d81-fe0be0406689</id>
+    <link href="http://www.yegor256.com/2014/04/13/no-obligations-principle.html"/>
+    <title>I wrote this over a year ago: &quot;No Obligations&quot; #xdsd #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>4321839c-3c42-41e9-a583-757bdc5df43b</id>
+    <link href="http://www.yegor256.com/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html"/>
+    <title>I wrote this over a year ago: &quot;Object-Oriented DynamoDB API&quot; #dynamodb #aws #java #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>72111769-7d28-43f9-a150-812d4ac55ce7</id>
+    <link href="http://www.yegor256.com/2014/04/15/definition-of-done.html"/>
+    <title>I wrote this over a year ago: &quot;Definition Of Done&quot; #management #xdsd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b2f97312-4ab2-425c-a222-b914ff4dffaf</id>
+    <link href="http://www.yegor256.com/2014/04/15/github-guidelines.html"/>
+    <title>I wrote this over a year ago: &quot;GitHub Guidelines&quot; #github #xdsd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e4ab0a73-2802-40f5-b4b1-b5e0b66cfb5b</id>
+    <link href="http://www.yegor256.com/2014/04/17/how-xdsd-is-different.html"/>
+    <title>I wrote this over a year ago: &quot;How XDSD Is Different&quot; #xdsd #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1b3abdd2-edcc-4b82-ac02-6bd79a84479b</id>
+    <link href="http://www.yegor256.com/2014/04/18/jcabi-http-server-mocking.html"/>
+    <title>I wrote this over a year ago: &quot;Mocking of HTTP Server in Java&quot; #jcabi #http #mocking</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>62898932-21fc-4fd0-84b7-7112572c8dcb</id>
+    <link href="http://www.yegor256.com/2014/04/20/how-hourly-rate-is-calculated.html"/>
+    <title>I wrote this over a year ago: &quot;How Hourly Rate Is Calculated&quot; #xdsd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c6334323-8620-42be-ad92-ba8612c808ab</id>
+    <link href="http://www.yegor256.com/2014/04/21/s3-http-basic-auth.html"/>
+    <title>I wrote this over a year ago: &quot;Basic HTTP Auth for S3 Buckets&quot; #aws #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c8b4f2ae-4731-4d7d-a48e-5ffb6614fb90</id>
+    <link href="http://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html"/>
+    <title>I wrote this over a year ago: &quot;Java XML Parsing Made Easy&quot; #xml #java #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>19ebe093-8374-4507-867b-d8c2c1f595bb</id>
+    <link href="http://www.yegor256.com/2014/04/26/incremental-requirements-with-requs.html"/>
+    <title>I wrote this over a year ago: &quot;Incremental Requirements With Requs&quot; #requs #xdsd #requirements</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8aacb709-5e30-4d19-9349-d034f6f619c9</id>
+    <link href="http://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html"/>
+    <title>I wrote this over a year ago: &quot;Typical Mistakes in Java Code&quot; #quality #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>585c4cf7-ddea-4949-a2d0-3e7345ee3312</id>
+    <link href="http://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html"/>
+    <title>I wrote this over a year ago: &quot;XML/XPath Matchers for Hamcrest&quot; #xml #hamcrest #xpath #testing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7f2de32f-b2a2-4e32-90fe-8614ae575d59</id>
+    <link href="http://www.yegor256.com/2014/04/29/w3c-java-validators.html"/>
+    <title>I wrote this over a year ago: &quot;W3C Java Validators&quot; #java #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>72168bc1-8d03-4e99-b166-9a4918566816</id>
+    <link href="http://www.yegor256.com/2014/05/01/dynamodb-local-maven-plugin.html"/>
+    <title>I wrote this over a year ago: &quot;DynamoDB Local Maven Plugin&quot; #dynamodb #maven #aws #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7ae89fa9-fde7-424d-8f9e-017cb10abb37</id>
+    <link href="http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html"/>
+    <title>I wrote this over a year ago: &quot;OOP Alternative to Utility Classes&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>82944e4a-3cb9-428d-8ecb-9032476c8058</id>
+    <link href="http://www.yegor256.com/2014/05/13/why-null-is-bad.html"/>
+    <title>Still using NULL in your code? Still think it's justified in some places? Still believe your code is object-oriented? Read this blog post of mine and think again. #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>167d5786-647f-4f40-82ff-f0eb96eaf8e9</id>
+    <link href="http://www.yegor256.com/2014/05/13/why-null-is-bad.html"/>
+    <title>I wrote this over a year ago: &quot;Why NULL is Bad?&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7463083b-862f-4ef4-803d-00606f18e2bf</id>
+    <link href="http://www.yegor256.com/2014/05/14/object-oriented-github-java-sdk.html"/>
+    <title>I wrote this over a year ago: &quot;Object-Oriented GitHub API&quot; #github #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>55bbe723-e316-4902-b45c-6d87c0adc15e</id>
+    <link href="http://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html"/>
+    <title>I wrote this over a year ago: &quot;Atomic Counters at Stateful.co&quot; #pets #aws #dynamodb</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f97cea71-c70b-4403-9fa2-ff7fa5f5453d</id>
+    <link href="http://www.yegor256.com/2014/05/21/mysql-maven-plugin.html"/>
+    <title>I wrote this over a year ago: &quot;MySQL Maven Plugin&quot; #mysql #maven #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8026b9ee-d5ee-4d67-8765-86d5bfa3f1c0</id>
+    <link href="http://www.yegor256.com/2014/05/23/avoid-java-static-logger.html"/>
+    <title>I wrote this over a year ago: &quot;Get Rid of Java Static Loggers&quot; #logging #java #slf4j</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3efc8d3c-840f-46d0-9c40-fea9f62bf984</id>
+    <link href="http://www.yegor256.com/2014/05/26/amazon-s3-java-oop-adapter.html"/>
+    <title>I wrote this over a year ago: &quot;Object-Oriented Java Adapter of Amazon S3 SDK&quot; #aws #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>eb427dcc-fa67-4155-a27d-649b4c439a34</id>
+    <link href="http://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html"/>
+    <title>I wrote this over a year ago: &quot;Java Method Logging with AOP and Annotations&quot; #aop #java #logging #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bbef464a-a285-4a76-89e8-e3b4c2be2746</id>
+    <link href="http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html"/>
+    <title>I wrote this over a year ago: &quot;Objects Should Be Immutable&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>541ea2e5-d94d-4414-a74e-cb2366cad789</id>
+    <link href="http://www.yegor256.com/2014/06/19/avoid-string-concatenation.html"/>
+    <title>I wrote this over a year ago: &quot;Avoid String Concatenation&quot; #java #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>da4f9bc0-c771-49ca-bb8f-02339c7aeedf</id>
+    <link href="http://www.yegor256.com/2014/06/20/limit-method-execution-time.html"/>
+    <title>I wrote this over a year ago: &quot;Limit Java Method Execution Time&quot; #java #aop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8329438d-045b-41ee-8843-d47d79ac2927</id>
+    <link href="http://www.yegor256.com/2014/06/21/casperjs-with-maven.html"/>
+    <title>I wrote this over a year ago: &quot;CasperJS Tests in Maven Build&quot; #maven #casperjs #phantomjs #testing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>213a21e7-de24-4572-9022-9be0a20af362</id>
+    <link href="http://www.yegor256.com/2014/06/24/jekyll-github-deploy.html"/>
+    <title>I wrote this over a year ago: &quot;Deploy Jekyll to GitHub Pages&quot; #jekyll #github #ruby</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>83282ebd-e8bb-4e2b-8977-c89392f6690d</id>
+    <link href="http://www.yegor256.com/2014/06/25/xml-and-xslt-in-browser.html"/>
+    <title>I wrote this over a year ago: &quot;XML+XSLT in a Browser&quot; #xslt #java #restful</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>182b2f7c-487c-4edb-87bc-68e6ffcb516c</id>
+    <link href="http://www.yegor256.com/2014/06/26/sass-in-java-webapp.html"/>
+    <title>I wrote this over a year ago: &quot;SASS in Java Webapp&quot; #java #sass</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ab7043b2-7021-4094-941e-82b75717ba59</id>
+    <link href="http://www.yegor256.com/2014/06/29/custom-lexer-in-jekyll.html"/>
+    <title>I wrote this over a year ago: &quot;Custom Pygments Lexer in Jekyll&quot; #jekyll #pygments</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>75999abd-8bc0-442e-9839-2787961e2b0e</id>
+    <link href="http://www.yegor256.com/2014/07/03/how-to-read-manifest-mf.html"/>
+    <title>I wrote this over a year ago: &quot;How to Read MANIFEST.MF Files&quot; #java #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c92a3315-7690-4dca-ad2c-cabb68498926</id>
+    <link href="http://www.yegor256.com/2014/07/20/liquibase-in-maven.html"/>
+    <title>I wrote this over a year ago: &quot;Liquibase with Maven&quot; #liquibase #maven #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2d54c7eb-d8f7-48a1-aac7-99e70555b03e</id>
+    <link href="http://www.yegor256.com/2014/07/21/read-only-master-branch.html"/>
+    <title>I wrote this over a year ago: &quot;Master Branch Must Be Read-Only&quot; #rultor #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8098c920-0f14-4145-9e54-14b3d2d306dd</id>
+    <link href="http://www.yegor256.com/2014/07/24/rultor-automated-merging.html"/>
+    <title>I wrote this over a year ago: &quot;Rultor.com, a Merging Bot&quot; #rultor #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ab9b79b0-aec9-4c2e-bb0e-e87594d492f6</id>
+    <link href="http://www.yegor256.com/2014/07/29/docker-in-rultor.html"/>
+    <title>I wrote this over a year ago: &quot;Every Build in Its Own Docker Container&quot; #docker #rultor #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>018b2351-f26f-42e0-a8d5-5167ab44b441</id>
+    <link href="http://www.yegor256.com/2014/07/31/travis-and-rultor.html"/>
+    <title>I wrote this over a year ago: &quot;Rultor + Travis&quot; #docker #rultor #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fca41bc4-3e05-406e-975d-f825d92da316</id>
+    <link href="http://www.yegor256.com/2014/08/03/cacheable-java-annotation.html"/>
+    <title>I wrote this over a year ago: &quot;Cache Java Method Results&quot; #java #jcabi #aop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2d58e808-2a9d-47e5-a311-bf9b48050963</id>
+    <link href="http://www.yegor256.com/2014/08/13/strict-code-quality-control.html"/>
+    <title>I wrote this over a year ago: &quot;Strict Control of Java Code Quality&quot; #java #qulice #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e5c3daaf-6a85-4a95-ba6b-92db0e203ff6</id>
+    <link href="http://www.yegor256.com/2014/08/15/retry-java-method-on-exception.html"/>
+    <title>I wrote this over a year ago: &quot;How to Retry Java Method Call on Exception&quot; #jcabi #java #aop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>68e0368d-ae2f-4aa6-8053-1f106b13d4ac</id>
+    <link href="http://www.yegor256.com/2014/08/18/fluent-jdbc-decorator.html"/>
+    <title>I wrote this over a year ago: &quot;Fluent JDBC Decorator&quot; #java #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>cfde03e2-4dd9-410e-9e93-3f0237774edc</id>
+    <link href="http://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html"/>
+    <title>I wrote this over a year ago: &quot;How to Release to Maven Central, in One Click&quot; #java #rultor #devops #maven</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>701e9612-d662-4ca2-b274-09af500faf19</id>
+    <link href="http://www.yegor256.com/2014/08/22/art-of-software-testing.html"/>
+    <title>I wrote this over a year ago: &quot;The Art of Software Testing by Glenford Myers&quot; #book-review #testing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>30c6e22a-fb14-483e-9776-09cb2dbf4613</id>
+    <link href="http://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html"/>
+    <title>I wrote this over a year ago: &quot;How to Deploy to CloudBees, in One Click&quot; #java #rultor #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>44641a5c-e9ab-4693-9cf8-d2af152a11a6</id>
+    <link href="http://www.yegor256.com/2014/08/26/publish-to-rubygems.html"/>
+    <title>I wrote this over a year ago: &quot;How to Publish to RubyGems, in One Click&quot; #rultor #devops #ruby</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2309389e-f466-46a9-ad0e-5bc98846c9f4</id>
+    <link href="http://www.yegor256.com/2014/08/29/docker-non-root.html"/>
+    <title>I wrote this over a year ago: &quot;How We Run as a Non-Root Inside Docker Container&quot; #docker #rultor</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c7d2ee26-02fd-4798-a3b9-ee0d690fd908</id>
+    <link href="http://www.yegor256.com/2014/09/02/java-ssh-client.html"/>
+    <title>I wrote this over a year ago: &quot;Simple Java SSH Client&quot; #java #jcabi #ssh</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>84d6d4da-36dc-424c-af92-722c4ebc5630</id>
+    <link href="http://www.yegor256.com/2014/09/09/restful-web-sites.html"/>
+    <title>I wrote this over a year ago: &quot;RESTful API and a Web Site in the Same URL&quot; #restful #xslt #xml</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bbb7fa10-f2fc-4184-a543-e5481006c9e3</id>
+    <link href="http://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html"/>
+    <title>I wrote this over a year ago: &quot;Anti-Patterns in OOP&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f206403f-37b8-439c-8458-3ddf5e4dca0c</id>
+    <link href="http://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html"/>
+    <title>I wrote this over a year ago: &quot;Deployment Script vs. Rultor&quot; #rultor #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a00491de-e1df-4532-8259-d208776bc62c</id>
+    <link href="http://www.yegor256.com/2014/09/13/deploying-to-heroku.html"/>
+    <title>I wrote this over a year ago: &quot;Deploying to Heroku, in One Click&quot; #rultor #devops #heroku #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2f66538f-9788-4f71-9a50-ad989c4444b9</id>
+    <link href="http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html"/>
+    <title>I wrote this over a year ago: &quot;Getters/Setters. Evil. Period.&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1a8a550d-93f0-459a-8133-1ba313c0d8a4</id>
+    <link href="http://www.yegor256.com/2014/09/22/remote-programming-interview.html"/>
+    <title>I wrote this over a year ago: &quot;Remote Programming in Teamed.io&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>dc8a21c1-b1ba-4eb5-a7e2-5fa450a2483d</id>
+    <link href="http://www.yegor256.com/2014/09/23/built-in-fake-objects.html"/>
+    <title>I wrote this over a year ago: &quot;Built-in Fake Objects&quot; #tdd #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f46193c2-32b5-4621-b3f1-ae49c8a38d37</id>
+    <link href="http://www.yegor256.com/2014/09/24/why-monetary-awards-dont-work.html"/>
+    <title>I wrote this over a year ago: &quot;Why Monetary Awards Don't Work?&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c7e6ee3b-2715-462c-9ed0-53907761d0d3</id>
+    <link href="http://www.yegor256.com/2014/10/03/di-containers-are-evil.html"/>
+    <title>I wrote this over a year ago: &quot;Dependency Injection Containers are Code Polluters&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>61ecc40d-c900-4591-8fd2-421883b333e7</id>
+    <link href="http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html"/>
+    <title>I wrote this over a year ago: &quot;Best Hosted Continuous Integration Services for a Private Repository&quot; #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>36e8751b-927c-475d-b37f-44af0a18fc4b</id>
+    <link href="http://www.yegor256.com/2014/10/06/software-project-lifecycle.html"/>
+    <title>I wrote this over a year ago: &quot;Project Lifecycle in Teamed.io&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b8c1de4a-a711-4eac-b167-b9577e0449a5</id>
+    <link href="http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html"/>
+    <title>I wrote this over a year ago: &quot;Stop Chatting, Start Coding&quot; #xdsd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d9229ded-8cac-4504-bf46-dbe3c8cab4ff</id>
+    <link href="http://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html"/>
+    <title>I wrote this over a year ago: &quot;Continuous Integration is Dead&quot; #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c64b7514-ef15-41f9-8d7a-f15d4dca63db</id>
+    <link href="http://www.yegor256.com/2014/10/12/who-is-software-architect.html"/>
+    <title>I wrote this over a year ago: &quot;What Does a Software Architect Do?&quot; #management #architect</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7ff9559d-2d09-46a4-a9bc-10a4146784f3</id>
+    <link href="http://www.yegor256.com/2014/10/20/how-we-write-product-vision.html"/>
+    <title>I wrote this over a year ago: &quot;How We Write a Product Vision&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>650beca5-972d-497d-b8f6-60f93b0a88a2</id>
+    <link href="http://www.yegor256.com/2014/10/21/incremental-billing.html"/>
+    <title>I wrote this over a year ago: &quot;Incremental Billing&quot; #xdsd #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6bb856db-a72e-43d1-912b-1ada81705ebe</id>
+    <link href="http://www.yegor256.com/2014/10/23/paired-brackets-notation.html"/>
+    <title>I wrote this over a year ago: &quot;Paired Brackets&quot; #java #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>082c929f-7f2d-43b8-a798-b6d141c066fe</id>
+    <link href="http://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html"/>
+    <title>I wrote this over a year ago: &quot;Are You a Hacker or a Designer?&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>acb6053f-1ed9-45cd-9238-ea167aaf38c9</id>
+    <link href="http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html"/>
+    <title>I wrote this over a year ago: &quot;How Much Do You Cost?&quot; #career</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>507f82fe-3ff9-455f-a31a-db87f8c82a4b</id>
+    <link href="http://www.yegor256.com/2014/11/03/empty-line-code-smell.html"/>
+    <title>I wrote this over a year ago: &quot;An Empty Line is a Code Smell&quot; #design</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>095e6a74-1be6-4d09-84c8-c329cfba0fe4</id>
+    <link href="http://www.yegor256.com/2014/11/07/how-immutability-helps.html"/>
+    <title>I wrote this over a year ago: &quot;How Immutability Helps&quot; #jcabi #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fb44f51f-7dae-4fcf-a791-d40b1235760d</id>
+    <link href="http://www.yegor256.com/2014/11/14/hits-of-code.html"/>
+    <title>I wrote this over a year ago: &quot;Hits-of-Code Instead of SLoC&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c4bd1398-326b-4fac-8c47-d0c4b1ce6c78</id>
+    <link href="http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html"/>
+    <title>I wrote this over a year ago: &quot;Seven Virtues of a Good Object&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>394fead9-7cb1-4000-8a18-d4e53bde402b</id>
+    <link href="http://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html"/>
+    <title>I wrote this over a year ago: &quot;Five Principles of Bug Tracking&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>92a19a0b-0100-4938-9afd-3b1113ddc53d</id>
+    <link href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html"/>
+    <title>ORM is a terrible anti-pattern that violates all principles of OOP, tearing objects apart and turning them into passive data bags. #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>5d78ef42-dfdd-4d0a-bbc0-fe866601edfb</id>
+    <link href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html"/>
+    <title>What's wrong with object-relational mapping, you may ask? Everything! #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b1b2e5f6-4c31-48ae-b08e-ff92ad96118a</id>
+    <link href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html"/>
+    <title>ORM, instead of encapsulating database interaction inside an object, extracts it away, tearing a living organism apart. #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d1437a93-5040-4e30-8297-7aeb574d3784</id>
+    <link href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html"/>
+    <title>SQL-Speaking Objects is, in my opinion, the best OOP alternative to ORM. #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c7635272-ccf8-4878-a2c6-a439ac729a16</id>
+    <link href="http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html"/>
+    <title>I wrote this over a year ago: &quot;ORM Is an Offensive Anti-Pattern&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bffd4a1c-41a0-4883-8fca-5f86919530fb</id>
+    <link href="http://www.yegor256.com/2014/12/04/synchronization-between-nodes.html"/>
+    <title>I wrote this over a year ago: &quot;Synchronization Between Nodes&quot; #stateful</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>4168f760-c18e-43a6-87be-f152285c5c13</id>
+    <link href="http://www.yegor256.com/2014/12/09/immutable-object-state-and-behavior.html"/>
+    <title>I wrote this over a year ago: &quot;How an Immutable Object Can Have State and Behavior?&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2b078f4c-d9b6-4e3c-b280-f503cae05295</id>
+    <link href="http://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html"/>
+    <title>I wrote this over a year ago: &quot;How Much Your Objects Encapsulate?&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bece971c-a54a-4a7c-b391-8d0ed31fc897</id>
+    <link href="http://www.yegor256.com/2014/12/18/independent-technical-reviews.html"/>
+    <title>I wrote this over a year ago: &quot;You Do Need Independent Technical Reviews!&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fde923f2-4609-4c6d-8a96-0840ca4f7279</id>
+    <link href="http://www.yegor256.com/2014/12/22/immutable-objects-not-dumb.html"/>
+    <title>I wrote this over a year ago: &quot;Immutable Objects Are Not Dumb&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b30ab59c-fd2c-4980-aa64-c8752f633b5d</id>
+    <link href="http://www.yegor256.com/2015/01/05/how-to-be-honest-and-keep-customer.html"/>
+    <title>I wrote this over a year ago: &quot;How to Be Honest and Keep a Customer&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b2db99a4-e865-460c-ba7b-94e4a75a68c8</id>
+    <link href="http://www.yegor256.com/2015/01/08/morning-standup-meetings.html"/>
+    <title>I wrote this over a year ago: &quot;Daily Stand-Up Meetings Are a Good Tool for a Bad Manager&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>06725bb0-af3c-46ba-b62c-6c2cdebd3a67</id>
+    <link href="http://www.yegor256.com/2015/01/10/windows-appveyor-maven.html"/>
+    <title>I wrote this over a year ago: &quot;Continuous Integration on Windows, with Appveyor and Maven&quot; #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>439cf082-f379-4dee-8dec-d2203b44036d</id>
+    <link href="http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html"/>
+    <title>I wrote this over a year ago: &quot;A Compound Name Is a Code Smell&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c48ff85a-1644-42da-a33f-71f792ca2949</id>
+    <link href="http://www.yegor256.com/2015/01/15/how-to-cut-corners.html"/>
+    <title>I wrote this over a year ago: &quot;How to Cut Corners and Stay Cool&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fe33315b-216e-4892-b424-e948eaf4940e</id>
+    <link href="http://www.yegor256.com/2015/01/21/if-then-throw-else.html"/>
+    <title>I wrote this over a year ago: &quot;If. Then. Throw. Else. WTF?&quot; #java #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>26c0ff46-62f6-44e0-8ffa-ca2303a87602</id>
+    <link href="http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html"/>
+    <title>I wrote this over a year ago: &quot;Making Your Boss Happy Is a False Objective&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ad594f44-3d12-41da-9d44-6dbfd6844659</id>
+    <link href="http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html"/>
+    <title>I wrote this over a year ago: &quot;XSL Transformation in Java: An Easy Way&quot; #xml #java #jcabi #xslt</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>0510e0fc-5703-4434-aff5-367b6a7ffe1e</id>
+    <link href="http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html"/>
+    <title>I wrote this over a year ago: &quot;Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent&quot; #java #maven #jcabi</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>26cd2a08-12fd-4396-bd64-67cfe5e7b94b</id>
+    <link href="http://www.yegor256.com/2015/02/09/serious-code-reviewer.html"/>
+    <title>I wrote this over a year ago: &quot;Four NOs of a Serious Code Reviewer&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>84ad114f-7400-41f4-bb77-318f13ad1579</id>
+    <link href="http://www.yegor256.com/2015/02/12/top-down-design.html"/>
+    <title>I wrote this over a year ago: &quot;Code For the User, Not for Yourself&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>68c629be-ce27-42fb-bbc1-8e44d21000ea</id>
+    <link href="http://www.yegor256.com/2015/02/16/it-is-not-a-school.html"/>
+    <title>I wrote this over a year ago: &quot;It's Not a School!&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>9a0d7d7d-6b5c-404c-9d6c-07488368a37c</id>
+    <link href="http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html"/>
+    <title>I wrote this over a year ago: &quot;Utility Classes Have Nothing to Do With Functional Programming&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>9d30c628-2f79-4364-bcba-250a7d6639fe</id>
+    <link href="http://www.yegor256.com/2015/02/23/haircut.html"/>
+    <title>I wrote this over a year ago: &quot;A Haircut&quot; #management #architect #mood</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c9feb8ef-9155-4f03-b088-681f6f448404</id>
+    <link href="http://www.yegor256.com/2015/02/26/composable-decorators.html"/>
+    <title>I wrote this over a year ago: &quot;Composable Decorators vs. Imperative Utility Methods&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>36757b6e-53b4-4293-9dbf-6744fc824d9d</id>
+    <link href="http://www.yegor256.com/2015/03/02/team-morale-myths-and-reality.html"/>
+    <title>I wrote this over a year ago: &quot;Team Morale: Myths and Reality&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d2eecf38-be56-425f-8eae-a5594216b27e</id>
+    <link href="http://www.yegor256.com/2015/03/09/objects-end-with-er.html"/>
+    <title>I wrote this over a year ago: &quot;Don't Create Objects That&amp;nbsp;End&amp;nbsp;With&amp;nbsp;-ER&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c4c02f8d-4ccb-4833-8bb5-e4dd8634c556</id>
+    <link href="http://www.yegor256.com/2015/03/16/technical-glossaries.html"/>
+    <title>I wrote this over a year ago: &quot;Worst Technical Specifications Have No Glossaries&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>42cb5a6f-bb80-4cbf-bfd3-20c9e0202060</id>
+    <link href="http://www.yegor256.com/2015/03/22/takes-java-web-framework.html"/>
+    <title>I wrote this over a year ago: &quot;Java Web App Architecture In Takes Framework&quot; #java #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>5a1ba050-a3d8-46eb-ab23-5d1996395111</id>
+    <link href="http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html"/>
+    <title>I wrote this over a year ago: &quot;JAXB Is Doing It Wrong; Try Xembly&quot; #java #xml</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>65b21454-3023-43da-8e4b-8dfa7f0e3415</id>
+    <link href="http://www.yegor256.com/2015/03/29/rultor-with-appveyor.html"/>
+    <title>I wrote this over a year ago: &quot;How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them&quot; #devops #rultor</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2d19510d-f550-4ab9-a1a3-751c9387cac9</id>
+    <link href="http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html"/>
+    <title>I wrote this over a year ago: &quot;Class Casting Is a Discriminating Anti-Pattern&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2c2ad056-fad9-4533-86d0-8e917623dcc2</id>
+    <link href="http://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html"/>
+    <title>I wrote this over a year ago: &quot;Tacit, a CSS Framework Without Classes&quot; #css #html</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>000c7665-b32c-4117-8453-607b4e993192</id>
+    <link href="http://www.yegor256.com/2015/04/16/award.html"/>
+    <title>I wrote this over a year ago: &quot;Software Quality Award, 2015&quot; #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b5028f3b-eb27-48c4-ad1f-2678120151ad</id>
+    <link href="http://www.yegor256.com/2015/04/22/favorite-software-books.html"/>
+    <title>I wrote this over a year ago: &quot;My Favorite Software Books&quot; #book-review</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>78889ce7-f300-45d5-a5e3-c13dea1b5bff</id>
+    <link href="http://www.yegor256.com/2015/04/30/iterating-adapter.html"/>
+    <title>I wrote this over a year ago: &quot;How to Implement an Iterating Adapter&quot; #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2ff3be58-7aa3-4df3-abed-17cdd02bfcef</id>
+    <link href="http://www.yegor256.com/2015/05/04/how-to-protect-business-idea.html"/>
+    <title>I wrote this over a year ago: &quot;How to Protect a Business Idea While Outsourcing&quot; #management #outsourcing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ef74fff8-e907-4be1-8a59-29ab5d7f42be</id>
+    <link href="http://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html"/>
+    <title>I wrote this over a year ago: &quot;Constructors Must Be Code-Free&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c7ff458a-d550-4b57-8c60-19440cf0c709</id>
+    <link href="http://www.yegor256.com/2015/05/11/software-architect-responsibilities.html"/>
+    <title>I wrote this over a year ago: &quot;Three Things I Expect From a Software Architect&quot; #management #agile #architect</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>68cfadce-9405-45e1-b054-eeded4a1857d</id>
+    <link href="http://www.yegor256.com/2015/05/13/two-instruments-of-software-architect.html"/>
+    <title>I wrote this over a year ago: &quot;Two Instruments of a Software Architect&quot; #management #agile #architect</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>33a46e23-c7c1-4658-abf0-45453c0479c6</id>
+    <link href="http://www.yegor256.com/2015/05/18/cookie-based-authentication.html"/>
+    <title>I wrote this over a year ago: &quot;How Cookie-Based Authentication Works in the Takes Framework&quot; #java #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1c71010b-ba60-4b12-a66f-d8dfbdce6413</id>
+    <link href="http://www.yegor256.com/2015/05/21/avoid-software-outsourcing-disaster.html"/>
+    <title>I wrote this over a year ago: &quot;How to Avoid a Software Outsourcing Disaster&quot; #outsourcing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>efe6afd2-9766-456e-8d1d-9e6bf702d3d0</id>
+    <link href="http://www.yegor256.com/2015/05/25/unit-test-scaffolding.html"/>
+    <title>I wrote this over a year ago: &quot;A Few Thoughts on Unit Test Scaffolding&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b79d0477-cfe2-4e73-a4ba-cb0b1e32ba5b</id>
+    <link href="http://www.yegor256.com/2015/05/28/one-primary-constructor.html"/>
+    <title>I wrote this over a year ago: &quot;There Can Be Only One Primary Constructor&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>eec7f0dd-ad94-49f9-8993-cef654438a27</id>
+    <link href="http://www.yegor256.com/2015/06/02/how-to-estimate-software-cost.html"/>
+    <title>I wrote this over a year ago: &quot;How Much For This Software?&quot; #management #agile #outsourcing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>dfbd4936-e74e-408b-99b1-3ca73f70061f</id>
+    <link href="http://www.yegor256.com/2015/06/08/deadly-sins-software-project.html"/>
+    <title>I wrote this over a year ago: &quot;Seven Deadly Sins of a Software Project&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b9c91f25-bfb7-417b-b711-adf237b4080e</id>
+    <link href="http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html"/>
+    <title>I wrote this over a year ago: &quot;Wikipedia's Definition of a Software Bug Is Wrong&quot; #testing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e1d69b99-80e3-4844-8f81-34e62c2ab3fe</id>
+    <link href="http://www.yegor256.com/2015/06/15/software-outsourcing-survival-guide.html"/>
+    <title>I wrote this over a year ago: &quot;Software Outsourcing Survival Guide&quot; #outsourcing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>0f624370-0c51-46c5-bc8c-750b81a5906c</id>
+    <link href="http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html"/>
+    <title>I wrote this over a year ago: &quot;Good Programmers Write Bug-Free Code, Don't They?&quot; #agile #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d97cbdee-83d0-49fd-9224-f5d92678132e</id>
+    <link href="http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html"/>
+    <title>I wrote this over a year ago: &quot;A Few Valid Reasons to Reject a Bug Fix&quot; #agile #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6b349df0-46df-4ea7-9312-eee909698414</id>
+    <link href="http://www.yegor256.com/2015/06/25/xml-data-xsl-views-takes-framework.html"/>
+    <title>I wrote this over a year ago: &quot;XML Data and XSL Views in Takes Framework&quot; #java #xsl #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>287299db-60ed-4c42-9a04-6987dd7ef192</id>
+    <link href="http://www.yegor256.com/2015/06/29/simple-diagrams.html"/>
+    <title>I wrote this over a year ago: &quot;The Better Architect You Are, The Simpler Your Diagrams&quot; #architect</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>815091b8-6800-48ba-b048-40e5bf7427e6</id>
+    <link href="http://www.yegor256.com/2015/07/06/public-static-literals.html"/>
+    <title>I wrote this over a year ago: &quot;Public Static Literals ... Are Not a Solution for Data Duplication&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ca201142-2c22-4091-83ba-982fa691e16f</id>
+    <link href="http://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html"/>
+    <title>I wrote this over a year ago: &quot;Catch Me If You ... Can't Do Otherwise&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d5d85e92-e4e3-4919-994f-ae66b284811c</id>
+    <link href="http://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html"/>
+    <title>I wrote this over a year ago: &quot;Meetings Are Legalized Robbery&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>44477ce1-1672-4808-b780-a6bb1070fae5</id>
+    <link href="http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html"/>
+    <title>I wrote this over a year ago: &quot;Fools Don't Write Unit Tests&quot; #tdd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b28960b5-766a-457c-b62b-876d9199251b</id>
+    <link href="http://www.yegor256.com/2015/07/21/hourly-pay-modern-slavery.html"/>
+    <title>I wrote this over a year ago: &quot;Hourly Pay Is Modern Slavery&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>dacc5367-e58d-4507-9cbc-e4c76ea0437b</id>
+    <link href="http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html"/>
+    <title>I wrote this over a year ago: &quot;Checked vs. Unchecked Exceptions: The Debate Is Not Over&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d33c96b8-3d8b-4ac3-8597-f6eeac084f33</id>
+    <link href="http://www.yegor256.com/2015/08/04/nine-steps-start-software-project.html"/>
+    <title>I wrote this over a year ago: &quot;Nine Steps to Start a Software Project&quot; #architect</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7401f5b0-0654-4e71-be67-a025e8ddc504</id>
+    <link href="http://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html"/>
+    <title>I wrote this over a year ago: &quot;Why Many Return Statements Are a Bad Idea in OOP&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c942e433-d752-4a21-abaf-cb6e6fc4f4c3</id>
+    <link href="http://www.yegor256.com/2015/08/25/fail-fast.html"/>
+    <title>I wrote this over a year ago: &quot;Need Robust Software? Make It Fragile&quot; #architecture</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e15f6b3d-1e0c-4bb9-88e0-c11c78165ed9</id>
+    <link href="http://www.yegor256.com/2015/09/01/redundant-variables-are-evil.html"/>
+    <title>I wrote this over a year ago: &quot;Redundant Variables Are Pure Evil&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>452c5312-f1e6-403b-af01-ec2c399d9f68</id>
+    <link href="http://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html"/>
+    <title>I wrote this over a year ago: &quot;How to Set Up a Private Maven Repository in Amazon S3&quot; #java #maven</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1e25fd29-5684-42e7-ab54-244e1d7b3a44</id>
+    <link href="http://www.yegor256.com/2015/09/10/testing-exit-criteria.html"/>
+    <title>I wrote this over a year ago: &quot;When Do You Stop Testing?&quot; #testing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>68156564-2abb-47d9-850a-7d1ecaf170f5</id>
+    <link href="http://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html"/>
+    <title>I wrote this over a year ago: &quot;How to Fire Someone Right&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8a3345ae-54cd-4609-a00b-86220a9f08a9</id>
+    <link href="http://www.yegor256.com/2015/09/22/micromanagement.html"/>
+    <title>I wrote this over a year ago: &quot;Are You a Micromanager?&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3a5feb8e-0490-49cb-9575-9a4dc9895883</id>
+    <link href="http://www.yegor256.com/2015/09/29/mayonnaise.html"/>
+    <title>I wrote this over a year ago: &quot;You're Just the Mayonnaise in a Bad Sandwich&quot; #management #mood</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>5c30fb01-f05f-4345-988b-8c9b3d51bcde</id>
+    <link href="http://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html"/>
+    <title>I wrote this over a year ago: &quot;Vertical and Horizontal Decorating&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>de991355-680e-4191-b805-ad56c2638bba</id>
+    <link href="http://www.yegor256.com/2015/10/06/how-to-be-good-office-slave.html"/>
+    <title>I wrote this over a year ago: &quot;How to Be a Good Office Slave&quot; #management #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>520cbcdb-d69e-46c9-b62d-0b55625f5545</id>
+    <link href="http://www.yegor256.com/2015/10/13/competition-without-rules.html"/>
+    <title>I wrote this over a year ago: &quot;Competition Without Rules Is Destructive&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>70db7b5b-7cfe-414e-952d-baae639e99fa</id>
+    <link href="http://www.yegor256.com/2015/10/16/ridley-scott-and-joseph-goebbels.html"/>
+    <title>I wrote this over a year ago: &quot;What Is the Difference Between Ridley Scott and Joseph Goebbels?&quot; #management #mood</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7c94b5a4-67d8-422c-ad37-1551b5dc3a09</id>
+    <link href="http://www.yegor256.com/2015/10/17/award-2016.html"/>
+    <title>I wrote this over a year ago: &quot;Software Quality Award, 2016&quot; #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b033b5ee-bca4-4a2f-ab18-3968112d5207</id>
+    <link href="http://www.yegor256.com/2015/10/20/interrupted-exception.html"/>
+    <title>I wrote this over a year ago: &quot;What Do You Do With InterruptedException?&quot; #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b0e37567-c7ba-4a42-a802-4fb7ed20a41b</id>
+    <link href="http://www.yegor256.com/2015/10/27/outsourcing-doesnt-work.html"/>
+    <title>I wrote this over a year ago: &quot;Why Software Outsourcing Doesn't Work ... Anymore&quot; #outsourcing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8ac8d8f2-25c7-455d-bdf5-11361fb067e1</id>
+    <link href="http://www.yegor256.com/2015/11/03/chatbot-better-than-ui-for-microservice.html"/>
+    <title>I wrote this over a year ago: &quot;A Chatbot Is Better Than a UI for a Microservice&quot; #java #architecture</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>82779b45-f5d0-44e9-aca5-f95a8ac4a8c3</id>
+    <link href="http://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html"/>
+    <title>I wrote this over a year ago: &quot;10 Typical Mistakes in Specs&quot; #requirements #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6afb3986-e443-44fc-8bdb-c4da28e15f5f</id>
+    <link href="http://www.yegor256.com/2015/11/16/json-vs-xml.html"/>
+    <title>I wrote this over a year ago: &quot;Stop Comparing JSON and XML&quot; #xml #json</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fc6af3bc-996e-4710-ba81-388c4d3e3c50</id>
+    <link href="http://www.yegor256.com/2015/11/21/ringelmann-effect-vs-agile.html"/>
+    <title>I wrote this over a year ago: &quot;Ringelmann Effect vs. Agile&quot; #agile #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1061b4a7-36bd-448d-88a9-84d82b271622</id>
+    <link href="http://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html"/>
+    <title>I wrote this over a year ago: &quot;Imprisonment for Irresponsible Coding!&quot; #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b43de481-bd50-4878-8b2a-72783bcb1ca1</id>
+    <link href="http://www.yegor256.com/2015/12/01/rethrow-exceptions.html"/>
+    <title>I wrote this over a year ago: &quot;Throwing an Exception Without Proper Context Is a Bad Habit&quot; #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6d9c96d9-2a63-4330-b8c3-b74441baa5c6</id>
+    <link href="http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html"/>
+    <title>I wrote this over a year ago: &quot;Temporal Coupling Between Method Calls&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>be67cd3c-e72e-4d6b-83b2-b36a34eb8454</id>
+    <link href="http://www.yegor256.com/2015/12/16/investors-are-too-scared.html"/>
+    <title>I wrote this over a year ago: &quot;Investors Are Too Scared&quot; #startup</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6104aeb1-4cd2-4aef-ace7-6ffaaf8e5b70</id>
+    <link href="http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html"/>
+    <title>I wrote this over a year ago: &quot;Why Don't You Contribute to Open Source?&quot; #programming</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a897dcde-c010-48cf-96c6-c93cc6d8e021</id>
+    <link href="http://www.yegor256.com/2015/12/29/turnover-is-good-for-maintainability.html"/>
+    <title>I wrote this over a year ago: &quot;Employee Turnover Is Good for the Maintainability of Your Code Base&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1f5203ee-a8ed-4038-9c10-9bbe35d66d78</id>
+    <link href="http://www.yegor256.com/2016/01/05/how-to-punish-employees.html"/>
+    <title>I wrote this over a year ago: &quot;How Do You Punish Your Employees?&quot; #management #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e6297839-ab3d-44a6-9d82-ab2e007ecc74</id>
+    <link href="http://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html"/>
+    <title>I wrote this over a year ago: &quot;Good Programmers Don't Work for Equity&quot; #startup</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6ff09281-b191-4a9e-b66c-65b4e7309457</id>
+    <link href="http://www.yegor256.com/2016/01/19/how-expensive-is-outsourcing.html"/>
+    <title>I wrote this over a year ago: &quot;How Expensive Is Your Outsourcing Team?&quot; #outsourcing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d2449bf3-6a8f-4759-aefc-aefec118eaf9</id>
+    <link href="http://www.yegor256.com/2016/01/26/defensive-programming.html"/>
+    <title>I wrote this over a year ago: &quot;Defensive Programming via Validating Decorators&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>64e3a18e-5c87-4172-b8b0-dc1efb5c6bfc</id>
+    <link href="http://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html"/>
+    <title>I wrote this over a year ago: &quot;Design Patterns and Anti-Patterns, Love and Hate&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a15f8919-6472-4789-abd5-286a1663bac7</id>
+    <link href="http://www.yegor256.com/2016/02/09/are-you-still-debugging.html"/>
+    <title>I wrote this over a year ago: &quot;Are You Still Debugging?&quot; #tdd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bf2bf205-b1f5-4bdc-a924-68d122927da2</id>
+    <link href="http://www.yegor256.com/2016/02/18/holacracy-autocracy.html"/>
+    <title>I wrote this over a year ago: &quot;Holacracy or Autocracy? Both!&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ce81339b-80c7-4618-8e8c-d065021df33b</id>
+    <link href="http://www.yegor256.com/2016/03/01/how-we-interview-programmers.html"/>
+    <title>I wrote this over a year ago: &quot;How We Interview Programmers&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>23e678ef-c099-44da-a781-068bd99bb890</id>
+    <link href="http://www.yegor256.com/2016/03/08/pimp-up-your-resume.html"/>
+    <title>I wrote this over a year ago: &quot;Pimp Up Your Resume&quot; #career</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ab806b04-acf7-498c-9bb9-222fd65960f3</id>
+    <link href="http://www.yegor256.com/2016/03/15/wring-dispatcher-github-notifications.html"/>
+    <title>I wrote this over a year ago: &quot;Wring.io, a Dispatcher of GitHub Notifications&quot; #github #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>07684385-4297-418b-920e-c9a4658226ea</id>
+    <link href="http://www.yegor256.com/2016/03/22/try-finally-if-not-null.html"/>
+    <title>I wrote this over a year ago: &quot;Try. Finally. If. Not. Null.&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>53dece0a-8475-450c-8c47-b2e567e0e9c9</id>
+    <link href="http://www.yegor256.com/2016/03/28/unspoken-secrets-of-elevator-pitch.html"/>
+    <title>I wrote this over a year ago: &quot;Unspoken Secrets of an Elevator Pitch&quot; #startup #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>82679866-488c-4bbd-a3a3-9032e9082ff6</id>
+    <link href="http://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html"/>
+    <title>I wrote this over a year ago: &quot;Jare.io, an Instant and Free CDN&quot; #cdn #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3cb1ee15-1bed-4524-a984-c6f656b3f1ba</id>
+    <link href="http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html"/>
+    <title>I wrote this over a year ago: &quot;Printers Instead of Getters&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>80f42f5e-2aa3-46ef-ad00-6fd6ddf0c371</id>
+    <link href="http://www.yegor256.com/2016/04/08/revenue-may-kill-startup.html"/>
+    <title>I wrote this over a year ago: &quot;Growing Revenue May Kill Your Startup&quot; #startup</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e6e24a39-34a3-4e3f-9de0-2d65457bd595</id>
+    <link href="http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html"/>
+    <title>I wrote this over a year ago: &quot;Java Annotations Are a Big Mistake&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>283c32d0-ab1c-4878-a517-f282429ded79</id>
+    <link href="http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html"/>
+    <title>I wrote this over a year ago: &quot;Object Behavior Must Not Be Configurable&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>44aa7ad1-eb1a-4112-995a-1e8892201bae</id>
+    <link href="http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html"/>
+    <title>I wrote this over a year ago: &quot;Why InputStream Design Is Wrong&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>97c179f4-d14d-493b-90ec-9b93d50e78de</id>
+    <link href="http://www.yegor256.com/2016/05/03/test-methods-must-share-nothing.html"/>
+    <title>I wrote this over a year ago: &quot;Test Methods Must Share Nothing&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3cf48570-34d8-49c1-8a3a-f4f8dcd81272</id>
+    <link href="http://www.yegor256.com/2016/05/10/keynote-clowns.html"/>
+    <title>I wrote this over a year ago: &quot;Keynote Clowns&quot; #mood #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>531d5943-374a-45d6-b78e-d0a8ba0e0b89</id>
+    <link href="http://www.yegor256.com/2016/05/17/convertible-notes.html"/>
+    <title>I wrote this over a year ago: &quot;What to Worry About in Convertible Notes&quot; #startup</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>585a1443-f5a1-4402-bf95-897f261d8996</id>
+    <link href="http://www.yegor256.com/2016/05/24/who-is-project-manager.html"/>
+    <title>I wrote this over a year ago: &quot;Who Is a Project Manager?&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fbdeb66d-5533-4c48-9d47-8b2dde4ceb27</id>
+    <link href="http://www.yegor256.com/2016/06/03/conference-mistakes.html"/>
+    <title>I wrote this over a year ago: &quot;11 Mistakes Conferences Keep Making&quot; #mood</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>69323c50-1d2e-47b9-bc65-8d2b0d11ed23</id>
+    <link href="http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"/>
+    <title>I wrote this over a year ago: &quot;Don't Use Java Assertions&quot; #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>eedc4053-2420-4103-b7b6-fe30992d3c87</id>
+    <link href="http://www.yegor256.com/2016/06/21/how-to-hire-programmer.html"/>
+    <title>I wrote this over a year ago: &quot;How to Hire a Programmer&quot; #management #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f7184b39-fb67-42a0-a5af-fbf759c0d3f2</id>
+    <link href="http://www.yegor256.com/2016/06/27/singletons-must-die.html"/>
+    <title>Forget about singletons; never use them; turn them into dependencies #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ee9e668b-8554-41e8-8f23-d63737522d48</id>
+    <link href="http://www.yegor256.com/2016/06/27/singletons-must-die.html"/>
+    <title>A proper object-oriented design would pass an instance to all objects that may need it through their constructors. #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3e9cae77-3b09-44e0-927a-c0a4d5b2be87</id>
+    <link href="http://www.yegor256.com/2016/06/27/singletons-must-die.html"/>
+    <title>I wrote this over a year ago: &quot;Singletons Must Die&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fb9510ed-df8f-452f-941b-38ad7f2c4eea</id>
+    <link href="http://www.yegor256.com/2016/07/06/data-transfer-object.html"/>
+    <title>DTO is just a shame, and Martin Fowler, who invented it, is just wrong. #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>914092b2-66f9-4bb5-b985-c37de6a479ea</id>
+    <link href="http://www.yegor256.com/2016/07/06/data-transfer-object.html"/>
+    <title>In OOP, data must not be visible. Objects must only have access to the data they encapsulate and never to the data encapsulated by other objects. #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f0d70b2c-2882-4fa6-9fab-e98f25109a8c</id>
+    <link href="http://www.yegor256.com/2016/07/06/data-transfer-object.html"/>
+    <title>I wrote this over a year ago: &quot;Data Transfer Object Is a Shame&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>98853541-230b-4b20-b5a6-895698f33856</id>
+    <link href="http://www.yegor256.com/2016/07/10/software-project-roles.html"/>
+    <title>I wrote this over a year ago: &quot;Key Roles in a Software Project&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>58877c84-99f2-4d51-96e6-4afb98b5fb97</id>
+    <link href="http://www.yegor256.com/2016/07/11/mistakes-in-agile-manifesto.html"/>
+    <title>I wrote this over a year ago: &quot;Twelve Mistakes in Agile Manifesto&quot; #management #agile</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a4c33a09-43f7-4a98-b8ac-f87207bdd12d</id>
+    <link href="http://www.yegor256.com/2016/07/14/who-is-object.html"/>
+    <title>I wrote this over a year ago: &quot;Who Is an Object?&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>06a793e8-1691-4205-b2a0-2ede325ecf40</id>
+    <link href="http://www.yegor256.com/2016/07/18/law-of-demeter.html"/>
+    <title>I wrote this over a year ago: &quot;The Law of Demeter Doesn't Mean One Dot&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>75fff06e-df92-4085-841e-8825bd1dbd84</id>
+    <link href="http://www.yegor256.com/2016/07/21/convince-me.html"/>
+    <title>I wrote this over a year ago: &quot;Convince Me!&quot; #management #architect</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>4da9381f-2f16-4bdc-8963-b366f9e9b5de</id>
+    <link href="http://www.yegor256.com/2016/07/26/active-record.html"/>
+    <title>I wrote this over a year ago: &quot;ActiveRecord Is Even Worse Than ORM&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>04117d69-f535-4e7c-87fd-965c08b67952</id>
+    <link href="http://www.yegor256.com/2016/08/01/continuous-integration-maturity.html"/>
+    <title>I wrote this over a year ago: &quot;8+2 Maturity Levels of Continuous Integration&quot; #devops</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>dc7d486d-7db8-4e47-9af3-2bfd97e79c7d</id>
+    <link href="http://www.yegor256.com/2016/08/05/distributed-teams-are-higher-quality.html"/>
+    <title>I wrote this over a year ago: &quot;A Distributed Team Delivers Code of Higher Quality&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b8d2c1af-f5d4-4b18-833f-bf73a3415485</id>
+    <link href="http://www.yegor256.com/2016/08/10/if-then-else-code-smell.html"/>
+    <title>I wrote this over a year ago: &quot;If-Then-Else Is a Code Smell&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>93e5e940-4d68-4f85-a0f3-b839edefb67f</id>
+    <link href="http://www.yegor256.com/2016/08/15/what-is-wrong-object-oriented-programming.html"/>
+    <title>I wrote this over a year ago: &quot;What's Wrong With Object-Oriented Programming?&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>73d0923a-46a8-4a99-9b18-df587b562943</id>
+    <link href="http://www.yegor256.com/2016/08/23/communication-maturity.html"/>
+    <title>I wrote this over a year ago: &quot;Eight Levels of Communication Maturity&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ad1c7112-edf3-46b2-88a3-e13751e53ef4</id>
+    <link href="http://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html"/>
+    <title>I wrote this over a year ago: &quot;Vertical vs. Horizontal Decomposition of Responsibility&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a75442ba-7193-487b-ada7-af9d2f59d1e4</id>
+    <link href="http://www.yegor256.com/2016/09/07/gradients-of-immutability.html"/>
+    <title>I wrote this over a year ago: &quot;Gradients of Immutability&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8ee0e86e-384f-4462-8488-43936fe99522</id>
+    <link href="http://www.yegor256.com/2016/09/13/inheritance-is-procedural.html"/>
+    <title>I wrote this over a year ago: &quot;Inheritance Is a Procedural Technique for Code Reuse&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b4efb798-c63a-4c62-a5b4-08252ab136f2</id>
+    <link href="http://www.yegor256.com/2016/09/20/oop-without-classes.html"/>
+    <title>I wrote this over a year ago: &quot;OOP Without Classes?&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>dff22cde-502c-4985-931e-fccbcc83f878</id>
+    <link href="http://www.yegor256.com/2016/09/27/command-control-innovate.html"/>
+    <title>I wrote this over a year ago: &quot;Command, Control, and Innovate&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>14118a83-e13e-4763-94fe-88592c1703e6</id>
+    <link href="http://www.yegor256.com/2016/10/23/award-2017.html"/>
+    <title>I wrote this over a year ago: &quot;Software Quality Award, 2017&quot; #quality</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>42d52815-a809-4c16-bf44-44e0a0610c6a</id>
+    <link href="http://www.yegor256.com/2016/11/09/why-no-ebooks.html"/>
+    <title>I wrote this over a year ago: &quot;Why I Don't Publish E-Books&quot; #mood</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>36e6da01-48eb-4c90-a540-5dd6943f210b</id>
+    <link href="http://www.yegor256.com/2016/11/18/software-conferences-to-attend.html"/>
+    <title>I wrote this over a year ago: &quot;Software Conferences to Attend&quot; #conferences</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a02b7fdb-f233-48ed-833e-e16dbf659114</id>
+    <link href="http://www.yegor256.com/2016/11/21/naked-data.html"/>
+    <title>I wrote this over a year ago: &quot;Encapsulation Covers Up Naked&amp;nbsp;Data&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8d3b61ce-30a4-4736-8a6d-9f8eee076e76</id>
+    <link href="http://www.yegor256.com/2016/11/29/eolang.html"/>
+    <title>I wrote this over a year ago: &quot;EO&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>42e48575-d94f-4085-9d7b-caa515d712b2</id>
+    <link href="http://www.yegor256.com/2016/12/06/how-to-pay-programmers-less.html"/>
+    <title>I wrote this over a year ago: &quot;How to Pay Programmers Less&quot; #mood #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b7ae4dca-8839-4917-a1f6-ca074e44a3ce</id>
+    <link href="http://www.yegor256.com/2016/12/13/mvc-vs-oop.html"/>
+    <title>I wrote this over a year ago: &quot;MVC vs. OOP&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>0277aac1-65c6-4d5c-8a57-5bc7b3b04464</id>
+    <link href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html"/>
+    <title>I wrote this over a year ago: &quot;Can Objects Be Friends?&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bd8691fc-855d-482f-9515-e0b056413627</id>
+    <link href="http://www.yegor256.com/2017/01/03/how-much-you-love-conflicts.html"/>
+    <title>I wrote this almost a year ago: &quot;How Much Do You Love Conflict?&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b939a976-24db-4c29-b03a-3f1c52085077</id>
+    <link href="http://www.yegor256.com/2017/01/10/how-to-teach-customers.html"/>
+    <title>I wrote this almost a year ago: &quot;How to Teach a Customer&quot; #outsourcing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>fcfd708e-5e69-47cb-9692-ac5df6b16650</id>
+    <link href="http://www.yegor256.com/2017/01/17/synchronized-decorators.html"/>
+    <title>I wrote this almost a year ago: &quot;Synchronized Decorators to Replace Thread-Safe Classes&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7bd32284-8811-4415-93da-ffd05fded5d5</id>
+    <link href="http://www.yegor256.com/2017/01/24/career-advice.html"/>
+    <title>I wrote this almost a year ago: &quot;16 Don'ts of Career Growth&quot; #career</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>eeda5a8b-1f09-4926-b193-859aae7a1bb6</id>
+    <link href="http://www.yegor256.com/2017/01/31/decorating-envelopes.html"/>
+    <title>I wrote this almost a year ago: &quot;Decorating Envelopes&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>5eec7644-872f-43f7-b0b6-43d3b4540ad2</id>
+    <link href="http://www.yegor256.com/2017/02/07/private-method-is-new-class.html"/>
+    <title>I wrote this almost a year ago: &quot;Each Private Static Method Is a Candidate for a New Class&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c403e35f-1c94-41d8-869b-7bee07c2e59c</id>
+    <link href="http://www.yegor256.com/2017/02/14/stackoverflow-is-your-tool.html"/>
+    <title>I wrote this almost a year ago: &quot;StackOverflow Is Your Mandatory&amp;nbsp;Tool&quot; #career</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3b24e663-63a5-409d-a750-c4ea5e0506c8</id>
+    <link href="http://www.yegor256.com/2017/02/21/say-no-to-google-recruiters.html"/>
+    <title>I wrote this almost a year ago: &quot;Why I Don't Talk to Google Recruiters&quot; #career #mood</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7ef53235-daa7-4666-b4a2-d2f733784bff</id>
+    <link href="http://www.yegor256.com/2017/02/28/too-many-classes.html"/>
+    <title>I wrote this almost a year ago: &quot;How to Handle the Problem of Too Many Classes&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>7fb202a7-6e3b-4f9d-a27d-d1e555fff53b</id>
+    <link href="http://www.yegor256.com/2017/03/07/traits-and-mixins.html"/>
+    <title>I wrote this almost a year ago: &quot;Traits and Mixins Are Not OOP&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c3116e08-5496-4ce3-97e9-99dba76c2c03</id>
+    <link href="http://www.yegor256.com/2017/03/24/tdd-that-works.html"/>
+    <title>I wrote this almost a year ago: &quot;The TDD That Works for Me&quot; #testing #tdd</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>0d9f6bb9-7a68-4f87-a3ba-1b7d539ee26a</id>
+    <link href="http://www.yegor256.com/2017/03/28/solid.html"/>
+    <title>I wrote this almost a year ago: &quot;SOLID Is OOP for Dummies&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8a9fa54a-25ee-4c71-9378-ef648896ceaf</id>
+    <link href="http://www.yegor256.com/2017/04/05/pdd-in-action.html"/>
+    <title>I wrote this almost a year ago: &quot;PDD in Action&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>85c8d3f4-4304-4a5f-8b9f-c7b0dffc09f2</id>
+    <link href="http://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html"/>
+    <title>I wrote this almost a year ago: &quot;Flexibility Equates to Lower Quality&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>9d7aa342-060d-4595-bc7b-e58a44ffbb50</id>
+    <link href="http://www.yegor256.com/2017/04/18/no-help-via-email.html"/>
+    <title>I wrote this almost a year ago: &quot;Why I Won't Help You Via Email&quot; #blogging</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>65c204ed-4829-4ae1-8a26-4b4380fcab73</id>
+    <link href="http://www.yegor256.com/2017/04/25/sixnines.html"/>
+    <title>I wrote this almost a year ago: &quot;SixNines.io, Your Website Availability Monitor&quot; #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>cf682659-c8c8-4405-8804-d2a909ed3d20</id>
+    <link href="http://www.yegor256.com/2017/05/02/remote-slaves.html"/>
+    <title>I wrote this almost a year ago: &quot;A Remote Slave Is Still a Slave&quot; #management #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>4a849d29-522f-45e4-ab7f-6c764059fc0a</id>
+    <link href="http://www.yegor256.com/2017/05/10/inversion-of-control.html"/>
+    <title>I wrote this almost a year ago: &quot;How Does Inversion of Control Really Work?&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>179deb12-b48d-462d-8b94-594cbe24dec1</id>
+    <link href="http://www.yegor256.com/2017/05/16/monikers.html"/>
+    <title>I wrote this almost a year ago: &quot;Monikers Instead of Variables&quot; #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>233f2498-ddbf-4d0f-9490-70ee3106de2b</id>
+    <link href="http://www.yegor256.com/2017/05/17/single-statement-unit-tests.html"/>
+    <title>I wrote this almost a year ago: &quot;Single Statement Unit Tests&quot; #testing #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e613ee50-2b97-4303-8110-940b1cdd232f</id>
+    <link href="http://www.yegor256.com/2017/05/23/unlimited-number-of-bugs.html"/>
+    <title>I wrote this almost a year ago: &quot;Any Program Has an Unlimited Number of Bugs&quot; #testing</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>74df30a9-b848-486f-813c-8056db226126</id>
+    <link href="http://www.yegor256.com/2017/05/30/why-contribute-to-open-source.html"/>
+    <title>I wrote this almost a year ago: &quot;Why Do You Contribute to Open Source?&quot; #programming</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>551181dc-3a7e-4661-bc27-b9afd3350cea</id>
+    <link href="http://www.yegor256.com/2017/06/06/gluten-free-management.html"/>
+    <title>I wrote this almost a year ago: &quot;Gluten-Free Management Recipes&quot; #management #sarcasm</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d208d8a6-03a6-4a4b-8afa-5e57b2c52b3d</id>
+    <link href="http://www.yegor256.com/2017/06/13/dynamodb-rack-maven.html"/>
+    <title>I wrote this almost a year ago: &quot;DynamoDB + Rake + Maven + Rack::Test&quot; #testing #ruby</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2ac65371-8550-4eb4-bea6-6843bb273b1e</id>
+    <link href="http://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html"/>
+    <title>I wrote this almost a year ago: &quot;Object-Oriented Declarative Input/Output in Cactoos&quot; #java #oop #pets</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>2de832af-674c-422f-8d0b-352746b9a34d</id>
+    <link href="http://www.yegor256.com/2017/06/27/my-environment.html"/>
+    <title>I wrote this almost a year ago: &quot;My Work Environment&quot; #tools</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>d9838ffe-3d6d-4f2d-b74e-a3444d11cc4c</id>
+    <link href="http://www.yegor256.com/2017/07/04/sexism.html"/>
+    <title>I wrote this 5 months ago: &quot;Am I a Sexist?&quot; #mood #social</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b4b4dd8e-bba0-4518-a3df-e7e85ce5b055</id>
+    <link href="http://www.yegor256.com/2017/07/11/how-to-redesign-equals.html"/>
+    <title>I wrote this 5 months ago: &quot;How I Would Re-design equals()&quot; #java #oop</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8a28292f-4271-477d-b949-45cc58075586</id>
+    <link href="http://www.yegor256.com/2017/07/18/sexual-harassment.html"/>
+    <title>I wrote this 5 months ago: &quot;The Bigger Victim of Sexual Harassment&quot; #mood #social</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>aea58131-dba7-4058-874a-dec3fad46fb1</id>
+    <link href="http://www.yegor256.com/2017/07/25/my-favorite-websites.html"/>
+    <title>I wrote this 5 months ago: &quot;My Favorite Websites&quot; #tools</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>21a60ae9-d623-47aa-9c9d-d8ea7e46c76f</id>
+    <link href="http://www.yegor256.com/2017/08/01/how-to-manage-a-manager.html"/>
+    <title>I wrote this 4 months ago: &quot;How to Manage a Manager?&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b1bd9806-f6ae-4917-9a50-f6be113c78a2</id>
+    <link href="http://www.yegor256.com/2017/08/08/raii-in-java.html"/>
+    <title>I wrote this 4 months ago: &quot;RAII in Java&quot; #oop #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1d8c2f0e-ee65-4ba3-8c39-e5e6148a0dec</id>
+    <link href="http://www.yegor256.com/2017/08/15/bitcoin-pyramid.html"/>
+    <title>I wrote this 4 months ago: &quot;Bitcoin Is Not a Pyramid. Coinbase&amp;nbsp;Is.&quot; #economics</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>9880f95f-0267-4b4d-bb73-f302a8ebe7c3</id>
+    <link href="http://www.yegor256.com/2017/08/22/to-be-nice-or-not.html"/>
+    <title>I wrote this 4 months ago: &quot;To Be Nice or Not to Be Nice?&quot; #management</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>cb0df08e-7145-4fda-8e54-c2718772398c</id>
+    <link href="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html"/>
+    <title>Alan Kay, inventor of objects, says that the very term &quot;object&quot; is misleading and a more appropriate one would be &quot;messaging&quot; #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e495696f-2ed7-4343-9ded-202beaeaf350</id>
+    <link href="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html"/>
+    <title>The key in making great and growable systems is much more to design how its modules communicate rather than what their internal properties and behaviors should be. #java</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3582f20e-444c-4f20-bf10-a22f400f799b</id>
+    <link href="https://www.youtube.com/watch?v=ZhWOlaMqppM"/>
+    <title>Watch it again: &quot;How I didn't get a job at Amazon (in Russian)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>021f5935-a52a-4561-8b6d-5ecf3b437aaf</id>
+    <link href="https://www.youtube.com/watch?v=B1MkVQb-hy0"/>
+    <title>Watch it again: &quot;TDD upside down or how to cut corners (in Russian)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>0a34600d-f642-4a9e-8338-18a9f769c57d</id>
+    <link href="https://www.youtube.com/watch?v=6mfo_FHL3PE"/>
+    <title>Watch it again: &quot;How we decide how much to pay programmers?&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>74fe1f40-eee7-4e3e-a94b-cc5f96400795</id>
+    <link href="https://www.youtube.com/watch?v=7WmsiV22IXM"/>
+    <title>Watch it again: &quot;Lazy Loading via Java Lambda (Webinar #30)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>9dfa0fe4-7048-4657-a8fd-f1c911255dfc</id>
+    <link href="https://www.youtube.com/watch?v=Z70PMGaxGhY"/>
+    <title>Watch it again: &quot;How to win $4096 in the next year Quality Award? (webinar #29)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>64f23ef7-1bd1-4638-ba13-8979b73f960d</id>
+    <link href="https://www.youtube.com/watch?v=VQtdNQd7wIU"/>
+    <title>Watch it again: &quot;Four factors of success (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>453651a0-aadd-4219-a75b-b2921318ef0a</id>
+    <link href="https://www.youtube.com/watch?v=KYd24FN58wg"/>
+    <title>Watch it again: &quot;Object-Oriented Java Web App from Scratch in One Hour: ThreeCopies.com (Webinar #28)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ba0866c3-1230-4663-a236-4ebb16df8cb2</id>
+    <link href="https://www.youtube.com/watch?v=nVmRY4Ri4CA"/>
+    <title>Watch it again: &quot;PostgreSQL + Liquibase + Docker + Maven + Java&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>147fa087-d8f9-438d-bd09-64cd602ceaa4</id>
+    <link href="https://www.youtube.com/watch?v=rEK3Rk2lX3M"/>
+    <title>Watch it again: &quot;Cactoos 0.12 polishing and releasing (webinar #27)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>5b797ec9-d721-4f35-bf54-2cfa8905e780</id>
+    <link href="https://www.youtube.com/watch?v=Mj1gA5mEk68"/>
+    <title>Watch it again: &quot;Unit Testing vs Debugging (webinar #26)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>db6a5b5e-0e6d-4cab-91b9-e7e3378cdba8</id>
+    <link href="https://www.youtube.com/watch?v=cv23Z6xpwDw"/>
+    <title>Watch it again: &quot;Java Annotations Are a Bad Idea&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>748e8d2d-ce9a-4c43-8c6e-1077ee8edb2e</id>
+    <link href="https://www.youtube.com/watch?v=oiNI2jF46h0"/>
+    <title>Watch it again: &quot;Make Customers Trust You&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>49b48a21-559c-4fd3-9ca0-73f22dd2cfcf</id>
+    <link href="https://www.youtube.com/watch?v=Rip_04Bv3Jk"/>
+    <title>Watch it again: &quot;How to be Honest and Keep a Client?&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c4fef046-4145-439f-9b40-4ec611d18a39</id>
+    <link href="https://www.youtube.com/watch?v=IWroBKW8_QI"/>
+    <title>Watch it again: &quot;Object-Oriented Mistakes in OpenJDK (part 2)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>4dea84c4-33c9-4622-8d77-69c6070ed33b</id>
+    <link href="https://www.youtube.com/watch?v=BgLqFTY1Rwk"/>
+    <title>Watch it again: &quot;Object-Oriented Mistakes in OpenJDK (part 1)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>747148d0-4ba9-48dd-a700-70d6ae5be9cb</id>
+    <link href="https://www.youtube.com/watch?v=CCr8hRE_TUs"/>
+    <title>Watch it again: &quot;Object-Oriented Flavor for JUnit Tests&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6aa46cd4-9043-4416-b48e-7fc279473452</id>
+    <link href="https://www.youtube.com/watch?v=DLk_5BmgTVk"/>
+    <title>Watch it again: &quot;How to Avoid Outsourcing Disaster&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>394556d7-de29-4011-a052-44ff319ca729</id>
+    <link href="https://www.youtube.com/watch?v=GS45LzE3LPQ"/>
+    <title>Watch it again: &quot;How Much Do You Cost?&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>4147a63f-7758-4e5a-9900-ebb114b886eb</id>
+    <link href="https://www.youtube.com/watch?v=K_QEOtYVQ7A"/>
+    <title>Watch it again: &quot;What's Wrong With Object-Oriented Programming?&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>6a2b570e-8d29-42ea-b8c2-4e0c57072a9f</id>
+    <link href="https://www.youtube.com/watch?v=uhDmHkMAYnM"/>
+    <title>Watch it again: &quot;Micro-management vs. micro-tasking (webinar #25)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ff52ff6e-3a40-4ffa-b70c-ffff70363f58</id>
+    <link href="https://www.youtube.com/watch?v=DjrA7_Uymok"/>
+    <title>Watch it again: &quot;Inheritance vs. Subtyping (webinar #24)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>98e7b17f-72db-480e-a0f6-e0c6b35feb0a</id>
+    <link href="https://www.youtube.com/watch?v=20QBvrHq6TA"/>
+    <title>Watch it again: &quot;Java Annotations Are Evil (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>aa91edd8-c8a0-4f9f-95b9-c852f80903c7</id>
+    <link href="https://www.youtube.com/watch?v=85B3FV_sB60"/>
+    <title>Watch it again: &quot;Utility Classes Are Killing Us (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1cb86527-7731-41c1-b8d3-f1e1415e5b8e</id>
+    <link href="https://www.youtube.com/watch?v=nsYGC2aUwfQ"/>
+    <title>Watch it again: &quot;Puzzle Driven Development (webinar #23)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>de8156a6-6e99-459a-b954-37eb5b2ec01c</id>
+    <link href="https://www.youtube.com/watch?v=MSBf2RftCKo"/>
+    <title>Watch it again: &quot;Four Best Practices of Time Wasting&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>11aab944-164d-4b41-9d63-d197aadbb493</id>
+    <link href="https://www.youtube.com/watch?v=TLM9eN0b6zo"/>
+    <title>Watch it again: &quot;Get Rid of Experts (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>32ccdc95-263d-4119-91e8-58df8987ff92</id>
+    <link href="https://www.youtube.com/watch?v=biE86esgFAE"/>
+    <title>Watch it again: &quot;Seven Enemies of Our Motivation (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a5dceed8-a5cc-4bbd-ba48-b846540e3069</id>
+    <link href="https://www.youtube.com/watch?v=lvoQZGsY56k"/>
+    <title>Watch it again: &quot;Management without managers (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3f3869ef-e4a6-4ee9-86cf-70b1fde11e45</id>
+    <link href="https://www.youtube.com/watch?v=YdR6I9xZueo"/>
+    <title>Watch it again: &quot;Q4: How to make sure programmers write documentation? (by Iulian Margeloiu)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e16cd6ac-312c-4051-ba17-6c6d7ef5e35d</id>
+    <link href="https://www.youtube.com/watch?v=AEy_6DK6nLk"/>
+    <title>Watch it again: &quot;Q3: How to enforce more formal communications in a team? (by Andriy Kryvtsun)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f89c0b07-5b17-4467-af11-743e927f5c01</id>
+    <link href="https://www.youtube.com/watch?v=3HvGVT5NDJA"/>
+    <title>Watch it again: &quot;Q2: What to do if the client doesn't want to pay for quality? (by Kartikey Tanna)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a2aeaca0-01bf-41bc-8d00-a4d9980e9580</id>
+    <link href="https://www.youtube.com/watch?v=Nm274dGikFc"/>
+    <title>Watch it again: &quot;Naked Data in OOP (webinar #22)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>a95f5763-8809-4339-bd9f-0b1063356652</id>
+    <link href="https://www.youtube.com/watch?v=vfTgEQJOBcI"/>
+    <title>Watch it again: &quot;Q1: How to increase the accuracy of QA planning? (by Vladislav Voinov)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ae5f4723-fb4c-4c72-9cc9-a86934d7f563</id>
+    <link href="https://www.youtube.com/watch?v=GWLpAZqvqSc"/>
+    <title>Watch it again: &quot;How to Deal With Conflicts in a Software Team (Webinar #21)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>58d4094e-81cd-43f6-bd99-db8fd28d8600</id>
+    <link href="https://www.youtube.com/watch?v=7EytYc7K5JA"/>
+    <title>Watch it again: &quot;eXtremely Distributed Software Development, at DevTernity&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>4d7742b0-a184-49c9-82bf-38c5777d15b5</id>
+    <link href="https://www.youtube.com/watch?v=PVvLQGnyDrQ"/>
+    <title>Watch it again: &quot;Gradients of Immutability (webinar #20)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b3f7c084-11f1-4da2-8b75-a8dc46c5031c</id>
+    <link href="https://www.youtube.com/watch?v=R1lA7pN60xg"/>
+    <title>Watch it again: &quot;Who Is a Software Architect?&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>eb6a8824-c252-488e-abf4-bcb6bd5f2eee</id>
+    <link href="https://www.youtube.com/watch?v=wd-SA1HVmLg"/>
+    <title>Watch it again: &quot;How Do You Know When Your Product is Ready to be Shipped?&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>42140c22-9dd3-4865-a108-a361697a8a42</id>
+    <link href="https://www.youtube.com/watch?v=mq4bsnKK0qs"/>
+    <title>Watch it again: &quot;Keep Your Servers in GitHub&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>ae8259df-b9f3-44e6-8c02-02002ac30b1c</id>
+    <link href="https://www.youtube.com/watch?v=hkXLOxZ6Fs4"/>
+    <title>Watch it again: &quot;Seven Sins of a Software Project&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1e654fdc-f115-4b1d-bbb6-a44b8d9c29d7</id>
+    <link href="https://www.youtube.com/watch?v=_61CuGhyv-o"/>
+    <title>Watch it again: &quot;Practical Example of a One-Click Release&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bdee5b1f-dcf8-4fc8-87fe-b81f93dccc0d</id>
+    <link href="https://www.youtube.com/watch?v=tCr9dtGdi2c"/>
+    <title>Watch it again: &quot;XDSD: How Extreme is Your Team&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>f9e45755-3d64-45e2-8755-89f04f90c50c</id>
+    <link href="https://www.youtube.com/watch?v=EDKbYVEInMU"/>
+    <title>Watch it again: &quot;Built-in Fake Objects&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>0009b53f-b972-4456-b487-af4140a3aa7b</id>
+    <link href="https://www.youtube.com/watch?v=03PXmPc7Q3g"/>
+    <title>Watch it again: &quot;ORM is an Offensive Anti-Pattern&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>9cc73e1f-e60a-4e1a-b466-b1fe88a00a8c</id>
+    <link href="https://www.youtube.com/watch?v=Y-16C5yhKLo"/>
+    <title>Watch it again: &quot;Trial by Combat for OOP Honor (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>58214ea5-d013-4927-86bc-3448ed6cced4</id>
+    <link href="https://www.youtube.com/watch?v=4SRoLYxvIQ8"/>
+    <title>Watch it again: &quot;Practical Example of AOP with AspectJ (in Russian with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>b0229103-f0e3-4cfb-b096-6623d2a2a813</id>
+    <link href="https://www.youtube.com/watch?v=cGcCcxx4xrg"/>
+    <title>Watch it again: &quot;Java vs OOP (JavaDay Kyiv)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1360b98c-d240-44e2-bf16-7dccb47032cb</id>
+    <link href="https://www.youtube.com/watch?v=zaKTNK8g2-M"/>
+    <title>Watch it again: &quot;Who Is a Project Manager? (webinar #19)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e95822ed-396c-4dae-844a-2b5febf43121</id>
+    <link href="https://www.youtube.com/watch?v=F-HIuQHy_84"/>
+    <title>Watch it again: &quot;Baruch Sadogursky and I talking about Java and OOP (in Russian, with English subtitles)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>e298a515-b886-471c-be7e-19c196034b88</id>
+    <link href="https://www.youtube.com/watch?v=bW5K5cJ-AVs"/>
+    <title>Watch it again: &quot;Interview with David West (part 2)&quot;</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>bdd4ab03-562e-4980-9479-315119ca7ba8</id>
+    <link href="https://www.facebook.com/yegor256"/>
+    <title>Don't forget to follow me in Facebook, here is the link</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>5a408bca-89fe-4722-9d55-a7da7fe4b02d</id>
+    <link href="https://www.youtube.com/c/yegor256?sub_confirmation=1"/>
+    <title>Don't forget to subscribe to my YouTube channel, I post videos a few times a month</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>3106dd28-fe4a-4567-a57d-bd798107baec</id>
+    <link href="https://angel.co/yegor256"/>
+    <title>Don't forget to follow my Angel.co account, if you are also there</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1eef9b8b-e817-4405-8bfe-238d0e3e36b7</id>
+    <link href="https://github.com/yegor256?tab=followers"/>
+    <title>BTW, here is my GitHub account, don't hesitate to follow it</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>8ff647ca-2753-4bdb-a5cb-c52c01ed1f4c</id>
+    <link href="https://github.com/yegor256/xembly"/>
+    <title>Xembly is an XML building and manipulation language and a library. Please, add your GitHub star, help the project:</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>c1294755-1ee1-47a1-bcbb-2effde37d90f</id>
+    <link href="https://github.com/yegor256/tacit"/>
+    <title>Tacit is a class-less CSS framework, for clueless programmers like me. Please, add your GitHub star, help the project:</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>44a529b2-9a3a-4123-aa44-fd321884d372</id>
+    <link href="https://github.com/yegor256/takes"/>
+    <title>Takes is a unique truly objet-oriented Java web framework. Please, add your GitHub star, help the project:</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>1fb13ed8-c7e1-4f11-9aa4-a259b2bd75c1</id>
+    <link href="https://github.com/yegor256/rultor"/>
+    <title>Rultor is a chatbot DevOps assistant to automate deployment and merge operations. Please, add your GitHub star, help the project:</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>77a6ef5c-7893-40ef-ac4e-752e50f49524</id>
+    <link href="https://github.com/teamed/qulice"/>
+    <title>Qulice is an aggregator of Java static analyzers. Please, add your GitHub star, help the project:</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <entry>
+    <id>72f89815-e707-438d-a30c-2832b54d8161</id>
+    <link href="https://github.com/yegor256/cactoos"/>
+    <title>Cactoos is a library of truly object-oriented Java primitives. Please, add your GitHub star, help the project:</title>
+    <updated>2017-12-24T14:07:20+00:00</updated>
+    <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+  </entry>
+  <dc:date>2017-12-24T14:07:20+00:00</dc:date>
+</feed>
