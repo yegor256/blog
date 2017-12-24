@@ -74,7 +74,7 @@ for the latest news. I'm also seen [somewhere else](/seen.html) sometimes.
 
 Here are topics I haven't spoken about yet but am planning to soon:
 
-  * [Puzzle-Driven Development]({% pst 2009/mar/2010-03-04-pdd %})
+  * [Puzzle-Driven Development]({% pst 2010/mar/2010-03-04-pdd %})
   * [SOLID Is OOP for Dummies]({% pst 2017/mar/2017-03-28-solid %})
   * [We Pay for Bugs]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
   * [Why I Don't Talk to Google Recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})

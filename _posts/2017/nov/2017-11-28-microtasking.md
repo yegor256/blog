@@ -124,7 +124,7 @@ into, say, 2,500+ micro tasks:
     and risks. Programmers will tell you that they can't guarantee anything
     in most cases, and can't really give any valid promises.
     We solve that by
-    [PDD]({% pst 2009/mar/2010-03-04-pdd %}).
+    [PDD]({% pst 2010/mar/2010-03-04-pdd %}).
 
   * **Distraction**.
     Programmers are used to doing many different things at the same time:
