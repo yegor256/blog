@@ -17,6 +17,9 @@ keywords:
 image: /images/2017/12/requiem-for-a-dream.jpg
 jb_picture:
   caption: Requiem for a Dream (2000) by Darren Aronofsky
+buffer:
+  - "The purpose is noble, but the implementation is terrible..."
+  - "Direct data manipulations are what break encapsulation and make object-oriented code procedural and unmaintainable"
 ---
 
 Someone asked me what I think about DAO and I realized that, even
