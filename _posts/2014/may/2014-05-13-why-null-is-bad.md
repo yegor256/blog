@@ -21,6 +21,8 @@ translated:
 book: elegant-objects-1 2.6
 youtube:
   - o3aNJX7AP3M
+buffer:
+  - "Still using NULL in your code? Still think it's justified in some places? Still believe your code is object-oriented? Read this blog post of mine and think again."
 ---
 
 A simple example of `NULL` usage in Java:

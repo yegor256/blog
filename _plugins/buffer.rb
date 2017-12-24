@@ -45,6 +45,7 @@ module Jekyll
           tags = p['tags'] ? " #{p['tags'].map {|t| "##{t}"}.join(' ')}" : ''
           if p['buffer']
             p['buffer'].each do |quote|
+              raise "Quote too log in #{p.url}" if quote.length > 200
               maker.items.new_item do |item|
                 item.id = SecureRandom.uuid
                 item.link = home + p.url

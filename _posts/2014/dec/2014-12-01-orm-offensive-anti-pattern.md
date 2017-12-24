@@ -33,6 +33,7 @@ buffer:
   - "ORM is a terrible anti-pattern that violates all principles of OOP, tearing objects apart and turning them into passive data bags."
   - "What's wrong with object-relational mapping, you may ask? Everything!"
   - "ORM, instead of encapsulating database interaction inside an object, extracts it away, tearing a living organism apart."
+  - "SQL-Speaking Objects is, in my opinion, the best OOP alternative to ORM."
 ---
 
 TL;DR ORM is a terrible [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
