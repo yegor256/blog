@@ -19,6 +19,9 @@ jb_picture:
   caption: Reality (2012) by Matteo Garrone
 youtube:
   - 7WmsiV22IXM
+buffer:
+  - "You obviously know what lazy loading is, right? And you no doubt know about caching. To my knowledge, there is no elegant way in Java to implement either of them"
+  - "Unfortunately, lazy loading and NULL references always come together in classic examples. However there is a better way to implement it"
 ---
 
 You obviously know what [lazy loading](https://en.wikipedia.org/wiki/Lazy_loading)
