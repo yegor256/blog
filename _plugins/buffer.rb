@@ -78,7 +78,7 @@ module Jekyll
               )
             )['items'][0]['snippet']['tags']
             raise "No tags for #{id}" if tags.nil?
-            tags = tags.select{ |t| t =~ /[a-z]{3,12}/ }.take(3).join(' ')
+            tags = tags.select{ |t| t =~ /[a-z]{3,12}/ }.take(3).map{ |t| "##{t}" }.join(' ')
             articles << {
               link: "https://www.youtube.com/watch?v=#{id}",
               title: "Watch it again: \"#{video['snippet']['title']}\" #{tags}"
