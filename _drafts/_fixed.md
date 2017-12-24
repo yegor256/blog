@@ -67,4 +67,6 @@ However, if and when you decide to apply micro-budgeting to your project,
 together with PDD, this is the top list of problems you most likely will face:
 
   * **Old habits**.
-    In the modern world, programmers are used to heroism-driven development
+    In the modern world, programmers are used to "Kindness & Goodness Driven Development,"
+
+
