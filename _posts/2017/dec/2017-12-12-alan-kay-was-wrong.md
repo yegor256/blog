@@ -17,6 +17,9 @@ keywords:
 image: /images/2017/12/rain-man.jpg
 jb_picture:
   caption: Rain Man (1988) by Barry Levinson
+buffer:
+  - "Alan Kay, inventor of objects, says that the very term 'object' is misleading and a more appropriate one would be 'messaging.'"
+  - "The key in making great and growable systems is much more to design how its modules communicate rather than what their internal properties and behaviors should be."
 ---
 
 From time to time someone asks me what I think about what
