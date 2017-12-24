@@ -42,6 +42,21 @@ module Jekyll
               end
             end
           end
+          months = ((Time.now - p['date']) / (30 * 24 * 60 * 60)).to_i
+          if months > 3
+            maker.items.new_item do |item|
+              item.id = SecureRandom.uuid
+              item.link = home + p.url
+              if months < 6
+                item.title = "I wrote this #{months} months ago: \"#{p['title']}\"#{tags}"
+              elsif months < 12
+                item.title = "I wrote this almost a year ago: \"#{p['title']}\"#{tags}"
+              else
+                item.title = "I wrote this over a year ago: \"#{p['title']}\"#{tags}"
+              end
+              item.updated = Time.now.to_s
+            end
+          end
         end
       end
       File.write(File.join(site.dest, 'buffer.rss'), rss.to_s)
