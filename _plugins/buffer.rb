@@ -83,6 +83,34 @@ module Jekyll
             end
           end
         end
+        {
+          'Don\'t forget to follow me in Facebook, here is the link': 'https://www.facebook.com/yegor256',
+          'Don\'t forget to subscribe to my YouTube channel, I post videos a few times a month': 'https://www.youtube.com/c/yegor256?sub_confirmation=1',
+          'Don\'t forget to follow my Angel.co account, if you are also there': 'https://angel.co/yegor256',
+          'BTW, here is my GitHub account, don\'t hesitate to follow it': 'https://github.com/yegor256?tab=followers'
+        }.each do |tweet, link|
+          maker.items.new_item do |item|
+            item.id = SecureRandom.uuid
+            item.link = link
+            item.title = tweet
+            item.updated = Time.now.to_s
+          end
+        end
+        {
+          'yegor256/xembly': 'Xembly is an XML building and manipulation language and a library',
+          'yegor256/tacit': 'Tacit is a class-less CSS framework, for clueless programmers like me',
+          'yegor256/takes': 'Takes is a unique truly objet-oriented Java web framework',
+          'yegor256/rultor': 'Rultor is a chatbot DevOps assistant to automate deployment and merge operations',
+          'teamed/qulice': 'Qulice is an aggregator of Java static analyzers',
+          'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives'
+        }.each do |repo, tweet|
+          maker.items.new_item do |item|
+            item.id = SecureRandom.uuid
+            item.link = "https://github.com/#{repo}"
+            item.title = "#{tweet}. Please, add your GitHub star, help the project:"
+            item.updated = Time.now.to_s
+          end
+        end
       end
       FileUtils.mkdir_p('_temp')
       File.write('_temp/buffer.rss', rss.to_s)
