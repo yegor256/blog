@@ -17,6 +17,10 @@ keywords:
 image: /images/2017/11/godfather.jpg
 jb_picture:
   caption: The Godfather (1972) by Francis Ford Coppola
+buffer:
+  - "I trusted them for over a year, now they've quit and I'm left with nothing!"
+  - "Don't trust us programmers. We are smart, lazy and spoiled"
+  - "Your frustration is enormous and you're ready to go back to the first step—you trust these new guys, because they definitely seem legit, not like those previous crooks"
 ---
 
 "Listen up, dude," a friend of mine said when he called yesterday, "I trusted them
