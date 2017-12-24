@@ -72,12 +72,12 @@ module Jekyll
         end
         key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
         unless key.nil?
-          uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=100&key=#{key}")
+          uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=50&key=#{key}")
           JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
             date = Time.parse(video['snippet']['publishedAt'])
             maker.items.new_item do |item|
               item.id = SecureRandom.uuid
-              item.link = "https://www.youtube.com/watch?v=#{video['resourceId']['videoId']}"
+              item.link = "https://www.youtube.com/watch?v=#{video['snippet']['resourceId']['videoId']}"
               item.title = "Watch it again: \"#{video['snippet']['title']}\""
               item.updated = Time.now.to_s
             end
