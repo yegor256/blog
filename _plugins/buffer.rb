@@ -89,7 +89,8 @@ module Jekyll
           'yegor256/takes': 'Takes is a unique truly objet-oriented Java web framework',
           'yegor256/rultor': 'Rultor is a chatbot DevOps assistant to automate deployment and merge operations',
           'teamed/qulice': 'Qulice is an aggregator of Java static analyzers',
-          'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives'
+          'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives',
+          'jcabi/jcabi-http': 'jcabi-http is an object-oriented Java HTTP client',
         }.each do |repo, tweet|
           article << { link: "https://github.com/#{repo}", title: "#{tweet}. Please, add your GitHub star, help the project:" }
         end
