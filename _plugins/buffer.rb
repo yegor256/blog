@@ -20,6 +20,17 @@ require 'rss'
 require 'securerandom'
 
 module Jekyll
+  class BufferFile < StaticFile
+    def write(dest)
+      target = File.join(dest, @dir, @name)
+      FileUtils.copy_file(
+        File.join(dest, "/../_temp/#{@name}"),
+        target
+      )
+      puts "#{target} created (#{File.size(target)} bytes)"
+      true
+    end
+  end
   class BufferGenerator < Generator
     priority :low
     safe true
@@ -58,10 +69,23 @@ module Jekyll
             end
           end
         end
+        key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
+        unless key.nil?
+          uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=100&key=#{key}")
+          JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
+            date = Time.parse(video['snippet']['publishedAt'])
+            maker.items.new_item do |item|
+              item.id = SecureRandom.uuid
+              item.link = "https://www.youtube.com/watch?v=#{video['resourceId']['videoId']}"
+              item.title = "Watch it again: \"#{video['snippet']['title']}\""
+              item.updated = Time.now.to_s
+            end
+          end
+        end
       end
-      File.write(File.join(site.dest, 'buffer.rss'), rss.to_s)
-      site.static_files << StaticFile.new(site, site.dest, '', 'buffer.rss')
-      puts 'buffer.rss generated'
+      FileUtils.mkdir_p('_temp')
+      File.write('_temp/buffer.rss', rss.to_s)
+      site.static_files << Jekyll::BufferFile.new(site, site.dest, '', 'buffer.rss')
     end
   end
 end
