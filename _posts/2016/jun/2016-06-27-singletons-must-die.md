@@ -19,6 +19,9 @@ social:
 image: /images/2016/06/perdita-durango.jpg
 jb_picture:
   caption: Perdita Durango (1997) by Álex de la Iglesia
+buffer:
+  - "Forget about singletons; never use them; turn them into dependencies"
+  - "A proper object-oriented design would pass an instance to all objects that may need it through their constructors."
 ---
 
 I think it's too obvious to say that a singleton is an anti-pattern as
