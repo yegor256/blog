@@ -56,7 +56,7 @@ Founded 2-Mar-2016.
 
 [0pdd.com](http://www.0pdd.com) is a hosted puzzles collector for GitHub projects,
 which automates and streamlines
-[Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %}) in any public
+[Puzzle Driven Development]({% pst 2009/mar/2010-03-04-pdd %}) in any public
 or private GitHub repository. This project is a member of
 [Zerocracy](http://www.zerocracy.com) family.
 More about it here:

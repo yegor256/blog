@@ -48,7 +48,7 @@ to deal with a very big amount of rejected tasks and didn't know how to make
 them smaller, since they were not programmers.
 
 Finally, in March 2010 we found a solution, which was labeled
-[Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %}) (PDD). According to
+[Puzzle Driven Development]({% pst 2009/mar/2010-03-04-pdd %}) (PDD). According to
 this concept: 1) Any task has a very small fixed budget (we use 30 minutes);
 2) Task performer is allowed to complete only part of the task;
 3) The code that is being returned to the code base must include `@todo` markers, called "puzzles";

@@ -99,7 +99,7 @@ April 6, 2017<br/>
 &#35;23: **Puzzle Driven Development**<br/>
 We discussed Puzzle Driven Development, the methodology that we've been using in
 our projects since 2009, with a lot of success. More about it here:
-[Puzzle Driven Development]({% pst 2009/mar/2009-03-04-pdd %}).
+[Puzzle Driven Development]({% pst 2009/mar/2010-03-04-pdd %}).
 
 <a href="https://www.youtube.com/watch?v=Nm274dGikFc"><img src="https://i.ytimg.com/vi/Nm274dGikFc/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 March 15, 2017<br/>

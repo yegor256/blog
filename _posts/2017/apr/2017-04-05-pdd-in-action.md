@@ -21,7 +21,7 @@ image: /images/2017/04/0pdd-screenshot.jpg
 
 {% badge https://avatars2.githubusercontent.com/u/24456188 64 http://www.0pdd.com %}
 
-[Puzzle Driven development]({% pst 2009/mar/2009-03-04-pdd %})
+[Puzzle Driven development]({% pst 2009/mar/2010-03-04-pdd %})
 (PDD) is a methodology we've been practicing on our teams
 for more than seven years. Using PDD, we delegate the responsibility of
 task decomposition to its performers, eliminating
