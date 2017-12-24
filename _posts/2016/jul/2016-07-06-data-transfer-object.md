@@ -17,6 +17,9 @@ keywords:
 image: /images/2016/07/before-the-devil-knows-you-are-dead.jpg
 jb_picture:
   caption: Before the Devil Knows You're Dead (2007) by Sidney Lumet
+buffer:
+  - "DTO is just a shame, and Martin Fowler, who invented it, is just wrong."
+  - "In OOP, data must not be visible. Objects must only have access to the data they encapsulate and never to the data encapsulated by other objects."
 ---
 
 [DTO](https://en.wikipedia.org/wiki/Data_transfer_object),
