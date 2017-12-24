@@ -69,9 +69,19 @@ module Jekyll
           uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=50&key=#{key}")
           JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
             date = Time.parse(video['snippet']['publishedAt'])
+            id = video['snippet']['resourceId']['videoId']
+            tags = JSON.parse(
+              Net::HTTP.get(
+                URI.parse(
+                  "https://www.googleapis.com/youtube/v3/videos?part=snippet&fields=items(snippet(title,description,tags))&key=#{key}&id=#{id}"
+                )
+              )
+            )['items'][0]['snippet']['tags']
+            raise "No tags for #{id}" if tags.nil?
+            tags = tags.select{ |t| t =~ /[a-z]{3,12}/ }.take(3).join(' ')
             articles << {
-              link: "https://www.youtube.com/watch?v=#{video['snippet']['resourceId']['videoId']}",
-              title: "Watch it again: \"#{video['snippet']['title']}\""
+              link: "https://www.youtube.com/watch?v=#{id}",
+              title: "Watch it again: \"#{video['snippet']['title']}\" #{tags}"
             }
           end
         end
@@ -94,13 +104,13 @@ module Jekyll
         }.each do |repo, tweet|
           articles << { link: "https://github.com/#{repo}", title: "#{tweet}. Please, add your GitHub star, help the project:" }
         end
-      end
-      articles.shuffle.each do |a|
-        maker.items.new_item do |item|
-          item.id = SecureRandom.uuid
-          item.link = a[:link]
-          item.title = a[:title]
-          item.updated = Time.now.to_s
+        articles.shuffle.each do |a|
+          maker.items.new_item do |item|
+            item.id = SecureRandom.uuid
+            item.link = a[:link]
+            item.title = a[:title]
+            item.updated = Time.now.to_s
+          end
         end
       end
       FileUtils.mkdir_p('_temp')
