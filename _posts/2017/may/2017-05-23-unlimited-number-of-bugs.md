@@ -1,5 +1,6 @@
 ---
-redirect_from: "/2017/05/02/unlimited-number-of-bugs.html"
+redirect_from:
+ - /2017/05/02/unlimited-number-of-bugs.html
 layout: post
 title: "Any Program Has an Unlimited Number of Bugs"
 date: 2017-05-23
