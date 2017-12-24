@@ -19,6 +19,10 @@ social:
 image: /images/2017/10/la-haine.jpg
 jb_picture:
   caption: La Haine (1995) by Mathieu Kassovitz
+buffer:
+  - "The Streams API was introduced in Java 8. I didn't really like it and went back to good old decorators"
+  - "The biggest issue with this streaming API is the very interface Stream, it's huge!"
+  - "There is no such thing as forEachWithIndex() in the Stream interface as of Java 8 (and Java 9 too)"
 ---
 
 The [Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
