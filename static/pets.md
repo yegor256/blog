@@ -25,7 +25,7 @@ all project expenses and you will write software. We will be co-founders.
 
 {% badge http://doc.rultor.com/images/logo.svg 70 http://www.rultor.com %}
 
-[rultor.com](http://www.rultor.com) is a chat bot that helps GitHub projects automate
+[Rultor.com](http://www.rultor.com) is a chat bot that helps GitHub projects automate
 their basic DevOps procedures, including merging, deploying, and
 releasing. It is open source and non-profit. More about it at these
 articles: [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
@@ -35,7 +35,7 @@ Founded 5-Jun-13.
 
 {% badge http://www.sixnines.io/images/logo.svg 70 http://www.sixnines.io %}
 
-[sixnines.io](http://www.sixnines.io) is a website availability monitor
+[SixNines.io](http://www.sixnines.io) is a website availability monitor
 that constantly HTTP requests your website to measure how often
 it falls down. The generated availability metric is accessible via
 a nice SVG badge, a landing page, and via JSON/XML. More about it here:
@@ -45,7 +45,7 @@ Founded 10-Mar-2017.
 
 {% badge http://www.jare.io/images/logo.svg 70 http://www.jare.io %}
 
-[jare.io](http://www.jare.io) is an instant CDN for small projects. It
+[Jare.io](http://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
 configuring it. More about it here:
 [Jare.io, an Instant and Free CDN]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}).
@@ -66,7 +66,7 @@ Founded 8-Dec-2016.
 
 {% badge http://img.s3auth.com/logo.png 140 http://www.s3auth.com %}
 
-[s3auth.com](http://www.s3auth.com) is a lightweight Basic authentication
+[S3Auth.com](http://www.s3auth.com) is a lightweight Basic authentication
 gateway for Amazon S3 buckets. Unfortunately AWS doesn't provide such
 a useful and simple functionality, that's why I created this small hosted
 service, which is actively used by 1000+ buckets up to date.
@@ -76,7 +76,7 @@ Founded 22-Aug-2012.
 
 {% badge http://img.stateful.co/pomegranate.svg 70 http://www.stateful.co %}
 
-[stateful.co](http://www.stateful.co) is a hosted set of micro-services
+[Stateful.co](http://www.stateful.co) is a hosted set of micro-services
 that help achieve statefulness in a multi-server/node environments. In other
 words, it provides persistent simple things accessible over the network.
 Still not clear? Check this out:
@@ -86,7 +86,7 @@ Founded 7-May-2014.
 
 {% badge http://www.takes.org/logo.png 70 http://www.takes.org %}
 
-[takes.org](http://www.takes.org) is an open source Java web framework,
+[Takes.org](http://www.takes.org) is an open source Java web framework,
 which adheres to almost all principles of object-oriented programming
 explained in my [Elegant Objects](/elegant-objects.html) book.
 More about it in this article:
@@ -96,7 +96,7 @@ Founded 8-Jan-2015.
 
 {% badge /images/books/elegant-objects/cactus.svg 70 http://www.cactoos.org %}
 
-[cactoos.org](http://www.cactoos.org) is an open source Java library
+[Cactoos.org](http://www.cactoos.org) is an open source Java library
 of object-oriented primitives, which are the alternatives to
 Guava, Apache Commons, and JDK.
 More about it in this article:
@@ -106,7 +106,7 @@ Founded 23-May-2017.
 
 {% badge http://www.rehttp.net/images/logo.svg 70 http://www.rehttp.net %}
 
-[rehttp.net](http://www.rehttp.net) is an HTTP repeater, which stays as
+[ReHTTP.net](http://www.rehttp.net) is an HTTP repeater, which stays as
 an extra layer between web apps and accumulates HTTP requests they send
 to each other. When requests can't be delivered it repeats them multiple times.
 More about it in this article:
@@ -116,7 +116,7 @@ Founded 21-Aug-2017.
 
 {% badge http://www.threecopies.com/images/logo.png 70 http://www.threecopies.com %}
 
-[threecopies.com](http://www.threecopies.com) is a hosted service
+[ThreeCopies.com](http://www.threecopies.com) is a hosted service
 to backup your server-side data. You create a bash script and one of our
 servers regularly runs it in a Docker container, collect logs and lets you see them.
 It's similar to Cron, but hosted.
@@ -127,7 +127,7 @@ Founded 25-Jun-2017.
 
 {% badge http://www.wring.io/images/logo.svg 70 http://www.wring.io %}
 
-[wring.io](http://www.wring.io) is a smart inbox for GitHub (and other, in the future)
+[Wring.io](http://www.wring.io) is a smart inbox for GitHub (and other, in the future)
 notifications we can't parse in our email inbox, because there are too many of them.
 I use this system every day to filter hundreds of notifications GitHub is sending me.
 More about it in this article:
@@ -135,12 +135,40 @@ More about it in this article:
 <br/>
 Founded 21-Feb-2016.
 
+{% badge https://github.com/yegor256/tacit/raw/master/tacit_logo.png 70 https://github.com/yegor256/tacit %}
+
+[Tacit](https://github.com/yegor256/tacit) is a CSS framework without a single
+"class," especially for those who don't understand anything in graphic
+design, but want their websites to look attractive.
+More about it in this article:
+[Tacit, a CSS Framework Without Classes]({% pst 2015/apr/2015-04-13-tacit-css-framework-for-dummies %}).
+<br/>
+Founded 7-Apr-2015.
+
+{% badge http://img.jcabi.com/logo-square.svg 70 http://www.jcabi.com %}
+
+[JCabi](http://www.jcabi.com) is a collection of over 20 small Java libraries,
+which were designed with object-oriented paradigm in mind, to solve some
+very typical problems in my Java projects. Try
+[jcabi-http]({% pst 2014/apr/2014-04-11-jcabi-http-intro %}),
+[jcabi-s3]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}),
+and [jcabi-github]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}).
+<br/>
+Founded 29-Apr-2012.
+
+{% badge http://www.xembly.org/logo.png 70 http://www.xembly.org %}
+
+[Xembly](http://www.xembly.org) is a language and a Java library for creating
+and modifying XML documents, which decorates DOM and makes it way easier
+to use it.
+More about it in this article:
+[Xembly, an Assembly for XML]({% pst 2014/apr/2014-04-09-xembly-intro %}).
+<br/>
+Founded 31-Jul-2013.
+
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
-[tacit](https://github.com/yegor256/tacit),
 [qulice](https://github.com/teamed/qulice),
-[jcabi](https://github.com/jcabi),
-[xembly](https://github.com/yegor256/xembly),
 [xcop](https://github.com/yegor256/xcop),
 [phpRack](http://www.phpRack.com/),
 [netbout](http://www.netbout.com),
