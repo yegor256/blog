@@ -20,7 +20,7 @@ require 'rss'
 require 'securerandom'
 
 module Jekyll
-  class BufferFile < StaticFile
+  class YegorBufferFile < StaticFile
     def write(dest)
       target = File.join(dest, @dir, @name)
       FileUtils.copy_file(
@@ -31,7 +31,7 @@ module Jekyll
       true
     end
   end
-  class BufferGenerator < Generator
+  class YegorBufferGenerator < Generator
     priority :low
     safe true
     def generate(site)
@@ -114,7 +114,7 @@ module Jekyll
       end
       FileUtils.mkdir_p('_temp')
       File.write('_temp/buffer.rss', rss.to_s)
-      site.static_files << Jekyll::BufferFile.new(site, site.dest, '', 'buffer.rss')
+      site.static_files << Jekyll::YegorBufferFile.new(site, site.dest, '', 'buffer.rss')
     end
   end
 end

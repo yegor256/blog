@@ -21,7 +21,6 @@ addons:
       - aspell
       - aspell-en
       - build-essential
-      - graphviz
       - gnuplot
       - s3cmd
       - fontforge
