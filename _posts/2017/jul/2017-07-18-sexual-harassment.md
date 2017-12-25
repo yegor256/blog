@@ -17,6 +17,11 @@ keywords:
 image: /images/2017/07/twentynine-palms.jpg
 jb_picture:
   caption: Twentynine Palms (2003) by Bruno Dumont
+buffer:
+  - "The gist of the accusation is that the male investors were making advances towards the female entrepreneurs"
+  - "I was getting confused figuring out whether to hire you or hit on you."
+  - "Can't we flirt any more?"
+  - "Not every flirtation is harassment. Not every man with a sexual instinct is a rapist"
 ---
 
 You most probably are aware of the recent sexual harassment
