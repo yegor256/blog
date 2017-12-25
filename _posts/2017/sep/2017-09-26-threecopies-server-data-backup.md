@@ -16,6 +16,8 @@ keywords:
 image: /images/2017/09/threecopies.jpg
 youtube:
   - KYd24FN58wg
+buffer:
+  - "I would say that it's a light version of AWS Data Pipeline. ThreeCopies does exactly the same, but it's easier to configure, and it's cheaper"
 ---
 
 {% badge http://www.threecopies.com/images/logo.png 64 http://www.threecopies.com %}

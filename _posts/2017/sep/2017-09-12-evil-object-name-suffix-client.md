@@ -17,6 +17,9 @@ keywords:
 image: /images/2017/09/dont-tempt-me.jpg
 jb_picture:
   caption: Sin noticias de Dios (2001) by Agustín Díaz Yanes
+buffer:
+  - "There are over 160 (!) methods in AmazonS3Client at the time of writing, while it started with only a few dozen just a few hundred versions ago"
+  - "The right design would be to replace clients with client-side objects that represent entities of the server side"
 ---
 
 Some time ago we [were talking]({% pst 2015/mar/2015-03-09-objects-end-with-er %})

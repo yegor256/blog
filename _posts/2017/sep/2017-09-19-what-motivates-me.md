@@ -17,6 +17,15 @@ keywords:
 image: /images/2017/09/300.jpg
 jb_picture:
   caption: 300 (2006) by Zack Snyder
+buffer:
+  - "Let's say you hire me tomorrow as a Java coder and ask \"What do you want us to do for you so that you will be most productive?\" This would be my wish list"
+  - "I hate being responsible for someone else's mistakes and I'm not really a good team player"
+  - "I hate to be afraid, especially if I don't really know what I'm supposed to be afraid of"
+  - "No Agile/Scrum, please. Do I need to say anything else here?"
+  - "I hate working for big ideas, if they are not mine"
+  - "Payments per results. I haven't seen this anywhere, except with my own projects, but I believe it's how good teams should be structured: everybody must be paid for results, not per hour/week/month/year."
+  - "A strong manager is someone who is ready to fight for their own ideas, rights, thoughts, and decisions"
+  - "I can't work under a weak manager, it will seriously demotivate me from the first day"
 ---
 
 I wrote a number of [sarcastic articles](/tag/sarcasm.html)

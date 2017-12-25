@@ -17,6 +17,8 @@ keywords:
 nospell: true
 style: |-
   .env-ico { height: 56px; display: inline-block; margin-right: .5em; }
+buffer:
+  - "My most favorite websites and online services, which help me do my daily job: write code and manage projects"
 ---
 
 I recently [published]({% pst 2017/jun/2017-06-27-my-environment %})

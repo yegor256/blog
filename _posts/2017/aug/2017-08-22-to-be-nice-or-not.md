@@ -17,6 +17,11 @@ keywords:
 image: /images/2017/08/scarecrow.jpg
 jb_picture:
   caption: Scarecrow (1973) by Jerry Schatzberg
+buffer:
+  - "Not that I think we shouldn't be nice. Not at all. But I do think that "being nice" is not a solution for organizational, management, marketing, sales, or business development problems"
+  - "In a nutshell, we are either soft-hearted or successful"
+  - "The only possible way to get rid of guilt is to replace it with a greater guilt"
+  - "Any successful business person, including Paul Graham, would tell you that in order to achieve something you have to fire people, say \"No\" to them, punish them, never return their phone calls, and rarely trust anyone"
 ---
 
 I stumbled upon this two-year-old article

@@ -19,6 +19,12 @@ social:
 image: /images/2017/11/idiocracy.jpg
 jb_picture:
   caption: Idiocracy (2006) by Mike Judge
+buffer:
+  - "Wouldn't it be great to enable global variables in Java and get rid of Singletons. PHP, JavaScript, Ruby and many other languages have them, why doesn't Java?"
+  - "I'm suggesting we add global functions to Java and optional \"namespaces\" to group them"
+  - "I'm suggesting we allow any object to access any of the attributes and methods of another object. Of course, if they are private, the compiler should issue a warning..."
+  - "It would be convenient to let us call constructors and methods with an incomplete set of arguments. The arguments we don't provide will be set to null by default"
+  - "I think it's only obvious that we need this feature: every private attribute must automatically have a setter and a getter"
 ---
 
 I stumbled upon [this proposal](http://cr.openjdk.java.net/~briangoetz/amber/datum.html)

@@ -17,6 +17,12 @@ keywords:
 image: /images/2017/07/intouchables.jpg
 jb_picture:
   caption: The Intouchables (2011) by  Olivier Nakache
+buffer:
+  - "Some of them are great, while many are simply idiots. What do you do if you happen to have a boss that fits perfectly into this dominating category?"
+  - "Very soon he stopped calling me to those hours-long meetings because I was simply ruining them, making strong points, and never \"being nice.\""
+  - "Any time he asked what I was busy with, I sent him something cryptic like \"HDFS reconfig for Docker image\" or \"Integration tests for JAX-RS endpoints.\""
+  - "Morning Stand-ups. These are annoying and very dangerous, because other programmers may catch your lies"
+  - "This was the most annoying part of all: face-to-face meetings with the manager. He asked me how happy I was in the team, what my plans were, what problems I saw, etc"
 ---
 
 No secret, <del>we</del> you all have managers. Some of them are
