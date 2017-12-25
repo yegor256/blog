@@ -55,7 +55,7 @@ Previous episodes:
 
 <img src="/images/shift-m/vincent-birlouez.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
-&#35;20: Vincent Birlouez about PMBOK and project managers<br/>
+&#35;20: [Vincent Birlouez about PMBOK and project managers](/shift-m/2017/20.html)<br/>
 3 November 2017; 47 min.
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
