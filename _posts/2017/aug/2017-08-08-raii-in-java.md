@@ -18,6 +18,8 @@ book: elegant-objects-1 4.4
 image: /images/2017/08/at-sachem-farm.jpg
 jb_picture:
   caption: At Sachem Farm (1998) by John Huddles
+buffer:
+  - "RAII is a perfect design approach when you deal with resources that may leak"
 ---
 
 Resource Acquisition Is Initialization
