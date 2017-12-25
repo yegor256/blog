@@ -17,6 +17,10 @@ keywords:
 image: /images/2017/08/two-and-a-half-men.jpg
 jb_picture:
   caption: Two and a Half Men (2011) by Chuck Lorre
+buffer:
+  - "How can Coinbase pay me eight times more now than I paid them less than a year ago? Where did they get that cash?"
+  - "Why the police are still closing their eyes to what Coinbase is doing, I simply can't understand"
+  - "I will make profit on the trading commission and the owners of YegorCoin will hope that they can manage to sell everything before my shop gets busted"
 ---
 
 In September 2016 I paid [Coinbase](http://www.coinbase.com)
