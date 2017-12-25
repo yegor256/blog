@@ -51,13 +51,12 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Already recorded but not yet published episodes:
 
+Previous episodes:
+
 <img src="/images/shift-m/vincent-birlouez.png" class="guest-face"/>
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;20: Vincent Birlouez about PMBOK and project managers<br/>
-3 November 2017; 47 min.<br/>
-To be published: 25 December 2017.
-
-Previous episodes:
+3 November 2017; 47 min.
 
 <img src="/images/yegor-bugayenko-192x192.png" class="guest-face"/><br/>
 &#35;19: [Typical mistakes we make in bug tracking](/shift-m/2017/19.html)<br/>
