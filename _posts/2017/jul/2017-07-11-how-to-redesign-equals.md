@@ -17,6 +17,9 @@ keywords:
 image: /images/2017/07/lultimo-capodanno.jpg
 jb_picture:
   caption: L'ultimo capodanno (1998) by Marco Risi
+buffer:
+  - "No more violation of encapsulation, no more type casting, no more ugly code inside those equals() and compareTo() methods"
+  - "Now I know what exactly is wrong and how I would design this \"object-to-object comparing\" mechanism better"
 ---
 
 I want to rant a bit about Java design, in particular about the methods
