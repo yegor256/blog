@@ -43,8 +43,8 @@ means fewer to annoy our users. By discovering bugs we make them visible.
 
 This is the primary job of a software tester&mdash;to make bugs visible.
 
-Obviously, their visibility affects the quality of the product in a positive
-way. This is because we can fix them before our users start complaining.
+Obviously, their visibility affects the [quality of the product]({% pst 2017/dec/2017-12-26-software-quality-formula %})
+in a positive way. This is because we can fix them before our users start complaining.
 
 In order to motivate all team members to make more bugs visible, we pay for
 their discovery. In [XDSD](http://www.xdsd.org) projects, we are pay 15 minutes for every bug found (no

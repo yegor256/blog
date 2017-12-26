@@ -67,7 +67,7 @@ every quality issue in the product under development is a **personal**
 fault of the architect. Of course, together with the blame he also
 takes all the credit from
 [happy customers]({% pst 2017/jan/2017-01-10-how-to-teach-customers %}),
-when the quality is good.
+when the [quality]({% pst 2017/dec/2017-12-26-software-quality-formula %}) is good.
 
 This is what the team needs&mdash;someone personally responsible
 for the [quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}) of the software being developed.
