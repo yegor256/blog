@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Formula for Software Quality"
-date: 2017-12-22
+date: 2017-12-26
 place: Voronezh, Russia
 tags: quality management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - quality metric
   - metric for quality
   - software quality metric
-image: /images/2017/12/
+image: /images/2017/12/coco-chanel-and-igor-stravinsky.jpg
 jb_picture:
-  caption:
+  caption: Coco Chanel & Igor Stravinsky (2009) by Jan Kounen
 ---
 
 How do you define the quality of a software product? There is definitely an
