@@ -20,7 +20,7 @@ image: /images/2017/11/extract.jpg
 jb_picture:
   caption: Extract (2009) by Mike Judge
 buffer:
-  - "I believe Joshua Bloch said it first in his very good book "Effective Java": static factory methods are the preferred way to instantiate objects compared with constructors. I disagree."
+  - "I believe Joshua Bloch said it first in his very good book \"Effective Java\": static factory methods are the preferred way to instantiate objects compared with constructors. I disagree."
   - "I believe that static methods are pure evil"
   - "I would strongly recommend you never use static methods, especially when they are going to replace object constructors"
 ---
