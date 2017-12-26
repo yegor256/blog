@@ -134,7 +134,7 @@ so why shouldn't we rate them, right? The best grade is
 ### 2017
 
 <div class="talk-event"/>
-<img src="https://i.ytimg.com/vi/B1MkVQb-hy0/mqdefault.jpg" class="future-talk" alt="DeepRefactoring 2017"/>
+<img src="https://i.ytimg.com/vi/B1MkVQb-hy0/mqdefault.jpg" class="past-talk" alt="DeepRefactoring 2017"/>
 TDD наоборот или как срезать углы;
 Почему меня не взяли в Amazon;
 [DeepRefactoring 2017](http://deeprefactoring.ru/yegor256);
