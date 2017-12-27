@@ -23,7 +23,6 @@ buffer:
   - "I hate to be afraid, especially if I don't really know what I'm supposed to be afraid of"
   - "No Agile/Scrum, please. Do I need to say anything else here?"
   - "I hate working for big ideas, if they are not mine"
-  - "Payments per results. I haven't seen this anywhere, except with my own projects, but I believe it's how good teams should be structured: everybody must be paid for results, not per hour/week/month/year."
   - "A strong manager is someone who is ready to fight for their own ideas, rights, thoughts, and decisions"
   - "I can't work under a weak manager, it will seriously demotivate me from the first day"
 ---
