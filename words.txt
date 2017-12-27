@@ -1954,6 +1954,7 @@ disturb
 disturbing
 diversity
 divert
+divide
 dividends
 divorce
 divorces
@@ -3099,6 +3100,7 @@ honored
 hook
 hope
 hopefully
+hoping
 horizontal
 horizontally
 horrible
@@ -3311,6 +3313,7 @@ inequality
 inevitable
 inevitably
 infamous
+infinite
 infinity
 influence
 influenced
