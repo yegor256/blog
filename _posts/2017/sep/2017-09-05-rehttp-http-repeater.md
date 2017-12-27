@@ -14,8 +14,6 @@ keywords:
   - http webhook reliability
   - webhook repeater
   - repeat webhook
-buffer:
-  - "One of my web apps that is supposed to receive HTTP requests (known as webhooks) from GitHub occasionally goes down, GitHub gets an HTTP error and never sends the request again, causing the request to simply get lost..."
 ---
 
 {% badge http://www.rehttp.net/images/logo.svg 92 http://www.rehttp.net %}
