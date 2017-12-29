@@ -36,7 +36,7 @@ Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj5
 feel free to import it (to Google Calendar or iCal) and stay
 informed about everything I do publicly, including these webinars.
 
-## 2017
+## 2018
 
 {% webinar 03-01-2018 31 Wcy53ZSF78o Decorating Envelopes %}
 
@@ -46,6 +46,8 @@ January 3, 2018<br/>
 We will discuss a simple object-oriented technique I keep using in my projects and find very convenient,
 it was discussed in [this blog post]({% pst 2017/jan/2017-01-31-decorating-envelopes %})
 earlier.
+
+## 2017
 
 <a href="https://www.youtube.com/watch?v=7WmsiV22IXM"><img src="https://i.ytimg.com/vi/7WmsiV22IXM/mqdefault.jpg" class="wnr" alt="Webinar no.30 by Yegor Bugayenko"/></a>
 December 13, 2017<br/>
