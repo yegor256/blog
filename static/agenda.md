@@ -12,6 +12,7 @@ keywords:
   - yegor256 agenda
   - blogging
   - software blogging
+nospell: true
 ---
 
 Here is a list of topics I'm going to write about in the next few
