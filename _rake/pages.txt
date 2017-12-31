@@ -19,7 +19,7 @@ p/10/index.html
 pdf/2014/guard-article.pdf
 uml/19b92d0465e2e819ffcf88cf46c6e333.svg
 fonts/cambria/2EAA54_0_0.woff
-images/yegor-bugayenko-192x192.png
+images/face-256x256.jpg
 tag/architect.html
 gnuplot/2014/11/hoc-vs-loc.svg
 2014/04/06/introduction.html
