@@ -24,6 +24,7 @@ require 'mail'
 require 'uuidtools'
 require 'liquid'
 require 'redcarpet'
+require 'rainbow'
 
 opts = Trollop::options do
   banner <<-EOS
@@ -101,11 +102,11 @@ emails.each do |line|
     end
   end
   if skip.include? email
-    print "  #{address} skipped\n"
+    print "  #{address} #{Rainbow('skipped').red}\n"
     next
   end
   if sent.include? email
-    print "  #{email} is a duplicate\n"
+    print "  #{email} is a #{Rainbow('duplicate').red}\n"
     next
   end
   html = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(markdown)
