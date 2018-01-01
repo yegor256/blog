@@ -24,6 +24,12 @@ be published in <del>November 2017</del> February 2018.
 
 <!--more-->
 
+Jan 1, 2018:
+The book is almost finished,
+here is the [contents](/images/books/code-ahead/contents.pdf) of the book.
+There will be about 220 pages. I will select 10 reviewers in the next two
+weeks.
+
 Mar 7, 2017:
 I wrote a two-page intro to the book. It will be a **novel**. A novel about
 programmers, testers, managers, executives, clients, and computers. The
