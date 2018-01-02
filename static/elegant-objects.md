@@ -64,6 +64,12 @@ Volume 2:<br/>
 
 <!--more-->
 
+Nov 27, 2017:
+I purchased the domain [elegantobjects.org](http://www.elegantobjects.org).
+Everything that is related to the EO concept will be added there. Please,
+add yourself to the list of fans or contributors, if you feel like it. We need
+to build a community, to help our ideas grow!
+
 Nov 17, 2017:
 I signed a contract with [I-manager Publications](http://www.imanagerpublications.com/),
 an academic book/magazine publisher in India. They will re-print the first
