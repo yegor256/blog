@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Operator new() is Toxic"
-date: 2017-11-20
+date: 2018-01-02
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - message oriented programming
   - messages oop
   - alan kay oop definition
-image: /images/2017/12/
+image: /images/2018/01/the-gift.jpg
 jb_picture:
-  caption:
+  caption: The Gift (2015) by Joel Edgerton
 ---
 
 To instantiate objects, in most object-oriented languages,
