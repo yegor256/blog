@@ -13,6 +13,11 @@ keywords:
   - object-oriented programming book
   - books on project management
   - books about management
+style: |
+  .book-par {
+    clear: both;
+    margin-top: 1em;
+  }
 ---
 
 {% badge /images/andreea/writing.svg 200 %}
@@ -29,6 +34,7 @@ Those reviews really make a difference and new readers are paying attention to t
 help me a lot if you post them. Please, make them honest and as detailed
 as you can.
 
+<div class="book-par"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 [Elegant Objects](/elegant-objects.html) (Volume 1)
 is my first book. It is about object-oriented
@@ -41,7 +47,7 @@ Published: 22 Feb 2016.
 <br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
-<div class="clear"></div>
+<div class="book-par"></div>
 {% badge /images/books/256-bloghacks/cover.png 125 /256-bloghacks.html %}
 [256 Bloghacks](/256-bloghacks.html) is a book about blogging,
 disclosing all techniques, secrets and tactics I'm using at this blog.
@@ -54,7 +60,7 @@ Published: 6 Nov 2016.
 <br/>
 <a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
-<div class="clear"></div>
+<div class="book-par"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 The **2nd Volume** of [Elegant Objects](/elegant-objects.html)
 covers more object-oriented patterns and anti-patterns,
@@ -65,7 +71,7 @@ Published: 18 Apr 2017.
 <br/>
 <a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
-<div class="clear"></div>
+<div class="book-par"></div>
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
 [Code Ahead](/code-ahead.html) will be a novel about software engineering. I will
 propose a number of best practices for organizing software development
@@ -74,7 +80,7 @@ characters, plot, jokes, dialogs, etc.
 <br/>
 To be published in <del>February</del> <del>November</del> <del>December 2017</del> February 2018.
 
-<div class="clear"></div>
+<div class="book-par"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
 will contain practical object-oriented design patterns, just like
@@ -85,7 +91,7 @@ To be published: end of 2018.
 <br/>
 <a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
 
-<div class="clear"></div>
+<div class="book-par"></div>
 To be continued...
 
 ## How to Get a Discount
