@@ -1480,6 +1480,7 @@ countries
 country
 couple
 coupled
+couples
 coupling
 courage
 course
@@ -3880,6 +3881,7 @@ locals
 locate
 located
 location
+locations
 lock
 locking
 lod
