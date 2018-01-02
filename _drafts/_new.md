@@ -5,9 +5,9 @@ date: 2017-11-20
 place: Moscow, Russia
 tags: oop
 description: |
-  Instantiating objects via operation NEW is what we
-  have to do in order to have that objects; however, it's
-  important where this is happening.
+  Instantiating objects via operator NEW is what we
+  have to do in order to have those objects; however, it's
+  important where this happens.
 keywords:
   - operator new
   - alan kay about oop
@@ -32,7 +32,7 @@ I would recommend to be more careful with this rather toxic operator.
 
 I'm sure you understand that the problem with this operator is that
 it couples objects, making testing and reuse very difficult or even impossible.
-Say, there is a story in a file that we need to read as a UTF-8 text
+Let's say there is a story in a file that we need to read as a UTF-8 text
 (I'm using
 [`TextOf`](http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html)
 from [Cactoos](http://www.cactoos.org)):
@@ -46,13 +46,13 @@ class Story {
 {% endhighlight %}
 
 It seems super simple, but the problem is obvious: class `Story` can't
-be reused. It can only read one particular file. Moreover, its testing
+be reused. It can only read one particular file. Moreover, testing it
 will be rather difficult, since it reads the content from exactly one place,
-which can't be changed anyhow. More formally this problem is known as a
+which can't be changed at all. More formally this problem is known as an
 _unbreakable dependency_&mdash;we can't break the link between `Story`
 and `/tmp/story.txt`&mdash;they are together forever.
 
-To solve that we need to introduce a constructor and let `Story` accept
+To solve this we need to introduce a constructor and let `Story` accept
 the location of the content as an argument:
 
 {% highlight java %}
@@ -102,8 +102,8 @@ new Story();
 
 I'm sure you're well aware of this technique, which is also known
 as [dependency injection](http://martinfowler.com/articles/injection.html).
-I'm actually not saying anything new. What I want you to pay attention here for is
-the location and the amount of operators `new` in all three code snippets.
+I'm actually not saying anything new. What I want you to pay attention to here is
+the location and the amount of `new` operators in all three code snippets.
 
 In the first snippet both `new` operators are in the method `text()`.
 In the second snippet we lost one of them. In the third snippet one operator
@@ -146,14 +146,14 @@ class Story {
 {% endhighlight %}
 
 It's just dependency injection, but pay attention to the locations
-of the operator `new`. They all are in the
-constructors now and none of them left in the method `text()`.
+of the operator `new`. They are all in the
+constructors now and none of them are left in the method `text()`.
 
-The tendency here is obvious to me: the more operators `new` stay in the
+The tendency here is obvious to me: the more the `new` operators stay in the
 methods, the less reusable and testable is the class.
 
-In other words, operator `new` is a rather toxic thing, try to keep its
-usage to the minimum in your methods. Make sure you instantiate everything
+In other words, operator `new` is a rather toxic thing, so try to keep its
+usage to a minimum in your methods. Make sure you instantiate everything
 or almost everything in your secondary constructors.
 
 
