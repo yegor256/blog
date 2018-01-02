@@ -93,7 +93,7 @@ class Story {
 }
 {% endhighlight %}
 
-Now we just make an instance through a no-args constructor, just like
+Now we just make an instance through a no-arguments constructor, just like
 we did before:
 
 {% highlight java %}
