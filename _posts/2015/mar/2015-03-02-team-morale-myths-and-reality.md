@@ -27,7 +27,7 @@ jb_picture:
   caption: Apocalypto (2006) by Mel Gibson
 buffer:
   - "Regular celebrations, team events, free lunches, pet-friendly offices, coffee machines, birthday presents, etc. All of these are instruments of concealed enslaving."
-  - "The most demotivating word used in task descriptions is "together." Don't use it. Each task has to be personally and individually assigned (no matter what the Agile Manifesto says)"
+  - "The most demotivating word used in task descriptions is \"together.\" Don't use it. Each task has to be personally and individually assigned (no matter what the Agile Manifesto says)"
   - "If your vision is so global, why is it not yet implemented in reality?"
   - "When you're proclaiming in the office that we should value \"working software over comprehensive documentation\", it sounds like you don't know what you're doing."
 ---
