@@ -94,7 +94,9 @@ from <a href="http://www.cactoos.org">Cactoos</a>):</p>
 
 <pre>class Story {
   String text() {
-    return new TextOf(new File("/tmp/story.txt")).asString();
+    return new TextOf(
+      new File("/tmp/story.txt")
+    ).asString();
   }
 }</pre>
 
