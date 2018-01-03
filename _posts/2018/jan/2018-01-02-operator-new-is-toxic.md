@@ -14,6 +14,7 @@ keywords:
   - message oriented programming
   - messages oop
   - alan kay oop definition
+book: elegant-objects-1 3.6
 image: /images/2018/01/the-gift.jpg
 jb_picture:
   caption: The Gift (2015) by Joel Edgerton
@@ -40,7 +41,9 @@ from [Cactoos](http://www.cactoos.org)):
 {% highlight java %}
 class Story {
   String text() {
-    return new TextOf(new File("/tmp/story.txt")).asString();
+    return new TextOf(
+      new File("/tmp/story.txt")
+    ).asString();
   }
 }
 {% endhighlight %}
