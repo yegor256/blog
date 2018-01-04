@@ -27,8 +27,6 @@ Fluent interface and OOP: http://www.yegor256.com/2014/04/11/jcabi-http-intro.ht
 
 Serialize/deserialize and OOP: http://www.yegor256.com/2017/12/05/data-access-object.html#comment-3671137267
 
-Toxic operator new(): http://www.yegor256.com/2014/10/03/di-containers-are-evil.html#comment-3650755969
-
 How to do risk management right
 
 Why do we need interfaces if we have PowerMock? http://www.yegor256.com/2017/11/14/static-factory-methods.html#comment-3633206640
