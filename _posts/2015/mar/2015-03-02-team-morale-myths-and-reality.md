@@ -29,7 +29,7 @@ buffer:
   - "Coffee machines, birthday presents, etc. All of these are instruments of concealed enslaving."
   - "Avoid the word \"together\" in task descriptions, no matter what the Agile Manifesto says"
   - "If your vision is so global, why is it not yet implemented in reality?"
-  - "Stating \"working software over comprehensive documentation\" makes you sound clueless to others"
+  - "Quoting \"Working software over comprehensive documentation\" makes you sound clueless to others"
 ---
 
 There are plenty of books, articles, and blog posts about _team morale_. They
