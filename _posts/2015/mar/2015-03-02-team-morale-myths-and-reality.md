@@ -25,6 +25,11 @@ social:
 image: /images/2015/03/apocalypto.jpg
 jb_picture:
   caption: Apocalypto (2006) by Mel Gibson
+buffer:
+  - "Coffee machines, birthday presents, etc. All of these are instruments of concealed enslaving."
+  - "Avoid the word \"together\" in task descriptions, no matter what the Agile Manifesto says"
+  - "If your vision is so global, why is it not yet implemented in reality?"
+  - "Quoting \"Working software over comprehensive documentation\" makes you sound clueless to others"
 ---
 
 There are plenty of books, articles, and blog posts about _team morale_. They
