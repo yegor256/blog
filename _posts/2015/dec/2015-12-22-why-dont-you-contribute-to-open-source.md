@@ -17,6 +17,8 @@ keywords:
 image: /images/2015/12/kung-fu-hustle.jpg
 jb_picture:
   caption: Kung Fu Hustle (2004) by Stephen Chow
+translated:
+  - Russian: https://habrahabr.ru/post/346130/
 ---
 
 In my [How Much Do You Cost?]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
