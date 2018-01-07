@@ -3,7 +3,8 @@ layout: static
 title: "Quotes"
 description: |
   Here is a more or less complete list of my favorite quotes,
-  taken from very different sources.
+  taken from very different sources; they are not mine, I just
+  love them.
 permalink: quotes.html
 keywords:
   - quotes
