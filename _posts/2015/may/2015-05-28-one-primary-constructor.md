@@ -19,6 +19,10 @@ translated:
 image: /images/2015/05/the-matrix-agent-smith.jpg
 jb_picture:
   caption: The Matrix (1999) by The Wachowski Brothers
+buffer:
+  - "A secondary constructor is simple: It doesn't do anything besides calling a primary constructor"
+  - "A properly designed class must have only one primary constructor"
+  - "By strictly following this suggested rule, all classes will have a single entry point"
 ---
 
 I suggest classifying class constructors in OOP as **primary**
