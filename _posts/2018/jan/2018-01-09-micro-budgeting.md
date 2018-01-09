@@ -77,7 +77,7 @@ for the first time:
     pay for as much time as they spend. Most of them quit.
 
   * **Anger**.
-    Some of them decide to try. Thanks to their previous multiyear experience,
+    Some of them decide to try. Thanks to their previous multi-year experience,
     they expect to be
     paid by the end of the day/week/month, no matter what they were doing. Very soon they
     realize that the total income for the first day of work was $0.00, even though
