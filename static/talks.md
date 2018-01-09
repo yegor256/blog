@@ -77,7 +77,6 @@ Here are topics I haven't spoken about yet but am planning to soon:
   * [Puzzle-Driven Development]({% pst 2010/mar/2010-03-04-pdd %})
   * [SOLID Is OOP for Dummies]({% pst 2017/mar/2017-03-28-solid %})
   * [We Pay for Bugs]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
-  * [Why I Don't Talk to Google Recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
   * [How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
   * [Inheritance Is a Procedural Technique for Code Reuse]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})
   * [A Distributed Team Delivers Code of Higher Quality]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})
