@@ -17,6 +17,10 @@ keywords:
 image: /images/2017/01/aladdin.jpg
 jb_picture:
   caption: Aladdin (1992) by Ron Clements and John Musker
+buffer:
+  - "All classes must be thread-safe, right? Not really. I think none of them have to be thread-safe"
+  - "Remember, there is a performance concern involved; we don't often have multiple threads..."
+  - "The right approach is to have two classes. One that is not thread-safe and a synchronized decorator"
 ---
 
 You know what thread safety is, right? If not, there is a simple example
