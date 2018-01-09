@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-01-09T11:49:15+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Operator new() is Toxic</title><link href="http://www.yegor256.com/2018/01/02/operator-new-is-toxic.html" rel="alternate" type="text/html" title="Operator new() is Toxic" /><published>2018-01-02T00:00:00+00:00</published><updated>2018-01-02T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/01/02/operator-new-is-toxic</id><content type="html" xml:base="http://www.yegor256.com/2018/01/02/operator-new-is-toxic.html">&lt;p&gt;To instantiate objects, in most object-oriented languages,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-01-09T18:28:47+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Five Stages of Microbudgeting</title><link href="http://www.yegor256.com/2018/01/09/micro-budgeting.html" rel="alternate" type="text/html" title="Five Stages of Microbudgeting" /><published>2018-01-09T00:00:00+00:00</published><updated>2018-01-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/01/09/micro-budgeting</id><content type="html" xml:base="http://www.yegor256.com/2018/01/09/micro-budgeting.html">&lt;p&gt;Microtasking, which &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;I explained&lt;/a&gt;
+in an earlier post, works only when each task has a very specific reward
+for success and a punishment for failure.
+I &lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;believe&lt;/a&gt;
+that the best reward and punishment instrument is money. The budget
+is fixed, the programmer gets it only when the task is completed (reward), no matter
+how much time it cost; if it is not completed, there is no money at all
+(punishment). Pure and simple. However, a logical question arises: how can we
+know upfront what is the right budget? Who sets it?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Taxi Driver (1976) by Martin Scorsese&#39; src=&#39;/images/2018/01/taxi-driver.jpg&#39; longdesc=&#39;#1d81308e&#39;/&gt;&lt;figcaption id=&#39;1d81308e&#39;&gt;Taxi Driver (1976) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;When we started to play with microtasking in our projects, in 2009, we were
+asking programmers to estimate each task. It did work, but only with very
+simple and obvious tasks. More complex ones almost always suffered
+from either under-estimating or padding&amp;mdash;numbers were either very small
+and task performers were complaining in the end, or they were too big and
+customers were asking for refunds. It was not a manageable situation.&lt;/p&gt;
+
+&lt;p&gt;Then, we realized that it would be better if all tasks were rather
+small, with exactly the same budget. We tried to use two hours as a universal
+and fixed estimate. Everything else that didn&amp;#39;t fit&amp;mdash;programmers were allowed
+to reject. This model didn&amp;#39;t really work either, because our managers had
+to deal with a very large amount of rejected tasks and didn&amp;#39;t know how to make
+them smaller, since they were not programmers.&lt;/p&gt;
+
+&lt;p&gt;Finally, in March 2010 we found a solution, which was labeled
+&lt;a href=&quot;/2010/03/04/pdd.html&quot;&gt;Puzzle Driven Development&lt;/a&gt; (PDD). According to
+this concept: 1) Any task has a very small fixed budget (we use 30 minutes);
+2) The task performer is allowed to complete only part of the task;
+3) The code that is being returned to &lt;code&gt;master&lt;/code&gt; must include &lt;code&gt;@todo&lt;/code&gt; markers, called &amp;quot;puzzles&amp;quot;;
+4) Puzzles are automatically converted to new tasks.&lt;/p&gt;
+
+&lt;p&gt;The beauty of this approach is that the most complicated part of the software
+project management&amp;mdash;scope decomposition&amp;mdash;is moved to the shoulders
+of those who are the best at it: programmers.&lt;/p&gt;
+
+&lt;p&gt;We are using PDD in all our projects now and have even created a public instrument
+for GitHub repositories, which allows anyone to play with PDD at no cost:
+&lt;a href=&quot;/2017/04/05/pdd-in-action.html&quot;&gt;0pdd.com&lt;/a&gt;. This is exactly
+the same tool we are using in our commercial projects.&lt;/p&gt;
+
+&lt;p&gt;However, if and when you decide to apply microbudgeting to your project,
+together with PDD, there will be problems. Psychological ones mostly. In my
+experience, people go through five stages when they face microbudgeting
+for the first time:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Denial&lt;/strong&gt;.
+They ask &amp;quot;How is it possible?&amp;quot; and then refuse to hear any explanations.
+There are many reasons why microbudgeting and microtasking may not
+work&amp;mdash;you will hear them all. Very often they demand a traditional
+model of payment, especially if they were invited. They just say that
+our model is insane, and if we want to see them work on our projects we have to
+pay for as much time as they spend. Most of them quit.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Anger&lt;/strong&gt;.
+Some of them decide to try. Thanks to their previous multi-year experience,
+they expect to be
+paid by the end of the day/week/month, no matter what they were doing. Very soon they
+realize that the total income for the first day of work was $0.00, even though
+they were doing something. They get very angry. They call us crooks, fraudsters,
+and many other names. Asking them to read the &lt;a href=&quot;http://datum.zerocracy.com/pages/policy.html&quot;&gt;policy&lt;/a&gt;
+again doesn&amp;#39;t help. They simply can&amp;#39;t believe that we are
+not going to pay them anything, even
+though they were doing something. Most of them quit.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bargaining&lt;/strong&gt;.
+Almost everybody at this stage recommends we change the model. They
+explain why it&amp;#39;s not really effective and how great it would be if we
+would pay them the traditional way. They give us examples of their previous
+projects, send references from previous employees, and criticize
+my blog posts. With some of them I try to argue, when their criticism
+is constructive. Most of them quit.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Depression&lt;/strong&gt;.
+Most programmers are used to doing work because they feel guilty
+if the task is not done or the bug is not fixed. Microbudgeting requires
+a completely opposite attitude: we all are supposed to work because
+we are greedy. Money has to motivate us, not guilt. If there is no money,
+we don&amp;#39;t work. Most people, when they see this new motivational paradigm
+and don&amp;#39;t see the usual guilt, lose coordination and don&amp;#39;t know what to do.
+They can&amp;#39;t really achieve anything, because there is no traditional manager
+standing behind them and pushing them forward. They are supposed to go for
+the money. They don&amp;#39;t, and so they don&amp;#39;t make any money. Most of them quit.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Acceptance&lt;/strong&gt;.
+Finally, the best of them realize that the model can work if they
+follow the rules, which are very simple: be greedy, selfish, egoistic,
+money-driven, result-oriented, lazy, misanthropic, heartless, and arrogant.
+They accept the fact that they lose, compete, work, and make money only
+when they produce results. They start enjoying meritocracy at its best.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You understand already that the vast majority of those who try to work with us
+can&amp;#39;t really get to the final point&amp;mdash;they quit somewhere in the middle.
+Most probably something very similar will happen on your projects too.&lt;/p&gt;
+
+&lt;p&gt;What is the solution? I don&amp;#39;t really know.&lt;/p&gt;
+
+&lt;p&gt;Statistically speaking, three to five people out of a hundred manage to survive and
+become effective and productive. Thus, to build a team of twenty people
+you will have to screen and try at least 400.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="xdsd" /><summary type="html">Microtasking, which I explained
+in an earlier post, works only when each task has a very specific reward
+for success and a punishment for failure.
+I believe
+that the best reward and punishment instrument is money. The budget
+is fixed, the programmer gets it only when the task is completed (reward), no matter
+how much time it cost; if it is not completed, there is no money at all
+(punishment). Pure and simple. However, a logical question arises: how can we
+know upfront what is the right budget? Who sets it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/01/taxi-driver.jpg" /></entry><entry><title type="html">Operator new() is Toxic</title><link href="http://www.yegor256.com/2018/01/02/operator-new-is-toxic.html" rel="alternate" type="text/html" title="Operator new() is Toxic" /><published>2018-01-02T00:00:00+00:00</published><updated>2018-01-02T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/01/02/operator-new-is-toxic</id><content type="html" xml:base="http://www.yegor256.com/2018/01/02/operator-new-is-toxic.html">&lt;p&gt;To instantiate objects, in most object-oriented languages,
 including Java, Ruby, and C++, we use operator &lt;code&gt;new()&lt;/code&gt;. Well, unless
 we use static factory methods, which we don&amp;#39;t use because
 &lt;a href=&quot;/2017/11/14/static-factory-methods.html&quot;&gt;they are evil&lt;/a&gt;.
@@ -1281,72 +1389,4 @@ by Brian Goetz
 for data classes in Java, and immediately
 realized that I too have a few ideas about how to make Java better
 as a language. I actually have many of them, but this is a short list of the five most
-important.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/11/idiocracy.jpg" /></entry><entry><title type="html">Software Quality Award, 2018</title><link href="http://www.yegor256.com/2017/10/24/award-2018.html" rel="alternate" type="text/html" title="Software Quality Award, 2018" /><published>2017-10-24T00:00:00+00:00</published><updated>2017-10-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/10/24/award-2018</id><content type="html" xml:base="http://www.yegor256.com/2017/10/24/award-2018.html">&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/andreea/quality-award.svg&#39; style=&#39;width:300px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the forth year of the
-&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
-is still the same&amp;mdash;&lt;strong&gt;$4,096&lt;/strong&gt;.
-The rules are still the same. Read on.
-Previous years are here:
-&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
-&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
-&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Fill
-&lt;a href=&quot;https://docs.google.com/forms/d/1bPgbvs9Y6fWlmvdqGPSxMXXCCRQWPSU2UuItNjSCgQg&quot;&gt;&lt;strong&gt;THIS FORM&lt;/strong&gt;&lt;/a&gt;
-to submit.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Rules:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;One person can submit only one project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Submissions are accepted until September 1, 2018.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I will check the commit history to make sure you&amp;#39;re the main contributor to the project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Results will be announced October 15, 2018 on this page and by email.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The best project will receive $4,096 (I may split this amount among a few projects).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Final decisions will be made by me and are not negotiable
-(although I may invite other people to help me make the right decision).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Winners that received any cash prizes in previous years can&amp;#39;t submit again.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Each project must be:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Open source (in GitHub).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;At least 10,000 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;At least one year old.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Object-oriented (that&amp;#39;s the only thing I understand).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What doesn&amp;#39;t matter:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Popularity. Even if nobody is using your
-product, it is still eligible for this award. I don&amp;#39;t care about
-popularity; quality is the key.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Programming language. I believe that any language, used correctly,
-can be applied to design a high-quality product.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
-line arguments, it&amp;#39;s still eligible for the award. I don&amp;#39;t care about
-your marketing position; quality is all.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">This is the forth year of the
-Software Quality Award. The prize
-is still the same&amp;mdash;$4,096.
-The rules are still the same. Read on.
-Previous years are here:
-2015,
-2016,
-2017.
-
-Fill
-THIS FORM
-to submit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/andreea/quality-award.png" /></entry></feed>
+important.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/11/idiocracy.jpg" /></entry></feed>

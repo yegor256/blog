@@ -237,6 +237,7 @@ android
 andronache
 anemic
 angel
+anger
 angle
 angles
 angry
@@ -523,6 +524,7 @@ bar
 barbara
 bare
 barely
+bargaining
 barker
 barr
 barry
@@ -1740,6 +1742,7 @@ demotivated
 demotivates
 demotivating
 demystifying
+denial
 deniro's
 dentists
 deny
@@ -2117,6 +2120,7 @@ efficiency
 efficient
 effort
 efforts
+egoistic
 ehcache
 eight
 eighth
@@ -2387,6 +2391,7 @@ explained
 explaining
 explains
 explanation
+explanations
 explicit
 explicitly
 explicitness
@@ -2695,6 +2700,7 @@ framework
 frameworks
 francisco
 francs
+fraudsters
 freaks
 fredrik
 free
@@ -3021,6 +3027,7 @@ hearing
 hears
 heart
 hearted
+heartless
 heavily
 heavyweight
 heinemeier
@@ -3357,6 +3364,7 @@ innovative
 innovator
 input
 inputs
+insane
 insecure
 inside
 insides
@@ -4019,6 +4027,7 @@ many-hour-long
 map
 mapping
 mar
+march
 margin
 mark
 markdown
@@ -4171,6 +4180,7 @@ micro-manages
 micro-step
 micro-tasking
 micro-tasks
+microbudgeting
 micromanage
 micromanagement
 micromanager
@@ -4182,6 +4192,7 @@ microservice
 microservices
 microsoft
 microsystems
+microtasking
 middle
 middleman
 middlemen
@@ -4217,6 +4228,7 @@ mirror
 mirrors
 misaligned
 misalignment
+misanthropic
 mischling
 misconception
 misconceptions
@@ -4342,6 +4354,7 @@ multi-release
 multi-resolution
 multi-threading
 multi-tier
+multi-year
 multiple
 multiply
 multiplying
@@ -4758,6 +4771,7 @@ package
 packaged
 packages
 packaging
+padding
 page
 pages
 paid
@@ -6441,6 +6455,7 @@ statically
 stating
 station
 stationary
+statistically
 statistics
 stats
 status
@@ -7081,6 +7096,7 @@ unclear
 uncomfortable
 uncovered
 under
+under-estimating
 under-funded
 under-informed
 under-performing
