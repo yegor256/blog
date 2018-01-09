@@ -14,7 +14,7 @@ keywords:
   - microtasking
   - task estimating
   - pay per task
-image: /images/2018/12/taxi-driver.jpg
+image: /images/2018/01/taxi-driver.jpg
 jb_picture:
   caption: Taxi Driver (1976) by Martin Scorsese
 ---
