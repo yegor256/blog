@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Five Stages of Microbudgeting"
-date: 2017-11-20
+date: 2018-01-09
 place: Moscow, Russia
 tags: xdsd
 description: |
@@ -14,9 +14,9 @@ keywords:
   - microtasking
   - task estimating
   - pay per task
-image: /images/2017/12/
+image: /images/2018/12/taxi-driver.jpg
 jb_picture:
-  caption:
+  caption: Taxi Driver (1976) by Martin Scorsese
 ---
 
 Microtasking, which [I explained]({% pst 2017/nov/2017-11-28-microtasking %})
