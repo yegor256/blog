@@ -50,3 +50,7 @@ Technical democracy - how to make decisions with multiple opinions
 Equality is a perfect way to ruin a software team
 
 Bigger ORM example: http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2736011652
+
+Example of properly architectured projects/proper architecture with pictures.
+
+Word about a distributed systems, how should they communicate with each other (should it be RPC-over-something or message passing or whatever).
