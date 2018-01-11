@@ -64,6 +64,12 @@ Volume 2:<br/>
 
 <!--more-->
 
+Jan 11, 2018:
+[Gitter chat room](https://gitter.im/yegor256/elegantobjects) is closed.
+For all discussions please join [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
+For OOP related questions, please use comment sections in one
+of [these blog posts](/tag/oop).
+
 Nov 27, 2017:
 I purchased the domain [elegantobjects.org](http://www.elegantobjects.org).
 Everything that is related to the EO concept will be added there. Please,
