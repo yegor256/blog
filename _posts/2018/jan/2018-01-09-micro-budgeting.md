@@ -17,6 +17,11 @@ keywords:
 image: /images/2018/01/taxi-driver.jpg
 jb_picture:
   caption: Taxi Driver (1976) by Martin Scorsese
+buffer:
+  - "I believe that the best reward and punishment instrument is money"
+  - "Task performers were complaining, customers were asking for refunds... finally, we found a solution"
+  - "They get very angry. They call us crooks, fraudsters, and many other names..."
+  - "Follow the rules: be greedy, selfish, egoistic, money-driven, result-oriented, lazy, misanthropic..."
 ---
 
 Microtasking, which [I explained]({% pst 2017/nov/2017-11-28-microtasking %})
