@@ -18,6 +18,10 @@ book: bloghacks 3.3
 image: /images/2017/04/il-divo.jpg
 jb_picture:
   caption: Il Divo (2008) by Paolo Sorrentino
+buffer:
+  - "I'm asking everybody who seeks help from me personally to go to one of these public channels and ask there"
+  - "When the question is asked publicly, everybody can see our conversation and learn something from it"
+  - "Thus, you can expect no help provided privately, but all public questions will be answered"
 ---
 
 I've been blogging and writing for almost three years now, and a few times a week
