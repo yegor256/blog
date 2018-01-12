@@ -21,6 +21,12 @@ months. If you want to add something here, please
 
 <!--more-->
 
+Good vs bad people: http://www.yegor256.com/2015/02/09/serious-code-reviewer.html#comment-3704330780
+
+Sociotech skills
+
+Design bubble
+
 How much OOP is in Kotlin?
 
 Fluent interface and OOP: http://www.yegor256.com/2014/04/11/jcabi-http-intro.html#comment-3683882559
