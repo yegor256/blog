@@ -112,7 +112,7 @@ Kiev, Ukraine<br/>
 Keynote about something...<br/>
 [DevExperience 2018](http://devexperience.ro/)<br/>
 Iasi, Romania<br/>
-20 April 2018
+23 April 2018
 
 <!--
 <div class="talk-event"/>
