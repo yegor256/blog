@@ -61,8 +61,8 @@ class Doc {
 
 For some of you this may not seem like a big difference, since both code snippets
 compile without issues and work exactly the same way. However, for us,
-the repository maintainers, it's a big deal. We do want our classes to always be
-`final`, we want them to be immutable (so all attributes should also be `final`),
+the repository maintainers, it is a big deal. We do want our classes to always be
+`final`, we do want them to be immutable (so all attributes should also be `final`),
 we want to prefix all attribute references with `this.`, and we want the
 code to be formatted the same way, since we believe that the uniformity
 of the code seriously increases its maintainability.
@@ -72,7 +72,7 @@ the code, to make it look the way we want. But in that case you would
 never _learn_ what the project wants from you and _why_.
 
 You will not know the reasoning behind our rules. You will never think about them.
-You will not really care about them. But they are not only about formatting
+You will not really care about them. But they are not only about the formatting
 of spaces and brackets. There are [over 900]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 of them in [Qulice](http://www.qulice.com) and some of
 them were designed especially for the object-oriented philosophy
