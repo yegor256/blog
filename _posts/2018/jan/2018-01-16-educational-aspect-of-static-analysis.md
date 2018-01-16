@@ -5,16 +5,18 @@ date: 2018-01-16
 place: Moscow, Russia
 tags: quality
 description: |
-  ...
+  Static analysis, if done manually, may seriously improve
+  programmer's skills; auto-formatting tools are lacking
+  that aspect and don't help us on the long run.
 keywords:
   - static analysis
   - teaching by static analysis
   - code auto-formatting
   - auto-formatting
   - java static analysis
-image: /images/2018/01/
+image: /images/2018/01/blind-fury.jpg
 jb_picture:
-  caption:
+  caption: Blind Fury (1989) by Phillip Noyce
 ---
 
 [Very often](https://github.com/yegor256/cactoos/issues/544)
