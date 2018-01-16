@@ -201,4 +201,3 @@ Acrylic on canvas;
 Odessa, Ukraine.
 "She betrayed me, after a year of love, leaving me with my feelings,
 my sadness, and my colors; now it's time to start looking for a new one."
-
