@@ -26,7 +26,7 @@ buffer:
 ---
 
 I believe Joshua Bloch said it first in his very good book
-["Effective Java"](http://amzn.to/2zgpiRI): static factory methods are the preferred
+"[Effective Java](http://amzn.to/2zgpiRI)": static factory methods are the preferred
 way to instantiate objects compared with constructors. I disagree.
 Not only because I believe that static methods are pure evil, but
 mostly because in this particular case they pretend to be good

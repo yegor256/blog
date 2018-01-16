@@ -93,7 +93,7 @@ The project is not paying you to look good. You're getting your paychecks
 not because the team loves you but because you produce deliverables on
 a daily basis. Your professional responsibility is to do what's best
 for the project and ignore everyone's opinions, including the opinion of your
-boss. Similar to ["A Happy Boss Is a False Objective,"]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+boss. Similar to [A Happy Boss Is a False Objective]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}),
 I would say that the respect of the team is a false goal. Don't try to earn respect.
 Instead, create clean code and respect will come automatically.
 

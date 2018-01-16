@@ -112,7 +112,7 @@ Unlike many other companies, we will never say something like,
 "Thanks for applying, but we decided not to proceed further. Wish you
 luck!" That's shallow and ignorant. But that's what most big companies
 do, including Google, Facebook, and other
-["no evils."](https://en.wikipedia.org/wiki/Don%27t_be_evil) Try to
+"[no evils](https://en.wikipedia.org/wiki/Don%27t_be_evil)." Try to
 apply there, and you will see for yourself.
 
 Instead, we believe that an honest and straightforward negative answer is exactly what

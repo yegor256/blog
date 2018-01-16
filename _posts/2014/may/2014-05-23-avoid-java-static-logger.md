@@ -67,7 +67,7 @@ level is enabled (for performance optimization) and formats the
 given string using [`Formatter`](http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html)
 (same as [`String.format()`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,+java.lang.Object...%29)).
 
-For convenience, there are also a number of ["decors"](http://log.jcabi.com/decors.html)
+For convenience, there are also a number of "[decors](http://log.jcabi.com/decors.html)"
 implemented in the library.
 
 The library ships as a JAR dependency in

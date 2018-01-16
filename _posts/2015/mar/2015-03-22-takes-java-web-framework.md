@@ -625,7 +625,7 @@ table data and convert it into HTML. The point here is that the dependency
 must be injected into the application (instance of class `TkApp`) at the
 moment of its instantiation. This is a pure and clean dependency injection
 mechanism, which is absolutely container-free. Read more about it in
-["Dependency Injection Containers Are Code Polluters."]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
+[Dependency Injection Containers Are Code Polluters]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
 
 ## Unit Testing
 
