@@ -783,9 +783,9 @@ startup. Below I summarize my experience with organizing such technical reviews.
         <title>How Immutability Helps</title>
         
           <description>&lt;p&gt;In a few recent posts, including
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;&amp;quot;Getters/Setters. Evil. Period.&amp;quot;&lt;/a&gt;
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;&amp;quot;Objects Should Be Immutable,&amp;quot;&lt;/a&gt; and
-&lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;&amp;quot;Dependency Injection Containers are Code Polluters,&amp;quot;&lt;/a&gt;
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;Getters/Setters. Evil. Period.&lt;/a&gt;
+&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;Objects Should Be Immutable&lt;/a&gt;, and
+&lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;Dependency Injection Containers are Code Polluters&lt;/a&gt;,
 I universally labeled all mutable objects with &amp;quot;setters&amp;quot; (object methods starting with &lt;code&gt;set&lt;/code&gt;) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn&amp;#39;t convincing enough for many of you&amp;mdash;I received a few requests
@@ -824,7 +824,7 @@ on someone&amp;#39;s t-shirt, the most &lt;strong&gt;reputable&lt;/strong&gt; pr
         <title>Continuous Integration is Dead</title>
         
           <description>&lt;p&gt;A few days ago, my article
-&lt;a href=&quot;http://devops.com/blogs/continuous-integration-doesnt-work/&quot;&gt;&amp;quot;Why Continuous Integration Doesn&amp;#39;t Work&amp;quot;&lt;/a&gt;
+&lt;a href=&quot;http://devops.com/blogs/continuous-integration-doesnt-work/&quot;&gt;Why Continuous Integration Doesn&amp;#39;t Work&lt;/a&gt;
 was published at &lt;a href=&quot;http://www.devops.com&quot;&gt;DevOps.com&lt;/a&gt;. Almost the same
 day I received a few strongly negative critiques on Twitter.&lt;/p&gt;
 
