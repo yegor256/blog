@@ -460,6 +460,7 @@ authority
 authorization
 authorized
 authors
+auto-formatting
 auto-generated
 auto-increment
 autocracy
@@ -490,6 +491,7 @@ aws
 axes
 axioms
 ba
+babel
 baby
 back
 back-end
@@ -830,6 +832,7 @@ byte
 byte-code
 bytecode
 bytes
+c-analysis
 cache
 cached
 caching
@@ -1200,6 +1203,7 @@ communities
 community
 compact
 companies
+companion
 company
 company's
 comparable
@@ -2155,6 +2159,7 @@ embarrass
 embarrassing
 embarrassment
 emerge
+emergency
 emitter
 emoji
 emojis
@@ -3163,6 +3168,7 @@ hurtful
 hurting
 hurts
 hyperlinear
+hyphenation
 hysteria
 i'd
 i'll
@@ -3171,6 +3177,7 @@ i've
 IAM
 ian
 IBM
+ic-analysis
 ice
 icloud
 icons
@@ -3875,6 +3882,7 @@ live
 lives
 living
 load
+loaded
 loaders
 loading
 loads
@@ -3978,6 +3986,7 @@ maintainability
 maintainable
 maintained
 maintainer
+maintainers
 maintaining
 maintains
 maintenance
@@ -4086,6 +4095,7 @@ mcclure
 mcconnell
 mccullough
 mcdonald's
+md
 me
 mean
 meaning
@@ -4355,6 +4365,7 @@ multi-resolution
 multi-threading
 multi-tier
 multi-year
+multiletter
 multiple
 multiply
 multiplying
@@ -4866,6 +4877,8 @@ pays
 PBS
 PDD
 PDF
+pdflatex
+pdftex
 PDU
 peace
 peaceful
@@ -5035,6 +5048,7 @@ polemic
 police
 policies
 policy
+polisher
 polite
 political
 politically
@@ -5107,6 +5121,7 @@ pre-java
 pre-merge
 pre-money
 pre-production
+preaching
 preamble
 precise
 precisely
@@ -5134,6 +5149,7 @@ prefix
 prefixed
 prefixes
 preliminary
+preloaded
 premium
 prep
 preparation
@@ -5449,6 +5465,7 @@ re-design
 re-designed
 re-do
 re-estimated
+re-format
 re-iterate
 re-phrase
 re-read
@@ -6043,6 +6060,7 @@ separating
 separation
 separator
 september
+sequences
 sequential
 sequentially
 seratch
@@ -6264,6 +6282,7 @@ Snap-CI
 snapchat
 snapshot
 snippet
+snippets
 snow
 snowboarding
 so
@@ -6400,6 +6419,7 @@ square
 squeeze
 SRP
 SRS
+ssd
 SSH
 st
 stab
@@ -6794,6 +6814,7 @@ testers
 testing
 tests
 tex
+tex's
 text
 textmate
 texts
@@ -7094,6 +7115,7 @@ uncle
 uncle's
 unclear
 uncomfortable
+uncompromising
 uncovered
 under
 under-estimating
