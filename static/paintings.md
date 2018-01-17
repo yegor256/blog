@@ -12,6 +12,7 @@ keywords:
   - paintings to buy
   - modern paintings to sell
   - for sale paintings
+  - abstract art
 image: /images/andreea/paintings.png
 style: |
   .picture { margin-top: 4em; }
