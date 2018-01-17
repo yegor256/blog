@@ -388,7 +388,7 @@ class OnlyValidStatus extends HTTPStatus {
   public int read() throws IOException {
     int code = super.read();
     if (code > 400) {
-      throw new RuntimException("unsuccessful HTTP code");
+      throw new RuntimeException("unsuccessful HTTP code");
     }
     return code;
   }
@@ -416,7 +416,7 @@ final class OnlyValidStatus implements Status {
   public int read() throws IOException {
     int code = this.origin.read();
     if (code > 400) {
-      throw new RuntimException("unsuccessful HTTP code");
+      throw new RuntimeException("unsuccessful HTTP code");
     }
     return code;
   }
@@ -447,7 +447,7 @@ abstract class ValidatedHTTPStatus implements Status {
   public final int read() throws IOException {
     int code = this.origin.read();
     if (!this.isValid()) {
-      throw new RuntimException("unsuccessful HTTP code");
+      throw new RuntimeException("unsuccessful HTTP code");
     }
     return code;
   }
