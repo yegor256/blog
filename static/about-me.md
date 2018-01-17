@@ -25,7 +25,8 @@ a programmer, founder, investor, and philanthropist.
 As a **programmer**, I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP, and JavaScript.
 I'm the founder and lead architect of
-[takes.org](http://www.takes.org) and [rultor.com](http://www.rultor.com).
+[Cactoos](http://www.cactoos.org),
+[Takes](http://www.takes.org), and [Rultor](http://www.rultor.com).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering, and a detailed description of
 [my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
@@ -35,7 +36,7 @@ Besides that, I'm a proud holder of
 [ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
 [ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
 [OCUP](http://www.omg.org/uml-certification/) certifications.
-I've also written a book about object-oriented programming,
+I've also written a book series about object-oriented programming,
 called [Elegant Objects](/elegant-objects.html), plus
 [a few other books](/books.html).
 
@@ -51,7 +52,8 @@ I'm a certified Project Management Professional
 Besides that, I'm a proud holder of
 [RUP](http://www-03.ibm.com/certify/certs/38008003.shtml),
 [PRINCE2 Foundation](https://www.prince2.com/usa),
-[MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf), and
+[MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf),
+and
 [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
 As an **investor** at [SeedRamp.com](http://www.seedramp.com), I've
