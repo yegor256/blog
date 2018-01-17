@@ -387,8 +387,8 @@ class OnlyValidStatus extends HTTPStatus {
   @Override
   public int read() throws IOException {
     int code = super.read();
-    if (code > 400) {
-      throw new RuntimeException("unsuccessful HTTP code");
+    if (code >= 400) {
+      throw new RuntimeException("Unsuccessful HTTP code");
     }
     return code;
   }
@@ -415,8 +415,8 @@ final class OnlyValidStatus implements Status {
   @Override
   public int read() throws IOException {
     int code = this.origin.read();
-    if (code > 400) {
-      throw new RuntimeException("unsuccessful HTTP code");
+    if (code >= 400) {
+      throw new RuntimeException("Unsuccessful HTTP code");
     }
     return code;
   }
@@ -447,7 +447,7 @@ abstract class ValidatedHTTPStatus implements Status {
   public final int read() throws IOException {
     int code = this.origin.read();
     if (!this.isValid()) {
-      throw new RuntimeException("unsuccessful HTTP code");
+      throw new RuntimeException("Unsuccessful HTTP code");
     }
     return code;
   }
