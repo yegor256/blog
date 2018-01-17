@@ -457,7 +457,7 @@ abstract class ValidatedHTTPStatus implements Status {
 
 As you see, the class doesn't know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through
-overloading the method `isValid()`. We're not going to offend him with
+overriding the method `isValid()`. We're not going to offend him with
 this inheritance, since he defended all other methods with `final` (pay
 attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.
