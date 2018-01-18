@@ -55,12 +55,24 @@ module Jekyll
             articles << {
               link: home + p.url,
               title: if months < 6
-                "I wrote this #{months} months ago: \"#{p['title']}\"#{tags}"
+                [
+                  "I wrote this #{months}-months ago:",
+                  "#{months}-months ago I wrote:",
+                  "Re-read this #{months}-months old post:"
+                ].sample
               elsif months < 12
-                "I wrote this almost a year ago: \"#{p['title']}\"#{tags}"
+                [
+                  'I wrote this almost a year ago:',
+                  'Almost a year old article:',
+                  'Re-read this year-old blog post:'
+                ].sample
               else
-                "I wrote this over a year ago: \"#{p['title']}\"#{tags}"
-              end
+                [
+                  'I wrote this over a year ago:',
+                  'Pretty old, but still relevant:',
+                  'Over a year old, read it again:'
+                ].sample
+              end + "\"#{p['title']}\"#{tags}"
             }
           end
         end
