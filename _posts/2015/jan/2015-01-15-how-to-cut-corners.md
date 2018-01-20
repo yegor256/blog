@@ -15,6 +15,8 @@ keywords:
   - agile planning
   - agile task planning
   - time management agile
+translated:
+  - Spanish: https://medium.com/@izarodsos/c%C3%B3mo-tomar-atajos-y-quedarte-tranquilo-ddfc680c97e8
 youtube:
   - b6r2W3P9vgY
   - YBQoTZ-1X-o
