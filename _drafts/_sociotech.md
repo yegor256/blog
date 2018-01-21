@@ -17,7 +17,7 @@ jb_picture:
   caption:
 ---
 
-Software development and coding are two different things. Usually
+Software development and coding are two different things. Usually,
 the former includes the latter, but not always. Coding produces
 lines of code, while software development creates products. Unfortunately,
 the majority of programmers joining Zerocracy now are [coders]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
@@ -38,7 +38,7 @@ done a few enterprise projects; he seems to be very seasoned. We give him
 access to the project and assign a few GitHub tickets.
 
 In a few hours I get a Facebook message a page long. It says that
-he is very glad to be in the project, but doesn't understand a thing yet
+he is very glad to be on the project, but doesn't understand a thing yet
 and needs help. Here is a list of questions he prepared and he's ready for
 a phone call to get them answered.
 
@@ -73,9 +73,9 @@ is that Mario is not a software developer, he's a coder.
 He doesn't understand the dynamics of a modern software project, he doesn't
 know how to use its
 [communication]({% pst 2016/aug/2016-08-23-communication-maturity %})
-instruments, and he has no socio-technical skills:
+instruments, and he has no sociotechnical skills:
 
-  * Searching and finding information
+  * Searching for, and finding, information
   * Submitting questions, collecting answers
   * Adding knowledge to the repository
   * Submitting code changes
@@ -88,7 +88,7 @@ The same happens to almost everybody who joins us, unfortunately.
 A modern software project is much more a social activity than code writing.
 Knowing how to interact with the team and deal with information
 is much more important than knowing how to use design patterns. The only
-way to earn these skills is practice. I've [said it](https://www.facebook.com/yegor256/videos/10214943124281537/)
+way to learn these skills is practice. I've [said it](https://www.facebook.com/yegor256/videos/10214943124281537/)
 [many times](https://www.youtube.com/watch?v=GS45LzE3LPQ),
 let me repeat it again: If you are not an open source and StackOverflow activist, you most
 likely won't have these skills.
