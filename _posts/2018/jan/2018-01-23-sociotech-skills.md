@@ -22,7 +22,8 @@ jb_picture:
 Software development and coding are two different things. Usually,
 the former includes the latter, but not always. Coding produces
 lines of code, while software development creates products. Unfortunately,
-the majority of programmers joining Zerocracy now are [coders]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
+the majority of programmers joining [Zerocracy](http://www.zerocracy.com)
+now are [coders]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Even though they claim to be developers, in reality they are lacking the very
 important [sociotechnical](https://en.wikipedia.org/wiki/Sociotechnical_system)
 skills that differentiate product creators from lines-of-code writers.
