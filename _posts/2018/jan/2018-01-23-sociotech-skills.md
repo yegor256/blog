@@ -96,5 +96,8 @@ Knowing how to interact with the team and deal with information
 is much more important than knowing how to use design patterns. The only
 way to learn these skills is _practice_. I've [said it](https://www.facebook.com/yegor256/videos/10214943124281537/)
 [many times](https://www.youtube.com/watch?v=GS45LzE3LPQ),
-let me repeat it again: If you are not an open source and StackOverflow activist, you most
+let me repeat it again: If you are not an
+[open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
+and StackOverflow
+[activist]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}), you most
 likely won't have these skills.
