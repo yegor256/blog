@@ -1,20 +1,22 @@
 ---
 layout: post
 title: "Are You a Coder or a Developer?"
-date: 2018-01-10
+date: 2018-01-23
 place: Moscow, Russia
 tags: management
 description: |
-  ...
+  Sociotechnical skills distinguish lines-of-code writers
+  from software developers, since modern software projects
+  are highly social activities.
 keywords:
   - sociotechnical
-  - ...
-  - ...
-  - ...
-  - ...
-image: /images/2017/12/
+  - sociotech
+  - coder vs developer
+  - coder
+  - developer
+image: /images/2018/01/hardmen.jpg
 jb_picture:
-  caption:
+  caption: Hard Men (1996) by J.K. Amalou
 ---
 
 Software development and coding are two different things. Usually,
@@ -38,7 +40,8 @@ done a few enterprise projects; he seems to be very seasoned. We give him
 access to the project and assign a few GitHub tickets.
 
 In a few hours I get a Facebook message a page long. It says that
-he is very glad to be on the project, but doesn't understand a thing yet
+he is very glad to be on the project, but [doesn't understand]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
+a thing yet
 and needs help. Here is a list of questions he prepared and he's ready for
 a phone call to get them answered.
 
@@ -50,17 +53,20 @@ tomorrow. Or if someone else joins us in a week and has
 exactly the same set of questions. Do I have to explain all over again? I'm too
 <del>old</del> lazy for that."
 
-He most probably thinks that I'm an arrogant prick, but what can he do? He
+He most probably thinks that I'm an [arrogant prick](/testimonials.html), but what can he do? He
 reads [my article]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 on this very subject and says "OK, I got it."
 
 In half an hour Mario submits a ticket to another (!) repository. The title
 is "The problem" and the description says "Help me understand the project."
+
 What do I do, as an architect of the project? I close the ticket with a quick
 message: "Please, make your tickets more specific." My response is just one
 step away from "Get lost," but what else can I say? Mario doesn't know
-how to use the ticketing system. He's most probably been working all his life
-in a cozy office, where everybody around was his friend. Not even using
+[how to use]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})
+the ticketing system. He's most probably been working all his life
+in a [cozy office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
+where everybody around was his friend. Not even using
 chat, just asking questions across the table. I'm asking him to
 do something he has never done before. Of course, he doesn't know how.
 He feels ashamed, I suspect.
@@ -88,9 +94,7 @@ The same happens to almost everybody who joins us, unfortunately.
 A modern software project is much more a social activity than code writing.
 Knowing how to interact with the team and deal with information
 is much more important than knowing how to use design patterns. The only
-way to learn these skills is practice. I've [said it](https://www.facebook.com/yegor256/videos/10214943124281537/)
+way to learn these skills is _practice_. I've [said it](https://www.facebook.com/yegor256/videos/10214943124281537/)
 [many times](https://www.youtube.com/watch?v=GS45LzE3LPQ),
 let me repeat it again: If you are not an open source and StackOverflow activist, you most
 likely won't have these skills.
-
-
