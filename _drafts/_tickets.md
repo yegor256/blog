@@ -58,3 +58,7 @@ Never discuss problems outside of their tickets, like it was done
 always keep all discussions inside the ticket they belong to.
 
 Never close tickets that you didn't create; ask their authors to close them.
+
+Always be very critical about new tickets&mdash;don't accept them to the
+project unless you are absolutely sure they make sense.
+
