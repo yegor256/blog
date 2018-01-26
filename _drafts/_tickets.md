@@ -52,3 +52,8 @@ here is [why]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}#3-dont-cl
 Always mention a pull request where you solved the problem,
 like it was done
 [here](https://github.com/zerocracy/farm/issues/404#issuecomment-360015046).
+
+Never discuss problems outside of their tickets, like it was done
+[here](https://github.com/zerocracy/farm/pull/439#issuecomment-360698197);
+always keep all discussions inside the ticket they belong to.
+
