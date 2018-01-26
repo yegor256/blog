@@ -57,3 +57,4 @@ Never discuss problems outside of their tickets, like it was done
 [here](https://github.com/zerocracy/farm/pull/439#issuecomment-360698197);
 always keep all discussions inside the ticket they belong to.
 
+Never close tickets that you didn't create; ask their authors to close them.
