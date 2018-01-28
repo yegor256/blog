@@ -72,7 +72,7 @@ module Jekyll
                   'Pretty old, but still relevant:',
                   'Over a year old, read it again:'
                 ].sample
-              end + "\"#{p['title']}\"#{tags}"
+              end + " \"#{p['title']}\"#{tags}"
             }
           end
         end
