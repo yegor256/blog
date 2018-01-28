@@ -108,7 +108,7 @@ module Jekyll
         {
           'yegor256/xembly': 'Xembly is an XML building and manipulation language and a library',
           'yegor256/tacit': 'Tacit is a class-less CSS framework, for clueless programmers like me',
-          'yegor256/takes': 'Takes is a unique truly objet-oriented Java web framework',
+          'yegor256/takes': 'Takes is a unique truly object-oriented Java web framework',
           'yegor256/rultor': 'Rultor is a chatbot DevOps assistant to automate deployment and merge operations',
           'teamed/qulice': 'Qulice is an aggregator of Java static analyzers',
           'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives',
