@@ -22,7 +22,11 @@ book: elegant-objects-1 2.6
 youtube:
   - o3aNJX7AP3M
 buffer:
-  - "Still using NULL in your code? Still think it's justified in some places? Still believe your code is object-oriented? Read this blog post of mine and think again."
+  - "Still using NULL in your code? Still think it's justified in some places? Think again"
+  - "NULL is a terrible practice in an object-oriented paradigm and should be avoided at all costs"
+  - "Basically, there are two possible alternatives to NULL..."
+  - "To get rid of this ambiguity, always return a real object, a null object or throw an exception"
+  - "Very often, NULL values are used in lazy loading, to make objects incomplete and mutable"
 ---
 
 A simple example of `NULL` usage in Java:
