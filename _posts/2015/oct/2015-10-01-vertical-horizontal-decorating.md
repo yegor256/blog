@@ -19,6 +19,11 @@ book: elegant-objects-1 3.2.6
 image: /images/2015/10/the-apartment.jpg
 jb_picture:
   caption: The Apartment (1960) by Billy Wilder
+buffer:
+  - "A decorator pattern is one of the best ways to add features to an object without changing its interface"
+  - "Which one is better and when?"
+  - "I always tend to start with vertical decorating since it's easier to implement..."
+  - "I migrate to horizontal decorating when the number of decorators starts to grow..."
 ---
 
 A [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
