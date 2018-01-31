@@ -36,6 +36,9 @@ Always report problems, not solutions&mdash;ticket title and description must ex
 what is broken, not how it should be fixed;
 here is [why]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}#5-report-when-it-is-broken).
 
+Never start discussions, always report problems;
+if something is not clear&mdash;it's a bug in documentation, it is broken.
+
 Never re-open tickets;
 always start a new one even if the same problem re-appears.
 
@@ -61,4 +64,8 @@ Never close tickets that you didn't create; ask their authors to close them.
 
 Always be very critical about new tickets&mdash;don't accept them to the
 project unless you are absolutely sure they make sense.
+
+Never submit bugs that don't exist in master, but only in your branches,
+like it was done [here](https://github.com/yegor256/jpeek/issues/128);
+instead, use PDD or [cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}).
 

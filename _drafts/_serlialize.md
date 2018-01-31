@@ -2,7 +2,7 @@
 layout: post
 title: "Don't Serialize Me, Please!"
 date: 2018-01-10
-place: Minsk, Belarus
+place: Moscow, Russia
 tags: oop
 description: |
   ...
@@ -12,7 +12,7 @@ keywords:
   - ...
   - ...
   - ...
-image: /images/2017/12/
+image: /images/2018/02/
 jb_picture:
   caption:
 ---
@@ -29,6 +29,7 @@ are not as terrible as this Serialization API.
 
 {% jb_picture_body %}
 
+First, let's see how it technically works.
 Say, we have a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %}):
 
 {% highlight java %}
@@ -40,11 +41,32 @@ class Point {
 
 It's not a DTO? Yes, it is. It just doesn't
 have [getters and setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
-but the purpose of this "class" is nothing but to transfer data.
+but the purpose of this "class" is nothing but to transfer data from
+point A to point B:
 
-Now, we want to _save_ it to the disc. Then, we will shut down the JVM,
-but the object of class `Point` will remain in the file. We will start
-the JVM and will _restore_ it. How can we do that? We need to serialize
-it first and then deserialize back.
+{% highlight java %}
+Point point = new Point();
+point.x = 50;
+point.y = 75;
+{% endhighlight %}
 
-We will need `ObjectOutputStream`, which knows
+Now, we want to _save_ `point` to the disc. Then, we can shut down the JVM.
+Later, when we start the JVM again and _restore_ `point`, it will contain
+exactly the same `x` and `y`. How to achieve that?
+We need to serialize it first and then deserialize back.
+
+Here is how we serialize `point` to a file (correct me if I'm wrong, since
+I've never done this in my life, just taking code samples from
+[Oracle documentation](https://docs.oracle.com/javase/8/docs/platform/serialization/spec/serialTOC.html)):
+
+{% highlight java %}
+try (ObjectOutput out =
+  new ObjectOutputStream(new FileOutputStream("point.bin"))) {
+  out.writeObject(point);
+}
+{% endhighlight %}
+
+What will `writeObject()` do in order to "convert" `point` to a stream
+of bytes? It will use reflection API to find all object attributes
+
+
