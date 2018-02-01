@@ -64,6 +64,12 @@ Volume 2:<br/>
 
 <!--more-->
 
+February 1, 2018:
+I signed a contract with [Питер](https://www.piter.com/),
+a book publisher in Russia. They will translate the first volume to Russian
+and print it. The book will also be extended by some questions and
+answers from the blog, for the most interesting/relevant sections.
+
 Jan 11, 2018:
 [Gitter chat room](https://gitter.im/yegor256/elegantobjects) is closed.
 For all discussions please join [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
