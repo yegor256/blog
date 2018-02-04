@@ -16,6 +16,8 @@ keywords:
   - factories vs constructiors
 social:
   - dzone: https://dzone.com/articles/constructors-or-static-factory-methods
+youtube:
+  - 9yjtsCK6Wdk
 image: /images/2017/11/extract.jpg
 jb_picture:
   caption: Extract (2009) by Mike Judge

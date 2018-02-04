@@ -39,7 +39,14 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-<!-- {% webinar 03-01-2018 31 Wcy53ZSF78o Decorating Envelopes %} -->
+{% webinar 07-02-2018 32 rC17YwowURQ Synchronized Decorators for Thread-Safety %}
+
+<a href="https://www.youtube.com/watch?v=rC17YwowURQ"><img src="https://i.ytimg.com/vi/rC17YwowURQ/mqdefault.jpg" class="wnr" alt="Webinar no.32 by Yegor Bugayenko"/></a>
+February 7, 2018<br/>
+&#35;32: **Synchronized Decorators for Thread-Safety**<br/>
+We will discuss thread-safety in OOP and synchronized decorators to solve the problem.
+The discussion will be based on this blog post:
+[Synchronized Decorators to Replace Thread-Safe Classes]({% pst 2017/jan/2017-01-17-synchronized-decorators %}).
 
 <a href="https://www.youtube.com/watch?v=Wcy53ZSF78o"><img src="https://i.ytimg.com/vi/Wcy53ZSF78o/mqdefault.jpg" class="wnr" alt="Webinar no.31 by Yegor Bugayenko"/></a>
 January 3, 2018<br/>
