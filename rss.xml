@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-04T11:05:51+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Are You a Coder or a Developer?</title><link href="http://www.yegor256.com/2018/01/23/sociotech-skills.html" rel="alternate" type="text/html" title="Are You a Coder or a Developer?" /><published>2018-01-23T00:00:00+00:00</published><updated>2018-01-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/01/23/sociotech-skills</id><content type="html" xml:base="http://www.yegor256.com/2018/01/23/sociotech-skills.html">&lt;p&gt;Software development and coding are two different things. Usually,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-04T12:03:55+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Are You a Coder or a Developer?</title><link href="http://www.yegor256.com/2018/01/23/sociotech-skills.html" rel="alternate" type="text/html" title="Are You a Coder or a Developer?" /><published>2018-01-23T00:00:00+00:00</published><updated>2018-01-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/01/23/sociotech-skills</id><content type="html" xml:base="http://www.yegor256.com/2018/01/23/sociotech-skills.html">&lt;p&gt;Software development and coding are two different things. Usually,
 the former includes the latter, but not always. Coding produces
 lines of code, while software development creates products. Unfortunately,
 the majority of programmers joining &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;
@@ -18,6 +18,8 @@ Java developer, as his &lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quo
 says. He&amp;#39;s been in the industry for ten years or so,
 done a few enterprise projects; he seems to be very seasoned. We give him
 access to the project and assign a few GitHub tickets.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Dude, I love you like a brother, but I don&amp;#39;t have time to answer your questions.&lt;/aside&gt;
 
 &lt;p&gt;In a few hours I get a Facebook message a page long. It says that
 he is very glad to be on the project, but &lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;doesn&amp;#39;t understand&lt;/a&gt;
@@ -50,6 +52,8 @@ where everybody around was his friend. Not even using
 chat, just asking questions across the table. I&amp;#39;m asking him to
 do something he has never done before. Of course, he doesn&amp;#39;t know how.
 He feels ashamed, I suspect.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;The bottom line is that Mario is not a software developer, he&amp;#39;s a coder.&lt;/aside&gt;
 
 &lt;p&gt;What happens next? He comes right back at me in Messenger, with the same
 set of questions. Actually, his reaction will depend on his personality.
