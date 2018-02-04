@@ -40,6 +40,8 @@ says. He's been in the industry for ten years or so,
 done a few enterprise projects; he seems to be very seasoned. We give him
 access to the project and assign a few GitHub tickets.
 
+{% quote Dude, I love you like a brother, but I don't have time to answer your questions. %}
+
 In a few hours I get a Facebook message a page long. It says that
 he is very glad to be on the project, but [doesn't understand]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 a thing yet
@@ -71,6 +73,8 @@ where everybody around was his friend. Not even using
 chat, just asking questions across the table. I'm asking him to
 do something he has never done before. Of course, he doesn't know how.
 He feels ashamed, I suspect.
+
+{% quote The bottom line is that Mario is not a software developer, he's a coder. %}
 
 What happens next? He comes right back at me in Messenger, with the same
 set of questions. Actually, his reaction will depend on his personality.
