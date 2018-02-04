@@ -104,3 +104,10 @@ By the way, I'm also an amateur artist,
 <del>check</del> buy [my paintings](/paintings.html).
 
 Just in case, my public PGP key is [23C2244F](/bin/23C2244F.asc).
+
+Here is my SO flair:
+
+<a href="https://stackexchange.com/users/63162">
+<img src="https://stackexchange.com/users/flair/63162.png"
+  width="208" height="58" alt="StackExchange flair for yegor256"/>
+</a>
