@@ -21,6 +21,8 @@ months. If you want to add something here, please
 
 <!--more-->
 
+To what extent should people think for themselves?
+
 How much OOP is in Kotlin?
 
 Fluent interface and OOP: http://www.yegor256.com/2014/04/11/jcabi-http-intro.html#comment-3683882559
