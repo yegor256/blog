@@ -23,14 +23,14 @@ is my personal definition). A bug can be hidden or visible; it can be
 "already fixed" or "still present"; it can be critical or cosmetic; it
 can be urgent or of a low priority. What is important is that the
 [more]({% pst 2017/may/2017-05-23-unlimited-number-of-bugs %})
-bugs we are able to find and fix before our customers, the higher
-is the perceived [quality]({% pst 2017/dec/2017-12-26-software-quality-formula %})
+bugs we are able to find and fix before our customers see them, the higher
+the perceived [quality]({% pst 2017/dec/2017-12-26-software-quality-formula %})
 of the software. Simply put, bugs are a
 [very good thing]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}),
 if they are found by us, not our customers.
 [We](http://www.zerocracy.com) pay our programmers for
 [each bug]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
-they find. Here is a cheat sheet for them, where
+they find. Here is a cheat sheet for them, showing where
 and how they can find those bugs, to make more money.
 
 <!--more-->
@@ -39,9 +39,9 @@ and how they can find those bugs, to make more money.
 
 Obviously, if something is broken, it's a bug; no need to mention it here.
 However, when a product is [more or less stable]({% pst 2017/mar/2017-03-24-tdd-that-works %}),
-not so many things are
-visually broken. But we still pay for bugs. What to do? Read on, this
-list will help (in no particular order).
+not too many things are
+visibly broken. But we still pay for bugs. What should you look out for? Read on. This
+list (in no particular order) will help you.
 
 **Lack of functionality**.
 If a class
@@ -60,7 +60,7 @@ the existing test doesn't cover some critical aspects of the class
 it's a bug.
 
 **Lack of class documentation**.
-If, say, a Javadoc block of a class is not explaining you clearly
+If, say, a Javadoc block for a class does not clearly explain to you
 how to use the class,
 it's a bug.
 
@@ -88,6 +88,6 @@ or doesn't work in some particular environment
 it's a bug.
 
 Also, it's worth mentioning that minor, cosmetic, or poorly formulated
-bugs will mostly likely be rejected or not paid for. If you want us to pay for your bugs,
+bug reports will most likely be rejected or not paid for. If you want us to pay for your bug reports,
 make sure they [sound right]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}),
 in order to help us move the project forward to a better state.
