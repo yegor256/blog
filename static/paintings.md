@@ -12,6 +12,7 @@ keywords:
   - paintings to buy
   - modern paintings to sell
   - for sale paintings
+  - abstract art
 image: /images/andreea/paintings.png
 style: |
   .picture { margin-top: 4em; }
@@ -45,12 +46,6 @@ You can buy via:
 <div class="art-logo">
   <a href="https://www.artfinder.com/yegor256#/">
     <img src="/images/paintings/artfinder.png"/></a></div>
-<div class="art-logo">
-  <a href="https://www.amazon.com/handmade/yegor256">
-    <img src="/images/paintings/amazon-handmade.png"/></a></div>
-<div class="art-logo">
-  <a href="https://www.vangoart.co/yegor256">
-    <img src="/images/paintings/vangoart.png"/></a></div>
 
 <!--
 ugallery.com - applied/rejected
@@ -61,13 +56,23 @@ shairart.com - form doesn't work
 
 In order of creation:
 
+{% picture /images/paintings/2018/gray-freedom.jpg 350 %}
+
+_Gray Freedom_<br/>
+January 2018;
+20 x 20 x 0.5 in;
+Acrylic on canvas;
+Moscow, Russia.
+"We never know what we see when we see. But we always know what we
+don't see when we don't see. What does freedom mean to you?"
+
 {% picture /images/paintings/2017/fall.jpg 350 %}
 
 _Fall_<br/>
 November 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "Small and big losses seem to be the essence of anyone's life;
 we can learn to enjoy them or we can resent the even fact of losing;
 it seems that Nature itself invented this drama."
@@ -78,7 +83,7 @@ _Obsession_<br/>
 October 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "I'm trying to understand the mystery of simplicity; obviously,
 the most powerful images are the most simple and even primitive;
 what do these three simple colors mean for you?"
@@ -89,7 +94,7 @@ _Not in love_<br/>
 October 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "When he is not in love, she doesn't know what to do with him;
 she doesn't understand him; she doesn't feel him; she doesn't know
 what to expect; she loves him more."
@@ -100,7 +105,7 @@ _In love_<br/>
 October 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "When she is in love, it's difficult to say what exactly is on her mind;
 it's even more difficult to say what she expects and wants,
 and she doesn't want; the trick is to figure out which color is the right one."
@@ -111,7 +116,7 @@ _Shame_<br/>
 September 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "There is so much dark in each of us, which we're ashamed of;
 we're trying to hide it, patching ourselves here and there;
 patches don't help but make our sins even more visible and obvious."
@@ -122,7 +127,7 @@ _Guilt_<br/>
 August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "One of the strongest manipulations we all experience in the childhood is guilt;
 later, when we grow up, it stays with us and controls our decisions;
 can we really get rid of it and become free?"
@@ -133,7 +138,7 @@ _Expectations_<br/>
 August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "We all expect ourselves to be better than we are;
 we expect our value and our uniqueness to be higher than they are;
 I had a discussion with a friend of mine about her inability to be happy because of her high expectations on herself;
@@ -145,7 +150,7 @@ _Doubts_<br/>
 August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "Making an important decision is always a tough task;
 each option has its pros and cons, each opportunity has its risks and threats;
 no matter how much reasoning we put into it, there are always doubts."
@@ -156,7 +161,7 @@ _A Woman on the Beach_<br/>
 August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "There are so many things that make a woman attractive;
 it's difficult to say which one catches you when you see her;
 why not lips, if it's a beach, you're alone, and she is beautiful?"
@@ -167,7 +172,7 @@ _Seven and One_<br/>
 August 2017;
 31.5 x 31.5 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "It was a long discussion about modern world fears; how they transform us, how they affect
 our lives, and what we can really do with them; the conclusion
 was that there is very little or nothing and it's very sad."
@@ -178,7 +183,7 @@ _Objectification_<br/>
 July 2017;
 27.6 x 27.6 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "We had a long discussion about sexual objectification problem in the
 modern world and then one of the discussants agreed to be a model for me."
 
@@ -188,7 +193,6 @@ _Love Look_<br/>
 July 2017;
 25.6 x 25.6 x 0.8 in;
 Acrylic on canvas;
-Ukraine.
+Odessa, Ukraine.
 "She betrayed me, after a year of love, leaving me with my feelings,
 my sadness, and my colors; now it's time to start looking for a new one."
-

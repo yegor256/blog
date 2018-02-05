@@ -364,7 +364,7 @@ More about this in [Don't Create Objects That End With -ER]({% pst 2015/mar/2015
 A good object comes from either a final or abstract class. A `final` class is one that
 can't be extended via [inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 An `abstract` class is one that
-can't have children. Simply put, a class should either say, "You can never break
+can't have instances. Simply put, a class should either say, "You can never break
 me; I'm a black box for you" or "I'm broken already; fix me first and then use."
 
 There is nothing in between. A final class is a black box that you can't modify
@@ -387,8 +387,8 @@ class OnlyValidStatus extends HTTPStatus {
   @Override
   public int read() throws IOException {
     int code = super.read();
-    if (code > 400) {
-      throw new RuntimException("unsuccessful HTTP code");
+    if (code >= 400) {
+      throw new RuntimeException("Unsuccessful HTTP code");
     }
     return code;
   }
@@ -415,8 +415,8 @@ final class OnlyValidStatus implements Status {
   @Override
   public int read() throws IOException {
     int code = this.origin.read();
-    if (code > 400) {
-      throw new RuntimException("unsuccessful HTTP code");
+    if (code >= 400) {
+      throw new RuntimeException("Unsuccessful HTTP code");
     }
     return code;
   }
@@ -447,7 +447,7 @@ abstract class ValidatedHTTPStatus implements Status {
   public final int read() throws IOException {
     int code = this.origin.read();
     if (!this.isValid()) {
-      throw new RuntimException("unsuccessful HTTP code");
+      throw new RuntimeException("Unsuccessful HTTP code");
     }
     return code;
   }
@@ -457,7 +457,7 @@ abstract class ValidatedHTTPStatus implements Status {
 
 As you see, the class doesn't know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through
-overloading the method `isValid()`. We're not going to offend him with
+overriding the method `isValid()`. We're not going to offend him with
 this inheritance, since he defended all other methods with `final` (pay
 attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.

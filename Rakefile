@@ -92,6 +92,10 @@ task garbage: [:build] do
     fail "Page #{file} is still there" if File.exist? file
     puts "#{file}: absent, OK" if VERBOSE
   end
+  ['_posts', 'static'].each do |p|
+    garbage = Dir["#{p}/**/*"].reject{ |f| f.end_with?('.md') || !File.file?(f) }
+    raise "Suspicious files in #{p}: #{garbage}" unless garbage.empty?
+  end
   done 'There is no garbage'
 end
 

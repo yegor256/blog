@@ -204,7 +204,7 @@ Make sure you have Facebook, Twitter, LinkedIn, and Instagram accounts, along
 with a blog. You must be present on the Internet. You're a serious software
 architect? I should be able to Google your name and find a lot of professional
 links, not just your Tinder profile. And they will Google your name; don't
-ever doubt that. My book ["256 Bloghacks"](/256-bloghacks.html) may
+ever doubt that. My book [256 Bloghacks](/256-bloghacks.html) may
 help you understand how to do it right.
 
 **Don't Stay Home**.

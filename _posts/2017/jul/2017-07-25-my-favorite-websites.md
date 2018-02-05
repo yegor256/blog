@@ -53,8 +53,8 @@ GitHub is simply the best, no doubts.
 is where I learn new technologies, ask questions, answer them sometimes
 and really enjoy working with the community. When I have some free time
 I just search by
-["design-patterns"](https://stackoverflow.com/questions/tagged/design-patterns) or
-["oop"](https://stackoverflow.com/questions/tagged/oop)
+"[design-patterns](https://stackoverflow.com/questions/tagged/design-patterns)" or
+"[oop](https://stackoverflow.com/questions/tagged/oop)"
 tags in order to find relevant questions and answer them if I can.
 
 <img src="http://www.wring.io/images/logo.svg" class="env-ico"/><br/>

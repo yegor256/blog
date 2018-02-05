@@ -131,6 +131,6 @@ That's why it doesn't fit into object-oriented programming.
 
 By the way, we [discussed](https://gitter.im/yegor256/elegantobjects?at=57bcd2e4cd00bdff6e745584)
 this problem in our
-[Gitter chat](https://gitter.im/yegor256/elegantobjects)
+[Gitter chat](https://gitter.im/yegor256/elegantobjects) (it's dead already)
 a week ago, and that's when it became obvious to me what exactly is
 wrong with inheritance. Take a look at our discussion there.

@@ -97,7 +97,7 @@ a normal object that is fully capable of doing all necessary database
 operations, without any help from a DAO. For example, there is
 [`Pipe.status(String)`](https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java#L63)
 method to update its status. I'm not going to use `Pipes` for that, I just do
-`pipe.status("Hello, world!)`.
+`pipe.status("Hello, world!")`.
 
 Here is yet another example from
 [Jare.io]({% pst 2016/mar/2016-03-30-jare-instant-free-cdn %}): interface

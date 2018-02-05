@@ -44,7 +44,7 @@ class Temperature {
 
 It represents a temperature. The only behavior it exposes is printing
 the temperature in Celsius. We don't want to expose `t`, because
-that will lead to the ["naked data"]({% pst 2016/nov/2016-11-21-naked-data %})
+that will lead to the "[naked data]({% pst 2016/nov/2016-11-21-naked-data %})"
 problem. We want to keep `t` secret, and that's a good desire.
 
 Now, we want to have the ability to print temperature in Fahrenheit. The most

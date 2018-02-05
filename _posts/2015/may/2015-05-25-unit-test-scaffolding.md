@@ -142,7 +142,7 @@ Yes, there is [nothing worse]({% pst 2015/feb/2015-02-20-utility-classes-vs-func
 in object-oriented programming than utility classes.
 
 A much better design would be to use
-["fake" objects]({% pst 2014/sep/2014-09-23-built-in-fake-objects %})
+"[fake]({% pst 2014/sep/2014-09-23-built-in-fake-objects %})" objects
 instead of private static utilities. Here is how. First, we create a fake class
 and place it into `src/main/java`. This class can be used in tests
 and also in production code, if necessary (`Fk` for "fake"):

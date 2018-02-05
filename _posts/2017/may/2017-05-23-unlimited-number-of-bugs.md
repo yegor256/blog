@@ -82,6 +82,6 @@ Finally, take a look at the method `sum()` one more time. How about these bugs:
 I'm sure you can find many more.
 
 BTW, Glenford J. Myers said something very similar in his book
-["The Art of Software Testing,"](http://amzn.to/1Y3qAbN) which I
+"[The Art of Software Testing](http://amzn.to/1Y3qAbN)," which I
 [reviewed]({% pst 2014/aug/2014-08-22-art-of-software-testing %})
 earlier.

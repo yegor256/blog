@@ -64,6 +64,18 @@ Volume 2:<br/>
 
 <!--more-->
 
+February 1, 2018:
+I signed a contract with [Питер](https://www.piter.com/),
+a book publisher in Russia. They will translate the first volume to Russian
+and print it. The book will also be extended by some questions and
+answers from the blog, for the most interesting/relevant sections.
+
+Jan 11, 2018:
+[Gitter chat room](https://gitter.im/yegor256/elegantobjects) is closed.
+For all discussions please join [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
+For OOP related questions, please use comment sections in one
+of [these blog posts](/tag/oop).
+
 Nov 27, 2017:
 I purchased the domain [elegantobjects.org](http://www.elegantobjects.org).
 Everything that is related to the EO concept will be added there. Please,
@@ -609,6 +621,8 @@ good, and how it could be better:
   * [Quinn Gil](https://quinngil.com/2017/08/06/book-review-elegant-objects-vol-1/)
   * [Javin Paul](http://javarevisited.blogspot.com/2017/04/top-5-books-to-learn-object-oriented-programming.html)
   * [Andrey Panasyuk](https://andreypanasyuk.wordpress.com/2017/08/17/elegant-objects/)
+  * [Igor Grishaev](http://grishaev.me/oop-1) (in Russian)
+  * [Łukasz Konopski](http://lkonopski.blogspot.ru/2018/01/oop-is-not-dead-elegant-objects.html?utm_source=jvm-bloggers.com&utm_medium=link&utm_campaign=jvm-bloggers)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)

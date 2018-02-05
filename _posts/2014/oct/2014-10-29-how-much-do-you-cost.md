@@ -162,7 +162,7 @@ because you are used to be patronized by someone senior, in your
 [StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
 is not just an indicator of how smart you are and how many
 upvotes you got for the
-["best programming joke."](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)
+"[best programming joke](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)."
 It is proof that you can find answers
 to your questions by communicating with people you don't know.
 It is a very important skill.

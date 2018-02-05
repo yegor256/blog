@@ -32,7 +32,7 @@ helps us design better object-oriented software. If it does.
 
 I mentioned SRP once in [my post about SOLID]({% pst 2017/mar/2017-03-28-solid %}),
 saying that it doesn't really help programmers understand the good old
-["high cohesion"](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29)
+"[high cohesion](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29)"
 concept, which was introduced by
 [Larry Constantine](https://en.wikipedia.org/wiki/Larry_Constantine)
 back in 1974. Now let's see it by example and analyze how we can

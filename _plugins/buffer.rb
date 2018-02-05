@@ -55,12 +55,24 @@ module Jekyll
             articles << {
               link: home + p.url,
               title: if months < 6
-                "I wrote this #{months} months ago: \"#{p['title']}\"#{tags}"
+                [
+                  "I wrote this #{months}-months ago:",
+                  "#{months}-months ago I wrote:",
+                  "Re-read this #{months}-months old post:"
+                ].sample
               elsif months < 12
-                "I wrote this almost a year ago: \"#{p['title']}\"#{tags}"
+                [
+                  'I wrote this almost a year ago:',
+                  'Almost a year old article:',
+                  'Re-read this year-old blog post:'
+                ].sample
               else
-                "I wrote this over a year ago: \"#{p['title']}\"#{tags}"
-              end
+                [
+                  'I wrote this over a year ago:',
+                  'Pretty old, but still relevant:',
+                  'Over a year old, read it again:'
+                ].sample
+              end + " \"#{p['title']}\"#{tags}"
             }
           end
         end
@@ -96,7 +108,7 @@ module Jekyll
         {
           'yegor256/xembly': 'Xembly is an XML building and manipulation language and a library',
           'yegor256/tacit': 'Tacit is a class-less CSS framework, for clueless programmers like me',
-          'yegor256/takes': 'Takes is a unique truly objet-oriented Java web framework',
+          'yegor256/takes': 'Takes is a unique truly object-oriented Java web framework',
           'yegor256/rultor': 'Rultor is a chatbot DevOps assistant to automate deployment and merge operations',
           'teamed/qulice': 'Qulice is an aggregator of Java static analyzers',
           'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives',

@@ -23,6 +23,12 @@ months. If you want to add something here, please
 
 To what extent should people think for themselves?
 
+Good vs bad people: http://www.yegor256.com/2015/02/09/serious-code-reviewer.html#comment-3704330780
+
+Sociotech skills
+
+Design bubble
+
 How much OOP is in Kotlin?
 
 Fluent interface and OOP: http://www.yegor256.com/2014/04/11/jcabi-http-intro.html#comment-3683882559
@@ -52,3 +58,7 @@ Technical democracy - how to make decisions with multiple opinions
 Equality is a perfect way to ruin a software team
 
 Bigger ORM example: http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2736011652
+
+Example of properly architectured projects/proper architecture with pictures.
+
+Word about a distributed systems, how should they communicate with each other (should it be RPC-over-something or message passing or whatever).
