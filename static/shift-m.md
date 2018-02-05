@@ -53,11 +53,9 @@ Already recorded but not yet published episodes:
 
 Previous episodes:
 
-<!--
 <img src="/images/face-256x256.jpg" class="guest-face"/><br/>
 &#35;21: [Sociotech skills in software development](/shift-m/2018/21.html)<br/>
 4 February 2018; 52 min.
--->
 
 <img src="/images/shift-m/vincent-birlouez.png" class="guest-face"/>
 <img src="/images/face-256x256.jpg" class="guest-face"/><br/>

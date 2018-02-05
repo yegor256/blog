@@ -59,9 +59,10 @@ the existing test doesn't cover some critical aspects of the class
 ([yegor256/cactoos#375](https://github.com/yegor256/cactoos/issues/375)),
 it's a bug.
 
-**Lack of class documentation**.
+**Lack of documentation**.
 If, say, a Javadoc block of a class is not explaining you clearly
-how to use the class,
+how to use the class, or the entire module is not documented well
+([yegor256/takes#790](https://github.com/yegor256/takes/issues/790)),
 it's a bug.
 
 **Suboptimal implementation**.
@@ -84,7 +85,7 @@ it's a bug.
 If a unit test fails sporadically
 ([yegor256/takes#506](https://github.com/yegor256/takes/issues/506))
 or doesn't work in some particular environment
-([yegor256/cactoos#537](https://github.com/yegor256/cactoos/issues/537)),
+([yegor256/jpeek#151](https://github.com/yegor256/jpeek/issues/151)),
 it's a bug.
 
 Also, it's worth mentioning that minor, cosmetic, or poorly formulated
