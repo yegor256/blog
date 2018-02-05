@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "icons";
-  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot%3F1517762606");
-  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot?#iefix%3F1517762606") format("embedded-opentype"),
-       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.woff%3F1517762606") format("woff"),
-       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.ttf%3F1517762606") format("truetype"),
-       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1517762606") format("svg");
+  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot%3F1517844187");
+  src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.eot?#iefix%3F1517844187") format("embedded-opentype"),
+       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.woff%3F1517844187") format("woff"),
+       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.ttf%3F1517844187") format("truetype"),
+       url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1517844187") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "icons";
-    src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1517762606") format("svg");
+    src: url("http://cf.jare.io/?u=http://www.yegor256.com/css/icons.svg#icons%3F1517844187") format("svg");
   }
 }
 
