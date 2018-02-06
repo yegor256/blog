@@ -1,20 +1,22 @@
 ---
 layout: post
 title: "More Bugs, Please"
-date: 2017-11-20
+date: 2018-02-06
 place: Moscow, Russia
 tags: testing
 description: |
-  ...
+  We encourage programmers to find bugs and report them;
+  we even pay for each bug found; this article
+  suggests some places where they can easily be found.
 keywords:
   - sources of bugs
   - finding bugs
   - software bugs
   - bugs
   - testing
-image: /images/2017/12/
+image: /images/2018/02/american-honey.jpg
 jb_picture:
-  caption:
+  caption: American Honey (2016) by Andrea Arnold
 ---
 
 A [bug]({% pst 2015/jun/2015-06-11-wikipedia-bug-definition %})
@@ -59,10 +61,10 @@ the existing test doesn't cover some critical aspects of the class
 ([yegor256/cactoos#375](https://github.com/yegor256/cactoos/issues/375)),
 it's a bug.
 
+**Lack of documentation**.
 If, say, a Javadoc block for a class does not clearly explain to you
 how to use the class, or the entire module is not documented well
 ([yegor256/takes#790](https://github.com/yegor256/takes/issues/790)),
-**Lack of documentation**.
 it's a bug.
 
 **Suboptimal implementation**.
