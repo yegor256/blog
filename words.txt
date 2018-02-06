@@ -2682,6 +2682,7 @@ former
 forms
 formula
 formulate
+formulated
 forth
 fortran
 fortune
@@ -3630,6 +3631,7 @@ journal
 journey
 joy
 JPA
+jpeek
 JPEG
 JPoint
 jq
@@ -4898,6 +4900,7 @@ people's
 pepper
 per
 perceive
+perceived
 percent
 percentage
 perdita
@@ -6584,6 +6587,7 @@ submit
 submits
 submitted
 submitting
+suboptimal
 subordinates
 subordination
 subscriber
@@ -7328,6 +7332,7 @@ virtue
 virtues
 visibility
 visible
+visibly
 vision
 visit
 visitor
