@@ -54,6 +54,9 @@ reviewer and had to be changed.
 Technical questions asked, paid, answered, and paid again:
 [yegor256/thindeck#347](https://github.com/yegor256/thindeck/issues/347)
 
+PDD puzzle was solved without any code written, just a piece of research:
+[yegor256/jpeek#155](https://github.com/yegor256/jpeek/pull/155)
+
 Big amount of work:
 [yegor256/thindeck#362](https://github.com/yegor256/thindeck/issues/362)
 

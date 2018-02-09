@@ -94,3 +94,14 @@ Also, it's worth mentioning that minor, cosmetic, or poorly formulated
 bug reports will most likely be rejected or not paid for. If you want us to pay for your bug reports,
 make sure they [sound right]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}),
 in order to help us move the project forward to a better state.
+
+<!--
+
+There are some examples of minor bugs, which are not worth paying
+for, even though they are valid:
+
+  * [yegor256/jpeek#158](https://github.com/yegor256/jpeek/issues/158)
+
+Cosmetic bugs are those that
+
+-->
