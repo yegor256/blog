@@ -22,13 +22,13 @@ jb_picture:
 Most startups don't have enough cash to pay programmers as much as
 they deserve, [unfortunately]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %})
 (or maybe not). Instead of cash, startups give their early employees
-[shares of stock](https://en.wikipedia.org/wiki/Stock#Shares), which they will be able to either
-1) sell in a few years and become <del>millionaires</del> billionaires,
+[shares of stock](https://en.wikipedia.org/wiki/Stock#Shares), which they will be able to either 1)
+sell in a few years and become <del>millionaires</del> billionaires,
 or 2) throw away and remain nobodies. It's a
 [common practice](https://www.quora.com/Do-founders-vest/answer/Charlie-Cheever).
 The question, however, is what
-are the right procedure and the optimal algorithm to transfer those shares to programmers.
-When exactly they become shareholders? What is the formula?
+is the right procedure, and the optimal algorithm, to transfer those shares to programmers.
+When exactly do they become shareholders? What is the formula?
 
 <!--more-->
 
@@ -36,16 +36,15 @@ When exactly they become shareholders? What is the formula?
 
 There are a few typical approaches.
 
-One of the most [popular](https://www.feld.com/archives/2005/05/term-sheet-vesting.html)
-ones is
+One of the most [popular](https://www.feld.com/archives/2005/05/term-sheet-vesting.html) is
 "[four years with a one-year cliff](https://thenextweb.com/entrepreneur/2013/07/21/startup-founders-heres-why-vesting-is-your-best-friend/),"
 which means that if they had 50% equity and leave after two years
-they will only retain 25%. The longer they stay, the larger percentage of
-their equity will be vested until they become fully vested in the 48th month.
+they will only retain 25%. The longer they stay, the larger the percentage of
+their equity that will be vested until they become fully vested in the 48th month.
 However, because they have a one year cliff, if they leave before the 12th month,
 they get nothing. There could be
 [slight modifications](https://medium.com/@ipaullee/let-s-revise-the-vesting-schedule-for-startup-founders-and-employees-7817fcb301ea)
-to numbers, of course.
+to the numbers, of course.
 
 The disadvantage of this approach is that their primary motivation is
 to stay in the company, instead of achieving results. This vesting
@@ -56,7 +55,7 @@ its <del>slaves</del> employees.
 
 Another option is [milestone-based](https://techcrunch.com/2015/12/09/milestone-based-vesting-for-startup-founders/)
 vesting, which defines a set of value milestones, each of which unlocks
-an additional part of the programmer' equity.
+an additional part of the programmer's equity.
 
 On top of the [inability](https://medium.com/swlh/why-milestone-based-agreements-are-bad-for-early-stage-startups-15c759995121)
 to predict milestones accurately, this vesting formula
@@ -72,7 +71,7 @@ round happen, but it's far from being true, in most cases. We all know that
 investments come to those who can <del>fool</del>
 [pitch]({% pst 2016/mar/2016-03-28-unspoken-secrets-of-elevator-pitch %}) an investor,
 not to those who write the best Java code. Thus, the work programmers do
-and the "value events" the startup aiming to reach are pretty much disconnected.
+and the "value events" the startup is aiming to reach are pretty much disconnected.
 
 A more logical formula is **microvesting**, which we practice in projects managed
 by [Zerocracy](http://www.zerocracy.com). It is as simple as that: A company has
@@ -83,9 +82,9 @@ programmer earns 0.004% of equity ($40 / $1,000,000). Our software calculates
 it all automatically, increasing their shares after each completed task.
 
 Using these two variables&mdash;valuation and hourly rate&mdash;the company
-can affect programmers' motivation.
+can influence programmers' motivation.
 
-No need to [lie]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
+No need to [lie]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) to
 them about big-money milestones or keep them in the office
 for four years. Just let them be focused on the results they can produce and
 give them back what they deserve. Incrementally. That's it.
