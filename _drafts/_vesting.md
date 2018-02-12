@@ -78,7 +78,7 @@ by [Zerocracy](http://www.zerocracy.com). It is as simple as that: A company has
 a valuation, which is set by its founders; let's say, it's $1,000,000. A programmer
 has an hourly rate, say, $40. Thus, when a [one-hour]({% pst 2017/nov/2017-11-28-microtasking %})
 [fixed-budget]({% pst 2018/jan/2018-01-09-micro-budgeting %}) task is completed, the
-programmer earns 0.004% of equity ($40 / $1,000,000). Our software calculates
+programmer earns 0.00004% of equity ($40 / $1,000,000). Our software calculates
 it all automatically, increasing their shares after each completed task.
 
 Using these two variables&mdash;valuation and hourly rate&mdash;the company
