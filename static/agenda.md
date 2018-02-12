@@ -21,6 +21,8 @@ months. If you want to add something here, please
 
 <!--more-->
 
+Does Enterprise Messaging have a future and can anything be done to simplify EAI?
+
 To what extent should people think for themselves?
 
 Good vs bad people: http://www.yegor256.com/2015/02/09/serious-code-reviewer.html#comment-3704330780
