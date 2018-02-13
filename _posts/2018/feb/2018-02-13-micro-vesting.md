@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Microvesting"
-date: 2018-02-07
+date: 2018-02-13
 place: Moscow, Russia
 tags: startup
 description: |
@@ -14,9 +14,9 @@ keywords:
   - vesting increments
   - vesting instant
   - vesting zerocracy
-image: /images/2017/12/
+image: /images/2018/02/la-comunidad.jpg
 jb_picture:
-  caption:
+  caption: La comunidad (2000) by Álex de la Iglesia
 ---
 
 Most startups don't have enough cash to pay programmers as much as
