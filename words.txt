@@ -153,6 +153,7 @@ agrees
 ah
 ahead
 aim
+aiming
 aintshy
 air
 airbnb
@@ -622,6 +623,7 @@ bible
 bibrarian
 bicycle
 big
+big-money
 big-names
 big-time
 bigger
@@ -630,6 +632,7 @@ bill
 billed
 billing
 billion
+billionaires
 billions
 bills
 bin
@@ -1079,6 +1082,7 @@ client's
 client-server
 client-side
 clients
+cliff
 clipper
 clockwise
 clone
@@ -1880,6 +1884,7 @@ dirty
 disabilities
 disable
 disabled
+disadvantage
 disagree
 disagreed
 disagrees
@@ -1906,6 +1911,7 @@ disclose
 disclosed
 disclosing
 disclosure
+disconnected
 discount
 discourage
 discourages
@@ -2601,6 +2607,7 @@ fitting
 five
 fix
 fixed
+fixed-budget
 fixed-cost
 fixes
 fixing
@@ -4205,6 +4212,7 @@ microservices
 microsoft
 microsystems
 microtasking
+microvesting
 middle
 middleman
 middlemen
@@ -4214,10 +4222,12 @@ migration
 mihai
 mile
 milestone
+milestone-based
 milestones
 military
 military-style
 million
+millionaires
 millions
 milliseconds
 mind
@@ -4481,6 +4491,7 @@ no
 no-server
 no-tests-upfront
 noble
+nobodies
 nobody
 nodding
 node
@@ -6118,6 +6129,7 @@ shampoo
 shape
 share
 shared
+shareholders
 shares
 sharing
 sharp
@@ -6251,6 +6263,7 @@ slf
 slick
 slide
 slides
+slight
 slightly
 SLIK
 slippage
@@ -7170,6 +7183,7 @@ unlike
 unlikely
 unlimited
 unlocking
+unlocks
 unmaintainable
 unmanageable
 unmarshalling
@@ -7274,6 +7288,7 @@ variations
 variety
 various
 vast
+VC
 vector
 vegas
 velocity
@@ -7300,6 +7315,8 @@ versus
 vertical
 vertically
 very
+vested
+vesting
 vexor
 via
 viber

@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-12T13:15:11+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">More Bugs, Please</title><link href="http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html" rel="alternate" type="text/html" title="More Bugs, Please" /><published>2018-02-06T00:00:00+00:00</published><updated>2018-02-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/06/where-to-find-more-bugs</id><content type="html" xml:base="http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html">&lt;p&gt;A &lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;bug&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-13T08:50:04+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Microvesting</title><link href="http://www.yegor256.com/2018/02/13/micro-vesting.html" rel="alternate" type="text/html" title="Microvesting" /><published>2018-02-13T00:00:00+00:00</published><updated>2018-02-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/13/micro-vesting</id><content type="html" xml:base="http://www.yegor256.com/2018/02/13/micro-vesting.html">&lt;p&gt;Most startups don&amp;#39;t have enough cash to pay programmers as much as
+they deserve, &lt;a href=&quot;/2016/01/12/good-programmers-dont-work-for-equity.html&quot;&gt;unfortunately&lt;/a&gt;
+(or maybe not). Instead of cash, startups give their early employees
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Stock#Shares&quot;&gt;shares of stock&lt;/a&gt;, which they will be able to either 1)
+sell in a few years and become &lt;del&gt;millionaires&lt;/del&gt; billionaires,
+or 2) throw away and remain nobodies. It&amp;#39;s a
+&lt;a href=&quot;https://www.quora.com/Do-founders-vest/answer/Charlie-Cheever&quot;&gt;common practice&lt;/a&gt;.
+The question, however, is what
+is the right procedure, and the optimal algorithm, to transfer those shares to programmers.
+When exactly do they become shareholders? What is the formula?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La comunidad (2000) by Álex de la Iglesia&#39; src=&#39;/images/2018/02/la-comunidad.jpg&#39; longdesc=&#39;#c6f3e007&#39;/&gt;&lt;figcaption id=&#39;c6f3e007&#39;&gt;La comunidad (2000) by Álex de la Iglesia&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are a few typical approaches.&lt;/p&gt;
+
+&lt;p&gt;One of the most &lt;a href=&quot;https://www.feld.com/archives/2005/05/term-sheet-vesting.html&quot;&gt;popular&lt;/a&gt; is
+&amp;quot;&lt;a href=&quot;https://thenextweb.com/entrepreneur/2013/07/21/startup-founders-heres-why-vesting-is-your-best-friend/&quot;&gt;four years with a one-year cliff&lt;/a&gt;,&amp;quot;
+which means that if they had 50% equity and leave after two years
+they will only retain 25%. The longer they stay, the larger the percentage of
+their equity that will be vested until they become fully vested in the 48th month.
+However, because they have a one year cliff, if they leave before the 12th month,
+they get nothing. There could be
+&lt;a href=&quot;https://medium.com/@ipaullee/let-s-revise-the-vesting-schedule-for-startup-founders-and-employees-7817fcb301ea&quot;&gt;slight modifications&lt;/a&gt;
+to the numbers, of course.&lt;/p&gt;
+
+&lt;p&gt;The disadvantage of this approach is that their primary motivation is
+to stay in the company, instead of achieving results. This vesting
+formula is perfectly aligned with the popular
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;be nice&lt;/a&gt;
+paradigm and is not beneficial, either to the company or to
+its &lt;del&gt;slaves&lt;/del&gt; employees.&lt;/p&gt;
+
+&lt;p&gt;Another option is &lt;a href=&quot;https://techcrunch.com/2015/12/09/milestone-based-vesting-for-startup-founders/&quot;&gt;milestone-based&lt;/a&gt;
+vesting, which defines a set of value milestones, each of which unlocks
+an additional part of the programmer&amp;#39;s equity.&lt;/p&gt;
+
+&lt;p&gt;On top of the &lt;a href=&quot;https://medium.com/swlh/why-milestone-based-agreements-are-bad-for-early-stage-startups-15c759995121&quot;&gt;inability&lt;/a&gt;
+to predict milestones accurately, this vesting formula
+promotes group responsibility, which, in my opinion,
+is &lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt;the least&lt;/a&gt;
+effective way to motivate. Programmers writing Java classes can&amp;#39;t be
+responsible for the &amp;quot;next round of VC funding,&amp;quot; simply because they
+don&amp;#39;t have any idea how to make that round happen. It&amp;#39;s not their job,
+not their responsibility.&lt;/p&gt;
+
+&lt;p&gt;You may say that writing those Java classes is exactly how we make the next
+round happen, but it&amp;#39;s far from being true, in most cases. We all know that
+investments come to those who can &lt;del&gt;fool&lt;/del&gt;
+&lt;a href=&quot;/2016/03/28/unspoken-secrets-of-elevator-pitch.html&quot;&gt;pitch&lt;/a&gt; an investor,
+not to those who write the best Java code. Thus, the work programmers do
+and the &amp;quot;value events&amp;quot; the startup is aiming to reach are pretty much disconnected.&lt;/p&gt;
+
+&lt;p&gt;A more logical formula is &lt;strong&gt;microvesting&lt;/strong&gt;, which we practice in projects managed
+by &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;. It is as simple as that: A company has
+a valuation, which is set by its founders; let&amp;#39;s say, it&amp;#39;s $1,000,000. A programmer
+has an hourly rate, say, $40. Thus, when a &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;one-hour&lt;/a&gt;
+&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;fixed-budget&lt;/a&gt; task is completed, the
+programmer earns 0.00004% of equity ($40 / $1,000,000). Our software calculates
+it all automatically, increasing their shares after each completed task.&lt;/p&gt;
+
+&lt;p&gt;Using these two variables&amp;mdash;valuation and hourly rate&amp;mdash;the company
+can influence programmers&amp;#39; motivation.&lt;/p&gt;
+
+&lt;p&gt;No need to &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;lie&lt;/a&gt; to
+them about big-money milestones or keep them in the office
+for four years. Just let them be focused on the results they can produce and
+give them back what they deserve. Incrementally. That&amp;#39;s it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="startup" /><summary type="html">Most startups don&amp;#39;t have enough cash to pay programmers as much as
+they deserve, unfortunately
+(or maybe not). Instead of cash, startups give their early employees
+shares of stock, which they will be able to either 1)
+sell in a few years and become millionaires billionaires,
+or 2) throw away and remain nobodies. It&amp;#39;s a
+common practice.
+The question, however, is what
+is the right procedure, and the optimal algorithm, to transfer those shares to programmers.
+When exactly do they become shareholders? What is the formula?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/02/la-comunidad.jpg" /></entry><entry><title type="html">More Bugs, Please</title><link href="http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html" rel="alternate" type="text/html" title="More Bugs, Please" /><published>2018-02-06T00:00:00+00:00</published><updated>2018-02-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/06/where-to-find-more-bugs</id><content type="html" xml:base="http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html">&lt;p&gt;A &lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;bug&lt;/a&gt;
 is something we find in a software product that &amp;quot;doesn&amp;#39;t look right&amp;quot; (this
 is my personal definition). A bug can be hidden or visible; it can be
 &amp;quot;already fixed&amp;quot; or &amp;quot;still present&amp;quot;; it can be critical or cosmetic; it
@@ -803,284 +880,4 @@ a Data Access Object
 is an object that
 &amp;quot;provides an abstract interface to some type of database or other
 persistence mechanism.&amp;quot; The purpose is noble, but the implementation
-is terrible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/requiem-for-a-dream.jpg" /></entry><entry><title type="html">How Micro Is Your Tasking?</title><link href="http://www.yegor256.com/2017/11/28/microtasking.html" rel="alternate" type="text/html" title="How Micro Is Your Tasking?" /><published>2017-11-28T00:00:00+00:00</published><updated>2017-11-28T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/11/28/microtasking</id><content type="html" xml:base="http://www.yegor256.com/2017/11/28/microtasking.html">&lt;p&gt;&amp;quot;What are you doing now?&amp;quot;&amp;mdash;when you hear this question
-from your boss, be aware: you&amp;#39;re dealing with a
-&lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;micromanager&lt;/a&gt;.
-Keeping us busy is the key objective of these creatures and this
-is what makes them so annoying. To the contrary,
-&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;effective managers&lt;/a&gt;
-make sure we are &lt;em&gt;productive&lt;/em&gt;, meaning that our results satisfy
-their expectations. They are not interested in knowing what we are
-doing to deliver them&amp;mdash;they manage the project, instead of managing us.
-And the first step to making the project manageable is to decompose its
-scope into smaller pieces.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Carlito&amp;#39;s Way (1993) by Brian De Palma&#39; src=&#39;/images/2017/11/carlitos-way.jpg&#39; longdesc=&#39;#fa318a0d&#39;/&gt;&lt;figcaption id=&#39;fa318a0d&#39;&gt;Carlito&amp;#39;s Way (1993) by Brian De Palma&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Imagine you want to re-design your apartment, having a few thousand
-dollars for this job. You hire a group of people and give them all your
-money up front. They ask you to come back in two months, when everything will
-be ready. You say &amp;quot;OK&amp;quot; and wait for two months. I&amp;#39;m sure you already know
-what I&amp;#39;m getting at&amp;mdash;this project most probably will be a failure, to
-some extent. In the worst case you won&amp;#39;t see these guys ever, they will just
-steal your money. In the best case, they will do something that will
-look &amp;quot;nice,&amp;quot; but not as nice as you expected.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-do-we-micromanage&quot;&gt;Why do we micromanage?&lt;/h2&gt;
-
-&lt;p&gt;What do you do in order to increase your chances of getting the best case scenario?
-That&amp;#39;s right, you micromanage them: you visit them every day, you ask them
-the famous &amp;quot;What are you doing now?&amp;quot; question, you push them when they are
-getting lazy, you control, you dominate, you annoy, you
-&amp;quot;stay on top,&amp;quot; you play the guilt card when they miss or forget,
-you &lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;punish&lt;/a&gt;
-them every way you can.&lt;/p&gt;
-
-&lt;p&gt;You don&amp;#39;t do that because you&amp;#39;re evil. You just know that otherwise they
-will trash your apartment, will forget things, will miss
-something, will make mistakes, will spend more time and money than they are
-supposed to, will choose wrong fabrics, will purchase the furniture
-you don&amp;#39;t like, and will do many other things you&amp;#39;re well aware of if you&amp;#39;ve
-ever dealt with interior designers and house builders.&lt;/p&gt;
-
-&lt;p&gt;The more aggressive you are, the higher the chances you win.&lt;/p&gt;
-
-&lt;p&gt;And it&amp;#39;s not because you are evil. You&amp;#39;re not evil, you&amp;#39;re stupid
-(not you personally, my dear and respected reader, but you get the point).&lt;/p&gt;
-
-&lt;p&gt;The problem is that the project is not manageable. That&amp;#39;s why you
-have to resort to the last possible measure&amp;mdash;micromanagement. Why is the
-project not manageable? Because its scope is not broken down into
-pieces. It contains a large single job called &amp;quot;Redesign The Apartment.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;One of the key success factors for manageability is the famous 0/100 rule, which
-requires any task to be either &amp;quot;in progress&amp;quot; or &amp;quot;complete.&amp;quot; There can be
-nothing in the middle. When such a rule is in place, the task can be
-delegated to its performer and they can become responsible for its completion,
-they can be trusted.&lt;/p&gt;
-
-&lt;p&gt;We can&amp;#39;t &amp;quot;trust&amp;quot; our single large task to the performer, simply because it&amp;#39;s too
-big to be trusted. If they fail, the cost of failure will be too high. We have
-to take a &lt;em&gt;micro&lt;/em&gt;-scope and get into the task to manage it from the inside,
-annoying its performers, whom we are supposed to trust. The micromanagement
-we do is &lt;em&gt;inevitable&lt;/em&gt;, because the scope is not broken down.&lt;/p&gt;
-
-&lt;p&gt;Scope decomposition was invented mostly in order to solve this very problem:
-to make the project more manageable. We need small tasks in the scope in order
-to be able to delegate them and never go inside in order to check what&amp;#39;s going on
-there, who is doing what, why, and where.&lt;/p&gt;
-
-&lt;p&gt;The smaller the tasks we can break the scope into, the better.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-small-can-tasks-be&quot;&gt;How small can tasks be?&lt;/h2&gt;
-
-&lt;p&gt;In our projects we break project scope into tasks of 30 minutes each.
-This may sound too extreme for you, but it works for us. We call them micro-tasks.
-We started to practice micro-tasking about seven years ago. We experimented
-with different task sizes, from 10 hours to 15 minutes, but eventually
-came down to 30 minutes.&lt;/p&gt;
-
-&lt;p&gt;When tasks are bigger, we lose the manageability and simply get back to
-macro-tasking. When tasks are smaller, the context switching overhead
-becomes too annoying.&lt;/p&gt;
-
-&lt;p&gt;In our experience, a senior programmer, if fully dedicated to a project, completes
-6-10 tasks a day. This means that they spend 3-5 hours working, while
-the rest of the time is spent on doing something else. This is a much more
-effective use of work time than we can achieve with traditional macro-tasking
-management, where programmers barely work for two hours a day, spending
-the rest of their time on something else (my personal observation).&lt;/p&gt;
-
-&lt;h2 id=&quot;what-obstacles-did-we-have&quot;&gt;What obstacles did we have?&lt;/h2&gt;
-
-&lt;p&gt;If you decide to go for micro-tasking, you will most likely have the same or similar
-obstacles that we&amp;#39;ve had. Here is a short list of them and my advice, which
-may help if one day you decide to break a &amp;quot;Develop a Mobile App&amp;quot; task
-into, say, 2,500+ micro tasks:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Vagueness&lt;/strong&gt;.
-Definition of done, exit criteria, requirements, expectations&amp;mdash;there
-are many names, which are all about our inability to define
-what exactly we expect programmers to do. Software development
-by definition includes a lot of unknowns, creativity, experiments,
-and risks. Programmers will tell you that they can&amp;#39;t guarantee anything
-in most cases, and can&amp;#39;t really give any valid promises.
-We solve that by
-&lt;a href=&quot;/2010/03/04/pdd.html&quot;&gt;PDD&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Distraction&lt;/strong&gt;.
-Programmers are used to doing many different things at the same time:
-they write code, help others, watch YouTube, scroll Facebook,
-swear at Reddit, and read my blog. Initially most of them
-won&amp;#39;t like the idea of having explicit tasks in front of them,
-simply because they put a structure on their work time, making it
-much more visible to the management. They will tell you that they
-have many other things to do aside from your bloody tasks.
-We solve that by
-&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;paying by result&lt;/a&gt; and
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;prohibition of chitchats&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Laziness&lt;/strong&gt;.
-Just like that apartment designers, programmers also love to get paid
-and do nothing. Who doesn&amp;#39;t, right? They will tell you that their
-work is more complicated than you think, that they need much more time,
-that they need to investigate the problem first, that reading
-documentation also takes a lot of time, etc. They are simply spoiled
-by the &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;traditional macro-tasking&lt;/a&gt;
-where they are paid by the month and nobody
-really controls their results. They are used to being &lt;del&gt;office slaves&lt;/del&gt; lazy.
-We solve that by
-&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;paying by result&lt;/a&gt;
-and the lazy ones simply quit.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Responsibility&lt;/strong&gt;.
-Micro-tasking will make individual results visible. When tasks are large
-people tend to work with them in groups and it&amp;#39;s unclear exactly who is responsible
-for failures and successes. Smaller tasks emphasize mistakes
-and make people &amp;quot;pay&amp;quot; for them. Not necessarily with cash,
-but definitely some way or other. Most programmers will find this concept
-very new and disturbing&amp;mdash;they&amp;#39;ve almost never paid for their own
-mistakes before and never had their own tasks. The responsibility was
-always spread across the group.
-We solve that by
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;monetary rewards and punishments&lt;/a&gt;,
-which make them very motivated and failure-ready.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Resentment&lt;/strong&gt;.
-This is one of the most popular and the most annoying of problems: they
-will tell you that they are &amp;quot;not monkeys.&amp;quot; They will actually combine
-all problems listed above and say that the right way to solve them
-is to give programmers freedom and let them do their job, since they
-are smart enough and don&amp;#39;t need any management from the top. And they
-will mostly be saying it quite honestly, with no intent to manipulate. The thing
-is that they are used to macro-tasking and believe that this is the
-only and the right way.
-I&amp;#39;m trying to solve this by writing this very blog post.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There could be something else, but this is a more or less an exhaustive list
-of the problems we were faced with.&lt;/p&gt;
-
-&lt;h2 id=&quot;where-micro-tasking-didnt-work&quot;&gt;Where micro-tasking didn&amp;#39;t work&lt;/h2&gt;
-
-&lt;p&gt;Obviously, any approach has its pros and cons. Micro-tasking seems to be
-the most effective management paradigm for us. However, it&amp;#39;s not applicable
-everywhere, according to our experience. There are territories where
-we failed to apply it.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Prototyping&lt;/strong&gt;.
-Every project or a new big feature starts with a prototype, which
-requires one or two people sitting next to each other, thinking, and
-experimenting. We tried to break this piece of work into smaller
-parts, but failed. It seems that this process has to be done as a single
-solid work package.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;UI/UX&lt;/strong&gt;.
-We were mostly working with server-side Java/Ruby/C++ projects for the last
-few years and didn&amp;#39;t have many opportunities to apply micro-tasking to the
-UI/UX jobs. However, whatever we did try never really worked: graphic
-designers weren&amp;#39;t able to decompose their tasks into smaller parts.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Customers&lt;/strong&gt;.
-We tried to decompose the task of eliciting requirements from our
-clients and failed a few times. Maybe our clients were stupid
-(I doubt that), maybe requirements were too complex, or maybe
-our system analysts were not professional enough. The bottom line
-is that we realized that such a task must be done as a solid piece of
-work, without any decomposition.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fire-fighting&lt;/strong&gt;.
-When the speed of delivery is the most important concern, micro-tasking
-doesn&amp;#39;t work for us. The overhead for dispatching and specifying tasks
-was taking too much time. When something is really urgent, we have
-to do the traditional macro-tasking and just &amp;quot;make it work.&amp;quot; Then
-we get back to micro-tasking.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Everything else, including programming, unit testing, manual testing,
-performance/load testing, integration testing, deployment, code review,
-documentation, and even training, can and must be managed via micro tasks.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-benefits-do-we-get&quot;&gt;What benefits do we get?&lt;/h2&gt;
-
-&lt;p&gt;The most important benefit of micro-tasking is that the project becomes
-more manageable, as was mentioned above. Here is a more detailed break
-down:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Money works&lt;/strong&gt;.
-When tasks are very small, we can use good old dollar bills
-to motivate programmers. We can throw away literally
-&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;all other&lt;/a&gt;
-instruments.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;We pay less&lt;/strong&gt;.
-We seriously lower our expenses, even though hourly rates of our programmers
-are
-&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;higher&lt;/a&gt;
-than many other projects can afford. I did a more or less
-&lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;detailed analysis&lt;/a&gt;
-a few years ago, which demonstrated that our projects
-were 30 (!) times more cost efficient than traditional ones.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Motivation is high&lt;/strong&gt;.
-Despite a very common stereotype that small and isolated tasks demotivate
-their performers, we see quite the opposite reaction: programmers
-are excited when it finally becomes possible to work within well-defined
-and explicit boundaries, independently, and in isolation. Not all of them, though.
-My personal observation is: only 25% of them can understand and enjoy
-micro-tasking. Others are either not professional enough or spoiled
-by &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slavery&lt;/a&gt;,
-where it&amp;#39;s possible to do almost nothing and stay very respected and well rewarded.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Turnover is not painful&lt;/strong&gt;.
-To make micro-tasking possible the management has to learn how to
-specify them: explicitly, unambiguously, and fast. When such a high
-level of transparency, formality, and agility (at the same time) is
-achieved, the project becomes less dependent on
-&lt;a href=&quot;/2015/12/29/turnover-is-good-for-maintainability.html&quot;&gt;experts&lt;/a&gt;.
-We lose the fear of losing people, because almost everything
-we need to know about the project is inside our task tracking system
-and project documentation.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Easier to parallel&lt;/strong&gt;.
-Smaller tasks are easier to delegate to a larger amount of programmers.
-In some projects we sometimes have over 40 programmers at the same time, while
-the amount of tasks is relatively small (up to 200).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Metrics work&lt;/strong&gt;.
-When one programmer closes 40-50 tasks per week and another one closes
-5-10, it does mean something, keeping in mind that all tasks are almost
-equal in size. We use this metric (and a few others) to make organizational
-and discipline decisions. In a macro-tasking environment almost no HR metrics
-really work.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Quality is enforceable&lt;/strong&gt;.
-Large amounts of small tasks implies that we constantly and frequently
-close them. Each closure is an important point for quality control. That&amp;#39;s
-exactly where we have the ability to say &amp;quot;No&amp;quot; and reject the deliverables
-that violate our quality standards. With big tasks this &amp;quot;No&amp;quot; is much more
-painful for programmers.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Risks are acceptable&lt;/strong&gt;.
-It&amp;#39;s impossible to accept the risk of the entire apartment redesign failure,
-since its cost is too high&amp;mdash;a few thousand dollars. However,
-it is absolutely affordable to accept a risk of a kitchen lamp installation.
-Even if it falls and breaks, we will spend a few dollars and buy a new one.
-We don&amp;#39;t need to control the &amp;quot;lamp person&amp;quot;&amp;mdash;we have a luxury
-to delegate and trust.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The benefits programmers get overlap with our benefits. If they
-are professional and motivated enough they find it effective and productive
-to work with micro tasks, which are always well defined and properly paid.&lt;/p&gt;
-
-&lt;h2 id=&quot;are-we-monkeys-or-not&quot;&gt;Are we monkeys or not?&lt;/h2&gt;
-
-&lt;p&gt;Now the most typical complaint we hear about micro-tasking is: &amp;quot;It is for
-junior programmers who are OK with being code monkeys.&amp;quot; To be honest,
-I also thought so a few years ago, when we started to experiment with
-&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;XDSD&lt;/a&gt;. What I quickly
-found out is that the most professional and self-motivated developers
-were enjoying micro-tasking, while their less mature and less skilled colleagues
-were finding it difficult to keep up.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">&amp;quot;What are you doing now?&amp;quot;&amp;mdash;when you hear this question
-from your boss, be aware: you&amp;#39;re dealing with a
-micromanager.
-Keeping us busy is the key objective of these creatures and this
-is what makes them so annoying. To the contrary,
-effective managers
-make sure we are productive, meaning that our results satisfy
-their expectations. They are not interested in knowing what we are
-doing to deliver them&amp;mdash;they manage the project, instead of managing us.
-And the first step to making the project manageable is to decompose its
-scope into smaller pieces.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/11/carlitos-way.jpg" /></entry></feed>
+is terrible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/requiem-for-a-dream.jpg" /></entry></feed>
