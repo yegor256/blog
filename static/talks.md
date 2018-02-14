@@ -98,14 +98,12 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
-<!--
 <div class="talk-event"/>
-<img src="/images/2017/javaday-2017.png" class="future-talk" alt="JavaDay 2017"/>
-**16 Don'ts of Career Growth**<br/>
-[JavaDay 2017](http://javaday.org.ua/)<br/>
-Kiev, Ukraine<br/>
-4-5 November 2017
--->
+<img src="https://2018.secon.ru/assets/logo-4c2eb8a37d9f098e2be8a2ba7390f3bbc797018d061939faaaba9648a8c985b9.png" class="future-talk" alt="SECON 2018"/>
+**Математика или любовь?**<br/>
+[SECON 2018](https://2018.secon.ru/)<br/>
+Penza, Russia<br/>
+16 March 2018
 
 <div class="talk-event"/>
 <img src="http://devexperience.ro/images/logo_black_green_white.png" class="future-talk" alt="DevExperience 2018"/>
