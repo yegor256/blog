@@ -12,7 +12,6 @@ keywords:
   - breakfast on saturday
   - morning with yegor
   - yegor bugayenko
-image: /images/andreea/saturday-breakfast.png
 ---
 
 <!-- {% badge /images/andreea/saturday-breakfast.svg 300 %} -->
