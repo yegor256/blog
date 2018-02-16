@@ -14,8 +14,6 @@ keywords:
   - yegor bugayenko
 ---
 
-<!-- {% badge /images/andreea/saturday-breakfast.svg 300 %} -->
-
 Every Saturday morning I'm having breakfast in some coffee shop
 around my living place. This page contains the up to date information about
 the place. Just check it and find me there. We will have a chat
