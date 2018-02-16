@@ -12,6 +12,7 @@ keywords:
   - breakfast on saturday
   - morning with yegor
   - yegor bugayenko
+nospell: true
 ---
 
 Every Saturday morning I'm having breakfast in some coffee shop
