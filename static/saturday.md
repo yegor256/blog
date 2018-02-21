@@ -12,8 +12,11 @@ keywords:
   - breakfast on saturday
   - morning with yegor
   - yegor bugayenko
+image: /images/andreea/breakfast.png
 nospell: true
 ---
+
+{% badge /images/andreea/breakfast.svg 300 %}
 
 Every Saturday morning I'm having breakfast in some coffee shop
 around my living place. This page contains the up to date information about
