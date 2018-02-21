@@ -58,12 +58,14 @@ of 0% means that all bugs are found by them.
 
 Does it make sense?
 
+{% badge /images/2017/12/managing-the-testing-process.jpg 96 http://amzn.to/2EEe2o6 %}
+
 P.S. It seems that I'm not the inventor of the formula. This is the quote
 from [__Managing the Testing Process: Practical Tools and Techniques for Managing Hardware and Software Testing__](http://amzn.to/2GvhMEV) (2009)
 by Rex Black, page 109:
 A common metric of test team effectiveness measures whether the test team
 manages to find a sizeable majority of the bugs prior to release. The production
-or customer bugs are sometimes called test escapes. The implication is that
+or customer bugs are sometimes called __test escapes__. The implication is that
 your test team missed these problems but could reasonably have detected them
 during test execution. You can quantify this metric as follows:
 
