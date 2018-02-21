@@ -85,3 +85,17 @@ BTW, Glenford J. Myers said something very similar in his book
 "[The Art of Software Testing](http://amzn.to/1Y3qAbN)," which I
 [reviewed]({% pst 2014/aug/2014-08-22-art-of-software-testing %})
 earlier.
+
+Bill Hetzel,
+[__The Complete Guide to Software Testing__](http://amzn.to/2HziEtM)
+(1993):
+"Some Theoretical Limits to Testing:
+'We can never be sure the specifications are correct,'
+'No testing system can identify every correct program,'
+'We can never be certain that a testing system is correct.'
+These theoretical limits tell us that there will never be a way to be sure
+we have a perfect understanding of what a program is supposed to do
+(the expected or required results) and that any testing system we
+might construct will always have some possibility of failing.
+In short, we cannot achieve 100 percent confidence no matter how much
+time and energy we put into it!"
