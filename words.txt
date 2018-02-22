@@ -3065,6 +3065,7 @@ heroku
 herself
 hesitate
 hesitation
+hetzel
 hey
 hibernate
 hickey
@@ -3247,6 +3248,7 @@ implemented
 implementer
 implementing
 implements
+implication
 implicit
 implied
 implies
@@ -3862,6 +3864,7 @@ limitation
 limitations
 limited
 limiting
+limits
 line
 lines
 lines-of-code
@@ -4024,6 +4027,7 @@ manager
 manager's
 managerial
 managers
+manages
 managing
 mandatory
 manifest
@@ -5408,6 +5412,7 @@ QCon
 qualities
 quality
 quanta
+quantify
 quantity
 queries
 query
@@ -5517,6 +5522,7 @@ reaper
 reappearing
 reason
 reasonable
+reasonably
 reasoning
 reasons
 receive
@@ -5812,6 +5818,7 @@ rewarded
 rewarding
 rewards
 rewrite
+rex
 ReXSL
 rich
 richard
@@ -6233,6 +6240,7 @@ situations
 six
 sixnines
 size
+sizeable
 sizes
 skateboard
 skeet
