@@ -61,12 +61,23 @@ Does it make sense?
 {% badge /images/2017/12/managing-the-testing-process.jpg 96 http://amzn.to/2EEe2o6 %}
 
 P.S. It seems that I'm not the inventor of the formula. This is the quote
-from [__Managing the Testing Process: Practical Tools and Techniques for Managing Hardware and Software Testing__](http://amzn.to/2GvhMEV) (2009)
+from [_Managing the Testing Process: Practical Tools and Techniques for Managing Hardware and Software Testing_](http://amzn.to/2GvhMEV) (2009)
 by Rex Black, page 109:
 A common metric of test team effectiveness measures whether the test team
 manages to find a sizeable majority of the bugs prior to release. The production
-or customer bugs are sometimes called __test escapes__. The implication is that
+or customer bugs are sometimes called _test escapes_. The implication is that
 your test team missed these problems but could reasonably have detected them
 during test execution. You can quantify this metric as follows:
 
 {% eqtn \mathit{Defect Detection Effectiveness} = \frac{\mathit{bugs (test)}}{\mathit{bugs (test) + bugs (production)}} %}
+
+P.P.S. Here is another similar metric by Capers Jones at
+[_Software Defect Removal Efficiency_](http://ieeexplore.ieee.org/document/488361/),
+Computer, Volume&nbsp;29, Issue&nbsp;4, 1996:
+"Serious software quality control involves measurement of defect removal efficiency (DRE).
+Defect removal efficiency is the percentage of defects found and repaired prior to release.
+In principle the measurement of DRE is simple. Keep records of all defects found
+during development. After a fixed period of 90 days, add customer-reported defects
+to internal defects and calculate the efficiency of internal removal. If the development
+team found 90 defects and customers reported 10 defects, then DRE is of course 90%."
+
