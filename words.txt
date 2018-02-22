@@ -875,6 +875,7 @@ canvas
 cap
 capabilities
 capable
+capers
 capital
 capitalism
 capitalists
@@ -1584,6 +1585,7 @@ cushioned
 custom
 customer
 customer's
+customer-reported
 customers
 customers'
 cut
@@ -2045,6 +2047,7 @@ drawback
 drawbacks
 drawing
 drawn
+DRE
 dream
 dreaming
 dreams
@@ -3634,6 +3637,7 @@ jokes
 joking
 joKX
 jon
+jones
 joseph
 joshua
 journal
@@ -5665,6 +5669,7 @@ rendering
 renounce
 rent
 repair
+repaired
 repeat
 repeated
 repeating
