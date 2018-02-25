@@ -21,7 +21,7 @@ nospell: true
 Every Saturday morning I'm having breakfast in some coffee shop
 around my living place. This page contains the up-to-date information about
 the place. Just check it and find me there. We will have a chat
-and a cup of tea/coffee.
+and a <del>cup of tea/coffee</del> breakfast.
 
 Next meeting on: 3-Mar-2018.
 
