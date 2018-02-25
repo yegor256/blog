@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-25T10:30:10+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Microvesting</title><link href="http://www.yegor256.com/2018/02/13/micro-vesting.html" rel="alternate" type="text/html" title="Microvesting" /><published>2018-02-13T00:00:00+00:00</published><updated>2018-02-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/13/micro-vesting</id><content type="html" xml:base="http://www.yegor256.com/2018/02/13/micro-vesting.html">&lt;p&gt;Most startups don&amp;#39;t have enough cash to pay programmers as much as
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-25T17:22:19+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Microvesting</title><link href="http://www.yegor256.com/2018/02/13/micro-vesting.html" rel="alternate" type="text/html" title="Microvesting" /><published>2018-02-13T00:00:00+00:00</published><updated>2018-02-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/13/micro-vesting</id><content type="html" xml:base="http://www.yegor256.com/2018/02/13/micro-vesting.html">&lt;p&gt;Most startups don&amp;#39;t have enough cash to pay programmers as much as
 they deserve, &lt;a href=&quot;/2016/01/12/good-programmers-dont-work-for-equity.html&quot;&gt;unfortunately&lt;/a&gt;
 (or maybe not). Instead of cash, startups give their early employees
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Stock#Shares&quot;&gt;shares of stock&lt;/a&gt;, which they will be able to either 1)
@@ -66,7 +66,7 @@ can influence programmers&amp;#39; motivation.&lt;/p&gt;
 &lt;p&gt;No need to &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;lie&lt;/a&gt; to
 them about big-money milestones or keep them in the office
 for four years. Just let them be focused on the results they can produce and
-give them back what they deserve. Incrementally. That&amp;#39;s it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="startup" /><summary type="html">Most startups don&amp;#39;t have enough cash to pay programmers as much as
+give them back what they deserve. Incrementally. That&amp;#39;s it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="startup" /><category term="zerocracy" /><summary type="html">Most startups don&amp;#39;t have enough cash to pay programmers as much as
 they deserve, unfortunately
 (or maybe not). Instead of cash, startups give their early employees
 shares of stock, which they will be able to either 1)
@@ -315,6 +315,8 @@ we want to prefix all attribute references with &lt;code&gt;this.&lt;/code&gt;, 
 code to be formatted the same way, since we believe that the uniformity
 of the code seriously increases its maintainability.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Of course, we could create a tool, but in that case you would never learn what the project wants from you and why.&lt;/aside&gt;
+
 &lt;p&gt;Of course, we could create a tool which you could then use to re-format
 the code, to make it look the way we want. But in that case you would
 never &lt;em&gt;learn&lt;/em&gt; what the project wants from you and &lt;em&gt;why&lt;/em&gt;.&lt;/p&gt;
@@ -360,6 +362,8 @@ and fixed estimate. Everything else that didn&amp;#39;t fit&amp;mdash;programmer
 to reject. This model didn&amp;#39;t really work either, because our managers had
 to deal with a very large amount of rejected tasks and didn&amp;#39;t know how to make
 them smaller, since they were not programmers.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;The beauty of this approach is that the task of scope decomposition is moved to the shoulders of programmers.&lt;/aside&gt;
 
 &lt;p&gt;Finally, in March 2010 we found a solution, which was labeled
 &lt;a href=&quot;/2010/03/04/pdd.html&quot;&gt;Puzzle Driven Development&lt;/a&gt; (PDD). According to
