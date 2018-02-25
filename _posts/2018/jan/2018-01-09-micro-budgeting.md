@@ -52,6 +52,8 @@ to reject. This model didn't really work either, because our managers had
 to deal with a very large amount of rejected tasks and didn't know how to make
 them smaller, since they were not programmers.
 
+{% quote The beauty of this approach is that the task of scope decomposition is moved to the shoulders of programmers. %}
+
 Finally, in March 2010 we found a solution, which was labeled
 [Puzzle Driven Development]({% pst 2010/mar/2010-03-04-pdd %}) (PDD). According to
 this concept: 1) Any task has a very small fixed budget (we use 30 minutes);
