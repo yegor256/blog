@@ -80,6 +80,8 @@ class Color {
 
 Which one do you like better?
 
+{% quote Giving birth to an object through its constructor is the most "sacred" moment in any object-oriented software, don't miss the beauty of it! %}
+
 According to Joshua Bloch, there are three basic advantages
 to using static factory methods instead of constructors (there
 are actually four, but the fourth one is not applicable to Java
