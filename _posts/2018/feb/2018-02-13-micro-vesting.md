@@ -3,7 +3,7 @@ layout: post
 title: "Microvesting"
 date: 2018-02-13
 place: Moscow, Russia
-tags: startup
+tags: startup zerocracy
 description: |
   At early stages in most startups programmers work
   for shares instead of cash; here is how Zerocracy

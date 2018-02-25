@@ -46,6 +46,8 @@ know JavaScript, and DevOps, and GitHub, and even Big Data. They definitely
 are the best. Moreover, they've been in this business for ten years. What else
 do you need, right?
 
+{% quote Finally, you lose when you realize that it's their software, not yours. %}
+
 Second, you **pay** them. How else would they work, right? True talent
 is expensive, we all [know that]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
 They bill you [regularly]({% pst 2014/oct/2014-10-21-incremental-billing %})

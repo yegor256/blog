@@ -3,7 +3,7 @@ layout: post
 title: "How Micro Is Your Tasking?"
 date: 2017-11-28
 place: Moscow, Russia
-tags: management
+tags: management xdsd
 description: |
   Micro-tasking is a management paradigm we've been
   practicing for over eight years, to the benefit
