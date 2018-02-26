@@ -26,7 +26,7 @@ system is through [data transfer objects]({% pst 2016/jul/2016-07-06-data-transf
 which are serialized into JSON before going out
 and deserialized when coming back. This way is as much popular as it is wrong. The
 serialization part should be replaced by [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),
-which I explained ealier.
+which I explained earlier.
 Here is my take on deserialization, which should be done by&mdash;guess what&mdash;objects.
 
 <!--more-->
@@ -135,7 +135,7 @@ public class TkUpload implements Take {
 }
 {% endhighlight %}
 
-Isn't that more elegant.
+Isn't that more elegant?
 
 Here are some examples from my projects:
 [RqUser](https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java)
