@@ -21,11 +21,11 @@ jb_picture:
 
 <!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 -->
 
-The traditional way of integrating object-oriented backend with an external
+The traditional way of integrating object-oriented back-end with an external
 system is through [data transfer objects]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
 which are serialized into JSON before going out
-and deserialized from it when coming back. This way is as much popular as it is wrong. The
-serialialization part should be replaced by [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),
+and deserialized when coming back. This way is as much popular as it is wrong. The
+serialization part should be replaced by [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),
 which I explained ealier.
 Here is my take on deserialization, which should be done by&mdash;guess what&mdash;objects.
 
@@ -33,7 +33,7 @@ Here is my take on deserialization, which should be done by&mdash;guess what&mda
 
 {% jb_picture_body %}
 
-Say, there is a back-end entry point, which is supposed to register a new
+Say there is a back-end entry point, which is supposed to register a new
 book in the library, arriving in JSON:
 
 {% highlight json %}
@@ -44,8 +44,8 @@ book in the library, arriving in JSON:
 }
 {% endhighlight %}
 
-Say, there is an object of class `Library`, which expects an object of type
-`Book` to its method `register()`:
+Also, there is an object of class `Library`, which expects an object of type
+`Book` to be given to its method `register()`:
 
 {% highlight java %}
 class Library {
@@ -55,7 +55,7 @@ class Library {
 }
 {% endhighlight %}
 
-Say, type `Book` has a simple method `isbn()`:
+Say also, type `Book` has a simple method `isbn()`:
 
 {% highlight java %}
 interface Book {
@@ -68,7 +68,7 @@ Now, here is the HTTP entry point
 and [Cactoos]({% pst 2017/jun/2017-06-22-object-oriented-input-output-in-cactoos %})),
 which is accepting
 a POST [`multipart/form-data`](https://www.ietf.org/rfc/rfc2045.txt)
-request and registers the book in the library:
+request and registering the book in the library:
 
 {% highlight java %}
 public class TkUpload implements Take {
@@ -88,10 +88,10 @@ public class TkUpload implements Take {
 }
 {% endhighlight %}
 
-What is wrong with this? A few things.
+What is wrong with this? Well, a few things.
 
-First, it's not reusable. If we would need something similar in a different
-place, we will have to write this HTTP processing and JSON parsing again.
+First, it's not reusable. If we were to need something similar in a different
+place, we would have to write this HTTP processing and JSON parsing again.
 
 Second, error handling and validation are not reusable either. If we add
 it to the method above, we will have to copy it everywhere. Of course,
@@ -135,7 +135,7 @@ public class TkUpload implements Take {
 }
 {% endhighlight %}
 
-Isn't it more elegant.
+Isn't that more elegant.
 
 Here are some examples from my projects:
 [RqUser](https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java)
@@ -143,9 +143,9 @@ from [zerocracy/farm](https://github.com/zerocracy/farm/) and
 [RqUser](https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java)
 from [yegor256/jare](https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java).
 
-As you see from the examples above, sometimes we can't use `implements`
-because some primitives in Java are not interfaces, but `final` classes:
-`String` is a "perfect" example. That's why I have to do:
+As you can see from the examples above, sometimes we can't use `implements`
+because some primitives in Java are not interfaces but `final` classes:
+`String` is a "perfect" example. That's why I have to do this:
 
 {% highlight java %}
 class RqUser implements Scalar<String> {
@@ -156,5 +156,5 @@ class RqUser implements Scalar<String> {
 }
 {% endhighlight %}
 
-But aside from that, those examples perfectly demonstrate the principle
+But aside from that, these examples perfectly demonstrate the principle
 of "parsing objects" suggested above.
