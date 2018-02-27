@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't Parse, Use Parsing Objects"
-date: 2018-02-20
+date: 2018-02-27
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - perfection vs speed
   - speed or perfection
   - speed is king
-image: /images/2017/02/...
+image: /images/2018/02/la-science-des-reves.jpg
 jb_picture:
-  caption:
+  caption: La science des rêves (2006) by Michel Gondry
 ---
 
 <!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 -->
