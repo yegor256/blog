@@ -138,9 +138,9 @@ public class TkUpload implements Take {
 Isn't that more elegant?
 
 Here are some examples from my projects:
-[RqUser](https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java)
+[`RqUser`](https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java)
 from [zerocracy/farm](https://github.com/zerocracy/farm/) and
-[RqUser](https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java)
+[`RqUser`](https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java)
 from [yegor256/jare](https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java).
 
 As you can see from the examples above, sometimes we can't use `implements`
