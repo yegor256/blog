@@ -365,6 +365,7 @@ array
 arrays
 arrive
 arrives
+arriving
 arrogant
 arrow
 arrows
@@ -1784,6 +1785,8 @@ describes
 description
 descriptions
 descriptive
+deserialization
+deserialized
 deserve
 deserves
 deserving
@@ -3422,6 +3425,7 @@ integers
 integrate
 integrated
 integrates
+integrating
 integration
 integrations
 intel
@@ -6089,6 +6093,8 @@ sequentially
 seratch
 sergey
 sergio
+serialization
+serialized
 serializers
 series
 serious

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Don't Parse, Use Parsing Objects</title>
+    <link rel="canonical" href="http://www.yegor256.com/2018/02/27/parsing-objects.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2018/02/27/parsing-objects.html"
+        },
+        "headline": "Don't Parse, Use Parsing Objects",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/02/la-science-des-reves.jpg",
+          "height": 900,
+          "width": 1600
+        },
+        "datePublished": "2018-02-27",
+        "dateModified": "2018-02-27",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "When project scope is perfectly decomposed and management
+rules are clear and strict, the speed of delivery
+is a virtue, not the quality.
+",
+        "keywords": ["quality vs speed", "speed vs quality", "perfection vs speed", "speed or perfection", "speed is king"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('http://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="http://www.yegor256.com/2018/02/27/parsing-objects.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>27 February 2018</p>
+      <h1>Don't Parse, Use Parsing Objects</h1>
+      
+
+<p>The traditional way of integrating object-oriented back-end with an external
+system is through <a href="/2016/07/06/data-transfer-object.html">data transfer objects</a>,
+which are serialized into JSON before going out
+and deserialized when coming back. This way is as much popular as it is wrong. The
+serialization part should be replaced by <a href="/2016/04/05/printers-instead-of-getters.html">printers</a>,
+which I explained earlier.
+Here is my take on deserialization, which should be done by—guess what—objects.</p>
+
+
+
+<amp-img src="/images/2018/02/la-science-des-reves.jpg" alt="La science des rêves (2006) by Michel Gondry" height="900" width="1600" layout="responsive"></amp-img>
+
+<p>Say there is a back-end entry point, which is supposed to register a new
+book in the library, arriving in JSON:</p>
+
+<pre>{
+  "title": "Object Thinking",
+  "isbn: "0735619654",
+  "author: "David West"
+}</pre>
+
+<p>Also, there is an object of class <code>Library</code>, which expects an object of type
+<code>Book</code> to be given to its method <code>register()</code>:</p>
+
+<pre>class Library {
+  public void register(Book book) {
+    // Create a new record in the database
+  }
+}</pre>
+
+<p>Say also, type <code>Book</code> has a simple method <code>isbn()</code>:</p>
+
+<pre>interface Book {
+  String isbn();
+}</pre>
+
+<p>Now, here is the HTTP entry point
+(I'm using <a href="/2015/03/22/takes-java-web-framework.html">Takes</a>
+and <a href="/2017/06/22/object-oriented-input-output-in-cactoos.html">Cactoos</a>),
+which is accepting
+a POST <a href="https://www.ietf.org/rfc/rfc2045.txt"><code>multipart/form-data</code></a>
+request and registering the book in the library:</p>
+
+<pre>public class TkUpload implements Take {
+  private final Library library;
+  @Override
+  public Response act(Request req) {
+    String body = new RqPrint(
+      new RqMtSmart(new RqMtBase(req)).single("book")
+    ).printBody();
+    JsonObject json = Json.createReader(
+      new InputStreamOf(body)
+    ).readObject();
+    Book book = new BookDTO();
+    book.setIsbn(json.getString("isbn"));
+    library.register(book);
+  }
+}</pre>
+
+<p>What is wrong with this? Well, a few things.</p>
+
+<p>First, it's not reusable. If we were to need something similar in a different
+place, we would have to write this HTTP processing and JSON parsing again.</p>
+
+<p>Second, error handling and validation are not reusable either. If we add
+it to the method above, we will have to copy it everywhere. Of course,
+the DTO may encapsulate it, but that's not what DTOs are usually for.</p>
+
+<p>Third, the code above is rather procedural and has a lot of
+<a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>.</p>
+
+<p>A better design would be to hide this parsing inside a new class <code>JsonBook</code>:</p>
+
+<pre>class JsonBook implements Book {
+  private final String json;
+  JsonBook(String body) {
+    this.json = body;
+  }
+  @Override
+  public String isbn() {
+    return Json.createReader(
+      new InputStreamOf(body)
+    ).readObject().getString("isbn");
+  }
+}</pre>
+
+<p>Then, the RESTful entry point will look like this:</p>
+
+<pre>public class TkUpload implements Take {
+  private final Library library;
+  @Override
+  public Response act(Request req) {
+    library.register(
+      new JsonBook(
+        new RqPrint(
+          new RqMtSmart(new RqMtBase(req)).single("book")
+        ).printBody()
+      )
+    );
+  }
+}</pre>
+
+<p>Isn't that more elegant?</p>
+
+<p>Here are some examples from my projects:
+<a href="https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java"><code>RqUser</code></a>
+from <a href="https://github.com/zerocracy/farm/">zerocracy/farm</a> and
+<a href="https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java"><code>RqUser</code></a>
+from <a href="https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java">yegor256/jare</a>.</p>
+
+<p>As you can see from the examples above, sometimes we can't use <code>implements</code>
+because some primitives in Java are not interfaces but <code>final</code> classes:
+<code>String</code> is a "perfect" example. That's why I have to do this:</p>
+
+<pre>class RqUser implements Scalar&lt;String&gt; {
+  @Override
+  public String value() {
+    // Parsing happens here and returns String
+  }
+}</pre>
+
+<p>But aside from that, these examples perfectly demonstrate the principle
+of "parsing objects" suggested above.</p>
+
+    </article>
+  </body>
+</html>

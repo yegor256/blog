@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-26T20:32:48+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Microvesting</title><link href="http://www.yegor256.com/2018/02/13/micro-vesting.html" rel="alternate" type="text/html" title="Microvesting" /><published>2018-02-13T00:00:00+00:00</published><updated>2018-02-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/13/micro-vesting</id><content type="html" xml:base="http://www.yegor256.com/2018/02/13/micro-vesting.html">&lt;p&gt;Most startups don&amp;#39;t have enough cash to pay programmers as much as
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-02-27T13:09:15+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Parse, Use Parsing Objects</title><link href="http://www.yegor256.com/2018/02/27/parsing-objects.html" rel="alternate" type="text/html" title="Don&#39;t Parse, Use Parsing Objects" /><published>2018-02-27T00:00:00+00:00</published><updated>2018-02-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/27/parsing-objects</id><content type="html" xml:base="http://www.yegor256.com/2018/02/27/parsing-objects.html">&lt;!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 --&gt;
+
+&lt;p&gt;The traditional way of integrating object-oriented back-end with an external
+system is through &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;data transfer objects&lt;/a&gt;,
+which are serialized into JSON before going out
+and deserialized when coming back. This way is as much popular as it is wrong. The
+serialization part should be replaced by &lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;printers&lt;/a&gt;,
+which I explained earlier.
+Here is my take on deserialization, which should be done by&amp;mdash;guess what&amp;mdash;objects.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La science des rêves (2006) by Michel Gondry&#39; src=&#39;/images/2018/02/la-science-des-reves.jpg&#39; longdesc=&#39;#bad54f07&#39;/&gt;&lt;figcaption id=&#39;bad54f07&#39;&gt;La science des rêves (2006) by Michel Gondry&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Say there is a back-end entry point, which is supposed to register a new
+book in the library, arriving in JSON:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;quot;isbn: &amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0735619654&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;  &amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;David West&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Also, there is an object of class &lt;code&gt;Library&lt;/code&gt;, which expects an object of type
+&lt;code&gt;Book&lt;/code&gt; to be given to its method &lt;code&gt;register()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Library&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Create a new record in the database&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Say also, type &lt;code&gt;Book&lt;/code&gt; has a simple method &lt;code&gt;isbn()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, here is the HTTP entry point
+(I&amp;#39;m using &lt;a href=&quot;/2015/03/22/takes-java-web-framework.html&quot;&gt;Takes&lt;/a&gt;
+and &lt;a href=&quot;/2017/06/22/object-oriented-input-output-in-cactoos.html&quot;&gt;Cactoos&lt;/a&gt;),
+which is accepting
+a POST &lt;a href=&quot;https://www.ietf.org/rfc/rfc2045.txt&quot;&gt;&lt;code&gt;multipart/form-data&lt;/code&gt;&lt;/a&gt;
+request and registering the book in the library:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkUpload&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Library&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqPrint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtSmart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;JsonObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BookDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIsbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;What is wrong with this? Well, a few things.&lt;/p&gt;
+
+&lt;p&gt;First, it&amp;#39;s not reusable. If we were to need something similar in a different
+place, we would have to write this HTTP processing and JSON parsing again.&lt;/p&gt;
+
+&lt;p&gt;Second, error handling and validation are not reusable either. If we add
+it to the method above, we will have to copy it everywhere. Of course,
+the DTO may encapsulate it, but that&amp;#39;s not what DTOs are usually for.&lt;/p&gt;
+
+&lt;p&gt;Third, the code above is rather procedural and has a lot of
+&lt;a href=&quot;/2015/12/08/temporal-coupling-between-method-calls.html&quot;&gt;temporal coupling&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A better design would be to hide this parsing inside a new class &lt;code&gt;JsonBook&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JsonBook&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;JsonBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, the RESTful entry point will look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkUpload&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Library&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JsonBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqPrint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtSmart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Isn&amp;#39;t that more elegant?&lt;/p&gt;
+
+&lt;p&gt;Here are some examples from my projects:
+&lt;a href=&quot;https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java&quot;&gt;&lt;code&gt;RqUser&lt;/code&gt;&lt;/a&gt;
+from &lt;a href=&quot;https://github.com/zerocracy/farm/&quot;&gt;zerocracy/farm&lt;/a&gt; and
+&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java&quot;&gt;&lt;code&gt;RqUser&lt;/code&gt;&lt;/a&gt;
+from &lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java&quot;&gt;yegor256/jare&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As you can see from the examples above, sometimes we can&amp;#39;t use &lt;code&gt;implements&lt;/code&gt;
+because some primitives in Java are not interfaces but &lt;code&gt;final&lt;/code&gt; classes:
+&lt;code&gt;String&lt;/code&gt; is a &amp;quot;perfect&amp;quot; example. That&amp;#39;s why I have to do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RqUser&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Scalar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Parsing happens here and returns String&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;But aside from that, these examples perfectly demonstrate the principle
+of &amp;quot;parsing objects&amp;quot; suggested above.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">The traditional way of integrating object-oriented back-end with an external
+system is through data transfer objects,
+which are serialized into JSON before going out
+and deserialized when coming back. This way is as much popular as it is wrong. The
+serialization part should be replaced by printers,
+which I explained earlier.
+Here is my take on deserialization, which should be done by&amp;mdash;guess what&amp;mdash;objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/02/la-science-des-reves.jpg" /></entry><entry><title type="html">Microvesting</title><link href="http://www.yegor256.com/2018/02/13/micro-vesting.html" rel="alternate" type="text/html" title="Microvesting" /><published>2018-02-13T00:00:00+00:00</published><updated>2018-02-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/13/micro-vesting</id><content type="html" xml:base="http://www.yegor256.com/2018/02/13/micro-vesting.html">&lt;p&gt;Most startups don&amp;#39;t have enough cash to pay programmers as much as
 they deserve, &lt;a href=&quot;/2016/01/12/good-programmers-dont-work-for-equity.html&quot;&gt;unfortunately&lt;/a&gt;
 (or maybe not). Instead of cash, startups give their early employees
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Stock#Shares&quot;&gt;shares of stock&lt;/a&gt;, which they will be able to either 1)
@@ -809,102 +939,4 @@ the first object-oriented language,
 said
 in 1998 about OOP. He literally said that the very
 term &amp;quot;object&amp;quot; was misleading and a more appropriate one would be &amp;quot;messaging.&amp;quot;
-Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/rain-man.jpg" /></entry><entry><title type="html">DAO is Yet Another OOP Shame</title><link href="http://www.yegor256.com/2017/12/05/data-access-object.html" rel="alternate" type="text/html" title="DAO is Yet Another OOP Shame" /><published>2017-12-05T00:00:00+00:00</published><updated>2017-12-05T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/05/data-access-object</id><content type="html" xml:base="http://www.yegor256.com/2017/12/05/data-access-object.html">&lt;p&gt;Someone asked me what I think about DAO and I realized that, even
-though I wrote about
-&lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM&lt;/a&gt;,
-&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTO&lt;/a&gt;,
-and
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt;,
-I haven&amp;#39;t had a chance
-yet to mention DAO. Here is my take on it: it&amp;#39;s as much of a shame
-as its friends&amp;mdash;ORM, DTO, and getters. In a nutshell,
-a &lt;a href=&quot;http://www.oracle.com/technetwork/java/dataaccessobject-138824.html&quot;&gt;Data Access Object&lt;/a&gt;
-is an object &lt;a href=&quot;https://en.wikipedia.org/wiki/Data_access_object&quot;&gt;that&lt;/a&gt;
-&amp;quot;provides an abstract interface to some type of database or other
-persistence mechanism.&amp;quot; The purpose is noble, but the implementation
-is terrible.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Requiem for a Dream (2000) by Darren Aronofsky&#39; src=&#39;/images/2017/12/requiem-for-a-dream.jpg&#39; longdesc=&#39;#edf81e4e&#39;/&gt;&lt;figcaption id=&#39;edf81e4e&#39;&gt;Requiem for a Dream (2000) by Darren Aronofsky&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is how it &lt;a href=&quot;https://stackoverflow.com/a/19154487/187141&quot;&gt;may look&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BookDAO&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// Other methods here ...&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The idea is simple&amp;mdash;method &lt;code&gt;find()&lt;/code&gt; creates
-a &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTO&lt;/a&gt;
-&lt;code&gt;Book&lt;/code&gt;, someone else injects new data into it and calls &lt;code&gt;update()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BookDAO&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BookDAOFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBookDAO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Don Quixote&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dao&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What is wrong, you ask? Everything that was wrong with
-&lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM&lt;/a&gt;,
-but instead of a &amp;quot;session&amp;quot; we have this DAO. The problem remains the
-same: the &lt;code&gt;book&lt;/code&gt; is not an object, but a data container. I quote
-my own three-year-old statement from the &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM article&lt;/a&gt;,
-with a slight change in the name:
-&amp;quot;DAO, instead of encapsulating database interaction inside an object,
-extracts it away, literally tearing a solid and cohesive living organism apart.&amp;quot;
-For more details, please check that article.&lt;/p&gt;
-
-&lt;p&gt;However, I have to say that I have something like DAOs in most of my
-&lt;a href=&quot;/pets.html&quot;&gt;pet projects&lt;/a&gt;, but they
-don&amp;#39;t return or accept DTOs. Instead, they return objects and sometimes accept
-operations on them. Here are a few examples. Look at this
-&lt;a href=&quot;https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java&quot;&gt;&lt;code&gt;Pipes&lt;/code&gt;&lt;/a&gt;
-interface from
-&lt;a href=&quot;/2016/03/15/wring-dispatcher-github-notifications.html&quot;&gt;Wring.io&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Pipes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Pipe&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Its method &lt;a href=&quot;https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L55&quot;&gt;&lt;code&gt;add()&lt;/code&gt;&lt;/a&gt;
-creates a new item in the &amp;quot;collection&amp;quot; and method
-&lt;a href=&quot;https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L62&quot;&gt;&lt;code&gt;pipe()&lt;/code&gt;&lt;/a&gt;
-returns a single object from the collection. The
-&lt;a href=&quot;https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java&quot;&gt;&lt;code&gt;Pipe&lt;/code&gt;&lt;/a&gt;
-is not a DTO, it is
-a normal object that is fully capable of doing all necessary database
-operations, without any help from a DAO. For example, there is
-&lt;a href=&quot;https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java#L63&quot;&gt;&lt;code&gt;Pipe.status(String)&lt;/code&gt;&lt;/a&gt;
-method to update its status. I&amp;#39;m not going to use &lt;code&gt;Pipes&lt;/code&gt; for that, I just do
-&lt;code&gt;pipe.status(&amp;quot;Hello, world!&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here is yet another example from
-&lt;a href=&quot;/2016/03/30/jare-instant-free-cdn.html&quot;&gt;Jare.io&lt;/a&gt;: interface
-&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Base.java&quot;&gt;&lt;code&gt;Base&lt;/code&gt;&lt;/a&gt;
-which returns a list of objects of type
-&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java&quot;&gt;&lt;code&gt;Domain&lt;/code&gt;&lt;/a&gt;.
-Then, when we want to delete a domain, we just call
-&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java#L54&quot;&gt;&lt;code&gt;domain.delete()&lt;/code&gt;&lt;/a&gt;.
-The domain is fully capable of doing all necessary database manipulations.&lt;/p&gt;
-
-&lt;p&gt;The problem with DAO is right in its name, I believe. It says that we are
-accessing &amp;quot;data&amp;quot; and does exactly that: goes to the database, retrieves
-some data, and returns &lt;em&gt;data&lt;/em&gt;. Not an object, but data, also known as a
-&amp;quot;data transfer object.&amp;quot; As we &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;discussed before&lt;/a&gt;,
-direct data manipulations are what break encapsulation and make
-object-oriented code procedural and unmaintainable.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Someone asked me what I think about DAO and I realized that, even
-though I wrote about
-ORM,
-DTO,
-and
-getters,
-I haven&amp;#39;t had a chance
-yet to mention DAO. Here is my take on it: it&amp;#39;s as much of a shame
-as its friends&amp;mdash;ORM, DTO, and getters. In a nutshell,
-a Data Access Object
-is an object that
-&amp;quot;provides an abstract interface to some type of database or other
-persistence mechanism.&amp;quot; The purpose is noble, but the implementation
-is terrible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/requiem-for-a-dream.jpg" /></entry></feed>
+Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/rain-man.jpg" /></entry></feed>
