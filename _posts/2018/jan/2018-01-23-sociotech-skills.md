@@ -14,6 +14,8 @@ keywords:
   - coder vs developer
   - coder
   - developer
+translated:
+  - Polish: https://bulldogjob.pl/news/321-jestes-deweloperem-czy-tylko-kodujesz
 image: /images/2018/01/hardmen.jpg
 jb_picture:
   caption: Hard Men (1996) by J.K. Amalou
