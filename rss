@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-03-04T08:15:14+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Parse, Use Parsing Objects</title><link href="http://www.yegor256.com/2018/02/27/parsing-objects.html" rel="alternate" type="text/html" title="Don&#39;t Parse, Use Parsing Objects" /><published>2018-02-27T00:00:00+00:00</published><updated>2018-02-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/27/parsing-objects</id><content type="html" xml:base="http://www.yegor256.com/2018/02/27/parsing-objects.html">&lt;!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 --&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-03-04T08:56:23+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Parse, Use Parsing Objects</title><link href="http://www.yegor256.com/2018/02/27/parsing-objects.html" rel="alternate" type="text/html" title="Don&#39;t Parse, Use Parsing Objects" /><published>2018-02-27T00:00:00+00:00</published><updated>2018-02-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/27/parsing-objects</id><content type="html" xml:base="http://www.yegor256.com/2018/02/27/parsing-objects.html">&lt;!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 --&gt;
 
 &lt;p&gt;The traditional way of integrating object-oriented back-end with an external
 system is through &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;data transfer objects&lt;/a&gt;,
@@ -155,6 +155,8 @@ they get nothing. There could be
 &lt;a href=&quot;https://medium.com/@ipaullee/let-s-revise-the-vesting-schedule-for-startup-founders-and-employees-7817fcb301ea&quot;&gt;slight modifications&lt;/a&gt;
 to the numbers, of course.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;Most vesting formulas are perfectly aligned with the popular &amp;quot;be nice&amp;quot; paradigm and is not beneficial, either to the company or to its slaves.&lt;/aside&gt;
+
 &lt;p&gt;The disadvantage of this approach is that their primary motivation is
 to stay in the company, instead of achieving results. This vesting
 formula is perfectly aligned with the popular
@@ -181,6 +183,8 @@ investments come to those who can &lt;del&gt;fool&lt;/del&gt;
 &lt;a href=&quot;/2016/03/28/unspoken-secrets-of-elevator-pitch.html&quot;&gt;pitch&lt;/a&gt; an investor,
 not to those who write the best Java code. Thus, the work programmers do
 and the &amp;quot;value events&amp;quot; the startup is aiming to reach are pretty much disconnected.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Using microvesting with valuation and hourly rate the company can influence programmers&amp;#39; motivation.&lt;/aside&gt;
 
 &lt;p&gt;A more logical formula is &lt;strong&gt;microvesting&lt;/strong&gt;, which we practice in projects managed
 by &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;. It is as simple as that: A company has
