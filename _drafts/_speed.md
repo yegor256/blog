@@ -19,6 +19,8 @@ jb_picture:
   caption:
 ---
 
+<!-- http://www.yegor256.com/2017/11/28/microtasking.html#comment-3783321466 -->
+
 I decided to write this blog post after reviewing
 [this pull request](https://github.com/yegor256/jpeek/pull/153). What happened
 there? The author of the PR wasn't able to figure out what was
