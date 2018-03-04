@@ -325,3 +325,4 @@ Look at these samples (they are good):
 [`@dozortsev`](/pdf/resumes/anton-dozortsev.pdf),
 [`@leventov`](/pdf/resumes/roman-leventov.pdf).
 
+Here is [mine](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887).
