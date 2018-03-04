@@ -1,0 +1,214 @@
+\documentclass[12pt]{article}
+\usepackage{xcolor}
+  \definecolor{yb-blue}{rgb}{0,0.5765,0.8196}
+\usepackage{hyperref}
+  \hypersetup{colorlinks=true,urlcolor=yb-blue,pdfborder={0 0 0}}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos}
+  \TPGrid{16}{16}
+\usepackage[top=2\TPVertModule, bottom=2\TPVertModule, left=3\TPHorizModule, right=2\TPHorizModule]{geometry}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \rhead{
+    \begin{textblock}{1}[0,0](0,0){
+      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (1,16);
+    }\end{textblock}
+  }
+  \rfoot{\small Page~\thepage}
+
+\begin{document}
+\setlength{\topskip}{0mm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\raggedright
+\interfootnotelinepenalty=10000
+
+\begin{textblock}{2.4}[1,0](14,2){
+  \includegraphics[width=\textwidth]{../images/face-1200x1200.jpg}
+}\end{textblock}
+
+\section*{Yegor Bugayenko}
+
+\href{mailto:yegor256@gmail.com}{yegor256@gmail.com}\\ %
+\href{http://www.yegor256.com}{www.yegor256.com}\\% 
+(408) 692-4742\\%
+\href{https://github.com/yegor256}{GitHub} /
+\href{https://stackexchange.com/users/63162/yegor256}{StackOverflow} /
+\href{https://www.linkedin.com/in/yegor256}{LinkedIn} /
+\href{https://twitter.com/intent/follow?screen_name=yegor256}{Twitter} /
+\href{https://www.facebook.com/yegor256}{Facebook}
+
+\subsection*{Seasoned Software Architect}
+
+SCEA and PMP certified software developer and architect with
+25+ years of engineering in complex projects and distributed software
+development teams. Strong background in object-oriented analysis and design
+with Java and C++. Took participation in over 150 successful projects,
+including for IBM, Intel, and Expedia. \href{http://www.yegor256.com/pets.html}{Founder}
+and \href{https://github.com/yegor256}{active contributor} of
+a few open source projects. Author of
+\href{http://www.yegor256.com/elegant-objects.html}{Elegant Objects}
+book series about object-oriented programming,
+regular \href{http://www.yegor256.com/talks.html}{speaker} at software conferences, regular software
+\href{http://www.yegor256.com}{blogger}.
+
+\subsection*{Hands-on Expertise}
+
+Java, OOP, Spring MVC, JSF, JPA/Hibernate, SOAP/JAX-WS,
+JAX-RS/REST/JSON, XML/XSLT/XSD, JAXB, Antlr3, Groovy/Grails, Hadoop
+
+AWS S3/DynamoDB/EC2/EBT/SQS, Rackspace Cloud, Google Cloud
+
+Continuous Delivery/Integration, DevOps, TDD/BDD, Maven/Gradle
+
+Ruby, Ruby on Rails, Sinatra
+
+PHP, Zend Framework, jQuery/JavaScript, XHTML/CSS, Phing, PHPUnit
+
+PMBOK, XP/Agile, Scrum, RUP, MSF
+
+\subsection*{Recent Projects}
+
+2018. \textbf{Zerocracy.com} (USA): AI-Powered Management Platform.
+Designed and implemented a software platform for distributed developers;
+Hosted on AWS with MongoDB, DynamoDB, S3, EC2;
+The work is still in progress.
+
+2017. \textbf{Rultor.com} (USA): Continuous Delivery Cloud Platform (USA).
+Designed and implemented a multi-node distributed build reactor;
+AWS cloud hosting, via S3/EC2/CloudWatch;
+Automated PhantomJS/CasperJS integration tests;
+MongoDB, PostgreSQL, AWS DynamoDB/SQS/EC2/CF, CloudBees.
+
+2013. \textbf{VakantieVeilingen.nl}: Auctioning Platform (The Netherlands).
+Introduced unit testing, continuous delivery, and quality control techniques;
+Automated pre-flight building mechanism;
+Refactored Zend Framework based application with over 2mln hits per day;
+PHP 5.3, PHPUnit, Ant, Jenkins, Vagrant, Chef, PhantomJS/CasperJS.
+
+2012. \textbf{Netbout.com}: User Interface On-Demand.
+Designed and developed a scalable solution on top of Amazon EBT/S3/CF/EC2;
+Presented the product on a few VC forums in Silicon Valley;
+HTML5/CSS3/jQuery, threads, Velocity, JUnit, Mockito, Facebook API, jQuery, MySQL.
+
+2011. \textbf{Expinia.com}: Semantic Search Engine.
+Designed and developed a search engine on top of Apache Lucene and Mallet;
+Resolved performance and scalability issues (over 20M entities updated daily);
+Implemented web layout in HTML5/CSS3;
+Lucene 3.5, RDF, Mallet, RSS/Atom, RDF, H2 Database, MySQL, OAuth/LinkedIn.
+
+\subsection*{Work Experience}
+
+\textbf{Zerocracy, Inc.} (Palo Alto, CA), 05/00--present.
+CTO/Lead Software Architect for Software development general contractor with offices in Florida, Eastern Europe and India.
+Coordinating work of multiple multi-national software teams;
+Overseeing management, design, programming, testing, and delivery;
+Over 120 successful software projects for customers from North America and Europe;
+Serving as point of contact for all strategic and technology governance-related issues;
+Prepared and successfully passed ISO:9001 company certification;
+Defined and incorporated CMMI Level 4 management standards;
+Controlled implementation and patenting of an enterprise project management toolkit.
+
+\textbf{MIKA Co.} (Ukraine), 04/93--04/00.
+Lead Software Developer and Technical Project Manager for Weighing and scaling equipment manufacturer.
+Created and maintained project management and technical documentation;
+Acted as liaison between all departments;
+Created and reported daily status of projects;
+Team leader on numerous projects utilizing Java and C++ platforms;
+Created fully-integrated enterprise-wide information systems;
+Performed requirements analysis, design, implementation, testing, and maintenance;
+Hands-on programming in Java and C++.
+
+\subsection*{Certifications}
+
+Sun Certified Enterprise Architect (SCEA)
+
+Zend Certified Engineer (ZCE) in PHP5
+
+Zend Framework Certified Engineer (ZFCE)
+
+OMG Certified UML Professional (OCUP) Fundamental
+
+Project Management Professional (PMP)
+
+IBM Certified Solution Designer for RUP
+
+PRINCE2 Foundation Certified
+
+Microsoft Certified Professional (MCP), Managing, Organizing, and Delivering by Using MSF 3.0
+
+CompTIA Project+ Certified
+
+IBM Certified Specialist for Requirements Management w/Use Cases
+
+COSMIC v3.0 Certified
+
+\subsection*{Education}
+
+Master's Degree in Computer Science, 1993-1998\\
+Dnepropetrovsk National University, Ukraine\\
+Radio-Physics Department, Database Management Systems.
+
+\subsection*{Public and Open Source Initiatives}
+
+\href{http://www.takes.org}{Takes}: open source Java web framework
+
+\href{http://www.cactoos.org}{Cactoos}: object-oriented open source framework
+
+\href{http://www.jcabi.com}{JCabi}: Java AOP aspects, Maven plugins, objec wrappers, Java, 30K+ LOC
+
+\href{http://www.xembly.org}{Xembly}: XML manipulation language and library (Java and Ruby)
+
+\href{http://www.qulice.com}{Qulice}: Java static code analysis toolkit, Java, 10K+ LOC.
+
+IEEE P730 Software Quality Assurance Standard: volunteer.
+
+ACM: full member since April 1996.
+
+PMI: member since January 2007.
+
+IEEE: professional member since February 2007.
+
+\subsection*{Patents, Patent Applications}
+
+12/943,022 ``Method and Software of NetBout''
+
+12/840,306 ``Puzzle Driven Development (PDD) Method and Software''
+
+12/703,202 ``Project Management Robot Method and Software''
+
+12/264,370 ``Method and software for the measurement of quality of process''
+
+12/193,010 ``Method for software cost estimating using scope champions''
+
+\subsection*{Publications}
+
+\emph{How to Prevent SVN Conflicts in Distributed Agile PHP Projects},
+php|Architect, Aug 2010
+
+\emph{phpRack---Integration Testing Framework},
+php|Architect, Jun 2010
+
+\emph{FaZend Object Relational Mapping},
+php|Architect, Feb 2010
+
+\emph{Quality of Process Control in Software Projects},
+IWSM/Mensura, Amsterdam, Nov 2009
+
+\emph{Quality of Code Can be Planned and Controlled},
+VALID, Porto, Portugal, Sep 2009
+
+\emph{Competitive Risk Identification Method for Distributed Teams},
+SEAFOOD, Zurich, Jul 2009
+
+\emph{Method for Software Cost Estimating w/Scope Champions},
+PROFES, Oulu, Finland, Jun 2009
+
+\emph{The Interactive Databases Approach to the User Interface Modeling},
+KRDB, Seattle, May 1998
+
+\end{document}

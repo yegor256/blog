@@ -9,8 +9,17 @@
   \TPGrid{16}{16}
 \usepackage[top=2\TPVertModule, bottom=2\TPVertModule, left=3\TPHorizModule, right=2\TPHorizModule]{geometry}
 \usepackage{tikz}
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \rhead{
+    \begin{textblock}{1}[0,0](0,0){
+      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
+    }\end{textblock}
+  }
+
 \begin{document}
-\pagestyle{empty}
 \setlength{\topskip}{0mm}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{8pt}
@@ -18,16 +27,12 @@
 \large
 \interfootnotelinepenalty=10000
 
-\begin{textblock}{1}[0,0](0,0){
-  \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
-}\end{textblock}
-
 \begin{textblock}{2.4}[1,0](14,2){
   \includegraphics[width=\textwidth]{../images/face-1200x1200.jpg}
 }\end{textblock}
 
-\textbf{\Large Yeg\'or Bugay\'enko}\\
-\href{mailto:yegor256@gmail.com}{yegor256@gmail.com}\\ 
+\textbf{\Large Yeg\'or Bugay\'enko}\\%
+\href{mailto:yegor256@gmail.com}{yegor256@gmail.com}\\ %
 (408) 692-4742
 
 \vspace{2em}
