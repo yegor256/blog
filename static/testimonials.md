@@ -88,6 +88,8 @@ I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/
 
 " ... absolute and utter crap"&mdash;[Rashid](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3263735127)
 
+"By reading Yegor's blog it is obvious to see that Yegor is not an experienced developer"&mdash;[Timmey](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-3754430293)
+
 "Please, don't do any software design anymore."&mdash;[Alex](http://www.yegor256.com/2017/12/19/srp-is-hoax.html#comment-3682316386)
 
 "I quickly lost interest in your blog because you clearly are a dick."&mdash;[Philippe](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697848370)
