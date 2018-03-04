@@ -3,7 +3,7 @@ layout: post
 title: "How Micro Is Your Tasking?"
 date: 2017-11-28
 place: Moscow, Russia
-tags: management xdsd
+tags: management xdsd zerocracy
 description: |
   Micro-tasking is a management paradigm we've been
   practicing for over eight years, to the benefit
@@ -60,6 +60,8 @@ getting lazy, you control, you dominate, you annoy, you
 "stay on top," you play the guilt card when they miss or forget,
 you [punish]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})
 them every way you can.
+
+{% quote The more aggressive you are, the higher the chances you win. %}
 
 You don't do that because you're evil. You just know that otherwise they
 will trash your apartment, will forget things, will miss
@@ -145,6 +147,8 @@ into, say, 2,500+ micro tasks:
     [paying by result]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}) and
     [prohibition of chitchats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
+{% quote They are simply spoiled by the traditional macro-tasking where they are paid by the month and nobody really controls their results. %}
+
   * **Laziness**.
     Just like that apartment designers, programmers also love to get paid
     and do nothing. Who doesn't, right? They will tell you that their
@@ -196,7 +200,8 @@ we failed to apply it.
     Every project or a new big feature starts with a prototype, which
     requires one or two people sitting next to each other, thinking, and
     experimenting. We tried to break this piece of work into smaller
-    parts, but failed. It seems that this process has to be done as a single
+    parts, but failed. It [seems]({% pst 2014/oct/2014-10-06-software-project-lifecycle %})
+    that this process has to be done as a single
     solid work package.
 
   * **UI/UX**.
@@ -206,7 +211,8 @@ we failed to apply it.
     designers weren't able to decompose their tasks into smaller parts.
 
   * **Customers**.
-    We tried to decompose the task of eliciting requirements from our
+    We [tried]({% pst 2014/apr/2014-04-26-incremental-requirements-with-requs %})
+    to decompose the task of eliciting requirements from our
     clients and failed a few times. Maybe our clients were stupid
     (I doubt that), maybe requirements were too complex, or maybe
     our system analysts were not professional enough. The bottom line
@@ -231,7 +237,7 @@ more manageable, as was mentioned above. Here is a more detailed break
 down:
 
   * **Money works**.
-    When tasks are very small, we can use good old dollar bills
+    When tasks are very small, we can use [good old dollar bills]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
     to motivate programmers. We can throw away literally
     [all other]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
     instruments.
@@ -249,7 +255,8 @@ down:
     Despite a very common stereotype that small and isolated tasks demotivate
     their performers, we see quite the opposite reaction: programmers
     are excited when it finally becomes possible to work within well-defined
-    and explicit boundaries, independently, and in isolation. Not all of them, though.
+    and explicit boundaries, independently, and in isolation. Not all of them,
+    [though]({% pst 2018/jan/2018-01-09-micro-budgeting %}).
     My personal observation is: only 25% of them can understand and enjoy
     micro-tasking. Others are either not professional enough or spoiled
     by [office slavery]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
@@ -273,7 +280,8 @@ down:
   * **Metrics work**.
     When one programmer closes 40-50 tasks per week and another one closes
     5-10, it does mean something, keeping in mind that all tasks are almost
-    equal in size. We use this metric (and a few others) to make organizational
+    equal in size. We use this metric (and [a few others](https://www.0crat.com/gang))
+    to make organizational
     and discipline decisions. In a macro-tasking environment almost no HR metrics
     really work.
 

@@ -3,7 +3,7 @@ layout: post
 title: "Five Stages of Microbudgeting"
 date: 2018-01-09
 place: Moscow, Russia
-tags: xdsd
+tags: xdsd zerocracy
 description: |
   Microtasking means that all tasks are very small in
   scope and in cost; microbudgeting is how those
