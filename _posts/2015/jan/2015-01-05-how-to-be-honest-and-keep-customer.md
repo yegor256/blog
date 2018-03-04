@@ -60,6 +60,8 @@ should be fixed, how, and when. It's
 [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}) in its worst form.
 We see it very often. What do we do?
 
+{% quote The simplest answer is that the client is a moron. Sometimes this is exactly the case, but it's a rare one. %}
+
 First, we try to understand why it's happening. The simplest answer
 is that the client is a moron. Sometimes this is exactly the case, but it's a rare one. Much more
 often, our clients are not that bad. What is it, then? Why can't they follow
@@ -105,6 +107,8 @@ such questions can turn a project into a school of programming.
 Even though he is paying for our time, that doesn't mean we should teach him
 how to develop software, right? On the other hand, he is interested in knowing
 how _his_ software is developed and how it works. It's a fair request, isn't it?
+
+{% quote He is interested in knowing how his software is developed and how it works. It's a fair request, isn't it? %}
 
 I believe there is a _win-win_ solution to this problem. Here is how we
 manage it. First of all, we make all his requests formal. We ask
@@ -163,6 +167,8 @@ by the client himself, because he will realize they are pointless or too expensi
 a few of them will survive, since they will be reasonable enough. And they will
 help the project. So it is also a _win-win_ solution.
 
+{% quote Never take a client's demands directly to execution, but rather use them first to amend the requirements documentation. %}
+
 For example, he says that "you should use MySQL because it's great." You tell
 him that the project requirements document doesn't limit you to choose whichever
 database you like. Should it? He says yes, of course! OK, let's try to
@@ -202,6 +208,8 @@ to work with you. That's why most
 [outsourcers]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 prefer to keep their sources
 private until the very end of the project, when the final invoice is paid.
+
+{% quote No matter how beautiful your architecture and your source code is, the "friend" will always be right. %}
 
 I think that an accidental appearance of a "friend" with a negative opinion
 is un-preventable. If it happens, it happens. You can't avoid it.
