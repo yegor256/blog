@@ -76,6 +76,8 @@ to strangers, who care more about the information you're able to deliver than th
 care about you personally. That's a skill you can't buy; you have to earn it.
 And it's crucial in a distributed team.
 
+{% quote It is a must-have instrument for any modern software developer, no matter what your programming language, your age, your project, or your professional level are. %}
+
 **How to Deal With Morons**.
 You know what to do with them in the office, but on the Internet, they are
 much more aggressive and offensive. And there are many of them. You need

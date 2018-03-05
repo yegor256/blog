@@ -24,6 +24,8 @@ social:
 image: /images/2017/02/the-deer-hunter.jpg
 jb_picture:
   caption: The Deer Hunter (1978) by Michael Cimino
+youtube:
+  - ZhWOlaMqppM
 ---
 
 This is a real story, and it's not only about Google. I'm getting emails from recruiters
