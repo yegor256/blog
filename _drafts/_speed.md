@@ -47,7 +47,7 @@ I truly believe that quality is not what programmers should care about. They
 must care only about speed&mdash;close tasks as soon as possible&mdash;
 which means [make money]({% pst 2018-01-09-micro-budgeting %}).
 
-Won't this attitude ruin the project and turn the code base into mess?
+Won't this attitude ruin the project and turn the code base into a mess?
 
 Yes, it will, if the project doesn't care about its quality either.
 
@@ -102,7 +102,7 @@ quality worries and letting them focus on what they do best&mdash;writing code.
 Of course, not every project will be able to configure itself in the most
 effective way. Most projects don't even know how to do it. In those projects,
 if you, as a developer, floor the speed pedal, you will most likely ruin
-their code base in a few days. That's why, the recommendations above are
+their code base in a few days. That's why the recommendations above are
 only applicable to those who really know what they are doing.
 
 We know what we are doing in our projects. We don't let any developers
