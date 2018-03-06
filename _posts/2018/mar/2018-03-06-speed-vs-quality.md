@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't Aim for Quality, Aim for Speed"
-date: 2018-02-20
+date: 2018-03-06
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - perfection vs speed
   - speed or perfection
   - speed is king
-image: /images/2017/02/...
+image: /images/2018/03/house-of-flying-daggers.jpg
 jb_picture:
-  caption:
+  caption: Shi mian mai fu (2004) by Yimou Zhang
 ---
 
 <!-- http://www.yegor256.com/2017/11/28/microtasking.html#comment-3783321466 -->
