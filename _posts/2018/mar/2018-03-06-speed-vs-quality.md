@@ -49,7 +49,9 @@ which means [make money]({% pst 2018-01-09-micro-budgeting %}).
 
 Won't this attitude ruin the project and turn the code base into a mess?
 
-Yes, it will, if the project doesn't care about its quality either.
+Yes, it will.
+
+If the project doesn't care about its quality either.
 
 There must be a permanent conflict between a project and its programmers:
 1) the project must be configured to reject anything that lowers the
