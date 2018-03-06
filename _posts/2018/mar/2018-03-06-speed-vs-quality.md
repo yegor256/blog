@@ -63,11 +63,11 @@ What do I mean by saying that a project rejects low quality? Here is a list
 of preventive measures it may take to make it impossible
 to jeopardize the quality:
 
-  * [Automated]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}) pre-flight builds
-  * [Read-only master branch]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
-  * High test coverage bar
-  * [Mandatory]({% pst 2018/jan/2018-01-16-educational-aspect-of-static-analysis %}) static analysis
-  * Multi-step code reviews
+  * [Automated]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}) pre-flight builds;
+  * [Read-only master branch]({% pst 2014/jul/2014-07-21-read-only-master-branch %});
+  * High test coverage bar;
+  * [Mandatory]({% pst 2018/jan/2018-01-16-educational-aspect-of-static-analysis %}) static analysis;
+  * Multi-step code reviews.
 
 What do I mean by saying that programmers must be interested in making changes?
 They have to be [motivated]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
@@ -75,11 +75,11 @@ to close tasks. Not just to [be in the project]({% pst 2015/oct/2015-10-06-how-t
 but to deliver. Here is what
 they can do in order to close tasks faster:
 
-  * [Cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
-  * Make changes [smaller]({% pst 2015/feb/2015-02-09-serious-code-reviewer %})
-  * [Don't study]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}) the code, just modify it
-  * Don't feel responsible for all code, just focus on the relevant units/classes
-  * Don't be afraid to [break things]({% pst 2017/mar/2017-03-24-tdd-that-works %})
+  * [Cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %});
+  * Make changes [smaller]({% pst 2015/feb/2015-02-09-serious-code-reviewer %});
+  * [Don't study]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}) the code, just modify it;
+  * Don't feel responsible for all code, just focus on the relevant units/classes;
+  * Don't be afraid to [break things]({% pst 2017/mar/2017-03-24-tdd-that-works %}).
 
 If we put these two interests in conflict, we will get a high-quality product, which is
 growing very fast. The project will enforce quality, programmers will push
@@ -107,7 +107,7 @@ if you, as a developer, floor the speed pedal, you will most likely ruin
 their code base in a few days. That's why the recommendations above are
 only applicable to those who really know what they are doing.
 
-We know what we are doing in our projects. We don't let any developers
+[We](http://www.zerocracy.com) know what we are doing in our projects. We don't let any developers
 touch any parts of our code, unless the "quality wall" is high and strong enough.
 How high is that wall in your projects? Can you say that, no matter how
 bad some code is and how sneakily its author introduces it, it will be rejected?
