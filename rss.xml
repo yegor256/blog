@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-03-05T17:02:47+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Parse, Use Parsing Objects</title><link href="http://www.yegor256.com/2018/02/27/parsing-objects.html" rel="alternate" type="text/html" title="Don&#39;t Parse, Use Parsing Objects" /><published>2018-02-27T00:00:00+00:00</published><updated>2018-02-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/27/parsing-objects</id><content type="html" xml:base="http://www.yegor256.com/2018/02/27/parsing-objects.html">&lt;!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 --&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-03-06T07:23:52+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Aim for Quality, Aim for Speed</title><link href="http://www.yegor256.com/2018/03/06/speed-vs-quality.html" rel="alternate" type="text/html" title="Don&#39;t Aim for Quality, Aim for Speed" /><published>2018-03-06T00:00:00+00:00</published><updated>2018-03-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/03/06/speed-vs-quality</id><content type="html" xml:base="http://www.yegor256.com/2018/03/06/speed-vs-quality.html">&lt;!-- http://www.yegor256.com/2017/11/28/microtasking.html#comment-3783321466 --&gt;
+
+&lt;p&gt;I decided to write this blog post after reviewing
+&lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153&quot;&gt;this pull request&lt;/a&gt;. What happened
+there? The author of the PR wasn&amp;#39;t able to figure out
+the &amp;quot;right&amp;quot; way to implement it, and the code
+reviewer was waiting and waiting. Eventually, the reviewer came to me,
+since I was an architect, and &lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153#issuecomment-364412192&quot;&gt;complained&lt;/a&gt;
+that it was taking too long and he wasn&amp;#39;t able to
+&lt;a href=&quot;http://datum.zerocracy.com/pages/policy.html#27&quot;&gt;earn&lt;/a&gt; his money for the review
+he had done. Then the author of the changes
+&lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153#issuecomment-364413528&quot;&gt;explained&lt;/a&gt; that he couldn&amp;#39;t
+finish since there were impediments and design inconsistencies; he also
+couldn&amp;#39;t &lt;a href=&quot;http://datum.zerocracy.com/pages/policy.html#4&quot;&gt;earn&lt;/a&gt;
+the money he deserved for fixing the issue. What did I say?
+I &lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153#issuecomment-364417885&quot;&gt;said&lt;/a&gt;:
+Forget the quality, just finish it any way possible.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Shi mian mai fu (2004) by Yimou Zhang&#39; src=&#39;/images/2018/03/house-of-flying-daggers.jpg&#39; longdesc=&#39;#7b8c6d28&#39;/&gt;&lt;figcaption id=&#39;7b8c6d28&#39;&gt;Shi mian mai fu (2004) by Yimou Zhang&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Was I kidding? Not at all.&lt;/p&gt;
+
+&lt;p&gt;I truly believe that quality is not what programmers should care about. They
+must care only about speed&amp;mdash;close tasks as soon as possible&amp;mdash;
+which means &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;make money&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Won&amp;#39;t this attitude ruin the project and turn the code base into a mess?&lt;/p&gt;
+
+&lt;p&gt;Yes, it will.&lt;/p&gt;
+
+&lt;p&gt;If the project doesn&amp;#39;t care about its quality either.&lt;/p&gt;
+
+&lt;p&gt;There must be a permanent conflict between a project and its programmers:
+1) the project must be configured to reject anything that lowers the
+quality of its artifacts and 2) programmers must be interested
+in making changes to those artifacts. The project cares about the quality,
+the programmers care about fast delivery of modifications.&lt;/p&gt;
+
+&lt;p&gt;What do I mean by saying that a project rejects low quality? Here is a list
+of preventive measures it may take to make it impossible
+to jeopardize the quality:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Automated&lt;/a&gt; pre-flight builds;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;Read-only master branch&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;High test coverage bar;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;Mandatory&lt;/a&gt; static analysis;&lt;/li&gt;
+&lt;li&gt;Multi-step code reviews.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What do I mean by saying that programmers must be interested in making changes?
+They have to be &lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;motivated&lt;/a&gt;
+to close tasks. Not just to &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;be in the project&lt;/a&gt;,
+but to deliver. Here is what
+they can do in order to close tasks faster:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;Cut corners&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Make changes &lt;a href=&quot;/2015/02/09/serious-code-reviewer.html&quot;&gt;smaller&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;Don&amp;#39;t study&lt;/a&gt; the code, just modify it;&lt;/li&gt;
+&lt;li&gt;Don&amp;#39;t feel responsible for all code, just focus on the relevant units/classes;&lt;/li&gt;
+&lt;li&gt;Don&amp;#39;t be afraid to &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;break things&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If we put these two interests in conflict, we will get a high-quality product, which is
+growing very fast. The project will enforce quality, programmers will push
+the code forward, making changes fast and frequently.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, most projects have a very different philosophy. They delegate
+quality control to programmers, hoping that they &amp;quot;won&amp;#39;t do evil.&amp;quot;
+This leads to frustration, distress, constant fear of mistakes, long delays,
+blaming, and shaming. Both the project and its programmers lose.&lt;/p&gt;
+
+&lt;p&gt;Programmers must not be responsible for the quality! They must not care
+what they may, or will, break. They must not care how good the code they write is.
+They must not &amp;quot;feel responsible&amp;quot; for the overall result. Instead, they must
+be focused on making money for their families by writing the largest amount
+of code and closing more tickets.&lt;/p&gt;
+
+&lt;p&gt;Not because they are ignorant and selfish, but because this is the right
+balance of responsibilities. This is how the project will get the most out
+of its developers&amp;mdash;by freeing their minds of unnecessary and unproductive
+quality worries and letting them focus on what they do best&amp;mdash;writing code.&lt;/p&gt;
+
+&lt;p&gt;Of course, not every project will be able to configure itself in the most
+effective way. Most projects don&amp;#39;t even know how to do it. In those projects,
+if you, as a developer, floor the speed pedal, you will most likely ruin
+their code base in a few days. That&amp;#39;s why the recommendations above are
+only applicable to those who really know what they are doing.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;We&lt;/a&gt; know what we are doing in our projects. We don&amp;#39;t let any developers
+touch any parts of our code, unless the &amp;quot;quality wall&amp;quot; is high and strong enough.
+How high is that wall in your projects? Can you say that, no matter how
+bad some code is and how sneakily its author introduces it, it will be rejected?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">I decided to write this blog post after reviewing
+this pull request. What happened
+there? The author of the PR wasn&amp;#39;t able to figure out
+the &amp;quot;right&amp;quot; way to implement it, and the code
+reviewer was waiting and waiting. Eventually, the reviewer came to me,
+since I was an architect, and complained
+that it was taking too long and he wasn&amp;#39;t able to
+earn his money for the review
+he had done. Then the author of the changes
+explained that he couldn&amp;#39;t
+finish since there were impediments and design inconsistencies; he also
+couldn&amp;#39;t earn
+the money he deserved for fixing the issue. What did I say?
+I said:
+Forget the quality, just finish it any way possible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/03/house-of-flying-daggers.jpg" /></entry><entry><title type="html">Don’t Parse, Use Parsing Objects</title><link href="http://www.yegor256.com/2018/02/27/parsing-objects.html" rel="alternate" type="text/html" title="Don&#39;t Parse, Use Parsing Objects" /><published>2018-02-27T00:00:00+00:00</published><updated>2018-02-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/27/parsing-objects</id><content type="html" xml:base="http://www.yegor256.com/2018/02/27/parsing-objects.html">&lt;!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 --&gt;
 
 &lt;p&gt;The traditional way of integrating object-oriented back-end with an external
 system is through &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;data transfer objects&lt;/a&gt;,
@@ -865,82 +974,4 @@ according to Robert Martin&amp;#39;s
 Clean Code,
 means that &amp;quot;a class should have only one reason to change.&amp;quot;
 Let&amp;#39;s try to decrypt this rather vague statement and see how it
-helps us design better object-oriented software. If it does.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/the-thomas-crown-affair.jpg" /></entry><entry><title type="html">Alan Kay Was Wrong About Him Being Wrong</title><link href="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html" rel="alternate" type="text/html" title="Alan Kay Was Wrong About Him Being Wrong" /><published>2017-12-12T00:00:00+00:00</published><updated>2017-12-12T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/12/alan-kay-was-wrong</id><content type="html" xml:base="http://www.yegor256.com/2017/12/12/alan-kay-was-wrong.html">&lt;p&gt;From time to time someone asks me what I think about what
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Alan_Kay&quot;&gt;Alan Kay&lt;/a&gt;, the father of OOP,
-the designer of &lt;a href=&quot;https://en.wikipedia.org/wiki/Smalltalk&quot;&gt;Smalltalk&lt;/a&gt;,
-the first object-oriented language,
-&lt;a href=&quot;http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html&quot;&gt;said&lt;/a&gt;
-in 1998 about OOP. He literally said that the very
-term &amp;quot;object&amp;quot; was misleading and a more appropriate one would be &amp;quot;messaging.&amp;quot;
-Here is what I think.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Rain Man (1988) by Barry Levinson&#39; src=&#39;/images/2017/12/rain-man.jpg&#39; longdesc=&#39;#7b3f07bb&#39;/&gt;&lt;figcaption id=&#39;7b3f07bb&#39;&gt;Rain Man (1988) by Barry Levinson&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I believe that there are two orthogonal means of interaction between objects:
-messaging and composition. Let&amp;#39;s say, we have a point and a canvas:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Canvas&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Canvas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is how messaging would look:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The problem with messaging is that it keeps objects on the same
-level of abstraction. They communicate
-as equal and independent &amp;quot;modules,&amp;quot; sending
-&lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;data messages&lt;/a&gt; to each other.
-Even though they look object-oriented, the entire communication pattern
-is very procedural. We try to encapsulate as much as we can inside a single
-object, however inevitably still having to expose a lot of its data in order to
-be able to &amp;quot;connect&amp;quot; it with other objects.&lt;/p&gt;
-
-&lt;p&gt;We turn objects into &amp;quot;little computers,&amp;quot; as &lt;a href=&quot;http://amzn.to/2npiZZQ&quot;&gt;some books&lt;/a&gt; refer to them. They
-expect data to come in, they process the data, and return back some new data.
-The maintainability problem is not really solved with this approach&amp;mdash;we
-still have to deal with a lot of data, remembering its semantic outside of
-the objects. In other words, there is no true encapsulation.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, this is how composition would look instead:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PrintedOn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Every time we need objects to communicate we create a bigger object that
-encapsulates more primitive ones, letting them interact inside. Of course,
-the data will also go from object to object, but that will happen
-inside a bigger object. We can even make the encapsulator
-and the encapsulated &amp;quot;friends,&amp;quot; as &lt;a href=&quot;/2016/12/20/can-objects-be-friends.html&quot;&gt;I suggested before&lt;/a&gt;,
-to make that interaction more transparent and avoid data exposure through
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt; or
-even
-&lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;printers&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let me
-&lt;a href=&quot;http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html&quot;&gt;quote&lt;/a&gt;
-Alan Kay again:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The key in making great and growable systems is much more to design how
-  its modules communicate rather than what their internal properties
-  and behaviors should be.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It seems to me that he means &lt;em&gt;modules&lt;/em&gt;, which are not objects. These are
-different things. Modules are elements of the architecture, while objects
-are elements of the design. These are two different levels. At the level of
-architecture we obviously need messages and Kay&amp;#39;s statement is perfectly correct.
-However, at the level of design we need composable structures,
-to increase maintainability and messaging is not what can help us achieve
-this goal.&lt;/p&gt;
-
-&lt;p&gt;Thus, I believe Alan Kay was right when he invented objects, called them
-objects, and gave their programming style the &amp;quot;object-oriented&amp;quot; title.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><summary type="html">From time to time someone asks me what I think about what
-Alan Kay, the father of OOP,
-the designer of Smalltalk,
-the first object-oriented language,
-said
-in 1998 about OOP. He literally said that the very
-term &amp;quot;object&amp;quot; was misleading and a more appropriate one would be &amp;quot;messaging.&amp;quot;
-Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/rain-man.jpg" /></entry></feed>
+helps us design better object-oriented software. If it does.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/the-thomas-crown-affair.jpg" /></entry></feed>
