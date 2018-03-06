@@ -45,7 +45,7 @@ Was I kidding? Not at all.
 
 I truly believe that quality is not what programmers should care about. They
 must care only about speed&mdash;close tasks as soon as possible&mdash;
-which means [make money]({% pst 2018-01-09-micro-budgeting %}).
+which means [make money]({% pst 2018/jan/2018-01-09-micro-budgeting %}).
 
 Won't this attitude ruin the project and turn the code base into a mess?
 
