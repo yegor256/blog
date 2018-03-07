@@ -90,6 +90,8 @@ quality control to programmers, hoping that they "won't do evil."
 This leads to frustration, distress, constant fear of mistakes, long delays,
 blaming, and shaming. Both the project and its programmers lose.
 
+{% If we put these two interests in conflict, we will get a high-quality product, which is growing very fast. %}
+
 Programmers must not be responsible for the quality! They must not care
 what they may, or will, break. They must not care how good the code they write is.
 They must not "feel responsible" for the overall result. Instead, they must
