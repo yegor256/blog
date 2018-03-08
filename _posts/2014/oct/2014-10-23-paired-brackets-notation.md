@@ -2,7 +2,7 @@
 layout: post
 title: "Paired Brackets"
 date: 2014-10-23
-tags: java quality
+tags: java
 description: |
   Paired Brackets notation makes your object-oriented
   code look beautiful and disciplined, no matter
