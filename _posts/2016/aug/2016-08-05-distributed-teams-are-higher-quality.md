@@ -20,25 +20,25 @@ jb_picture:
 ---
 
 OK, the title is not exactly accurate. I've missed the "can" word. A distributed
-team **can** deliver code of much higher quality than a co-located one,
+team _can_ deliver code of much higher quality than a co-located one,
 and now I'll explain why. Of course, not every distributed team can do that.
 Most of them can't even deliver code that works, let alone quality code.
 But if a team&mdash;a distributed one&mdash;is managed according to the principles
 I'll explain now, the quality will be much higher than the same team can
 achieve if co-located. What I'm going to show you is that working in a
 [remote mode]({% pst 2017/may/2017-05-02-remote-slaves %}),
-if done right, **guarantees** higher quality of code. Surprised?
+if done right, _guarantees_ higher quality of code. Surprised?
 
 <!--more-->
 
 {% jb_picture_body %}
 
 There are basically four simple ingredients to success ... you know what, there is
-actually _one_ main ingredient, and its name is **control**. If we want quality
-to be at some level, we have to **enforce** it. We can't just declare it; we
-need to **make** it high.
+actually _one_ main ingredient, and its name is _control_. If we want quality
+to be at some level, we have to _enforce_ it. We can't just declare it; we
+need to _make_ it high.
 
-{% quote Quality can be achieved only if it is controlled and enforced %}
+{% quote Quality can be achieved only if it is controlled and enforced. %}
 
 How do software teams make high-quality code? Oh, there are many proven methods.
 First, you need a very modern office where <del>programmers</del> developers
@@ -51,7 +51,7 @@ more expensive the developer is, the higher the quality he or she writes.
 
 I'm sure you understand that I'm joking. None of these "proven methods" will either
 guarantee quality or motivate serious software engineers. Quality can
-be achieved only if it is **controlled and enforced**. And this is also what
+be achieved only if it is _controlled and enforced_. And this is also what
 motivates programmers best of all&mdash;the fact that the quality
 is so important for management that they find mechanisms of
 control and enforcement, and they invest in them. Table tennis and lean
@@ -88,7 +88,7 @@ we practice in our projects:
     they are each very small (up to two hours). We don't pay for time spent
     in the office or in front of the computer. We pay only when tickets
     are closed&mdash;no close, no pay. This means that programmers are motivated
-    to **close** them, nothing else.
+    to _close_ them, nothing else.
 
 Thus, as you can see, there is an intentionally created conflict. On one hand,
 programmers have to close tickets and deliver working code. On the other

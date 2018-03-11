@@ -68,7 +68,7 @@ else. Instead, an architect must make his decisions and be responsible for the
 entire success or failure of the product, just like I
 [explained before]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
 
-{% quote A good architect must collect different opinions before making his own decision %}
+{% quote A good architect must collect different opinions before making his own decision. %}
 
 There is a simple reason for that. Any attempt to convince anyone
 causes a possibility of "responsibility leakage." What if I fail to convince?
@@ -103,7 +103,7 @@ I know my design decisions are dictated by the requirements.
 And not because Chris convinced me or I failed to convince him, but because
 that's what the document says.
 
-{% quote An architect must be an absolute technical dictator during the project and must not have to convince anyone %}
+{% quote An architect must be an absolute technical dictator during the project and must not have to convince anyone. %}
 
 Second, if he is not entirely sure that Gradle is the right choice
 and just wants me to be more serious about my decisions, he should

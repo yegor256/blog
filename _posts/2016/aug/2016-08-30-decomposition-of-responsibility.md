@@ -21,7 +21,7 @@ jb_picture:
 
 Objects responsible for too many things are a problem. Because their
 complexity is high, they are difficult to maintain and extend.
-**Decomposition of responsibility** is what we do in order to break
+_Decomposition of responsibility_ is what we do in order to break
 these overly complex objects into smaller ones. I see two types of this
 refactoring operation: vertical and horizontal. And I believe
 the former is better than the latter.
@@ -49,9 +49,9 @@ They save log lines to the
 file and also format them&mdash;an obvious violation of
 a famous
 [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
-An object of this class would be **responsible** for too many things.
+An object of this class would be _responsible_ for too many things.
 We have to extract some functionality out of it and put that
-into another object(s). We have to **decompose** its responsibility.
+into another object(s). We have to _decompose_ its responsibility.
 No matter where we put it, this is how the
 `Log` class will look after the extraction:
 
@@ -75,7 +75,7 @@ log = Log.new('/tmp/log.txt')
 
 Next, where do we put the lines with formatting functionality that were just extracted?
 There are two approaches to decompose responsibility: horizontal and
-vertical. This one is **horizontal**:
+vertical. This one is _horizontal_:
 
 {% highlight ruby %}
 class Line
@@ -105,7 +105,7 @@ two classes in order to log a line:
 [script] -down-> [Line]
 {% endplantuml %}
 
-To the contrary, this decomposition of responsibility is **vertical**:
+To the contrary, this decomposition of responsibility is _vertical_:
 
 {% highlight ruby %}
 class TimedLog

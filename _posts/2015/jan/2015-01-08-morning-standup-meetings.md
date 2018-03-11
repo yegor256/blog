@@ -31,14 +31,14 @@ A stand-up meeting (or simply "stand-up") is
 "a daily team-meeting held to provide a status update
 to the team members," according to [Wikipedia](https://en.wikipedia.org/wiki/Stand-up_meeting).
 In the next few paragraphs, I attempt to explain why these meetings,
-despite being so popular in software development teams, are **pure evil**
+despite being so popular in software development teams, are _pure evil_
 and should never be used by good
 [managers]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 I'm not saying they can be done right or wrong;
 there are plenty of articles about that. I'm not
 trying to give advice about how to do them properly so they
-work, either. I'm saying that a good manager should **never** have daily stand-ups.
+work, either. I'm saying that a good manager should _never_ have daily stand-ups.
 Because they not only "don't work" but also do very bad, sometimes catastrophic,
 things to your management process, whether it's
 [agile]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}) or not. On the other hand,
@@ -155,7 +155,7 @@ Instead, he trusts them and controls their results only.
 
 Let me reiterate: I strongly believe that responsibility must be
 delegated, and this delegation consists of three components:
-**awards, penalties, and rules**. In a modern Western culture, it may
+_awards, penalties, and rules_. In a modern Western culture, it may
 be rather difficult to define them&mdash;we have long-term contracts and
 monthly salaries. But a good manager has to find a way. Each task has to
 be delegated and isolated. This means that the programmer working on the

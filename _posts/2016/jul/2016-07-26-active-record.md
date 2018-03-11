@@ -44,7 +44,7 @@ ActiveRecord.
 
 I disagree. Moreover, I think that ActiveRecord is even worse than ORM.
 
-{% quote What's even worse in ActiveRecord is that it hides the fact that objects are data containers %}
+{% quote What's even worse in ActiveRecord is that it hides the fact that objects are data containers. %}
 
 ORM consists of two parts: the session and
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities."
@@ -59,7 +59,7 @@ against the object paradigm, you can read
 Now, let's just agree that it's very wrong and move on.
 
 What solution is ActiveRecord proposing? How is it solving the problem?
-It moves the engine into the **parent class**, which all our entities inherit from.
+It moves the engine into the _parent class_, which all our entities inherit from.
 This is how we were supposed to save our entity to the database in the ORM
 scenario (pseudo-code):
 
@@ -76,15 +76,15 @@ book.update();
 {% endhighlight %}
 
 The method `update()` is defined in book's parent class and uses
-book as a **data container**. When called, it fetches data
+book as a _data container_. When called, it fetches data
 from the container (the book) and updates the database. How is it
 different than ORM? There is absolutely no difference. The book
 is still a container that knows nothing about SQL and any persistence
 mechanisms.
 
-What's even worse in ActiveRecord, compared to ORM, is that it **hides**
+What's even worse in ActiveRecord, compared to ORM, is that it _hides_
 the fact that objects are data containers. A book, in the second snippet,
-**pretends** to be a [proper object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
+_pretends_ to be a [proper object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 while in reality it's just a dumb data bag.
 
 I believe this is what misguided those who were saying
