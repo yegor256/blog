@@ -37,7 +37,7 @@ By the way, his name, to my knowledge, was
 was not the sole inventor of DTO, but he made it legal and recommended
 its use. With all due respect, he was just wrong.
 
-{% quote Objects must only have access to the data they encapsulate and never to the data encapsulated by other objects  %}
+{% quote Objects must only have access to the data they encapsulate and never to the data encapsulated by other objects.  %}
 
 The key idea of object-oriented programming is to hide data
 behind objects. This idea has a name:
@@ -152,7 +152,7 @@ The very idea of DTO is wrong because it turns object-oriented code
 into procedural code. We have procedures that manipulate data, and DTO is just
 a box for that data. Don't think that way, and don't do that.
 
-PS. There are a few another names of DTO:
+PS. There are a few other names of DTO:
 [business objects](https://en.wikipedia.org/wiki/Business_object),
 domain objects (not in [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)),
 [entity objects](https://docs.oracle.com/cd/A97335_02/apps.102/bc4j/developing_bc_projects/bc_awhatisaneo.htm),

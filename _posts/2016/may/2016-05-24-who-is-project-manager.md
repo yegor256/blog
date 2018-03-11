@@ -68,7 +68,7 @@ owner of that bag of coffee beans, who asked you yesterday not to use them
 because he was waiting for a date tonight? How much of a success was your project
 to _him_?
 
-{% quote A project is never a success or a failure; it is either dead or alive, that's it %}
+{% quote A project is never a success or a failure; it is either dead or alive, that's it. %}
 
 So, a project is never a "success" or a "failure." A project is either
 _dead_ or _alive_, that's it. Success is a subjective category and can only
@@ -99,7 +99,7 @@ press the button. You might also need a budgeting software to calculate how
 much money you will owe to the roommate. You might use a few risk identification
 and planning algorithms, etc.
 
-{% quote You must try to predict the future with as much accuracy and precision as possible %}
+{% quote You must try to predict the future with as much accuracy and precision as possible. %}
 
 Most of such tools are mentioned and explained in the PMBOK. They are even
 grouped there into so called "knowledge areas:" for predicting
@@ -130,7 +130,7 @@ a PM in a project is to help its key stakeholders (also known as sponsors) to
 make a **decision**: to _kill_ the project right now or to let it stay
 _alive_ for a bit more. That's it.
 
-{% quote Project sponsors need to know whether the project is worth going forward %}
+{% quote Project sponsors need to know whether the project is worth going forward. %}
 
 You didn't need a PM in your coffee making project because you, as its key
 stakeholder, were fully committed to finish it only when the coffee is ready.
@@ -168,7 +168,7 @@ know what will happen and when, in the short-term. But the long-term future
 stays absolutely unclear. A bad PM mostly relies on expert judgment, just
 like you did while making that coffee.
 
-{% quote A good PM finds a way to organize resources in such a way that their future becomes predictable %}
+{% quote A good PM finds a way to organize resources in such a way that their future becomes predictable. %}
 
 A good project manager is a completely different creature. A good PM
 finds a way to _organize_ resources in such a way that their future
@@ -197,7 +197,7 @@ risks identified and documented, concerns properly reported, stakeholders
 informed in time, etc. This may sound like utopia, but that's the
 true meaning of a "project manager" role.
 
-{% quote A charismatic project manager will inevitably ruin the project %}
+{% quote A charismatic project manager will inevitably ruin the project. %}
 
 I believe it's already obvious that project management has very little to do
 with leadership. They are just two _orthogonal_ skill sets. I would say that

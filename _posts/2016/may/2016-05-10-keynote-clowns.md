@@ -45,6 +45,8 @@ more valuable than the content you will be talking about. Nobody will remember
 the content, but the jokes will definitely be re-tweeted. When a good speaker
 is talking, the room is laughing every 60 seconds.
 
+{% quote A well-prepared collection of jokes is much more valuable than the content you will be talking about. %}
+
 **Swear!**
 Don't be too formal and boring, show a slide with a picture of
 a naked butt every once in a while. Everybody will understand that you're not only a
