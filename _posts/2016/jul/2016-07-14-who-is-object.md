@@ -51,7 +51,7 @@ What is common throughout all these definitions is the word "contains" (or "hold
 "consists," "has," etc.). They all think that an object is a _box with data_.
 And this perspective is exactly what I'm strongly against.
 
-{% quote They all think that an object is a box with data -- this perspective is exactly what I'm strongly against %}
+{% quote They all think that an object is a box with data &mdash; this perspective is exactly what I'm strongly against. %}
 
 If we look at how C++ or Java are implemented, such a definition of an
 object will sound _technically_ correct. Indeed, for each object, Java Virtual
@@ -104,7 +104,7 @@ _pointer_ to another object. If our object would only have an
 `engine` attribute, it would take just 8 bytes in memory, with none of them
 actually occupied by "data."
 
-{% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data %}
+{% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data. %}
 
 Now, let's get back to our new pseudo language. Let's imagine it treats
 objects very differently than C++&mdash;it doesn't keep object attributes
