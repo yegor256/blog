@@ -29,8 +29,6 @@ To what extent should people think for themselves?
 
 Good vs bad people: http://www.yegor256.com/2015/02/09/serious-code-reviewer.html#comment-3704330780
 
-Sociotech skills
-
 Design bubble
 
 How much OOP is in Kotlin?
