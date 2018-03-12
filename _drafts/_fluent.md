@@ -151,7 +151,7 @@ rather difficult to read for those who are used to fluent interfaces. In additio
 it's very far away from the DSL idea.
 
 But here is the list of benefits. First, each object is small, very cohesive and
-they are all losely coupled&mdash;which are obvious merits in OOP. Second,
+they are all loosely coupled&mdash;which are obvious merits in OOP. Second,
 adding new functionality to the library is as easy as creating a new class;
 no need to touch existing classes. Third, unit testing is simplified,
 since classes are small. Fourth, all classes can be immutable, which is also
@@ -169,7 +169,7 @@ are much easier to use, even when I don't know exactly which classes out there
 are the most suitable for me. Even without the code-auto-complete I can figure
 it out myself, because the code is clean.
 
-Also, I very often find myself interested in extending existing funcionality
+Also, I very often find myself interested in extending existing functionality
 either inside my code base or via a pull request to the library. I am much more
 [interested]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 to do that if I know that the changes I introduce
