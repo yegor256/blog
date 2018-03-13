@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fluent Interfaces Are Bad for Maintainability"
-date: 2018-02-28
+date: 2018-03-13
 place: Moscow, Russia
 tags: java oop
 description: |
@@ -14,6 +14,9 @@ keywords:
   - fluent interface is evil
   - fluent interfaces are evil
   - oop fluent interface
+image: /images/2018/03/donnie-brasco.jpg
+jb_picture:
+  caption: Donnie Brasco (1997) by Mike Newell
 ---
 
 [Fluent interface](https://en.wikipedia.org/wiki/Fluent_interface),
