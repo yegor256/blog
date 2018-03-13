@@ -30,6 +30,8 @@ now I will add my few cents.
 
 <!--more-->
 
+{% jb_picture_body %}
+
 Let's take my own library [jcabi-http](http://http.jcabi.com/),
 which I created a few years ago,
 when I thought that fluent interfaces were a good thing. Here is how you
