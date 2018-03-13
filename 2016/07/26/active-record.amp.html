@@ -111,7 +111,7 @@ against the object paradigm, you can read
 Now, let's just agree that it's very wrong and move on.</p>
 
 <p>What solution is ActiveRecord proposing? How is it solving the problem?
-It moves the engine into the <strong>parent class</strong>, which all our entities inherit from.
+It moves the engine into the <em>parent class</em>, which all our entities inherit from.
 This is how we were supposed to save our entity to the database in the ORM
 scenario (pseudo-code):</p>
 
@@ -124,15 +124,15 @@ session.update(book);</pre>
 book.update();</pre>
 
 <p>The method <code>update()</code> is defined in book's parent class and uses
-book as a <strong>data container</strong>. When called, it fetches data
+book as a <em>data container</em>. When called, it fetches data
 from the container (the book) and updates the database. How is it
 different than ORM? There is absolutely no difference. The book
 is still a container that knows nothing about SQL and any persistence
 mechanisms.</p>
 
-<p>What's even worse in ActiveRecord, compared to ORM, is that it <strong>hides</strong>
+<p>What's even worse in ActiveRecord, compared to ORM, is that it <em>hides</em>
 the fact that objects are data containers. A book, in the second snippet,
-<strong>pretends</strong> to be a <a href="/2014/11/20/seven-virtues-of-good-object.html">proper object</a>,
+<em>pretends</em> to be a <a href="/2014/11/20/seven-virtues-of-good-object.html">proper object</a>,
 while in reality it's just a dumb data bag.</p>
 
 <p>I believe this is what misguided those who were saying

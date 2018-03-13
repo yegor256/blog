@@ -463,6 +463,7 @@ authority
 authorization
 authorized
 authors
+auto-complete
 auto-formatting
 auto-generated
 auto-increment
@@ -1128,6 +1129,7 @@ COBOL
 cockburn
 coda
 code
+code-auto-complete
 code-free
 code-intensive
 code-rich
@@ -1142,6 +1144,7 @@ cohesion
 cohesive
 coin
 coinbase
+coined
 coinmama
 collaborate
 collaboration
@@ -2437,6 +2440,7 @@ extend
 extendability
 extendable
 extended
+extending
 extends
 extensible
 extensions
@@ -4064,6 +4068,7 @@ map
 mapping
 mar
 march
+marco
 margin
 mario
 mark
@@ -4182,6 +4187,7 @@ merge
 merged
 merges
 merging
+merit
 meritocracy
 merits
 merriam-webster
@@ -5019,6 +5025,7 @@ pirate
 pit
 pitch
 pitfalls
+pivetta
 pixelmator
 pizza
 place
@@ -7267,6 +7274,7 @@ use
 used
 used-to-be
 useful
+usefulness
 useless
 user
 user-targeted

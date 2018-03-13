@@ -76,7 +76,7 @@ can do it right or wrong.
       <h1>Vertical vs. Horizontal Decomposition of Responsibility</h1>
       <p>Objects responsible for too many things are a problem. Because their
 complexity is high, they are difficult to maintain and extend.
-<strong>Decomposition of responsibility</strong> is what we do in order to break
+<em>Decomposition of responsibility</em> is what we do in order to break
 these overly complex objects into smaller ones. I see two types of this
 refactoring operation: vertical and horizontal. And I believe
 the former is better than the latter.</p>
@@ -102,9 +102,9 @@ They save log lines to the
 file and also format them—an obvious violation of
 a famous
 <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>.
-An object of this class would be <strong>responsible</strong> for too many things.
+An object of this class would be <em>responsible</em> for too many things.
 We have to extract some functionality out of it and put that
-into another object(s). We have to <strong>decompose</strong> its responsibility.
+into another object(s). We have to <em>decompose</em> its responsibility.
 No matter where we put it, this is how the
 <code>Log</code> class will look after the extraction:</p>
 
@@ -124,7 +124,7 @@ is cohesive and small. Let's make an instance of it:</p>
 
 <p>Next, where do we put the lines with formatting functionality that were just extracted?
 There are two approaches to decompose responsibility: horizontal and
-vertical. This one is <strong>horizontal</strong>:</p>
+vertical. This one is <em>horizontal</em>:</p>
 
 <pre>class Line
   def initialize(text)
@@ -147,7 +147,7 @@ two classes in order to log a line:</p>
 
 <p></p>
 
-<p>To the contrary, this decomposition of responsibility is <strong>vertical</strong>:</p>
+<p>To the contrary, this decomposition of responsibility is <em>vertical</em>:</p>
 
 <pre>class TimedLog
   def initialize(log)
