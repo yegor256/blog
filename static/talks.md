@@ -103,12 +103,12 @@ informed about everything I do publicly.
 **Математика или любовь?** (Math of Love?)<br/>
 [SECON 2018](https://2018.secon.ru/reports/matematika-ili-lyubov)<br/>
 Penza, Russia<br/>
-16 March 2018
+17 March 2018
 
 <div class="talk-event"/>
 <img src="http://devexperience.ro/images/logo_black_green_white.png" class="future-talk" alt="DevExperience 2018"/>
 Keynote about something...<br/>
-[DevExperience 2018](http://devexperience.ro/)<br/>
+[DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/)<br/>
 Iasi, Romania<br/>
 23 April 2018
 
