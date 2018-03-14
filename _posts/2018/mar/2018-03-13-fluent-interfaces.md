@@ -111,6 +111,8 @@ object of type `Response` we have to use that "ugly" method
 which depends heavily on Reflection and
 [type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %}).
 
+{% quote Fluent interfaces mean large classes or some ugly workarounds. %}
+
 In other words, fluent interfaces mean large classes or some ugly workarounds.
 I mentioned this problem earlier, when I [wrote]({% pst 2017/oct/2017-10-10-streams-vs-decorators %}) about
 [Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
@@ -154,6 +156,8 @@ the IDE won't be able to auto-complete almost anything. Also, we will
 have to remember many of the names of the classes. And the construct looks
 rather difficult to read for those who are used to fluent interfaces. In addition,
 it's very far away from the DSL idea.
+
+{% quote Fluent interfaces are good for users, but bad for developers. Small objects are good for developers, but difficult to use. %}
 
 But here is the list of benefits. First, each object is small, very cohesive and
 they are all loosely coupled&mdash;which are obvious merits in OOP. Second,
