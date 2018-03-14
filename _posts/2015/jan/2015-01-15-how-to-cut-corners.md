@@ -41,7 +41,7 @@ you miss the deadline and **everybody blames you**. Been there, done that?
 
 There is, however, an alternative approach that provides a professional exit
 from this situation. Here are some tips I recommend to my peers who code with me
-in [teamed.io](http://www.teamed.io) projects.
+in [Teamed.io](http://www.teamed.io) projects.
 In a nutshell, I'm going to explain how you can **cut corners** and remain
 professional, 1) protecting your nerves, 2) optimizing your project's expenses,
 and 3) increasing the quality of the source code.

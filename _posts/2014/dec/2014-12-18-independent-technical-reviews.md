@@ -65,7 +65,7 @@ help you _check the reality_ of your code and evaluate how your team is really d
 
 {% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
 
-We, at [teamed.io](http://www.teamed.io), do independent reviews
+We, at [Teamed.io](http://www.teamed.io), do independent reviews
 with every project of ours, and this is a list of principles we use:
 
 **Make Independent Reviews Systematic**.

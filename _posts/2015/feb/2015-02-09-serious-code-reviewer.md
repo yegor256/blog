@@ -179,7 +179,7 @@ In other words, you're the plaintiff and he is the defender. Not the other way a
 
 This is the last and most difficult principle to follow. No matter how bad the
 code is and how stubborn your opponent is, you must remain professional. To be honest,
-I find this very difficult sometimes. At [teamed.io](http://www.teamed.io),
+I find this very difficult sometimes. At [Teamed.io](http://www.teamed.io),
 we're working in distributed teams and hire a few new people every week. Some
 of them, despite our [screening criteria]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}),
 appear to be rather <span class="strike">stupid</span> difficult to deal with.

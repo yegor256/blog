@@ -27,7 +27,7 @@ but only one of them (to my knowledge) supports Windows as a build
 platform&mdash;[appveyor.com](http://www.appveyor.com). My experience
 tells me that it's a good practice to continuously integrate on
 different platforms at the same time, especially when developing an
-open source library. That's why, in [teamed.io](http://www.teamed.io)
+open source library. That's why, in [Teamed.io](http://www.teamed.io)
 we're using AppVeyor in combination with [Travis](http://www.travis-ci.org).
 
 <!--more-->
