@@ -21,6 +21,8 @@ months. If you want to add something here, please
 
 <!--more-->
 
+Why shouldn't decorators be `public`? This will better enable vertical composition
+
 Support principles. Free, Paid, Fast, Slow, Open Source, Commercial. What's the right approach that everyone should adopt?
 
 Does Enterprise Messaging have a future and can anything be done to simplify EAI?
