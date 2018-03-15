@@ -40,7 +40,7 @@ you don't need to worry about screening and testing. Second, you'll have
 a very good explanation for why your project failed&mdash;because your
 friend let you down with a bad recommendation. Win-win.
 
-{% quote Hire only locals &mdash; they are much easier to manage and punish. %}
+{% quote Hire only locals&mdash;they are much easier to manage and punish. %}
 
 **Hire Only Locals**.
 Don't even think about a remote programmer&mdash;remote projects always fail.
