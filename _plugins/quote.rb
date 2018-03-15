@@ -24,7 +24,7 @@ module Yegor
     end
 
     def render(context)
-      "<aside class='quote'>#{CGI::escapeHTML(@text)}</aside>\n\n"
+      "<aside class='quote'>#{@text}</aside>\n\n"
     end
   end
 end
