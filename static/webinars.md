@@ -39,7 +39,7 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-<!-- {% webinar 04-04-2018 33 REj8pJesMVI The Alternative to Fluent Interfaces in Java %} -->
+{% webinar 04-04-2018 33 REj8pJesMVI The Alternative to Fluent Interfaces in Java %}
 
 <a href="https://www.youtube.com/watch?v=REj8pJesMVI"><img src="https://i.ytimg.com/vi/REj8pJesMVI/mqdefault.jpg" class="wnr" alt="Webinar no.33 by Yegor Bugayenko"/></a>
 April 4, 2018<br/>
