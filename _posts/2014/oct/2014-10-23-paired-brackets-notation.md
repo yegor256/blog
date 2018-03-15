@@ -66,7 +66,8 @@ get used to them :)
 
 ## Fluent
 
-This is how I would recommend formatting fluent method calls
+This is how I would recommend formatting
+[fluent]({% pst 2018/mar/2018-03-13-fluent-interfaces %}) method calls
 (this is Java in [NetBeans](https://netbeans.org/)):
 
 {% figure /images/2014/10/netbeans-fluent-indentation.png 637 %}

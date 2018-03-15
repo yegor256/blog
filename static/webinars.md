@@ -39,7 +39,16 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-<!-- {% webinar 07-02-2018 32 rC17YwowURQ Synchronized Decorators for Thread-Safety %} -->
+<!-- {% webinar 04-04-2018 33 REj8pJesMVI The Alternative to Fluent Interfaces in Java %} -->
+
+<a href="https://www.youtube.com/watch?v=REj8pJesMVI"><img src="https://i.ytimg.com/vi/REj8pJesMVI/mqdefault.jpg" class="wnr" alt="Webinar no.33 by Yegor Bugayenko"/></a>
+April 4, 2018<br/>
+&#35;33: **The Alternative to Fluent Interfaces in Java**<br/>
+We will discuss fluent interfaces design pattern by example. We will
+try to create an HTTP client as an alternative to jcabi-http,
+without fluent interfaces, but only with decorators and smart objects.
+This blog post explains the idea:
+[Fluent Interfaces Are Bad for Maintainability]({% pst 2018/mar/2018-03-13-fluent-interfaces %}).
 
 <a href="https://www.youtube.com/watch?v=rC17YwowURQ"><img src="https://i.ytimg.com/vi/rC17YwowURQ/mqdefault.jpg" class="wnr" alt="Webinar no.32 by Yegor Bugayenko"/></a>
 February 7, 2018<br/>

@@ -128,7 +128,8 @@ new Xembler(directives).apply(document);
 {% endhighlight %}
 
 In this snippet, I'm using a supplementary script builder, `Directives`, which
-enables generation of directives in a fluent way. Then, I use `Xembler` class,
+enables generation of directives in a
+[fluent]({% pst 2018/mar/2018-03-13-fluent-interfaces %}) way. Then, I use `Xembler` class,
 which is similar to "assembler," to apply all specified directives
 to the `document` object of class `org.w3c.dom.Document`.
 
