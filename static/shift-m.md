@@ -52,6 +52,10 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 Recent episodes:
 
 <img src="/images/face-256x256.jpg" class="guest-face"/><br/>
+&#35;23: [No estimates](/shift-m/2018/23.html)<br/>
+18 March 2018; 50 min.
+
+<img src="/images/face-256x256.jpg" class="guest-face"/><br/>
 &#35;22: [How to be honest with a client?](/shift-m/2018/22.html)<br/>
 4 March 2018; 54 min.
 

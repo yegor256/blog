@@ -295,11 +295,12 @@ of the subject, or the time of the year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">C</aside>
-<img src="/images/2016/geecon-2016.png" class="past-talk" alt="GeeCON 2017"/>
+<img src="https://i.ytimg.com/vi/HSh_Gpnn6fo/mqdefault.jpg" class="past-talk" alt="GeeCON 2017"/>
 What's This InterruptedException About?;
 [GeeCON 2017](https://geecon.org/);
 Kraków, Poland;
-18-19 May 2017.
+18-19 May 2017;
+[video](https://www.youtube.com/watch?v=HSh_Gpnn6fo).
 The event was very big, but many things were not as good as I would expect.
 It was in the cinema, as in 2016&mdash;not the best location, if you ask me.
 The food was average, the accomodation too. The key issue was the lack
