@@ -151,3 +151,4 @@ Recent episodes:
 <img src="/images/face-256x256.jpg" class="guest-face"/><br/>
 &#35;1: [Why Distributed Teams Fail?](/podcast/2017/1.html)<br/>
 5 June 2017; 53 min.
+
