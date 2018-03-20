@@ -28,8 +28,6 @@ style: |
 
 {% badge /images/andreea/podcast.svg 300 %}
 
-<!-- {% badge /images/shift-m-logo.svg 92 %} -->
-
 Shift-M is a weekly podcast about project management. I'm <del>recording</del> publishing
 every Monday. If you want to be a guest, please email to
 [podcast@yegor256.com](mailto:podcast@yegor256.com).
@@ -49,9 +47,13 @@ Subscribe at
 
 If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com).
 
-Already recorded but not yet published episodes:
+<!-- Already recorded but not yet published episodes: -->
 
-Previous episodes:
+Recent episodes:
+
+<img src="/images/face-256x256.jpg" class="guest-face"/><br/>
+&#35;23: [No estimates](/shift-m/2018/23.html)<br/>
+18 March 2018; 50 min.
 
 <img src="/images/face-256x256.jpg" class="guest-face"/><br/>
 &#35;22: [How to be honest with a client?](/shift-m/2018/22.html)<br/>
@@ -149,3 +151,4 @@ Previous episodes:
 <img src="/images/face-256x256.jpg" class="guest-face"/><br/>
 &#35;1: [Why Distributed Teams Fail?](/podcast/2017/1.html)<br/>
 5 June 2017; 53 min.
+

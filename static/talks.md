@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&#20;</span> Upcoming Events
 
 <div class="talk-event"/>
-<img src="https://2018.secon.ru/assets/logo-4c2eb8a37d9f098e2be8a2ba7390f3bbc797018d061939faaaba9648a8c985b9.png" class="future-talk" alt="SECON 2018"/>
-**Математика или любовь?** (Math of Love?)<br/>
-[SECON 2018](https://2018.secon.ru/reports/matematika-ili-lyubov)<br/>
-Penza, Russia<br/>
-17 March 2018
-
-<div class="talk-event"/>
 <img src="http://devexperience.ro/images/logo_black_green_white.png" class="future-talk" alt="DevExperience 2018"/>
 Keynote about something...<br/>
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/)<br/>
@@ -302,11 +295,12 @@ of the subject, or the time of the year.
 
 <div class="talk-event"/>
 <aside class="venue-rate green">C</aside>
-<img src="/images/2016/geecon-2016.png" class="past-talk" alt="GeeCON 2017"/>
+<img src="https://i.ytimg.com/vi/HSh_Gpnn6fo/mqdefault.jpg" class="past-talk" alt="GeeCON 2017"/>
 What's This InterruptedException About?;
 [GeeCON 2017](https://geecon.org/);
 Kraków, Poland;
-18-19 May 2017.
+18-19 May 2017;
+[video](https://www.youtube.com/watch?v=HSh_Gpnn6fo).
 The event was very big, but many things were not as good as I would expect.
 It was in the cinema, as in 2016&mdash;not the best location, if you ask me.
 The food was average, the accomodation too. The key issue was the lack

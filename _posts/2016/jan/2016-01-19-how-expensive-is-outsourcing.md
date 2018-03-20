@@ -37,13 +37,13 @@ Java project and seemed to like our approach. I explained how we work,
 how we control [quality]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}),
 and why and how we're [different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from everybody else. He seemed to be impressed.
-Then, he asked, "**How much** do you charge?"
+Then, he asked, "_How much_ do you charge?"
 
 {% badge http://img.teamed.io/logo.svg 100 http://www.teamed.io %}
 
 I told him that we are also different in the way we bill for our work,
 because we don't charge for the time spent by our programmers sitting
-in front of monitors. Instead, we bill for **results** produced, merged,
+in front of monitors. Instead, we bill for _results_ produced, merged,
 and delivered. I showed him this article about
 [incremental billing]({% pst 2014/oct/2014-10-21-incremental-billing %}).
 He seemed to understand the advantages of our approach, compared to the
@@ -54,7 +54,7 @@ Still, the question remained&mdash;how much?
 
 What could I do? I had to give him an answer.
 
-{% quote Under different management, programmers deliver very different results in the same 60 minutes %}
+{% quote Under different management, programmers deliver very different results in the same 60 minutes. %}
 
 I told him that our best Java programmers earn $30 to $50 per hour and
 we add our margin on top of that, in the amount of 100 percent, for management.
@@ -63,7 +63,7 @@ In the end, "one hour" will cost him $60 to $100. He ran away.
 What did I do wrong? I think I know what it was.
 I didn't explain to him that, under different management,
 programmers deliver very different results in the same
-60 minutes. By "very different," I mean **dramatically** different. Let
+60 minutes. By "very different," I mean _dramatically_ different. Let
 me demonstrate the numbers (I actually did that already almost two
 years ago, in my [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04-11-cost-of-loc %})
 post, but will try again from a different perspective).
@@ -91,7 +91,7 @@ Four people worked on this feature. If you put them all together
 in an office, full-time, with the same hourly rate, they will cost
 $800 per day (I'm not adding any management costs!).
 Now the question is whether they will be able to
-create **eight** new features **every day**.
+create _eight_ new features _every day_.
 
 If you're a manager, you know the velocity of your programmers.
 If you're a programmer, you know how much code you can write in a day.
@@ -120,7 +120,7 @@ of delivering for $100. Can you and your team do the same?
 
 Thus, your [ROI](https://en.wikipedia.org/wiki/Return_on_investment)
 while working with an [outsourced team]({% pst 2015/may/2015-05-21-avoid-software-outsourcing-disaster %}) mostly
-depends on their **results per dollar**, not dollars per hour. The first
+depends on their _results per dollar_, not dollars per hour. The first
 metric is difficult to calculate, and only the best teams will be able
 to do so. The second metric is absolutely misleading, but anyone
 will give it to you.
