@@ -119,10 +119,10 @@ which were introduced in 2010 and practiced since then on [many](https://www.you
 software projects. The principles have proved able to seriously increase project
 predictability, [decrease costs]({% pst 2014/apr/2014-04-11-cost-of-loc %}),
 and [enforce]({% pst 2018/mar/2018-03-06-speed-vs-quality %})
-quality of code. Also, they have boosted the motivation of [the programmers]({% pst 2018/jan/2018-01-09-micro-budgeting %}),
+quality of code. Also, they have boosted the motivation of [the type of programmers]({% pst 2018/jan/2018-01-09-micro-budgeting %}),
 who like the idea of being their own bosses.
 
-How many of them are out there
+How many of these people there are out there
 on the market&mdash;the future will soon show us.
 
 Speaking philosophically, while it's a common
