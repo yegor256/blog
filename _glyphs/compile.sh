@@ -15,4 +15,4 @@ mkdir -p "${target}"
 fontcustom compile "${dir}" \
   "--output=${target}" \
   --font-name=icons --templates=css --no-hash --force --autowidth
-sed -i -E "s|\"./icons([^\"]+)\"|\"http://cf.jare.io/?u=http://www.yegor256.com/css/icons\1%3F$(date +%s)\"|g" "${target}/icons.css"
+sed -i -E "s|\"./icons([^\"]+)\"|\"http://www.yegor256.com/css/icons\1%3F$(date +%s)\"|g" "${target}/icons.css"
