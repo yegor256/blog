@@ -14,6 +14,8 @@ keywords:
   - fluent interface is evil
   - fluent interfaces are evil
   - oop fluent interface
+social:
+  - hackernews: https://news.ycombinator.com/item?id=16619171
 image: /images/2018/03/donnie-brasco.jpg
 jb_picture:
   caption: Donnie Brasco (1997) by Mike Newell
