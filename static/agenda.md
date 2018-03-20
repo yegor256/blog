@@ -21,6 +21,8 @@ months. If you want to add something here, please
 
 <!--more-->
 
+When should you implement more than one interface instead of using a decorator?
+
 Support principles. Free, Paid, Fast, Slow, Open Source, Commercial. What's the right approach that everyone should adopt?
 
 Does Enterprise Messaging have a future and can anything be done to simplify EAI?
