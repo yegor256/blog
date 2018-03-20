@@ -22,7 +22,7 @@ jb_picture:
 There are tons of articles about resume writing. Literally,
 [tons of them](https://www.google.com/search?q=how+to+write+resume).
 And here's yet another one? Well, maybe ... but I don't think so. I'll try to
-give you a few **practical** hints for how to make your resume look
+give you a few _practical_ hints for how to make your resume look
 "sexier," and how to position yourself beyond the "good programmer" category and into
 the superstar zone. It may take a few years to truly pimp up your CV, but
 when it's done, you will charge
@@ -37,12 +37,12 @@ from your clients in paying.
 
 I think it's obvious, but only one out of 10 resumes I've been getting
 each day fits onto one page. All the others take three or more pages, and this looks
-very **unprofessional**. If you can't explain yourself in one page, there will be doubts
+very _unprofessional_. If you can't explain yourself in one page, there will be doubts
 about your skills in scope management, which are very important for a software engineer.
 It shows you simply can't filter out what's non-important and focus
 on what really matters. Besides, it's just boring to read three pages.
 
-Thus, strictly limit yourself to one page, **no exceptions**. Your resume is an "executive summary"
+Thus, strictly limit yourself to one page, _no exceptions_. Your resume is an "executive summary"
 of the product you're trying to sell. It's a marketing brochure. A sales
 flyer. A sticker on my refrigerator, if you wish. It has to be short
 and straightforward. Employers will either buy it or throw it away. They don't want to read it;
@@ -50,6 +50,8 @@ they want to buy you. Or throw your brochure away.
 Four-page brochures have far fewer chances than one-pagers.
 
 ## Don't Lie
+
+{% quote You can tell half of the truth, you can hide some information, and you can rephrase the truth, but never lie. %}
 
 No matter what you do with your resume, never lie about a single word. You
 can tell half of the truth, you can hide some information, and you can rephrase
@@ -71,7 +73,7 @@ Just pay attention to the photo; it's very important.
 Do I have to say that you must smile on that photo? Well, yes, you must.
 And make it casual, with a T-shirt and funny background. You must look
 relaxed and successful. You don't want to get hired; they want to hire
-you&mdash;this is the message your photo should send, just like in online **dating**.
+you&mdash;this is the message your photo should send, just like in online _dating_.
 
 ## Skip "Objective" and "Title"
 
@@ -81,16 +83,18 @@ They know what you are, because they are reading your resume.
 
 Besides that, you're limiting yourself with that title. Maybe they are looking
 for a VP of engineering while your resume says "Software Architect." That's
-immediately a mismatch for them. It's a strike against you. Your **name** is the title
+immediately a mismatch for them. It's a strike against you. Your _name_ is the title
 of your resume. That's it.
 
 ## A Dozen Skills
 
 This section of your resume actually tells them about your "tech focus."
-It must have a very short list of skills, definitely **under 12**. You simply
+It must have a very short list of skills, definitely _under 12_. You simply
 can't be an expert in MySQL, PostgreSQL, Oracle, and MS SQL at the same time.
 If there are too many skills, it's a sign of a "jack of all trades" who is
 almost always a "master of none." Don't do that.
+
+{% quote If there are too many skills, it's a sign of a "jack of all trades" who is almost always a "master of none." %}
 
 Find the most important skills in your profile and put them there.
 Just a few. And make sure the skills are all on the same level of abstraction.
@@ -133,9 +137,11 @@ software developer, you must be on GitHub. You
 to some open source. You have to be visible in the open-source world if you
 want to sell yourself high.
 
-Your potential employer wants to see what the **market** is thinking about
+{% quote You don't have to spend all your time on open-source projects, just contribute to the ones you're using already. %}
+
+Your potential employer wants to see what the _market_ is thinking about
 your code and about you. They are afraid of making a mistake by hiring you.
-Your presence in the open-source world is a **guarantee** for them. Someone has already
+Your presence in the open-source world is a _guarantee_ for them. Someone has already
 seen your code, and someone has already given some kudos to your projects. Someone virtually
 vouches for you. As a result, they will feel more comfortable in hiring you.
 
@@ -311,7 +317,7 @@ attention to it. You didn't even care to create that small but very
 important product nicely. How will you create their software? With the
 same attitude. Don't ruin the whole show with a careless design. That's the
 key word here&mdash;"careless." It doesn't need to be complex. It may be
-very simple. But it must be **yours**, made with care and love.
+very simple. But it must be _yours_, made with care and love.
 
 <hr/>
 

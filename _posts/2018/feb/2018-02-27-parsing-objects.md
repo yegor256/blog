@@ -3,7 +3,7 @@ layout: post
 title: "Don't Parse, Use Parsing Objects"
 date: 2018-02-27
 place: Moscow, Russia
-tags: management
+tags: oop java
 description: |
   When project scope is perfectly decomposed and management
   rules are clear and strict, the speed of delivery

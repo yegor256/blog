@@ -36,7 +36,7 @@ the cost?" I can, but I won't. Here is why.
 
 {% jb_picture_body %}
 
-Let me ask you something else: **Why do you need an estimate?**
+Let me ask you something else: _Why do you need an estimate?_
 Yes, I mean it&mdash;why do you ask me how much it will cost
 to develop the software for you? I can tell you why.
 
@@ -72,7 +72,7 @@ You need to choose the right
 [software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 partner, and you need to know what to expect and when, but ...
 
-You're asking the **wrong question**!
+You're asking the _wrong question_!
 
 This question has only one valid answer, and it's the answer nobody
 will ever give you&mdash;the development will take forever and will
@@ -89,7 +89,7 @@ asking for an estimate. I'm telling you that your software will be ready
 for $40K, and you sleep well. Until the moment you realize you've been
 fooled. By your own self.
 
-{% quote The development will take forever and will consume all your money %}
+{% quote The development will take forever and will consume all your money. %}
 
 Your concern is perfectly valid. You want to spend no more than $40K, and you want
 to get a product that will help you achieve your business goals. For example,
@@ -122,10 +122,10 @@ you can control these numbers during the course of the project. That's the
 guarantee you're looking for. Now you know what you're buying and how
 much you're paying for it. In other words, like I said above, having these
 numbers in front of you will assure you that your money is producing
-the maximum **amount** of software it can produce, at the highest **quality**.
+the maximum _amount_ of software it can produce, at the highest _quality_.
 
 The only question left is how you can know you're buying
-the **right** software. In other words, you know how much
+the _right_ software. In other words, you know how much
 we charge per gallon and how many gallons we use per mile, but
 how do you know we're driving in the right direction and not making
 too many circles or detours?
