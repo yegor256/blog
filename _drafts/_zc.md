@@ -52,7 +52,7 @@ instincts and hope for the best.
 Here is what I mean by that.
 First, we put a group of people together, also known as programmers. Then,
 we tell them how [important]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
-the goal is that they are going to achieve&mdash;that is, develop
+the goal is that they are going to achieve&mdash;develop
 a software product. Then we make sure they know who the boss is, by paying
 them [by the hour]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 Finally, thanks to their upbringing and education,
@@ -88,8 +88,8 @@ We, at [Zerocracy](http://www.zerocracy.com),
 believe that in the 21st century programmers (and not only them) deserve
 a better and a more effective replacement for this
 "monkey management." We believe that the software development world
-needs a management model, which is based
-on people's professional merits, instead of their ability to play
+needs a management model which is based
+on people's professional merits, instead of on their ability to play
 the [alpha/beta](https://en.wikipedia.org/wiki/Alpha_%28ethology%29) games.
 
 {% badge https://www.0crat.com/svg/zerocrat.svg 100 https://www.0crat.com %}
@@ -115,11 +115,11 @@ which acts according to a very strict [policy](http://www.zerocracy.com/policy.h
 
 The [policy](http://www.zerocracy.com/policy.html)
 of Zerocracy is based on [XDSD](http://www.xdsd.org) principles,
-which were introduced in 2010 and practiced since then in [many](https://www.youtube.com/watch?v=qRZYJGYdrwk)
-software projects. They proved able to seriously increase project
+which were introduced in 2010 and practiced since then on [many](https://www.youtube.com/watch?v=qRZYJGYdrwk)
+software projects. The principles have proved able to seriously increase project
 predictability, [decrease costs]({% pst 2014/apr/2014-04-11-cost-of-loc %}),
 and [enforce]({% pst 2018/mar/2018-03-06-speed-vs-quality %})
-quality of code. Also, they boosted the motivation of [the programmers]({% pst 2018/jan/2018-01-09-micro-budgeting %}),
+quality of code. Also, they have boosted the motivation of [the programmers]({% pst 2018/jan/2018-01-09-micro-budgeting %}),
 who like the idea of being their own bosses.
 
 How many of them are out there
