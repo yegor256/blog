@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Zerocracy: A Project Manager That Never Sleeps"
-date: 2018-03-27
+date: 2018-03-21
 place: Moscow, Russia
 tags: management zerocracy
 description: |
