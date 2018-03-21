@@ -134,3 +134,4 @@ We believe that in the future computers will help us organize
 ourselves by taking the routine part of the management on themselves.
 
 Zerocracy makes the first step in this direction.
+
