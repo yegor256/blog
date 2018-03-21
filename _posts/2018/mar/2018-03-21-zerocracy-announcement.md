@@ -95,7 +95,7 @@ the [alpha/beta](https://en.wikipedia.org/wiki/Alpha_%28ethology%29) games.
 
 Zerocracy offers exactly that: [Zerocrat](https://www.0crat.com), an automated project manager, which
 communicates as a chat bot and tells programmers what to do.
-It replaces a traditional "boss in the office",
+It replaces a traditional "boss in the office,"
 distributing [micro tasks]({% pst 2017/nov/2017-11-28-microtasking %})
 among programmers, validating their results,
 paying them, and calculating schedule, budget, and scope predictions. It does
