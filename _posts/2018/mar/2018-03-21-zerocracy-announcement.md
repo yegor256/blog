@@ -14,9 +14,9 @@ keywords:
   - zerocracy management
   - what is zerocracy
   - how zerocracy works
-image: /images/2018/03/
+image: /images/2018/03/casino.jpg
 jb_picture:
-  caption:
+  caption: Casino (1995) by Martin Scorsese
 ---
 
 I've been in the software business for almost 30 years. I wrote my first piece of code
@@ -46,8 +46,7 @@ says we have to do in order to keep a project under control.
 
 What do we do instead?
 
-We rely on our innate hierarchical
-instincts and hope for the best.
+We rely on our innate hierarchical instincts and hope for the best.
 
 Here is what I mean by that.
 First, we put a group of people together, also known as programmers. Then,
@@ -95,7 +94,7 @@ the [alpha/beta](https://en.wikipedia.org/wiki/Alpha_%28ethology%29) games.
 {% badge https://www.0crat.com/svg/zerocrat.svg 100 https://www.0crat.com %}
 
 Zerocracy offers exactly that: [Zerocrat](https://www.0crat.com), an automated project manager, which
-communicates as a chat bot, tells programmers what to do.
+communicates as a chat bot and tells programmers what to do.
 It replaces a traditional "boss in the office",
 distributing [micro tasks]({% pst 2017/nov/2017-11-28-microtasking %})
 among programmers, validating their results,
