@@ -152,6 +152,7 @@ agreements
 agrees
 ah
 ahead
+AI-powered
 aim
 aiming
 aintshy
@@ -244,6 +245,7 @@ angle
 angles
 angry
 AngularJS
+animal
 animals
 animate
 animating
@@ -587,6 +589,7 @@ behind
 behind-the-scenes
 beijing
 being
+belief
 beliefs
 believe
 believed
@@ -847,6 +850,7 @@ cake
 calculate
 calculated
 calculates
+calculating
 calculation
 calculations
 calculator
@@ -1921,6 +1925,7 @@ disclose
 disclosed
 disclosing
 disclosure
+discomfort
 disconnected
 discount
 discourage
@@ -1976,6 +1981,7 @@ distress
 distressing
 distribute
 distributed
+distributing
 disturb
 disturbing
 diversity
@@ -2139,6 +2145,7 @@ effective
 effectively
 effectiveness
 effects
+efficacy
 efficiency
 efficient
 effort
@@ -2646,6 +2653,7 @@ flirting
 floor
 flourish
 flow
+flowers
 flows
 fluent
 flushing
@@ -3384,6 +3392,7 @@ injector
 injects
 inline
 inlined
+innate
 inner
 innocence
 innocent
@@ -3420,6 +3429,7 @@ instantiated
 instantiation
 instead
 instinct
+instincts
 instituted
 instructed
 instruction
@@ -3893,6 +3903,7 @@ linkedin
 links
 linus
 linux
+lions
 liquibase
 lisette
 liskov
@@ -4033,6 +4044,7 @@ males
 malm
 mam
 mambo-jambo
+mammals
 man
 man-month
 manage
@@ -4279,6 +4291,7 @@ mischling
 misconception
 misconceptions
 miserable
+miserably
 misfortune
 misguided
 misleading
@@ -5144,6 +5157,7 @@ PPS
 PR
 practical
 practice
+practiced
 practices
 practicing
 practitioners
@@ -5174,6 +5188,7 @@ predictable
 predicted
 predicting
 prediction
+predictions
 predicts
 predisposition
 preemptive
@@ -5288,6 +5303,7 @@ productive
 productivity
 products
 prof
+profession
 professional
 professionalism
 professionally
@@ -5787,6 +5803,7 @@ responsible
 responsiveness
 rest
 restart
+restarts
 restaurant
 RESTful
 restrict
@@ -5869,6 +5886,8 @@ rob
 robbery
 robbing
 robert
+robot
+robots
 robson
 robust
 robustness
@@ -6000,6 +6019,7 @@ schoolmate
 science
 scientific
 scientist
+scientists
 SCM
 scope
 scoping
@@ -6294,6 +6314,7 @@ slave's
 slavery
 slaves
 sleep
+sleeps
 slf
 slick
 slide
@@ -6390,6 +6411,7 @@ soulless
 sound
 soundcloud
 sounds
+soup
 source
 sources
 sourcing
@@ -6499,6 +6521,7 @@ standardization
 standardized
 standards
 standing
+standish
 stands
 standups
 stanford
@@ -7248,6 +7271,7 @@ unwise
 up
 up-time
 up-votes
+upbringing
 update
 updated
 updates
@@ -7562,6 +7586,7 @@ with
 within
 without
 woke
+wolves
 woman
 women
 won't
@@ -7666,6 +7691,7 @@ zero-emission
 zero-stress
 ZeroCI
 zerocracy
+zerocrat
 zi
 zillow
 ziyavuddin

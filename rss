@@ -1,4 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-03-21T08:58:11+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fluent Interfaces Are Bad for Maintainability</title><link href="http://www.yegor256.com/2018/03/13/fluent-interfaces.html" rel="alternate" type="text/html" title="Fluent Interfaces Are Bad for Maintainability" /><published>2018-03-13T00:00:00+00:00</published><updated>2018-03-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/03/13/fluent-interfaces</id><content type="html" xml:base="http://www.yegor256.com/2018/03/13/fluent-interfaces.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fluent_interface&quot;&gt;Fluent interface&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-03-21T15:07:29+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Zerocracy: A Project Manager That Never Sleeps</title><link href="http://www.yegor256.com/2018/03/21/zerocracy-announcement.html" rel="alternate" type="text/html" title="Zerocracy: A Project Manager That Never Sleeps" /><published>2018-03-21T00:00:00+00:00</published><updated>2018-03-21T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/03/21/zerocracy-announcement</id><content type="html" xml:base="http://www.yegor256.com/2018/03/21/zerocracy-announcement.html">&lt;p&gt;I&amp;#39;ve been in the software business for almost 30 years. I wrote my first piece of code
+when I was 12. Since then I have been programming and managing other programmers,
+hiring and firing them, planning projects and their budgets, finding and losing
+customers, investing into software teams and losing my investments,
+even teaching others how to manage software projects. What is my overall
+impression? It&amp;#39;s a pain. I think I&amp;#39;ve found a solution though.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Casino (1995) by Martin Scorsese&#39; src=&#39;/images/2018/03/casino.jpg&#39; longdesc=&#39;#23194099&#39;/&gt;&lt;figcaption id=&#39;23194099&#39;&gt;Casino (1995) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Software projects &lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;fail&lt;/a&gt;.
+Most of them, anyway. Miserably. They run out of money, they
+produce software that doesn&amp;#39;t work, they miss deadlines, they
+lose key people and fall apart, and so on.
+Why does it happen? Not because programmers are stupid, nor technologies immature, and not because
+hardware is unstable.&lt;/p&gt;
+
+&lt;p&gt;They fail &lt;a href=&quot;https://www.infoq.com/articles/software-failure-reasons&quot;&gt;because&lt;/a&gt; we don&amp;#39;t manage them.&lt;/p&gt;
+
+&lt;p&gt;We miss important data, we lose track of events, we don&amp;#39;t pay attention
+to risks and threats, we don&amp;#39;t plan time and money, and we don&amp;#39;t do many other
+things that &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge&quot;&gt;PMBOK&lt;/a&gt;
+says we have to do in order to keep a project under control.&lt;/p&gt;
+
+&lt;p&gt;What do we do instead?&lt;/p&gt;
+
+&lt;p&gt;We rely on our innate hierarchical instincts and hope for the best.&lt;/p&gt;
+
+&lt;p&gt;Here is what I mean by that.
+First, we put a group of people together, also known as programmers. Then,
+we tell them how &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;important&lt;/a&gt;
+the goal is that they are going to achieve&amp;mdash;develop
+a software product. Then we make sure they know who the boss is, by paying
+them &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;by the hour&lt;/a&gt;.
+Finally, thanks to their upbringing and education,
+they &amp;quot;do the right thing&amp;quot; and software gets created. Maybe. If we are lucky.&lt;/p&gt;
+
+&lt;p&gt;This is exactly how it has worked in the Animal Kingdom, for millions of years.
+In order to survive, mammals create hierarchies: the strongest males are on top, others
+do what they say. If they don&amp;#39;t obey, violence helps. Scientists &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pubmed/26133375&quot;&gt;think&lt;/a&gt;
+that humans are also very hierarchical creatures&amp;mdash;we feel discomfort
+if we don&amp;#39;t know who the boss is, who to submit to.&lt;/p&gt;
+
+&lt;p&gt;Thanks to this hierarchical instinct, just like lions, wolves, and monkeys,
+we manage our projects using force.
+We, unlike the animals, don&amp;#39;t use physical violence anymore, at least not in the software business, but
+we have a huge arsenal of more sophisticated
+&lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;punishment methods&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;They do work.&lt;/p&gt;
+
+&lt;p&gt;However, due to the complexity of our profession, the quality
+and efficacy of the results we observe are very low.
+The &lt;a href=&quot;https://www.projectsmart.co.uk/white-papers/chaos-report.pdf&quot;&gt;CHAOS Report&lt;/a&gt; (2015)
+by the Standish Group says that &amp;quot;software development projects
+are in chaos, and we can no longer imitate the three monkeys&amp;mdash;hear no failures,
+see no failures, speak no failures.&amp;quot; The report also demonstrates that as a
+result of this chaos we have restarts (94% projects!), cost overruns, and time
+overruns. The report also says that technology incompetence is the root cause of project failures only in
+7% cases. In almost all other cases the management is the source of the trouble.&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.zerocracy.com&#39;&gt;&lt;img src=&#39;http://www.0crat.com/svg/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;We, at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;,
+believe that in the 21st century programmers (and not only them) deserve
+a better and a more effective replacement for this
+&amp;quot;monkey management.&amp;quot; We believe that the software development world
+needs a management model which is based
+on people&amp;#39;s professional merits, instead of on their ability to play
+the &lt;a href=&quot;https://en.wikipedia.org/wiki/Alpha_%28ethology%29&quot;&gt;alpha/beta&lt;/a&gt; games.&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;https://www.0crat.com&#39;&gt;&lt;img src=&#39;https://www.0crat.com/svg/zerocrat.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;Zerocracy offers exactly that: &lt;a href=&quot;https://www.0crat.com&quot;&gt;Zerocrat&lt;/a&gt;, an automated project manager, which
+communicates as a chat bot and tells programmers what to do.
+It replaces a traditional &amp;quot;boss in the office,&amp;quot;
+distributing &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;micro tasks&lt;/a&gt;
+among programmers, validating their results,
+paying them, and calculating schedule, budget, and scope predictions. It does
+all the routine jobs a professional &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project manager&lt;/a&gt;
+should do on any project, but rarely does do because it&amp;#39;s so boring.
+It doesn&amp;#39;t look boring to the robot though.&lt;/p&gt;
+
+&lt;p&gt;Zerocrat is a project manager that never sleeps. It doesn&amp;#39;t make mistakes,
+doesn&amp;#39;t forget things, and doesn&amp;#39;t accept excuses.
+It also doesn&amp;#39;t know anything about hierarchies. It manages programmers
+only by their merits, which are visible via &lt;a href=&quot;https://www.0crat.com/team&quot;&gt;objective metrics&lt;/a&gt;.
+Thanks to this, programmers become their own bosses, reporting only to a soulless piece of software,
+which acts according to a very strict &lt;a href=&quot;http://www.zerocracy.com/policy.html&quot;&gt;policy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xdsd.org&#39;&gt;&lt;img src=&#39;http://www.xdsd.org/images/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://www.zerocracy.com/policy.html&quot;&gt;policy&lt;/a&gt;
+of Zerocracy is based on &lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt; principles,
+which were introduced in 2010 and practiced since then on &lt;a href=&quot;https://www.youtube.com/watch?v=qRZYJGYdrwk&quot;&gt;many&lt;/a&gt;
+software projects. The principles have proved able to seriously increase project
+predictability, &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;decrease costs&lt;/a&gt;,
+and &lt;a href=&quot;/2018/03/06/speed-vs-quality.html&quot;&gt;enforce&lt;/a&gt;
+quality of code. Also, they boost the motivation of &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;the type of programmers&lt;/a&gt;,
+who like the idea of being their own bosses.&lt;/p&gt;
+
+&lt;p&gt;How many of those people are out there
+on the market&amp;mdash;the future will soon show us.&lt;/p&gt;
+
+&lt;p&gt;Speaking philosophically, while it&amp;#39;s a common
+&lt;a href=&quot;https://www.forbes.com/sites/quora/2017/12/18/artificial-intelligence-will-change-the-job-landscape-forever-heres-how-to-prepare/&quot;&gt;belief&lt;/a&gt;
+that in the future AI-powered robots will do what we want,
+we believe in the opposite: Robots will tell us what to do. Management is
+what computers do better, while writing code, drawing diagrams, growing flowers,
+or cooking a soup is what we, humans, do better and actually enjoy doing.
+We believe that in the future computers will help us organize
+ourselves by taking the routine part of the management on themselves.&lt;/p&gt;
+
+&lt;p&gt;Zerocracy makes the first step in this direction.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="zerocracy" /><summary type="html">I&amp;#39;ve been in the software business for almost 30 years. I wrote my first piece of code
+when I was 12. Since then I have been programming and managing other programmers,
+hiring and firing them, planning projects and their budgets, finding and losing
+customers, investing into software teams and losing my investments,
+even teaching others how to manage software projects. What is my overall
+impression? It&amp;#39;s a pain. I think I&amp;#39;ve found a solution though.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/03/casino.jpg" /></entry><entry><title type="html">Fluent Interfaces Are Bad for Maintainability</title><link href="http://www.yegor256.com/2018/03/13/fluent-interfaces.html" rel="alternate" type="text/html" title="Fluent Interfaces Are Bad for Maintainability" /><published>2018-03-13T00:00:00+00:00</published><updated>2018-03-13T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/03/13/fluent-interfaces</id><content type="html" xml:base="http://www.yegor256.com/2018/03/13/fluent-interfaces.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fluent_interface&quot;&gt;Fluent interface&lt;/a&gt;,
 first &lt;a href=&quot;https://martinfowler.com/bliki/FluentInterface.html&quot;&gt;coined&lt;/a&gt;
 as a term by Martin Fowler, is a very convenient way of communicating
 with objects in OOP. It makes their facades easier to use and understand.
@@ -984,71 +1103,4 @@ including Java, Ruby, and C++, we use operator new(). Well, unless
 we use static factory methods, which we don&amp;#39;t use because
 they are evil.
 Even though it looks so easy to make a new object any time we need it,
-I would recommend to be more careful with this rather toxic operator.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/01/the-gift.jpg" /></entry><entry><title type="html">The Formula for Software Quality</title><link href="http://www.yegor256.com/2017/12/26/software-quality-formula.html" rel="alternate" type="text/html" title="The Formula for Software Quality" /><published>2017-12-26T00:00:00+00:00</published><updated>2017-12-26T00:00:00+00:00</updated><id>http://www.yegor256.com/2017/12/26/software-quality-formula</id><content type="html" xml:base="http://www.yegor256.com/2017/12/26/software-quality-formula.html">&lt;p&gt;How do you define the quality of a software product? There is definitely an
-intrinsic emotional component to it, which means satisfaction for the user,
-willingness to pay, appreciation, positive attitude, and all that. However,
-if we put emotions aside, how can we really measure it?
-The IEEE &lt;a href=&quot;https://standards.ieee.org/findstds/standard/610.12-1990.html&quot;&gt;says&lt;/a&gt; that
-quality is the degree to which a product meets its requirements or
-user expectations. But what is the formula? Can we say that it
-satisfies requirements and expectations to, say, 73%?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Coco Chanel &amp;amp; Igor Stravinsky (2009) by Jan Kounen&#39; src=&#39;/images/2017/12/coco-chanel-and-igor-stravinsky.jpg&#39; longdesc=&#39;#f962b2fa&#39;/&gt;&lt;figcaption id=&#39;f962b2fa&#39;&gt;Coco Chanel &amp;amp; Igor Stravinsky (2009) by Jan Kounen&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is the formula and the logic I&amp;#39;m suggesting.&lt;/p&gt;
-
-&lt;p&gt;As &lt;a href=&quot;/2017/05/23/unlimited-number-of-bugs.html&quot;&gt;we know&lt;/a&gt;,
-any software product has an unlimited number of bugs. Some of them
-are discovered and fixed by the development team, let&amp;#39;s call them &lt;em&gt;F&lt;/em&gt;.
-Some of them are discovered by the end users, let&amp;#39;s call them &lt;em&gt;U&lt;/em&gt;. Thus,
-the total amount of bugs we are aware of, out of an infinity of them, is &lt;em&gt;F+U&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Obviously, the smaller &lt;em&gt;U&lt;/em&gt; is, the higher the quality. Ideally, &lt;em&gt;U&lt;/em&gt; has
-to be zero, which will mean that users don&amp;#39;t see any bugs at all. How can
-we achieve that, if the total amount of bugs is infinite? The only possible
-way to do it is to increase &lt;em&gt;F&lt;/em&gt;, hoping that &lt;em&gt;U&lt;/em&gt; will decrease automatically.&lt;/p&gt;
-
-&lt;p&gt;Thus, the quality of a product can be measured as:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#39;http://latex.codecogs.com/svg.latex?$$Q%20=%20%5Cfrac%7BF%7D%7BF%20+%20U%7D$$&#39; class=&#39;eqtn&#39;/&gt;&lt;/p&gt;
-
-&lt;p&gt;We simply divide the amount of bugs found by the total amount of bugs
-visible. Thus, the more bugs we manage to find before our users see them, the higher the
-quality.&lt;/p&gt;
-
-&lt;p&gt;A quality of 100% means that no bugs are found by the users. A quality
-of 0% means that all bugs are found by them.&lt;/p&gt;
-
-&lt;p&gt;Does it make sense?&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/2EEe2o6&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2017/12/managing-the-testing-process.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;P.S. It seems that I&amp;#39;m not the inventor of the formula. This is the quote
-from &lt;a href=&quot;http://amzn.to/2GvhMEV&quot;&gt;&lt;em&gt;Managing the Testing Process: Practical Tools and Techniques for Managing Hardware and Software Testing&lt;/em&gt;&lt;/a&gt; (2009)
-by Rex Black, page 109:
-A common metric of test team effectiveness measures whether the test team
-manages to find a sizeable majority of the bugs prior to release. The production
-or customer bugs are sometimes called &lt;em&gt;test escapes&lt;/em&gt;. The implication is that
-your test team missed these problems but could reasonably have detected them
-during test execution. You can quantify this metric as follows:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#39;http://latex.codecogs.com/svg.latex?$$%5Cmathit%7BDefect%20Detection%20Effectiveness%7D%20=%20%5Cfrac%7B%5Cmathit%7Bbugs%20(test)%7D%7D%7B%5Cmathit%7Bbugs%20(test)%20+%20bugs%20(production)%7D%7D$$&#39; class=&#39;eqtn&#39;/&gt;&lt;/p&gt;
-
-&lt;p&gt;P.P.S. Here is another similar metric by Capers Jones at
-&lt;a href=&quot;http://ieeexplore.ieee.org/document/488361/&quot;&gt;&lt;em&gt;Software Defect Removal Efficiency&lt;/em&gt;&lt;/a&gt;,
-Computer, Volume&amp;nbsp;29, Issue&amp;nbsp;4, 1996:
-&amp;quot;Serious software quality control involves measurement of defect removal efficiency (DRE).
-Defect removal efficiency is the percentage of defects found and repaired prior to release.
-In principle the measurement of DRE is simple. Keep records of all defects found
-during development. After a fixed period of 90 days, add customer-reported defects
-to internal defects and calculate the efficiency of internal removal. If the development
-team found 90 defects and customers reported 10 defects, then DRE is of course 90%.&amp;quot;&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="quality" /><category term="management" /><summary type="html">How do you define the quality of a software product? There is definitely an
-intrinsic emotional component to it, which means satisfaction for the user,
-willingness to pay, appreciation, positive attitude, and all that. However,
-if we put emotions aside, how can we really measure it?
-The IEEE says that
-quality is the degree to which a product meets its requirements or
-user expectations. But what is the formula? Can we say that it
-satisfies requirements and expectations to, say, 73%?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2017/12/coco-chanel-and-igor-stravinsky.jpg" /></entry></feed>
+I would recommend to be more careful with this rather toxic operator.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/01/the-gift.jpg" /></entry></feed>
