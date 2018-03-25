@@ -102,6 +102,12 @@ After every merge, we test the entire product, executing all
 available unit and integration tests.
 This is called <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> (aka "CI").</p>
 
+<div class="youtube">
+        <a href="https://www.youtube.com/watch?v=2a2nWELIk-Y">
+        </a>
+        Yegor Bugayenko | Kyiv DevOps, September, 2015;
+        6 October 2015</div>
+
 <p>Sometimes, some tests fail. When this happens, we say that our
 "build is broken." Such a failure is a positive
 side effect of quality control because it raises a red
@@ -144,6 +150,12 @@ importance of a "clean build" and technical leaders can't buy time for fixing
 unit tests. Moreover, the code that broke them was already in <code>master</code> and, in
 most cases, has been already deployed to production and delivered to end-users.
 What's the urgency of fixing some tests if business value was already delivered?</p>
+
+<div class="youtube">
+        <a href="https://www.youtube.com/watch?v=gL4XwP-EBOg">
+        </a>
+        Continuous Integration May Have Negative Effects;
+        20 April 2016</div>
 
 <p>In the end, most development teams don't take continuous integration alerts
 seriously. Jenkins or Travis are just fancy tools for them that play no role in
@@ -194,6 +206,12 @@ time.</p>
 before they get merged into <code>master</code>. Travis, for example, has this feature and
 it is very helpful. When you make a new commit to a branch, Travis immediately
 tries to build it, and reports in GitHub pull request, if there are problems.</p>
+
+<div class="youtube">
+        <a href="https://www.youtube.com/watch?v=Ht0JI41kA4I">
+        </a>
+        Pre-flight Build Pitfalls;
+        10 May 2016</div>
 
 <p>Pay attention, pre-flight builds don't merge. They just check whether your
 individual branch is clean. After merge, it can easily break <code>master</code>. And, of

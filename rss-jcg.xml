@@ -1217,42 +1217,12 @@ takes just a few seconds of your time.&lt;/p&gt;
         
           <description>&lt;p&gt;In object-oriented programming, an object is
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Immutable_object&quot;&gt;immutable&lt;/a&gt; if its state can&amp;#39;t be
-modified after it is created.&lt;/p&gt;
-
-&lt;p&gt;In Java, a good example of an
+modified after it is created.
+In Java, a good example of an
 immutable &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt;
 is &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/String.html&quot;&gt;&lt;code&gt;String&lt;/code&gt;&lt;/a&gt;.
 Once created, we can&amp;#39;t modify its state. We can request that it creates
 new strings, but its own state will never change.&lt;/p&gt;
-
-&lt;p&gt;However, there are not so many immutable classes in JDK. Take,
-for example, class &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/Date.html&quot;&gt;&lt;code&gt;Date&lt;/code&gt;&lt;/a&gt;.
-It is possible to modify its state using &lt;code&gt;setTime()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;#39;t know why the JDK designers decided to make these two
-very similar classes differently. However, I believe that the design
-of a mutable &lt;code&gt;Date&lt;/code&gt; has many flaws, while the immutable &lt;code&gt;String&lt;/code&gt;
-is much more in the spirit of the object-oriented paradigm.&lt;/p&gt;
-
-&lt;p&gt;Moreover, I think that &lt;strong&gt;all classes should be immutable in
-a perfect object-oriented world&lt;/strong&gt;. Unfortunately, sometimes,
-it is technically not possible due to limitations in JVM.
-Nevertheless, we should always aim for the best.&lt;/p&gt;
-
-&lt;p&gt;This is an incomplete list of arguments in favor of immutability:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;immutable objects are simpler to construct, test, and use&lt;/li&gt;
-&lt;li&gt;truly immutable objects are always thread-safe&lt;/li&gt;
-&lt;li&gt;they help to avoid &lt;a href=&quot;/2015/12/08/temporal-coupling-between-method-calls.html&quot;&gt;temporal coupling&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;their usage is side-effect free (no defensive copies)&lt;/li&gt;
-&lt;li&gt;identity mutability problem is avoided&lt;/li&gt;
-&lt;li&gt;they always have failure atomicity&lt;/li&gt;
-&lt;li&gt;they are much easier to cache&lt;/li&gt;
-&lt;li&gt;they prevent NULL references, &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;which are bad&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Let&amp;#39;s discuss the most important arguments one by one.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 09 Jun 2014 00:00:00 +0000</pubDate>
@@ -1321,23 +1291,6 @@ and encapsulates no state. &lt;code&gt;StringUtils&lt;/code&gt;, &lt;code&gt;IOU
 &lt;a href=&quot;https://code.google.com/p/guava-libraries/&quot;&gt;Guava&lt;/a&gt;, and
 &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html&quot;&gt;&lt;code&gt;Files&lt;/code&gt;&lt;/a&gt;
 from JDK7 are perfect examples of utility classes.&lt;/p&gt;
-
-&lt;p&gt;This design idea is very popular in the Java world (as well as C#, Ruby, etc.)
-because utility classes provide common functionality used everywhere.&lt;/p&gt;
-
-&lt;p&gt;Here, we want to follow the
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY principle&lt;/a&gt; and avoid
-duplication. Therefore, we place common code blocks into utility classes and
-reuse them when necessary:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// This is a terrible design, don&amp;#39;t reuse&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NumberUtils&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Indeed, this a very convenient technique!?&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
