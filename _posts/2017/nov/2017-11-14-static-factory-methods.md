@@ -16,8 +16,6 @@ keywords:
   - factories vs constructiors
 social:
   - dzone: https://dzone.com/articles/constructors-or-static-factory-methods
-youtube:
-  - 9yjtsCK6Wdk
 image: /images/2017/11/extract.jpg
 jb_picture:
   caption: Extract (2009) by Mike Judge
@@ -318,6 +316,8 @@ method inside `Color`:
 {% highlight java %}
 colors.make(0xBF1932);
 {% endhighlight %}
+
+{% youtube 9yjtsCK6Wdk %}
 
 However, this is still not really an object-oriented way of thinking, because
 we're taking the decision-making away from the object it belongs to. Either

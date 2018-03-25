@@ -14,8 +14,6 @@ keywords:
   - 0pdd
   - GitHub PDD
   - zerocracy pdd
-youtube:
-  - nsYGC2aUwfQ
 image: /images/2017/04/0pdd-screenshot.jpg
 ---
 
@@ -37,6 +35,8 @@ Here is how you configure it, in two steps. First, you
 [grant](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/)
 access to [@0pdd](https://github.com/0pdd) in GitHub
 (if your repository is private).
+
+{% youtube nsYGC2aUwfQ %}
 
 Second, you add a [webhook](https://help.github.com/articles/about-webhooks/)
 to your GitHub repository: `http://www.0pdd.com/hook/github` (with just `push` event

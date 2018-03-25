@@ -14,8 +14,6 @@ keywords:
   - management skills
   - leadership skills
   - project management skills
-youtube:
-  - zaKTNK8g2-M
 image: /images/2016/05/schindlers-list.jpg
 jb_picture:
   caption: Schindler's List (1993) by Steven Spielberg
@@ -43,6 +41,8 @@ state to another.
 [PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx) defines projects as
 "temporary endeavors undertaken to create unique products, services, or results,"
 which is just a specific case of my definition. Mine is more abstract, I believe.
+
+{% youtube zaKTNK8g2-M %}
 
 Consider this example. You woke up in the morning and made yourself a cup of coffee.
 That was a project.

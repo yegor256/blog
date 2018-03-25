@@ -24,8 +24,6 @@ social:
 image: /images/2017/02/the-deer-hunter.jpg
 jb_picture:
   caption: The Deer Hunter (1978) by Michael Cimino
-youtube:
-  - ZhWOlaMqppM
 ---
 
 This is a real story, and it's not only about Google. I'm getting emails from recruiters
@@ -48,6 +46,8 @@ I do realize that their recruiters don't care about my answers&mdash;they
 simply click "delete" and move on. I also realize that they will never see
 this post, and this article probably won't change anything. However,
 I have to write it.
+
+{% youtube ZhWOlaMqppM %}
 
 This is what I'm sending back to them:
 

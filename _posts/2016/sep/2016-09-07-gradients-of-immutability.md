@@ -14,8 +14,6 @@ keywords:
   - immutable list
   - immutable object
   - immutable object java
-youtube:
-  - PVvLQGnyDrQ
 related:
   - 2014/jun/2014-06-09-objects-should-be-immutable
   - 2014/dec/2014-12-09-immutable-object-state-and-behavior
@@ -149,6 +147,8 @@ The object is still _immutable_. Is it
 No. Is it immutable? Yes. Confused? You bet.
 
 <hr/>
+
+{% youtube PVvLQGnyDrQ %}
 
 My point is that immutability is not _binary_; there are many
 forms of it. The most simple one is, of course, a

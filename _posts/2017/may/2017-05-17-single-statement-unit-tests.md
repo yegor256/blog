@@ -14,9 +14,6 @@ keywords:
   - hamcrest
   - junit design
   - testing design patterns
-youtube:
-  - 1bAixLaOCSA
-  - CCr8hRE_TUs
 image: /images/2017/05/bullet.jpg
 jb_picture:
   caption: Bullet (1996) by Julien Temple
@@ -52,6 +49,8 @@ public void testIntStream() {
 There are two parts in this method: the algorithm and the assertion. The
 algorithm prepares two arrays of integers and the assertion compares them
 and throws `AssertionError` if they are not equal.
+
+{% youtube 1bAixLaOCSA %}
 
 I'm saying that the first part, the algorithm, is the one we should try
 to avoid. The only thing we must have is the assertion. Here is
@@ -106,6 +105,8 @@ and its
 [collection](http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/allclasses-frame.html)
 of basic matchers is a perfect instrument to make our
 single-statement test methods even more cohesive and readable.
+
+{% youtube CCr8hRE_TUs %}
 
 There are a number of practical benefits of this principle, if we
 agree to follow it:

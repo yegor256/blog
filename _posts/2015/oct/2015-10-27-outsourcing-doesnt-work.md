@@ -17,8 +17,6 @@ keywords:
 social:
   - hackernews: https://news.ycombinator.com/item?id=10463195
   - reddit: https://www.reddit.com/r/programming/comments/3qgr7o/why_software_outsourcing_doesnt_work_anymore/
-youtube:
-  - 9j5pq71BS5U
 image: /images/2015/10/the-godfather-ii.jpg
 jb_picture:
   caption: "The Godfather: Part II (1974) by Francis Ford Coppola"
@@ -60,6 +58,8 @@ they all miss the point, because they are looking at the problem from
 a paying customer's point of view. I try to look at it from both sides
 and tell you the ugly truth. More on that in a few paragraphs. For now, let's
 explore what the usual reasons are.
+
+{% youtube 9j5pq71BS5U %}
 
 **Cheapest Providers**.
 Here is the argument: "So you're outsourcing because you want to optimize

@@ -14,8 +14,6 @@ keywords:
   - best java web framework
   - object-oriented java web framework
   - java web app framework
-youtube:
-  - nheD2LNYrpk
 image: /images/2015/03/godfather-shooting-scene.jpg
 jb_picture:
   caption: Making of The Godfather (1972) by Francis Ford Coppola
@@ -45,6 +43,8 @@ Let's see what was created and how it works.
 
 This is how I understand a web application architecture and its
 components, in simple terms.
+
+{% youtube nheD2LNYrpk %}
 
 First, to create a web server, we should create
 a new [network socket](http://en.wikipedia.org/wiki/Network_socket),

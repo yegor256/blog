@@ -14,9 +14,6 @@ keywords:
   - office awards ideas
   - office awards funny
   - startup failure stories
-youtube:
-  - F6NwcQyEY18
-  - ibT5oKToMoQ
 related:
   - 2016/dec/2016-12-06-how-to-pay-programmers-less
   - 2015/mar/2015-03-02-team-morale-myths-and-reality
@@ -41,6 +38,8 @@ Here is a list of the most effective methods.
 
 Disclaimer: I'm using the pronoun "he" merely for simplicity of speech. The
 same exact rules apply to both males and females.
+
+{% youtube F6NwcQyEY18 %}
 
 **Use Your Voice**.
 This, of course, is your best instrument of
@@ -105,6 +104,8 @@ Your key message is this: "I'm worrying about the project while you're
 enjoying your family time!" Guilt is what you're planting with this.
 He won't be able to ask you not to call him after work; he is not that brave.
 He will instead try to please you somehow so that you stop calling him.
+
+{% youtube ibT5oKToMoQ %}
 
 **Don't Check Results**.
 This technique is close to playing hard to get, but here you don't ignore him.

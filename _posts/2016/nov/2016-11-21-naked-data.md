@@ -17,8 +17,6 @@ keywords:
 image: /images/2016/11/borat.jpg
 jb_picture:
   caption: "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles"
-youtube:
-  - Nm274dGikFc
 ---
 
 Encapsulation is the core principle of object-oriented programming
@@ -49,6 +47,8 @@ example, both lines after `int t` decided that the temperature is in Fahrenheit.
 At the moment of writing, this may be true, but this assumption couples the
 code with the data. If tomorrow we change `t` to Celsius, the code won't know
 about this change. That's why I call this coupling _hidden_.
+
+{% youtube Nm274dGikFc %}
 
 If we change the type of `t` from `int` to, say, `double`, the `printf`
 line won't print anything after the decimal point. Again, the coupling is

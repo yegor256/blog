@@ -16,10 +16,6 @@ keywords:
   - java annotations tutorial
   - java annotations list
 book: elegant-objects-2 6.1
-youtube:
-  - g1ctRcW214w
-  - oV6Utb5Jows
-  - WSgP85kr6eU
 image: /images/2016/04/gomorrah.jpg
 jb_picture:
   caption: Gomorra (2008) by Matteo Garrone)
@@ -40,6 +36,8 @@ annotations are a big mistake in Java design.
 <!--more-->
 
 {% jb_picture_body %}
+
+{% youtube g1ctRcW214w %}
 
 Long story short, there is one big problem with annotations&mdash;they encourage us to implement
 [object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
@@ -119,6 +117,8 @@ and encourage us by tearing objects apart and keeping parts in different
 places. They are containers, sessions, managers, controllers, etc.
 
 ## `@XmlElement`
+
+{% youtube oV6Utb5Jows %}
 
 This is how JAXB
 [works]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}), when you want to convert your
@@ -256,6 +256,8 @@ has to be wrapped into another one. This is happening behind the scenes. We don'
 see that supplementary class, which implements the retrying algorithm.
 But the bytecode produced by the AspectJ weaver contains a modified
 version of class `Foo`.
+
+{% youtube WSgP85kr6eU %}
 
 That is exactly what is wrong with this approach&mdash;we don't see
 and don't control the instantiation of that supplementary object. Object

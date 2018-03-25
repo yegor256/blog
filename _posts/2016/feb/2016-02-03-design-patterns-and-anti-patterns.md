@@ -15,10 +15,6 @@ keywords:
   - java design pattern
   - anti patterns
   - clean code
-youtube:
-  - WSgP85kr6eU
-  - WpP4rIhh5e4
-  - DEqcn4-freM
 image: /images/2016/02/the-shining.jpg
 jb_picture:
   caption: The Shining (1980) by Stanley Kubrick
@@ -35,6 +31,8 @@ I love or hate each one. Follow me, in alphabetic order.
 <!--more-->
 
 {% jb_picture_body %}
+
+{% youtube WSgP85kr6eU %}
 
 [<span class='green'>Abstract Factory</span>](https://en.wikipedia.org/wiki/Abstract_factory_pattern).
 It's OK.

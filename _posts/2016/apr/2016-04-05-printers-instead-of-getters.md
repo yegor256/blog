@@ -15,8 +15,6 @@ keywords:
   - alternative to getters
   - getters java
   - getters and setters java
-youtube:
-  - _Q0cNykXB04
 book: elegant-objects-2 5.3
 image: /images/2016/04/amelie.jpg
 jb_picture:
@@ -86,6 +84,8 @@ If we want to convert it into
 they will be very helpful. If we want
 to use this poor object as a data object in JSP, getters will help us. There
 are many examples in Java, where getters are being actively used.
+
+{% youtube _Q0cNykXB04 %}
 
 This is **not** because they are so effective. This is because we're so
 [**procedural**]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})

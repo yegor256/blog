@@ -13,10 +13,6 @@ keywords:
   - software architect responsibilities
   - software architect vs developer
   - software architect vs engineer
-youtube:
-  - 0fuEgmibJc4
-  - PNSezrlemsY
-  - AvVQ5NjS_Nk
 image: /images/2015/05/dr-strangelove.jpg
 jb_picture:
   caption: Dr. Strangelove (1964) by Stanley Kubrick
@@ -41,6 +37,8 @@ regular reports from software architects a few times a week. Each report
 includes three mandatory parts: 1) scope status, 2) issues, and 3) risks.
 
 ## Scope Status
+
+{% youtube 0fuEgmibJc4 %}
 
 The first and most important type of information I'm looking for
 is the scope status, which should be presented in
@@ -72,6 +70,8 @@ is accurate. Again, a mistake here is unforgivable.
 
 ## Issues
 
+{% youtube PNSezrlemsY %}
+
 The second important part of a regular report from an architect is a list
 of current issues the development team is facing. An issue is something
 that has already happened and we're suffering from it. Here are
@@ -88,6 +88,8 @@ Again, the list must include four to eight items (no more and no less), and the 
 should mention the most critical issues there.
 
 ## Risks
+
+{% youtube AvVQ5NjS_Nk %}
 
 Now, the risks. A risk is something that hasn't happened yet but may happen
 soon, and if it happens, we'll be in trouble. The architect is responsible

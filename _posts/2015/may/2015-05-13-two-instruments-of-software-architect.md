@@ -12,9 +12,6 @@ keywords:
   - software architect responsibilities
   - software architect vs developer
   - software architect vs engineer
-youtube:
-  - 0fuEgmibJc4
-  - AvVQ5NjS_Nk
 image: /images/2015/05/rear-window.jpg
 jb_picture:
   caption: Rear Window (1954) by Alfred Hitchcock
@@ -37,6 +34,8 @@ At [Teamed.io](http://www.teamed.io), we discourage any
 between developers unless they are formally attached to the tickets or tasks
 we're working on. Read more details about this approach in
 [this post]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
+
+{% youtube 0fuEgmibJc4 %}
 
 The same principle applies to an architect. We don't use meetings,
 stand-ups, Skype calls, IRC channels, or any other tools where information
@@ -68,6 +67,8 @@ between him and the team. An architect doesn't explain what needs to be done
 but asks the team to fix the product in a way he thinks is right.
 If the ticket resolver, a member of the team, disagrees with that approach,
 a discussion starts right in the ticket.
+
+{% youtube AvVQ5NjS_Nk %}
 
 Sometimes an architect has doubts and needs to discuss a few possible solutions
 with the team or simply collect opinions. Again, we use bugs for that.

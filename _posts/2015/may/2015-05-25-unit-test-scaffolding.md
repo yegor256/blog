@@ -14,8 +14,6 @@ keywords:
   - unit testing mocks
   - unit testing stubs
   - unit testing of static
-youtube:
-  - l6MpCBzwDbg
 image: /images/2015/05/leon-the-professional.jpg
 jb_picture:
   caption: "Léon: The Professional by Luc Besson"
@@ -69,6 +67,8 @@ it creates a "test fixture" of type `Folder`. That is used in all three
 tests as an argument for the `Metrics` constructor. The real class being
 tested here is `Metrics` while `this.folder` is something we need
 in order to test it.
+
+{% youtube l6MpCBzwDbg %}
 
 What's wrong with this test? There is one serious issue:
 **coupling** between test methods. Test methods (and all tests in general)

@@ -17,8 +17,6 @@ keywords:
 image: /images/2017/10/reality.jpg
 jb_picture:
   caption: Reality (2012) by Matteo Garrone
-youtube:
-  - 7WmsiV22IXM
 buffer:
   - "You obviously know what lazy loading is, right? And you no doubt know about caching. To my knowledge, there is no elegant way in Java to implement either of them"
   - "Unfortunately, lazy loading and NULL references always come together in classic examples. However there is a better way to implement it"
@@ -221,6 +219,8 @@ of room for
 we can add more constructors which will accept
 other sources of data, for example
 [`File`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html) or a byte array.
+
+{% youtube 7WmsiV22IXM %}
 
 In a nutshell, the attribute that is supposed to be loaded in a "lazy" way
 is represented inside an object as a "function"

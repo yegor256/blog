@@ -13,9 +13,6 @@ keywords:
   - team morale events
   - team morale booster ideas
   - team morale event ideas
-youtube:
-  - ibT5oKToMoQ
-  - biE86esgFAE
 related:
   - 2016/sep/2016-09-27-command-control-innovate
   - 2016/jun/2016-06-21-how-to-hire-programmer
@@ -57,6 +54,8 @@ team members. Your job as a manager is to help the best players
 play better, and they can't play better if they see that management
 doesn't understand the difference between excellence and mediocrity. It's
 a severe demotivating factor.
+
+{% youtube ibT5oKToMoQ %}
 
 **Be Honest About Problems and Risks**.
 Your team is following you and expecting you to be a smart manager. While they
@@ -107,6 +106,8 @@ tasks and goals strictly personal, and be prepared to be responsible for
 the group's success. You, as a manager, break down an entire project into
 parts and delegate them to your people. If you do this job properly,
 we all will succeed. But don't try to blame us if the parts fall apart.
+
+{% youtube biE86esgFAE %}
 
 **Don't Mention Steve Jobs**.
 Try to avoid global slogans and world domination speeches in the office and
