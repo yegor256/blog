@@ -34,7 +34,7 @@ module Yegor
       item = json['items'][0]
       snippet = item['snippet']
       "<div class='youtube'>
-        <a href='https://www.youtube.com/watch?v=#{id}'>
+        <a href='https://www.youtube.com/watch?v=#{@id}'>
         <img src='#{snippet['thumbnails']['medium']['url']}'/></a>
         #{snippet['title']};
         #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}</div>"
