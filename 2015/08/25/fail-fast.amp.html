@@ -98,6 +98,13 @@ by example. This is Fail Safe:</p>
   return file.length();
 }</pre>
 
+<div class="youtube">
+        <a href="https://www.youtube.com/watch?v=QMcDa2eyRBY">
+        </a>
+        <div>Need Robust Software? Make It Fragile;
+        29 February 2016</div>
+</div>
+
 <p>This method is supposed to calculate and return a file size. It first checks
 whether the file exists. If it doesn't exist, the method returns zero. Indeed,
 the file is absent, so there is no size. We could complain that the file is
@@ -131,6 +138,13 @@ be fixed. And the fix will be simpler and also more visible. Fail Fast
 is a much better approach for maintainability. The code becomes cleaner.
 It is much easier to track a failure. All methods are ready to break and throw
 an exception on even the tiniest problem.</p>
+
+<div class="youtube">
+        <a href="https://www.youtube.com/watch?v=nCGBgI1MNwE">
+        </a>
+        <div>Need It Robust? Make It Fragile!;
+        21 May 2016</div>
+</div>
 
 <p>In this example, if the method returns zero, it's not obvious
 whether the file exists and its size is actually zero or if its name is wrong
