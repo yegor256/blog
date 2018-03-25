@@ -36,8 +36,8 @@ module Yegor
       "<div class='youtube'>
         <a href='https://www.youtube.com/watch?v=#{@id}'>
         <img src='#{snippet['thumbnails']['medium']['url']}'/></a>
-        #{snippet['title']};
-        #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}</div>"
+        <div>#{snippet['title']};
+        #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}</div></div>"
         # "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
     end
   end
