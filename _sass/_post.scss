@@ -6,11 +6,12 @@
   float: right;
   font-size: 0.8em;
   margin: .5 * $em -5 * $em .5 * $em $em;
+  padding-left: $em;
   text-align: left;
 
   img {
     float: left;
-    width: 100%;
+    width: 9 * $em;
     display: block;
   }
 }
