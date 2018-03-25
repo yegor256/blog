@@ -30,17 +30,15 @@ module Yegor
       key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
       return if key.nil?
       '<div class="youtube">' +
-      list.map do |id|
-        uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet,statistics&key=#{key}")
-        json = JSON.parse(Net::HTTP.get(uri))
-        item = json['items'][0]
-        snippet = item['snippet']
-        "<a href='https://www.youtube.com/watch?v=#{id}'>" \
-          "<img src='#{snippet['thumbnails']['medium']['url']}'/></a>" \
-          "#{snippet['title']}; " \
-          "#{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}"
-          # "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
-      end + '</div>'
+      uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet,statistics&key=#{key}")
+      json = JSON.parse(Net::HTTP.get(uri))
+      item = json['items'][0]
+      snippet = item['snippet']
+      "<a href='https://www.youtube.com/watch?v=#{id}'>" \
+        "<img src='#{snippet['thumbnails']['medium']['url']}'/></a>" \
+        "#{snippet['title']}; " \
+        "#{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}</div>"
+        # "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
     end
   end
 end
