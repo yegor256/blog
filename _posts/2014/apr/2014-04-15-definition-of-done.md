@@ -14,8 +14,6 @@ keywords:
   - project planning
   - risk management
   - human resource management
-youtube:
-  - qRZYJGYdrwk
 ---
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
@@ -36,6 +34,8 @@ principle states that someone is paid only
 when they provide deliverables. Combining the definition of done and the
 principle of paying only for deliverables provides us a very important
 conclusion: we do not pay for un-finished tasks.
+
+{% youtube qRZYJGYdrwk %}
 
 Every task has its own time budget. Regardless of the number of people who
 worked on a task previously, only the last one&mdash;the one who managed to provide

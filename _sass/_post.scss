@@ -1,26 +1,33 @@
 .youtube {
   @extend %unprintable;
+  border-left: 4px solid $green;
+  border: 0;
+  height: 360px;
+  width: 640px;
+  float: right;
+  height: 180px;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  width: 320px;
+  float: right;
+}
+
+
+.youtube {
+  @extend %desktop-only;
+  @extend %unprintable;
+  border-left: 4px solid #e52d27;
+  float: right;
+  font-size: 0.8em;
   margin-bottom: 2 * $em;
   margin-top: 2 * $em;
+  margin-left: $em;
   text-align: left;
 
-  ul {
-    list-style: none;
-    padding-left: 0;
-
-    li {
-      @extend %clear;
-      border-left: 4px solid #e52d27;
-      margin-bottom: $em;
-      min-height: 80px;
-      padding-left: $em;
-
-      img {
-        float: left;
-        height: 80px;
-        margin-right: 1em;
-      }
-    }
+  img {
+    float: left;
+    height: 120px;
+    display: block;
   }
 }
 
@@ -72,3 +79,41 @@
     }
   }
 }
+
+.quote {
+  @extend %desktop-only;
+  @extend %unprintable;
+  border-left: 4px solid $green;
+  float: right;
+  font-size: 1.6 * $em;
+  line-height: 1.6 * $em;
+  margin: .5 * $em -5 * $em .5 * $em $em;
+  padding-left: .75 * $em;
+  width: 15 * $em;
+
+  &::before {
+    content: 'ˮ';
+  }
+}
+
+.book {
+  @extend %desktop-only;
+  @extend %unprintable;
+  float: right;
+  font-family: $code-font;
+  margin: .5 * $em -6 * $em .5 * $em $em;
+  padding-left: .75 * $em;
+  width: 15 * $em;
+
+  .book-cover {
+    float: left;
+    height: 160px;
+    margin-right: .6 * $em;
+    width: 108px;
+  }
+
+  .amazon-button {
+    height: 20px;
+  }
+}
+

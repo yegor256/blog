@@ -14,8 +14,6 @@ keywords:
   - test planning
   - test plan
   - test script
-youtube:
-  - qRZYJGYdrwk
 image: /images/2014/04/charlie-and-chocolate-factory-chewing-breakfast.png
 jb_picture:
   caption: Charlie and the Chocolate Factory (2005) by Tim Burton
@@ -59,6 +57,8 @@ judgment.
 Let's say we're starting to develop a web system, which is similar to the one we
 worked on last year. We know that in the previous project our users and team
 together reported 500 bugs.
+
+{% youtube qRZYJGYdrwk %}
 
 It's logical to assume that the new project will have a similar number of bugs.
 Thus, our task is to make those 500 bugs visible before they hit the production

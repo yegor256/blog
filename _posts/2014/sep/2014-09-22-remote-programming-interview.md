@@ -15,7 +15,7 @@ keywords:
   - outsource programming
 ---
 
-{% youtube TWBBZK_XRNU %}
+<iframe class='video' src='https://www.youtube.com/embed/TWBBZK_XRNU?controls=2' allowfullscreen='true'></iframe>
 
 Here is an interview taken by Lisette Sutherland from
 [www.CollaborationSuperpowers.com](http://www.collaborationsuperpowers.com),

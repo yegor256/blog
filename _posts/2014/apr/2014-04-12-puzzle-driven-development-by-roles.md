@@ -14,8 +14,6 @@ keywords:
   - project planning
   - project roles
   - distributed programming
-youtube:
-  - nsYGC2aUwfQ
 image: /images/2014/04/pulp-fiction-mr-wolf-with-cup.png
 jb_picture:
   caption: Pulp Fiction (1994) by Quentin Tarantino
@@ -53,6 +51,8 @@ Let's assume, for the sake of simplicity, that a project is a simple
 software tool written by me for a close friend. I created the
 first draft version 0.0.1 and delivered it to him. For me, the project
 is done. I've completed the work, and hopefully will never have to return to it again.
+
+{% youtube nsYGC2aUwfQ %}
 
 However, the reality of the project is very different. In just a few hours,
 I receive a call from my friend saying that a he's found a few bugs in the tool. He is asking me

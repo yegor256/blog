@@ -239,29 +239,6 @@ del {
   text-align: center;
 }
 
-.video {
-  @extend %unprintable;
-  border: 0;
-  height: 360px;
-  width: 640px;
-
-  &.video-left {
-    float: left;
-    height: 180px;
-    margin-bottom: 1em;
-    margin-right: 1em;
-    width: 320px;
-  }
-
-  &.video-right {
-    float: right;
-    height: 180px;
-    margin-bottom: 1em;
-    margin-left: 1em;
-    width: 320px;
-  }
-}
-
 label {
   display: block;
 }
@@ -422,43 +399,6 @@ blockquote {
     border-left: 0;
     margin-left: 0;
     padding-left: 0;
-  }
-}
-
-.quote {
-  @extend %desktop-only;
-  @extend %unprintable;
-  border-left: 4px solid $green;
-  float: right;
-  font-size: 1.6 * $em;
-  line-height: 1.6 * $em;
-  margin: .5 * $em -5 * $em .5 * $em $em;
-  padding-left: .75 * $em;
-  width: 15 * $em;
-
-  &::before {
-    content: 'ˮ';
-  }
-}
-
-.book {
-  @extend %desktop-only;
-  @extend %unprintable;
-  float: right;
-  font-family: $code-font;
-  margin: .5 * $em -6 * $em .5 * $em $em;
-  padding-left: .75 * $em;
-  width: 15 * $em;
-
-  .book-cover {
-    float: left;
-    height: 160px;
-    margin-right: .6 * $em;
-    width: 108px;
-  }
-
-  .amazon-button {
-    height: 20px;
   }
 }
 

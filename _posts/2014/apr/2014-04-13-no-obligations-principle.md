@@ -15,8 +15,6 @@ keywords:
   - risk management
   - micro management
   - project responsibility
-youtube:
-  - qRZYJGYdrwk
 image: /images/2014/04/big-lebowski-her-life-is-in-your-hands.png
 jb_picture:
   caption: The Big Lebowski (1998) by Joel Coen
@@ -53,6 +51,8 @@ I recommend that you read it. Its authors present problems as monkeys sitting on
 our shoulders. When the
 [project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
 assigns a task to a programmer&mdash;he moves the monkey from his shoulders to the programmer's shoulders.
+
+{% youtube qRZYJGYdrwk %}
 
 The programmer usually presents the excuse "I don't know what to do." Now the
 monkey is back on the shoulders of the managers. The goal of the manager is to

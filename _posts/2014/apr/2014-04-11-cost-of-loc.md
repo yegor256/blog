@@ -14,8 +14,6 @@ keywords:
   - cost of line of code
   - cost of software development
   - price per line of code
-youtube:
-  - qRZYJGYdrwk
 image: /images/2014/04/brazil-crowded-office.png
 jb_picture:
   caption: Brazil (1985) by Terry Gilliam
@@ -31,6 +29,8 @@ However, I want to compare two projects in which I have participated recently
 and discuss some very interesting numbers.
 
 <!--more-->
+
+{% youtube qRZYJGYdrwk %}
 
 ## Project #1: Traditionally Co-located
 

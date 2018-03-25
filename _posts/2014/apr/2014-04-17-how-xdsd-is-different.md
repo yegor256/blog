@@ -13,10 +13,6 @@ keywords:
   - project management
   - effective project management
   - xdsd
-youtube:
-  - 7EytYc7K5JA
-  - qRZYJGYdrwk
-  - tCr9dtGdi2c
 image: /images/2014/04/revolver-avi-with-dollar.png
 jb_picture:
   caption: Revolver (2005) by Guy Ritchie
@@ -39,6 +35,8 @@ agreed upon time budget. Let me explain by example. Let's say, you are a Ruby
 programmer and you a get a new task that requires you to fix a broken unit test.
 The task has a time budget of 30 minutes, as is the case most of the time.
 Sometimes, though, tasks may have time budgets of fifteen minutes or one hour.
+
+{% youtube 7EytYc7K5JA %}
 
 In our example, we agree upon a contract rate of $50 per hour. With the broken
 test, you will receive $25 for completing the task&mdash;30 minute tasked billed at
@@ -85,6 +83,8 @@ maintains no type mailing list. Our only method of communication is a ticket
 tracking system (which in most projects consists of
 [GitHub Issues]({% pst 2014/apr/2014-04-15-github-guidelines %}).)
 
+{% youtube qRZYJGYdrwk %}
+
 Moreover, we discourage horizontal communications between developers regarding
 the scope of individual tasks. When assigned a task, your single and only point
 of contact (and your only customer) is the task author. You communicate with the
@@ -117,6 +117,8 @@ Review the following article for complete details on XDSD bug reporting:
 We expect everyone involved with a project to report every bug found.
 Additionally, we encourage team members to make suggestions. In XDSD, we pay
 team members for every properly reported bug.
+
+{% youtube tCr9dtGdi2c %}
 
 XDSD makes payments for reported bugs because we believe that the more of them
 we can find, the higher the
