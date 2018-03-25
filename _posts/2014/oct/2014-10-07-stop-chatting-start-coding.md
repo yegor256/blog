@@ -14,13 +14,6 @@ keywords:
   - chat with programmers
   - formal project communications
 categories: jcg
-youtube:
-  - qRZYJGYdrwk
-  - LB_YLWhGrco
-  - dE0_j4Kk6jo
-  - pt9uHp35fwM
-  - b6r2W3P9vgY
-  - xbovkm0tTn0
 image: /images/2014/10/barton-fink.png
 jb_picture:
   caption: Barton Fink (1991) by Joel Coen
@@ -61,6 +54,8 @@ Answering questions in Skype, Slack, or HipChat, or by email is something that
 is not appreciated in XDSD in any way. The project simply doesn't pay for
 this activity. That's why none of our programmers do this.
 
+{% youtube qRZYJGYdrwk %}
+
 More about this philosophy here:
 [It's Not a School!]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 
@@ -78,6 +73,8 @@ he submits it as a new "ticket." The project
 and assigns it to another developer, who is able to answer it. Then, the
 answer goes back through the tracking system or directly into
 the source code.
+
+{% youtube LB_YLWhGrco %}
 
 The "question ticket" gets closed when its author is satisfied with the
 answer. When the ticket is closed, those who answered it get paid.

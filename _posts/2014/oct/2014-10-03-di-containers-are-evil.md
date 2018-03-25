@@ -16,8 +16,6 @@ keywords:
   - constructor injection
   - field injection
 book: elegant-objects-2 6.3
-youtube:
-  - oV6Utb5Jows
 ---
 
 While [dependency injection](http://martinfowler.com/articles/injection.html) (aka, "DI")
@@ -44,6 +42,8 @@ incomplete, mutable objects, that get stuffed with data during the course
 of application execution. Remember: ideal objects
 [must be immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 and [may not contain setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
+
+{% youtube oV6Utb5Jows %}
 
 Instead, let's talk about "constructor injection"
 (like in [Google Guice](https://github.com/google/guice/wiki/Injections#constructor-injection))

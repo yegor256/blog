@@ -17,12 +17,6 @@ keywords:
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
 book: elegant-objects-2 6.5
-youtube:
-  - DEqcn4-freM
-  - WSgP85kr6eU
-  - aER4uwyFbqQ
-  - 63tS3HNmhiE
-  - 03PXmPc7Q3g
 social:
   - hackernews: https://news.ycombinator.com/item?id=8686346
   - reddit: https://www.reddit.com/r/programming/comments/2nx4vq/orm_is_an_offensive_antipattern/
@@ -74,6 +68,8 @@ Let's say we have a single table in the database, called `post`:
 |  27 | 11/17/2014 | How much I love my job   |
 +-----+------------+--------------------------+
 {% endhighlight %}
+
+{% youtube DEqcn4-freM %}
 
 Now we want to CRUD-manipulate this table from our Java app (CRUD
 stands for create, read, update, and delete). First, we should create
@@ -150,6 +146,8 @@ of class `Post` and stuffs them with the data.
 When the object comes to us, it is filled with data, and we should
 use getters to take them out, like we're using `getTitle()` above.
 
+{% youtube aER4uwyFbqQ %}
+
 When we want to do a reverse operation and send an object to the
 database, we do all of the same but in reverse order. We make an instance
 of class `Post`, stuff it with the data, and ask Hibernate to save it:
@@ -223,6 +221,8 @@ engine and the "thing," which we can't even call an object.
 Because of this terrible and offensive violation of the object-oriented
 paradigm, we have a lot of practical issues already mentioned in
 respected publications. I can only add a few more.
+
+{% youtube 63tS3HNmhiE %}
 
 **SQL Is Not Hidden**.
 Users of ORM should speak SQL
@@ -311,6 +311,8 @@ talking to the PostgreSQL or if they keep all the data in text files. All
 we need from `Posts` is an ability to list all posts for us and to create
 a new one. Implementation details are perfectly hidden inside. Now let's
 see how we can implement these two classes.
+
+{% youtube 03PXmPc7Q3g %}
 
 I'm going to use [jcabi-jdbc](http://jdbc.jcabi.com) as a JDBC wrapper,
 but you can use something else like [jOOQ](http://www.jooq.org),

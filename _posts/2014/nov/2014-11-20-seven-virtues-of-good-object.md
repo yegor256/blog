@@ -20,8 +20,6 @@ translated:
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2mw8mp/seven_virtues_of_a_good_object/
 book: elegant-objects-1 2.3
-youtube:
-  - WSgP85kr6eU
 ---
 
 Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):
@@ -53,6 +51,8 @@ is a place where objects are being born (a.k.a. *instantiated*). The main
 of a class is to *construct* new objects on demand and *destruct* them when
 they are not used anymore. A class knows how its children should look
 and how they should behave. In other words, it knows what *contracts* they should obey.
+
+{% youtube WSgP85kr6eU %}
 
 Sometimes I hear classes being called "object templates"
 (for example, [Wikipedia says so](https://en.wikipedia.org/wiki/Class_%28computer_programming%29)).

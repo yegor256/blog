@@ -19,8 +19,6 @@ keywords:
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
 book: elegant-objects-1 2.6
-youtube:
-  - o3aNJX7AP3M
 buffer:
   - "Still using NULL in your code? Still think it's justified in some places? Think again"
   - "NULL is a terrible practice in an object-oriented paradigm and should be avoided at all costs"
@@ -224,6 +222,8 @@ This argument is close to the "ad-hoc error handling" discussed above.
 
 It is a good practice to make your code as fragile as possible,
 letting it break when necessary.
+
+{% youtube o3aNJX7AP3M %}
 
 Make your methods extremely demanding as to the data
 they manipulate. Let them complain by throwing exceptions,

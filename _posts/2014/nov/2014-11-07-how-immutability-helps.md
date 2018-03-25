@@ -19,10 +19,6 @@ keywords:
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2llw2x/how_immutability_helps_in_object_design/
 book: elegant-objects-1 2.6
-youtube:
-  - KwP7Ay9Z-hc
-  - EnhRgXrHCC4
-  - p7m7_iiqaHI
 ---
 
 In a few recent posts, including
@@ -88,6 +84,8 @@ a hundred methods, about two thousands lines of code. First, you configure
 the class through a bunch of setters and then you ask it to `send()`
 an email for you.
 
+{% youtube KwP7Ay9Z-hc %}
+
 In the second example, we have seven objects instantiated via seven `new` calls.
 `Postman` is responsible for packaging a MIME message; `SMTP` is
 responsible for sending it via SMTP; stamps (`StSender`, `StRecipient`,
@@ -114,6 +112,8 @@ They have huge multi-line "classes" (in reality, COBOL programs written in Java)
 that were inherited from a few generations of programmers before you. When
 you start, you're full of energy, but after a few minutes of scrolling
 such a "class" you say&mdash;"screw it, it's almost Saturday."
+
+{% youtube EnhRgXrHCC4 %}
 
 *Because the class is so big*,
 there is no data hiding or encapsulation any more&mdash;33 variables are accessible by over 100 methods. What is hidden?
@@ -157,6 +157,8 @@ else that this class has to do. Then, something else. Then, even more.
 The best way to make your class more and more powerful is by adding
 setters that inject configuration parameters into the class so that it
 can process them inside, isn't it?
+
+{% youtube p7m7_iiqaHI %}
 
 This is the root cause of the problem! The root cause is our ability to **insert**
 data into mutable objects via configuration methods, also known as "setters."

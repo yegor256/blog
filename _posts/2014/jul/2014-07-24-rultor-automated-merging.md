@@ -16,8 +16,6 @@ keywords:
   - continuous integration pre-flight builds
   - continuous integration preflight builds
   - continuous delivery pre-flight builds
-youtube:
-  - NflR7DKwxDY
 ---
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
@@ -44,6 +42,8 @@ For example, downloadable open-source
 [Jenkins](http://jenkins-ci.org/) and hosted
 [Travis]({% pst 2014/jul/2014-07-31-travis-and-rultor %})
 both perform these tasks. So, why do we need one more?
+
+{% youtube NflR7DKwxDY %}
 
 Well, there are three very important features that we need for our projects, but
 we can't find all of them in any of the DevOps tools currently available on the

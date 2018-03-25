@@ -13,10 +13,6 @@ keywords:
   - immutable objects in java example
   - immutable objects are thread safe
 book: elegant-objects-1 2.6
-youtube:
-  - KwP7Ay9Z-hc
-  - EnhRgXrHCC4
-  - p7m7_iiqaHI
 related:
   - 2014/jun/2014-06-09-objects-should-be-immutable
   - 2014/dec/2014-12-09-immutable-object-state-and-behavior
@@ -43,6 +39,8 @@ could an immutable object represent a mutable entity? Huh?
 <!--more-->
 
 {% jb_picture_body %}
+
+{% youtube p7m7_iiqaHI %}
 
 I'm very surprised. This post is going to clarify the definition of an immutable
 [object]({% pst 2016/jul/2016-07-14-who-is-object %}).
@@ -91,6 +89,8 @@ mutable entity of the real world, a web page with a URI.
 There is no contradiction in this situation. The class is perfectly immutable,
 while the web page it represents is mutable.
 
+{% youtube KwP7Ay9Z-hc %}
+
 Why do most programmers I have talked to believe that
 if an underlying entity is mutable, an object is mutable too? I think the
 answer is simple&mdash;they think that objects are
@@ -104,6 +104,8 @@ It does encapsulate some data, which helps to locate the entity in the real worl
 data is the **coordinates** of the entity being represented. In the case
 of `String` or `URL`, the coordinates are the same as the
 entity itself, but this is just an isolated incident, not a generic rule.
+
+{% youtube EnhRgXrHCC4 %}
 
 An immutable object is not a data structure that doesn't change, even
 though `String`, `BigInteger`, and `URL` look like one. An object is immutable

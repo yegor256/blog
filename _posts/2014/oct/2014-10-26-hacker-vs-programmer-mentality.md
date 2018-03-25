@@ -13,8 +13,6 @@ keywords:
   - scalability
   - maintainability
   - readability
-youtube:
-  - PNSezrlemsY
 ---
 
 Twenty years ago, the best programmer was the one
@@ -43,6 +41,8 @@ The first trend falls down and shows how much cheaper
 [computer memory](http://www.jcmit.com/memoryprice.htm)
 and [HDD storage](http://ns1758.ca/winch/winchest.html)
 have become over the last twenty years.
+
+{% youtube PNSezrlemsY %}
 
 The second trend demonstrates how much software developers' salaries
 escalated over the same period. More accurately, they tripled. I didn't find

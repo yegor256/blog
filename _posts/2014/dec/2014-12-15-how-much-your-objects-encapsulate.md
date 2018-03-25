@@ -14,8 +14,6 @@ keywords:
   - object constructor
   - object method vs constructor
 book: elegant-objects-1 2.2
-youtube:
-  - 9yjtsCK6Wdk
 image: /images/2014/12/truman-show-universe.png
 jb_picture:
   caption: The Truman Show (1998) by Peter Weir
@@ -84,6 +82,8 @@ class Time {
 This class has two constructors. One of them is the main one, and one is
 supplementary. We're interested in the main one, which implements
 the [*encapsulation*]({% pst 2016/nov/2016-11-21-naked-data %}) of arguments.
+
+{% youtube 9yjtsCK6Wdk %}
 
 Now, the question is which is better: to represent a web page
 or the Universe? It depends, but I think that in general, the smaller the

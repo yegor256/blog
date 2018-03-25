@@ -1,27 +1,10 @@
 .youtube {
-  @extend %unprintable;
-  border-left: 4px solid $green;
-  border: 0;
-  height: 360px;
-  width: 640px;
-  float: right;
-  height: 180px;
-  margin-bottom: 1em;
-  margin-left: 1em;
-  width: 320px;
-  float: right;
-}
-
-
-.youtube {
   @extend %desktop-only;
   @extend %unprintable;
   border-left: 4px solid #e52d27;
   float: right;
   font-size: 0.8em;
-  margin-bottom: 2 * $em;
-  margin-top: 2 * $em;
-  margin-left: $em;
+  margin: .5 * $em -5 * $em .5 * $em $em;
   text-align: left;
 
   img {

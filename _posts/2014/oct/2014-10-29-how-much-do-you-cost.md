@@ -15,8 +15,6 @@ keywords:
 translated:
   - Japanese: http://postd.cc/how-much-do-you-cost/
   - Russian: http://karagodin.pro/how_much_do_you_cost/
-youtube:
-  - GS45LzE3LPQ
 related:
   - 2016/mar/2016-03-08-pimp-up-your-resume
   - 2016/dec/2016-12-06-how-to-pay-programmers-less
@@ -52,6 +50,8 @@ Do you have your own
 some community? Do you write code that is publicly available and used?
 
 If you have nothing to show here, I see three possible causes.
+
+{% youtube GS45LzE3LPQ %}
 
 First, you're **too shy to share** your code because **it's crap**.
 [Obviously]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}),

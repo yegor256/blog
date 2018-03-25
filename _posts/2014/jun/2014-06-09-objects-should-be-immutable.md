@@ -23,25 +23,24 @@ related:
   - 2014/dec/2014-12-22-immutable-objects-not-dumb
   - 2014/dec/2014-12-09-immutable-object-state-and-behavior
   - 2016/sep/2016-09-07-gradients-of-immutability
-youtube:
-  - KwP7Ay9Z-hc
-  - EnhRgXrHCC4
-  - p7m7_iiqaHI
 ---
 
 In object-oriented programming, an object is
 [immutable](http://en.wikipedia.org/wiki/Immutable_object) if its state can't be
 modified after it is created.
-
 In Java, a good example of an
 immutable [object]({% pst 2016/jul/2016-07-14-who-is-object %})
 is [`String`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html).
 Once created, we can't modify its state. We can request that it creates
 new strings, but its own state will never change.
 
+<!--more-->
+
 However, there are not so many immutable classes in JDK. Take,
 for example, class [`Date`](http://docs.oracle.com/javase/7/docs/api/java/util/Date.html).
 It is possible to modify its state using `setTime()`.
+
+{% youtube KwP7Ay9Z-hc %}
 
 I don't know why the JDK designers decided to make these two
 very similar classes differently. However, I believe that the design
@@ -66,9 +65,9 @@ This is an incomplete list of arguments in favor of immutability:
 
 Let's discuss the most important arguments one by one.
 
-<!--more-->
-
 ## Thread Safety
+
+{% youtube EnhRgXrHCC4 %}
 
 The first and the most obvious argument is that immutable objects
 are thread-safe. This means that multiple threads can access the same
@@ -245,6 +244,8 @@ When modifying the state of `date` object, we're not expecting
 it to change its identity. We're not expecting to lose an entry
 in the map just because the state of its key is changed. However,
 this is exactly what is happening in the example above.
+
+{% youtube p7m7_iiqaHI %}
 
 When we add an object to the map, its `hashCode()` returns one value.
 This value is used by [`HashMap`](http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)

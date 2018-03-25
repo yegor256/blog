@@ -15,10 +15,6 @@ keywords:
   - continous deployment
   - continuous delivery preflight builds
   - continuous integration
-youtube:
-  - 2a2nWELIk-Y
-  - gL4XwP-EBOg
-  - Ht0JI41kA4I
 ---
 
 Continuous integration is easy. Download Jenkins, install,  create a job, click
@@ -48,6 +44,8 @@ they are in development. Then, we merge branches into `master`.
 After every merge, we test the entire product, executing all
 available unit and integration tests.
 This is called [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (aka "CI").
+
+{% youtube 2a2nWELIk-Y %}
 
 Sometimes, some tests fail. When this happens, we say that our
 "build is broken." Such a failure is a positive
@@ -91,6 +89,8 @@ importance of a "clean build" and technical leaders can't buy time for fixing
 unit tests. Moreover, the code that broke them was already in `master` and, in
 most cases, has been already deployed to production and delivered to end-users.
 What's the urgency of fixing some tests if business value was already delivered?
+
+{% youtube gL4XwP-EBOg %}
 
 In the end, most development teams don't take continuous integration alerts
 seriously. Jenkins or Travis are just fancy tools for them that play no role in
@@ -142,6 +142,8 @@ Some CI servers offer pre-flight builds feature, which means testing branches
 before they get merged into `master`. Travis, for example, has this feature and
 it is very helpful. When you make a new commit to a branch, Travis immediately
 tries to build it, and reports in GitHub pull request, if there are problems.
+
+{% youtube Ht0JI41kA4I %}
 
 Pay attention, pre-flight builds don't merge. They just check whether your
 individual branch is clean. After merge, it can easily break `master`. And, of

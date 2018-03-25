@@ -17,8 +17,6 @@ keywords:
   - aspect oriented programming java
   - aspectj logging
   - aspectj weaving annotations
-youtube:
-  - 4SRoLYxvIQ8
 ---
 
 Sometimes, I want to log (through [slf4j](http://www.slf4j.org)
@@ -60,6 +58,8 @@ that can be seen and read. Some annotations are designed to be
 seen at compile time only&mdash;they don't exist in `.class` files after
 compilation. Others remain visible after compilation and can
 be accessed in runtime.
+
+{% youtube 4SRoLYxvIQ8 %}
 
 For example,
 [`@Override`](http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html) is of

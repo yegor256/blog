@@ -18,10 +18,6 @@ keywords:
   - alternative to continuous integration
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2j9vt0/continuous_integration_is_dead/
-youtube:
-  - 3IXk5yEJMIs
-  - gL4XwP-EBOg
-  - Ht0JI41kA4I
 ---
 
 A few days ago, my article
@@ -50,6 +46,8 @@ and [AppVeyor](http://www.appveyor.com).
 
 ## How Continuous Integration Should Work
 
+{% youtube 3IXk5yEJMIs %}
+
 The idea is simple and obvious. Every time you make a new commit
 to the `master` branch (or `/trunk` in Subversion), a continuous integration
 server (or service) attempts to build the entire product. "Build" means
@@ -67,6 +65,8 @@ it may have its problems, like hard-coded dependencies, lack of isolation betwee
 environments or parallel build collisions, but this article is not about those.
 If the application is well written and its unit tests are stable,
 continuous integration is easy. Technically.
+
+{% youtube gL4XwP-EBOg %}
 
 Let's see the organizational side.
 
@@ -118,6 +118,8 @@ and will try to fix the build. Only because we don't like that red button
 on the dashboard and want to turn it into a green one.
 
 ## What About Discipline?
+
+{% youtube Ht0JI41kA4I %}
 
 Yes, there is another side of this coin. We can try to enforce
 discipline in the team. We can make it a strict rule, that our

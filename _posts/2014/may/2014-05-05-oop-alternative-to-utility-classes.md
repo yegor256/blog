@@ -19,9 +19,6 @@ keywords:
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2016/01/03/oop-alternative-to-utility-classes/
 book: elegant-objects-1 3.2
-youtube:
-  - psrp3TtaYYI
-  - D0dqC_3Bch8
 ---
 
 A utility class (aka helper class) is a "structure" that has only static methods
@@ -31,8 +28,12 @@ and encapsulates no state. `StringUtils`, `IOUtils`, `FileUtils` from
 [`Files`](http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html)
 from JDK7 are perfect examples of utility classes.
 
+<!--more-->
+
 This design idea is very popular in the Java world (as well as C#, Ruby, etc.)
 because utility classes provide common functionality used everywhere.
+
+{% youtube psrp3TtaYYI %}
 
 Here, we want to follow the
 [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and avoid
@@ -49,8 +50,6 @@ public class NumberUtils {
 {% endhighlight %}
 
 Indeed, this a very convenient technique!?
-
-<!--more-->
 
 ## Utility Classes Are Evil
 
@@ -167,6 +166,8 @@ participation in the snippet are rather small: `Trimmed`, `FileLines`, and
 `UnicodeFile`.
 Each of them is responsible for its own single feature, thus following perfectly
 the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).
+
+{% youtube D0dqC_3Bch8 %}
 
 On our side, as users of the library, this may be not so important, but for
 their developers it is an imperative.

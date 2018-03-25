@@ -14,11 +14,6 @@ keywords:
   - object behavior model
   - object attributes
   - immutable object state
-youtube:
-  - KwP7Ay9Z-hc
-  - EnhRgXrHCC4
-  - p7m7_iiqaHI
-  - PVvLQGnyDrQ
 related:
   - 2014/jun/2014-06-09-objects-should-be-immutable
   - 2016/sep/2016-09-07-gradients-of-immutability
@@ -94,6 +89,8 @@ Here, we're creating two objects and then modifying their encapsulated
 states. Obviously, `first.equals(second)` will return `false` because
 the two objects have different identities, even though they encapsulate the
 same state.
+
+{% youtube KwP7Ay9Z-hc %}
 
 Method `toString()` exposes the document's behavior&mdash;the document can
 convert itself to a string.
@@ -186,6 +183,8 @@ a huge obligation. Moreover, if an immutable object encapsulates other immutable
 objects, we have to change the entire hierarchy when modifying even a single
 string in one of them.
 
+{% youtube EnhRgXrHCC4 %}
+
 The answer is simple. A document's title should not be part of its **state**.
 Instead, the title should be its **behavior**. For example, consider this:
 
@@ -258,6 +257,8 @@ We have no issues as long as a real-world document exists and has its
 own identity. Our title reading and writing methods will communicate with that
 real-world document and extract or update its title.
 
+{% youtube p7m7_iiqaHI %}
+
 Problems arise when such an entity doesn't exist in a real world. In that
 case, we need to create a mutable object property called `title`, read it via
 `title()`, and modify it via `title(String)`. But an object is immutable,
@@ -329,6 +330,8 @@ a memory address in order to find the data and animate it. But an
 object should never think of itself as data.
 
 ## What Is the Practical Solution?
+
+{% youtube PVvLQGnyDrQ %}
 
 Unfortunately, we don't have such a memory-representing class
 in Java, Ruby, JavaScript, Python, PHP, and many other high-level languages.
