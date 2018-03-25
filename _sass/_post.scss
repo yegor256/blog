@@ -1,6 +1,7 @@
 .youtube {
   @extend %desktop-only;
   @extend %unprintable;
+  width: 10 * $em;
   border-left: 4px solid #e52d27;
   float: right;
   font-size: 0.8em;
@@ -9,7 +10,7 @@
 
   img {
     float: left;
-    height: 100px;
+    width: 100%;
     display: block;
   }
 }
