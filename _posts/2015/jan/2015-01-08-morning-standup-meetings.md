@@ -18,10 +18,6 @@ keywords:
   - scrum standup
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2015/08/11/daily-stand-up-meetings-are-a-good-tool-for-a-bad-manager/
-youtube:
-  - ibT5oKToMoQ
-  - dE0_j4Kk6jo
-  - pt9uHp35fwM
 image: /images/2015/01/cool-hand-luke.png
 jb_picture:
   caption: Cool Hand Luke (1967) by Stuart Rosenberg
@@ -67,6 +63,8 @@ is to ask the team, "What are you working on right now?"
 Morning stand-up is a perfect place to ask this annoying question officially
 without being marked as a manager who doesn't know what he is doing.
 
+{% youtube ibT5oKToMoQ %}
+
 **A Good Manager Is Being Told When Necessary**.
 Managing a project involves management of communications. When information
 flows are organized correctly, every team member knows when and how
@@ -78,6 +76,8 @@ a project manager if he needs this information. A
 never asks his people. Instead, they tell him when necessary. And when
 someone does stop to tell him something, a good project manager fixes such a broken communication channel.
 But he never uses daily meetings to collect information.
+
+{% youtube dE0_j4Kk6jo %}
 
 As a [good manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
 inform your team what your goals are and what's important
@@ -232,6 +232,8 @@ her? Absolutely not! She already knows what she is working for, and she is motiv
 When she finishes on time, organize a meeting and
 give her a $500 check in front of everybody. This is what a good manager
 uses meetings for.
+
+{% youtube pt9uHp35fwM %}
 
 There's more to this, too, as daily status updates in front of everybody motivate
 the best team players to backslide and become the same as the worst ones. Well, this is mostly

@@ -20,9 +20,6 @@ translated:
   - Japanese: http://tbd.kaitoy.xyz/2016/06/25/seven-deadly-sins-of-a-software-project/
 social:
   - reddit: https://www.reddit.com/r/programming/comments/396q18/seven_deadly_sins_of_a_software_project/
-youtube:
-  - ZtWmlKi3ivc
-  - hkXLOxZ6Fs4
 ---
 
 _Maintainability_ is the [most valuable virtue]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
@@ -47,6 +44,8 @@ against you placing the entire application in one single "class"
 with a few thousand methods. Technically, the application will compile
 and run. But it's a well-known anti-pattern called a
 [God object](https://en.wikipedia.org/wiki/God_object).
+
+{% youtube ZtWmlKi3ivc %}
 
 Thus, an [anti-pattern](https://en.wikipedia.org/wiki/Anti-pattern)
 is a technically acceptable way of designing things that is
@@ -153,6 +152,8 @@ static analyzer(s). I've written about this in
 I use [qulice.com](http://www.qulice.com) in Java projects
 and [rubocop](https://github.com/bbatsov/rubocop) in Ruby, but there
 are many similar tools for nearly every language.
+
+{% youtube hkXLOxZ6Fs4 %}
 
 You can use any of them, but make it mandatory! In most projects
 where static analysis is used, developers just build nicely-looking

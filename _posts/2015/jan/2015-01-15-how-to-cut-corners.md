@@ -17,9 +17,6 @@ keywords:
   - time management agile
 translated:
   - Spanish: https://medium.com/@izarodsos/c%C3%B3mo-tomar-atajos-y-quedarte-tranquilo-ddfc680c97e8
-youtube:
-  - b6r2W3P9vgY
-  - YBQoTZ-1X-o
 image: /images/2015/01/regarding-henry.jpg
 jb_picture:
   caption: Regarding Henry (1991) by Mike Nichols
@@ -45,6 +42,8 @@ in [Teamed.io](http://www.teamed.io) projects.
 In a nutshell, I'm going to explain how you can **cut corners** and remain
 professional, 1) protecting your nerves, 2) optimizing your project's expenses,
 and 3) increasing the quality of the source code.
+
+{% youtube b6r2W3P9vgY %}
 
 Here is a list of options you have, in order of preference. I would
 recommend you start with the first one on the list and proceed down when you
@@ -193,6 +192,8 @@ Will they believe you? I don't think so, but they don't have a choice. They
 can't push you any further. You've already done something&mdash;created
 a new test that proves everything is fine. The ticket will be closed
 and the project will move on.
+
+{% youtube YBQoTZ-1X-o %}
 
 If, later on, the same problem occurs in
 production, a new bug will be reported. It will be linked to your ticket. Your
