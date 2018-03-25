@@ -3,7 +3,7 @@ layout: post
 title: "Fully Transparent Donations via Zerocracy"
 date: 2018-03-28
 place: Moscow, Russia
-tags: management
+tags: zerocracy
 description: |
   Open source projects rarely receive donations, for many
   reasons; Zerocracy transparently simplifies the process

@@ -1,0 +1,236 @@
+---
+layout: post
+title: "How I Test My Java Classes for Thread-Safety"
+date: 2018-03-28
+place: Moscow, Russia
+tags: java
+description: |
+  Thread-safety is a very important and critical
+  quality of some Java objects; here is how it can
+  be tested with the help of Cactoos RunInThreads class.
+keywords:
+  - thread safety
+  - test thread safety
+  - how to test thread safety
+  - thread conflicts
+  - thread safety bugs
+image: /images/2018/03/
+jb_picture:
+  caption:
+---
+
+I touched this problem in [one of my recent webinars](https://www.youtube.com/watch?v=rC17YwowURQ),
+now it's time to explain it in writing. Thread-safety is an important
+quality of classes in languages/platforms like Java, where we frequently share
+objects between threads. The issues caused by lack of thread-safety
+are very difficult to debug, since they are sporadic and almost impossible
+to reproduce on purpose. How do you test your objects to make sure
+they are thread-safe? Here is how I'm doing it.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+Say, there is a simple in-memory bookshelf:
+
+{% highlight java %}
+class Books {
+  final Map<Integer, String> map =
+    new ConcurrentHashMap<>();
+  int add(String title) {
+    final Integer next = this.map.size() + 1;
+    this.map.put(next, title);
+    return next;
+  }
+  String title(int id) {
+    return this.map.get(id);
+  }
+}
+{% endhighlight %}
+
+First, we put a book there and the bookshelf returns its ID. Then, we can
+read the title of the book by its ID:
+
+{% highlight java %}
+Books books = new Books();
+String title = "Elegant Objects";
+int id = books.add(title);
+assert books.title(id).equals(title);
+{% endhighlight %}
+
+The class seems to be thread-safe, since we are using thread-safe
+[`ConcurrentHashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)
+instead of a more primitive and non-thread-safe
+[`HashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html),
+right? Let's try to test it:
+
+{% highlight java %}
+class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    String title = "Elegant Objects";
+    int id = books.add(title);
+    assert books.title(id).equals(title);
+  }
+}
+{% endhighlight %}
+
+The test passes, but it's just a one-thread test. Let's try to do the
+same manipulation from a few parallel threads (I'm using
+[Hamcrest](https://github.com/hamcrest/JavaHamcrest)):
+
+{% highlight java %}
+class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    int threads = 10;
+    ExecutorService service =
+      Executors.newFixedThreadPool(threads);
+    Collection<Future<Integer>> futures =
+      new LinkedList<>();
+    for (int t = 0; t < threads; ++t) {
+      final String title = String.format("Book #%d", t);
+      futures.add(service.submit(() -> books.add(title)));
+    }
+    Set<Integer> ids = new HashSet<>();
+    for (Future<Integer> f : futures) {
+      ids.add(f.get());
+    }
+    assertThat(ids.size(), equalTo(threads));
+  }
+}
+{% endhighlight %}
+
+First, I created a pool of threads via
+[`Executors`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html).
+Then I submit ten objects of type
+[`Callable`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html) via
+`submit()`. Each of them will add a new
+unique book to the bookshelf. All of them will be executed in some
+unpredictable order by some of those ten threads from the pool.
+
+Then I fetch the results of their executors through the list of objects
+of type
+[`Future`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html).
+Finally, I calculate the amount of unique book IDs
+created. If the number is 10, there were no conflicts. I'm using
+[`Set`](https://docs.oracle.com/javase/7/docs/api/java/util/Set.html)
+collection in order to make sure the list of IDs contains only
+unique elements.
+
+The test passes on my laptop. However, it's not strong enough. The problem
+here is that it's not really testing the `Books` from multiple parallel threads.
+The time that passes between our calls to `submit()` is big enough to finish
+the execution of `books.add()`. That's why in reality only one thread
+will run at the same time. We can check that by modifying the code a bit:
+
+{% highlight java %}
+AtomicBoolean running = new AtomicBoolean();
+AtomicInteger overlaps = new AtomicInteger();
+Collection<Future<Integer>> futures = new LinkedList<>();
+for (int t = 0; t < threads; ++t) {
+  final String title = String.format("Book #%d", t);
+  futures.add(
+    service.submit(
+      () -> {
+        if (running.get()) {
+          overlaps.incrementAndGet();
+        }
+        running.set(true);
+        int id = books.add(title);
+        running.set(false);
+        return id;
+      }
+    )
+  );
+}
+assertThat(overlaps.get(), greaterThan(0));
+{% endhighlight %}
+
+With this code I'm trying to see how often threads overlap each other and
+do something parallel. This never happens and `overlaps` equals to zero.
+Thus, our test is not really testing anything yet. It just adds ten
+books to the bookshelf one by one. If I increase the amount of threads to
+1000, they start to overlap sometimes. But we want them to overlap even
+when the amount of them is rather small.
+To solve that we need to use
+[`CountDownLatch`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html):
+
+{% highlight java %}
+CountDownLatch latch = new CountDownLatch(1);
+AtomicBoolean running = new AtomicBoolean();
+AtomicInteger overlaps = new AtomicInteger();
+Collection<Future<Integer>> futures = new LinkedList<>();
+for (int t = 0; t < threads; ++t) {
+  final String title = String.format("Book #%d", t);
+  futures.add(
+    service.submit(
+      () -> {
+        latch.await();
+        if (running.get()) {
+          overlaps.incrementAndGet();
+        }
+        running.set(true);
+        int id = books.add(title);
+        running.set(false);
+        return id;
+      }
+    )
+  );
+}
+latch.countDown();
+Set<Integer> ids = new HashSet<>();
+for (Future<Integer> f : futures) {
+  ids.add(f.get());
+}
+assertThat(overlaps.get(), greaterThan(0));
+{% endhighlight %}
+
+Now each thread before touching the `books` waits for the permission
+given by `latch`. When we submit them all via `submit()` they stay on hold
+and way. Then, we release the latch with `countDown()` and they all start
+to go, simultaneously. Now on my laptop `overlaps` equals to 3-5 when `threads`
+is 10.
+
+And the last `assertThat()` crashes now! I'm not getting 10 book IDs,
+as it was before. It's 7-9, but never 10. The class, apparently, is not thread-safe!
+
+But before we fix the class, let's make our test simpler. Let's use
+[`RunInThreads`](http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html)
+from [Cactoos](http://www.cactoos.org), which does exactly the same we've done above,
+but under the hood:
+
+{% highlight java %}
+class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    MatcherAssert.assertThat(
+      t -> {
+        String title = String.format(
+          "Book #%d", t.getAndIncrement()
+        );
+        int id = books.add(title);
+        return books.title(id).equals(title);
+      },
+      new RunsInThreads<>(new AtomicInteger(), 10)
+    );
+  }
+}
+{% endhighlight %}
+
+The first argument of `assertThat()` is an instance of `Func`
+(a functional interface), accepting
+[`AtomicInteger`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html)
+(the first argument of `RunsInThreads`) and returning `Boolean`. This function will
+be executed in 10 parallel thread, using the same latch-based approached
+as demonstrated above.
+
+This `RunInThreads` seems to be compact and convenient, I'm using it
+in a few projects already.
+
+By the way, in order to make `Books` thread-safe we just need to add
+`synchronized` to its method `add()`. Or maybe you can suggest a better
+solution?
