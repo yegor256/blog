@@ -3,7 +3,7 @@ layout: post
 title: "PDD in Action"
 date: 2017-04-05
 place: Moscow, Russia
-tags: management
+tags: management pdd
 description: |
   0pdd.com is a free hosted service that helps
   you automate puzzle-driven development in your
