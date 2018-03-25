@@ -38,8 +38,8 @@ module Yegor
         "<a href='https://www.youtube.com/watch?v=#{id}'>" \
           "<img src='#{snippet['thumbnails']['medium']['url']}'/></a>" \
           "#{snippet['title']}; " \
-          "#{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}; " \
-          "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
+          "#{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}"
+          # "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
       end + '</div>'
     end
   end
