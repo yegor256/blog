@@ -45,5 +45,4 @@ module Yegor
   end
 end
 
-Liquid::Template.register_filter(Yegor::Youtube)
 Liquid::Template.register_tag('youtube', Yegor::YoutubeBlock)
