@@ -13,9 +13,6 @@ keywords:
   - fully automated deployment
   - how to automate deployment process
 categories: jcg
-youtube:
-  - NflR7DKwxDY
-  - _61CuGhyv-o
 image: /images/2014/09/charlie-and-chocolate-factory-father.png
 jb_picture:
   caption: Charlie and the Chocolate Factory (2005) by Tim Burton
@@ -45,6 +42,8 @@ to automate deployment with Rultor, you don't throw away any of your
 existing scripts. You just teach Rultor how to call them.
 
 ## Isolated Docker Containers
+
+{% youtube NflR7DKwxDY %}
 
 The first advantage you get once you start calling your deployment
 scripts from Rultor is the [usage of Docker]({% pst 2014/jul/2014-07-29-docker-in-rultor %}).
@@ -100,6 +99,8 @@ is an FTP deployment to the production server. Very simple. But this script
 will only work if PHP 5.3, MySQL, Phing, xdebug, PHPCS and PHPUnit are installed.
 Again, it's a lot of work to install and configure them every time I upgrade
 my MacOS or change a laptop.
+
+{% youtube _61CuGhyv-o %}
 
 Needless to say, that if/when someone joins the project and
 tries to run my scripts, he/she will have to do this pre-installation

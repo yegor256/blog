@@ -16,8 +16,6 @@ keywords:
 image: /images/2015/02/gi-jane.png
 jb_picture:
   caption: G.I. Jane (1997) by Ridley Scott
-youtube:
-  - YBQoTZ-1X-o
 ---
 
 At [Teamed.io](http://www.teamed.io), we work in distributed teams and
@@ -57,6 +55,8 @@ which will give us something back&mdash;usually cash. Finally, the project will
 share that cash among us,
 [investors]({% pst 2015/dec/2015-12-16-investors-are-too-scared %}),
 and the government.
+
+{% youtube YBQoTZ-1X-o %}
 
 A properly planned and managed project acquires the best resources its
 budget can afford and then relies on their quality. A programmer who doesn't

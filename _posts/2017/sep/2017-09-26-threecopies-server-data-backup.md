@@ -14,8 +14,6 @@ keywords:
   - server-side backup service
   - threecopies
 image: /images/2017/09/threecopies.jpg
-youtube:
-  - KYd24FN58wg
 buffer:
   - "I would say that it's a light version of AWS Data Pipeline. ThreeCopies does exactly the same, but it's easier to configure, and it's cheaper"
 ---
@@ -39,6 +37,8 @@ script, which will pull the data from the MySQL database, package it,
 and upload it to some place where it will be safe, such as Amazon S3
 bucket. Then, I would need another script for the PostgreSQL database, and another one
 for the FTP file archive, etc.
+
+{% youtube KYd24FN58wg %}
 
 This is actually how I was doing it for years. The drawbacks
 of this solution were always the same:

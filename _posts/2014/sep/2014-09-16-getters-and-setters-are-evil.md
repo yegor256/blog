@@ -21,9 +21,6 @@ translated:
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2y7jcb/getterssetters_evil_period/
 book: elegant-objects-1 3.5
-youtube:
-  - WSgP85kr6eU
-  - F4N25kZ2zQU
 image: /images/2014/09/fish-called-wanda.png
 jb_picture:
   caption: A Fish Called Wanda (1988) by Charles Crichton
@@ -54,6 +51,8 @@ by David West, the best book about object-oriented programming I've read so far.
 So please. Calm down and try to understand while I try to explain.
 
 ## Existing Arguments
+
+{% youtube WSgP85kr6eU %}
 
 There are a few arguments against "accessors"
 (another name for getters and setters), in an object-oriented world.
@@ -132,6 +131,8 @@ dog.setWeight("23kg");
 {% endhighlight %}
 
 Can you imagine this transaction in the real world? :)
+
+{% youtube F4N25kZ2zQU %}
 
 Does it look similar to what you're writing every day? If yes,
 then you're a procedural programmer. Admit it. And this is what

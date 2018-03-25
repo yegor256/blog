@@ -15,8 +15,6 @@ keywords:
   - entry and exit criteria
   - software testing
   - test planning
-youtube:
-  - wd-SA1HVmLg
 image: /images/2015/09/la-fille-sur-le-pont.jpg
 jb_picture:
   caption: La fille sur le pont (1999) by Patrice Leconte
@@ -50,6 +48,8 @@ broken, how it fails on different inputs, how it crashes under stress,
 how it misunderstands the user, how it doesn't satisfy the requirements.
 This is why Dr. Myers is calling testing "a destructive, even sadistic, process"
 (page 6). This is what most testers don't understand.
+
+{% youtube wd-SA1HVmLg %}
 
 Second, any software
 [has]({% pst 2017/may/2017-05-23-unlimited-number-of-bugs %})

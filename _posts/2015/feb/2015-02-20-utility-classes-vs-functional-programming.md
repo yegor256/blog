@@ -14,9 +14,6 @@ keywords:
   - utility classes vs functional programming
   - utility classes are not functional programming
   - utility classes
-youtube:
-  - D0dqC_3Bch8
-  - psrp3TtaYYI
 image: /images/2015/02/color-me-kubrick.png
 jb_picture:
   caption: Color Me Kubrick (2005) by Brian W. Cook
@@ -74,6 +71,8 @@ there is nothing wrong. The code will work. But it is not object-oriented
 programming. Instead, it is imperative and procedural. Do we care? Well,
 it's up to you to decide. Let's see what the difference is.
 
+{% youtube D0dqC_3Bch8 %}
+
 There are basically two different approaches: declarative and imperative.
 
 [Imperative programming](http://en.wikipedia.org/wiki/Imperative_programming)
@@ -125,6 +124,8 @@ Here, method `calc()` is a buyer, method `Math.f()` is a packager of the result,
 and method `foo()` is a consumer. No matter which programming style is used,
 there are always these three guys participating in the process:
 the buyer, the packager, and the consumer.
+
+{% youtube psrp3TtaYYI %}
 
 Imagine you're a buyer and want to purchase a gift for your (girl|boy)friend. The first
 option is to visit a shop, pay $50, let them package that perfume for you,

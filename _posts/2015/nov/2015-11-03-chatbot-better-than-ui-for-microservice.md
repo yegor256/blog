@@ -14,13 +14,6 @@ keywords:
   - chatbot java
   - chatbot architecture
   - chatbot user interface
-youtube:
-  - mHCwlZSlZeU
-  - jUil-aTImgU
-  - Xj226o2xI9Y
-  - vOMqDcSXnT0
-  - vU_x6oK437I
-  - 7yTIWFZrXpg
 social:
   - reddit: https://www.reddit.com/r/programming/comments/3reqsj/a_chatbot_is_better_than_a_ui_for_a_microservice/
 ---
@@ -54,6 +47,8 @@ At <span class="bullet">3</span>, the bot says the job is
 completed and its completion took nine minutes. Our conversation is over.
 That's it.
 
+{% youtube mHCwlZSlZeU %}
+
 Now, what is so special about this?
 
 One thing: There is no user interface. Well, there is
@@ -81,6 +76,8 @@ HTML+CSS responses. Or, if a user is on another service, requests may
 contain some data, and responses will be in
 [XML or JSON]({% pst 2015/nov/2015-11-16-json-vs-xml %}). You get the idea;
 a user is a client, and the service is a server.
+
+{% youtube jUil-aTImgU %}
 
 Like in a restaurant&mdash;you say what you want, and a **server** goes
 to the kitchen, waits there, and in a few minutes, comes back with
@@ -116,6 +113,8 @@ virgin olive oil ... yeah, he makes it right ... and puts it next to the board.
 You hear an announcement that order number 15 is ready. You go there,
 collect the food, return to your table, and enjoy.
 
+{% youtube Xj226o2xI9Y %}
+
 The point is that there is **no cute lady** involved anymore. There is no
 server. There are two parties communicating with the board&mdash;you and
 the kitchen. The kitchen is our microservice, but it's not a server anymore.
@@ -144,6 +143,8 @@ doing something else at the moment. We'll wait for a few seconds or even minutes
 If, on the other hand, I give an order to the waitress and she waits five seconds
 before replying back, I'll be very surprised. If she keeps doing
 that with every question, I'll start to wonder to myself if everything is OK with her.
+
+{% youtube vOMqDcSXnT0 %}
 
 I expect a user interface to be instant, while in a chat I have no problem
 allowing some time for the bot to answer. This happens **naturally**. We're

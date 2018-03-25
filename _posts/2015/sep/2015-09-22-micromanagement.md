@@ -13,8 +13,6 @@ keywords:
   - micromanagement effects
   - micromanagement quotes
   - micromanagement meaning
-youtube:
-  - ZVn7ufg-tk0
 image: /images/2015/09/office-space.jpg
 jb_picture:
   caption: Office Space (1999) by Mike Judge
@@ -51,6 +49,8 @@ Micromanagement has nothing to do with the details observed or the amount
 of control a manager exerts over subordinates. Instead, it is all about
 _how_ the details are observed and control is exercised. A micromanager
 gives instructions while a good manager defines goals and rules.
+
+{% youtube ZVn7ufg-tk0 %}
 
 Micro-managers define _algorithms_ for achieving results and insist
 on them being implemented according to their will. This is what

@@ -21,8 +21,6 @@ style: |
     width: 125px;
     height: 150px;
   }
-youtube:
- - cGcCcxx4xrg
 image: /images/2016/08/swingers.jpg
 jb_picture:
   caption: Swingers (1996) by Doug Liman
@@ -59,6 +57,8 @@ in [Ansi Common Lisp](http://amzn.to/29JwmOz), page 408:
 by accretion. What this often means, in practice, is that it
 provides a structured way to write spaghetti code."
 -->
+
+{% youtube cGcCcxx4xrg %}
 
 <img src="/images/2016/08/alan-kay.jpg" class="quote-author" alt="Alan Kay"/><br/>
 [**Alan Kay**](https://en.wikipedia.org/wiki/Alan_Kay) (1997)<br/>

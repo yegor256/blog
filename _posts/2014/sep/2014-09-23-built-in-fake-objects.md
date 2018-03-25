@@ -16,9 +16,6 @@ keywords:
   - java mock framework
 categories: jcg
 book: elegant-objects-1 2.8
-youtube:
-  - l6MpCBzwDbg
-  - EDKbYVEInMU
 ---
 
 While mock objects are perfect instruments for unit testing,
@@ -117,6 +114,8 @@ using Mockito, for example. First, we have
 to mock the `Region` interface. Then, we have to mock a `Table` interface and make sure
 it is returned by the `table()` method. Then, we have to mock a `Frame` interface, etc.
 
+{% youtube l6MpCBzwDbg %}
+
 The unit test will be much longer than the class itself. Besides that,
 its real purpose, which is to test the retrieval of an employee's salary, will not
 be obvious to the reader.
@@ -163,6 +162,8 @@ This test looks obvious to me. First, we create a fake DynamoDB region,
 which works on top of `H2Data` storage (in-memory H2 database). The storage
 will be ready for a single `employees` table with a hash key `name` and
 a single `salary` attribute.
+
+{% youtube EDKbYVEInMU %}
 
 Then, we put a record into the table, with a hash `Jeff` and a salary
 `50000`.

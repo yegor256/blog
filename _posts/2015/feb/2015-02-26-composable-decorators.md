@@ -14,8 +14,6 @@ keywords:
   - decorator pattern java
   - decorator pattern example
   - decorator pattern real life example
-youtube:
-  - D0dqC_3Bch8
 image: /images/2015/02/russina-matroshka.jpg
 ---
 
@@ -122,6 +120,8 @@ final class TrimmedText implements Text {
   }
 }
 {% endhighlight %}
+
+{% youtube D0dqC_3Bch8 %}
 
 I can go on and on with these
 [decorators]({% pst 2015/oct/2015-10-01-vertical-horizontal-decorating %}).

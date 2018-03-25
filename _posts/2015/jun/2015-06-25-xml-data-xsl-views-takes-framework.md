@@ -14,8 +14,6 @@ keywords:
   - xslt java web framework
   - xslt web page
   - xslt for web app
-youtube:
-  - nheD2LNYrpk
 ---
 
 {% badge http://www.takes.org/logo.png 96 http://www.takes.org %}
@@ -51,6 +49,8 @@ design for a few reasons. First, the view is tightly coupled with the model.
 Second, the flexibility of rendering is very limited. Third, the result of
 rendering is not reusable, and views are not stackable. There are many other
 reasons ... more about them in one of the next articles.
+
+{% youtube nheD2LNYrpk %}
 
 Let's see how this should be done right. First, we let our model generate
 the output in XML format, for example:

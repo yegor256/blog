@@ -14,11 +14,6 @@ keywords:
   - why meetings suck
   - meetings in software team
   - how to organize meetings
-youtube:
-  - ibT5oKToMoQ
-  - LB_YLWhGrco
-  - dE0_j4Kk6jo
-  - pt9uHp35fwM
 image: /images/2015/07/heat.jpg
 jb_picture:
   caption: Heat (1995) by Michael Mann
@@ -44,6 +39,8 @@ as well as a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %
 [meetings]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
 and **never** organizes them.
 
+{% youtube ibT5oKToMoQ %}
+
 Meetings demotivate, waste time, burn money, and degrade quality. But more about
 that later. For now, let's discuss a proposed alternative.
 
@@ -61,6 +58,8 @@ a ticket and assign it to Jeff. When he has time, he creates a draft
 and returns a pull request. I review it and make some comments before he updates
 the branch, and finally
 [I merge it]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
+
+{% youtube LB_YLWhGrco %}
 
 Perfect; we have a draft.
 
@@ -107,6 +106,8 @@ There's no need to sit together in the same room or stand at a whiteboard.
 Monica is smart enough to do this job by herself. She already has
 all the ideas expressed by Jeff in front of her;
 there is no need for her to talk to him either.
+
+{% youtube dE0_j4Kk6jo %}
 
 Once I merge her pull request (after a proper review and corrections),
 I have a new version of my `schema.md` document.
@@ -224,6 +225,8 @@ I think it's obvious. For the first few minutes of the meeting, you're concentra
 then you start checking your Twitter feed and doodling. Everybody is doing
 the same&mdash;not because we're lazy but because there is _no demand_
 for our full focus at the meeting.
+
+{% youtube pt9uHp35fwM %}
 
 While Monica is working with the document, making comments and suggestions, she is
 [fully concentrated]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})

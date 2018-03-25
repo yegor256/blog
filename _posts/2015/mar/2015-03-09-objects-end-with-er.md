@@ -16,8 +16,6 @@ keywords:
 book: elegant-objects-1 1.1
 translated:
   - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52317370
-youtube:
-  - WpP4rIhh5e4
 image: /images/2015/03/fight-club.jpg
 jb_picture:
   caption: Fight Club (1999) by David Fincher
@@ -48,6 +46,8 @@ by Ben Hall.
 The main argument against this "-er" suffix is that "when you need a manager,
 it's often a sign that the managed are just plain old data structures
 and that the manager is the smart procedure doing the real work."
+
+{% youtube WpP4rIhh5e4 %}
 
 I totally agree but would like to add a few words to this.
 

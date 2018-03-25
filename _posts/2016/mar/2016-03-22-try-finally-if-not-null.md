@@ -16,8 +16,6 @@ keywords:
   - java close stream in finally
   - java close stream try catch
 book: elegant-objects-1 2.6
-youtube:
-  - o3aNJX7AP3M
 image: /images/2016/03/lock-stock-two-smoking-barrels.jpg
 jb_picture:
   caption: Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie
@@ -48,6 +46,8 @@ try {
   }
 }
 {% endhighlight %}
+
+{% youtube o3aNJX7AP3M %}
 
 I already wrote about [`null`]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 and its evil nature. Here it comes again. If you just follow the rule

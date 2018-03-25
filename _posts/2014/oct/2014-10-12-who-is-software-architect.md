@@ -16,10 +16,6 @@ keywords:
   - software architect job description
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2016/01/11/who-is-software-architect/
-youtube:
-  - 0fuEgmibJc4
-  - PNSezrlemsY
-  - AvVQ5NjS_Nk
 image: /images/2014/10/jackie-brown.jpg
 jb_picture:
   caption: Jackie Brown (1997) by Quentin Tarantino
@@ -44,6 +40,8 @@ a **status** than a role with explicitly defined responsibilities. It is
 a sign of respect, paid by other team players to the oldest and the
 most authoritative one among them. Right?
 
+{% youtube 0fuEgmibJc4 %}
+
 Absolutely wrong!
 
 Obviously, an architect is usually someone who
@@ -60,6 +58,8 @@ And this is not what the team needs. My definition of a software architect
 is this:
 
 An **architect** is the one who takes the **blame** for the **quality**.
+
+{% youtube PNSezrlemsY %}
 
 You can replace "blame" with accountability or responsibility. Although,
 I prefer to use "blame," because it much better emphasizes the fact that
@@ -101,6 +101,8 @@ to make sure that every
 technical decision the architect makes is not doubted
 [by anyone]({% pst 2015/oct/2015-10-13-competition-without-rules %}). This is
 what delegation is all about&mdash;responsibility should always come with power.
+
+{% youtube AvVQ5NjS_Nk %}
 
 As a project manager, you should regularly evaluate
 [the results]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})

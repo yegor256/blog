@@ -14,11 +14,6 @@ keywords:
   - fire fighting
   - high turnover
   - low turnover
-youtube:
-  - xbovkm0tTn0
-  - pt9uHp35fwM
-  - b6r2W3P9vgY
-  - dE0_j4Kk6jo
 image: /images/2015/12/commando.jpg
 jb_picture:
   caption: Commando (1985) by Mark L. Lester
@@ -52,6 +47,8 @@ retirement, resignation, or any other. Simply put, the more
 people your team loses every year, the higher your turnover.
 If there are 20 programmers on your team, and five of them
 walk away every year, your turnover is 25 percent.
+
+{% youtube xbovkm0tTn0 %}
 
 I can't pinpoint what number you should aim for, but I strongly believe
 that if you consider **programmers** to be a **valuable long-term asset**,
@@ -87,6 +84,8 @@ And that's how the team starts to degrade.
 This [blog post](http://highlevelbits.com/2014/08/hero-driven-development.html)
 by Fredrik Rubensson is right about this problem.
 
+{% youtube pt9uHp35fwM %}
+
 Thus, to achieve higher maintainability of the source code and
 robustness of the product, we must **rotate** programmers, preventing
 them from becoming subject matter experts.
@@ -104,6 +103,8 @@ behind will be unmaintainable. In most cases, we will have to re-write it.
 That's why in most software teams, management is **afraid** of programmers.
 They are scared to lose key software developers, because the
 consequences may be fatal.
+
+{% youtube b6r2W3P9vgY %}
 
 In the end, programmers control management, not the other way around.
 

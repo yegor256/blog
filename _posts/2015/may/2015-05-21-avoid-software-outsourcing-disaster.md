@@ -14,8 +14,6 @@ keywords:
   - software outsourcing companies
   - software outsourcing trends
   - software outsourcing definition
-youtube:
-  - DLk_5BmgTVk
 image: /images/2015/05/evil-cult.jpg
 jb_picture:
   caption: The Evil Cult (1993) by Jing Wong
@@ -40,6 +38,8 @@ a way to do
 
 Yes, it is possible to do it right and truly hassle-free, but you have
 to be ready to twist your management philosophy.
+
+{% youtube DLk_5BmgTVk %}
 
 The basic fundamental principle here is that 1) you should openly and frequently
 communicate your **concerns** with the outsourcing team, and 2) they should
