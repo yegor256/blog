@@ -51,6 +51,10 @@ end
 desc 'Delete _site directory'
 task :clean do
   rm_rf '_site'
+  rm_rf 'uml'
+  rm_rf '.sass-cache'
+  rm_rf '_temp'
+  rm_rf 'gnuplot'
   done 'Jekyll site directory deleted'
 end
 
@@ -70,7 +74,7 @@ task :build do
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
     system('jekyll build --trace')
-    fail 'Jekyll failed' unless $CHILD_STATUS.success?
+    fail "Jekyll failed with #{$CHILD_STATUS.success?}" unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
   end
 end
@@ -79,7 +83,7 @@ desc 'Check the existence of all critical pages'
 task pages: [:build] do
   File.open('_rake/pages.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
-    fail "Page #{file} is not found" unless File.exist? file
+    fail "Page/directory #{file} is not found" unless File.exist? file
     puts "#{file}: OK" if VERBOSE
   end
   done 'All files are in place'
