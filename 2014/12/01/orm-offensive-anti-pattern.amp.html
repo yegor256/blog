@@ -111,12 +111,7 @@ Let's say we have a single table in the database, called <code>post</code>:</p>
 |  27 | 11/17/2014 | How much I love my job   |
 +-----+------------+--------------------------+</pre>
 
-<div class="youtube">
-        <a href="https://www.youtube.com/watch?v=DEqcn4-freM">
-        </a>
-        <div>Why ORM is an Anti-Pattern? (webinar #10);
-        6 January 2016</div>
-</div>
+
 
 <p>Now we want to CRUD-manipulate this table from our Java app (CRUD
 stands for create, read, update, and delete). First, we should create
@@ -185,12 +180,7 @@ of class <code>Post</code> and stuffs them with the data.
 When the object comes to us, it is filled with data, and we should
 use getters to take them out, like we're using <code>getTitle()</code> above.</p>
 
-<div class="youtube">
-        <a href="https://www.youtube.com/watch?v=aER4uwyFbqQ">
-        </a>
-        <div>ORM is offensive (in Russian with English subtitles);
-        24 April 2016</div>
-</div>
+
 
 <p>When we want to do a reverse operation and send an object to the
 database, we do all of the same but in reverse order. We make an instance
@@ -264,12 +254,7 @@ engine and the "thing," which we can't even call an object.</p>
 paradigm, we have a lot of practical issues already mentioned in
 respected publications. I can only add a few more.</p>
 
-<div class="youtube">
-        <a href="https://www.youtube.com/watch?v=63tS3HNmhiE">
-        </a>
-        <div>ORM is a perfect anti-pattern;
-        23 May 2016</div>
-</div>
+
 
 <p><strong>SQL Is Not Hidden</strong>.
 Users of ORM should speak SQL
@@ -351,12 +336,7 @@ we need from <code>Posts</code> is an ability to list all posts for us and to cr
 a new one. Implementation details are perfectly hidden inside. Now let's
 see how we can implement these two classes.</p>
 
-<div class="youtube">
-        <a href="https://www.youtube.com/watch?v=03PXmPc7Q3g">
-        </a>
-        <div>ORM is an Offensive Anti-Pattern;
-        9 November 2016</div>
-</div>
+
 
 <p>I'm going to use <a href="http://jdbc.jcabi.com">jcabi-jdbc</a> as a JDBC wrapper,
 but you can use something else like <a href="http://www.jooq.org">jOOQ</a>,
