@@ -73,8 +73,8 @@ task :build do
   if File.exist? '_site'
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
-    system('jekyll build --trace')
-    fail "Jekyll failed with #{$CHILD_STATUS.success?}" unless $CHILD_STATUS.success?
+    system('jekyll clean build --trace')
+    fail "Jekyll failed with #{$CHILD_STATUS}" unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
   end
 end
