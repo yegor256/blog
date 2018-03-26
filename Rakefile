@@ -73,6 +73,7 @@ task :build do
   if File.exist? '_site'
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
+    puts 'Building Jekyll site...'
     system('jekyll clean build --trace')
     fail "Jekyll failed with #{$CHILD_STATUS}" unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
@@ -83,7 +84,7 @@ desc 'Check the existence of all critical pages'
 task pages: [:build] do
   File.open('_rake/pages.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
-    fail "Page/directory #{file} is not found" unless File.exist? file
+    fail "Page/directory #{file} is not found" unless File.exist?(file)
     puts "#{file}: OK" if VERBOSE
   end
   done 'All files are in place'
