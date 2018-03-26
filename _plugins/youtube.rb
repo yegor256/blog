@@ -35,8 +35,9 @@ module Yegor
       snippet = item['snippet']
       "<aside class='youtube'>
         <a href='https://www.youtube.com/watch?v=#{@id}'>
+        <img src='#{snippet['thumbnails']['medium']['url']}'>
         <div class='play'><i class='icon icon-play'></i></div>
-        <img src='#{snippet['thumbnails']['medium']['url']}'/></a>
+        </img></a>
         <div>#{snippet['title']};
         #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}.</div></aside>"
         # "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
