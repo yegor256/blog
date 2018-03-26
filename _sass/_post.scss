@@ -2,11 +2,12 @@
   @extend %desktop-only;
   @extend %unprintable;
   @extend %gray;
+  position: relative;
   width: 10 * $em;
   border-left: 4px solid #e52d27;
   float: right;
   font-size: 0.8em;
-  line-height: 0.9em;
+  line-height: 1.2em;
   margin: .5 * $em -5 * $em .5 * $em $em;
   padding-left: $em;
   text-align: left;
@@ -18,15 +19,16 @@
   }
 
   i {
-    @extend %gray;
     position: absolute;
-    font-size: 5 * $em;
     left: 50%;
     top: 50%;
-    vertical-align: middle;
-    text-align: center;
     z-index: 100;
-    line-height: 1em;
+
+    &:before {
+      color: $white;
+      font-size: 5 * $em;
+      line-height: 1em;
+    }
   }
 }
 
