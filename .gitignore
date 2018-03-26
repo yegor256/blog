@@ -8,3 +8,4 @@ _temp/
 _newsletters/send.sh
 gnuplot/
 css/_icons.scss
+_gnuplot/**/*.svg

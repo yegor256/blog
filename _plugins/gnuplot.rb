@@ -42,7 +42,7 @@ module Jekyll
           gnuplot #{base}.gpi
           mkdir -p ${dir}/_site/gnuplot/#{path}
           mkdir -p ${dir}/_temp/gnuplot/#{path}
-          cp #{base}.svg ${dir}/_temp/gnuplot/#{path}
+          mv #{base}.svg ${dir}/_temp/gnuplot/#{path}
         ]
         raise 'failed to build gnuplot image' if !$?.exitstatus
         site.static_files << Jekyll::GnuplotFile.new(site, site.dest, 'gnuplot', "#{path}/#{base}.svg")
