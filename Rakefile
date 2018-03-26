@@ -16,7 +16,6 @@ require 'html-proofer'
 VERBOSE = false
 
 task default: [
-  # :clean,
   :build,
   :pages,
   :garbage,
@@ -53,9 +52,10 @@ task :clean do
   rm_rf '_site'
   rm_rf 'uml'
   rm_rf '.sass-cache'
+  rm_rf '.jekyll-metadata'
   rm_rf '_temp'
   rm_rf 'gnuplot'
-  done 'Jekyll site directory deleted'
+  done 'Jekyll temporary files and directories deleted'
 end
 
 desc 'Lint SASS sources'
