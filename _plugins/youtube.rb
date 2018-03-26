@@ -34,10 +34,10 @@ module Yegor
       item = json['items'][0]
       snippet = item['snippet']
       "<aside class='youtube'>
-        <a href='https://www.youtube.com/watch?v=#{@id}'>
-        <img src='#{snippet['thumbnails']['medium']['url']}'>
+        <a href='https://www.youtube.com/watch?v=#{@id}'><div class='box'>
+        <img src='#{snippet['thumbnails']['medium']['url']}'/>
         <div class='play'><i class='icon icon-play'></i></div>
-        </img></a>
+        </div></a>
         <div>#{snippet['title']};
         #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}.</div></aside>"
         # "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
