@@ -412,7 +412,9 @@ using the classes we just created:</p>
 for (Post post : posts.iterate()){
   System.out.println("Title: " + post.title());
 }
-Post post = posts.add(new Date(), "How to cook an omelette");
+Post post = posts.add(
+  new Date(), "How to cook an omelette"
+);
 System.out.println("Just added post #" + post.id());</pre>
 
 <p>You can see a full practical example <a href="https://github.com/aintshy/hub/tree/0.7.2/src/main/java/com/aintshy/pgsql">here</a>.
@@ -526,7 +528,9 @@ transaction, do it like this:</p>
     @Override
     public Integer call() {
       Posts posts = new PgPosts(dbase);
-      Post post = posts.add(new Date(), "How to cook an omelette");
+      Post post = posts.add(
+        new Date(), "How to cook an omelette"
+      );
       posts.comments().post("This is my first comment!");
       return post.id();
     }
