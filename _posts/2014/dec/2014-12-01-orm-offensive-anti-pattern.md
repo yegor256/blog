@@ -393,7 +393,9 @@ Posts posts = new PgPosts(dbase);
 for (Post post : posts.iterate()){
   System.out.println("Title: " + post.title());
 }
-Post post = posts.add(new Date(), "How to cook an omelette");
+Post post = posts.add(
+  new Date(), "How to cook an omelette"
+);
 System.out.println("Just added post #" + post.id());
 {% endhighlight %}
 
@@ -515,7 +517,9 @@ new Txn(dbase).call(
     @Override
     public Integer call() {
       Posts posts = new PgPosts(dbase);
-      Post post = posts.add(new Date(), "How to cook an omelette");
+      Post post = posts.add(
+        new Date(), "How to cook an omelette"
+      );
       posts.comments().post("This is my first comment!");
       return post.id();
     }
