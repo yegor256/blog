@@ -57,4 +57,5 @@ install:
 script:
   - set -e
   - export JEKYLL_ENV=production
+  - rake
   - jgd -u git@github.com:yegor256/blog.git
