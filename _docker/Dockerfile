@@ -20,21 +20,14 @@ FROM yegor256/rultor
 MAINTAINER Yegor Bugayenko <yegor256@gmail.com>
 LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 
+RUN sudo apt-get -y update
 RUN sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3cmd fontforge liblapack-dev
 
-COPY install_cmake.sh /tmp/
-RUN /tmp/install_cmake.sh && sudo apt-get install -y libxml2-utils
+COPY https://raw.githubusercontent.com/yegor256/blog/master/_docker/install.sh /tmp/
+RUN /tmp/install.sh
+RUN sudo apt-get install -y libxml2-utils
 
 RUN npm install cssshrink@0.0.5
-
-COPY install_plantuml.sh /tmp/
-RUN sudo /tmp/install_plantuml.sh
-
-COPY install_sfnt2woff.sh /tmp/
-RUN sudo /tmp/install_sfnt2woff.sh
-
-COPY install_tidy.sh /tmp/
-RUN sudo /tmp/install_tidy.sh
 
 RUN gem install jgd -v 1.6.5
 
