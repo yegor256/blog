@@ -1,17 +1,7 @@
 install: |
-  sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3cmd fontforge liblapack-dev
-  _rultor/install_cmake.sh && sudo apt-get install -y libxml2-utils
-  npm install cssshrink@0.0.5
-  sudo _rultor/install_plantuml.sh
-  sudo _rultor/install_sfnt2woff.sh
-  sudo _rultor/install_tidy.sh
   bundle install
-  fontcustom --version
-  gem install jgd -v 1.6.5
-  gnuplot --version
 deploy:
   script: |
-script: |
-  export JEKYLL_ENV=production
-  rake
-  jgd
+    export JEKYLL_ENV=production
+    rake
+    jgd
