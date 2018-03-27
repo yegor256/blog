@@ -26,7 +26,7 @@ RUN sudo apt-get -y update
 RUN sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3cmd fontforge liblapack-dev
 
 ADD https://raw.githubusercontent.com/yegor256/blog/master/_docker/install.sh /tmp/
-RUN /tmp/install.sh
+RUN /bin/bash /tmp/install.sh
 RUN sudo apt-get install -y libxml2-utils
 
 RUN npm install cssshrink@0.0.5
