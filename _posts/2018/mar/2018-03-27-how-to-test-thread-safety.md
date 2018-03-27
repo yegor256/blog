@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I Test My Java Classes for Thread-Safety"
-date: 2018-03-28
+date: 2018-03-27
 place: Moscow, Russia
 tags: java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - how to test thread safety
   - thread conflicts
   - thread safety bugs
-image: /images/2018/03/
+image: /images/2018/03/scent-of-a-woman.jpg
 jb_picture:
-  caption:
+  caption: Scent of a Woman (1992) by Martin Brest
 ---
 
 I touched on this problem in [one of my recent webinars](https://www.youtube.com/watch?v=rC17YwowURQ),
@@ -221,6 +221,8 @@ class BooksTest {
 }
 {% endhighlight %}
 
+{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
+
 The first argument of `assertThat()` is an instance of `Func`
 (a functional interface), accepting an
 [`AtomicInteger`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html)
@@ -234,3 +236,6 @@ in a few projects already.
 By the way, in order to make `Books` thread-safe we just need to add
 `synchronized` to its method `add()`. Or maybe you can suggest a better
 solution?
+
+P.S. I learned all this from [Java Concurrency in Practice](http://amzn.to/2c7sVS1)
+by Goetz et al.
