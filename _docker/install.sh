@@ -3,7 +3,7 @@ set -e
 set -o pipefail
 
 # cmake
-wget --no-check-certificate https://cmake.org/files/v3.5/cmake-3.5.1.tar.gz
+wget --no-check-certificate --quiet https://cmake.org/files/v3.5/cmake-3.5.1.tar.gz
 tar xf cmake-3.5.1.tar.gz
 rm -rf _cmake-3.5.1
 mv cmake-3.5.1 _cmake-3.5.1
@@ -14,7 +14,7 @@ make install
 cd ..
 
 # plantuml
-wget --retry-connrefused --no-check-certificate http://img.teamed.io/yegor256/plantuml_7707-1_all.deb
+wget --retry-connrefused --quiet --no-check-certificate http://img.teamed.io/yegor256/plantuml_7707-1_all.deb
 dpkg -i plantuml_7707-1_all.deb
 rm -rf plantuml_7707-1_all.deb
 
