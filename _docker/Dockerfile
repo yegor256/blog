@@ -20,6 +20,8 @@ FROM yegor256/rultor
 MAINTAINER Yegor Bugayenko <yegor256@gmail.com>
 LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN sudo apt-get -y update
 RUN sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3cmd fontforge liblapack-dev
 
