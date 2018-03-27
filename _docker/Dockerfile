@@ -23,7 +23,7 @@ LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 RUN sudo apt-get -y update
 RUN sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3cmd fontforge liblapack-dev
 
-COPY https://raw.githubusercontent.com/yegor256/blog/master/_docker/install.sh /tmp/
+ADD https://raw.githubusercontent.com/yegor256/blog/master/_docker/install.sh /tmp/
 RUN /tmp/install.sh
 RUN sudo apt-get install -y libxml2-utils
 
