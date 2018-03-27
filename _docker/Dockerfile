@@ -27,9 +27,10 @@ RUN sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3
 
 ADD https://raw.githubusercontent.com/yegor256/blog/master/_docker/install.sh /tmp/
 RUN /bin/bash /tmp/install.sh
+RUN sudo apt-get -y update
 RUN sudo apt-get install -y libxml2-utils
 
-RUN npm install cssshrink@0.0.5
+RUN npm install -g cssshrink@0.0.5
 
-RUN gem install jgd -v 1.6.5
+RUN sudo gem install jgd -v 1.6.5
 
