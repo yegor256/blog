@@ -19,7 +19,7 @@ jb_picture:
   caption:
 ---
 
-I touched this problem in [one of my recent webinars](https://www.youtube.com/watch?v=rC17YwowURQ),
+I touched on this problem in [one of my recent webinars](https://www.youtube.com/watch?v=rC17YwowURQ),
 now it's time to explain it in writing. Thread-safety is an important
 quality of classes in languages/platforms like Java, where we frequently share
 objects between threads. The issues caused by lack of thread-safety
@@ -31,7 +31,7 @@ they are thread-safe? Here is how I'm doing it.
 
 {% jb_picture_body %}
 
-Say, there is a simple in-memory bookshelf:
+Let us say there is a simple in-memory bookshelf:
 
 {% highlight java %}
 class Books {
@@ -48,7 +48,7 @@ class Books {
 }
 {% endhighlight %}
 
-First, we put a book there and the bookshelf returns its ID. Then, we can
+First, we put a book there and the bookshelf returns its ID. Then we can
 read the title of the book by its ID:
 
 {% highlight java %}
@@ -58,7 +58,7 @@ int id = books.add(title);
 assert books.title(id).equals(title);
 {% endhighlight %}
 
-The class seems to be thread-safe, since we are using thread-safe
+The class seems to be thread-safe, since we are using the thread-safe
 [`ConcurrentHashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)
 instead of a more primitive and non-thread-safe
 [`HashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html),
@@ -103,26 +103,26 @@ class BooksTest {
 }
 {% endhighlight %}
 
-First, I created a pool of threads via
+First, I create a pool of threads via
 [`Executors`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html).
 Then I submit ten objects of type
 [`Callable`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html) via
 `submit()`. Each of them will add a new
-unique book to the bookshelf. All of them will be executed in some
-unpredictable order by some of those ten threads from the pool.
+unique book to the bookshelf. All of them will be executed, in some
+unpredictable order, by some of those ten threads from the pool.
 
 Then I fetch the results of their executors through the list of objects
 of type
 [`Future`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html).
 Finally, I calculate the amount of unique book IDs
-created. If the number is 10, there were no conflicts. I'm using
+created. If the number is 10, there were no conflicts. I'm using the
 [`Set`](https://docs.oracle.com/javase/7/docs/api/java/util/Set.html)
 collection in order to make sure the list of IDs contains only
 unique elements.
 
 The test passes on my laptop. However, it's not strong enough. The problem
 here is that it's not really testing the `Books` from multiple parallel threads.
-The time that passes between our calls to `submit()` is big enough to finish
+The time that passes between our calls to `submit()` is large enough to finish
 the execution of `books.add()`. That's why in reality only one thread
 will run at the same time. We can check that by modifying the code a bit:
 
@@ -150,11 +150,11 @@ assertThat(overlaps.get(), greaterThan(0));
 {% endhighlight %}
 
 With this code I'm trying to see how often threads overlap each other and
-do something parallel. This never happens and `overlaps` equals to zero.
-Thus, our test is not really testing anything yet. It just adds ten
+do something in parallel. This never happens and `overlaps` is equal to zero.
+Thus our test is not really testing anything yet. It just adds ten
 books to the bookshelf one by one. If I increase the amount of threads to
 1000, they start to overlap sometimes. But we want them to overlap even
-when the amount of them is rather small.
+when there's a small number of them.
 To solve that we need to use
 [`CountDownLatch`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html):
 
@@ -188,18 +188,18 @@ for (Future<Integer> f : futures) {
 assertThat(overlaps.get(), greaterThan(0));
 {% endhighlight %}
 
-Now each thread before touching the `books` waits for the permission
+Now each thread, before touching the books, waits for the permission
 given by `latch`. When we submit them all via `submit()` they stay on hold
-and way. Then, we release the latch with `countDown()` and they all start
-to go, simultaneously. Now on my laptop `overlaps` equals to 3-5 when `threads`
+and wait. Then we release the latch with `countDown()` and they all start
+to go, simultaneously. Now, on my laptop, `overlaps` is equal to 3-5 even when `threads`
 is 10.
 
-And the last `assertThat()` crashes now! I'm not getting 10 book IDs,
-as it was before. It's 7-9, but never 10. The class, apparently, is not thread-safe!
+And that last `assertThat()` crashes now! I'm not getting 10 book IDs,
+as I was before. It's 7-9, but never 10. The class, apparently, is not thread-safe!
 
 But before we fix the class, let's make our test simpler. Let's use
 [`RunInThreads`](http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html)
-from [Cactoos](http://www.cactoos.org), which does exactly the same we've done above,
+from [Cactoos](http://www.cactoos.org), which does exactly the same as we've done above,
 but under the hood:
 
 {% highlight java %}
@@ -222,10 +222,10 @@ class BooksTest {
 {% endhighlight %}
 
 The first argument of `assertThat()` is an instance of `Func`
-(a functional interface), accepting
+(a functional interface), accepting an
 [`AtomicInteger`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html)
 (the first argument of `RunsInThreads`) and returning `Boolean`. This function will
-be executed in 10 parallel thread, using the same latch-based approached
+be executed on 10 parallel thread, using the same latch-based approach
 as demonstrated above.
 
 This `RunInThreads` seems to be compact and convenient, I'm using it
