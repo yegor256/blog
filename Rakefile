@@ -24,7 +24,7 @@ task default: [
   :regex,
   :excerpts,
   :snippets,
-  # :orphans,
+  :orphans,
   # :ping,
   # :jslint,
   # :proofer,
@@ -61,11 +61,17 @@ end
 desc 'Lint SASS sources'
 SCSSLint::RakeTask.new do |t|
   FileUtils.mkdir_p('_temp')
-  f = File.open('_temp/layout.scss', 'w')
-  f << File.open('css/layout.scss').drop(2).join("\n")
-  f.flush
-  f.close
-  t.files = Dir.glob([f.path])
+  paths = []
+  Dir['css/**/*.scss'].each do |css|
+    name = File.basename(css)
+    f = File.open("_temp/#{name}", 'w')
+    f << File.open(css).drop(2).join("\n")
+    f.flush
+    f.close
+    paths << f.path
+  end
+  paths += Dir['_sass/**/*.scss']
+  t.files = Dir.glob(paths)
 end
 
 desc 'Build Jekyll site'
@@ -283,6 +289,8 @@ task orphans: [:build] do
   links
     .reject{ |a| !a.match /.*\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/.*/ }
     .reject{ |a| a.end_with? '.amp.html' }
+    .reject{ |a| a.include? '2009/03/04/pdd' }
+    .reject{ |a| a.include? '2017/05/02/unl' }
     .group_by(&:itself).each { |k,v| counts[k] = v.length }
   orphans = 0
   counts.each do |k,v|

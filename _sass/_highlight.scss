@@ -2,6 +2,7 @@ code,
 pre {
   font-family: $code-font;
   font-weight: 400;
+
   @media all and (max-width: $width) {
     font-family: 'Ubuntu Mono';
     letter-spacing: -1px;
@@ -18,6 +19,7 @@ code {
   border-left: 3px solid $light-gray;
   margin-left: 2 * $em;
   padding-left: .5 * $em !important;
+
   @media all and (max-width: $width) {
     border-left: 0;
     margin-left: 0;

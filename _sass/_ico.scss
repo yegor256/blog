@@ -1,6 +1,6 @@
 @import 'defs';
 
-.icon:before {
+.icon::before {
   font-size: $em;
   line-height: 1.2 * $em;
 }
