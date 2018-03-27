@@ -122,7 +122,7 @@ unique elements.
 
 The test passes on my laptop. However, it's not strong enough. The problem
 here is that it's not really testing the `Books` from multiple parallel threads.
-The time that passes between our calls to `submit()` is big enough to finish
+The time that passes between our calls to `submit()` is large enough to finish
 the execution of `books.add()`. That's why in reality only one thread
 will run at the same time. We can check that by modifying the code a bit:
 
@@ -150,7 +150,7 @@ assertThat(overlaps.get(), greaterThan(0));
 {% endhighlight %}
 
 With this code I'm trying to see how often threads overlap each other and
-do something parallel. This never happens and `overlaps` is equal to zero.
+do something in parallel. This never happens and `overlaps` is equal to zero.
 Thus our test is not really testing anything yet. It just adds ten
 books to the bookshelf one by one. If I increase the amount of threads to
 1000, they start to overlap sometimes. But we want them to overlap even
@@ -188,7 +188,7 @@ for (Future<Integer> f : futures) {
 assertThat(overlaps.get(), greaterThan(0));
 {% endhighlight %}
 
-Now each thread, before touching the `books`, waits for the permission
+Now each thread, before touching the books, waits for the permission
 given by `latch`. When we submit them all via `submit()` they stay on hold
 and wait. Then we release the latch with `countDown()` and they all start
 to go, simultaneously. Now, on my laptop, `overlaps` is equal to 3-5 even when `threads`
