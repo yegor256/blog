@@ -1,5 +1,8 @@
 docker:
   image: yegor256/blog
+assets:
+  id_rsa: zerocracy/home#assets/blog/id_rsa
+  id_rsa.pub: zerocracy/home#assets/blog/id_rsa.pub
 install: |
   sudo locale-gen en_US en_US.UTF-8
   sudo dpkg-reconfigure locales
@@ -11,4 +14,8 @@ deploy:
   script: |
     export JEKYLL_ENV=production
     rake
+    mkdir ~/.ssh
+    mv ../id_rsa ../id_rsa.pub ~/.ssh
+    chmod -R 600 ~/.ssh/*
+    echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
     jgd
