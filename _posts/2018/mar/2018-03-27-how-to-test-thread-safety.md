@@ -111,6 +111,8 @@ Then I submit ten objects of type
 unique book to the bookshelf. All of them will be executed, in some
 unpredictable order, by some of those ten threads from the pool.
 
+{% youtube rC17YwowURQ %}
+
 Then I fetch the results of their executors through the list of objects
 of type
 [`Future`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html).
