@@ -12,6 +12,7 @@ keywords:
   - workshops about software development
   - conferences about programming
   - software engineers conferences
+nospell: true
 image: /images/andreea/yegor-is-presenting.png
 style: |
   .talk-event {
