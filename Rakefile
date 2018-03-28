@@ -295,7 +295,7 @@ end
 desc 'Make sure there are no orphan articles'
 task orphans: [:build] do
   links = all_links()
-    .reject{ |a| !a.start_with? 'http://www.yegor 256.com/' }
+    .reject{ |a| !a.start_with? 'http://www.yegor256.com/' }
     .map{ |a| a.gsub(/#.*/, '') }
   links += all_html().map { |f| f.gsub(/_site/, 'http://www.yegor256.com') }
   counts = {}
@@ -304,7 +304,8 @@ task orphans: [:build] do
     .reject{ |a| a.end_with? '.amp.html' }
     .reject{ |a| a.include? '2009/03/04/pdd' }
     .reject{ |a| a.include? '2017/05/02/unl' }
-    .group_by(&:itself).each { |k,v| counts[k] = v.length }
+    .group_by(&:itself)
+    .each { |k,v| counts[k] = v.length }
   orphans = 0
   counts.each do |k,v|
     if v < 4
