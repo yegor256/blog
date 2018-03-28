@@ -99,8 +99,9 @@ module Yegor
         .gsub(/'/, '&apos;')
         .gsub(/</, '&lt;')
         .gsub(/>/, '&gt;')
+      alt = 'picture' if alt.empty?
       html = "<figure class='picture'><img src='#{Yegor::Img.new(@src, context)}'" +
-        " style='width:#{@width}px;max-width:100%;' alt='#{CGI.escapeHTML alt}'/>"
+        " style='width:#{@width}px;max-width:100%;' alt='#{CGI.escapeHTML(alt)}'/>"
       if @title != ''
         html += "<figcaption>#{CGI::escapeHTML @title}</figcaption>"
       end

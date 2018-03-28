@@ -42,10 +42,10 @@ You can buy via:
 
 <div class="art-logo">
   <a href="https://www.saatchiart.com/yegor256">
-    <img src="/images/paintings/saatchiart.png"/></a></div>
+    <img src="/images/paintings/saatchiart.png" alt="saatchiart"/></a></div>
 <div class="art-logo">
   <a href="https://www.artfinder.com/yegor256#/">
-    <img src="/images/paintings/artfinder.png"/></a></div>
+    <img src="/images/paintings/artfinder.png" alt="artfinder"/></a></div>
 
 <!--
 ugallery.com - applied/rejected

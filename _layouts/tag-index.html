@@ -20,12 +20,13 @@ description: |
       {% elsif page.title == 'java' %}
         <h1>{{ page.posts.size }} Posts About Java&trade;</h1>
         <p>
-          <img alt="Java logo" src="/images/java-icon.svg" style="height:150px;float:right;margin-left:1em"/></a>
+          <img alt="Java logo" src="/images/java-icon.svg" style="height:150px;float:right;margin-left:1em"/>
         </p>
       {% elsif page.title == 'zerocracy' %}
         <h1>{{ page.posts.size }} Posts About Zerocracy&trade;</h1>
         <p>
-          <img alt="Zerocracy logo" src="http://www.0crat.com/svg/logo.svg" style="height:150px;float:right;margin-left:1em"/></a>
+          <a href="http://www.zerocracy.com">
+            <img alt="Zerocracy logo" src="http://www.0crat.com/svg/logo.svg" style="height:150px;float:right;margin-left:1em"/></a>
           <a href="http://www.zerocracy.com">Zerocracy</a>
           a project manager that
           <a href="/2018/03/21/zerocracy-announcement.html">never sleeps</a>,
@@ -35,7 +36,8 @@ description: |
       {% elsif page.title == 'xdsd' %}
         <h1>{{ page.posts.size }} Posts About eXtremely Distributed Software Development (XDSD&trade;) Methodology</h1>
         <p>
-          <img alt="XDSD logo" src="http://www.xdsd.org/images/logo.svg" style="height:150px;float:right;margin-left:1em"/></a>
+          <a href="http://www.xdsd.org/">
+            <img alt="XDSD logo" src="http://www.xdsd.org/images/logo.svg" style="height:150px;float:right;margin-left:1em"/></a>
           <a href="http://www.xdsd.org">XDSD</a> is an open software development methodology
           that aims to reduce risks and improve quality in a project
           of almost any size.
@@ -46,12 +48,10 @@ description: |
         <h1>{{ page.posts.size }} posts about {{ page.title }}</h1>
       {% endif %}
     </header>
-    <main>
-      <article itemprop="articleBody">
-        {% for post in page.posts %}
-          {{ post | tagged }}
-        {% endfor %}
-      </article>
-    </main>
+    <article itemprop="articleBody">
+      {% for post in page.posts %}
+        {{ post | tagged }}
+      {% endfor %}
+    </article>
   </div>
 </section>

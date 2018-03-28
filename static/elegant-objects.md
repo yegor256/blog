@@ -57,10 +57,10 @@ on [Amazon](http://goo.gl/W2WVMk) (Please don't forget to review it there!),
 ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobjects).
 
 Volume 1:<br/>
-<a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 Volume 2:<br/>
-<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <!--more-->
 
@@ -74,7 +74,7 @@ Jan 11, 2018:
 [Gitter chat room](https://gitter.im/yegor256/elegantobjects) is closed.
 For all discussions please join [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 For OOP related questions, please use comment sections in one
-of [these blog posts](/tag/oop).
+of [these blog posts](/tag/oop.html).
 
 Nov 27, 2017:
 I purchased the domain [elegantobjects.org](http://www.elegantobjects.org).
@@ -202,19 +202,7 @@ People on the list are sorted by the date I received their applications.
 I excluded some really blank applications. If you feel I did that by mistake
 to your application, please [email me](mailto:blog@yegor256.com).
 
-<a href="#" id="show-link" onclick="
-  $('#show-link').hide();
-  $('#vol2-reviewers').show();
-  $('#vol2-reviewers a.vote').click(
-    function(a) {
-      $('#reviewer').val(
-        $(this).closest('.rv').find('.name').text()
-      );
-      return true;
-    }
-  );
-  return false;
-">Show the list</a>
+<a href="#show-link" id="show-link" onclick="$('#show-link').hide();$('#vol2-reviewers').show();return false;">Show the list</a>
 
 <div id="vol2-reviewers">
   <div class="rv">
@@ -376,7 +364,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     correct OOP and help to make your book better.</span>
   </div>
   <div class="rv">
-    <a href="www.linkedin.com/in/settyblue">
+    <a href="https://www.linkedin.com/in/settyblue">
       <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAASIAAAAJDBlMTU0NzRiLTM2NTUtNDQ2Ni04N2NkLTBjNTEzMDUwZWY5OQ.jpg"
         alt="Rakshith Kunchum"/>
     </a>
@@ -396,7 +384,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
   </div>
   <div class="rv">
     <a href="https://www.facebook.com/polart.studio">
-      <img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/10457828_483815805095641_9124450483338096797_n.jpg?oh=c27ecd3694383a2e73343de382bc286d&oe=590BFA0C"
+      <img src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.0-9/10457828_483815805095641_9124450483338096797_n.jpg?oh=c27ecd3694383a2e73343de382bc286d&amp;oe=590BFA0C"
         alt="Victor Bugaenko"/>
     </a>
     <span class="name">Victor Bugaenko</span>
@@ -479,7 +467,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
       <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAABPAAAAJDQxNGFiMDI5LTVmNWItNGYwYS04YmEwLWE0MjNiNDAyZTQwOQ.jpg"
         alt="Nikita Salnikov-Tarnovski"/>
     </a>
-    <span class="name" class="name">Nikita Salnikov-Tarnovski</span>
+    <span class="name">Nikita Salnikov-Tarnovski</span>
     <span class="text">I hope to raise many objections so you can polish your arguments.</span>
   </div>
   <div class="rv">
@@ -645,7 +633,7 @@ with a short description of yourself and your LinkedIn profile. If you
 reviewed the first volume, please don't bother. I want a new group of
 reviewers.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 <div style="float:right;margin-left:1em">
   <a href="http://javapoint.ru/en/">
     <img src="/images/2016/jpoint-2016.png" style="height:45px;" alt="JPoint 2016"/></a><br/>
@@ -674,7 +662,7 @@ I will give away a few copies at each event to those who
 ask the most interesting questions after my presentations. Don't miss your
 chance to say hello and get a free book.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 Feb 28, 2016:
 More than 100 books have sold already, in just one week! I'm glad to see
 that you're interested in reading it. I haven't got a single review yet,
@@ -693,7 +681,7 @@ and throw it away so it doesn't take up space. When an e-book is available,
 send me that picture and I will send you a Kindle/epub/PDF/whatever
 file **for free**. How does that sound?
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 {% badge /images/books/elegant-objects/cover.png 125 http://goo.gl/W2WVMk %}
 Feb 22, 2016:
 The book is published! It is for sale
@@ -708,7 +696,7 @@ It will help me attract more readers. After reading, please shoot me
 an email at [book@yegor256.com](mailto:book@yegor256.com).
 I'm very interested in knowing what you think. Thanks!
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 {% badge /images/books/elegant-objects/cactus.svg 125 %}
 Jan 27, 2016:
 This cute cactus, created by [Andreea Mironiuc](http://andreeamironiuc.com/),
@@ -718,7 +706,7 @@ all our objects in Java. Right? Third, it's pretty hard to offend by
 breaking its skin and treating it as a bag for other objects. And fourth,
 I just like it.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 {% badge /images/books/elegant-objects/contents.png 125 /images/books/elegant-objects/contents.pdf %}
 Jan 19, 2016:
 Nearly all the reviewers have finished already. I'm waiting for the
@@ -727,14 +715,14 @@ final changes. Fortunately, the overall feedback is **positive**
 so far. All reviewers said the book was worth reading.
 Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 {% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
 You can [pre-order](http://goo.gl/W2WVMk)
 the book on Amazon.com. The price is **$40.96**.
 As promised, the book will be published on **Feb 22**.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 {% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
@@ -758,14 +746,14 @@ I hope to receive their reviews by the end of January. Then, I will
 spend another two to three weeks taking their recommendations into account,
 and the book will go out at the end of February.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 Dec 6, 2015:
 I've received **63 emails** so far, and it's time to choose the best candidates.
 I will do that in the next few days and email them. I will announce
 the names of selected reviewers here soon. Thanks a lot to all of you
 for your readiness to help!
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 {% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 %}
 Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
@@ -788,12 +776,12 @@ book is about. However, I'm sure that my **explanations** and **arguments**
 have many flaws. As an early reviewer, you will help me find them.
 Again, don't argue with **what** I'm preaching, but complain about **how** I do it.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 Sep 1, 2015:
 The manuscript is finished, in its first draft. It took about 200 hours. Most
 of the ideas were taken from the articles previously published on the blog.
 
-<div class="book-event"/>
+<div class="book-event">&nbsp;</div>
 Jul 5, 2015:
 I started to write it.
 

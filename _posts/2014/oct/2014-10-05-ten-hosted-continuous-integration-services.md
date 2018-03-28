@@ -83,7 +83,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td><a href="https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest">
-    <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build"/></a></td>
+    <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build" alt='badge'/></a></td>
   </tr>
 <tr><td><a href="http://www.travis-ci.org">Travis</a></td>
   <td class="x-right"><a href="https://travis-ci.com/plans">$69/mo</a></td>
@@ -94,7 +94,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td><a href="https://travis-ci.org/yegor256/rultor">
-    <img src="https://travis-ci.org/yegor256/rultor.svg?branch=master" class="x-build"/></a></td>
+    <img src="https://travis-ci.org/yegor256/rultor.svg?branch=master" class="x-build" alt='badge'/></a></td>
   </tr>
 <tr><td><a href="http://www.appveyor.com">AppVeyor</a></td>
   <td class="x-right"><a href="http://www.appveyor.com/pricing">$39/mo</a></td>
@@ -105,7 +105,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center">&mdash;</td>
   <td><a href="https://ci.appveyor.com/project/yegor256/rultor/branch/master">
-    <img src="https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true" class="x-build"/></a></td>
+    <img src="https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true" class="x-build" alt='badge'/></a></td>
   </tr>
 <tr><td><a href="http://www.wercker.com">Wercker</a></td>
   <td class="x-right">$350/mo</td>
@@ -116,7 +116,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td><a href="https://app.wercker.com/project/bykey/0e6506c69e078b7692e50b240c034524">
-    <img src="https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status" class="x-build"/></a></td>
+    <img src="https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status" class="x-build" alt='badge'/></a></td>
   </tr>
 <tr><td colspan="9" class="x-hr"></td></tr>
 <tr><td><a href="http://www.semaphoreapp.com">SemaphoreApp</a></td>

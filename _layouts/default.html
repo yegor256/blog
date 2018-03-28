@@ -6,15 +6,15 @@ layout: compress
   itemscope="" itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="utf-8"/>
-    <meta name="description" itemprop="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
-    <meta name="keywords" itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
+    <meta name="description" content="{{ page | description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
+    <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
     <meta name="author" content="{{ site.author.name }}">
     {% if page.date %}
       <meta name="article:published_time" content="{{ page.date }}">
     {% endif %}
-    <meta name="og:site_name" itemprop="name" content="{{ site.author.name }}"/>
+    <meta name="og:site_name" content="{{ site.author.name }}"/>
     <meta name="og:type" content="article" />
     <meta name="og:locale" content="en_US" />
     <meta name="twitter:account_id" content="4503599630178231" />
@@ -30,7 +30,7 @@ layout: compress
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="stylesheet" href="/css/icons.css?{{ site.data['hash'] }}"/>
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" itemprop="url" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <link rel="amphtml" href="{{ site.url }}{{ page.url | replace_first:'.html','.amp.html' }}" />
     <title>{{ page.title }}
       {% if paginator.page > 1 %}
@@ -63,7 +63,7 @@ layout: compress
           <ul class="menu social notranslate">
             <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow"
               title="Follow me on Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="/rss.xml" re="nofollow"
+            <li><a href="/rss.xml" rel="nofollow"
               title="Subscribe to my RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
             <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow"
               title="My GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
@@ -214,20 +214,20 @@ layout: compress
         ga('create', 'UA-1963507-32', 'auto');
         ga('send', 'pageview');
       </script>
-      <script language="javascript" type="text/javascript">
+      <script language="javascript">
         Cd=document;Cr="&"+Math.random();Cp="&s=1";
         Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
         Cp+="&t="+(new Date()).getTimezoneOffset();
         if(self!=top)Cp+="&f=1";
       </script>
-      <script language="javascript1.1" type="text/javascript">
+      <script language="javascript1.1">
         if(navigator.javaEnabled())Cp+="&j=1";
       </script>
-      <script language="javascript1.2" type="text/javascript">
+      <script language="javascript1.2">
         if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
         screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
       </script>
-      <script language="javascript" type="text/javascript">
+      <script language="javascript">
         Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+
         "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
         "' border='0' wi"+"dth='1' he"+"ight='1'/>");

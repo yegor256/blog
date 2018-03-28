@@ -116,13 +116,11 @@ layout: default
         </a>
       </nav>
     </header>
-    <main>
-      <article class="main" itemprop="articleBody">
-        <div {% if page.nospell %} class="nospell" {% endif %}>
-          {{ content }}
-        </div>
-      </article>
-    </main>
+    <article class="main" itemprop="articleBody">
+      <div {% if page.nospell %} class="nospell" {% endif %}>
+        {{ content }}
+      </div>
+    </article>
   </div>
 
   <div class="wrapper">

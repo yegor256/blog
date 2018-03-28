@@ -45,7 +45,7 @@ more solid and architecture more visible.
 <br/>
 Published: 22 Feb 2016.
 <br/>
-<a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <div class="book-par"></div>
 {% badge /images/books/256-bloghacks/cover.png 125 /256-bloghacks.html %}
@@ -58,7 +58,7 @@ in just one go.
 <br/>
 Published: 6 Nov 2016.
 <br/>
-<a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <div class="book-par"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
@@ -69,7 +69,7 @@ dependency injection, reflection, and others.
 <br/>
 Published: 18 Apr 2017.
 <br/>
-<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <div class="book-par"></div>
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
@@ -89,7 +89,7 @@ previous two volumes did, but will suggest what to do instead.
 <br/>
 To be published: end of 2018.
 <br/>
-<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <div class="book-par"></div>
 To be continued...

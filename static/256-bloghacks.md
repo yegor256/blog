@@ -27,7 +27,7 @@ and keeps growing. You will definitely learn something new from this
 book.
 Buy it on [Amazon](https://goo.gl/DUcXm9) (please, don't forget to review it there!),
 ISBN: 1537688669.<br/>
-<a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px'/></a>
+<a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <!--more-->
 

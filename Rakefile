@@ -27,7 +27,7 @@ task default: [
   :orphans,
   # :ping,
   # :jslint,
-  # :proofer,
+  :proofer,
   # :rubocop,
 ]
 
@@ -136,10 +136,23 @@ desc 'Validate a few pages through HTML proofer'
 task proofer: [:build] do
   HTMLProofer.check_directory(
     '_site',
+    only_4xx: true,
+    disable_external: true,
     log_level: :warn,
+    validation: {
+      report_invalid_tags: false,
+      report_missing_names: true,
+      report_script_embeds: true
+    },
+    parallel: {
+      in_processes: 8
+    },
     check_favicon: true,
     check_html: true,
-    file_ignore: [/201[4-6].*/]
+    file_ignore: [
+      '_site/2009/03/04/pdd.html',
+      '_site/2017/05/02/unlimited-number-of-bugs.html'
+    ]
   ).run
   done 'HTML passed through html-proofer'
 end

@@ -59,7 +59,7 @@ What is interesting is that now I can see a summary of my API
 I see how many requests were processed successfully over the last 24 hours
 and how many of them failed. Also, I have this cute button:
 
-<img src="http://www.rehttp.net/b?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub"/>
+<img src="http://www.rehttp.net/b?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub" alt='badge'/>
 
 And I have a URL for checking the status of the entire API:
 
