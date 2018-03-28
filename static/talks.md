@@ -172,7 +172,7 @@ activity around the talks.
 Four factors of success;
 [Семинар в ДНУ](https://www.facebook.com/photo.php?fbid=10214062047615171)
 (Днепропетровский Государственный Университет,
-факультет "Международные Отношения", кафедра "Международная Экономика")<br/>
+факультет "Международные Отношения," кафедра "Международная Экономика")<br/>
 Dnepr, Ukraine;
 13 September 2017;
 [видео](https://www.youtube.com/watch?v=VQtdNQd7wIU).
