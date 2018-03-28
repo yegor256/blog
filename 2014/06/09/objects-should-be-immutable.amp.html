@@ -89,8 +89,6 @@ new strings, but its own state will never change.</p>
 for example, class <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code>Date</code></a>.
 It is possible to modify its state using <code>setTime()</code>.</p>
 
-
-
 <p>I don't know why the JDK designers decided to make these two
 very similar classes differently. However, I believe that the design
 of a mutable <code>Date</code> has many flaws, while the immutable <code>String</code>
@@ -119,8 +117,6 @@ Nevertheless, we should always aim for the best.</p>
 <p>Let's discuss the most important arguments one by one.</p>
 
 <h2 id="thread-safety">Thread Safety</h2>
-
-
 
 <p>The first and the most obvious argument is that immutable objects
 are thread-safe. This means that multiple threads can access the same
@@ -275,8 +271,6 @@ assert map.containsKey(date); // false</pre>
 it to change its identity. We're not expecting to lose an entry
 in the map just because the state of its key is changed. However,
 this is exactly what is happening in the example above.</p>
-
-
 
 <p>When we add an object to the map, its <code>hashCode()</code> returns one value.
 This value is used by <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html"><code>HashMap</code></a>

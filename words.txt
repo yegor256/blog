@@ -3796,6 +3796,7 @@ larkin
 larry
 las
 last
+latch-based
 late
 late-night
 later
@@ -6468,6 +6469,7 @@ sponsor
 sponsor's
 sponsored
 sponsors
+sporadic
 sporadically
 sporchi
 sport
@@ -6936,6 +6938,7 @@ thousand
 thousands
 thread
 thread-safe
+thread-safety
 threads
 threat
 threaten

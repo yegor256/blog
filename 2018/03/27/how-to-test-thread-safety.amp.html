@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How I Test My Java Classes for Thread-Safety</title>
+    <link rel="canonical" href="http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html"
+        },
+        "headline": "How I Test My Java Classes for Thread-Safety",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/03/scent-of-a-woman.jpg",
+          "height": 748,
+          "width": 1330
+        },
+        "datePublished": "2018-03-27",
+        "dateModified": "2018-03-27",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Thread-safety is a very important and critical
+quality of some Java objects; here is how it can
+be tested with the help of Cactoos RunInThreads class.
+",
+        "keywords": ["thread safety", "test thread safety", "how to test thread safety", "thread conflicts", "thread safety bugs"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('http://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>27 March 2018</p>
+      <h1>How I Test My Java Classes for Thread-Safety</h1>
+      <p>I touched on this problem in <a href="https://www.youtube.com/watch?v=rC17YwowURQ">one of my recent webinars</a>,
+now it's time to explain it in writing. Thread-safety is an important
+quality of classes in languages/platforms like Java, where we frequently share
+objects between threads. The issues caused by lack of thread-safety
+are very difficult to debug, since they are sporadic and almost impossible
+to reproduce on purpose. How do you test your objects to make sure
+they are thread-safe? Here is how I'm doing it.</p>
+
+
+
+<amp-img src="/images/2018/03/scent-of-a-woman.jpg" alt="Scent of a Woman (1992) by Martin Brest" height="748" width="1330" layout="responsive"></amp-img>
+
+<p>Let us say there is a simple in-memory bookshelf:</p>
+
+<pre>class Books {
+  final Map&lt;Integer, String&gt; map =
+    new ConcurrentHashMap&lt;&gt;();
+  int add(String title) {
+    final Integer next = this.map.size() + 1;
+    this.map.put(next, title);
+    return next;
+  }
+  String title(int id) {
+    return this.map.get(id);
+  }
+}</pre>
+
+<p>First, we put a book there and the bookshelf returns its ID. Then we can
+read the title of the book by its ID:</p>
+
+<pre>Books books = new Books();
+String title = "Elegant Objects";
+int id = books.add(title);
+assert books.title(id).equals(title);</pre>
+
+<p>The class seems to be thread-safe, since we are using the thread-safe
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code>ConcurrentHashMap</code></a>
+instead of a more primitive and non-thread-safe
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>,
+right? Let's try to test it:</p>
+
+<pre>class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    String title = "Elegant Objects";
+    int id = books.add(title);
+    assert books.title(id).equals(title);
+  }
+}</pre>
+
+<p>The test passes, but it's just a one-thread test. Let's try to do the
+same manipulation from a few parallel threads (I'm using
+<a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
+
+<pre>class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    int threads = 10;
+    ExecutorService service =
+      Executors.newFixedThreadPool(threads);
+    Collection&lt;Future&lt;Integer&gt;&gt; futures =
+      new LinkedList&lt;&gt;();
+    for (int t = 0; t &lt; threads; ++t) {
+      final String title = String.format("Book #%d", t);
+      futures.add(service.submit(() -&gt; books.add(title)));
+    }
+    Set&lt;Integer&gt; ids = new HashSet&lt;&gt;();
+    for (Future&lt;Integer&gt; f : futures) {
+      ids.add(f.get());
+    }
+    assertThat(ids.size(), equalTo(threads));
+  }
+}</pre>
+
+<p>First, I create a pool of threads via
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html"><code>Executors</code></a>.
+Then I submit ten objects of type
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html"><code>Callable</code></a> via
+<code>submit()</code>. Each of them will add a new
+unique book to the bookshelf. All of them will be executed, in some
+unpredictable order, by some of those ten threads from the pool.</p>
+
+<p>Then I fetch the results of their executors through the list of objects
+of type
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html"><code>Future</code></a>.
+Finally, I calculate the amount of unique book IDs
+created. If the number is 10, there were no conflicts. I'm using the
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Set.html"><code>Set</code></a>
+collection in order to make sure the list of IDs contains only
+unique elements.</p>
+
+<p>The test passes on my laptop. However, it's not strong enough. The problem
+here is that it's not really testing the <code>Books</code> from multiple parallel threads.
+The time that passes between our calls to <code>submit()</code> is large enough to finish
+the execution of <code>books.add()</code>. That's why in reality only one thread
+will run at the same time. We can check that by modifying the code a bit:</p>
+
+<pre>AtomicBoolean running = new AtomicBoolean();
+AtomicInteger overlaps = new AtomicInteger();
+Collection&lt;Future&lt;Integer&gt;&gt; futures = new LinkedList&lt;&gt;();
+for (int t = 0; t &lt; threads; ++t) {
+  final String title = String.format("Book #%d", t);
+  futures.add(
+    service.submit(
+      () -&gt; {
+        if (running.get()) {
+          overlaps.incrementAndGet();
+        }
+        running.set(true);
+        int id = books.add(title);
+        running.set(false);
+        return id;
+      }
+    )
+  );
+}
+assertThat(overlaps.get(), greaterThan(0));</pre>
+
+<p>With this code I'm trying to see how often threads overlap each other and
+do something in parallel. This never happens and <code>overlaps</code> is equal to zero.
+Thus our test is not really testing anything yet. It just adds ten
+books to the bookshelf one by one. If I increase the amount of threads to
+1000, they start to overlap sometimes. But we want them to overlap even
+when there's a small number of them.
+To solve that we need to use
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html"><code>CountDownLatch</code></a>:</p>
+
+<pre>CountDownLatch latch = new CountDownLatch(1);
+AtomicBoolean running = new AtomicBoolean();
+AtomicInteger overlaps = new AtomicInteger();
+Collection&lt;Future&lt;Integer&gt;&gt; futures = new LinkedList&lt;&gt;();
+for (int t = 0; t &lt; threads; ++t) {
+  final String title = String.format("Book #%d", t);
+  futures.add(
+    service.submit(
+      () -&gt; {
+        latch.await();
+        if (running.get()) {
+          overlaps.incrementAndGet();
+        }
+        running.set(true);
+        int id = books.add(title);
+        running.set(false);
+        return id;
+      }
+    )
+  );
+}
+latch.countDown();
+Set&lt;Integer&gt; ids = new HashSet&lt;&gt;();
+for (Future&lt;Integer&gt; f : futures) {
+  ids.add(f.get());
+}
+assertThat(overlaps.get(), greaterThan(0));</pre>
+
+<p>Now each thread, before touching the books, waits for the permission
+given by <code>latch</code>. When we submit them all via <code>submit()</code> they stay on hold
+and wait. Then we release the latch with <code>countDown()</code> and they all start
+to go, simultaneously. Now, on my laptop, <code>overlaps</code> is equal to 3-5 even when <code>threads</code>
+is 10.</p>
+
+<p>And that last <code>assertThat()</code> crashes now! I'm not getting 10 book IDs,
+as I was before. It's 7-9, but never 10. The class, apparently, is not thread-safe!</p>
+
+<p>But before we fix the class, let's make our test simpler. Let's use
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html"><code>RunInThreads</code></a>
+from <a href="http://www.cactoos.org">Cactoos</a>, which does exactly the same as we've done above,
+but under the hood:</p>
+
+<pre>class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    MatcherAssert.assertThat(
+      t -&gt; {
+        String title = String.format(
+          "Book #%d", t.getAndIncrement()
+        );
+        int id = books.add(title);
+        return books.title(id).equals(title);
+      },
+      new RunsInThreads&lt;&gt;(new AtomicInteger(), 10)
+    );
+  }
+}</pre>
+
+
+
+<p>The first argument of <code>assertThat()</code> is an instance of <code>Func</code>
+(a functional interface), accepting an
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html"><code>AtomicInteger</code></a>
+(the first argument of <code>RunsInThreads</code>) and returning <code>Boolean</code>. This function will
+be executed on 10 parallel thread, using the same latch-based approach
+as demonstrated above.</p>
+
+<p>This <code>RunInThreads</code> seems to be compact and convenient, I'm using it
+in a few projects already.</p>
+
+<p>By the way, in order to make <code>Books</code> thread-safe we just need to add
+<code>synchronized</code> to its method <code>add()</code>. Or maybe you can suggest a better
+solution?</p>
+
+<p>P.S. I learned all this from <a href="http://amzn.to/2c7sVS1">Java Concurrency in Practice</a>
+by Goetz et al.</p>
+
+    </article>
+  </body>
+</html>

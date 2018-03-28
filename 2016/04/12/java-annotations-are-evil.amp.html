@@ -90,8 +90,6 @@ annotations are a big mistake in Java design.</p>
 
 <amp-img src="/images/2016/04/gomorrah.jpg" alt="Gomorra (2008) by Matteo Garrone)" height="852" width="1280" layout="responsive"></amp-img>
 
-
-
 <p>Long story short, there is one big problem with annotations—they encourage us to implement
 <a href="/2014/11/20/seven-virtues-of-good-object.html">object</a>
 functionality <strong>outside</strong> of an object,
@@ -162,8 +160,6 @@ and encourage us by tearing objects apart and keeping parts in different
 places. They are containers, sessions, managers, controllers, etc.</p>
 
 <h2 id="xmlelement"><code>@XmlElement</code></h2>
-
-
 
 <p>This is how JAXB
 <a href="/2015/03/26/jaxb-vs-xembly.html">works</a>, when you want to convert your
@@ -287,8 +283,6 @@ has to be wrapped into another one. This is happening behind the scenes. We don'
 see that supplementary class, which implements the retrying algorithm.
 But the bytecode produced by the AspectJ weaver contains a modified
 version of class <code>Foo</code>.</p>
-
-
 
 <p>That is exactly what is wrong with this approach—we don't see
 and don't control the instantiation of that supplementary object. Object

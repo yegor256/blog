@@ -111,8 +111,6 @@ Let's say we have a single table in the database, called <code>post</code>:</p>
 |  27 | 11/17/2014 | How much I love my job   |
 +-----+------------+--------------------------+</pre>
 
-
-
 <p>Now we want to CRUD-manipulate this table from our Java app (CRUD
 stands for create, read, update, and delete). First, we should create
 a <code>Post</code> class (I'm sorry it's so long, but that's the best I can do):</p>
@@ -179,8 +177,6 @@ engine that makes a connection to the database, executes necessary SQL
 of class <code>Post</code> and stuffs them with the data.
 When the object comes to us, it is filled with data, and we should
 use getters to take them out, like we're using <code>getTitle()</code> above.</p>
-
-
 
 <p>When we want to do a reverse operation and send an object to the
 database, we do all of the same but in reverse order. We make an instance
@@ -253,8 +249,6 @@ engine and the "thing," which we can't even call an object.</p>
 <p>Because of this terrible and offensive violation of the object-oriented
 paradigm, we have a lot of practical issues already mentioned in
 respected publications. I can only add a few more.</p>
-
-
 
 <p><strong>SQL Is Not Hidden</strong>.
 Users of ORM should speak SQL
@@ -335,8 +329,6 @@ talking to the PostgreSQL or if they keep all the data in text files. All
 we need from <code>Posts</code> is an ability to list all posts for us and to create
 a new one. Implementation details are perfectly hidden inside. Now let's
 see how we can implement these two classes.</p>
-
-
 
 <p>I'm going to use <a href="http://jdbc.jcabi.com">jcabi-jdbc</a> as a JDBC wrapper,
 but you can use something else like <a href="http://www.jooq.org">jOOQ</a>,
