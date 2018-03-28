@@ -223,7 +223,8 @@ class BooksTest {
 
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
 
-The first argument of `assertThat()` is an instance of `Func`
+The first argument of `assertThat()` is an instance of
+[`Func`](http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html)
 (a functional interface), accepting an
 [`AtomicInteger`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html)
 (the first argument of `RunsInThreads`) and returning `Boolean`. This function will
