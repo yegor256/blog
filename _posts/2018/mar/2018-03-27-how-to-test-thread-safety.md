@@ -89,7 +89,7 @@ class BooksTest {
     ExecutorService service =
       Executors.newFixedThreadPool(threads);
     Collection<Future<Integer>> futures =
-      new LinkedList<>();
+      new ArrayList<>(threads);
     for (int t = 0; t < threads; ++t) {
       final String title = String.format("Book #%d", t);
       futures.add(service.submit(() -> books.add(title)));
@@ -129,7 +129,8 @@ will run at the same time. We can check that by modifying the code a bit:
 {% highlight java %}
 AtomicBoolean running = new AtomicBoolean();
 AtomicInteger overlaps = new AtomicInteger();
-Collection<Future<Integer>> futures = new LinkedList<>();
+Collection<Future<Integer>> futures =
+  new ArrayList<>(threads);
 for (int t = 0; t < threads; ++t) {
   final String title = String.format("Book #%d", t);
   futures.add(
@@ -162,7 +163,8 @@ To solve that we need to use
 CountDownLatch latch = new CountDownLatch(1);
 AtomicBoolean running = new AtomicBoolean();
 AtomicInteger overlaps = new AtomicInteger();
-Collection<Future<Integer>> futures = new LinkedList<>();
+Collection<Future<Integer>> futures =
+  new ArrayList<>(threads);
 for (int t = 0; t < threads; ++t) {
   final String title = String.format("Book #%d", t);
   futures.add(
