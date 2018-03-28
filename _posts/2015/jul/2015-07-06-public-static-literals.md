@@ -62,7 +62,7 @@ byte[] array = text.getBytes(CharEncoding.UTF_8);
 Looks convenient, right? This is what the designers of Apache Commons think
 (one of the most popular but simply _terrible_ libraries
 in the Java world). I encourage you to think differently.
-If you are currently using Apache Commons then you should definitely consider
+If you are currently using Apache Commons, then you should definitely consider
 switching to [Cactoos](http://www.cactoos.org/). In your own code, don't use public
 static properties&mdash;ever. Even if this code may look convenient to you,
 it's a very bad design.
