@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>How I Test My Java Classes for Thread-Safety</title>
     <link rel="canonical" href="http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
@@ -137,7 +138,7 @@ same manipulation from a few parallel threads (I'm using
     ExecutorService service =
       Executors.newFixedThreadPool(threads);
     Collection&lt;Future&lt;Integer&gt;&gt; futures =
-      new LinkedList&lt;&gt;();
+      new ArrayList&lt;&gt;(threads);
     for (int t = 0; t &lt; threads; ++t) {
       final String title = String.format("Book #%d", t);
       futures.add(service.submit(() -&gt; books.add(title)));
@@ -175,7 +176,8 @@ will run at the same time. We can check that by modifying the code a bit:</p>
 
 <pre>AtomicBoolean running = new AtomicBoolean();
 AtomicInteger overlaps = new AtomicInteger();
-Collection&lt;Future&lt;Integer&gt;&gt; futures = new LinkedList&lt;&gt;();
+Collection&lt;Future&lt;Integer&gt;&gt; futures =
+  new ArrayList&lt;&gt;(threads);
 for (int t = 0; t &lt; threads; ++t) {
   final String title = String.format("Book #%d", t);
   futures.add(
@@ -206,7 +208,8 @@ To solve that we need to use
 <pre>CountDownLatch latch = new CountDownLatch(1);
 AtomicBoolean running = new AtomicBoolean();
 AtomicInteger overlaps = new AtomicInteger();
-Collection&lt;Future&lt;Integer&gt;&gt; futures = new LinkedList&lt;&gt;();
+Collection&lt;Future&lt;Integer&gt;&gt; futures =
+  new ArrayList&lt;&gt;(threads);
 for (int t = 0; t &lt; threads; ++t) {
   final String title = String.format("Book #%d", t);
   futures.add(
@@ -264,7 +267,8 @@ but under the hood:</p>
 
 
 
-<p>The first argument of <code>assertThat()</code> is an instance of <code>Func</code>
+<p>The first argument of <code>assertThat()</code> is an instance of
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html"><code>Func</code></a>
 (a functional interface), accepting an
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html"><code>AtomicInteger</code></a>
 (the first argument of <code>RunsInThreads</code>) and returning <code>Boolean</code>. This function will
