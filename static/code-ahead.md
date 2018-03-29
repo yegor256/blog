@@ -24,6 +24,13 @@ be published in <del>November 2017</del> February 2018.
 
 <!--more-->
 
+Mar 29, 2018:
+After a few rather critical reviews I re-wrote and re-structured the book
+a lot. It lost one section and became more focused. It's less of a fiction
+now and more technical. The text is fully ready. Now I will send it for
+a proof-reading and then will publish. Before the end of April it will
+be available on Amazon.
+
 Jan 1, 2018:
 The book is almost finished,
 here is the [contents](/images/books/code-ahead/contents.pdf) of the book.
