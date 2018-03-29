@@ -3,7 +3,6 @@
 [![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/blog)](http://www.rultor.com/p/yegor256/blog)
 
 [![Availability at SixNines](http://www.sixnines.io/b/3ba1652f)](http://www.sixnines.io/h/3ba1652f)
-[![Dependency Status](https://gemnasium.com/yegor256/blog.svg)](https://gemnasium.com/yegor256/blog)
 
 This is my blog: [www.yegor256.com](http://www.yegor256.com)
 
