@@ -26,19 +26,19 @@ direct cash payments from your users, usually. There are [ways](https://hackerno
 to collect money, which include an obvious "tip jar" button on your GitHub project page.
 The chances anyone will pay
 [are low](https://news.ycombinator.com/item?id=14446516) though. In my opinion,
-mostly because nobody trusts you enough&mdash;they are not sure you will
-use the money to make the product better. Most likely you will just spend them
-and nothing will change. But they need the product, not to make you happier.
+this is mostly because nobody trusts you enough&mdash;they are not sure you will
+use the money to make the product better. Most likely you will just spend it
+and nothing will change. But they want the product, not to make you happier.
 At least that's what I feel when I see a [Patreon](https://patreon.com/) button.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-[Zerocracy](http://www.zerocracy.com) is a platform, that manages programmers remotely.
+[Zerocracy](http://www.zerocracy.com) is a platform that manages programmers remotely.
 Moreover, it's absolutely [free](http://www.zerocracy.com/policy.html#23) for open source projects. Take a
 look at [Cactoos](http://www.cactoos.org) or [Takes](http://www.takes.org)&mdash;they
-both are managed by
+are both managed by
 [Zerocrat]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}). These projects
 are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
 [pays]({% pst 2018/jan/2018-01-09-micro-budgeting %})
@@ -47,14 +47,14 @@ programmers when they close their [microtasks]({% pst 2017/nov/2017-11-28-microt
 A few days ago someone approached me by email and literally said: "There
 is a bug in your project, I'm happy to pay you for your time if you can come
 up with a solution." He was ready to donate and wanted me (or us) to solve
-the specific issue. I could just take his money over PayPal and fix the issue,
-but I'm not really an active maintainer of the project he was interested in
+his specific issue. I could just take his money over PayPal and fix the issue,
+but I'm not really an active maintainer of the project he was interested in,
 and I'm busy at the moment.
 
 I realized that the best way would be to take the money,
 break down the problem into pieces, and delegate them to a few programmers,
 just like it usually works in Zerocracy. In other words, I decided to suggest
-him to fund the project and then let us use the funds for
+he fund the project and then let us use the funds for
 [microtasking]({% pst 2017/nov/2017-11-28-microtasking %}),
 keeping the focus on the issue he was interested in.
 
@@ -74,10 +74,10 @@ Cactoos.org:<br/>
 Takes.org:<br/>
 [![Donate via Zerocracy](https://www.0crat.com/contrib-badge/C3FFK3YAY.svg)](https://www.0crat.com/contrib/C3FFK3YAY)
 
-The advantage of this approach, comparing to, for example,
+The advantage of this approach, compared to, for example,
 [BountySource](https://www.bountysource.com/), is that the money will
 be distributed in micro-payments and will be fully traceable. I believe
 that this makes a difference for donators&mdash;they are interested to see
-how their money are being used.
+how their money is being used.
 
 
