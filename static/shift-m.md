@@ -52,6 +52,10 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 Recent episodes:
 
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Guest photo"/><br/>
+&#35;24: [Mandatory skills of a software architect](/shift-m/2018/24.html)<br/>
+2 April 2018; 51 min.
+
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Guest photo"/><br/>
 &#35;23: [No estimates](/shift-m/2018/23.html)<br/>
 18 March 2018; 50 min.
 
