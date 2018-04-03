@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fully Transparent Donations via Zerocracy"
-date: 2018-03-28
+date: 2018-04-03
 place: Moscow, Russia
 tags: zerocracy
 description: |
@@ -14,9 +14,9 @@ keywords:
   - give money to open source
   - risk management in software
   - software risk management
-image: /images/2017/12/
+image: /images/2018/04/last-tango-in-paris.jpg
 jb_picture:
-  caption:
+  caption: Last Tango in Paris (1972) by Bernardo Bertolucci
 ---
 
 Open source is free, as in beer: you write code, nobody pays you. Of course,
@@ -43,6 +43,8 @@ are both managed by
 are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
 [pays]({% pst 2018/jan/2018-01-09-micro-budgeting %})
 programmers when they close their [microtasks]({% pst 2017/nov/2017-11-28-microtasking %}) in GitHub.
+
+{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
 
 A few days ago someone approached me by email and literally said: "There
 is a bug in your project, I'm happy to pay you for your time if you can come
