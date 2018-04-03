@@ -322,6 +322,7 @@ appreciate
 appreciated
 appreciation
 approach
+approached
 approaches
 appropriate
 approve
@@ -722,6 +723,7 @@ bottom
 bought
 bouncing
 boundaries
+bountysource
 bout
 bowling
 box
@@ -1409,7 +1411,9 @@ contradiction
 contradictory
 contradicts
 contrary
+contrib
 contribute
+contributed
 contributes
 contributing
 contribution
@@ -1522,6 +1526,7 @@ crap
 crash
 crashed
 crashes
+crat
 crazy
 crazyontap
 cream
@@ -2023,6 +2028,8 @@ domination
 don
 don't
 donald
+donate
+donators
 done
 doodling
 doomed
@@ -2558,6 +2565,7 @@ few
 few-hour
 few-minutes-granularity
 fewer
+FFK
 fhe
 fiasco
 fibonacci
@@ -4233,6 +4241,7 @@ micro-management
 micro-manager
 micro-managers
 micro-manages
+micro-payments
 micro-step
 micro-tasking
 micro-tasks
@@ -4249,6 +4258,7 @@ microservices
 microsoft
 microsystems
 microtasking
+microtasks
 microvesting
 middle
 middleman
@@ -4344,6 +4354,7 @@ momentary
 momentum
 monday
 monetary
+monetize
 money
 money-driven
 money-making
@@ -4906,6 +4917,7 @@ patents
 path
 patience
 patient
+patreon
 patriot
 patronize
 patronized
@@ -7658,6 +7670,7 @@ XSL's
 XSLT
 yahoo
 YAML
+YAY
 YC
 yeah
 year

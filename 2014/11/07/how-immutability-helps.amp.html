@@ -98,7 +98,7 @@ we get from a "pure" object-oriented and immutable approach, without getters.</p
 email.setHostName("smtp.googlemail.com");
 email.setSmtpPort(465);
 email.setAuthenticator(new DefaultAuthenticator("user", "pwd"));
-email.setFrom("yegor@teamed.io", "Yegor Bugayenko");
+email.setFrom("yegor256@gmail.com", "Yegor Bugayenko");
 email.addTo("dude@jcabi.com");
 email.setSubject("how are you?");
 email.setMsg("Dude, how are you?");
@@ -111,7 +111,7 @@ email.send();</pre>
 );
 Envelope envelope = new Envelope.MIME(
   new Array&lt;Stamp&gt;(
-    new StSender("Yegor Bugayenko &lt;yegor@teamed.io&gt;"),
+    new StSender("Yegor Bugayenko &lt;yegor256@gmail.com&gt;"),
     new StRecipient("dude@jcabi.com"),
     new StSubject("how are you?")
   ),

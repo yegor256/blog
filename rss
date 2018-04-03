@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-02T07:16:05+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How I Test My Java Classes for Thread-Safety</title><link href="http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html" rel="alternate" type="text/html" title="How I Test My Java Classes for Thread-Safety" /><published>2018-03-27T00:00:00+00:00</published><updated>2018-03-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/03/27/how-to-test-thread-safety</id><content type="html" xml:base="http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html">&lt;p&gt;I touched on this problem in &lt;a href=&quot;https://www.youtube.com/watch?v=rC17YwowURQ&quot;&gt;one of my recent webinars&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-03T20:34:18+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fully Transparent Donations via Zerocracy</title><link href="http://www.yegor256.com/2018/04/03/donations-via-zerocracy.html" rel="alternate" type="text/html" title="Fully Transparent Donations via Zerocracy" /><published>2018-04-03T00:00:00+00:00</published><updated>2018-04-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/03/donations-via-zerocracy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/03/donations-via-zerocracy.html">&lt;p&gt;Open source is free, as in beer: you write code, nobody pays you. Of course,
+there are &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;many ways&lt;/a&gt;
+to monetize your efforts, but there will be no
+direct cash payments from your users, usually. There are &lt;a href=&quot;https://hackernoon.com/why-funding-open-source-is-hard-652b7055569d&quot;&gt;ways&lt;/a&gt;
+to collect money, which include an obvious &amp;quot;tip jar&amp;quot; button on your GitHub project page.
+The chances anyone will pay
+&lt;a href=&quot;https://news.ycombinator.com/item?id=14446516&quot;&gt;are low&lt;/a&gt; though. In my opinion,
+this is mostly because nobody trusts you enough&amp;mdash;they are not sure you will
+use the money to make the product better. Most likely you will just spend it
+and nothing will change. But they want the product, not to make you happier.
+At least that&amp;#39;s what I feel when I see a &lt;a href=&quot;https://patreon.com/&quot;&gt;Patreon&lt;/a&gt; button.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Last Tango in Paris (1972) by Bernardo Bertolucci&#39; src=&#39;/images/2018/04/last-tango-in-paris.jpg&#39; longdesc=&#39;#1ea97881&#39;/&gt;&lt;figcaption id=&#39;1ea97881&#39;&gt;Last Tango in Paris (1972) by Bernardo Bertolucci&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; is a platform that manages programmers remotely.
+Moreover, it&amp;#39;s absolutely &lt;a href=&quot;http://www.zerocracy.com/policy.html#23&quot;&gt;free&lt;/a&gt; for open source projects. Take a
+look at &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; or &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt;&amp;mdash;they
+are both managed by
+&lt;a href=&quot;/2018/03/21/zerocracy-announcement.html&quot;&gt;Zerocrat&lt;/a&gt;. These projects
+are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
+&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;pays&lt;/a&gt;
+programmers when they close their &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;microtasks&lt;/a&gt; in GitHub.&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.zerocracy.com&#39;&gt;&lt;img src=&#39;http://www.0crat.com/svg/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;A few days ago someone approached me by email and literally said: &amp;quot;There
+is a bug in your project, I&amp;#39;m happy to pay you for your time if you can come
+up with a solution.&amp;quot; He was ready to donate and wanted me (or us) to solve
+his specific issue. I could just take his money over PayPal and fix the issue,
+but I&amp;#39;m not really an active maintainer of the project he was interested in,
+and I&amp;#39;m busy at the moment.&lt;/p&gt;
+
+&lt;p&gt;I realized that the best way would be to take the money,
+break down the problem into pieces, and delegate them to a few programmers,
+just like it usually works in Zerocracy. In other words, I decided to suggest
+he fund the project and then let us use the funds for
+&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;microtasking&lt;/a&gt;,
+keeping the focus on the issue he was interested in.&lt;/p&gt;
+
+&lt;p&gt;He gladly accepted the offer.
+We &lt;a href=&quot;https://github.com/zerocracy/farm/issues/866&quot;&gt;implemented&lt;/a&gt; the functionality in
+&lt;a href=&quot;https://www.0crat.com&quot;&gt;Zerocrat&lt;/a&gt; and he contributed $128 via Stripe.&lt;/p&gt;
+
+&lt;p&gt;Now &lt;a href=&quot;http://www.zerocracy.com/policy.html#50&quot;&gt;anyone&lt;/a&gt;
+can give a few dollars to a project, if it&amp;#39;s
+managed by Zerocracy. The contributor will see how those funds are being spent, down to each and every dollar!
+Try, for example, one of these buttons and you will see detailed
+financial reports of each project and will be able to add your funds:&lt;/p&gt;
+
+&lt;p&gt;Cactoos.org:&lt;br/&gt;
+&lt;a href=&quot;https://www.0crat.com/contrib/C63314D6Z&quot;&gt;&lt;img src=&quot;https://www.0crat.com/contrib-badge/C63314D6Z.svg&quot; alt=&quot;Donate via Zerocracy&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Takes.org:&lt;br/&gt;
+&lt;a href=&quot;https://www.0crat.com/contrib/C3FFK3YAY&quot;&gt;&lt;img src=&quot;https://www.0crat.com/contrib-badge/C3FFK3YAY.svg&quot; alt=&quot;Donate via Zerocracy&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The advantage of this approach, compared to, for example,
+&lt;a href=&quot;https://www.bountysource.com/&quot;&gt;BountySource&lt;/a&gt;, is that the money will
+be distributed in micro-payments and will be fully traceable. I believe
+that this makes a difference for donators&amp;mdash;they are interested to see
+how their money is being used.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><summary type="html">Open source is free, as in beer: you write code, nobody pays you. Of course,
+there are many ways
+to monetize your efforts, but there will be no
+direct cash payments from your users, usually. There are ways
+to collect money, which include an obvious &amp;quot;tip jar&amp;quot; button on your GitHub project page.
+The chances anyone will pay
+are low though. In my opinion,
+this is mostly because nobody trusts you enough&amp;mdash;they are not sure you will
+use the money to make the product better. Most likely you will just spend it
+and nothing will change. But they want the product, not to make you happier.
+At least that&amp;#39;s what I feel when I see a Patreon button.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/04/last-tango-in-paris.jpg" /></entry><entry><title type="html">How I Test My Java Classes for Thread-Safety</title><link href="http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html" rel="alternate" type="text/html" title="How I Test My Java Classes for Thread-Safety" /><published>2018-03-27T00:00:00+00:00</published><updated>2018-03-27T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/03/27/how-to-test-thread-safety</id><content type="html" xml:base="http://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html">&lt;p&gt;I touched on this problem in &lt;a href=&quot;https://www.youtube.com/watch?v=rC17YwowURQ&quot;&gt;one of my recent webinars&lt;/a&gt;,
 now it&amp;#39;s time to explain it in writing. Thread-safety is an important
 quality of classes in languages/platforms like Java, where we frequently share
 objects between threads. The issues caused by lack of thread-safety
@@ -1079,114 +1150,4 @@ have auto-formatting instruments to make Java code look exactly
 the way Qulice
 expects. (Qulice is the static analyzer we use.) I always reply that having
 such an automated code polisher would only be harmful and wouldn&amp;#39;t help
-the project and its members improve and grow. Here is why I think so.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/01/blind-fury.jpg" /></entry><entry><title type="html">Five Stages of Microbudgeting</title><link href="http://www.yegor256.com/2018/01/09/micro-budgeting.html" rel="alternate" type="text/html" title="Five Stages of Microbudgeting" /><published>2018-01-09T00:00:00+00:00</published><updated>2018-01-09T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/01/09/micro-budgeting</id><content type="html" xml:base="http://www.yegor256.com/2018/01/09/micro-budgeting.html">&lt;p&gt;Microtasking, which &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;I explained&lt;/a&gt;
-in an earlier post, works only when each task has a very specific reward
-for success and a punishment for failure.
-I &lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;believe&lt;/a&gt;
-that the best reward and punishment instrument is money. The budget
-is fixed, the programmer gets it only when the task is completed (reward), no matter
-how much time it cost; if it is not completed, there is no money at all
-(punishment). Pure and simple. However, a logical question arises: how can we
-know upfront what is the right budget? Who sets it?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Taxi Driver (1976) by Martin Scorsese&#39; src=&#39;/images/2018/01/taxi-driver.jpg&#39; longdesc=&#39;#1d81308e&#39;/&gt;&lt;figcaption id=&#39;1d81308e&#39;&gt;Taxi Driver (1976) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;When we started to play with microtasking in our projects, in 2009, we were
-asking programmers to estimate each task. It did work, but only with very
-simple and obvious tasks. More complex ones almost always suffered
-from either under-estimating or padding&amp;mdash;numbers were either very small
-and task performers were complaining in the end, or they were too big and
-customers were asking for refunds. It was not a manageable situation.&lt;/p&gt;
-
-&lt;p&gt;Then, we realized that it would be better if all tasks were rather
-small, with exactly the same budget. We tried to use two hours as a universal
-and fixed estimate. Everything else that didn&amp;#39;t fit&amp;mdash;programmers were allowed
-to reject. This model didn&amp;#39;t really work either, because our managers had
-to deal with a very large amount of rejected tasks and didn&amp;#39;t know how to make
-them smaller, since they were not programmers.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;The beauty of this approach is that the task of scope decomposition is moved to the shoulders of programmers.&lt;/aside&gt;
-
-&lt;p&gt;Finally, in March 2010 we found a solution, which was labeled
-&lt;a href=&quot;/2010/03/04/pdd.html&quot;&gt;Puzzle Driven Development&lt;/a&gt; (PDD). According to
-this concept: 1) Any task has a very small fixed budget (we use 30 minutes);
-2) The task performer is allowed to complete only part of the task;
-3) The code that is being returned to &lt;code&gt;master&lt;/code&gt; must include &lt;code&gt;@todo&lt;/code&gt; markers, called &amp;quot;puzzles&amp;quot;;
-4) Puzzles are automatically converted to new tasks.&lt;/p&gt;
-
-&lt;p&gt;The beauty of this approach is that the most complicated part of the software
-project management&amp;mdash;scope decomposition&amp;mdash;is moved to the shoulders
-of those who are the best at it: programmers.&lt;/p&gt;
-
-&lt;p&gt;We are using PDD in all our projects now and have even created a public instrument
-for GitHub repositories, which allows anyone to play with PDD at no cost:
-&lt;a href=&quot;/2017/04/05/pdd-in-action.html&quot;&gt;0pdd.com&lt;/a&gt;. This is exactly
-the same tool we are using in our commercial projects.&lt;/p&gt;
-
-&lt;p&gt;However, if and when you decide to apply microbudgeting to your project,
-together with PDD, there will be problems. Psychological ones mostly. In my
-experience, people go through five stages when they face microbudgeting
-for the first time:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Denial&lt;/strong&gt;.
-They ask &amp;quot;How is it possible?&amp;quot; and then refuse to hear any explanations.
-There are many reasons why microbudgeting and microtasking may not
-work&amp;mdash;you will hear them all. Very often they demand a traditional
-model of payment, especially if they were invited. They just say that
-our model is insane, and if we want to see them work on our projects we have to
-pay for as much time as they spend. Most of them quit.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Anger&lt;/strong&gt;.
-Some of them decide to try. Thanks to their previous multi-year experience,
-they expect to be
-paid by the end of the day/week/month, no matter what they were doing. Very soon they
-realize that the total income for the first day of work was $0.00, even though
-they were doing something. They get very angry. They call us crooks, fraudsters,
-and many other names. Asking them to read the &lt;a href=&quot;http://datum.zerocracy.com/pages/policy.html&quot;&gt;policy&lt;/a&gt;
-again doesn&amp;#39;t help. They simply can&amp;#39;t believe that we are
-not going to pay them anything, even
-though they were doing something. Most of them quit.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bargaining&lt;/strong&gt;.
-Almost everybody at this stage recommends we change the model. They
-explain why it&amp;#39;s not really effective and how great it would be if we
-would pay them the traditional way. They give us examples of their previous
-projects, send references from previous employees, and criticize
-my blog posts. With some of them I try to argue, when their criticism
-is constructive. Most of them quit.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Depression&lt;/strong&gt;.
-Most programmers are used to doing work because they feel guilty
-if the task is not done or the bug is not fixed. Microbudgeting requires
-a completely opposite attitude: we all are supposed to work because
-we are greedy. Money has to motivate us, not guilt. If there is no money,
-we don&amp;#39;t work. Most people, when they see this new motivational paradigm
-and don&amp;#39;t see the usual guilt, lose coordination and don&amp;#39;t know what to do.
-They can&amp;#39;t really achieve anything, because there is no traditional manager
-standing behind them and pushing them forward. They are supposed to go for
-the money. They don&amp;#39;t, and so they don&amp;#39;t make any money. Most of them quit.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Acceptance&lt;/strong&gt;.
-Finally, the best of them realize that the model can work if they
-follow the rules, which are very simple: be greedy, selfish, egoistic,
-money-driven, result-oriented, lazy, misanthropic, heartless, and arrogant.
-They accept the fact that they lose, compete, work, and make money only
-when they produce results. They start enjoying meritocracy at its best.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You understand already that the vast majority of those who try to work with us
-can&amp;#39;t really get to the final point&amp;mdash;they quit somewhere in the middle.
-Most probably something very similar will happen on your projects too.&lt;/p&gt;
-
-&lt;p&gt;What is the solution? I don&amp;#39;t really know.&lt;/p&gt;
-
-&lt;p&gt;Statistically speaking, three to five people out of a hundred manage to survive and
-become effective and productive. Thus, to build a team of twenty people
-you will have to screen and try at least 400.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="xdsd" /><category term="zerocracy" /><summary type="html">Microtasking, which I explained
-in an earlier post, works only when each task has a very specific reward
-for success and a punishment for failure.
-I believe
-that the best reward and punishment instrument is money. The budget
-is fixed, the programmer gets it only when the task is completed (reward), no matter
-how much time it cost; if it is not completed, there is no money at all
-(punishment). Pure and simple. However, a logical question arises: how can we
-know upfront what is the right budget? Who sets it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/01/taxi-driver.jpg" /></entry></feed>
+the project and its members improve and grow. Here is why I think so.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/01/blind-fury.jpg" /></entry></feed>
