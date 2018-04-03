@@ -42,10 +42,10 @@ http://www.0pdd.com/hook/github
 From now on a new URL has to be used:
 
 {% highlight text %}
-http://p.rehttp.net/http://www.0pdd.com/hook/github
+https://www.rehttp.net/p/http://www.0pdd.com/hook/github
 {% endhighlight %}
 
-It looks very similar, but starts with `http://p.rehttp.net`. GitHub sends
+It looks very similar, but starts with `https://www.rehttp.net/p/`. GitHub sends
 all webhook PUT/POST requests to the ReHTTP server, which stores
 them in a temporary database (I'm using AWS DynamoDB).
 
@@ -55,16 +55,16 @@ in about an hour. Then it retries every hour for about a day. If all
 attempts fail, it abandons the request and that's it.
 
 What is interesting is that now I can see a summary of my API
-[here](http://www.rehttp.net/i?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub).
+[here](https://www.rehttp.net/i?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub).
 I see how many requests were processed successfully over the last 24 hours
 and how many of them failed. Also, I have this cute button:
 
-<img src="http://www.rehttp.net/b?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub" alt='badge'/>
+<img src="https://www.rehttp.net/b?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub" alt='badge'/>
 
 And I have a URL for checking the status of the entire API:
 
 {% highlight text %}
-http://www.rehttp.net/s?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub
+https://www.rehttp.net/s?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub
 {% endhighlight %}
 
 I gave this URL to [StatusCake](https://www.statuscake.com/) to
