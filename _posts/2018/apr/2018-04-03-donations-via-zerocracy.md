@@ -62,7 +62,7 @@ keeping the focus on the issue he was interested in.
 
 He gladly accepted the offer.
 We [implemented](https://github.com/zerocracy/farm/issues/866) the functionality in
-[0crat.com](https://www.0crat.com) and he contributed $128 via Stripe.
+[Zerocrat](https://www.0crat.com) and he contributed $128 via Stripe.
 
 Now [anyone](http://www.zerocracy.com/policy.html#50)
 can give a few dollars to a project, if it's
