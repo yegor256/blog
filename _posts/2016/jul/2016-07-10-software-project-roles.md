@@ -67,7 +67,7 @@ There are just a few roles:
   * **Quality Assurance** (`QA`)
     oversees the correctness of our process.
     The QA approves each closed task before it's officially closed by the PM.
-    The QA ensures that our process complies to [our policy](http://at.teamed.io/policy.html).
+    The QA ensures that our process complies to [our policy](http://www.zerocracy.com/policy.html).
     The QA reports to the PM.
 
   * **Tester** (`TST`)

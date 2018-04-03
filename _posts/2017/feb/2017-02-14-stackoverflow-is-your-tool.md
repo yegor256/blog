@@ -21,7 +21,7 @@ jb_picture:
 
 I've [said before]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
 that your StackOverflow reputation is very important
-to [us](http://www.teamed.io) when we make a decision on
+to [us](http://www.zerocracy.com) when we make a decision on
 how much we should pay
 a software developer. However, there were many complaints about this metric.
 Take, for example, the ones [here](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1704113248)

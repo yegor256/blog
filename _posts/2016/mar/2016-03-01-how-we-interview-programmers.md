@@ -129,4 +129,4 @@ past.
 
 <hr/>
 
-Try to apply; the form is [here](http://at.teamed.io/join.html).
+Try to apply; the form is [here](https://www.0crat.com/join).

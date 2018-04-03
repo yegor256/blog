@@ -45,7 +45,7 @@ Email email = new SimpleEmail();
 email.setHostName("smtp.googlemail.com");
 email.setSmtpPort(465);
 email.setAuthenticator(new DefaultAuthenticator("user", "pwd"));
-email.setFrom("yegor@teamed.io", "Yegor Bugayenko");
+email.setFrom("yegor256@gmail.com", "Yegor Bugayenko");
 email.addTo("dude@jcabi.com");
 email.setSubject("how are you?");
 email.setMsg("Dude, how are you?");
@@ -60,7 +60,7 @@ Postman postman = new Postman.Default(
 );
 Envelope envelope = new Envelope.MIME(
   new Array<Stamp>(
-    new StSender("Yegor Bugayenko <yegor@teamed.io>"),
+    new StSender("Yegor Bugayenko <yegor256@gmail.com>"),
     new StRecipient("dude@jcabi.com"),
     new StSubject("how are you?")
   ),

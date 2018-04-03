@@ -17,7 +17,7 @@ keywords:
 
 {% badge http://www.wring.io/images/logo.svg 92 http://www.wring.io %}
 
-I'm taking participation in over 50 repositories in GitHub. [We](http://www.teamed.io)
+I'm taking participation in over 50 repositories in GitHub. [We](http://www.zerocracy.com)
 manage all of our projects there. GitHub is sending me hundreds of emails
 every day. I'm serious. Hundreds! I tried to filter them somehow in Gmail,
 but it's not really possible. Gmail filters are not powerful enough to

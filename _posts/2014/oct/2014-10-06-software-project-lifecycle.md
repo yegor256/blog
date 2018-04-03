@@ -25,7 +25,7 @@ we work with.
 
 I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
-the end of the project, when you choose to [work with us](mailto:hire@teamed.io).
+the end of the project, when you choose to [work with us](https://www.0crat.com/join).
 
 You will see below that our methods of
 software development [seriously differ]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})

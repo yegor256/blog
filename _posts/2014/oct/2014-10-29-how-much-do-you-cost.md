@@ -22,7 +22,7 @@ related:
 image: /images/2014/11/rate-open-source-contribution.png
 ---
 
-{% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
+{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
 
 I'm getting a few emails every day from programmers
 interested in working with [Zerocracy](http://www.zerocracy.com) remotely.

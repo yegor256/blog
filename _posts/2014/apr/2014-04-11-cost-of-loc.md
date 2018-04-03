@@ -124,7 +124,7 @@ $350k vs $7k, $3.98 vs &cent;13? What do you think?
 
 ## How to Validate the Numbers?
 
-If you're curious, I'm using [hoc](https://github.com/teamed/hoc)
+If you're curious, I'm using [hoc](https://github.com/yegor256/hoc)
 to get the numbers from Git (it is explained in
 [Hits-of-Code Instead of SLoC]({% pst 2014/nov/2014-11-14-hits-of-code %})).
 You can validate the numbers for the second project here on GitHub:
