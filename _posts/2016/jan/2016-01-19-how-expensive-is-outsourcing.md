@@ -32,7 +32,7 @@ or in-house teams.
 {% jb_picture_body %}
 
 I actually decided to write this after a short sales meeting recently
-with a prospect from Illinois. He wanted to hire [Teamed.io](http://www.teamed.io) for his
+with a prospect from Illinois. He wanted to hire [Zerocracy](http://www.zerocracy.com) for his
 Java project and seemed to like our approach. I explained how we work,
 how we control [quality]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}),
 and why and how we're [different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
@@ -105,7 +105,7 @@ In that [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04-11-cost-
 post, I actually did a comparison of a co-located project, where I was an architect,
 with a distributed one, where I also was an architect. My numbers tell
 me that a traditionally managed team is at least 10 times less
-productive than a team managed by [Teamed.io](http://www.teamed.io) under
+productive than a team managed by [Zerocracy](http://www.zerocracy.com) under
 [XDSD](http://www.xdsd.org) principles.
 
 My point is that asking "What is your hourly rate?" is just as wrong as

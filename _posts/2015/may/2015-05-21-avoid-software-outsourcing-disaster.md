@@ -188,7 +188,7 @@ but when the future comes, it's **too late**.
 Again, keeping the age-old principle in mind, I would recommend that from the first
 day of the project, you establish a routine procedure of checking their
 results and expressing your concerns. In our projects at
-[Teamed.io](http://www.teamed.io), we ask our customers to be present
+[Zerocracy](http://www.zerocracy.com), we ask our customers to be present
 in GitHub, review our releases frequently, and report any inconsistencies
 found as GitHub issues. We encourage project sponsors to be as **pessimistic**
 and **negative** about our quality from the beginning of the project. We realize

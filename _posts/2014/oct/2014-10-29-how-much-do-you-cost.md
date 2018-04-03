@@ -25,7 +25,7 @@ image: /images/2014/11/rate-open-source-contribution.png
 {% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
 
 I'm getting a few emails every day from programmers
-interested in working with [Teamed.io](http://www.teamed.io) remotely.
+interested in working with [Zerocracy](http://www.zerocracy.com) remotely.
 The first question I usually ask is "what is your rate?"
 (we pay [by the hour]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}))
 What surprises me is how

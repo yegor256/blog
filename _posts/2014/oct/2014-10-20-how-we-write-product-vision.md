@@ -219,7 +219,7 @@ Quality Requirements
 ## Diplomacy
 
 We follow all these recommendations in our projects,
-in [Teamed.io](http://www.teamed.io). You can use
+in [Zerocracy](http://www.zerocracy.com). You can use
 them in your projects as well, but keep in mind that the process
 of defining a Product Vision could be very painful. You may sometimes
 [offend]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})

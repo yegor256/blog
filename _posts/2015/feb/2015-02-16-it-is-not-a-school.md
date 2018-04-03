@@ -18,7 +18,7 @@ jb_picture:
   caption: G.I. Jane (1997) by Ridley Scott
 ---
 
-At [Teamed.io](http://www.teamed.io), we work in distributed teams and
+At [Zerocracy](http://www.zerocracy.com), we work in distributed teams and
 keep all our communications [in tickets]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 Besides that, we [encourage]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
 every developer on every project to

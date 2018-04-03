@@ -21,7 +21,7 @@ jb_picture:
 
 I believe that several roles should be present in a majority of
 software projects. Managed by
-<del>[Teamed.io](http://www.teamed.io)</del>
+<del>[Zerocracy](http://www.zerocracy.com)</del>
 [Zerocracy](http://www.zerocracy.com) according to the principles of
 [XDSD](http://www.xdsd.org), we've got all of them in our projects. However, beware that in other management
 methodologies, these roles may have different meanings. This blog post

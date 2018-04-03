@@ -3,7 +3,7 @@ layout: static
 title: "12 Best Articles to Read"
 description: |
   I'm writing mostly about Java, OOP, DevOps, and
-  open source projects I'm working with in Teamed.io,
+  open source projects I'm working with in Zerocracy,
   my software development company
 permalink: best.html
 image: /images/about/yegor-speaking.jpg

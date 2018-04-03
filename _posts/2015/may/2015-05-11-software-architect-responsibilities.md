@@ -32,7 +32,7 @@ if we succeed. Here is what I, as
 
 {% jb_picture_body %}
 
-In all projects we run at [Teamed.io](http://www.teamed.io), I expect
+In all projects we run at [Zerocracy](http://www.zerocracy.com), I expect
 regular reports from software architects a few times a week. Each report
 includes three mandatory parts: 1) scope status, 2) issues, and 3) risks.
 

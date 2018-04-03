@@ -287,6 +287,6 @@ $ curl -w "@f.txt" -o /dev/null -s \
 Most of the work is done by AWS CloudFront, while jare.io is just a
 relay that makes its configuration more convenient. Besides, it makes
 it free, because jare.io is sponsored by
-[Teamed.io](http://www.teamed.io). In other words, my company will
+[Zerocracy](http://www.zerocracy.com). In other words, my company will
 pay for your usage of CloudFront. I would appreciate if you kept that in
 mind and didn't use jare.io for traffic-intensive resources.

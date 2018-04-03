@@ -63,9 +63,9 @@ where he would change it, and what he would do instead. Then, you pay him
 and he leaves. You may never see him again, but his conclusions and suggestions
 help you _check the reality_ of your code and evaluate how your team is really doing.
 
-{% badge http://img.teamed.io/logo.svg 120 http://www.teamed.io %}
+{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
 
-We, at [Teamed.io](http://www.teamed.io), do independent reviews
+We, at [Zerocracy](http://www.zerocracy.com), do independent reviews
 with every project of ours, and this is a list of principles we use:
 
 **Make Independent Reviews Systematic**.

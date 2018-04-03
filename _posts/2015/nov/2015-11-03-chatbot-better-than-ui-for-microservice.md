@@ -277,7 +277,7 @@ primitive web system with isolated discussions. Simply put, anyone
 can create a new discussion, invite a few friends, and post messages there.
 Both users and chatbots can do that.
 
-So, when a new candidate wants to join [Teamed.io](http://www.teamed.io),
+So, when a new candidate wants to join [Zerocracy](http://www.zerocracy.com),
 we ask that person to fill out an [online form](http://at.teamed.io/join.html). When
 the candidate clicks the "Submit" button, a new discussion starts, and the first
 chatbot decides who should [interview]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})

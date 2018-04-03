@@ -79,7 +79,7 @@ won't understand each other." Is that why we have
 [cost overruns](https://en.wikipedia.org/wiki/Cost_overrun),
 [schedule slippage](https://en.wikipedia.org/wiki/Project_slippage),
 and low quality of code? I don't think so. Moreover, my experience
-tells me the opposite. Our programmers at [Teamed.io](http://www.teamed.io)
+tells me the opposite. Our programmers at [Zerocracy](http://www.zerocracy.com)
 are from more than 15 countries, and we've never had cultural issues get
 tangled up in any
 [work conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %}), which we have a lot of.
