@@ -60,6 +60,10 @@ he fund the project and then let us use the funds for
 [microtasking]({% pst 2017/nov/2017-11-28-microtasking %}),
 keeping the focus on the issue he was interested in.
 
+Moreover, this concept was
+[earlier proposed](https://github.com/zerocracy/datum/issues/212)
+by [@skapral](https://github.com/skapral).
+
 He gladly accepted the offer.
 We [implemented](https://github.com/zerocracy/farm/issues/866) the functionality in
 [Zerocrat](https://www.0crat.com) and he contributed $128 via Stripe.
