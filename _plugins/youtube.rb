@@ -30,11 +30,13 @@ module Yegor
     def render(context)
       path = File.expand_path('~/secrets.yml')
       return unless File.exist?(path)
-      key = YAML.safe_load(path)['youtube_api_key']
+      key = YAML::safe_load(File.open(path))['youtube_api_key']
       uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet,statistics&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
+      raise json['error']['message'] if json['error']
       item = json['items'][0]
       snippet = item['snippet']
+      puts "YouTube video #{@id} found: #{snippet['title']}"
       "<aside class='youtube'>
         <a href='https://www.youtube.com/watch?v=#{@id}'><div class='box'>
         <img src='#{snippet['thumbnails']['medium']['url']}'/>
