@@ -18,6 +18,7 @@
 
 require 'net/http'
 require 'uri'
+require 'yaml'
 
 module Yegor
   class YoutubeBlock < Liquid::Tag
@@ -27,8 +28,9 @@ module Yegor
     end
 
     def render(context)
-      key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
-      return if key.nil?
+      path = File.expand_path('~/secrets.yml')
+      return unless File.exist?(path)
+      key = YAML.safe_load(path)['youtube_api_key']
       uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet,statistics&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
       item = json['items'][0]

@@ -1,8 +1,9 @@
 docker:
   image: yegor256/blog
 assets:
-  id_rsa: zerocracy/home#assets/blog/id_rsa
-  id_rsa.pub: zerocracy/home#assets/blog/id_rsa.pub
+  secrets.yml: "zerocracy/home#assets/blog/secrets.yml"
+  id_rsa: "zerocracy/home#assets/blog/id_rsa"
+  id_rsa.pub: "zerocracy/home#assets/blog/id_rsa.pub"
 install: |
   sudo locale-gen en_US en_US.UTF-8
   sudo dpkg-reconfigure locales
@@ -20,4 +21,5 @@ deploy:
     echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
     git config --global user.email "rultor@yegor256.com"
     git config --global user.name "Rultor"
+    mv ../secrets.yml ~
     jgd
