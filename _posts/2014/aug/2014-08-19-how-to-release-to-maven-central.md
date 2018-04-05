@@ -40,6 +40,8 @@ strongly recommend moving there.
 
 ## Prepare Your POM
 
+{% youtube rEK3Rk2lX3M %}
+
 Make sure your `pom.xml` contains all elements required by Sonatype,
 explained in [Central Sync Requirements](http://central.sonatype.org/pages/requirements.html).
 We will deploy to Sonatype, and they will synchronize all JAR (and not only)

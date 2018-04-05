@@ -58,6 +58,8 @@ We expect the `number` integer to be equal to 2 when both threads
 finish up, because each of them will increment it once, right?
 However, most likely this won't happen.
 
+{% youtube rC17YwowURQ %}
+
 Let's see what will happen. In both threads, `before`
 will equal `0` when they start. Then `after` will be set to `1`. Then, both threads
 will do `this.number = 1` and we will end up with `1` in `number` instead

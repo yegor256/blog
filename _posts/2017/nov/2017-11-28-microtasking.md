@@ -75,6 +75,8 @@ The more aggressive you are, the higher the chances you win.
 And it's not because you are evil. You're not evil, you're stupid
 (not you personally, my dear and respected reader, but you get the point).
 
+{% youtube uhDmHkMAYnM %}
+
 The problem is that the project is not manageable. That's why you
 have to resort to the last possible measure&mdash;micromanagement. Why is the
 project not manageable? Because its scope is not broken down into

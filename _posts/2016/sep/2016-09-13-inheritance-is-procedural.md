@@ -56,6 +56,8 @@ He was definitely right, but I believe it's not the root cause of the problem.
 is what inheritance inventors in [Simula](https://en.wikipedia.org/wiki/Simula) had in mind, I guess:
 "Derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors."
 
+{% youtube DjrA7_Uymok %}
+
 Deriving a characteristic from another object is a great idea, and it's called
 [subtyping](https://en.wikipedia.org/wiki/Subtyping).
 It perfectly fits into OOP and actually enables

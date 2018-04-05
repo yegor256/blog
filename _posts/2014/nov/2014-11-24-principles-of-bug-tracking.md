@@ -59,6 +59,8 @@ of that kind. My job is to do the best I can in order to *keep the ticket alive*
 Obviously, if the bug is not reproducible, I'll be forced to close
 the ticket. However, until the ticket is closed, I'm its guardian angel. :)
 
+{% youtube 7DYr8GYzJ6Q %}
+
 On the other hand, the responsibility of the ticket solver is to
 **defend the solution**. When a ticket is assigned to me and I have to resolve it,
 my job is to convince the reporter that my solution is good enough. He may

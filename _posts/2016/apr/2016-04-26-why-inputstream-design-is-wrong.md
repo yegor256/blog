@@ -49,6 +49,8 @@ What's wrong? It's very convenient to have the ability to read
 a single byte, an array of bytes or even an array of bytes
 with a direct positioning into a specific place in the buffer!
 
+{% youtube Xk9tIqwca3k %}
+
 However, we are still lacking a few methods: for reading the bytes and
 immediately saving into a file, converting to a text with a selected
 encoding, sending them by email and posting on Twitter. It would be

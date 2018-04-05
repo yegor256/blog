@@ -74,6 +74,8 @@ public class RsWrap implements Response {
 As you see, this "decorator" doesn't do anything except "just decorating."
 It encapsulates another `Response` and passes through all method calls.
 
+{% youtube Wcy53ZSF78o %}
+
 If it's not clear yet, I'll explain the purpose of `RsHtml`. Let's
 say you have text and you want to create a `Response`:
 

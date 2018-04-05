@@ -57,6 +57,8 @@ is very far from being elegant. The biggest problem is that
 they are rather big and it's <del>difficult</del> impossible
 to extend them without making them even bigger.
 
+{% youtube REj8pJesMVI %}
+
 For example, right now [`JdkRequest`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html)
 has the methods
 [`method()`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#method%28java.lang.String%29),

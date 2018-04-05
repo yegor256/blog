@@ -60,6 +60,8 @@ I assume that the above is easy to understand and maintain.
 
 ## Fluent Interface
 
+{% youtube REj8pJesMVI %}
+
 The new client has to be
 [fluent]({% pst 2018/mar/2018-03-13-fluent-interfaces %}),
 which means that the entire server interaction

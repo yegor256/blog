@@ -39,6 +39,8 @@ baseball game. That's a conflict. It starts with a confrontation of _positions_.
 Your position is, "I want this game," while her position is,
 "I want this movie."
 
+{% youtube GWLpAZqvqSc %}
+
 The easiest way is to hold to these positions no matter what, but very soon
 your conflict will turn into a fight and maybe eventually a divorce.
 

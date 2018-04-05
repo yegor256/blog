@@ -103,6 +103,8 @@ utilities to help me create that temporary file and fill it with data.
 That's a lot of work. Well, maybe not "a lot," but way more than a few minutes
 of debugging.
 
+{% youtube Mj1gA5mEk68 %}
+
 Thus, if you perceive debugging to be faster and easier, think about the quality
 of your code. I bet it has a lot of opportunities for refactoring, just like
 the code from the example above. Here is how I would modify it. First of all,

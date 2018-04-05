@@ -41,6 +41,8 @@ means fewer to annoy our users. By discovering bugs we make them visible.
 
 This is the primary job of a software tester&mdash;to make bugs visible.
 
+{% youtube 7DYr8GYzJ6Q %}
+
 Obviously, their visibility affects the [quality of the product]({% pst 2017/dec/2017-12-26-software-quality-formula %})
 in a positive way. This is because we can fix them before our users start complaining.
 
