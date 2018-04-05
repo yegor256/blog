@@ -62,7 +62,7 @@ keeping the focus on the issue he was interested in.
 
 Moreover, this concept was
 [earlier proposed](https://github.com/zerocracy/datum/issues/212)
-by [@skapral](https://github.com/skapral).
+by [`@skapral`](https://github.com/skapral).
 
 He gladly accepted the offer.
 We [implemented](https://github.com/zerocracy/farm/issues/866) the functionality in
