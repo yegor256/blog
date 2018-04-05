@@ -81,6 +81,8 @@ I see this as a lack of passion and self-motivation.
 Will you be an effective developer in our projects? Not at all, because our
 entire management model relies on [self-motivation]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}).
 
+{% youtube 6mfo_FHL3PE %}
+
 The last possible cause is that
 you don't know what to write and where to contribute, which means
 **lack of creativity**. As I mentioned above, almost everything we're using

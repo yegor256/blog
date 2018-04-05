@@ -151,6 +151,8 @@ final Marshaller marshaller = ctx.createMarshaller();
 marshaller.marshal(book, System.out);
 {% endhighlight %}
 
+{% youtube cv23Z6xpwDw %}
+
 Who is creating the XML? Not the `book`. Someone else, outside of the
 class `Book`. This is very wrong. Instead, this is how this should have
 been done. First, the class that has no idea about XML:
