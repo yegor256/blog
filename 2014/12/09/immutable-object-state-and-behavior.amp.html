@@ -135,6 +135,8 @@ states. Obviously, <code>first.equals(second)</code> will return <code>false</co
 the two objects have different identities, even though they encapsulate the
 same state.</p>
 
+
+
 <p>Method <code>toString()</code> exposes the document's behavior—the document can
 convert itself to a string.</p>
 
@@ -218,6 +220,8 @@ a huge obligation. Moreover, if an immutable object encapsulates other immutable
 objects, we have to change the entire hierarchy when modifying even a single
 string in one of them.</p>
 
+
+
 <p>The answer is simple. A document's title should not be part of its <strong>state</strong>.
 Instead, the title should be its <strong>behavior</strong>. For example, consider this:</p>
 
@@ -285,6 +289,8 @@ have no issues in the implementation of title reading or writing, keeping the ob
 We have no issues as long as a real-world document exists and has its
 own identity. Our title reading and writing methods will communicate with that
 real-world document and extract or update its title.</p>
+
+
 
 <p>Problems arise when such an entity doesn't exist in a real world. In that
 case, we need to create a mutable object property called <code>title</code>, read it via
@@ -355,6 +361,8 @@ a memory address in order to find the data and animate it. But an
 object should never think of itself as data.</p>
 
 <h2 id="what-is-the-practical-solution">What Is the Practical Solution?</h2>
+
+
 
 <p>Unfortunately, we don't have such a memory-representing class
 in Java, Ruby, JavaScript, Python, PHP, and many other high-level languages.

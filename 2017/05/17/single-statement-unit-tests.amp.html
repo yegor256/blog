@@ -104,6 +104,8 @@ public void testIntStream() {
 algorithm prepares two arrays of integers and the assertion compares them
 and throws <code>AssertionError</code> if they are not equal.</p>
 
+
+
 <p>I'm saying that the first part, the algorithm, is the one we should try
 to avoid. The only thing we must have is the assertion. Here is
 how I would re-design this test method:</p>
@@ -153,6 +155,8 @@ and its
 <a href="http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/allclasses-frame.html">collection</a>
 of basic matchers is a perfect instrument to make our
 single-statement test methods even more cohesive and readable.</p>
+
+
 
 <p>There are a number of practical benefits of this principle, if we
 agree to follow it:</p>

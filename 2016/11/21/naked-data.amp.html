@@ -102,6 +102,8 @@ At the moment of writing, this may be true, but this assumption couples the
 code with the data. If tomorrow we change <code>t</code> to Celsius, the code won't know
 about this change. That's why I call this coupling <em>hidden</em>.</p>
 
+
+
 <p>If we change the type of <code>t</code> from <code>int</code> to, say, <code>double</code>, the <code>printf</code>
 line won't print anything after the decimal point. Again, the coupling is
 there, but it's hidden. Later on, we simply won't be able to find all the places in our

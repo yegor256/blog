@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-05T07:00:59+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fully Transparent Donations via Zerocracy</title><link href="http://www.yegor256.com/2018/04/03/donations-via-zerocracy.html" rel="alternate" type="text/html" title="Fully Transparent Donations via Zerocracy" /><published>2018-04-03T00:00:00+00:00</published><updated>2018-04-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/03/donations-via-zerocracy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/03/donations-via-zerocracy.html">&lt;p&gt;Open source is free, as in beer: you write code, nobody pays you. Of course,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-05T14:29:17+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fully Transparent Donations via Zerocracy</title><link href="http://www.yegor256.com/2018/04/03/donations-via-zerocracy.html" rel="alternate" type="text/html" title="Fully Transparent Donations via Zerocracy" /><published>2018-04-03T00:00:00+00:00</published><updated>2018-04-03T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/03/donations-via-zerocracy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/03/donations-via-zerocracy.html">&lt;p&gt;Open source is free, as in beer: you write code, nobody pays you. Of course,
 there are &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;many ways&lt;/a&gt;
 to monetize your efforts, but there will be no
 direct cash payments from your users, usually. There are &lt;a href=&quot;https://hackernoon.com/why-funding-open-source-is-hard-652b7055569d&quot;&gt;ways&lt;/a&gt;
@@ -156,6 +156,14 @@ Then I submit ten objects of type
 &lt;code&gt;submit()&lt;/code&gt;. Each of them will add a new
 unique book to the bookshelf. All of them will be executed, in some
 unpredictable order, by some of those ten threads from the pool.&lt;/p&gt;
+
+&lt;aside class=&#39;youtube&#39;&gt;
+        &lt;a href=&#39;https://www.youtube.com/watch?v=rC17YwowURQ&#39;&gt;&lt;div class=&#39;box&#39;&gt;
+        &lt;img src=&#39;https://i.ytimg.com/vi/rC17YwowURQ/mqdefault.jpg&#39; alt=&#39;YouTube video #rC17YwowURQ&#39;/&gt;
+        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;Synchronized Decorators for Thread-Safety (Webinar #32);
+        7 February 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;Then I fetch the results of their executors through the list of objects
 of type
@@ -439,6 +447,14 @@ which is the one you see,
 is very far from being elegant. The biggest problem is that
 they are rather big and it&amp;#39;s &lt;del&gt;difficult&lt;/del&gt; impossible
 to extend them without making them even bigger.&lt;/p&gt;
+
+&lt;aside class=&#39;youtube&#39;&gt;
+        &lt;a href=&#39;https://www.youtube.com/watch?v=REj8pJesMVI&#39;&gt;&lt;div class=&#39;box&#39;&gt;
+        &lt;img src=&#39;https://i.ytimg.com/vi/REj8pJesMVI/mqdefault.jpg&#39; alt=&#39;YouTube video #REj8pJesMVI&#39;/&gt;
+        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;The Alternative to Fluent Interfaces in Java (webinar #33);
+        4 April 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;For example, right now &lt;a href=&quot;http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html&quot;&gt;&lt;code&gt;JdkRequest&lt;/code&gt;&lt;/a&gt;
 has the methods

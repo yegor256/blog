@@ -122,6 +122,8 @@ tests as an argument for the <code>Metrics</code> constructor. The real class be
 tested here is <code>Metrics</code> while <code>this.folder</code> is something we need
 in order to test it.</p>
 
+
+
 <p>What's wrong with this test? There is one serious issue:
 <strong>coupling</strong> between test methods. Test methods (and all tests in general)
 must be perfectly isolated from each other. This means that changing

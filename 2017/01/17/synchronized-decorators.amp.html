@@ -108,6 +108,8 @@ exactly the same moment in time.</p>
 finish up, because each of them will increment it once, right?
 However, most likely this won't happen.</p>
 
+
+
 <p>Let's see what will happen. In both threads, <code>before</code>
 will equal <code>0</code> when they start. Then <code>after</code> will be set to <code>1</code>. Then, both threads
 will do <code>this.number = 1</code> and we will end up with <code>1</code> in <code>number</code> instead
