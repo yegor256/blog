@@ -21,6 +21,8 @@ months. If you want to add something here, please
 
 <!--more-->
 
+How big should Scala blocks be?
+
 When should you implement more than one interface instead of using a decorator?
 
 Support principles. Free, Paid, Fast, Slow, Open Source, Commercial. What's the right approach that everyone should adopt?
