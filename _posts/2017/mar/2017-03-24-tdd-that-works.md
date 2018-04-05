@@ -61,8 +61,6 @@ not calculator examples. It's also very _inefficient_, because tests by definiti
 are much more rigid than the code they validate&mdash;creating them first will
 cause many re-do cycles until the design is stabilized.
 
-{% youtube R_2AvKDHAWI %}
-
 I've personally [written](https://github.com/yegor256) almost 300,000 lines of code in
 Java, Ruby, PHP, and JavaScript over the last four years, and I have never
 done TDD by the book: "write a test, make it run, make it right." Ever.

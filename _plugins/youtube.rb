@@ -34,6 +34,7 @@ module Yegor
       uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet,statistics&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
       raise json['error']['message'] if json['error']
+      raise "YouTube video #{@id} not found" if json['items'].empty?
       item = json['items'][0]
       snippet = item['snippet']
       puts "YouTube video #{@id} found: #{snippet['title']}"
