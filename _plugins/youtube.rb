@@ -40,7 +40,7 @@ module Yegor
       puts "YouTube video #{@id} found: #{snippet['title']}"
       "<aside class='youtube'>
         <a href='https://www.youtube.com/watch?v=#{@id}'><div class='box'>
-        <img src='#{snippet['thumbnails']['medium']['url']}'/>
+        <img src='#{snippet['thumbnails']['medium']['url']}' alt='YouTube video ##{@id}'/>
         <div class='play'><i class='icon icon-play'></i></div>
         </div></a>
         <div>#{snippet['title']};

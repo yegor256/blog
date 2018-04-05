@@ -64,6 +64,9 @@ Volume 2:<br/>
 
 <!--more-->
 
+April 5, 2018:
+I posted it to [ProductHunt](https://www.producthunt.com/posts/elegant-objects).
+
 February 1, 2018:
 I signed a contract with [Питер](https://www.piter.com/),
 a book publisher in Russia. They will translate the first volume to Russian
