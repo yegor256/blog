@@ -25,11 +25,11 @@ jb_picture:
 
 Punishment ... how do you prefer to do it? There are many ways to punish
 employees; some are rather effective, while others simply don't work. This is
-not an exact science. Actually, I would say it's an **art**. You must be creative,
+not an exact science. Actually, I would say it's an _art_. You must be creative,
 innovative, and very open-minded. You never know which method of
 punishment will work with whom. Some people respond to one method,
 while others may completely ignore it. The overarching goal, of course, is
-to make employees **scared** of **you**, their boss, so they will obey enthusiastically.
+to make employees _scared_ of _you_, their boss, so they will obey enthusiastically.
 Here is a list of the most effective methods.
 
 <!--more-->
@@ -46,7 +46,7 @@ This, of course, is your best instrument of
 [punishment](https://en.wikipedia.org/wiki/Punishment). Make sure he is scared
 of you. He must know who he [works for]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})&mdash;you, his boss. The rule
 of thumb is that the one with the strongest voice is the boss. Thus, you
-must be heard, you must **rule** with your voice, and he must physically
+must be heard, you must _rule_ with your voice, and he must physically
 feel your presence in the room. Even if it's just a Skype
 [call]({% pst 2016/aug/2016-08-23-communication-maturity %}),
 your voice must sound stronger than all others.
@@ -78,7 +78,7 @@ to laugh alongside everybody else, but this won't last for the long term. In the
 end, everybody will laugh at him, and he will do whatever it takes just to stop it.
 He will obey any order you give!
 
-{% quote Having a personal life outside the office is not for everybody; it is a luxury %}
+{% quote Having a personal life outside the office is not for everybody; it is a luxury. %}
 
 **Mistakes Must be Visible**.
 Is he wrong? Did he miss a deadline? Did he deploy a broken version to production?
@@ -112,14 +112,14 @@ This technique is close to playing hard to get, but here you don't ignore him.
 You communicate with the guilty employee, but you don't talk about his
 results. You discuss his uncle's wedding, his snowboarding weekend, his
 new bicycle, etc. But you don't ask about the migration to PostgreSQL he
-has been working on for the last three weeks. You are **not interested**. This is
+has been working on for the last three weeks. You are _not interested_. This is
 a perfect method for demonstrating that you don't see him as a valuable
 team member anymore. The [team]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
 doesn't need his results. The team can live
 without them. You will see how soon he realizes who the boss is and
 what it means when the boss is not happy!
 
-{% quote Obviously, the best desk is the one at which nobody can see your monitor %}
+{% quote Obviously, the best desk is the one at which nobody can see your monitor. %}
 
 **A Bad Office Spot Is a Great De-Motivator**.
 This is a classic instrument of punishment: The worst desks go to
@@ -148,7 +148,7 @@ tasks all go to the employee who deserves punishment. Of course,
 you must look unbiased&mdash;be very polite and supportive, acting as if you're
 a good friend!
 
-{% quote Leaving the office at 5 p.m. is a privilege; only the best employees can afford it %}
+{% quote Leaving the office at 5 p.m. is a privilege; only the best employees can afford it. %}
 
 **Spread Rumors**.
 Simply show your annoyance of his poor results, but not to his face. Talk
