@@ -95,6 +95,8 @@ The HTML document is still readable and usable, but it doesn't have the
 good-looking-graphics component. Tacit adds that component in a non-intrusive
 manner.
 
+{% youtube SCcJcSVBSpU %}
+
 Of course, in many projects, the default layout features of Tacit won't
 be enough. In most cases, I still have to add my own CSS classes and inline
 styles. But Tacit gives me an adequate foundation to start from. It solves
