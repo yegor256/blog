@@ -1,0 +1,15 @@
+# encoding: utf-8
+
+require 'redcarpet'
+
+task :default do
+  template = File.read('template.html')
+  Dir['**/*.md'].each do |md|
+    html = template.gsub(
+      '[content]',
+      Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(File.read(md))
+    )
+    FileUtils.mkdir_p('html')
+    File.write("html/#{File.basename(md, '.*')}.html", html)
+  end
+end
