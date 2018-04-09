@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Learning by Refactoring"
+title: "Nine Steps of Learning by Refactoring"
 date: 2018-04-10
 place: Moscow, Russia
 tags: refactoring
 description: |
-  ...
+  The best way to learn foreign or legacy code is
+  to refactor it; here is a list of nine steps I go through
+  when the Java code is new to me.
 keywords:
   - refactoring
   - learning by refactoring
@@ -96,7 +98,21 @@ I'm in general in favor of short one-noun names for variables and one-verb names
 for methods. I [believe]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %})
 that longer "compound" names are an indicator of unnecessary code complexity.
 
-... example ...
+For example, I found this method
+`registerServletContainerInitializerToDriveServletContextInitializers` (69 characters!)
+in `o.s.b.w.e.u.UndertowServletWebServerFactory` class in Spring Boot.
+I wonder why the author skipped the `couldYouPlease` prefix
+and the `otherwiseThrowAnException` suffix.
+
+Jokes aside, those long method names clearly demostrate that the code
+is too complex and can't explained with a simple `register` or even
+`registerContainer`. It seems that there are many different containers,
+initializers, servlets, and other creatures that need to be registered
+somehow. When I join a project and see a method with this name I'm getting
+ready for big troubles.
+
+Making names shorter is the mandatory refactoring step I take when
+starting to work with a foreign or legacy code.
 
 ## Add Unit Tests
 
@@ -130,17 +146,94 @@ object-oriented programming must encourage. Instead, a method must
 always have a single exit point, just like those functions in
 functional programming.
 
-... example ...
+Look at this method from Binder class from Spring Boot
+(there are many similar examples there, I picked this one randomly):
 
-## Apply Static Analysis
+{% figure /images/2018/04/maven-listing.jpg 600 %}
 
+There are five `return` statements in such a small method. For an object-oriented
+code it's too much. It's OK for a procedural code, which I also write
+sometimes. For example, this Groovy script of ours has five `return` keywords too:
 
+{% figure /images/2018/04/farm-listing.jpg 600 %}
 
-## Make Objects Immutable
+But this is Groovy and it's not a class. It's just a procedure, a script.
 
-Most
+Refactoring and removing multiple `return` statements definitely helps
+make code cleaner. Mostly because without them it's necessary to use
+deeper nesting of `if/then/else` statements and the code start to look
+ugly, unless you break it down to smaller pieces.
 
 ## Get Rid of NULLs
 
-## Remove Static Methods
+NULLs [are evil]({% pst 2014/may/2014-05-13-why-null-is-bad %}),
+it's a well-known fact. However, they are still everywhere. For example,
+there are 4,100 Java files in Spring Boot v2.0.0.RELEASE and 243K LoC,
+which include `null` keyword 7,055 times. This means approximately one `null`
+per each 35 lines.
+
+To the contrary, Takes Framework, which I founded a few years ago,
+has 771 Java files, 154K LoC, and 58 `null` keywords. Which is roughly
+one `null` per 2,700 lines. See the difference?
+
+The code gets cleaner when you remove NULLs, but it's not so easy to do.
+Sometimes it's even impossible. That's why we still have those 58 cases
+of NULL in Takes. We simply can't remove them, because they are coming
+from JDK.
+
+## Make Objects Immutable
+
+As I [demonstrated]({% pst 2014/nov/2014-11-07-how-immutability-helps %})
+some time ago,
+[immutability]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
+helps keep objects smaller. Most classes
+that are coming from the foreign code I deal with are mutable. And large.
+
+If you look at any artifact analyzed by [jpeek](http://www.jpeek.org),
+you will see that in most of them approximately 80% classes
+are mutable. Moving from mutability to immutability is a big challenge
+in object-oriented programming, which, if resolved, leads to better
+code.
+
+This "immutabilizing" refactoring step is only profitable.
+
+## Remove Static
+
+Static methods and attributes are convenient,
+if you are a procedural programmer. If your
+code is object-oriented, they
+[must go away]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}). In Spring Boot there
+are 7,482 `static` keywords, which means one per each 32 lines of code.
+To the contrary, in Takes we have 310 `static`-s, which is
+every 496 lines.
+
+Compare these numbers with statistics about NULL and you will see
+that getting rid of static is a more complex task.
+
+## Apply Static Analysis
+
+This is the final step and the most complex one. It's complex because
+I configure static analyzers to their maximum potential or even more.
+I'm using [Qulice](http://www.qulice.com),
+which is an aggregator of Checkstyle, PMD, and FindBugs.
+Those guys are strong by themselves, but Qulice makes them
+[even stronger]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}),
+adding a few dozen custom made checks.
+
+The principle I use for static analysis is 0/100. This means that either
+the entire code base is clean and there are no Qulice complaints, or it's
+dirty. There is nothing in the middle. This is not a very typical way
+of lookiing at static analysis. Most programmers are using those tools
+just to collect "opinions" about their code. I'm using them as guides
+for refactoring.
+
+Check this video, it demonstrates the amount of complaints Qulice
+gives for `spring-boot-project/spring-boot` sub-module in Spring Boot
+(the video has no end, since I lost my patience in waiting):
+
+... video ...
+
+When Qulice says that everything is clean, I consider the code base fully
+ready for maintenance and modifications. At this point the refactoring
+is done.
 
