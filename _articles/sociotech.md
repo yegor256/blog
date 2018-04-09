@@ -1,3 +1,8 @@
+An ability to hack algorithms and make data structures optimal
+was a virtue of programmers a few decades ago; now the reality is
+different and their ability to communicate, learn, and work remotely
+is more important.
+
 In the 70s of the last century, when Microsoft and Apple were founded,
 programming was an art, which only a limited group of dedicated
 enthusiasts really knew how to do right. CPUs were rather slow,
@@ -12,7 +17,7 @@ The first three volumes of the famous book _The Art of Computer Programming_ of
 a Stanford University professor and a
 [Turing Award winner](https://amturing.acm.org/award_winners/knuth_1013846.cfm),
 were published in 1968-1973.
-It was a bible of programmers, which earned a [famous comment](https://www.technologyreview.com/s/400456/rewriting-the-bible-in-0s-and-1s/)
+This Bible of programming earned a [famous comment](https://www.technologyreview.com/s/400456/rewriting-the-bible-in-0s-and-1s/)
 from Bill Gates: "It took incredible discipline, and several months, for me to read it."
 
 Just creating a simple piece of software was a complex engineering task,
@@ -46,7 +51,7 @@ Second, the growth of _open source_ is huge. The majority of software is availab
 now for free together with their source code, including operating systems,
 graphic processors, compilers, editors, frameworks, cryptography
 tools, and whatever we can only imagine. Programmers don't need to
-write a lot of code anymore, they need to be able to put together the
+write that much code anymore, all they need in most cases is to wire together the
 components already available.
 
 Third, the _population_ of programmers in the world keeps growing and they are

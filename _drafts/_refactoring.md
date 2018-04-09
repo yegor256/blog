@@ -24,13 +24,13 @@ I [replied](https://twitter.com/yegor256/status/977966601227112449)
 that it is "learning by refactoring." Then tried to Google it
 and found [nothing](https://www.google.ru/search?q="learning+by+refactoring").
 I am surprised. To me refactoring seems to be the most effective and
-obvious way to study the source code.
+obvious way to study the source code. Here is how I usually do it.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-[Code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is the
+According to Wikipedia, [code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is the
 process of restructuring existing computer code&mdash;changing the
 factoring&mdash;without changing its external behavior. The goal
 of refactoring is to make code more readable and suitable for modifications.
@@ -46,7 +46,7 @@ from an object-oriented standpoint, like
 [Encapsulate Field](https://en.wikipedia.org/wiki/Field_encapsulation),
 for example, but most of them are valid.
 
-Here is what I'm usually doing the code I don't know, but need to modify it.
+Here is what I'm usually doing when I don't know the code, but need to modify it.
 The techniques are sorted by the order of complexity. Let's start with
 the simplest.
 
@@ -60,22 +60,22 @@ custom [`settings.jar`](/bin/settings.jar), I see something like this:
 When I open the source code of, say,
 [Spring Boot](https://github.com/spring-projects/spring-boot), I see something like this
 (it's [`o.s.b.ImageBanner`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java)
-randomly picked out of a thousand of other
-classes that look very similar):
+randomly picked out of a thousand of other classes that look very similar):
 
 {% figure /images/2018/04/springboot-listing.jpg 600 %}
 
 See the difference?
 
-The first thing I do when I see someone's code, I make it red spots free. Most
-of them are easy to remove, while others will take some time to refactor.
+The first thing I do when I see someone's code, I make it "red spots free." Most
+of those red spots are easy to remove, while others will take some time to refactor.
 While doing that I learn a lot about the <del>crap</del> program I have
 to deal with.
 
 ## Remove Empty Lines
 
 I wrote some time ago that empty lines inside method bodies are bad things.
-They are obvious indicators of
+They are obvious indicators of redundant complexity. Programmers tend
+to add them to their methods to simplify things.
 
 This is a method from [Apache Maven](https://github.com/apache/maven) code base
 (class [`RepositoryUtils`](https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java)
@@ -86,24 +86,61 @@ picked randomly, almost all other clases are formatted same way):
 Aside from being "all red" their code is full of empty lines.
 Removing them will make code more readable and will also help
 understand how it works. Bigger methods will need refactoring, since
-without empty lines they will become almost absolutely unreadable.
+without empty lines they will become almost absolutely unreadable. Hence,
+I compress them, understand, and make smaller mostly by breaking
+down to smaller methods.
 
 ## Make Names Shorter
 
-I'm general in favor of short one-noun names for variables and one-verb
+I'm in general in favor of short one-noun names for variables and one-verb names
 for methods. I [believe]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %})
 that longer "compound" names are an indicator of unnecessary code complexity.
 
+... example ...
 
+## Add Unit Tests
 
-## Apply Static Analysis
+{% badge /images/2015/04/book-goos.jpg 96 http://amzn.to/1PBpoDT %}
 
-## Document Classes
+Most classes (and methods) come without any documentation, especially
+if we are talking about closed-source commercial code. We are lucky if
+the classes have more or less descriptive names and are rather small and
+cohesive.
+
+{% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
+
+However, instead of documentation I prefer to deal with unit tests. They
+explain the code much better and prove that it works. When I don't
+understand how the class works, I try to write a unit test for it. In most
+cases it's not possible, for many reasons. In such a case I try to apply
+everything I learedn from
+[_Working Effectively With Legacy Code_](http://amzn.to/1SdcZ8M)
+by Michael Feathers
+and
+[_Growing Object-Oriented Software, Guided by Tests_](http://amzn.to/1PBpoDT)
+by Steve Freeman and Nat Pryce.
+Both books are pretty much focused on this very problem: what to do
+when you don't know what to do, testing wise.
 
 ## Remove Multiple Returns
 
+I [wrote earlier]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %})
+that multiple return statements in a single method is not what
+object-oriented programming must encourage. Instead, a method must
+always have a single exit point, just like those functions in
+functional programming.
+
+... example ...
+
+## Apply Static Analysis
+
+
+
 ## Make Objects Immutable
+
+Most
 
 ## Get Rid of NULLs
 
 ## Remove Static Methods
+
