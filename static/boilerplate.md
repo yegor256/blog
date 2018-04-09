@@ -16,7 +16,7 @@ nospell: true
 ---
 
 Quick bio:
-CEO at Zerocracy and author of Elegant Objects
+CEO at Zerocracy and author of Elegant Objects.
 
 Short bio:
 Yegor is a CEO of Zerocracy,
@@ -24,12 +24,13 @@ an author of Elegant Objects book series about OOP,
 and a hands-on Java developer.
 
 Bio:
-Yegor Bugayenko is a founder and CEO of Zerocracy, which plans to replace annoying bosses with with AI bots;
-an OOP fundamentalist and an author of "Elegant Objects" book series;
+Yegor Bugayenko is a founder and CEO of Zerocracy, which replaces annoying bosses with AI bots;
+an OOP fundamentalist;
+an author of "Elegant Objects" book series;
 a provocative blogger at yegor256.com;
-a hands-on Java programmer and a creator of Cactoos, Takes Framework, JCabi, and Rultor;
-a philanthropist with an annual competition for programmers,
-where he donates a few thousand dollars to the best software project.
+a hands-on Java programmer;
+a creator of Cactoos, Takes Framework, JCabi, and Rultor;
+a philanthropist donating four thousand dollars annualy to an open source award.
 
 Employer: Zerocracy, Inc. (www.zerocracy.com)
 
