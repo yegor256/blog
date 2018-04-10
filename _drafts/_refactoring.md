@@ -23,9 +23,9 @@ I [was asked](https://twitter.com/yegor256/status/977799130100781056)
 on Twitter recently how is it possible to refactor
 if one doesn't understand how the code works.
 I [replied](https://twitter.com/yegor256/status/977966601227112449)
-that it is "learning by refactoring." Then tried to Google it
+that it is "learning by refactoring." Then I tried to Google it
 and found [nothing](https://www.google.ru/search?q="learning+by+refactoring").
-I am surprised. To me refactoring seems to be the most effective and
+I was surprised. To me refactoring seems to be the most effective and
 obvious way to study the source code. Here is how I usually do it,
 in nine object-oriented steps.
 
@@ -72,7 +72,7 @@ randomly picked out of a thousand of other classes that look very similar):
 
 See the difference?
 
-The first thing I do when I see someone's code, I make it "red spots free"
+The first thing I do, when I see someone's code, is to make it "red spots free"
 for my IDE. Most of those red spots are easy to remove,
 while others will take some time to refactor.
 While doing that I learn a lot about the <del>crap</del> program I have
@@ -85,41 +85,41 @@ some time ago that empty lines inside method bodies are bad things.
 They are obvious indicators of redundant complexity. Programmers tend
 to add them to their methods in order to simplify things.
 
-This is a method from [Apache Maven](https://github.com/apache/maven) code base
+This is a method from the [Apache Maven](https://github.com/apache/maven) code base
 (class [`RepositoryUtils`](https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java)
-picked randomly, almost all other clases are formatted same way):
+picked at random, but almost all other clases are formatted the same way):
 
 {% figure /images/2018/04/maven-listing.jpg 600 %}
 
 Aside from being "all red" their code is full of empty lines.
-Removing them will make code more readable and will also help
+Removing them will make code more readable and will also help me
 understand how it works. Bigger methods will need refactoring, since
-without empty lines they will become almost absolutely unreadable. Hence,
-I compress them, understand, and make smaller mostly by breaking
-down to smaller methods.
+without empty lines they will become almost completely unreadable. Hence,
+I compress, understand, and make them smaller mostly by breaking
+them down into smaller methods.
 
 ## Make Names Shorter
 
-I'm in general in favor of short one-noun names for variables and one-verb names
+I'm generally in favor of short one-noun names for variables and one-verb names
 for methods. I [believe]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %})
 that longer "compound" names are an indicator of unnecessary code complexity.
 
 For example, I found this method
 `registerServletContainerInitializerToDriveServletContextInitializers` (69 characters!)
-in [`o.s.b.w.e.u.UndertowServletWebServerFactory`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java)
+in the [`o.s.b.w.e.u.UndertowServletWebServerFactory`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java)
 class in Spring Boot.
 I wonder why the author skipped the `couldYouPlease` prefix
 and the `otherwiseThrowAnException` suffix.
 
-Jokes aside, so long method names clearly demostrate that the code
-is too complex and can't explained with a simple `register` or even
+Jokes aside, such long method names clearly demonstrate that the code
+is too complex and can't be explained with a simple `register` or even
 `registerContainer`. It seems that there are many different containers,
 initializers, servlets, and other creatures that need to be registered
 somehow. When I join a project and see a method with this name I'm getting
-ready for big troubles.
+ready for big trouble.
 
 Making names shorter is the mandatory refactoring step I take when
-starting to work with a foreign or legacy code.
+starting to work with foreign or legacy code.
 
 ## Add Unit Tests
 
@@ -127,7 +127,7 @@ starting to work with a foreign or legacy code.
 
 Most classes (and methods) come without any documentation, especially
 if we are talking about closed-source commercial code. We are lucky if
-the classes have more or less descriptive names and are rather small and
+the classes have more or less descriptive names and are small and
 cohesive.
 
 {% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
@@ -143,24 +143,24 @@ and
 [_Growing Object-Oriented Software, Guided by Tests_](http://amzn.to/1PBpoDT)
 by Steve Freeman and Nat Pryce.
 Both books are pretty much focused on this very problem: what to do
-when you don't know what to do, testing wise.
+when you don't know what to do, testing-wise.
 
 ## Remove Multiple Returns
 
 I [wrote earlier]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %})
-that the presence of multiple `return` statements in a single method is not what
-object-oriented programming must encourage. Instead, a method must
+that the presence of multiple `return` statements in a single method is not something
+object-oriented programming should encourage. Instead, a method must
 always have a single exit point, just like those functions in
 functional programming.
 
-Look at this method from
+Look at this method from the
 [`o.s.b.c.p.b.Binder`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java)
 class from Spring Boot (there are many similar examples there, I picked this one randomly):
 
 {% figure /images/2018/04/maven-listing.jpg 600 %}
 
-There are five `return` statements in such a small method. For an object-oriented
-code it's too much. It's OK for a procedural code, which I also write
+There are five `return` statements in such a small method. For object-oriented
+code that's too much. It's OK for procedural code, which I also write
 sometimes. For example, [this Groovy script]()
 of ours has five `return` keywords too:
 
@@ -170,16 +170,16 @@ But this is Groovy and it's not a class. It's just a procedure, a script.
 
 Refactoring and removing multiple `return` statements definitely helps
 make code cleaner. Mostly because without them it's necessary to use
-deeper nesting of `if/then/else` statements and the code start to look
-ugly, unless you break it down to smaller pieces.
+deeper nesting of `if/then/else` statements and then the code starts to look
+ugly, unless you break it down into smaller pieces.
 
 ## Get Rid of NULLs
 
 NULLs [are evil]({% pst 2014/may/2014-05-13-why-null-is-bad %}),
 it's a well-known fact. However, they are still everywhere. For example,
 there are 4,100 Java files in Spring Boot v2.0.0.RELEASE and 243K LoC,
-which include `null` keyword 7,055 times. This means approximately one `null`
-per each 35 lines.
+which include the `null` keyword 7,055 times. This means approximately one `null`
+for every 35 lines.
 
 To the contrary, Takes Framework, which I founded a few years ago,
 has 771 Java files, 154K LoC, and 58 `null` keywords. Which is roughly
@@ -187,8 +187,8 @@ one `null` per 2,700 lines. See the difference?
 
 The code gets cleaner when you remove NULLs, but it's not so easy to do.
 Sometimes it's even impossible. That's why we still have those 58 cases
-of NULL in Takes. We simply can't remove them, because they are coming
-from JDK.
+of `null` in Takes. We simply can't remove them, because they are coming
+from the JDK.
 
 ## Make Objects Immutable
 
@@ -196,15 +196,15 @@ As I [demonstrated]({% pst 2014/nov/2014-11-07-how-immutability-helps %})
 some time ago,
 [immutability]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 helps keep objects smaller. Most classes
-that are coming from the foreign code I deal with are mutable. And large.
+that I see in the foreign code I deal with are mutable. And large.
 
 If you look at any artifact analyzed by [jpeek](http://www.jpeek.org),
-you will see that in most of them approximately 80% classes
+you will see that in most of them approximately 80% of classes
 are mutable. Moving from mutability to immutability is a big challenge
 in object-oriented programming, which, if resolved, leads to better
 code.
 
-This "immutabilizing" refactoring step is only profitable.
+This refactoring step of make things immutable is purely profitable.
 
 ## Remove Static
 
@@ -212,12 +212,12 @@ Static methods and attributes are convenient,
 if you are a procedural programmer. If your
 code is object-oriented, they
 [must go away]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}). In Spring Boot there
-are 7,482 `static` keywords, which means one per each 32 lines of code.
+are 7,482 `static` keywords, which means one for every 32 lines of code.
 To the contrary, in Takes we have 310 `static`-s, which is
-every 496 lines.
+one every 496 lines.
 
-Compare these numbers with statistics about NULL and you will see
-that getting rid of static is a more complex task.
+Compare these numbers with the statistics about NULL and you will see
+that getting rid of `static` is a more complex task.
 
 ## Apply Static Analysis
 
@@ -227,17 +227,17 @@ I'm using [Qulice](http://www.qulice.com),
 which is an aggregator of Checkstyle, PMD, and FindBugs.
 Those guys are strong by themselves, but Qulice makes them
 [even stronger]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}),
-adding a few dozen custom made checks.
+adding a few dozen custom-made checks.
 
 The principle I use for static analysis is 0/100. This means that either
 the entire code base is clean and there are no Qulice complaints, or it's
 dirty. There is nothing in the middle. This is not a very typical way
-of lookiing at static analysis. Most programmers are using those tools
+of looking at static analysis. Most programmers are using those tools
 just to collect "opinions" about their code. I'm using them as guides
 for refactoring.
 
-Check this video, it demonstrates the amount of complaints Qulice
-gives for `spring-boot-project/spring-boot` sub-module in Spring Boot
+Check out this video, which demonstrates the amount of complaints Qulice
+gives for the `spring-boot-project/spring-boot` sub-module in Spring Boot
 (the video has no end, since I lost my patience in waiting):
 
 ... video ...
