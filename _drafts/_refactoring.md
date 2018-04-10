@@ -66,13 +66,13 @@ When I open the source code of, say,
 [Spring Boot](https://github.com/spring-projects/spring-boot),
 I see something like this
 (it's [`o.s.b.ImageBanner`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java)
-randomly picked out of a thousand of other classes that look very similar):
+randomly picked out of a thousand other classes that look very similar):
 
 {% figure /images/2018/04/springboot-listing.jpg 600 %}
 
 See the difference?
 
-The first thing I do, when I see someone's code, is to make it "red spots free"
+The first thing I do, when I see someone else's code, is to make it "red spots free"
 for my IDE. Most of those red spots are easy to remove,
 while others will take some time to refactor.
 While doing that I learn a lot about the <del>crap</del> program I have
