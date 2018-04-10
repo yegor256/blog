@@ -38,7 +38,7 @@ good news is&mdash;you are not the first to have this problem."
 
 "Trust, pay, lose" is what I would call this very typical scenario.
 
-First, you **trust** your programmers. You call them partners.
+First, you _trust_ your programmers. You call them partners.
 You believe in them. You are sure that you picked the best ones. They seem
 to be very reliable. You look at their
 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) and feel excited. They
@@ -48,7 +48,7 @@ do you need, right?
 
 {% quote Finally, you lose when you realize that it's their software, not yours. %}
 
-Second, you **pay** them. How else would they work, right? True talent
+Second, you _pay_ them. How else would they work, right? True talent
 is expensive, we all [know that]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
 They bill you [regularly]({% pst 2014/oct/2014-10-21-incremental-billing %})
 for [the time]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) they
@@ -61,7 +61,7 @@ demonstrate new versions regularly. There are bugs, of course, but this is how i
 right? They [explain]({% pst 2017/jan/2017-01-10-how-to-teach-customers %})
 everything to you and you keep paying.
 
-Finally, you **lose** when you realize that it's their software,
+Finally, you _lose_ when you realize that it's their software,
 [not yours]({% pst 2015/may/2015-05-04-how-to-protect-business-idea %}).
 They quit because of some business reasons and you're left with nothing.
 You can't understand those files. You don't even have them, since they
