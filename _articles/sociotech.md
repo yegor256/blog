@@ -1,3 +1,5 @@
+The Era of Hackers Is Over
+
 An ability to hack algorithms and make data structures optimal
 was a virtue of programmers a few decades ago; now the reality is
 different and their ability to work remotely, communicate, and share
@@ -105,13 +107,16 @@ code repositories, which a professional programmer must know how to navigate.
 Those who used to rely on colleagues and friends will lose to those
 who know how to learn from the entire Internet.
 
-They have to know how to write understandable and maintainable code, which
+They have to know how to write _maintainable_ code, which
 other programmers will be able to understand easily. Since personnel is
 getting more expensive every year, businesses care a lot about the maintainability
-of their code bases. They simply can't afford to lose what previous
+of their code bases. It is easier for them to buy a bigger server,
+if the algorithm is not fast enough, than to lose what previous
 programmers created when a new team or a replacement shows up and fails
-to understand and modify. Those "hackers" who used to write complex and cryptic
-software will soon be out of the market.
+to understand and modify. Since computers are getting cheaper and people
+are getting more expensive, maintainability starts to dominate at the
+landscape of virtues of almost any software.
+Those "hackers" who used to write complex and cryptic code will soon be out of the market.
 
 The words of
 [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)&mdash;"Simplicity is a great virtue"&mdash;which
