@@ -111,8 +111,13 @@ getting more expensive every year, businesses care a lot about the maintainabili
 of their code bases. They simply can't afford to lose what previous
 programmers created when a new team or a replacement shows up and fails
 to understand and modify. Those "hackers" who used to write complex and cryptic
-software will soon be out of the market. "Simplicity is a great virtue"
-as [Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra) once said.
+software will soon be out of the market.
+
+The words of
+[Edsger W. Dijkstra](https://en.wikipedia.org/wiki/Edsger_W._Dijkstra)&mdash;"Simplicity is a great virtue"&mdash;which
+were
+[said](http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD896.html) in 1984,
+are becoming more valuable every year.
 
 It seems that the future of programming is less about math and more about
 sociotech relationships between people.
