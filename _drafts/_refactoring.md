@@ -26,15 +26,17 @@ I [replied](https://twitter.com/yegor256/status/977966601227112449)
 that it is "learning by refactoring." Then tried to Google it
 and found [nothing](https://www.google.ru/search?q="learning+by+refactoring").
 I am surprised. To me refactoring seems to be the most effective and
-obvious way to study the source code. Here is how I usually do it.
+obvious way to study the source code. Here is how I usually do it,
+in nine object-oriented steps.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-According to Wikipedia, [code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is the
-process of restructuring existing computer code&mdash;changing the
-factoring&mdash;without changing its external behavior. The goal
+According to Wikipedia,
+[code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is
+"the process of restructuring existing computer code&mdash;changing the
+factoring&mdash;without changing its external behavior." The goal
 of refactoring is to make code more readable and suitable for modifications.
 
 {% badge /images/2018/04/refactoring.jpg 96 https://amzn.to/2E7i17H %}
@@ -44,23 +46,25 @@ suggested a number of refactoring techniques which help making
 code simpler, more abstract, more readable, etc. Some of them
 are rather
 [questionable]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
-from an object-oriented standpoint, like
+from an object-oriented standpoint&mdash;like
 [Encapsulate Field](https://en.wikipedia.org/wiki/Field_encapsulation),
-for example, but most of them are valid.
+for example&mdash;but most of them are valid.
 
 Here is what I'm usually doing when I don't know the code, but need to modify it.
-The techniques are sorted by the order of complexity. Let's start with
-the simplest.
+The techniques are sorted by the order of complexity, starting with
+the easiest one.
 
 ## Remove IDE Red Spots
 
-When I open the source code of Cactoos in IntelliJ IDEA, using my
+When I open the source code of [Cactoos](http://www.cactoos.org)
+in IntelliJ IDEA, using my
 custom [`settings.jar`](/bin/settings.jar), I see something like this:
 
 {% figure /images/2018/04/cactoos-listing.jpg 600 %}
 
 When I open the source code of, say,
-[Spring Boot](https://github.com/spring-projects/spring-boot), I see something like this
+[Spring Boot](https://github.com/spring-projects/spring-boot),
+I see something like this
 (it's [`o.s.b.ImageBanner`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java)
 randomly picked out of a thousand of other classes that look very similar):
 
@@ -68,16 +72,18 @@ randomly picked out of a thousand of other classes that look very similar):
 
 See the difference?
 
-The first thing I do when I see someone's code, I make it "red spots free." Most
-of those red spots are easy to remove, while others will take some time to refactor.
+The first thing I do when I see someone's code, I make it "red spots free"
+for my IDE. Most of those red spots are easy to remove,
+while others will take some time to refactor.
 While doing that I learn a lot about the <del>crap</del> program I have
 to deal with.
 
 ## Remove Empty Lines
 
-I wrote some time ago that empty lines inside method bodies are bad things.
+I [wrote]({% pst 2014/nov/2014-11-03-empty-line-code-smell %})
+some time ago that empty lines inside method bodies are bad things.
 They are obvious indicators of redundant complexity. Programmers tend
-to add them to their methods to simplify things.
+to add them to their methods in order to simplify things.
 
 This is a method from [Apache Maven](https://github.com/apache/maven) code base
 (class [`RepositoryUtils`](https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java)
@@ -100,11 +106,12 @@ that longer "compound" names are an indicator of unnecessary code complexity.
 
 For example, I found this method
 `registerServletContainerInitializerToDriveServletContextInitializers` (69 characters!)
-in `o.s.b.w.e.u.UndertowServletWebServerFactory` class in Spring Boot.
+in [`o.s.b.w.e.u.UndertowServletWebServerFactory`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java)
+class in Spring Boot.
 I wonder why the author skipped the `couldYouPlease` prefix
 and the `otherwiseThrowAnException` suffix.
 
-Jokes aside, those long method names clearly demostrate that the code
+Jokes aside, so long method names clearly demostrate that the code
 is too complex and can't explained with a simple `register` or even
 `registerContainer`. It seems that there are many different containers,
 initializers, servlets, and other creatures that need to be registered
@@ -129,7 +136,7 @@ However, instead of documentation I prefer to deal with unit tests. They
 explain the code much better and prove that it works. When I don't
 understand how the class works, I try to write a unit test for it. In most
 cases it's not possible, for many reasons. In such a case I try to apply
-everything I learedn from
+everything I learned from
 [_Working Effectively With Legacy Code_](http://amzn.to/1SdcZ8M)
 by Michael Feathers
 and
@@ -141,19 +148,21 @@ when you don't know what to do, testing wise.
 ## Remove Multiple Returns
 
 I [wrote earlier]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %})
-that multiple return statements in a single method is not what
+that the presence of multiple `return` statements in a single method is not what
 object-oriented programming must encourage. Instead, a method must
 always have a single exit point, just like those functions in
 functional programming.
 
-Look at this method from Binder class from Spring Boot
-(there are many similar examples there, I picked this one randomly):
+Look at this method from
+[`o.s.b.c.p.b.Binder`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java)
+class from Spring Boot (there are many similar examples there, I picked this one randomly):
 
 {% figure /images/2018/04/maven-listing.jpg 600 %}
 
 There are five `return` statements in such a small method. For an object-oriented
 code it's too much. It's OK for a procedural code, which I also write
-sometimes. For example, this Groovy script of ours has five `return` keywords too:
+sometimes. For example, [this Groovy script]()
+of ours has five `return` keywords too:
 
 {% figure /images/2018/04/farm-listing.jpg 600 %}
 

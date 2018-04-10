@@ -1,6 +1,6 @@
 An ability to hack algorithms and make data structures optimal
 was a virtue of programmers a few decades ago; now the reality is
-different and their ability to communicate, learn, and work remotely
+different and their ability to work remotely, communicate, and share
 is more important.
 
 In the 70s of the last century, when Microsoft and Apple were founded,

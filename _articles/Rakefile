@@ -4,12 +4,15 @@ require 'redcarpet'
 
 task :default do
   template = File.read('template.html')
-  Dir['**/*.md'].each do |md|
-    html = template.gsub(
-      '[content]',
-      Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(File.read(md))
-    )
+  Dir['**/*.md'].each do |f|
+    markdown = File.read(f)
+    html = template
+      .gsub('[words]', markdown.split.size.to_s)
+      .gsub(
+        '[content]',
+        Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(markdown)
+      )
     FileUtils.mkdir_p('html')
-    File.write("html/#{File.basename(md, '.*')}.html", html)
+    File.write("html/#{File.basename(f, '.*')}.html", html)
   end
 end
