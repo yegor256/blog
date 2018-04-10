@@ -20,7 +20,7 @@ were published in 1968-1973.
 This Bible of programming earned a [famous comment](https://www.technologyreview.com/s/400456/rewriting-the-bible-in-0s-and-1s/)
 from Bill Gates: "It took incredible discipline, and several months, for me to read it."
 
-Just creating a simple piece of software was a complex engineering task,
+The comment demonstrates that just creating a simple piece of software was a complex engineering task,
 even though software engineering "emerged as a discipline in its own right"
 only later in 1980s, as [Ian Sommerville](https://en.wikipedia.org/wiki/Ian_Sommerville_%28academic%29)
 said in [_Software Engineering_](https://amzn.to/2HlrI5P) book.
