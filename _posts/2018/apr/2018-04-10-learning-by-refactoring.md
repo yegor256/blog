@@ -14,9 +14,9 @@ keywords:
   - refactoring and learning
   - refactoring in java
   - refactoring benefits
-image: /images/2017/12/
+image: /images/2018/04/dom-hemingway.jpg
 jb_picture:
-  caption:
+  caption: Dom Hemingway (2013) by Richard Shepard
 ---
 
 I [was asked](https://twitter.com/yegor256/status/977799130100781056)
@@ -181,7 +181,7 @@ there are 4,100 Java files in Spring Boot v2.0.0.RELEASE and 243K LoC,
 which include the `null` keyword 7,055 times. This means approximately one `null`
 for every 35 lines.
 
-To the contrary, Takes Framework, which I founded a few years ago,
+To the contrary, [Takes Framework](http://www.takes.org), which I founded a few years ago,
 has 771 Java files, 154K LoC, and 58 `null` keywords. Which is roughly
 one `null` per 2,700 lines. See the difference?
 
@@ -240,7 +240,7 @@ Check out this video, which demonstrates the amount of complaints Qulice
 gives for the `spring-boot-project/spring-boot` sub-module in Spring Boot
 (the video has no end, since I lost my patience in waiting):
 
-... video ...
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DDtAKIyuRMA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 When Qulice says that everything is clean, I consider the code base fully
 ready for maintenance and modifications. At this point the refactoring

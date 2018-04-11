@@ -20,8 +20,10 @@ keywords:
 It's a full list of academic publications under my name,
 conference proceedings, journals, patents, etc.
 This is basically everything that was written
-and published by myself outside of this blog (in chronological
-order):
+and published by myself outside of this blog
+(in chronological order):
+
+Find me at [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ) too.
 
 [Method and Software of NetBout](https://www.google.com/patents/US20120117164)<br/>
 US patent application 12/943,022<br/>
