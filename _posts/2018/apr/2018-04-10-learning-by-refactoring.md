@@ -87,7 +87,7 @@ to add them to their methods in order to simplify things.
 
 This is a method from the [Apache Maven](https://github.com/apache/maven) code base
 (class [`RepositoryUtils`](https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java)
-picked at random, but almost all other clases are formatted the same way):
+picked at random, but almost all other classes are formatted the same way):
 
 {% figure /images/2018/04/maven-listing.jpg 600 %}
 
