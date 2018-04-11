@@ -224,7 +224,10 @@ that getting rid of `static` is a more complex task.
 This is the final step and the most complex one. It's complex because
 I configure static analyzers to their maximum potential or even more.
 I'm using [Qulice](http://www.qulice.com),
-which is an aggregator of Checkstyle, PMD, and FindBugs.
+which is an aggregator of
+[Checkstyle](http://checkstyle.sourceforge.net/),
+[PMD](http://pmd.sourceforge.net/), and
+[FindBugs](http://findbugs.sourceforge.net/).
 Those guys are strong by themselves, but Qulice makes them
 [even stronger]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}),
 adding a few dozen custom-made checks.
