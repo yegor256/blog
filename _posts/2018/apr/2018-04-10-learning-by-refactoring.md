@@ -157,7 +157,7 @@ Look at this method from the
 [`o.s.b.c.p.b.Binder`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java)
 class from Spring Boot (there are many similar examples there, I picked this one randomly):
 
-{% figure /images/2018/04/maven-listing.jpg 600 %}
+{% figure /images/2018/04/binder-listing.jpg 600 %}
 
 There are five `return` statements in such a small method. For object-oriented
 code that's too much. It's OK for procedural code, which I also write
