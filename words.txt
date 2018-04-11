@@ -138,6 +138,7 @@ ages
 aggregated
 aggregates
 aggregating
+aggregator
 aggressive
 aggressively
 agile
@@ -703,6 +704,7 @@ bookshelf
 boost
 boosted
 booster
+boot
 bootstrap
 border
 borders
@@ -1098,6 +1100,7 @@ clone
 clones
 close
 closed
+closed-source
 closely
 closer
 closes
@@ -1597,6 +1600,7 @@ curve
 cushion
 cushioned
 custom
+custom-made
 customer
 customer's
 customer-reported
@@ -1704,6 +1708,7 @@ dedicate
 dedicated
 deem
 deep
+deeper
 deeply
 default
 defaults
@@ -2482,6 +2487,7 @@ faces
 facing
 fact
 factor
+factoring
 factors
 factory
 fading
@@ -2695,6 +2701,7 @@ forced
 forces
 ford
 forecast
+foreign
 foremost
 forever
 forget
@@ -2941,6 +2948,7 @@ GreenHouseCI
 griggs
 grooming
 groove
+groovy
 ground
 group
 group's
@@ -2967,6 +2975,7 @@ guice
 guidance
 guide
 guided
+guides
 guilt
 guilt-driven
 guilty
@@ -3390,6 +3399,7 @@ inherits
 initial
 initialization
 initialized
+initializers
 initially
 inject
 injectable
@@ -3729,6 +3739,7 @@ kernel
 key
 keynote
 keyword
+keywords
 khRFR
 kick
 kicked
@@ -4504,6 +4515,7 @@ neighbors
 neither
 nerves
 nervous
+nesting
 net
 netbeans
 netbout
@@ -4693,11 +4705,13 @@ one
 one's
 one-hour
 one-man
+one-noun
 one-on-one
 one-page
 one-pagers
 one-paragraph
 one-user
+one-verb
 one-year
 ones
 online
@@ -5825,6 +5839,7 @@ restriction
 restrictions
 restroom
 restructure
+restructuring
 result
 result-oriented
 resulted
@@ -6487,6 +6502,7 @@ sporchi
 sport
 sports
 spot
+spots
 spouse
 spouses
 spread
@@ -6536,6 +6552,7 @@ standardized
 standards
 standing
 standish
+standpoint
 stands
 standups
 stanford
@@ -6660,6 +6677,7 @@ styles
 stylesheet
 stylesheets
 styling
+sub-module
 sub-tasks
 subconsciously
 subject
@@ -6899,6 +6917,7 @@ tested
 tester
 testers
 testing
+testing-wise
 tests
 tex
 text
