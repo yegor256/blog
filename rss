@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-11T13:29:08+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Nine Steps of Learning by Refactoring</title><link href="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html" rel="alternate" type="text/html" title="Nine Steps of Learning by Refactoring" /><published>2018-04-10T00:00:00+00:00</published><updated>2018-04-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/10/learning-by-refactoring</id><content type="html" xml:base="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html">&lt;p&gt;I &lt;a href=&quot;https://twitter.com/yegor256/status/977799130100781056&quot;&gt;was asked&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-11T16:04:14+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Nine Steps of Learning by Refactoring</title><link href="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html" rel="alternate" type="text/html" title="Nine Steps of Learning by Refactoring" /><published>2018-04-10T00:00:00+00:00</published><updated>2018-04-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/10/learning-by-refactoring</id><content type="html" xml:base="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html">&lt;p&gt;I &lt;a href=&quot;https://twitter.com/yegor256/status/977799130100781056&quot;&gt;was asked&lt;/a&gt;
 on Twitter recently how is it possible to refactor
 if one doesn&amp;#39;t understand how the code works.
 I &lt;a href=&quot;https://twitter.com/yegor256/status/977966601227112449&quot;&gt;replied&lt;/a&gt;
@@ -102,12 +102,12 @@ starting to work with foreign or legacy code.&lt;/p&gt;
 
 &lt;h2 id=&quot;add-unit-tests&quot;&gt;Add Unit Tests&lt;/h2&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1PBpoDT&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2015/04/book-goos.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
 &lt;p&gt;Most classes (and methods) come without any documentation, especially
 if we are talking about closed-source commercial code. We are lucky if
 the classes have more or less descriptive names and are small and
 cohesive.&lt;/p&gt;
+
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1PBpoDT&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2015/04/book-goos.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1SdcZ8M&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2015/04/book-legacy.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
@@ -136,7 +136,7 @@ functional programming.&lt;/p&gt;
 &lt;a href=&quot;https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java&quot;&gt;&lt;code&gt;o.s.b.c.p.b.Binder&lt;/code&gt;&lt;/a&gt;
 class from Spring Boot (there are many similar examples there, I picked this one randomly):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/maven-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/binder-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;There are five &lt;code&gt;return&lt;/code&gt; statements in such a small method. For object-oriented
 code that&amp;#39;s too much. It&amp;#39;s OK for procedural code, which I also write
