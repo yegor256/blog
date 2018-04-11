@@ -123,12 +123,12 @@ starting to work with foreign or legacy code.
 
 ## Add Unit Tests
 
-{% badge /images/2015/04/book-goos.jpg 96 http://amzn.to/1PBpoDT %}
-
 Most classes (and methods) come without any documentation, especially
 if we are talking about closed-source commercial code. We are lucky if
 the classes have more or less descriptive names and are small and
 cohesive.
+
+{% badge /images/2015/04/book-goos.jpg 96 http://amzn.to/1PBpoDT %}
 
 {% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
 
