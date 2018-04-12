@@ -59,6 +59,8 @@ from 9 until 5 and I have to do what my boss tells
 me to do. In exchange, I will get paychecks every few weeks, which will
 cover my expenses.
 
+{% youtube ODxm7w2DE-g %}
+
 Doesn't it look similar to what I just said above about ancient slaves? The
 master (a.k.a. CEO) tells me what to do and punishes me at will;
 in exchange, he gives me food and safety.
