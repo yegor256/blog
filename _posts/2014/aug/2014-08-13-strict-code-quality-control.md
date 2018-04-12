@@ -20,7 +20,8 @@ jb_picture:
 ---
 
 There are many tools that control the quality of
-Java code, including [Checkstyle](http://checkstyle.sourceforge.net/),
+Java code, including
+[Checkstyle](http://checkstyle.sourceforge.net/),
 [PMD](http://pmd.sourceforge.net/),
 [FindBugs](http://findbugs.sourceforge.net/),
 [Cobertura](http://cobertura.github.io/cobertura/), etc.
@@ -29,11 +30,15 @@ some fancy reports. Very often, those reports are published
 by [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 servers, like Jenkins.
 
-{% badge http://img.qulice.com/logo.svg 128 http://www.qulice.com %}
+<!--more-->
+
+{% jb_picture_body %}
 
 [Qulice](http://www.qulice.com) takes things one step further. It
 aggregates a few quality checkers, configures them to a maximum
 strict mode, and breaks your build if any of them fail.
+
+{% badge http://img.qulice.com/logo.svg 128 http://www.qulice.com %}
 
 Seriously. There are
 [over 130 checks](http://checkstyle.sourceforge.net/checks.html) in Checkstyle,
@@ -46,8 +51,6 @@ What do you think? Would it be convenient for you&mdash;to have your
 code rejected every time it breaks just one of 900 checks? Would it
 be productive for the team&mdash;to force developers to focus
 so much on code quality?
-
-<!--more-->
 
 ## First Reaction
 
@@ -99,8 +102,6 @@ be patient and try to get used to this new approach to
 [quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}).
 In a few weeks, those who stick with it start to understand why
 this approach is good for the project and for them, as Java engineers.
-
-{% jb_picture_body %}
 
 Why is it good? Read on.
 
