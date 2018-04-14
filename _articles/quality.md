@@ -10,26 +10,26 @@ be a concern of a project.
 Any software is being written by programmers, who, together with the source
 code that works as intended, create defective code or simply "bugs."
 One of the main goals of any software project is to lower the amount
-of bugs and to increase the so called quality of code.
+of bugs and to increase the so called quality of code [quote].
 
 There are well-known methods of finding bugs in the code, which include
 manual testing and peer reviews. However, those methods are rather reactive&mdash;they
 find bugs when the code already contains them and maybe already has been
-shipped to its users.
+shipped to its users [quote].
 
 Preventive methods of increasing the quality of code are more desireable,
-mostly because they are cheaper. One of the most popular of them and at the same
+mostly because they are cheaper [quote]. One of the most popular of them and at the same
 time the least obvious is "hiring better programmers." It is a very common
 misconception that more professional, expensive, and talented programmers
 create less bugs. In reality, the correlation
 [seems to be](http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html)
-the opposite.
+the opposite [quote].
 
 The next equally questionable method of increasing the quality of code
 is to blame programmers for the bugs they make. The negative effect
 of this approach, also known as [Fear Driven Development](https://jvns.ca/blog/2014/12/21/fear-makes-you-a-worse-programmer/),
 is bigger than its benefits: programmers get stressed,
-work much slower, and throw away a lot of code.
+work much slower, and throw away a lot of code [quote].
 
 Instead of putting the blame for the quality of code on the shoulders
 of programmers, it would be much more effective to let the project
@@ -50,12 +50,13 @@ complexity and importance):
     tests. If the actual amount of code covered by tests is lower than the pre-configured
     threshold, the build fails. It is expected that the higher
     the threshold, the stronger is the protection of the code by
-    automated tests. Even though this assumption has been criticized many times,
-    the absence of coverage control is definitely worse than wrongly
+    automated tests. Even though this assumption has been [criticized](https://www.thoughtworks.com/insights/blog/are-test-coverage-metrics-overrated)
+    many times, the absence of coverage control is definitely worse than wrongly
     covered code.
 
   * Mandatory **static analysis** with a number of pre-configured
-    analyzers, like Checkstyle or [Rubocop](https://github.com/bbatsov/rubocop), which go through the entire
+    analyzers, like [Checkstyle](http://checkstyle.sourceforge.net/) or
+    [Rubocop](https://github.com/bbatsov/rubocop), which go through the entire
     code base and find potentially problematic code blocks. They don't
     compile or execute the code. Instead they find where the code
     violates the rules and conventions of coding. For example,
@@ -80,8 +81,8 @@ complexity and importance):
     unless the build is clean. Of course, if the build is not
     automated or the test coverage is low, pre-flight builds won't help much.
 
-  * **Read-only master** branch, which nobody can push to, except the
-    pre-flight build server. All changes coming from programmers must
+  * **Read-only master** branch, which [nobody can push to](http://www.yegor256.com/2014/07/21/read-only-master-branch.html),
+    except the pre-flight build server. All changes coming from programmers must
     be validated and only then merged into the master. The restriction must
     be technical, not organizational&mdash;it must be impossible to push
     to the master due to pre-configured permission rules in the code repository.
