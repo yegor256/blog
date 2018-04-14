@@ -11,6 +11,9 @@
       margin-left: auto;
       margin-right: auto;
     }
+    p {
+      text-align: justify;
+    }
     a {
       color: inherit;
       text-decoration: none;
@@ -19,20 +22,33 @@
       background-repeat: repeat-x;
       background-size: 1px;
     }
-    section > p:first-child {
+    article > p:first-child {
       font-size: 2em;
     }
-    section > p:nth-child(2) {
+    article > p:nth-child(2) {
       font-style: italic;
       border-left: 1em solid black;
       padding-left: 1em;
+    }
+    .minor {
+       font-size: 0.8em;
+       color: gray;
     }
     </style>
   </head>
   <body>
     <section>
-      [content]
-      <p>
+      <p class="minor">
+        By <a href="http://www.yegor256.com/about-me.html">Yegor Bugayenko</a><br/>
+        CEO of <a href="http://www.zerocracy.com">Zerocracy</a> (AI bot to manage programmers)<br/>
+        Palo Alto, CA<br/>
+        <a href="mailto:yegor@zerocracy.com">yegor@zerocracy.com</a><br/>
+        408.692.4742
+      </p>
+      <article>
+        [content]
+      </article>
+      <p class="minor">
         [words] words.
       </p>
     </section>
