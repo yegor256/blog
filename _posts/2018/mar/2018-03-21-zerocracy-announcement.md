@@ -44,6 +44,8 @@ to risks and threats, we don't plan time and money, and we don't do many other
 things that [PMBOK](https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge)
 says we have to do in order to keep a project under control.
 
+{% youtube AwrMKTFyohg %}
+
 What do we do instead?
 
 We rely on our innate hierarchical instincts and hope for the best.
