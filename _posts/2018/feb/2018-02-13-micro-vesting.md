@@ -77,7 +77,7 @@ and the "value events" the startup is aiming to reach are pretty much disconnect
 
 {% quote Using microvesting with valuation and hourly rate the company can influence programmers' motivation. %}
 
-A more logical formula is **microvesting**, which we practice in projects managed
+A more logical formula is _microvesting_, which we practice in projects managed
 by [Zerocracy](http://www.zerocracy.com). It is as simple as that: A company has
 a valuation, which is set by its founders; let's say, it's $1,000,000. A programmer
 has an hourly rate, say, $40. Thus, when a [one-hour]({% pst 2017/nov/2017-11-28-microtasking %})
