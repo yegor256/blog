@@ -25,7 +25,7 @@ and definition. We basically define what needs to be done somehow, be it on a
 piece of napkin or a 100-page Word document. The next step is to
 turn this into a working piece of software as fast as possible and by spending as
 few dollars as possible. Ideally, this prototyping takes a week
-and is made by an architect working **solo**.
+and is made by an architect working _solo_.
 Once the "skeleton" is ready, we start putting software "meat" on it.
 We recruit a team of programmers for that or
 [outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
@@ -55,12 +55,12 @@ clear enough. It doesn't say anything about performance, but I
 can assume that it has to be as fast as Google. The same goes
 for scalability, stress resilience, etc.
 
-{% quote For each decision I made, there has to be at least one alternative that I considered and rejected %}
+{% quote For each decision I made, there has to be at least one alternative that I considered and rejected. %}
 
 I'm not going to discuss how the software is created in a specific
 technical stack. That's not important for this article. What's important now
 is how my programming work will be "wrapped." In other words, what will
-I hand off to the team of programmers after a week of hard work&mdash;what is my product, or more formally, my **deliverables**.
+I hand off to the team of programmers after a week of hard work&mdash;what is my product, or more formally, my _deliverables_.
 
 Thus, let's assume I managed to create a piece of software and it works.
 
@@ -86,7 +86,7 @@ Java 8 is a programming language, and JVM is a
   Ruby, Python, Go, Scala, and tons of others.
 {% endhighlight %}
 
-{% quote Each decision must be traceable to the person who made it %}
+{% quote Each decision must be traceable to the person who made it. %}
 
 These decisions are very high-level, but I still need to document them. As you
 see, I'm not explaining
@@ -115,7 +115,7 @@ Then, I attach a simple diagram to illustrate my decision:
 [Analyzer] - [Lucene]
 {% endplantuml %}
 
-As you see, in this case, I totally **ignored** all alternatives. I didn't even
+As you see, in this case, I totally _ignored_ all alternatives. I didn't even
 mention them. Again, I take full responsibility for that; I said,
 "I don't see any alternatives." If, later, a better alternative is
 discovered, it will be obvious why we overlooked it and whose fault
@@ -148,12 +148,12 @@ and I do what I think is right for the project.
 
 I'm trying to show that the point of this documentation is for
 me, the architect, to explain my way of thinking&mdash;no matter how bad,
-biased, or **irrational** it was. I have to write my decisions down and let the project
+biased, or _irrational_ it was. I have to write my decisions down and let the project
 [know]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 them all.
 
 I would suggest you keep the number of documented decisions somewhere
-between **four and twelve**. If there are fewer than four, I probably forgot
+between _four and twelve_. If there are fewer than four, I probably forgot
 to document something important. More than 12&mdash;I'm documenting
 too many non-important decisions. I should use other media for that,
 like JavaDoc blocks or responsive classes.
@@ -183,7 +183,7 @@ The bottleneck is in Lucene, and it is scalable
 vertically. Not sure about horizontal scalability.
 {% endhighlight %}
 
-As you see, I'm trying to be **honest** and tell the truth. We'll be able to
+As you see, I'm trying to be _honest_ and tell the truth. We'll be able to
 review these statements later and decide whether I was right or wrong. But
 we need to have my answers to all concerns expressed in the requirements.
 
@@ -192,7 +192,7 @@ we need to have my answers to all concerns expressed in the requirements.
 The next section is about assumptions I've made while working with the
 prototype. We usually make assumptions when we don't have enough factual
 information, and we basically fill the gaps. There is nothing wrong with
-it, but we have to document which **gaps** were filled and why.
+it, but we have to document which _gaps_ were filled and why.
 
 How about these two assumptions:
 
@@ -207,10 +207,10 @@ How about these two assumptions:
 I made these assumptions without proper analysis of the situation. I don't
 know whether Twitter will be happy to see millions of requests every hour
 coming from our server or not. Maybe it will ban us; I don't know. I don't
-have to evaluate this and find an exact answer. I just made an **assumption**
+have to evaluate this and find an exact answer. I just made an _assumption_
 and documented it.
 
-{% quote I just make an assumption and call it a day %}
+{% quote I just make an assumption and call it a day. %}
 
 Will it be enough to have Lucene only, without any additional data persistence
 layer? I don't know, but I _hope_ so. I don't have time to do a detailed
@@ -235,11 +235,11 @@ their probability and impact. Let me show you an example first:
 
 The first number in square brackets is the probability and the second one
 is the impact, on a 0 to 9 scale. If both numbers are nine, it's not a risk
-anymore; it's a **fact**. If both numbers are zero, we can simply ignore this
+anymore; it's a _fact_. If both numbers are zero, we can simply ignore this
 risk.
 
 I listed just two, but in a real system there should be somewhere
-between **four and twelve** risks. Too many risks is a sign that the prototype is
+between _four and twelve_ risks. Too many risks is a sign that the prototype is
 not focused enough, while too few is due to a lack of attention.
 
 ## Continuous Integration
@@ -260,16 +260,16 @@ covers all critical areas, including:
  * Collecting test coverage.
  * Generating documentation.
 
-{% quote The goal is to make the continuous integration pipeline as fragile as possible %}
+{% quote The goal is to make the continuous integration pipeline as fragile as possible. %}
 
 The stricter the pipeline, the better it is for the project. At this stage, my job,
 as an architect, is to build a "guard wall" around the product to protect
-it against future **chaos**. The chaos will come from programmers making
+it against future _chaos_. The chaos will come from programmers making
 changes through pull requests. They will care much less about the entire
 quality of the product than I do, and that's why I have to incorporate tools
 that keep the situation under control.
 
-My goal is to make the continuous integration pipeline as **fragile** as possible.
+My goal is to make the continuous integration pipeline as _fragile_ as possible.
 Any minor error should lead to a build failure. Of course, I'm talking about
 reproducible failures. The build should fail in a predictable way, not
 sporadically.
@@ -283,7 +283,7 @@ In the most primitive approach, a static analysis will check the formatting
 of your source code and fail the build when that formatting is broken. However,
 in a more advanced variant, static analysis will catch many important bugs.
 
-{% quote The fragility of the build is a key success factor in software development %}
+{% quote The fragility of the build is a key success factor in software development. %}
 
 It is called "static" because it doesn't require the software to be running.
 To the contrary, unit tests validate software quality in runtime
@@ -306,7 +306,7 @@ the build breaks.
 
 My job, as an architect creating a prototype, is to make sure the coverage
 is calculated on every build and is under control&mdash;it can't go
-lower than the **threshold** I set.
+lower than the _threshold_ I set.
 
 No matter how low the threshold is, what matters is whether it is under
 control or not.
@@ -348,12 +348,12 @@ If my solution won't be good enough for their criteria, they will
 [change]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
 the architect and try again.
 
-My objective is **not** to satisfy them but to do the best I can according
+My objective is _not_ to satisfy them but to do the best I can according
 to the requirements and my professional understanding of the problem and
 business domains. I wrote about this some time ago:
 [A Happy Boss Is a False Objective]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}).
 Again, my objective is not to make them happy. Instead, my objective is to make
-a perfect prototype, the way I understand the word **perfect**. If I fail,
+a perfect prototype, the way I understand the word _perfect_. If I fail,
 I fail. The project will get another architect and try again.
 
 That's it. The skeleton is ready, and my job is done.
