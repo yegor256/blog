@@ -62,6 +62,8 @@ strength of any army was ensured by its internal discipline, which
 was always about a clear and explicit chain of commands, rewards, and
 punishments.
 
+{% youtube AwrMKTFyohg %}
+
 The situation started to change only recently, in the 20th century.
 Three trends dramatically influenced the balance of power between
 employers and employees, masters and slaves, managers and managees:
