@@ -37,7 +37,7 @@ software design discipline ... and it's very _sad_ to see it.
 A good [software architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 as well as a [good project manager]({% pst 2015/sep/2015-09-22-micromanagement %}), doesn't need
 [meetings]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
-and **never** organizes them.
+and _never_ organizes them.
 
 {% youtube ibT5oKToMoQ %}
 
@@ -131,7 +131,7 @@ ask Jeff to pay attention to and resolve them.
 {% quote Train and discipline yourself to work with documents and let juniors enjoy their meetings %}
 
 The more we circle this document, the better it becomes. And every minute
-the project pays for turns into a tangible product: a **document**
+the project pays for turns into a tangible product: a _document_
 with a change history!
 
 That's how a professional architect collects opinions and
@@ -169,6 +169,8 @@ real human communication with a nice coffee break where we'll share our
 opinions about the last episode of The Bing Bang Theory. Isn't that what
 we all like about our [office jobs]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) anyway?
 
+{% youtube AwrMKTFyohg %}
+
 I don't think so.
 
 I think meetings demotivate, waste time, burn money, and degrade quality.
@@ -180,7 +182,7 @@ But even then, we had a pen and paper.
 
 I'm talking about meetings that are intended to collect or distribute information,
 discuss or propose something, or find a solution in a _technical_ domain.
-The only _valid purpose_ of meetings is to read **body language** of the people
+The only _valid purpose_ of meetings is to read _body language_ of the people
 you are dealing with. Politicians, businessmen, poker players,
 shrinks, physicians, etc.&mdash;they need meetings because they must
 read our bodies, not just our thoughts.
@@ -196,18 +198,18 @@ of his or her creativity. If I'm not mistaken, enjoying the process
 of creativity without any results is an obvious
 sign of mental illness. A healthy and creative person like a software
 engineer, for example, wants to see how his or her efforts are turned
-into something **valuable** and, preferably, **tangible**.
+into something _valuable_ and, preferably, _tangible_.
 
 Meetings almost never produce anything tangible and rarely something valuable.
 Sometimes we have "minutes"
 of our meetings, but they are just short pieces of paper with a brief
-summary of what we were talking about. Not a real "**product**" for a
+summary of what we were talking about. Not a real "_product_" for a
 creative person.
 
 Thus, they demotivate me because I simply don't see what
 [two hours]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 of my life were turned into. We don't really _create_ anything there,
-we just **discuss**. Pay attention here; I'm talking about meetings, not about
+we just _discuss_. Pay attention here; I'm talking about meetings, not about
 collaborative work on something, like in pair programming, for example.
 
 {% quote Did Einstein invent his theory at a meeting with his colleagues? %}
@@ -216,7 +218,7 @@ You may say that some meetings actually produce great ideas, which
 are very tangible results. You may say that only in a direct,
 face-to-face setting could these ideas be born. You may also
 say that many bright technical decisions were invented precisely due
-to a magic synergy of **friends** thinking in the same direction, at the
+to a magic synergy of _friends_ thinking in the same direction, at the
 same time, and in the same room. This argument makes sense, but I'll address that later.
 
 ## Meetings Waste Time
@@ -255,7 +257,7 @@ result they produce is almost equal to what a single person can deliver.
 Or much less.
 
 Even though this may sound extreme, I have to say that I consider meetings
-a legalized way to **rob** a project. Most meeting
+a legalized way to _rob_ a project. Most meeting
 organizers (architects, CTOs, CEOs, programmers, etc.) don't realize that.
 They believe the more they talk, the better engineers they are. And their
 bosses, by mistake, appreciate that sort of activity from their subordinates.
@@ -279,7 +281,7 @@ Quality goes up when it is being
 When someone tells me every
 day that my code is buggy and needs improvements, my quality goes up.
 When nobody cares what I do or how good my results are, my quality
-goes **down**, no matter how self-motivated I am.
+goes _down_, no matter how self-motivated I am.
 
 Meetings promote group achievements and
 [discourage]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
@@ -299,8 +301,8 @@ tangible feedback, like money or
 [code reviews]({% pst 2015/feb/2015-02-09-serious-code-reviewer %}).
 I want to know what
 was wrong in my DB schema draft and what I missed. And I want this to be
-documented somewhere. This is what makes me better, and this is how I **learn**
-and **grow**.
+documented somewhere. This is what makes me better, and this is how I _learn_
+and _grow_.
 
 ## What About the A-ha! Moment?
 
