@@ -127,7 +127,9 @@ public class TkUpload implements Take {
     library.register(
       new JsonBook(
         new RqPrint(
-          new RqMtSmart(new RqMtBase(req)).single("book")
+          new RqMtSmart(
+            new RqMtBase(req)
+          ).single("book")
         ).printBody()
       )
     );
