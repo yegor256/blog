@@ -36,7 +36,7 @@ programming. I'll try to add my two cents to this discussion.
 The gist of the following text is this: getters and setters is
 a terrible practice and those who use it can't be excused.
 Again, to avoid any misunderstanding, I'm not saying that get/set should be avoided when possible.
-No. I'm saying that you should **never** have them near your code.
+No. I'm saying that you should _never_ have them near your code.
 
 <!--more-->
 
@@ -90,11 +90,11 @@ an article by Bozhidar Bozhanov:
 and setters are simple data holders.
 
 This misconception is the consequence of a huge misunderstanding!
-Objects are not "simple data holders." Objects are **not** data structures
+Objects are not "simple data holders." Objects are _not_ data structures
 with attached methods. This "data holder" concept came to object-oriented programming
 from procedural languages, especially C and COBOL.
-I'll say it again: an object is **not** a set of data elements
-and functions that manipulate them. An object is **not** a data entity.
+I'll say it again: an object is _not_ a set of data elements
+and functions that manipulate them. An object is _not_ a data entity.
 
 What is it then?
 
@@ -195,8 +195,8 @@ give us some piece of data (for example, her weight), and she may
 return us that information. But we always remember that the dog is
 an active component. She decides what will happen after our request.
 
-That's why, **it is conceptually incorrect to have any methods starting
-with `set` or `get` in an object**. And it's not about breaking
+That's why, _it is conceptually incorrect to have any methods starting
+with `set` or `get` in an object_. And it's not about breaking
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}), like
 many people argue. It is whether you're thinking like an object
 or you're still writing COBOL in Java syntax.
