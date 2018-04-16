@@ -40,7 +40,7 @@ No. I'm saying that you should **never** have them near your code.
 
 <!--more-->
 
-{% badge /images/2014/09/object-thinking-by-david-west.png 96 http://amzn.to/266oJr4 %}
+{% jb_picture_body %}
 
 Arrogant enough to catch your attention? You've been using
 that get/set pattern for 15 years and you're a respected Java architect?
@@ -52,7 +52,7 @@ So please. Calm down and try to understand while I try to explain.
 
 ## Existing Arguments
 
-{% youtube WSgP85kr6eU %}
+{% badge /images/2014/09/object-thinking-by-david-west.png 96 http://amzn.to/266oJr4 %}
 
 There are a few arguments against "accessors"
 (another name for getters and setters), in an object-oriented world.
@@ -69,6 +69,8 @@ An object can be teared apart by other objects, since they
 are able to inject any new data into it, through setters. The object simply
 can't encapsulate its own state safely enough, since anyone
 can alter it.
+
+{% youtube WSgP85kr6eU %}
 
 **Exposed Implementation Details**
 If we can get an object out
@@ -161,8 +163,6 @@ dog can't give `NULL` back. Dogs simply don't know what `NULL` is :)
 Object thinking immediately eliminates
 [NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
-
-{% jb_picture_body %}
 
 Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:
