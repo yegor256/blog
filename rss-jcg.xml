@@ -1105,7 +1105,7 @@ programming. I&amp;#39;ll try to add my two cents to this discussion.&lt;/p&gt;
 &lt;p&gt;The gist of the following text is this: getters and setters is
 a terrible practice and those who use it can&amp;#39;t be excused.
 Again, to avoid any misunderstanding, I&amp;#39;m not saying that get/set should be avoided when possible.
-No. I&amp;#39;m saying that you should &lt;strong&gt;never&lt;/strong&gt; have them near your code.&lt;/p&gt;
+No. I&amp;#39;m saying that you should &lt;em&gt;never&lt;/em&gt; have them near your code.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 16 Sep 2014 00:00:00 +0000</pubDate>

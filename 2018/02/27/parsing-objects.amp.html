@@ -172,7 +172,9 @@ the DTO may encapsulate it, but that's not what DTOs are usually for.</p>
     library.register(
       new JsonBook(
         new RqPrint(
-          new RqMtSmart(new RqMtBase(req)).single("book")
+          new RqMtSmart(
+            new RqMtBase(req)
+          ).single("book")
         ).printBody()
       )
     );

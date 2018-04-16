@@ -85,11 +85,11 @@ programming. I'll try to add my two cents to this discussion.</p>
 <p>The gist of the following text is this: getters and setters is
 a terrible practice and those who use it can't be excused.
 Again, to avoid any misunderstanding, I'm not saying that get/set should be avoided when possible.
-No. I'm saying that you should <strong>never</strong> have them near your code.</p>
+No. I'm saying that you should <em>never</em> have them near your code.</p>
 
 
 
-
+<amp-img src="/images/2014/09/fish-called-wanda.png" alt="A Fish Called Wanda (1988) by Charles Crichton" height="684" width="1276" layout="responsive"></amp-img>
 
 <p>Arrogant enough to catch your attention? You've been using
 that get/set pattern for 15 years and you're a respected Java architect?
@@ -119,6 +119,8 @@ are able to inject any new data into it, through setters. The object simply
 can't encapsulate its own state safely enough, since anyone
 can alter it.</p>
 
+
+
 <p><strong>Exposed Implementation Details</strong>
 If we can get an object out
 of another object, we are relying too much on the first object's implementation
@@ -139,11 +141,11 @@ and setters are simple data holders.</p>
 </blockquote>
 
 <p>This misconception is the consequence of a huge misunderstanding!
-Objects are not "simple data holders." Objects are <strong>not</strong> data structures
+Objects are not "simple data holders." Objects are <em>not</em> data structures
 with attached methods. This "data holder" concept came to object-oriented programming
 from procedural languages, especially C and COBOL.
-I'll say it again: an object is <strong>not</strong> a set of data elements
-and functions that manipulate them. An object is <strong>not</strong> a data entity.</p>
+I'll say it again: an object is <em>not</em> a set of data elements
+and functions that manipulate them. An object is <em>not</em> a data entity.</p>
 
 <p>What is it then?</p>
 
@@ -207,8 +209,6 @@ Object thinking immediately eliminates
 <a href="/2014/05/13/why-null-is-bad.html">NULL references</a>
 from your code.</p>
 
-<amp-img src="/images/2014/09/fish-called-wanda.png" alt="A Fish Called Wanda (1988) by Charles Crichton" height="684" width="1276" layout="responsive"></amp-img>
-
 <p>Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:</p>
 
@@ -238,8 +238,8 @@ give us some piece of data (for example, her weight), and she may
 return us that information. But we always remember that the dog is
 an active component. She decides what will happen after our request.</p>
 
-<p>That's why, <strong>it is conceptually incorrect to have any methods starting
-with <code>set</code> or <code>get</code> in an object</strong>. And it's not about breaking
+<p>That's why, <em>it is conceptually incorrect to have any methods starting
+with <code>set</code> or <code>get</code> in an object</em>. And it's not about breaking
 <a href="/2016/11/21/naked-data.html">encapsulation</a>, like
 many people argue. It is whether you're thinking like an object
 or you're still writing COBOL in Java syntax.</p>

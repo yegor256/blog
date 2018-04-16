@@ -81,7 +81,7 @@ and definition. We basically define what needs to be done somehow, be it on a
 piece of napkin or a 100-page Word document. The next step is to
 turn this into a working piece of software as fast as possible and by spending as
 few dollars as possible. Ideally, this prototyping takes a week
-and is made by an architect working <strong>solo</strong>.
+and is made by an architect working <em>solo</em>.
 Once the "skeleton" is ready, we start putting software "meat" on it.
 We recruit a team of programmers for that or
 <a href="/2015/10/27/outsourcing-doesnt-work.html">outsource</a>
@@ -114,7 +114,7 @@ for scalability, stress resilience, etc.</p>
 <p>I'm not going to discuss how the software is created in a specific
 technical stack. That's not important for this article. What's important now
 is how my programming work will be "wrapped." In other words, what will
-I hand off to the team of programmers after a week of hard work—what is my product, or more formally, my <strong>deliverables</strong>.</p>
+I hand off to the team of programmers after a week of hard work—what is my product, or more formally, my <em>deliverables</em>.</p>
 
 <p>Thus, let's assume I managed to create a piece of software and it works.</p>
 
@@ -161,7 +161,7 @@ choices I've made: Lucene and Java 8.</p>
 
 <p></p>
 
-<p>As you see, in this case, I totally <strong>ignored</strong> all alternatives. I didn't even
+<p>As you see, in this case, I totally <em>ignored</em> all alternatives. I didn't even
 mention them. Again, I take full responsibility for that; I said,
 "I don't see any alternatives." If, later, a better alternative is
 discovered, it will be obvious why we overlooked it and whose fault
@@ -192,12 +192,12 @@ and I do what I think is right for the project.</p>
 
 <p>I'm trying to show that the point of this documentation is for
 me, the architect, to explain my way of thinking—no matter how bad,
-biased, or <strong>irrational</strong> it was. I have to write my decisions down and let the project
+biased, or <em>irrational</em> it was. I have to write my decisions down and let the project
 <a href="/2014/10/07/stop-chatting-start-coding.html">know</a>
 them all.</p>
 
 <p>I would suggest you keep the number of documented decisions somewhere
-between <strong>four and twelve</strong>. If there are fewer than four, I probably forgot
+between <em>four and twelve</em>. If there are fewer than four, I probably forgot
 to document something important. More than 12—I'm documenting
 too many non-important decisions. I should use other media for that,
 like JavaDoc blocks or responsive classes.</p>
@@ -223,7 +223,7 @@ Lucene is rather fast even with large amounts of data.</pre>
 <pre>The bottleneck is in Lucene, and it is scalable
 vertically. Not sure about horizontal scalability.</pre>
 
-<p>As you see, I'm trying to be <strong>honest</strong> and tell the truth. We'll be able to
+<p>As you see, I'm trying to be <em>honest</em> and tell the truth. We'll be able to
 review these statements later and decide whether I was right or wrong. But
 we need to have my answers to all concerns expressed in the requirements.</p>
 
@@ -232,7 +232,7 @@ we need to have my answers to all concerns expressed in the requirements.</p>
 <p>The next section is about assumptions I've made while working with the
 prototype. We usually make assumptions when we don't have enough factual
 information, and we basically fill the gaps. There is nothing wrong with
-it, but we have to document which <strong>gaps</strong> were filled and why.</p>
+it, but we have to document which <em>gaps</em> were filled and why.</p>
 
 <p>How about these two assumptions:</p>
 
@@ -245,7 +245,7 @@ it, but we have to document which <strong>gaps</strong> were filled and why.</p>
 <p>I made these assumptions without proper analysis of the situation. I don't
 know whether Twitter will be happy to see millions of requests every hour
 coming from our server or not. Maybe it will ban us; I don't know. I don't
-have to evaluate this and find an exact answer. I just made an <strong>assumption</strong>
+have to evaluate this and find an exact answer. I just made an <em>assumption</em>
 and documented it.</p>
 
 
@@ -271,11 +271,11 @@ their probability and impact. Let me show you an example first:</p>
 
 <p>The first number in square brackets is the probability and the second one
 is the impact, on a 0 to 9 scale. If both numbers are nine, it's not a risk
-anymore; it's a <strong>fact</strong>. If both numbers are zero, we can simply ignore this
+anymore; it's a <em>fact</em>. If both numbers are zero, we can simply ignore this
 risk.</p>
 
 <p>I listed just two, but in a real system there should be somewhere
-between <strong>four and twelve</strong> risks. Too many risks is a sign that the prototype is
+between <em>four and twelve</em> risks. Too many risks is a sign that the prototype is
 not focused enough, while too few is due to a lack of attention.</p>
 
 <h2 id="continuous-integration">Continuous Integration</h2>
@@ -302,12 +302,12 @@ covers all critical areas, including:</p>
 
 <p>The stricter the pipeline, the better it is for the project. At this stage, my job,
 as an architect, is to build a "guard wall" around the product to protect
-it against future <strong>chaos</strong>. The chaos will come from programmers making
+it against future <em>chaos</em>. The chaos will come from programmers making
 changes through pull requests. They will care much less about the entire
 quality of the product than I do, and that's why I have to incorporate tools
 that keep the situation under control.</p>
 
-<p>My goal is to make the continuous integration pipeline as <strong>fragile</strong> as possible.
+<p>My goal is to make the continuous integration pipeline as <em>fragile</em> as possible.
 Any minor error should lead to a build failure. Of course, I'm talking about
 reproducible failures. The build should fail in a predictable way, not
 sporadically.</p>
@@ -344,7 +344,7 @@ the build breaks.</p>
 
 <p>My job, as an architect creating a prototype, is to make sure the coverage
 is calculated on every build and is under control—it can't go
-lower than the <strong>threshold</strong> I set.</p>
+lower than the <em>threshold</em> I set.</p>
 
 <p>No matter how low the threshold is, what matters is whether it is under
 control or not.</p>
@@ -388,12 +388,12 @@ If my solution won't be good enough for their criteria, they will
 <a href="/2015/09/16/how-to-fire-someone-right.html">change</a>
 the architect and try again.</p>
 
-<p>My objective is <strong>not</strong> to satisfy them but to do the best I can according
+<p>My objective is <em>not</em> to satisfy them but to do the best I can according
 to the requirements and my professional understanding of the problem and
 business domains. I wrote about this some time ago:
 <a href="/2015/01/26/happy-boss-false-objective.html">A Happy Boss Is a False Objective</a>.
 Again, my objective is not to make them happy. Instead, my objective is to make
-a perfect prototype, the way I understand the word <strong>perfect</strong>. If I fail,
+a perfect prototype, the way I understand the word <em>perfect</em>. If I fail,
 I fail. The project will get another architect and try again.</p>
 
 <p>That's it. The skeleton is ready, and my job is done.</p>

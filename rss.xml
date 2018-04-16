@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-11T16:04:14+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Nine Steps of Learning by Refactoring</title><link href="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html" rel="alternate" type="text/html" title="Nine Steps of Learning by Refactoring" /><published>2018-04-10T00:00:00+00:00</published><updated>2018-04-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/10/learning-by-refactoring</id><content type="html" xml:base="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html">&lt;p&gt;I &lt;a href=&quot;https://twitter.com/yegor256/status/977799130100781056&quot;&gt;was asked&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-16T14:31:56+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Nine Steps of Learning by Refactoring</title><link href="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html" rel="alternate" type="text/html" title="Nine Steps of Learning by Refactoring" /><published>2018-04-10T00:00:00+00:00</published><updated>2018-04-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/10/learning-by-refactoring</id><content type="html" xml:base="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html">&lt;p&gt;I &lt;a href=&quot;https://twitter.com/yegor256/status/977799130100781056&quot;&gt;was asked&lt;/a&gt;
 on Twitter recently how is it possible to refactor
 if one doesn&amp;#39;t understand how the code works.
 I &lt;a href=&quot;https://twitter.com/yegor256/status/977966601227112449&quot;&gt;replied&lt;/a&gt;
@@ -203,7 +203,10 @@ that getting rid of &lt;code&gt;static&lt;/code&gt; is a more complex task.&lt;/
 &lt;p&gt;This is the final step and the most complex one. It&amp;#39;s complex because
 I configure static analyzers to their maximum potential or even more.
 I&amp;#39;m using &lt;a href=&quot;http://www.qulice.com&quot;&gt;Qulice&lt;/a&gt;,
-which is an aggregator of Checkstyle, PMD, and FindBugs.
+which is an aggregator of
+&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt;,
+&lt;a href=&quot;http://pmd.sourceforge.net/&quot;&gt;PMD&lt;/a&gt;, and
+&lt;a href=&quot;http://findbugs.sourceforge.net/&quot;&gt;FindBugs&lt;/a&gt;.
 Those guys are strong by themselves, but Qulice makes them
 &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;even stronger&lt;/a&gt;,
 adding a few dozen custom-made checks.&lt;/p&gt;
@@ -552,6 +555,14 @@ hardware is unstable.&lt;/p&gt;
 to risks and threats, we don&amp;#39;t plan time and money, and we don&amp;#39;t do many other
 things that &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge&quot;&gt;PMBOK&lt;/a&gt;
 says we have to do in order to keep a project under control.&lt;/p&gt;
+
+&lt;aside class=&#39;youtube&#39;&gt;
+        &lt;a href=&#39;https://www.youtube.com/watch?v=AwrMKTFyohg&#39;&gt;&lt;div class=&#39;box&#39;&gt;
+        &lt;img src=&#39;https://i.ytimg.com/vi/AwrMKTFyohg/mqdefault.jpg&#39; alt=&#39;YouTube video #AwrMKTFyohg&#39;/&gt;
+        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;#NoMagic;
+        13 April 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;What do we do instead?&lt;/p&gt;
 
@@ -1029,7 +1040,9 @@ the DTO may encapsulate it, but that&amp;#39;s not what DTOs are usually for.&lt
     &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JsonBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqPrint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtSmart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtSmart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
       &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
@@ -1120,7 +1133,7 @@ and the &amp;quot;value events&amp;quot; the startup is aiming to reach are pret
 
 &lt;aside class=&#39;quote&#39;&gt;Using microvesting with valuation and hourly rate the company can influence programmers&#39; motivation.&lt;/aside&gt;
 
-&lt;p&gt;A more logical formula is &lt;strong&gt;microvesting&lt;/strong&gt;, which we practice in projects managed
+&lt;p&gt;A more logical formula is &lt;em&gt;microvesting&lt;/em&gt;, which we practice in projects managed
 by &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;. It is as simple as that: A company has
 a valuation, which is set by its founders; let&amp;#39;s say, it&amp;#39;s $1,000,000. A programmer
 has an hourly rate, say, $40. Thus, when a &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;one-hour&lt;/a&gt;
