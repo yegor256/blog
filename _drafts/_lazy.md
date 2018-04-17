@@ -7,7 +7,7 @@ tags: management zerocracy
 description: |
   Solving technical problems in a large scope which
   is difficult to understand is a very stressful activity;
-  I suggest to behave professionally.
+  I suggest we behave professionally.
 keywords:
   - lazy
   - programming lazy
@@ -19,14 +19,14 @@ jb_picture:
   caption:
 ---
 
-What frustrates me most in my profession of a software developer
-is a regular necessity to understand large problem scopes before fixing
+What frustrates me most in my profession of software development
+is the regular necessity to understand large problem scopes before fixing
 small bugs, especially if the code is
 [legacy](https://en.wikipedia.org/wiki/Legacy_code) and not mine. Actually,
 it's even more frustrating when the code is mine. The "deep thinking," as
 [they call it](https://twitter.com/yegor256/status/984759494918987776),
-always required before even a small issue can be resolved, seriously
-turns me away from programming. Did turn me away. Until I started
+which is always required before even a small issue can be resolved, seriously
+turns me away from programming. Or did turn me away. Until I started
 to think differently and encourage myself to be lazy. Here is how.
 
 <!--more-->
@@ -46,10 +46,10 @@ One of the core [principles](http://www.zerocracy.com/toc.html) of Zerocracy is
 [#NoAltruism]().
 This literally means that
 you should always and only think about yourself and your personal profit. You should
-not try to improve the project, to increase its quality, to fix the code, or to refactor anything, ...
+not try to improve the project, to increase its quality, to fix the code, or to refactor anything...
 unless you are paid for it.
 
-First of all, when the task, which are you going to be paid for, is in front of you and
+First of all, when the task, which you are going to be paid for, is in front of you and
 you can't understand how to solve it, don't _blame_ yourself. You are not
 supposed to be an expert in the legacy code you just opened up.
 Strictly speaking, you are not supposed to be an expert in anything.
@@ -58,41 +58,41 @@ be intelligent or tech-savvy. It needs you to
 [close tickets]({% pst 2017/nov/2017-11-28-microtasking %}).
 
 Who do you blame, if not yourself, when the bug is serious, the
-code is messy, and you have no idea how much time it will take even to
-understand it, let alone the fixing part? You blame everybody around you,
+code is messy, and you have no idea how much time it will take just to
+understand it, let alone fix it? You blame everybody around you,
 but first of all you blame the code base itself. How do you blame it?
 You report its low quality by creating new tickets, which may sound
 like this:
 
-  * "The class X is not sufficiently documented, I can't understand how it works."
-  * "The method X is too complex, I can't figure out what it does."
-  * "The algorithm X is messy, can't figure out what it does."
-  * "The library X is used here, but I don't understand why not library Y."
+  * "The class X is not sufficiently documented, I don't understand how it works."
+  * "The method X is too complex, I don't know what it does."
+  * "The algorithm X is messy, I can't figure out what it does."
+  * "The library X is used here, but I don't understand why you don't use library Y."
   * "The rules of class naming are not clear, document them please."
   * "The principle of data organization is not obvious, document it."
 
-However, don't make a mistake many programmers are making, when we tell
-them that tickets is the only
+However, don't make the mistake many programmers are making when we tell
+them that tickets are the only
 [right way]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
-to solve problems. They start asking questions and seeking help, just like this:
+to solve problems. They start asking questions and seeking help in the tickets, just like this:
 
   * "How can I unit test class X, please explain."
-  * "Please, help me create a class X."
+  * "Please help me create class X."
   * "Where should I put class X, in which package?"
   * "Which library should I use for doing X?"
 
 The project is [not a school]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}),
 it's not interested in making you smarter
-or a bigger expert in its code. Nobody will explain _you_ anything,
+or more of an expert in its code. Nobody will explain anything to _you_,
 because it's a waste of money and time. What the project will do instead is
-fixing its code base so that it becomes cleaner and more obvious for
-you and _everybody else_. Thus, never ask for explanation or help, ask for
+fix its code base so that it becomes cleaner and more obvious for
+you _and everybody else_. Thus, never ask for explanation or help, ask for
 documentation and source code fixes.
 
 What do you do next? You sit and wait, until those tickets are resolved.
-Who will resolve them? You don't care. It's a problem of the project manager.
+Who will resolve them? You don't care. That's a problem for the project manager.
 Maybe he/she will even assign those tickets back to you and it will
-be your problem to resolve. But if that happens, the scope of work will
+be your problem to resolve them. But if that happens, the scope of work will
 be different for you. You won't need to fix the bug anymore, you will
 have to document some functionality or refactor some module.
 
@@ -113,23 +113,23 @@ real life and real software projects, for a few obvious psychological reasons:
     You want to complete the entire ticket, solve the entire problem,
     and understand the entire scope.
     What can I say?
-    This won't be solved until the project pays you
+    This won't be solved while the project continues to pay you
     [by the hour/month]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
     Once they start paying for results, this disease will be cured.
 
   * **You have no passion**.
     You just don't care about the quality of code at all.
-    You don't want it to look clean, you can't even tell what is clean
-    and what is messy. You just want them to pay you by the end
-    of the month. In such a case you won't even know what tickets to
+    You don't want it to look clean, you can't even tell what clean is
+    or what messy is. You just want them to pay you by the end
+    of the month. In this case you won't even know what tickets to
     report.
     What can I say?
-    I guess you have to try to find another job.
+    I guess you have to try and find another job.
     Maybe a [manager]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})?
 
   * **You are afraid**.
     Blaming the project and reporting tickets may look like you
-    have a negative attitude towards the code base and people, which
+    have a negative attitude towards the code base, and people who
     created it, which is not true. Instead, your attitude is
     [positive]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}),
     since you care about it and want it to get better.
@@ -139,15 +139,15 @@ real life and real software projects, for a few obvious psychological reasons:
 
   * **You have no time**.
     You have to solve the problem now and you have no time to wait
-    for the resolution of those complaints you report.
+    for the resolution of those complaints you reported.
     What can I say?
     Blame the management and require more time. Much more time.
     But never blame yourself.
 
-Software development is a perfect territory for
+Software development is perfect territory for
 [cutting corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}),
-being lazy and remain calm, because our work is rather descreet and can
-be very incremental. Very rarely it wouldn't be possible to blame the project
-and put the ticket on pause until all those complaints are addressed.
-I can't imagine such situations. If you can, please let me know.
+being lazy and remaining calm, because our work is often descrete and can
+be very incremental. Very occasionally it might not be possible to blame the project
+and put the ticket on pause until all your complaints are addressed.
+I can't imagine such a situation though. If you can, please let me know.
 
