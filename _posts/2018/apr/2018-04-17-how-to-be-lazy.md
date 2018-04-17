@@ -42,6 +42,8 @@ question over and over again: What should I do when the project is absolutely
 new to me, I have just [30 minutes]({% pst 2018/jan/2018-01-09-micro-budgeting %}),
 and the bug is very complex?
 
+{% quote This literally means that you should always and only think about yourself and your personal profit. %}
+
 One of the core [principles](http://www.zerocracy.com/toc.html) of Zerocracy is
 `#NoAltruism`.
 This literally means that
@@ -88,6 +90,8 @@ because it's a waste of money and time. What the project will do instead is
 fix its code base so that it becomes cleaner and more obvious for
 you _and everybody else_. Thus, never ask for explanation or help, ask for
 documentation and source code fixes.
+
+{% quote You can blame everybody around you, but first of all you should blame the code base itself. %}
 
 What do you do next? You sit and wait, until those tickets are resolved.
 Who will resolve them? You don't care. That's a problem for the project manager.
