@@ -109,7 +109,8 @@ will happen later in other pull requests with new
 [code reviews]({% pst 2015/feb/2015-02-09-serious-code-reviewer %})
 and new merges.
 
-It's not about being lazy and unwilling to fix what looks bad. It's about
+It's not about being [lazy]({% pst 2018/apr/2018-04-17-how-to-be-lazy %})
+and unwilling to fix what looks bad. It's about
 a discipline, which is [much more important]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
 than good intentions.
 

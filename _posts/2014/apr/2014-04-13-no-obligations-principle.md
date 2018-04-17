@@ -131,7 +131,9 @@ usually happens with traditional projects. He will just take the task away from
 you after ten days if you don’t finish it. To avoid that, you should control
 your tasks and their deadlines.
 
-With every task, try to be as lazy as possible and cut every corner you can. The
+With every task, try to be as
+[lazy]({% pst 2018/apr/2018-04-17-how-to-be-lazy %})
+as possible and cut every corner you can. The
 smaller the amount of work you perform on a task, the easier it will be to
 deliver it and pass all quality controls.
 

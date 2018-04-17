@@ -225,7 +225,8 @@ same time, and in the same room. This argument makes sense, but I'll address tha
 
 I think it's obvious. For the first few minutes of the meeting, you're concentrated;
 then you start checking your Twitter feed and doodling. Everybody is doing
-the same&mdash;not because we're lazy but because there is _no demand_
+the same&mdash;not because we're [lazy]({% pst 2018/apr/2018-04-17-how-to-be-lazy %})
+but because there is _no demand_
 for our full focus at the meeting.
 
 {% youtube pt9uHp35fwM %}

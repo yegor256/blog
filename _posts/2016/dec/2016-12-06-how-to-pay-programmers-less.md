@@ -31,7 +31,8 @@ jb_picture:
 ---
 
 To create software, you need programmers. Unfortunately. They are expensive,
-lazy, and almost impossible to control. The software they create either works or doesn't, but
+[lazy]({% pst 2018/apr/2018-04-17-how-to-be-lazy %}),
+and almost impossible to control. The software they create either works or doesn't, but
 you still have to pay them, every month. Of course, it's always better to pay less.
 However, sometimes they may figure out they are being
 underpaid and quit. How do you prevent that? [Unfortunately]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}),
