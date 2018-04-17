@@ -1589,6 +1589,7 @@ cunning
 cup
 cups
 curators
+cured
 curiosity
 curious
 curled
@@ -1945,6 +1946,7 @@ discover
 discovered
 discovering
 discovery
+discrete
 discriminate
 discriminates
 discrimination
@@ -2849,6 +2851,7 @@ generic
 generics
 generous
 genetically
+gentle
 gentleman
 gentlemen
 geographic
@@ -4983,6 +4986,7 @@ percentage
 perdita
 perfect
 perfection
+perfectionist
 perfectly
 perfecto
 perform
@@ -6050,6 +6054,7 @@ scientist
 scientists
 SCM
 scope
+scopes
 scoping
 score
 scott
@@ -6093,6 +6098,7 @@ see
 seed
 seedramp
 seeing
+seeking
 seeks
 seem
 seemed
@@ -6721,6 +6727,7 @@ suffered
 suffering
 suffers
 sufficient
+sufficiently
 suffix
 suffixes
 sugar
@@ -6861,6 +6868,7 @@ tear
 teared
 tearing
 tech
+tech-savvy
 technical
 technically
 technically-savvy

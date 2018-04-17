@@ -1,4 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-16T15:31:59+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Nine Steps of Learning by Refactoring</title><link href="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html" rel="alternate" type="text/html" title="Nine Steps of Learning by Refactoring" /><published>2018-04-10T00:00:00+00:00</published><updated>2018-04-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/10/learning-by-refactoring</id><content type="html" xml:base="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html">&lt;p&gt;I &lt;a href=&quot;https://twitter.com/yegor256/status/977799130100781056&quot;&gt;was asked&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-17T11:13:08+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Be Lazy and Stay Calm</title><link href="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html" rel="alternate" type="text/html" title="How to Be Lazy and Stay Calm" /><published>2018-04-17T00:00:00+00:00</published><updated>2018-04-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/17/how-to-be-lazy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html">&lt;p&gt;What frustrates me most in my profession of software development
+is the regular necessity to understand large problem scopes before fixing
+small bugs, especially if the code is
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Legacy_code&quot;&gt;legacy&lt;/a&gt; and not mine. Actually,
+it&amp;#39;s even more frustrating when the code &lt;em&gt;is&lt;/em&gt; mine. The &amp;quot;deep thinking,&amp;quot; as
+&lt;a href=&quot;https://twitter.com/yegor256/status/984759494918987776&quot;&gt;they call it&lt;/a&gt;,
+which is always required before even a small issue can be resolved, seriously
+turns me away from programming. Or did turn me away. Until I started
+to think differently and encourage myself to be lazy. Here is how.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Sin City (2005) by Frank Miller&#39; src=&#39;/images/2018/04/sin-city.jpg&#39; longdesc=&#39;#fcd454d6&#39;/&gt;&lt;figcaption id=&#39;fcd454d6&#39;&gt;Sin City (2005) by Frank Miller&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I wrote about this a few years ago in this blog post:
+&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;How to Cut Corners and Stay Cool&lt;/a&gt;.
+However, in &lt;a href=&quot;https://t.me/joinchat/CLxAaQ0xp-g_3WWI3MBr2g&quot;&gt;our Telegram group&lt;/a&gt;,
+where we talk about &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;,
+some programmers keep asking me the same
+question over and over again: What should I do when the project is absolutely
+new to me, I have just &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;30 minutes&lt;/a&gt;,
+and the bug is very complex?&lt;/p&gt;
+
+&lt;p&gt;One of the core &lt;a href=&quot;http://www.zerocracy.com/toc.html&quot;&gt;principles&lt;/a&gt; of Zerocracy is
+&lt;code&gt;#NoAltruism&lt;/code&gt;.
+This literally means that
+you should always and only think about yourself and your personal profit. You should
+not try to improve the project, to increase its quality, to fix the code, or to refactor anything...
+unless you are paid for it.&lt;/p&gt;
+
+&lt;p&gt;First of all, when the task, which you are going to be paid for, is in front of you and
+you can&amp;#39;t understand how to solve it, don&amp;#39;t &lt;em&gt;blame yourself&lt;/em&gt;. You are not
+supposed to be an expert in the legacy code you just opened up.
+Strictly speaking, you are not supposed to be an expert in anything.
+A project, &lt;del&gt;unlike your mom&lt;/del&gt;, doesn&amp;#39;t expect you to
+be intelligent or tech-savvy. It needs you to
+&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;close tickets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Who do you blame, if not yourself, when the bug is serious, the
+code is messy, and you have no idea how much time it will take just to
+understand it, let alone fix it? Well, you can blame everybody around you,
+but first of all you should blame the code base itself. How do you blame it?
+You report its low quality by creating new tickets, which may sound
+like this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;The class X is not sufficiently documented, I don&amp;#39;t understand how it works.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;The method X is too complex, I don&amp;#39;t know what it does.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;The algorithm X is messy, I can&amp;#39;t figure out what it does.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;The library X is used here, but I don&amp;#39;t understand why you don&amp;#39;t use library Y.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;The rules of class naming are not clear, document them please.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;The principle of data organization is not obvious, document it.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, don&amp;#39;t make the mistake many programmers are making when we tell
+them that tickets are the only
+&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;right way&lt;/a&gt;
+to solve problems. They start asking questions and seeking help in the tickets, just like this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;How can I unit test class X, please explain.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;Please help me create class X.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;Where should I put class X, in which package?&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;Which library should I use for doing X?&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The project is &lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;not a school&lt;/a&gt;,
+it&amp;#39;s not interested in making you smarter
+or more of an expert in its code. Nobody will explain anything to &lt;em&gt;you&lt;/em&gt;,
+because it&amp;#39;s a waste of money and time. What the project will do instead is
+fix its code base so that it becomes cleaner and more obvious for
+you &lt;em&gt;and everybody else&lt;/em&gt;. Thus, never ask for explanation or help, ask for
+documentation and source code fixes.&lt;/p&gt;
+
+&lt;p&gt;What do you do next? You sit and wait, until those tickets are resolved.
+Who will resolve them? You don&amp;#39;t care. That&amp;#39;s a problem for the project manager.
+Maybe he/she will even assign those tickets back to you and it will
+be your problem to resolve them. But if that happens, the scope of work will
+be different for you. You won&amp;#39;t need to fix the bug anymore, you will
+have to document some functionality or refactor some module.&lt;/p&gt;
+
+&lt;p&gt;You will have other problems in this new and smaller scope.
+You will create new tickets, blaming everybody around you, and they also
+may come back to you. And so on and so forth. Ultimately, the scope
+of a ticket will be as small as it&amp;#39;s possible to fix in 30 minutes.&lt;/p&gt;
+
+&lt;p&gt;See the algorithm? I&amp;#39;m sure you do, but it&amp;#39;s very difficult to apply it to
+real life and real software projects, for a few obvious psychological reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;You are ashamed&lt;/strong&gt;.
+You are trained to feel guilty when you are not smart enough.
+What can I say?
+Just &lt;a href=&quot;https://www.youtube.com/watch?v=Ow0lr63y4Mw&quot;&gt;stop it&lt;/a&gt;!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;You are a &lt;a href=&quot;https://en.wikipedia.org/wiki/Perfectionism_%28psychology%29&quot;&gt;perfectionist&lt;/a&gt;&lt;/strong&gt;.
+You want to complete the entire ticket, solve the entire problem,
+and understand the entire scope.
+What can I say?
+This won&amp;#39;t be solved while the project continues to pay you
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;by the hour/month&lt;/a&gt;.
+Once they start paying for results, this disease will be cured.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;You have no passion&lt;/strong&gt;.
+You just don&amp;#39;t care about the quality of code at all.
+You don&amp;#39;t want it to look clean, you can&amp;#39;t even tell what clean is
+or what messy is. You just want them to pay you by the end
+of the month. In this case you won&amp;#39;t even know what tickets to
+report.
+What can I say?
+I guess you have to try and find another job.
+Maybe a &lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;manager&lt;/a&gt;?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;You are afraid&lt;/strong&gt;.
+Blaming the project and reporting tickets may look like you
+have a negative attitude towards the code base, and people who
+created it, which is not true. Instead, your attitude is
+&lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;positive&lt;/a&gt;,
+since you care about it and want it to get better.
+What can I say?
+Make your tickets sound extremely polite and gentle.
+But keep reporting them.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;You have no time&lt;/strong&gt;.
+You have to solve the problem now and you have no time to wait
+for the resolution of those complaints you reported.
+What can I say?
+Blame the management and require more time. Much more time.
+But never blame yourself.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Software development is perfect territory for
+&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;cutting corners&lt;/a&gt;,
+being lazy and remaining calm, because our work is often discrete and can
+be very incremental. Very occasionally it might not be possible to blame the project
+and put the ticket on pause until all your complaints are addressed.
+I can&amp;#39;t imagine such a situation though. If you can, please let me know.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="zerocracy" /><summary type="html">What frustrates me most in my profession of software development
+is the regular necessity to understand large problem scopes before fixing
+small bugs, especially if the code is
+legacy and not mine. Actually,
+it&amp;#39;s even more frustrating when the code is mine. The &amp;quot;deep thinking,&amp;quot; as
+they call it,
+which is always required before even a small issue can be resolved, seriously
+turns me away from programming. Or did turn me away. Until I started
+to think differently and encourage myself to be lazy. Here is how.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/04/sin-city.jpg" /></entry><entry><title type="html">Nine Steps of Learning by Refactoring</title><link href="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html" rel="alternate" type="text/html" title="Nine Steps of Learning by Refactoring" /><published>2018-04-10T00:00:00+00:00</published><updated>2018-04-10T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/10/learning-by-refactoring</id><content type="html" xml:base="http://www.yegor256.com/2018/04/10/learning-by-refactoring.html">&lt;p&gt;I &lt;a href=&quot;https://twitter.com/yegor256/status/977799130100781056&quot;&gt;was asked&lt;/a&gt;
 on Twitter recently how is it possible to refactor
 if one doesn&amp;#39;t understand how the code works.
 I &lt;a href=&quot;https://twitter.com/yegor256/status/977966601227112449&quot;&gt;replied&lt;/a&gt;
@@ -1255,99 +1395,4 @@ if they are found by us, not our customers.
 We pay our programmers for
 each bug
 they find. Here is a cheat sheet for them, showing where
-and how they can find those bugs, to make more money.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/02/american-honey.jpg" /></entry><entry><title type="html">Are You a Coder or a Developer?</title><link href="http://www.yegor256.com/2018/01/23/sociotech-skills.html" rel="alternate" type="text/html" title="Are You a Coder or a Developer?" /><published>2018-01-23T00:00:00+00:00</published><updated>2018-01-23T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/01/23/sociotech-skills</id><content type="html" xml:base="http://www.yegor256.com/2018/01/23/sociotech-skills.html">&lt;p&gt;Software development and coding are two different things. Usually,
-the former includes the latter, but not always. Coding produces
-lines of code, while software development creates products. Unfortunately,
-the majority of programmers joining &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;
-now are &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;coders&lt;/a&gt;.
-Even though they claim to be developers, in reality they are lacking the very
-important &lt;a href=&quot;https://en.wikipedia.org/wiki/Sociotechnical_system&quot;&gt;sociotechnical&lt;/a&gt;
-skills that differentiate product creators from lines-of-code writers.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Hard Men (1996) by J.K. Amalou&#39; src=&#39;/images/2018/01/hardmen.jpg&#39; longdesc=&#39;#716b804f&#39;/&gt;&lt;figcaption id=&#39;716b804f&#39;&gt;Hard Men (1996) by J.K. Amalou&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let me show you the symptoms first.&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#39;s call him Mario. He is a very skilled
-Java developer, as his &lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;resume&lt;/a&gt;
-says. He&amp;#39;s been in the industry for ten years or so,
-done a few enterprise projects; he seems to be very seasoned. We give him
-access to the project and assign a few GitHub tickets.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;Dude, I love you like a brother, but I don&#39;t have time to answer your questions.&lt;/aside&gt;
-
-&lt;p&gt;In a few hours I get a Facebook message a page long. It says that
-he is very glad to be on the project, but &lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;doesn&amp;#39;t understand&lt;/a&gt;
-a thing yet
-and needs help. Here is a list of questions he prepared and he&amp;#39;s ready for
-a phone call to get them answered.&lt;/p&gt;
-
-&lt;p&gt;I reply: &amp;quot;Dude, I love you like a brother, but I don&amp;#39;t have time to answer
-your questions. Not because I&amp;#39;m lazy or don&amp;#39;t appreciate your work... Actually,
-yes, exactly because of that. I am lazy and don&amp;#39;t want to answer any questions over Messenger.
-My answers will be totally wasted, if you, for example, quit the project
-tomorrow. Or if someone else joins us in a week and has
-exactly the same set of questions. Do I have to explain all over again? I&amp;#39;m too
-&lt;del&gt;old&lt;/del&gt; lazy for that.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;He most probably thinks that I&amp;#39;m an &lt;a href=&quot;/testimonials.html&quot;&gt;arrogant prick&lt;/a&gt;, but what can he do? He
-reads &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;my article&lt;/a&gt;
-on this very subject and says &amp;quot;OK, I got it.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;In half an hour Mario submits a ticket to another (!) repository. The title
-is &amp;quot;The problem&amp;quot; and the description says &amp;quot;Help me understand the project.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;What do I do, as an architect of the project? I close the ticket with a quick
-message: &amp;quot;Please, make your tickets more specific.&amp;quot; My response is just one
-step away from &amp;quot;Get lost,&amp;quot; but what else can I say? Mario doesn&amp;#39;t know
-&lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;how to use&lt;/a&gt;
-the ticketing system. He&amp;#39;s most probably been working all his life
-in a &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;cozy office&lt;/a&gt;,
-where everybody around was his friend. Not even using
-chat, just asking questions across the table. I&amp;#39;m asking him to
-do something he has never done before. Of course, he doesn&amp;#39;t know how.
-He feels ashamed, I suspect.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;The bottom line is that Mario is not a software developer, he&#39;s a coder.&lt;/aside&gt;
-
-&lt;p&gt;What happens next? He comes right back at me in Messenger, with the same
-set of questions. Actually, his reaction will depend on his personality.
-It may either be anger, confusion, or
-&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;something else&lt;/a&gt;. But the bottom line
-is that Mario is not a software developer, he&amp;#39;s a coder.
-He doesn&amp;#39;t understand the dynamics of a modern software project, he doesn&amp;#39;t
-know how to use its
-&lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;communication&lt;/a&gt;
-instruments, and he has no sociotechnical skills:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Searching for, and finding, information&lt;/li&gt;
-&lt;li&gt;Submitting questions, collecting answers&lt;/li&gt;
-&lt;li&gt;Adding knowledge to the repository&lt;/li&gt;
-&lt;li&gt;Submitting code changes&lt;/li&gt;
-&lt;li&gt;Arguing in writing, reviewing changes&lt;/li&gt;
-&lt;li&gt;Closing tickets and preventing them from closing&lt;/li&gt;
-&lt;li&gt;Maintaining discipline in repositories&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The same happens to almost everybody who joins us, unfortunately.&lt;/p&gt;
-
-&lt;p&gt;A modern software project is much more a social activity than code writing.
-Knowing how to interact with the team and deal with information
-is much more important than knowing how to use design patterns. The only
-way to learn these skills is &lt;em&gt;practice&lt;/em&gt;. I&amp;#39;ve &lt;a href=&quot;https://www.facebook.com/yegor256/videos/10214943124281537/&quot;&gt;said it&lt;/a&gt;
-&lt;a href=&quot;https://www.youtube.com/watch?v=GS45LzE3LPQ&quot;&gt;many times&lt;/a&gt;,
-let me repeat it again: If you are not an
-&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;open source&lt;/a&gt;
-and StackOverflow
-&lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;activist&lt;/a&gt;, you most
-likely won&amp;#39;t have these skills.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Software development and coding are two different things. Usually,
-the former includes the latter, but not always. Coding produces
-lines of code, while software development creates products. Unfortunately,
-the majority of programmers joining Zerocracy
-now are coders.
-Even though they claim to be developers, in reality they are lacking the very
-important sociotechnical
-skills that differentiate product creators from lines-of-code writers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/01/hardmen.jpg" /></entry></feed>
+and how they can find those bugs, to make more money.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/02/american-honey.jpg" /></entry></feed>
