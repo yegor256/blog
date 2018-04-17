@@ -11,11 +11,11 @@ keywords:
   - java blog
   - programming blog
   - blog about software
-image: /images/angry-testimonials.png
+image: /images/andreea/angry-testimonials.png
 nospell: true
 ---
 
-{% badge /images/angry-testimonials.png 220 %}
+{% badge /images/andreea/angry-testimonials.png 220 %}
 
 <strong class='red'>WARNING</strong>:
 The text you are about to read is of a mature matter.
