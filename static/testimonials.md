@@ -67,6 +67,10 @@ programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-revie
 
 "You're a smug, pontificating prick."&mdash;anonymous
 
+"You're promoting waterfall, cutting corners, illegible code, dysfunctional social team dynamics,
+bad design principles and basically ignoring reality and anything
+our industry has achieved in the last decade."&mdash;[Lieven D.](https://twitter.com/lievendoclo/status/986257188803969025)
+
 "You are a moron that probably does not work in any real application ever, and I hope you won't"&mdash;[Peter V.](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2854491117)
 
 "You're nothing more then a code monkey and I'd never hire you"&mdash;[h3_t3ch](http://www.yegor256.com/2017/03/28/solid.html#comment-3260179760)
