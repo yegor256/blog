@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Be Lazy and Stay Calm"
-date: 2018-04-20
+date: 2018-04-17
 place: Moscow, Russia
 tags: management zerocracy
 description: |
@@ -14,9 +14,9 @@ keywords:
   - lazy and calm
   - zerocracy
   - noaltruism
-image: /images/2018/04/
+image: /images/2018/04/sin-city.jpg
 jb_picture:
-  caption:
+  caption: Sin City (2005) by Frank Miller
 ---
 
 What frustrates me most in my profession of software development
@@ -43,7 +43,7 @@ new to me, I have just [30 minutes]({% pst 2018/jan/2018-01-09-micro-budgeting %
 and the bug is very complex?
 
 One of the core [principles](http://www.zerocracy.com/toc.html) of Zerocracy is
-[#NoAltruism]().
+`#NoAltruism`.
 This literally means that
 you should always and only think about yourself and your personal profit. You should
 not try to improve the project, to increase its quality, to fix the code, or to refactor anything...
