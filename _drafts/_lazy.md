@@ -23,7 +23,7 @@ What frustrates me most in my profession of software development
 is the regular necessity to understand large problem scopes before fixing
 small bugs, especially if the code is
 [legacy](https://en.wikipedia.org/wiki/Legacy_code) and not mine. Actually,
-it's even more frustrating when the code is mine. The "deep thinking," as
+it's even more frustrating when the code _is_ mine. The "deep thinking," as
 [they call it](https://twitter.com/yegor256/status/984759494918987776),
 which is always required before even a small issue can be resolved, seriously
 turns me away from programming. Or did turn me away. Until I started
@@ -50,7 +50,7 @@ not try to improve the project, to increase its quality, to fix the code, or to 
 unless you are paid for it.
 
 First of all, when the task, which you are going to be paid for, is in front of you and
-you can't understand how to solve it, don't _blame_ yourself. You are not
+you can't understand how to solve it, don't _blame yourself_. You are not
 supposed to be an expert in the legacy code you just opened up.
 Strictly speaking, you are not supposed to be an expert in anything.
 A project, <del>unlike your mom</del>, doesn't expect you to
@@ -59,8 +59,8 @@ be intelligent or tech-savvy. It needs you to
 
 Who do you blame, if not yourself, when the bug is serious, the
 code is messy, and you have no idea how much time it will take just to
-understand it, let alone fix it? You blame everybody around you,
-but first of all you blame the code base itself. How do you blame it?
+understand it, let alone fix it? Well, you can blame everybody around you,
+but first of all you should blame the code base itself. How do you blame it?
 You report its low quality by creating new tickets, which may sound
 like this:
 
@@ -146,7 +146,7 @@ real life and real software projects, for a few obvious psychological reasons:
 
 Software development is perfect territory for
 [cutting corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}),
-being lazy and remaining calm, because our work is often descrete and can
+being lazy and remaining calm, because our work is often discrete and can
 be very incremental. Very occasionally it might not be possible to blame the project
 and put the ticket on pause until all your complaints are addressed.
 I can't imagine such a situation though. If you can, please let me know.
