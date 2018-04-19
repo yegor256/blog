@@ -45,7 +45,7 @@ and the bug is very complex?
 {% quote This literally means that you should always and only think about yourself and your personal profit. %}
 
 One of the core [principles](http://www.zerocracy.com/toc.html) of Zerocracy is
-`#NoAltruism`.
+[#NoAltruism](https://www.youtube.com/watch?v=TpduNpwCq40).
 This literally means that
 you should always and only think about yourself and your personal profit. You should
 not try to improve the project, to increase its quality, to fix the code, or to refactor anything...
@@ -58,6 +58,8 @@ Strictly speaking, you are not supposed to be an expert in anything.
 A project, <del>unlike your mom</del>, doesn't expect you to
 be intelligent or tech-savvy. It needs you to
 [close tickets]({% pst 2017/nov/2017-11-28-microtasking %}).
+
+{% youtube TpduNpwCq40 %}
 
 Who do you blame, if not yourself, when the bug is serious, the
 code is messy, and you have no idea how much time it will take just to
