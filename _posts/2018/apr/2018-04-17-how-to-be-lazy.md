@@ -45,7 +45,7 @@ and the bug is very complex?
 {% quote This literally means that you should always and only think about yourself and your personal profit. %}
 
 One of the core [principles](http://www.zerocracy.com/toc.html) of Zerocracy is
-[#NoAltruism](https://www.youtube.com/watch?v=TpduNpwCq40).
+[#NoAltruism](https://www.youtube.com/watch?v=vXUwE3FGfpg).
 This literally means that
 you should always and only think about yourself and your personal profit. You should
 not try to improve the project, to increase its quality, to fix the code, or to refactor anything...

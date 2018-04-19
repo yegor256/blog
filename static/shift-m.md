@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/james-bach.png" class="guest-face" alt="James Bach photo"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;26: [Software testing with James Bach](/shift-m/2018/26.html)<br/>
+19 April 2018; 60 min.
+
 <img src="/images/shift-m/ricardo-vargas.png" class="guest-face" alt="Ricardo Vargas photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;25: [Risk management with Ricardo Vargas](/shift-m/2018/25.html)<br/>
