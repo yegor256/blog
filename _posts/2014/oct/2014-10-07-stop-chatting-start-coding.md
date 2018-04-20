@@ -30,6 +30,10 @@ pass a code review and make sure the code is
 [merged into the destination branch]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 Only then, is his result appreciated and paid for.
 
+<!--more-->
+
+{% jb_picture_body %}
+
 For most of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 this already sounds extreme.
 They are used to a traditional scheme of paying
@@ -40,11 +44,9 @@ funds are
 [not wasted]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 on activities that don't produce results.
 
+{% youtube qRZYJGYdrwk %}
+
 But that's not all.
-
-<!--more-->
-
-{% jb_picture_body %}
 
 This principle also means that nobody is paid for anything except
 tasks explicitly assigned to him/her. Thus, when a programmer has a question
@@ -54,8 +56,6 @@ Answering questions in Skype, Slack, or HipChat, or by email is something that
 is not appreciated in XDSD in any way. The project simply doesn't pay for
 this activity. That's why none of our programmers do this.
 
-{% youtube qRZYJGYdrwk %}
-
 More about this philosophy here:
 [It's Not a School!]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 
@@ -63,7 +63,7 @@ We don't use **any** (I mean it!) [informal communication channels]({% pst 2016/
 XDSD projects. We don't do meetings or conference calls. We never discuss
 any technical issues on Skype or by phone.
 
-{% quote Every hour spent by a team member is traceable to the line of code produced %}
+{% quote Every hour spent by a team member is traceable to the line of code produced. %}
 
 So, how do we resolve problems and share information?
 
@@ -74,14 +74,14 @@ and assigns it to another developer, who is able to answer it. Then, the
 answer goes back through the tracking system or directly into
 the source code.
 
-{% youtube LB_YLWhGrco %}
-
 The "question ticket" gets closed when its author is satisfied with the
 answer. When the ticket is closed, those who answered it get paid.
 
 Using this model, we significantly improve project communications, by making
 them clean and transparent. We also save a lot of project funds, since
 every hour spent by a team member is traceable to the line of code he produced.
+
+{% youtube LB_YLWhGrco %}
 
 You can see how this happens in action, for example, in this ticket
 (the project is [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}); that's why all communications are open):
