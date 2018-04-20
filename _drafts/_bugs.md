@@ -93,6 +93,6 @@ but when your bugs are small and cosmetic&mdash;aggregate them. In such a
 case you have a chance to win. They will reject three minor bugs, but they
 won't reject a bigger one with three minor parts.
 
-I believe that if you follow those simple recommendations,
+I believe that if you follow these simple recommendations,
 you will be a more successful bug reporter. At least at
 [Zerocracy](http://www.zerocracy.com).
