@@ -57,20 +57,20 @@ but don't help them to make it against you.
 Don't just say "the class is broken"&mdash;there is no victim in this statement.
 So, no need to save anyone's life. The bug is minor&mdash;no need to pay.
 Instead, say "I can't use the class." Present yourself as a victim.
-Or even better, represent a group of victims: "Nobody can really use the class."
+Or even better, represent a group of victims: "Nobody can really use this class."
 
 **Push them**.
 If a bug report is not paid for, don't hesitate to ask why.
 Insist that it was a very important problem and you deserve to be paid.
 If they still don't pay, forget it and move on.
-You must not look like it offends you anyhow.
+You must not look like it offends you somehow.
 
 **Show efforts**.
 The bug description must look "rich," clearly demonstrating that
-you invested a lot of effort into its creation. If there is just a single line,
-it's easier for them to not pay you&mdash;they don't feel any guilt.
+you invested a lot of effort in its creation. If there is just a single line,
+it's easier for them to not pay you&mdash;they won't feel any guilt.
 However, if it's long, detailed, properly formatted, and contains multiple supporting links,
-they will feel very bad if they don't pay.
+they will feel bad if they don't pay.
 
 **Look engaged**.
 Say something like "I'm ready to investigate more and provide additional details,
