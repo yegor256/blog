@@ -30,7 +30,7 @@ this software works. You get frustrated and blame that
 [stupid project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) and
 programmers who were fired two years ago. You spend hours just to find out
 how the code works. Then even more hours trying to fix it. In the end,
-you miss the deadline and **everybody blames you**. Been there, done that?
+you miss the deadline and _everybody blames you_. Been there, done that?
 
 <!--more-->
 
@@ -39,7 +39,7 @@ you miss the deadline and **everybody blames you**. Been there, done that?
 There is, however, an alternative approach that provides a professional exit
 from this situation. Here are some tips I recommend to my peers who code with me
 in [Zerocracy](http://www.zerocracy.com) projects.
-In a nutshell, I'm going to explain how you can **cut corners** and remain
+In a nutshell, I'm going to explain how you can _cut corners_ and remain
 professional, 1) protecting your nerves, 2) optimizing your project's expenses,
 and 3) increasing the quality of the source code.
 
@@ -86,7 +86,7 @@ Don't be [a hero]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainabilit
 [bad code]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}) you inherited. Think
 [like a developer, not a hacker]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Remember that your first and most important responsibility as
-a disciplined engineer is to help the project **reveal** maintainability issues.
+a disciplined engineer is to help the project _reveal_ maintainability issues.
 Who will fix them and how is the responsibility of a
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 Your job is to reveal, not to hide. By being a hero and trying to fix everything
