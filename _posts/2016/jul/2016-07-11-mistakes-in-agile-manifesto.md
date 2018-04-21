@@ -34,13 +34,13 @@ interpretation of each principle.
 **Principle #1**:
 "Our highest priority is to satisfy the customer through early and continuous delivery of valuable software."
 
-{% quote If the customer is not satisfied, we find another customer %}
+{% quote If the customer is not satisfied, we find another customer. %}
 
 By focusing on "satisfy the customer," Agile adepts totally forget about
 the "through" part. They think that a [happy customer]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 is their true objective, while "continuous delivery" is something that obviously
 helps, though not crucially. However, this is quite the opposite&mdash;the customer
-will be satisfied **if** the software is perfectly created and delivered. If the
+will be satisfied _if_ the software is perfectly created and delivered. If the
 customer is not satisfied, we find another customer&mdash;that's the
 true spirit a professional software team should adhere to. I believe that's what
  the Manifesto means. We make sure that our process is
@@ -59,8 +59,10 @@ change? Obviously, just get rid of any requirement documents!
 In this case, any change will be welcome, since it won't affect anything.
 There simply won't be anything to affect. But this is not what the Manifesto
 means! This principle means that our requirements management process is so
-**powerful** that it can accept change at any moment. However, it's rather difficult to
+_powerful_ that it can accept change at any moment. However, it's rather difficult to
 achieve, if requirements are actually documented.
+
+{% youtube sZoJ3gO4PSo %}
 
 **Principle #3**:
 "Deliver working software frequently, from a couple of weeks to
@@ -77,7 +79,7 @@ times a day.
 **Principle #4**:
 "Business people and developers must work together daily throughout the project."
 
-{% quote Working together means quicker turnarounds in communication not lack or roles and responsibilities %}
+{% quote Working together means quicker turnarounds in communication not lack or roles and responsibilities. %}
 
 Working together doesn't mean working without clearly defined
 rules and processes. However, most teams understand this principle as
@@ -91,7 +93,7 @@ shorter response cycles. It definitely doesn't mean lack of roles and responsibi
 **Principle #5**:
 "Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done."
 
-{% quote Trust doesn't mean lack of control %}
+{% quote Trust doesn't mean lack of control. %}
 
 Trust is a great word and concept, but it doesn't replace another equally great
 word&mdash;control. Most Agile teams think that trust means
@@ -108,7 +110,7 @@ of completing assigned tasks on their own.
 **Principle #6**:
 "The most efficient and effective method of conveying information to and within a development team is face-to-face conversation."
 
-{% quote Face-to-face doesn't mean at the same office, especially now %}
+{% quote Face-to-face doesn't mean at the same office, especially now. %}
 
 Face-to-face doesn't mean sitting in the same office. The Manifesto doesn't say
 anything about co-located or distributed teams. It's obvious that in modern software projects,
@@ -122,7 +124,7 @@ totally different from what it meant 15 years ago, when the Manifesto was writte
 "Working software is the primary measure of progress."
 
 This doesn't mean that we should not measure anything else. Of course, the
-working software is the **primary** measure, but there are many other
+working software is the _primary_ measure, but there are many other
 measures, which we can and must use. For example, the amount of features
 documented, implemented and delivered;
 or the amount of lines of code added to the project (don't smile, [read]({% pst 2014/nov/2014-11-14-hits-of-code %}));
@@ -136,7 +138,7 @@ is suggesting to do though.
 **Principle #8**:
 "Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely."
 
-{% quote We must remember that any project is first of all a money burning machine %}
+{% quote We must remember that any project is first of all a money burning machine. %}
 
 This doesn't mean that we should indefinitely [burn]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
 customers' money. Yes, we
@@ -183,10 +185,10 @@ and doable work order.
 **Principle #11**:
 "The best architectures, requirements, and designs emerge from self-organizing teams."
 
-{% quote Self-organized doesn't mean un-organized %}
+{% quote Self-organized doesn't mean un-organized. %}
 
 Self-organized doesn't mean un-organized. This rule is often translated
-as a legalization of **anarchy**. We don't need any project managers,
+as a legalization of _anarchy_. We don't need any project managers,
 processes, discipline, rules, or policies&mdash;we've got
 [holacracy]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) instead!
 We also don't need a software architect&mdash;our programmers can make
