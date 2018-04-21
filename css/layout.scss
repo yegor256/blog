@@ -163,6 +163,13 @@ del {
       display: inline;
       margin-right: .4 * $em;
 
+      &.selected {
+        a {
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+
       &.highlighted {
         a {
           background-color: $red;

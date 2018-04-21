@@ -55,6 +55,14 @@ module Yegor
         .gsub(/</, '&lt;')
         .gsub(/>/, '&gt;')
     end
+
+    def menu(url, title)
+      if url.end_with?(title + '.html')
+        ' class="selected" '
+      else
+        ''
+      end
+    end
   end
 end
 
