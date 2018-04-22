@@ -89,8 +89,6 @@ those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
 To be published: end of 2018.
-<br/>
-<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <div class="book-par"></div>
 To be continued...
