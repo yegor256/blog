@@ -138,6 +138,9 @@ Unfortunately, using empty lines to separate blocks of code is a very common hab
 Moreover, very often I see empty blocks of two or even three lines, which are all
 playing this evil role of a separator of concerns.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you use empty lines inside object methods to make them more readable? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/987978512123523072?ref_src=twsrc%5Etfw">April 22, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 Needless to say, a properly designed class must have just a few public
 methods and a properly designed method must have up to ten instructions
 (according to Bob Martin).
