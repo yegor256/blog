@@ -59,7 +59,7 @@ A project, <del>unlike your mom</del>, doesn't expect you to
 be intelligent or tech-savvy. It needs you to
 [close tickets]({% pst 2017/nov/2017-11-28-microtasking %}).
 
-{% youtube TpduNpwCq40 %}
+{% youtube vXUwE3FGfpg %}
 
 Who do you blame, if not yourself, when the bug is serious, the
 code is messy, and you have no idea how much time it will take just to
