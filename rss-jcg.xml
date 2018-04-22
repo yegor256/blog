@@ -694,7 +694,7 @@ this software works. You get frustrated and blame that
 &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;stupid project manager&lt;/a&gt; and
 programmers who were fired two years ago. You spend hours just to find out
 how the code works. Then even more hours trying to fix it. In the end,
-you miss the deadline and &lt;strong&gt;everybody blames you&lt;/strong&gt;. Been there, done that?&lt;/p&gt;
+you miss the deadline and &lt;em&gt;everybody blames you&lt;/em&gt;. Been there, done that?&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
@@ -856,18 +856,6 @@ has to write the code, commit it to the repository,
 pass a code review and make sure the code is
 &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;merged into the destination branch&lt;/a&gt;.
 Only then, is his result appreciated and paid for.&lt;/p&gt;
-
-&lt;p&gt;For most of my &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;clients&lt;/a&gt;
-this already sounds extreme.
-They are used to a traditional scheme of paying
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;per hour&lt;/a&gt;
-or per month. They immediately realize the benefits of XDSD, though,
-because for them this approach means that project
-funds are
-&lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;not wasted&lt;/a&gt;
-on activities that don&amp;#39;t produce results.&lt;/p&gt;
-
-&lt;p&gt;But that&amp;#39;s not all.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>

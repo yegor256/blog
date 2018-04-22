@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-17T11:13:08+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Be Lazy and Stay Calm</title><link href="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html" rel="alternate" type="text/html" title="How to Be Lazy and Stay Calm" /><published>2018-04-17T00:00:00+00:00</published><updated>2018-04-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/17/how-to-be-lazy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html">&lt;p&gt;What frustrates me most in my profession of software development
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-22T07:33:59+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Be Lazy and Stay Calm</title><link href="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html" rel="alternate" type="text/html" title="How to Be Lazy and Stay Calm" /><published>2018-04-17T00:00:00+00:00</published><updated>2018-04-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/17/how-to-be-lazy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html">&lt;p&gt;What frustrates me most in my profession of software development
 is the regular necessity to understand large problem scopes before fixing
 small bugs, especially if the code is
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Legacy_code&quot;&gt;legacy&lt;/a&gt; and not mine. Actually,
@@ -21,8 +21,10 @@ question over and over again: What should I do when the project is absolutely
 new to me, I have just &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;30 minutes&lt;/a&gt;,
 and the bug is very complex?&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;This literally means that you should always and only think about yourself and your personal profit.&lt;/aside&gt;
+
 &lt;p&gt;One of the core &lt;a href=&quot;http://www.zerocracy.com/toc.html&quot;&gt;principles&lt;/a&gt; of Zerocracy is
-&lt;code&gt;#NoAltruism&lt;/code&gt;.
+&lt;a href=&quot;https://www.youtube.com/watch?v=vXUwE3FGfpg&quot;&gt;#NoAltruism&lt;/a&gt;.
 This literally means that
 you should always and only think about yourself and your personal profit. You should
 not try to improve the project, to increase its quality, to fix the code, or to refactor anything...
@@ -35,6 +37,14 @@ Strictly speaking, you are not supposed to be an expert in anything.
 A project, &lt;del&gt;unlike your mom&lt;/del&gt;, doesn&amp;#39;t expect you to
 be intelligent or tech-savvy. It needs you to
 &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;close tickets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;aside class=&#39;youtube&#39;&gt;
+        &lt;a href=&#39;https://www.youtube.com/watch?v=vXUwE3FGfpg&#39;&gt;&lt;div class=&#39;box&#39;&gt;
+        &lt;img src=&#39;https://i.ytimg.com/vi/vXUwE3FGfpg/mqdefault.jpg&#39; alt=&#39;YouTube video #vXUwE3FGfpg&#39;/&gt;
+        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;#NoAltruism;
+        20 April 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;Who do you blame, if not yourself, when the bug is serious, the
 code is messy, and you have no idea how much time it will take just to
@@ -71,6 +81,8 @@ because it&amp;#39;s a waste of money and time. What the project will do instead
 fix its code base so that it becomes cleaner and more obvious for
 you &lt;em&gt;and everybody else&lt;/em&gt;. Thus, never ask for explanation or help, ask for
 documentation and source code fixes.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;You can blame everybody around you, but first of all you should blame the code base itself.&lt;/aside&gt;
 
 &lt;p&gt;What do you do next? You sit and wait, until those tickets are resolved.
 Who will resolve them? You don&amp;#39;t care. That&amp;#39;s a problem for the project manager.
@@ -224,7 +236,7 @@ for methods. I &lt;a href=&quot;/2015/01/12/compound-name-is-code-smell.html&quo
 that longer &amp;quot;compound&amp;quot; names are an indicator of unnecessary code complexity.&lt;/p&gt;
 
 &lt;p&gt;For example, I found this method
-&lt;code&gt;registerServletContainerInitializerToDriveServletContextInitializers&lt;/code&gt; (69 characters!)
+&lt;code&gt;registerServlet&amp;amp;shy;Container&amp;amp;shy;Initializer&amp;amp;shy;ToDriveServlet&amp;amp;shy;Context&amp;amp;shy;Initializers&lt;/code&gt; (69 characters!)
 in the &lt;a href=&quot;https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java&quot;&gt;&lt;code&gt;o.s.b.w.e.u.UndertowServletWebServerFactory&lt;/code&gt;&lt;/a&gt;
 class in Spring Boot.
 I wonder why the author skipped the &lt;code&gt;couldYouPlease&lt;/code&gt; prefix
