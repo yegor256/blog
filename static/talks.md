@@ -103,7 +103,7 @@ informed about everything I do publicly.
 <img src="http://devexperience.ro/images/logo_black_green_white.png" class="future-talk" alt="DevExperience 2018"/>
 Math of Love?<br/>
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/)<br/>
-Iasi, Romania<br/>
+Iași, Romania<br/>
 23 April 2018
 
 <!--
