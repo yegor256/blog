@@ -165,8 +165,8 @@ del {
 
       &.selected {
         a {
-          text-decoration: none;
           color: darken($green, 25);
+          text-decoration: none;
         }
       }
 
