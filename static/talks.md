@@ -99,12 +99,7 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
-<div class="talk-event">&nbsp;</div>
-<img src="http://devexperience.ro/images/logo_black_green_white.png" class="future-talk" alt="DevExperience 2018"/>
-Math of Love?<br/>
-[DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/)<br/>
-Iași, Romania<br/>
-23 April 2018
+None, as of yet.
 
 <!--
 <div class="talk-event">&nbsp;</div>
@@ -121,6 +116,16 @@ that I attended recently as a speaker. They rate us as speakers,
 so why shouldn't we rate them, right? The best grade is
 <span class="green">**A+**</span>, while the worst is
 <span class="red">**F-**</span>.
+
+### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="http://devexperience.ro/images/logo_black_green_white.png" class="pase-talk" alt="DevExperience 2018"/>
+Math of Love?;
+[DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
+Iași, Romania;
+23 April 2018;
+[slides](https://www.slideshare.net/YegorBugayenko/math-or-love).
 
 ### 2017
 
