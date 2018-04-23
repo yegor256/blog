@@ -39,7 +39,7 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-{% webinar 04-04-2018 34 NQRyqiQehBk How to Get Rid of the NEW Operator %}
+{% webinar 10-05-2018 34 NQRyqiQehBk How to Get Rid of the NEW Operator %}
 
 <a href="https://www.youtube.com/watch?v=NQRyqiQehBk"><img src="https://i.ytimg.com/vi/NQRyqiQehBk/mqdefault.jpg" class="wnr" alt="Webinar no.34 by Yegor Bugayenko"/></a>
 May 10, 2018<br/>
