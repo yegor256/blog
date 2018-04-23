@@ -120,7 +120,7 @@ so why shouldn't we rate them, right? The best grade is
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
-<img src="http://devexperience.ro/images/logo_black_green_white.png" class="pase-talk" alt="DevExperience 2018"/>
+<img src="http://devexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
 Math of Love?;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
 Iași, Romania;
@@ -158,13 +158,13 @@ try to attend next year.
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B+</aside>
-<img src="https://i.ytimg.com/vi/R_2AvKDHAWI/mqdefault.jpg" class="past-talk" alt="DotNext 2017"/>
+<img src="https://i.ytimg.com/vi/3QT7jaoOa9w/mqdefault.jpg" class="past-talk" alt="DotNext 2017"/>
 TDD Upside Down;
 [DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/);
 Moscow, Russia;
 12-13 November 2017;
 [slides](https://www.slideshare.net/secret/cUPqyS0ZwPhKL6),
-[видео](https://www.youtube.com/watch?v=R_2AvKDHAWI).
+[видео](https://www.youtube.com/watch?v=3QT7jaoOa9w).
 The event was organized by JUG.ru guys (authors of JPoint and Joker) and
 it was rather good, as usual. Maybe because it was not Java community, I didn't
 get as much value from the event as I was getting from JPoint, but the
