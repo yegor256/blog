@@ -127,6 +127,14 @@ Iași, Romania;
 23 April 2018;
 [slides](https://www.slideshare.net/YegorBugayenko/math-or-love).
 
+<div class="talk-event">&nbsp;</div>
+<img src="http://devexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
+How to Cut Corners and Stay Cool;
+[DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
+Iași, Romania;
+23 April 2018;
+[slides](https://www.slideshare.net/YegorBugayenko/how-to-cut-corners-and-stay-cool).
+
 ### 2017
 
 <div class="talk-event">&nbsp;</div>

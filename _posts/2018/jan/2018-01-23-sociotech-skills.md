@@ -19,6 +19,12 @@ translated:
 image: /images/2018/01/hardmen.jpg
 jb_picture:
   caption: Hard Men (1996) by J.K. Amalou
+articles:
+  cacm:
+    place: BLOG@CACM
+    title: "The Era of Hackers Is Over"
+    date: 2018-04-23
+    url: https://cacm.acm.org/blogs/blog-cacm/227154-the-era-of-hackers-is-over/fulltext
 ---
 
 Software development and coding are two different things. Usually,
