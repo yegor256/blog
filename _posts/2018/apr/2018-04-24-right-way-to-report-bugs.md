@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Right Way to Report a Bug"
-date: 2018-04-20
+date: 2018-04-24
 place: Moscow, Russia
 tags: testing zerocracy
 description: |
