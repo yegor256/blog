@@ -135,6 +135,7 @@ agendas
 agent
 agents
 ages
+aggregate
 aggregated
 aggregates
 aggregating
@@ -204,6 +205,7 @@ alternatives
 although
 altogether
 altruism
+altruistic
 always
 am
 amateur
@@ -1161,6 +1163,7 @@ collaboration
 collaborationsuperpowers
 collaborative
 collaborators
+collapse
 colleague
 colleagues
 collect
@@ -2370,6 +2373,7 @@ evil
 evils
 exact
 exactly
+exaggerate
 exam
 examine
 example
@@ -4575,8 +4579,10 @@ non-compete
 non-completion
 non-compromising
 non-disclosure
+non-disputable
 non-empty
 non-english
+non-exhaustive
 non-functional
 non-important
 non-intrusive
@@ -7429,6 +7435,8 @@ via
 viber
 vice
 victim
+victimize
+victims
 video
 video-recorded
 videos

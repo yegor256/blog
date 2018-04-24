@@ -727,7 +727,8 @@ And a big, complex scope is an obvious code smell.&lt;/p&gt;
 are rather surprised when we explain to them that
 they will have full access to the source code from the first day
 of the project. We let them see everything that is happening in
-the project, including the Git repository, bug reports, discussions
+the project, including the Git repository,
+&lt;a href=&quot;/2018/04/24/right-way-to-report-bugs.html&quot;&gt;bug reports&lt;/a&gt;, discussions
 between programmers,
 &lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;continuous integration&lt;/a&gt; fails, etc.
 They often tell me that other software development

@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-23T09:36:52+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Be Lazy and Stay Calm</title><link href="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html" rel="alternate" type="text/html" title="How to Be Lazy and Stay Calm" /><published>2018-04-17T00:00:00+00:00</published><updated>2018-04-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/17/how-to-be-lazy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html">&lt;p&gt;What frustrates me most in my profession of software development
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-04-24T06:29:12+00:00</updated><id>http://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Right Way to Report a Bug</title><link href="http://www.yegor256.com/2018/04/24/right-way-to-report-bugs.html" rel="alternate" type="text/html" title="The Right Way to Report a Bug" /><published>2018-04-24T00:00:00+00:00</published><updated>2018-04-24T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/24/right-way-to-report-bugs</id><content type="html" xml:base="http://www.yegor256.com/2018/04/24/right-way-to-report-bugs.html">&lt;p&gt;You know, at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, either you are a programmer or a tester,
+and &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;we pay&lt;/a&gt;
+for each bug you find and report. Well, not quite. We pay for
+each bug report a project architect considers good enough to pay for.
+The architect&amp;#39;s decision is totally subjective and non-disputable,
+according to &lt;a href=&quot;http://www.zerocracy.com/policy.html#29&quot;&gt;§29&lt;/a&gt;
+of the &lt;a href=&quot;http://www.zerocracy.com/policy.html&quot;&gt;Policy&lt;/a&gt;.
+Some of our developers find this unfair and ask me to explain
+how they can report bugs such that they are definitely paid.
+Here is a non-exhaustive list of my recommendations.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Burn After Reading (2008) by Coen Brothers&#39; src=&#39;/images/2018/04/burn-after-reading.jpg&#39; longdesc=&#39;#d3a4c799&#39;/&gt;&lt;figcaption id=&#39;d3a4c799&#39;&gt;Burn After Reading (2008) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;To be honest, there are &lt;a href=&quot;https://www.google.com/search?q=how+to+write+good+bug+reports&quot;&gt;many articles&lt;/a&gt;
+written before on this very subject. I will try not to repeat them. They
+mostly say reasonable things, like
+&amp;quot;be specific,&amp;quot;
+&amp;quot;choose a strong title,&amp;quot;
+&amp;quot;avoid duplicates,&amp;quot; and many others.
+My recommendations here are more of a psychological nature.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stay cool&lt;/strong&gt;.
+Don&amp;#39;t expect all of your bugs to be accepted and paid for.
+Some of them won&amp;#39;t be.
+This must not stop you from reporting them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Exaggerate&lt;/strong&gt;.
+No matter how minor the bug is, present it as if the entire world will
+collapse tomorrow if they don&amp;#39;t fix it.
+Of course, they will make their own decision about the priority and severity of the bug,
+but don&amp;#39;t help them to make it against you.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Victimize yourself&lt;/strong&gt;.
+Don&amp;#39;t just say &amp;quot;the class is broken&amp;quot;&amp;mdash;there is no victim in this statement.
+So, no need to save anyone&amp;#39;s life. The bug is minor&amp;mdash;no need to pay.
+Instead, say &amp;quot;I can&amp;#39;t use the class.&amp;quot; Present yourself as a victim.
+Or even better, represent a group of victims: &amp;quot;Nobody can really use this class.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Push them&lt;/strong&gt;.
+If a bug report is not paid for, don&amp;#39;t hesitate to ask why.
+Insist that it was a very important problem and you deserve to be paid.
+If they still don&amp;#39;t pay, forget it and move on.
+You must not look like it offends you somehow.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Show efforts&lt;/strong&gt;.
+The bug description must look &amp;quot;rich,&amp;quot; clearly demonstrating that
+you invested a lot of effort in its creation. If there is just a single line,
+it&amp;#39;s easier for them to not pay you&amp;mdash;they won&amp;#39;t feel any guilt.
+However, if it&amp;#39;s long, detailed, properly formatted, and contains multiple supporting links,
+they will feel bad if they don&amp;#39;t pay.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Look engaged&lt;/strong&gt;.
+Say something like &amp;quot;I&amp;#39;m ready to investigate more and provide additional details,
+if you need me too.&amp;quot; Of course you won&amp;#39;t do that (in most cases),
+but you have to say it. This will look like you care and this bug comes
+right from your heart. How can they not pay for it?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Look altruistic&lt;/strong&gt;.
+Don&amp;#39;t show them that you are reporting these bugs just to get money.
+They know that anyway, but still.
+Look like you care about the project and honestly want to help.
+Say that you worry about the users, about the market, about the mission, about
+the bigger scope, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aggregate&lt;/strong&gt;.
+This may sound against the
+&lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;principles&lt;/a&gt;
+of bug tracking I suggested earlier,
+but when your bugs are small and cosmetic&amp;mdash;aggregate them. In such a
+case you have a chance to win. They will reject three minor bugs, but they
+won&amp;#39;t reject a bigger one with three minor parts.&lt;/p&gt;
+
+&lt;p&gt;I believe that if you follow these simple recommendations,
+you will be a more successful bug reporter. At least at
+&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="zerocracy" /><summary type="html">You know, at Zerocracy, either you are a programmer or a tester,
+and we pay
+for each bug you find and report. Well, not quite. We pay for
+each bug report a project architect considers good enough to pay for.
+The architect&amp;#39;s decision is totally subjective and non-disputable,
+according to §29
+of the Policy.
+Some of our developers find this unfair and ask me to explain
+how they can report bugs such that they are definitely paid.
+Here is a non-exhaustive list of my recommendations.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/04/burn-after-reading.jpg" /></entry><entry><title type="html">How to Be Lazy and Stay Calm</title><link href="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html" rel="alternate" type="text/html" title="How to Be Lazy and Stay Calm" /><published>2018-04-17T00:00:00+00:00</published><updated>2018-04-17T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/04/17/how-to-be-lazy</id><content type="html" xml:base="http://www.yegor256.com/2018/04/17/how-to-be-lazy.html">&lt;p&gt;What frustrates me most in my profession of software development
 is the regular necessity to understand large problem scopes before fixing
 small bugs, especially if the code is
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Legacy_code&quot;&gt;legacy&lt;/a&gt; and not mine. Actually,
@@ -1308,103 +1393,4 @@ or 2) throw away and remain nobodies. It&amp;#39;s a
 common practice.
 The question, however, is what
 is the right procedure, and the optimal algorithm, to transfer those shares to programmers.
-When exactly do they become shareholders? What is the formula?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/02/la-comunidad.jpg" /></entry><entry><title type="html">More Bugs, Please</title><link href="http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html" rel="alternate" type="text/html" title="More Bugs, Please" /><published>2018-02-06T00:00:00+00:00</published><updated>2018-02-06T00:00:00+00:00</updated><id>http://www.yegor256.com/2018/02/06/where-to-find-more-bugs</id><content type="html" xml:base="http://www.yegor256.com/2018/02/06/where-to-find-more-bugs.html">&lt;p&gt;A &lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;bug&lt;/a&gt;
-is something we find in a software product that &amp;quot;doesn&amp;#39;t look right&amp;quot; (this
-is my personal definition). A bug can be hidden or visible; it can be
-&amp;quot;already fixed&amp;quot; or &amp;quot;still present&amp;quot;; it can be critical or cosmetic; it
-can be urgent or of a low priority. What is important is that the
-&lt;a href=&quot;/2017/05/23/unlimited-number-of-bugs.html&quot;&gt;more&lt;/a&gt;
-bugs we are able to find and fix before our customers see them, the higher
-the perceived &lt;a href=&quot;/2017/12/26/software-quality-formula.html&quot;&gt;quality&lt;/a&gt;
-of the software. Simply put, bugs are a
-&lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;very good thing&lt;/a&gt;,
-if they are found by us, not our customers.
-&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;We&lt;/a&gt; pay our programmers for
-&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;each bug&lt;/a&gt;
-they find. Here is a cheat sheet for them, showing where
-and how they can find those bugs, to make more money.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;American Honey (2016) by Andrea Arnold&#39; src=&#39;/images/2018/02/american-honey.jpg&#39; longdesc=&#39;#02df6b04&#39;/&gt;&lt;figcaption id=&#39;02df6b04&#39;&gt;American Honey (2016) by Andrea Arnold&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Obviously, if something is broken, it&amp;#39;s a bug; no need to mention it here.
-However, when a product is &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;more or less stable&lt;/a&gt;,
-not too many things are
-visibly broken. But we still pay for bugs. What should you look out for? Read on. This
-list (in no particular order) will help you.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lack of functionality&lt;/strong&gt;.
-If a class
-(&lt;a href=&quot;https://github.com/yegor256/cactoos/issues/558&quot;&gt;yegor256/cactoos#558&lt;/a&gt;)
-or the entire module
-(&lt;a href=&quot;https://github.com/yegor256/cactoos/issues/399&quot;&gt;yegor256/cactoos#399&lt;/a&gt;)
-doesn&amp;#39;t provide the functionality you &lt;em&gt;expect&lt;/em&gt; it to have,
-it&amp;#39;s a bug.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lack of tests&lt;/strong&gt;.
-If a class doesn&amp;#39;t have a unit test
-(&lt;a href=&quot;https://github.com/yegor256/takes/issues/43&quot;&gt;yegor256/takes#43&lt;/a&gt;)
-or
-the existing test doesn&amp;#39;t cover some critical aspects of the class
-(&lt;a href=&quot;https://github.com/yegor256/cactoos/issues/375&quot;&gt;yegor256/cactoos#375&lt;/a&gt;),
-it&amp;#39;s a bug.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lack of documentation&lt;/strong&gt;.
-If, say, a Javadoc block for a class does not clearly explain to you
-how to use the class, or the entire module is not documented well
-(&lt;a href=&quot;https://github.com/yegor256/takes/issues/790&quot;&gt;yegor256/takes#790&lt;/a&gt;),
-it&amp;#39;s a bug.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Suboptimal implementation&lt;/strong&gt;.
-If a piece of code doesn&amp;#39;t look good to you, and you think it can be
-refactored to look better, it&amp;#39;s a bug.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Design inconsistency&lt;/strong&gt;.
-If the design doesn&amp;#39;t look logical to you
-(&lt;a href=&quot;https://github.com/yegor256/cactoos/issues/436&quot;&gt;yegor256/cactoos#436&lt;/a&gt;)
-and you know how it can be improved,
-it&amp;#39;s a bug.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Naming is weird&lt;/strong&gt;.
-If class, variable or package names don&amp;#39;t look consistent and
-obvious to you, and you know how they can be fixed
-(&lt;a href=&quot;https://github.com/yegor256/cactoos/issues/274&quot;&gt;yegor256/cactoos#274&lt;/a&gt;),
-it&amp;#39;s a bug.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Unstable test&lt;/strong&gt;.
-If a unit test fails sporadically
-(&lt;a href=&quot;https://github.com/yegor256/takes/issues/506&quot;&gt;yegor256/takes#506&lt;/a&gt;)
-or doesn&amp;#39;t work in some particular environment
-(&lt;a href=&quot;https://github.com/yegor256/jpeek/issues/151&quot;&gt;yegor256/jpeek#151&lt;/a&gt;),
-it&amp;#39;s a bug.&lt;/p&gt;
-
-&lt;p&gt;Also, it&amp;#39;s worth mentioning that minor, cosmetic, or poorly formulated
-bug reports will most likely be rejected or not paid for. If you want us to pay for your bug reports,
-make sure they &lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;sound right&lt;/a&gt;,
-in order to help us move the project forward to a better state.&lt;/p&gt;
-
-&lt;!--
-
-There are some examples of minor bugs, which are not worth paying
-for, even though they are valid:
-
-  * [yegor256/jpeek#158](https://github.com/yegor256/jpeek/issues/158)
-
-Cosmetic bugs are those that
-
---&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">A bug
-is something we find in a software product that &amp;quot;doesn&amp;#39;t look right&amp;quot; (this
-is my personal definition). A bug can be hidden or visible; it can be
-&amp;quot;already fixed&amp;quot; or &amp;quot;still present&amp;quot;; it can be critical or cosmetic; it
-can be urgent or of a low priority. What is important is that the
-more
-bugs we are able to find and fix before our customers see them, the higher
-the perceived quality
-of the software. Simply put, bugs are a
-very good thing,
-if they are found by us, not our customers.
-We pay our programmers for
-each bug
-they find. Here is a cheat sheet for them, showing where
-and how they can find those bugs, to make more money.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/02/american-honey.jpg" /></entry></feed>
+When exactly do they become shareholders? What is the formula?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.yegor256.com/images/2018/02/la-comunidad.jpg" /></entry></feed>
