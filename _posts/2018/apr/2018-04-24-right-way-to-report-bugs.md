@@ -14,9 +14,9 @@ keywords:
   - quality of bugs
   - bug quality
   - good defects
-image: /images/2018/04/
+image: /images/2018/04/burn-after-reading.jpg
 jb_picture:
-  caption:
+  caption: Burn After Reading (2008) by Coen Brothers
 ---
 
 You know, at [Zerocracy](http://www.zerocracy.com), either you are a programmer or a tester,

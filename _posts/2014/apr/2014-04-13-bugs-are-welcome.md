@@ -84,7 +84,7 @@ Something can be reported as a bug and subsequently paid for
  * it doesn't duplicate a bug already reported
 
 Reproducibility of a bug is very important. Consequently, it is the
-responsibility of a bug reporter to make sure the bug is reproducible. Until it
+responsibility of a [bug reporter]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}) to make sure the bug is reproducible. Until it
 is proven that the bug can be reproduced&mdash;it's not a bug for which
 payment can be made.
 

@@ -100,8 +100,9 @@ After the author closes the task, the
 We're very strict about this principle&mdash;no informal communications.
 However, it doesn't mean that we are not interested in your opinions and
 constructive criticism. Rather, we encourage everyone to submit their
-suggestions and bugs. By the way, we pay for bugs (see the next section for
-further details about bug reporting and payments.)
+suggestions and bugs. By the way, we pay for
+[bugs]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %})
+(see the next section for further details about bug reporting and payments.)
 
 Since we have no formal communications, members of project teams are not
 required to work at specific times. Instead, team members work at times
@@ -109,7 +110,8 @@ convenient for them in their time zones. This includes weekdays and weekends.
 
 ## We Pay For Bugs
 
-Unlike many other software teams, XDSD welcomes bug reports in all our projects.
+Unlike many other software teams, XDSD welcomes
+[bug reports]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}) in all our projects.
 Therefore, we ask for bugs openly and expect team members to report them.
 Review the following article for complete details on XDSD bug reporting:
 [Bugs are welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})

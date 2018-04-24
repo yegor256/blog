@@ -130,7 +130,8 @@ you. He put you into this situation. He planned
 all project activities, so he probably knows what he is doing. This means
 that the project **documentation** should be detailed enough for a Java
 developer to create that Python module. However, it is not detailed enough. So report
-this **issue** and wait for its **resolution**. Explain in your bug report that you
+this **issue** and wait for its **resolution**. Explain in your
+[bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}) that you
 honestly started to work with the module and realized that its documentation
 is not complete enough for a Java developer to understand. Ask the project manager
 to fix this. If the project decides to invest its money into the documentation, you

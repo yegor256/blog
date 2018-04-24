@@ -51,7 +51,8 @@ resolution, only these two characters have formal roles.
 {% quote Remember what is happening there - one person is selling his solution to another person %}
 
 The responsibility of the ticket reporter is to **defend the problem**. When I
-report a bug, I have to insist that it exists&mdash;this is my job. Others
+[report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
+I have to insist that it exists&mdash;this is my job. Others
 may tell me that I'm wrong and the bug is not there. They may tell
 me that they can't reproduce it. They may say that my description of
 a task is too **vague** and nobody understands it. There may be many issues
@@ -180,7 +181,7 @@ project at all.
 ## 5. Report When It Is Broken
 
 I think it is obvious, but I will reiterate: Every bug has
-to be reproducible. Every time you report a bug, you should explain
+to be reproducible. Every time you [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), you should explain
 how exactly the product is broken. Yes, it is your job to prove that the
 software doesn't work as intended, or is not documented properly, or
 doesn't satisfy the
@@ -206,7 +207,8 @@ how I should use class X. Please fix."
 If you can't explain how to get there, say so in the ticket: "I see that
 this class doesn't work as it should, but I don't know how to reproduce
 the problem and how to fix it." This will give everybody a clear message
-that you are aware that your bug report is not perfect. The first step
+that you are aware that your [bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %})
+is not perfect. The first step
 for its resolver will be to refine the problem and find a way to reproduce it.
 If such a replica can't be found, obviously your bug will be forced into closing.
 

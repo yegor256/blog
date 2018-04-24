@@ -120,7 +120,8 @@ To avoid long conversations in tasks, submit new tickets with questions or bug
 reports. Again, the
 [Puzzle Driven Development by Roles]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %})
 article explains the
-whole idea of helping us "to break the project" by submitting new bugs. Follow
+whole idea of helping us "to break the project" by submitting new
+[bugs]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}). Follow
 this concept and you'll be fine.
 
 ## Contribution via Bugs

@@ -199,7 +199,7 @@ database schema,
 panel, build environment,
 issue tracking system, plans and schedules, work agendas, up-time reports,
 deployment pipeline, production logs,
-customer bug reports, statistics, etc. Everything that
+customer [bug reports]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), statistics, etc. Everything that
 could help him understand how your system works, and more importantly,
 where and how it breaks, is very useful. Don't limit the reviewer to the
 source code only&mdash;this is simply not enough! Let him see the big

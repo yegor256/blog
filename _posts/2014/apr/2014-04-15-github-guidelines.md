@@ -85,7 +85,8 @@ The rule of thumb for this type of situation is: "if something is not clear, it
 is our fault, not yours." Therefore, if you don’t understand the project design,
 it is the fault of the project designer.
 
-Submit a bug report requesting an explanation of a design concept. You will be
+Submit a [bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %})
+requesting an explanation of a design concept. You will be
 paid for this report, and the information you receive in the reply will be
 shared between all other developers.
 

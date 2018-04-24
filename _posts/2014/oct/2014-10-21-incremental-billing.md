@@ -116,7 +116,8 @@ We call it "Incremental Billing."
 
 Remember, in [XDSD](http://www.xdsd.org) we work with a stream of micro-tasks, usually completed
 in less than an hour. Each completed task produces a new increment (aka a "release" or "version") of software.
-An increment could be a bug fix, a bug report, a new feature or
+An increment could be a bug fix, a [bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
+a new feature or
 a micro-step towards any of these.
 
 By the end of a week you get a bill that lists every single increment

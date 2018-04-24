@@ -26,7 +26,8 @@ Most of our
 are rather surprised when we explain to them that
 they will have full access to the source code from the first day
 of the project. We let them see everything that is happening in
-the project, including the Git repository, bug reports, discussions
+the project, including the Git repository,
+[bug reports]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), discussions
 between programmers,
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) fails, etc.
 They often tell me that other software development

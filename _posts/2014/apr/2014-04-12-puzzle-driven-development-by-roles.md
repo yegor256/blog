@@ -143,7 +143,7 @@ Besides feature requests from product owners, I often receive
 complaints about the quality of the SRS. The document may not be clear
 enough for some team members. Therefore, it's my job to resolve clarity problems
 and fix the SRS. These team members are also my customers. When they
-close their bug reports, I'll be paid.
+close their [bug reports]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), I'll be paid.
 
 In both cases (a feature request or a bug,) I can make changes to the
 SRS immediately - if I have enough time. However, it's not always

@@ -52,7 +52,8 @@ There are four phases in every project I work with in
    It is a one-man job that is done almost without any interaction
    with anyone else. The architect builds the product according to the
    specification in a very limited time frame. The result will have
-   multiple bugs and open ends, but it will implement the main user story.
+   multiple [bugs]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %})
+   and open ends, but it will implement the main user story.
    The architect also configures
    [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) and delivery pipelines.
    Deliverables: working software.
@@ -204,7 +205,8 @@ in GitHub.
 {% badge /images/2014/10/lifecycle-using.png 250 %}
 
 This is the final phase and it can take quite a long time. By now, the product is
-ready and is launched to the market. But we still receive bug reports
+ready and is launched to the market. But we still receive
+[bug reports]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %})
 and feature request from the product owner, and we still fix them through
 the same process flow as in the Fixing phase.
 
