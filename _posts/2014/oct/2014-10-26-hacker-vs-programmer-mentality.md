@@ -13,9 +13,9 @@ keywords:
   - scalability
   - maintainability
   - readability
-articles:
-  cacm:
-    place: BLOG@CACM
+republished:
+  -
+    place: "BLOG@CACM"
     title: "The Era of Hackers Is Over"
     date: 2018-04-23
     url: https://cacm.acm.org/blogs/blog-cacm/227154-the-era-of-hackers-is-over/fulltext

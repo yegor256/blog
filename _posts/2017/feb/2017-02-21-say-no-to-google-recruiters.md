@@ -24,6 +24,12 @@ social:
 image: /images/2017/02/the-deer-hunter.jpg
 jb_picture:
   caption: The Deer Hunter (1978) by Michael Cimino
+republished:
+  -
+    place: Quartz
+    title: "Tech recruiters are ruining Silicon Valley"
+    date: 2017-02-28
+    url: https://qz.com/920271/tech-recruiters-are-ruining-silicon-valley/
 ---
 
 This is a real story, and it's not only about Google. I'm getting emails from recruiters
