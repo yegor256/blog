@@ -67,6 +67,8 @@ programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-revie
 
 "You're a smug, pontificating prick."&mdash;anonymous
 
+"You must have a brain injury of some sort."&mdash;[Sofia](http://www.yegor256.com/2017/07/04/sexism.html#comment-3873243224)
+
 "You're promoting waterfall, cutting corners, illegible code, dysfunctional social team dynamics,
 bad design principles and basically ignoring reality and anything
 our industry has achieved in the last decade."&mdash;[Lieven D.](https://twitter.com/lievendoclo/status/986257188803969025)
