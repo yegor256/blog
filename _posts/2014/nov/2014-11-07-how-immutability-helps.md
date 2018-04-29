@@ -160,13 +160,13 @@ can process them inside, isn't it?
 
 {% youtube p7m7_iiqaHI %}
 
-This is the root cause of the problem! The root cause is our ability to **insert**
+This is the root cause of the problem! The root cause is our ability to _insert_
 data into mutable objects via configuration methods, also known as "setters."
 When an [object]({% pst 2016/jul/2016-07-14-who-is-object %})
 is mutable and allows us to add setters whenever we
 want, we will do it without limits.
 
-Let me put it this way&mdash;**mutable classes tend to grow in size and lose cohesiveness**.
+Let me put it this way&mdash;_mutable classes tend to grow in size and lose cohesiveness_.
 
 If commons-email authors made this `Email` class immutable
 in the beginning, they wouldn't have been able to add so many methods into it
@@ -257,7 +257,8 @@ class MIME implements Envelope {
 
 It works, but it does nothing useful yet. It only creates an absolutely
 empty MIME message and returns it. How about adding a subject to it
-and both `To:` and `From:` addresses (pay attention, `MIME` class is
+and both `To:` and `From:` addresses (pay attention,
+[`MIME`](http://email.jcabi.com/apidocs-1.10/com/jcabi/email/Envelope.Mime.html) class is
 also immutable):
 
 {% highlight java %}
@@ -345,7 +346,7 @@ What is important here is why I made the decision to refactor while
 the class was relatively small. Indeed, I started to worry about these
 stamp classes when my `MIME` class was just 25 lines in size.
 
-That is exactly the point of this article&mdash;**immutability forces you to design small and cohesive objects**.
+That is exactly the point of this article&mdash;_immutability forces you to design small and cohesive objects_.
 
 Without immutability, I would have gone the same direction as commons-email. My
 `MIME` class would grow in size and sooner or later would become
