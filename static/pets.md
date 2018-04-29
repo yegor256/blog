@@ -33,7 +33,7 @@ releasing. It is open source and non-profit. More about it at these
 articles: [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 and [Deployment Script vs. Rultor]({% pst 2014/sep/2014-09-11-deployment-script-vs-rultor %}).
 <br/>
-Founded 5-Jun-13.
+Founded 5-Jun-2013.
 
 {% badge http://www.sixnines.io/images/logo.svg 70 http://www.sixnines.io %}
 
