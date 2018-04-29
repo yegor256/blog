@@ -42,7 +42,7 @@ but rather thanks to a simple rule: Good slaves ate, and bad ones were beaten to
 A primitive form of command-and-control management was most
 effective at that time, both in civil and military arenas.
 
-{% quote The external strength of any army is ensured by its internal discipline %}
+{% quote The external strength of any army is ensured by its internal discipline. %}
 
 Once slavery became illegal in the 19th century,
 the simple rule changed: Good workers were paid, while
@@ -91,7 +91,7 @@ just like the guys who built the Colosseum. Likewise,
 we need motivation and punishment in order to produce
 something for someone.
 
-{% quote They still adhere to command and control but mask it as inspire and trust %}
+{% quote They still adhere to command and control but mask it as inspire and trust. %}
 
 What about creativity and inspiration? Just like the architects of
 the Colosseum, we need people today to create iPads and Facebooks,

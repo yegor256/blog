@@ -37,15 +37,15 @@ are a few more gradients; let's take a look.
 {% jb_picture_body %}
 
 As we agreed [here]({% pst 2016/jul/2016-07-14-who-is-object %}),
-an object is a **representative** of someone else
+an object is a _representative_ of someone else
 (some entity or entities, other object(s), data, memory, files, etc.).
 Let's examine a number of objects that look exactly the same
-to us but **represent** different things, then analyze how
+to us but _represent_ different things, then analyze how
 immutable they are and why.
 
 ## Constant
 
-This is **constant**; it doesn't allow any modifications
+This is _constant_; it doesn't allow any modifications
 to the encapsulated entity and always returns the same text
 (I've skipped constructors for the sake of brevity):
 
@@ -158,7 +158,7 @@ a few steps forward and give immutable objects more permissions
 and flexibility. In OOP, we may have many more forms of immutability.
 
 What is common among all these examples is that our objects are
-**loyal** to the entities they encapsulate. There are no
+_loyal_ to the entities they encapsulate. There are no
 [setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 that could change them. All encapsulated objects are `final`.
 
