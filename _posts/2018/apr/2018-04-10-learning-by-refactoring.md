@@ -105,7 +105,7 @@ for methods. I [believe]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell 
 that longer "compound" names are an indicator of unnecessary code complexity.
 
 For example, I found this method
-`registerServlet&shy;Container&shy;Initializer&shy;ToDriveServlet&shy;Context&shy;Initializers` (69 characters!)
+`registerServletContainerInitializerToDriveServletContextInitializers` (69 characters!)
 in the [`o.s.b.w.e.u.UndertowServletWebServerFactory`](https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java)
 class in Spring Boot.
 I wonder why the author skipped the `couldYouPlease` prefix
