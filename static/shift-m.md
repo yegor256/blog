@@ -51,12 +51,10 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
-<!--
 <img src="/images/shift-m/geepaw.png" class="guest-face" alt="GeePaw photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;27: [TDD philosophy with GeePaw Hill](/shift-m/2018/27.html)<br/>
 27 April 2018; 61 min.
--->
 
 <img src="/images/shift-m/james-bach.png" class="guest-face" alt="James Bach photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
