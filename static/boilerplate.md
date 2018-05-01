@@ -15,15 +15,15 @@ keywords:
 nospell: true
 ---
 
-Quick bio:
+Quick bio:<br/>
 CEO at Zerocracy and author of Elegant Objects.
 
-Short bio:
+Short bio:<br/>
 Yegor is a CEO of Zerocracy,
 an author of Elegant Objects book series about OOP,
 and a hands-on Java developer.
 
-Bio:
+Full bio:<br/>
 Yegor Bugayenko is a founder and CEO of Zerocracy, which replaces annoying bosses with AI bots;
 an OOP fundamentalist;
 an author of "Elegant Objects" book series;
@@ -32,13 +32,17 @@ a hands-on Java programmer;
 a creator of Cactoos, Takes Framework, JCabi, and Rultor;
 a philanthropist donating four thousand dollars annualy to an open source award.
 
-Employer: Zerocracy, Inc. (www.zerocracy.com)
+Employer:<br/>
+Zerocracy, Inc. (www.zerocracy.com)
 
-Position: CEO
+Position:<br/>
+CEO
 
-Headshot (JPEG, 256x256): http://www.yegor256.com/images/face-256x256.jpg
+Headshot (JPEG, 256x256):<br/>
+http://www.yegor256.com/images/face-256x256.jpg
 
-Headshot (JPEG, 1024x1024): http://www.yegor256.com/images/face-1024x1024.jpg
+Headshot (JPEG, 1024x1024):<br/>
+http://www.yegor256.com/images/face-1024x1024.jpg
 
 Best speeches:
 
@@ -46,20 +50,42 @@ Best speeches:
   * [How Bright is Your Future?](https://www.youtube.com/watch?v=IGbteQpTNCA) at RigaDevDays 2017
   * [eXtremely Distributed Software Development](https://www.youtube.com/watch?v=7EytYc7K5JA) at DevTernity 2016
 
-YouTube channel: https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q
+YouTube channel:<br/>
+https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q
 
-Twitter: [yegor256](https://twitter.com/yegor256)
+Twitter:<br/>
+[yegor256](https://twitter.com/yegor256)
 
-Facebook: [yegor256](https://www.facebook.com/yegor256)
+Facebook:<br/>
+[yegor256](https://www.facebook.com/yegor256)
 
-LinkedIn: [yegor256](https://www.linkedin.com/in/yegor256)
+LinkedIn:<br/>
+[yegor256](https://www.linkedin.com/in/yegor256)
 
-Address:
-555 Bryant Str, Ste 470,
+Address:<br/>
+555 Bryant Str, Ste 470,<br/>
 Palo Alto, CA 94301, USA.
 
-Phone: +1 408 692 4742 (USA)
+Phone:<br/>
++1 408.692.4742 (USA)
 
-Email: yegor256@gmail.com
+Email:<br/>
+yegor256@gmail.com
 
+Кратко:<br/>
+Основатель Zerocracy и автор книги Elegant Objects.
+
+Short bio:<br/>
+Егор CEO и основаатель Zerocracy,
+автор Elegant Objects, серии книг об ООП,
+и программист на Java.
+
+Full bio:<br/>
+Егор Бугаенко &mdash; основатель и CEO компании Zerocracy, разрабатывающей AI роботов для управления программистами;
+ООП-фундаменталист;
+автор "Elegant Objects" &mdash; серии книг об объектно-ориентированном программировании;
+провокационный блогер на yegor256.com;
+пишущий Java программист;
+создатель Cactoos, Takes Framework, JCabi и Rultor;
+филантроп, жертвующий ежегодно несколько тысяч долларов номинантам его собственной премии за самый качественный программный проект.
 
