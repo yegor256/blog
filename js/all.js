@@ -93,7 +93,7 @@ if (typeof($) != 'undefined') {
           dataType: 'json',
           async: true,
           timeout: timeout,
-          url: 'http://www.reddit.com/api/info.json?jsonp=?&url=' + eurl,
+          url: 'https://www.reddit.com/api/info.json?jsonp=?&url=' + eurl,
           success: function(json) {
             var count = json.data.children.length;
             if (count > 0) {
@@ -146,7 +146,7 @@ if (typeof($) != 'undefined') {
           dataType: 'json',
           async: true,
           timeout: timeout,
-          url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
+          url: 'https://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
             + encodeURIComponent(url.replace('http://www.yegor256.com', ''))
             + '"',
           success: function(json) {
