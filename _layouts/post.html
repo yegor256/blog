@@ -124,7 +124,7 @@ layout: default
     </div>
     <script>
       var disqus_config = function () {
-        this.page.url = document.location.href.split('?')[0].split('#')[0];
+        this.page.url = document.location.href.split('?')[0].split('#')[0].replace('https://', 'http://');
         this.page.identifier = this.page.url;
       };
       (function() {
