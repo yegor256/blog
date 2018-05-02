@@ -3,8 +3,8 @@
   <channel>
     <title>yegor256.com - Miscellaneous</title>
     <description>Posts categorized as 'miscellaneous'</description>
-    <link>http://www.yegor256.com</link>
-    <atom:link href="http://www.yegor256.com/rss/rss-jcg.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.yegor256.com</link>
+    <atom:link href="https://www.yegor256.com/rss/rss-jcg.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Don&#39;t Use Java Assertions</title>
@@ -17,8 +17,8 @@ in all situations and assertions should never be used. Here&amp;#39;s why.&lt;/p
 </description>
         
         <pubDate>Fri, 17 Jun 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/06/17/dont-use-java-assertions.html</guid>
+        <link>https://www.yegor256.com/2016/06/17/dont-use-java-assertions.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/06/17/dont-use-java-assertions.html</guid>
       </item>
     
       <item>
@@ -37,8 +37,8 @@ to get rid of them is via a private static literal. This is just wrong.&lt;/p&gt
 </description>
         
         <pubDate>Tue, 03 May 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/05/03/test-methods-must-share-nothing.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/05/03/test-methods-must-share-nothing.html</guid>
+        <link>https://www.yegor256.com/2016/05/03/test-methods-must-share-nothing.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/05/03/test-methods-must-share-nothing.html</guid>
       </item>
     
       <item>
@@ -56,8 +56,8 @@ created supplementary &amp;quot;smart&amp;quot; classes.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 26 Apr 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html</guid>
+        <link>https://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/04/26/why-inputstream-design-is-wrong.html</guid>
       </item>
     
       <item>
@@ -74,8 +74,8 @@ it from a practical perspective.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 19 Apr 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html</guid>
+        <link>https://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/04/19/object-must-not-be-configurable.html</guid>
       </item>
     
       <item>
@@ -95,8 +95,8 @@ annotations are a big mistake in Java design.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/04/12/java-annotations-are-evil.html</guid>
+        <link>https://www.yegor256.com/2016/04/12/java-annotations-are-evil.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/04/12/java-annotations-are-evil.html</guid>
       </item>
     
       <item>
@@ -110,8 +110,8 @@ the data out of an object, right? Nope. Wrong.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/04/05/printers-instead-of-getters.html</guid>
+        <link>https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html</guid>
       </item>
     
       <item>
@@ -125,8 +125,8 @@ open and close them correctly, please.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/03/22/try-finally-if-not-null.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/03/22/try-finally-if-not-null.html</guid>
+        <link>https://www.yegor256.com/2016/03/22/try-finally-if-not-null.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/03/22/try-finally-if-not-null.html</guid>
       </item>
     
       <item>
@@ -143,8 +143,8 @@ If debugging is required, the &lt;strong&gt;design is bad&lt;/strong&gt;.&lt;/p&
 </description>
         
         <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/02/09/are-you-still-debugging.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/02/09/are-you-still-debugging.html</guid>
+        <link>https://www.yegor256.com/2016/02/09/are-you-still-debugging.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/02/09/are-you-still-debugging.html</guid>
       </item>
     
       <item>
@@ -160,8 +160,8 @@ I love or hate each one. Follow me, in alphabetic order.&lt;/p&gt;
 </description>
         
         <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html</guid>
+        <link>https://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html</guid>
       </item>
     
       <item>
@@ -176,8 +176,8 @@ I&amp;#39;m suggesting you use &lt;strong&gt;validating decorators&lt;/strong&gt
 </description>
         
         <pubDate>Tue, 26 Jan 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/01/26/defensive-programming.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/01/26/defensive-programming.html</guid>
+        <link>https://www.yegor256.com/2016/01/26/defensive-programming.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/01/26/defensive-programming.html</guid>
       </item>
     
       <item>
@@ -193,8 +193,8 @@ I don&amp;#39;t think you&amp;#39;re a good entrepreneur.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 12 Jan 2016 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html</guid>
+        <link>https://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2016/01/12/good-programmers-dont-work-for-equity.html</guid>
       </item>
     
       <item>
@@ -208,8 +208,8 @@ a look at this example.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html</guid>
+        <link>https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html</guid>
       </item>
     
       <item>
@@ -227,8 +227,8 @@ Both are wrong.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/12/01/rethrow-exceptions.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/12/01/rethrow-exceptions.html</guid>
+        <link>https://www.yegor256.com/2015/12/01/rethrow-exceptions.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/12/01/rethrow-exceptions.html</guid>
       </item>
     
       <item>
@@ -245,8 +245,8 @@ some food for thought.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</guid>
+        <link>https://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html</guid>
       </item>
     
       <item>
@@ -264,8 +264,8 @@ You&amp;#39;re &lt;strong&gt;fundamentally wrong&lt;/strong&gt;.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 10 Sep 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/09/10/testing-exit-criteria.html</guid>
+        <link>https://www.yegor256.com/2015/09/10/testing-exit-criteria.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/09/10/testing-exit-criteria.html</guid>
       </item>
     
       <item>
@@ -282,8 +282,8 @@ in production.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/08/25/fail-fast.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/08/25/fail-fast.html</guid>
+        <link>https://www.yegor256.com/2015/08/25/fail-fast.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/08/25/fail-fast.html</guid>
       </item>
     
       <item>
@@ -299,8 +299,8 @@ multiple exception types are a bad idea too.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</guid>
+        <link>https://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html</guid>
       </item>
     
       <item>
@@ -319,8 +319,8 @@ the tool that makes your work faster? Let me show you how.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</guid>
+        <link>https://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/07/16/fools-dont-write-unit-tests.html</guid>
       </item>
     
       <item>
@@ -337,8 +337,8 @@ valid reasons for such a rejection, according to my experience.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 22 Jun 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</guid>
+        <link>https://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/06/22/valid-reasons-to-reject-bug-fix.html</guid>
       </item>
     
       <item>
@@ -360,8 +360,8 @@ that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p
 </description>
         
         <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</guid>
+        <link>https://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/06/18/good-programmers-bug-free.html</guid>
       </item>
     
       <item>
@@ -382,8 +382,8 @@ defects related to, for example, &lt;strong&gt;maintainability&lt;/strong&gt; an
 </description>
         
         <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</guid>
+        <link>https://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/06/11/wikipedia-bug-definition.html</guid>
       </item>
     
       <item>
@@ -401,8 +401,8 @@ alternative. Let me explain.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 25 May 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/05/25/unit-test-scaffolding.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/05/25/unit-test-scaffolding.html</guid>
+        <link>https://www.yegor256.com/2015/05/25/unit-test-scaffolding.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/05/25/unit-test-scaffolding.html</guid>
       </item>
     
       <item>
@@ -417,8 +417,8 @@ un-extensible.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html</guid>
+        <link>https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html</guid>
       </item>
     
       <item>
@@ -435,8 +435,8 @@ another source of data, in the form of an iterator. I hope this example will hel
 </description>
         
         <pubDate>Thu, 30 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/04/30/iterating-adapter.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/04/30/iterating-adapter.html</guid>
+        <link>https://www.yegor256.com/2015/04/30/iterating-adapter.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/04/30/iterating-adapter.html</guid>
       </item>
     
       <item>
@@ -453,8 +453,8 @@ company through which I put my admiration of discipline and clean design into pr
 </description>
         
         <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/04/16/award.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/04/16/award.html</guid>
+        <link>https://www.yegor256.com/2015/04/16/award.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/04/16/award.html</guid>
       </item>
     
       <item>
@@ -474,8 +474,8 @@ instead for marshalling Java objects into XML documents.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</guid>
+        <link>https://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html</guid>
       </item>
     
       <item>
@@ -499,8 +499,8 @@ Let&amp;#39;s see what was created and how it works.&lt;/p&gt;
 </description>
         
         <pubDate>Sun, 22 Mar 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/03/22/takes-java-web-framework.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/03/22/takes-java-web-framework.html</guid>
+        <link>https://www.yegor256.com/2015/03/22/takes-java-web-framework.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/03/22/takes-java-web-framework.html</guid>
       </item>
     
       <item>
@@ -519,8 +519,8 @@ utility methods, which make our code procedural rather than object-oriented.&lt;
 </description>
         
         <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/02/26/composable-decorators.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/02/26/composable-decorators.html</guid>
+        <link>https://www.yegor256.com/2015/02/26/composable-decorators.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/02/26/composable-decorators.html</guid>
       </item>
     
       <item>
@@ -540,8 +540,8 @@ friendly and nice?&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/02/23/haircut.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/02/23/haircut.html</guid>
+        <link>https://www.yegor256.com/2015/02/23/haircut.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/02/23/haircut.html</guid>
       </item>
     
       <item>
@@ -568,8 +568,8 @@ and where this misconception is coming from.&lt;/p&gt;
 </description>
         
         <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</guid>
+        <link>https://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html</guid>
       </item>
     
       <item>
@@ -587,8 +587,8 @@ why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let&amp;#39;s see wha
 </description>
         
         <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/02/12/top-down-design.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/02/12/top-down-design.html</guid>
+        <link>https://www.yegor256.com/2015/02/12/top-down-design.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/02/12/top-down-design.html</guid>
       </item>
     
       <item>
@@ -618,8 +618,8 @@ what code duplication means. It&amp;#39;s a disaster. However, there is a soluti
 </description>
         
         <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</guid>
+        <link>https://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/02/05/jcabi-parent-maven-pom.html</guid>
       </item>
     
       <item>
@@ -641,8 +641,8 @@ see how this library helps in XSL transformations.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</guid>
+        <link>https://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/02/02/xsl-transformations-in-java.html</guid>
       </item>
     
       <item>
@@ -659,8 +659,8 @@ for the project, not for the boss.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</guid>
+        <link>https://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/01/26/happy-boss-false-objective.html</guid>
       </item>
     
       <item>
@@ -679,8 +679,8 @@ Today I finally found it.&lt;/p&gt;
 </description>
         
         <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/01/21/if-then-throw-else.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/01/21/if-then-throw-else.html</guid>
+        <link>https://www.yegor256.com/2015/01/21/if-then-throw-else.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/01/21/if-then-throw-else.html</guid>
       </item>
     
       <item>
@@ -698,8 +698,8 @@ you miss the deadline and &lt;em&gt;everybody blames you&lt;/em&gt;. Been there,
 </description>
         
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/01/15/how-to-cut-corners.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/01/15/how-to-cut-corners.html</guid>
+        <link>https://www.yegor256.com/2015/01/15/how-to-cut-corners.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/01/15/how-to-cut-corners.html</guid>
       </item>
     
       <item>
@@ -715,8 +715,8 @@ And a big, complex scope is an obvious code smell.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 12 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html</guid>
+        <link>https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html</guid>
       </item>
     
       <item>
@@ -745,8 +745,8 @@ honestly show your clients all project internals and still keep them on board.&l
 </description>
         
         <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2015/01/05/how-to-be-honest-and-keep-customer.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2015/01/05/how-to-be-honest-and-keep-customer.html</guid>
+        <link>https://www.yegor256.com/2015/01/05/how-to-be-honest-and-keep-customer.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2015/01/05/how-to-be-honest-and-keep-customer.html</guid>
       </item>
     
       <item>
@@ -776,8 +776,8 @@ startup. Below I summarize my experience with organizing such technical reviews.
 </description>
         
         <pubDate>Thu, 18 Dec 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/12/18/independent-technical-reviews.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/12/18/independent-technical-reviews.html</guid>
+        <link>https://www.yegor256.com/2014/12/18/independent-technical-reviews.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/12/18/independent-technical-reviews.html</guid>
       </item>
     
       <item>
@@ -800,8 +800,8 @@ we get from a &amp;quot;pure&amp;quot; object-oriented and immutable approach, w
 </description>
         
         <pubDate>Fri, 07 Nov 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/11/07/how-immutability-helps.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/11/07/how-immutability-helps.html</guid>
+        <link>https://www.yegor256.com/2014/11/07/how-immutability-helps.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/11/07/how-immutability-helps.html</guid>
       </item>
     
       <item>
@@ -817,8 +817,8 @@ on someone&amp;#39;s t-shirt, the most &lt;strong&gt;reputable&lt;/strong&gt; pr
 </description>
         
         <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/10/12/who-is-software-architect.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/10/12/who-is-software-architect.html</guid>
+        <link>https://www.yegor256.com/2014/10/12/who-is-software-architect.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/10/12/who-is-software-architect.html</guid>
       </item>
     
       <item>
@@ -840,8 +840,8 @@ I&amp;#39;ll try to rely only on logic instead.&lt;/p&gt;
 </description>
         
         <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html</guid>
+        <link>https://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/10/08/continuous-integration-is-dead.html</guid>
       </item>
     
       <item>
@@ -860,8 +860,8 @@ Only then, is his result appreciated and paid for.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html</guid>
+        <link>https://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html</guid>
       </item>
     
       <item>
@@ -886,8 +886,8 @@ of code and quality of the internal processes that connect our team.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/10/06/software-project-lifecycle.html</guid>
+        <link>https://www.yegor256.com/2014/10/06/software-project-lifecycle.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/10/06/software-project-lifecycle.html</guid>
       </item>
     
       <item>
@@ -1053,8 +1053,8 @@ the best and highly recommended):&lt;/p&gt;
 </description>
         
         <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</guid>
+        <link>https://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/10/05/ten-hosted-continuous-integration-services.html</guid>
       </item>
     
       <item>
@@ -1077,8 +1077,8 @@ almost impossible to maintain.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/09/23/built-in-fake-objects.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/09/23/built-in-fake-objects.html</guid>
+        <link>https://www.yegor256.com/2014/09/23/built-in-fake-objects.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/09/23/built-in-fake-objects.html</guid>
       </item>
     
       <item>
@@ -1098,8 +1098,8 @@ No. I&amp;#39;m saying that you should &lt;em&gt;never&lt;/em&gt; have them near
 </description>
         
         <pubDate>Tue, 16 Sep 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html</guid>
+        <link>https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html</guid>
       </item>
     
       <item>
@@ -1123,8 +1123,8 @@ deployment script(s).&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html</guid>
+        <link>https://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html</guid>
       </item>
     
       <item>
@@ -1151,8 +1151,8 @@ the data?&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 09 Sep 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/09/09/restful-web-sites.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/09/09/restful-web-sites.html</guid>
+        <link>https://www.yegor256.com/2014/09/09/restful-web-sites.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/09/09/restful-web-sites.html</guid>
       </item>
     
       <item>
@@ -1174,8 +1174,8 @@ a well-known pure Java implementation of SSH2.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 02 Sep 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/09/02/java-ssh-client.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/09/02/java-ssh-client.html</guid>
+        <link>https://www.yegor256.com/2014/09/02/java-ssh-client.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/09/02/java-ssh-client.html</guid>
       </item>
     
       <item>
@@ -1197,8 +1197,8 @@ takes just a few seconds of your time.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 19 Aug 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html</guid>
+        <link>https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html</guid>
       </item>
     
       <item>
@@ -1215,8 +1215,8 @@ new strings, but its own state will never change.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 09 Jun 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html</guid>
+        <link>https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html</guid>
       </item>
     
       <item>
@@ -1246,8 +1246,8 @@ This is how I&amp;#39;m doing it, with help of &lt;a href=&quot;http://eclipse.o
 </description>
         
         <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html</guid>
+        <link>https://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html</guid>
       </item>
     
       <item>
@@ -1267,8 +1267,8 @@ This is how I&amp;#39;m doing it, with help of &lt;a href=&quot;http://eclipse.o
 </description>
         
         <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/05/13/why-null-is-bad.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/05/13/why-null-is-bad.html</guid>
+        <link>https://www.yegor256.com/2014/05/13/why-null-is-bad.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/05/13/why-null-is-bad.html</guid>
       </item>
     
       <item>
@@ -1283,8 +1283,8 @@ from JDK7 are perfect examples of utility classes.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html</guid>
+        <link>https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html</guid>
       </item>
     
       <item>
@@ -1297,8 +1297,8 @@ list them all here.&lt;/p&gt;
 </description>
         
         <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html</guid>
+        <link>https://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/04/27/typical-mistakes-in-java-code.html</guid>
       </item>
     
       <item>
@@ -1315,8 +1315,8 @@ and discuss some very interesting numbers.&lt;/p&gt;
 </description>
         
         <pubDate>Fri, 11 Apr 2014 00:00:00 +0000</pubDate>
-        <link>http://www.yegor256.com/2014/04/11/cost-of-loc.html</link>
-        <guid isPermaLink="true">http://www.yegor256.com/2014/04/11/cost-of-loc.html</guid>
+        <link>https://www.yegor256.com/2014/04/11/cost-of-loc.html</link>
+        <guid isPermaLink="true">https://www.yegor256.com/2014/04/11/cost-of-loc.html</guid>
       </item>
     
   </channel>
