@@ -93,7 +93,7 @@ CDN that is simple to configure. It utilizes AWS CloudFront resources.</p>
 the details, I will explain how it's done internally. Say you have
 this HTML:</p>
 
-<pre>&lt;img src="http://www.teamed.io/image/logo.svg"/&gt;</pre>
+<pre>&lt;img src="//www.teamed.io/image/logo.svg"/&gt;</pre>
 
 <p>I want this <code>logo.svg</code> to be delivered via a CDN. There are two steps.
 First, I register my domain at <a href="http://www.jare.io">jare.io</a>:</p>
@@ -102,7 +102,7 @@ First, I register my domain at <a href="http://www.jare.io">jare.io</a>:</p>
 
 <p>Second, I change my HTML:</p>
 
-<pre>&lt;img src="http://cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/&gt;</pre>
+<pre>&lt;img src="//cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/&gt;</pre>
 
 <p>That's it.</p>
 

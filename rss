@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-05-02T21:37:07+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Right Way to Report a Bug</title><link href="https://www.yegor256.com/2018/04/24/right-way-to-report-bugs.html" rel="alternate" type="text/html" title="The Right Way to Report a Bug" /><published>2018-04-24T00:00:00+00:00</published><updated>2018-04-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/04/24/right-way-to-report-bugs</id><content type="html" xml:base="https://www.yegor256.com/2018/04/24/right-way-to-report-bugs.html">&lt;p&gt;You know, at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, either you are a programmer or a tester,
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-05-03T14:15:04+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Right Way to Report a Bug</title><link href="https://www.yegor256.com/2018/04/24/right-way-to-report-bugs.html" rel="alternate" type="text/html" title="The Right Way to Report a Bug" /><published>2018-04-24T00:00:00+00:00</published><updated>2018-04-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/04/24/right-way-to-report-bugs</id><content type="html" xml:base="https://www.yegor256.com/2018/04/24/right-way-to-report-bugs.html">&lt;p&gt;You know, at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, either you are a programmer or a tester,
 and &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;we pay&lt;/a&gt;
 for each bug you find and report. Well, not quite. We pay for
 each bug report a project architect considers good enough to pay for.
@@ -255,7 +255,7 @@ in nine object-oriented steps.&lt;/p&gt;
 factoring&amp;mdash;without changing its external behavior.&amp;quot; The goal
 of refactoring is to make code more readable and suitable for modifications.&lt;/p&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;https://amzn.to/2E7i17H&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/refactoring.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;https://amzn.to/2E7i17H&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/refactoring.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Martin Fowler in his famous book &lt;a href=&quot;https://amzn.to/2E7i17H&quot;&gt;Refactoring: Improving the Design of Existing Code&lt;/a&gt;
 suggested a number of refactoring techniques which help making
@@ -276,7 +276,7 @@ the easiest one.&lt;/p&gt;
 in IntelliJ IDEA, using my
 custom &lt;a href=&quot;/bin/settings.jar&quot;&gt;&lt;code&gt;settings.jar&lt;/code&gt;&lt;/a&gt;, I see something like this:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/cactoos-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/cactoos-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;When I open the source code of, say,
 &lt;a href=&quot;https://github.com/spring-projects/spring-boot&quot;&gt;Spring Boot&lt;/a&gt;,
@@ -284,7 +284,7 @@ I see something like this
 (it&amp;#39;s &lt;a href=&quot;https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java&quot;&gt;&lt;code&gt;o.s.b.ImageBanner&lt;/code&gt;&lt;/a&gt;
 randomly picked out of a thousand other classes that look very similar):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/springboot-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/springboot-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;See the difference?&lt;/p&gt;
 
@@ -305,7 +305,7 @@ to add them to their methods in order to simplify things.&lt;/p&gt;
 (class &lt;a href=&quot;https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java&quot;&gt;&lt;code&gt;RepositoryUtils&lt;/code&gt;&lt;/a&gt;
 picked at random, but almost all other classes are formatted the same way):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/maven-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/maven-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;Aside from being &amp;quot;all red&amp;quot; their code is full of empty lines.
 Removing them will make code more readable and will also help me
@@ -344,9 +344,9 @@ if we are talking about closed-source commercial code. We are lucky if
 the classes have more or less descriptive names and are small and
 cohesive.&lt;/p&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1PBpoDT&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2015/04/book-goos.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1PBpoDT&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2015/04/book-goos.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1SdcZ8M&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2015/04/book-legacy.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1SdcZ8M&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2015/04/book-legacy.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;However, instead of documentation I prefer to deal with unit tests. They
 explain the code much better and prove that it works. When I don&amp;#39;t
@@ -373,14 +373,14 @@ functional programming.&lt;/p&gt;
 &lt;a href=&quot;https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java&quot;&gt;&lt;code&gt;o.s.b.c.p.b.Binder&lt;/code&gt;&lt;/a&gt;
 class from Spring Boot (there are many similar examples there, I picked this one randomly):&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/binder-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/binder-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;There are five &lt;code&gt;return&lt;/code&gt; statements in such a small method. For object-oriented
 code that&amp;#39;s too much. It&amp;#39;s OK for procedural code, which I also write
 sometimes. For example, &lt;a href=&quot;https://github.com/zerocracy/farm/blob/master/src/main/resources/com/zerocracy/stk/pm/in/orders/start_order_if_assigned_in_github.groovy&quot;&gt;this Groovy script&lt;/a&gt;
 of ours has five &lt;code&gt;return&lt;/code&gt; keywords too:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2018/04/farm-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/farm-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
 
 &lt;p&gt;But this is Groovy and it&amp;#39;s not a class. It&amp;#39;s just a procedure, a script.&lt;/p&gt;
 
@@ -744,7 +744,7 @@ but under the hood:&lt;/p&gt;
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/2c7sVS1&#39;&gt;&lt;img src=&#39;http://www.yegor256.com/images/2014/12/java-concurrency-in-practice.png&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/2c7sVS1&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2014/12/java-concurrency-in-practice.png&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;The first argument of &lt;code&gt;assertThat()&lt;/code&gt; is an instance of
 &lt;a href=&quot;http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html&quot;&gt;&lt;code&gt;Func&lt;/code&gt;&lt;/a&gt;
