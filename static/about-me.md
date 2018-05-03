@@ -88,6 +88,7 @@ By the way, this is what some people think about me
 and this blog: [testimonials](/testimonials.html) (18+, be careful!).
 
 I'm also visible sometimes at
+[BLOG@CACM](https://cacm.acm.org/blogs/blog-cacm/),
 [DZone](https://dzone.com/users/1023189/yegor256.html),
 [JavaCodeGeeks](https://www.javacodegeeks.com/user/yegor-bugayenko/?profiletab=posts),
 [Hacker News](https://news.ycombinator.com/user?id=yegor256a),
