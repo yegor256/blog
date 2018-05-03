@@ -98,15 +98,11 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
-None, as of yet.
-
-<!--
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2016/jeeconf-logo.png" class="future-talk" alt="JEEConf 2018"/>
-[JEEConf 2018](http://www.jeeconf.com/)<br/>
-Kiev, Ukraine<br/>
-25-26 May 2018
--->
+<img src="https://www.meetup.com/mu_static/en-US/004ada050440a14f84dbb068035be043.svg" class="future-talk" alt="Meetup 2018"/>
+[RedCode Meetup #1](https://www.meetup.com/RedCode/events/250405723/)<br/>
+Krasnodar, Russia<br/>
+17 May 2018
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
@@ -124,7 +120,7 @@ Math of Love?;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
 Iași, Romania;
 23 April 2018;
-video is coming,
+[video](https://www.youtube.com/watch?v=_cdni0NMus0),
 [slides](https://www.slideshare.net/YegorBugayenko/math-or-love).
 
 <div class="talk-event">&nbsp;</div>
