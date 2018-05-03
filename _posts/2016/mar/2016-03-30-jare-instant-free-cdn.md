@@ -37,7 +37,7 @@ the details, I will explain how it's done internally. Say you have
 this HTML:
 
 {% highlight html %}
-<img src="http://www.teamed.io/image/logo.svg"/>
+<img src="//www.teamed.io/image/logo.svg"/>
 {% endhighlight %}
 
 I want this `logo.svg` to be delivered via a CDN. There are two steps.
@@ -48,7 +48,7 @@ First, I register my domain at [jare.io](http://www.jare.io):
 Second, I change my HTML:
 
 {% highlight html %}
-<img src="http://cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/>
+<img src="//cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/>
 {% endhighlight %}
 
 That's it.

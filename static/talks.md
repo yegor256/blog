@@ -115,7 +115,7 @@ so why shouldn't we rate them, right? The best grade is
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
-<img src="http://devexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
+<img src="//devexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
 Math of Love?;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
 Iași, Romania;
@@ -124,7 +124,7 @@ Iași, Romania;
 [slides](https://www.slideshare.net/YegorBugayenko/math-or-love).
 
 <div class="talk-event">&nbsp;</div>
-<img src="http://devexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
+<img src="//defexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
 How to Cut Corners and Stay Cool;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
 Iași, Romania;

@@ -57,7 +57,7 @@ I just search by
 "[oop](https://stackoverflow.com/questions/tagged/oop)"
 tags in order to find relevant questions and answer them if I can.
 
-<img src="http://www.wring.io/images/logo.svg" class="env-ico" alt="icon"/><br/>
+<img src="//www.wring.io/images/logo.svg" class="env-ico" alt="icon"/><br/>
 [Wring](http://www.wring.io) aggregates my GitHub notifications
 and helps me stay on top of all events that are happening there.
 It's my own project and I use it every day.

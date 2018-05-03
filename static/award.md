@@ -37,10 +37,10 @@ Submission to 2018 [is open]({% pst 2017/oct/2017-10-24-award-2018 %}).
 
 <hr/>
 
-<img src="http://www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png"
+<img src="//www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png"
   style="width:203px;height:45px;" alt='badge'/>
 &nbsp;
-<img src="http://www.yegor256.com/images/award/2017/winner-mafagafogigante.png"
+<img src="//www.yegor256.com/images/award/2017/winner-mafagafogigante.png"
   style="width:203px;height:45px;" alt='badge'/>
 
 [`@itcraftsmanpl`](https://github.com/itcraftsmanpl) and [`@mafagafogigante`](https://github.com/mafagafogigante)
@@ -52,10 +52,10 @@ received a cash prize of **$1,024** each.
 
 <hr/>
 
-<img src="http://www.yegor256.com/images/award/2016/winner-pholser.png"
+<img src="//www.yegor256.com/images/award/2016/winner-pholser.png"
   style="width:203px;height:45px;" alt='badge'/>
 &nbsp;
-<img src="http://www.yegor256.com/images/award/2016/winner-sils.png"
+<img src="//www.yegor256.com/images/award/2016/winner-sils.png"
   style="width:203px;height:45px;" alt='badge'/>
 
 [`@pholser`](https://github.com/pholser) and [`@sils`](https://github.com/sils) were the winners in 2016
@@ -66,7 +66,7 @@ received a cash prize of **$2,048** each.
 
 <hr/>
 
-<img src="http://www.yegor256.com/images/award/2015/winner.png"
+<img src="//www.yegor256.com/images/award/2015/winner.png"
   style="width:203px;height:45px;" alt='badge'/>
 
 [`@gvlasov`](https://github.com/gvlasov) was a winner in 2015
