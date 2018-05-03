@@ -69,8 +69,8 @@ mailing list. Just give me your email address and briefly explain who you are
 and why you're interested (I'm trying to avoid anonymous
 subscribers).
 
-<form class="unprintable" action="http://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
-  <input type="hidden" name="_next" value="http://www.yegor256.com/subscribed.html"/>
+<form class="unprintable" action="https://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
+  <input type="hidden" name="_next" value="https://www.yegor256.com/subscribed.html"/>
   <input type="hidden" name="_subject" value="subscribe me"/>
   <input type="hidden" name="_format" value="text"/>
   <label for="email">Your email</label>
@@ -108,6 +108,6 @@ Just in case, my public PGP key is [23C2244F](/bin/23C2244F.asc).
 Here is my SO flair:
 
 <a href="https://stackexchange.com/users/63162">
-<img src="https://stackexchange.com/users/flair/63162.png"
+<img src="//stackexchange.com/users/flair/63162.png"
   width="208" height="58" alt="StackExchange flair for yegor256"/>
 </a>

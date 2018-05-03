@@ -22,8 +22,8 @@ script: |
 
 I'm sorry to see you leaving :(
 
-<form action="http://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
-  <input type="hidden" name="_next" value="http://www.yegor256.com/unsubscribed.html"/>
+<form action="https://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
+  <input type="hidden" name="_next" value="https://www.yegor256.com/unsubscribed.html"/>
   <input type="hidden" name="_subject" value="unsubscribe me"/>
   <input type="hidden" name="_format" value="text"/>
   <label for="email">Your email</label>
