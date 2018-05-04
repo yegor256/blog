@@ -19,7 +19,7 @@
 module Yegor
   class Img
     def initialize(src, ctx)
-      if src.index('/') == 0
+      if src.index('/') == 0 && src.index('//') != 0
         @url = src
         raise "file doesn't exist: #{src}" unless
           File.exists?('./_site' + src) ||
