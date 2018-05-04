@@ -100,6 +100,7 @@ informed about everything I do publicly.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.meetup.com/mu_static/en-US/004ada050440a14f84dbb068035be043.svg" class="future-talk" alt="Meetup 2018"/>
+12 шагов от Java к ООП<br/>
 [RedCode Meetup #1](https://www.meetup.com/RedCode/events/250405723/)<br/>
 Krasnodar, Russia<br/>
 17 May 2018
