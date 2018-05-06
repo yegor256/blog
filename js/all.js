@@ -147,7 +147,7 @@ if (typeof($) != 'undefined') {
           async: true,
           timeout: timeout,
           url: 'https://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
-            + encodeURIComponent(url.replace('http://www.yegor256.com', ''))
+            + encodeURIComponent(url.replace('https://www.yegor256.com', ''))
             + '"',
           success: function(json) {
             var count = json.nbHits;
