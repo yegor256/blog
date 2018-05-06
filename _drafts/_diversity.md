@@ -44,5 +44,6 @@ that blacks lacked basic human emotions and
 [claimed](http://www.nytimes.com/2012/12/01/opinion/the-real-thomas-jefferson.html)
 he had "never seen an elementary trait of painting or sculpture"
 or poetry among blacks and argued that blacks’ ability to "reason" was
-"much inferior" to whites’, while "in imagination they are dull, tasteless, and anomalous?"
+"much inferior" to whites', while
+"in imagination they are dull, tasteless, and anomalous?"
 
