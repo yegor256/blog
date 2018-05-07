@@ -29,7 +29,7 @@ our aggregator of
 [FindBugs](http://findbugs.sourceforge.net/),
 and some other analyzers. I do love IDEA's rules&mdash;some of them are
 unique and very useful. I asked whether I could find them somewhere in
-Maven Central (they are in Java) and the answer was "You'll have to figure
+Maven Central (they are written in Java) and the answer was "You'll have to figure
 out yourself how to use them, but they are open source."
 Here comes my opinion about this
 situation: I believe that open source doesn't just mean the code is readable
@@ -40,10 +40,10 @@ without authorization. It means something much bigger.
 {% jb_picture_body %}
 
 Just making a piece of code publicly accessible is not what it takes to call
-it _open source_ software. Actually, it only harms the product and the
-reputation of its author, if it's open but not ready for _reuse_, which
+it _open source_ software. Actually, it only harms the product, and the
+reputation of its author, if it's open but not ready for _reuse_ (which
 is what [the open source world]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
-is all about. As [Eric Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond) said in his
+is all about). As [Eric Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond) said in his
 famous piece [_The Cathedral and the Bazaar_](https://amzn.to/2FKF9tv),
 "Good programmers know what to write. Great ones know what to rewrite (and reuse)."
 
@@ -55,11 +55,11 @@ is a totally different piece of work, which may take much more time.
 As [Karl Fogel](https://en.wikipedia.org/wiki/Karl_Fogel)
 said in [_Producing Open Source Software_](https://amzn.to/2jyMrrF):
 "Most free software projects fail." They fail, I believe, because not enough
-attention is pai to the following basic things (in no particular
+attention is paid to the following basic things (in no particular
 order):
 
 **README**.
-I'm sure you host your product on GitHub (if not, what's wrong with you?).
+I'm sure you host your product on GitHub. (If not, what's wrong with you?)
 There must be a `README.md` file in the root directory that
 explains what the product is all about and how we should use it.
 A few good examples:
@@ -89,7 +89,7 @@ reads it anyway. This is exactly what happens in most cases.
 But only while those users are small potatoes.
 
 A few years ago I was an architect on a software project and we had to create
-an analizer of hardware components, like CPU, memory, hard disc, etc. We had
+an analyzer of hardware components, like CPU, memory, hard disc, etc. We had
 to make sure all of them worked as expected after running pretty complex
 and customized tests. My obvious suggestion was to use open source tools,
 which would do the hard work for us. We would only have to integrate them.
@@ -123,7 +123,7 @@ it definitely isn't.
 It was, twenty years ago, but now we have repositories.
 You have to distribute your product as an "artifact" through one of those public
 repositories, and make it possible for us to fetch it
-from there, skip the testing and packaging, and just use it as a product
+from there, skipping the testing and packaging, and just using it as a product
 (a Ruby gem or Java JAR, for example).
 
 I'm talking about repositories like
