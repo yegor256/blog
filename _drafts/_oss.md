@@ -205,7 +205,7 @@ the questions I'd recommend you answer in your
   * How do I run an automated build?
   * How big/small does a pull request have to be in order to be accepted?
   * What are your style guidelines?
-  * How do bugs have to reported, tagged, explained?
+  * How do bugs have to be reported, tagged, explained?
   * What makes a [good bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %})?
 
 Here is the text I
