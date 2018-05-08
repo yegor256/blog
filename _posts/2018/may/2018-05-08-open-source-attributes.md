@@ -54,7 +54,7 @@ is a totally different piece of work, which may take much more time.
 
 As [Karl Fogel](https://en.wikipedia.org/wiki/Karl_Fogel)
 said in [_Producing Open Source Software_](https://amzn.to/2jyMrrF):
-"Most free software projects fail." They fail, I believe, because not enough
+"Most free software projects fail." They fail (on top of many other factors) because not enough
 attention is paid to the following basic things (in no particular
 order):
 
