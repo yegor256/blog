@@ -157,7 +157,7 @@ those classes will not interest anyone.
 
 The best format for those Javadoc blocks is "by example." Instead of prose
 I'd recommend you demonstrate how to use the class, especially in combination
-with it neighbours. Moreover, I'd suggest you _don't_ write documentation
+with it neighbors. Moreover, I'd suggest you _don't_ write documentation
 anywhere else apart from those Javadoc blocks. (They exist in other
 languages too, but have different names.)
 
