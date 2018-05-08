@@ -5,7 +5,7 @@ date: 2015-12-22
 place: Kiev, Ukraine
 tags: programming
 description: |
-  An active open-source contribution is a good
+  An active open source contribution is a good
   habit for a software developer who is passionate about
   his or her job.
 keywords:
@@ -22,11 +22,12 @@ translated:
 ---
 
 In my [How Much Do You Cost?]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %})
-post last year, I said open-source contribution is a very
+post last year, I said [open source]({% pst 2018/may/2018-05-08-open-source-attributes %})
+contribution is a very
 important factor in defining who is good and who isn't, as far as programmers go.
 I was saying that if you're not contributing to open source, if your
 GitHub profile is not full of projects and commits, your "value" as a
-software developer is low, simply because this lack of open-source
+software developer is low, simply because this lack of open source
 activity tells everybody that you're **not passionate** about software
 development and are simply working for money. I keep getting angry comments
 about that every week. Let me answer them all here.
@@ -43,14 +44,14 @@ a list of **reasons** why the author of the comment doesn't contribute:
   * I'm already busy in the office; why should I do extra work?
   * I'm well-paid; why should I do anything for free?
   * My employer doesn't allow me to contribute to open source.
-  * My company won't pay me for writing open-source code.
+  * My company won't pay me for writing open source code.
 
 Good excuses, but let's try to look at it from a different perspective.
 
 Today, it's **not possible** at all to create software without using
-open-source components. I'm sure nobody will argue with this. Only something
+open source components. I'm sure nobody will argue with this. Only something
 very basic and simple can be created without code reuse. Nah, I'm wrong. Even
-super small pieces of software can't be created without open-source
+super small pieces of software can't be created without open source
 "neighbors." You need at the very least an operating system and a programming language.
 In most cases, they are open source (Microsoft is an exception, and it must die).
 
@@ -85,13 +86,13 @@ work on something that is outside of your business scope. I can imagine that,
 but let's see what's happening behind the scenes.
 
 You're telling me that your company doesn't care about the software industry,
-right? They don't allow you to give anything back to the open-source community.
+right? They don't allow you to give anything back to the open source community.
 They want you to use those free libraries and give nothing back. And it is their
 corporate strategy. I doubt that's the case.
 Did you ask your CTO about it?
 
 I strongly believe that in 95 percent of cases, when you explain that your software
-seriously depends on a few open-source libraries that may need some
+seriously depends on a few open source libraries that may need some
 improvements, your boss will have nothing against you becoming a contributor.
 Try it.
 

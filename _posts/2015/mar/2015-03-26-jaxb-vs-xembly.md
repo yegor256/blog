@@ -151,5 +151,5 @@ marshalling process. In addition, the complexity of these directives
 may be very high&mdash;much higher than the rather cumbersome
 [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}) of JAXB.
 
-Xembly is an open-source project, so feel free to submit your questions
+Xembly is an open source project, so feel free to submit your questions
 or corrections to [GitHub](https://github.com/yegor256/xembly).

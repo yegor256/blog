@@ -38,7 +38,7 @@ the GitHub issue.
 There are many tools on the market, which automate
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) and
 continuous delivery (let's call them DevOps).
-For example, downloadable open-source
+For example, downloadable open source
 [Jenkins](http://jenkins-ci.org/) and hosted
 [Travis]({% pst 2014/jul/2014-07-31-travis-and-rultor %})
 both perform these tasks. So, why do we need one more?

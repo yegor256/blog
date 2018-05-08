@@ -77,7 +77,7 @@ certain problems:
 How does your
 [manager]({% pst 2017/jun/2017-06-06-gluten-free-management %}) know you're actually working,
 not watching TV, playing with your kids, or grooming your favorite
-open-source pets? In the office, it's easier; you just sit in front of the monitor
+open source pets? In the office, it's easier; you just sit in front of the monitor
 and the boss is happy. At home or in a coffee shop, you are guilty by
 default until you prove the opposite by creating new tickets,
 posting emojis to Slack, and sending emails with multiple CCs.

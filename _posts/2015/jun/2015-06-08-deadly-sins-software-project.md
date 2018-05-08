@@ -243,6 +243,6 @@ who are going to use it&mdash;not contribute to it but simply use it as a
 
 <hr/>
 
-These are the criteria being used to evaluate the open-source projects
+These are the criteria being used to evaluate the open source projects
 entered in our
 [award]({% pst 2015/apr/2015-04-16-award %}) competition.

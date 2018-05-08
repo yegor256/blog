@@ -44,7 +44,7 @@ we're saying to you, our candidate.
 
 How does the market validate that code?
 [Open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})&mdash;that's what is the most convincing to us.
-We ask you to show us which open-source products you have and how
+We ask you to show us which open source products you have and how
 popular they are.
 
 Then show us your blog, your conference talks, your hackathon
@@ -64,7 +64,7 @@ way we understand object-oriented programming is also
 So occasionally we'll find that we simply don't trust the market as our only
 source of information, especially when the market has almost nothing to say about you.
 Some programmers come to us with zero
-[open-source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}) experience, no certificates,
+[open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}) experience, no certificates,
 and no public work. Still, they claim they are
 [the best]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
 

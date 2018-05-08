@@ -130,22 +130,22 @@ part of the community.
 
 ## GitHub Profile
 
-GitHub is the de-facto standard platform for open-source code. There are others
+GitHub is the de-facto standard platform for open source code. There are others
 like BitBucket, but&mdash;I hope&mdash;they will die sooner or later. As a modern
 software developer, you must be on GitHub. You
 [have to contribute]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
-to some open source. You have to be visible in the open-source world if you
+to some open source. You have to be visible in the open source world if you
 want to sell yourself high.
 
-{% quote You don't have to spend all your time on open-source projects, just contribute to the ones you're using already. %}
+{% quote You don't have to spend all your time on open source projects, just contribute to the ones you're using already. %}
 
 Your potential employer wants to see what the _market_ is thinking about
 your code and about you. They are afraid of making a mistake by hiring you.
-Your presence in the open-source world is a _guarantee_ for them. Someone has already
+Your presence in the open source world is a _guarantee_ for them. Someone has already
 seen your code, and someone has already given some kudos to your projects. Someone virtually
 vouches for you. As a result, they will feel more comfortable in hiring you.
 
-To be in the "elite," you don't have to spend all your time on open-source
+To be in the "elite," you don't have to spend all your time on open source
 projects. Just contribute to the ones you're using already. You're using
 Sinatra at work? Check its source code. You will find a lot of places that
 need improvement. Offer them your help and simply submit small pull requests

@@ -417,7 +417,7 @@ this approach.
 Let's say you have a programmer and you trust that person and he's a
 professional or she's a professional and then he's supposed to work on the back
 yard or whatever and then you find out he doesn't tell you that but you find out
-that he's also contributing to an open-source project of his own.  So, he's
+that he's also contributing to an open source project of his own.  So, he's
 doing something maybe in the evening time, maybe in the daytime but you don't
 know that because you don't control him, you don't see the screen of that
 person.  So, what's going to be your reaction in this case?

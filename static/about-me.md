@@ -60,7 +60,7 @@ As an **investor** at [SeedRamp.com](http://www.seedramp.com), I've
 made a few investments, but I've got no results yet :)
 
 As a **philanthropist**, I donate a few thousand dollars every year (started in 2015)
-to the best open-source project at the time, which I pick myself out of about a hundred in
+to the best open source project at the time, which I pick myself out of about a hundred in
 a more or less fair [competition](/award.html).
 
 Once a month, I send a summary email of my writing activity. If

@@ -76,4 +76,4 @@ If you click it, you will see the full report of all puzzles
 currently present and previously seen.
 
 This mechanism helps us in many projects. You can use it for free. It's
-an open-source Ruby product; feel free to [contribute](https://github.com/yegor256/0pdd).
+an open source Ruby product; feel free to [contribute](https://github.com/yegor256/0pdd).
