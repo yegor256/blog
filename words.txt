@@ -85,6 +85,7 @@ adblock
 ADC
 add
 added
+addict
 adding
 addition
 additional
@@ -555,6 +556,7 @@ bat
 batchelder
 bathroom
 bay
+bazaar
 bcba
 be
 beans
@@ -784,6 +786,7 @@ browsing
 bruce
 brutti
 BSc
+BSD
 BTC
 BTCs
 BTW
@@ -933,6 +936,7 @@ catching
 categories
 categorize
 category
+cathedral
 cats
 cattivi
 caught
@@ -1469,6 +1473,7 @@ copies
 copy
 copy-pasted
 copying
+copyleft
 copyright
 core
 corey
@@ -1611,6 +1616,8 @@ customer's
 customer-reported
 customers
 customers'
+customize
+customized
 cut
 cute
 cutting
@@ -1831,6 +1838,7 @@ desk-to-desk
 desks
 desktop
 desperately
+despise
 despite
 destination
 destroy
@@ -1998,6 +2006,7 @@ distressing
 distribute
 distributed
 distributing
+distribution
 disturb
 disturbing
 diversity
@@ -2686,6 +2695,7 @@ flyweight
 focus
 focused
 focusing
+fogel
 fold
 folder
 follow
@@ -2928,6 +2938,7 @@ gov
 governed
 government
 GPG
+GPL
 gracefully
 grade
 gradients
@@ -2950,6 +2961,7 @@ great
 greater
 greatest
 greatly
+greatness
 greed
 greedy
 green
@@ -2970,6 +2982,7 @@ growing
 grown-ups
 grows
 growth
+grunt
 GTA
 guarantee
 guarantees
@@ -2984,6 +2997,7 @@ guice
 guidance
 guide
 guided
+guidelines
 guides
 guilt
 guilt-driven
@@ -3240,6 +3254,7 @@ icons
 ID
 IDE
 idea
+IDEA's
 ideal
 ideally
 ideas
@@ -4223,6 +4238,7 @@ mentions
 menu
 menus
 mercedes-benz
+mere
 merely
 merge
 merged
@@ -4623,6 +4639,8 @@ novices
 now
 nowadays
 nowhere
+NPM
+npmjs
 NULL
 NULLs
 number
@@ -4735,7 +4753,6 @@ OOP-inflected
 OOPSLA'
 open
 open-minded
-open-source
 opened
 opener
 opening
@@ -5187,6 +5204,7 @@ posted
 PostgreSQL
 posting
 posts
+potatoes
 potential
 poverty
 powder
@@ -5402,6 +5420,7 @@ proposed
 proposing
 proprietary
 pros
+prose
 prospect
 prospects
 protect
@@ -5585,6 +5604,7 @@ reader
 readers
 readiness
 reading
+README
 reads
 ready
 real
@@ -5879,6 +5899,7 @@ retweet
 reusability
 reusable
 reuse
+reusing
 reveal
 revealed
 revealing
@@ -5955,6 +5976,7 @@ round
 route
 router
 routine
+royalties
 RSS
 rubensson
 rubocop
@@ -6264,6 +6286,7 @@ shoulders
 shouldn't
 show
 show-stopper
+showcase
 showed
 showing
 shows
@@ -6283,6 +6306,7 @@ sigh
 sight
 sign
 signal
+signals
 signature
 signatures
 signed
@@ -6346,6 +6370,7 @@ skimp
 skinparam
 skip
 skipped
+skipping
 skirts
 skype
 skyrocket
@@ -6647,6 +6672,7 @@ strangers
 strategies
 strategy
 stream
+streamline
 streams
 streets
 strength
@@ -6826,6 +6852,7 @@ table
 tables
 tacit
 tackles
+tagged
 tags
 take
 taken
@@ -7614,6 +7641,7 @@ wife's
 wifi
 wiki
 wikipedia
+wikis
 wild
 wild-wild
 will
