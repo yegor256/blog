@@ -14,9 +14,9 @@ keywords:
   - how to package open source
   - open source maven
   - open source discipline
-image: /images/2018/05/
+image: /images/2018/05/her.jpg
 jb_picture:
-  caption:
+  caption: Her (2013) by Spike Jonze
 ---
 
 A few weeks ago someone [suggested](https://www.yegor256.com/2018/04/10/learning-by-refactoring.html#comment-3865410512)
