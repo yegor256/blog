@@ -106,6 +106,8 @@ By the way, I'm also an amateur artist,
 
 Just in case, my public PGP key is [23C2244F](/bin/23C2244F.asc).
 
+If you are interested, I'm [INTJ-A](https://www.16personalities.com/intj-personality).
+
 Here is my SO flair:
 
 <a href="https://stackexchange.com/users/63162">
