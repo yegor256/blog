@@ -200,7 +200,7 @@
 		<text>Jul/18</text>
 	</g>
 	<path stroke='black'  d='M53.5,14.1 L53.5,230.0 L678.9,230.0 L678.9,14.1 L53.5,14.1 Z  h0.01'/>	<g transform="translate(14.7,122.1) rotate(270)" style="stroke:none; fill:rgb(0,0,0); font-family:monospace; font-size:10.00pt; text-anchor:middle">
-		<text>words per month</text>
+		<text>Words per month</text>
 	</g>
 </g>
 	<g id="gnuplot_plot_1" ><title>gnuplot_plot_1</title>
@@ -353,9 +353,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '639.4,230.0 648.2,230.0 648.2,161.2 639.4,161.2 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M639.4,230.0 L639.4,161.3 L648.1,161.3 L648.1,230.0 L639.4,230.0 Z  h0.01'/>	<g style = 'stroke:none; shape-rendering:crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '651.0,230.0 659.6,230.0 659.6,197.8 651.0,197.8 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '651.0,230.0 659.6,230.0 659.6,197.7 651.0,197.7 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M651.0,230.0 L651.0,197.9 L659.5,197.9 L659.5,230.0 L651.0,230.0 Z  h0.01'/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M651.0,230.0 L651.0,197.8 L659.5,197.8 L659.5,230.0 L651.0,230.0 Z  h0.01'/></g>
 	</g>
 <g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
 	<path stroke='black'  d='M53.5,14.1 L53.5,230.0 L678.9,230.0 L678.9,14.1 L53.5,14.1 Z  h0.01'/></g>
