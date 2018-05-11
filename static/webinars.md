@@ -39,12 +39,12 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-{% webinar 10-05-2018 34 NQRyqiQehBk How to Get Rid of the NEW Operator %}
+<!-- {% webinar 10-05-2018 34 NQRyqiQehBk How to Get Rid of the NEW Operator %} -->
 
 <a href="https://www.youtube.com/watch?v=NQRyqiQehBk"><img src="https://i.ytimg.com/vi/NQRyqiQehBk/mqdefault.jpg" class="wnr" alt="Webinar no.34 by Yegor Bugayenko"/></a>
 May 10, 2018<br/>
 &#35;34: **How to Get Rid of the NEW Operator**<br/>
-We will discuss what is wrong with the operator NEW and how object-oriented code can get rid of it.
+We discussed what was wrong with the operator NEW and how object-oriented code could get rid of it.
 More details here: [Operator new() is Toxic]({% pst 2018/jan/2018-01-02-operator-new-is-toxic %}).
 
 <a href="https://www.youtube.com/watch?v=REj8pJesMVI"><img src="https://i.ytimg.com/vi/REj8pJesMVI/mqdefault.jpg" class="wnr" alt="Webinar no.33 by Yegor Bugayenko"/></a>
