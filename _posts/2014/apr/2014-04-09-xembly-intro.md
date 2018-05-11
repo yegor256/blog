@@ -2,7 +2,7 @@
 layout: post
 title: "Xembly, an Assembly for XML"
 date: 2014-04-09
-tags: xembly xml xsl xsd
+tags: xembly xml xslt xsd
 description: |
   Xembly is an imperative language for XML data and schema manipulations
   that makes XML building much easier and convenient
