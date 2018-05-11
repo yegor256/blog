@@ -15,7 +15,7 @@ keywords:
 image: /images/andreea/pet.png
 ---
 
-{% badge /images/andreea/pet.svg 300 %}
+{% badge /images/andreea/pet.svg 200 %}
 
 It's a full list of my pet projects (which are still alive). If interested
 in helping any of them, don't hesitate to [email](mailto:pets@yegor256.com).
