@@ -10,5 +10,5 @@ set autoscale
 set style fill solid
 set boxwidth 0.75 relative
 
-set ylabel "words per month" textcolor rgb 'black'
+set ylabel "Words per month" textcolor rgb 'black'
 plot "stats.dat" using 1:($2/1000) with boxes title "" linecolor rgb "#81b341"
