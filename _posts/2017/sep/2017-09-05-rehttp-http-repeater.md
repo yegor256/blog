@@ -3,7 +3,7 @@ layout: post
 title: "ReHTTP.net&mdash;HTTP Repeater"
 date: 2017-09-05
 place: Odessa, Ukraine
-tags: pet
+tags: pets
 description: |
   Some HTTP requests that arrive at my web apps
   can't be processed for technical reasons and I need

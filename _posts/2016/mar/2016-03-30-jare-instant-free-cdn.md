@@ -3,7 +3,7 @@ layout: post
 title: "Jare.io, an Instant and Free CDN"
 date: 2016-03-30
 place: Palo Alto, CA
-tags: cdn pets
+tags: pets
 description: |
   If you want your images, script, or CSS files
   be available via a CDN, use jare.io, an instant

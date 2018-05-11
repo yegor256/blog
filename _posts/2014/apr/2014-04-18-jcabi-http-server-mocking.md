@@ -2,7 +2,7 @@
 layout: post
 title: "Mocking of HTTP Server in Java"
 date: 2014-04-18
-tags: jcabi http mocking
+tags: jcabi testing
 description: |
   HTTP server mocking in Java unit and integration
   testing is easy and flexible with jcabi-http; the article
