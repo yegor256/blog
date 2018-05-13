@@ -161,6 +161,9 @@ able to get any help from anyone. You will be on your own and you will fail,
 because you are used to be patronized by someone senior, in your
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How much would you charge per hour, for a remote part-time consulting gig? <a href="https://twitter.com/hashtag/freelance?src=hash&amp;ref_src=twsrc%5Etfw">#freelance</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/993162626497699840?ref_src=twsrc%5Etfw">May 6, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 [StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
 is not just an indicator of how smart you are and how many
 upvotes you got for the
