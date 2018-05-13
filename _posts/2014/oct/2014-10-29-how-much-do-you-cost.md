@@ -15,6 +15,7 @@ keywords:
 translated:
   - Japanese: http://postd.cc/how-much-do-you-cost/
   - Russian: http://karagodin.pro/how_much_do_you_cost/
+  - Turkish: https://medium.com/kodcular/ka%C3%A7-paral%C4%B1k-adams%C4%B1n%C4%B1z-5138dc96406
 related:
   - 2016/mar/2016-03-08-pimp-up-your-resume
   - 2016/dec/2016-12-06-how-to-pay-programmers-less
