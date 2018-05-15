@@ -40,3 +40,8 @@ in his opinion, 'What harms me is harmful as such', he knows that he
 himself is the one to first confer honour on a thing, he creates values."
 [Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche),
 [Zur Genealogie der Moral: Eine Streitschrift](https://en.wikipedia.org/wiki/On_the_Genealogy_of_Morality), 1887.
+
+&mdash;
+"The happiness of man is: I will. The happiness of woman is: he wills."
+[Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche),
+[Also sprach Zarathustra: Ein Buch für Alle und Keinen](https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra), 1885.
