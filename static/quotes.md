@@ -23,7 +23,7 @@ Here is a more or less complete list of my favorite quotes.
 "There is nothing of which we are more certain
 than the feeling of our self, of our own ego."
 [Sigmund Freud](https://en.wikipedia.org/wiki/Sigmund_Freud),
-[Civilization and its Discontents](https://en.wikipedia.org/wiki/Civilization_and_Its_Discontents), 1930.
+[Das Unbehagen in der Kultur](https://en.wikipedia.org/wiki/Civilization_and_Its_Discontents), 1930.
 
 &mdash;
 "What is good? &mdash; All that heightens the feeling of power, the
@@ -31,4 +31,12 @@ will to power, power itself in man. What is bad? &mdash; All
 that proceeds from weakness. What is happiness? &mdash;
 The feeling that power increases &mdash; that a resistance is overcome."
 [Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche),
-[The Antichrist](https://en.wikipedia.org/wiki/The_Antichrist_%28book%29)
+[Der Antichrist](https://en.wikipedia.org/wiki/The_Antichrist_%28book%29), 1888.
+
+&mdash;
+"The noble type of man feels
+himself to be the determiner of values, he does not need to find approval,
+in his opinion, 'What harms me is harmful as such', he knows that he
+himself is the one to first confer honour on a thing, he creates values."
+[Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche),
+[Zur Genealogie der Moral: Eine Streitschrift](https://en.wikipedia.org/wiki/On_the_Genealogy_of_Morality), 1887.
