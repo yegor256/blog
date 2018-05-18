@@ -1390,6 +1390,7 @@ constructor
 constructors
 constructs
 consultant
+consulting
 consume
 consumed
 consumers
@@ -2774,6 +2775,7 @@ fredrik
 free
 freedom
 freeing
+freelance
 freelancers
 freely
 freeman
