@@ -99,11 +99,11 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.meetup.com/mu_static/en-US/004ada050440a14f84dbb068035be043.svg" class="future-talk" alt="Meetup 2018"/>
-12 шагов от Java к ООП<br/>
-[RedCode Meetup #1](https://www.meetup.com/RedCode/events/250405723/)<br/>
-Krasnodar, Russia<br/>
-17 May 2018
+<img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
+Can a Freelancer Cost $500 an Hour?<br/>
+[CloudEXPO](http://java.sys-con.com/node/4266925)<br/>
+New York, USA<br/>
+11-13 November.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
@@ -116,7 +116,15 @@ so why shouldn't we rate them, right? The best grade is
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
-<img src="//devexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
+<img src="https://i.ytimg.com/vi/klCNgqlAflI/mqdefault.jpg" class="past-talk" alt="Meetup 2018"/>
+12 шагов от Java к ООП;
+[RedCode Meetup #1](https://www.meetup.com/RedCode/events/250405723/);
+Krasnodar, Russia;
+17 May 2018;
+[видео](https://www.youtube.com/watch?v=klCNgqlAflI).
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/_cdni0NMus0/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
 Math of Love?;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
 Iași, Romania;
@@ -125,7 +133,7 @@ Iași, Romania;
 [slides](https://www.slideshare.net/YegorBugayenko/math-or-love).
 
 <div class="talk-event">&nbsp;</div>
-<img src="//defexperience.ro/images/logo_black_green_white.png" class="past-talk" alt="DevExperience 2018"/>
+<img src="https://i.ytimg.com/vi/_cdni0NMus0/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
 How to Cut Corners and Stay Cool;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
 Iași, Romania;

@@ -49,10 +49,10 @@ One of the core [principles](http://www.zerocracy.com/toc.html) of Zerocracy is
 This literally means that
 you should always and only think about yourself and your personal profit. You should
 not try to improve the project, to increase its quality, to fix the code, or to refactor anything...
-unless you are paid for it.
+unless you are _paid_ for it.
 
 First of all, when the task, which you are going to be paid for, is in front of you and
-you can't understand how to solve it, don't _blame yourself_. You are not
+you can't understand how to solve it, _don't_ blame yourself. You are not
 supposed to be an expert in the legacy code you just opened up.
 Strictly speaking, you are not supposed to be an expert in anything.
 A project, <del>unlike your mom</del>, doesn't expect you to
