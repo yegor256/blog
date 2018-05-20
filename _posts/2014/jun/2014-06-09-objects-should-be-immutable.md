@@ -67,8 +67,6 @@ Let's discuss the most important arguments one by one.
 
 ## Thread Safety
 
-{% youtube EnhRgXrHCC4 %}
-
 The first and the most obvious argument is that immutable objects
 are thread-safe. This means that multiple threads can access the same
 object at the same time, without clashing with another thread.
@@ -117,6 +115,8 @@ is about&mdash;there is always some hidden
 information in the code that a programmer has to remember. In this example,
 we have to remember that the configuration for the first request
 is also used for the second one.
+
+{% youtube EnhRgXrHCC4 %}
 
 We have to remember that the second request should always stay
 together and be executed after the first one.

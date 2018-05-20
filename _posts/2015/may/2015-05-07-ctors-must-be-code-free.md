@@ -169,7 +169,8 @@ public final class CachedName implements Name {
 }
 {% endhighlight %}
 
-But please don't make `CachedName` mutable and lazily loaded&mdash;it's an anti-pattern, which I've discussed before in
+But please don't make `CachedName` mutable and lazily
+loaded&mdash;it's an anti-pattern, which I've discussed before in
 [Objects Should Be Immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
 
 This is how our code will look now:
