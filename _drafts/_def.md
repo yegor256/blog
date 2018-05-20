@@ -51,6 +51,8 @@ PHP [`max()`](http://php.net/manual/en/function.max.php)
 returns `FALSE`.
 Python [`max()`](https://docs.python.org/3/library/functions.html#max)
 raises an exception.
+C# [`Enumerable.Max()](https://msdn.microsoft.com/en-us/library/bb335614(v=vs.110).aspx)
+throws an exception.
 JavaScript [`Math.max()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
 returns `NaN`.
 
