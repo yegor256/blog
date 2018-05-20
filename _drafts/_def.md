@@ -7,19 +7,69 @@ tags: oop
 description: |
   Returning NULL when a method can't calculate the result
   is widely considered as a bad practice; there are
-  a number of alternatives
+  a number of alternatives.
 keywords:
-  - agile
-  - agile
-  - lazy and calm
-  - zerocracy
-  -
+  - oop null
+  - null in oop
+  - return null
+  - null is evil
+  - null is bad
 image: /images/2018/04/
 jb_picture:
   caption:
 ---
 
+You know what NULL is, right? It's [evil](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare).
+In OOP your method can either return it,
+accept as an argument, your object can encapsulate it as an attribute,
+or you can assign it to a variable.
+All four scenarios are bad for the maintainability of your code&mdash;there
+are no doubts about that.
+The question is what to do instead. Let's discuss the "return it" part and
+I will suggest one more "best practice" on top what
+[was discussed]({% pst 2014/may/2014-05-13-why-null-is-bad %}) a few years ago.
+
 <!--more-->
 
 {% jb_picture_body %}
+
+Look at this code:
+
+{% highlight java %}
+Integer max(List<Integer> items) {
+  // Calculate the maximum of all
+  // items and return it.
+}
+{% endhighlight %}
+
+What should this method do if the list is empty?
+Java [`Collections.max()`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-)
+throws an exception.
+Ruby [`Enumerable.max()`](https://ruby-doc.org/core-2.5.1/Enumerable.html#method-i-max)
+retuns `nil`.
+PHP [`max()`](http://php.net/manual/en/function.max.php)
+returns `FALSE`.
+Python [`max()`](https://docs.python.org/3/library/functions.html#max)
+raises an exception.
+JavaScript [`Math.max()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max)
+returns `NaN`.
+
+What is the right way, huh? An exception, NULL, false or NaN?
+
+An exception, if you ask me.
+
+But there is yet another approach, which is better than an exception. This one:
+
+{% highlight java %}
+Integer max(List<Integer> items, Integer def) {
+  // Calculate the maximum of all
+  // items and return it. Returns 'def' if the
+  // list is empty.
+}
+{% endhighlight %}
+
+The "default" object will be returned if the list is empty. This feature
+is implemented in Python [`max()`](https://docs.python.org/3/library/functions.html#max):
+it's possible to pass both a list and a default element to return in case the list
+is empty. If the default element is not provided, the exception will be raised.
 
