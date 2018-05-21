@@ -258,9 +258,9 @@ right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
 their best to find what&amp;#39;s wrong. Eventually they stop and say
 &amp;quot;we&amp;#39;re done.&amp;quot; How do they know when to stop? When there is enough
-testing? It&amp;#39;s obvious&amp;mdash;when there are &lt;strong&gt;no more bugs left&lt;/strong&gt; and the
+testing? It&amp;#39;s obvious&amp;mdash;when there are &lt;em&gt;no more bugs left&lt;/em&gt; and the
 product can be shipped! If you think like this, I have bad news for you.
-You&amp;#39;re &lt;strong&gt;fundamentally wrong&lt;/strong&gt;.&lt;/p&gt;
+You&amp;#39;re &lt;em&gt;fundamentally wrong&lt;/em&gt;.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 10 Sep 2015 00:00:00 +0000</pubDate>
@@ -378,7 +378,7 @@ to behave in unintended ways.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;I think that&amp;#39;s incomplete. The definition entirely excludes &amp;quot;non-behavioral&amp;quot;
-defects related to, for example, &lt;strong&gt;maintainability&lt;/strong&gt; and &lt;strong&gt;reusability&lt;/strong&gt;.&lt;/p&gt;
+defects related to, for example, &lt;em&gt;maintainability&lt;/em&gt; and &lt;em&gt;reusability&lt;/em&gt;.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
@@ -810,10 +810,10 @@ we get from a &amp;quot;pure&amp;quot; object-oriented and immutable approach, w
           <description>&lt;p&gt;Do you have a software architect in your project? Do you need one?
 Well, most &lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt;agile teams&lt;/a&gt;
 do not define such a role explicitly and
-work in a &lt;strong&gt;democratic&lt;/strong&gt; mode. Every important technical decision
+work in a &lt;em&gt;democratic&lt;/em&gt; mode. Every important technical decision
 is discussed with the entire team, and the most voted for solution wins.
 When such a team eventually decides to put a &amp;quot;software architect&amp;quot; badge
-on someone&amp;#39;s t-shirt, the most &lt;strong&gt;reputable&lt;/strong&gt; programmer gets it.&lt;/p&gt;
+on someone&amp;#39;s t-shirt, the most &lt;em&gt;reputable&lt;/em&gt; programmer gets it.&lt;/p&gt;
 </description>
         
         <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>

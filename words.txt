@@ -1149,6 +1149,7 @@ code-auto-complete
 code-free
 code-intensive
 code-rich
+codeahead
 coder
 coders
 codes
@@ -6433,6 +6434,7 @@ societies
 society
 sociocratic
 sociopath
+sociotech
 sociotechnical
 socket
 sockets
