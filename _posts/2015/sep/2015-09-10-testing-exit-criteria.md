@@ -26,9 +26,9 @@ right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
 their best to find what's wrong. Eventually they stop and say
 "we're done." How do they know when to stop? When there is enough
-testing? It's obvious&mdash;when there are **no more bugs left** and the
+testing? It's obvious&mdash;when there are _no more bugs left_ and the
 product can be shipped! If you think like this, I have bad news for you.
-You're **fundamentally wrong**.
+You're _fundamentally wrong_.
 
 <!--more-->
 
@@ -41,8 +41,8 @@ I will just summarize it here again.
 {% badge /images/2015/04/book-art-of-testing.jpg 96 http://amzn.to/1Y3qAbN %}
 
 First, "testing is the process of executing a program with the
-intent of **finding errors**" (page 6). Pay attention, the intent is to find errors.
-Not to prove that the product works fine, but to prove that it **doesn't work**
+intent of _finding errors_" (page 6). Pay attention, the intent is to find errors.
+Not to prove that the product works fine, but to prove that it _doesn't work_
 as intended. The goal of any tester is to show how the product can be
 broken, how it fails on different inputs, how it crashes under stress,
 how it misunderstands the user, how it doesn't satisfy the requirements.
@@ -53,7 +53,7 @@ This is why Dr. Myers is calling testing "a destructive, even sadistic, process"
 
 Second, any software
 [has]({% pst 2017/may/2017-05-23-unlimited-number-of-bugs %})
-an **unlimited amount of bugs**. Dr. Myers says that
+an _unlimited amount of bugs_. Dr. Myers says that
 "you cannot test a program to guarantee that it is error free" (page 10)
 and that "it is impractical, often impossible, to find all the errors in
 a program" (page 8). This is also what most testers don't understand. They
@@ -77,7 +77,7 @@ last remaining error" (page 135).
 They can't find all bugs, no matter how much time we give them. And they
 are motivated to find more and more of them. But at some point of time we
 must make a decision and release the product. Looks like we will release
-it with bugs inside? Yes, indeed! We will release a product **full of bugs**.
+it with bugs inside? Yes, indeed! We will release a product _full of bugs_.
 The only question is how many of them were found already and how critical
 they were.
 
@@ -90,7 +90,7 @@ time. What to do?
 Dr. Meyers says that "since the goal of testing is to find errors,
 why not make the completion criterion the detection of some predefined
 number of errors?" (page 136). Indeed, we should predict how many bugs
-are just enough to find, in order to have a desirable level of **confidence**
+are just enough to find, in order to have a desirable level of _confidence_
 that the product is ready to be shipped. Then, ship it, consciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.
@@ -104,4 +104,4 @@ not when it is known to be correct, but when the rate of discovering
 errors slows down to one that management considers acceptable" (page 13).
 
 Thus, the only valid criteria for exiting a testing process is the
-discovery of a **forecast** amount of bugs.
+discovery of a _forecast_ amount of bugs.

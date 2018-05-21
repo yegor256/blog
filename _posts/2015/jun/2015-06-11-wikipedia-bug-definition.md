@@ -25,7 +25,7 @@ to produce an incorrect or unexpected result or
 to behave in unintended ways.
 
 I think that's incomplete. The definition entirely excludes "non-behavioral"
-defects related to, for example, **maintainability** and **reusability**.
+defects related to, for example, _maintainability_ and _reusability_.
 
 <!--more-->
 
@@ -90,7 +90,7 @@ That makes for a common source of confusion&mdash;an inconsistent code style is 
 
 That is wrong.
 
-An inconsistent code style **is** a software bug, as is incomplete documentation,
+An inconsistent code style _is_ a software bug, as is incomplete documentation,
 lack of documentation, code that's too complex, the lack of a coding style guide,
 etc.
 
