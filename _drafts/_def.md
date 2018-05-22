@@ -46,7 +46,7 @@ What should this method do if the list is empty?
 Java's [`Collections.max()`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-)
 throws an exception.
 Ruby's [`Enumerable.max()`](https://ruby-doc.org/core-2.5.1/Enumerable.html#method-i-max)
-retuns `nil`.
+returns `nil`.
 PHP's [`max()`](http://php.net/manual/en/function.max.php)
 returns `FALSE`.
 Python's [`max()`](https://docs.python.org/3/library/functions.html#max)
