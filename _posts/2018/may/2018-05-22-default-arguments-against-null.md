@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "One More Recipe Against NULL"
-date: 2018-04-20
+date: 2018-05-22
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,12 +14,13 @@ keywords:
   - return null
   - null is evil
   - null is bad
-image: /images/2018/04/
+image: /images/2018/05/snatch.jpg
 jb_picture:
-  caption:
+  caption: Snatch (2000) by Guy Ritchie
 ---
 
-You know what NULL is, right? It's [evil](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare).
+You know what NULL is, right? It's
+[evil](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare).
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
 or you can assign it to a variable.
