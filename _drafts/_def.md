@@ -20,8 +20,8 @@ jb_picture:
 ---
 
 You know what NULL is, right? It's [evil](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare).
-In OOP your method can either return NULL,
-accept it as an argument, your object can encapsulate it as an attribute,
+In OOP, either your method can return NULL,
+it can accept NULL as an argument, your object can encapsulate it as an attribute,
 or you can assign it to a variable.
 All four scenarios are bad for the maintainability of your code&mdash;there
 are no doubts about that.
