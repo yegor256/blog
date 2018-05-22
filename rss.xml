@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-05-21T06:45:57+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">An Open Code Base Is Not Yet an Open Source Project</title><link href="https://www.yegor256.com/2018/05/08/open-source-attributes.html" rel="alternate" type="text/html" title="An Open Code Base Is Not Yet an Open Source Project" /><published>2018-05-08T00:00:00+00:00</published><updated>2018-05-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/08/open-source-attributes</id><content type="html" xml:base="https://www.yegor256.com/2018/05/08/open-source-attributes.html">&lt;p&gt;A few weeks ago someone &lt;a href=&quot;https://www.yegor256.com/2018/04/10/learning-by-refactoring.html#comment-3865410512&quot;&gt;suggested&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-05-22T06:07:03+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">One More Recipe Against NULL</title><link href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html" rel="alternate" type="text/html" title="One More Recipe Against NULL" /><published>2018-05-22T00:00:00+00:00</published><updated>2018-05-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/22/default-arguments-against-null</id><content type="html" xml:base="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">&lt;p&gt;You know what NULL is, right? It&amp;#39;s
+&lt;a href=&quot;https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare&quot;&gt;evil&lt;/a&gt;.
+In OOP, your method can return NULL,
+it can accept NULL as an argument, your object can encapsulate it as an attribute,
+or you can assign it to a variable.
+All four scenarios are bad for the maintainability of your code&amp;mdash;there
+are no doubts about that.
+The question is what to do instead. Let&amp;#39;s discuss the &amp;quot;return it&amp;quot; part and
+I will suggest one more &amp;quot;best practice&amp;quot; on top of what
+&lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;was discussed&lt;/a&gt; a few years ago.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Snatch (2000) by Guy Ritchie&#39; src=&#39;/images/2018/05/snatch.jpg&#39; longdesc=&#39;#7fe602d0&#39;/&gt;&lt;figcaption id=&#39;7fe602d0&#39;&gt;Snatch (2000) by Guy Ritchie&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Look at this code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Calculate the maximum of all&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// items and return it.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;What should this method do if the list is empty?
+Java&amp;#39;s &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-&quot;&gt;&lt;code&gt;Collections.max()&lt;/code&gt;&lt;/a&gt;
+throws an exception.
+Ruby&amp;#39;s &lt;a href=&quot;https://ruby-doc.org/core-2.5.1/Enumerable.html#method-i-max&quot;&gt;&lt;code&gt;Enumerable.max()&lt;/code&gt;&lt;/a&gt;
+returns &lt;code&gt;nil&lt;/code&gt;.
+PHP&amp;#39;s &lt;a href=&quot;http://php.net/manual/en/function.max.php&quot;&gt;&lt;code&gt;max()&lt;/code&gt;&lt;/a&gt;
+returns &lt;code&gt;FALSE&lt;/code&gt;.
+Python&amp;#39;s &lt;a href=&quot;https://docs.python.org/3/library/functions.html#max&quot;&gt;&lt;code&gt;max()&lt;/code&gt;&lt;/a&gt;
+raises an exception.
+C#&amp;#39;s &lt;a href=&quot;https://msdn.microsoft.com/en-us/library/bb335614(v=vs.110).aspx&quot;&gt;&lt;code&gt;Enumerable.Max()&lt;/code&gt;&lt;/a&gt;
+also throws an exception.
+JavaScript&amp;#39;s &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max&quot;&gt;&lt;code&gt;Math.max()&lt;/code&gt;&lt;/a&gt;
+returns &lt;code&gt;NaN&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Which is the right way, huh? An exception, NULL, false or NaN?&lt;/p&gt;
+
+&lt;p&gt;An exception, if you ask me.&lt;/p&gt;
+
+&lt;p&gt;But there is yet another approach, which is better than an exception. This one:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Calculate the maximum of all&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// items and return it. Returns &amp;#39;def&amp;#39; if the&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// list is empty.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &amp;quot;default&amp;quot; object will be returned if the list is empty. This feature
+is implemented in Python&amp;#39;s &lt;a href=&quot;https://docs.python.org/3/library/functions.html#max&quot;&gt;&lt;code&gt;max()&lt;/code&gt;&lt;/a&gt; function:
+it&amp;#39;s possible to pass both a list and a default element to return in case the list
+is empty. If the default element is not provided, the exception will be raised.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You know what NULL is, right? It&amp;#39;s
+evil.
+In OOP, your method can return NULL,
+it can accept NULL as an argument, your object can encapsulate it as an attribute,
+or you can assign it to a variable.
+All four scenarios are bad for the maintainability of your code&amp;mdash;there
+are no doubts about that.
+The question is what to do instead. Let&amp;#39;s discuss the &amp;quot;return it&amp;quot; part and
+I will suggest one more &amp;quot;best practice&amp;quot; on top of what
+was discussed a few years ago.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/snatch.jpg" /></entry><entry><title type="html">An Open Code Base Is Not Yet an Open Source Project</title><link href="https://www.yegor256.com/2018/05/08/open-source-attributes.html" rel="alternate" type="text/html" title="An Open Code Base Is Not Yet an Open Source Project" /><published>2018-05-08T00:00:00+00:00</published><updated>2018-05-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/08/open-source-attributes</id><content type="html" xml:base="https://www.yegor256.com/2018/05/08/open-source-attributes.html">&lt;p&gt;A few weeks ago someone &lt;a href=&quot;https://www.yegor256.com/2018/04/10/learning-by-refactoring.html#comment-3865410512&quot;&gt;suggested&lt;/a&gt;
 I should try to integrate &lt;a href=&quot;https://www.jetbrains.com/idea/&quot;&gt;IntelliJ IDEA&lt;/a&gt;&amp;#39;s
 static analysis rules into
 &lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;Qulice&lt;/a&gt;,
@@ -1415,136 +1475,4 @@ finish since there were impediments and design inconsistencies; he also
 couldn&amp;#39;t earn
 the money he deserved for fixing the issue. What did I say?
 I said:
-Forget the quality, just finish it any way possible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/house-of-flying-daggers.jpg" /></entry><entry><title type="html">Don’t Parse, Use Parsing Objects</title><link href="https://www.yegor256.com/2018/02/27/parsing-objects.html" rel="alternate" type="text/html" title="Don&#39;t Parse, Use Parsing Objects" /><published>2018-02-27T00:00:00+00:00</published><updated>2018-02-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/02/27/parsing-objects</id><content type="html" xml:base="https://www.yegor256.com/2018/02/27/parsing-objects.html">&lt;!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 --&gt;
-
-&lt;p&gt;The traditional way of integrating object-oriented back-end with an external
-system is through &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;data transfer objects&lt;/a&gt;,
-which are serialized into JSON before going out
-and deserialized when coming back. This way is as much popular as it is wrong. The
-serialization part should be replaced by &lt;a href=&quot;/2016/04/05/printers-instead-of-getters.html&quot;&gt;printers&lt;/a&gt;,
-which I explained earlier.
-Here is my take on deserialization, which should be done by&amp;mdash;guess what&amp;mdash;objects.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;La science des rêves (2006) by Michel Gondry&#39; src=&#39;/images/2018/02/la-science-des-reves.jpg&#39; longdesc=&#39;#bad54f07&#39;/&gt;&lt;figcaption id=&#39;bad54f07&#39;&gt;La science des rêves (2006) by Michel Gondry&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Say there is a back-end entry point, which is supposed to register a new
-book in the library, arriving in JSON:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Object Thinking&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;quot;isbn: &amp;quot;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0735619654&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;,&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;  &amp;quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;David West&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Also, there is an object of class &lt;code&gt;Library&lt;/code&gt;, which expects an object of type
-&lt;code&gt;Book&lt;/code&gt; to be given to its method &lt;code&gt;register()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Library&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Create a new record in the database&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Say also, type &lt;code&gt;Book&lt;/code&gt; has a simple method &lt;code&gt;isbn()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, here is the HTTP entry point
-(I&amp;#39;m using &lt;a href=&quot;/2015/03/22/takes-java-web-framework.html&quot;&gt;Takes&lt;/a&gt;
-and &lt;a href=&quot;/2017/06/22/object-oriented-input-output-in-cactoos.html&quot;&gt;Cactoos&lt;/a&gt;),
-which is accepting
-a POST &lt;a href=&quot;https://www.ietf.org/rfc/rfc2045.txt&quot;&gt;&lt;code&gt;multipart/form-data&lt;/code&gt;&lt;/a&gt;
-request and registering the book in the library:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkUpload&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Library&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqPrint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtSmart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;JsonObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BookDTO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIsbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What is wrong with this? Well, a few things.&lt;/p&gt;
-
-&lt;p&gt;First, it&amp;#39;s not reusable. If we were to need something similar in a different
-place, we would have to write this HTTP processing and JSON parsing again.&lt;/p&gt;
-
-&lt;p&gt;Second, error handling and validation are not reusable either. If we add
-it to the method above, we will have to copy it everywhere. Of course,
-the DTO may encapsulate it, but that&amp;#39;s not what DTOs are usually for.&lt;/p&gt;
-
-&lt;p&gt;Third, the code above is rather procedural and has a lot of
-&lt;a href=&quot;/2015/12/08/temporal-coupling-between-method-calls.html&quot;&gt;temporal coupling&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;A better design would be to hide this parsing inside a new class &lt;code&gt;JsonBook&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JsonBook&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;JsonBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createReader&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InputStreamOf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;isbn&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then, the RESTful entry point will look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TkUpload&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Take&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Library&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JsonBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqPrint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-          &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtSmart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RqMtBase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;book&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Isn&amp;#39;t that more elegant?&lt;/p&gt;
-
-&lt;p&gt;Here are some examples from my projects:
-&lt;a href=&quot;https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java&quot;&gt;&lt;code&gt;RqUser&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;https://github.com/zerocracy/farm/&quot;&gt;zerocracy/farm&lt;/a&gt; and
-&lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java&quot;&gt;&lt;code&gt;RqUser&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java&quot;&gt;yegor256/jare&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;As you can see from the examples above, sometimes we can&amp;#39;t use &lt;code&gt;implements&lt;/code&gt;
-because some primitives in Java are not interfaces but &lt;code&gt;final&lt;/code&gt; classes:
-&lt;code&gt;String&lt;/code&gt; is a &amp;quot;perfect&amp;quot; example. That&amp;#39;s why I have to do this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RqUser&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Scalar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Parsing happens here and returns String&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;But aside from that, these examples perfectly demonstrate the principle
-of &amp;quot;parsing objects&amp;quot; suggested above.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">The traditional way of integrating object-oriented back-end with an external
-system is through data transfer objects,
-which are serialized into JSON before going out
-and deserialized when coming back. This way is as much popular as it is wrong. The
-serialization part should be replaced by printers,
-which I explained earlier.
-Here is my take on deserialization, which should be done by&amp;mdash;guess what&amp;mdash;objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/02/la-science-des-reves.jpg" /></entry></feed>
+Forget the quality, just finish it any way possible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/house-of-flying-daggers.jpg" /></entry></feed>

@@ -5508,6 +5508,7 @@ pycharm
 pylint
 pyramid
 python
+python's
 QA
 QCon
 qualities
