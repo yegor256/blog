@@ -42,7 +42,7 @@ class Comparison<T extends Digitizable> {
             if (idx <= right.length) {
                 rht = right[max - idx];
             }
-            result = (int) lft - (int) rht;
+            result = lft - rht;
             if (result != 0) {
                 break;
             }
