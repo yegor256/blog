@@ -27,7 +27,10 @@ class Comparison<T extends Digitizable> {
     int value() {
         final byte[] left = this.lt.digits();
         final byte[] right = this.rt.digits();
-        int result = 0;
+        int result = Math.min(Integer.MIN_VALUE, left.length - right.length);
+        if (result != 0) {
+            return Integer.signum(result);
+        }
         int max = Math.max(left.length, right.length);
         for (int idx = max; idx > 0; --idx) {
             byte lft = 0;
@@ -38,11 +41,11 @@ class Comparison<T extends Digitizable> {
             if (idx <= right.length) {
                 rht = right[max - idx];
             }
-            result = lft - rht;
+            result = Math.min(Integer.MIN_VALUE, lft - rht);
             if (result != 0) {
                 break;
             }
         }
-        return (int) Math.signum(result);
+        return Integer.signum(result);
     }
 }
