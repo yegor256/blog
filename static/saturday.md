@@ -23,12 +23,12 @@ around my living place. This page contains the up-to-date information about
 the place. Just check it and find me there. We will have a chat
 and a <del>cup of tea/coffee</del> breakfast.
 
-Next meeting on: 26-May-2018.
+Next meeting on: 9-June-2018.
 
 10am-1pm<br/>
-Cook Shop "Karavaevy Brothers"<br/>
-Myasnitskaya Ulitsa, 18<br/>
+Odessa-Mama<br/>
+Krivokolennyy Pereulok, 10 stroyenie 5<br/>
 Moscow, Russia
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8979.388804039796!2d37.6324301!3d55.7611565!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c9a63d84a054325!2sCook+Shop+%22Karavaevy+Brothers%22!5e0!3m2!1sen!2sru!4v1519545235882"
+<iframe src="https://www.google.com/maps/embed?pb=!4m8!1m2!2m1!1smaps!3m4!1s0x46b54a60a6ce45bb:0x9612e9c4836a9cf0!8m2!3d55.7616719!4d37.6360843"
   style="width:100%;height:300px;border:0;max-width:100%" allowfullscreen="true"></iframe>

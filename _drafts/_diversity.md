@@ -47,3 +47,6 @@ or poetry among blacks and argued that blacks’ ability to "reason" was
 "much inferior" to whites', while
 "in imagination they are dull, tasteless, and anomalous?"
 
+"There is real chess and women's chess" [said](https://www.telegraph.co.uk/news/2017/12/02/garry-kasparov-wrong-women-playing-chess/)
+Garry Kasparov in a 1989 interview with Playboy magazine.
+
