@@ -93,7 +93,9 @@ What is wrong with this? Well, a few things.
 First, it's not reusable. If we were to need something similar in a different
 place, we would have to write this HTTP processing and JSON parsing again.
 
-Second, error handling and validation are not reusable either. If we add
+Second, error handling and
+[validation]({% pst 2018/may/2018-05-29-object-validation %})
+are not reusable either. If we add
 it to the method above, we will have to copy it everywhere. Of course,
 the DTO may encapsulate it, but that's not what DTOs are usually for.
 

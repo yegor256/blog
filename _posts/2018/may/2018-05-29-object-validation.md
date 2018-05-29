@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object Validation: to Defer or Not?"
-date: 2018-05-20
+date: 2018-05-29
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - validation in constructor
   - when validate objects
   - validation in oop
-image: /images/2018/05/
+image: /images/2018/05/punching-the-clown.jpg
 jb_picture:
-  caption:
+  caption: Punching the Clown (2009) by Gregori Viens
 ---
 
 <!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 -->
