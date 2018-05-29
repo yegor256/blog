@@ -87,7 +87,7 @@ in the constructor, while the other two&mdash;later, in the method.
 Why did I do it this way? Why not put all of them into the constructor?
 
 Because the first two compromise [object state]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
-while the other two&mdash;its runtime behavior. You remember, that an
+while with the other two&mdash;its runtime behavior. You remember that an
 [object]({% pst 2016/jul/2016-07-14-who-is-object %}) is a representative of
 a set of other objects it encapsulates, called attributes. The object of
 class `Users` can't _represent_ `nil` or a number. It can only represent
@@ -95,7 +95,7 @@ a file with a name of type `String`. On the other hand, what that file
 contains and whether it really is a file&mdash;doesn't make the state invalid.
 It only causes trouble for the behavior.
 
-Even though the difference may look too subtle, it's obvious. There are
+Even though the difference may look subtle, it's obvious. There are
 two phases of interaction with the encapsulated object: _connecting_ and _talking_.
 
 First, we encapsulate the `file` and want to be sure that it really is
@@ -121,5 +121,5 @@ check, thanks to their [Null Safety](https://kotlinlang.org/docs/reference/null-
 Ruby is less powerful than those languages, that's why we have to validate "manually."
 
 Thus, to summarize, validating in constructors is _not_ a bad idea, provided
-the validations are _not touching_ the objects but only confirm that they are
+the validations are _not touching the objects_ but only confirm that they are
 good enough to work with later.
