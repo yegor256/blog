@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-05-22T06:07:03+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">One More Recipe Against NULL</title><link href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html" rel="alternate" type="text/html" title="One More Recipe Against NULL" /><published>2018-05-22T00:00:00+00:00</published><updated>2018-05-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/22/default-arguments-against-null</id><content type="html" xml:base="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">&lt;p&gt;You know what NULL is, right? It&amp;#39;s
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-05-29T14:11:43+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Object Validation: to Defer or Not?</title><link href="https://www.yegor256.com/2018/05/29/object-validation.html" rel="alternate" type="text/html" title="Object Validation: to Defer or Not?" /><published>2018-05-29T00:00:00+00:00</published><updated>2018-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/29/object-validation</id><content type="html" xml:base="https://www.yegor256.com/2018/05/29/object-validation.html">&lt;!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 --&gt;
+
+&lt;p&gt;I &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;said earlier&lt;/a&gt;
+that constructors must be code-free and do nothing
+aside from attribute initialization. Since then, the most frequently
+asked &lt;a href=&quot;https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622&quot;&gt;question&lt;/a&gt;
+is: What about validation of arguments? If they are &amp;quot;broken,&amp;quot;
+what is the point of creating an object in an &amp;quot;invalid&amp;quot; state?
+Such an object will fail later, at an unexpected moment. Isn&amp;#39;t it
+better to throw an exception at the very moment of instantiation? To fail fast,
+so to speak? Here is what I think.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Punching the Clown (2009) by Gregori Viens&#39; src=&#39;/images/2018/05/punching-the-clown.jpg&#39; longdesc=&#39;#ec207931&#39;/&gt;&lt;figcaption id=&#39;ec207931&#39;&gt;Punching the Clown (2009) by Gregori Viens&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s start with this Ruby code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&amp;amp;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We can use it to read a list of users from a file:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;names&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are a number of ways to abuse this class:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Pass &lt;code&gt;nil&lt;/code&gt; to the ctor instead of a file name;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pass something else, which is not &lt;code&gt;String&lt;/code&gt;;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pass a file that doesn&amp;#39;t exist;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pass a directory instead of a file.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Do you see the difference between these four mistakes we can make?
+Let&amp;#39;s see how our class can protect itself from each of them:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;File name can&amp;#39;t be nil&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;must&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;is_a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#{@file} is absent&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#{@file} is not a file&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&amp;amp;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The first two potential mistakes were filtered out
+in the constructor, while the other two&amp;mdash;later, in the method.
+Why did I do it this way? Why not put all of them into the constructor?&lt;/p&gt;
+
+&lt;p&gt;Because the first two compromise &lt;a href=&quot;/2014/12/09/immutable-object-state-and-behavior.html&quot;&gt;object state&lt;/a&gt;,
+while with the other two&amp;mdash;its runtime behavior. You remember that an
+&lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt; is a representative of
+a set of other objects it encapsulates, called attributes. The object of
+class &lt;code&gt;Users&lt;/code&gt; can&amp;#39;t &lt;em&gt;represent&lt;/em&gt; &lt;code&gt;nil&lt;/code&gt; or a number. It can only represent
+a file with a name of type &lt;code&gt;String&lt;/code&gt;. On the other hand, what that file
+contains and whether it really is a file&amp;mdash;doesn&amp;#39;t make the state invalid.
+It only causes trouble for the behavior.&lt;/p&gt;
+
+&lt;p&gt;Even though the difference may look subtle, it&amp;#39;s obvious. There are
+two phases of interaction with the encapsulated object: &lt;em&gt;connecting&lt;/em&gt; and &lt;em&gt;talking&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;First, we encapsulate the &lt;code&gt;file&lt;/code&gt; and want to be sure that it really is
+a file. We are not yet talking to it, we don&amp;#39;t want it to work for us yet,
+we just want to make sure it really &lt;em&gt;is&lt;/em&gt; an object that we will be able to talk
+to in the near future. If it&amp;#39;s &lt;code&gt;nil&lt;/code&gt; or a &lt;code&gt;float&lt;/code&gt;, we will have problems
+in the future, for sure. That&amp;#39;s why we raise an exception from the constructor.&lt;/p&gt;
+
+&lt;p&gt;Then the second phase is talking, where we delegate control to the object
+and expect it to behave correctly. At this phase we may have other validation
+procedures, in order to make sure our interaction will go smoothly.
+It&amp;#39;s important to mention that these validations are very situational.
+We may call &lt;code&gt;names()&lt;/code&gt; multiple times and every time have a different
+situation with the file on disc. To begin with it may not exist, while in a few seconds
+it will be ready and available for reading.&lt;/p&gt;
+
+&lt;p&gt;Ideally, a programming language should provide instruments for the first
+type of validations, for example with &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot;&gt;strict typing&lt;/a&gt;.
+In Java, for example,
+we would not need to check the type of &lt;code&gt;file&lt;/code&gt;, the compiler would catch
+that error earlier. In Kotlin we would be able to get rid of the NULL
+check, thanks to their &lt;a href=&quot;https://kotlinlang.org/docs/reference/null-safety.html&quot;&gt;Null Safety&lt;/a&gt; feature.
+Ruby is less powerful than those languages, that&amp;#39;s why we have to validate &amp;quot;manually.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Thus, to summarize, validating in constructors is &lt;em&gt;not&lt;/em&gt; a bad idea, provided
+the validations are &lt;em&gt;not touching the objects&lt;/em&gt; but only confirm that they are
+good enough to work with later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">I said earlier
+that constructors must be code-free and do nothing
+aside from attribute initialization. Since then, the most frequently
+asked question
+is: What about validation of arguments? If they are &amp;quot;broken,&amp;quot;
+what is the point of creating an object in an &amp;quot;invalid&amp;quot; state?
+Such an object will fail later, at an unexpected moment. Isn&amp;#39;t it
+better to throw an exception at the very moment of instantiation? To fail fast,
+so to speak? Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/punching-the-clown.jpg" /></entry><entry><title type="html">One More Recipe Against NULL</title><link href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html" rel="alternate" type="text/html" title="One More Recipe Against NULL" /><published>2018-05-22T00:00:00+00:00</published><updated>2018-05-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/22/default-arguments-against-null</id><content type="html" xml:base="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">&lt;p&gt;You know what NULL is, right? It&amp;#39;s
 &lt;a href=&quot;https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare&quot;&gt;evil&lt;/a&gt;.
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
@@ -1364,115 +1468,4 @@ with objects in OOP. It makes their facades easier to use and understand.
 However, it ruins their internal design, making them more difficult
 to maintain. A few words were said about that by Marco Pivetta
 in his blog post Fluent Interfaces are Evil;
-now I will add my few cents.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/donnie-brasco.jpg" /></entry><entry><title type="html">Don’t Aim for Quality, Aim for Speed</title><link href="https://www.yegor256.com/2018/03/06/speed-vs-quality.html" rel="alternate" type="text/html" title="Don&#39;t Aim for Quality, Aim for Speed" /><published>2018-03-06T00:00:00+00:00</published><updated>2018-03-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/03/06/speed-vs-quality</id><content type="html" xml:base="https://www.yegor256.com/2018/03/06/speed-vs-quality.html">&lt;!-- http://www.yegor256.com/2017/11/28/microtasking.html#comment-3783321466 --&gt;
-
-&lt;p&gt;I decided to write this blog post after reviewing
-&lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153&quot;&gt;this pull request&lt;/a&gt;. What happened
-there? The author of the PR wasn&amp;#39;t able to figure out
-the &amp;quot;right&amp;quot; way to implement it, and the code
-reviewer was waiting and waiting. Eventually, the reviewer came to me,
-since I was an architect, and &lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153#issuecomment-364412192&quot;&gt;complained&lt;/a&gt;
-that it was taking too long and he wasn&amp;#39;t able to
-&lt;a href=&quot;http://datum.zerocracy.com/pages/policy.html#27&quot;&gt;earn&lt;/a&gt; his money for the review
-he had done. Then the author of the changes
-&lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153#issuecomment-364413528&quot;&gt;explained&lt;/a&gt; that he couldn&amp;#39;t
-finish since there were impediments and design inconsistencies; he also
-couldn&amp;#39;t &lt;a href=&quot;http://datum.zerocracy.com/pages/policy.html#4&quot;&gt;earn&lt;/a&gt;
-the money he deserved for fixing the issue. What did I say?
-I &lt;a href=&quot;https://github.com/yegor256/jpeek/pull/153#issuecomment-364417885&quot;&gt;said&lt;/a&gt;:
-Forget the quality, just finish it any way possible.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Shi mian mai fu (2004) by Yimou Zhang&#39; src=&#39;/images/2018/03/house-of-flying-daggers.jpg&#39; longdesc=&#39;#7b8c6d28&#39;/&gt;&lt;figcaption id=&#39;7b8c6d28&#39;&gt;Shi mian mai fu (2004) by Yimou Zhang&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Was I kidding? Not at all.&lt;/p&gt;
-
-&lt;p&gt;I truly believe that quality is not what programmers should care about. They
-must care only about speed&amp;mdash;close tasks as soon as possible&amp;mdash;
-which means &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;make money&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Won&amp;#39;t this attitude ruin the project and turn the code base into a mess?&lt;/p&gt;
-
-&lt;p&gt;Yes, it will.&lt;/p&gt;
-
-&lt;p&gt;If the project doesn&amp;#39;t care about its quality either.&lt;/p&gt;
-
-&lt;p&gt;There must be a permanent conflict between a project and its programmers:
-1) the project must be configured to reject anything that lowers the
-quality of its artifacts and 2) programmers must be interested
-in making changes to those artifacts. The project cares about the quality,
-the programmers care about fast delivery of modifications.&lt;/p&gt;
-
-&lt;p&gt;What do I mean by saying that a project rejects low quality? Here is a list
-of preventive measures it may take to make it impossible
-to jeopardize the quality:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Automated&lt;/a&gt; pre-flight builds;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;Read-only master branch&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;High test coverage bar;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;Mandatory&lt;/a&gt; static analysis;&lt;/li&gt;
-&lt;li&gt;Multi-step code reviews.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What do I mean by saying that programmers must be interested in making changes?
-They have to be &lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;motivated&lt;/a&gt;
-to close tasks. Not just to &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;be in the project&lt;/a&gt;,
-but to deliver. Here is what
-they can do in order to close tasks faster:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;Cut corners&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Make changes &lt;a href=&quot;/2015/02/09/serious-code-reviewer.html&quot;&gt;smaller&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;Don&amp;#39;t study&lt;/a&gt; the code, just modify it;&lt;/li&gt;
-&lt;li&gt;Don&amp;#39;t feel responsible for all code, just focus on the relevant units/classes;&lt;/li&gt;
-&lt;li&gt;Don&amp;#39;t be afraid to &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;break things&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If we put these two interests in conflict, we will get a high-quality product, which is
-growing very fast. The project will enforce quality, programmers will push
-the code forward, making changes fast and frequently.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, most projects have a very different philosophy. They delegate
-quality control to programmers, hoping that they &amp;quot;won&amp;#39;t do evil.&amp;quot;
-This leads to frustration, distress, constant fear of mistakes, long delays,
-blaming, and shaming. Both the project and its programmers lose.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;If we put these two interests in conflict, we will get a high-quality product, which is growing very fast.&lt;/aside&gt;
-
-&lt;p&gt;Programmers must not be responsible for the quality! They must not care
-what they may, or will, break. They must not care how good the code they write is.
-They must not &amp;quot;feel responsible&amp;quot; for the overall result. Instead, they must
-be focused on making money for their families by writing the largest amount
-of code and closing more tickets.&lt;/p&gt;
-
-&lt;p&gt;Not because they are ignorant and selfish, but because this is the right
-balance of responsibilities. This is how the project will get the most out
-of its developers&amp;mdash;by freeing their minds of unnecessary and unproductive
-quality worries and letting them focus on what they do best&amp;mdash;writing code.&lt;/p&gt;
-
-&lt;p&gt;Of course, not every project will be able to configure itself in the most
-effective way. Most projects don&amp;#39;t even know how to do it. In those projects,
-if you, as a developer, floor the speed pedal, you will most likely ruin
-their code base in a few days. That&amp;#39;s why the recommendations above are
-only applicable to those who really know what they are doing.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;We&lt;/a&gt; know what we are doing in our projects. We don&amp;#39;t let any developers
-touch any parts of our code, unless the &amp;quot;quality wall&amp;quot; is high and strong enough.
-How high is that wall in your projects? Can you say that, no matter how
-bad some code is and how sneakily its author introduces it, it will be rejected?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">I decided to write this blog post after reviewing
-this pull request. What happened
-there? The author of the PR wasn&amp;#39;t able to figure out
-the &amp;quot;right&amp;quot; way to implement it, and the code
-reviewer was waiting and waiting. Eventually, the reviewer came to me,
-since I was an architect, and complained
-that it was taking too long and he wasn&amp;#39;t able to
-earn his money for the review
-he had done. Then the author of the changes
-explained that he couldn&amp;#39;t
-finish since there were impediments and design inconsistencies; he also
-couldn&amp;#39;t earn
-the money he deserved for fixing the issue. What did I say?
-I said:
-Forget the quality, just finish it any way possible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/house-of-flying-daggers.jpg" /></entry></feed>
+now I will add my few cents.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/donnie-brasco.jpg" /></entry></feed>
