@@ -42,7 +42,7 @@ Hermann Hesse, _Siddhartha_, 1922. [Buy](http://amzn.to/2xNB3kK).
 
 Илья Ильф и Евгений Петров, _Двенадцать стульев_, 1928. [Buy](http://amzn.to/2fgLiqh).
 
-Milan Kundera, _Nesnesitelná lehkost bytí_, 1984. [Buy](http://amzn.to/2xjf9EG).
+Henry Miller, _Tropic of Cancer_, 1934. [Buy](http://amzn.to/2xj7ea6).
 
 Margaret Mitchell, _Gone with the Wind_, 1936. [Buy](http://amzn.to/2xjclr1).
 
@@ -72,9 +72,9 @@ Philip Roth, _Portnoy’s Complaint_, 1969. [Buy](http://amzn.to/2xfsOeg).
 
 Братья Стругацкие, _Град обреченный_, 1972.
 
-Henry Miller, _Tropic of Cancer_, 1934. [Buy](http://amzn.to/2xj7ea6).
-
 Gabriel García Márquez, _El otoño del patriarca_, 1975. [Buy](http://amzn.to/2yn1Tgr).
+
+Milan Kundera, _Nesnesitelná lehkost bytí_, 1984. [Buy](http://amzn.to/2xjf9EG).
 
 Фазиль Искандер, _Кролики и удавы_, 1987.
 
