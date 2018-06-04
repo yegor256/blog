@@ -53,6 +53,9 @@ every time I decide to stay home. Instead, I want to inform
 you when I decide to visit the office. In other words, my default state
 should be "not in the office."
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What motivates you best of all? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1003355914555002881?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 **Isolation of tasks**.
 I hate being responsible for someone else's mistakes and I'm not really a good
 [team player]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}).
