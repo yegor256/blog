@@ -18,6 +18,7 @@ keywords:
   - utility classes is a bad practice
 translated:
   - Japanese: http://tbd.kaitoy.xyz/2016/01/03/oop-alternative-to-utility-classes/
+  - Russian: http://agorlov.ru/oop-alternative-to-utility-classes.html
 book: elegant-objects-1 3.2
 ---
 
