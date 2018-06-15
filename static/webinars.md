@@ -39,7 +39,18 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-<!-- {% webinar 10-05-2018 34 NQRyqiQehBk How to Get Rid of the NEW Operator %} -->
+{% webinar 04-07-2018 35 -drZbHxydMc When do you validate your objects? %}
+
+https://www.youtube.com/watch?v=-drZbHxydMc
+
+<a href="https://www.youtube.com/watch?v=-drZbHxydMc"><img src="https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg" class="wnr" alt="Webinar no.35 by Yegor Bugayenko"/></a>
+July 4, 2018<br/>
+&#35;35: **When do you validate your objects?**<br/>
+Very often we need to validate our objects for consistency, before working with them.
+A file may be absent, a database connection may get lost, a data structure may
+contain invalid information, and so on. When is the right moment to validate
+that, in a constructor or some time later, in a method?
+[Object Validation: to Defer or Not?]({% pst 2018/may/2018-05-29-object-validation %})
 
 <a href="https://www.youtube.com/watch?v=NQRyqiQehBk"><img src="https://i.ytimg.com/vi/NQRyqiQehBk/mqdefault.jpg" class="wnr" alt="Webinar no.34 by Yegor Bugayenko"/></a>
 May 10, 2018<br/>
