@@ -79,7 +79,7 @@ propose a number of best practices for organizing software development
 process. What will be interesting is that it will be fiction book, with
 characters, plot, jokes, dialogs, etc.
 <br/>
-To be published in <del>February</del> <del>November</del> <del>December 2017</del> May 2018.
+To be published in <del>February</del> <del>November</del> <del>December 2017</del> June 2018.
 
 <div class="book-par"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}

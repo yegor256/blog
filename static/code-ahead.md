@@ -24,6 +24,12 @@ be published in <del>November 2017</del> February 2018.
 
 <!--more-->
 
+Jun 15, 2018:
+The manuscript is finally ready.
+[Phew!](https://twitter.com/yegor256/status/1007494042345721856)
+It took way more time and energy than I expected.
+Now the proof-reading phase and it's out.
+
 Mar 29, 2018:
 After a few rather critical reviews I re-wrote and re-structured the book
 a lot. It lost one section and became more focused. It's less of a fiction
