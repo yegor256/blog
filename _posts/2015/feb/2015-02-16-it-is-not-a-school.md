@@ -32,7 +32,7 @@ rather harsh to most developers who are just starting to work with us, so
 here I'll try to illustrate why such an attitude makes sense and is beneficial to both
 the programmers and the project.
 
-Disclaimer: I'm talking about software **projects** here, which PMBOK defines
+Disclaimer: I'm talking about software _projects_ here, which PMBOK defines
 as "_temporary_ endeavors undertaken to create unique
 products, services, or results." If your team is engaged in
 [continuous development]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
@@ -44,12 +44,12 @@ or maintenance of software, this concept may not be relevant.
 
 No matter how unpleasant this could be, let's face the reality:
 each software project is a business, and we, the developers, are
-its **resources**. Just like concrete, wood, and glass are the resources required
+its _resources_. Just like concrete, wood, and glass are the resources required
 to build a house, which is also a business activity. No matter how much we think
 about ourselves as a family having fun together and writing code because
 we enjoy it, each business looks at it completely differently.
 
-The project needs us to **produce** classes, lines of code, methods, functions,
+The project needs us to _produce_ classes, lines of code, methods, functions,
 files, and features. Then, the project can convert them into happy customers,
 which will give us something back&mdash;usually cash. Finally, the project will
 share that cash among us,
@@ -60,7 +60,7 @@ and the government.
 
 A properly planned and managed project acquires the best resources its
 budget can afford and then relies on their quality. A programmer who doesn't
-have adequate skills or knowledge is an **unreliable resource**. Obviously,
+have adequate skills or knowledge is an _unreliable resource_. Obviously,
 no project would acquire such a resource from the start. However,
 this weakness may be revealed in the middle of the project.
 
@@ -70,7 +70,7 @@ that he's never worked with it and doesn't know how to install it.
 It was a risk, and it occurred. A good
 [project manager]({% pst 2015/sep/2015-09-22-micromanagement %})
 always has a fallback plan
-or even a few of them. Obviously, the best option would be to contract **another**
+or even a few of them. Obviously, the best option would be to contract _another_
 plumber. The worst option would be to train the original one on the spot.
 
 {% quote The goal of the project is to build a house, not to train a plumber %}
@@ -128,9 +128,9 @@ you he's not running a school and get rid of you. That's a bad scenario for both
 project manager. He [hired]({% pst 2016/jun/2016-06-21-how-to-hire-programmer %})
 you. He put you into this situation. He planned
 all project activities, so he probably knows what he is doing. This means
-that the project **documentation** should be detailed enough for a Java
+that the project _documentation_ should be detailed enough for a Java
 developer to create that Python module. However, it is not detailed enough. So report
-this **issue** and wait for its **resolution**. Explain in your
+this _issue_ and wait for its _resolution_. Explain in your
 [bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}) that you
 honestly started to work with the module and realized that its documentation
 is not complete enough for a Java developer to understand. Ask the project manager
@@ -144,8 +144,8 @@ You could blame yourself for not reading
 [Knuth](http://amzn.to/2c5o1n2)
 in school and ask the project to train you on it. A good and strong project manager should tell you that it's not a school
 and get rid of you. Again, a bad scenario for both of you. Instead,
-blame the project. The code is **not self-descriptive** and is difficult to
-understand. The algorithm implementation is **not obvious** and is poorly documented.
+blame the project. The code is _not self-descriptive_ and is difficult to
+understand. The algorithm implementation is _not obvious_ and is poorly documented.
 Ask for better documentation. If the project invests its money into
 the documentation, you will learn the algorithm from it. The source
 code will be improved, and you will have improved your skills. Win-win.
@@ -160,7 +160,7 @@ should tell you that you're not in school and are supposed to understand the
 software if the project is paying you a software developer
 [salary]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %}). And he will
 be right. But it's a bad scenario for both of you. Instead, blame the project
-for **incomplete** design documentation. Good software should properly document
+for _incomplete_ design documentation. Good software should properly document
 its architecture and design. Ask for the project to provide such documentation.
 If it invests its time and money into better documentation, you
 will learn from it and find all the necessary answers. Another win-win.
@@ -169,7 +169,7 @@ There are a few other examples in my
 [How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}) post.
 
 In conclusion, I would recommend you remember that software projects are,
-first and foremost, business activities where we, the developers, are **resources**.
+first and foremost, business activities where we, the developers, are _resources_.
 In order to obtain something for ourselves in terms of education and training,
 we should align our goals with project objectives. Instead of asking for
 help and information, we should blame the project for its lack of
