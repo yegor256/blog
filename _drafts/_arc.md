@@ -30,14 +30,230 @@ Here is a list of traits, I believe, a good architect has.
 
 {% jb_picture_body %}
 
-Loyal
+Disclaimer: Even though I haven't seen a single female software architect in my life,
+I have to say for my leftist/feminist readers that in this blog post
+I'm assuming an architect is a man only for the sake of convenience of speech.
+There is no intention to offend anyone.
 
-Disciplined
+**He Is Loyal**.
 
-Abstract
+Programmers come and go.
+They, as I [mentioned]({% pst 2018/jan/2018-01-09-micro-budgeting %})
+many times before, are egoists with a strong focus
+on their personal profit. They change projects, they work in multiple
+projects at the same time, they have
+[no personal attachments]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
+to any piece of code. They worry only about their individual tasks and
+feature branches. The branch is merged? All bets are off. Professional
+developers are "polygamous" and disloyal.
 
-Expensive
+However, an architect is a different creature. He stays with the project
+even after it runs out of funds, loses the last programmer, and
+proves that the architecture is a total mess that can't handle even
+a fraction of traffic it was supposed to work under. The architect
+stays and says "No worries, we'll get through, no matter what!"
+How to find such a guy and how to motivate him is a different question,
+maybe for another blog post.
 
-Brave
+**He Is Disciplined.**
 
+Design patterns, quality of code, static analysis, unit testing,
+high performance, reliability, security and even maintabinability are all
+very important things to worry about. However, a good architect knows that
+all these can be resolved and achieved by programmers, if they are properly
+hired, motivated, organized and controlled. How to hire them, motivate, organize
+and control---is what a good architect worries about.
+
+He knows that process comes first, people next.
+
+However, this is not what most software experts think. For example,
+according to Alistair Cockburn's article [_Agile Software Development: The People Factor_](https://ieeexplore.ieee.org/document/963450/)
+published in IEEE Computer in 2001,
+"If the people on the project are good
+enough, they can use almost any process
+and accomplish their assignment. If they
+are not good enough, no process will
+repair their inadequacy---`people trump
+process' is one way to say this." It is acceptable if a programmer
+thinks like that, but not an architect.
+
+An architect puts discipline on top of everything else, constantly inventing
+new [rules]({% pst 2015/oct/2015-10-13-competition-without-rules %})
+and enforcing them. Moreover, he is not only making others obey,
+but also following the rules himself. Here, for example, the rules to enforce:
+
+  * No changes without a code review;
+  * Every idea starts with a ticket;
+  * The master branch is [read only]({% pst 2014/jul/2014-07-21-read-only-master-branch %});
+  * Static analysis is [mandatory]({% pst 2018/jan/2018-01-16-educational-aspect-of-static-analysis %});
+  * No [singletons]({% pst 2016/jun/2016-06-27-singletons-must-die %}),
+    no [getter/setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
+    and [so on]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %});
+  * Unit testing is mandatory for all new changes;
+  * No [informal discussions]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}) outside of tickets.
+
+Each project has its own set of rules. The list above is a subset of what we
+have in our projects in [Zerocracy](http://www.zerocracy.com). A good
+architect thinks about the rules first and about the architecture second.
+
+I totally agree with Len Bass that
+"the architecture should be the product of a single architect,"
+as he said in his book [_Software Architecture in Practice_](https://amzn.to/2MvHgFY).
+The question, however, is how exactly the architect will create the
+product: either in a solo mode, making all technical decisions alone,
+or letting the team contribute in an organized and disciplined manner.
+The former is easy but less effective, the latter is way more difficult,
+but leads to much stronger solutions and better team synergy (hate this word,
+but here it fits well).
+
+**He Is Strong**.
+
+Matthew McBride said in his article
+[_The Software Architect_](https://cacm.acm.org/magazines/2007/5/5663-the-software-architect/abstract),
+published in CACM in 2007, that
+"Without strong supervision from the software architect,
+projects and attempted solutions tend to fall apart due to the
+weight of unmitigated complexity." The word _strong_ is what is important
+to emphasize here.
+
+What does strength mean in this context? An ability to stay in the office two days
+straight with just pizza and cola? An ability to multiply six-digit numbers
+in memory? An ability to memorize the purpose and design of all classes
+and methods? An ability to stay in a meeting with investors for three hours
+without checking Facebook even once? Doubtly so.
+
+Strength of an architect is the ability to say "No" when it's difficult to do.
+For example:
+
+  * "No, I will [not merge]({% pst 2015/feb/2015-02-09-serious-code-reviewer %}) your pull request";
+  * "No, we will not implement this feature";
+  * "No, you do not deserve a promotion yet";
+  * "No, your code is not as good as we expect";
+  * "No, this build is not stable enough to be released";
+  * "No, you will not go on vacation this month."
+
+There are many other "No," which can easily turn an architect into
+a hatred figure, but this is what his job is: to be a bad guy. This is why
+he has to be strong&mdash;to handle it all calmly and continue leading
+the project forward, to his own well defined technical goals.
+
+**He Is Abstract**.
+
+Abstract thinking is a very important positive trait of an architect.
+Programmers may lack that, since they are mostly focused on their own
+[isolated tasks]({% pst 2017/nov/2017-11-28-microtasking %}).
+An architect must think globally and see the product
+as a whole. Details are less important. He must rely on his people
+when talking about details.
+
+**He Is Social**.
+
+Software is a product of people. No matter how great is the architect,
+if he can't find the right people to implement his ideas and to bring
+back new ideas, he is doomed to fail. The key quality of the architect
+is the ability to work with people: recruit, motivate, and control their
+results. [Social skills]({% pst 2018/jan/2018-01-23-sociotech-skills %})
+is what an architect needs in order to be
+successful in that, especially in finding new programmers and engaging
+them into the project. What exactly does this mean? Here, for example:
+
+  * High visibility in social networks;
+  * Long list of previous projects and teams;
+  * Active membership in professional groups;
+  * Publicity in blogosphere.
+
+In other words, a good architect is the one with a big group of
+followers and supporters around him. I mentioned that in my recent
+talk [_How Much Do You Cost?_](https://www.youtube.com/watch?v=GS45LzE3LPQ) at
+[JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/).
+
+**He Is Brave**.
+
+A good architect says many times a day: "It is my fault."
+If an architect doesn't have a habit of saying that frequently, he is not
+a good architect. He is just a programmer who is afraid of responsibility
+and authority.
+
+The golden rule of a good manager is: "Success is yours, faults are mine."
+This is the attitude a good architect has to express to his team.
+When they win, he will always find a way to celebrate and reward them.
+When they fail, he will take full responsibility for the failure.
+Because it's his team, he found them, he motivated them, he controlled them,
+and he didn't punish them properly. That's why they failed. First of all,
+it's his fault.
+
+What will he do with this fault is a separate question. Maybe will
+train and coach someone, maybe will enforce some rules more aggressively, maybe
+will even [give someone his card]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}).
+It's up to the architect. But for the
+outside world he will always be the guilty one and the team must know that.
+If they know that, they will do everything to not let the architect down.
+
+**He Is Simple**.
+
+"Simplicity is a great virtue," said Edsger Dijkstra in 1984.
+For a programmer it's a virtue, for an architect is a survial skill.
+An architect, who can't explain his ideas in simple words, easily
+understood by other programmers, is not an architect. No matter how
+smart he is, no matter how bright are the ideas. If they can't be
+delivered in a simple form, they are worth nothing.
+
+"If I don't understand you, it's your fault"
+[said]({% pst 2015/jun/2015-06-29-simple-diagrams %}) Yegor Bugayenko in 2015.
+A good architect remembers that.
+
+**He Is Coding**.
+
+Anthony Langsworth in his piece
+[__Should Software Architects Write Code?__](https://goo.gl/vGN61n) argues
+in favor of code-writing architects and in particular says that
+"Understanding code means the architect can use his or her judgment
+more effectively rather than rely on which developer is more persuasive."
+Indeed, an architect that is only capable of talking and
+[drawing]({% pst 2015/jun/2015-06-29-simple-diagrams %})
+is a weak architect that will sooner or later let the team and the
+project down.
+
+How much code the architect has to write, depends on the age of the project.
+When the project is young and is still in the phase of prototyping,
+the architect produces the majority of code. Then, later, when the product
+matures, the architect steps away and mostly reviews the contribution
+of programmers. Eventually, when the project migrates into the maintenance phase,
+the architect may quit the project and transfer his respoinsibilities to
+one of the programmers.
+
+**He Is Ambitious**.
+
+An architect does want to get something on top of money. He wants to
+be the smartest guy in the room,he wants to solve complex tasks
+nobody else has been able to solve before, he wants to save the world.
+He wants all of that to be appreciated and rewarded. He wants to be number one.
+In most cases he miserably fails. But he always stands back on his feet
+and tries again. Look for the guy with ambitions if you want to hire
+an architect, not just yet another programmer.
+
+Michael Keeling in his recent book
+[__Design It!: From Programmer to Software Architect__](https://amzn.to/2tgR8uv) (worth reading):
+"On some teams, architect is an official team role. On other teams,
+there is no explicit role and teammates share the architect's
+responsibilities. Some teams say they don't have an architect, but
+if you look closely, someone is fulfilling the architect's
+duties without realizing it. If your team doesn't have an architect, congratulations,
+you've got the job!"
+
+Michael's point is that the architect's position is rarely given to someone
+voluntarily. Instead, an architect has to fight for it and
+demand it. Sometimes even going straight forward and saying "I want to be
+an architect!"
+
+What is imporant is that it will not sound like "I want to architect this."
+This would be the voice of a programmer, not an architect.
+An architect wants to be a man of power, not just a smart technical engineer.
+So, it's way more about a title for him, than his actual responsibilities.
+
+**He Is Expensive**.
+
+Yes, the money question [again]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
+A good architect is expensive.
+If he is not, he is not a good architect.
 
