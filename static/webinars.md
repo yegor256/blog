@@ -41,8 +41,6 @@ informed about everything I do publicly, including these webinars.
 
 {% webinar 04-07-2018 35 -drZbHxydMc When do you validate your objects? %}
 
-https://www.youtube.com/watch?v=-drZbHxydMc
-
 <a href="https://www.youtube.com/watch?v=-drZbHxydMc"><img src="https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg" class="wnr" alt="Webinar no.35 by Yegor Bugayenko"/></a>
 July 4, 2018<br/>
 &#35;35: **When do you validate your objects?**<br/>
