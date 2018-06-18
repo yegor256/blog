@@ -22,7 +22,7 @@ jb_picture:
 
 You know what OAuth login is, right? It's when your users click "login"
 and get redirected to Facebook, Twitter, Google, or some other
-website that identify them. Then, they go back to your website and you
+website which then identifies them. Then they go back to your website and you
 know who they are. It's very convenient for them. It's convenient for you
 too, since you don't need to implement the login functionality and don't
 need to keep their credentials in a database. I created a simple
@@ -80,7 +80,7 @@ before '/*' do
 end
 ```
 
-If the `glogin` cookie is coming in and contains a valid data,
+If the `glogin` cookie comes in and contains valid data,
 a local variable `@user` will be set to something like this:
 
 ```ruby
@@ -118,14 +118,14 @@ settings.glogin.login_uri
 
 For unit testing you can just provide an empty string as a `secret` for
 `GLogin::Cookie::Open` and `GLogin::Cookie::Closed` and the encryption will be disabled:
-whatever will be coming from the cookie will be trusted. For testing
-it will be convenient to provide a user name in a query string, like:
+whatever comes from the cookie will be trusted. For testing
+it will be convenient to provide a user name in a query string, like this:
 
 ```
 http://localhost:9292/?glogin=tester
 ```
 
-To enable that, it's recommended to add this line (see how
+To enable that, it's recommended you add this line (see how
 it works in [zold-io/wts.zold.io](https://github.com/zold-io/wts.zold.io)):
 
 ```ruby
