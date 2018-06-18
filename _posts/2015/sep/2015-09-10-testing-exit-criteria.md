@@ -18,6 +18,12 @@ keywords:
 image: /images/2015/09/la-fille-sur-le-pont.jpg
 jb_picture:
   caption: La fille sur le pont (1999) by Patrice Leconte
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "The Goal of Software Testing"
+    date: 2018-05-30
+    url: https://cacm.acm.org/blogs/blog-cacm/228226-the-goal-of-software-testing/fulltext
 ---
 
 There is a software to be tested. There is a team of testers. There is
