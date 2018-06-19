@@ -170,7 +170,7 @@ Founded 31-Jul-2013.
 
 {% badge //www.zold.io/logo.png 70 http://www.zold.io %}
 
-[Zold](http://www.zold.io) is a digital currenty for fast micro payments,
+[Zold](http://www.zold.io) is a digital currency for fast micro payments,
 based on the proof-of-work principle, but without the Blockchain.
 <br/>
 Founded 29-Jan-2018.
