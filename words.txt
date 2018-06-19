@@ -1460,6 +1460,7 @@ convinced
 convincing
 cook
 cooked
+cookie
 cookie-based
 cookies
 cooking
@@ -2906,6 +2907,7 @@ glass
 glenford
 global
 globally
+glogin
 glossaries
 glossary
 gmail
@@ -4762,6 +4764,7 @@ opener
 opening
 OpenJDK
 openly
+opensource
 opera
 operate
 operating
@@ -5667,6 +5670,7 @@ redefine
 redesign
 redev
 redirect
+redirected
 rediscovered
 reduce
 redundancy
@@ -7785,6 +7789,7 @@ zerocrat
 zi
 zillow
 ziyavuddin
+zold
 zombie
 zombies
 zone
