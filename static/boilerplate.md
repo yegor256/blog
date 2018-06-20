@@ -76,7 +76,7 @@ yegor256@gmail.com
 Основатель Zerocracy и автор книги Elegant Objects.
 
 Short bio:<br/>
-Егор CEO и основаатель Zerocracy,
+Егор &mdash; CEO и основатель Zerocracy,
 автор Elegant Objects, серии книг об ООП,
 и программист на Java.
 
@@ -84,6 +84,7 @@ Full bio:<br/>
 Егор Бугаенко &mdash; основатель и CEO компании Zerocracy, разрабатывающей AI роботов для управления программистами;
 ООП-фундаменталист;
 автор "Elegant Objects" &mdash; серии книг об объектно-ориентированном программировании;
+создатель криптовалюты Zold для быстрых микроплатежей;
 провокационный блогер на yegor256.com;
 пишущий Java программист;
 создатель Cactoos, Takes Framework, JCabi и Rultor;
