@@ -1,20 +1,22 @@
 ---
 layout: post
-title: "Architect vs. Developer"
-date: 2018-05-29
+title: "Are You an Architect?"
+date: 2018-06-26
 place: Moscow, Russia
 tags: architect
 description: |
-  ...
+  What makes a good architect? Is it the same as
+  a senior programmer? Not really. Here is the list
+  of traits a software architect must have.
 keywords:
   - architect
   - software architect
-  - lazy and calm
-  - zerocracy
-  -
-image: /images/2018/04/
+  - architect traits
+  - good architect
+  - good software architect
+image: /images/2018/06/no-country-for-old-men.jpg
 jb_picture:
-  caption:
+  caption: No Country for Old Men (2007) by Coen Brothers
 ---
 
 Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
