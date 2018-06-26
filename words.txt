@@ -275,6 +275,7 @@ answer
 answered
 answering
 answers
+anthony
 anti-
 anti-depressant
 anti-OOP
@@ -357,6 +358,7 @@ arenas
 argentina
 argue
 argued
+argues
 arguing
 argument
 argumentation
@@ -434,7 +436,9 @@ atomicity
 atop
 attach
 attached
+attachments
 attempt
+attempted
 attempts
 attend
 attendant
@@ -552,6 +556,7 @@ basically
 basics
 basil
 basis
+bass
 bat
 batchelder
 bathroom
@@ -681,6 +686,7 @@ blog's
 blogger
 blogging
 bloghacks
+blogosphere
 blogspot
 blood
 bloody
@@ -854,6 +860,7 @@ bytes
 cache
 cached
 caching
+CACM
 cactoos
 cafe
 cake
@@ -874,6 +881,7 @@ caller
 calling
 calls
 calm
+calmly
 calorie
 cambria
 came
@@ -1143,12 +1151,14 @@ coarse-grained
 cobertura
 COBOL
 cockburn
+cockburn's
 coda
 code
 code-auto-complete
 code-free
 code-intensive
 code-rich
+code-writing
 codeahead
 coder
 coders
@@ -1163,6 +1173,7 @@ coin
 coinbase
 coined
 coinmama
+cola
 collaborate
 collaboration
 collaborationsuperpowers
@@ -1977,6 +1988,7 @@ dish
 disillusionment
 disk
 dislike
+disloyal
 disney
 disobey
 disobeying
@@ -2181,6 +2193,7 @@ efficient
 effort
 efforts
 egoistic
+egoists
 ehcache
 eight
 eighth
@@ -2219,6 +2232,7 @@ emerge
 emitter
 emoji
 emojis
+emoluments
 emotional
 emotionally
 emotions
@@ -2273,6 +2287,7 @@ enforceable
 enforced
 enforcement
 enforces
+enforcing
 engage
 engaged
 engaging
@@ -2578,10 +2593,12 @@ feeling
 feelings
 feels
 fees
+feet
 fellow
 felt
 female
 females
+feminist
 feminists
 fetch
 fetches
@@ -2764,6 +2781,7 @@ four
 four-page
 fourth
 fowler
+fraction
 fragile
 fragility
 frame
@@ -2803,6 +2821,7 @@ frustrates
 frustrating
 frustration
 FTP
+fulfilling
 full
 full-hearted
 full-purpose
@@ -3088,6 +3107,7 @@ HDD
 HDFS
 hdous
 he
+he'll
 he's
 head
 head-hunt
@@ -3351,6 +3371,7 @@ in-HTTP
 in-memory
 in-method-body
 inability
+inadequacy
 inapplicable
 inappropriate
 inbox
@@ -3748,6 +3769,7 @@ justice
 justification
 justifications
 justified
+justify
 JVM
 kalanick
 kanban
@@ -3760,6 +3782,7 @@ kawasaki
 kay
 kay's
 kb
+keeling
 keep
 keeping
 keeps
@@ -3810,6 +3833,7 @@ kotlin
 krakow
 kristina
 krubner
+kruchten
 kuban
 kube
 kudos
@@ -3832,6 +3856,7 @@ lake
 lambda
 lamp
 landed
+langsworth
 language
 languages
 lanyrd
@@ -3875,6 +3900,7 @@ lead
 leader
 leaders
 leadership
+leading
 leads
 leak
 leakage
@@ -3891,6 +3917,7 @@ leaves
 leaving
 led
 left
+leftist
 leg
 legacy
 legal
@@ -3899,6 +3926,7 @@ legalized
 legally
 legible
 legit
+len
 lending
 length
 lengthy
@@ -4176,6 +4204,7 @@ matter
 matters
 matthew
 mature
+matures
 maturity
 maven
 max
@@ -4186,6 +4215,7 @@ maybe
 mayonnaise
 mayonnaise-free
 mb
+mcbride
 mcclure
 mcconnell
 mccullough
@@ -4231,6 +4261,7 @@ members
 membership
 memberships
 memento
+memorize
 memory
 memory-representing
 men
@@ -4276,6 +4307,7 @@ metrics
 meyer
 meyers
 michael
+michael's
 micro
 micro-manage
 micro-managed
@@ -4307,6 +4339,7 @@ middleman
 middlemen
 might
 migrate
+migrates
 migration
 mihai
 mile
@@ -4756,6 +4789,7 @@ onto
 OO
 OOP
 OOP-inflected
+OOPSLA
 OOPSLA'
 open
 open-minded
@@ -5043,6 +5077,7 @@ personal
 personality
 personally
 perspective
+persuasive
 pescio
 pessimistic
 pet
@@ -5055,6 +5090,7 @@ PhantomJS
 phase
 phases
 phd
+philippe
 philosophical
 philosophically
 philosophy
@@ -5172,6 +5208,7 @@ politicians
 politics
 pollute
 polluters
+polygamous
 polymorphism
 POM
 pompous
@@ -5350,6 +5387,7 @@ procedures
 proceed
 proceedings
 process
+process'
 processed
 processes
 processing
@@ -5473,6 +5511,7 @@ psychology
 public
 publication
 publications
+publicity
 publicly
 publish
 published
@@ -5623,6 +5662,7 @@ reality
 realize
 realized
 realizes
+realizing
 really
 realy
 reaper
@@ -6362,6 +6402,7 @@ situation
 situational
 situations
 six
+six-digit
 sixnines
 size
 sizeable
@@ -6794,6 +6835,7 @@ summarize
 summarizes
 summary
 summer
+sumptuous
 sun
 sunday
 super
@@ -6808,6 +6850,7 @@ suppliers
 supply
 support
 supported
+supporters
 supporting
 supportive
 supports
@@ -6910,6 +6953,7 @@ team-meeting
 teamcity
 teamed
 teammate
+teammates
 teams
 teamwork
 tear
@@ -7144,6 +7188,7 @@ trained
 training
 trainings
 trainspotting
+trait
 traits
 transaction
 transactions
@@ -7336,6 +7381,7 @@ unlocks
 unmaintainable
 unmanageable
 unmarshalling
+unmitigated
 unmotivated
 unnecessary
 unpacks
@@ -7432,6 +7478,7 @@ valuable
 valuation
 value
 values
+vancouver
 varargs
 variable
 variables
@@ -7517,6 +7564,7 @@ void
 voil
 volume
 volumes
+voluntarily
 volunteer
 vote
 voted

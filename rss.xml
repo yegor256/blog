@@ -1,4 +1,255 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-06-19T11:37:43+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Simplified GitHub Login for a Ruby Web App</title><link href="https://www.yegor256.com/2018/06/19/glogin.html" rel="alternate" type="text/html" title="Simplified GitHub Login for a Ruby Web App" /><published>2018-06-19T00:00:00+00:00</published><updated>2018-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/19/glogin</id><content type="html" xml:base="https://www.yegor256.com/2018/06/19/glogin.html">&lt;p&gt;You know what &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-06-26T08:37:10+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Are You an Architect?</title><link href="https://www.yegor256.com/2018/06/26/are-you-an-architect.html" rel="alternate" type="text/html" title="Are You an Architect?" /><published>2018-06-26T00:00:00+00:00</published><updated>2018-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/26/are-you-an-architect</id><content type="html" xml:base="https://www.yegor256.com/2018/06/26/are-you-an-architect.html">&lt;p&gt;Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
+Kent Beck, in answer to the question
+&amp;quot;What is an architect?&amp;quot; said, according to &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0164121208002057&quot;&gt;Philippe Kruchten&lt;/a&gt;,
+that it is &amp;quot;a new pompous title that programmers demand to have on their business cards
+to justify their sumptuous emoluments.&amp;quot;
+Not much has changed since then.
+There is a big difference between a smart programmer and a project architect.
+Here is a list of traits that, I believe, a good architect has.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;No Country for Old Men (2007) by Coen Brothers&#39; src=&#39;/images/2018/06/no-country-for-old-men.jpg&#39; longdesc=&#39;#3627e4f5&#39;/&gt;&lt;figcaption id=&#39;3627e4f5&#39;&gt;No Country for Old Men (2007) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Disclaimer: Even though I haven&amp;#39;t seen a single female software architect in my life,
+I have to say for my leftist/feminist readers that in this blog post
+I&amp;#39;m assuming an architect is a man only for the sake of convenience of speech.
+There is no intention to offend anyone.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Loyal.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Programmers come and go.
+They are, as I &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;mentioned&lt;/a&gt;
+many times before, egoists with a strong focus
+on their personal profit. They change projects, they work on multiple
+projects at the same time, they have
+&lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;no personal attachments&lt;/a&gt;
+to any piece of code. They worry only about their individual tasks and
+feature branches. The branch is merged? All bets are off. Professional
+developers are &amp;quot;polygamous&amp;quot; and disloyal.&lt;/p&gt;
+
+&lt;p&gt;An architect, however, is a different creature. He stays with the project
+even after it runs out of funds, loses the last programmer, and
+proves that the architecture is a total mess that can&amp;#39;t handle even
+a fraction of the traffic it was supposed to work under. The architect
+stays and says &amp;quot;No worries, we&amp;#39;ll get through, no matter what!&amp;quot;
+How to find such a guy and how to motivate him are different questions,
+maybe for another blog post.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Disciplined.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Design patterns, quality of code, static analysis, unit testing,
+high performance, reliability, security and even maintainability are all
+very important things to worry about. However, a good architect knows that
+all these can be resolved and achieved by programmers, if they are properly
+hired, motivated, organized and controlled. How to hire, motivate, organize
+and control them&amp;mdash;that&amp;#39;s what a good architect worries about.&lt;/p&gt;
+
+&lt;p&gt;He knows that process comes first, people next.&lt;/p&gt;
+
+&lt;p&gt;However, this is not what most software experts think. For example,
+according to Alistair Cockburn&amp;#39;s article &lt;a href=&quot;https://ieeexplore.ieee.org/document/963450/&quot;&gt;&lt;em&gt;Agile Software Development: The People Factor&lt;/em&gt;&lt;/a&gt;
+published in IEEE Computer in 2001:
+&amp;quot;If the people on the project are good
+enough, they can use almost any process
+and accomplish their assignment. If they
+are not good enough, no process will
+repair their inadequacy&amp;mdash;&amp;#39;people trump
+process&amp;#39; is one way to say this.&amp;quot; It is acceptable if a programmer
+thinks like that, but not an architect.&lt;/p&gt;
+
+&lt;p&gt;An architect puts discipline on top of everything else, constantly inventing
+new &lt;a href=&quot;/2015/10/13/competition-without-rules.html&quot;&gt;rules&lt;/a&gt;
+and enforcing them. Moreover, he is not only making others obey,
+but also following the rules himself. Here, for example, are the rules to enforce:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No changes without a code review;&lt;/li&gt;
+&lt;li&gt;Every idea starts with a ticket;&lt;/li&gt;
+&lt;li&gt;The master branch is &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;read only&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Static analysis is &lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;mandatory&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;No &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;singletons&lt;/a&gt;,
+no &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getter/setters&lt;/a&gt;,
+and &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;so on&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Unit testing is mandatory for all new changes;&lt;/li&gt;
+&lt;li&gt;No &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;informal discussions&lt;/a&gt; outside of tickets.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each project has its own set of rules. The list above is a subset of what we
+have on our projects at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;. A good
+architect thinks about the rules first and about the architecture second.&lt;/p&gt;
+
+&lt;p&gt;I totally agree with Len Bass that
+&amp;quot;the architecture should be the product of a single architect,&amp;quot;
+as he said in his book &lt;a href=&quot;https://amzn.to/2MvHgFY&quot;&gt;&lt;em&gt;Software Architecture in Practice&lt;/em&gt;&lt;/a&gt;.
+The question, however, is how exactly the architect will create the
+product: either in solo mode, making all technical decisions alone,
+or letting the team contribute in an organized and disciplined manner.
+The former is easy but less effective, the latter is way more difficult,
+but leads to much stronger solutions and better team synergy (I hate this word,
+but here it fits well).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Strong.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Matthew McBride said in his article
+&lt;a href=&quot;https://cacm.acm.org/magazines/2007/5/5663-the-software-architect/abstract&quot;&gt;&lt;em&gt;The Software Architect&lt;/em&gt;&lt;/a&gt;,
+published in CACM in 2007, that
+&amp;quot;Without strong supervision from the software architect,
+projects and attempted solutions tend to fall apart due to the
+weight of unmitigated complexity.&amp;quot; The word &lt;em&gt;strong&lt;/em&gt; is what is important
+to emphasize here.&lt;/p&gt;
+
+&lt;p&gt;What does strength mean in this context? An ability to stay in the office two days
+straight with just pizza and cola? An ability to multiply six-digit numbers
+in memory? An ability to memorize the purpose and design of all classes
+and methods? An ability to stay in a meeting with investors for three hours
+without checking Facebook even once? Not likely.&lt;/p&gt;
+
+&lt;p&gt;The strength of an architect is in the ability to say &amp;quot;No&amp;quot; when it&amp;#39;s difficult to do so.
+For example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;No, I will &lt;a href=&quot;/2015/02/09/serious-code-reviewer.html&quot;&gt;not merge&lt;/a&gt; your pull request&amp;quot;;&lt;/li&gt;
+&lt;li&gt;&amp;quot;No, we will not implement this feature&amp;quot;;&lt;/li&gt;
+&lt;li&gt;&amp;quot;No, you do not deserve a promotion yet&amp;quot;;&lt;/li&gt;
+&lt;li&gt;&amp;quot;No, your code is not as good as we expect&amp;quot;;&lt;/li&gt;
+&lt;li&gt;&amp;quot;No, this build is not stable enough to be released&amp;quot;;&lt;/li&gt;
+&lt;li&gt;&amp;quot;No, you will not go on vacation this month.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are many other instances of &amp;quot;No&amp;quot; which can easily turn an architect into
+a hated figure, but this is what his job is: to be the bad guy. This is why
+he has to be strong&amp;mdash;to handle it all calmly and continue leading
+the project forward, toward his own well-defined technical goals.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Abstract.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Abstract thinking is a very important positive trait of an architect.
+Programmers may lack that, since they are mostly focused on their own
+&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;isolated tasks&lt;/a&gt;.
+An architect must think globally and see the product
+as a whole. Details are less important. He must rely on his people
+when talking about details.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Social.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Software is a product of people. No matter how great the architect is,
+if he can&amp;#39;t find the right people to implement his ideas and to bring
+back new ideas, he is doomed to fail. The key quality of the architect
+is the ability to work with people: recruit, motivate, and control their
+results. &lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;Social skills&lt;/a&gt;
+are what an architect needs in order to be
+successful in that, especially in finding new programmers and engaging
+them on the project. What exactly does this mean? Well, here are some examples:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;High visibility in social networks;&lt;/li&gt;
+&lt;li&gt;A long list of previous projects and teams;&lt;/li&gt;
+&lt;li&gt;Active membership in professional groups;&lt;/li&gt;
+&lt;li&gt;Publicity in the blogosphere.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In other words, a good architect is the one with a big group of
+followers and supporters around him. I mentioned that in my recent
+talk &lt;a href=&quot;https://www.youtube.com/watch?v=GS45LzE3LPQ&quot;&gt;&lt;em&gt;How Much Do You Cost?&lt;/em&gt;&lt;/a&gt; at
+&lt;a href=&quot;http://jeeconf.com/speaker/yegor-bugayenko-2/&quot;&gt;JEEConf 2017&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Brave.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A good architect says many times a day: &amp;quot;It is my fault.&amp;quot;
+If an architect doesn&amp;#39;t have a habit of saying that frequently, he is not
+a good architect. He is just a programmer who is afraid of responsibility
+and authority.&lt;/p&gt;
+
+&lt;p&gt;The golden rule of a good manager is: &amp;quot;Success is yours, faults are mine.&amp;quot;
+This is the attitude a good architect has to express to his team.
+When they win, he will always find a way to celebrate and reward them.
+When they fail, he will take full responsibility for the failure.
+Because it&amp;#39;s his team, he found them, he motivated them, he controlled them,
+and he didn&amp;#39;t punish them properly. That&amp;#39;s why they failed. First of all,
+it&amp;#39;s his fault.&lt;/p&gt;
+
+&lt;p&gt;What will he do with this fault is a separate question. Maybe he will
+train and coach someone, maybe he&amp;#39;ll enforce some rules more aggressively, maybe
+he will even &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;give someone his card&lt;/a&gt;.
+It&amp;#39;s up to the architect. But for the
+outside world he will always be the guilty one and the team must know that.
+If they know that, they will do everything to not let the architect down.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Simple.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Simplicity is a great virtue,&amp;quot; said Edsger Dijkstra in 1984.
+For a programmer it&amp;#39;s a virtue, for an architect it&amp;#39;s a survival skill.
+An architect who can&amp;#39;t explain his ideas in simple words, easily
+understood by other programmers, is not an architect. No matter how
+smart he is, no matter how bright his ideas are. If they can&amp;#39;t be
+delivered in a simple form, they are worth nothing.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;If I don&amp;#39;t understand you, it&amp;#39;s your fault&amp;quot;
+&lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;said&lt;/a&gt; Yegor Bugayenko in 2015.
+A good architect remembers that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Coding.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Anthony Langsworth in his piece
+&lt;a href=&quot;https://goo.gl/vGN61n&quot;&gt;&lt;em&gt;Should Software Architects Write Code?&lt;/em&gt;&lt;/a&gt; argues
+in favor of code-writing architects and in particular says that
+&amp;quot;Understanding code means the architect can use his or her judgment
+more effectively rather than rely on which developer is more persuasive.&amp;quot;
+Indeed, an architect that is only capable of talking and
+&lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;drawing&lt;/a&gt;
+is a weak architect that will sooner or later let the team and the
+project down.&lt;/p&gt;
+
+&lt;p&gt;How much code the architect has to write, depends on the age of the project.
+When the project is young and is still in the phase of prototyping,
+the architect produces the majority of code. Then, later, when the product
+matures, the architect steps away and mostly reviews the contribution
+of programmers. Eventually, when the project migrates into the maintenance phase,
+the architect may quit the project and transfer his responsibilities to
+one of the programmers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Ambitious.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;An architect does want to get something in addition to money. He wants to
+be the smartest guy in the room, he wants to solve complex tasks
+nobody else has been able to solve before, he wants to save the world.
+He wants all of that to be appreciated and rewarded. He wants to be number one.
+In most cases he fails miserably. But he always gets back on his feet
+and tries again. Look for the guy with ambitions if you want to hire
+an architect, not just yet another programmer.&lt;/p&gt;
+
+&lt;p&gt;Michael Keeling, in his recent book
+&lt;a href=&quot;https://amzn.to/2tgR8uv&quot;&gt;&lt;em&gt;Design It!: From Programmer to Software Architect&lt;/em&gt;&lt;/a&gt; (worth reading), says:
+&amp;quot;On some teams, architect is an official team role. On other teams,
+there is no explicit role and teammates share the architect&amp;#39;s
+responsibilities. Some teams say they don&amp;#39;t have an architect, but
+if you look closely, someone is fulfilling the architect&amp;#39;s
+duties without realizing it. If your team doesn&amp;#39;t have an architect, congratulations,
+you&amp;#39;ve got the job!&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Michael&amp;#39;s point is that the architect&amp;#39;s position is rarely given to someone
+voluntarily. Instead, an architect has to fight for it and
+demand it. Sometimes even going straight ahead and saying &amp;quot;I want to be
+the architect!&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;What is important is that it will not sound like &amp;quot;I want to architect this.&amp;quot;
+That would be the voice of a programmer, not an architect.
+An architect wants to be a man of power, not just a smart technical engineer.
+So, it&amp;#39;s way more about a title for him, rather that just his actual responsibilities.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He Is Expensive&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Yes, the money question &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;again&lt;/a&gt;.
+A good architect is expensive.
+If he is not, he is not a good architect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
+Kent Beck, in answer to the question
+&amp;quot;What is an architect?&amp;quot; said, according to Philippe Kruchten,
+that it is &amp;quot;a new pompous title that programmers demand to have on their business cards
+to justify their sumptuous emoluments.&amp;quot;
+Not much has changed since then.
+There is a big difference between a smart programmer and a project architect.
+Here is a list of traits that, I believe, a good architect has.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/no-country-for-old-men.jpg" /></entry><entry><title type="html">Simplified GitHub Login for a Ruby Web App</title><link href="https://www.yegor256.com/2018/06/19/glogin.html" rel="alternate" type="text/html" title="Simplified GitHub Login for a Ruby Web App" /><published>2018-06-19T00:00:00+00:00</published><updated>2018-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/19/glogin</id><content type="html" xml:base="https://www.yegor256.com/2018/06/19/glogin.html">&lt;p&gt;You know what &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;
 login is, right? It&amp;#39;s when your users click &amp;quot;login&amp;quot;
 and get redirected to Facebook, Twitter, Google, or some other
 website which then identifies them. Then they go back to your website and you
@@ -1274,131 +1525,4 @@ quality of classes in languages/platforms like Java, where we frequently share
 objects between threads. The issues caused by lack of thread-safety
 are very difficult to debug, since they are sporadic and almost impossible
 to reproduce on purpose. How do you test your objects to make sure
-they are thread-safe? Here is how I&amp;#39;m doing it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/scent-of-a-woman.jpg" /></entry><entry><title type="html">Zerocracy: A Project Manager That Never Sleeps</title><link href="https://www.yegor256.com/2018/03/21/zerocracy-announcement.html" rel="alternate" type="text/html" title="Zerocracy: A Project Manager That Never Sleeps" /><published>2018-03-21T00:00:00+00:00</published><updated>2018-03-21T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/03/21/zerocracy-announcement</id><content type="html" xml:base="https://www.yegor256.com/2018/03/21/zerocracy-announcement.html">&lt;p&gt;I&amp;#39;ve been in the software business for almost 30 years. I wrote my first piece of code
-when I was 12. Since then I have been programming and managing other programmers,
-hiring and firing them, planning projects and their budgets, finding and losing
-customers, investing into software teams and losing my investments,
-even teaching others how to manage software projects. What is my overall
-impression? It&amp;#39;s a pain. I think I&amp;#39;ve found a solution though.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Casino (1995) by Martin Scorsese&#39; src=&#39;/images/2018/03/casino.jpg&#39; longdesc=&#39;#23194099&#39;/&gt;&lt;figcaption id=&#39;23194099&#39;&gt;Casino (1995) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Software projects &lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;fail&lt;/a&gt;.
-Most of them, anyway. Miserably. They run out of money, they
-produce software that doesn&amp;#39;t work, they miss deadlines, they
-lose key people and fall apart, and so on.
-Why does it happen? Not because programmers are stupid, nor technologies immature, and not because
-hardware is unstable.&lt;/p&gt;
-
-&lt;p&gt;They fail &lt;a href=&quot;https://www.infoq.com/articles/software-failure-reasons&quot;&gt;because&lt;/a&gt; we don&amp;#39;t manage them.&lt;/p&gt;
-
-&lt;p&gt;We miss important data, we lose track of events, we don&amp;#39;t pay attention
-to risks and threats, we don&amp;#39;t plan time and money, and we don&amp;#39;t do many other
-things that &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge&quot;&gt;PMBOK&lt;/a&gt;
-says we have to do in order to keep a project under control.&lt;/p&gt;
-
-&lt;aside class=&#39;youtube&#39;&gt;
-        &lt;a href=&#39;https://www.youtube.com/watch?v=AwrMKTFyohg&#39;&gt;&lt;div class=&#39;box&#39;&gt;
-        &lt;img src=&#39;https://i.ytimg.com/vi/AwrMKTFyohg/mqdefault.jpg&#39; alt=&#39;YouTube video #AwrMKTFyohg&#39;/&gt;
-        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;#NoMagic;
-        13 April 2018.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;What do we do instead?&lt;/p&gt;
-
-&lt;p&gt;We rely on our innate hierarchical instincts and hope for the best.&lt;/p&gt;
-
-&lt;p&gt;Here is what I mean by that.
-First, we put a group of people together, also known as programmers. Then,
-we tell them how &lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;important&lt;/a&gt;
-the goal is that they are going to achieve&amp;mdash;develop
-a software product. Then we make sure they know who the boss is, by paying
-them &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;by the hour&lt;/a&gt;.
-Finally, thanks to their upbringing and education,
-they &amp;quot;do the right thing&amp;quot; and software gets created. Maybe. If we are lucky.&lt;/p&gt;
-
-&lt;p&gt;This is exactly how it has worked in the Animal Kingdom, for millions of years.
-In order to survive, mammals create hierarchies: the strongest males are on top, others
-do what they say. If they don&amp;#39;t obey, violence helps. Scientists &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pubmed/26133375&quot;&gt;think&lt;/a&gt;
-that humans are also very hierarchical creatures&amp;mdash;we feel discomfort
-if we don&amp;#39;t know who the boss is, who to submit to.&lt;/p&gt;
-
-&lt;p&gt;Thanks to this hierarchical instinct, just like lions, wolves, and monkeys,
-we manage our projects using force.
-We, unlike the animals, don&amp;#39;t use physical violence anymore, at least not in the software business, but
-we have a huge arsenal of more sophisticated
-&lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;punishment methods&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;They do work.&lt;/p&gt;
-
-&lt;p&gt;However, due to the complexity of our profession, the quality
-and efficacy of the results we observe are very low.
-The &lt;a href=&quot;https://www.projectsmart.co.uk/white-papers/chaos-report.pdf&quot;&gt;CHAOS Report&lt;/a&gt; (2015)
-by the Standish Group says that &amp;quot;software development projects
-are in chaos, and we can no longer imitate the three monkeys&amp;mdash;hear no failures,
-see no failures, speak no failures.&amp;quot; The report also demonstrates that as a
-result of this chaos we have restarts (94% projects!), cost overruns, and time
-overruns. The report also says that technology incompetence is the root cause of project failures only in
-7% cases. In almost all other cases the management is the source of the trouble.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.zerocracy.com&#39;&gt;&lt;img src=&#39;http://www.0crat.com/svg/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;We, at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;,
-believe that in the 21st century programmers (and not only them) deserve
-a better and a more effective replacement for this
-&amp;quot;monkey management.&amp;quot; We believe that the software development world
-needs a management model which is based
-on people&amp;#39;s professional merits, instead of on their ability to play
-the &lt;a href=&quot;https://en.wikipedia.org/wiki/Alpha_%28ethology%29&quot;&gt;alpha/beta&lt;/a&gt; games.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;https://www.0crat.com&#39;&gt;&lt;img src=&#39;https://www.0crat.com/svg/zerocrat.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Zerocracy offers exactly that: &lt;a href=&quot;https://www.0crat.com&quot;&gt;Zerocrat&lt;/a&gt;, an automated project manager, which
-communicates as a chat bot and tells programmers what to do.
-It replaces a traditional &amp;quot;boss in the office,&amp;quot;
-distributing &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;micro tasks&lt;/a&gt;
-among programmers, validating their results,
-paying them, and calculating schedule, budget, and scope predictions. It does
-all the routine jobs a professional &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project manager&lt;/a&gt;
-should do on any project, but rarely does do because it&amp;#39;s so boring.
-It doesn&amp;#39;t look boring to the robot though.&lt;/p&gt;
-
-&lt;p&gt;Zerocrat is a project manager that never sleeps. It doesn&amp;#39;t make mistakes,
-doesn&amp;#39;t forget things, and doesn&amp;#39;t accept excuses.
-It also doesn&amp;#39;t know anything about hierarchies. It manages programmers
-only by their merits, which are visible via &lt;a href=&quot;https://www.0crat.com/team&quot;&gt;objective metrics&lt;/a&gt;.
-Thanks to this, programmers become their own bosses, reporting only to a soulless piece of software,
-which acts according to a very strict &lt;a href=&quot;http://www.zerocracy.com/policy.html&quot;&gt;policy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xdsd.org&#39;&gt;&lt;img src=&#39;http://www.xdsd.org/images/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://www.zerocracy.com/policy.html&quot;&gt;policy&lt;/a&gt;
-of Zerocracy is based on &lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt; principles,
-which were introduced in 2010 and practiced since then on &lt;a href=&quot;https://www.youtube.com/watch?v=qRZYJGYdrwk&quot;&gt;many&lt;/a&gt;
-software projects. The principles have proved able to seriously increase project
-predictability, &lt;a href=&quot;/2014/04/11/cost-of-loc.html&quot;&gt;decrease costs&lt;/a&gt;,
-and &lt;a href=&quot;/2018/03/06/speed-vs-quality.html&quot;&gt;enforce&lt;/a&gt;
-quality of code. Also, they boost the motivation of &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;the type of programmers&lt;/a&gt;,
-who like the idea of being their own bosses.&lt;/p&gt;
-
-&lt;p&gt;How many of those people are out there
-on the market&amp;mdash;the future will soon show us.&lt;/p&gt;
-
-&lt;p&gt;Speaking philosophically, while it&amp;#39;s a common
-&lt;a href=&quot;https://www.forbes.com/sites/quora/2017/12/18/artificial-intelligence-will-change-the-job-landscape-forever-heres-how-to-prepare/&quot;&gt;belief&lt;/a&gt;
-that in the future AI-powered robots will do what we want,
-we believe in the opposite: Robots will tell us what to do. Management is
-what computers do better, while writing code, drawing diagrams, growing flowers,
-or cooking a soup is what we, humans, do better and actually enjoy doing.
-We believe that in the future computers will help us organize
-ourselves by taking the routine part of the management on themselves.&lt;/p&gt;
-
-&lt;p&gt;Zerocracy makes the first step in this direction.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="zerocracy" /><summary type="html">I&amp;#39;ve been in the software business for almost 30 years. I wrote my first piece of code
-when I was 12. Since then I have been programming and managing other programmers,
-hiring and firing them, planning projects and their budgets, finding and losing
-customers, investing into software teams and losing my investments,
-even teaching others how to manage software projects. What is my overall
-impression? It&amp;#39;s a pain. I think I&amp;#39;ve found a solution though.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/casino.jpg" /></entry></feed>
+they are thread-safe? Here is how I&amp;#39;m doing it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/03/scent-of-a-woman.jpg" /></entry></feed>
