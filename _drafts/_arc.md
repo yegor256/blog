@@ -22,7 +22,7 @@ Kent Beck, in answer to the question
 "What is an architect?" said, according to [Philippe Kruchten](https://www.sciencedirect.com/science/article/pii/S0164121208002057),
 that it is "a new pompous title that programmers demand to have on their business cards
 to justify their sumptuous emoluments."
-Not much has really changed since then.
+Not much has changed since then.
 There is a big difference between a smart programmer and a project architect.
 Here is a list of traits that, I believe, a good architect has.
 
@@ -35,7 +35,7 @@ I have to say for my leftist/feminist readers that in this blog post
 I'm assuming an architect is a man only for the sake of convenience of speech.
 There is no intention to offend anyone.
 
-**He Is Loyal**.
+**He Is Loyal.**
 
 Programmers come and go.
 They are, as I [mentioned]({% pst 2018/jan/2018-01-09-micro-budgeting %})
@@ -62,7 +62,7 @@ high performance, reliability, security and even maintainability are all
 very important things to worry about. However, a good architect knows that
 all these can be resolved and achieved by programmers, if they are properly
 hired, motivated, organized and controlled. How to hire, motivate, organize
-and control them---that's what a good architect worries about.
+and control them&mdash;that's what a good architect worries about.
 
 He knows that process comes first, people next.
 
@@ -73,7 +73,7 @@ published in IEEE Computer in 2001:
 enough, they can use almost any process
 and accomplish their assignment. If they
 are not good enough, no process will
-repair their inadequacy---'people trump
+repair their inadequacy&mdash;'people trump
 process' is one way to say this." It is acceptable if a programmer
 thinks like that, but not an architect.
 
@@ -106,7 +106,7 @@ The former is easy but less effective, the latter is way more difficult,
 but leads to much stronger solutions and better team synergy (I hate this word,
 but here it fits well).
 
-**He Is Strong**.
+**He Is Strong.**
 
 Matthew McBride said in his article
 [_The Software Architect_](https://cacm.acm.org/magazines/2007/5/5663-the-software-architect/abstract),
@@ -133,11 +133,11 @@ For example:
   * "No, you will not go on vacation this month."
 
 There are many other instances of "No" which can easily turn an architect into
-a hatred figure, but this is what his job is: to be the bad guy. This is why
+a hated figure, but this is what his job is: to be the bad guy. This is why
 he has to be strong&mdash;to handle it all calmly and continue leading
 the project forward, toward his own well-defined technical goals.
 
-**He Is Abstract**.
+**He Is Abstract.**
 
 Abstract thinking is a very important positive trait of an architect.
 Programmers may lack that, since they are mostly focused on their own
@@ -146,7 +146,7 @@ An architect must think globally and see the product
 as a whole. Details are less important. He must rely on his people
 when talking about details.
 
-**He Is Social**.
+**He Is Social.**
 
 Software is a product of people. No matter how great the architect is,
 if he can't find the right people to implement his ideas and to bring
@@ -167,7 +167,7 @@ followers and supporters around him. I mentioned that in my recent
 talk [_How Much Do You Cost?_](https://www.youtube.com/watch?v=GS45LzE3LPQ) at
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/).
 
-**He Is Brave**.
+**He Is Brave.**
 
 A good architect says many times a day: "It is my fault."
 If an architect doesn't have a habit of saying that frequently, he is not
@@ -189,10 +189,10 @@ It's up to the architect. But for the
 outside world he will always be the guilty one and the team must know that.
 If they know that, they will do everything to not let the architect down.
 
-**He Is Simple**.
+**He Is Simple.**
 
 "Simplicity is a great virtue," said Edsger Dijkstra in 1984.
-For a programmer it's a virtue, for an architect it's a survial skill.
+For a programmer it's a virtue, for an architect it's a survival skill.
 An architect who can't explain his ideas in simple words, easily
 understood by other programmers, is not an architect. No matter how
 smart he is, no matter how bright his ideas are. If they can't be
@@ -202,10 +202,10 @@ delivered in a simple form, they are worth nothing.
 [said]({% pst 2015/jun/2015-06-29-simple-diagrams %}) Yegor Bugayenko in 2015.
 A good architect remembers that.
 
-**He Is Coding**.
+**He Is Coding.**
 
 Anthony Langsworth in his piece
-[__Should Software Architects Write Code?__](https://goo.gl/vGN61n) argues
+[_Should Software Architects Write Code?_](https://goo.gl/vGN61n) argues
 in favor of code-writing architects and in particular says that
 "Understanding code means the architect can use his or her judgment
 more effectively rather than rely on which developer is more persuasive."
@@ -222,7 +222,7 @@ of programmers. Eventually, when the project migrates into the maintenance phase
 the architect may quit the project and transfer his responsibilities to
 one of the programmers.
 
-**He Is Ambitious**.
+**He Is Ambitious.**
 
 An architect does want to get something in addition to money. He wants to
 be the smartest guy in the room, he wants to solve complex tasks
@@ -233,7 +233,7 @@ and tries again. Look for the guy with ambitions if you want to hire
 an architect, not just yet another programmer.
 
 Michael Keeling, in his recent book
-[__Design It!: From Programmer to Software Architect__](https://amzn.to/2tgR8uv) (worth reading), says:
+[_Design It!: From Programmer to Software Architect_](https://amzn.to/2tgR8uv) (worth reading), says:
 "On some teams, architect is an official team role. On other teams,
 there is no explicit role and teammates share the architect's
 responsibilities. Some teams say they don't have an architect, but
@@ -247,7 +247,7 @@ demand it. Sometimes even going straight ahead and saying "I want to be
 the architect!"
 
 What is important is that it will not sound like "I want to architect this."
-This would be the voice of a programmer, not an architect.
+That would be the voice of a programmer, not an architect.
 An architect wants to be a man of power, not just a smart technical engineer.
 So, it's way more about a title for him, rather that just his actual responsibilities.
 
