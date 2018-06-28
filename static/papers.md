@@ -27,7 +27,8 @@ Find me at [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ
 
 [We are Done with 'Hacking'](https://cacm.acm.org/magazines/2018/7/229044-we-are-done-with-hacking/fulltext)
 Communications of the ACM, Volume 61, Number 7<br/>
-July 2018
+July 2018<br/>
+[PDF](/pdf/2018/we-are-done-with-hacking.pdf)
 
 [Method and Software of NetBout](https://www.google.com/patents/US20120117164)<br/>
 US patent application 12/943,022<br/>
