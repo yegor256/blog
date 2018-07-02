@@ -119,28 +119,6 @@ if (typeof($) != 'undefined') {
           url: 'https://vk.com/share.php?act=count&url=' + eurl
         });
       }
-      /*
-      // https://jsonp.afeld.me/
-      $.ajax({
-        dataType: 'jsonp',
-        async: true,
-        timeout: timeout,
-        url: 'http://jsonp.afeld.me/?url=' +
-          'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
-          + eurl,
-        jsonp: 'callback',
-        jsonpCallback: 'x',
-        success: function(json) {
-          var count = json.result.views;
-          if (count > 0) {
-            $('.count-stumbleupon').html(number(count)).fadeIn();
-          }
-        },
-        error: function() {
-          $('.share .icon-stumbleupon').css('border', border);
-        }
-      });
-      */
       if ($('.count-hackernews').length) {
         $.ajax({
           dataType: 'json',
