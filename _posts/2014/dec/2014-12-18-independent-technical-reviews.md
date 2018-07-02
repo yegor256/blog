@@ -25,26 +25,26 @@ chosen them from a hundred candidates! Are they passionate about the product?
 Absolutely! They use cutting-edge technologies, never sleep, and hardly eat or drink
 anything except coffee! Do they believe in your business success? No doubts about it;
 they live and breathe all those features, releases, continuous delivery, user
-experience, etc. Are you sure they are developing the product **correctly**?
+experience, etc. Are you sure they are developing the product _correctly_?
 Well, yes, you're pretty sure; why wouldn't they? ...
+
+<!--more-->
+
+{% jb_picture_body %}
 
 Does this sound
 [familiar]({% pst 2017/nov/2017-11-21-trust-pay-lose %})?
 I can't count how many times I've heard
 these stories told by startup founders. Most of them are in love with their teams ...
 until that day when it's time to [hire]({% pst 2016/jun/2016-06-21-how-to-hire-programmer %})
-**a new one**. There could be many
+_a new one_. There could be many
 possible reasons for such a fiasco, but one of them is a lack of
-regular, systematic, and independent **technical reviews**.
+regular, systematic, and independent _technical reviews_.
 Nothing demotivates a development team more than a lack of attention
 to their deliverables. On the other hand, a regular
 reconciliation of their results and your quality expectations is one
 of the key factors that will guarantee technical success for your
 startup. Below I summarize my experience with organizing such technical reviews.
-
-<!--more-->
-
-{% jb_picture_body %}
 
 An independent review is when you ask someone outside of your team
 to look at your source code and other technical resources
@@ -73,7 +73,7 @@ This is the first and most important rule&mdash;organize
 such technical reviews regularly. Moreover, inform your team about the schedule,
 and let them be prepared for the reviews. Once a month is a good practice,
 according to my experience. Depending on your source code size, a full
-review should take from **two to eight hours**. Don't spend more than eight hours;
+review should take from _two to eight hours_. Don't spend more than eight hours;
 there is no point in going too deep into the code during independent reviews.
 
 **Pay for Bugs Found**.
@@ -128,7 +128,7 @@ psychologically you make him engaged to the source code. He's seen it once;
 now he has to see it again. He already told you about some problem, and
 now he has to repeat it again. He won't feel comfortable doing it. Instead,
 he will start feeling like a member of the team and will feel
-**responsible** for the source code and its mistakes. He, as any other
+_responsible_ for the source code and its mistakes. He, as any other
 team member, will start hiding issues instead of revealing them. Thus,
 for every independent technical review, get a new person.
 
