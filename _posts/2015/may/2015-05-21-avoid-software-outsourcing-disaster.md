@@ -25,7 +25,7 @@ a product&mdash;on-time and in-budget delivery, highest quality, beautiful user 
 cutting-edge technologies, and hassle-free lifetime support. So you send the
 first payment and your journey starts. The team hardly understands your needs,
 the quality is terrible, all your time and budget expectations
-are severely violated, and the level of **frustration** is skyrocketing. And the
+are severely violated, and the level of _frustration_ is skyrocketing. And the
 "best" part is that you can't get away or else all the money you've spent so far
 will go down the drain and you will have to start from scratch. You have to
 stay "married" to this team because you can't afford a "divorce." Is there
@@ -42,8 +42,8 @@ to be ready to twist your management philosophy.
 {% youtube DLk_5BmgTVk %}
 
 The basic fundamental principle here is that 1) you should openly and frequently
-communicate your **concerns** with the outsourcing team, and 2) they should
-openly and frequently communicate **risks and issues** with you. These are
+communicate your _concerns_ with the outsourcing team, and 2) they should
+openly and frequently communicate _risks and issues_ with you. These are
 two major success factors in
 [software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 that are very often neglected.
@@ -76,19 +76,19 @@ I hope you do realize that no matter what kind of contract you signed with
 your software outsourcing partner, how many schedules you've baselined,
 or how many promises were made, they want to keep you as a
 [client]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
-**forever**. Well, for as long as you have something in your bank account.
+_forever_. Well, for as long as you have something in your bank account.
 
 You want your business to succeed and flourish, right? They want the same for their
 business. Your success means a product that is finished and launched to
 end users. Their success means a never-ending process of writing software
 for you. These two goals have very little in common. I would even say
-they contradict each other&mdash;when you **succeed**, they **fail**.
+they contradict each other&mdash;when you _succeed_, they _fail_.
 
 Of course, they will tell you they want to finish this product for
 you and get new contracts in the future. They will say their primary
 motivation is to make you happy and obtain a good reference. They
 will assure you that customer satisfaction is more important than money.
-However, I'm suggesting you be strong enough to face the reality&mdash;it's all **lies**.
+However, I'm suggesting you be strong enough to face the reality&mdash;it's all _lies_.
 
 The majority of software outsourcing projects fail.
 The vast majority (see the latest [CHAOS report](http://www.csus.edu/indiv/v/velianitis/161/ChaosReport.pdf)).
@@ -107,7 +107,7 @@ your concerns_. What usually happens is that the outsourcing team remains
 unaware of a real business situation and only hears "I need this ASAP" every
 second day.
 
-"ASAP" is not a deadline. Moreover, it's a very **de-motivating** substitute
+"ASAP" is not a deadline. Moreover, it's a very _de-motivating_ substitute
 for a realistic milestone. When the team doesn't know when exactly you need
 the product, what exactly has to be ready by that date, and _why_,
 it starts to work against you. The emphasis here is on "why." For most
@@ -136,7 +136,7 @@ in half.
 
 When the software outsourcing company, your partner, hears this definition
 of a deadline, it becomes a real partner of yours. Now its goals
-are **aligned** with yours. If the milestone is missed, you will suffer
+are _aligned_ with yours. If the milestone is missed, you will suffer
 and they understand exactly how. Besides that, they see how your
 suffering will be transferred to their shoulders too.
 
@@ -145,14 +145,14 @@ suffering will be transferred to their shoulders too.
 Stop asking them to finish everything ASAP. Stop calling them twice a day
 and yelling for an hour about their poor performance. Stop using language
 in business emails. Stop making all this noise. It doesn't help you anyway.
-Moreover, it only makes the situation worse, because you're losing **respect**
+Moreover, it only makes the situation worse, because you're losing _respect_
 and they're starting to treat you like a cash cow&mdash;a rather stupid
 and emotional one.
 
-Instead, do your homework and define your **realistic** milestones. Think
+Instead, do your homework and define your _realistic_ milestones. Think
 about your real time, scope, and budget limitations. Write them down in
 very short and concise sentences. Make sure your constraints are realistic
-and their descriptions answer the main question&mdash;**why**.
+and their descriptions answer the main question&mdash;_why_.
 
 Why do you need this by the first of June? Why do you want to spend less than
 $50,000? Why do you need all five features to be in version 1.0? Why
@@ -166,7 +166,7 @@ outsourcing company. Don't hide this information.
 
 You want your web app to look like Pinterest, react fast, be easy to use,
 and make you proud when you show it to your friends. But the product
-they created for you is clumsy, slow, and to be honest, **ugly**. You're
+they created for you is clumsy, slow, and to be honest, _ugly_. You're
 asking them to do something about it, and they keep giving you promises.
 The project keeps consuming your money and its budget grows, but the look and feel
 is not getting any better. It is far from Pinterest, very far. The frustration
@@ -176,22 +176,22 @@ a new web development team. How does this sound? I bet it's familiar.
 
 {% quote We encourage project sponsors to be pessimistic and negative about our quality %}
 
-I believe the root cause of this dead-end situation is a **fear**
+I believe the root cause of this dead-end situation is a _fear_
 of [conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %}).
 At early stages in the project, you try to do everything you can
 to keep a good relationship with the outsourcing company and not to offend anyone.
 You don't want to control anyone's work because they may take it as an insult.
 You don't want to express your quality concerns because they may
 de-motivate the team. You just hope they will improve the product in the future,
-but when the future comes, it's **too late**.
+but when the future comes, it's _too late_.
 
 Again, keeping the age-old principle in mind, I would recommend that from the first
 day of the project, you establish a routine procedure of checking their
 results and expressing your concerns. In our projects at
 [Zerocracy](http://www.zerocracy.com), we ask our customers to be present
 in GitHub, review our releases frequently, and report any inconsistencies
-found as GitHub issues. We encourage project sponsors to be as **pessimistic**
-and **negative** about our quality from the beginning of the project. We realize
+found as GitHub issues. We encourage project sponsors to be as _pessimistic_
+and _negative_ about our quality from the beginning of the project. We realize
 this is how we can minimize the risk of a "piled-up frustration."
 
 Try to do the same in your project that is outsourced to an offshore developer.
@@ -213,7 +213,7 @@ under development. Read my other post about this subject:
 
 You call them, make plans, declare milestones, define features, set priorities,
 agree about quality, and then hang up. In a few days, you realize it was
-a total waste of time. They don't keep their **promises** because there is
+a total waste of time. They don't keep their _promises_ because there is
 always something new happening. Someone is sick, some server is broken,
 some piece of software appears to be mal-functional, some code is no
 longer working, etc. You call again, express your frustration, make
@@ -225,7 +225,7 @@ priorities, and in a few days start over. Been there, done that? Sound familiar?
 In my experience, this unpredictability and unreliability of a software
 outsourcing team is in most cases caused by a project sponsor himself or herself.
 This happens when you don't listen to them or they are afraid to tell
-you the **truth**, which is usually the same thing. Some call this
+you the _truth_, which is usually the same thing. Some call this
 "[fear-driven development](http://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)."
 The team is afraid of you, and in order to
 keep you on board as a paying customer, has to lie to you.
@@ -234,8 +234,8 @@ Basically, they are telling you what you want to hear&mdash;that the end of the 
 easy to fix, that performance problems are minor, that the quality
 of the architecture is outstanding, and that the team is very motivated to work with you.
 When you hear any of the above, question yourself&mdash;Do you
-encourage them to tell the truth? Do you **reward** them for bringing you
-**bad** but honest news?
+encourage them to tell the truth? Do you _reward_ them for bringing you
+_bad_ but honest news?
 
 {% quote If you reward your team when they make you happy with good news, you are training them to lie to you %}
 
@@ -243,8 +243,8 @@ Once again citing the fundamental principle mentioned above, I would recommend
 you make sure your reasoning for awards and punishments is transparent to
 your
 [software outsourcing partner]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
-and is based on project **objectives**,
-not your personal **emotions**.
+and is based on project _objectives_,
+not your personal _emotions_.
 
 In [one of my previous posts]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}),
 I wrote that a happy customer is a false objective for a software development team.
@@ -254,9 +254,9 @@ make you happy with good news, you are training them to lie to you. If you
 expect them to deliver good news, you are discouraging them from telling
 you the truth and from doing what is good for the project, not for you personally.
 
-You're discouraging them from **arguing** with you. In other words, you're
+You're discouraging them from _arguing_ with you. In other words, you're
 throttling the channel of information that is supposed to come to you
-from the people working for you. You're **isolating** yourself, and the team
+from the people working for you. You're _isolating_ yourself, and the team
 is starting to work against you, not with you.
 
 Here is a practical recommendation. First, regularly announce your reasonable
