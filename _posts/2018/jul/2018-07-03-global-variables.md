@@ -14,7 +14,7 @@ keywords:
   - global variables evil
   - global variables bad
   - global variables wrong
-image: /images/2010/07/el-chapo.jpg
+image: /images/2018/07/el-chapo.jpg
 jb_picture:
   caption: El Chapo, Season 1 (2017) by Silvana Aguirre et al.
 ---
