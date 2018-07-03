@@ -14,9 +14,9 @@ keywords:
   - global variables evil
   - global variables bad
   - global variables wrong
-image: /images/2010/07/
+image: /images/2010/07/el-chapo.jpg
 jb_picture:
-  caption:
+  caption: El Chapo, Season 1 (2017) by Silvana Aguirre et al.
 ---
 
 Only lazy people haven't written already about how [global variables](https://en.wikipedia.org/wiki/Global_variable)
