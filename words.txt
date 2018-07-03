@@ -424,6 +424,7 @@ assume
 assumed
 assumes
 assuming
+assumption
 assumptions
 assurance
 assure
@@ -1069,6 +1070,7 @@ cinemas
 CircleCI
 circles
 circulating
+circumstances
 citing
 citizens
 city
@@ -1291,6 +1293,7 @@ comply
 component
 components
 componentstyle
+composability
 composable
 compose
 composer
@@ -2901,6 +2904,7 @@ getter
 getters
 getting
 GHz
+giant
 GIF
 gift
 gifts
@@ -3755,6 +3759,7 @@ judgment
 JUG
 jugru
 julian
+july
 jump
 jumping
 jumps
@@ -4642,6 +4647,7 @@ non-functional
 non-important
 non-intrusive
 non-IT
+non-local
 non-native
 non-professional
 non-programmer
@@ -5579,6 +5585,7 @@ quiz
 qulice
 qulice's
 quo
+quot
 quote
 quotes
 quoting
@@ -5635,6 +5642,7 @@ re-throw
 re-throwing
 re-tweeted
 re-used
+re-work
 re-write
 re-written
 reach
@@ -6095,6 +6103,7 @@ satisfy
 satisfying
 saturday
 save
+saved
 saves
 saving
 savvy
@@ -6134,6 +6143,7 @@ scientist
 scientists
 SCM
 scope
+scoped
 scopes
 scoping
 score
@@ -6442,6 +6452,7 @@ slight
 slightly
 SLIK
 slippage
+slipped
 SLoC
 slogans
 slope
@@ -7777,6 +7788,7 @@ written
 wrong
 wrote
 WSDL
+wulf
 WWII
 www
 xcop
