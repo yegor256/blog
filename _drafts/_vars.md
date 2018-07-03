@@ -19,7 +19,7 @@ jb_picture:
   caption:
 ---
 
-Only a lazy hasn't written yet that [global variables](https://en.wikipedia.org/wiki/Global_variable)
+Only lazy people haven't written already about how [global variables](https://en.wikipedia.org/wiki/Global_variable)
 are evil. It started in 1973 when W.&nbsp;Wulf et al. [claimed](https://dl.acm.org/citation.cfm?id=953355) that
 "the non-local variable is a major contributing factor in programs
 which are difficult to understand." Since then, [many other reasons](http://wiki.c2.com/?GlobalVariablesAreBad)
@@ -44,7 +44,7 @@ App.start!
 Here `start!` is a static method of the `App` class, which you have to declare
 as a child of their default parent
 [`Sinatra::Base`](https://github.com/sinatra/sinatra/blob/v2.0.3/lib/sinatra/base.rb#L893-L1896).
-To tell the app which TCP port to listen to you have to pre-configure it:
+To tell the app which TCP port to listen to you have to preconfigure it:
 
 {% highlight ruby %}
 require 'sinatra/base'
