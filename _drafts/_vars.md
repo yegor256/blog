@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "What's Wrong About Global Variables?"
+title: "What's Wrong With Global Variables?"
 date: 2018-07-03
 place: Moscow, Russia
 tags: oop
 description: |
   There are many reasons why global variables are
-  evil and must be avoided in object-oriented context;
+  evil and must be avoided in an object-oriented context;
   here is yet another one from me.
 keywords:
   - global variables
@@ -19,15 +19,15 @@ jb_picture:
   caption:
 ---
 
-Only a lazy hasn't written yet that [global variables](https://en.wikipedia.org/wiki/Global_variable)
+Only lazy people haven't written already about how [global variables](https://en.wikipedia.org/wiki/Global_variable)
 are evil. It started in 1973 when W.&nbsp;Wulf et al. [claimed](https://dl.acm.org/citation.cfm?id=953355) that
 "the non-local variable is a major contributing factor in programs
 which are difficult to understand." Since then, [many other reasons](http://wiki.c2.com/?GlobalVariablesAreBad)
-where suggested to convience programmers to stop using global variables.
+where suggested to convince programmers to stop using global variables.
 I think [I read them all](https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil),
 but didn't find the one that bothers me most of all: composability.
 In a nutshell, global variables make code difficult or impossible to compose
-in ways, which are different from what its author expected.
+in ways which are different from what its original author expected.
 
 <!--more-->
 
@@ -44,7 +44,7 @@ App.start!
 Here `start!` is a static method of the `App` class, which you have to declare
 as a child of their default parent
 [`Sinatra::Base`](https://github.com/sinatra/sinatra/blob/v2.0.3/lib/sinatra/base.rb#L893-L1896).
-To tell the app which TCP port to listen to you have to pre-configure it:
+To tell the app which TCP port to listen to you have to preconfigure it:
 
 {% highlight ruby %}
 require 'sinatra/base'
@@ -68,13 +68,13 @@ Can this really be fixed? Let's take a look at [their code](https://github.com/s
 Class `Sinatra::Base` is essentially a [Singleton]({% pst 2016/jun/2016-06-27-singletons-must-die %}),
 which is not supposed to have more than one instance.
 When we call `App.set(:port, 8080)`, the value `8080` is saved into an attribute of a single instance.
-Number `8080` becomes available for all methods of `Sinatra::Base`, no matter what instance
+The number `8080` becomes available for all methods of `Sinatra::Base`, no matter what instance
 they are called from.
 
 They are not using [true](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/globalvars.html)
-Ruby global variables, I believe, because they knew that they are bad.
-Why exactly they were bad and what were the
-[alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})&mdash;slipped through their fingers.
+Ruby global variables, I believe, because they know that they are bad.
+Why exactly they are bad and what the
+[alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) are&mdash;slipped through their fingers.
 
 Technically speaking, their design is "globally scoped."
 `Sinatra::Base` treats the entire application as its scope of visibility.
@@ -82,9 +82,9 @@ No matter who calls it, everything is visible, including what was created
 in previous calls and in previously instantiated objects.
 This "class" is a giant bag of global variables.
 
-Every global variable is a trouble maker of that kind.
-While the application is small and its test coverage is low, global variables may no hurt.
-But the bigger the app and the more sophisticated are its automated testing scenarios,
+Every global variable is a troublemaker of that kind.
+While the application is small and its test coverage is low, global variables may not hurt.
+But the bigger the app and the more sophisticated its automated testing scenarios,
 the more difficult it will be to compose objects which depend on global variables,
 singletons, or class variables.
 
