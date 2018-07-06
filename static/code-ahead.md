@@ -19,10 +19,15 @@ keywords:
 
 "Code Ahead" will be my <del>second</del> fourth book. It will be about software engineering. It
 will contain a number of best practices, which help software live longer.
-All of that principles I've learned from my practical experience. It will
-be published in <del>November 2017</del> February 2018.
+All of that principles I've learned from my practical experience.
+
+Volume 1:<br/>
+<a href="https://amzn.to/2u9BbqF"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <!--more-->
+
+July 6, 2018:
+It is finally published, in version 1.0.
 
 Jun 15, 2018:
 The manuscript is finally ready.
