@@ -99,6 +99,13 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
+<img src="/images/2018/appsconf.png" class="future-talk" alt="AppsConf 2018"/><br/>
+Главное не качество, а количество!<br/>
+[AppsConf](http://appsconf.ru/2018)<br/>
+Moscow, Russia<br/>
+8-9 October.
+
+<div class="talk-event">&nbsp;</div>
 <img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
 Can a Freelancer Cost $500 an Hour?<br/>
 [CloudEXPO](http://java.sys-con.com/node/4266925)<br/>
