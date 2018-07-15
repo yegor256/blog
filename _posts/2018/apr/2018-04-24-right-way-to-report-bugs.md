@@ -47,6 +47,8 @@ Don't expect all of your bugs to be accepted and paid for.
 Some of them won't be.
 This must not stop you from reporting them.
 
+{% quote Present it as if the entire world will collapse tomorrow if they don't fix it. %}
+
 **Exaggerate**.
 No matter how minor the bug is, present it as if the entire world will
 collapse tomorrow if they don't fix it.
