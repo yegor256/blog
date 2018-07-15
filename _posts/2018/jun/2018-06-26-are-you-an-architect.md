@@ -68,6 +68,8 @@ and control them&mdash;that's what a good architect worries about.
 
 He knows that process comes first, people next.
 
+{% quote An architect puts discipline on top of everything else, constantly inventing new rules and enforcing them. %}
+
 However, this is not what most software experts think. For example,
 according to Alistair Cockburn's article [_Agile Software Development: The People Factor_](https://ieeexplore.ieee.org/document/963450/)
 published in IEEE Computer in 2001:
@@ -117,6 +119,8 @@ published in CACM in 2007, that
 projects and attempted solutions tend to fall apart due to the
 weight of unmitigated complexity." The word _strong_ is what is important
 to emphasize here.
+
+{% quote The strength of an architect is in the ability to say "No" when it's difficult to do so. %}
 
 What does strength mean in this context? An ability to stay in the office two days
 straight with just pizza and cola? An ability to multiply six-digit numbers
@@ -184,6 +188,8 @@ Because it's his team, he found them, he motivated them, he controlled them,
 and he didn't punish them properly. That's why they failed. First of all,
 it's his fault.
 
+{% quote He didn't punish them properly. That's why they failed. First of all, it's his fault. %}
+
 What will he do with this fault is a separate question. Maybe he will
 train and coach someone, maybe he'll enforce some rules more aggressively, maybe
 he will even [give someone his card]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}).
@@ -218,7 +224,7 @@ project down.
 
 How much code the architect has to write, depends on the age of the project.
 When the project is young and is still in the phase of prototyping,
-the architect produces the majority of code. Then, later, when the product
+the architect produces the [majority of code]({% pst 2017/mar/2017-03-24-tdd-that-works %}). Then, later, when the product
 matures, the architect steps away and mostly reviews the contribution
 of programmers. Eventually, when the project migrates into the maintenance phase,
 the architect may quit the project and transfer his responsibilities to
@@ -233,6 +239,8 @@ He wants all of that to be appreciated and rewarded. He wants to be number one.
 In most cases he fails miserably. But he always gets back on his feet
 and tries again. Look for the guy with ambitions if you want to hire
 an architect, not just yet another programmer.
+
+{% quote An architect wants to be a man of power, not just a smart technical engineer. %}
 
 Michael Keeling, in his recent book
 [_Design It!: From Programmer to Software Architect_](https://amzn.to/2tgR8uv) (worth reading), says:
