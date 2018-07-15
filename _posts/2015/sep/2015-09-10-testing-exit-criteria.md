@@ -75,7 +75,7 @@ new or old is the product.
 {% quote They can't find all bugs, no matter how much time we give them %}
 
 Having these axioms in mind, let's try to decide when testers have to stop.
-According to Dr. Meyers, "one of the most difficult questions
+According to Dr. Myers, "one of the most difficult questions
 to answer when testing a program is determining when to stop,
 since there is no way of knowing if the error just detected is the
 last remaining error" (page 135).
@@ -93,7 +93,7 @@ version, sooner or later. At the same time, testers will always tell us
 that there are more bugs there and they can find more, just need more
 time. What to do?
 
-Dr. Meyers says that "since the goal of testing is to find errors,
+Dr. Myers says that "since the goal of testing is to find errors,
 why not make the completion criterion the detection of some predefined
 number of errors?" (page 136). Indeed, we should predict how many bugs
 are just enough to find, in order to have a desirable level of _confidence_
