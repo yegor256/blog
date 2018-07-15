@@ -28,20 +28,20 @@ I'm expecting you to shrug your shoulders. You're right, these questions never
 have explicit answers in modern organizations. We are used to working
 in a more "[democratic]({% pst 2014/oct/2014-10-12-who-is-software-architect %})"
 way, where such decisions are made
-**subjectively** by managers or more senior employees.
+_subjectively_ by managers or more senior employees.
 Is this how it should be?
 
 <!--more-->
 
 {% jb_picture_body %}
 
-We are trying to **avoid explicitness** in these sensitive subjects. Indeed,
+We are trying to _avoid explicitness_ in these sensitive subjects. Indeed,
 how can we tell Jeff that his salary is lower than
 Monica's because his performance is worse?
 This will definitely lead to depression and negativity
 within the team, right?
 
-What I'm trying to say is that **we don't set rules**. We think that
+What I'm trying to say is that _we don't set rules_. We think that
 strict and explicit rules related to performance
 offend creative people. Well, all people.
 
@@ -49,12 +49,12 @@ We avoid explicitness in performance appraisals.
 
 And this is totally wrong!
 
-This is a **mistake**, and it causes big problems!
+This is a _mistake_, and it causes big problems!
 
 {% quote Competition is inevitable in a group, especially if the group consists of creative people %}
 
 When a group doesn't have explicitly defined principles of
-survival and growth, it starts to create them **naturally**. When
+survival and growth, it starts to create them _naturally_. When
 people don't know what exactly needs to be done in order to get
 a 15 percent raise, they find a way to get this information anyway. And guess what
 this information will end up being? Right&mdash;you have
@@ -67,9 +67,9 @@ Instead of focusing on the results and their quality, we
 are reading the mood of our
 [manager]({% pst 2015/sep/2015-09-22-micromanagement %}). Our fear becomes a guide for us.
 
-Competition is **inevitable** in a group, especially if the group consists
+Competition is _inevitable_ in a group, especially if the group consists
 of creative people. Creativity is all about competition. Each of us
-wants to be better than the others, and this is what drives **innovation**.
+wants to be better than the others, and this is what drives _innovation_.
 But if the team has no rules, even a minor competition seriously
 and negatively affects their motivation.
 
