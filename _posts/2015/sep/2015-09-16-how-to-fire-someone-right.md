@@ -22,8 +22,8 @@ someone the right way? What are the tricks to do it nicely,
 gracefully, and professionally?" I responded by saying that if you question yourself
 about how to do it right, you're doing it wrong in the first place.
 If firing is a painful and unpleasant process for you, there is
-a problem with your management model. Firing must be an **easy**
-and **open** procedure, **visible** and **understood** by the entire team.
+a problem with your management model. Firing must be an _easy_
+and _open_ procedure, _visible_ and _understood_ by the entire team.
 
 <!--more-->
 
@@ -31,7 +31,7 @@ and **open** procedure, **visible** and **understood** by the entire team.
 
 I mentioned this problem before in
 [my post]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) about team morale.
-I said that firing someone should not be done behind **closed doors**.
+I said that firing someone should not be done behind _closed doors_.
 Instead, the assessment of individual performance should
 occur openly and be visible to the entire team. If you need to close
 the door in order to talk "privately" to express your concerns and
@@ -43,8 +43,8 @@ that a perfectly managed team is working for the project, not for you, the boss.
 The team must share the same goal and work towards it. The boss (or CEO, CTO,
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
 Scrum master, team lead, etc.) is there in order
-to enforce the **rules** accepted by the team. The team agrees to the rules,
-so the boss is just making sure they are **enforced**.
+to enforce the _rules_ accepted by the team. The team agrees to the rules,
+so the boss is just making sure they are _enforced_.
 
 If firing is unpleasant for you, the rules are not clear.
 
