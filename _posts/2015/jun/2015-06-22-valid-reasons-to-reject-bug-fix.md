@@ -23,7 +23,7 @@ A bug exists when something doesn't work as expected. A _bug
 fix_ is basically a patch (a pull request) to the existing code base that
 is supposed to solve the problem and make sure that "something"
 works as expected. Very often, such a patch fixes one thing
-and breaks many others. I believe that sometimes it's necessary to **reject**
+and breaks many others. I believe that sometimes it's necessary to _reject_
 a bug fix and ask its author to re-do the patch in order to
 protect the project from bigger problems. There are a few
 valid reasons for such a rejection, according to my experience.

@@ -51,7 +51,7 @@ If firing is unpleasant for you, the rules are not clear.
 If the rules are not clear, you're a
 [bad manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
-{% quote The firing decision should not be your decision %}
+{% quote The firing decision should not be your decision. %}
 
 The firing is unpleasant only when your decision is not supported by the team.
 You feel you're doing something wrong to the person you are firing and

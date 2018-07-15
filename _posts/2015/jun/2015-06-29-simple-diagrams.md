@@ -22,7 +22,7 @@ jb_picture:
 ---
 
 I don't even know where to start. Let's begin with this:
-**If I don't understand you, it's your fault**. This has to be
+_If I don't understand you, it's your fault_. This has to be
 the most basic, fundamental principle of a good software architect (well,
 of any engineer), but most of the architects I've met so far, in many
 companies, don't seem to believe in it. They don't understand that
@@ -41,7 +41,7 @@ Why is this happening? Why are their diagrams complex and difficult to read?
 I'm sure you know what I'm talking about; you probably have your own examples
 of such diagrams from projects and architects you've worked with. So why do we have them?
 
-Architects are **proud of complexity**, that's why. They think that
+Architects are _proud of complexity_, that's why. They think that
 the more complex the problem they're working with, the better an engineer
 they are. I've had this dialog many times:
 
@@ -62,7 +62,7 @@ When the problem is properly decomposed (broken down into smaller, isolated
 and properly decoupled pieces), the complexity _decreases_, and it becomes
 easier for everybody to understand and resolve.
 
-{% quote A good architect would never be proud of a complex diagram %}
+{% quote A good architect would never be proud of a complex diagram. %}
 
 The main virtue of an architect is the ability to _reduce_ complexity. Thus,
 a good architect would never be proud of a complex diagram. Instead, he would
@@ -72,7 +72,7 @@ is really difficult to do. That's where a true architectural mind shines.
 
 There are not many architects like that. I can't say I'm one of them yet,
 but I have a few recommendations for your diagrams. Read on and remember
-that the main goal of all this is to **reduce complexity**.
+that the main goal of all this is to _reduce complexity_.
 
 **No More Than Five Rectangles**.
 If you have more, there is something wrong. Try to explain yourself
