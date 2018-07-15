@@ -76,6 +76,8 @@ Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
 [alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) are&mdash;slipped through their fingers.
 
+{% quote While the application is small and its test coverage is low, global variables may not hurt. %}
+
 Technically speaking, their design is "globally scoped."
 `Sinatra::Base` treats the entire application as its scope of visibility.
 No matter who calls it, everything is visible, including what was created
@@ -89,3 +91,6 @@ the more difficult it will be to compose objects which depend on global variable
 singletons, or class variables.
 
 My recommendation? Under no circumstances even think about any global variables.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think about global variables? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> <a href="https://twitter.com/hashtag/oop?src=hash&amp;ref_src=twsrc%5Etfw">#oop</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw">July 15, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
