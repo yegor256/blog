@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/michael-krigsman.png" class="guest-face" alt="Michael Krigsman photo"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;29: [Team dynamics in modern IT companies](/shift-m/2018/29.html)<br/>
+12 July 2018; 60 min.
+
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;28: [How to be critical and lazy](/shift-m/2018/28.html)<br/>
 20 May 2018; 53 min.
