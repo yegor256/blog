@@ -2654,6 +2654,7 @@ findbugs
 finding
 findings
 finds
+finduserbyname
 fine
 fine-grained
 finger

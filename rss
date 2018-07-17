@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-07-06T11:54:43+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven&amp;#39;t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-07-17T09:25:41+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven&amp;#39;t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
 are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=953355&quot;&gt;claimed&lt;/a&gt; that
 &amp;quot;the non-local variable is a major contributing factor in programs
 which are difficult to understand.&amp;quot; Since then, &lt;a href=&quot;http://wiki.c2.com/?GlobalVariablesAreBad&quot;&gt;many other reasons&lt;/a&gt;
@@ -51,6 +51,8 @@ Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
 &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;alternatives&lt;/a&gt; are&amp;mdash;slipped through their fingers.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;While the application is small and its test coverage is low, global variables may not hurt.&lt;/aside&gt;
+
 &lt;p&gt;Technically speaking, their design is &amp;quot;globally scoped.&amp;quot;
 &lt;code&gt;Sinatra::Base&lt;/code&gt; treats the entire application as its scope of visibility.
 No matter who calls it, everything is visible, including what was created
@@ -63,7 +65,11 @@ But the bigger the app and the more sophisticated its automated testing scenario
 the more difficult it will be to compose objects which depend on global variables,
 singletons, or class variables.&lt;/p&gt;
 
-&lt;p&gt;My recommendation? Under no circumstances even think about any global variables.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven&amp;#39;t written already about how global variables
+&lt;p&gt;My recommendation? Under no circumstances even think about any global variables.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think about global variables? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/oop?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#oop&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw&quot;&gt;July 15, 2018&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven&amp;#39;t written already about how global variables
 are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. claimed that
 &amp;quot;the non-local variable is a major contributing factor in programs
 which are difficult to understand.&amp;quot; Since then, many other reasons
@@ -120,6 +126,8 @@ and control them&amp;mdash;that&amp;#39;s what a good architect worries about.&l
 
 &lt;p&gt;He knows that process comes first, people next.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;An architect puts discipline on top of everything else, constantly inventing new rules and enforcing them.&lt;/aside&gt;
+
 &lt;p&gt;However, this is not what most software experts think. For example,
 according to Alistair Cockburn&amp;#39;s article &lt;a href=&quot;https://ieeexplore.ieee.org/document/963450/&quot;&gt;&lt;em&gt;Agile Software Development: The People Factor&lt;/em&gt;&lt;/a&gt;
 published in IEEE Computer in 2001:
@@ -171,6 +179,8 @@ published in CACM in 2007, that
 projects and attempted solutions tend to fall apart due to the
 weight of unmitigated complexity.&amp;quot; The word &lt;em&gt;strong&lt;/em&gt; is what is important
 to emphasize here.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;The strength of an architect is in the ability to say &quot;No&quot; when it&#39;s difficult to do so.&lt;/aside&gt;
 
 &lt;p&gt;What does strength mean in this context? An ability to stay in the office two days
 straight with just pizza and cola? An ability to multiply six-digit numbers
@@ -242,6 +252,8 @@ Because it&amp;#39;s his team, he found them, he motivated them, he controlled t
 and he didn&amp;#39;t punish them properly. That&amp;#39;s why they failed. First of all,
 it&amp;#39;s his fault.&lt;/p&gt;
 
+&lt;aside class=&#39;quote&#39;&gt;He didn&#39;t punish them properly. That&#39;s why they failed. First of all, it&#39;s his fault.&lt;/aside&gt;
+
 &lt;p&gt;What will he do with this fault is a separate question. Maybe he will
 train and coach someone, maybe he&amp;#39;ll enforce some rules more aggressively, maybe
 he will even &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;give someone his card&lt;/a&gt;.
@@ -276,7 +288,7 @@ project down.&lt;/p&gt;
 
 &lt;p&gt;How much code the architect has to write, depends on the age of the project.
 When the project is young and is still in the phase of prototyping,
-the architect produces the majority of code. Then, later, when the product
+the architect produces the &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;majority of code&lt;/a&gt;. Then, later, when the product
 matures, the architect steps away and mostly reviews the contribution
 of programmers. Eventually, when the project migrates into the maintenance phase,
 the architect may quit the project and transfer his responsibilities to
@@ -291,6 +303,8 @@ He wants all of that to be appreciated and rewarded. He wants to be number one.
 In most cases he fails miserably. But he always gets back on his feet
 and tries again. Look for the guy with ambitions if you want to hire
 an architect, not just yet another programmer.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;An architect wants to be a man of power, not just a smart technical engineer.&lt;/aside&gt;
 
 &lt;p&gt;Michael Keeling, in his recent book
 &lt;a href=&quot;https://amzn.to/2tgR8uv&quot;&gt;&lt;em&gt;Design It!: From Programmer to Software Architect&lt;/em&gt;&lt;/a&gt; (worth reading), says:
@@ -584,7 +598,11 @@ returns &lt;code&gt;NaN&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The &amp;quot;default&amp;quot; object will be returned if the list is empty. This feature
 is implemented in Python&amp;#39;s &lt;a href=&quot;https://docs.python.org/3/library/functions.html#max&quot;&gt;&lt;code&gt;max()&lt;/code&gt;&lt;/a&gt; function:
 it&amp;#39;s possible to pass both a list and a default element to return in case the list
-is empty. If the default element is not provided, the exception will be raised.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You know what NULL is, right? It&amp;#39;s
+is empty. If the default element is not provided, the exception will be raised.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw&quot;&gt;April 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You know what NULL is, right? It&amp;#39;s
 evil.
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
@@ -855,6 +873,8 @@ My recommendations here are more of a psychological nature.&lt;/p&gt;
 Don&amp;#39;t expect all of your bugs to be accepted and paid for.
 Some of them won&amp;#39;t be.
 This must not stop you from reporting them.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Present it as if the entire world will collapse tomorrow if they don&#39;t fix it.&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Exaggerate&lt;/strong&gt;.
 No matter how minor the bug is, present it as if the entire world will

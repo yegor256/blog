@@ -313,7 +313,7 @@ may sound like, &amp;quot;We don&amp;#39;t use
 &amp;quot;TDD is too expensive for us now.&amp;quot; I&amp;#39;m sure you&amp;#39;ve heard this or even
 said it yourself. It doesn&amp;#39;t make any sense to me. I don&amp;#39;t get the
 logic. In my understanding, unit testing is not
-a product; it&amp;#39;s a &lt;strong&gt;tool&lt;/strong&gt;. You use tests to develop a product
+a product; it&amp;#39;s a &lt;em&gt;tool&lt;/em&gt;. You use tests to develop a product
 faster and better. How can you say you don&amp;#39;t have time to use
 the tool that makes your work faster? Let me show you how.&lt;/p&gt;
 </description>
@@ -330,7 +330,7 @@ the tool that makes your work faster? Let me show you how.&lt;/p&gt;
 fix&lt;/em&gt; is basically a patch (a pull request) to the existing code base that
 is supposed to solve the problem and make sure that &amp;quot;something&amp;quot;
 works as expected. Very often, such a patch fixes one thing
-and breaks many others. I believe that sometimes it&amp;#39;s necessary to &lt;strong&gt;reject&lt;/strong&gt;
+and breaks many others. I believe that sometimes it&amp;#39;s necessary to &lt;em&gt;reject&lt;/em&gt;
 a bug fix and ask its author to re-do the patch in order to
 protect the project from bigger problems. There are a few
 valid reasons for such a rejection, according to my experience.&lt;/p&gt;
