@@ -22,27 +22,10 @@ I'm Yegor Bugayenko (Russian:
 <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Буга&#x435;&#x301;нко</span>),
 a programmer, founder, investor, and philanthropist.
 
-As a **programmer**, I [write](https://github.com/yegor256)
-mostly in Java, but also in Ruby, PHP, and JavaScript.
-I'm the founder and lead architect of
-[Cactoos](http://www.cactoos.org),
-[Takes](http://www.takes.org), and [Rultor](http://www.rultor.com).
-Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
-about software engineering, and a detailed description of
-[my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
-I'm an Oracle Certified Master and Java EE 6 Enterprise Architect
-([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).
-Besides that, I'm a proud holder of
-[ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
-[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
-[OCUP](http://www.omg.org/uml-certification/) certifications.
-I've also written a book series about object-oriented programming,
-called [Elegant Objects](/elegant-objects.html), plus
-[a few other books](/books.html).
-
 As a **founder** and CEO of [Zerocracy](http://www.zerocracy.com/),
 a software engineering and management platform with an absolutely unique
-methodology called [XDSD](http://www.xdsd.org),
+methodology called [XDSD](http://www.xdsd.org) (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
+Most of the ideas behind the methodology I explained in my book [Code Ahead](/code-ahead.html).
 I'm the author of a few patent applications, including
 [Puzzle-Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)
 and
@@ -56,12 +39,35 @@ Besides that, I'm a proud holder of
 and
 [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
+As a **programmer**, I [write](https://github.com/yegor256)
+mostly in Java, but also in Ruby, PHP, and JavaScript (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
+I'm the founder and lead architect of
+[Zold](https://www.zold.io),
+[Cactoos](http://www.cactoos.org),
+[Takes](http://www.takes.org), and [Rultor](http://www.rultor.com).
+Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
+about software engineering, and a detailed description of
+[my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
+I'm an Oracle Certified Master and Java EE 6 Enterprise Architect
+([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).
+Besides that, I'm a proud holder of
+[ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
+[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
+[OCUP](http://www.omg.org/uml-certification/) certifications.
+I've also written a book series about object-oriented programming,
+called [Elegant Objects](/elegant-objects.html), plus
+[a few other books](/books.html),
+and founded [a movement for better OOP](https://elegantobjects.org).
+
 As an **investor** at [SeedRamp.com](http://www.seedramp.com), I've
 made a few investments, but I've got no results yet :)
 
 As a **philanthropist**, I donate a few thousand dollars every year (started in 2015)
 to the best open source project at the time, which I pick myself out of about a hundred in
 a more or less fair [competition](/award.html).
+
+Here is [my resume](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887)
+and its longer and [boring version](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432).
 
 Once a month, I send a summary email of my writing activity. If
 you're interested in knowing what's going on here, I can add you to my
