@@ -15,8 +15,9 @@ keywords:
   - github team work
 ---
 
-This manual explains the workflow used when working with a [XDSD](http://www.xdsd.org) project hosted
-on [GitHub.com](http://www.github.com). You start when a GitHub issue is
+This manual explains the workflow used when working with a [XDSD](http://www.xdsd.org)
+project hosted
+on [GitHub](http://www.github.com). You start when a GitHub issue is
 assigned to you. Next, you will receive a message from a
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 containing the issue number, title, description and its budget in hours (usually
@@ -55,7 +56,7 @@ Once you have a forked our repository to your account, clone it to your
 computer, and then check out the `master` branch. For example:
 
 {% highlight bash %}
-git clone git@github.com:yegor256/jcabi.git
+git clone git@github.com:yegor256/xembly.git
 git checkout master
 {% endhighlight %}
 
@@ -72,16 +73,18 @@ with.
 ## 3. Changes
 
 All task-related questions should be discussed in the GitHub issue. For GitHub
-issues, we don't use emails, Skype, phone calls or meetings. All questions
+issues, we [don't use]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
+emails, Skype, phone calls or meetings. All questions
 should be asked directly in the GitHub issues.
 
 Don't hesitate to submit new issues if something is not clear or you need help.
 It's a very common to receive a task that you may not be able to implement.
-Don't panic. This usually happens when you first just join a project and don't
+[Don't panic]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}).
+This usually happens when you first just join a project and don't
 yet have enough information. If this happens, don't try to figure out a problem
 or issue by yourself.
 
-The rule of thumb for this type of situation is: "if something is not clear, it
+The rule of thumb for this type of situation is: "If something is not clear, it
 is our fault, not yours." Therefore, if you don’t understand the project design,
 it is the fault of the project designer.
 
@@ -92,7 +95,8 @@ shared between all other developers.
 
 Read this article: [Bugs Are Welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
 
-Don't expect anyone to help you. Your only source of help is the source code
+[Don't expect]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
+anyone to help you. Your only source of help is the source code
 itself. If the code doesn't explain everything  you need to know&mdash;it is a
 bug, which must be reported.
 
@@ -152,4 +156,4 @@ Remember, until your branch is merged, you are not paid.
 
 Once your changes are merged, return to the GitHub issue and ask the author to
 close it. Once the issue is closed by a project manager, you will receive your
-payment within a few hours, through oDesk or PayPal.
+payment within a few hours.
