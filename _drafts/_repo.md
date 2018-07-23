@@ -23,20 +23,15 @@ The question is whether we should create a new repository for each
 new module or try to keep as much as possible in a single so called "monothilic" repo.
 Market makers, like [Facebook](https://code.fb.com/core-data/scaling-mercurial-at-facebook/)
 and [Google](https://www.infoq.com/presentations/Development-at-Google),
-advocate the second approach. I believe, it is a mistake.
+advocate the second approach. I believe, they are wrong.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-There are many arguments in favor of a single monolithic repo.
-I want to try to apply them all to a piece of code, and see whether
-they will make sense. It seems that the logic behind pro-monolithic
-thinking is very similar when we deal with repositories and,
-say, a JavaScript function.
-
-Let's use the following function, as an example.
-It downloads a JSON document (using [jQuery](https://jquery.com/))
+Let's use the following JavaScript function, as an example.
+It downloads a JSON document from a [Zold](http://www.zold.io)
+node (using [jQuery](https://jquery.com/))
 and places part of its content to the HTML page.
 Then, it colors the data, according to its value.
 
@@ -44,12 +39,13 @@ Then, it colors the data, according to its value.
 // main.js
 function main() {
   $.getJSON('http://b1.zold.io/', function(json) {
-    $('body').text(json.nscore);
+    var $body = $('body');
+    $body.text(json.nscore);
+    var color = 'red';
     if (json.nscore > 500) {
-      $('body').css('color', 'green');
-    } else {
-      $('body').css('color', 'red');
+      color = 'green';
     }
+    $body.css('color', color);
   });
 }
 {% endhighlight %}
@@ -75,12 +71,18 @@ plugin will look:
 {% highlight javascript %}
 // colorize.js
 $.fn.colorize = function() {
-  this.css('color', 'inherit');
-  for (var max in colors) {
-    if ($element.text() > max) {
-      this.css('color', colors[max]);
-      break;
+  var data = parseFloat(this.text());
+  var keys = Object.keys(colors)
+    .map(function (k) { return parseInt(k); })
+    .sort(function (a,b) { return a - b; })
+    .reverse();
+  for (i = 0; i < keys.length; ++i) {
+    var max = keys[i];
+    if (data >= max) {
+      this.addClass(colors[max]);
+      return;
     }
+    this.removeClass(colors[max]);
   }
   return this;
 }
@@ -122,7 +124,22 @@ think so. Here are the most popular arguments in favor of a single file:
   * Testing is easier, since the entire code is right here;
   *
 
-This is all true. However, just l
+Indeed, it's much easier to work with a single file and a single repo. I've spent
+almost two hours to create that jQuery plugin. Here is what I had to do:
+
+  * Read the [instructions](https://learn.jquery.com/plugins/basic-plugin-creation/);
+  * Created a new GitHub repo;
+  * Did some research of jQuery plugins, saw their examples;
+  * Found out that most of them use Gulp, which I've never heard of;
+  * Created `package.json` and `bower.json`;
+  * Renamed GitHub repo to `colorizejs` when I found out that npm package
+    [`colorize`](https://www.npmjs.com/package/colorize) already exists;
+  * [Configured](https://travis-ci.org/yegor256/colorizejs) Travis with `.travis.yml`;
+  * Created README.md and explained how to use it and install;
+  * Decided to use MIT license and created LICENSE.txt;
+
+
+In order to create that plugin I had to d
 
 **Faster Deployment**.
 
