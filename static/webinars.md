@@ -39,7 +39,15 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-<!-- {% webinar 04-07-2018 35 -drZbHxydMc When do you validate your objects? %} -->
+
+{% webinar 01-08-2018 36 FNWyN_Q10TI What's wrong with global variables? %}
+
+<a href="https://www.youtube.com/watch?v=FNWyN_Q10TI"><img src="https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg" class="wnr" alt="Webinar no.36 by Yegor Bugayenko"/></a>
+August 1, 2018<br/>
+&#35;36: **What's wrong with global variables?**<br/>
+We all know that global variables are evil, but most of us keep using them.
+Here we discuss what exactly is wrong with them. The discussion is based on this blog post:
+[What's Wrong With Global Variables?]({% pst 2018/jul/2018-07-03-global-variables %})
 
 <a href="https://www.youtube.com/watch?v=-drZbHxydMc"><img src="https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg" class="wnr" alt="Webinar no.35 by Yegor Bugayenko"/></a>
 July 4, 2018<br/>
