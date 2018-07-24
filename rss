@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-07-23T12:03:38+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven&amp;#39;t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-07-24T06:25:39+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Either Bugs or Pull Requests</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
+my projects managed by Zerocracy. He claims to be an expert with 10 years
+of hands-on coding experience, $60 hourly rate (we don&amp;#39;t hire US guys),
+and fluent English. Then he joins the project and attempts
+to close a few tickets. But he hardly can. For many reasons. Then he comes back
+and explains why &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;our microtasking methodology&lt;/a&gt;
+doesn&amp;#39;t work, trying to convince me
+that I have to pay him &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;per hour&lt;/a&gt;,
+instead of per result. Here is my answer.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Jamón, Jamón (1992) by Bigas Luna&#39; src=&#39;/images/2018/07/jamon-jamon.jpg&#39; longdesc=&#39;#97156df6&#39;/&gt;&lt;figcaption id=&#39;97156df6&#39;&gt;Jamón, Jamón (1992) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;No matter how bad the methodology is, you do know that &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;we pay&lt;/a&gt;
+for each bug that is found and properly reported, right?
+Check &lt;a href=&quot;http://www.zerocracy.com/policy.html#29&quot;&gt;§29&lt;/a&gt; of our Policy.&lt;/p&gt;
+
+&lt;p&gt;If the Code Base Is Bad, Why Don&amp;#39;t You Report Bugs?&lt;/p&gt;
+
+&lt;p&gt;If the Code Base Is Good, Where Are Your Pull Requests?&lt;/p&gt;
+
+&lt;p&gt;There is only one metric on our projects, which separates good programmers
+from bad ones: the amount of money they are making.
+You can make money contributing to the project either by
+1) reporting bugs (when you see problems)
+or 2) submitting pull requests (when you don&amp;#39;t see problems).&lt;/p&gt;
+
+&lt;p&gt;If none of that works for you, you are a bad programmer.&lt;/p&gt;
+
+&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of
+my projects managed by Zerocracy. He claims to be an expert with 10 years
+of hands-on coding experience, $60 hourly rate (we don&amp;#39;t hire US guys),
+and fluent English. Then he joins the project and attempts
+to close a few tickets. But he hardly can. For many reasons. Then he comes back
+and explains why our microtasking methodology
+doesn&amp;#39;t work, trying to convince me
+that I have to pay him per hour,
+instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven&amp;#39;t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
 are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=953355&quot;&gt;claimed&lt;/a&gt; that
 &amp;quot;the non-local variable is a major contributing factor in programs
 which are difficult to understand.&amp;quot; Since then, &lt;a href=&quot;http://wiki.c2.com/?GlobalVariablesAreBad&quot;&gt;many other reasons&lt;/a&gt;
@@ -1321,79 +1359,4 @@ that it is &amp;quot;learning by refactoring.&amp;quot; Then I tried to Google i
 and found nothing.
 I was surprised. To me refactoring seems to be the most effective and
 obvious way to study the source code. Here is how I usually do it,
-in nine object-oriented steps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/dom-hemingway.jpg" /></entry><entry><title type="html">Fully Transparent Donations via Zerocracy</title><link href="https://www.yegor256.com/2018/04/03/donations-via-zerocracy.html" rel="alternate" type="text/html" title="Fully Transparent Donations via Zerocracy" /><published>2018-04-03T00:00:00+00:00</published><updated>2018-04-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/04/03/donations-via-zerocracy</id><content type="html" xml:base="https://www.yegor256.com/2018/04/03/donations-via-zerocracy.html">&lt;p&gt;Open source is free, as in beer: you write code, nobody pays you. Of course,
-there are &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;many ways&lt;/a&gt;
-to monetize your efforts, but there will be no
-direct cash payments from your users, usually. There are &lt;a href=&quot;https://hackernoon.com/why-funding-open-source-is-hard-652b7055569d&quot;&gt;ways&lt;/a&gt;
-to collect money, which include an obvious &amp;quot;tip jar&amp;quot; button on your GitHub project page.
-The chances anyone will pay
-&lt;a href=&quot;https://news.ycombinator.com/item?id=14446516&quot;&gt;are low&lt;/a&gt; though. In my opinion,
-this is mostly because nobody trusts you enough&amp;mdash;they are not sure you will
-use the money to make the product better. Most likely you will just spend it
-and nothing will change. But they want the product, not to make you happier.
-At least that&amp;#39;s what I feel when I see a &lt;a href=&quot;https://patreon.com/&quot;&gt;Patreon&lt;/a&gt; button.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Last Tango in Paris (1972) by Bernardo Bertolucci&#39; src=&#39;/images/2018/04/last-tango-in-paris.jpg&#39; longdesc=&#39;#1ea97881&#39;/&gt;&lt;figcaption id=&#39;1ea97881&#39;&gt;Last Tango in Paris (1972) by Bernardo Bertolucci&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; is a platform that manages programmers remotely.
-Moreover, it&amp;#39;s absolutely &lt;a href=&quot;http://www.zerocracy.com/policy.html#23&quot;&gt;free&lt;/a&gt; for open source projects. Take a
-look at &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; or &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt;&amp;mdash;they
-are both managed by
-&lt;a href=&quot;/2018/03/21/zerocracy-announcement.html&quot;&gt;Zerocrat&lt;/a&gt;. These projects
-are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
-&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;pays&lt;/a&gt;
-programmers when they close their &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;microtasks&lt;/a&gt; in GitHub.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.zerocracy.com&#39;&gt;&lt;img src=&#39;http://www.0crat.com/svg/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;A few days ago someone approached me by email and literally said: &amp;quot;There
-is a bug in your project, I&amp;#39;m happy to pay you for your time if you can come
-up with a solution.&amp;quot; He was ready to donate and wanted me (or us) to solve
-his specific issue. I could just take his money over PayPal and fix the issue,
-but I&amp;#39;m not really an active maintainer of the project he was interested in,
-and I&amp;#39;m busy at the moment.&lt;/p&gt;
-
-&lt;p&gt;I realized that the best way would be to take the money,
-break down the problem into pieces, and delegate them to a few programmers,
-just like it usually works in Zerocracy. In other words, I decided to suggest
-he fund the project and then let us use the funds for
-&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;microtasking&lt;/a&gt;,
-keeping the focus on the issue he was interested in.&lt;/p&gt;
-
-&lt;p&gt;Moreover, this concept was
-&lt;a href=&quot;https://github.com/zerocracy/datum/issues/212&quot;&gt;earlier proposed&lt;/a&gt;
-by &lt;a href=&quot;https://github.com/skapral&quot;&gt;&lt;code&gt;@skapral&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;He gladly accepted the offer.
-We &lt;a href=&quot;https://github.com/zerocracy/farm/issues/866&quot;&gt;implemented&lt;/a&gt; the functionality in
-&lt;a href=&quot;https://www.0crat.com&quot;&gt;Zerocrat&lt;/a&gt; and he contributed $128 via Stripe.&lt;/p&gt;
-
-&lt;p&gt;Now &lt;a href=&quot;http://www.zerocracy.com/policy.html#50&quot;&gt;anyone&lt;/a&gt;
-can give a few dollars to a project, if it&amp;#39;s
-managed by Zerocracy. The contributor will see how those funds are being spent, down to each and every dollar!
-Try, for example, one of these buttons and you will see detailed
-financial reports of each project and will be able to add your funds:&lt;/p&gt;
-
-&lt;p&gt;Cactoos.org:&lt;br/&gt;
-&lt;a href=&quot;https://www.0crat.com/contrib/C63314D6Z&quot;&gt;&lt;img src=&quot;https://www.0crat.com/contrib-badge/C63314D6Z.svg&quot; alt=&quot;Donate via Zerocracy&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Takes.org:&lt;br/&gt;
-&lt;a href=&quot;https://www.0crat.com/contrib/C3FFK3YAY&quot;&gt;&lt;img src=&quot;https://www.0crat.com/contrib-badge/C3FFK3YAY.svg&quot; alt=&quot;Donate via Zerocracy&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The advantage of this approach, compared to, for example,
-&lt;a href=&quot;https://www.bountysource.com/&quot;&gt;BountySource&lt;/a&gt;, is that the money will
-be distributed in micro-payments and will be fully traceable. I believe
-that this makes a difference for donators&amp;mdash;they are interested to see
-how their money is being used.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><summary type="html">Open source is free, as in beer: you write code, nobody pays you. Of course,
-there are many ways
-to monetize your efforts, but there will be no
-direct cash payments from your users, usually. There are ways
-to collect money, which include an obvious &amp;quot;tip jar&amp;quot; button on your GitHub project page.
-The chances anyone will pay
-are low though. In my opinion,
-this is mostly because nobody trusts you enough&amp;mdash;they are not sure you will
-use the money to make the product better. Most likely you will just spend it
-and nothing will change. But they want the product, not to make you happier.
-At least that&amp;#39;s what I feel when I see a Patreon button.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/last-tango-in-paris.jpg" /></entry></feed>
+in nine object-oriented steps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/dom-hemingway.jpg" /></entry></feed>
