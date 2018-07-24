@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Either Bugs or Pull Requests"
-date: 2018-07-20
+date: 2018-07-24
 place: Moscow, Russia
 tags: zerocracy management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - zerocracy
   - microtasking
   - bug tracking
-image: /images/2018/07/
+image: /images/2018/07/jamon-jamon.jpg
 jb_picture:
-  caption:
+  caption: Jamón, Jamón (1992) by Bigas Luna
 ---
 
 Here is how it goes, over and over again. I find a new developer for one of
