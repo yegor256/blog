@@ -35,7 +35,7 @@ ancient slaves in our offices and in front of our monitors?
 {% jb_picture_body %}
 
 This post is partially provoked by a recently published semi-historical book
-[**How to Manage Your Slaves**](http://amzn.to/2crHiNG)
+[_How to Manage Your Slaves_](http://amzn.to/2crHiNG)
 by Jerry Toner. However, there's more. The entire eXtremely Distributed
 Software Development ([XDSD](http://www.xdsd.org)) methodology
 is based on a primary fundamental principle that states,
@@ -67,7 +67,7 @@ in exchange, he gives me food and safety.
 
 The problem here is not about
 [punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
-This model of work makes me **think like a slave**. I think this is a fair
+This model of work makes me _think like a slave_. I think this is a fair
 exchange&mdash;I give away my freedom (my time), and I get back food and
 safety. I'm a slave not because the master is punishing me and I'm sitting
 all day long in fetters. Absolutely not. A slave is not the one who was
@@ -81,7 +81,7 @@ What is freedom, then? How should a free man make money?
 
 {% quote A free man sells results, not time %}
 
-A free man sells the **results of his work**. A free man cleans someone's house
+A free man sells the _results of his work_. A free man cleans someone's house
 and bills him when the work is done. A free man drives passengers
 from the airport to their home and bills them when they get there.
 A free man creates a software module and bills the client when it's ready.
