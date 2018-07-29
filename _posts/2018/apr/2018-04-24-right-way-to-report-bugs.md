@@ -98,3 +98,6 @@ won't reject a bigger one with three minor parts.
 I believe that if you follow these simple recommendations,
 you will be a more successful bug reporter. At least at
 [Zerocracy](http://www.zerocracy.com).
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you feel when you report a bug? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a> <a href="https://twitter.com/hashtag/bugs?src=hash&amp;ref_src=twsrc%5Etfw">#bugs</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1023455022997233664?ref_src=twsrc%5Etfw">July 29, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
