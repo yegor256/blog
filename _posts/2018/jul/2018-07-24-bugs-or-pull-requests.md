@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Either Bugs or Pull Requests"
+title: "Either Bugs or Pull Requests ... or You Are Out"
 date: 2018-07-24
 place: Moscow, Russia
 tags: zerocracy management
