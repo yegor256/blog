@@ -21,7 +21,7 @@ jb_picture:
 
 Here is how it goes, over and over again. I find a new developer for one of
 my projects managed by Zerocracy. He claims to be an expert with 10 years
-of hands-on coding experience, $60 hourly rate (we don't hire US guys),
+of hands-on coding experience, $60 hourly rate (we [don't hire]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}) US guys),
 and fluent English. Then he joins the project and attempts
 to close a few tickets. But he hardly can. For many reasons. Then he comes back
 and explains why [our microtasking methodology]({% pst 2017/nov/2017-11-28-microtasking %})
