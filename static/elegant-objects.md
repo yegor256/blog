@@ -64,6 +64,10 @@ Volume 2:<br/>
 
 <!--more-->
 
+July 20, 2018:
+Русское издание [вышло](https://www.piter.com/collection/all/product/elegantnye-obekty-java-edition)
+в издательстве Питер. Вот анонс на [Habr](https://habr.com/company/piter/blog/418157/).
+
 April 5, 2018:
 I posted it to [ProductHunt](https://www.producthunt.com/posts/elegant-objects).
 
