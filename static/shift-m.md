@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/lisa-sieverts.png" class="guest-face" alt="Lisa Sieverts photo"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;31: [Waterfall, Agile and self-awareness with Lisa Sieverts](/shift-m/2018/31.html)<br/>
+30 July 2018; 56 min.
+
 <img src="/images/shift-m/erik-van-hurck.png" class="guest-face" alt="Erik van Hurck photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;30: [Change management with Erik van Hurck](/shift-m/2018/30.html)<br/>
