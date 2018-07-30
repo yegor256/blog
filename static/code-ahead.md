@@ -7,6 +7,7 @@ description: |
   future-oriented.
 permalink: code-ahead.html
 image: /images/books/code-ahead/cover.png
+nospell: true
 keywords:
   - book about software development
   - book about programming

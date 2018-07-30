@@ -7,6 +7,7 @@ description: |
   point of view.
 permalink: elegant-objects.html
 image: /images/books/elegant-objects/cover.png
+nospell: true
 keywords:
   - book about object-oriented programming
   - book about oop
