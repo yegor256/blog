@@ -74,9 +74,9 @@ Published: 18 Apr 2017.
 
 <div class="book-par"></div>
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
-[Code Ahead](/code-ahead.html) will be a novel about software engineering. I will
+[Code Ahead](/code-ahead.html) is a novel about software engineering. In this book I
 propose a number of best practices for organizing software development
-process. What will be interesting is that it will be fiction book, with
+process. What is interesting is that it is a semi-biographical fiction book, with
 characters, plot, jokes, dialogs, etc.
 <br/>
 Published: 6 July 2018.
