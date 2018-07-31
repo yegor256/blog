@@ -44,7 +44,9 @@ mostly in Java, but also in Ruby, PHP, and JavaScript (watch [this](https://www.
 I'm the founder and lead architect of
 [Zold](https://www.zold.io),
 [Cactoos](http://www.cactoos.org),
-[Takes](http://www.takes.org), and [Rultor](http://www.rultor.com).
+[Takes](http://www.takes.org),
+[Rultor](http://www.rultor.com),
+and [a few others](/pets.html).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering, and a detailed description of
 [my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
@@ -99,8 +101,9 @@ I'm also visible sometimes at
 [JavaCodeGeeks](https://www.javacodegeeks.com/user/yegor-bugayenko/?profiletab=posts),
 [Hacker News](https://news.ycombinator.com/user?id=yegor256a),
 [Reddit](https://www.reddit.com/user/yegor256),
+[Medium](https://medium.com/@yegor256),
 and
-[Medium](https://medium.com/@yegor256).
+[Blog@Zold](https://blog.zold.io).
 
 Ah, one more thing. I'm a big fan of good movies, so here's
 [my list]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}) of the ones
