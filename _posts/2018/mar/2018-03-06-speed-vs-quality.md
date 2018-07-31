@@ -17,6 +17,12 @@ keywords:
 image: /images/2018/03/house-of-flying-daggers.jpg
 jb_picture:
   caption: Shi mian mai fu (2004) by Yimou Zhang
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "Blame-Free Quality Control"
+    date: 2018-07-30
+    url: https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext
 ---
 
 <!-- http://www.yegor256.com/2017/11/28/microtasking.html#comment-3783321466 -->
