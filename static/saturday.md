@@ -23,7 +23,7 @@ around my living place. This page contains the up-to-date information about
 the place. Just check it and find me there. We will have a chat
 and a <del>cup of tea/coffee</del> breakfast.
 
-Next meeting on: 28-July-2018.
+Next meeting on: 4-August-2018.
 
 10am-1pm<br/>
 Odessa-Mama<br/>
