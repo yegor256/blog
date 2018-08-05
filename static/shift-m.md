@@ -51,6 +51,13 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<!--
+<img src="/images/shift-m/andy-jordan.png" class="guest-face" alt="Andy Jordan photo"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;32: [How to deal with project failures with Andy Jordan](/shift-m/2018/32.html)<br/>
+1 August 2018; 51 min.
+-->
+
 <img src="/images/shift-m/lisa-sieverts.png" class="guest-face" alt="Lisa Sieverts photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;31: [Waterfall, Agile and self-awareness with Lisa Sieverts](/shift-m/2018/31.html)<br/>
