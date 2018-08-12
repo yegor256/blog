@@ -98,6 +98,8 @@ It only causes trouble for the behavior.
 Even though the difference may look subtle, it's obvious. There are
 two phases of interaction with the encapsulated object: _connecting_ and _talking_.
 
+{% youtube -drZbHxydMc %}
+
 First, we encapsulate the `file` and want to be sure that it really is
 a file. We are not yet talking to it, we don't want it to work for us yet,
 we just want to make sure it really _is_ an object that we will be able to talk

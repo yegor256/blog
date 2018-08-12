@@ -40,7 +40,7 @@ informed about everything I do publicly, including these webinars.
 ## 2018
 
 
-{% webinar 08-08-2018 36 FNWyN_Q10TI What's wrong with global variables? %}
+<!-- {% webinar 08-08-2018 36 FNWyN_Q10TI What's wrong with global variables? %} -->
 
 <a href="https://www.youtube.com/watch?v=FNWyN_Q10TI"><img src="https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg" class="wnr" alt="Webinar no.36 by Yegor Bugayenko"/></a>
 August 8, 2018<br/>

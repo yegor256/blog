@@ -64,6 +64,8 @@ it is necessary to test how a number of servers communicate to each other.
 I can't do that! There is absolutely no way.
 Because Sinatra is designed with the assumption that only one server may exist in the entire application scope.
 
+{% youtube FNWyN_Q10TI %}
+
 Can this really be fixed? Let's take a look at [their code](https://github.com/sinatra/sinatra/).
 Class `Sinatra::Base` is essentially a [Singleton]({% pst 2016/jun/2016-06-27-singletons-must-die %}),
 which is not supposed to have more than one instance.
