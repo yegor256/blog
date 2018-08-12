@@ -106,3 +106,6 @@ why we don't have them at all in [EO](http://www.eolang.org).
 
 By the way, _public_ static methods are a different story. They are also evil,
 but for [different reasons]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
+
+P.S. Now I think that the reasons in this article are applicable to _all_ private
+methods, not only static ones.
