@@ -244,3 +244,6 @@ solution?
 
 P.S. I learned all this from [Java Concurrency in Practice](http://amzn.to/2c7sVS1)
 by Goetz et al.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you create unit tests to prove that your classes are thread-safe?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1028678871187640329?ref_src=twsrc%5Etfw">August 12, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
