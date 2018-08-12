@@ -113,7 +113,7 @@ Interfaces must be small.
 
 Obviously, method overloading in interfaces is a code smell. An interface
 with more than **three methods** is a good candidate for refactoring. If methods
-overload each other&mdash;it's serious trouble.
+overload each other---it's serious trouble.
 
 Interfaces must be small!
 

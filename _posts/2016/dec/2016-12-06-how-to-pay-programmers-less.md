@@ -76,7 +76,7 @@ The office must be their second home. Well, preferably the first one. They
 must go there every day, have a desk there, a computer, a chair, and a stapler.
 They will be emotionally attached to the place and it will be very difficult
 to leave, no matter how underpaid they will be. Never allow them to work
-[remotely]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})&mdash;they
+[remotely]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})---they
 may start thinking about a new home with a bigger salary.
 
 **Spy on them**.
@@ -107,11 +107,11 @@ For quite a long time, this trick will work.
 
 **Build a family**.
 Corporate parties, Friday beer, team building events, bowling, birthdays,
-lunches and team nights&mdash;use these
+lunches and team nights---use these
 [tools]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
 to create a feeling that your company is their family. Money is not really what good people talk
 about in a family, right? Asking for a raise will sound like a betrayal
-of family values&mdash;they will be afraid to do that.
+of family values---they will be afraid to do that.
 
 **Stress them**.
 They must not feel relaxed, it's not in your favor. Make sure they
@@ -126,7 +126,7 @@ raise their salaries soon, or by the time you
 raise investments, or by the time a big contract is signed, or when
 "the time is right." It is important
 to always make your promises dependable on events that are out of your
-control&mdash;your hands must always be clean.
+control---your hands must always be clean.
 
 {% quote Instead of giving someone a raise, it's always better to buy a new PlayStation for the office. %}
 
@@ -137,7 +137,7 @@ A fancy and professional coffee machine will cost you $1,000 and make
 it possible to save $200 to $300 on each programmer monthly. Do the math.
 Make yourself a rule that instead of giving someone a raise, it's always
 better to buy a new PlayStation for the office. Also, let them bring
-their <del>spouses</del> pets to the office&mdash;they will <del>work</del> stay
+their <del>spouses</del> pets to the office---they will <del>work</del> stay
 longer for less money.
 
 **Give them sound titles**.
@@ -161,10 +161,10 @@ It works.
 
 **Be a friend**.
 This is the last and most powerful technique. You have to be a friend
-to your programmers. It's very difficult to negotiate money with a friend&mdash;they
+to your programmers. It's very difficult to negotiate money with a friend---they
 won't be able to do it easily. They will keep working for you for less money
 just because you're good friends. How do you become friends? Well, meet their
 families, invite them over for dinner at your house, give them birthday
-gifts&mdash;all those tricks. They will save you a lot of money.
+gifts---all those tricks. They will save you a lot of money.
 
 Did I forget anything?

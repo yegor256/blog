@@ -21,7 +21,7 @@ jb_picture:
 
 Software outsourcing is a disaster waiting to happen; we all know that. First, you find
 a company that promises you everything you could wish for in
-a product&mdash;on-time and in-budget delivery, highest quality, beautiful user interface,
+a product---on-time and in-budget delivery, highest quality, beautiful user interface,
 cutting-edge technologies, and hassle-free lifetime support. So you send the
 first payment and your journey starts. The team hardly understands your needs,
 the quality is terrible, all your time and budget expectations
@@ -82,27 +82,27 @@ You want your business to succeed and flourish, right? They want the same for th
 business. Your success means a product that is finished and launched to
 end users. Their success means a never-ending process of writing software
 for you. These two goals have very little in common. I would even say
-they contradict each other&mdash;when you _succeed_, they _fail_.
+they contradict each other---when you _succeed_, they _fail_.
 
 Of course, they will tell you they want to finish this product for
 you and get new contracts in the future. They will say their primary
 motivation is to make you happy and obtain a good reference. They
 will assure you that customer satisfaction is more important than money.
-However, I'm suggesting you be strong enough to face the reality&mdash;it's all _lies_.
+However, I'm suggesting you be strong enough to face the reality---it's all _lies_.
 
 The majority of software outsourcing projects fail.
 The vast majority (see the latest [CHAOS report](http://www.csus.edu/indiv/v/velianitis/161/ChaosReport.pdf)).
 Software developers realize this better than you,
 mostly because they see how it happens every day.
 And your project is not an exception. Thus, let's forget about these
-beautiful promises and focus on the ugly reality&mdash;you're on your own.
+beautiful promises and focus on the ugly reality---you're on your own.
 
 Keeping in mind the principle I mentioned above, here is my recommendation:
 Make sure the team understands 1) your real time,
 [cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}),
 and scope constraints,
 and 2) the consequences of their violation. This is about the first
-part of the principle&mdash;_you should openly and frequently communicate
+part of the principle---_you should openly and frequently communicate
 your concerns_. What usually happens is that the outsourcing team remains
 unaware of a real business situation and only hears "I need this ASAP" every
 second day.
@@ -146,13 +146,13 @@ Stop asking them to finish everything ASAP. Stop calling them twice a day
 and yelling for an hour about their poor performance. Stop using language
 in business emails. Stop making all this noise. It doesn't help you anyway.
 Moreover, it only makes the situation worse, because you're losing _respect_
-and they're starting to treat you like a cash cow&mdash;a rather stupid
+and they're starting to treat you like a cash cow---a rather stupid
 and emotional one.
 
 Instead, do your homework and define your _realistic_ milestones. Think
 about your real time, scope, and budget limitations. Write them down in
 very short and concise sentences. Make sure your constraints are realistic
-and their descriptions answer the main question&mdash;_why_.
+and their descriptions answer the main question---_why_.
 
 Why do you need this by the first of June? Why do you want to spend less than
 $50,000? Why do you need all five features to be in version 1.0? Why
@@ -200,7 +200,7 @@ healthier approach than feedback-free peace that ends in war. Find a way
 to keep your outsourcing team aware of your opinion about its results
 on a regular basis. Don't try to be nice to save a project. You're doing
 yourself a bad favor. Instead, be open about your concerns. Remember
-the first part of the principle above&mdash;you should openly and frequently
+the first part of the principle above---you should openly and frequently
 communicate your concerns. This is how you stabilize the project and minimize
 risks.
 
@@ -230,10 +230,10 @@ you the _truth_, which is usually the same thing. Some call this
 The team is afraid of you, and in order to
 keep you on board as a paying customer, has to lie to you.
 
-Basically, they are telling you what you want to hear&mdash;that the end of the project is close, that currently open bugs are
+Basically, they are telling you what you want to hear---that the end of the project is close, that currently open bugs are
 easy to fix, that performance problems are minor, that the quality
 of the architecture is outstanding, and that the team is very motivated to work with you.
-When you hear any of the above, question yourself&mdash;Do you
+When you hear any of the above, question yourself---Do you
 encourage them to tell the truth? Do you _reward_ them for bringing you
 _bad_ but honest news?
 

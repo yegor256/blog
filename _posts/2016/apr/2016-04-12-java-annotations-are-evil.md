@@ -39,13 +39,13 @@ annotations are a big mistake in Java design.
 
 {% youtube g1ctRcW214w %}
 
-Long story short, there is one big problem with annotations&mdash;they encourage us to implement
+Long story short, there is one big problem with annotations---they encourage us to implement
 [object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 functionality **outside** of an object,
 which is against the very principle of
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
 The object is not solid any more, since its behavior is not defined entirely by its own
-methods&mdash;some of its functionality stays elsewhere. Why is it bad? Let's
+methods---some of its functionality stays elsewhere. Why is it bad? Let's
 see in a few examples.
 
 ## `@Inject`
@@ -205,7 +205,7 @@ String xml = new XmlBook(
 The XML printing functionality is inside `XmlBook`. If you don't like the
 decorator idea, you can move the `toXML()` method to the `DefaultBook` class. It's
 not important. What is important is that the functionality always stays
-where it belongs&mdash;inside the object. Only the object knows how
+where it belongs---inside the object. Only the object knows how
 to
 [print itself]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
 to the XML. Nobody else!
@@ -261,7 +261,7 @@ version of class `Foo`.
 
 {% youtube WSgP85kr6eU %}
 
-That is exactly what is wrong with this approach&mdash;we don't see
+That is exactly what is wrong with this approach---we don't see
 and don't control the instantiation of that supplementary object. Object
 composition, which is the most important process in object design, is
 hidden somewhere behind the scenes. You may say that we don't need
@@ -327,7 +327,7 @@ instead? Object [composition]({% pst 2015/feb/2015-02-26-composable-decorators %
 What could be worse than annotations? [Configurations]({% pst 2016/apr/2016-04-19-object-must-not-be-configurable %}).
 For example, XML configurations. Spring XML configuration mechanisms is a perfect
 example of terrible design. I've said it many times before. Let
-me repeat it again&mdash;Spring Framework is one of the worst
+me repeat it again---Spring Framework is one of the worst
 software products in the Java world. If you can stay away from it, you will
 do yourself a big favor.
 

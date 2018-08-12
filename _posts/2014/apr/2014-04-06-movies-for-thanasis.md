@@ -19,7 +19,7 @@ Sometime ago, I recommended a list of movies to a friend of
 mine after he told me was losing all interest in  "Hollywood."
 
 Level C titles are supposed to be impossible to understand
-unless you've seen (and understood) their prequels&mdash;listed
+unless you've seen (and understood) their prequels---listed
 in sections A and B. So, start browsing the lists in sections A
 and post your comments if you have any. :)
 

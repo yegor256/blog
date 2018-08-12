@@ -51,7 +51,7 @@ we enjoy it, each business looks at it completely differently.
 
 The project needs us to _produce_ classes, lines of code, methods, functions,
 files, and features. Then, the project can convert them into happy customers,
-which will give us something back&mdash;usually cash. Finally, the project will
+which will give us something back---usually cash. Finally, the project will
 share that cash among us,
 [investors]({% pst 2015/dec/2015-12-16-investors-are-too-scared %}),
 and the government.
@@ -93,7 +93,7 @@ a school here. We're building a house!
 While working on a software project, a good project manager has a staffing management
 plan that describes how skills will be recruited, tested, applied, and
 discharged when necessary. Such a plan may include training, but it would be
-as small an amount as possible&mdash;mostly because a plumber trained by us
+as small an amount as possible---mostly because a plumber trained by us
 [costs]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) much
 more than one trained by someone else but does exactly the same, or worse, work.
 Thus, a smart project manager acquires project members who are already
@@ -116,7 +116,7 @@ should stop you, saying "This is not a school!"
 
 What is the solution?
 
-I believe that in the software business, there is only one workaround&mdash;blame the
+I believe that in the software business, there is only one workaround---blame the
 project for your own deficiencies in education, skills, or information.
 I'm being absolutely serious.
 Let's discuss a few practical situations.

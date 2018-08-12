@@ -155,8 +155,8 @@ void transform(File in, File out) {
 
 `FileLines` implements `Collection<String>` and encapsulates  all file reading
 and writing operations. An instance of `FileLines` behaves exactly as a
-collection of strings and hides all I/O operations. When we iterate it&mdash;a
-file is being read. When we `addAll()` to it&mdash;a file is being written.
+collection of strings and hides all I/O operations. When we iterate it---a
+file is being read. When we `addAll()` to it---a file is being written.
 
 `Trimmed` also implements `Collection<String>` and encapsulates a collection of
 strings ([Decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).

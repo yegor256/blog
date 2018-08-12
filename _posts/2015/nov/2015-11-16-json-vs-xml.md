@@ -7,7 +7,7 @@ tags: xml json
 description: |
   JSON vs. XML? This comparison makes no sense, because
   the former is a simple data format while the latter is
-  a language&mdash;a very powerful one.
+  a language---a very powerful one.
 keywords:
   - xml vs json
   - json or xml which is better

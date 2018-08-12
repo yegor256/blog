@@ -32,9 +32,9 @@ much more effort at the same time being much lighter than others
 of measuring the weight of the aircraft we should measure the effort put into it... somehow.
 So, here is the idea. How about we measure the amount of times programmers
 **touch** the lines. Instead of counting the number of lines we'll count
-how many times they were actually modified&mdash;we can get this information
+how many times they were actually modified---we can get this information
 from Git (or any other SCM). The more you touch that part
-of the aircraft&mdash;the more effort you spent on it, right?
+of the aircraft---the more effort you spent on it, right?
 
 <!--more-->
 
@@ -49,7 +49,7 @@ $ hoc
 {% endhighlight %}
 
 The number 54687 is a total number of Hits-of-Code in your code base. The
-principle behind this number is primitive&mdash;every time a line of code
+principle behind this number is primitive---every time a line of code
 is modified, created or deleted in a Git commit, the counter increments.
 
 The main reason why this metric is better than LoC is that
@@ -59,7 +59,7 @@ base. Here is why.
 ## It Always Increments
 
 The HoC metric always goes up. Today it can not be lower than it
-was yesterday&mdash;just like the effort, it always increments.
+was yesterday---just like the effort, it always increments.
 Lines-of-Code is not acting like this. You may have a huge code
 base today, but after refactoring it will become much smaller. The number
 of lines of code is decreased. Does it mean you are less effective?
@@ -90,9 +90,9 @@ For HoC it doesn't matter how big the absolute size of the code base,
 but only how big your relative contribution to it.
 
 Let's say, you have 300K lines of code and 95% of them were copy-pasted from some
-third-party libraries (by the way, it is a very common and terrible practice&mdash;to keep third-party code inside your own repository). The amount of lines
+third-party libraries (by the way, it is a very common and terrible practice---to keep third-party code inside your own repository). The amount of lines
 of code will be big, but the actual custom code part will be relatively small. Thus,
-the LoC metric will be misleading&mdash;it will always show 300K with
+the LoC metric will be misleading---it will always show 300K with
 small increments or decrements around it. Everybody will have a feeling that the
 team is working with 300K lines code base.
 
@@ -111,7 +111,7 @@ considered a false metric.
 Hits-of-Code takes complexity into account, because the longer you work
 with that sorting algorithm the more modifications you make to its
 lines. Well, this statement is true if you use Git regularly and commit
-your changes frequently&mdash;that is how you tell Git about your work progress.
+your changes frequently---that is how you tell Git about your work progress.
 
 ## Conclusion
 

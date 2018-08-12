@@ -39,11 +39,11 @@ There are a few basic principles I would like to share.
 
 We believe that the market is a much better interviewer than
 any one of us. "_Instead of demonstrating to us how great your
-code is, show it to the market and see what it says_"&mdash;that's what
+code is, show it to the market and see what it says_"---that's what
 we're saying to you, our candidate.
 
 How does the market validate that code?
-[Open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})&mdash;that's what is the most convincing to us.
+[Open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})---that's what is the most convincing to us.
 We ask you to show us which open source products you have and how
 popular they are.
 
@@ -68,7 +68,7 @@ Some programmers come to us with zero
 and no public work. Still, they claim they are
 [the best]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
 
-To put them to the test, we provide a piece of code and ask them to refactor it&mdash;just make
+To put them to the test, we provide a piece of code and ask them to refactor it---just make
 it better. I think this approach perfectly demonstrates who is in front of me:
 [a hacker or a designer]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 In this way, we filter out a lot of people who pay attention to
@@ -77,7 +77,7 @@ minor implementation tricks but miss the bigger design issues.
 The quiz is [here](https://github.com/teamed/quiz).
 You can see how many
 [pull requests](https://github.com/teamed/quiz/pulls)
-there are already&mdash;all of them are from our candidates.
+there are already---all of them are from our candidates.
 
 ## No Phone or Video Calls
 
@@ -95,7 +95,7 @@ least not in our [remote work]({% pst 2014/oct/2014-10-07-stop-chatting-start-co
 mode. We expect you to write code
 and communicate via GitHub. Why on earth would we need to call you? We
 just don't do it, and I think that's how everybody else should operate. That's
-what true equality and diversity is&mdash;no phone or video calls.
+what true equality and diversity is---no phone or video calls.
 
 ## We Explain When We Reject
 
@@ -117,7 +117,7 @@ apply there, and you will see for yourself.
 
 Instead, we believe that an honest and straightforward negative answer is exactly what
 our candidates are looking for in the case of a rejection. We understand
-that it's not the end of the world for you&mdash;you're going to continue
+that it's not the end of the world for you---you're going to continue
 learning and improving. Our feedback will help you. So why should we
 hide it behind that polite "good luck" answer? We won't. You will
 know exactly why you are not good enough for us.

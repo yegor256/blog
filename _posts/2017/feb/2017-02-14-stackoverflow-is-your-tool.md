@@ -70,7 +70,7 @@ Initially, you will be afraid to answer. Then, most of your answers will
 be down-voted. Then, some of them will be accepted as best answers. Eventually,
 some of them will start getting up-votes. Until that happens, you will go
 through a lot of frustration and negative emotions. You will learn how to
-make your answers helpful&mdash;not just to your friends, because they don't want
+make your answers helpful---not just to your friends, because they don't want
 to offend you by saying that you have no idea what you're talking about, but
 to strangers, who care more about the information you're able to deliver than they
 care about you personally. That's a skill you can't buy; you have to earn it.
@@ -99,7 +99,7 @@ problems on your own.
 To summarize, StackOverflow is a must-have _instrument_ for any modern
 software developer, no matter what your programming language, your age,
 your project, or your professional level are. It's like an IDE and
-[unit tests]({% pst 2016/feb/2016-02-09-are-you-still-debugging %})&mdash;you
+[unit tests]({% pst 2016/feb/2016-02-09-are-you-still-debugging %})---you
 just use them in order to develop faster. Some people are still using
 [vim](https://en.wikipedia.org/wiki/Vim_%28text_editor%29) or
 [emacs](https://en.wikipedia.org/wiki/Emacs)

@@ -39,7 +39,7 @@ and goes down to the most **mature** and professional ones, which cause the
 least amount of trouble:
 
   * **Coffee Breaks**.
-    This is the most dangerous thing&mdash;you can never
+    This is the most dangerous thing---you can never
     keep track of them, you won't know what they were about, and there
     is no "search" button anywhere. Everything you say standing next
     to that coffee machine will be lost. Nothing will be converted
@@ -79,7 +79,7 @@ least amount of trouble:
     of such a "document" is very low.
 
   * **Trello**.
-    By Trello I mean any task/ticket tracking system&mdash;they are great instruments
+    By Trello I mean any task/ticket tracking system---they are great instruments
     to immediately turn conversations and discussions into project artifacts.
     You don't need to document anything; it's already there. The problem is
     that they are still rather far away from the main project artifact:

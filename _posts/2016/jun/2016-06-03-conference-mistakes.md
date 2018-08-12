@@ -51,7 +51,7 @@ This really de-motivates me as a speaker. I want to feel valuable.
 I came to the conference to be heard. I think my speech is the most important and I don't want people to
 jump quickly out of the room, just to have enough time to drink coffee
 and run to the next presentation. 30 minutes between talks is a comfortable
-time&mdash;enough to forget the previous talk and focus on the next one.
+time---enough to forget the previous talk and focus on the next one.
 Also, four talks per day is an absolute maximum for a serious listener.
 
 **No moderator**.
@@ -72,9 +72,9 @@ I really want it to look cool. Some conferences don't care about
 that and this attitude seriously demotivates me as a speaker.
 
 **Cheap venue**.
-This means literally what it says&mdash;the place is too cheap and, because
+This means literally what it says---the place is too cheap and, because
 of that, bad. The impression of such a place ruins the entire conference.
-Don't fool yourself, if it's cheap&mdash;it's bad.
+Don't fool yourself, if it's cheap---it's bad.
 Into this category I would also place venues that are not designed to be
 conference hosts, like cinemas or offices. They will also be cheaper than
 proper venues, but you will get what you pay for.
@@ -132,7 +132,7 @@ The best size of the room is 250 people. That's the ideal audience for
 a technical talk.
 
 **Too big**.
-A very big audience (over 500 people in the room) causes another problem&mdash;I completely lose any contact with my listeners. I don't see their eyes any more.
+A very big audience (over 500 people in the room) causes another problem---I completely lose any contact with my listeners. I don't see their eyes any more.
 I can't see their reaction, I don't understand whether they follow me or not.
 I'm not a technical speaker any more, but a rock singer. All I can do is turn
 my presentation into a show and play with their emotions, not their brains.
@@ -154,7 +154,7 @@ conference attendees feel the same. A perfect conference must have one
 track, a room for 250-300 listeners, and a very well selected list of
 speakers. I believe that most conferences are shooting themselves in the
 foot trying to please the audience by inviting too many speakers. Instead,
-do your homework right&mdash;select the best speakers and don't make listeners
+do your homework right---select the best speakers and don't make listeners
 walk from track to track cursing you for the mediocre speeches.
 Choosing speakers is your job! Don't delegate it to your audience.
 

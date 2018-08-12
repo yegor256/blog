@@ -72,7 +72,7 @@ process with `pid` as its process ID (this won't work in Windows, only Linux/Mac
 Then I immediately register an
 [`at_exit`](https://ruby-doc.org/core-2.2.3/Kernel.html#method-i-at_exit)
 Ruby hook, which will be executed if Ruby dies for any reason. I'm sure
-it's obvious why I have to do that&mdash;in order to avoid garbage running
+it's obvious why I have to do that---in order to avoid garbage running
 in the background after Rake is finished or terminated.
 
 Pay attention, I'm using `kill -TERM` instead of `kill -KILL`, in order to

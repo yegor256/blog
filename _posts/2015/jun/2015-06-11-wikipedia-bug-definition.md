@@ -56,7 +56,7 @@ If our software generates a perfectly correct PDF report but it
 takes a minute, that's a non-functional bug.
 
 So far so good, since the bug definition given by Wikipedia perfectly
-covers both of them&mdash;if they happen, they will cause our software
+covers both of them---if they happen, they will cause our software
 "to _produce_ an incorrect or unexpected result or to _behave_ in an unintended way."
 The emphasis here is on the words "produce" and "behave." They presume
 the software is doing something and we're observing its behavior.
@@ -85,7 +85,7 @@ Read more about this in
 
 The definition of a software bug given by Wikipedia doesn't cover
 maintainability and reusability flaws at all.
-That makes for a common source of confusion&mdash;an inconsistent code style is not a bug (see the discussion under
+That makes for a common source of confusion---an inconsistent code style is not a bug (see the discussion under
 [this post]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})).
 
 That is wrong.

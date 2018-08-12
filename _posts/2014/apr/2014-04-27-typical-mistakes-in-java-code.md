@@ -38,7 +38,7 @@ and to Java in particular.
 
 Your class should be an abstraction of a real life entity
 with no "validators," "controllers," "managers," etc.
-If your class name ends with an "-er"&mdash;it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
+If your class name ends with an "-er"---it's [a bad design](http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData).
 BTW, here are my
 [seven virtues]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 of a good object.
@@ -87,7 +87,7 @@ void append(File file, String line);
 You can read more about this idea in
 [Elegant Objects](/elegant-objects.html) book,
 section [2.4](/images/books/elegant-objects/contents.pdf).
-There is only one exception to the rule just mentioned&mdash;test methods for JUnit. They are explained below.
+There is only one exception to the rule just mentioned---test methods for JUnit. They are explained below.
 
 ## Test Method Names
 
@@ -120,7 +120,7 @@ It's a good practice to always declare test methods as throwing `Exception`.
 ## Variable Names
 
 Avoid composite names of variables, like `timeOfDay`, `firstItem`, or
-`httpRequest`. I mean with both&mdash;class variables and in-method ones. A
+`httpRequest`. I mean with both---class variables and in-method ones. A
 variable name should be long enough to avoid ambiguity in its scope of
 visibility, but not too long if possible. A name should be a noun in singular or
 plural form, or an appropriate abbreviation. More about it in
@@ -208,7 +208,7 @@ This above variable is used only once and the code should be refactored to:
 return new File("data.txt");
 ```
 
-Sometimes, in very rare cases&mdash;mostly because of better formatting&mdash;one-time
+Sometimes, in very rare cases---mostly because of better formatting---one-time
 variables may be used. Nevertheless, try to avoid such situations at all costs.
 
 ## Exceptions
@@ -277,7 +277,7 @@ StringUtils.join(
 
 Class constants should be used when you want to share information between class
 methods, and this information is a characteristic (!) of your class. Don't use
-constants as a replacement of string or numeric literals&mdash;very bad
+constants as a replacement of string or numeric literals---very bad
 practice that leads to code pollution. Constants (as with any
 [object]({% pst 2016/jul/2016-07-14-who-is-object %}) in
 [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}))

@@ -136,7 +136,7 @@ just looking at this code.
 {% quote The biggest issue with this streaming API is the very interface Stream, it's huge! %}
 
 These two problems are connected. The biggest issue with this streaming API
-is the very interface `Stream`&mdash;it's huge. At the time of writing
+is the very interface `Stream`---it's huge. At the time of writing
 there are 43 methods. Forty three, in a single interface! This is against
 each and every
 [principle]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})

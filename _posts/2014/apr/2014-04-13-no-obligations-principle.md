@@ -22,7 +22,7 @@ jb_picture:
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
-It is a very common problem in project management&mdash;how to make team
+It is a very common problem in project management---how to make team
 members more responsible and avoid [micro
 management](http://en.wikipedia.org/wiki/Micromanagement)?
 
@@ -50,7 +50,7 @@ published in the Harvard Business Review about this very subject.
 I recommend that you read it. Its authors present problems as monkeys sitting on
 our shoulders. When the
 [project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
-assigns a task to a programmer&mdash;he moves the monkey from his shoulders to the programmer's shoulders.
+assigns a task to a programmer---he moves the monkey from his shoulders to the programmer's shoulders.
 
 {% youtube qRZYJGYdrwk %}
 
@@ -96,7 +96,7 @@ paid for deliverables. Based on this idea, we can go even further and declare a
 "No Obligations" principle.
 
 In essence, for every team member, it says: if you don’t like the task assigned
-to you, don’t have time or you’re simply not in the mood&mdash;don't do it.
+to you, don’t have time or you’re simply not in the mood---don't do it.
 
 You have no obligation to do anything. You're free to reject every second task
 that a project manager gives to you or even all of them.
@@ -106,7 +106,7 @@ assigned to you for longer than 10 days (we think that this time frame is
 logical).
 
 If you get a task, and don't deliver within ten days, the project manager can
-take it away and pay you nothing&mdash;no matter how much time you invested in
+take it away and pay you nothing---no matter how much time you invested in
 the task already or the reasons for your failure to complete it.
 
 ## Where Are The Monkeys Now?
@@ -137,5 +137,5 @@ as possible and cut every corner you can. The
 smaller the amount of work you perform on a task, the easier it will be to
 deliver it and pass all quality controls.
 
-Always remember that your efforts are not appreciated&mdash;only the
+Always remember that your efforts are not appreciated---only the
 deliverables matter.

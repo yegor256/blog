@@ -24,7 +24,7 @@ You know what NULL is, right? It's
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
 or you can assign it to a variable.
-All four scenarios are bad for the maintainability of your code&mdash;there
+All four scenarios are bad for the maintainability of your code---there
 are no doubts about that.
 The question is what to do instead. Let's discuss the "return it" part and
 I will suggest one more "best practice" on top of what
@@ -76,5 +76,5 @@ is implemented in Python's [`max()`](https://docs.python.org/3/library/functions
 it's possible to pass both a list and a default element to return in case the list
 is empty. If the default element is not provided, the exception will be raised.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

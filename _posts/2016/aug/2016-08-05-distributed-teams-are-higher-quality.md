@@ -23,7 +23,7 @@ OK, the title is not exactly accurate. I've missed the "can" word. A distributed
 team _can_ deliver code of much higher quality than a co-located one,
 and now I'll explain why. Of course, not every distributed team can do that.
 Most of them can't even deliver code that works, let alone quality code.
-But if a team&mdash;a distributed one&mdash;is managed according to the principles
+But if a team---a distributed one---is managed according to the principles
 I'll explain now, the quality will be much higher than the same team can
 achieve if co-located. What I'm going to show you is that working in a
 [remote mode]({% pst 2017/may/2017-05-02-remote-slaves %}),
@@ -52,7 +52,7 @@ more expensive the developer is, the higher the quality he or she writes.
 I'm sure you understand that I'm joking. None of these "proven methods" will either
 guarantee quality or motivate serious software engineers. Quality can
 be achieved only if it is _controlled and enforced_. And this is also what
-motivates programmers best of all&mdash;the fact that the quality
+motivates programmers best of all---the fact that the quality
 is so important for management that they find mechanisms of
 control and enforcement, and they invest in them. Table tennis and lean
 startup books are not even close to those mechanisms.
@@ -87,7 +87,7 @@ we practice in our projects:
   * **Micro Payments for Deliverables**. We pay only for closed tickets, and
     they are each very small (up to two hours). We don't pay for time spent
     in the office or in front of the computer. We pay only when tickets
-    are closed&mdash;no close, no pay. This means that programmers are motivated
+    are closed---no close, no pay. This means that programmers are motivated
     to _close_ them, nothing else.
 
 Thus, as you can see, there is an intentionally created conflict. On one hand,
@@ -97,7 +97,7 @@ no room to make compromises, and there is no technical possibility to
 go around an issue. Good programmers survive in this conflict and manage to deliver
 and get paid. Well-paid.
 
-And now, to the main point of this blog post&mdash;do you think it's possible
+And now, to the main point of this blog post---do you think it's possible
 to build all that in a co-located team? I don't think so. First of all,
 you won't be able to prohibit
 [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}). No matter how many
@@ -120,5 +120,5 @@ then to a few senior developers, then to a few good friends who you
 absolutely trust. Then to everybody, just in case. It's inevitable.
 
 To summarize, I believe that co-located teams are just not made for
-quality programming. For fun&mdash;yes. For creativity&mdash;maybe.
-For burning investors' money&mdash;absolutely. For quality&mdash;not really.
+quality programming. For fun---yes. For creativity---maybe.
+For burning investors' money---absolutely. For quality---not really.

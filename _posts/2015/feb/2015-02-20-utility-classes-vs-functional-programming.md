@@ -151,7 +151,7 @@ visiting the shop. He or she may instead present it to somebody else as a gift
 or just exchange it for another card or product. The gift card itself
 becomes a product!
 
-So the difference is what the consumer is getting&mdash;either a
+So the difference is what the consumer is getting---either a
 product ready to be used (imperative) or a voucher for the product, which
 can later be converted into a real product (declarative).
 

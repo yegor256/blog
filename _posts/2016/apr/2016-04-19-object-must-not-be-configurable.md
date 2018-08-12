@@ -23,7 +23,7 @@ jb_picture:
 
 Using object properties as configuration parameters is a very common
 mistake we keep making mostly because our objects
-are mutable&mdash;we **configure** them. We change their behavior by
+are mutable---we **configure** them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it's abusive and disrespectful
 from a [philosophical]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})

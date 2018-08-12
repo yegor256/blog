@@ -72,7 +72,7 @@ This is how a good manager would delegate a similar task:
 Pay attention to how polite our micromanager is and how rude the good manager is.
 However, it's obvious that the first one is extremely annoying while
 the second doesn't irritate us at all. Because it's all about how
-the task is defined&mdash;as an _algorithm_ or as a _goal with rules_.
+the task is defined---as an _algorithm_ or as a _goal with rules_.
 
 Micro-managers treat me as a dumb executor of their will. A micromanager
 is [_imperative_](https://en.wikipedia.org/wiki/Imperative_programming).
@@ -80,14 +80,14 @@ A good manager, on the other hand, is
 [_declarative_](https://en.wikipedia.org/wiki/Declarative_programming). A good manager
 declares what needs to be done, never telling me how I must achieve it.
 
-By the way, there is&mdash;surprisingly&mdash;a lot in common between management and
+By the way, there is---surprisingly---a lot in common between management and
 object-oriented programming :) Good object-oriented programming is
 [also declarative]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}),
 not imperative.
 
 Thus, this "micro" prefix is not really about the size of the tasks a manager
 keeps under control. It is about what a manager wants to see
-inside them&mdash;a black box or a glass box under a _microscope_.
+inside them---a black box or a glass box under a _microscope_.
 
 {% quote A good manager pays extreme attention to defining quality standards for my work. %}
 

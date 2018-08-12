@@ -52,8 +52,8 @@ It seems super simple, but the problem is obvious: class `Story` can't
 be reused. It can only read one particular file. Moreover, testing it
 will be rather difficult, since it reads the content from exactly one place,
 which can't be changed at all. More formally this problem is known as an
-_unbreakable dependency_&mdash;we can't break the link between `Story`
-and `/tmp/story.txt`&mdash;they are together forever.
+_unbreakable dependency_---we can't break the link between `Story`
+and `/tmp/story.txt`---they are together forever.
 
 To solve this we need to introduce a constructor and let `Story` accept
 the location of the content as an argument:

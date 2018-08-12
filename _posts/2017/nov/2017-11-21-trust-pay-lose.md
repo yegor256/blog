@@ -24,13 +24,13 @@ buffer:
 ---
 
 "Listen up, dude," a friend of mine said when he called yesterday, "I trusted them
-for over a year&mdash;we've been partners. They've been programming it all
+for over a year---we've been partners. They've been programming it all
 and I was busy doing business development. Now they've quit and
 I'm left with nothing! What am I supposed to do with all these
 JavaScript files? How do I even know they are mine? Moreover, they don't even
 want to cooperate. I feel like a hostage. Please, help me out!"
 What could I say? "It's too late, dude," was my answer, "but the
-good news is&mdash;you are not the first to have this problem."
+good news is---you are not the first to have this problem."
 
 <!--more-->
 
@@ -68,7 +68,7 @@ You can't understand those files. You don't even have them, since they
 are somewhere in the programmers' Git repository. You hire some more people
 to help you save what's left, but they say that it's time to start
 everything from scratch. Your frustration is enormous and you're ready
-to go back to the first step&mdash;you trust these new guys, because they
+to go back to the first step---you trust these new guys, because they
 definitely seem legit, not like those previous crooks.
 
 Seems familiar?

@@ -83,16 +83,16 @@ class Users {
 {% endhighlight %}
 
 The first two potential mistakes were filtered out
-in the constructor, while the other two&mdash;later, in the method.
+in the constructor, while the other two---later, in the method.
 Why did I do it this way? Why not put all of them into the constructor?
 
 Because the first two compromise [object state]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}),
-while with the other two&mdash;its runtime behavior. You remember that an
+while with the other two---its runtime behavior. You remember that an
 [object]({% pst 2016/jul/2016-07-14-who-is-object %}) is a representative of
 a set of other objects it encapsulates, called attributes. The object of
 class `Users` can't _represent_ `nil` or a number. It can only represent
 a file with a name of type `String`. On the other hand, what that file
-contains and whether it really is a file&mdash;doesn't make the state invalid.
+contains and whether it really is a file---doesn't make the state invalid.
 It only causes trouble for the behavior.
 
 Even though the difference may look subtle, it's obvious. There are

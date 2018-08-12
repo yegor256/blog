@@ -101,7 +101,7 @@ but that's a subject for
 
 Someone may say that daily stand-ups are a perfect place and time to
 exchange information among programmers, not just to inform the Scrum master and
-get his feedback. Again, we have the same argument here&mdash;why can't they
+get his feedback. Again, we have the same argument here---why can't they
 exchange information when it's required, during the day? Why do we need to
 put 10 people together every morning to discuss something that concerns
 only five of them? I can answer.
@@ -125,7 +125,7 @@ he feels very insecure. He is afraid of losing control of the team; he
 doesn't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
 his own people; and he always feels under-informed and shakes
 when his own boss asks him, "What's going on?" Because of all this, he
-uses his people as anti-depressant pills&mdash;when they are doing what
+uses his people as anti-depressant pills---when they are doing what
 he says, he feels more secure and stable. A daily stand-up meeting is a great
 place where he can ask each of us what we're doing and then tell us
 what we should do instead. This manager forces us to disclose our personal goals and plans
@@ -156,7 +156,7 @@ Instead, he trusts them and controls their results only.
 Let me reiterate: I strongly believe that responsibility must be
 delegated, and this delegation consists of three components:
 _awards, penalties, and rules_. In a modern Western culture, it may
-be rather difficult to define them&mdash;we have long-term contracts and
+be rather difficult to define them---we have long-term contracts and
 monthly salaries. But a good manager has to find a way. Each task has to
 be delegated and isolated. This means that the programmer working on the
 task has to be personally responsible for its success or failure. And

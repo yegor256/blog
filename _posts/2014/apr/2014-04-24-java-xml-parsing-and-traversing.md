@@ -23,7 +23,7 @@ one line of code. XML traversing using XPath takes even more code,  and I find
 this is unfair and annoying.
 
 I'm a big fan of XML and use it it in almost every Java application. Some time
-ago, I decided to put all of that XML-to-DOM parsing code into a small library&mdash;[jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}).
+ago, I decided to put all of that XML-to-DOM parsing code into a small library---[jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}).
 
 Put simply, the library is a convenient wrapper for JDK-native DOM
 manipulations. That's why it is small and dependency-free. With the following

@@ -198,8 +198,8 @@ and difficult to implement. As a programmer, I don't know what is more
 important: to scroll or to make sure the scrolling is fast.
 
 Also, it is difficult to modify such a statement. If tomorrow we add
-another functional requirement&mdash;scrolling a list
-of friends, for example&mdash;we'll want to require this scrolling to also be smooth and fast.
+another functional requirement---scrolling a list
+of friends, for example---we'll want to require this scrolling to also be smooth and fast.
 Then, a few days later, we'll want to say that "fast" means less than
 10 milliseconds of reaction time. We'll then have to duplicate this information
 in two places. See how messy our document may become eventually?
@@ -287,7 +287,7 @@ button will be placed, and what information will be stored in the database.
 {% quote You shouldn't tell me how to implement the functionality you desire %}
 
 If you really care about that because there are certain higher-level
-limitations&mdash;say so. But again, not as implementation instructions
+limitations---say so. But again, not as implementation instructions
 to us programmers, but rather as non-functional requirements like this:
 
 {% highlight text %}

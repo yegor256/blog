@@ -35,7 +35,7 @@ to reproduce that experiment. It seems the French professor was right.
 
 Here is what we did. We created two groups with four people in each of them,
 all non-native English speakers. Then, both groups received the same
-task&mdash;to create as many words as possible using the letters in a single given word.
+task---to create as many words as possible using the letters in a single given word.
 It's a pretty simple task that just requires some time and creativity.
 
 {% badge https://www.socialpsychology.org/images/socialfigures/ringelmann.jpg 72 https://en.wikipedia.org/wiki/Max_Ringelmann %}
@@ -44,7 +44,7 @@ The first group worked as a team. They had just one piece of paper
 and one pen to write down the words they found. We called them a
 **co-located** team.
 
-The second group of four people worked in a **distributed** mode&mdash;they had four pieces of paper and four pens. They didn't communicate with
+The second group of four people worked in a **distributed** mode---they had four pieces of paper and four pens. They didn't communicate with
 each other and just created words. They knew that the best performer
 would receive a prize (a bar of organic chocolate).
 

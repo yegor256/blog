@@ -84,7 +84,7 @@ model. But it is not the result by itself. It is just a tool in your hands.
 
 Your valuation is what makes you rich, **not** your revenue or your happy
 customers. Of course, the revenue is important, but only as long as
-it serves the main goal&mdash;increase valuation at an extremely
+it serves the main goal---increase valuation at an extremely
 fast pace. The revenue is not the goal; it's the way to achieve it. The valuation
 is the goal.
 

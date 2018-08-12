@@ -53,7 +53,7 @@ every time I decide to stay home. Instead, I want to inform
 you when I decide to visit the office. In other words, my default state
 should be "not in the office."
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What motivates you best of all? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1003355914555002881?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What motivates you best of all? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1003355914555002881?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 **Isolation of tasks**.
@@ -208,6 +208,6 @@ may have some other points or may disagree with mine.
 P.S. I would most probably stay away from a business involved in something
 I consider unethical, like corruption, gambling, crime, etc.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What motivates you best of all? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1003355914555002881?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What motivates you best of all? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1003355914555002881?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

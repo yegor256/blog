@@ -103,7 +103,7 @@ $20-35 per hour, for completed tasks only according to one of the principles of
 The first one, in three months, produced 59k new lines and removed 29k in
 changes in the `master` branch, which totals 88k lines of code. The project
 resulted in about 10,000 man hours to produce these lines (20 programmers, three
-months, 170 working hours per month)&mdash;which equates to about $350k. Therefore,
+months, 170 working hours per month)---which equates to about $350k. Therefore,
 the project
 [cost]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %}) a whopping
 
@@ -151,7 +151,7 @@ to work from home and never come to the
 [XDSD](http://www.xdsd.org) is about strict quality principles, which should be
 followed by the entire team.
 
-And when these principles are in place&mdash;you pay thirty times less.
+And when these principles are in place---you pay thirty times less.
 
 By the way, this is what people say about their projects:
 

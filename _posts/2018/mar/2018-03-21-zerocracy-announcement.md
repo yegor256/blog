@@ -53,7 +53,7 @@ We rely on our innate hierarchical instincts and hope for the best.
 Here is what I mean by that.
 First, we put a group of people together, also known as programmers. Then,
 we tell them how [important]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
-the goal is that they are going to achieve&mdash;develop
+the goal is that they are going to achieve---develop
 a software product. Then we make sure they know who the boss is, by paying
 them [by the hour]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 Finally, thanks to their upbringing and education,
@@ -62,7 +62,7 @@ they "do the right thing" and software gets created. Maybe. If we are lucky.
 This is exactly how it has worked in the Animal Kingdom, for millions of years.
 In order to survive, mammals create hierarchies: the strongest males are on top, others
 do what they say. If they don't obey, violence helps. Scientists [think](https://www.ncbi.nlm.nih.gov/pubmed/26133375)
-that humans are also very hierarchical creatures&mdash;we feel discomfort
+that humans are also very hierarchical creatures---we feel discomfort
 if we don't know who the boss is, who to submit to.
 
 Thanks to this hierarchical instinct, just like lions, wolves, and monkeys,
@@ -77,7 +77,7 @@ However, due to the complexity of our profession, the quality
 and efficacy of the results we observe are very low.
 The [CHAOS Report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf) (2015)
 by the Standish Group says that "software development projects
-are in chaos, and we can no longer imitate the three monkeys&mdash;hear no failures,
+are in chaos, and we can no longer imitate the three monkeys---hear no failures,
 see no failures, speak no failures." The report also demonstrates that as a
 result of this chaos we have restarts (94% projects!), cost overruns, and time
 overruns. The report also says that technology incompetence is the root cause of project failures only in
@@ -124,7 +124,7 @@ quality of code. Also, they boost the motivation of [the type of programmers]({%
 who like the idea of being their own bosses.
 
 How many of those people are out there
-on the market&mdash;the future will soon show us.
+on the market---the future will soon show us.
 
 Speaking philosophically, while it's a common
 [belief](https://www.forbes.com/sites/quora/2017/12/18/artificial-intelligence-will-change-the-job-landscape-forever-heres-how-to-prepare/)

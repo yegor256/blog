@@ -48,7 +48,7 @@ class Foo {
 }
 {% endhighlight %}
 
-What do you think about that? I believe it's clear what `names()` is doing&mdash;creating a list of names. In order to avoid duplication, there is a supplementary
+What do you think about that? I believe it's clear what `names()` is doing---creating a list of names. In order to avoid duplication, there is a supplementary
 _procedure_, `append()`, which converts an item to lowercase and adds it to the
 list.
 
@@ -95,7 +95,7 @@ return list;
 {% endhighlight %}
 
 It looks perfectly clean, doesn't it? Instantiate a list, append two items to it, and
-return it. Yes, it is clean&mdash;for now. Because we remember what `append()` is
+return it. Yes, it is clean---for now. Because we remember what `append()` is
 doing. In a few months, we'll get back to this code, and it will look like this:
 
 {% highlight java %}

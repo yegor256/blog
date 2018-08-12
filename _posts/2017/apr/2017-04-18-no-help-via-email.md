@@ -29,7 +29,7 @@ I get emails or Facebook and Telegram messages from
 people I don't really know. They ask questions about Java,
 management, object-oriented programming, and other things
 they believe I understand and can help them with. Well, my contact details are
-published right in the header on my blog&mdash;what else would I expect, right?
+published right in the header on my blog---what else would I expect, right?
 True, but even though I always reply to them, I never
 answer their questions.
 
@@ -42,7 +42,7 @@ Why?
 Because it's ineffective.
 
 Honestly, I believe that the more people I help, the better. The bigger my contribution
-to the community is, the better&mdash;for both the community and me personally.
+to the community is, the better---for both the community and me personally.
 That's why I try to answer every single comment on this blog,
 on my [YouTube channel](https://www.youtube.com/c/yegor256?sub_confirmation=1), in
 our [Gitter chat](https://gitter.im/yegor256/elegantobjects), and on

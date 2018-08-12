@@ -80,7 +80,7 @@ class Book
 end
 {% endhighlight %}
 
-It seems nice&mdash;if you don't understand the
+It seems nice---if you don't understand the
 [difference]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 between
 [object-oriented programming]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
@@ -153,7 +153,7 @@ It's the same issue as with
 [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}),
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
-and [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})&mdash;they
+and [utility classes]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})---they
 tear objects apart and place pieces of functionality in places
 where objects don't see them.
 
@@ -186,7 +186,7 @@ Doesn't it look very similar to what we were doing above with Ruby mixins?
 
 However, unlike mixins, decorators leave objects small and cohesive, layering
 extra functionality on top of them. Mixins do
-the opposite&mdash;they make objects more complex and, thanks to that, less
+the opposite---they make objects more complex and, thanks to that, less
 readable and maintainable.
 
 I honestly believe they are just poison. Whoever invented them

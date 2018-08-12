@@ -68,7 +68,7 @@ you're shooting yourself in the foot; your career is in trouble.
 **Don't Make Friends**.
 I'm talking about professional relationships in the office, within your projects,
 at the company you're working for. Remember that 99 percent of people will not
-become experts. They will remain who they are&mdash;regular
+become experts. They will remain who they are---regular
 programmers with no passion or ambition. What's really bad for you is that they will
 want you to stay _with them_. Nobody will enjoy seeing your growth, and your
 closest friends will become your enemies. Not explicitly, but subconsciously they
@@ -81,7 +81,7 @@ stay professional and don't make friends at work.
 **Don't Be Helpful**.
 There are more than 10 million programmers in the world. They all need help. Why
 do you need to help that dude sitting next to you in the office? You won't
-save the world by helping people around you&mdash;forget that religious
+save the world by helping people around you---forget that religious
 nonsense. If you really want to do good for the software industry, focus
 on bigger things: make an open source product, write a book, or improve
 the documentation of the project you are working on. By
@@ -104,7 +104,7 @@ learn from books, StackOverflow, and open source software.
 
 **Don't Waste Time**.
 This is probably the most important advice, which I have to give myself
-first of all&mdash;unfortunately, I waste a lot of time. Any growth is always
+first of all---unfortunately, I waste a lot of time. Any growth is always
 about saying "No." You must be prepared to say it to your friends, your
 family, your habits, your wishes, your projects, colleagues, classes,
 methods, and lines of code. Stop the projects that are taking time and giving
@@ -130,7 +130,7 @@ gift for your spouse. Your laptop is your instrument; it must be
 You must go "all in" if you want to win.
 
 **Don't Work Full-Time**.
-As much as possible, try to stay away from full-time, 9-to-5 jobs&mdash;they
+As much as possible, try to stay away from full-time, 9-to-5 jobs---they
 pause your professional growth. Permanent or long-term employment gives you
 a stable income, a comfortable office environment, a predictable set of
 technical problems to solve, and the ability to become an expert over a small
@@ -142,7 +142,7 @@ you must work on two to three projects part-time and change them every 6 to 12 m
 
 **Don't Be Cheap**.
 Forget the stories that teach "money is not everything, and an interesting project
-is much more important"&mdash;they are for losers. Money
+is much more important"---they are for losers. Money
 [is everything]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}).
 An interesting project will be _properly_ funded. If it's not funded, the market
 doesn't need it. What are you doing there then? The only answer is that you're
@@ -192,7 +192,7 @@ one thing, while writing code that is visible to the entire world is a totally
 different thing. Most programmers are simply afraid of that, and they make
 up many excuses for why they are not there. Don't be one of them. Yes, it's
 difficult, it's stressful, it will consume a lot of your private time, and
-nobody will pay you for it. Do it anyway&mdash;this is the fastest way
+nobody will pay you for it. Do it anyway---this is the fastest way
 to grow. Moreover, I would recommend you try to open as much source code
 as possible, even if you write it for private and commercial projects.
 Some companies won't be against that.
@@ -210,7 +210,7 @@ help you understand how to do it right.
 **Don't Stay Home**.
 Attend seminars, meetups, and software conferences. At least once a month,
 you must go somewhere where other programmers are hanging out. You don't
-need to be super active and make a lot of friends&mdash;just be
+need to be super active and make a lot of friends---just be
 there and watch. Eventually you will realize that it's time to become
 a speaker. Remember that it doesn't really matter how much your
 coworkers respect you. What matters is what the _market_ thinks about you.
@@ -223,10 +223,10 @@ hire you and respect you as a coder, but they will never take you
 seriously as a candidate for a role with a lot of <del>money</del> responsibility. You will
 always look like a mentally unstable person. Instead, you must look "like business," even
 though you are a geek. That's why it's very important to pay attention to
-how you spend your free time&mdash;how you relax. Playing GTA 'til 3 a.m. is not
+how you spend your free time---how you relax. Playing GTA 'til 3 a.m. is not
 what successful and happy software architects do. Instead, here is your
 short list of activities: sports, tourism, and night clubs.
-Be a normal person&mdash;that's the point.
+Be a normal person---that's the point.
 
 Did I miss anything important?
 

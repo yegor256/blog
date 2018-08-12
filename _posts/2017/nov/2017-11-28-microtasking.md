@@ -26,7 +26,7 @@ buffer:
   - "Most professional and self-motivated developers were enjoying micro-tasking, while their less mature and less skilled colleagues were finding it difficult to keep up."
 ---
 
-"What are you doing now?"&mdash;when you hear this question
+"What are you doing now?"---when you hear this question
 from your boss, be aware: you're dealing with a
 [micromanager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 Keeping us busy is the key objective of these creatures and this
@@ -34,7 +34,7 @@ is what makes them so annoying. To the contrary,
 [effective managers]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 make sure we are _productive_, meaning that our results satisfy
 their expectations. They are not interested in knowing what we are
-doing to deliver them&mdash;they manage the project, instead of managing us.
+doing to deliver them---they manage the project, instead of managing us.
 And the first step to making the project manageable is to decompose its
 scope into smaller pieces.
 
@@ -46,7 +46,7 @@ Imagine you want to re-design your apartment, having a few thousand
 dollars for this job. You hire a group of people and give them all your
 money up front. They ask you to come back in two months, when everything will
 be ready. You say "OK" and wait for two months. I'm sure you already know
-what I'm getting at&mdash;this project most probably will be a failure, to
+what I'm getting at---this project most probably will be a failure, to
 some extent. In the worst case you won't see these guys ever, they will just
 steal your money. In the best case, they will do something that will
 look "nice," but not as nice as you expected.
@@ -78,7 +78,7 @@ And it's not because you are evil. You're not evil, you're stupid
 {% youtube uhDmHkMAYnM %}
 
 The problem is that the project is not manageable. That's why you
-have to resort to the last possible measure&mdash;micromanagement. Why is the
+have to resort to the last possible measure---micromanagement. Why is the
 project not manageable? Because its scope is not broken down into
 pieces. It contains a large single job called "Redesign The Apartment."
 
@@ -128,7 +128,7 @@ may help if one day you decide to break a "Develop a Mobile App" task
 into, say, 2,500+ micro tasks:
 
   * **Vagueness**.
-    Definition of done, exit criteria, requirements, expectations&mdash;there
+    Definition of done, exit criteria, requirements, expectations---there
     are many names, which are all about our inability to define
     what exactly we expect programmers to do. Software development
     by definition includes a lot of unknowns, creativity, experiments,
@@ -170,7 +170,7 @@ into, say, 2,500+ micro tasks:
     for failures and successes. Smaller tasks emphasize mistakes
     and make people "pay" for them. Not necessarily with cash,
     but definitely some way or other. Most programmers will find this concept
-    very new and disturbing&mdash;they've almost never paid for their own
+    very new and disturbing---they've almost never paid for their own
     mistakes before and never had their own tasks. The responsibility was
     always spread across the group.
     We solve that by
@@ -296,10 +296,10 @@ down:
 
   * **Risks are acceptable**.
     It's impossible to accept the risk of the entire apartment redesign failure,
-    since its cost is too high&mdash;a few thousand dollars. However,
+    since its cost is too high---a few thousand dollars. However,
     it is absolutely affordable to accept a risk of a kitchen lamp installation.
     Even if it falls and breaks, we will spend a few dollars and buy a new one.
-    We don't need to control the "lamp person"&mdash;we have a luxury
+    We don't need to control the "lamp person"---we have a luxury
     to delegate and trust.
 
 The benefits programmers get overlap with our benefits. If they

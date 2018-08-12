@@ -32,7 +32,7 @@ through RESTful API, and then download it again (either through HTTP or the API.
 
 Amazon ships the [Java SDK](https://aws.amazon.com/sdkforjava/)
 that wraps their RESTful API. However, this SDK is not object-oriented
-at all. It is purely imperative and procedural&mdash;it just mirrors the API.
+at all. It is purely imperative and procedural---it just mirrors the API.
 
 For example, in order to download an existing object `doc.txt`
 from bucket `test-1`, you have to do something like this:

@@ -27,7 +27,7 @@ our aggregator of
 [Checkstyle](http://checkstyle.sourceforge.net/),
 [PMD](http://pmd.sourceforge.net/),
 [FindBugs](http://findbugs.sourceforge.net/),
-and some other analyzers. I do love IDEA's rules&mdash;some of them are
+and some other analyzers. I do love IDEA's rules---some of them are
 unique and very useful. I asked whether I could find them somewhere in
 Maven Central (they are written in Java) and the answer was "You'll have to figure
 out yourself how to use them, but they are open source."
@@ -84,7 +84,7 @@ Most of us don't pay attention to [this bureaucracy](https://en.wikipedia.org/wi
 I didn't either, until recently.
 I thought that the moment my code is open I can forget about any
 rights and royalties. They will just use my code and I won't
-see any profit, ever. The license I attach to it won't matter&mdash;nobody
+see any profit, ever. The license I attach to it won't matter---nobody
 reads it anyway. This is exactly what happens in most cases.
 But only while those users are small potatoes.
 
@@ -119,7 +119,7 @@ who are too [lazy]({% pst 2018/apr/2018-04-17-how-to-be-lazy %})
 to read their own code, let alone someone else's,
 it definitely isn't.
 
-"Take it from GitHub" is not a polite way to treat us&mdash;your fellow programmers&mdash;anymore.
+"Take it from GitHub" is not a polite way to treat us---your fellow programmers---anymore.
 It was, twenty years ago, but now we have repositories.
 You have to distribute your product as an "artifact" through one of those public
 repositories, and make it possible for us to fetch it
@@ -186,7 +186,7 @@ is the answer. We must be able
 to see the logs of the recent CI build and make sure it is clean.
 
 It's a matter of trust. You may never use those Travis builds and simply
-ignore their red and green signals, but they are important for us&mdash;your
+ignore their red and green signals, but they are important for us---your
 clients. I add Travis badges to all projects of mine, right after I create
 a new repository.
 

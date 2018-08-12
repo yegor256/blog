@@ -27,7 +27,7 @@ is "a process of running a program/method interactively,
 breaking execution flow after each statement and showing..." In a nutshell, it is
 a very useful technique ... for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
-never debug their code&mdash;they write unit tests. My point here
+never debug their code---they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
 If debugging is required, the **design is bad**.
 
@@ -220,7 +220,7 @@ them from reappearing.
 
 Debugging is needed when our code is
 [procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
-and algorithmic&mdash;when the code is all
+and algorithmic---when the code is all
 about **how** the goal should be achieved instead of **what** the goal is.
 See the examples above again. The first static method is all about
 how we read the file, parse it, and find words. It's even named `readWords()` (a **verb**).

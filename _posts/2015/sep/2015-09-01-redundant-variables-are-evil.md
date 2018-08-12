@@ -44,7 +44,7 @@ print("Length is " + new File("test.txt").length());
 {% endhighlight %}
 
 This example is very primitive, but I'm sure you've seen these
-redundant variables many times. We use them to "explain" the code&mdash;it's not just a string literal `"test.txt"` anymore but a `fileName`.
+redundant variables many times. We use them to "explain" the code---it's not just a string literal `"test.txt"` anymore but a `fileName`.
 The code looks easier to understand, right? Not really.
 
 {% quote The more variable names I have to remember, the longer it takes to digest the code %}

@@ -60,7 +60,7 @@ be able to "connect" it with other objects.
 
 We turn objects into "little computers," as [some books](http://amzn.to/2npiZZQ) refer to them. They
 expect data to come in, they process the data, and return back some new data.
-The maintainability problem is not really solved with this approach&mdash;we
+The maintainability problem is not really solved with this approach---we
 still have to deal with a lot of data, remembering its semantic outside of
 the objects. In other words, there is no true encapsulation.
 

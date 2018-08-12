@@ -5,7 +5,7 @@ date: 2015-09-16
 tags: management
 place: Kiev, Ukraine
 description: |
-  Firing can be done right&mdash;nicely and gracefully&mdash;if you make it professional and not personal.
+  Firing can be done right---nicely and gracefully---if you make it professional and not personal.
 keywords:
   - how to fire someone
   - how to fire someone gracefully
@@ -65,13 +65,13 @@ comply with the rules, like when there's a lack of performance.
 
 When the rules are clear, everybody understands them, and reconciliation of
 performance is done regularly and openly, everybody will understand
-your firing decision and support it&mdash;including the person you're firing!
+your firing decision and support it---including the person you're firing!
 Because it won't be your decision, but rather a decision logically derived
 from the rules. You will work for the project, not for your emotions or
 personal feelings.
 
 By firing a person who is causing problems for the project,
-you will be doing a good thing for everybody&mdash;the project, the team, and the
+you will be doing a good thing for everybody---the project, the team, and the
 person who will go and find another place for his or her skills and talents.
 
 Let me reiterate: If firing is unpleasant, there is a problem

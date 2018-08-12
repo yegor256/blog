@@ -35,8 +35,8 @@ in nine object-oriented steps.
 
 According to Wikipedia,
 [code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) is
-"the process of restructuring existing computer code&mdash;changing the
-factoring&mdash;without changing its external behavior." The goal
+"the process of restructuring existing computer code---changing the
+factoring---without changing its external behavior." The goal
 of refactoring is to make code more readable and suitable for modifications.
 
 {% badge /images/2018/04/refactoring.jpg 96 https://amzn.to/2E7i17H %}
@@ -46,9 +46,9 @@ suggested a number of refactoring techniques which help making
 code simpler, more abstract, more readable, etc. Some of them
 are rather
 [questionable]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
-from an object-oriented standpoint&mdash;like
+from an object-oriented standpoint---like
 [Encapsulate Field](https://en.wikipedia.org/wiki/Field_encapsulation),
-for example&mdash;but most of them are valid.
+for example---but most of them are valid.
 
 Here is what I'm usually doing when I don't know the code, but need to modify it.
 The techniques are sorted by the order of complexity, starting with

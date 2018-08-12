@@ -77,7 +77,7 @@ Temperature t = new TempFahrenheit(
 The only problem is that it won't compile in Java, because class
 `TempFahrenheit` is not allowed to access private `t` in class `TempCelsius`.
 And if we make `t` public, everybody will be able to read it directly, and we'll have
-that "naked data" problem&mdash;a severe violation of encapsulation.
+that "naked data" problem---a severe violation of encapsulation.
 
 However, if we allow that access _only_ to one class, everything will be fine.
 Something like this (won't work in Java; it's just a concept):
@@ -93,7 +93,7 @@ class TempCelsius {
 {% endhighlight %}
 
 Since this `trust` keyword is placed into the class that allows access,
-we won't have the "naked data" problem&mdash;we will always know exactly which
+we won't have the "naked data" problem---we will always know exactly which
 objects posses knowledge about `t`. When we change
 something about `t`, we know exactly where to update the code.
 

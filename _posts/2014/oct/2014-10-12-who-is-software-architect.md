@@ -69,7 +69,7 @@ takes all the credit from
 [happy customers]({% pst 2017/jan/2017-01-10-how-to-teach-customers %}),
 when the [quality]({% pst 2017/dec/2017-12-26-software-quality-formula %}) is good.
 
-This is what the team needs&mdash;someone personally responsible
+This is what the team needs---someone personally responsible
 for the [quality]({% pst 2017/apr/2017-04-11-flexibility-equates-lower-quality %}) of the software being developed.
 
 {% quote The job of the PM is to make sure that every technical decision the architect makes is not doubted by anyone %}
@@ -78,7 +78,7 @@ How this guy will delegate this responsibility to others is his job. Whether
 he will use his knowledge and skills, or quality control
 [tools]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}), or
 unit testing frameworks, or authority, or coaching, or
-[corporal punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})&mdash;it's his business.
+[corporal punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})---it's his business.
 A project
 [manager]({% pst 2015/sep/2015-09-22-micromanagement %}) delegates quality control to the software architect,
 and [it is up to]({% pst 2015/feb/2015-02-23-haircut %})
@@ -100,7 +100,7 @@ And this is the job of the
 to make sure that every
 technical decision the architect makes is not doubted
 [by anyone]({% pst 2015/oct/2015-10-13-competition-without-rules %}). This is
-what delegation is all about&mdash;responsibility should always come with power.
+what delegation is all about---responsibility should always come with power.
 
 {% youtube AvVQ5NjS_Nk %}
 
@@ -123,5 +123,5 @@ and that his decisions are final.
 
 That's the only way of having a chance of building a perfect product.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Does your team have an official role of a Software Architect, who has enough authority to make technical decisions alone? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/995545586983161856?ref_src=twsrc%5Etfw">May 13, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Does your team have an official role of a Software Architect, who has enough authority to make technical decisions alone? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/995545586983161856?ref_src=twsrc%5Etfw">May 13, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

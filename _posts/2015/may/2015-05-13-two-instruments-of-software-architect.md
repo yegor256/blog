@@ -40,7 +40,7 @@ we're working on. Read more details about this approach in
 The same principle applies to an architect. We don't use meetings,
 stand-ups, Skype calls, IRC channels, or any other tools where information
 flies in the air and stays in our heads. Instead, we put everything in writing and talk
-only when we're being explicitly asked to and paid to&mdash;in tickets.
+only when we're being explicitly asked to and paid to---in tickets.
 
 ## Bugs
 

@@ -74,7 +74,7 @@ object at the same time, without clashing with another thread.
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2bQVqBr %}
 
 If no object methods can modify its state, no matter how many
-of them and how often are being called parallel&mdash;they
+of them and how often are being called parallel---they
 will work in their own memory space in stack.
 
 Goetz et al. explained the advantages of immutable objects
@@ -111,7 +111,7 @@ String second = request.fetch();
 
 Now, the script is broken although it compiled without errors. This is
 what [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %})
-is about&mdash;there is always some hidden
+is about---there is always some hidden
 information in the code that a programmer has to remember. In this example,
 we have to remember that the configuration for the first request
 is also used for the second one.
@@ -162,7 +162,7 @@ public String post(Request request) {
 }
 {% endhighlight %}
 
-Let's try to make two requests&mdash;the first
+Let's try to make two requests---the first
 with GET method and the second with POST:
 
 {% highlight java %}
@@ -172,7 +172,7 @@ String first = this.post(request);
 String second = request.fetch();
 {% endhighlight %}
 
-Method `post()` has a "side effect"&mdash;it makes changes
+Method `post()` has a "side effect"---it makes changes
 to the mutable object `request`. These changes are not really
 expected in this case. We expect it to make a POST request and
 return its body. We don't want to read its documentation just

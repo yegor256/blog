@@ -56,7 +56,7 @@ final class Cash {
 }
 {% endhighlight %}
 
-There are three constructors in the class&mdash;only one is
+There are three constructors in the class---only one is
 _primary_ and the other two are _secondary_. My definition of a
 secondary constructor is simple: It doesn't do anything besides
 calling a primary constructor, through `this(..)`.

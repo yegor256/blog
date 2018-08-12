@@ -38,7 +38,7 @@ These traditional techniques turn employees into
 speechless monkeys, programming under the influence of Prozac. Their existence
 and [popularity]({% pst 2015/oct/2015-10-16-ridley-scott-and-joseph-goebbels %})
 is our big misfortune. Let me present my own
-vision of how team morale can be boosted on a software team&mdash;a team that
+vision of how team morale can be boosted on a software team---a team that
 has a good [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
 
 <!--more-->
@@ -96,7 +96,7 @@ The most demotivating word used in task descriptions is "together." Don't use it
 Each task has to be personally and individually assigned (no matter what the
 [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) says).
 Everybody is responsible for his or her own success or failure. How their results
-join together and lead to a mutual success or failure&mdash;that's _your_
+join together and lead to a mutual success or failure---that's _your_
 [business]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 Whether you succeed or fail, we all will see. Once you say we all have to succeed
 [together]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %}),
@@ -163,7 +163,7 @@ A project team is
 [not a group of friends]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
 or family members, even though
 some teams may feel like that. No matter how it feels, a team is here
-for one reason&mdash;to create the product and make money for its sponsor.
+for one reason---to create the product and make money for its sponsor.
 This is the direction we're going. Our goal is not to build a community and
 live together til the end of our days. Our goal is to achieve the business
 success of the product we're developing, or in other words, complete the project.
@@ -171,7 +171,7 @@ When the only events we're celebrating are our birthdays, that's a sign to
 us that our managers are trying to lie to us. They are pretending that we're
 here to make a community of friends while in reality they are using us to
 build their business. It's unhealthy and ruins team morale. Instead, celebrate
-achievements on your real path&mdash;to the success of the product under
+achievements on your real path---to the success of the product under
 development. This will show everybody that you, as a manager, are honest with
 your people and ready to show them that their true role on the team is
 to develop a product and earn money for its investors. Honesty is the best

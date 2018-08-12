@@ -54,7 +54,7 @@ win-lose, or win-win.
 
 [Compromise](https://en.wikipedia.org/wiki/Compromise)
 is the worst outcome, and it's known as lose-lose. For example,
-you both agree on watching the news&mdash;that's a compromise. Neither of you will
+you both agree on watching the news---that's a compromise. Neither of you will
 get what you wanted, a movie or a baseball game. You both lose.
 Who gains in this case? You neighbors and the police, since there will be no
 fight. Will the problem really be solved? No. You both will hate
@@ -63,7 +63,7 @@ divorce is still coming closer.
 
 {% quote If we resolve conflicts through compromises, everybody suffers except those management monkeys %}
 
-The same happens in software team conflicts&mdash;if and when we resolve
+The same happens in software team conflicts---if and when we resolve
 them through compromises, everybody suffers except those
 [management and HR monkeys]({% pst 2015/sep/2015-09-29-mayonnaise %})
 who only care about a peaceful
@@ -123,7 +123,7 @@ full responsibility for them.
 If the architect is super smart, respected by everybody, and immortal, this
 force-based conflict resolution technique will work perfectly. The project
 will move forward fast, because everybody will work instead of think. There
-will be only one person who thinks&mdash;the architect.
+will be only one person who thinks---the architect.
 
 The main drawback of this win-lose approach is the "lose" part: Someone
 is always losing. And it's not about an offense, even though that's also important.
@@ -157,7 +157,7 @@ interests be satisfied at the same time?
 
 We will ask that junior developer: "Why do you think we need NoSQL?" It's
 very likely that we will hear something like, "I just want to learn this new
-concept." This is his real interest&mdash;to learn something new while
+concept." This is his real interest---to learn something new while
 working on this project. Maybe we can offer him some other technology to
 learn? Maybe we can move him to another project where NoSQL is used? There
 are many options. But the first step is to understand what he really
@@ -170,7 +170,7 @@ involved and make a lot of information visible and available.
 
 Truly professional team players always try to _provoke_ conflicts in order to gain
 an opportunity to resolve them through collaboration, thereby exiting through the win-win door.
-That's how the team grows&mdash;not by hiding conflicts and making compromises,
+That's how the team grows---not by hiding conflicts and making compromises,
 but by provoking them, making different interests visible, and finding the
 most optimal solutions.
 

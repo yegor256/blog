@@ -73,7 +73,7 @@ Just pay attention to the photo; it's very important.
 Do I have to say that you must smile on that photo? Well, yes, you must.
 And make it casual, with a T-shirt and funny background. You must look
 relaxed and successful. You don't want to get hired; they want to hire
-you&mdash;this is the message your photo should send, just like in online _dating_.
+you---this is the message your photo should send, just like in online _dating_.
 
 ## Skip "Objective" and "Title"
 
@@ -131,7 +131,7 @@ part of the community.
 ## GitHub Profile
 
 GitHub is the de-facto standard platform for open source code. There are others
-like BitBucket, but&mdash;I hope&mdash;they will die sooner or later. As a modern
+like BitBucket, but---I hope---they will die sooner or later. As a modern
 software developer, you must be on GitHub. You
 [have to contribute]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 to some open source. You have to be visible in the open source world if you
@@ -272,7 +272,7 @@ Other employers may think differently. Well, they most likely think differently.
 That's why you have to demonstrate with which offices you've spent 10 recent
 years of your life. I would recommend you keep this list short. Even if you've
 changed eight companies over the last two years, don't say that. Just three
-places is enough. That will show them you're a good slave&mdash;very
+places is enough. That will show them you're a good slave---very
 loyal to previous masters. That's what they want to see, because they
 are planning to buy you and become your next master. Right? Sounds harsh?
 Isn't [it true]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})?
@@ -298,7 +298,7 @@ other applicants aren't. You're definitely more reliable than many others.
 I think information about hobbies is important. Some say it's not, but I believe
 that a personal "click" between you and your potential employer plays
 an important role. There is a human on that side. He or she is reading
-your CV, and he or she wants to like you&mdash;mostly in order to be comfortable
+your CV, and he or she wants to like you---mostly in order to be comfortable
 making a hiring decision. Help him or her like you faster. Mention that
 you enjoy skiing, monkey-feeding in the zoo, and Jimmy Kimmel. Be creative,
 not boring. Just like you do in online dating.
@@ -316,7 +316,7 @@ document in a standard template, they will feel you didn't pay
 attention to it. You didn't even care to create that small but very
 important product nicely. How will you create their software? With the
 same attitude. Don't ruin the whole show with a careless design. That's the
-key word here&mdash;"careless." It doesn't need to be complex. It may be
+key word here---"careless." It doesn't need to be complex. It may be
 very simple. But it must be _yours_, made with care and love.
 
 <hr/>

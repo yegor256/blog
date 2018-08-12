@@ -184,13 +184,13 @@ We're not talking semantics here, either. We are differentiating the procedural
 programming mindset from an object-oriented one. In procedural programming,
 we're working with data, manipulating them, getting, setting,
 and deleting when necessary. We're in charge, and the data is just a passive component.
-The dog is nothing to us&mdash;it's just a "data holder."
+The dog is nothing to us---it's just a "data holder."
 It doesn't have its own life. We are free
 to get whatever is necessary from it and set any data into it.
 This is how C, COBOL, Pascal and many other procedural languages work(ed).
 
 On the contrary, in a true object-oriented world, we treat objects like
-living organisms, with their own date of birth and a moment of death&mdash;with their own identity and habits, if you wish. We can ask a dog to
+living organisms, with their own date of birth and a moment of death---with their own identity and habits, if you wish. We can ask a dog to
 give us some piece of data (for example, her weight), and she may
 return us that information. But we always remember that the dog is
 an active component. She decides what will happen after our request.
@@ -201,7 +201,7 @@ with `set` or `get` in an object_. And it's not about breaking
 many people argue. It is whether you're thinking like an object
 or you're still writing COBOL in Java syntax.
 
-PS. Yes, you may ask,&mdash;what about JavaBeans, JPA, JAXB, and many other
+PS. Yes, you may ask,---what about JavaBeans, JPA, JAXB, and many other
 Java API-s that rely on the get/set notation? What about Ruby's built-in
 [feature](http://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/accessors.html)
 that simplifies the creation of accessors? Well, all of that is our

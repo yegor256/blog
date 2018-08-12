@@ -23,7 +23,7 @@ Do you have private static methods that help you break
 your algorithms down into smaller parts? I do. Every time I write
 a new method, I realize that it can be a new class instead. Of course,
 I don't make classes out of all of them, but that has to be the
-goal. Private static methods are not reusable, while classes are&mdash;that
+goal. Private static methods are not reusable, while classes are---that
 is the main difference between them, and it is crucial.
 
 <!--more-->

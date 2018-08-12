@@ -48,7 +48,7 @@ this situation in the industry.
 
 Disclaimer: I do realize that these are multi-billion-dollar companies, the best
 in the industry, and I'm nothing compared to them.
-I do realize that their recruiters don't care about my answers&mdash;they
+I do realize that their recruiters don't care about my answers---they
 simply click "delete" and move on. I also realize that they will never see
 this post, and this article probably won't change anything. However,
 I have to write it.
@@ -98,7 +98,7 @@ process effective and creative. They just send them through random
 programmers who are supposed to ask as complex questions as possible.
 
 I'm not saying that people who pass their tests are not good programmers.
-I'm also not saying that I'm a good programmer&mdash;let's face it,
+I'm also not saying that I'm a good programmer---let's face it,
 I didn't pass the test. I do believe this filtering system is rather good.
 My point is that it contradicts the original email I got from the recruiter.
 

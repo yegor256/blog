@@ -110,8 +110,8 @@ and _precision_ as possible. Here comes the definition of the main guy.
 
 A **project manager** (PM) is the one who predicts the future.
 The PM knows in what state <i>W<sub>2</sub></i> the world will be when
-the project is finished. If the PM doesn't know or is in doubt&mdash;it's a bad PM. If
-the PM knows and is certain about it&mdash;it's a good PM. That's it.
+the project is finished. If the PM doesn't know or is in doubt---it's a bad PM. If
+the PM knows and is certain about it---it's a good PM. That's it.
 
 And I have to say, in that coffee making project you were a lousy PM. Did you
 know what was the probability of the project being finished without a cup of coffee
@@ -148,10 +148,10 @@ That's exactly what is happening in software development projects and all
 other projects. Project sponsors need to _know_ whether the project is worth
 going forward or it's time to stop it and do something else. That's what
 they hire project managers for. This is the only reason of that millions
-of PMs existence&mdash;to _predict_ the future so that we were able to
+of PMs existence---to _predict_ the future so that we were able to
 kill our projects before they kill us (read "eat all our resources").
 
-You may ask&mdash;what about the **coordinating** part? What about
+You may ask---what about the **coordinating** part? What about
 [morning stand-ups]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})?
 What about walking around the office and motivating all the
 [office slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
@@ -161,7 +161,7 @@ Not really. This is what a PM does in order to better understand the situation
 and predict the future. But it's not what a PM is paid for.
 Indeed, a bad PM goes around the office and calls
 [multiple meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %})
-a day. This is also known as "staying on top of things"&mdash;a perfect term to define an amateur PM. A bad PM _becomes_ the future, instead
+a day. This is also known as "staying on top of things"---a perfect term to define an amateur PM. A bad PM _becomes_ the future, instead
 of predicting it. He [micromanages]({% pst 2015/sep/2015-09-22-micromanagement %})
 the team by telling everybody what to do, since this is the easiest way to
 know what will happen and when, in the short-term. But the long-term future

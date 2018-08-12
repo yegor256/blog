@@ -85,7 +85,7 @@ has an hourly rate, say, $40. Thus, when a [one-hour]({% pst 2017/nov/2017-11-28
 programmer earns 0.004% of equity ($40 / $1,000,000). Our software calculates
 it all automatically, increasing their shares after each completed task.
 
-Using these two variables&mdash;valuation and hourly rate&mdash;the company
+Using these two variables---valuation and hourly rate---the company
 can influence programmers' motivation.
 
 No need to [lie]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) to

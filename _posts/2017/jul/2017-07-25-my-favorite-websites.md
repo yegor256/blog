@@ -134,7 +134,7 @@ and the service is pretty decent. I'm with them for at least five years.
 [Papertrail](https://papertrailapp.com/?thank=9e5dc6)
 is where all my logs are being aggregated. I tried a few other
 systems, but these guys seem to be the best. I even was paying them something
-some time ago, but stopped&mdash;their free package seems to be sufficient
+some time ago, but stopped---their free package seems to be sufficient
 enough for my volumes.
 
 <img src="/images/2017/07/sites-statuscake.jpg" class="env-ico" alt="icon"/><br/>

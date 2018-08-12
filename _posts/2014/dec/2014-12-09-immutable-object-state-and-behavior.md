@@ -92,7 +92,7 @@ same state.
 
 {% youtube KwP7Ay9Z-hc %}
 
-Method `toString()` exposes the document's behavior&mdash;the document can
+Method `toString()` exposes the document's behavior---the document can
 convert itself to a string.
 
 In order to modify a document's title, we just call its `setTitle()`
@@ -171,7 +171,7 @@ first = first.title("How to cook pasta");
 
 Every time we want to modify its encapsulated state, we have to modify
 its identity too, because there is no identity. State is the identity.
-Look at the code of the `equals()` method above&mdash;it compares documents
+Look at the code of the `equals()` method above---it compares documents
 by their IDs and titles. Now ID+title of a document is its identity!
 
 ## What About Frequent Changes?
@@ -214,8 +214,8 @@ class Document {
 {% endhighlight %}
 
 Conceptually speaking, this document is acting as a proxy of a real-life
-document that has a title stored somewhere&mdash;in a file, for example. This is
-what a good object should do&mdash;be a proxy of a real-life entity.
+document that has a title stored somewhere---in a file, for example. This is
+what a good object should do---be a proxy of a real-life entity.
 The document exposes two features: reading the title and saving the title. Here is
 how its [interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %}) would look like:
 
@@ -262,7 +262,7 @@ real-world document and extract or update its title.
 Problems arise when such an entity doesn't exist in a real world. In that
 case, we need to create a mutable object property called `title`, read it via
 `title()`, and modify it via `title(String)`. But an object is immutable,
-so we can't have a mutable property in it&mdash;by definition! What do we do?
+so we can't have a mutable property in it---by definition! What do we do?
 
 Think.
 
@@ -349,7 +349,7 @@ in-file or in-HTTP data. In C++, we can create that `Memory` class
 and use it exactly the way we explained above.
 
 **Use Arrays**.
-In Java, an array is a data structure with a unique property&mdash;it can be modified while being declared as `final`. You can use
+In Java, an array is a data structure with a unique property---it can be modified while being declared as `final`. You can use
 an array of bytes as a mutable data structure inside an immutable object.
 It's a surrogate solution that conceptually resembles the `Memory` class
 but is much more primitive.
@@ -367,7 +367,7 @@ There is no workaround.
 
 To summarize, don't forget that an object is an **animator** of data. It is using
 its encapsulated knowledge in order to reach the data. No matter where
-the data is stored&mdash;in a file, in HTTP, or in memory&mdash;it is
+the data is stored---in a file, in HTTP, or in memory---it is
 conceptually very different from an object state, even though they may
 look very similar.
 

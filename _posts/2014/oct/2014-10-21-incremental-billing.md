@@ -20,7 +20,7 @@ When you hire a software developer (individual or a team), there are
 basically two types of contracts:
 [fixed price](https://en.wikipedia.org/wiki/Fixed-price_contract) or
 [time-and-material](https://en.wikipedia.org/wiki/Time_and_materials).
-They are fundamentally different but the truth is that in either case&mdash;**you lose**.
+They are fundamentally different but the truth is that in either case---**you lose**.
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
@@ -46,7 +46,7 @@ to get their monthly salaries on time.
 
 What does this tell us?
 
-I guess it means that in all failures you&mdash;the client&mdash;will be the loser.
+I guess it means that in all failures you---the client---will be the loser.
 
 ## Time and Material
 
@@ -73,17 +73,17 @@ but overall
 [statistics]({% pst 2014/apr/2014-04-11-cost-of-loc %})
 tell us that most of that time will be wasted.
 
-No matter how good or bad the code written during that month&mdash;you still have
+No matter how good or bad the code written during that month---you still have
 to pay the bill. How many more invoices you will get until the
 product is done? Nobody knows.
 
-In the end&mdash;you lose.
+In the end---you lose.
 
 ## Fixed Price
 
 {% figure /images/2014/10/fixed-price-contract.svg 500 %}
 
-In Fixed Price you will feel secure at the beginning&mdash;"the statement
+In Fixed Price you will feel secure at the beginning---"the statement
 of work specifies everything and the price is fixed, how can I lose?"
 According to the statistics above, however, programmers are much smarter than their
 [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}).
@@ -102,7 +102,7 @@ or corrections, there will be a fight about budget. You will either give
 up and lose a lot of money or your team will significantly jeopardize
 quality, in order to stay profitable.
 
-In either case&mdash;you lose.
+In either case---you lose.
 
 ## Incremental Billing
 
@@ -144,4 +144,4 @@ How does this help you not lose/waste money? Here's how:
 As you can see, [XDSD methodology](http://www.xdsd.org) not only
 improves the way we develop software but also fixes the flaws in
 the way you pay for it. Since it is a win-win model, it is beneficial
-for both programmers and for you&mdash;the paying project sponsor.
+for both programmers and for you---the paying project sponsor.

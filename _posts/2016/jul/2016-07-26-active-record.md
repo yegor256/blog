@@ -26,7 +26,7 @@ You probably remember what [I think]({% pst 2014/dec/2014-12-01-orm-offensive-an
 about ORM, a very popular design pattern. In a nutshell,
 it encourages us to turn objects into
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), which are
-anemic, passive, and not objects at all. The consequences are usually dramatic&mdash;the entire programming paradigm shifts from object-oriented to procedural.
+anemic, passive, and not objects at all. The consequences are usually dramatic---the entire programming paradigm shifts from object-oriented to procedural.
 I've tried to explain this at a [JPoint](https://www.youtube.com/watch?v=aER4uwyFbqQ) and
 [JEEConf](https://www.youtube.com/watch?v=63tS3HNmhiE) this year. After
 each talk, a few people told me that what I'm suggesting is called
@@ -49,7 +49,7 @@ I disagree. Moreover, I think that ActiveRecord is even worse than ORM.
 ORM consists of two parts: the session and
 [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}), also known as "entities."
 The entities have no functionality; they are just primitive containers for the
-data transferred from and to the session. And that is what the problem is&mdash;objects don't encapsulate but rather expose data. To understand why this is wrong and why it's
+data transferred from and to the session. And that is what the problem is---objects don't encapsulate but rather expose data. To understand why this is wrong and why it's
 against the object paradigm, you can read
 [here]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 [here]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),

@@ -321,8 +321,8 @@ colors.make(0xBF1932);
 
 However, this is still not really an object-oriented way of thinking, because
 we're taking the decision-making away from the object it belongs to. Either
-through a static factory method `make()` or a new class `Colors`&mdash;it doesn't
-really matter how&mdash;we tear our objects into two pieces. The first
+through a static factory method `make()` or a new class `Colors`---it doesn't
+really matter how---we tear our objects into two pieces. The first
 piece is the object itself and the second one is the decision
 making algorithm that stays somewhere else.
 

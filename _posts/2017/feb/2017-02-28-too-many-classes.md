@@ -49,7 +49,7 @@ we had 300 shorter ones, then the code would be way less readable."
 This will most certainly happen if you design them wrong.
 
 Types (or classes) in OOP constitute your [_vocabulary_](https://en.wikipedia.org/wiki/Vocabulary),
-which explains the world around your code&mdash;the world your code lives in.
+which explains the world around your code---the world your code lives in.
 The richer the vocabulary, the more powerful your code.
 The more types you have, the better you can understand and explain the world.
 

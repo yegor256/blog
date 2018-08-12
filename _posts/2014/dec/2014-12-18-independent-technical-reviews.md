@@ -69,7 +69,7 @@ We, at [Zerocracy](http://www.zerocracy.com), do independent reviews
 with every project of ours, and this is a list of principles we use:
 
 **Make Independent Reviews Systematic**.
-This is the first and most important rule&mdash;organize
+This is the first and most important rule---organize
 such technical reviews regularly. Moreover, inform your team about the schedule,
 and let them be prepared for the reviews. Once a month is a good practice,
 according to my experience. Depending on your source code size, a full
@@ -87,7 +87,7 @@ critical issues he can discover. Our estimate is that he should spend five hours
 work. Thus, he will get $750 when we have 20 bugs in our tracking system
 reported by him. If he finds fewer, he gets proportionally less money.
 This payment schedule will help you focus your reviewer on the main
-objective of the review process&mdash;finding and reporting issues. There
+objective of the review process---finding and reporting issues. There
 are no other goals. The only thing you're interested in is knowing what
 the issues with your current technical solution are. That's what you're paying for.
 
@@ -116,7 +116,7 @@ to hear this again from the reviewer. Instead, you want to know what
 is wrong and needs to be fixed. So your questions should sound like,
 "What problems do you think we should fix first?" Some reviewers will try
 to please you with positive comments, but ignore that flattery and bring them back
-to the main goal&mdash;bugs. The payment schedule explained above should help.
+to the main goal---bugs. The payment schedule explained above should help.
 
 **Regularly Change Reviewers**.
 Try not to use the same reviewer more than once on the same project (I mean the
@@ -143,7 +143,7 @@ be honest with them. Tell them that the [quality of the product]({% pst 2017/dec
 is critical for you
 and your business. Explain to them that the business is paying them for their
 work and that in order to keep paychecks coming, you have to stress quality
-control&mdash;regularly, objectively, independently, and honestly. In the end,
+control---regularly, objectively, independently, and honestly. In the end,
 if you manage to organize reviews as this article explains, the team will
 be very thankful to you. They will gain a lot of new ideas and thoughts from every
 review and will ask you to repeat them regularly.
@@ -184,7 +184,7 @@ to handle exponential growth in web traffic. An independent reviewer will help y
 [flaws]({% pst 2015/aug/2015-08-25-fail-fast %})
 and address them sooner than later. In order to get bugs
 of that kind from the reviewer, you should encourage him to report
-_anything_ he doesn't like&mdash;unmotivated use of a technology,
+_anything_ he doesn't like---unmotivated use of a technology,
 lack of documentation, unclear purpose of a file, absence of
 a unit test, etc. Remember, the reviewer is not a member of your team and has his
 own ideas about the technologies you're using and software development in general.
@@ -202,7 +202,7 @@ deployment pipeline, production logs,
 customer [bug reports]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), statistics, etc. Everything that
 could help him understand how your system works, and more importantly,
 where and how it breaks, is very useful. Don't limit the reviewer to the
-source code only&mdash;this is simply not enough! Let him see the big
+source code only---this is simply not enough! Let him see the big
 picture, and you will get a much more detailed and professional report.
 
 **Track How Inconsistencies Are Resolved**.

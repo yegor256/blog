@@ -53,7 +53,7 @@ byte[] content = Files.readAllBytes(
 );
 {% endhighlight %}
 
-This code is very imperative&mdash;it reads the file content right here and now,
+This code is very imperative---it reads the file content right here and now,
 placing it into the array.
 
 This is how you do it with [Cactoos](https://github.com/yegor256/cactoos):
@@ -66,7 +66,7 @@ Bytes source = new InputAsBytes(
 );
 {% endhighlight %}
 
-Pay attention&mdash;there are no method calls yet. Just three constructors
+Pay attention---there are no method calls yet. Just three constructors
 of three classes that compose a bigger object. The object `source` is of type
 [`Bytes`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Bytes.html)
 and represents the content of the file. To get that content

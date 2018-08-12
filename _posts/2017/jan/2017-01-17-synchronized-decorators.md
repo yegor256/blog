@@ -47,7 +47,7 @@ class Position {
 }
 {% endhighlight %}
 
-What do you think&mdash;is it [thread-safe](https://en.wikipedia.org/wiki/Thread_safety)?
+What do you think---is it [thread-safe](https://en.wikipedia.org/wiki/Thread_safety)?
 This term refers to whether
 an object of this class will operate without mistakes when used by multiple
 threads at the same time. Let's say we have two threads working with

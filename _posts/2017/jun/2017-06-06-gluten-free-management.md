@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 We live in the era of organic food, eco-friendly toilets, zero-emission cars,
-and harassment-free offices. Our management practices have to keep up&mdash;they
+and harassment-free offices. Our management practices have to keep up---they
 must be zero-stress, conflict-free, and idiot-friendly. If you're still
 stuck in the old carrot-and-stick, mediocrity-intolerant, primitive mentality,
 these recipes will open your eyes.
@@ -106,7 +106,7 @@ Elon Musk and Peter Thiel biographies.
 
 **Be a Committer**.
 Not a [Git](https://git-scm.com/)
-committer, obviously&mdash;that's for junior programmers. You
+committer, obviously---that's for junior programmers. You
 have to commit yourself to the project, just like Tim Cook
 [committed](https://techcrunch.com/2016/12/19/apples-tim-cook-assures-employees-that-it-is-committed-to-the-mac-and-that-great-desktops-are-coming/)
 to MacBooks. Technically, this means:
@@ -123,13 +123,13 @@ just commit <del>suicide</del> themselves to new projects.
 
 **Be a Friend**.
 Explicit and non-ambiguous work orders are not
-popular any more&mdash;they create tension and destroy
+popular any more---they create tension and destroy
 [team morale]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}).
 Guilt-driven management is much more subtle and elegant:
 you turn your subordinates into a family and then say:
 "I count on you as a friend."
 Who can refuse a friend? And not even a friend, but a mom. This is
-who they will associate you with when the guilt kicks in&mdash;with their
+who they will associate you with when the guilt kicks in---with their
 mothers. They won't disobey, won't quit, and will never ask for
 [more money]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %}).
 

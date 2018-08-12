@@ -64,7 +64,7 @@ high performance, reliability, security and even maintainability are all
 very important things to worry about. However, a good architect knows that
 all these can be resolved and achieved by programmers, if they are properly
 hired, motivated, organized and controlled. How to hire, motivate, organize
-and control them&mdash;that's what a good architect worries about.
+and control them---that's what a good architect worries about.
 
 He knows that process comes first, people next.
 
@@ -77,7 +77,7 @@ published in IEEE Computer in 2001:
 enough, they can use almost any process
 and accomplish their assignment. If they
 are not good enough, no process will
-repair their inadequacy&mdash;'people trump
+repair their inadequacy---'people trump
 process' is one way to say this." It is acceptable if a programmer
 thinks like that, but not an architect.
 
@@ -140,7 +140,7 @@ For example:
 
 There are many other instances of "No" which can easily turn an architect into
 a hated figure, but this is what his job is: to be the bad guy. This is why
-he has to be strong&mdash;to handle it all calmly and continue leading
+he has to be strong---to handle it all calmly and continue leading
 the project forward, toward his own well-defined technical goals.
 
 **He Is Abstract.**

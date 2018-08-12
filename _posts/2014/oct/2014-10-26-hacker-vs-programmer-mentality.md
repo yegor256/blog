@@ -53,7 +53,7 @@ have become over the last twenty years.
 The second trend demonstrates how much software developers' salaries
 escalated over the same period. More accurately, they tripled. I didn't find
 an official report about that, but I'm sure it's no secret to anyone
-that the salaries of programmers keep growing&mdash;$200,000 per year for
+that the salaries of programmers keep growing---$200,000 per year for
 a senior developer is not a dream any more... while twenty years
 ago $60K was the best offer around. I found
 [this article](http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html)
@@ -97,8 +97,8 @@ I would highlight these qualities of a good
  * uses all known (and unknown) features of a programming language
  * discriminates others as hackers and newbies and codes for hackers
  * gets bored and frustrated by [rules]({% pst 2015/oct/2015-10-13-competition-without-rules %}) and [standards]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
- * doesn't write unit tests&mdash;juniors will write them later
- * enjoys fire-fighting&mdash;that's how his talent manifests
+ * doesn't write unit tests---juniors will write them later
+ * enjoys fire-fighting---that's how his talent manifests
  * prefers talks over [docs]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), since they are much more fun
  * hates to see his code being modified by someone else
  * likes to dedicate himself to one project at a time
@@ -109,11 +109,11 @@ A hacker is a talented individual. He wants to express his
 talent in the software he writes. He enjoys coding and does
 it mostly for fun. I would say, he is married to his code and can't imagine
 its happy life after an eventual divorce. Code ownership is
-what a hacker is about&mdash;he understands himself as an "owner"
+what a hacker is about---he understands himself as an "owner"
 of the code.
 
-When I ask one of my hacker friends&mdash;"How will someone understand
-what this code does?" I almost always hear the same answer&mdash;"They will ask me!" (usually said very proudly, with a sincere smile).
+When I ask one of my hacker friends---"How will someone understand
+what this code does?" I almost always hear the same answer---"They will ask me!" (usually said very proudly, with a sincere smile).
 
 ## Designer Mentality
 
@@ -150,9 +150,9 @@ contributes to the source code. He always makes sure that once
 he leaves the project his code and his ideas stay and work.
 
 The highest satisfaction for a good designer
-is to see his code living its own life&mdash;being modified, improved,
+is to see his code living its own life---being modified, improved,
 refactored and eventually retired. A designer sees himself as a parent
-of the code&mdash;once it is old enough to walk and talk, it has
+of the code---once it is old enough to walk and talk, it has
 to live its own life.
 
 ## The Future

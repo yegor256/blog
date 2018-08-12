@@ -51,7 +51,7 @@ But that's not all.
 This principle also means that nobody is paid for anything except
 tasks explicitly assigned to him/her. Thus, when a programmer has a question
 about current design,
-[specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), configuration, etc.&mdash;nobody will be interested in answering it. Why not? Because there is no payment attached to this.
+[specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}), configuration, etc.---nobody will be interested in answering it. Why not? Because there is no payment attached to this.
 Answering questions in Skype, Slack, or HipChat, or by email is something that
 is not appreciated in XDSD in any way. The project simply doesn't pay for
 this activity. That's why none of our programmers do this.

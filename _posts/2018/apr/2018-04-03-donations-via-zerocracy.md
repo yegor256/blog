@@ -26,7 +26,7 @@ direct cash payments from your users, usually. There are [ways](https://hackerno
 to collect money, which include an obvious "tip jar" button on your GitHub project page.
 The chances anyone will pay
 [are low](https://news.ycombinator.com/item?id=14446516) though. In my opinion,
-this is mostly because nobody trusts you enough&mdash;they are not sure you will
+this is mostly because nobody trusts you enough---they are not sure you will
 use the money to make the product better. Most likely you will just spend it
 and nothing will change. But they want the product, not to make you happier.
 At least that's what I feel when I see a [Patreon](https://patreon.com/) button.
@@ -37,7 +37,7 @@ At least that's what I feel when I see a [Patreon](https://patreon.com/) button.
 
 [Zerocracy](http://www.zerocracy.com) is a platform that manages programmers remotely.
 Moreover, it's absolutely [free](http://www.zerocracy.com/policy.html#23) for open source projects. Take a
-look at [Cactoos](http://www.cactoos.org) or [Takes](http://www.takes.org)&mdash;they
+look at [Cactoos](http://www.cactoos.org) or [Takes](http://www.takes.org)---they
 are both managed by
 [Zerocrat]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}). These projects
 are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
@@ -83,7 +83,7 @@ Takes.org:<br/>
 The advantage of this approach, compared to, for example,
 [BountySource](https://www.bountysource.com/), is that the money will
 be distributed in micro-payments and will be fully traceable. I believe
-that this makes a difference for donators&mdash;they are interested to see
+that this makes a difference for donators---they are interested to see
 how their money is being used.
 
 

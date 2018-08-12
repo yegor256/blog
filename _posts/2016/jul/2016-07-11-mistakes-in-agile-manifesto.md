@@ -39,9 +39,9 @@ interpretation of each principle.
 By focusing on "satisfy the customer," Agile adepts totally forget about
 the "through" part. They think that a [happy customer]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 is their true objective, while "continuous delivery" is something that obviously
-helps, though not crucially. However, this is quite the opposite&mdash;the customer
+helps, though not crucially. However, this is quite the opposite---the customer
 will be satisfied _if_ the software is perfectly created and delivered. If the
-customer is not satisfied, we find another customer&mdash;that's the
+customer is not satisfied, we find another customer---that's the
 true spirit a professional software team should adhere to. I believe that's what
  the Manifesto means. We make sure that our process is
 "early and continuous," which will result to customer satisfaction. We focus on improving
@@ -73,7 +73,7 @@ team has to frequently deliver, while programmers are free to deliver almost
 nothing and who knows when. I think the Manifesto here is emphasizing on
 both individual and group responsibilities to frequently deliver. I also think
 that this frequency should be way higher than just a "couple of weeks." Today, with
-modern technologies and instruments, we can deliver way faster&mdash;several
+modern technologies and instruments, we can deliver way faster---several
 times a day.
 
 **Principle #4**:
@@ -96,9 +96,9 @@ shorter response cycles. It definitely doesn't mean lack of roles and responsibi
 {% quote Trust doesn't mean lack of control. %}
 
 Trust is a great word and concept, but it doesn't replace another equally great
-word&mdash;control. Most Agile teams think that trust means
-exactly that&mdash;complete lack of any validation, verification, responsibility,
-and control. "We trust our programmers to write perfect codes"&mdash;I've heard that countless times which is simply wrong. This principle means something completely different.
+word---control. Most Agile teams think that trust means
+exactly that---complete lack of any validation, verification, responsibility,
+and control. "We trust our programmers to write perfect codes"---I've heard that countless times which is simply wrong. This principle means something completely different.
 It means that when clearly defined tasks are assigned to their
 performers, we fully delegate responsibilities to them. We
 [motivate]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
@@ -143,7 +143,7 @@ is suggesting to do though.
 This doesn't mean that we should indefinitely [burn]({% pst 2015/jun/2015-06-02-how-to-estimate-software-cost %})
 customers' money. Yes, we
 should be developing at some given speed, but we should always remember
-whose money we're spending&mdash;customers' money. The Manifesto doesn't say anything
+whose money we're spending---customers' money. The Manifesto doesn't say anything
 about the cost of development and that's probably because it was written by
 those who make money (programmers), not those who spend it (customers). We must therefore
 remember that any project is first of all a money burning machine. That's why
@@ -171,7 +171,7 @@ teams understand "quality" as a great flag to hang on the wall, but
 get scared when I ask, "what happens if someone delivers low quality?."
 
 **Principle #10**:
-"Simplicity&mdash;the art of maximizing the amount of work not done&mdash;is essential."
+"Simplicity---the art of maximizing the amount of work not done---is essential."
 
 That's a great rule which most Agile teams don't follow at all. This principle
 means that our tasks are small and simple enough to make sure they are either
@@ -189,12 +189,12 @@ and doable work order.
 
 Self-organized doesn't mean un-organized. This rule is often translated
 as a legalization of _anarchy_. We don't need any project managers,
-processes, discipline, rules, or policies&mdash;we've got
+processes, discipline, rules, or policies---we've got
 [holacracy]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) instead!
-We also don't need a software architect&mdash;our programmers can make
+We also don't need a software architect---our programmers can make
 all technical decisions at regular [meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %})!
 Furthermore, we don't want our programmers
-to be individually responsible for anything&mdash;they are always together
+to be individually responsible for anything---they are always together
 in all risks and issues. Stop that nonsense! This is not what the Manifesto means.
 A self-organizing team is a team that doesn't need any supervision from the outside;
 a team that has clearly defined roles from the inside;

@@ -113,7 +113,7 @@ some knowledge (aka, a "state"). That's what
 
 ## What is a DI Container?
 
-So far so good, but here comes the dark side&mdash;a dependency
+So far so good, but here comes the dark side---a dependency
 injection container. Here is how it works (let's use
 [Google Guice](https://github.com/google/guice)
 as an example):

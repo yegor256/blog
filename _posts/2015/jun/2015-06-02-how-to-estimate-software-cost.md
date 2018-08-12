@@ -37,7 +37,7 @@ the cost?" I can, but I won't. Here is why.
 {% jb_picture_body %}
 
 Let me ask you something else: _Why do you need an estimate?_
-Yes, I mean it&mdash;why do you ask me how much it will cost
+Yes, I mean it---why do you ask me how much it will cost
 to develop the software for you? I can tell you why.
 
 Because you don't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) me.
@@ -75,7 +75,7 @@ partner, and you need to know what to expect and when, but ...
 You're asking the _wrong question_!
 
 This question has only one valid answer, and it's the answer nobody
-will ever give you&mdash;the development will take forever and will
+will ever give you---the development will take forever and will
 consume all your money. All other answers are simply a lie.
 
 I'm sorry if I've delivered bad news to you.

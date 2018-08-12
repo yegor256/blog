@@ -6,7 +6,7 @@ tags: oop java
 place: Kiev, Ukraine
 description: |
   A properly designed method in object-oriented software
-  must have a single return statement&mdash;and nothing
+  must have a single return statement---and nothing
   but a return statement.
 keywords:
   - single function exit point
@@ -80,7 +80,7 @@ two `return` statements are better than one.
 If your code is truly object-oriented, you won't be able to have more than
 one `return`. Moreover, you will have nothing except a `return` in each method.
 Actually, you will have only two operators in the entire
-software&mdash;`new` and `return`. That's it.
+software---`new` and `return`. That's it.
 
 Until we're there, let's stick with just one `return` and at least try to look
 like pure [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}).

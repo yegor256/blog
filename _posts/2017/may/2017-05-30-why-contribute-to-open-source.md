@@ -22,15 +22,15 @@ jb_picture:
 You probably remember my half-a-year-old article:
 [Why Don't You Contribute to Open Source?]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}).
 I said there that if you don't have your own OSS projects
-or don't give anything back to those you're using&mdash;something
+or don't give anything back to those you're using---something
 is wrong with you. Now I'm talking to those who actually _do_ contribute
-without demanding anything back&mdash;guys, you're doing it wrong!
+without demanding anything back---guys, you're doing it wrong!
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Open source <del>almost</del> always means _free_, as in beer&mdash;nobody will
+Open source <del>almost</del> always means _free_, as in beer---nobody will
 pay you anything for your pull requests. However, it doesn't mean
 you're not allowed to make money.
 
@@ -38,7 +38,7 @@ Of course, you will not earn any cash directly by fixing a bug in
 [docker/docker](https://github.com/docker/docker), but you _may_ earn
 some intangible value, which will be converted to cash later.
 
-Moreover, you _must_ earn it&mdash;this is my point. Otherwise, if you contribute
+Moreover, you _must_ earn it---this is my point. Otherwise, if you contribute
 out of pure
 [altruism](https://en.wikipedia.org/wiki/Altruism),
 you will lose the motivation very soon. Not because
@@ -50,7 +50,7 @@ money you won't feel your efforts are being truly appreciated.
 The intangible value I'm talking about is, of course, your
 [resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}). If you
 are an active contributor to [docker/docker](https://github.com/docker/docker),
-your resume says so, and you're in the list of contributors&mdash;your
+your resume says so, and you're in the list of contributors---your
 hourly rate or your salary will
 [definitely]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}) be higher.
 

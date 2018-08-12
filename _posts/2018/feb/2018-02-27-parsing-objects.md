@@ -27,7 +27,7 @@ which are serialized into JSON before going out
 and deserialized when coming back. This way is as much popular as it is wrong. The
 serialization part should be replaced by [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}),
 which I explained earlier.
-Here is my take on deserialization, which should be done by&mdash;guess what&mdash;objects.
+Here is my take on deserialization, which should be done by---guess what---objects.
 
 <!--more-->
 

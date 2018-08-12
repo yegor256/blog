@@ -139,7 +139,7 @@ Each time we need a new format, we create a new printer.
 
 You may say that the object will be rather big if there will be many formats.
 That's true, but a big object is a bad design in the first place. I would
-say that if there is more than one printer&mdash;it's a problem.
+say that if there is more than one printer---it's a problem.
 
 So, what to do if we need multiple formats? Use "media," where that printers
 will be able to print to. Say, we have an object that represents a
@@ -165,7 +165,7 @@ public class Book {
 Again, it's a very primitive design of that
 [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 `Media` class, but you got
-the idea&mdash;the `media` accepts the data.
+the idea---the `media` accepts the data.
 Now, we want to print our object to JSON
 (this design is not really perfect, since `JsonObjectBuilder` is not immutable,
 even though it looks like one...):
@@ -208,7 +208,7 @@ exactly what printed just now. We need to print the book to XML? We
 create `XmlMedia`, which will print the book to XML. The `Book` class
 stays small, while the complexity of "media" objects is unlimited.
 
-My point here is simple&mdash;no
+My point here is simple---no
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 just printers!
 

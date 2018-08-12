@@ -162,7 +162,7 @@ in order to sort them correctly. We want changes to be applied in their
 correct chronological order.
 
 That's it. We're ready to run `mvn liquibase:update -Pproduction` and
-our production database will be updated&mdash;a new column will be
+our production database will be updated---a new column will be
 added to the `user` table.
 
 Also, see how [MySQL Maven Plugin]({% pst 2014/may/2014-05-21-mysql-maven-plugin %})

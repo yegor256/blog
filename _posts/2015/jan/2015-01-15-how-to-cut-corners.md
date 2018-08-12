@@ -55,7 +55,7 @@ This is the first and most preferable option. If you can't figure out
 how to fix an issue or how to implement a new feature, it's a fault
 of the project, not you. Even if you can't figure it out because you
 don't know anything about Ruby and they hired you to fix bugs
-in a Ruby on Rails code base&mdash;it's their fault. Why did they hire
+in a Ruby on Rails code base---it's their fault. Why did they hire
 you when you know nothing about Ruby?
 
 So be positive; don't blame yourself. If you don't know how this
@@ -67,9 +67,9 @@ easy to understand and maintain.
 Don't try to eat spaghetti code; complain to the chef and ask
 him or her to cook something better (BTW, I love spaghetti).
 
-How can you do that? Create dependencies&mdash;new bugs complaining
+How can you do that? Create dependencies---new bugs complaining
 about unclear design, lack of unit tests, absence of necessary classes, or
-whatever. Be creative and offensive&mdash;in a constructive and professional way,
+whatever. Be creative and offensive---in a constructive and professional way,
 of course. Don't get personal. No matter who cooked that spaghetti, you have
 nothing against him or her personally. You just want another dish, that's all.
 
@@ -82,7 +82,7 @@ when all dependencies are resolved and the code looks better, try to
 get back to it again. If you still see issues, create new dependencies.
 Keep doing this until the code in front of you is clean and easy to fix.
 
-Don't be [a hero]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainability %})&mdash;don't rush into fixing the
+Don't be [a hero]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainability %})---don't rush into fixing the
 [bad code]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}) you inherited. Think
 [like a developer, not a hacker]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Remember that your first and most important responsibility as
@@ -90,13 +90,13 @@ a disciplined engineer is to help the project _reveal_ maintainability issues.
 Who will fix them and how is the responsibility of a
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}).
 Your job is to reveal, not to hide. By being a hero and trying to fix everything
-in the scope of a single task, you're not doing the project a favor&mdash;you're concealing the problem(s).
+in the scope of a single task, you're not doing the project a favor---you're concealing the problem(s).
 
 Edit: Another good example of a dependency may be a question raised
 at, for example, [StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
 or a user list of a third-party library.
 If you can't find a solution yourself and the problem is outside of the scope
-of your project&mdash;submit a question to SO and put its link to the
+of your project---submit a question to SO and put its link to the
 source code (in JavaDoc block, for example).
 
 ## Demand Better Documentation and Wait
@@ -106,7 +106,7 @@ don't understand how to fix the problem or implement a new feature. It's
 too complex. Or maybe you just don't know how this library works. Or you've
 never done anything like that before. Anyhow, you can't continue because
 you don't understand. And in order to understand, you will need a lot of
-time&mdash;much more than you have from your project manager or your Scrum board. What
+time---much more than you have from your project manager or your Scrum board. What
 do you do?
 
 {% badge /images/2015/01/cut-corners-2.png 250 %}
@@ -185,11 +185,11 @@ I think the best option here is to create a test that will prove that
 the code works as intended. The test won't fail, and the build will remain clean.
 You will commit it to the repository and ... report that the problem is solved.
 You will say that the reported bug doesn't really exist in real life. You
-will state that there is no bug&mdash;"our software works correctly; here
+will state that there is no bug---"our software works correctly; here
 is the proof: see my new unit test."
 
 Will they believe you? I don't think so, but they don't have a choice. They
-can't push you any further. You've already done something&mdash;created
+can't push you any further. You've already done something---created
 a new test that proves everything is fine. The ticket will be closed
 and the project will move on.
 
@@ -258,7 +258,7 @@ professional. They will remember you as a guy who was honest and took his
 reputation seriously. In the end, you will win.
 
 Don't hold the task in your hands. The minute you realize you're
-not the best guy for it or you simply can't fix it&mdash;notify
+not the best guy for it or you simply can't fix it---notify
 your manager. Make it his problem. Actually, it is his problem in the
 first place. He hired you. He [interviewed]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
 you. He decided to give you this

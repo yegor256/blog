@@ -60,7 +60,7 @@ for scalability, stress resilience, etc.
 I'm not going to discuss how the software is created in a specific
 technical stack. That's not important for this article. What's important now
 is how my programming work will be "wrapped." In other words, what will
-I hand off to the team of programmers after a week of hard work&mdash;what is my product, or more formally, my _deliverables_.
+I hand off to the team of programmers after a week of hard work---what is my product, or more formally, my _deliverables_.
 
 Thus, let's assume I managed to create a piece of software and it works.
 
@@ -71,7 +71,7 @@ alternatives. [We](http://www.zerocracy.com) usually work in GitHub, and the bes
 media is the `README.md` file in the root directory of the repo. I just
 put my text there in a plain [Markdown](https://daringfireball.net/projects/markdown/)
 format. That's enough for a good
-technical document&mdash;it has to be short; that's important.
+technical document---it has to be short; that's important.
 
 For each decision I made, there has to be at least one alternative
 that I considered and rejected. There are two items at the top of my list:
@@ -95,7 +95,7 @@ why the alternatives were rejected, and it's
 my choice. If someone questions my decisions in the future, they may
 say that the alternatives were not analyzed properly. It will be clear whose
 [fault]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
-it was&mdash;mine. So I'm taking full responsibility for these two
+it was---mine. So I'm taking full responsibility for these two
 choices I've made: Lucene and Java&nbsp;8.
 
 Yet another item to the list:
@@ -147,14 +147,14 @@ But I'm the [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 and I do what I think is right for the project.
 
 I'm trying to show that the point of this documentation is for
-me, the architect, to explain my way of thinking&mdash;no matter how bad,
+me, the architect, to explain my way of thinking---no matter how bad,
 biased, or _irrational_ it was. I have to write my decisions down and let the project
 [know]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 them all.
 
 I would suggest you keep the number of documented decisions somewhere
 between _four and twelve_. If there are fewer than four, I probably forgot
-to document something important. More than 12&mdash;I'm documenting
+to document something important. More than 12---I'm documenting
 too many non-important decisions. I should use other media for that,
 like JavaDoc blocks or responsive classes.
 
@@ -164,7 +164,7 @@ The next chapter in the `README.md` file has to explain how exactly I
 managed to address all concerns expressed in the initial
 [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}).
 I mentioned above that it goes without saying that our system must
-be as fast and scalable as Google. Thus, let's say there are two "concerns"&mdash;performance and scalability.
+be as fast and scalable as Google. Thus, let's say there are two "concerns"---performance and scalability.
 
 As a software architect, I must address them both. In other words, I have to
 prove that my solution is fast and scalable. Maybe it's not, but if I believe
@@ -305,7 +305,7 @@ a new class without a unit test, the coverage percentage goes down and
 the build breaks.
 
 My job, as an architect creating a prototype, is to make sure the coverage
-is calculated on every build and is under control&mdash;it can't go
+is calculated on every build and is under control---it can't go
 lower than the _threshold_ I set.
 
 No matter how low the threshold is, what matters is whether it is under
@@ -316,7 +316,7 @@ control or not.
 This is the final step before the handoff. I have to configure a continuous
 delivery pipeline to make sure the product is packaged and deployed in
 [one click]({% pst 2015/jun/2015-06-08-deadly-sins-software-project %}).
-This is a very important&mdash;critically important&mdash;step. Without it,
+This is a very important---critically important---step. Without it,
 everything done before and the piece of software itself is just a collection
 of files. A piece of software is a product when it is packagable and
 deployable in one click.
@@ -338,7 +338,7 @@ is packaged and deployed in a few minutes.
 
 ## Acceptance
 
-The last step is the handoff&mdash;I have to present my solution to the
+The last step is the handoff---I have to present my solution to the
 [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}),
 the sponsor of the project, and the team. Everybody has
 to accept it. It doesn't mean they will like it, and that's not the goal. The

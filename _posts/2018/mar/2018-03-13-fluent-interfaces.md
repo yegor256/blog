@@ -124,7 +124,7 @@ and the interface
 [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html),
 which is perfectly fluent. There are 43 methods!
 
-That is the biggest problem with fluent interfaces&mdash;they _force_ objects to be huge.
+That is the biggest problem with fluent interfaces---they _force_ objects to be huge.
 
 Fluent interfaces are perfect for their users, since all methods
 are in one place and the amount of classes is very small.
@@ -164,7 +164,7 @@ it's very far away from the DSL idea.
 {% quote Fluent interfaces are good for users, but bad for developers. Small objects are good for developers, but difficult to use. %}
 
 But here is the list of benefits. First, each object is small, very cohesive and
-they are all loosely coupled&mdash;which are obvious merits in OOP. Second,
+they are all loosely coupled---which are obvious merits in OOP. Second,
 adding new functionality to the library is as easy as creating a new class;
 no need to touch existing classes. Third, unit testing is simplified,
 since classes are small. Fourth, all classes can be immutable, which is also

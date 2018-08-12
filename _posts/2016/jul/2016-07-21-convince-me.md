@@ -41,7 +41,7 @@ we write, and they want their opinion to be taken into account and
 respected.
 
 And I'm not talking about [stupid]({% pst 2015/jan/2015-01-05-how-to-be-honest-and-keep-customer %})
-product owners&mdash;those guys are a separate story. I'm talking about a pretty
+product owners---those guys are a separate story. I'm talking about a pretty
 reasonable PO with his own technical opinion that needs to be heard.
 
 Here is a practical example. Last week, I was

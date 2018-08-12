@@ -85,15 +85,15 @@ the product and the trading will begin. I will make my commission.
 Will this be legal? I seriously doubt that [Stripe](http://www.stripe.com),
 for example, would approve my account if I told them my business plan.
 
-And the problem is not the YegorCoin itself&mdash;there is nothing wrong in
+And the problem is not the YegorCoin itself---there is nothing wrong in
 creating your own crypto-electronic-whatever-product. The problem is that I'll
 be trading something that has a very questionable value, being completely
 unregulated by the government. The trading of my YegorCoin,
 just like shares of stocks, bonds, options, gold, and Bitcoin, must be
-regulated by the people we're paying our taxes to&mdash;the police.
+regulated by the people we're paying our taxes to---the police.
 
 You may say that Coinbase is not issuing those Bitcoins and only trading
-them&mdash;and that's why it's not a pyramid. Not true. In my YegorBase shop
+them---and that's why it's not a pyramid. Not true. In my YegorBase shop
 I won't need to issue my YegorCoins for very long. As soon as the total volume
 of YegorCoins is big enough, the situation will control itself
 and the price will jump and fall somehow. I will make profit on the trading

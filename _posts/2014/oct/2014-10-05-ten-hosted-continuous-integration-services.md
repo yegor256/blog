@@ -103,7 +103,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center">?</td>
-  <td class="center">&mdash;</td>
+  <td class="center">---</td>
   <td><a href="https://ci.appveyor.com/project/yegor256/rultor/branch/master">
     <img src="https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true" class="x-build" alt='badge'/></a></td>
   </tr>
@@ -227,7 +227,7 @@ the best platform I've seen so far. Mostly because
 it is the most popular. Perfectly integrates with
 GitHub and has proper documentation. One important
 downside is the price of $129 per month. "With this money
-you can get a dedicated EC2 instance and install Jenkins there"&mdash;some of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
+you can get a dedicated EC2 instance and install Jenkins there"---some of my [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
 say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
@@ -265,7 +265,7 @@ system, which I generally appreciate. As a downside, they
 <span class="strike">don't have any Maven pre-installed</span>
 have an old version of Maven, but this was solved easily with a short
 custom script that downloads and unpacks the latest Maven. Another downside is
-that they are not configurable through a file (like `.travis.yml`)&mdash;you should do everything through a UI. They also support
+that they are not configurable through a file (like `.travis.yml`)---you should do everything through a UI. They also support
 [caching between builds](https://semaphoreapp.com/docs/caching-between-builds.html).
 
 {% badge /images/2014/10/snap.png 64 http://www.snap-ci.com %}
@@ -277,9 +277,9 @@ complicated than others, giving you an ability to define "stages"
 and combine them into pipelines. I'm not sure yet how these mechanisms
 may help in small and medium size projects we're mostly working with,
 but they look "cool." There is also a very unfortunate limitation of
-2Gb RAM per build&mdash;some of my Java projects fail because of that.
+2Gb RAM per build---some of my Java projects fail because of that.
 Besides that, they don't give full access to the build server, for example
-we can't modify anything in `/etc`&mdash;it is a show-stopper for us.
+we can't modify anything in `/etc`---it is a show-stopper for us.
 
 [**Codeship**](https://codeship.com) works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
@@ -320,7 +320,7 @@ continuous integration.
 {% badge /images/2014/10/vexor.png 64 http://vexor.io %}
 
 [**Vexor**](http://vexor.io/) looks nice and offers a rather unique
-billing model&mdash;they charge per build, not per month. I would definitely
+billing model---they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
 
 {% badge /images/2014/10/greenhouseci.png 64 http://www.greenhouseci.com %}

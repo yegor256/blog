@@ -74,7 +74,7 @@ they are called from.
 They are not using [true](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/globalvars.html)
 Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
-[alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) are&mdash;slipped through their fingers.
+[alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) are---slipped through their fingers.
 
 {% quote While the application is small and its test coverage is low, global variables may not hurt. %}
 
@@ -92,5 +92,5 @@ singletons, or class variables.
 
 My recommendation? Under no circumstances even think about any global variables.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think about global variables? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> <a href="https://twitter.com/hashtag/oop?src=hash&amp;ref_src=twsrc%5Etfw">#oop</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw">July 15, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think about global variables? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> <a href="https://twitter.com/hashtag/oop?src=hash&amp;ref_src=twsrc%5Etfw">#oop</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw">July 15, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

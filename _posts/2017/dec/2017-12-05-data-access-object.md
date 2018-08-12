@@ -30,7 +30,7 @@ and
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 I haven't had a chance
 yet to mention DAO. Here is my take on it: it's as much of a shame
-as its friends&mdash;ORM, DTO, and getters. In a nutshell,
+as its friends---ORM, DTO, and getters. In a nutshell,
 a [Data Access Object](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
 is an object [that](https://en.wikipedia.org/wiki/Data_access_object)
 "provides an abstract interface to some type of database or other
@@ -51,7 +51,7 @@ class BookDAO {
 }
 {% endhighlight %}
 
-The idea is simple&mdash;method `find()` creates
+The idea is simple---method `find()` creates
 a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %})
 `Book`, someone else injects new data into it and calls `update()`:
 

@@ -90,7 +90,7 @@ other programmers may catch your lies about "HDFS and Docker." The best
 defense is offense: I always acted very interested in what other
 people were working on. I always asked additional questions too, making
 them afraid of me. It worked. They never bothered me with their suspicions.
-Try not to avoid the stand-up meetings&mdash;if a manager sees you there
+Try not to avoid the stand-up meetings---if a manager sees you there
 they assume that you're actually working.
 
 **Advice**.
@@ -118,7 +118,7 @@ people will think that you're on top of everything in the team.
 My manager would ask me every now and then to train new programmers and to help them out. This
 too was very risky, since the new guys usually decided that I was their friend and
 would talk to me about everything, consuming my time. To prevent this
-from happening I would always try to introduce them to somebody else&mdash;their
+from happening I would always try to introduce them to somebody else---their
 new friend. Everybody, if they don't understand the consequences,
 is happy to talk to junior programmers and to patronize them. I just had to forward
 those juniors immediately to the right person.

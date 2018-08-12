@@ -21,7 +21,7 @@ keywords:
 Amazon DynamoDB is a great NoSQL cloud database. It is cheap,
 highly reliable and rather powerful. I'm using it in many web systems.
 
-There is one feature that it lacks, though&mdash;auto-increment attributes.
+There is one feature that it lacks, though---auto-increment attributes.
 
 Say that you have a table with a list of messages:
 
@@ -58,7 +58,7 @@ a few times in case of collisions.
 {% badge http://img.stateful.co/pomegranate.svg 128 %}
 
 To make life easier in a few of my applications, I created a simple web
-service&mdash;[stateful.co](http://www.stateful.co).
+service---[stateful.co](http://www.stateful.co).
 It provides a simple atomic counter feature through its RESTful API.
 
 <!--more-->
@@ -71,7 +71,7 @@ asking to
 increment your counter by one and return its next value.
 
 [stateful.co](http://www.stateful.co) guarantees that values
-returned will never duplicate each other&mdash;no matter how many
+returned will never duplicate each other---no matter how many
 clients are using a counter or how fast they request increments simultaneously.
 
 Moreover, I designed a small [Java SDK](https://github.com/sttc/java-sdk)

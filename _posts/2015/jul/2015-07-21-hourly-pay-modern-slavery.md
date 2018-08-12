@@ -68,7 +68,7 @@ in exchange, he gives me food and safety.
 The problem here is not about
 [punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
 This model of work makes me _think like a slave_. I think this is a fair
-exchange&mdash;I give away my freedom (my time), and I get back food and
+exchange---I give away my freedom (my time), and I get back food and
 safety. I'm a slave not because the master is punishing me and I'm sitting
 all day long in fetters. Absolutely not. A slave is not the one who was
 captured and imprisoned. A slave is one who thinks slavery is

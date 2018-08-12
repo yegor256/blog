@@ -43,7 +43,7 @@ What is wrong with this method?
 
 <!--more-->
 
-It may return `NULL` instead of an object&mdash;that's what is wrong.
+It may return `NULL` instead of an object---that's what is wrong.
 `NULL` is a terrible practice in an object-oriented paradigm and should be avoided at
 [all costs]({% pst 2016/mar/2016-03-22-try-finally-if-not-null %}).
 There have been a number of opinions about this published already, including
@@ -257,7 +257,7 @@ public Employee getByName(String name) {
 }
 {% endhighlight %}
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Mutable and Incomplete Objects
@@ -289,7 +289,7 @@ Mostly because it makes an object responsible for performance problems
 of the computational platform, which is something an `Employee` object should not be aware of.
 
 Instead of managing a state and exposing its business-relevant behavior,
-an object has to take care of the caching of its own results&mdash;this is what lazy loading is about.
+an object has to take care of the caching of its own results---this is what lazy loading is about.
 
 Caching is not something an employee does in the office, does he?
 

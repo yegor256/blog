@@ -50,7 +50,7 @@ Forget the quality, just finish it any way possible.
 Was I kidding? Not at all.
 
 I truly believe that quality is not what programmers should care about. They
-must care only about speed&mdash;close tasks as soon as possible&mdash;
+must care only about speed---close tasks as soon as possible---
 which means [make money]({% pst 2018/jan/2018-01-09-micro-budgeting %}).
 
 Won't this attitude ruin the project and turn the code base into a mess?
@@ -106,8 +106,8 @@ of code and closing more tickets.
 
 Not because they are ignorant and selfish, but because this is the right
 balance of responsibilities. This is how the project will get the most out
-of its developers&mdash;by freeing their minds of unnecessary and unproductive
-quality worries and letting them focus on what they do best&mdash;writing code.
+of its developers---by freeing their minds of unnecessary and unproductive
+quality worries and letting them focus on what they do best---writing code.
 
 Of course, not every project will be able to configure itself in the most
 effective way. Most projects don't even know how to do it. In those projects,

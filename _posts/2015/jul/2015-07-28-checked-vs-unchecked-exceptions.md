@@ -7,7 +7,7 @@ tags: oop java
 place: Sunnyvale, CA
 description: |
   While most programmers think checked exceptions in Java
-  are a mistake, I'm of the opposite opinion&mdash;unchecked
+  are a mistake, I'm of the opposite opinion---unchecked
   ones are a mistake.
 keywords:
   - checked vs unchecked exceptions
@@ -26,7 +26,7 @@ Do we need checked exceptions at all? The
 is over, isn't it?
 Not for me. While most object-oriented languages don't have them, and most programmers
 think checked exceptions are a Java mistake, I believe in the
-opposite&mdash;unchecked exceptions are the **mistake**. Moreover, I believe
+opposite---unchecked exceptions are the **mistake**. Moreover, I believe
 multiple exception types are a bad idea too.
 
 <!--more-->
@@ -69,7 +69,7 @@ I know each method is designed with a
 in mind. This is a guarantee to me that if method `save()` fails, it means
 the entire saving operation can't be completed. If I need to know what
 the cause of this failure was, I will [un-chain](https://en.wikipedia.org/wiki/Exception_chaining)
-the exception&mdash;traverse the stack of chained exceptions and stack traces
+the exception---traverse the stack of chained exceptions and stack traces
 encapsulated in `ex`.
 
 I never use exceptions for flow control, which means I **never recover**
@@ -119,7 +119,7 @@ a method is too big and does too many things at the same time (violates
 the single responsibility principle), it's definitely better to let us
 keep some exceptions "hidden" (a.k.a. unchecked).
 But it's not a real solution. It is only
-a temporary patch that does all of us more harm than good&mdash;methods keep
+a temporary patch that does all of us more harm than good---methods keep
 growing in size and complexity.
 
 Unchecked exceptions are a mistake in Java design, not
@@ -130,7 +130,7 @@ exactly what unchecked exceptions do.
 
 Instead, we should make this fact visible. When a method does too many
 things, there will be too many points of failure, and the author of the
-method will realize that something is wrong&mdash;a method should
+method will realize that something is wrong---a method should
 not throw exceptions in so many situations. This will lead to refactoring. The existence of
 unchecked exceptions leads to a mess. By the way, checked exceptions don't exist
 at all in Ruby, C#, Python, PHP, etc. This means that creators of these

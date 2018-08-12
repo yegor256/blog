@@ -32,7 +32,7 @@ right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
 their best to find what's wrong. Eventually they stop and say
 "we're done." How do they know when to stop? When there is enough
-testing? It's obvious&mdash;when there are _no more bugs left_ and the
+testing? It's obvious---when there are _no more bugs left_ and the
 product can be shipped! If you think like this, I have bad news for you.
 You're _fundamentally wrong_.
 

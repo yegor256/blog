@@ -25,7 +25,7 @@ downtime, backups and system administrators.
 [DynamoDB](http://aws.amazon.com/dynamodb/) is one of the steps towards this
 future.
 
-<blockquote class="twitter-tweet" lang="en"><p>This looks cool - jcabi-dynamo - a <a href="https://twitter.com/search?q=%23Java&amp;src=hash">#Java</a> Object layer atop the <a href="https://twitter.com/search?q=%23DynamoDB&amp;src=hash">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/search?q=%23aws&amp;src=hash">#aws</a></p>&mdash;Jeff Barr (@jeffbarr) <a href="https://twitter.com/jeffbarr/statuses/380813867971915777">September 19, 2013</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p>This looks cool - jcabi-dynamo - a <a href="https://twitter.com/search?q=%23Java&amp;src=hash">#Java</a> Object layer atop the <a href="https://twitter.com/search?q=%23DynamoDB&amp;src=hash">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/search?q=%23aws&amp;src=hash">#aws</a></p>---Jeff Barr (@jeffbarr) <a href="https://twitter.com/jeffbarr/statuses/380813867971915777">September 19, 2013</a></blockquote>
 <script async='' src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <!--more-->
@@ -86,7 +86,7 @@ try {
 }
 {% endhighlight %}
 
-The above script works fine, but there is one major drawback&mdash;it is not
+The above script works fine, but there is one major drawback---it is not
 object oriented. It is a perfect example of an imperative [procedural
 programming](http://en.wikipedia.org/wiki/Procedural_programming).
 

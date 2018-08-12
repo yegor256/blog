@@ -36,7 +36,7 @@ why you always work **top down**. Let's see what I mean through a practical exam
 Say I'm contracted by a friend of mine to create a word-counting command line
 tool very similar to [wc](http://en.wikipedia.org/wiki/Wc_%28Unix%29). He
 promised to pay me $200 for this work, and I promised him I'd deliver the
-product in two increments&mdash;an alpha and beta version. I promised him
+product in two increments---an alpha and beta version. I promised him
 I'd release the alpha version on Saturday and the beta version on Sunday. He is
 going to pay me $100 after the first release and the rest after the second release.
 
@@ -92,7 +92,7 @@ All clean!
 
 I'm ready to get my $200. Wait, the deal was to deliver two
 versions and get cash in two installments. Let's back up a little and
-think&mdash;how can we break this small tool into two parts?
+think---how can we break this small tool into two parts?
 
 On first thought, let's release the tool itself first and
 build automation and testing next. Is that a good idea? Can we

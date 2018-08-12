@@ -167,8 +167,8 @@ are able to control their build configurations with much better precision.
 ## Application-Centric
 
 Docker, unlike LXC or Vagrant, for example, is application-centric.
-This means that when we start a container&mdash;we start an application.
-With other virtualization technologies, when you get a virtual machine&mdash;you get a fully functional Unix environment, where you can login through
+This means that when we start a container---we start an application.
+With other virtualization technologies, when you get a virtual machine---you get a fully functional Unix environment, where you can login through
 SSH and do whatever you want.
 
 Docker makes things simpler. It doesn't give you SSH access to container,

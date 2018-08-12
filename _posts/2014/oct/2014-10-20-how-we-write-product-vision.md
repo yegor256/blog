@@ -86,7 +86,7 @@ and straight forward, like "earn money," "increase profit," "share photos,"
 or "host a website."
 
 I would recommend defining one or two needs for each stakeholder. If there
-are more than three, think again&mdash;do you really understand what your
+are more than three, think again---do you really understand what your
 stakeholders need?
 
 Your project will be considered successful if you **satisfy** all the needs
@@ -110,7 +110,7 @@ User can post tweets, read tweets of his friends,
   follow new friends and re-tweet their tweets.
 {% endhighlight %}
 
-Is it clear for a stranger what we're talking about here? Absolutely not&mdash;what
+Is it clear for a stranger what we're talking about here? Absolutely not---what
 is a "tweet," what does it mean to "follow" and what is a "re-tweet?"
 These questions have no answers in the Product Vision document,
 but it's clear that a user will have four main features available. All other
@@ -180,7 +180,7 @@ of abstraction. The document must take less than a minute to read,
 from start to finish.
 
 If you can't keep it
-[short]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})&mdash;you don't understand your product well enough.
+[short]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})---you don't understand your product well enough.
 
 ## Example
 

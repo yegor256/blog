@@ -25,7 +25,7 @@ for more than seven years. Using PDD, we delegate the responsibility of
 task decomposition to its performers, eliminating
 the role of a project manager. We've been using our proprietary software
 for that. A month ago, we made it public, open source, and free.
-It is available as [0pdd](http://www.0pdd.com)&mdash;a GitHub-based chat bot.
+It is available as [0pdd](http://www.0pdd.com)---a GitHub-based chat bot.
 
 <!--more-->
 

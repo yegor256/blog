@@ -64,7 +64,7 @@ Looks convenient, right? This is what the designers of Apache Commons think
 in the Java world). I encourage you to think differently.
 I can't tell you to stop using Apache Commons, because we just don't have
 a better alternative (yet!). But in your own code, don't use public
-static properties&mdash;ever. Even if this code may look convenient to you,
+static properties---ever. Even if this code may look convenient to you,
 it's a very bad design.
 
 {% quote Every time you see data duplication, start thinking about the functionality you're duplicating %}
@@ -72,10 +72,10 @@ it's a very bad design.
 The reason why is very similar to
 [utility classes]({% pst 2015/feb/2015-02-26-composable-decorators %})
 with public static
-methods&mdash;they are unbreakable hard-coded dependencies. Once you
+methods---they are unbreakable hard-coded dependencies. Once you
 use that `CharEncoding.UTF_8`, your object starts to depend on this
 data, and its user (the user of your object) can't break this dependency. You may say that
-this is your intention, in the case of a `"UTF-8"` constant&mdash;to make
+this is your intention, in the case of a `"UTF-8"` constant---to make
 sure that Unicode is specifically and exclusively being used. In this particular
 example, this may be true, but look at it from a more global perspective.
 
@@ -100,7 +100,7 @@ As you see, we encapsulate the "UTF-8" constant somewhere inside the class
 conversion is happening.
 
 By introducing `UTF8String`, we solved the problem of "UTF-8"
-literal duplication. But we did it in a proper object-oriented way&mdash;we encapsulated the functionality inside a class and let everybody
+literal duplication. But we did it in a proper object-oriented way---we encapsulated the functionality inside a class and let everybody
 instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.
 

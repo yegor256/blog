@@ -53,7 +53,7 @@ Travis found a new commit in the pull request and immediately
 (without any interaction from my side) triggered a build in that branch.
 The build didn't fail, that's why Travis gave me a green sign.
 I looked at that sign and at the code. Since all problems in the code
-were corrected by the pull request author and Travis didn't complain&mdash;I gave a "go" to Rultor.
+were corrected by the pull request author and Travis didn't complain---I gave a "go" to Rultor.
 
 ## Scenario #2: Continuous Integration
 

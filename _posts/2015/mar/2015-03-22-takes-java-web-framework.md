@@ -562,7 +562,7 @@ For more complex HTML documents, I would recommend you use XML/XSLT
 in combination with Xembly. I explained this idea in a few previous posts:
 [XML+XSLT in a Browser]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
 and [RESTful API and a Web Site in the Same URL]({% pst 2014/sep/2014-09-09-restful-web-sites %}).
-It is simple and powerful&mdash;Java generates XML output and the XSLT
+It is simple and powerful---Java generates XML output and the XSLT
 processor transforms it into HTML documents. This is how we separate
 representation from data. The XSL stylesheet is a "view" and `TkIndex` is a "controller,"
 in terms of [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}).

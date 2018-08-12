@@ -60,7 +60,7 @@ Does it have anything to do with
 [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) containers?
 Well, of course, we _could_ put the book into a container, inject the entire
 container into `print()`, let it retrieve the book from the container and
-then call `title()`. But that's not what IoC is really about&mdash;it's merely
+then call `title()`. But that's not what IoC is really about---it's merely
 one of its
 [perverted]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}) usage scenarios.
 
@@ -78,5 +78,5 @@ new PrintedBook(book);
 
 That would be pure [object composition](https://en.wikipedia.org/wiki/Object_composition).
 
-There is not much more to say on this subject; I hope I have cleared it up for you&mdash;it
+There is not much more to say on this subject; I hope I have cleared it up for you---it
 is just as simple as that.

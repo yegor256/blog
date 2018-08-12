@@ -39,7 +39,7 @@ Because we understand that there are two categories of bugs: visible and hidden.
 The more bugs that become visible, the more of them we can fix. More fixed bugs
 means fewer to annoy our users. By discovering bugs we make them visible.
 
-This is the primary job of a software tester&mdash;to make bugs visible.
+This is the primary job of a software tester---to make bugs visible.
 
 {% youtube 7DYr8GYzJ6Q %}
 
@@ -69,7 +69,7 @@ it one of the project goals: "discover 500 bugs."
 
 Of course, our estimate may be wrong. Nevertheless, we have historical records
 for a few dozen projects, and in all of them the number is close to 500. So,
-finding 500 bugs in a project is usually a reality&mdash;we can use it as a
+finding 500 bugs in a project is usually a reality---we can use it as a
 target.
 
 ## What Is a Bug?
@@ -85,7 +85,7 @@ Something can be reported as a bug and subsequently paid for
 
 Reproducibility of a bug is very important. Consequently, it is the
 responsibility of a [bug reporter]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}) to make sure the bug is reproducible. Until it
-is proven that the bug can be reproduced&mdash;it's not a bug for which
+is proven that the bug can be reproduced---it's not a bug for which
 payment can be made.
 
 A bug is not a task; it has to refer to an existing functionality. Additionally,

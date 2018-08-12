@@ -56,8 +56,8 @@ Of course, they will make their own decision about the priority and severity of 
 but don't help them to make it against you.
 
 **Victimize yourself**.
-Don't just say "the class is broken"&mdash;there is no victim in this statement.
-So, no need to save anyone's life. The bug is minor&mdash;no need to pay.
+Don't just say "the class is broken"---there is no victim in this statement.
+So, no need to save anyone's life. The bug is minor---no need to pay.
 Instead, say "I can't use the class." Present yourself as a victim.
 Or even better, represent a group of victims: "Nobody can really use this class."
 
@@ -70,7 +70,7 @@ You must not look like it offends you somehow.
 **Show efforts**.
 The bug description must look "rich," clearly demonstrating that
 you invested a lot of effort in its creation. If there is just a single line,
-it's easier for them to not pay you&mdash;they won't feel any guilt.
+it's easier for them to not pay you---they won't feel any guilt.
 However, if it's long, detailed, properly formatted, and contains multiple supporting links,
 they will feel bad if they don't pay.
 
@@ -91,7 +91,7 @@ the bigger scope, etc.
 This may sound against the
 [principles]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})
 of bug tracking I suggested earlier,
-but when your bugs are small and cosmetic&mdash;aggregate them. In such a
+but when your bugs are small and cosmetic---aggregate them. In such a
 case you have a chance to win. They will reject three minor bugs, but they
 won't reject a bigger one with three minor parts.
 
@@ -99,5 +99,5 @@ I believe that if you follow these simple recommendations,
 you will be a more successful bug reporter. At least at
 [Zerocracy](http://www.zerocracy.com).
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you feel when you report a bug? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a> <a href="https://twitter.com/hashtag/bugs?src=hash&amp;ref_src=twsrc%5Etfw">#bugs</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1023455022997233664?ref_src=twsrc%5Etfw">July 29, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you feel when you report a bug? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a> <a href="https://twitter.com/hashtag/bugs?src=hash&amp;ref_src=twsrc%5Etfw">#bugs</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1023455022997233664?ref_src=twsrc%5Etfw">July 29, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

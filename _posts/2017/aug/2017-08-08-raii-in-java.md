@@ -61,7 +61,7 @@ multiple parallel threads, will allow only five of them to print
 in parallel. Sometimes it will not allow some of them to print and will
 throw an exception if `x` is bigger than `1000`.
 
-The problem with this code is&mdash;[resource leakage](https://en.wikipedia.org/wiki/Resource_leak).
+The problem with this code is---[resource leakage](https://en.wikipedia.org/wiki/Resource_leak).
 Each `print()` call
 with `x` larger than `1000` will take one permit from the semaphore and
 won't return it. In five calls with exceptions

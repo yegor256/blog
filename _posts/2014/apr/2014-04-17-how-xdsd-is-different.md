@@ -24,7 +24,7 @@ eXtremely Distributed Software Development, or [XDSD](http://www.xdsd.org) for s
 that differs significantly from working in traditional software development
 teams. Most [XDSD](http://www.xdsd.org) methods are so different (yet critical) that many newcomers get
 confused. This article should help you bootstrap once you join a project managed
-with by [XDSD](http://www.xdsd.org) principles&mdash;either as a developer or a project sponsor.
+with by [XDSD](http://www.xdsd.org) principles---either as a developer or a project sponsor.
 
 <!--more-->
 
@@ -41,7 +41,7 @@ Sometimes, though, tasks may have time budgets of fifteen minutes or one hour.
 {% youtube 7EytYc7K5JA %}
 
 In our example, we agree upon a contract rate of $50 per hour. With the broken
-test, you will receive $25 for completing the task&mdash;30 minute tasked billed at
+test, you will receive $25 for completing the task---30 minute tasked billed at
 $50 per hour.
 
 It does not matter how long it actually takes you to fix the test. Your actual
@@ -61,7 +61,7 @@ or
 As mentioned above, this is one of the most important differences between XDSD
 and other methods. Many people get confused when they see this principle in
 action, and some leave our projects because of it. They simply are used to being
-paid by the end of the month&mdash;no matter how much work they actually
+paid by the end of the month---no matter how much work they actually
 deliver. In XDSD, we consider this type of approach very unfair. We feel that
 people who deliver more results should receive more cash. Conversely, those who
 don't deliver should get less.
@@ -91,13 +91,13 @@ of contact (and your only customer) is the task author. You communicate with the
 author in the ticket to clarify task requirements.
 
 When the [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
-of a task are clear&mdash;and you understand them fully&mdash;deliver the result to the author and wait for him to close the task.
+of a task are clear---and you understand them fully---deliver the result to the author and wait for him to close the task.
 After the author closes the task, the
 [project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) pays you.
 
 {% picture /images/2014/04/goodfellas-paulie-talking.png 0 Goodfellas (1990) by Martin Scorsese %}
 
-We're very strict about this principle&mdash;no informal communications.
+We're very strict about this principle---no informal communications.
 However, it doesn't mean that we are not interested in your opinions and
 constructive criticism. Rather, we encourage everyone to submit their
 suggestions and bugs. By the way, we pay for
@@ -133,7 +133,7 @@ just a matter of expending the time and effort needed to discover them.
 
 ## Only Pull Request
 
-We never grant team member access to the `master` branch&mdash;no matter how
+We never grant team member access to the `master` branch---no matter how
 long you work on a project. Consequently, you must always submit your changes
 through pull requests (most of our projects are done in
 [GitHub]({% pst 2014/apr/2014-04-15-github-guidelines %}).)

@@ -38,7 +38,7 @@ phase and then shutdown all stubs during the `post-integration-test`.
 
 It would be great if it were possible to use DynamoDB Local
 that way. I didn't find any Maven plugins for that purpose,
-so I decided to create my own&mdash;[jcabi-dynamodb-maven-plugin](https://github.com/jcabi/jcabi-dynamodb-maven-plugin).
+so I decided to create my own---[jcabi-dynamodb-maven-plugin](https://github.com/jcabi/jcabi-dynamodb-maven-plugin).
 
 <!--more-->
 

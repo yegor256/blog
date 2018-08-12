@@ -89,7 +89,7 @@ reiterate. Once the build is broken, everybody should focus
 on fixing it and making a commit that returns the build to
 the stable state.
 
-Now, my question is&mdash;who, in an actively working team, may need this?
+Now, my question is---who, in an actively working team, may need this?
 
 A product owner, who is interested in launching new features to the market
 as soon as possible? Or maybe a
@@ -146,7 +146,7 @@ but never committed to `master`, because of that fear factor.
 I wrote about it before; it is called
 [read-only master branch]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
-It is simple&mdash;prohibit anyone from merging anything
+It is simple---prohibit anyone from merging anything
 into `master` and create a script that anyone can call. The script will
 merge, test, and commit. The script will not make any exceptions.
 If any branch breaks at even one unit test, the entire branch will be rejected.

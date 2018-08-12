@@ -62,7 +62,7 @@ they will produce has no limit.
 
 Of course, only a very limited subset of the entire set of bugs has any
 real business impact. Most of the bugs that exist in a program may
-stay there even after it is shipped to its users&mdash;nobody will ever
+stay there even after it is shipped to its users---nobody will ever
 find them or else the damage they cause to the user experience will be
 insignificant.
 

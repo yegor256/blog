@@ -109,7 +109,7 @@ What is the solution?
 
 This is what I'm offering. Any comparison, no matter what types we
 are talking about, is about comparing two digital values. Either we
-compare a weight with a weight, text with text, or a user with a user&mdash;our
+compare a weight with a weight, text with text, or a user with a user---our
 CPUs can only compare numbers. Thus, we introduce a new interface
 `Digitizable`:
 

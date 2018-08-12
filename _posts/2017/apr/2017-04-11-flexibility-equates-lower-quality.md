@@ -117,7 +117,7 @@ typing in Ruby vs. the strong and
 one in Java also prove my point.
 
 In general, I believe that the more flexible the programming language is, the
-lower the _maintainability_&mdash;the key quality characteristic&mdash;of the code it produces.
+lower the _maintainability_---the key quality characteristic---of the code it produces.
 Simply put, higher quality comes from simpler languages.
 
 The same is true for the entire software development: The more restrictions

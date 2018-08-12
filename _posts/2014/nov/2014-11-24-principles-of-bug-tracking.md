@@ -42,9 +42,9 @@ team, you may find them useful.
 ## 1. Keep It One-on-One
 
 Each ticket (aka "bug") is a link between two people: problem specifier and problem
-solver. If it is a bug, I'm reporting it&mdash;you're solving it. If it is
-a question, I'm asking for an explanation&mdash;you're explaining. If it
-is a task, I'm ordering you to do it&mdash;you're doing it. In any case,
+solver. If it is a bug, I'm reporting it---you're solving it. If it is
+a question, I'm asking for an explanation---you're explaining. If it
+is a task, I'm ordering you to do it---you're doing it. In any case,
 there are two main characters. No matter how many people are involved in the ticket
 resolution, only these two characters have formal roles.
 
@@ -52,7 +52,7 @@ resolution, only these two characters have formal roles.
 
 The responsibility of the ticket reporter is to **defend the problem**. When I
 [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
-I have to insist that it exists&mdash;this is my job. Others
+I have to insist that it exists---this is my job. Others
 may tell me that I'm wrong and the bug is not there. They may tell
 me that they can't reproduce it. They may say that my description of
 a task is too **vague** and nobody understands it. There may be many issues
@@ -74,7 +74,7 @@ is secondary. The first thing I will be focused on is how to convince
 the reporter. I will always remember that my primary goal is to *close the ticket*.
 
 My point here is that no matter how many people are involved in the
-ticket discussion, always remember what is happening there&mdash;one
+ticket discussion, always remember what is happening there---one
 person is selling his solution to another person. Everybody else around
 them is help or distraction (see below).
 
@@ -97,7 +97,7 @@ that have hundreds of comments and no deliverables? It is a mistake
 by their
 [project managers]({% pst 2015/sep/2015-09-22-micromanagement %})
 and ticket participants. Each ticket should be
-short and focused&mdash;1) a problem, 2) a refinement
+short and focused---1) a problem, 2) a refinement
 question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
 This is an ideal scenario.
 
@@ -107,7 +107,7 @@ As soon as you realize that your ticket is turning into a long discussion,
 try to close it even faster. How can I close it if the reporter doesn't
 like my solution? Find a temporary solution that will satisfy the reporter
 and allow you to close the ticket. Use "TODO" in your code or dirty
-workarounds&mdash;they are all better than a ticket hovering for a long time.
+workarounds---they are all better than a ticket hovering for a long time.
 
 Once you see that the solution is provided and is sufficient enough
 to close the ticket, ask its reporter to close it. Explicitly ask for that;
@@ -149,12 +149,12 @@ of the same problem. Even if you're convinced that the issue you found in
 the code is not really an issue, ask a ticket resolver to document it right
 in the source code in order to prevent such confusion from happening again in the future.
 
-## 4. Avoid Noise&mdash;Address Your Comments
+## 4. Avoid Noise---Address Your Comments
 
 Every time you post a message to the ticket, address it to someone. Otherwise,
 if you post just because you want to express your opinion, your
 comments become communication **noise**. Remember, a ticket is a conversation
-between two people&mdash;one of them reported an issue and the other one is
+between two people---one of them reported an issue and the other one is
 trying to fix it. Comments like, "How about we try another approach"
 or "I remember I had a similar issue some time ago" are very annoying
 and distracting. Let's be honest, nobody really needs or cares about "opinions."
@@ -173,7 +173,7 @@ because..." This way, you will help the ticket reporter keep the ticket
 open until a proper solution comes up.
 
 Again, don't pollute the air with generic opinions. Instead, be very specific
-and take sides&mdash;you either like the solution and want the ticket to
+and take sides---you either like the solution and want the ticket to
 be closed, or you don't like it and want the ticket to stay open. Everything
 in between is just making the situation more complex and isn't helping the
 project at all.
@@ -193,7 +193,7 @@ a task, a question, or a suggestion, should be formatted in this way. By
 submitting it, you're asking the project to move from point A to point B. Something
 is not right at point A, and it will be much better for all of us to be
 at that point B. So it's obvious that you have to explain where these points
-A and B are. It is highly desirable if you can explain how to get there&mdash;how to reproduce a problem and how to fix it.
+A and B are. It is highly desirable if you can explain how to get there---how to reproduce a problem and how to fix it.
 
 {% quote Your job, as a ticket reporter, is to draw that line from point A to point B %}
 
@@ -214,4 +214,4 @@ If such a replica can't be found, obviously your bug will be forced into closing
 
 Let me reiterate again: Every ticket is dragging the project from point A,
 where something is not right, to point B, where it is fixed. Your job,
-as a ticket reporter, is to draw that line&mdash;clearly and explicitly.
+as a ticket reporter, is to draw that line---clearly and explicitly.

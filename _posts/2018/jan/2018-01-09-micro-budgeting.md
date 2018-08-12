@@ -41,13 +41,13 @@ know upfront what is the right budget? Who sets it?
 When we started to play with microtasking in our projects, in 2009, we were
 asking programmers to estimate each task. It did work, but only with very
 simple and obvious tasks. More complex ones almost always suffered
-from either under-estimating or padding&mdash;numbers were either very small
+from either under-estimating or padding---numbers were either very small
 and task performers were complaining in the end, or they were too big and
 customers were asking for refunds. It was not a manageable situation.
 
 Then, we realized that it would be better if all tasks were rather
 small, with exactly the same budget. We tried to use two hours as a universal
-and fixed estimate. Everything else that didn't fit&mdash;programmers were allowed
+and fixed estimate. Everything else that didn't fit---programmers were allowed
 to reject. This model didn't really work either, because our managers had
 to deal with a very large amount of rejected tasks and didn't know how to make
 them smaller, since they were not programmers.
@@ -62,7 +62,7 @@ this concept: 1) Any task has a very small fixed budget (we use 30 minutes);
 4) Puzzles are automatically converted to new tasks.
 
 The beauty of this approach is that the most complicated part of the software
-project management&mdash;scope decomposition&mdash;is moved to the shoulders
+project management---scope decomposition---is moved to the shoulders
 of those who are the best at it: programmers.
 
 We are using PDD in all our projects now and have even created a public instrument
@@ -78,7 +78,7 @@ for the first time:
   * **Denial**.
     They ask "How is it possible?" and then refuse to hear any explanations.
     There are many reasons why microbudgeting and microtasking may not
-    work&mdash;you will hear them all. Very often they demand a traditional
+    work---you will hear them all. Very often they demand a traditional
     model of payment, especially if they were invited. They just say that
     our model is insane, and if we want to see them work on our projects we have to
     pay for as much time as they spend. Most of them quit.
@@ -121,7 +121,7 @@ for the first time:
     when they produce results. They start enjoying meritocracy at its best.
 
 You understand already that the vast majority of those who try to work with us
-can't really get to the final point&mdash;they quit somewhere in the middle.
+can't really get to the final point---they quit somewhere in the middle.
 Most probably something very similar will happen on your projects too.
 
 What is the solution? I don't really know.

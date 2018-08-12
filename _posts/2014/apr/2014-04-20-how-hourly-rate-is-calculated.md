@@ -5,7 +5,7 @@ date: 2014-04-20
 tags: xdsd
 description: |
   In this article, we discuss a very sensitive and
-  important topic&mdash;who should get higher rates
+  important topic---who should get higher rates
   in extremely distributed projects.
 keywords:
   - hourly rates of freelancers
@@ -17,8 +17,8 @@ keywords:
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
-In [XDSD](http://www.xdsd.org), everyone&mdash;including project managers,  analysts, programmers,
-and product owners&mdash;receives payments based on deliverables with agreed
+In [XDSD](http://www.xdsd.org), everyone---including project managers,  analysts, programmers,
+and product owners---receives payments based on deliverables with agreed
 upon budgets. In the fhe first section of the article,
 [How XDSD Is Different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}) I explain
 exactly how this concept works. I don't explain in the article, though,
@@ -33,7 +33,7 @@ decreasing them as appropriate).
 
 Further along in the article, is a list of factors that influence our decision
 making process regarding payment rates. However, before we get to the factors
-that influence our rate-setting decisions, it is important to mention that&mdash;unlike most other companies or software teams&mdash;we don't pay attention to the
+that influence our rate-setting decisions, it is important to mention that---unlike most other companies or software teams---we don't pay attention to the
 following:
 
  * Your geographic location;
@@ -107,7 +107,7 @@ few roles at the same time.
 ## Lengthy Discussions
 
 We discourage long conversations on one task. The longer the discussions about a
-task, the longer it takes to complete&mdash;which lowers your quality as a
+task, the longer it takes to complete---which lowers your quality as a
 developer. Ideally, developers should receive a task, deliver the result and
 inform the task author after it's done. Afterwards, the task author closes the
 task and payment is made.

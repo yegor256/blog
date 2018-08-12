@@ -58,7 +58,7 @@ if we understand TDD literally, by
 Writing a test for a class without having that class in front of you is
 _difficult_. I would even say impossible, if we are talking about real code,
 not calculator examples. It's also very _inefficient_, because tests by definition
-are much more rigid than the code they validate&mdash;creating them first will
+are much more rigid than the code they validate---creating them first will
 cause many re-do cycles until the design is stabilized.
 
 I've personally [written](https://github.com/yegor256) almost 300,000 lines of code in
@@ -111,7 +111,7 @@ The justification behind this no-tests-upfront approach is simple: We don't
 need to test until it's broken, mostly because we understand that it's
 technically not possible to test everything or to fix all bugs. We have
 to fix only what's visible and intolerable by the business. If the business
-doesn't care or our users/testers don't see our bugs&mdash;we must not
+doesn't care or our users/testers don't see our bugs---we must not
 **waste** project resources on fixing them.
 
 {% quote I only create tests later when my users express the need for them by reporting bugs. %}
