@@ -5,7 +5,9 @@ date: 2015-09-16
 tags: management
 place: Kiev, Ukraine
 description: |
-  Firing can be done right---nicely and gracefully---if you make it professional and not personal.
+  Firing can be done right---nicely and gracefully---if
+  you make it professional and not personal; the article
+  explains how exactly.
 keywords:
   - how to fire someone
   - how to fire someone gracefully
