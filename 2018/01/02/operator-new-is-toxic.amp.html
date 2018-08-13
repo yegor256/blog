@@ -105,8 +105,8 @@ from <a href="http://www.cactoos.org">Cactoos</a>):</p>
 be reused. It can only read one particular file. Moreover, testing it
 will be rather difficult, since it reads the content from exactly one place,
 which can't be changed at all. More formally this problem is known as an
-<em>unbreakable dependency</em>—we can't break the link between <code>Story</code>
-and <code>/tmp/story.txt</code>—they are together forever.</p>
+<em>unbreakable dependency</em>---we can't break the link between <code>Story</code>
+and <code>/tmp/story.txt</code>---they are together forever.</p>
 
 <p>To solve this we need to introduce a constructor and let <code>Story</code> accept
 the location of the content as an argument:</p>

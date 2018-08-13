@@ -91,7 +91,7 @@ should <em>release</em> the lock. While the lock is being captured by one
 module, no other modules will be able to capture it. The approach
 is very simple and well-known. However, I didn't find any cloud services
 that would provide such a locking and unlocking service over a RESTful API.
-So I decided to create one—<a href="http://www.stateful.co">stateful.co</a>.</p>
+So I decided to create one---<a href="http://www.stateful.co">stateful.co</a>.</p>
 
 
 
@@ -153,7 +153,7 @@ new Atomic(lock).call(
 
 <p>As you see, I wrap that critical transaction into <code>Callable</code>, which will
 be executed in isolation. This approach, obviously, doesn't
-guarantee atomicity of transaction—if part of the transaction fails,
+guarantee atomicity of transaction---if part of the transaction fails,
 there won't be any automatic rollbacks and the DynamoDB table will be left
 in a "broken" state.</p>
 

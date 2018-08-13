@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-06T09:54:27+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-13T05:42:51+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
 my projects managed by Zerocracy. He claims to be an expert with 10 years
 of hands-on coding experience, $60 hourly rate (we &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;don&amp;#39;t hire&lt;/a&gt; US guys),
 and fluent English. Then he joins the project and attempts
@@ -77,6 +77,14 @@ it is necessary to test how a number of servers communicate to each other.
 I can&amp;#39;t do that! There is absolutely no way.
 Because Sinatra is designed with the assumption that only one server may exist in the entire application scope.&lt;/p&gt;
 
+&lt;aside class=&#39;youtube&#39;&gt;
+        &lt;a href=&#39;https://www.youtube.com/watch?v=FNWyN_Q10TI&#39;&gt;&lt;div class=&#39;box&#39;&gt;
+        &lt;img src=&#39;https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg&#39; alt=&#39;YouTube video #FNWyN_Q10TI&#39;/&gt;
+        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;What&#39;s wrong with global variables?;
+        8 August 2018.&lt;/div&gt;&lt;/aside&gt;
+
 &lt;p&gt;Can this really be fixed? Let&amp;#39;s take a look at &lt;a href=&quot;https://github.com/sinatra/sinatra/&quot;&gt;their code&lt;/a&gt;.
 Class &lt;code&gt;Sinatra::Base&lt;/code&gt; is essentially a &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;Singleton&lt;/a&gt;,
 which is not supposed to have more than one instance.
@@ -87,7 +95,7 @@ they are called from.&lt;/p&gt;
 &lt;p&gt;They are not using &lt;a href=&quot;https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/globalvars.html&quot;&gt;true&lt;/a&gt;
 Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;alternatives&lt;/a&gt; are&amp;mdash;slipped through their fingers.&lt;/p&gt;
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;alternatives&lt;/a&gt; are---slipped through their fingers.&lt;/p&gt;
 
 &lt;aside class=&#39;quote&#39;&gt;While the application is small and its test coverage is low, global variables may not hurt.&lt;/aside&gt;
 
@@ -105,7 +113,7 @@ singletons, or class variables.&lt;/p&gt;
 
 &lt;p&gt;My recommendation? Under no circumstances even think about any global variables.&lt;/p&gt;
 
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think about global variables? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/oop?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#oop&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw&quot;&gt;July 15, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think about global variables? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/oop?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#oop&lt;/a&gt;&lt;/p&gt;--- Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw&quot;&gt;July 15, 2018&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven&amp;#39;t written already about how global variables
 are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. claimed that
@@ -160,7 +168,7 @@ high performance, reliability, security and even maintainability are all
 very important things to worry about. However, a good architect knows that
 all these can be resolved and achieved by programmers, if they are properly
 hired, motivated, organized and controlled. How to hire, motivate, organize
-and control them&amp;mdash;that&amp;#39;s what a good architect worries about.&lt;/p&gt;
+and control them---that&amp;#39;s what a good architect worries about.&lt;/p&gt;
 
 &lt;p&gt;He knows that process comes first, people next.&lt;/p&gt;
 
@@ -173,7 +181,7 @@ published in IEEE Computer in 2001:
 enough, they can use almost any process
 and accomplish their assignment. If they
 are not good enough, no process will
-repair their inadequacy&amp;mdash;&amp;#39;people trump
+repair their inadequacy---&amp;#39;people trump
 process&amp;#39; is one way to say this.&amp;quot; It is acceptable if a programmer
 thinks like that, but not an architect.&lt;/p&gt;
 
@@ -240,7 +248,7 @@ For example:&lt;/p&gt;
 
 &lt;p&gt;There are many other instances of &amp;quot;No&amp;quot; which can easily turn an architect into
 a hated figure, but this is what his job is: to be the bad guy. This is why
-he has to be strong&amp;mdash;to handle it all calmly and continue leading
+he has to be strong---to handle it all calmly and continue leading
 the project forward, toward his own well-defined technical goals.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;He Is Abstract.&lt;/strong&gt;&lt;/p&gt;
@@ -538,20 +546,28 @@ Let&amp;#39;s see how our class can protect itself from each of them:&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The first two potential mistakes were filtered out
-in the constructor, while the other two&amp;mdash;later, in the method.
+in the constructor, while the other two---later, in the method.
 Why did I do it this way? Why not put all of them into the constructor?&lt;/p&gt;
 
 &lt;p&gt;Because the first two compromise &lt;a href=&quot;/2014/12/09/immutable-object-state-and-behavior.html&quot;&gt;object state&lt;/a&gt;,
-while with the other two&amp;mdash;its runtime behavior. You remember that an
+while with the other two---its runtime behavior. You remember that an
 &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt; is a representative of
 a set of other objects it encapsulates, called attributes. The object of
 class &lt;code&gt;Users&lt;/code&gt; can&amp;#39;t &lt;em&gt;represent&lt;/em&gt; &lt;code&gt;nil&lt;/code&gt; or a number. It can only represent
 a file with a name of type &lt;code&gt;String&lt;/code&gt;. On the other hand, what that file
-contains and whether it really is a file&amp;mdash;doesn&amp;#39;t make the state invalid.
+contains and whether it really is a file---doesn&amp;#39;t make the state invalid.
 It only causes trouble for the behavior.&lt;/p&gt;
 
 &lt;p&gt;Even though the difference may look subtle, it&amp;#39;s obvious. There are
 two phases of interaction with the encapsulated object: &lt;em&gt;connecting&lt;/em&gt; and &lt;em&gt;talking&lt;/em&gt;.&lt;/p&gt;
+
+&lt;aside class=&#39;youtube&#39;&gt;
+        &lt;a href=&#39;https://www.youtube.com/watch?v=-drZbHxydMc&#39;&gt;&lt;div class=&#39;box&#39;&gt;
+        &lt;img src=&#39;https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg&#39; alt=&#39;YouTube video #-drZbHxydMc&#39;/&gt;
+        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;When do you validate your objects?;
+        4 July 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;First, we encapsulate the &lt;code&gt;file&lt;/code&gt; and want to be sure that it really is
 a file. We are not yet talking to it, we don&amp;#39;t want it to work for us yet,
@@ -590,7 +606,7 @@ so to speak? Here is what I think.</summary><media:thumbnail xmlns:media="http:/
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
 or you can assign it to a variable.
-All four scenarios are bad for the maintainability of your code&amp;mdash;there
+All four scenarios are bad for the maintainability of your code---there
 are no doubts about that.
 The question is what to do instead. Let&amp;#39;s discuss the &amp;quot;return it&amp;quot; part and
 I will suggest one more &amp;quot;best practice&amp;quot; on top of what
@@ -638,14 +654,14 @@ is implemented in Python&amp;#39;s &lt;a href=&quot;https://docs.python.org/3/li
 it&amp;#39;s possible to pass both a list and a default element to return in case the list
 is empty. If the default element is not provided, the exception will be raised.&lt;/p&gt;
 
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw&quot;&gt;April 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;--- Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw&quot;&gt;April 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You know what NULL is, right? It&amp;#39;s
 evil.
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
 or you can assign it to a variable.
-All four scenarios are bad for the maintainability of your code&amp;mdash;there
+All four scenarios are bad for the maintainability of your code---there
 are no doubts about that.
 The question is what to do instead. Let&amp;#39;s discuss the &amp;quot;return it&amp;quot; part and
 I will suggest one more &amp;quot;best practice&amp;quot; on top of what
@@ -657,7 +673,7 @@ our aggregator of
 &lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt;,
 &lt;a href=&quot;http://pmd.sourceforge.net/&quot;&gt;PMD&lt;/a&gt;,
 &lt;a href=&quot;http://findbugs.sourceforge.net/&quot;&gt;FindBugs&lt;/a&gt;,
-and some other analyzers. I do love IDEA&amp;#39;s rules&amp;mdash;some of them are
+and some other analyzers. I do love IDEA&amp;#39;s rules---some of them are
 unique and very useful. I asked whether I could find them somewhere in
 Maven Central (they are written in Java) and the answer was &amp;quot;You&amp;#39;ll have to figure
 out yourself how to use them, but they are open source.&amp;quot;
@@ -714,7 +730,7 @@ Most of us don&amp;#39;t pay attention to &lt;a href=&quot;https://en.wikipedia.
 I didn&amp;#39;t either, until recently.
 I thought that the moment my code is open I can forget about any
 rights and royalties. They will just use my code and I won&amp;#39;t
-see any profit, ever. The license I attach to it won&amp;#39;t matter&amp;mdash;nobody
+see any profit, ever. The license I attach to it won&amp;#39;t matter---nobody
 reads it anyway. This is exactly what happens in most cases.
 But only while those users are small potatoes.&lt;/p&gt;
 
@@ -749,7 +765,7 @@ who are too &lt;a href=&quot;/2018/04/17/how-to-be-lazy.html&quot;&gt;lazy&lt;/a
 to read their own code, let alone someone else&amp;#39;s,
 it definitely isn&amp;#39;t.&lt;/p&gt;
 
-&lt;p&gt;&amp;quot;Take it from GitHub&amp;quot; is not a polite way to treat us&amp;mdash;your fellow programmers&amp;mdash;anymore.
+&lt;p&gt;&amp;quot;Take it from GitHub&amp;quot; is not a polite way to treat us---your fellow programmers---anymore.
 It was, twenty years ago, but now we have repositories.
 You have to distribute your product as an &amp;quot;artifact&amp;quot; through one of those public
 repositories, and make it possible for us to fetch it
@@ -818,7 +834,7 @@ is the answer. We must be able
 to see the logs of the recent CI build and make sure it is clean.&lt;/p&gt;
 
 &lt;p&gt;It&amp;#39;s a matter of trust. You may never use those Travis builds and simply
-ignore their red and green signals, but they are important for us&amp;mdash;your
+ignore their red and green signals, but they are important for us---your
 clients. I add Travis badges to all projects of mine, right after I create
 a new repository.&lt;/p&gt;
 
@@ -878,7 +894,7 @@ our aggregator of
 Checkstyle,
 PMD,
 FindBugs,
-and some other analyzers. I do love IDEA&amp;#39;s rules&amp;mdash;some of them are
+and some other analyzers. I do love IDEA&amp;#39;s rules---some of them are
 unique and very useful. I asked whether I could find them somewhere in
 Maven Central (they are written in Java) and the answer was &amp;quot;You&amp;#39;ll have to figure
 out yourself how to use them, but they are open source.&amp;quot;
@@ -921,8 +937,8 @@ Of course, they will make their own decision about the priority and severity of 
 but don&amp;#39;t help them to make it against you.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Victimize yourself&lt;/strong&gt;.
-Don&amp;#39;t just say &amp;quot;the class is broken&amp;quot;&amp;mdash;there is no victim in this statement.
-So, no need to save anyone&amp;#39;s life. The bug is minor&amp;mdash;no need to pay.
+Don&amp;#39;t just say &amp;quot;the class is broken&amp;quot;---there is no victim in this statement.
+So, no need to save anyone&amp;#39;s life. The bug is minor---no need to pay.
 Instead, say &amp;quot;I can&amp;#39;t use the class.&amp;quot; Present yourself as a victim.
 Or even better, represent a group of victims: &amp;quot;Nobody can really use this class.&amp;quot;&lt;/p&gt;
 
@@ -935,7 +951,7 @@ You must not look like it offends you somehow.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Show efforts&lt;/strong&gt;.
 The bug description must look &amp;quot;rich,&amp;quot; clearly demonstrating that
 you invested a lot of effort in its creation. If there is just a single line,
-it&amp;#39;s easier for them to not pay you&amp;mdash;they won&amp;#39;t feel any guilt.
+it&amp;#39;s easier for them to not pay you---they won&amp;#39;t feel any guilt.
 However, if it&amp;#39;s long, detailed, properly formatted, and contains multiple supporting links,
 they will feel bad if they don&amp;#39;t pay.&lt;/p&gt;
 
@@ -956,7 +972,7 @@ the bigger scope, etc.&lt;/p&gt;
 This may sound against the
 &lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;principles&lt;/a&gt;
 of bug tracking I suggested earlier,
-but when your bugs are small and cosmetic&amp;mdash;aggregate them. In such a
+but when your bugs are small and cosmetic---aggregate them. In such a
 case you have a chance to win. They will reject three minor bugs, but they
 won&amp;#39;t reject a bigger one with three minor parts.&lt;/p&gt;
 
@@ -964,7 +980,7 @@ won&amp;#39;t reject a bigger one with three minor parts.&lt;/p&gt;
 you will be a more successful bug reporter. At least at
 &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you feel when you report a bug? &lt;a href=&quot;https://twitter.com/hashtag/codeahead?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#codeahead&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/bugs?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#bugs&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1023455022997233664?ref_src=twsrc%5Etfw&quot;&gt;July 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you feel when you report a bug? &lt;a href=&quot;https://twitter.com/hashtag/codeahead?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#codeahead&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/bugs?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#bugs&lt;/a&gt;&lt;/p&gt;--- Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1023455022997233664?ref_src=twsrc%5Etfw&quot;&gt;July 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="zerocracy" /><summary type="html">You know, at Zerocracy, either you are a programmer or a tester,
 and we pay
@@ -1143,8 +1159,8 @@ in nine object-oriented steps.&lt;/p&gt;
 
 &lt;p&gt;According to Wikipedia,
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_refactoring&quot;&gt;code refactoring&lt;/a&gt; is
-&amp;quot;the process of restructuring existing computer code&amp;mdash;changing the
-factoring&amp;mdash;without changing its external behavior.&amp;quot; The goal
+&amp;quot;the process of restructuring existing computer code---changing the
+factoring---without changing its external behavior.&amp;quot; The goal
 of refactoring is to make code more readable and suitable for modifications.&lt;/p&gt;
 
 &lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;https://amzn.to/2E7i17H&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/refactoring.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
@@ -1154,9 +1170,9 @@ suggested a number of refactoring techniques which help making
 code simpler, more abstract, more readable, etc. Some of them
 are rather
 &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;questionable&lt;/a&gt;
-from an object-oriented standpoint&amp;mdash;like
+from an object-oriented standpoint---like
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Field_encapsulation&quot;&gt;Encapsulate Field&lt;/a&gt;,
-for example&amp;mdash;but most of them are valid.&lt;/p&gt;
+for example---but most of them are valid.&lt;/p&gt;
 
 &lt;p&gt;Here is what I&amp;#39;m usually doing when I don&amp;#39;t know the code, but need to modify it.
 The techniques are sorted by the order of complexity, starting with

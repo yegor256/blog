@@ -127,7 +127,7 @@ a method <code>getT()</code>, but neither one is perfect.</p>
 <p>The only problem is that it won't compile in Java, because class
 <code>TempFahrenheit</code> is not allowed to access private <code>t</code> in class <code>TempCelsius</code>.
 And if we make <code>t</code> public, everybody will be able to read it directly, and we'll have
-that "naked data" problem—a severe violation of encapsulation.</p>
+that "naked data" problem---a severe violation of encapsulation.</p>
 
 <p>However, if we allow that access <em>only</em> to one class, everything will be fine.
 Something like this (won't work in Java; it's just a concept):</p>
@@ -141,7 +141,7 @@ Something like this (won't work in Java; it's just a concept):</p>
 }</pre>
 
 <p>Since this <code>trust</code> keyword is placed into the class that allows access,
-we won't have the "naked data" problem—we will always know exactly which
+we won't have the "naked data" problem---we will always know exactly which
 objects posses knowledge about <code>t</code>. When we change
 something about <code>t</code>, we know exactly where to update the code.</p>
 

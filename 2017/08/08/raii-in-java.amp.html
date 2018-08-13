@@ -112,7 +112,7 @@ multiple parallel threads, will allow only five of them to print
 in parallel. Sometimes it will not allow some of them to print and will
 throw an exception if <code>x</code> is bigger than <code>1000</code>.</p>
 
-<p>The problem with this code is—<a href="https://en.wikipedia.org/wiki/Resource_leak">resource leakage</a>.
+<p>The problem with this code is---<a href="https://en.wikipedia.org/wiki/Resource_leak">resource leakage</a>.
 Each <code>print()</code> call
 with <code>x</code> larger than <code>1000</code> will take one permit from the semaphore and
 won't return it. In five calls with exceptions

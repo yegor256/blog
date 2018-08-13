@@ -79,7 +79,7 @@ serously affects maintainability.
 <a href="/2015/07/06/public-static-literals.html">some time ago</a>, mostly
 saying that they are a bad thing, if being public. They reduce duplication,
 but introduce coupling. A much better way to get rid of duplication is
-by creating new classes or methods—a traditional OOP method. This seems to make
+by creating new classes or methods---a traditional OOP method. This seems to make
 sense and in our projects I see less and less public constants. In
 some projects we don't have them at all. But one thing still bothers me:
 unit tests. Most programmers seem to think that when static analysis says
@@ -172,7 +172,7 @@ Moreover, there are seven (!) test methods in
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>,
 which are using <code>MSG</code>. Thus, we will have 14 occurrences of <code>"something"</code>, right?
 Yes, that's right and that's most likely why one of authors of this
-test case introduced the constant—to get rid of duplication.
+test case introduced the constant---to get rid of duplication.
 BTW, <a href="https://github.com/Happy-Neko">@Happy-Neko</a> did that in pull request
 <a href="https://github.com/yegor256/takes/pull/513">#513</a>,
 <a href="https://github.com/carlosmiranda"><code>@carlosmiranda</code></a> reviewed the code and I
@@ -201,7 +201,7 @@ at the same time won't introduce coupling? Here it is:</p>
 }</pre>
 
 <p>These literals must be different. This is what any static analyzer is
-saying when it sees <code>"something"</code> in so many places. It questions us—why are they the same? Is it really so important to use <code>"something"</code> everywhere?
+saying when it sees <code>"something"</code> in so many places. It questions us---why are they the same? Is it really so important to use <code>"something"</code> everywhere?
 Why can't you use different literals? Of course we can. And we should.</p>
 
 <p>The bottom line is that each test method must have its own set of data and objects. They must

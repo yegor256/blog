@@ -108,7 +108,7 @@ instrument that doesn't change the way code works, but gives
 marks to certain elements (methods, classes or variables).
 In other words, annotations are just markers attached to the code
 that can be seen and read. Some annotations are designed to be
-seen at compile time only—they don't exist in <code>.class</code> files after
+seen at compile time only---they don't exist in <code>.class</code> files after
 compilation. Others remain visible after compilation and can
 be accessed in runtime.</p>
 
@@ -117,7 +117,7 @@ be accessed in runtime.</p>
 <p>For example,
 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html"><code>@Override</code></a> is of
 the first type (its retention type is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE"><code>SOURCE</code></a>), while <a href="http://junit.sourceforge.net/javadoc/org/junit/Test.html"><code>@Test</code></a> from JUnit is of the second type (retention type is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME"><code>RUNTIME</code></a>).
-<a href="http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html"><code>@Loggable</code></a>—the one I'm using in the script above—is an annotation of the second type,
+<a href="http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html"><code>@Loggable</code></a>---the one I'm using in the script above---is an annotation of the second type,
 from <a href="http://aspects.jcabi.com">jcabi-aspects</a>.
 It stays with the byte-code in the <code>.class</code> file after compilation.</p>
 
@@ -140,7 +140,7 @@ and log every call to that specific method <code>power()</code>. And, of course,
 the same interceptor should be used for other methods where
 we'll place the same annotation in the future.</p>
 
-<p>This case perfectly fits the original intent of AOP—to avoid re-implementation of some common behavior in multiple classes.</p>
+<p>This case perfectly fits the original intent of AOP---to avoid re-implementation of some common behavior in multiple classes.</p>
 
 <p>Logging is a supplementary feature to our main functionality,
 and we don't want to pollute our code with multiple logging
@@ -184,7 +184,7 @@ and advice is annotated with <code>@Around</code>. As discussed above,
 these annotations are just markers in <code>.class</code> files. They don't do
 anything except provide some meta-information to those who are interested in runtime.</p>
 
-<p>Annotation <code>@Around</code> has one parameter, which—in this case—says that the advice should be applied to a method if:</p>
+<p>Annotation <code>@Around</code> has one parameter, which---in this case---says that the advice should be applied to a method if:</p>
 
 <ol>
 <li><p>its visibility modifier is <code>*</code> (<code>public</code>, <code>protected</code> or <code>private</code>);</p></li>
@@ -205,14 +205,14 @@ to call <code>proceed()</code> of the <strong>join point</strong> object.</p>
 <p>We compile this aspect and make it available in classpath
 together with our main file <code>Foo.class</code>. So far so good,
 but we need to take one last step in order to put
-our aspect into action—we should <strong>apply</strong> our advice.</p>
+our aspect into action---we should <strong>apply</strong> our advice.</p>
 
 <h2 id="binary-aspect-weaving">Binary Aspect Weaving</h2>
 
 <p>Aspect weaving is the name of the advice applying process.
 Aspect weaver modifies original code by injecting calls to aspects.
 AspectJ does exactly that. We give it two binary Java classes <code>Foo.class</code>
-and <code>MethodLogger.class</code>; it gives back three—modified
+and <code>MethodLogger.class</code>; it gives back three---modified
 <code>Foo.class</code>, <code>Foo$AjcClosure1.class</code> and unmodified <code>MethodLogger.class</code>.</p>
 
 

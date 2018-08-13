@@ -6,7 +6,10 @@ ability
 able
 abnormal
 about
+about---focus
+about---responsibility
 above
+above---you
 absence
 absent
 absolute
@@ -48,6 +51,7 @@ accuse
 accused
 achievable
 achieve
+achieve---develop
 achieved
 achievement
 achievements
@@ -129,6 +133,9 @@ after
 afterward
 afterwards
 again
+again---do
+again---maybe
+again---spring
 against
 age
 age-old
@@ -162,6 +169,7 @@ aintshy
 air
 airbnb
 aircraft
+aircraft---the
 airport
 AJAX
 aka
@@ -172,6 +180,7 @@ alerts
 algorithm
 algorithm-writing
 algorithmic
+algorithmic---when
 algorithms
 aliases
 align
@@ -180,6 +189,8 @@ aligns
 alistair
 alive
 all
+all---the
+all---unfortunately
 allen
 allman
 allocates
@@ -197,6 +208,7 @@ alongside
 alpha
 alphabetic
 already
+already---all
 also
 altcoins
 alter
@@ -228,6 +240,7 @@ amsterdam
 an
 analysis
 analyst
+analyst---documents
 analysts
 analytics
 analyze
@@ -259,6 +272,7 @@ annotated
 annotation
 annotation-driven
 annotations
+annotations---they
 announce
 announced
 announcement
@@ -275,6 +289,7 @@ answer
 answered
 answering
 answers
+answers---they
 anthony
 anti-
 anti-depressant
@@ -289,14 +304,20 @@ anyhow
 anymore
 anyone
 anyone's
+anyone---publicly
+anyone---you're
 anything
+anything---ask
+anything---they
 anyway
+anyway---this
 anywhere
 AOP
 apache
 apart
 apartment
 API
+API---Web
 API-s
 APIs
 apologize
@@ -325,6 +346,7 @@ appraisals
 appraising
 appreciate
 appreciated
+appreciated---only
 appreciation
 approach
 approached
@@ -341,6 +363,8 @@ april
 ARC
 architect
 architect's
+architect---defines
+architect---our
 architects
 architectural
 architecturally
@@ -350,6 +374,9 @@ archive
 archives
 archiving
 are
+are---regular
+are---slipped
+are---that
 area
 areas
 aren't
@@ -381,6 +408,7 @@ arrows
 arsenal
 art
 article
+article---
 articles
 artifact
 artifacts
@@ -392,6 +420,7 @@ ASAP
 ashamed
 aside
 ask
+ask---what
 asked
 asking
 asks
@@ -429,6 +458,7 @@ assumptions
 assurance
 assure
 at
+at---this
 ate
 atlantic
 atom
@@ -478,7 +508,6 @@ authors
 auto-complete
 auto-formatting
 auto-generated
-auto-increment
 autocracy
 automate
 automated
@@ -509,6 +538,8 @@ axioms
 ba
 baby
 back
+back---guys
+back---usually
 back-end
 back-stabbing
 backbone
@@ -546,6 +577,7 @@ barker
 barr
 barry
 base
+base---it's
 baseball
 basecamp
 based
@@ -584,13 +616,16 @@ becomes
 becoming
 been
 beer
-beers
+beer---nobody
+beers---you
 before
 beforehand
 beg
 begging
 begin
 beginning
+beginning---
+beginning---but
 begins
 behalf
 behave
@@ -622,6 +657,7 @@ bernie
 bertrand
 besides
 best
+best---writing
 best-use
 bestia
 bet
@@ -631,6 +667,8 @@ betrayals
 betraying
 bets
 better
+better---for
+better---more
 betterembsw
 between
 beware
@@ -674,6 +712,7 @@ blackberry
 blacked
 blah
 blame
+blame---it's
 blamed
 blames
 blaming
@@ -684,6 +723,7 @@ block
 blocks
 blog
 blog's
+blog---what
 blogger
 blogging
 bloghacks
@@ -697,6 +737,7 @@ bluff
 blur
 BMW
 board
+board---you
 boards
 boast
 boat
@@ -736,6 +777,7 @@ bottom
 bought
 bouncing
 boundaries
+boundaries---who
 bountysource
 bout
 bowling
@@ -752,6 +794,8 @@ brains
 brainstorming
 brainwash
 branch
+branch---all
+branch---no
 branches
 brand
 branded
@@ -799,6 +843,7 @@ BTCs
 BTW
 bubble
 bucket
+bucket---but
 buckets
 bucks
 buddy
@@ -810,11 +855,14 @@ buffer
 buffered
 bug
 bug's
+bug---
 bug-free
 bugayenko
 buggy
 bugs
+bugs---we
 build
+build---some
 buildbot
 builder
 builders
@@ -843,6 +891,7 @@ businessmen
 busted
 busy
 but
+but---i
 butt
 button
 buttons
@@ -853,6 +902,7 @@ buying
 buys
 buzz
 by
+by---guess
 bye
 bypassed
 byte
@@ -927,6 +977,8 @@ carrot-and-stick
 carrots
 cars
 case
+case---
+case---you
 cases
 cash
 cashback
@@ -951,6 +1003,7 @@ cats
 cattivi
 caught
 cause
+cause---the
 cause-and-effect
 caused
 causes
@@ -1011,6 +1064,7 @@ chapter
 chapters
 character
 characteristic
+characteristic---of
 characteristics
 characters
 charge
@@ -1028,6 +1082,7 @@ chats
 chatterbot
 chauvinism
 cheap
+cheap---it's
 cheaper
 cheapest
 cheat
@@ -1075,6 +1130,7 @@ circumstances
 citing
 citizens
 city
+city---how
 civil
 civilization
 claim
@@ -1097,10 +1153,12 @@ classmate
 clause
 clauses
 clean
+clean---merges
 cleaner
 cleaning
 cleans
 clear
+clear---and
 cleared
 clearly
 clever
@@ -1108,6 +1166,7 @@ click
 clicks
 client
 client's
+client---will
 client-server
 client-side
 clients
@@ -1118,6 +1177,7 @@ clone
 clones
 close
 closed
+closed---no
 closed-source
 closely
 closer
@@ -1143,6 +1203,7 @@ CNAME
 co
 co-found
 co-founder
+co-founder---don't
 co-founders
 co-located
 co-locating
@@ -1157,6 +1218,13 @@ cockburn
 cockburn's
 coda
 code
+code---and
+code---changing
+code---it's
+code---once
+code---the
+code---there
+code---they
 code-auto-complete
 code-free
 code-intensive
@@ -1233,6 +1301,7 @@ common
 commonly
 commons
 commons-email
+commons-email---bloat
 communicate
 communicates
 communicating
@@ -1244,6 +1313,7 @@ communities
 community
 compact
 companies
+companies---mostly
 company
 company's
 comparable
@@ -1271,12 +1341,14 @@ compiled
 compiler
 compiles
 complain
+complain---i
 complained
 complaining
 complains
 complaint
 complaints
 complete
+complete---which
 completed
 completely
 completes
@@ -1313,6 +1385,7 @@ compulsion
 computational
 computations
 computer
+computer---it
 computers
 computing
 comunidad
@@ -1364,10 +1437,12 @@ conflict
 conflict-free
 conflict-provoking
 conflicts
+conflicts---if
 confrontation
 confuse
 confused
 confusion
+confusion---an
 congratulations
 connect
 connected
@@ -1445,9 +1520,14 @@ contributed
 contributes
 contributing
 contribution
+contribution---this
 contributor
 contributors
+contributors---your
 control
+control---it
+control---regularly
+control---your
 controll
 controlled
 controller
@@ -1503,6 +1583,7 @@ corporate
 corporation
 corporations
 correct
+correct---it's
 corrected
 correcting
 corrections
@@ -1513,6 +1594,7 @@ correspond
 corrupted
 corruption
 cosmetic
+cosmetic---aggregate
 cossacks
 cost
 costs
@@ -1533,6 +1615,7 @@ countries
 country
 couple
 coupled
+coupled---which
 couples
 coupling
 courage
@@ -1548,6 +1631,7 @@ covering
 coverity
 covers
 cow
+cow---a
 cowards
 coworkers
 cozy
@@ -1568,10 +1652,12 @@ creation
 creative
 creatively
 creativity
+creativity---maybe
 creator
 creators
 creature
 creatures
+creatures---we
 credentials
 credible
 credit
@@ -1579,12 +1665,11 @@ crew
 cried
 crime
 crimen
-crimes
+crimes---so
 cripple
 criteria
 criterion
 critical
-critically
 criticism
 criticize
 criticized
@@ -1631,9 +1716,11 @@ custom
 custom-made
 customer
 customer's
+customer---that's
 customer-reported
 customers
 customers'
+customers---they're
 customize
 customized
 cut
@@ -1672,6 +1759,7 @@ dave
 dave's
 david
 day
+day---it's
 day-to-day
 days
 DB
@@ -1693,6 +1781,7 @@ deals
 dealt
 dear
 death
+death---with
 debate
 debates
 debt
@@ -1720,6 +1809,7 @@ decoder
 decompose
 decomposed
 decomposition
+decomposition---is
 decorate
 decorated
 decorating
@@ -1753,6 +1843,7 @@ defensive
 deficiencies
 define
 defined
+defined---as
 defines
 defining
 definitely
@@ -1778,7 +1869,7 @@ deleting
 delicatessen
 delicious
 deliver
-deliverable
+deliverable---receives
 deliverables
 delivered
 delivering
@@ -1809,6 +1900,7 @@ department
 depend
 dependable
 dependencies
+dependencies---new
 dependency
 dependency-free
 dependent
@@ -1845,6 +1937,7 @@ design-wise
 designed
 designer
 designer's
+designer---implements
 designers
 designing
 designs
@@ -1879,8 +1972,10 @@ DEV
 develop
 developed
 developer
+developer---is
 developers
 developers'
+developers---by
 developing
 development
 devil
@@ -2011,6 +2106,7 @@ disrespectful
 disrespects
 disruption
 disservice
+disservice---we're
 distance
 distilled
 distinguish
@@ -2028,6 +2124,7 @@ distributing
 distribution
 disturb
 disturbing
+disturbing---they've
 diversity
 divert
 divide
@@ -2066,13 +2163,16 @@ dominating
 domination
 don
 don't
+don't---it
 donald
 donate
-donators
+donators---they
 done
+done---is
 doodling
 doomed
 door
+door---anyone
 doors
 dorks
 dot
@@ -2080,6 +2180,7 @@ double
 doubles
 doubling
 doubt
+doubt---it's
 doubted
 doubts
 down
@@ -2101,7 +2202,7 @@ draft
 dragging
 drain
 drainage
-dramatic
+dramatic---the
 dramatically
 draw
 drawback
@@ -2225,6 +2326,7 @@ elliotte
 elon
 else
 else's
+else---their
 elsewhere
 emacs
 email
@@ -2254,6 +2356,7 @@ employing
 employment
 employs
 empty
+empty---there
 enable
 enabled
 enables
@@ -2264,6 +2367,7 @@ encapsulated
 encapsulates
 encapsulating
 encapsulation
+encapsulation---data
 encapsulator
 encapsulators
 encoded
@@ -2276,6 +2380,8 @@ encourages
 encrypt
 encrypted
 end
+end---they
+end---you
 end-point
 end-user
 end-users
@@ -2284,7 +2390,7 @@ endeavors
 endpoints
 ends
 enemies
-energetic
+energetic---this
 energy
 enforce
 enforceable
@@ -2308,6 +2414,8 @@ enjoying
 enjoys
 enormous
 enough
+enough---that
+enough---they
 enslaving
 ensure
 ensured
@@ -2326,6 +2434,7 @@ entirely
 entirety
 entities
 entity
+entity---the
 entrepreneur
 entrepreneurs
 entries
@@ -2378,7 +2487,7 @@ et
 etc
 ethan
 etherium
-ethical
+ethical---this
 euro
 europe
 european
@@ -2394,13 +2503,16 @@ ever
 every
 everybody
 everybody's
+everybody---the
 everyday
 everyone
 everyone's
+everyone---including
 everything
 everywhere
 evidence
 evil
+evil---we
 evils
 exact
 exactly
@@ -2408,6 +2520,8 @@ exaggerate
 exam
 examine
 example
+example---
+example---but
 examples
 exceeded
 excellence
@@ -2420,6 +2534,7 @@ exceptionally
 exceptions
 excessive
 exchange
+exchange---i
 excited
 excitement
 excluded
@@ -2443,13 +2558,17 @@ exhaustive
 exist
 existed
 existence
+existence---to
 existing
 exists
+exists---but
+exists---this
 exit
 exiting
 exits
 expect
 expectations
+expectations---there
 expected
 expecting
 expects
@@ -2472,6 +2591,7 @@ explained
 explaining
 explains
 explanation
+explanation---you're
 explanations
 explicit
 explicitly
@@ -2509,7 +2629,7 @@ extra
 extracting
 extreme
 extremely
-extrovert
+extrovert---you
 extroverted
 eye
 eyes
@@ -2526,15 +2646,17 @@ faces
 facing
 fact
 factor
-factoring
+factoring---without
 factors
 factory
 fading
 fail
 failed
+failed---because
 failing
 fails
 failure
+failure---that's
 failure-ready
 failure-resilient
 failures
@@ -2551,6 +2673,7 @@ false
 familiar
 families
 family
+family---
 famous
 fan
 fancy
@@ -2562,12 +2685,14 @@ farther
 fashion
 fast
 faster
+faster---several
 fastest
 fatal
 father
 fault
 faults
 favor
+favor---you're
 favorite
 favorites
 favors
@@ -2628,6 +2753,7 @@ figure
 figured
 figuring
 file
+file---doesn't
 filed
 files
 filing
@@ -2678,6 +2804,7 @@ firstitem
 fish
 fist
 fit
+fit---programmers
 fits
 fitting
 five
@@ -2719,6 +2846,7 @@ flying
 flyweight
 focus
 focused
+focused---
 focusing
 fogel
 fold
@@ -2809,16 +2937,22 @@ freire
 french
 frequency
 frequently
+frequently---that
 fresh
 friday
 fridays
 friend
 friend's
+friend---they
 friend-making
 friendly
 friends
+friends---and
+friends---just
+friends---ORM
 friendship
 from
+from---an
 front
 front-end
 frustrated
@@ -2832,7 +2966,9 @@ full-hearted
 full-purpose
 full-time
 fully
+fully---deliver
 fun
+fun---yes
 function
 functional
 functionalities
@@ -2909,7 +3045,7 @@ GHz
 giant
 GIF
 gift
-gifts
+gifts---all
 gig
 gigabyte
 girl
@@ -2938,6 +3074,8 @@ glossary
 gmail
 go
 goal
+goal---bugs
+goal---increase
 goal-oriented
 goals
 god
@@ -3009,8 +3147,10 @@ groups
 grow
 growable
 growing
+growing---
 grown-ups
 grows
+grows---not
 growth
 grunt
 GTA
@@ -3066,6 +3206,7 @@ handle
 handler
 handling
 handoff
+handoff---i
 hands
 hands-on
 hang
@@ -3123,12 +3264,14 @@ headless
 headline
 headphones
 heads
+heads---that's
 heal
 health
 healthier
 healthy
 heap
 hear
+hear---that
 heard
 hearing
 hears
@@ -3146,12 +3289,15 @@ helped
 helper
 helpers
 helpful
+helpful---not
 helping
 helps
 hence
 her
 here
 here's
+here---
+here---why
 hero
 hero-driven
 heroes
@@ -3171,6 +3317,8 @@ hierarchical
 hierarchies
 hierarchy
 high
+high---a
+high---much
 high-level
 high-quality
 higher
@@ -3180,6 +3328,7 @@ highlighted
 highlighting
 highly
 him
+him---jeff
 himself
 hints
 hipchat
@@ -3215,6 +3364,7 @@ honesty
 honored
 hook
 hope
+hope---they
 hopefully
 hoping
 horizontal
@@ -3286,6 +3436,7 @@ ID
 IDE
 idea
 IDEA's
+idea---make
 ideal
 ideally
 ideas
@@ -3350,6 +3501,8 @@ implies
 import
 importance
 important
+important---critically
+important---step
 importantly
 importers
 imports
@@ -3369,6 +3522,7 @@ improves
 improving
 improvise
 in
+in---with
 in-budget
 in-docker
 in-file
@@ -3377,7 +3531,7 @@ in-HTTP
 in-memory
 in-method-body
 inability
-inadequacy
+inadequacy---'people
 inapplicable
 inappropriate
 inbox
@@ -3408,6 +3562,7 @@ incremental
 incrementally
 incremented
 increments
+increments---an
 incubator
 incurred
 indeed
@@ -3533,6 +3688,7 @@ intent
 intention
 intentionally
 intentions
+intentions---you
 interact
 interacting
 interaction
@@ -3540,6 +3696,7 @@ interactions
 interactively
 interacts
 interest
+interest---to
 interested
 interesting
 interestingly
@@ -3594,6 +3751,7 @@ investigating
 investing
 investment
 investments
+investments---these
 investor
 investors
 investors'
@@ -3609,6 +3767,7 @@ invoicing
 invoking
 involve
 involved
+involved---there
 involves
 involving
 io
@@ -3626,6 +3785,12 @@ irresponsible
 irreversible
 irritate
 is
+is---no
+is---objects
+is---surprisingly---a
+is---who
+is---why
+is---you
 isn't
 ISO-
 isolate
@@ -3633,6 +3798,7 @@ isolated
 isolating
 isolation
 issue
+issue---they
 issue-tracking
 issued
 issues
@@ -3641,16 +3807,28 @@ istat
 it
 it'll
 it's
+it---a
+it---including
+it---it's
+it---just
+it---not
+it---notify
+it---the
+it---this
+it---why
+it---you
+it---you're
 item
 items
 iterate
 iterating
 iterative
 iterator
-iterators
+iterators---it's
 iterm
 its
 itself
+itself---there
 jack
 jaguar
 jail
@@ -3722,6 +3900,7 @@ jo
 job
 jobless
 jobs
+jobs---they
 joe
 joel
 joelonsoftware
@@ -3955,6 +4134,7 @@ liability
 liao
 libraries
 library
+library---
 license
 licenses
 lie
@@ -3962,6 +4142,8 @@ lieberherr
 lies
 lieu
 life
+life---being
+life---what
 lifecycle
 lifestyle
 lifetime
@@ -3969,6 +4151,7 @@ light
 light-weight
 lighter
 like
+like---unmotivated
 likely
 likes
 likewise
@@ -3979,6 +4162,7 @@ limited
 limiting
 limits
 line
+line---clearly
 lines
 lines-of-code
 lining
@@ -4008,6 +4192,7 @@ little
 live
 lives
 living
+living---it
 load
 loaders
 loading
@@ -4020,6 +4205,7 @@ loc
 local
 locally
 locals
+locals---they
 locate
 located
 location
@@ -4032,6 +4218,7 @@ log
 logged
 logging
 logic
+logic---not
 logical
 logically
 login
@@ -4066,6 +4253,7 @@ loss
 losses
 lost
 lot
+lot---and
 lots
 loud
 lousy
@@ -4138,8 +4326,12 @@ manageable
 managed
 managees
 management
+management---how
+management---scope
+management---so
 manager
 manager's
+manager---assigns
 managerial
 managers
 manages
@@ -4174,6 +4366,8 @@ marked
 marker
 markers
 market
+market---the
+market---we
 market-ready
 marketable
 marketers
@@ -4208,6 +4402,7 @@ MathML
 matrix
 matt
 matter
+matter---nobody
 matters
 matthew
 mature
@@ -4220,6 +4415,7 @@ maximum
 may
 maybe
 mayonnaise
+mayonnaise---to
 mayonnaise-free
 mb
 mcbride
@@ -4228,6 +4424,7 @@ mcconnell
 mccullough
 mcdonald's
 me
+me---you
 mean
 meaning
 meanings
@@ -4237,6 +4434,7 @@ meantime
 meanwhile
 measurable
 measure
+measure---micromanagement
 measured
 measurement
 measurements
@@ -4261,6 +4459,7 @@ medium-sized
 meet
 meeting
 meetings
+meetings---if
 meets
 meetups
 member
@@ -4270,8 +4469,10 @@ memberships
 memento
 memorize
 memory
+memory---it
 memory-representing
 men
+men---physically
 mental
 mentality
 mentally
@@ -4309,6 +4510,8 @@ method
 methodologies
 methodology
 methods
+methods---a
+methods---some
 metric
 metrics
 meyer
@@ -4365,10 +4568,12 @@ minds
 mindset
 mindsets
 mine
+mine---
 minimize
 minimum
 minister
 minor
+minor---no
 minority
 minus
 minuses
@@ -4388,6 +4593,7 @@ miserably
 misfortune
 misguided
 misleading
+misleading---it
 mismatch
 mismatches
 misplaced
@@ -4395,6 +4601,7 @@ miss
 missed
 misses
 missing
+missing---amazon
 mission
 mistake
 mistaken
@@ -4414,7 +4621,9 @@ mock
 mocking
 mockito
 mode
+mode---they
 model
+model---they
 model-view-controller
 modeling
 moderator
@@ -4423,6 +4632,7 @@ modifiable
 modification
 modifications
 modified
+modified---we
 modifiers
 modify
 modifying
@@ -4438,6 +4648,7 @@ monday
 monetary
 monetize
 money
+money---absolutely
 money-driven
 money-making
 money-saving
@@ -4454,16 +4665,21 @@ monitors
 monkey
 monkey-feeding
 monkeys
+monkeys---hear
 monopoly
 monster
 monsters
 month
 month's
+month---no
+month---you
 monthly
 months
 mood
+mood---don't
 morale
 more
+more---they
 moreover
 morning
 moron
@@ -4521,6 +4737,7 @@ must-have
 must-read
 mutability
 mutable
+mutable---we
 mutation
 mutko
 mutual
@@ -4539,6 +4756,7 @@ naked
 name
 named
 names
+names---why
 namespaces
 naming
 napkin
@@ -4570,9 +4788,12 @@ necessity
 neck
 ned
 need
+need---the
 needed
 needless
 needs
+needs---not
+needs---someone
 negative
 negatively
 negativity
@@ -4605,6 +4826,7 @@ newcomers
 newly
 newrelic
 news
+news---that's
 next
 NFRs
 nice
@@ -4615,8 +4837,9 @@ niche
 nierstrasz
 night
 nightmare
+nightmare---much
 nightmares
-nights
+nights---use
 nine
 nines
 nl
@@ -4631,6 +4854,7 @@ nodding
 node
 nodes
 noise
+noise---address
 nokia
 NOLO
 non-
@@ -4671,6 +4895,7 @@ notations
 note
 notes
 nothing
+nothing---no
 notice
 noticed
 noticing
@@ -4684,6 +4909,7 @@ nov
 novel
 novices
 now
+now---the
 nowadays
 nowhere
 NPM
@@ -4698,10 +4924,12 @@ nutshell
 NYSE
 OAuth
 obey
+obey---he's
 obeyed
 obeys
 object
 object's
+object---and
 object-orientation
 object-oriented
 object-relational
@@ -4727,7 +4955,9 @@ observing
 obstacles
 obtain
 obvious
+obvious---when
 obviously
+obviously---that's
 occasional
 occasionally
 occupied
@@ -4746,11 +4976,13 @@ offending
 offends
 offense
 offensive
+offensive---in
 offer
 offered
 offering
 offers
 office
+office---they
 officer
 officers
 offices
@@ -4760,6 +4992,7 @@ offline
 offset
 offshore
 often
+often---your
 oh
 oil
 OK
@@ -4773,12 +5006,15 @@ on
 on-fly
 on-premise
 on-site
-on-time
 once
 once-in-a-lifetime
 oncologists
 one
 one's
+one---
+one---is
+one---the
+one---thinking
 one-hour
 one-man
 one-noun
@@ -4791,7 +5027,9 @@ one-verb
 one-year
 ones
 online
+online---or
 only
+only---this
 onto
 OO
 OOP
@@ -4810,6 +5048,7 @@ opera
 operate
 operating
 operation
+operation---even
 operations
 operator
 operators
@@ -4820,6 +5059,10 @@ opportunities
 opportunity
 opposing
 opposite
+opposite---the
+opposite---they
+opposite---unchecked
+opposite---wealthy
 optimal
 optimization
 optimizations
@@ -4866,8 +5109,11 @@ OSS
 OSSRH
 OSX
 other
+other---it's
+other---when
 others
 others'
+others---HTML
 otherwise
 our
 ours
@@ -4921,9 +5167,12 @@ owe
 owen
 OWL
 own
+own---
 owner
 owner's
 owners
+owners---receives
+owners---those
 ownership
 owning
 owns
@@ -4936,9 +5185,11 @@ package
 packaged
 packages
 packaging
-padding
+padding---numbers
 page
+page---it
 pages
+pages---just
 paid
 pain
 painful
@@ -4960,6 +5211,7 @@ paradigms
 paragraph
 paragraphs
 parallel
+parallel---they
 parameter
 parameters
 parent
@@ -4973,6 +5225,7 @@ parser
 parsers
 parsing
 part
+part---estimations
 part-time
 partially
 participant
@@ -4982,6 +5235,7 @@ participated
 participating
 participation
 particular
+particular---just
 parties
 partner
 partners
@@ -4989,12 +5243,14 @@ parts
 party
 pascal
 pass
+pass---i
 pass-through
 passed
 passengers
 passes
 passing
 passion
+passion---not
 passionate
 passive
 passport
@@ -5006,6 +5262,7 @@ patches
 patent
 patents
 path
+path---to
 patience
 patient
 patreon
@@ -5017,6 +5274,7 @@ patterns
 paul
 pause
 pay
+pay---in
 pay-rate
 payable
 payback
@@ -5051,6 +5309,9 @@ pensions
 pentad
 people
 people's
+people---investors
+people---one
+people---people
 pepper
 per
 perceive
@@ -5065,6 +5326,7 @@ perfectly
 perfecto
 perform
 performance
+performance---it
 performed
 performer
 performers
@@ -5080,6 +5342,7 @@ permissions
 persistence
 persists
 person
+person---that's
 personal
 personality
 personally
@@ -5108,6 +5371,7 @@ photo
 photos
 photoshop
 PHP
+PHP---the
 PHP-related
 phpcs
 phpmd
@@ -5126,7 +5390,7 @@ piece
 pieces
 pike
 piled-up
-pills
+pills---when
 pimp
 pin
 pinaf
@@ -5149,18 +5413,22 @@ pivetta
 pixelmator
 pizza
 place
+place---you
 placed
 places
+places---it's
 placing
 plain
 plaintiff
 plan
+plan---he
 planet
 planned
 planning
 plans
 planting
 platform
+platform---
 platform-specific
 platforms
 play
@@ -5195,6 +5463,7 @@ pocket
 podcast
 poems
 point
+point---they
 pointer
 pointers
 pointless
@@ -5206,6 +5475,7 @@ poland
 polemic
 police
 policies
+policies---we've
 policy
 polisher
 polite
@@ -5240,13 +5510,17 @@ positioning
 positions
 positive
 positively
+positively---they
 posses
 possess
 possesses
 possibility
 possible
+possible---
+possible---mostly
 possibly
 post
+post---do
 post-it
 post-merge
 post-money
@@ -5266,6 +5540,7 @@ PPS
 PR
 practical
 practice
+practice---to
 practiced
 practices
 practicing
@@ -5319,11 +5594,12 @@ prepare
 prepared
 prepares
 preparing
-prequels
+prequels---listed
 prescribes
 presence
 present
 presentation
+presentation---a
 presentations
 presented
 presenteeism
@@ -5353,9 +5629,16 @@ prick
 primarily
 primary
 primitive
+primitive---every
 primitives
 principle
+principle---
+principle---it
+principle---no
 principles
+principles---either
+principles---not
+principles---programmers
 print
 printed
 printers
@@ -5385,9 +5668,13 @@ probable
 probably
 problem
 problem's
+problem---i
+problem---we
 problem-centered
 problems
+problems---even
 procedural
+procedural---it
 procedurally
 procedure
 procedures
@@ -5395,6 +5682,7 @@ proceed
 proceedings
 process
 process'
+process---finding
 processed
 processes
 processing
@@ -5408,6 +5696,8 @@ produces
 producing
 product
 product's
+product---on-time
+product---your
 production
 productive
 productivity
@@ -5428,8 +5718,13 @@ profitable
 program
 programmer
 programmer's
+programmer---he
+programmer---implements
+programmer---let's
+programmer---remote
 programmers
 programmers'
+programmers---anymore
 programming
 programs
 progress
@@ -5440,8 +5735,11 @@ prohibition
 prohibits
 project
 project's
+project---create
+project---submit
 projectors
 projects
+projects---that's
 proletariat
 promise
 promised
@@ -5462,6 +5760,7 @@ proper
 properly
 properties
 property
+property---it
 prophesy
 prophet
 proportionally
@@ -5516,6 +5815,7 @@ psychological
 psychologically
 psychology
 public
+public---so
 publication
 publications
 publicity
@@ -5563,6 +5863,7 @@ QA
 QCon
 qualities
 quality
+quality---not
 quanta
 quantify
 quantity
@@ -5570,10 +5871,13 @@ queries
 query
 querying
 question
+question---
+question---why
 questionable
 questioned
 questioning
 questions
+questions---keep
 quick
 quickbooks
 quicker
@@ -5617,6 +5921,7 @@ rare
 rarely
 rasterized
 rate
+rate---the
 rate-setting
 rates
 rather
@@ -5651,6 +5956,7 @@ reached
 reaches
 react
 reaction
+reaction---i've
 reactive
 read
 read-only
@@ -5668,6 +5974,9 @@ real-life
 real-world
 realistic
 reality
+reality---it's
+reality---we
+reality---you're
 realize
 realized
 realizes
@@ -5677,6 +5986,7 @@ realy
 reaper
 reappearing
 reason
+reason---to
 reasonable
 reasonably
 reasoning
@@ -5727,6 +6037,7 @@ redundant
 refactor
 refactored
 refactoring
+refactoring---your
 refer
 reference
 references
@@ -5802,6 +6113,7 @@ relying
 remain
 remainder
 remained
+remained---how
 remaining
 remains
 remember
@@ -5811,6 +6123,7 @@ reminded
 reminds
 remote
 remotely
+remotely---what
 removal
 remove
 removed
@@ -5858,6 +6171,7 @@ representing
 represents
 reproduce
 reproduced
+reproduced---it's
 reproduces
 reproducibility
 reproducible
@@ -5917,12 +6231,14 @@ response
 responses
 responsibilities
 responsibility
+responsibility---to
 responsible
 responsiveness
 rest
 restart
 restarts
 restaurant
+restaurant---you
 RESTful
 restrict
 restricted
@@ -5932,6 +6248,7 @@ restroom
 restructure
 restructuring
 result
+result---mostly
 result-oriented
 resulted
 results
@@ -5989,6 +6306,8 @@ ridiculous
 ridley
 riel
 right
+right---select
+right---you
 rights
 rigid
 ringelmann
@@ -6048,7 +6367,9 @@ ruined
 ruining
 ruins
 rule
+rule---organize
 rules
+rules---some
 rultor
 rultors
 rumors
@@ -6078,11 +6399,16 @@ safety
 said
 sake
 salaries
+salaries---it's
 salary
 sales
 sally
 salt
 same
+same---
+same---it
+same---not
+same---small
 sample
 samples
 samsung
@@ -6110,8 +6436,10 @@ saving
 savvy
 saw
 say
+say---
 saying
 says
+says---the
 SBT
 scaffolding
 scala
@@ -6175,6 +6503,7 @@ seasoned
 seattle
 SEBOK
 second
+second---HTML
 secondary
 seconds
 secret
@@ -6345,6 +6674,7 @@ shot
 should
 shoulders
 shouldn't
+shouldn't---competition
 show
 show-stopper
 showcase
@@ -6362,6 +6692,7 @@ sick
 side
 side-effect
 sides
+sides---you
 sierra
 sigh
 sight
@@ -6382,10 +6713,15 @@ silver
 similar
 similarly
 simple
+simple---no
+simple---prohibit
+simple---the
+simple---they
 simplecov
 simpler
 simplest
 simplicity
+simplicity---the
 simplification
 simplified
 simplifies
@@ -6426,6 +6762,7 @@ skeptical
 sketch
 skiing
 skill
+skill---finding
 skilled
 skills
 skim
@@ -6442,6 +6779,7 @@ slack
 slashes
 slave
 slave's
+slave---very
 slavery
 slaves
 sleep
@@ -6454,7 +6792,6 @@ slight
 slightly
 SLIK
 slippage
-slipped
 SLoC
 slogans
 slope
@@ -6464,9 +6801,11 @@ slowly
 slows
 small
 smaller
+smaller---less
 smalltalk
 smalltalk-
 smart
+smart---you
 smart-asses
 smarter
 smartest
@@ -6475,6 +6814,7 @@ smell
 smells
 smelly
 smile
+smile---
 smiles
 smiling
 smoothies
@@ -6506,6 +6846,7 @@ soft-heartedness
 soften
 softness
 software
+software---
 solanolabs
 sold
 soldiers
@@ -6528,6 +6869,7 @@ somehow
 someone
 someone's
 something
+something---created
 sometime
 sometimes
 somewhere
@@ -6547,8 +6889,9 @@ soundcloud
 sounds
 soup
 source
+source---libraries
 sources
-sourcing
+sourcing---are
 south
 soviet
 SP
@@ -6588,9 +6931,11 @@ speech
 speeches
 speechless
 speed
+speed---close
 spellcheckworker
 spend
 spending
+spending---customers'
 spends
 spent
 spin-wait
@@ -6658,7 +7003,7 @@ standardized
 standards
 standing
 standish
-standpoint
+standpoint---like
 stands
 standups
 stanford
@@ -6699,6 +7044,7 @@ steal
 stealing
 steals
 step
+step---you
 step-by-step
 step-dad
 steps
@@ -6715,16 +7061,18 @@ sticks
 sticky
 still
 stock
+stock---because
 stockholm
 stocks
 stole
 stolen
 stop
 stopped
+stopped---their
 stops
 storage
 store
-stored
+stored---in
 stores
 stories
 story
@@ -6733,6 +7081,7 @@ straight
 straight-forward
 straightforward
 strange
+strange---git
 stranger
 strangers
 strategies
@@ -6757,6 +7106,7 @@ stripe
 stripped
 strolling
 strong
+strong---to
 stronger
 strongest
 strongly
@@ -6910,6 +7260,7 @@ synonyms
 syntactic
 syntax
 system
+system---they
 system-level
 systematic
 systematically
@@ -6927,6 +7278,7 @@ taken
 takes
 taking
 talent
+talent---you
 talented
 talents
 talk
@@ -6942,8 +7294,11 @@ tangled
 tap
 target
 task
+task---
+task---to
 tasked
 tasks
+tasks---be
 taste
 tasteful
 taught
@@ -6961,6 +7316,8 @@ teachers
 teaching
 team
 team's
+team---a
+team---to
 team-building
 team-meeting
 teamcity
@@ -6968,6 +7325,7 @@ teamed
 teammate
 teammates
 teams
+teams---we
 teamwork
 tear
 teared
@@ -7028,6 +7386,8 @@ testable
 testament
 tested
 tester
+tester---finds
+tester---to
 testers
 testing
 testing-wise
@@ -7042,11 +7402,21 @@ thankful
 thanks
 that
 that's
+that---complete
+that---face-to-face
+that---unlike
 the
 theft
 their
 theirs
 them
+them---a
+them---and
+them---but
+them---that's
+them---they
+them---this
+them---we
 themselves
 then
 theoretical
@@ -7054,6 +7424,8 @@ theory
 thePMP
 there
 there's
+there---how
+there---one
 thereby
 therefore
 thermometer
@@ -7063,10 +7435,12 @@ they're
 they've
 thiel
 thing
+thing---you
 things
 think
 thinking
 thinks
+thinks---the
 third
 third-party
 third-world
@@ -7075,6 +7449,8 @@ this
 thomas
 those
 though
+though---auto-increment
+though---so
 thought
 thoughts
 thoughtworks
@@ -7118,6 +7494,12 @@ tiles
 till
 tim
 time
+time---enough
+time---how
+time---much
+time---simple
+time---that's
+time---there's
 time-and-material
 time-consuming
 time-wasting
@@ -7125,6 +7507,7 @@ timedlog
 timeframe
 timeofday
 times
+times---will
 timescale
 timing
 tinder
@@ -7136,6 +7519,8 @@ title
 titles
 tl
 to
+to---in
+to---the
 today
 TODO
 together
@@ -7204,6 +7589,7 @@ trainspotting
 trait
 traits
 transaction
+transaction---they
 transactions
 transfer
 transferred
@@ -7293,6 +7679,8 @@ twice
 twist
 twitter
 two
+two---its
+two---later
 two-year-old
 txr
 txt
@@ -7306,6 +7694,7 @@ typo
 tzu
 ua
 uber
+uber---taxi
 ubuntu
 uglier
 ugly
@@ -7328,7 +7717,7 @@ unannounced
 unanswered
 unaware
 unbeatable
-unbiased
+unbiased---be
 uncertainty
 unchecked
 uncle
@@ -7395,7 +7784,6 @@ unmaintainable
 unmanageable
 unmarshalling
 unmitigated
-unmotivated
 unnecessary
 unpacks
 unpleasant
@@ -7418,11 +7806,13 @@ untraceable
 unwilling
 unwise
 up
+up---they
 up-time
 up-votes
 upbringing
 update
 updated
+updated---a
 updates
 updating
 upfront
@@ -7440,6 +7830,10 @@ urgently
 URI
 URL
 us
+us---it's
+us---me
+us---why
+us---your
 usability
 usable
 usage
@@ -7452,8 +7846,10 @@ useless
 user
 user-targeted
 users
+users---nobody
 uses
 using
+using---something
 using-pull-requests
 USPTO
 USSR
@@ -7478,6 +7874,7 @@ vakhobov
 valentin
 valid
 validate
+validate---creating
 validated
 validates
 validating
@@ -7491,10 +7888,12 @@ valuable
 valuation
 value
 values
+values---they
 vancouver
 varargs
 variable
 variables
+variables---valuation
 variant
 variations
 variety
@@ -7541,6 +7940,7 @@ video-recorded
 videos
 vienna
 view
+view---and
 viewed
 views
 vigilant
@@ -7598,6 +7998,7 @@ wall
 wallet
 walls
 want
+want---sort
 wanted
 wants
 WAR
@@ -7615,8 +8016,11 @@ wasting
 watch
 watched
 watching
+watching---but
 water
 way
+way---that
+way---we
 ways
 wc
 we
@@ -7629,7 +8033,6 @@ weaker
 weakest
 weakness
 weaknesses
-wealthy
 weapon
 weapons
 wear
@@ -7680,6 +8083,7 @@ west
 western
 what
 what's
+what---objects
 whatever
 whatsapp
 wheat
@@ -7694,6 +8098,7 @@ whichever
 while
 whine
 white
+white---there
 white-box
 who
 who're
@@ -7747,15 +8152,19 @@ won't
 wonder
 wood
 word
+word---control
 word-counting
 wordpress
 words
 wore
 work
+work---you
 work-from-home
 workaholics
 workaround
+workaround---blame
 workarounds
+workarounds---they
 worked
 worker
 workers
@@ -7788,6 +8197,7 @@ writes
 writing
 written
 wrong
+wrong---the
 wrote
 WSDL
 wulf
@@ -7814,6 +8224,7 @@ YAY
 YC
 yeah
 year
+year---we've
 year-old
 years
 yegor
@@ -7824,6 +8235,7 @@ yelling
 yelp
 yes
 yesterday
+yesterday---just
 yet
 ying
 yoga
@@ -7833,12 +8245,23 @@ you'd
 you'll
 you're
 you've
+you---forget
+you---i
+you---it
+you---mostly
+you---the
+you---they
+you---this
+you---to
+you---which
+you---you're
 young
 younger
 your
 yourkit
 yours
 yourself
+yourself---do
 youtube
 ypshenychka
 zend
@@ -7859,3 +8282,4 @@ zones
 zoo
 zoom
 zuckerberg
+zuckerberg---the

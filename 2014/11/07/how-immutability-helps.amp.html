@@ -81,13 +81,13 @@ mutability causes scope creep and tight coupling.
 <a href="/2014/10/03/di-containers-are-evil.html">Dependency Injection Containers are Code Polluters</a>,
 I universally labeled all mutable objects with "setters" (object methods starting with <code>set</code>) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
-this wasn't convincing enough for many of you—I received a few requests
+this wasn't convincing enough for many of you---I received a few requests
 asking to provide more specific and practical examples.</p>
 
 <p>Thus, in order to illustrate my strongly negative attitude to "mutability via setters," I took
 an existing <a href="http://commons.apache.org/proper/commons-email/">commons-email</a> Java library from Apache
 and re-designed it my way, without setters and with "object thinking" in mind.
-I released my library as part of the <a href="http://www.jcabi.com">jcabi</a> family—<a href="http://email.jcabi.com">jcabi-email</a>. Let's see what benefits
+I released my library as part of the <a href="http://www.jcabi.com">jcabi</a> family---<a href="http://email.jcabi.com">jcabi-email</a>. Let's see what benefits
 we get from a "pure" object-oriented and immutable approach, without getters.</p>
 
 
@@ -129,7 +129,7 @@ dealing with a monster
 sending your MIME message via SMTP, creating the message, configuring
 its parameters, adding MIME parts to it, etc. The
 <a href="http://svn.apache.org/viewvc/commons/proper/email/tags/EMAIL_1_3_3/src/main/java/org/apache/commons/mail/Email.java?revision=1609295&amp;view=co"><code>Email</code></a>
-class from commons-email is really a huge class—33 private properties, over
+class from commons-email is really a huge class---33 private properties, over
 a hundred methods, about two thousands lines of code. First, you configure
 the class through a bunch of setters and then you ask it to <code>send()</code>
 an email for you.</p>
@@ -148,25 +148,25 @@ the envelope for us.</p>
 <h2 id="whats-wrong-with-a-mutable-email">What's Wrong With a Mutable Email?</h2>
 
 <p>From a user perspective, there is almost nothing wrong. <code>Email</code> is a powerful
-class with multiple controls—just hit the right one and the job
+class with multiple controls---just hit the right one and the job
 gets done. However, from a developer perspective <code>Email</code> class is a nightmare. Mostly
 because the class is very big and difficult to maintain.</p>
 
 <p><em>Because the class is so big</em>,
 every time you want to extend it by introducing a new method, you're facing the fact that you're
-making the class even worse—longer, less cohesive, less readable,
+making the class even worse---longer, less cohesive, less readable,
 less maintainable, etc. You have a feeling that you're digging into something
 dirty and that there is no hope to make it cleaner, ever. I'm sure, you're
-familiar with this feeling—most legacy applications look that way.
+familiar with this feeling---most legacy applications look that way.
 They have huge multi-line "classes" (in reality, COBOL programs written in Java)
 that were inherited from a few generations of programmers before you. When
 you start, you're full of energy, but after a few minutes of scrolling
-such a "class" you say—"screw it, it's almost Saturday."</p>
+such a "class" you say---"screw it, it's almost Saturday."</p>
 
 
 
 <p><em>Because the class is so big</em>,
-there is no data hiding or encapsulation any more—33 variables are accessible by over 100 methods. What is hidden?
+there is no data hiding or encapsulation any more---33 variables are accessible by over 100 methods. What is hidden?
 This <code>Email.java</code> file in reality is a big, procedural 2000-line script, called
 a "class" by mistake. Nothing is hidden, once you cross the border of the
 class by calling one of its methods. After that, you have full access to
@@ -216,7 +216,7 @@ When an <a href="/2016/07/14/who-is-object.html">object</a>
 is mutable and allows us to add setters whenever we
 want, we will do it without limits.</p>
 
-<p>Let me put it this way—<em>mutable classes tend to grow in size and lose cohesiveness</em>.</p>
+<p>Let me put it this way---<em>mutable classes tend to grow in size and lose cohesiveness</em>.</p>
 
 <p>If commons-email authors made this <code>Email</code> class immutable
 in the beginning, they wouldn't have been able to add so many methods into it
@@ -342,7 +342,7 @@ the constructor will have too many arguments, and nobody will be able to use it.
 <p>So, what do I do?</p>
 
 <p>Well, I started to think: how can we break the concept of an "envelope"
-into smaller concepts—and this what I invented. Like a real-life envelope,
+into smaller concepts---and this what I invented. Like a real-life envelope,
 my <code>MIME</code> object will have stamps. Stamps will be responsible
 for configuring an object <code>Message</code> (again,
 <a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java"><code>Stamp</code></a> is immutable,
@@ -376,13 +376,13 @@ class Envelope.MIME implements Envelope {
 
 <p>Now, I will create stamps for the subject, for <code>To:</code>, for <code>From:</code>,
 for <code>CC:</code>, for <code>BCC:</code>, etc. As many stamps as I like. The class <code>MIME</code>
-will stay the same—small, cohesive, readable, solid, etc.</p>
+will stay the same---small, cohesive, readable, solid, etc.</p>
 
 <p>What is important here is why I made the decision to refactor while
 the class was relatively small. Indeed, I started to worry about these
 stamp classes when my <code>MIME</code> class was just 25 lines in size.</p>
 
-<p>That is exactly the point of this article—<em>immutability forces you to design small and cohesive objects</em>.</p>
+<p>That is exactly the point of this article---<em>immutability forces you to design small and cohesive objects</em>.</p>
 
 <p>Without immutability, I would have gone the same direction as commons-email. My
 <code>MIME</code> class would grow in size and sooner or later would become
@@ -391,7 +391,7 @@ was the necessity to refactor it, because I wasn't able to pass all
 arguments through a constructor.</p>
 
 <p>Without immutability, I wouldn't have had that motivator and I would
-have done what Apache developers did with commons-email—bloat the
+have done what Apache developers did with commons-email---bloat the
 class and turn it into an unmaintainable
 <a href="/2017/09/12/evil-object-name-suffix-client.html">monster</a>.</p>
 

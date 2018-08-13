@@ -93,13 +93,13 @@ annotations are a big mistake in Java design.</p>
 
 
 
-<p>Long story short, there is one big problem with annotations—they encourage us to implement
+<p>Long story short, there is one big problem with annotations---they encourage us to implement
 <a href="/2014/11/20/seven-virtues-of-good-object.html">object</a>
 functionality <strong>outside</strong> of an object,
 which is against the very principle of
 <a href="/2016/11/21/naked-data.html">encapsulation</a>.
 The object is not solid any more, since its behavior is not defined entirely by its own
-methods—some of its functionality stays elsewhere. Why is it bad? Let's
+methods---some of its functionality stays elsewhere. Why is it bad? Let's
 see in a few examples.</p>
 
 <h2 id="inject"><code>@Inject</code></h2>
@@ -241,7 +241,7 @@ the book in XML we do the following:</p>
 <p>The XML printing functionality is inside <code>XmlBook</code>. If you don't like the
 decorator idea, you can move the <code>toXML()</code> method to the <code>DefaultBook</code> class. It's
 not important. What is important is that the functionality always stays
-where it belongs—inside the object. Only the object knows how
+where it belongs---inside the object. Only the object knows how
 to
 <a href="/2016/04/05/printers-instead-of-getters.html">print itself</a>
 to the XML. Nobody else!</p>
@@ -293,7 +293,7 @@ version of class <code>Foo</code>.</p>
 
 
 
-<p>That is exactly what is wrong with this approach—we don't see
+<p>That is exactly what is wrong with this approach---we don't see
 and don't control the instantiation of that supplementary object. Object
 composition, which is the most important process in object design, is
 hidden somewhere behind the scenes. You may say that we don't need
@@ -353,7 +353,7 @@ instead? Object <a href="/2015/02/26/composable-decorators.html">composition</a>
 <p>What could be worse than annotations? <a href="/2016/04/19/object-must-not-be-configurable.html">Configurations</a>.
 For example, XML configurations. Spring XML configuration mechanisms is a perfect
 example of terrible design. I've said it many times before. Let
-me repeat it again—Spring Framework is one of the worst
+me repeat it again---Spring Framework is one of the worst
 software products in the Java world. If you can stay away from it, you will
 do yourself a big favor.</p>
 

@@ -28,7 +28,7 @@ in all situations and assertions should never be used. Here&amp;#39;s why.&lt;/p
 &lt;a href=&quot;/2015/07/06/public-static-literals.html&quot;&gt;some time ago&lt;/a&gt;, mostly
 saying that they are a bad thing, if being public. They reduce duplication,
 but introduce coupling. A much better way to get rid of duplication is
-by creating new classes or methods&amp;mdash;a traditional OOP method. This seems to make
+by creating new classes or methods---a traditional OOP method. This seems to make
 sense and in our projects I see less and less public constants. In
 some projects we don&amp;#39;t have them at all. But one thing still bothers me:
 unit tests. Most programmers seem to think that when static analysis says
@@ -65,7 +65,7 @@ created supplementary &amp;quot;smart&amp;quot; classes.&lt;/p&gt;
         
           <description>&lt;p&gt;Using object properties as configuration parameters is a very common
 mistake we keep making mostly because our objects
-are mutable&amp;mdash;we &lt;strong&gt;configure&lt;/strong&gt; them. We change their behavior by
+are mutable---we &lt;strong&gt;configure&lt;/strong&gt; them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it&amp;#39;s abusive and disrespectful
 from a &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;philosophical&lt;/a&gt;
@@ -137,7 +137,7 @@ is &amp;quot;a process of running a program/method interactively,
 breaking execution flow after each statement and showing...&amp;quot; In a nutshell, it is
 a very useful technique ... for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
-never debug their code&amp;mdash;they write unit tests. My point here
+never debug their code---they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
 If debugging is required, the &lt;strong&gt;design is bad&lt;/strong&gt;.&lt;/p&gt;
 </description>
@@ -258,7 +258,7 @@ right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
 their best to find what&amp;#39;s wrong. Eventually they stop and say
 &amp;quot;we&amp;#39;re done.&amp;quot; How do they know when to stop? When there is enough
-testing? It&amp;#39;s obvious&amp;mdash;when there are &lt;em&gt;no more bugs left&lt;/em&gt; and the
+testing? It&amp;#39;s obvious---when there are &lt;em&gt;no more bugs left&lt;/em&gt; and the
 product can be shipped! If you think like this, I have bad news for you.
 You&amp;#39;re &lt;em&gt;fundamentally wrong&lt;/em&gt;.&lt;/p&gt;
 </description>
@@ -294,7 +294,7 @@ in production.&lt;/p&gt;
 is over, isn&amp;#39;t it?
 Not for me. While most object-oriented languages don&amp;#39;t have them, and most programmers
 think checked exceptions are a Java mistake, I believe in the
-opposite&amp;mdash;unchecked exceptions are the &lt;strong&gt;mistake&lt;/strong&gt;. Moreover, I believe
+opposite---unchecked exceptions are the &lt;strong&gt;mistake&lt;/strong&gt;. Moreover, I believe
 multiple exception types are a bad idea too.&lt;/p&gt;
 </description>
         
@@ -631,7 +631,7 @@ what code duplication means. It&amp;#39;s a disaster. However, there is a soluti
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
-you have to write a few dozen lines of code&amp;mdash;and maybe even more
+you have to write a few dozen lines of code---and maybe even more
 than that if proper exception handling and logging is needed.
 &lt;a href=&quot;/2014/04/24/java-xml-parsing-and-traversing.html&quot;&gt;jcabi-xml&lt;/a&gt; is
 a small open source library that makes life much easier by enabling
@@ -775,13 +775,13 @@ Well, yes, you&amp;#39;re pretty sure; why wouldn&amp;#39;t they? ...&lt;/p&gt;
 &lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;Dependency Injection Containers are Code Polluters&lt;/a&gt;,
 I universally labeled all mutable objects with &amp;quot;setters&amp;quot; (object methods starting with &lt;code&gt;set&lt;/code&gt;) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
-this wasn&amp;#39;t convincing enough for many of you&amp;mdash;I received a few requests
+this wasn&amp;#39;t convincing enough for many of you---I received a few requests
 asking to provide more specific and practical examples.&lt;/p&gt;
 
 &lt;p&gt;Thus, in order to illustrate my strongly negative attitude to &amp;quot;mutability via setters,&amp;quot; I took
 an existing &lt;a href=&quot;http://commons.apache.org/proper/commons-email/&quot;&gt;commons-email&lt;/a&gt; Java library from Apache
 and re-designed it my way, without setters and with &amp;quot;object thinking&amp;quot; in mind.
-I released my library as part of the &lt;a href=&quot;http://www.jcabi.com&quot;&gt;jcabi&lt;/a&gt; family&amp;mdash;&lt;a href=&quot;http://email.jcabi.com&quot;&gt;jcabi-email&lt;/a&gt;. Let&amp;#39;s see what benefits
+I released my library as part of the &lt;a href=&quot;http://www.jcabi.com&quot;&gt;jcabi&lt;/a&gt; family---&lt;a href=&quot;http://email.jcabi.com&quot;&gt;jcabi-email&lt;/a&gt;. Let&amp;#39;s see what benefits
 we get from a &amp;quot;pure&amp;quot; object-oriented and immutable approach, without getters.&lt;/p&gt;
 </description>
         
@@ -946,7 +946,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;?&lt;/td&gt;
-  &lt;td class=&quot;center&quot;&gt;&amp;mdash;&lt;/td&gt;
+  &lt;td class=&quot;center&quot;&gt;---&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://ci.appveyor.com/project/yegor256/rultor/branch/master&quot;&gt;
     &lt;img src=&quot;https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true&quot; class=&quot;x-build&quot; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
@@ -1128,7 +1128,7 @@ The URL is different, the server-side is definitely different, but the
 nature of the data is exactly the same. The only thing that changes is
 a representation layer.&lt;/p&gt;
 
-&lt;p&gt;In the first case, we get JSON; in the second&amp;mdash;HTML.&lt;/p&gt;
+&lt;p&gt;In the first case, we get JSON; in the second---HTML.&lt;/p&gt;
 
 &lt;p&gt;How about combining them? How about using the same URL and the same
 server-side processing mechanism for both of them? How about shifting the whole rendering task

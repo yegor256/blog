@@ -192,7 +192,7 @@ post.setDate(new Date());
 post.setTitle("How to cook an omelette");
 session.save(post);</pre>
 
-<p>This is how almost every ORM works. The basic principle is always the same—ORM objects are
+<p>This is how almost every ORM works. The basic principle is always the same---ORM objects are
 <a href="/2016/07/06/data-transfer-object.html">anemic envelopes</a>
 with data. We are talking with the ORM
 framework, and the framework is talking to the database. Objects only help
@@ -248,7 +248,7 @@ relational database. Look at this picture; it illustrates what ORM is doing.</p>
 <p>I, being a reader of posts, have to deal with two components: 1) the ORM
 and 2) the "ob-truncated" object returned to me. The behavior I'm interacting
 with is supposed to be provided through a single entry point, which is an object
-in OOP. In the case of ORM, I'm getting this behavior via <strong>two</strong> entry points—the ORM
+in OOP. In the case of ORM, I'm getting this behavior via <strong>two</strong> entry points---the ORM
 engine and the "thing," which we can't even call an object.</p>
 
 <p>Because of this terrible and offensive violation of the object-oriented
@@ -421,7 +421,7 @@ System.out.println("Just added post #" + post.id());</pre>
 <p>You can see a full practical example <a href="https://github.com/aintshy/hub/tree/0.7.2/src/main/java/com/aintshy/pgsql">here</a>.
 It's an open source
 web app that works with PostgreSQL using the exact approach explained
-above—SQL-speaking objects.</p>
+above---SQL-speaking objects.</p>
 
 <h2 id="what-about-performance">What About Performance?</h2>
 

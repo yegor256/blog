@@ -93,7 +93,7 @@ and to Java in particular.</p>
 
 <p>Your class should be an abstraction of a real life entity
 with no "validators," "controllers," "managers," etc.
-If your class name ends with an "-er"—it's <a href="http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData">a bad design</a>.
+If your class name ends with an "-er"---it's <a href="http://c2.com/cgi/wiki?DontNameClassesObjectManagerHandlerOrData">a bad design</a>.
 BTW, here are my
 <a href="/2014/11/20/seven-virtues-of-good-object.html">seven virtues</a>
 of a good object.
@@ -133,7 +133,7 @@ use the <code>get</code> prefix <a href="/2014/09/16/getters-and-setters-are-evi
 <p>You can read more about this idea in
 <a href="/elegant-objects.html">Elegant Objects</a> book,
 section <a href="/images/books/elegant-objects/contents.pdf">2.4</a>.
-There is only one exception to the rule just mentioned—test methods for JUnit. They are explained below.</p>
+There is only one exception to the rule just mentioned---test methods for JUnit. They are explained below.</p>
 
 <h2 id="test-method-names">Test Method Names</h2>
 
@@ -163,7 +163,7 @@ comments use 'can.'</p>
 <h2 id="variable-names">Variable Names</h2>
 
 <p>Avoid composite names of variables, like <code>timeOfDay</code>, <code>firstItem</code>, or
-<code>httpRequest</code>. I mean with both—class variables and in-method ones. A
+<code>httpRequest</code>. I mean with both---class variables and in-method ones. A
 variable name should be long enough to avoid ambiguity in its scope of
 visibility, but not too long if possible. A name should be a noun in singular or
 plural form, or an appropriate abbreviation. More about it in
@@ -230,7 +230,7 @@ used only once. Like in this example:</p>
 <p>This above variable is used only once and the code should be refactored to:</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="k">return</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"data.txt"</span><span class="o">);</span>
 </code></pre></div>
-<p>Sometimes, in very rare cases—mostly because of better formatting—one-time
+<p>Sometimes, in very rare cases---mostly because of better formatting---one-time
 variables may be used. Nevertheless, try to avoid such situations at all costs.</p>
 
 <h2 id="exceptions">Exceptions</h2>
@@ -287,7 +287,7 @@ same line:</p>
 
 <p>Class constants should be used when you want to share information between class
 methods, and this information is a characteristic (!) of your class. Don't use
-constants as a replacement of string or numeric literals—very bad
+constants as a replacement of string or numeric literals---very bad
 practice that leads to code pollution. Constants (as with any
 <a href="/2016/07/14/who-is-object.html">object</a> in
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>)
