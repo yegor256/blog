@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-13T05:42:51+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-14T09:14:07+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
+He said that he needed a partner, to help him partially finance the project, promote
+it, bring in new ideas, and push the business forward. I liked the business
+idea and wanted to participate. I started to ask questions about our
+future partnership and attempted to draw a simple partnership agreement.
+He quickly got offended. He said that he was looking for a &lt;em&gt;real&lt;/em&gt; partner,
+who would share his goals and would never require any papers or lawyers.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Lola rennt (1998) by Tom Tykwer&#39; src=&#39;/images/2018/08/run-lola-run.jpg&#39; longdesc=&#39;#8ad64182&#39;/&gt;&lt;figcaption id=&#39;8ad64182&#39;&gt;Lola rennt (1998) by Tom Tykwer&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is a list of the questions I asked him:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What happens with my shares if I stop working?&lt;/li&gt;
+&lt;li&gt;Can I start a similar business with another partner later?&lt;/li&gt;
+&lt;li&gt;Who will have a checkbook and bank account access?&lt;/li&gt;
+&lt;li&gt;Who has final say if we disagree?&lt;/li&gt;
+&lt;li&gt;Do I need your permission to sell my shares to a friend?&lt;/li&gt;
+&lt;li&gt;Will there be any vesting schedule?&lt;/li&gt;
+&lt;li&gt;Who approves expenses?&lt;/li&gt;
+&lt;li&gt;Who controls the domain name registrar account?&lt;/li&gt;
+&lt;li&gt;Who pays if the project needs more money?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the majority of people I attempt to do business with, these questions are
+indeed offensive. They feel like I&amp;#39;m trying to draw
+a &lt;a href=&quot;https://en.wikipedia.org/wiki/Prenuptial_agreement&quot;&gt;prenup&lt;/a&gt; between
+us, while they would prefer our &amp;quot;marriage&amp;quot; to be based solely on love.
+They would have us promise to never betray each other&amp;#39;s mutual interests but then
+the business suffers and eventually collapses.&lt;/p&gt;
+
+&lt;p&gt;Why so? Because it&amp;#39;s impossible to be equal in business (just like it&amp;#39;s impossible
+to be equal in marriage, but that&amp;#39;s a topic for another blog post).
+Eventually a conflict of interests shows up and the inability to resolve it
+affects and damages the business.
+&amp;quot;Co-founder disputes have historically been one of the top reasons
+startups fail at the earliest possible stage,&amp;quot;
+&lt;a href=&quot;https://techcrunch.com/2017/02/18/co-founder-conflict/&quot;&gt;says&lt;/a&gt;
+&lt;a href=&quot;https://twitter.com/garrytan&quot;&gt;Garry Tan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I would call that type of partnership, which many young startup founders
+enter into, &amp;quot;70/70.&amp;quot; For them the initial agreement is not a formula of future
+growth, but a symbol of &lt;em&gt;respect&lt;/em&gt;. Each of them wants to be respected and that&amp;#39;s
+why they demand 70% of the business for themselves. They don&amp;#39;t care and
+don&amp;#39;t understand how exactly the distribution of assets and profit
+will work in the future. They don&amp;#39;t foresee forthcoming conflicts and fights,
+mostly because they are too young or naive (or both).
+According to the &lt;a href=&quot;https://hbr.org/2008/02/the-founders-dilemma&quot;&gt;The Founder&amp;#39;s Dilemma&lt;/a&gt;
+by &lt;a href=&quot;https://en.wikipedia.org/wiki/Noam_T._Wasserman&quot;&gt;Noam Wasserman&lt;/a&gt;,
+&amp;quot;Founders&amp;#39; attachment, overconfidence, and naïveté may be necessary
+to get new ventures up and running, but these emotions later create problems.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;They just want to have 70%... each!!!&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not even 50/50 in most cases, but 70/70. This is what makes it funny.
+Very often each partner thinks that he or she is the major contributor
+to the project and that&amp;#39;s why it&amp;#39;s 70%.&lt;/p&gt;
+
+&lt;p&gt;And they have it.&lt;/p&gt;
+
+&lt;p&gt;When I was younger, I had no problem with entering into
+such an agreement. I was saying to myself: he wants 70% but he doesn&amp;#39;t
+understand that in reality he won&amp;#39;t even get a single percent, since, for example, we
+didn&amp;#39;t put the ownership of the domain name into the contract. It is obvious
+right from the start that the partner is ready to trust me blindly,
+without even thinking about possible consequences. In the end, all of us, and our
+startups, were losing.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t get me wrong, trust between partners is a crucial and mandatory element
+of any deal. But you can&amp;#39;t trust me to stand by my words, if there were &lt;em&gt;no words&lt;/em&gt;.
+If we never discussed, for example, how much I get when I quit because
+I&amp;#39;m fed up with you, I will try to get as much as possible and where exactly
+that line of 70% goes will be a subject for an ugly debate. And this will
+happen in very different circumstances, where there will be, most probably,
+no love between us or maybe even friendship. In that future fight the one
+who is the most aggressive and cunning will win. Do you really want that
+to be me? Or do you expect it to be you?&lt;/p&gt;
+
+&lt;p&gt;Now I&amp;#39;m a bit older and more experienced. I&amp;#39;ve seen those ugly debates and don&amp;#39;t want them anymore.
+I don&amp;#39;t want the investment of my time and my money to go down the drain. I want
+to know upfront what exactly will happen with them in a month, a year,
+and a few decades, when I retire and my grandchildren inherit them.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s why I ask all those &amp;quot;offensive&amp;quot; questions upfront. If the other side does
+indeed get offended, I attempt to explain to them what I just said in this article.
+If they don&amp;#39;t understand and still want to marry me out of love,
+I walk away. As &lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&quot;&gt;Paul Graham&lt;/a&gt;, a co-founder of Y Combinator,
+&lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&quot;&gt;said&lt;/a&gt;,
+&amp;quot;Most of the disputes I&amp;#39;ve seen between founders could have been avoided if they&amp;#39;d been more careful about
+who they started a company with.&amp;quot; I don&amp;#39;t want to start a business with
+those who are scared of a prenup. I know that in that case
+the divorce will be ugly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">A few days ago, a friend of mine asked me to join him in a new startup.
+He said that he needed a partner, to help him partially finance the project, promote
+it, bring in new ideas, and push the business forward. I liked the business
+idea and wanted to participate. I started to ask questions about our
+future partnership and attempted to draw a simple partnership agreement.
+He quickly got offended. He said that he was looking for a real partner,
+who would share his goals and would never require any papers or lawyers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/run-lola-run.jpg" /></entry><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
 my projects managed by Zerocracy. He claims to be an expert with 10 years
 of hands-on coding experience, $60 hourly rate (we &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;don&amp;#39;t hire&lt;/a&gt; US guys),
 and fluent English. Then he joins the project and attempts
@@ -1143,240 +1242,4 @@ it&amp;#39;s even more frustrating when the code is mine. The &amp;quot;deep thi
 they call it,
 which is always required before even a small issue can be resolved, seriously
 turns me away from programming. Or did turn me away. Until I started
-to think differently and encourage myself to be lazy. Here is how.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/sin-city.jpg" /></entry><entry><title type="html">Nine Steps of Learning by Refactoring</title><link href="https://www.yegor256.com/2018/04/10/learning-by-refactoring.html" rel="alternate" type="text/html" title="Nine Steps of Learning by Refactoring" /><published>2018-04-10T00:00:00+00:00</published><updated>2018-04-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/04/10/learning-by-refactoring</id><content type="html" xml:base="https://www.yegor256.com/2018/04/10/learning-by-refactoring.html">&lt;p&gt;I &lt;a href=&quot;https://twitter.com/yegor256/status/977799130100781056&quot;&gt;was asked&lt;/a&gt;
-on Twitter recently how is it possible to refactor
-if one doesn&amp;#39;t understand how the code works.
-I &lt;a href=&quot;https://twitter.com/yegor256/status/977966601227112449&quot;&gt;replied&lt;/a&gt;
-that it is &amp;quot;learning by refactoring.&amp;quot; Then I tried to Google it
-and found &lt;a href=&quot;https://www.google.ru/search?q=%22learning+by+refactoring%22&quot;&gt;nothing&lt;/a&gt;.
-I was surprised. To me refactoring seems to be the most effective and
-obvious way to study the source code. Here is how I usually do it,
-in nine object-oriented steps.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Dom Hemingway (2013) by Richard Shepard&#39; src=&#39;/images/2018/04/dom-hemingway.jpg&#39; longdesc=&#39;#e8b2dbc0&#39;/&gt;&lt;figcaption id=&#39;e8b2dbc0&#39;&gt;Dom Hemingway (2013) by Richard Shepard&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;According to Wikipedia,
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Code_refactoring&quot;&gt;code refactoring&lt;/a&gt; is
-&amp;quot;the process of restructuring existing computer code---changing the
-factoring---without changing its external behavior.&amp;quot; The goal
-of refactoring is to make code more readable and suitable for modifications.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;https://amzn.to/2E7i17H&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/refactoring.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Martin Fowler in his famous book &lt;a href=&quot;https://amzn.to/2E7i17H&quot;&gt;Refactoring: Improving the Design of Existing Code&lt;/a&gt;
-suggested a number of refactoring techniques which help making
-code simpler, more abstract, more readable, etc. Some of them
-are rather
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;questionable&lt;/a&gt;
-from an object-oriented standpoint---like
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Field_encapsulation&quot;&gt;Encapsulate Field&lt;/a&gt;,
-for example---but most of them are valid.&lt;/p&gt;
-
-&lt;p&gt;Here is what I&amp;#39;m usually doing when I don&amp;#39;t know the code, but need to modify it.
-The techniques are sorted by the order of complexity, starting with
-the easiest one.&lt;/p&gt;
-
-&lt;h2 id=&quot;remove-ide-red-spots&quot;&gt;Remove IDE Red Spots&lt;/h2&gt;
-
-&lt;p&gt;When I open the source code of &lt;a href=&quot;http://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt;
-in IntelliJ IDEA, using my
-custom &lt;a href=&quot;/bin/settings.jar&quot;&gt;&lt;code&gt;settings.jar&lt;/code&gt;&lt;/a&gt;, I see something like this:&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/cactoos-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;When I open the source code of, say,
-&lt;a href=&quot;https://github.com/spring-projects/spring-boot&quot;&gt;Spring Boot&lt;/a&gt;,
-I see something like this
-(it&amp;#39;s &lt;a href=&quot;https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java&quot;&gt;&lt;code&gt;o.s.b.ImageBanner&lt;/code&gt;&lt;/a&gt;
-randomly picked out of a thousand other classes that look very similar):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/springboot-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;See the difference?&lt;/p&gt;
-
-&lt;p&gt;The first thing I do, when I see someone else&amp;#39;s code, is to make it &amp;quot;red spots free&amp;quot;
-for my IDE. Most of those red spots are easy to remove,
-while others will take some time to refactor.
-While doing that I learn a lot about the &lt;del&gt;crap&lt;/del&gt; program I have
-to deal with.&lt;/p&gt;
-
-&lt;h2 id=&quot;remove-empty-lines&quot;&gt;Remove Empty Lines&lt;/h2&gt;
-
-&lt;p&gt;I &lt;a href=&quot;/2014/11/03/empty-line-code-smell.html&quot;&gt;wrote&lt;/a&gt;
-some time ago that empty lines inside method bodies are bad things.
-They are obvious indicators of redundant complexity. Programmers tend
-to add them to their methods in order to simplify things.&lt;/p&gt;
-
-&lt;p&gt;This is a method from the &lt;a href=&quot;https://github.com/apache/maven&quot;&gt;Apache Maven&lt;/a&gt; code base
-(class &lt;a href=&quot;https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java&quot;&gt;&lt;code&gt;RepositoryUtils&lt;/code&gt;&lt;/a&gt;
-picked at random, but almost all other classes are formatted the same way):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/maven-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;Aside from being &amp;quot;all red&amp;quot; their code is full of empty lines.
-Removing them will make code more readable and will also help me
-understand how it works. Bigger methods will need refactoring, since
-without empty lines they will become almost completely unreadable. Hence,
-I compress, understand, and make them smaller mostly by breaking
-them down into smaller methods.&lt;/p&gt;
-
-&lt;h2 id=&quot;make-names-shorter&quot;&gt;Make Names Shorter&lt;/h2&gt;
-
-&lt;p&gt;I&amp;#39;m generally in favor of short one-noun names for variables and one-verb names
-for methods. I &lt;a href=&quot;/2015/01/12/compound-name-is-code-smell.html&quot;&gt;believe&lt;/a&gt;
-that longer &amp;quot;compound&amp;quot; names are an indicator of unnecessary code complexity.&lt;/p&gt;
-
-&lt;p&gt;For example, I found this method
-&lt;code&gt;registerServletContainerInitializerToDriveServletContextInitializers&lt;/code&gt; (69 characters!)
-in the &lt;a href=&quot;https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java&quot;&gt;&lt;code&gt;o.s.b.w.e.u.UndertowServletWebServerFactory&lt;/code&gt;&lt;/a&gt;
-class in Spring Boot.
-I wonder why the author skipped the &lt;code&gt;couldYouPlease&lt;/code&gt; prefix
-and the &lt;code&gt;otherwiseThrowAnException&lt;/code&gt; suffix.&lt;/p&gt;
-
-&lt;p&gt;Jokes aside, such long method names clearly demonstrate that the code
-is too complex and can&amp;#39;t be explained with a simple &lt;code&gt;register&lt;/code&gt; or even
-&lt;code&gt;registerContainer&lt;/code&gt;. It seems that there are many different containers,
-initializers, servlets, and other creatures that need to be registered
-somehow. When I join a project and see a method with this name I&amp;#39;m getting
-ready for big trouble.&lt;/p&gt;
-
-&lt;p&gt;Making names shorter is the mandatory refactoring step I take when
-starting to work with foreign or legacy code.&lt;/p&gt;
-
-&lt;h2 id=&quot;add-unit-tests&quot;&gt;Add Unit Tests&lt;/h2&gt;
-
-&lt;p&gt;Most classes (and methods) come without any documentation, especially
-if we are talking about closed-source commercial code. We are lucky if
-the classes have more or less descriptive names and are small and
-cohesive.&lt;/p&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1PBpoDT&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2015/04/book-goos.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://amzn.to/1SdcZ8M&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2015/04/book-legacy.jpg&#39; style=&#39;width:96px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;However, instead of documentation I prefer to deal with unit tests. They
-explain the code much better and prove that it works. When I don&amp;#39;t
-understand how the class works, I try to write a unit test for it. In most
-cases it&amp;#39;s not possible, for many reasons. In such a case I try to apply
-everything I learned from
-&lt;a href=&quot;http://amzn.to/1SdcZ8M&quot;&gt;&lt;em&gt;Working Effectively With Legacy Code&lt;/em&gt;&lt;/a&gt;
-by Michael Feathers
-and
-&lt;a href=&quot;http://amzn.to/1PBpoDT&quot;&gt;&lt;em&gt;Growing Object-Oriented Software, Guided by Tests&lt;/em&gt;&lt;/a&gt;
-by Steve Freeman and Nat Pryce.
-Both books are pretty much focused on this very problem: what to do
-when you don&amp;#39;t know what to do, testing-wise.&lt;/p&gt;
-
-&lt;h2 id=&quot;remove-multiple-returns&quot;&gt;Remove Multiple Returns&lt;/h2&gt;
-
-&lt;p&gt;I &lt;a href=&quot;/2015/08/18/multiple-return-statements-in-oop.html&quot;&gt;wrote earlier&lt;/a&gt;
-that the presence of multiple &lt;code&gt;return&lt;/code&gt; statements in a single method is not something
-object-oriented programming should encourage. Instead, a method must
-always have a single exit point, just like those functions in
-functional programming.&lt;/p&gt;
-
-&lt;p&gt;Look at this method from the
-&lt;a href=&quot;https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java&quot;&gt;&lt;code&gt;o.s.b.c.p.b.Binder&lt;/code&gt;&lt;/a&gt;
-class from Spring Boot (there are many similar examples there, I picked this one randomly):&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/binder-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are five &lt;code&gt;return&lt;/code&gt; statements in such a small method. For object-oriented
-code that&amp;#39;s too much. It&amp;#39;s OK for procedural code, which I also write
-sometimes. For example, &lt;a href=&quot;https://github.com/zerocracy/farm/blob/master/src/main/resources/com/zerocracy/stk/pm/in/orders/start_order_if_assigned_in_github.groovy&quot;&gt;this Groovy script&lt;/a&gt;
-of ours has five &lt;code&gt;return&lt;/code&gt; keywords too:&lt;/p&gt;
-
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2018/04/farm-listing.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
-
-&lt;p&gt;But this is Groovy and it&amp;#39;s not a class. It&amp;#39;s just a procedure, a script.&lt;/p&gt;
-
-&lt;p&gt;Refactoring and removing multiple &lt;code&gt;return&lt;/code&gt; statements definitely helps
-make code cleaner. Mostly because without them it&amp;#39;s necessary to use
-deeper nesting of &lt;code&gt;if/then/else&lt;/code&gt; statements and then the code starts to look
-ugly, unless you break it down into smaller pieces.&lt;/p&gt;
-
-&lt;h2 id=&quot;get-rid-of-nulls&quot;&gt;Get Rid of NULLs&lt;/h2&gt;
-
-&lt;p&gt;NULLs &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;are evil&lt;/a&gt;,
-it&amp;#39;s a well-known fact. However, they are still everywhere. For example,
-there are 4,100 Java files in Spring Boot v2.0.0.RELEASE and 243K LoC,
-which include the &lt;code&gt;null&lt;/code&gt; keyword 7,055 times. This means approximately one &lt;code&gt;null&lt;/code&gt;
-for every 35 lines.&lt;/p&gt;
-
-&lt;p&gt;To the contrary, &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes Framework&lt;/a&gt;, which I founded a few years ago,
-has 771 Java files, 154K LoC, and 58 &lt;code&gt;null&lt;/code&gt; keywords. Which is roughly
-one &lt;code&gt;null&lt;/code&gt; per 2,700 lines. See the difference?&lt;/p&gt;
-
-&lt;p&gt;The code gets cleaner when you remove NULLs, but it&amp;#39;s not so easy to do.
-Sometimes it&amp;#39;s even impossible. That&amp;#39;s why we still have those 58 cases
-of &lt;code&gt;null&lt;/code&gt; in Takes. We simply can&amp;#39;t remove them, because they are coming
-from the JDK.&lt;/p&gt;
-
-&lt;h2 id=&quot;make-objects-immutable&quot;&gt;Make Objects Immutable&lt;/h2&gt;
-
-&lt;p&gt;As I &lt;a href=&quot;/2014/11/07/how-immutability-helps.html&quot;&gt;demonstrated&lt;/a&gt;
-some time ago,
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutability&lt;/a&gt;
-helps keep objects smaller. Most classes
-that I see in the foreign code I deal with are mutable. And large.&lt;/p&gt;
-
-&lt;p&gt;If you look at any artifact analyzed by &lt;a href=&quot;http://www.jpeek.org&quot;&gt;jpeek&lt;/a&gt;,
-you will see that in most of them approximately 80% of classes
-are mutable. Moving from mutability to immutability is a big challenge
-in object-oriented programming, which, if resolved, leads to better
-code.&lt;/p&gt;
-
-&lt;p&gt;This refactoring step of make things immutable is purely profitable.&lt;/p&gt;
-
-&lt;h2 id=&quot;remove-static&quot;&gt;Remove Static&lt;/h2&gt;
-
-&lt;p&gt;Static methods and attributes are convenient,
-if you are a procedural programmer. If your
-code is object-oriented, they
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;must go away&lt;/a&gt;. In Spring Boot there
-are 7,482 &lt;code&gt;static&lt;/code&gt; keywords, which means one for every 32 lines of code.
-To the contrary, in Takes we have 310 &lt;code&gt;static&lt;/code&gt;-s, which is
-one every 496 lines.&lt;/p&gt;
-
-&lt;p&gt;Compare these numbers with the statistics about NULL and you will see
-that getting rid of &lt;code&gt;static&lt;/code&gt; is a more complex task.&lt;/p&gt;
-
-&lt;h2 id=&quot;apply-static-analysis&quot;&gt;Apply Static Analysis&lt;/h2&gt;
-
-&lt;p&gt;This is the final step and the most complex one. It&amp;#39;s complex because
-I configure static analyzers to their maximum potential or even more.
-I&amp;#39;m using &lt;a href=&quot;http://www.qulice.com&quot;&gt;Qulice&lt;/a&gt;,
-which is an aggregator of
-&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt;,
-&lt;a href=&quot;http://pmd.sourceforge.net/&quot;&gt;PMD&lt;/a&gt;, and
-&lt;a href=&quot;http://findbugs.sourceforge.net/&quot;&gt;FindBugs&lt;/a&gt;.
-Those guys are strong by themselves, but Qulice makes them
-&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;even stronger&lt;/a&gt;,
-adding a few dozen custom-made checks.&lt;/p&gt;
-
-&lt;p&gt;The principle I use for static analysis is 0/100. This means that either
-the entire code base is clean and there are no Qulice complaints, or it&amp;#39;s
-dirty. There is nothing in the middle. This is not a very typical way
-of looking at static analysis. Most programmers are using those tools
-just to collect &amp;quot;opinions&amp;quot; about their code. I&amp;#39;m using them as guides
-for refactoring.&lt;/p&gt;
-
-&lt;p&gt;Check out this video, which demonstrates the amount of complaints Qulice
-gives for the &lt;code&gt;spring-boot-project/spring-boot&lt;/code&gt; sub-module in Spring Boot
-(the video has no end, since I lost my patience in waiting):&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DDtAKIyuRMA?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;When Qulice says that everything is clean, I consider the code base fully
-ready for maintenance and modifications. At this point the refactoring
-is done.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="refactoring" /><summary type="html">I was asked
-on Twitter recently how is it possible to refactor
-if one doesn&amp;#39;t understand how the code works.
-I replied
-that it is &amp;quot;learning by refactoring.&amp;quot; Then I tried to Google it
-and found nothing.
-I was surprised. To me refactoring seems to be the most effective and
-obvious way to study the source code. Here is how I usually do it,
-in nine object-oriented steps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/dom-hemingway.jpg" /></entry></feed>
+to think differently and encourage myself to be lazy. Here is how.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/sin-city.jpg" /></entry></feed>

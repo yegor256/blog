@@ -467,6 +467,7 @@ atomicity
 atop
 attach
 attached
+attachment
 attachments
 attempt
 attempted
@@ -662,6 +663,7 @@ best-use
 bestia
 bet
 beta
+betray
 betrayal
 betrayals
 betraying
@@ -717,6 +719,7 @@ blamed
 blames
 blaming
 blank
+blindly
 bloat
 bloch
 block
@@ -1087,6 +1090,7 @@ cheaper
 cheapest
 cheat
 check
+checkbook
 checked
 checkers
 checking
@@ -1251,6 +1255,7 @@ collaborationsuperpowers
 collaborative
 collaborators
 collapse
+collapses
 colleague
 colleagues
 collect
@@ -1735,6 +1740,7 @@ dagger
 daily
 damage
 damaged
+damages
 damaging
 damn
 damon
@@ -1789,6 +1795,7 @@ debts
 debug
 debugging
 dec
+decades
 december
 decent
 decide
@@ -2015,6 +2022,7 @@ digest
 digestible
 digital
 dijkstra
+dilemma
 diligence
 dinner
 diplomacy
@@ -2099,6 +2107,7 @@ dispatching
 display
 displays
 disposal
+disputes
 disqualified
 disrespect
 disrespected
@@ -2253,6 +2262,7 @@ e-books
 each
 EAR
 earlier
+earliest
 early
 earn
 earned
@@ -2711,6 +2721,7 @@ feature
 features
 featuring
 feb
+fed
 federer
 fee
 feed
@@ -2874,6 +2885,7 @@ ford
 forecast
 foreign
 foremost
+foresee
 forever
 forget
 forgot
@@ -2899,6 +2911,7 @@ formula
 formulate
 formulated
 forth
+forthcoming
 fortran
 fortune
 forty
@@ -2909,7 +2922,9 @@ foundation
 foundational
 founded
 founder
+founder's
 founders
+founders'
 four
 four-page
 fourth
@@ -3005,6 +3020,7 @@ gantt
 gap
 gaps
 garbage
+garry
 gas
 gates
 gateway
@@ -3117,6 +3133,7 @@ graduated
 graduation
 graham
 grammarly
+grandchildren
 grant
 graph
 graphic
@@ -3338,6 +3355,7 @@ hires
 hiring
 his
 historical
+historically
 history
 hit
 hits
@@ -4152,6 +4170,7 @@ light-weight
 lighter
 like
 like---unmotivated
+liked
 likely
 likes
 likewise
@@ -4372,6 +4391,7 @@ market-ready
 marketable
 marketers
 marketing
+marriage
 married
 marry
 marrying
@@ -4749,6 +4769,7 @@ myself
 MySQL
 mythical
 myths
+na
 nag
 nah
 naive
@@ -4847,6 +4868,7 @@ no
 no-server
 no-tests-upfront
 noaltruism
+noam
 noble
 nobodies
 nobody
@@ -5000,6 +5022,7 @@ okay
 old
 old-fashioned
 old-school
+older
 oldest
 olive
 on
@@ -5109,6 +5132,7 @@ OSS
 OSSRH
 OSX
 other
+other's
 other---it's
 other---when
 others
@@ -5141,6 +5165,7 @@ overall
 overarching
 overblown
 overcomplicated
+overconfidence
 overdue
 overestimated
 overflow
@@ -5239,6 +5264,7 @@ particular---just
 parties
 partner
 partners
+partnership
 parts
 party
 pascal
@@ -5588,6 +5614,7 @@ prefixed
 prefixes
 preliminary
 premium
+prenup
 prep
 preparation
 prepare
@@ -6064,6 +6091,7 @@ register
 registered
 registering
 registers
+registrar
 registration
 regret
 regrets
@@ -6258,6 +6286,7 @@ resumes
 retain
 rethink
 retina
+retire
 retired
 retirement
 retires
@@ -7248,6 +7277,7 @@ swimming
 switch
 switched
 switching
+symbol
 sympathy
 symptom
 symptoms
@@ -7288,6 +7318,7 @@ talks
 tallinn
 tambi
 taming
+tan
 tandem
 tangible
 tangled
@@ -7431,6 +7462,7 @@ therefore
 thermometer
 these
 they
+they'd
 they're
 they've
 thiel
@@ -7905,6 +7937,7 @@ vegas
 velocity
 vendor
 venture
+ventures
 venue
 venues
 verb
@@ -7928,6 +7961,7 @@ vertically
 very
 vested
 vesting
+vet
 vexor
 via
 viber
@@ -8008,6 +8042,7 @@ warnings
 wars
 was
 wasn't
+wasserman
 waste
 wasted
 wasteful
