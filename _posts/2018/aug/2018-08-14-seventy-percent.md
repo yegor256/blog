@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "70/70"
-date: 2018-01-29
+date: 2018-08-14
 place: Moscow, Russia
 tags: mood
 description: |
@@ -14,9 +14,9 @@ keywords:
   - trust in deals
   - how to trust a partner
   - equality in business
-image: /images/2018/09/
+image: /images/2018/08/run-lola-run.jpg
 jb_picture:
-  caption:
+  caption: Lola rennt (1998) by Tom Tykwer
 ---
 
 A few days ago, a friend of mine asked me to join him in a new startup.
