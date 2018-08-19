@@ -8,6 +8,7 @@ description: |
   What makes a good architect? Is it the same as
   a senior programmer? Not really. Here is the list
   of traits a software architect must have.
+book: code-ahead-1 2
 keywords:
   - architect
   - software architect

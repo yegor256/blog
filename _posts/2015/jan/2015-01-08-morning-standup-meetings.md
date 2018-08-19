@@ -8,6 +8,7 @@ description: |
   Daily stand-up meetings are a common practice among software
   development teams (especially in Scrum), even though they are a bad
   practice and should not be used by good project managers.
+book: code-ahead-1 1
 keywords:
   - scrum stand-up meetings
   - daily scrum meetings

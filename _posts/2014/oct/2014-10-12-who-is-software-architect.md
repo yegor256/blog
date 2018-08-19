@@ -7,6 +7,7 @@ categories: jcg best
 description: |
   The role of a software architect is mission critical
   and has to be explicitly set even for very small projects.
+book: code-ahead-1 2
 keywords:
   - software architect
   - role of software architect

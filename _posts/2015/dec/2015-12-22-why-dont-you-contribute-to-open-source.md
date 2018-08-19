@@ -8,6 +8,7 @@ description: |
   An active open source contribution is a good
   habit for a software developer who is passionate about
   his or her job.
+book: code-ahead-1 1
 keywords:
   - open source contribution
   - github followers

@@ -8,6 +8,7 @@ description: |
   Static analysis, if done manually, may seriously improve
   programmer's skills; auto-formatting tools are lacking
   that aspect and don't help us on the long run.
+book: code-ahead-1 1
 keywords:
   - static analysis
   - teaching by static analysis

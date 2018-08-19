@@ -7,6 +7,7 @@ description: |
   Continuous integration doesn't work while programmers
   are able to commit into the master branch. This article
   explains why and proposes a solution.
+book: code-ahead-1 3
 keywords:
   - broken builds
   - continuous integration doesn't work

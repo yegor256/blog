@@ -8,6 +8,7 @@ description: |
   Software architect is a person responsible for
   a software product and leading the team of software
   developers; what skills he or she must posess?
+book: code-ahead-1 2
 keywords:
   - podcast
   - project management podcast

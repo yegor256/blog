@@ -8,6 +8,7 @@ description: |
   When project scope is perfectly decomposed and management
   rules are clear and strict, speed of delivery
   is the virtue, not the quality.
+book: code-ahead-1 3
 keywords:
   - quality vs speed
   - speed vs quality

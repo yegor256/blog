@@ -7,6 +7,7 @@ description: |
   A software architect is responsible for the technical
   success of a software project and must accurately report
   to the project manager.
+book: code-ahead-1 2
 keywords:
   - software architect
   - software architect job description

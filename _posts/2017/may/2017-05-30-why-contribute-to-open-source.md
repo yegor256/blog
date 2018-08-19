@@ -8,6 +8,7 @@ description: |
   Open source contribution is a very important
   activity of a serious programmer, but he or she
   must demand rewards for that.
+book: code-ahead-1 1
 keywords:
   - open source contribution
   - github followers
