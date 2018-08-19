@@ -40,7 +40,13 @@ informed about everything I do publicly, including these webinars.
 ## 2018
 
 
-<!-- {% webinar 08-08-2018 36 FNWyN_Q10TI What's wrong with global variables? %} -->
+{% webinar 05-09-2018 37 oXj9UWm1134 Names of objects, methods and variables in OOP %}
+
+<a href="https://www.youtube.com/watch?v=oXj9UWm1134"><img src="https://i.ytimg.com/vi/oXj9UWm1134/mqdefault.jpg" class="wnr" alt="Webinar no.37 by Yegor Bugayenko"/></a>
+September 5, 2018<br/>
+&#35;37: **Names of objects, methods and variables in OOP**<br/>
+Finding the right name for a class, a method, an object, an attribute or a variable
+is a complex task in OOP. There are a few thoughts and practical examples.
 
 <a href="https://www.youtube.com/watch?v=FNWyN_Q10TI"><img src="https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg" class="wnr" alt="Webinar no.36 by Yegor Bugayenko"/></a>
 August 8, 2018<br/>
