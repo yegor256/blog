@@ -18,7 +18,7 @@ keywords:
 ---
 
 Here is a simple principle for naming methods in OOP,
-which I try to follow in my code:
+which I'm trying to follow in my code:
 it's a _verb_ if it _manipulates_, it's a _noun_ if it _builds_.
 That's it. Nothing in between. Methods like
 `saveFile()` or `getTitle()` don't fit and must be renamed and refactored.
