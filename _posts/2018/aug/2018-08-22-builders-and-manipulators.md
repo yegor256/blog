@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Builders and Manipulators"
-date: 2018-08-21
+date: 2018-08-22
 tags: oop java
 place: Palo Alto, CA
 description: |
@@ -15,6 +15,9 @@ keywords:
   - method name in oop
   - method naming best practices
   - method naming
+image: /images/2018/08/the-night-of.jpg
+jb_picture:
+  caption: The Night Of (2016) by Richard Price et al.
 ---
 
 Here is a simple principle for naming methods in OOP,
@@ -26,6 +29,8 @@ Moreover, methods that "manipulate" must always return `void`,
 for example `print()` or `save()`. Let me explain.
 
 <!--more-->
+
+{% jb_picture_body %}
 
 First, I have to say that this idea is very similar to the one
 suggested by [Bertrand Meyer](https://en.wikipedia.org/wiki/Bertrand_Meyer) in his book
