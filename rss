@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-19T05:47:54+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-22T06:12:17+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Builders and Manipulators</title><link href="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html" rel="alternate" type="text/html" title="Builders and Manipulators" /><published>2018-08-22T00:00:00+00:00</published><updated>2018-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/22/builders-and-manipulators</id><content type="html" xml:base="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html">&lt;p&gt;Here is a simple principle for naming methods in OOP,
+which I&amp;#39;m trying to follow in my code:
+it&amp;#39;s a &lt;em&gt;verb&lt;/em&gt; if it &lt;em&gt;manipulates&lt;/em&gt;, it&amp;#39;s a &lt;em&gt;noun&lt;/em&gt; if it &lt;em&gt;builds&lt;/em&gt;.
+That&amp;#39;s it. Nothing in between. Methods like
+&lt;code&gt;saveFile()&lt;/code&gt; or &lt;code&gt;getTitle()&lt;/code&gt; don&amp;#39;t fit and must be renamed and refactored.
+Moreover, methods that &amp;quot;manipulate&amp;quot; must always return &lt;code&gt;void&lt;/code&gt;,
+for example &lt;code&gt;print()&lt;/code&gt; or &lt;code&gt;save()&lt;/code&gt;. Let me explain.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Night Of (2016) by Richard Price et al.&#39; src=&#39;/images/2018/08/the-night-of.jpg&#39; longdesc=&#39;#e86c0384&#39;/&gt;&lt;figcaption id=&#39;e86c0384&#39;&gt;The Night Of (2016) by Richard Price et al.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, I have to say that this idea is very similar to the one
+suggested by &lt;a href=&quot;https://en.wikipedia.org/wiki/Bertrand_Meyer&quot;&gt;Bertrand Meyer&lt;/a&gt; in his book
+&lt;a href=&quot;https://amzn.to/2MWEuJP&quot;&gt;Object Oriented Software Construction&lt;/a&gt;,
+where he proposes we divide an object&amp;#39;s methods into two sharply
+separated categories: queries and commands.&lt;/p&gt;
+
+&lt;p&gt;The idea behind this principle is rather philosophical. Let&amp;#39;s start
+with builders, which are supposed to create or find an object and then return
+it. Suppose I have a store of books and I ask it to give me a book
+by name:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bookshelf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It&amp;#39;s obviously a &amp;quot;builder&amp;quot; (or a &amp;quot;query&amp;quot; in Meyer&amp;#39;s terms). I ask for
+a book and it&amp;#39;s given to me. The problem, though, is with the name of the method.
+It&amp;#39;s called &amp;quot;find,&amp;quot; which implies that I know how the book will be dealt with. It will
+be found.&lt;/p&gt;
+
+&lt;p&gt;However, this is not how we should treat our objects. We must not tell them
+how to do the job we want them to do. Instead, we must let &lt;em&gt;them&lt;/em&gt; decide
+whether the book will be found, constructed, or maybe taken from a memory cache.
+When we query, we have to say what result we are looking for and let
+the object make the decision about the way this result is going to be built.
+A much more appropriate name for this method would be &lt;code&gt;book()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bookshelf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The rule of thumb is: a builder is always a noun. If the method returns
+something, it has to be a noun. Preferably its name should explain what
+the method returns. If it&amp;#39;s a book, name it &lt;code&gt;book()&lt;/code&gt;. If it&amp;#39;s a file, call
+the method &lt;code&gt;file()&lt;/code&gt;, etc. Here are a few good builder examples:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;speed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Actor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;salary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;deadline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Project&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, on the contrary, are a few examples of badly named builders:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;calculateSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Actor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getSalary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;openDatabase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readDeadline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Project&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There is no place for a verb in a builder&amp;#39;s name!&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not only about the name, by the way. A builder, since its name doesn&amp;#39;t
+contain a verb, should not do any modifications to the encapsulated entities.
+It may only create or find something and return it. Just like a
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Pure_function&quot;&gt;pure function&lt;/a&gt;, it must not have any
+side-effects.&lt;/p&gt;
+
+&lt;p&gt;Next, there are &amp;quot;manipulators&amp;quot; (or &amp;quot;commands&amp;quot; in Meyer&amp;#39;s terms). They do some
+work for us, modifying the entities, which the object encapsulates. They are
+the opposite to builders, because they actually make changes to the world
+abstracted by the object.
+For example, we ask the &lt;code&gt;Bookshelf&lt;/code&gt; to add a new book to itself:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Bookshelf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The method adds the book to the storage. How exactly the storage will be
+modified, we don&amp;#39;t know. But we know that since the name of the method
+is a verb, there will be modifications.&lt;/p&gt;
+
+&lt;p&gt;Also, manipulators must not return anything. It&amp;#39;s always &lt;code&gt;void&lt;/code&gt; that we see
+as the type of their response. This is needed mostly in order to separate the imperative
+part of the code from the declarative part. We either receive objects
+or tell them what to do. We must not mix those activities in one method.&lt;/p&gt;
+
+&lt;p&gt;The purpose of these rules is to make the code simpler. If you follow
+them, and all your builders only return objects and your manipulators
+only modify the world, the entire design will become easier to
+understand. Methods will be smaller and their names shorter.&lt;/p&gt;
+
+&lt;p&gt;Of course, very often you will have a hard time finding those names. From time to time
+you will want to return something from a manipulator or make your builder
+make some changes, say to the cache. Try to resist this temptation and stay
+with the principle: a method is either a builder or a manipulator, nothing in
+the middle. The examples above are rather primitive, the code in real life
+is much more complicated. But that&amp;#39;s what the principle is going to help
+us with---making the code simpler.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m also aware of the &lt;a href=&quot;http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html&quot;&gt;noun/verb&lt;/a&gt;
+principle, which suggests always naming classes as nouns and their methods
+as verbs. I believe it&amp;#39;s a wrong idea, since it doesn&amp;#39;t differentiate
+builders from manipulators and encourages us to always think in terms
+of imperative instructions. I believe that OOP must be much more about declarative
+composition of objects, even if we have to sometimes get them from other objects
+instead of instantiating them via constructors. That&amp;#39;s why we do need builders
+in most situations and we also have to see an obvious difference between them and the other
+methods, manipulators.&lt;/p&gt;
+
+&lt;p&gt;You can find a more detailed discussion of this problem
+in &lt;a href=&quot;http://goo.gl/W2WVMk&quot;&gt;Elegant Objects&lt;/a&gt;, Volume 1, Section 2.4.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Here is a simple principle for naming methods in OOP,
+which I&amp;#39;m trying to follow in my code:
+it&amp;#39;s a verb if it manipulates, it&amp;#39;s a noun if it builds.
+That&amp;#39;s it. Nothing in between. Methods like
+saveFile() or getTitle() don&amp;#39;t fit and must be renamed and refactored.
+Moreover, methods that &amp;quot;manipulate&amp;quot; must always return void,
+for example print() or save(). Let me explain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/the-night-of.jpg" /></entry><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
 He said that he needed a partner, to help him partially finance the project, promote
 it, bring in new ideas, and push the business forward. I liked the business
 idea and wanted to participate. I started to ask questions about our
@@ -1090,156 +1211,4 @@ according to §29
 of the Policy.
 Some of our developers find this unfair and ask me to explain
 how they can report bugs such that they are definitely paid.
-Here is a non-exhaustive list of my recommendations.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/burn-after-reading.jpg" /></entry><entry><title type="html">How to Be Lazy and Stay Calm</title><link href="https://www.yegor256.com/2018/04/17/how-to-be-lazy.html" rel="alternate" type="text/html" title="How to Be Lazy and Stay Calm" /><published>2018-04-17T00:00:00+00:00</published><updated>2018-04-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/04/17/how-to-be-lazy</id><content type="html" xml:base="https://www.yegor256.com/2018/04/17/how-to-be-lazy.html">&lt;p&gt;What frustrates me most in my profession of software development
-is the regular necessity to understand large problem scopes before fixing
-small bugs, especially if the code is
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Legacy_code&quot;&gt;legacy&lt;/a&gt; and not mine. Actually,
-it&amp;#39;s even more frustrating when the code &lt;em&gt;is&lt;/em&gt; mine. The &amp;quot;deep thinking,&amp;quot; as
-&lt;a href=&quot;https://twitter.com/yegor256/status/984759494918987776&quot;&gt;they call it&lt;/a&gt;,
-which is always required before even a small issue can be resolved, seriously
-turns me away from programming. Or did turn me away. Until I started
-to think differently and encourage myself to be lazy. Here is how.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Sin City (2005) by Frank Miller&#39; src=&#39;/images/2018/04/sin-city.jpg&#39; longdesc=&#39;#fcd454d6&#39;/&gt;&lt;figcaption id=&#39;fcd454d6&#39;&gt;Sin City (2005) by Frank Miller&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I wrote about this a few years ago in this blog post:
-&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;How to Cut Corners and Stay Cool&lt;/a&gt;.
-However, in &lt;a href=&quot;https://t.me/joinchat/CLxAaQ0xp-g_3WWI3MBr2g&quot;&gt;our Telegram group&lt;/a&gt;,
-where we talk about &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;,
-some programmers keep asking me the same
-question over and over again: What should I do when the project is absolutely
-new to me, I have just &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;30 minutes&lt;/a&gt;,
-and the bug is very complex?&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;This literally means that you should always and only think about yourself and your personal profit.&lt;/aside&gt;
-
-&lt;p&gt;One of the core &lt;a href=&quot;http://www.zerocracy.com/toc.html&quot;&gt;principles&lt;/a&gt; of Zerocracy is
-&lt;a href=&quot;https://www.youtube.com/watch?v=vXUwE3FGfpg&quot;&gt;#NoAltruism&lt;/a&gt;.
-This literally means that
-you should always and only think about yourself and your personal profit. You should
-not try to improve the project, to increase its quality, to fix the code, or to refactor anything...
-unless you are &lt;em&gt;paid&lt;/em&gt; for it.&lt;/p&gt;
-
-&lt;p&gt;First of all, when the task, which you are going to be paid for, is in front of you and
-you can&amp;#39;t understand how to solve it, &lt;em&gt;don&amp;#39;t&lt;/em&gt; blame yourself. You are not
-supposed to be an expert in the legacy code you just opened up.
-Strictly speaking, you are not supposed to be an expert in anything.
-A project, &lt;del&gt;unlike your mom&lt;/del&gt;, doesn&amp;#39;t expect you to
-be intelligent or tech-savvy. It needs you to
-&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;close tickets&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class=&#39;youtube&#39;&gt;
-        &lt;a href=&#39;https://www.youtube.com/watch?v=vXUwE3FGfpg&#39;&gt;&lt;div class=&#39;box&#39;&gt;
-        &lt;img src=&#39;https://i.ytimg.com/vi/vXUwE3FGfpg/mqdefault.jpg&#39; alt=&#39;YouTube video #vXUwE3FGfpg&#39;/&gt;
-        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;#NoAltruism;
-        20 April 2018.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Who do you blame, if not yourself, when the bug is serious, the
-code is messy, and you have no idea how much time it will take just to
-understand it, let alone fix it? Well, you can blame everybody around you,
-but first of all you should blame the code base itself. How do you blame it?
-You report its low quality by creating new tickets, which may sound
-like this:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;The class X is not sufficiently documented, I don&amp;#39;t understand how it works.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;The method X is too complex, I don&amp;#39;t know what it does.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;The algorithm X is messy, I can&amp;#39;t figure out what it does.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;The library X is used here, but I don&amp;#39;t understand why you don&amp;#39;t use library Y.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;The rules of class naming are not clear, document them please.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;The principle of data organization is not obvious, document it.&amp;quot;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;However, don&amp;#39;t make the mistake many programmers are making when we tell
-them that tickets are the only
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;right way&lt;/a&gt;
-to solve problems. They start asking questions and seeking help in the tickets, just like this:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&amp;quot;How can I unit test class X, please explain.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;Please help me create class X.&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;Where should I put class X, in which package?&amp;quot;&lt;/li&gt;
-&lt;li&gt;&amp;quot;Which library should I use for doing X?&amp;quot;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The project is &lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;not a school&lt;/a&gt;,
-it&amp;#39;s not interested in making you smarter
-or more of an expert in its code. Nobody will explain anything to &lt;em&gt;you&lt;/em&gt;,
-because it&amp;#39;s a waste of money and time. What the project will do instead is
-fix its code base so that it becomes cleaner and more obvious for
-you &lt;em&gt;and everybody else&lt;/em&gt;. Thus, never ask for explanation or help, ask for
-documentation and source code fixes.&lt;/p&gt;
-
-&lt;aside class=&#39;quote&#39;&gt;You can blame everybody around you, but first of all you should blame the code base itself.&lt;/aside&gt;
-
-&lt;p&gt;What do you do next? You sit and wait, until those tickets are resolved.
-Who will resolve them? You don&amp;#39;t care. That&amp;#39;s a problem for the project manager.
-Maybe he/she will even assign those tickets back to you and it will
-be your problem to resolve them. But if that happens, the scope of work will
-be different for you. You won&amp;#39;t need to fix the bug anymore, you will
-have to document some functionality or refactor some module.&lt;/p&gt;
-
-&lt;p&gt;You will have other problems in this new and smaller scope.
-You will create new tickets, blaming everybody around you, and they also
-may come back to you. And so on and so forth. Ultimately, the scope
-of a ticket will be as small as it&amp;#39;s possible to fix in 30 minutes.&lt;/p&gt;
-
-&lt;p&gt;See the algorithm? I&amp;#39;m sure you do, but it&amp;#39;s very difficult to apply it to
-real life and real software projects, for a few obvious psychological reasons:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;You are ashamed&lt;/strong&gt;.
-You are trained to feel guilty when you are not smart enough.
-What can I say?
-Just &lt;a href=&quot;https://www.youtube.com/watch?v=Ow0lr63y4Mw&quot;&gt;stop it&lt;/a&gt;!&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;You are a &lt;a href=&quot;https://en.wikipedia.org/wiki/Perfectionism_%28psychology%29&quot;&gt;perfectionist&lt;/a&gt;&lt;/strong&gt;.
-You want to complete the entire ticket, solve the entire problem,
-and understand the entire scope.
-What can I say?
-This won&amp;#39;t be solved while the project continues to pay you
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;by the hour/month&lt;/a&gt;.
-Once they start paying for results, this disease will be cured.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;You have no passion&lt;/strong&gt;.
-You just don&amp;#39;t care about the quality of code at all.
-You don&amp;#39;t want it to look clean, you can&amp;#39;t even tell what clean is
-or what messy is. You just want them to pay you by the end
-of the month. In this case you won&amp;#39;t even know what tickets to
-report.
-What can I say?
-I guess you have to try and find another job.
-Maybe a &lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;manager&lt;/a&gt;?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;You are afraid&lt;/strong&gt;.
-Blaming the project and reporting tickets may look like you
-have a negative attitude towards the code base, and people who
-created it, which is not true. Instead, your attitude is
-&lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;positive&lt;/a&gt;,
-since you care about it and want it to get better.
-What can I say?
-Make your tickets sound extremely polite and gentle.
-But keep reporting them.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;You have no time&lt;/strong&gt;.
-You have to solve the problem now and you have no time to wait
-for the resolution of those complaints you reported.
-What can I say?
-Blame the management and require more time. Much more time.
-But never blame yourself.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Software development is perfect territory for
-&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;cutting corners&lt;/a&gt;,
-being lazy and remaining calm, because our work is often discrete and can
-be very incremental. Very occasionally it might not be possible to blame the project
-and put the ticket on pause until all your complaints are addressed.
-I can&amp;#39;t imagine such a situation though. If you can, please let me know.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="zerocracy" /><summary type="html">What frustrates me most in my profession of software development
-is the regular necessity to understand large problem scopes before fixing
-small bugs, especially if the code is
-legacy and not mine. Actually,
-it&amp;#39;s even more frustrating when the code is mine. The &amp;quot;deep thinking,&amp;quot; as
-they call it,
-which is always required before even a small issue can be resolved, seriously
-turns me away from programming. Or did turn me away. Until I started
-to think differently and encourage myself to be lazy. Here is how.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/sin-city.jpg" /></entry></feed>
+Here is a non-exhaustive list of my recommendations.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/04/burn-after-reading.jpg" /></entry></feed>

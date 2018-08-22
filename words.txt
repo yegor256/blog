@@ -3673,6 +3673,7 @@ instances
 instant
 instantiate
 instantiated
+instantiating
 instantiation
 instead
 instinct
@@ -4360,9 +4361,12 @@ manifest
 manifesto
 manifests
 manipulate
+manipulates
 manipulating
 manipulation
 manipulations
+manipulator
+manipulators
 manner
 manners
 mansfield
@@ -5795,6 +5799,7 @@ proposal
 proposals
 propose
 proposed
+proposes
 proposing
 proprietary
 pros
@@ -6671,6 +6676,7 @@ shareholders
 shares
 sharing
 sharp
+sharply
 she
 sheet
 sheets
@@ -7246,6 +7252,7 @@ supporters
 supporting
 supportive
 supports
+suppose
 supposed
 supreme
 sur
@@ -8177,6 +8184,7 @@ wisely
 wish
 wishes
 with
+with---making
 within
 without
 woke
