@@ -25,6 +25,11 @@ and published by myself outside of this blog
 
 Find me at [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ) too.
 
+[Discovering Bugs, or Ensuring Success?](https://cacm.acm.org/magazines/2018/9/230562-discovering-bugs-or-ensuring-success/fulltext)<br/>
+Communications of the ACM, Volume 61, Number 9<br/>
+August 2018<br/>
+[PDF](/pdf/2018/discovering-bugs.pdf)
+
 [We are Done with 'Hacking'](https://cacm.acm.org/magazines/2018/7/229044-we-are-done-with-hacking/fulltext)<br/>
 Communications of the ACM, Volume 61, Number 7<br/>
 July 2018<br/>
