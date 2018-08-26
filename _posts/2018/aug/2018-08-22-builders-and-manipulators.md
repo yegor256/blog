@@ -147,3 +147,5 @@ methods, manipulators.
 You can find a more detailed discussion of this problem
 in [Elegant Objects](http://goo.gl/W2WVMk), Volume 1, Section 2.4.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How would you name a method of a class Document that reads and returns its content? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1033605343274840064?ref_src=twsrc%5Etfw">August 26, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
