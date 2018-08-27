@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/todd-williams.png" class="guest-face" alt="Todd Williams photo"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;34: [Respect in software teams with Todd Williams](/shift-m/2018/34.html)<br/>
+26 August 2018; 66 min.
+
 <img src="/images/shift-m/shoaib-ahmed.png" class="guest-face" alt="Shoaib Ahmed photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;33: [Metrics in project management with Shoaib Ahmed](/shift-m/2018/33.html)<br/>
