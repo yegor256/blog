@@ -123,6 +123,15 @@ so why shouldn't we rate them, right? The best grade is
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/MCaKPYBMXyI/mqdefault.jpg" class="past-talk" alt="CryptoBBQ 2018"/>
+Life Without Blockchain;
+[CryptoBBQ](https://cryptoevent.io/cryptobbq);
+Moscow, Russia;
+23 Aug 2018;
+[видео](https://www.youtube.com/watch?v=MCaKPYBMXyI).
+[slides](https://www.slideshare.net/YegorBugayenko/life-without-blockchain).
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/klCNgqlAflI/mqdefault.jpg" class="past-talk" alt="Meetup 2018"/>
 12 шагов от Java к ООП;
 [RedCode Meetup #1](https://www.meetup.com/RedCode/events/250405723/);
