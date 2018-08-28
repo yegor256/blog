@@ -36,7 +36,7 @@ strategizing, lifelong learning, business mindedness, work ethic, judgment,
 ego management, commitment,
 accountability, creativity, adaptability, big-picture thinking. Phew!
 
-Do you really understand what these words mean? I don't.
+Do you really understand exactly what these words mean? I don't.
 
 I would actually suggest we replace them all with the "do the right thing"
 mantra and call it a day.
@@ -117,7 +117,7 @@ since it doesn't have anything to do with the quality of your code but it
 seriously affects your professionalism as a software developer.
 
 **Failing**.
-Most projects fail, one way or an other. Technical failures are not
+Most projects fail, one way or another. Technical failures are not
 the primary source of our troubles. We fail due to management incompetence
 most frequently. Good programmers know how to deal with failures,
 by provoking (aka Fail Fast), predicting (aka Risk Management), and
@@ -126,7 +126,7 @@ embracing them.
 **Delivering**.
 Continuous integration, delivery pipeline, build automation, staging,
 green/blue deployments, etc.&mdash;if you think that all these things concern
-the DevOps department only you are wrong. You have to understand how your lines
+the DevOps department only, you are wrong. You have to understand how your lines
 of code reach your users. The bigger the product, the longer the pipeline,
 the more people it involves, and the more soft skills it requires to be
 smooth.
