@@ -45,7 +45,7 @@ I have my own list of soft skills though. I also
 [strongly believe]({% pst 2018/jan/2018-01-23-sociotech-skills %}) that tech skills
 are just a small part of what makes a good programmer,
 but being empathical and ready to learn is not what the other part consists of.
-Of course, smiling in the office and not cursing at a stupid boss---helps.
+Of course, smiling in the office and not cursing at a stupid boss&mdash;helps.
 But this is not what soft skills are about.
 
 They are about our ability to exchange deliverables. Tech skills produce
@@ -125,7 +125,7 @@ embracing them.
 
 **Delivering**.
 Continuous integration, delivery pipeline, build automation, staging,
-green/blue deployments, etc.---if you think that all these things concern
+green/blue deployments, etc.&mdash;if you think that all these things concern
 the DevOps department only you are wrong. You have to understand how your lines
 of code reach your users. The bigger the product, the longer the pipeline,
 the more people it involves, and the more soft skills it requires to be
@@ -134,7 +134,7 @@ smooth.
 **Intriguing**.
 Any project is a part of a bigger political game, one way or the other.
 If you isolate yourself from intrigue, claiming that your job is to
-write code---you are not a good programmer. A good programmer understands
+write code&mdash;you are not a good programmer. A good programmer understands
 where the money is coming from, who the primary shareholders are,
 and which ass to kiss and when.
 
