@@ -6,7 +6,7 @@ tags: management
 place: Moscow, Russia
 description: |
   Tech skills alone won't make you a good programmer, no matter
-  how fast are you algorithms; you need soft skills, which
+  how fast your algorithms are; you need soft skills, which
   most of us don't understand.
 keywords:
   - soft skills
@@ -17,13 +17,13 @@ keywords:
 ---
 
 There are tech skills and there are soft skills. Every programmer knows that.
-Tech skills is about algorithms, operators, classes, objects, and everything
+Tech skills are about algorithms, operators, classes, objects, and everything
 else they teach us in tech schools.
 
 <!--more-->
 
 Here is a non-exhaustive list of soft skills I managed to find
-in the Net<sup>[1](https://hackernoon.com/10-soft-skills-every-developer-needs-66f0cdcfd3f7),
+on the Net<sup>[1](https://hackernoon.com/10-soft-skills-every-developer-needs-66f0cdcfd3f7),
 [2](https://jaxenter.com/6-most-useful-soft-skills-for-software-developers-125286.html),
 [3](https://blog.scottlogic.com/2018/01/13/soft-skills-for-software-developers.html),
 [4](https://amzn.to/2wbSuZa),
@@ -32,39 +32,39 @@ in the Net<sup>[1](https://hackernoon.com/10-soft-skills-every-developer-needs-6
 empathy, open-mindedness, a willingness to learn, effective communication,
 teamwork, approachability, helpfulness, listening, patience, responsibility,
 critical thinking, problem solving, mentoring, attunement, clarity, curiosity,
-strategizing, lifelong learning, business mindedness, work ethic, judgement,
+strategizing, lifelong learning, business mindedness, work ethic, judgment,
 ego management, commitment,
 accountability, creativity, adaptability, big-picture thinking. Phew!
 
-Do you really understand what exactly this list of words mean? I don't.
+Do you really understand exactly what these words mean? I don't.
 
-I would actually suggest to replace them all with the "do the right thing"
+I would actually suggest we replace them all with the "do the right thing"
 mantra and call it a day.
 
-I have my own list of soft skills, though. I also
+I have my own list of soft skills though. I also
 [strongly believe]({% pst 2018/jan/2018-01-23-sociotech-skills %}) that tech skills
-is just a small part of what makes a good programmer,
+are just a small part of what makes a good programmer,
 but being empathical and ready to learn is not what the other part consists of.
-Of course, smiling in the office and not cursing to a stupid boss---helps.
+Of course, smiling in the office and not cursing at a stupid boss&mdash;helps.
 But this is not what soft skills are about.
 
 They are about our ability to exchange deliverables. Tech skills produce
-deliverables, soft skills turn them into a final product, which is a working
+deliverables, soft skills turn them into a final product, which is working
 software. Here is a short list, in no particular order:
 
 **Drawing**.
-Talking works great when you discuss your next vacation with your partner.
-In a software team your ability to explain your thoughts in a diagram
-seriously increases your usefulnes.
+Talking works great when you're discussing your next vacation with your partner.
+In a software team your ability to explain your thoughts with a diagram
+seriously increases your usefulness.
 
 **Writing**.
 Again, talking is great, when your chaotic team is being managed by
-a histerical boss, who just read a book about uncoditional love. In a more
+an hysterical boss who just read a book about unconditional love. In a more
 disciplined environment your ability to put your thoughts in writing
-do make a difference for the mutual success.
+do make a difference for mutual success.
 
 **Reporting**.
-A good programmer knows not only how to fix a bug, but more importantly, how
+A good programmer knows not only how to fix a bug but, more importantly, how
 to report it [the right way]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
 so that the project benefits. An ability
 to describe a technical problem in simple words is a crucial soft skill.
@@ -78,8 +78,8 @@ your own open source products. You will need a lot of non-tech skills to do that
 
 **Charging**.
 Programmers make money by writing code. Very often projects fail because
-important quit due to a money conflict. They don't know how to resolve that,
-how to manage their financial objectives, how to ask for a raise, or change
+important people quit due to a money conflict. They don't know how to resolve that,
+how to manage their financial objectives, how to ask for a raise, or how to change
 the paying schedule. I blame programmers for that. We, technical people,
 have to know how to manage our financial relationship with our projects.
 
@@ -98,26 +98,26 @@ you need to have to be a good developer.
 
 **Tweeting**.
 Here comes your ability to share your thoughts and achievements in social
-networks. If you stay mute and net-socio-phobic, you are not really helping your
+networks. If you stay mute and net-social-phobic, you are not really helping your
 project. This is the skill you won't learn in a few days. I would suggest
 you take a look at my [256 Bloghacks](/256-bloghacks.html) book.
 
 **Testing**.
 Here I mean not only writing automated tests, which is a tech skill, but
 an ability to communicate with testers, to make sure their feedback
-improves the quality of the software under development. It is a
+improves the quality of the software under development. There is a
 [well known](https://www.sciencedirect.com/science/article/abs/pii/S0378720613000967)
 developer-tester conflict, which good programmers know how to deal with.
 
 **Branching**.
 Still working in a single `master` branch? Still an amateur. You have to
 learn how to use multiple branches, how to resolve conflicts between them,
-and what is the difference between merge and rebase. This is the soft skill,
-since it doesn't have anything to do with the quality of your code, but it
+and what is the difference between merge and rebase. This is a soft skill,
+since it doesn't have anything to do with the quality of your code but it
 seriously affects your professionalism as a software developer.
 
 **Failing**.
-Most projects fail, one way or the other. Technical failures are not
+Most projects fail, one way or another. Technical failures are not
 the primary source of our troubles. We fail due to management incompetence
 most frequently. Good programmers know how to deal with failures,
 by provoking (aka Fail Fast), predicting (aka Risk Management), and
@@ -125,18 +125,18 @@ embracing them.
 
 **Delivering**.
 Continuous integration, delivery pipeline, build automation, staging,
-green/blue deployments, etc.---if you think that all those things concerns
-the DevOps deparment only, you are wrong. You have to understand how your lines
+green/blue deployments, etc.&mdash;if you think that all these things concern
+the DevOps department only, you are wrong. You have to understand how your lines
 of code reach your users. The bigger the product, the longer the pipeline,
-the more people it involves, the more soft skills it requires to be
+the more people it involves, and the more soft skills it requires to be
 smooth.
 
 **Intriguing**.
 Any project is a part of a bigger political game, one way or the other.
-If you isolate yourself from intrigues, claiming that your job is to
-write code---you are not a good programmer. A good programmer understands
-where the money is coming from, who are the primary shareholders,
-which ass to kiss and when.
+If you isolate yourself from intrigue, claiming that your job is to
+write code&mdash;you are not a good programmer. A good programmer understands
+where the money is coming from, who the primary shareholders are,
+and which ass to kiss and when.
 
 Did I forget anything important?
 
