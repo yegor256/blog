@@ -47,6 +47,8 @@ Do you really understand exactly what these words mean? I don't.
 I would actually suggest we replace them all with the "do the right thing"
 mantra and call it a day.
 
+{% quote Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about. %}
+
 I have my own list of soft skills though. I also
 [strongly believe]({% pst 2018/jan/2018-01-23-sociotech-skills %}) that tech skills
 are just a small part of what makes a good programmer,
