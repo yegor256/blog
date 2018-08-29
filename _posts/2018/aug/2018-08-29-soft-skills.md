@@ -26,6 +26,8 @@ What exactly? Difficult to say. Let's try clear the air.
 
 <!--more-->
 
+{% jb_picture_body %}
+
 Here is a non-exhaustive list of soft skills I managed to find
 on the Net<sup>[1](https://hackernoon.com/10-soft-skills-every-developer-needs-66f0cdcfd3f7),
 [2](https://jaxenter.com/6-most-useful-soft-skills-for-software-developers-125286.html),
