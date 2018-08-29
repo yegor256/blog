@@ -99,6 +99,13 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://obs.com.ua/images/obs2.svg" class="future-talk" alt="Odessa Blockchain Summit 2018"/><br/>
+Zold: Experimental Cryptocurrency Without Blockchain<br/>
+[Odessa Blockchain Summit](https://obs.com.ua/)<br/>
+Odessa, Ukraine<br/>
+6 September.
+
+<div class="talk-event">&nbsp;</div>
 <img src="/images/2018/appsconf.png" class="future-talk" alt="AppsConf 2018"/><br/>
 Главное не качество, а количество!<br/>
 [AppsConf](http://appsconf.ru/2018)<br/>
@@ -111,6 +118,13 @@ Can a Freelancer Cost $500 an Hour?<br/>
 [CloudEXPO](http://java.sys-con.com/node/4266925)<br/>
 New York, USA<br/>
 11-13 November.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Warsaw 2018"/><br/>
+Something about Zerocracy...<br/>
+[DevOpsDays Warsaw 2018](https://www.devopsdays.org/events/2018-warsaw/welcome/)<br/>
+Warsaw, Poland<br/>
+19-20 November.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
