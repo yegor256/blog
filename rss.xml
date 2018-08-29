@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-29T13:59:48+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Soft Skills Demystified</title><link href="https://www.yegor256.com/2018/08/29/soft-skills.html" rel="alternate" type="text/html" title="Soft Skills Demystified" /><published>2018-08-29T00:00:00+00:00</published><updated>2018-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/29/soft-skills</id><content type="html" xml:base="https://www.yegor256.com/2018/08/29/soft-skills.html">&lt;p&gt;There are tech skills and there are soft skills. Every programmer knows that.
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-08-29T14:57:14+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Soft Skills Demystified</title><link href="https://www.yegor256.com/2018/08/29/soft-skills.html" rel="alternate" type="text/html" title="Soft Skills Demystified" /><published>2018-08-29T00:00:00+00:00</published><updated>2018-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/29/soft-skills</id><content type="html" xml:base="https://www.yegor256.com/2018/08/29/soft-skills.html">&lt;p&gt;There are tech skills and there are soft skills. Every programmer knows that.
 Tech skills are about algorithms, operators, classes, objects, and everything
 else they teach us in tech schools. Soft skills are about something else.
 What exactly? Difficult to say. Let&amp;#39;s try clear the air.&lt;/p&gt;
 
 &lt;!--more--&gt;
+
+&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Glengarry Glen Ross (1992) by James Foley&#39; src=&#39;/images/2018/08/glengarry-glen-ross.jpg&#39; longdesc=&#39;#03b7bd6c&#39;/&gt;&lt;figcaption id=&#39;03b7bd6c&#39;&gt;Glengarry Glen Ross (1992) by James Foley&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is a non-exhaustive list of soft skills I managed to find
 on the Net&lt;sup&gt;&lt;a href=&quot;https://hackernoon.com/10-soft-skills-every-developer-needs-66f0cdcfd3f7&quot;&gt;1&lt;/a&gt;,
@@ -23,6 +25,8 @@ accountability, creativity, adaptability, big-picture thinking. Phew!&lt;/p&gt;
 
 &lt;p&gt;I would actually suggest we replace them all with the &amp;quot;do the right thing&amp;quot;
 mantra and call it a day.&lt;/p&gt;
+
+&lt;aside class=&#39;quote&#39;&gt;Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about.&lt;/aside&gt;
 
 &lt;p&gt;I have my own list of soft skills though. I also
 &lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;strongly believe&lt;/a&gt; that tech skills
