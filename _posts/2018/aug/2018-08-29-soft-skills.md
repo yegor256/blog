@@ -22,7 +22,7 @@ jb_picture:
 There are tech skills and there are soft skills. Every programmer knows that.
 Tech skills are about algorithms, operators, classes, objects, and everything
 else they teach us in tech schools. Soft skills are about something else.
-What exactly? Difficult to say. Let's try clear the air.
+What exactly? Difficult to say. Let's try to clear the air.
 
 <!--more-->
 
