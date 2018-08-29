@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Soft Skills Demystified"
-date: 2018-08-21
+date: 2018-08-29
 tags: management
 place: Moscow, Russia
 description: |
@@ -14,11 +14,15 @@ keywords:
   - what are soft skills
   - programmers soft skills
   - software soft skills
+image: /images/2018/08/glengarry-glen-ross.jpg
+jb_picture:
+  caption: Glengarry Glen Ross (1992) by James Foley
 ---
 
 There are tech skills and there are soft skills. Every programmer knows that.
 Tech skills are about algorithms, operators, classes, objects, and everything
-else they teach us in tech schools.
+else they teach us in tech schools. Soft skills are about something else.
+What exactly? Difficult to say. Let's try clear the air.
 
 <!--more-->
 
@@ -45,10 +49,10 @@ I have my own list of soft skills though. I also
 [strongly believe]({% pst 2018/jan/2018-01-23-sociotech-skills %}) that tech skills
 are just a small part of what makes a good programmer,
 but being empathical and ready to learn is not what the other part consists of.
-Of course, smiling in the office and not cursing at a stupid boss&mdash;helps.
+Of course, smiling in the office and not cursing at a stupid boss---helps.
 But this is not what soft skills are about.
 
-They are about our ability to exchange deliverables. Tech skills produce
+They are about our ability to _exchange_ deliverables. Tech skills produce
 deliverables, soft skills turn them into a final product, which is working
 software. Here is a short list, in no particular order:
 
@@ -125,7 +129,7 @@ embracing them.
 
 **Delivering**.
 Continuous integration, delivery pipeline, build automation, staging,
-green/blue deployments, etc.&mdash;if you think that all these things concern
+green/blue deployments, etc.---if you think that all these things concern
 the DevOps department only, you are wrong. You have to understand how your lines
 of code reach your users. The bigger the product, the longer the pipeline,
 the more people it involves, and the more soft skills it requires to be
@@ -134,7 +138,7 @@ smooth.
 **Intriguing**.
 Any project is a part of a bigger political game, one way or the other.
 If you isolate yourself from intrigue, claiming that your job is to
-write code&mdash;you are not a good programmer. A good programmer understands
+write code---you are not a good programmer. A good programmer understands
 where the money is coming from, who the primary shareholders are,
 and which ass to kiss and when.
 
