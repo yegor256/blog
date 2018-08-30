@@ -77,10 +77,8 @@ mailing list. Just give me your email address and briefly explain who you are
 and why you're interested (I'm trying to avoid anonymous
 subscribers).
 
-<form class="unprintable" action="https://formspree.io/blog@yegor256.com" method="POST"><fieldset id="form">
-  <input type="hidden" name="_next" value="https://www.yegor256.com/subscribed.html"/>
-  <input type="hidden" name="_subject" value="subscribe me"/>
-  <input type="hidden" name="_format" value="text"/>
+<form class="unprintable" action="https://www.mailanes.com/subscribe?list=1" method="POST"><fieldset id="form">
+  <input type="hidden" name="redirect" value="https://www.yegor256.com/subscribed.html"/>
   <label for="email">Your email</label>
   <input id="email" class="field field-text" tabindex="1" name="email" size="25" maxlength="255" type="email" required="required"/>
   <label for="reason">Who are you and why are you interested?</label>
