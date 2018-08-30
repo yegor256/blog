@@ -88,8 +88,6 @@ subscribers).
   <span class="note">3697+ happy subscribers and counting...</span>
 </fieldset></form>
 
-You can always [unsubscribe](/unsubscribe.html).
-
 By the way, this is what some people think about me
 and this blog: [testimonials](/testimonials.html) (18+, be careful!).
 

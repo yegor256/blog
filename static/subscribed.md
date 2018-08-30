@@ -12,6 +12,3 @@ keywords:
 
 Thanks for subscribing! I will send you an email soon (on the closest
 weekend) to confirm subscription.
-
-You can always [unsubscribe](/unsubscribe.html), if my monthly emails
-get too annoying.
