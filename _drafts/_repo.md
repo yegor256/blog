@@ -234,7 +234,7 @@ from it are enormous. This is my short list of them:
     the application. Moreover there will be different languages and file formats.
     Say a repo has 200K lines of Java, 150K lines of XML, 50K lines of JavaScript,
     and 40K lines of Ruby. Can you say something specific about this repo? Is it
-    large? Is it Java repo? And, more importantly, can it be compared with other
+    large? Is it a Java repo? And, more importantly, can it be compared with other
     repositories? Not really. It's just a big messy storage of files.
 
   * **Homogeneous Tasks**.
