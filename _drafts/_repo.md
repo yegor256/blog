@@ -6,8 +6,8 @@ place: Moscow, Russia
 tags: devops
 description: |
   While many, including Google, advocate for larger monolithic
-  repositories, I strongly believe that biggest repo may
-  include less than 50K lines of code.
+  repositories, I strongly believe that the biggest repo should
+  include fewer than 50K lines of code.
 keywords:
   - mono stack repo
   - monolithic repository
@@ -22,20 +22,20 @@ jb_picture:
 We all keep our code in <del>Git</del>
 [version control](https://en.wikipedia.org/wiki/Version_control) repositories.
 The question is whether we should create a new repository for each
-new module or try to keep as much as possible in a single so called "monothilic" repo.
-Market makers, like [Facebook](https://code.fb.com/core-data/scaling-mercurial-at-facebook/)
+new module or try to keep as much as possible in a single so called "monolithic" repo.
+Market leaders, like [Facebook](https://code.fb.com/core-data/scaling-mercurial-at-facebook/)
 and [Google](https://www.infoq.com/presentations/Development-at-Google),
-advocate the second approach. I believe, they are wrong.
+advocate the second approach. I believe they are wrong.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Let's use the following JavaScript function, as an example.
+Let's use the following JavaScript function as an example.
 It downloads a JSON document from a [Zold](http://www.zold.io)
 node (using [jQuery](https://jquery.com/))
-and places part of its content to the HTML page.
-Then, it colors the data, according to its value.
+and places part of its content on the HTML page.
+Then it colors the data according to its value.
 
 {% highlight javascript %}
 // main.js
@@ -52,7 +52,7 @@ function main() {
 }
 {% endhighlight %}
 
-Pretty obvious, isn't it? Just a single `main.js` file, which does everything we need.
+Pretty obvious, isn't it? Just a single `main.js` file which does everything we need.
 We simply add it to the HTML and it works:
 
 {% highlight html %}
@@ -103,7 +103,7 @@ function main() {
 }
 {% endhighlight %}
 
-Now, instead of a single monolithic piece of code we have two smaller pieces,
+Now, instead of a single monolithic piece of code, we have two smaller pieces
 which have to be loaded together into the target HTML:
 
 {% highlight html %}
@@ -138,8 +138,8 @@ Here is what I did:
   * Renamed GitHub repo to `colorizejs` when I found out that npm package
     [`colorize`](https://www.npmjs.com/package/colorize) already exists;
   * Configured [`.travis.yml`](https://github.com/yegor256/colorizejs/blob/master/.travis.yml) for [Travis](https://travis-ci.org/);
-  * Created [README.md](https://github.com/yegor256/colorizejs/blob/master/README.md) and explained how to use it and install;
-  * Decided to use MIT license and created [LICENSE.txt](https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt);
+  * Created a [README.md](https://github.com/yegor256/colorizejs/blob/master/README.md) and explained how to use it and install it;
+  * Decided to use the MIT license and created [LICENSE.txt](https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt);
   * Configured [PDD](https://github.com/yegor256/colorizejs/blob/master/.pdd) for
     [puzzles]({% pst 2017/apr/2017-04-05-pdd-in-action %}) automated collection;
   * Configured [`.rultor.yml`](https://github.com/yegor256/colorizejs/blob/master/.rultor.yml) for
@@ -157,7 +157,7 @@ Here is what I did:
   * [Implemented](https://github.com/yegor256/colorizejs/issues/3) and released
     the next version [0.1.0](https://github.com/yegor256/colorizejs/tree/0.1.0);
   * [Added it](https://github.com/zold-io/zold.github.io/issues/81) to Zold front-end,
-    tested, and released---check it out [here](http://www.zold.io/health.html).
+    tested it, and released it---check it out [here](http://www.zold.io/health.html).
 
 It took almost three weeks of waiting and four hours of work, just
 to move a small piece of JavaScript code to a new repository and release
@@ -172,7 +172,7 @@ and
 [How Monolithic Repository in Open Source saved my Laziness](https://www.tomasvotruba.cz/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/)
 by Tomas Votruba.
 
-There are also a few good analysises of both approaches, for example
+There are also a few good analyses of both approaches, for example
 [Monolithic repositories vs. Many repositories](https://www.dotconferences.com/2016/05/fabien-potencier-monolithic-repositories-vs-many-repositories)
 speech by Fabien Potencier at dotScale 2016
 and
@@ -182,14 +182,14 @@ by Peter Seibel.
 In a nutshell, they all claim that productivity is higher with a monolithic repo because
 the amount of operations one has to do in order to make a change is smaller.
 Indeed, in a monorepo there will be a single branch, a single set of commits, a single pull request,
-a single merge, deploy and release. Also, it will be easier to test, both
-manually and via unit testing. Also, continuous integration is easier to configure,
+a single merge, deploy and release. Also it will be easier to test, both
+manually and via unit testing. Continuous integration is easier to configure,
 and so on and so forth.
 
-All these "reasonable" arguments remind me what I hear when preaching
+All these "reasonable" arguments remind me of what I hear when preaching
 object decomposition and suggesting that multiple objects are better than
 a single large one. Imagine a large class of 3,000 lines of code, which
-does many things and they all are very tightly coupled. It's "easy" to test it,
+does many things and they are all very tightly coupled. It's "easy" to test it,
 to make changes, to deploy, to review, etc. Because everything stays in one
 file, right? We don't need to jump from class to class in order to understand
 the design. We just look at one screen, scroll it up and down, and that's it.
@@ -199,7 +199,7 @@ I guess I don't need to explain why it's wrong. We don't design our software
 that way anymore. We know that tight coupling is a bad idea. We know that
 a set of smaller components is better than a larger solid piece.
 
-Why can't we apply the same logic to repositories? I believe, we can.
+Why can't we apply the same logic to repositories? I believe we can.
 Of course, just like in object-oriented programming, a fine-grained design
 requires more skills and time. Look at what I had to do with this small
 jQuery plugin. I've spent hours of coding and thinking. I even had to learn
@@ -209,10 +209,10 @@ from it are enourmous. This is my short list of them:
 
   * **Encapsulation**.
     Each repo encapsulates a single problem, hiding its details from everybody
-    else. Thanks to that, the scope, each repo has to deal with, gets smaller.
+    else. Thanks to that, the scope each repo has to deal with gets smaller.
     The smaller the scope, just like in OOP, the easier it is to maintain and
-    modify. The easier to mainain, the cheaper is the development. I guess Google
-    guys don't really worry about costs. To the contrary, they want their salaries
+    modify. The easier to maintain, the cheaper the development. I guess Google
+    guys don't really worry about costs. On the contrary, they want their salaries
     to grow. A large unmaintainable monolithic repo is a perfect tool to make
     it happen.
 
@@ -225,29 +225,29 @@ from it are enourmous. This is my short list of them:
     the build as a tool for development.
 
   * **Accurate Metrics**.
-    I don't know whether you rely on metrics in your projects, but we in
+    I don't know whether you rely on metrics in your projects, but we at
     [Zerocracy](https://www.zerocracy.com) do pay attention to numbers, like
     lines of code, hits of code, number of commits, classes, methods, cohesion,
-    coupling, etc. It's always a question, whether the metrics are accurate.
-    Calculating lines of code of a large repository doesn't make any sense, since
-    the number will include a lot of files from absolutely different parts of
-    the application. Moreover, there will be different languages and file formats.
-    Say, a repo has 200K lines of Java, 150K lines of XML, 50K lines of JavaScript,
+    coupling, etc. It's always a question whether the metrics are accurate.
+    Calculating lines of code for a large repository doesn't make any sense, since
+    the number will include a lot of files from completely different parts of
+    the application. Moreover there will be different languages and file formats.
+    Say a repo has 200K lines of Java, 150K lines of XML, 50K lines of JavaScript,
     and 40K lines of Ruby. Can you say something specific about this repo? Is it
-    large? It is Java repo? And, more important, can it be compared with other
+    large? Is it Java repo? And, more importantly, can it be compared with other
     repositories? Not really. It's just a big messy storage of files.
 
   * **Homogeneous Tasks**.
     Smaller repositories tend to have smaller tech stacks, meaning that each of
-    them uses just a few languages and frameworks, or, which is the most preferrable
-    situation---one language or technology per repository. Thanks to that,
+    them uses just a few languages and frameworks, or---and this is the preferred
+    situation---one language or technology per repository. Thanks to this,
     the management of programmers becomes easier, since any ticket/problem can
     be assigned to anybody. It's easier to make tasks similar in size and complexity.
-    This, obviously, means better manageability of the project.
+    This obviously means better manageability of the project.
 
   * **Single Coding Standard**.
     It's easier to standardize the coding style if the repo is small. When it's
-    large, obviously, different parts of the code base will look differently and
+    large, various parts of the code base will have different styles and
     it will be almost impossible to put everybody on the same page. In other
     words, smaller repositories look more beautiful than larger ones.
 
@@ -260,11 +260,11 @@ from it are enourmous. This is my short list of them:
 
   * **Simple Tests**.
     The larger the code base, the more dependencies it has, which are difficult
-    to mock and test. Very large code bases become untestable at all, since
-    they require a lot of integration tests, which are difficult to maintain.
+    to mock and test. Very large code bases become fundamentally untestable since
+    they require a lot of integration tests which are difficult to maintain.
     Smaller libraries, frameworks and modules are easier to keep at the level
     of simple and fast unit testing.
 
 Thus, I believe that the smaller the repositories and modules, the better.
-Ideally, I would say, the largest code base acceptable size is 50,000 lines of code.
+Ideally, I would say, the largest acceptable size for a code base is 50,000 lines of code.
 Everything that goes above this line is a perfect candidate for decomposition.
