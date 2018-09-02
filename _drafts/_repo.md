@@ -205,7 +205,7 @@ requires more skills and time. Look at what I had to do with this small
 jQuery plugin. I've spent hours of coding and thinking. I even had to learn
 [Gulp](https://gulpjs.com/) and [Jasmine](https://jasmine.github.io/),
 which I most probably will not use anymore. But the benefits we are getting
-from it are enourmous. This is my short list of them:
+from it are enormous. This is my short list of them:
 
   * **Encapsulation**.
     Each repo encapsulates a single problem, hiding its details from everybody
