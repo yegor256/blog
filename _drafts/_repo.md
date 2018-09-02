@@ -239,8 +239,8 @@ from it are enormous. This is my short list of them:
 
   * **Homogeneous Tasks**.
     Smaller repositories tend to have smaller tech stacks, meaning that each of
-    them uses just a few languages and frameworks, or---and this is the preferred
-    situation---one language or technology per repository. Thanks to this,
+    them uses just a few languages and frameworks, or (and this is the preferred
+    situation)---one language or technology per repository. Thanks to this,
     the management of programmers becomes easier, since any ticket/problem can
     be assigned to anybody. It's easier to make tasks similar in size and complexity.
     This obviously means better manageability of the project.
