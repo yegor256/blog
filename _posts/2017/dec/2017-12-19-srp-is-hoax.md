@@ -112,3 +112,6 @@ where we can't even find it, while the monster object is always right in front
 of us and we can always refactor it into smaller pieces.
 
 Encapsulation comes first, size goes next, if ever.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think about the Single Responsibility Principle (SRP)? <a href="https://twitter.com/hashtag/oop?src=hash&amp;ref_src=twsrc%5Etfw">#oop</a> <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1036247379140399104?ref_src=twsrc%5Etfw">September 2, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
