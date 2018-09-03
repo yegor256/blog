@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/suzanne-lucas.png" class="guest-face" alt="Suzanne Lucas photo"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;35: [Bullying, discussion with Suzanne Lucas](/shift-m/2018/35.html)<br/>
+3 September 2018; 65 min.
+
 <img src="/images/shift-m/todd-williams.png" class="guest-face" alt="Todd Williams photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;34: [Respect in software teams with Todd Williams](/shift-m/2018/34.html)<br/>
