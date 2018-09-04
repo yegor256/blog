@@ -113,6 +113,13 @@ Moscow, Russia<br/>
 8-9 October.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://jokerconf.com/assets/images/logo_black.svg" class="future-talk" alt="Joker Conf 2018"/><br/>
+Don't aim for quality, aim for speed<br/>
+[Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/)<br/>
+St.Petersburg, Russia<br/>
+19-20 October.
+
+<div class="talk-event">&nbsp;</div>
 <img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
 Can a Freelancer Cost $500 an Hour?<br/>
 [CloudEXPO](http://java.sys-con.com/node/4266925)<br/>
