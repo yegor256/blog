@@ -5,7 +5,7 @@ date: 2014-12-22
 tags: oop
 description: |
   Immutable objects are not the same as passive data structures
-  without setters, despite a very common misbelief.
+  without setters, despite a very common mis-belief.
 keywords:
   - immutable objects
   - immutable objects advantages
