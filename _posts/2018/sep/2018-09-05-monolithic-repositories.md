@@ -14,9 +14,9 @@ keywords:
   - mono repo
   - monorepo
   - git monorepo
-image: /images/2018/07/
+image: /images/2018/09/funny-games.jpg
 jb_picture:
-  caption:
+  caption: Funny Games (2007) by Michael Haneke
 ---
 
 We all keep our code in <del>Git</del>
