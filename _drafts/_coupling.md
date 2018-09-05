@@ -14,9 +14,9 @@ keywords:
   - coupling in oop
   - coupling in object oriented programming
   - coupling vs reliability
-image: /images/2018/09/
+image: /images/2018/09/funny-games.jpg
 jb_picture:
-  caption:
+  caption: Funny Games (2007) by Michael Haneke
 ---
 
 Objects talk to each other via their methods. In mainstream programming

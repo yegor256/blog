@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Monolithic Repos"
-date: 2018-07-20
+title: "Monolithic Repos Are Evil"
+date: 2018-09-05
 place: Moscow, Russia
 tags: devops
 description: |
