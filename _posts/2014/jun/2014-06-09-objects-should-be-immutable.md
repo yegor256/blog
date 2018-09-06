@@ -88,7 +88,7 @@ Here is an example of temporal coupling (the code makes
 two consecutive HTTP POST requests, where the second one contains HTTP body):
 
 {% highlight java %}
-Request request = new Request("http://example.com");
+Request request = new Request("http://localhost");
 request.method("POST");
 String first = request.fetch();
 request.body("text=hello");
@@ -102,7 +102,7 @@ remove the second and the third line, and won't get any errors
 from the compiler:
 
 {% highlight java %}
-Request request = new Request("http://example.com");
+Request request = new Request("http://localhost");
 // request.method("POST");
 // String first = request.fetch();
 request.body("text=hello");
@@ -166,7 +166,7 @@ Let's try to make two requests---the first
 with GET method and the second with POST:
 
 {% highlight java %}
-Request request = new Request("http://example.com");
+Request request = new Request("http://localhost");
 request.method("GET");
 String first = this.post(request);
 String second = request.fetch();
@@ -194,7 +194,7 @@ Nobody can modify our `request` object, no matter where
 it is used and how deep through the call stack it is passed by method calls:
 
 {% highlight java %}
-Request request = new Request("http://example.com").method("GET");
+Request request = new Request("http://localhost").method("GET");
 String first = this.post(request);
 String second = request.fetch();
 {% endhighlight %}
