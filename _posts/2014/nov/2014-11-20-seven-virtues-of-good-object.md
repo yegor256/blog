@@ -173,7 +173,7 @@ of a bad object, which may have clones:
 
 {% highlight java %}
 class HTTPStatus implements Status {
-  private URL page = new URL("http:// www.google.com");
+  private URL page = new URL("http://localhost");
   @Override
   public int read() throws IOException {
     return HttpURLConnection.class.cast(
