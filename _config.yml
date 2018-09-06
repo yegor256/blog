@@ -33,7 +33,7 @@ exclude:
   - uml
   - node_modules
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-bits
   - jekyll-paginate

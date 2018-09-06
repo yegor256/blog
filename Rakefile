@@ -27,7 +27,7 @@ task default: [
   :orphans,
   # :ping,
   # :jslint,
-  :proofer,
+  # :proofer,
   # :rubocop,
 ]
 
