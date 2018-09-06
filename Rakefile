@@ -280,6 +280,8 @@ task :snippets do
       .join("\n")
       .gsub(/<code [^>]+>/, '')
       .gsub(/<span class="[A-Za-z0-9-]+">/, '')
+      .gsub(/<a href="[^\"]+">/, '')
+      .gsub(/<\/a>/, '')
       .gsub(/<\/code>/, "\n")
       .gsub(/<\/span>/, '')
       .gsub(/&lt;/, '<')
