@@ -14,7 +14,7 @@ gem 'jekyll-sass'
 gem 'jekyll-sass-converter'
 gem 'jekyll-sitemap'
 gem 'jekyll-redirect-from'
-gem 'jekyll-related-posts'
+# gem 'jekyll-related-posts'
 
 gem 'fastimage', '~>2.1'
 gem 'fontcustom', '~>1.3'

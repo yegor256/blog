@@ -40,7 +40,7 @@ plugins:
   - jekyll-plantuml
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll-related-posts
+  # - jekyll-related-posts
 
 # see https://github.com/alfanick/jekyll-related-posts
 related:
