@@ -1,11 +1,247 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://www.yegor256.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-03T08:28:36+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Soft Skills Demystified</title><link href="https://www.yegor256.com/2018/08/29/soft-skills.html" rel="alternate" type="text/html" title="Soft Skills Demystified" /><published>2018-08-29T00:00:00+00:00</published><updated>2018-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/29/soft-skills</id><content type="html" xml:base="https://www.yegor256.com/2018/08/29/soft-skills.html">&lt;p&gt;There are tech skills and there are soft skills. Every programmer knows that.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-07T06:17:47+00:00</updated><id>https://www.yegor256.com/</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Monolithic Repos Are Evil</title><link href="https://www.yegor256.com/2018/09/05/monolithic-repositories.html" rel="alternate" type="text/html" title="Monolithic Repos Are Evil" /><published>2018-09-05T00:00:00+00:00</published><updated>2018-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/05/monolithic-repositories</id><content type="html" xml:base="https://www.yegor256.com/2018/09/05/monolithic-repositories.html">&lt;p&gt;We all keep our code in &lt;del&gt;Git&lt;/del&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;version control&lt;/a&gt; repositories.
+The question is whether we should create a new repository for each
+new module or try to keep as much as possible in a single so called &amp;quot;monolithic&amp;quot; repo.
+Market leaders, like &lt;a href=&quot;https://code.fb.com/core-data/scaling-mercurial-at-facebook/&quot;&gt;Facebook&lt;/a&gt;
+and &lt;a href=&quot;https://www.infoq.com/presentations/Development-at-Google&quot;&gt;Google&lt;/a&gt;,
+advocate the second approach. I believe they are wrong.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Funny Games (2007) by Michael Haneke' src='/images/2018/09/funny-games.jpg' longdesc='#9f6d574f'/&gt;&lt;figcaption id='9f6d574f'&gt;Funny Games (2007) by Michael Haneke&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let&amp;#39;s use the following JavaScript function as an example.
+It downloads a JSON document from a &lt;a href=&quot;http://www.zold.io&quot;&gt;Zold&lt;/a&gt;
+node (using &lt;a href=&quot;https://jquery.com/&quot;&gt;jQuery&lt;/a&gt;)
+and places part of its content on the HTML page.
+Then it colors the data according to its value.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// main.js&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://b1.zold.io/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nscore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nscore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pretty obvious, isn&amp;#39;t it? Just a single &lt;code&gt;main.js&lt;/code&gt; file which does everything we need.
+We simply add it to the HTML and it works:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://code.jquery.com/jquery-3.3.1.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main();&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;loading...&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, let me refactor it. Let me break it into two pieces. The first
+piece will load the data and the second one will be a jQuery plugin to colorize
+HTML content according to the data it contains. This is how the
+plugin will look:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// colorize.js&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colorize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;parseFloat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;code&gt;main.js&lt;/code&gt; will look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// main.js&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://b1.zold.io/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nscore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colorize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;red&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, instead of a single monolithic piece of code, we have two smaller pieces
+which have to be loaded together into the target HTML:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://code.jquery.com/jquery-3.3.1.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;colorize.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main();&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;loading...&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Two pieces are better than one? It seems that
+&lt;a href=&quot;https://ai.google/research/pubs/pub45424&quot;&gt;Google&lt;/a&gt;,
+&lt;a href=&quot;https://blog.digitalocean.com/taming-your-go-dependencies/&quot;&gt;Digital Ocean&lt;/a&gt;
+and &lt;a href=&quot;https://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/&quot;&gt;Mozilla&lt;/a&gt;
+don&amp;#39;t think so.&lt;/p&gt;
+
+&lt;p&gt;I disagree.&lt;/p&gt;
+
+&lt;p&gt;To illustrate my point I extracted the JavaScript function into a
+new standalone &lt;a href=&quot;https://github.com/yegor256/colorizejs&quot;&gt;jQuery plugin&lt;/a&gt;.
+Here is what I did:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Created a new GitHub repo &lt;a href=&quot;https://github.com/yegor256/colorizejs&quot;&gt;yegor256/colorizejs&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Read the &lt;a href=&quot;https://learn.jquery.com/plugins/basic-plugin-creation/&quot;&gt;instructions&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Did some research of jQuery plugins, studied a few examples;&lt;/li&gt;
+&lt;li&gt;Found out that most of them used &lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;, which I&amp;#39;ve never heard of;&lt;/li&gt;
+&lt;li&gt;Decided to use &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; for JavaScript packaging (what else, right?);&lt;/li&gt;
+&lt;li&gt;Created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/package.json&quot;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/a&gt; for npm;&lt;/li&gt;
+&lt;li&gt;Renamed GitHub repo to &lt;code&gt;colorizejs&lt;/code&gt; when I found out that npm package
+&lt;a href=&quot;https://www.npmjs.com/package/colorize&quot;&gt;&lt;code&gt;colorize&lt;/code&gt;&lt;/a&gt; already exists;&lt;/li&gt;
+&lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.travis.yml&quot;&gt;&lt;code&gt;.travis.yml&lt;/code&gt;&lt;/a&gt; for &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Created a &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/README.md&quot;&gt;README.md&lt;/a&gt; and explained how to use it and install it;&lt;/li&gt;
+&lt;li&gt;Decided to use the MIT license and created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt&quot;&gt;LICENSE.txt&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.pdd&quot;&gt;PDD&lt;/a&gt; for
+&lt;a href=&quot;/2017/04/05/pdd-in-action.html&quot;&gt;puzzles&lt;/a&gt; automated collection;&lt;/li&gt;
+&lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.rultor.yml&quot;&gt;&lt;code&gt;.rultor.yml&lt;/code&gt;&lt;/a&gt; for
+&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Tried to create a unit test and failed miserably (after a full hour of research),
+since I&amp;#39;ve had almost no experience in JS unit testing;&lt;/li&gt;
+&lt;li&gt;Posted a &lt;a href=&quot;https://stackoverflow.com/questions/51809750/&quot;&gt;question&lt;/a&gt; to StackOverflow;&lt;/li&gt;
+&lt;li&gt;The question was answered by a few people only after the bounty I offered;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/brian-lives-outdoors&quot;&gt;@brian-lives-outdoors&lt;/a&gt;&amp;#39;s answer
+was the best and he even submitted a &lt;a href=&quot;https://github.com/yegor256/colorizejs/pull/2&quot;&gt;pull request&lt;/a&gt;
+with a unit test, which I merged;&lt;/li&gt;
+&lt;li&gt;Released the first version &lt;a href=&quot;https://github.com/yegor256/colorizejs/tree/0.0.1&quot;&gt;0.0.1&lt;/a&gt;
+to &lt;a href=&quot;https://www.npmjs.com/package/colorizejs&quot;&gt;npmjs.com&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Modified the code to make it work both with classes and colors;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/colorizejs/issues/3&quot;&gt;Implemented&lt;/a&gt; and released
+the next version &lt;a href=&quot;https://github.com/yegor256/colorizejs/tree/0.1.0&quot;&gt;0.1.0&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zold-io/zold.github.io/issues/81&quot;&gt;Added it&lt;/a&gt; to Zold front-end,
+tested it, and released it---check it out &lt;a href=&quot;http://www.zold.io/health.html&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It took almost three weeks of waiting and four hours of work, just
+to move a small piece of JavaScript code to a new repository and release
+it separately. Was it worth it? Well, I think it was. But &lt;del&gt;many&lt;/del&gt; most
+other blog post authors, who I managed to find, think that it would be better to keep
+everything in a single monolithic repo, mostly because it&amp;#39;s better for &lt;em&gt;productivity&lt;/em&gt;.
+For example,
+&lt;a href=&quot;https://danluu.com/monorepo/&quot;&gt;Advantages of monorepos&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/danluu&quot;&gt;Dan Luu&lt;/a&gt;,
+&lt;a href=&quot;https://people.engr.ncsu.edu/ermurph3/papers/seip18.pdf&quot;&gt;Advantages and Disadvantages of a Monolithic Repository&lt;/a&gt;
+(a case study at Google) by Ciera Jaspan et al.,
+and
+&lt;a href=&quot;https://www.tomasvotruba.cz/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/&quot;&gt;How Monolithic Repository in Open Source saved my Laziness&lt;/a&gt;
+by Tomas Votruba.&lt;/p&gt;
+
+&lt;p&gt;There are also a few good analyses of both approaches, for example
+&lt;a href=&quot;https://www.dotconferences.com/2016/05/fabien-potencier-monolithic-repositories-vs-many-repositories&quot;&gt;Monolithic repositories vs. Many repositories&lt;/a&gt;
+speech by Fabien Potencier at dotScale 2016
+and
+&lt;a href=&quot;http://www.gigamonkeys.com/mono-vs-multi/&quot;&gt;Repo Style Wars: Mono vs Multi&lt;/a&gt;
+by Peter Seibel.&lt;/p&gt;
+
+&lt;p&gt;In a nutshell, they all claim that productivity is higher with a monolithic repo because
+the amount of operations one has to do in order to make a change is smaller.
+Indeed, in a monorepo there will be a single branch, a single set of commits, a single pull request,
+a single merge, deploy and release. Also it will be easier to test, both
+manually and via unit testing. Continuous integration is easier to configure,
+and so on and so forth.&lt;/p&gt;
+
+&lt;p&gt;All these &amp;quot;reasonable&amp;quot; arguments remind me of what I hear when preaching
+object decomposition and suggesting that multiple objects are better than
+a single large one. Imagine a large class of 3,000 lines of code, which
+does many things and they are all very tightly coupled. It&amp;#39;s &amp;quot;easy&amp;quot; to test it,
+to make changes, to deploy, to review, etc. Because everything stays in one
+file, right? We don&amp;#39;t need to jump from class to class in order to understand
+the design. We just look at one screen, scroll it up and down, and that&amp;#39;s it.
+Right? Totally wrong!&lt;/p&gt;
+
+&lt;p&gt;I guess I don&amp;#39;t need to explain why it&amp;#39;s wrong. We don&amp;#39;t design our software
+that way anymore. We know that tight coupling is a bad idea. We know that
+a set of smaller components is better than a larger solid piece.&lt;/p&gt;
+
+&lt;p&gt;Why can&amp;#39;t we apply the same logic to repositories? I believe we can.
+Of course, just like in object-oriented programming, a fine-grained design
+requires more skills and time. Look at what I had to do with this small
+jQuery plugin. I&amp;#39;ve spent hours of coding and thinking. I even had to learn
+&lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt; and &lt;a href=&quot;https://jasmine.github.io/&quot;&gt;Jasmine&lt;/a&gt;,
+which I most probably will not use anymore. But the benefits we are getting
+from it are enormous. This is my short list of them:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Encapsulation&lt;/strong&gt;.
+Each repo encapsulates a single problem, hiding its details from everybody
+else. Thanks to that, the scope each repo has to deal with gets smaller.
+The smaller the scope, just like in OOP, the easier it is to maintain and
+modify. The easier to maintain, the cheaper the development. I guess Google
+guys don&amp;#39;t really worry about costs. On the contrary, they want their salaries
+to grow. A large unmaintainable monolithic repo is a perfect tool to make
+it happen.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fast Builds&lt;/strong&gt;.
+When a repo is small, the time its automated build takes is small. Look at the
+time Travis &lt;a href=&quot;https://travis-ci.org/yegor256/colorizejs/builds/420726284&quot;&gt;spends&lt;/a&gt;
+for my jQuery plugin. It&amp;#39;s 51 seconds. It&amp;#39;s fast.
+We &lt;a href=&quot;https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/&quot;&gt;all know&lt;/a&gt;
+that the faster the build, the better it is for productivity, since it&amp;#39;s easier to use
+the build as a tool for development.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Accurate Metrics&lt;/strong&gt;.
+I don&amp;#39;t know whether you rely on metrics in your projects, but we at
+&lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; do pay attention to numbers, like
+lines of code, hits of code, number of commits, classes, methods, cohesion,
+coupling, etc. It&amp;#39;s always a question whether the metrics are accurate.
+Calculating lines of code for a large repository doesn&amp;#39;t make any sense, since
+the number will include a lot of files from completely different parts of
+the application. Moreover there will be different languages and file formats.
+Say a repo has 200K lines of Java, 150K lines of XML, 50K lines of JavaScript,
+and 40K lines of Ruby. Can you say something specific about this repo? Is it
+large? Is it a Java repo? And, more importantly, can it be compared with other
+repositories? Not really. It&amp;#39;s just a big messy storage of files.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Homogeneous Tasks&lt;/strong&gt;.
+Smaller repositories tend to have smaller tech stacks, meaning that each of
+them uses just a few languages and frameworks, or (and this is the preferred
+situation)---one language or technology per repository. Thanks to this,
+the management of programmers becomes easier, since any ticket/problem can
+be assigned to anybody. It&amp;#39;s easier to make tasks similar in size and complexity.
+This obviously means better manageability of the project.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Single Coding Standard&lt;/strong&gt;.
+It&amp;#39;s easier to standardize the coding style if the repo is small. When it&amp;#39;s
+large, various parts of the code base will have different styles and
+it will be almost impossible to put everybody on the same page. In other
+words, smaller repositories look more beautiful than larger ones.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Short Names&lt;/strong&gt;.
+Each repository, inevitably, will have its own namespace. For example, in the
+JS repository I just created, I only have two files: &lt;code&gt;colorizejs.js&lt;/code&gt; and &lt;code&gt;test-colorizejs.js&lt;/code&gt;.
+I don&amp;#39;t really care about the naming inside them, since the namespace
+is very small. &lt;del&gt;I can even use global variables.&lt;/del&gt;
+Shorter names and smaller namespaces mean better maintainability.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Simple Tests&lt;/strong&gt;.
+The larger the code base, the more dependencies it has, which are difficult
+to mock and test. Very large code bases become fundamentally untestable since
+they require a lot of integration tests which are difficult to maintain.
+Smaller libraries, frameworks and modules are easier to keep at the level
+of simple and fast unit testing.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thus, I believe that the smaller the repositories and modules, the better.
+Ideally, I would say, the largest acceptable size for a code base is 50,000 lines of code.
+Everything that goes above this line is a perfect candidate for decomposition.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">We all keep our code in Git version control repositories. The question is whether we should create a new repository for each new module or try to keep as much as possible in a single so called &amp;quot;monolithic&amp;quot; repo. Market leaders, like Facebook and Google, advocate the second approach. I believe they are wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry><entry><title type="html">Soft Skills Demystified</title><link href="https://www.yegor256.com/2018/08/29/soft-skills.html" rel="alternate" type="text/html" title="Soft Skills Demystified" /><published>2018-08-29T00:00:00+00:00</published><updated>2018-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/29/soft-skills</id><content type="html" xml:base="https://www.yegor256.com/2018/08/29/soft-skills.html">&lt;p&gt;There are tech skills and there are soft skills. Every programmer knows that.
 Tech skills are about algorithms, operators, classes, objects, and everything
 else they teach us in tech schools. Soft skills are about something else.
 What exactly? Difficult to say. Let&amp;#39;s try to clear the air.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Glengarry Glen Ross (1992) by James Foley&#39; src=&#39;/images/2018/08/glengarry-glen-ross.jpg&#39; longdesc=&#39;#03b7bd6c&#39;/&gt;&lt;figcaption id=&#39;03b7bd6c&#39;&gt;Glengarry Glen Ross (1992) by James Foley&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Glengarry Glen Ross (1992) by James Foley' src='/images/2018/08/glengarry-glen-ross.jpg' longdesc='#03b7bd6c'/&gt;&lt;figcaption id='03b7bd6c'&gt;Glengarry Glen Ross (1992) by James Foley&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is a non-exhaustive list of soft skills I managed to find
 on the Net&lt;sup&gt;&lt;a href=&quot;https://hackernoon.com/10-soft-skills-every-developer-needs-66f0cdcfd3f7&quot;&gt;1&lt;/a&gt;,
@@ -26,7 +262,7 @@ accountability, creativity, adaptability, big-picture thinking. Phew!&lt;/p&gt;
 &lt;p&gt;I would actually suggest we replace them all with the &amp;quot;do the right thing&amp;quot;
 mantra and call it a day.&lt;/p&gt;
 
-&lt;aside class=&#39;quote&#39;&gt;Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about.&lt;/aside&gt;
+&lt;aside class='quote'&gt;Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about.&lt;/aside&gt;
 
 &lt;p&gt;I have my own list of soft skills though. I also
 &lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;strongly believe&lt;/a&gt; that tech skills
@@ -125,10 +361,7 @@ write code---you are not a good programmer. A good programmer understands
 where the money is coming from, who the primary shareholders are,
 and which ass to kiss and when.&lt;/p&gt;
 
-&lt;p&gt;Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">There are tech skills and there are soft skills. Every programmer knows that.
-Tech skills are about algorithms, operators, classes, objects, and everything
-else they teach us in tech schools. Soft skills are about something else.
-What exactly? Difficult to say. Let&amp;#39;s try to clear the air.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/glengarry-glen-ross.jpg" /></entry><entry><title type="html">Builders and Manipulators</title><link href="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html" rel="alternate" type="text/html" title="Builders and Manipulators" /><published>2018-08-22T00:00:00+00:00</published><updated>2018-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/22/builders-and-manipulators</id><content type="html" xml:base="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html">&lt;p&gt;Here is a simple principle for naming methods in OOP,
+&lt;p&gt;Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">There are tech skills and there are soft skills. Every programmer knows that. Tech skills are about algorithms, operators, classes, objects, and everything else they teach us in tech schools. Soft skills are about something else. What exactly? Difficult to say. Let&amp;#39;s try to clear the air.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/glengarry-glen-ross.jpg" /></entry><entry><title type="html">Builders and Manipulators</title><link href="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html" rel="alternate" type="text/html" title="Builders and Manipulators" /><published>2018-08-22T00:00:00+00:00</published><updated>2018-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/22/builders-and-manipulators</id><content type="html" xml:base="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html">&lt;p&gt;Here is a simple principle for naming methods in OOP,
 which I&amp;#39;m trying to follow in my code:
 it&amp;#39;s a &lt;em&gt;verb&lt;/em&gt; if it &lt;em&gt;manipulates&lt;/em&gt;, it&amp;#39;s a &lt;em&gt;noun&lt;/em&gt; if it &lt;em&gt;builds&lt;/em&gt;.
 That&amp;#39;s it. Nothing in between. Methods like
@@ -138,7 +371,7 @@ for example &lt;code&gt;print()&lt;/code&gt; or &lt;code&gt;save()&lt;/code&gt;.
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Night Of (2016) by Richard Price et al.&#39; src=&#39;/images/2018/08/the-night-of.jpg&#39; longdesc=&#39;#e86c0384&#39;/&gt;&lt;figcaption id=&#39;e86c0384&#39;&gt;The Night Of (2016) by Richard Price et al.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='The Night Of (2016) by Richard Price et al.' src='/images/2018/08/the-night-of.jpg' longdesc='#e86c0384'/&gt;&lt;figcaption id='e86c0384'&gt;The Night Of (2016) by Richard Price et al.&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, I have to say that this idea is very similar to the one
 suggested by &lt;a href=&quot;https://en.wikipedia.org/wiki/Bertrand_Meyer&quot;&gt;Bertrand Meyer&lt;/a&gt; in his book
@@ -247,13 +480,7 @@ in &lt;a href=&quot;http://goo.gl/W2WVMk&quot;&gt;Elegant Objects&lt;/a&gt;, Vol
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How would you name a method of a class Document that reads and returns its content? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1033605343274840064?ref_src=twsrc%5Etfw&quot;&gt;August 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Here is a simple principle for naming methods in OOP,
-which I&amp;#39;m trying to follow in my code:
-it&amp;#39;s a verb if it manipulates, it&amp;#39;s a noun if it builds.
-That&amp;#39;s it. Nothing in between. Methods like
-saveFile() or getTitle() don&amp;#39;t fit and must be renamed and refactored.
-Moreover, methods that &amp;quot;manipulate&amp;quot; must always return void,
-for example print() or save(). Let me explain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/the-night-of.jpg" /></entry><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Here is a simple principle for naming methods in OOP, which I&amp;#39;m trying to follow in my code: it&amp;#39;s a verb if it manipulates, it&amp;#39;s a noun if it builds. That&amp;#39;s it. Nothing in between. Methods like saveFile() or getTitle() don&amp;#39;t fit and must be renamed and refactored. Moreover, methods that &amp;quot;manipulate&amp;quot; must always return void, for example print() or save(). Let me explain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/the-night-of.jpg" /></entry><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
 He said that he needed a partner, to help him partially finance the project, promote
 it, bring in new ideas, and push the business forward. I liked the business
 idea and wanted to participate. I started to ask questions about our
@@ -263,7 +490,7 @@ who would share his goals and would never require any papers or lawyers.&lt;/p&g
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Lola rennt (1998) by Tom Tykwer&#39; src=&#39;/images/2018/08/run-lola-run.jpg&#39; longdesc=&#39;#8ad64182&#39;/&gt;&lt;figcaption id=&#39;8ad64182&#39;&gt;Lola rennt (1998) by Tom Tykwer&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Lola rennt (1998) by Tom Tykwer' src='/images/2018/08/run-lola-run.jpg' longdesc='#8ad64182'/&gt;&lt;figcaption id='8ad64182'&gt;Lola rennt (1998) by Tom Tykwer&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is a list of the questions I asked him:&lt;/p&gt;
 
@@ -346,13 +573,7 @@ I walk away. As &lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&
 &amp;quot;Most of the disputes I&amp;#39;ve seen between founders could have been avoided if they&amp;#39;d been more careful about
 who they started a company with.&amp;quot; I don&amp;#39;t want to start a business with
 those who are scared of a prenup. I know that in that case
-the divorce will be ugly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">A few days ago, a friend of mine asked me to join him in a new startup.
-He said that he needed a partner, to help him partially finance the project, promote
-it, bring in new ideas, and push the business forward. I liked the business
-idea and wanted to participate. I started to ask questions about our
-future partnership and attempted to draw a simple partnership agreement.
-He quickly got offended. He said that he was looking for a real partner,
-who would share his goals and would never require any papers or lawyers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/run-lola-run.jpg" /></entry><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
+the divorce will be ugly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">A few days ago, a friend of mine asked me to join him in a new startup. He said that he needed a partner, to help him partially finance the project, promote it, bring in new ideas, and push the business forward. I liked the business idea and wanted to participate. I started to ask questions about our future partnership and attempted to draw a simple partnership agreement. He quickly got offended. He said that he was looking for a real partner, who would share his goals and would never require any papers or lawyers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/run-lola-run.jpg" /></entry><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
 my projects managed by Zerocracy. He claims to be an expert with 10 years
 of hands-on coding experience, $60 hourly rate (we &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;don&amp;#39;t hire&lt;/a&gt; US guys),
 and fluent English. Then he joins the project and attempts
@@ -364,7 +585,7 @@ instead of per result. Here is my answer.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Jamón, Jamón (1992) by Bigas Luna&#39; src=&#39;/images/2018/07/jamon-jamon.jpg&#39; longdesc=&#39;#97156df6&#39;/&gt;&lt;figcaption id=&#39;97156df6&#39;&gt;Jamón, Jamón (1992) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Jamón, Jamón (1992) by Bigas Luna' src='/images/2018/07/jamon-jamon.jpg' longdesc='#97156df6'/&gt;&lt;figcaption id='97156df6'&gt;Jamón, Jamón (1992) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;No matter how bad the methodology is, you do know that &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;we pay&lt;/a&gt;
 for each bug that is found and properly reported, right?
@@ -382,15 +603,7 @@ or 2) submitting pull requests (when you don&amp;#39;t see problems).&lt;/p&gt;
 
 &lt;p&gt;If none of that works for you, you are a bad programmer.&lt;/p&gt;
 
-&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of
-my projects managed by Zerocracy. He claims to be an expert with 10 years
-of hands-on coding experience, $60 hourly rate (we don&amp;#39;t hire US guys),
-and fluent English. Then he joins the project and attempts
-to close a few tickets. But he hardly can. For many reasons. Then he comes back
-and explains why our microtasking methodology
-doesn&amp;#39;t work, trying to convince me
-that I have to pay him per hour,
-instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What&#39;s Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven&amp;#39;t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
+&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of my projects managed by Zerocracy. He claims to be an expert with 10 years of hands-on coding experience, $60 hourly rate (we don&amp;#39;t hire US guys), and fluent English. Then he joins the project and attempts to close a few tickets. But he hardly can. For many reasons. Then he comes back and explains why our microtasking methodology doesn&amp;#39;t work, trying to convince me that I have to pay him per hour, instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What's Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven&amp;#39;t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
 are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=953355&quot;&gt;claimed&lt;/a&gt; that
 &amp;quot;the non-local variable is a major contributing factor in programs
 which are difficult to understand.&amp;quot; Since then, &lt;a href=&quot;http://wiki.c2.com/?GlobalVariablesAreBad&quot;&gt;many other reasons&lt;/a&gt;
@@ -402,7 +615,7 @@ in ways which are different from what its original author expected.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&#39; src=&#39;/images/2018/07/el-chapo.jpg&#39; longdesc=&#39;#9e10a0df&#39;/&gt;&lt;figcaption id=&#39;9e10a0df&#39;&gt;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='El Chapo, Season 1 (2017) by Silvana Aguirre et al.' src='/images/2018/07/el-chapo.jpg' longdesc='#9e10a0df'/&gt;&lt;figcaption id='9e10a0df'&gt;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;I was recently writing a web front for &lt;a href=&quot;https://www.zold.io&quot;&gt;Zold&lt;/a&gt; in Ruby,
 on top of &lt;a href=&quot;http://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;.
@@ -431,12 +644,12 @@ it is necessary to test how a number of servers communicate to each other.
 I can&amp;#39;t do that! There is absolutely no way.
 Because Sinatra is designed with the assumption that only one server may exist in the entire application scope.&lt;/p&gt;
 
-&lt;aside class=&#39;youtube&#39;&gt;
-        &lt;a href=&#39;https://www.youtube.com/watch?v=FNWyN_Q10TI&#39;&gt;&lt;div class=&#39;box&#39;&gt;
-        &lt;img src=&#39;https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg&#39; alt=&#39;YouTube video #FNWyN_Q10TI&#39;/&gt;
-        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;aside class='youtube'&gt;
+        &lt;a href='https://www.youtube.com/watch?v=FNWyN_Q10TI'&gt;&lt;div class='box'&gt;
+        &lt;img src='https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg' alt='YouTube video #FNWyN_Q10TI'/&gt;
+        &lt;div class='play'&gt;&lt;i class='icon icon-play'&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;What&#39;s wrong with global variables?;
+        &lt;div&gt;What's wrong with global variables?;
         8 August 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;Can this really be fixed? Let&amp;#39;s take a look at &lt;a href=&quot;https://github.com/sinatra/sinatra/&quot;&gt;their code&lt;/a&gt;.
@@ -451,7 +664,7 @@ Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
 &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;alternatives&lt;/a&gt; are---slipped through their fingers.&lt;/p&gt;
 
-&lt;aside class=&#39;quote&#39;&gt;While the application is small and its test coverage is low, global variables may not hurt.&lt;/aside&gt;
+&lt;aside class='quote'&gt;While the application is small and its test coverage is low, global variables may not hurt.&lt;/aside&gt;
 
 &lt;p&gt;Technically speaking, their design is &amp;quot;globally scoped.&amp;quot;
 &lt;code&gt;Sinatra::Base&lt;/code&gt; treats the entire application as its scope of visibility.
@@ -469,15 +682,7 @@ singletons, or class variables.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think about global variables? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/oop?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#oop&lt;/a&gt;&lt;/p&gt;--- Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw&quot;&gt;July 15, 2018&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven&amp;#39;t written already about how global variables
-are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. claimed that
-&amp;quot;the non-local variable is a major contributing factor in programs
-which are difficult to understand.&amp;quot; Since then, many other reasons
-where suggested to convince programmers to stop using global variables.
-I think I read them all,
-but didn&amp;#39;t find the one that bothers me most of all: composability.
-In a nutshell, global variables make code difficult or impossible to compose
-in ways which are different from what its original author expected.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/el-chapo.jpg" /></entry><entry><title type="html">Are You an Architect?</title><link href="https://www.yegor256.com/2018/06/26/are-you-an-architect.html" rel="alternate" type="text/html" title="Are You an Architect?" /><published>2018-06-26T00:00:00+00:00</published><updated>2018-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/26/are-you-an-architect</id><content type="html" xml:base="https://www.yegor256.com/2018/06/26/are-you-an-architect.html">&lt;p&gt;Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven&amp;#39;t written already about how global variables are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. claimed that &amp;quot;the non-local variable is a major contributing factor in programs which are difficult to understand.&amp;quot; Since then, many other reasons where suggested to convince programmers to stop using global variables. I think I read them all, but didn&amp;#39;t find the one that bothers me most of all: composability. In a nutshell, global variables make code difficult or impossible to compose in ways which are different from what its original author expected.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/el-chapo.jpg" /></entry><entry><title type="html">Are You an Architect?</title><link href="https://www.yegor256.com/2018/06/26/are-you-an-architect.html" rel="alternate" type="text/html" title="Are You an Architect?" /><published>2018-06-26T00:00:00+00:00</published><updated>2018-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/26/are-you-an-architect</id><content type="html" xml:base="https://www.yegor256.com/2018/06/26/are-you-an-architect.html">&lt;p&gt;Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
 Kent Beck, in answer to the question
 &amp;quot;What is an architect?&amp;quot; said, according to &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0164121208002057&quot;&gt;Philippe Kruchten&lt;/a&gt;,
 that it is &amp;quot;a new pompous title that programmers demand to have on their business cards
@@ -488,7 +693,7 @@ Here is a list of traits that, I believe, a good architect has.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;No Country for Old Men (2007) by Coen Brothers&#39; src=&#39;/images/2018/06/no-country-for-old-men.jpg&#39; longdesc=&#39;#3627e4f5&#39;/&gt;&lt;figcaption id=&#39;3627e4f5&#39;&gt;No Country for Old Men (2007) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='No Country for Old Men (2007) by Coen Brothers' src='/images/2018/06/no-country-for-old-men.jpg' longdesc='#3627e4f5'/&gt;&lt;figcaption id='3627e4f5'&gt;No Country for Old Men (2007) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Disclaimer: Even though I haven&amp;#39;t seen a single female software architect in my life,
 I have to say for my leftist/feminist readers that in this blog post
@@ -526,7 +731,7 @@ and control them---that&amp;#39;s what a good architect worries about.&lt;/p&gt;
 
 &lt;p&gt;He knows that process comes first, people next.&lt;/p&gt;
 
-&lt;aside class=&#39;quote&#39;&gt;An architect puts discipline on top of everything else, constantly inventing new rules and enforcing them.&lt;/aside&gt;
+&lt;aside class='quote'&gt;An architect puts discipline on top of everything else, constantly inventing new rules and enforcing them.&lt;/aside&gt;
 
 &lt;p&gt;However, this is not what most software experts think. For example,
 according to Alistair Cockburn&amp;#39;s article &lt;a href=&quot;https://ieeexplore.ieee.org/document/963450/&quot;&gt;&lt;em&gt;Agile Software Development: The People Factor&lt;/em&gt;&lt;/a&gt;
@@ -580,7 +785,7 @@ projects and attempted solutions tend to fall apart due to the
 weight of unmitigated complexity.&amp;quot; The word &lt;em&gt;strong&lt;/em&gt; is what is important
 to emphasize here.&lt;/p&gt;
 
-&lt;aside class=&#39;quote&#39;&gt;The strength of an architect is in the ability to say &quot;No&quot; when it&#39;s difficult to do so.&lt;/aside&gt;
+&lt;aside class='quote'&gt;The strength of an architect is in the ability to say &quot;No&quot; when it's difficult to do so.&lt;/aside&gt;
 
 &lt;p&gt;What does strength mean in this context? An ability to stay in the office two days
 straight with just pizza and cola? An ability to multiply six-digit numbers
@@ -652,7 +857,7 @@ Because it&amp;#39;s his team, he found them, he motivated them, he controlled t
 and he didn&amp;#39;t punish them properly. That&amp;#39;s why they failed. First of all,
 it&amp;#39;s his fault.&lt;/p&gt;
 
-&lt;aside class=&#39;quote&#39;&gt;He didn&#39;t punish them properly. That&#39;s why they failed. First of all, it&#39;s his fault.&lt;/aside&gt;
+&lt;aside class='quote'&gt;He didn't punish them properly. That's why they failed. First of all, it's his fault.&lt;/aside&gt;
 
 &lt;p&gt;What will he do with this fault is a separate question. Maybe he will
 train and coach someone, maybe he&amp;#39;ll enforce some rules more aggressively, maybe
@@ -704,7 +909,7 @@ In most cases he fails miserably. But he always gets back on his feet
 and tries again. Look for the guy with ambitions if you want to hire
 an architect, not just yet another programmer.&lt;/p&gt;
 
-&lt;aside class=&#39;quote&#39;&gt;An architect wants to be a man of power, not just a smart technical engineer.&lt;/aside&gt;
+&lt;aside class='quote'&gt;An architect wants to be a man of power, not just a smart technical engineer.&lt;/aside&gt;
 
 &lt;p&gt;Michael Keeling, in his recent book
 &lt;a href=&quot;https://amzn.to/2tgR8uv&quot;&gt;&lt;em&gt;Design It!: From Programmer to Software Architect&lt;/em&gt;&lt;/a&gt; (worth reading), says:
@@ -729,14 +934,7 @@ So, it&amp;#39;s way more about a title for him, rather that just his actual res
 
 &lt;p&gt;Yes, the money question &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;again&lt;/a&gt;.
 A good architect is expensive.
-If he is not, he is not a good architect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
-Kent Beck, in answer to the question
-&amp;quot;What is an architect?&amp;quot; said, according to Philippe Kruchten,
-that it is &amp;quot;a new pompous title that programmers demand to have on their business cards
-to justify their sumptuous emoluments.&amp;quot;
-Not much has changed since then.
-There is a big difference between a smart programmer and a project architect.
-Here is a list of traits that, I believe, a good architect has.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/no-country-for-old-men.jpg" /></entry><entry><title type="html">Simplified GitHub Login for a Ruby Web App</title><link href="https://www.yegor256.com/2018/06/19/glogin.html" rel="alternate" type="text/html" title="Simplified GitHub Login for a Ruby Web App" /><published>2018-06-19T00:00:00+00:00</published><updated>2018-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/19/glogin</id><content type="html" xml:base="https://www.yegor256.com/2018/06/19/glogin.html">&lt;p&gt;You know what &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;
+If he is not, he is not a good architect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver, Kent Beck, in answer to the question &amp;quot;What is an architect?&amp;quot; said, according to Philippe Kruchten, that it is &amp;quot;a new pompous title that programmers demand to have on their business cards to justify their sumptuous emoluments.&amp;quot; Not much has changed since then. There is a big difference between a smart programmer and a project architect. Here is a list of traits that, I believe, a good architect has.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/no-country-for-old-men.jpg" /></entry><entry><title type="html">Simplified GitHub Login for a Ruby Web App</title><link href="https://www.yegor256.com/2018/06/19/glogin.html" rel="alternate" type="text/html" title="Simplified GitHub Login for a Ruby Web App" /><published>2018-06-19T00:00:00+00:00</published><updated>2018-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/19/glogin</id><content type="html" xml:base="https://www.yegor256.com/2018/06/19/glogin.html">&lt;p&gt;You know what &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;
 login is, right? It&amp;#39;s when your users click &amp;quot;login&amp;quot;
 and get redirected to Facebook, Twitter, Google, or some other
 website which then identifies them. Then they go back to your website and you
@@ -748,7 +946,7 @@ to simplify this operation for GitHub only. Here is how it works.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;The Savages (2007) by Tamara Jenkins&#39; src=&#39;/images/2018/06/savages.jpg&#39; longdesc=&#39;#0d3acec9&#39;/&gt;&lt;figcaption id=&#39;0d3acec9&#39;&gt;The Savages (2007) by Tamara Jenkins&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='The Savages (2007) by Tamara Jenkins' src='/images/2018/06/savages.jpg' longdesc='#0d3acec9'/&gt;&lt;figcaption id='0d3acec9'&gt;The Savages (2007) by Tamara Jenkins&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, you will have to register your application in GitHub,
 as &lt;a href=&quot;https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/&quot;&gt;this page&lt;/a&gt;
@@ -835,15 +1033,7 @@ it works in &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;zol
 &lt;a href=&quot;https://github.com/yegor256/sixnines&quot;&gt;sixnines&lt;/a&gt;,
 &lt;a href=&quot;https://github.com/yegor256/0pdd&quot;&gt;0pdd&lt;/a&gt;,
 and &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;Zold&lt;/a&gt;
-web apps on top of Sinatra (all open source).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">You know what OAuth
-login is, right? It&amp;#39;s when your users click &amp;quot;login&amp;quot;
-and get redirected to Facebook, Twitter, Google, or some other
-website which then identifies them. Then they go back to your website and you
-know who they are. It&amp;#39;s very convenient for them. It&amp;#39;s convenient for you
-too, since you don&amp;#39;t need to implement the login functionality and don&amp;#39;t
-need to keep their credentials in a database. I created a simple
-Ruby gem
-to simplify this operation for GitHub only. Here is how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/savages.jpg" /></entry><entry><title type="html">Object Validation: to Defer or Not?</title><link href="https://www.yegor256.com/2018/05/29/object-validation.html" rel="alternate" type="text/html" title="Object Validation: to Defer or Not?" /><published>2018-05-29T00:00:00+00:00</published><updated>2018-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/29/object-validation</id><content type="html" xml:base="https://www.yegor256.com/2018/05/29/object-validation.html">&lt;!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 --&gt;
+web apps on top of Sinatra (all open source).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">You know what OAuth login is, right? It&amp;#39;s when your users click &amp;quot;login&amp;quot; and get redirected to Facebook, Twitter, Google, or some other website which then identifies them. Then they go back to your website and you know who they are. It&amp;#39;s very convenient for them. It&amp;#39;s convenient for you too, since you don&amp;#39;t need to implement the login functionality and don&amp;#39;t need to keep their credentials in a database. I created a simple Ruby gem to simplify this operation for GitHub only. Here is how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/savages.jpg" /></entry><entry><title type="html">Object Validation: to Defer or Not?</title><link href="https://www.yegor256.com/2018/05/29/object-validation.html" rel="alternate" type="text/html" title="Object Validation: to Defer or Not?" /><published>2018-05-29T00:00:00+00:00</published><updated>2018-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/29/object-validation</id><content type="html" xml:base="https://www.yegor256.com/2018/05/29/object-validation.html">&lt;!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 --&gt;
 
 &lt;p&gt;I &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;said earlier&lt;/a&gt;
 that constructors must be code-free and do nothing
@@ -857,7 +1047,7 @@ so to speak? Here is what I think.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Punching the Clown (2009) by Gregori Viens&#39; src=&#39;/images/2018/05/punching-the-clown.jpg&#39; longdesc=&#39;#ec207931&#39;/&gt;&lt;figcaption id=&#39;ec207931&#39;&gt;Punching the Clown (2009) by Gregori Viens&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Punching the Clown (2009) by Gregori Viens' src='/images/2018/05/punching-the-clown.jpg' longdesc='#ec207931'/&gt;&lt;figcaption id='ec207931'&gt;Punching the Clown (2009) by Gregori Viens&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Let&amp;#39;s start with this Ruby code:&lt;/p&gt;
 
@@ -915,10 +1105,10 @@ It only causes trouble for the behavior.&lt;/p&gt;
 &lt;p&gt;Even though the difference may look subtle, it&amp;#39;s obvious. There are
 two phases of interaction with the encapsulated object: &lt;em&gt;connecting&lt;/em&gt; and &lt;em&gt;talking&lt;/em&gt;.&lt;/p&gt;
 
-&lt;aside class=&#39;youtube&#39;&gt;
-        &lt;a href=&#39;https://www.youtube.com/watch?v=-drZbHxydMc&#39;&gt;&lt;div class=&#39;box&#39;&gt;
-        &lt;img src=&#39;https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg&#39; alt=&#39;YouTube video #-drZbHxydMc&#39;/&gt;
-        &lt;div class=&#39;play&#39;&gt;&lt;i class=&#39;icon icon-play&#39;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;aside class='youtube'&gt;
+        &lt;a href='https://www.youtube.com/watch?v=-drZbHxydMc'&gt;&lt;div class='box'&gt;
+        &lt;img src='https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg' alt='YouTube video #-drZbHxydMc'/&gt;
+        &lt;div class='play'&gt;&lt;i class='icon icon-play'&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;/div&gt;&lt;/a&gt;
         &lt;div&gt;When do you validate your objects?;
         4 July 2018.&lt;/div&gt;&lt;/aside&gt;
@@ -947,15 +1137,7 @@ Ruby is less powerful than those languages, that&amp;#39;s why we have to valida
 
 &lt;p&gt;Thus, to summarize, validating in constructors is &lt;em&gt;not&lt;/em&gt; a bad idea, provided
 the validations are &lt;em&gt;not touching the objects&lt;/em&gt; but only confirm that they are
-good enough to work with later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">I said earlier
-that constructors must be code-free and do nothing
-aside from attribute initialization. Since then, the most frequently
-asked question
-is: What about validation of arguments? If they are &amp;quot;broken,&amp;quot;
-what is the point of creating an object in an &amp;quot;invalid&amp;quot; state?
-Such an object will fail later, at an unexpected moment. Isn&amp;#39;t it
-better to throw an exception at the very moment of instantiation? To fail fast,
-so to speak? Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/punching-the-clown.jpg" /></entry><entry><title type="html">One More Recipe Against NULL</title><link href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html" rel="alternate" type="text/html" title="One More Recipe Against NULL" /><published>2018-05-22T00:00:00+00:00</published><updated>2018-05-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/22/default-arguments-against-null</id><content type="html" xml:base="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">&lt;p&gt;You know what NULL is, right? It&amp;#39;s
+good enough to work with later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">I said earlier that constructors must be code-free and do nothing aside from attribute initialization. Since then, the most frequently asked question is: What about validation of arguments? If they are &amp;quot;broken,&amp;quot; what is the point of creating an object in an &amp;quot;invalid&amp;quot; state? Such an object will fail later, at an unexpected moment. Isn&amp;#39;t it better to throw an exception at the very moment of instantiation? To fail fast, so to speak? Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/punching-the-clown.jpg" /></entry><entry><title type="html">One More Recipe Against NULL</title><link href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html" rel="alternate" type="text/html" title="One More Recipe Against NULL" /><published>2018-05-22T00:00:00+00:00</published><updated>2018-05-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/22/default-arguments-against-null</id><content type="html" xml:base="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">&lt;p&gt;You know what NULL is, right? It&amp;#39;s
 &lt;a href=&quot;https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare&quot;&gt;evil&lt;/a&gt;.
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
@@ -968,7 +1150,7 @@ I will suggest one more &amp;quot;best practice&amp;quot; on top of what
 
 &lt;!--more--&gt;
 
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Snatch (2000) by Guy Ritchie&#39; src=&#39;/images/2018/05/snatch.jpg&#39; longdesc=&#39;#7fe602d0&#39;/&gt;&lt;figcaption id=&#39;7fe602d0&#39;&gt;Snatch (2000) by Guy Ritchie&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Snatch (2000) by Guy Ritchie' src='/images/2018/05/snatch.jpg' longdesc='#7fe602d0'/&gt;&lt;figcaption id='7fe602d0'&gt;Snatch (2000) by Guy Ritchie&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Look at this code:&lt;/p&gt;
 
@@ -1010,248 +1192,4 @@ is empty. If the default element is not provided, the exception will be raised.&
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;--- Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw&quot;&gt;April 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
 
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You know what NULL is, right? It&amp;#39;s
-evil.
-In OOP, your method can return NULL,
-it can accept NULL as an argument, your object can encapsulate it as an attribute,
-or you can assign it to a variable.
-All four scenarios are bad for the maintainability of your code---there
-are no doubts about that.
-The question is what to do instead. Let&amp;#39;s discuss the &amp;quot;return it&amp;quot; part and
-I will suggest one more &amp;quot;best practice&amp;quot; on top of what
-was discussed a few years ago.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/snatch.jpg" /></entry><entry><title type="html">An Open Code Base Is Not Yet an Open Source Project</title><link href="https://www.yegor256.com/2018/05/08/open-source-attributes.html" rel="alternate" type="text/html" title="An Open Code Base Is Not Yet an Open Source Project" /><published>2018-05-08T00:00:00+00:00</published><updated>2018-05-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/08/open-source-attributes</id><content type="html" xml:base="https://www.yegor256.com/2018/05/08/open-source-attributes.html">&lt;p&gt;A few weeks ago someone &lt;a href=&quot;https://www.yegor256.com/2018/04/10/learning-by-refactoring.html#comment-3865410512&quot;&gt;suggested&lt;/a&gt;
-I should try to integrate &lt;a href=&quot;https://www.jetbrains.com/idea/&quot;&gt;IntelliJ IDEA&lt;/a&gt;&amp;#39;s
-static analysis rules into
-&lt;a href=&quot;/2014/08/13/strict-code-quality-control.html&quot;&gt;Qulice&lt;/a&gt;,
-our aggregator of
-&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt;,
-&lt;a href=&quot;http://pmd.sourceforge.net/&quot;&gt;PMD&lt;/a&gt;,
-&lt;a href=&quot;http://findbugs.sourceforge.net/&quot;&gt;FindBugs&lt;/a&gt;,
-and some other analyzers. I do love IDEA&amp;#39;s rules---some of them are
-unique and very useful. I asked whether I could find them somewhere in
-Maven Central (they are written in Java) and the answer was &amp;quot;You&amp;#39;ll have to figure
-out yourself how to use them, but they are open source.&amp;quot;
-Here comes my opinion about this
-situation: I believe that open source doesn&amp;#39;t just mean the code is readable
-without authorization. It means something much bigger.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&#39;jb_picture&#39;&gt;&lt;img itemprop=&#39;image&#39; alt=&#39;Her (2013) by Spike Jonze&#39; src=&#39;/images/2018/05/her.jpg&#39; longdesc=&#39;#c478dfc9&#39;/&gt;&lt;figcaption id=&#39;c478dfc9&#39;&gt;Her (2013) by Spike Jonze&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Just making a piece of code publicly accessible is not what it takes to call
-it &lt;em&gt;open source&lt;/em&gt; software. Actually, it only harms the product, and the
-reputation of its author, if it&amp;#39;s open but not ready for &lt;em&gt;reuse&lt;/em&gt; (which
-is what &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;the open source world&lt;/a&gt;
-is all about). As &lt;a href=&quot;https://en.wikipedia.org/wiki/Eric_S._Raymond&quot;&gt;Eric Raymond&lt;/a&gt; said in his
-famous piece &lt;a href=&quot;https://amzn.to/2FKF9tv&quot;&gt;&lt;em&gt;The Cathedral and the Bazaar&lt;/em&gt;&lt;/a&gt;,
-&amp;quot;Good programmers know what to write. Great ones know what to rewrite (and reuse).&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s the responsibility of the software product&amp;#39;s author to help
-those &amp;quot;good&amp;quot; programmers to reuse the code. Coding, testing, debugging,
-and making sure &amp;quot;it works on my laptop&amp;quot; is one thing. Making it readable and reusable
-is a totally different piece of work, which may take much more time.&lt;/p&gt;
-
-&lt;p&gt;As &lt;a href=&quot;https://en.wikipedia.org/wiki/Karl_Fogel&quot;&gt;Karl Fogel&lt;/a&gt;
-said in &lt;a href=&quot;https://amzn.to/2jyMrrF&quot;&gt;&lt;em&gt;Producing Open Source Software&lt;/em&gt;&lt;/a&gt;:
-&amp;quot;Most free software projects fail.&amp;quot; They fail (on top of many other factors) because not enough
-attention is paid to the following basic things (in no particular
-order):&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;README&lt;/strong&gt;.
-I&amp;#39;m sure you host your product on GitHub. (If not, what&amp;#39;s wrong with you?)
-There must be a &lt;code&gt;README.md&lt;/code&gt; file in the root directory that
-explains what the product is all about and how we should use it.
-A few good examples:
-&lt;a href=&quot;https://github.com/leejarvis/slop/blob/master/README.md&quot;&gt;&lt;code&gt;leejarvis/slop&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/mongobee/mongobee/blob/master/README.md&quot;&gt;&lt;code&gt;mongobee/mongobee&lt;/code&gt;&lt;/a&gt;
-&lt;a href=&quot;https://github.com/ronmamo/reflections/blob/master/README.md&quot;&gt;&lt;code&gt;ronmamo/reflections&lt;/code&gt;&lt;/a&gt;,
-and
-&lt;a href=&quot;https://github.com/yegor256/takes/blob/master/README.md&quot;&gt;&lt;code&gt;yegor256/takes&lt;/code&gt;&lt;/a&gt; (this one is mine).
-A few bad examples:
-&lt;a href=&quot;https://github.com/qos-ch/slf4j/blob/master/README.md&quot;&gt;&lt;code&gt;qos-ch/slf4j&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/rzwitserloot/lombok/blob/master/README&quot;&gt;&lt;code&gt;rzwitserloot/lombok&lt;/code&gt;&lt;/a&gt;, and
-&lt;a href=&quot;https://github.com/junit-team/junit4/blob/master/README.md&quot;&gt;&lt;code&gt;junit4/blob&lt;/code&gt;&lt;/a&gt; (don&amp;#39;t be like these guys).&lt;/p&gt;
-
-&lt;p&gt;No matter how rich you&amp;#39;ve made your website, Javadoc, Wiki, mailing
-list, and Twitter, the README is the place where we expect
-to see everything. Only if and when we get interested will we investigate
-further and deeper. Read the README files in other projects and copy
-their best ideas. README is your showcase, it must shine.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;License&lt;/strong&gt;.
-Most of us don&amp;#39;t pay attention to &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_license&quot;&gt;this bureaucracy&lt;/a&gt;.
-I didn&amp;#39;t either, until recently.
-I thought that the moment my code is open I can forget about any
-rights and royalties. They will just use my code and I won&amp;#39;t
-see any profit, ever. The license I attach to it won&amp;#39;t matter---nobody
-reads it anyway. This is exactly what happens in most cases.
-But only while those users are small potatoes.&lt;/p&gt;
-
-&lt;p&gt;A few years ago I was an architect on a software project and we had to create
-an analyzer of hardware components, like CPU, memory, hard disc, etc. We had
-to make sure all of them worked as expected after running pretty complex
-and customized tests. My obvious suggestion was to use open source tools,
-which would do the hard work for us. We would only have to integrate them.
-It was an awesome idea, until some of us decided to check the licenses of
-those tools.&lt;/p&gt;
-
-&lt;p&gt;That was the moment I realized that I was so wrong for not paying attention
-to what licenses say. &lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_General_Public_License&quot;&gt;GPL&lt;/a&gt;,
-for example, which we found in a few tools,
-didn&amp;#39;t allow us to reuse the code if our product wasn&amp;#39;t open source too.
-Since we were creating proprietary software, we understood that we weren&amp;#39;t able to
-use &lt;a href=&quot;https://en.wikipedia.org/wiki/Copyleft&quot;&gt;copyleft&lt;/a&gt; modules,
-only
-&lt;a href=&quot;https://en.wikipedia.org/wiki/MIT_License&quot;&gt;MIT&lt;/a&gt;,
-&lt;a href=&quot;https://en.wikipedia.org/wiki/BSD_licenses&quot;&gt;BSD&lt;/a&gt; or similar.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m suggesting you think about the license before publishing the
-product. I&amp;#39;ve used &lt;a href=&quot;https://en.wikipedia.org/wiki/MIT_License&quot;&gt;MIT&lt;/a&gt;
-in all my products since 2016.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Distribution&lt;/strong&gt;.
-A mere collection of &lt;code&gt;.rb&lt;/code&gt; files is not reusable Ruby code. Well, maybe for
-those &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;hackers&lt;/a&gt;
-I despise so much, it is. But for professional
-&lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;developers&lt;/a&gt;,
-who are too &lt;a href=&quot;/2018/04/17/how-to-be-lazy.html&quot;&gt;lazy&lt;/a&gt;
-to read their own code, let alone someone else&amp;#39;s,
-it definitely isn&amp;#39;t.&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;Take it from GitHub&amp;quot; is not a polite way to treat us---your fellow programmers---anymore.
-It was, twenty years ago, but now we have repositories.
-You have to distribute your product as an &amp;quot;artifact&amp;quot; through one of those public
-repositories, and make it possible for us to fetch it
-from there, skipping the testing and packaging, and just using it as a product
-(a Ruby gem or Java JAR, for example).&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m talking about repositories like
-&lt;a href=&quot;https://search.maven.org/&quot;&gt;Maven Central&lt;/a&gt;,
-&lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npmjs&lt;/a&gt;,
-or &lt;a href=&quot;https://rubygems.org/&quot;&gt;RubyGems&lt;/a&gt;.
-You have to find a way to deploy your product there.
-It&amp;#39;s not an easy task, even though those repositories
-do their best to simplify the process. We use
-&lt;a href=&quot;/2014/09/11/deployment-script-vs-rultor.html&quot;&gt;Rultor&lt;/a&gt; in all our projects,
-which helps us streamline the deployment:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; to Maven Central
-(&lt;a href=&quot;/2014/08/19/how-to-release-to-maven-central.html&quot;&gt;details&lt;/a&gt;);&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/xcop&quot;&gt;yegor256/xcop&lt;/a&gt; to RubyGems
-(&lt;a href=&quot;/2014/08/26/publish-to-rubygems.html&quot;&gt;details&lt;/a&gt;);&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/tacit&quot;&gt;yegor256/tacit&lt;/a&gt; to npmjs.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Package_manager&quot;&gt;Package managers&lt;/a&gt;
-like Maven, NPM, Rake, Grunt, Gradle and
-&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&quot;&gt;others&lt;/a&gt;,
-are the standard and traditional way of reusing open source software (proprietary too).
-If your product is not available in a public repository, it&amp;#39;s not a product;
-it&amp;#39;s just a code base.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Javadoc&lt;/strong&gt;.
-We all hate writing documentation. And we hate libraries that are not
-documented. I usually find it boring to write Javadoc blocks for my classes,
-but I understand that without them the code I&amp;#39;m writing inside
-those classes will not interest anyone.&lt;/p&gt;
-
-&lt;p&gt;The best format for those Javadoc blocks is &amp;quot;by example.&amp;quot; Instead of prose
-I&amp;#39;d recommend you demonstrate how to use the class, especially in combination
-with it neighbors. Moreover, I&amp;#39;d suggest you &lt;em&gt;don&amp;#39;t&lt;/em&gt; write documentation
-anywhere else apart from those Javadoc blocks. (They exist in other
-languages too, but have different names.)&lt;/p&gt;
-
-&lt;p&gt;The problem with Javadoc is that it&amp;#39;s not so easy to format the text
-so that it looks visually attractive. Maybe that&amp;#39;s why many programmers
-still rely on Wikis or project websites. I&amp;#39;d recommend you stay inside
-Javadoc blocks and learn their formatting syntax.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Badges&lt;/strong&gt;.
-As &lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;you can see&lt;/a&gt;, I like badges. First and foremost
-they make a repository look as if it&amp;#39;s being &amp;quot;actively maintained,&amp;quot; especially
-if those badges are green. They don&amp;#39;t really deliver any valuable information.
-They mostly say: &amp;quot;Our author has very good taste, see how perfectly
-our colors match!&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;Jokes aside, it&amp;#39;s not so easy to add all those badges. Each badge will take you
-some time, to integrate a third party system, to make sure the numbers
-are good enough to be proud of, and to keep it under control. If the
-repository is not being watched over, the badges will eventually start failing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Continuous Integration&lt;/strong&gt;.
-In order to use your code we have to trust it, meaning that we have to
-be sure that it works, or at least passes automated tests. (Do I have to say that
-you must have tests?) How can we be sure it works? &lt;a href=&quot;/2014/10/05/ten-hosted-continuous-integration-services.html&quot;&gt;CI&lt;/a&gt;
-is the answer. We must be able
-to see the logs of the recent CI build and make sure it is clean.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s a matter of trust. You may never use those Travis builds and simply
-ignore their red and green signals, but they are important for us---your
-clients. I add Travis badges to all projects of mine, right after I create
-a new repository.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Contribution Guidelines&lt;/strong&gt;.
-For a regular GitHub addict it&amp;#39;s not a problem to figure out how to
-send you a pull request. However, the majority of us, at least
-initially, will consist of active users, not contributors. We will try
-to use your product and will attempt to customize it for our needs.
-If we get lost, we will leave, frustrated.&lt;/p&gt;
-
-&lt;p&gt;To prevent this, you have to explain what a disciplined contributor
-has to do in order to make changes to your code base. Here are
-the questions I&amp;#39;d recommend you answer in your
-&lt;a href=&quot;https://help.github.com/articles/setting-guidelines-for-repository-contributors/&quot;&gt;&lt;code&gt;CONTRIBUTING.md&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;How do I run an automated build?&lt;/li&gt;
-&lt;li&gt;How big/small does a pull request have to be in order to be accepted?&lt;/li&gt;
-&lt;li&gt;What are your style guidelines?&lt;/li&gt;
-&lt;li&gt;How do bugs have to be reported, tagged, explained?&lt;/li&gt;
-&lt;li&gt;What makes a &lt;a href=&quot;/2018/04/24/right-way-to-report-bugs.html&quot;&gt;good bug report&lt;/a&gt;?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here is the text I
-&lt;a href=&quot;https://blog.github.com/2016-02-17-issue-and-pull-request-templates/&quot;&gt;use&lt;/a&gt; in all my projects:
-&lt;a href=&quot;https://github.com/yegor256/takes/blob/master/.github/ISSUE_TEMPLATE.md&quot;&gt;&lt;code&gt;ISSUE_TEMPLATE.md&lt;/code&gt;&lt;/a&gt;
-and
-&lt;a href=&quot;https://github.com/yegor256/takes/blob/master/.github/PULL_REQUEST_TEMPLATE.md&quot;&gt;&lt;code&gt;PULL_REQUEST_TEMPLATE.md&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Quality Wall&lt;/strong&gt;.
-Finally, if you are lucky, we will use your product and will be interested
-in contributing. You will start getting our pull requests. The question is how
-fast we will ruin your code base. We will, if you don&amp;#39;t protect yourself.&lt;/p&gt;
-
-&lt;p&gt;If you strictly review each pull request and reject anything that doesn&amp;#39;t
-look like &amp;quot;great&amp;quot; code, you will lose us, your contributors. We don&amp;#39;t want
-to write great code, we want to make changes to your product so that it
-becomes more suitable for &lt;em&gt;our&lt;/em&gt; needs. The greatness of the code is &lt;em&gt;your&lt;/em&gt;
-concern, not ours.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, if you accept whatever comes in, the architecture will lose its robustness
-(if it ever had any) and you again will lose us, your contributors. This time
-you will lose us because the product will become bad and difficult to
-maintain and contribute to.&lt;/p&gt;
-
-&lt;p&gt;The best way to keep the balance is to &amp;quot;hire&amp;quot; a tool to help you:
-build automation, static analysis, automated tests, and coverage control.
-You have to configure the product to fail when the changes someone
-introduces violate its internal quality expectations.
-I &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;use Rultor&lt;/a&gt; for that too.&lt;/p&gt;
-
-&lt;p&gt;Did I forget anything?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="programming" /><summary type="html">A few weeks ago someone suggested
-I should try to integrate IntelliJ IDEA&amp;#39;s
-static analysis rules into
-Qulice,
-our aggregator of
-Checkstyle,
-PMD,
-FindBugs,
-and some other analyzers. I do love IDEA&amp;#39;s rules---some of them are
-unique and very useful. I asked whether I could find them somewhere in
-Maven Central (they are written in Java) and the answer was &amp;quot;You&amp;#39;ll have to figure
-out yourself how to use them, but they are open source.&amp;quot;
-Here comes my opinion about this
-situation: I believe that open source doesn&amp;#39;t just mean the code is readable
-without authorization. It means something much bigger.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/her.jpg" /></entry></feed>
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You know what NULL is, right? It&amp;#39;s evil. In OOP, your method can return NULL, it can accept NULL as an argument, your object can encapsulate it as an attribute, or you can assign it to a variable. All four scenarios are bad for the maintainability of your code---there are no doubts about that. The question is what to do instead. Let&amp;#39;s discuss the &amp;quot;return it&amp;quot; part and I will suggest one more &amp;quot;best practice&amp;quot; on top of what was discussed a few years ago.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/snatch.jpg" /></entry></feed>

@@ -121,6 +121,7 @@ advantages
 advice
 advise
 adviser
+advocate
 adwords
 affairs
 affect
@@ -239,6 +240,7 @@ amounts
 amp
 amsterdam
 an
+analyses
 analysis
 analyst
 analyst---documents
@@ -787,6 +789,7 @@ bought
 bouncing
 boundaries
 boundaries---who
+bounty
 bountysource
 bout
 bowling
@@ -821,6 +824,7 @@ breakthrough
 breathe
 brevity
 brian
+brian-lives-outdoors
 brick-and-mortar
 bridge
 brief
@@ -1133,6 +1137,7 @@ chrome
 chronological
 chunks
 CI
+ciera
 cinemas
 CircleCI
 circles
@@ -1276,6 +1281,7 @@ collectors
 collects
 collisions
 colloquy
+colorizejs
 colors
 colosseum
 column
@@ -1752,6 +1758,7 @@ damages
 damaging
 damn
 damon
+dan
 dance
 dancing
 dangerous
@@ -2053,6 +2060,7 @@ disabilities
 disable
 disabled
 disadvantage
+disadvantages
 disagree
 disagreed
 disagrees
@@ -2195,6 +2203,7 @@ door---anyone
 doors
 dorks
 dot
+dotscale
 double
 doubles
 doubling
@@ -2651,6 +2660,7 @@ extensive
 extent
 external
 extra
+extracted
 extracting
 extreme
 extremely
@@ -2658,6 +2668,7 @@ extrovert---you
 extroverted
 eye
 eyes
+fabien
 fabrics
 facade
 facades
@@ -3204,6 +3215,7 @@ guides
 guilt
 guilt-driven
 guilty
+gulp
 gun
 gunslingers
 gurus
@@ -3392,6 +3404,7 @@ home
 homebrew
 homepage
 homework
+homogeneous
 honest
 honestly
 honesty
@@ -3846,6 +3859,7 @@ it
 it'll
 it's
 it---a
+it---check
 it---including
 it---it's
 it---just
@@ -3878,6 +3892,8 @@ JAR
 jare
 jargon
 JARs
+jasmine
+jaspan
 java
 javabeans
 javadoc
@@ -4314,6 +4330,7 @@ luckily
 lucky
 lunch
 lunches
+luu
 luxury
 LV
 lying
@@ -4467,6 +4484,7 @@ mcclure
 mcconnell
 mccullough
 mcdonald's
+md
 me
 me---you
 mean
@@ -4712,7 +4730,11 @@ monkey
 monkey-feeding
 monkeys
 monkeys---hear
+mono
+monolithic
 monopoly
+monorepo
+monorepos
 monster
 monsters
 month
@@ -4755,12 +4777,14 @@ movie
 movies
 moving
 movo
+mozilla
 mph
 MS
 MS-DOS
 MSc
 much
 mulcahy
+multi
 multi-billion-dollar
 multi-million-dollar
 multi-national
@@ -4805,6 +4829,7 @@ name
 named
 names
 names---why
+namespace
 namespaces
 naming
 napkin
@@ -5016,6 +5041,7 @@ occur
 occurred
 occurrences
 occurs
+ocean
 oct
 oct-
 october
@@ -5587,6 +5613,7 @@ PostgreSQL
 posting
 posts
 potatoes
+potencier
 potential
 poverty
 powder
@@ -6592,6 +6619,7 @@ sees
 segregate
 segregating
 segregation
+seibel
 select
 selected
 selection
@@ -7050,6 +7078,7 @@ stack
 stackable
 stackexchange
 stackoverflow
+stacks
 staff
 staffing
 stage
@@ -7066,6 +7095,7 @@ stand-ups
 standalone
 standard
 standardization
+standardize
 standardized
 standards
 standing
@@ -7188,6 +7218,7 @@ stubborn
 stubbornness
 stubs
 stuck
+studied
 studio
 study
 stuff
@@ -7602,6 +7633,7 @@ token
 told
 tolerance
 tom
+tomas
 tomes
 tomorrow
 toner
@@ -7877,6 +7909,7 @@ unresolved
 unsafe
 unstable
 unsuccessful
+untestable
 until
 untraceable
 unwilling
@@ -8060,6 +8093,7 @@ volunteer
 volunteering
 vote
 voted
+votruba
 vouches
 VP
 VPs

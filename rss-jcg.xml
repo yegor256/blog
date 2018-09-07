@@ -7,7 +7,7 @@
     <atom:link href="https://www.yegor256.com/rss/rss-jcg.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Don&#39;t Use Java Assertions</title>
+        <title>Don't Use Java Assertions</title>
         
           <description>&lt;p&gt;There are basically two ways to validate a situation in Java and complain
 when something unexpected happens. It&amp;#39;s either an exception
@@ -181,7 +181,7 @@ I&amp;#39;m suggesting you use &lt;strong&gt;validating decorators&lt;/strong&gt
       </item>
     
       <item>
-        <title>Good Programmers Don&#39;t Work for Equity</title>
+        <title>Good Programmers Don't Work for Equity</title>
         
           <description>&lt;p&gt;&amp;quot;You&amp;#39;re a good programmer. I&amp;#39;m a great entrepreneur. This is a
 breakthrough idea. Help me build it. I don&amp;#39;t have cash, but I will
@@ -304,7 +304,7 @@ multiple exception types are a bad idea too.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Fools Don&#39;t Write Unit Tests</title>
+        <title>Fools Don't Write Unit Tests</title>
         
           <description>&lt;p&gt;&amp;quot;We don&amp;#39;t have time to write unit tests&amp;quot; or &amp;quot;We don&amp;#39;t have the
 budget for unit testing&amp;quot; are complaints I hear very often. Sometimes it
@@ -342,7 +342,7 @@ valid reasons for such a rejection, according to my experience.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Good Programmers Write Bug-Free Code, Don&#39;t They?</title>
+        <title>Good Programmers Write Bug-Free Code, Don't They?</title>
         
           <description>&lt;p&gt;Good programmers create fewer
 &lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;bugs&lt;/a&gt;
@@ -365,7 +365,7 @@ that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p
       </item>
     
       <item>
-        <title>Wikipedia&#39;s Definition of a Software Bug Is Wrong</title>
+        <title>Wikipedia's Definition of a Software Bug Is Wrong</title>
         
           <description>&lt;p&gt;Here is what &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_bug&quot;&gt;Wikipedia says&lt;/a&gt;
 at the time of this writing:&lt;/p&gt;
@@ -442,7 +442,7 @@ another source of data, in the form of an iterator. I hope this example will hel
       <item>
         <title>Software Quality Award, 2015</title>
         
-          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/andreea/quality-award.svg&#39; style=&#39;width:300px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/figure&gt;
+          <description>&lt;figure class='badge'&gt;&lt;img src='https://www.yegor256.com/images/andreea/quality-award.svg' style='width:300px;max-width:100%;' alt='badge'/&gt;&lt;/figure&gt;
 
 &lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
@@ -460,7 +460,7 @@ company through which I put my admiration of discipline and clean design into pr
       <item>
         <title>JAXB Is Doing It Wrong; Try Xembly</title>
         
-          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xembly.org&#39;&gt;&lt;img src=&#39;http://img.xembly.org/logo-256x256.png&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xembly.org'&gt;&lt;img src='http://img.xembly.org/logo-256x256.png' style='width:64px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding&quot;&gt;JAXB&lt;/a&gt;
 is a 10-year-old Java technology that allows us to
@@ -592,9 +592,9 @@ why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let&amp;#39;s see wha
       </item>
     
       <item>
-        <title>Don&#39;t Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
+        <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
         
-          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://http.jcabi.com&#39;&gt;&lt;img src=&#39;http://img.jcabi.com/logo-square.svg&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Maven is a build automation tool mostly for Java projects. It&amp;#39;s a great
 tool, but it has one important drawback that has motivated the creation
@@ -625,7 +625,7 @@ what code duplication means. It&amp;#39;s a disaster. However, there is a soluti
       <item>
         <title>XSL Transformation in Java: An Easy Way</title>
         
-          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://http.jcabi.com&#39;&gt;&lt;img src=&#39;http://img.jcabi.com/logo-square.svg&#39; style=&#39;width:64px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
 (XSLT) is a powerful mechanism for converting one
@@ -833,7 +833,7 @@ I&amp;#39;ll try to rely only on logic instead.&lt;/p&gt;
       <item>
         <title>Stop Chatting, Start Coding</title>
         
-          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xdsd.org&#39;&gt;&lt;img src=&#39;http://www.xdsd.org/images/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xdsd.org'&gt;&lt;img src='http://www.xdsd.org/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;The first principle of eXtremely Distributed Software Development
 (&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;) states that
@@ -858,7 +858,7 @@ Only then, is his result appreciated and paid for.&lt;/p&gt;
 I play the role of a technical and management leader in all projects
 we work with.&lt;/p&gt;
 
-&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.zerocracy.com&#39;&gt;&lt;img src=&#39;http://www.0crat.com/svg/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class='badge'&gt;&lt;a href='http://www.zerocracy.com'&gt;&lt;img src='http://www.0crat.com/svg/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;I wrote this article for those who&amp;#39;re interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
@@ -926,7 +926,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest&quot;&gt;
-    &lt;img src=&quot;https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master&quot; class=&quot;x-build&quot; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://travis-ci.com/plans&quot;&gt;$69/mo&lt;/a&gt;&lt;/td&gt;
@@ -937,7 +937,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://travis-ci.org/yegor256/rultor&quot;&gt;
-    &lt;img src=&quot;https://travis-ci.org/yegor256/rultor.svg?branch=master&quot; class=&quot;x-build&quot; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://travis-ci.org/yegor256/rultor.svg?branch=master&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;AppVeyor&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;http://www.appveyor.com/pricing&quot;&gt;$39/mo&lt;/a&gt;&lt;/td&gt;
@@ -948,7 +948,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;?&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;---&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://ci.appveyor.com/project/yegor256/rultor/branch/master&quot;&gt;
-    &lt;img src=&quot;https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true&quot; class=&quot;x-build&quot; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;Wercker&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;$350/mo&lt;/td&gt;
@@ -959,7 +959,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://app.wercker.com/project/bykey/0e6506c69e078b7692e50b240c034524&quot;&gt;
-    &lt;img src=&quot;https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status&quot; class=&quot;x-build&quot; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td colspan=&quot;9&quot; class=&quot;x-hr&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;SemaphoreApp&lt;/a&gt;&lt;/td&gt;
@@ -1091,7 +1091,7 @@ No. I&amp;#39;m saying that you should &lt;em&gt;never&lt;/em&gt; have them near
       <item>
         <title>Deployment Script vs. Rultor</title>
         
-          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.rultor.com&#39;&gt;&lt;img src=&#39;http://doc.rultor.com/images/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.rultor.com'&gt;&lt;img src='http://doc.rultor.com/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;When I explain how &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; automates deployment/release processes,
 very often I hear something like:&lt;/p&gt;
@@ -1172,7 +1172,7 @@ a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
 how it all happened, in &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects/issues/80&quot;&gt;GitHub issue #80&lt;/a&gt;:&lt;/p&gt;
 
-&lt;figure class=&#39;unprintable&#39;&gt;&lt;img src=&#39;https://www.yegor256.com/images/2014/08/github-ticket-80.jpg&#39; itemprop=&#39;image&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;The figure&#39;/&gt;&lt;/figure&gt;
+&lt;figure class='unprintable'&gt;&lt;img src='https://www.yegor256.com/images/2014/08/github-ticket-80.jpg' itemprop='image' style='width:600px;max-width:100%;' alt='The figure'/&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you see, I gave a command to &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;,
 and it released a new version to Maven central. I didn&amp;#39;t do anything else.&lt;/p&gt;
@@ -1290,7 +1290,7 @@ list them all here.&lt;/p&gt;
       <item>
         <title>How Much Do You Pay Per&amp;nbsp;Line&amp;nbsp;of&amp;nbsp;Code?</title>
         
-          <description>&lt;figure class=&#39;badge&#39;&gt;&lt;a href=&#39;http://www.xdsd.org&#39;&gt;&lt;img src=&#39;http://www.xdsd.org/images/logo.svg&#39; style=&#39;width:100px;max-width:100%;&#39; alt=&#39;badge&#39;/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xdsd.org'&gt;&lt;img src='http://www.xdsd.org/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Yes, I know, &amp;quot;line of code&amp;quot; (LoC)
 is a &lt;a href=&quot;http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects&quot;&gt;very wrong metric&lt;/a&gt;.

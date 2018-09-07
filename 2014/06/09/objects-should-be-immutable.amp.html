@@ -141,7 +141,7 @@ in more details in their very famous book
 <p>Here is an example of temporal coupling (the code makes
 two consecutive HTTP POST requests, where the second one contains HTTP body):</p>
 
-<pre>Request request = new Request("http://example.com");
+<pre>Request request = new Request("http://localhost");
 request.method("POST");
 String first = request.fetch();
 request.body("text=hello");
@@ -153,7 +153,7 @@ If we decide to remove the first request from the script, we will
 remove the second and the third line, and won't get any errors
 from the compiler:</p>
 
-<pre>Request request = new Request("http://example.com");
+<pre>Request request = new Request("http://localhost");
 // request.method("POST");
 // String first = request.fetch();
 request.body("text=hello");
@@ -209,7 +209,7 @@ because it doesn't have
 <p>Let's try to make two requests---the first
 with GET method and the second with POST:</p>
 
-<pre>Request request = new Request("http://example.com");
+<pre>Request request = new Request("http://localhost");
 request.method("GET");
 String first = this.post(request);
 String second = request.fetch();</pre>
@@ -233,7 +233,7 @@ to work with an immutable <code>Request</code>:</p>
 Nobody can modify our <code>request</code> object, no matter where
 it is used and how deep through the call stack it is passed by method calls:</p>
 
-<pre>Request request = new Request("http://example.com").method("GET");
+<pre>Request request = new Request("http://localhost").method("GET");
 String first = this.post(request);
 String second = request.fetch();</pre>
 
