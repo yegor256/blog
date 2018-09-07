@@ -89,8 +89,8 @@ Now, let's see the arguments against `NULL`.
 
 Besides Tony Hoare's presentation and David West's book
 mentioned above, I read these publications before writing this post:
-[Clean Code](http://www.amazon.com/dp/0132350882/) by Robert Martin,
-[Code Complete](http://www.amazon.com/dp/0735619670/) by Steve McConnell,
+[Clean Code](http://amzn.to/2m7LmaA) by Robert Martin,
+[Code Complete](http://amzn.to/2cs4cXW) by Steve McConnell,
 [Say "No" to "Null"](http://elegantcode.com/2010/05/01/say-no-to-null/) by John Sonmez,
 [Is returning null bad design?](http://stackoverflow.com/questions/1274792/is-returning-null-bad-design) discussion at StackOverflow.
 

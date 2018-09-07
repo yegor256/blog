@@ -93,7 +93,7 @@ module Jekyll
               #{post['date'].strftime('%-d %B %Y')}
             </time>
           </li>
-          <li class='tags'>#{tags(post)}</li>
+          <li class='tags'>#{page_tags(post)}</li>
           <li class='unprintable'>
             <a href='http://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
           </li>
@@ -101,7 +101,7 @@ module Jekyll
       </div>".gsub(/\n/, '')
     end
 
-    def tags(obj)
+    def page_tags(obj)
       return '' unless obj['tags'].kind_of?(Array)
       tags = obj['tags'].dup.sort
       tags.map! { |t| t.first } if tags.first.is_a?(Array)
