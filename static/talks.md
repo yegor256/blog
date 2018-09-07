@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://obs.com.ua/images/obs2.svg" class="future-talk" alt="Odessa Blockchain Summit 2018"/><br/>
-Zold: Experimental Cryptocurrency Without Blockchain<br/>
-[Odessa Blockchain Summit](https://obs.com.ua/)<br/>
-Odessa, Ukraine<br/>
-6 September.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/2018/devopsconf.png" class="future-talk" alt="DevOpsConf 2018"/><br/>
 Главное не качество, а количество!<br/>
 [AppsConf](https://devopsconf.io/moscow/2018/abstracts/3723)<br/>
@@ -149,6 +142,14 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://obs.com.ua/images/obs2.svg" class="past-talk" alt="Odessa Blockchain Summit 2018"/><br/>
+Zold: Experimental Cryptocurrency Without Blockchain;
+[Odessa Blockchain Summit](https://obs.com.ua/);
+Odessa, Ukraine;
+6 September;
+[slides](https://www.slideshare.net/YegorBugayenko/zold-a-cryptocurrency-without-blockchain).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/MCaKPYBMXyI/mqdefault.jpg" class="past-talk" alt="CryptoBBQ 2018"/>
