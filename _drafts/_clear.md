@@ -35,7 +35,7 @@ The kitchen is clean when there is no dirt in the oven. But if its electric pane
 speaks French, I can't use the kitchen. Even if it's perfectly clean.
 It's not _clear_ how to use it---that's why it's useless.
 
-The metaphor applies to the source code too. Making it clean is the first
+The metaphor applies to the source code. Making it clean is the first
 and very important step, which will remove all those coding anti-patterns
 so many books speak about, including my favorite
 [_Code Complete_](http://amzn.to/2cs4cXW) by Steve McConnell,
