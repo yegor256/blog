@@ -381,6 +381,7 @@ are
 are---regular
 are---slipped
 are---that
+are---that's
 area
 areas
 aren't
@@ -1170,8 +1171,10 @@ clause
 clauses
 clean
 clean---merges
+cleaned
 cleaner
 cleaning
+cleanliness
 cleans
 clear
 clear---and
@@ -1217,6 +1220,7 @@ clumsy
 clusterer
 CNAME
 co
+co-developers
 co-found
 co-founder
 co-founder---don't
@@ -2055,6 +2059,7 @@ directives
 directly
 directories
 directory
+dirt
 dirty
 disabilities
 disable
@@ -2110,6 +2115,7 @@ discussions
 disease
 disgusting
 dish
+dishes
 disillusionment
 disk
 dislike
@@ -2410,6 +2416,7 @@ encountered
 encourage
 encouraged
 encourages
+encouraging
 encrypt
 encrypted
 end
@@ -3522,6 +3529,7 @@ illustrative
 image
 images
 imaginary
+imaginative
 imagine
 imitate
 immature
@@ -3578,6 +3586,7 @@ in-house
 in-HTTP
 in-memory
 in-method-body
+in-project
 inability
 inadequacy---'people
 inapplicable
@@ -3865,6 +3874,7 @@ it---it's
 it---just
 it---not
 it---notify
+it---that's
 it---the
 it---this
 it---why
@@ -4568,6 +4578,7 @@ messiness
 messy
 met
 metadata
+metaphor
 metaphors
 method
 methodologies
@@ -4939,6 +4950,7 @@ non-comment
 non-compete
 non-completion
 non-compromising
+non-descriptive
 non-disclosure
 non-disputable
 non-empty
@@ -5214,6 +5226,7 @@ outsourcing
 outstaffers
 outstaffing
 outstanding
+oven
 over
 over-simplifying
 overact
@@ -5491,6 +5504,7 @@ piracy
 pirate
 pit
 pitch
+pitfall
 pitfalls
 pivetta
 pixelmator
@@ -7005,6 +7019,7 @@ speaker
 speaker's
 speakers
 speaking
+speaks
 spec
 special
 specialist
@@ -7317,6 +7332,7 @@ supporting
 supportive
 supports
 suppose
+suppose---there
 supposed
 supreme
 sur
@@ -7661,6 +7677,7 @@ tough
 tourism
 toward
 towards
+towels
 tower
 toxic
 trac
@@ -7830,6 +7847,7 @@ unchecked
 uncle
 uncle's
 unclear
+unclear---are
 uncomfortable
 uncompromising
 unconditional
