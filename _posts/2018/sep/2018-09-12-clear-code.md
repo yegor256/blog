@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Code Must Be Clean. And Clear."
-date: 2018-01-29
+date: 2018-09-12
 place: Odessa, Ukraine
 tags: maintainability
 description: |
@@ -14,9 +14,9 @@ keywords:
   - maintainability
   - code maintainability
   - how to keep maintainability of code
-image: /images/2018/09/
+image: /images/2018/09/rum-diary.jpg
 jb_picture:
-  caption:
+  caption: The Rum Diary (2011) by Bruce Robinson
 ---
 
 There is a famous book by Robert Martin called [_Clean Code_](http://amzn.to/2m7LmaA).
