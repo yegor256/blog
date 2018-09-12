@@ -127,6 +127,13 @@ St.Petersburg, Russia<br/>
 19-20 October.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://static.tildacdn.com/tild3366-3633-4437-b961-373136313633/_L900_2.png" class="future-talk" alt="https://cryptoevent.io/cryptoevent_riw 2018"/><br/>
+Zold...<br/>
+[CryptoEvent RIW](https://cryptoevent.io/cryptoevent_riw)<br/>
+Moscow, Russia<br/>
+21-23 November.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
 Micro-Devs and Micro-Ops<br/>
 [DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/welcome/)<br/>
