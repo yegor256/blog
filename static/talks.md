@@ -120,6 +120,13 @@ St.Petersburg, Russia<br/>
 19-20 October.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
+Micro-Devs and Micro-Ops<br/>
+[DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/welcome/)<br/>
+Oslo, Norway<br/>
+29-30 November.
+
+<div class="talk-event">&nbsp;</div>
 <img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
 Can a Freelancer Cost $500 an Hour?<br/>
 [CloudEXPO](http://java.sys-con.com/node/4266925)<br/>
