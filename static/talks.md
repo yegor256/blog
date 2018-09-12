@@ -101,7 +101,7 @@ informed about everything I do publicly.
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2018/devopsconf.png" class="future-talk" alt="DevOpsConf 2018"/><br/>
 Главное не качество, а количество!<br/>
-[AppsConf](https://devopsconf.io/moscow/2018/abstracts/3723)<br/>
+[DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723)<br/>
 Moscow, Russia<br/>
 1-2 October.
 
@@ -111,6 +111,13 @@ Moscow, Russia<br/>
 [AppsConf](http://appsconf.ru/2018)<br/>
 Moscow, Russia<br/>
 8-9 October.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://2018.geecon.cz/assets/images/logo.png" class="future-talk" alt="GeeCON Prague 2018"/><br/>
+Expertise vs Experts<br/>
+[GeeCON Prague](https://2018.geecon.cz/speakers/#bio)<br/>
+Prague, Czech Republic<br/>
+18-19 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://jokerconf.com/assets/images/logo_black.svg" class="future-talk" alt="Joker Conf 2018"/><br/>
