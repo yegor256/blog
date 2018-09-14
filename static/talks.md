@@ -110,7 +110,7 @@ Boston, USA<br/>
 Главное не качество, а количество!<br/>
 [DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723)<br/>
 Moscow, Russia<br/>
-1-2 October.
+2 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2018/appsconf.png" class="future-talk" alt="AppsConf 2018"/><br/>
