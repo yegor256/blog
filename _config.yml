@@ -8,7 +8,7 @@ description: "Yegor Bugayenko"
 copyright: "(c) Yegor Bugayenko, 2014-2018"
 encoding: utf-8
 timezone: America/San_Francisco
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 redcarpet:
   extensions:
