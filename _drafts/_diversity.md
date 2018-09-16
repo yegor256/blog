@@ -22,7 +22,7 @@ the eleventh World Chess Champion, was one of the best chess players
 of the last century. Did you know that,
 among [anti-semitic statements](https://en.wikiquote.org/wiki/Bobby_Fischer),
 [he said](https://www.theguardian.com/books/2007/apr/22/sportandleisure.features)
-that women chess players "aren't creative and are all fish?"
+that women chess players "aren’t creative and are all fish?"
 Did you know that he publicly described the
 [9/11 events](https://en.wikipedia.org/wiki/September_11_attacks) as "wonderful news"?
 

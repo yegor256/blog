@@ -16,7 +16,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-module Jekyll
+module Yegor
   module Filters
     def movies_count(posts)
       with_movies(posts).size
@@ -38,3 +38,5 @@ module Jekyll
       end
   end
 end
+
+Liquid::Template.register_filter(Yegor::Filters)

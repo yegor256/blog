@@ -23,7 +23,7 @@ task default: [
   :spell,
   :regex,
   :excerpts,
-  # :snippets,
+  :snippets,
   :orphans,
   # :ping,
   # :jslint,
@@ -172,10 +172,10 @@ task spell: [:build] do
       .gsub(/[\n\r\t ]+/, ' ')
       .gsub(/&[a-z]+;/, ' ')
       .gsub(/&#[0-9]+;/, ' ')
-      .gsub(/n't/, ' not')
-      .gsub(/'ll/, ' will')
-      .gsub(/'ve/, ' have')
-      .gsub(/'s/, ' ')
+      .gsub(/n[’']t/, ' not')
+      .gsub(/[’']ll/, ' will')
+      .gsub(/[’']ve/, ' have')
+      .gsub(/[’']s/, ' ')
       .gsub(/[,:;<>?!-#$%^&@]+/, ' ')
     tmp << text
     tmp.flush
@@ -188,6 +188,8 @@ task spell: [:build] do
     else
       puts "Typos in #{f}:"
       puts stdout
+      puts text
+      exit
     end
     total + stdout.split("\n").size
   end
