@@ -126,6 +126,8 @@ them, and all your builders only return objects and your manipulators
 only modify the world, the entire design will become easier to
 understand. Methods will be smaller and their names shorter.
 
+{% youtube oXj9UWm1134 %}
+
 Of course, very often you will have a hard time finding those names. From time to time
 you will want to return something from a manipulator or make your builder
 make some changes, say to the cache. Try to resist this temptation and stay
