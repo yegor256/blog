@@ -45,7 +45,7 @@ a nice SVG badge, a landing page, and via JSON/XML. More about it here:
 <br/>
 Founded 10-Mar-2017.
 
-{% badge //www.jare.io/images/logo.svg 70 http://www.jare.io %}
+{% badge /image/pets/jare.svg 70 http://www.jare.io %}
 
 [Jare.io](http://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
@@ -66,7 +66,7 @@ More about it here:
 <br/>
 Founded 8-Dec-2016.
 
-{% badge //img.s3auth.com/logo.png 140 http://www.s3auth.com %}
+{% badge /images/pets/s3auth.png 140 http://www.s3auth.com %}
 
 [S3Auth.com](http://www.s3auth.com) is a lightweight Basic authentication
 gateway for Amazon S3 buckets. Unfortunately AWS doesn't provide such
@@ -76,7 +76,7 @@ More about it here: [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-
 <br/>
 Founded 22-Aug-2012.
 
-{% badge //img.stateful.co/pomegranate.svg 70 http://www.stateful.co %}
+{% badge /images/pets/stateful.svg 70 http://www.stateful.co %}
 
 [Stateful.co](http://www.stateful.co) is a hosted set of micro-services
 that help achieve statefulness in a multi-server/node environments. In other
@@ -147,7 +147,7 @@ More about it in this article:
 <br/>
 Founded 7-Apr-2015.
 
-{% badge //img.jcabi.com/logo-square.svg 70 http://www.jcabi.com %}
+{% badge /images/pets/jcabi.svg 70 http://www.jcabi.com %}
 
 [JCabi](http://www.jcabi.com) is a collection of over 20 small Java libraries,
 which were designed with object-oriented paradigm in mind, to solve some
@@ -174,6 +174,14 @@ Founded 31-Jul-2013.
 based on the proof-of-work principle, but without the Blockchain.
 <br/>
 Founded 29-Jan-2018.
+
+{% badge //www.mailanes.com/logo.svg 70 http://www.mailanes.com %}
+
+[Mailanes](https://www.mailanes.com) is a newsletter management email delivery
+web system that does what MailChimp and similar products can do, but in
+a much simpler and cheaper (it's free) way.
+<br/>
+Founded 27-Aug-2018.
 
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
