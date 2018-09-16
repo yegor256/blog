@@ -141,6 +141,13 @@ New York, USA<br/>
 11-13 November.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://www.devopspro.ru/wp-content/uploads/2018/07/logo_devops_moscow-min.png" class="future-talk" alt="DevOpsPro 2018"/><br/>
+Expertise vs Experts<br/>
+[DevOpsPro](https://www.devopspro.ru/speakers/)<br/>
+Moscow, Russia<br/>
+13-15 November.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3366-3633-4437-b961-373136313633/_L900_2.png" class="future-talk" alt="https://cryptoevent.io/cryptoevent_riw 2018"/><br/>
 Zold...<br/>
 [CryptoEvent RIW](https://cryptoevent.io/cryptoevent_riw)<br/>
