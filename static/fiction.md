@@ -20,17 +20,11 @@ nospell: true
 
 Here they are, in chronological order:
 
-孫子, _兵法_, 5th century BC, [Buy](http://amzn.to/2y8hu3O).
-
-Niccolò Machiavelli, _Il Principe_, 1513. [Buy](http://amzn.to/2xeLKtt).
-
 Donatien Alphonse François de Sade, _Histoire de Juliette_, 1801. [Buy](http://amzn.to/2ylYb6Z).
 
 Johann Wolfgang von Goethe, _Faust_, 1832. [Buy](http://amzn.to/2xj7uGb).
 
 Alexandre Dumas, _Le Comte de Monte-Cristo_, 1845. [Buy](http://amzn.to/2fxyBUQ).
-
-Friedrich Nietzsche, _Der Antichrist_, 1888. [Buy](http://amzn.to/2xeFnX2).
 
 Ethel Lilian Voynich, _The Gadfly_, 1897. [Buy](http://amzn.to/2helUy2).
 
@@ -63,8 +57,6 @@ Ernest Miller Hemingway, _The Old Man and the Sea_, 1952. [Buy](http://amzn.to/2
 Anthony Burgess, _A Clockwork Orange_, 1962. [Buy](http://amzn.to/2xOPVPG).
 
 Ken Kesey, _One Flew Over the Cuckoo's Nest_, 1962. [Buy](http://amzn.to/2xOPy7K).
-
-Eric Berne, _Games People Play: The Psychology of Human Relationships_, 1964. [Buy](http://amzn.to/2fixqLX).
 
 Philip Roth, _Portnoy’s Complaint_, 1969. [Buy](http://amzn.to/2xfsOeg).
 
@@ -102,8 +94,6 @@ Frédéric Beigbeder, _99 francs_, 2000.
 
 Владимир Сорокин, _Лёд_, 2002.
 
-Анатолий Протопопов, _Трактат о любви_, 2003.
-
 Виктор Пелевин, _Числа_, 2003.
 
 Михаил Елизаров, _Библиотекарь_, 2007.
@@ -112,3 +102,5 @@ Frédéric Beigbeder, _99 francs_, 2000.
 
 If you know something that I missed and it's worth to be in the list,
 please [send it](mailto:fiction@yegor256.com) my way, I love to read.
+
+Non-fiction is [here](/non-fiction.html).
