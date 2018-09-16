@@ -1,9 +1,26 @@
+# Copyright (c) 2014-2017 Yegor Bugayenko
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the 'Software'), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so. The Software doesn't include files with .md extension.
+# That files you are not allowed to copy, distribute, modify, publish, or sell.
+#
+# THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 require 'nuggets/range/quantile'
 require 'erb'
 
-module Jekyll
-
-  class Tagger < Generator
+module Yegor
+  class Tagger < Jekyll::Generator
     safe true
     attr_accessor :site
     @types = [:page, :feed]
@@ -31,7 +48,7 @@ module Jekyll
     end
   end
 
-  class TagPage < Page
+  class TagPage < Jekyll::Page
 
     def initialize(site, base, dir, name, data = {})
       self.content = data.delete('content') || ''
@@ -55,7 +72,6 @@ module Jekyll
   end
 
   module Filters
-
     def tag_cloud(tags)
       tags.keys.sort.map{ |t| tag_link(t) }.join(' ')
     end
@@ -101,14 +117,16 @@ module Jekyll
       </div>".gsub(/\n/, '')
     end
 
-    def page_tags(obj)
-      return '' unless obj['tags'].kind_of?(Array)
-      tags = obj['tags'].dup.sort
+    def page_tags(page)
+      return '' unless page['tags'].kind_of?(Array)
+      tags = page['tags'].dup.sort
       tags.map! { |t| t.first } if tags.first.is_a?(Array)
       tags.map { |t| tag_link(t) if t.is_a?(String) }
         .compact
         .join(' ')
     end
   end
-
 end
+
+Liquid::Template.register_filter(Yegor::Filters)
+
