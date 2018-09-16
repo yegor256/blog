@@ -45,7 +45,7 @@ a nice SVG badge, a landing page, and via JSON/XML. More about it here:
 <br/>
 Founded 10-Mar-2017.
 
-{% badge /image/pets/jare.svg 70 http://www.jare.io %}
+{% badge /images/pets/jare.svg 70 http://www.jare.io %}
 
 [Jare.io](http://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
