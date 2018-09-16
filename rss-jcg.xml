@@ -10,10 +10,11 @@
         <title>Don't Use Java Assertions</title>
         
           <description>&lt;p&gt;There are basically two ways to validate a situation in Java and complain
-when something unexpected happens. It&amp;#39;s either an exception
+when something unexpected happens. It’s either an exception
 or an assertion. Technically, they are almost the same, but there are some
 small differences. I believe that exceptions are the right way to go
-in all situations and assertions should never be used. Here&amp;#39;s why.&lt;/p&gt;
+in all situations and assertions should never be used. Here’s why.&lt;/p&gt;
+
 </description>
         
         <pubDate>Fri, 17 Jun 2016 00:00:00 +0000</pubDate>
@@ -24,16 +25,17 @@ in all situations and assertions should never be used. Here&amp;#39;s why.&lt;/p
       <item>
         <title>Test Methods Must Share Nothing</title>
         
-          <description>&lt;p&gt;Constants... I wrote about them
+          <description>&lt;p&gt;Constants… I wrote about them
 &lt;a href=&quot;/2015/07/06/public-static-literals.html&quot;&gt;some time ago&lt;/a&gt;, mostly
 saying that they are a bad thing, if being public. They reduce duplication,
 but introduce coupling. A much better way to get rid of duplication is
-by creating new classes or methods---a traditional OOP method. This seems to make
+by creating new classes or methods—a traditional OOP method. This seems to make
 sense and in our projects I see less and less public constants. In
-some projects we don&amp;#39;t have them at all. But one thing still bothers me:
+some projects we don’t have them at all. But one thing still bothers me:
 unit tests. Most programmers seem to think that when static analysis says
 that there are too many similar literals in the same file, the best way
 to get rid of them is via a private static literal. This is just wrong.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 03 May 2016 00:00:00 +0000</pubDate>
@@ -44,15 +46,16 @@ to get rid of them is via a private static literal. This is just wrong.&lt;/p&gt
       <item>
         <title>Why InputStream Design Is Wrong</title>
         
-          <description>&lt;p&gt;It&amp;#39;s not just about &lt;code&gt;InputSteam&lt;/code&gt;, this class is a good
-example of a bad design. I&amp;#39;m talking about three overloaded
-methods &lt;code&gt;read()&lt;/code&gt;. I&amp;#39;ve mentioned this problem in Section 2.9
+          <description>&lt;p&gt;It’s not just about &lt;code&gt;InputSteam&lt;/code&gt;, this class is a good
+example of a bad design. I’m talking about three overloaded
+methods &lt;code&gt;read()&lt;/code&gt;. I’ve mentioned this problem in Section 2.9
 of &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt;. In a few words,
-I strongly believe that interfaces must be &amp;quot;functionality poor.&amp;quot;
+I strongly believe that interfaces must be “functionality poor.”
 &lt;code&gt;InputStream&lt;/code&gt; should have been an interface in the first place
 and it should have had a single method &lt;code&gt;read(byte[])&lt;/code&gt;. Then if
 its authors wanted to give us extra functionality, they should have
-created supplementary &amp;quot;smart&amp;quot; classes.&lt;/p&gt;
+created supplementary “smart” classes.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 26 Apr 2016 00:00:00 +0000</pubDate>
@@ -65,12 +68,13 @@ created supplementary &amp;quot;smart&amp;quot; classes.&lt;/p&gt;
         
           <description>&lt;p&gt;Using object properties as configuration parameters is a very common
 mistake we keep making mostly because our objects
-are mutable---we &lt;strong&gt;configure&lt;/strong&gt; them. We change their behavior by
+are mutable—we &lt;strong&gt;configure&lt;/strong&gt; them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
-into them. Do I have to say that it&amp;#39;s abusive and disrespectful
+into them. Do I have to say that it’s abusive and disrespectful
 from a &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;philosophical&lt;/a&gt;
-point of view? I can, but let&amp;#39;s take a look at
+point of view? I can, but let’s take a look at
 it from a practical perspective.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 19 Apr 2016 00:00:00 +0000</pubDate>
@@ -88,10 +92,11 @@ files! Just annotations, right there in the code where we need them. No more
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Marker_interface_pattern&quot;&gt;marker interfaces&lt;/a&gt;,
 just a &lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Retention.html&quot;&gt;runtime-retained&lt;/a&gt;
 &lt;a href=&quot;http://stackoverflow.com/questions/4296910/&quot;&gt;reflection-discoverable&lt;/a&gt; annotation!
-I was excited too. Moreover, I&amp;#39;ve made a few open source libraries which
+I was excited too. Moreover, I’ve made a few open source libraries which
 use annotations heavily. Take &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects&quot;&gt;jcabi-aspects&lt;/a&gt;,
-for example. However, I&amp;#39;m not excited any more. Moreover, I believe that
+for example. However, I’m not excited any more. Moreover, I believe that
 annotations are a big mistake in Java design.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
@@ -103,10 +108,11 @@ annotations are a big mistake in Java design.&lt;/p&gt;
         <title>Printers Instead of Getters</title>
         
           <description>&lt;p&gt;Getters and setters &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;are evil&lt;/a&gt;.
-No need to argue about this, it&amp;#39;s settled. You disagree?
-Let&amp;#39;s discuss that later. For now, let&amp;#39;s say, we want to get rid of getters.
+No need to argue about this, it’s settled. You disagree?
+Let’s discuss that later. For now, let’s say, we want to get rid of getters.
 The key question is how is it possible at all? We do need to get
 the data out of an object, right? Nope. Wrong.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
@@ -117,11 +123,12 @@ the data out of an object, right? Nope. Wrong.&lt;/p&gt;
       <item>
         <title>Try. Finally. If. Not. Null.</title>
         
-          <description>&lt;p&gt;There is a very typical mistake in pre-Java7 &amp;quot;try/finally&amp;quot; scenario,
+          <description>&lt;p&gt;There is a very typical mistake in pre-Java7 “try/finally” scenario,
 which I keep seeing in so many code reviews. I just have to write about it.
-Java7 introduced a solution, but it doesn&amp;#39;t cover all situations.
-Sometimes we need to deal with non-&lt;code&gt;AutoCloseable&lt;/code&gt; resources. Let&amp;#39;s
+Java7 introduced a solution, but it doesn’t cover all situations.
+Sometimes we need to deal with non-&lt;code&gt;AutoCloseable&lt;/code&gt; resources. Let’s
 open and close them correctly, please.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
@@ -133,13 +140,14 @@ open and close them correctly, please.&lt;/p&gt;
         <title>Are You Still Debugging?</title>
         
           <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Debugging&quot;&gt;Debugging&lt;/a&gt;
-is &amp;quot;a process of running a program/method interactively,
-breaking execution flow after each statement and showing...&amp;quot; In a nutshell, it is
-a very useful technique ... for a bad programmer. Or an old programmer
+is “a process of running a program/method interactively,
+breaking execution flow after each statement and showing…” In a nutshell, it is
+a very useful technique … for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
-never debug their code---they write unit tests. My point here
+never debug their code—they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
 If debugging is required, the &lt;strong&gt;design is bad&lt;/strong&gt;.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
@@ -150,13 +158,14 @@ If debugging is required, the &lt;strong&gt;design is bad&lt;/strong&gt;.&lt;/p&
       <item>
         <title>Design Patterns and Anti-Patterns, Love and Hate</title>
         
-          <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Software_design_pattern&quot;&gt;Design Patterns&lt;/a&gt; are ...
+          <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Software_design_pattern&quot;&gt;Design Patterns&lt;/a&gt; are …
 Come on, you know what they are. They are
 something we &lt;strong&gt;love&lt;/strong&gt; and &lt;strong&gt;hate&lt;/strong&gt;. We love them because they let us
 write code without thinking. We hate them when we see the code
 of someone who is used to writing code without thinking. Am I wrong?
 Now, let me try to go through all of them and show you how much
 I love or hate each one. Follow me, in alphabetic order.&lt;/p&gt;
+
 </description>
         
         <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
@@ -168,11 +177,12 @@ I love or hate each one. Follow me, in alphabetic order.&lt;/p&gt;
         <title>Defensive Programming via Validating Decorators</title>
         
           <description>&lt;p&gt;Do you check the input parameters of your methods for validity?
-I don&amp;#39;t. I used to, but not anymore.
+I don’t. I used to, but not anymore.
 I just let my methods crash with a null pointer and other exceptions
 when parameters are not valid.
 This may sound illogical, but only in the beginning.
-I&amp;#39;m suggesting you use &lt;strong&gt;validating decorators&lt;/strong&gt; instead.&lt;/p&gt;
+I’m suggesting you use &lt;strong&gt;validating decorators&lt;/strong&gt; instead.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 26 Jan 2016 00:00:00 +0000</pubDate>
@@ -183,13 +193,14 @@ I&amp;#39;m suggesting you use &lt;strong&gt;validating decorators&lt;/strong&gt
       <item>
         <title>Good Programmers Don't Work for Equity</title>
         
-          <description>&lt;p&gt;&amp;quot;You&amp;#39;re a good programmer. I&amp;#39;m a great entrepreneur. This is a
-breakthrough idea. Help me build it. I don&amp;#39;t have cash, but I will
-give you equity. Deal?&amp;quot; I hear this at least once a month, and
-I always say no. Not because I don&amp;#39;t like your idea. Indeed, it
-is really interesting. And not because I&amp;#39;m too busy. I would
-definitely find time for a good idea. It&amp;#39;s not that. I say no because
-I don&amp;#39;t think you&amp;#39;re a good entrepreneur.&lt;/p&gt;
+          <description>&lt;p&gt;“You’re a good programmer. I’m a great entrepreneur. This is a
+breakthrough idea. Help me build it. I don’t have cash, but I will
+give you equity. Deal?” I hear this at least once a month, and
+I always say no. Not because I don’t like your idea. Indeed, it
+is really interesting. And not because I’m too busy. I would
+definitely find time for a good idea. It’s not that. I say no because
+I don’t think you’re a good entrepreneur.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 12 Jan 2016 00:00:00 +0000</pubDate>
@@ -205,6 +216,7 @@ when they must stay in a particular order. This is inevitable
 in imperative programming, but we can reduce the negative effect
 of it just by turning those static procedures into functions. Take
 a look at this example.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
@@ -215,15 +227,16 @@ a look at this example.&lt;/p&gt;
       <item>
         <title>Throwing an Exception Without Proper Context Is a Bad Habit</title>
         
-          <description>&lt;p&gt;I keep repeating the same mistake again and again. So it&amp;#39;s time to
+          <description>&lt;p&gt;I keep repeating the same mistake again and again. So it’s time to
 stop and make a rule to prevent this from happening anymore. The mistake
-is not fatal, but it&amp;#39;s very annoying. When I look at production logs, I often see
-something like &lt;code&gt;&amp;quot;File doesn&amp;#39;t exist&amp;quot;&lt;/code&gt;, and I ask myself:
+is not fatal, but it’s very annoying. When I look at production logs, I often see
+something like &lt;code&gt;&quot;File doesn't exist&quot;&lt;/code&gt;, and I ask myself:
 What file? Where is it supposed to exist? What did the server try to do with it?
 What was going on a second before it crashed?
-There is no answer in the log, and it&amp;#39;s totally my fault.
-I either 1) don&amp;#39;t re-throw or 2) re-throw without providing context.
+There is no answer in the log, and it’s totally my fault.
+I either 1) don’t re-throw or 2) re-throw without providing context.
 Both are wrong.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
@@ -240,8 +253,9 @@ without changing its interface. I use
 &lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composable decorators&lt;/a&gt;
 quite often and always question myself as to how to design them right
 when the list of features must be configurable.
-I&amp;#39;m not sure I have the right answer, but here is
+I’m not sure I have the right answer, but here is
 some food for thought.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
@@ -256,11 +270,12 @@ some food for thought.&lt;/p&gt;
 some money in the budget. There is some time in the schedule. We start
 right now. Testers are trying to break the product, finding bugs,
 reporting bugs, communicating with programmers when necessary, doing
-their best to find what&amp;#39;s wrong. Eventually they stop and say
-&amp;quot;we&amp;#39;re done.&amp;quot; How do they know when to stop? When there is enough
-testing? It&amp;#39;s obvious---when there are &lt;em&gt;no more bugs left&lt;/em&gt; and the
+their best to find what’s wrong. Eventually they stop and say
+“we’re done.” How do they know when to stop? When there is enough
+testing? It’s obvious—when there are &lt;em&gt;no more bugs left&lt;/em&gt; and the
 product can be shipped! If you think like this, I have bad news for you.
-You&amp;#39;re &lt;em&gt;fundamentally wrong&lt;/em&gt;.&lt;/p&gt;
+You’re &lt;em&gt;fundamentally wrong&lt;/em&gt;.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 10 Sep 2015 00:00:00 +0000</pubDate>
@@ -271,14 +286,15 @@ You&amp;#39;re &lt;em&gt;fundamentally wrong&lt;/em&gt;.&lt;/p&gt;
       <item>
         <title>Need Robust Software? Make It Fragile</title>
         
-          <description>&lt;p&gt;In any software project, the goal is to create something stable. We don&amp;#39;t want it
-to break in front of a user. We also don&amp;#39;t want our website to show an
-&amp;quot;internal application error&amp;quot; instead of a web page. We want our software
-to work, not fail. That&amp;#39;s a perfectly valid and logical desire,
+          <description>&lt;p&gt;In any software project, the goal is to create something stable. We don’t want it
+to break in front of a user. We also don’t want our website to show an
+“internal application error” instead of a web page. We want our software
+to work, not fail. That’s a perfectly valid and logical desire,
 but in order to achieve that, we have to make our software as fragile
-as possible. This may sound counter-intuitive, but that&amp;#39;s the way it is.
+as possible. This may sound counter-intuitive, but that’s the way it is.
 The more &lt;strong&gt;fragile&lt;/strong&gt; your app is in development, the more &lt;strong&gt;robust&lt;/strong&gt; it is
 in production.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
@@ -291,11 +307,12 @@ in production.&lt;/p&gt;
         
           <description>&lt;p&gt;Do we need checked exceptions at all? The
 &lt;a href=&quot;http://stackoverflow.com/questions/6115896/java-checked-vs-unchecked-exception-explanation&quot;&gt;debate&lt;/a&gt;
-is over, isn&amp;#39;t it?
-Not for me. While most object-oriented languages don&amp;#39;t have them, and most programmers
+is over, isn’t it?
+Not for me. While most object-oriented languages don’t have them, and most programmers
 think checked exceptions are a Java mistake, I believe in the
-opposite---unchecked exceptions are the &lt;strong&gt;mistake&lt;/strong&gt;. Moreover, I believe
+opposite—unchecked exceptions are the &lt;strong&gt;mistake&lt;/strong&gt;. Moreover, I believe
 multiple exception types are a bad idea too.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 28 Jul 2015 00:00:00 +0000</pubDate>
@@ -306,16 +323,17 @@ multiple exception types are a bad idea too.&lt;/p&gt;
       <item>
         <title>Fools Don't Write Unit Tests</title>
         
-          <description>&lt;p&gt;&amp;quot;We don&amp;#39;t have time to write unit tests&amp;quot; or &amp;quot;We don&amp;#39;t have the
-budget for unit testing&amp;quot; are complaints I hear very often. Sometimes it
-may sound like, &amp;quot;We don&amp;#39;t use
-&lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;TDD&lt;/a&gt;, so that&amp;#39;s why there are no unit tests,&amp;quot; or even
-&amp;quot;TDD is too expensive for us now.&amp;quot; I&amp;#39;m sure you&amp;#39;ve heard this or even
-said it yourself. It doesn&amp;#39;t make any sense to me. I don&amp;#39;t get the
+          <description>&lt;p&gt;“We don’t have time to write unit tests” or “We don’t have the
+budget for unit testing” are complaints I hear very often. Sometimes it
+may sound like, “We don’t use
+&lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;TDD&lt;/a&gt;, so that’s why there are no unit tests,” or even
+“TDD is too expensive for us now.” I’m sure you’ve heard this or even
+said it yourself. It doesn’t make any sense to me. I don’t get the
 logic. In my understanding, unit testing is not
-a product; it&amp;#39;s a &lt;em&gt;tool&lt;/em&gt;. You use tests to develop a product
-faster and better. How can you say you don&amp;#39;t have time to use
+a product; it’s a &lt;em&gt;tool&lt;/em&gt;. You use tests to develop a product
+faster and better. How can you say you don’t have time to use
 the tool that makes your work faster? Let me show you how.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 16 Jul 2015 00:00:00 +0000</pubDate>
@@ -326,14 +344,15 @@ the tool that makes your work faster? Let me show you how.&lt;/p&gt;
       <item>
         <title>A Few Valid Reasons to Reject a Bug Fix</title>
         
-          <description>&lt;p&gt;A bug exists when something doesn&amp;#39;t work as expected. A &lt;em&gt;bug
+          <description>&lt;p&gt;A bug exists when something doesn’t work as expected. A &lt;em&gt;bug
 fix&lt;/em&gt; is basically a patch (a pull request) to the existing code base that
-is supposed to solve the problem and make sure that &amp;quot;something&amp;quot;
+is supposed to solve the problem and make sure that “something”
 works as expected. Very often, such a patch fixes one thing
-and breaks many others. I believe that sometimes it&amp;#39;s necessary to &lt;em&gt;reject&lt;/em&gt;
+and breaks many others. I believe that sometimes it’s necessary to &lt;em&gt;reject&lt;/em&gt;
 a bug fix and ask its author to re-do the patch in order to
 protect the project from bigger problems. There are a few
 valid reasons for such a rejection, according to my experience.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 22 Jun 2015 00:00:00 +0000</pubDate>
@@ -347,16 +366,17 @@ valid reasons for such a rejection, according to my experience.&lt;/p&gt;
           <description>&lt;p&gt;Good programmers create fewer
 &lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;bugs&lt;/a&gt;
 while bad programmers cause more. Sounds
-logical, doesn&amp;#39;t it? However, there is a lot of criticism of this way of
+logical, doesn’t it? However, there is a lot of criticism of this way of
 thinking. Take this one, for example: Bugs are inevitable, and
 instead of expecting fewer bugs from us, let us focus on the right design
-and let testers find and report bugs; then we&amp;#39;ll fix them. Or this one:
+and let testers find and report bugs; then we’ll fix them. Or this one:
 Being afraid to make a mistake makes me write slower and experiment less,
 which translates into lower-quality software. Read more about that
 &lt;a href=&quot;http://programmers.stackexchange.com/questions/41248&quot;&gt;here&lt;/a&gt; and
 &lt;a href=&quot;http://www.joelonsoftware.com/articles/fog0000000067.html&quot;&gt;here&lt;/a&gt;.
 But allow me to look at this from a different perspective and assert
 that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate>
@@ -371,14 +391,15 @@ that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p
 at the time of this writing:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;A software bug is an error, flaw, failure, or fault
+  &lt;p&gt;A software bug is an error, flaw, failure, or fault
 in a computer program or system that causes it
 to produce an incorrect or unexpected result or
 to behave in unintended ways.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I think that&amp;#39;s incomplete. The definition entirely excludes &amp;quot;non-behavioral&amp;quot;
+&lt;p&gt;I think that’s incomplete. The definition entirely excludes “non-behavioral”
 defects related to, for example, &lt;em&gt;maintainability&lt;/em&gt; and &lt;em&gt;reusability&lt;/em&gt;.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
@@ -392,12 +413,13 @@ defects related to, for example, &lt;em&gt;maintainability&lt;/em&gt; and &lt;em
           <description>&lt;p&gt;When I start to repeat myself in unit test methods by creating
 the same objects and preparing the data to run the test,
 I feel disappointed in my design. Long test methods with a lot of code
-duplication just don&amp;#39;t look right. To simplify and shorten them,
+duplication just don’t look right. To simplify and shorten them,
 there are basically two options, at least in Java: 1) private properties
 initialized through &lt;code&gt;@Before&lt;/code&gt; and &lt;code&gt;@BeforeClass&lt;/code&gt;, and 2)
 &lt;a href=&quot;/2017/02/07/private-method-is-new-class.html&quot;&gt;private static methods&lt;/a&gt;.
 They both look anti-OOP to me, and I think there is an
 alternative. Let me explain.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 25 May 2015 00:00:00 +0000</pubDate>
@@ -410,10 +432,11 @@ alternative. Let me explain.&lt;/p&gt;
         
           <description>&lt;p&gt;How much work should be done within a constructor? It seems reasonable
 to do some computations inside a constructor and then encapsulate
-results. That way, when the results are required by object methods, we&amp;#39;ll have them
-ready. Sounds like a good approach? No, it&amp;#39;s not. It&amp;#39;s a bad idea
+results. That way, when the results are required by object methods, we’ll have them
+ready. Sounds like a good approach? No, it’s not. It’s a bad idea
 for one reason: It prevents composition of objects and makes them
 un-extensible.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
@@ -428,10 +451,11 @@ un-extensible.&lt;/p&gt;
 is one of the fundamental Java
 &lt;a href=&quot;/2016/04/26/why-inputstream-design-is-wrong.html&quot;&gt;interfaces&lt;/a&gt;,
 introduced in Java 1.2. It is supposed
-to be very simple; however, in my experience, many Java developers don&amp;#39;t understand
+to be very simple; however, in my experience, many Java developers don’t understand
 how to implement a custom one, which should iterate a stream of data
 coming from some other source. In other words, it becomes an &lt;strong&gt;adapter&lt;/strong&gt; of
 another source of data, in the form of an iterator. I hope this example will help.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 30 Apr 2015 00:00:00 +0000</pubDate>
@@ -442,14 +466,15 @@ another source of data, in the form of an iterator. I hope this example will hel
       <item>
         <title>Software Quality Award, 2015</title>
         
-          <description>&lt;figure class='badge'&gt;&lt;img src='https://www.yegor256.com/images/andreea/quality-award.svg' style='width:300px;max-width:100%;' alt='badge'/&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
-&lt;p&gt;I&amp;#39;m a big fan of rules and discipline in software development; as an example, see
+&lt;p&gt;I’m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
-Also, I&amp;#39;m a big fan of object-oriented programming in its purest form; for example, see
+Also, I’m a big fan of object-oriented programming in its purest form; for example, see
 &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Seven Virtues of a Good Object&lt;/a&gt;.
-I&amp;#39;m also a co-founder and the CEO of &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, a software development
+I’m also a co-founder and the CEO of &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, a software development
 company through which I put my admiration of discipline and clean design into practice.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 16 Apr 2015 00:00:00 +0000</pubDate>
@@ -460,7 +485,7 @@ company through which I put my admiration of discipline and clean design into pr
       <item>
         <title>JAXB Is Doing It Wrong; Try Xembly</title>
         
-          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xembly.org'&gt;&lt;img src='http://img.xembly.org/logo-256x256.png' style='width:64px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.xembly.org&quot;&gt;&lt;img src=&quot;http://img.xembly.org/logo-256x256.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding&quot;&gt;JAXB&lt;/a&gt;
 is a 10-year-old Java technology that allows us to
@@ -471,6 +496,7 @@ and, in my opinion, violates key principles of object-oriented
 programming by turning objects into &lt;strong&gt;passive data structures&lt;/strong&gt;. I would
 recommend you use &lt;a href=&quot;http://www.xembly.org&quot;&gt;Xembly&lt;/a&gt;
 instead for marshalling Java objects into XML documents.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
@@ -493,9 +519,10 @@ framework. I put a few basic principles into its foundation: 1) No
 classes, and 4) no class casting, reflection,
 and &lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;&lt;code&gt;instanceof&lt;/code&gt;&lt;/a&gt;
 operators. These four basic principles should guarantee
-clean code and transparent architecture. That&amp;#39;s how the
+clean code and transparent architecture. That’s how the
 &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework was born.
-Let&amp;#39;s see what was created and how it works.&lt;/p&gt;
+Let’s see what was created and how it works.&lt;/p&gt;
+
 </description>
         
         <pubDate>Sun, 22 Mar 2015 00:00:00 +0000</pubDate>
@@ -507,15 +534,16 @@ Let&amp;#39;s see what was created and how it works.&lt;/p&gt;
         <title>Composable Decorators vs. Imperative Utility Methods</title>
         
           <description>&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
-is my favorite among all other patterns I&amp;#39;m aware of. It is a very simple
+is my favorite among all other patterns I’m aware of. It is a very simple
 and yet very powerful mechanism to make your code
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;highly cohesive&lt;/a&gt; and
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29&quot;&gt;loosely coupled&lt;/a&gt;.
 However, I believe decorators are not used often enough. They should
 be everywhere, but they are not. The biggest advantage we get from decorators
-is that they make our code &lt;em&gt;composable&lt;/em&gt;. That&amp;#39;s why the title of this
+is that they make our code &lt;em&gt;composable&lt;/em&gt;. That’s why the title of this
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
@@ -531,12 +559,13 @@ appointment with courteous questions about how I wanted my hair cut, what size o
 he should use, how long the sides should be, and how much should be removed
 from the front. He also offered me many types of shampoo and a cup of tea.
 All this reminded me of the work we do as programmers, and I
-decided to write a short post about it. I&amp;#39;ve already
+decided to write a short post about it. I’ve already
 &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;mentioned before&lt;/a&gt;
 that trying to make a customer happy is a false objective. This hairdresser
 was a perfect illustrative example of this very mistake. By the way, in the end,
-I wasn&amp;#39;t happy, and he got no tip. How could this happen if he was so
+I wasn’t happy, and he got no tip. How could this happen if he was so
 friendly and nice?&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
@@ -550,21 +579,22 @@ friendly and nice?&lt;/p&gt;
           <description>&lt;p&gt;I was recently &lt;a href=&quot;https://twitter.com/lukaseder/status/564866432790708224&quot;&gt;accused&lt;/a&gt; of being against
 &lt;a href=&quot;http://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;
 because &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;I call utility classes an anti-pattern&lt;/a&gt;.
-That&amp;#39;s absolutely wrong! Well, I do consider them a terrible anti-pattern,
+That’s absolutely wrong! Well, I do consider them a terrible anti-pattern,
 but they have nothing to do with functional programming. I believe there are
 two basic reasons why. First, functional programming is declarative, while
 utility class methods are imperative. Second,
 functional programming is based on lambda calculus, where
 a function can be assigned to a variable. Utility class methods
-are not functions in this sense. I&amp;#39;ll decode these statements in a minute.&lt;/p&gt;
+are not functions in this sense. I’ll decode these statements in a minute.&lt;/p&gt;
 
 &lt;p&gt;In Java, there are basically two valid alternatives to these ugly utility
 classes aggressively promoted by &lt;a href=&quot;https://code.google.com/p/guava-libraries/&quot;&gt;Guava&lt;/a&gt;,
 &lt;a href=&quot;http://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;, and others. The first one
 is the use of traditional classes, and the second one is
-&lt;a href=&quot;http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html&quot;&gt;Java&amp;nbsp;8 lambda&lt;/a&gt;.
-Now let&amp;#39;s see why utility classes are not even close to functional programming
+&lt;a href=&quot;http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html&quot;&gt;Java 8 lambda&lt;/a&gt;.
+Now let’s see why utility classes are not even close to functional programming
 and where this misconception is coming from.&lt;/p&gt;
+
 </description>
         
         <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
@@ -579,11 +609,12 @@ and where this misconception is coming from.&lt;/p&gt;
 users (a.k.a. customers, project sponsors, end users, or
 &lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;clients&lt;/a&gt;). Second,
 no matter what the methodology is, we write incrementally, releasing
-features and bug fixes one by one. Maybe I&amp;#39;m saying something absolutely obvious here,
-but it&amp;#39;s important to remember that each new version should first of all satisfy
+features and bug fixes one by one. Maybe I’m saying something absolutely obvious here,
+but it’s important to remember that each new version should first of all satisfy
 the needs of the user, not of us programmers. In other words, the way
-we decompose a big task into smaller pieces should be user-targeted, and that&amp;#39;s
-why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let&amp;#39;s see what I mean through a practical example.&lt;/p&gt;
+we decompose a big task into smaller pieces should be user-targeted, and that’s
+why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let’s see what I mean through a practical example.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 12 Feb 2015 00:00:00 +0000</pubDate>
@@ -594,27 +625,28 @@ why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let&amp;#39;s see wha
       <item>
         <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
         
-          <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;http://img.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;p&gt;Maven is a build automation tool mostly for Java projects. It&amp;#39;s a great
+&lt;p&gt;Maven is a build automation tool mostly for Java projects. It’s a great
 tool, but it has one important drawback that has motivated the creation
 of similar tools, like Gradle and SBT. That weakness is its verbosity of configuration.
 Maven gets all project build parameters from &lt;code&gt;pom.xml&lt;/code&gt;, an XML
-file that can get very long. I&amp;#39;ve seen POM files of 3,000-plus lines.
-Taking into account 1) recent DSL buzz and 2) fear of XML, it&amp;#39;s
-only logical that many people don&amp;#39;t like Maven because of its &lt;code&gt;pom.xml&lt;/code&gt; verbosity.&lt;/p&gt;
+file that can get very long. I’ve seen POM files of 3,000-plus lines.
+Taking into account 1) recent DSL buzz and 2) fear of XML, it’s
+only logical that many people don’t like Maven because of its &lt;code&gt;pom.xml&lt;/code&gt; verbosity.&lt;/p&gt;
 
-&lt;p&gt;But even if you&amp;#39;re an XML fan who enjoys its strictness and elegance
-(like myself), you won&amp;#39;t like the necessity to repeat yourself in &lt;code&gt;pom.xml&lt;/code&gt;
-for every project. If you&amp;#39;re working on multiple projects, code duplication
+&lt;p&gt;But even if you’re an XML fan who enjoys its strictness and elegance
+(like myself), you won’t like the necessity to repeat yourself in &lt;code&gt;pom.xml&lt;/code&gt;
+for every project. If you’re working on multiple projects, code duplication
 will be enormous. An average Java web app uses a few dozen standard Maven plugins
 and almost the same number of pretty common dependencies, like
 JUnit, Apache Commons, Log4J, Mockito, etc. All of them have their versions
 and configurations, which have to be specified if you want to keep
 the project stable and avoid Maven warnings. Thus, once a new version
 of a plugin is released, you have to go through all &lt;code&gt;pom.xml&lt;/code&gt; files in
-the projects you&amp;#39;re working on and update it there. You obviously understand
-what code duplication means. It&amp;#39;s a disaster. However, there is a solution.&lt;/p&gt;
+the projects you’re working on and update it there. You obviously understand
+what code duplication means. It’s a disaster. However, there is a solution.&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
@@ -625,19 +657,20 @@ what code duplication means. It&amp;#39;s a disaster. However, there is a soluti
       <item>
         <title>XSL Transformation in Java: An Easy Way</title>
         
-          <description>&lt;figure class='badge'&gt;&lt;a href='http://http.jcabi.com'&gt;&lt;img src='http://img.jcabi.com/logo-square.svg' style='width:64px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;http://img.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
-you have to write a few dozen lines of code---and maybe even more
+you have to write a few dozen lines of code—and maybe even more
 than that if proper exception handling and logging is needed.
 &lt;a href=&quot;/2014/04/24/java-xml-parsing-and-traversing.html&quot;&gt;jcabi-xml&lt;/a&gt; is
 a small open source library that makes life much easier by enabling
 XML parsing and XPath traversing with
-&lt;a href=&quot;/2014/04/24/java-xml-parsing-and-traversing.html&quot;&gt;a few simple methods&lt;/a&gt;. Let&amp;#39;s
+&lt;a href=&quot;/2014/04/24/java-xml-parsing-and-traversing.html&quot;&gt;a few simple methods&lt;/a&gt;. Let’s
 see how this library helps in XSL transformations.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
@@ -649,13 +682,14 @@ see how this library helps in XSL transformations.&lt;/p&gt;
         <title>Making Your Boss Happy Is a False Objective</title>
         
           <description>&lt;p&gt;We all have bosses. We also have customers who pay us for running
-their software projects. They are my bosses for the time of the contract. I&amp;#39;m also
+their software projects. They are my bosses for the time of the contract. I’m also
 acting as a boss for developers who are working for &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.
 It is obvious that a good employee/contractor is one who makes his
 boss/customer happy. But only a bad employee works toward
 this goal. Trying to make your boss happy is a false target that,
 if pursued, ruins the project. A professional employee works
 for the project, not for the boss.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
@@ -676,6 +710,7 @@ for the project, not for the boss.&lt;/p&gt;
 
 &lt;p&gt;I have been trying to find a proper metaphor to explain its incorrectness.
 Today I finally found it.&lt;/p&gt;
+
 </description>
         
         <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
@@ -686,15 +721,16 @@ Today I finally found it.&lt;/p&gt;
       <item>
         <title>How to Cut Corners and Stay Cool</title>
         
-          <description>&lt;p&gt;You have a task assigned to you, and you don&amp;#39;t like it. You are simply
-not in the mood. You don&amp;#39;t know how to fix that damn bug. You have no idea
-how that bloody module was designed, and you don&amp;#39;t know how it works. But
+          <description>&lt;p&gt;You have a task assigned to you, and you don’t like it. You are simply
+not in the mood. You don’t know how to fix that damn bug. You have no idea
+how that bloody module was designed, and you don’t know how it works. But
 you have to fix the issue, which was reported by someone who has no clue how
 this software works. You get frustrated and blame that
 &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;stupid project manager&lt;/a&gt; and
 programmers who were fired two years ago. You spend hours just to find out
 how the code works. Then even more hours trying to fix it. In the end,
 you miss the deadline and &lt;em&gt;everybody blames you&lt;/em&gt;. Been there, done that?&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
@@ -712,6 +748,7 @@ recommend avoiding them. I believe a variable name that is more complex than a n
 is a code smell. Why? Because we usually give a variable a compound name when its scope
 is so big and complex that a simple noun would sound ambiguous.
 And a big, complex scope is an obvious code smell.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 12 Jan 2015 00:00:00 +0000</pubDate>
@@ -740,8 +777,9 @@ rarely together with the source code.&lt;/p&gt;
 Giving a project sponsor full access to the development environment
 is &lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;not easy&lt;/a&gt;
 at all. Here is a summary
-of problems we&amp;#39;ve been having and our solutions. I hope they help you
+of problems we’ve been having and our solutions. I hope they help you
 honestly show your clients all project internals and still keep them on board.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
@@ -752,13 +790,14 @@ honestly show your clients all project internals and still keep them on board.&l
       <item>
         <title>You Do Need Independent Technical Reviews!</title>
         
-          <description>&lt;p&gt;Do you have a team of brilliant and enthusiastic programmers? Of course! You&amp;#39;ve carefully
+          <description>&lt;p&gt;Do you have a team of brilliant and enthusiastic programmers? Of course! You’ve carefully
 chosen them from a hundred candidates! Are they passionate about the product?
 Absolutely! They use cutting-edge technologies, never sleep, and hardly eat or drink
 anything except coffee! Do they believe in your business success? No doubts about it;
 they live and breathe all those features, releases, continuous delivery, user
 experience, etc. Are you sure they are developing the product &lt;em&gt;correctly&lt;/em&gt;?
-Well, yes, you&amp;#39;re pretty sure; why wouldn&amp;#39;t they? ...&lt;/p&gt;
+Well, yes, you’re pretty sure; why wouldn’t they? …&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 18 Dec 2014 00:00:00 +0000</pubDate>
@@ -773,16 +812,17 @@ Well, yes, you&amp;#39;re pretty sure; why wouldn&amp;#39;t they? ...&lt;/p&gt;
 &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;Getters/Setters. Evil. Period.&lt;/a&gt;
 &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;Objects Should Be Immutable&lt;/a&gt;, and
 &lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;Dependency Injection Containers are Code Polluters&lt;/a&gt;,
-I universally labeled all mutable objects with &amp;quot;setters&amp;quot; (object methods starting with &lt;code&gt;set&lt;/code&gt;) evil.
+I universally labeled all mutable objects with “setters” (object methods starting with &lt;code&gt;set&lt;/code&gt;) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
-this wasn&amp;#39;t convincing enough for many of you---I received a few requests
+this wasn’t convincing enough for many of you—I received a few requests
 asking to provide more specific and practical examples.&lt;/p&gt;
 
-&lt;p&gt;Thus, in order to illustrate my strongly negative attitude to &amp;quot;mutability via setters,&amp;quot; I took
+&lt;p&gt;Thus, in order to illustrate my strongly negative attitude to “mutability via setters,” I took
 an existing &lt;a href=&quot;http://commons.apache.org/proper/commons-email/&quot;&gt;commons-email&lt;/a&gt; Java library from Apache
-and re-designed it my way, without setters and with &amp;quot;object thinking&amp;quot; in mind.
-I released my library as part of the &lt;a href=&quot;http://www.jcabi.com&quot;&gt;jcabi&lt;/a&gt; family---&lt;a href=&quot;http://email.jcabi.com&quot;&gt;jcabi-email&lt;/a&gt;. Let&amp;#39;s see what benefits
-we get from a &amp;quot;pure&amp;quot; object-oriented and immutable approach, without getters.&lt;/p&gt;
+and re-designed it my way, without setters and with “object thinking” in mind.
+I released my library as part of the &lt;a href=&quot;http://www.jcabi.com&quot;&gt;jcabi&lt;/a&gt; family—&lt;a href=&quot;http://email.jcabi.com&quot;&gt;jcabi-email&lt;/a&gt;. Let’s see what benefits
+we get from a “pure” object-oriented and immutable approach, without getters.&lt;/p&gt;
+
 </description>
         
         <pubDate>Fri, 07 Nov 2014 00:00:00 +0000</pubDate>
@@ -798,8 +838,9 @@ Well, most &lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt
 do not define such a role explicitly and
 work in a &lt;em&gt;democratic&lt;/em&gt; mode. Every important technical decision
 is discussed with the entire team, and the most voted for solution wins.
-When such a team eventually decides to put a &amp;quot;software architect&amp;quot; badge
-on someone&amp;#39;s t-shirt, the most &lt;em&gt;reputable&lt;/em&gt; programmer gets it.&lt;/p&gt;
+When such a team eventually decides to put a “software architect” badge
+on someone’s t-shirt, the most &lt;em&gt;reputable&lt;/em&gt; programmer gets it.&lt;/p&gt;
+
 </description>
         
         <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
@@ -811,18 +852,19 @@ on someone&amp;#39;s t-shirt, the most &lt;em&gt;reputable&lt;/em&gt; programmer
         <title>Continuous Integration is Dead</title>
         
           <description>&lt;p&gt;A few days ago, my article
-&lt;a href=&quot;http://devops.com/blogs/continuous-integration-doesnt-work/&quot;&gt;Why Continuous Integration Doesn&amp;#39;t Work&lt;/a&gt;
+&lt;a href=&quot;http://devops.com/blogs/continuous-integration-doesnt-work/&quot;&gt;Why Continuous Integration Doesn’t Work&lt;/a&gt;
 was published at &lt;a href=&quot;http://www.devops.com&quot;&gt;DevOps.com&lt;/a&gt;. Almost the same
 day I received a few strongly negative critiques on Twitter.&lt;/p&gt;
 
 &lt;p&gt;Here is my response to the un-asked question:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Why the hell shouldn&amp;#39;t continuous integration work, being such a brilliant and popular idea?&lt;/p&gt;
+  &lt;p&gt;Why the hell shouldn’t continuous integration work, being such a brilliant and popular idea?&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Even though I have some experience in this area, I won&amp;#39;t use it as an argument.
-I&amp;#39;ll try to rely only on logic instead.&lt;/p&gt;
+&lt;p&gt;Even though I have some experience in this area, I won’t use it as an argument.
+I’ll try to rely only on logic instead.&lt;/p&gt;
+
 </description>
         
         <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
@@ -833,16 +875,17 @@ I&amp;#39;ll try to rely only on logic instead.&lt;/p&gt;
       <item>
         <title>Stop Chatting, Start Coding</title>
         
-          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xdsd.org'&gt;&lt;img src='http://www.xdsd.org/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.xdsd.org&quot;&gt;&lt;img src=&quot;http://www.xdsd.org/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;The first principle of eXtremely Distributed Software Development
 (&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;) states that
-&amp;quot;everyone gets paid for verified deliverables.&amp;quot; This literally
+“everyone gets paid for verified deliverables.” This literally
 means that, in order to get paid, every programmer
 has to write the code, commit it to the repository,
 pass a code review and make sure the code is
 &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;merged into the destination branch&lt;/a&gt;.
 Only then, is his result appreciated and paid for.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
@@ -853,14 +896,14 @@ Only then, is his result appreciated and paid for.&lt;/p&gt;
       <item>
         <title>Project Lifecycle in Zerocracy</title>
         
-          <description>&lt;p&gt;In addition to being a hands-on programmer, I&amp;#39;m also co-founder and CTO of
+          <description>&lt;p&gt;In addition to being a hands-on programmer, I’m also co-founder and CTO of
 &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, a custom software development company.
 I play the role of a technical and management leader in all projects
 we work with.&lt;/p&gt;
 
-&lt;figure class='badge'&gt;&lt;a href='http://www.zerocracy.com'&gt;&lt;img src='http://www.0crat.com/svg/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;&lt;img src=&quot;http://www.0crat.com/svg/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;p&gt;I wrote this article for those who&amp;#39;re interested in hiring me and/or
+&lt;p&gt;I wrote this article for those who’re interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
 the end of the project, when you choose to &lt;a href=&quot;https://www.0crat.com/join&quot;&gt;work with us&lt;/a&gt;.&lt;/p&gt;
 
@@ -869,6 +912,7 @@ software development &lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quo
 from what many other teams are using. I personally pay a lot of attention to
 &lt;a href=&quot;/2017/04/11/flexibility-equates-lower-quality.html&quot;&gt;quality&lt;/a&gt;
 of code and quality of the internal processes that connect our team.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
@@ -879,10 +923,10 @@ of code and quality of the internal processes that connect our team.&lt;/p&gt;
       <item>
         <title>Best Hosted Continuous Integration Services for a Private Repository</title>
         
-          <description>&lt;p&gt;Every project I&amp;#39;m working with starts with a setup of
+          <description>&lt;p&gt;Every project I’m working with starts with a setup of
 &lt;a href=&quot;/2016/08/01/continuous-integration-maturity.html&quot;&gt;continuous integration&lt;/a&gt;
-pipeline. I&amp;#39;m a big fan of cloud services,
-that&amp;#39;s why I was always using &lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;. A few of
+pipeline. I’m a big fan of cloud services,
+that’s why I was always using &lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;. A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.&lt;/p&gt;
 
@@ -895,13 +939,13 @@ the best and highly recommended):&lt;/p&gt;
 
 &lt;table&gt;
 &lt;colgroup&gt;
-&lt;col class=&quot;x-col1&quot;/&gt;
-&lt;col class=&quot;x-col2&quot;/&gt;
-&lt;col class=&quot;x-colX&quot;/&gt;
-&lt;col class=&quot;x-colX&quot;/&gt;
-&lt;col class=&quot;x-colX&quot;/&gt;
-&lt;col class=&quot;x-colX&quot;/&gt;
-&lt;col class=&quot;x-colX&quot;/&gt;
+&lt;col class=&quot;x-col1&quot; /&gt;
+&lt;col class=&quot;x-col2&quot; /&gt;
+&lt;col class=&quot;x-colX&quot; /&gt;
+&lt;col class=&quot;x-colX&quot; /&gt;
+&lt;col class=&quot;x-colX&quot; /&gt;
+&lt;col class=&quot;x-colX&quot; /&gt;
+&lt;col class=&quot;x-colX&quot; /&gt;
 &lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr class=&quot;x-head&quot;&gt;
@@ -926,7 +970,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest&quot;&gt;
-    &lt;img src=&quot;https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://travis-ci.com/plans&quot;&gt;$69/mo&lt;/a&gt;&lt;/td&gt;
@@ -937,7 +981,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://travis-ci.org/yegor256/rultor&quot;&gt;
-    &lt;img src=&quot;https://travis-ci.org/yegor256/rultor.svg?branch=master&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://travis-ci.org/yegor256/rultor.svg?branch=master&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;AppVeyor&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;http://www.appveyor.com/pricing&quot;&gt;$39/mo&lt;/a&gt;&lt;/td&gt;
@@ -948,7 +992,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;?&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;---&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://ci.appveyor.com/project/yegor256/rultor/branch/master&quot;&gt;
-    &lt;img src=&quot;https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;Wercker&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;$350/mo&lt;/td&gt;
@@ -959,7 +1003,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href=&quot;https://app.wercker.com/project/bykey/0e6506c69e078b7692e50b240c034524&quot;&gt;
-    &lt;img src=&quot;https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status&quot; class=&quot;x-build&quot; alt='badge'/&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;img src=&quot;https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td colspan=&quot;9&quot; class=&quot;x-hr&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;SemaphoreApp&lt;/a&gt;&lt;/td&gt;
@@ -1036,6 +1080,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
 </description>
         
         <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
@@ -1049,7 +1094,7 @@ the best and highly recommended):&lt;/p&gt;
           <description>&lt;p&gt;While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
 an unmaintainable mess. Thanks to them we often hear that
-&amp;quot;mocking is bad&amp;quot; and &amp;quot;mocking is evil.&amp;quot;&lt;/p&gt;
+“mocking is bad” and “mocking is evil.”&lt;/p&gt;
 
 &lt;p&gt;The root cause of this complexity is that our objects
 are too big. They have many methods and these methods
@@ -1060,6 +1105,7 @@ make sure that all of its methods return valid objects.&lt;/p&gt;
 &lt;p&gt;This leads to inevitable complexity, which turns unit tests
 to &lt;a href=&quot;https://news.ycombinator.com/item?id=7353767&quot;&gt;waste&lt;/a&gt;
 almost impossible to maintain.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 23 Sep 2014 00:00:00 +0000</pubDate>
@@ -1075,12 +1121,13 @@ in this &lt;a href=&quot;http://www.javaworld.com/article/2073723/core-java/why-
 famous article, about whether getters/setters is an
 &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;anti-pattern&lt;/a&gt;
 and should be avoided or if it is something we inevitably need in object-oriented
-programming. I&amp;#39;ll try to add my two cents to this discussion.&lt;/p&gt;
+programming. I’ll try to add my two cents to this discussion.&lt;/p&gt;
 
 &lt;p&gt;The gist of the following text is this: getters and setters is
-a terrible practice and those who use it can&amp;#39;t be excused.
-Again, to avoid any misunderstanding, I&amp;#39;m not saying that get/set should be avoided when possible.
-No. I&amp;#39;m saying that you should &lt;em&gt;never&lt;/em&gt; have them near your code.&lt;/p&gt;
+a terrible practice and those who use it can’t be excused.
+Again, to avoid any misunderstanding, I’m not saying that get/set should be avoided when possible.
+No. I’m saying that you should &lt;em&gt;never&lt;/em&gt; have them near your code.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 16 Sep 2014 00:00:00 +0000</pubDate>
@@ -1091,13 +1138,13 @@ No. I&amp;#39;m saying that you should &lt;em&gt;never&lt;/em&gt; have them near
       <item>
         <title>Deployment Script vs. Rultor</title>
         
-          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.rultor.com'&gt;&lt;img src='http://doc.rultor.com/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.rultor.com&quot;&gt;&lt;img src=&quot;http://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;When I explain how &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; automates deployment/release processes,
 very often I hear something like:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;But I already have a script that deploys everything automatically.&lt;/p&gt;
+  &lt;p&gt;But I already have a script that deploys everything automatically.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;This response is very common, so I decided to summarize my three main arguments for
@@ -1106,6 +1153,7 @@ automated Rultor deployment/release processes in one article: 1) isolated docker
 
 &lt;p&gt;Read about them and see what Rultor gives you on top of &lt;strong&gt;your existing&lt;/strong&gt;
 deployment script(s).&lt;/p&gt;
+
 </description>
         
         <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
@@ -1120,7 +1168,7 @@ deployment script(s).&lt;/p&gt;
 about a repository you should make a GET request to
 &lt;a href=&quot;https://api.github.com/repos/yegor256/rultor&quot;&gt;api.github.com/repos/yegor256/rultor&lt;/a&gt;.
 In response, you will get a JSON document with all the details of the
-&lt;code&gt;yegor256/rultor&lt;/code&gt; repository. Try it, the URL doesn&amp;#39;t require any authentication.&lt;/p&gt;
+&lt;code&gt;yegor256/rultor&lt;/code&gt; repository. Try it, the URL doesn’t require any authentication.&lt;/p&gt;
 
 &lt;p&gt;To open the same repository in a nice HTML+CSS page, you should use
 a different URL: &lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;github.com/yegor256/rultor&lt;/a&gt;.
@@ -1128,12 +1176,13 @@ The URL is different, the server-side is definitely different, but the
 nature of the data is exactly the same. The only thing that changes is
 a representation layer.&lt;/p&gt;
 
-&lt;p&gt;In the first case, we get JSON; in the second---HTML.&lt;/p&gt;
+&lt;p&gt;In the first case, we get JSON; in the second—HTML.&lt;/p&gt;
 
 &lt;p&gt;How about combining them? How about using the same URL and the same
 server-side processing mechanism for both of them? How about shifting the whole rendering task
 to the client-side (the browser) and letting the server work solely with
 the data?&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 09 Sep 2014 00:00:00 +0000</pubDate>
@@ -1157,6 +1206,7 @@ Java, in just a few lines, using &lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt; is
 a convenient wrapper of &lt;a href=&quot;http://www.jcraft.com/jsch/&quot;&gt;&lt;code&gt;JSch&lt;/code&gt;&lt;/a&gt;,
 a well-known pure Java implementation of SSH2.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 02 Sep 2014 00:00:00 +0000</pubDate>
@@ -1172,14 +1222,15 @@ a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
 how it all happened, in &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects/issues/80&quot;&gt;GitHub issue #80&lt;/a&gt;:&lt;/p&gt;
 
-&lt;figure class='unprintable'&gt;&lt;img src='https://www.yegor256.com/images/2014/08/github-ticket-80.jpg' itemprop='image' style='width:600px;max-width:100%;' alt='The figure'/&gt;&lt;/figure&gt;
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2014/08/github-ticket-80.jpg&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you see, I gave a command to &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;,
-and it released a new version to Maven central. I didn&amp;#39;t do anything else.&lt;/p&gt;
+and it released a new version to Maven central. I didn’t do anything else.&lt;/p&gt;
 
-&lt;p&gt;Now let&amp;#39;s see how you can do the same. How you can configure your project
+&lt;p&gt;Now let’s see how you can do the same. How you can configure your project
 so that the release of its new version to Maven Central
 takes just a few seconds of your time.&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 19 Aug 2014 00:00:00 +0000</pubDate>
@@ -1191,13 +1242,14 @@ takes just a few seconds of your time.&lt;/p&gt;
         <title>Objects Should Be Immutable</title>
         
           <description>&lt;p&gt;In object-oriented programming, an object is
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Immutable_object&quot;&gt;immutable&lt;/a&gt; if its state can&amp;#39;t be
+&lt;a href=&quot;http://en.wikipedia.org/wiki/Immutable_object&quot;&gt;immutable&lt;/a&gt; if its state can’t be
 modified after it is created.
 In Java, a good example of an
 immutable &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt;
 is &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/String.html&quot;&gt;&lt;code&gt;String&lt;/code&gt;&lt;/a&gt;.
-Once created, we can&amp;#39;t modify its state. We can request that it creates
+Once created, we can’t modify its state. We can request that it creates
 new strings, but its own state will never change.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 09 Jun 2014 00:00:00 +0000</pubDate>
@@ -1212,7 +1264,7 @@ new strings, but its own state will never change.&lt;/p&gt;
 and &lt;a href=&quot;http://logging.apache.org/log4j/2.x/&quot;&gt;log4j&lt;/a&gt;) every execution
 of a method, seeing what arguments it receives, what
 it returns and how much time every execution takes.
-This is how I&amp;#39;m doing it, with help of &lt;a href=&quot;http://eclipse.org/aspectj/&quot;&gt;AspectJ&lt;/a&gt;,
+This is how I’m doing it, with help of &lt;a href=&quot;http://eclipse.org/aspectj/&quot;&gt;AspectJ&lt;/a&gt;,
 &lt;a href=&quot;http://aspects.jcabi.com&quot;&gt;jcabi-aspects&lt;/a&gt; and Java 6
 &lt;a href=&quot;/2016/04/12/java-annotations-are-evil.html&quot;&gt;annotations&lt;/a&gt;:&lt;/p&gt;
 
@@ -1228,7 +1280,8 @@ This is how I&amp;#39;m doing it, with help of &lt;a href=&quot;http://eclipse.o
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;[INFO] com.example.Foo #power(2, 10): 1024 in 12μs
 [INFO] com.example.Foo #power(3, 3): 27 in 4μs&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Nice, isn&amp;#39;t it? Now, let&amp;#39;s see how it works.&lt;/p&gt;
+&lt;p&gt;Nice, isn’t it? Now, let’s see how it works.&lt;/p&gt;
+
 </description>
         
         <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
@@ -1250,6 +1303,7 @@ This is how I&amp;#39;m doing it, with help of &lt;a href=&quot;http://eclipse.o
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;What is wrong with this method?&lt;/p&gt;
+
 </description>
         
         <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
@@ -1260,12 +1314,13 @@ This is how I&amp;#39;m doing it, with help of &lt;a href=&quot;http://eclipse.o
       <item>
         <title>OOP Alternative to Utility Classes</title>
         
-          <description>&lt;p&gt;A utility class (aka helper class) is a &amp;quot;structure&amp;quot; that has only static methods
+          <description>&lt;p&gt;A utility class (aka helper class) is a “structure” that has only static methods
 and encapsulates no state. &lt;code&gt;StringUtils&lt;/code&gt;, &lt;code&gt;IOUtils&lt;/code&gt;, &lt;code&gt;FileUtils&lt;/code&gt; from
 &lt;a href=&quot;http://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;; &lt;code&gt;Iterables&lt;/code&gt; and &lt;code&gt;Iterators&lt;/code&gt; from
 &lt;a href=&quot;https://code.google.com/p/guava-libraries/&quot;&gt;Guava&lt;/a&gt;, and
 &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html&quot;&gt;&lt;code&gt;Files&lt;/code&gt;&lt;/a&gt;
 from JDK7 are perfect examples of utility classes.&lt;/p&gt;
+
 </description>
         
         <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
@@ -1277,9 +1332,10 @@ from JDK7 are perfect examples of utility classes.&lt;/p&gt;
         <title>Typical Mistakes in Java Code</title>
         
           <description>&lt;p&gt;This page contains most typical mistakes I see in the Java code of people
-working with me. Static analysis (we&amp;#39;re using &lt;a href=&quot;http://www.qulice.com&quot;&gt;qulice&lt;/a&gt;
-can&amp;#39;t catch all of the mistakes for obvious reasons, and that&amp;#39;s why I decided to
+working with me. Static analysis (we’re using &lt;a href=&quot;http://www.qulice.com&quot;&gt;qulice&lt;/a&gt;
+can’t catch all of the mistakes for obvious reasons, and that’s why I decided to
 list them all here.&lt;/p&gt;
+
 </description>
         
         <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
@@ -1290,14 +1346,15 @@ list them all here.&lt;/p&gt;
       <item>
         <title>How Much Do You Pay Per&amp;nbsp;Line&amp;nbsp;of&amp;nbsp;Code?</title>
         
-          <description>&lt;figure class='badge'&gt;&lt;a href='http://www.xdsd.org'&gt;&lt;img src='http://www.xdsd.org/images/logo.svg' style='width:100px;max-width:100%;' alt='badge'/&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.xdsd.org&quot;&gt;&lt;img src=&quot;http://www.xdsd.org/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;p&gt;Yes, I know, &amp;quot;line of code&amp;quot; (LoC)
+&lt;p&gt;Yes, I know, “line of code” (LoC)
 is a &lt;a href=&quot;http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects&quot;&gt;very wrong metric&lt;/a&gt;.
 There are &lt;a href=&quot;http://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/&quot;&gt;tons of articles&lt;/a&gt;
 written about it, as well as famous books.
 However, I want to compare two projects in which I have participated recently
 and discuss some very interesting numbers.&lt;/p&gt;
+
 </description>
         
         <pubDate>Fri, 11 Apr 2014 00:00:00 +0000</pubDate>

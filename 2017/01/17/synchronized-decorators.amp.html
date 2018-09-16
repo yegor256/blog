@@ -84,7 +84,7 @@ be thread-safe, while all of them have to provide synchronized decorators.</p>
 
 <amp-img src="/images/2017/01/aladdin.jpg" alt="Aladdin (1992) by Ron Clements and John Musker" height="679" width="1200" layout="responsive"></amp-img>
 
-<p>Let's start with an example (it's
+<p>Let’s start with an example (it’s
 <a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>, by the way):</p>
 
 <pre>class Position {
@@ -97,20 +97,20 @@ be thread-safe, while all of them have to provide synchronized decorators.</p>
   }
 }</pre>
 
-<p>What do you think---is it <a href="https://en.wikipedia.org/wiki/Thread_safety">thread-safe</a>?
+<p>What do you think—is it <a href="https://en.wikipedia.org/wiki/Thread_safety">thread-safe</a>?
 This term refers to whether
 an object of this class will operate without mistakes when used by multiple
-threads at the same time. Let's say we have two threads working with
+threads at the same time. Let’s say we have two threads working with
 the same object, <code>position</code>, and calling its method <code>increment()</code> at
 exactly the same moment in time.</p>
 
 <p>We expect the <code>number</code> integer to be equal to 2 when both threads
 finish up, because each of them will increment it once, right?
-However, most likely this won't happen.</p>
+However, most likely this won’t happen.</p>
 
 
 
-<p>Let's see what will happen. In both threads, <code>before</code>
+<p>Let’s see what will happen. In both threads, <code>before</code>
 will equal <code>0</code> when they start. Then <code>after</code> will be set to <code>1</code>. Then, both threads
 will do <code>this.number = 1</code> and we will end up with <code>1</code> in <code>number</code> instead
 of the expected <code>2</code>. See the problem? Classes with such a flaw in their
@@ -133,14 +133,14 @@ that mistake from happening:</p>
   }
 }</pre>
 
-<p>A class that guarantees it won't break no matter how many threads
+<p>A class that guarantees it won’t break no matter how many threads
 are working with it is called <strong>thread-safe</strong>.</p>
 
 <p>Now the question is: Do we have to make all classes
 thread-safe or only some of them? It would seem to be better to have all
 classes error-free, right? Why would anyone want an object
 that may break at some point? Well, not exactly. Remember, there is
-a performance concern involved; we don't often have multiple
+a performance concern involved; we don’t often have multiple
 threads, and we always want our objects to run as fast as possible.
 A between-threads synchronization mechanism will definitely slow us down.</p>
 

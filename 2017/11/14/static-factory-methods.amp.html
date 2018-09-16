@@ -76,7 +76,7 @@ with this idea and explain why.
       <p>Yegor Bugayenko<br>14 November 2017</p>
       <h1>Constructors or Static Factory Methods?</h1>
       <p>I believe Joshua Bloch said it first in his very good book
-"<a href="http://amzn.to/2zgpiRI">Effective Java</a>": static factory methods are the preferred
+“<a href="http://amzn.to/2zgpiRI">Effective Java</a>”: static factory methods are the preferred
 way to instantiate objects compared with constructors. I disagree.
 Not only because I believe that static methods are pure evil, but
 mostly because in this particular case they pretend to be good
@@ -86,7 +86,7 @@ and make us think that we have to love them.</p>
 
 <amp-img src="/images/2017/11/extract.jpg" alt="Extract (2009) by Mike Judge" height="688" width="1280" layout="responsive"></amp-img>
 
-<p>Let's analyze the reasoning and see why it's wrong, from
+<p>Let’s analyze the reasoning and see why it’s wrong, from
 an object-oriented point of view.</p>
 
 <p>This is a class with one primary and two secondary constructors:</p>
@@ -132,14 +132,14 @@ are actually four, but the fourth one is not applicable to Java
 <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/type-inference-generic-instance-creation.html">anymore</a>):</p>
 
 <ul>
-<li>They have names.</li>
-<li>They can cache.</li>
-<li>They can subtype.</li>
+  <li>They have names.</li>
+  <li>They can cache.</li>
+  <li>They can subtype.</li>
 </ul>
 
-<p>I believe that all three make perfect sense ... if the design is wrong.
+<p>I believe that all three make perfect sense … if the design is wrong.
 They are good excuses for workarounds.
-Let's take them one by one.</p>
+Let’s take them one by one.</p>
 
 <h2 id="they-have-names">They Have Names</h2>
 
@@ -155,7 +155,7 @@ color object with a constructor:</p>
 
 <p>It seems that <code>makeFromPalette()</code> is semantically richer than just <code>new Color()</code>,
 right? Well, yes. Who knows what those three numbers mean if we just pass
-them to the constructor. But the word "palette" helps us figure everything
+them to the constructor. But the word “palette” helps us figure everything
 out immediately.</p>
 
 <p>True.</p>
@@ -188,7 +188,7 @@ class RGBColor implements Color {
 
 <h2 id="they-can-cache">They Can Cache</h2>
 
-<p>Let's say I need a red tomato color in multiple places in the application:</p>
+<p>Let’s say I need a red tomato color in multiple places in the application:</p>
 
 <pre>Color tomato = new Color(255, 99, 71);
 // ... sometime later
@@ -252,7 +252,7 @@ Color red = palette.take(255, 99, 71);</pre>
 
 <h2 id="they-can-subtype">They Can Subtype</h2>
 
-<p>Let's say our class <code>Color</code> has a method <code>lighter()</code>, which is supposed
+<p>Let’s say our class <code>Color</code> has a method <code>lighter()</code>, which is supposed
 to shift the color to the next available lighter one:</p>
 
 <pre>class Color {
@@ -265,7 +265,7 @@ to shift the color to the next available lighter one:</p>
   }
 }</pre>
 
-<p>However, sometimes it's more desirable to pick the next lighter color
+<p>However, sometimes it’s more desirable to pick the next lighter color
 through a set of available
 <a href="https://en.wikipedia.org/wiki/Pantone">Pantone</a> colors:</p>
 
@@ -297,13 +297,13 @@ which <code>Color</code> implementation is the most suitable for us:</p>
 }</pre>
 
 <p>If the <a href="https://www.pantone.com/color-finder/19-1664-TPX">true red</a> color
-is requested, we return an instance of <code>PantoneColor</code>. In all other cases it's
+is requested, we return an instance of <code>PantoneColor</code>. In all other cases it’s
 just a standard <code>RGBColor</code>. The decision is made by the static factory
 method. This is how we will call it:</p>
 
 <pre>Color color = Color.make(0xBF1932);</pre>
 
-<p>It would not be possible to do the same "forking" with a constructor, since
+<p>It would not be possible to do the same “forking” with a constructor, since
 it can only return the class it is declared in. A static method has all the
 necessary freedom to return any subtype of <code>Color</code>.</p>
 
@@ -336,9 +336,9 @@ method inside <code>Color</code>:</p>
 
 
 <p>However, this is still not really an object-oriented way of thinking, because
-we're taking the decision-making away from the object it belongs to. Either
-through a static factory method <code>make()</code> or a new class <code>Colors</code>---it doesn't
-really matter how---we tear our objects into two pieces. The first
+we’re taking the decision-making away from the object it belongs to. Either
+through a static factory method <code>make()</code> or a new class <code>Colors</code>—it doesn’t
+really matter how—we tear our objects into two pieces. The first
 piece is the object itself and the second one is the decision
 making algorithm that stays somewhere else.</p>
 
@@ -379,16 +379,16 @@ the Pantone palette, not the one that is merely lighter in RGB coordinates:</p>
 if we really want it to be applicable to all Pantone colors, but I hope
 you get the idea. The logic must stay <em>inside</em> the class, not somewhere outside,
 not in static factory methods or even in some other supplementary class.
-I'm talking about the logic that belongs to this particular class, of course.
-If it's something related to the management of class instances, then there can
+I’m talking about the logic that belongs to this particular class, of course.
+If it’s something related to the management of class instances, then there can
 be containers and stores, just like in the previous example above.</p>
 
 <p>To summarize, I would strongly recommend you <em>never</em> use static methods, especially
 when they are going to replace object constructors. Giving birth to an
 object through its constructor is
 <a href="/2014/10/03/di-containers-are-evil.html">the most</a>
-"sacred" moment in any object-oriented
-software, don't miss the beauty of it.</p>
+“sacred” moment in any object-oriented
+software, don’t miss the beauty of it.</p>
 
     </article>
   </body>

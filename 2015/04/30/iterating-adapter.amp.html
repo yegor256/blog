@@ -78,14 +78,14 @@ an iterating adapter in Java; this article should give a practical example.
 is one of the fundamental Java
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a>,
 introduced in Java 1.2. It is supposed
-to be very simple; however, in my experience, many Java developers don't understand
+to be very simple; however, in my experience, many Java developers don’t understand
 how to implement a custom one, which should iterate a stream of data
 coming from some other source. In other words, it becomes an <strong>adapter</strong> of
 another source of data, in the form of an iterator. I hope this example will help.</p>
 
 
 
-<p>Let's say we have an object of this class:</p>
+<p>Let’s say we have an object of this class:</p>
 
 <pre>final class Data {
   byte[] read();
@@ -132,8 +132,8 @@ us iterate them:</p>
 <p>There is no way to make it
 <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a> because the iterating process
 is outside the scope of the iterator. Even if we declare our methods
-as <code>synchronized</code>, this won't guarantee that two threads won't conflict
-when they both call <code>hasNext()</code> and <code>next()</code>. So don't bother with it and
+as <code>synchronized</code>, this won’t guarantee that two threads won’t conflict
+when they both call <code>hasNext()</code> and <code>next()</code>. So don’t bother with it and
 just document the iterator as not thread-safe, then let its users
 synchronize one level higher when necessary.</p>
 

@@ -85,7 +85,7 @@ of a build automation scenario.</p>
 
 <h2 id="maven-plugin">Maven Plugin</h2>
 
-<p>Let's assume you're using MySQL (PostgreSQL or any other
+<p>Let’s assume you’re using MySQL (PostgreSQL or any other
 database configuration will be very similar.)</p>
 
 <p>Add <code>liquibase-maven-plugin</code>
@@ -141,20 +141,20 @@ and  in their respective profiles. For example:</p>
   &lt;/profiles&gt;
 &lt;/settings&gt;</pre>
 
-<p>When you run Maven, don't forget to turn
+<p>When you run Maven, don’t forget to turn
 on one of the profiles. For example: <code>mvn -Pproduction</code>.</p>
 
 <h2 id="initial-schema">Initial Schema</h2>
 
 <p>I assume you already have a database with
 a schema (tables, triggers, views, etc.) and some data.
-You should "reverse engineer" it and create an initial schema
+You should “reverse engineer” it and create an initial schema
 file for Liquibase. In other words, we should inform Liquibase
 where we are at the moment, so that it starts to apply
 changes from this point.</p>
 
-<p>Maven plugin doesn't support it, so you will have to run
-Liquibase directly. But, it's not that difficult. First,
+<p>Maven plugin doesn’t support it, so you will have to run
+Liquibase directly. But, it’s not that difficult. First,
 run <code>mvn liquibase:help</code> in order to download all artifacts.
 Then, replace placeholders with your actual credentials:</p>
 
@@ -187,7 +187,7 @@ XML mostly because it is easier to maintain and works faster.</p>
 
 <h2 id="incremental-changesets">Incremental Changesets</h2>
 
-<p>Let's create a simple changeset, which adds a new column to an existing table:</p>
+<p>Let’s create a simple changeset, which adds a new column to an existing table:</p>
 
 <pre>&lt;databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
@@ -209,8 +209,8 @@ number 45 coming from ticket #3432.</p>
 in order to sort them correctly. We want changes to be applied in their
 correct chronological order.</p>
 
-<p>That's it. We're ready to run <code>mvn liquibase:update -Pproduction</code> and
-our production database will be updated---a new column will be
+<p>That’s it. We’re ready to run <code>mvn liquibase:update -Pproduction</code> and
+our production database will be updated—a new column will be
 added to the <code>user</code> table.</p>
 
 <p>Also, see how <a href="/2014/05/21/mysql-maven-plugin.html">MySQL Maven Plugin</a>

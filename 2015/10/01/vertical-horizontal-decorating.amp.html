@@ -81,14 +81,14 @@ without changing its interface. I use
 <a href="/2015/02/26/composable-decorators.html">composable decorators</a>
 quite often and always question myself as to how to design them right
 when the list of features must be configurable.
-I'm not sure I have the right answer, but here is
+I’m not sure I have the right answer, but here is
 some food for thought.</p>
 
 
 
 <amp-img src="/images/2015/10/the-apartment.jpg" alt="The Apartment (1960) by Billy Wilder" height="727" width="1107" layout="responsive"></amp-img>
 
-<p>Let's say I have a list of numbers:</p>
+<p>Let’s say I have a list of numbers:</p>
 
 <pre>interface Numbers {
   Iterable&lt;Integer&gt; iterate();
@@ -127,7 +127,7 @@ The first approach is <strong>vertical</strong> (I just made this name up):</p>
   }
 );</pre>
 
-<p>See the difference? The first approach decorates <code>ArrayNumbers</code> "vertically,"
+<p>See the difference? The first approach decorates <code>ArrayNumbers</code> “vertically,”
 adding functionality through the composable decorators <code>Positive</code>, <code>Odds</code>,
 <code>Unique</code>, and <code>Sorted</code>.</p>
 
@@ -144,7 +144,7 @@ only in the design. Which one is better and when? It seems that
 vertical decorating is easier to implement and is more suitable for
 smaller objects that expose just a few methods.</p>
 
-<p>As for my experience, I always tend to start with vertical decorating since it's
+<p>As for my experience, I always tend to start with vertical decorating since it’s
 easier to implement but eventually migrate to a horizontal one when the
 number of decorators starts to grow.</p>
 

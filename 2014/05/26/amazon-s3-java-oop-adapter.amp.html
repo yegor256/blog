@@ -77,19 +77,19 @@ makes them truly object-oriented
       <h1>Object-Oriented Java Adapter of Amazon S3 SDK</h1>
       
 
-<p>I'm a big fan of Amazon Web Services (AWS). I'm using them
+<p>I’m a big fan of Amazon Web Services (AWS). I’m using them
 in almost all of my projects. One of their most popular
 services is <a href="http://aws.amazon.com/s3/">Simple Storage Service (S3)</a>.
 It is a storage for binary objects (files) with unique names,
 accessible through HTTP or RESTful API.</p>
 
-<p>Using S3 is very simple. You create a "bucket" with a unique name,
-upload your "object" into the bucket through their web interface or
+<p>Using S3 is very simple. You create a “bucket” with a unique name,
+upload your “object” into the bucket through their web interface or
 through RESTful API, and then download it again (either through HTTP or the API.)</p>
 
 <p>Amazon ships the <a href="https://aws.amazon.com/sdkforjava/">Java SDK</a>
 that wraps their RESTful API. However, this SDK is not object-oriented
-at all. It is purely imperative and procedural---it just mirrors the API.</p>
+at all. It is purely imperative and procedural—it just mirrors the API.</p>
 
 <p>For example, in order to download an existing object <code>doc.txt</code>
 from bucket <code>test-1</code>, you have to do something like this:</p>
@@ -125,7 +125,7 @@ String content = new Ocket.Text(ocket).read();</pre>
 <p>S3 object get its representative in Java. It is not
 a collection of procedures to be called in order to
 get its properties (as with AWS SDK). Rather, it is a Java object
-with certain behaviors. I called them "ockets" (similar to "buckets"),
+with certain behaviors. I called them “ockets” (similar to “buckets”),
 in order to avoid clashes with <code>java.lang.Object</code>.</p>
 
 <p><a href="http://s3.jcabi.com/apidocs-0.5/com/jcabi/s3/Ocket.html"><code>Ocket</code></a> is
@@ -186,7 +186,7 @@ an instance of <code>RetryingOcket</code> that wraps your original object:</p>
 
 <pre>foo.process(new RetryingOcket(ocket));</pre>
 
-<p>Method <code>foo.process()</code> won't see a difference, since
+<p>Method <code>foo.process()</code> won’t see a difference, since
 it is the same <code>Ocket</code> interface it is expecting.</p>
 
 <p>By the way, this retry functionality is implemented
@@ -199,7 +199,7 @@ in <a href="http://s3.jcabi.com/apidocs-0.5/com/jcabi/s3/retry/package-summary.h
 <a href="http://s3.jcabi.com">jcabi-s3</a> are interfaces, they are
 very easy to mock. For example, your class expects an
 S3 object, reads its data and calculates the MD5
-hash (I'm using <a href="http://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/digest/DigestUtils.html"><code>DigestUtils</code></a>
+hash (I’m using <a href="http://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/digest/DigestUtils.html"><code>DigestUtils</code></a>
 from <a href="http://commons.apache.org/proper/commons-codec/">commons-codec</a>):</p>
 
 <pre>import com.jcabi.s3.Ocket;
@@ -237,7 +237,7 @@ public class S3Md5HashTest {
   }
 }</pre>
 
-<p>I'm using <a href="http://junit.org/">JUnit</a> and <a href="https://code.google.com/p/mockito/">Mockito</a> in this test.</p>
+<p>I’m using <a href="http://junit.org/">JUnit</a> and <a href="https://code.google.com/p/mockito/">Mockito</a> in this test.</p>
 
 <h2 id="immutability">Immutability</h2>
 

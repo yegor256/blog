@@ -80,7 +80,7 @@ ability to do it more succinctly.
 interface by making an instance of another class. Sound weird? Let me show
 you an example. There are many classes of that kind in the
 <a href="http://www.takes.org">Takes Framework</a>,
-and they all are named like <code>*Wrap</code>. It's a convenient design concept that,
+and they all are named like <code>*Wrap</code>. It’s a convenient design concept that,
 unfortunately, looks rather verbose in Java. It would be great to have something
 shorter, like in <a href="http://www.eolang.org">EO</a> for example.</p>
 
@@ -104,7 +104,7 @@ like this (a simplified version with only one primary constructor):</p>
   }
 }</pre>
 
-<p>Now, let's take a look at that
+<p>Now, let’s take a look at that
 <a href="https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsWrap.java"><code>RsWrap</code></a>
 it extends:</p>
 
@@ -123,12 +123,12 @@ it extends:</p>
   }
 }</pre>
 
-<p>As you see, this "decorator" doesn't do anything except "just decorating."
+<p>As you see, this “decorator” doesn’t do anything except “just decorating.”
 It encapsulates another <code>Response</code> and passes through all method calls.</p>
 
 
 
-<p>If it's not clear yet, I'll explain the purpose of <code>RsHtml</code>. Let's
+<p>If it’s not clear yet, I’ll explain the purpose of <code>RsHtml</code>. Let’s
 say you have text and you want to create a <code>Response</code>:</p>
 
 <pre>String text = // you have it already
@@ -145,10 +145,10 @@ over and over again in many places, you use <code>RsHtml</code>:</p>
 Response response = new RsHtml(text);</pre>
 
 <p>It is very convenient, but that <code>RsWrap</code> is very verbose. There are too many
-lines that don't do anything special; they just forward all method
+lines that don’t do anything special; they just forward all method
 calls to the encapsulated <code>Response</code>.</p>
 
-<p>How about we introduce a new concept, "decorators," with a new
+<p>How about we introduce a new concept, “decorators,” with a new
 keyword, <code>decorates</code>:</p>
 
 <pre>class RsHtml decorates Response {
@@ -166,16 +166,16 @@ keyword, <code>decorates</code>:</p>
 
 <pre>Response response = new RsHtml(text);</pre>
 
-<p>We don't have any new methods in the decorators, just constructors.
+<p>We don’t have any new methods in the decorators, just constructors.
 The only purpose for these guys is to create other objects and encapsulate
 them. They are not really full-purpose objects. They only help us
 create other objects.</p>
 
-<p>That's why I would call them "decorating envelopes."</p>
+<p>That’s why I would call them “decorating envelopes.”</p>
 
 <p>This idea may look very similar to the
 <a href="https://en.wikipedia.org/wiki/Factory_%28object-oriented_programming%29">Factory</a> design pattern,
-but it doesn't have
+but it doesn’t have
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">static methods</a>,
 which we are trying to avoid in
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">object-oriented programming</a>.</p>

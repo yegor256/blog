@@ -77,9 +77,9 @@ They can be friends!
       <h1>Can Objects Be Friends?</h1>
       <p>As <a href="/2016/11/21/naked-data.html">discussed before</a>,
 proper encapsulation leads to a complete absence
-of "naked data." However, the question remains: How can objects
-interact if they can't exchange data? Eventually we have to expose
-some data in order to let other objects use it, right? Yes, that's true.
+of “naked data.” However, the question remains: How can objects
+interact if they can’t exchange data? Eventually we have to expose
+some data in order to let other objects use it, right? Yes, that’s true.
 However, I guess I have a solution that keeps encapsulation in place
 while allowing objects to interact.</p>
 
@@ -97,9 +97,9 @@ while allowing objects to interact.</p>
 }</pre>
 
 <p>It represents a temperature. The only behavior it exposes is printing
-the temperature in Celsius. We don't want to expose <code>t</code>, because
-that will lead to the "<a href="/2016/11/21/naked-data.html">naked data</a>"
-problem. We want to keep <code>t</code> secret, and that's a good desire.</p>
+the temperature in Celsius. We don’t want to expose <code>t</code>, because
+that will lead to the “<a href="/2016/11/21/naked-data.html">naked data</a>”
+problem. We want to keep <code>t</code> secret, and that’s a good desire.</p>
 
 <p>Now, we want to have the ability to print temperature in Fahrenheit. The most
 obvious approach would be to introduce another method, <code>toFahrenheitString()</code>,
@@ -124,13 +124,13 @@ a method <code>getT()</code>, but neither one is perfect.</p>
   new TempCelsius(35)
 );</pre>
 
-<p>The only problem is that it won't compile in Java, because class
+<p>The only problem is that it won’t compile in Java, because class
 <code>TempFahrenheit</code> is not allowed to access private <code>t</code> in class <code>TempCelsius</code>.
-And if we make <code>t</code> public, everybody will be able to read it directly, and we'll have
-that "naked data" problem---a severe violation of encapsulation.</p>
+And if we make <code>t</code> public, everybody will be able to read it directly, and we’ll have
+that “naked data” problem—a severe violation of encapsulation.</p>
 
 <p>However, if we allow that access <em>only</em> to one class, everything will be fine.
-Something like this (won't work in Java; it's just a concept):</p>
+Something like this (won’t work in Java; it’s just a concept):</p>
 
 <pre>class TempCelsius {
   trust TempFahrenheit; // here!
@@ -141,7 +141,7 @@ Something like this (won't work in Java; it's just a concept):</p>
 }</pre>
 
 <p>Since this <code>trust</code> keyword is placed into the class that allows access,
-we won't have the "naked data" problem---we will always know exactly which
+we won’t have the “naked data” problem—we will always know exactly which
 objects posses knowledge about <code>t</code>. When we change
 something about <code>t</code>, we know exactly where to update the code.</p>
 
@@ -149,7 +149,7 @@ something about <code>t</code>, we know exactly where to update the code.</p>
 
 <p>P.S. After discussing this idea below in comments I
 <a href="http://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632">started</a> to think
-that we don't need that <code>trust</code> keyword at all. Instead, we should just
+that we don’t need that <code>trust</code> keyword at all. Instead, we should just
 give all decorators access to all private attributes of an object.</p>
 
     </article>

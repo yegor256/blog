@@ -74,7 +74,7 @@ in Maven build using Tomcat, PhantomJS and CasperJS
       </p>
       <p>Yegor Bugayenko<br>21 June 2014</p>
       <h1>CasperJS Tests in Maven Build</h1>
-      <p>I'm a big fan of automated testing in general and integration
+      <p>I’m a big fan of automated testing in general and integration
 testing in particular. I strongly believe that effort spent on
 writing tests are direct investments into
 <a href="/2017/12/26/software-quality-formula.html">quality</a>  and stability
@@ -109,22 +109,34 @@ of a running WAR application and asserts that the response has
 );</pre>
 
 <p>I keep this test in the <code>src/test/casperjs/home-page.js</code> file.
-Let's see how CasperJS can be executed automatically on every Maven build.</p>
+Let’s see how CasperJS can be executed automatically on every Maven build.</p>
 
 <p>Here is the test scenario, implemented with a combination of Maven plugins:</p>
 
 <ol>
-<li><p>Install PhantomJS</p></li>
-<li><p>Install CasperJS</p></li>
-<li><p>Reserve a random TCP port</p></li>
-<li><p>Start Tomcat on that TCP port (with WAR inside)</p></li>
-<li><p>Run CasperJS tests and point them to the running Tomcat</p></li>
-<li><p>Shutdown Tomcat</p></li>
+  <li>
+    <p>Install PhantomJS</p>
+  </li>
+  <li>
+    <p>Install CasperJS</p>
+  </li>
+  <li>
+    <p>Reserve a random TCP port</p>
+  </li>
+  <li>
+    <p>Start Tomcat on that TCP port (with WAR inside)</p>
+  </li>
+  <li>
+    <p>Run CasperJS tests and point them to the running Tomcat</p>
+  </li>
+  <li>
+    <p>Shutdown Tomcat</p>
+  </li>
 </ol>
 
-<p>I'm using a combination of plugins. Let's go through the steps one by one.</p>
+<p>I’m using a combination of plugins. Let’s go through the steps one by one.</p>
 
-<p>BTW, I'm not showing plugin versions in the examples below, primarily
+<p>BTW, I’m not showing plugin versions in the examples below, primarily
 because most of them are in active development. Check their versions
 at <a href="http://search.maven.org/">Maven Central</a> (yes, all of them are available there).</p>
 
@@ -158,7 +170,7 @@ binary automatically, placing it into the <code>target</code> directory.</p>
 <h2 id="2-install-casperjs">2. Install CasperJS</h2>
 
 <p>Unfortunately, there is no similar plugin for the CasperJS installation
-(at least I haven't found any as of yet). That's why I'm using plain
+(at least I haven’t found any as of yet). That’s why I’m using plain
 old <code>git</code> (you should have it installed on your build machine).</p>
 
 <pre>&lt;plugin&gt;
@@ -188,7 +200,7 @@ old <code>git</code> (you should have it installed on your build machine).</p>
 
 <p>I need to obtain a random TCP port where Tomcat will be started.
 The port has to be available on the build machine. I want to be able
-to run multiple Maven builds in parallel, so that's why I get a random port on every build.</p>
+to run multiple Maven builds in parallel, so that’s why I get a random port on every build.</p>
 
 <p>In other examples, you may see people using fixed port numbers,
 like <code>5555</code> or something similar. This is a very bad practice.
@@ -216,8 +228,8 @@ Always reserve a new random port when you need it.</p>
 
 <h2 id="4-start-tomcat">4. Start Tomcat</h2>
 
-<p>Now, it's time to start Tomcat with the WAR package inside.
-I'm using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>
+<p>Now, it’s time to start Tomcat with the WAR package inside.
+I’m using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>
 that starts a real Tomcat7 server and configures it to serve on the port reserved above.</p>
 
 <pre>&lt;plugin&gt;
@@ -242,12 +254,12 @@ that starts a real Tomcat7 server and configures it to serve on the port reserve
 &lt;/plugin&gt;</pre>
 
 <p>Due to the option <code>fork</code> being set to <code>true</code>, Tomcat7 continues
-to run when the plugin execution finishes. That's exactly what I need.</p>
+to run when the plugin execution finishes. That’s exactly what I need.</p>
 
 <h2 id="5-run-casperjs">5. Run CasperJS</h2>
 
-<p>Now, it's time to run CasperJS. Even though there are some
-plugins exist for this, I'm using plain old
+<p>Now, it’s time to run CasperJS. Even though there are some
+plugins exist for this, I’m using plain old
 <code>exec-maven-plugin</code>,
 mostly because it is more configurable.</p>
 
@@ -314,7 +326,7 @@ Its source code is open and available in <a href="https://github.com/sttc/statef
 <p>Its <a href="https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml"><code>pom.xml</code></a>
 contains exactly the same configurations explained above, but joined together.</p>
 
-<p>If you have any questions, please don't hesitate to ask below.</p>
+<p>If you have any questions, please don’t hesitate to ask below.</p>
 
 <p>PS. Also, check this:
 <a href="/2014/04/06/phandom.html">PhantomJS as an HTML Validator</a></p>

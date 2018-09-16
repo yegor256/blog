@@ -106,7 +106,7 @@ and throws <code>AssertionError</code> if they are not equal.</p>
 
 
 
-<p>I'm saying that the first part, the algorithm, is the one we should try
+<p>I’m saying that the first part, the algorithm, is the one we should try
 to avoid. The only thing we must have is the assertion. Here is
 how I would re-design this test method:</p>
 
@@ -147,7 +147,7 @@ public void testIntStream() {
   );
 }</pre>
 
-<p>As you can see, there is only one "statement" in this method: <code>assertEquals()</code>.</p>
+<p>As you can see, there is only one “statement” in this method: <code>assertEquals()</code>.</p>
 
 <p><a href="http://hamcrest.org/">Hamcrest</a> with its
 <a href="http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/org/hamcrest/MatcherAssert.html"><code>assertThat()</code></a>
@@ -162,28 +162,37 @@ single-statement test methods even more cohesive and readable.</p>
 agree to follow it:</p>
 
 <ul>
-<li><p><strong>Reusability</strong>. The classes we will have to create for test
+  <li>
+    <p><strong>Reusability</strong>. The classes we will have to create for test
 assertions will be reusable in other test methods and test cases.
 Just as, in the example above, <code>ArrayFromRandom</code> could be used
 somewhere else. Similarly, Hamcrest matchers may and will constitute
-a library of reusable test components.</p></li>
-<li><p><strong>Brevity</strong>. Since it will be rather difficult to create a long
+a library of reusable test components.</p>
+  </li>
+  <li>
+    <p><strong>Brevity</strong>. Since it will be rather difficult to create a long
 test method when it only has a single <code>assert</code>, you and your fellow programmers
-will inevitably write shorter and more readable code.</p></li>
-<li><p><strong>Readability</strong>. With a single <code>assert</code> it will always be obvious
+will inevitably write shorter and more readable code.</p>
+  </li>
+  <li>
+    <p><strong>Readability</strong>. With a single <code>assert</code> it will always be obvious
 what the intent of the test method is. It will start with the intent
-declaration while all other lower level details will be indented.</p></li>
-<li><p><strong>Immutability</strong>. It will be almost impossible to have
+declaration while all other lower level details will be indented.</p>
+  </li>
+  <li>
+    <p><strong>Immutability</strong>. It will be almost impossible to have
 <a href="/2014/09/16/getters-and-setters-are-evil.html">setters</a> in the
 production code if test methods have no place for algorithmic code. You
 inevitably will create
 <a href="/2014/06/09/objects-should-be-immutable.html">immutable objects</a>
-to make them testable with a single <code>assert</code>.</p></li>
+to make them testable with a single <code>assert</code>.</p>
+  </li>
 </ul>
 
 <p>The biggest benefit we get when this principle is applied to our tests
 is that they become declarative and object-oriented, instead of being
 algorithmic, imperative, and procedural.</p>
+
 
     </article>
   </body>

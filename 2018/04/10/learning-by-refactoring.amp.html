@@ -77,9 +77,9 @@ when the Java code is new to me.
       <h1>Nine Steps of Learning by Refactoring</h1>
       <p>I <a href="https://twitter.com/yegor256/status/977799130100781056">was asked</a>
 on Twitter recently how is it possible to refactor
-if one doesn't understand how the code works.
+if one doesn’t understand how the code works.
 I <a href="https://twitter.com/yegor256/status/977966601227112449">replied</a>
-that it is "learning by refactoring." Then I tried to Google it
+that it is “learning by refactoring.” Then I tried to Google it
 and found <a href="https://www.google.ru/search?q=%22learning+by+refactoring%22">nothing</a>.
 I was surprised. To me refactoring seems to be the most effective and
 obvious way to study the source code. Here is how I usually do it,
@@ -91,8 +91,8 @@ in nine object-oriented steps.</p>
 
 <p>According to Wikipedia,
 <a href="https://en.wikipedia.org/wiki/Code_refactoring">code refactoring</a> is
-"the process of restructuring existing computer code---changing the
-factoring---without changing its external behavior." The goal
+“the process of restructuring existing computer code—changing the
+factoring—without changing its external behavior.” The goal
 of refactoring is to make code more readable and suitable for modifications.</p>
 
 
@@ -102,11 +102,11 @@ suggested a number of refactoring techniques which help making
 code simpler, more abstract, more readable, etc. Some of them
 are rather
 <a href="/2014/09/16/getters-and-setters-are-evil.html">questionable</a>
-from an object-oriented standpoint---like
+from an object-oriented standpoint—like
 <a href="https://en.wikipedia.org/wiki/Field_encapsulation">Encapsulate Field</a>,
-for example---but most of them are valid.</p>
+for example—but most of them are valid.</p>
 
-<p>Here is what I'm usually doing when I don't know the code, but need to modify it.
+<p>Here is what I’m usually doing when I don’t know the code, but need to modify it.
 The techniques are sorted by the order of complexity, starting with
 the easiest one.</p>
 
@@ -121,14 +121,14 @@ custom <a href="/bin/settings.jar"><code>settings.jar</code></a>, I see somethin
 <p>When I open the source code of, say,
 <a href="https://github.com/spring-projects/spring-boot">Spring Boot</a>,
 I see something like this
-(it's <a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java"><code>o.s.b.ImageBanner</code></a>
+(it’s <a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java"><code>o.s.b.ImageBanner</code></a>
 randomly picked out of a thousand other classes that look very similar):</p>
 
 
 
 <p>See the difference?</p>
 
-<p>The first thing I do, when I see someone else's code, is to make it "red spots free"
+<p>The first thing I do, when I see someone else’s code, is to make it “red spots free”
 for my IDE. Most of those red spots are easy to remove,
 while others will take some time to refactor.
 While doing that I learn a lot about the <del>crap</del> program I have
@@ -147,7 +147,7 @@ picked at random, but almost all other classes are formatted the same way):</p>
 
 
 
-<p>Aside from being "all red" their code is full of empty lines.
+<p>Aside from being “all red” their code is full of empty lines.
 Removing them will make code more readable and will also help me
 understand how it works. Bigger methods will need refactoring, since
 without empty lines they will become almost completely unreadable. Hence,
@@ -156,9 +156,9 @@ them down into smaller methods.</p>
 
 <h2 id="make-names-shorter">Make Names Shorter</h2>
 
-<p>I'm generally in favor of short one-noun names for variables and one-verb names
+<p>I’m generally in favor of short one-noun names for variables and one-verb names
 for methods. I <a href="/2015/01/12/compound-name-is-code-smell.html">believe</a>
-that longer "compound" names are an indicator of unnecessary code complexity.</p>
+that longer “compound” names are an indicator of unnecessary code complexity.</p>
 
 <p>For example, I found this method
 <code>registerServletContainerInitializerToDriveServletContextInitializers</code> (69 characters!)
@@ -168,10 +168,10 @@ I wonder why the author skipped the <code>couldYouPlease</code> prefix
 and the <code>otherwiseThrowAnException</code> suffix.</p>
 
 <p>Jokes aside, such long method names clearly demonstrate that the code
-is too complex and can't be explained with a simple <code>register</code> or even
+is too complex and can’t be explained with a simple <code>register</code> or even
 <code>registerContainer</code>. It seems that there are many different containers,
 initializers, servlets, and other creatures that need to be registered
-somehow. When I join a project and see a method with this name I'm getting
+somehow. When I join a project and see a method with this name I’m getting
 ready for big trouble.</p>
 
 <p>Making names shorter is the mandatory refactoring step I take when
@@ -189,9 +189,9 @@ cohesive.</p>
 
 
 <p>However, instead of documentation I prefer to deal with unit tests. They
-explain the code much better and prove that it works. When I don't
+explain the code much better and prove that it works. When I don’t
 understand how the class works, I try to write a unit test for it. In most
-cases it's not possible, for many reasons. In such a case I try to apply
+cases it’s not possible, for many reasons. In such a case I try to apply
 everything I learned from
 <a href="http://amzn.to/1SdcZ8M"><em>Working Effectively With Legacy Code</em></a>
 by Michael Feathers
@@ -199,7 +199,7 @@ and
 <a href="http://amzn.to/1PBpoDT"><em>Growing Object-Oriented Software, Guided by Tests</em></a>
 by Steve Freeman and Nat Pryce.
 Both books are pretty much focused on this very problem: what to do
-when you don't know what to do, testing-wise.</p>
+when you don’t know what to do, testing-wise.</p>
 
 <h2 id="remove-multiple-returns">Remove Multiple Returns</h2>
 
@@ -216,23 +216,23 @@ class from Spring Boot (there are many similar examples there, I picked this one
 
 
 <p>There are five <code>return</code> statements in such a small method. For object-oriented
-code that's too much. It's OK for procedural code, which I also write
+code that’s too much. It’s OK for procedural code, which I also write
 sometimes. For example, <a href="https://github.com/zerocracy/farm/blob/master/src/main/resources/com/zerocracy/stk/pm/in/orders/start_order_if_assigned_in_github.groovy">this Groovy script</a>
 of ours has five <code>return</code> keywords too:</p>
 
 
 
-<p>But this is Groovy and it's not a class. It's just a procedure, a script.</p>
+<p>But this is Groovy and it’s not a class. It’s just a procedure, a script.</p>
 
 <p>Refactoring and removing multiple <code>return</code> statements definitely helps
-make code cleaner. Mostly because without them it's necessary to use
+make code cleaner. Mostly because without them it’s necessary to use
 deeper nesting of <code>if/then/else</code> statements and then the code starts to look
 ugly, unless you break it down into smaller pieces.</p>
 
 <h2 id="get-rid-of-nulls">Get Rid of NULLs</h2>
 
 <p>NULLs <a href="/2014/05/13/why-null-is-bad.html">are evil</a>,
-it's a well-known fact. However, they are still everywhere. For example,
+it’s a well-known fact. However, they are still everywhere. For example,
 there are 4,100 Java files in Spring Boot v2.0.0.RELEASE and 243K LoC,
 which include the <code>null</code> keyword 7,055 times. This means approximately one <code>null</code>
 for every 35 lines.</p>
@@ -241,9 +241,9 @@ for every 35 lines.</p>
 has 771 Java files, 154K LoC, and 58 <code>null</code> keywords. Which is roughly
 one <code>null</code> per 2,700 lines. See the difference?</p>
 
-<p>The code gets cleaner when you remove NULLs, but it's not so easy to do.
-Sometimes it's even impossible. That's why we still have those 58 cases
-of <code>null</code> in Takes. We simply can't remove them, because they are coming
+<p>The code gets cleaner when you remove NULLs, but it’s not so easy to do.
+Sometimes it’s even impossible. That’s why we still have those 58 cases
+of <code>null</code> in Takes. We simply can’t remove them, because they are coming
 from the JDK.</p>
 
 <h2 id="make-objects-immutable">Make Objects Immutable</h2>
@@ -277,9 +277,9 @@ that getting rid of <code>static</code> is a more complex task.</p>
 
 <h2 id="apply-static-analysis">Apply Static Analysis</h2>
 
-<p>This is the final step and the most complex one. It's complex because
+<p>This is the final step and the most complex one. It’s complex because
 I configure static analyzers to their maximum potential or even more.
-I'm using <a href="http://www.qulice.com">Qulice</a>,
+I’m using <a href="http://www.qulice.com">Qulice</a>,
 which is an aggregator of
 <a href="http://checkstyle.sourceforge.net/">Checkstyle</a>,
 <a href="http://pmd.sourceforge.net/">PMD</a>, and
@@ -289,10 +289,10 @@ Those guys are strong by themselves, but Qulice makes them
 adding a few dozen custom-made checks.</p>
 
 <p>The principle I use for static analysis is 0/100. This means that either
-the entire code base is clean and there are no Qulice complaints, or it's
+the entire code base is clean and there are no Qulice complaints, or it’s
 dirty. There is nothing in the middle. This is not a very typical way
 of looking at static analysis. Most programmers are using those tools
-just to collect "opinions" about their code. I'm using them as guides
+just to collect “opinions” about their code. I’m using them as guides
 for refactoring.</p>
 
 <p>Check out this video, which demonstrates the amount of complaints Qulice
@@ -304,6 +304,7 @@ gives for the <code>spring-boot-project/spring-boot</code> sub-module in Spring 
 <p>When Qulice says that everything is clean, I consider the code base fully
 ready for maintenance and modifications. At this point the refactoring
 is done.</p>
+
 
     </article>
   </body>

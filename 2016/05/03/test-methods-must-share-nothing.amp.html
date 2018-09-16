@@ -75,13 +75,13 @@ serously affects maintainability.
       </p>
       <p>Yegor Bugayenko<br>3 May 2016</p>
       <h1>Test Methods Must Share Nothing</h1>
-      <p>Constants... I wrote about them
+      <p>Constants… I wrote about them
 <a href="/2015/07/06/public-static-literals.html">some time ago</a>, mostly
 saying that they are a bad thing, if being public. They reduce duplication,
 but introduce coupling. A much better way to get rid of duplication is
-by creating new classes or methods---a traditional OOP method. This seems to make
+by creating new classes or methods—a traditional OOP method. This seems to make
 sense and in our projects I see less and less public constants. In
-some projects we don't have them at all. But one thing still bothers me:
+some projects we don’t have them at all. But one thing still bothers me:
 unit tests. Most programmers seem to think that when static analysis says
 that there are too many similar literals in the same file, the best way
 to get rid of them is via a private static literal. This is just wrong.</p>
@@ -94,14 +94,14 @@ to get rid of them is via a private static literal. This is just wrong.</p>
 similar or almost identical functionality and this is almost inevitable. Well,
 we can use more of that <a href="http://junit.sourceforge.net/javadoc/org/junit/Before.html"><code>@Before</code></a>
 and <a href="http://junit.sourceforge.net/javadoc/org/junit/Before.html"><code>@BeforeClass</code></a> features,
-but sometimes it's just not possible. We may have, say, 20 test methods
-in one <code>FooTest.java</code> file. Preparing all objects in one "before" is not
+but sometimes it’s just not possible. We may have, say, 20 test methods
+in one <code>FooTest.java</code> file. Preparing all objects in one “before” is not
 possible. So we have to do certain things again and again in our test
 methods.</p>
 
-<p>Let's take a look at one of the classes in our <a href="http://www.takes.org">Takes Framework</a>:
+<p>Let’s take a look at one of the classes in our <a href="http://www.takes.org">Takes Framework</a>:
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>.
-It's a unit test and it has a problem, which I'm trying to tell you about.
+It’s a unit test and it has a problem, which I’m trying to tell you about.
 Look at that <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L54"><code>MSG</code></a>
 private literal. It is used for the first time in
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L77-L80"><code>setUp()</code></a> method
@@ -133,7 +133,7 @@ code:</p>
 
 <p>This is basically what is happening in
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>
-and it's very wrong. Why? Because this shared literal <code>MSG</code>
+and it’s very wrong. Why? Because this shared literal <code>MSG</code>
 introduced an unnatural coupling between these two test methods.
 They have nothing in common, because they test different behaviors
 of class <code>Foo</code>. But this private constant ties them together. Now they are
@@ -143,7 +143,7 @@ somehow related.</p>
 to modify the other one too. Say I want to see how <code>doSomethingElse()</code>
 behaves if the encapsulated message is an empty string. What do I do?
 I change the value of the constant <code>FooTest.MSG</code>, which is used by
-another test method. This is called coupling. And it's a bad thing.</p>
+another test method. This is called coupling. And it’s a bad thing.</p>
 
 <p>What do we do? Well, we can use that <code>"something"</code> string literal in
 both test methods:</p>
@@ -171,15 +171,15 @@ shows up four times in the test class. No static analyzers will tolerate that.
 Moreover, there are seven (!) test methods in
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code>VerboseListTest</code></a>,
 which are using <code>MSG</code>. Thus, we will have 14 occurrences of <code>"something"</code>, right?
-Yes, that's right and that's most likely why one of authors of this
-test case introduced the constant---to get rid of duplication.
+Yes, that’s right and that’s most likely why one of authors of this
+test case introduced the constant—to get rid of duplication.
 BTW, <a href="https://github.com/Happy-Neko">@Happy-Neko</a> did that in pull request
 <a href="https://github.com/yegor256/takes/pull/513">#513</a>,
 <a href="https://github.com/carlosmiranda"><code>@carlosmiranda</code></a> reviewed the code and I
 approved the changes. So, three people made/approved that mistake, including myself.</p>
 
 <p>So what is the right approach that will avoid code duplication and
-at the same time won't introduce coupling? Here it is:</p>
+at the same time won’t introduce coupling? Here it is:</p>
 
 <pre>class FooTest {
   @Test
@@ -201,8 +201,8 @@ at the same time won't introduce coupling? Here it is:</p>
 }</pre>
 
 <p>These literals must be different. This is what any static analyzer is
-saying when it sees <code>"something"</code> in so many places. It questions us---why are they the same? Is it really so important to use <code>"something"</code> everywhere?
-Why can't you use different literals? Of course we can. And we should.</p>
+saying when it sees <code>"something"</code> in so many places. It questions us—why are they the same? Is it really so important to use <code>"something"</code> everywhere?
+Why can’t you use different literals? Of course we can. And we should.</p>
 
 <p>The bottom line is that each test method must have its own set of data and objects. They must
 not be shared between test methods ever. Test methods must always be
@@ -212,6 +212,7 @@ independent, having nothing in common.</p>
 any shared variables in test classes are <strong>evil</strong>. They must not be used
 and simply must not exist. I think that their invention in JUnit caused
 a lot of harm to Java code.</p>
+
 
     </article>
   </body>

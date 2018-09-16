@@ -77,7 +77,7 @@ important where this happens.
       <h1>Operator new() is Toxic</h1>
       <p>To instantiate objects, in most object-oriented languages,
 including Java, Ruby, and C++, we use operator <code>new()</code>. Well, unless
-we use static factory methods, which we don't use because
+we use static factory methods, which we don’t use because
 <a href="/2017/11/14/static-factory-methods.html">they are evil</a>.
 Even though it looks so easy to make a new object any time we need it,
 I would recommend to be more careful with this rather toxic operator.</p>
@@ -86,10 +86,10 @@ I would recommend to be more careful with this rather toxic operator.</p>
 
 <amp-img src="/images/2018/01/the-gift.jpg" alt="The Gift (2015) by Joel Edgerton" height="803" width="1280" layout="responsive"></amp-img>
 
-<p>I'm sure you understand that the problem with this operator is that
+<p>I’m sure you understand that the problem with this operator is that
 it couples objects, making testing and reuse very difficult or even impossible.
-Let's say there is a story in a file that we need to read as a UTF-8 text
-(I'm using
+Let’s say there is a story in a file that we need to read as a UTF-8 text
+(I’m using
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html"><code>TextOf</code></a>
 from <a href="http://www.cactoos.org">Cactoos</a>):</p>
 
@@ -101,12 +101,12 @@ from <a href="http://www.cactoos.org">Cactoos</a>):</p>
   }
 }</pre>
 
-<p>It seems super simple, but the problem is obvious: class <code>Story</code> can't
+<p>It seems super simple, but the problem is obvious: class <code>Story</code> can’t
 be reused. It can only read one particular file. Moreover, testing it
 will be rather difficult, since it reads the content from exactly one place,
-which can't be changed at all. More formally this problem is known as an
-<em>unbreakable dependency</em>---we can't break the link between <code>Story</code>
-and <code>/tmp/story.txt</code>---they are together forever.</p>
+which can’t be changed at all. More formally this problem is known as an
+<em>unbreakable dependency</em>—we can’t break the link between <code>Story</code>
+and <code>/tmp/story.txt</code>—they are together forever.</p>
 
 <p>To solve this we need to introduce a constructor and let <code>Story</code> accept
 the location of the content as an argument:</p>
@@ -125,7 +125,7 @@ the location of the content as an argument:</p>
 
 <pre>new Story(new File("/tmp/story.txt"));</pre>
 
-<p>It's not really
+<p>It’s not really
 convenient, especially for those users who were using <code>Story</code> before, knowing
 nothing about the file path. To help them we introduce
 a <a href="/2015/05/28/one-primary-constructor.html">secondary constructor</a>:</p>
@@ -148,16 +148,16 @@ we did before:</p>
 
 <pre>new Story();</pre>
 
-<p>I'm sure you're well aware of this technique, which is also known
+<p>I’m sure you’re well aware of this technique, which is also known
 as <a href="http://martinfowler.com/articles/injection.html">dependency injection</a>.
-I'm actually not saying anything new. What I want you to pay attention to here is
+I’m actually not saying anything new. What I want you to pay attention to here is
 the location and the amount of <code>new</code> operators in all three code snippets.</p>
 
 <p>In the first snippet both <code>new</code> operators are in the method <code>text()</code>.
 In the second snippet we lost one of them. In the third snippet one operator
 is in the method, while the second one moved up, to the constructor.</p>
 
-<p>Remember this fact and let's move on.</p>
+<p>Remember this fact and let’s move on.</p>
 
 <p>What if the file is not in UTF-8 encoding but in <a href="https://en.wikipedia.org/wiki/KOI8-R">KOI8-R</a>?
 Class <code>TextOf</code> and then method <code>Story.text()</code> will throw an exception.
@@ -189,7 +189,7 @@ constructor:</p>
   }
 }</pre>
 
-<p>It's just dependency injection, but pay attention to the locations
+<p>It’s just dependency injection, but pay attention to the locations
 of the operator <code>new</code>. They are all in the
 constructors now and none of them are left in the method <code>text()</code>.</p>
 
@@ -199,6 +199,7 @@ methods, the less reusable and testable is the class.</p>
 <p>In other words, operator <code>new</code> is a rather toxic thing, so try to keep its
 usage to a minimum in your methods. Make sure you instantiate everything
 or almost everything in your secondary constructors.</p>
+
 
     </article>
   </body>

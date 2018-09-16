@@ -76,18 +76,18 @@ natural conflict with business and technical objectives.
       <p>Yegor Bugayenko<br>8 October 2014</p>
       <h1>Continuous Integration is Dead</h1>
       <p>A few days ago, my article
-<a href="http://devops.com/blogs/continuous-integration-doesnt-work/">Why Continuous Integration Doesn't Work</a>
+<a href="http://devops.com/blogs/continuous-integration-doesnt-work/">Why Continuous Integration Doesn’t Work</a>
 was published at <a href="http://www.devops.com">DevOps.com</a>. Almost the same
 day I received a few strongly negative critiques on Twitter.</p>
 
 <p>Here is my response to the un-asked question:</p>
 
 <blockquote>
-<p>Why the hell shouldn't continuous integration work, being such a brilliant and popular idea?</p>
+  <p>Why the hell shouldn’t continuous integration work, being such a brilliant and popular idea?</p>
 </blockquote>
 
-<p>Even though I have some experience in this area, I won't use it as an argument.
-I'll try to rely only on logic instead.</p>
+<p>Even though I have some experience in this area, I won’t use it as an argument.
+I’ll try to rely only on logic instead.</p>
 
 
 
@@ -98,7 +98,7 @@ a few years ago I created a hosted
 <a href="/2016/08/01/continuous-integration-maturity.html">continuous integration</a> service called
 <a href="http://www.fazend.com">fazend.com</a>,
 renamed to <a href="http://www.rultor.com">rultor.com</a> in 2013.
-Currently, I'm also an active user of <a href="http://www.travis-ci.org">Travis</a>
+Currently, I’m also an active user of <a href="http://www.travis-ci.org">Travis</a>
 and <a href="http://www.appveyor.com">AppVeyor</a>.</p>
 
 <h2 id="how-continuous-integration-should-work">How Continuous Integration Should Work</h2>
@@ -107,12 +107,12 @@ and <a href="http://www.appveyor.com">AppVeyor</a>.</p>
 
 <p>The idea is simple and obvious. Every time you make a new commit
 to the <code>master</code> branch (or <code>/trunk</code> in Subversion), a continuous integration
-server (or service) attempts to build the entire product. "Build" means
+server (or service) attempts to build the entire product. “Build” means
 compile, unit test, integration test, quality analysis,
 <a href="/2014/06/21/casperjs-with-maven.html">etc.</a></p>
 
-<p>The result is either "success" or "failure." If it is a success, we
-say that "the build is clean." If it is a failure, we say that "the build is broken."
+<p>The result is either “success” or “failure.” If it is a success, we
+say that “the build is clean.” If it is a failure, we say that “the build is broken.”
 The build usually gets broken because someone breaks it by
 committing new code that turns previously passing unit tests
 into failing ones.</p>
@@ -125,20 +125,20 @@ continuous integration is easy. Technically.</p>
 
 
 
-<p>Let's see the organizational side.</p>
+<p>Let’s see the organizational side.</p>
 
 <p>Continuous integration is not only a server that builds, but a
-management/organizational process that should "work." Being a process
+management/organizational process that should “work.” Being a process
 that works means exactly what Jez Humble said in
 <a href="http://amzn.to/2c7sR4V">Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</a>,
 on page 55:</p>
 
 <blockquote>
-<p>Crucially, if the build fails, the development team
+  <p>Crucially, if the build fails, the development team
 stops whatever they are doing and fixes the problem immediately</p>
 </blockquote>
 
-<p>This is what doesn't work and can't work.</p>
+<p>This is what doesn’t work and can’t work.</p>
 
 <h2 id="who-needs-this">Who Needs This?</h2>
 
@@ -148,7 +148,7 @@ reiterate. Once the build is broken, everybody should focus
 on fixing it and making a commit that returns the build to
 the stable state.</p>
 
-<p>Now, my question is---who, in an actively working team, may need this?</p>
+<p>Now, my question is—who, in an actively working team, may need this?</p>
 
 <p>A product owner, who is interested in launching new features to the market
 as soon as possible? Or maybe a
@@ -162,18 +162,18 @@ especially under pressure?</p>
 
 <h2 id="what-happens-in-reality">What Happens In Reality?</h2>
 
-<p>I can tell you. I've seen it multiple times. The scenario is always
+<p>I can tell you. I’ve seen it multiple times. The scenario is always
 the same. We just start to ignore that continuous integration
 build status. Either the build is clean or it is broken, and we continue
 to do what we were doing before.</p>
 
-<p>We don't stop and fix it, as Jez Humble recommends.</p>
+<p>We don’t stop and fix it, as Jez Humble recommends.</p>
 
-<p>Instead, we ignore the information that's
+<p>Instead, we ignore the information that’s
 coming from the continuous integration server.</p>
 
-<p>Eventually, maybe tomorrow or on Monday, we'll try to find some spare time
-and will try to fix the build. Only because we don't like that red button
+<p>Eventually, maybe tomorrow or on Monday, we’ll try to find some spare time
+and will try to fix the build. Only because we don’t like that red button
 on the dashboard and want to turn it into a green one.</p>
 
 <h2 id="what-about-discipline">What About Discipline?</h2>
@@ -190,10 +190,10 @@ will be afraid of committing anything to the repository because
 they will know that if they cause a build failure they will have to
 <a href="http://programmers.stackexchange.com/questions/79041">apologize</a>, at least.</p>
 
-<p>A strict discipline (which I'm a big fan of) in this case only
+<p>A strict discipline (which I’m a big fan of) in this case only
 makes the situation worse. The entire development process slows
 down and programmers keep their code to themselves for as long as
-possible, to avoid possibly broken builds. When it's time to commit,
+possible, to avoid possibly broken builds. When it’s time to commit,
 their changes are so massive that merging becomes very difficult and
 sometimes impossible.</p>
 
@@ -205,7 +205,7 @@ but never committed to <code>master</code>, because of that fear factor.</p>
 <p>I wrote about it before; it is called
 <a href="/2014/07/21/read-only-master-branch.html">read-only master branch</a>.</p>
 
-<p>It is simple---prohibit anyone from merging anything
+<p>It is simple—prohibit anyone from merging anything
 into <code>master</code> and create a script that anyone can call. The script will
 merge, test, and commit. The script will not make any exceptions.
 If any branch breaks at even one unit test, the entire branch will be rejected.</p>
@@ -215,13 +215,13 @@ gets into <code>master</code>.</p>
 
 <p>This solves all problems.</p>
 
-<p>First, the build is always clean. We simply can't break it because
+<p>First, the build is always clean. We simply can’t break it because
 nobody can commit unless his code keeps the build clean.</p>
 
-<p>Second, there is no fear of breaking anything. Simply because you technically can't
+<p>Second, there is no fear of breaking anything. Simply because you technically can’t
 do it. All you can do is get a negative response from a merging script. Then
 you fix your errors and tell the script to try again. Nobody sees these
-attempts, and you don't need to apologize. Fear factor is gone.</p>
+attempts, and you don’t need to apologize. Fear factor is gone.</p>
 
 <p>BTW, try to use <a href="http://www.rultor.com">rultor.com</a> to enforce this
 <a href="/2014/07/21/read-only-master-branch.html">read-only master branch</a>

@@ -75,15 +75,15 @@ this class, but in general in OOP.
       </p>
       <p>Yegor Bugayenko<br>26 April 2016</p>
       <h1>Why InputStream Design Is Wrong</h1>
-      <p>It's not just about <code>InputSteam</code>, this class is a good
-example of a bad design. I'm talking about three overloaded
-methods <code>read()</code>. I've mentioned this problem in Section 2.9
+      <p>It’s not just about <code>InputSteam</code>, this class is a good
+example of a bad design. I’m talking about three overloaded
+methods <code>read()</code>. I’ve mentioned this problem in Section 2.9
 of <a href="/elegant-objects.html">Elegant Objects</a>. In a few words,
-I strongly believe that interfaces must be "functionality poor."
+I strongly believe that interfaces must be “functionality poor.”
 <code>InputStream</code> should have been an interface in the first place
 and it should have had a single method <code>read(byte[])</code>. Then if
 its authors wanted to give us extra functionality, they should have
-created supplementary "smart" classes.</p>
+created supplementary “smart” classes.</p>
 
 
 
@@ -97,7 +97,7 @@ created supplementary "smart" classes.</p>
   int read(byte[] buffer);
 }</pre>
 
-<p>What's wrong? It's very convenient to have the ability to read
+<p>What’s wrong? It’s very convenient to have the ability to read
 a single byte, an array of bytes or even an array of bytes
 with a direct positioning into a specific place in the buffer!</p>
 
@@ -109,9 +109,9 @@ encoding, sending them by email and posting on Twitter. It would be
 great to have the features too, right in the poor <code>InputStream</code>.
 I hope the Oracle Java team is working on them now.</p>
 
-<p>In the mean time, let's see what exactly is wrong with what these
+<p>In the mean time, let’s see what exactly is wrong with what these
 bright engineers designed for us already. Or maybe let me show
-how I would design <code>InputStream</code> and we'll compare:</p>
+how I would design <code>InputStream</code> and we’ll compare:</p>
 
 <pre>interface InputStream {
   int read(byte[] buffer, int offset, int length);
@@ -121,8 +121,8 @@ how I would design <code>InputStream</code> and we'll compare:</p>
 bytes from the stream. There is one single method for this
 feature. Is it convenient for everybody? Does it read and post
 on Twitter? Not yet. Do we need that functionality? Of course we do,
-but it doesn't mean that we will add it to the interface. Instead,
-we will create supplementary "smart" class:</p>
+but it doesn’t mean that we will add it to the interface. Instead,
+we will create supplementary “smart” class:</p>
 
 <pre>interface InputStream {
   int read(byte[] buffer, int offset, int length);
@@ -151,7 +151,7 @@ we will create supplementary "smart" class:</p>
 final byte b = new InputStream.Smart(input).read();</pre>
 
 <p>The functionality of reading a single byte is outside of <code>InputStream</code>,
-because this is not its business. The stream doesn't need to know
+because this is not its business. The stream doesn’t need to know
 how to manage the data after it is read. All the stream
 is <strong>responsible</strong> for is reading, not parsing or manipulating afterwards.</p>
 
@@ -159,14 +159,14 @@ is <strong>responsible</strong> for is reading, not parsing or manipulating afte
 
 <p>Obviously, method overloading in interfaces is a code smell. An interface
 with more than <strong>three methods</strong> is a good candidate for refactoring. If methods
-overload each other---it's serious trouble.</p>
+overload each other—it’s serious trouble.</p>
 
 <p>Interfaces must be small!</p>
 
-<p>You may say that the creators of <code>InputStream</code> cared about performance, that's
+<p>You may say that the creators of <code>InputStream</code> cared about performance, that’s
 why allowed us to implement <code>read()</code> in three different forms. Then I have
 to ask again, why not create a method for reading and immediately post it
-on Twitter? That would be fantastically fast. Isn't it what we all want?
+on Twitter? That would be fantastically fast. Isn’t it what we all want?
 A fast software which nobody has any desire to read or maintain.</p>
 
     </article>

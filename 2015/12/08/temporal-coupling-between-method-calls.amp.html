@@ -100,7 +100,7 @@ a look at this example.</p>
   }
 }</pre>
 
-<p>What do you think about that? I believe it's clear what <code>names()</code> is doing---creating a list of names. In order to avoid duplication, there is a supplementary
+<p>What do you think about that? I believe it’s clear what <code>names()</code> is doing—creating a list of names. In order to avoid duplication, there is a supplementary
 <em>procedure</em>, <code>append()</code>, which converts an item to lowercase and adds it to the
 list.</p>
 
@@ -142,9 +142,9 @@ Foo.append(list, "Jeff");
 Foo.append(list, "Walter");
 return list;</pre>
 
-<p>It looks perfectly clean, doesn't it? Instantiate a list, append two items to it, and
-return it. Yes, it is clean---for now. Because we remember what <code>append()</code> is
-doing. In a few months, we'll get back to this code, and it will look like this:</p>
+<p>It looks perfectly clean, doesn’t it? Instantiate a list, append two items to it, and
+return it. Yes, it is clean—for now. Because we remember what <code>append()</code> is
+doing. In a few months, we’ll get back to this code, and it will look like this:</p>
 
 <pre>List&lt;String&gt; list = new LinkedList();
 // 10 more lines here
@@ -155,11 +155,11 @@ return list;</pre>
 
 <p>Is it so clear now that <code>append()</code> is actually adding <code>"Jeff"</code> to <code>list</code>? What
 will happen if I remove that line? Will it affect the result being
-returned in the last line? I don't know. I need to <strong>check</strong> the body of method
+returned in the last line? I don’t know. I need to <strong>check</strong> the body of method
 <code>append()</code> to make sure.</p>
 
 <p>Also, how about returning <code>list</code> first and calling <code>append()</code> afterwards? This
-is what possible "refactoring" may do to our code:</p>
+is what possible “refactoring” may do to our code:</p>
 
 <pre>List&lt;String&gt; list = new LinkedList();
 if (/* something */) {
@@ -174,15 +174,15 @@ return list;</pre>
 <p>First of all, we return <code>list</code> too early, when it is not ready. But did anyone
 tell me that these two calls to <code>append()</code> must happen before <code>return list</code>?
 Second, we changed the order of <code>append()</code> calls. Again, did anyone tell me
-that it's important to call them in that particular order?</p>
+that it’s important to call them in that particular order?</p>
 
 <p>Nobody. Nowhere. This is called <strong>temporal coupling</strong>.</p>
 
 <p>Our lines are <strong>coupled</strong> together. They must stay in this particular order, but the
-knowledge about that order is hidden. It's easy to destroy
-the order, and our compiler won't be able to catch us.</p>
+knowledge about that order is hidden. It’s easy to destroy
+the order, and our compiler won’t be able to catch us.</p>
 
-<p>To the contrary, this design doesn't have any "order":</p>
+<p>To the contrary, this design doesn’t have any “order”:</p>
 
 <pre>return Foo.with(
   Foo.with(
@@ -214,8 +214,8 @@ Foo.withEnoughSpace(list).add("Walter");</pre>
 
 <p>And, of course, an ideal approach would be to use
 <a href="/2015/02/26/composable-decorators.html">composable decorators</a>
-instead of these ugly static methods. But if it's not possible for
-some reason, just don't make those static methods look like procedures.
+instead of these ugly static methods. But if it’s not possible for
+some reason, just don’t make those static methods look like procedures.
 Make sure they always return results, which become arguments to
 further calls.</p>
 

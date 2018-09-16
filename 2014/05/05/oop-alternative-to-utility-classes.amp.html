@@ -75,7 +75,7 @@ many consider them a terrible practice to be avoided.
       </p>
       <p>Yegor Bugayenko<br>5 May 2014</p>
       <h1>OOP Alternative to Utility Classes</h1>
-      <p>A utility class (aka helper class) is a "structure" that has only static methods
+      <p>A utility class (aka helper class) is a “structure” that has only static methods
 and encapsulates no state. <code>StringUtils</code>, <code>IOUtils</code>, <code>FileUtils</code> from
 <a href="http://commons.apache.org/">Apache Commons</a>; <code>Iterables</code> and <code>Iterators</code> from
 <a href="https://code.google.com/p/guava-libraries/">Guava</a>, and
@@ -106,7 +106,7 @@ public class NumberUtils {
 <h2 id="utility-classes-are-evil">Utility Classes Are Evil</h2>
 
 <p>However, in an object-oriented world, utility classes are considered a very bad
-(some even may say "terrible") practice.</p>
+(some even may say “terrible”) practice.</p>
 
 <p>There have been many discussions of this subject; to name a few:
 <a href="http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx">Are Helper Classes Evil?</a> by Nick Malik,
@@ -120,12 +120,12 @@ public class NumberUtils {
 <a href="http://stackoverflow.com/questions/3340032/utility-classes-are-evil">Utility Classes are Evil</a>.</p>
 
 <p>A dry summary of all their arguments is that utility classes are not proper
-<strong>objects</strong>; therefore, they don't fit into object-oriented world. They were
+<strong>objects</strong>; therefore, they don’t fit into object-oriented world. They were
 inherited from <strong>procedural</strong> programming, mostly because we were used to a
 functional decomposition paradigm back then.</p>
 
 <p>Assuming you agree with the arguments and want to stop using utility classes,
-I'll show by example how these creatures can be replaced with proper
+I’ll show by example how these creatures can be replaced with proper
 <a href="/2016/07/14/who-is-object.html">objects</a>.</p>
 
 <h2 id="procedural-example">Procedural Example</h2>
@@ -147,7 +147,7 @@ from Apache Commons:</p>
 <p>The above code may look clean; however, this is procedural programming, not
 object-oriented. We are manipulating data (bytes and bits) and explicitly
 instructing the computer from where to retrieve them and then where to put them
-on every single line of code. We're defining <em>a procedure of execution</em>.</p>
+on every single line of code. We’re defining <em>a procedure of execution</em>.</p>
 
 <h2 id="object-oriented-alternative">Object-Oriented Alternative</h2>
 
@@ -177,7 +177,7 @@ exposing the behavior we are seeking:</p>
 
 <pre>int max = new Max(10, 5).intValue();</pre>
 
-<p>Potato, potato? Not really; just read on...</p>
+<p>Potato, potato? Not really; just read on…</p>
 
 <h2 id="objects-instead-of-data-structures">Objects Instead of Data Structures</h2>
 
@@ -196,8 +196,8 @@ in an object-oriented manner:</p>
 
 <p><code>FileLines</code> implements <code>Collection&lt;String&gt;</code> and encapsulates  all file reading
 and writing operations. An instance of <code>FileLines</code> behaves exactly as a
-collection of strings and hides all I/O operations. When we iterate it---a
-file is being read. When we <code>addAll()</code> to it---a file is being written.</p>
+collection of strings and hides all I/O operations. When we iterate it—a
+file is being read. When we <code>addAll()</code> to it—a file is being written.</p>
 
 <p><code>Trimmed</code> also implements <code>Collection&lt;String&gt;</code> and encapsulates a collection of
 strings (<a href="http://en.wikipedia.org/wiki/Decorator_pattern">Decorator pattern</a>).
@@ -220,11 +220,11 @@ than using a <code>readLines()</code> method in a 80+ methods and 3000 lines uti
 
 <p>An object-oriented approach enables lazy execution. The <code>in</code> file is not read
 until its data is required. If we fail to open <code>out</code> due to some I/O error, the
-first file won't even be touched. The whole show starts only after we call <code>addAll()</code>.</p>
+first file won’t even be touched. The whole show starts only after we call <code>addAll()</code>.</p>
 
 <p>All lines in the second snippet, except the last one, instantiate and compose
 smaller objects into bigger ones. This object composition is rather cheap for
-the CPU since it doesn't cause any data transformations.</p>
+the CPU since it doesn’t cause any data transformations.</p>
 
 <p>Besides that, it is obvious that the second script runs in O(1) space, while the
 first one executes in O(n). This is the consequence of our procedural approach

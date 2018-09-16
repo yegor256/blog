@@ -93,7 +93,7 @@ can help you in unit and integration testing of your HTTP clients.</p>
 
 
 
-<p>Let me show you an example first. In the example, I'm using
+<p>Let me show you an example first. In the example, I’m using
 <a href="https://github.com/hamcrest">hamcrest</a> for assertions.</p>
 
 <pre>MkContainer container = new MkGrizzlyContainer()
@@ -113,26 +113,26 @@ MatcherAssert.assertThat(
   Matchers.hasItem("Myself")
 );</pre>
 
-<p>Now, let's discover what happens here.</p>
+<p>Now, let’s discover what happens here.</p>
 
 <p>In the first few lines, I create an instance of
 <a href="http://http.jcabi.com/apidocs-1.1/com/jcabi/http/mock/MkContainer.html"><code>MkContainer</code></a>,
 which literally has four methods: <code>next(MkAnswer)</code>, <code>start()</code>, <code>stop()</code>, and
 <code>home()</code>.</p>
 
-<p>It works as an HTTP server with a "first-in-first-out" queue for HTTP answers.
+<p>It works as an HTTP server with a “first-in-first-out” queue for HTTP answers.
 We add answers, and the server returns them in response to HTTP requests.</p>
 
 <p>The server starts on <code>start()</code> call and stops on <code>stop()</code>. Its method <code>home()</code>
-returns a URL of its "home page." The server then binds itself to a randomly
+returns a URL of its “home page.” The server then binds itself to a randomly
 allocated TCP port.</p>
 
 <p>The container finds the first available and unoccupied port.</p>
 
 <p>In the example above, I added just one answer. This means that the container
 will reply only to the first HTTP request with that answer and that all
-consecutive requests will cause HTTP responses with status "internal server
-error <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">500</a>."</p>
+consecutive requests will cause HTTP responses with status “internal server
+error <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">500</a>.”</p>
 
 <p>In lines 5 through 8, I make an HTTP request to the already started server.
 Also, I make an assertion that the body of the HTTP response contains the text
@@ -157,7 +157,7 @@ the container will be killed together with the JVM. However, for the sake of
 clarity, I would recommend you stop the container in the <code>finally</code> block.</p>
 
 <p>On line 12, I ask the stopped container to give me the first request it
-received. This mechanism is similar conceptually to the "verify" technology of
+received. This mechanism is similar conceptually to the “verify” technology of
 mocking frameworks. For example, <a href="http://mockito.org/">Mockito</a>.</p>
 
 <pre>MkQuery query = container.take();

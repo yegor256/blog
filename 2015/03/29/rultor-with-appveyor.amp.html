@@ -81,14 +81,14 @@ they can work together.
 <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a> service that builds
 Windows projects. <a href="http://www.rultor.com">Rultor</a> is a DevOps assistant, which automates
 release, merge and deploy operations, using Docker containers. These posts
-explain how Rultor works and what it's for:
+explain how Rultor works and what it’s for:
 <a href="/2014/07/24/rultor-automated-merging.html">Rultor.com, a Merging Bot</a>
 and <a href="/2014/07/21/read-only-master-branch.html">Master Branch Must Be Read-Only</a>.</p>
 
 
 
 <p>The problem is that Rultor is running all scripts inside Docker containers
-and Docker can't build Windows projects. The only and the best logical solution
+and Docker can’t build Windows projects. The only and the best logical solution
 is to trigger AppVeyor before running all other scripts in Docker. If AppVeyor
 gives a green light, we continue with our usual in-Docker script. Otherwise,
 we fail the entire build. Below I explain how this automation was configured
@@ -98,7 +98,7 @@ in <a href="http://www.takes.org">Takes framework</a>.</p>
 
 <p>First, I got a token from my AppVeyor account (at the time
 of writing it was <a href="https://ci.appveyor.com/api-token">here</a>). I created
-a text file <code>curl-appveyor.cfg</code> with this content (it's not my real token inside,
+a text file <code>curl-appveyor.cfg</code> with this content (it’s not my real token inside,
 just an example):</p>
 
 <pre>--silent
@@ -120,7 +120,7 @@ GitHub repository.</p>
 $ git commit -am 'CURL config for Appveyor'
 $ git push origin master</pre>
 
-<p>Then, I configured AppVeyor "pinging" from Docker script.
+<p>Then, I configured AppVeyor “pinging” from Docker script.
 This is what I did in <a href="https://github.com/yegor256/takes/blob/master/.rultor.yml"><code>.rultor.yml</code></a>:</p>
 
 <pre>decrypt:
@@ -146,17 +146,17 @@ merge:
     done
     mvn clean install</pre>
 
-<p>There is no magic here, it's very simple. First, I start a new build
+<p>There is no magic here, it’s very simple. First, I start a new build
 using <code>/api/builds</code> end-point of
 <a href="http://www.appveyor.com/docs/api/projects-builds#start-build-of-pull-request-github-only">AppVeyor REST API</a>.
 <code>${pull_id}</code> is an environment variable that is coming from Rultor,
 it contains an integer number of current pull request.</p>
 
-<p>I'm using <a href="http://stedolan.github.io/jq/">jq</a>
+<p>I’m using <a href="http://stedolan.github.io/jq/">jq</a>
 in order to parse AppVeyor JSON output.</p>
 
-<p>Once the build is started, I'm getting its unique <code>version</code> and start
-looping to check its status. I'm waiting for <code>success</code> or <code>failed</code>. Anything
+<p>Once the build is started, I’m getting its unique <code>version</code> and start
+looping to check its status. I’m waiting for <code>success</code> or <code>failed</code>. Anything
 else will mean that the build is still in progress and I should keep looping.</p>
 
 <p>You can see how it works in this pull request, for example:

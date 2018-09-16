@@ -88,10 +88,10 @@ of how all this can be used together with the <a href="http://www.takes.org">Tak
 
 
 
-<p>First, let's agree that templating is a bad idea in the first place. Yes, I mean
+<p>First, let’s agree that templating is a bad idea in the first place. Yes, I mean
 it. The entire design of JSP is wrong, with all due respect to its creators.
-Here is how it works: Let's say my website has to fetch the current exchange rate of
-the euro from a database and show it on the home page. Here's how my <code>index.jsp</code>
+Here is how it works: Let’s say my website has to fetch the current exchange rate of
+the euro from a database and show it on the home page. Here’s how my <code>index.jsp</code>
 would look:</p>
 
 <pre>&lt;html&gt;
@@ -101,15 +101,15 @@ would look:</p>
 &lt;/html&gt;</pre>
 
 <p>In order to create HTML, the JSP engine will have to call <code>get()</code> on object
-<code>rates</code> and render what's returned through <code>toString()</code>. It's a terrible
+<code>rates</code> and render what’s returned through <code>toString()</code>. It’s a terrible
 design for a few reasons. First, the view is tightly coupled with the model.
 Second, the flexibility of rendering is very limited. Third, the result of
 rendering is not reusable, and views are not stackable. There are many other
-reasons ... more about them in one of the next articles.</p>
+reasons … more about them in one of the next articles.</p>
 
 
 
-<p>Let's see how this should be done right. First, we let our model generate
+<p>Let’s see how this should be done right. First, we let our model generate
 the output in XML format, for example:</p>
 
 <pre>&lt;?xml version="1.1"?&gt;
@@ -135,10 +135,10 @@ we create the view as an XSL stylesheet, which will transform XML into HTML:</p>
   &lt;/xsl:template&gt;
 &lt;/xsl:stylesheet&gt;</pre>
 
-<p>As you see, the view doesn't know anything about the model in terms of
+<p>As you see, the view doesn’t know anything about the model in terms of
 implementation. All it knows is the format of XML data output produced
 by the model. Here is how you design it in the <a href="http://www.takes.org">Takes framework</a>.
-Let's start with a simple example:</p>
+Let’s start with a simple example:</p>
 
 <pre>import org.takes.http.Exit;
 import org.takes.http.FtCli;
@@ -148,9 +148,9 @@ public final class Entry {
   }
 }</pre>
 
-<p>It's a simple web application that starts a web server
+<p>It’s a simple web application that starts a web server
 and never ends (it waits for connections in daemon mode). To make it work,
-we should create a simple "take" named <code>TkApp</code>:</p>
+we should create a simple “take” named <code>TkApp</code>:</p>
 
 <pre>import org.takes.Take;
 import org.takes.tk.TkWrap;
@@ -166,7 +166,7 @@ final class TkApp extends TkWrap {
   }
 }</pre>
 
-<p>This "take" always returns the same XML response, but it doesn't
+<p>This “take” always returns the same XML response, but it doesn’t
 do any XSL transformation yet. We need to add the <code>RsXSLT</code> class to the picture:</p>
 
 <pre>@Override
@@ -184,13 +184,13 @@ public Response act() {
 
 <p>Excuse me for using string concatenation, which is a
 <a href="/2014/06/19/avoid-string-concatenation.html">bad practice</a>;
-it's merely for the simplicity of the example.</p>
+it’s merely for the simplicity of the example.</p>
 
 <p>As you see, I also added an XML stylesheet processing instruction to
 the XML. <code>RsXSLT</code> will understand it and try to find the <code>/xsl/index.xsl</code>
 resource on classpath. You see the content of that file above.</p>
 
-<p>That's it.</p>
+<p>That’s it.</p>
 
 <p>Well, not really. Building XML from strings is not a good idea. We
 have a better instrument in the Takes framework. We use <a href="http://www.xembly.org">Xembly</a>,
@@ -223,7 +223,7 @@ public Response act() {
 <p>The most important class here is
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/RsXembly.html"><code>RsXembly</code></a>.
 The idea is to let
-model classes expose their data through Xembly "directives," which
+model classes expose their data through Xembly “directives,” which
 will later be applied to a DOM structure by <code>RsXembly</code>.</p>
 
 <p><code>XeChain</code>, <code>XeStylesheet</code>, <code>XeAppend</code>, and <code>XeDirectives</code> expose
@@ -233,20 +233,20 @@ Their names describe their
 intentions rather well.
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeChain.html"><code>XeChain</code></a>
 just chains everything that is
-delivered by encapsulated "directive sources."
+delivered by encapsulated “directive sources.”
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeStylesheet.html"><code>XeStylesheet</code></a>
 returns directives that create a single XML processing instruction.
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeAppend.html"><code>XeAppend</code></a>
 creates an XML node and adds encapsulated directives to it.
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/XeDirectives.html"><code>XeDirectives</code></a>
-simply returns what's inside.</p>
+simply returns what’s inside.</p>
 
 <p>In the end, this code will create exactly the same XML document
 as I created above with string concatenation.</p>
 
 <p>The beauty of this approach is in the perfect decoupling of data generation
 and XML building and translation between XML and HTML. It is perfectly reusable
-and "stackable." We can transform the data in XML format multiple times,
+and “stackable.” We can transform the data in XML format multiple times,
 applying different XSL stylesheets to each one. We can even transform them into
 <a href="/2015/11/16/json-vs-xml.html">JSON</a>
 without changing a line of code in model classes.</p>

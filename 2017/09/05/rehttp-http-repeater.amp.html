@@ -86,13 +86,13 @@ sends the request again. The request simply gets lost. There is absolutely
 no way to receive it again once the app is back up. I realized that I needed
 a <a href="https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/">service mesh</a>
 between GitHub and my web app, to accept HTTP
-requests and repeat them later if they can't be delivered immediately.</p>
+requests and repeat them later if they can’t be delivered immediately.</p>
 
 
 
 <p>I created <a href="http://www.rehttp.net">rehttp.net</a> to do exactly that.</p>
 
-<p>See, the URL I've been giving to GitHub is this one:</p>
+<p>See, the URL I’ve been giving to GitHub is this one:</p>
 
 <pre>http://www.0pdd.com/hook/github</pre>
 
@@ -102,12 +102,12 @@ requests and repeat them later if they can't be delivered immediately.</p>
 
 <p>It looks very similar, but starts with <code>https://www.rehttp.net/p/</code>. GitHub sends
 all webhook PUT/POST requests to the ReHTTP server, which stores
-them in a temporary database (I'm using AWS DynamoDB).</p>
+them in a temporary database (I’m using AWS DynamoDB).</p>
 
 <p>ReHTTP attempts to deliver them immediately. If something goes wrong and
 the server HTTP response code is not in the 200-299 range, the next attempt is made
 in about an hour. Then it retries every hour for about a day. If all
-attempts fail, it abandons the request and that's it.</p>
+attempts fail, it abandons the request and that’s it.</p>
 
 <p>What is interesting is that now I can see a summary of my API
 <a href="https://www.rehttp.net/i?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub">here</a>.

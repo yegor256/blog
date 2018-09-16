@@ -77,7 +77,7 @@ instead, create and ship fake classes together with your code.
       <p>While mock objects are perfect instruments for unit testing,
 mocking through mock frameworks may turn your unit tests into
 an unmaintainable mess. Thanks to them we often hear that
-"mocking is bad" and "mocking is evil."</p>
+“mocking is bad” and “mocking is evil.”</p>
 
 <p>The root cause of this complexity is that our objects
 are too big. They have many methods and these methods
@@ -132,7 +132,7 @@ before the actual testing.</p>
 
 <h2 id="sample-use-case">Sample Use Case</h2>
 
-<p>Let's say, you're developing a project that uses jcabi-dynamo for
+<p>Let’s say, you’re developing a project that uses jcabi-dynamo for
 managing data in <a href="https://aws.amazon.com/dynamodb/">DynamoDB</a>.
 Your class may look similar to this:</p>
 
@@ -165,7 +165,7 @@ it is returned by the <code>table()</code> method. Then, we have to mock a <code
 
 
 <p>The unit test will be much longer than the class itself. Besides that,
-its real purpose, which is to test the retrieval of an employee's salary, will not
+its real purpose, which is to test the retrieval of an employee’s salary, will not
 be obvious to the reader.</p>
 
 <p>Moreover, when we need to test a similar method of a similar class,
@@ -217,8 +217,8 @@ a single <code>salary</code> attribute.</p>
 <p>Finally, we create an instance of class <code>Employee</code> and check how it
 fetches the salary from DynamoDB.</p>
 
-<p>I'm currently doing the same thing in almost every open source library I'm working with.
-I'm creating a collection of fake classes, that simplify testing
+<p>I’m currently doing the same thing in almost every open source library I’m working with.
+I’m creating a collection of fake classes, that simplify testing
 inside the library and for its users.</p>
 
 <p>BTW, a great article on the same subject:

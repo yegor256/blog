@@ -80,7 +80,7 @@ the Takes framework does it with a few composable decorators.
 <p>When you enter your email and password into the Facebook login page,
 you get into your account. Then, wherever you go in the site,
 you always see your photo at the top right corner of the page. Facebook
-remembers you and doesn't ask for the password again and again. This works
+remembers you and doesn’t ask for the password again and again. This works
 thanks to <a href="https://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookies</a>
 and is called <strong>cookie-based authentication</strong>. Even though this mechanism
 often causes some security problems, it is very popular and simple.
@@ -88,9 +88,9 @@ Here is how <a href="http://www.takes.org">Takes</a> makes it possible in a few 
 
 
 
-<p>First, let's see how it works. Moreover, let's see how I believe it should work.</p>
+<p>First, let’s see how it works. Moreover, let’s see how I believe it should work.</p>
 
-<p>Step one: The user enters an email and password and clicks "submit." The server
+<p>Step one: The user enters an email and password and clicks “submit.” The server
 receives a POST request with this information inside:</p>
 
 <pre>POST / HTTP/1.1
@@ -117,11 +117,11 @@ Host: www.facebook.com
 Cookie: user=me@yegor256.com</pre>
 
 <p>The server gets my email from the <code>Cookie</code>
-header and understands that it's me again! No need to ask for the
+header and understands that it’s me again! No need to ask for the
 password once more. The server trusts the information from the cookie.
-That's it. That's what cookie-based authentication is all about.</p>
+That’s it. That’s what cookie-based authentication is all about.</p>
 
-<h2 id="wait-what-about-security">Wait ... What About Security?</h2>
+<h2 id="wait--what-about-security">Wait … What About Security?</h2>
 
 <p>Right, what about security? If the server trusts any browser request with
 a user email in the <code>Cookie</code> header, anyone would be able to send my email
@@ -137,7 +137,7 @@ by <a href="https://en.wikipedia.org/wiki/XOR_cipher">XOR cipher</a> with <code>
 Location: www.facebook.com
 Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39</pre>
 
-<p>This is not the best encryption mechanism, though; for proper encryption, it's better
+<p>This is not the best encryption mechanism, though; for proper encryption, it’s better
 to use something stronger like <a href="https://en.wikipedia.org/wiki/Data_Encryption_Standard">DES</a>.</p>
 
 <p>This all sounds good, but what if someone hijacks the traffic between the server and the
@@ -148,16 +148,16 @@ person into my account. This type of attack is called
 <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle</a> (MITM).
 To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
-SSL encryption. That's done by an extra flag in the <code>Set-Cookie</code> header:</p>
+SSL encryption. That’s done by an extra flag in the <code>Set-Cookie</code> header:</p>
 
 <pre>HTTP/1.1 303 See Other
 Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure</pre>
 
 <p>There is yet another type of attack associated with cookie-based authentication,
-based on a browser's ability to expose all cookies associated with a web page
+based on a browser’s ability to expose all cookies associated with a web page
 to JavaScript executed inside it. An attacker may inject some malicious
-JavaScript code into the page (Don't ask me how ... this will happen only
+JavaScript code into the page (Don’t ask me how … this will happen only
 if your entire HTML rendering is done wrong), and this code will gain access
 to the cookie. Then, the code will send the cookie somewhere else so
 the attacker can collect it. This type of attack is called
@@ -169,10 +169,10 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure; HttpOnly</pre>
 
 <p>The presence of this flag will tell the browser that this particular cookie can
-be transferred back to the server only through HTTP requests. JavaScript won't
+be transferred back to the server only through HTTP requests. JavaScript won’t
 have access to it.</p>
 
-<h2 id="how-its-done-in-takes">How It's Done in Takes</h2>
+<h2 id="how-its-done-in-takes">How It’s Done in Takes</h2>
 
 <p>Here is how this cookie-based authentication mechanism is designed in the
 <a href="http://www.takes.org">Takes</a> framework. The entire framework consists of
@@ -181,10 +181,10 @@ have access to it.</p>
 explains the framework in more detail). When the request comes in,
 we should find the authentication cookie in the <code>Cookie</code> header and translate
 it to the user credentials. When the response goes out, we should add the
-<code>Set-Cookie</code> header to it with the encrypted user credentials. That's it. Just
+<code>Set-Cookie</code> header to it with the encrypted user credentials. That’s it. Just
 these two steps.</p>
 
-<p>Let's say we have an account page that is supposed to show the current user's
+<p>Let’s say we have an account page that is supposed to show the current user’s
 balance:</p>
 
 <pre>final class TkAccount implements Take {
@@ -206,7 +206,7 @@ the user, encoded inside an authenticating cookie. To make this mechanism
 reusable, we have the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/TkAuth.html"><code>TkAuth</code></a>
 decorator, which wraps an existing <em>take</em>,
 decodes an incoming cookie, and adds a new <code>TkAuth</code>
-header to the request with the user's identification information:</p>
+header to the request with the user’s identification information:</p>
 
 <pre>final Codec codec = new CcHex(new CcXOR(new CcPlain()));
 final Pass pass = new PsCookie(codec);
@@ -243,7 +243,7 @@ to authenticate the user and create an <code>Identity</code> object.</p>
 
 <h2 id="how-is-it-composable">How Is It Composable?</h2>
 
-<p>This mechanism is indeed very extensible and "composable." Let's say we
+<p>This mechanism is indeed very extensible and “composable.” Let’s say we
 want to skip authentication during integration testing. Here is how:</p>
 
 <pre>new TkAuth(
@@ -265,7 +265,7 @@ Using a single boolean argument in its constructor, it makes a decision whether
 to return a fake identity or return nothing. With just a single boolean
 trigger, we can switch off the entire authentication mechanism in the app.</p>
 
-<p>Let's say you want to authenticate users through Facebook OAuth. Here is how:</p>
+<p>Let’s say you want to authenticate users through Facebook OAuth. Here is how:</p>
 
 <pre>new TkAuth(
   take, // original application "take"
@@ -292,7 +292,7 @@ The link must include something like this: <code>?PsByFlag=PsFacebook</code>. Th
 tell <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsByFlag.html"><code>PsByFlag</code></a>
 that this request authenticates a user.</p>
 
-<p><code>PsByFlag</code> will iterate through all encapsulated "pairs" and try to find the
+<p><code>PsByFlag</code> will iterate through all encapsulated “pairs” and try to find the
 right one.
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/social/PsFacebook.html"><code>PsFacebook</code></a>
 will be the first and the right one. It will connect to the Facebook API using the

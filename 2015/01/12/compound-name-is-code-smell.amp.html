@@ -102,14 +102,14 @@ end</pre>
 
 <p>The visible scope of variable <code>csvFileName</code> is method <code>initialize()</code>, which
 is a constructor of the class <code>CSV</code>. Why does it need a compound name
-that consists of three words? Isn't it already clear that a single-argument
+that consists of three words? Isn’t it already clear that a single-argument
 constructor of class <code>CSV</code> expects the name of a file with
 comma-separated values? I would rename it to <code>file</code>.</p>
 
 <p>Next, the scope of <code>@fileName</code> is the entire <code>CSV</code> class. Renaming a single
-variable in the class to just <code>@file</code> won't introduce
-any confusion. It's still clear what file we're dealing with.
-The same situation exists with the <code>csvLine</code> variable. It is clear that we're
+variable in the class to just <code>@file</code> won’t introduce
+any confusion. It’s still clear what file we’re dealing with.
+The same situation exists with the <code>csvLine</code> variable. It is clear that we’re
 dealing with CSV lines here. The <code>csv</code> prefix is just a redundancy.
 Here is how I would refactor the class:</p>
 
@@ -126,13 +126,13 @@ end</pre>
 
 <p>Now it looks clear and concise.</p>
 
-<p>If you can't perform such a refactoring, it means your scope is too
+<p>If you can’t perform such a refactoring, it means your scope is too
 big and/or too complex. An ideal method should deal with up to five variables,
 and an ideal class should encapsulate up to five properties.</p>
 
-<p>If we have five variables, can't we find five nouns to name them?</p>
+<p>If we have five variables, can’t we find five nouns to name them?</p>
 
-<p>Adam and Eve didn't have second names. They were unique in Eden,
+<p>Adam and Eve didn’t have second names. They were unique in Eden,
 as were many other characters in the Old Testament. Second and middle
 names were invented later in order to resolve ambiguity. To keep
 your methods and classes clean and solid, and to prevent ambiguity, try to give your variables

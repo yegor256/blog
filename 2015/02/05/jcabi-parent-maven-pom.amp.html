@@ -76,25 +76,25 @@ to project; jcabi-parent offers a pre-configured solution.
       <h1>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</h1>
       
 
-<p>Maven is a build automation tool mostly for Java projects. It's a great
+<p>Maven is a build automation tool mostly for Java projects. It’s a great
 tool, but it has one important drawback that has motivated the creation
 of similar tools, like Gradle and SBT. That weakness is its verbosity of configuration.
 Maven gets all project build parameters from <code>pom.xml</code>, an XML
-file that can get very long. I've seen POM files of 3,000-plus lines.
-Taking into account 1) recent DSL buzz and 2) fear of XML, it's
-only logical that many people don't like Maven because of its <code>pom.xml</code> verbosity.</p>
+file that can get very long. I’ve seen POM files of 3,000-plus lines.
+Taking into account 1) recent DSL buzz and 2) fear of XML, it’s
+only logical that many people don’t like Maven because of its <code>pom.xml</code> verbosity.</p>
 
-<p>But even if you're an XML fan who enjoys its strictness and elegance
-(like myself), you won't like the necessity to repeat yourself in <code>pom.xml</code>
-for every project. If you're working on multiple projects, code duplication
+<p>But even if you’re an XML fan who enjoys its strictness and elegance
+(like myself), you won’t like the necessity to repeat yourself in <code>pom.xml</code>
+for every project. If you’re working on multiple projects, code duplication
 will be enormous. An average Java web app uses a few dozen standard Maven plugins
 and almost the same number of pretty common dependencies, like
 JUnit, Apache Commons, Log4J, Mockito, etc. All of them have their versions
 and configurations, which have to be specified if you want to keep
 the project stable and avoid Maven warnings. Thus, once a new version
 of a plugin is released, you have to go through all <code>pom.xml</code> files in
-the projects you're working on and update it there. You obviously understand
-what code duplication means. It's a disaster. However, there is a solution.</p>
+the projects you’re working on and update it there. You obviously understand
+what code duplication means. It’s a disaster. However, there is a solution.</p>
 
 
 
@@ -117,11 +117,11 @@ all in your project is define <code>com.jcabi:parent</code> as your parent POM:<
   [...]
 &lt;/project&gt;</pre>
 
-<p>That's all you need. Now you can remove most of your custom configurations
+<p>That’s all you need. Now you can remove most of your custom configurations
 from <code>pom.xml</code> and rely on defaults provided by jcabi-parent. Its
 <a href="https://github.com/jcabi/jcabi-parent/blob/master/pom.xml"><code>pom.xml</code></a>
 is rather large and properly configured. Multiple projects depend on it, so you
-can be confident that you're using the best possible configuration of
+can be confident that you’re using the best possible configuration of
 all standard plugins.</p>
 
 <p>Here are a few examples of <code>pom.xml</code> from projects that are using

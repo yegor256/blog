@@ -81,9 +81,9 @@ may be validated, on certain terms.
 that constructors must be code-free and do nothing
 aside from attribute initialization. Since then, the most frequently
 asked <a href="https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622">question</a>
-is: What about validation of arguments? If they are "broken,"
-what is the point of creating an object in an "invalid" state?
-Such an object will fail later, at an unexpected moment. Isn't it
+is: What about validation of arguments? If they are “broken,”
+what is the point of creating an object in an “invalid” state?
+Such an object will fail later, at an unexpected moment. Isn’t it
 better to throw an exception at the very moment of instantiation? To fail fast,
 so to speak? Here is what I think.</p>
 
@@ -91,7 +91,7 @@ so to speak? Here is what I think.</p>
 
 <amp-img src="/images/2018/05/punching-the-clown.jpg" alt="Punching the Clown (2009) by Gregori Viens" height="720" width="1274" layout="responsive"></amp-img>
 
-<p>Let's start with this Ruby code:</p>
+<p>Let’s start with this Ruby code:</p>
 
 <pre>class Users {
   def initialize(file)
@@ -109,14 +109,22 @@ so to speak? Here is what I think.</p>
 <p>There are a number of ways to abuse this class:</p>
 
 <ul>
-<li><p>Pass <code>nil</code> to the ctor instead of a file name;</p></li>
-<li><p>Pass something else, which is not <code>String</code>;</p></li>
-<li><p>Pass a file that doesn't exist;</p></li>
-<li><p>Pass a directory instead of a file.</p></li>
+  <li>
+    <p>Pass <code>nil</code> to the ctor instead of a file name;</p>
+  </li>
+  <li>
+    <p>Pass something else, which is not <code>String</code>;</p>
+  </li>
+  <li>
+    <p>Pass a file that doesn’t exist;</p>
+  </li>
+  <li>
+    <p>Pass a directory instead of a file.</p>
+  </li>
 </ul>
 
 <p>Do you see the difference between these four mistakes we can make?
-Let's see how our class can protect itself from each of them:</p>
+Let’s see how our class can protect itself from each of them:</p>
 
 <pre>class Users {
   def initialize(file)
@@ -132,33 +140,33 @@ Let's see how our class can protect itself from each of them:</p>
 }</pre>
 
 <p>The first two potential mistakes were filtered out
-in the constructor, while the other two---later, in the method.
+in the constructor, while the other two—later, in the method.
 Why did I do it this way? Why not put all of them into the constructor?</p>
 
 <p>Because the first two compromise <a href="/2014/12/09/immutable-object-state-and-behavior.html">object state</a>,
-while with the other two---its runtime behavior. You remember that an
+while with the other two—its runtime behavior. You remember that an
 <a href="/2016/07/14/who-is-object.html">object</a> is a representative of
 a set of other objects it encapsulates, called attributes. The object of
-class <code>Users</code> can't <em>represent</em> <code>nil</code> or a number. It can only represent
+class <code>Users</code> can’t <em>represent</em> <code>nil</code> or a number. It can only represent
 a file with a name of type <code>String</code>. On the other hand, what that file
-contains and whether it really is a file---doesn't make the state invalid.
+contains and whether it really is a file—doesn’t make the state invalid.
 It only causes trouble for the behavior.</p>
 
-<p>Even though the difference may look subtle, it's obvious. There are
+<p>Even though the difference may look subtle, it’s obvious. There are
 two phases of interaction with the encapsulated object: <em>connecting</em> and <em>talking</em>.</p>
 
 
 
 <p>First, we encapsulate the <code>file</code> and want to be sure that it really is
-a file. We are not yet talking to it, we don't want it to work for us yet,
+a file. We are not yet talking to it, we don’t want it to work for us yet,
 we just want to make sure it really <em>is</em> an object that we will be able to talk
-to in the near future. If it's <code>nil</code> or a <code>float</code>, we will have problems
-in the future, for sure. That's why we raise an exception from the constructor.</p>
+to in the near future. If it’s <code>nil</code> or a <code>float</code>, we will have problems
+in the future, for sure. That’s why we raise an exception from the constructor.</p>
 
 <p>Then the second phase is talking, where we delegate control to the object
 and expect it to behave correctly. At this phase we may have other validation
 procedures, in order to make sure our interaction will go smoothly.
-It's important to mention that these validations are very situational.
+It’s important to mention that these validations are very situational.
 We may call <code>names()</code> multiple times and every time have a different
 situation with the file on disc. To begin with it may not exist, while in a few seconds
 it will be ready and available for reading.</p>
@@ -169,7 +177,7 @@ In Java, for example,
 we would not need to check the type of <code>file</code>, the compiler would catch
 that error earlier. In Kotlin we would be able to get rid of the NULL
 check, thanks to their <a href="https://kotlinlang.org/docs/reference/null-safety.html">Null Safety</a> feature.
-Ruby is less powerful than those languages, that's why we have to validate "manually."</p>
+Ruby is less powerful than those languages, that’s why we have to validate “manually.”</p>
 
 <p>Thus, to summarize, validating in constructors is <em>not</em> a bad idea, provided
 the validations are <em>not touching the objects</em> but only confirm that they are

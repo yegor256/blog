@@ -79,8 +79,8 @@ avoided.
 Router. Dispatcher. Observer. Listener. Sorter. Encoder. Decoder.
 This is the class names <strong>hall of shame</strong>. Have you seen them in your code?
 In <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">open source libraries</a>
-you're using? In pattern books? They are all wrong.
-What do they have in common? They all end in "-er." And what's wrong with that?
+you’re using? In pattern books? They are all wrong.
+What do they have in common? They all end in “-er.” And what’s wrong with that?
 They are not classes, and the objects they instantiate are not objects.
 Instead, they are collections of procedures pretending to be classes.</p>
 
@@ -89,7 +89,7 @@ Instead, they are collections of procedures pretending to be classes.</p>
 <amp-img src="/images/2015/03/fight-club.jpg" alt="Fight Club (1999) by David Fincher" height="531" width="1276" layout="responsive"></amp-img>
 
 <p><a href="http://en.wikipedia.org/wiki/Peter_Coad">Peter Coad</a>
-used to say: Challenge any class name that ends in "-er." There
+used to say: Challenge any class name that ends in “-er.” There
 are a few good articles about this subject, including
 <a href="http://www.carlopescio.com/2011/04/your-coding-conventions-are-hurting-you.html">Your Coding Conventions Are Hurting You</a>
 by Carlo Pescio,
@@ -97,27 +97,27 @@ by Carlo Pescio,
 by Travis Griggs,
 and <a href="http://www.benhallbenhall.com/2013/01/naming-objects-er-object-names/">Naming Objects – Don’t Use ER in Your Object Names</a>
 by Ben Hall.
-The main argument against this "-er" suffix is that "when you need a manager,
-it's often a sign that the managed are just plain old data structures
-and that the manager is the smart procedure doing the real work."</p>
+The main argument against this “-er” suffix is that “when you need a manager,
+it’s often a sign that the managed are just plain old data structures
+and that the manager is the smart procedure doing the real work.”</p>
 
 
 
 <p>I totally agree but would like to add a few words to this.</p>
 
 <p>I mentioned already in <a href="/2014/11/20/seven-virtues-of-good-object.html">Seven Virtues of a Good Object</a>
-that a good object name is not a job title, but I didn't explain why I think so.
+that a good object name is not a job title, but I didn’t explain why I think so.
 Besides that, in <a href="/2015/02/20/utility-classes-vs-functional-programming.html">Utility Classes Have Nothing to Do With Functional Programming</a>,
 I tried to explain the difference between
 <a href="http://en.wikipedia.org/wiki/Declarative_programming">declarative</a> and
 <a href="http://en.wikipedia.org/wiki/Imperative_programming">imperative</a> programming paradigms.
-Now it's time to put these two pieces together.</p>
+Now it’s time to put these two pieces together.</p>
 
-<p>Let's say I'm an object and you're my client. You give me a bucket of apples
-and ask me to sort them by size. If I'm living in the world of imperative programming,
+<p>Let’s say I’m an object and you’re my client. You give me a bucket of apples
+and ask me to sort them by size. If I’m living in the world of imperative programming,
 you will get them sorted immediately, and we will never interact again.
 I will do my job just as requested, without even thinking <em>why</em> you need
-them sorted. I would be a sorter who doesn't really care about your real intention:</p>
+them sorted. I would be a sorter who doesn’t really care about your real intention:</p>
 
 <pre>List&lt;Apple&gt; sorted = new Sorter().sort(apples);
 Apple biggest = sorted.get(0);</pre>
@@ -128,9 +128,9 @@ Apple biggest = sorted.get(0);</pre>
 who can help you work with a bucket of apples.</p>
 
 <p>Instead, if I lived in the world of declarative programming, I would
-tell you: "<em>Consider them sorted; what do you want to do next?</em>." You, in turn,
+tell you: “<em>Consider them sorted; what do you want to do next?</em>.” You, in turn,
 would tell me that you need the biggest apple now. And I would say,
-"<em>No problem; here it is</em>." In order to return the biggest one, I would not
+“<em>No problem; here it is</em>.” In order to return the biggest one, I would not
 sort them all. I would just go through them all one by one and select the
 biggest. This operation is much faster than sorting first and then selecting
 the first in the list.</p>
@@ -147,17 +147,17 @@ Apple biggest = sorted.get(0);</pre>
 
 <p>Pay special attention to the difference between the <code>sorter</code> and <code>sorted</code> names.</p>
 
-<p>Let's get back to class names. When you add the "-er" suffix to your class name,
-you're immediately turning it into a dumb imperative executor of <em>your</em> will.
+<p>Let’s get back to class names. When you add the “-er” suffix to your class name,
+you’re immediately turning it into a dumb imperative executor of <em>your</em> will.
 You do not allow it to think and improvise. You expect it to do exactly
-what you want---sort, manage, control, print, write, combine, concatenate, etc.</p>
+what you want—sort, manage, control, print, write, combine, concatenate, etc.</p>
 
 <p>An object is a <a href="/2014/11/20/seven-virtues-of-good-object.html">living organism</a>
-that doesn't want to be told what to do. It wants to be an equal partner with
+that doesn’t want to be told what to do. It wants to be an equal partner with
 other objects, exposing behavior according to its contract(s), a.k.a.
 interfaces in Java and C# or protocols in Swift.</p>
 
-<p>Philosophically speaking, the "-er" suffix is a sign of disrespect toward the poor object.</p>
+<p>Philosophically speaking, the “-er” suffix is a sign of disrespect toward the poor object.</p>
 
     </article>
   </body>

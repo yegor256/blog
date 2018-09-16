@@ -128,7 +128,7 @@ marshaller.marshal(book, System.out);</pre>
   &lt;title&gt;Clean Code&lt;/title&gt;
 &lt;/book&gt;</pre>
 
-<p>So what's wrong with it? Pretty much the same thing that's wrong with
+<p>So what’s wrong with it? Pretty much the same thing that’s wrong with
 object-relational mapping, which is explained in
 <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM Is an Offensive Anti-Pattern</a>.
 JAXB is treating an object as a bag of data, extracting the data
@@ -151,17 +151,17 @@ anymore but rather a passive bag of data.</p>
   }
 }</pre>
 
-<p>However, there are a few problems with this approach. First of all, there's
+<p>However, there are a few problems with this approach. First of all, there’s
 massive code duplication. Building an XML document is a rather verbose
 process in Java. If every class had to re-implement it in its
 <code>toXML()</code> method, we would have a big problem with duplicate code.</p>
 
-<p>The second problem is that we don't know exactly what type of wrapping
+<p>The second problem is that we don’t know exactly what type of wrapping
 our XML document should be delivered in. It may be a <code>String</code> or an <code>InputStream</code>
 or maybe an instance of <code>org.w3c.dom.Document</code>. Making many <code>toXML()</code> methods
 in each object would definitely be a disaster.</p>
 
-<p><a href="http://www.xembly.org">Xembly</a> provides a solution. As I've
+<p><a href="http://www.xembly.org">Xembly</a> provides a solution. As I’ve
 <a href="/2014/04/09/xembly-intro.html">mentioned before</a>, it is
 an imperative language for XML constructions and manipulations. Here is
 how we can implement our <code>Book</code> object with the help of Xembly:</p>
@@ -195,7 +195,7 @@ class will convert Xembly directives into an XML document.</p>
 <p>The beauty of this solution is that the internals of the object are
 not exposed via getters and the object is fully in charge of the XML
 marshalling process. In addition, the complexity of these directives
-may be very high---much higher than the rather cumbersome
+may be very high—much higher than the rather cumbersome
 <a href="/2016/04/12/java-annotations-are-evil.html">annotations</a> of JAXB.</p>
 
 <p>Xembly is an open source project, so feel free to submit your questions

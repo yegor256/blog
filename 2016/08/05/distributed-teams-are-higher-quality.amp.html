@@ -75,13 +75,13 @@ a co-located one.
       </p>
       <p>Yegor Bugayenko<br>5 August 2016</p>
       <h1>A Distributed Team Delivers Code of Higher Quality</h1>
-      <p>OK, the title is not exactly accurate. I've missed the "can" word. A distributed
+      <p>OK, the title is not exactly accurate. I’ve missed the “can” word. A distributed
 team <em>can</em> deliver code of much higher quality than a co-located one,
-and now I'll explain why. Of course, not every distributed team can do that.
-Most of them can't even deliver code that works, let alone quality code.
-But if a team---a distributed one---is managed according to the principles
-I'll explain now, the quality will be much higher than the same team can
-achieve if co-located. What I'm going to show you is that working in a
+and now I’ll explain why. Of course, not every distributed team can do that.
+Most of them can’t even deliver code that works, let alone quality code.
+But if a team—a distributed one—is managed according to the principles
+I’ll explain now, the quality will be much higher than the same team can
+achieve if co-located. What I’m going to show you is that working in a
 <a href="/2017/05/02/remote-slaves.html">remote mode</a>,
 if done right, <em>guarantees</em> higher quality of code. Surprised?</p>
 
@@ -89,9 +89,9 @@ if done right, <em>guarantees</em> higher quality of code. Surprised?</p>
 
 <amp-img src="/images/2016/08/oceans-twelve.jpg" alt="Ocean's Twelve (2004) by Steven Soderbergh" height="801" width="1200" layout="responsive"></amp-img>
 
-<p>There are basically four simple ingredients to success ... you know what, there is
+<p>There are basically four simple ingredients to success … you know what, there is
 actually <em>one</em> main ingredient, and its name is <em>control</em>. If we want quality
-to be at some level, we have to <em>enforce</em> it. We can't just declare it; we
+to be at some level, we have to <em>enforce</em> it. We can’t just declare it; we
 need to <em>make</em> it high.</p>
 
 
@@ -105,78 +105,86 @@ and Haskell to Docker, Agile, and lean startups. The more books, the higher
 the quality of the code they write. And third, you have to pay them well. The
 more expensive the developer is, the higher the quality he or she writes.</p>
 
-<p>I'm sure you understand that I'm joking. None of these "proven methods" will either
+<p>I’m sure you understand that I’m joking. None of these “proven methods” will either
 guarantee quality or motivate serious software engineers. Quality can
 be achieved only if it is <em>controlled and enforced</em>. And this is also what
-motivates programmers best of all---the fact that the quality
+motivates programmers best of all—the fact that the quality
 is so important for management that they find mechanisms of
 control and enforcement, and they invest in them. Table tennis and lean
 startup books are not even close to those mechanisms.</p>
 
-<p>So, now let's discuss those four ingredients of quality enforcement, which
+<p>So, now let’s discuss those four ingredients of quality enforcement, which
 we practice in our projects:</p>
 
 <ul>
-<li><p><strong>Read-Only Master Branch</strong>. Nobody can make changes directly to
+  <li>
+    <p><strong>Read-Only Master Branch</strong>. Nobody can make changes directly to
 the master branch; neither the architect nor the project sponsor. The
 master branch is technically read-only. This means that in order
 to compromise the quality of our code, everyone has to go through a
-pull request, pre-flight build, and automated merge procedure.</p></li>
-<li><p><strong>Chats Are Prohibited</strong>. Any modification to our code base, even a very small one,
+pull request, pre-flight build, and automated merge procedure.</p>
+  </li>
+  <li>
+    <p><strong>Chats Are Prohibited</strong>. Any modification to our code base, even a very small one,
 must be submitted in a pull request. A code review
 must also occur in the pull request. We strictly disallow any
 <a href="/2016/08/23/communication-maturity.html">informal communications</a>
 between programmers, including chats, phone
 calls, emails, or face-to-face discussions. This means that the chances
 of quality compromises due to friendship, informal agreements, and trade-offs
-are very low.</p></li>
-<li><p><strong>Build Is Fragile</strong>. We believe that the higher the quality bar, the more
+are very low.</p>
+  </li>
+  <li>
+    <p><strong>Build Is Fragile</strong>. We believe that the higher the quality bar, the more
 difficult it is to modify any piece of code without breaking the build.
 We put a lot of quality checks right into the build to make the lives
 of programmers more difficult. Well, this is not our goal, but it
 happens. The code has to pass all static analysis
 checks, a test coverage threshold,
 <a href="https://en.wikipedia.org/wiki/Mutation_testing">mutation coverage</a> threshold, and many others.
-This means that bad code won't reach the repo, ever.</p></li>
-<li><p><strong>Micro Payments for Deliverables</strong>. We pay only for closed tickets, and
-they are each very small (up to two hours). We don't pay for time spent
+This means that bad code won’t reach the repo, ever.</p>
+  </li>
+  <li>
+    <p><strong>Micro Payments for Deliverables</strong>. We pay only for closed tickets, and
+they are each very small (up to two hours). We don’t pay for time spent
 in the office or in front of the computer. We pay only when tickets
-are closed---no close, no pay. This means that programmers are motivated
-to <em>close</em> them, nothing else.</p></li>
+are closed—no close, no pay. This means that programmers are motivated
+to <em>close</em> them, nothing else.</p>
+  </li>
 </ul>
 
 <p>Thus, as you can see, there is an intentionally created conflict. On one hand,
 programmers have to close tickets and deliver working code. On the other
-hand, it's rather difficult to do; because the quality bar is high, there is
+hand, it’s rather difficult to do; because the quality bar is high, there is
 no room to make compromises, and there is no technical possibility to
 go around an issue. Good programmers survive in this conflict and manage to deliver
 and get paid. Well-paid.</p>
 
-<p>And now, to the main point of this blog post---do you think it's possible
-to build all that in a co-located team? I don't think so. First of all,
-you won't be able to prohibit
+<p>And now, to the main point of this blog post—do you think it’s possible
+to build all that in a co-located team? I don’t think so. First of all,
+you won’t be able to prohibit
 <a href="/2016/08/23/communication-maturity.html">informal communications</a>. No matter how many
 times you ask developers to communicate in tickets, they will resolve
-most of their technical questions face-to-face. It's inevitable.</p>
+most of their technical questions face-to-face. It’s inevitable.</p>
 
 
 
-<p>Second, you won't be able to pay for results only, because programmers will
+<p>Second, you won’t be able to pay for results only, because programmers will
 complain that they are doing a lot of communication in the office that
 has to be paid somehow. In reality, they will spend two to three hours per day on
 actually writing code, and the rest of the time will be spent on
-coffee breaks, Trump talks, and Facebook scrolling. Again, it's
+coffee breaks, Trump talks, and Facebook scrolling. Again, it’s
 inevitable.</p>
 
 <p>And third, people are people. Nobody likes to hit that quality bar
 multiple times a day. They will complain, and eventually you will give them
 direct access to the master branch. First, you will give it to the architect,
 then to a few senior developers, then to a few good friends who you
-absolutely trust. Then to everybody, just in case. It's inevitable.</p>
+absolutely trust. Then to everybody, just in case. It’s inevitable.</p>
 
 <p>To summarize, I believe that co-located teams are just not made for
-quality programming. For fun---yes. For creativity---maybe.
-For burning investors' money---absolutely. For quality---not really.</p>
+quality programming. For fun—yes. For creativity—maybe.
+For burning investors’ money—absolutely. For quality—not really.</p>
 
     </article>
   </body>

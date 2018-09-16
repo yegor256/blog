@@ -81,13 +81,13 @@ though I wrote about
 <a href="/2016/07/06/data-transfer-object.html">DTO</a>,
 and
 <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>,
-I haven't had a chance
-yet to mention DAO. Here is my take on it: it's as much of a shame
-as its friends---ORM, DTO, and getters. In a nutshell,
+I haven’t had a chance
+yet to mention DAO. Here is my take on it: it’s as much of a shame
+as its friends—ORM, DTO, and getters. In a nutshell,
 a <a href="http://www.oracle.com/technetwork/java/dataaccessobject-138824.html">Data Access Object</a>
 is an object <a href="https://en.wikipedia.org/wiki/Data_access_object">that</a>
-"provides an abstract interface to some type of database or other
-persistence mechanism." The purpose is noble, but the implementation
+“provides an abstract interface to some type of database or other
+persistence mechanism.” The purpose is noble, but the implementation
 is terrible.</p>
 
 
@@ -102,7 +102,7 @@ is terrible.</p>
   // Other methods here ...
 }</pre>
 
-<p>The idea is simple---method <code>find()</code> creates
+<p>The idea is simple—method <code>find()</code> creates
 a <a href="/2016/07/06/data-transfer-object.html">DTO</a>
 <code>Book</code>, someone else injects new data into it and calls <code>update()</code>:</p>
 
@@ -113,17 +113,17 @@ dao.update(book);</pre>
 
 <p>What is wrong, you ask? Everything that was wrong with
 <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM</a>,
-but instead of a "session" we have this DAO. The problem remains the
+but instead of a “session” we have this DAO. The problem remains the
 same: the <code>book</code> is not an object, but a data container. I quote
 my own three-year-old statement from the <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM article</a>,
 with a slight change in the name:
-"DAO, instead of encapsulating database interaction inside an object,
-extracts it away, literally tearing a solid and cohesive living organism apart."
+“DAO, instead of encapsulating database interaction inside an object,
+extracts it away, literally tearing a solid and cohesive living organism apart.”
 For more details, please check that article.</p>
 
 <p>However, I have to say that I have something like DAOs in most of my
 <a href="/pets.html">pet projects</a>, but they
-don't return or accept DTOs. Instead, they return objects and sometimes accept
+don’t return or accept DTOs. Instead, they return objects and sometimes accept
 operations on them. Here are a few examples. Look at this
 <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java"><code>Pipes</code></a>
 interface from
@@ -135,7 +135,7 @@ interface from
 }</pre>
 
 <p>Its method <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L55"><code>add()</code></a>
-creates a new item in the "collection" and method
+creates a new item in the “collection” and method
 <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L62"><code>pipe()</code></a>
 returns a single object from the collection. The
 <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java"><code>Pipe</code></a>
@@ -143,7 +143,7 @@ is not a DTO, it is
 a normal object that is fully capable of doing all necessary database
 operations, without any help from a DAO. For example, there is
 <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java#L63"><code>Pipe.status(String)</code></a>
-method to update its status. I'm not going to use <code>Pipes</code> for that, I just do
+method to update its status. I’m not going to use <code>Pipes</code> for that, I just do
 <code>pipe.status("Hello, world!")</code>.</p>
 
 <p>Here is yet another example from
@@ -156,11 +156,12 @@ Then, when we want to delete a domain, we just call
 The domain is fully capable of doing all necessary database manipulations.</p>
 
 <p>The problem with DAO is right in its name, I believe. It says that we are
-accessing "data" and does exactly that: goes to the database, retrieves
+accessing “data” and does exactly that: goes to the database, retrieves
 some data, and returns <em>data</em>. Not an object, but data, also known as a
-"data transfer object." As we <a href="/2016/11/21/naked-data.html">discussed before</a>,
+“data transfer object.” As we <a href="/2016/11/21/naked-data.html">discussed before</a>,
 direct data manipulations are what break encapsulation and make
 object-oriented code procedural and unmaintainable.</p>
+
 
     </article>
   </body>

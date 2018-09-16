@@ -91,7 +91,7 @@ public class Foo {
   }
 }</pre>
 
-<p>What's wrong with it? Code duplication.</p>
+<p>What’s wrong with it? Code duplication.</p>
 
 
 
@@ -115,13 +115,13 @@ public class Foo {
 }</pre>
 
 <p>This looks much cleaner to me and does exactly
-the same---sends a single log line to the SLF4J
+the same—sends a single log line to the SLF4J
 logging facility. Besides, it check automatically whether a given logging
 level is enabled (for performance optimization) and formats the
 given string using <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html"><code>Formatter</code></a>
 (same as <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,+java.lang.Object...%29"><code>String.format()</code></a>).</p>
 
-<p>For convenience, there are also a number of "<a href="http://log.jcabi.com/decors.html">decors</a>"
+<p>For convenience, there are also a number of “<a href="http://log.jcabi.com/decors.html">decors</a>”
 implemented in the library.</p>
 
 <p>The library ships as a JAR dependency in
@@ -132,6 +132,7 @@ implemented in the library.</p>
   &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
   &lt;artifactId&gt;jcabi-log&lt;/artifactId&gt;
 &lt;/dependency&gt;</pre>
+
 
     </article>
   </body>

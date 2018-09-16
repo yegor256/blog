@@ -78,22 +78,22 @@ can be hosted there
       
 
 <p>The purpose of Continuous Integration is to tell us, the developers,
-when the product we're working on is not "packagable" any more. The
+when the product we’re working on is not “packagable” any more. The
 sooner we get the signal, the better. Why? Because the damage will
 be younger if we find it sooner. The younger the damage, the easier it is
 to fix. There are many modern and high-quality
 <a href="/2014/10/05/ten-hosted-continuous-integration-services.html">hosted continuous integration services</a>,
 but only one of them (to my knowledge) supports Windows as a build
-platform---<a href="http://www.appveyor.com">appveyor.com</a>. My experience
-tells me that it's a good practice to continuously integrate on
+platform—<a href="http://www.appveyor.com">appveyor.com</a>. My experience
+tells me that it’s a good practice to continuously integrate on
 different platforms at the same time, especially when developing an
-open source library. That's why, in <a href="http://www.zerocracy.com">Zerocracy</a>
-we're using AppVeyor in combination with <a href="http://www.travis-ci.org">Travis</a>.</p>
+open source library. That’s why, in <a href="http://www.zerocracy.com">Zerocracy</a>
+we’re using AppVeyor in combination with <a href="http://www.travis-ci.org">Travis</a>.</p>
 
 
 
 <p>This is how I managed to configure AppVeyor to build my Java Maven projects
-(this is <code>appveyor.yml</code> configuration file you're supposed to place
+(this is <code>appveyor.yml</code> configuration file you’re supposed to place
 in the root directory of your GitHub repository):</p>
 
 <pre>version: '{build}'

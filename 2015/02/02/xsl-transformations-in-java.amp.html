@@ -80,22 +80,22 @@ call with the help of jcabi-xml.
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
-you have to write a few dozen lines of code---and maybe even more
+you have to write a few dozen lines of code—and maybe even more
 than that if proper exception handling and logging is needed.
 <a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a> is
 a small open source library that makes life much easier by enabling
 XML parsing and XPath traversing with
-<a href="/2014/04/24/java-xml-parsing-and-traversing.html">a few simple methods</a>. Let's
+<a href="/2014/04/24/java-xml-parsing-and-traversing.html">a few simple methods</a>. Let’s
 see how this library helps in XSL transformations.</p>
 
 
 
-<p>First, take a look at a practical example---<a href="http://www.rultor.com">rultor.com</a>---a hosted DevOps assistant that
+<p>First, take a look at a practical example—<a href="http://www.rultor.com">rultor.com</a>—a hosted DevOps assistant that
 <a href="/2014/07/24/rultor-automated-merging.html">automates</a>
-release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. "talk")
+release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. “talk”)
 in a DynamoDB record. There are multiple situations to handle
-in each talk; that's why using multiple columns of a record is not
-really feasible. Instead, we're keeping only a few parameters of each talk
+in each talk; that’s why using multiple columns of a record is not
+really feasible. Instead, we’re keeping only a few parameters of each talk
 in record columns (like ID and name) and putting all the rest in a single
 XML column.</p>
 
@@ -121,7 +121,7 @@ to create such a text answer (a regular user would not appreciate an XML respons
 we have to fetch that <code>xml</code> column from the necessary DynamoDB record and convert
 it to plain English text.</p>
 
-<p>Here is how we're doing that with the help of
+<p>Here is how we’re doing that with the help of
 <a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>
 and its class,
 <a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html"><code>XSLDocument</code></a>.</p>
@@ -132,7 +132,7 @@ final XSL xsl = new XSLDocument(
 );
 final String text = xsl.applyTo(xml);</pre>
 
-<p>That's it. Now let's see what's there in that <code>status.xsl</code> file
+<p>That’s it. Now let’s see what’s there in that <code>status.xsl</code> file
 (this is just a skeleton of it; the full version is <a href="https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl">here</a>):</p>
 
 <pre>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -161,8 +161,8 @@ run. We have a static utility method <a href="http://xml.jcabi.com/apidocs-0.15/
   }
 }</pre>
 
-<p>Pay attention to the fact we're using XSLT 2.0. Built-in Java implementation of XSLT
-doesn't support version 2.0, and in order to make it work, we're using
+<p>Pay attention to the fact we’re using XSLT 2.0. Built-in Java implementation of XSLT
+doesn’t support version 2.0, and in order to make it work, we’re using
 these two Maven Saxon dependencies:</p>
 
 <pre>&lt;dependency&gt;
@@ -187,7 +187,7 @@ add this dependency to your <code>pom.xml</code>:</p>
   &lt;artifactId&gt;jcabi-xml&lt;/artifactId&gt;
 &lt;/dependency&gt;</pre>
 
-<p>If you have any problems or suggestions, don't hesitate to submit an issue
+<p>If you have any problems or suggestions, don’t hesitate to submit an issue
 to the GitHub <a href="https://github.com/jcabi/jcabi-xml/issues">issue tracker</a>.</p>
 
     </article>

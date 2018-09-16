@@ -75,10 +75,10 @@ annoying mistake.
       </p>
       <p>Yegor Bugayenko<br>22 March 2016</p>
       <h1>Try. Finally. If. Not. Null.</h1>
-      <p>There is a very typical mistake in pre-Java7 "try/finally" scenario,
+      <p>There is a very typical mistake in pre-Java7 “try/finally” scenario,
 which I keep seeing in so many code reviews. I just have to write about it.
-Java7 introduced a solution, but it doesn't cover all situations.
-Sometimes we need to deal with non-<code>AutoCloseable</code> resources. Let's
+Java7 introduced a solution, but it doesn’t cover all situations.
+Sometimes we need to deal with non-<code>AutoCloseable</code> resources. Let’s
 open and close them correctly, please.</p>
 
 
@@ -103,7 +103,7 @@ try {
 
 <p>I already wrote about <a href="/2014/05/13/why-null-is-bad.html"><code>null</code></a>
 and its evil nature. Here it comes again. If you just follow the rule
-of "not using NULL anywhere ever," this code would need an immediate
+of “not using NULL anywhere ever,” this code would need an immediate
 refactoring. Its correct version will look like this:</p>
 
 <pre>final InputStream input = url.openStream();
@@ -115,10 +115,10 @@ try {
   input.close();
 }</pre>
 
-<p>There is no <code>null</code> anymore and it's very clean. Isn't it?</p>
+<p>There is no <code>null</code> anymore and it’s very clean. Isn’t it?</p>
 
 <p>There are situations when opening the resource itself throws <code>IOException</code>
-and we can't put it outside of <code>try/catch</code>. In that case, we have to have
+and we can’t put it outside of <code>try/catch</code>. In that case, we have to have
 <strong>two</strong> <code>try/catch</code> blocks:</p>
 
 <pre>final InputStream input;
@@ -139,10 +139,11 @@ try {
 
 <p>The presence of <code>null</code> in Java code is a clear indicator of code smell. Something
 is not right if you have to use <code>null</code>. The only place where the presence of <code>null</code>
-is justified is where we're using third-party APIs or JDK. They may return
-<code>null</code> sometimes because... well, their design is bad. We have
-no other option but to do <code>if(x==null)</code>. But that's it. No other places
+is justified is where we’re using third-party APIs or JDK. They may return
+<code>null</code> sometimes because… well, their design is bad. We have
+no other option but to do <code>if(x==null)</code>. But that’s it. No other places
 are good for <code>null</code>.</p>
+
 
     </article>
   </body>

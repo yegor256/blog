@@ -83,14 +83,14 @@ convenient to define it once somewhere and reuse it, just like Apache Commons
 is doing; see <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/CharEncoding.html#UTF_8"><code>CharEncoding.UTF_8</code></a>
 (There are many other static literals there).
 These guys are setting a bad example! <code>public</code> <code>static</code>
-"properties" are as bad as
+“properties” are as bad as
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>.</p>
 
 
 
 <amp-img src="/images/2015/07/the-shining.jpg" alt="The Shining (1980) by Stanley Kubrick" height="600" width="1200" layout="responsive"></amp-img>
 
-<p>Here is what I'm talking about, specifically:</p>
+<p>Here is what I’m talking about, specifically:</p>
 
 <pre>package org.apache.commons.lang3;
 public class CharEncoding {
@@ -103,7 +103,7 @@ public class CharEncoding {
 <pre>import org.apache.commons.lang3.CharEncoding;
 String text = new String(array, CharEncoding.UTF_8);</pre>
 
-<p>Let's say I want to convert a <code>String</code> into a byte array:</p>
+<p>Let’s say I want to convert a <code>String</code> into a byte array:</p>
 
 <pre>import org.apache.commons.lang3.CharEncoding;
 byte[] array = text.getBytes(CharEncoding.UTF_8);</pre>
@@ -111,54 +111,54 @@ byte[] array = text.getBytes(CharEncoding.UTF_8);</pre>
 <p>Looks convenient, right? This is what the designers of Apache Commons think
 (one of the most popular but simply <em>terrible</em> libraries
 in the Java world). I encourage you to think differently.
-I can't tell you to stop using Apache Commons, because we just don't have
-a better alternative (yet!). But in your own code, don't use public
-static properties---ever. Even if this code may look convenient to you,
-it's a very bad design.</p>
+I can’t tell you to stop using Apache Commons, because we just don’t have
+a better alternative (yet!). But in your own code, don’t use public
+static properties—ever. Even if this code may look convenient to you,
+it’s a very bad design.</p>
 
 
 
 <p>The reason why is very similar to
 <a href="/2015/02/26/composable-decorators.html">utility classes</a>
 with public static
-methods---they are unbreakable hard-coded dependencies. Once you
+methods—they are unbreakable hard-coded dependencies. Once you
 use that <code>CharEncoding.UTF_8</code>, your object starts to depend on this
-data, and its user (the user of your object) can't break this dependency. You may say that
-this is your intention, in the case of a <code>"UTF-8"</code> constant---to make
+data, and its user (the user of your object) can’t break this dependency. You may say that
+this is your intention, in the case of a <code>"UTF-8"</code> constant—to make
 sure that Unicode is specifically and exclusively being used. In this particular
 example, this may be true, but look at it from a more global perspective.</p>
 
 <p>Let me show you the alternative I have in mind before we continue.
-Here is what I'm suggesting instead to convert a byte array
+Here is what I’m suggesting instead to convert a byte array
 into a <code>String</code>:</p>
 
 <pre>String text = new UTF8String(array);</pre>
 
-<p>It's pseudo-code, since Java designers made class <code>String</code> final and we
-can't really extend it and create <code>UTF8String</code>, but you get the idea. In the real
+<p>It’s pseudo-code, since Java designers made class <code>String</code> final and we
+can’t really extend it and create <code>UTF8String</code>, but you get the idea. In the real
 world, this would look like this:</p>
 
 <pre>String text = new UTF8String(array).toString();</pre>
 
-<p>As you see, we encapsulate the "UTF-8" constant somewhere inside the class
-<code>UTF8String</code>, and its users have no idea how exactly this "byte array to string"
+<p>As you see, we encapsulate the “UTF-8” constant somewhere inside the class
+<code>UTF8String</code>, and its users have no idea how exactly this “byte array to string”
 conversion is happening.</p>
 
-<p>By introducing <code>UTF8String</code>, we solved the problem of "UTF-8"
-literal duplication. But we did it in a proper object-oriented way---we encapsulated the functionality inside a class and let everybody
+<p>By introducing <code>UTF8String</code>, we solved the problem of “UTF-8”
+literal duplication. But we did it in a proper object-oriented way—we encapsulated the functionality inside a class and let everybody
 instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.</p>
 
 <p>Placing data into one shared place (<code>CharEncoding.UTF_8</code>)
-doesn't really solve the duplication problem; it actually makes it <strong>worse</strong>, mostly
+doesn’t really solve the duplication problem; it actually makes it <strong>worse</strong>, mostly
 because it encourages everybody to duplicate functionality using the same
 piece of shared data.</p>
 
 <p>My point here is that every time you see that you have some data duplication
-in your application, start thinking about the functionality you're duplicating.
+in your application, start thinking about the functionality you’re duplicating.
 You will easily find the code that is repeated again and again. Make a new
 class for this code and place the data there, as a <code>private</code> property (or private
-<code>static</code> property). That's how you will improve your design and truly get rid
+<code>static</code> property). That’s how you will improve your design and truly get rid
 of duplication.</p>
 
 <p>PS. You can use a method instead of a class, but not a static literal.</p>

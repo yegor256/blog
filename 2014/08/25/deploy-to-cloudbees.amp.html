@@ -84,9 +84,9 @@ how it all happened, in <a href="https://github.com/sttc/stateful/issues/6">GitH
 
 <p>As you see, I gave a command to <a href="http://www.rultor.com">Rultor</a>,
 and it packaged, tested and deployed a new version to CloudBees.
-I didn't do anything else.</p>
+I didn’t do anything else.</p>
 
-<p>Now let's see how you can do the same. How you can configure your project
+<p>Now let’s see how you can do the same. How you can configure your project
 so that the deployment of its new version to CloudBees
 takes just a few seconds of your time.</p>
 
@@ -156,26 +156,26 @@ this article will have no sense after that.
   &lt;/profiles&gt;
 &lt;/project&gt;</pre>
 
-<p>This plugin is not in Maven Central (unfortunately). That's why
+<p>This plugin is not in Maven Central (unfortunately). That’s why
 we have to specify that <code>&lt;pluginRepository&gt;</code>.</p>
 
-<p>Pay attention to the fact that we're also disabling <code>maven-deploy-plugin</code>, since
+<p>Pay attention to the fact that we’re also disabling <code>maven-deploy-plugin</code>, since
 it would try to deploy your WAR package to the repository from the
 <code>&lt;distributionManagement&gt;</code> section. We want to avoid this.</p>
 
 <p>The profile gets activated only when the <code>bees.id</code> property
-is defined. This won't happen during your normal development and testing,
+is defined. This won’t happen during your normal development and testing,
 but it will occur during the deployment cycle initiated by Rultor, because
 we will define this property in <code>settings.xml</code> (discussed below).</p>
 
 <h2 id="secure-access-to-cloudbees">Secure Access to CloudBees</h2>
 
 <p>Create an account in CloudBees and register your web application there.
-CloudBees is free, as long as you don't need too much computing power. I believe
-that web applications should be light-weight by definition, so CloudBees' free
+CloudBees is free, as long as you don’t need too much computing power. I believe
+that web applications should be light-weight by definition, so CloudBees’ free
 layer is an ideal choice.</p>
 
-<p>Create a <code>settings.xml</code> file (but don't commit it to your repo!):</p>
+<p>Create a <code>settings.xml</code> file (but don’t commit it to your repo!):</p>
 
 <pre>&lt;settings&gt;
   &lt;profiles&gt;
@@ -206,7 +206,7 @@ Rultor server.</p>
 
 <p>I recommend using <a href="/2015/02/05/jcabi-parent-maven-pom.html">jcabi-parent</a>.
 It configures the required plugin out-of-the-box.
-If you're using it, skip this step.</p>
+If you’re using it, skip this step.</p>
 
 <p>Otherwise, add this plugin to your <code>pom.xml</code>:</p>
 
@@ -249,7 +249,7 @@ release:
 
 
 
-<p>Now it's time to see how it all works. Create a new ticket in the
+<p>Now it’s time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it
 (read more about <a href="http://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
@@ -259,7 +259,7 @@ GitHub issue tracker, and post something like that into it
 
 <p>Enjoy :)</p>
 
-<p>BTW, if something doesn't work as I've explained, don't hesitate to
+<p>BTW, if something doesn’t work as I’ve explained, don’t hesitate to
 submit a ticket to the
 <a href="https://github.com/yegor256/rultor/issues">Rultor issue tracker</a>.
 I will try to help you.</p>
@@ -268,7 +268,7 @@ I will try to help you.</p>
 for <a href="/2014/09/13/deploying-to-heroku.html">Heroku</a>
 (using <a href="http://heroku.jcabi.com">jcabi-heroku-maven-plugin</a>)
 and for AWS Elastic Beanstalk (using <a href="http://beanstalk.jcabi.com">jcabi-beanstalk-maven-plugin</a>).
-I'll probably dedicate individual posts to them, as well.</p>
+I’ll probably dedicate individual posts to them, as well.</p>
 
     </article>
   </body>

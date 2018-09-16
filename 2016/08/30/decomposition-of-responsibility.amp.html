@@ -86,7 +86,7 @@ the former is better than the latter.</p>
 
 <amp-img src="/images/2016/08/once-upon-a-time-in-america.jpg" alt="Once Upon a Time in America (1984) by Sergio Leone" height="720" width="1280" layout="responsive"></amp-img>
 
-<p>Let's say this is our code (it is Ruby):</p>
+<p>Let’s say this is our code (it is Ruby):</p>
 
 <pre>class Log
   def initialize(path)
@@ -100,7 +100,7 @@ end</pre>
 
 <p>Obviously, objects of this class are doing too much.
 They save log lines to the
-file and also format them---an obvious violation of
+file and also format them—an obvious violation of
 a famous
 <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>.
 An object of this class would be <em>responsible</em> for too many things.
@@ -119,7 +119,7 @@ No matter where we put it, this is how the
 end</pre>
 
 <p>Now it only saves lines to the file, which is perfect. The class
-is cohesive and small. Let's make an instance of it:</p>
+is cohesive and small. Let’s make an instance of it:</p>
 
 <pre>log = Log.new('/tmp/log.txt')</pre>
 
@@ -140,7 +140,7 @@ end</pre>
 
 <pre>log.put(Line.new("Hello, world"))</pre>
 
-<p>See why it's horizontal? Because this script sees them
+<p>See why it’s horizontal? Because this script sees them
 both. They both are on the same level of visibility. We will always have
 to communicate with both of them when we want to log a line. Both
 objects of <code>Log</code> and <code>Line</code> are in front of us. We have to deal with
@@ -168,13 +168,13 @@ end</pre>
 <pre>log.put("Hello, world")</pre>
 
 <p>The responsibility is decomposed vertically. We still have one entry point
-into the <code>log</code> object, but the object "consists" of two objects, one wrapped
+into the <code>log</code> object, but the object “consists” of two objects, one wrapped
 into another:</p>
 
 <p></p>
 
 <p>In general, I think horizontal decomposition of responsibility is a bad idea,
-while vertical is a much better one. That's because a vertically
+while vertical is a much better one. That’s because a vertically
 decomposed object decreases complexity, while a horizontally decomposed
 one actually makes things more complex because its clients have to deal with
 more dependencies and more points of contact.</p>

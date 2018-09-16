@@ -81,7 +81,7 @@ the designer of <a href="https://en.wikipedia.org/wiki/Smalltalk">Smalltalk</a>,
 the first object-oriented language,
 <a href="http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html">said</a>
 in 1998 about OOP. He literally said that the very
-term "object" was misleading and a more appropriate one would be "messaging."
+term “object” was misleading and a more appropriate one would be “messaging.”
 Here is what I think.</p>
 
 
@@ -89,7 +89,7 @@ Here is what I think.</p>
 <amp-img src="/images/2017/12/rain-man.jpg" alt="Rain Man (1988) by Barry Levinson" height="750" width="1440" layout="responsive"></amp-img>
 
 <p>I believe that there are two orthogonal means of interaction between objects:
-messaging and composition. Let's say, we have a point and a canvas:</p>
+messaging and composition. Let’s say, we have a point and a canvas:</p>
 
 <pre>Point p = new Point(x, y);
 Canvas canvas = new Canvas();</pre>
@@ -100,16 +100,16 @@ Canvas canvas = new Canvas();</pre>
 
 <p>The problem with messaging is that it keeps objects on the same
 level of abstraction. They communicate
-as equal and independent "modules," sending
+as equal and independent “modules,” sending
 <a href="/2016/11/21/naked-data.html">data messages</a> to each other.
 Even though they look object-oriented, the entire communication pattern
 is very procedural. We try to encapsulate as much as we can inside a single
 object, however inevitably still having to expose a lot of its data in order to
-be able to "connect" it with other objects.</p>
+be able to “connect” it with other objects.</p>
 
-<p>We turn objects into "little computers," as <a href="http://amzn.to/2npiZZQ">some books</a> refer to them. They
+<p>We turn objects into “little computers,” as <a href="http://amzn.to/2npiZZQ">some books</a> refer to them. They
 expect data to come in, they process the data, and return back some new data.
-The maintainability problem is not really solved with this approach---we
+The maintainability problem is not really solved with this approach—we
 still have to deal with a lot of data, remembering its semantic outside of
 the objects. In other words, there is no true encapsulation.</p>
 
@@ -121,7 +121,7 @@ the objects. In other words, there is no true encapsulation.</p>
 encapsulates more primitive ones, letting them interact inside. Of course,
 the data will also go from object to object, but that will happen
 inside a bigger object. We can even make the encapsulator
-and the encapsulated "friends," as <a href="/2016/12/20/can-objects-be-friends.html">I suggested before</a>,
+and the encapsulated “friends,” as <a href="/2016/12/20/can-objects-be-friends.html">I suggested before</a>,
 to make that interaction more transparent and avoid data exposure through
 <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a> or
 even
@@ -132,7 +132,7 @@ even
 Alan Kay again:</p>
 
 <blockquote>
-<p>The key in making great and growable systems is much more to design how
+  <p>The key in making great and growable systems is much more to design how
   its modules communicate rather than what their internal properties
   and behaviors should be.</p>
 </blockquote>
@@ -140,13 +140,13 @@ Alan Kay again:</p>
 <p>It seems to me that he means <em>modules</em>, which are not objects. These are
 different things. Modules are elements of the architecture, while objects
 are elements of the design. These are two different levels. At the level of
-architecture we obviously need messages and Kay's statement is perfectly correct.
+architecture we obviously need messages and Kay’s statement is perfectly correct.
 However, at the level of design we need composable structures,
 to increase maintainability and messaging is not what can help us achieve
 this goal.</p>
 
 <p>Thus, I believe Alan Kay was right when he invented objects, called them
-objects, and gave their programming style the "object-oriented" title.</p>
+objects, and gave their programming style the “object-oriented” title.</p>
 
     </article>
   </body>

@@ -74,7 +74,7 @@ this article explains why and how to avoid it to create cleaner code
       </p>
       <p>Yegor Bugayenko<br>19 June 2014</p>
       <h1>Avoid String Concatenation</h1>
-      <p>This is "string concatenation," and it is a bad practice:</p>
+      <p>This is “string concatenation,” and it is a bad practice:</p>
 
 <pre>// bad practice, don't reuse!
 String text = "Hello, " + name + "!";</pre>
@@ -87,33 +87,33 @@ but this is not the point here.</p>
 
 
 
-<p>Actually, I don't think performance in this case is a big issue.
+<p>Actually, I don’t think performance in this case is a big issue.
 Moreover, there were <a href="http://stackoverflow.com/questions/925423">multiple experiments</a>
 showing that concatenation is not that slow when compared to other
 string building methods and sometimes is even faster.</p>
 
 <p>Some say that concatenated strings are not localizable because in
 different languages text blocks in a phrase may be positioned
-in a different order. The example above can't be translated to,
+in a different order. The example above can’t be translated to,
 say, Russian, where we would want to put a name in front of
-"привет." We will need to localize the entire block of code,
+“привет.” We will need to localize the entire block of code,
 instead of just translating a phrase.</p>
 
 <p>However, my point here is different. I strongly recommend
 avoiding string concatenation because it is <strong>less readable</strong>
 than other methods of joining texts together.</p>
 
-<p>Let's see these alternative methods. I'd recommend three of them (in order of preference):
+<p>Let’s see these alternative methods. I’d recommend three of them (in order of preference):
 <code>String.format()</code>,
 Apache <code>StringUtils</code> and
 Guava <code>Joiner</code>.</p>
 
 <p>There is also a <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html"><code>StringBuilder</code></a>,
-but I don't find it as attractive as <code>StringUtils</code>. It is a useful
+but I don’t find it as attractive as <code>StringUtils</code>. It is a useful
 builder of strings, but not a proper replacer or string
 concatenation tool when readability is important.</p>
 
-<h2 id="string-format">String.format()</h2>
+<h2 id="stringformat">String.format()</h2>
 
 <p><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,%20java.lang.Object...%29"><code>String.format()</code></a>
 is my favorite option. It makes text phrases easy to understand
@@ -131,23 +131,23 @@ much more obvious. Look at this ugly code:</p>
   + " has been shipped at " + shipment.date()
   + "!";</pre>
 
-<p>This one looks much more beautiful doesn't it:</p>
+<p>This one looks much more beautiful doesn’t it:</p>
 
 <pre>String msg = String.format(
   "Dear %1$s, your order #%2$d has been shipped at %3$tR!",
   customer.name(), order.number(), shipment.date()
 );</pre>
 
-<p>Please note that I'm using argument indexes in order to make
-the pattern even more localizable. Let's say, I want
+<p>Please note that I’m using argument indexes in order to make
+the pattern even more localizable. Let’s say, I want
 to translate it to Greek. This is how will it look:</p>
 
 <pre>Αγαπητέ %1$s, στις %3$tR στείλαμε την παραγγελία σου με αριθμό #%2$d!</pre>
 
-<p>I'm changing the order of substitutions in the pattern,
+<p>I’m changing the order of substitutions in the pattern,
 but not in the actual list of methods arguments.</p>
 
-<h2 id="apache-stringutils-join">Apache <code>StringUtils.join()</code>
+<h2 id="apache-stringutilsjoin">Apache <code>StringUtils.join()</code>
 </h2>
 
 <p>When the text is rather long (longer than your screen width),

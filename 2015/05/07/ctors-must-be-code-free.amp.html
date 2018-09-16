@@ -77,8 +77,8 @@ uncontrollable behavior.
       <h1>Constructors Must Be Code-Free</h1>
       <p>How much work should be done within a constructor? It seems reasonable
 to do some computations inside a constructor and then encapsulate
-results. That way, when the results are required by object methods, we'll have them
-ready. Sounds like a good approach? No, it's not. It's a bad idea
+results. That way, when the results are required by object methods, we’ll have them
+ready. Sounds like a good approach? No, it’s not. It’s a bad idea
 for one reason: It prevents composition of objects and makes them
 un-extensible.</p>
 
@@ -86,13 +86,13 @@ un-extensible.</p>
 
 <amp-img src="/images/2015/05/kill-bill.jpg" alt="Kill Bill: Vol. 2 (2004) by Quentin Tarantino" height="718" width="1694" layout="responsive"></amp-img>
 
-<p>Let's say we're making an interface that would represent a name of a person:</p>
+<p>Let’s say we’re making an interface that would represent a name of a person:</p>
 
 <pre>interface Name {
   String first();
 }</pre>
 
-<p>Pretty easy, right? Now, let's try to implement it:</p>
+<p>Pretty easy, right? Now, let’s try to implement it:</p>
 
 <pre>public final class EnglishName implements Name {
   private final String name;
@@ -105,9 +105,9 @@ un-extensible.</p>
   }
 }</pre>
 
-<p>What's wrong with this? It's faster, right? It splits the name into
+<p>What’s wrong with this? It’s faster, right? It splits the name into
 parts only once and encapsulates them. Then, no matter how many times we
-call the <code>first()</code> method, it will return the same value and won't need
+call the <code>first()</code> method, it will return the same value and won’t need
 to do the splitting again. However, this is flawed thinking! Let me show
 you the right way and explain:</p>
 
@@ -139,7 +139,7 @@ we do all calculations right now and return fully ready results. In declarative
 programming, we are instead trying to delay calculations for
 as long as possible.</p>
 
-<p>Let's try to use our <code>EnglishName</code> class:</p>
+<p>Let’s try to use our <code>EnglishName</code> class:</p>
 
 <pre>final Name name = new EnglishName(
   new NameInPostgreSQL(/*...*/)
@@ -154,7 +154,7 @@ if (/* something goes wrong */) {
 }</pre>
 
 <p>In the first line of this snippet, we are just making an instance of an object
-and labeling it <code>name</code>. We don't want to go to the database yet and fetch
+and labeling it <code>name</code>. We don’t want to go to the database yet and fetch
 the full name from there, split it into parts, and encapsulate them
 inside <code>name</code>. We just want to create an instance of an object. Such a parsing
 behavior would be a side effect for us and, in this case,
@@ -167,12 +167,12 @@ practice and must be avoided because they are side effects and are not
 requested by the object owner.</p>
 
 <p>What about performance during the re-use of <code>name</code>, you may ask. If we make an
-instance of <code>EnglishName</code> and then call <code>name.first()</code> five times, we'll
+instance of <code>EnglishName</code> and then call <code>name.first()</code> five times, we’ll
 end up with five calls to the <code>String.split()</code> method.</p>
 
 <p>To solve that, we create another class,
 a <a href="/2015/02/26/composable-decorators.html">composable decorator</a>,
-which will help us solve this "re-use" problem:</p>
+which will help us solve this “re-use” problem:</p>
 
 <pre>public final class CachedName implements Name {
   private final Name origin;
@@ -186,7 +186,7 @@ which will help us solve this "re-use" problem:</p>
   }
 }</pre>
 
-<p>I'm using the <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>Cacheable</code></a>
+<p>I’m using the <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>Cacheable</code></a>
 annotation from <a href="http://aspects.jcabi.com/">jcabi-aspects</a>, but you can use any other
 caching tools available in Java (or other languages), like
 <a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava Cache</a>:</p>
@@ -212,8 +212,8 @@ caching tools available in Java (or other languages), like
   }
 }</pre>
 
-<p>But please don't make <code>CachedName</code> mutable and lazily
-loaded---it's an anti-pattern, which I've discussed before in
+<p>But please don’t make <code>CachedName</code> mutable and lazily
+loaded—it’s an anti-pattern, which I’ve discussed before in
 <a href="/2014/06/09/objects-should-be-immutable.html">Objects Should Be Immutable</a>.</p>
 
 <p>This is how our code will look now:</p>
@@ -224,17 +224,17 @@ loaded---it's an anti-pattern, which I've discussed before in
   )
 );</pre>
 
-<p>It's a very primitive example, but I hope you get the idea.</p>
+<p>It’s a very primitive example, but I hope you get the idea.</p>
 
-<p>In this design, we're basically splitting the object into two parts. The first
+<p>In this design, we’re basically splitting the object into two parts. The first
 one knows how to get the first name from the English name. The second one
-knows how to cache the results of this calculation in memory. And now it's
+knows how to cache the results of this calculation in memory. And now it’s
 my decision, as a user of these classes, how exactly to use them. I will
 decide whether I need caching or not. This is what object composition is all about.</p>
 
 <p>Let me reiterate that the only allowed statement inside
 a constructor is an assignment. If you need to put something else there,
-start thinking about refactoring---your class definitely needs a redesign.</p>
+start thinking about refactoring—your class definitely needs a redesign.</p>
 
     </article>
   </body>

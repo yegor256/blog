@@ -102,12 +102,18 @@ like LXC, for example?</p>
 <p>Well, there are a few very important benefits:</p>
 
 <ul>
-<li><p>Image repository (hub.docker.com)</p></li>
-<li><p>Versioning</p></li>
-<li><p>Application-centric</p></li>
+  <li>
+    <p>Image repository (hub.docker.com)</p>
+  </li>
+  <li>
+    <p>Versioning</p>
+  </li>
+  <li>
+    <p>Application-centric</p>
+  </li>
 </ul>
 
-<p>Let's discuss them in details.</p>
+<p>Let’s discuss them in details.</p>
 
 <h2 id="image-repository">Image Repository</h2>
 
@@ -116,7 +122,7 @@ like LXC, for example?</p>
 I prepare a working environment for my application, I make
 an image out of it and push it to the hub.</p>
 
-<p>Let's say, I want my Maven build to be executed in a container
+<p>Let’s say, I want my Maven build to be executed in a container
 with a pre-installed <code>graphviz</code> package (in order to enable <code>dot</code> command line tool).
 First, I would start a plain vanilla Ubuntu container, and install <code>graphviz</code> inside it:</p>
 
@@ -132,7 +138,7 @@ $ sudo docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                     PORTS               NAMES
 215d2696e8ad        ubuntu:14.04        /bin/bash           About a minute ago   Exited (0) 3 seconds ago                       high_mccarthy</pre>
 
-<p>I have a container that stopped a few seconds ago. Container's
+<p>I have a container that stopped a few seconds ago. Container’s
 ID is <code>215d2696e8ad</code>. Now, I want to make it reusable for all
 further tests in Rultor.com. I have to create an image from it:</p>
 
@@ -143,7 +149,7 @@ c5ad7718fc0e20fe4bf2c8a9bfade4db8617a25366ca5b64be2e1e8aa0de6e52</pre>
 This image can be reused right now. I can create a new container
 from this image and it will have <code>graphviz</code> installed inside!</p>
 
-<p>Now it's time to share my image at Docker hub, in order to make it available for Rultor:</p>
+<p>Now it’s time to share my image at Docker hub, in order to make it available for Rultor:</p>
 
 <pre>$ sudo docker push yegor256/beta
 The push refers to a repository [yegor256/beta] (len: 1)
@@ -165,13 +171,13 @@ in the root directory of my GitHub repository:</p>
 <pre>docker:
   image: yegor256/beta</pre>
 
-<p>That's it. From now on, Rultor will use my custom Docker image with
+<p>That’s it. From now on, Rultor will use my custom Docker image with
 pre-installed <code>graphviz</code>, in every build (merge, release, deploy, etc.)</p>
 
 <p>Moreover, if and when I want to add something else to the image,
-it's easy to do. Say, I want to install Ruby into my build image.
+it’s easy to do. Say, I want to install Ruby into my build image.
 I start a container from the image and install it (pay attention,
-I'm starting a container not from <code>ubuntu</code> image, as I did before, but from <code>yegor256/beta</code>):</p>
+I’m starting a container not from <code>ubuntu</code> image, as I did before, but from <code>yegor256/beta</code>):</p>
 
 <pre>$ sudo docker run -i -t yegor256/beta /bin/bash
 root@7e0fbd9806c9:/# sudo apt-get install -y ruby
@@ -202,7 +208,7 @@ $ sudo docker push yegor256/beta
 <h2 id="versioning">Versioning</h2>
 
 <p>As you saw in the example above, every change to a Docker image has
-its own version (hash) and it's possible to track changes.
+its own version (hash) and it’s possible to track changes.
 It is also possible to roll back to any particular change.</p>
 
 <p>Rultor is not using this functionality itself, but Rultor users
@@ -211,11 +217,11 @@ are able to control their build configurations with much better precision.</p>
 <h2 id="application-centric">Application-Centric</h2>
 
 <p>Docker, unlike LXC or Vagrant, for example, is application-centric.
-This means that when we start a container---we start an application.
-With other virtualization technologies, when you get a virtual machine---you get a fully functional Unix environment, where you can login through
+This means that when we start a container—we start an application.
+With other virtualization technologies, when you get a virtual machine—you get a fully functional Unix environment, where you can login through
 SSH and do whatever you want.</p>
 
-<p>Docker makes things simpler. It doesn't give you SSH access to container,
+<p>Docker makes things simpler. It doesn’t give you SSH access to container,
 but runs an application inside and shows you its output. This is
 exactly what we need in Rultor. We need to run an automated build
 (for example Maven or Bundler), see its output and get its exit code.
@@ -232,7 +238,7 @@ If the code is not zero, we fail the build and report to the user.</p>
 [INFO]
 ...</pre>
 
-<p>As you can see, Maven starts immediately. We don't worry
+<p>As you can see, Maven starts immediately. We don’t worry
 about the internals of the container. We just start an application inside it.</p>
 
 <p>Furthermore, thanks to the <code>--rm</code> option, the container gets

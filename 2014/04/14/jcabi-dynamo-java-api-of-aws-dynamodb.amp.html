@@ -76,10 +76,10 @@ the article explains why jcabi-dynamo is better than bare Amazon SDK
       <h1>Object-Oriented DynamoDB API</h1>
       
 
-<p>I'm a big fan of cloud computing in general and of
+<p>I’m a big fan of cloud computing in general and of
 <a href="http://aws.amazon.com/">Amazon Web Services</a> in particular. I honestly believe that in a
 few years big providers will host all, or almost all, computing and storage
-resources. When this is the case, we won't have to worry too much anymore about
+resources. When this is the case, we won’t have to worry too much anymore about
 downtime, backups and system administrators.
 <a href="http://aws.amazon.com/dynamodb/">DynamoDB</a> is one of the steps towards this
 future.</p>
@@ -91,13 +91,12 @@ future.</p>
 
 
 
-
 <p>DynamoDB is a <a href="http://en.wikipedia.org/wiki/NoSQL">NoSQL</a> database accessible
 through <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">RESTful</a>
 JSON API. Its design is relatively simple. There are tables, which basically
-are collections of data structures, or in AWS terminology, "items."</p>
+are collections of data structures, or in AWS terminology, “items.”</p>
 
-<p>Every item has a mandatory "hash," an optional "range" and a number of other
+<p>Every item has a mandatory “hash,” an optional “range” and a number of other
 optional attributes. For instance, take the example table <code>depts</code>:</p>
 
 <pre>+------+--------+---------------------------+
@@ -113,7 +112,7 @@ optional attributes. For instance, take the example table <code>depts</code>:</p
 RESTful calls to Java methods. The SDK works fine, but is designed in a pure
 <a href="http://en.wikipedia.org/wiki/Procedural_programming">procedural</a> style.</p>
 
-<p>Let's say we want to add a new item to the table above. RESTful call
+<p>Let’s say we want to add a new item to the table above. RESTful call
 <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html"><code>putItem</code></a>
 looks like (in essence):</p>
 
@@ -125,7 +124,7 @@ looks like (in essence):</p>
     job: "programmer"</pre>
 
 <p>This is what the Amazon server needs to know in order to create a new item in
-the table. This is how you're supposed to make this call through the AWS Java
+the table. This is how you’re supposed to make this call through the AWS Java
 SDK:</p>
 
 <pre>PutItemRequest request = new PutItemRequest();
@@ -142,11 +141,11 @@ try {
   aws.shutdown();
 }</pre>
 
-<p>The above script works fine, but there is one major drawback---it is not
+<p>The above script works fine, but there is one major drawback—it is not
 object oriented. It is a perfect example of an imperative <a href="http://en.wikipedia.org/wiki/Procedural_programming">procedural
 programming</a>.</p>
 
-<p>To allow you to compare, let me show what I've done with
+<p>To allow you to compare, let me show what I’ve done with
 <a href="http://dynamo.jcabi.com">jcabi-dynamo</a>. Here is my code, which does exactly the
 same thing, but in an
 <a href="http://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> way:</p>
@@ -177,7 +176,7 @@ the code:</p>
   System.out.println("Hello, " + item.get("worker"));
 }</pre>
 
-<p>In this script, we don't know anything about DynamoDB or how to deal with its
+<p>In this script, we don’t know anything about DynamoDB or how to deal with its
 RESTful API. We interact solely with an instance of
 <a href="http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html"><code>Item</code></a> class.</p>
 
@@ -187,8 +186,8 @@ Java interfaces. Thanks to that, you can test and mock the library completely
 <a href="/2014/05/01/dynamodb-local-maven-plugin.html">DynamoDB Local</a>
 and create integration tests).</p>
 
-<p>Let's consider a more complex example, which would take a page of code if we
-were to use a bare AWS SDK. Let's say that we want to remove all workers from
+<p>Let’s consider a more complex example, which would take a page of code if we
+were to use a bare AWS SDK. Let’s say that we want to remove all workers from
 our table who work as architects:</p>
 
 <pre>Region region = // instantiate it with credentials
@@ -210,6 +209,7 @@ Central</a>
   &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
   &lt;artifactId&gt;jcabi-dynamo&lt;/artifactId&gt;
 &lt;/dependency&gt;</pre>
+
 
     </article>
   </body>

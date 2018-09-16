@@ -75,7 +75,7 @@ room for improvement.
       </p>
       <p>Yegor Bugayenko<br>7 November 2017</p>
       <h1>Five Features to Make Java Even Better</h1>
-      <p>I stumbled upon <a href="http://cr.openjdk.java.net/%7Ebriangoetz/amber/datum.html">this proposal</a>
+      <p>I stumbled upon <a href="http://cr.openjdk.java.net/~briangoetz/amber/datum.html">this proposal</a>
 by <a href="https://twitter.com/BrianGoetz">Brian Goetz</a>
 for data classes in Java, and immediately
 realized that I too have a few ideas about how to make Java better
@@ -91,9 +91,9 @@ There are <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singletons</
 in Java,
 which, as we all know, are nothing but
 <a href="https://en.wikipedia.org/wiki/Global_variable">global variables</a>.
-Wouldn't it be great to enable global variables in Java and get rid of
+Wouldn’t it be great to enable global variables in Java and get rid of
 Singletons. PHP, JavaScript, Ruby and many other languages
-have them, why doesn't Java? Look at this code:</p>
+have them, why doesn’t Java? Look at this code:</p>
 
 <pre>class User {
   private static User INSTANCE;
@@ -117,7 +117,7 @@ have them, why doesn't Java? Look at this code:</p>
 
 <p>This is a Singleton. See how verbose it is?
 We can simply replace it with a global variable (<code>global</code> is the keyword
-I'm suggesting we use):</p>
+I’m suggesting we use):</p>
 
 <pre>global User user;</pre>
 
@@ -133,8 +133,8 @@ I'm suggesting we use):</p>
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>,
 where we have to define private constructors to prevent their instantiation.
 Also, we have to remember which particular utility class a static method is in.
-It's just extra hassle. I'm suggesting we add global functions
-to Java and optional "namespaces" to group them. Take a look at this
+It’s just extra hassle. I’m suggesting we add global functions
+to Java and optional “namespaces” to group them. Take a look at this
 utility class:</p>
 
 <pre>class TextUtils {
@@ -159,14 +159,14 @@ utility class:</p>
 }</pre>
 
 <p>My point is that since we are already using classes as collections
-of functions, let's make it more convenient. In some applications we
-won't even need namespaces, just global functions, like in C and C++.</p>
+of functions, let’s make it more convenient. In some applications we
+won’t even need namespaces, just global functions, like in C and C++.</p>
 
 <h2 id="full-access-to-private-attributes-and-methods">Full Access to Private Attributes and Methods</h2>
 
 <p>In order to access a private attribute or a method of an object from outside we
 have to use the <a href="https://docs.oracle.com/javase/tutorial/reflect/">Reflection API</a>.
-It's not particularly difficult, but it does take a few lines
+It’s not particularly difficult, but it does take a few lines
 of code, which are not so easy to read and understand:</p>
 
 <pre>class Point {
@@ -178,7 +178,7 @@ Field field = point.getClass().getDeclaredField("x");
 field.setAccessible(true);
 int x = (int) field.get(point);</pre>
 
-<p>I'm suggesting we allow any object to access any of the attributes and methods
+<p>I’m suggesting we allow any object to access any of the attributes and methods
 of another object:</p>
 
 <pre>Point point = new Point();
@@ -193,13 +193,13 @@ the Reflection API anyway.</p>
 <h2 id="null-by-default">NULL by Default</h2>
 
 <p>It would be convenient to let us call constructors and methods with an
-incomplete set of arguments. The arguments we don't provide will be set
+incomplete set of arguments. The arguments we don’t provide will be set
 to <code>null</code> by default. Also, when a method has to return something, but
 there is no <code>return</code> statement, Java should return <code>null</code>. This is almost exactly how
 it works in PHP, Ruby, and many other languages. I believe
 it would be a convenient feature for Java <del>monkeys</del> developers too.</p>
 
-<p>We won't need to define so many methods when some of the arguments are optional.
+<p>We won’t need to define so many methods when some of the arguments are optional.
 <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html">Method overloading</a>
 is very verbose and difficult to understand. Instead, we
 should have one method with a long list of arguments. Some of them will be
@@ -213,13 +213,13 @@ decide what to do, for example:</p>
 }</pre>
 
 <p>Then we just call either <code>save(f)</code> or <code>save(f, "UTF-16")</code>. The method will
-understand what we mean. We can also make it even more convenient, like it's
+understand what we mean. We can also make it even more convenient, like it’s
 done in Ruby, providing method arguments by names:</p>
 
 <pre>save(file: f, encoding: "UTF-16");</pre>
 
 <p>Also, when there is nothing to return, the method must return <code>null</code> by default.
-Writing <code>return null</code> is just a waste of a code line and doesn't really
+Writing <code>return null</code> is just a waste of a code line and doesn’t really
 improve readability. Take a look:</p>
 
 <pre>String load(File file) {
@@ -228,24 +228,24 @@ improve readability. Take a look:</p>
  }
 }</pre>
 
-<p>It's obvious from this code that if the file exists, the method loads
+<p>It’s obvious from this code that if the file exists, the method loads
 and returns its content. If not, it returns <code>null</code>, which will be a good
 indicator for the caller that something is not right and the content
 of the file is not available.</p>
 
 <h2 id="getters-and-setters">Getters and Setters</h2>
 
-<p>I think it's only obvious that we need this feature: every private attribute
+<p>I think it’s only obvious that we need this feature: every private attribute
 must automatically have
 <a href="/2014/09/16/getters-and-setters-are-evil.html">a setter and a getter</a>.
 There should be no need
 to create them, Java will provide them out-of-the-box, just like
 <a href="https://kotlinlang.org/docs/reference/properties.html">Kotlin</a>
-and <a href="http://www.rubyist.net/%7Eslagell/ruby/accessors.html">Ruby</a> do.
+and <a href="http://www.rubyist.net/~slagell/ruby/accessors.html">Ruby</a> do.
 What is the point of having an attribute if there are no getters and setters
 to read it and to modify it, right?</p>
 
-<p>With this new feature we'll no longer need the help of
+<p>With this new feature we’ll no longer need the help of
 <a href="https://projectlombok.org/features/GetterSetter">Lombok</a>,
 or <a href="https://www.jetbrains.com/help/idea/generating-getters-and-setters.html">IntelliJ IDEA</a>.</p>
 

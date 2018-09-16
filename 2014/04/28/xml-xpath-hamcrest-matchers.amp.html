@@ -87,7 +87,7 @@ Maven Central: <a href="http://matchers.jcabi.com">jcabi-matchers</a>.
 jcabi-matchers is a collection of
 Hamcrest matchers to make XPath assertions in XML and XHTML documents.</p>
 
-<p>Let's say, for instance, a class that is undergoing  testing produces an XML
+<p>Let’s say, for instance, a class that is undergoing  testing produces an XML
 that needs to contain a single <code>&lt;message&gt;</code> element with the content <code>"hello,
 world!"</code></p>
 
@@ -111,7 +111,7 @@ public class FooTest {
 
 
 
-<p>There are two alternatives to the above that I'm aware of, which are do almost the same thing:
+<p>There are two alternatives to the above that I’m aware of, which are do almost the same thing:
 <a href="https://code.google.com/p/xml-matchers/">xml-matchers</a> by
 David Ehringer
 and
@@ -144,7 +144,7 @@ but, still, it is requires extra code in every unit test.</p>
 problems even further, as it pre-defines most popular namespaces, including
 <code>xhtml</code>, <code>xs</code>, <code>xsl</code>, etc.</p>
 
-<p>The following example works right out-of-the-box---without any extra configuration:</p>
+<p>The following example works right out-of-the-box—without any extra configuration:</p>
 
 <pre>MatcherAssert.assertThat(
   new URL("http://www.google.com").getContent(),

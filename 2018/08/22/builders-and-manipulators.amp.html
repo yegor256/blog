@@ -76,11 +76,11 @@ simple principle.
       <p>Yegor Bugayenko<br>22 August 2018</p>
       <h1>Builders and Manipulators</h1>
       <p>Here is a simple principle for naming methods in OOP,
-which I'm trying to follow in my code:
-it's a <em>verb</em> if it <em>manipulates</em>, it's a <em>noun</em> if it <em>builds</em>.
-That's it. Nothing in between. Methods like
-<code>saveFile()</code> or <code>getTitle()</code> don't fit and must be renamed and refactored.
-Moreover, methods that "manipulate" must always return <code>void</code>,
+which I’m trying to follow in my code:
+it’s a <em>verb</em> if it <em>manipulates</em>, it’s a <em>noun</em> if it <em>builds</em>.
+That’s it. Nothing in between. Methods like
+<code>saveFile()</code> or <code>getTitle()</code> don’t fit and must be renamed and refactored.
+Moreover, methods that “manipulate” must always return <code>void</code>,
 for example <code>print()</code> or <code>save()</code>. Let me explain.</p>
 
 
@@ -90,10 +90,10 @@ for example <code>print()</code> or <code>save()</code>. Let me explain.</p>
 <p>First, I have to say that this idea is very similar to the one
 suggested by <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a> in his book
 <a href="https://amzn.to/2MWEuJP">Object Oriented Software Construction</a>,
-where he proposes we divide an object's methods into two sharply
+where he proposes we divide an object’s methods into two sharply
 separated categories: queries and commands.</p>
 
-<p>The idea behind this principle is rather philosophical. Let's start
+<p>The idea behind this principle is rather philosophical. Let’s start
 with builders, which are supposed to create or find an object and then return
 it. Suppose I have a store of books and I ask it to give me a book
 by name:</p>
@@ -102,9 +102,9 @@ by name:</p>
   Book find(String title);
 }</pre>
 
-<p>It's obviously a "builder" (or a "query" in Meyer's terms). I ask for
-a book and it's given to me. The problem, though, is with the name of the method.
-It's called "find," which implies that I know how the book will be dealt with. It will
+<p>It’s obviously a “builder” (or a “query” in Meyer’s terms). I ask for
+a book and it’s given to me. The problem, though, is with the name of the method.
+It’s called “find,” which implies that I know how the book will be dealt with. It will
 be found.</p>
 
 <p>However, this is not how we should treat our objects. We must not tell them
@@ -120,7 +120,7 @@ A much more appropriate name for this method would be <code>book()</code>:</p>
 
 <p>The rule of thumb is: a builder is always a noun. If the method returns
 something, it has to be a noun. Preferably its name should explain what
-the method returns. If it's a book, name it <code>book()</code>. If it's a file, call
+the method returns. If it’s a book, name it <code>book()</code>. If it’s a file, call
 the method <code>file()</code>, etc. Here are a few good builder examples:</p>
 
 <pre>interface Foo {
@@ -139,15 +139,15 @@ the method <code>file()</code>, etc. Here are a few good builder examples:</p>
   Date readDeadline(Project project, User user);
 }</pre>
 
-<p>There is no place for a verb in a builder's name!</p>
+<p>There is no place for a verb in a builder’s name!</p>
 
-<p>It's not only about the name, by the way. A builder, since its name doesn't
+<p>It’s not only about the name, by the way. A builder, since its name doesn’t
 contain a verb, should not do any modifications to the encapsulated entities.
 It may only create or find something and return it. Just like a
 <a href="https://en.wikipedia.org/wiki/Pure_function">pure function</a>, it must not have any
 side-effects.</p>
 
-<p>Next, there are "manipulators" (or "commands" in Meyer's terms). They do some
+<p>Next, there are “manipulators” (or “commands” in Meyer’s terms). They do some
 work for us, modifying the entities, which the object encapsulates. They are
 the opposite to builders, because they actually make changes to the world
 abstracted by the object.
@@ -158,10 +158,10 @@ For example, we ask the <code>Bookshelf</code> to add a new book to itself:</p>
 }</pre>
 
 <p>The method adds the book to the storage. How exactly the storage will be
-modified, we don't know. But we know that since the name of the method
+modified, we don’t know. But we know that since the name of the method
 is a verb, there will be modifications.</p>
 
-<p>Also, manipulators must not return anything. It's always <code>void</code> that we see
+<p>Also, manipulators must not return anything. It’s always <code>void</code> that we see
 as the type of their response. This is needed mostly in order to separate the imperative
 part of the code from the declarative part. We either receive objects
 or tell them what to do. We must not mix those activities in one method.</p>
@@ -171,21 +171,23 @@ them, and all your builders only return objects and your manipulators
 only modify the world, the entire design will become easier to
 understand. Methods will be smaller and their names shorter.</p>
 
+
+
 <p>Of course, very often you will have a hard time finding those names. From time to time
 you will want to return something from a manipulator or make your builder
 make some changes, say to the cache. Try to resist this temptation and stay
 with the principle: a method is either a builder or a manipulator, nothing in
 the middle. The examples above are rather primitive, the code in real life
-is much more complicated. But that's what the principle is going to help
-us with---making the code simpler.</p>
+is much more complicated. But that’s what the principle is going to help
+us with—making the code simpler.</p>
 
-<p>I'm also aware of the <a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">noun/verb</a>
+<p>I’m also aware of the <a href="http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html">noun/verb</a>
 principle, which suggests always naming classes as nouns and their methods
-as verbs. I believe it's a wrong idea, since it doesn't differentiate
+as verbs. I believe it’s a wrong idea, since it doesn’t differentiate
 builders from manipulators and encourages us to always think in terms
 of imperative instructions. I believe that OOP must be much more about declarative
 composition of objects, even if we have to sometimes get them from other objects
-instead of instantiating them via constructors. That's why we do need builders
+instead of instantiating them via constructors. That’s why we do need builders
 in most situations and we also have to see an obvious difference between them and the other
 methods, manipulators.</p>
 

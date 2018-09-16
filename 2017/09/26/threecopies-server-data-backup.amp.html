@@ -77,10 +77,10 @@ web service to get rid of backup servers entirely.
       
 
 <p>I have a number of data resources which exist in one place only and which
-I don't really want to lose. For example, I have a hosted PHP website,
+I don’t really want to lose. For example, I have a hosted PHP website,
 and a MySQL database hosted at the same place. I also have
 a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
-Heroku, and also... Well, there are many of them. How to back them up was always a
+Heroku, and also… Well, there are many of them. How to back them up was always a
 question for me.</p>
 
 
@@ -100,26 +100,26 @@ for the FTP file archive, etc.</p>
 of this solution were always the same:</p>
 
 <ul>
-<li>I needed to pay for the server.</li>
-<li>I needed to make sure the server was always up and running (Linux is far from reliable).</li>
-<li>I needed to back up my scripts too.</li>
-<li>I needed to SSH to the server every time I wanted to change a script, remember where they were, how they start, etc.</li>
+  <li>I needed to pay for the server.</li>
+  <li>I needed to make sure the server was always up and running (Linux is far from reliable).</li>
+  <li>I needed to back up my scripts too.</li>
+  <li>I needed to SSH to the server every time I wanted to change a script, remember where they were, how they start, etc.</li>
 </ul>
 
 <p>The biggest issue is that every single owner of a data source faces
-exactly the same set of problems. "Why can't I create a hosted solution for
-these scripts, to help everybody to back up their data," I was asking myself
-for years. "Well, I can," was the answer just a few weeks ago, and
+exactly the same set of problems. “Why can’t I create a hosted solution for
+these scripts, to help everybody to back up their data,” I was asking myself
+for years. “Well, I can,” was the answer just a few weeks ago, and
 I created <a href="http://www.threecopies.com">ThreeCopies</a>.</p>
 
-<p>It's a very simple hosted executor of bash scripts, which you edit
+<p>It’s a very simple hosted executor of bash scripts, which you edit
 through a web interface. Then one of our servers starts a Docker
 container (<a href="https://hub.docker.com/r/yegor256/threecopies/">yegor256/threecopies</a> is the image, here is the
 <a href="https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile"><code>Dockerfile</code></a>)
 and runs your script inside.</p>
 
 <p>The script starts every hour, every day and every week.
-Hence the name: "three copies." It's good practice for data backup
+Hence the name: “three copies.” It’s good practice for data backup
 to create separate copies with different regularities. Also, you might want to put
 different data into different copies. To help your script understand which
 copy is running at any particular time we pass the <code>$period</code> environment variable into it, with
@@ -148,14 +148,14 @@ echo "secret_key=yQv3g3ao654Ns**********H1xQSfZlTkseA0haG" &gt;&gt; ~/.s3cfg
 s3cmd --no-progress put "${tgz}" "s3://backup.yegor256.com/${tgz}"</pre>
 
 <p>The output of the script is available through the web interface and this
-is yet another benefit of this solution. It's easy to monitor what went
+is yet another benefit of this solution. It’s easy to monitor what went
 wrong and restart the script. All logs are available through the browser. No
 SSH, no terminals.</p>
 
-<p>I would say that it's a light version of
+<p>I would say that it’s a light version of
 <a href="https://aws.amazon.com/datapipeline/">AWS Data Pipeline</a>. <a href="http://www.threecopies.com">ThreeCopies</a>
-does exactly the same, but it's easier to configure, and it's cheaper.
-I'm charging $0.01 per script execution hour. And I actually charge
+does exactly the same, but it’s easier to configure, and it’s cheaper.
+I’m charging $0.01 per script execution hour. And I actually charge
 per second, while AWS always charges for a full hour. For $5.00 you get
 500 hours. For example, the script you see above takes about 5 minutes
 to complete (the database is not huge). If you skip the hourly executions, like I did above, you

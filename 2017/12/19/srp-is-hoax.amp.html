@@ -76,10 +76,10 @@ valid is it really?
       <p>Yegor Bugayenko<br>19 December 2017</p>
       <h1>SRP is a Hoax</h1>
       <p>The <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle</a>,
-according to <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Robert Martin</a>'s
+according to <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Robert Martin</a>’s
 <a href="http://amzn.to/2m7LmaA">Clean Code</a>,
-means that "a class should have only one reason to change."
-Let's try to decrypt this rather vague statement and see how it
+means that “a class should have only one reason to change.”
+Let’s try to decrypt this rather vague statement and see how it
 helps us design better object-oriented software. If it does.</p>
 
 
@@ -87,16 +87,16 @@ helps us design better object-oriented software. If it does.</p>
 <amp-img src="/images/2017/12/the-thomas-crown-affair.jpg" alt="The Thomas Crown Affair (1999) by John McTiernan" height="539" width="1280" layout="responsive"></amp-img>
 
 <p>I mentioned SRP once in <a href="/2017/03/28/solid.html">my post about SOLID</a>,
-saying that it doesn't really help programmers understand the good old
-"<a href="https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">high cohesion</a>"
+saying that it doesn’t really help programmers understand the good old
+“<a href="https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">high cohesion</a>”
 concept, which was introduced by
 <a href="https://en.wikipedia.org/wiki/Larry_Constantine">Larry Constantine</a>
-back in 1974. Now let's see it by example and analyze how we can
+back in 1974. Now let’s see it by example and analyze how we can
 improve a class, with the SRP in mind, and whether it will become
 <a href="/2014/11/20/seven-virtues-of-good-object.html">more object-oriented</a>.</p>
 
-<p>Let's try the class <a href="https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java"><code>AwsOcket</code></a>
-from <a href="http://s3.jcabi.com">jcabi-s3</a> (I've simplified the code):</p>
+<p>Let’s try the class <a href="https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java"><code>AwsOcket</code></a>
+from <a href="http://s3.jcabi.com">jcabi-s3</a> (I’ve simplified the code):</p>
 
 <pre>class AwsOcket {
   boolean exists() { /* ... */ }
@@ -104,18 +104,18 @@ from <a href="http://s3.jcabi.com">jcabi-s3</a> (I've simplified the code):</p>
   void write(final InputStream input) { /* ... */ }
 }</pre>
 
-<p>Correct me if I'm wrong, but according to SRP this class is responsible for
+<p>Correct me if I’m wrong, but according to SRP this class is responsible for
 too many things:
 1) checking the existence of an object in AWS S3,
 2) reading its content, and
 3) modifying its content.
-Right? It's not a good design and it must be changed.</p>
+Right? It’s not a good design and it must be changed.</p>
 
 <p>In order to change it and make it responsible for just one thing we must introduce
 a getter, which will return an AWS client and then create three new classes:
 <code>ExistenceChecker</code>, <code>ContentReader</code>, and <code>ContentWriter</code>. They will check,
 read, and write. Now, in order to read the content and print it to the
-console I'm currently doing this:</p>
+console I’m currently doing this:</p>
 
 <pre>if (ocket.exists()) {
   ocket.read(System.out);
@@ -129,9 +129,9 @@ console I'm currently doing this:</p>
 
 <p>Aside from the fact that these checkers, readers, and writers are not really
 classes, but pure holders of procedures, the usage of this <code>ocket</code> turns
-into a nightmare. We can't really know anymore what will happen with it
-when we pass it somewhere. We can't, for example, guarantee that the content
-that is coming from it is decrypted or decoded on the fly. We simply can't
+into a nightmare. We can’t really know anymore what will happen with it
+when we pass it somewhere. We can’t, for example, guarantee that the content
+that is coming from it is decrypted or decoded on the fly. We simply can’t
 decorate it. It is not an object anymore, but a holder of an AWS client,
 which is used by some other classes somewhere.</p>
 
@@ -147,8 +147,8 @@ method in addition to those.</p>
 <p>My point is that SRP is a wrong idea.</p>
 
 <p>Making classes small and cohesive is a good
-idea, but making them responsible "for one thing" is a misleading simplification
-of a "high cohesion" concept. It only turns them into dumb carriers of something
+idea, but making them responsible “for one thing” is a misleading simplification
+of a “high cohesion” concept. It only turns them into dumb carriers of something
 else, instead of being encapsulators and decorators of smaller entities, to
 construct bigger ones.</p>
 
@@ -158,7 +158,7 @@ encapsulation. It is much less important how many things an object is
 responsible for than how tightly it protects the entities it encapsulates.
 A monster object with a hundred methods is much less of a problem than a DTO with five pairs of
 getters and setters! This is because a DTO spreads the problem all over the code,
-where we can't even find it, while the monster object is always right in front
+where we can’t even find it, while the monster object is always right in front
 of us and we can always refactor it into smaller pieces.</p>
 
 <p>Encapsulation comes first, size goes next, if ever.</p>

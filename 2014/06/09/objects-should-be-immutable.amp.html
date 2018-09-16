@@ -76,12 +76,12 @@ have to be immutable,  i.e. never modify their encapsulated state
       <p>Yegor Bugayenko<br>9 June 2014</p>
       <h1>Objects Should Be Immutable</h1>
       <p>In object-oriented programming, an object is
-<a href="http://en.wikipedia.org/wiki/Immutable_object">immutable</a> if its state can't be
+<a href="http://en.wikipedia.org/wiki/Immutable_object">immutable</a> if its state can’t be
 modified after it is created.
 In Java, a good example of an
 immutable <a href="/2016/07/14/who-is-object.html">object</a>
 is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"><code>String</code></a>.
-Once created, we can't modify its state. We can request that it creates
+Once created, we can’t modify its state. We can request that it creates
 new strings, but its own state will never change.</p>
 
 
@@ -92,7 +92,7 @@ It is possible to modify its state using <code>setTime()</code>.</p>
 
 
 
-<p>I don't know why the JDK designers decided to make these two
+<p>I don’t know why the JDK designers decided to make these two
 very similar classes differently. However, I believe that the design
 of a mutable <code>Date</code> has many flaws, while the immutable <code>String</code>
 is much more in the spirit of the object-oriented paradigm.</p>
@@ -105,19 +105,19 @@ Nevertheless, we should always aim for the best.</p>
 <p>This is an incomplete list of arguments in favor of immutability:</p>
 
 <ul>
-<li>immutable objects are simpler to construct, test, and use</li>
-<li>truly immutable objects are always thread-safe</li>
-<li>they help to avoid <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>
+  <li>immutable objects are simpler to construct, test, and use</li>
+  <li>truly immutable objects are always thread-safe</li>
+  <li>they help to avoid <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>
 </li>
-<li>their usage is side-effect free (no defensive copies)</li>
-<li>identity mutability problem is avoided</li>
-<li>they always have failure atomicity</li>
-<li>they are much easier to cache</li>
-<li>they prevent NULL references, <a href="/2014/05/13/why-null-is-bad.html">which are bad</a>
+  <li>their usage is side-effect free (no defensive copies)</li>
+  <li>identity mutability problem is avoided</li>
+  <li>they always have failure atomicity</li>
+  <li>they are much easier to cache</li>
+  <li>they prevent NULL references, <a href="/2014/05/13/why-null-is-bad.html">which are bad</a>
 </li>
 </ul>
 
-<p>Let's discuss the most important arguments one by one.</p>
+<p>Let’s discuss the most important arguments one by one.</p>
 
 <h2 id="thread-safety">Thread Safety</h2>
 
@@ -128,7 +128,7 @@ object at the same time, without clashing with another thread.</p>
 
 
 <p>If no object methods can modify its state, no matter how many
-of them and how often are being called parallel---they
+of them and how often are being called parallel—they
 will work in their own memory space in stack.</p>
 
 <p>Goetz et al. explained the advantages of immutable objects
@@ -150,7 +150,7 @@ String second = request.fetch();</pre>
 <p>This code works. However, you must remember that the first
 request should be configured before the second one may happen.
 If we decide to remove the first request from the script, we will
-remove the second and the third line, and won't get any errors
+remove the second and the third line, and won’t get any errors
 from the compiler:</p>
 
 <pre>Request request = new Request("http://localhost");
@@ -161,7 +161,7 @@ String second = request.fetch();</pre>
 
 <p>Now, the script is broken although it compiled without errors. This is
 what <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>
-is about---there is always some hidden
+is about—there is always some hidden
 information in the code that a programmer has to remember. In this example,
 we have to remember that the configuration for the first request
 is also used for the second one.</p>
@@ -171,7 +171,7 @@ is also used for the second one.</p>
 <p>We have to remember that the second request should always stay
 together and be executed after the first one.</p>
 
-<p>If <code>Request</code> class were immutable, the first snippet wouldn't
+<p>If <code>Request</code> class were immutable, the first snippet wouldn’t
 work in the first place, and would have been rewritten like:</p>
 
 <pre>final Request request = new Request("");
@@ -188,25 +188,25 @@ final Request post = request.method("POST");
 String first = post.fetch();
 String second = post.body("text=hello").fetch();</pre>
 
-<p>See, refactoring didn't break anything and we still don't have
+<p>See, refactoring didn’t break anything and we still don’t have
 temporal coupling. The first request can be removed safely
 from the code without affecting the second one.</p>
 
 <p>I hope this example demonstrates that the code manipulating
 immutable objects is more readable and maintainable,
-because it doesn't have
+because it doesn’t have
 <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>.</p>
 
 <h2 id="avoiding-side-effects">Avoiding Side Effects</h2>
 
-<p>Let's try to use our <code>Request</code> class in a new method (now it is mutable):</p>
+<p>Let’s try to use our <code>Request</code> class in a new method (now it is mutable):</p>
 
 <pre>public String post(Request request) {
   request.method("POST");
   return request.fetch();
 }</pre>
 
-<p>Let's try to make two requests---the first
+<p>Let’s try to make two requests—the first
 with GET method and the second with POST:</p>
 
 <pre>Request request = new Request("http://localhost");
@@ -214,12 +214,12 @@ request.method("GET");
 String first = this.post(request);
 String second = request.fetch();</pre>
 
-<p>Method <code>post()</code> has a "side effect"---it makes changes
+<p>Method <code>post()</code> has a “side effect”—it makes changes
 to the mutable object <code>request</code>. These changes are not really
 expected in this case. We expect it to make a POST request and
-return its body. We don't want to read its documentation just
+return its body. We don’t want to read its documentation just
 to find out that behind the scene it also modifies
-the request we're passing to it as an argument.</p>
+the request we’re passing to it as an argument.</p>
 
 <p>Needless to say, such side effects lead to bugs and
 maintainability issues. It would be much better
@@ -256,7 +256,7 @@ implementation of <code>equals()</code> and <code>hashCode()</code> methods.</p>
 
 <p>The consequence of this convenient approach being used
 with mutable objects is that every time we modify
-object's state it changes its identity:</p>
+object’s state it changes its identity:</p>
 
 <pre>Date first = new Date(1L);
 Date second = new Date(1L);
@@ -272,8 +272,8 @@ map.put(date, "hello, world!");
 date.setTime(12345L);
 assert map.containsKey(date); // false</pre>
 
-<p>When modifying the state of <code>date</code> object, we're not expecting
-it to change its identity. We're not expecting to lose an entry
+<p>When modifying the state of <code>date</code> object, we’re not expecting
+it to change its identity. We’re not expecting to lose an entry
 in the map just because the state of its key is changed. However,
 this is exactly what is happening in the example above.</p>
 
@@ -284,7 +284,7 @@ This value is used by <a href="http://docs.oracle.com/javase/7/docs/api/java/uti
 to place the entry into the internal hash table.
 When we call <code>containsKey()</code> hash code of the object is
 different (because it is based on its internal state) and
-<code>HashMap</code> can't find it in the internal hash table.</p>
+<code>HashMap</code> can’t find it in the internal hash table.</p>
 
 <p>It is a very annoying and difficult to debug
 side effects of mutable objects. Immutable objects avoid it completely.</p>
@@ -309,7 +309,7 @@ side effects of mutable objects. Immutable objects avoid it completely.</p>
 in a broken state if it
 <a href="/2015/12/01/rethrow-exceptions.html">throws</a>
 a runtime exception on overflow.
-Its <code>size</code> property will be incremented, while <code>items</code> won't get a new element.</p>
+Its <code>size</code> property will be incremented, while <code>items</code> won’t get a new element.</p>
 
 
 
@@ -328,7 +328,8 @@ by Joshua Bloch.</p>
 <p>There are a number of arguments against immutability.</p>
 
 <ol>
-<li><p>“Immutability is not for enterprise systems”.
+  <li>
+    <p>“Immutability is not for enterprise systems”.
 Very often, I hear people say that immutability is a
 fancy feature, while absolutely impractical in real
 enterprise systems. As a counter-argument, I can only show
@@ -345,16 +346,19 @@ some examples of real-life applications that contain only immutable Java objects
 The above are all Java libraries that work solely with immutable
 classes/objects. <a href="https://github.com/netbout/netbout">netbout.com</a>
 and <a href="/2014/12/04/synchronization-between-nodes.html">stateful.co</a> are
-web applications that work solely with immutable objects.</p></li>
-<li><p>“It's cheaper to update an existing object than create a new one”.
+web applications that work solely with immutable objects.</p>
+  </li>
+  <li>
+    <p>“It’s cheaper to update an existing object than create a new one”.
 Oracle <a href="http://docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html">thinks</a>
 that “The impact of object creation is often overestimated and can
 be offset by some of the efficiency associated with immutable objects.
 These include decreased overhead due to garbage collection, and the
-elimination of code needed to protect mutable objects from corruption.” I agree.</p></li>
+elimination of code needed to protect mutable objects from corruption.” I agree.</p>
+  </li>
 </ol>
 
-<p>If you have some other arguments, please post them below and I'll try to comment.</p>
+<p>If you have some other arguments, please post them below and I’ll try to comment.</p>
 
 <p>P.S. Check <a href="http://www.takes.org">takes.org</a>,
 a Java web framework that consists entirely of immutable objects.</p>

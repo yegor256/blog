@@ -76,33 +76,45 @@ it is not defined correctly in most books.
       <p>Yegor Bugayenko<br>14 July 2016</p>
       <h1>Who Is an Object?</h1>
       <p>There are thousands of books about object-oriented programming and
-hundreds of object-oriented languages, and I believe most (read "all") of them
-give us an incorrect definition of an "object." That's why the entire
+hundreds of object-oriented languages, and I believe most (read “all”) of them
+give us an incorrect definition of an “object.” That’s why the entire
 OOP world is so full of misconceptions and mistakes. Their
 definition of an object is limited by the hardware architecture they
-are working with and that's why is very primitive and mechanical.
-I'd like to introduce a better one.</p>
+are working with and that’s why is very primitive and mechanical.
+I’d like to introduce a better one.</p>
 
 
 
 <amp-img src="/images/2016/07/jackass-the-movie.jpg" alt="Jackass: The Movie (2002) by Jeff Tremaine" height="675" width="1200" layout="responsive"></amp-img>
 
-<p>What is an object? I've done a little research, and this is what I've found:</p>
+<p>What is an object? I’ve done a little research, and this is what I’ve found:</p>
 
 <ul>
-<li><p>"Objects may contain data, in the form of fields, often known as attributes;
-and code, in the form of procedures, often known as methods"---<a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Wikipedia</a> at the time of writing.</p></li>
-<li><p>"An object stores its state in fields and exposes its behavior through methods"---<a href="https://docs.oracle.com/javase/tutorial/java/concepts/object.html">What Is an Object?</a> by Oracle.</p></li>
-<li><p>"Each object looks quite a bit like a little computer---it has a state, and it has operations that you can ask it to perform"---<a href="http://amzn.to/1PBmQpm">Thinking in Java</a>, 4th Ed., Bruce Eckel, p. 16.</p></li>
-<li><p>"A class is a collection of data fields that hold values
-and methods that operate on those values"---<a href="http://amzn.to/28PEqSi">Java in a Nutshell</a>, 6th Ed., Evans and Flanagan, p. 98.</p></li>
-<li><p>"An object is some memory that holds a value of some type"---<a href="http://amzn.to/1XyGCtk">The C++ Programming Language</a>, 4th Ed., Bjarne Stroustrup, p. 40.</p></li>
-<li><p>"An object consists of some private memory and a set of operations"---<a href="http://amzn.to/1UhYinp">Smalltalk-80</a>, Goldberg and Robson, p. 6.</p></li>
+  <li>
+    <p>“Objects may contain data, in the form of fields, often known as attributes;
+and code, in the form of procedures, often known as methods”—<a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Wikipedia</a> at the time of writing.</p>
+  </li>
+  <li>
+    <p>“An object stores its state in fields and exposes its behavior through methods”—<a href="https://docs.oracle.com/javase/tutorial/java/concepts/object.html">What Is an Object?</a> by Oracle.</p>
+  </li>
+  <li>
+    <p>“Each object looks quite a bit like a little computer—it has a state, and it has operations that you can ask it to perform”—<a href="http://amzn.to/1PBmQpm">Thinking in Java</a>, 4th Ed., Bruce Eckel, p. 16.</p>
+  </li>
+  <li>
+    <p>“A class is a collection of data fields that hold values
+and methods that operate on those values”—<a href="http://amzn.to/28PEqSi">Java in a Nutshell</a>, 6th Ed., Evans and Flanagan, p. 98.</p>
+  </li>
+  <li>
+    <p>“An object is some memory that holds a value of some type”—<a href="http://amzn.to/1XyGCtk">The C++ Programming Language</a>, 4th Ed., Bjarne Stroustrup, p. 40.</p>
+  </li>
+  <li>
+    <p>“An object consists of some private memory and a set of operations”—<a href="http://amzn.to/1UhYinp">Smalltalk-80</a>, Goldberg and Robson, p. 6.</p>
+  </li>
 </ul>
 
-<p>What is common throughout all these definitions is the word "contains" (or "holds,"
-"consists," "has," etc.). They all think that an object is a <em>box with data</em>.
-And this perspective is exactly what I'm strongly against.</p>
+<p>What is common throughout all these definitions is the word “contains” (or “holds,”
+“consists,” “has,” etc.). They all think that an object is a <em>box with data</em>.
+And this perspective is exactly what I’m strongly against.</p>
 
 
 
@@ -114,18 +126,18 @@ that an object is an in-memory box with data.</p>
 
 <p>Right, but this is just a corner case!</p>
 
-<p>Let's try to imagine another object-oriented language that doesn't
+<p>Let’s try to imagine another object-oriented language that doesn’t
 store object attributes in memory. Confused? Bear with me for a minute.
-Let's say that in that language we define an object:</p>
+Let’s say that in that language we define an object:</p>
 
 <pre>c {
   vin: v,
   engine: e
 }</pre>
 
-<p>Here, <code>vin</code> and <code>engine</code> are attributes of object <code>c</code> (it's a car; let's
+<p>Here, <code>vin</code> and <code>engine</code> are attributes of object <code>c</code> (it’s a car; let’s
 forget about classes for now to focus strictly on objects). Thus, there is
-a simple object that has two attributes. The first one is car's VIN, and the
+a simple object that has two attributes. The first one is car’s VIN, and the
 second one is its engine. The VIN is an object <code>v</code>, while the engine is <code>e</code>.
 To make it easier to understand, this is how a similar object would
 look in Java:</p>
@@ -134,34 +146,34 @@ look in Java:</p>
 Engine e = new Engine();
 Car c = new Car(v, e);</pre>
 
-<p>I'm not entirely sure about JVM, but in C++ such an object will take
-exactly 25 bytes in memory (assuming it's 64-bit x86 architecture). The
+<p>I’m not entirely sure about JVM, but in C++ such an object will take
+exactly 25 bytes in memory (assuming it’s 64-bit x86 architecture). The
 first 17 bytes will be taken by the array of chars and another 8 bytes
 by a pointer to the block in memory with object <code>e</code>.
-That's how the C++ compiler understands objects and translates them to
+That’s how the C++ compiler understands objects and translates them to
 the x86 architecture. In C++, objects are just data structures with
 clearly defined allocation of data attributes.</p>
 
 <p>In that example, attributes <code>vin</code> and <code>engine</code> are not equal:
-<code>vin</code> is "data," while <code>engine</code> is a "pointer" to another object.
+<code>vin</code> is “data,” while <code>engine</code> is a “pointer” to another object.
 I intentionally made it this way in order to demonstrate that calling
 an object a box with data is possible only with <code>vin</code>. Only when
-the data are located right "inside" the object can we say that the
-object is actually a box for the data. With <code>engine</code>, it isn't
+the data are located right “inside” the object can we say that the
+object is actually a box for the data. With <code>engine</code>, it isn’t
 really true because there is no data technically <em>inside</em> the object. Instead, there is a
 <em>pointer</em> to another object. If our object would only have an
 <code>engine</code> attribute, it would take just 8 bytes in memory, with none of them
-actually occupied by "data."</p>
+actually occupied by “data.”</p>
 
 
 
-<p>Now, let's get back to our new pseudo language. Let's imagine it treats
-objects very differently than C++---it doesn't keep object attributes
-in memory <em>at all</em>. It doesn't have pointers, and it doesn't know anything about
+<p>Now, let’s get back to our new pseudo language. Let’s imagine it treats
+objects very differently than C++—it doesn’t keep object attributes
+in memory <em>at all</em>. It doesn’t have pointers, and it doesn’t know anything about
 x86 architecture. It just <em>knows</em> somehow what attributes belong to an object.</p>
 
 <p>Thus, in our language, objects are no longer boxes with data both technically
-and conceptually. They know where the data is, but they don't
+and conceptually. They know where the data is, but they don’t
 <em>contain</em> the data. They <em>represent</em> the data, as well as other objects and entities.
 Indeed, the object <code>c</code> in our imaginary language represents two other objects:
 a VIN and an engine.</p>
@@ -177,22 +189,22 @@ and try to access that data as much as possible.</p>
 
 <p>If we would think of an object as a <strong>representative</strong> of data instead of
 a container of them, we would not want to get a hold of data as soon as
-possible. We would understand that the data are far away and we can't
-just easily touch them. We should communicate with an object---and how
+possible. We would understand that the data are far away and we can’t
+just easily touch them. We should communicate with an object—and how
 exactly it communicates with the data is not our concern.</p>
 
 <p>I hope that in the near future, the market will introduce new object-oriented
-languages that won't store objects as in-memory data structures, even
+languages that won’t store objects as in-memory data structures, even
 technically.</p>
 
 <p>By the way, here is the definition of an object from my favorite book,
 <a href="http://amzn.to/266oJr4">Object Thinking</a> by David West, p. 66:</p>
 
 <blockquote>
-<p>An object is the equivalent of the quanta from which the universe is constructed</p>
+  <p>An object is the equivalent of the quanta from which the universe is constructed</p>
 </blockquote>
 
-<p>What do you think? Is it close to the "representative" definition I just
+<p>What do you think? Is it close to the “representative” definition I just
 proposed?</p>
 
     </article>

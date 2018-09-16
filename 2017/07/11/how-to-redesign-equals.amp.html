@@ -79,9 +79,9 @@ it and make more object-oriented.
 <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29"><code>Object.equals()</code></a>
 and
 <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29"><code>Comparable.compareTo()</code></a>.
-I've hated them for years, because, no matter how hard
+I’ve hated them for years, because, no matter how hard
 I try to like them, the code inside looks ugly. Now I know what exactly
-is wrong and how I would design this "object-to-object comparing" mechanism
+is wrong and how I would design this “object-to-object comparing” mechanism
 <em>better</em>.</p>
 
 
@@ -122,9 +122,9 @@ represent the weight of something in kilos:</p>
 <a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>
 with <code>instanceof</code>. The second problem
 is that we touch the internals of the incoming object. This design makes
-polymorphic behavior of the <code>Weight</code> impossible. We simply can't pass
+polymorphic behavior of the <code>Weight</code> impossible. We simply can’t pass
 anything else to the <code>equals()</code> method, besides an instance of the
-class <code>Weight</code>. We can't turn it into an interface and introduce
+class <code>Weight</code>. We can’t turn it into an interface and introduce
 multiple implementations of it:</p>
 
 <pre>interface Weight {
@@ -150,9 +150,9 @@ to do the actual comparison.</p>
 
 <p>What is the solution?</p>
 
-<p>This is what I'm offering. Any comparison, no matter what types we
+<p>This is what I’m offering. Any comparison, no matter what types we
 are talking about, is about comparing two digital values. Either we
-compare a weight with a weight, text with text, or a user with a user---our
+compare a weight with a weight, text with text, or a user with a user—our
 CPUs can only compare numbers. Thus, we introduce a new interface
 <code>Digitizable</code>:</p>
 
@@ -161,7 +161,7 @@ CPUs can only compare numbers. Thus, we introduce a new interface
 }</pre>
 
 <p>Next, we introduce a new class <code>Comparison</code>, which <em>is</em> the comparison of
-two streams of bytes (I'm not sure the code is perfect, I tested it
+two streams of bytes (I’m not sure the code is perfect, I tested it
 <a href="https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals">here</a>,
 feel free to improve and contribute with a pull request):</p>
 
@@ -222,11 +222,12 @@ because <code>400</code> is less than <code>500</code>.</p>
 ugly code inside those <code>equals()</code> and <code>compareTo()</code> methods.
 The class <code>Comparison</code> will work with all possible types. All our objects
 need to do in order to become comparable is to implement <code>Digitizable</code> and
-"provide" their bytes for inspection/comparison.</p>
+“provide” their bytes for inspection/comparison.</p>
 
 <p>This approach is actually very close to the
 <a href="/2016/04/05/printers-instead-of-getters.html">printers</a>
 I described earlier.</p>
+
 
     </article>
   </body>

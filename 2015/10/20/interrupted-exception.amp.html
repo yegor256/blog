@@ -77,7 +77,7 @@ of how it should be handled.
       <h1>What Do You Do With InterruptedException?</h1>
       <p><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html"><code>InterruptedException</code></a>
 is a permanent source of pain in Java, for
-junior developers especially. But it shouldn't be. It's a rather
+junior developers especially. But it shouldn’t be. It’s a rather
 simple and easy-to-understand idea. Let me try to describe and
 simplify it.</p>
 
@@ -85,7 +85,7 @@ simplify it.</p>
 
 <amp-img src="/images/2015/10/crouching-tiger-hidden-dragon.jpg" alt="Crouching Tiger, Hidden Dragon (2000) by Ang Lee" height="516" width="1200" layout="responsive"></amp-img>
 
-<p>Let's start with this code:</p>
+<p>Let’s start with this code:</p>
 
 <pre>while (true) {
   // Nothing
@@ -94,10 +94,10 @@ simplify it.</p>
 <p>What does it do? Nothing, it just spins the CPU endlessly. Can we terminate it?
 Not in Java. It will only stop when the entire JVM stops, when you hit
 <code>Ctrl-C</code>. There is no way in Java to terminate a thread unless the
-thread exits by itself. That's the principle we have to have in mind,
+thread exits by itself. That’s the principle we have to have in mind,
 and everything else will just be obvious.</p>
 
-<p>Let's put this endless loop into a thread:</p>
+<p>Let’s put this endless loop into a thread:</p>
 
 <pre>Thread loop = new Thread(
   new Runnable() {
@@ -138,18 +138,18 @@ loop.interrupt();</pre>
 are used in this example. When I call <code>loop.interrupt()</code>, a flag
 is set to <code>true</code> somewhere inside the thread <code>loop</code>. When I call
 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupted%28%29"><code>interrupted()</code></a>,
-the flag is returned and immediately set to <code>false</code>. Yeah, that's the design
-of the method. It checks the flag, returns it, and sets it to <code>false</code>. It's ugly,
+the flag is returned and immediately set to <code>false</code>. Yeah, that’s the design
+of the method. It checks the flag, returns it, and sets it to <code>false</code>. It’s ugly,
 I know.</p>
 
-<p>Thus, if I never call <code>Thread.interrupted()</code> inside the thread and don't
+<p>Thus, if I never call <code>Thread.interrupted()</code> inside the thread and don’t
 exit when the flag is <code>true</code>, nobody will be able to stop me. Literally,
 I will just ignore their calls to <code>interrupt()</code>. They will ask me to stop,
-but I will ignore them. They won't be able to interrupt me.</p>
+but I will ignore them. They won’t be able to interrupt me.</p>
 
-<p>Thus, to summarize what we've learned so far, a properly designed thread
+<p>Thus, to summarize what we’ve learned so far, a properly designed thread
 will check that flag once in a while and stop gracefully. If the
-code doesn't check the flag and never calls <code>Thread.interrupted()</code>, it
+code doesn’t check the flag and never calls <code>Thread.interrupted()</code>, it
 accepts the fact that sooner or later it will be terminated cold turkey,
 by clicking <code>Ctrl-C</code>.</p>
 
@@ -173,17 +173,17 @@ is designed (taking a very primitive approach):</p>
   }
 }</pre>
 
-<p>Why is it done this way? Why can't it just wait and never check the flag?
-Well, I believe it's done for a good reason. And the reason is the following
-(correct me if I'm wrong): The code should either be bullet-fast or
+<p>Why is it done this way? Why can’t it just wait and never check the flag?
+Well, I believe it’s done for a good reason. And the reason is the following
+(correct me if I’m wrong): The code should either be bullet-fast or
 interruption-ready, nothing in between.</p>
 
 <p>If your code is fast, you never check the interruption flag, because you
-don't want to deal with any interruptions.
+don’t want to deal with any interruptions.
 If your code is slow and may take seconds to execute, make it explicit
 and handle interruptions somehow.</p>
 
-<p>That's why <code>InterruptedException</code> is a
+<p>That’s why <code>InterruptedException</code> is a
 <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">checked</a>
 exception. Its design
 tells you that if you want to pause for a few milliseconds, make your
@@ -197,16 +197,16 @@ code interruption-ready. This is how it looks in practice:</p>
 
 <p>Well, you could let it float up to a higher level, where they will be
 responsible for catching it. The point is that someone will have to
-catch it and do something with the thread. Ideally, just stop it, since that's
+catch it and do something with the thread. Ideally, just stop it, since that’s
 what the flag is about. If <code>InterruptedException</code> is thrown, it means
-someone checked the flag and our thread has to finish what it's doing ASAP.</p>
+someone checked the flag and our thread has to finish what it’s doing ASAP.</p>
 
 <p>The owner of the thread
-<a href="/2014/06/20/limit-method-execution-time.html">doesn't want to wait</a>
+<a href="/2014/06/20/limit-method-execution-time.html">doesn’t want to wait</a>
 any longer. And we must respect the decision of our owner.</p>
 
 <p>Thus, when you catch <code>InterruptedException</code>, you have to do whatever
-it takes to wrap up what you're doing and exit.</p>
+it takes to wrap up what you’re doing and exit.</p>
 
 <p>Now, look again at the code of <code>Thread.sleep()</code>:</p>
 
@@ -230,11 +230,11 @@ removed it, and threw <code>InterruptedException</code>. If you call <code>Threa
 again, it will not know anything about that interruption request and will
 not <a href="/2015/12/01/rethrow-exceptions.html">throw</a> anything.</p>
 
-<p>See what I'm getting at? It's very important not to lose that
-<code>InterruptedException</code>. We can't just swallow it and move on. That would
+<p>See what I’m getting at? It’s very important not to lose that
+<code>InterruptedException</code>. We can’t just swallow it and move on. That would
 be a severe violation of the entire Java multi-threading idea.
 Our owner (the owner of our thread) is
-asking us to stop, and we just ignore it. That's a very bad idea.</p>
+asking us to stop, and we just ignore it. That’s a very bad idea.</p>
 
 <p>This is what most of us are doing with <code>InterruptedException</code>:</p>
 
@@ -244,16 +244,16 @@ asking us to stop, and we just ignore it. That's a very bad idea.</p>
   throw new RuntimeException(ex);
 }</pre>
 
-<p>It looks logical, but it doesn't guarantee that the higher level will
+<p>It looks logical, but it doesn’t guarantee that the higher level will
 actually stop everything and exit. They may just catch a runtime exception
 there, and the thread will remain alive. The owner of the thread will be disappointed.</p>
 
 <p>We have to inform the higher level that we just caught an interruption
-request. We can't just throw a runtime exception. Such behavior would
+request. We can’t just throw a runtime exception. Such behavior would
 be too <a href="/2015/11/24/imprisonment-for-irresponsible-coding.html">irresponsible</a>.
 The entire thread received an interruption request,
 and we merely swallow it and convert it into a <code>RuntimeException</code>.
-We can't treat such a serious situation so loosely.</p>
+We can’t treat such a serious situation so loosely.</p>
 
 <p>This is what we have to do:</p>
 
@@ -264,13 +264,13 @@ We can't treat such a serious situation so loosely.</p>
   throw new RuntimeException(ex);
 }</pre>
 
-<p>We're setting the flag back to <code>true</code>!</p>
+<p>We’re setting the flag back to <code>true</code>!</p>
 
 <p>Now, nobody will blame us for having an irresponsible attitude toward a valuable flag. We
 found it in <code>true</code> status, cleared it, set it back to <code>true</code>, and threw
-a runtime exception. What happens next, we don't care.</p>
+a runtime exception. What happens next, we don’t care.</p>
 
-<p>I think that's it. You can find a more detailed and official description
+<p>I think that’s it. You can find a more detailed and official description
 of this problem here:
 <a href="http://www.ibm.com/developerworks/library/j-jtp05236/">Java Theory and Practice: Dealing With <code>InterruptedException</code></a>.</p>
 

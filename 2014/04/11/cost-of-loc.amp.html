@@ -77,7 +77,7 @@ The experiment proves economical advantage of a distributed development.
       <h1>How Much Do You Pay Per Line of Code?</h1>
       
 
-<p>Yes, I know, "line of code" (LoC)
+<p>Yes, I know, “line of code” (LoC)
 is a <a href="http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects">very wrong metric</a>.
 There are <a href="http://blog.codinghorror.com/diseconomies-of-scale-and-lines-of-code/">tons of articles</a>
 written about it, as well as famous books.
@@ -91,31 +91,31 @@ and discuss some very interesting numbers.</p>
 <h2 id="project-1-traditionally-co-located">Project #1: Traditionally Co-located</h2>
 
 <p>The first project I was a part of was performed  by a traditionally co-located
-group of programmers. There were about 20 of them (I'm not counting
+group of programmers. There were about 20 of them (I’m not counting
 <a href="/2015/09/22/micromanagement.html">managers</a>,
 analysts, product owners, SCRUM masters, etc.) The project was a web auctioning
 site with pretty high traffic numbers (over two million page views per day).</p>
 
 <p>The code base size was about 200k lines, of which 150k was PHP, 35k JavaScript
-and the remainder CSS, XML, Ruby, and something else. I'm counting only
+and the remainder CSS, XML, Ruby, and something else. I’m counting only
 non-empty and non-comment lines of code, using
 <a href="http://cloc.sourceforge.net/"><code>cloc.pl</code></a>.</p>
 
-<p>It was a commercial project, so I can't disclose its name.</p>
+<p>It was a commercial project, so I can’t disclose its name.</p>
 
 <amp-img src="/images/2014/04/brazil-crowded-office.png" alt="Brazil (1985) by Terry Gilliam" height="675" width="1200" layout="responsive"></amp-img>
 
 <p>The team was co-located in one
 <a href="/2015/10/06/how-to-be-good-office-slave.html">office</a>
 in Europe where everybody was working
-"from nine 'til five." We had meetings, lunches, desk-to-desk chats and lots of
+“from nine ‘til five.” We had meetings, lunches, desk-to-desk chats and lots of
 other <a href="/2016/08/23/communication-maturity.html">informal communications</a>.
 All tasks were tracked in JIRA.</p>
 
 <h2 id="project-2-extremely-distributed">Project #2: Extremely Distributed</h2>
 
 <p>The second project was an open source Java product, developed by an <a href="http://www.xdsd.org">extremely
-distributed</a> team of about 15 developers. We didn't have
+distributed</a> team of about 15 developers. We didn’t have
 any chats or any other informal communications. We discussed everything in
 GitHub issues. The code base was significantly smaller with only about 30k
 lines, of which about 90% was Java and the rest in XML.</p>
@@ -136,7 +136,7 @@ teams.</p>
 
 <p>Both projects satisfied the
 <a href="/2015/11/10/ten-mistakes-in-specs.html">requirements</a>
-of their users. I'm mentioning this to
+of their users. I’m mentioning this to
 emphasize that both projects produced valuable and useful lines of code. There
 was no garbage and almost no <a href="http://en.wikipedia.org/wiki/Duplicate_code">code
 duplication</a>.</p>
@@ -148,7 +148,7 @@ financial details. Besides that, I had access to both Git repositories,
 so I can measure how many new lines (or changed lines) were introduced by both
 teams in, say, a three-month period.</p>
 
-<p>Now, let's see the numbers.</p>
+<p>Now, let’s see the numbers.</p>
 
 <p>The first project (the one that was co-located) was paying approximately
 €50,000 annually to a good developer, which was about $5,600 per month or
@@ -159,7 +159,7 @@ $20-35 per hour, for completed tasks only according to one of the principles of
 <p>The first one, in three months, produced 59k new lines and removed 29k in
 changes in the <code>master</code> branch, which totals 88k lines of code. The project
 resulted in about 10,000 man hours to produce these lines (20 programmers, three
-months, 170 working hours per month)---which equates to about $350k. Therefore,
+months, 170 working hours per month)—which equates to about $350k. Therefore,
 the project
 <a href="/2015/06/02/how-to-estimate-software-cost.html">cost</a> a whopping</p>
 
@@ -180,7 +180,7 @@ talks about 10 lines per day, which is a hundred times less than we saw in our p
 
 <h2 id="how-to-validate-the-numbers">How to Validate the Numbers?</h2>
 
-<p>If you're curious, I'm using <a href="https://github.com/yegor256/hoc">hoc</a>
+<p>If you’re curious, I’m using <a href="https://github.com/yegor256/hoc">hoc</a>
 to get the numbers from Git (it is explained in
 <a href="/2014/11/14/hits-of-code.html">Hits-of-Code Instead of SLoC</a>).
 You can validate the numbers for the second project here on GitHub:
@@ -188,35 +188,35 @@ You can validate the numbers for the second project here on GitHub:
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>What I'm trying to express with these numbers is that distributed programming is
+<p>What I’m trying to express with these numbers is that distributed programming is
 <a href="/2016/08/05/distributed-teams-are-higher-quality.html">much more effective</a>,
 money-wise, than a co-located team. Again, I can hear you
-saying that "line of code" is not a proper metric. But, come on, $0.13 vs.
+saying that “line of code” is not a proper metric. But, come on, $0.13 vs.
 $3.98? Thirty times more expensive?</p>
 
 
 
-<p>It's not about metrics any more. It's about preventing wasteful man hours and
+<p>It’s not about metrics any more. It’s about preventing wasteful man hours and
 the huge waste of money that comes with them?</p>
 
 <h2 id="can-we-do-the-same">Can We Do the Same?</h2>
 
-<p>Of course, the same results can't be achieved by just telling your programmers
+<p>Of course, the same results can’t be achieved by just telling your programmers
 to work from home and never come to the
 <a href="/2015/10/06/how-to-be-good-office-slave.html">office</a>. XDSD is not about that.
 <a href="http://www.xdsd.org">XDSD</a> is about strict quality principles, which should be
 followed by the entire team.</p>
 
-<p>And when these principles are in place---you pay thirty times less.</p>
+<p>And when these principles are in place—you pay thirty times less.</p>
 
 <p>By the way, this is what people say about their projects:</p>
 
 <ul>
-<li>$12–103: <a href="http://www.crazyontap.com/topic.php?TopicId=242135">crazyontap.com</a>
+  <li>$12–103: <a href="http://www.crazyontap.com/topic.php?TopicId=242135">crazyontap.com</a>
 </li>
-<li>$15–40: <a href="http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html">betterembsw.blogspot.nl</a>
+  <li>$15–40: <a href="http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html">betterembsw.blogspot.nl</a>
 </li>
-<li>over $5: <a href="http://discuss.joelonsoftware.com/default.asp?biz.5.467536.25">joelonsoftware.com</a>
+  <li>over $5: <a href="http://discuss.joelonsoftware.com/default.asp?biz.5.467536.25">joelonsoftware.com</a>
 </li>
 </ul>
 

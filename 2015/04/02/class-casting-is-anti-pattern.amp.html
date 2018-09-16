@@ -108,13 +108,13 @@ of it, for example
 is smart enough to understand that if <code>items</code> are also instances of <code>Collection</code>,
 there is no need to actually iterate them. It would be much faster to
 cast them to <code>Collection</code> and then call method <code>size()</code>. Looks logical,
-but what's wrong with this approach? I see two practical problems.</p>
+but what’s wrong with this approach? I see two practical problems.</p>
 
 <p>First, there is a <strong>hidden coupling</strong> of <code>sizeOf()</code> and <code>Collection</code>. This
-coupling is not visible to the clients of <code>sizeOf()</code>. They don't know that
+coupling is not visible to the clients of <code>sizeOf()</code>. They don’t know that
 method <code>sizeOf()</code> relies on interface <code>Collection</code>. If tomorrow we decide
-to change it, <code>sizeOf()</code> won't work. And we'll be very surprised, since
-its signature says nothing about this dependency. This won't happen with
+to change it, <code>sizeOf()</code> won’t work. And we’ll be very surprised, since
+its signature says nothing about this dependency. This won’t happen with
 <code>Collection</code>, obviously, since it is part of the Java SDK, but with custom
 classes, this may and will happen.</p>
 
@@ -143,7 +143,7 @@ is method overloading (not available in semi-OOP languages like Ruby or PHP):</p
   }
 }</pre>
 
-<p>Isn't that more elegant?</p>
+<p>Isn’t that more elegant?</p>
 
 <p>Philosophically speaking, type casting is discrimination  against the object
 that comes into the method. The object complies with the contract provided by the
@@ -151,24 +151,24 @@ method signature. It implements the <code>Iterable</code> interface, which
 <a href="/2014/11/20/seven-virtues-of-good-object.html">is a contract</a>,
 and it expects equal treatment with all other objects that come into
 the same method. But the method discriminates objects by their types.
-The method is basically asking the object about its... race. Black
-objects go right while white objects go left. That's what this <code>instanceof</code>
-is doing, and that's what discrimination is all about.</p>
+The method is basically asking the object about its… race. Black
+objects go right while white objects go left. That’s what this <code>instanceof</code>
+is doing, and that’s what discrimination is all about.</p>
 
 <p>By using <code>instanceof</code>, the method is segregating incoming objects by the
 certain group they belong to. In this case, there are two groups: collections
 and everybody else. If you are a collection, you get special treatment.
 Even though you abide by the <code>Iterable</code> contract, we still treat some objects
-specially because they belong to an "elite" group called <code>Collection</code>.</p>
+specially because they belong to an “elite” group called <code>Collection</code>.</p>
 
 <p>You may say that <code>Collection</code> is just another contract that an object may
-comply with. That's true, but in this case, there should be another door through
+comply with. That’s true, but in this case, there should be another door through
 which those who work by that contract should enter. You announced that
 <code>sizeOf()</code> accepts everybody who works on the <code>Iterable</code> contract. I am an object,
 and I do what the contract says. I enter the method and expect
 equal treatment with everybody else who comes into the same method.
 But, apparently, once inside the method, I realize that some objects have
-some special privileges. Isn't that discrimination?</p>
+some special privileges. Isn’t that discrimination?</p>
 
 <p>To conclude, I would consider <code>instanceof</code> and class casting to be
 anti-patterns and code smells. Once you see a need to use them,

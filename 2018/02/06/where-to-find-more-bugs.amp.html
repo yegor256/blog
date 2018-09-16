@@ -76,9 +76,9 @@ suggests some places where they can easily be found.
       <p>Yegor Bugayenko<br>6 February 2018</p>
       <h1>More Bugs, Please</h1>
       <p>A <a href="/2015/06/11/wikipedia-bug-definition.html">bug</a>
-is something we find in a software product that "doesn't look right" (this
+is something we find in a software product that “doesn’t look right” (this
 is my personal definition). A bug can be hidden or visible; it can be
-"already fixed" or "still present"; it can be critical or cosmetic; it
+“already fixed” or “still present”; it can be critical or cosmetic; it
 can be urgent or of a low priority. What is important is that the
 <a href="/2017/05/23/unlimited-number-of-bugs.html">more</a>
 bugs we are able to find and fix before our customers see them, the higher
@@ -95,7 +95,7 @@ and how they can find those bugs, to make more money.</p>
 
 <amp-img src="/images/2018/02/american-honey.jpg" alt="American Honey (2016) by Andrea Arnold" height="832" width="1280" layout="responsive"></amp-img>
 
-<p>Obviously, if something is broken, it's a bug; no need to mention it here.
+<p>Obviously, if something is broken, it’s a bug; no need to mention it here.
 However, when a product is <a href="/2017/03/24/tdd-that-works.html">more or less stable</a>,
 not too many things are
 visibly broken. But we still pay for bugs. What should you look out for? Read on. This
@@ -106,47 +106,47 @@ If a class
 (<a href="https://github.com/yegor256/cactoos/issues/558">yegor256/cactoos#558</a>)
 or the entire module
 (<a href="https://github.com/yegor256/cactoos/issues/399">yegor256/cactoos#399</a>)
-doesn't provide the functionality you <em>expect</em> it to have,
-it's a bug.</p>
+doesn’t provide the functionality you <em>expect</em> it to have,
+it’s a bug.</p>
 
 <p><strong>Lack of tests</strong>.
-If a class doesn't have a unit test
+If a class doesn’t have a unit test
 (<a href="https://github.com/yegor256/takes/issues/43">yegor256/takes#43</a>)
 or
-the existing test doesn't cover some critical aspects of the class
+the existing test doesn’t cover some critical aspects of the class
 (<a href="https://github.com/yegor256/cactoos/issues/375">yegor256/cactoos#375</a>),
-it's a bug.</p>
+it’s a bug.</p>
 
 <p><strong>Lack of documentation</strong>.
 If, say, a Javadoc block for a class does not clearly explain to you
 how to use the class, or the entire module is not documented well
 (<a href="https://github.com/yegor256/takes/issues/790">yegor256/takes#790</a>),
-it's a bug.</p>
+it’s a bug.</p>
 
 <p><strong>Suboptimal implementation</strong>.
-If a piece of code doesn't look good to you, and you think it can be
-refactored to look better, it's a bug.</p>
+If a piece of code doesn’t look good to you, and you think it can be
+refactored to look better, it’s a bug.</p>
 
 <p><strong>Design inconsistency</strong>.
-If the design doesn't look logical to you
+If the design doesn’t look logical to you
 (<a href="https://github.com/yegor256/cactoos/issues/436">yegor256/cactoos#436</a>)
 and you know how it can be improved,
-it's a bug.</p>
+it’s a bug.</p>
 
 <p><strong>Naming is weird</strong>.
-If class, variable or package names don't look consistent and
+If class, variable or package names don’t look consistent and
 obvious to you, and you know how they can be fixed
 (<a href="https://github.com/yegor256/cactoos/issues/274">yegor256/cactoos#274</a>),
-it's a bug.</p>
+it’s a bug.</p>
 
 <p><strong>Unstable test</strong>.
 If a unit test fails sporadically
 (<a href="https://github.com/yegor256/takes/issues/506">yegor256/takes#506</a>)
-or doesn't work in some particular environment
+or doesn’t work in some particular environment
 (<a href="https://github.com/yegor256/jpeek/issues/151">yegor256/jpeek#151</a>),
-it's a bug.</p>
+it’s a bug.</p>
 
-<p>Also, it's worth mentioning that minor, cosmetic, or poorly formulated
+<p>Also, it’s worth mentioning that minor, cosmetic, or poorly formulated
 <a href="/2018/04/24/right-way-to-report-bugs.html">bug reports</a>
 will most likely be rejected or not paid for. If you want us to pay for your bug reports,
 make sure they <a href="/2014/11/24/principles-of-bug-tracking.html">sound right</a>,

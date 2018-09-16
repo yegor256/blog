@@ -81,7 +81,7 @@ needed a lobotomy, just like David West suggested in his
 <a href="http://amzn.to/2ass77O">Object Thinking</a> book.
 These features have different names, but the most common ones are
 <a href="https://en.wikipedia.org/wiki/Trait_%28computer_programming%29">traits</a> and
-<a href="https://en.wikipedia.org/wiki/Mixin">mixins</a>. I seriously can't understand
+<a href="https://en.wikipedia.org/wiki/Mixin">mixins</a>. I seriously can’t understand
 how we can still call programming object-oriented when it has
 <a href="http://stackoverflow.com/questions/925609/mixins-vs-traits">these features</a>.</p>
 
@@ -89,7 +89,7 @@ how we can still call programming object-oriented when it has
 
 <amp-img src="/images/2014/04/fear-and-loathing-adrenochrome.png" alt="Fear and Loathing in Las Vegas (1998) by Terry Gilliam" height="816" width="1920" layout="responsive"></amp-img>
 
-<p>First, here's how they work in a nutshell. Let's use
+<p>First, here’s how they work in a nutshell. Let’s use
 <a href="http://phrogz.net/programmingruby/tut_modules.html">Ruby modules</a>
 as a sample implementation. Say that we have a class <code>Book</code>:</p>
 
@@ -115,7 +115,7 @@ class Book
   end
 end</pre>
 
-<p>Or we may make it even more "convenient" and <code>extend</code> our module
+<p>Or we may make it even more “convenient” and <code>extend</code> our module
 in order to access its methods directly:</p>
 
 <pre>module TextModule
@@ -130,22 +130,22 @@ class Book
   end
 end</pre>
 
-<p>It seems nice---if you don't understand the
+<p>It seems nice—if you don’t understand the
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">difference</a>
 between
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">object-oriented programming</a>
 and static methods. Moreover, if we forget
 <a href="/2014/11/20/seven-virtues-of-good-object.html">OOP purity</a>
 for a minute, this approach actually looks less readable to me, even though it has
-fewer characters; it's difficult to understand where the method
-<code>caps()</code> is coming from when it's called just like <code>#{caps(@title)}</code> instead
-of <code>#{TextUtils.caps(@title)}</code>. Don't you think?</p>
+fewer characters; it’s difficult to understand where the method
+<code>caps()</code> is coming from when it’s called just like <code>#{caps(@title)}</code> instead
+of <code>#{TextUtils.caps(@title)}</code>. Don’t you think?</p>
 
 <p>Mixins start to play their role better when we <code>include</code> them. We can
-combine them to construct the behavior of the class we're looking for. Let's
+combine them to construct the behavior of the class we’re looking for. Let’s
 create two mixins. The first one will be called <code>PlainMixin</code> and will print the title
 of the book the way it is, and the second one will be called <code>CapsMixin</code> and will
-capitalize what's already printed:</p>
+capitalize what’s already printed:</p>
 
 <pre>module CapsMixin
   def to_s
@@ -189,23 +189,23 @@ class Book
   end
 end</pre>
 
-<p>I'm sure you already understand that they both have access to
+<p>I’m sure you already understand that they both have access to
 the private attribute <code>@title</code> of class <code>Book</code>. They actually have
 full access to <em>everything</em> in the class. They literally are
-"pieces of code" that we <em>inject</em> into the class to make it more
-powerful and complex. What's wrong with this approach?</p>
+“pieces of code” that we <em>inject</em> into the class to make it more
+powerful and complex. What’s wrong with this approach?</p>
 
-<p>It's the same issue as with
+<p>It’s the same issue as with
 <a href="/2016/04/12/java-annotations-are-evil.html">annotations</a>,
 <a href="/2016/07/06/data-transfer-object.html">DTOs</a>,
 <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>,
-and <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>---they
+and <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>—they
 tear objects apart and place pieces of functionality in places
-where objects don't see them.</p>
+where objects don’t see them.</p>
 
 <p>In the case of mixins, the functionality is
 in the Ruby <code>modules</code>, which make assumptions about the internal structure
-of <code>Book</code> and further assume that the programmer will still understand what's in <code>Book</code> after
+of <code>Book</code> and further assume that the programmer will still understand what’s in <code>Book</code> after
 the internal structure changes. Such assumptions completely violate
 the very idea of
 <a href="/2016/11/21/naked-data.html">encapsulation</a>.</p>
@@ -226,11 +226,11 @@ Take a look at the example given in the
   )
 );</pre>
 
-<p>Doesn't it look very similar to what we were doing above with Ruby mixins?</p>
+<p>Doesn’t it look very similar to what we were doing above with Ruby mixins?</p>
 
 <p>However, unlike mixins, decorators leave objects small and cohesive, layering
 extra functionality on top of them. Mixins do
-the opposite---they make objects more complex and, thanks to that, less
+the opposite—they make objects more complex and, thanks to that, less
 readable and maintainable.</p>
 
 <p>I honestly believe they are just poison. Whoever invented them

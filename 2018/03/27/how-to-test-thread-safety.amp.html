@@ -76,12 +76,12 @@ be tested with the help of Cactoos RunInThreads class.
       <p>Yegor Bugayenko<br>27 March 2018</p>
       <h1>How I Test My Java Classes for Thread-Safety</h1>
       <p>I touched on this problem in <a href="https://www.youtube.com/watch?v=rC17YwowURQ">one of my recent webinars</a>,
-now it's time to explain it in writing. Thread-safety is an important
+now it’s time to explain it in writing. Thread-safety is an important
 quality of classes in languages/platforms like Java, where we frequently share
 objects between threads. The issues caused by lack of thread-safety
 are very difficult to debug, since they are sporadic and almost impossible
 to reproduce on purpose. How do you test your objects to make sure
-they are thread-safe? Here is how I'm doing it.</p>
+they are thread-safe? Here is how I’m doing it.</p>
 
 
 
@@ -114,7 +114,7 @@ assert books.title(id).equals(title);</pre>
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code>ConcurrentHashMap</code></a>
 instead of a more primitive and non-thread-safe
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>,
-right? Let's try to test it:</p>
+right? Let’s try to test it:</p>
 
 <pre>class BooksTest {
   @Test
@@ -126,8 +126,8 @@ right? Let's try to test it:</p>
   }
 }</pre>
 
-<p>The test passes, but it's just a one-thread test. Let's try to do the
-same manipulation from a few parallel threads (I'm using
+<p>The test passes, but it’s just a one-thread test. Let’s try to do the
+same manipulation from a few parallel threads (I’m using
 <a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
 
 <pre>class BooksTest {
@@ -165,15 +165,15 @@ unpredictable order, by some of those ten threads from the pool.</p>
 of type
 <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html"><code>Future</code></a>.
 Finally, I calculate the amount of unique book IDs
-created. If the number is 10, there were no conflicts. I'm using the
+created. If the number is 10, there were no conflicts. I’m using the
 <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Set.html"><code>Set</code></a>
 collection in order to make sure the list of IDs contains only
 unique elements.</p>
 
-<p>The test passes on my laptop. However, it's not strong enough. The problem
-here is that it's not really testing the <code>Books</code> from multiple parallel threads.
+<p>The test passes on my laptop. However, it’s not strong enough. The problem
+here is that it’s not really testing the <code>Books</code> from multiple parallel threads.
 The time that passes between our calls to <code>submit()</code> is large enough to finish
-the execution of <code>books.add()</code>. That's why in reality only one thread
+the execution of <code>books.add()</code>. That’s why in reality only one thread
 will run at the same time. We can check that by modifying the code a bit:</p>
 
 <pre>AtomicBoolean running = new AtomicBoolean();
@@ -198,12 +198,12 @@ for (int t = 0; t &lt; threads; ++t) {
 }
 assertThat(overlaps.get(), greaterThan(0));</pre>
 
-<p>With this code I'm trying to see how often threads overlap each other and
+<p>With this code I’m trying to see how often threads overlap each other and
 do something in parallel. This never happens and <code>overlaps</code> is equal to zero.
 Thus our test is not really testing anything yet. It just adds ten
 books to the bookshelf one by one. If I increase the amount of threads to
 1000, they start to overlap sometimes. But we want them to overlap even
-when there's a small number of them.
+when there’s a small number of them.
 To solve that we need to use
 <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html"><code>CountDownLatch</code></a>:</p>
 
@@ -242,12 +242,12 @@ and wait. Then we release the latch with <code>countDown()</code> and they all s
 to go, simultaneously. Now, on my laptop, <code>overlaps</code> is equal to 3-5 even when <code>threads</code>
 is 10.</p>
 
-<p>And that last <code>assertThat()</code> crashes now! I'm not getting 10 book IDs,
-as I was before. It's 7-9, but never 10. The class, apparently, is not thread-safe!</p>
+<p>And that last <code>assertThat()</code> crashes now! I’m not getting 10 book IDs,
+as I was before. It’s 7-9, but never 10. The class, apparently, is not thread-safe!</p>
 
-<p>But before we fix the class, let's make our test simpler. Let's use
+<p>But before we fix the class, let’s make our test simpler. Let’s use
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html"><code>RunInThreads</code></a>
-from <a href="http://www.cactoos.org">Cactoos</a>, which does exactly the same as we've done above,
+from <a href="http://www.cactoos.org">Cactoos</a>, which does exactly the same as we’ve done above,
 but under the hood:</p>
 
 <pre>class BooksTest {
@@ -277,7 +277,7 @@ but under the hood:</p>
 be executed on 10 parallel thread, using the same latch-based approach
 as demonstrated above.</p>
 
-<p>This <code>RunInThreads</code> seems to be compact and convenient, I'm using it
+<p>This <code>RunInThreads</code> seems to be compact and convenient, I’m using it
 in a few projects already.</p>
 
 <p>By the way, in order to make <code>Books</code> thread-safe we just need to add

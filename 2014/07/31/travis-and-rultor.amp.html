@@ -82,10 +82,10 @@ releasing and deploying operations
 <p><a href="http://www.rultor.com">Rultor</a> is a coding team assistant.
 <a href="http://travis-ci.org">Travis</a> is a hosted
 <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a> system.
-In this article I'll show how our open source projects are
+In this article I’ll show how our open source projects are
 using them in tandem to achieve seamless continuous delivery.</p>
 
-<p>I'll show a few practical scenarios.</p>
+<p>I’ll show a few practical scenarios.</p>
 
 
 
@@ -103,24 +103,24 @@ I reviewed the request and asked Rultor to merge it into <code>master</code>:</p
 I gave him access to the project by adding his GitHub account to
 the list of project collaborators.</p>
 
-<p>Before giving a "go ahead" to Rultor I checked the status
+<p>Before giving a “go ahead” to Rultor I checked the status
 of the pre-build reported by Travis:</p>
 
 
 
 <p>Travis found a new commit in the pull request and immediately
 (without any interaction from my side) triggered a build in that branch.
-The build didn't fail, that's why Travis gave me a green sign.
+The build didn’t fail, that’s why Travis gave me a green sign.
 I looked at that sign and at the code. Since all problems in the code
-were corrected by the pull request author and Travis didn't complain---I gave a "go" to Rultor.</p>
+were corrected by the pull request author and Travis didn’t complain—I gave a “go” to Rultor.</p>
 
 <h2 id="scenario-2-continuous-integration">Scenario #2: Continuous Integration</h2>
 
 <p>Even though the previous step <a href="/2014/07/21/read-only-master-branch.html">guarantees</a>
-that <code>master</code> branch is always clean and stable, we're using Travis to
+that <code>master</code> branch is always clean and stable, we’re using Travis to
 continuously integrate it. Every commit made to <code>master</code> triggers
 a new build in Travis. The result of the build changes the status
-of the project in Travis: either "failing" or "passing."</p>
+of the project in Travis: either “failing” or “passing.”</p>
 
 <p><a href="http://aspects.jcabi.com"><code>jcabi-aspects</code></a> is a collection of
 <a href="/2014/06/01/aop-aspectj-java-method-logging.html">AOP AspectJ aspects</a>.
@@ -130,7 +130,7 @@ We configured Travis to build it continuously. This is the badge it produces (th
 
 <p>Again, let me stress that even through
 <a href="/2014/07/21/read-only-master-branch.html">read-only master</a>
-is a strong protection against broken builds, it doesn't guarantee that
+is a strong protection against broken builds, it doesn’t guarantee that
 at any moment master is stable. For example, sometimes unit tests
 fail sporadically due to changes in calendar, in environment, in dependencies,
 in network connection qualities, etc.</p>
@@ -139,7 +139,7 @@ in network connection qualities, etc.</p>
 are environment independent. However, in reality, unit tests are far
 from being ideal.</p>
 
-<p>That's why a combination of <a href="/2014/07/21/read-only-master-branch.html">read-only master</a>
+<p>That’s why a combination of <a href="/2014/07/21/read-only-master-branch.html">read-only master</a>
 with Rultor and
 <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a>
 with Travis gives us higher stability.</p>
@@ -223,7 +223,7 @@ production always means using secure credentials, like login, password, SSH keys
 
 <p>In this particular example, <a href="https://wiki.cloudbees.com/bin/view/RUN/MavenGuide">Maven CloudBees  Plugin</a>
 needed API key, secret and web application name. These three parameters are kept secure
-and can't be revealed in an "<a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">open source</a>" way.</p>
+and can’t be revealed in an “<a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">open source</a>” way.</p>
 
 <p>So, there is <a href="http://doc.rultor.com/reference.html#assets">a mechanism</a>
 that configures Rultor accordingly through its

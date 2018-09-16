@@ -76,10 +76,10 @@ leads to procedural code and must be avoided.
       <p>Yegor Bugayenko<br>12 September 2017</p>
       <h1>Yet Another Evil Suffix For Object Names: Client</h1>
       <p>Some time ago we <a href="/2015/03/09/objects-end-with-er.html">were talking</a>
-about "-ER" suffixes in object and class
+about “-ER” suffixes in object and class
 names. We agreed that they were evil and must be avoided if we want
 our code to be truly object-oriented and our objects to be objects instead
-of collections of procedures. Now I'm ready to introduce a new evil suffix:
+of collections of procedures. Now I’m ready to introduce a new evil suffix:
 <code>Client</code>.</p>
 
 
@@ -87,7 +87,7 @@ of collections of procedures. Now I'm ready to introduce a new evil suffix:
 <amp-img src="/images/2017/09/dont-tempt-me.jpg" alt="Sin noticias de Dios (2001) by Agustín Díaz Yanes" height="720" width="1280" layout="responsive"></amp-img>
 
 <p>Let me give an example first. This is what an object with such a suffix may look like
-(it's a pseudo-code version of the
+(it’s a pseudo-code version of the
 <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html"><code>AmazonS3Client</code></a>
 from <a href="https://aws.amazon.com/sdk-for-java/">AWS Java SDK</a>):</p>
 
@@ -101,82 +101,96 @@ from <a href="https://aws.amazon.com/sdk-for-java/">AWS Java SDK</a>):</p>
   // 160+ more methods here
 }</pre>
 
-<p>All "clients" look similar: they encapsulate the destination URL
+<p>All “clients” look similar: they encapsulate the destination URL
 with some access credentials and expose a number of methods, which
-transport the data to/from the "server." Even though this design
+transport the data to/from the “server.” Even though this design
 looks like a <a href="/2014/11/20/seven-virtues-of-good-object.html">proper object</a>,
-it doesn't really follow the true spirit of object-orientation.
-That's why it's not as maintainable as it should be, for two reasons:</p>
+it doesn’t really follow the true spirit of object-orientation.
+That’s why it’s not as maintainable as it should be, for two reasons:</p>
 
 <ul>
-<li><p><strong>Its scope is too broad</strong>.
-Since the client is an abstraction of a server, it inevitably has to
-represent the server's <em>entire</em> functionality. When the functionality
-is rather limited there is no issue. Take
-<a href="https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/HttpClient.html"><code>HttpClient</code></a>
-from <a href="https://hc.apache.org/">Apache HttpComponents</a> as an example.
-However, when the server is more complex, the size of the client also
-grows. There are over 160 (!) methods in <code>AmazonS3Client</code> at the time of writing, while
-it started with only a few dozen just a few <del>years</del> hundred versions ago.</p></li>
-<li><p><strong>It is data focused</strong>.
-The very idea of a client-server relationship is about transferring
-data. Take the HTTP RESTful API of the AWS S3 service as
-an example. There are entities on the AWS side: buckets, objects, versions,
-access control policies, etc., and the server turns them into JSON/XML
-data. Then the <a href="/2016/11/21/naked-data.html">data</a>
-comes to us and the client on our side deals
-with JSON or XML. It inevitably remains <em>data</em> for us and never really becomes
-buckets, objects, or versions.</p></li>
+  <li>
+    <p><strong>Its scope is too broad</strong>.
+  Since the client is an abstraction of a server, it inevitably has to
+  represent the server’s <em>entire</em> functionality. When the functionality
+  is rather limited there is no issue. Take
+  <a href="https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/HttpClient.html"><code>HttpClient</code></a>
+  from <a href="https://hc.apache.org/">Apache HttpComponents</a> as an example.
+  However, when the server is more complex, the size of the client also
+  grows. There are over 160 (!) methods in <code>AmazonS3Client</code> at the time of writing, while
+  it started with only a few dozen just a few <del>years</del> hundred versions ago.</p>
+  </li>
+  <li>
+    <p><strong>It is data focused</strong>.
+  The very idea of a client-server relationship is about transferring
+  data. Take the HTTP RESTful API of the AWS S3 service as
+  an example. There are entities on the AWS side: buckets, objects, versions,
+  access control policies, etc., and the server turns them into JSON/XML
+  data. Then the <a href="/2016/11/21/naked-data.html">data</a>
+  comes to us and the client on our side deals
+  with JSON or XML. It inevitably remains <em>data</em> for us and never really becomes
+  buckets, objects, or versions.</p>
+  </li>
 </ul>
 
 <p>The consequences depend on the situation, but these are the most probable:</p>
 
 <ul>
-<li><p><strong>Procedural code</strong>.
-Since the client returns the data, the code that works with that
-data will <a href="/2016/11/21/naked-data.html">most likely</a>
-be procedural. Look at the results AWS SDK methods
-return, they all look like
-<a href="/2016/07/14/who-is-object.html">objects</a>, but in reality they are just
-data structures:
-<a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/S3Object.html"><code>S3Object</code></a>,
-<a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html"><code>ObjectMetadata</code></a>,
-<a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/BucketPolicy.html"><code>BucketPolicy</code></a>,
-<a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/PutObjectResult.html"><code>PutObjectResult</code></a>, etc.
-They are all <a href="/2016/07/06/data-transfer-object.html">Data Transfer Objects</a>
-with only
-<a href="/2014/09/16/getters-and-setters-are-evil.html">getters and setters</a>
-inside.</p></li>
-<li><p><strong>Duplicated code</strong>.
-If we actually decide to stay object-oriented we will have to
-turn the data the client returns to us into
-<a href="/2016/07/14/who-is-object.html">objects</a>. Most likely this
-will lead to code duplication in multiple projects. I had that too,
-when I started to work with S3 SDK. Very soon I realized that in order
-to avoid duplication I'd better create a library that does the job
-of converting S3 SDK data into objects: <a href="https://github.com/jcabi/jcabi-s3">jcabi-s3</a>.</p></li>
-<li><p><strong>Difficulties with testing</strong>.
-Since the client is in most cases a rather big class/interface, mocking
-it in unit tests or creating its <a href="/2014/09/23/built-in-fake-objects.html">test doubles/fakes</a>
-is a rather complex task.</p></li>
-<li><p><strong>Static problems</strong>.
-Client classes, even though their methods are not static, look very similar to
-<a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>,
-which are well known for being
-<a href="/2014/09/10/anti-patterns-in-oop.html">anti-OOP</a>. The issues we have
-with utility classes are almost the same as those we have with "client" classes.</p></li>
-<li><p><strong>Extendability issues</strong>.
-Needless to say, it's almost impossible to
-<a href="/2015/02/26/composable-decorators.html">decorate</a> a client
-object when it has 160+ methods and keeps on growing. The only possible
-way to add new functionality to it is by creating new methods. Eventually
-we get a <a href="https://en.wikipedia.org/wiki/God_object">monster class</a>
-that can't be re-used anyhow without modification.</p></li>
+  <li>
+    <p><strong>Procedural code</strong>.
+  Since the client returns the data, the code that works with that
+  data will <a href="/2016/11/21/naked-data.html">most likely</a>
+  be procedural. Look at the results AWS SDK methods
+  return, they all look like
+  <a href="/2016/07/14/who-is-object.html">objects</a>, but in reality they are just
+  data structures:
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/S3Object.html"><code>S3Object</code></a>,
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html"><code>ObjectMetadata</code></a>,
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/BucketPolicy.html"><code>BucketPolicy</code></a>,
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/PutObjectResult.html"><code>PutObjectResult</code></a>, etc.
+  They are all <a href="/2016/07/06/data-transfer-object.html">Data Transfer Objects</a>
+  with only
+  <a href="/2014/09/16/getters-and-setters-are-evil.html">getters and setters</a>
+  inside.</p>
+  </li>
+  <li>
+    <p><strong>Duplicated code</strong>.
+  If we actually decide to stay object-oriented we will have to
+  turn the data the client returns to us into
+  <a href="/2016/07/14/who-is-object.html">objects</a>. Most likely this
+  will lead to code duplication in multiple projects. I had that too,
+  when I started to work with S3 SDK. Very soon I realized that in order
+  to avoid duplication I’d better create a library that does the job
+  of converting S3 SDK data into objects: <a href="https://github.com/jcabi/jcabi-s3">jcabi-s3</a>.</p>
+  </li>
+  <li>
+    <p><strong>Difficulties with testing</strong>.
+  Since the client is in most cases a rather big class/interface, mocking
+  it in unit tests or creating its <a href="/2014/09/23/built-in-fake-objects.html">test doubles/fakes</a>
+  is a rather complex task.</p>
+  </li>
+  <li>
+    <p><strong>Static problems</strong>.
+  Client classes, even though their methods are not static, look very similar to
+  <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>,
+  which are well known for being
+  <a href="/2014/09/10/anti-patterns-in-oop.html">anti-OOP</a>. The issues we have
+  with utility classes are almost the same as those we have with “client” classes.</p>
+  </li>
+  <li>
+    <p><strong>Extendability issues</strong>.
+  Needless to say, it’s almost impossible to
+  <a href="/2015/02/26/composable-decorators.html">decorate</a> a client
+  object when it has 160+ methods and keeps on growing. The only possible
+  way to add new functionality to it is by creating new methods. Eventually
+  we get a <a href="https://en.wikipedia.org/wiki/God_object">monster class</a>
+  that can’t be re-used anyhow without modification.</p>
+  </li>
 </ul>
 
 <p>What is the alternative?</p>
 
-<p>The right design would be to replace "clients" with client-side objects
+<p>The right design would be to replace “clients” with client-side objects
 that represent <em>entities</em> of the server side, not the entire server. For example, with the S3 SDK,
 that could be <code>Bucket</code>, <code>Object</code>, <code>Version</code>, <code>Policy</code>, etc. Each of them
 exposes the functionality of real
@@ -191,9 +205,9 @@ which the AWS S3 can expose.</p>
 entire API/server, but it should be small. For example, in the S3 SDK example
 it could be called <code>Region</code>, which means the entire
 <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">AWS region</a> with buckets.
-Then we could retrieve a bucket from it and won't need a region anymore. Then,
+Then we could retrieve a bucket from it and won’t need a region anymore. Then,
 to list objects in the bucket we ask the bucket to do it for us. No need to communicate
-with the entire "server object" every time, even though technically such a communication
+with the entire “server object” every time, even though technically such a communication
 happens, of course.</p>
 
 <p>To summarize, the trouble is not exactly in the name suffix, but in the very idea
@@ -201,11 +215,12 @@ of representing the entire server on the client side rather than its <em>entitie
 an abstraction is 1) too big and 2) very data driven.</p>
 
 <p>BTW, check out some of the <a href="http://www.jcabi.com">JCabi libraries</a> (Java) for examples
-of object-oriented clients without "client" objects:
+of object-oriented clients without “client” objects:
 <a href="http://github.jcabi.com">jcabi-github</a>,
 <a href="http://dynamo.jcabi.com">jcabi-dynamo</a>,
 <a href="http://s3.jcabi.com">jcabi-s3</a>,
 or <a href="http://simpledb.jcabi.com">jcabi-simpledb</a>.</p>
+
 
     </article>
   </body>

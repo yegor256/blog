@@ -78,7 +78,7 @@ is what breaks encapsulation.
       <p>Encapsulation is the core principle of object-oriented programming
 that makes objects solid, cohesive, trustworthy, etc. But
 what exactly is encapsulation? Does it only protect against access
-to private attributes from outside an object? I think it's much more.
+to private attributes from outside an object? I think it’s much more.
 Encapsulation leads to the absence of <em>naked</em> data on all levels and in all forms.</p>
 
 
@@ -99,14 +99,14 @@ Anyone can modify it or read it.</p>
 <p>The code around <code>t</code> inevitably makes a lot of assumptions about the data. For
 example, both lines after <code>int t</code> decided that the temperature is in Fahrenheit.
 At the moment of writing, this may be true, but this assumption couples the
-code with the data. If tomorrow we change <code>t</code> to Celsius, the code won't know
-about this change. That's why I call this coupling <em>hidden</em>.</p>
+code with the data. If tomorrow we change <code>t</code> to Celsius, the code won’t know
+about this change. That’s why I call this coupling <em>hidden</em>.</p>
 
 
 
 <p>If we change the type of <code>t</code> from <code>int</code> to, say, <code>double</code>, the <code>printf</code>
-line won't print anything after the decimal point. Again, the coupling is
-there, but it's hidden. Later on, we simply won't be able to find all the places in our
+line won’t print anything after the decimal point. Again, the coupling is
+there, but it’s hidden. Later on, we simply won’t be able to find all the places in our
 code where we made these or other assumptions about <code>t</code>.</p>
 
 <p>This will seriously affect maintainability.</p>
@@ -120,7 +120,7 @@ code where we made these or other assumptions about <code>t</code>.</p>
 }</pre>
 
 <p>It looks like an object, but the data is still naked. Anyone can retrieve
-<code>t</code> from the object and decide whether it's Fahrenheit or Celsius, whether
+<code>t</code> from the object and decide whether it’s Fahrenheit or Celsius, whether
 it has digits after the dot or not, etc. This is not encapsulation yet!</p>
 
 <p>The only way to encapsulate <code>t</code> is to make sure nobody can touch
@@ -135,7 +135,7 @@ for example:</p>
   }
 }</pre>
 
-<p>We don't allow anyone to retrieve <code>t</code> anymore. All they can do is
+<p>We don’t allow anyone to retrieve <code>t</code> anymore. All they can do is
 convert temperature to text. If and when we decide to change <code>t</code> to Celsius,
 we will do it just once and in one place: in the class <code>Temperature</code>.</p>
 
@@ -146,14 +146,14 @@ to Celsius, we add more methods to class <code>Temperature</code>. But we never
 let anyone touch or know about <code>t</code>.</p>
 
 <p>This idea is close to
-"<a href="/2016/04/05/printers-instead-of-getters.html">printers instead of getters</a>,"
+“<a href="/2016/04/05/printers-instead-of-getters.html">printers instead of getters</a>,”
 which we discussed earlier, though from a much wider perspective.
-Here I'm saying that any data elements that escape objects are <em>naked</em>
+Here I’m saying that any data elements that escape objects are <em>naked</em>
 and lead to maintainability problems.</p>
 
 <p>The question is how we can work entirely without naked data, right? Eventually
-we have to let objects exchange data, don't we? Yes, that's true. But not entirely.
-I'll explain that in
+we have to let objects exchange data, don’t we? Yes, that’s true. But not entirely.
+I’ll explain that in
 <a href="/2016/12/20/can-objects-be-friends.html">my next post</a>.</p>
 
     </article>

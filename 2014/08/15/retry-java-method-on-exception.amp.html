@@ -82,7 +82,7 @@ you want to retry it a few times before
 <a href="/2015/12/01/rethrow-exceptions.html">throwing</a>
 an exception. <a href="http://aspects.jcabi.com/annotation-retryonfailure.html"><code>@RetryOnFailure</code></a> from
 <a href="http://aspects.jcabi.com">jcabi-aspects</a> can help.
-For example, if you're downloading the following web page:</p>
+For example, if you’re downloading the following web page:</p>
 
 <pre>@RetryOnFailure(
   attempts = 3,
@@ -119,10 +119,18 @@ is happening behind the scene (pseudo-code):</p>
 (based on my experience):</p>
 
 <ul>
-<li><p>Executing <a href="/2014/08/18/fluent-jdbc-decorator.html">JDBC</a> <code>SELECT</code> statements</p></li>
-<li><p>Loading data from HTTP, <a href="/2014/05/26/amazon-s3-java-oop-adapter.html">S3</a>, FTP, etc resources</p></li>
-<li><p>Uploading data over the network</p></li>
-<li><p>Fetching data through RESTful stateless API-s</p></li>
+  <li>
+    <p>Executing <a href="/2014/08/18/fluent-jdbc-decorator.html">JDBC</a> <code>SELECT</code> statements</p>
+  </li>
+  <li>
+    <p>Loading data from HTTP, <a href="/2014/05/26/amazon-s3-java-oop-adapter.html">S3</a>, FTP, etc resources</p>
+  </li>
+  <li>
+    <p>Uploading data over the network</p>
+  </li>
+  <li>
+    <p>Fetching data through RESTful stateless API-s</p>
+  </li>
 </ul>
 
 <p>The project is in <a href="https://github.com/jcabi/jcabi-aspects">GitHub</a>.</p>

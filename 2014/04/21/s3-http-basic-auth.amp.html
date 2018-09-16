@@ -78,7 +78,7 @@ a free cloud service for this purpose
       
 
 <p><a href="http://aws.amazon.com/s3/">Amazon S3</a> is a simple and very useful storage of
-binary objects (aka "files"). To use it, you create a "bucket" there with a
+binary objects (aka “files”). To use it, you create a “bucket” there with a
 unique name and upload your objects.</p>
 
 <p>Afterwards, AWS guarantees your object will be available for download through
@@ -98,10 +98,10 @@ your static website is available at <code>www.example.com</code> just as it woul
 normally.</p>
 
 <p>When using Amazon S3, though, it is not possible to protect your website because
-the content is purely static. This means you can't have a login page on the
+the content is purely static. This means you can’t have a login page on the
 front end. With the service, you can either make your objects either absolutely
-public---so that anyone can see them online---or assign access
-rights to them---but only for users connected through RESTful API.</p>
+public—so that anyone can see them online—or assign access
+rights to them—but only for users connected through RESTful API.</p>
 
 
 
@@ -112,12 +112,12 @@ few people had access to the content using their Web browsers.</p>
 <h2 id="http-basic-authentication">HTTP Basic Authentication</h2>
 
 <p>The HTTP protocol offers a nice
-<a href="http://en.wikipedia.org/wiki/Basic_access_authentication">"basic access authentication"</a>
-feature that doesn't require any extra site pages.</p>
+<a href="http://en.wikipedia.org/wiki/Basic_access_authentication">“basic access authentication”</a>
+feature that doesn’t require any extra site pages.</p>
 
-<p>When an HTTP request arrives at the server, it doesn't deliver the content but
-replies with a 401 status response. This response means literally "I don't know
-who you are, please authenticate yourself."</p>
+<p>When an HTTP request arrives at the server, it doesn’t deliver the content but
+replies with a 401 status response. This response means literally “I don’t know
+who you are, please authenticate yourself.”</p>
 
 <p>The browser shows its native login screen and prompts for a user name and
 password. After entering the login credentials, they are concatenated,
@@ -136,12 +136,12 @@ this time, the HTTP request contains a header:</p>
 the user.</p>
 
 <p>This time the server has authentication information and can make a decision
-whether this user is authenticated (his password matches the server's records)
+whether this user is authenticated (his password matches the server’s records)
 and authorized (he has permission to access the request webpage).</p>
 
-<h2 id="s3auth-com"><code>s3auth.com</code></h2>
+<h2 id="s3authcom"><code>s3auth.com</code></h2>
 
-<p>Since Amazon doesn't provide this feature, I decided to create a simple web
+<p>Since Amazon doesn’t provide this feature, I decided to create a simple web
 service, <a href="http://www.s3auth.com">s3auth.com</a>, which stays in front of my Amazon
 S3 buckets and implements the HTTP-native authentication and authorization
 mechanism.</p>
@@ -154,31 +154,31 @@ HTTP responses.</p>
 <p>The server implements authentication and authorization using a special file
 <code>.htpasswd</code> in the root of my bucket. The format of the <code>.htpasswd</code> file is
 identical to the one used by
-<a href="http://httpd.apache.org/docs/2.2/programs/htpasswd.html">Apache HTTP Server</a>---one user
+<a href="http://httpd.apache.org/docs/2.2/programs/htpasswd.html">Apache HTTP Server</a>—one user
 per line. Every line has the name of a user and a hash version of his password.</p>
 
 <h2 id="implementation">Implementation</h2>
 
 <p>I made this software open source mostly to guarantee to my users that the server
-doesn't store their private data anywhere, but rather acts only as a
+doesn’t store their private data anywhere, but rather acts only as a
 pass-through service. As a result, the software is on
 <a href="https://github.com/yegor256/s3auth">GitHub</a>.</p>
 
 <p>For the sake of privacy and convenience, I use only OAuth2 for user accounts.
-This means that I don't know who my users are. I don't possess their names or
+This means that I don’t know who my users are. I don’t possess their names or
 emails, but only their account numbers in Facebook, Google Plus or GitHub. Of
 course, I can find their names using these numbers, but this information is
 public anyway.</p>
 
-<p>The server is implemented in Java6. For its hosting, I'm using a single Amazon
+<p>The server is implemented in Java6. For its hosting, I’m using a single Amazon
 EC2 <a href="http://aws.amazon.com/ec2/instance-types/">m1.small</a> Ubuntu server. These
 days, the server seems to work properly and is stable.</p>
 
 <h2 id="extra-features">Extra Features</h2>
 
 <p>Besides authentication and authorization, the
-<a href="http://www.s3auth.com">s3auth.com</a> server can render lists of pages---just like Apache HTTP Server. If you have a collection of objects in your bucket---but the <code>index.html</code> file is missing---Amazon S3 delivers a "page
-not found" result. Conversely, my server displays a list of objects in the
+<a href="http://www.s3auth.com">s3auth.com</a> server can render lists of pages—just like Apache HTTP Server. If you have a collection of objects in your bucket—but the <code>index.html</code> file is missing—Amazon S3 delivers a “page
+not found” result. Conversely, my server displays a list of objects in the
 bucket, when no <code>index.html</code> is present, and makes it possible to navigate up or
 down one folder.</p>
 
@@ -189,7 +189,7 @@ the end of the URL to display the list. Next, click a version to have
 
 <h2 id="traction">Traction</h2>
 
-<p>I created this service mostly for myself, but apparently I'm not the only with
+<p>I created this service mostly for myself, but apparently I’m not the only with
 the problems described above. At the moment, <a href="http://www.s3auth.com">s3auth.com</a>
 hosts over 300 domains and sends through more than 10Mb of data each hour.</p>
 

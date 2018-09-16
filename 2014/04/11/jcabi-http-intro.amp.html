@@ -79,7 +79,7 @@ comparing with native Java and Apache HttpClient
 
 <p>In the world of Java, there are plenty of HTTP clients from which to choose.
 Nevertheless, I decided to create a new one because none of the other clients
-satisfied fully all of my requirements. Maybe, I'm too demanding. Still, this is
+satisfied fully all of my requirements. Maybe, I’m too demanding. Still, this is
 how my <a href="http://http.jcabi.com/">jcabi-http</a> client interacts when you make an
 HTTP request and expect a successful HTML page in return:</p>
 
@@ -127,7 +127,7 @@ knowledge, none of the existing libraries enable this type of fluency.</p>
 
 <h2 id="testable-and-extensible">Testable and Extensible</h2>
 
-<p>I'm a big fan of interfaces, mostly because they make your designs both cleaner
+<p>I’m a big fan of interfaces, mostly because they make your designs both cleaner
 and highly extensible at the same time. In <a href="http://http.jcabi.com/">jcabi-http</a>,
 there are five interfaces extended by 20 classes.</p>
 
@@ -163,7 +163,7 @@ format. It has always been a hassle, and extra work, for me to parse the
 output to take care of formatting issues.</p>
 
 <p><a href="http://http.jcabi.com/">jcabi-http</a> client supports them both out of the box,
-and it's possible to add more formats in the future as needed. For example, you
+and it’s possible to add more formats in the future as needed. For example, you
 can fetch XML and retrieve a string value from its element:</p>
 
 <pre>String name = new JdkRequest("http://my-api.example.com")
@@ -177,7 +177,7 @@ can fetch XML and retrieve a string value from its element:</p>
 <p>The same can be done with JSON through the Java JSON API
 (<a href="https://jcp.org/en/jsr/detail?id=353">JSR-353</a>).</p>
 
-<p>None of the libraries that I'm aware of or worked with offer this feature.</p>
+<p>None of the libraries that I’m aware of or worked with offer this feature.</p>
 
 <h2 id="immutable">Immutable</h2>
 

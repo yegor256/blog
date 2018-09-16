@@ -80,7 +80,7 @@ which work just fine. What value can Rultor add to them?
 very often I hear something like:</p>
 
 <blockquote>
-<p>But I already have a script that deploys everything automatically.</p>
+  <p>But I already have a script that deploys everything automatically.</p>
 </blockquote>
 
 <p>This response is very common, so I decided to summarize my three main arguments for
@@ -96,7 +96,7 @@ deployment script(s).</p>
 
 <p>Before we start with the arguments, let me emphasize that Rultor
 is a useful interface to your custom scripts. When you decide
-to automate deployment with Rultor, you don't throw away any of your
+to automate deployment with Rultor, you don’t throw away any of your
 existing scripts. You just teach Rultor how to call them.</p>
 
 <h2 id="isolated-docker-containers">Isolated Docker Containers</h2>
@@ -105,9 +105,9 @@ existing scripts. You just teach Rultor how to call them.</p>
 
 <p>The first advantage you get once you start calling your deployment
 scripts from Rultor is the <a href="/2014/07/29/docker-in-rultor.html">usage of Docker</a>.
-I'm sure you know what <a href="http://www.docker.io">Docker</a> is, but for those who don't---it is a
-manager of virtual Linux "machines." It's a command line script
-that you call when you need to run some script in a new virtual machine (aka "container").
+I’m sure you know what <a href="http://www.docker.io">Docker</a> is, but for those who don’t—it is a
+manager of virtual Linux “machines.” It’s a command line script
+that you call when you need to run some script in a new virtual machine (aka “container”).
 Docker starts the container almost immediately and runs your script. The beauty
 of Docker is that every container is a perfectly isolated Linux environment, with its
 own file system, memory, processes, etc.</p>
@@ -120,15 +120,15 @@ is done. This means that you can do all pre-configuration inside the
 container without any fear of conflict with your main working
 platform. Let me give an example.</p>
 
-<p>I'm developing on MacBook, where I install and remove packages which I need for development.
+<p>I’m developing on MacBook, where I install and remove packages which I need for development.
 At the same time, I have a project that, in order to be deployed, requires PHP 5.3, MySQL 5.6, Phing,
 PHPUnit, PHPCS and xdebug. Every MacOS version needs to be configured specifically
-to get these applications up and running, and it's a time-consuming job.</p>
+to get these applications up and running, and it’s a time-consuming job.</p>
 
 <p>I can change laptops, and I can change MacOS versions, but the project stays the same. It
 still requires the same set of packages in order to run its deployment script
 successfully. And the project is not in active development any more. I simply
-don't need these packages for my day-to-day work, since I'm working with Java more now.
+don’t need these packages for my day-to-day work, since I’m working with Java more now.
 But, when I need to make a minor fix to that PHP project and deploy it,
 I have to install all the required PHP packages and configure them.
 Only after that can I deploy that minor fix.</p>
@@ -153,7 +153,7 @@ git ftp push --user ".." \
 <p>Just two lines. The first one is a full run of unit tests. The second one
 is an FTP deployment to the production server. Very simple. But this script
 will only work if PHP 5.3, MySQL, Phing, xdebug, PHPCS and PHPUnit are installed.
-Again, it's a lot of work to install and configure them every time I upgrade
+Again, it’s a lot of work to install and configure them every time I upgrade
 my MacOS or change a laptop.</p>
 
 
@@ -162,7 +162,7 @@ my MacOS or change a laptop.</p>
 tries to run my scripts, he/she will have to do this pre-installation
 work again.</p>
 
-<p>So, here is a new script, which I'm using now.
+<p>So, here is a new script, which I’m using now.
 It is being executed inside a new Docker container, every time:</p>
 
 <pre>#!/bin/bash
@@ -183,7 +183,7 @@ git ftp push --user ".." \
   ftp://ftp.example.com/</pre>
 
 <p>Obviously, running this script on my MacBook (without virtualization) would
-cause a lot of trouble. Well, I don't even have <code>apt-get</code> here :)</p>
+cause a lot of trouble. Well, I don’t even have <code>apt-get</code> here :)</p>
 
 <p>Thus, the first benefit that Rultor gives you is an isolation
 of your deployment script in its own virtual environment. We have this
@@ -194,11 +194,11 @@ mostly thanks to Docker.</p>
 <p>Traditionally, we keep deployment scripts in some <code>~/deploy</code> directory
 and run them with a magic set of parameters. In a small project, you
 do this yourself and this directory is on your own laptop. In a bigger
-project, there is a "deployment" server, that has that magic directory
+project, there is a “deployment” server, that has that magic directory
 with a set of scripts that can be executed only by a few trusted
-senior developers. I've seen this setup many times.</p>
+senior developers. I’ve seen this setup many times.</p>
 
-<p>The biggest issue here is traceability. It's almost impossible to find
+<p>The biggest issue here is traceability. It’s almost impossible to find
 out who deployed what and why some particular deployment failed. The senior
 deployment gurus simply SSH to the server and run those magic scripts
 with magic parameters. Logs are usually lost and problem tracking
@@ -229,16 +229,16 @@ close to it. There is just no other way. If your software works with
 a database, it has to know login credentials (user name, password, DB name,
 port number, etc.). Well, in the worst case, some people just hard
 code that information right into the source code.
-We aren't even going to discuss this case, that's how bad it is.</p>
+We aren’t even going to discuss this case, that’s how bad it is.</p>
 
-<p>But let's say you separate your DB credentials from the source code. You will
+<p>But let’s say you separate your DB credentials from the source code. You will
 have something like a <code>db.properties</code> or <code>db.ini</code> file, which will be attached
 to the application right before deployment. You can also keep that file
 directly in the production server, which is even better, but not always
 possible, especially with PaaS deployments, for example.</p>
 
 <p>A similar problem exists with deployments of artifacts to repositories. Say,
-you're regularly deploying to RubyGems.org. Your <code>~/.gem/credentials</code> will
+you’re regularly deploying to RubyGems.org. Your <code>~/.gem/credentials</code> will
 contain your secret API key.</p>
 
 <p>So, very often, your deployment scripts are accompanied by some files
@@ -246,13 +246,13 @@ with sensitive and secure information. And these files have this information
 in a plain, open format. No encryption, no protection. Just user names, passwords,
 codes and tokens in plain text.</p>
 
-<p>Why is this bad? Well, for a single developer with a single laptop this doesn't
-sound like a problem. Although, I don't like the idea of losing a laptop somewhere
+<p>Why is this bad? Well, for a single developer with a single laptop this doesn’t
+sound like a problem. Although, I don’t like the idea of losing a laptop somewhere
 in an airport with all credentials open and ready to be used. You may
 argue that there are disc protection tools, like FileVault for MacOS or
 BestCrypt for Windows. Yes, maybe.</p>
 
-<p>But let's see what happens when we have a team of developers, working together
+<p>But let’s see what happens when we have a team of developers, working together
 and sharing those deployment scripts <strong>and</strong> files with credentials. Once you
 give access to your deployment scripts to a new member of the team, you have
 to share all that sensitive data. There is just no way around it. In order

@@ -78,7 +78,7 @@ look at it from a different perspective.
       <p>Martin Fowler <a href="http://martinfowler.com/bliki/InversionOfControl.html">says</a>:</p>
 
 <blockquote>
-<p>A library is essentially a set of functions that you can call,
+  <p>A library is essentially a set of functions that you can call,
 these days usually organized into classes.</p>
 </blockquote>
 
@@ -86,7 +86,7 @@ these days usually organized into classes.</p>
 is a very common misconception of a class in object-oriented programming. Classes
 are not organizers of functions. And objects are not data structures.</p>
 
-<p>So what is a "proper" object? Which one is not a proper one?
+<p>So what is a “proper” object? Which one is not a proper one?
 What is the difference? Even though it is a very polemic subject, it is very important.
 Unless we understand what an object is, how can we write object-oriented software?
 Well, thanks to Java, Ruby, and others, we can. But how good will it be?
@@ -100,7 +100,7 @@ Here is my list of qualities of a good object.</p>
 
 
 <p>Before we start talking about <a href="/2016/07/14/who-is-object.html">objects</a>,
-let's define what a <em>class</em> is. It
+let’s define what a <em>class</em> is. It
 is a place where objects are being born (a.k.a. <em>instantiated</em>). The main
 <a href="/2016/08/30/decomposition-of-responsibility.html">responsibility</a>
 of a class is to <em>construct</em> new objects on demand and <em>destruct</em> them when
@@ -109,23 +109,23 @@ and how they should behave. In other words, it knows what <em>contracts</em> the
 
 
 
-<p>Sometimes I hear classes being called "object templates"
+<p>Sometimes I hear classes being called “object templates”
 (for example, <a href="https://en.wikipedia.org/wiki/Class_%28computer_programming%29">Wikipedia says so</a>).
 This definition is not correct because it places classes into a passive position. This definition
 assumes that someone will get a template and build an object by using it.
-This may be true, technically speaking, but conceptually it's wrong. Nobody else
-should be involved---there are only a class and its children. An
-object asks a class to create another object, and the class constructs it; that's it.
+This may be true, technically speaking, but conceptually it’s wrong. Nobody else
+should be involved—there are only a class and its children. An
+object asks a class to create another object, and the class constructs it; that’s it.
 Ruby expresses this concept much better than Java or C++:</p>
 
 <pre>photo = File.new('/tmp/photo.png')</pre>
 
 <p>The object <code>photo</code> is constructed by the class <code>File</code> (<code>new</code> is an entry point to the class).
-Once constructed, the object is acting on its own. It shouldn't know who constructed it
+Once constructed, the object is acting on its own. It shouldn’t know who constructed it
 and how many more brothers and sisters it has in the class. Yes, I mean
 that <a href="https://en.wikipedia.org/wiki/Reflection_%28computer_programming%29">reflection</a>
-is a terrible idea, but I'll write more about it in one of the next posts :)
-Now, let's talk about objects and their best and worst sides.</p>
+is a terrible idea, but I’ll write more about it in one of the next posts :)
+Now, let’s talk about objects and their best and worst sides.</p>
 
 <h2 id="1-he-exists-in-real-life">1. He Exists in Real Life</h2>
 
@@ -139,38 +139,38 @@ of functions. Instead, it is an independent entity with its own life cycle,
 its own behavior, and its own habits.</p>
 
 <p>An employee, a department, an HTTP request, a table in MySQL,
-a line in a file, or a file itself are proper objects---because they exist in
+a line in a file, or a file itself are proper objects—because they exist in
 real life, even when our software is turned off. To be more precise, an object is a
 <em>representative</em> of a real-life creature. It is a <em>proxy</em> of that
 real-life creature in front of all other objects. Without
-such a creature, there is---obviously---no object.</p>
+such a creature, there is—obviously—no object.</p>
 
 <pre>photo = File.new('/tmp/photo.png')
 puts photo.width()</pre>
 
-<p>In this example, I'm asking <code>File</code> to construct a new object <code>photo</code>, which will
+<p>In this example, I’m asking <code>File</code> to construct a new object <code>photo</code>, which will
 be a representative of a real file on disk. You may say that a file
 is also something virtual and exists only when the computer is turned on.
-I would agree and refine the definition of "real life" as follows: It is
+I would agree and refine the definition of “real life” as follows: It is
 everything that exists aside from the scope of the program the object
-lives in. The disk file is outside the scope of our program; that's why
+lives in. The disk file is outside the scope of our program; that’s why
 it is perfectly correct to create its representative inside the program.</p>
 
 <p>A controller, a parser, a filter, a validator, a service locator,
 a singleton, or a factory are <strong>not</strong> good objects
 (yes, most GoF patterns are
 <a href="/2016/02/03/design-patterns-and-anti-patterns.html">anti-patterns</a>!).
-They don't exist apart from your software, in real life. They
+They don’t exist apart from your software, in real life. They
 are invented just to tie other objects together. They are artificial
-and fake creatures. They don't represent anyone. Seriously, an XML parser---who does it represent? Nobody.</p>
+and fake creatures. They don’t represent anyone. Seriously, an XML parser—who does it represent? Nobody.</p>
 
 <p>Some of them may become good if they change their names;
 others can never excuse their existence. For example, that XML parser can be
-renamed to "parseable XML" and start to represent an XML document
+renamed to “parseable XML” and start to represent an XML document
 that exists outside of our scope.</p>
 
-<p>Always ask yourself, "What is
-the real-life entity behind my object?" If you can't find an answer,
+<p>Always ask yourself, “What is
+the real-life entity behind my object?” If you can’t find an answer,
 start thinking about refactoring.</p>
 
 <h2 id="2-he-works-by-contracts">2. He Works by Contracts</h2>
@@ -179,18 +179,18 @@ start thinking about refactoring.</p>
 
 <p>A good object always works by contracts. He expects to be hired not
 because of his personal merits but because he obeys the contracts. On the
-other hand, when we hire an object, we shouldn't discriminate and expect some specific
+other hand, when we hire an object, we shouldn’t discriminate and expect some specific
 object from a specific class to do the work for us. We should expect <em>any</em>
 object to do what our contract says. As long as the object does what
 we need, we should not be interested in his class of origin, his sex, or his religion.</p>
 
 <p>For example, I need to show a photo on the screen.
-I want that photo to be read from a file in PNG format. I'm
+I want that photo to be read from a file in PNG format. I’m
 contracting an object from class <code>DataFile</code> and asking him to give me
 the binary content of that image.</p>
 
-<p>But wait, do I care where exactly the content will come from---the file on disk, or
-an HTTP request, or maybe a document in Dropbox? Actually, I don't. All I care about
+<p>But wait, do I care where exactly the content will come from—the file on disk, or
+an HTTP request, or maybe a document in Dropbox? Actually, I don’t. All I care about
 is that some object gives me a byte array with PNG content. So my contract
 would look like this:</p>
 
@@ -200,7 +200,7 @@ would look like this:</p>
 
 <p>Now, any object from any class (not just <code>DataFile</code>) can work for me.
 All he has to do, in order to be eligible, is to obey
-the contract---by implementing the interface <code>Binary</code>.</p>
+the contract—by implementing the interface <code>Binary</code>.</p>
 
 <p>The rule here is simple: every public method in a good object should
 implement his counterpart from an interface. If your object has
@@ -237,9 +237,9 @@ second = new HTTPStatus();
 assert first.equals(second);</pre>
 
 <p>Obviously utility classes, which have only static methods,
-can't instantiate good objects. More generally, utility classes
-don't have any of the merits mentioned in this article and can't
-even be called "classes." They are simply terrible abusers of an object paradigm
+can’t instantiate good objects. More generally, utility classes
+don’t have any of the merits mentioned in this article and can’t
+even be called “classes.” They are simply terrible abusers of an object paradigm
 and exist in modern object-oriented languages only because their
 inventors enabled static methods.</p>
 
@@ -251,7 +251,7 @@ entity should stay the same through the entire life of the object. In other
 words, an object should never betray those whom he represents. He should
 never change owners. :)</p>
 
-<p>Be aware that immutability doesn't mean that all methods always return the same values.
+<p>Be aware that immutability doesn’t mean that all methods always return the same values.
 Instead, a good immutable object is very dynamic.
 However, he never changes his internal state. For example:</p>
 
@@ -279,16 +279,16 @@ never betray the URL he represents.</p>
 In a nutshell, immutable objects are better because:</p>
 
 <ul>
-<li>Immutable objects are simpler to construct, test, and use.</li>
-<li>Truly immutable objects are always <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a>.</li>
-<li>They help avoid <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>.</li>
-<li>Their usage is side-effect free (no defensive copies).</li>
-<li>They always have failure atomicity.</li>
-<li>They are much easier to cache.</li>
-<li>They prevent <a href="/2014/05/13/why-null-is-bad.html">NULL references</a>.</li>
+  <li>Immutable objects are simpler to construct, test, and use.</li>
+  <li>Truly immutable objects are always <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a>.</li>
+  <li>They help avoid <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>.</li>
+  <li>Their usage is side-effect free (no defensive copies).</li>
+  <li>They always have failure atomicity.</li>
+  <li>They are much easier to cache.</li>
+  <li>They prevent <a href="/2014/05/13/why-null-is-bad.html">NULL references</a>.</li>
 </ul>
 
-<p>Of course, a good object doesn't have
+<p>Of course, a good object doesn’t have
 <a href="/2014/09/16/getters-and-setters-are-evil.html">setters</a>, which
 may change his state and force him to betray the URL. In other words,
 introducing a <code>setURL()</code> method would be a terrible mistake in class <code>HTTPStatus</code>.</p>
@@ -297,9 +297,9 @@ introducing a <code>setURL()</code> method would be a terrible mistake in class 
 more cohesive, solid, and understandable designs, as this article
 explains: <a href="/2014/11/07/how-immutability-helps.html">How Immutability Helps</a>.</p>
 
-<h2 id="5-his-class-doesnt-have-anything-static">5. His Class Doesn't Have Anything Static</h2>
+<h2 id="5-his-class-doesnt-have-anything-static">5. His Class Doesn’t Have Anything Static</h2>
 
-<p>A static method implements a behavior of a class, not an object. Let's say
+<p>A static method implements a behavior of a class, not an object. Let’s say
 we have class <code>File</code>, and his children have method <code>size()</code>:</p>
 
 <pre>final class File implements Measurable {
@@ -324,13 +324,13 @@ class File {
 }</pre>
 
 <p>This design runs completely against the object-oriented paradigm. Why?
-Because static methods turn object-oriented programming into "class-oriented" programming.
-This method, <code>size()</code>, exposes the behavior of the class, not of his objects. What's
-wrong with this, you may ask? Why can't we have both objects and classes
-as first-class citizens in our code? Why can't both of them have methods and properties?</p>
+Because static methods turn object-oriented programming into “class-oriented” programming.
+This method, <code>size()</code>, exposes the behavior of the class, not of his objects. What’s
+wrong with this, you may ask? Why can’t we have both objects and classes
+as first-class citizens in our code? Why can’t both of them have methods and properties?</p>
 
 <p>The problem is that with class-oriented programming,
-decomposition doesn't work anymore. We can't break down a complex problem
+decomposition doesn’t work anymore. We can’t break down a complex problem
 into parts, because only a single instance of a class exists in the entire
 program. The power of <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>
 is that it allows us to use objects as an instrument
@@ -338,24 +338,24 @@ for scope decomposition. When I instantiate an object inside a method, he
 is dedicated to my specific task. He is perfectly isolated from
 all other objects around the method. This object is a <em>local variable</em>
 in the scope of the method. A class, with his static methods, is always
-a <em>global variable</em> no matter where I use him. Because of that, I can't
+a <em>global variable</em> no matter where I use him. Because of that, I can’t
 isolate my interaction with this
 <a href="/2017/05/16/monikers.html">variable</a> from others.</p>
 
 <p>Besides being conceptually against object-oriented principles, public static
 methods have a few practical drawbacks:</p>
 
-<p>First, it's <strong>impossible to mock</strong> them
+<p>First, it’s <strong>impossible to mock</strong> them
 (Well, you can use <a href="https://code.google.com/p/powermock/">PowerMock</a>,
 but this will then be the most terrible decision
-you could make in a Java project... I made it once, a few years ago).</p>
+you could make in a Java project… I made it once, a few years ago).</p>
 
 <p>Second, they are <strong>not thread-safe</strong> by definition, because they always
 work with static variables, which are accessible from all threads. You can
 make them thread-safe, but this will always require explicit
 synchronization.</p>
 
-<p>Every time you see a public static method, start rewriting immediately. I don't
+<p>Every time you see a public static method, start rewriting immediately. I don’t
 even want to mention how terrible static (or global) variables are. I think
 it is just obvious.</p>
 
@@ -367,7 +367,7 @@ it is just obvious.</p>
 it <strong>does</strong>, just like we name objects in real life: book instead of
 page aggregator, cup instead of water holder, T-shirt instead of body dresser.
 There are exceptions, of course, like printer or computer, but
-they were invented just recently and by those who didn't read this article. :)</p>
+they were invented just recently and by those who didn’t read this article. :)</p>
 
 <p>For example, these names tell us who their owners are:
 an apple, a file, a series of HTTP requests, a socket, an XML document, a list of users, a regular
@@ -378,15 +378,15 @@ possible to draw as a small picture. Even a regular expression can be drawn.</p>
 a file reader, a text parser, a URL validator, an XML printer,
 a service locator, a <a href="/2016/06/27/singletons-must-die.html">singleton</a>,
 a script runner, or a Java programmer. Can you draw
-any of them? No, you can't. These names are not suitable for good objects.
+any of them? No, you can’t. These names are not suitable for good objects.
 They are terrible names that lead to terrible design.</p>
 
-<p>In general, avoid names that end with "-er"---most of them are bad.</p>
+<p>In general, avoid names that end with “-er”—most of them are bad.</p>
 
-<p>"What is the alternative of a <code>FileReader</code>?" I hear you asking. What would
-be a better name? Let's see. We already have <code>File</code>, which is a representative
+<p>“What is the alternative of a <code>FileReader</code>?” I hear you asking. What would
+be a better name? Let’s see. We already have <code>File</code>, which is a representative
 of a real-world file on disk. This representative is not powerful enough for us,
-because he doesn't know how to read the content of the file. We want to create
+because he doesn’t know how to read the content of the file. We want to create
 a more powerful one that will have that ability. What would we call him?
 Remember, the name should say what he is, not what he does. What is he? He
 is a file that has data; not just a file, like <code>File</code>, but a more sophisticated
@@ -396,24 +396,24 @@ one, with data. So how about <code>FileWithData</code> or simply <code>DataFile<
 Always think about <strong>what it is</strong> rather than what it does. Give your
 objects real, meaningful names instead of job titles.</p>
 
-<p>More about this in <a href="/2015/03/09/objects-end-with-er.html">Don't Create Objects That End With -ER</a>.</p>
+<p>More about this in <a href="/2015/03/09/objects-end-with-er.html">Don’t Create Objects That End With -ER</a>.</p>
 
 <h2 id="7-his-class-is-either-final-or-abstract">7. His Class Is Either Final or Abstract</h2>
 
 
 
 <p>A good object comes from either a final or abstract class. A <code>final</code> class is one that
-can't be extended via <a href="/2016/09/13/inheritance-is-procedural.html">inheritance</a>.
+can’t be extended via <a href="/2016/09/13/inheritance-is-procedural.html">inheritance</a>.
 An <code>abstract</code> class is one that
-can't have instances. Simply put, a class should either say, "You can never break
-me; I'm a black box for you" or "I'm broken already; fix me first and then use."</p>
+can’t have instances. Simply put, a class should either say, “You can never break
+me; I’m a black box for you” or “I’m broken already; fix me first and then use.”</p>
 
-<p>There is nothing in between. A final class is a black box that you can't modify
-by any means. He works as he works, and you either use him or throw him away. You can't
+<p>There is nothing in between. A final class is a black box that you can’t modify
+by any means. He works as he works, and you either use him or throw him away. You can’t
 create another class that will inherit his properties. This is not allowed
 because of that <code>final</code> modifier. The only way to extend such a final class
-is through decoration of his children. Let's say I have the class <code>HTTPStatus</code> (see
-above), and I don't like him. Well, I like him, but he's not powerful enough
+is through decoration of his children. Let’s say I have the class <code>HTTPStatus</code> (see
+above), and I don’t like him. Well, I like him, but he’s not powerful enough
 for me. I want him to
 <a href="/2015/12/01/rethrow-exceptions.html">throw</a>
 an exception if HTTP status is over 400. I want
@@ -437,8 +437,8 @@ to extend the class and overwrite his method:</p>
 <p>Why is this wrong? It is very wrong because we risk breaking
 the logic of the entire parent class by overriding one of his methods. Remember,
 once we override the method <code>read()</code> in the child class, all methods from the
-parent class start to use his new version. We're literally injecting
-a new "piece of implementation" right into the class. Philosophically
+parent class start to use his new version. We’re literally injecting
+a new “piece of implementation” right into the class. Philosophically
 speaking, this is an offense.</p>
 
 <p>On the other hand, to extend a final class, you have to treat him like a black box
@@ -468,12 +468,12 @@ call will be intercepted and implemented in a different way, if necessary.
 In this design, we treat the original object as a black box and never
 touch his internal logic.</p>
 
-<p>If you don't use that <code>final</code> keyword, anyone (including yourself) will
-be able to extend the class and... offend him :( So a class without <code>final</code>
+<p>If you don’t use that <code>final</code> keyword, anyone (including yourself) will
+be able to extend the class and… offend him :( So a class without <code>final</code>
 is a bad design.</p>
 
-<p>An abstract class is the exact opposite case---he tells us that
-he is incomplete and we can't use him "as is." We have to inject
+<p>An abstract class is the exact opposite case—he tells us that
+he is incomplete and we can’t use him “as is.” We have to inject
 our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as <code>abstract</code> methods.
 For example, our <code>HTTPStatus</code> may look like this:</p>
@@ -490,14 +490,14 @@ For example, our <code>HTTPStatus</code> may look like this:</p>
   protected abstract boolean isValid();
 }</pre>
 
-<p>As you see, the class doesn't know how exactly to validate the HTTP
+<p>As you see, the class doesn’t know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through
-overriding the method <code>isValid()</code>. We're not going to offend him with
+overriding the method <code>isValid()</code>. We’re not going to offend him with
 this inheritance, since he defended all other methods with <code>final</code> (pay
 attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.</p>
 
-<p>To summarize, your class should either be <code>final</code> or <code>abstract</code>---nothing in between.</p>
+<p>To summarize, your class should either be <code>final</code> or <code>abstract</code>—nothing in between.</p>
 
 <p>Update (April 2017): If you also agree that
 <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a> is evil,

@@ -104,12 +104,12 @@ public class Page {
 <h2 id="how-it-works">How It Works?</h2>
 
 <p>This post about <a href="/2014/06/01/aop-aspectj-java-method-logging.html">AOP, AspectJ and method logging</a>
-explains how "aspect weaving" works (I highly recommend that you read it first).</p>
+explains how “aspect weaving” works (I highly recommend that you read it first).</p>
 
-<p>Here I'll explain how caching works.</p>
+<p>Here I’ll explain how caching works.</p>
 
 <p>The approach is very straight forward. There is a static hash map with keys
-as "method coordinates" and values as their results. Method coordinates consist
+as “method coordinates” and values as their results. Method coordinates consist
 of the object, an owner of the method and a method name with parameter types.</p>
 
 <p>In the example above, right after the method <code>load()</code>
@@ -125,7 +125,7 @@ the end of its lifetime, which is five minutes in the example above.</p>
 
 <h2 id="what-about-cache-flushing">What About Cache Flushing?</h2>
 
-<p>Sometimes it's necessary to have the ability to flush cache before
+<p>Sometimes it’s necessary to have the ability to flush cache before
 the end of its lifetime. Here is a practical example:</p>
 
 <pre>import com.jcabi.aspects.Cacheable;
@@ -140,10 +140,10 @@ public class Employees {
   }
 }</pre>
 
-<p>It's obvious that the number of employees in the database
+<p>It’s obvious that the number of employees in the database
 will be different after <code>add()</code> method execution and the
 result of <code>size()</code> should be invalidated in cache. This invalidation
-operation is called "flushing" and <code>@Cacheable.FlushBefore</code> triggers it.</p>
+operation is called “flushing” and <code>@Cacheable.FlushBefore</code> triggers it.</p>
 
 <p>Actually, every call to <code>add()</code> invalidates all cached methods
 in this class, not only <code>size()</code>.</p>

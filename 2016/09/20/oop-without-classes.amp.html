@@ -79,8 +79,8 @@ of course, no implementation inheritance.
 David West, the author of the <a href="http://amzn.to/266oJr4">Object Thinking</a> book,
 a few weeks ago, and he said that classes were not meant to be in
 object-oriented programming at all. He actually said that
-<a href="https://www.youtube.com/watch?v=RdE-d_EhzmA">earlier</a>; I just didn't
-understand him then. The more I've thought about this, the more it appears
+<a href="https://www.youtube.com/watch?v=RdE-d_EhzmA">earlier</a>; I just didn’t
+understand him then. The more I’ve thought about this, the more it appears
 obvious that we indeed do not need classes.</p>
 
 
@@ -89,13 +89,13 @@ obvious that we indeed do not need classes.</p>
 
 <p>Here is a prototype.</p>
 
-<p>Let's say we have only <em>types</em> and <em>objects</em>. First, we define a type:</p>
+<p>Let’s say we have only <em>types</em> and <em>objects</em>. First, we define a type:</p>
 
 <pre>type Book {
   void print();
 }</pre>
 
-<p>Then we <em>create</em> an object (pay attention; we don't "instantiate"):</p>
+<p>Then we <em>create</em> an object (pay attention; we don’t “instantiate”):</p>
 
 <pre>Book b1 = create Book("Object Thinking") {
   String title;
@@ -115,7 +115,7 @@ We <em>copy</em> an existing one:</p>
 
 <p>Libraries will deliver us objects, which we can copy.</p>
 
-<p>That's it.</p>
+<p>That’s it.</p>
 
 <p>No <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a>
 and no <a href="/2014/05/05/oop-alternative-to-utility-classes.html">static methods</a>,

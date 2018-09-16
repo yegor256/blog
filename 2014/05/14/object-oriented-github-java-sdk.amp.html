@@ -87,17 +87,17 @@ Java SDK-s that wrap and expose the API. I tried to use them,
 but faced a number of issues:</p>
 
 <ul>
-<li>They are not really object-oriented (even though one of them has a description that says it is)</li>
-<li>They are not based on JSR-353 (JSON Java API)</li>
-<li>They provide no mocking instruments</li>
-<li>They don't cover the entire API and can't be extended</li>
+  <li>They are not really object-oriented (even though one of them has a description that says it is)</li>
+  <li>They are not based on JSR-353 (JSON Java API)</li>
+  <li>They provide no mocking instruments</li>
+  <li>They don’t cover the entire API and can’t be extended</li>
 </ul>
 
 
 
 <p>Keeping in mind all those drawbacks, I created my
-own library---<a href="http://github.jcabi.com">jcabi-github</a>.
-Let's look at its most important advantages.</p>
+own library—<a href="http://github.jcabi.com">jcabi-github</a>.
+Let’s look at its most important advantages.</p>
 
 
 
@@ -122,7 +122,7 @@ and <code>User</code> are interfaces. Classes that implement them are not visibl
 
 <p><code>MkGitHub</code> class is a mock version of a GitHub server. It behaves
 almost exactly the same as a real server and is the perfect
-instrument for unit testing. For example, say that you're
+instrument for unit testing. For example, say that you’re
 testing a method that is supposed to post a new issue to GitHub
 and add a message into it. Here is how the unit test would look:</p>
 
@@ -151,7 +151,7 @@ processing. This combination makes it highly customizable and extensible,
 when some GitHub feature is not covered by the library (and there are many of them).</p>
 
 <p>For example, you want to get the value of <code>hireable</code> attribute of a <code>User</code>.
-Class <code>User.Smart</code> doesn't have a method for it. So, here is how you would get it:</p>
+Class <code>User.Smart</code> doesn’t have a method for it. So, here is how you would get it:</p>
 
 <pre>User user = // get it somewhere
 // name() method exists in User.Smart, let's use it
@@ -159,14 +159,14 @@ System.out.println(new User.Smart(user).name());
 // there is no hireable() method there
 System.out.println(user.json().getString("hireable"));</pre>
 
-<p>We're using method <code>json()</code> that returns an instance of
+<p>We’re using method <code>json()</code> that returns an instance of
 <a href="http://docs.oracle.com/javaee/7/api/javax/json/JsonObject.html"><code>JsonObject</code></a>
 from JSR-353 (part of Java7).</p>
 
 <p>No other library allows such direct access to JSON objects
 returned by the GitHub server.</p>
 
-<p>Let's see another example. Say, you want to use some feature
+<p>Let’s see another example. Say, you want to use some feature
 from GitHub that is not covered by the API. You get a <code>Request</code>
 object from <code>GitHub</code> interface and directly access the HTTP entry point of the server:</p>
 
@@ -186,9 +186,9 @@ int found = github.entry()
 <p>All classes are truly immutable and annotated with
 <a href="http://aspects.jcabi.com/annotation-immutable.html"><code>@Immutable</code></a>.
 This may sound like a minor benefit, but it was very important for me.
-I'm using this annotation in all my projects to ensure my classes are truly immutable.</p>
+I’m using this annotation in all my projects to ensure my classes are truly immutable.</p>
 
-<h2 id="version-0-8">Version 0.8</h2>
+<h2 id="version-08">Version 0.8</h2>
 
 <p>A few days ago we released the latest <a href="https://github.com/jcabi/jcabi-github/releases/tag/jcabi-0.8">version 0.8</a>.
 It is a major release, that included over 1200 commits. It covers the entire GitHub API and is
@@ -200,6 +200,7 @@ The library ships as a JAR dependency in <a href="http://repo1.maven.org/maven2/
   &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
   &lt;artifactId&gt;jcabi-github&lt;/artifactId&gt;
 &lt;/dependency&gt;</pre>
+
 
     </article>
   </body>

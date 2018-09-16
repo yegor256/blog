@@ -78,8 +78,8 @@ duplication between classes and are not testable.
       <p>Do you have private static methods that help you break
 your algorithms down into smaller parts? I do. Every time I write
 a new method, I realize that it can be a new class instead. Of course,
-I don't make classes out of all of them, but that has to be the
-goal. Private static methods are not reusable, while classes are---that
+I don’t make classes out of all of them, but that has to be the
+goal. Private static methods are not reusable, while classes are—that
 is the main difference between them, and it is crucial.</p>
 
 
@@ -148,9 +148,9 @@ implements the functionality we want to share:</p>
 use this class <code>Encoded</code> in many other places, and we can create a unit
 test for it. We were not able to do that with the private static method before.</p>
 
-<p>See the point? The rule of thumb I've already figured for myself is that
-<em>each</em> private static method is a perfect candidate for a new class. That's
-why we don't have them at all in <a href="http://www.eolang.org">EO</a>.</p>
+<p>See the point? The rule of thumb I’ve already figured for myself is that
+<em>each</em> private static method is a perfect candidate for a new class. That’s
+why we don’t have them at all in <a href="http://www.eolang.org">EO</a>.</p>
 
 <p>By the way, <em>public</em> static methods are a different story. They are also evil,
 but for <a href="/2014/05/05/oop-alternative-to-utility-classes.html">different reasons</a>.</p>

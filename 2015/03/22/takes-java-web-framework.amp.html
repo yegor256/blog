@@ -87,9 +87,9 @@ framework. I put a few basic principles into its foundation: 1) No
 classes, and 4) no class casting, reflection,
 and <a href="/2015/04/02/class-casting-is-anti-pattern.html"><code>instanceof</code></a>
 operators. These four basic principles should guarantee
-clean code and transparent architecture. That's how the
+clean code and transparent architecture. That’s how the
 <a href="http://www.takes.org">Takes</a> framework was born.
-Let's see what was created and how it works.</p>
+Let’s see what was created and how it works.</p>
 
 
 
@@ -105,7 +105,7 @@ components, in simple terms.</p>
 <p>First, to create a web server, we should create
 a new <a href="http://en.wikipedia.org/wiki/Network_socket">network socket</a>,
 that accepts connections on a certain <a href="http://en.wikipedia.org/wiki/Port_%28computer_networking%29">TCP port</a>.
-Usually it is 80, but I'm going to use 8080 for testing purposes.
+Usually it is 80, but I’m going to use 8080 for testing purposes.
 This is done in Java with the <a href="http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html"><code>ServerSocket</code></a> class:</p>
 
 <pre>import java.net.ServerSocket;
@@ -116,18 +116,18 @@ public class Foo {
   }
 }</pre>
 
-<p>That's enough to start a web server. Now, the socket is ready and listening
+<p>That’s enough to start a web server. Now, the socket is ready and listening
 on port 8080. When someone opens <code>http://localhost:8080</code> in their browser,
 the connection will be established and the browser will spin its waiting
 wheel forever. Compile this snippet and try. We just built a simple web
-server without the use of any frameworks. We're not doing anything with
-incoming connections yet, but we're not rejecting them either. All of them
-are being lined up inside that <code>server</code> object. It's being done in a background
-thread; that's why we need to put that <code>while(true)</code> in afterward. Without this endless pause,
+server without the use of any frameworks. We’re not doing anything with
+incoming connections yet, but we’re not rejecting them either. All of them
+are being lined up inside that <code>server</code> object. It’s being done in a background
+thread; that’s why we need to put that <code>while(true)</code> in afterward. Without this endless pause,
 the app will finish its execution immediately and the server socket will
 shut down.</p>
 
-<p>The next step is to accept the incoming connections. In Java, that's done through
+<p>The next step is to accept the incoming connections. In Java, that’s done through
 a blocking call to the <code>accept()</code> method:</p>
 
 <pre>final Socket socket = server.accept();</pre>
@@ -150,7 +150,7 @@ web server should work like this:</p>
   }
 }</pre>
 
-<p>It's an endless cycle that accepts a new connection, understands it,
+<p>It’s an endless cycle that accepts a new connection, understands it,
 creates a response, returns the response, and accepts a new connection again.
 HTTP protocol is stateless, which means the server should not
 remember what happened in any previous connection. All it cares about is
@@ -189,8 +189,8 @@ for a response.</p>
 
 <p>Our job is to create an HTTP response using the information we get in the
 request. If our server is very primitive, we can basically ignore all the
-information in the request and just return "Hello, world!" to all requests
-(I'm using
+information in the request and just return “Hello, world!” to all requests
+(I’m using
 <a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html"><code>IOUtils</code></a>
 for simplicity):</p>
 
@@ -211,7 +211,7 @@ public class Foo {
   }
 }</pre>
 
-<p>That's it. The server is ready. Try to compile and run it. Point your browser
+<p>That’s it. The server is ready. Try to compile and run it. Point your browser
 to <code>http://localhost:8080</code>, and you will see <code>Hello, world!</code>:</p>
 
 <pre>$ javac -cp commons-io.jar Foo.java
@@ -230,11 +230,11 @@ $ curl http://localhost:8080 -v
 * Closing connection 0
 Hello, world!</pre>
 
-<p>That's all you need to build a web server. Now let's discuss how to make
-it object-oriented and composable. Let's try to see how the <a href="http://www.takes.org">Takes</a>
+<p>That’s all you need to build a web server. Now let’s discuss how to make
+it object-oriented and composable. Let’s try to see how the <a href="http://www.takes.org">Takes</a>
 framework was built.</p>
 
-<h2 id="routing-dispatching">Routing/Dispatching</h2>
+<h2 id="routingdispatching">Routing/Dispatching</h2>
 
 <p>Routing/dispatching is combined with response printing in Takes. All you
 need to do to create a working web application is to create a single
@@ -250,7 +250,7 @@ public final class TkFoo implements Take {
   }
 }</pre>
 
-<p>And now it's time to start a server:</p>
+<p>And now it’s time to start a server:</p>
 
 <pre>import org.takes.http.Exit;
 import org.takes.http.FtBasic;
@@ -265,13 +265,13 @@ class does the exact same socket manipulations explained
 above. It starts a server socket on port 8080 and dispatches all incoming
 connections through an instance of <code>TkFoo</code> that we are giving to its constructor.
 It does this dispatching in an endless cycle, checking every second whether
-it's time to stop with an instance of
+it’s time to stop with an instance of
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html"><code>Exit</code></a>.
-Obviously, <code>Exit.NEVER</code> always responds with, "Don't stop, please."</p>
+Obviously, <code>Exit.NEVER</code> always responds with, “Don’t stop, please.”</p>
 
 <h2 id="http-request">HTTP Request</h2>
 
-<p>Now let's see what's inside the HTTP request arriving at <code>TkFoo</code> and what
+<p>Now let’s see what’s inside the HTTP request arriving at <code>TkFoo</code> and what
 we can get out of it. This is how the
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>
 interface is defined in <a href="http://www.takes.org">Takes</a>:</p>
@@ -315,7 +315,7 @@ As you already probably understand, the <code>Rq</code> prefix stands for <code>
 
 <h2 id="first-real-web-app">First Real Web App</h2>
 
-<p>Let's create our first real web application, which will do something
+<p>Let’s create our first real web application, which will do something
 useful. I would recommend starting with an <code>Entry</code> class, which is
 required by Java to start an app from the command line:</p>
 
@@ -331,8 +331,8 @@ public final class Entry {
 called by JVM when the app starts from the command line. As you see, it
 instantiates <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html"><code>FtCli</code></a>,
 giving it an instance of class <code>TkApp</code> and command
-line arguments. We'll create the <code>TkApp</code> class in a second. <code>FtCli</code>
-(translates to "front-end with command line interface") makes an instance
+line arguments. We’ll create the <code>TkApp</code> class in a second. <code>FtCli</code>
+(translates to “front-end with command line interface”) makes an instance
 of the same <code>FtBasic</code>, wrapping it into a few useful decorators and configuring
 it according to command line arguments. For example, <code>--port=8080</code> will
 be converted into a <code>8080</code> port number and passed as a second argument of
@@ -358,9 +358,9 @@ final class TkApp extends TkWrap {
   }
 }</pre>
 
-<p>We'll discuss this <code>TkFork</code> class in a minute.</p>
+<p>We’ll discuss this <code>TkFork</code> class in a minute.</p>
 
-<p>If you're using Maven, this is the <code>pom.xml</code> you should start with:</p>
+<p>If you’re using Maven, this is the <code>pom.xml</code> you should start with:</p>
 
 <pre>&lt;?xml version="1.0"?&gt;
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -420,7 +420,7 @@ to Heroku. This is what <code>Procfile</code> should look like:</p>
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right <em>take</em>. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
-a collection of "forks," which are instances of the
+a collection of “forks,” which are instances of the
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html"><code>Fork</code></a> interface:</p>
 
 <pre>public interface Fork {
@@ -433,7 +433,7 @@ with a single <code>Response</code>. <code>TkFork</code> goes through all forks,
 <code>TkFork</code> returns this response to the caller, which is
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code>FtBasic</code></a>.</p>
 
-<p>Let's create a simple fork ourselves now. For example, we want to show
+<p>Let’s create a simple fork ourselves now. For example, we want to show
 the status of the application when the <code>/status</code> URL is requested. Here is
 the code:</p>
 
@@ -459,7 +459,7 @@ or an iterator with an instance of <code>TkStatus</code> inside. If an empty
 iterator is returned, <code>TkFork</code> will try to find another fork in the
 collection that actually gets an instance of <code>Response</code>.
 By the way, if nothing is found and all forks return empty iterators,
-<code>TkFork</code> will throw a "Page not found" exception.</p>
+<code>TkFork</code> will throw a “Page not found” exception.</p>
 
 <p>This exact logic is implemented by an out-of-the-box fork called <code>FkRegex</code>,
 which attempts to match a request URI path with the regular expression
@@ -489,14 +489,14 @@ provided:</p>
   }
 }</pre>
 
-<p>Again, I believe it's obvious. The instance of <code>FkRegex</code> will ask an
+<p>Again, I believe it’s obvious. The instance of <code>FkRegex</code> will ask an
 encapsulated instance of <code>TkFork</code> to return a response, and it will try to
 fetch it from one that <code>FkParams</code> encapsulated. If the HTTP query is
 <code>/status?f=xml</code>, an instance of <code>TkStatusXML</code> will be returned.</p>
 
 <h2 id="http-response">HTTP Response</h2>
 
-<p>Now let's discuss the structure of the HTTP response and its object-oriented
+<p>Now let’s discuss the structure of the HTTP response and its object-oriented
 abstraction, <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html"><code>Response</code></a>.
 This is how the interface looks:</p>
 
@@ -506,7 +506,7 @@ This is how the interface looks:</p>
 }</pre>
 
 <p>Looks very similar to the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>,
-doesn't it? Well, it's identical, mostly because the structure of the HTTP request and
+doesn’t it? Well, it’s identical, mostly because the structure of the HTTP request and
 response is almost identical. The only difference is the first line.</p>
 
 <p>There is a collection of useful decorators that help in response building. They
@@ -533,17 +533,17 @@ creates a response with a body but with no headers at all. Then,
 makes sure the first line of the response contains <code>HTTP/1.1 200 OK</code>.</p>
 
 <p>You can create your own decorators that can reuse existing ones. Take a look
-at how it's done in <a href="https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java"><code>RsPage</code></a>
+at how it’s done in <a href="https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java"><code>RsPage</code></a>
 from rultor.com.</p>
 
 <h2 id="how-about-templates">How About Templates?</h2>
 
-<p>Returning simple "Hello, world" pages is not a big problem, as we can see. But
+<p>Returning simple “Hello, world” pages is not a big problem, as we can see. But
 what about more complex output like HTML pages, <a href="/2015/11/16/json-vs-xml.html">XML</a>
 documents, JSON
 data sets, etc? There are a few convenient <code>Response</code> decorators that
-enable all of that. Let's start with <a href="http://velocity.apache.org">Velocity</a>,
-a simple templating engine. Well, it's not that simple. It's rather powerful,
+enable all of that. Let’s start with <a href="http://velocity.apache.org">Velocity</a>,
+a simple templating engine. Well, it’s not that simple. It’s rather powerful,
 but I would suggest to use it in simple situations only. Here is how it
 works:</p>
 
@@ -557,8 +557,8 @@ works:</p>
 
 <p>The <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html"><code>RsVelocity</code></a> constructor
 accepts a single argument that has to be a Velocity template. Then, you call
-the <code>with()</code> method, injecting data into the Velocity context. When it's time
-to render the HTTP response, <code>RsVelocity</code> will "evaluate" the template
+the <code>with()</code> method, injecting data into the Velocity context. When it’s time
+to render the HTTP response, <code>RsVelocity</code> will “evaluate” the template
 against the context configured. Again, I would recommend you use
 this templating approach only for simple outputs.</p>
 
@@ -566,16 +566,16 @@ this templating approach only for simple outputs.</p>
 in combination with Xembly. I explained this idea in a few previous posts:
 <a href="/2014/06/25/xml-and-xslt-in-browser.html">XML+XSLT in a Browser</a>
 and <a href="/2014/09/09/restful-web-sites.html">RESTful API and a Web Site in the Same URL</a>.
-It is simple and powerful---Java generates XML output and the XSLT
+It is simple and powerful—Java generates XML output and the XSLT
 processor transforms it into HTML documents. This is how we separate
-representation from data. The XSL stylesheet is a "view" and <code>TkIndex</code> is a "controller,"
+representation from data. The XSL stylesheet is a “view” and <code>TkIndex</code> is a “controller,”
 in terms of <a href="/2016/12/13/mvc-vs-oop.html">MVC</a>.</p>
 
-<p>I'll write a separate article about templating with Xembly and XSL very soon.</p>
+<p>I’ll write a separate article about templating with Xembly and XSL very soon.</p>
 
-<p>In the meantime, we'll create decorators for <a href="http://en.wikipedia.org/wiki/Facelets">JSF/Facelets</a>
+<p>In the meantime, we’ll create decorators for <a href="http://en.wikipedia.org/wiki/Facelets">JSF/Facelets</a>
 and <a href="http://en.wikipedia.org/wiki/JavaServer_Pages">JSP</a> rendering
-in Takes. If you're interested in helping, please fork the framework
+in Takes. If you’re interested in helping, please fork the framework
 and submit your pull requests.</p>
 
 <h2 id="what-about-persistence">What About Persistence?</h2>
@@ -588,7 +588,7 @@ constructors of custom <em>takes</em>.</p>
 
 <p>For example, we have a PostgreSQL database that contains
 some table data that we need to render. Here is how I would
-initialize a connection to it in the <code>Entry</code> class (I'm using
+initialize a connection to it in the <code>Entry</code> class (I’m using
 a <a href="http://www.jolbox.com/">BoneCP</a> connection pool):</p>
 
 <pre>public final class Entry {
@@ -630,9 +630,9 @@ mechanism, which is absolutely container-free. Read more about it in
 <h2 id="unit-testing">Unit Testing</h2>
 
 <p>Since every class is immutable and all dependencies are injected only
-through constructors, unit testing is extremely easy. Let's say we want
+through constructors, unit testing is extremely easy. Let’s say we want
 to test <code>TkStatus</code>, which is supposed to return an HTML response
-(I'm using <a href="http://junit.org/">JUnit 4</a> and <a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
+(I’m using <a href="http://junit.org/">JUnit 4</a> and <a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
 
 <pre>import org.junit.Test;
 import org.hamcrest.MatcherAssert;
@@ -651,7 +651,7 @@ public final class TkIndexTest {
 
 <p>Also, we can start the entire application or any individual <em>take</em> in a
 test HTTP server and test its behavior via a real TCP socket; for example
-(I'm using <a href="http://http.jcabi.com">jcabi-http</a> to make an HTTP request and check the output):</p>
+(I’m using <a href="http://http.jcabi.com">jcabi-http</a> to make an HTTP request and check the output):</p>
 
 <pre>public final class TkIndexTest {
   @Test
@@ -682,7 +682,7 @@ independent from the framework and other <em>takes</em>.</p>
 
 <h2 id="why-the-name">Why the Name?</h2>
 
-<p>That's the question I've been hearing rather often. The idea is simple, and it
+<p>That’s the question I’ve been hearing rather often. The idea is simple, and it
 originates from the movie business. When a movie is made, the crew shoots many <em>takes</em> in order
 to capture the reality and put it on film. Each capture is called a <em>take</em>.</p>
 

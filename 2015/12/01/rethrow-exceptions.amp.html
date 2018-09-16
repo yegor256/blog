@@ -75,14 +75,14 @@ actually, in all other situations.
       </p>
       <p>Yegor Bugayenko<br>1 December 2015</p>
       <h1>Throwing an Exception Without Proper Context Is a Bad Habit</h1>
-      <p>I keep repeating the same mistake again and again. So it's time to
+      <p>I keep repeating the same mistake again and again. So it’s time to
 stop and make a rule to prevent this from happening anymore. The mistake
-is not fatal, but it's very annoying. When I look at production logs, I often see
+is not fatal, but it’s very annoying. When I look at production logs, I often see
 something like <code>"File doesn't exist"</code>, and I ask myself:
 What file? Where is it supposed to exist? What did the server try to do with it?
 What was going on a second before it crashed?
-There is no answer in the log, and it's totally my fault.
-I either 1) don't re-throw or 2) re-throw without providing context.
+There is no answer in the log, and it’s totally my fault.
+I either 1) don’t re-throw or 2) re-throw without providing context.
 Both are wrong.</p>
 
 
@@ -106,8 +106,8 @@ Both are wrong.</p>
 }</pre>
 
 <p>Both examples demonstrate an inadequate style of handling situations that
-involve exceptions and reporting them. What's wrong here? The exception messages
-are not thorough enough. They simply don't contain any information
+involve exceptions and reporting them. What’s wrong here? The exception messages
+are not thorough enough. They simply don’t contain any information
 from the place where they originated from.</p>
 
 <p>This is how they should look instead:</p>
@@ -135,9 +135,9 @@ from the place where they originated from.</p>
   );
 }</pre>
 
-<p>See the difference? This may look like redundant code, but it's not.
-Of course, when I'm writing all this, I don't really care about
-logs and exceptions. I'm not really expecting this file
+<p>See the difference? This may look like redundant code, but it’s not.
+Of course, when I’m writing all this, I don’t really care about
+logs and exceptions. I’m not really expecting this file
 to be absent.</p>
 
 <p>But I should.</p>
@@ -146,7 +146,7 @@ to be absent.</p>
 exception message must describe the problem with as much
 detail as possible.</p>
 
-<p>Of course, we can't forget about security and risk putting any
+<p>Of course, we can’t forget about security and risk putting any
 sensitive information into the exception message, like passwords,
 credit card numbers, etc. Besides that, as much as possible
 must be exposed to the exception catcher at a higher level.</p>
@@ -154,7 +154,7 @@ must be exposed to the exception catcher at a higher level.</p>
 <p>Throwing an exception is literally an escalation of a problem
 to a higher level of management. Imagine that my boss is asking
 me to install a new server. I come back to him in a few hours
-and say, "I failed; sorry." That would sound strange. He
+and say, “I failed; sorry.” That would sound strange. He
 would ask for more details. Why did I fail? What exactly went wrong?
 Is it possible to do it differently? Etc.</p>
 
@@ -166,9 +166,9 @@ Is it possible to do it differently? Etc.</p>
 
 <p>I have to be more verbose and give more details.</p>
 
-<p>And I'm not alone in this mistake. I see it everywhere, and it really
+<p>And I’m not alone in this mistake. I see it everywhere, and it really
 makes <a href="/2016/02/09/are-you-still-debugging.html">debugging</a>
-difficult, especially in production, where it's
+difficult, especially in production, where it’s
 almost impossible to reproduce the problem right away.</p>
 
 <p>Thus, please be more verbose in your exception messages. I will do the same
@@ -178,7 +178,7 @@ in my code :)</p>
 are unchecked, which means that catching them is not a mandatory
 operation, <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">unfortunately</a>.
 Nevertheless, I recommend you catch, add context, and
-re-throw them all, <strong>always</strong>. This may seem like pure noise, but it's not!
+re-throw them all, <strong>always</strong>. This may seem like pure noise, but it’s not!
 Just make your methods smaller and ensure all exceptions
 sent out of them have enough information about their origins.
 You will do yourself and everybody else a big favor.</p>

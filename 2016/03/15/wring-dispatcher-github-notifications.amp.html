@@ -76,33 +76,33 @@ a free hosted dispatcher of incoming notification traffic.
       <h1>Wring.io, a Dispatcher of GitHub Notifications</h1>
       
 
-<p>I'm taking participation in over 50 repositories in GitHub. <a href="http://www.zerocracy.com">We</a>
+<p>I’m taking participation in over 50 repositories in GitHub. <a href="http://www.zerocracy.com">We</a>
 manage all of our projects there. GitHub is sending me hundreds of emails
-every day. I'm serious. Hundreds! I tried to filter them somehow in Gmail,
-but it's not really possible. Gmail filters are not powerful enough to
+every day. I’m serious. Hundreds! I tried to filter them somehow in Gmail,
+but it’s not really possible. Gmail filters are not powerful enough to
 understand the difference between different types of notifications, and there
 are many other problems.
-I decided to create my own simple filtering machine. It's called
+I decided to create my own simple filtering machine. It’s called
 <a href="http://www.wring.io">wring.io</a>.</p>
 
 
 
-<p>The idea of wring.io is simple. First, I'm registering my sources
-of notifications (called "pipes"), such as GitHub. Then I'm giving
+<p>The idea of wring.io is simple. First, I’m registering my sources
+of notifications (called “pipes”), such as GitHub. Then I’m giving
 <a href="http://www.wring.io">wring.io</a> permission
 to connect to GitHub on my behalf and fetch whatever is new there.</p>
 
-<p>Then I'm configuring what should be filtered out, using text matching and/or
+<p>Then I’m configuring what should be filtered out, using text matching and/or
 regular expressions. Right after a new pipe is created,
 <a href="http://www.wring.io">wring.io</a> starts pulling all my sources and updating my inbox.
-All I need to do is delete new messages from my inbox when I'm done with them.
-That's it.</p>
+All I need to do is delete new messages from my inbox when I’m done with them.
+That’s it.</p>
 
-<p>Let's see an example. First I'm creating a new pipe:</p>
+<p>Let’s see an example. First I’m creating a new pipe:</p>
 
 
 
-<p>It's a JSON object. Property <code>class</code> must be set to
+<p>It’s a JSON object. Property <code>class</code> must be set to
 <code>io.wring.agents.github.AgGithub</code>. This is the name of the Java
 class that will be pulling my notifications from GitHub. The project is
 open source, so you can see how the class actually works:
@@ -115,7 +115,7 @@ on my behalf and under my credentials:</p>
 
 
 <p>Property <code>ignore</code> must have an array of strings. Each item is a matching
-pattern. I can use a text or a regular expression. By default, it's
+pattern. I can use a text or a regular expression. By default, it’s
 a text. If exactly the same text is found in a notification, it
 will be ignored. To use a regular expression, I need to wrap it in slashes (for example <code>/[a-z]+/</code>).
 You may skip that property and just specify this JSON:</p>
@@ -125,10 +125,10 @@ You may skip that property and just specify this JSON:</p>
   "token": "your-personal-access-token"
 }</pre>
 
-<p>Then I go to my inbox and read what's there.</p>
+<p>Then I go to my inbox and read what’s there.</p>
 
 <p>This solution literally saves me hours of time now. Feel free to use
-it, it's absolutely free. Moreover, it's open source, so feel free to
+it, it’s absolutely free. Moreover, it’s open source, so feel free to
 contribute.</p>
 
     </article>

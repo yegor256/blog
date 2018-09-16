@@ -80,7 +80,7 @@ is a perfect place for keeping private <a href="https://maven.apache.org/">Maven
 I assume you keep public artifacts in
 <a href="/2014/08/19/how-to-release-to-maven-central.html">Maven Central</a> because
 you want them to be available to everybody. Private artifacts
-are those you don't want visible to anyone except members
+are those you don’t want visible to anyone except members
 of your team. Thus, you want to deploy your <code>.jar</code> files there
 and make sure they are visible only by your team. Here is how we do
 this in all <a href="http://www.zerocracy.com">our</a> Java projects.</p>
@@ -93,7 +93,7 @@ this in all <a href="http://www.zerocracy.com">our</a> Java projects.</p>
 your project domain and a prefix. For example, with <code>repo.teamed.io</code>,
 <code>repo</code> is a prefix and <code>teamed.io</code> is the domain.</p>
 
-<p>There's no need to configure any permissions for this bucket. Just create it
+<p>There’s no need to configure any permissions for this bucket. Just create it
 through the <a href="https://console.aws.amazon.com/console/home">Amazon S3 console</a>.</p>
 
 <h2 id="create-an-iam-user">Create an IAM User</h2>
@@ -101,7 +101,7 @@ through the <a href="https://console.aws.amazon.com/console/home">Amazon S3 cons
 <p>Create a new IAM user. I recommend you name it like <code>teamed-maven</code>
 if your project name is <code>teamed</code>.</p>
 
-<p>Add a new "inline policy" to the user:</p>
+<p>Add a new “inline policy” to the user:</p>
 
 <pre>{
   "Statement": [
@@ -119,7 +119,7 @@ if your project name is <code>teamed</code>.</p>
 <p>Here, <code>repo.teamed.io</code> is the name of the S3 bucket you
 created a minute ago.</p>
 
-<p>Make sure you have an "access key" for this new user. It must look similar
+<p>Make sure you have an “access key” for this new user. It must look similar
 to this:</p>
 
 <pre>key: AKIAI9NNNJD5D7X4TUVA
@@ -127,7 +127,7 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
 
 <p>The key is 20 characters (all caps), and the secret is 40 characters.</p>
 
-<h2 id="extend-settings-xml">Extend <code>settings.xml</code>
+<h2 id="extend-settingsxml">Extend <code>settings.xml</code>
 </h2>
 
 <p>Add this configuration to your <code>~/.m2/settings.xml</code> file:</p>
@@ -144,7 +144,7 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
   [...]
 &lt;/settings&gt;</pre>
 
-<h2 id="configure-pom-xml">Configure <code>pom.xml</code>
+<h2 id="configure-pomxml">Configure <code>pom.xml</code>
 </h2>
 
 <p>Add this configuration to <code>pom.xml</code>:</p>
@@ -185,12 +185,12 @@ also in <code>pom.xml</code>:</p>
   &lt;/build&gt;
 &lt;/project&gt;</pre>
 
-<p>You're ready to go. You can deploy your artifacts just by running
+<p>You’re ready to go. You can deploy your artifacts just by running
 Maven from the command line:</p>
 
 <pre>$ mvn clean deploy</pre>
 
-<h2 id="configure-s3auth-com">Configure <code>s3auth.com</code>
+<h2 id="configure-s3authcom">Configure <code>s3auth.com</code>
 </h2>
 
 <p>Now you want to see these artifacts in your browser, in a secure mode, by
@@ -227,7 +227,7 @@ deploy:
   script: |
     mvn clean deploy --settings ../settings.xml</pre>
 
-<p>Now it's time to see how it all works together. Create a new ticket in the
+<p>Now it’s time to see how it all works together. Create a new ticket in the
 GitHub issue tracker and post something like this into it
 (read more about <a href="http://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
@@ -235,7 +235,7 @@ GitHub issue tracker and post something like this into it
 
 <p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
 
-<p>That's it.</p>
+<p>That’s it.</p>
 
     </article>
   </body>

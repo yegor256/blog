@@ -95,20 +95,20 @@ print("Length is " + new File(fileName).length());</pre>
 
 <pre>print("Length is " + new File("test.txt").length());</pre>
 
-<p>This example is very primitive, but I'm sure you've seen these
-redundant variables many times. We use them to "explain" the code---it's not just a string literal <code>"test.txt"</code> anymore but a <code>fileName</code>.
+<p>This example is very primitive, but I’m sure you’ve seen these
+redundant variables many times. We use them to “explain” the code—it’s not just a string literal <code>"test.txt"</code> anymore but a <code>fileName</code>.
 The code looks easier to understand, right? Not really.</p>
 
 
 
-<p>Let's dig into what "readability" of code is in the first place. I think this
+<p>Let’s dig into what “readability” of code is in the first place. I think this
 quality can be measured by the number of seconds I need to understand the
-code I'm looking at. The longer the timeframe, the lower the readability.
-Ideally, I want to understand any piece of code in a <strong>few seconds</strong>. If I can't,
-that's a failure of its <strong>author</strong>.</p>
+code I’m looking at. The longer the timeframe, the lower the readability.
+Ideally, I want to understand any piece of code in a <strong>few seconds</strong>. If I can’t,
+that’s a failure of its <strong>author</strong>.</p>
 
 <p><a href="/2015/06/29/simple-diagrams.html">Remember</a>,
-if I don't understand you, it's your fault.</p>
+if I don’t understand you, it’s your fault.</p>
 
 <p>An increasing length of code degrades readability. So the more variable
 names I have to remember while reading through it, the longer
@@ -127,7 +127,7 @@ Refactor it using new objects or methods but not variables. Make your
 code shorter by moving pieces of it into new classes or private methods.</p>
 
 <p>Moreover, I think that in <a href="/2015/08/18/multiple-return-statements-in-oop.html">perfectly designed methods</a>,
-you won't need <strong>any</strong> variables aside from method arguments.</p>
+you won’t need <strong>any</strong> variables aside from method arguments.</p>
 
     </article>
   </body>

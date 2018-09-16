@@ -79,10 +79,10 @@ it is even worse.
 about ORM, a very popular design pattern. In a nutshell,
 it encourages us to turn objects into
 <a href="/2016/07/06/data-transfer-object.html">DTOs</a>, which are
-anemic, passive, and not objects at all. The consequences are usually dramatic---the entire programming paradigm shifts from object-oriented to procedural.
-I've tried to explain this at a <a href="https://www.youtube.com/watch?v=aER4uwyFbqQ">JPoint</a> and
+anemic, passive, and not objects at all. The consequences are usually dramatic—the entire programming paradigm shifts from object-oriented to procedural.
+I’ve tried to explain this at a <a href="https://www.youtube.com/watch?v=aER4uwyFbqQ">JPoint</a> and
 <a href="https://www.youtube.com/watch?v=63tS3HNmhiE">JEEConf</a> this year. After
-each talk, a few people told me that what I'm suggesting is called
+each talk, a few people told me that what I’m suggesting is called
 <a href="https://en.wikipedia.org/wiki/Active_record_pattern">ActiveRecord</a> or
 <a href="https://msdn.microsoft.com/en-us/library/ff649690.aspx">Repository</a> patterns.</p>
 
@@ -91,8 +91,8 @@ each talk, a few people told me that what I'm suggesting is called
 <amp-img src="/images/2016/07/en-duva-satt-pa-engren.jpg" alt="En duva satt på en gren och funderade på tillvaron (2014) by Roy Andersson" height="670" width="1200" layout="responsive"></amp-img>
 
 <p>Moreover, they claimed that ActiveRecord actually solves the problem
-I've found in ORM. They said I should explain in my talks that
-what I'm offering (SQL-speaking objects) already exists and has a name:
+I’ve found in ORM. They said I should explain in my talks that
+what I’m offering (SQL-speaking objects) already exists and has a name:
 ActiveRecord.</p>
 
 <p>I disagree. Moreover, I think that ActiveRecord is even worse than ORM.</p>
@@ -100,16 +100,16 @@ ActiveRecord.</p>
 
 
 <p>ORM consists of two parts: the session and
-<a href="/2016/07/06/data-transfer-object.html">DTOs</a>, also known as "entities."
+<a href="/2016/07/06/data-transfer-object.html">DTOs</a>, also known as “entities.”
 The entities have no functionality; they are just primitive containers for the
-data transferred from and to the session. And that is what the problem is---objects don't encapsulate but rather expose data. To understand why this is wrong and why it's
+data transferred from and to the session. And that is what the problem is—objects don’t encapsulate but rather expose data. To understand why this is wrong and why it’s
 against the object paradigm, you can read
 <a href="/2014/09/16/getters-and-setters-are-evil.html">here</a>,
 <a href="/2016/04/05/printers-instead-of-getters.html">here</a>,
 <a href="/2014/12/01/orm-offensive-anti-pattern.html">here</a>,
 <a href="/2014/11/20/seven-virtues-of-good-object.html">here</a>, and
 <a href="/2016/07/06/data-transfer-object.html">here</a>.
-Now, let's just agree that it's very wrong and move on.</p>
+Now, let’s just agree that it’s very wrong and move on.</p>
 
 <p>What solution is ActiveRecord proposing? How is it solving the problem?
 It moves the engine into the <em>parent class</em>, which all our entities inherit from.
@@ -124,23 +124,23 @@ session.update(book);</pre>
 <pre>book.setTitle("Java in a Nutshell");
 book.update();</pre>
 
-<p>The method <code>update()</code> is defined in book's parent class and uses
+<p>The method <code>update()</code> is defined in book’s parent class and uses
 book as a <em>data container</em>. When called, it fetches data
 from the container (the book) and updates the database. How is it
 different than ORM? There is absolutely no difference. The book
 is still a container that knows nothing about SQL and any persistence
 mechanisms.</p>
 
-<p>What's even worse in ActiveRecord, compared to ORM, is that it <em>hides</em>
+<p>What’s even worse in ActiveRecord, compared to ORM, is that it <em>hides</em>
 the fact that objects are data containers. A book, in the second snippet,
 <em>pretends</em> to be a <a href="/2014/11/20/seven-virtues-of-good-object.html">proper object</a>,
-while in reality it's just a dumb data bag.</p>
+while in reality it’s just a dumb data bag.</p>
 
 <p>I believe this is what misguided those who were saying
 that my SQL-speaking objects concept is exactly the same as the ActiveRecord
 design pattern (or Repository, which is almost exactly the same).</p>
 
-<p>No, it's not.</p>
+<p>No, it’s not.</p>
 
     </article>
   </body>

@@ -89,7 +89,7 @@ this article tries to explain why you should give up this bad habit.
 
 
 
-<p>It may return <code>NULL</code> instead of an object---that's what is wrong.
+<p>It may return <code>NULL</code> instead of an object—that’s what is wrong.
 <code>NULL</code> is a terrible practice in an object-oriented paradigm and should be avoided at
 <a href="/2016/03/22/try-finally-if-not-null.html">all costs</a>.
 There have been a number of opinions about this published already, including
@@ -98,7 +98,7 @@ presentation by Tony Hoare and the entire
 <a href="http://amzn.to/266oJr4">Object Thinking</a>
 book by David West.</p>
 
-<p>Here, I'll try to summarize all the arguments and show examples of
+<p>Here, I’ll try to summarize all the arguments and show examples of
 how <code>NULL</code> usage can be avoided and replaced with proper object-oriented constructs.</p>
 
 <p>Basically, there are two possible alternatives to <code>NULL</code>.</p>
@@ -116,7 +116,7 @@ design <a href="/2016/02/03/design-patterns-and-anti-patterns.html">pattern</a>
 }</pre>
 
 <p>The second possible alternative is to <a href="/2015/08/25/fail-fast.html">fail fast</a>
-by throwing an <strong>Exception</strong> when you can't return an
+by throwing an <strong>Exception</strong> when you can’t return an
 <a href="/2016/07/14/who-is-object.html">object</a>:</p>
 
 <pre>public Employee getByName(String name) {
@@ -127,13 +127,13 @@ by throwing an <strong>Exception</strong> when you can't return an
   return Employee(id);
 }</pre>
 
-<p>Now, let's see the arguments against <code>NULL</code>.</p>
+<p>Now, let’s see the arguments against <code>NULL</code>.</p>
 
-<p>Besides Tony Hoare's presentation and David West's book
+<p>Besides Tony Hoare’s presentation and David West’s book
 mentioned above, I read these publications before writing this post:
 <a href="http://amzn.to/2m7LmaA">Clean Code</a> by Robert Martin,
 <a href="http://amzn.to/2cs4cXW">Code Complete</a> by Steve McConnell,
-<a href="http://elegantcode.com/2010/05/01/say-no-to-null/">Say "No" to "Null"</a> by John Sonmez,
+<a href="http://elegantcode.com/2010/05/01/say-no-to-null/">Say “No” to “Null”</a> by John Sonmez,
 <a href="http://stackoverflow.com/questions/1274792/is-returning-null-bad-design">Is returning null bad design?</a> discussion at StackOverflow.</p>
 
 <h2 id="ad-hoc-error-handling">Ad-hoc Error Handling</h2>
@@ -230,16 +230,16 @@ makes much less sense. This is how our code looks from an object point of view:<
 - Hello.
 - Are you NULL?</pre>
 
-<p>The last question in this conversation sounds weird, doesn't it?</p>
+<p>The last question in this conversation sounds weird, doesn’t it?</p>
 
 <p>Instead, if they hang up the phone after our request to speak
 to Jeffrey, that causes a problem for us (Exception).
 At that point, we try to call again or inform our supervisor
-that we can't reach Jeffrey and complete a bigger transaction.</p>
+that we can’t reach Jeffrey and complete a bigger transaction.</p>
 
 <p>Alternatively, they may let us speak to another person,
 who is not Jeffrey, but who can help with most of our questions
-or refuse to help if we need something "Jeffrey specific" (Null Object).</p>
+or refuse to help if we need something “Jeffrey specific” (Null Object).</p>
 
 <h2 id="slow-failing">Slow Failing</h2>
 
@@ -248,7 +248,7 @@ the code above attempts to die slowly, killing others on its way.
 Instead of letting everyone know that something went wrong and that an
 exception handling should start immediately, it is hiding this failure from its client.</p>
 
-<p>This argument is close to the "ad-hoc error handling" discussed above.</p>
+<p>This argument is close to the “ad-hoc error handling” discussed above.</p>
 
 <p>It is a good practice to make your code as fragile as possible,
 letting it break when necessary.</p>
@@ -258,7 +258,7 @@ letting it break when necessary.</p>
 <p>Make your methods extremely demanding as to the data
 they manipulate. Let them complain by throwing exceptions,
 if the provided data provided is not sufficient or simply
-doesn't fit with the main usage scenario of the method.</p>
+doesn’t fit with the main usage scenario of the method.</p>
 
 <p>Otherwise, return a Null Object, that exposes some common
 behavior and throws exceptions on all other calls:</p>
@@ -290,7 +290,6 @@ behavior and throws exceptions on all other calls:</p>
 </blockquote>
 
 
-
 <h2 id="mutable-and-incomplete-objects">Mutable and Incomplete Objects</h2>
 
 <p>In general, it is <a href="/2014/06/09/objects-should-be-immutable.html">highly recommended</a>
@@ -318,11 +317,11 @@ Mostly because it makes an object responsible for performance problems
 of the computational platform, which is something an <code>Employee</code> object should not be aware of.</p>
 
 <p>Instead of managing a state and exposing its business-relevant behavior,
-an object has to take care of the caching of its own results---this is what lazy loading is about.</p>
+an object has to take care of the caching of its own results—this is what lazy loading is about.</p>
 
 <p>Caching is not something an employee does in the office, does he?</p>
 
-<p>The solution? Don't use lazy loading in such a primitive way,
+<p>The solution? Don’t use lazy loading in such a primitive way,
 as in the example above. Instead, move this caching problem to
 another layer of your application.</p>
 

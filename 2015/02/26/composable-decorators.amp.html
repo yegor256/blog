@@ -76,13 +76,13 @@ programming.
       <p>Yegor Bugayenko<br>26 February 2015</p>
       <h1>Composable Decorators vs. Imperative Utility Methods</h1>
       <p>The <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>
-is my favorite among all other patterns I'm aware of. It is a very simple
+is my favorite among all other patterns I’m aware of. It is a very simple
 and yet very powerful mechanism to make your code
 <a href="http://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">highly cohesive</a> and
 <a href="http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">loosely coupled</a>.
 However, I believe decorators are not used often enough. They should
 be everywhere, but they are not. The biggest advantage we get from decorators
-is that they make our code <em>composable</em>. That's why the title of this
+is that they make our code <em>composable</em>. That’s why the title of this
 post is composable decorators. Unfortunately, instead of decorators, we often use imperative
 utility methods, which make our code procedural rather than object-oriented.</p>
 
@@ -127,19 +127,19 @@ removes all unprintable characters from the text:</p>
   }
 }</pre>
 
-<p>Here is how I'm using it:</p>
+<p>Here is how I’m using it:</p>
 
 <pre>final Text text = new PrintableText(
   new TextInFile(new File("/tmp/a.txt"))
 );
 String content = text.read();</pre>
 
-<p>As you can see, the <code>PrintableText</code> doesn't read the text from the file. It doesn't
+<p>As you can see, the <code>PrintableText</code> doesn’t read the text from the file. It doesn’t
 really care where the text is coming from. It <em>delegates</em> text reading to
 the encapsulated instance of <code>Text</code>. How this encapsulated object will
-deal with the text and where it will get it doesn't concern <code>PrintableText</code>.</p>
+deal with the text and where it will get it doesn’t concern <code>PrintableText</code>.</p>
 
-<p>Let's <a href="/2016/04/19/object-must-not-be-configurable.html">continue</a>
+<p>Let’s <a href="/2016/04/19/object-must-not-be-configurable.html">continue</a>
 and try to create an implementation of <code>Text</code>
 that will capitalize all letters in the text:</p>
 
@@ -172,8 +172,8 @@ that will capitalize all letters in the text:</p>
 <p>I can go on and on with these
 <a href="/2015/10/01/vertical-horizontal-decorating.html">decorators</a>.
 I can create many of them,
-suitable for their own individual use cases. But let's see how they all
-can play together. Let's say I want to read the text from the file,
+suitable for their own individual use cases. But let’s see how they all
+can play together. Let’s say I want to read the text from the file,
 capitalize it, trim it, and remove all unprintable characters. And I want
 to be <em>declarative</em>. Here is what I do:</p>
 

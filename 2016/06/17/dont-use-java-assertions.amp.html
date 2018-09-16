@@ -75,16 +75,16 @@
       <p>Yegor Bugayenko<br>17 June 2016</p>
       <h1>Don't Use Java Assertions</h1>
       <p>There are basically two ways to validate a situation in Java and complain
-when something unexpected happens. It's either an exception
+when something unexpected happens. It’s either an exception
 or an assertion. Technically, they are almost the same, but there are some
 small differences. I believe that exceptions are the right way to go
-in all situations and assertions should never be used. Here's why.</p>
+in all situations and assertions should never be used. Here’s why.</p>
 
 
 
 <amp-img src="/images/2016/06/natural-born-killers.jpg" alt="Natural Born Killers (1994) by Oliver Stone" height="672" width="1200" layout="responsive"></amp-img>
 
-<p>Let's see what happens when an assertion is triggered. Say that this
+<p>Let’s see what happens when an assertion is triggered. Say that this
 is our code:</p>
 
 <pre>public class Main {
@@ -103,7 +103,7 @@ is our code:</p>
 <pre>$ java Main
 Hello, world!</pre>
 
-<p>The assertion wasn't triggered. It was ignored. Now run it with an
+<p>The assertion wasn’t triggered. It was ignored. Now run it with an
 <code>-enableassertions</code> flag:</p>
 
 <pre>$ java -enableassertions Main
@@ -114,13 +114,13 @@ Exception in thread "main" java.lang.AssertionError: There is a problem
 will always be thrown, while assertions are not enabled by default. They are
 supposed to be turned on during testing and turned off in production.
 The assertion caused the runtime exception
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html"><code>AssertionError</code></a>. But hold on; it's
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html"><code>AssertionError</code></a>. But hold on; it’s
 not a <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a>. It extends
 <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html"><code>Error</code></a> class,
 which extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html"><code>Throwable</code></a>.
-This is the second difference. I don't know of any other differences.</p>
+This is the second difference. I don’t know of any other differences.</p>
 
-<p>I would recommend <strong>not</strong> to use assertions ... ever. Simply because I strongly
+<p>I would recommend <strong>not</strong> to use assertions … ever. Simply because I strongly
 believe in the <a href="/2015/08/25/fail-fast.html">Fail Fast</a>
 approach. I think bugs must be visible not only
 during testing but also in production. Moreover, I believe making

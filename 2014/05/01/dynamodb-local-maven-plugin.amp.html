@@ -83,7 +83,7 @@ the tool and based it on SQLite. It acts as a real DynamoDB
 service through the RESTful API.</p>
 
 <p>I guess, DynamoDB Local is meant to be used in
-integration testing and this is how we're going to use it below.</p>
+integration testing and this is how we’re going to use it below.</p>
 
 <p>I use Maven to run all of my Java integration
 testing using <a href="http://maven.apache.org/surefire/maven-failsafe-plugin/"><code>maven-failsafe-plugin</code></a>.
@@ -95,8 +95,8 @@ phase and then shutdown all stubs during the <code>post-integration-test</code>.
 
 
 <p>It would be great if it were possible to use DynamoDB Local
-that way. I didn't find any Maven plugins for that purpose,
-so I decided to create my own---<a href="https://github.com/jcabi/jcabi-dynamodb-maven-plugin">jcabi-dynamodb-maven-plugin</a>.</p>
+that way. I didn’t find any Maven plugins for that purpose,
+so I decided to create my own—<a href="https://github.com/jcabi/jcabi-dynamodb-maven-plugin">jcabi-dynamodb-maven-plugin</a>.</p>
 
 
 
@@ -124,7 +124,7 @@ on <a href="http://dynamodb.jcabi.com">its website</a>. However, here is a simpl
 <p>The above configuration will start DynamoDB Local
 right before running integration tests, and then stop it
 immediately afterwards. The server will listen at TCP port 10500.
-While the number is used in the example, you're supposed
+While the number is used in the example, you’re supposed
 to use a randomly allocated port instead.</p>
 
 <p>When the DynamoDB Local server is up and running,
@@ -148,7 +148,7 @@ public class FooITCase {
   }
 }</pre>
 
-<p>Of course, there won't be any output because the server
+<p>Of course, there won’t be any output because the server
 starts without any tables. Since the server is empty,
 you should create tables before every integration test, using
 <code>createTable()</code> from <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/dynamodbv2/package-summary.html">DynamoDB SDK</a>.</p>

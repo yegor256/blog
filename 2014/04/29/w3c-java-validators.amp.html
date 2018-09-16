@@ -85,7 +85,7 @@ in the API section. Until recently, these wrappers have
 always been part of <a href="https://github.com/yegor256/rexsl">ReXSL</a> library.</p>
 
 <p>A few days ago, though, I took the wrappers out of ReXSL
-and published them as a standalone library---<a href="http://w3c.jcabi.com">jcabi-w3c</a>. Consequently, now seems
+and published them as a standalone library—<a href="http://w3c.jcabi.com">jcabi-w3c</a>. Consequently, now seems
 to be a good time to write a few words about them.</p>
 
 <p>Below is an example that demonstrates how you can validate
@@ -100,7 +100,7 @@ assert ValidatorBuilder.html()
 
 <p>The <code>valid()</code> method is a black or white indicator that
 returns <code>false</code> when the document is not valid. Additionally,
-you can obtain more information through a list of "defects" returned by the W3C server:</p>
+you can obtain more information through a list of “defects” returned by the W3C server:</p>
 
 <pre>Collection&lt;Defect&gt; defects = ValidatorBuilder.html()
   .validate("&lt;html&gt;hello, world!&lt;/html&gt;")
@@ -114,7 +114,7 @@ you can obtain more information through a list of "defects" returned by the W3C 
 
 <p>Personally, I think it is a good practice to validate all
 of HTML pages produced by your application against W3C during
-integration testing. It's not a matter of seeking perfection,
+integration testing. It’s not a matter of seeking perfection,
 but rather of preventing bigger problems later.</p>
 
 <p>These dependencies are mandatory when using jcabi-w3c
@@ -136,6 +136,7 @@ but rather of preventing bigger problems later.</p>
   &lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
   &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
 &lt;/dependency&gt;</pre>
+
 
     </article>
   </body>

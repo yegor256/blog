@@ -77,18 +77,18 @@ bigger and less cohesive objects.
       <h1>Object Behavior Must Not Be Configurable</h1>
       <p>Using object properties as configuration parameters is a very common
 mistake we keep making mostly because our objects
-are mutable---we <strong>configure</strong> them. We change their behavior by
+are mutable—we <strong>configure</strong> them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
-into them. Do I have to say that it's abusive and disrespectful
+into them. Do I have to say that it’s abusive and disrespectful
 from a <a href="/2014/11/20/seven-virtues-of-good-object.html">philosophical</a>
-point of view? I can, but let's take a look at
+point of view? I can, but let’s take a look at
 it from a practical perspective.</p>
 
 
 
 <amp-img src="/images/2016/04/the-take.jpg" alt="The Take (2009) by David Drury" height="677" width="1200" layout="responsive"></amp-img>
 
-<p>Let's say there is a class that is supposed to read a web page and
+<p>Let’s say there is a class that is supposed to read a web page and
 return its content:</p>
 
 <pre>class Page {
@@ -104,14 +104,14 @@ return its content:</p>
   }
 }</pre>
 
-<p>Looks simple and straight-forward, right? Yes, it's a rather cohesive
+<p>Looks simple and straight-forward, right? Yes, it’s a rather cohesive
 and solid class. Here is how we use it to read the content of Google
 front page:</p>
 
 <pre>String html = new Page("http://www.google.com").html();</pre>
 
 <p>Everything is fine until we start making this class more powerful.
-Let's say we want to configure the encoding. We don't always want to use <code>"UTF-8"</code>.
+Let’s say we want to configure the encoding. We don’t always want to use <code>"UTF-8"</code>.
 We want it to be configurable. Here is what we do:</p>
 
 <pre>class Page {
@@ -129,7 +129,7 @@ We want it to be configurable. Here is what we do:</p>
   }
 }</pre>
 
-<p>Done, the encoding is encapsulated and configurable. Now, let's say we
+<p>Done, the encoding is encapsulated and configurable. Now, let’s say we
 want to change the behavior of the class for the situation of an empty
 page. If an empty page is loaded, we want to return <code>"&lt;html/&gt;"</code>. But not
 always. We want this to be configurable. Here is what we do:</p>
@@ -156,10 +156,10 @@ always. We want this to be configurable. Here is what we do:</p>
   }
 }</pre>
 
-<p>The class is getting bigger, huh? It's great, we're good programmers and our
+<p>The class is getting bigger, huh? It’s great, we’re good programmers and our
 code must be complex, right? The more complex it is, the better programmers
-we are! I'm being sarcastic. Definitely
-<a href="/2015/06/29/simple-diagrams.html">not</a>! But let's move on. Now
+we are! I’m being sarcastic. Definitely
+<a href="/2015/06/29/simple-diagrams.html">not</a>! But let’s move on. Now
 we want our class to proceed anyway, even if the encoding is not
 supported on the current platform:</p>
 
@@ -196,7 +196,7 @@ supported on the current platform:</p>
   }
 }</pre>
 
-<p>The class is growing and becoming more and more powerful! Now it's time
+<p>The class is growing and becoming more and more powerful! Now it’s time
 to introduce a new class, which we will call <code>PageSettings</code>:</p>
 
 <pre>class Page {
@@ -236,7 +236,7 @@ look at
 <a href="https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html"><code>JobConf</code></a>
 from Hadoop.
 This is how we will call our highly configurable <code>Page</code>
-(I'm assuming <code>PageSettings</code> is immutable):</p>
+(I’m assuming <code>PageSettings</code> is immutable):</p>
 
 <pre>String html = new Page(
   "http://www.google.com",
@@ -292,7 +292,7 @@ its design a bit):</p>
   }
 }</pre>
 
-<p>As you see, I'm making it implement interface <code>Page</code>.
+<p>As you see, I’m making it implement interface <code>Page</code>.
 Now <code>TextPage</code> decorator, which converts an array of bytes to a text using
 provided encoding:</p>
 
@@ -350,10 +350,10 @@ provided encoding:</p>
 
 <p>You may say that <code>AlwaysTextPage</code> will make two calls to the encapsulated
 <code>origin</code>, in case of an unsupported encoding, which will lead to a duplicated
-HTTP request. That's true and this is by design. We don't want this
-duplicated HTTP roundtrip to happen. Let's introduce one more class,
+HTTP request. That’s true and this is by design. We don’t want this
+duplicated HTTP roundtrip to happen. Let’s introduce one more class,
 which will cache the page fetched (
-<a href="/2017/01/17/synchronized-decorators.html">not thread-safe</a>, but it's not important now):</p>
+<a href="/2017/01/17/synchronized-decorators.html">not thread-safe</a>, but it’s not important now):</p>
 
 <pre>class OncePage implements Page {
   private final Page origin;
@@ -371,7 +371,7 @@ which will cache the page fetched (
   }
 }</pre>
 
-<p>Now, our code should look like this (pay attention, I'm now using <code>OncePage</code>):</p>
+<p>Now, our code should look like this (pay attention, I’m now using <code>OncePage</code>):</p>
 
 <pre>Page page = new NeverEmptyPage(
   new OncePage(
@@ -384,10 +384,11 @@ String html = new AlwaysTextPage(
 ).html();</pre>
 
 <p>This is probably the most code-intensive post on this site so far, but I
-hope it's readable and I managed to convey the idea. Now we have five
+hope it’s readable and I managed to convey the idea. Now we have five
 classes, each of which is rather small, easy to read and easy to reuse.</p>
 
 <p>Just follow the rule: never make classes configurable!</p>
+
 
     </article>
   </body>

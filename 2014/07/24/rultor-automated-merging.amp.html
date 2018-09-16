@@ -77,11 +77,11 @@ passing them through a full testing cycle
       <h1>Rultor.com, a Merging Bot</h1>
       
 
-<p>You get a GitHub pull request. You review it. It looks correct---it's time
+<p>You get a GitHub pull request. You review it. It looks correct—it’s time
 to merge it into <code>master</code>. You post a comment in it, asking
 <a href="https://github.com/rultor">@rultor</a> to test and merge. Rultor starts a new
 <a href="http://www.docker.io">Docker</a> container, merges the pull request into <code>master</code>, runs all tests and, if
-everything looks clean---merges, pushes, and closes the request.</p>
+everything looks clean—merges, pushes, and closes the request.</p>
 
 <p>Then, you ask <a href="https://github.com/rultor">@rultor</a> to deploy the current version
 to production environment. It checks out your repository, starts a new Docker
@@ -94,7 +94,7 @@ the GitHub issue.</p>
 
 <p>There are many tools on the market, which automate
 <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a> and
-continuous delivery (let's call them DevOps).
+continuous delivery (let’s call them DevOps).
 For example, downloadable open source
 <a href="http://jenkins-ci.org/">Jenkins</a> and hosted
 <a href="/2014/07/31/travis-and-rultor.html">Travis</a>
@@ -103,22 +103,28 @@ both perform these tasks. So, why do we need one more?</p>
 
 
 <p>Well, there are three very important features that we need for our projects, but
-we can't find all of them in any of the DevOps tools currently available on the
+we can’t find all of them in any of the DevOps tools currently available on the
 market:</p>
 
 <ul>
-<li><p><strong>Merging</strong>. We make master branch read-only in our projects,
+  <li>
+    <p><strong>Merging</strong>. We make master branch read-only in our projects,
 as <a href="/2014/07/21/read-only-master-branch.html">this article</a>
 recommends. All changes into master we pass through
-a script that validates them and merges.</p></li>
-<li><p><strong>Docker</strong>. Every build should work in its own
+a script that validates them and merges.</p>
+  </li>
+  <li>
+    <p><strong>Docker</strong>. Every build should work in its own
 Docker container, in order to simplify configuration, isolate
-resources and make errors easily reproducible.</p></li>
-<li><p><strong>Tell vs. Trigger</strong>. We need to communicate with DevOps tool
+resources and make errors easily reproducible.</p>
+  </li>
+  <li>
+    <p><strong>Tell vs. Trigger</strong>. We need to communicate with DevOps tool
 through commands, right from our issue tracking system (GitHub
 issues, in most projects). All existing DevOps systems trigger
 builds on certain conditions. We need our developers to be able
-to talk to the tool, through human-like commands in the tickets they are working with.</p></li>
+to talk to the tool, through human-like commands in the tickets they are working with.</p>
+  </li>
 </ul>
 
 <p>A combination of these three features is what differs
@@ -130,14 +136,28 @@ to talk to the tool, through human-like commands in the tickets they are working
 in one of your GitHub pull requests, it does exactly this:</p>
 
 <ol>
-<li><p>Reads the <a href="http://doc.rultor.com/reference.html"><code>.rultor.yml</code></a>
-YAML configuration file from the root directory of your repository.</p></li>
-<li><p>Gets automated build execution command from it, for example <code>bundle test</code>.</p></li>
-<li><p>Checks out your repository into a temporary directory on one of its servers.</p></li>
-<li><p>Merges pull request into <code>master</code> branch.</p></li>
-<li><p>Starts a new Docker container and runs <code>bundle test</code> in it.</p></li>
-<li><p>If everything is fine, pushes modified <code>master</code> branch to GitHub.</p></li>
-<li><p>Reports back to you, in the GitHub pull request.</p></li>
+  <li>
+    <p>Reads the <a href="http://doc.rultor.com/reference.html"><code>.rultor.yml</code></a>
+YAML configuration file from the root directory of your repository.</p>
+  </li>
+  <li>
+    <p>Gets automated build execution command from it, for example <code>bundle test</code>.</p>
+  </li>
+  <li>
+    <p>Checks out your repository into a temporary directory on one of its servers.</p>
+  </li>
+  <li>
+    <p>Merges pull request into <code>master</code> branch.</p>
+  </li>
+  <li>
+    <p>Starts a new Docker container and runs <code>bundle test</code> in it.</p>
+  </li>
+  <li>
+    <p>If everything is fine, pushes modified <code>master</code> branch to GitHub.</p>
+  </li>
+  <li>
+    <p>Reports back to you, in the GitHub pull request.</p>
+  </li>
 </ol>
 
 <p>You can see it in action, for example, in this pull request:

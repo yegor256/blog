@@ -84,9 +84,9 @@ is what I found out for myself with the help of Cactoos primitives.</p>
 
 <amp-img src="/images/2017/10/reality.jpg" alt="Reality (2012) by Matteo Garrone" height="778" width="1828" layout="responsive"></amp-img>
 
-<p>Let's say we need an object that will encrypt some text. Speaking in
+<p>Let’s say we need an object that will encrypt some text. Speaking in
 a more object-oriented way, it will encapsulate the text and <em>become</em> its
-encrypted form. Here is how we will use it (let's create
+encrypted form. Here is how we will use it (let’s create
 <a href="/2017/03/24/tdd-that-works.html">tests first</a>):</p>
 
 <pre>interface Encrypted {
@@ -95,11 +95,11 @@ encrypted form. Here is how we will use it (let's create
 Encrypted enc = new EncryptedX("Hello, world!");
 System.out.println(enc.asString());</pre>
 
-<p>Now let's implement it, in a very primitive way, with one
+<p>Now let’s implement it, in a very primitive way, with one
 <a href="/2015/05/28/one-primary-constructor.html">primary</a>
 constructor. The encryption mechanism
 will just add <code>+1</code> to each byte in the incoming data, and will assume that
-the encryption won't break anything (a very stupid
+the encryption won’t break anything (a very stupid
 assumption, but for the sake of this example it will work):</p>
 
 <pre>class Encrypted1 implements Encrypted {
@@ -122,7 +122,7 @@ assumption, but for the sake of this example it will work):</p>
 and it works. If the input is <code>"Hello, world!"</code>,
 the output will be <code>"Ifmmp-!xpsme\""</code>.</p>
 
-<p>Next, let's say that we want our class to accept an
+<p>Next, let’s say that we want our class to accept an
 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a>
 as well as a
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a>.
@@ -163,7 +163,7 @@ which is <a href="/2015/05/07/ctors-must-be-code-free.html">bad practice</a>.
 constructors must not do anything but attribute assignments, while secondary
 ones may only create new objects.</p>
 
-<p>Let's try to refactor and introduce lazy loading:</p>
+<p>Let’s try to refactor and introduce lazy loading:</p>
 
 <pre>class Encrypted3 implements Encrypted {
   private String text;
@@ -206,11 +206,11 @@ this.input = null;</pre>
 
 <p>They make the object
 <a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>
-and they're using <a href="/2014/05/13/why-null-is-bad.html">NULL</a>. It's ugly,
+and they’re using <a href="/2014/05/13/why-null-is-bad.html">NULL</a>. It’s ugly,
 trust me. Unfortunately, lazy loading and NULL references always come together in
 <a href="https://stackoverflow.com/a/2192271/187141">classic examples</a>.
 However there is a better way to implement it.
-Let's refactor our class, this time using
+Let’s refactor our class, this time using
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html"><code>Scalar</code></a>
 from
 <a href="http://www.cactoos.org">Cactoos</a>:</p>
@@ -261,10 +261,10 @@ other sources of data, for example
 
 
 
-<p>In a nutshell, the attribute that is supposed to be loaded in a "lazy" way
-is represented inside an object as a "function"
+<p>In a nutshell, the attribute that is supposed to be loaded in a “lazy” way
+is represented inside an object as a “function”
 (<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">lambda expression</a> in
-Java 8). Until we touch that attribute, it's not loaded. Once we need
+Java 8). Until we touch that attribute, it’s not loaded. Once we need
 to work with it, the function gets executed and we have the result.</p>
 
 <p>There is one problem with this code though. It will read the input stream
@@ -309,9 +309,9 @@ is not thread-safe. There is another primitive to help us out though, called
   }
   // same as above in Encrypted4</pre>
 
-<p>Now we're safe and the design is elegant. It includes lazy loading and caching.</p>
+<p>Now we’re safe and the design is elegant. It includes lazy loading and caching.</p>
 
-<p>I'm using this approach in many projects now and it seems convenient,
+<p>I’m using this approach in many projects now and it seems convenient,
 clear, and object-oriented.</p>
 
     </article>

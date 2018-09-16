@@ -76,17 +76,17 @@ here is what I'm suggesting instead.
       <p>Yegor Bugayenko<br>26 January 2016</p>
       <h1>Defensive Programming via Validating Decorators</h1>
       <p>Do you check the input parameters of your methods for validity?
-I don't. I used to, but not anymore.
+I don’t. I used to, but not anymore.
 I just let my methods crash with a null pointer and other exceptions
 when parameters are not valid.
 This may sound illogical, but only in the beginning.
-I'm suggesting you use <strong>validating decorators</strong> instead.</p>
+I’m suggesting you use <strong>validating decorators</strong> instead.</p>
 
 
 
 <amp-img src="/images/2016/01/shi-mian-mai-fu.jpg" alt="Shi mian mai fu (2004) by Yimou Zhang" height="508" width="1200" layout="responsive"></amp-img>
 
-<p>Let's take a look at this rather typical Java example:</p>
+<p>Let’s take a look at this rather typical Java example:</p>
 
 <pre>class Report {
   void export(File file) {
@@ -165,20 +165,21 @@ And smaller objects always mean higher <strong>maintainability</strong>.
 Our <code>DefaultReport</code> class will always remain small, no matter
 how many validations we may invent in the future. The
 more things we need to validate, the more validating decorators
-we will create. All of them will be small and cohesive. And we'll
+we will create. All of them will be small and cohesive. And we’ll
 be able to put them together in different variations.</p>
 
 <p>Besides that, this approach makes our code much more
 <strong>reusable</strong>, as classes perform very few operations
-and don't defend themselves by default. While being defensive
-is an important feature, we'll use validating decorators. But
+and don’t defend themselves by default. While being defensive
+is an important feature, we’ll use validating decorators. But
 this will not always be the case. Sometimes validation is just
 too expensive in terms of time and memory, and we may want to work
-directly with objects that don't defend themselves.</p>
+directly with objects that don’t defend themselves.</p>
 
 <p>I also decided not to use the Java Validation API anymore for the
 same reason. Its annotations make classes much more verbose
-and less cohesive. I'm using validating decorators instead.</p>
+and less cohesive. I’m using validating decorators instead.</p>
+
 
     </article>
   </body>

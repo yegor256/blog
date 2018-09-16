@@ -79,7 +79,7 @@ this article explains the rationale and the basic use case
 <p>I created <a href="http://www.phandom.org">phandom.org</a> a few months ago,
 but yesterday finally found the time to make some needed changes to it.
 So, now is a good time to
-explain how I'm using Phandom in some of my unit tests.</p>
+explain how I’m using Phandom in some of my unit tests.</p>
 
 <p>Before I get started, though, I should say a few words about
 <a href="http://phantomjs.org/"><code>phantomjs</code></a>, which is a
@@ -114,11 +114,11 @@ JavaScript, ActionScript, etc, just as any standard Web browser would.</p>
 
 <p>So far so good, and this is the traditional way of using PhantomJS. Now, on to
 giving you an idea of how <a href="http://www.phandom.org">Phandom</a> (which stands for
-"PhantomJS DOM") works inside Java unit tests:</p>
+“PhantomJS DOM”) works inside Java unit tests:</p>
 
-<p>To test this, let's give <code>phantomjs</code> an HTML page and ask him to render it. When
-the page is ready, we'll ask <code>phantomjs</code> to show us how this HTML looks in WebKit.
-If we see the elements we need and desire,---we're good to go. Let's use
+<p>To test this, let’s give <code>phantomjs</code> an HTML page and ask him to render it. When
+the page is ready, we’ll ask <code>phantomjs</code> to show us how this HTML looks in WebKit.
+If we see the elements we need and desire,—we’re good to go. Let’s use
 the following example:</p>
 
 <pre>import com.rexsl.test.XhtmlMatchers;
@@ -150,11 +150,11 @@ of the class <code>org.w3c.dom.Document</code>.</p>
 exception and the unit test fail. If HTML is clean and WebKit is able to
 render it without problems, the test passes.</p>
 
-<p>I'm using this mechanism in a few different projects,and it works quite well. Therefore, I highly recommend it.</p>
+<p>I’m using this mechanism in a few different projects,and it works quite well. Therefore, I highly recommend it.</p>
 
-<p>Of course, you shouldn't forget that you must have <code>phantomjs</code> installed on your
+<p>Of course, you shouldn’t forget that you must have <code>phantomjs</code> installed on your
 build machine. In order to avoid unit test failures when
-<code>phantomjs</code> is not available or present, I've created the following supplementary method:</p>
+<code>phantomjs</code> is not available or present, I’ve created the following supplementary method:</p>
 
 <pre>public class DocumentTest {
   @Test

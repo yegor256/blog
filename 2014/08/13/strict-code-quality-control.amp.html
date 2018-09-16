@@ -100,12 +100,12 @@ strict mode, and breaks your build if any of them fail.</p>
 <a href="http://checkstyle.sourceforge.net/checks.html">over 130 checks</a> in Checkstyle,
 <a href="http://pmd.sourceforge.net/pmd-5.1.2/rules/index.html">over 400 rules</a> in PMD, and
 <a href="http://findbugs.sourceforge.net/bugDescriptions.html">over 400 bugs</a> in FindBugs.
-All of them should say: "Yes, we like your code."
-Otherwise, your build shouldn't pass.</p>
+All of them should say: “Yes, we like your code.”
+Otherwise, your build shouldn’t pass.</p>
 
-<p>What do you think? Would it be convenient for you---to have your
+<p>What do you think? Would it be convenient for you—to have your
 code rejected every time it breaks just one of 900 checks? Would it
-be productive for the team---to force developers to focus
+be productive for the team—to force developers to focus
 so much on code quality?</p>
 
 <h2 id="first-reaction">First Reaction</h2>
@@ -114,28 +114,34 @@ so much on code quality?</p>
 develop your code <a href="/2014/07/21/read-only-master-branch.html">in branches</a>
 and, then, <a href="/2014/07/24/rultor-automated-merging.html">Rultor will merge</a>
 your changes into <code>master</code>. Before actually merging, though, <a href="http://www.rultor.com">Rultor</a> will run an
-automated build script to make sure that your branch doesn't break it.</p>
+automated build script to make sure that your branch doesn’t break it.</p>
 
 
 
 <p>As a static analysis tool, Qulice is just one of the steps in the automated
 build script. It is actually a Maven plugin and we automate Java builds
-with Maven 3x. Thus, if your changes break any of Qulice's rules,
+with Maven 3x. Thus, if your changes break any of Qulice’s rules,
 your entire branch gets rejected.</p>
 
-<p>Your first reaction---I've seen it hundreds of times---will be negative.
+<p>Your first reaction—I’ve seen it hundreds of times—will be negative.
 You may actually become frustrated enough to leave the project immediately.
-You may say something like this (I'm quoting real life stories):</p>
+You may say something like this (I’m quoting real life stories):</p>
 
 <ul>
-<li><p>"These quality rules entirely ruin my creativity!"</p></li>
-<li><p>"Instead of wasting time on these misplaced commas and braces, we'd be better
-off developing new features!"</p></li>
-<li><p>"I've done many successful projects in my life, never heard about this
-ridiculous quality checking..."</p></li>
+  <li>
+    <p>“These quality rules entirely ruin my creativity!”</p>
+  </li>
+  <li>
+    <p>“Instead of wasting time on these misplaced commas and braces, we’d be better
+off developing new features!”</p>
+  </li>
+  <li>
+    <p>“I’ve done many successful projects in my life, never heard about this
+ridiculous quality checking…”</p>
+  </li>
 </ul>
 
-<p>This first reaction is only logical. I've seen many people say things like this,
+<p>This first reaction is only logical. I’ve seen many people say things like this,
 in both
 <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">open source</a>
 and commercial projects. Not only in Java, but also
@@ -163,7 +169,7 @@ this approach is good for the project and for them, as Java engineers.</p>
 
 <h2 id="what-do-projects-get-from-qulice">What Do Projects Get From Qulice?</h2>
 
-<p>Let's take one simple rule as an example. Here is a piece of Java
+<p>Let’s take one simple rule as an example. Here is a piece of Java
 code that Qulice would complain about
 (due to the <a href="http://checkstyle.sourceforge.net/config_design.html#DesignForExtension"><code>DesignForExtension</code></a> rule from Checkstyle):</p>
 
@@ -185,32 +191,40 @@ class is allowed to break a super class, overriding its method.</p>
   }
 }</pre>
 
-<p>Now, the method is final and can't be overridden by child classes. It is
+<p>Now, the method is final and can’t be overridden by child classes. It is
 a much safer design (according to Checkstyle, and I agree).</p>
 
-<p>So, let's say we make this rule mandatory for all classes in the project.
+<p>So, let’s say we make this rule mandatory for all classes in the project.
 What does the project gain from this?
 It can promise its members (programmers) a <strong>higher quality</strong> of work,
-compared to other projects that don't have this restriction, mostly
+compared to other projects that don’t have this restriction, mostly
 because of:</p>
 
 <ul>
-<li><p><strong>Predictability of Design</strong>---I don't have to scroll through
-the entire class to make sure it doesn't have methods that can
-be accidentally overridden. I know for sure that this can't happen
-in this project. In other words, I know what to expect.</p></li>
-<li><p><strong>Less Hidden Tricks</strong>---Higher predictability of design leads
+  <li>
+    <p><strong>Predictability of Design</strong>—I don’t have to scroll through
+the entire class to make sure it doesn’t have methods that can
+be accidentally overridden. I know for sure that this can’t happen
+in this project. In other words, I know what to expect.</p>
+  </li>
+  <li>
+    <p><strong>Less Hidden Tricks</strong>—Higher predictability of design leads
 to better visibility of mistakes and tricks. Standardization of source
-code makes it uniform. This means that it's easier to read and
-spot problems.</p></li>
-<li><p><strong>Industry Standards</strong>---The decision to use this design is
+code makes it uniform. This means that it’s easier to read and
+spot problems.</p>
+  </li>
+  <li>
+    <p><strong>Industry Standards</strong>—The decision to use this design is
 made by Checkstyle, not by a project architect. For me, as a project
-developer, this means that I'm following industry standards. That makes
-the project (and its leaders) more respectable.</p></li>
-<li><p><strong>Learning</strong>---I'll bet that most of you who read this post didn't know about the
+developer, this means that I’m following industry standards. That makes
+the project (and its leaders) more respectable.</p>
+  </li>
+  <li>
+    <p><strong>Learning</strong>—I’ll bet that most of you who read this post didn’t know about the
 design rule explained above. Just by reading this article, you learned
 something new. Imagine how much you could learn after making your
-code compliant to all 900 rules of Qulice (Checkstyle + PMD + FindBugs).</p></li>
+code compliant to all 900 rules of Qulice (Checkstyle + PMD + FindBugs).</p>
+  </li>
 </ul>
 
 <p>The point about learning brings us to the last, and the most important, thought
@@ -220,7 +234,7 @@ to discuss.</p>
 
 <p>As a programmer, I hope you already realize what you get from working
 in a project that raises its quality bar as high as Qulice asks. Yes,
-you'll learn <a href="/2015/01/21/if-then-throw-else.html">a lot</a> of
+you’ll learn <a href="/2015/01/21/if-then-throw-else.html">a lot</a> of
 <a href="/2014/11/03/empty-line-code-smell.html">new things</a>
 about writing quality Java code.</p>
 
@@ -233,8 +247,8 @@ integrates those software tools together. Truthfully, it is the developers who a
 real authors of quality checks and rules.</p>
 
 <p>So, what do I tell those who complain about quality rules being too strict?
-I say this: "Do you want to learn and improve, or do you just want to get paid
-and get away with it?"</p>
+I say this: “Do you want to learn and improve, or do you just want to get paid
+and get away with it?”</p>
 
 <p>ps. You can use my <a href="http://img.teamed.io/settings.jar">settings.jar</a>
 for IntelliJ, they are rather strict and will help you clean your

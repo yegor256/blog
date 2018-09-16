@@ -78,7 +78,7 @@ two fundamental instruments - bugs and reviews.
 is a key person in any software project, no matter how big or small it is.
 An architect is personally responsible for the technical outcome of
 the entire team. A good architect knows what needs to be done and how
-it's going to be done, both architecturally and design-wise. In order to enforce
+it’s going to be done, both architecturally and design-wise. In order to enforce
 this idea in practice, an architect uses two instruments:
 <strong>bugs and reviews</strong>.</p>
 
@@ -89,21 +89,21 @@ this idea in practice, an architect uses two instruments:
 <p>At <a href="http://www.zerocracy.com">Zerocracy</a>, we discourage any
 <a href="/2016/08/23/communication-maturity.html">communication</a>
 between developers unless they are formally attached to the tickets or tasks
-we're working on. Read more details about this approach in
+we’re working on. Read more details about this approach in
 <a href="/2014/10/07/stop-chatting-start-coding.html">this post</a>.</p>
 
 
 
-<p>The same principle applies to an architect. We don't use meetings,
+<p>The same principle applies to an architect. We don’t use meetings,
 stand-ups, Skype calls, IRC channels, or any other tools where information
 flies in the air and stays in our heads. Instead, we put everything in writing and talk
-only when we're being explicitly asked to and paid to---in tickets.</p>
+only when we’re being explicitly asked to and paid to—in tickets.</p>
 
 <h2 id="bugs">Bugs</h2>
 
 <p>With this in mind, a reasonable question may be asked: How can
 a software architect enforce his or her technical vision for the team
-if he can't communicate with the team? Here is our answer:
+if he can’t communicate with the team? Here is our answer:
 the architect must use <strong>bugs</strong>.</p>
 
 
@@ -120,7 +120,7 @@ for a bug.</p>
 
 <p>Thus, bugs reported by an architect serve as
 <a href="/2016/08/23/communication-maturity.html">communication channels</a>
-between him and the team. An architect doesn't explain what needs to be done
+between him and the team. An architect doesn’t explain what needs to be done
 but asks the team to fix the product in a way he thinks is right.
 If the ticket resolver, a member of the team, disagrees with that approach,
 a discussion starts right in the ticket.</p>
@@ -129,34 +129,34 @@ a discussion starts right in the ticket.</p>
 
 <p>Sometimes an architect has doubts and needs to discuss a few possible solutions
 with the team or simply collect opinions. Again, we use bugs for that.
-But these bugs don't report problems in the source code; instead, they
+But these bugs don’t report problems in the source code; instead, they
 complain about incomplete documentation. For example, say an architect
-doesn't know which database to use, MongoDB or Cassandra, and needs more
-information about their pros and cons. A bug will sound like "our design documentation
-doesn't have a detailed comparison of existing NoSQL databases; please fix it."
+doesn’t know which database to use, MongoDB or Cassandra, and needs more
+information about their pros and cons. A bug will sound like “our design documentation
+doesn’t have a detailed comparison of existing NoSQL databases; please fix it.”
 Whoever is assigned to this ticket will perform the comparison
 and update the documentation.</p>
 
 <p>Bugs are a <em>proactive</em> tool for an architect. Through reporting bugs,
-an architect influences the project and "dictates his will."</p>
+an architect influences the project and “dictates his will.”</p>
 
 <h2 id="reviews">Reviews</h2>
 
 <p>In our projects, every ticket is implemented in its own branch. When
 implementation is done, all tickets pass mandatory code peer review. In other
-words, developers review each others' code. An architect is not involved
+words, developers review each others’ code. An architect is not involved
 in this process.</p>
 
 
 
 <p>But when peer review is done, each ticket goes to an architect and he
-has to give a final "OK" before the code goes to the <code>master</code> branch through
+has to give a final “OK” before the code goes to the <code>master</code> branch through
 Rultor, our <a href="/2014/07/24/rultor-automated-merging.html">merge bot</a>.</p>
 
-<p>This is an architect's opportunity for control. This is where he can
+<p>This is an architect’s opportunity for control. This is where he can
 prevent his vision from being destroyed. When the code created by a developer
 violates project design principles or any part of the entire technical idea,
-the architect says "No" and the branch is rejected.</p>
+the architect says “No” and the branch is rejected.</p>
 
 <p>Reviews are a <em>reactive</em> instrument for an architect. Through strict and
 non-compromising code reviews, an architect enforces his design and architectural

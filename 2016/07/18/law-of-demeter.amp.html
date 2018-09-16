@@ -75,14 +75,14 @@ to the law of one dot.
       </p>
       <p>Yegor Bugayenko<br>18 July 2016</p>
       <h1>The Law of Demeter Doesn't Mean One Dot</h1>
-      <p>You've probably heard about that 30-year-old
+      <p>You’ve probably heard about that 30-year-old
 <a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a> (LoD). Someone
 asked me recently what I think about it. And not just what I think, but
 how it is possible to keep objects small and obey the LoD. According to the
-law, we're not allowed to do something like <code>book.pages().last().text()</code>.
-Instead, we're supposed to go with <code>book.textOfLastPage()</code>.
+law, we’re not allowed to do something like <code>book.pages().last().text()</code>.
+Instead, we’re supposed to go with <code>book.textOfLastPage()</code>.
 It puzzled me, because I strongly disagree. I believe the first construct
-is perfectly valid in OOP. So I've done some research to find out
+is perfectly valid in OOP. So I’ve done some research to find out
 whether this law is really a law. What I found out is that the law is
 perfect, but its common understanding in the OOP world is simply wrong
 (not surprisingly).</p>
@@ -92,16 +92,16 @@ perfect, but its common understanding in the OOP world is simply wrong
 <amp-img src="/images/2016/07/spartacus.jpg" alt="Spartacus (1960) by Stanley Kubrick" height="537" width="1200" layout="responsive"></amp-img>
 
 <p><a href="http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf">Object-Oriented Programming: An Objective Sense of Style</a>,
-K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.</p>
+K.Lieberherr, I.Holland, and A.Riel, OOPSLA’88 Proceedings, 1988.</p>
 
-<p>This is where it was introduced. Let's see what it literally says (look for
+<p>This is where it was introduced. Let’s see what it literally says (look for
 Section 3 in that PDF document):</p>
 
 <blockquote>
-<p>For all classes C, and for all methods M attached to C, all objects to which M sends a message must be instances of classes associated with the following classes: 1) the argument classes of M (including C), 2) the instance variable classes of C.</p>
+  <p>For all classes C, and for all methods M attached to C, all objects to which M sends a message must be instances of classes associated with the following classes: 1) the argument classes of M (including C), 2) the instance variable classes of C.</p>
 </blockquote>
 
-<p>Say it's a Java class:</p>
+<p>Say it’s a Java class:</p>
 
 <pre>class C {
   private B b;
@@ -119,43 +119,43 @@ the answer is this: <code>a.x.hello()</code>. That would be illegal. Directly
 accessing the attribute from another object and then talking to it
 is not allowed by the law.</p>
 
-<p>But we don't do that anyway. We're talking about <code>book.pages().last().text()</code>.
-In this chain of method calls, we're not accessing any attributes. We're
+<p>But we don’t do that anyway. We’re talking about <code>book.pages().last().text()</code>.
+In this chain of method calls, we’re not accessing any attributes. We’re
 asking our objects to build new objects for us. What does the law say about
 that? Let me read it and quote:</p>
 
 <blockquote>
-<p>Objects created by M, or by functions or methods that M calls, are considered as arguments of M</p>
+  <p>Objects created by M, or by functions or methods that M calls, are considered as arguments of M</p>
 </blockquote>
 
 <p>In other words, the object <code>Pages</code> that method call <code>book.pages()</code> returns
 is a perfectly valid object that can be used. Then, we can call method
 <code>last()</code> on it and get an object <code>Page</code>, and then call method <code>text()</code>, etc. This
-is a perfectly valid scenario that doesn't violate the law at all, just
+is a perfectly valid scenario that doesn’t violate the law at all, just
 as I expected.</p>
 
 
 
 <p>So where does this common understanding of the law come from? Why does
 <a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Wikipedia</a>
-call it a rule of "one dot" and say that
-"an object should avoid invoking methods of a member object returned by another method?"
+call it a rule of “one dot” and say that
+“an object should avoid invoking methods of a member object returned by another method?”
 This is absolutely to the contrary of what the original paper says!
-What's going on?</p>
+What’s going on?</p>
 
 <p>The answer is simple: <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>.</p>
 
 <p>The majority of OOP developers think most object methods that
 return anything are getters. And getters, indeed, are no different than
-direct access to object attributes. That's why Wikipedia actually says
-"no direct access to attributes and, since most of your methods are getters,
-don't touch them either, silly."</p>
+direct access to object attributes. That’s why Wikipedia actually says
+“no direct access to attributes and, since most of your methods are getters,
+don’t touch them either, silly.”</p>
 
-<p>That's just sad to see.</p>
+<p>That’s just sad to see.</p>
 
 <p>So the bottom line is that the Law of Demeter is not against
-method chaining at all. Of course, it's against getters and direct attribute
-access. But who isn't, right?</p>
+method chaining at all. Of course, it’s against getters and direct attribute
+access. But who isn’t, right?</p>
 
     </article>
   </body>

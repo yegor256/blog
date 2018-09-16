@@ -83,27 +83,27 @@ make your code both <a href="https://en.wikipedia.org/wiki/SOLID_%28object-orien
 They were introduced almost 30 years ago, but have they
 really made us better programmers in the time since?
 Do we really understand OOP better thanks to them? Do we write more
-"legible and extensible" code? I don't think so.</p>
+“legible and extensible” code? I don’t think so.</p>
 
 
 
 <amp-img src="/images/2017/03/dumb-and-dumber.jpg" alt="Dumb &amp;amp; Dumber (1994) by Peter Farrelly" height="720" width="1280" layout="responsive"></amp-img>
 
-<p>Let's go one by one and see how they "help."</p>
+<p>Let’s go one by one and see how they “help.”</p>
 
 <h2 id="s">S</h2>
 
-<p>The "S" refers to the <a href="/2017/12/19/srp-is-hoax.html">Single Responsibility Principle</a>,
+<p>The “S” refers to the <a href="/2017/12/19/srp-is-hoax.html">Single Responsibility Principle</a>,
 which, according to <a href="http://amzn.to/2m7LmaA">Clean Code</a> by
 <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Robert Martin</a>, means that
-"a class should have only one reason to change."</p>
+“a class should have only one reason to change.”</p>
 
 <p>This statement sounds extremely vague to me, but the book explains it, stating that
-objects must be problem-centered and responsible for "one thing."
-It's up to us to decide what that <em>one thing</em> is, of course.</p>
+objects must be problem-centered and responsible for “one thing.”
+It’s up to us to decide what that <em>one thing</em> is, of course.</p>
 
 <p>This is what we know as
-"<a href="https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">high cohesion</a>"
+“<a href="https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">high cohesion</a>”
 since <a href="https://en.wikipedia.org/wiki/Larry_Constantine">Larry Constantine</a>
 wrote about it in the IBM Systems Journal in 1974.
 Why was it necessary to create a new principle 15 years later with an ambiguous name and
@@ -114,7 +114,7 @@ a very questionable definition?</p>
 <p>This letter is about the <a href="https://en.wikipedia.org/wiki/Open/closed_principle">Open/Close Principle</a>,
 which was introduced by Bertrand Meyer in
 <a href="http://amzn.to/2lNxy44">Object Oriented Software Construction</a> in 1988.
-Simply put, it means that an object should not be modifiable. I can't agree more
+Simply put, it means that an object should not be modifiable. I can’t agree more
 with this.</p>
 
 <p>But then it says it should be <em>extendable</em>, literally through
@@ -137,12 +137,12 @@ will work.</p>
 
 <p>It is also known as <a href="https://en.wikipedia.org/wiki/Subtyping">subtyping</a> and is
 the foundational component of any object-oriented language. Why do we need to
-call it a principle and "follow" it? Is it at all possible to create any
-object-oriented software without subtyping? If this one is a principle, let's
-add "variables" and "method calling" here too.</p>
+call it a principle and “follow” it? Is it at all possible to create any
+object-oriented software without subtyping? If this one is a principle, let’s
+add “variables” and “method calling” here too.</p>
 
 <p>Honestly, I suspect that this principle was added to SOLID mostly in order
-to somehow fill the gap between "SO" and "ID."</p>
+to somehow fill the gap between “SO” and “ID.”</p>
 
 <h2 id="i-and-d">I and D</h2>
 
@@ -152,7 +152,7 @@ he was working at Xerox.</p>
 
 <p>The <a href="https://en.wikipedia.org/wiki/Interface_segregation_principle">Interface Segregation Principle</a>
 states that you must not declare <code>List x</code> if you only need <code>Collection x</code>
-or even <code>Iterable x.</code> I can't agree more. Let's see the next one.</p>
+or even <code>Iterable x.</code> I can’t agree more. Let’s see the next one.</p>
 
 <p>The <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion Principle</a>
 means that instead of <code>ArrayList x,</code> you must
@@ -163,26 +163,26 @@ it is
 This one also sounds reasonable to me.</p>
 
 <p>However, how is all this different from the good old
-"<a href="https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">loose coupling</a>"
+“<a href="https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29">loose coupling</a>”
 introduced together with cohesion by Constantine in 1974?
 Do we really need to simplify and blur in order to learn better?
 No, not to learn better, but to <em>sell</em> better. Here goes my point.</p>
 
-<h2 id="my-point-is">My point is...</h2>
+<h2 id="my-point-is">My point is…</h2>
 
 <p>The point being these principles are nothing but an explanation of
-"cohesion and coupling" for dummies in a very primitive, ambiguous,
+“cohesion and coupling” for dummies in a very primitive, ambiguous,
 and marketable way. Dummies will buy books, seminars, and trainings,
-but won't really be able to understand the logic behind them. Do they really
+but won’t really be able to understand the logic behind them. Do they really
 need to? They are just <del>monkeys</del>
 <a href="/2014/10/26/hacker-vs-programmer-mentality.html">coders</a>, right?</p>
 
 
 
-<p>"But an object must be responsible for one thing!" is what I often hear at
+<p>“But an object must be responsible for one thing!” is what I often hear at
 conferences. People learn that mantra without even knowing
-what cohesion is nor understanding what this "one thing" they are
-praying for really is. There is no such thing as "one thing," guys! There are different
+what cohesion is nor understanding what this “one thing” they are
+praying for really is. There is no such thing as “one thing,” guys! There are different
 levels of cohesion.</p>
 
 <p>Who is guilty? Uncle Bob &amp; Co.</p>
@@ -191,10 +191,10 @@ levels of cohesion.</p>
 <a href="/2015/10/16/ridley-scott-and-joseph-goebbels.html">Ridley Scott</a>
 and other Hollywood money makers who
 deliver primitive and easy-to-cry-at movies just to generate a profit. People
-are getting dumber by watching---but this is not of their concern.
-The same happens with magic OOP principles---programmers rely on
+are getting dumber by watching—but this is not of their concern.
+The same happens with magic OOP principles—programmers rely on
 them, thinking the truth is right there while the real truth
-is not understood even by the creators of this "magic."</p>
+is not understood even by the creators of this “magic.”</p>
 
 <p>SOLID is a money-making instrument, not an instrument to make
 code better.</p>

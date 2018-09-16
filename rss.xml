@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-16T17:06:04+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Code Must Be Clean. And Clear.</title><link href="https://www.yegor256.com/2018/09/12/clear-code.html" rel="alternate" type="text/html" title="Code Must Be Clean. And Clear." /><published>2018-09-12T00:00:00+00:00</published><updated>2018-09-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/12/clear-code</id><content type="html" xml:base="https://www.yegor256.com/2018/09/12/clear-code.html">&lt;p&gt;There is a famous book by Robert Martin called &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;&lt;em&gt;Clean Code&lt;/em&gt;&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-16T18:48:03+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Code Must Be Clean. And Clear.</title><link href="https://www.yegor256.com/2018/09/12/clear-code.html" rel="alternate" type="text/html" title="Code Must Be Clean. And Clear." /><published>2018-09-12T00:00:00+00:00</published><updated>2018-09-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/12/clear-code</id><content type="html" xml:base="https://www.yegor256.com/2018/09/12/clear-code.html">&lt;p&gt;There is a famous book by Robert Martin called &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;&lt;em&gt;Clean Code&lt;/em&gt;&lt;/a&gt;.
 The title is an obvious call to all of us: the code must be &lt;em&gt;clean&lt;/em&gt;. Clean, like a kitchen,
-I suppose---there are no dirty dishes, no garbage on the floor, no smelly
+I suppose—there are no dirty dishes, no garbage on the floor, no smelly
 towels. Dirt to be cleaned in a code base, according to Martin, includes
 large methods, non-descriptive variable names, tight coupling, lack of SOLID
-and SRP compliance, and many other things. Read the book, it&amp;#39;s worth it. However,
+and SRP compliance, and many other things. Read the book, it’s worth it. However,
 there is yet another aspect of source code. How &lt;em&gt;clear&lt;/em&gt; is it?&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='The Rum Diary (2011) by Bruce Robinson' src='/images/2018/09/rum-diary.jpg' longdesc='#b241032c'/&gt;&lt;figcaption id='b241032c'&gt;The Rum Diary (2011) by Bruce Robinson&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Rum Diary (2011) by Bruce Robinson&quot; src=&quot;/images/2018/09/rum-diary.jpg&quot; longdesc=&quot;#b241032c&quot; /&gt;&lt;figcaption id=&quot;b241032c&quot;&gt;The Rum Diary (2011) by Bruce Robinson&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;The kitchen is clean when there is no dirt in the oven. But if its electric panel
-speaks French, I can&amp;#39;t use the kitchen. Even if it&amp;#39;s perfectly clean.
-It&amp;#39;s not &lt;em&gt;clear&lt;/em&gt; how to use it---that&amp;#39;s why it&amp;#39;s useless.&lt;/p&gt;
+speaks French, I can’t use the kitchen. Even if it’s perfectly clean.
+It’s not &lt;em&gt;clear&lt;/em&gt; how to use it—that’s why it’s useless.&lt;/p&gt;
 
 &lt;p&gt;The metaphor applies to the source code. Making it clean is the first
 and very important step, which will remove all those coding anti-patterns
@@ -22,13 +22,13 @@ so many books speak about, including my favorite
 by Michael Feathers, and
 &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;&lt;em&gt;Clean Code&lt;/em&gt;&lt;/a&gt;.
 A very important step, but not the most important one.
-A dirty kitchen that is useful is better than a clean one that I can&amp;#39;t use, isn&amp;#39;t it?&lt;/p&gt;
+A dirty kitchen that is useful is better than a clean one that I can’t use, isn’t it?&lt;/p&gt;
 
 &lt;p&gt;Making code clean but leaving it difficult to understand by others is the
 pitfall most of us fall for. By &lt;em&gt;others&lt;/em&gt; I mean everybody, from
 our fellow in-project co-developers sitting next to us at the same desk, to
 imaginative junior contributors who will join the project in five years after
-we&amp;#39;re all hired by Google. All of them, across this very large time frame, must
+we’re all hired by Google. All of them, across this very large time frame, must
 be able to use the &lt;del&gt;kitchen&lt;/del&gt; source code without any additional help.
 The oven has to speak their language. Not the language of its designer.&lt;/p&gt;
 
@@ -36,33 +36,33 @@ The oven has to speak their language. Not the language of its designer.&lt;/p&gt
 
 &lt;p&gt;Well, test it. Ask someone who is outside of the project to take a look
 at your code and tell you how clear it is. Not how beautiful your classes
-and code constructs are---that&amp;#39;s what makes it clean. Instead, ask someone to
+and code constructs are—that’s what makes it clean. Instead, ask someone to
 fix a bug in just 30 minutes and see how they react. You will realize
 how clear the code is and whether it speaks the language a &lt;em&gt;stranger&lt;/em&gt;
 can understand.&lt;/p&gt;
 
 &lt;p&gt;This is the definition of maintainability. If a stranger can &lt;em&gt;modify&lt;/em&gt; your
 code and fix a bug in less than an hour, it is maintainable. Obviously,
-cleanliness will help. But it&amp;#39;s not enough. There has to be something
-else, which I don&amp;#39;t really know how to describe. The only way to achieve
+cleanliness will help. But it’s not enough. There has to be something
+else, which I don’t really know how to describe. The only way to achieve
 it is to let strangers regularly see your code, attempt to make a
 contribution, and report bugs when something is not &lt;em&gt;clear&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Making your code open and encouraging programmers to report bugs when
-something is not only broken but unclear---are the best two ways to achieve
-high maintainability.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="maintainability" /><summary type="html">There is a famous book by Robert Martin called Clean Code. The title is an obvious call to all of us: the code must be clean. Clean, like a kitchen, I suppose---there are no dirty dishes, no garbage on the floor, no smelly towels. Dirt to be cleaned in a code base, according to Martin, includes large methods, non-descriptive variable names, tight coupling, lack of SOLID and SRP compliance, and many other things. Read the book, it&amp;#39;s worth it. However, there is yet another aspect of source code. How clear is it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/rum-diary.jpg" /></entry><entry><title type="html">Monolithic Repos Are Evil</title><link href="https://www.yegor256.com/2018/09/05/monolithic-repositories.html" rel="alternate" type="text/html" title="Monolithic Repos Are Evil" /><published>2018-09-05T00:00:00+00:00</published><updated>2018-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/05/monolithic-repositories</id><content type="html" xml:base="https://www.yegor256.com/2018/09/05/monolithic-repositories.html">&lt;p&gt;We all keep our code in &lt;del&gt;Git&lt;/del&gt;
+something is not only broken but unclear—are the best two ways to achieve
+high maintainability.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="maintainability" /><summary type="html">There is a famous book by Robert Martin called Clean Code. The title is an obvious call to all of us: the code must be clean. Clean, like a kitchen, I suppose—there are no dirty dishes, no garbage on the floor, no smelly towels. Dirt to be cleaned in a code base, according to Martin, includes large methods, non-descriptive variable names, tight coupling, lack of SOLID and SRP compliance, and many other things. Read the book, it’s worth it. However, there is yet another aspect of source code. How clear is it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/rum-diary.jpg" /></entry><entry><title type="html">Monolithic Repos Are Evil</title><link href="https://www.yegor256.com/2018/09/05/monolithic-repositories.html" rel="alternate" type="text/html" title="Monolithic Repos Are Evil" /><published>2018-09-05T00:00:00+00:00</published><updated>2018-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/05/monolithic-repositories</id><content type="html" xml:base="https://www.yegor256.com/2018/09/05/monolithic-repositories.html">&lt;p&gt;We all keep our code in &lt;del&gt;Git&lt;/del&gt;
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;version control&lt;/a&gt; repositories.
 The question is whether we should create a new repository for each
-new module or try to keep as much as possible in a single so called &amp;quot;monolithic&amp;quot; repo.
+new module or try to keep as much as possible in a single so called “monolithic” repo.
 Market leaders, like &lt;a href=&quot;https://code.fb.com/core-data/scaling-mercurial-at-facebook/&quot;&gt;Facebook&lt;/a&gt;
 and &lt;a href=&quot;https://www.infoq.com/presentations/Development-at-Google&quot;&gt;Google&lt;/a&gt;,
 advocate the second approach. I believe they are wrong.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Funny Games (2007) by Michael Haneke' src='/images/2018/09/funny-games.jpg' longdesc='#9f6d574f'/&gt;&lt;figcaption id='9f6d574f'&gt;Funny Games (2007) by Michael Haneke&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Funny Games (2007) by Michael Haneke&quot; src=&quot;/images/2018/09/funny-games.jpg&quot; longdesc=&quot;#9f6d574f&quot; /&gt;&lt;figcaption id=&quot;9f6d574f&quot;&gt;Funny Games (2007) by Michael Haneke&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;Let&amp;#39;s use the following JavaScript function as an example.
+&lt;p&gt;Let’s use the following JavaScript function as an example.
 It downloads a JSON document from a &lt;a href=&quot;http://www.zold.io&quot;&gt;Zold&lt;/a&gt;
 node (using &lt;a href=&quot;https://jquery.com/&quot;&gt;jQuery&lt;/a&gt;)
 and places part of its content on the HTML page.
@@ -81,7 +81,7 @@ Then it colors the data according to its value.&lt;/p&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Pretty obvious, isn&amp;#39;t it? Just a single &lt;code&gt;main.js&lt;/code&gt; file which does everything we need.
+&lt;p&gt;Pretty obvious, isn’t it? Just a single &lt;code&gt;main.js&lt;/code&gt; file which does everything we need.
 We simply add it to the HTML and it works:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -142,7 +142,7 @@ which have to be loaded together into the target HTML:&lt;/p&gt;
 &lt;a href=&quot;https://ai.google/research/pubs/pub45424&quot;&gt;Google&lt;/a&gt;,
 &lt;a href=&quot;https://blog.digitalocean.com/taming-your-go-dependencies/&quot;&gt;Digital Ocean&lt;/a&gt;
 and &lt;a href=&quot;https://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/&quot;&gt;Mozilla&lt;/a&gt;
-don&amp;#39;t think so.&lt;/p&gt;
+don’t think so.&lt;/p&gt;
 
 &lt;p&gt;I disagree.&lt;/p&gt;
 
@@ -151,42 +151,42 @@ new standalone &lt;a href=&quot;https://github.com/yegor256/colorizejs&quot;&gt;
 Here is what I did:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Created a new GitHub repo &lt;a href=&quot;https://github.com/yegor256/colorizejs&quot;&gt;yegor256/colorizejs&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Read the &lt;a href=&quot;https://learn.jquery.com/plugins/basic-plugin-creation/&quot;&gt;instructions&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Did some research of jQuery plugins, studied a few examples;&lt;/li&gt;
-&lt;li&gt;Found out that most of them used &lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;, which I&amp;#39;ve never heard of;&lt;/li&gt;
-&lt;li&gt;Decided to use &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; for JavaScript packaging (what else, right?);&lt;/li&gt;
-&lt;li&gt;Created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/package.json&quot;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/a&gt; for npm;&lt;/li&gt;
-&lt;li&gt;Renamed GitHub repo to &lt;code&gt;colorizejs&lt;/code&gt; when I found out that npm package
+  &lt;li&gt;Created a new GitHub repo &lt;a href=&quot;https://github.com/yegor256/colorizejs&quot;&gt;yegor256/colorizejs&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;Read the &lt;a href=&quot;https://learn.jquery.com/plugins/basic-plugin-creation/&quot;&gt;instructions&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;Did some research of jQuery plugins, studied a few examples;&lt;/li&gt;
+  &lt;li&gt;Found out that most of them used &lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;, which I’ve never heard of;&lt;/li&gt;
+  &lt;li&gt;Decided to use &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; for JavaScript packaging (what else, right?);&lt;/li&gt;
+  &lt;li&gt;Created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/package.json&quot;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/a&gt; for npm;&lt;/li&gt;
+  &lt;li&gt;Renamed GitHub repo to &lt;code&gt;colorizejs&lt;/code&gt; when I found out that npm package
 &lt;a href=&quot;https://www.npmjs.com/package/colorize&quot;&gt;&lt;code&gt;colorize&lt;/code&gt;&lt;/a&gt; already exists;&lt;/li&gt;
-&lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.travis.yml&quot;&gt;&lt;code&gt;.travis.yml&lt;/code&gt;&lt;/a&gt; for &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Created a &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/README.md&quot;&gt;README.md&lt;/a&gt; and explained how to use it and install it;&lt;/li&gt;
-&lt;li&gt;Decided to use the MIT license and created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt&quot;&gt;LICENSE.txt&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.pdd&quot;&gt;PDD&lt;/a&gt; for
+  &lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.travis.yml&quot;&gt;&lt;code&gt;.travis.yml&lt;/code&gt;&lt;/a&gt; for &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;Created a &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/README.md&quot;&gt;README.md&lt;/a&gt; and explained how to use it and install it;&lt;/li&gt;
+  &lt;li&gt;Decided to use the MIT license and created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt&quot;&gt;LICENSE.txt&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.pdd&quot;&gt;PDD&lt;/a&gt; for
 &lt;a href=&quot;/2017/04/05/pdd-in-action.html&quot;&gt;puzzles&lt;/a&gt; automated collection;&lt;/li&gt;
-&lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.rultor.yml&quot;&gt;&lt;code&gt;.rultor.yml&lt;/code&gt;&lt;/a&gt; for
+  &lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.rultor.yml&quot;&gt;&lt;code&gt;.rultor.yml&lt;/code&gt;&lt;/a&gt; for
 &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Tried to create a unit test and failed miserably (after a full hour of research),
-since I&amp;#39;ve had almost no experience in JS unit testing;&lt;/li&gt;
-&lt;li&gt;Posted a &lt;a href=&quot;https://stackoverflow.com/questions/51809750/&quot;&gt;question&lt;/a&gt; to StackOverflow;&lt;/li&gt;
-&lt;li&gt;The question was answered by a few people only after the bounty I offered;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/brian-lives-outdoors&quot;&gt;@brian-lives-outdoors&lt;/a&gt;&amp;#39;s answer
+  &lt;li&gt;Tried to create a unit test and failed miserably (after a full hour of research),
+since I’ve had almost no experience in JS unit testing;&lt;/li&gt;
+  &lt;li&gt;Posted a &lt;a href=&quot;https://stackoverflow.com/questions/51809750/&quot;&gt;question&lt;/a&gt; to StackOverflow;&lt;/li&gt;
+  &lt;li&gt;The question was answered by a few people only after the bounty I offered;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/brian-lives-outdoors&quot;&gt;@brian-lives-outdoors&lt;/a&gt;’s answer
 was the best and he even submitted a &lt;a href=&quot;https://github.com/yegor256/colorizejs/pull/2&quot;&gt;pull request&lt;/a&gt;
 with a unit test, which I merged;&lt;/li&gt;
-&lt;li&gt;Released the first version &lt;a href=&quot;https://github.com/yegor256/colorizejs/tree/0.0.1&quot;&gt;0.0.1&lt;/a&gt;
+  &lt;li&gt;Released the first version &lt;a href=&quot;https://github.com/yegor256/colorizejs/tree/0.0.1&quot;&gt;0.0.1&lt;/a&gt;
 to &lt;a href=&quot;https://www.npmjs.com/package/colorizejs&quot;&gt;npmjs.com&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Modified the code to make it work both with classes and colors;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/colorizejs/issues/3&quot;&gt;Implemented&lt;/a&gt; and released
+  &lt;li&gt;Modified the code to make it work both with classes and colors;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/colorizejs/issues/3&quot;&gt;Implemented&lt;/a&gt; and released
 the next version &lt;a href=&quot;https://github.com/yegor256/colorizejs/tree/0.1.0&quot;&gt;0.1.0&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zold-io/zold.github.io/issues/81&quot;&gt;Added it&lt;/a&gt; to Zold front-end,
-tested it, and released it---check it out &lt;a href=&quot;http://www.zold.io/health.html&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zold-io/zold.github.io/issues/81&quot;&gt;Added it&lt;/a&gt; to Zold front-end,
+tested it, and released it—check it out &lt;a href=&quot;http://www.zold.io/health.html&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;It took almost three weeks of waiting and four hours of work, just
 to move a small piece of JavaScript code to a new repository and release
 it separately. Was it worth it? Well, I think it was. But &lt;del&gt;many&lt;/del&gt; most
 other blog post authors, who I managed to find, think that it would be better to keep
-everything in a single monolithic repo, mostly because it&amp;#39;s better for &lt;em&gt;productivity&lt;/em&gt;.
+everything in a single monolithic repo, mostly because it’s better for &lt;em&gt;productivity&lt;/em&gt;.
 For example,
 &lt;a href=&quot;https://danluu.com/monorepo/&quot;&gt;Advantages of monorepos&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/danluu&quot;&gt;Dan Luu&lt;/a&gt;,
 &lt;a href=&quot;https://people.engr.ncsu.edu/ermurph3/papers/seip18.pdf&quot;&gt;Advantages and Disadvantages of a Monolithic Repository&lt;/a&gt;
@@ -209,91 +209,105 @@ a single merge, deploy and release. Also it will be easier to test, both
 manually and via unit testing. Continuous integration is easier to configure,
 and so on and so forth.&lt;/p&gt;
 
-&lt;p&gt;All these &amp;quot;reasonable&amp;quot; arguments remind me of what I hear when preaching
+&lt;p&gt;All these “reasonable” arguments remind me of what I hear when preaching
 object decomposition and suggesting that multiple objects are better than
 a single large one. Imagine a large class of 3,000 lines of code, which
-does many things and they are all very tightly coupled. It&amp;#39;s &amp;quot;easy&amp;quot; to test it,
+does many things and they are all very tightly coupled. It’s “easy” to test it,
 to make changes, to deploy, to review, etc. Because everything stays in one
-file, right? We don&amp;#39;t need to jump from class to class in order to understand
-the design. We just look at one screen, scroll it up and down, and that&amp;#39;s it.
+file, right? We don’t need to jump from class to class in order to understand
+the design. We just look at one screen, scroll it up and down, and that’s it.
 Right? Totally wrong!&lt;/p&gt;
 
-&lt;p&gt;I guess I don&amp;#39;t need to explain why it&amp;#39;s wrong. We don&amp;#39;t design our software
+&lt;p&gt;I guess I don’t need to explain why it’s wrong. We don’t design our software
 that way anymore. We know that tight coupling is a bad idea. We know that
 a set of smaller components is better than a larger solid piece.&lt;/p&gt;
 
-&lt;p&gt;Why can&amp;#39;t we apply the same logic to repositories? I believe we can.
+&lt;p&gt;Why can’t we apply the same logic to repositories? I believe we can.
 Of course, just like in object-oriented programming, a fine-grained design
 requires more skills and time. Look at what I had to do with this small
-jQuery plugin. I&amp;#39;ve spent hours of coding and thinking. I even had to learn
+jQuery plugin. I’ve spent hours of coding and thinking. I even had to learn
 &lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt; and &lt;a href=&quot;https://jasmine.github.io/&quot;&gt;Jasmine&lt;/a&gt;,
 which I most probably will not use anymore. But the benefits we are getting
 from it are enormous. This is my short list of them:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Encapsulation&lt;/strong&gt;.
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Encapsulation&lt;/strong&gt;.
 Each repo encapsulates a single problem, hiding its details from everybody
 else. Thanks to that, the scope each repo has to deal with gets smaller.
 The smaller the scope, just like in OOP, the easier it is to maintain and
 modify. The easier to maintain, the cheaper the development. I guess Google
-guys don&amp;#39;t really worry about costs. On the contrary, they want their salaries
+guys don’t really worry about costs. On the contrary, they want their salaries
 to grow. A large unmaintainable monolithic repo is a perfect tool to make
-it happen.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fast Builds&lt;/strong&gt;.
+it happen.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fast Builds&lt;/strong&gt;.
 When a repo is small, the time its automated build takes is small. Look at the
 time Travis &lt;a href=&quot;https://travis-ci.org/yegor256/colorizejs/builds/420726284&quot;&gt;spends&lt;/a&gt;
-for my jQuery plugin. It&amp;#39;s 51 seconds. It&amp;#39;s fast.
+for my jQuery plugin. It’s 51 seconds. It’s fast.
 We &lt;a href=&quot;https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/&quot;&gt;all know&lt;/a&gt;
-that the faster the build, the better it is for productivity, since it&amp;#39;s easier to use
-the build as a tool for development.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Accurate Metrics&lt;/strong&gt;.
-I don&amp;#39;t know whether you rely on metrics in your projects, but we at
+that the faster the build, the better it is for productivity, since it’s easier to use
+the build as a tool for development.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Accurate Metrics&lt;/strong&gt;.
+I don’t know whether you rely on metrics in your projects, but we at
 &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; do pay attention to numbers, like
 lines of code, hits of code, number of commits, classes, methods, cohesion,
-coupling, etc. It&amp;#39;s always a question whether the metrics are accurate.
-Calculating lines of code for a large repository doesn&amp;#39;t make any sense, since
+coupling, etc. It’s always a question whether the metrics are accurate.
+Calculating lines of code for a large repository doesn’t make any sense, since
 the number will include a lot of files from completely different parts of
 the application. Moreover there will be different languages and file formats.
 Say a repo has 200K lines of Java, 150K lines of XML, 50K lines of JavaScript,
 and 40K lines of Ruby. Can you say something specific about this repo? Is it
 large? Is it a Java repo? And, more importantly, can it be compared with other
-repositories? Not really. It&amp;#39;s just a big messy storage of files.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Homogeneous Tasks&lt;/strong&gt;.
+repositories? Not really. It’s just a big messy storage of files.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Homogeneous Tasks&lt;/strong&gt;.
 Smaller repositories tend to have smaller tech stacks, meaning that each of
 them uses just a few languages and frameworks, or (and this is the preferred
-situation)---one language or technology per repository. Thanks to this,
+situation)—one language or technology per repository. Thanks to this,
 the management of programmers becomes easier, since any ticket/problem can
-be assigned to anybody. It&amp;#39;s easier to make tasks similar in size and complexity.
-This obviously means better manageability of the project.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Single Coding Standard&lt;/strong&gt;.
-It&amp;#39;s easier to standardize the coding style if the repo is small. When it&amp;#39;s
+be assigned to anybody. It’s easier to make tasks similar in size and complexity.
+This obviously means better manageability of the project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Single Coding Standard&lt;/strong&gt;.
+It’s easier to standardize the coding style if the repo is small. When it’s
 large, various parts of the code base will have different styles and
 it will be almost impossible to put everybody on the same page. In other
-words, smaller repositories look more beautiful than larger ones.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Short Names&lt;/strong&gt;.
+words, smaller repositories look more beautiful than larger ones.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Short Names&lt;/strong&gt;.
 Each repository, inevitably, will have its own namespace. For example, in the
 JS repository I just created, I only have two files: &lt;code&gt;colorizejs.js&lt;/code&gt; and &lt;code&gt;test-colorizejs.js&lt;/code&gt;.
-I don&amp;#39;t really care about the naming inside them, since the namespace
+I don’t really care about the naming inside them, since the namespace
 is very small. &lt;del&gt;I can even use global variables.&lt;/del&gt;
-Shorter names and smaller namespaces mean better maintainability.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Simple Tests&lt;/strong&gt;.
+Shorter names and smaller namespaces mean better maintainability.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Simple Tests&lt;/strong&gt;.
 The larger the code base, the more dependencies it has, which are difficult
 to mock and test. Very large code bases become fundamentally untestable since
 they require a lot of integration tests which are difficult to maintain.
 Smaller libraries, frameworks and modules are easier to keep at the level
-of simple and fast unit testing.&lt;/p&gt;&lt;/li&gt;
+of simple and fast unit testing.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Thus, I believe that the smaller the repositories and modules, the better.
 Ideally, I would say, the largest acceptable size for a code base is 50,000 lines of code.
-Everything that goes above this line is a perfect candidate for decomposition.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">We all keep our code in Git version control repositories. The question is whether we should create a new repository for each new module or try to keep as much as possible in a single so called &amp;quot;monolithic&amp;quot; repo. Market leaders, like Facebook and Google, advocate the second approach. I believe they are wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry><entry><title type="html">Soft Skills Demystified</title><link href="https://www.yegor256.com/2018/08/29/soft-skills.html" rel="alternate" type="text/html" title="Soft Skills Demystified" /><published>2018-08-29T00:00:00+00:00</published><updated>2018-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/29/soft-skills</id><content type="html" xml:base="https://www.yegor256.com/2018/08/29/soft-skills.html">&lt;p&gt;There are tech skills and there are soft skills. Every programmer knows that.
+Everything that goes above this line is a perfect candidate for decomposition.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">We all keep our code in Git version control repositories. The question is whether we should create a new repository for each new module or try to keep as much as possible in a single so called “monolithic” repo. Market leaders, like Facebook and Google, advocate the second approach. I believe they are wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry><entry><title type="html">Soft Skills Demystified</title><link href="https://www.yegor256.com/2018/08/29/soft-skills.html" rel="alternate" type="text/html" title="Soft Skills Demystified" /><published>2018-08-29T00:00:00+00:00</published><updated>2018-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/29/soft-skills</id><content type="html" xml:base="https://www.yegor256.com/2018/08/29/soft-skills.html">&lt;p&gt;There are tech skills and there are soft skills. Every programmer knows that.
 Tech skills are about algorithms, operators, classes, objects, and everything
 else they teach us in tech schools. Soft skills are about something else.
-What exactly? Difficult to say. Let&amp;#39;s try to clear the air.&lt;/p&gt;
+What exactly? Difficult to say. Let’s try to clear the air.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Glengarry Glen Ross (1992) by James Foley' src='/images/2018/08/glengarry-glen-ross.jpg' longdesc='#03b7bd6c'/&gt;&lt;figcaption id='03b7bd6c'&gt;Glengarry Glen Ross (1992) by James Foley&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Glengarry Glen Ross (1992) by James Foley&quot; src=&quot;/images/2018/08/glengarry-glen-ross.jpg&quot; longdesc=&quot;#03b7bd6c&quot; /&gt;&lt;figcaption id=&quot;03b7bd6c&quot;&gt;Glengarry Glen Ross (1992) by James Foley&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is a non-exhaustive list of soft skills I managed to find
 on the Net&lt;sup&gt;&lt;a href=&quot;https://hackernoon.com/10-soft-skills-every-developer-needs-66f0cdcfd3f7&quot;&gt;1&lt;/a&gt;,
@@ -309,18 +323,18 @@ strategizing, lifelong learning, business mindedness, work ethic, judgment,
 ego management, commitment,
 accountability, creativity, adaptability, big-picture thinking. Phew!&lt;/p&gt;
 
-&lt;p&gt;Do you really understand exactly what these words mean? I don&amp;#39;t.&lt;/p&gt;
+&lt;p&gt;Do you really understand exactly what these words mean? I don’t.&lt;/p&gt;
 
-&lt;p&gt;I would actually suggest we replace them all with the &amp;quot;do the right thing&amp;quot;
+&lt;p&gt;I would actually suggest we replace them all with the “do the right thing”
 mantra and call it a day.&lt;/p&gt;
 
-&lt;aside class='quote'&gt;Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about.&lt;/aside&gt;
+&lt;aside class=&quot;quote&quot;&gt;Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about.&lt;/aside&gt;
 
 &lt;p&gt;I have my own list of soft skills though. I also
 &lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;strongly believe&lt;/a&gt; that tech skills
 are just a small part of what makes a good programmer,
 but being empathical and ready to learn is not what the other part consists of.
-Of course, smiling in the office and not cursing at a stupid boss---helps.
+Of course, smiling in the office and not cursing at a stupid boss—helps.
 But this is not what soft skills are about.&lt;/p&gt;
 
 &lt;p&gt;They are about our ability to &lt;em&gt;exchange&lt;/em&gt; deliverables. Tech skills produce
@@ -328,7 +342,7 @@ deliverables, soft skills turn them into a final product, which is working
 software. Here is a short list, in no particular order:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Drawing&lt;/strong&gt;.
-Talking works great when you&amp;#39;re discussing your next vacation with your partner.
+Talking works great when you’re discussing your next vacation with your partner.
 In a software team your ability to explain your thoughts with a diagram
 seriously increases your usefulness.&lt;/p&gt;
 
@@ -353,14 +367,14 @@ your own open source products. You will need a lot of non-tech skills to do that
 
 &lt;p&gt;&lt;strong&gt;Charging&lt;/strong&gt;.
 Programmers make money by writing code. Very often projects fail because
-important people quit due to a money conflict. They don&amp;#39;t know how to resolve that,
+important people quit due to a money conflict. They don’t know how to resolve that,
 how to manage their financial objectives, how to ask for a raise, or how to change
 the paying schedule. I blame programmers for that. We, technical people,
 have to know how to manage our financial relationship with our projects.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Relaxing&lt;/strong&gt;.
 Many projects fail because its programmers burn out. This happens, very often,
-because they don&amp;#39;t know how to manage their time right: when to work and
+because they don’t know how to manage their time right: when to work and
 when to relax. Again, I blame programmers. We have to know how to manage our
 own peace of mind.&lt;/p&gt;
 
@@ -374,7 +388,7 @@ you need to have to be a good developer.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Tweeting&lt;/strong&gt;.
 Here comes your ability to share your thoughts and achievements in social
 networks. If you stay mute and net-social-phobic, you are not really helping your
-project. This is the skill you won&amp;#39;t learn in a few days. I would suggest
+project. This is the skill you won’t learn in a few days. I would suggest
 you take a look at my &lt;a href=&quot;/256-bloghacks.html&quot;&gt;256 Bloghacks&lt;/a&gt; book.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Testing&lt;/strong&gt;.
@@ -388,7 +402,7 @@ developer-tester conflict, which good programmers know how to deal with.&lt;/p&g
 Still working in a single &lt;code&gt;master&lt;/code&gt; branch? Still an amateur. You have to
 learn how to use multiple branches, how to resolve conflicts between them,
 and what is the difference between merge and rebase. This is a soft skill,
-since it doesn&amp;#39;t have anything to do with the quality of your code but it
+since it doesn’t have anything to do with the quality of your code but it
 seriously affects your professionalism as a software developer.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Failing&lt;/strong&gt;.
@@ -400,7 +414,7 @@ embracing them.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Delivering&lt;/strong&gt;.
 Continuous integration, delivery pipeline, build automation, staging,
-green/blue deployments, etc.---if you think that all these things concern
+green/blue deployments, etc.—if you think that all these things concern
 the DevOps department only, you are wrong. You have to understand how your lines
 of code reach your users. The bigger the product, the longer the pipeline,
 the more people it involves, and the more soft skills it requires to be
@@ -409,29 +423,29 @@ smooth.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Intriguing&lt;/strong&gt;.
 Any project is a part of a bigger political game, one way or the other.
 If you isolate yourself from intrigue, claiming that your job is to
-write code---you are not a good programmer. A good programmer understands
+write code—you are not a good programmer. A good programmer understands
 where the money is coming from, who the primary shareholders are,
 and which ass to kiss and when.&lt;/p&gt;
 
-&lt;p&gt;Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">There are tech skills and there are soft skills. Every programmer knows that. Tech skills are about algorithms, operators, classes, objects, and everything else they teach us in tech schools. Soft skills are about something else. What exactly? Difficult to say. Let&amp;#39;s try to clear the air.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/glengarry-glen-ross.jpg" /></entry><entry><title type="html">Builders and Manipulators</title><link href="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html" rel="alternate" type="text/html" title="Builders and Manipulators" /><published>2018-08-22T00:00:00+00:00</published><updated>2018-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/22/builders-and-manipulators</id><content type="html" xml:base="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html">&lt;p&gt;Here is a simple principle for naming methods in OOP,
-which I&amp;#39;m trying to follow in my code:
-it&amp;#39;s a &lt;em&gt;verb&lt;/em&gt; if it &lt;em&gt;manipulates&lt;/em&gt;, it&amp;#39;s a &lt;em&gt;noun&lt;/em&gt; if it &lt;em&gt;builds&lt;/em&gt;.
-That&amp;#39;s it. Nothing in between. Methods like
-&lt;code&gt;saveFile()&lt;/code&gt; or &lt;code&gt;getTitle()&lt;/code&gt; don&amp;#39;t fit and must be renamed and refactored.
-Moreover, methods that &amp;quot;manipulate&amp;quot; must always return &lt;code&gt;void&lt;/code&gt;,
+&lt;p&gt;Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">There are tech skills and there are soft skills. Every programmer knows that. Tech skills are about algorithms, operators, classes, objects, and everything else they teach us in tech schools. Soft skills are about something else. What exactly? Difficult to say. Let’s try to clear the air.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/glengarry-glen-ross.jpg" /></entry><entry><title type="html">Builders and Manipulators</title><link href="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html" rel="alternate" type="text/html" title="Builders and Manipulators" /><published>2018-08-22T00:00:00+00:00</published><updated>2018-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/22/builders-and-manipulators</id><content type="html" xml:base="https://www.yegor256.com/2018/08/22/builders-and-manipulators.html">&lt;p&gt;Here is a simple principle for naming methods in OOP,
+which I’m trying to follow in my code:
+it’s a &lt;em&gt;verb&lt;/em&gt; if it &lt;em&gt;manipulates&lt;/em&gt;, it’s a &lt;em&gt;noun&lt;/em&gt; if it &lt;em&gt;builds&lt;/em&gt;.
+That’s it. Nothing in between. Methods like
+&lt;code&gt;saveFile()&lt;/code&gt; or &lt;code&gt;getTitle()&lt;/code&gt; don’t fit and must be renamed and refactored.
+Moreover, methods that “manipulate” must always return &lt;code&gt;void&lt;/code&gt;,
 for example &lt;code&gt;print()&lt;/code&gt; or &lt;code&gt;save()&lt;/code&gt;. Let me explain.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='The Night Of (2016) by Richard Price et al.' src='/images/2018/08/the-night-of.jpg' longdesc='#e86c0384'/&gt;&lt;figcaption id='e86c0384'&gt;The Night Of (2016) by Richard Price et al.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Night Of (2016) by Richard Price et al.&quot; src=&quot;/images/2018/08/the-night-of.jpg&quot; longdesc=&quot;#e86c0384&quot; /&gt;&lt;figcaption id=&quot;e86c0384&quot;&gt;The Night Of (2016) by Richard Price et al.&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, I have to say that this idea is very similar to the one
 suggested by &lt;a href=&quot;https://en.wikipedia.org/wiki/Bertrand_Meyer&quot;&gt;Bertrand Meyer&lt;/a&gt; in his book
 &lt;a href=&quot;https://amzn.to/2MWEuJP&quot;&gt;Object Oriented Software Construction&lt;/a&gt;,
-where he proposes we divide an object&amp;#39;s methods into two sharply
+where he proposes we divide an object’s methods into two sharply
 separated categories: queries and commands.&lt;/p&gt;
 
-&lt;p&gt;The idea behind this principle is rather philosophical. Let&amp;#39;s start
+&lt;p&gt;The idea behind this principle is rather philosophical. Let’s start
 with builders, which are supposed to create or find an object and then return
 it. Suppose I have a store of books and I ask it to give me a book
 by name:&lt;/p&gt;
@@ -440,9 +454,9 @@ by name:&lt;/p&gt;
   &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;It&amp;#39;s obviously a &amp;quot;builder&amp;quot; (or a &amp;quot;query&amp;quot; in Meyer&amp;#39;s terms). I ask for
-a book and it&amp;#39;s given to me. The problem, though, is with the name of the method.
-It&amp;#39;s called &amp;quot;find,&amp;quot; which implies that I know how the book will be dealt with. It will
+&lt;p&gt;It’s obviously a “builder” (or a “query” in Meyer’s terms). I ask for
+a book and it’s given to me. The problem, though, is with the name of the method.
+It’s called “find,” which implies that I know how the book will be dealt with. It will
 be found.&lt;/p&gt;
 
 &lt;p&gt;However, this is not how we should treat our objects. We must not tell them
@@ -458,7 +472,7 @@ A much more appropriate name for this method would be &lt;code&gt;book()&lt;/cod
 
 &lt;p&gt;The rule of thumb is: a builder is always a noun. If the method returns
 something, it has to be a noun. Preferably its name should explain what
-the method returns. If it&amp;#39;s a book, name it &lt;code&gt;book()&lt;/code&gt;. If it&amp;#39;s a file, call
+the method returns. If it’s a book, name it &lt;code&gt;book()&lt;/code&gt;. If it’s a file, call
 the method &lt;code&gt;file()&lt;/code&gt;, etc. Here are a few good builder examples:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -477,15 +491,15 @@ the method &lt;code&gt;file()&lt;/code&gt;, etc. Here are a few good builder exa
   &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;readDeadline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Project&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;There is no place for a verb in a builder&amp;#39;s name!&lt;/p&gt;
+&lt;p&gt;There is no place for a verb in a builder’s name!&lt;/p&gt;
 
-&lt;p&gt;It&amp;#39;s not only about the name, by the way. A builder, since its name doesn&amp;#39;t
+&lt;p&gt;It’s not only about the name, by the way. A builder, since its name doesn’t
 contain a verb, should not do any modifications to the encapsulated entities.
 It may only create or find something and return it. Just like a
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Pure_function&quot;&gt;pure function&lt;/a&gt;, it must not have any
 side-effects.&lt;/p&gt;
 
-&lt;p&gt;Next, there are &amp;quot;manipulators&amp;quot; (or &amp;quot;commands&amp;quot; in Meyer&amp;#39;s terms). They do some
+&lt;p&gt;Next, there are “manipulators” (or “commands” in Meyer’s terms). They do some
 work for us, modifying the entities, which the object encapsulates. They are
 the opposite to builders, because they actually make changes to the world
 abstracted by the object.
@@ -496,10 +510,10 @@ For example, we ask the &lt;code&gt;Bookshelf&lt;/code&gt; to add a new book to 
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The method adds the book to the storage. How exactly the storage will be
-modified, we don&amp;#39;t know. But we know that since the name of the method
+modified, we don’t know. But we know that since the name of the method
 is a verb, there will be modifications.&lt;/p&gt;
 
-&lt;p&gt;Also, manipulators must not return anything. It&amp;#39;s always &lt;code&gt;void&lt;/code&gt; that we see
+&lt;p&gt;Also, manipulators must not return anything. It’s always &lt;code&gt;void&lt;/code&gt; that we see
 as the type of their response. This is needed mostly in order to separate the imperative
 part of the code from the declarative part. We either receive objects
 or tell them what to do. We must not mix those activities in one method.&lt;/p&gt;
@@ -509,21 +523,29 @@ them, and all your builders only return objects and your manipulators
 only modify the world, the entire design will become easier to
 understand. Methods will be smaller and their names shorter.&lt;/p&gt;
 
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=oXj9UWm1134&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/oXj9UWm1134/mqdefault.jpg&quot; alt=&quot;YouTube video #oXj9UWm1134&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;Names of objects, methods and variables in OOP (Webinar #37);
+        12 September 2018.&lt;/div&gt;&lt;/aside&gt;
+
 &lt;p&gt;Of course, very often you will have a hard time finding those names. From time to time
 you will want to return something from a manipulator or make your builder
 make some changes, say to the cache. Try to resist this temptation and stay
 with the principle: a method is either a builder or a manipulator, nothing in
 the middle. The examples above are rather primitive, the code in real life
-is much more complicated. But that&amp;#39;s what the principle is going to help
-us with---making the code simpler.&lt;/p&gt;
+is much more complicated. But that’s what the principle is going to help
+us with—making the code simpler.&lt;/p&gt;
 
-&lt;p&gt;I&amp;#39;m also aware of the &lt;a href=&quot;http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html&quot;&gt;noun/verb&lt;/a&gt;
+&lt;p&gt;I’m also aware of the &lt;a href=&quot;http://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html&quot;&gt;noun/verb&lt;/a&gt;
 principle, which suggests always naming classes as nouns and their methods
-as verbs. I believe it&amp;#39;s a wrong idea, since it doesn&amp;#39;t differentiate
+as verbs. I believe it’s a wrong idea, since it doesn’t differentiate
 builders from manipulators and encourages us to always think in terms
 of imperative instructions. I believe that OOP must be much more about declarative
 composition of objects, even if we have to sometimes get them from other objects
-instead of instantiating them via constructors. That&amp;#39;s why we do need builders
+instead of instantiating them via constructors. That’s why we do need builders
 in most situations and we also have to see an obvious difference between them and the other
 methods, manipulators.&lt;/p&gt;
 
@@ -531,8 +553,7 @@ methods, manipulators.&lt;/p&gt;
 in &lt;a href=&quot;http://goo.gl/W2WVMk&quot;&gt;Elegant Objects&lt;/a&gt;, Volume 1, Section 2.4.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How would you name a method of a class Document that reads and returns its content? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1033605343274840064?ref_src=twsrc%5Etfw&quot;&gt;August 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Here is a simple principle for naming methods in OOP, which I&amp;#39;m trying to follow in my code: it&amp;#39;s a verb if it manipulates, it&amp;#39;s a noun if it builds. That&amp;#39;s it. Nothing in between. Methods like saveFile() or getTitle() don&amp;#39;t fit and must be renamed and refactored. Moreover, methods that &amp;quot;manipulate&amp;quot; must always return void, for example print() or save(). Let me explain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/the-night-of.jpg" /></entry><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Here is a simple principle for naming methods in OOP, which I’m trying to follow in my code: it’s a verb if it manipulates, it’s a noun if it builds. That’s it. Nothing in between. Methods like saveFile() or getTitle() don’t fit and must be renamed and refactored. Moreover, methods that “manipulate” must always return void, for example print() or save(). Let me explain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/the-night-of.jpg" /></entry><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
 He said that he needed a partner, to help him partially finance the project, promote
 it, bring in new ideas, and push the business forward. I liked the business
 idea and wanted to participate. I started to ask questions about our
@@ -542,108 +563,112 @@ who would share his goals and would never require any papers or lawyers.&lt;/p&g
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Lola rennt (1998) by Tom Tykwer' src='/images/2018/08/run-lola-run.jpg' longdesc='#8ad64182'/&gt;&lt;figcaption id='8ad64182'&gt;Lola rennt (1998) by Tom Tykwer&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Lola rennt (1998) by Tom Tykwer&quot; src=&quot;/images/2018/08/run-lola-run.jpg&quot; longdesc=&quot;#8ad64182&quot; /&gt;&lt;figcaption id=&quot;8ad64182&quot;&gt;Lola rennt (1998) by Tom Tykwer&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is a list of the questions I asked him:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;What happens with my shares if I stop working?&lt;/li&gt;
-&lt;li&gt;Can I start a similar business with another partner later?&lt;/li&gt;
-&lt;li&gt;Who will have a checkbook and bank account access?&lt;/li&gt;
-&lt;li&gt;Who has final say if we disagree?&lt;/li&gt;
-&lt;li&gt;Do I need your permission to sell my shares to a friend?&lt;/li&gt;
-&lt;li&gt;Will there be any vesting schedule?&lt;/li&gt;
-&lt;li&gt;Who approves expenses?&lt;/li&gt;
-&lt;li&gt;Who controls the domain name registrar account?&lt;/li&gt;
-&lt;li&gt;Who pays if the project needs more money?&lt;/li&gt;
+  &lt;li&gt;What happens with my shares if I stop working?&lt;/li&gt;
+  &lt;li&gt;Can I start a similar business with another partner later?&lt;/li&gt;
+  &lt;li&gt;Who will have a checkbook and bank account access?&lt;/li&gt;
+  &lt;li&gt;Who has final say if we disagree?&lt;/li&gt;
+  &lt;li&gt;Do I need your permission to sell my shares to a friend?&lt;/li&gt;
+  &lt;li&gt;Will there be any vesting schedule?&lt;/li&gt;
+  &lt;li&gt;Who approves expenses?&lt;/li&gt;
+  &lt;li&gt;Who controls the domain name registrar account?&lt;/li&gt;
+  &lt;li&gt;Who pays if the project needs more money?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;For the majority of people I attempt to do business with, these questions are
-indeed offensive. They feel like I&amp;#39;m trying to draw
+indeed offensive. They feel like I’m trying to draw
 a &lt;a href=&quot;https://en.wikipedia.org/wiki/Prenuptial_agreement&quot;&gt;prenup&lt;/a&gt; between
-us, while they would prefer our &amp;quot;marriage&amp;quot; to be based solely on love.
-They would have us promise to never betray each other&amp;#39;s mutual interests but then
+us, while they would prefer our “marriage” to be based solely on love.
+They would have us promise to never betray each other’s mutual interests but then
 the business suffers and eventually collapses.&lt;/p&gt;
 
-&lt;p&gt;Why so? Because it&amp;#39;s impossible to be equal in business (just like it&amp;#39;s impossible
-to be equal in marriage, but that&amp;#39;s a topic for another blog post).
+&lt;aside class=&quot;quote&quot;&gt;They just want to have 70%... each!!! And they have it.&lt;/aside&gt;
+
+&lt;p&gt;Why so? Because it’s impossible to be equal in business (just like it’s impossible
+to be equal in marriage, but that’s a topic for another blog post).
 Eventually a conflict of interests shows up and the inability to resolve it
 affects and damages the business.
-&amp;quot;Co-founder disputes have historically been one of the top reasons
-startups fail at the earliest possible stage,&amp;quot;
+“Co-founder disputes have historically been one of the top reasons
+startups fail at the earliest possible stage,”
 &lt;a href=&quot;https://techcrunch.com/2017/02/18/co-founder-conflict/&quot;&gt;says&lt;/a&gt;
 &lt;a href=&quot;https://twitter.com/garrytan&quot;&gt;Garry Tan&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I would call that type of partnership, which many young startup founders
-enter into, &amp;quot;70/70.&amp;quot; For them the initial agreement is not a formula of future
-growth, but a symbol of &lt;em&gt;respect&lt;/em&gt;. Each of them wants to be respected and that&amp;#39;s
-why they demand 70% of the business for themselves. They don&amp;#39;t care and
-don&amp;#39;t understand how exactly the distribution of assets and profit
-will work in the future. They don&amp;#39;t foresee forthcoming conflicts and fights,
+enter into, “70/70.” For them the initial agreement is not a formula of future
+growth, but a symbol of &lt;em&gt;respect&lt;/em&gt;. Each of them wants to be respected and that’s
+why they demand 70% of the business for themselves. They don’t care and
+don’t understand how exactly the distribution of assets and profit
+will work in the future. They don’t foresee forthcoming conflicts and fights,
 mostly because they are too young or naive (or both).
-According to the &lt;a href=&quot;https://hbr.org/2008/02/the-founders-dilemma&quot;&gt;The Founder&amp;#39;s Dilemma&lt;/a&gt;
+According to the &lt;a href=&quot;https://hbr.org/2008/02/the-founders-dilemma&quot;&gt;The Founder’s Dilemma&lt;/a&gt;
 by &lt;a href=&quot;https://en.wikipedia.org/wiki/Noam_T._Wasserman&quot;&gt;Noam Wasserman&lt;/a&gt;,
-&amp;quot;Founders&amp;#39; attachment, overconfidence, and naïveté may be necessary
-to get new ventures up and running, but these emotions later create problems.&amp;quot;&lt;/p&gt;
+“Founders’ attachment, overconfidence, and naïveté may be necessary
+to get new ventures up and running, but these emotions later create problems.”&lt;/p&gt;
 
-&lt;p&gt;They just want to have 70%... each!!!&lt;/p&gt;
+&lt;p&gt;They just want to have 70%… each!!!&lt;/p&gt;
 
-&lt;p&gt;It&amp;#39;s not even 50/50 in most cases, but 70/70. This is what makes it funny.
+&lt;p&gt;It’s not even 50/50 in most cases, but 70/70. This is what makes it funny.
 Very often each partner thinks that he or she is the major contributor
-to the project and that&amp;#39;s why it&amp;#39;s 70%.&lt;/p&gt;
+to the project and that’s why it’s 70%.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;You can't trust me to stand by my words, if there were no words.&lt;/aside&gt;
 
 &lt;p&gt;And they have it.&lt;/p&gt;
 
 &lt;p&gt;When I was younger, I had no problem with entering into
-such an agreement. I was saying to myself: he wants 70% but he doesn&amp;#39;t
-understand that in reality he won&amp;#39;t even get a single percent, since, for example, we
-didn&amp;#39;t put the ownership of the domain name into the contract. It is obvious
+such an agreement. I was saying to myself: he wants 70% but he doesn’t
+understand that in reality he won’t even get a single percent, since, for example, we
+didn’t put the ownership of the domain name into the contract. It is obvious
 right from the start that the partner is ready to trust me blindly,
 without even thinking about possible consequences. In the end, all of us, and our
 startups, were losing.&lt;/p&gt;
 
-&lt;p&gt;Don&amp;#39;t get me wrong, trust between partners is a crucial and mandatory element
-of any deal. But you can&amp;#39;t trust me to stand by my words, if there were &lt;em&gt;no words&lt;/em&gt;.
+&lt;p&gt;Don’t get me wrong, trust between partners is a crucial and mandatory element
+of any deal. But you can’t trust me to stand by my words, if there were &lt;em&gt;no words&lt;/em&gt;.
 If we never discussed, for example, how much I get when I quit because
-I&amp;#39;m fed up with you, I will try to get as much as possible and where exactly
+I’m fed up with you, I will try to get as much as possible and where exactly
 that line of 70% goes will be a subject for an ugly debate. And this will
 happen in very different circumstances, where there will be, most probably,
 no love between us or maybe even friendship. In that future fight the one
 who is the most aggressive and cunning will win. Do you really want that
 to be me? Or do you expect it to be you?&lt;/p&gt;
 
-&lt;p&gt;Now I&amp;#39;m a bit older and more experienced. I&amp;#39;ve seen those ugly debates and don&amp;#39;t want them anymore.
-I don&amp;#39;t want the investment of my time and my money to go down the drain. I want
+&lt;p&gt;Now I’m a bit older and more experienced. I’ve seen those ugly debates and don’t want them anymore.
+I don’t want the investment of my time and my money to go down the drain. I want
 to know upfront what exactly will happen with them in a month, a year,
 and a few decades, when I retire and my grandchildren inherit them.&lt;/p&gt;
 
-&lt;p&gt;That&amp;#39;s why I ask all those &amp;quot;offensive&amp;quot; questions upfront. If the other side does
+&lt;p&gt;That’s why I ask all those “offensive” questions upfront. If the other side does
 indeed get offended, I attempt to explain to them what I just said in this article.
-If they don&amp;#39;t understand and still want to marry me out of love,
+If they don’t understand and still want to marry me out of love,
 I walk away. As &lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&quot;&gt;Paul Graham&lt;/a&gt;, a co-founder of Y Combinator,
 &lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&quot;&gt;said&lt;/a&gt;,
-&amp;quot;Most of the disputes I&amp;#39;ve seen between founders could have been avoided if they&amp;#39;d been more careful about
-who they started a company with.&amp;quot; I don&amp;#39;t want to start a business with
+“Most of the disputes I’ve seen between founders could have been avoided if they’d been more careful about
+who they started a company with.” I don’t want to start a business with
 those who are scared of a prenup. I know that in that case
 the divorce will be ugly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">A few days ago, a friend of mine asked me to join him in a new startup. He said that he needed a partner, to help him partially finance the project, promote it, bring in new ideas, and push the business forward. I liked the business idea and wanted to participate. I started to ask questions about our future partnership and attempted to draw a simple partnership agreement. He quickly got offended. He said that he was looking for a real partner, who would share his goals and would never require any papers or lawyers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/run-lola-run.jpg" /></entry><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
 my projects managed by Zerocracy. He claims to be an expert with 10 years
-of hands-on coding experience, $60 hourly rate (we &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;don&amp;#39;t hire&lt;/a&gt; US guys),
+of hands-on coding experience, $60 hourly rate (we &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;don’t hire&lt;/a&gt; US guys),
 and fluent English. Then he joins the project and attempts
 to close a few tickets. But he hardly can. For many reasons. Then he comes back
 and explains why &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;our microtasking methodology&lt;/a&gt;
-doesn&amp;#39;t work, trying to convince me
+doesn’t work, trying to convince me
 that I have to pay him &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;per hour&lt;/a&gt;,
 instead of per result. Here is my answer.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Jamón, Jamón (1992) by Bigas Luna' src='/images/2018/07/jamon-jamon.jpg' longdesc='#97156df6'/&gt;&lt;figcaption id='97156df6'&gt;Jamón, Jamón (1992) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Jamón, Jamón (1992) by Bigas Luna&quot; src=&quot;/images/2018/07/jamon-jamon.jpg&quot; longdesc=&quot;#97156df6&quot; /&gt;&lt;figcaption id=&quot;97156df6&quot;&gt;Jamón, Jamón (1992) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;No matter how bad the methodology is, you do know that &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;we pay&lt;/a&gt;
 for each bug that is found and properly reported, right?
 Check &lt;a href=&quot;http://www.zerocracy.com/policy.html#29&quot;&gt;§29&lt;/a&gt; of our Policy.&lt;/p&gt;
 
-&lt;p&gt;If the Code Base Is Bad, Why Don&amp;#39;t You Report Bugs?&lt;/p&gt;
+&lt;p&gt;If the Code Base Is Bad, Why Don’t You Report Bugs?&lt;/p&gt;
 
 &lt;p&gt;If the Code Base Is Good, Where Are Your Pull Requests?&lt;/p&gt;
 
@@ -651,23 +676,23 @@ Check &lt;a href=&quot;http://www.zerocracy.com/policy.html#29&quot;&gt;§29&lt;
 from bad ones: the amount of money they are making.
 You can make money contributing to the project either by
 1) reporting bugs (when you see problems)
-or 2) submitting pull requests (when you don&amp;#39;t see problems).&lt;/p&gt;
+or 2) submitting pull requests (when you don’t see problems).&lt;/p&gt;
 
 &lt;p&gt;If none of that works for you, you are a bad programmer.&lt;/p&gt;
 
-&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of my projects managed by Zerocracy. He claims to be an expert with 10 years of hands-on coding experience, $60 hourly rate (we don&amp;#39;t hire US guys), and fluent English. Then he joins the project and attempts to close a few tickets. But he hardly can. For many reasons. Then he comes back and explains why our microtasking methodology doesn&amp;#39;t work, trying to convince me that I have to pay him per hour, instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What's Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven&amp;#39;t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
-are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=953355&quot;&gt;claimed&lt;/a&gt; that
-&amp;quot;the non-local variable is a major contributing factor in programs
-which are difficult to understand.&amp;quot; Since then, &lt;a href=&quot;http://wiki.c2.com/?GlobalVariablesAreBad&quot;&gt;many other reasons&lt;/a&gt;
+&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of my projects managed by Zerocracy. He claims to be an expert with 10 years of hands-on coding experience, $60 hourly rate (we don’t hire US guys), and fluent English. Then he joins the project and attempts to close a few tickets. But he hardly can. For many reasons. Then he comes back and explains why our microtasking methodology doesn’t work, trying to convince me that I have to pay him per hour, instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What's Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven’t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
+are evil. It started in 1973 when W. Wulf et al. &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=953355&quot;&gt;claimed&lt;/a&gt; that
+“the non-local variable is a major contributing factor in programs
+which are difficult to understand.” Since then, &lt;a href=&quot;http://wiki.c2.com/?GlobalVariablesAreBad&quot;&gt;many other reasons&lt;/a&gt;
 where suggested to convince programmers to stop using global variables.
 I think &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil&quot;&gt;I read them all&lt;/a&gt;,
-but didn&amp;#39;t find the one that bothers me most of all: composability.
+but didn’t find the one that bothers me most of all: composability.
 In a nutshell, global variables make code difficult or impossible to compose
 in ways which are different from what its original author expected.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='El Chapo, Season 1 (2017) by Silvana Aguirre et al.' src='/images/2018/07/el-chapo.jpg' longdesc='#9e10a0df'/&gt;&lt;figcaption id='9e10a0df'&gt;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&quot; src=&quot;/images/2018/07/el-chapo.jpg&quot; longdesc=&quot;#9e10a0df&quot; /&gt;&lt;figcaption id=&quot;9e10a0df&quot;&gt;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;I was recently writing a web front for &lt;a href=&quot;https://www.zold.io&quot;&gt;Zold&lt;/a&gt; in Ruby,
 on top of &lt;a href=&quot;http://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;.
@@ -693,18 +718,18 @@ To tell the app which TCP port to listen to you have to preconfigure it:&lt;/p&g
 For the purpose of testing this may be a pretty logical requirement.
 For example, since Zold is a distributed network,
 it is necessary to test how a number of servers communicate to each other.
-I can&amp;#39;t do that! There is absolutely no way.
+I can’t do that! There is absolutely no way.
 Because Sinatra is designed with the assumption that only one server may exist in the entire application scope.&lt;/p&gt;
 
-&lt;aside class='youtube'&gt;
-        &lt;a href='https://www.youtube.com/watch?v=FNWyN_Q10TI'&gt;&lt;div class='box'&gt;
-        &lt;img src='https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg' alt='YouTube video #FNWyN_Q10TI'/&gt;
-        &lt;div class='play'&gt;&lt;i class='icon icon-play'&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=FNWyN_Q10TI&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg&quot; alt=&quot;YouTube video #FNWyN_Q10TI&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;/div&gt;&lt;/a&gt;
         &lt;div&gt;What's wrong with global variables? (Webinar #36);
         8 August 2018.&lt;/div&gt;&lt;/aside&gt;
 
-&lt;p&gt;Can this really be fixed? Let&amp;#39;s take a look at &lt;a href=&quot;https://github.com/sinatra/sinatra/&quot;&gt;their code&lt;/a&gt;.
+&lt;p&gt;Can this really be fixed? Let’s take a look at &lt;a href=&quot;https://github.com/sinatra/sinatra/&quot;&gt;their code&lt;/a&gt;.
 Class &lt;code&gt;Sinatra::Base&lt;/code&gt; is essentially a &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;Singleton&lt;/a&gt;,
 which is not supposed to have more than one instance.
 When we call &lt;code&gt;App.set(:port, 8080)&lt;/code&gt;, the value &lt;code&gt;8080&lt;/code&gt; is saved into an attribute of a single instance.
@@ -714,15 +739,15 @@ they are called from.&lt;/p&gt;
 &lt;p&gt;They are not using &lt;a href=&quot;https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/globalvars.html&quot;&gt;true&lt;/a&gt;
 Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;alternatives&lt;/a&gt; are---slipped through their fingers.&lt;/p&gt;
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;alternatives&lt;/a&gt; are—slipped through their fingers.&lt;/p&gt;
 
-&lt;aside class='quote'&gt;While the application is small and its test coverage is low, global variables may not hurt.&lt;/aside&gt;
+&lt;aside class=&quot;quote&quot;&gt;While the application is small and its test coverage is low, global variables may not hurt.&lt;/aside&gt;
 
-&lt;p&gt;Technically speaking, their design is &amp;quot;globally scoped.&amp;quot;
+&lt;p&gt;Technically speaking, their design is “globally scoped.”
 &lt;code&gt;Sinatra::Base&lt;/code&gt; treats the entire application as its scope of visibility.
 No matter who calls it, everything is visible, including what was created
 in previous calls and in previously instantiated objects.
-This &amp;quot;class&amp;quot; is a giant bag of global variables.&lt;/p&gt;
+This “class” is a giant bag of global variables.&lt;/p&gt;
 
 &lt;p&gt;Every global variable is a troublemaker of that kind.
 While the application is small and its test coverage is low, global variables may not hurt.
@@ -733,23 +758,22 @@ singletons, or class variables.&lt;/p&gt;
 &lt;p&gt;My recommendation? Under no circumstances even think about any global variables.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think about global variables? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/oop?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#oop&lt;/a&gt;&lt;/p&gt;--- Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw&quot;&gt;July 15, 2018&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven&amp;#39;t written already about how global variables are evil. It started in 1973 when W.&amp;nbsp;Wulf et al. claimed that &amp;quot;the non-local variable is a major contributing factor in programs which are difficult to understand.&amp;quot; Since then, many other reasons where suggested to convince programmers to stop using global variables. I think I read them all, but didn&amp;#39;t find the one that bothers me most of all: composability. In a nutshell, global variables make code difficult or impossible to compose in ways which are different from what its original author expected.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/el-chapo.jpg" /></entry><entry><title type="html">Are You an Architect?</title><link href="https://www.yegor256.com/2018/06/26/are-you-an-architect.html" rel="alternate" type="text/html" title="Are You an Architect?" /><published>2018-06-26T00:00:00+00:00</published><updated>2018-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/26/are-you-an-architect</id><content type="html" xml:base="https://www.yegor256.com/2018/06/26/are-you-an-architect.html">&lt;p&gt;Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven’t written already about how global variables are evil. It started in 1973 when W. Wulf et al. claimed that “the non-local variable is a major contributing factor in programs which are difficult to understand.” Since then, many other reasons where suggested to convince programmers to stop using global variables. I think I read them all, but didn’t find the one that bothers me most of all: composability. In a nutshell, global variables make code difficult or impossible to compose in ways which are different from what its original author expected.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/el-chapo.jpg" /></entry><entry><title type="html">Are You an Architect?</title><link href="https://www.yegor256.com/2018/06/26/are-you-an-architect.html" rel="alternate" type="text/html" title="Are You an Architect?" /><published>2018-06-26T00:00:00+00:00</published><updated>2018-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/26/are-you-an-architect</id><content type="html" xml:base="https://www.yegor256.com/2018/06/26/are-you-an-architect.html">&lt;p&gt;Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver,
 Kent Beck, in answer to the question
-&amp;quot;What is an architect?&amp;quot; said, according to &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0164121208002057&quot;&gt;Philippe Kruchten&lt;/a&gt;,
-that it is &amp;quot;a new pompous title that programmers demand to have on their business cards
-to justify their sumptuous emoluments.&amp;quot;
+“What is an architect?” said, according to &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0164121208002057&quot;&gt;Philippe Kruchten&lt;/a&gt;,
+that it is “a new pompous title that programmers demand to have on their business cards
+to justify their sumptuous emoluments.”
 Not much has changed since then.
 There is a big difference between a smart programmer and a project architect.
 Here is a list of traits that, I believe, a good architect has.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='No Country for Old Men (2007) by Coen Brothers' src='/images/2018/06/no-country-for-old-men.jpg' longdesc='#3627e4f5'/&gt;&lt;figcaption id='3627e4f5'&gt;No Country for Old Men (2007) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;No Country for Old Men (2007) by Coen Brothers&quot; src=&quot;/images/2018/06/no-country-for-old-men.jpg&quot; longdesc=&quot;#3627e4f5&quot; /&gt;&lt;figcaption id=&quot;3627e4f5&quot;&gt;No Country for Old Men (2007) by Coen Brothers&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;Disclaimer: Even though I haven&amp;#39;t seen a single female software architect in my life,
+&lt;p&gt;Disclaimer: Even though I haven’t seen a single female software architect in my life,
 I have to say for my leftist/feminist readers that in this blog post
-I&amp;#39;m assuming an architect is a man only for the sake of convenience of speech.
+I’m assuming an architect is a man only for the sake of convenience of speech.
 There is no intention to offend anyone.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;He Is Loyal.&lt;/strong&gt;&lt;/p&gt;
@@ -762,13 +786,13 @@ projects at the same time, they have
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;no personal attachments&lt;/a&gt;
 to any piece of code. They worry only about their individual tasks and
 feature branches. The branch is merged? All bets are off. Professional
-developers are &amp;quot;polygamous&amp;quot; and disloyal.&lt;/p&gt;
+developers are “polygamous” and disloyal.&lt;/p&gt;
 
 &lt;p&gt;An architect, however, is a different creature. He stays with the project
 even after it runs out of funds, loses the last programmer, and
-proves that the architecture is a total mess that can&amp;#39;t handle even
+proves that the architecture is a total mess that can’t handle even
 a fraction of the traffic it was supposed to work under. The architect
-stays and says &amp;quot;No worries, we&amp;#39;ll get through, no matter what!&amp;quot;
+stays and says “No worries, we’ll get through, no matter what!”
 How to find such a guy and how to motivate him are different questions,
 maybe for another blog post.&lt;/p&gt;
 
@@ -779,21 +803,21 @@ high performance, reliability, security and even maintainability are all
 very important things to worry about. However, a good architect knows that
 all these can be resolved and achieved by programmers, if they are properly
 hired, motivated, organized and controlled. How to hire, motivate, organize
-and control them---that&amp;#39;s what a good architect worries about.&lt;/p&gt;
+and control them—that’s what a good architect worries about.&lt;/p&gt;
 
 &lt;p&gt;He knows that process comes first, people next.&lt;/p&gt;
 
-&lt;aside class='quote'&gt;An architect puts discipline on top of everything else, constantly inventing new rules and enforcing them.&lt;/aside&gt;
+&lt;aside class=&quot;quote&quot;&gt;An architect puts discipline on top of everything else, constantly inventing new rules and enforcing them.&lt;/aside&gt;
 
 &lt;p&gt;However, this is not what most software experts think. For example,
-according to Alistair Cockburn&amp;#39;s article &lt;a href=&quot;https://ieeexplore.ieee.org/document/963450/&quot;&gt;&lt;em&gt;Agile Software Development: The People Factor&lt;/em&gt;&lt;/a&gt;
+according to Alistair Cockburn’s article &lt;a href=&quot;https://ieeexplore.ieee.org/document/963450/&quot;&gt;&lt;em&gt;Agile Software Development: The People Factor&lt;/em&gt;&lt;/a&gt;
 published in IEEE Computer in 2001:
-&amp;quot;If the people on the project are good
+“If the people on the project are good
 enough, they can use almost any process
 and accomplish their assignment. If they
 are not good enough, no process will
-repair their inadequacy---&amp;#39;people trump
-process&amp;#39; is one way to say this.&amp;quot; It is acceptable if a programmer
+repair their inadequacy—‘people trump
+process’ is one way to say this.” It is acceptable if a programmer
 thinks like that, but not an architect.&lt;/p&gt;
 
 &lt;p&gt;An architect puts discipline on top of everything else, constantly inventing
@@ -802,15 +826,15 @@ and enforcing them. Moreover, he is not only making others obey,
 but also following the rules himself. Here, for example, are the rules to enforce:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;No changes without a code review;&lt;/li&gt;
-&lt;li&gt;Every idea starts with a ticket;&lt;/li&gt;
-&lt;li&gt;The master branch is &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;read only&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Static analysis is &lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;mandatory&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;No &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;singletons&lt;/a&gt;,
+  &lt;li&gt;No changes without a code review;&lt;/li&gt;
+  &lt;li&gt;Every idea starts with a ticket;&lt;/li&gt;
+  &lt;li&gt;The master branch is &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;read only&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;Static analysis is &lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;mandatory&lt;/a&gt;;&lt;/li&gt;
+  &lt;li&gt;No &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;singletons&lt;/a&gt;,
 no &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getter/setters&lt;/a&gt;,
 and &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;so on&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Unit testing is mandatory for all new changes;&lt;/li&gt;
-&lt;li&gt;No &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;informal discussions&lt;/a&gt; outside of tickets.&lt;/li&gt;
+  &lt;li&gt;Unit testing is mandatory for all new changes;&lt;/li&gt;
+  &lt;li&gt;No &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;informal discussions&lt;/a&gt; outside of tickets.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Each project has its own set of rules. The list above is a subset of what we
@@ -818,7 +842,7 @@ have on our projects at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zeroc
 architect thinks about the rules first and about the architecture second.&lt;/p&gt;
 
 &lt;p&gt;I totally agree with Len Bass that
-&amp;quot;the architecture should be the product of a single architect,&amp;quot;
+“the architecture should be the product of a single architect,”
 as he said in his book &lt;a href=&quot;https://amzn.to/2MvHgFY&quot;&gt;&lt;em&gt;Software Architecture in Practice&lt;/em&gt;&lt;/a&gt;.
 The question, however, is how exactly the architect will create the
 product: either in solo mode, making all technical decisions alone,
@@ -832,12 +856,12 @@ but here it fits well).&lt;/p&gt;
 &lt;p&gt;Matthew McBride said in his article
 &lt;a href=&quot;https://cacm.acm.org/magazines/2007/5/5663-the-software-architect/abstract&quot;&gt;&lt;em&gt;The Software Architect&lt;/em&gt;&lt;/a&gt;,
 published in CACM in 2007, that
-&amp;quot;Without strong supervision from the software architect,
+“Without strong supervision from the software architect,
 projects and attempted solutions tend to fall apart due to the
-weight of unmitigated complexity.&amp;quot; The word &lt;em&gt;strong&lt;/em&gt; is what is important
+weight of unmitigated complexity.” The word &lt;em&gt;strong&lt;/em&gt; is what is important
 to emphasize here.&lt;/p&gt;
 
-&lt;aside class='quote'&gt;The strength of an architect is in the ability to say &quot;No&quot; when it's difficult to do so.&lt;/aside&gt;
+&lt;aside class=&quot;quote&quot;&gt;The strength of an architect is in the ability to say &quot;No&quot; when it's difficult to do so.&lt;/aside&gt;
 
 &lt;p&gt;What does strength mean in this context? An ability to stay in the office two days
 straight with just pizza and cola? An ability to multiply six-digit numbers
@@ -845,21 +869,21 @@ in memory? An ability to memorize the purpose and design of all classes
 and methods? An ability to stay in a meeting with investors for three hours
 without checking Facebook even once? Not likely.&lt;/p&gt;
 
-&lt;p&gt;The strength of an architect is in the ability to say &amp;quot;No&amp;quot; when it&amp;#39;s difficult to do so.
+&lt;p&gt;The strength of an architect is in the ability to say “No” when it’s difficult to do so.
 For example:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&amp;quot;No, I will &lt;a href=&quot;/2015/02/09/serious-code-reviewer.html&quot;&gt;not merge&lt;/a&gt; your pull request&amp;quot;;&lt;/li&gt;
-&lt;li&gt;&amp;quot;No, we will not implement this feature&amp;quot;;&lt;/li&gt;
-&lt;li&gt;&amp;quot;No, you do not deserve a promotion yet&amp;quot;;&lt;/li&gt;
-&lt;li&gt;&amp;quot;No, your code is not as good as we expect&amp;quot;;&lt;/li&gt;
-&lt;li&gt;&amp;quot;No, this build is not stable enough to be released&amp;quot;;&lt;/li&gt;
-&lt;li&gt;&amp;quot;No, you will not go on vacation this month.&amp;quot;&lt;/li&gt;
+  &lt;li&gt;“No, I will &lt;a href=&quot;/2015/02/09/serious-code-reviewer.html&quot;&gt;not merge&lt;/a&gt; your pull request”;&lt;/li&gt;
+  &lt;li&gt;“No, we will not implement this feature”;&lt;/li&gt;
+  &lt;li&gt;“No, you do not deserve a promotion yet”;&lt;/li&gt;
+  &lt;li&gt;“No, your code is not as good as we expect”;&lt;/li&gt;
+  &lt;li&gt;“No, this build is not stable enough to be released”;&lt;/li&gt;
+  &lt;li&gt;“No, you will not go on vacation this month.”&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;There are many other instances of &amp;quot;No&amp;quot; which can easily turn an architect into
+&lt;p&gt;There are many other instances of “No” which can easily turn an architect into
 a hated figure, but this is what his job is: to be the bad guy. This is why
-he has to be strong---to handle it all calmly and continue leading
+he has to be strong—to handle it all calmly and continue leading
 the project forward, toward his own well-defined technical goals.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;He Is Abstract.&lt;/strong&gt;&lt;/p&gt;
@@ -874,7 +898,7 @@ when talking about details.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;He Is Social.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Software is a product of people. No matter how great the architect is,
-if he can&amp;#39;t find the right people to implement his ideas and to bring
+if he can’t find the right people to implement his ideas and to bring
 back new ideas, he is doomed to fail. The key quality of the architect
 is the ability to work with people: recruit, motivate, and control their
 results. &lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;Social skills&lt;/a&gt;
@@ -883,10 +907,10 @@ successful in that, especially in finding new programmers and engaging
 them on the project. What exactly does this mean? Well, here are some examples:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;High visibility in social networks;&lt;/li&gt;
-&lt;li&gt;A long list of previous projects and teams;&lt;/li&gt;
-&lt;li&gt;Active membership in professional groups;&lt;/li&gt;
-&lt;li&gt;Publicity in the blogosphere.&lt;/li&gt;
+  &lt;li&gt;High visibility in social networks;&lt;/li&gt;
+  &lt;li&gt;A long list of previous projects and teams;&lt;/li&gt;
+  &lt;li&gt;Active membership in professional groups;&lt;/li&gt;
+  &lt;li&gt;Publicity in the blogosphere.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;In other words, a good architect is the one with a big group of
@@ -896,38 +920,38 @@ talk &lt;a href=&quot;https://www.youtube.com/watch?v=GS45LzE3LPQ&quot;&gt;&lt;e
 
 &lt;p&gt;&lt;strong&gt;He Is Brave.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;A good architect says many times a day: &amp;quot;It is my fault.&amp;quot;
-If an architect doesn&amp;#39;t have a habit of saying that frequently, he is not
+&lt;p&gt;A good architect says many times a day: “It is my fault.”
+If an architect doesn’t have a habit of saying that frequently, he is not
 a good architect. He is just a programmer who is afraid of responsibility
 and authority.&lt;/p&gt;
 
-&lt;p&gt;The golden rule of a good manager is: &amp;quot;Success is yours, faults are mine.&amp;quot;
+&lt;p&gt;The golden rule of a good manager is: “Success is yours, faults are mine.”
 This is the attitude a good architect has to express to his team.
 When they win, he will always find a way to celebrate and reward them.
 When they fail, he will take full responsibility for the failure.
-Because it&amp;#39;s his team, he found them, he motivated them, he controlled them,
-and he didn&amp;#39;t punish them properly. That&amp;#39;s why they failed. First of all,
-it&amp;#39;s his fault.&lt;/p&gt;
+Because it’s his team, he found them, he motivated them, he controlled them,
+and he didn’t punish them properly. That’s why they failed. First of all,
+it’s his fault.&lt;/p&gt;
 
-&lt;aside class='quote'&gt;He didn't punish them properly. That's why they failed. First of all, it's his fault.&lt;/aside&gt;
+&lt;aside class=&quot;quote&quot;&gt;He didn't punish them properly. That's why they failed. First of all, it's his fault.&lt;/aside&gt;
 
 &lt;p&gt;What will he do with this fault is a separate question. Maybe he will
-train and coach someone, maybe he&amp;#39;ll enforce some rules more aggressively, maybe
+train and coach someone, maybe he’ll enforce some rules more aggressively, maybe
 he will even &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;give someone his card&lt;/a&gt;.
-It&amp;#39;s up to the architect. But for the
+It’s up to the architect. But for the
 outside world he will always be the guilty one and the team must know that.
 If they know that, they will do everything to not let the architect down.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;He Is Simple.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;quot;Simplicity is a great virtue,&amp;quot; said Edsger Dijkstra in 1984.
-For a programmer it&amp;#39;s a virtue, for an architect it&amp;#39;s a survival skill.
-An architect who can&amp;#39;t explain his ideas in simple words, easily
+&lt;p&gt;“Simplicity is a great virtue,” said Edsger Dijkstra in 1984.
+For a programmer it’s a virtue, for an architect it’s a survival skill.
+An architect who can’t explain his ideas in simple words, easily
 understood by other programmers, is not an architect. No matter how
-smart he is, no matter how bright his ideas are. If they can&amp;#39;t be
+smart he is, no matter how bright his ideas are. If they can’t be
 delivered in a simple form, they are worth nothing.&lt;/p&gt;
 
-&lt;p&gt;&amp;quot;If I don&amp;#39;t understand you, it&amp;#39;s your fault&amp;quot;
+&lt;p&gt;“If I don’t understand you, it’s your fault”
 &lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;said&lt;/a&gt; Yegor Bugayenko in 2015.
 A good architect remembers that.&lt;/p&gt;
 
@@ -936,8 +960,8 @@ A good architect remembers that.&lt;/p&gt;
 &lt;p&gt;Anthony Langsworth in his piece
 &lt;a href=&quot;https://goo.gl/vGN61n&quot;&gt;&lt;em&gt;Should Software Architects Write Code?&lt;/em&gt;&lt;/a&gt; argues
 in favor of code-writing architects and in particular says that
-&amp;quot;Understanding code means the architect can use his or her judgment
-more effectively rather than rely on which developer is more persuasive.&amp;quot;
+“Understanding code means the architect can use his or her judgment
+more effectively rather than rely on which developer is more persuasive.”
 Indeed, an architect that is only capable of talking and
 &lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;drawing&lt;/a&gt;
 is a weak architect that will sooner or later let the team and the
@@ -961,44 +985,44 @@ In most cases he fails miserably. But he always gets back on his feet
 and tries again. Look for the guy with ambitions if you want to hire
 an architect, not just yet another programmer.&lt;/p&gt;
 
-&lt;aside class='quote'&gt;An architect wants to be a man of power, not just a smart technical engineer.&lt;/aside&gt;
+&lt;aside class=&quot;quote&quot;&gt;An architect wants to be a man of power, not just a smart technical engineer.&lt;/aside&gt;
 
 &lt;p&gt;Michael Keeling, in his recent book
 &lt;a href=&quot;https://amzn.to/2tgR8uv&quot;&gt;&lt;em&gt;Design It!: From Programmer to Software Architect&lt;/em&gt;&lt;/a&gt; (worth reading), says:
-&amp;quot;On some teams, architect is an official team role. On other teams,
-there is no explicit role and teammates share the architect&amp;#39;s
-responsibilities. Some teams say they don&amp;#39;t have an architect, but
-if you look closely, someone is fulfilling the architect&amp;#39;s
-duties without realizing it. If your team doesn&amp;#39;t have an architect, congratulations,
-you&amp;#39;ve got the job!&amp;quot;&lt;/p&gt;
+“On some teams, architect is an official team role. On other teams,
+there is no explicit role and teammates share the architect’s
+responsibilities. Some teams say they don’t have an architect, but
+if you look closely, someone is fulfilling the architect’s
+duties without realizing it. If your team doesn’t have an architect, congratulations,
+you’ve got the job!”&lt;/p&gt;
 
-&lt;p&gt;Michael&amp;#39;s point is that the architect&amp;#39;s position is rarely given to someone
+&lt;p&gt;Michael’s point is that the architect’s position is rarely given to someone
 voluntarily. Instead, an architect has to fight for it and
-demand it. Sometimes even going straight ahead and saying &amp;quot;I want to be
-the architect!&amp;quot;&lt;/p&gt;
+demand it. Sometimes even going straight ahead and saying “I want to be
+the architect!”&lt;/p&gt;
 
-&lt;p&gt;What is important is that it will not sound like &amp;quot;I want to architect this.&amp;quot;
+&lt;p&gt;What is important is that it will not sound like “I want to architect this.”
 That would be the voice of a programmer, not an architect.
 An architect wants to be a man of power, not just a smart technical engineer.
-So, it&amp;#39;s way more about a title for him, rather that just his actual responsibilities.&lt;/p&gt;
+So, it’s way more about a title for him, rather that just his actual responsibilities.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;He Is Expensive&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Yes, the money question &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;again&lt;/a&gt;.
 A good architect is expensive.
-If he is not, he is not a good architect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver, Kent Beck, in answer to the question &amp;quot;What is an architect?&amp;quot; said, according to Philippe Kruchten, that it is &amp;quot;a new pompous title that programmers demand to have on their business cards to justify their sumptuous emoluments.&amp;quot; Not much has changed since then. There is a big difference between a smart programmer and a project architect. Here is a list of traits that, I believe, a good architect has.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/no-country-for-old-men.jpg" /></entry><entry><title type="html">Simplified GitHub Login for a Ruby Web App</title><link href="https://www.yegor256.com/2018/06/19/glogin.html" rel="alternate" type="text/html" title="Simplified GitHub Login for a Ruby Web App" /><published>2018-06-19T00:00:00+00:00</published><updated>2018-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/19/glogin</id><content type="html" xml:base="https://www.yegor256.com/2018/06/19/glogin.html">&lt;p&gt;You know what &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;
-login is, right? It&amp;#39;s when your users click &amp;quot;login&amp;quot;
+If he is not, he is not a good architect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver, Kent Beck, in answer to the question “What is an architect?” said, according to Philippe Kruchten, that it is “a new pompous title that programmers demand to have on their business cards to justify their sumptuous emoluments.” Not much has changed since then. There is a big difference between a smart programmer and a project architect. Here is a list of traits that, I believe, a good architect has.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/no-country-for-old-men.jpg" /></entry><entry><title type="html">Simplified GitHub Login for a Ruby Web App</title><link href="https://www.yegor256.com/2018/06/19/glogin.html" rel="alternate" type="text/html" title="Simplified GitHub Login for a Ruby Web App" /><published>2018-06-19T00:00:00+00:00</published><updated>2018-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/19/glogin</id><content type="html" xml:base="https://www.yegor256.com/2018/06/19/glogin.html">&lt;p&gt;You know what &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;
+login is, right? It’s when your users click “login”
 and get redirected to Facebook, Twitter, Google, or some other
 website which then identifies them. Then they go back to your website and you
-know who they are. It&amp;#39;s very convenient for them. It&amp;#39;s convenient for you
-too, since you don&amp;#39;t need to implement the login functionality and don&amp;#39;t
+know who they are. It’s very convenient for them. It’s convenient for you
+too, since you don’t need to implement the login functionality and don’t
 need to keep their credentials in a database. I created a simple
 &lt;a href=&quot;https://github.com/yegor256/glogin&quot;&gt;Ruby gem&lt;/a&gt;
 to simplify this operation for GitHub only. Here is how it works.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='The Savages (2007) by Tamara Jenkins' src='/images/2018/06/savages.jpg' longdesc='#0d3acec9'/&gt;&lt;figcaption id='0d3acec9'&gt;The Savages (2007) by Tamara Jenkins&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Savages (2007) by Tamara Jenkins&quot; src=&quot;/images/2018/06/savages.jpg&quot; longdesc=&quot;#0d3acec9&quot; /&gt;&lt;figcaption id=&quot;0d3acec9&quot;&gt;The Savages (2007) by Tamara Jenkins&lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;First, you will have to register your application in GitHub,
 as &lt;a href=&quot;https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/&quot;&gt;this page&lt;/a&gt;
@@ -1007,101 +1031,117 @@ explains. This is how it works with
 but you can do something similar in any framework.&lt;/p&gt;
 
 &lt;p&gt;First, somewhere in the global space, before the app starts:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;glogin&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GLogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# You get this from GitHub, when you register your&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# web application:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;client_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# Make sure this value is coming from a secure&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# place and is NOT visible in the source code:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;client_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# This is what you will register in GitHub as an&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# authorization callback URL:&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://www.example.com/github-callback&amp;#39;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;require 'glogin'
+configure do
+  set :glogin, GLogin::Auth.new(
+    # You get this from GitHub, when you register your
+    # web application:
+    client_id,
+    # Make sure this value is coming from a secure
+    # place and is NOT visible in the source code:
+    client_secret,
+    # This is what you will register in GitHub as an
+    # authorization callback URL:
+    'http://www.example.com/github-callback'
+  )
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Next, for all web pages we need to parse a cookie, if it exists,
 and convert it into a user:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sinatra/cookies&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/*&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GLogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Cookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Closed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# This must be some long text to be used to&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# encrypt the value in the cookie:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;encryption_secret&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_user&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;rescue&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;OpenSSL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Cipher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;CipherError&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;
-      &lt;span class=&quot;c1&quot;&gt;# Nothing happens here, the user is not logged in.&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;require 'sinatra/cookies'
+before '/*' do
+  if cookies[:glogin]
+    begin
+      @user = GLogin::Cookie::Closed.new(
+        cookies[:glogin],
+        # This must be some long text to be used to
+        # encrypt the value in the cookie:
+        encryption_secret
+      ).to_user
+    rescue OpenSSL::Cipher::CipherError =&amp;gt; _
+      # Nothing happens here, the user is not logged in.
+      cookies.delete(:glogin)
+    end
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;If the &lt;code&gt;glogin&lt;/code&gt; cookie comes in and contains valid data,
 a local variable &lt;code&gt;@user&lt;/code&gt; will be set to something like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;yegor256&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;http://...&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;{ login: 'yegor256', avatar: 'http://...' }
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Next, we need a URL for GitHub OAuth callback:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/github-callback&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;GLogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Cookie&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Open&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:code&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# The same encryption secret that we were using above:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;encryption_secret&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;redirect&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;get '/github-callback' do
+  cookies[:glogin] = GLogin::Cookie::Open.new(
+    settings.glogin.user(params[:code]),
+    # The same encryption secret that we were using above:
+    encryption_secret
+  ).to_s
+  redirect to('/')
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Finally, we need a logout URL:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/logout&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;redirect&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;get '/logout' do
+  cookies.delete(:glogin)
+  redirect to('/')
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;One more thing is the login URL you will need for your front page. Here
 it is:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;login_uri&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;settings.glogin.login_uri
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;For unit testing you can just provide an empty string as a &lt;code&gt;secret&lt;/code&gt; for
 &lt;code&gt;GLogin::Cookie::Open&lt;/code&gt; and &lt;code&gt;GLogin::Cookie::Closed&lt;/code&gt; and the encryption will be disabled:
 whatever comes from the cookie will be trusted. For testing
 it will be convenient to provide a user name in a query string, like this:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;http://localhost:9292/?glogin=tester
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To enable that, it&amp;#39;s recommended you add this line (see how
+
+&lt;pre&gt;&lt;code&gt;http://localhost:9292/?glogin=tester
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To enable that, it’s recommended you add this line (see how
 it works in &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;zold-io/wts.zold.io&lt;/a&gt;):&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sinatra/cookies&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/*&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cookies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:glogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# same as above&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;require 'sinatra/cookies'
+before '/*' do
+  cookies[:glogin] = params[:glogin] if params[:glogin]
+  if cookies[:glogin]
+    # same as above
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;I use this gem in
 &lt;a href=&quot;https://github.com/yegor256/sixnines&quot;&gt;sixnines&lt;/a&gt;,
 &lt;a href=&quot;https://github.com/yegor256/0pdd&quot;&gt;0pdd&lt;/a&gt;,
 and &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;Zold&lt;/a&gt;
-web apps on top of Sinatra (all open source).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">You know what OAuth login is, right? It&amp;#39;s when your users click &amp;quot;login&amp;quot; and get redirected to Facebook, Twitter, Google, or some other website which then identifies them. Then they go back to your website and you know who they are. It&amp;#39;s very convenient for them. It&amp;#39;s convenient for you too, since you don&amp;#39;t need to implement the login functionality and don&amp;#39;t need to keep their credentials in a database. I created a simple Ruby gem to simplify this operation for GitHub only. Here is how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/savages.jpg" /></entry><entry><title type="html">Object Validation: to Defer or Not?</title><link href="https://www.yegor256.com/2018/05/29/object-validation.html" rel="alternate" type="text/html" title="Object Validation: to Defer or Not?" /><published>2018-05-29T00:00:00+00:00</published><updated>2018-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/29/object-validation</id><content type="html" xml:base="https://www.yegor256.com/2018/05/29/object-validation.html">&lt;!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 --&gt;
+web apps on top of Sinatra (all open source).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">You know what OAuth login is, right? It’s when your users click “login” and get redirected to Facebook, Twitter, Google, or some other website which then identifies them. Then they go back to your website and you know who they are. It’s very convenient for them. It’s convenient for you too, since you don’t need to implement the login functionality and don’t need to keep their credentials in a database. I created a simple Ruby gem to simplify this operation for GitHub only. Here is how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/savages.jpg" /></entry><entry><title type="html">Object Validation: to Defer or Not?</title><link href="https://www.yegor256.com/2018/05/29/object-validation.html" rel="alternate" type="text/html" title="Object Validation: to Defer or Not?" /><published>2018-05-29T00:00:00+00:00</published><updated>2018-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/29/object-validation</id><content type="html" xml:base="https://www.yegor256.com/2018/05/29/object-validation.html">&lt;!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 --&gt;
 
 &lt;p&gt;I &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;said earlier&lt;/a&gt;
 that constructors must be code-free and do nothing
 aside from attribute initialization. Since then, the most frequently
 asked &lt;a href=&quot;https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622&quot;&gt;question&lt;/a&gt;
-is: What about validation of arguments? If they are &amp;quot;broken,&amp;quot;
-what is the point of creating an object in an &amp;quot;invalid&amp;quot; state?
-Such an object will fail later, at an unexpected moment. Isn&amp;#39;t it
+is: What about validation of arguments? If they are “broken,”
+what is the point of creating an object in an “invalid” state?
+Such an object will fail later, at an unexpected moment. Isn’t it
 better to throw an exception at the very moment of instantiation? To fail fast,
 so to speak? Here is what I think.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;figure class='jb_picture'&gt;&lt;img itemprop='image' alt='Punching the Clown (2009) by Gregori Viens' src='/images/2018/05/punching-the-clown.jpg' longdesc='#ec207931'/&gt;&lt;figcaption id='ec207931'&gt;Punching the Clown (2009) by Gregori Viens&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Punching the Clown (2009) by Gregori Viens&quot; src=&quot;/images/2018/05/punching-the-clown.jpg&quot; longdesc=&quot;#ec207931&quot; /&gt;&lt;figcaption id=&quot;ec207931&quot;&gt;Punching the Clown (2009) by Gregori Viens&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;Let&amp;#39;s start with this Ruby code:&lt;/p&gt;
+&lt;p&gt;Let’s start with this Ruby code:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -1119,14 +1159,22 @@ so to speak? Here is what I think.&lt;/p&gt;
 &lt;p&gt;There are a number of ways to abuse this class:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Pass &lt;code&gt;nil&lt;/code&gt; to the ctor instead of a file name;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Pass something else, which is not &lt;code&gt;String&lt;/code&gt;;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Pass a file that doesn&amp;#39;t exist;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Pass a directory instead of a file.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pass &lt;code&gt;nil&lt;/code&gt; to the ctor instead of a file name;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pass something else, which is not &lt;code&gt;String&lt;/code&gt;;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pass a file that doesn’t exist;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pass a directory instead of a file.&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Do you see the difference between these four mistakes we can make?
-Let&amp;#39;s see how our class can protect itself from each of them:&lt;/p&gt;
+Let’s see how our class can protect itself from each of them:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -1142,39 +1190,39 @@ Let&amp;#39;s see how our class can protect itself from each of them:&lt;/p&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The first two potential mistakes were filtered out
-in the constructor, while the other two---later, in the method.
+in the constructor, while the other two—later, in the method.
 Why did I do it this way? Why not put all of them into the constructor?&lt;/p&gt;
 
 &lt;p&gt;Because the first two compromise &lt;a href=&quot;/2014/12/09/immutable-object-state-and-behavior.html&quot;&gt;object state&lt;/a&gt;,
-while with the other two---its runtime behavior. You remember that an
+while with the other two—its runtime behavior. You remember that an
 &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt; is a representative of
 a set of other objects it encapsulates, called attributes. The object of
-class &lt;code&gt;Users&lt;/code&gt; can&amp;#39;t &lt;em&gt;represent&lt;/em&gt; &lt;code&gt;nil&lt;/code&gt; or a number. It can only represent
+class &lt;code&gt;Users&lt;/code&gt; can’t &lt;em&gt;represent&lt;/em&gt; &lt;code&gt;nil&lt;/code&gt; or a number. It can only represent
 a file with a name of type &lt;code&gt;String&lt;/code&gt;. On the other hand, what that file
-contains and whether it really is a file---doesn&amp;#39;t make the state invalid.
+contains and whether it really is a file—doesn’t make the state invalid.
 It only causes trouble for the behavior.&lt;/p&gt;
 
-&lt;p&gt;Even though the difference may look subtle, it&amp;#39;s obvious. There are
+&lt;p&gt;Even though the difference may look subtle, it’s obvious. There are
 two phases of interaction with the encapsulated object: &lt;em&gt;connecting&lt;/em&gt; and &lt;em&gt;talking&lt;/em&gt;.&lt;/p&gt;
 
-&lt;aside class='youtube'&gt;
-        &lt;a href='https://www.youtube.com/watch?v=-drZbHxydMc'&gt;&lt;div class='box'&gt;
-        &lt;img src='https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg' alt='YouTube video #-drZbHxydMc'/&gt;
-        &lt;div class='play'&gt;&lt;i class='icon icon-play'&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=-drZbHxydMc&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg&quot; alt=&quot;YouTube video #-drZbHxydMc&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;/div&gt;&lt;/a&gt;
         &lt;div&gt;When do you validate your objects? (Webinar #35);
         4 July 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;First, we encapsulate the &lt;code&gt;file&lt;/code&gt; and want to be sure that it really is
-a file. We are not yet talking to it, we don&amp;#39;t want it to work for us yet,
+a file. We are not yet talking to it, we don’t want it to work for us yet,
 we just want to make sure it really &lt;em&gt;is&lt;/em&gt; an object that we will be able to talk
-to in the near future. If it&amp;#39;s &lt;code&gt;nil&lt;/code&gt; or a &lt;code&gt;float&lt;/code&gt;, we will have problems
-in the future, for sure. That&amp;#39;s why we raise an exception from the constructor.&lt;/p&gt;
+to in the near future. If it’s &lt;code&gt;nil&lt;/code&gt; or a &lt;code&gt;float&lt;/code&gt;, we will have problems
+in the future, for sure. That’s why we raise an exception from the constructor.&lt;/p&gt;
 
 &lt;p&gt;Then the second phase is talking, where we delegate control to the object
 and expect it to behave correctly. At this phase we may have other validation
 procedures, in order to make sure our interaction will go smoothly.
-It&amp;#39;s important to mention that these validations are very situational.
+It’s important to mention that these validations are very situational.
 We may call &lt;code&gt;names()&lt;/code&gt; multiple times and every time have a different
 situation with the file on disc. To begin with it may not exist, while in a few seconds
 it will be ready and available for reading.&lt;/p&gt;
@@ -1185,8 +1233,8 @@ In Java, for example,
 we would not need to check the type of &lt;code&gt;file&lt;/code&gt;, the compiler would catch
 that error earlier. In Kotlin we would be able to get rid of the NULL
 check, thanks to their &lt;a href=&quot;https://kotlinlang.org/docs/reference/null-safety.html&quot;&gt;Null Safety&lt;/a&gt; feature.
-Ruby is less powerful than those languages, that&amp;#39;s why we have to validate &amp;quot;manually.&amp;quot;&lt;/p&gt;
+Ruby is less powerful than those languages, that’s why we have to validate “manually.”&lt;/p&gt;
 
 &lt;p&gt;Thus, to summarize, validating in constructors is &lt;em&gt;not&lt;/em&gt; a bad idea, provided
 the validations are &lt;em&gt;not touching the objects&lt;/em&gt; but only confirm that they are
-good enough to work with later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">I said earlier that constructors must be code-free and do nothing aside from attribute initialization. Since then, the most frequently asked question is: What about validation of arguments? If they are &amp;quot;broken,&amp;quot; what is the point of creating an object in an &amp;quot;invalid&amp;quot; state? Such an object will fail later, at an unexpected moment. Isn&amp;#39;t it better to throw an exception at the very moment of instantiation? To fail fast, so to speak? Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/punching-the-clown.jpg" /></entry></feed>
+good enough to work with later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">I said earlier that constructors must be code-free and do nothing aside from attribute initialization. Since then, the most frequently asked question is: What about validation of arguments? If they are “broken,” what is the point of creating an object in an “invalid” state? Such an object will fail later, at an unexpected moment. Isn’t it better to throw an exception at the very moment of instantiation? To fail fast, so to speak? Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/punching-the-clown.jpg" /></entry></feed>

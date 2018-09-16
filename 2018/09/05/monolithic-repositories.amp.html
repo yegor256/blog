@@ -78,7 +78,7 @@ include fewer than 50K lines of code.
       <p>We all keep our code in <del>Git</del>
 <a href="https://en.wikipedia.org/wiki/Version_control">version control</a> repositories.
 The question is whether we should create a new repository for each
-new module or try to keep as much as possible in a single so called "monolithic" repo.
+new module or try to keep as much as possible in a single so called “monolithic” repo.
 Market leaders, like <a href="https://code.fb.com/core-data/scaling-mercurial-at-facebook/">Facebook</a>
 and <a href="https://www.infoq.com/presentations/Development-at-Google">Google</a>,
 advocate the second approach. I believe they are wrong.</p>
@@ -87,7 +87,7 @@ advocate the second approach. I believe they are wrong.</p>
 
 <amp-img src="/images/2018/09/funny-games.jpg" alt="Funny Games (2007) by Michael Haneke" height="687" width="1270" layout="responsive"></amp-img>
 
-<p>Let's use the following JavaScript function as an example.
+<p>Let’s use the following JavaScript function as an example.
 It downloads a JSON document from a <a href="http://www.zold.io">Zold</a>
 node (using <a href="https://jquery.com/">jQuery</a>)
 and places part of its content on the HTML page.
@@ -106,7 +106,7 @@ function main() {
   });
 }</pre>
 
-<p>Pretty obvious, isn't it? Just a single <code>main.js</code> file which does everything we need.
+<p>Pretty obvious, isn’t it? Just a single <code>main.js</code> file which does everything we need.
 We simply add it to the HTML and it works:</p>
 
 <pre>&lt;html&gt;
@@ -167,7 +167,7 @@ which have to be loaded together into the target HTML:</p>
 <a href="https://ai.google/research/pubs/pub45424">Google</a>,
 <a href="https://blog.digitalocean.com/taming-your-go-dependencies/">Digital Ocean</a>
 and <a href="https://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/">Mozilla</a>
-don't think so.</p>
+don’t think so.</p>
 
 <p>I disagree.</p>
 
@@ -176,45 +176,45 @@ new standalone <a href="https://github.com/yegor256/colorizejs">jQuery plugin</a
 Here is what I did:</p>
 
 <ul>
-<li>Created a new GitHub repo <a href="https://github.com/yegor256/colorizejs">yegor256/colorizejs</a>;</li>
-<li>Read the <a href="https://learn.jquery.com/plugins/basic-plugin-creation/">instructions</a>;</li>
-<li>Did some research of jQuery plugins, studied a few examples;</li>
-<li>Found out that most of them used <a href="https://gulpjs.com/">Gulp</a>, which I've never heard of;</li>
-<li>Decided to use <a href="https://www.npmjs.com/">npm</a> for JavaScript packaging (what else, right?);</li>
-<li>Created <a href="https://github.com/yegor256/colorizejs/blob/master/package.json"><code>package.json</code></a> for npm;</li>
-<li>Renamed GitHub repo to <code>colorizejs</code> when I found out that npm package
+  <li>Created a new GitHub repo <a href="https://github.com/yegor256/colorizejs">yegor256/colorizejs</a>;</li>
+  <li>Read the <a href="https://learn.jquery.com/plugins/basic-plugin-creation/">instructions</a>;</li>
+  <li>Did some research of jQuery plugins, studied a few examples;</li>
+  <li>Found out that most of them used <a href="https://gulpjs.com/">Gulp</a>, which I’ve never heard of;</li>
+  <li>Decided to use <a href="https://www.npmjs.com/">npm</a> for JavaScript packaging (what else, right?);</li>
+  <li>Created <a href="https://github.com/yegor256/colorizejs/blob/master/package.json"><code>package.json</code></a> for npm;</li>
+  <li>Renamed GitHub repo to <code>colorizejs</code> when I found out that npm package
 <a href="https://www.npmjs.com/package/colorize"><code>colorize</code></a> already exists;</li>
-<li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.travis.yml"><code>.travis.yml</code></a> for <a href="https://travis-ci.org/">Travis</a>;</li>
-<li>Created a <a href="https://github.com/yegor256/colorizejs/blob/master/README.md">README.md</a> and explained how to use it and install it;</li>
-<li>Decided to use the MIT license and created <a href="https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt">LICENSE.txt</a>;</li>
-<li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.pdd">PDD</a> for
+  <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.travis.yml"><code>.travis.yml</code></a> for <a href="https://travis-ci.org/">Travis</a>;</li>
+  <li>Created a <a href="https://github.com/yegor256/colorizejs/blob/master/README.md">README.md</a> and explained how to use it and install it;</li>
+  <li>Decided to use the MIT license and created <a href="https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt">LICENSE.txt</a>;</li>
+  <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.pdd">PDD</a> for
 <a href="/2017/04/05/pdd-in-action.html">puzzles</a> automated collection;</li>
-<li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.rultor.yml"><code>.rultor.yml</code></a> for
+  <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.rultor.yml"><code>.rultor.yml</code></a> for
 <a href="/2014/07/24/rultor-automated-merging.html">Rultor</a>;</li>
-<li>Tried to create a unit test and failed miserably (after a full hour of research),
-since I've had almost no experience in JS unit testing;</li>
-<li>Posted a <a href="https://stackoverflow.com/questions/51809750/">question</a> to StackOverflow;</li>
-<li>The question was answered by a few people only after the bounty I offered;</li>
-<li>
-<a href="https://github.com/brian-lives-outdoors">@brian-lives-outdoors</a>'s answer
+  <li>Tried to create a unit test and failed miserably (after a full hour of research),
+since I’ve had almost no experience in JS unit testing;</li>
+  <li>Posted a <a href="https://stackoverflow.com/questions/51809750/">question</a> to StackOverflow;</li>
+  <li>The question was answered by a few people only after the bounty I offered;</li>
+  <li>
+<a href="https://github.com/brian-lives-outdoors">@brian-lives-outdoors</a>’s answer
 was the best and he even submitted a <a href="https://github.com/yegor256/colorizejs/pull/2">pull request</a>
 with a unit test, which I merged;</li>
-<li>Released the first version <a href="https://github.com/yegor256/colorizejs/tree/0.0.1">0.0.1</a>
+  <li>Released the first version <a href="https://github.com/yegor256/colorizejs/tree/0.0.1">0.0.1</a>
 to <a href="https://www.npmjs.com/package/colorizejs">npmjs.com</a>;</li>
-<li>Modified the code to make it work both with classes and colors;</li>
-<li>
+  <li>Modified the code to make it work both with classes and colors;</li>
+  <li>
 <a href="https://github.com/yegor256/colorizejs/issues/3">Implemented</a> and released
 the next version <a href="https://github.com/yegor256/colorizejs/tree/0.1.0">0.1.0</a>;</li>
-<li>
+  <li>
 <a href="https://github.com/zold-io/zold.github.io/issues/81">Added it</a> to Zold front-end,
-tested it, and released it---check it out <a href="http://www.zold.io/health.html">here</a>.</li>
+tested it, and released it—check it out <a href="http://www.zold.io/health.html">here</a>.</li>
 </ul>
 
 <p>It took almost three weeks of waiting and four hours of work, just
 to move a small piece of JavaScript code to a new repository and release
 it separately. Was it worth it? Well, I think it was. But <del>many</del> most
 other blog post authors, who I managed to find, think that it would be better to keep
-everything in a single monolithic repo, mostly because it's better for <em>productivity</em>.
+everything in a single monolithic repo, mostly because it’s better for <em>productivity</em>.
 For example,
 <a href="https://danluu.com/monorepo/">Advantages of monorepos</a> by <a href="https://twitter.com/danluu">Dan Luu</a>,
 <a href="https://people.engr.ncsu.edu/ermurph3/papers/seip18.pdf">Advantages and Disadvantages of a Monolithic Repository</a>
@@ -237,79 +237,93 @@ a single merge, deploy and release. Also it will be easier to test, both
 manually and via unit testing. Continuous integration is easier to configure,
 and so on and so forth.</p>
 
-<p>All these "reasonable" arguments remind me of what I hear when preaching
+<p>All these “reasonable” arguments remind me of what I hear when preaching
 object decomposition and suggesting that multiple objects are better than
 a single large one. Imagine a large class of 3,000 lines of code, which
-does many things and they are all very tightly coupled. It's "easy" to test it,
+does many things and they are all very tightly coupled. It’s “easy” to test it,
 to make changes, to deploy, to review, etc. Because everything stays in one
-file, right? We don't need to jump from class to class in order to understand
-the design. We just look at one screen, scroll it up and down, and that's it.
+file, right? We don’t need to jump from class to class in order to understand
+the design. We just look at one screen, scroll it up and down, and that’s it.
 Right? Totally wrong!</p>
 
-<p>I guess I don't need to explain why it's wrong. We don't design our software
+<p>I guess I don’t need to explain why it’s wrong. We don’t design our software
 that way anymore. We know that tight coupling is a bad idea. We know that
 a set of smaller components is better than a larger solid piece.</p>
 
-<p>Why can't we apply the same logic to repositories? I believe we can.
+<p>Why can’t we apply the same logic to repositories? I believe we can.
 Of course, just like in object-oriented programming, a fine-grained design
 requires more skills and time. Look at what I had to do with this small
-jQuery plugin. I've spent hours of coding and thinking. I even had to learn
+jQuery plugin. I’ve spent hours of coding and thinking. I even had to learn
 <a href="https://gulpjs.com/">Gulp</a> and <a href="https://jasmine.github.io/">Jasmine</a>,
 which I most probably will not use anymore. But the benefits we are getting
 from it are enormous. This is my short list of them:</p>
 
 <ul>
-<li><p><strong>Encapsulation</strong>.
+  <li>
+    <p><strong>Encapsulation</strong>.
 Each repo encapsulates a single problem, hiding its details from everybody
 else. Thanks to that, the scope each repo has to deal with gets smaller.
 The smaller the scope, just like in OOP, the easier it is to maintain and
 modify. The easier to maintain, the cheaper the development. I guess Google
-guys don't really worry about costs. On the contrary, they want their salaries
+guys don’t really worry about costs. On the contrary, they want their salaries
 to grow. A large unmaintainable monolithic repo is a perfect tool to make
-it happen.</p></li>
-<li><p><strong>Fast Builds</strong>.
+it happen.</p>
+  </li>
+  <li>
+    <p><strong>Fast Builds</strong>.
 When a repo is small, the time its automated build takes is small. Look at the
 time Travis <a href="https://travis-ci.org/yegor256/colorizejs/builds/420726284">spends</a>
-for my jQuery plugin. It's 51 seconds. It's fast.
+for my jQuery plugin. It’s 51 seconds. It’s fast.
 We <a href="https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/">all know</a>
-that the faster the build, the better it is for productivity, since it's easier to use
-the build as a tool for development.</p></li>
-<li><p><strong>Accurate Metrics</strong>.
-I don't know whether you rely on metrics in your projects, but we at
+that the faster the build, the better it is for productivity, since it’s easier to use
+the build as a tool for development.</p>
+  </li>
+  <li>
+    <p><strong>Accurate Metrics</strong>.
+I don’t know whether you rely on metrics in your projects, but we at
 <a href="https://www.zerocracy.com">Zerocracy</a> do pay attention to numbers, like
 lines of code, hits of code, number of commits, classes, methods, cohesion,
-coupling, etc. It's always a question whether the metrics are accurate.
-Calculating lines of code for a large repository doesn't make any sense, since
+coupling, etc. It’s always a question whether the metrics are accurate.
+Calculating lines of code for a large repository doesn’t make any sense, since
 the number will include a lot of files from completely different parts of
 the application. Moreover there will be different languages and file formats.
 Say a repo has 200K lines of Java, 150K lines of XML, 50K lines of JavaScript,
 and 40K lines of Ruby. Can you say something specific about this repo? Is it
 large? Is it a Java repo? And, more importantly, can it be compared with other
-repositories? Not really. It's just a big messy storage of files.</p></li>
-<li><p><strong>Homogeneous Tasks</strong>.
+repositories? Not really. It’s just a big messy storage of files.</p>
+  </li>
+  <li>
+    <p><strong>Homogeneous Tasks</strong>.
 Smaller repositories tend to have smaller tech stacks, meaning that each of
 them uses just a few languages and frameworks, or (and this is the preferred
-situation)---one language or technology per repository. Thanks to this,
+situation)—one language or technology per repository. Thanks to this,
 the management of programmers becomes easier, since any ticket/problem can
-be assigned to anybody. It's easier to make tasks similar in size and complexity.
-This obviously means better manageability of the project.</p></li>
-<li><p><strong>Single Coding Standard</strong>.
-It's easier to standardize the coding style if the repo is small. When it's
+be assigned to anybody. It’s easier to make tasks similar in size and complexity.
+This obviously means better manageability of the project.</p>
+  </li>
+  <li>
+    <p><strong>Single Coding Standard</strong>.
+It’s easier to standardize the coding style if the repo is small. When it’s
 large, various parts of the code base will have different styles and
 it will be almost impossible to put everybody on the same page. In other
-words, smaller repositories look more beautiful than larger ones.</p></li>
-<li><p><strong>Short Names</strong>.
+words, smaller repositories look more beautiful than larger ones.</p>
+  </li>
+  <li>
+    <p><strong>Short Names</strong>.
 Each repository, inevitably, will have its own namespace. For example, in the
 JS repository I just created, I only have two files: <code>colorizejs.js</code> and <code>test-colorizejs.js</code>.
-I don't really care about the naming inside them, since the namespace
+I don’t really care about the naming inside them, since the namespace
 is very small. <del>I can even use global variables.</del>
-Shorter names and smaller namespaces mean better maintainability.</p></li>
-<li><p><strong>Simple Tests</strong>.
+Shorter names and smaller namespaces mean better maintainability.</p>
+  </li>
+  <li>
+    <p><strong>Simple Tests</strong>.
 The larger the code base, the more dependencies it has, which are difficult
 to mock and test. Very large code bases become fundamentally untestable since
 they require a lot of integration tests which are difficult to maintain.
 Smaller libraries, frameworks and modules are easier to keep at the level
-of simple and fast unit testing.</p></li>
+of simple and fast unit testing.</p>
+  </li>
 </ul>
 
 <p>Thus, I believe that the smaller the repositories and modules, the better.

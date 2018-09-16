@@ -82,21 +82,31 @@ plugins, which <a href="https://help.github.com/articles/using-jekyll-plugins-wi
 
 <pre>$ jgd</pre>
 
-<p>That's it. <a href="http://rubygems.org/gems/jgd">jgd</a> is my
-Ruby gem (stands for "Jekyll GitHub Deploy"), which does
+<p>That’s it. <a href="http://rubygems.org/gems/jgd">jgd</a> is my
+Ruby gem (stands for “Jekyll GitHub Deploy”), which does
 the trick. Here is
 <a href="https://github.com/yegor256/jekyll-github-deploy/blob/master/bash/deploy.sh">what it does</a>:</p>
 
 
 
 <ol>
-<li><p>It clones your existing repository from the current
-directory to a temporary one (guessing the URL of the repo from <code>.git/config</code> file).</p></li>
-<li><p>Runs <code>jekyll build</code> in that temporary directory,
-which saves the output in another temporary directory.</p></li>
-<li><p>Checks out <code>gh-pages</code> branch or creates one if it doesn't exist.</p></li>
-<li><p>Copies the content of the site built by <code>jekyll build</code> into the branch, thus overwriting existing files, commits and pushes to GitHub.</p></li>
-<li><p>Cleans up all temporary directories.</p></li>
+  <li>
+    <p>It clones your existing repository from the current
+directory to a temporary one (guessing the URL of the repo from <code>.git/config</code> file).</p>
+  </li>
+  <li>
+    <p>Runs <code>jekyll build</code> in that temporary directory,
+which saves the output in another temporary directory.</p>
+  </li>
+  <li>
+    <p>Checks out <code>gh-pages</code> branch or creates one if it doesn’t exist.</p>
+  </li>
+  <li>
+    <p>Copies the content of the site built by <code>jekyll build</code> into the branch, thus overwriting existing files, commits and pushes to GitHub.</p>
+  </li>
+  <li>
+    <p>Cleans up all temporary directories.</p>
+  </li>
 </ol>
 
 <p>Using this gem is very easy. Just install it with

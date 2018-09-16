@@ -83,16 +83,16 @@ how it all happened, in <a href="https://github.com/jcabi/jcabi-aspects/issues/8
 
 
 <p>As you see, I gave a command to <a href="http://www.rultor.com">Rultor</a>,
-and it released a new version to Maven central. I didn't do anything else.</p>
+and it released a new version to Maven central. I didn’t do anything else.</p>
 
-<p>Now let's see how you can do the same. How you can configure your project
+<p>Now let’s see how you can do the same. How you can configure your project
 so that the release of its new version to Maven Central
 takes just a few seconds of your time.</p>
 
 
 
-<p>By the way, I assume that you're hosting your project in GitHub. If not,
-this entire tutorial won't work. If you are still not in GitHub, I would
+<p>By the way, I assume that you’re hosting your project in GitHub. If not,
+this entire tutorial won’t work. If you are still not in GitHub, I would
 strongly recommend moving there.</p>
 
 <h2 id="prepare-your-pom">Prepare Your POM</h2>
@@ -120,7 +120,7 @@ article.</p>
 <p>When this step is done, you should have two files:
 <code>pubring.gpg</code> and <code>secring.gpg</code>.</p>
 
-<h2 id="create-settings-xml">Create settings.xml</h2>
+<h2 id="create-settingsxml">Create settings.xml</h2>
 
 <p>Create <code>settings.xml</code>, next to the two <code>.gpg</code> files created in the previous step:</p>
 
@@ -167,9 +167,9 @@ but only the Rultor server can decrypt them.</p>
 
 <p>I would recommend using <a href="/2015/02/05/jcabi-parent-maven-pom.html">jcabi-parent</a>, as
 a parent pom for your project. This will make many further steps
-unnecessary. If you're using jcabi-parent, skip this step.</p>
+unnecessary. If you’re using jcabi-parent, skip this step.</p>
 
-<p>However, if you don't use jcabi-parent, you should add these two repositories
+<p>However, if you don’t use jcabi-parent, you should add these two repositories
 to your <code>pom.xml</code>:</p>
 
 <pre>&lt;project&gt;
@@ -188,8 +188,8 @@ to your <code>pom.xml</code>:</p>
 
 <h2 id="configure-gpg-plugin">Configure GPG Plugin</h2>
 
-<p>Again, I'd recommend using <a href="http://parent.jcabi.com">jcabi-parent</a>,
-which configures this plugin automatically. If you're using it, skip this step.</p>
+<p>Again, I’d recommend using <a href="http://parent.jcabi.com">jcabi-parent</a>,
+which configures this plugin automatically. If you’re using it, skip this step.</p>
 
 <p>Otherwise, add this plugin to your <code>pom.xml</code>:</p>
 
@@ -219,7 +219,7 @@ which configures this plugin automatically. If you're using it, skip this step.<
 <h2 id="configure-versions-plugin">Configure Versions Plugin</h2>
 
 <p>Once again, I recommend using <a href="/2015/02/05/jcabi-parent-maven-pom.html">http://parent.jcabi.com</a>. It
-configures all required plugins out-of-the-box. If you're using it, skip this step.</p>
+configures all required plugins out-of-the-box. If you’re using it, skip this step.</p>
 
 <p>Otherwise, add this plugin to your <code>pom.xml</code>:</p>
 
@@ -243,8 +243,8 @@ configures all required plugins out-of-the-box. If you're using it, skip this st
 
 <h2 id="configure-sonatype-plugin">Configure Sonatype Plugin</h2>
 
-<p>Yes, you're right, <a href="/2015/02/05/jcabi-parent-maven-pom.html">http://parent.jcabi.com</a> will help
-you here as well. If you're using it, skip this step too.</p>
+<p>Yes, you’re right, <a href="/2015/02/05/jcabi-parent-maven-pom.html">http://parent.jcabi.com</a> will help
+you here as well. If you’re using it, skip this step too.</p>
 
 <p>Otherwise, add these four plugins to your <code>pom.xml</code>:</p>
 
@@ -331,7 +331,7 @@ release:
 
 
 
-<p>Now it's time to see how it all works. Create a new ticket in the
+<p>Now it’s time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it
 (read more about <a href="http://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
@@ -341,7 +341,7 @@ GitHub issue tracker, and post something like that into it
 
 <p>Enjoy :)</p>
 
-<p>BTW, if something doesn't work as I've explained, don't hesitate to
+<p>BTW, if something doesn’t work as I’ve explained, don’t hesitate to
 submit a ticket to
 <a href="https://github.com/yegor256/rultor/issues">Rultor issue tracker</a>.
 I will try to help you.</p>

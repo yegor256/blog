@@ -75,23 +75,23 @@ to access global things.
       </p>
       <p>Yegor Bugayenko<br>27 June 2016</p>
       <h1>Singletons Must Die</h1>
-      <p>I think it's too obvious to say that a singleton is an anti-pattern as
+      <p>I think it’s too obvious to say that a singleton is an anti-pattern as
 there are tons of articles about that (singleton being an anti-pattern).
 However, more often than not, the question
 is how to define global things without a singleton; and the answer to that is not
 obvious for many of us. There are several examples: a database connection
 pool, a repository, a configuration map, etc. They all naturally seem to
-be "global"; but what do we do with them?</p>
+be “global”; but what do we do with them?</p>
 
 
 
 <amp-img src="/images/2016/06/perdita-durango.jpg" alt="Perdita Durango (1997) by Álex de la Iglesia" height="721" width="1200" layout="responsive"></amp-img>
 
-<p>I assume you already know what a singleton is and why it's an anti-pattern.
+<p>I assume you already know what a singleton is and why it’s an anti-pattern.
 If not, I recommend you read this StackOverflow thread:
 <a href="http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons">What is so bad about singletons?</a></p>
 
-<p>Now that we agree it's a bad deal, what do we do if we need to, let's say,
+<p>Now that we agree it’s a bad deal, what do we do if we need to, let’s say,
 have access to a database connection pool in many different places within the
 application? We simply need something like this:</p>
 
@@ -121,9 +121,9 @@ class Index {
   }
 }</pre>
 
-<p>In case you're not familiar with JAX-RS, it's a simple
+<p>In case you’re not familiar with JAX-RS, it’s a simple
 <a href="/2016/12/13/mvc-vs-oop.html">MVC</a> architecture,
-and this <code>text()</code> method is a "controller." Additionally, I'm using
+and this <code>text()</code> method is a “controller.” Additionally, I’m using
 <a href="http://jdbc.jcabi.com/apidocs-0.16/com/jcabi/jdbc/JdbcSession.html"><code>JdbcSession</code></a>,
 a simple JDBC wrapper from <a href="http://jdbc.jcabi.com">jcabi-jdbc</a>.</p>
 
@@ -138,8 +138,8 @@ is the answer.</p>
 
 
 <p>We need to make this database connection pool dependency of the controller
-and ensure it's provided through a constructor. However, in this particular
-case, for JAX-RS, we can't do it through a constructor thanks to its
+and ensure it’s provided through a constructor. However, in this particular
+case, for JAX-RS, we can’t do it through a constructor thanks to its
 ugly architecture. But we can create a <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextListener.html"><code>ServletContextListener</code></a>,
 instantiate a <code>Database</code> in its <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextListener.html#contextInitialized-javax.servlet.ServletContextEvent-"><code>contextInitialized()</code></a> method,
 and add that instance as an attribute of
@@ -148,17 +148,17 @@ the controller, we retrieve the servlet context by adding the
 <a href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Context.html"><code>javax.ws.rs.core.Context</code></a>
 annotation to a setter and using
 <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContext.html#getAttribute-java.lang.String-"><code>getAttribute()</code></a>
-on it. This is absolutely terrible and procedural, but it's better
+on it. This is absolutely terrible and procedural, but it’s better
 than a singleton.</p>
 
 <p>A proper object-oriented design would pass an instance of <code>Database</code>
 to <em>all</em> objects that may need it through their constructors.</p>
 
 <p>Nonetheless, what do we do if there are many dependencies? Do we make a 10-argument
-constructor? No, we don't. If our objects really need 10 dependencies to do
+constructor? No, we don’t. If our objects really need 10 dependencies to do
 their work, we need to break them down into smaller ones.</p>
 
-<p>That's it. Forget about singletons; never use them. Turn them into dependencies
+<p>That’s it. Forget about singletons; never use them. Turn them into dependencies
 and pass them from object to object through the operator <code>new</code>.</p>
 
     </article>

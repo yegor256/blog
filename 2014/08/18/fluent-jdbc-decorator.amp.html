@@ -85,7 +85,7 @@ with <a href="http://jdbc.jcabi.com">jcabi-jdbc</a>:</p>
   .set(1234)
   .select(new SingleOutcome&lt;String&gt;(String.class));</pre>
 
-<p>Simple and straight forward, isn't it? The library
+<p>Simple and straight forward, isn’t it? The library
 simplifies interaction with relational databases
 via JDBC, avoiding the need to use
 <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM</a>.</p>
@@ -94,13 +94,13 @@ via JDBC, avoiding the need to use
 
 <p><a href="http://jdbc.jcabi.com">jcabi-jdbc</a> is a lightweight wrapper of
 <a href="http://www.oracle.com/technetwork/java/javase/jdbc/index.html">JDBC</a>.
-It is very convenient to use when you don't need a full-scale
+It is very convenient to use when you don’t need a full-scale
 <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM</a>
 (like Hibernate), but want just to select, insert, or update
 a few rows in a relational database.</p>
 
-<p>Every instance of <code>JdbcSession</code> is a "transaction" in a database.
-You start it by instantiating the class with a single parameter---data source.</p>
+<p>Every instance of <code>JdbcSession</code> is a “transaction” in a database.
+You start it by instantiating the class with a single parameter—data source.</p>
 
 <p>You can obtain the data source from your connection pool. There are many
 implementations of connection pools. I would recommend that you use
@@ -119,7 +119,7 @@ private static DataSource source() {
 <p>Be sure to pay attention to the <code>@Cacheable</code> annotation.
 <a href="/2014/08/03/cacheable-java-annotation.html">This post</a>
 explains how it can help you to cache Java method results for some time.
-Setting the <code>forever</code> attribute to <code>true</code> means that we don't want this
+Setting the <code>forever</code> attribute to <code>true</code> means that we don’t want this
 method to be called more than once. Instead, we want the connection pool
 to be created just once, and every second call should return its
 existing instance (kind of like a
@@ -148,8 +148,9 @@ possible to leave the connection open and continue, for example:</p>
   .insert(Outcome.VOID)
   .commit();</pre>
 
-<p>In this example we're executing three SQL statements one by one, leaving
+<p>In this example we’re executing three SQL statements one by one, leaving
 connection (and transaction) open until <code>commit()</code> is called.</p>
+
 
     </article>
   </body>

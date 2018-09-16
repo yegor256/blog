@@ -78,7 +78,7 @@ programmer, and tester
       <h1>PDD by Roles</h1>
       
 
-<p>In this post, I'll try to walk you through a project managed
+<p>In this post, I’ll try to walk you through a project managed
 with the spirit of
 <a href="/2010/03/04/pdd.html">Puzzle Driven Development</a>
 (PDD). As I do this, I will attempt to convey typical points
@@ -88,12 +88,12 @@ of view of various project members.</p>
 <a href="/2016/07/10/software-project-roles.html">roles</a> in any software team:</p>
 
 <ul>
-<li>Project Manager---assigns tasks and pays on completion</li>
-<li>System Analyst---documents the product owner's ideas</li>
-<li>Architect---defines how system components interact</li>
-<li>Designer---implements most complex components</li>
-<li>Programmer---implements all components</li>
-<li>Tester---finds and reports bugs</li>
+  <li>Project Manager—assigns tasks and pays on completion</li>
+  <li>System Analyst—documents the product owner’s ideas</li>
+  <li>Architect—defines how system components interact</li>
+  <li>Designer—implements most complex components</li>
+  <li>Programmer—implements all components</li>
+  <li>Tester—finds and reports bugs</li>
 </ul>
 
 <p>Everybody, except the
@@ -106,19 +106,19 @@ this with a simple example.</p>
 
 <h2 id="fix-and-break">Fix and Break</h2>
 
-<p>Let's assume, for the sake of simplicity, that a project is a simple
+<p>Let’s assume, for the sake of simplicity, that a project is a simple
 software tool written by me for a close friend. I created the
 first draft version 0.0.1 and delivered it to him. For me, the project
-is done. I've completed the work, and hopefully will never have to return to it again.</p>
+is done. I’ve completed the work, and hopefully will never have to return to it again.</p>
 
 
 
 <p>However, the reality of the project is very different. In just a few hours,
-I receive a call from my friend saying that a he's found a few bugs in the tool. He is asking me
-to fix them. Now, I can see that the project is not done. In fact, it's broken.
+I receive a call from my friend saying that a he’s found a few bugs in the tool. He is asking me
+to fix them. Now, I can see that the project is not done. In fact, it’s broken.
 It has a few bugs in it, which means a few tasks to complete.</p>
 
-<p>I'm going to fix the project, by removing the bugs. I implement
+<p>I’m going to fix the project, by removing the bugs. I implement
 a new version of the software, name it 0.0.2 and ship it to my friend. Again, I believe my project is finished. It is fixed and should be closed.</p>
 
 <p>This scenario repeats itself again and again until my friend stops
@@ -130,7 +130,7 @@ Version 0.0.1 was just a very preliminary version, although I considered it fina
 the time I released it. In a few months, after I learn of and fix
 hundreds of bugs, version 3.5.17 will be much more mature and stable.</p>
 
-<p>This is the result of this "fix and break" approach.</p>
+<p>This is the result of this “fix and break” approach.</p>
 
 
 
@@ -151,23 +151,23 @@ reaches its peak and starts to go down.</p>
 <p>The job of a project
 <a href="/2015/09/22/micromanagement.html">manager</a>
 is to do as much as possible
-to fix the project. He has to use the sponsor's time and money in order
+to fix the project. He has to use the sponsor’s time and money in order
 to remove all bugs and inconsistencies and return the project back
-to a "fixed" state.</p>
+to a “fixed” state.</p>
 
 <amp-img src="/images/2014/04/pulp-fiction-mr-wolf-with-cup.png" alt="Pulp Fiction (1994) by Quentin Tarantino" height="668" width="1510" layout="responsive"></amp-img>
 
-<p>When I say "bugs," I mean more than just software errors but also:</p>
+<p>When I say “bugs,” I mean more than just software errors but also:</p>
 
 <ul>
-<li>unclear or ambiguous <a href="/2015/11/10/ten-mistakes-in-specs.html">requirements</a>
+  <li>unclear or ambiguous <a href="/2015/11/10/ten-mistakes-in-specs.html">requirements</a>
 </li>
-<li>features not yet implemented</li>
-<li>functional and non-functional bugs</li>
-<li>lack of test coverage</li>
-<li>unresolved <code>@todo</code> markers</li>
-<li>lack of risk analysis</li>
-<li>etc.</li>
+  <li>features not yet implemented</li>
+  <li>functional and non-functional bugs</li>
+  <li>lack of test coverage</li>
+  <li>unresolved <code>@todo</code> markers</li>
+  <li>lack of risk analysis</li>
+  <li>etc.</li>
 </ul>
 
 <p>The project manager gives me tasks that he wants done in order
@@ -179,62 +179,62 @@ In the example with my friend, he was breaking the
 project constantly by reporting bugs to me. This is how he helped both of us
 increase the final quality of the product.</p>
 
-<p>I should do the same and always try to report new bugs when I'm
+<p>I should do the same and always try to report new bugs when I’m
 working on some feature. I should <strong>fix and break</strong> at the same time.</p>
 
-<p>Now let's take a closer look at project roles.</p>
+<p>Now let’s take a closer look at project roles.</p>
 
 <h2 id="system-analyst">System Analyst</h2>
 
 <p>A product owner submits an informal feature request, which usually
-starts with "it would be nice to have..." I'm a system analyst and my
-job is to translate owner's English into
+starts with “it would be nice to have…” I’m a system analyst and my
+job is to translate owner’s English into
 <a href="/2015/11/10/ten-mistakes-in-specs.html">formal specifications</a> in the SRS,
-understandable both by programmers and myself. It's not my responsibility
+understandable both by programmers and myself. It’s not my responsibility
 to implement the feature.</p>
 
 
 
 <p>My task is complete when a new version of the SRS is signed by the
-Change Control Board. I'm an interpreter for the product owners, translating
+Change Control Board. I’m an interpreter for the product owners, translating
 from their language to formal language needed in the SRS document.
 My only customer is the product owner. As soon as she closes the
-feature request, I'll be paid.</p>
+feature request, I’ll be paid.</p>
 
 <p>Besides feature requests from product owners, I often receive
 complaints about the quality of the SRS. The document may not be clear
-enough for some team members. Therefore, it's my job to resolve clarity problems
+enough for some team members. Therefore, it’s my job to resolve clarity problems
 and fix the SRS. These team members are also my customers. When they
-close their <a href="/2018/04/24/right-way-to-report-bugs.html">bug reports</a>, I'll be paid.</p>
+close their <a href="/2018/04/24/right-way-to-report-bugs.html">bug reports</a>, I’ll be paid.</p>
 
 <p>In both cases (a feature request or a bug,) I can make changes to the
-SRS immediately - if I have enough time. However, it's not always
-possible. I can submit a bug and wait for its resolution; but, I don't
+SRS immediately - if I have enough time. However, it’s not always
+possible. I can submit a bug and wait for its resolution; but, I don’t
 want to keep my customers waiting.</p>
 
 <p>This is where puzzle driven development
 helps me. Instead of submitting bug reports, I add
-"<a href="http://en.wikipedia.org/wiki/To_be_announced">TBD</a>" puzzles in
+“<a href="http://en.wikipedia.org/wiki/To_be_announced">TBD</a>” puzzles in
 the SRS document. The puzzles are informal replacements of normally very strict
 formal requirements. They satisfy my customer, since they are in
 plain English, and are understandable by technical people.</p>
 
-<p>Thus, when I don't have time, I don't wait. I change the SRS
-using TBD-s at points where I can't create a proper and formal description of the
-requirements or simply don't know what to write exactly.</p>
+<p>Thus, when I don’t have time, I don’t wait. I change the SRS
+using TBD-s at points where I can’t create a proper and formal description of the
+requirements or simply don’t know what to write exactly.</p>
 
 <h2 id="architect">Architect</h2>
 
-<p>Now, I'm the <a href="/2016/07/21/convince-me.html">architect</a>,
+<p>Now, I’m the <a href="/2016/07/21/convince-me.html">architect</a>,
 and my task is to implement a requirement, which has been formally specified
 in the SRS. PM is expecting a working feature from me, which I can deliver
 only when the architecture is clear and classes have been designed and implemented.</p>
 
 
 
-<p>Being an architect, I'm responsible for assembling all of the components
+<p>Being an architect, I’m responsible for assembling all of the components
 together and making sure they fit. In most cases,
-I'm not creating them myself, but I'm telling everybody how they should
+I’m not creating them myself, but I’m telling everybody how they should
 be created. My work flow of artifacts is the following:</p>
 
 <p></p>
@@ -242,37 +242,37 @@ be created. My work flow of artifacts is the following:</p>
 <p>I receive <a href="/2015/11/10/ten-mistakes-in-specs.html">requirements</a>
 from the SRS, produce UML diagrams and
 explain to designers how to create source code according to my diagrams.
-I don't really care how source code is implemented. I'm more concerned
+I don’t really care how source code is implemented. I’m more concerned
 with the interaction of components and how well the entire architecture satisfies
 functional and non-functional (!) requirements.</p>
 
 <p>My task will be closed and paid when the system analyst
-changes its state to "implemented" in the SRS. The system analyst is my only
+changes its state to “implemented” in the SRS. The system analyst is my only
 customer. I have to sell my solution to him. Project manager
 will close my task and pay me when system analyst changes
-the status of the functional requirement from "specified" to "implemented."</p>
+the status of the functional requirement from “specified” to “implemented.”</p>
 
 <p>The task sounds big, and I have only half an hour. Obviously,
 puzzle driven development should help me. I will create many tickets and
 puzzles. For example:</p>
 
 <ul>
-<li>SRS doesn't explain requirements properly</li>
-<li>Non-functional requirements are not clear</li>
-<li>UML diagrams are not clear enough</li>
-<li>Components are not implemented</li>
-<li>Build is not automated</li>
-<li>Continuous integration is not configured</li>
-<li>Quality of code is not under control</li>
-<li>Performance testing is not automated</li>
+  <li>SRS doesn’t explain requirements properly</li>
+  <li>Non-functional requirements are not clear</li>
+  <li>UML diagrams are not clear enough</li>
+  <li>Components are not implemented</li>
+  <li>Build is not automated</li>
+  <li>Continuous integration is not configured</li>
+  <li>Quality of code is not under control</li>
+  <li>Performance testing is not automated</li>
 </ul>
 
 <p>When all of my puzzles are resolved, I can get back to my main task
 and finish feature implementation. Obviously, this may take a long time - days or even weeks.</p>
 
 <p>But, the time cost of the main task is less than an hour.
-What is the point of all this hard work? Well, it's simple;
-I'll earn my hours from all the bugs reported.
+What is the point of all this hard work? Well, it’s simple;
+I’ll earn my hours from all the bugs reported.
 From this small half-an-hour task, I will generate many tickets, and every one of them will give me extra cash.</p>
 
 <h2 id="designer-and-programmer">Designer and Programmer</h2>
@@ -284,22 +284,22 @@ low-level details.</p>
 
 
 
-<p>I'm a programmer and my task is to implement a class or method or to
+<p>I’m a programmer and my task is to implement a class or method or to
 fix some functional bug. In most cases, I have only half an hour available.
 And, most tasks are bigger and require more time than that.</p>
 
 <p>Puzzle driven development helps me break my task into smaller sub-tasks.
 I <a href="/2017/03/24/tdd-that-works.html">always</a>
-start with a unit test. In the unit test, I'm trying to
+start with a unit test. In the unit test, I’m trying to
 reproduce a bug or model the feature. When my test fails, I commit
 it and determine the amount of time I have left. If I still have time to make it
-pass---I do it, commit the changes and report to the project manager.</p>
+pass—I do it, commit the changes and report to the project manager.</p>
 
-<p>If I don't have time to implement the fix, I mark pieces of code that
-don't already have <code>@todo</code> markers, commit them and report to the
-project manager that I've finished.</p>
+<p>If I don’t have time to implement the fix, I mark pieces of code that
+don’t already have <code>@todo</code> markers, commit them and report to the
+project manager that I’ve finished.</p>
 
-<p>As you see, I'm fixing the code and breaking it at the same time. I'm fixing
+<p>As you see, I’m fixing the code and breaking it at the same time. I’m fixing
 it with my new unit test, but breaking it with <code>@todo</code> puzzles.</p>
 
 <p>This is how I help to increase the overall quality of the project - by
@@ -307,19 +307,19 @@ fixing and breaking at the same time.</p>
 
 <h2 id="tester">Tester</h2>
 
-<p>I'm a tester and my primary motivation is to find bugs. This may be
-contradictory to what you've heard before; but in <a href="http://www.xdsd.org">XDSD</a>, we plan
+<p>I’m a tester and my primary motivation is to find bugs. This may be
+contradictory to what you’ve heard before; but in <a href="http://www.xdsd.org">XDSD</a>, we plan
 to find a certain amount of bugs at every stage of the project.</p>
 
 
 
-<p>As as a tester, I receive tasks from my project manager. These tasks usually resemble "review feature X and find 10 bugs in it." The project manager
+<p>As as a tester, I receive tasks from my project manager. These tasks usually resemble “review feature X and find 10 bugs in it.” The project manager
 needs a certain number of bugs to be found in order to fix the project.
-From his point of view, the project is fixed when, say, 200 bugs have been found. That's why he asks me to find more.</p>
+From his point of view, the project is fixed when, say, 200 bugs have been found. That’s why he asks me to find more.</p>
 
-<p>Thus, to respond to the request, i find bugs to do my part in regard to the "fixing" part
+<p>Thus, to respond to the request, i find bugs to do my part in regard to the “fixing” part
 of the bigger picture. At the same time, though, I can find defects on my own
-and report them. This is the "breaking" part of my mission.</p>
+and report them. This is the “breaking” part of my mission.</p>
 
     </article>
   </body>

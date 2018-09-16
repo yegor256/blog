@@ -79,9 +79,9 @@ can be used when they seem appropriate.
 I tried to explain it <a href="/2014/06/09/objects-should-be-immutable.html">here</a>,
 <a href="/2014/12/09/immutable-object-state-and-behavior.html">here</a>, and
 <a href="/2014/12/22/immutable-objects-not-dumb.html">here</a>,
-but now it's time to make another attempt. Actually, the more I think about it,
-the more I realize that immutability is not black or white---there
-are a few more gradients; let's take a look.</p>
+but now it’s time to make another attempt. Actually, the more I think about it,
+the more I realize that immutability is not black or white—there
+are a few more gradients; let’s take a look.</p>
 
 
 
@@ -90,15 +90,15 @@ are a few more gradients; let's take a look.</p>
 <p>As we agreed <a href="/2016/07/14/who-is-object.html">here</a>,
 an object is a <em>representative</em> of someone else
 (some entity or entities, other object(s), data, memory, files, etc.).
-Let's examine a number of objects that look exactly the same
+Let’s examine a number of objects that look exactly the same
 to us but <em>represent</em> different things, then analyze how
 immutable they are and why.</p>
 
 <h2 id="constant">Constant</h2>
 
-<p>This is <em>constant</em>; it doesn't allow any modifications
+<p>This is <em>constant</em>; it doesn’t allow any modifications
 to the encapsulated entity and always returns the same text
-(I've skipped constructors for the sake of brevity):</p>
+(I’ve skipped constructors for the sake of brevity):</p>
 
 <pre>class Book {
   private final String ttl;
@@ -133,9 +133,9 @@ the same initial values, the result of <code>title()</code> will be the same.</p
 }</pre>
 
 <p>The object is still immutable, but it is not a pure
-function anymore because of the method <code>title()</code>---it returns different values if we call it
+function anymore because of the method <code>title()</code>—it returns different values if we call it
 multiple times with at least a one-minute interval. The object
-is immutable; it's just not a constant anymore.</p>
+is immutable; it’s just not a constant anymore.</p>
 
 <h2 id="represented-mutability">Represented Mutability</h2>
 
@@ -158,11 +158,11 @@ is immutable; it's just not a constant anymore.</p>
   }
 }</pre>
 
-<p>This <em>immutable</em> object keeps the book title in a file. It's not a constant,
+<p>This <em>immutable</em> object keeps the book title in a file. It’s not a constant,
 because its method <code>title()</code> may return different values on every
 second call. Moreover, the represented entity (the file) is not a constant.
-We can't say whether it's mutable or immutable, as we don't know how <code>Files.write()</code>
-is implemented. But we know for sure that it's not a constant, because it
+We can’t say whether it’s mutable or immutable, as we don’t know how <code>Files.write()</code>
+is implemented. But we know for sure that it’s not a constant, because it
 accepts change requests.</p>
 
 <h2 id="encapsulated-mutability">Encapsulated Mutability</h2>
@@ -207,7 +207,7 @@ that could change them. All encapsulated objects are <code>final</code>.</p>
 
 <p>This is the only quality that differentiates mutable objects from
 immutable ones. The latter are always loyal to the entities they
-encapsulate and represent. For all the rest ... it depends.</p>
+encapsulate and represent. For all the rest … it depends.</p>
 
     </article>
   </body>

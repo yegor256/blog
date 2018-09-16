@@ -75,13 +75,13 @@ here is yet another one from me.
       </p>
       <p>Yegor Bugayenko<br>3 July 2018</p>
       <h1>What's Wrong With Global Variables?</h1>
-      <p>Only lazy people haven't written already about how <a href="https://en.wikipedia.org/wiki/Global_variable">global variables</a>
+      <p>Only lazy people haven’t written already about how <a href="https://en.wikipedia.org/wiki/Global_variable">global variables</a>
 are evil. It started in 1973 when W. Wulf et al. <a href="https://dl.acm.org/citation.cfm?id=953355">claimed</a> that
-"the non-local variable is a major contributing factor in programs
-which are difficult to understand." Since then, <a href="http://wiki.c2.com/?GlobalVariablesAreBad">many other reasons</a>
+“the non-local variable is a major contributing factor in programs
+which are difficult to understand.” Since then, <a href="http://wiki.c2.com/?GlobalVariablesAreBad">many other reasons</a>
 where suggested to convince programmers to stop using global variables.
 I think <a href="https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil">I read them all</a>,
-but didn't find the one that bothers me most of all: composability.
+but didn’t find the one that bothers me most of all: composability.
 In a nutshell, global variables make code difficult or impossible to compose
 in ways which are different from what its original author expected.</p>
 
@@ -113,12 +113,12 @@ App.start!</pre>
 For the purpose of testing this may be a pretty logical requirement.
 For example, since Zold is a distributed network,
 it is necessary to test how a number of servers communicate to each other.
-I can't do that! There is absolutely no way.
+I can’t do that! There is absolutely no way.
 Because Sinatra is designed with the assumption that only one server may exist in the entire application scope.</p>
 
 
 
-<p>Can this really be fixed? Let's take a look at <a href="https://github.com/sinatra/sinatra/">their code</a>.
+<p>Can this really be fixed? Let’s take a look at <a href="https://github.com/sinatra/sinatra/">their code</a>.
 Class <code>Sinatra::Base</code> is essentially a <a href="/2016/06/27/singletons-must-die.html">Singleton</a>,
 which is not supposed to have more than one instance.
 When we call <code>App.set(:port, 8080)</code>, the value <code>8080</code> is saved into an attribute of a single instance.
@@ -128,15 +128,15 @@ they are called from.</p>
 <p>They are not using <a href="https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/globalvars.html">true</a>
 Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
-<a href="/2014/05/05/oop-alternative-to-utility-classes.html">alternatives</a> are---slipped through their fingers.</p>
+<a href="/2014/05/05/oop-alternative-to-utility-classes.html">alternatives</a> are—slipped through their fingers.</p>
 
 
 
-<p>Technically speaking, their design is "globally scoped."
+<p>Technically speaking, their design is “globally scoped.”
 <code>Sinatra::Base</code> treats the entire application as its scope of visibility.
 No matter who calls it, everything is visible, including what was created
 in previous calls and in previously instantiated objects.
-This "class" is a giant bag of global variables.</p>
+This “class” is a giant bag of global variables.</p>
 
 <p>Every global variable is a troublemaker of that kind.
 While the application is small and its test coverage is low, global variables may not hurt.

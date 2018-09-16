@@ -77,8 +77,8 @@ that has no right to exist.
       <h1>Data Transfer Object Is a Shame</h1>
       <p><a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a>,
 as far as I understand it, is a cornerstone of the ORM design pattern,
-which I <a href="/2014/12/01/orm-offensive-anti-pattern.html">simply "adore."</a>
-But let's skip to the point: DTO is just a shame, and the man who invented
+which I <a href="/2014/12/01/orm-offensive-anti-pattern.html">simply “adore.”</a>
+But let’s skip to the point: DTO is just a shame, and the man who invented
 it is just wrong. There is no excuse for what he has done.</p>
 
 
@@ -99,12 +99,12 @@ In OOP, data
 must not be visible. <a href="/2014/11/20/seven-virtues-of-good-object.html">Objects</a>
 must only have access to the data they
 encapsulate and never to the data encapsulated by other objects. There
-can be no arguing about this principle---it is what
+can be no arguing about this principle—it is what
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a> is all about.</p>
 
 <p>However, DTO runs completely against that principle.</p>
 
-<p>Let's see a practical example. Say that this is a service that fetches
+<p>Let’s see a practical example. Say that this is a service that fetches
 a JSON document from some RESTful API and returns a DTO, which we can then
 store in the database:</p>
 
@@ -122,9 +122,9 @@ database.saveNewBook(book);</pre>
   return book;
 }</pre>
 
-<p>Am I right? I bet I am. It already looks disgusting to me. Anyway, let's
+<p>Am I right? I bet I am. It already looks disgusting to me. Anyway, let’s
 continue. This is what will most likely happen in the <code>saveNewBook()</code> method
-(I'm using pure JDBC):</p>
+(I’m using pure JDBC):</p>
 
 <pre>void saveNewBook(Book book) {
   Statement stmt = connection.prepareStatement(
@@ -139,7 +139,7 @@ continue. This is what will most likely happen in the <code>saveNewBook()</code>
 <p>This <code>Book</code> is a classic example of a data transfer object design pattern.
 All it does is transfer
 data between two pieces of code, two procedures. The object <code>book</code> is pretty
-dumb. All it knows how to do is ... nothing. It doesn't do anything. It is
+dumb. All it knows how to do is … nothing. It doesn’t do anything. It is
 actually not an object at all but rather a passive and anemic data structure.</p>
 
 <p>What is the right design? There are a few. For example, this one looks
@@ -167,7 +167,7 @@ book.save(database);</pre>
   );
 }</pre>
 
-<p>What happens if there are many more parameters of the book in JSON that won't
+<p>What happens if there are many more parameters of the book in JSON that won’t
 fit nicely as parameters into a single <code>createBook()</code> method? How about this:</p>
 
 <pre>void save(Database db) {
@@ -189,7 +189,7 @@ any data from it.</p>
 
 <p>The very idea of DTO is wrong because it turns object-oriented code
 into procedural code. We have procedures that manipulate data, and DTO is just
-a box for that data. Don't think that way, and don't do that.</p>
+a box for that data. Don’t think that way, and don’t do that.</p>
 
 <p>PS. There are a few other names of DTO:
 <a href="https://en.wikipedia.org/wiki/Business_object">business objects</a>,

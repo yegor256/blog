@@ -75,15 +75,15 @@ a number of alternatives.
       </p>
       <p>Yegor Bugayenko<br>22 May 2018</p>
       <h1>One More Recipe Against NULL</h1>
-      <p>You know what NULL is, right? It's
+      <p>You know what NULL is, right? It’s
 <a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare">evil</a>.
 In OOP, your method can return NULL,
 it can accept NULL as an argument, your object can encapsulate it as an attribute,
 or you can assign it to a variable.
-All four scenarios are bad for the maintainability of your code---there
+All four scenarios are bad for the maintainability of your code—there
 are no doubts about that.
-The question is what to do instead. Let's discuss the "return it" part and
-I will suggest one more "best practice" on top of what
+The question is what to do instead. Let’s discuss the “return it” part and
+I will suggest one more “best practice” on top of what
 <a href="/2014/05/13/why-null-is-bad.html">was discussed</a> a few years ago.</p>
 
 
@@ -98,17 +98,17 @@ I will suggest one more "best practice" on top of what
 }</pre>
 
 <p>What should this method do if the list is empty?
-Java's <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-"><code>Collections.max()</code></a>
+Java’s <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-"><code>Collections.max()</code></a>
 throws an exception.
-Ruby's <a href="https://ruby-doc.org/core-2.5.1/Enumerable.html#method-i-max"><code>Enumerable.max()</code></a>
+Ruby’s <a href="https://ruby-doc.org/core-2.5.1/Enumerable.html#method-i-max"><code>Enumerable.max()</code></a>
 returns <code>nil</code>.
-PHP's <a href="http://php.net/manual/en/function.max.php"><code>max()</code></a>
+PHP’s <a href="http://php.net/manual/en/function.max.php"><code>max()</code></a>
 returns <code>FALSE</code>.
-Python's <a href="https://docs.python.org/3/library/functions.html#max"><code>max()</code></a>
+Python’s <a href="https://docs.python.org/3/library/functions.html#max"><code>max()</code></a>
 raises an exception.
-C#'s <a href="https://msdn.microsoft.com/en-us/library/bb335614(v=vs.110).aspx"><code>Enumerable.Max()</code></a>
+C#’s <a href="https://msdn.microsoft.com/en-us/library/bb335614(v=vs.110).aspx"><code>Enumerable.Max()</code></a>
 also throws an exception.
-JavaScript's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max()</code></a>
+JavaScript’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max()</code></a>
 returns <code>NaN</code>.</p>
 
 <p>Which is the right way, huh? An exception, NULL, false or NaN?</p>
@@ -123,9 +123,9 @@ returns <code>NaN</code>.</p>
   // list is empty.
 }</pre>
 
-<p>The "default" object will be returned if the list is empty. This feature
-is implemented in Python's <a href="https://docs.python.org/3/library/functions.html#max"><code>max()</code></a> function:
-it's possible to pass both a list and a default element to return in case the list
+<p>The “default” object will be returned if the list is empty. This feature
+is implemented in Python’s <a href="https://docs.python.org/3/library/functions.html#max"><code>max()</code></a> function:
+it’s possible to pass both a list and a default element to return in case the list
 is empty. If the default element is not provided, the exception will be raised.</p>
 
 <blockquote class="twitter-tweet" data-lang="en">

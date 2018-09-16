@@ -75,7 +75,7 @@ here's why.
       </p>
       <p>Yegor Bugayenko<br>13 July 2015</p>
       <h1>Meetings Are Legalized Robbery</h1>
-      <p>Software development is all about creativity, right? It's an art,
+      <p>Software development is all about creativity, right? It’s an art,
 not a science. As software engineers, we solve complex problems,
 and often our solutions are absolutely not obvious. We experiment,
 innovate, research, and investigate.
@@ -83,33 +83,33 @@ To do all this, we <em>talk</em>.
 We sit together in our meeting rooms, Skype conference calls, or Slack channels;
 we discuss our solutions;
 we ask our coworkers for their opinions;
-and we argue about the best ideas. There's no doubt meetings are the key component of the modern
-software design discipline ... and it's very <em>sad</em> to see it.</p>
+and we argue about the best ideas. There’s no doubt meetings are the key component of the modern
+software design discipline … and it’s very <em>sad</em> to see it.</p>
 
 
 
 <amp-img src="/images/2015/07/heat.jpg" alt="Heat (1995) by Michael Mann" height="675" width="1200" layout="responsive"></amp-img>
 
 <p>A good <a href="/2014/10/12/who-is-software-architect.html">software architect</a>,
-as well as a <a href="/2015/09/22/micromanagement.html">good project manager</a>, doesn't need
+as well as a <a href="/2015/09/22/micromanagement.html">good project manager</a>, doesn’t need
 <a href="/2015/01/08/morning-standup-meetings.html">meetings</a>
 and <em>never</em> organizes them.</p>
 
 
 
 <p>Meetings demotivate, waste time, burn money, and degrade quality. But more about
-that later. For now, let's discuss a proposed alternative.</p>
+that later. For now, let’s discuss a proposed alternative.</p>
 
-<p>Say I'm an architect who needs to design the schema for a relational
+<p>Say I’m an architect who needs to design the schema for a relational
 database in a new project, and I have a team of five programmers whom I want
-to help me with this design. That's a very logical and appropriate desire,
+to help me with this design. That’s a very logical and appropriate desire,
 as a good architect always discusses all possible options with available
 team members before making a final decision. So I call a meeting? No!</p>
 
 <h2 id="a-good-architect">A Good Architect</h2>
 
-<p>I ask Jeff, one of our programmers, to create a draft of the DB schema, but I don't
-actually talk to him about it. I value and respect his time---there's no need to bother him with this organizational noise, so I just create
+<p>I ask Jeff, one of our programmers, to create a draft of the DB schema, but I don’t
+actually talk to him about it. I value and respect his time—there’s no need to bother him with this organizational noise, so I just create
 a ticket and assign it to Jeff. When he has time, he creates a draft
 and returns a pull request. I review it and make some comments before he updates
 the branch, and finally
@@ -120,7 +120,7 @@ the branch, and finally
 <p>Perfect; we have a draft.</p>
 
 <p>At the end of the document, Jeff also listed assumptions, risks, and concerns.
-For example, this is what I got back from him (it's Markdown, a very
+For example, this is what I got back from him (it’s Markdown, a very
 convenient format for simple technical documents; I highly recommend it):</p>
 
 <pre>## Tables
@@ -141,22 +141,22 @@ order (id INT, details VARCHAR, user_id INT FK(user));
 - Would NoSQL be more suitable?
 - What is the DB server we'll use?</pre>
 
-<p>I don't know how much time Jeff would have spent on this document,
-but I just created it in 10 minutes. Of course, it's a very simple schema
+<p>I don’t know how much time Jeff would have spent on this document,
+but I just created it in 10 minutes. Of course, it’s a very simple schema
 for a very simple project. But even if Jeff spent an hour
 on it, every minute of that hour is valuable to the project. What I mean
 is that every dollar I pay Jeff for his time is returned to me
 in the form of a text document.</p>
 
-<p>Now I have a draft and I'm taking the next step. I ask
-Monica to take a look at it and suggest changes. Again, it's another
-hour and I've got back a pull request with changes, corrections,
-new assumptions, new risks, and new concerns. I'm not talking to Monica---there is no need for that. She has all the information she needs
+<p>Now I have a draft and I’m taking the next step. I ask
+Monica to take a look at it and suggest changes. Again, it’s another
+hour and I’ve got back a pull request with changes, corrections,
+new assumptions, new risks, and new concerns. I’m not talking to Monica—there is no need for that. She has all the information she needs
 to work with the DB schema. She is a good engineer, and I
 <a href="/2017/11/21/trust-pay-lose.html">trust</a>
 her ability to formulate her opinion in a written format.</p>
 
-<p>There's no need to sit together in the same room or stand at a whiteboard.
+<p>There’s no need to sit together in the same room or stand at a whiteboard.
 Monica is smart enough to do this job by herself. She already has
 all the ideas expressed by Jeff in front of her;
 there is no need for her to talk to him either.</p>
@@ -170,10 +170,10 @@ I have a new version of my <code>schema.md</code> document.</p>
 of pull requests with comments. This is way better than meeting notes
 or even a meeting video. Anyone who joins the project later will be
 able to understand how we came to the conclusion of using PostgreSQL
-and storing monetary amounts without cents. It's all there in the Git history
+and storing monetary amounts without cents. It’s all there in the Git history
 and GitHub tickets, forever with us.</p>
 
-<p>What if I need more opinions? Or if I'm still not sure the schema is good enough?
+<p>What if I need more opinions? Or if I’m still not sure the schema is good enough?
 No problem; I ask someone else to review it one more time and
 send me a pull request with changes.
 I can even ask Jeff to do it again after a few iterations with
@@ -188,8 +188,8 @@ ask Jeff to pay attention to and resolve them.</p>
 the project pays for turns into a tangible product: a <em>document</em>
 with a change history!</p>
 
-<p>That's how a professional architect collects opinions and
-makes complex decisions. Now let's see what a bad architect would do.</p>
+<p>That’s how a professional architect collects opinions and
+makes complex decisions. Now let’s see what a bad architect would do.</p>
 
 <h2 id="a-bad-architect">A Bad Architect</h2>
 
@@ -209,59 +209,59 @@ No, wait, wait. First of all, I create an agenda:</p>
   - Ask Joe about PostgreSQL
 6. Conclusions: 10 min</pre>
 
-<p>I'm sure you know what I'm talking about and you've seen these
-agendas from your "architects." Anyway, my first step is done. I've scheduled an
-hour-and-a-half meeting where all programmers will be present. We'll have fun
-and drink coffee. We'll discuss the problem, hear all opinions, and find
-the best solution. We'll document it in that <code>schema.md</code> and
+<p>I’m sure you know what I’m talking about and you’ve seen these
+agendas from your “architects.” Anyway, my first step is done. I’ve scheduled an
+hour-and-a-half meeting where all programmers will be present. We’ll have fun
+and drink coffee. We’ll discuss the problem, hear all opinions, and find
+the best solution. We’ll document it in that <code>schema.md</code> and
 get back to our tasks.</p>
 
-<p>Instead of circulating those <em>dry</em> and <em>boring</em> Git documents, we'll have a
-real human communication with a nice coffee break where we'll share our
-opinions about the last episode of The Bing Bang Theory. Isn't that what
+<p>Instead of circulating those <em>dry</em> and <em>boring</em> Git documents, we’ll have a
+real human communication with a nice coffee break where we’ll share our
+opinions about the last episode of The Bing Bang Theory. Isn’t that what
 we all like about our <a href="/2015/10/06/how-to-be-good-office-slave.html">office jobs</a> anyway?</p>
 
 
 
-<p>I don't think so.</p>
+<p>I don’t think so.</p>
 
 <p>I think meetings demotivate, waste time, burn money, and degrade quality.
 Those who organize them either have no idea what they are doing or
-are silently <em>robbing</em> the company they're working for.</p>
+are silently <em>robbing</em> the company they’re working for.</p>
 
-<p>We needed meetings 30 years ago when we didn't have laptops and GitHub.
+<p>We needed meetings 30 years ago when we didn’t have laptops and GitHub.
 But even then, we had a pen and paper.</p>
 
-<p>I'm talking about meetings that are intended to collect or distribute information,
+<p>I’m talking about meetings that are intended to collect or distribute information,
 discuss or propose something, or find a solution in a <em>technical</em> domain.
 The only <em>valid purpose</em> of meetings is to read <em>body language</em> of the people
 you are dealing with. Politicians, businessmen, poker players,
-shrinks, physicians, etc.---they need meetings because they must
+shrinks, physicians, etc.—they need meetings because they must
 read our bodies, not just our thoughts.</p>
 
-<p>Do we really care about Monica's body while we're designing a DB schema?
-Well, that depends, right? But let's be serious; we're not paid for that.</p>
+<p>Do we really care about Monica’s body while we’re designing a DB schema?
+Well, that depends, right? But let’s be serious; we’re not paid for that.</p>
 
 <h2 id="meetings-demotivate">Meetings Demotivate</h2>
 
 <p>The best motivation for a creative person is to see the
 <a href="/2015/07/21/hourly-pay-modern-slavery.html">results</a>
-of his or her creativity. If I'm not mistaken, enjoying the process
+of his or her creativity. If I’m not mistaken, enjoying the process
 of creativity without any results is an obvious
 sign of mental illness. A healthy and creative person like a software
 engineer, for example, wants to see how his or her efforts are turned
 into something <em>valuable</em> and, preferably, <em>tangible</em>.</p>
 
 <p>Meetings almost never produce anything tangible and rarely something valuable.
-Sometimes we have "minutes"
+Sometimes we have “minutes”
 of our meetings, but they are just short pieces of paper with a brief
-summary of what we were talking about. Not a real "<em>product</em>" for a
+summary of what we were talking about. Not a real “<em>product</em>” for a
 creative person.</p>
 
-<p>Thus, they demotivate me because I simply don't see what
+<p>Thus, they demotivate me because I simply don’t see what
 <a href="/2015/07/21/hourly-pay-modern-slavery.html">two hours</a>
-of my life were turned into. We don't really <em>create</em> anything there,
-we just <em>discuss</em>. Pay attention here; I'm talking about meetings, not about
+of my life were turned into. We don’t really <em>create</em> anything there,
+we just <em>discuss</em>. Pay attention here; I’m talking about meetings, not about
 collaborative work on something, like in pair programming, for example.</p>
 
 
@@ -271,13 +271,13 @@ are very tangible results. You may say that only in a direct,
 face-to-face setting could these ideas be born. You may also
 say that many bright technical decisions were invented precisely due
 to a magic synergy of <em>friends</em> thinking in the same direction, at the
-same time, and in the same room. This argument makes sense, but I'll address that later.</p>
+same time, and in the same room. This argument makes sense, but I’ll address that later.</p>
 
 <h2 id="meetings-waste-time">Meetings Waste Time</h2>
 
-<p>I think it's obvious. For the first few minutes of the meeting, you're concentrated;
+<p>I think it’s obvious. For the first few minutes of the meeting, you’re concentrated;
 then you start checking your Twitter feed and doodling. Everybody is doing
-the same---not because we're <a href="/2018/04/17/how-to-be-lazy.html">lazy</a>
+the same—not because we’re <a href="/2018/04/17/how-to-be-lazy.html">lazy</a>
 but because there is <em>no demand</em>
 for our full focus at the meeting.</p>
 
@@ -285,20 +285,20 @@ for our full focus at the meeting.</p>
 
 <p>While Monica is working with the document, making comments and suggestions, she is
 <a href="/2015/11/21/ringelmann-effect-vs-agile.html">fully concentrated</a>
-on the result---mostly because there is nobody
+on the result—mostly because there is nobody
 else to
 <a href="/2015/02/16/it-is-not-a-school.html">help</a>
-her. She has to deliver that pull request, and I'm waiting for her.
+her. She has to deliver that pull request, and I’m waiting for her.
 Her concentration is as high as it would be at the meeting, when someone
 is asking her a direct question and she has to provide a detailed answer.</p>
 
 <p>Her time is optimized for a suitable outcome while everybody else is doing
 something else.</p>
 
-<p>At the meeting, on the other hand, we're all concentrating sparingly at best. And the longer
+<p>At the meeting, on the other hand, we’re all concentrating sparingly at best. And the longer
 the meeting, the slower we are. Also, the more people who are there,
 the less we care and the more interested we become in our Facebook updates.
-I reckon that's not much of a surprise to you if you've been in the software development
+I reckon that’s not much of a surprise to you if you’ve been in the software development
 industry for at least a few months.</p>
 
 <h2 id="meetings-burn-money">Meetings Burn Money</h2>
@@ -311,14 +311,14 @@ Or much less.</p>
 
 <p>Even though this may sound extreme, I have to say that I consider meetings
 a legalized way to <em>rob</em> a project. Most meeting
-organizers (architects, CTOs, CEOs, programmers, etc.) don't realize that.
+organizers (architects, CTOs, CEOs, programmers, etc.) don’t realize that.
 They believe the more they talk, the better engineers they are. And their
 bosses, by mistake, appreciate that sort of activity from their subordinates.</p>
 
-<p>It's robbery!</p>
+<p>It’s robbery!</p>
 
-<p>I told you to create a draft of a DB schema. Now you're coming to me
-and asking for a meeting because certain "aspects" are not clear?
+<p>I told you to create a draft of a DB schema. Now you’re coming to me
+and asking for a meeting because certain “aspects” are not clear?
 Did you study software engineering anywhere? Do you know how to work
 with technical documents? Are you capable of writing in a way that everybody
 else can understand and respond to you, also in writing? No? Now you want
@@ -339,14 +339,14 @@ goes <em>down</em>, no matter how self-motivated I am.</p>
 <p>Meetings promote group achievements and
 <a href="/2015/11/21/ringelmann-effect-vs-agile.html">discourage</a>
 individual ones. At the
-end of a meeting, it's often not clear who exactly suggested a good idea
+end of a meeting, it’s often not clear who exactly suggested a good idea
 and who made the biggest effort. In other words, at the end of a meeting,
-I don't know how good I am. Am I still the same as a month ago or am I a
+I don’t know how good I am. Am I still the same as a month ago or am I a
 <a href="/2014/10/29/how-much-do-you-cost.html">better</a>
 engineer?</p>
 
-<p>They smile more and ask me "what do you think?" more frequently than last summer;
-that must mean something, right? I'm sure you understand this is
+<p>They smile more and ask me “what do you think?” more frequently than last summer;
+that must mean something, right? I’m sure you understand this is
 not the kind of feedback a serious engineer would expect.</p>
 
 <p>A serious software developer wants to produce tangible results and receive
@@ -359,15 +359,15 @@ and <em>grow</em>.</p>
 
 <h2 id="what-about-the-a-ha-moment">What About the A-ha! Moment?</h2>
 
-<p>Now, what about true creativity or that well-known "a-ha!" moment? Sometimes
-it's necessary to "think out loud" in order to invent something, right?
-We all know how important a face-to-face interaction could be when we're
+<p>Now, what about true creativity or that well-known “a-ha!” moment? Sometimes
+it’s necessary to “think out loud” in order to invent something, right?
+We all know how important a face-to-face interaction could be when we’re
 researching and developing something new. Where would we be without meetings?
-We can't simply work with documents; we need to talk to each other in order to let our
-ideas out. Isn't it obvious?</p>
+We can’t simply work with documents; we need to talk to each other in order to let our
+ideas out. Isn’t it obvious?</p>
 
 <p>I have only one argument for that. Did Einstein invent his theory
-at a meeting with his colleagues? I don't think so. And he was solving a much
+at a meeting with his colleagues? I don’t think so. And he was solving a much
 bigger problem than a DB schema design.</p>
 
 <hr>
@@ -376,6 +376,7 @@ bigger problem than a DB schema design.</p>
 while documenting ideas in text and diagrams is a way more difficult
 job to do. So train and discipline yourself to work with documents
 and let juniors enjoy their meetings.</p>
+
 
     </article>
   </body>

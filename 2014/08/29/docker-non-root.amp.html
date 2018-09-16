@@ -75,11 +75,11 @@ user, read how
       </p>
       <p>Yegor Bugayenko<br>29 August 2014</p>
       <h1>How We Run as a Non-Root Inside Docker Container</h1>
-      <p>Docker starts a process inside its container as a "root" user. In some
-cases, this is not convenient though. For example, <code>initdb</code> from PostgreSQL doesn't like to
+      <p>Docker starts a process inside its container as a “root” user. In some
+cases, this is not convenient though. For example, <code>initdb</code> from PostgreSQL doesn’t like to
 be started as root and will fail. In <a href="http://www.rultor.com">rultor.com</a>,
 a DevOps team assistant,
-<a href="/2014/07/29/docker-in-rultor.html">we're using Docker</a>
+<a href="/2014/07/29/docker-in-rultor.html">we’re using Docker</a>
 as a virtualization technology for every build we run.</p>
 
 <p>Here is how we change the user inside a running container, right

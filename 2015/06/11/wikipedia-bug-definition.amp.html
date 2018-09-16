@@ -79,13 +79,13 @@ reusability issues, which are very important too.
 at the time of this writing:</p>
 
 <blockquote>
-<p>A software bug is an error, flaw, failure, or fault
+  <p>A software bug is an error, flaw, failure, or fault
 in a computer program or system that causes it
 to produce an incorrect or unexpected result or
 to behave in unintended ways.</p>
 </blockquote>
 
-<p>I think that's incomplete. The definition entirely excludes "non-behavioral"
+<p>I think that’s incomplete. The definition entirely excludes “non-behavioral”
 defects related to, for example, <em>maintainability</em> and <em>reusability</em>.</p>
 
 
@@ -99,26 +99,26 @@ requirement:</p>
 
 <pre>The user can generate a PDF report.</pre>
 
-<p>If our software doesn't generate a PDF report and crashes instead,
-that's a functional bug. If instead of a PDF report, it generates an empty
-page or a plain text document, that's a functional bug. If there
-is no "generate PDF report" button at all and the user simply can't start
-the PDF generation process, that's a functional bug.</p>
+<p>If our software doesn’t generate a PDF report and crashes instead,
+that’s a functional bug. If instead of a PDF report, it generates an empty
+page or a plain text document, that’s a functional bug. If there
+is no “generate PDF report” button at all and the user simply can’t start
+the PDF generation process, that’s a functional bug.</p>
 
 <p>Here is an example of a non-functional requirement:</p>
 
 <pre>PDF report generation must take less than 100ms.</pre>
 
 <p>If our software generates a perfectly correct PDF report but it
-takes a minute, that's a non-functional bug.</p>
+takes a minute, that’s a non-functional bug.</p>
 
 <p>So far so good, since the bug definition given by Wikipedia perfectly
-covers both of them---if they happen, they will cause our software
-"to <em>produce</em> an incorrect or unexpected result or to <em>behave</em> in an unintended way."
-The emphasis here is on the words "produce" and "behave." They presume
-the software is doing something and we're observing its behavior.</p>
+covers both of them—if they happen, they will cause our software
+“to <em>produce</em> an incorrect or unexpected result or to <em>behave</em> in an unintended way.”
+The emphasis here is on the words “produce” and “behave.” They presume
+the software is doing something and we’re observing its behavior.</p>
 
-<p>However, that's not all of it.</p>
+<p>However, that’s not all of it.</p>
 
 <p>What about maintainability? I may have this kind of non-functional requirement:</p>
 
@@ -126,33 +126,33 @@ the software is doing something and we're observing its behavior.</p>
 easy to maintain and extend for an average
 Java programmer.</pre>
 
-<p>It's a rather vague requirement, but you get the idea.</p>
+<p>It’s a rather vague requirement, but you get the idea.</p>
 
 <p>Maintainability and reusability are very critical non-functional components
 of any modern software program, especially taking into account a very high
-cost of labor in the market. Very often, it's more important to make sure
-the software is maintainable than fast. If it's maintainable and slow, we
+cost of labor in the market. Very often, it’s more important to make sure
+the software is maintainable than fast. If it’s maintainable and slow, we
 can find new programmers to <em>improve</em> the code. If it is fast
-but unmaintainable, we won't be able to do anything with it later and will
+but unmaintainable, we won’t be able to do anything with it later and will
 have to <em>rewrite</em> it from scratch if some new feature is required.
 Read more about this in
 <a href="/2014/10/26/hacker-vs-programmer-mentality.html">Are You a Hacker or a Designer?</a>.</p>
 
-<p>The definition of a software bug given by Wikipedia doesn't cover
+<p>The definition of a software bug given by Wikipedia doesn’t cover
 maintainability and reusability flaws at all.
-That makes for a common source of confusion---an inconsistent code style is not a bug (see the discussion under
+That makes for a common source of confusion—an inconsistent code style is not a bug (see the discussion under
 <a href="/2014/08/13/strict-code-quality-control.html">this post</a>).</p>
 
 <p>That is wrong.</p>
 
 <p>An inconsistent code style <em>is</em> a software bug, as is incomplete documentation,
-lack of documentation, code that's too complex, the lack of a coding style guide,
+lack of documentation, code that’s too complex, the lack of a coding style guide,
 etc.</p>
 
 <p>I would rewrite the software bug definition paragraph in Wikipedia like this:</p>
 
 <blockquote>
-<p>A software bug is an error, flaw, failure, or fault
+  <p>A software bug is an error, flaw, failure, or fault
 in a computer program or system that causes it
 to violate at least one of its functional or
 non-functional requirements.</p>
