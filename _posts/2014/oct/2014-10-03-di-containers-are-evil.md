@@ -212,5 +212,3 @@ I believe this is how a proper object-oriented application
 should be instantiated.
 
 And DI containers? In my opinion, they just add unnecessary noise.
-
-ps. Another live example is here:
