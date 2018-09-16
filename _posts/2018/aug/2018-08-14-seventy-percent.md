@@ -50,6 +50,8 @@ us, while they would prefer our "marriage" to be based solely on love.
 They would have us promise to never betray each other's mutual interests but then
 the business suffers and eventually collapses.
 
+{% quote They just want to have 70%... each!!! And they have it. %}
+
 Why so? Because it's impossible to be equal in business (just like it's impossible
 to be equal in marriage, but that's a topic for another blog post).
 Eventually a conflict of interests shows up and the inability to resolve it
@@ -76,6 +78,8 @@ They just want to have 70%... each!!!
 It's not even 50/50 in most cases, but 70/70. This is what makes it funny.
 Very often each partner thinks that he or she is the major contributor
 to the project and that's why it's 70%.
+
+{% quote You can't trust me to stand by my words, if there were no words. %}
 
 And they have it.
 
