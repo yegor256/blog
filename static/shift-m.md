@@ -51,7 +51,7 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
-<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/>
 <img src="/images/shift-m/olga-arnoldi.png" class="guest-face" alt="Face of Olga Arnoldi"/><br/>
 &#35;36: [70/70 or how to make a business deal](/shift-m/2018/36.html)<br/>
 10 September 2018; 62 min.
