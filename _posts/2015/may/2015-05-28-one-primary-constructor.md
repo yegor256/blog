@@ -3,6 +3,7 @@ layout: post
 title: "There Can Be Only One Primary Constructor"
 date: 2015-05-28
 tags: oop java
+place: Mountain View, CA
 description: |
   In a properly designed class, there can only be
   one primary constructor and any number of

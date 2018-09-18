@@ -3,6 +3,7 @@ layout: post
 title: "A Few Thoughts on Unit Test Scaffolding"
 date: 2015-05-25
 tags: oop java
+place: Atherton, CA
 categories: jcg
 description: |
   Most unit tests require mocks, stubs, and the preparation
