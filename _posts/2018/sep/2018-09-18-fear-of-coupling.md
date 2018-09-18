@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fear of Decoupling"
-date: 2018-01-29
+date: 2018-09-18
 place: Moscow, Russia
 tags: oop
 description: |

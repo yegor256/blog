@@ -199,7 +199,9 @@ simply returns what's inside.
 In the end, this code will create exactly the same XML document
 as I created above with string concatenation.
 
-The beauty of this approach is in the perfect decoupling of data generation
+The beauty of this approach is in the perfect
+[decoupling]({% pst 2018/sep/2018-09-18-fear-of-coupling %})
+of data generation
 and XML building and translation between XML and HTML. It is perfectly reusable
 and "stackable." We can transform the data in XML format multiple times,
 applying different XSL stylesheets to each one. We can even transform them into
