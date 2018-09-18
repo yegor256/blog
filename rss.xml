@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-17T14:51:03+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Code Must Be Clean. And Clear.</title><link href="https://www.yegor256.com/2018/09/12/clear-code.html" rel="alternate" type="text/html" title="Code Must Be Clean. And Clear." /><published>2018-09-12T00:00:00+00:00</published><updated>2018-09-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/12/clear-code</id><content type="html" xml:base="https://www.yegor256.com/2018/09/12/clear-code.html">&lt;p&gt;There is a famous book by Robert Martin called &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;&lt;em&gt;Clean Code&lt;/em&gt;&lt;/a&gt;.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-18T05:21:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fear of Decoupling</title><link href="https://www.yegor256.com/2018/09/18/fear-of-coupling.html" rel="alternate" type="text/html" title="Fear of Decoupling" /><published>2018-09-18T00:00:00+00:00</published><updated>2018-09-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/18/fear-of-coupling</id><content type="html" xml:base="https://www.yegor256.com/2018/09/18/fear-of-coupling.html">&lt;p&gt;Objects talk to each other via their methods. In mainstream programming
+languages, like Java or C#, an object may have a unique set of methods
+together with some methods it is forced to have because it &lt;em&gt;implements&lt;/em&gt; certain types,
+also known as &lt;em&gt;interfaces&lt;/em&gt;. My experience of speaking with many programmers
+tells me that most of us are pretty scared of objects that implement too
+many interface methods. We don’t want to deal with them since they
+are &lt;em&gt;polymorphic&lt;/em&gt; and, because of that, unreliable.
+It’s a fair fear. Let’s try to analyze where it comes from.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Funny Games (2007) by Michael Haneke&quot; src=&quot;/images/2018/09/funny-games.jpg&quot; longdesc=&quot;#9f6d574f&quot; /&gt;&lt;figcaption id=&quot;9f6d574f&quot;&gt;Funny Games (2007) by Michael Haneke&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;As usual, let’s start with a simple Java example. Here is an amount of money
+I’m going to send to a user via, say, the PayPal API:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Money&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now here I am, the method that sends the money:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Send them over via the API...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;These two pieces of code are, as we call it, loosely coupled. The method
+&lt;code&gt;send()&lt;/code&gt; has no idea which class is provided and how exactly the method
+&lt;code&gt;cents()&lt;/code&gt; is implemented. Maybe it’s a simple constant object of one dollar:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OneDollar&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;100.0d&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Or maybe it’s a way more complex entity that makes a network connection first,
+in order to fetch the current USD-to-EUR exchange rate, update the database,
+and then return the result of some calculation:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmployeeHourlyRate&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Money&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Fetch the exchange rate;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Update the database;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Calculate the hourly rate;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Return the value.&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The method &lt;code&gt;send()&lt;/code&gt; doesn’t have the knowledge of what exactly is provided
+as its first argument. All it can do is hope that the method &lt;code&gt;cents()&lt;/code&gt; will
+do the work right. What if it doesn’t?&lt;/p&gt;
+
+&lt;p&gt;If I’m a developer of the method &lt;code&gt;send()&lt;/code&gt; and I’m fully prepared to take the
+blame for the mistakes my method causes, I do want to know what my collaborators are.
+And I want to be absolutely sure they work. Not just work, but work exactly how I expect
+them to. Preferably I would like to write them myself. Ideally
+I would like to ensure that nobody touches them after I implement them. You get
+the sarcasm, right?&lt;/p&gt;
+
+&lt;p&gt;This may sound like a joke, but I have heard this argument many times. They say
+that “it’s better to be completely sure two pieces work together, instead of
+relying on the damn polymorphism and then spending hours debugging something
+I didn’t write.” And they are right, you know. Polymorphism—when
+a seemingly primitive object of type &lt;code&gt;Money&lt;/code&gt; does whatever it wants, including
+HTTP requests and SQL &lt;code&gt;UPDATE&lt;/code&gt; queries—doesn’t add reliability to the entire
+application, does it?&lt;/p&gt;
+
+&lt;p&gt;No, it doesn’t.&lt;/p&gt;
+
+&lt;p&gt;Obviously, polymorphism makes the life of the developers of this type &lt;code&gt;Money&lt;/code&gt; and its
+“ancestors” way simpler, since they don’t have to think about their users much.
+All they worry about is how to return the &lt;code&gt;double&lt;/code&gt; when &lt;code&gt;cents()&lt;/code&gt; is called.
+They don’t need to care about speed, potential exceptions, memory usage,
+and many other things, since the interface doesn’t require that. It only
+tells them to return the &lt;code&gt;double&lt;/code&gt; and call it a day. Let somebody else
+worry about everything else. Easy, huh? But that’s a childish and egoistic way
+of thinking, you may say!&lt;/p&gt;
+
+&lt;p&gt;Yes, it is.&lt;/p&gt;
+
+&lt;p&gt;However…&lt;/p&gt;
+
+&lt;p&gt;You’ve most definitely heard of the &lt;a href=&quot;/2015/08/25/fail-fast.html&quot;&gt;Fail Fast&lt;/a&gt; idea,
+which, in a nutshell, claims that in order to make an application robust
+and stable we have to make sure its components are as fragile as possible and
+as vulnerable as they can be in response to any potential exceptional situation.
+They have to break whenever they can and let their users deal with the failures.
+With such a philosophy no object will assume anything good about its counterparts
+and will always try to escalate problems to higher levels, which eventually will
+hit the end user who will report them back to the team. The team will fix them
+all and the entire product will stabilize.&lt;/p&gt;
+
+&lt;p&gt;If the philosophy is the opposite and every object is trying to deal with
+problems on its individual micro level, the majority of exceptional situations
+will never be visible to users, testers, architects and programmers, who are
+supposed to be dealing with them and finding solutions for them. Thanks to this
+“careful” mindset of individual objects, the stability and robustness of the
+entire application will suffer.&lt;/p&gt;
+
+&lt;p&gt;We can apply the same logic to the “fear of loose coupling.”&lt;/p&gt;
+
+&lt;p&gt;When we worry about how &lt;code&gt;Money.cents()&lt;/code&gt; works and want to control its behavior,
+we are doing ourselves and the entire project a big disservice. In the long run
+we destabilize the product, instead of making it more stable. Some even
+want to prohibit polymorphism by declaring method &lt;code&gt;send()&lt;/code&gt; this way:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EmployeeHourlyRate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Now I know that it&amp;#39;s not some abstract Money,&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// but a very specific class EmployeeHourlyRate, which&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// was implemented by Bobby, a good friend of mine.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here we limit the amount of mistakes our code may have, since we know Bobby,
+we’ve seen his code, we know how it works and which exceptions to expect.
+We are safe. Yes, we are. For now. But strategically speaking, by not
+allowing our software to make all possible mistakes and throw all possible
+exceptions in all unusual situations, we are seriously limiting its ability
+to be properly tested and that’s why it’s destabilized.&lt;/p&gt;
+
+&lt;p&gt;As I &lt;a href=&quot;/2017/05/23/unlimited-number-of-bugs.html&quot;&gt;mentioned earlier&lt;/a&gt;,
+the only way to increase the quality of software is to find and fix its bugs.
+The more bugs we fix, the fewer are the bugs that remain hidden and not-fixed-yet. A fear
+of bugs and our intention to prevent them is only shooting us in the foot.&lt;/p&gt;
+
+&lt;p&gt;Instead, we should let everybody, not only Bobby, implement &lt;code&gt;Money&lt;/code&gt; and pass
+those implementations to &lt;code&gt;send()&lt;/code&gt;. Yes, some of them will cause troubles
+and may even lead to UI-visible failures. But if our management understands
+the concept of software quality right, they will not blame us for mistakes.
+Instead, they will encourage us to find as many of them as possible,
+reproduce them with automated tests, fix, and re-deploy.&lt;/p&gt;
+
+&lt;p&gt;Thus, the fear of decoupling is nothing else but Fail Safe.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Objects talk to each other via their methods. In mainstream programming languages, like Java or C#, an object may have a unique set of methods together with some methods it is forced to have because it implements certain types, also known as interfaces. My experience of speaking with many programmers tells me that most of us are pretty scared of objects that implement too many interface methods. We don’t want to deal with them since they are polymorphic and, because of that, unreliable. It’s a fair fear. Let’s try to analyze where it comes from.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry><entry><title type="html">Code Must Be Clean. And Clear.</title><link href="https://www.yegor256.com/2018/09/12/clear-code.html" rel="alternate" type="text/html" title="Code Must Be Clean. And Clear." /><published>2018-09-12T00:00:00+00:00</published><updated>2018-09-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/12/clear-code</id><content type="html" xml:base="https://www.yegor256.com/2018/09/12/clear-code.html">&lt;p&gt;There is a famous book by Robert Martin called &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;&lt;em&gt;Clean Code&lt;/em&gt;&lt;/a&gt;.
 The title is an obvious call to all of us: the code must be &lt;em&gt;clean&lt;/em&gt;. Clean, like a kitchen,
 I suppose—there are no dirty dishes, no garbage on the floor, no smelly
 towels. Dirt to be cleaned in a code base, according to Martin, includes
@@ -1127,116 +1262,4 @@ end
 &lt;a href=&quot;https://github.com/yegor256/sixnines&quot;&gt;sixnines&lt;/a&gt;,
 &lt;a href=&quot;https://github.com/yegor256/0pdd&quot;&gt;0pdd&lt;/a&gt;,
 and &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;Zold&lt;/a&gt;
-web apps on top of Sinatra (all open source).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">You know what OAuth login is, right? It’s when your users click “login” and get redirected to Facebook, Twitter, Google, or some other website which then identifies them. Then they go back to your website and you know who they are. It’s very convenient for them. It’s convenient for you too, since you don’t need to implement the login functionality and don’t need to keep their credentials in a database. I created a simple Ruby gem to simplify this operation for GitHub only. Here is how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/savages.jpg" /></entry><entry><title type="html">Object Validation: to Defer or Not?</title><link href="https://www.yegor256.com/2018/05/29/object-validation.html" rel="alternate" type="text/html" title="Object Validation: to Defer or Not?" /><published>2018-05-29T00:00:00+00:00</published><updated>2018-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/05/29/object-validation</id><content type="html" xml:base="https://www.yegor256.com/2018/05/29/object-validation.html">&lt;!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 --&gt;
-
-&lt;p&gt;I &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;said earlier&lt;/a&gt;
-that constructors must be code-free and do nothing
-aside from attribute initialization. Since then, the most frequently
-asked &lt;a href=&quot;https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622&quot;&gt;question&lt;/a&gt;
-is: What about validation of arguments? If they are “broken,”
-what is the point of creating an object in an “invalid” state?
-Such an object will fail later, at an unexpected moment. Isn’t it
-better to throw an exception at the very moment of instantiation? To fail fast,
-so to speak? Here is what I think.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Punching the Clown (2009) by Gregori Viens&quot; src=&quot;/images/2018/05/punching-the-clown.jpg&quot; longdesc=&quot;#ec207931&quot; /&gt;&lt;figcaption id=&quot;ec207931&quot;&gt;Punching the Clown (2009) by Gregori Viens&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let’s start with this Ruby code:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&amp;amp;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;We can use it to read a list of users from a file:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;names&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are a number of ways to abuse this class:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pass &lt;code&gt;nil&lt;/code&gt; to the ctor instead of a file name;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pass something else, which is not &lt;code&gt;String&lt;/code&gt;;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pass a file that doesn’t exist;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Pass a directory instead of a file.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Do you see the difference between these four mistakes we can make?
-Let’s see how our class can protect itself from each of them:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;File name can&amp;#39;t be nil&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;must&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;is_a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#{@file} is absent&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#{@file} is not a file&amp;quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&amp;amp;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The first two potential mistakes were filtered out
-in the constructor, while the other two—later, in the method.
-Why did I do it this way? Why not put all of them into the constructor?&lt;/p&gt;
-
-&lt;p&gt;Because the first two compromise &lt;a href=&quot;/2014/12/09/immutable-object-state-and-behavior.html&quot;&gt;object state&lt;/a&gt;,
-while with the other two—its runtime behavior. You remember that an
-&lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt; is a representative of
-a set of other objects it encapsulates, called attributes. The object of
-class &lt;code&gt;Users&lt;/code&gt; can’t &lt;em&gt;represent&lt;/em&gt; &lt;code&gt;nil&lt;/code&gt; or a number. It can only represent
-a file with a name of type &lt;code&gt;String&lt;/code&gt;. On the other hand, what that file
-contains and whether it really is a file—doesn’t make the state invalid.
-It only causes trouble for the behavior.&lt;/p&gt;
-
-&lt;p&gt;Even though the difference may look subtle, it’s obvious. There are
-two phases of interaction with the encapsulated object: &lt;em&gt;connecting&lt;/em&gt; and &lt;em&gt;talking&lt;/em&gt;.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=-drZbHxydMc&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/-drZbHxydMc/mqdefault.jpg&quot; alt=&quot;YouTube video #-drZbHxydMc&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;When do you validate your objects? (Webinar #35);
-        4 July 2018.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;First, we encapsulate the &lt;code&gt;file&lt;/code&gt; and want to be sure that it really is
-a file. We are not yet talking to it, we don’t want it to work for us yet,
-we just want to make sure it really &lt;em&gt;is&lt;/em&gt; an object that we will be able to talk
-to in the near future. If it’s &lt;code&gt;nil&lt;/code&gt; or a &lt;code&gt;float&lt;/code&gt;, we will have problems
-in the future, for sure. That’s why we raise an exception from the constructor.&lt;/p&gt;
-
-&lt;p&gt;Then the second phase is talking, where we delegate control to the object
-and expect it to behave correctly. At this phase we may have other validation
-procedures, in order to make sure our interaction will go smoothly.
-It’s important to mention that these validations are very situational.
-We may call &lt;code&gt;names()&lt;/code&gt; multiple times and every time have a different
-situation with the file on disc. To begin with it may not exist, while in a few seconds
-it will be ready and available for reading.&lt;/p&gt;
-
-&lt;p&gt;Ideally, a programming language should provide instruments for the first
-type of validations, for example with &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot;&gt;strict typing&lt;/a&gt;.
-In Java, for example,
-we would not need to check the type of &lt;code&gt;file&lt;/code&gt;, the compiler would catch
-that error earlier. In Kotlin we would be able to get rid of the NULL
-check, thanks to their &lt;a href=&quot;https://kotlinlang.org/docs/reference/null-safety.html&quot;&gt;Null Safety&lt;/a&gt; feature.
-Ruby is less powerful than those languages, that’s why we have to validate “manually.”&lt;/p&gt;
-
-&lt;p&gt;Thus, to summarize, validating in constructors is &lt;em&gt;not&lt;/em&gt; a bad idea, provided
-the validations are &lt;em&gt;not touching the objects&lt;/em&gt; but only confirm that they are
-good enough to work with later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">I said earlier that constructors must be code-free and do nothing aside from attribute initialization. Since then, the most frequently asked question is: What about validation of arguments? If they are “broken,” what is the point of creating an object in an “invalid” state? Such an object will fail later, at an unexpected moment. Isn’t it better to throw an exception at the very moment of instantiation? To fail fast, so to speak? Here is what I think.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/05/punching-the-clown.jpg" /></entry></feed>
+web apps on top of Sinatra (all open source).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">You know what OAuth login is, right? It’s when your users click “login” and get redirected to Facebook, Twitter, Google, or some other website which then identifies them. Then they go back to your website and you know who they are. It’s very convenient for them. It’s convenient for you too, since you don’t need to implement the login functionality and don’t need to keep their credentials in a database. I created a simple Ruby gem to simplify this operation for GitHub only. Here is how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/savages.jpg" /></entry></feed>

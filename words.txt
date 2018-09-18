@@ -753,6 +753,7 @@ boards
 boast
 boat
 bob
+bobby
 bodies
 body
 bonds
@@ -1978,6 +1979,7 @@ desktop
 desperately
 despise
 despite
+destabilized
 destination
 destroy
 destroyed
@@ -4976,6 +4978,7 @@ normal
 normally
 NoSQL
 not
+not-fixed-yet
 not-so-perfect
 not-yet-implemented
 notation
@@ -5583,6 +5586,7 @@ politics
 pollute
 polluters
 polygamous
+polymorphic
 polymorphism
 POM
 pompous
@@ -7196,6 +7200,7 @@ strange
 strange---git
 stranger
 strangers
+strategically
 strategies
 strategizing
 strategy
@@ -7823,6 +7828,7 @@ ubuntu
 uglier
 ugly
 UI
+UI-visible
 ukraine
 ultimate
 ultimately
@@ -7930,6 +7936,7 @@ unsuccessful
 untestable
 until
 untraceable
+unusual
 unwilling
 unwise
 up
