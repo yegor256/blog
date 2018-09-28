@@ -160,7 +160,8 @@ of bugs and our intention to prevent them is only shooting us in the foot.
 Instead, we should let everybody, not only Bobby, implement `Money` and pass
 those implementations to `send()`. Yes, some of them will cause troubles
 and may even lead to UI-visible failures. But if our management understands
-the concept of software quality right, they will not blame us for mistakes.
+the concept of [software quality]({% pst 2017/dec/2017-12-26-software-quality-formula %})
+right, they will [not blame]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}) us for mistakes.
 Instead, they will encourage us to find as many of them as possible,
 reproduce them with automated tests, fix, and re-deploy.
 

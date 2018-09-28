@@ -114,7 +114,7 @@ Unlike many other software teams, XDSD welcomes
 [bug reports]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}) in all our projects.
 Therefore, we ask for bugs openly and expect team members to report them.
 Review the following article for complete details on XDSD bug reporting:
-[Bugs are welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
+[_Bugs Are Welcome_]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
 
 We expect everyone involved with a project to report every bug found.
 Additionally, we encourage team members to make suggestions. In XDSD, we pay

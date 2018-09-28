@@ -19,7 +19,7 @@ keywords:
 I'm a big fan of automated testing in general and integration
 testing in particular. I strongly believe that effort spent on
 writing tests are direct investments into
-[quality]({% pst 2017/dec/2017-12-26-software-quality-formula %})  and stability
+[quality]({% pst 2017/dec/2017-12-26-software-quality-formula %}) and stability
 of the product under development.
 
 [CasperJS](http://casperjs.org/) is a testing framework on top of
