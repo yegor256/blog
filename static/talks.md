@@ -108,9 +108,9 @@ Moscow, Russia<br/>
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2018/appsconf.png" class="future-talk" alt="AppsConf 2018"/><br/>
 Главное не качество, а количество!<br/>
-[AppsConf](http://appsconf.ru/2018)<br/>
+[AppsConf](https://appsconf.ru/2018/abstracts/3721)<br/>
 Moscow, Russia<br/>
-8-9 October.
+9 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://2018.geecon.cz/assets/images/logo.png" class="future-talk" alt="GeeCON Prague 2018"/><br/>
