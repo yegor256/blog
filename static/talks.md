@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Boston 2018"/><br/>
-Expertise vs Experts<br/>
-[DevOpsDays Boston 2018](https://www.devopsdays.org/events/2018-boston/speakers/yegor-bugayenko/)<br/>
-Boston, USA<br/>
-24-25 September.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/2018/devopsconf.png" class="future-talk" alt="DevOpsConf 2018"/><br/>
 Главное не качество, а количество!<br/>
 [DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723)<br/>
@@ -184,6 +177,14 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="past-talk" alt="DevOpsDays Boston 2018"/><br/>
+Expertise vs Experts;
+[DevOpsDays Boston 2018](https://www.devopsdays.org/events/2018-boston/speakers/yegor-bugayenko/);
+Boston, USA;
+25 September;
+[slides](https://www.slideshare.net/YegorBugayenko/experts-vs-expertise).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://obs.com.ua/images/obs2.svg" class="past-talk" alt="Odessa Blockchain Summit 2018"/><br/>
