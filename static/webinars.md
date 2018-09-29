@@ -40,7 +40,14 @@ informed about everything I do publicly, including these webinars.
 ## 2018
 
 
-<!-- {% webinar 12-09-2018 37 oXj9UWm1134 Names of objects, methods and variables in OOP %} -->
+{% webinar 03-10-2018 38 GIyAZRRgWPg Parsing Objects vs Parsers %}
+
+<a href="https://www.youtube.com/watch?v=GIyAZRRgWPg"><img src="https://i.ytimg.com/vi/GIyAZRRgWPg/mqdefault.jpg" class="wnr" alt="Webinar no.38 by Yegor Bugayenko"/></a>
+October 3, 2018<br/>
+&#35;38: **Parsing Objects vs Parsers**<br/>
+The Parser is a very commonly used pattern in OOP, which is actually
+not very object-oriented; a better alternative is parsing objects.
+The discussion is based on this [blog post]({% pst 2018/feb/2018-02-27-parsing-objects %}).
 
 <a href="https://www.youtube.com/watch?v=oXj9UWm1134"><img src="https://i.ytimg.com/vi/oXj9UWm1134/mqdefault.jpg" class="wnr" alt="Webinar no.37 by Yegor Bugayenko"/></a>
 September 12, 2018<br/>
