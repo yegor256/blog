@@ -148,6 +148,13 @@ Moscow, Russia<br/>
 13-15 November.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Warsaw 2018"/><br/>
+Something about Zerocracy...<br/>
+[DevOpsDays Warsaw 2018](https://www.devopsdays.org/events/2018-warsaw/welcome/)<br/>
+Warsaw, Poland<br/>
+19-20 November.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3366-3633-4437-b961-373136313633/_L900_2.png" class="future-talk" alt="https://cryptoevent.io/cryptoevent_riw 2018"/><br/>
 Zold...<br/>
 [CryptoEvent RIW](https://cryptoevent.io/cryptoevent_riw)<br/>
@@ -155,18 +162,18 @@ Moscow, Russia<br/>
 21-23 November.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://knect365.imgix.net/uploads/payment-png-23bd6dafb92ef0ae50b4f48efdb047f1.png" class="future-talk" alt="Payments International 2018"/><br/>
+The Next Big Thing: Beyond Blockchain – the Future of Cryptocurrency<br/>
+[Payments International 2018](https://finance.knect365.com/payments-international/speakers/yegor-bugayenko)<br/>
+London, UK<br/>
+26 November.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
 Micro-Devs and Micro-Ops<br/>
 [DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/welcome/)<br/>
 Oslo, Norway<br/>
 29-30 November.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Warsaw 2018"/><br/>
-Something about Zerocracy...<br/>
-[DevOpsDays Warsaw 2018](https://www.devopsdays.org/events/2018-warsaw/welcome/)<br/>
-Warsaw, Poland<br/>
-19-20 November.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
