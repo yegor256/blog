@@ -149,14 +149,14 @@ Moscow, Russia<br/>
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Warsaw 2018"/><br/>
-Something about Zerocracy...<br/>
+_Something about Zerocracy..._<br/>
 [DevOpsDays Warsaw 2018](https://www.devopsdays.org/events/2018-warsaw/welcome/)<br/>
 Warsaw, Poland<br/>
 19-20 November.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3366-3633-4437-b961-373136313633/_L900_2.png" class="future-talk" alt="https://cryptoevent.io/cryptoevent_riw 2018"/><br/>
-Zold...<br/>
+_Something about Zold..._<br/>
 [CryptoEvent RIW](https://cryptoevent.io/cryptoevent_riw)<br/>
 Moscow, Russia<br/>
 21-23 November.
