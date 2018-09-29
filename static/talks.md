@@ -171,9 +171,9 @@ London, UK<br/>
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
 Micro-Devs and Micro-Ops<br/>
-[DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/speakers/yegor-bugayenko/)<br/>
+[DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/program/yegor-bugayenko/)<br/>
 Oslo, Norway<br/>
-29-30 November.
+30 November.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
