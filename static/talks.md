@@ -134,6 +134,13 @@ New York, USA<br/>
 11-13 November.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://bcconf.com/img/about-img.jpg" class="future-talk" alt="BCConf 2018"/><br/>
+Zold Cryptocurrency<br/>
+[Blockchain and Cryptocurrency Conf](https://bcconf.com/)<br/>
+Kuala Lumpur, Malaysia<br/>
+13 November.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://www.devopspro.ru/wp-content/uploads/2018/07/logo_devops_moscow-min.png" class="future-talk" alt="DevOpsPro 2018"/><br/>
 Expertise vs Experts<br/>
 [DevOpsPro](https://www.devopspro.ru/speakers/)<br/>
