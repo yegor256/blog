@@ -52,7 +52,7 @@ final class TextInFile implements Text {
   @Override
   public String read() {
     return new String(
-      Files.readAllBytes(), "UTF-8"
+      Files.readAllBytes(this.file.toPath()), "UTF-8"
     );
   }
 }
