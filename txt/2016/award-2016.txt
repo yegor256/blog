@@ -1,4 +1,4 @@
-http://www.yegor256.com/2015/10/17/award-2016.html
+https://www.yegor256.com/2015/10/17/award-2016.html
 
 
 hackiftekhar/IQKeyboardManager	(Objective-C)
@@ -750,7 +750,7 @@ From me:
 
 
 
-reinterpretcat/utymap  (C#, C++)  the link to the repo is broken on the page (http://www.yegor256.com/2015/10/17/award-2016.html)
+reinterpretcat/utymap  (C#, C++)  the link to the repo is broken on the page (https://www.yegor256.com/2015/10/17/award-2016.html)
 +
 Travis CI
 Github issue tracking

@@ -1,4 +1,4 @@
-Sitemap: http://www.yegor256.com/sitemap.xml
+Sitemap: https://www.yegor256.com/sitemap.xml
 
 User-agent: *
 Disallow: /p/

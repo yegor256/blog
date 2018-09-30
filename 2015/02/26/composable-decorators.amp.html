@@ -33,7 +33,7 @@
           "name": "yegor256.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "http://www.yegor256.com/images/face-512x512.jpg",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
             "width": 512,
             "height": 512
           }
@@ -107,7 +107,7 @@ supposed to read a text somewhere and return it:</p>
   @Override
   public String read() {
     return new String(
-      Files.readAllBytes(), "UTF-8"
+      Files.readAllBytes(this.file.toPath()), "UTF-8"
     );
   }
 }</pre>

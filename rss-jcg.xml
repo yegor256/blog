@@ -472,7 +472,7 @@ another source of data, in the form of an iterator. I hope this example will hel
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
 Also, I’m a big fan of object-oriented programming in its purest form; for example, see
 &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;Seven Virtues of a Good Object&lt;/a&gt;.
-I’m also a co-founder and the CEO of &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, a software development
+I’m also a co-founder and the CEO of &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, a software development
 company through which I put my admiration of discipline and clean design into practice.&lt;/p&gt;
 
 </description>
@@ -683,7 +683,7 @@ see how this library helps in XSL transformations.&lt;/p&gt;
         
           <description>&lt;p&gt;We all have bosses. We also have customers who pay us for running
 their software projects. They are my bosses for the time of the contract. I’m also
-acting as a boss for developers who are working for &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.
+acting as a boss for developers who are working for &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.
 It is obvious that a good employee/contractor is one who makes his
 boss/customer happy. But only a bad employee works toward
 this goal. Trying to make your boss happy is a false target that,
@@ -875,10 +875,10 @@ I’ll try to rely only on logic instead.&lt;/p&gt;
       <item>
         <title>Stop Chatting, Start Coding</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.xdsd.org&quot;&gt;&lt;img src=&quot;http://www.xdsd.org/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://www.xdsd.org&quot;&gt;&lt;img src=&quot;https://www.xdsd.org/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;The first principle of eXtremely Distributed Software Development
-(&lt;a href=&quot;http://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;) states that
+(&lt;a href=&quot;https://www.xdsd.org&quot;&gt;XDSD&lt;/a&gt;) states that
 “everyone gets paid for verified deliverables.” This literally
 means that, in order to get paid, every programmer
 has to write the code, commit it to the repository,
@@ -897,11 +897,11 @@ Only then, is his result appreciated and paid for.&lt;/p&gt;
         <title>Project Lifecycle in Zerocracy</title>
         
           <description>&lt;p&gt;In addition to being a hands-on programmer, I’m also co-founder and CTO of
-&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, a custom software development company.
+&lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;, a custom software development company.
 I play the role of a technical and management leader in all projects
 we work with.&lt;/p&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.zerocracy.com&quot;&gt;&lt;img src=&quot;http://www.0crat.com/svg/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://www.zerocracy.com&quot;&gt;&lt;img src=&quot;//www.0crat.com/svg/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;I wrote this article for those who’re interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
@@ -1346,7 +1346,7 @@ list them all here.&lt;/p&gt;
       <item>
         <title>How Much Do You Pay Per&amp;nbsp;Line&amp;nbsp;of&amp;nbsp;Code?</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.xdsd.org&quot;&gt;&lt;img src=&quot;http://www.xdsd.org/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://www.xdsd.org&quot;&gt;&lt;img src=&quot;https://www.xdsd.org/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Yes, I know, “line of code” (LoC)
 is a &lt;a href=&quot;http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects&quot;&gt;very wrong metric&lt;/a&gt;.

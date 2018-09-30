@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-29T17:51:28+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fear of Decoupling</title><link href="https://www.yegor256.com/2018/09/18/fear-of-coupling.html" rel="alternate" type="text/html" title="Fear of Decoupling" /><published>2018-09-18T00:00:00+00:00</published><updated>2018-09-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/18/fear-of-coupling</id><content type="html" xml:base="https://www.yegor256.com/2018/09/18/fear-of-coupling.html">&lt;p&gt;Objects talk to each other via their methods. In mainstream programming
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-09-30T09:30:28+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2019</title><link href="https://www.yegor256.com/2018/09/30/award-2019.html" rel="alternate" type="text/html" title="Software Quality Award, 2019" /><published>2018-09-30T00:00:00+00:00</published><updated>2018-09-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/30/award-2019</id><content type="html" xml:base="https://www.yegor256.com/2018/09/30/award-2019.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is the fifth year of the
+&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
+is still the same—&lt;strong&gt;$4,096&lt;/strong&gt;.
+The rules are still the same. Read on.
+Previous years are here:
+&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
+&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
+&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;,
+&lt;a href=&quot;/2017/10/24/award-2018.html&quot;&gt;2018&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Fill out &lt;a href=&quot;https://docs.google.com/forms/d/1UhXRhVP9ofmWv460LYF1e3vz_hwUmvosmYPDsQSJkBg&quot;&gt;&lt;strong&gt;THIS FORM&lt;/strong&gt;&lt;/a&gt;
+to submit your project.&lt;/p&gt;
+
+&lt;p&gt;Rules:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;One person can submit only one project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Submissions are accepted until September 1, 2019.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I will check the commit history to make sure you’re the main contributor to the project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Results will be announced October 15, 2019 on this page and by email.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The best project will receive $4,096
+(I may split this amount among a few projects and may give away a smaller amount!).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Final decisions will be made by me and are not negotiable
+(although I may invite other people to help me make the right decision).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Winners that received any cash prizes in previous years can’t submit again.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=Z70PMGaxGhY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg&quot; alt=&quot;YouTube video #Z70PMGaxGhY&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;How to win $4096 in the next year Quality Award? (webinar #29);
+        1 November 2017.&lt;/div&gt;&lt;/aside&gt;
+
+&lt;p&gt;Each project must be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open source (in GitHub).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
+&lt;em&gt;and&lt;/em&gt; at least 16,384 &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits-of-code&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At least one year old.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Object-oriented (that’s the only thing I understand).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What doesn’t matter:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Popularity. Even if nobody is using your
+product, it is still eligible for this award. I don’t care about
+popularity; quality is the key.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Programming language. I believe that any language, used correctly,
+can be applied to design a high-quality product.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
+line arguments, it’s still eligible for the award. I don’t care about
+your marketing position; quality is all.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the fifth year of the Software Quality Award. The prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /></entry><entry><title type="html">Fear of Decoupling</title><link href="https://www.yegor256.com/2018/09/18/fear-of-coupling.html" rel="alternate" type="text/html" title="Fear of Decoupling" /><published>2018-09-18T00:00:00+00:00</published><updated>2018-09-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/18/fear-of-coupling</id><content type="html" xml:base="https://www.yegor256.com/2018/09/18/fear-of-coupling.html">&lt;p&gt;Objects talk to each other via their methods. In mainstream programming
 languages, like Java or C#, an object may have a unique set of methods
 together with some methods it is forced to have because it &lt;em&gt;implements&lt;/em&gt; certain types,
 also known as &lt;em&gt;interfaces&lt;/em&gt;. My experience of speaking with many programmers
@@ -804,7 +903,7 @@ instead of per result. Here is my answer.&lt;/p&gt;
 
 &lt;p&gt;No matter how bad the methodology is, you do know that &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;we pay&lt;/a&gt;
 for each bug that is found and properly reported, right?
-Check &lt;a href=&quot;http://www.zerocracy.com/policy.html#29&quot;&gt;§29&lt;/a&gt; of our Policy.&lt;/p&gt;
+Check &lt;a href=&quot;https://www.zerocracy.com/policy.html#29&quot;&gt;§29&lt;/a&gt; of our Policy.&lt;/p&gt;
 
 &lt;p&gt;If the Code Base Is Bad, Why Don’t You Report Bugs?&lt;/p&gt;
 
@@ -976,7 +1075,7 @@ and &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt
 &lt;/ul&gt;
 
 &lt;p&gt;Each project has its own set of rules. The list above is a subset of what we
-have on our projects at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;. A good
+have on our projects at &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;. A good
 architect thinks about the rules first and about the architecture second.&lt;/p&gt;
 
 &lt;p&gt;I totally agree with Len Bass that
@@ -1148,119 +1247,4 @@ So, it’s way more about a title for him, rather that just his actual responsib
 
 &lt;p&gt;Yes, the money question &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;again&lt;/a&gt;.
 A good architect is expensive.
-If he is not, he is not a good architect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver, Kent Beck, in answer to the question “What is an architect?” said, according to Philippe Kruchten, that it is “a new pompous title that programmers demand to have on their business cards to justify their sumptuous emoluments.” Not much has changed since then. There is a big difference between a smart programmer and a project architect. Here is a list of traits that, I believe, a good architect has.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/no-country-for-old-men.jpg" /></entry><entry><title type="html">Simplified GitHub Login for a Ruby Web App</title><link href="https://www.yegor256.com/2018/06/19/glogin.html" rel="alternate" type="text/html" title="Simplified GitHub Login for a Ruby Web App" /><published>2018-06-19T00:00:00+00:00</published><updated>2018-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/06/19/glogin</id><content type="html" xml:base="https://www.yegor256.com/2018/06/19/glogin.html">&lt;p&gt;You know what &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;
-login is, right? It’s when your users click “login”
-and get redirected to Facebook, Twitter, Google, or some other
-website which then identifies them. Then they go back to your website and you
-know who they are. It’s very convenient for them. It’s convenient for you
-too, since you don’t need to implement the login functionality and don’t
-need to keep their credentials in a database. I created a simple
-&lt;a href=&quot;https://github.com/yegor256/glogin&quot;&gt;Ruby gem&lt;/a&gt;
-to simplify this operation for GitHub only. Here is how it works.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Savages (2007) by Tamara Jenkins&quot; src=&quot;/images/2018/06/savages.jpg&quot; longdesc=&quot;#0d3acec9&quot; /&gt;&lt;figcaption id=&quot;0d3acec9&quot;&gt;The Savages (2007) by Tamara Jenkins&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;First, you will have to register your application in GitHub,
-as &lt;a href=&quot;https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/&quot;&gt;this page&lt;/a&gt;
-explains. This is how it works with
-&lt;a href=&quot;http://www.sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;,
-but you can do something similar in any framework.&lt;/p&gt;
-
-&lt;p&gt;First, somewhere in the global space, before the app starts:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;require 'glogin'
-configure do
-  set :glogin, GLogin::Auth.new(
-    # You get this from GitHub, when you register your
-    # web application:
-    client_id,
-    # Make sure this value is coming from a secure
-    # place and is NOT visible in the source code:
-    client_secret,
-    # This is what you will register in GitHub as an
-    # authorization callback URL:
-    'http://www.example.com/github-callback'
-  )
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next, for all web pages we need to parse a cookie, if it exists,
-and convert it into a user:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;require 'sinatra/cookies'
-before '/*' do
-  if cookies[:glogin]
-    begin
-      @user = GLogin::Cookie::Closed.new(
-        cookies[:glogin],
-        # This must be some long text to be used to
-        # encrypt the value in the cookie:
-        encryption_secret
-      ).to_user
-    rescue OpenSSL::Cipher::CipherError =&amp;gt; _
-      # Nothing happens here, the user is not logged in.
-      cookies.delete(:glogin)
-    end
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If the &lt;code&gt;glogin&lt;/code&gt; cookie comes in and contains valid data,
-a local variable &lt;code&gt;@user&lt;/code&gt; will be set to something like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;{ login: 'yegor256', avatar: 'http://...' }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next, we need a URL for GitHub OAuth callback:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;get '/github-callback' do
-  cookies[:glogin] = GLogin::Cookie::Open.new(
-    settings.glogin.user(params[:code]),
-    # The same encryption secret that we were using above:
-    encryption_secret
-  ).to_s
-  redirect to('/')
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, we need a logout URL:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;get '/logout' do
-  cookies.delete(:glogin)
-  redirect to('/')
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;One more thing is the login URL you will need for your front page. Here
-it is:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;settings.glogin.login_uri
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For unit testing you can just provide an empty string as a &lt;code&gt;secret&lt;/code&gt; for
-&lt;code&gt;GLogin::Cookie::Open&lt;/code&gt; and &lt;code&gt;GLogin::Cookie::Closed&lt;/code&gt; and the encryption will be disabled:
-whatever comes from the cookie will be trusted. For testing
-it will be convenient to provide a user name in a query string, like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://localhost:9292/?glogin=tester
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To enable that, it’s recommended you add this line (see how
-it works in &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;zold-io/wts.zold.io&lt;/a&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-ruby&quot;&gt;require 'sinatra/cookies'
-before '/*' do
-  cookies[:glogin] = params[:glogin] if params[:glogin]
-  if cookies[:glogin]
-    # same as above
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I use this gem in
-&lt;a href=&quot;https://github.com/yegor256/sixnines&quot;&gt;sixnines&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/yegor256/0pdd&quot;&gt;0pdd&lt;/a&gt;,
-and &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;Zold&lt;/a&gt;
-web apps on top of Sinatra (all open source).&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">You know what OAuth login is, right? It’s when your users click “login” and get redirected to Facebook, Twitter, Google, or some other website which then identifies them. Then they go back to your website and you know who they are. It’s very convenient for them. It’s convenient for you too, since you don’t need to implement the login functionality and don’t need to keep their credentials in a database. I created a simple Ruby gem to simplify this operation for GitHub only. Here is how it works.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/savages.jpg" /></entry></feed>
+If he is not, he is not a good architect.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Over twenty five years ago, in 1992, at an OOPSLA workshop in Vancouver, Kent Beck, in answer to the question “What is an architect?” said, according to Philippe Kruchten, that it is “a new pompous title that programmers demand to have on their business cards to justify their sumptuous emoluments.” Not much has changed since then. There is a big difference between a smart programmer and a project architect. Here is a list of traits that, I believe, a good architect has.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/06/no-country-for-old-men.jpg" /></entry></feed>
