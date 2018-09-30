@@ -20,7 +20,7 @@ jb_picture:
   caption: The Big Lebowski (1998) by Joel Coen
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 It is a very common problem in project management---how to make team
 members more responsible and avoid [micro
@@ -87,11 +87,11 @@ are finished with their jobs.
 {% jb_picture_body %}
 
 Implementation problems should be solved by team members on their own. So, how
-do we accomplish this in [XDSD](http://www.xdsd.org)?
+do we accomplish this in [XDSD](https://www.xdsd.org)?
 
 ## I Owe You Nothing
 
-In [XDSD](http://www.xdsd.org), there is the first fundamental principle that says everybody should be
+In [XDSD](https://www.xdsd.org), there is the first fundamental principle that says everybody should be
 paid for deliverables. Based on this idea, we can go even further and declare a
 "No Obligations" principle.
 
@@ -123,7 +123,7 @@ will be purchased only from members who manage to complete their tasks on time.
 
 ## How Does This Affect Me?
 
-When you're working with [XDSD](http://www.xdsd.org)-inspired project, you should always keep the "No
+When you're working with [XDSD](https://www.xdsd.org)-inspired project, you should always keep the "No
 Obligations" principle in mind. You should start a task only if you're sure that
 you can finish it in a few days. You should pursue your tasks and control
 deadlines yourself. The project manager will not ask you for status updates, as

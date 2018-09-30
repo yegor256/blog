@@ -126,7 +126,7 @@ use not only rewards, but also
 them, because they will help emphasize
 what (and who) works best and help get rid of the waste.
 
-I'm speaking from experience here. In [XDSD](http://www.xdsd.org)
+I'm speaking from experience here. In [XDSD](https://www.xdsd.org)
 we're not only rewarding programmers with money, but we also never pay
 for anything except delivered results. We manage to do this mostly because
 our ground rules are very strict and non-ambiguous. And we never

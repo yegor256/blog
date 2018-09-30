@@ -24,7 +24,7 @@ a programmer, founder, investor, and philanthropist.
 
 As a **founder** and CEO of [Zerocracy](https://www.zerocracy.com/),
 a software engineering and management platform with an absolutely unique
-methodology called [XDSD](http://www.xdsd.org) (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
+methodology called [XDSD](https://www.xdsd.org) (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
 Most of the ideas behind the methodology I explained in my book [Code Ahead](/code-ahead.html).
 I'm the author of a few patent applications, including
 [Puzzle-Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)

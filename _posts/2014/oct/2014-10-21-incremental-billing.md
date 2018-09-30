@@ -22,10 +22,10 @@ basically two types of contracts:
 [time-and-material](https://en.wikipedia.org/wiki/Time_and_materials).
 They are fundamentally different but the truth is that in either case---**you lose**.
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 In the eXtremely Distributed Software Development
-([XDSD](http://www.xdsd.org)) methodology everything is different, including
+([XDSD](https://www.xdsd.org)) methodology everything is different, including
 the way we invoice our clients. Let's see what happens in traditional
 contracts and what changes in XDSD, which we practice
 in [Zerocracy](https://www.zerocracy.com).
@@ -114,7 +114,7 @@ contracts with programmers?
 Yes, [it is]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %}).
 We call it "Incremental Billing."
 
-Remember, in [XDSD](http://www.xdsd.org) we work with a stream of micro-tasks, usually completed
+Remember, in [XDSD](https://www.xdsd.org) we work with a stream of micro-tasks, usually completed
 in less than an hour. Each completed task produces a new increment (aka a "release" or "version") of software.
 An increment could be a bug fix, a [bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
 a new feature or
@@ -141,7 +141,7 @@ How does this help you not lose/waste money? Here's how:
  * there is no long-term commitment, and you can stop at any time
  * every increment passes all quality checks
 
-As you can see, [XDSD methodology](http://www.xdsd.org) not only
+As you can see, [XDSD methodology](https://www.xdsd.org) not only
 improves the way we develop software but also fixes the flaws in
 the way you pay for it. Since it is a win-win model, it is beneficial
 for both programmers and for you---the paying project sponsor.

@@ -19,7 +19,7 @@ jb_picture:
   caption: Brazil (1985) by Terry Gilliam
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 Yes, I know, "line of code" (LoC)
 is a [very wrong metric](http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects).
@@ -59,7 +59,7 @@ All tasks were tracked in JIRA.
 ## Project #2: Extremely Distributed
 
 The second project was an open source Java product, developed by an [extremely
-distributed](http://www.xdsd.org) team of about 15 developers. We didn't have
+distributed](https://www.xdsd.org) team of about 15 developers. We didn't have
 any chats or any other informal communications. We discussed everything in
 GitHub issues. The code base was significantly smaller with only about 30k
 lines, of which about 90% was Java and the rest in XML.
@@ -98,7 +98,7 @@ The first project (the one that was co-located) was paying approximately
 &euro;50,000 annually to a good developer, which was about $5,600 per month or
 $35 per hour. The second one (the extremely distributed project) was paying
 $20-35 per hour, for completed tasks only according to one of the principles of
-[XDSD](http://www.xdsd.org).
+[XDSD](https://www.xdsd.org).
 
 The first one, in three months, produced 59k new lines and removed 29k in
 changes in the `master` branch, which totals 88k lines of code. The project
@@ -148,7 +148,7 @@ the huge waste of money that comes with them?
 Of course, the same results can't be achieved by just telling your programmers
 to work from home and never come to the
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). XDSD is not about that.
-[XDSD](http://www.xdsd.org) is about strict quality principles, which should be
+[XDSD](https://www.xdsd.org) is about strict quality principles, which should be
 followed by the entire team.
 
 And when these principles are in place---you pay thirty times less.

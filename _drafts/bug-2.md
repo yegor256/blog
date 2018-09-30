@@ -15,7 +15,7 @@ keywords:
   - life cycle of defects
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 Bug is something that causes our software products to crash and us to cry.
 This is a traditional attitude to a "software bug". From a user perspective

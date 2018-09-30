@@ -15,9 +15,9 @@ keywords:
   - how to rate a freelancer
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
-In [XDSD](http://www.xdsd.org), everyone---including project managers,  analysts, programmers,
+In [XDSD](https://www.xdsd.org), everyone---including project managers,  analysts, programmers,
 and product owners---receives payments based on deliverables with agreed
 upon budgets. In the fhe first section of the article,
 [How XDSD Is Different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}) I explain
@@ -92,9 +92,9 @@ successfully and on time.
 
 ## Complexity
 
-Every [XDSD](http://www.xdsd.org) task has a project role assigned to it. The article,
+Every [XDSD](https://www.xdsd.org) task has a project role assigned to it. The article,
 [Puzzle Driven Development by Roles]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %}),
-lists the key roles we use in [XDSD](http://www.xdsd.org) projects.
+lists the key roles we use in [XDSD](https://www.xdsd.org) projects.
 Generally speaking, the higher the role, the higher the
 complexity of tasks assigned to it.
 Therefore, closing a task in an "architect"
@@ -126,7 +126,7 @@ this concept and you'll be fine.
 
 ## Contribution via Bugs
 
-In [XDSD](http://www.xdsd.org) [Bugs Are Welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}). You
+In [XDSD](https://www.xdsd.org) [Bugs Are Welcome]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}). You
 are supposed to report bugs along the normal development activities. Besides
 receiving extra money for reporting bugs, you can also increase your overall
 rating.

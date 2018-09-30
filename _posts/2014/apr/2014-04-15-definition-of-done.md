@@ -16,20 +16,20 @@ keywords:
   - human resource management
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 [Definition of Done (DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
-key definition used in Scrum and the one we also use in [XDSD](http://www.xdsd.org).
+key definition used in Scrum and the one we also use in [XDSD](https://www.xdsd.org).
 DoD is an exit criteria of a simple atomic task and answers the question:"am I
 done with this task?" Moreover, DoD answers the question: "will I be paid for
 the task?"
-In [XDSD](http://www.xdsd.org), the definition of "done" is very simple---the task is done
+In [XDSD](https://www.xdsd.org), the definition of "done" is very simple---the task is done
 [iff](http://en.wikipedia.org/wiki/If_and_only_if)
 its author accepts the deliverables.
 
 <!--more-->
 
-At [XDSD](http://www.xdsd.org), our first and most important
+At [XDSD](https://www.xdsd.org), our first and most important
 principle states that someone is paid only
 when they provide deliverables. Combining the definition of done and the
 principle of paying only for deliverables provides us a very important

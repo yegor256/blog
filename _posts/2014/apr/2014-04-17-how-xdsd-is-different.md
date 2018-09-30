@@ -18,13 +18,13 @@ jb_picture:
   caption: Revolver (2005) by Guy Ritchie
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
-eXtremely Distributed Software Development, or [XDSD](http://www.xdsd.org) for short, is a methodology
+eXtremely Distributed Software Development, or [XDSD](https://www.xdsd.org) for short, is a methodology
 that differs significantly from working in traditional software development
-teams. Most [XDSD](http://www.xdsd.org) methods are so different (yet critical) that many newcomers get
+teams. Most [XDSD](https://www.xdsd.org) methods are so different (yet critical) that many newcomers get
 confused. This article should help you bootstrap once you join a project managed
-with by [XDSD](http://www.xdsd.org) principles---either as a developer or a project sponsor.
+with by [XDSD](https://www.xdsd.org) principles---either as a developer or a project sponsor.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ with by [XDSD](http://www.xdsd.org) principles---either as a developer or a proj
 
 ## We Pay Only For Closed Tasks
 
-Unlike with many other projects, in [XDSD](http://www.xdsd.org), we pay only for closed tasks and the
+Unlike with many other projects, in [XDSD](https://www.xdsd.org), we pay only for closed tasks and the
 agreed upon time budget. Let me explain by example. Let's say, you are a Ruby
 programmer and you a get a new task that requires you to fix a broken unit test.
 The task has a time budget of 30 minutes, as is the case most of the time.

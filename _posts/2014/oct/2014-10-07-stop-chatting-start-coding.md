@@ -19,10 +19,10 @@ jb_picture:
   caption: Barton Fink (1991) by Joel Coen
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 The first principle of eXtremely Distributed Software Development
-([XDSD](http://www.xdsd.org)) states that
+([XDSD](https://www.xdsd.org)) states that
 "everyone gets paid for verified deliverables." This literally
 means that, in order to get paid, every programmer
 has to write the code, commit it to the repository,

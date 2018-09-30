@@ -26,14 +26,14 @@ bugs. And, we, as users, expect software to work without bugs.
 
 {% jb_picture_body %}
 
-But, let's take a look at bugs from a different angle. In [XDSD](http://www.xdsd.org), we say that
+But, let's take a look at bugs from a different angle. In [XDSD](https://www.xdsd.org), we say that
 "bugs are welcome." This means we encourage all interested parties to find bugs
 and report them. We want our team to see bugs as something that we need in our
 projects. Why?
 
 <!--more-->
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 Because we understand that there are two categories of bugs: visible and hidden.
 The more bugs that become visible, the more of them we can fix. More fixed bugs
@@ -47,12 +47,12 @@ Obviously, their visibility affects the [quality of the product]({% pst 2017/dec
 in a positive way. This is because we can fix them before our users start complaining.
 
 In order to motivate all team members to make more bugs visible, we pay for
-their discovery. In [XDSD](http://www.xdsd.org) projects, we are pay 15 minutes for every bug found (no
+their discovery. In [XDSD](https://www.xdsd.org) projects, we are pay 15 minutes for every bug found (no
 matter who finds them and where.)
 
 ## We Plan Bugs
 
-We go even further. At [XDSD](http://www.xdsd.org), we plan for a number of hidden bugs in every
+We go even further. At [XDSD](https://www.xdsd.org), we plan for a number of hidden bugs in every
 project. We do this by using our experience with previous projects and expert
 judgment.
 

@@ -19,7 +19,7 @@ jb_picture:
   caption: Pulp Fiction (1994) by Quentin Tarantino
 ---
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 In this post, I'll try to walk you through a project managed
 with the spirit of
@@ -248,7 +248,7 @@ fixing and breaking at the same time.
 ## Tester
 
 I'm a tester and my primary motivation is to find bugs. This may be
-contradictory to what you've heard before; but in [XDSD](http://www.xdsd.org), we plan
+contradictory to what you've heard before; but in [XDSD](https://www.xdsd.org), we plan
 to find a certain amount of bugs at every stage of the project.
 
 {% picture /images/2014/04/fear-and-loathing-adrenochrome.png 0 Fear and Loathing in Las Vegas (1998) by Terry Gilliam %}

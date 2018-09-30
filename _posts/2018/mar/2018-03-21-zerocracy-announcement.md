@@ -112,10 +112,10 @@ only by their merits, which are visible via [objective metrics](https://www.0cra
 Thanks to this, programmers become their own bosses, reporting only to a soulless piece of software,
 which acts according to a very strict [policy](https://www.zerocracy.com/policy.html).
 
-{% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
 
 The [policy](https://www.zerocracy.com/policy.html)
-of Zerocracy is based on [XDSD](http://www.xdsd.org) principles,
+of Zerocracy is based on [XDSD](https://www.xdsd.org) principles,
 which were introduced in 2010 and practiced since then on [many](https://www.youtube.com/watch?v=qRZYJGYdrwk)
 software projects. The principles have proved able to seriously increase project
 predictability, [decrease costs]({% pst 2014/apr/2014-04-11-cost-of-loc %}),

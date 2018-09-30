@@ -37,7 +37,7 @@ ancient slaves in our offices and in front of our monitors?
 This post is partially provoked by a recently published semi-historical book
 [_How to Manage Your Slaves_](http://amzn.to/2crHiNG)
 by Jerry Toner. However, there's more. The entire eXtremely Distributed
-Software Development ([XDSD](http://www.xdsd.org)) methodology
+Software Development ([XDSD](https://www.xdsd.org)) methodology
 is based on a primary fundamental principle that states,
 "Everyone gets paid for verified deliverables." They're not paid for their time
 per hour, per week, or per month, but rather for verified deliverables.
