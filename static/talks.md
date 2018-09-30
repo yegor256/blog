@@ -117,14 +117,14 @@ Moscow, Russia<br/>
 Expertise vs Experts<br/>
 [GeeCON Prague](https://2018.geecon.cz/speakers/#bio)<br/>
 Prague, Czech Republic<br/>
-18-19 October.
+18 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://jokerconf.com/assets/images/logo_black.svg" class="future-talk" alt="Joker Conf 2018"/><br/>
 Don't aim for quality, aim for speed<br/>
 [Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/)<br/>
 St.Petersburg, Russia<br/>
-19-20 October.
+19 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
