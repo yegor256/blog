@@ -97,7 +97,7 @@ module Yegor
     end
 
     def tagged_list(posts)
-      posts.reject { |p| p.noidex }.map{ |p| tagged(p) }.join() unless posts.nil?
+      posts.reject { |p| p.noindex }.map{ |p| tagged(p) }.join() unless posts.nil?
     end
 
     def tagged(post)

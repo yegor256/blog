@@ -122,3 +122,4 @@ why allowed us to implement `read()` in three different forms. Then I have
 to ask again, why not create a method for reading and immediately post it
 on Twitter? That would be fantastically fast. Isn't it what we all want?
 A fast software which nobody has any desire to read or maintain.
+
