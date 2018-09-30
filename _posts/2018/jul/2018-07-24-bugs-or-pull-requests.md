@@ -35,7 +35,7 @@ instead of per result. Here is my answer.
 
 No matter how bad the methodology is, you do know that [we pay]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
 for each bug that is found and properly reported, right?
-Check [§29](http://www.zerocracy.com/policy.html#29) of our Policy.
+Check [§29](https://www.zerocracy.com/policy.html#29) of our Policy.
 
 If the Code Base Is Bad, Why Don't You Report Bugs?
 

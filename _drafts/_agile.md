@@ -23,7 +23,7 @@ Give them the environment and support they need,
 and trust them to get the job done."
 First, I found myself totally disagreeing with it.
 Then, after a few minutes of thinking I realized that it is absolutely
-in line with what [Zerocracy](http://www.zerocracy.com) is preaching.
+in line with what [Zerocracy](https://www.zerocracy.com) is preaching.
 Let me show you.
 
 <!--more-->

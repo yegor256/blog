@@ -83,9 +83,9 @@ result of this chaos we have restarts (94% projects!), cost overruns, and time
 overruns. The report also says that technology incompetence is the root cause of project failures only in
 7% cases. In almost all other cases the management is the source of the trouble.
 
-{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
+{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
-We, at [Zerocracy](http://www.zerocracy.com),
+We, at [Zerocracy](https://www.zerocracy.com),
 believe that in the 21st century programmers (and not only them) deserve
 a better and a more effective replacement for this
 "monkey management." We believe that the software development world
@@ -110,11 +110,11 @@ doesn't forget things, and doesn't accept excuses.
 It also doesn't know anything about hierarchies. It manages programmers
 only by their merits, which are visible via [objective metrics](https://www.0crat.com/team).
 Thanks to this, programmers become their own bosses, reporting only to a soulless piece of software,
-which acts according to a very strict [policy](http://www.zerocracy.com/policy.html).
+which acts according to a very strict [policy](https://www.zerocracy.com/policy.html).
 
 {% badge http://www.xdsd.org/images/logo.svg 100 http://www.xdsd.org %}
 
-The [policy](http://www.zerocracy.com/policy.html)
+The [policy](https://www.zerocracy.com/policy.html)
 of Zerocracy is based on [XDSD](http://www.xdsd.org) principles,
 which were introduced in 2010 and practiced since then on [many](https://www.youtube.com/watch?v=qRZYJGYdrwk)
 software projects. The principles have proved able to seriously increase project

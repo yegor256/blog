@@ -17,11 +17,11 @@ categories: jcg
 ---
 
 In addition to being a hands-on programmer, I'm also co-founder and CTO of
-[Zerocracy](http://www.zerocracy.com), a custom software development company.
+[Zerocracy](https://www.zerocracy.com), a custom software development company.
 I play the role of a technical and management leader in all projects
 we work with.
 
-{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
+{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
@@ -36,7 +36,7 @@ of code and quality of the internal processes that connect our team.
 <!--more-->
 
 There are four phases in every project I work with in
-[Zerocracy](http://www.zerocracy.com):
+[Zerocracy](https://www.zerocracy.com):
 
  * **Thinking**.
    Here we're trying to understand: What is the problem that the product

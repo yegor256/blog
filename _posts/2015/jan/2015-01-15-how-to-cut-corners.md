@@ -38,7 +38,7 @@ you miss the deadline and _everybody blames you_. Been there, done that?
 
 There is, however, an alternative approach that provides a professional exit
 from this situation. Here are some tips I recommend to my peers who code with me
-in [Zerocracy](http://www.zerocracy.com) projects.
+in [Zerocracy](https://www.zerocracy.com) projects.
 In a nutshell, I'm going to explain how you can _cut corners_ and remain
 professional, 1) protecting your nerves, 2) optimizing your project's expenses,
 and 3) increasing the quality of the source code.

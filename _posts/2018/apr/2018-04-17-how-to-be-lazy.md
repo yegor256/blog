@@ -36,7 +36,7 @@ to think differently and encourage myself to be lazy. Here is how.
 I wrote about this a few years ago in this blog post:
 [How to Cut Corners and Stay Cool]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}).
 However, in [our Telegram group](https://t.me/joinchat/CLxAaQ0xp-g_3WWI3MBr2g),
-where we talk about [Zerocracy](http://www.zerocracy.com),
+where we talk about [Zerocracy](https://www.zerocracy.com),
 some programmers keep asking me the same
 question over and over again: What should I do when the project is absolutely
 new to me, I have just [30 minutes]({% pst 2018/jan/2018-01-09-micro-budgeting %}),
@@ -44,7 +44,7 @@ and the bug is very complex?
 
 {% quote This literally means that you should always and only think about yourself and your personal profit. %}
 
-One of the core [principles](http://www.zerocracy.com/toc.html) of Zerocracy is
+One of the core [principles](https://www.zerocracy.com/toc.html) of Zerocracy is
 [#NoAltruism](https://www.youtube.com/watch?v=vXUwE3FGfpg).
 This literally means that
 you should always and only think about yourself and your personal profit. You should

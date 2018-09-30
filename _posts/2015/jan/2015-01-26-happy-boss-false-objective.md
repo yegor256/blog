@@ -20,7 +20,7 @@ jb_picture:
 
 We all have bosses. We also have customers who pay us for running
 their software projects. They are my bosses for the time of the contract. I'm also
-acting as a boss for developers who are working for [Zerocracy](http://www.zerocracy.com).
+acting as a boss for developers who are working for [Zerocracy](https://www.zerocracy.com).
 It is obvious that a good employee/contractor is one who makes his
 boss/customer happy. But only a bad employee works toward
 this goal. Trying to make your boss happy is a false target that,

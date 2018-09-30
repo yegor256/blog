@@ -98,7 +98,7 @@ but also following the rules himself. Here, for example, are the rules to enforc
   * No [informal discussions]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}) outside of tickets.
 
 Each project has its own set of rules. The list above is a subset of what we
-have on our projects at [Zerocracy](http://www.zerocracy.com). A good
+have on our projects at [Zerocracy](https://www.zerocracy.com). A good
 architect thinks about the rules first and about the architecture second.
 
 I totally agree with Len Bass that

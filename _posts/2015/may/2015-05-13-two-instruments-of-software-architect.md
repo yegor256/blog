@@ -29,7 +29,7 @@ this idea in practice, an architect uses two instruments:
 
 {% jb_picture_body %}
 
-At [Zerocracy](http://www.zerocracy.com), we discourage any
+At [Zerocracy](https://www.zerocracy.com), we discourage any
 [communication]({% pst 2016/aug/2016-08-23-communication-maturity %})
 between developers unless they are formally attached to the tickets or tasks
 we're working on. Read more details about this approach in

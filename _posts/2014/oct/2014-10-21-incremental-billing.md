@@ -28,7 +28,7 @@ In the eXtremely Distributed Software Development
 ([XDSD](http://www.xdsd.org)) methodology everything is different, including
 the way we invoice our clients. Let's see what happens in traditional
 contracts and what changes in XDSD, which we practice
-in [Zerocracy](http://www.zerocracy.com).
+in [Zerocracy](https://www.zerocracy.com).
 
 <!--more-->
 

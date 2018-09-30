@@ -60,7 +60,7 @@ Founded 2-Mar-2016.
 which automates and streamlines
 [Puzzle Driven Development]({% pst 2010/mar/2010-03-04-pdd %}) in any public
 or private GitHub repository. This project is a member of
-[Zerocracy](http://www.zerocracy.com) family.
+[Zerocracy](https://www.zerocracy.com) family.
 More about it here:
 [PDD in Action]({% pst 2017/apr/2017-04-05-pdd-in-action %}).
 <br/>

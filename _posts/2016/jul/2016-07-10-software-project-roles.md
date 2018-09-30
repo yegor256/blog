@@ -21,8 +21,8 @@ jb_picture:
 
 I believe that several roles should be present in a majority of
 software projects. Managed by
-<del>[Zerocracy](http://www.zerocracy.com)</del>
-[Zerocracy](http://www.zerocracy.com) according to the principles of
+<del>[Zerocracy](https://www.zerocracy.com)</del>
+[Zerocracy](https://www.zerocracy.com) according to the principles of
 [XDSD](http://www.xdsd.org), we've got all of them in our projects. However, beware that in other management
 methodologies, these roles may have different meanings. This blog post
 is mostly for people who work with us, either as clients or freelancers.
@@ -67,7 +67,7 @@ There are just a few roles:
   * **Quality Assurance** (`QA`)
     oversees the correctness of our process.
     The QA approves each closed task before it's officially closed by the PM.
-    The QA ensures that our process complies to [our policy](http://www.zerocracy.com/policy.html).
+    The QA ensures that our process complies to [our policy](https://www.zerocracy.com/policy.html).
     The QA reports to the PM.
 
   * **Tester** (`TST`)

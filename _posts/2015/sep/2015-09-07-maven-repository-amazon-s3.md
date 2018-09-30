@@ -24,7 +24,7 @@ you want them to be available to everybody. Private artifacts
 are those you don't want visible to anyone except members
 of your team. Thus, you want to deploy your `.jar` files there
 and make sure they are visible only by your team. Here is how we do
-this in all [our](http://www.zerocracy.com) Java projects.
+this in all [our](https://www.zerocracy.com) Java projects.
 
 <!--more-->
 

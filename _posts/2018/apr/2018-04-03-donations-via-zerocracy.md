@@ -35,8 +35,8 @@ At least that's what I feel when I see a [Patreon](https://patreon.com/) button.
 
 {% jb_picture_body %}
 
-[Zerocracy](http://www.zerocracy.com) is a platform that manages programmers remotely.
-Moreover, it's absolutely [free](http://www.zerocracy.com/policy.html#23) for open source projects. Take a
+[Zerocracy](https://www.zerocracy.com) is a platform that manages programmers remotely.
+Moreover, it's absolutely [free](https://www.zerocracy.com/policy.html#23) for open source projects. Take a
 look at [Cactoos](http://www.cactoos.org) or [Takes](http://www.takes.org)---they
 are both managed by
 [Zerocrat]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}). These projects
@@ -44,7 +44,7 @@ are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
 [pays]({% pst 2018/jan/2018-01-09-micro-budgeting %})
 programmers when they close their [microtasks]({% pst 2017/nov/2017-11-28-microtasking %}) in GitHub.
 
-{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
+{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 A few days ago someone approached me by email and literally said: "There
 is a bug in your project, I'm happy to pay you for your time if you can come
@@ -68,7 +68,7 @@ He gladly accepted the offer.
 We [implemented](https://github.com/zerocracy/farm/issues/866) the functionality in
 [Zerocrat](https://www.0crat.com) and he contributed $128 via Stripe.
 
-Now [anyone](http://www.zerocracy.com/policy.html#50)
+Now [anyone](https://www.zerocracy.com/policy.html#50)
 can give a few dollars to a project, if it's
 managed by Zerocracy. The contributor will see how those funds are being spent, down to each and every dollar!
 Try, for example, one of these buttons and you will see detailed

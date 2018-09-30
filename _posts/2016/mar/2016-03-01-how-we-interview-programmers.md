@@ -19,9 +19,9 @@ jb_picture:
   caption: Wall Street (1987) by Oliver Stone
 ---
 
-{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
+{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
-At [Zerocracy](http://www.zerocracy.com), we've been getting
+At [Zerocracy](https://www.zerocracy.com), we've been getting
 about 10 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) every day from programmers who want to work
 with us. We don't do video or online
 [coding interviews]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}). We don't

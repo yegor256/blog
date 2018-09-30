@@ -125,7 +125,7 @@ time we invested into it and how old they are.
 I used the HoC metric in this analysis: [How much do you pay per line of code?]({% pst 2014/apr/2014-04-11-cost-of-loc %}).
 That post compares a traditional project that paid $3.98 per HoC and
 an [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
-one, managed by [Zerocracy](http://www.zerocracy.com), that paid &cent;13.
+one, managed by [Zerocracy](https://www.zerocracy.com), that paid &cent;13.
 
 My conclusion is that this Hits-of-Code metric can be used as a tool of
 progress tracking in a software development project. Moreover, it

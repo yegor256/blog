@@ -116,7 +116,7 @@ if you, as a developer, floor the speed pedal, you will most likely ruin
 their code base in a few days. That's why the recommendations above are
 only applicable to those who really know what they are doing.
 
-[We](http://www.zerocracy.com) know what we are doing in our projects. We don't let any developers
+[We](https://www.zerocracy.com) know what we are doing in our projects. We don't let any developers
 touch any parts of our code, unless the "quality wall" is high and strong enough.
 How high is that wall in your projects? Can you say that, no matter how
 bad some code is and how sneakily its author introduces it, it will be rejected?

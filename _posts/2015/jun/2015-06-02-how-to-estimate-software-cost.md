@@ -22,7 +22,7 @@ jb_picture:
 "Here is the specification; how much will it cost to create this software?"
 I hear this almost every day from
 [clients]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %})
-of [Zerocracy](http://www.zerocracy.com)
+of [Zerocracy](https://www.zerocracy.com)
 and prospects that are planning to become our clients and
 [outsource]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}) the software
 development to us. My best answer is "_I don't know; it depends._"
@@ -111,7 +111,7 @@ how much we charge per gallon and how many gallons we consume per mile.
 
 Different teams use different metrics to measure their results
 (to be honest, most of them don't use any). We, at
-[Zerocracy](http://www.zerocracy.com), use
+[Zerocracy](https://www.zerocracy.com), use
 [hits of code]({% pst 2014/nov/2014-11-14-hits-of-code %}),
 bugs, pull requests, test coverage, and a few other metrics
 as measurable indicators of _quantity and quality_. We know exactly how much

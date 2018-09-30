@@ -47,7 +47,7 @@ This subject seems to be hot. Of course, I have my own take on it; let me share.
 {% jb_picture_body %}
 
 In theory, TDD means "writing tests first and code next." In practice,
-according to [my experience](http://www.zerocracy.com) while working with
+according to [my experience](https://www.zerocracy.com) while working with
 more than 250 developers over the last four years, it means writing tests
 when we're in a good mood and have nothing else to do. And this is only logical,
 if we understand TDD literally, by

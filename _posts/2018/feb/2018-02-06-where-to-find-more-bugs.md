@@ -30,7 +30,7 @@ the perceived [quality]({% pst 2017/dec/2017-12-26-software-quality-formula %})
 of the software. Simply put, bugs are a
 [very good thing]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}),
 if they are found by us, not our customers.
-[We](http://www.zerocracy.com) pay our programmers for
+[We](https://www.zerocracy.com) pay our programmers for
 [each bug]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 they find. Here is a cheat sheet for them, showing where
 and how they can find those bugs, to make more money.

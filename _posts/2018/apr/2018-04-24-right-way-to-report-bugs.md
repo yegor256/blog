@@ -19,13 +19,13 @@ jb_picture:
   caption: Burn After Reading (2008) by Coen Brothers
 ---
 
-You know, at [Zerocracy](http://www.zerocracy.com), either you are a programmer or a tester,
+You know, at [Zerocracy](https://www.zerocracy.com), either you are a programmer or a tester,
 and [we pay]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
 for each bug you find and report. Well, not quite. We pay for
 each bug report a project architect considers good enough to pay for.
 The architect's decision is totally subjective and non-disputable,
-according to [§29](http://www.zerocracy.com/policy.html#29)
-of the [Policy](http://www.zerocracy.com/policy.html).
+according to [§29](https://www.zerocracy.com/policy.html#29)
+of the [Policy](https://www.zerocracy.com/policy.html).
 Some of our developers find this unfair and ask me to explain
 how they can report bugs such that they are definitely paid.
 Here is a non-exhaustive list of my recommendations.
@@ -97,7 +97,7 @@ won't reject a bigger one with three minor parts.
 
 I believe that if you follow these simple recommendations,
 you will be a more successful bug reporter. At least at
-[Zerocracy](http://www.zerocracy.com).
+[Zerocracy](https://www.zerocracy.com).
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you feel when you report a bug? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a> <a href="https://twitter.com/hashtag/bugs?src=hash&amp;ref_src=twsrc%5Etfw">#bugs</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1023455022997233664?ref_src=twsrc%5Etfw">July 29, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

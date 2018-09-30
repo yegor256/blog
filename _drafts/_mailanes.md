@@ -40,14 +40,14 @@ be moved through, step by step, email by email. Then, you create a Campaign
 and connect your list with the lane. That's it.
 
 Let me show by example.
-Say, you go to [zerocracy.com](http://www.zerocracy.com), enter your email
+Say, you go to [zerocracy.com](https://www.zerocracy.com), enter your email
 and click "Help me start!" The form on the site is configured to post that
-email directly to the mailanes web app (see the [sources](http://www.zerocracy.com/)):
+email directly to the mailanes web app (see the [sources](https://www.zerocracy.com/)):
 
 {% highlight html %}
 <form method="POST" action="https://www.mailanes.com/subscribe?list=4">
   <input type="hidden" name="source" value="www.zerocracy.com"/>
-  <input type="hidden" name="redirect" value="http://www.zerocracy.com/"/>
+  <input type="hidden" name="redirect" value="https://www.zerocracy.com/"/>
   <input type="email" name="email" placeholder="Your email..." size="24"/>
   <button type="submit">Help me start!</button>
 </form>

@@ -47,7 +47,7 @@ I think that's disgusting.
 
 I am, in general, a big fan of **meritocracy**, where those who are smarter
 or stronger win the most. This is the principle we,
-at [Zerocracy](http://www.zerocracy.com), apply to software developers who come to us.
+at [Zerocracy](https://www.zerocracy.com), apply to software developers who come to us.
 I explained it last year in this rather popular and provocative post:
 [How Much Do You Cost?]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
 We simply don't care how many years of experience you have,
@@ -95,7 +95,7 @@ the **truth**.
 
 And it's disgusting.
 
-In our recruitment process at [Zerocracy](http://www.zerocracy.com), we do
+In our recruitment process at [Zerocracy](https://www.zerocracy.com), we do
 exactly the opposite. You apply to us, we ask one of our programmers to
 [interview]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
 you, and then, when finished, we make a decision about whether you're

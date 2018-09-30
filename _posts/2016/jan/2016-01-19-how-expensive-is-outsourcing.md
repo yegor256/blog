@@ -32,14 +32,14 @@ or in-house teams.
 {% jb_picture_body %}
 
 I actually decided to write this after a short sales meeting recently
-with a prospect from Illinois. He wanted to hire [Zerocracy](http://www.zerocracy.com) for his
+with a prospect from Illinois. He wanted to hire [Zerocracy](https://www.zerocracy.com) for his
 Java project and seemed to like our approach. I explained how we work,
 how we control [quality]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}),
 and why and how we're [different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
 from everybody else. He seemed to be impressed.
 Then, he asked, "_How much_ do you charge?"
 
-{% badge http://www.0crat.com/svg/logo.svg 100 http://www.zerocracy.com %}
+{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 I told him that we are also different in the way we bill for our work,
 because we don't charge for the time spent by our programmers sitting
@@ -105,7 +105,7 @@ In that [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04-11-cost-
 post, I actually did a comparison of a co-located project, where I was an architect,
 with a distributed one, where I also was an architect. My numbers tell
 me that a traditionally managed team is at least 10 times less
-productive than a team managed by [Zerocracy](http://www.zerocracy.com) under
+productive than a team managed by [Zerocracy](https://www.zerocracy.com) under
 [XDSD](http://www.xdsd.org) principles.
 
 My point is that asking "What is your hourly rate?" is just as wrong as

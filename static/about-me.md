@@ -22,7 +22,7 @@ I'm Yegor Bugayenko (Russian:
 <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Буга&#x435;&#x301;нко</span>),
 a programmer, founder, investor, and philanthropist.
 
-As a **founder** and CEO of [Zerocracy](http://www.zerocracy.com/),
+As a **founder** and CEO of [Zerocracy](https://www.zerocracy.com/),
 a software engineering and management platform with an absolutely unique
 methodology called [XDSD](http://www.xdsd.org) (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
 Most of the ideas behind the methodology I explained in my book [Code Ahead](/code-ahead.html).
