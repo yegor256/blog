@@ -414,14 +414,14 @@ figure {
   position: relative;
 
   figcaption {
-    background-color: lighten($gray, 10);
     bottom: 1em;
-    color: lighten($black, 40);
+    color: darken($white, 30);
     font-size: .8em;
     left: .5em;
     line-height: 1em;
     max-width: 90%;
     position: absolute;
+    text-shadow: .2px .2px lighten($black, 30);
   }
 
   figcaption::before {
