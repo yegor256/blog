@@ -33,7 +33,7 @@ value quality above everything else.
 <!--more-->
 
 <span class="green">ATTENTION</span>:
-Submission to 2018 [is open]({% pst 2017/oct/2017-10-24-award-2018 %}).
+Submission to 2019 [is open]({% pst 2017/oct/2018-09-30-award-2019 %}).
 
 <hr/>
 
