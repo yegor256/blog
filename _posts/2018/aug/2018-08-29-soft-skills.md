@@ -117,6 +117,8 @@ improves the quality of the software under development. There is a
 [well known](https://www.sciencedirect.com/science/article/abs/pii/S0378720613000967)
 developer-tester conflict, which good programmers know how to deal with.
 
+{% quote Still working in a single master branch? Still an amateur. %}
+
 **Branching**.
 Still working in a single `master` branch? Still an amateur. You have to
 learn how to use multiple branches, how to resolve conflicts between them,
