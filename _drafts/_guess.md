@@ -5,7 +5,9 @@ date: 2018-09-30
 place: Moscow, Russia
 tags: mood
 description: |
-  ...
+  I call it verbal terrorism where I'm being asked
+  questions I can't understand, because they are totally
+  out of context or there is simply no context.
 keywords:
   - discussion
   - communication skills
