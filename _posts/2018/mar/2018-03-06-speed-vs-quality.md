@@ -26,7 +26,7 @@ republished:
     url: https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext
 ---
 
-<!-- http://www.yegor256.com/2017/11/28/microtasking.html#comment-3783321466 -->
+<!-- https://www.yegor256.com/2017/11/28/microtasking.html#comment-3783321466 -->
 
 I decided to write this blog post after reviewing
 [this pull request](https://github.com/yegor256/jpeek/pull/153). What happened

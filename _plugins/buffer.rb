@@ -35,7 +35,7 @@ module Jekyll
     priority :low
     safe true
     def generate(site)
-      home = 'http://www.yegor256.com'
+      home = 'https://www.yegor256.com'
       rss = RSS::Maker.make("atom") do |maker|
         maker.channel.author = "yegor256"
         maker.channel.updated = Time.now.to_s

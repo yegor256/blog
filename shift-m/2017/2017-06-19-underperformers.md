@@ -33,4 +33,4 @@ Question at pm.stackexchange.com:
 [How to transition away a bad developer?](https://pm.stackexchange.com/questions/323/how-to-transition-away-a-bad-developer/326#326)
 
 My blog post:
-[How to Fire Someone Right](http://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html)
+[How to Fire Someone Right](https://www.yegor256.com/2015/09/16/how-to-fire-someone-right.html)

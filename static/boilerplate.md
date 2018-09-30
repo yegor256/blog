@@ -40,10 +40,10 @@ Position:<br/>
 CEO
 
 Headshot (JPEG, 256x256):<br/>
-http://www.yegor256.com/images/face-256x256.jpg
+https://www.yegor256.com/images/face-256x256.jpg
 
 Headshot (JPEG, 1024x1024):<br/>
-http://www.yegor256.com/images/face-1024x1024.jpg
+https://www.yegor256.com/images/face-1024x1024.jpg
 
 Best speeches:
 

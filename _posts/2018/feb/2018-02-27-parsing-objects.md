@@ -19,7 +19,7 @@ jb_picture:
   caption: La science des rêves (2006) by Michel Gondry
 ---
 
-<!-- here: http://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 -->
+<!-- here: https://www.yegor256.com/2014/09/16/getters-and-setters-are-evil.html#comment-3438202653 -->
 
 The traditional way of integrating object-oriented back-end with an external
 system is through [data transfer objects]({% pst 2016/jul/2016-07-06-data-transfer-object %}),

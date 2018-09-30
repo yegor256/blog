@@ -26,7 +26,7 @@ This is what _some_ of my readers think about me. The list is
 sorted by my personal preference, the most interesting comments
 are at the top.
 
-"Self-opinionated intellectually-correct only-code-focusing high-ego moron"&mdash;[José](http://www.yegor256.com/2014/10/03/di-containers-are-evil.html#comment-3212271221)
+"Self-opinionated intellectually-correct only-code-focusing high-ego moron"&mdash;[José](https://www.yegor256.com/2014/10/03/di-containers-are-evil.html#comment-3212271221)
 
 "You're a self opinionated asshole and I hope you suffocate
 under the weight of your giant ego, you clueless asshole."&mdash;anonymous (by email)
@@ -40,26 +40,26 @@ so go fuck yourself. I understand that you have to promote your business
 but goddamn you would probably choke any programmer who worked under
 you by dictating what angle they held a bloody pencil at you dip. Please stop"&mdash;anonymous (by email)
 
-"You are great at writing code that is painful to understand, use and explain."&mdash;[Ross W.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2401444164)
+"You are great at writing code that is painful to understand, use and explain."&mdash;[Ross W.](https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2401444164)
 
 "The author is the type of person that embodies everything that's
 wrong with this industry: hypocritical, holds people to
 a standard he doesn't meet, lacks basic empathy and
 the ability to put himself in another person's shoes&mdash;some kind
-of coward/sociopath hybrid. Would be laughable if it wasn't pathetic."&mdash;[NoOne](http://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html#comment-3099486424)
+of coward/sociopath hybrid. Would be laughable if it wasn't pathetic."&mdash;[NoOne](https://www.yegor256.com/2015/12/22/why-dont-you-contribute-to-open-source.html#comment-3099486424)
 
-"That may be the most stupid use of object orientation I have ever seen"&mdash;[Tor D.](http://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
+"That may be the most stupid use of object orientation I have ever seen"&mdash;[Tor D.](https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html#comment-2705418724)
 
 " ... insightless nonsense"&mdash;[@andreasdotorg](https://twitter.com/andreasdotorg/status/756138631325061120)
 
-"I have still a good opinion of you but some posts are just holy crap"&mdash;[Siv N.](http://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
+"I have still a good opinion of you but some posts are just holy crap"&mdash;[Siv N.](https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html#comment-2423190347)
 
 "A great intellectual masturbator of concepts that never gets his
 hands really dirty; in other words a misleader. Go back to your
-bedroom and play with your dick."&mdash;[Martin L.](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2601044224)
+bedroom and play with your dick."&mdash;[Martin L.](https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2601044224)
 
 "If I would be the one to decide what is irresponsible coding
-you would be imprisoned for a lifetime by me."&mdash;[David R.](http://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html#comment-2376244941)
+you would be imprisoned for a lifetime by me."&mdash;[David R.](https://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html#comment-2376244941)
 
 "Do not waste your money on the book; It will teach you nothing&mdash;or worse,
 it may teach you to hold on to absurd, opinionated, borderline superstitious
@@ -67,15 +67,15 @@ programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-revie
 
 "You're a smug, pontificating prick."&mdash;anonymous
 
-"You must have a brain injury of some sort."&mdash;[Sofia](http://www.yegor256.com/2017/07/04/sexism.html#comment-3873243224)
+"You must have a brain injury of some sort."&mdash;[Sofia](https://www.yegor256.com/2017/07/04/sexism.html#comment-3873243224)
 
 "You're promoting waterfall, cutting corners, illegible code, dysfunctional social team dynamics,
 bad design principles and basically ignoring reality and anything
 our industry has achieved in the last decade."&mdash;[Lieven D.](https://twitter.com/lievendoclo/status/986257188803969025)
 
-"You are a moron that probably does not work in any real application ever, and I hope you won't"&mdash;[Peter V.](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2854491117)
+"You are a moron that probably does not work in any real application ever, and I hope you won't"&mdash;[Peter V.](https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2854491117)
 
-"You're nothing more then a code monkey and I'd never hire you"&mdash;[h3_t3ch](http://www.yegor256.com/2017/03/28/solid.html#comment-3260179760)
+"You're nothing more then a code monkey and I'd never hire you"&mdash;[h3_t3ch](https://www.yegor256.com/2017/03/28/solid.html#comment-3260179760)
 
 "I bought your first book and read it for 10 mins.
 Then realized it was a copy paste from your website and
@@ -84,27 +84,27 @@ I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/
 
 "Wow, what a douche this guy is"&mdash;[@klingtnet](https://twitter.com/klingtnet/status/834907311730790400)
 
-"You're everything that's wrong with tech."&mdash;[Robert P.](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3170487895)
+"You're everything that's wrong with tech."&mdash;[Robert P.](https://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3170487895)
 
-"Author is a fucking moron."&mdash;[James](http://www.yegor256.com/2017/07/04/sexism.html#comment-3404682410)
+"Author is a fucking moron."&mdash;[James](https://www.yegor256.com/2017/07/04/sexism.html#comment-3404682410)
 
-"Are you an idiot?"&mdash;[Asshat](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
+"Are you an idiot?"&mdash;[Asshat](https://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1871518471)
 
-"You're a sociopath."&mdash;[Odain](http://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)
+"You're a sociopath."&mdash;[Odain](https://www.yegor256.com/2014/10/12/who-is-software-architect.html#comment-2359146551)
 
-" ... absolute and utter crap"&mdash;[Rashid](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3263735127)
+" ... absolute and utter crap"&mdash;[Rashid](https://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3263735127)
 
-"By reading Yegor's blog it is obvious to see that Yegor is not an experienced developer"&mdash;[Timmey](http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-3754430293)
+"By reading Yegor's blog it is obvious to see that Yegor is not an experienced developer"&mdash;[Timmey](https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-3754430293)
 
-"Please, don't do any software design anymore."&mdash;[Alex](http://www.yegor256.com/2017/12/19/srp-is-hoax.html#comment-3682316386)
+"Please, don't do any software design anymore."&mdash;[Alex](https://www.yegor256.com/2017/12/19/srp-is-hoax.html#comment-3682316386)
 
-"I quickly lost interest in your blog because you clearly are a dick."&mdash;[Philippe](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697848370)
+"I quickly lost interest in your blog because you clearly are a dick."&mdash;[Philippe](https://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697848370)
 
 "If it's a conference talk then people just leave the room, if it's a project
 then it's a just messy bunch of libraries that he puts together in the dirtiest way,
 and if it's a podcast interview he can't provide a good technical explanation
 of his point of view..."&mdash;[@heldev](https://github.com/heldev)
 
-"You're a weird individual"&mdash;[Andriy](http://www.yegor256.com/2017/12/05/data-access-object.html#comment-3650742133)
+"You're a weird individual"&mdash;[Andriy](https://www.yegor256.com/2017/12/05/data-access-object.html#comment-3650742133)
 
 Ready to add something? :) Just [email](mailto:me@yegor256.com).

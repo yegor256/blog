@@ -24,8 +24,8 @@ that your StackOverflow reputation is very important
 to [us](https://www.zerocracy.com) when we make a decision on
 how much we should pay
 a software developer. However, there were many complaints about this metric.
-Take, for example, the ones [here](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1704113248)
-and [here](http://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697910905).
+Take, for example, the ones [here](https://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1704113248)
+and [here](https://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-1697910905).
 In a nutshell, so many of you
 disagreed and said that the number of StackOverflow up-votes was
 nothing more than a measurement of the amount of time someone spent answering

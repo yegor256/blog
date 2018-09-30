@@ -44,7 +44,7 @@ def all_links()
     array + Nokogiri::HTML(File.read(f)).xpath(
       '//article//a/@href'
     ).to_a.map(&:to_s)
-  end.sort.map{ |a| a.gsub(/^\//, 'http://www.yegor256.com/') }
+  end.sort.map{ |a| a.gsub(/^\//, 'https://www.yegor256.com/') }
 end
 
 desc 'Delete _site directory'
@@ -200,7 +200,7 @@ end
 desc 'Ping all foreign links'
 task ping: [:build] do
   links = all_links().uniq
-    .reject{ |a| a.start_with? 'http://www.yegor256.com/' }
+    .reject{ |a| a.start_with? 'https://www.yegor256.com/' }
     .reject{ |a| a.include? 'linkedin.com' }
     .reject{ |a| !(a =~ /^https?:\/\/.*/) }
   tmp = Tempfile.new(['yegor256-', '.txt'])
@@ -299,9 +299,9 @@ end
 desc 'Make sure there are no orphan articles'
 task orphans: [:build] do
   links = all_links()
-    .reject{ |a| !a.start_with? 'http://www.yegor256.com/' }
+    .reject{ |a| !a.start_with? 'https://www.yegor256.com/' }
     .map{ |a| a.gsub(/#.*/, '') }
-  links += all_html().map { |f| f.gsub(/_site/, 'http://www.yegor256.com') }
+  links += all_html().map { |f| f.gsub(/_site/, 'https://www.yegor256.com') }
   counts = {}
   links
     .reject{ |a| !a.match /.*\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/.*/ }

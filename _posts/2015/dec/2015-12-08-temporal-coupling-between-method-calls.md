@@ -82,7 +82,7 @@ class Foo {
 An ideal design for method `with()` would create a new instance of
 `List`, populate it through `addAll(list)`, then `add(item)` to it, and
 finally return. That would be perfectly
-[immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html),
+[immutable](https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html),
 but slow.
 
 So, what is wrong with this:

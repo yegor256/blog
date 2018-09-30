@@ -29,23 +29,23 @@ Does Enterprise Messaging have a future and can anything be done to simplify EAI
 
 To what extent should people think for themselves?
 
-Good vs bad people: http://www.yegor256.com/2015/02/09/serious-code-reviewer.html#comment-3704330780
+Good vs bad people: https://www.yegor256.com/2015/02/09/serious-code-reviewer.html#comment-3704330780
 
 Design bubble
 
 How much OOP is in Kotlin?
 
-Fluent interface and OOP: http://www.yegor256.com/2014/04/11/jcabi-http-intro.html#comment-3683882559
+Fluent interface and OOP: https://www.yegor256.com/2014/04/11/jcabi-http-intro.html#comment-3683882559
 
-Serialize/deserialize and OOP: http://www.yegor256.com/2017/12/05/data-access-object.html#comment-3671137267
+Serialize/deserialize and OOP: https://www.yegor256.com/2017/12/05/data-access-object.html#comment-3671137267
 
 How to do risk management right
 
-Why do we need interfaces if we have PowerMock? http://www.yegor256.com/2017/11/14/static-factory-methods.html#comment-3633206640
+Why do we need interfaces if we have PowerMock? https://www.yegor256.com/2017/11/14/static-factory-methods.html#comment-3633206640
 
 How to implement data layer in OOP
 
-Data structures, sorting, and OOP: http://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html#comment-3235867316
+Data structures, sorting, and OOP: https://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html#comment-3235867316
 
 Prototype-based inheritance
 
@@ -61,7 +61,7 @@ Technical democracy - how to make decisions with multiple opinions
 
 Equality is a perfect way to ruin a software team
 
-Bigger ORM example: http://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2736011652
+Bigger ORM example: https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2736011652
 
 Example of properly architectured projects/proper architecture with pictures.
 

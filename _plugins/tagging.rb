@@ -111,7 +111,7 @@ module Yegor
           </li>
           <li class='tags'>#{page_tags(post)}</li>
           <li class='unprintable'>
-            <a href='http://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
+            <a href='https://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
           </li>
         </ul>
       </div>".gsub(/\n/, '')
