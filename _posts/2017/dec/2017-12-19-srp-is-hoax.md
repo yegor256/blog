@@ -94,6 +94,8 @@ full extent: it will become a holder of data or of other objects, with a
 collection of setters and getters on top of them. Maybe with one extra
 method in addition to those.
 
+{% quote “One thing” is a misleading simplification of a “high cohesion” concept. %}
+
 My point is that SRP is a wrong idea.
 
 Making classes small and cohesive is a good
