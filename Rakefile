@@ -15,6 +15,8 @@ require 'html-proofer'
 
 VERBOSE = false
 
+raise "Invalid encoding \"#{Encoding.default_external}\"" unless Encoding.default_external.to_s == 'UTF-8'
+
 task default: [
   :build,
   :pages,
