@@ -58,12 +58,10 @@ Recent episodes:
 29 September 2018; 50 min.
 -->
 
-<!--
 <img src="/images/shift-m/mike-clayton.png" class="guest-face" alt="Face of Mike Clayton"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;37: [Zend project management with Mike Clayton](/shift-m/2018/37.html)<br/>
 29 September 2018; 58 min.
--->
 
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/>
 <img src="/images/shift-m/olga-arnoldi.png" class="guest-face" alt="Face of Olga Arnoldi"/><br/>
