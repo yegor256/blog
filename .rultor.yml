@@ -5,11 +5,6 @@ assets:
   id_rsa: "zerocracy/home#assets/blog/id_rsa"
   id_rsa.pub: "zerocracy/home#assets/blog/id_rsa.pub"
 install: |
-  sudo locale-gen en_US en_US.UTF-8
-  sudo dpkg-reconfigure locales
-  export LC_ALL=en_US.UTF-8
-  export LANG=en_US.UTF-8
-  export LANGUAGE=en_US.UTF-8
   bundle install
 deploy:
   script: |
