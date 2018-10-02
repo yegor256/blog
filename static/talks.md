@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2018/devopsconf.png" class="future-talk" alt="DevOpsConf 2018"/><br/>
-Главное не качество, а количество!<br/>
-[DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723)<br/>
-Moscow, Russia<br/>
-2 October.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/2018/appsconf.png" class="future-talk" alt="AppsConf 2018"/><br/>
 Главное не качество, а количество!<br/>
 [AppsConf](https://appsconf.ru/2018/abstracts/3721)<br/>
@@ -184,6 +177,15 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/NFJNp5ke4CM/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2018"/><br/>
+Quantity vs. Quality;
+[DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723);
+Moscow, Russia;
+2 October;
+[видео](https://youtu.be/NFJNp5ke4CM),
+[slides](https://www.slideshare.net/YegorBugayenko/quantity-vs-quality-117828058).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="past-talk" alt="DevOpsDays Boston 2018"/><br/>
