@@ -117,7 +117,14 @@ Prague, Czech Republic<br/>
 Don't aim for quality, aim for speed<br/>
 [Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/)<br/>
 St.Petersburg, Russia<br/>
-19 October.
+20 October.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://crowdsourcingweek.com/wp-content/themes/csw/images/logo-w-slogan.png" class="future-talk" alt="CSW 2018"/><br/>
+Zold: A Fast Cryptocurrency for Micro Payments<br/>
+[CrowdSourcing Week](https://crowdsourcingweek.com/speaker/yegor-bugayenko/)<br/>
+Washington, D.C.<br/>
+24-28 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
