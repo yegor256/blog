@@ -179,6 +179,7 @@ al
 alan
 alcohol
 alerts
+alexey
 algorithm
 algorithm-writing
 algorithmic
@@ -6666,6 +6667,7 @@ selling
 sells
 semantics
 semaphoreapp
+semenyuk
 semi-automatically
 semi-historical
 semi-object
@@ -8131,6 +8133,7 @@ VP
 VPs
 vs
 vulnerable
+vytautas
 wages
 wait
 waited
