@@ -39,7 +39,7 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-{% webinar 03-10-2018 39 uznmzI7qsvI A practical example of ORM-free persistence layer %}
+{% webinar 07-11-2018 39 uznmzI7qsvI A practical example of ORM-free persistence layer %}
 
 <a href="https://www.youtube.com/watch?v=uznmzI7qsvI"><img src="https://i.ytimg.com/vi/uznmzI7qsvI/mqdefault.jpg" class="wnr" alt="Webinar no.38 by Yegor Bugayenko"/></a>
 November 7, 2018<br/>
