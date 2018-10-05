@@ -23,10 +23,12 @@ we may organize an on-site tranining for your team. There are three
 topics I'm training for: object-oriented programming, DevOps, and
 project management.
 
-Usually, it's a one full-day 6-hours course, split into two parts by
+Usually, it's a one full-day **6-hours** course, split into two parts by
 three hours each. There could be from four to sixteen people in the room.
 
-The cost: $400/hour (plus travel and accomodation expenses).
+The cost: **$400/hour** (plus travel and accomodation expenses).
 
 As a bonus, all course participants get a copy
 of one of my [my books](/books.html).
+
+Text me in [Telegram](https://t.me/yegor256) or [email](mailto:trainings@yegor256.com) when ready.

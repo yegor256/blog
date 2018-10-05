@@ -39,8 +39,14 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
+{% webinar 03-10-2018 39 uznmzI7qsvI A practical example of ORM-free persistence layer %}
 
-{% webinar 03-10-2018 38 GIyAZRRgWPg Parsing Objects vs Parsers %}
+<a href="https://www.youtube.com/watch?v=uznmzI7qsvI"><img src="https://i.ytimg.com/vi/uznmzI7qsvI/mqdefault.jpg" class="wnr" alt="Webinar no.38 by Yegor Bugayenko"/></a>
+November 7, 2018<br/>
+&#35;39: **A practical example of ORM-free persistence layer**<br/>
+There is a demonstration of a real web application ([mailanes.com](https://www.mailanes.com)),
+where the persistence layer
+is designed without the use of any ORM frameworks, on top of plain PostgreSQL Ruby SDK.
 
 <a href="https://www.youtube.com/watch?v=GIyAZRRgWPg"><img src="https://i.ytimg.com/vi/GIyAZRRgWPg/mqdefault.jpg" class="wnr" alt="Webinar no.38 by Yegor Bugayenko"/></a>
 October 3, 2018<br/>

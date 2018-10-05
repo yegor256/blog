@@ -124,7 +124,7 @@ St.Petersburg, Russia<br/>
 Zold: A Fast Cryptocurrency for Micro Payments<br/>
 [CrowdSourcing Week](https://crowdsourcingweek.com/speaker/yegor-bugayenko/)<br/>
 Washington, D.C.<br/>
-24-28 October.
+26 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
@@ -145,7 +145,7 @@ Kuala Lumpur, Malaysia<br/>
 Expertise vs Experts<br/>
 [DevOpsPro](https://www.devopspro.ru/speakers/)<br/>
 Moscow, Russia<br/>
-13-15 November.
+14 November.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Warsaw 2018"/><br/>
