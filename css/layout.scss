@@ -33,7 +33,21 @@
 
 %strike { text-decoration: line-through; }
 
-%main-font { font-family: $main-font; }
+%main-font {
+  font-family: $main-font;
+  font-weight: normal;
+  font-style: normal;
+}
+%main-font-bold {
+  font-family: $main-font-bold;
+  font-weight: bold;
+  font-style: normal;
+}
+%main-font-italic {
+  font-family: $main-font-italic;
+  font-weight: normal;
+  font-style: italic;
+}
 
 %desktop-only {
   @media all and (max-width: $width) {
@@ -72,7 +86,6 @@ body {
   background-color: $white;
   color: $black;
   font-size: $em;
-  font-weight: 400;
   height: 100%;
   margin: 0;
   overflow-x: hidden;
@@ -271,13 +284,13 @@ fieldset {
 
 b,
 strong {
-  font-weight: bold;
+  @extend %main-font-bold;
 }
 
 h1 {
   @extend %clear;
+  @extend %main-font-bold;
   font-size: 2 * $em;
-  font-weight: bold;
   line-height: 2 * $em;
   margin-bottom: .5 * $em;
 
@@ -386,8 +399,8 @@ hr {
 }
 
 blockquote {
+  @extend %main-font-italic;
   border-left: 3px solid $light-gray;
-  font-style: italic;
   margin-left: 1.5 * $em;
   padding-left: .5 * $em !important;
   position: relative;
@@ -483,12 +496,12 @@ figure {
 
 // see 2015-11-03-chatbot-better-than-ui-for-microservices
 .bullet {
+  @extend %main-font-bold;
   background-color: $white;
   border-radius: 50%;
   color: lighten($orange, 25);
   display: inline-block;
   font-size: .8em;
-  font-weight: bold;
   height: 1em;
   line-height: 1em;
   padding: .2em;
