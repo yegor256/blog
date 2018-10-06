@@ -13,6 +13,7 @@ keywords:
   - hire remote programmer
   - hire remote developer
   - outsource programming
+noindex: true
 ---
 
 <iframe class='video' src='https://www.youtube.com/embed/TWBBZK_XRNU?controls=2' allowfullscreen='true'></iframe>
