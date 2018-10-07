@@ -23,8 +23,10 @@ There is a famous book by Robert Martin called [_Clean Code_](http://amzn.to/2m7
 The title is an obvious call to all of us: the code must be _clean_. Clean, like a kitchen,
 I suppose---there are no dirty dishes, no garbage on the floor, no smelly
 towels. Dirt to be cleaned in a code base, according to Martin, includes
-large methods, non-descriptive variable names, tight coupling, lack of SOLID
-and SRP compliance, and many other things. Read the book, it's worth it. However,
+large methods, non-descriptive variable names, tight coupling, lack of
+[SOLID]({% pst 2017/mar/2017-03-28-solid %})
+and [SRP]({% pst 2017/dec/2017-12-19-srp-is-hoax %}) compliance,
+and many other things. Read the book, it's worth it. However,
 there is yet another aspect of source code. How _clear_ is it?
 
 <!--more-->
