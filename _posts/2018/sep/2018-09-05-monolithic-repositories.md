@@ -186,6 +186,8 @@ a single merge, deploy and release. Also it will be easier to test, both
 manually and via unit testing. Continuous integration is easier to configure,
 and so on and so forth.
 
+{% quote A set of smaller components is better than a larger solid piece. %}
+
 All these "reasonable" arguments remind me of what I hear when preaching
 object decomposition and suggesting that multiple objects are better than
 a single large one. Imagine a large class of 3,000 lines of code, which
@@ -227,7 +229,8 @@ from it are enormous. This is my short list of them:
   * **Accurate Metrics**.
     I don't know whether you rely on metrics in your projects, but we at
     [Zerocracy](https://www.zerocracy.com) do pay attention to numbers, like
-    lines of code, hits of code, number of commits, classes, methods, cohesion,
+    lines of code, [hits of code]({% pst 2014/nov/2014-11-14-hits-of-code %}),
+    number of commits, classes, methods, cohesion,
     coupling, etc. It's always a question whether the metrics are accurate.
     Calculating lines of code for a large repository doesn't make any sense, since
     the number will include a lot of files from completely different parts of
@@ -236,6 +239,8 @@ from it are enormous. This is my short list of them:
     and 40K lines of Ruby. Can you say something specific about this repo? Is it
     large? Is it a Java repo? And, more importantly, can it be compared with other
     repositories? Not really. It's just a big messy storage of files.
+
+{% quote The preferred situation is one language or technology per repository. %}
 
   * **Homogeneous Tasks**.
     Smaller repositories tend to have smaller tech stacks, meaning that each of
