@@ -88,15 +88,11 @@ That's how I understand exceptions.
 
 According to this paradigm, I would say we must:
 
- * always use checked exceptions.
-
- * never throw/use unchecked exceptions.
-
- * use only `Exception`, without any sub-types.
-
- * always declare one exception type in the `throws` block.
-
- * never catch without rethrowing; read [more about that here]({% pst 2015/jul/2015-07-09-catch-if-cant-otherwise %}).
+ * Always use checked exceptions.
+ * Never throw/use unchecked exceptions.
+ * Use only `Exception`, without any sub-types.
+ * Always declare one exception type in the `throws` block.
+ * Never catch without rethrowing; read [more about that here]({% pst 2015/jul/2015-07-09-catch-if-cant-otherwise %}).
 
 This paradigm diverges from many other articles I've found on this subject.
 Let's compare and discuss.
