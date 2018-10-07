@@ -101,3 +101,6 @@ What are they really committed to? To give you a 30-days notice when they
 finally find a better place to scroll Facebook eight hours a day?
 
 Seriosly?
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Who really is in charge, you or your boss? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1048824708068777984?ref_src=twsrc%5Etfw">October 7, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
