@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-10-07T06:20:23+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2019</title><link href="https://www.yegor256.com/2018/09/30/award-2019.html" rel="alternate" type="text/html" title="Software Quality Award, 2019" /><published>2018-09-30T00:00:00+00:00</published><updated>2018-09-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/30/award-2019</id><content type="html" xml:base="https://www.yegor256.com/2018/09/30/award-2019.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-10-08T11:49:31+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2019</title><link href="https://www.yegor256.com/2018/09/30/award-2019.html" rel="alternate" type="text/html" title="Software Quality Award, 2019" /><published>2018-09-30T00:00:00+00:00</published><updated>2018-09-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/30/award-2019</id><content type="html" xml:base="https://www.yegor256.com/2018/09/30/award-2019.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is the fifth year of the
 &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
@@ -240,8 +240,10 @@ reproduce them with automated tests, fix, and re-deploy.&lt;/p&gt;
 The title is an obvious call to all of us: the code must be &lt;em&gt;clean&lt;/em&gt;. Clean, like a kitchen,
 I suppose—there are no dirty dishes, no garbage on the floor, no smelly
 towels. Dirt to be cleaned in a code base, according to Martin, includes
-large methods, non-descriptive variable names, tight coupling, lack of SOLID
-and SRP compliance, and many other things. Read the book, it’s worth it. However,
+large methods, non-descriptive variable names, tight coupling, lack of
+&lt;a href=&quot;/2017/03/28/solid.html&quot;&gt;SOLID&lt;/a&gt;
+and &lt;a href=&quot;/2017/12/19/srp-is-hoax.html&quot;&gt;SRP&lt;/a&gt; compliance,
+and many other things. Read the book, it’s worth it. However,
 there is yet another aspect of source code. How &lt;em&gt;clear&lt;/em&gt; is it?&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -449,6 +451,8 @@ a single merge, deploy and release. Also it will be easier to test, both
 manually and via unit testing. Continuous integration is easier to configure,
 and so on and so forth.&lt;/p&gt;
 
+&lt;aside class=&quot;quote&quot;&gt;A set of smaller components is better than a larger solid piece.&lt;/aside&gt;
+
 &lt;p&gt;All these “reasonable” arguments remind me of what I hear when preaching
 object decomposition and suggesting that multiple objects are better than
 a single large one. Imagine a large class of 3,000 lines of code, which
@@ -494,7 +498,8 @@ the build as a tool for development.&lt;/p&gt;
     &lt;p&gt;&lt;strong&gt;Accurate Metrics&lt;/strong&gt;.
 I don’t know whether you rely on metrics in your projects, but we at
 &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; do pay attention to numbers, like
-lines of code, hits of code, number of commits, classes, methods, cohesion,
+lines of code, &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits of code&lt;/a&gt;,
+number of commits, classes, methods, cohesion,
 coupling, etc. It’s always a question whether the metrics are accurate.
 Calculating lines of code for a large repository doesn’t make any sense, since
 the number will include a lot of files from completely different parts of
@@ -504,6 +509,11 @@ and 40K lines of Ruby. Can you say something specific about this repo? Is it
 large? Is it a Java repo? And, more importantly, can it be compared with other
 repositories? Not really. It’s just a big messy storage of files.&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;The preferred situation is one language or technology per repository.&lt;/aside&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Homogeneous Tasks&lt;/strong&gt;.
 Smaller repositories tend to have smaller tech stacks, meaning that each of
