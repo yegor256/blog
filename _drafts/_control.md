@@ -47,11 +47,11 @@ OK, replace it with managed, organized, or (I love this word) orchestrated.
 
 The bottom line is: you control it or you lose it.
 
-What does control technically means? According to
+What does control technically mean? According to
 [Wikipedia](https://en.wikipedia.org/wiki/Control_%28management%29),
 it means "setting standards, measuring actual performance and taking _corrective action_."
-What are those corrective actions in the context of people management?
-There are two: awards and punishments. In order to keep even the
+What are the corrective actions in the context of people management?
+There are two: rewards and punishments. In order to keep even the
 [most talented people]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
 under control, we have to reward them for their successes and
 punish or [fire]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
@@ -59,7 +59,7 @@ them for their failures.
 
 The question is how you do that. How do you reward and how do you punish?
 
-Even if you don't want to admit that you do it, you still do it. You reward
+Even if you don't want to admit that you do it, you still do. You reward
 and you punish. How does it happen in a traditional management model with the
 "hired developers" my prospective client was talking about? I've explained it already
 in a few blog posts. [_How to Pay Programmers Less_]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
@@ -85,20 +85,20 @@ You will be under our control, not the other way around.
 If you are lucky, the project will _maybe_ see its end.
 But in most cases this doesn't happen.
 
-Do you want to know what real control is? Read this [Policy](https://www.zerocracy.com/policy.html)---
-this is how we _control_ programming in Zerocracy. This is the level of
-control true professionals enjoy. This document, fully supported by our
+Do you want to know what real control is? Read this [Policy](https://www.zerocracy.com/policy.html),
+which is how we _control_ programming in Zerocracy. That is the level of
+control true professionals enjoy. That document, fully supported by our
 [automated chatbot]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}),
 guides every small piece of reward and punishment a programmer may have on a project.
 
-This is what true committment means for our guys: personal and
+This is what true commitment means for our guys: personal and
 [explicit responsibility]({% pst 2014/apr/2014-04-13-no-obligations-principle %}) for
-every single step they make. This level of committment can not even be compared
-to what you get when hiring full-time 9-to-5
+every single step they make. This level of commitment is incomparably better than what
+you will likely find when hiring full-time 9-to-5
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) <del>slaves</del> employees.
 
 What are they really committed to? To giving you a month's notice when they
-finally find a better place to scroll Facebook from eight hours a day?
+finally find a better place to scroll through Facebook eight hours a day?
 
 Seriously?
 
