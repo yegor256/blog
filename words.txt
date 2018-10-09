@@ -1612,6 +1612,7 @@ correct---it's
 corrected
 correcting
 corrections
+corrective
 correctly
 correctness
 correlated
@@ -2482,6 +2483,7 @@ entrepreneur
 entrepreneurs
 entries
 entropy
+entrusting
 entry
 enumerations
 envelopes
@@ -3068,6 +3070,7 @@ GeeCON
 geek
 GeekOUT
 geekoutee
+geeks
 gem
 gender
 genderless
@@ -3607,6 +3610,7 @@ includes
 including
 income
 incoming
+incomparably
 incompetence
 incomplete
 inconsistencies
@@ -5173,6 +5177,7 @@ options
 or
 oracle
 orange
+orchestrated
 order
 ordering
 orders
@@ -5881,6 +5886,7 @@ proprietary
 pros
 prose
 prospect
+prospective
 prospects
 protect
 protected
@@ -7524,6 +7530,7 @@ testing-wise
 tests
 tex
 text
+texted
 textmate
 texts
 th
