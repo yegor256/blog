@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "You Think You Can Control It?"
-date: 2018-10-10
+title: "You Think You Can Control Us?"
+date: 2018-10-09
 place: Moscow, Russia
 tags: mood zerocracy
 description: |
@@ -14,9 +14,9 @@ keywords:
   - programmers control
   - management control
   - zerocracy
-image: /images/2018/10/
+image: /images/2018/10/the-drop.jpg
 jb_picture:
-  caption:
+  caption: The Drop (2014) by Michaël R. Roskam
 ---
 
 I was explaining how [Zerocracy](https://www.zerocracy.com) works to one of our prospective
