@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "icons";
-  src: url("https://www.yegor256.com/css/icons.eot?1539151064");
-  src: url("https://www.yegor256.com/css/icons.eot?#iefix?1539151064") format("embedded-opentype"),
-       url("https://www.yegor256.com/css/icons.woff?1539151064") format("woff"),
-       url("https://www.yegor256.com/css/icons.ttf?1539151064") format("truetype"),
-       url("https://www.yegor256.com/css/icons.svg#icons?1539151064") format("svg");
+  src: url("https://www.yegor256.com/css/icons.eot?1539154314");
+  src: url("https://www.yegor256.com/css/icons.eot?#iefix?1539154314") format("embedded-opentype"),
+       url("https://www.yegor256.com/css/icons.woff?1539154314") format("woff"),
+       url("https://www.yegor256.com/css/icons.ttf?1539154314") format("truetype"),
+       url("https://www.yegor256.com/css/icons.svg#icons?1539154314") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "icons";
-    src: url("https://www.yegor256.com/css/icons.svg#icons?1539151064") format("svg");
+    src: url("https://www.yegor256.com/css/icons.svg#icons?1539154314") format("svg");
   }
 }
 
