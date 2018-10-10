@@ -30,5 +30,4 @@ Odessa-Mama<br/>
 Krivokolennyy Pereulok, 10 stroyenie 5<br/>
 Moscow, Russia
 
-<iframe src="https://www.google.com/maps/embed?pb=!4m8!1m2!2m1!1smaps!3m4!1s0x46b54a60a6ce45bb:0x9612e9c4836a9cf0!8m2!3d55.7616719!4d37.6360843"
-  style="width:100%;height:300px;border:0;max-width:100%" allowfullscreen="true"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.8175259444215!2d37.63389531599083!3d55.761671980555704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a60a6ce45bb%3A0x9612e9c4836a9cf0!2sCafe+%22Odessa-mama%22!5e0!3m2!1sen!2sua!4v1539149890431" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
