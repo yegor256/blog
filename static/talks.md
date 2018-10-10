@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2018/appsconf.png" class="future-talk" alt="AppsConf 2018"/><br/>
-Главное не качество, а количество!<br/>
-[AppsConf](https://appsconf.ru/2018/abstracts/3721)<br/>
-Moscow, Russia<br/>
-9 October.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://2018.geecon.cz/assets/images/logo.png" class="future-talk" alt="GeeCON Prague 2018"/><br/>
 Expertise vs Experts<br/>
 [GeeCON Prague](https://2018.geecon.cz/speakers/#bio)<br/>
@@ -184,6 +177,15 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/d_gZUcpBdRM/mqdefault.jpg" class="past-talk" alt="AppsConf 2018"/><br/>
+Who Cares About Quality?;
+[AppsConf](https://appsconf.ru/2018/abstracts/3721);
+Moscow, Russia;
+9 October;
+[видео](https://youtu.be/d_gZUcpBdRM),
+[slides](https://www.slideshare.net/YegorBugayenko/who-cares-about-quality).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/NFJNp5ke4CM/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2018"/><br/>
