@@ -38,6 +38,7 @@ module Yegor
     end
 
     def yb_description(page)
+      return ''
       text = page['description']
       if text.nil?
         text = ''
