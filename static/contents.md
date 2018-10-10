@@ -111,6 +111,6 @@ Sort by:
 </div>
 
 <div id="all">
-{{ site.posts | tagged_list }}
+{{ site.posts | yb_tagged_list }}
 </div>
 

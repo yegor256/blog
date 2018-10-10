@@ -96,7 +96,7 @@ module Yegor
       "/tag/#{tag}.html"
     end
 
-    def tagged_list(posts)
+    def yb_tagged_list(posts)
       posts.select { |p| p['noindex'].nil? }.map{ |p| tagged(p) }.join() unless posts.nil?
     end
 
