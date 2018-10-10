@@ -6,7 +6,7 @@ layout: compress
   itemscope="" itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="utf-8"/>
-    <meta name="description" content="{{ page | yb_description }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
+    <meta name="description" content="{{ page | yb_description | xml_escape }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
     <meta name="keywords" content="{{ page | yb_keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />
@@ -21,7 +21,7 @@ layout: compress
     <meta name="twitter:creator" content="@yegor256"/>
     <meta name="twitter:site" content="@yegor256"/>
     <meta name="twitter:title" property="og:title" content="{{ page.title }}"/>
-    <meta name="twitter:description" property="og:description" content="{{ page | yb_description }}"/>
+    <meta name="twitter:description" property="og:description" content="{{ page | yb_description | xml_escape }}"/>
     <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <meta name="telegram:channel" content="AAAAAEJFMRzsRTRxM3ec6A"/>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" />
