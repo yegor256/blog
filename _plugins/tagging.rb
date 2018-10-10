@@ -97,6 +97,7 @@ module Yegor
     end
 
     def yb_tagged_list(posts)
+      return 'Temporary broken, sorry :('
       posts.select { |p| p['noindex'].nil? }.map{ |p| tagged(p) }.join() unless posts.nil?
     end
 

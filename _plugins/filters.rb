@@ -38,6 +38,7 @@ module Yegor
     end
 
     def yb_description(page)
+      return 'Temporary broken, sorry :('
       text = page['description']
       if text.nil?
         text = ''
@@ -49,12 +50,6 @@ module Yegor
         fail "too long description in [#{page['title']}] (#{text.length} chars): \"#{text}\""
       end
       text.gsub(/[ \n\r\t]+/, ' ')
-        .gsub(/&/, '&amp;')
-        .gsub(/"/, '&quot;')
-        .gsub(/'/, '&apos;')
-        .gsub(/</, '&lt;')
-        .gsub(/>/, '&gt;')
-        .to_s
     end
 
     def yb_menu(url, title)
