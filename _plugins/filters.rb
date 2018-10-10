@@ -18,7 +18,7 @@
 
 module Yegor
   module Filters
-    def keywords(page)
+    def yb_keywords(page)
       list = page['keywords']
       if list.nil?
         list = []
@@ -37,7 +37,7 @@ module Yegor
       list.compact.sort.uniq
     end
 
-    def description(page)
+    def yb_description(page)
       text = page['description']
       if text.nil?
         text = ''
@@ -56,7 +56,7 @@ module Yegor
         .gsub(/>/, '&gt;')
     end
 
-    def menu(url, title)
+    def yb_menu(url, title)
       if url.end_with?(title + '.html')
         ' class="selected" '
       else
