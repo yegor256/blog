@@ -5,7 +5,7 @@ layout: compress
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="utf-8"/>
-    <meta name="description" content="{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
+    <meta name="description" content="{{ page | yb_description | xml_escape }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
     <meta name="keywords" content="{{ page | yb_keywords | join:', ' | xml_escape }}" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
     <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" />

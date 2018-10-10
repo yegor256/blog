@@ -54,6 +54,7 @@ module Yegor
         .gsub(/'/, '&apos;')
         .gsub(/</, '&lt;')
         .gsub(/>/, '&gt;')
+        .to_s
     end
 
     def yb_menu(url, title)
