@@ -17,7 +17,7 @@
 # SOFTWARE.
 
 module Yegor
-  module Filters
+  module FrontFilters
     def yb_keywords(page)
       list = page['keywords']
       if list.nil?
@@ -38,7 +38,6 @@ module Yegor
     end
 
     def yb_description(page)
-      return 'Temporary broken, sorry :('
       text = page['description']
       if text.nil?
         text = ''
@@ -62,4 +61,5 @@ module Yegor
   end
 end
 
-Liquid::Template.register_filter(Yegor::Filters)
+require 'liquid'
+Liquid::Template.register_filter(Yegor::FrontFilters)

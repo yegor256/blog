@@ -49,7 +49,6 @@ module Yegor
   end
 
   class TagPage < Jekyll::Page
-
     def initialize(site, base, dir, name, data = {})
       self.content = data.delete('content') || ''
       self.data = data
@@ -71,7 +70,7 @@ module Yegor
     end
   end
 
-  module Filters
+  module TaggingFilters
     def tag_cloud(tags)
       tags.keys.sort.map{ |t| tag_link(t) }.join(' ')
     end
@@ -97,7 +96,6 @@ module Yegor
     end
 
     def yb_tagged_list(posts)
-      return 'Temporary broken, sorry :('
       posts.select { |p| p['noindex'].nil? }.map{ |p| tagged(p) }.join() unless posts.nil?
     end
 
@@ -110,7 +108,7 @@ module Yegor
               #{post['date'].strftime('%-d %B %Y')}
             </time>
           </li>
-          <li class='tags'>#{page_tags(post)}</li>
+          <li class='tags'>#{yb_page_tags(post)}</li>
           <li class='unprintable'>
             <a href='https://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
           </li>
@@ -118,7 +116,7 @@ module Yegor
       </div>".gsub(/\n/, '')
     end
 
-    def page_tags(page)
+    def yb_page_tags(page)
       return '' unless page['tags'].kind_of?(Array)
       tags = page['tags'].dup.sort
       tags.map! { |t| t.first } if tags.first.is_a?(Array)
@@ -129,5 +127,6 @@ module Yegor
   end
 end
 
-Liquid::Template.register_filter(Yegor::Filters)
+require 'liquid'
+Liquid::Template.register_filter(Yegor::TaggingFilters)
 
