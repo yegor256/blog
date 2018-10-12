@@ -70,6 +70,8 @@ I started to work on the 3rd volume. It will be suggest how to refactor
 the legacy code in order to make it more object-oriented. I will try to make
 it similar to those popular refactoring books, where recommendations are
 given to improve the code. Hope to publish it in the first half of 2019.
+If you want to be a reviewer, please fill out
+[this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o/).
 
 July 20, 2018:
 Русское издание [вышло](https://www.piter.com/collection/all/product/elegantnye-obekty-java-edition)
