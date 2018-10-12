@@ -185,6 +185,16 @@ a much simpler and cheaper (it's free) way.
 <br/>
 Founded 27-Aug-2018.
 
+{% badge //www.soalition.com/logo.svg 70 http://www.soalition.com %}
+
+[Soalition](https://www.soalition.com) is a manager of social coalitions
+of online writers. You join a group as a member and start sharing your
+online content. Other members of the group re-post your content and earn
+reputation points. In exchange you have to re-post their content. Thus,
+you all gain better social visibility of your mutual idea.
+<br/>
+Founded 28-Aug-2018.
+
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
 [qulice](https://github.com/teamed/qulice),
