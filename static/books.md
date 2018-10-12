@@ -90,7 +90,7 @@ will contain practical object-oriented design patterns, just like
 those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
-To be published: end of 2018.
+To be published: first half of 2019.
 
 <div class="book-par"></div>
 To be continued...

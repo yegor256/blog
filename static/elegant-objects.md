@@ -65,6 +65,12 @@ Volume 2:<br/>
 
 <!--more-->
 
+October 12, 2018:
+I started to work on the 3rd volume. It will be suggest how to refactor
+the legacy code in order to make it more object-oriented. I will try to make
+it similar to those popular refactoring books, where recommendations are
+given to improve the code. Hope to publish it in the first half of 2019.
+
 July 20, 2018:
 Русское издание [вышло](https://www.piter.com/collection/all/product/elegantnye-obekty-java-edition)
 в издательстве Питер. Вот анонс на [Habr](https://habr.com/company/piter/blog/418157/).
