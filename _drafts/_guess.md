@@ -86,7 +86,7 @@ blog post trying to open the same broken link. That's why it's a good
 moment to just tell me: "Hey, it's broken!"
 
 Is it a [mental disorder](https://en.wikipedia.org/wiki/Schizophasia)
-or just negligence and lack of respect to the listener?
+or just negligence and lack of respect for the listener?
 
 Honestly, I think it's a bit of both.
 
@@ -100,15 +100,15 @@ Here is my short list of countermeasures:
     Sometimes it works, but very often it's not appropriate, since I realize that
     the information coming to me is valuable. Just like in this
     situation with Paul. I was interested to know what exactly was broken,
-    either a link or maybe one of my pet webservices is down. Thus,
+    either a link or maybe one of my pet webs ervices is down. Thus,
     silence wasn't an option.
 
   * **Being Silly**.
-    Instead of clarifing, I sometimes try to make the situation even worse,
+    Instead of clarifying, I sometimes try to make the situation even worse,
     pretending that I understand the message and that the context is clear to me,
     but that it's a different context. For example, right after "The link is broken"
     I would answer "No, it's not, I just checked!" That would confuse Paul,
-    since he would then need to put some extra effort to explain me which link it was
+    since he would then need to put some extra effort to explain to me which link it was
     and that it is indeed broken.
 
   * **Long Pauses**.
