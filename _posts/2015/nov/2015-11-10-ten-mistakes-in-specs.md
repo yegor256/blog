@@ -37,8 +37,8 @@ Chapter 4.3 of a famous standard
 [IEEE 830-1998](https://standards.ieee.org/findstds/standard/830-1998.html)
 says that a good
 [specification](https://en.wikipedia.org/wiki/Software_requirements_specification)
-should be **correct**, **unambiguous**, **complete**, **consistent**,
-**ranked**, **verifiable**, **modifiable**, and **traceable**.
+should be _correct_, _unambiguous_, _complete_, _consistent_,
+_ranked_, _verifiable_, _modifiable_, and _traceable_.
 Eight qualities in total. Then, the standard explains them one by one
 in pretty simple English. But do we have time to read those boring standards?
 They are for university professors and certification boards.
@@ -50,11 +50,11 @@ No matter how small the project is and how practical we are, there
 is always a document that explains what needs to be done, and it
 may be called the "software requirements specification," or "specification,"
 or just "spec." Of course, there is a lot of space for creativity, but
-we're **engineers**, not artists. We must follow rules and standards,
+we're _engineers_, not artists. We must follow rules and standards,
 mostly because they make our communication easier.
 
 Now, I'm getting to my point. The specs I usually see violate pretty much
-**all** eight principles mentioned earlier. Below is a summary of how exactly
+_all_ eight principles mentioned earlier. Below is a summary of how exactly
 they do it. By the way, all examples are taken from real documents in
 real commercial software projects.
 
@@ -73,7 +73,7 @@ be great to know what UUID stands for. Is it "unique user ID" or maybe
 "unified user identity descriptor?" I have no idea. I'm lost, and I want
 to find the author of this text and do something bad to him ... or her.
 
-{% quote We're writing in order to be understood, not to impress the reader %}
+{% quote We're writing in order to be understood, not to impress the reader. %}
 
 I've written already that the
 [worst technical specifications have no glossaries]({% pst 2015/mar/2015-03-16-technical-glossaries %}).
@@ -116,7 +116,7 @@ the author asks me what possible options are out there. Then,
 he suggests I consider something, and after that,
 he invites me for a talk.
 
-{% quote Find all your answers before writing the document, that's what you're paid for %}
+{% quote Find all your answers before writing the document, that's what you're paid for. %}
 
 Impressive, right? Obviously, the author has a very creative personality.
 But we should keep this person as far away from project documentation as possible.
@@ -124,7 +124,7 @@ This is not what a requirements document appreciates. Well, we appreciate
 creativity, but these four things are strictly prohibited:
 questions, discussions, suggestions, and opinions.
 
-Specifications can't have any **questions** in them. Who are these questions
+Specifications can't have any _questions_ in them. Who are these questions
 addressed to? Me, a programmer? Am I supposed to implement the
 software or answer your questions? I'm not interested in brainstorming
 with you. I expect you, a requirements author, to tell me
@@ -132,7 +132,7 @@ what needs to be done. Find all your answers before writing the document. That's
 what you're paid for. If you don't have the answers, put something like
 TBD ("to be determined") there. But don't ask questions. It's annoying.
 
-A requirements document is not a **discussion** board. As a reader of the
+A requirements document is not a _discussion_ board. As a reader of the
 spec, I expect to see exactly what needs to be done without any "maybe" or
 "we could do it differently." Of course you need to discuss these issues,
 but do it before documenting it. Do it somewhere else, like in Skype, on Slack,
@@ -140,7 +140,7 @@ or by email. If you really want to discuss in the document, use Google Docs or
 Word with version tracking. But when the discussion is over, remove its history
 from the document. Its presence only confuses me, a programmer.
 
-There's no need to format requirements as **suggestions** either. Just say what
+There's no need to format requirements as _suggestions_ either. Just say what
 needs to be done and how the software has to work without fear of being wrong.
 Usually, people resort to suggestion when they are afraid to say it straight. Instead
 of saying "the app must work on Android 3.x and higher," they say
@@ -150,7 +150,7 @@ personal responsibility. He's not saying "exactly Android 3.x;" he's just
 suggesting. Don't be a coward; say it straight. If you make a mistake,
 we'll correct you.
 
-And, of course, **opinions** are not appreciated at all. It's not a letter
+And, of course, _opinions_ are not appreciated at all. It's not a letter
 to a friend; it's a formal document that belongs to the project. In a few
 months or weeks, you may leave the project, and somebody else will work with
 your document. The spec is a contract between the project sponsor and project
@@ -251,7 +251,7 @@ With what amount of data in the user profile? What does "launch" mean; does it i
 profile loading time? What if there are launching problems? Do they count?
 There are a lot of questions like that.
 
-If we answer **all** of them, the requirement text will fill an entire
+If we answer _all_ of them, the requirement text will fill an entire
 page. Nobody wants that, but having un-measurable requirements
 is a greater evil.
 
@@ -284,7 +284,7 @@ The spec should only require what really matters for the business. Everything
 else is up to us, the programmers. We decide what database to use, where the
 button will be placed, and what information will be stored in the database.
 
-{% quote You shouldn't tell me how to implement the functionality you desire %}
+{% quote You shouldn't tell me how to implement the functionality you desire. %}
 
 If you really care about that because there are certain higher-level
 limitations---say so. But again, not as implementation instructions
@@ -313,7 +313,7 @@ is more or less clear, but it's not clear who is doing all this. Where
 is the user? It is just a story of something happening somewhere. That's not
 really what programmers need in order to implement it.
 
-{% quote A good user story always has, guess what ... a user %}
+{% quote A good user story always has, guess what ... a user. %}
 
 The best way to explain functionality is through user stories. And a good
 user story always has, guess what ... a user. It always starts with
@@ -346,12 +346,12 @@ information.
 I don't want to share your concerns, your beliefs, or your intentions. That's your
 business. And you're paid to properly and unambiguously translate all that
 into testable and measurable requirements. If you can't do this, it's
-your problem and **your fault**. Don't try to make it mine.
+your problem and _your fault_. Don't try to make it mine.
 
 Very often ... wait. Very, very often. No. Almost always. Wrong again. Always!
 That's right, spec documents are always full of noise.
 Some of them have a bit less; some have more. I believe this
-is a symptom of **lazy** and unprofessional document authors. In most cases,
+is a symptom of _lazy_ and unprofessional document authors. In most cases,
 just lazy.
 
 They don't want to think and translate their concerns, ideas, thoughts,

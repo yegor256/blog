@@ -28,9 +28,9 @@ managers, real estate agents,
 sales agents, lawyers, and [outstaffers](http://english.stackexchange.com/questions/103448/is-outstaffing-a-real-word)---what do they all have in common?
 They are middlemen standing between money and the
 [proletariat](https://en.wikipedia.org/wiki/Proletariat), taking a huge percentage
-for themselves but **adding no value**. Their very existence is our mutual
+for themselves but _adding no value_. Their very existence is our mutual
 misfortune. We are too weak to get rid of them now, but sooner
-or later every supply chain will be **mayonnaise-free**. Look at
+or later every supply chain will be _mayonnaise-free_. Look at
 Uber---taxi companies are dead already, and we now have only drivers
 and passengers with a computer system in between. The same will happen
 everywhere else.
@@ -39,13 +39,13 @@ everywhere else.
 
 {% jb_picture_body %}
 
-Seriously, look at [**IT recruiters**]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}),
+Seriously, look at [_IT recruiters_]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}),
 for example. To find a programmer, one has to pay
 about $30K (in Silicon Valley, if a programmer's salary is, say, $120K a year)
 to a recruiter. $30,000! What will this money be spent on? Or let me put it this way:
 How much software will I get for this money? Let me put it even better:
 Why don't I give this money to the programmer directly as a bonus for
-switching companies? Why do **we** need this
+switching companies? Why do _we_ need this
 [recruiter]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
 between us---me and the programmer I'm going to hire?
 Can't we use this $30,000 more effectively?
@@ -71,7 +71,7 @@ a candidate's skills are. And there are plenty of other avenues.
 On the other hand, these tools are not actively used by
 the majority of programmers and software companies---mostly because
 [IT recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
-stay between us, **stealing** our money
+stay between us, _stealing_ our money
 and protecting that position for themselves.
 Just like taxi companies remain between passengers and drivers,
 or real estate agents get in between house owners and house buyers,
@@ -85,9 +85,9 @@ fast, it is accurate, and it is free. The researchers are out of business.
 Are we sorry about it? Well, maybe, but that's the way it should be.
 The same will happen with IT recruiters and all those "agents." They will
 eventually be out of business and will start doing something that
-actually adds **some value** for all of us.
+actually adds _some value_ for all of us.
 
-At the moment, they are simply taking away our money, **exploiting** the
+At the moment, they are simply taking away our money, _exploiting_ the
 fact that we're lazy, or stupid, or shy, or you name it. For example, it was not obvious
 in the beginning how to use Google. I know a few people who still don't
 know how to do it. I'm sure you know a few, too. They would
@@ -101,10 +101,10 @@ friend and wanted Jeff to depend on me forever, I would just
 browse over to Google, check the weather, and tell Jeff it'll be cloudy.
 
 That's exactly what recruiters are doing.
-Their entire business is based on the fact that we're **not smart** enough
+Their entire business is based on the fact that we're _not smart_ enough
 to use existing software systems, publicly available and in most cases
-very cheap or simply free. Or we're **too shy** to apply for a new job ourselves.
-Or we just **don't know** how to write a [good resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) and emphasize
+very cheap or simply free. Or we're _too shy_ to apply for a new job ourselves.
+Or we just _don't know_ how to write a [good resume]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) and emphasize
 our skills properly. They are exploiting our weaknesses to make money.
 
 A friend of mine was looking for a house in San Francisco a few months ago. He
@@ -124,7 +124,7 @@ to Zillow and let it handle everything, automatically. Without any "agents"
 involved. Can we? I'm sure we can, and that's the future.
 
 What will the army of real estate agents do? Well, maybe something useful,
-like **cleaning streets**.
+like _cleaning streets_.
 
 {% quote $25 out of my $40 will be spent not writing code but rather on something else %}
 
@@ -135,7 +135,7 @@ a very de-motivating effect on those who are actually delivering value while
 making a much smaller income. It obviously demonstrates that the entire
 system is defective and simply not fair.
 
-The same is true about **outstaffing** companies, which we contract with to
+The same is true about _outstaffing_ companies, which we contract with to
 gain access to programmers sitting somewhere overseas or much closer.
 They find developers, hire them full-time, and resell their skills with a 150 percent
 or greater margin on a part-time or short-term basis. I've been getting a few offers
@@ -144,7 +144,7 @@ from such companies every day.
 They want me to pay, say, $40 for each hour while a developer
 sitting in their [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 gets like $2,500 per month. This means
-$25 out of my $40 will be spent **not writing code** but rather on something else.
+$25 out of my $40 will be spent _not writing code_ but rather on something else.
 Also, a programmer will be motivated for the $2,500, not for $7,000.
 So I will be paying $7K per month and getting software worth $2,500 a month.
 
@@ -155,14 +155,14 @@ In this scenario, $4,500 will be simply wasted.
 The same is true about every single middleman in the market. They
 make business processes less effective, take away significant
 amounts of money, and slow down optimizations and innovations.
-A truly modern and innovative way of doing business is by **directly connecting
-money and people** who add value. There should be no one in
+A truly modern and innovative way of doing business is by _directly connecting
+money and people_ who add value. There should be no one in
 between except computer systems.
 
 Sometimes I hear the comment that people love to work with people, not computers. That's
-why we need all that mayonnaise---to make our life **happier**? It's true that
+why we need all that mayonnaise---to make our life _happier_? It's true that
 people love to deal with people---people we really need, people who
-speak the same language, and people who deliver **real value**. Not with
+speak the same language, and people who deliver _real value_. Not with
 producers, recruiters, real estate agents, sales agents, outstaffers, lawyers,
 travel agents, investment brokers, executive officers, or taxi dispatchers.
 

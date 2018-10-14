@@ -21,7 +21,7 @@ jb_picture:
 
 The [Ringelmann Effect](https://en.wikipedia.org/wiki/Ringelmann_effect)
 (a.k.a. [social loafing](https://en.wikipedia.org/wiki/Social_loafing))
-is basically about people experiencing **decreasing** productivity
+is basically about people experiencing _decreasing_ productivity
 when working in groups. We're basically more productive when
 we work individually to achieve personal goals rather than being
 teamed up. That was discovered by Prof. [Max Ringelmann](https://en.wikipedia.org/wiki/Max_Ringelmann) a hundred
@@ -42,9 +42,10 @@ It's a pretty simple task that just requires some time and creativity.
 
 The first group worked as a team. They had just one piece of paper
 and one pen to write down the words they found. We called them a
-**co-located** team.
+_co-located_ team.
 
-The second group of four people worked in a **distributed** mode---they had four pieces of paper and four pens. They didn't communicate with
+The second group of four people worked in a _distributed_
+mode---they had four pieces of paper and four pens. They didn't communicate with
 each other and just created words. They knew that the best performer
 would receive a prize (a bar of organic chocolate).
 
@@ -52,11 +53,11 @@ I promised a prize to the co-located team too. A very similar chocolate bar.
 
 We gave them both just 5 minutes.
 
-Our result was this: **38 words** found by a co-located team and **41 words**
+Our result was this: _38 words_ found by a co-located team and _41 words_
 found by a distributed team. Of course, we removed duplicates and non-English
 words.
 
-The distributed team was **8 percent** more productive than the co-located one.
+The distributed team was _8 percent_ more productive than the co-located one.
 
 Of course, this may not be a clear experiment, and we can't use these numbers
 to really prove anything, but it was interesting to see how groups work and what
@@ -70,5 +71,5 @@ it does or doesn't work in your case.
 
 Now, my main question. If I understand it right,
 [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) promotes group
-responsibility and discourages **individualism**. How does it go along
+responsibility and discourages _individualism_. How does it go along
 with the Ringelmann Effect? Any thoughts?
