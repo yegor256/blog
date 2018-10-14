@@ -49,7 +49,7 @@ that in outsourcing, there are two companies involved: you the
 and some WeCodeLikeNoOneElse Inc. from Loompaland.  In offshore
 development, you just open an
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) in that same Loompaland with your own
-management and employees. Again, I'm discussing **outsourcing** here.
+management and employees. Again, I'm discussing _outsourcing_ here.
 
 Before writing this, I read
 [a few dozen articles](https://www.google.com/search?q=why+outsourcing+fails)
@@ -130,7 +130,7 @@ I don't find these "reasons" logical. They merely explain the
 consequences but never even touch the real problem, which I believe
 sounds like this:
 
-You're just a **cash cow** for an outsourcing company.
+You're just a _cash cow_ for an outsourcing company.
 
 You're neither a partner nor a friend, despite all your expectations.
 
@@ -142,14 +142,14 @@ fundamental confusion that exists in our heads: We think these
 they are our team. They are with us in the same boat, sharing
 the same values and looking in the same direction.
 
-**It's just not true**.
+_It's just not true_.
 
 It can't be true.
 
 I've been in the shoes of an outsourcing company for almost 10 years
 (and quit in 2010). The ugly truth is that for a CEO of an outsourcing
 shop, the only problem is how to take care of the
-next month's payroll, and **90 percent** of all expenses are salaries
+next month's payroll, and _90 percent_ of all expenses are salaries
 for the programmers.
 
 {% quote Your business interests can't be aligned with the interests of your outsourcing partner %}
@@ -164,18 +164,18 @@ pays a lot, and pays on time. Period.
 
 That's the root cause of all problems with outsourcing.
 
-The title of this article states that outsourcing doesn't work **anymore**. Why
+The title of this article states that outsourcing doesn't work _anymore_. Why
 anymore? Did it work before? Yes, it did, when salaries of programmers
 were extremely lower in third-world (offshore) countries. For example, in 2001, we had
 a team of very good senior Java developers in Ukraine. We paid them above
-the market price, and it was **$300 per month**. At the same time, we were
+the market price, and it was _$300 per month_. At the same time, we were
 selling their time to U.S. customers for $15 per hour, which was $2,500 per month.
 See the margin?
 
 With such a margin, outsourcing works fine. I was a CEO and had almost no
 worries about payroll. I had enough money to pay my team, even if we
 lost some customers eventually. Let me put it this way:
-I had the **luxury** to be
+I had the _luxury_ to be
 [honest]({% pst 2015/jan/2015-01-05-how-to-be-honest-and-keep-customer %})
 with my customers.
 
@@ -183,7 +183,7 @@ Not anymore.
 
 Put yourself in their shoes. Today, a good Java developer in Ukraine
 [earns](http://www.payscale.com/research/UA/Job=Senior_Java_Developer/Salary)
-**$4,000** a month. On top of that, this developer expects health
+_$4,000_ a month. On top of that, this developer expects health
 insurance, a free gym membership, free lunch, paid vacation, paid sick leave, etc. At the same
 time, the price of Java time is not much higher on the market than it was years ago. Even
 if you charge $40 per hour (which is very unlikely), your income would be $6,800.
@@ -194,7 +194,7 @@ Again, your income is $6.8K and your expenses are close to $5K. See the margin?
 And don't forget about office expenses, taxes, computers,
 administrative staff, team building events, etc. Because of such a small
 margin, you will literally be broke if you lose a key paying customer. You just
-can't afford to keep your programmers "on the **bench**" for too long.
+can't afford to keep your programmers "on the _bench_" for too long.
 
 Thus, your lone motivation is to keep that
 cash flow coming. No matter what. The longer the project, the better.
@@ -204,7 +204,7 @@ The more mess in specs, the better. Just do whatever it takes to suck
 money from the customer.
 
 You have to do this, not because you're evil but because you
-have to feed your team. Your team. Yes, the team is **yours**. You're responsible
+have to feed your team. Your team. Yes, the team is _yours_. You're responsible
 for their salaries, not the customer. In order to protect the team, you
 have to go against the real interests of your customers.
 You simply can't be in the same boat with them.
