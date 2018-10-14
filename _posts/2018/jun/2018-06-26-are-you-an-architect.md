@@ -231,6 +231,9 @@ of programmers. Eventually, when the project migrates into the maintenance phase
 the architect may quit the project and transfer his responsibilities to
 one of the programmers.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">A good software architect writes code every day! <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1051357678138736640?ref_src=twsrc%5Etfw">October 14, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 **He Is Ambitious.**
 
 An architect does want to get something in addition to money. He wants to
