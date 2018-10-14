@@ -100,7 +100,7 @@ Here is my short list of countermeasures:
     Sometimes it works, but very often it's not appropriate, since I realize that
     the information coming to me is valuable. Just like in this
     situation with Paul. I was interested to know what exactly was broken,
-    either a link or maybe one of my pet webs ervices is down. Thus,
+    either a link or maybe one of my pet web services is down. Thus,
     silence wasn't an option.
 
   * **Being Silly**.
