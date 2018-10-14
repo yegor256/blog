@@ -112,19 +112,23 @@ Don't aim for quality, aim for speed<br/>
 St.Petersburg, Russia<br/>
 20 October.
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://crowdsourcingweek.com/wp-content/themes/csw/images/logo-w-slogan.png" class="future-talk" alt="CSW 2018"/><br/>
 Zold: A Fast Cryptocurrency for Micro Payments<br/>
 [CrowdSourcing Week](https://crowdsourcingweek.com/speaker/yegor-bugayenko/)<br/>
 Washington, D.C.<br/>
 26 October.
+-->
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
 Can a Freelancer Cost $500 an Hour?<br/>
 [CloudEXPO](http://java.sys-con.com/node/4266925)<br/>
 New York, USA<br/>
 11-13 November.
+-->
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://bcconf.com/img/about-img.jpg" class="future-talk" alt="BCConf 2018"/><br/>
