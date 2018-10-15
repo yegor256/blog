@@ -20,15 +20,29 @@ nospell: true
 
 Here they are, in chronological order:
 
-孫子, _兵法_, 5th century BC, [Buy](http://amzn.to/2y8hu3O).
+孫子,
+_兵法_,
+5th century BC, [Buy](http://amzn.to/2y8hu3O).
 
-Niccolò Machiavelli, _Il Principe_, 1513. [Buy](http://amzn.to/2xeLKtt).
+Niccolò Machiavelli,
+_Il Principe_,
+1513. [Buy](http://amzn.to/2xeLKtt).
 
-Friedrich Nietzsche, _Der Antichrist_, 1888. [Buy](http://amzn.to/2xeFnX2).
+Friedrich Nietzsche,
+_Der Antichrist_,
+1888. [Buy](http://amzn.to/2xeFnX2).
 
-Eric Berne, _Games People Play: The Psychology of Human Relationships_, 1964. [Buy](http://amzn.to/2fixqLX).
+Eric Berne,
+_Games People Play: The Psychology of Human Relationships_,
+1964. [Buy](http://amzn.to/2fixqLX).
 
-Анатолий Протопопов, _Трактат о любви_, 2003.
+Анатолий Протопопов,
+_Трактат о любви_,
+2003.
+
+Михаил Хазин и Сергей Щеглов,
+_Лестница в небо. Диалоги о власти, карьере и мировой элите_,
+2018, [Купить](https://www.ozon.ru/context/detail/id/144301832/).
 
 If you know something that I missed and it's worth to be in the list,
 please [send it](mailto:non-fiction@yegor256.com) my way, I love to read.
