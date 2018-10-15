@@ -19,8 +19,8 @@ jb_picture:
 ---
 
 A redundant variable is one that exists exclusively
-to **explain** its value. I strongly believe that such a variable is
-not only pure noise but also **evil**, with a very negative effect
+to _explain_ its value. I strongly believe that such a variable is
+not only pure noise but also _evil_, with a very negative effect
 on code readability. When we introduce a redundant variable, we intend to make our code
 cleaner and easier to read. In reality, though, we make it more verbose
 and difficult to understand. Without exception, any variable used only
@@ -44,16 +44,17 @@ print("Length is " + new File("test.txt").length());
 {% endhighlight %}
 
 This example is very primitive, but I'm sure you've seen these
-redundant variables many times. We use them to "explain" the code---it's not just a string literal `"test.txt"` anymore but a `fileName`.
+redundant variables many times. We use them to "explain" the code---it's
+not just a string literal `"test.txt"` anymore but a `fileName`.
 The code looks easier to understand, right? Not really.
 
-{% quote The more variable names I have to remember, the longer it takes to digest the code %}
+{% quote The more variable names I have to remember, the longer it takes to digest the code. %}
 
 Let's dig into what "readability" of code is in the first place. I think this
 quality can be measured by the number of seconds I need to understand the
 code I'm looking at. The longer the timeframe, the lower the readability.
-Ideally, I want to understand any piece of code in a **few seconds**. If I can't,
-that's a failure of its **author**.
+Ideally, I want to understand any piece of code in a _few seconds_. If I can't,
+that's a failure of its _author_.
 
 [Remember]({% pst 2015/jun/2015-06-29-simple-diagrams %}),
 if I don't understand you, it's your fault.
@@ -61,7 +62,7 @@ if I don't understand you, it's your fault.
 An increasing length of code degrades readability. So the more variable
 names I have to remember while reading through it, the longer
 it takes to digest the code and come to a conclusion about
-its purpose and effects. I think **four** is the maximum number
+its purpose and effects. I think _four_ is the maximum number
 of variables I can comfortably keep in my head without thinking
 about quitting the job.
 
@@ -75,4 +76,4 @@ Refactor it using new objects or methods but not variables. Make your
 code shorter by moving pieces of it into new classes or private methods.
 
 Moreover, I think that in [perfectly designed methods]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %}),
-you won't need **any** variables aside from method arguments.
+you won't need _any_ variables aside from method arguments.

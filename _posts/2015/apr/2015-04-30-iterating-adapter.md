@@ -21,7 +21,7 @@ is one of the fundamental Java
 introduced in Java 1.2. It is supposed
 to be very simple; however, in my experience, many Java developers don't understand
 how to implement a custom one, which should iterate a stream of data
-coming from some other source. In other words, it becomes an **adapter** of
+coming from some other source. In other words, it becomes an _adapter_ of
 another source of data, in the form of an iterator. I hope this example will help.
 
 <!--more-->

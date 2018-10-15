@@ -45,8 +45,6 @@ with a few thousand methods. Technically, the application will compile
 and run. But it's a well-known anti-pattern called a
 [God object](https://en.wikipedia.org/wiki/God_object).
 
-{% youtube ZtWmlKi3ivc %}
-
 Thus, an [anti-pattern](https://en.wikipedia.org/wiki/Anti-pattern)
 is a technically acceptable way of designing things that is
 commonly agreed to be wrong. There are many anti-patterns in each
@@ -57,6 +55,8 @@ unmaintainable and has to be re-written.
 
 Once you let a few anti-patterns in, you will eventually get more of them,
 and the "tumor" will only grow.
+
+{% youtube ZtWmlKi3ivc %}
 
 This is especially true for object-oriented languages (Java, C++, Ruby, and Python),
 mostly because they inherit so much from procedural languages (C, Fortran, and COBOL).
@@ -153,13 +153,13 @@ I use [qulice.com](http://www.qulice.com) in Java projects
 and [rubocop](https://github.com/bbatsov/rubocop) in Ruby, but there
 are many similar tools for nearly every language.
 
-{% youtube hkXLOxZ6Fs4 %}
-
 You can use any of them, but make it mandatory! In most projects
 where static analysis is used, developers just build nicely-looking
 reports and continue to write code the way they did before. Such a "volunteer"
 approach is not doing any favors for the project. Moreover, it
 creates an illusion of quality.
+
+{% youtube hkXLOxZ6Fs4 %}
 
 What I'm saying is that static analysis must be a mandatory step in
 your deployment pipeline. The build can't pass if any static analysis

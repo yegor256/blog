@@ -33,7 +33,7 @@ There are plenty of books, articles, and blog posts about _team morale_. They
 will all suggest you do things like regular celebrations, team events,
 free lunches, pet-friendly offices, coffee machines, birthday presents, etc.
 All of these are instruments of
-[**concealed enslaving**]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
+[_concealed enslaving_]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 These traditional techniques turn employees into
 speechless monkeys, programming under the influence of Prozac. Their existence
 and [popularity]({% pst 2015/oct/2015-10-16-ridley-scott-and-joseph-goebbels %})
@@ -71,7 +71,7 @@ your people about problems you're facing and
 risks you're trying to prevent. They will appreciate it and respect you.
 A strong, professional manager deals with risks instead of ignoring them.
 
-{% quote A strong manager isn't afraid to look stupid in front of the team %}
+{% quote A strong manager isn't afraid to look stupid in front of the team. %}
 
 **Failures Are Yours; Success Is Theirs**.
 Always remember that when someone on your team makes a mistake,
@@ -133,7 +133,7 @@ of abstract principles that you should understand and digest. But then,
 after you chew them properly, convert them to specific and
 very unambiguous rules of work. Don't talk about Agile; be agile.
 
-{% quote Give everybody an assurance that none of them will be terminated behind a closed door %}
+{% quote Give everybody an assurance that none of them will be terminated behind a closed door. %}
 
 **Don't Close the Door**.
 Responsibility is personal,
@@ -197,7 +197,7 @@ of terrain you're going to cross with your team. When it's time to make
 a decision, everybody will understand why it's made and will respect you
 as a manager who predicted the situation and managed it professionally.
 
-{% quote Everybody should know everybody's salaries, bonuses, and benefits %}
+{% quote Everybody should know everybody's salaries, bonuses, and benefits. %}
 
 **Put Money on the Table**.
 Discuss money openly and freely, right in the office, right in front

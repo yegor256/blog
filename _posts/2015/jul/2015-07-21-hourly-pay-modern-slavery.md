@@ -79,7 +79,7 @@ in return is exactly what slavery is about.
 
 What is freedom, then? How should a free man make money?
 
-{% quote A free man sells results, not time %}
+{% quote A free man sells results, not time. %}
 
 A free man sells the _results of his work_. A free man cleans someone's house
 and bills him when the work is done. A free man drives passengers

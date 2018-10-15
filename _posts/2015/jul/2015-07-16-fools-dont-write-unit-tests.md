@@ -58,7 +58,7 @@ piece of code and only for you, a single developer of it. But I hear
 this "I don't have time" argument from programmers working on _enterprise_
 systems. How do you guys test your code?
 
-{% quote Not because you didn't have time, you just didn't know how %}
+{% quote Not because you didn't have time, you just didn't know how. %}
 
 I would compare unit tests with OOP classes. You can design the entire application
 in a single class with a few thousand methods. You will save time on creating
