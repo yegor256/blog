@@ -164,7 +164,7 @@ And I'm [not alone](https://medium.freecodecamp.org/the-developers-workflow-in-p
 Do you know that the first version of Minecraft (which was later
 [sold](https://mojang.com/2014/09/yes-were-being-bought-by-microsoft/)
 to Microsoft for $2.5B) was released in just [six](https://www.techradar.com/news/the-history-of-minecraft)
-days? There are many other examples, including Uber, DropBox,
+days? There are many other examples, including Uber, Dropbox,
 [Buffer](https://blog.bufferapp.com/idea-to-paying-customers-in-7-weeks-how-we-did-it),
 and
 [others](https://hackernoon.com/this-will-change-the-way-you-build-a-mvp-minimum-viable-product-in-2017-99daabb4bf1b).
@@ -177,7 +177,7 @@ in less than a month and it has to be ready for real paying users. Most
 of my [pet projects](/pets.html) I created in less than a week each.
 
 **Don't Pay Salaries**.
-Of course, they will want you to pay monthly, plus health insurrance,
+Of course, they will want you to pay monthly, plus health insurance,
 laptops, vacations, and a nice sunny office. That's where your plan falls short.
 Make them happy and you lose. You must find a way to align your objectives
 (deliver the MVP as soon as possible and start making money) with theirs
