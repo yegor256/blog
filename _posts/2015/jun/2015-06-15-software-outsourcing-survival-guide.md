@@ -168,11 +168,11 @@ days? There are many other examples, including Uber, DropBox,
 [Buffer](https://blog.bufferapp.com/idea-to-paying-customers-in-7-weeks-how-we-did-it),
 and
 [others](https://hackernoon.com/this-will-change-the-way-you-build-a-mvp-minimum-viable-product-in-2017-99daabb4bf1b).
-Eric Reis in his book
+Eric Ries in his book
 [_Lean Startup_](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation-ebook/dp/B004J4XGN6)
-called it a Minimum Viable Product (MVP), I'm sure you've heard this accronym.
-If developers are promising you to deliver the product in a few months,
-you are doing something wrong. You absolutely must get a working software
+called it a Minimum Viable Product (MVP), I'm sure you've heard this acronym.
+If developers are promising to deliver the product in a few months,
+you are doing something wrong. You absolutely must get some working software
 in less than a month and it has to be ready for real paying users. Most
 of my [pet projects](/pets.html) I created in less than a week each.
 
@@ -186,15 +186,15 @@ Can you do that? It's difficult. That's why we created [Zerocracy](https://www.z
 [incremental billing]({% pst 2014/oct/2014-10-21-incremental-billing %})
 and paying by results possible. You can either [move](https://www.zerocracy.com/rfp) your
 project to our platform and manage your developers there, or invent something
-on your own. But remember, no monthly salaries! Only by results delivered.
+on your own. But remember, no monthly salaries! Only pay by results delivered.
 
-**Don't** let them _experiment_.
+**Don't let them _experiment_**.
 Every smart programmer wants to use your new project as a test ground for
-some new technologies. Nobody likes to do exactly the same they were doing
+some new technologies. Nobody likes to do exactly the same thing they were doing
 yesterday, unless they are stupid and boring people. Thus, your guys
-will recommend you to use something new: a new framework, a new database,
-a new cloud hosting solution, a new deployment tools. They are doing this
-for their own purpose, not to help the project. Don't fall for this. Insist
-to use what they have experience with, at least at the MVP stage. Promise them
-a freedom to experiment, but later, when the MVP is launched.
+will recommend that you use something new: a new framework, a new database,
+a new cloud hosting solution, new deployment tools. They are doing this
+for their own purposes, not to help the project. Don't fall for this. Insist
+that they use what they have experience with, at least at the MVP stage. Promise them
+freedom to experiment, but later, when the MVP is launched.
 
