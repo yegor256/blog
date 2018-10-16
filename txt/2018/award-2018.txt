@@ -4,7 +4,7 @@ https://www.yegor256.com/2017/10/24/award-2018.html
 WORK IS STILL IN PROGRESS!
 
 
-https://github.com/pmed/v8pp
+https://github.com/pmed/v8pp (C++, 5.6K LoC)
 
 Warning: Project does not pass to the lines of code rule, though I still reviewed the project a bit further
 + Is Opensource
@@ -24,6 +24,7 @@ Warning: Project does not pass to the lines of code rule, though I still reviewe
 
 @yegor256: 6/10
 
+* It's rather small, less than 10K LoC
 * I didn't find static analysis
 * It seems that code coverage is not collected
 * The project is indeed rather small, but pretty well organized and structured
@@ -35,7 +36,7 @@ Warning: Project does not pass to the lines of code rule, though I still reviewe
 
 
 
-https://github.com/shlinkio/shlink (PHP)
+https://github.com/shlinkio/shlink (PHP, 12K LoC)
 
 + Class names are well orginized.
 + Code is object oriented.
@@ -69,7 +70,7 @@ https://github.com/shlinkio/shlink (PHP)
 
 
 
-https://github.com/FindMyFriends/api (PHP)
+https://github.com/FindMyFriends/api (PHP, 19K LoC)
 
 + No Getters or Setters used.
 + No any static methods and no any instanceof.
@@ -105,7 +106,7 @@ https://github.com/FindMyFriends/api (PHP)
 
 
 
-https://github.com/sql-boot/sql-boot
+https://github.com/sql-boot/sql-boot (Java, 4.3K LoC)
 
 + There is a CI pipeline, but for merged code not all checks were passed in pipeline;
 + There are badges;
@@ -122,6 +123,7 @@ https://github.com/sql-boot/sql-boot
 
 @yegor256: 6/10
 
+* It's rather small, less than 10K LoC
 * I found e.printStackTrace() in JdbcSelectQuery. WTF?
 * Indeed, NULL is used somewhere, but not frequently
 * I see Qulice in pom.xml, but I don't think it's used at the CI stage (didn't find it in .travis.yml)
@@ -129,37 +131,9 @@ https://github.com/sql-boot/sql-boot
 
 
 
-https://github.com/pmd/pmd
-
-- ER: parser, tokenizer, handler, controller
-- Some Facade objects
-- NULLs everywhere (3777 occurences)
-- Getters and Setters
-- There are some comments inside methods
-- Not all commits have ticket link, but most of them have a good description at least
-- Looks that the architectural overview is good: it seems to be possible to plug rules and even new types of files to analyze
-+ Release is automated (uses PMDbot)
-+ Releases happen frequently
-+ 47% coverage according to coveralls.io
-- Just javadocs in core classes.
-+ PMD uses checkstyle for static analysis.
-+ PMD uses travis for CI.
-+ Master branch is read-only
-+ Code coverage metric is under control
-+ The majority of core classes are well-documented.
-+ The source code repository is garbage free
-+ Team responds to tickets pretty fast, 1-2 days for a answer to a question or bug report.
-
-@yegor256: 5/10
-
-* Glad to see the release automation script do-release.sh
-* This repo definitely is very disciplined, but the quality of code is rather low (it's procedural)
-* There are NULLs, getters, setters, mutable objects, anemic objects, DTOs, etc.
-* I don't think it's possible to improve it, since it's pretty old and very popular
 
 
-
-https://github.com/driver733/VK-Uploader
+https://github.com/driver733/VK-Uploader (Java, 10.5 LoC)
 
 + Travis
 + Github issue tracking - commits lead to issues in Github
@@ -196,7 +170,7 @@ Another reviewer:
 
 
 
-https://github.com/dgroup/docker-unittests
+https://github.com/dgroup/docker-unittests (Java, 5.7K LoC)
 
 - ~5800 loc
 + Travis CI
@@ -223,12 +197,14 @@ https://github.com/dgroup/docker-unittests
 
 @yegor256: 8/10
 
-* I like it
+* I like it, however:
+* It's rather small, less than 10K LoC
+* Technically it started (first commit) on Oct 28, 2017 (less than a year ago)
 
 
 
 
-https://github.com/HDouss/jeometry
+https://github.com/HDouss/jeometry (Java, 9.7K LoC)
 
 + Travis
 - Issue tracking (only 3 issues overall)
@@ -255,6 +231,7 @@ https://github.com/HDouss/jeometry
 
 @yegor256: 7/10
 
+* It's rather small, less than 10K LoC
 * It seems that almost no defects, which were reported last year, haven't been fixed
 * No GitHub releases. Why?
 * No issues, no pull requests?
@@ -263,7 +240,7 @@ https://github.com/HDouss/jeometry
 
 
 
-https://github.com/onqtam/doctest
+https://github.com/onqtam/doctest (C++, 15K LoC)
 
 + Is Opensource
 + 15450 LOC > 10.000 lines of code
@@ -312,7 +289,7 @@ https://github.com/onqtam/doctest
 
 
 
-https://github.com/ribtoks/xpiks
+https://github.com/ribtoks/xpiks (C++, 430K LoC)
 
 + Is Opensource
 + Initial commit: Mon Nov 17 08:23:13 2014 +0200 > 1 year old
@@ -343,29 +320,7 @@ https://github.com/ribtoks/xpiks
 
 
 
-https://github.com/amihaiemil/comdor
-
-+ Many small, tightly scoped classes
-+ Clean, elegant interfaces
-+ Minimal use of null, static, DTO, getters/setters
-+ Strictly conforms to Command-Query Separation
-+ Easy to browse and navigate the project
-- Tests do not follow EO Testing style
-- Tests to not make good use of whitespace for Arrange-Act-Assert Style
-- Tests make extensive use of ugly Mock objects that are setup per test
-Elegance 5/5
-
-@yegor256: 7/10
-
-* It was released to production about a year ago
-* The last commit was made 10 months ago
-* The documentation is very sketchy in README
-* Aside from that, a good repo
-
-
-
-
-https://github.com/javascript-obfuscator/javascript-obfuscator
+https://github.com/javascript-obfuscator/javascript-obfuscator (JavaScript, 80K LoC)
 
 + Project has 80K+ lines of code.
 + Test coverage 98% !!!
@@ -397,6 +352,59 @@ https://github.com/javascript-obfuscator/javascript-obfuscator
 ============================================================================================================================
 ==== NOT THE BEST ==========================================================================================================
 ============================================================================================================================
+
+
+
+https://github.com/amihaiemil/comdor (4.3K LoC)
+
++ Many small, tightly scoped classes
++ Clean, elegant interfaces
++ Minimal use of null, static, DTO, getters/setters
++ Strictly conforms to Command-Query Separation
++ Easy to browse and navigate the project
+- Tests do not follow EO Testing style
+- Tests to not make good use of whitespace for Arrange-Act-Assert Style
+- Tests make extensive use of ugly Mock objects that are setup per test
+Elegance 5/5
+
+@yegor256: 7/10
+
+* It was released to production about a year ago
+* The last commit was made 10 months ago
+* The documentation is very sketchy in README
+* It's pretty small, just 4.3K lines of Java code, 5K overall
+* Aside from that, a good repo
+
+
+
+
+https://github.com/pmd/pmd
+
+- ER: parser, tokenizer, handler, controller
+- Some Facade objects
+- NULLs everywhere (3777 occurences)
+- Getters and Setters
+- There are some comments inside methods
+- Not all commits have ticket link, but most of them have a good description at least
+- Looks that the architectural overview is good: it seems to be possible to plug rules and even new types of files to analyze
++ Release is automated (uses PMDbot)
++ Releases happen frequently
++ 47% coverage according to coveralls.io
+- Just javadocs in core classes.
++ PMD uses checkstyle for static analysis.
++ PMD uses travis for CI.
++ Master branch is read-only
++ Code coverage metric is under control
++ The majority of core classes are well-documented.
++ The source code repository is garbage free
++ Team responds to tickets pretty fast, 1-2 days for a answer to a question or bug report.
+
+@yegor256: 5/10
+
+* Glad to see the release automation script do-release.sh
+* This repo definitely is very disciplined, but the quality of code is rather low (it's procedural)
+* There are NULLs, getters, setters, mutable objects, anemic objects, DTOs, etc.
+* I don't think it's possible to improve it, since it's pretty old and very popular
 
 
 
