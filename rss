@@ -1,4 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-10-11T06:33:04+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">You Think You Can Control Us?</title><link href="https://www.yegor256.com/2018/10/09/can-you-control-us.html" rel="alternate" type="text/html" title="You Think You Can Control Us?" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/09/can-you-control-us</id><content type="html" xml:base="https://www.yegor256.com/2018/10/09/can-you-control-us.html">&lt;p&gt;I was explaining how &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; works to one of our prospective
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-10-16T08:57:01+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Make Me Guess</title><link href="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html" rel="alternate" type="text/html" title="Don't Make Me Guess" /><published>2018-10-16T00:00:00+00:00</published><updated>2018-10-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/16/dont-make-me-guess</id><content type="html" xml:base="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html">&lt;p&gt;It’s Sunday. I’m at home, drinking tea and writing a new document for
+one of our future investors. One of my contacts in Telegram all of a sudden shoots me
+a message. I haven’t talked to this guy for at least two months. He is
+a software developer. I know him because he works at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.
+His name is Paul.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Сталкер (1979) by Андрей Тарковский&quot; src=&quot;/images/2018/10/stalker.jpg&quot; longdesc=&quot;#82ab8aad&quot; /&gt;&lt;figcaption id=&quot;82ab8aad&quot;&gt;Сталкер (1979) by Андрей Тарковский&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Paul: “Hey, it’s broken!”&lt;/p&gt;
+
+&lt;p&gt;Me: “What exactly?”&lt;/p&gt;
+
+&lt;p&gt;Paul: “The link.”&lt;/p&gt;
+
+&lt;p&gt;Me: “What link?”&lt;/p&gt;
+
+&lt;p&gt;Paul sends me the link.&lt;/p&gt;
+
+&lt;p&gt;Me: “Where did you get it?”&lt;/p&gt;
+
+&lt;p&gt;Paul: “On your blog.”&lt;/p&gt;
+
+&lt;p&gt;Me: “Where exactly on the blog?”&lt;/p&gt;
+
+&lt;p&gt;Paul gives me the link to the blog post where one of the links is broken.&lt;/p&gt;
+
+&lt;p&gt;Me: “Thanks for noticing!”&lt;/p&gt;
+
+&lt;p&gt;Paul: “Sure, have a good Sunday, sorry for bothering you.”&lt;/p&gt;
+
+&lt;p&gt;Me: “No worries.”&lt;/p&gt;
+
+&lt;p&gt;Now I’m asking myself, why didn’t Paul just send me a single message? It would
+sound something like this: “Hey, the link … in your blog post … it’s broken.”&lt;/p&gt;
+
+&lt;p&gt;Moreover, why didn’t Paul just go to the &lt;a href=&quot;https://github.com/yegor256/blog&quot;&gt;GitHub repo&lt;/a&gt;
+and submit a ticket?&lt;/p&gt;
+
+&lt;p&gt;Even more, why didn’t Paul just fix the broken link and submit a pull
+request?&lt;/p&gt;
+
+&lt;p&gt;Do you know the answer?&lt;/p&gt;
+
+&lt;p&gt;I have three hypotheses.&lt;/p&gt;
+
+&lt;p&gt;The first one is that Paul is a lonely guy. He has nothing to do on Sunday and wants to
+talk to someone. A broken link in my blog is a perfect excuse to start
+a conversation.&lt;/p&gt;
+
+&lt;p&gt;The second one is that Paul was testing my reactions, like those
+funny radio shows do by calling strangers, trying
+to be super annoying to trigger their angry response.&lt;/p&gt;
+
+&lt;p&gt;The third one, and this is my favorite, is that Paul simply doesn’t know how
+to deliver information &lt;em&gt;together&lt;/em&gt; with its context. And this is where we
+get serious.&lt;/p&gt;
+
+&lt;p&gt;This is the mistake so many programmers make, in my experience
+of dealing with them. When they deliver the question they have, they think
+that I, their listener, am right inside the same context as they are at the very same
+moment. They think that I’m sitting right now reading exactly the same
+blog post trying to open the same broken link. That’s why it’s a good
+moment to just tell me: “Hey, it’s broken!”&lt;/p&gt;
+
+&lt;p&gt;Is it a &lt;a href=&quot;https://en.wikipedia.org/wiki/Schizophasia&quot;&gt;mental disorder&lt;/a&gt;
+or just negligence and lack of respect for the listener?&lt;/p&gt;
+
+&lt;p&gt;Honestly, I think it’s a bit of both.&lt;/p&gt;
+
+&lt;p&gt;I &lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;wrote&lt;/a&gt; some time ago
+that &lt;em&gt;if I don’t understand you, it’s your fault&lt;/em&gt;. However, sometimes
+this “verbal terrorism” (isn’t that what it is?) has to be punished.
+Here is my short list of countermeasures:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Silence&lt;/strong&gt;.
+Instead of trying to clarify the message, I just don’t answer.
+Sometimes it works, but very often it’s not appropriate, since I realize that
+the information coming to me is valuable. Just like in this
+situation with Paul. I was interested to know what exactly was broken,
+either a link or maybe one of my pet web services is down. Thus,
+silence wasn’t an option.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Being Silly&lt;/strong&gt;.
+Instead of clarifying, I sometimes try to make the situation even worse,
+pretending that I understand the message and that the context is clear to me,
+but that it’s a different context. For example, right after “The link is broken”
+I would answer “No, it’s not, I just checked!” That would confuse Paul,
+since he would then need to put some extra effort to explain to me which link it was
+and that it is indeed broken.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Long Pauses&lt;/strong&gt;.
+Instead of a complete silence I sometimes take very long pauses between
+their comments and my answers. Some of them realize that the comments
+are out of context and attempt to provide additional details. Others just
+wait, which very often helps me switch them to the silence treatment.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Is this blog post offensive? Or have I said what many of you also experience
+when dealing with tech people? Or is it not only limited to tech people? I can’t be
+sure, but most of these verbal terrorists I meet seem to be programmers.&lt;/p&gt;
+
+&lt;p&gt;Please, guys, try to be more respectful and careful in your conversations,
+especially digital ones. Your listener is not your personal best friend, thinking
+and doing exactly the same as you are thinking and doing right now. Always imagine that
+the context of the listener is completely different from yours and just
+saying that “it” is broken is not enough. You have to specify what
+you are going to talk about before jumping straight to the point.&lt;/p&gt;
+
+&lt;p&gt;This is definitely one of those &lt;a href=&quot;/2018/08/29/soft-skills.html&quot;&gt;soft skills&lt;/a&gt;
+I’ve mentioned before.&lt;/p&gt;
+
+&lt;p&gt;Thanks.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">It’s Sunday. I’m at home, drinking tea and writing a new document for one of our future investors. One of my contacts in Telegram all of a sudden shoots me a message. I haven’t talked to this guy for at least two months. He is a software developer. I know him because he works at Zerocracy. His name is Paul.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/10/stalker.jpg" /></entry><entry><title type="html">You Think You Can Control Us?</title><link href="https://www.yegor256.com/2018/10/09/can-you-control-us.html" rel="alternate" type="text/html" title="You Think You Can Control Us?" /><published>2018-10-09T00:00:00+00:00</published><updated>2018-10-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/09/can-you-control-us</id><content type="html" xml:base="https://www.yegor256.com/2018/10/09/can-you-control-us.html">&lt;p&gt;I was explaining how &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; works to one of our prospective
 clients yesterday. He texted me today:
 “[At Zerocracy] there is no commitment and anybody is free to leave any time,
 so the risk of entrusting a highly important project to such
@@ -1016,82 +1134,4 @@ or 2) submitting pull requests (when you don’t see problems).&lt;/p&gt;
 
 &lt;p&gt;If none of that works for you, you are a bad programmer.&lt;/p&gt;
 
-&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of my projects managed by Zerocracy. He claims to be an expert with 10 years of hands-on coding experience, $60 hourly rate (we don’t hire US guys), and fluent English. Then he joins the project and attempts to close a few tickets. But he hardly can. For many reasons. Then he comes back and explains why our microtasking methodology doesn’t work, trying to convince me that I have to pay him per hour, instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry><entry><title type="html">What’s Wrong With Global Variables?</title><link href="https://www.yegor256.com/2018/07/03/global-variables.html" rel="alternate" type="text/html" title="What's Wrong With Global Variables?" /><published>2018-07-03T00:00:00+00:00</published><updated>2018-07-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/03/global-variables</id><content type="html" xml:base="https://www.yegor256.com/2018/07/03/global-variables.html">&lt;p&gt;Only lazy people haven’t written already about how &lt;a href=&quot;https://en.wikipedia.org/wiki/Global_variable&quot;&gt;global variables&lt;/a&gt;
-are evil. It started in 1973 when W. Wulf et al. &lt;a href=&quot;https://dl.acm.org/citation.cfm?id=953355&quot;&gt;claimed&lt;/a&gt; that
-“the non-local variable is a major contributing factor in programs
-which are difficult to understand.” Since then, &lt;a href=&quot;http://wiki.c2.com/?GlobalVariablesAreBad&quot;&gt;many other reasons&lt;/a&gt;
-where suggested to convince programmers to stop using global variables.
-I think &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/148108/why-is-global-state-so-evil&quot;&gt;I read them all&lt;/a&gt;,
-but didn’t find the one that bothers me most of all: composability.
-In a nutshell, global variables make code difficult or impossible to compose
-in ways which are different from what its original author expected.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&quot; src=&quot;/images/2018/07/el-chapo.jpg&quot; longdesc=&quot;#9e10a0df&quot; /&gt;&lt;figcaption id=&quot;9e10a0df&quot;&gt;El Chapo, Season 1 (2017) by Silvana Aguirre et al.&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I was recently writing a web front for &lt;a href=&quot;https://www.zold.io&quot;&gt;Zold&lt;/a&gt; in Ruby,
-on top of &lt;a href=&quot;http://sinatrarb.com/&quot;&gt;Sinatra&lt;/a&gt;.
-This is how a web server starts according to &lt;a href=&quot;http://sinatrarb.com/intro.html&quot;&gt;their documentation&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here &lt;code&gt;start!&lt;/code&gt; is a static method of the &lt;code&gt;App&lt;/code&gt; class, which you have to declare
-as a child of their default parent
-&lt;a href=&quot;https://github.com/sinatra/sinatra/blob/v2.0.3/lib/sinatra/base.rb#L893-L1896&quot;&gt;&lt;code&gt;Sinatra::Base&lt;/code&gt;&lt;/a&gt;.
-To tell the app which TCP port to listen to you have to preconfigure it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sinatra/base&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello, world!&amp;#39;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What do you do if you want to start two web servers?
-For the purpose of testing this may be a pretty logical requirement.
-For example, since Zold is a distributed network,
-it is necessary to test how a number of servers communicate to each other.
-I can’t do that! There is absolutely no way.
-Because Sinatra is designed with the assumption that only one server may exist in the entire application scope.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=FNWyN_Q10TI&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/FNWyN_Q10TI/mqdefault.jpg&quot; alt=&quot;YouTube video #FNWyN_Q10TI&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;What's wrong with global variables? (Webinar #36);
-        8 August 2018.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Can this really be fixed? Let’s take a look at &lt;a href=&quot;https://github.com/sinatra/sinatra/&quot;&gt;their code&lt;/a&gt;.
-Class &lt;code&gt;Sinatra::Base&lt;/code&gt; is essentially a &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;Singleton&lt;/a&gt;,
-which is not supposed to have more than one instance.
-When we call &lt;code&gt;App.set(:port, 8080)&lt;/code&gt;, the value &lt;code&gt;8080&lt;/code&gt; is saved into an attribute of a single instance.
-The number &lt;code&gt;8080&lt;/code&gt; becomes available for all methods of &lt;code&gt;Sinatra::Base&lt;/code&gt;, no matter what instance
-they are called from.&lt;/p&gt;
-
-&lt;p&gt;They are not using &lt;a href=&quot;https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/globalvars.html&quot;&gt;true&lt;/a&gt;
-Ruby global variables, I believe, because they know that they are bad.
-Why exactly they are bad and what the
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;alternatives&lt;/a&gt; are—slipped through their fingers.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;While the application is small and its test coverage is low, global variables may not hurt.&lt;/aside&gt;
-
-&lt;p&gt;Technically speaking, their design is “globally scoped.”
-&lt;code&gt;Sinatra::Base&lt;/code&gt; treats the entire application as its scope of visibility.
-No matter who calls it, everything is visible, including what was created
-in previous calls and in previously instantiated objects.
-This “class” is a giant bag of global variables.&lt;/p&gt;
-
-&lt;p&gt;Every global variable is a troublemaker of that kind.
-While the application is small and its test coverage is low, global variables may not hurt.
-But the bigger the app and the more sophisticated its automated testing scenarios,
-the more difficult it will be to compose objects which depend on global variables,
-singletons, or class variables.&lt;/p&gt;
-
-&lt;p&gt;My recommendation? Under no circumstances even think about any global variables.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think about global variables? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/oop?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#oop&lt;/a&gt;&lt;/p&gt;--- Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1018400337324118016?ref_src=twsrc%5Etfw&quot;&gt;July 15, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Only lazy people haven’t written already about how global variables are evil. It started in 1973 when W. Wulf et al. claimed that “the non-local variable is a major contributing factor in programs which are difficult to understand.” Since then, many other reasons where suggested to convince programmers to stop using global variables. I think I read them all, but didn’t find the one that bothers me most of all: composability. In a nutshell, global variables make code difficult or impossible to compose in ways which are different from what its original author expected.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/el-chapo.jpg" /></entry></feed>
+&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of my projects managed by Zerocracy. He claims to be an expert with 10 years of hands-on coding experience, $60 hourly rate (we don’t hire US guys), and fluent English. Then he joins the project and attempts to close a few tickets. But he hardly can. For many reasons. Then he comes back and explains why our microtasking methodology doesn’t work, trying to convince me that I have to pay him per hour, instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry></feed>

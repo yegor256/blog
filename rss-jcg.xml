@@ -292,7 +292,7 @@ to break in front of a user. We also don’t want our website to show an
 to work, not fail. That’s a perfectly valid and logical desire,
 but in order to achieve that, we have to make our software as fragile
 as possible. This may sound counter-intuitive, but that’s the way it is.
-The more &lt;strong&gt;fragile&lt;/strong&gt; your app is in development, the more &lt;strong&gt;robust&lt;/strong&gt; it is
+The more &lt;em&gt;fragile&lt;/em&gt; your app is in development, the more &lt;em&gt;robust&lt;/em&gt; it is
 in production.&lt;/p&gt;
 
 </description>
@@ -453,7 +453,7 @@ is one of the fundamental Java
 introduced in Java 1.2. It is supposed
 to be very simple; however, in my experience, many Java developers don’t understand
 how to implement a custom one, which should iterate a stream of data
-coming from some other source. In other words, it becomes an &lt;strong&gt;adapter&lt;/strong&gt; of
+coming from some other source. In other words, it becomes an &lt;em&gt;adapter&lt;/em&gt; of
 another source of data, in the form of an iterator. I hope this example will help.&lt;/p&gt;
 
 </description>
