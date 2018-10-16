@@ -48,7 +48,7 @@ module Yegor
       if text.length > 200
         fail "too long description in [#{page['title']}] (#{text.length} chars): \"#{text}\""
       end
-      text.gsub(/[ \n\r\t]+/, ' ').trim
+      text.gsub(/[ \n\r\t]+/, ' ').strip
     end
 
     def yb_menu(url, title)
