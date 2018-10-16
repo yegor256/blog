@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't Make Me Guess"
-date: 2018-09-30
+date: 2018-10-16
 place: Moscow, Russia
 tags: mood
 description: |
@@ -14,16 +14,16 @@ keywords:
   - verbal terrorism
   - conversation skills
   - mental disorder
-image: /images/2018/09/
+image: /images/2018/10/stalker.jpg
 jb_picture:
-  caption:
+  caption: Сталкер (1979) by Андрей Тарковский
 ---
 
 It's Sunday. I'm at home, drinking tea and writing a new document for
 one of our future investors. One of my contacts in Telegram all of a sudden shoots me
 a message. I haven't talked to this guy for at least two months. He is
-a software developer. I know him because he works at Zerocracy. His name
-is Paul.
+a software developer. I know him because he works at [Zerocracy](http://www.zerocracy.com).
+His name is Paul.
 
 <!--more-->
 

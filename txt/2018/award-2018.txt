@@ -1129,3 +1129,42 @@ Elegance 4/5 (N/A for Award)
 @yegor256: too small
 
 
+
+
+
+https://github.com/infotech-group/android-drawable-dsl
+
++ Project has good documentation
++ 3 releases
++ deployment automated with circleci.com
+- Project is too small only 353 lines of code in Kotlin. and 300 in XML
+- commits not well orginized
+- code mostly written in kotlin style. Not very OOP.
+- Codding style is in procudural programming.
+- There are test but it is not clear what is test coverage.
+
+@yegor256: too small
+
+
+
+
+https://github.com/javascript-obfuscator/javascript-obfuscator
+
++ Project has +80K lines of code.
++ Test coverage 98% !!!
++ Very Good documentation. Good in code comments
++ commits organized and linked to pull requests
++ 82 releases and verioning.
++ deployment automated.
++ code is clean
++ Github issues tracker.
++ Class names are well orginized
+- coding style mosty in Javascript way.
+- lots of static methods used. I found in 27 files.
+- lost of global methods. I found in 25 files
+- use of instanceof in NudeUtils class.
+- lots of null checks and null returning in many classes.
+
+@yegor256: 6/10
+
+
