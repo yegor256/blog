@@ -1,0 +1,1131 @@
+https://www.yegor256.com/2017/10/24/award-2018.html
+
+
+
+https://github.com/shlinkio/shlink (PHP)
+
++ Class names are well orginized.
++ Code is object oriented.
++ Coding style is clean.
++ High code coverage 93 %
++ 27 releases
++ Build is automated
++ Classes are quite small no God objects found
++ Good documentation and comments
++ statis analysis used.
++ Project has +10K lines of code.
++ Commits linked to issues
+- Some procedural code and global functions found in file = module/Common/functions/functions.php.
+  Rewrite them into plain objects.
+- -ER class found. ConfigProvider.php
+- Project uses Symfony framework therefore lots of getters and setters, ORM and other anti patters found which Sympony uses.
+- Lots of null used in project.
+- Instanceof used in class CreateShortUrlContentNegotiationMiddleware.
+- Some classes names are too long. Example CreateShortUrlContentNegotiationMiddleware. Use Short names
+- Static methods found in 18 files. [ ShortUrlMeta.php, RestUtils.php, IpAddresses.php and so on ... ]
+- Project uses Utility classes
+
+@yegor256: 6/10
+
+
+
+https://github.com/rectorphp/rector (PHP)
+
++ Commits linked to issues
++ Static analysis used.
++ Well documented and there are comments in code.
++ 16 releases
++ Code is Object Oriented and Clean.
++ Project has +10k lines of code.
++ Classes are quite small no any God objects found.
+- Use of static methods, in classes [ArgumentAdderRecipe, RecipeGuard, ArgumentDefaultValueReplacerRecipe, ArgumentRemoverRecipe]
+- Use of utility classes like RecipeGuard.
+- Lots of getters and setters found, in classes [ArgumentDefaultValueReplacerRector, ArgumentRemoverRector, ArgumentAdderRector, GenerateRectorOverviewCommand, and so on ...]
+- Lots of -ER and Utility classes found. [TypeAnalyzer, RectorServiceParametersShifter, TolerantRectorYamlFileLoader]
+- Use of instanceof in many classes. 39 files found. [NodeFactory, MethodCallNodeFactory, MultipleClassFileToPsr4ClassesRector, ClassReplacerRector, AbstractArgumentRector and so on ...]
+- Use of NULL in functions. +30 classes returns or checks for null .
+- Reflection used in 4 classes. [ReplaceParentRepositoryCallsByRepositoryPropertyRector, GenerateRectorOverviewCommand, PropertyFetchAnalyzer, RectorServiceParametersShifter]
+- There are tests, but some of them empty some of them not clear how they work.
+- No any data about test coverage.
+
+@yegor256: 5/10
+
+
+
+https://github.com/postaddictme/instagram-php-scraper (PHP)
+
++ Code styling is Object Oriented.
++ Issue tracking with github.
++ Commits linked to issues
++ 76 releases
++ No -ER classes found
+- Project is small only 3K lines
+- Two God objects found. The classes Media has +600 lines of code and The class Instagram has +1400 lines of code.
+- Two traits found replace them with composition. [ArrayLikeTrait, InitializerTrait]
+- Use of static methods, in classes [Instagram, EndPoints, AbstractModel, Media]
+- Null return and null checking used in clases [Instagram, Media, trait ArrayLikeTrait]
+- There are some tests not clear about test coverage.
+- Getters found in class Instagram
+- No automation build. No Travic CI or any other.
+- There are code examples but not enough documentation that explains.
+
+@yegor256: 4/10
+
+
+
+https://github.com/flyimg/flyimg (PHP)
+
++ The project is well documented and covered with tests. Test coverage 97%. Wow!
++ The coding is clean and understandable.
++ 16 releases.
++ Static methods avoided no Utility classes.
++ Github issue tracking. Commits linked to both pull and issues.
++ Deployment is automated, for Docker, Git and Composer.
++ Project has +10K lines of code. But +8K lines are CSS.
+- The project uses lots of Getters and Setters.
+- Some functions return Null or check for null
+- Reflection and instanceof used. in ControllerResolver.php class.
+- -ER classes user. Controller and Provider classes
+- Getters and Setters used in classes [Response, OutputImage, ImageProcessor]
+- No static analyzer found
+
+@yegor256: too small
+
+
+
+https://github.com/facile-it/moka (PHP)
+
++ The project is well documented and covered with tests.
++ Test coverage 97%. Wow!
++ Clean coding.
++ 26 releases.
++ Github issue tracking.
+- Only +3K lines of code.
+- Static methods used in more 10 Classes. [PhakePlugin, PHPUnitPlugin, MethodTemplate and so on ...]
+- Traits  found replace them with composition.
+- Getters and setters used.
+- Lots of instanceof used.
+- Global functions and procedural codes used, in functions.php
+
+@yegor256: too small
+
+
+
+
+https://github.com/FindMyFriends/api (PHP)
+
++ No Getters or Setters used.
++ No any static methods and no any instanceof.
++ Clean Code.
++ Static analizer used PHPStan.
++ Test coverage 91%.
++ Travic CI
++ Project has +18K lines of code.
++ Github issue tracking.
++ Deployment automated for Docker
++ Clases Named correctly. Each Classes are small. No any God objects
+- Some procedural and global methods found in function.php file.
+- 0 releases
+- Poor documentation. Only readme file found.
+- -ER classes found in files [AmqpPublisher, ConstantSeeker, HarnessedPublisher and so on ...]
+- Found Reflection in PostgresETag class.
+
+@yegor256: 6/10
+
+
+
+
+https://github.com/floralvikings/jira-connector (Javascript)
+
++ Github issues tracker.
++ 25 releases. Versioning.
++ Good Documentation and code commenting
++ No Static methods and getters and setters
++ With HTML +10K lines of code
++ Commits linked to pull request
+- If remove HTML, Project has only 3K of JavaScript.
+- Coding style is mostly Function programming.
+- Lots of global functions.
+- No any test coverage
+
+@yegor256: too small
+
+
+
+
+
+https://github.com/Guseyn/cutie (Javascript)
+
+- Project is too small.
++ Good documentation
++ 15 releases
++ Clean OOP in JavaScript. !Wow
++ Class names are well orginized.
+- Project has only 583 lines of code. Too small.
+- There are some test, But no any data about test coverage.
+- Commits not well orginized
+
+@yegor256: too small
+
+
+
+
+
+https://github.com/WeGoFoods
+
+- No commit tied to issues
+- ERs: deliverer, requester
+- Getters and setters
+- Null references
+- Some comments inside methods
+- The release procedure is documented and automated?
+- No, I couldnt build the project, 17 repositories and there is no info on how to build it
+- Releases happen frequently, at least once a week?
+- There are 17 repositories, but no release so far
+- There are some opened tickets in the repositories, 140 total, 20 open
+- There is CI evidences on some of the projects, but we can't say that the delivery pipeline is strong enough to reject mistakes
++ Bugs and features are registered as tickets
+- There is evidence of tests but no coverage info
+- Key architectural technical decisions are not documented
+- No evidences od static analysis
+- Some evidences of CI, circleci usage, but we can't see if reports are taken into account
++ Looks like any master branch of the 17 repositories are read only
+- NO evidences of programming metrics
+- Could not find requirements documentation
+- No evidence of code coverage metrics, but there are tests
+- Could not find in-code documentation
++ The source code repository is garbage free
+- User interfaces are not documented
+- 1-2 months for ticket closure
+
+@yegor256: 3/10
+
+
+
+
+
+
+
+https://github.com/yfpeng/bioc
+
+- No bug tracking
+- Commits are not tied to issues
+- ERs: decoder, encoder,
+- Is_instance usage
+- The release procedure is not documented and automated
+- Releases happen NOT frequently, at least once a week
+- The project does not uses bug tracking features
++ Uses travis for CI
+- Bugs and features are NOT registered as tickets
+- There are tests but no coverage metrics or information.
+- Static analysis is NOT in place
++ Uses travis
+- There are no programming metrics collection
++ Requirements documentation is short and up to date
+- NO code coverage info
++ Key classes, methods and functions have in-code documentation
++ The source code repository is garbage free
++ Documentation in readme.md
+- How responsive the team is to the tickets?
+- There is no info on how responsive the team is; there is no bug tracking
+
+@yegor256: 2/10
+
+
+
+
+
+
+https://github.com/dmfs/ContentPal
+
++ GitHub issues
++ GitHub pull requests
++ All commits are traceable to issues (and even the pull requests).
+- No release management
++ Travis
++ JaCoCo
+- Haven't found any static analysers
++ JUnit 4 unit testing
+- Few reasoning around nulls (DemoActivity, RowCount, BaseView)
+- Several public static constants and methods
+- Plenty of public static methods in contentpal-testing
+? There are several cases of `extends` usage, but IMO they are okay,
+  since contain only constructors, or inevitable because of android SDK API.
++ Not found any getters, setters, DTOs and other non-Elegant stuff besides enumerated.
+
+@yegor256: 5/10
+
+
+
+
+
+https://github.com/traccar/traccar
+
++ GitHub issues
++ GitHub pull requests
+- Almost none commits are traceable to issues.
++ GitHub releases
++ Regular releases
+- No Change logs or other release information
++ Travis
+- CI doesn't cover the whole process of building from sources to distribution package, only the Java part.
+- Found no coverage information
++ Checkstyle
++ PMD
++ Findbugs
++ JUnit unit testing
+- lots of -ERs (org.traccar.database, org.traccar.events)
+- lots of DTOs (org.traccar.model, org.traccar.geocoder)
+- lots of utility classes (org.traccar.helper)
+- lots of implementation inheritance (search by "extends" in repository)
+- lots of instanceof reasoning (search by "instanceof" in repository)
+- lots of public static constants and methods
+- Single Maven module for whole project
+- Procedure for building a package might be automated better. In my case,
+  script failed, expecting some dependencies. These dependencies might be
+  automatically downloaded or at least described in procedure as prerequisites.
+
+@yegor256: 4/10
+
+
+
+
+
+
+https://github.com/umple/umple
+
+NOTE: I can't adequately review the project. It is too large and consists of too
+many modules with lots of content on different languages. IMO the fact
+that there is 1M LoC in one repository itself should be the reason to discard
+the project from nomination. Also, since it is large and has lots of
+Ant scripts, I may have skipped by mistake some relevant stuff.
+
++ GitHub issues
++ GitHub pull requests
+- Several commits are not traceable to issues.
+- Several pull requests are  not traceable to issues
++ GitHub releases
+- It is not clear which exact issues were fixed in certain release
++ Travis
++ AppVeyor
+- Didn't found anything.
+- Didn't found anything.
+- Didn't found anything.
+- Lots of them. Statics, implementation inheritance, utility classes, -ER.
+  In fact I didn't find any Java class compliant with this
+  list https://www.yegor256.com/2014/09/10/anti-patterns-in-oop.html
+
+@yegor256: 3/10
+
+
+
+
+
+https://github.com/smarr/SMOns
+
+- Some ER in class names: builder, parser, wrapper
+- Javadoc for just some classes
+- Mutability, getters and setters
+- Comments and white lines inside methods
+- A lot of instanceof uses (277 occurences)
+- Lots of nulls
+- Most of the commits are not linked to issues
+- Looks like releases are made by the main contributor, and does not seem to be automated.
++ Uses travis to provide CI
+- There are some test classes, but no coverage info.
++ There are some documentation in readme.md
++ Project uses checkstyle.
++ Project uses travis for CI.
+- Project uses two branches, dev and release, but looks like none of them are read only.
+- Could not get info about metrics, project just show about travis build status.
++ Yes, requirements are documented in README.md.
+- No code coverage metrics found.
++/- Source repository is preety clean, but is a little difficult to find project files due non-standard project tree.
++ Good documentation in https://somns.readthedocs.io/en/dev/
+- Team seams to take a long time to respond tickets outside the planned
+  milestones (more than one month from ticket open to ticket closure).
+
+@yegor256: 3/10
+
+
+
+
+
+
+https://github.com/aatxe/irc
+
+NOTE: I don't know Rust language, so I focused in architectural and project features
+
+- Good class naming, no ERs
+- Some comments inside methods
+- Commits have issue number just on most recent releases
+- No, there are no releases in github and I couldn't find any documentation about release procedure.
++ Releases happen frequently
++ Yes, uses github issues
+- No test coverage info
++ PMD and Checkstyle
++ Uses travis for CI.
++ Develop and stable branches are read only
++ Requirements documentation is short and up to date
+- Could not find coverage metrics
++ Key classes, methods and functions have in-code documentation
++ The source code repository is garbage free
++ Good documentation on how to use IRC library in readme.md
++ Issue resolution: 11h according to https://crates.io/crates/irc
+
+@yegor256: 6/10
+
+
+
+
+https://github.com/sql-boot/sql-boot
+
++ There is a CI pipeline, but for merged code not all checks were passed in pipeline;
++ There are badges;
++ There are test coverage (but not much value ~ 60%) and static analysis quality control (qulice);
++ No static methods, getters and setters and code free constructors.
+- Many commits goes to the master directly without PRs.
+- Using NULL. com.github.mgramin.sqlboot.sql.select.impl.RestSelectQuery,
+  com.github.mgramin.sqlboot.model.resource_type.wrappers.header.SelectWrapper,
+  com.github.mgramin.sqlboot.model.resource_type.impl.file.FileResourceType
+- Missed JavaDoc for some classes, just mentioned author.
+- There are too long methods com.github.mgramin.sqlboot.sql.select.impl.JdbcSelectQuery#getMapStream,
+  com.github.mgramin.sqlboot.tools.files.file_system.impl.LocalFileSystem#listFiles
+  com.github.mgramin.sqlboot.rest.controllers.ApiController.
+
+@yegor256: 5/10
+
+
+
+
+
+https://github.com/pmd/pmd
+
+- ER: parser, tokenizer, handler, controller
+- Some Facade objects
+- NULLs everywhere (3777 occurences)
+- Getters and Setters
+- There are some comments inside methods
+- Not all commits have ticket link, but most of them have a good description at least
+- Looks that the architectural overview is good: it seems to be possible to plug rules and even new types of files to analyze
++ Release is automated (uses PMDbot)
++ Releases happen frequently
++ 47% coverage according to coveralls.io
+- Just javadocs in core classes.
++ PMD uses checkstyle for static analysis.
++ PMD uses travis for CI.
++ Master branch is read-only
++ Code coverage metric is under control
++ The majority of core classes are well-documented.
++ The source code repository is garbage free
++ Team responds to tickets pretty fast, 1-2 days for a answer to a question or bug report.
+
+@yegor256: 5/10
+
+
+
+
+
+https://github.com/driver733/VK-Uploader
+
++ Travis
++ Github issue tracking - commits lead to issues in Github
++ Automated releases using rultor
++ High code coverage  (> 90%)
+- Coverage is not imposed on build
++ Qulice static analysis
+- Cannot build project with static analysis on master (one checkstyle error)
++ EO style of coding (no statics, no nulls, no getters/setters, no inheritance, no code in ctors...)
++ Completly immutable design
++ Every class implements an interface (There is one that doesn't :) -> AttachmentAudioProps)
++ OOP style consistent through the codebase
++ Readable code (good class naming and no compaund variable names)
++ Small cohesive classes
+- About 16 classes take 5 to 7 parameters in their ctors (Wall and Attachment implementations)
+- Two enum classes (AudioStatus, WallPhotoStatus)
++ Javadoc (extensively documented code)
++ Clean declarative tests
+- Unit tests failing on master (one test in error)
+- Almost every unit test is basically a small integration test. For instance, PropertiesUpdateTest is
+  using IdsMap, AttachmentAddAudio, VkApiClient and PropsFile to test PropertiesUpdate.
+
+Another reviewer:
++ Nice, elegant interfaces
++ Clear, concrete, easy to understand Object names
++ Lots of tests, covers many use cases
++ Well organized project, very easy to navigate
++ Application expresses its use cases through its Objects
+
+@yegor256: 8/10
+
+
+
+
+
+https://github.com/dgroup/docker-unittests
+
+- ~5800 loc
++ Travis CI
++ Github issue tracking - commits lead to issues in Github
++ Automated releases using rultor
+- Releases are not documented - no issues connected with releases
++ Aulice static analysis
++ Codecov and code quality tracking
++ Good code coverage > 80%
++ Coverage is integrated into build pipeline
++ EO style (no statics, no nulls, no getters/setters, no inheritance, no code in ctors...)
++ Strong emphasize on OOP design, small number of if/else/while... statements
++ Completly immutable design
++ Small cohesive classes
++ Very clean and readable code (good class naming and no compaund variable names)
+- Usage of instanceof in App.class
++ Overall no antipatterns except for the two instanceof statements
++ Javadoc (extensively documented code)
++ Good readme
++ Declarative OOP tests
++ Using of fakes in tests (this is somehow subjective but the result is very well isolated and maintainable tests)
+- Tests failing on master
++ Highly maintainable project overall
+
+@yegor256: 8/10
+
+
+
+https://github.com/HDouss/jeometry
+
++ Travis
+- Issue tracking (only 3 issues overall)
+- Pull requests (1 PR overall)
+- No releases
++ High code coverage (>90%)
+- Coverage is not imposed on build
++ Qulice static analysis
++ EO style of coding (no statics, no nulls, no getters/setters, no inheritance, no code in ctors...), there are some implementation inheritance
+  but it's controlled through final methods
++ Immutable design except for few mutable classes -> FixedMatrix, Between, Different, Greater, Lower, Awt ...
++ Small and cohesive classes
++ Very readable design (good class naming and no compaund variable names)
++ OOP style consistent through the codebase
++ Every class implements an interface
+- Few classes using instanceof
+- Using annotations through one aspect class (DimensionsEqual)
+- Default methods in interfaces
++ Javadoc (extensively documented code)
++ Clean unit tests
++ Unit tests are well isolated
+- Tests are highly dependant on mockito which makes them less readable and maintainable
+- Usage of null in ScalarTest
+
+@yegor256: 7/10
+
+
+
+
+https://github.com/intuit/karate
+
++ issue tracking
++ fair amount of releases (27)
++ well documented releases
++ maven releases
+- release process doesn't seem to be automated
+- no visible CI
+- no codecov except for the demo app
++ clear class naming, too bad for lot of ER ending names (-)
++ readable code
++ small methods through the codebase, allthough there are few larger ones in ApacheHttpClient, FeatureServerHandler, CucumberRunner (-)
+- utility classes (JsonUtils, XmlUtils, FileUtils, ConvertUtils ...)
+- usage of enums
+- plenty of classes without interfaces
+- plenty of public static methods
+- one big class -> Script(1670 loc) and few medium sized -> XmlUtils, FileUtils (around 350 loc)
+- large number of public methods per class
+- multi-responsible classes with many private methods
+- getters/setters (FeatureBuilder, PostmanRequest ...)
+- lot of mutability
+- implementation inheritance (KarateReporterBase)
+- singletons in karate-web (*Reference classes)
+- field dependency injection in karate-web
+- null return in Main, Script, HttpUtils ...
+- usage of instanceof (Script, ApacheHttpUtils, XmlUtils ...)
++ excellent readme file
+- partial javadoc
+- tests failing on master
+
+@yegor256: 5/10
+
+
+
+
+
+https://github.com/Iprogrammerr/Bright-Server
+
+- 2700 java loc
+- Cannot build project on master
+- No issue tracking
+- No pull requests
+- No releases
+- No visible CI
+- No static analysis
++ EO style of coding (no statics, no nulls, no getters/setters, no inheritance, no code in ctors...)
++ Immutable classes
++ Every class implements an interface except for ServerConfiguration and Server
++ Readable OOP design (good class naming)
++ Small and cohesive classes
+- Weird code formatting
+- Multiple return statements in lot of methods
+- Code is not documented
+- Code is not tested - there are only 8 test cases
+
+@yegor256: 4/10
+
+
+
+
+https://github.com/jeremybrooks/SuprSetr
+
+- Issue tracking (only 6 issues overall)
+- No pull requests
+- Weird releases cycle (12 out of 17 releases are done in a period of three days)
+- Releases are not automated nor documented
+- No visible CI
+- No visible codecov
+- Code is not tested (6 unit tests overall)
++ There are number of classes with small readable methods
+- Few big classes > 500 loc (SetEditor(1793), MainWindow (1200), PhotosetDAO(567), Preferences(730), SSPhotoset(531))
+- Not a single interface in the project
+- Everything is mutable
+- Statics all over the place
+- Procedural design
+
+@yegor256: 4/10
+
+
+
+
+https://github.com/mP1/walkingkooka
+
++ Travis
+- No releases
++ Design through pull requests
++ Codecov
++ High coverage 88%
+- Coverage is not imposed on build
++ Small methods throught the codebase
++ Classes implements interfaces
++/- Most classes are immutable but there are lot of them that are not
+- Usage of enums
+- Lot of public static methods
+- One large test class with 3000 loc (SpreadsheetFormatParsersTest)
+- One large 1100 loc class (ToStringBuilder)
+- Weird formatting (instance variables are on the bottom of the classes and in the middle of methods) - extremly hard to read
+- ER naming classes all over the place
+- Implementation inheritance (Color class)
+- Lot of methods per a class
+- Mixing of different coding styles. Vast number of classes use static methods with hidden ctors,
+  while others use public ctors without static. Some classes are fully immutable, some has mutable intances members.
+  Some implementation inheritance is controlled via final methods some are not.
+- Tests failing on master
+- Lot of inheritance in tests
+- Tests are hard to digest and are very procedural
++ Well documented code
++ Nice readme
+
+@yegor256: 5/10
+
+
+
+
+https://github.com/RobinJ1995/DistroHopper
+
+- Only two releases from 2015 onwards
+- No pull requests
+- Issue tracking (only 11 issues overall)
+- No visible CI
+- No visible code cov
+- Mutable classes
+- ER naming classes
+- One big class HomeActivity (1021 loc)
+- Procedural design (lot of if/else/for nestings in AppManager, HomeActivity, IconPackHelper, Image and so on)
+- Usage of contstants (ex. RequestCode)
+- Plenty of classes do not implement an interface
+- Implementation inheritance (ex. Observed)
+- Usage of instanceOf (App, Image, HomeActivity...)
+- Returning of null (IconPackHelper, AppManager...)
+- Public static methods (ex. Tracker)
+- Commented out code
+- No unit tests
+- Code is not documented
+
+@yegor256: 3/10
+
+
+https://github.com/scireum/sirius-kernel
+
++ Plenty of releases
++ Design trough PRs
+- No visible CI
+- Issue tracking
+- 44% code cov
+- Codecov is not visible
+- Few big classes (AdvancedDAteParser(627 loc), NLS(789 loc), Value (884 loc))
+- Procedural design
+- Mutable classes
+- Classes do not implement interfaces
+- Static methods
+- Multi-responsible classes
+- Returning of null in many classes
+- InstanceOf in many classes
++ Small maintainable tests
++ Javadoc (extensively documented code)
++ Project website
+
+@yegor256: 4/10
+
+
+
+https://github.com/jri/deepamehta
+
++ Is Opensource
++ 27303 LOC > 10.000 lines of code
++ Initial commit: - Thu Jul 8 14:25:13 2010 +0200 > 1 year old
++ 66,2% of the commit messages seem to be linked to tickets (1878 out of 2836 commit messages)
++ Release notes seem to be well organized and mention tickets in each release
+  iteration in the project's used ticketing system (https://trac.deepamehta.de/wiki/ReleaseNotes)
++ API appears to be broadly documented, with resource in this case to javadoc,
+  example: https://api.deepamehta.de/deepamehta/5.0-SNAPSHOT/
++ Ticketing report appears to be organized and coordinated with severall
+  different reports available (https://trac.deepamehta.de/report)
+? How to build information is not provided in a "quick-start" fashion in the
+  README file itself, only in an external page: https://trac.deepamehta.de/wiki/BuildFromSource
+? Issue tracking is outside of Github - https://trac.deepamehta.de/report,
+  and not making use of github release notes
+- No badges on README file mentioning License, Coverage, CI, or any other information
+- Build on master branch is currently failing. Specific failure on DMX Test
+  module with the following info: `Tests run: 98, Failures: 6, Errors: 18, Skipped: 0`
+- No sort of static analysis solution seems to be in place;
+- I've found at least "Utils" classes with quite a bit of static
+  methods (examples: util/DMXUtils.java, dmx/core/util/JavaUtils.java)
+- Project is made of smaller modules to a big extent for this project,
+  meaning the repo is in a way not "encapsulating a single problem",
+  read more at https://www.yegor256.com/2018/09/05/monolithic-repositories.html
+- Unknown Coverage - had a hard time finding coverage reports or a coverage value;
+- I've found about 120 tests, but these are not organized per module, instead kept in a separate module;
+- There are null references in the code as a whole (I've counted around 53 `return null`, for example), example run `grep -nr "return null" . | grep .java:` or `grep -nr "== null" . | grep .java:`
+- I was not able to access to the public self-hosted CI solution being used
+  . CI seems to be handled in a public self-hosted instance of Jenkins - but when user tries to open the CI link (https://ci.deepamehta.de/jenkins/) it's lead to a certificate error page: NET::ERR_CERT_COMMON_NAME_INVALID, "This server could not prove that it is ci.deepamehta.de; its security certificate is from api.deepamehta.de."
+  . After accepting the security certificate issue, https://ci.deepamehta.de/jenkins/ seems to be leading to a 404 page, and I'm left with no visibility of the CI of the project
+- Milestones document mentioned in readme leads to this
+  page: http://deepamehta.newthinking.net/docs/milestones.html,
+  and I get a "This site can’t be reached" error
+
+@yegor256: 4/10
+
+
+
+
+https://github.com/onqtam/doctest
+
++ Is Opensource
++ 15450 LOC > 10.000 lines of code
++ Coverage and CI and other badges readily available on README
++ Changelog is cleanly organized (with about 17 releases), and seems each point delivered in the changelog points to an actual issue on Github
++ Project seems to be broadly documented for a potential end-user of the library, example: https://github.com/onqtam/doctest/blob/master/doc/markdown/readme.md#reference
++ Both Coverage and Static analysis are part of the project and are scripted (Examples: https://github.com/onqtam/doctest/blob/bba24e8202fa9f57eef19b69883805392ddbabd6/.travis.yml#L269 and https://github.com/onqtam/doctest/blob/bba24e8202fa9f57eef19b69883805392ddbabd6/.travis.yml#L287)
+? Releases make use of github release notes to a certain extent, pointing to the changelog each release (this one in term being automated and organized);
+? Release process isn't fully automated, but some parts are scripted and the process steps are described in https://github.com/onqtam/doctest/blob/master/scripts/release_process.md
+? The first commit references squashing of git history: "squashing git history for the last time", BUT, the author clarified in last year edition of the award:
+  . "the git history was squashed before releasing version 1.0 because it was a mess - I even had many binaries committed (thousands of megabytes) which bloated the history - I no longer have CMake committed in the repo... Also now the branch is protected in github so no more force-pushes. So now the entire history is just a few megs."
+? Taking into consideration I was also a reviewer for this project last year, it's still a bit hard
+  as an outsider to evaluate the project's maintainability:
+  . An issue "remains" from the 2017 evaluation: the main source files "with thousands of lines of code"; On last
+    years edition the author explained the reason behind this: "Also the whole point of
+    the library is to be a single-header testing framework - like Catch ( https://github.com/philsquared/Catch ) -
+    so thats why so much code is in a few headers."
+  . I understand that for the main maintainer (@onqtam) the need of the big files, but I
+    have doubts on how easy it is to deal with working with these large files;
+- It's unclear for a newcomer contributor how to build the project, there's no "quick-start/how to build" information on the readme
+- Only 17,8% of the commit messages seem to reference actual tickets (153 out of 857 commit messages)
+@yegor256 I was also a reviewer for this project last year; I'd feel more comfortable if someone else also reviewed this project, in order to avoid any sort of bias/unfairness.
+
+@yegor256: 5/10
+
+
+
+https://github.com/Riduidel/gaedo
+
++ Is opensource
++ 24250 LOC > 10.000 lines of code
++ Initial commit: Mon Jun 11 17:10:13 2012 +0200 > 1 year old
++ Releases were made often and with resource to maven release plugin and to a maven central repo https://search.maven.org/search?q=gaedo
+? Releases don't make full use of github release notes, and there doesn't seem to be a changelog
+? Project is made of smaller modules, meaning the repo is in a way not "encapsulating a single problem", read more at https://www.yegor256.com/2018/09/05/monolithic-repositories.html
+? Even though cobertura plugin is configured
+? About 30% of the commit messages seem to point to tickets (143 out of 476 commit messages)
+- No info on readme in a quick-start manner of how to build the project
+- Building fails when building locally with `mvn clean install` (Example: [INFO] gaedo definition ...... FAILURE )
+- There are a few null references in the code as a whole (I've counted around 36 `return null` for example), example run `grep -nr "return null" . | grep .java:`
+- There are a few "Utils" classes with functions&resources files across the code (I counted 16, for example run `find . -name '*Utils.java'`)
+- Releases don't make full use of github release notes
+- CI badge leads to an index page: https://www.cloudbees.com/
+- No reference anywhere regarding Code Coverage
+- Codebase seems untouched since July 2014
+
+@yegor256: 4/10
+
+
+
+https://github.com/seratch/jslack
+
+Warning: Project MIGHT NOT to pass to the lines of code rule (9033 loc at the time of review)
++ Is opensource
++ Initial commit: Sat Jul 2 21:30:14 2016 +0900 > 1 year old
++ Releases are made to maven central repo (example https://search.maven.org/search?q=g:com.github.seratch%20a:jslack)
++ CI being used with Travis
++ Project seems to be documented for a potential end-user of the library in the readme
+? There is javadoc documentation of the library (http://www.javadoc.io/doc/com.github.seratch/jslack/1.1.6) but it's not mentioned on the readme
+? 9033 LOC < 10.000 lines of code
+- No info on readme in a quick-start manner of how to properly build the project
+- Build seems to fail just by running `mvn clean install` (Tests run: 52, Failures: 29, Errors: 15, Skipped: 2),
+  and they don't seem to run on `./mvnw test-compile` mentioned on .travis.yml file
+- Only 25,2% of commit messages seem to reference tickets (37 out of 147 commit messages)
+- No seems to be no reference anywhere regarding code coverage
+- Found nothing regarding static analisys/code quality
+
+@yegor256: 5/10
+
+
+
+
+https://github.com/cssinjs/jss
+
++ Is Opensource
++ Initial commit - Sun Oct 12 22:33:29 2014 +0200 > 1 year old
++ 28387 LOC > 10.000 lines of code
++ Built in Travis CI
++ Maintainers seem to care about covering the code with checks
+  (ran about 497 tests (Integration, Functional and Unit)), and also care
+  about code style, having a proper linting setup
++ Project seems to be broadly documented for a potential end-user of the
+  library, example: https://github.com/cssinjs/jss/tree/master/docs and http://cssinjs.org/
+? Code is released often (see https://github.com/cssinjs/jss/releases) but not making
+  use of github release notes, instead saving release notes in the `changelog.md`
+? Project is made of smaller packages/plugins inside: jss, jss-plugin-cache,
+  jss-plugin-isolate, jss-plugin-props-sort, and 13 more -> meaning the repo is in a way not "encapsulating a single problem", read more at https://www.yegor256.com/2018/09/05/monolithic-repositories.html
+- There are a few null references in the code as a whole (I've counted
+  around 22 `return null` for example), example run `grep -nr "return null" . | grep .js:` or `grep -nr ": null" . | grep .js:`
+- There are a few "Utility" functions&resources files across the code, example run `grep -nr "utils" . | grep .js:`
+- There are 2 instances where "Type casting" topic is referenced in the code pointing to a question in SO, https://stackoverflow.com/questions/41328728/force-casting-in-flow , run `grep -nr "cast" . | grep .js:`
+- Some of the changes in the changelog are unlinked to tickets
+- The code itself is somewhat documented, but there seems to be no strict pattern actively applied: example compare `FontFaceRule.js with `KeyframesRule.js`
+- Test coverage for me as an initial contributor seems unknown. Codecov badge
+  also shows "unknown coverage", clicking on it seems codecov isn't configured
+- Only 23,6% commit message seem to reference to a ticket number (333 out of 1410 commit messages)
+- Multiple similar commit messages content, unlinked to tickets: example run `git log --pretty=oneline --abbrev-commit | grep docs`
+- No "quick-start"-like mention in the readme.md on how to build the project or run tests for example. Build and test commands can only be found by inspecting package.json. JS developers typically know this, but other first-time contributors are left guessing a bit;
+- There seems to be no mention of what version of npm, node, yarn and other packages is recommended to build the project, so user is a bit left guessing what dependencies are required to build;
+- Some of the inner packages are missing a readme.md, example: jss-plugin-syntax-rule-value-function, jss-plugin-syntax-rule-value-observable, jss
+Some notes running yarn test:
+  . You or one of the Babel plugins you are using are using Flow declarations as bindings. Support for this will be removed in version 7. To find out the caller, grep for this message and change it to a `console.trace()`.
+  . ERROR: 'Warning: SheetsManager: can't find sheet to unmanage'
+
+@yegor256: 4/10
+
+
+
+https://github.com/nem-toolchain/nem-toolchain
+
+Warning: Project does not pass to the lines of code rule, though I still reviewed the project a bit further
++ Is Opensource
++ Badges are readily available in the README file (For coverage, CI across different CI solutions, license,...)
++ Releases seem to be automated (with resource to )
++ Coverage reports configured for pull requests
++ Coverage readily available
++ Linting seems to be in place(with resource to https://github.com/alecthomas/gometalinter)
+? Initial commit: Wed Sep 13 23:31:58 2017 +0300 > 1 year?
+? Seems the project is not making full use of github release notes
+? Only 1,7% of the commit messages specifically reference a ticket ( 9 out of 519), but the project seems to make extensive use of Pull Requests (with around 110 merged pull requests)
+- 2585 LOC < 10.000 lines of code
+- Multiple similar commit messages content, unlinked to tickets: example run `git log --pretty=oneline --abbrev-commit | grep "circleci"`
+
+@yegor256: 4/10
+
+
+
+https://github.com/scalikejdbc/scalikejdbc
+
++ Is opensource
++ 24416 LOC > 10.000 lines of code
++ Initial commit: Fri Nov 18 15:57:01 2011 +0900 > 1 year ago
++ Project seems to be broadly documented for a potential end-user of the library, example: http://scalikejdbc.org/
++ CI being used with Travis
++ Changelog (https://github.com/scalikejdbc/scalikejdbc/tree/master/notes) seems to be kept organized, latest releases seem to always mention what changes (and respective tickets) are being made available.
+? Release process seems to be scripted (https://github.com/scalikejdbc/scalikejdbc/blob/master/scripts/release_all.sh)
+? Releases don't make full use of github release notes, and changelog folder isn't linked on README.md, had to search for it
+? Project is made of smaller modules, meaning the repo is in a way not
+  "encapsulating a single problem", read more at https://www.yegor256.com/2018/09/05/monolithic-repositories.html
+- Only 12% of commit messages seem to reference tickets (283 out of 2349 commit messages)
+- No info on readme in a quick-start manner of how to build the project
+- No reference anywhere regarding Code Coverage
+- Seems no linting/static analysis tools are in place
+
+@yegor256: 5/10
+
+
+
+https://github.com/ligi/SurvivalManual
+
+Warning: Project does not pass to the lines of code rule, though I still reviewed the project a bit further
++ Is Opensource
++ Initial commit: Fri Sep 16 20:46:53 2016 +0200 > 1 year old
+? Code is released often (see https://github.com/cssinjs/jss/releases) but not making use of github release notes, and unclear
+- 2314 LOC < 10.000 lines of code
+- Couldn't find any link to a CI solution (like Travis or Jenkins, or other)
+- Only 6,1% of the commit messages seem to be linked to tickets (21 out of 325)
+- No badges on README file mentioning License, Coverage, CI, or any other information
+- I haven't found any information regarding coverage even though there seem to be some tests (I've found about 22)
+- How to build information is not provided in a "quick-start" fashion in the README file itself and I haven't found it anywhere else
+- No sort of static analysis solution seems to be in place;
+- I was able to open and build the project on Android Studio, but there seems to be no information
+  in the documentation on dependencies, what is needed to run tests, how to test on a local device,
+  examples on how to configure firebase.
+
+@yegor256: 4/10
+
+
+
+https://github.com/pmed/v8pp
+
+Warning: Project does not pass to the lines of code rule, though I still reviewed the project a bit further
++ Is Opensource
++ Initial commit: Wed Jun 26 17:08:19 2013 +0400 > 1 year
++ CI badges on readme and CI being used
++ Project seems to be broadly documented for a potential end-user of the library, example: https://github.com/pmed/v8pp/blob/master/docs/
+? Releases make use of github release notes to a certain extent
+- It's unclear for a newcomer contributor how to build the project, there's no "quick-start/how to build" information on the readme
+- Code coverage is unclear, even though there seems to be an effort to have test (https://github.com/pmed/v8pp/tree/master/test)
+- 5670 LOC > 10.000 lines of code
+- Commit messages are detailed, but only 4,2% of commit messages reference a ticket (12 out of 280 commit messages)
+- It's unclear if there is there is any sort of static analysis / linters going on
+@yegor256 I was also a reviewer for this project last year; I'd feel more comfortable if someone
+  else also reviewed this project, in order to avoid any sort of bias/unfairness.
+
+@yegor256: 5/10
+
+
+
+https://github.com/ribtoks/xpiks
+
++ Is Opensource
++ Initial commit: Mon Nov 17 08:23:13 2014 +0200 > 1 year old
++ 431640 LOC > 10.000 lines of code
++ Coverage and CI and other badges readily available on README (and CI is being used)
++ How to build info is clearly linked in the README (pointing to https://github.com/ribtoks/xpiks/wiki/Build-instructions)
++ Release change information is improved from last year award edition,
+  each new release has since linked the respective tickets that comprise its own changes
++ Clear issue organization, bug tracking, and labelling
++ Code coverage is configured
++ There were efforts to add automated style analysis since last year
+  award edition (example: https://github.com/ribtoks/xpiks/commit/1f9590c3ee86edd182c2f418c42698d5fe2c1bdb)
+? There are a few signs of class casting (https://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html),
+  example run `grep -nr "dynamic_cast" . | grep ".cpp:"`
+- Only 10,3% of the commit messages seem to reference a ticket (384 out of 3728 commit messages)
+@yegor256 I was also a reviewer for this project last year; I'd feel more
+  comfortable if someone else also reviewed this project, in order to avoid any sort of bias/unfairness.
+
+@yegor256: 5/10
+
+
+
+https://github.com/Hack23/cia
+
+- Getters, setters and mutability all along the project
+- NULL in many places
+- Utility classes, static methods
+- Commits don’t link to issues and PRs
+- Uses Dependency Injection Containers and ORM/Pojo
+- ERs: listener, sender, generator, consumer...
+- The release procedure is not documented and does not look like it is automated.
+  Looks like it is made by a single person writing all on master branch manually,
+  but changelog information may suggest it is automated (it is too verbose).
+  It uses some automation techniques though (dependabot).
+- Releases happen frequently
++ Sonar shows 0.1% technical debt
+- Commits are not tied to issues
++ 95.8% coverage according to sonar badge
++ Very extensive documentation of all project (http://hack23.github.io/cia)
++ Static analysis performed by various different tools (jenkins, codefactor,
+  codacy, codeclimate, bettercode, codebeat, lgtm.com, blackduck)
+- Looks like master branch is not read-only, just one committer and just two branches (master and gh-pages)
++ Documentation is very complete and up to date, with a lot of diagrams.
+- In-code documentation looks like automatically generated and does not provide any usable information about the classes.
+- Had a bad time compiling and trying to run it; too many modules makes it IDE dependent (very hard to organize if not using eclipse)
++ Good documentation in readme.md and http://hack23.github.io/cia/ .
++ Median issue resolution time: 17h (https://isitmaintained.com/project/Hack23/cia),
+- 17% of issues reported are still open.
+
+@yegor256: 7/10
+
+
+
+
+
+https://github.com/WriteThemFirst/approvals-java/
+
+ - Less than 1 year old. Initial commit - 2018-02-17 : https://github.com/WriteThemFirst/approvals-java/commit/2060b8b5749716e8c57d8992db6d25b4912eb592
+
+@yegor256: too young
+
+
+
+
+https://github.com/pdacostaporto/representations
+
++ Good README.md with clear description and usage examples.
++ Static analysis with Qulice.
++ 88% test coverage (at the moment of writing this).
+? Committing directly into master, almost no PRs. Just one contributor though, so I don't think that's bad.
+? Issues are being registered, but most of them are not linked to PRs.
++ Good packaging. Abstractions in the top package. Lower packages depend on upper packages, not the other way around.
++ Small cohesive classes.
++ Only assignments (and conversions as appropriate) in constructors.
++ All public methods implement interfaces.
++ Classes are immutable (although sometimes 'final' modifier is missing).
++ Javadocs.
++ Small clear unit tests, each having a single assertion.
++ No mocking libraries - using fake objects.
+? Unit tests are not single statement. Could be made that way by inlining variables
+  declared at the top. Although this is more of a style choice.
+- Marker interfaces.
+
+@yegor256: 7/10
+
+
+
+
+https://github.com/smartcommunitylab/smartcampus.gamification
+
+? Minimal README.md.
+? Few PRs, mostly committing directly into master.
+- Test coverage not reported.
+- Didn't see any static code analysis.
+- Packaging by layer (repo, model, managers, etc.)
+- Anemic Domain Model antipattern.
+- Interfaces depend on data structures. This violates Dependency Inversion Principle.
+- Law Of Demeter violated in at least several places.
+- Heavy use of data classes with generater getters/setters.
+- Utility classes.
+- Few interfaces. A few of them have over 20 methods.
+- A few classes with over 500 lines of code.
+- Quite complicated tests.
+- Most tests require Spring context to be launched.
+
+@yegor256: 4/10
+
+
+
+
+https://github.com/AdamsLair/duality
+
++ Uses excellent names, very clear and noun-centric
++ Looks like a genuinely great open-source game engine
+- Has some very large classes
+- Has many globally configured values with static access
+- Has many static classes/methods
+- Has many serializable data structures with getters/setters
+- Uses attributes to add behavior
+- Uses nulls for resource management and data values
+Elegance 1/5
+
+@yegor256: 4/10
+
+
+
+
+https://github.com/akaigoro/df4j
+
++ Has some very nice Elegant Interfaces and implementors
++ Uses inheritance
+- Uses "Encoder" -er suffix
+- Uses static Loggers
+- Sometimes returns `null`
+- Uses `null` in a lot of places
+- Frequently guards against `null`
++/- Many TODOs
+- Uses many Utils
+- Puts many classes in the same source files
+- Uses ActionCaller and allows Reflection Exceptions (such as NoSuchMethodException) outside of it's own context
+Elegance 3/5
+
+@yegor256: 4/10
+
+
+
+
+https://github.com/Alecu100/CodeAnalyzer
+
+- Uses and returns null
+- Has some very long methods
+- Uses globals
+- Has many DTOs
+- Has many, many getters/setters
+- Has many many classes that end in -er (Resolver, Evaluator, Comparer
+- Some of the key interfaces are very inelegant, too many methods, or too many args for a single methods
+- Uses many different .NET Framework attributes
+- Doesn't really seem to follow almost any of the EO Design Principles
+Elegance 0/5
+
+@yegor256: 2/10
+
+
+
+https://github.com/amihaiemil/comdor
+
++ Many small, tightly scoped classes
++ Clean, elegant interfaces
++ Minimal use of null, static, DTO, getters/setters
++ Strictly conforms to Command-Query Separation
++ Easy to browse and navigate the project
+- Tests do not follow EO Testing style
+- Tests to not make good use of whitespace for Arrange-Act-Assert Style
+- Tests make extensive use of ugly Mock objects that are setup per test
+Elegance 5/5
+
+@yegor256: 7/10
+
+
+
+
+https://github.com/ashtonhogan/tacinga
+
+Github 404 - User / Repo Not Found
+
+
+
+
+
+https://github.com/banq/jdonframework
+
+- Uses null and null checks liberally
+- Uses annotation to add behavior and inspect
+- Has many Util classes
+- Makes liberal use of static methods and data values
+- Many, many classes ending in -er
+- Brings in other files from external sources via literal copy-pasting, with comments and everything
+- Uses type-casting
+Elegance 0/5
+
+@yegor256: 2/10
+
+
+
+https://github.com/filfreire/CommentCop
+
+Very small project. Not eligible due to <1K LOC
+Project is very elegant and has not obvious EO flaws
+App doesn't actually seem to do anything yet
+Appears to be basic scaffolding - would be nice to see this developed further
+Elegance 4/5 (N/A for Award)
+
+@yegor256: too small
+
+
