@@ -4346,6 +4346,7 @@ low
 low-level
 lower
 lower-quality
+lowered
 lowers
 lowest
 loyal
@@ -6499,6 +6500,7 @@ ruining
 ruins
 rule
 rule---organize
+ruled
 rules
 rules---some
 rultor
@@ -6799,6 +6801,7 @@ shooting
 shoots
 shop
 short
+short-list
 short-term
 shortage
 shorten
@@ -7211,6 +7214,7 @@ stolen
 stop
 stopped
 stopped---their
+stoppers
 stops
 storage
 store
@@ -7907,6 +7911,7 @@ understood
 undertaken
 undocumented
 unethical
+unevenly
 unexpected
 unfair
 unfinished
