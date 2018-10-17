@@ -4,7 +4,7 @@ https://www.yegor256.com/2017/10/24/award-2018.html
 WORK IS STILL IN PROGRESS!
 
 
-https://github.com/pmed/v8pp (C++, 5.6K LoC)
+https://github.com/pmed/v8pp (C++, 5.6K LoC, 27K HoC)
 
 Warning: Project does not pass to the lines of code rule, though I still reviewed the project a bit further
 + Is Opensource
@@ -37,7 +37,7 @@ Warning: Project does not pass to the lines of code rule, though I still reviewe
 
 
 
-https://github.com/shlinkio/shlink (PHP, 12K LoC)
+https://github.com/shlinkio/shlink (PHP, 12K LoC, 42K HoC)
 
 + Class names are well orginized.
 + Code is object oriented.
@@ -72,7 +72,7 @@ https://github.com/shlinkio/shlink (PHP, 12K LoC)
 
 
 
-https://github.com/FindMyFriends/api (PHP, 19K LoC)
+https://github.com/FindMyFriends/api (PHP, 19K LoC, 152K HoC)
 
 + No Getters or Setters used.
 + No any static methods and no any instanceof.
@@ -108,7 +108,7 @@ https://github.com/FindMyFriends/api (PHP, 19K LoC)
 
 
 
-https://github.com/sql-boot/sql-boot (Java, 4.3K LoC)
+https://github.com/sql-boot/sql-boot (Java, 4.3K LoC, 110K HoC)
 
 + There is a CI pipeline, but for merged code not all checks were passed in pipeline;
 + There are badges;
@@ -135,7 +135,7 @@ https://github.com/sql-boot/sql-boot (Java, 4.3K LoC)
 
 
 
-https://github.com/driver733/VK-Uploader (Java, 10.5 LoC)
+https://github.com/driver733/VK-Uploader (Java, 10.5 LoC, 37K HoC)
 
 + Travis
 + Github issue tracking - commits lead to issues in Github
@@ -172,7 +172,7 @@ Another reviewer:
 
 
 
-https://github.com/dgroup/docker-unittests (Java, 5.7K LoC)
+https://github.com/dgroup/docker-unittests (Java, 5.7K LoC, 38K HoC)
 
 - ~5800 loc
 + Travis CI
@@ -206,7 +206,7 @@ https://github.com/dgroup/docker-unittests (Java, 5.7K LoC)
 
 
 
-https://github.com/HDouss/jeometry (Java, 9.7K LoC)
+https://github.com/HDouss/jeometry (Java, 9.7K LoC, 28K HoC)
 
 + Travis
 - Issue tracking (only 3 issues overall)
@@ -244,7 +244,7 @@ https://github.com/HDouss/jeometry (Java, 9.7K LoC)
 
 
 
-https://github.com/onqtam/doctest (C++, 15K LoC)
+https://github.com/onqtam/doctest (C++, 15K LoC, 113K HoC)
 
 + Is Opensource
 + 15450 LOC > 10.000 lines of code
@@ -293,7 +293,7 @@ https://github.com/onqtam/doctest (C++, 15K LoC)
 
 
 
-https://github.com/ribtoks/xpiks (C++, 430K LoC)
+https://github.com/ribtoks/xpiks (C++, 430K LoC, 965K HoC)
 
 + Is Opensource
 + Initial commit: Mon Nov 17 08:23:13 2014 +0200 > 1 year old
@@ -324,7 +324,7 @@ https://github.com/ribtoks/xpiks (C++, 430K LoC)
 
 
 
-https://github.com/javascript-obfuscator/javascript-obfuscator (JavaScript, 80K LoC)
+https://github.com/javascript-obfuscator/javascript-obfuscator (JavaScript, 80K LoC, 760K HoC)
 
 + Project has 80K+ lines of code.
 + Test coverage 98% !!!
@@ -1212,7 +1212,7 @@ https://github.com/floralvikings/jira-connector (Javascript)
 - Lots of global functions.
 - No any test coverage
 
-@yegor256: too small
+@yegor256: and it's too small
 
 
 
@@ -1232,7 +1232,7 @@ https://github.com/facile-it/moka (PHP)
 - Lots of instanceof used.
 - Global functions and procedural codes used, in functions.php
 
-@yegor256: too small
+@yegor256: and it's too small
 
 
 
@@ -1253,7 +1253,7 @@ https://github.com/flyimg/flyimg (PHP)
 - Getters and Setters used in classes [Response, OutputImage, ImageProcessor]
 - No static analyzer found
 
-@yegor256: too small
+@yegor256: and it's too small
 
 
 
@@ -1268,7 +1268,7 @@ https://github.com/Guseyn/cutie (Javascript)
 - There are some test, But no any data about test coverage.
 - Commits not well orginized
 
-@yegor256: too small
+@yegor256: it's just too small
 
 
 
@@ -1282,7 +1282,7 @@ App doesn't actually seem to do anything yet
 Appears to be basic scaffolding - would be nice to see this developed further
 Elegance 4/5 (N/A for Award)
 
-@yegor256: too small
+@yegor256: it's too small
 
 
 
@@ -1299,7 +1299,7 @@ https://github.com/infotech-group/android-drawable-dsl
 - Codding style is in procudural programming.
 - There are test but it is not clear what is test coverage.
 
-@yegor256: too small
+@yegor256: it's too small
 
 
 
