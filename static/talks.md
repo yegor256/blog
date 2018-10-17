@@ -112,6 +112,13 @@ Don't aim for quality, aim for speed<br/>
 St.Petersburg, Russia<br/>
 20 October.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
+Micro-Devs and Micro-Ops<br/>
+[DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/program/yegor-bugayenko/)<br/>
+Oslo, Norway<br/>
+30 October.
+
 <!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://crowdsourcingweek.com/wp-content/themes/csw/images/logo-w-slogan.png" class="future-talk" alt="CSW 2018"/><br/>
@@ -164,13 +171,6 @@ The Next Big Thing: Beyond Blockchain – the Future of Cryptocurrency<br/>
 [Payments International 2018](https://finance.knect365.com/payments-international/speakers/yegor-bugayenko)<br/>
 London, UK<br/>
 26 November.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
-Micro-Devs and Micro-Ops<br/>
-[DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/program/yegor-bugayenko/)<br/>
-Oslo, Norway<br/>
-30 November.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
