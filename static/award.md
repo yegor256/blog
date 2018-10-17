@@ -37,6 +37,20 @@ Submission to 2019 [is open]({% pst 2018/sep/2018-09-30-award-2019 %}).
 
 <hr/>
 
+<img src="//www.yegor256.com/images/award/2018/winner-driver733.png"
+  style="height:45px;" alt='badge'/>
+&nbsp;
+<img src="//www.yegor256.com/images/award/2018/winner-dgroup.png"
+  style="height:45px;" alt='badge'/>
+
+[`@driver733`](https://github.com/driver733) and [`@dgroup`](https://github.com/dgroup)
+were the winners in 2018
+[`VK-Uploader`](https://github.com/driver733/VK-Uploader) ($2,048)
+and
+[`docker-unittests`](https://github.com/dgroup/docker-unittests) ($1,024)
+projects.
+[More details]({% pst 2017/oct/2017-10-24-award-2018 %}).
+
 <img src="//www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png"
   style="width:203px;height:45px;" alt='badge'/>
 &nbsp;
