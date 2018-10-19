@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2018.geecon.cz/assets/images/logo.png" class="future-talk" alt="GeeCON Prague 2018"/><br/>
-Expertise vs Experts<br/>
-[GeeCON Prague](https://2018.geecon.cz/speakers/#bio)<br/>
-Prague, Czech Republic<br/>
-18 October.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://jokerconf.com/assets/images/logo_black.svg" class="future-talk" alt="Joker Conf 2018"/><br/>
 Don't aim for quality, aim for speed<br/>
 [Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/)<br/>
@@ -181,6 +174,15 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/WwjU1ORdz4s/mqdefault.jpg" class="past-talk" alt="GeeCON Prague 2018"/><br/>
+Expertise vs Experts;
+[GeeCON Prague](https://2018.geecon.cz/speakers/#bio);
+Prague, Czech Republic;
+18 October;
+[video](https://youtu.be/WwjU1ORdz4s),
+[slides](https://www.slideshare.net/YegorBugayenko/experts-vs-expertise-119883955).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/d_gZUcpBdRM/mqdefault.jpg" class="past-talk" alt="AppsConf 2018"/><br/>
