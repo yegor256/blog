@@ -29,6 +29,6 @@ three hours each. There could be from four to sixteen people in the room.
 The cost: **$400/hour** (plus travel and accomodation expenses).
 
 As a bonus, all course participants get a copy
-of one of my [my books](/books.html).
+of one of [my books](/books.html).
 
 Text me in [Telegram](https://t.me/yegor256) or [email](mailto:trainings@yegor256.com) when ready.
