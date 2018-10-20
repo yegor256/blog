@@ -176,6 +176,7 @@ so why shouldn't we rate them, right? The best grade is
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
+<aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/WwjU1ORdz4s/mqdefault.jpg" class="past-talk" alt="GeeCON Prague 2018"/><br/>
 Expertise vs Experts;
 [GeeCON Prague](https://2018.geecon.cz/speakers/#bio);
@@ -183,8 +184,14 @@ Prague, Czech Republic;
 18 October;
 [video](https://youtu.be/WwjU1ORdz4s),
 [slides](https://www.slideshare.net/YegorBugayenko/experts-vs-expertise-119883955).
+I'm not for the first time at this event and it seems to be pretty stable
+at its quality. It is, as they claim, not-for-profit. It happens in a cinema,
+which affects the quality, I believe. The screen is huge, the light is dim,
+the sound is not so perfect. Also, the focus of the event is not clear---it is
+just about tech in general? Anyway, I keep coming because I like the city :)
 
 <div class="talk-event">&nbsp;</div>
+<aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/d_gZUcpBdRM/mqdefault.jpg" class="past-talk" alt="AppsConf 2018"/><br/>
 Who Cares About Quality?;
 [AppsConf](https://appsconf.ru/2018/abstracts/3721);
@@ -192,8 +199,15 @@ Moscow, Russia;
 9 October;
 [видео](https://youtu.be/d_gZUcpBdRM),
 [slides](https://www.slideshare.net/YegorBugayenko/who-cares-about-quality).
+The event was organized by the same guys as DevOpsConf and happened
+at the same venue, in Moscow. Again, as with the previous one, the quality
+of the venue seriously affected the entire impression of the event. The audience
+was pretty well prepared, but I totally missed the committee part---even though
+it did exist there. Would be great to see more attention paid to the quality
+of talks.
 
 <div class="talk-event">&nbsp;</div>
+<aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/NFJNp5ke4CM/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2018"/><br/>
 Quantity vs. Quality;
 [DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723);
@@ -201,24 +215,43 @@ Moscow, Russia;
 2 October;
 [видео](https://youtu.be/NFJNp5ke4CM),
 [slides](https://www.slideshare.net/YegorBugayenko/quantity-vs-quality-117828058).
+It's a nice event, with about 100 people at my talk, was pretty warm and
+welcome. The quality of the venue was rather low (you can see it at
+my video), although the food was pretty decent. Also, I wasn't sure the
+event was focused enough on the DevOps subject. My talk wasn't really reviewed
+by any committee and I'm not sure it actually exists there.
 
 <div class="talk-event">&nbsp;</div>
+<aside class="venue-rate green">B+</aside>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="past-talk" alt="DevOpsDays Boston 2018"/><br/>
 Expertise vs Experts;
 [DevOpsDays Boston 2018](https://www.devopsdays.org/events/2018-boston/speakers/yegor-bugayenko/);
 Boston, USA;
 25 September;
 [slides](https://www.slideshare.net/YegorBugayenko/experts-vs-expertise).
+Surprisingly, it was a very good event. Usually, as, I believe, I wrote before,
+US-based events are way worse in quality comparing to Europe and especially
+Eastern Europe. This one was pretty decent. The quality of the venue, the video
+(which is not published yet, which is sad), the food, and travel---everything
+was good. The audience (about 150 in my talk and about 500 in the entire event),
+which is the most important factor, was rather interested
+and engaged. I will definitely try to attend again.
 
 <div class="talk-event">&nbsp;</div>
+<aside class="venue-rate orange">C-</aside>
 <img src="https://obs.com.ua/images/obs2.svg" class="past-talk" alt="Odessa Blockchain Summit 2018"/><br/>
 Zold: Experimental Cryptocurrency Without Blockchain;
 [Odessa Blockchain Summit](https://obs.com.ua/);
 Odessa, Ukraine;
 6 September;
 [slides](https://www.slideshare.net/YegorBugayenko/zold-a-cryptocurrency-without-blockchain).
+The event was pretty small (about 20 people at my talk with about 80 in total), despite
+the promised 300. Also, the venue was rather unusual for tech talks---some sort of a hotel
+lobby. Also, the video recordings of our talks were lost, for some reason. And I wasn't
+filming myself :( That's sad.
 
 <div class="talk-event">&nbsp;</div>
+<aside class="venue-rate green">B-</aside>
 <img src="https://i.ytimg.com/vi/MCaKPYBMXyI/mqdefault.jpg" class="past-talk" alt="CryptoBBQ 2018"/>
 Life Without Blockchain;
 [CryptoBBQ](https://cryptoevent.io/cryptobbq);
@@ -226,6 +259,10 @@ Moscow, Russia;
 23 Aug 2018;
 [видео](https://www.youtube.com/watch?v=MCaKPYBMXyI).
 [slides](https://www.slideshare.net/YegorBugayenko/life-without-blockchain).
+The organization of the even was decent, including food, the venue, etc. However,
+I totally missed the program committee part---did it exist there? It seemed
+that the majority of talks were there because they were either friends of
+organizers (my case) or paid. Maybe it's inevitable in the area of cryptocurrencies?
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/klCNgqlAflI/mqdefault.jpg" class="past-talk" alt="Meetup 2018"/>
@@ -236,6 +273,7 @@ Krasnodar, Russia;
 [видео](https://www.youtube.com/watch?v=klCNgqlAflI).
 
 <div class="talk-event">&nbsp;</div>
+<aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/_cdni0NMus0/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
 Math of Love?;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
@@ -243,6 +281,11 @@ Iași, Romania;
 23 April 2018;
 [video](https://www.youtube.com/watch?v=_cdni0NMus0),
 [slides](https://www.slideshare.net/YegorBugayenko/math-or-love).
+Surpisingly, it was a nice event organized by a good team. They did care
+about the quality and really wanted to help us speakers to deliver it to
+the audience. The venue was good, the food was good, the travel organization was good,
+but the most important part was the preparation of attendees. I would definitely
+try to speak there again, if they organize again.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/_cdni0NMus0/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
@@ -338,7 +381,7 @@ attendees. This year there were just two tracks, about 80 people at my talk.
 Will be glad to visit again.
 
 <div class="talk-event">&nbsp;</div>
-<aside class="venue-rate green">C+</aside>
+<aside class="venue-rate orange">C+</aside>
 <img src="https://i.ytimg.com/vi/oiNI2jF46h0/mqdefault.jpg" class="past-talk" alt="BDMSummit 2017 Summer"/>
 Make Customers Trust You;
 [BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/);
@@ -413,7 +456,7 @@ Kiev, Ukraine;
 [slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost).
 
 <div class="talk-event">&nbsp;</div>
-<aside class="venue-rate green">C-</aside>
+<aside class="venue-rate orange">C-</aside>
 <img src="https://i.ytimg.com/vi/DLk_5BmgTVk/mqdefault.jpg" class="past-talk" alt="Kyiv Outsourcing Forum 2017"/>
 How to Avoid Outsourcing Disaster;
 [Kyiv Outsourcing Forum 2017](http://outsourceforum.org/);
@@ -426,7 +469,7 @@ low quality, and the audience was pretty much random. Maybe that's because
 of the subject, or the time of the year.
 
 <div class="talk-event">&nbsp;</div>
-<aside class="venue-rate green">C</aside>
+<aside class="venue-rate orange">C</aside>
 <img src="https://i.ytimg.com/vi/HSh_Gpnn6fo/mqdefault.jpg" class="past-talk" alt="GeeCON 2017"/>
 What's This InterruptedException About?;
 [GeeCON 2017](https://geecon.org/);
