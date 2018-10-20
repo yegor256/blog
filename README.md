@@ -1,4 +1,4 @@
-<img src="//www.yegor256.com/favicon.ico" width="32px" height="32px" />
+<img src="https://www.yegor256.com/favicon.ico" width="32px" height="32px" />
 
 [![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/blog)](http://www.rultor.com/p/yegor256/blog)
 
