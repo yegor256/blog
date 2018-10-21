@@ -273,3 +273,6 @@ from it are enormous. This is my short list of them:
 Thus, I believe that the smaller the repositories and modules, the better.
 Ideally, I would say, the largest acceptable size for a code base is 50,000 lines of code.
 Everything that goes above this line is a perfect candidate for decomposition.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think is better, a bigger code repository with everything inside, or many smaller ones with their own builds, dependencies, issues, and pull requests?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1053922638517731329?ref_src=twsrc%5Etfw">October 21, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
