@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://jokerconf.com/assets/images/logo_black.svg" class="future-talk" alt="Joker Conf 2018"/><br/>
-Don't aim for quality, aim for speed<br/>
-[Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/)<br/>
-St.Petersburg, Russia<br/>
-20 October.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
 Micro-Devs and Micro-Ops<br/>
 [DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/program/yegor-bugayenko/)<br/>
@@ -174,6 +167,21 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<aside class="venue-rate green">A</aside>
+<img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="future-talk" alt="Joker Conf 2018"/><br/>
+Quality vs. Quantity;
+[Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/);
+St.Petersburg, Russia;
+20 October;
+[видео](https://youtu.be/55mwAbuDrV8),
+[slides](https://www.slideshare.net/YegorBugayenko/quality-vs-quantity-120177792).
+This is one of the best conferences organized by JUG.ru. There is nothing
+else to say. The venue, the travel organization, the staff, and of course the
+audience. These guys know how to do their work. The only problem we've had
+this year was the food---it was terrible, thanks to the venue providers (ExpoForum),
+shame on them (that's why not A+). Aside from that, Joker rocks!
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B-</aside>
