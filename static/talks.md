@@ -170,7 +170,7 @@ so why shouldn't we rate them, right? The best grade is
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">A</aside>
-<img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="future-talk" alt="Joker Conf 2018"/><br/>
+<img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="past-talk" alt="Joker Conf 2018"/><br/>
 Quality vs. Quantity;
 [Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/);
 St.Petersburg, Russia;
@@ -231,11 +231,12 @@ by any committee and I'm not sure it actually exists there.
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B+</aside>
-<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="past-talk" alt="DevOpsDays Boston 2018"/><br/>
+<img src="https://i.ytimg.com/vi/KCx1o_lSMkI/mqdefault.jpg" class="past-talk" alt="DevOpsDays Boston 2018"/><br/>
 Expertise vs Experts;
 [DevOpsDays Boston 2018](https://www.devopsdays.org/events/2018-boston/speakers/yegor-bugayenko/);
 Boston, USA;
 25 September;
+[video](https://youtu.be/KCx1o_lSMkI),
 [slides](https://www.slideshare.net/YegorBugayenko/experts-vs-expertise).
 Surprisingly, it was a very good event. Usually, as, I believe, I wrote before,
 US-based events are way worse in quality comparing to Europe and especially
