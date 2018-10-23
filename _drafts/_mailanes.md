@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: pets
 description: |
   Mailanes is a simple web app to help you manage
-  a list of emails which you want to deliver some information
+  a list of email addresses where you want to deliver some information
   regularly.
 keywords:
   - mail sending
@@ -19,7 +19,7 @@ jb_picture:
   caption:
 ---
 
-There are many other products doing something similar, including
+There are other products doing something similar, including
 [MailChimp](http://www.mailchimp.com/), [AWeber](http://www.aweber.com/), and
 many others. They are great. Maybe. I don't really know. I tried some of them,
 some time ago. And I was frustrated. They are expensive, clumsy, and heavy.
@@ -33,16 +33,16 @@ and it's [open source](https://github.com/yegor256/mailanes/).
 
 {% jb_picture_body %}
 
-First, you login via GitHub (what else, right?) Then, you create a List
-of recipients. You add them there one by one or you upload a CSV. Then,
+First, you login via GitHub (what else, right?) Then you create a List
+of Recipients. You add them there one by one or you upload a CSV. Next,
 you create a Lane of Letters. A lane is something your recipients should
-be moved through, step by step, email by email. Then, you create a Campaign
+be moved through, step by step, email by email. Then you create a Campaign
 and connect your list with the lane. That's it.
 
 Let me show by example.
-Say, you go to [zerocracy.com](https://www.zerocracy.com), enter your email
+Let's say you go to [zerocracy.com](https://www.zerocracy.com), enter your email
 and click "Help me start!" The form on the site is configured to post that
-email directly to the mailanes web app (see the [sources](https://www.zerocracy.com/)):
+email directly to the Mailanes web app (see the [sources](https://www.zerocracy.com/)):
 
 {% highlight html %}
 <form method="POST" action="https://www.mailanes.com/subscribe?list=4">
@@ -53,9 +53,9 @@ email directly to the mailanes web app (see the [sources](https://www.zerocracy.
 </form>
 {% endhighlight %}
 
-The `action` of the form points to the `/subscribe?list=4` URL at the mailanes
-server. Once submitted, the recipient will be add to the list no.4 and the browser
-will be redirected to the URL from the `redirect` form parameter.
+The `action` of the form points to the `/subscribe?list=4` URL at the Mailanes
+server. Once submitted, the recipient will be added to list number 4 and the browser
+will be redirected to the URL in the `redirect` form parameter.
 
 Right after the recipient shows up in the list, the system starts moving
 him or her through the letters defined in the lane. Try it yourself and you
@@ -63,8 +63,8 @@ will receive the first letter almost immediately (in 10 minutes, to be precise).
 
 To define a letter I decided to use [Liquid](https://github.com/Shopify/liquid),
 as a pretty simple markup language. For the configuration of lists, lanes, letters
-and campaigns I'm using [YAML](http://yaml.org/), since it's rich enough, but
-way easier and shorter than JSON and, of course, XML. Here is how the
+and campaigns I'm using [YAML](http://yaml.org/), since it's rich enough but
+way easier and shorter than JSON and, of course, XML. Here is what the
 configuration of the first letter you will receive looks like:
 
 {% figure /images/2018/09/mailanes-1.png 600 %}
@@ -81,15 +81,15 @@ Yegor Bugayenko<br/>
 Click [here]({{unsubscribe}}) if you don't want to hear from me again.
 {% endhighlight %}
 
-The `{{unsubscribe}}` will be replaced by the link to the page, where
+The `{{unsubscribe}}` will be replaced by the link to a page where
 the recipient of the email will be instantly unsubscribed. I believe it's
-a good practice to let your newsletter recievers to unsubscribe instantly.
-They will also have the ability to do that via the [`List-Unsubscribe`](https://tools.ietf.org/html/rfc8058)
+good practice to allow your newsletter recievers to unsubscribe instantly.
+They will also have the ability to do it via the [`List-Unsubscribe`](https://tools.ietf.org/html/rfc8058)
 mail header.
 
-I also configured the lane, with my SMTP server details. I'm using
+I also configured the lane with my SMTP server details. I'm using
 AWS [Simple Email Service](https://aws.amazon.com/ses/).
-It's pretty easy to configure and it's rather inexpensive:
+It's pretty easy to configure and it's inexpensive:
 [$1 per 10,000 emails](https://aws.amazon.com/ses/pricing/) at the time of writing.
 To my knowledge, [SendGrid](https://sendgrid.com/pricing/)
 is two times more expensive,
@@ -104,18 +104,18 @@ unsubscribe actions, etc.:
 
 {% figure /images/2018/09/mailanes-3.png 600 %}
 
-You see, there is Telegram chat ID, where I'm getting notifications. You can
+You see, there is the Telegram chat ID where I'm getting notifications. You can
 do that too, you just need to know the chat ID. Start talking to the
 Telegram bot [@mailanes_bot](https://t.me/mailanes_bot) and it will tell you your chat ID.
 
 I'm using Mailanes for my blog newsletter too. Try to subscribe to it
 [here](/about-me.html#subscribe) and you will see what happens.
 
-[README](https://github.com/yegor256/mailanes/blob/master/README.md) fully
-explains all possible configuration options. The project is open, feel free
+The [README](https://github.com/yegor256/mailanes/blob/master/README.md) fully
+explains all possible configuration options. The project is open, so feel free
 to contribute with [pull requests](https://github.com/yegor256/mailanes).
 As I said above, it's absolutely _free_
-for anyone. Just sign up, create your lists, lanes and campaigns and go ahead.
+for anyone. Just sign up, create your lists, lanes, and campaigns, and go ahead.
 
 If something is not clear in the system and you are lost, don't hesitate
 to [submit a ticket](https://github.com/yegor256/mailanes/issues),
