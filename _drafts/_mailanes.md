@@ -42,7 +42,7 @@ and connect your list with the lane. That's it.
 Let me show by example.
 Let's say you go to [zerocracy.com](https://www.zerocracy.com), enter your email
 and click "Help me start!" The form on the site is configured to post that
-email directly to the mailanes web app (see the [sources](https://www.zerocracy.com/)):
+email directly to the Mailanes web app (see the [sources](https://www.zerocracy.com/)):
 
 {% highlight html %}
 <form method="POST" action="https://www.mailanes.com/subscribe?list=4">
@@ -53,7 +53,7 @@ email directly to the mailanes web app (see the [sources](https://www.zerocracy.
 </form>
 {% endhighlight %}
 
-The `action` of the form points to the `/subscribe?list=4` URL at the mailanes
+The `action` of the form points to the `/subscribe?list=4` URL at the Mailanes
 server. Once submitted, the recipient will be added to list number 4 and the browser
 will be redirected to the URL in the `redirect` form parameter.
 
