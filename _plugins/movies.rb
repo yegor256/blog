@@ -17,12 +17,12 @@
 # SOFTWARE.
 
 module Yegor
-  module Filters
-    def movies_count(posts)
+  module MovieFilters
+    def yb_movies_count(posts)
       with_movies(posts).size
     end
 
-    def movies(posts)
+    def yb_movies(posts)
       with_movies(posts).map do |p|
         "<p><a href='#{p.url}'>#{CGI::escapeHTML(p['jb_picture']['caption'])}</a></p>"
       end
@@ -39,4 +39,4 @@ module Yegor
   end
 end
 
-Liquid::Template.register_filter(Yegor::Filters)
+Liquid::Template.register_filter(Yegor::MovieFilters)

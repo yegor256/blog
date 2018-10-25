@@ -16,12 +16,12 @@ keywords:
   - movies
 ---
 
-These {{ site.posts | movies_count }}
+These {{ site.posts | yb_movies_count }}
 movies were mentioned in this blog, I would
 recommend to watch them all:
 
 <div class="nospell">
-{{ site.posts | movies | join:'' }}
+{{ site.posts | yb_movies | join:'' }}
 </div>
 
 If you know some other good movies, please
