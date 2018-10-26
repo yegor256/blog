@@ -119,3 +119,5 @@ Here is my SO flair:
 <img src="//stackexchange.com/users/flair/63162.png"
   width="208" height="58" alt="StackExchange flair for yegor256"/>
 </a>
+
+This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`).
