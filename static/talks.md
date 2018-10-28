@@ -86,7 +86,7 @@ Here are topics I haven't spoken about yet but am planning to soon:
   * [16 Don'ts of Career Growth]({% pst 2017/jan/2017-01-24-career-advice %})
 -->
 
-If you are interested in hearing me speak at **your event**,
+If you are interested in hearing me speak at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
 a premium suite in a 5-star hotel, and a limo.
@@ -123,12 +123,14 @@ New York, USA<br/>
 11-13 November.
 -->
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://bcconf.com/img/about-img.jpg" class="future-talk" alt="BCConf 2018"/><br/>
 Zold Cryptocurrency<br/>
 [Blockchain and Cryptocurrency Conf](https://bcconf.com/)<br/>
 Kuala Lumpur, Malaysia<br/>
 13 November.
+-->
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.devopspro.ru/wp-content/uploads/2018/07/logo_devops_moscow-min.png" class="future-talk" alt="DevOpsPro 2018"/><br/>

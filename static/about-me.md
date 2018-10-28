@@ -121,3 +121,7 @@ Here is my SO flair:
 </a>
 
 This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`).
+
+BTW, if you wonder why 256, the answer is simple---this is my FIDOnet node ID back from 1995.
+I was [2:464/256](http://nodehist.fidonet.org.ua/?address=2%3A464%2F256) over there, and this
+is where my network presence has started.
