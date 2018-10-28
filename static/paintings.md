@@ -56,6 +56,14 @@ shairart.com - form doesn't work
 
 In order of creation:
 
+{% picture /images/paintings/2018/october-2018.jpg 350 %}
+
+_X.2018_<br/>
+October 2018;
+50 x 50 cm;
+Acrylic on canvas;
+Moscow, Russia.
+
 {% picture /images/paintings/2018/gray-freedom.jpg 350 %}
 
 _Gray Freedom_<br/>
