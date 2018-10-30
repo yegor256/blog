@@ -87,8 +87,6 @@ and it’s <a href="https://github.com/yegor256/mailanes/">open source</a>.</p>
 
 
 
-<amp-img src="/images/2018/09/mailanes-1.png" alt="Mailanes.com" height="1590" width="1960" layout="responsive"></amp-img>
-
 <p>First, you login via GitHub (what else, right?) Then you create a List
 of Recipients. You add them there one by one or you upload a CSV. Next,
 you create a Lane of Letters. A lane is something your recipients should
@@ -131,9 +129,9 @@ for four days, zero hours, and zero minutes.</p>
 
 <pre>Thanks,&lt;br/&gt;
 Yegor Bugayenko&lt;br/&gt;
-Click [here]() if you don't want to hear from me again.</pre>
+Click [here](&amp;lcub;&amp;lcub;unsubscribe&amp;rcub;&amp;rcub;) if you don't want to hear from me again.</pre>
 
-<p>The `` will be replaced by the link to a page where
+<p>The <code>&amp;lcub;&amp;lcub;unsubscribe&amp;rcub;&amp;lcub;</code> will be replaced by the link to a page where
 the recipient of the email will be instantly unsubscribed. I believe it’s
 good practice to allow your newsletter recievers to unsubscribe instantly.
 They will also have the ability to do it via the <a href="https://tools.ietf.org/html/rfc8058"><code>List-Unsubscribe</code></a>
