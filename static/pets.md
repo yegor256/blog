@@ -182,6 +182,8 @@ Founded 29-Jan-2018.
 [Mailanes](https://www.mailanes.com) is a newsletter management email delivery
 web system that does what MailChimp and similar products can do, but in
 a much simpler and cheaper (it's free) way.
+More about it in this article:
+[Mailanes.com Helps Manage Newsletters and Mailing Lists]({% pst 2018/oct/2018-10-30-mailanes %}).
 <br/>
 Founded 27-Aug-2018.
 
