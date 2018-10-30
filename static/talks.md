@@ -99,40 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Oslo 2018"/><br/>
-Micro-Devs and Micro-Ops<br/>
-[DevOpsDays Oslo 2018](https://www.devopsdays.org/events/2018-oslo/program/yegor-bugayenko/)<br/>
-Oslo, Norway<br/>
-30 October.
-
-<!--
-<div class="talk-event">&nbsp;</div>
-<img src="https://crowdsourcingweek.com/wp-content/themes/csw/images/logo-w-slogan.png" class="future-talk" alt="CSW 2018"/><br/>
-Zold: A Fast Cryptocurrency for Micro Payments<br/>
-[CrowdSourcing Week](https://crowdsourcingweek.com/speaker/yegor-bugayenko/)<br/>
-Washington, D.C.<br/>
-26 October.
--->
-
-<!--
-<div class="talk-event">&nbsp;</div>
-<img src="http://www.adaptivecomputing.com/wp-content/media/logos/cloud-expo.png" class="future-talk" alt="CloudExpo 2018"/><br/>
-Can a Freelancer Cost $500 an Hour?<br/>
-[CloudEXPO](http://java.sys-con.com/node/4266925)<br/>
-New York, USA<br/>
-11-13 November.
--->
-
-<!--
-<div class="talk-event">&nbsp;</div>
-<img src="https://bcconf.com/img/about-img.jpg" class="future-talk" alt="BCConf 2018"/><br/>
-Zold Cryptocurrency<br/>
-[Blockchain and Cryptocurrency Conf](https://bcconf.com/)<br/>
-Kuala Lumpur, Malaysia<br/>
-13 November.
--->
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://www.devopspro.ru/wp-content/uploads/2018/07/logo_devops_moscow-min.png" class="future-talk" alt="DevOpsPro 2018"/><br/>
 Expertise vs Experts<br/>
 [DevOpsPro](https://www.devopspro.ru/speakers/)<br/>
@@ -145,6 +111,13 @@ _Something about Zerocracy..._<br/>
 [DevOpsDays Warsaw 2018](https://www.devopsdays.org/events/2018-warsaw/welcome/)<br/>
 Warsaw, Poland<br/>
 19-20 November.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://moscow.bc.events/images/logo/navbar-logo.png" class="future-talk" alt="Blockchain 2018"/><br/>
+Panel Discussion about Blockchain<br/>
+[Blockchain Conference 2018](https://moscow.bc.events/ru)<br/>
+Moscow, Russia<br/>
+20 November.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3366-3633-4437-b961-373136313633/_L900_2.png" class="future-talk" alt="https://cryptoevent.io/cryptoevent_riw 2018"/><br/>
