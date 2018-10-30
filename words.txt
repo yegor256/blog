@@ -539,6 +539,7 @@ award-
 awards
 aware
 away
+AWeber
 awesome
 aws
 axes
@@ -958,6 +959,8 @@ cambria
 came
 camera
 cameras
+campaign
+campaigns
 can
 can't
 cancellable
@@ -1721,6 +1724,7 @@ cryptic
 crypto-electronic-whatever-product
 cryptocurrency
 CSS
+CSV
 CTO
 CTO's
 CTOs
@@ -3343,6 +3347,7 @@ heart
 hearted
 heartless
 heavily
+heavy
 heavyweight
 heinemeier
 held
@@ -3658,6 +3663,7 @@ inequalities
 inequality
 inevitable
 inevitably
+inexpensive
 infamous
 infinite
 infinity
@@ -3729,6 +3735,7 @@ instantiate
 instantiated
 instantiating
 instantiation
+instantly
 instead
 instinct
 instincts
@@ -4121,6 +4128,8 @@ lake
 lambda
 lamp
 landed
+lane
+lanes
 langsworth
 language
 languages
@@ -4230,6 +4239,7 @@ lifetime
 light
 light-weight
 lighter
+lightweight
 like
 like---unmotivated
 liked
@@ -4375,6 +4385,10 @@ macro-tasking
 made
 magic
 Magnum-CI
+mail
+mailanes
+mailchimp
+mailgun
 mailing
 main
 mainly
@@ -4931,6 +4945,7 @@ newly
 newrelic
 news
 news---that's
+newsletter
 next
 NFRs
 nice
@@ -5234,6 +5249,7 @@ ourselves
 out
 out-dated
 out-of-the-box
+outbound
 outcome
 outcomes
 outdated
@@ -6125,8 +6141,11 @@ receives
 receiving
 recent
 recently
+recievers
 recipe
 recipes
+recipient
+recipients
 reckon
 recognition
 recognized
@@ -6696,6 +6715,8 @@ seminars
 send
 sender
 sender's
+sendgrid
+sendinblue
 sending
 sends
 senior
@@ -6960,6 +6981,7 @@ smiling
 smooth
 smoothies
 smoothly
+SMTP
 snake
 Snap-CI
 snapchat
@@ -7300,7 +7322,9 @@ submitting
 suboptimal
 subordinates
 subordination
+subscribe
 subscriber
+subscribers
 subsequently
 subset
 substantial
@@ -7967,6 +7991,8 @@ unreliable
 unresolved
 unsafe
 unstable
+unsubscribe
+unsubscribed
 unsuccessful
 untestable
 until

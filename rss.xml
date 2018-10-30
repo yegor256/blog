@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-10-29T07:17:44+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Make Me Guess</title><link href="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html" rel="alternate" type="text/html" title="Don't Make Me Guess" /><published>2018-10-16T00:00:00+00:00</published><updated>2018-10-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/16/dont-make-me-guess</id><content type="html" xml:base="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html">&lt;p&gt;It’s Sunday. I’m at home, drinking tea and writing a new document for
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-10-30T07:02:07+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Mailanes.com Helps Manage Newsletters and Mailing Lists</title><link href="https://www.yegor256.com/2018/10/30/mailanes.html" rel="alternate" type="text/html" title="Mailanes.com Helps Manage Newsletters and Mailing Lists" /><published>2018-10-30T00:00:00+00:00</published><updated>2018-10-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/30/mailanes</id><content type="html" xml:base="https://www.yegor256.com/2018/10/30/mailanes.html">&lt;p&gt;There are other products doing something similar, including
+&lt;a href=&quot;http://www.mailchimp.com/&quot;&gt;MailChimp&lt;/a&gt;, &lt;a href=&quot;http://www.aweber.com/&quot;&gt;AWeber&lt;/a&gt;, and
+many others. They are great. Maybe. I don’t really know. I tried some of them,
+some time ago. And I was frustrated. They are expensive, clumsy, and heavy.
+That’s my experience. I wanted something lightweight, where I can upload
+a list of emails, create a simple HTML/text letter, configure my SMTP outbound
+server, and call it a day. I spent a few days and created
+&lt;a href=&quot;http://www.mailanes.com&quot;&gt;Mailanes&lt;/a&gt;. It’s free (for all of you), it’s simple,
+and it’s &lt;a href=&quot;https://github.com/yegor256/mailanes/&quot;&gt;open source&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Mailanes.com&quot; src=&quot;/images/2018/09/mailanes-1.png&quot; longdesc=&quot;#25ab7bd3&quot; /&gt;&lt;figcaption id=&quot;25ab7bd3&quot;&gt;Mailanes.com&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, you login via GitHub (what else, right?) Then you create a List
+of Recipients. You add them there one by one or you upload a CSV. Next,
+you create a Lane of Letters. A lane is something your recipients should
+be moved through, step by step, email by email. Then you create a Campaign
+and connect your list with the lane. That’s it.&lt;/p&gt;
+
+&lt;p&gt;Let me show by example.
+Let’s say you go to &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;zerocracy.com&lt;/a&gt;, enter your email
+and click “Help me start!” The form on the site is configured to post that
+email directly to the Mailanes web app (see the &lt;a href=&quot;https://www.zerocracy.com/&quot;&gt;sources&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;POST&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://www.mailanes.com/subscribe?list=4&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;source&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;www.zerocracy.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;redirect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://www.zerocracy.com/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Your email...&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;24&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Help me start!&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;code&gt;action&lt;/code&gt; of the form points to the &lt;code&gt;/subscribe?list=4&lt;/code&gt; URL at the Mailanes
+server. Once submitted, the recipient will be added to list number 4 and the browser
+will be redirected to the URL in the &lt;code&gt;redirect&lt;/code&gt; form parameter.&lt;/p&gt;
+
+&lt;p&gt;Right after the recipient shows up in the list, the system starts moving
+him or her through the letters defined in the lane. Try it yourself and you
+will receive the first letter almost immediately (in 10 minutes, to be precise).&lt;/p&gt;
+
+&lt;p&gt;To define a letter I decided to use &lt;a href=&quot;https://github.com/Shopify/liquid&quot;&gt;Liquid&lt;/a&gt;,
+as a pretty simple markup language. For the configuration of lists, lanes, letters
+and campaigns I’m using &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML&lt;/a&gt;, since it’s rich enough but
+way easier and shorter than JSON and, of course, XML. Here is what the
+configuration of the first letter you will receive looks like:&lt;/p&gt;
+
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2018/09/mailanes-1.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;code&gt;relax&lt;/code&gt; parameter of the letter specifies how much time the system has
+to wait after this letter before it sends you the next one. &lt;code&gt;&quot;4:0:0&quot;&lt;/code&gt; stands
+for four days, zero hours, and zero minutes.&lt;/p&gt;
+
+&lt;p&gt;At the bottom of the letter I added this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;Thanks,&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+Yegor Bugayenko&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+Click [here]() if you don&amp;#39;t want to hear from me again.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The `` will be replaced by the link to a page where
+the recipient of the email will be instantly unsubscribed. I believe it’s
+good practice to allow your newsletter recievers to unsubscribe instantly.
+They will also have the ability to do it via the &lt;a href=&quot;https://tools.ietf.org/html/rfc8058&quot;&gt;&lt;code&gt;List-Unsubscribe&lt;/code&gt;&lt;/a&gt;
+mail header.&lt;/p&gt;
+
+&lt;p&gt;I also configured the lane with my SMTP server details. I’m using
+AWS &lt;a href=&quot;https://aws.amazon.com/ses/&quot;&gt;Simple Email Service&lt;/a&gt;.
+It’s pretty easy to configure and it’s inexpensive:
+&lt;a href=&quot;https://aws.amazon.com/ses/pricing/&quot;&gt;$1 per 10,000 emails&lt;/a&gt; at the time of writing.
+To my knowledge, &lt;a href=&quot;https://sendgrid.com/pricing/&quot;&gt;SendGrid&lt;/a&gt;
+is two times more expensive,
+&lt;a href=&quot;https://www.smtp2go.com&quot;&gt;Smtp2Go&lt;/a&gt;—six times,
+&lt;a href=&quot;https://www.sendinblue.com/pricing/&quot;&gt;SendInBlue&lt;/a&gt;—four times,
+&lt;a href=&quot;https://www.mailgun.com/pricing&quot;&gt;MailGun&lt;/a&gt;—eight times, etc.:&lt;/p&gt;
+
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2018/09/mailanes-2.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, I configured my list to notify me via Telegram about all new subscribers,
+unsubscribe actions, etc.:&lt;/p&gt;
+
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2018/09/mailanes-3.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;You see, there is the Telegram chat ID where I’m getting notifications. You can
+do that too, you just need to know the chat ID. Start talking to the
+Telegram bot &lt;a href=&quot;https://t.me/mailanes_bot&quot;&gt;@mailanes_bot&lt;/a&gt; and it will tell you your chat ID.&lt;/p&gt;
+
+&lt;p&gt;I’m using Mailanes for my blog newsletter too. Try to subscribe to it
+&lt;a href=&quot;/about-me.html#subscribe&quot;&gt;here&lt;/a&gt; and you will see what happens.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/yegor256/mailanes/blob/master/README.md&quot;&gt;README&lt;/a&gt; fully
+explains all possible configuration options. The project is open, so feel free
+to contribute with &lt;a href=&quot;https://github.com/yegor256/mailanes&quot;&gt;pull requests&lt;/a&gt;.
+As I said above, it’s absolutely &lt;em&gt;free&lt;/em&gt;
+for anyone. Just sign up, create your lists, lanes, and campaigns, and go ahead.&lt;/p&gt;
+
+&lt;p&gt;If something is not clear in the system and you are lost, don’t hesitate
+to &lt;a href=&quot;https://github.com/yegor256/mailanes/issues&quot;&gt;submit a ticket&lt;/a&gt;,
+I will try to improve it or add documentation.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">There are other products doing something similar, including MailChimp, AWeber, and many others. They are great. Maybe. I don’t really know. I tried some of them, some time ago. And I was frustrated. They are expensive, clumsy, and heavy. That’s my experience. I wanted something lightweight, where I can upload a list of emails, create a simple HTML/text letter, configure my SMTP outbound server, and call it a day. I spent a few days and created Mailanes. It’s free (for all of you), it’s simple, and it’s open source.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/mailanes-1.png" /></entry><entry><title type="html">Don’t Make Me Guess</title><link href="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html" rel="alternate" type="text/html" title="Don't Make Me Guess" /><published>2018-10-16T00:00:00+00:00</published><updated>2018-10-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/16/dont-make-me-guess</id><content type="html" xml:base="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html">&lt;p&gt;It’s Sunday. I’m at home, drinking tea and writing a new document for
 one of our future investors. One of my contacts in Telegram all of a sudden shoots me
 a message. I haven’t talked to this guy for at least two months. He is
 a software developer. I know him because he works at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.
@@ -1107,34 +1203,4 @@ I walk away. As &lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&
 “Most of the disputes I’ve seen between founders could have been avoided if they’d been more careful about
 who they started a company with.” I don’t want to start a business with
 those who are scared of a prenup. I know that in that case
-the divorce will be ugly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">A few days ago, a friend of mine asked me to join him in a new startup. He said that he needed a partner, to help him partially finance the project, promote it, bring in new ideas, and push the business forward. I liked the business idea and wanted to participate. I started to ask questions about our future partnership and attempted to draw a simple partnership agreement. He quickly got offended. He said that he was looking for a real partner, who would share his goals and would never require any papers or lawyers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/run-lola-run.jpg" /></entry><entry><title type="html">Either Bugs or Pull Requests … or You Are Out</title><link href="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html" rel="alternate" type="text/html" title="Either Bugs or Pull Requests ... or You Are Out" /><published>2018-07-24T00:00:00+00:00</published><updated>2018-07-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/07/24/bugs-or-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2018/07/24/bugs-or-pull-requests.html">&lt;p&gt;Here is how it goes, over and over again. I find a new developer for one of
-my projects managed by Zerocracy. He claims to be an expert with 10 years
-of hands-on coding experience, $60 hourly rate (we &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;don’t hire&lt;/a&gt; US guys),
-and fluent English. Then he joins the project and attempts
-to close a few tickets. But he hardly can. For many reasons. Then he comes back
-and explains why &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;our microtasking methodology&lt;/a&gt;
-doesn’t work, trying to convince me
-that I have to pay him &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;per hour&lt;/a&gt;,
-instead of per result. Here is my answer.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Jamón, Jamón (1992) by Bigas Luna&quot; src=&quot;/images/2018/07/jamon-jamon.jpg&quot; longdesc=&quot;#97156df6&quot; /&gt;&lt;figcaption id=&quot;97156df6&quot;&gt;Jamón, Jamón (1992) by Bigas Luna&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;No matter how bad the methodology is, you do know that &lt;a href=&quot;/2014/04/13/bugs-are-welcome.html&quot;&gt;we pay&lt;/a&gt;
-for each bug that is found and properly reported, right?
-Check &lt;a href=&quot;https://www.zerocracy.com/policy.html#29&quot;&gt;§29&lt;/a&gt; of our Policy.&lt;/p&gt;
-
-&lt;p&gt;If the Code Base Is Bad, Why Don’t You Report Bugs?&lt;/p&gt;
-
-&lt;p&gt;If the Code Base Is Good, Where Are Your Pull Requests?&lt;/p&gt;
-
-&lt;p&gt;There is only one metric on our projects, which separates good programmers
-from bad ones: the amount of money they are making.
-You can make money contributing to the project either by
-1) reporting bugs (when you see problems)
-or 2) submitting pull requests (when you don’t see problems).&lt;/p&gt;
-
-&lt;p&gt;If none of that works for you, you are a bad programmer.&lt;/p&gt;
-
-&lt;p&gt;Good bye.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">Here is how it goes, over and over again. I find a new developer for one of my projects managed by Zerocracy. He claims to be an expert with 10 years of hands-on coding experience, $60 hourly rate (we don’t hire US guys), and fluent English. Then he joins the project and attempts to close a few tickets. But he hardly can. For many reasons. Then he comes back and explains why our microtasking methodology doesn’t work, trying to convince me that I have to pay him per hour, instead of per result. Here is my answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/07/jamon-jamon.jpg" /></entry></feed>
+the divorce will be ugly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">A few days ago, a friend of mine asked me to join him in a new startup. He said that he needed a partner, to help him partially finance the project, promote it, bring in new ideas, and push the business forward. I liked the business idea and wanted to participate. I started to ask questions about our future partnership and attempted to draw a simple partnership agreement. He quickly got offended. He said that he was looking for a real partner, who would share his goals and would never require any papers or lawyers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/run-lola-run.jpg" /></entry></feed>
