@@ -21,7 +21,6 @@ jb_picture:
 
 I believe that several roles should be present in a majority of
 software projects. Managed by
-<del>[Zerocracy](https://www.zerocracy.com)</del>
 [Zerocracy](https://www.zerocracy.com) according to the principles of
 [XDSD](https://www.xdsd.org), we've got all of them in our projects. However, beware that in other management
 methodologies, these roles may have different meanings. This blog post
