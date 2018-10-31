@@ -50,12 +50,12 @@ resolution, only these two characters have formal roles.
 
 {% quote Remember what is happening there - one person is selling his solution to another person %}
 
-The responsibility of the ticket reporter is to **defend the problem**. When I
+The responsibility of the ticket reporter is to _defend the problem_. When I
 [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
 I have to insist that it exists---this is my job. Others
 may tell me that I'm wrong and the bug is not there. They may tell
 me that they can't reproduce it. They may say that my description of
-a task is too **vague** and nobody understands it. There may be many issues
+a task is too _vague_ and nobody understands it. There may be many issues
 of that kind. My job is to do the best I can in order to *keep the ticket alive*.
 Obviously, if the bug is not reproducible, I'll be forced to close
 the ticket. However, until the ticket is closed, I'm its guardian angel. :)
@@ -63,7 +63,7 @@ the ticket. However, until the ticket is closed, I'm its guardian angel. :)
 {% youtube 7DYr8GYzJ6Q %}
 
 On the other hand, the responsibility of the ticket solver is to
-**defend the solution**. When a ticket is assigned to me and I have to resolve it,
+_defend the solution_. When a ticket is assigned to me and I have to resolve it,
 my job is to convince the reporter that my solution is good enough. He may
 tell me that my solution is not sufficient, not the most efficient, or
 incomplete. My job is to insist that I'm right and he is wrong. Well, of course,
@@ -89,7 +89,7 @@ focus on closing it as soon as possible
 
 Also, keep in mind that the sooner you close the ticket, the better job
 you will do for the project. Long-living tickets are a
-[management]({% pst 2017/jun/2017-06-06-gluten-free-management %}) **nightmare**.
+[management]({% pst 2017/jun/2017-06-06-gluten-free-management %}) _nightmare_.
 It is difficult to track them and control them. It's difficult to understand
 what's going on. Have you seen those two-year-old tickets in
 [open source projects]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
@@ -129,7 +129,7 @@ in the discussion.
 {% quote Anything would work, but not nothing %}
 
 If you close the ticket without a problem being properly solved,
-you put this money into the **trash** bin. Once the ticket is started, there
+you put this money into the _trash_ bin. Once the ticket is started, there
 is no way back. We can't just say, "Nah, ignore it; it's not important anymore."
 Your ticket already consumed project time and budget resources, and in order to turn
 them into something useful, you have to make sure that *some*
@@ -144,7 +144,7 @@ Look at it from a different perspective. When you started that ticket, you had
 something in mind. Something was not right with the product. That's why you
 reported a bug. If you close the ticket without anyone even touching that place
 of code, someone else will have the same concern in a few days or a few years.
-And then the project will have to **pay again** for a similar ticket or discussion
+And then the project will have to _pay again_ for a similar ticket or discussion
 of the same problem. Even if you're convinced that the issue you found in
 the code is not really an issue, ask a ticket resolver to document it right
 in the source code in order to prevent such confusion from happening again in the future.
@@ -153,7 +153,7 @@ in the source code in order to prevent such confusion from happening again in th
 
 Every time you post a message to the ticket, address it to someone. Otherwise,
 if you post just because you want to express your opinion, your
-comments become communication **noise**. Remember, a ticket is a conversation
+comments become communication _noise_. Remember, a ticket is a conversation
 between two people---one of them reported an issue and the other one is
 trying to fix it. Comments like, "How about we try another approach"
 or "I remember I had a similar issue some time ago" are very annoying
