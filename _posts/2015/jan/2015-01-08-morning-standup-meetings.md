@@ -270,3 +270,5 @@ his inability to manage people. To hide his lack of competence. To hide
 his fear of problems, challenges, and risks. If you're a good manager,
 don't embarrass yourself with daily stand-ups.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think about daily standup meetings? <a href="https://twitter.com/hashtag/agile?src=hash&amp;ref_src=twsrc%5Etfw">#agile</a> <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1058957021305815040?ref_src=twsrc%5Etfw">November 4, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
