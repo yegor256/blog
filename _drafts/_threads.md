@@ -20,7 +20,7 @@ Are you a Ruby developer? If you are, I'm pretty sure you have a very
 vague idea of what concurrency and thread safety are. No offense, but this
 is what I've figured out after dealing with Ruby code and speaking with Ruby
 programmers over the last half a year. I've been writing in Ruby pretty actively
-recently and I do like the language and the eco-system around it.
+recently and I do like the language and the ecosystem around it.
 Zold, the experimental cryptocurrency we are creating, is written almost
 entirely in Ruby. What does that tell you? I like Ruby. But when it comes
 to concurrency, there are blank spots. Big time.
@@ -44,7 +44,7 @@ end
 Front.run!
 {% endhighlight %}
 
-It's a simple web server. It does work - try to run it like this
+It's a simple web server. It does work---try to run it like this
 (you will need Ruby 2.3+ installed):
 
 {% highlight ruby %}
