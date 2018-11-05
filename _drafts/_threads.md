@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Do You Test Ruby Code for Thread-Safety?"
+title: "Do You Test Ruby Code for Thread Safety?"
 date: 2018-10-01
 place: Moscow, Russia
 tags: ruby
