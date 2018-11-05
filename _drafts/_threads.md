@@ -84,9 +84,9 @@ the server. I know, it's a very ugly approach, but I don't have anything
 better for this small example. Next we make an HTTP request and
 compare it with the expected number 1. Finally, we stop the web server.
 
-So far so good. Now, the question is what will happen when many
+So far so good. Now, the question is, what will happen when many
 requests are sent to the server? Will it still return the correct,
-unique numbers? Let's try:
+consecutive numbers? Let's try:
 
 {% highlight ruby %}
 def test_works
@@ -105,8 +105,8 @@ end
 
 Here we make a thousand requests and put all the returned numbers into an
 array. Then we `uniq` the array and `count` its elements. If there is
-a thousand of them---everything works fine, we received a correct list
-of unique numbers. I just tested it, and it works.
+a thousand of them---everything worked fine, we received a correct list
+of consecutive, unique numbers. I just tested it, and it works.
 
 But we are making them one by one, that's why our server doesn't have
 any problems. We aren't making them concurrently. They go strictly one
