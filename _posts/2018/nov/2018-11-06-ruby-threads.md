@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Do You Test Ruby Code for Thread Safety?"
-date: 2018-10-01
+date: 2018-11-06
 place: Moscow, Russia
 tags: ruby
 description: |
@@ -130,7 +130,7 @@ def test_works
     end
   end
   threads.each { |t| t.join }
-  assert_equal(1000, numbers.to_a.uniq.count)
+  assert_equal(1000, numbers.to_a.count)
   Front.stop!
 end
 {% endhighlight %}
@@ -165,7 +165,7 @@ def test_works
   Threads.new(5).assert(1000) do
     numbers << Net::HTTP.get(URI('http://localhost:4567/')).to_i
   end
-  assert_equal(1000, numbers.to_a.uniq.count)
+  assert_equal(1000, numbers.to_a.count)
   Front.stop!
 end
 {% endhighlight %}
