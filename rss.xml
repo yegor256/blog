@@ -1,4 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-01T06:54:29+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Mailanes.com Helps Manage Newsletters and Mailing Lists</title><link href="https://www.yegor256.com/2018/10/30/mailanes.html" rel="alternate" type="text/html" title="Mailanes.com Helps Manage Newsletters and Mailing Lists" /><published>2018-10-30T00:00:00+00:00</published><updated>2018-10-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/30/mailanes</id><content type="html" xml:base="https://www.yegor256.com/2018/10/30/mailanes.html">&lt;p&gt;There are other products doing something similar, including
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-06T18:17:51+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Do You Test Ruby Code for Thread Safety?</title><link href="https://www.yegor256.com/2018/11/06/ruby-threads.html" rel="alternate" type="text/html" title="Do You Test Ruby Code for Thread Safety?" /><published>2018-11-06T00:00:00+00:00</published><updated>2018-11-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/06/ruby-threads</id><content type="html" xml:base="https://www.yegor256.com/2018/11/06/ruby-threads.html">&lt;p&gt;Are you a Ruby developer? If you are, I’m pretty sure you have a very
+vague idea of what concurrency and thread safety are. No offense, but this
+is what I’ve figured out after dealing with Ruby code and speaking with Ruby
+programmers over the last half a year. I’ve been writing in Ruby pretty actively
+recently and I do like the language and the ecosystem around it.
+Zold, the experimental cryptocurrency we are creating, is written almost
+entirely in Ruby. What does that tell you? I like Ruby. But when it comes
+to concurrency, there are blank spots. Big time.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Look at this Ruby class:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sinatra&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;0&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It’s a simple web server. It does work—try to run it like this
+(you will need Ruby 2.3+ installed):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sinatra&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rb&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, open &lt;code&gt;http://localhost:4567&lt;/code&gt; and you will see the counter. Refresh
+the page and the counter will increment. Try again. It works. The counter
+is in the file &lt;code&gt;idx.txt&lt;/code&gt; and it’s essentially
+a &lt;a href=&quot;/2018/07/03/global-variables.html&quot;&gt;global variable&lt;/a&gt;,
+which we increment on every HTTP request.&lt;/p&gt;
+
+&lt;p&gt;Let’s create a unit test for it, to make sure it is automatically tested:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;minitest/autorun&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;net/http&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;uri&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FrontTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Minitest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Test&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;OK, it’s not a unit test, but more like an integration test.
+First we start a web server in a background thread. Then
+we wait for a second, to give that thread enough time to bootstrap
+the server. I know, it’s a very ugly approach, but I don’t have anything
+better for this small example. Next we make an HTTP request and
+compare it with the expected number 1. Finally, we stop the web server.&lt;/p&gt;
+
+&lt;p&gt;So far so good. Now, the question is, what will happen when many
+requests are sent to the server? Will it still return the correct,
+consecutive numbers? Let’s try:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uniq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here we make a thousand requests and put all the returned numbers into an
+array. Then we &lt;code&gt;uniq&lt;/code&gt; the array and &lt;code&gt;count&lt;/code&gt; its elements. If there is
+a thousand of them—everything worked fine, we received a correct list
+of consecutive, unique numbers. I just tested it, and it works.&lt;/p&gt;
+
+&lt;p&gt;But we are making them one by one, that’s why our server doesn’t have
+any problems. We aren’t making them concurrently. They go strictly one
+after another. Let’s try to use a few additional threads to simulate
+parallel execution of HTTP requests:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;concurrent/set&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;First of all, we keep the list of numbers in a
+&lt;a href=&quot;http://ruby-concurrency.github.io/concurrent-ruby/master/Concurrent/Set.html&quot;&gt;&lt;code&gt;Concurrent::Set&lt;/code&gt;&lt;/a&gt;, which
+is a thread-safe version of Ruby &lt;a href=&quot;http://ruby-doc.org/stdlib-2.4.0/libdoc/set/rdoc/Set.html&quot;&gt;&lt;code&gt;Set&lt;/code&gt;&lt;/a&gt;.
+Second, we start five background threads, each of which makes 200 HTTP requests.
+They all run in parallel and we wait for them to finish by calling &lt;code&gt;join&lt;/code&gt; on
+each of them. Finally, we take the numbers out of the Set and validate
+the correctness of the list.&lt;/p&gt;
+
+&lt;p&gt;No surprise, it fails.&lt;/p&gt;
+
+&lt;p&gt;Of course, you know why. Because the implementation is not &lt;em&gt;thread-safe&lt;/em&gt;. When
+one thread is reading the file, another one is writing it. Eventually, and very
+soon, they clash and the contents of the file is broken. The more threads
+we put into the test, the less accurate will be the result.&lt;/p&gt;
+
+&lt;p&gt;In order to make this type of testing easier I created
+&lt;a href=&quot;https://github.com/yegor256/threads&quot;&gt;threads&lt;/a&gt;,
+a simple Ruby gem. Here is how it works:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;threads&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That’s it. This single line with &lt;code&gt;Threads.new()&lt;/code&gt; replaces all other lines,
+where we have to create threads, make sure they start at the same time,
+and then collect their results and make sure their stack traces are visible
+in the console if they crash (by default, the error log of a background
+thread is not visible).&lt;/p&gt;
+
+&lt;p&gt;Try this gem in your projects, it’s pretty well tested already and I
+use it in all my concurrency tests.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">Are you a Ruby developer? If you are, I’m pretty sure you have a very vague idea of what concurrency and thread safety are. No offense, but this is what I’ve figured out after dealing with Ruby code and speaking with Ruby programmers over the last half a year. I’ve been writing in Ruby pretty actively recently and I do like the language and the ecosystem around it. Zold, the experimental cryptocurrency we are creating, is written almost entirely in Ruby. What does that tell you? I like Ruby. But when it comes to concurrency, there are blank spots. Big time.</summary></entry><entry><title type="html">Mailanes.com Helps Manage Newsletters and Mailing Lists</title><link href="https://www.yegor256.com/2018/10/30/mailanes.html" rel="alternate" type="text/html" title="Mailanes.com Helps Manage Newsletters and Mailing Lists" /><published>2018-10-30T00:00:00+00:00</published><updated>2018-10-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/30/mailanes</id><content type="html" xml:base="https://www.yegor256.com/2018/10/30/mailanes.html">&lt;p&gt;There are other products doing something similar, including
 &lt;a href=&quot;http://www.mailchimp.com/&quot;&gt;MailChimp&lt;/a&gt;, &lt;a href=&quot;http://www.aweber.com/&quot;&gt;AWeber&lt;/a&gt;, and
 many others. They are great. Maybe. I don’t really know. I tried some of them,
 some time ago. And I was frustrated. They are expensive, clumsy, and heavy.
@@ -1104,101 +1253,4 @@ methods, manipulators.&lt;/p&gt;
 in &lt;a href=&quot;http://goo.gl/W2WVMk&quot;&gt;Elegant Objects&lt;/a&gt;, Volume 1, Section 2.4.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How would you name a method of a class Document that reads and returns its content? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1033605343274840064?ref_src=twsrc%5Etfw&quot;&gt;August 26, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Here is a simple principle for naming methods in OOP, which I’m trying to follow in my code: it’s a verb if it manipulates, it’s a noun if it builds. That’s it. Nothing in between. Methods like saveFile() or getTitle() don’t fit and must be renamed and refactored. Moreover, methods that “manipulate” must always return void, for example print() or save(). Let me explain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/the-night-of.jpg" /></entry><entry><title type="html">70/70</title><link href="https://www.yegor256.com/2018/08/14/seventy-percent.html" rel="alternate" type="text/html" title="70/70" /><published>2018-08-14T00:00:00+00:00</published><updated>2018-08-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/14/seventy-percent</id><content type="html" xml:base="https://www.yegor256.com/2018/08/14/seventy-percent.html">&lt;p&gt;A few days ago, a friend of mine asked me to join him in a new startup.
-He said that he needed a partner, to help him partially finance the project, promote
-it, bring in new ideas, and push the business forward. I liked the business
-idea and wanted to participate. I started to ask questions about our
-future partnership and attempted to draw a simple partnership agreement.
-He quickly got offended. He said that he was looking for a &lt;em&gt;real&lt;/em&gt; partner,
-who would share his goals and would never require any papers or lawyers.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Lola rennt (1998) by Tom Tykwer&quot; src=&quot;/images/2018/08/run-lola-run.jpg&quot; longdesc=&quot;#8ad64182&quot; /&gt;&lt;figcaption id=&quot;8ad64182&quot;&gt;Lola rennt (1998) by Tom Tykwer&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is a list of the questions I asked him:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What happens with my shares if I stop working?&lt;/li&gt;
-  &lt;li&gt;Can I start a similar business with another partner later?&lt;/li&gt;
-  &lt;li&gt;Who will have a checkbook and bank account access?&lt;/li&gt;
-  &lt;li&gt;Who has final say if we disagree?&lt;/li&gt;
-  &lt;li&gt;Do I need your permission to sell my shares to a friend?&lt;/li&gt;
-  &lt;li&gt;Will there be any vesting schedule?&lt;/li&gt;
-  &lt;li&gt;Who approves expenses?&lt;/li&gt;
-  &lt;li&gt;Who controls the domain name registrar account?&lt;/li&gt;
-  &lt;li&gt;Who pays if the project needs more money?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For the majority of people I attempt to do business with, these questions are
-indeed offensive. They feel like I’m trying to draw
-a &lt;a href=&quot;https://en.wikipedia.org/wiki/Prenuptial_agreement&quot;&gt;prenup&lt;/a&gt; between
-us, while they would prefer our “marriage” to be based solely on love.
-They would have us promise to never betray each other’s mutual interests but then
-the business suffers and eventually collapses.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;They just want to have 70%... each!!! And they have it.&lt;/aside&gt;
-
-&lt;p&gt;Why so? Because it’s impossible to be equal in business (just like it’s impossible
-to be equal in marriage, but that’s a topic for another blog post).
-Eventually a conflict of interests shows up and the inability to resolve it
-affects and damages the business.
-“Co-founder disputes have historically been one of the top reasons
-startups fail at the earliest possible stage,”
-&lt;a href=&quot;https://techcrunch.com/2017/02/18/co-founder-conflict/&quot;&gt;says&lt;/a&gt;
-&lt;a href=&quot;https://twitter.com/garrytan&quot;&gt;Garry Tan&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I would call that type of partnership, which many young startup founders
-enter into, “70/70.” For them the initial agreement is not a formula of future
-growth, but a symbol of &lt;em&gt;respect&lt;/em&gt;. Each of them wants to be respected and that’s
-why they demand 70% of the business for themselves. They don’t care and
-don’t understand how exactly the distribution of assets and profit
-will work in the future. They don’t foresee forthcoming conflicts and fights,
-mostly because they are too young or naive (or both).
-According to the &lt;a href=&quot;https://hbr.org/2008/02/the-founders-dilemma&quot;&gt;The Founder’s Dilemma&lt;/a&gt;
-by &lt;a href=&quot;https://en.wikipedia.org/wiki/Noam_T._Wasserman&quot;&gt;Noam Wasserman&lt;/a&gt;,
-“Founders’ attachment, overconfidence, and naïveté may be necessary
-to get new ventures up and running, but these emotions later create problems.”&lt;/p&gt;
-
-&lt;p&gt;They just want to have 70%… each!!!&lt;/p&gt;
-
-&lt;p&gt;It’s not even 50/50 in most cases, but 70/70. This is what makes it funny.
-Very often each partner thinks that he or she is the major contributor
-to the project and that’s why it’s 70%.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;You can't trust me to stand by my words, if there were no words.&lt;/aside&gt;
-
-&lt;p&gt;And they have it.&lt;/p&gt;
-
-&lt;p&gt;When I was younger, I had no problem with entering into
-such an agreement. I was saying to myself: he wants 70% but he doesn’t
-understand that in reality he won’t even get a single percent, since, for example, we
-didn’t put the ownership of the domain name into the contract. It is obvious
-right from the start that the partner is ready to trust me blindly,
-without even thinking about possible consequences. In the end, all of us, and our
-startups, were losing.&lt;/p&gt;
-
-&lt;p&gt;Don’t get me wrong, trust between partners is a crucial and mandatory element
-of any deal. But you can’t trust me to stand by my words, if there were &lt;em&gt;no words&lt;/em&gt;.
-If we never discussed, for example, how much I get when I quit because
-I’m fed up with you, I will try to get as much as possible and where exactly
-that line of 70% goes will be a subject for an ugly debate. And this will
-happen in very different circumstances, where there will be, most probably,
-no love between us or maybe even friendship. In that future fight the one
-who is the most aggressive and cunning will win. Do you really want that
-to be me? Or do you expect it to be you?&lt;/p&gt;
-
-&lt;p&gt;Now I’m a bit older and more experienced. I’ve seen those ugly debates and don’t want them anymore.
-I don’t want the investment of my time and my money to go down the drain. I want
-to know upfront what exactly will happen with them in a month, a year,
-and a few decades, when I retire and my grandchildren inherit them.&lt;/p&gt;
-
-&lt;p&gt;That’s why I ask all those “offensive” questions upfront. If the other side does
-indeed get offended, I attempt to explain to them what I just said in this article.
-If they don’t understand and still want to marry me out of love,
-I walk away. As &lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&quot;&gt;Paul Graham&lt;/a&gt;, a co-founder of Y Combinator,
-&lt;a href=&quot;http://www.paulgraham.com/startupmistakes.html&quot;&gt;said&lt;/a&gt;,
-“Most of the disputes I’ve seen between founders could have been avoided if they’d been more careful about
-who they started a company with.” I don’t want to start a business with
-those who are scared of a prenup. I know that in that case
-the divorce will be ugly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">A few days ago, a friend of mine asked me to join him in a new startup. He said that he needed a partner, to help him partially finance the project, promote it, bring in new ideas, and push the business forward. I liked the business idea and wanted to participate. I started to ask questions about our future partnership and attempted to draw a simple partnership agreement. He quickly got offended. He said that he was looking for a real partner, who would share his goals and would never require any papers or lawyers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/run-lola-run.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Here is a simple principle for naming methods in OOP, which I’m trying to follow in my code: it’s a verb if it manipulates, it’s a noun if it builds. That’s it. Nothing in between. Methods like saveFile() or getTitle() don’t fit and must be renamed and refactored. Moreover, methods that “manipulate” must always return void, for example print() or save(). Let me explain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/the-night-of.jpg" /></entry></feed>

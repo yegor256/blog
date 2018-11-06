@@ -2323,6 +2323,7 @@ ECMAScript
 eco-friendly
 eco-manager
 eco-titles
+ecosystem
 ed
 eden
 edge
@@ -2635,6 +2636,7 @@ experience
 experienced
 experiencing
 experiment
+experimental
 experimentally
 experimented
 experimenting
@@ -5030,6 +5032,7 @@ noun
 nouns
 nov
 novel
+november
 novices
 now
 now---the
@@ -7172,6 +7175,7 @@ standing
 standish
 standpoint---like
 stands
+standup
 standups
 stanford
 stapler
@@ -7749,6 +7753,7 @@ trace-in
 trace-out
 traceability
 traceable
+traces
 track
 tracked
 tracker
