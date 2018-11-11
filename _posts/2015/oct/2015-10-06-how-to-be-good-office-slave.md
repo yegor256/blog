@@ -96,6 +96,9 @@ bad, but because your life belongs to this company.
 Loyalty is what makes you a
 [good slave]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}); don't forget it!
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">When being employed, do you go to job interviews? <a href="https://twitter.com/hashtag/career?src=hash&amp;ref_src=twsrc%5Etfw">#career</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1061538963180191746?ref_src=twsrc%5Etfw">November 11, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 **Don't Take Sides**.
 It's just too risky. In any argument, you can always find pros and cons
 for both sides, right? So why support one of them? You may be wrong and
