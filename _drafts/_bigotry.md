@@ -22,7 +22,7 @@ jb_picture:
 [Bobby Fischer](https://en.wikipedia.org/wiki/Bobby_Fischer),
 the eleventh World Chess Champion, was one of the best chess players
 of the last century. Did you know that,
-along with [anti-semitic statements](https://en.wikiquote.org/wiki/Bobby_Fischer),
+along with [anti-Semitic statements](https://en.wikiquote.org/wiki/Bobby_Fischer),
 [he also said](https://www.theguardian.com/books/2007/apr/22/sportandleisure.features)
 that women chess players "aren't creative and are all fish"?
 Did you also know that he publicly described the
@@ -37,7 +37,7 @@ the founder of the
 [Ford Motor Company](https://en.wikipedia.org/wiki/Ford_Motor_Company),
 was one of the greatest American entrepreneurs. Did you know that he
 [said](https://en.wikiquote.org/wiki/Henry_Ford#Quotes) in 1919
-that "the Jew is the threat" and wrote an anti-semitic set of booklets called
+that "the Jew is the threat" and wrote an anti-Semitic set of booklets called
 [The International Jew](https://en.wikipedia.org/wiki/The_International_Jew)?
 
 [Thomas Jefferson](https://en.wikipedia.org/wiki/Thomas_Jefferson),
@@ -61,7 +61,7 @@ Most probably, just like me, you don't. Most probably you have your own
 views. Political, social, racial, and what have you.
 The question is---what do you do with them? And what do you do with those you
 disagree with? Do you stop listening to them? Do you call them stupid,
-despite their obvious achivements in their trades? Do you ostracize them
+despite their obvious achievements in their trades? Do you ostracize them
 in order to stay only with those who share your views?
 
 Here comes an example.
@@ -85,15 +85,15 @@ of conduct. Apologies for the late notice on this.
 I never asked, but I bet they referred to
 [this blog post]({% pst 2017/jul/2017-07-04-sexism %}) and
 [this recent tweet](https://twitter.com/yegor256/status/1056447293535281154)
-published one day before the cancelation email.
+published one day before the cancellation email.
 
 My social views conflict with their aims and that's why they decided to not let me
 speak about DevOps!
 
 I wonder, what would they have done if they had found out
-that I was, for example, a muslim and believed [that](https://en.wikipedia.org/wiki/Women_in_Islam)
+that I was, for example, a Muslim and believed [that](https://en.wikipedia.org/wiki/Women_in_Islam)
 "a woman's sphere of operation is the home, and a man's corresponding sphere is the outside world."
-What if they had find out that I was a [mormon](https://en.wikipedia.org/wiki/Mormonism_and_women) and believed
+What if they had find out that I was a [Mormon](https://en.wikipedia.org/wiki/Mormonism_and_women) and believed
 that "women have qualities of faithfulness, benevolence, and charity that balance
 the more aggressive and competitive nature of man"?
 What if they had found out that I was a member of the KKK, or a communist,
@@ -102,7 +102,7 @@ What if I was a supporter of Trump, Putin, or
 [Kim Jong-un](https://en.wikipedia.org/wiki/Kim_Jong-un)?
 
 According to the logic in their email, they would also cancel my talk. They would
-cancel all talks coming from muslims, mormons, communists, orthodox christians,
+cancel all talks coming from Muslims, Mormons, communists, Orthodox Christians,
 and many others, who are not quiet and tolerant liberals,
 preferably without any social or political views?
 They would also never play chess with Kasparov, drive Ford cars, and live
@@ -118,9 +118,9 @@ if you 95% agree with the consensus side, seems ill-advised."
 Doesn't it remind you of the time of the Soviet Union and the Third Reich? Over a half a century
 ago Nazis and commies were fighting with those who were thinking differently.
 What are we doing today? Aren't we fighting with those who think differently
-about women, jews, people of color, homosexuals, and many other controversial topics?
+about women, Jews, people of color, homosexuals, and many other controversial topics?
 Einstein's ideas in physics were attacked because he was a
-[jewish pacifistic internationalist](https://www.scientificamerican.com/article/how-2-pro-nazi-nobelists-attacked-einstein-s-jewish-science-excerpt1/).
+[Jewish pacifistic internationalist](https://www.scientificamerican.com/article/how-2-pro-nazi-nobelists-attacked-einstein-s-jewish-science-excerpt1/).
 Now it's time to [attack programmers](https://www.bloomberg.com/news/articles/2017-08-08/google-fires-employee-behind-controversial-diversity-memo)
 who seem to be sexist. Just a change of terms, but the principle is the same.
 
