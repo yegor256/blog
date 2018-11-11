@@ -99,13 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Beeline.svg/1144px-Beeline.svg.png" class="future-talk" alt="Bee Mobile 2018"/><br/>
-Something about software testing...<br/>
-[Bee Mobile Meetup](https://www.facebook.com/events/1913869582250737/)<br/>
-Moscow, Russia<br/>
-7 November.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://www.devopspro.ru/wp-content/uploads/2018/07/logo_devops_moscow-min.png" class="future-talk" alt="DevOpsPro 2018"/><br/>
 Expertise vs Experts<br/>
 [DevOpsPro](https://www.devopspro.ru/speakers/)<br/>
@@ -149,6 +142,14 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/y0X-WQ1bOUI/mqdefault.jpg" class="post-talk" alt="Bee Mobile 2018"/><br/>
+Software Testing Philosophy;
+[Bee Mobile Meetup](https://www.facebook.com/events/1913869582250737/);
+Moscow, Russia;
+7 November;
+[видео](https://youtu.be/y0X-WQ1bOUI).
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">A</aside>
