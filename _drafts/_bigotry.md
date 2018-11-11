@@ -40,7 +40,7 @@ was one of the greatest American entrepreneurs. Did you know that he
 that "the Jew is the threat" and wrote an anti-Semitic set of booklets called
 [The International Jew](https://en.wikipedia.org/wiki/The_International_Jew)?
 
-[Thomas Jefferson](https://en.wikipedia.org/wiki/Thomas_Jefferson),
+[Thomas Jefferson](https://en.wikipedia.org/wiki/Thomas_Jefferson)
 was the third president of the United States. Did you know that he believed
 that blacks lacked basic human emotions and
 [claimed](http://www.nytimes.com/2012/12/01/opinion/the-real-thomas-jefferson.html)
@@ -82,7 +82,7 @@ the event as an attendee, assuming you accept the terms of our code
 of conduct. Apologies for the late notice on this.
 {% endhighlight %}
 
-I never asked, but I bet they referred to
+I never asked, but I bet they are referring to
 [this blog post]({% pst 2017/jul/2017-07-04-sexism %}) and
 [this recent tweet](https://twitter.com/yegor256/status/1056447293535281154)
 published one day before the cancellation email.
@@ -104,9 +104,9 @@ What if I was a supporter of Trump, Putin, or
 According to the logic in their email, they would also cancel my talk. They would
 cancel all talks coming from Muslims, Mormons, communists, Orthodox Christians,
 and many others, who are not quiet and tolerant liberals,
-preferably without any social or political views?
-They would also never play chess with Kasparov, drive Ford cars, and live
-in the United States, who made the mistake of having a racist president.
+preferably without any social or political views.
+They would also never play chess with Kasparov, drive Ford cars, or live
+in the United States, which made the mistake of having a racist president.
 Is it really inclusiveness they care so much about?
 
 As Sam Altman, a co-founder of Y-Combinator,
@@ -115,7 +115,7 @@ said in his [blog post](http://blog.samaltman.com/e-pur-si-muove),
 heresies in San Francisco every year. Debating a controversial idea, even
 if you 95% agree with the consensus side, seems ill-advised."
 
-Doesn't it remind you of the time of the Soviet Union and the Third Reich? Over a half a century
+Doesn't it remind you of the time of the Soviet Union and the Third Reich? Over half a century
 ago Nazis and commies were fighting with those who were thinking differently.
 What are we doing today? Aren't we fighting with those who think differently
 about women, Jews, people of color, homosexuals, and many other controversial topics?
@@ -130,19 +130,19 @@ a Nobel Prize winner, is the "heritage of communism" used by a "self-appointed g
 to impose their views on others."
 
 Did we really learn any lessons from the last century or are we still the same
-good old bigots, looking for a reason to hunt those who we disagree with?
+good old bigots, looking for a reason to hunt down those who we disagree with?
 
 <hr/>
 
 You want to know the name of the conference?
 It was [DevOpsDays Oslo](https://www.devopsdays.org/events/2018-oslo/welcome/).
-They are not alone. There were a few others, who canceled my talks.
+They are not alone. There were a few others also who canceled my talks.
 Here is a non-complete list of them (I will keep updating the list, if and when
 I know for sure what the reason for rejection was):
 
   * [DevOpsDays Oslo](https://www.devopsdays.org/events/2018-oslo/welcome/) by Anders Bruvik.
   * [vJUG](https://virtualjug.com/) by [Simon Maple](https://www.yegor256.com/2017/07/04/sexism.html#comment-3403001068).
 
-I will not hide their names. Just like Nazi criminals, these guys should be known,
+I will not hide their names. Just like Nazi criminals these guys should be known,
 visible, and prosecuted, as soon as possible.
 
