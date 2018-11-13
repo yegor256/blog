@@ -167,6 +167,7 @@ ahead
 AI-powered
 aim
 aiming
+aims
 aintshy
 air
 airbnb
@@ -219,6 +220,7 @@ alternative
 alternatively
 alternatives
 although
+altman
 altogether
 altruism
 altruistic
@@ -256,6 +258,7 @@ anarchy
 ancestors
 ancient
 and
+anders
 andreea
 android
 andronache
@@ -288,6 +291,7 @@ annoying
 annoys
 annual
 annually
+anomalous
 another
 answer
 answered
@@ -300,6 +304,7 @@ anti-depressant
 anti-OOP
 anti-pattern
 anti-patterns
+anti-semitic
 anti-social
 antwerp
 any
@@ -475,6 +480,8 @@ attach
 attached
 attachment
 attachments
+attack
+attacked
 attempt
 attempted
 attempts
@@ -661,6 +668,7 @@ bench
 beneficial
 benefit
 benefits
+benevolence
 benner
 berlin
 bernie
@@ -695,6 +703,7 @@ big-picture
 big-time
 bigger
 biggest
+bigots
 bill
 billed
 billing
@@ -722,6 +731,8 @@ bjarne
 black
 blackberry
 blacked
+blacks
+blacks'
 blah
 blame
 blame---it's
@@ -765,6 +776,7 @@ bonuses
 book
 book's
 bookkeeping
+booklets
 bookmarks
 books
 bookshelf
@@ -856,6 +868,7 @@ browsers
 browsing
 bruce
 brutti
+bruvik
 BSc
 BSD
 BTC
@@ -963,7 +976,10 @@ campaign
 campaigns
 can
 can't
+cancel
+canceled
 cancellable
+cancellation
 cancer
 candidate
 candidate's
@@ -1094,6 +1110,7 @@ charges
 charging
 charisma
 charismatic
+charity
 charm
 chars
 charts
@@ -1122,6 +1139,7 @@ cheering
 cheerleader
 cheerleaders
 chef
+chess
 chew
 chicken
 chief
@@ -1140,6 +1158,7 @@ chose
 chosen
 chris
 chris's
+christians
 christmas
 chrome
 chronological
@@ -1293,6 +1312,7 @@ collectors
 collects
 collisions
 colloquy
+color
 colorizejs
 colors
 colosseum
@@ -1320,6 +1340,7 @@ commas
 comment
 comments
 commercial
+commies
 commission
 commit
 commitment
@@ -1340,6 +1361,9 @@ communication
 communications
 communicative
 communicator
+communism
+communist
+communists
 communities
 community
 compact
@@ -1566,6 +1590,7 @@ controller
 controllers
 controlling
 controls
+controversial
 convenience
 convenient
 convention
@@ -1624,6 +1649,7 @@ correctly
 correctness
 correlated
 correspond
+corresponding
 corrupted
 corruption
 cosmetic
@@ -1700,6 +1726,7 @@ cried
 crime
 crimen
 crimes---so
+criminals
 cripple
 criteria
 criterion
@@ -1821,6 +1848,7 @@ death
 death---with
 debate
 debates
+debating
 debt
 debts
 debug
@@ -2220,6 +2248,7 @@ doomed
 door
 door---anyone
 doors
+doris
 dorks
 dot
 dotscale
@@ -2279,6 +2308,7 @@ DTOs
 dude
 due
 dues
+dull
 dumb
 dumber
 dummies
@@ -2354,6 +2384,7 @@ ehcache
 eight
 eighth
 einstein
+einstein's
 either
 el
 elastic
@@ -2368,6 +2399,7 @@ elements
 elevator
 eleven
 eleven-page
+eleventh
 eliciting
 eligible
 eliminating
@@ -2721,6 +2753,7 @@ failure-ready
 failure-resilient
 failures
 fair
+faithfulness
 fake
 fakes
 fall
@@ -2863,6 +2896,7 @@ firm
 firm's
 first
 firstitem
+fischer
 fish
 fist
 fit
@@ -3365,11 +3399,14 @@ helpfulness
 helping
 helps
 hence
+henry
 her
 here
 here's
 here---
 here---why
+heresies
+heritage
 hero
 hero-driven
 heroes
@@ -3432,6 +3469,7 @@ homebrew
 homepage
 homework
 homogeneous
+homosexuals
 honest
 honestly
 honesty
@@ -3538,6 +3576,7 @@ ignore
 ignored
 ignores
 ignoring
+ill-advised
 illegal
 illinois
 illness
@@ -3550,6 +3589,7 @@ illustrative
 image
 images
 imaginary
+imagination
 imaginative
 imagine
 imitate
@@ -3583,6 +3623,7 @@ important---step
 importantly
 importers
 imports
+impose
 impossible
 impractical
 impress
@@ -3622,6 +3663,7 @@ include
 included
 includes
 including
+inclusiveness
 income
 incoming
 incomparably
@@ -3667,6 +3709,7 @@ inevitable
 inevitably
 inexpensive
 infamous
+inferior
 infinite
 infinity
 influence
@@ -3790,6 +3833,8 @@ interior
 internal
 internally
 internals
+international
+internationalist
 internet
 interpretation
 interpreter
@@ -3872,6 +3917,7 @@ is
 is---no
 is---objects
 is---surprisingly---a
+is---what
 is---who
 is---why
 is---you
@@ -3970,6 +4016,7 @@ JEEConf
 jeff
 jeff's
 jeffbarr
+jefferson
 jekyll
 jenkins
 jeopardize
@@ -3977,6 +4024,9 @@ JEP
 jerry
 jersey
 jetbrains
+jew
+jewish
+jews
 jez
 JFokus
 jgd
@@ -4003,6 +4053,7 @@ joking
 joKX
 jon
 jones
+jong-un
 joseph
 joshua
 journal
@@ -4050,6 +4101,7 @@ kanban
 kapralov
 karachi
 karl
+kasparov
 katakuris
 katie
 kawasaki
@@ -4081,6 +4133,7 @@ killers
 killing
 kilograms
 kilos
+kim
 kimmel
 kind
 kindle
@@ -4092,6 +4145,7 @@ kiss
 kissed
 kitchen
 kitties
+KKK
 knew
 knife
 knocking
@@ -4119,6 +4173,7 @@ label
 labeled
 labor
 lack
+lacked
 lacking
 lacks
 ladder
@@ -4208,6 +4263,7 @@ length
 lengthy
 leone
 less
+lessing
 lesson
 lessons
 let
@@ -4222,6 +4278,7 @@ levinson's
 lexer
 liability
 liao
+liberals
 libraries
 library
 library---
@@ -4385,6 +4442,7 @@ MacOS
 macports
 macro-tasking
 made
+magazine
 magic
 Magnum-CI
 mail
@@ -4419,6 +4477,7 @@ mam
 mambo-jambo
 mammals
 man
+man's
 man-month
 manage
 manageability
@@ -4457,6 +4516,7 @@ manuals
 many
 many-hour-long
 map
+maple
 mapping
 mar
 march
@@ -4794,6 +4854,8 @@ morale
 more
 more---they
 moreover
+mormon
+mormons
 morning
 moron
 moronic
@@ -4812,6 +4874,7 @@ motivation
 motivational
 motivator
 motives
+motor
 mount
 mourn
 mouth
@@ -4824,6 +4887,7 @@ moving
 movo
 mozilla
 mph
+MRM
 MS
 MS-DOS
 MSc
@@ -4836,6 +4900,7 @@ multi-national
 multi-page
 multi-release
 multi-resolution
+multi-server
 multi-step
 multi-threading
 multi-tier
@@ -4847,6 +4912,8 @@ multiton
 mush
 music
 musk
+muslim
+muslims
 must
 must-have
 must-read
@@ -4891,6 +4958,7 @@ naturally
 nature
 navigate
 nazi
+nazis
 nbsp
 NCC
 nd
@@ -4969,6 +5037,7 @@ no-server
 no-tests-upfront
 noaltruism
 noam
+nobel
 noble
 nobodies
 nobody
@@ -4984,6 +5053,7 @@ non-ambiguous
 non-behavioral
 non-comment
 non-compete
+non-complete
 non-completion
 non-compromising
 non-descriptive
@@ -5231,12 +5301,14 @@ originated
 originates
 origins
 ORM
+orthodox
 orthogonal
 OS
 oscar
 oslo
 OSS
 OSSRH
+ostracize
 OSX
 other
 other's
@@ -5312,6 +5384,7 @@ owning
 owns
 paas
 pace
+pacifistic
 pacino
 pack
 packagable
@@ -5518,6 +5591,7 @@ phrase
 physical
 physically
 physicians
+physics
 pick
 picked
 picks
@@ -5571,6 +5645,7 @@ platform---
 platform-specific
 platforms
 play
+playboy
 played
 player
 players
@@ -5601,6 +5676,7 @@ PO
 pocket
 podcast
 poems
+poetry
 point
 point---they
 pointer
@@ -5747,6 +5823,7 @@ presented
 presenteeism
 presenting
 presents
+president
 presidents
 press
 pressman
@@ -5915,6 +5992,7 @@ proposing
 proprietary
 pros
 prose
+prosecuted
 prospect
 prospective
 prospects
@@ -5993,6 +6071,7 @@ pushes
 pushing
 pushover
 put
+putin
 puts
 putting
 puzzle
@@ -6039,6 +6118,8 @@ quote
 quotes
 quoting
 race
+racial
+racist
 rack
 radiate
 radical
@@ -6321,6 +6402,7 @@ representatives
 represented
 representing
 represents
+repression
 reproduce
 reproduced
 reproduced---it's
@@ -6559,6 +6641,7 @@ salary
 sales
 sally
 salt
+sam
 same
 same---
 same---it
@@ -6647,6 +6730,7 @@ scroll
 scrolling
 SCRUM
 scrutinizer
+sculpture
 SDK
 SDK-s
 SE
@@ -6690,6 +6774,7 @@ selected
 selection
 selects
 self
+self-appointed
 self-confidence
 self-descriptive
 self-discipline
@@ -6876,6 +6961,7 @@ silly
 silver
 similar
 similarly
+simon
 simple
 simple---no
 simple---prohibit
@@ -7105,6 +7191,7 @@ spending
 spending---customers'
 spends
 spent
+sphere
 spin-wait
 spirit
 split
@@ -7391,6 +7478,7 @@ suppliers
 supply
 support
 supported
+supporter
 supporters
 supporting
 supportive
@@ -7483,6 +7571,7 @@ tasks
 tasks---be
 taste
 tasteful
+tasteless
 taught
 tax
 taxes
@@ -7715,6 +7804,7 @@ toilets
 token
 told
 tolerance
+tolerant
 tom
 tomas
 tomes
@@ -7730,6 +7820,7 @@ tools
 top
 top-down
 topic
+topics
 tops
 torrent
 torrents
@@ -8150,6 +8241,7 @@ view---and
 viewed
 views
 vigilant
+vigilantes
 villages
 villain
 vim
@@ -8176,6 +8268,7 @@ visitor
 visitors
 visual
 visually
+vJUG
 VLC
 vocabulary
 voice
@@ -8310,6 +8403,7 @@ whine
 white
 white---there
 white-box
+whites'
 who
 who're
 who's
@@ -8358,9 +8452,12 @@ without
 woke
 wolves
 woman
+woman's
 women
+women's
 won't
 wonder
+wonderful
 wood
 word
 word---control
@@ -8429,6 +8526,7 @@ XSD
 XSL
 XSL's
 XSLT
+y-combinator
 yahoo
 YAML
 YAY
