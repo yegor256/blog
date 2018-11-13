@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-13T09:19:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Beware of Bigotry</title><link href="https://www.yegor256.com/2018/11/13/bigotry.html" rel="alternate" type="text/html" title="Beware of Bigotry" /><published>2018-11-13T00:00:00+00:00</published><updated>2018-11-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/13/bigotry</id><content type="html" xml:base="https://www.yegor256.com/2018/11/13/bigotry.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bobby_Fischer&quot;&gt;Bobby Fischer&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-13T09:40:00+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Beware of Bigotry</title><link href="https://www.yegor256.com/2018/11/13/bigotry.html" rel="alternate" type="text/html" title="Beware of Bigotry" /><published>2018-11-13T00:00:00+00:00</published><updated>2018-11-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/13/bigotry</id><content type="html" xml:base="https://www.yegor256.com/2018/11/13/bigotry.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bobby_Fischer&quot;&gt;Bobby Fischer&lt;/a&gt;,
 the eleventh World Chess Champion, was one of the best chess players
 of the last century. Did you know that,
 along with &lt;a href=&quot;https://en.wikiquote.org/wiki/Bobby_Fischer&quot;&gt;anti-Semitic statements&lt;/a&gt;,
@@ -52,12 +52,14 @@ without a single central point of failure. While in the taxi, I checked my inbox
 and found this:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;Hi Yegor,
-It has come to our attention that some of your views on women in tech
-published as posts on your blog and twitter conflict with our aims of
-promoting an inclusive and diverse conference. In this light, we have
-decided to cancel your talk.  You are of course still welcome to attend
-the event as an attendee, assuming you accept the terms of our code
-of conduct. Apologies for the late notice on this.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+It has come to our attention that some of your views
+on women in tech published as posts on your blog and
+twitter conflict with our aims of promoting an inclusive
+and diverse conference. In this light, we have decided
+to cancel your talk.  You are of course still welcome
+to attend the event as an attendee, assuming you accept
+the terms of our code of conduct. Apologies for the late
+notice on this.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;I never asked, but I bet they are referring to
 &lt;a href=&quot;/2017/07/04/sexism.html&quot;&gt;this blog post&lt;/a&gt; and
