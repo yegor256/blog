@@ -39,8 +39,6 @@ a universal instrument to measure our labor? Why can't an American dollar,
 which has been used for centuries as a trading tool between working
 people, be used anymore?
 
-{% youtube F6NwcQyEY18 %}
-
 Why, in a [modern office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}),
 do we try to hide
 [monetary]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %})
@@ -52,6 +50,8 @@ everybody else. This is his $500 check. Whoever completes the
 next task gets $300," out loud in the office?... Sounds uncomfortable, doesn't it?
 
 Why does money as a motivator scare us?
+
+{% youtube F6NwcQyEY18 %}
 
 I have an answer.
 
