@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tech Journalism Suck"
+title: "Tech Journalism Sucks"
 date: 2018-01-29
 place: Moscow, Russia
 tags: mood
@@ -65,16 +65,17 @@ Finally, I submitted that very same article to the blog section of the Communica
 and it was [published](https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext) there,
 maybe thanks to the objectivism of Lawrence Fisher, their editor.
 I also submitted it to a number of software conferences, where it was accepted,
-including [Joker](https://youtu.be/55mwAbuDrV8) in St. Petersburg, Russia.
+including [Joker 2018](https://youtu.be/55mwAbuDrV8) in St. Petersburg, Russia.
 
 Here comes my point.
 
-Modern tech journalism suck.
+Tech journalism sucks.
 
 If you want to be published, say what everybody else is saying. Or say something
 very new. I don't really know. What I do from now on? I keep sending my
 pieces to many places. I even created a list of journalists (over 200 magazines)
-and send them my articles via [Mailanes]({% pst 2018/oct/2018-10-30-mailanes %}).
+and <del>spam</del> send them my articles via [Mailanes]({% pst 2018/oct/2018-10-30-mailanes %}).
+
 It seems they don't deserve a better attitude.
 
 Sadly.

@@ -39,9 +39,15 @@ informed about everything I do publicly, including these webinars.
 
 ## 2018
 
-{% webinar 07-11-2018 39 uznmzI7qsvI A practical example of ORM-free persistence layer %}
+{% webinar 05-12-2018 40 gLHdZnrlPD8 The Power of Decorators %}
 
-<a href="https://www.youtube.com/watch?v=uznmzI7qsvI"><img src="https://i.ytimg.com/vi/uznmzI7qsvI/mqdefault.jpg" class="wnr" alt="Webinar no.38 by Yegor Bugayenko"/></a>
+<a href="https://www.youtube.com/watch?v=gLHdZnrlPD8"><img src="https://i.ytimg.com/vi/gLHdZnrlPD8/mqdefault.jpg" class="wnr" alt="Webinar no.40 by Yegor Bugayenko"/></a>
+December 5, 2018<br/>
+&#35;40: **The Power of Decorators**<br/>
+The Decorator design pattern is a powerful tool in object-oriented programming. There is
+a real practical example demonstrated, from Zold source code.
+
+<a href="https://www.youtube.com/watch?v=uznmzI7qsvI"><img src="https://i.ytimg.com/vi/uznmzI7qsvI/mqdefault.jpg" class="wnr" alt="Webinar no.39 by Yegor Bugayenko"/></a>
 November 7, 2018<br/>
 &#35;39: **A practical example of ORM-free persistence layer**<br/>
 There is a demonstration of a real web application ([mailanes.com](https://www.mailanes.com)),
