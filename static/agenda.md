@@ -66,3 +66,5 @@ Bigger ORM example: https://www.yegor256.com/2014/12/01/orm-offensive-anti-patte
 Example of properly architectured projects/proper architecture with pictures.
 
 Word about a distributed systems, how should they communicate with each other (should it be RPC-over-something or message passing or whatever).
+
+How to be an Architect in a Scrum team. Since there is no architect role in Scrum, who will handle the long term goals/system-level consistency of the modules, examining the risks while introducing a system level change in the product, etc.? 
