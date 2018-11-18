@@ -48,8 +48,6 @@ The first trend falls down and shows how much cheaper
 and [HDD storage](http://ns1758.ca/winch/winchest.html)
 have become over the last twenty years.
 
-{% youtube PNSezrlemsY %}
-
 The second trend demonstrates how much software developers' salaries
 escalated over the same period. More accurately, they tripled. I didn't find
 an official report about that, but I'm sure it's no secret to anyone
@@ -143,6 +141,8 @@ I think these qualities can be attributed to a good designer:
  * hates fire-fighting and working over time
  * loves to see his code being modified and refactored
  * works with a few projects at the same time
+
+{% youtube PNSezrlemsY %}
 
 A designer is a talented team player. He contributes to the team
 processes, standards, rules, education, and discipline as much as he
