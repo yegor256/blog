@@ -41,9 +41,13 @@ There is no particular order, just everything I have in mind, in one list.
 Learning how to program and programming are not same things. The best,
 and the only right way to learn is "by doing." The best way of doing is
 creating something meaningful and important. If it's your own product---even
-better. If someone pays you for that---best.
-
-...
+better. If someone pays you for that---best. Every time I want
+to learn something new, I make up a realistic goal and attempt to achieve it.
+A few years ago I was interested in learning Python. Instead of going to online
+courses or reading books I tried to created a small web app for my marketing purposes.
+At that time I knew Java, but did that app in Python. My recommendation: never study
+anything in an academic way, always do something real using the tech stack you want
+to learn.
 
 **Change Languages**.
 Don't get stuck with one stack of technologies, no matter how much you love it.
@@ -61,24 +65,26 @@ The bigger part is turning your "working" code into a market-ready product,
 which means merging and auto-testing, compiling and packaging for multiple platforms,
 staging and acceptance testing, bug reporting, metrics collecting, A/B testing,
 stress and load testing, deploying to production, and even reporting to investors.
-Modern software development lifecycle is a giant mess. Do you know how it all works?
+Modern software development lifecycle is a giant <del>mess</del> show.
+Do you know how it all works?
 You don't? You don't care? You are not a senior developer.
 
 **Open Your Sources**.
 Like I said in my talk [_How Bright Is Your Future?_](https://www.youtube.com/watch?v=IGbteQpTNCA)
 at RigaDevDays, the future of software will almost entirely be open source. The
-amount of code companies keep in house is decreasing every year. You have
+amount of code companies keep proprietary is decreasing every year. You have
 to be an open source advocate, if you want to be successful. If you are still
 [afraid]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}),
 or don't have time, [reconsider]({% pst 2017/may/2017-05-30-why-contribute-to-open-source %}).
 Writing code for yourself and your office buddies, and writing it for a few
 thousand anonymous GitHub hooligans---are two different stories. You will
-need time to get up to speed in this wild territory. Took me three years.
+need time to get up to speed in this wild territory. Took me over three years.
 Don't wait, start now.
 
 **Test Everything**.
 To be honest, almost everything I've learned about software quality, I owe
-to the painful hours of writing unit tests, mocks, fixtures, stubs, integration
+to the painful hours of [writing unit tests]({% pst 2015/jul/2015-07-16-fools-dont-write-unit-tests %}),
+mocks, fixtures, stubs, integration
 tests, and so on. I truly believe that a professional programmer spends more
 time for creating automated tests than for writing production code. That's why
 I'd recommend you to focus on testing, if you want to become a better engineer.
@@ -88,17 +94,21 @@ every line of code, you are in doubt about, must be proven by a test.
 
 **Statically Analyze**.
 Well, half of my knowledge about software quality I owe to unit testing. The
-other half---to static analyizers. I learned much more from Checkstyle and PMD
+other half---to static analyizers. I learned much more from
+[Checkstyle](http://checkstyle.sourceforge.net/) and [PMD](https://pmd.github.io/)
 than from all Java books I've ever read. Every new programming language I learn
 I start with configuring the strictest static analyzer I can find and listening
-to its complains. I'd recommend you do the same. Listen to your tools and make
-sure your code is 100% complaint with their quality expectations. Don't just
-use them as recommendation providers, but make yourself a rule: never commit
+to its complains. I'd recommend you do the same. Listen to your tools and
+[make sure]({% pst 2018/jan/2018-01-16-educational-aspect-of-static-analysis %})
+your code is 100% complaint with their quality expectations. Don't just
+use them as recommendation providers, but make yourself a rule:
+[never commit]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 anything that doesn't fully pass all static analyzers.
 
 **Humiliate Yourself at StackOverflow**.
-You know they say that in order to ask the right question you have to know
-almost the entire answer. Friends, online chats, and office kitchen talks are
+Robert Sheckley [said](https://amzn.to/2ToSdws)
+that "in order to ask a question you must already know most of the answer."
+Friends, online chats, and office kitchen talks are
 great places to find help ... for junior programmers. Those people understand you
 no matter how stupid your questions are and this is how they spoil you. You don't
 grow while talking to them and getting their help. You degrade. Instead, you should
@@ -114,7 +124,7 @@ and I'm not going to be employed by any enterprise that
 cares about badges in
 [my CV](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432).
 Still, I want more certificates. Why? Because I learn a lot when I pass them.
-And when I fail (I did, twice, up to now). There are two things certificates
+Also when I fail (I did, twice, up to now). There are two things certificates
 give you: 1) they help you fill up your knowledge gaps, and 2) they boost your
 self-respect (when and if you pass, of course). Make yourself a rule: one
 new certificate every year.
@@ -131,8 +141,13 @@ If you won't, you will lose. Regular job interviews is the best way to prepare
 yourself. Make it a rule: every three months you go to an interview.
 
 **Change Jobs**.
-
-**Change Places**.
+You will never be a truly senior developer or an architect if you stay with one
+company or a project for a long time. You have to change jobs. Frequently. I know,
+it's painful for most of us, but this is how we grow. You need new tasks, new
+challenges, new technologies, new customers, and new bosses in order to learn
+how to survive and become stronger. Ideally, you should become a freelancer
+and forget about full-time [nine-to-five]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
+office <del>slavery</del> employment.
 
 **Read Books**.
 One book per month. How does it sound? Twelve books per year. That's an easily
@@ -151,11 +166,11 @@ Facebook ([here](https://www.facebook.com/yegor256) I am),
 Telegram ([my channel](https://t.me/yegor256news)),
 Instagram ([click here](https://instagram.com/yegor256) to follow me), and, of course,
 GitHub (I'm [@yegor256](https://github.com/yegor256)). What's new you can hear from me?
-Maybe not so much, probably, but you will get a feeling of what's goin on
-in my life, where I'm heading, what I read, what I write, etc. Who do I follow?
-All authors of all books I like, all bloggers I ever enjoyed reading,
+Probably, not so much, but you will get a feeling of what's going on
+in my professional life, where I'm heading, what I read, what I write, etc. Who do I follow?
+All authors of all books I like, all bloggers I've ever enjoyed reading,
 all speakers I liked watching, key public figures and politicians,
-no matter whether I agree with or not. I believe you should do the same, to
+no matter whether I agree with them or not. I believe you should do the same, to
 stay informed about the trends.
 
 **Lurke**.
