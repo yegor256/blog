@@ -5,13 +5,15 @@ date: 2018-11-06
 place: Moscow, Russia
 tags: career
 description: |
-  ...
+  Do you want to become a better programmer, a more successful,
+  well-paid, and happier? Here is a list of recommendations,
+  hope they help.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - career
+  - career advice
+  - programmer career
+  - better programmer
+  - skills for better programmer
 image: /images/2018/11/
 jb_picture:
   caption:
@@ -44,6 +46,13 @@ better. If someone pays you for that---best.
 ...
 
 **Change Languages**.
+Don't get stuck with one stack of technologies, no matter how much you love it.
+Of course, you don't want to be a "jack of all trades," since they are never
+paid well. You want to be focused. But "one focus" per life is not enough. I switch
+langugages every 4-6 years. I started with Pascal, then it was C++, then Java,
+then PHP (yes, you heard it right, I'm
+[ZCE](http://www.zend.com/en/yellow-pages/ZEND007965)/[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965)),
+then Java again, now it's Ruby.
 
 **Go Full Cycle**.
 Writing code that "works on your laptop" is a great achievement ... of a junior
@@ -126,6 +135,15 @@ yourself. Make it a rule: every three months you go to an interview.
 **Change Places**.
 
 **Read Books**.
+One book per month. How does it sound? Twelve books per year. That's an easily
+achievable goal. However, ask yourself, did you manage to read a dozen of books
+over the last calendar year? I seriously doubt many of you will answer positively.
+Books are important because they are way more formal and "complete" than blog
+posts, news articles, or conference presentations. They cover entire topics,
+not parts of them. For example, did you read the [Git book](http://amzn.to/2crIfoY) ever? Most of programmers
+I know who use Git never even touched the book. They use Git, but barely understand
+what's under the hood. This is how junior developers behave. Be professional,
+read the manual!
 
 **Follow Key People**.
 I mean Twitter (I'm [@yegor256](https://twitter.com/yegor256)),
@@ -136,8 +154,29 @@ GitHub (I'm [@yegor256](https://github.com/yegor256)). What's new you can hear f
 Maybe not so much, probably, but you will get a feeling of what's goin on
 in my life, where I'm heading, what I read, what I write, etc. Who do I follow?
 All authors of all books I like, all bloggers I ever enjoyed reading,
+all speakers I liked watching, key public figures and politicians,
+no matter whether I agree with or not. I believe you should do the same, to
+stay informed about the trends.
 
 **Lurke**.
+Regularly check [Hacker News](https://news.ycombinator.com/),
+[/programming](https://en.reddit.com/r/programming/) Reddit, and, maybe,
+[Changelog](https://changelog.com/). That's pretty much all you need to read.
+A few times a week. Just <del>read</del> scroll what's hot and move on.
+Will it make you a better programmer? Doubtfully. Will it help your career
+and your life? Definitely. You never know what's coming and where is the
+next opportunity. I still [feel sorry]({% pst 2017/aug/2017-08-15-bitcoin-pyramid %})
+about paying not enough attention to
+the [announcement](https://news.ycombinator.com/item?id=1532670) of Bitcoin
+at HN many years ago.
 
-**Attend Conferences**.
+**Attend Conferences and Meetups**.
+Ideally, as a speaker. Otherwise, _at least once a month_ as a listener. Will
+you learn something new? I don't think so. But you will definitely motivate
+yourself by meeting most active and motivated people in the industry,
+including speakers and other listeners. Most companies will be ready to
+sponsor your tickets. Two big conferences per year will be enough. The rest
+of the time attend your local meetups, you can find them
+at [meetup.com](https://www.meetup.com).
 
+That's pretty much it. Hope this list helps.
