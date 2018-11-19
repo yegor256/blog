@@ -99,20 +99,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.devopspro.ru/wp-content/uploads/2018/07/logo_devops_moscow-min.png" class="future-talk" alt="DevOpsPro 2018"/><br/>
-Expertise vs Experts<br/>
-[DevOpsPro](https://www.devopspro.ru/speakers/)<br/>
-Moscow, Russia<br/>
-14 November.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://www.devopsdays.org/img/devopsdays-brain@2x.png" class="future-talk" alt="DevOpsDays Warsaw 2018"/><br/>
-_Something about Zerocracy..._<br/>
-[DevOpsDays Warsaw 2018](https://www.devopsdays.org/events/2018-warsaw/welcome/)<br/>
-Warsaw, Poland<br/>
-19-20 November.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://moscow.bc.events/images/logo/navbar-logo.png" class="future-talk" alt="Blockchain 2018"/><br/>
 Panel Discussion about Blockchain<br/>
 [Blockchain Conference 2018](https://moscow.bc.events/ru)<br/>
@@ -126,12 +112,14 @@ _Something about Zold..._<br/>
 Moscow, Russia<br/>
 21-23 November.
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://knect365.imgix.net/uploads/payment-png-23bd6dafb92ef0ae50b4f48efdb047f1.png" class="future-talk" alt="Payments International 2018"/><br/>
 The Next Big Thing: Beyond Blockchain – the Future of Cryptocurrency<br/>
 [Payments International 2018](https://finance.knect365.com/payments-international/speakers/yegor-bugayenko)<br/>
 London, UK<br/>
 26 November.
+-->
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
@@ -144,7 +132,15 @@ so why shouldn't we rate them, right? The best grade is
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://i.ytimg.com/vi/y0X-WQ1bOUI/mqdefault.jpg" class="post-talk" alt="Bee Mobile 2018"/><br/>
+<img src="https://i.ytimg.com/vi/21vDI9L2kmI/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2018"/><br/>
+How True Experts Manage Their Expertise;
+[DevOpsPro](https://www.devopspro.ru/speakers/);
+Moscow, Russia;
+14 November;
+[видео](https://youtu.be/21vDI9L2kmI).
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/y0X-WQ1bOUI/mqdefault.jpg" class="past-talk" alt="Bee Mobile 2018"/><br/>
 Software Testing Philosophy;
 [Bee Mobile Meetup](https://www.facebook.com/events/1913869582250737/);
 Moscow, Russia;
