@@ -140,6 +140,7 @@ module Jekyll
       .gsub(/`[^`]+`/, ' ')
       .gsub(/\{% .+ %\}/, ' ')
       .gsub(/&mdash;/, ' ')
+      .gsub(/---/, ' ')
       .gsub(/<[^>]+>/, ' ')
       .gsub(/[^A-Za-z'-]/, ' ')
       .split(/\s+/)
