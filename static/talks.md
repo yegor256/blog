@@ -105,13 +105,6 @@ Panel Discussion about Blockchain<br/>
 Moscow, Russia<br/>
 20 November.
 
-<div class="talk-event">&nbsp;</div>
-<img src="https://static.tildacdn.com/tild3366-3633-4437-b961-373136313633/_L900_2.png" class="future-talk" alt="https://cryptoevent.io/cryptoevent_riw 2018"/><br/>
-_Something about Zold..._<br/>
-[CryptoEvent RIW](https://cryptoevent.io/cryptoevent_riw)<br/>
-Moscow, Russia<br/>
-21-23 November.
-
 <!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://knect365.imgix.net/uploads/payment-png-23bd6dafb92ef0ae50b4f48efdb047f1.png" class="future-talk" alt="Payments International 2018"/><br/>
