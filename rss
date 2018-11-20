@@ -1,4 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-20T06:41:24+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Beware of Bigotry</title><link href="https://www.yegor256.com/2018/11/13/bigotry.html" rel="alternate" type="text/html" title="Beware of Bigotry" /><published>2018-11-13T00:00:00+00:00</published><updated>2018-11-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/13/bigotry</id><content type="html" xml:base="https://www.yegor256.com/2018/11/13/bigotry.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bobby_Fischer&quot;&gt;Bobby Fischer&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-20T08:44:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Tech Journalism Sucks</title><link href="https://www.yegor256.com/2018/11/20/journalism.html" rel="alternate" type="text/html" title="Tech Journalism Sucks" /><published>2018-11-20T00:00:00+00:00</published><updated>2018-11-20T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/20/journalism</id><content type="html" xml:base="https://www.yegor256.com/2018/11/20/journalism.html">&lt;p&gt;This July, just four months ago,
+I submitted an article to &lt;a href=&quot;http://www.infoq.com/&quot;&gt;InfoQ&lt;/a&gt;, a
+popular online tech magazine. In the article I
+suggested that in order to improve our projects we must not make programmers worry
+about the quality of code they write, but instead let them focus mostly
+on the speed of delivery. The quality, I argued in the
+article, must be the concern of the delivery pipeline. You have most probably
+already read the blog posts where I mention this idea, especially this one:
+&lt;a href=&quot;/2018/03/06/speed-vs-quality.html&quot;&gt;Don’t Aim for Quality, Aim for Speed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Wag the Dog (1997) by Barry Levinson&quot; src=&quot;/images/2018/11/wag-the-dog.jpg&quot; longdesc=&quot;#123ce141&quot; /&gt;&lt;figcaption id=&quot;123ce141&quot;&gt;Wag the Dog (1997) by Barry Levinson&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I received a response from the InfoQ editor in an email, and I quote:
+“The article provides no new insights for our audience, and actually some recommendations
+that go against well-known good practices in DevOps.”
+I &lt;a href=&quot;https://twitter.com/yegor256/status/1015261994826567680&quot;&gt;tweeted&lt;/a&gt;
+about this and Charles Humble, their editor-in-chief, emailed me back.
+He said that he still didn’t want to publish my piece, because
+“both people who reviewed it are experienced DevOps practitioners,
+and felt strongly that, although the ideas presented were interesting,
+it wasn’t something that would generalize well or work well for more mature teams.”&lt;/p&gt;
+
+&lt;p&gt;Two people decided that my point of view was wrong and that’s why the entire
+audience must not hear it! They know better what “works well for more mature teams.”
+Pay attention: they didn’t say anything about
+the quality of my article, about the way I structured my arguments, about the
+consistency of the logic in it. They totally got what I wanted to say, but they
+disagreed. My opinion didn’t go along with theirs. And so—no platform for the guy.&lt;/p&gt;
+
+&lt;p&gt;You know what happened next? I sent my piece, without any changes, to Gerard Holzmann,
+one of the editors of &lt;a href=&quot;https://publications.computer.org/software-magazine/&quot;&gt;IEEE Software&lt;/a&gt;.
+You know what he said? I quote:
+“I like your analogy of a wall, but when I reflect on it I believe it is
+really no more than the standard check-in and commit process that most
+organizations use. So I’m sorry that we can’t use it.”
+See? The InfoQ guys thought that it’s a practice that nobody would use, while
+the IEEE Software editor thinks that it’s something everybody is already using.&lt;/p&gt;
+
+&lt;p&gt;Ironic, huh?&lt;/p&gt;
+
+&lt;p&gt;Finally, I submitted that very same article to the blog section of the Communications of the ACM
+and it was &lt;a href=&quot;https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext&quot;&gt;published&lt;/a&gt; there,
+maybe thanks to the objectivity of Lawrence Fisher, their editor.
+I also submitted it to a number of software conferences, where it was also accepted,
+including &lt;a href=&quot;https://youtu.be/55mwAbuDrV8&quot;&gt;Joker 2018&lt;/a&gt; in St. Petersburg, Russia.&lt;/p&gt;
+
+&lt;p&gt;Here comes my point.&lt;/p&gt;
+
+&lt;p&gt;Tech journalism sucks.&lt;/p&gt;
+
+&lt;p&gt;If you want to be published, say what everybody else is saying. Or else say something
+very new. I don’t really know. What will I do from now on? I will keep sending my
+articles to many places. I’ve even created a list of journalists (over 200 magazines)
+and I &lt;del&gt;spam&lt;/del&gt; send them my articles via &lt;a href=&quot;/2018/10/30/mailanes.html&quot;&gt;Mailanes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It seems they don’t deserve a better attitude.&lt;/p&gt;
+
+&lt;p&gt;Sadly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">This July, just four months ago, I submitted an article to InfoQ, a popular online tech magazine. In the article I suggested that in order to improve our projects we must not make programmers worry about the quality of code they write, but instead let them focus mostly on the speed of delivery. The quality, I argued in the article, must be the concern of the delivery pipeline. You have most probably already read the blog posts where I mention this idea, especially this one: Don’t Aim for Quality, Aim for Speed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/wag-the-dog.jpg" /></entry><entry><title type="html">Beware of Bigotry</title><link href="https://www.yegor256.com/2018/11/13/bigotry.html" rel="alternate" type="text/html" title="Beware of Bigotry" /><published>2018-11-13T00:00:00+00:00</published><updated>2018-11-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/13/bigotry</id><content type="html" xml:base="https://www.yegor256.com/2018/11/13/bigotry.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bobby_Fischer&quot;&gt;Bobby Fischer&lt;/a&gt;,
 the eleventh World Chess Champion, was one of the best chess players
 of the last century. Did you know that,
 along with &lt;a href=&quot;https://en.wikiquote.org/wiki/Bobby_Fischer&quot;&gt;anti-Semitic statements&lt;/a&gt;,
@@ -1125,133 +1184,4 @@ Ideally, I would say, the largest acceptable size for a code base is 50,000 line
 Everything that goes above this line is a perfect candidate for decomposition.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think is better, a bigger code repository with everything inside, or many smaller ones with their own builds, dependencies, issues, and pull requests?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1053922638517731329?ref_src=twsrc%5Etfw&quot;&gt;October 21, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">We all keep our code in Git version control repositories. The question is whether we should create a new repository for each new module or try to keep as much as possible in a single so called “monolithic” repo. Market leaders, like Facebook and Google, advocate the second approach. I believe they are wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry><entry><title type="html">Soft Skills Demystified</title><link href="https://www.yegor256.com/2018/08/29/soft-skills.html" rel="alternate" type="text/html" title="Soft Skills Demystified" /><published>2018-08-29T00:00:00+00:00</published><updated>2018-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/08/29/soft-skills</id><content type="html" xml:base="https://www.yegor256.com/2018/08/29/soft-skills.html">&lt;p&gt;There are tech skills and there are soft skills. Every programmer knows that.
-Tech skills are about algorithms, operators, classes, objects, and everything
-else they teach us in tech schools. Soft skills are about something else.
-What exactly? Difficult to say. Let’s try to clear the air.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Glengarry Glen Ross (1992) by James Foley&quot; src=&quot;/images/2018/08/glengarry-glen-ross.jpg&quot; longdesc=&quot;#03b7bd6c&quot; /&gt;&lt;figcaption id=&quot;03b7bd6c&quot;&gt;Glengarry Glen Ross (1992) by James Foley&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is a non-exhaustive list of soft skills I managed to find
-on the Net&lt;sup&gt;&lt;a href=&quot;https://hackernoon.com/10-soft-skills-every-developer-needs-66f0cdcfd3f7&quot;&gt;1&lt;/a&gt;,
-&lt;a href=&quot;https://jaxenter.com/6-most-useful-soft-skills-for-software-developers-125286.html&quot;&gt;2&lt;/a&gt;,
-&lt;a href=&quot;https://blog.scottlogic.com/2018/01/13/soft-skills-for-software-developers.html&quot;&gt;3&lt;/a&gt;,
-&lt;a href=&quot;https://amzn.to/2wbSuZa&quot;&gt;4&lt;/a&gt;,
-&lt;a href=&quot;https://medium.freecodecamp.org/what-soft-skills-do-successful-developer-have-in-their-backpacks-e4b71e90329a&quot;&gt;5&lt;/a&gt;,
-&lt;a href=&quot;https://www.netguru.co/blog/9-soft-skills-every-web-developer-should-master&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;:
-empathy, open-mindedness, a willingness to learn, effective communication,
-teamwork, approachability, helpfulness, listening, patience, responsibility,
-critical thinking, problem solving, mentoring, attunement, clarity, curiosity,
-strategizing, lifelong learning, business mindedness, work ethic, judgment,
-ego management, commitment,
-accountability, creativity, adaptability, big-picture thinking. Phew!&lt;/p&gt;
-
-&lt;p&gt;Do you really understand exactly what these words mean? I don’t.&lt;/p&gt;
-
-&lt;p&gt;I would actually suggest we replace them all with the “do the right thing”
-mantra and call it a day.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about.&lt;/aside&gt;
-
-&lt;p&gt;I have my own list of soft skills though. I also
-&lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;strongly believe&lt;/a&gt; that tech skills
-are just a small part of what makes a good programmer,
-but being empathical and ready to learn is not what the other part consists of.
-Of course, smiling in the office and not cursing at a stupid boss—helps.
-But this is not what soft skills are about.&lt;/p&gt;
-
-&lt;p&gt;They are about our ability to &lt;em&gt;exchange&lt;/em&gt; deliverables. Tech skills produce
-deliverables, soft skills turn them into a final product, which is working
-software. Here is a short list, in no particular order:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Drawing&lt;/strong&gt;.
-Talking works great when you’re discussing your next vacation with your partner.
-In a software team your ability to explain your thoughts with a diagram
-seriously increases your usefulness.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Writing&lt;/strong&gt;.
-Again, talking is great, when your chaotic team is being managed by
-an hysterical boss who just read a book about unconditional love. In a more
-disciplined environment your ability to put your thoughts in writing
-do make a difference for mutual success.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Reporting&lt;/strong&gt;.
-A good programmer knows not only how to fix a bug but, more importantly, how
-to report it &lt;a href=&quot;/2018/04/24/right-way-to-report-bugs.html&quot;&gt;the right way&lt;/a&gt;,
-so that the project benefits. An ability
-to describe a technical problem in simple words is a crucial soft skill.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Volunteering&lt;/strong&gt;.
-Open source is an important part of any software project. You have to know
-how to work with an open source community, by giving them something back
-for the software they provide. Sometimes you will have to report problems
-to them, sometimes even submit pull requests, and maybe even create
-your own open source products. You will need a lot of non-tech skills to do that.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Charging&lt;/strong&gt;.
-Programmers make money by writing code. Very often projects fail because
-important people quit due to a money conflict. They don’t know how to resolve that,
-how to manage their financial objectives, how to ask for a raise, or how to change
-the paying schedule. I blame programmers for that. We, technical people,
-have to know how to manage our financial relationship with our projects.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Relaxing&lt;/strong&gt;.
-Many projects fail because its programmers burn out. This happens, very often,
-because they don’t know how to manage their time right: when to work and
-when to relax. Again, I blame programmers. We have to know how to manage our
-own peace of mind.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Asking&lt;/strong&gt;.
-Not your friends, but StackOverflow and other public sources. The software
-development world is getting global and the knowledge your project team
-possess is just a tiny fraction of what the world knows about the problem
-you are solving. You have to know how to ask the world. This is the soft skill
-you need to have to be a good developer.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tweeting&lt;/strong&gt;.
-Here comes your ability to share your thoughts and achievements in social
-networks. If you stay mute and net-social-phobic, you are not really helping your
-project. This is the skill you won’t learn in a few days. I would suggest
-you take a look at my &lt;a href=&quot;/256-bloghacks.html&quot;&gt;256 Bloghacks&lt;/a&gt; book.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Testing&lt;/strong&gt;.
-Here I mean not only writing automated tests, which is a tech skill, but
-an ability to communicate with testers, to make sure their feedback
-improves the quality of the software under development. There is a
-&lt;a href=&quot;https://www.sciencedirect.com/science/article/abs/pii/S0378720613000967&quot;&gt;well known&lt;/a&gt;
-developer-tester conflict, which good programmers know how to deal with.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Still working in a single master branch? Still an amateur.&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Branching&lt;/strong&gt;.
-Still working in a single &lt;code&gt;master&lt;/code&gt; branch? Still an amateur. You have to
-learn how to use multiple branches, how to resolve conflicts between them,
-and what is the difference between merge and rebase. This is a soft skill,
-since it doesn’t have anything to do with the quality of your code but it
-seriously affects your professionalism as a software developer.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Failing&lt;/strong&gt;.
-Most projects fail, one way or another. Technical failures are not
-the primary source of our troubles. We fail due to management incompetence
-most frequently. Good programmers know how to deal with failures,
-by provoking (aka Fail Fast), predicting (aka Risk Management), and
-embracing them.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Delivering&lt;/strong&gt;.
-Continuous integration, delivery pipeline, build automation, staging,
-green/blue deployments, etc.—if you think that all these things concern
-the DevOps department only, you are wrong. You have to understand how your lines
-of code reach your users. The bigger the product, the longer the pipeline,
-the more people it involves, and the more soft skills it requires to be
-smooth.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Intriguing&lt;/strong&gt;.
-Any project is a part of a bigger political game, one way or the other.
-If you isolate yourself from intrigue, claiming that your job is to
-write code—you are not a good programmer. A good programmer understands
-where the money is coming from, who the primary shareholders are,
-and which ass to kiss and when.&lt;/p&gt;
-
-&lt;p&gt;Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">There are tech skills and there are soft skills. Every programmer knows that. Tech skills are about algorithms, operators, classes, objects, and everything else they teach us in tech schools. Soft skills are about something else. What exactly? Difficult to say. Let’s try to clear the air.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/08/glengarry-glen-ross.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">We all keep our code in Git version control repositories. The question is whether we should create a new repository for each new module or try to keep as much as possible in a single so called “monolithic” repo. Market leaders, like Facebook and Google, advocate the second approach. I believe they are wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry></feed>
