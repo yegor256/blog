@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/melissa-perri.png" class="guest-face" alt="Face of Melissa Perri"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;39: [Product Management with Melissa Perri](/shift-m/2018/39.html)<br/>
+19 November 2018; 48 min.
+
 <img src="/images/shift-m/jennifer-britton.png" class="guest-face" alt="Face of Jennifer Britton"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;38: [Herd instinct with Jennifer Britton](/shift-m/2018/38.html)<br/>
