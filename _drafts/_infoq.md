@@ -45,9 +45,9 @@ it wasn't something that would generalize well or work well for more mature team
 
 Two people decided that my point of view was wrong and that's why the entire
 audience must not hear it! They know better what "works well for more mature teams."
-Pay attention, they didn't say anything about
+Pay attention: they didn't say anything about
 the quality of my article, about the way I structured my arguments, about the
-consistency of the logic in it. They totally understood what I wanted to say, but they
+consistency of the logic in it. They totally got what I wanted to say, but they
 disagreed. My opinion didn't go along with theirs. And so---no platform for the guy.
 
 You know what happened next? I sent my piece, without any changes, to Gerard Holzmann,
