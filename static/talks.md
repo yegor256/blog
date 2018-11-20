@@ -125,7 +125,7 @@ so why shouldn't we rate them, right? The best grade is
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://i.ytimg.com/vi/21vDI9L2kmI/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2018"/><br/>
+<img src="https://i.ytimg.com/vi/21vDI9L2kmI/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2018"/>
 How True Experts Manage Their Expertise;
 [DevOpsPro](https://www.devopspro.ru/speakers/);
 Moscow, Russia;
@@ -133,7 +133,7 @@ Moscow, Russia;
 [видео](https://youtu.be/21vDI9L2kmI).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://i.ytimg.com/vi/y0X-WQ1bOUI/mqdefault.jpg" class="past-talk" alt="Bee Mobile 2018"/><br/>
+<img src="https://i.ytimg.com/vi/y0X-WQ1bOUI/mqdefault.jpg" class="past-talk" alt="Bee Mobile 2018"/>
 Software Testing Philosophy;
 [Bee Mobile Meetup](https://www.facebook.com/events/1913869582250737/);
 Moscow, Russia;
@@ -142,7 +142,7 @@ Moscow, Russia;
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">A</aside>
-<img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="past-talk" alt="Joker Conf 2018"/><br/>
+<img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="past-talk" alt="Joker Conf 2018"/>
 Quality vs. Quantity;
 [Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/);
 St.Petersburg, Russia;
@@ -157,7 +157,7 @@ shame on them (that's why not A+). Aside from that, Joker rocks!
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/WwjU1ORdz4s/mqdefault.jpg" class="past-talk" alt="GeeCON Prague 2018"/><br/>
+<img src="https://i.ytimg.com/vi/WwjU1ORdz4s/mqdefault.jpg" class="past-talk" alt="GeeCON Prague 2018"/>
 Expertise vs Experts;
 [GeeCON Prague](https://2018.geecon.cz/speakers/#bio);
 Prague, Czech Republic;
@@ -172,7 +172,7 @@ just about tech in general? Anyway, I keep coming because I like the city :)
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/d_gZUcpBdRM/mqdefault.jpg" class="past-talk" alt="AppsConf 2018"/><br/>
+<img src="https://i.ytimg.com/vi/d_gZUcpBdRM/mqdefault.jpg" class="past-talk" alt="AppsConf 2018"/>
 Who Cares About Quality?;
 [AppsConf](https://appsconf.ru/2018/abstracts/3721);
 Moscow, Russia;
@@ -188,7 +188,7 @@ of talks.
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B-</aside>
-<img src="https://i.ytimg.com/vi/NFJNp5ke4CM/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2018"/><br/>
+<img src="https://i.ytimg.com/vi/NFJNp5ke4CM/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2018"/>
 Quantity vs. Quality;
 [DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723);
 Moscow, Russia;
@@ -203,7 +203,7 @@ by any committee and I'm not sure it actually exists there.
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B+</aside>
-<img src="https://i.ytimg.com/vi/KCx1o_lSMkI/mqdefault.jpg" class="past-talk" alt="DevOpsDays Boston 2018"/><br/>
+<img src="https://i.ytimg.com/vi/KCx1o_lSMkI/mqdefault.jpg" class="past-talk" alt="DevOpsDays Boston 2018"/>
 Expertise vs Experts;
 [DevOpsDays Boston 2018](https://www.devopsdays.org/events/2018-boston/speakers/yegor-bugayenko/);
 Boston, USA;
@@ -220,7 +220,7 @@ and engaged. I will definitely try to attend again.
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate orange">C-</aside>
-<img src="https://obs.com.ua/images/obs2.svg" class="past-talk" alt="Odessa Blockchain Summit 2018"/><br/>
+<img src="https://obs.com.ua/images/obs2.svg" class="past-talk" alt="Odessa Blockchain Summit 2018"/>
 Zold: Experimental Cryptocurrency Without Blockchain;
 [Odessa Blockchain Summit](https://obs.com.ua/);
 Odessa, Ukraine;
