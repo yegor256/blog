@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tech Journalism Sucks"
-date: 2018-01-29
+date: 2018-11-20
 place: Moscow, Russia
 tags: mood
 description: |
@@ -14,9 +14,9 @@ keywords:
   - ieee
   - online writing
   - corruption
-image: /images/2018/01/
+image: /images/2018/11/wag-the-dog.jpg
 jb_picture:
-  caption:
+  caption: Wag the Dog (1997) by Barry Levinson
 ---
 
 This July, just four months ago,
