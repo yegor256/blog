@@ -98,12 +98,7 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
-<div class="talk-event">&nbsp;</div>
-<img src="https://moscow.bc.events/images/logo/navbar-logo.png" class="future-talk" alt="Blockchain 2018"/><br/>
-Panel Discussion about Blockchain<br/>
-[Blockchain Conference 2018](https://moscow.bc.events/ru)<br/>
-Moscow, Russia<br/>
-20 November.
+Nothing yet...
 
 <!--
 <div class="talk-event">&nbsp;</div>
@@ -123,6 +118,14 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
+Panel Discussion about Blockchain;
+[Blockchain Conference 2018](https://moscow.bc.events/ru);
+Moscow, Russia;
+20 November;
+[видео](https://youtu.be/i1fGk8XJ7jI).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/21vDI9L2kmI/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2018"/>
