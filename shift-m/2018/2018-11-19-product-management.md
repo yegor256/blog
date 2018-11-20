@@ -24,6 +24,8 @@ image: /images/andreea/podcast.png
 
 Her Twitter: [@lissijean](https://twitter.com/lissijean)
 
+Her company: [ProdUX Labs](http://produxlabs.com)
+
 Her book on Amazon: [_Escaping the Build Trap: How Effective Product Management Creates Real Value_](https://amzn.to/2qVL4qL).
 
 ## Transcript
