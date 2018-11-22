@@ -16,6 +16,11 @@ keywords:
   - software engineers conferences
 ---
 
+22 Nov 2018:
+[Люди PRO](https://www.youtube.com/channel/UCnfR9C-3Oxt7jl6Q-JNDd4g)
+with Sergey Pavlovich:
+[video](https://www.youtube.com/watch?v=3-TJ-XhEUV4) (in Russian).
+
 5 Sep 2018:
 [FrontEnd Weekend](http://www.frontendweekend.ml)
 with Andrey Smirnov:
