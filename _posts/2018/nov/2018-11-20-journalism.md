@@ -65,7 +65,8 @@ Finally, I submitted that very same article to the blog section of the Communica
 and it was [published](https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext) there,
 maybe thanks to the objectivity of Lawrence Fisher, their editor.
 I also submitted it to a number of software conferences, where it was also accepted,
-including [Joker 2018](https://youtu.be/55mwAbuDrV8) in St. Petersburg, Russia.
+including [Joker 2018](https://youtu.be/55mwAbuDrV8) in St. Petersburg, Russia
+(it was the 3rd most liked speech, according to the votes of 400+ attendees).
 
 Here comes my point.
 
