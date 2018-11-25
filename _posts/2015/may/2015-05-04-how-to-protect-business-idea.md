@@ -199,3 +199,6 @@ To summarize, getting a patent is the best instrument available at the moment
 in developed countries that can protect your business idea.
 However, as Apple vs. Samsung [lawsuit](http://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.) demonstrates,
 it is not a 100 percent guarantee either.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How do you protect your business ideas (to prevent programmers from copying them)? <a href="https://twitter.com/hashtag/outsourcing?src=hash&amp;ref_src=twsrc%5Etfw">#outsourcing</a> <a href="https://twitter.com/hashtag/freelance?src=hash&amp;ref_src=twsrc%5Etfw">#freelance</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1066629433447129089?ref_src=twsrc%5Etfw">November 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
