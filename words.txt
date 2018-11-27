@@ -279,6 +279,7 @@ annoys
 annual
 annually
 anomalous
+anonymous
 another
 answer
 answered
@@ -292,6 +293,7 @@ anti-pattern
 anti-patterns
 anti-semitic
 anti-social
+antiquated
 antwerp
 any
 anybody
@@ -494,6 +496,7 @@ auto-complete
 auto-formatting
 auto-generated
 auto-increment
+auto-testing
 autocracy
 automate
 automated
@@ -709,6 +712,7 @@ blocks
 blog
 blog's
 blogger
+bloggers
 blogging
 bloghacks
 blogosphere
@@ -833,6 +837,7 @@ bubble
 bucket
 buckets
 bucks
+buddies
 buddy
 budget
 budgeting
@@ -1015,6 +1020,7 @@ CEO
 CEOs
 certain
 certainly
+certificate
 certificates
 certification
 certifications
@@ -1037,6 +1043,7 @@ chance
 chances
 change
 changed
+changelog
 changes
 changeset
 changing
@@ -1325,6 +1332,7 @@ compile-time
 compiled
 compiler
 compiles
+compiling
 complain
 complained
 complaining
@@ -2725,6 +2733,7 @@ fighting
 fights
 figure
 figured
+figures
 figuring
 file
 filed
@@ -2789,6 +2798,7 @@ fixed-cost
 fixes
 fixing
 fixture
+fixtures
 flag
 flags
 flanagan
@@ -2906,6 +2916,7 @@ free
 freedom
 freeing
 freelance
+freelancer
 freelancers
 freely
 freeman
@@ -2952,6 +2963,7 @@ fundamentally
 funded
 funding
 funds
+funnier
 funny
 furniture
 further
@@ -3015,6 +3027,7 @@ getter
 getters
 getting
 GHz
+giang
 giant
 GIF
 gift
@@ -3310,6 +3323,7 @@ history
 hit
 hits
 hits-of-code
+HN
 hobbies
 hobby
 hoc
@@ -3333,7 +3347,9 @@ honest
 honestly
 honesty
 honored
+hood
 hook
+hooligans
 hope
 hopefully
 hoping
@@ -3379,6 +3395,7 @@ human-readable
 humans
 humble
 humbly
+humiliate
 humiliates
 humiliating
 hundred
@@ -4249,6 +4266,7 @@ luckily
 lucky
 lunch
 lunches
+lurk
 luu
 luxury
 LV
@@ -4407,6 +4425,7 @@ md
 me
 mean
 meaning
+meaningful
 meanings
 means
 meant
@@ -4439,6 +4458,7 @@ meet
 meeting
 meetings
 meets
+meetup
 meetups
 member
 members
@@ -4594,6 +4614,7 @@ mobile
 mock
 mocking
 mockito
+mocks
 mode
 model
 model-view-controller
@@ -4819,6 +4840,7 @@ nightmare
 nightmares
 nights
 nine
+nine-to-five
 nines
 nl
 no
@@ -6239,6 +6261,7 @@ ridiculous
 ridley
 riel
 ries
+rigadevdays
 right
 rights
 rigid
@@ -6475,6 +6498,7 @@ self-motivation
 self-organized
 self-organizing
 self-regulation
+self-respect
 self-sufficient
 selfish
 sell
@@ -6577,6 +6601,7 @@ sharing
 sharp
 sharply
 she
+sheckley
 sheet
 sheets
 shelf
@@ -6761,6 +6786,7 @@ so
 so-called
 social
 socialism
+socially
 societies
 society
 sociocratic
@@ -6868,6 +6894,7 @@ spin-wait
 spirit
 split
 splitting
+spoil
 spoiled
 sponsor
 sponsor's
@@ -6988,6 +7015,7 @@ stickies
 sticking
 sticks
 sticky
+stigma
 still
 stock
 stockholm
@@ -7025,6 +7053,7 @@ stressed
 stressful
 strict
 stricter
+strictest
 strictly
 strictness
 strider
@@ -7883,6 +7912,7 @@ visitor
 visitors
 visual
 visually
+vivian
 vJUG
 VLC
 vocabulary
@@ -7896,6 +7926,7 @@ volunteer
 volunteering
 vote
 voted
+votes
 votruba
 vouches
 VP
@@ -8164,6 +8195,7 @@ yours
 yourself
 youtube
 ypshenychka
+ZCE
 zend
 zero
 zero-emission
@@ -8171,6 +8203,7 @@ zero-stress
 ZeroCI
 zerocracy
 zerocrat
+ZFCE
 zi
 zillow
 ziyavuddin

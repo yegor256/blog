@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-20T08:44:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Tech Journalism Sucks</title><link href="https://www.yegor256.com/2018/11/20/journalism.html" rel="alternate" type="text/html" title="Tech Journalism Sucks" /><published>2018-11-20T00:00:00+00:00</published><updated>2018-11-20T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/20/journalism</id><content type="html" xml:base="https://www.yegor256.com/2018/11/20/journalism.html">&lt;p&gt;This July, just four months ago,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-11-27T10:34:39+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">You Can Do Better</title><link href="https://www.yegor256.com/2018/11/27/you-can-do-better.html" rel="alternate" type="text/html" title="You Can Do Better" /><published>2018-11-27T00:00:00+00:00</published><updated>2018-11-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/27/you-can-do-better</id><content type="html" xml:base="https://www.yegor256.com/2018/11/27/you-can-do-better.html">&lt;p&gt;OK, it’s time to publish this piece. I’ve been dancing around it for quite a while,
+telling you how to make &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;more per hour&lt;/a&gt;,
+how to manage those &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;stupid managers&lt;/a&gt; that don’t let you grow,
+how to &lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;boost your career&lt;/a&gt;
+and how to deal with &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slavery&lt;/a&gt;.
+Now here is a simple, plain list of recommendations for you: what you should do
+if you want to be a more successful programmer. Not a better algorithm
+designer, even though that’s &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;important&lt;/a&gt;.
+Not a funnier &lt;del&gt;clown&lt;/del&gt;
+&lt;a href=&quot;/2018/08/29/soft-skills.html&quot;&gt;team player&lt;/a&gt;, even though that’s
+also important. But a more successful software engineer, both
+&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;financially&lt;/a&gt;
+and socially.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Rocky (1976) by John G. Avildsen&quot; src=&quot;/images/2018/11/rocky.jpg&quot; longdesc=&quot;#8288874d&quot; /&gt;&lt;figcaption id=&quot;8288874d&quot;&gt;Rocky (1976) by John G. Avildsen&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There is no particular order here, just everything I have in mind, in one list.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make Your Own Product&lt;/strong&gt;.
+Learning how to program and &lt;em&gt;actually&lt;/em&gt; programming are not the same thing. The best,
+and the only right way to learn is “by doing.” The best way of doing is
+to create something meaningful and important. If it’s your own product—even
+better. If someone pays you for that—best of all. Every time I want
+to learn something new I make up a realistic goal and &lt;a href=&quot;/pets.html&quot;&gt;attempt&lt;/a&gt; to achieve it.
+A few years ago I was interested in learning Python. Instead of going to online
+courses or reading books I tried to create a small web app for my own marketing purposes.
+At that time I knew Java, but I wrote that app in Python. My recommendation: never study
+anything in an academic way, always do something real using the tech stack you want
+to learn.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Change Languages&lt;/strong&gt;.
+Don’t get stuck with one stack of technologies, no matter how much you love it.
+Of course, you don’t want to be a “jack of all trades,” since they are never
+paid well. You want to be focused. But “one focus” in life is not enough. I switch
+languages every 4-6 years. I started with Pascal, then it was C++, then Java,
+then PHP (yes, you heard right, I’m
+&lt;a href=&quot;http://www.zend.com/en/yellow-pages/ZEND007965&quot;&gt;ZCE&lt;/a&gt;/&lt;a href=&quot;http://www.zend.com/en/yellow-pages/ZEND007965&quot;&gt;ZFCE&lt;/a&gt;),
+then Java again, and now it’s Ruby.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Go Full Cycle&lt;/strong&gt;.
+Writing code that “works on your laptop” is a great achievement… for a junior
+programmer. A senior knows that it’s only a part of the job. The smaller part.
+The bigger part is turning your “working” code into a market-ready product,
+which means merging and auto-testing, compiling and packaging for multiple platforms,
+staging and acceptance testing, bug reporting, metrics collecting, A/B testing,
+stress and load testing, deploying to production, and even reporting to investors.
+Modern software development life cycle is a giant &lt;del&gt;mess&lt;/del&gt; show.
+Do you know how it all works?
+You don’t? You don’t care? You are not a senior developer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Open Your Sources&lt;/strong&gt;.
+Like I said in my talk &lt;a href=&quot;https://www.youtube.com/watch?v=IGbteQpTNCA&quot;&gt;&lt;em&gt;How Bright Is Your Future?&lt;/em&gt;&lt;/a&gt;
+at RigaDevDays, the future of software will almost entirely be open source. The
+amount of code that companies keep proprietary is decreasing every year. You have
+to be an open source advocate if you want to be successful. If you are still
+&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;afraid&lt;/a&gt;,
+or don’t have time, &lt;a href=&quot;/2017/05/30/why-contribute-to-open-source.html&quot;&gt;reconsider&lt;/a&gt;.
+Writing code for yourself and your office buddies, and writing it for a few
+thousand anonymous GitHub hooligans, are two very different stories. You will
+need time to get up to speed in this wild territory. It took me over three years.
+Don’t wait, start now.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Test Everything&lt;/strong&gt;.
+To be honest, almost everything I’ve learned about software quality, I owe
+to the painful hours of &lt;a href=&quot;/2015/07/16/fools-dont-write-unit-tests.html&quot;&gt;writing unit tests&lt;/a&gt;,
+mocks, fixtures, stubs, integration
+tests, and so on. I truly believe that a professional programmer spends more
+time creating automated tests than writing production code. That’s why
+I’d recommend you focus on testing if you want to become a better engineer.
+Start with the great book &lt;a href=&quot;http://amzn.to/1PBpoDT&quot;&gt;&lt;em&gt;Growing Object-Oriented Software, Guided by Tests&lt;/em&gt;&lt;/a&gt;
+by Steve Freeman and Nat Pryce and make yourself &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;a rule&lt;/a&gt;:
+every line of code, that you are at all in doubt about, must be proven by a test.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Statically Analyze&lt;/strong&gt;.
+Well, half of my knowledge about software quality I owe to unit testing. The
+other half I owe to static analyzers. I learned much more from
+&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt; and &lt;a href=&quot;https://pmd.github.io/&quot;&gt;PMD&lt;/a&gt;
+than from all the Java books I’ve ever read. Every new programming language I learn
+I start by configuring the strictest static analyzer I can find and then listening
+to its complaints. I’d recommend you do the same. Listen to your tools and
+&lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;make sure&lt;/a&gt;
+your code is 100% complaint with their quality expectations. Don’t just
+use them as recommendation providers, but make yourself a rule:
+&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;never commit&lt;/a&gt;
+anything that doesn’t fully pass all static analyzers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Humiliate Yourself on StackOverflow&lt;/strong&gt;.
+Robert Sheckley &lt;a href=&quot;https://amzn.to/2ToSdws&quot;&gt;said&lt;/a&gt;
+that “in order to ask a question you must already know most of the answer.”
+Friends, online chats, and office kitchen talks are
+great places to find help… for junior programmers. Those people understand you
+no matter how stupid your questions are and that is how they spoil you. You don’t
+grow while talking to them and getting their help. You degrade. Instead, you should
+ask questions where nobody knows you and will only answer if your question is perfectly
+formulated and expressed. There are many places, but StackOverflow is the best.
+Make sure every question you have goes to StackOverflow first. Then you may share the
+link with your buddies. But StackOverflow comes first.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Earn Certificates&lt;/strong&gt;.
+I’ve got some of them and I’m planning to get more, even though I’m not really
+a programmer &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;on a payroll&lt;/a&gt;
+and I’m not going to be employed by any enterprise that
+cares about badges in
+&lt;a href=&quot;https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&amp;amp;target=_latex%2Fresume-boring.tex&amp;amp;command=pdflatex&amp;amp;trackId=1520166474432&quot;&gt;my CV&lt;/a&gt;.
+Still, I want more certificates. Why? Because I learn a lot when I pass them.
+Also when I fail (I have done, twice, up to now). There are two things certificates
+give you: 1) they help you fill up your knowledge gaps, and 2) they boost your
+self-respect (when and if you pass, of course). Make yourself a rule: one
+new certificate every year.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Go to Job Interviews&lt;/strong&gt;.
+“Changing jobs every couple of years used to look bad on a resume. It told
+recruiters you can’t hold down a job, can’t get along with colleagues, or
+that you’re simply disloyal and can’t commit. That stigma is fast
+becoming antiquated. Workers who stay with a company longer than
+two years are said to get paid 50% less,” according to
+&lt;a href=&quot;https://www.fastcompany.com/3055035/you-should-plan-on-switching-jobs-every-three-years-for-the-rest-of-your-&quot;&gt;Vivian Giang&lt;/a&gt;.
+The bottom line is that you must be ready to change jobs, because you will have to, and soon.
+If you don’t, you will lose. Regular job interviews are the best way to prepare
+yourself. Make it a rule: every three months you go to an interview.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Change Jobs&lt;/strong&gt;.
+You will never be a truly senior developer or an architect if you stay with one
+company or project for a long time. You have to change jobs. Frequently. I know,
+it’s painful for most of us, but this is how we grow. You need new tasks, new
+challenges, new technologies, new customers, and new bosses in order to learn
+how to survive and become stronger. Ideally, you should become a freelancer
+and forget about full-time &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;nine-to-five&lt;/a&gt;
+office &lt;del&gt;slavery&lt;/del&gt; employment.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Read Books&lt;/strong&gt;.
+One book per month. How does that sound? Twelve books per year. That’s an easily
+achievable goal. However, ask yourself, did you manage to read a dozen books
+over the last calendar year? I seriously doubt many of you will answer positively.
+Books are important because they are way more formal and “complete” than blog
+posts, news articles, or conference presentations. They cover entire topics,
+not parts of them. For example, did you read the &lt;a href=&quot;http://amzn.to/2crIfoY&quot;&gt;Git book&lt;/a&gt; ever? Most programmers
+I know who use Git never even touched the book. They use Git, but barely understand
+what’s under the hood. This is how junior developers behave. Be professional,
+read the manual!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Follow Key People&lt;/strong&gt;.
+I mean Twitter (I’m &lt;a href=&quot;https://twitter.com/yegor256&quot;&gt;@yegor256&lt;/a&gt;),
+Facebook (&lt;a href=&quot;https://www.facebook.com/yegor256&quot;&gt;here&lt;/a&gt; I am),
+Telegram (&lt;a href=&quot;https://t.me/yegor256news&quot;&gt;my channel&lt;/a&gt;),
+Instagram (&lt;a href=&quot;https://instagram.com/yegor256&quot;&gt;click here&lt;/a&gt; to follow me), and, of course,
+GitHub (I’m &lt;a href=&quot;https://github.com/yegor256&quot;&gt;@yegor256&lt;/a&gt;). What’s new that you can hear from me?
+Probably not so much, but you will get a feeling for what’s going on
+in my professional life, where I’m heading, what I read, what I write, etc. Who do I follow?
+All authors of all books I like, all bloggers I’ve ever enjoyed reading,
+all speakers I liked watching, key public figures and politicians,
+no matter whether I agree with them or not. I believe you should do the same, to
+stay informed about the trends.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lurk&lt;/strong&gt;.
+Regularly check &lt;a href=&quot;https://news.ycombinator.com/&quot;&gt;Hacker News&lt;/a&gt;,
+&lt;a href=&quot;https://en.reddit.com/r/programming/&quot;&gt;/programming&lt;/a&gt; Reddit, and, maybe,
+&lt;a href=&quot;https://changelog.com/&quot;&gt;Changelog&lt;/a&gt;. That’s pretty much all you need to read.
+A few times a week. Just &lt;del&gt;read&lt;/del&gt; scroll what’s hot and move on.
+Will it make you a better programmer? Unlikely. Will it help your career
+and your life? Definitely. You never know what’s coming and where the
+next opportunity is. I still &lt;a href=&quot;/2017/08/15/bitcoin-pyramid.html&quot;&gt;feel sorry&lt;/a&gt;
+about not paying enough attention to
+the &lt;a href=&quot;https://news.ycombinator.com/item?id=1532670&quot;&gt;announcement&lt;/a&gt; of Bitcoin
+at HN many years ago.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Attend Conferences and Meetups&lt;/strong&gt;.
+Ideally, as a speaker. Otherwise, &lt;em&gt;at least once a month&lt;/em&gt; as a listener. Will
+you learn something new? I don’t think so. But you will definitely motivate
+yourself by meeting the most active and motivated people in the industry,
+including speakers and other listeners. Most companies will be ready to
+sponsor your tickets. Two big conferences per year will be enough. The rest
+of the time attend your local meetups, you can find them
+at &lt;a href=&quot;https://www.meetup.com&quot;&gt;meetup.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;That’s pretty much it. Hope this list helps.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">OK, it’s time to publish this piece. I’ve been dancing around it for quite a while, telling you how to make more per hour, how to manage those stupid managers that don’t let you grow, how to boost your career and how to deal with office slavery. Now here is a simple, plain list of recommendations for you: what you should do if you want to be a more successful programmer. Not a better algorithm designer, even though that’s important. Not a funnier clown team player, even though that’s also important. But a more successful software engineer, both financially and socially.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/rocky.jpg" /></entry><entry><title type="html">Tech Journalism Sucks</title><link href="https://www.yegor256.com/2018/11/20/journalism.html" rel="alternate" type="text/html" title="Tech Journalism Sucks" /><published>2018-11-20T00:00:00+00:00</published><updated>2018-11-20T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/20/journalism</id><content type="html" xml:base="https://www.yegor256.com/2018/11/20/journalism.html">&lt;p&gt;This July, just four months ago,
 I submitted an article to &lt;a href=&quot;http://www.infoq.com/&quot;&gt;InfoQ&lt;/a&gt;, a
 popular online tech magazine. In the article I
 suggested that in order to improve our projects we must not make programmers worry
@@ -44,7 +221,8 @@ the IEEE Software editor thinks that it’s something everybody is already using
 and it was &lt;a href=&quot;https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext&quot;&gt;published&lt;/a&gt; there,
 maybe thanks to the objectivity of Lawrence Fisher, their editor.
 I also submitted it to a number of software conferences, where it was also accepted,
-including &lt;a href=&quot;https://youtu.be/55mwAbuDrV8&quot;&gt;Joker 2018&lt;/a&gt; in St. Petersburg, Russia.&lt;/p&gt;
+including &lt;a href=&quot;https://youtu.be/55mwAbuDrV8&quot;&gt;Joker 2018&lt;/a&gt; in St. Petersburg, Russia
+(it was the 3rd most liked speech, according to the votes of 400+ attendees).&lt;/p&gt;
 
 &lt;p&gt;Here comes my point.&lt;/p&gt;
 
@@ -923,265 +1101,4 @@ contribution, and report bugs when something is not &lt;em&gt;clear&lt;/em&gt;.&
 
 &lt;p&gt;Making your code open and encouraging programmers to report bugs when
 something is not only broken but unclear—are the best two ways to achieve
-high maintainability.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="maintainability" /><summary type="html">There is a famous book by Robert Martin called Clean Code. The title is an obvious call to all of us: the code must be clean. Clean, like a kitchen, I suppose—there are no dirty dishes, no garbage on the floor, no smelly towels. Dirt to be cleaned in a code base, according to Martin, includes large methods, non-descriptive variable names, tight coupling, lack of SOLID and SRP compliance, and many other things. Read the book, it’s worth it. However, there is yet another aspect of source code. How clear is it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/rum-diary.jpg" /></entry><entry><title type="html">Monolithic Repos Are Evil</title><link href="https://www.yegor256.com/2018/09/05/monolithic-repositories.html" rel="alternate" type="text/html" title="Monolithic Repos Are Evil" /><published>2018-09-05T00:00:00+00:00</published><updated>2018-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/05/monolithic-repositories</id><content type="html" xml:base="https://www.yegor256.com/2018/09/05/monolithic-repositories.html">&lt;p&gt;We all keep our code in &lt;del&gt;Git&lt;/del&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Version_control&quot;&gt;version control&lt;/a&gt; repositories.
-The question is whether we should create a new repository for each
-new module or try to keep as much as possible in a single so called “monolithic” repo.
-Market leaders, like &lt;a href=&quot;https://code.fb.com/core-data/scaling-mercurial-at-facebook/&quot;&gt;Facebook&lt;/a&gt;
-and &lt;a href=&quot;https://www.infoq.com/presentations/Development-at-Google&quot;&gt;Google&lt;/a&gt;,
-advocate the second approach. I believe they are wrong.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Funny Games (2007) by Michael Haneke&quot; src=&quot;/images/2018/09/funny-games.jpg&quot; longdesc=&quot;#9f6d574f&quot; /&gt;&lt;figcaption id=&quot;9f6d574f&quot;&gt;Funny Games (2007) by Michael Haneke&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let’s use the following JavaScript function as an example.
-It downloads a JSON document from a &lt;a href=&quot;http://www.zold.io&quot;&gt;Zold&lt;/a&gt;
-node (using &lt;a href=&quot;https://jquery.com/&quot;&gt;jQuery&lt;/a&gt;)
-and places part of its content on the HTML page.
-Then it colors the data according to its value.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// main.js&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://b1.zold.io/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$body&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nscore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nscore&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pretty obvious, isn’t it? Just a single &lt;code&gt;main.js&lt;/code&gt; file which does everything we need.
-We simply add it to the HTML and it works:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://code.jquery.com/jquery-3.3.1.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main();&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;loading...&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, let me refactor it. Let me break it into two pieces. The first
-piece will load the data and the second one will be a jQuery plugin to colorize
-HTML content according to the data it contains. This is how the
-plugin will look:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// colorize.js&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colorize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;parseFloat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code&gt;main.js&lt;/code&gt; will look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// main.js&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://b1.zold.io/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nscore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colorize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;red&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, instead of a single monolithic piece of code, we have two smaller pieces
-which have to be loaded together into the target HTML:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://code.jquery.com/jquery-3.3.1.min.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;colorize.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;main();&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;loading...&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Two pieces are better than one? It seems that
-&lt;a href=&quot;https://ai.google/research/pubs/pub45424&quot;&gt;Google&lt;/a&gt;,
-&lt;a href=&quot;https://blog.digitalocean.com/taming-your-go-dependencies/&quot;&gt;Digital Ocean&lt;/a&gt;
-and &lt;a href=&quot;https://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/&quot;&gt;Mozilla&lt;/a&gt;
-don’t think so.&lt;/p&gt;
-
-&lt;p&gt;I disagree.&lt;/p&gt;
-
-&lt;p&gt;To illustrate my point I extracted the JavaScript function into a
-new standalone &lt;a href=&quot;https://github.com/yegor256/colorizejs&quot;&gt;jQuery plugin&lt;/a&gt;.
-Here is what I did:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Created a new GitHub repo &lt;a href=&quot;https://github.com/yegor256/colorizejs&quot;&gt;yegor256/colorizejs&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;Read the &lt;a href=&quot;https://learn.jquery.com/plugins/basic-plugin-creation/&quot;&gt;instructions&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;Did some research of jQuery plugins, studied a few examples;&lt;/li&gt;
-  &lt;li&gt;Found out that most of them used &lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;, which I’ve never heard of;&lt;/li&gt;
-  &lt;li&gt;Decided to use &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt; for JavaScript packaging (what else, right?);&lt;/li&gt;
-  &lt;li&gt;Created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/package.json&quot;&gt;&lt;code&gt;package.json&lt;/code&gt;&lt;/a&gt; for npm;&lt;/li&gt;
-  &lt;li&gt;Renamed GitHub repo to &lt;code&gt;colorizejs&lt;/code&gt; when I found out that npm package
-&lt;a href=&quot;https://www.npmjs.com/package/colorize&quot;&gt;&lt;code&gt;colorize&lt;/code&gt;&lt;/a&gt; already exists;&lt;/li&gt;
-  &lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.travis.yml&quot;&gt;&lt;code&gt;.travis.yml&lt;/code&gt;&lt;/a&gt; for &lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;Created a &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/README.md&quot;&gt;README.md&lt;/a&gt; and explained how to use it and install it;&lt;/li&gt;
-  &lt;li&gt;Decided to use the MIT license and created &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt&quot;&gt;LICENSE.txt&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.pdd&quot;&gt;PDD&lt;/a&gt; for
-&lt;a href=&quot;/2017/04/05/pdd-in-action.html&quot;&gt;puzzles&lt;/a&gt; automated collection;&lt;/li&gt;
-  &lt;li&gt;Configured &lt;a href=&quot;https://github.com/yegor256/colorizejs/blob/master/.rultor.yml&quot;&gt;&lt;code&gt;.rultor.yml&lt;/code&gt;&lt;/a&gt; for
-&lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;Rultor&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;Tried to create a unit test and failed miserably (after a full hour of research),
-since I’ve had almost no experience in JS unit testing;&lt;/li&gt;
-  &lt;li&gt;Posted a &lt;a href=&quot;https://stackoverflow.com/questions/51809750/&quot;&gt;question&lt;/a&gt; to StackOverflow;&lt;/li&gt;
-  &lt;li&gt;The question was answered by a few people only after the bounty I offered;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/brian-lives-outdoors&quot;&gt;@brian-lives-outdoors&lt;/a&gt;’s answer
-was the best and he even submitted a &lt;a href=&quot;https://github.com/yegor256/colorizejs/pull/2&quot;&gt;pull request&lt;/a&gt;
-with a unit test, which I merged;&lt;/li&gt;
-  &lt;li&gt;Released the first version &lt;a href=&quot;https://github.com/yegor256/colorizejs/tree/0.0.1&quot;&gt;0.0.1&lt;/a&gt;
-to &lt;a href=&quot;https://www.npmjs.com/package/colorizejs&quot;&gt;npmjs.com&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;Modified the code to make it work both with classes and colors;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/yegor256/colorizejs/issues/3&quot;&gt;Implemented&lt;/a&gt; and released
-the next version &lt;a href=&quot;https://github.com/yegor256/colorizejs/tree/0.1.0&quot;&gt;0.1.0&lt;/a&gt;;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/zold-io/zold.github.io/issues/81&quot;&gt;Added it&lt;/a&gt; to Zold front-end,
-tested it, and released it—check it out &lt;a href=&quot;http://www.zold.io/health.html&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It took almost three weeks of waiting and four hours of work, just
-to move a small piece of JavaScript code to a new repository and release
-it separately. Was it worth it? Well, I think it was. But &lt;del&gt;many&lt;/del&gt; most
-other blog post authors, who I managed to find, think that it would be better to keep
-everything in a single monolithic repo, mostly because it’s better for &lt;em&gt;productivity&lt;/em&gt;.
-For example,
-&lt;a href=&quot;https://danluu.com/monorepo/&quot;&gt;Advantages of monorepos&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/danluu&quot;&gt;Dan Luu&lt;/a&gt;,
-&lt;a href=&quot;https://people.engr.ncsu.edu/ermurph3/papers/seip18.pdf&quot;&gt;Advantages and Disadvantages of a Monolithic Repository&lt;/a&gt;
-(a case study at Google) by Ciera Jaspan et al.,
-and
-&lt;a href=&quot;https://www.tomasvotruba.cz/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/&quot;&gt;How Monolithic Repository in Open Source saved my Laziness&lt;/a&gt;
-by Tomas Votruba.&lt;/p&gt;
-
-&lt;p&gt;There are also a few good analyses of both approaches, for example
-&lt;a href=&quot;https://www.dotconferences.com/2016/05/fabien-potencier-monolithic-repositories-vs-many-repositories&quot;&gt;Monolithic repositories vs. Many repositories&lt;/a&gt;
-speech by Fabien Potencier at dotScale 2016
-and
-&lt;a href=&quot;http://www.gigamonkeys.com/mono-vs-multi/&quot;&gt;Repo Style Wars: Mono vs Multi&lt;/a&gt;
-by Peter Seibel.&lt;/p&gt;
-
-&lt;p&gt;In a nutshell, they all claim that productivity is higher with a monolithic repo because
-the amount of operations one has to do in order to make a change is smaller.
-Indeed, in a monorepo there will be a single branch, a single set of commits, a single pull request,
-a single merge, deploy and release. Also it will be easier to test, both
-manually and via unit testing. Continuous integration is easier to configure,
-and so on and so forth.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;A set of smaller components is better than a larger solid piece.&lt;/aside&gt;
-
-&lt;p&gt;All these “reasonable” arguments remind me of what I hear when preaching
-object decomposition and suggesting that multiple objects are better than
-a single large one. Imagine a large class of 3,000 lines of code, which
-does many things and they are all very tightly coupled. It’s “easy” to test it,
-to make changes, to deploy, to review, etc. Because everything stays in one
-file, right? We don’t need to jump from class to class in order to understand
-the design. We just look at one screen, scroll it up and down, and that’s it.
-Right? Totally wrong!&lt;/p&gt;
-
-&lt;p&gt;I guess I don’t need to explain why it’s wrong. We don’t design our software
-that way anymore. We know that tight coupling is a bad idea. We know that
-a set of smaller components is better than a larger solid piece.&lt;/p&gt;
-
-&lt;p&gt;Why can’t we apply the same logic to repositories? I believe we can.
-Of course, just like in object-oriented programming, a fine-grained design
-requires more skills and time. Look at what I had to do with this small
-jQuery plugin. I’ve spent hours of coding and thinking. I even had to learn
-&lt;a href=&quot;https://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt; and &lt;a href=&quot;https://jasmine.github.io/&quot;&gt;Jasmine&lt;/a&gt;,
-which I most probably will not use anymore. But the benefits we are getting
-from it are enormous. This is my short list of them:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Encapsulation&lt;/strong&gt;.
-Each repo encapsulates a single problem, hiding its details from everybody
-else. Thanks to that, the scope each repo has to deal with gets smaller.
-The smaller the scope, just like in OOP, the easier it is to maintain and
-modify. The easier to maintain, the cheaper the development. I guess Google
-guys don’t really worry about costs. On the contrary, they want their salaries
-to grow. A large unmaintainable monolithic repo is a perfect tool to make
-it happen.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Fast Builds&lt;/strong&gt;.
-When a repo is small, the time its automated build takes is small. Look at the
-time Travis &lt;a href=&quot;https://travis-ci.org/yegor256/colorizejs/builds/420726284&quot;&gt;spends&lt;/a&gt;
-for my jQuery plugin. It’s 51 seconds. It’s fast.
-We &lt;a href=&quot;https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/&quot;&gt;all know&lt;/a&gt;
-that the faster the build, the better it is for productivity, since it’s easier to use
-the build as a tool for development.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Accurate Metrics&lt;/strong&gt;.
-I don’t know whether you rely on metrics in your projects, but we at
-&lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; do pay attention to numbers, like
-lines of code, &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits of code&lt;/a&gt;,
-number of commits, classes, methods, cohesion,
-coupling, etc. It’s always a question whether the metrics are accurate.
-Calculating lines of code for a large repository doesn’t make any sense, since
-the number will include a lot of files from completely different parts of
-the application. Moreover there will be different languages and file formats.
-Say a repo has 200K lines of Java, 150K lines of XML, 50K lines of JavaScript,
-and 40K lines of Ruby. Can you say something specific about this repo? Is it
-large? Is it a Java repo? And, more importantly, can it be compared with other
-repositories? Not really. It’s just a big messy storage of files.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;The preferred situation is one language or technology per repository.&lt;/aside&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Homogeneous Tasks&lt;/strong&gt;.
-Smaller repositories tend to have smaller tech stacks, meaning that each of
-them uses just a few languages and frameworks, or (and this is the preferred
-situation)—one language or technology per repository. Thanks to this,
-the management of programmers becomes easier, since any ticket/problem can
-be assigned to anybody. It’s easier to make tasks similar in size and complexity.
-This obviously means better manageability of the project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Single Coding Standard&lt;/strong&gt;.
-It’s easier to standardize the coding style if the repo is small. When it’s
-large, various parts of the code base will have different styles and
-it will be almost impossible to put everybody on the same page. In other
-words, smaller repositories look more beautiful than larger ones.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Short Names&lt;/strong&gt;.
-Each repository, inevitably, will have its own namespace. For example, in the
-JS repository I just created, I only have two files: &lt;code&gt;colorizejs.js&lt;/code&gt; and &lt;code&gt;test-colorizejs.js&lt;/code&gt;.
-I don’t really care about the naming inside them, since the namespace
-is very small. &lt;del&gt;I can even use global variables.&lt;/del&gt;
-Shorter names and smaller namespaces mean better maintainability.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Simple Tests&lt;/strong&gt;.
-The larger the code base, the more dependencies it has, which are difficult
-to mock and test. Very large code bases become fundamentally untestable since
-they require a lot of integration tests which are difficult to maintain.
-Smaller libraries, frameworks and modules are easier to keep at the level
-of simple and fast unit testing.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thus, I believe that the smaller the repositories and modules, the better.
-Ideally, I would say, the largest acceptable size for a code base is 50,000 lines of code.
-Everything that goes above this line is a perfect candidate for decomposition.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think is better, a bigger code repository with everything inside, or many smaller ones with their own builds, dependencies, issues, and pull requests?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1053922638517731329?ref_src=twsrc%5Etfw&quot;&gt;October 21, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">We all keep our code in Git version control repositories. The question is whether we should create a new repository for each new module or try to keep as much as possible in a single so called “monolithic” repo. Market leaders, like Facebook and Google, advocate the second approach. I believe they are wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry></feed>
+high maintainability.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="maintainability" /><summary type="html">There is a famous book by Robert Martin called Clean Code. The title is an obvious call to all of us: the code must be clean. Clean, like a kitchen, I suppose—there are no dirty dishes, no garbage on the floor, no smelly towels. Dirt to be cleaned in a code base, according to Martin, includes large methods, non-descriptive variable names, tight coupling, lack of SOLID and SRP compliance, and many other things. Read the book, it’s worth it. However, there is yet another aspect of source code. How clear is it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/rum-diary.jpg" /></entry></feed>
