@@ -39,7 +39,7 @@ There is no particular order here, just everything I have in mind, in one list.
 
 **Make Your Own Product**.
 Learning how to program and *actually* programming are not the same thing. The best,
-and the only right way, to learn is "by doing." The best way of doing is
+and the only right way to learn is "by doing." The best way of doing is
 to create something meaningful and important. If it's your own product---even
 better. If someone pays you for that--- best of all. Every time I want
 to learn something new I make up a realistic goal and attempt to achieve it.
