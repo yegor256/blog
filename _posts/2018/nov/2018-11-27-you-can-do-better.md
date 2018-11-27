@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How to Become a Better Programmer"
-date: 2018-11-06
+title: "You Can Do Better"
+date: 2018-11-27
 place: Moscow, Russia
 tags: career
 description: |
@@ -14,9 +14,9 @@ keywords:
   - programmer career
   - better programmer
   - skills for better programmer
-image: /images/2018/11/
+image: /images/2018/11/rocky.jpg
 jb_picture:
-  caption:
+  caption: Rocky (1976) by John G. Avildsen
 ---
 
 OK, it's time to publish this piece. I've been dancing around it for quite a while,
@@ -26,9 +26,11 @@ how to [boost your career]({% pst 2017/jan/2017-01-24-career-advice %})
 and how to deal with [office slavery]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 Now here is a simple, plain list of recommendations for you: what you should do
 if you want to be a more successful programmer. Not a better algorithm
-designer, even though that's important. Not a funnier <del>clown</del>
+designer, even though that's [important]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
+Not a funnier <del>clown</del>
 [team player]({% pst 2018/aug/2018-08-29-soft-skills %}), even though that's
-also important. But a more successful software engineer, both financially
+also important. But a more successful software engineer, both
+[financially]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
 and socially.
 
 <!--more-->
@@ -41,8 +43,8 @@ There is no particular order here, just everything I have in mind, in one list.
 Learning how to program and *actually* programming are not the same thing. The best,
 and the only right way to learn is "by doing." The best way of doing is
 to create something meaningful and important. If it's your own product---even
-better. If someone pays you for that--- best of all. Every time I want
-to learn something new I make up a realistic goal and attempt to achieve it.
+better. If someone pays you for that---best of all. Every time I want
+to learn something new I make up a realistic goal and [attempt](/pets.html) to achieve it.
 A few years ago I was interested in learning Python. Instead of going to online
 courses or reading books I tried to create a small web app for my own marketing purposes.
 At that time I knew Java, but I wrote that app in Python. My recommendation: never study
