@@ -19,10 +19,10 @@ jb_picture:
   caption:
 ---
 
-OK, it's time to publish this piece. I've been dancing around for quite a while,
+OK, it's time to publish this piece. I've been dancing around it for quite a while,
 telling you how to make [more per hour]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}),
 how to manage those [stupid managers]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %}) that don't let you grow,
-how to [boost your career]({% pst 2017/jan/2017-01-24-career-advice %}),
+how to [boost your career]({% pst 2017/jan/2017-01-24-career-advice %})
 and how to deal with [office slavery]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 Now here is a simple, plain list of recommendations for you: what you should do
 if you want to be a more successful programmer. Not a better algorithm
@@ -38,13 +38,13 @@ and socially.
 There is no particular order here, just everything I have in mind, in one list.
 
 **Make Your Own Product**.
-Learning how to program and *actually* programming are not same thing. The best,
-and the only right way to learn is "by doing." The best way of doing is
-creating something meaningful and important. If it's your own product---even
-better. If someone pays you for that--- that's best of all. Every time I want
+Learning how to program and *actually* programming are not the same thing. The best,
+and the only right way, to learn is "by doing." The best way of doing is
+to create something meaningful and important. If it's your own product---even
+better. If someone pays you for that--- best of all. Every time I want
 to learn something new I make up a realistic goal and attempt to achieve it.
 A few years ago I was interested in learning Python. Instead of going to online
-courses or reading books I tried to created a small web app for my own marketing purposes.
+courses or reading books I tried to create a small web app for my own marketing purposes.
 At that time I knew Java, but I wrote that app in Python. My recommendation: never study
 anything in an academic way, always do something real using the tech stack you want
 to learn.
@@ -53,8 +53,8 @@ to learn.
 Don't get stuck with one stack of technologies, no matter how much you love it.
 Of course, you don't want to be a "jack of all trades," since they are never
 paid well. You want to be focused. But "one focus" in life is not enough. I switch
-langugages every 4-6 years. I started with Pascal, then it was C++, then Java,
-then PHP (yes, you heard it right, I'm
+languages every 4-6 years. I started with Pascal, then it was C++, then Java,
+then PHP (yes, you heard right, I'm
 [ZCE](http://www.zend.com/en/yellow-pages/ZEND007965)/[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965)),
 then Java again, and now it's Ruby.
 
@@ -65,14 +65,14 @@ The bigger part is turning your "working" code into a market-ready product,
 which means merging and auto-testing, compiling and packaging for multiple platforms,
 staging and acceptance testing, bug reporting, metrics collecting, A/B testing,
 stress and load testing, deploying to production, and even reporting to investors.
-Modern software development lifecycle is a giant <del>mess</del> show.
+Modern software development life cycle is a giant <del>mess</del> show.
 Do you know how it all works?
 You don't? You don't care? You are not a senior developer.
 
 **Open Your Sources**.
 Like I said in my talk [_How Bright Is Your Future?_](https://www.youtube.com/watch?v=IGbteQpTNCA)
 at RigaDevDays, the future of software will almost entirely be open source. The
-amount of code companies keep proprietary is decreasing every year. You have
+amount of code that companies keep proprietary is decreasing every year. You have
 to be an open source advocate if you want to be successful. If you are still
 [afraid]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}),
 or don't have time, [reconsider]({% pst 2017/may/2017-05-30-why-contribute-to-open-source %}).
@@ -166,7 +166,7 @@ Facebook ([here](https://www.facebook.com/yegor256) I am),
 Telegram ([my channel](https://t.me/yegor256news)),
 Instagram ([click here](https://instagram.com/yegor256) to follow me), and, of course,
 GitHub (I'm [@yegor256](https://github.com/yegor256)). What's new that you can hear from me?
-Probably, not so much, but you will get a feeling of what's going on
+Probably not so much, but you will get a feeling for what's going on
 in my professional life, where I'm heading, what I read, what I write, etc. Who do I follow?
 All authors of all books I like, all bloggers I've ever enjoyed reading,
 all speakers I liked watching, key public figures and politicians,
