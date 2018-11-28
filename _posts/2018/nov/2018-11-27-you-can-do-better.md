@@ -102,7 +102,7 @@ than from all the Java books I've ever read. Every new programming language I le
 I start by configuring the strictest static analyzer I can find and then listening
 to its complaints. I'd recommend you do the same. Listen to your tools and
 [make sure]({% pst 2018/jan/2018-01-16-educational-aspect-of-static-analysis %})
-your code is 100% complaint with their quality expectations. Don't just
+your code is 100% compliant with their quality expectations. Don't just
 use them as recommendation providers, but make yourself a rule:
 [never commit]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 anything that doesn't fully pass all static analyzers.
