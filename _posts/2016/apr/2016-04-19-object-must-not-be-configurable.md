@@ -23,7 +23,7 @@ jb_picture:
 
 Using object properties as configuration parameters is a very common
 mistake we keep making mostly because our objects
-are mutable---we **configure** them. We change their behavior by
+are mutable---we _configure_ them. We change their behavior by
 injecting parameters or even entire settings/configuration objects
 into them. Do I have to say that it's abusive and disrespectful
 from a [philosophical]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
@@ -207,7 +207,7 @@ String html = new Page(
 {% endhighlight %}
 
 However, no matter how convenient it may look at first glance,
-this approach is **very wrong**. Mostly because it encourages us
+this approach is _very wrong_. Mostly because it encourages us
 to make big and non-cohesive objects. They grow in size and become less
 testable, less maintainable and less readable.
 

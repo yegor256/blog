@@ -281,12 +281,12 @@ but the most important part was the preparation of attendees. I would definitely
 try to speak there again, if they organize again.
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://i.ytimg.com/vi/_cdni0NMus0/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
+<img src="https://i.ytimg.com/vi/BQegLaUIvgs/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
 How to Cut Corners and Stay Cool;
 [DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
 <span class="city">Iași</span>, <span class="country">Romania</span>;
 23 April 2018;
-video is coming,
+[video](https://www.youtube.com/watch?v=BQegLaUIvgs),
 [slides](https://www.slideshare.net/YegorBugayenko/how-to-cut-corners-and-stay-cool).
 
 ### 2017

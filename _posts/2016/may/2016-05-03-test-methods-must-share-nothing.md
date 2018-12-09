@@ -152,7 +152,8 @@ class FooTest {
 {% endhighlight %}
 
 These literals must be different. This is what any static analyzer is
-saying when it sees `"something"` in so many places. It questions us---why are they the same? Is it really so important to use `"something"` everywhere?
+saying when it sees `"something"` in so many places. It questions us---why
+are they the same? Is it really so important to use `"something"` everywhere?
 Why can't you use different literals? Of course we can. And we should.
 
 The bottom line is that each test method must have its own set of data and objects. They must
@@ -160,7 +161,7 @@ not be shared between test methods ever. Test methods must always be
 independent, having nothing in common.
 
 Having that in mind, we can easily conclude that methods like `setUp()` or
-any shared variables in test classes are **evil**. They must not be used
+any shared variables in test classes are _evil_. They must not be used
 and simply must not exist. I think that their invention in JUnit caused
 a lot of harm to Java code.
 

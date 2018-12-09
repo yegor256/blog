@@ -104,7 +104,7 @@ you won't be able to prohibit
 times you ask developers to communicate in tickets, they will resolve
 most of their technical questions face-to-face. It's inevitable.
 
-{% quote People are people; nobody likes to hit that quality bar multiple times a day %}
+{% quote People are people; nobody likes to hit that quality bar multiple times a day. %}
 
 Second, you won't be able to pay for results only, because programmers will
 complain that they are doing a lot of communication in the office that

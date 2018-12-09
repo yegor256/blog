@@ -41,7 +41,7 @@ annotations are a big mistake in Java design.
 
 Long story short, there is one big problem with annotations---they encourage us to implement
 [object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
-functionality **outside** of an object,
+functionality _outside_ of an object,
 which is against the very principle of
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}).
 The object is not solid any more, since its behavior is not defined entirely by its own
@@ -101,6 +101,8 @@ class Books {
 }
 {% endhighlight %}
 
+{% youtube oV6Utb5Jows %}
+
 This article explains why Dependency Injection containers are
 a wrong idea in the first place:
 [Dependency Injection Containers are Code Polluters]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
@@ -117,8 +119,6 @@ and encourage us by tearing objects apart and keeping parts in different
 places. They are containers, sessions, managers, controllers, etc.
 
 ## `@XmlElement`
-
-{% youtube oV6Utb5Jows %}
 
 This is how JAXB
 [works]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}), when you want to convert your
