@@ -39,12 +39,12 @@
   font-weight: normal;
 }
 %main-font-bold {
-  font-family: $main-font-bold;
+  font-family: $main-font;
   font-style: normal;
   font-weight: bold;
 }
 %main-font-italic {
-  font-family: $main-font-italic;
+  font-family: $main-font;
   font-style: italic;
   font-weight: normal;
 }
@@ -302,6 +302,7 @@ h1 {
 h2,
 h3 {
   @extend %clear;
+  @extend %main-font-bold;
   position: relative;
 }
 

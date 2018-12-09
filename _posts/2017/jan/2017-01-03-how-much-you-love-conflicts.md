@@ -61,7 +61,7 @@ fight. Will the problem really be solved? No. You both will hate
 each other even more, because neither of your desires were satisfied. The
 divorce is still coming closer.
 
-{% quote If we resolve conflicts through compromises, everybody suffers except those management monkeys %}
+{% quote If we resolve conflicts through compromises, everybody suffers except those management monkeys. %}
 
 The same happens in software team conflicts---if and when we resolve
 them through compromises, everybody suffers except those
@@ -153,7 +153,7 @@ and honestly expose their _interests_. When that's done, we can all start to wor
 not against each other but against the problem: With what solution will all our
 interests be satisfied at the same time?
 
-{% quote A truly professional software team is full of conflicts %}
+{% quote A truly professional software team is full of conflicts. %}
 
 We will ask that junior developer: "Why do you think we need NoSQL?" It's
 very likely that we will hear something like, "I just want to learn this new
