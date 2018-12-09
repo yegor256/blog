@@ -162,6 +162,9 @@ I know who use Git never even touched the book. They use Git, but barely underst
 what's under the hood. This is how junior developers behave. Be professional,
 read the manual!
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Please, remember, how many technical books you&#39;ve read this year? <a href="https://twitter.com/hashtag/career?src=hash&amp;ref_src=twsrc%5Etfw">#career</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1069103139972935680?ref_src=twsrc%5Etfw">December 2, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 **Follow Key People**.
 I mean Twitter (I'm [@yegor256](https://twitter.com/yegor256)),
 Facebook ([here](https://www.facebook.com/yegor256) I am),
