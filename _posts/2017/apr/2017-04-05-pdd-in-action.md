@@ -36,8 +36,6 @@ Here is how you configure it, in two steps. First, you
 access to [@0pdd](https://github.com/0pdd) in GitHub
 (if your repository is private).
 
-{% youtube nsYGC2aUwfQ %}
-
 Second, you add a [webhook](https://help.github.com/articles/about-webhooks/)
 to your GitHub repository: `http://www.0pdd.com/hook/github` (with just `push` event
 and any content type). I would actually recommend to send GitHub
@@ -57,6 +55,8 @@ issues to the GitHub issue-tracking section of your repository.
 
 Also, when you remove markers from your code base,
 [0pdd](http://www.0pdd.com) will immediately close issues it created.
+
+{% youtube nsYGC2aUwfQ %}
 
 Now, when an issue is assigned to a programmer, we allow him or her
 to [cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})

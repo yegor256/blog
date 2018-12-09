@@ -87,7 +87,7 @@ BTW, Glenford J. Myers said something very similar in his book
 earlier.
 
 Bill Hetzel,
-[__The Complete Guide to Software Testing__](http://amzn.to/2HziEtM)
+[_The Complete Guide to Software Testing_](http://amzn.to/2HziEtM)
 (1993):
 "Some Theoretical Limits to Testing:
 'We can never be sure the specifications are correct,'
