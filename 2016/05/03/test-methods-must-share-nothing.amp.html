@@ -201,7 +201,8 @@ at the same time won’t introduce coupling? Here it is:</p>
 }</pre>
 
 <p>These literals must be different. This is what any static analyzer is
-saying when it sees <code>"something"</code> in so many places. It questions us—why are they the same? Is it really so important to use <code>"something"</code> everywhere?
+saying when it sees <code>"something"</code> in so many places. It questions us—why
+are they the same? Is it really so important to use <code>"something"</code> everywhere?
 Why can’t you use different literals? Of course we can. And we should.</p>
 
 <p>The bottom line is that each test method must have its own set of data and objects. They must
@@ -209,7 +210,7 @@ not be shared between test methods ever. Test methods must always be
 independent, having nothing in common.</p>
 
 <p>Having that in mind, we can easily conclude that methods like <code>setUp()</code> or
-any shared variables in test classes are <strong>evil</strong>. They must not be used
+any shared variables in test classes are <em>evil</em>. They must not be used
 and simply must not exist. I think that their invention in JUnit caused
 a lot of harm to Java code.</p>
 
