@@ -21,8 +21,8 @@ jb_picture:
 
 I wrote some time ago about [anti-patterns in OOP]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}).
 Now it's time to write about unit testing anti-patterns---because they also exist, and there are many.
-I will try to include everything I know of in this list. If you know something
-else, please add via a [pull request](https://github.com/yegor256/blog) or
+I will try to include every example I know in this list. If you know any
+others, please add them via a [pull request](https://github.com/yegor256/blog) or
 post a comment below. For each anti-pattern I will try to mention where it
 was found, if it's not mine. Keep in mind that if I found it somewhere, that doesn't necessarily mean it
 was invented there. If you spot an error, please comment.
