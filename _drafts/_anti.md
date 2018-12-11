@@ -5,7 +5,7 @@ date: 2018-01-29
 place: Moscow, Russia
 tags: testing
 description: |
-  This is a full list of unit-testing anti-patterns I
+  This is a full list of unit-testing anti-patterns that I
   managed to find and collect; feel free to add your
   items to the list, via a pull request.
 keywords:
@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 I wrote some time ago about [anti-patterns in OOP]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}).
-Now it's time to write about unit testing anti-patterns---because they also exist, and many of them.
+Now it's time to write about unit testing anti-patterns---because they also exist, and there are many.
 I will try to include everything I know of in this list. If you know something
 else, please add via a [pull request](https://github.com/yegor256/blog) or
 post a comment below. For each anti-pattern I will try to mention where it
@@ -114,7 +114,7 @@ tests are passing.
 **Greedy Catcher**<sup>3</sup>.
 A unit test which catches exceptions and swallows the stack trace, sometimes
 replacing it with a less informative failure message, but sometimes even just
-logging (c.f. Loudmouth) and letting the test pass.
+logging (cf. Loudmouth) and letting the test pass.
 
 **Sequencer**<sup>3</sup>.
 A unit test that depends on items in an unordered list appearing
@@ -122,7 +122,7 @@ in the same order during assertions.
 
 **Enumerator**<sup>3</sup> (aka [Test With No Name](https://stackoverflow.com/a/336766/187141)).
 Unit tests where each test case method name is only an enumeration,
-i.e. `test1`, `test2`, `test3`. As a result, the intention of the
+e.g. `test1`, `test2`, `test3`. As a result, the intention of the
 test case is unclear, and the only way to be sure is to read
 the test case code and pray for clarity.
 
