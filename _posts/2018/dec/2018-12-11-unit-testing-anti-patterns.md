@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Unit Testing Anti-Patterns, Full List"
-date: 2018-01-29
+date: 2018-12-11
 place: Moscow, Russia
 tags: testing
 description: |
@@ -14,9 +14,9 @@ keywords:
   - unit testing anti-pattern
   - testing anti-pattern java
   - unit testing anti-pattern java
-image: /images/2018/11/
+image: /images/2018/12/breaking-bad.jpg
 jb_picture:
-  caption:
+  caption: Breaking Bad (2010) by Vince Gilligan
 ---
 
 I wrote some time ago about [anti-patterns in OOP]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}).
