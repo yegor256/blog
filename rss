@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-12-09T15:28:33+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">You Can Do Better</title><link href="https://www.yegor256.com/2018/11/27/you-can-do-better.html" rel="alternate" type="text/html" title="You Can Do Better" /><published>2018-11-27T00:00:00+00:00</published><updated>2018-11-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/27/you-can-do-better</id><content type="html" xml:base="https://www.yegor256.com/2018/11/27/you-can-do-better.html">&lt;p&gt;OK, it’s time to publish this piece. I’ve been dancing around it for quite a while,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-12-11T12:44:15+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Unit Testing Anti-Patterns, Full List</title><link href="https://www.yegor256.com/2018/12/11/unit-testing-anti-patterns.html" rel="alternate" type="text/html" title="Unit Testing Anti-Patterns, Full List" /><published>2018-12-11T00:00:00+00:00</published><updated>2018-12-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/12/11/unit-testing-anti-patterns</id><content type="html" xml:base="https://www.yegor256.com/2018/12/11/unit-testing-anti-patterns.html">&lt;p&gt;I wrote some time ago about &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;anti-patterns in OOP&lt;/a&gt;.
+Now it’s time to write about unit testing anti-patterns—because they also exist, and there are many.
+I will try to include every example I know in this list. If you know any
+others, please add them via a &lt;a href=&quot;https://github.com/yegor256/blog&quot;&gt;pull request&lt;/a&gt; or
+post a comment below. For each anti-pattern I will try to mention where it
+was found, if it’s not mine. Keep in mind that if I found it somewhere, that doesn’t necessarily mean it
+was invented there. If you spot an error, please comment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Breaking Bad (2010) by Vince Gilligan&quot; src=&quot;/images/2018/12/breaking-bad.jpg&quot; longdesc=&quot;#5cbba42c&quot; /&gt;&lt;figcaption id=&quot;5cbba42c&quot;&gt;Breaking Bad (2010) by Vince Gilligan&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Cuckoo&lt;/strong&gt;&lt;sup&gt;1&lt;/sup&gt; (aka Stranger&lt;sup&gt;3&lt;/sup&gt;).
+This is a test method that sits in the same unit test but doesn’t really belong there.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Test-per-Method&lt;/strong&gt;&lt;sup&gt;1&lt;/sup&gt;.
+Although a one-to-one relationship between test and production classes is
+a reasonable starting point, a one-to-one relationship between test
+and production method is almost always a bad idea.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Anal Probe&lt;/strong&gt;&lt;sup&gt;2&lt;/sup&gt;.
+A test that has to use unhealthy ways to perform its task, such as
+reading private fields using reflection.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conjoined Twins&lt;/strong&gt;&lt;sup&gt;2&lt;/sup&gt;.
+Tests that are called unit tests but are really integration tests
+since there is no isolation between the system-under-test and the
+tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Happy Path&lt;/strong&gt; (aka Success Against All Odds&lt;sup&gt;3&lt;/sup&gt;, Liar&lt;sup&gt;3&lt;/sup&gt;).
+The tests stay on happy paths (i.e. expected results) without testing
+for boundaries and exceptions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Slow Poke&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test that runs incredibly slow. When developers kick it off, they
+have time to go to the bathroom, grab a smoke, or worse, kick the test off before
+they go home at the end of the day.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Giant&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test that, although it is validly testing the object under test,
+can span thousands of lines and contain many many test cases. This
+can be an indicator that the system-under-test is a God Object.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mockery&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+Sometimes mocking can be good, and handy. But sometimes developers can
+lose themselves in their effort to mock out what isn’t being tested.
+In this case, a unit test contains so many mocks, stubs, and/or fakes that
+the system under test isn’t even being tested at all, instead
+data returned from mocks is what is being tested.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Inspector&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test that violates encapsulation in an effort to achieve 100%
+code coverage, but knows so much about what is going on in the object
+that any attempt to refactor will break the existing test and require
+any change to be reflected in the unit test.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Generous Leftovers&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt; (aka &lt;a href=&quot;https://stackoverflow.com/a/333814/187141&quot;&gt;Chain Gang&lt;/a&gt;,
+&lt;a href=&quot;https://stackoverflow.com/a/2150985/187141&quot;&gt;Wet Floor&lt;/a&gt;).
+An instance where one unit test creates data that is persisted somewhere,
+and another test reuses the data for its own devious purposes. If the
+“generator” is ran afterward, or not at all, the test using that
+data will outright fail.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Local Hero&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt; (aka Hidden Dependency, Operating System Evangelist,
+&lt;a href=&quot;https://stackoverflow.com/a/339339/187141&quot;&gt;Wait and See&lt;/a&gt;, &lt;a href=&quot;https://stackoverflow.com/a/339297/187141&quot;&gt;Environmental Vandal&lt;/a&gt;).
+A test case that is dependent on something specific to the development environment
+it was written on, in order to run. The result is that the test passes
+on development boxes, but fails when someone attempts to run it elsewhere.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nitpicker&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test which compares a complete output when it’s really only interested
+in small parts of it, so the test has to continually be kept
+in line with otherwise unimportant details.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Secret Catcher&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A test that at first glance appears to be doing no testing due
+to the absence of assertions, but as they say, “the devil is in the details.”
+The test is really relying on an exception to be thrown when a mishap
+occurs, and is expecting the testing framework to capture the exception
+and report it to the user as a failure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dodger&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test which has lots of tests for minor (and presumably easy to test)
+side effects, but never tests the core desired behavior. Sometimes you
+may find this in database access related tests, where a method is
+called, then the test selects from the database and runs assertions against the result.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Loudmouth&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test (or test suite) that clutters up the console with diagnostic
+messages, logging, and other miscellaneous chatter, even when
+tests are passing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Greedy Catcher&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test which catches exceptions and swallows the stack trace, sometimes
+replacing it with a less informative failure message, but sometimes even just
+logging (cf. Loudmouth) and letting the test pass.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sequencer&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt;.
+A unit test that depends on items in an unordered list appearing
+in the same order during assertions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Enumerator&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt; (aka &lt;a href=&quot;https://stackoverflow.com/a/336766/187141&quot;&gt;Test With No Name&lt;/a&gt;).
+Unit tests where each test case method name is only an enumeration,
+e.g. &lt;code&gt;test1&lt;/code&gt;, &lt;code&gt;test2&lt;/code&gt;, &lt;code&gt;test3&lt;/code&gt;. As a result, the intention of the
+test case is unclear, and the only way to be sure is to read
+the test case code and pray for clarity.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Free Ride&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt; (aka &lt;a href=&quot;https://stackoverflow.com/a/333883/187141&quot;&gt;Piggyback&lt;/a&gt;).
+Rather than write a new test case method to test another feature
+or functionality, a new assertion rides along in an existing test case.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Excessive Setup&lt;/strong&gt;&lt;sup&gt;3&lt;/sup&gt; (aka &lt;a href=&quot;https://stackoverflow.com/a/333909/187141&quot;&gt;Mother Hen&lt;/a&gt;).
+A test that requires a lot of work to set up in order to even begin testing.
+Sometimes several hundred lines of code are used to setup the environment for one test,
+with several objects involved, which can make it difficult to really ascertain
+what is being tested due to the “noise” of all of the setup.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Line hitter&lt;/strong&gt;.
+At first glance, the tests cover everything and code coverage tools
+confirm it with 100%, but in reality the tests merely hit the code,
+without doing any output analysis.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Forty-Foot Pole Test&lt;/strong&gt; (&lt;a href=&quot;https://stackoverflow.com/a/339247/187141&quot;&gt;see&lt;/a&gt;).
+Afraid of getting too close to the class they are trying to test, these tests
+act at a distance, separated by countless layers of abstraction
+and thousands of lines of code from the logic they are checking.&lt;/p&gt;
+
+&lt;p&gt;Useful links:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2BaAKRB&quot;&gt;&lt;em&gt;Spock: Up and Running&lt;/em&gt;&lt;/a&gt; by Rob Fletcher&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amzn.to/2DpkFc6&quot;&gt;&lt;em&gt;Mastering Software Testing with JUnit 5&lt;/em&gt;&lt;/a&gt; by Boni Garcia&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://archive.is/3acB#selection-119.0-119.17&quot;&gt;TDD Anti-Patterns&lt;/a&gt; by James Carr&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">I wrote some time ago about anti-patterns in OOP. Now it’s time to write about unit testing anti-patterns—because they also exist, and there are many. I will try to include every example I know in this list. If you know any others, please add them via a pull request or post a comment below. For each anti-pattern I will try to mention where it was found, if it’s not mine. Keep in mind that if I found it somewhere, that doesn’t necessarily mean it was invented there. If you spot an error, please comment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/12/breaking-bad.jpg" /></entry><entry><title type="html">You Can Do Better</title><link href="https://www.yegor256.com/2018/11/27/you-can-do-better.html" rel="alternate" type="text/html" title="You Can Do Better" /><published>2018-11-27T00:00:00+00:00</published><updated>2018-11-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/27/you-can-do-better</id><content type="html" xml:base="https://www.yegor256.com/2018/11/27/you-can-do-better.html">&lt;p&gt;OK, it’s time to publish this piece. I’ve been dancing around it for quite a while,
 telling you how to make &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;more per hour&lt;/a&gt;,
 how to manage those &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;stupid managers&lt;/a&gt; that don’t let you grow,
 how to &lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;boost your career&lt;/a&gt;
@@ -1048,60 +1181,4 @@ reproduce them with automated tests, fix, and re-deploy.&lt;/p&gt;
 &lt;p&gt;Thus, the fear of decoupling is nothing else but Fail Safe.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How often do you create interfaces for your classes? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/oop?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#oop&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1046377815799738368?ref_src=twsrc%5Etfw&quot;&gt;September 30, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Objects talk to each other via their methods. In mainstream programming languages, like Java or C#, an object may have a unique set of methods together with some methods it is forced to have because it implements certain types, also known as interfaces. My experience of speaking with many programmers tells me that most of us are pretty scared of objects that implement too many interface methods. We don’t want to deal with them since they are polymorphic and, because of that, unreliable. It’s a fair fear. Let’s try to analyze where it comes from.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry><entry><title type="html">Code Must Be Clean. And Clear.</title><link href="https://www.yegor256.com/2018/09/12/clear-code.html" rel="alternate" type="text/html" title="Code Must Be Clean. And Clear." /><published>2018-09-12T00:00:00+00:00</published><updated>2018-09-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/12/clear-code</id><content type="html" xml:base="https://www.yegor256.com/2018/09/12/clear-code.html">&lt;p&gt;There is a famous book by Robert Martin called &lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;&lt;em&gt;Clean Code&lt;/em&gt;&lt;/a&gt;.
-The title is an obvious call to all of us: the code must be &lt;em&gt;clean&lt;/em&gt;. Clean, like a kitchen,
-I suppose—there are no dirty dishes, no garbage on the floor, no smelly
-towels. Dirt to be cleaned in a code base, according to Martin, includes
-large methods, non-descriptive variable names, tight coupling, lack of
-&lt;a href=&quot;/2017/03/28/solid.html&quot;&gt;SOLID&lt;/a&gt;
-and &lt;a href=&quot;/2017/12/19/srp-is-hoax.html&quot;&gt;SRP&lt;/a&gt; compliance,
-and many other things. Read the book, it’s worth it. However,
-there is yet another aspect of source code. How &lt;em&gt;clear&lt;/em&gt; is it?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Rum Diary (2011) by Bruce Robinson&quot; src=&quot;/images/2018/09/rum-diary.jpg&quot; longdesc=&quot;#b241032c&quot; /&gt;&lt;figcaption id=&quot;b241032c&quot;&gt;The Rum Diary (2011) by Bruce Robinson&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;The kitchen is clean when there is no dirt in the oven. But if its electric panel
-speaks French, I can’t use the kitchen. Even if it’s perfectly clean.
-It’s not &lt;em&gt;clear&lt;/em&gt; how to use it—that’s why it’s useless.&lt;/p&gt;
-
-&lt;p&gt;The metaphor applies to the source code. Making it clean is the first
-and very important step, which will remove all those coding anti-patterns
-so many books speak about, including my favorite
-&lt;a href=&quot;http://amzn.to/2cs4cXW&quot;&gt;&lt;em&gt;Code Complete&lt;/em&gt;&lt;/a&gt; by Steve McConnell,
-&lt;a href=&quot;http://amzn.to/1SdcZ8M&quot;&gt;&lt;em&gt;Working Effectively With Legacy Code&lt;/em&gt;&lt;/a&gt;
-by Michael Feathers, and
-&lt;a href=&quot;http://amzn.to/2m7LmaA&quot;&gt;&lt;em&gt;Clean Code&lt;/em&gt;&lt;/a&gt;.
-A very important step, but not the most important one.
-A dirty kitchen that is useful is better than a clean one that I can’t use, isn’t it?&lt;/p&gt;
-
-&lt;p&gt;Making code clean but leaving it difficult to understand by others is the
-pitfall most of us fall for. By &lt;em&gt;others&lt;/em&gt; I mean everybody, from
-our fellow in-project co-developers sitting next to us at the same desk, to
-imaginative junior contributors who will join the project in five years after
-we’re all hired by Google. All of them, across this very large time frame, must
-be able to use the &lt;del&gt;kitchen&lt;/del&gt; source code without any additional help.
-The oven has to speak their language. Not the language of its designer.&lt;/p&gt;
-
-&lt;p&gt;How do you do that? How do you make sure the code is clear, not just clean?&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;If a stranger can modify your code and fix a bug in less than an hour, it is maintainable.&lt;/aside&gt;
-
-&lt;p&gt;Well, test it. Ask someone who is outside of the project to take a look
-at your code and tell you how clear it is. Not how beautiful your classes
-and code constructs are—that’s what makes it clean. Instead, ask someone to
-fix a bug in just 30 minutes and see how they react. You will realize
-how clear the code is and whether it speaks the language a &lt;em&gt;stranger&lt;/em&gt;
-can understand.&lt;/p&gt;
-
-&lt;p&gt;This is the definition of maintainability. If a stranger can &lt;em&gt;modify&lt;/em&gt; your
-code and fix a bug in less than an hour, it is maintainable. Obviously,
-cleanliness will help. But it’s not enough. There has to be something
-else, which I don’t really know how to describe. The only way to achieve
-it is to let strangers regularly see your code, attempt to make a
-contribution, and report bugs when something is not &lt;em&gt;clear&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Making your code open and encouraging programmers to report bugs when
-something is not only broken but unclear—are the best two ways to achieve
-high maintainability.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="maintainability" /><summary type="html">There is a famous book by Robert Martin called Clean Code. The title is an obvious call to all of us: the code must be clean. Clean, like a kitchen, I suppose—there are no dirty dishes, no garbage on the floor, no smelly towels. Dirt to be cleaned in a code base, according to Martin, includes large methods, non-descriptive variable names, tight coupling, lack of SOLID and SRP compliance, and many other things. Read the book, it’s worth it. However, there is yet another aspect of source code. How clear is it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/rum-diary.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Objects talk to each other via their methods. In mainstream programming languages, like Java or C#, an object may have a unique set of methods together with some methods it is forced to have because it implements certain types, also known as interfaces. My experience of speaking with many programmers tells me that most of us are pretty scared of objects that implement too many interface methods. We don’t want to deal with them since they are polymorphic and, because of that, unreliable. It’s a fair fear. Let’s try to analyze where it comes from.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/funny-games.jpg" /></entry></feed>

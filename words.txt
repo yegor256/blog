@@ -231,6 +231,7 @@ amounts
 amp
 amsterdam
 an
+anal
 analogy
 analyses
 analysis
@@ -318,6 +319,7 @@ appeal
 appear
 appearance
 appeared
+appearing
 appears
 apple
 apples
@@ -402,6 +404,7 @@ artists
 as
 asaf
 ASAP
+ascertain
 ashamed
 aside
 ask
@@ -734,6 +737,7 @@ bobby
 bodies
 body
 bonds
+boni
 bonus
 bonuses
 book
@@ -962,6 +966,7 @@ carefully
 careless
 cares
 carlo
+carr
 carried
 carriers
 carrot
@@ -984,6 +989,7 @@ catalysts
 catastrophic
 catch
 catcher
+catches
 catching
 categories
 categorize
@@ -1026,6 +1032,7 @@ certification
 certifications
 certified
 CEX
+cf
 CFO
 CFP
 chain
@@ -1071,6 +1078,7 @@ chat
 chatbot
 chatbots
 chats
+chatter
 chatterbot
 chauvinism
 cheap
@@ -1193,6 +1201,7 @@ clue
 clueless
 clumsy
 clusterer
+clutters
 CNAME
 co
 co-developers
@@ -1432,6 +1441,7 @@ confuse
 confused
 confusion
 congratulations
+conjoined
 connect
 connected
 connecting
@@ -1489,6 +1499,7 @@ contest
 context
 continents
 contingency
+continually
 continue
 continues
 continuous
@@ -1679,6 +1690,7 @@ CSV
 CTO
 CTO's
 CTOs
+cuckoo
 cultural
 culture
 cumbersome
@@ -1926,6 +1938,7 @@ designing
 designs
 desirable
 desire
+desired
 desires
 desk
 desk-to-desk
@@ -1962,6 +1975,7 @@ developers'
 developing
 development
 devil
+devious
 devop
 devops
 devopsdays
@@ -1969,6 +1983,7 @@ devoxx
 DI
 diagnose
 diagnosis
+diagnostic
 diagram
 diagrams
 dialog
@@ -2131,6 +2146,7 @@ documented
 documenting
 documents
 dod
+dodger
 does
 doesn't
 dog
@@ -2431,7 +2447,9 @@ entries
 entropy
 entrusting
 entry
+enumeration
 enumerations
+enumerator
 envelopes
 environment
 environmental
@@ -2484,6 +2502,7 @@ euro
 europe
 european
 evaluate
+evangelist
 evans
 eve
 even
@@ -2809,6 +2828,7 @@ flattery
 flaw
 flawed
 flaws
+fletcher
 flexibility
 flexible
 flies
@@ -2887,6 +2907,7 @@ forthcoming
 fortran
 fortune
 forty
+forty-foot
 forward
 forwarded
 found
@@ -2980,12 +3001,14 @@ game
 game-changing
 games
 gaming
+gang
 gangster
 gangsters
 gantt
 gap
 gaps
 garbage
+garcia
 garry
 gas
 gates
@@ -3010,6 +3033,7 @@ generates
 generating
 generating-ssh-keys
 generation
+generator
 generators
 generic
 generics
@@ -3091,6 +3115,7 @@ governed
 government
 GPG
 GPL
+grab
 gracefully
 grade
 gradients
@@ -3192,6 +3217,7 @@ handling
 handoff
 hands
 hands-on
+handy
 hang
 hanging
 hansson
@@ -3274,6 +3300,7 @@ helpful
 helpfulness
 helping
 helps
+hen
 hence
 henry
 her
@@ -3323,6 +3350,7 @@ history
 hit
 hits
 hits-of-code
+hitter
 HN
 hobbies
 hobby
@@ -3549,6 +3577,7 @@ incorrectly
 increase
 increases
 increasing
+incredibly
 increment
 incremental
 incrementally
@@ -3590,6 +3619,7 @@ infoq
 inform
 informal
 information
+informative
 informed
 informing
 infrastructure
@@ -3636,6 +3666,7 @@ insist
 insists
 inspect
 inspection
+inspector
 inspiration
 inspire
 inspiring
@@ -4071,6 +4102,7 @@ lawyer
 lawyers
 layer
 layering
+layers
 layout
 laziness
 lazy
@@ -4098,6 +4130,7 @@ leaving
 led
 left
 leftist
+leftovers
 leg
 legacy
 legal
@@ -4127,6 +4160,7 @@ levinson's
 lexer
 liability
 liao
+liar
 liberals
 libraries
 library
@@ -4247,6 +4281,7 @@ lost
 lot
 lots
 loud
+loudmouth
 lousy
 love
 loves
@@ -4386,6 +4421,7 @@ massage
 massive
 master
 mastered
+mastering
 masters
 mat
 match
@@ -4581,6 +4617,7 @@ mirrors
 misaligned
 misalignment
 misanthropic
+miscellaneous
 mischling
 misconception
 misconceptions
@@ -4588,6 +4625,7 @@ miserable
 miserably
 misfortune
 misguided
+mishap
 misleading
 mismatch
 mismatches
@@ -4612,6 +4650,7 @@ mixins
 mo
 mobile
 mock
+mockery
 mocking
 mockito
 mocks
@@ -4842,6 +4881,7 @@ nights
 nine
 nine-to-five
 nines
+nitpicker
 nl
 no
 no-server
@@ -4970,6 +5010,7 @@ ocean
 oct
 oct-
 october
+odds
 of
 off
 offend
@@ -5019,6 +5060,7 @@ one-on-one
 one-page
 one-pagers
 one-paragraph
+one-to-one
 one-user
 one-verb
 one-year
@@ -5118,6 +5160,7 @@ outcome
 outcomes
 outdated
 output
+outright
 outside
 outsource
 outsourced
@@ -5249,6 +5292,7 @@ patches
 patent
 patents
 path
+paths
 patience
 patient
 patreon
@@ -5322,6 +5366,7 @@ perl
 permanent
 permission
 permissions
+persisted
 persistence
 persists
 person
@@ -5372,6 +5417,7 @@ picture
 pictures
 piece
 pieces
+piggyback
 pike
 piled-up
 pills
@@ -5451,9 +5497,11 @@ pointers
 pointless
 points
 poison
+poke
 poker
 pokerstars
 poland
+pole
 polemic
 police
 policies
@@ -5588,6 +5636,7 @@ presidents
 press
 pressman
 pressure
+presumably
 pretend
 pretended
 pretending
@@ -5638,6 +5687,7 @@ probabilities
 probability
 probable
 probably
+probe
 problem
 problem's
 problem-centered
@@ -6002,6 +6052,7 @@ refine
 refinement
 refines
 reflect
+reflected
 reflecting
 reflection
 reflection-discoverable
@@ -6229,6 +6280,7 @@ retweet
 reusability
 reusable
 reuse
+reuses
 reusing
 reveal
 revealed
@@ -6257,6 +6309,8 @@ rich
 richard
 richer
 rid
+ride
+rides
 ridiculous
 ridley
 riel
@@ -6535,6 +6589,7 @@ separating
 separation
 separator
 september
+sequencer
 sequential
 sequentially
 seratch
@@ -6701,6 +6756,7 @@ sins
 sit
 site
 sites
+sits
 sitting
 situation
 situational
@@ -6769,6 +6825,7 @@ smelly
 smile
 smiles
 smiling
+smoke
 smooth
 smoothies
 smoothly
@@ -6855,6 +6912,7 @@ spaghetti
 spam
 spamming
 spams
+span
 spare
 sparingly
 spark
@@ -6894,6 +6952,7 @@ spin-wait
 spirit
 split
 splitting
+spock
 spoil
 spoiled
 sponsor
@@ -7151,6 +7210,7 @@ suggests
 suicide
 suit
 suitable
+suite
 suits
 sullivan
 sum
@@ -7203,6 +7263,7 @@ SV
 SVG
 SVN
 swallowing
+swallows
 swear
 sweet
 swift
@@ -7225,6 +7286,7 @@ syntactic
 syntax
 system
 system-level
+system-under-test
 systematic
 systematically
 systems
@@ -7340,6 +7402,7 @@ tesla
 test
 test-and-fix-only-when-broken
 test-driven
+test-per-method
 test-related
 testability
 testable
@@ -7618,6 +7681,7 @@ tweeting
 twelve
 twenty
 twice
+twins
 twist
 twitter
 two
@@ -7701,6 +7765,7 @@ unicode
 unified
 uniform
 uniformity
+unimportant
 unintended
 union
 unique
@@ -7728,6 +7793,7 @@ unmarshalling
 unmitigated
 unmotivated
 unnecessary
+unordered
 unpacks
 unpleasant
 unpredictability
@@ -7822,12 +7888,14 @@ validations
 validator
 validators
 validity
+validly
 valley
 valuable
 valuation
 value
 values
 vancouver
+vandal
 varargs
 variable
 variables
@@ -8028,6 +8096,7 @@ were
 weren't
 west
 western
+wet
 what
 what's
 whatever
