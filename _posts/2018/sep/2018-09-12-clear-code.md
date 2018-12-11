@@ -76,3 +76,6 @@ contribution, and report bugs when something is not _clear_.
 Making your code open and encouraging programmers to report bugs when
 something is not only broken but unclear---are the best two ways to achieve
 high maintainability.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How do you feel when your buddy says that your code is crap? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1071662601883607040?ref_src=twsrc%5Etfw">December 9, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
