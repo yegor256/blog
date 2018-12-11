@@ -138,8 +138,8 @@ what is being tested due to the "noise" of all of the setup.
 
 **Line hitter**.
 At first glance, the tests cover everything and code coverage tools
-confirm it with 100%, but in reality the tests only the hit code,
-without any output analysis.
+confirm it with 100%, but in reality the tests merely hit the code,
+without doing any output analysis.
 
 **Forty-Foot Pole Test** ([see](https://stackoverflow.com/a/339247/187141)).
 Afraid of getting too close to the class they are trying to test, these tests
