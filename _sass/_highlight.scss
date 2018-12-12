@@ -11,8 +11,10 @@ pre {
 
 code {
   background-color: $light-gray;
+  border-radius: 3px;
+  font-size: 90%;
   line-height: $em;
-  padding: 0 .3 * $em;
+  padding: 0 .15 * $em;
 }
 
 .highlight {
