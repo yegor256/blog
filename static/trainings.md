@@ -26,7 +26,7 @@ project management.
 Usually, it's a one full-day **6-hours** course, split into two parts by
 three hours each. There could be from four to sixteen people in the room.
 
-The cost: **$500/hour** (plus travel and accomodation expenses).
+The cost: **$500/hour** (plus travel and accomodation expenses; I currently reside in Moscow).
 
 As a bonus, all course participants get a copy
 of one of [my books](/books.html).
