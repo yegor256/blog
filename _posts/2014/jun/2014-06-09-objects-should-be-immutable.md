@@ -59,7 +59,7 @@ This is an incomplete list of arguments in favor of immutability:
  * they help to avoid [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %})
  * their usage is side-effect free (no defensive copies)
  * identity mutability problem is avoided
- * they always have failure atomicity
+ * they always have [failure atomicity](https://stackoverflow.com/questions/29842845/)
  * they are much easier to cache
  * they prevent NULL references, [which are bad]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 

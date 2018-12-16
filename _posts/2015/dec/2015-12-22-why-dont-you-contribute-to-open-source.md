@@ -29,7 +29,7 @@ important factor in defining who is good and who isn't, as far as programmers go
 I was saying that if you're not contributing to open source, if your
 GitHub profile is not full of projects and commits, your "value" as a
 software developer is low, simply because this lack of open source
-activity tells everybody that you're **not passionate** about software
+activity tells everybody that you're _not passionate_ about software
 development and are simply working for money. I keep getting angry comments
 about that every week. Let me answer them all here.
 
@@ -39,7 +39,7 @@ about that every week. Let me answer them all here.
 
 The gist of all those comments is this: "I don't contribute to open source,
 but I'm still very passionate about software development." Then, there is
-a list of **reasons** why the author of the comment doesn't contribute:
+a list of _reasons_ why the author of the comment doesn't contribute:
 
   * I spend my free time with my family.
   * I'm already busy in the office; why should I do extra work?
@@ -49,7 +49,7 @@ a list of **reasons** why the author of the comment doesn't contribute:
 
 Good excuses, but let's try to look at it from a different perspective.
 
-Today, it's **not possible** at all to create software without using
+Today, it's _not possible_ at all to create software without using
 open source components. I'm sure nobody will argue with this. Only something
 very basic and simple can be created without code reuse. Nah, I'm wrong. Even
 super small pieces of software can't be created without open source
@@ -57,7 +57,7 @@ super small pieces of software can't be created without open source
 In most cases, they are open source (Microsoft is an exception, and it must die).
 
 Thus, no matter what software you're creating, you're using modules
-created for you by **others**. Someone else spent his or her time to help you.
+created for you by _others_. Someone else spent his or her time to help you.
 
 {% quote Just admit that you don't care; it's not a crime, after all %}
 
@@ -76,12 +76,12 @@ requests to them.
 
 I do understand that. Millions of programmers are like that; you're not alone.
 But please, don't tell me that you're passionate about software development.
-Just admit that you don't care. It's **not a crime**, after all. You're not stealing
+Just admit that you don't care. It's _not a crime_, after all. You're not stealing
 anything (although I actually think you are, but that's a different story).
 
 That was the first reason why you may not contribute.
 However, in most cases, my typical opponent tells me he or she does care,
-but just can't. There are **obstacles**, right? Your family is taking
+but just can't. There are _obstacles_, right? Your family is taking
 all your free time, and in the office, you simply are not allowed to
 work on something that is outside of your business scope. I can imagine that,
 but let's see what's happening behind the scenes.
@@ -106,8 +106,8 @@ I don't know.
 In that case, my next question is philosophical. You're working for such a person and
 such a company. You're accepting their
 [paychecks]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}). Aren't you a part
-of this team and this mentality? If you don't walk away, you **accept** this
-attitude. You're part of it. It's **you** who doesn't care, not just them.
+of this team and this mentality? If you don't walk away, you _accept_ this
+attitude. You're part of it. It's _you_ who doesn't care, not just them.
 Because of your existence, they have an ability to not care.
 
 Tomorrow if they ask you to use stolen software, you may say
@@ -117,8 +117,8 @@ I had to steal, because that's what my company asked me to do."
 Does it sound like a good excuse?
 
 The same story goes for open source. If you do care and you're passionate
-about software development, you will either **contribute** actively
-or **walk away** from the company that doesn't share your passion. What, you can't
+about software development, you will either _contribute_ actively
+or _walk away_ from the company that doesn't share your passion. What, you can't
 walk away because of some reasons? Then don't tell me about your passion.
 Simply admit that you're too weak to follow your passion.
 
