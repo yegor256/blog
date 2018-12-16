@@ -59,7 +59,7 @@ In most cases, they are open source (Microsoft is an exception, and it must die)
 Thus, no matter what software you're creating, you're using modules
 created for you by _others_. Someone else spent his or her time to help you.
 
-{% quote Just admit that you don't care; it's not a crime, after all %}
+{% quote Just admit that you don't care; it's not a crime, after all. %}
 
 Now, you're not giving anything back. I'm curious, why is that?
 
@@ -101,7 +101,7 @@ Sometimes, the boss says he or she doesn't care about any open source
 and wants you to focus on your product. Maybe this happens rather often;
 I don't know.
 
-{% quote If you don't walk away, you accept this attitude; you're part of it %}
+{% quote If you don't walk away, you accept this attitude; you're part of it. %}
 
 In that case, my next question is philosophical. You're working for such a person and
 such a company. You're accepting their
