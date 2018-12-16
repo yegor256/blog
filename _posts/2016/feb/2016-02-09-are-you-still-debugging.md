@@ -29,7 +29,7 @@ a very useful technique ... for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
 never debug their code---they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
-If debugging is required, the **design is bad**.
+If debugging is required, the _design is bad_.
 
 <!--more-->
 
@@ -79,16 +79,16 @@ From it, we get this list of words:
 {% endhighlight %}
 
 Now that doesn't look right to me ... so what is the next step? Either the file
-reading doesn't work correctly or the split is broken. Let's **debug**, right?
+reading doesn't work correctly or the split is broken. Let's _debug_, right?
 Let's give it a file through an input and go step by step, tracing and watching
 the variables. We'll find the bug and fix it. But when a similar
 problem shows up, we'll have to debug again! And that's what unit testing
-is supposed to **prevent**.
+is supposed to _prevent_.
 
 We're supposed to create a unit test once, in which the problem is reproduced.
 Then we fix the problem and make sure the test passes. That's how we save
 our investments in problem solving. We won't fix it again, because it won't
-happen again. Our **test** will prevent it from happening.
+happen again. Our _test_ will prevent it from happening.
 
 {% quote If you perceive debugging to be faster and easier, think about the quality of your code %}
 
@@ -221,11 +221,11 @@ them from reappearing.
 Debugging is needed when our code is
 [procedural]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
 and algorithmic---when the code is all
-about **how** the goal should be achieved instead of **what** the goal is.
+about _how_ the goal should be achieved instead of _what_ the goal is.
 See the examples above again. The first static method is all about
-how we read the file, parse it, and find words. It's even named `readWords()` (a **verb**).
+how we read the file, parse it, and find words. It's even named `readWords()` (a _verb_).
 To the contrary, the second example is about what will be achieved. It's either
-the `Text` of the file or `Words` of the text (both are **nouns**).
+the `Text` of the file or `Words` of the text (both are _nouns_).
 
 I believe there is no place for debugging in clean object-oriented
 programming. Only unit testing!
