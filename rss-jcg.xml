@@ -146,7 +146,7 @@ a very useful technique … for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
 never debug their code—they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
-If debugging is required, the &lt;strong&gt;design is bad&lt;/strong&gt;.&lt;/p&gt;
+If debugging is required, the &lt;em&gt;design is bad&lt;/em&gt;.&lt;/p&gt;
 
 </description>
         

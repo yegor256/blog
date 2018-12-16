@@ -82,7 +82,7 @@ a very useful technique … for a bad programmer. Or an old programmer
 who is still writing procedural code in C. Object-oriented programmers
 never debug their code—they write unit tests. My point here
 is that unit testing is a technique that completely replaces debugging.
-If debugging is required, the <strong>design is bad</strong>.</p>
+If debugging is required, the <em>design is bad</em>.</p>
 
 
 
@@ -126,16 +126,16 @@ but know not what we may be.</pre>
 "be\n"</pre>
 
 <p>Now that doesn’t look right to me … so what is the next step? Either the file
-reading doesn’t work correctly or the split is broken. Let’s <strong>debug</strong>, right?
+reading doesn’t work correctly or the split is broken. Let’s <em>debug</em>, right?
 Let’s give it a file through an input and go step by step, tracing and watching
 the variables. We’ll find the bug and fix it. But when a similar
 problem shows up, we’ll have to debug again! And that’s what unit testing
-is supposed to <strong>prevent</strong>.</p>
+is supposed to <em>prevent</em>.</p>
 
 <p>We’re supposed to create a unit test once, in which the problem is reproduced.
 Then we fix the problem and make sure the test passes. That’s how we save
 our investments in problem solving. We won’t fix it again, because it won’t
-happen again. Our <strong>test</strong> will prevent it from happening.</p>
+happen again. Our <em>test</em> will prevent it from happening.</p>
 
 
 
@@ -260,11 +260,11 @@ them from reappearing.</p>
 <p>Debugging is needed when our code is
 <a href="/2015/02/20/utility-classes-vs-functional-programming.html">procedural</a>
 and algorithmic—when the code is all
-about <strong>how</strong> the goal should be achieved instead of <strong>what</strong> the goal is.
+about <em>how</em> the goal should be achieved instead of <em>what</em> the goal is.
 See the examples above again. The first static method is all about
-how we read the file, parse it, and find words. It’s even named <code>readWords()</code> (a <strong>verb</strong>).
+how we read the file, parse it, and find words. It’s even named <code>readWords()</code> (a <em>verb</em>).
 To the contrary, the second example is about what will be achieved. It’s either
-the <code>Text</code> of the file or <code>Words</code> of the text (both are <strong>nouns</strong>).</p>
+the <code>Text</code> of the file or <code>Words</code> of the text (both are <em>nouns</em>).</p>
 
 <p>I believe there is no place for debugging in clean object-oriented
 programming. Only unit testing!</p>
