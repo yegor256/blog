@@ -37,7 +37,7 @@ Have any of you seen this movie: [Cossacks of the Kuban](http://www.imdb.com/tit
 It was shot in 1949, when [Joseph Stalin](https://en.wikipedia.org/wiki/Joseph_Stalin)
 was in power, the [Soviet Union](https://en.wikipedia.org/wiki/Soviet_Union)
 was literally broke, and [WWII](https://en.wikipedia.org/wiki/World_War_II)
-brought people to the point of **starvation**.
+brought people to the point of _starvation_.
 However, the film showed something completely opposite---wealthy villages, rich peasants, and tables full of food.
 
 It was [propaganda](https://en.wikipedia.org/wiki/Propaganda) in 1949.
@@ -49,7 +49,7 @@ produced and directed in 2015 by [Ridley Scott](http://www.imdb.com/name/nm00006
 
 In 1949, the goal of Soviet propaganda was to convince people that
 their personal situations with a lack of food and lack of future were
-just their local, personal **exceptions** to a more general rule. And that
+just their local, personal _exceptions_ to a more general rule. And that
 rule was that the country was full of food. The country was governed by
 the principles of socialism, and they were working perfectly.
 
@@ -63,7 +63,7 @@ if we're all good friends.
 
 Ridley Scott is telling us that in a perfect organization, such as
 [NASA](https://www.nasa.gov/),
-everybody **loves** everyone; that's why they can get a man from Mars without
+everybody _loves_ everyone; that's why they can get a man from Mars without
 even a map. Do the same in your company and you will be fine. You don't
 need risk planning, you just need a hero. Actually, you'd be better off
 with a couple of heroes who love each other.
@@ -81,7 +81,7 @@ different. There are
 [conflicts]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %}),
 fights, politics, betrayals, back-stabbing,
 leakage of information, and just primitive incompetence. To manage all
-this, one can't just be a **nice guy** with a big heart. I would even say
+this, one can't just be a _nice guy_ with a big heart. I would even say
 that being a nice guy is a drawback for any management position in a modern
 organization. Well, in any organization at any time and in any place.
 
@@ -90,11 +90,11 @@ about compassion and sympathy. It is about
 accurate and routine comparison of risks, probabilities, impacts, and
 their mitigation plans. It is about
 [setting rules]({% pst 2015/sep/2015-09-22-micromanagement %})
-and making **decisions**. It is about making sure
+and making _decisions_. It is about making sure
 these decisions are being executed, precisely and without mistakes.
 It is about [making sure]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
-those who've made mistakes are **punished** while those who've
-done everything right are **rewarded**.
+those who've made mistakes are _punished_ while those who've
+done everything right are _rewarded_.
 
 A team of six. In a multi-million-dollar spaceship.
 Flying to another planet to save one person.
@@ -109,11 +109,11 @@ that you're a hero.
 
 I'm sure you get the point.
 
-{% picture http://www.popsci.com/sites/popsci.com/files/styles/large_1x_/public/psc1015_mt_088.jpg 0 Shooting The Martian (by popsci.com) %}
+{% picture /images/2015/10/martian.jpg 0 Shooting The Martian (by popsci.com) %}
 
-So, why is Ridley Scott **lying** to us?
+So, why is Ridley Scott _lying_ to us?
 Why is he giving us a false picture of reality?
-Intentionally **false**. He knows better than I do how real management
+Intentionally _false_. He knows better than I do how real management
 works in real-life organizations. Hollywood is not much different
 than Silicon Valley in this aspect. So, why is he lying?
 
@@ -123,10 +123,10 @@ Why was [Joseph Goebbels](https://en.wikipedia.org/wiki/Joseph_Goebbels),
 a minister of propaganda in the Third Reich,
 lying to the German people?
 
-Because that's what we like to hear, **unfortunately**.
+Because that's what we like to hear, _unfortunately_.
 
 It is sad, but we don't want to know the truth. We didn't want to know about
-Nazi war crimes---so Joseph Goebbels built a **fake** reality for us.
+Nazi war crimes---so Joseph Goebbels built a _fake_ reality for us.
 We don't want to know about the true principles of management---so Ridley Scott built fake ones for us.
 
 Think about it.

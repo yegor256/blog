@@ -41,7 +41,7 @@ in bigger companies and bigger projects, the story will be different. But the
 outcome is almost always the same---it is
 [a disaster]({% pst 2015/jun/2015-06-15-software-outsourcing-survival-guide %}).
 
-{% quote All these reasons merely explain the consequences but never even touch the real problem %}
+{% quote All these reasons merely explain the consequences but never even touch the real problem. %}
 
 I'm talking about outsourcing, not offshore development. The difference is
 that in outsourcing, there are two companies involved: you the
@@ -152,7 +152,7 @@ shop, the only problem is how to take care of the
 next month's payroll, and _90 percent_ of all expenses are salaries
 for the programmers.
 
-{% quote Your business interests can't be aligned with the interests of your outsourcing partner %}
+{% quote Your business interests can't be aligned with the interests of your outsourcing partner. %}
 
 That's why a good customer for them is a paying customer. Not a customer with
 a successful project. Not a customer with a properly solved problem. Not
