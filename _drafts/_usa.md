@@ -206,8 +206,8 @@ go for $4-5.
 
 You basically have nothing to do there, aside from work. "Staying home with
 your family" is probably what most of Americans are trained to do in their
-spare time. If you don't have a family, you will be bored to death. It's a very
-family-focused country.
+spare time. If you don't have a family, you will be bored to death. Maybe
+it's just me or [maybe not](https://www.quora.com/Why-is-America-so-boring-to-live-in).
 
 ## It Is Conservative
 
