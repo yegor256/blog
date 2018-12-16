@@ -290,7 +290,7 @@ object instantiation, or succeed, making a valid solid object,
 which never changes its encapsulated state.
 
 For more on this subject, read
-[Effective Java, 2nd Edition](http://amzn.to/2cs4aiR)
+[_Effective Java_](http://amzn.to/2cs4aiR)
 by Joshua Bloch.
 
 ## Arguments Against Immutability
