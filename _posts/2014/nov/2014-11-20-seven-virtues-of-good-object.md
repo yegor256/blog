@@ -18,6 +18,7 @@ translated:
   - Japanese: http://tbd.kaitoy.xyz/2015/10/28/seven-virtues-of-good-object/
   - Spanish: https://ixmanuel.gitbooks.io/pensando-en-objectos/content/
   - Russian: https://agorlov.github.io/yb-seven-virtues-of-good-object.html
+  - Korean: http://codingnuri.com/seven-virtues-of-good-object/
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2mw8mp/seven_virtues_of_a_good_object/
 book: elegant-objects-1 2.3
