@@ -125,7 +125,7 @@ diagnoses give them immunity against all sorts of bullying, harassment,
 discrimination, and so on. Is it good? Maybe. But the price we pay is
 a constant feeling that you are not in the office, but in an insane asylum.
 
-## It Is Too Positive
+## It Is Positive
 
 "Are you OK? Yes, I'm fine!" is a dialog you hear when someone hits a finger nail
 with a hammer. No matter what happens, they remain positive. I believe, this
@@ -176,6 +176,38 @@ very aggressive, doesn't real help. They are armed and seem to be constantly
 on alert, which is, most probably, what they need in order to fight the crime,
 but a law-abiding citizen doesn't feel safe at all. When you hear their siren
 you want to raise your hands. I guess this is what they want us to feel.
+
+## It Is Expensive
+
+I was once renting a room in Palo Alto, with a shared bathroom, no kitchen,
+no-guests policy, and a small closet, which I had to share with a son
+of the house owner, who was temporary on vacation. I was paying $2,400 per month.
+To rent a decent apartment in down town, you have to 1) prove that you have
+a stable job, 2) sign an unbreakable lease for a year
+(you pay for the entire year even if you leave earlier), 3) bring your own furniture,
+and 4) pay something around $4K per month. The quality of it will be way
+below your expectations (see the "distasteful" point above). If you want
+something really good and modern, get yourself ready for $8K+ numbers. You can verify
+the numbers at [Zillow](https://www.zillow.com/palo-alto-ca-94301/rentals/).
+
+On top of that, the food is expensive, unless you don't care what you eat. If you
+do, [Whole Foods](https://eu.wholefoodsmarket.com/) is your grocery store, which has a reputation of
+[whole paycheck](https://www.sfgate.com/business/article/Whole-Foods-whole-paycheck-Amazon-Jeff-Bezos-13181055.php)
+place, where you basically are supposed to leave your entire monthly salary.
+Check their [prices](https://www.wholefoodsmarket.com/shop/PAL/3173).
+
+Going out to a decent restaurant will cost you around $100, for two. For example,
+see the menu of [Tamarine](https://tamarinerestaurant.com/) and
+[JOYA](http://www.joya.com/menus.html). A cup of coffee or tea in
+[Starbucks](https://www.starbucks.com/) or [Peet's](https://www.peets.com/) will
+go for $4-5.
+
+## It Is Boring
+
+You basically have nothing to do there, aside from work. "Staying home with
+your family" is probably what most of Americans are trained to do in their
+spare time. If you don't have a family, you will be bored to death. It's a very
+family-focused country.
 
 ## It Is Conservative
 
