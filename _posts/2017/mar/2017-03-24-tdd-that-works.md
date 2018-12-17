@@ -112,7 +112,7 @@ need to test until it's broken, mostly because we understand that it's
 technically not possible to test everything or to fix all bugs. We have
 to fix only what's visible and intolerable by the business. If the business
 doesn't care or our users/testers don't see our bugs---we must not
-**waste** project resources on fixing them.
+_waste_ project resources on fixing them.
 
 {% quote I only create tests later when my users express the need for them by reporting bugs. %}
 
@@ -121,7 +121,7 @@ we have to be very strict with ourselves; our testing system is weak and
 must be fixed first. We can't just fix the production code and deploy,
 because in this case, we may make this mistake again after some refactoring,
 and our tests won't catch it. The user will find the bug again, and the
-business will pay us again to fix it. That will be the **waste** of resources.
+business will pay us again to fix it. That will be the _waste_ of resources.
 
 As you can see, it's all money-driven. First, don't fix anything if nobody pays for it.
 Second, fix it once and for all if they actually paid. It's as simple as that.
