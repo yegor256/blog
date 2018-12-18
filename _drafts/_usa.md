@@ -35,7 +35,7 @@ It is absolutely different...
 
 The way people dress up, the cars they buy, the way they decorate their
 houses, the food they eat, the women they marry, the web sites (e.g.
-[ebay](https://www.ebay.com) and [craigslist](https://www.craigslist.com)) they design---have
+[eBay](https://www.ebay.com) and [craigslist](https://www.craigslist.com)) they design---have
 no taste, at all. And I'm not only speaking about ordinary middle class. I've
 seen rich and poor, they all find Chinese take-away paper boxes
 of something smelly pretty tasty, and think that a Chevrolet is really a car.
@@ -55,10 +55,10 @@ But the price you pay---the ugliness of everything around you---seems too high f
 ## It is Insanely Correct ... Not
 
 You have to expect Social Justice Warriors to be everywhere:
-amongst your co-workers, gym buddies, close friends, employers, and employees.
+among your co-workers, gym buddies, close friends, employers, and employees.
 You have to be constantly on alert. You can't say "blacks" or "chicks," you have
 to remember that they are "Afro-Americans" and "ladies." You can't joke about
-gays, immigrants, homeless, women, mexicans, and many other
+gays, immigrants, homeless, women, Mexicans, and many other
 "categories." Well, you can, but be prepared to get into trouble, which
 you may [never]({% pst 2018/nov/2018-11-13-bigotry %}) resolve.
 
@@ -66,7 +66,7 @@ What's funny is that <del>almost</del> every single white male I've met there wa
 not publicly, of course. They all claimed to be tolerant but in a private
 conversation were often whispering the n-word into my ear, while
 speaking about the race problem. They always had a handful of racist jokes
-when talking about their house keepers, who were all mexicans.
+when talking about their house keepers, who were all Mexicans.
 
 Intolerance, bigotry, xenophobia, and racism exist everywhere I happen to
 live, including Moscow and Amsterdam, but over there people are not afraid to say what
@@ -138,7 +138,7 @@ and gracefully submits to whatever the boss demands." Enough said.
 
 ## It is Shallow
 
-You will be surpised how
+You will be surprised how
 [cheerful, friendly and willing to communicate](https://www.cbsnews.com/news/how-americans-look-to-the-rest-of-the-world/)
 Americans are, when you meet them as
 a stranger. In a grocery store, a gym, a cafe, on the street, they will
@@ -157,7 +157,7 @@ think too much.
 
 I once asked an American girlfriend what the meaning of life is. She said that
 it was only the second time in her life that she had heard the phrase "the meaning of life."
-She was 32.
+She was thirty-two.
 
 ## It is Dangerous
 
