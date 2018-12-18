@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Don't Want to Live in Silicon Valley"
-date: 2018-11-27
+date: 2018-12-18
 place: Moscow, Russia
 tags: mood
 description: |
