@@ -13,9 +13,9 @@ keywords:
   - silicon valley issues
   - silicon valley criticism
   - silicon valley troubles
-image: /images/2018/11/
+image: /images/2018/12/american-beauty.jpg
 jb_picture:
-  caption:
+  caption: American Beauty (1999) by Sam Mendes
 ---
 
 Silicon Valley is a great place to be ... or maybe not. I've spent five years there,
