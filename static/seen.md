@@ -16,6 +16,11 @@ keywords:
   - software engineers conferences
 ---
 
+18 Dec 2018:
+[АйтиХайп](https://www.youtube.com/channel/UC25Ol81YfP1wvJG37mTdYww)
+with Egor Tolstoy:
+[video](https://www.youtube.com/watch?v=ca9ou5t6yyY) (in Russian).
+
 22 Nov 2018:
 [Люди PRO](https://www.youtube.com/channel/UCnfR9C-3Oxt7jl6Q-JNDd4g)
 with Sergey Pavlovich:
