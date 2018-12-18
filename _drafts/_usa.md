@@ -44,11 +44,11 @@ While being richer than people I've met in, say, Amsterdam or Moscow, inhabitant
 of the Valley don't know how to enjoy their money. And the longer you stay
 there, the less eager you become to find beauty in life. You turn into a zombie
 focused on making money, to buy a one-million-dollar three-bedroom half-a-house,
-which will smell of cheap Indian food you will buy at the corner, because home cooking is not
+which will smell of the cheap Indian food you will buy at the corner, because home cooking is not
 cost-efficient.
 
-Maybe this is how it should be, if a country wants its people to work, instead
-of having fun and carelessly enjoying life. Americans do work. Don't get me wrong,
+Maybe this is how it should be, if a country wants its people to work instead
+of having fun and carelessly enjoying life. Americans *do* work. Don't get me wrong,
 it's good. This is what I love in the Valley---it's very focused on results.
 But the price you pay---the ugliness of everything around you---seems too high for me.
 
@@ -56,19 +56,19 @@ But the price you pay---the ugliness of everything around you---seems too high f
 
 You have to expect Social Justice Warriors to be everywhere:
 among your co-workers, gym buddies, close friends, employers, and employees.
-You have to be constantly on alert. You can't say "blacks" or "chicks," you have
+You have to be constantly on the alert. You can't say "blacks" or "chicks," you have
 to remember that they are "Afro-Americans" and "ladies." You can't joke about
 gays, immigrants, homeless, women, Mexicans, and many other
 "categories." Well, you can, but be prepared to get into trouble, which
 you may [never]({% pst 2018/nov/2018-11-13-bigotry %}) resolve.
 
 What's funny is that <del>almost</del> every single white male I've met there was a racist, but
-not publicly, of course. They all claimed to be tolerant but in a private
+not publicly of course. They all claimed to be tolerant but in a private
 conversation were often whispering the n-word into my ear, while
 speaking about the race problem. They always had a handful of racist jokes
 when talking about their house keepers, who were all Mexicans.
 
-Intolerance, bigotry, xenophobia, and racism exist everywhere I happen to
+Intolerance, bigotry, xenophobia, and racism exist wherever I happen to
 live, including Moscow and Amsterdam, but over there people are not afraid to say what
 they have in mind. In California there are so many taboo subjects that it
 reminds me of the good old Soviet Union, where (I can still remember it)
@@ -80,7 +80,7 @@ would shut their mouths when I entered.
 CNN [thinks](https://edition.cnn.com/travel/article/world-best-food-cultures/index.html)
 that the USA "cuisine" is the 10th best in the world (while Russia's is
 not even in the list). You know, I remember when I was in one office in Mountain
-View and we were going to have a lunch. Every day they would pick a different
+View and we were going to have lunch. Every day they would pick a different
 cuisine, like Korean, Japanese, Italian, and so on. I asked them, why can't we
 try American cuisine for a change? They were surprised and Mike said: "We don't have one,"
 and then added, "Do you want hamburgers?"
@@ -123,7 +123,7 @@ There are no more good old-fashioned "idiots." There are only people with
 and [many other D-s](https://psychcentral.com/disorders/). Those complicated
 diagnoses give them immunity against all sorts of bullying, harassment,
 discrimination, and so on. Is it good? Maybe. But the price you pay is
-a constant feeling that you are not in the office, but in an insane asylum.
+a constant feeling that you are not in the office but in an insane asylum.
 
 ## It is Positive
 
