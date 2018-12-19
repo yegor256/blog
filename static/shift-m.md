@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/anne-loehr.png" class="guest-face" alt="Face of Anne Loehr"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;40: [Soft skills with Anne Loehr](/shift-m/2018/40.html)<br/>
+19 December 2018; 59 min.
+
 <img src="/images/shift-m/melissa-perri.png" class="guest-face" alt="Face of Melissa Perri"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;39: [Product Management with Melissa Perri](/shift-m/2018/39.html)<br/>
