@@ -106,7 +106,7 @@ just yet, to have the entire room against you. Although, that would be the
 best speaking experience in your life. However, just a few enemies will show up if you
 say something that contradicts the _status quo_. Once you say it (and you should)
 someone will disagree and shout out. Don't try to calm them down. Instead,
-be agressive with something like "Thanks to people like you we still have Windows."
+be aggressive with something like "Thanks to people like you we still have Windows."
 Success guaranteed.
 
 **Structure It**.
@@ -137,7 +137,7 @@ a question. The easiest one is "Does this make sense so far?" or "Do you follow?
 A few examples of more complex ones:
 "Have you ever heard about ...?"
 "Who of you knows how this works?"
-"Does this look similiar to what you experience on your projects?",
+"Does this look similar to what you experience on your projects?",
 and so on.
 Why do you need to do that? To know their opinion? Not at all. You don't
 care about their opinion. You just need to relax yourself. That's why your
@@ -167,7 +167,7 @@ to entertain with your provocative ideas and unique thoughts.
 **Have Fun**.
 You have to enjoy it. I know it's stressful, but you have to find a way to
 relax and fool around a little bit. Sometimes I catch a sight of a smiling cute lady
-in the eigth row and smile back. Sometimes the clicker doesn't work and I switch
+in the eighth row and smile back. Sometimes the clicker doesn't work and I switch
 slides [with my feet](https://www.youtube.com/watch?v=Rip_04Bv3Jk). Sometimes
 I just fool around.
 
@@ -208,7 +208,7 @@ and found out that there are tons of books and articles about this subject. Ther
 are hundreds of recommendations and my short list above is merely a few percent
 of what people say about this, and of what I can actually say too.
 
-Thus, I belive I will publish a book about this topic,
+Thus, I believe I will publish a book about this topic,
 similar to the [_256 Bloghacks_](/256-bloghacks.html) I wrote a few years go.
 Maybe I will title it _256 Speechhacks_.
 
