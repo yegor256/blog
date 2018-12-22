@@ -48,15 +48,15 @@ after the first one, when everybody is already awake but not too hungry and
 still on the premises.
 
 **Bring Friends**.
-It's way easier for me when there are some people in the room who I know and who
-will support me no matter how bad is my talk. It's even easier when they
+It's way easier for me when there are some people in the room whom I know and who
+will support me no matter how bad my talk is. It's even easier when they
 are being loud. The key trait of a good speaker is knowing how to break
 the wall between the stage and the room. The presence of friends helps.
 Sometimes I don't have any friends with me, when the place is new and I've
 just arrived. I try to make a few, right before the talk, while checking-in
 and walking around. Then I invite them to my talk. Most of them don't really
-care where they go and easily agree. For them, having a friend on the stage,
-is an honor. So, it's win-win.
+care where they go and easily agree. For them, having a friend on the stage
+is an honor. So it's win-win.
 
 **10/20/30 Rule**.
 Ever heard about [this rule](https://guykawasaki.com/the_102030_rule/) from Guy Kawasaki?
@@ -65,7 +65,7 @@ should not last for longer than twenty minutes, and that thirty points is the sm
 you can use. Don't take it literally, but it does make a lot of sense.
 
 **Bring No Slides**.
-The best presenter uses no slides at all. The worst ones will have 200+ of them
+The best presenter uses no slides at all. The worst ones will have 200+
 for a 30 minute talk. Where are you on this scale? You have to tell a story,
 or maybe three, like [Steve Jobs did](https://www.youtube.com/watch?v=D1R-jKKp3NA).
 Imagine yourself talking to me
@@ -73,7 +73,7 @@ over a cafe table. Would you show me slides? I doubt it. You would just speak an
 I understand you. Do the same on the stage. Of course, you might have some visual data,
 just like you would use a napkin at the cafe. But that's all. Your slides have
 to support your talk, instead of being its replacement. I strongly recommend
-you to read these two great books:
+you read these two great books:
 [_slide:ology: The Art and Science of Presentation Design_](https://amzn.to/2zw09nx) by Nancy Duarte
 and
 [_Presentation Zen: Simple Ideas on Presentation Design and Delivery_](https://amzn.to/2PeHth9) by Garr Reynolds.
@@ -81,7 +81,7 @@ and
 **Stay Cool ... Not**.
 Be brave. Stay strong. Look them in the eye. Smile. Relax. Everything will be fine! ...
 Don't listen to this nonsense. It doesn't work that way. I always feel scared. And I
-always ask myself right before the talk---maybe I should hide somewhere in the
+always think to myself right before the talk---maybe I should hide somewhere in the
 bathroom, they won't find me and will quietly cancel the talk. You have to
 feel something similar. If you don't, there is something wrong with you.
 But what should you do with that fear? Embrace it. Just like you do when watching a horror movie.
@@ -103,7 +103,7 @@ The most interesting discussion is a scandal. Well, the most entertaining one.
 To have a scandal you need a conflict, between you and your audience. Well, not
 the entire room, but a small part of it. You are not that strong, I suppose,
 just yet, to have the entire room against you. Although, that would be the
-best speaking experience in your life. However, just a few enemies will show up if you
+best speaking experience in your life. However, a few enemies will show up if you
 say something that contradicts the _status quo_. Once you say it (and you should)
 someone will disagree and shout out. Don't try to calm them down. Instead,
 be aggressive with something like "Thanks to people like you we still have Windows."
@@ -125,7 +125,7 @@ with me for another 15 minutes and we will be done."
 **Intrigue**.
 I'm not a master of it, but the principle is simple: don't give everything away at once.
 Promise to give it out later instead. Something like: "This doesn't work, and I will
-tell you why in a few minutes." They will stay interested while waiting for that
+tell you why in a few minutes." They will stay interested while waiting for that,
 and you will be able to feed them with something else. Also, if someone asks
 a question in the middle of the talk, you might start answering it, then stop
 and say: "I will touch on this problem in a few minutes." You get the idea: keep
@@ -151,7 +151,7 @@ not a clown, not a professional actor, not a speaker on a payroll. You are a
 software engineer with a unique opinion. We need your thoughts straight from
 your heart and your real experience. Don't worry about being a bad speaker,
 that doesn't matter much. Worry about the _consistency_ of your arguments. Don't try
-to remember the exact words you will say or the jokes you will be make---this
+to remember the exact words you will say or the jokes you will make---this
 will only make you look fishy. Just make sure your arguments are strong
 and deliver them just like you would if you were convincing a friend
 standing next to you at the coffee machine.
@@ -194,11 +194,11 @@ sign up to Zerocracy, etc.
 
 **Provoke Questions**.
 You know how I know whether my talk was a success or a failure? I can tell by
-the amount of questions I get. The more the better. I've been lucky so far---even
+the amount of questions I get. The more, the better. I've been lucky so far---even
 my worst talks had a few questions at the end. My best ones though were
 filled with them, starting from the 10th minute. That's what success is for me!
 How can you do the same? Be provocative in your content and exaggerate.
-Also, ask yourself before the talk, where are the points of concern and leave
+Also, ask yourself before the talk where the points of concern are, and leave
 many of them unexplained. Questions will show up.
 
 <hr/>
@@ -206,10 +206,10 @@ many of them unexplained. Questions will show up.
 You know, while I was working on this blog post, I did some research online
 and found out that there are tons of books and articles about this subject. There
 are hundreds of recommendations and my short list above is merely a few percent
-of what people say about this, and of what I can actually say too.
+of what people say about this, and of what I could actually say too.
 
 Thus, I believe I will publish a book about this topic,
 similar to the [_256 Bloghacks_](/256-bloghacks.html) I wrote a few years go.
-Maybe I will title it _256 Speechhacks_.
+Maybe I will call it _256 Speechhacks_.
 
 Stay tuned!
