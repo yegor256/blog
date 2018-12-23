@@ -26,7 +26,7 @@ almost every day in blog comments: Why do we need all those _new_ OOP
 principles if our code works just fine without them? What is the
 point of introducing a new way, which is supposed to be "better,"
 if the existing, traditional, semi-object, semi-procedural, not-so-perfect
-approach **just works**?
+approach _just works_?
 
 <!--more-->
 
@@ -140,3 +140,6 @@ mutual "convenience."
 They indeed work, but the maintainability of the software we produce
 is very low. Well, it's way lower than it could be, if our "creativity"
 would be restricted.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">An ability to implement the same thing in a few different ways (a.k.a. &quot;syntax sugar&quot;) makes a programming language ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1076767928715038720?ref_src=twsrc%5Etfw">December 23, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
