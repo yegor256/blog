@@ -471,9 +471,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '445.4,230.0 453.1,230.0 453.1,189.5 445.4,189.5 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M445.4,230.0 L445.4,189.6 L453.0,189.6 L453.0,230.0 L445.4,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '455.7,230.0 463.6,230.0 463.6,197.9 455.7,197.9 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '455.7,230.0 463.6,230.0 463.6,197.5 455.7,197.5 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M455.7,230.0 L455.7,198.0 L463.5,198.0 L463.5,230.0 L455.7,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M455.7,230.0 L455.7,197.6 L463.5,197.6 L463.5,230.0 L455.7,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '466.1,230.0 474.0,230.0 474.0,185.0 466.1,185.0 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M466.1,230.0 L466.1,185.1 L473.9,185.1 L473.9,230.0 L466.1,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -531,9 +531,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '653.9,230.0 661.9,230.0 661.9,166.2 653.9,166.2 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M653.9,230.0 L653.9,166.3 L661.8,166.3 L661.8,230.0 L653.9,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '664.3,230.0 672.2,230.0 672.2,173.0 664.3,173.0 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '664.3,230.0 672.2,230.0 672.2,132.3 664.3,132.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M664.3,230.0 L664.3,173.1 L672.1,173.1 L672.1,230.0 L664.3,230.0 Z  '/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M664.3,230.0 L664.3,132.4 L672.1,132.4 L672.1,230.0 L664.3,230.0 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(129, 179,  65)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>

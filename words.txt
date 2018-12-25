@@ -398,6 +398,7 @@ arrangement
 array
 arrays
 arrive
+arrived
 arrives
 arriving
 arrogant
@@ -530,6 +531,7 @@ avoid
 avoidance
 avoided
 avoiding
+awake
 award
 award-
 awards
@@ -755,6 +757,7 @@ bonus
 bonuses
 book
 book's
+booked
 bookkeeping
 booklets
 bookmarks
@@ -1108,6 +1111,7 @@ checkbook
 checked
 checkers
 checking
+checking-in
 checklist
 checkpoints
 checks
@@ -1152,6 +1156,7 @@ CircleCI
 circles
 circulating
 circumstances
+cities
 citing
 citizen
 citizens
@@ -1189,6 +1194,7 @@ cleared
 clearly
 clever
 click
+clicker
 clicks
 client
 client's
@@ -1706,6 +1712,7 @@ crooks
 cross
 cross-browser
 crossed-out
+crowd
 crucial
 crucially
 CRUD
@@ -1828,6 +1835,7 @@ decides
 decision
 decision-making
 decisions
+deck
 declaration
 declarative
 declare
@@ -2041,6 +2049,7 @@ differentiating
 differently
 differs
 difficult
+difficult-to-deal-with
 difficulties
 difficulty
 dig
@@ -2267,6 +2276,7 @@ DRY
 DSL
 DTO
 DTOs
+duarte
 dude
 due
 dues
@@ -2384,6 +2394,7 @@ emails
 embarrass
 embarrassing
 embarrassment
+embrace
 embracing
 emerge
 emitter
@@ -2477,6 +2488,8 @@ entering
 enterprise
 enterprise-size
 enters
+entertain
+entertaining
 enthusiastic
 enthusiastically
 entire
@@ -2806,6 +2819,7 @@ filing
 filipe
 fill
 fille
+filled
 filling
 fills
 film
@@ -2850,6 +2864,7 @@ firstitem
 fischer
 fish
 fisher
+fishy
 fist
 fit
 fits
@@ -3056,6 +3071,7 @@ gap
 gaps
 garbage
 garcia
+garr
 garry
 gas
 gates
@@ -3211,6 +3227,7 @@ growth
 grunt
 GTA
 guarantee
+guaranteed
 guarantees
 guard
 guarded
@@ -3428,6 +3445,7 @@ homosexuals
 honest
 honestly
 honesty
+honor
 honored
 hood
 hook
@@ -3439,6 +3457,7 @@ horizontal
 horizontally
 horrible
 horrid
+horror
 hospital
 host
 hostage
@@ -4880,6 +4899,7 @@ names
 namespace
 namespaces
 naming
+nancy
 napkin
 narrow-skilled
 NASA
@@ -4934,6 +4954,7 @@ netbout
 network
 networking
 networks
+neutral
 neutrality
 neutralize
 never
@@ -5012,6 +5033,7 @@ nope
 nor
 normal
 normally
+nose
 NoSQL
 not
 not-fixed-yet
@@ -5128,6 +5150,7 @@ old-school
 older
 oldest
 olive
+ology
 on
 on-fly
 on-premise
@@ -5324,6 +5347,7 @@ palo
 panel
 panic
 pantone
+pants
 paper
 papers
 papertrail
@@ -5675,6 +5699,7 @@ pre-java
 pre-merge
 pre-money
 pre-production
+preach
 preaching
 preamble
 precise
@@ -5704,6 +5729,7 @@ prefix
 prefixed
 prefixes
 preliminary
+premises
 premium
 prenup
 prep
@@ -5720,6 +5746,7 @@ presentation
 presentations
 presented
 presenteeism
+presenter
 presenting
 presents
 president
@@ -5749,6 +5776,7 @@ primarily
 primary
 primitive
 primitives
+principal
 principle
 principles
 print
@@ -5979,6 +6007,7 @@ quickbooks
 quicker
 quickly
 quiet
+quietly
 quit
 quite
 quitting
@@ -6087,6 +6116,7 @@ reasonably
 reasoning
 reasons
 rebase
+rebellion
 receive
 received
 receiver
@@ -6209,6 +6239,7 @@ relevant
 reliability
 reliable
 relies
+relieve
 religion
 religious
 reluctance
@@ -6400,6 +6431,7 @@ rewards
 rewrite
 rex
 ReXSL
+reynolds
 rich
 richard
 richer
@@ -6458,6 +6490,7 @@ round
 route
 router
 routine
+row
 royalties
 RSS
 rubensson
@@ -6549,6 +6582,7 @@ scalability
 scalable
 scale
 scam
+scandal
 scandals
 scans
 scare
@@ -6589,6 +6623,7 @@ screen
 screening
 screens
 screw
+screwed
 script
 scripts
 scroll
@@ -6605,6 +6640,7 @@ searches
 searching
 season
 seasoned
+seats
 seattle
 SEBOK
 second
@@ -6651,6 +6687,7 @@ self-motivated
 self-motivation
 self-organized
 self-organizing
+self-promotion
 self-regulation
 self-respect
 self-sufficient
@@ -6790,11 +6827,13 @@ shot
 should
 shoulders
 shouldn't
+shout
 show
 show-stopper
 showcase
 showed
 showing
+showman
 shows
 shrinks
 shrug
@@ -6909,12 +6948,14 @@ slipped
 SLoC
 slogans
 slope
+slot
 slow
 slower
 slowly
 slows
 small
 smaller
+smallest
 smalltalk
 smalltalk-
 smart
@@ -7045,6 +7086,7 @@ specifying
 specs
 speech
 speeches
+speechhacks
 speechless
 speed
 spellcheckworker
@@ -7060,6 +7102,7 @@ splitting
 spock
 spoil
 spoiled
+spoke
 sponsor
 sponsor's
 sponsored
@@ -7870,6 +7913,7 @@ undocumented
 unethical
 unevenly
 unexpected
+unexplained
 unfair
 unfinished
 unfixable
@@ -8218,6 +8262,7 @@ weren't
 west
 western
 wet
+wetting
 what
 what's
 whatever
@@ -8390,6 +8435,7 @@ yourself
 youtube
 ypshenychka
 ZCE
+zen
 zend
 zero
 zero-emission

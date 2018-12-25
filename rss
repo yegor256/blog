@@ -1,4 +1,202 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-12-21T21:47:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Don’t Want to Live in Silicon Valley</title><link href="https://www.yegor256.com/2018/12/18/silicon-valley-criticism.html" rel="alternate" type="text/html" title="Why I Don't Want to Live in Silicon Valley" /><published>2018-12-18T00:00:00+00:00</published><updated>2018-12-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/12/18/silicon-valley-criticism</id><content type="html" xml:base="https://www.yegor256.com/2018/12/18/silicon-valley-criticism.html">&lt;p&gt;Silicon Valley is a great place to be … or maybe not. I’ve spent five years there,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2018-12-25T06:51:24+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Speaker Cheat Sheet</title><link href="https://www.yegor256.com/2018/12/25/speaker-cheat-sheet.html" rel="alternate" type="text/html" title="Speaker Cheat Sheet" /><published>2018-12-25T00:00:00+00:00</published><updated>2018-12-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/12/25/speaker-cheat-sheet</id><content type="html" xml:base="https://www.yegor256.com/2018/12/25/speaker-cheat-sheet.html">&lt;p&gt;I speak at &lt;a href=&quot;/2016/11/18/software-conferences-to-attend.html&quot;&gt;software conferences&lt;/a&gt;
+regularly. Over the last three years I
+spoke in 30 cities and 10 countries. I recorded &lt;del&gt;almost&lt;/del&gt; all of them, you can
+see them &lt;a href=&quot;/talks.html&quot;&gt;here&lt;/a&gt; and on my
+&lt;a href=&quot;https://www.youtube.com/c/yegor256?sub_confirmation=1&quot;&gt;YouTube channel&lt;/a&gt;.
+My principal rule is that I never give the same speech more
+than once. Every time it’s a new deck of slides and a new flow of thoughts.
+Of course, they all dance around the ideas I preach about, like
+&lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt; or rebellion against office slavery.
+I guess it’s time to share some of my secrets, mostly learned the hard way.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Убить Дракона (1988) by Марк Захаров&quot; src=&quot;/images/2018/12/ubit-drakona.jpg&quot; longdesc=&quot;#c100b445&quot; /&gt;&lt;figcaption id=&quot;c100b445&quot;&gt;Убить Дракона (1988) by Марк Захаров&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Demand a Larger Room&lt;/strong&gt;.
+You know what’s funny—the smaller the room, the more difficult is
+the talk. The easiest talks I’ve had were done in front of 400+ people. The
+most difficult ones had about ten people. That’s why I try to insist, when
+I can, that my talk should be in the main room with more seats. How so? Read on.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Take a Morning Slot&lt;/strong&gt;.
+I’m not sure there is a rule for this, but my experience tells me that
+the best speakers usually open an event and quit before lunch. If your slot
+is somewhere closer to the end, make up a fake reason, like a booked flight,
+and ask organizers to move you to an earlier time. The best slot is right
+after the first one, when everybody is already awake but not too hungry and
+still on the premises.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bring Friends&lt;/strong&gt;.
+It’s way easier for me when there are some people in the room whom I know and who
+will support me no matter how bad my talk is. It’s even easier when they
+are being loud. The key trait of a good speaker is knowing how to break
+the wall between the stage and the room. The presence of friends helps.
+Sometimes I don’t have any friends with me, when the place is new and I’ve
+just arrived. I try to make a few, right before the talk, while checking-in
+and walking around. Then I invite them to my talk. Most of them don’t really
+care where they go and easily agree. For them, having a friend on the stage
+is an honor. So it’s win-win.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;10/20/30 Rule&lt;/strong&gt;.
+Ever heard about &lt;a href=&quot;https://guykawasaki.com/the_102030_rule/&quot;&gt;this rule&lt;/a&gt; from Guy Kawasaki?
+The gist is that your presentation should not include more than ten slides,
+should not last for longer than twenty minutes, and that thirty points is the smallest font
+you can use. Don’t take it literally, but it does make a lot of sense.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bring No Slides&lt;/strong&gt;.
+The best presenter uses no slides at all. The worst ones will have 200+
+for a 30 minute talk. Where are you on this scale? You have to tell a story,
+or maybe three, like &lt;a href=&quot;https://www.youtube.com/watch?v=D1R-jKKp3NA&quot;&gt;Steve Jobs did&lt;/a&gt;.
+Imagine yourself talking to me
+over a cafe table. Would you show me slides? I doubt it. You would just speak and hope
+I understand you. Do the same on the stage. Of course, you might have some visual data,
+just like you would use a napkin at the cafe. But that’s all. Your slides have
+to support your talk, instead of being its replacement. I strongly recommend
+you read these two great books:
+&lt;a href=&quot;https://amzn.to/2zw09nx&quot;&gt;&lt;em&gt;slide:ology: The Art and Science of Presentation Design&lt;/em&gt;&lt;/a&gt; by Nancy Duarte
+and
+&lt;a href=&quot;https://amzn.to/2PeHth9&quot;&gt;&lt;em&gt;Presentation Zen: Simple Ideas on Presentation Design and Delivery&lt;/em&gt;&lt;/a&gt; by Garr Reynolds.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stay Cool … Not&lt;/strong&gt;.
+Be brave. Stay strong. Look them in the eye. Smile. Relax. Everything will be fine! …
+Don’t listen to this nonsense. It doesn’t work that way. I always feel scared. And I
+always think to myself right before the talk—maybe I should hide somewhere in the
+bathroom, they won’t find me and will quietly cancel the talk. You have to
+feel something similar. If you don’t, there is something wrong with you.
+But what should you do with that fear? Embrace it. Just like you do when watching a horror movie.
+Enjoy seeing yourself wetting your pants. Look at yourself from the outside. I often
+say to myself: “Let’s see how you can survive the next 45 minutes, dude.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make Friends&lt;/strong&gt;.
+My experience tells me that only about one out of every 20 people in the room are really
+listening to what I’m saying and are capable of understanding. The rest of them
+are just a crowd. So, when there are 200 people in the room, only ten of them
+are my real audience. It’s important to find them as soon as possible and keep
+talking to them, looking them right in the eye. Ignore everybody else.
+Oh, and by the way, if you have to speak in front of 10 people, you are screwed.
+Because, according to the “1 out of 20” formula, most likely there will be nobody interested
+in what you are saying.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make Enemies&lt;/strong&gt;.
+The most interesting discussion is a scandal. Well, the most entertaining one.
+To have a scandal you need a conflict, between you and your audience. Well, not
+the entire room, but a small part of it. You are not that strong, I suppose,
+just yet, to have the entire room against you. Although, that would be the
+best speaking experience in your life. However, a few enemies will show up if you
+say something that contradicts the &lt;em&gt;status quo&lt;/em&gt;. Once you say it (and you should)
+someone will disagree and shout out. Don’t try to calm them down. Instead,
+be aggressive with something like “Thanks to people like you we still have Windows.”
+Success guaranteed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Structure It&lt;/strong&gt;.
+You know, I almost never attend other people’s talks. You know why? I very
+quickly loose the train of thought and then just wait until the speaker finishes. I can
+listen for the first five minutes, then something distracts me for a minute,
+and I can never get back. The problem, I believe, is that speakers don’t announce
+the structure of their presentations and don’t stay strictly attached to it
+during the course of it. Here is what I’d suggest you do instead. When you start,
+tell your listeners what the key idea is that you are going to deliver. Then, explain how you
+are going to structure the next 45 minutes: What will go first, what next, how
+you will end. Then, as you go, remind them about the structure from time to time, with something like:
+“Hey, we are at the third principle, and there are seven of them in total. Stay
+with me for another 15 minutes and we will be done.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Intrigue&lt;/strong&gt;.
+I’m not a master of it, but the principle is simple: don’t give everything away at once.
+Promise to give it out later instead. Something like: “This doesn’t work, and I will
+tell you why in a few minutes.” They will stay interested while waiting for that,
+and you will be able to feed them with something else. Also, if someone asks
+a question in the middle of the talk, you might start answering it, then stop
+and say: “I will touch on this problem in a few minutes.” You get the idea: keep
+them interested by not telling them everything right away.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ask Questions&lt;/strong&gt;.
+My rule of thumb is that at least once every five minutes I have to ask my audience
+a question. The easiest one is “Does this make sense so far?” or “Do you follow?”
+A few examples of more complex ones:
+“Have you ever heard about …?”
+“Who of you knows how this works?”
+“Does this look similar to what you experience on your projects?”,
+and so on.
+Why do you need to do that? To know their opinion? Not at all. You don’t
+care about their opinion. You just need to relax yourself. That’s why your
+questions should be as neutral as possible, expecting no specific or difficult-to-deal-with
+answers. It’s just an instrument to relieve the speaker and return
+the attention and pressure back to the room, for a few seconds.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t Rehearse&lt;/strong&gt;.
+Well, maybe just once. But don’t try to make your talk perfect. Nobody needs that. You are
+not a &lt;a href=&quot;/2016/05/10/keynote-clowns.html&quot;&gt;clown&lt;/a&gt;,
+not a professional actor, not a speaker on a payroll. You are a
+software engineer with a unique opinion. We need your thoughts straight from
+your heart and your real experience. Don’t worry about being a bad speaker,
+that doesn’t matter much. Worry about the &lt;em&gt;consistency&lt;/em&gt; of your arguments. Don’t try
+to remember the exact words you will say or the jokes you will make—this
+will only make you look fishy. Just make sure your arguments are strong
+and deliver them just like you would if you were convincing a friend
+standing next to you at the coffee machine.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t Be Funny&lt;/strong&gt;.
+Don’t make funny slides and don’t prepare jokes.
+Those are &lt;a href=&quot;/2016/05/10/keynote-clowns.html&quot;&gt;cheap&lt;/a&gt;
+techniques. Don’t sell yourself that short. Stay serious about your content.
+If there is a moment for a joke, make it, if you feel like it.
+Otherwise, don’t be like those &lt;a href=&quot;/2016/05/10/keynote-clowns.html&quot;&gt;keynote clowns&lt;/a&gt;.
+You are not a showman out there to entertain them with a red nose. You are supposed
+to entertain with your &lt;em&gt;provocative ideas&lt;/em&gt; and &lt;em&gt;unique thoughts&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have Fun&lt;/strong&gt;.
+You have to enjoy it. I know it’s stressful, but you have to find a way to
+relax and fool around a little bit. Sometimes I catch a sight of a smiling cute lady
+in the eighth row and smile back. Sometimes the clicker doesn’t work and I switch
+slides &lt;a href=&quot;https://www.youtube.com/watch?v=Rip_04Bv3Jk&quot;&gt;with my feet&lt;/a&gt;. Sometimes
+I just fool around.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;If you know everything, you can't be trusted.&lt;/aside&gt;
+
+&lt;p&gt;&lt;strong&gt;Be Humble&lt;/strong&gt;.
+I believe that a really good speaker knows when to say “I don’t know” (not too often though).
+If you know everything, you can’t be trusted. You have to demonstrate to them
+that you are one of them, but a bit more advanced in one area. You are a programmer,
+just like them, but you know a bit more about Java memory management. And you are
+still learning and there is still a lot to learn. Now it’s time to share your
+learning experience with them. To &lt;em&gt;share&lt;/em&gt;. Pay attention to this word. Not to
+teach them, but to share what you know. When you say “I don’t know this” we
+trust you more, because we understand that you accurately estimate the limits
+of your knowledge.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t Be Shy&lt;/strong&gt;.
+I totally forgot to touch on this key question: Why are you making the speech? There
+can be many answers, but the best one and the most honest is: It is for self-promotion.
+Use your first and last few minutes to tell them who you are and (what is more
+important) what you want them to do. I didn’t do this for many years;
+I thought that a good speaker must be humble and stay focused on the content
+instead of themselves. I was very wrong. Now I give them explicit instructions
+on what I want from them: follow me on Twitter, subscribe to my Telegram channel,
+sign up to Zerocracy, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Provoke Questions&lt;/strong&gt;.
+You know how I know whether my talk was a success or a failure? I can tell by
+the amount of questions I get. The more, the better. I’ve been lucky so far—even
+my worst talks had a few questions at the end. My best ones though were
+filled with them, starting from the 10th minute. That’s what success is for me!
+How can you do the same? Be provocative in your content and exaggerate.
+Also, ask yourself before the talk where the points of concern are, and leave
+many of them unexplained. Questions will show up.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;You know, while I was working on this blog post, I did some research online
+and found out that there are tons of books and articles about this subject. There
+are hundreds of recommendations and my short list above is merely a few percent
+of what people say about this, and of what I could actually say too.&lt;/p&gt;
+
+&lt;p&gt;Thus, I believe I will publish a book about this topic,
+similar to the &lt;a href=&quot;/256-bloghacks.html&quot;&gt;&lt;em&gt;256 Bloghacks&lt;/em&gt;&lt;/a&gt; I wrote a few years go.
+Maybe I will call it &lt;em&gt;256 Speechhacks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="speaking" /><summary type="html">I speak at software conferences regularly. Over the last three years I spoke in 30 cities and 10 countries. I recorded almost all of them, you can see them here and on my YouTube channel. My principal rule is that I never give the same speech more than once. Every time it’s a new deck of slides and a new flow of thoughts. Of course, they all dance around the ideas I preach about, like Elegant Objects or rebellion against office slavery. I guess it’s time to share some of my secrets, mostly learned the hard way.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/12/ubit-drakona.jpg" /></entry><entry><title type="html">Why I Don’t Want to Live in Silicon Valley</title><link href="https://www.yegor256.com/2018/12/18/silicon-valley-criticism.html" rel="alternate" type="text/html" title="Why I Don't Want to Live in Silicon Valley" /><published>2018-12-18T00:00:00+00:00</published><updated>2018-12-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/12/18/silicon-valley-criticism</id><content type="html" xml:base="https://www.yegor256.com/2018/12/18/silicon-valley-criticism.html">&lt;p&gt;Silicon Valley is a great place to be … or maybe not. I’ve spent five years there,
 from 2011 till 2016. I did enjoy some parts of it, but others were not enjoyable
 at all. Here is a quick summary of what’s wrong with this territory. I can’t speak about
 the rest of the United States since, even though I’ve seen some other places, I’ve
@@ -1152,103 +1350,4 @@ finally find a better place to scroll through Facebook eight hours a day?&lt;/p&
 &lt;p&gt;Seriously?&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Who really is in charge, you or your boss? &lt;a href=&quot;https://twitter.com/hashtag/codeahead?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#codeahead&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1048824708068777984?ref_src=twsrc%5Etfw&quot;&gt;October 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="zerocracy" /><summary type="html">I was explaining how Zerocracy works to one of our prospective clients yesterday. He texted me today: “[At Zerocracy] there is no commitment and anybody is free to leave any time, so the risk of entrusting a highly important project to such a platform and failing to deliver it on time is very high. We will develop it on our own with hired developers who will have salaries, and I’ll be architect and project manager, that way it will be under our entire control.” I think this word “control” he used deserves a comment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/10/the-drop.jpg" /></entry><entry><title type="html">Software Quality Award, 2019</title><link href="https://www.yegor256.com/2018/09/30/award-2019.html" rel="alternate" type="text/html" title="Software Quality Award, 2019" /><published>2018-09-30T00:00:00+00:00</published><updated>2018-09-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/09/30/award-2019</id><content type="html" xml:base="https://www.yegor256.com/2018/09/30/award-2019.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the fifth year of the
-&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The prize
-is still the same—&lt;strong&gt;$4,096&lt;/strong&gt;.
-The rules are still the same. Read on.
-Previous years are here:
-&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
-&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
-&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;,
-&lt;a href=&quot;/2017/10/24/award-2018.html&quot;&gt;2018&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Fill out &lt;a href=&quot;https://docs.google.com/forms/d/1UhXRhVP9ofmWv460LYF1e3vz_hwUmvosmYPDsQSJkBg&quot;&gt;&lt;strong&gt;THIS FORM&lt;/strong&gt;&lt;/a&gt;
-to submit your project.&lt;/p&gt;
-
-&lt;p&gt;Rules:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;One person can submit only one project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Submissions are accepted until September 1, 2019.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I will check the commit history to make sure you’re the main contributor to the project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Results will be announced October 15, 2019 on this page and by email.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The best project will receive $4,096
-(I may split this amount among a few projects and may give away a smaller amount!).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Final decisions will be made by me and are not negotiable
-(although I may invite other people to help me make the right decision).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Winners that received any cash prizes in previous years can’t submit again.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=Z70PMGaxGhY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg&quot; alt=&quot;YouTube video #Z70PMGaxGhY&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;How to win $4096 in the next year Quality Award? (webinar #29);
-        1 November 2017.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Each project must be:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Open source (in GitHub).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
-&lt;em&gt;and&lt;/em&gt; at least 16,384 &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits-of-code&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At least one year old.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Object-oriented (that’s the only thing I understand).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What doesn’t matter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Popularity. Even if nobody is using your
-product, it is still eligible for this award. I don’t care about
-popularity; quality is the key.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Programming language. I believe that any language, used correctly,
-can be applied to design a high-quality product.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
-line arguments, it’s still eligible for the award. I don’t care about
-your marketing position; quality is all.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the fifth year of the Software Quality Award. The prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="zerocracy" /><summary type="html">I was explaining how Zerocracy works to one of our prospective clients yesterday. He texted me today: “[At Zerocracy] there is no commitment and anybody is free to leave any time, so the risk of entrusting a highly important project to such a platform and failing to deliver it on time is very high. We will develop it on our own with hired developers who will have salaries, and I’ll be architect and project manager, that way it will be under our entire control.” I think this word “control” he used deserves a comment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/10/the-drop.jpg" /></entry></feed>
