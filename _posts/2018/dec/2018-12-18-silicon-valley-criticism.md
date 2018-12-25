@@ -94,7 +94,8 @@ You know why? Not because they eat that much (not the case in California),
 but mostly because they take what's left home. In order to warm it up in
 the morning and have a free breakfast.
 
-Aside from that, the way the food is served and presented can't even be compared
+Aside from that, the way the food is
+[served and presented](https://twitter.com/Jason/status/1077390533880770560) can't even be compared
 with what you can experience in Paris, Milan, Munich, or Moscow. I once
 saw a road-side ad saying something like "Food! $5.00 per pound!" Was it a joke?
 I don't think so.
