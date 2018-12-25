@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What If the Architect Is Wrong?"
-date: 2018-01-01
+date: 2019-01-01
 place: Moscow, Russia
 tags: architect
 description: |
@@ -14,7 +14,7 @@ keywords:
   - trust software architect
   - how to find software architect
   - good architect
-image: /images/2018/09/
+image: /images/2019/01/
 jb_picture:
   caption:
 ---
