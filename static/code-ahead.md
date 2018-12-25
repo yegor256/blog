@@ -27,7 +27,11 @@ Volume 1:<br/>
 
 <!--more-->
 
-July 6, 2018:
+Nov 19, 2018:
+I signed a contract with Piter, a Russian publishing house. They will
+translate the book to Russian and publish in Russia.
+
+Jul 6, 2018:
 It is finally published, in version 1.0.
 
 Jun 15, 2018:
