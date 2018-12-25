@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Speaker Cheat Sheet"
-date: 2018-01-29
+date: 2018-12-25
 place: Moscow, Russia
 tags: speaking
 description: |
@@ -14,12 +14,13 @@ keywords:
   - how to make a speech
   - speech tricks
   - presentation tricks
-image: /images/2018/11/
+image: /images/2018/12/ubit-drakona.jpg
 jb_picture:
-  caption:
+  caption: Убить Дракона (1988) by Марк Захаров
 ---
 
-I speak at software conferences regularly. Over the last three years I
+I speak at [software conferences]({% pst 2016/nov/2016-11-18-software-conferences-to-attend %})
+regularly. Over the last three years I
 spoke in 30 cities and 10 countries. I recorded <del>almost</del> all of them, you can
 see them [here](/talks.html) and on my
 [YouTube channel](https://www.youtube.com/c/yegor256?sub_confirmation=1).
@@ -147,7 +148,8 @@ the attention and pressure back to the room, for a few seconds.
 
 **Don't Rehearse**.
 Well, maybe just once. But don't try to make your talk perfect. Nobody needs that. You are
-not a clown, not a professional actor, not a speaker on a payroll. You are a
+not a [clown]({% pst 2016/may/2016-05-10-keynote-clowns %}),
+not a professional actor, not a speaker on a payroll. You are a
 software engineer with a unique opinion. We need your thoughts straight from
 your heart and your real experience. Don't worry about being a bad speaker,
 that doesn't matter much. Worry about the _consistency_ of your arguments. Don't try
@@ -158,11 +160,12 @@ standing next to you at the coffee machine.
 
 **Don't Be Funny**.
 Don't make funny slides and don't prepare jokes.
-Those are cheap techniques. Don't sell yourself that short. Stay serious about your content.
+Those are [cheap]({% pst 2016/may/2016-05-10-keynote-clowns %})
+techniques. Don't sell yourself that short. Stay serious about your content.
 If there is a moment for a joke, make it, if you feel like it.
 Otherwise, don't be like those [keynote clowns]({% pst 2016/may/2016-05-10-keynote-clowns %}).
 You are not a showman out there to entertain them with a red nose. You are supposed
-to entertain with your provocative ideas and unique thoughts.
+to entertain with your _provocative ideas_ and _unique thoughts_.
 
 **Have Fun**.
 You have to enjoy it. I know it's stressful, but you have to find a way to
@@ -171,13 +174,15 @@ in the eighth row and smile back. Sometimes the clicker doesn't work and I switc
 slides [with my feet](https://www.youtube.com/watch?v=Rip_04Bv3Jk). Sometimes
 I just fool around.
 
+{% quote If you know everything, you can't be trusted. %}
+
 **Be Humble**.
 I believe that a really good speaker knows when to say "I don't know" (not too often though).
 If you know everything, you can't be trusted. You have to demonstrate to them
 that you are one of them, but a bit more advanced in one area. You are a programmer,
 just like them, but you know a bit more about Java memory management. And you are
 still learning and there is still a lot to learn. Now it's time to share your
-learning experience with them. To share. Pay attention to this word. Not to
+learning experience with them. To _share_. Pay attention to this word. Not to
 teach them, but to share what you know. When you say "I don't know this" we
 trust you more, because we understand that you accurately estimate the limits
 of your knowledge.
