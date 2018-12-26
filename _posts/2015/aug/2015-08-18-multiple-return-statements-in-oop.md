@@ -20,7 +20,7 @@ This [debate](http://programmers.stackexchange.com/questions/118703)
 is very old, but I have something to say too. The question
 is whether a method may have multiple `return` statements or always
 just one. The answer may surprise you: In a pure object-oriented
-world, a method **must** have a **single** `return` statement and **nothing** else.
+world, a method _must_ have a _single_ `return` statement and _nothing_ else.
 Yes, just a `return` statement and that's it. No other operators
 or statements. Just `return`. All arguments in favor of multiple
 `return` statements go against the very idea of object-oriented programming.
@@ -55,7 +55,7 @@ public int max(int a, int b) {
 
 More verbose, less readable, and slower, right? Right.
 
-This is the code in a **pure** object-oriented world:
+This is the code in a _pure_ object-oriented world:
 
 {% highlight java %}
 public int max(int a, int b) {
@@ -67,7 +67,7 @@ public int max(int a, int b) {
 {% endhighlight %}
 
 What do you think now? There are no statements or operators. No `if` and no `>`.
-Instead, there are **objects** of class `If` and `GreaterThan`.
+Instead, there are _objects_ of class `If` and `GreaterThan`.
 
 This is a pure and clean object-oriented approach.
 
