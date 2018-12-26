@@ -79,7 +79,7 @@ but a return statement.
 is very old, but I have something to say too. The question
 is whether a method may have multiple <code>return</code> statements or always
 just one. The answer may surprise you: In a pure object-oriented
-world, a method <strong>must</strong> have a <strong>single</strong> <code>return</code> statement and <strong>nothing</strong> else.
+world, a method <em>must</em> have a <em>single</em> <code>return</code> statement and <em>nothing</em> else.
 Yes, just a <code>return</code> statement and that’s it. No other operators
 or statements. Just <code>return</code>. All arguments in favor of multiple
 <code>return</code> statements go against the very idea of object-oriented programming.</p>
@@ -110,7 +110,7 @@ with a single <code>return</code>:</p>
 
 <p>More verbose, less readable, and slower, right? Right.</p>
 
-<p>This is the code in a <strong>pure</strong> object-oriented world:</p>
+<p>This is the code in a <em>pure</em> object-oriented world:</p>
 
 <pre>public int max(int a, int b) {
   return new If(
@@ -120,7 +120,7 @@ with a single <code>return</code>:</p>
 }</pre>
 
 <p>What do you think now? There are no statements or operators. No <code>if</code> and no <code>&gt;</code>.
-Instead, there are <strong>objects</strong> of class <code>If</code> and <code>GreaterThan</code>.</p>
+Instead, there are <em>objects</em> of class <code>If</code> and <code>GreaterThan</code>.</p>
 
 <p>This is a pure and clean object-oriented approach.</p>
 
