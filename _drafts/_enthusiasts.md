@@ -47,6 +47,8 @@ a singleton and a very nice [ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-
 library he's been using for a year and it
 is just great, blah blah blah... OK? Let's do it? Why not?
 
+{% youtube gMJNz9AWbQE %}
+
 I have very little to say and ask him to submit a ticket. I try to assure him
 that I will investigate the possibilities as soon as possible. I'm also trying
 to remind him, in a very polite way, that I'm an
