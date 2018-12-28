@@ -31,7 +31,7 @@ a provocative blogger at yegor256.com;
 a creator of Zold, a non-Blockchain cryptocurrency for fast micro-payments;
 a hands-on Java programmer;
 a creator of Cactoos, Takes Framework, JCabi, and Rultor;
-a philanthropist donating four thousand dollars annualy to an open source award.
+a philanthropist donating four thousand dollars annually to an open source award.
 
 Employer:<br/>
 Zerocracy, Inc. (www.zerocracy.com)
