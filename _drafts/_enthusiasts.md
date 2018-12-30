@@ -25,7 +25,7 @@ projects, either as volunteers or for money via [Zerocracy](https://www.zerocrac
 (and my software projects are [all]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 open source). Over the years I have realized
 that there is a pattern in their behavior, which I need to be <del>scared</del> aware of.
-I call it "hazardous enthusiam." Here are the symptoms.
+I call it "hazardous enthusiasm." Here are the symptoms.
 
 <!--more-->
 
@@ -77,7 +77,7 @@ push everything they have in mind in one large chunk. Of course,
 they fail. Because there is a bad guy in front of them: me, the architect.
 
 What makes their cases fatal is the enthusiasm. If they were less
-agressive and eager to do the right thing, they would survive. But they can't
+aggressive and eager to do the right thing, they would survive. But they can't
 wait and they don't want to apply half-measures. They want to fix the world
 in one huge pull request.
 
