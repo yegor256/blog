@@ -81,3 +81,6 @@ write unit tests, but because you _didn't know_ how to do it.
 So every time I hear, "I didn't have time for unit testing," I understand
 that you just didn't know how and are trying to conceal that fact behind
 false excuses. It's not professional, to say the least.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Why don&#39;t you write unit tests? <a href="https://twitter.com/hashtag/testing?src=hash&amp;ref_src=twsrc%5Etfw">#testing</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1079264946356211712?ref_src=twsrc%5Etfw">December 30, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
