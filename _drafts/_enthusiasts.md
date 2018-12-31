@@ -72,7 +72,7 @@ a professional software engineer from a guy who merely learned how to write Java
 [microtasking]({% pst 2017/nov/2017-11-28-microtasking %}).
 
 They simply don't know how to break their changes, which in most cases are
-not so useless, into smaller pieces and deliver them incrementally. They want to
+by no means useless, into smaller pieces and deliver them incrementally. They want to
 push everything they have in mind in one large chunk. Of course,
 they fail. Because there is a bad guy in front of them: me, the architect.
 
