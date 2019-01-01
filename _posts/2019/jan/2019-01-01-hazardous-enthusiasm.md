@@ -14,9 +14,9 @@ keywords:
   - good will in software
   - good intention
   - risks in software
-image: /images/2019/01/
+image: /images/2019/01/the-thin-red-line.jpg
 jb_picture:
-  caption:
+  caption: The Thin Red Line (1998) by Terrence Malick
 ---
 
 On a daily basis I deal with many programmers who contribute to my
@@ -96,5 +96,4 @@ They are [hackers]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
 not designers or [architects]({% pst 2018/jun/2018-06-26-are-you-an-architect %}).
 
 Honestly, I feel sorry when I lose them.
-
 
