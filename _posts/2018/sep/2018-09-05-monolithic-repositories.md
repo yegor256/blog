@@ -201,6 +201,8 @@ I guess I don't need to explain why it's wrong. We don't design our software
 that way anymore. We know that tight coupling is a bad idea. We know that
 a set of smaller components is better than a larger solid piece.
 
+{% youtube zljJpADEf_E %}
+
 Why can't we apply the same logic to repositories? I believe we can.
 Of course, just like in object-oriented programming, a fine-grained design
 requires more skills and time. Look at what I had to do with this small
