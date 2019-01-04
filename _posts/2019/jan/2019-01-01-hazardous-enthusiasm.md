@@ -89,7 +89,7 @@ If I accept what they suggest, I will simply transfer
 my architect's [responsibilities]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
 to them. It will be their architecture from
 now on. And what's wrong with that? Well, their lack of that skill. They won't be able
-to be architects, because they can't manage changes, can't delivery them incrementally,
+to be architects, because they can't manage changes, can't deliver them incrementally,
 and can't understand the dynamics of collaborative work with the source code.
 
 They are [hackers]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}),
