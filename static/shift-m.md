@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/gordon-tredgold.png" class="guest-face" alt="Face of Gordon Tredgold"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;41: [Focus and accountability with Gordon Tredgold](/shift-m/2019/41.html)<br/>
+3 January 2019; 59 min.
+
 <img src="/images/shift-m/anne-loehr.png" class="guest-face" alt="Face of Anne Loehr"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;40: [Soft skills with Anne Loehr](/shift-m/2018/40.html)<br/>
