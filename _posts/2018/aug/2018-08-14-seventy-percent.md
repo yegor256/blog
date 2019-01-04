@@ -101,6 +101,8 @@ no love between us or maybe even friendship. In that future fight the one
 who is the most aggressive and cunning will win. Do you really want that
 to be me? Or do you expect it to be you?
 
+{% youtube RNRaVmbWZXI %}
+
 Now I'm a bit older and more experienced. I've seen those ugly debates and don't want them anymore.
 I don't want the investment of my time and my money to go down the drain. I want
 to know upfront what exactly will happen with them in a month, a year,
