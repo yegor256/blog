@@ -94,6 +94,8 @@ I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/
 
 " ... absolute and utter crap"&mdash;[Rashid](https://www.yegor256.com/2014/10/29/how-much-do-you-cost.html#comment-3263735127)
 
+"This blog is hilarious, the guy clearly is out of his minds"&mdash;[Sas](https://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html#comment-4269860301)
+
 "By reading Yegor's blog it is obvious to see that Yegor is not an experienced developer"&mdash;[Timmey](https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-3754430293)
 
 "Please, don't do any software design anymore."&mdash;[Alex](https://www.yegor256.com/2017/12/19/srp-is-hoax.html#comment-3682316386)
