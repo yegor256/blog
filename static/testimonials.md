@@ -96,6 +96,8 @@ I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/
 
 "This blog is hilarious, the guy clearly is out of his minds"&mdash;[Sas](https://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html#comment-4269860301)
 
+"If just plain simply writing robust code in the first place is a problem for you---consider flipping burgers instead"&mdash;[anon123](https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html#comment-4244129670)
+
 "By reading Yegor's blog it is obvious to see that Yegor is not an experienced developer"&mdash;[Timmey](https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-3754430293)
 
 "Please, don't do any software design anymore."&mdash;[Alex](https://www.yegor256.com/2017/12/19/srp-is-hoax.html#comment-3682316386)
