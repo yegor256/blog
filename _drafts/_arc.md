@@ -22,11 +22,11 @@ jb_picture:
 You most probably know what I think about the
 [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 role on a software project---it's that of a _dictator_ who makes all technical decisions
-and bears the entire responsibility for the final result. I [wrote]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
+and who bears the entire responsibility for the final result. I [wrote]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 about it and even gave a task [_Who is a Software Architect?_](https://www.youtube.com/watch?v=R1lA7pN60xg)
 at BuildStuff in 2016. However, the obvious question you may ask is:
 What happens if the architect is wrong? Does it mean the entire project
-is at risk of failure? And isn't it better to make the entire team responsible
+is at risk of failure? And isn't it better to make the whole team responsible
 for the result, instead of having one single point of failure?
 
 <!--more-->
@@ -36,7 +36,7 @@ for the result, instead of having one single point of failure?
 The question indeed is obvious. Dictatorship is a [great]({% pst 2016/sep/2016-09-27-command-control-innovate %})
 management model, provided the dictator is _smart_. This means, first of all, having the ability
 1) to analyze the reality, 2) [collect]({% pst 2015/may/2015-05-13-two-instruments-of-software-architect %})
-all available different opinions, and 3) find
+all available differing opinions, and 3) find
 the best possible option, leaving personal emotions aside. How many people
 truly can do that? <del>None</del> Very few.
 
@@ -73,7 +73,7 @@ What can we do?
 
 We can recall that the only real boss of the architect is _requirements_. The
 architect may not listen to us, to developers, to customers, to anyone. But
-the requirements are the undisputable boss. Did the requirements document
+the requirements are the indisputable boss. Did the requirements document
 mention anything about the choice of the database? Most likely there was nothing
 about it. So the architect did everything right. The requirements said
 that payments have to be persisted and they are. The requirements wanted
@@ -89,7 +89,7 @@ to say that something else is required for this particular decision. Let's say,
 we add this line:
 
 > The choice of each third-party product has
-to grounded on a multi-factor analysis of
+to be grounded on a multi-factor analysis of
 at least four alternatives.
 
 Once this requirement clause is approved, the architect will have to improve the
@@ -105,7 +105,7 @@ need a few additional pairs of eyes to look at this artifact and tell us
 what's wrong with it. For example, we can ask someone from the team to review
 the analysis and tell us what's wrong. Or we can [hire]({% pst 2014/dec/2014-12-18-independent-technical-reviews %})
 someone from the market, who is very expensive, but
-very professional in the area of database management.
+a professional in the area of database management.
 
 Once defects are reported, they will have to be resolved somehow by the
 architect. Either the analysis will have
