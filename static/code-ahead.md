@@ -27,6 +27,13 @@ Volume 1:<br/>
 
 <!--more-->
 
+Jan 12, 2019:
+This is a short list of reviews I've managed to find (feel free
+to add yours, via a [pull request](https://github.com/yegor256/blog)):
+
+  * [Wojciech Adam Koszek](https://www.koszek.com/books/2017/01/07/book-blog-hacks-256/)
+  * [Mikhail Yakushin](https://www.driver733.com/2018/11/05/256-bloghacks-book-review.html)
+
 Nov 19, 2018:
 I signed a contract with Piter, a Russian publishing house. They will
 translate the book to Russian and publish in Russia.
