@@ -133,3 +133,6 @@ I always kept a list of such things ready, in case a manager ever called
 me for a meeting.
 
 That was my strategy. How do you manage your managers?
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you feel guilty sitting in your employer&#39;s office, getting a decent salary, and working on your own project most of the time? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1084379639525658624?ref_src=twsrc%5Etfw">January 13, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
