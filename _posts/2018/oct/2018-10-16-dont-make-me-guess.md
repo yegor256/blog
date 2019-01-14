@@ -74,6 +74,8 @@ The second one is that Paul was testing my reactions, like those
 funny radio shows do by calling strangers, trying
 to be super annoying to trigger their angry response.
 
+{% youtube fVMml2vpP-Y %}
+
 The third one, and this is my favorite, is that Paul simply doesn't know how
 to deliver information _together_ with its context. And this is where we
 get serious.
