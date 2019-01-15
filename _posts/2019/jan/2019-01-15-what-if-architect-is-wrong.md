@@ -47,6 +47,8 @@ software architects like that are out there? <del>All</del> Many.
 
 What is the solution?
 
+{% youtube PYq05UAwzNk %}
+
 How about we get rid of the dictator in the first place and let the team
 decide what the right architecture is? How about we replace dictatorship
 with [democracy]({% pst 2016/feb/2016-02-18-holacracy-autocracy %})
