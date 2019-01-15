@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-07T09:05:47+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Hazardous Enthusiasm</title><link href="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html" rel="alternate" type="text/html" title="Hazardous Enthusiasm" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/01/hazardous-enthusiasm</id><content type="html" xml:base="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html">&lt;p&gt;On a daily basis I deal with many programmers who contribute to my
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-15T10:12:09+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What if the Architect is Wrong?</title><link href="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html" rel="alternate" type="text/html" title="What if the Architect is Wrong?" /><published>2019-01-15T00:00:00+00:00</published><updated>2019-01-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong</id><content type="html" xml:base="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html">&lt;p&gt;You most probably know what I think about the
+&lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;architect&lt;/a&gt;
+role on a software project—it’s that of a &lt;em&gt;dictator&lt;/em&gt; who makes all technical decisions
+and who bears the entire responsibility for the final result. I &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;wrote&lt;/a&gt;
+about it and even gave a task &lt;a href=&quot;https://www.youtube.com/watch?v=R1lA7pN60xg&quot;&gt;&lt;em&gt;Who is a Software Architect?&lt;/em&gt;&lt;/a&gt;
+at BuildStuff in 2016. However, the obvious question you may ask is:
+What happens if the architect is wrong? Does it mean the entire project
+is at risk of failure? And isn’t it better to make the whole team responsible
+for the result, instead of having one single point of failure?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Color of Money (1986) by Martin Scorsese&quot; src=&quot;/images/2019/01/the-color-of-money.jpg&quot; longdesc=&quot;#de60815d&quot; /&gt;&lt;figcaption id=&quot;de60815d&quot;&gt;The Color of Money (1986) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The question indeed is obvious. Dictatorship is a &lt;a href=&quot;/2016/09/27/command-control-innovate.html&quot;&gt;great&lt;/a&gt;
+management model, provided the dictator is &lt;em&gt;smart&lt;/em&gt;. This means, first of all, having the ability
+1) to analyze the reality, 2) &lt;a href=&quot;/2015/05/13/two-instruments-of-software-architect.html&quot;&gt;collect&lt;/a&gt;
+all available differing opinions, and 3) find
+the best possible option, leaving personal emotions aside. How many people
+truly can do that? &lt;del&gt;None&lt;/del&gt; Very few.&lt;/p&gt;
+
+&lt;p&gt;Everybody else will most likely abuse the power and turn into a bad dictator,
+who doesn’t listen to anyone, doesn’t pay attention to different opinions,
+and makes technical decisions out of personal feelings. How many
+software architects like that are out there? &lt;del&gt;All&lt;/del&gt; Many.&lt;/p&gt;
+
+&lt;p&gt;What is the solution?&lt;/p&gt;
+
+&lt;p&gt;How about we get rid of the dictator in the first place and let the team
+decide what the right architecture is? How about we replace dictatorship
+with &lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;democracy&lt;/a&gt;
+and let software developers &lt;em&gt;vote&lt;/em&gt; somehow, so that there will
+be no single point of failure? They will all be responsible for the product,
+and when it breaks—they will all be guilty. Right?&lt;/p&gt;
+
+&lt;p&gt;Wrong!&lt;/p&gt;
+
+&lt;p&gt;“Quality and responsibility mean nothing unless they are attributed personally,”
+I said in my book &lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt;. Group responsibility
+is the most terrible mistake a team can ever make. So, no! No voting and no democracy.&lt;/p&gt;
+
+&lt;p&gt;What than?&lt;/p&gt;
+
+&lt;p&gt;Imagine a real project, where an architect makes a decision to use MongoDB (a NoSQL database) for persisting
+user payments. It’s a questionable decision, since, traditionally, relational databases
+are considered a better option for financial data. However, we know that the architect
+is a dictator and we are not supposed to argue. We can’t tell the architect
+that the decision is wrong. Moreover, we should not ask the architect to
+&lt;a href=&quot;/2016/07/21/convince-me.html&quot;&gt;convince&lt;/a&gt; us. The decision is made. It’s done.&lt;/p&gt;
+
+&lt;p&gt;What can we do?&lt;/p&gt;
+
+&lt;p&gt;We can recall that the only real boss of the architect is &lt;em&gt;requirements&lt;/em&gt;. The
+architect may not listen to us, to developers, to customers, to anyone. But
+the requirements are the indisputable boss. Did the requirements document
+mention anything about the choice of the database? Most likely there was nothing
+about it. So the architect did everything right. The requirements said
+that payments have to be persisted and they are. The requirements wanted
+the system to process up to a hundred payments per second and it does. So,
+where is the mistake?&lt;/p&gt;
+
+&lt;p&gt;Well, we just &lt;em&gt;feel&lt;/em&gt; that the choice of MongoDB was a bad idea. It’s just gut feeling.
+But maybe we are wrong and the architect is right?&lt;/p&gt;
+
+&lt;p&gt;To make the situation more explicit and resolve the conflict,
+we have to amend the requirements document. We have
+to say that something else is required for this particular decision. Let’s say,
+we add this line:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The choice of each third-party product has
+to be grounded on a multi-factor analysis of
+at least four alternatives.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once this requirement clause is approved, the architect will have to improve the
+product documentation. There will have to be an analysis of MongoDB,
+PostgreSQL, Oracle, and some other databases. There will be some selection
+criteria defined and the architect will provide some numbers to make the
+choice of MongoDB look reasonable.&lt;/p&gt;
+
+&lt;p&gt;Once it’s done, the opinion of the architect will turn into a digital artifact,
+which &lt;em&gt;may&lt;/em&gt; have defects. How many defects are there and how soon we find them
+becomes a management question, which is relatively easy to resolve. We just
+need a few additional pairs of eyes to look at this artifact and tell us
+what’s wrong with it. For example, we can ask someone from the team to review
+the analysis and tell us what’s wrong. Or we can &lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;hire&lt;/a&gt;
+someone from the market, who is very expensive, but
+a professional in the area of database management.&lt;/p&gt;
+
+&lt;p&gt;Once defects are reported, they will have to be resolved somehow by the
+architect. Either the analysis will have
+to be improved, or the decision will have to be changed, if the facts start
+stacking up against it.&lt;/p&gt;
+
+&lt;p&gt;The lower the risk tolerance in the project, the more pairs of eyes we need
+to look at the decisions the architect is making. If the quality is very
+important or the professional level of the architect is questionable, we need
+more decisions to be documented and more frequently reviewed. It’s a simple
+game of numbers. If the architect is completely trusted and the project is not
+expensive and only short-term—we just let the architect do whatever he or she
+wants.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, if the architect is junior and the project is very important
+to us, we must demand the majority of technical decisions to be documented
+and analyzed. We must organize as many reviews of those documents as possible,
+even inviting &lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;independent experts&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, to summarize my points, we must not expect the architect to be an expert
+capable of solving all problems. On the other hand, we must not replace the
+architect with a democratic vote. Both ideas are wrong. The right approach is
+to control the quality of decisions the architect makes via regular reviews.&lt;/p&gt;
+
+&lt;p&gt;Do you have such reviews in your project? If not, why not?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">You most probably know what I think about the architect role on a software project—it’s that of a dictator who makes all technical decisions and who bears the entire responsibility for the final result. I wrote about it and even gave a task Who is a Software Architect? at BuildStuff in 2016. However, the obvious question you may ask is: What happens if the architect is wrong? Does it mean the entire project is at risk of failure? And isn’t it better to make the whole team responsible for the result, instead of having one single point of failure?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/the-color-of-money.jpg" /></entry><entry><title type="html">Hazardous Enthusiasm</title><link href="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html" rel="alternate" type="text/html" title="Hazardous Enthusiasm" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/01/hazardous-enthusiasm</id><content type="html" xml:base="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html">&lt;p&gt;On a daily basis I deal with many programmers who contribute to my
 &lt;a href=&quot;/2017/05/30/why-contribute-to-open-source.html&quot;&gt;open source&lt;/a&gt;
 projects, either as volunteers or for money via &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;
 (and my software projects are &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;all&lt;/a&gt;
@@ -988,7 +1101,15 @@ I know for sure what the reason for rejection was):&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I will not hide their names. Just like Nazi criminals these guys should be known,
-visible, and prosecuted, as soon as possible.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">Bobby Fischer, the eleventh World Chess Champion, was one of the best chess players of the last century. Did you know that, along with anti-Semitic statements, he also said that women chess players “aren’t creative and are all fish”? Did you also know that he publicly described the 9/11 events as “wonderful news”?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/better-call-saul.jpg" /></entry><entry><title type="html">Do You Test Ruby Code for Thread Safety?</title><link href="https://www.yegor256.com/2018/11/06/ruby-threads.html" rel="alternate" type="text/html" title="Do You Test Ruby Code for Thread Safety?" /><published>2018-11-06T00:00:00+00:00</published><updated>2018-11-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/06/ruby-threads</id><content type="html" xml:base="https://www.yegor256.com/2018/11/06/ruby-threads.html">&lt;p&gt;Are you a Ruby developer? If you are, I’m pretty sure you have a very
+visible, and prosecuted, as soon as possible.&lt;/p&gt;
+
+&lt;p&gt;PS. Let me build a list of other victims (if you know more, please add in comments, I will
+extend the list):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2019/01/14/arts/dance/sergei-polunin-putin-trump-paris-opera-ballet.html&quot;&gt;Anti-Gay and Sexist Posts Cost Sergei Polunin a Role in Paris&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.livescience.com/64492-james-watson-stripped-of-honors.html&quot;&gt;James Watson, Co-Discoverer of DNA Structure, Stripped of Honors Over Racist Statements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">Bobby Fischer, the eleventh World Chess Champion, was one of the best chess players of the last century. Did you know that, along with anti-Semitic statements, he also said that women chess players “aren’t creative and are all fish”? Did you also know that he publicly described the 9/11 events as “wonderful news”?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/better-call-saul.jpg" /></entry><entry><title type="html">Do You Test Ruby Code for Thread Safety?</title><link href="https://www.yegor256.com/2018/11/06/ruby-threads.html" rel="alternate" type="text/html" title="Do You Test Ruby Code for Thread Safety?" /><published>2018-11-06T00:00:00+00:00</published><updated>2018-11-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/06/ruby-threads</id><content type="html" xml:base="https://www.yegor256.com/2018/11/06/ruby-threads.html">&lt;p&gt;Are you a Ruby developer? If you are, I’m pretty sure you have a very
 vague idea of what concurrency and thread safety are. No offense, but this
 is what I’ve figured out after dealing with Ruby code and speaking with Ruby
 programmers over the last half a year. I’ve been writing in Ruby pretty actively
@@ -1231,122 +1352,4 @@ for anyone. Just sign up, create your lists, lanes, and campaigns, and go ahead.
 
 &lt;p&gt;If something is not clear in the system and you are lost, don’t hesitate
 to &lt;a href=&quot;https://github.com/yegor256/mailanes/issues&quot;&gt;submit a ticket&lt;/a&gt;,
-I will try to improve it or add documentation.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">There are other products doing something similar, including MailChimp, AWeber, and many others. They are great. Maybe. I don’t really know. I tried some of them, some time ago. And I was frustrated. They are expensive, clumsy, and heavy. That’s my experience. I wanted something lightweight, where I can upload a list of emails, create a simple HTML/text letter, configure my SMTP outbound server, and call it a day. I spent a few days and created Mailanes. It’s free (for all of you), it’s simple, and it’s open source.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/mailanes-1.png" /></entry><entry><title type="html">Don’t Make Me Guess</title><link href="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html" rel="alternate" type="text/html" title="Don't Make Me Guess" /><published>2018-10-16T00:00:00+00:00</published><updated>2018-10-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/16/dont-make-me-guess</id><content type="html" xml:base="https://www.yegor256.com/2018/10/16/dont-make-me-guess.html">&lt;p&gt;It’s Sunday. I’m at home, drinking tea and writing a new document for
-one of our future investors. One of my contacts in Telegram all of a sudden shoots me
-a message. I haven’t talked to this guy for at least two months. He is
-a software developer. I know him because he works at &lt;a href=&quot;http://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;.
-His name is Paul.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Сталкер (1979) by Андрей Тарковский&quot; src=&quot;/images/2018/10/stalker.jpg&quot; longdesc=&quot;#82ab8aad&quot; /&gt;&lt;figcaption id=&quot;82ab8aad&quot;&gt;Сталкер (1979) by Андрей Тарковский&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Paul: “Hey, it’s broken!”&lt;/p&gt;
-
-&lt;p&gt;Me: “What exactly?”&lt;/p&gt;
-
-&lt;p&gt;Paul: “The link.”&lt;/p&gt;
-
-&lt;p&gt;Me: “What link?”&lt;/p&gt;
-
-&lt;p&gt;Paul sends me the link.&lt;/p&gt;
-
-&lt;p&gt;Me: “Where did you get it?”&lt;/p&gt;
-
-&lt;p&gt;Paul: “On your blog.”&lt;/p&gt;
-
-&lt;p&gt;Me: “Where exactly on the blog?”&lt;/p&gt;
-
-&lt;p&gt;Paul gives me the link to the blog post where one of the links is broken.&lt;/p&gt;
-
-&lt;p&gt;Me: “Thanks for noticing!”&lt;/p&gt;
-
-&lt;p&gt;Paul: “Sure, have a good Sunday, sorry for bothering you.”&lt;/p&gt;
-
-&lt;p&gt;Me: “No worries.”&lt;/p&gt;
-
-&lt;p&gt;Now I’m asking myself, why didn’t Paul just send me a single message? It would
-sound something like this: “Hey, the link … in your blog post … it’s broken.”&lt;/p&gt;
-
-&lt;p&gt;Moreover, why didn’t Paul just go to the &lt;a href=&quot;https://github.com/yegor256/blog&quot;&gt;GitHub repo&lt;/a&gt;
-and submit a ticket?&lt;/p&gt;
-
-&lt;p&gt;Even more, why didn’t Paul just fix the broken link and submit a pull
-request?&lt;/p&gt;
-
-&lt;p&gt;Do you know the answer?&lt;/p&gt;
-
-&lt;p&gt;I have three hypotheses.&lt;/p&gt;
-
-&lt;p&gt;The first one is that Paul is a lonely guy. He has nothing to do on Sunday and wants to
-talk to someone. A broken link in my blog is a perfect excuse to start
-a conversation.&lt;/p&gt;
-
-&lt;p&gt;The second one is that Paul was testing my reactions, like those
-funny radio shows do by calling strangers, trying
-to be super annoying to trigger their angry response.&lt;/p&gt;
-
-&lt;p&gt;The third one, and this is my favorite, is that Paul simply doesn’t know how
-to deliver information &lt;em&gt;together&lt;/em&gt; with its context. And this is where we
-get serious.&lt;/p&gt;
-
-&lt;p&gt;This is the mistake so many programmers make, in my experience
-of dealing with them. When they deliver the question they have, they think
-that I, their listener, am right inside the same context as they are at the very same
-moment. They think that I’m sitting right now reading exactly the same
-blog post trying to open the same broken link. That’s why it’s a good
-moment to just tell me: “Hey, it’s broken!”&lt;/p&gt;
-
-&lt;p&gt;Is it a &lt;a href=&quot;https://en.wikipedia.org/wiki/Schizophasia&quot;&gt;mental disorder&lt;/a&gt;
-or just negligence and lack of respect for the listener?&lt;/p&gt;
-
-&lt;p&gt;Honestly, I think it’s a bit of both.&lt;/p&gt;
-
-&lt;p&gt;I &lt;a href=&quot;/2015/06/29/simple-diagrams.html&quot;&gt;wrote&lt;/a&gt; some time ago
-that &lt;em&gt;if I don’t understand you, it’s your fault&lt;/em&gt;. However, sometimes
-this “verbal terrorism” (isn’t that what it is?) has to be punished.
-Here is my short list of countermeasures:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Silence&lt;/strong&gt;.
-Instead of trying to clarify the message, I just don’t answer.
-Sometimes it works, but very often it’s not appropriate, since I realize that
-the information coming to me is valuable. Just like in this
-situation with Paul. I was interested to know what exactly was broken,
-either a link or maybe one of my pet web services is down. Thus,
-silence wasn’t an option.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Being Silly&lt;/strong&gt;.
-Instead of clarifying, I sometimes try to make the situation even worse,
-pretending that I understand the message and that the context is clear to me,
-but that it’s a different context. For example, right after “The link is broken”
-I would answer “No, it’s not, I just checked!” That would confuse Paul,
-since he would then need to put some extra effort to explain to me which link it was
-and that it is indeed broken.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Long Pauses&lt;/strong&gt;.
-Instead of a complete silence I sometimes take very long pauses between
-their comments and my answers. Some of them realize that the comments
-are out of context and attempt to provide additional details. Others just
-wait, which very often helps me switch them to the silence treatment.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Is this blog post offensive? Or have I said what many of you also experience
-when dealing with tech people? Or is it not only limited to tech people? I can’t be
-sure, but most of these verbal terrorists I meet seem to be programmers.&lt;/p&gt;
-
-&lt;p&gt;Please, guys, try to be more respectful and careful in your conversations,
-especially digital ones. Your listener is not your personal best friend, thinking
-and doing exactly the same as you are thinking and doing right now. Always imagine that
-the context of the listener is completely different from yours and just
-saying that “it” is broken is not enough. You have to specify what
-you are going to talk about before jumping straight to the point.&lt;/p&gt;
-
-&lt;p&gt;This is definitely one of those &lt;a href=&quot;/2018/08/29/soft-skills.html&quot;&gt;soft skills&lt;/a&gt;
-I’ve mentioned before.&lt;/p&gt;
-
-&lt;p&gt;Thanks.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">It’s Sunday. I’m at home, drinking tea and writing a new document for one of our future investors. One of my contacts in Telegram all of a sudden shoots me a message. I haven’t talked to this guy for at least two months. He is a software developer. I know him because he works at Zerocracy. His name is Paul.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/10/stalker.jpg" /></entry></feed>
+I will try to improve it or add documentation.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">There are other products doing something similar, including MailChimp, AWeber, and many others. They are great. Maybe. I don’t really know. I tried some of them, some time ago. And I was frustrated. They are expensive, clumsy, and heavy. That’s my experience. I wanted something lightweight, where I can upload a list of emails, create a simple HTML/text letter, configure my SMTP outbound server, and call it a day. I spent a few days and created Mailanes. It’s free (for all of you), it’s simple, and it’s open source.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/mailanes-1.png" /></entry></feed>
