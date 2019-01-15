@@ -14,9 +14,9 @@ keywords:
   - trust software architect
   - how to find software architect
   - good architect
-image: /images/2019/01/
+image: /images/2019/01/the-color-of-money.jpg
 jb_picture:
-  caption:
+  caption: The Color of Money (1986) by Martin Scorsese
 ---
 
 You most probably know what I think about the
