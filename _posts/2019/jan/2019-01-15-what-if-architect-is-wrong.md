@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What if the Architect is Wrong?"
-date: 2019-01-01
+date: 2019-01-15
 place: Moscow, Russia
 tags: architect
 description: |
