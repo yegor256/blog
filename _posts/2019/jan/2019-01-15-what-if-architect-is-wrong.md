@@ -62,7 +62,7 @@ Wrong!
 I said in my book [_Code Ahead_](/code-ahead.html). Group responsibility
 is the most terrible mistake a team can ever make. So, no! No voting and no democracy.
 
-What than?
+What then?
 
 Imagine a real project, where an architect makes a decision to use MongoDB (a NoSQL database) for persisting
 user payments. It's a questionable decision, since, traditionally, relational databases
