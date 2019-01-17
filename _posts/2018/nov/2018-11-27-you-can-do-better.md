@@ -83,6 +83,8 @@ thousand anonymous GitHub hooligans, are two very different stories. You will
 need time to get up to speed in this wild territory. It took me over three years.
 Don't wait, start now.
 
+{% quote I truly believe that a professional programmer spends more time creating automated tests than writing production code. %}
+
 **Test Everything**.
 To be honest, almost everything I've learned about software quality, I owe
 to the painful hours of [writing unit tests]({% pst 2015/jul/2015-07-16-fools-dont-write-unit-tests %}),
