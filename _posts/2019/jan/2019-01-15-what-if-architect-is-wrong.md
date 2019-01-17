@@ -23,7 +23,7 @@ You most probably know what I think about the
 [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
 role on a software project---it's that of a _dictator_ who makes all technical decisions
 and who bears the entire responsibility for the final result. I [wrote]({% pst 2014/oct/2014-10-12-who-is-software-architect %})
-about it and even gave a task [_Who is a Software Architect?_](https://www.youtube.com/watch?v=R1lA7pN60xg)
+about it and even gave a talk [_Who is a Software Architect?_](https://www.youtube.com/watch?v=R1lA7pN60xg)
 at BuildStuff in 2016. However, the obvious question you may ask is:
 What happens if the architect is wrong? Does it mean the entire project
 is at risk of failure? And isn't it better to make the whole team responsible
