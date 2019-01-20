@@ -140,7 +140,7 @@ void save(Database db) {
 {% endhighlight %}
 
 There are many other options. But the main point is that the data
-**never** escapes the object `book`. Once the object is instantiated, the
+_never_ escapes the object `book`. Once the object is instantiated, the
 data is not visible or accessible by anyone else. We may only
 ask our object to save itself or to
 [print]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
