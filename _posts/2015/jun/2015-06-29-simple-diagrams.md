@@ -132,3 +132,6 @@ As I mentioned above, the goal of all this is to
 and help me, a programmer, understand you, an architect. Remember,
 if I can't understand you, it's your fault. You're a bad architect
 if you can't deliver your ideas in a plain, simple form.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Sometimes the documentation and diagrams I create are too complex and difficult to understand because...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1086873609157705729?ref_src=twsrc%5Etfw">January 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
