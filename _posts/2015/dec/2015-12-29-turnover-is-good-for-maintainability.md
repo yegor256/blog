@@ -36,7 +36,7 @@ where John Sullivan explains why low turnover could be a troubling
 symptom. It's a really good read, but rather generic. It is not specifically about software
 teams. My experience is mostly focused on programmers and their
 turnover. I've learned that low turnover negatively affects code maintainability
-and encourages **hero-driven development** and **strong code ownership**
+and encourages _hero-driven development_ and _strong code ownership_
 (both of which are bad practices).
 
 {% quote If you consider programmers to be a valuable long-term asset, you're wrong %}
@@ -51,21 +51,21 @@ walk away every year, your turnover is 25 percent.
 {% youtube xbovkm0tTn0 %}
 
 I can't pinpoint what number you should aim for, but I strongly believe
-that if you consider **programmers** to be a **valuable long-term asset**,
+that if you consider _programmers_ to be a _valuable long-term asset_,
 and try to retain them at all cost, you're doing it wrong.
 
 My point is that a healthy software team must
-**replace** programmers **regularly**. I would say having one
+_replace_ programmers _regularly_. I would say having one
 person on board for longer than a year is asking for trouble.
 
 By replacing, I don't necessarily mean
 [firing]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}).
 Not at all. I mean moving them
-**away** from the code base. Obviously, if you have a single code
+_away_ from the code base. Obviously, if you have a single code
 base, replacing will mean firing.
 
 When programmers stay together for a long time, working on the
-same code base, they inevitably become subject matter **experts**. First of
+same code base, they inevitably become subject matter _experts_. First of
 all, this leads to strong code ownership. Naturally, each of them
 becomes a specialist in his or her own part of the code, mostly because
 it's easier to work with something you're familiar with instead of jumping
@@ -87,20 +87,20 @@ by Fredrik Rubensson is right about this problem.
 {% youtube pt9uHp35fwM %}
 
 Thus, to achieve higher maintainability of the source code and
-robustness of the product, we must **rotate** programmers, preventing
+robustness of the product, we must _rotate_ programmers, preventing
 them from becoming subject matter experts.
 
 I realize this idea sounds counter-intuitive, but think about it.
 By keeping people together, working on the same problem for a long time,
 we put a lot of knowledge into their heads, not our source code.
-These people become the **asset**. They become smarter, they know the
+These people become the _asset_. They become smarter, they know the
 solution very well, and they solve all issues rather quickly.
 But the code base degrades.
 
 When the time comes to change someone (for any reason), the loss will be
 damaging. We may lose significant knowledge, and the code base left
 behind will be unmaintainable. In most cases, we will have to re-write it.
-That's why in most software teams, management is **afraid** of programmers.
+That's why in most software teams, management is _afraid_ of programmers.
 They are scared to lose key software developers, because the
 consequences may be fatal.
 
@@ -112,5 +112,5 @@ In the end, programmers control management, not the other way around.
 [firing]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
 or rotating programmers, but few teams, especially co-located ones,
 can afford it. If your team can't, just try to keep your turnover high
-enough to prevent the appearance of **heroes** (a.k.a. subject matter experts).
+enough to prevent the appearance of _heroes_ (a.k.a. subject matter experts).
 
