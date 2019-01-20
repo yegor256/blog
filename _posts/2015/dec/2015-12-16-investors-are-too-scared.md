@@ -25,27 +25,27 @@ an interview, we have a one-hour conversation, you present me your
 startup idea, and we either give you cash right away or explain why we don't
 feel like it. We don't do any due diligence or background checks. The decision
 is made right there. It's something similar to angel investment, but the
-amount is smaller---less than **$20K**, and decisions are faster.
+amount is smaller---less than _$20K_, and decisions are faster.
 
 <!--more-->
 
 {% jb_picture_body %}
 
 There are basically three problems we're trying to solve with this
-new idea: 1) Investors are **cowards**, 2) investors are **cowards**, and
-3) investors are **cowards**. Here is why.
+new idea: 1) Investors are _cowards_, 2) investors are _cowards_, and
+3) investors are _cowards_. Here is why.
 
 ## They Are Afraid of Strangers
 
-It's no secret that Silicon Valley is very "**corrupted**" territory,
+It's no secret that Silicon Valley is very "_corrupted_" territory,
 where in order to get access to money people, you must know some other
-money people or someone who knows someone, etc. You must be **well-connected**
+money people or someone who knows someone, etc. You must be _well-connected_
 in order to be successful. You simply can't raise money just by having an
 awesome idea or even a great implementation. You need connections.
 
 I think that's disgusting.
 
-I am, in general, a big fan of **meritocracy**, where those who are smarter
+I am, in general, a big fan of _meritocracy_, where those who are smarter
 or stronger win the most. This is the principle we,
 at [Zerocracy](https://www.zerocracy.com), apply to software developers who come to us.
 I explained it last year in this rather popular and provocative post:
@@ -63,16 +63,16 @@ I strongly believe this is how it should be.
 Unfortunately, this is not how it is in Silicon Valley when a young
 startup is looking for $100K to $150K of seed money. Angel investors are difficult
 to reach. They are afraid of you, if you come out of nowhere. They only want
-to talk to someone they can **complain** about to their friends. This
+to talk to someone they can _complain_ about to their friends. This
 basically encourages startup founders to spend their time on friend-making
 activities instead of business-making ones. Very often, good teams simply
-**miss** their chance.
+_miss_ their chance.
 
 ## They Are Afraid of Telling the Truth
 
 Have you ever talked to a venture capital firm? To angel investors? To
 any investors, basically? If you have, you'd know they all
-are very **polite**, nodding their heads and smiling while listening
+are very _polite_, nodding their heads and smiling while listening
 to your
 [pitch]({% pst 2016/mar/2016-03-28-unspoken-secrets-of-elevator-pitch %}).
 They usually are "very excited" to meet you and
@@ -82,7 +82,7 @@ In the end, they don't give you the money.
 
 Why? Who knows. They won't tell you. They are cowards, and they are afraid
 of telling you that your idea sucks and your business plan is totally wrong.
-They are afraid of being **honest**.
+They are afraid of being _honest_.
 
 {% quote They are afraid of telling you that your idea sucks %}
 
@@ -91,7 +91,7 @@ There is an almost identical situation with recruitment. You send your
 to Facebook, they interview you, and you spend a few hours with them, answering
 their questions. In the end, they email you, saying "We decided not to proceed
 any further; good luck in your job search." They are afraid of telling you
-the **truth**.
+the _truth_.
 
 And it's disgusting.
 
@@ -108,10 +108,10 @@ Especially with regard to investments.
 
 It's a very infamous problem, mentioned everywhere there's a list
 of "top 10 reasons for startup failures." Investors simply turn you
-into an **employee**. Before you get their money, you're on your own. You make
+into an _employee_. Before you get their money, you're on your own. You make
 your own decisions, you manage your business, you're in charge.
 
-Then, you get the money. It doesn't mean you're **rich**. Not at all. It means
+Then, you get the money. It doesn't mean you're _rich_. Not at all. It means
 that, from now on, you're their employee. They decide what your salary is.
 They decide whether you can rent this office or not. They decide what
 car you can afford.
@@ -119,11 +119,11 @@ car you can afford.
 Keep in mind that your salary is lower than your friends are getting,
 working somewhere on Facebook. Your salary is low, and you can't change it.
 All your expenses have to be approved. You're simply under the full control
-of your **board**.
+of your _board_.
 
 {% quote They are trying to win in poker by always making small bets %}
 
-Why is that? Because they are afraid of you being **free**. They are afraid
+Why is that? Because they are afraid of you being _free_. They are afraid
 of losing their money. That's why they are doing everything they can
 to keep a close eye on you.
 
@@ -140,16 +140,16 @@ to get a new product.
 [SeedRamp](http://www.seedramp.com) is going to solve all of these three problems.
 
 First of all, we completely remove the necessity to have any connections
-in order to reach us. You need money? Just **schedule** an appointment online.
+in order to reach us. You need money? Just _schedule_ an appointment online.
 We don't care who you are, where you're coming from, or who you know. We
 give you one hour of our time, and if we reject your idea, you can apply again in
 a month. Thus, any young startup without any friends or connections is
-**welcome**. Just bring your strategy, your existing results, and your passion, and
+_welcome_. Just bring your strategy, your existing results, and your passion, and
 we'll talk.
 
 Second, we don't say, "We will call you back." We give you our reasons right
 away, and we always tell the truth. Moreover, we record our interview and
-publish it on **YouTube**. Yes, that's not a joke; we will publish all interviews
+publish it on _YouTube_. Yes, that's not a joke; we will publish all interviews
 online, and you can see how we talk about other startups. We are not afraid of
 telling the truth; it's part of our marketing strategy.
 
@@ -158,7 +158,7 @@ give you a check, and you can fly to Vegas the next day and spend all of that
 money there. We don't care. When our decision is made, we don't tell you
 what to do with the money. If we gave you the money, we believed in you
 and your judgment. If you think that the best use of this money would
-be a new **Kawasaki**, do it.
+be a new _Kawasaki_, do it.
 
 ## Instant Micro Investments
 
