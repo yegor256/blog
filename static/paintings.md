@@ -56,6 +56,22 @@ shairart.com - form doesn't work
 
 In order of creation:
 
+{% picture /images/paintings/2018/december-2018.jpg 350 %}
+
+_XII.2018_<br/>
+December 2018;
+50 x 50 cm;
+Acrylic on canvas;
+Moscow, Russia.
+
+{% picture /images/paintings/2018/november-2018.jpg 350 %}
+
+_XI.2018_<br/>
+November 2018;
+50 x 50 cm;
+Acrylic on canvas;
+Moscow, Russia.
+
 {% picture /images/paintings/2018/october-2018.jpg 350 %}
 
 _X.2018_<br/>
