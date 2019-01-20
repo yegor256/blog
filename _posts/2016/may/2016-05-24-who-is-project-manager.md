@@ -19,7 +19,7 @@ jb_picture:
   caption: Schindler's List (1993) by Steven Spielberg
 ---
 
-A project manager is very often **confused** with a leader. However, they are two
+A project manager is very often _confused_ with a leader. However, they are two
 very different things. A project manager is the one who predicts the future,
 while a leader is the one who builds it. And, in my opinion, a perfect
 project manager is much more valuable for a project than a leader. If a
@@ -29,7 +29,7 @@ leader is valuable at all...
 
 {% jb_picture_body %}
 
-There are **three things** I want to define: project, project
+There are _three things_ I want to define: project, project
 management, and project manager. Once they are clear, my previous statement
 will become obvious.
 
@@ -50,7 +50,7 @@ When you woke up, the world was in <i>W<sub>1</sub></i> state.
 There were some coffee beans in the bag, some water in the tap and
 some electricity in the power station. And there were you standing in front
 of the coffee machine. These were the _resources_ (including yourself).
-There were also **risks**. The electricity black out could have happened, right?
+There were also _risks_. The electricity black out could have happened, right?
 The machine could have broken, right?
 In theory, there was an unlimited amount of risks, including a zombie riot.
 However, the majority of them had very low _probabilities_, that's why you
@@ -59,7 +59,7 @@ managed to make that cup of coffee.
 When the coffee was ready, the world appeared to be in <i>W<sub>2</sub></i> state.
 There were no coffee beans in the bag any more, the water was
 used, and so was the electricity. However, a cup of coffee was created. We may
-call that project a **success**, but that's not really important and is not correct. What's important
+call that project a _success_, but that's not really important and is not correct. What's important
 is that it's _finished_. We successfully transformed the world from state
 <i>W<sub>1</sub></i> to state <i>W<sub>2</sub></i>. You may be surprised to
 hear that the project was not a success. Indeed, it was not. It was a success
@@ -75,7 +75,7 @@ _dead_ or _alive_, that's it. Success is a subjective category and can only
 be measured per stakeholder. And even a small project has many stakeholders.
 Think about that electricity company who sold you a few kW/h and made some
 profit out of it? The project was definitely a success for them. What about
-**mother nature**? Your project was definitely a failure for it, since you
+_mother nature_? Your project was definitely a failure for it, since you
 produced a few kilograms of CO<sub>2</sub> while making that damn coffee. As you
 see, success is very subjective.
 
@@ -91,7 +91,7 @@ realize that.
 of a project. Planning is one of those tools. Guessing is another one. Expert
 judgment is yet another one, which you were using while making that coffee.
 You were an expert and knew how to use the machine, the electricity, and the water
-tap. You didn't need any other tools except your **expert judgment**. And it
+tap. You didn't need any other tools except your _expert judgment_. And it
 worked. In bigger projects, we would need more powerful instruments and methods.
 For example, we could use some scheduling software to plan when to put the beans
 into the machine, when to put that cup under the dipping point and when to
@@ -117,7 +117,7 @@ And I have to say, in that coffee making project you were a lousy PM. Did you
 know what was the probability of the project being finished without a cup of coffee
 made? A good PM would say that "after an analysis of 230 risks I predict
 the probability of that coffee being tasteful as 87.4%." Obviously, you didn't
-have that **information**. Next, did you know what would be the total monetary value of
+have that _information_. Next, did you know what would be the total monetary value of
 the project after its completion? Did you calculate all incurred costs, including
 the price of environmental damage your coffee machine made? A good PM would
 say that "the total cost of the project is expected to be $1.09." Were you
@@ -127,7 +127,7 @@ you were rather good at.
 There is only one reason why we want to put a project manager on top of
 the project. I'm sure you will be surprised to hear it: the only purpose of
 a PM in a project is to help its key stakeholders (also known as sponsors) to
-make a **decision**: to _kill_ the project right now or to let it stay
+make a _decision_: to _kill_ the project right now or to let it stay
 _alive_ for a bit more. That's it.
 
 {% quote Project sponsors need to know whether the project is worth going forward. %}
@@ -138,7 +138,7 @@ But imagine another situation. The coffee machine suddenly breaks, the water
 stops, the electricity is blacked out and some zombies are knocking at your door.
 And you still want that cup of coffee. Well, you're not entirely sure what's
 more important now, the coffee or simply finding a way to survive. You will need
-a more or less accurate **prediction** of how much that coffee will cost you and
+a more or less accurate _prediction_ of how much that coffee will cost you and
 when will it be ready. If it's just a few minutes and everything will be
 fine again, you will keep waiting for it. However, if the prediction is
 five hours and a risk of failure rate is 93%, you had better terminate this
@@ -151,7 +151,7 @@ they hire project managers for. This is the only reason of that millions
 of PMs existence---to _predict_ the future so that we were able to
 kill our projects before they kill us (read "eat all our resources").
 
-You may ask---what about the **coordinating** part? What about
+You may ask---what about the _coordinating_ part? What about
 [morning stand-ups]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})?
 What about walking around the office and motivating all the
 [office slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
@@ -185,13 +185,13 @@ what the quality will be, and what the accuracy of that prediction is.
 A good PM doesn't personally give orders to the team and
 doesn't meet people to tell them what to do. Instead, he makes sure
 that [all communication]({% pst 2016/aug/2016-08-23-communication-maturity %}) is happening through
-a **project management information system** (PMIS). Moreover, in a perfectly
+a _project management information system_ (PMIS). Moreover, in a perfectly
 organized project, a PM won't even need to give any orders to the team. Work
 orders will be created, approved, assigned and verified by the team itself.
 The PM will make sure that the workflow is seamless and disciplined. But he
 won't be personally responsible for telling people what to do.
 
-A perfect PM won't even be visible to the team. Everything will be **obvious**
+A perfect PM won't even be visible to the team. Everything will be _obvious_
 and clear: plans will be available, work orders explicitly defined,
 risks identified and documented, concerns properly reported, stakeholders
 informed in time, etc. This may sound like utopia, but that's the
@@ -206,7 +206,7 @@ a lot of them. As far as I understand, being a leader means having enough
 inner power (also known as "[charisma](https://en.wikipedia.org/wiki/Charisma)")
 to make people do what you need. But that's
 totally against what we just discussed. A project manager doesn't want people
-do what's needed because of his **charisma**. Instead, he wants people to be
+do what's needed because of his _charisma_. Instead, he wants people to be
 leaders of their own tasks. They have to move forward driven by their own
 motivation and [selfish interests]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}),
 according to the plans and
