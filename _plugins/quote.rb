@@ -16,6 +16,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+require 'kramdown'
+
 module Yegor
   class QuoteBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
@@ -24,7 +26,7 @@ module Yegor
     end
 
     def render(context)
-      "<aside class='quote'>#{@text}</aside>\n\n"
+      "<aside class='quote'>#{Kramdown::Document.new(@text).to_html.gsub(/<\/?p>/, '')}</aside>\n\n"
     end
   end
 end

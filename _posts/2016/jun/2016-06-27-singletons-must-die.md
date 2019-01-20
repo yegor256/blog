@@ -88,7 +88,7 @@ thing, what do we replace it with?
 A [dependency injection]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 is the answer.
 
-{% quote Forget about singletons; never use them; turn them into dependencies %}
+{% quote Forget about singletons; never use them; turn them into dependencies. %}
 
 We need to make this database connection pool dependency of the controller
 and ensure it's provided through a constructor. However, in this particular
