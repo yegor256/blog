@@ -47,16 +47,16 @@ you don't have money, then? How come you can't find someone to pay
 for the work of a good programmer?
 
 I will create a product for you, but you will most certainly
-fail. You **already** failed. You failed to find initial
+fail. You _already_ failed. You failed to find initial
 investment to cover the startup expenses of the business.
 Why do you think you will succeed after the product is ready?
 
-The point is that a good programmer will **never**
+The point is that a good programmer will _never_
 work for equity. Not because a good programmer is greedy,
 or doesn't want to risk, or doesn't believe
 in new ideas. Not at all.
 
-A good programmer wants to work with a **good** entrepreneur. And
+A good programmer wants to work with a _good_ entrepreneur. And
 a good entrepreneur knows how to find money. That's the definition
 of a decent entrepreneur.
 

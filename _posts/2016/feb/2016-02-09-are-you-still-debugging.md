@@ -90,7 +90,7 @@ Then we fix the problem and make sure the test passes. That's how we save
 our investments in problem solving. We won't fix it again, because it won't
 happen again. Our _test_ will prevent it from happening.
 
-{% quote If you perceive debugging to be faster and easier, think about the quality of your code %}
+{% quote If you perceive debugging to be faster and easier, think about the quality of your code. %}
 
 However, all this will work only if it's easy to create a unit test. If it's
 difficult, I'll be too lazy to do it. I will just debug and fix the problem.

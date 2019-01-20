@@ -26,7 +26,7 @@ I don't. I used to, but not anymore.
 I just let my methods crash with a null pointer and other exceptions
 when parameters are not valid.
 This may sound illogical, but only in the beginning.
-I'm suggesting you use **validating decorators** instead.
+I'm suggesting you use _validating decorators_ instead.
 
 <!--more-->
 
@@ -117,7 +117,7 @@ report.export(file);
 
 What do we achieve with this approach?
 First and foremost: smaller objects.
-And smaller objects always mean higher **maintainability**.
+And smaller objects always mean higher _maintainability_.
 Our `DefaultReport` class will always remain small, no matter
 how many validations we may invent in the future. The
 more things we need to validate, the more validating decorators
@@ -125,7 +125,7 @@ we will create. All of them will be small and cohesive. And we'll
 be able to put them together in different variations.
 
 Besides that, this approach makes our code much more
-**reusable**, as classes perform very few operations
+_reusable_, as classes perform very few operations
 and don't defend themselves by default. While being defensive
 is an important feature, we'll use validating decorators. But
 this will not always be the case. Sometimes validation is just
