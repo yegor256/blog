@@ -133,7 +133,7 @@ And one more thing before you go. In most OOP languages, exceptions
 are unchecked, which means that catching them is not a mandatory
 operation, [unfortunately]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %}).
 Nevertheless, I recommend you catch, add context, and
-re-throw them all, **always**. This may seem like pure noise, but it's not!
+re-throw them all, _always_. This may seem like pure noise, but it's not!
 Just make your methods smaller and ensure all exceptions
 sent out of them have enough information about their origins.
 You will do yourself and everybody else a big favor.
