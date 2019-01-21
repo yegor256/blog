@@ -13,6 +13,8 @@ keywords:
   - agile manifesto
   - why agile doesn't work
   - agile is evil
+translated:
+  - Russian: https://habr.com/ru/post/436582/
 image: /images/2016/07/hail-caesar.jpg
 jb_picture:
   caption: Hail, Caesar! (2016) by Coen Brothers
