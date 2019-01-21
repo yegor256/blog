@@ -19,7 +19,7 @@ jb_picture:
   caption:
 ---
 
-You most definitely have heard about 10x programmer. The gist of this
+You most definitely will have heard about 10x programmers. The gist of this
 folklore is that some of us coders are very effective (10 or even
 [100 times](http://antirez.com/news/112) more
 than others), while the rest are just "normal." It is definitely
@@ -34,16 +34,16 @@ than others), while the rest are just "normal." It is definitely
 [_Frequently Forgotten Fundamental Facts About Software Engineering_](https://ieeexplore.ieee.org/document/922739/) (2001)
 essay said that
 "good programmers are up to 30 times better than
-mediocre programmers, according to `individual differences' research."
-I don't know where did he get the number 30 from, and I seriously
+mediocre programmers, according to 'individual differences' research."
+I don't know where he gets the number 30 from, and I seriously
 doubt this number makes any sense, but the bottom line is valid:
 there is a [huge distance]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
-between people who write code and those who do it _right_.
+between people who just write code and those who do it _right_.
 
 [Steve McConnell](https://en.wikipedia.org/wiki/Steve_McConnell)
 in his [blog post](https://www.construx.com/blog/productivity-variations-among-software-developers-and-teams-the-origin-of-10x/)
-analyzed a few studies of this subject and demonstrated that actual
-ratio varies from 2.6 up to 8. At the end of the blog post he asks
+analyzed a few studies of this subject and demonstrated that the actual
+ratio varies from 2.6 up to 8. At the end of the post he asks
 "Have you seen 10:1 differences in capabilities between different individuals?
 Does 10:1 even cover the range?" Thus, the distance exists, it is pretty big,
 but, obviously, we can't claim an exact factor.
@@ -56,7 +56,7 @@ and everybody else. Let's take a look at the salary report from PayScale
 
 According to this report, the worst programmer gets $36K, while the best
 one gets $100K, which confirms the 3:1 ratio. It's far from 10:1, but if
-we look closer, the salary of $100K is far from being the best on the market.
+we look more closely, the salary of $100K is far from being the best on the market.
 For example, Indeed [says](https://spectrum.ieee.org/view-from-the-valley/at-work/tech-careers/what-silicon-valley-tech-jobs-pay-the-highest-salaries)
 that in Silicon Valley senior software engineers make $160K, which
 gives us the ratio of 4.4x. If we look even closer, we will see that
@@ -70,17 +70,17 @@ more than their colleagues.
 Wait! Are they really?
 
 It seems that the ratio we just observed is motivated by location instead
-of skills. The $36K programming are not working together with $250K guys
+of skills. The $36K programmers are not working together with $250K guys
 in the same office, committing to the same code base. This is not happening.
-I can't really prove it with statistics, but let's hear out some companies.
+I can't really prove it with statistics, but let's hear from some companies.
 [Basecamp](https://m.signalvnoise.com/how-we-pay-people-at-basecamp-f1d04f4f194b):
 "Everyone in the same role at the same level is paid the same."
 [Buffer](https://open.buffer.com/introducing-open-salaries-at-buffer-including-our-transparent-formula-and-all-individual-salaries/):
 "Master: 1.3X, Senior: +5%."
 
 Simply put, companies attempt to minimize the spread, in order to avoid
-jealosy between programmers.
-Buffer made a [big spalsh](http://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html)
+jealousy between programmers.
+Buffer made a [big splash](http://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html)
 in the news, when they opened their salaries calculating formula.
 This is not typical for the industry.
 
@@ -91,12 +91,12 @@ According to [some studies](https://www.theatlantic.com/business/archive/2014/07
 prohibited or strongly discouraged from discussing pay with their coworkers."
 
 Putting all this together we can effectively assume that no matter how
-large is the difference in skills between regular programmers and 10x programmers
+large the difference in skills between regular programmers and 10x programmers
 in the same project, they will get almost the same or very similar compensation.
-In order to get more, a programmer has to change the location, the company,
+In order to get more, a programmer has to change location, company,
 or both.
 
-It seems to be very wrong!
+It seems very wrong!
 
 And it's not resolvable, until we change the
 [payment model]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
@@ -119,9 +119,8 @@ This is how I see the future and this is what
 [Zerocracy](https://www.zerocracy.com) is leading us to.
 
 In order to achieve that future we need to pay per result. This is the key
-success factor. Until that, there is no hope that those
+success factor. Until then, there is no hope that those
 [office slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) who
 claim to be 10x programmers will ever make what they truly deserve.
-
 
 
