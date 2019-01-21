@@ -181,7 +181,7 @@ I don’t. I used to, but not anymore.
 I just let my methods crash with a null pointer and other exceptions
 when parameters are not valid.
 This may sound illogical, but only in the beginning.
-I’m suggesting you use &lt;strong&gt;validating decorators&lt;/strong&gt; instead.&lt;/p&gt;
+I’m suggesting you use &lt;em&gt;validating decorators&lt;/em&gt; instead.&lt;/p&gt;
 
 </description>
         

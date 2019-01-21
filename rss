@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-15T10:12:09+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What if the Architect is Wrong?</title><link href="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html" rel="alternate" type="text/html" title="What if the Architect is Wrong?" /><published>2019-01-15T00:00:00+00:00</published><updated>2019-01-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong</id><content type="html" xml:base="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html">&lt;p&gt;You most probably know what I think about the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-21T15:55:05+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What if the Architect is Wrong?</title><link href="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html" rel="alternate" type="text/html" title="What if the Architect is Wrong?" /><published>2019-01-15T00:00:00+00:00</published><updated>2019-01-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong</id><content type="html" xml:base="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html">&lt;p&gt;You most probably know what I think about the
 &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;architect&lt;/a&gt;
 role on a software project—it’s that of a &lt;em&gt;dictator&lt;/em&gt; who makes all technical decisions
 and who bears the entire responsibility for the final result. I &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;wrote&lt;/a&gt;
-about it and even gave a task &lt;a href=&quot;https://www.youtube.com/watch?v=R1lA7pN60xg&quot;&gt;&lt;em&gt;Who is a Software Architect?&lt;/em&gt;&lt;/a&gt;
+about it and even gave a talk &lt;a href=&quot;https://www.youtube.com/watch?v=R1lA7pN60xg&quot;&gt;&lt;em&gt;Who is a Software Architect?&lt;/em&gt;&lt;/a&gt;
 at BuildStuff in 2016. However, the obvious question you may ask is:
 What happens if the architect is wrong? Does it mean the entire project
 is at risk of failure? And isn’t it better to make the whole team responsible
@@ -26,6 +26,14 @@ software architects like that are out there? &lt;del&gt;All&lt;/del&gt; Many.&lt
 
 &lt;p&gt;What is the solution?&lt;/p&gt;
 
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=PYq05UAwzNk&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/PYq05UAwzNk/mqdefault.jpg&quot; alt=&quot;YouTube video #PYq05UAwzNk&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M2: We must fully trust the architect, but regularly review the decisions he or she is making;
+        28 December 2018.&lt;/div&gt;&lt;/aside&gt;
+
 &lt;p&gt;How about we get rid of the dictator in the first place and let the team
 decide what the right architecture is? How about we replace dictatorship
 with &lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;democracy&lt;/a&gt;
@@ -39,7 +47,7 @@ and when it breaks—they will all be guilty. Right?&lt;/p&gt;
 I said in my book &lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt;. Group responsibility
 is the most terrible mistake a team can ever make. So, no! No voting and no democracy.&lt;/p&gt;
 
-&lt;p&gt;What than?&lt;/p&gt;
+&lt;p&gt;What then?&lt;/p&gt;
 
 &lt;p&gt;Imagine a real project, where an architect makes a decision to use MongoDB (a NoSQL database) for persisting
 user payments. It’s a questionable decision, since, traditionally, relational databases
@@ -47,6 +55,9 @@ are considered a better option for financial data. However, we know that the arc
 is a dictator and we are not supposed to argue. We can’t tell the architect
 that the decision is wrong. Moreover, we should not ask the architect to
 &lt;a href=&quot;/2016/07/21/convince-me.html&quot;&gt;convince&lt;/a&gt; us. The decision is made. It’s done.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;The only real boss of the architect is requirements.
+&lt;/aside&gt;
 
 &lt;p&gt;What can we do?&lt;/p&gt;
 
@@ -93,6 +104,9 @@ architect. Either the analysis will have
 to be improved, or the decision will have to be changed, if the facts start
 stacking up against it.&lt;/p&gt;
 
+&lt;aside class=&quot;quote&quot;&gt;The lower the risk tolerance in the project, the more pairs of eyes we need to look at the decisions the architect is making.
+&lt;/aside&gt;
+
 &lt;p&gt;The lower the risk tolerance in the project, the more pairs of eyes we need
 to look at the decisions the architect is making. If the quality is very
 important or the professional level of the architect is questionable, we need
@@ -111,7 +125,7 @@ capable of solving all problems. On the other hand, we must not replace the
 architect with a democratic vote. Both ideas are wrong. The right approach is
 to control the quality of decisions the architect makes via regular reviews.&lt;/p&gt;
 
-&lt;p&gt;Do you have such reviews in your project? If not, why not?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">You most probably know what I think about the architect role on a software project—it’s that of a dictator who makes all technical decisions and who bears the entire responsibility for the final result. I wrote about it and even gave a task Who is a Software Architect? at BuildStuff in 2016. However, the obvious question you may ask is: What happens if the architect is wrong? Does it mean the entire project is at risk of failure? And isn’t it better to make the whole team responsible for the result, instead of having one single point of failure?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/the-color-of-money.jpg" /></entry><entry><title type="html">Hazardous Enthusiasm</title><link href="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html" rel="alternate" type="text/html" title="Hazardous Enthusiasm" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/01/hazardous-enthusiasm</id><content type="html" xml:base="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html">&lt;p&gt;On a daily basis I deal with many programmers who contribute to my
+&lt;p&gt;Do you have such reviews in your project? If not, why not?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">You most probably know what I think about the architect role on a software project—it’s that of a dictator who makes all technical decisions and who bears the entire responsibility for the final result. I wrote about it and even gave a talk Who is a Software Architect? at BuildStuff in 2016. However, the obvious question you may ask is: What happens if the architect is wrong? Does it mean the entire project is at risk of failure? And isn’t it better to make the whole team responsible for the result, instead of having one single point of failure?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/the-color-of-money.jpg" /></entry><entry><title type="html">Hazardous Enthusiasm</title><link href="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html" rel="alternate" type="text/html" title="Hazardous Enthusiasm" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/01/hazardous-enthusiasm</id><content type="html" xml:base="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html">&lt;p&gt;On a daily basis I deal with many programmers who contribute to my
 &lt;a href=&quot;/2017/05/30/why-contribute-to-open-source.html&quot;&gt;open source&lt;/a&gt;
 projects, either as volunteers or for money via &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;
 (and my software projects are &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;all&lt;/a&gt;
@@ -144,7 +158,7 @@ just great, blah blah blah… OK? Let’s do it? Why not?&lt;/p&gt;
         &lt;img src=&quot;https://i.ytimg.com/vi/gMJNz9AWbQE/mqdefault.jpg&quot; alt=&quot;YouTube video #gMJNz9AWbQE&quot; /&gt;
         &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
         &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;Your enthusiasm may only harm the project if you can't deliver it incrementally;
+        &lt;div&gt;M1: Your enthusiasm may only harm the project if you can't deliver it incrementally;
         27 December 2018.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;I have very little to say and instead ask him to submit a ticket. I try to assure him
@@ -348,7 +362,8 @@ in the eighth row and smile back. Sometimes the clicker doesn’t work and I swi
 slides &lt;a href=&quot;https://www.youtube.com/watch?v=Rip_04Bv3Jk&quot;&gt;with my feet&lt;/a&gt;. Sometimes
 I just fool around.&lt;/p&gt;
 
-&lt;aside class=&quot;quote&quot;&gt;If you know everything, you can't be trusted.&lt;/aside&gt;
+&lt;aside class=&quot;quote&quot;&gt;If you know everything, you can’t be trusted.
+&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Be Humble&lt;/strong&gt;.
 I believe that a really good speaker knows when to say “I don’t know” (not too often though).
@@ -797,6 +812,9 @@ Writing code for yourself and your office buddies, and writing it for a few
 thousand anonymous GitHub hooligans, are two very different stories. You will
 need time to get up to speed in this wild territory. It took me over three years.
 Don’t wait, start now.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;I truly believe that a professional programmer spends more time creating automated tests than writing production code.
+&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Test Everything&lt;/strong&gt;.
 To be honest, almost everything I’ve learned about software quality, I owe
