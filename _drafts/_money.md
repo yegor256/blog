@@ -84,7 +84,7 @@ Buffer made a [big splash](http://www.inc.com/jeff-haden/inside-buffer-company-c
 in the news, when they opened their salary calculating formula.
 This is not typical for the industry.
 
-Even with ratios much smaller than 10x employers tend to keep salaries
+Even with ratios much smaller than 10x, employers tend to keep salaries
 [secret](https://www.forbes.com/sites/davidburkus/2016/02/02/why-do-we-keep-salaries-secret/).
 According to [some studies](https://www.theatlantic.com/business/archive/2014/07/when-the-boss-says-dont-tell-your-coworkers-how-much-you-get-paid/374467/),
 "about half of American employees in all sectors are either explicitly
@@ -92,7 +92,7 @@ prohibited or strongly discouraged from discussing pay with their coworkers."
 
 Putting all this together we can effectively assume that no matter how
 large the difference in skills between regular programmers and 10x programmers
-in the same project, they will get almost the same or very similar compensation.
+in the same project, they will get almost the same, or very similar, compensation.
 In order to get more, a programmer has to change location, company,
 or both.
 
