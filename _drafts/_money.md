@@ -19,11 +19,11 @@ jb_picture:
   caption:
 ---
 
-You most definitely will have heard about 10x programmers. The gist of this
+You most definitely have heard about 10x programmers. The gist of this
 folklore is that some of us coders are very effective (10 or even
-[100 times](http://antirez.com/news/112) more
+[100 times](http://antirez.com/news/112) more so
 than others), while the rest are just "normal." It is definitely
-[not a myth](https://www.ybrikman.com/writing/2013/09/29/the-10x-developer-is-not-myth/).
+[not a myth](https://www.ybrikman.com/writing/2013/09/29/the-10x-developer-is-not-myth/) though.
 
 
 <!--more-->
@@ -48,11 +48,11 @@ ratio varies from 2.6 up to 8. At the end of the post he asks
 Does 10:1 even cover the range?" Thus, the distance exists, it is pretty big,
 but, obviously, we can't claim an exact factor.
 
-But this is not my point.
+But that is not my point.
 
 What I'm interested in is the pay gap between those 10x programmers
 and everybody else. Let's take a look at the salary report from PayScale
-(I made this screenshot [from here](https://www.payscale.com/research/US/Job=Computer_Programmer/Salary)):
+(I took this screenshot [from here](https://www.payscale.com/research/US/Job=Computer_Programmer/Salary)):
 
 According to this report, the worst programmer gets $36K, while the best
 one gets $100K, which confirms the 3:1 ratio. It's far from 10:1, but if
@@ -71,17 +71,17 @@ Wait! Are they really?
 
 It seems that the ratio we just observed is motivated by location instead
 of skills. The $36K programmers are not working together with $250K guys
-in the same office, committing to the same code base. This is not happening.
+in the same office, committing to the same code base. This is just not happening.
 I can't really prove it with statistics, but let's hear from some companies.
 [Basecamp](https://m.signalvnoise.com/how-we-pay-people-at-basecamp-f1d04f4f194b):
 "Everyone in the same role at the same level is paid the same."
 [Buffer](https://open.buffer.com/introducing-open-salaries-at-buffer-including-our-transparent-formula-and-all-individual-salaries/):
 "Master: 1.3X, Senior: +5%."
 
-Simply put, companies attempt to minimize the spread, in order to avoid
+Simply put, companies attempt to minimize the spread in order to avoid
 jealousy between programmers.
 Buffer made a [big splash](http://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html)
-in the news, when they opened their salaries calculating formula.
+in the news, when they opened their salary calculating formula.
 This is not typical for the industry.
 
 Even with ratios much smaller than 10x employers tend to keep salaries
@@ -106,13 +106,13 @@ For me, as a programmer, it will always be difficult or impossible to understand
 why I'm getting, say, $100 dollars per day, while another Java developer
 is getting $1,000. I will be jealous and no
 [team building]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
-will be able to calm me down.
+exercise will be able to calm me down.
 
 However, when we start paying by result, what seems to be utopian now, will
 become possible: 10x programmers will collect 10x paychecks. A good programmer
 will get $250/hour, taking home $25,000 a month, working part-time. A bad
 programmer will make $20/hour, taking home as much as ... an average plumber,
-a bus driver, or an electric engineer.
+a bus driver, or an electrician.
 
 A good programmer _must_ make $25K+ a month, working remotely and part-time.
 This is how I see the future and this is what
