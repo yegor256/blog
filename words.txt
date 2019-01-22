@@ -1470,6 +1470,7 @@ configuring
 confirm
 confirmation
 confirming
+confirms
 conflict
 conflict-free
 conflict-provoking
@@ -2049,6 +2050,7 @@ dies
 differ
 difference
 differences
+differences'
 different
 differentiate
 differentiates
@@ -2119,6 +2121,7 @@ discomfort
 disconnected
 discount
 discourage
+discouraged
 discourages
 discouraging
 discover
@@ -2376,6 +2379,7 @@ either
 el
 elastic
 electric
+electrician
 electricity
 elegance
 elegant
@@ -2548,6 +2552,7 @@ escapes
 escort
 especially
 esperanto
+essay
 essence
 essential
 essentially
@@ -2698,6 +2703,7 @@ external
 extra
 extracted
 extracting
+extraordinary
 extreme
 extremely
 extrovert
@@ -2927,6 +2933,7 @@ focusing
 fogel
 fold
 folder
+folklore
 follow
 followed
 followers
@@ -4906,6 +4913,7 @@ my
 myers
 myself
 MySQL
+myth
 mythical
 myths
 n-word
@@ -5452,6 +5460,7 @@ payout
 paypal
 payroll
 pays
+payscale
 PBS
 PDD
 PDF
@@ -6081,6 +6090,7 @@ rather
 rating
 ratio
 rationale
+ratios
 raymond
 rb
 rbara
@@ -6370,6 +6380,7 @@ resilience
 resist
 resists
 resolution
+resolvable
 resolve
 resolved
 resolver
@@ -6648,6 +6659,7 @@ screams
 screen
 screening
 screens
+screenshot
 screw
 screwed
 script
@@ -6677,6 +6689,7 @@ secrets
 section
 sections
 sector
+sectors
 secure
 security
 seduce
@@ -7124,6 +7137,7 @@ spent
 sphere
 spin-wait
 spirit
+splash
 split
 splitting
 spock
@@ -7316,6 +7330,7 @@ stubbornness
 stubs
 stuck
 studied
+studies
 studio
 study
 stuff
@@ -8061,6 +8076,7 @@ utilized
 utilizes
 utils
 utopia
+utopian
 UX
 vacation
 vacations
@@ -8092,6 +8108,7 @@ variable
 variables
 variant
 variations
+varies
 variety
 various
 vast

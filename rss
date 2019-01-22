@@ -1,4 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-21T15:55:05+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">What if the Architect is Wrong?</title><link href="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html" rel="alternate" type="text/html" title="What if the Architect is Wrong?" /><published>2019-01-15T00:00:00+00:00</published><updated>2019-01-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong</id><content type="html" xml:base="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html">&lt;p&gt;You most probably know what I think about the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-22T18:18:15+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">10x Paychecks for 10x Programmers</title><link href="https://www.yegor256.com/2019/01/22/10x-paychecks.html" rel="alternate" type="text/html" title="10x Paychecks for 10x Programmers" /><published>2019-01-22T00:00:00+00:00</published><updated>2019-01-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/22/10x-paychecks</id><content type="html" xml:base="https://www.yegor256.com/2019/01/22/10x-paychecks.html">&lt;p&gt;You most definitely have heard about 10x programmers. The gist of this
+folklore is that some of us coders are very effective (10 or even
+&lt;a href=&quot;http://antirez.com/news/112&quot;&gt;100 times&lt;/a&gt; more so
+than others), while the rest are just “normal.” It is definitely
+&lt;a href=&quot;https://www.ybrikman.com/writing/2013/09/29/the-10x-developer-is-not-myth/&quot;&gt;not a myth&lt;/a&gt; though.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Fargo (TV Series, Season 3) by Noah Hawley&quot; src=&quot;/images/2019/01/fargo.jpg&quot; longdesc=&quot;#e92b8140&quot; /&gt;&lt;figcaption id=&quot;e92b8140&quot;&gt;Fargo (TV Series, Season 3) by Noah Hawley&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Robert_L._Glass&quot;&gt;Robert Glass&lt;/a&gt; in his
+&lt;a href=&quot;https://ieeexplore.ieee.org/document/922739/&quot;&gt;&lt;em&gt;Frequently Forgotten Fundamental Facts About Software Engineering&lt;/em&gt;&lt;/a&gt; (2001)
+essay said that
+“good programmers are up to 30 times better than
+mediocre programmers, according to ‘individual differences’ research.”
+I don’t know where he gets the number 30 from, and I seriously
+doubt this number makes any sense, but the bottom line is valid:
+there is a &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;huge distance&lt;/a&gt;
+between people who just write code and those who do it &lt;em&gt;right&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Steve_McConnell&quot;&gt;Steve McConnell&lt;/a&gt;
+in his &lt;a href=&quot;https://www.construx.com/blog/productivity-variations-among-software-developers-and-teams-the-origin-of-10x/&quot;&gt;blog post&lt;/a&gt;
+analyzed a few studies of this subject and demonstrated that the actual
+ratio varies from 2.6 up to 8. At the end of the post he asks
+“Have you seen 10:1 differences in capabilities between different individuals?
+Does 10:1 even cover the range?” Thus, the distance exists, it is pretty big,
+but, obviously, we can’t claim an exact factor.&lt;/p&gt;
+
+&lt;p&gt;But that is not my point.&lt;/p&gt;
+
+&lt;p&gt;What I’m interested in is the pay gap between those 10x programmers
+and everybody else. Let’s take a look at the salary report from PayScale
+(I took this screenshot &lt;a href=&quot;https://www.payscale.com/research/US/Job=Computer_Programmer/Salary&quot;&gt;from here&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2019/01/payscale.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;According to this report, the worst programmer gets $36K, while the best
+one gets $100K, which confirms the 3:1 ratio. It’s far from 10:1, but if
+we look more closely, the salary of $100K is far from being the best on the market.
+For example, Indeed &lt;a href=&quot;https://spectrum.ieee.org/view-from-the-valley/at-work/tech-careers/what-silicon-valley-tech-jobs-pay-the-highest-salaries&quot;&gt;says&lt;/a&gt;
+that in Silicon Valley senior software engineers make $160K, which
+gives us the ratio of 4.4x. If we look even closer, we will see that
+&lt;em&gt;some&lt;/em&gt; programmers &lt;a href=&quot;https://www.cnet.com/news/silicon-valley-talent-wars-engineers-come-get-your-250k-salary/&quot;&gt;make&lt;/a&gt;
+$250K or even
+&lt;a href=&quot;https://www.businessinsider.de/a-google-programmer-blew-off-a-500000-salary-at-startup-because-hes-already-making-3-million-every-year-2014-1?r=US&amp;amp;IR=T&quot;&gt;$3M&lt;/a&gt;,
+which gives us the ratio of 83x. It seems that 10x programmers exist
+&lt;em&gt;and&lt;/em&gt; they are paid according to their extraordinary talents—many times
+more than their colleagues.&lt;/p&gt;
+
+&lt;p&gt;Wait! Are they really?&lt;/p&gt;
+
+&lt;p&gt;It seems that the ratio we just observed is motivated by location instead
+of skills. The $36K programmers are not working together with $250K guys
+in the same office, committing to the same code base. This is just not happening.
+I can’t really prove it with statistics, but let’s hear from some companies.
+&lt;a href=&quot;https://m.signalvnoise.com/how-we-pay-people-at-basecamp-f1d04f4f194b&quot;&gt;Basecamp&lt;/a&gt;:
+“Everyone in the same role at the same level is paid the same.”
+&lt;a href=&quot;https://open.buffer.com/introducing-open-salaries-at-buffer-including-our-transparent-formula-and-all-individual-salaries/&quot;&gt;Buffer&lt;/a&gt;:
+“Master: 1.3X, Senior: +5%.”&lt;/p&gt;
+
+&lt;p&gt;Simply put, companies attempt to minimize the spread in order to avoid
+jealousy between programmers.
+Buffer made a &lt;a href=&quot;http://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html&quot;&gt;big splash&lt;/a&gt;
+in the news, when they opened their salary calculating formula.
+This is not typical for the industry.&lt;/p&gt;
+
+&lt;p&gt;Even with ratios much smaller than 10x, employers tend to keep salaries
+&lt;a href=&quot;https://www.forbes.com/sites/davidburkus/2016/02/02/why-do-we-keep-salaries-secret/&quot;&gt;secret&lt;/a&gt;.
+According to &lt;a href=&quot;https://www.theatlantic.com/business/archive/2014/07/when-the-boss-says-dont-tell-your-coworkers-how-much-you-get-paid/374467/&quot;&gt;some studies&lt;/a&gt;,
+“about half of American employees in all sectors are either explicitly
+prohibited or strongly discouraged from discussing pay with their coworkers.”&lt;/p&gt;
+
+&lt;p&gt;Putting all this together we can effectively assume that no matter how
+large the difference in skills between regular programmers and 10x programmers
+in the same project, they will get almost the same, or very similar, compensation.
+In order to get more, a programmer has to change location, company,
+or both.&lt;/p&gt;
+
+&lt;p&gt;It seems very wrong!&lt;/p&gt;
+
+&lt;p&gt;And it’s not resolvable, until we change the
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;payment model&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we continue to pay programmers for their time, the pay inequality will always hurt.
+For me, as a programmer, it will always be difficult or impossible to understand
+why I’m getting, say, $100 dollars per day, while another Java developer
+is getting $1,000. I will be jealous and no
+&lt;a href=&quot;/2015/03/02/team-morale-myths-and-reality.html&quot;&gt;team building&lt;/a&gt;
+exercise will be able to calm me down.&lt;/p&gt;
+
+&lt;p&gt;However, when we start paying by result, what seems to be utopian now, will
+become possible: 10x programmers will collect 10x paychecks. A good programmer
+will get $250/hour, taking home $25,000 a month, working part-time. A bad
+programmer will make $20/hour, taking home as much as … an average plumber,
+a bus driver, or an electrician.&lt;/p&gt;
+
+&lt;p&gt;A good programmer &lt;em&gt;must&lt;/em&gt; make $25K+ a month, working remotely and part-time.
+This is how I see the future and this is what
+&lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; is leading us to.&lt;/p&gt;
+
+&lt;p&gt;In order to achieve that future we need to pay per result. This is the key
+success factor. Until then, there is no hope that those
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slaves&lt;/a&gt; who
+claim to be 10x programmers will ever make what they truly deserve.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="zerocracy" /><category term="management" /><summary type="html">You most definitely have heard about 10x programmers. The gist of this folklore is that some of us coders are very effective (10 or even 100 times more so than others), while the rest are just “normal.” It is definitely not a myth though.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/fargo.jpg" /></entry><entry><title type="html">What if the Architect is Wrong?</title><link href="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html" rel="alternate" type="text/html" title="What if the Architect is Wrong?" /><published>2019-01-15T00:00:00+00:00</published><updated>2019-01-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong</id><content type="html" xml:base="https://www.yegor256.com/2019/01/15/what-if-architect-is-wrong.html">&lt;p&gt;You most probably know what I think about the
 &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;architect&lt;/a&gt;
 role on a software project—it’s that of a &lt;em&gt;dictator&lt;/em&gt; who makes all technical decisions
 and who bears the entire responsibility for the final result. I &lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;wrote&lt;/a&gt;
@@ -1276,98 +1379,4 @@ in the console if they crash (by default, the error log of a background
 thread is not visible).&lt;/p&gt;
 
 &lt;p&gt;Try this gem in your projects, it’s pretty well tested already and I
-use it in all my concurrency tests.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">Are you a Ruby developer? If you are, I’m pretty sure you have a very vague idea of what concurrency and thread safety are. No offense, but this is what I’ve figured out after dealing with Ruby code and speaking with Ruby programmers over the last half a year. I’ve been writing in Ruby pretty actively recently and I do like the language and the ecosystem around it. Zold, the experimental cryptocurrency we are creating, is written almost entirely in Ruby. What does that tell you? I like Ruby. But when it comes to concurrency, there are blank spots. Big time.</summary></entry><entry><title type="html">Mailanes.com Helps Manage Newsletters and Mailing Lists</title><link href="https://www.yegor256.com/2018/10/30/mailanes.html" rel="alternate" type="text/html" title="Mailanes.com Helps Manage Newsletters and Mailing Lists" /><published>2018-10-30T00:00:00+00:00</published><updated>2018-10-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/10/30/mailanes</id><content type="html" xml:base="https://www.yegor256.com/2018/10/30/mailanes.html">&lt;p&gt;There are other products doing something similar, including
-&lt;a href=&quot;http://www.mailchimp.com/&quot;&gt;MailChimp&lt;/a&gt;, &lt;a href=&quot;http://www.aweber.com/&quot;&gt;AWeber&lt;/a&gt;, and
-many others. They are great. Maybe. I don’t really know. I tried some of them,
-some time ago. And I was frustrated. They are expensive, clumsy, and heavy.
-That’s my experience. I wanted something lightweight, where I can upload
-a list of emails, create a simple HTML/text letter, configure my SMTP outbound
-server, and call it a day. I spent a few days and created
-&lt;a href=&quot;http://www.mailanes.com&quot;&gt;Mailanes&lt;/a&gt;. It’s free (for all of you), it’s simple,
-and it’s &lt;a href=&quot;https://github.com/yegor256/mailanes/&quot;&gt;open source&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;First, you login via GitHub (what else, right?) Then you create a List
-of Recipients. You add them there one by one or you upload a CSV. Next,
-you create a Lane of Letters. A lane is something your recipients should
-be moved through, step by step, email by email. Then you create a Campaign
-and connect your list with the lane. That’s it.&lt;/p&gt;
-
-&lt;p&gt;Let me show by example.
-Let’s say you go to &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;zerocracy.com&lt;/a&gt;, enter your email
-and click “Help me start!” The form on the site is configured to post that
-email directly to the Mailanes web app (see the &lt;a href=&quot;https://www.zerocracy.com/&quot;&gt;sources&lt;/a&gt;):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;POST&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://www.mailanes.com/subscribe?list=4&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;source&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;www.zerocracy.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;redirect&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;https://www.zerocracy.com/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Your email...&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;24&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Help me start!&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;form&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code&gt;action&lt;/code&gt; of the form points to the &lt;code&gt;/subscribe?list=4&lt;/code&gt; URL at the Mailanes
-server. Once submitted, the recipient will be added to list number 4 and the browser
-will be redirected to the URL in the &lt;code&gt;redirect&lt;/code&gt; form parameter.&lt;/p&gt;
-
-&lt;p&gt;Right after the recipient shows up in the list, the system starts moving
-him or her through the letters defined in the lane. Try it yourself and you
-will receive the first letter almost immediately (in 10 minutes, to be precise).&lt;/p&gt;
-
-&lt;p&gt;To define a letter I decided to use &lt;a href=&quot;https://github.com/Shopify/liquid&quot;&gt;Liquid&lt;/a&gt;,
-as a pretty simple markup language. For the configuration of lists, lanes, letters
-and campaigns I’m using &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML&lt;/a&gt;, since it’s rich enough but
-way easier and shorter than JSON and, of course, XML. Here is what the
-configuration of the first letter you will receive looks like:&lt;/p&gt;
-
-&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2018/09/mailanes-1.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code&gt;relax&lt;/code&gt; parameter of the letter specifies how much time the system has
-to wait after this letter before it sends you the next one. &lt;code&gt;&quot;4:0:0&quot;&lt;/code&gt; stands
-for four days, zero hours, and zero minutes.&lt;/p&gt;
-
-&lt;p&gt;At the bottom of the letter I added this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&lt;/span&gt;Thanks,&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-Yegor Bugayenko&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;br&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
-Click [here]({{ unsubscribe }}) if you don&amp;#39;t want to hear from me again.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code&gt;{{ unsubscribe }}&lt;/code&gt; will be replaced by the link to a page where
-the recipient of the email will be instantly unsubscribed. I believe it’s
-good practice to allow your newsletter recievers to unsubscribe instantly.
-They will also have the ability to do it via the &lt;a href=&quot;https://tools.ietf.org/html/rfc8058&quot;&gt;&lt;code&gt;List-Unsubscribe&lt;/code&gt;&lt;/a&gt;
-mail header.&lt;/p&gt;
-
-&lt;p&gt;I also configured the lane with my SMTP server details. I’m using
-AWS &lt;a href=&quot;https://aws.amazon.com/ses/&quot;&gt;Simple Email Service&lt;/a&gt;.
-It’s pretty easy to configure and it’s inexpensive:
-&lt;a href=&quot;https://aws.amazon.com/ses/pricing/&quot;&gt;$1 per 10,000 emails&lt;/a&gt; at the time of writing.
-To my knowledge, &lt;a href=&quot;https://sendgrid.com/pricing/&quot;&gt;SendGrid&lt;/a&gt;
-is two times more expensive,
-&lt;a href=&quot;https://www.smtp2go.com&quot;&gt;Smtp2Go&lt;/a&gt;—six times,
-&lt;a href=&quot;https://www.sendinblue.com/pricing/&quot;&gt;SendInBlue&lt;/a&gt;—four times,
-&lt;a href=&quot;https://www.mailgun.com/pricing&quot;&gt;MailGun&lt;/a&gt;—eight times, etc.:&lt;/p&gt;
-
-&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2018/09/mailanes-2.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then, I configured my list to notify me via Telegram about all new subscribers,
-unsubscribe actions, etc.:&lt;/p&gt;
-
-&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2018/09/mailanes-3.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;You see, there is the Telegram chat ID where I’m getting notifications. You can
-do that too, you just need to know the chat ID. Start talking to the
-Telegram bot &lt;a href=&quot;https://t.me/mailanes_bot&quot;&gt;@mailanes_bot&lt;/a&gt; and it will tell you your chat ID.&lt;/p&gt;
-
-&lt;p&gt;I’m using Mailanes for my blog newsletter too. Try to subscribe to it
-&lt;a href=&quot;/about-me.html#subscribe&quot;&gt;here&lt;/a&gt; and you will see what happens.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://github.com/yegor256/mailanes/blob/master/README.md&quot;&gt;README&lt;/a&gt; fully
-explains all possible configuration options. The project is open, so feel free
-to contribute with &lt;a href=&quot;https://github.com/yegor256/mailanes&quot;&gt;pull requests&lt;/a&gt;.
-As I said above, it’s absolutely &lt;em&gt;free&lt;/em&gt;
-for anyone. Just sign up, create your lists, lanes, and campaigns, and go ahead.&lt;/p&gt;
-
-&lt;p&gt;If something is not clear in the system and you are lost, don’t hesitate
-to &lt;a href=&quot;https://github.com/yegor256/mailanes/issues&quot;&gt;submit a ticket&lt;/a&gt;,
-I will try to improve it or add documentation.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">There are other products doing something similar, including MailChimp, AWeber, and many others. They are great. Maybe. I don’t really know. I tried some of them, some time ago. And I was frustrated. They are expensive, clumsy, and heavy. That’s my experience. I wanted something lightweight, where I can upload a list of emails, create a simple HTML/text letter, configure my SMTP outbound server, and call it a day. I spent a few days and created Mailanes. It’s free (for all of you), it’s simple, and it’s open source.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/09/mailanes-1.png" /></entry></feed>
+use it in all my concurrency tests.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">Are you a Ruby developer? If you are, I’m pretty sure you have a very vague idea of what concurrency and thread safety are. No offense, but this is what I’ve figured out after dealing with Ruby code and speaking with Ruby programmers over the last half a year. I’ve been writing in Ruby pretty actively recently and I do like the language and the ecosystem around it. Zold, the experimental cryptocurrency we are creating, is written almost entirely in Ruby. What does that tell you? I like Ruby. But when it comes to concurrency, there are blank spots. Big time.</summary></entry></feed>
