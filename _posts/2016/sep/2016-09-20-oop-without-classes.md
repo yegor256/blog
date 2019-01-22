@@ -16,7 +16,7 @@ keywords:
   - classes in oop
 image: /images/2016/09/battleship-potemkin.jpg
 jb_picture:
-  caption: Battleship Potemkin (1925) by Sergei M. Eisenstein
+  caption: Броненосец Потемкин (1925) by Сергей Эйзенштейн
 ---
 
 I [interviewed](https://www.youtube.com/watch?v=s-hdZZzMCac)

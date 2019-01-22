@@ -16,7 +16,7 @@ keywords:
   - management in movies
 image: /images/2015/10/cossacks-of-the-kuban.jpg
 jb_picture:
-  caption: Cossacks of the Kuban (1950) by Ivan Pyryev
+  caption: Кубанские казаки (1950) by Иван Пырьев
 ---
 
 I saw [The Martian](http://www.imdb.com/title/tt3659388/)

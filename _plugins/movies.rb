@@ -16,6 +16,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+require 'kramdown'
+
 module Yegor
   module MovieFilters
     def yb_movies_count(posts)
@@ -24,7 +26,7 @@ module Yegor
 
     def yb_movies(posts)
       with_movies(posts).map do |p|
-        "<p><a href='#{p.url}'>#{CGI::escapeHTML(p['jb_picture']['caption'])}</a></p>"
+        "<p><a href='#{p.url}'>#{Kramdown::Document.new(p['jb_picture']['caption']).to_html.gsub(/<\/?p>/, '')}</a></p>"
       end
     end
 

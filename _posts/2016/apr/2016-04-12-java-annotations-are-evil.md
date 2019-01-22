@@ -18,7 +18,7 @@ keywords:
 book: elegant-objects-2 6.1
 image: /images/2016/04/gomorrah.jpg
 jb_picture:
-  caption: Gomorra (2008) by Matteo Garrone)
+  caption: Gomorra (2008) by Matteo Garrone
 ---
 
 [Annotations](https://en.wikipedia.org/wiki/Java_annotation)

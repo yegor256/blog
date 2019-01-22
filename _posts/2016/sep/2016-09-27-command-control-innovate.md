@@ -16,7 +16,7 @@ keywords:
   - command and control work environment
 image: /images/2016/09/andrei-rublev.jpg
 jb_picture:
-  caption: Andrei Rublev (1966) by Andrei Tarkovsky
+  caption: Андрей Рублев (1966) by Андрей Тарковский
 ---
 
 [Command and control](https://en.wikipedia.org/wiki/Command_and_control)
