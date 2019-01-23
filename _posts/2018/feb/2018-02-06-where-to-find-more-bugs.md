@@ -77,6 +77,8 @@ If the design doesn't look logical to you
 and you know how it can be improved,
 it's a bug.
 
+{% youtube F3bjFXFRsI8 %}
+
 **Naming is weird**.
 If class, variable or package names don't look consistent and
 obvious to you, and you know how they can be fixed
