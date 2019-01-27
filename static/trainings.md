@@ -29,3 +29,9 @@ three hours each. There could be from four to sixteen people in the room.
 The cost: **$500/hour** (plus travel and accomodation expenses; I currently reside in Moscow).
 
 Text me in [Telegram](https://t.me/yegor256) or [email](mailto:trainings@yegor256.com) when ready.
+
+"We really liked your workshop. It was awesome! You did
+a great job, and cool with how much energy you approached it.
+I think everyone learned a lot, I got a very positive
+feedback from everyone I spoke to,"---Martin Reichard, Lotum.de.
+

@@ -137,3 +137,6 @@ architect with a democratic vote. Both ideas are wrong. The right approach is
 to control the quality of decisions the architect makes via regular reviews.
 
 Do you have such reviews in your project? If not, why not?
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Imagine, you are a software architect and your manager tells you that your design decisions from now on will be regularly reviewed by another programmer, who they just contracted for that. What will be your answer?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1089398576793436160?ref_src=twsrc%5Etfw">January 27, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
