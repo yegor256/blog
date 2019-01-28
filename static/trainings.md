@@ -30,8 +30,24 @@ The cost: **$500/hour** (plus travel and accomodation expenses; I currently resi
 
 Text me in [Telegram](https://t.me/yegor256) or [email](mailto:trainings@yegor256.com) when ready.
 
+<hr/>
+
+January 2019:
+"Большинству тренинг понравился. Некоторые услышали Ваши идеи впервые и отнеслись к ним настороженно.
+В любом случае все получили возможность услышать альтернативную точку зрения на практики ООП.
+Понравилась Ваша манера подачи материала, все очень конкретно и на примерах.
+Бывает, что лектор на вопросы, --- 'А что делать, если вот так и так у меня в коде?'
+уклончиво отвечает, что надо смотреть по ситуации и т.п. В отличие от таких лекторов
+у Вас все конкретно, если с чем-то не сталкивались или не согласны, то так и говорите.
+Большое спасибо за тренинг!"
+---Александр Токмашев, [Код Безопасности](https://www.securitycode.ru/)
+
+March 2017:
 "We really liked your workshop. It was awesome! You did
 a great job, and cool with how much energy you approached it.
 I think everyone learned a lot, I got a very positive
-feedback from everyone I spoke to,"---Martin Reichard, Lotum.de.
+feedback from everyone I spoke to,"
+---[Martin Reichard](https://in.linkedin.com/pub/martin-reichard/35/43b/721),
+[Lotum.de](https://www.lotum.de).
+
 
