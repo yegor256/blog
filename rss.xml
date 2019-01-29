@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-28T16:25:00+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">10x Paychecks for 10x Programmers</title><link href="https://www.yegor256.com/2019/01/22/10x-paychecks.html" rel="alternate" type="text/html" title="10x Paychecks for 10x Programmers" /><published>2019-01-22T00:00:00+00:00</published><updated>2019-01-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/22/10x-paychecks</id><content type="html" xml:base="https://www.yegor256.com/2019/01/22/10x-paychecks.html">&lt;p&gt;You most definitely have heard about 10x programmers. The gist of this
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-01-29T12:14:46+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">My Recipe Against Dependency Hell</title><link href="https://www.yegor256.com/2019/01/29/dependency-hell.html" rel="alternate" type="text/html" title="My Recipe Against Dependency Hell" /><published>2019-01-29T00:00:00+00:00</published><updated>2019-01-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/29/dependency-hell</id><content type="html" xml:base="https://www.yegor256.com/2019/01/29/dependency-hell.html">&lt;p&gt;Do you specify exact versions of your dependencies? I mean, when your
+software package depends on another one, do you write down, in your &lt;code&gt;pom.xml&lt;/code&gt;,
+&lt;code&gt;Gruntfile&lt;/code&gt;, &lt;code&gt;Gemfile&lt;/code&gt;, or what have you, its version as &lt;code&gt;1.13.5&lt;/code&gt; or just
+&lt;code&gt;1.+&lt;/code&gt;? I always &lt;a href=&quot;https://twitter.com/yegor256/status/1059856548112068608&quot;&gt;thought&lt;/a&gt;
+that it was better to use exact version numbers,
+to avoid the so called &lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_hell&quot;&gt;dependency hell&lt;/a&gt;,
+and &lt;a href=&quot;https://blog.danlew.net/2015/09/09/dont-use-dynamic-versions-for-your-dependencies/&quot;&gt;I was not alone&lt;/a&gt;.
+However, very soon I &lt;a href=&quot;https://twitter.com/yegor256/status/1060538705260265474&quot;&gt;realized&lt;/a&gt;
+that dynamic versions, like &lt;code&gt;1.+&lt;/code&gt;, give more flexibility.
+Just a few weeks ago I realized that neither approach
+is right and found myself a hybrid formula. No suprise, I again saw that
+&lt;a href=&quot;https://brock.io/post/repeatable_android_builds/&quot;&gt;I wasn’t alone&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Sin noticias de Dios (2001) by Agustín Díaz Yanes&quot; src=&quot;/images/2019/01/sin-noticias-de-dios.jpg&quot; longdesc=&quot;#9005641b&quot; /&gt;&lt;figcaption id=&quot;9005641b&quot;&gt;Sin noticias de Dios (2001) by Agustín Díaz Yanes&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, let me explain what’s wrong with fixed dependencies.&lt;/p&gt;
+
+&lt;p&gt;Say I create a library X, which depends on, for example, a logging
+facility, which is a third-party library, not mine. Thus my library X has
+a &lt;em&gt;dependency&lt;/em&gt;. The logging library has a version number, such as
+&lt;code&gt;1.13.5&lt;/code&gt;. I put this text into the &lt;code&gt;pom.xml&lt;/code&gt; file of X:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.example&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;log-me&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.13.5&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Many advocates of fixed dependencies argue that it’s very important
+to stick to the version &lt;code&gt;1.13.5&lt;/code&gt;, instead of using a more flexible dynamic
+one: &lt;code&gt;1.13)&lt;/code&gt; (i.e. any version, provided it is &lt;code&gt;1.13&lt;/code&gt; or newer).
+Why? Because future versions may introduce something that
+will break the build of X. They may change interfaces, rename classes or methods,
+or delete something that I’m using. You never know what the authors of this
+&lt;code&gt;log-me&lt;/code&gt; library might do. That’s why it’s better to hard-wire ourselves to &lt;code&gt;1.13.5&lt;/code&gt; and
+call it a day.&lt;/p&gt;
+
+&lt;p&gt;This is true.&lt;/p&gt;
+
+&lt;p&gt;But.&lt;/p&gt;
+
+&lt;p&gt;What if the library X is used by another library Y, which also depends on
+&lt;code&gt;log-me&lt;/code&gt; but needs version &lt;code&gt;1.14.1&lt;/code&gt;. Boom! There will be a conflict
+in library Y: Maven, the package manager, won’t be able to decide
+which version to use. It will be necessary to resolve the conflict somehow.
+In the case of Maven it’s resolvable, in the case of, for example,
+&lt;a href=&quot;https://github.com/ruby/rake&quot;&gt;Rake&lt;/a&gt;, it’s not (to my knowledge).&lt;/p&gt;
+
+&lt;p&gt;To resolve this problem, library Y will have to explicitly say which version
+has to be used. But it can’t be sure that &lt;code&gt;1.14.1&lt;/code&gt; will work correctly with
+library X. To confirm that it does, it would have to be tested by the authors of library
+X. So the best the creators of library Y can do is to try it and hope
+for the best. With other build tools, like Rake, the authors will have no choice,
+but to ask the authors of library X to upgrade to &lt;code&gt;1.14.1&lt;/code&gt; and release
+a new version. Then, library Y will be able to use library X.&lt;/p&gt;
+
+&lt;p&gt;This problem would not exist if library X depended on &lt;code&gt;1.13&lt;/code&gt; instead.
+But, as I mentioned above, in that case its authors would be planting a time bomb—eventually
+one of the future versions will definitely break the build.&lt;/p&gt;
+
+&lt;p&gt;So what is the solution?&lt;/p&gt;
+
+&lt;p&gt;Here is my formula: If you trust the authors of the library, use dynamic versioning;
+if you don’t, use a fixed version.&lt;/p&gt;
+
+&lt;p&gt;What I mean is, do you trust that they are professional enough to think about
+backward compatibility and to follow the principles of &lt;a href=&quot;https://semver.org/&quot;&gt;semantic versioning&lt;/a&gt;?
+If they are careful enough to not delete or modify something
+that may affect future versions without also changing the major number of the version,
+then you can trust them. How do you know who to trust? I don’t trust anyone, except
+my own libraries and a very small number of other libraries which I have reviewed in GitHub and checked
+the quality of their repositories.&lt;/p&gt;
+
+&lt;p&gt;Of course, you can’t fully trust anyone, but this is the formula I
+have for myself now. You can see how it works in this
+&lt;a href=&quot;https://github.com/zold-io/zold/blob/master/zold.gemspec&quot;&gt;Gemfile&lt;/a&gt;, for example.
+Pay attention to the version numbers. Those that start with &lt;code&gt;~&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;gt;=&lt;/code&gt; are dynamic,
+while others are fixed. It’s a hybrid approach, but it works for me.&lt;/p&gt;
+
+&lt;p&gt;Maybe it will help you too.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">Do you specify exact versions of your dependencies? I mean, when your software package depends on another one, do you write down, in your pom.xml, Gruntfile, Gemfile, or what have you, its version as 1.13.5 or just 1.+? I always thought that it was better to use exact version numbers, to avoid the so called dependency hell, and I was not alone. However, very soon I realized that dynamic versions, like 1.+, give more flexibility. Just a few weeks ago I realized that neither approach is right and found myself a hybrid formula. No suprise, I again saw that I wasn’t alone.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/sin-noticias-de-dios.jpg" /></entry><entry><title type="html">10x Paychecks for 10x Programmers</title><link href="https://www.yegor256.com/2019/01/22/10x-paychecks.html" rel="alternate" type="text/html" title="10x Paychecks for 10x Programmers" /><published>2019-01-22T00:00:00+00:00</published><updated>2019-01-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/22/10x-paychecks</id><content type="html" xml:base="https://www.yegor256.com/2019/01/22/10x-paychecks.html">&lt;p&gt;You most definitely have heard about 10x programmers. The gist of this
 folklore is that some of us coders are very effective (10 or even
 &lt;a href=&quot;http://antirez.com/news/112&quot;&gt;100 times&lt;/a&gt; more so
 than others), while the rest are just “normal.” It is definitely
@@ -1239,153 +1320,4 @@ extend the list):&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.nytimes.com/2019/01/14/arts/dance/sergei-polunin-putin-trump-paris-opera-ballet.html&quot;&gt;Anti-Gay and Sexist Posts Cost Sergei Polunin a Role in Paris&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.livescience.com/64492-james-watson-stripped-of-honors.html&quot;&gt;James Watson, Co-Discoverer of DNA Structure, Stripped of Honors Over Racist Statements&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">Bobby Fischer, the eleventh World Chess Champion, was one of the best chess players of the last century. Did you know that, along with anti-Semitic statements, he also said that women chess players “aren’t creative and are all fish”? Did you also know that he publicly described the 9/11 events as “wonderful news”?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/better-call-saul.jpg" /></entry><entry><title type="html">Do You Test Ruby Code for Thread Safety?</title><link href="https://www.yegor256.com/2018/11/06/ruby-threads.html" rel="alternate" type="text/html" title="Do You Test Ruby Code for Thread Safety?" /><published>2018-11-06T00:00:00+00:00</published><updated>2018-11-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/06/ruby-threads</id><content type="html" xml:base="https://www.yegor256.com/2018/11/06/ruby-threads.html">&lt;p&gt;Are you a Ruby developer? If you are, I’m pretty sure you have a very
-vague idea of what concurrency and thread safety are. No offense, but this
-is what I’ve figured out after dealing with Ruby code and speaking with Ruby
-programmers over the last half a year. I’ve been writing in Ruby pretty actively
-recently and I do like the language and the ecosystem around it.
-Zold, the experimental cryptocurrency we are creating, is written almost
-entirely in Ruby. What does that tell you? I like Ruby. But when it comes
-to concurrency, there are blank spots. Big time.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Look at this Ruby class:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sinatra&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;0&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It’s a simple web server. It does work—try to run it like this
-(you will need Ruby 2.3+ installed):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sinatra&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rb&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then, open &lt;code&gt;http://localhost:4567&lt;/code&gt; and you will see the counter. Refresh
-the page and the counter will increment. Try again. It works. The counter
-is in the file &lt;code&gt;idx.txt&lt;/code&gt; and it’s essentially
-a &lt;a href=&quot;/2018/07/03/global-variables.html&quot;&gt;global variable&lt;/a&gt;,
-which we increment on every HTTP request.&lt;/p&gt;
-
-&lt;p&gt;Let’s create a unit test for it, to make sure it is automatically tested:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;minitest/autorun&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;net/http&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;uri&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FrontTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Minitest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Test&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;OK, it’s not a unit test, but more like an integration test.
-First we start a web server in a background thread. Then
-we wait for a second, to give that thread enough time to bootstrap
-the server. I know, it’s a very ugly approach, but I don’t have anything
-better for this small example. Next we make an HTTP request and
-compare it with the expected number 1. Finally, we stop the web server.&lt;/p&gt;
-
-&lt;p&gt;So far so good. Now, the question is, what will happen when many
-requests are sent to the server? Will it still return the correct,
-consecutive numbers? Let’s try:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uniq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here we make a thousand requests and put all the returned numbers into an
-array. Then we &lt;code&gt;uniq&lt;/code&gt; the array and &lt;code&gt;count&lt;/code&gt; its elements. If there is
-a thousand of them—everything worked fine, we received a correct list
-of consecutive, unique numbers. I just tested it, and it works.&lt;/p&gt;
-
-&lt;p&gt;But we are making them one by one, that’s why our server doesn’t have
-any problems. We aren’t making them concurrently. They go strictly one
-after another. Let’s try to use a few additional threads to simulate
-parallel execution of HTTP requests:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;concurrent/set&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-      &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;First of all, we keep the list of numbers in a
-&lt;a href=&quot;http://ruby-concurrency.github.io/concurrent-ruby/master/Concurrent/Set.html&quot;&gt;&lt;code&gt;Concurrent::Set&lt;/code&gt;&lt;/a&gt;, which
-is a thread-safe version of Ruby &lt;a href=&quot;http://ruby-doc.org/stdlib-2.4.0/libdoc/set/rdoc/Set.html&quot;&gt;&lt;code&gt;Set&lt;/code&gt;&lt;/a&gt;.
-Second, we start five background threads, each of which makes 200 HTTP requests.
-They all run in parallel and we wait for them to finish by calling &lt;code&gt;join&lt;/code&gt; on
-each of them. Finally, we take the numbers out of the Set and validate
-the correctness of the list.&lt;/p&gt;
-
-&lt;p&gt;No surprise, it fails.&lt;/p&gt;
-
-&lt;p&gt;Of course, you know why. Because the implementation is not &lt;em&gt;thread-safe&lt;/em&gt;. When
-one thread is reading the file, another one is writing it. Eventually, and very
-soon, they clash and the contents of the file is broken. The more threads
-we put into the test, the less accurate will be the result.&lt;/p&gt;
-
-&lt;p&gt;In order to make this type of testing easier I created
-&lt;a href=&quot;https://github.com/yegor256/threads&quot;&gt;threads&lt;/a&gt;,
-a simple Ruby gem. Here is how it works:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;threads&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_works&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Concurrent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
-  &lt;span class=&quot;no&quot;&gt;Threads&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Net&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://localhost:4567/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numbers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop!&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;That’s it. This single line with &lt;code&gt;Threads.new()&lt;/code&gt; replaces all other lines,
-where we have to create threads, make sure they start at the same time,
-and then collect their results and make sure their stack traces are visible
-in the console if they crash (by default, the error log of a background
-thread is not visible).&lt;/p&gt;
-
-&lt;p&gt;Try this gem in your projects, it’s pretty well tested already and I
-use it in all my concurrency tests.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">Are you a Ruby developer? If you are, I’m pretty sure you have a very vague idea of what concurrency and thread safety are. No offense, but this is what I’ve figured out after dealing with Ruby code and speaking with Ruby programmers over the last half a year. I’ve been writing in Ruby pretty actively recently and I do like the language and the ecosystem around it. Zold, the experimental cryptocurrency we are creating, is written almost entirely in Ruby. What does that tell you? I like Ruby. But when it comes to concurrency, there are blank spots. Big time.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">Bobby Fischer, the eleventh World Chess Champion, was one of the best chess players of the last century. Did you know that, along with anti-Semitic statements, he also said that women chess players “aren’t creative and are all fish”? Did you also know that he publicly described the 9/11 events as “wonderful news”?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/better-call-saul.jpg" /></entry></feed>
