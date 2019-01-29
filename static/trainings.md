@@ -32,7 +32,7 @@ Text me in [Telegram](https://t.me/yegor256) or [email](mailto:trainings@yegor25
 
 <hr/>
 
-January 2019:
+January 2019 (38 people):
 "Большинству тренинг понравился. Некоторые услышали Ваши идеи впервые и отнеслись к ним настороженно.
 В любом случае все получили возможность услышать альтернативную точку зрения на практики ООП.
 Понравилась Ваша манера подачи материала, все очень конкретно и на примерах.
@@ -42,7 +42,7 @@ January 2019:
 Большое спасибо за тренинг!"
 ---Александр Токмашев, [Код Безопасности](https://www.securitycode.ru/)
 
-March 2017:
+March 2017 (12 people):
 "We really liked your workshop. It was awesome! You did
 a great job, and cool with how much energy you approached it.
 I think everyone learned a lot, I got a very positive

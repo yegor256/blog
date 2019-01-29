@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Recipe Against Dependency Hell"
-date: 2019-01-25
+date: 2019-01-29
 place: Moscow, Russia
 tags: devops
 description: |
@@ -14,9 +14,9 @@ keywords:
   - fixed version dependency
   - software dependencies
   - dependency packages
-image: /images/2019/01/
+image: /images/2019/01/sin-noticias-de-dios.jpg
 jb_picture:
-  caption:
+  caption: Sin noticias de Dios (2001) by Agustín Díaz Yanes
 ---
 
 Do you specify exact versions of your dependencies? I mean, when your
