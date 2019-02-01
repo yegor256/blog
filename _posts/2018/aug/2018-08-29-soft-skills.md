@@ -14,6 +14,8 @@ keywords:
   - what are soft skills
   - programmers soft skills
   - software soft skills
+translated:
+  - Polish: https://bulldogjob.pl/news/517-umiejetnosci-miekkie-programisty
 image: /images/2018/08/glengarry-glen-ross.jpg
 jb_picture:
   caption: Glengarry Glen Ross (1992) by James Foley
