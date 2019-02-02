@@ -17,23 +17,23 @@ keywords:
 ---
 
 A month ago I stumbled upon a problem: I wasn't able to find a Ruby
-gem, which would do in-memory caching, with the possibility to expire
-on timeout. After a quick research I decided to implement my own and called
-it zache (as in "zero cache," since there is no backend). Here is how it works:
+gem which would do in-memory caching with the capability to expire
+on timeout. After some quick research I decided to implement my own and called
+it Zache (as in "zero cache," since there is no backend). Here is how it works:
 
 <!--more-->
 
 {% jb_picture_body %}
 
-First, you create a storage:
+First, you create the cache:
 
 {% highlight ruby %}
 require 'zache'
 zache = Zache.new
 {% endhighlight %}
 
-Then, you fetch the value by the key, providing the block, which will
-be executed if the key is absent or is expired:
+Then you fetch the value by the key, also providing the block which will
+be executed if the key is absent or expired:
 
 {% highlight ruby %}
 x = zache.get(:x, lifetime: 15) do
@@ -42,12 +42,12 @@ x = zache.get(:x, lifetime: 15) do
 end
 {% endhighlight %}
 
-Here, `:x` is the key and `15` is the amount of seconds it will stay
-in the cache, until it becomes expired.
+Here, `:x` is the key and `15` is the number of seconds it will stay
+in the cache, until it expires.
 
 It's important to notice that the key won't be deleted from the cache
 automatically. It will stay there until the next call to `get(:x)`. Only at
-that moment it will be deleted as "expired." In order to clean up the
+that moment will it be marked as "expired." In order to clean up the
 cache, you can call `zache.clean()` and all expired keys will be deleted.
 
 You can do it regularly in a separate thread, for example, every minute:
@@ -61,5 +61,5 @@ end
 
 Also, Zache, of course, is thread-safe.
 
-The Gem is in this [GitHub repository](https://github.com/yegor256/zache),
-feel free to file bugs, if you find them, or help us with additional features.
+The gem is in this [GitHub repository](https://github.com/yegor256/zache),
+feel free to report bugs, if you find them, or help us with additional features.
