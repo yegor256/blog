@@ -103,3 +103,6 @@ succeed.
 Thus, to be a good manager, you should never tell your subordinates _how_
 to complete their tasks. Instead, you should define _what_ solutions and results
 are expected. And, of course, what will happen in the case of success or failure.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Micromanagement is when they tell you what to do, instead of what is the expected result to be achieved. Does your boss practice this? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1091958080139595776?ref_src=twsrc%5Etfw">February 3, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
