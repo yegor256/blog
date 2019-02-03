@@ -138,8 +138,9 @@ deploy:
 For more information on the `.rultor.yml` file,
 check the [Rultor Reference Page](http://doc.rultor.com/reference.html).
 
-Now that everything is configued you should be able to deploy to
+Now that everything is configured you should be able to deploy to
 CloudRepo with Rultor by executing the `@rultor deploy` command.
-Wait for the response and Rultor will take care of all the rest.
+Wait for the response and Rultor will [take care]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
+of all the rest.
 
 That's it!
