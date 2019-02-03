@@ -78,7 +78,8 @@ include fewer than 50K lines of code.
       <p>We all keep our code in <del>Git</del>
 <a href="https://en.wikipedia.org/wiki/Version_control">version control</a> repositories.
 The question is whether we should create a new repository for each
-new module or try to keep as much as possible in a single so called “monolithic” repo.
+new module or try to keep as much as possible in a single so called “monolithic” repo
+(or simply <a href="https://en.wikipedia.org/wiki/Monorepo">monorepo</a>).
 Market leaders, like <a href="https://code.fb.com/core-data/scaling-mercurial-at-facebook/">Facebook</a>
 and <a href="https://www.infoq.com/presentations/Development-at-Google">Google</a>,
 advocate the second approach. I believe they are wrong.</p>
@@ -230,7 +231,8 @@ and
 <a href="http://www.gigamonkeys.com/mono-vs-multi/">Repo Style Wars: Mono vs Multi</a>
 by Peter Seibel.</p>
 
-<p>In a nutshell, they all claim that productivity is higher with a monolithic repo because
+<p>In a nutshell, they
+<a href="https://gomonorepo.org/">all claim</a> that productivity is higher with a monolithic repo because
 the amount of operations one has to do in order to make a change is smaller.
 Indeed, in a monorepo there will be a single branch, a single set of commits, a single pull request,
 a single merge, deploy and release. Also it will be easier to test, both
