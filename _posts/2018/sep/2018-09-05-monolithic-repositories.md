@@ -22,7 +22,8 @@ jb_picture:
 We all keep our code in <del>Git</del>
 [version control](https://en.wikipedia.org/wiki/Version_control) repositories.
 The question is whether we should create a new repository for each
-new module or try to keep as much as possible in a single so called "monolithic" repo.
+new module or try to keep as much as possible in a single so called "monolithic" repo
+(or simply [monorepo](https://en.wikipedia.org/wiki/Monorepo)).
 Market leaders, like [Facebook](https://code.fb.com/core-data/scaling-mercurial-at-facebook/)
 and [Google](https://www.infoq.com/presentations/Development-at-Google),
 advocate the second approach. I believe they are wrong.
@@ -179,7 +180,8 @@ and
 [Repo Style Wars: Mono vs Multi](http://www.gigamonkeys.com/mono-vs-multi/)
 by Peter Seibel.
 
-In a nutshell, they all claim that productivity is higher with a monolithic repo because
+In a nutshell, they
+[all claim](https://gomonorepo.org/) that productivity is higher with a monolithic repo because
 the amount of operations one has to do in order to make a change is smaller.
 Indeed, in a monorepo there will be a single branch, a single set of commits, a single pull request,
 a single merge, deploy and release. Also it will be easier to test, both
