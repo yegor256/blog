@@ -19,7 +19,7 @@ keywords:
 A month ago I stumbled upon a problem: I wasn't able to find a Ruby
 gem which would do in-memory caching with the capability to expire
 on timeout. After some quick research I decided to implement my own and called
-it Zache (as in "zero cache," since there is no backend). Here is how it works:
+it Zache (as in "zero cache," since there is no back end). Here is how it works:
 
 <!--more-->
 
@@ -61,5 +61,5 @@ end
 
 Also, Zache, of course, is thread-safe.
 
-The gem is in this [GitHub repository](https://github.com/yegor256/zache),
-feel free to report bugs, if you find them, or help us with additional features.
+The gem is in this [GitHub repository](https://github.com/yegor256/zache).
+Feel free to report bugs, if you find them, or help us with additional features.
