@@ -48,17 +48,15 @@ Simply put, they are not just storages of JAR files, but Maven repositories
 in cloud.
 
 A fully managed, cloud hosted solution will cost you a monthly subscription
-fee of some sort.  CloudRepo's [plans](https://www.cloudrepo.io/pricing.html) for individuals (or companies 
-that are just getting started) begin at $9 per month and increase based on how much storage and transfer you use.
-Business plans start at $79 per month and include a custom domain and unlimited data transfer so you don't have to worry 
-about per GB download charges (like you would with S3).  Free accounts for open source projects as well as discounts
-for non profits are also available.
-
-**Discounts for My Readers** 
-
-For readers of my blog, CloudRepo is offering an extended, 90 day, free trial, versus the standard 14.  This is effectively 
-a 25% discount off of your first year.  Simply [shoot them an email](mailto:support@cloudrepo.io) when your account is created
-and they'll take care of you.
+fee of some sort. At the moment of writing they charge $9 per month
+[and up](https://www.cloudrepo.io/pricing.html). They are free for open source,
+but I don't see why you would need them if you can use
+[Maven Central]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %}).
+The good news is that they are offering a special discount for my readers:
+the first 90 days are free, versus the standard 14. This is effectively
+a 25% discount off of your first year.
+Simply [shoot them an email](mailto:support@cloudrepo.io) when your account is created
+and they'll take care of you (don't forget to mention me, to get the discount).
 
 {% badge /images/2019/02/cloudrepo.png 100 http://www.cloudrepo.io %}
 
