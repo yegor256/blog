@@ -6871,6 +6871,7 @@ shippable
 shipped
 ships
 shoes
+shoot
 shooting
 shoots
 shop
@@ -7385,6 +7386,7 @@ subordination
 subscribe
 subscriber
 subscribers
+subscription
 subsequently
 subset
 substantial
@@ -7661,6 +7663,7 @@ thermometer
 these
 they
 they'd
+they'll
 they're
 they've
 thiel
