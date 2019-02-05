@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-02-04T17:52:39+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Deploy Maven Artifacts to CloudRepo via Rultor</title><link href="https://www.yegor256.com/2019/02/03/cloudrepo.html" rel="alternate" type="text/html" title="How to Deploy Maven Artifacts to CloudRepo via Rultor" /><published>2019-02-03T00:00:00+00:00</published><updated>2019-02-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/03/cloudrepo</id><content type="html" xml:base="https://www.yegor256.com/2019/02/03/cloudrepo.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.rultor.com&quot;&gt;&lt;img src=&quot;http://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-02-05T09:57:25+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Zache: A Simple Ruby In-Memory Cache</title><link href="https://www.yegor256.com/2019/02/05/zache.html" rel="alternate" type="text/html" title="Zache: A Simple Ruby In-Memory Cache" /><published>2019-02-05T00:00:00+00:00</published><updated>2019-02-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/05/zache</id><content type="html" xml:base="https://www.yegor256.com/2019/02/05/zache.html">&lt;p&gt;A month ago I stumbled upon a problem: I wasn’t able to find a Ruby
+gem which would do in-memory caching with the capability to expire
+on timeout. After some quick research I decided to implement my own and called
+it Zache (as in “zero cache,” since there is no back end). Here is how it works:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;First, you create the cache:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;zache&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;zache&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Zache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then you fetch the value by the key, also providing the block which will
+be executed if the key is absent or expired:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;lifetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Something very slow and expensive, which&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# we only want to execute once every 15 seconds.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, &lt;code&gt;:x&lt;/code&gt; is the key and &lt;code&gt;15&lt;/code&gt; is the number of seconds it will stay
+in the cache, until it expires.&lt;/p&gt;
+
+&lt;p&gt;It’s important to notice that the key won’t be deleted from the cache
+automatically. It will stay there until the next call to &lt;code&gt;get(:x)&lt;/code&gt;. Only at
+that moment will it be marked as “expired.” In order to clean up the
+cache, you can call &lt;code&gt;zache.clean()&lt;/code&gt; and all expired keys will be deleted.&lt;/p&gt;
+
+&lt;p&gt;You can do it regularly in a separate thread, for example, every minute:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;zache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clean&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Also, Zache, of course, is thread-safe.&lt;/p&gt;
+
+&lt;p&gt;The gem is in this &lt;a href=&quot;https://github.com/yegor256/zache&quot;&gt;GitHub repository&lt;/a&gt;.
+Feel free to report bugs, if you find them, or help us with additional features.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">A month ago I stumbled upon a problem: I wasn’t able to find a Ruby gem which would do in-memory caching with the capability to expire on timeout. After some quick research I decided to implement my own and called it Zache (as in “zero cache,” since there is no back end). Here is how it works:</summary></entry><entry><title type="html">How to Deploy Maven Artifacts to CloudRepo via Rultor</title><link href="https://www.yegor256.com/2019/02/03/cloudrepo.html" rel="alternate" type="text/html" title="How to Deploy Maven Artifacts to CloudRepo via Rultor" /><published>2019-02-03T00:00:00+00:00</published><updated>2019-02-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/03/cloudrepo</id><content type="html" xml:base="https://www.yegor256.com/2019/02/03/cloudrepo.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.rultor.com&quot;&gt;&lt;img src=&quot;http://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;In my &lt;a href=&quot;/2015/09/07/maven-repository-amazon-s3.html&quot;&gt;previous article&lt;/a&gt;,
 I described how to
@@ -1258,64 +1296,4 @@ sponsor your tickets. Two big conferences per year will be enough. The rest
 of the time attend your local meetups, you can find them
 at &lt;a href=&quot;https://www.meetup.com&quot;&gt;meetup.com&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;That’s pretty much it. Hope this list helps.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">OK, it’s time to publish this piece. I’ve been dancing around it for quite a while, telling you how to make more per hour, how to manage those stupid managers that don’t let you grow, how to boost your career and how to deal with office slavery. Now here is a simple, plain list of recommendations for you: what you should do if you want to be a more successful programmer. Not a better algorithm designer, even though that’s important. Not a funnier clown team player, even though that’s also important. But a more successful software engineer, both financially and socially.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/rocky.jpg" /></entry><entry><title type="html">Tech Journalism Sucks</title><link href="https://www.yegor256.com/2018/11/20/journalism.html" rel="alternate" type="text/html" title="Tech Journalism Sucks" /><published>2018-11-20T00:00:00+00:00</published><updated>2018-11-20T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/20/journalism</id><content type="html" xml:base="https://www.yegor256.com/2018/11/20/journalism.html">&lt;p&gt;This July, just four months ago,
-I submitted an article to &lt;a href=&quot;http://www.infoq.com/&quot;&gt;InfoQ&lt;/a&gt;, a
-popular online tech magazine. In the article I
-suggested that in order to improve our projects we must not make programmers worry
-about the quality of code they write, but instead let them focus mostly
-on the speed of delivery. The quality, I argued in the
-article, must be the concern of the delivery pipeline. You have most probably
-already read the blog posts where I mention this idea, especially this one:
-&lt;a href=&quot;/2018/03/06/speed-vs-quality.html&quot;&gt;Don’t Aim for Quality, Aim for Speed&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Wag the Dog (1997) by Barry Levinson&quot; src=&quot;/images/2018/11/wag-the-dog.jpg&quot; longdesc=&quot;#123ce141&quot; /&gt;&lt;figcaption id=&quot;123ce141&quot;&gt;Wag the Dog (1997) by Barry Levinson&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I received a response from the InfoQ editor in an email, and I quote:
-“The article provides no new insights for our audience, and actually some recommendations
-that go against well-known good practices in DevOps.”
-I &lt;a href=&quot;https://twitter.com/yegor256/status/1015261994826567680&quot;&gt;tweeted&lt;/a&gt;
-about this and Charles Humble, their editor-in-chief, emailed me back.
-He said that he still didn’t want to publish my piece, because
-“both people who reviewed it are experienced DevOps practitioners,
-and felt strongly that, although the ideas presented were interesting,
-it wasn’t something that would generalize well or work well for more mature teams.”&lt;/p&gt;
-
-&lt;p&gt;Two people decided that my point of view was wrong and that’s why the entire
-audience must not hear it! They know better what “works well for more mature teams.”
-Pay attention: they didn’t say anything about
-the quality of my article, about the way I structured my arguments, about the
-consistency of the logic in it. They totally got what I wanted to say, but they
-disagreed. My opinion didn’t go along with theirs. And so—no platform for the guy.&lt;/p&gt;
-
-&lt;p&gt;You know what happened next? I sent my piece, without any changes, to Gerard Holzmann,
-one of the editors of &lt;a href=&quot;https://publications.computer.org/software-magazine/&quot;&gt;IEEE Software&lt;/a&gt;.
-You know what he said? I quote:
-“I like your analogy of a wall, but when I reflect on it I believe it is
-really no more than the standard check-in and commit process that most
-organizations use. So I’m sorry that we can’t use it.”
-See? The InfoQ guys thought that it’s a practice that nobody would use, while
-the IEEE Software editor thinks that it’s something everybody is already using.&lt;/p&gt;
-
-&lt;p&gt;Ironic, huh?&lt;/p&gt;
-
-&lt;p&gt;Finally, I submitted that very same article to the blog section of the Communications of the ACM
-and it was &lt;a href=&quot;https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext&quot;&gt;published&lt;/a&gt; there,
-maybe thanks to the objectivity of Lawrence Fisher, their editor.
-I also submitted it to a number of software conferences, where it was also accepted,
-including &lt;a href=&quot;https://youtu.be/55mwAbuDrV8&quot;&gt;Joker 2018&lt;/a&gt; in St. Petersburg, Russia
-(it was the 3rd most liked speech, according to the votes of 400+ attendees).&lt;/p&gt;
-
-&lt;p&gt;Here comes my point.&lt;/p&gt;
-
-&lt;p&gt;Tech journalism sucks.&lt;/p&gt;
-
-&lt;p&gt;If you want to be published, say what everybody else is saying. Or else say something
-very new. I don’t really know. What will I do from now on? I will keep sending my
-articles to many places. I’ve even created a list of journalists (over 200 magazines)
-and I &lt;del&gt;spam&lt;/del&gt; send them my articles via &lt;a href=&quot;/2018/10/30/mailanes.html&quot;&gt;Mailanes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It seems they don’t deserve a better attitude.&lt;/p&gt;
-
-&lt;p&gt;Sadly.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">This July, just four months ago, I submitted an article to InfoQ, a popular online tech magazine. In the article I suggested that in order to improve our projects we must not make programmers worry about the quality of code they write, but instead let them focus mostly on the speed of delivery. The quality, I argued in the article, must be the concern of the delivery pipeline. You have most probably already read the blog posts where I mention this idea, especially this one: Don’t Aim for Quality, Aim for Speed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/wag-the-dog.jpg" /></entry></feed>
+&lt;p&gt;That’s pretty much it. Hope this list helps.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">OK, it’s time to publish this piece. I’ve been dancing around it for quite a while, telling you how to make more per hour, how to manage those stupid managers that don’t let you grow, how to boost your career and how to deal with office slavery. Now here is a simple, plain list of recommendations for you: what you should do if you want to be a more successful programmer. Not a better algorithm designer, even though that’s important. Not a funnier clown team player, even though that’s also important. But a more successful software engineer, both financially and socially.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/rocky.jpg" /></entry></feed>
