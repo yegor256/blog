@@ -43,6 +43,8 @@ He said that he still didn't want to publish my piece, because
 and felt strongly that, although the ideas presented were interesting,
 it wasn't something that would generalize well or work well for more mature teams."
 
+{% youtube 2oAW9LmYJI4 %}
+
 Two people decided that my point of view was wrong and that's why the entire
 audience must not hear it! They know better what "works well for more mature teams."
 Pay attention: they didn't say anything about

@@ -19,7 +19,7 @@ keywords:
 
 In [XDSD](https://www.xdsd.org), everyone---including project managers,  analysts, programmers,
 and product owners---receives payments based on deliverables with agreed
-upon budgets. In the fhe first section of the article,
+upon budgets. In the first section of the article,
 [How XDSD Is Different]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}) I explain
 exactly how this concept works. I don't explain in the article, though,
 how we decide which hourly rate is acceptable for each project participant.

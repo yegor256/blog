@@ -34,8 +34,9 @@ with by [XDSD](https://www.xdsd.org) principles---either as a developer or a pro
 
 Unlike with many other projects, in [XDSD](https://www.xdsd.org), we pay only for closed tasks and the
 agreed upon time budget. Let me explain by example. Let's say, you are a Ruby
-programmer and you a get a new task that requires you to fix a broken unit test.
-The task has a time budget of 30 minutes, as is the case most of the time.
+programmer and you get a new task that requires you to fix a broken unit test.
+The task has a time [budget]({% pst 2018/jan/2018-01-09-micro-budgeting %})
+of 30 minutes, as is the case most of the time.
 Sometimes, though, tasks may have time budgets of fifteen minutes or one hour.
 
 {% youtube 7EytYc7K5JA %}
