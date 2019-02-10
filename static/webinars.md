@@ -37,9 +37,16 @@ Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj5
 feel free to import it (to Google Calendar or iCal) and stay
 informed about everything I do publicly, including these webinars.
 
-## 2018
+## 2019
 
-{% webinar 02-01-2019 41 u8JMaMXydbs The Power of Decorators %}
+{% webinar 13-02-2019 41 bVzEPOZ_mDU A practical example of making an object-oriented HTTP server in Java %}
+
+<a href="https://www.youtube.com/watch?v=bVzEPOZ_mDU"><img src="https://i.ytimg.com/vi/bVzEPOZ_mDU/mqdefault.jpg" class="wnr" alt="Webinar no.41 by Yegor Bugayenko"/></a>
+February 13, 2019<br/>
+&#35;42: **A practical example of making an object-oriented HTTP server in Java**<br/>
+Most web frameworks hide the details of HTTP requests processing
+from software developers, making it difficult to design a web application right;
+in the webinar we analyze how it can be done right, in an object-oriented way.
 
 <a href="https://www.youtube.com/watch?v=u8JMaMXydbs"><img src="https://i.ytimg.com/vi/u8JMaMXydbs/mqdefault.jpg" class="wnr" alt="Webinar no.41 by Yegor Bugayenko"/></a>
 January 2, 2019<br/>
@@ -47,6 +54,8 @@ January 2, 2019<br/>
 Multiple RETURN statements are considered as bad practice in object-oriented programming.
 We analyze practical examples and see why exactly those statements are bad or not. The discussion is in this blog post:
 [_Why Many Return Statements Are a Bad Idea in OOP_]({% pst 2015/aug/2015-08-18-multiple-return-statements-in-oop %}).
+
+## 2018
 
 <a href="https://www.youtube.com/watch?v=gLHdZnrlPD8"><img src="https://i.ytimg.com/vi/gLHdZnrlPD8/mqdefault.jpg" class="wnr" alt="Webinar no.40 by Yegor Bugayenko"/></a>
 December 5, 2018<br/>
