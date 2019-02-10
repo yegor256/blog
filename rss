@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-02-05T09:57:25+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Zache: A Simple Ruby In-Memory Cache</title><link href="https://www.yegor256.com/2019/02/05/zache.html" rel="alternate" type="text/html" title="Zache: A Simple Ruby In-Memory Cache" /><published>2019-02-05T00:00:00+00:00</published><updated>2019-02-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/05/zache</id><content type="html" xml:base="https://www.yegor256.com/2019/02/05/zache.html">&lt;p&gt;A month ago I stumbled upon a problem: I wasn’t able to find a Ruby
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-02-10T09:53:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Zache: A Simple Ruby In-Memory Cache</title><link href="https://www.yegor256.com/2019/02/05/zache.html" rel="alternate" type="text/html" title="Zache: A Simple Ruby In-Memory Cache" /><published>2019-02-05T00:00:00+00:00</published><updated>2019-02-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/05/zache</id><content type="html" xml:base="https://www.yegor256.com/2019/02/05/zache.html">&lt;p&gt;A month ago I stumbled upon a problem: I wasn’t able to find a Ruby
 gem which would do in-memory caching with the capability to expire
 on timeout. After some quick research I decided to implement my own and called
 it Zache (as in “zero cache,” since there is no back end). Here is how it works:&lt;/p&gt;
@@ -269,6 +269,14 @@ I don’t know where he gets the number 30 from, and I seriously
 doubt this number makes any sense, but the bottom line is valid:
 there is a &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;huge distance&lt;/a&gt;
 between people who just write code and those who do it &lt;em&gt;right&lt;/em&gt;.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=mKZOuJ7AAas&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/mKZOuJ7AAas/mqdefault.jpg&quot; alt=&quot;YouTube video #mKZOuJ7AAas&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M30: Pay equality and smaller pay gap mean only one thing: the management is weak;
+        6 February 2019.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Steve_McConnell&quot;&gt;Steve McConnell&lt;/a&gt;
 in his &lt;a href=&quot;https://www.construx.com/blog/productivity-variations-among-software-developers-and-teams-the-origin-of-10x/&quot;&gt;blog post&lt;/a&gt;
