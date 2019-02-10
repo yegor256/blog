@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ReHTTP.net---HTTP Repeater"
+title: "ReHTTP.net&mdash;HTTP Repeater"
 date: 2017-09-05
 place: Odessa, Ukraine
 tags: pets
