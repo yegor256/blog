@@ -187,3 +187,6 @@ This dynamic looks only logical to me.
 You can also analyze your project using
 [my tool](https://github.com/yegor256/tdx) and see the graph. It would be
 interesting to learn what kind of curve you will get.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">When do you write unit tests? <a href="https://twitter.com/hashtag/testing?src=hash&amp;ref_src=twsrc%5Etfw">#testing</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1094483307130060803?ref_src=twsrc%5Etfw">February 10, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
