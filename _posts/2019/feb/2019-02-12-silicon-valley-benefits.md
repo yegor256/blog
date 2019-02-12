@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Want to Live in Silicon Valley"
-date: 2019-02-10
+date: 2019-02-12
 place: Moscow, Russia
 tags: mood
 description: |
@@ -14,9 +14,9 @@ keywords:
   - silicon valley live
   - live in silicon valley
   - silicon valley bad and good
-image: /images/2019/02/
+image: /images/2019/02/gostya-iz-budushego.jpg
 jb_picture:
-  caption:
+  caption: Гостья из будущего (1985) by Кир Булычев
 ---
 
 You remember my blog post about
