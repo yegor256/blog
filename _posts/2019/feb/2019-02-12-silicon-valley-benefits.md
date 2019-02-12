@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 You remember my blog post about
-[_Why I Don't Want to Live in Silicon Valley_]({% pst 2018/dec/2018-12-18-silicion-valley-criticism %}),
+[_Why I Don't Want to Live in Silicon Valley_]({% pst 2018/dec/2018-12-18-silicon-valley-criticism %}),
 don't you? Read it first if you haven't already. The gist of it is
 that Silicon Valley is a place with a lot of troubles. No one should want
 to live there, according to that previous post, right? That is what
