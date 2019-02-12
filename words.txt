@@ -33,6 +33,7 @@ accessing
 accessors
 accidental
 accidentally
+accompanied
 accomplish
 according
 accordingly
@@ -470,6 +471,7 @@ atomicity
 atop
 attach
 attached
+attaches
 attachment
 attachments
 attack
@@ -501,6 +503,7 @@ audio
 audit
 augmented
 august
+australia
 auth
 authenticate
 authenticated
@@ -572,6 +575,7 @@ bags
 bakery
 balance
 balanced
+bald
 ball
 balls
 bang
@@ -694,10 +698,12 @@ bigger
 biggest
 bigotry
 bigots
+bike
 bill
 billed
 billing
 billion
+billionaire
 billionaires
 billions
 bills
@@ -758,6 +764,7 @@ bob
 bobby
 bodies
 body
+bodyguards
 bomb
 bonds
 boni
@@ -955,6 +962,8 @@ calls
 calm
 calmly
 calorie
+calories
+caltrain
 cambria
 came
 camera
@@ -1112,6 +1121,7 @@ chats
 chatter
 chatterbot
 chauvinism
+che
 cheap
 cheaper
 cheapest
@@ -1142,6 +1152,7 @@ chief
 child
 childhood
 children
+chilling
 china
 chinese
 chit-chats
@@ -1215,6 +1226,7 @@ client-server
 client-side
 clients
 cliff
+climate
 clipper
 clockwise
 clone
@@ -1257,10 +1269,12 @@ co-located
 co-locating
 co-worker
 co-workers
+co-working
 coach
 coaching
 coad
 coarse-grained
+coast
 cobertura
 COBOL
 coca
@@ -1288,6 +1302,7 @@ coinbase
 coined
 coinmama
 cola
+cold
 collaborate
 collaboration
 collaborationsuperpowers
@@ -1324,6 +1339,7 @@ combining
 come
 comedian
 comes
+comfort
 comfortable
 comfortably
 coming
@@ -1454,6 +1470,7 @@ concerning
 concerns
 concise
 conclude
+concluded
 conclusion
 conclusions
 concrete
@@ -1513,6 +1530,7 @@ consistency
 consistent
 consists
 console
+conspiracy
 constant
 constantine
 constantly
@@ -1640,6 +1658,7 @@ correspond
 corresponding
 corrupted
 corruption
+cortege
 cosmetic
 cossacks
 cost
@@ -1730,6 +1749,7 @@ cross
 cross-browser
 crossed-out
 crowd
+crowded
 crucial
 crucially
 CRUD
@@ -1781,6 +1801,7 @@ cutting-edge
 CV
 cycle
 cycles
+cycling
 d-s
 dad
 dagger
@@ -2363,6 +2384,7 @@ editor-in-chief
 editors
 edsger
 educate
+educated
 education
 educational
 EE
@@ -2828,7 +2850,6 @@ few-hour
 few-minutes-granularity
 fewer
 FFK
-fhe
 fiasco
 fibonacci
 fiction
@@ -2945,6 +2966,7 @@ focus
 focused
 focusing
 fogel
+foggy
 fold
 folder
 folklore
@@ -3022,6 +3044,7 @@ fraction
 fragile
 fragility
 frame
+frames
 framework
 frameworks
 francisco
@@ -3113,6 +3136,7 @@ gateway
 gave
 gays
 gb
+GDP
 GeeCON
 geek
 GeekOUT
@@ -3179,6 +3203,7 @@ globally
 glogin
 glossaries
 glossary
+gluten
 gmail
 go
 goal
@@ -3272,6 +3297,7 @@ guardian
 guava
 guess
 guessing
+guevara
 GUI
 guice
 guidance
@@ -3309,6 +3335,8 @@ half
 half-a-house
 half-a-year-old
 half-an-hour
+half-drunk
+half-high
 half-measures
 half-page
 hall
@@ -3446,6 +3474,7 @@ highlight
 highlighted
 highlighting
 highly
+highways
 him
 himself
 hints
@@ -3543,6 +3572,7 @@ humiliate
 humiliates
 humiliating
 hundred
+hundred-dollar-bill
 hundred-year
 hundreds
 hungry
@@ -3615,6 +3645,7 @@ imitate
 immature
 immediate
 immediately
+immigrant-friendly
 immigrants
 immortal
 immunity
@@ -3741,6 +3772,7 @@ infoq
 inform
 informal
 information
+informational
 informative
 informed
 informing
@@ -4222,6 +4254,7 @@ latex
 latinx
 latter
 laugh
+laughed
 laughing
 launch
 launched
@@ -4373,6 +4406,7 @@ located
 location
 locations
 lock
+locked
 locking
 lod
 loeliger
@@ -4532,6 +4566,7 @@ mar
 march
 marco
 margin
+marijuana
 mario
 mark
 markdown
@@ -4725,6 +4760,7 @@ migration
 mihai
 mike
 milan
+mild
 mile
 milestone
 milestone-based
@@ -4732,6 +4768,7 @@ milestones
 military
 military-style
 million
+millionaire
 millionaires
 millions
 milliseconds
@@ -4872,6 +4909,7 @@ motivational
 motivator
 motives
 motor
+motto
 mount
 mountain
 mourn
@@ -4948,6 +4986,7 @@ namespaces
 naming
 nancy
 napkin
+narrow-minded
 narrow-skilled
 NASA
 nashorn
@@ -4964,6 +5003,7 @@ nazi
 nazis
 nbsp
 NCC
+nd
 NDA
 NDAs
 ndash
@@ -5148,6 +5188,7 @@ observed
 observer
 observes
 observing
+obsession
 obstacles
 obtain
 obvious
@@ -5320,6 +5361,7 @@ outdated
 output
 outright
 outside
+outsider
 outsource
 outsourced
 outsourcer
@@ -5402,6 +5444,7 @@ papertrail
 paperwork
 paradigm
 paradigms
+paradise
 paragraph
 paragraphs
 parallel
@@ -5410,6 +5453,7 @@ parameters
 parent
 parents
 paris
+parking
 parmesan
 parodies
 parse
@@ -5859,6 +5903,7 @@ probability
 probable
 probably
 probe
+probiotics
 problem
 problem's
 problem-centered
@@ -6514,6 +6559,7 @@ rita's
 road
 road-side
 roadmap
+roads
 rob
 robbery
 robbing
@@ -6834,6 +6880,7 @@ sexier
 sexist
 sexual
 sexy
+SF
 shades
 shadow
 shadows
@@ -6877,6 +6924,7 @@ shoot
 shooting
 shoots
 shop
+shops
 short
 short-list
 short-term
@@ -6982,6 +7030,7 @@ skilled
 skills
 skim
 skimp
+skin
 skinparam
 skip
 skipped
@@ -7032,6 +7081,7 @@ smile
 smiles
 smiling
 smoke
+smoking
 smooth
 smoothies
 smoothly
@@ -7101,6 +7151,7 @@ sorted
 sorter
 sorting
 sorts
+soul
 soulless
 sound
 soundcloud
@@ -7116,6 +7167,7 @@ space
 spaces
 spaceship
 spaceships
+spacious
 spaghetti
 spam
 spamming
@@ -7637,6 +7689,7 @@ testing
 testing-wise
 tests
 tex
+texas
 text
 texted
 textmate
@@ -7755,6 +7808,7 @@ token
 told
 tolerance
 tolerant
+toll-free
 tom
 tomas
 tomes
@@ -7787,6 +7841,7 @@ toward
 towards
 towels
 tower
+town
 toxic
 trac
 trace
@@ -7979,6 +8034,7 @@ understandings
 understands
 understood
 undertaken
+underwear
 undocumented
 unethical
 unevenly
@@ -8146,6 +8202,8 @@ ve
 vector
 vedran
 vegas
+vegetarian
+vehicles
 velocity
 vendor
 venture
@@ -8287,6 +8345,7 @@ weaker
 weakest
 weakness
 weaknesses
+wealth
 wealthy
 weapon
 weapons
@@ -8368,6 +8427,7 @@ whom
 whopping
 whose
 why
+wide
 widely
 wider
 width
@@ -8420,6 +8480,7 @@ words
 wore
 work
 work-from-home
+workaholic
 workaholics
 workaround
 workarounds

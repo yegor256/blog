@@ -1,4 +1,193 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-02-10T09:53:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Zache: A Simple Ruby In-Memory Cache</title><link href="https://www.yegor256.com/2019/02/05/zache.html" rel="alternate" type="text/html" title="Zache: A Simple Ruby In-Memory Cache" /><published>2019-02-05T00:00:00+00:00</published><updated>2019-02-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/05/zache</id><content type="html" xml:base="https://www.yegor256.com/2019/02/05/zache.html">&lt;p&gt;A month ago I stumbled upon a problem: I wasn’t able to find a Ruby
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-02-12T07:40:48+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Want to Live in Silicon Valley</title><link href="https://www.yegor256.com/2019/02/12/silicon-valley-benefits.html" rel="alternate" type="text/html" title="Why I Want to Live in Silicon Valley" /><published>2019-02-12T00:00:00+00:00</published><updated>2019-02-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/12/silicon-valley-benefits</id><content type="html" xml:base="https://www.yegor256.com/2019/02/12/silicon-valley-benefits.html">&lt;p&gt;You remember my blog post about
+&lt;a href=&quot;/2018/12/18/silicon-valley-criticism.html&quot;&gt;&lt;em&gt;Why I Don’t Want to Live in Silicon Valley&lt;/em&gt;&lt;/a&gt;,
+don’t you? Read it first if you haven’t already. The gist of it is
+that Silicon Valley is a place with a lot of troubles. No one should want
+to live there, according to that previous post, right? That is what
+many of my readers concluded, but they were wrong. Despite the problems,
+the place is definitely unique and there are a lot of reasons why
+you may want to consider it as a great place to live, for a few years
+at least, especially if you are in the tech business.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Гостья из будущего (1985) by Кир Булычев&quot; src=&quot;/images/2019/02/gostya-iz-budushego.jpg&quot; longdesc=&quot;#ee65f478&quot; /&gt;&lt;figcaption id=&quot;ee65f478&quot;&gt;Гостья из будущего (1985) by Кир Булычев&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I lived there for about five years and speak from my own experience:
+&lt;a href=&quot;/2018/12/18/silicon-valley-criticism.html&quot;&gt;it is&lt;/a&gt;
+distasteful, insanely correct, unappetizing, insane, positive,
+shallow, dangerous, expensive, boring, and conservative. However, aside from
+that:&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-rich&quot;&gt;It is Rich&lt;/h2&gt;
+
+&lt;p&gt;The state of California is the biggest generator of GDP in the US, almost
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_between_U.S._states_and_countries_by_GDP_%28nominal%29&quot;&gt;80% larger&lt;/a&gt;
+than second place Texas, mostly thanks
+to Hollywood and Silicon Valley.
+California &lt;a href=&quot;https://www.forbes.com/sites/katiasavchuk/2015/03/04/california-has-more-billionaires-than-every-country-except-the-u-s-and-china/&quot;&gt;has more billionaires&lt;/a&gt;
+than any country (except the US and China),
+and half of them live in the Bay Area and Silicon Valley.&lt;/p&gt;
+
+&lt;p&gt;You can smell money everywhere. Salaries are overblown: you can easily make
+&lt;a href=&quot;https://spectrum.ieee.org/view-from-the-valley/at-work/tech-careers/what-silicon-valley-tech-jobs-pay-the-highest-salaries&quot;&gt;$150,000&lt;/a&gt;
+a year (which is around $9K per month, after taxes) being a decent Java developer. Being
+a part-time software consultant you can charge $200/hour and it won’t really
+surprise anyone.&lt;/p&gt;
+
+&lt;p&gt;When you move there the feelings you get out of a hundred-dollar-bill change: It becomes
+a smaller value for you, in just a few weeks of staying in the Bay Area. Along
+with that, your expectations of your own financial results go up and you
+realize that you either become a millionaire ASAP or your life is wasted.
+For some this can be depressing, but for others it’s a great push forward.
+I’ve experienced both.&lt;/p&gt;
+
+&lt;h2 id=&quot;is-is-easy-going&quot;&gt;Is is Easy Going&lt;/h2&gt;
+
+&lt;p&gt;Either it’s a cultural thing for the whole of the US or something specific
+to the West Coast: They don’t tend to make long-term, tight connections.
+“Nothing personal, it’s strictly business,” seems to be the motto of most people
+there. They do business with you, they may invite you to their houses,
+share a lunch with you, introduce you to the members of their families, and
+then… forget your name once the business is over. This attitude may look cold and
+rude to someone with a sensitive soul, but if you are focused on doing
+business and making money, you will feel way more comfortable than in,
+say, Russia.&lt;/p&gt;
+
+&lt;p&gt;You won’t need to build a sophisticated relationship before someone can
+do business with you, as is the case, for example, in Europe. In America
+they are ready to shake hands at the first meeting, but they are also
+ready to walk out of the deal very quickly when business interests
+change.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-work-focused&quot;&gt;It is Work Focused&lt;/h2&gt;
+
+&lt;p&gt;Try to visit any Starbucks in the Bay Area, at say 11pm (if it’s open).
+There will be many people (if not most of them) with laptops. I haven’t
+seen anything like that in any place in the world and I’ve been in dozens
+of them. Americans work and they work a lot. How productive they are is
+a different story—but the smell of work is everywhere.&lt;/p&gt;
+
+&lt;p&gt;For me it is very motivating, maybe because I’m a workaholic too. In, for example,
+Amsterdam, where I lived for a few years, coffee shops are crowded with people
+who are chilling, talking, drinking, smoking, and enjoying life. When you open
+your laptop in an honest attempt to work for a few hours you feel that you
+are an outsider, you are not in the system, you are doing something wrong.
+Most likely your efforts won’t get you anywhere, since everybody around
+you is 1) half-drunk and half-high, and, at the same time, 2) seems to be doing fine. In a few
+days you ask yourself whether you are doing the right thing. Maybe to be
+successful you should join them and close your laptop.&lt;/p&gt;
+
+&lt;p&gt;In Silicon Valley you get the opposite feeling. If you don’t open your laptop
+you quickly realize that you are an outsider, you are doing something wrong.
+You are missing your opportunities, you need to catch up immediately, before
+it’s too late. I even made an &lt;a href=&quot;https://www.instagram.com/p/BIBL9kRj4Qi/&quot;&gt;Instagram photo&lt;/a&gt;
+to illustrate that.
+It’s a regular cafe, a regular day, a regular crowd. It’s not a tech co-working space,
+it’s a place where people are supposed to drink coffee. Have you seen anything
+similar in any other places in the world? Tell me where.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-smart&quot;&gt;It is Smart&lt;/h2&gt;
+
+&lt;p&gt;Maybe “smart” is not the right word here, but I couldn’t find
+a better one. They are 1) narrow-minded and 2) properly educated—this seems
+to be the most accurate description of what I felt there. First, they are
+very tightly locked in their “knowledge frames”—they know what they know
+and are not interested in hearing about anything else, which might
+disturb their self-confidence in the body of knowledge they already possess.
+Anything that even slightly contradicts the concepts they learned in school is
+a “conspiracy theory” and, if you take it seriously “you are a weird
+individual and we have to agree to disagree, bye!”&lt;/p&gt;
+
+&lt;p&gt;On the other hand, they are properly educated in the areas they need to be in order to do
+their work. Maybe this is thanks to Stanford, probably the best high school in the
+world, or maybe it’s just an American thing: stay focused on what you need
+and renounce everything else as “informational noise.” This is what they seem
+to be doing: they may not know where Australia is or who exactly
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Che_Guevara&quot;&gt;Che Guevara&lt;/a&gt; was,
+but they learn what matters for them.&lt;/p&gt;
+
+&lt;p&gt;That’s why the first impression is that they are stupid. But later you realize
+that they simply have a different attitude to information: it’s a tool for them,
+not a source of fun. What is the source of fun for them? I have no idea.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-comfortable&quot;&gt;It is Comfortable&lt;/h2&gt;
+
+&lt;p&gt;First, of course, is the climate. It’s one of the best in the world. Most of the
+time it’s warm and sunny. Not in San Francisco, though, where it’s cold
+and foggy most of the time. I have no idea why people live there.&lt;/p&gt;
+
+&lt;p&gt;Second, it’s very spacious. The roads are wide and easy to navigate. The
+traffic is mild (except a few highways in rush hours). Parking lots are huge
+and the parking is toll-free (except SF down town). After crowded Europe
+it feels like paradise: a very relaxed territory of comfort.&lt;/p&gt;
+
+&lt;p&gt;Third, the public transport there is pretty good. It’s not perfect, as many
+point out, but for me it was pretty cool. The train goes every 20-30 minutes and takes
+you to the city (if you live in the Valley) in less than half an hour. Even though
+the area is rather large, you can actually ride a bike everywhere,
+like &lt;a href=&quot;https://www.instagram.com/p/8zc2GupGzq/&quot;&gt;I did&lt;/a&gt; for almost an entire year,
+thanks to &lt;a href=&quot;https://www.instagram.com/p/9cbYGSJG9z/&quot;&gt;CalTrain&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-democratic&quot;&gt;It is Democratic&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.weeklystandard.com/michael-warren/will-america-in-10-years-look-like-california-does-today&quot;&gt;They say&lt;/a&gt;
+California is the most democratic state, and it seems to be true.
+You can feel it in the way people dress, live, and don’t show off, even
+though some of them are pretty rich. You can easily meet a billionaire
+in a coffee shop in the morning, and they won’t be accompanied by bodyguards
+or a cortege of armed vehicles.&lt;/p&gt;
+
+&lt;p&gt;On the one hand, it makes you very comfortable if you are a regular nobody
+making money out of writing Java code. On the other, if you are financially
+successful, nobody cares and it may hurt. You simply have nothing to spend
+your wealth on. Even Vegas won’t help.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-immigrant-friendly&quot;&gt;It is Immigrant-Friendly&lt;/h2&gt;
+
+&lt;p&gt;Very friendly. No matter where you are from, what the color of your skin is,
+how old, bald, or ugly you are, you are very welcome! And it doesn’t matter
+how bad your English is either. The majority of people you deal with are immigrants
+to some extent. If they are not, their parents are. Very rarely do you meet
+someone who is an American of the 2nd or 3rd generation, especially in tech.&lt;/p&gt;
+
+&lt;p&gt;I’ve met people who have lived there for many years and still barely speak English.
+Moreover, they don’t even want to learn it. They live and work in local
+communities, having no problems making enough money and enjoying their lives.
+I would recommend staying away from those local groups, though.&lt;/p&gt;
+
+&lt;p&gt;One of the first questions they ask is “Where are you from?” Just for fun,
+I asked the same question when I met new people in Ukraine. They
+always laughed, not understanding what I meant by it.&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-healthy&quot;&gt;It is Healthy&lt;/h2&gt;
+
+&lt;p&gt;They pay a lot of attention to their health. The first indicator of
+financial success for a person is that they talk a lot about yoga, gluten,
+probiotics, cycling, and all that. Health is probably the biggest obsession of rich people
+in Silicon Valley. Most of them &lt;a href=&quot;https://www.cdc.gov/statesystem/cigaretteuseadult.html&quot;&gt;don’t smoke&lt;/a&gt;
+(but marijuana is a very popular product there, which some even grow at home).&lt;/p&gt;
+
+&lt;p&gt;Sooner or later you catch up, buy an Apple Watch, start counting calories and paying attention
+to the letter “V” which almost every restaurant attaches to vegetarian dishes
+in their menus.&lt;/p&gt;
+
+&lt;p&gt;You can even find &lt;a href=&quot;https://www.instagram.com/p/BGvbjHGpG2a/&quot;&gt;organic underwear&lt;/a&gt; there!&lt;/p&gt;
+
+&lt;h2 id=&quot;it-is-motivating&quot;&gt;It is Motivating&lt;/h2&gt;
+
+&lt;p&gt;The bottom line is that it’s a territory where you just can’t give up. You see
+a lot of things going on around you and you want to be part of them. In most
+cases you can’t, simply because the competition is very tight, but the feeling
+of “drive” you get from everyone around you is exceptional. I wasn’t able to find
+anything like that anywhere else.&lt;/p&gt;
+
+&lt;p&gt;Thus, if you put two of my articles together, you will realize that the
+best method is to live in Silicon Valley for some time and then move
+somewhere else. Then come back again. You can’t stay there for an entire year, but you
+start missing it very soon if you stay somewhere else for too long.
+If you can afford to live in different countries, I would recommend trying
+Silicon Valley for a change. It’s definitely an exceptional experience. Both
+good and bad.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">You remember my blog post about Why I Don’t Want to Live in Silicon Valley, don’t you? Read it first if you haven’t already. The gist of it is that Silicon Valley is a place with a lot of troubles. No one should want to live there, according to that previous post, right? That is what many of my readers concluded, but they were wrong. Despite the problems, the place is definitely unique and there are a lot of reasons why you may want to consider it as a great place to live, for a few years at least, especially if you are in the tech business.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/02/gostya-iz-budushego.jpg" /></entry><entry><title type="html">Zache: A Simple Ruby In-Memory Cache</title><link href="https://www.yegor256.com/2019/02/05/zache.html" rel="alternate" type="text/html" title="Zache: A Simple Ruby In-Memory Cache" /><published>2019-02-05T00:00:00+00:00</published><updated>2019-02-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/05/zache</id><content type="html" xml:base="https://www.yegor256.com/2019/02/05/zache.html">&lt;p&gt;A month ago I stumbled upon a problem: I wasn’t able to find a Ruby
 gem which would do in-memory caching with the capability to expire
 on timeout. After some quick research I decided to implement my own and called
 it Zache (as in “zero cache,” since there is no back end). Here is how it works:&lt;/p&gt;
@@ -1121,187 +1310,4 @@ and thousands of lines of code from the logic they are checking.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://amzn.to/2BaAKRB&quot;&gt;&lt;em&gt;Spock: Up and Running&lt;/em&gt;&lt;/a&gt; by Rob Fletcher&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://amzn.to/2DpkFc6&quot;&gt;&lt;em&gt;Mastering Software Testing with JUnit 5&lt;/em&gt;&lt;/a&gt; by Boni Garcia&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://archive.is/3acB#selection-119.0-119.17&quot;&gt;&lt;em&gt;TDD Anti-Patterns&lt;/em&gt;&lt;/a&gt; by James Carr&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">I wrote some time ago about anti-patterns in OOP. Now it’s time to write about unit testing anti-patterns—because they also exist, and there are many. I will try to include every example I know in this list. If you know any others, please add them via a pull request or post a comment below. For each anti-pattern I will try to mention where it was found, if it’s not mine. Keep in mind that if I found it somewhere, that doesn’t necessarily mean it was invented there. If you spot an error, please comment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/12/breaking-bad.jpg" /></entry><entry><title type="html">You Can Do Better</title><link href="https://www.yegor256.com/2018/11/27/you-can-do-better.html" rel="alternate" type="text/html" title="You Can Do Better" /><published>2018-11-27T00:00:00+00:00</published><updated>2018-11-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2018/11/27/you-can-do-better</id><content type="html" xml:base="https://www.yegor256.com/2018/11/27/you-can-do-better.html">&lt;p&gt;OK, it’s time to publish this piece. I’ve been dancing around it for quite a while,
-telling you how to make &lt;a href=&quot;/2014/10/29/how-much-do-you-cost.html&quot;&gt;more per hour&lt;/a&gt;,
-how to manage those &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;stupid managers&lt;/a&gt; that don’t let you grow,
-how to &lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;boost your career&lt;/a&gt;
-and how to deal with &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;office slavery&lt;/a&gt;.
-Now here is a simple, plain list of recommendations for you: what you should do
-if you want to be a more successful programmer. Not a better algorithm
-designer, even though that’s &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;important&lt;/a&gt;.
-Not a funnier &lt;del&gt;clown&lt;/del&gt;
-&lt;a href=&quot;/2018/08/29/soft-skills.html&quot;&gt;team player&lt;/a&gt;, even though that’s
-also important. But a more successful software engineer, both
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;financially&lt;/a&gt;
-and socially.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Rocky (1976) by John G. Avildsen&quot; src=&quot;/images/2018/11/rocky.jpg&quot; longdesc=&quot;#8288874d&quot; /&gt;&lt;figcaption id=&quot;8288874d&quot;&gt;Rocky (1976) by John G. Avildsen&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;There is no particular order here, just everything I have in mind, in one list.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Make Your Own Product&lt;/strong&gt;.
-Learning how to program and &lt;em&gt;actually&lt;/em&gt; programming are not the same thing. The best,
-and the only right way to learn is “by doing.” The best way of doing is
-to create something meaningful and important. If it’s your own product—even
-better. If someone pays you for that—best of all. Every time I want
-to learn something new I make up a realistic goal and &lt;a href=&quot;/pets.html&quot;&gt;attempt&lt;/a&gt; to achieve it.
-A few years ago I was interested in learning Python. Instead of going to online
-courses or reading books I tried to create a small web app for my own marketing purposes.
-At that time I knew Java, but I wrote that app in Python. My recommendation: never study
-anything in an academic way, always do something real using the tech stack you want
-to learn.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Change Languages&lt;/strong&gt;.
-Don’t get stuck with one stack of technologies, no matter how much you love it.
-Of course, you don’t want to be a “jack of all trades,” since they are never
-paid well. You want to be focused. But “one focus” in life is not enough. I switch
-languages every 4-6 years. I started with Pascal, then it was C++, then Java,
-then PHP (yes, you heard right, I’m
-&lt;a href=&quot;http://www.zend.com/en/yellow-pages/ZEND007965&quot;&gt;ZCE&lt;/a&gt;/&lt;a href=&quot;http://www.zend.com/en/yellow-pages/ZEND007965&quot;&gt;ZFCE&lt;/a&gt;),
-then Java again, and now it’s Ruby.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Go Full Cycle&lt;/strong&gt;.
-Writing code that “works on your laptop” is a great achievement… for a junior
-programmer. A senior knows that it’s only a part of the job. The smaller part.
-The bigger part is turning your “working” code into a market-ready product,
-which means merging and auto-testing, compiling and packaging for multiple platforms,
-staging and acceptance testing, bug reporting, metrics collecting, A/B testing,
-stress and load testing, deploying to production, and even reporting to investors.
-Modern software development life cycle is a giant &lt;del&gt;mess&lt;/del&gt; show.
-Do you know how it all works?
-You don’t? You don’t care? You are not a senior developer.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Open Your Sources&lt;/strong&gt;.
-Like I said in my talk &lt;a href=&quot;https://www.youtube.com/watch?v=IGbteQpTNCA&quot;&gt;&lt;em&gt;How Bright Is Your Future?&lt;/em&gt;&lt;/a&gt;
-at RigaDevDays, the future of software will almost entirely be open source. The
-amount of code that companies keep proprietary is decreasing every year. You have
-to be an open source advocate if you want to be successful. If you are still
-&lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;afraid&lt;/a&gt;,
-or don’t have time, &lt;a href=&quot;/2017/05/30/why-contribute-to-open-source.html&quot;&gt;reconsider&lt;/a&gt;.
-Writing code for yourself and your office buddies, and writing it for a few
-thousand anonymous GitHub hooligans, are two very different stories. You will
-need time to get up to speed in this wild territory. It took me over three years.
-Don’t wait, start now.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;I truly believe that a professional programmer spends more time creating automated tests than writing production code.
-&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;Test Everything&lt;/strong&gt;.
-To be honest, almost everything I’ve learned about software quality, I owe
-to the painful hours of &lt;a href=&quot;/2015/07/16/fools-dont-write-unit-tests.html&quot;&gt;writing unit tests&lt;/a&gt;,
-mocks, fixtures, stubs, integration
-tests, and so on. I truly believe that a professional programmer spends more
-time creating automated tests than writing production code. That’s why
-I’d recommend you focus on testing if you want to become a better engineer.
-Start with the great book &lt;a href=&quot;http://amzn.to/1PBpoDT&quot;&gt;&lt;em&gt;Growing Object-Oriented Software, Guided by Tests&lt;/em&gt;&lt;/a&gt;
-by Steve Freeman and Nat Pryce and make yourself &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;a rule&lt;/a&gt;:
-every line of code, that you are at all in doubt about, must be proven by a test.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Statically Analyze&lt;/strong&gt;.
-Well, half of my knowledge about software quality I owe to unit testing. The
-other half I owe to static analyzers. I learned much more from
-&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt; and &lt;a href=&quot;https://pmd.github.io/&quot;&gt;PMD&lt;/a&gt;
-than from all the Java books I’ve ever read. Every new programming language I learn
-I start by configuring the strictest static analyzer I can find and then listening
-to its complaints. I’d recommend you do the same. Listen to your tools and
-&lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;make sure&lt;/a&gt;
-your code is 100% compliant with their quality expectations. Don’t just
-use them as recommendation providers, but make yourself a rule:
-&lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;never commit&lt;/a&gt;
-anything that doesn’t fully pass all static analyzers.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Humiliate Yourself on StackOverflow&lt;/strong&gt;.
-Robert Sheckley &lt;a href=&quot;https://amzn.to/2ToSdws&quot;&gt;said&lt;/a&gt;
-that “in order to ask a question you must already know most of the answer.”
-Friends, online chats, and office kitchen talks are
-great places to find help… for junior programmers. Those people understand you
-no matter how stupid your questions are and that is how they spoil you. You don’t
-grow while talking to them and getting their help. You degrade. Instead, you should
-ask questions where nobody knows you and will only answer if your question is perfectly
-formulated and expressed. There are many places, but StackOverflow is the best.
-Make sure every question you have goes to StackOverflow first. Then you may share the
-link with your buddies. But StackOverflow comes first.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Earn Certificates&lt;/strong&gt;.
-I’ve got some of them and I’m planning to get more, even though I’m not really
-a programmer &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;on a payroll&lt;/a&gt;
-and I’m not going to be employed by any enterprise that
-cares about badges in
-&lt;a href=&quot;https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&amp;amp;target=_latex%2Fresume-boring.tex&amp;amp;command=pdflatex&amp;amp;trackId=1520166474432&quot;&gt;my CV&lt;/a&gt;.
-Still, I want more certificates. Why? Because I learn a lot when I pass them.
-Also when I fail (I have done, twice, up to now). There are two things certificates
-give you: 1) they help you fill up your knowledge gaps, and 2) they boost your
-self-respect (when and if you pass, of course). Make yourself a rule: one
-new certificate every year.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Go to Job Interviews&lt;/strong&gt;.
-“Changing jobs every couple of years used to look bad on a resume. It told
-recruiters you can’t hold down a job, can’t get along with colleagues, or
-that you’re simply disloyal and can’t commit. That stigma is fast
-becoming antiquated. Workers who stay with a company longer than
-two years are said to get paid 50% less,” according to
-&lt;a href=&quot;https://www.fastcompany.com/3055035/you-should-plan-on-switching-jobs-every-three-years-for-the-rest-of-your-&quot;&gt;Vivian Giang&lt;/a&gt;.
-The bottom line is that you must be ready to change jobs, because you will have to, and soon.
-If you don’t, you will lose. Regular job interviews are the best way to prepare
-yourself. Make it a rule: every three months you go to an interview.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Change Jobs&lt;/strong&gt;.
-You will never be a truly senior developer or an architect if you stay with one
-company or project for a long time. You have to change jobs. Frequently. I know,
-it’s painful for most of us, but this is how we grow. You need new tasks, new
-challenges, new technologies, new customers, and new bosses in order to learn
-how to survive and become stronger. Ideally, you should become a freelancer
-and forget about full-time &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;nine-to-five&lt;/a&gt;
-office &lt;del&gt;slavery&lt;/del&gt; employment.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Read Books&lt;/strong&gt;.
-One book per month. How does that sound? Twelve books per year. That’s an easily
-achievable goal. However, ask yourself, did you manage to read a dozen books
-over the last calendar year? I seriously doubt many of you will answer positively.
-Books are important because they are way more formal and “complete” than blog
-posts, news articles, or conference presentations. They cover entire topics,
-not parts of them. For example, did you read the &lt;a href=&quot;http://amzn.to/2crIfoY&quot;&gt;Git book&lt;/a&gt; ever? Most programmers
-I know who use Git never even touched the book. They use Git, but barely understand
-what’s under the hood. This is how junior developers behave. Be professional,
-read the manual!&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Please, remember, how many technical books you&amp;#39;ve read this year? &lt;a href=&quot;https://twitter.com/hashtag/career?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#career&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1069103139972935680?ref_src=twsrc%5Etfw&quot;&gt;December 2, 2018&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;Follow Key People&lt;/strong&gt;.
-I mean Twitter (I’m &lt;a href=&quot;https://twitter.com/yegor256&quot;&gt;@yegor256&lt;/a&gt;),
-Facebook (&lt;a href=&quot;https://www.facebook.com/yegor256&quot;&gt;here&lt;/a&gt; I am),
-Telegram (&lt;a href=&quot;https://t.me/yegor256news&quot;&gt;my channel&lt;/a&gt;),
-Instagram (&lt;a href=&quot;https://instagram.com/yegor256&quot;&gt;click here&lt;/a&gt; to follow me), and, of course,
-GitHub (I’m &lt;a href=&quot;https://github.com/yegor256&quot;&gt;@yegor256&lt;/a&gt;). What’s new that you can hear from me?
-Probably not so much, but you will get a feeling for what’s going on
-in my professional life, where I’m heading, what I read, what I write, etc. Who do I follow?
-All authors of all books I like, all bloggers I’ve ever enjoyed reading,
-all speakers I liked watching, key public figures and politicians,
-no matter whether I agree with them or not. I believe you should do the same, to
-stay informed about the trends.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lurk&lt;/strong&gt;.
-Regularly check &lt;a href=&quot;https://news.ycombinator.com/&quot;&gt;Hacker News&lt;/a&gt;,
-&lt;a href=&quot;https://en.reddit.com/r/programming/&quot;&gt;/programming&lt;/a&gt; Reddit, and, maybe,
-&lt;a href=&quot;https://changelog.com/&quot;&gt;Changelog&lt;/a&gt;. That’s pretty much all you need to read.
-A few times a week. Just &lt;del&gt;read&lt;/del&gt; scroll what’s hot and move on.
-Will it make you a better programmer? Unlikely. Will it help your career
-and your life? Definitely. You never know what’s coming and where the
-next opportunity is. I still &lt;a href=&quot;/2017/08/15/bitcoin-pyramid.html&quot;&gt;feel sorry&lt;/a&gt;
-about not paying enough attention to
-the &lt;a href=&quot;https://news.ycombinator.com/item?id=1532670&quot;&gt;announcement&lt;/a&gt; of Bitcoin
-at HN many years ago.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Attend Conferences and Meetups&lt;/strong&gt;.
-Ideally, as a speaker. Otherwise, &lt;em&gt;at least once a month&lt;/em&gt; as a listener. Will
-you learn something new? I don’t think so. But you will definitely motivate
-yourself by meeting the most active and motivated people in the industry,
-including speakers and other listeners. Most companies will be ready to
-sponsor your tickets. Two big conferences per year will be enough. The rest
-of the time attend your local meetups, you can find them
-at &lt;a href=&quot;https://www.meetup.com&quot;&gt;meetup.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;That’s pretty much it. Hope this list helps.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">OK, it’s time to publish this piece. I’ve been dancing around it for quite a while, telling you how to make more per hour, how to manage those stupid managers that don’t let you grow, how to boost your career and how to deal with office slavery. Now here is a simple, plain list of recommendations for you: what you should do if you want to be a more successful programmer. Not a better algorithm designer, even though that’s important. Not a funnier clown team player, even though that’s also important. But a more successful software engineer, both financially and socially.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/11/rocky.jpg" /></entry></feed>
+&lt;/ol&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">I wrote some time ago about anti-patterns in OOP. Now it’s time to write about unit testing anti-patterns—because they also exist, and there are many. I will try to include every example I know in this list. If you know any others, please add them via a pull request or post a comment below. For each anti-pattern I will try to mention where it was found, if it’s not mine. Keep in mind that if I found it somewhere, that doesn’t necessarily mean it was invented there. If you spot an error, please comment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2018/12/breaking-bad.jpg" /></entry></feed>
