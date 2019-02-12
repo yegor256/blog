@@ -33,7 +33,7 @@ at least, especially if you are in the tech business.
 
 {% jb_picture_body %}
 
-I lived there for about five years and speak from own experience:
+I lived there for about five years and speak from my own experience:
 [it is]({% pst 2018/dec/2018-12-18-silicion-valley-criticism %})
 distasteful, insanely correct, unappetizing, insane, positive,
 shallow, dangerous, expensive, boring, and conservative. However, aside from
@@ -94,8 +94,8 @@ who are chilling, talking, drinking, smoking, and enjoying life. When you open
 your laptop in an honest attempt to work for a few hours you feel that you
 are an outsider, you are not in the system, you are doing something wrong.
 Most likely your efforts won't get you anywhere, since everybody around
-you is 1) half-drunk and half-high, and, at the same time, 2) seem to be doing fine. In a few
-days you ask yourself whether you are doing the right thing? Maybe to be
+you is 1) half-drunk and half-high, and, at the same time, 2) seems to be doing fine. In a few
+days you ask yourself whether you are doing the right thing. Maybe to be
 successful you should join them and close your laptop.
 
 In Silicon Valley you get the opposite feeling. If you don't open your laptop
@@ -151,7 +151,7 @@ thanks to [CalTrain](https://www.instagram.com/p/9cbYGSJG9z/).
 
 ## It is Democratic
 
-[They say](https://www.weeklystandard.com/michael-warren/will-america-in-10-years-look-like-california-does-today),
+[They say](https://www.weeklystandard.com/michael-warren/will-america-in-10-years-look-like-california-does-today)
 California is the most democratic state, and it seems to be true.
 You can feel it in the way people dress, live, and don't show off, even
 though some of them are pretty rich. You can easily meet a billionaire
@@ -167,7 +167,7 @@ your wealth on. Even Vegas won't help.
 
 Very friendly. No matter where you are from, what the color of your skin is,
 how old, bald, or ugly you are, you are very welcome! And it doesn't matter
-how bad is your English is either. The majority of people you deal with are immigrants
+how bad your English is either. The majority of people you deal with are immigrants
 to some extent. If they are not, their parents are. Very rarely do you meet
 someone who is an American of the 2nd or 3rd generation, especially in tech.
 
