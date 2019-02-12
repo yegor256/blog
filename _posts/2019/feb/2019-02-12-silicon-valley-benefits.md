@@ -34,7 +34,7 @@ at least, especially if you are in the tech business.
 {% jb_picture_body %}
 
 I lived there for about five years and speak from my own experience:
-[it is]({% pst 2018/dec/2018-12-18-silicion-valley-criticism %})
+[it is]({% pst 2018/dec/2018-12-18-silicon-valley-criticism %})
 distasteful, insanely correct, unappetizing, insane, positive,
 shallow, dangerous, expensive, boring, and conservative. However, aside from
 that:
