@@ -22,7 +22,7 @@ jb_picture:
 You remember my blog post about
 [_Why I Don't Want to Live in Silicon Valley_]({% pst 2018/dec/2018-12-18-silicion-valley-criticism %}),
 don't you? Read it first if you haven't already. The gist of it is
-that Silicon Valley is a place with a lot of troubles. Noone should want
+that Silicon Valley is a place with a lot of troubles. No one should want
 to live there, according to that previous post, right? That is what
 many of my readers concluded, but they were wrong. Despite the problems,
 the place is definitely unique and there are a lot of reasons why
@@ -66,10 +66,10 @@ I've experienced both.
 
 Either it's a cultural thing for the whole of the US or something specific
 to the West Coast: They don't tend to make long-term, tight connections.
-"Nothing personal, it's strictly business," seems to be the moto of most people
+"Nothing personal, it's strictly business," seems to be the motto of most people
 there. They do business with you, they may invite you to their houses,
 share a lunch with you, introduce you to the members of their families, and
-then ... forget your name once the business is over. This attitude may look cold and
+then... forget your name once the business is over. This attitude may look cold and
 rude to someone with a sensitive soul, but if you are focused on doing
 business and making money, you will feel way more comfortable than in,
 say, Russia.
@@ -102,7 +102,7 @@ In Silicon Valley you get the opposite feeling. If you don't open your laptop
 you quickly realize that you are an outsider, you are doing something wrong.
 You are missing your opportunities, you need to catch up immediately, before
 it's too late. I even made an [Instagram photo](https://www.instagram.com/p/BIBL9kRj4Qi/)
-to illustate that.
+to illustrate that.
 It's a regular cafe, a regular day, a regular crowd. It's not a tech co-working space,
 it's a place where people are supposed to drink coffee. Have you seen anything
 similar in any other places in the world? Tell me where.
@@ -114,7 +114,7 @@ a better one. They are 1) narrow-minded and 2) properly educated---this seems
 to be the most accurate description of what I felt there. First, they are
 very tightly locked in their "knowledge frames"---they know what they know
 and are not interested in hearing about anything else, which might
-disturb their self-confidence in the body of knowledge they already posess.
+disturb their self-confidence in the body of knowledge they already possess.
 Anything that even slightly contradicts the concepts they learned in school is
 a "conspiracy theory" and, if you take it seriously "you are a weird
 individual and we have to agree to disagree, bye!"
