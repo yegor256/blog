@@ -115,6 +115,8 @@ code is also a professional developer, and he also has no fear. So he insists
 that his implementation approach is right and your ideas are wrong. What
 should a professional code reviewer do in this case?
 
+{% quote The worst thing is a compromise, it ruins quality faster than bad code. %}
+
 The worst thing (as in any conflict resolution) is a compromise. This is what
 ruins quality faster than bad code. A compromise
 is a conflict resolution technique for which both parties agree not to get
@@ -163,6 +165,8 @@ That's why he created that method the way you don't like. One of you needs
 some additional education. Here is an opportunity for you to be a teacher
 of your colleague. To be an effective teacher, you need to show proof. You
 need to ground your logic and make sure he understands and accepts it.
+
+{% quote Remember that it's your job to prove that the code you're reviewing is bad. %}
 
 Be ready to show links, articles, books, reports, examples, etc. Just
 "_I know this because I've been writing Java for 15 years_" is not enough. Moreover,
