@@ -629,6 +629,7 @@ good, and how it could be better:
   * [Łukasz Konopski](http://lkonopski.blogspot.ru/2018/01/oop-is-not-dead-elegant-objects.html?utm_source=jvm-bloggers.com&utm_medium=link&utm_campaign=jvm-bloggers)
   * [Alexey Nikitin](http://www.nikialeksey.com/2018/01/30/elegant-objects-vol1-review.html) (in Russian)
   * [Manu Pijierro](https://medium.com/@mpijierro/review-del-libro-elegants-objects-vol-1-c0fbc5a0359e) (in Spanish)
+  * [Felix Roth](https://thinkingsideways.net/reviews/2019/02/10/elegant-objects-review.html)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)

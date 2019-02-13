@@ -77,24 +77,48 @@ follow me [on Twitter](https://www.twitter.com/yegor256) and
 [Lanyrd](http://lanyrd.com/profile/yegor256/)
 for the latest news. I'm also seen [somewhere else](/seen.html) sometimes.
 
-Here are topics I haven't spoken about yet but am planning to soon:
+This is what I'm going to speak about in the nearest future:
 
-  * [Puzzle-Driven Development]({% pst 2010/mar/2010-03-04-pdd %})
-  * [SOLID Is OOP for Dummies]({% pst 2017/mar/2017-03-28-solid %})
-  * [We Pay for Bugs]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
-  * [Inheritance Is a Procedural Technique for Code Reuse]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})
-  * [A Distributed Team Delivers Code of Higher Quality]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %})
+  * **The Biggest Mistake of an Honest Tester**.
+    Most of us programmers, testers, and their managers, believe that testing
+    is needed in order to make the software better. This is true. However,
+    many of us also believe that the job of a tester is to verify the software
+    and confirm that it's ready for end-users. Testing departments in most
+    software companies do exactly that---they go through their test scenarios,
+    validate that the functionality is still there and give the green light
+    for deployment. This kind of thinking is absolutely wrong, according to many
+    authors of software testing books. However, it still dominates the market.
+    Why it's happening? I will attempt to analyze and demonstrate by example
+    what's wrong with it.
 
-<!--
-  * [How Much Do You Love Conflict?]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %})
-  * [16 Don'ts of Career Growth]({% pst 2017/jan/2017-01-24-career-advice %})
--->
+  * **Is Java Getting Better?**.
+    The Java programming language is growing, getting new features every
+    new version. Some of them are coming from functional programming paradigm,
+    some from procedural one. How does it affect the object-orientation of
+    Java? Do we loose the OO spirit or we gain it? Do we need it in the first
+    place, if everything works just fine without it? I'll try to analyze
+    the changes Java introduced over the last years, since its version 1.6,
+    and find out which of them are making the language better or worse.
 
-If you are interested in hearing me speak at _your event_,
+  * **Can Distributed Teams Deliver Quality?**
+    It is a well known trend: software teams are becoming more distributed.
+    Programmers work from home, communicate remotely, contribute via
+    pull requests, and chat in Slack. How does it affect the quality
+    of software? Can those distributed teams compete with co-located ones?
+    Many managers think that it's impossible, because real quality
+    is achievable only when people know each other personally and have
+    direct face-to-face contacts on a daily basis. How true is that? I will
+    demonstrate that it's not true and will illustrate my thoughts with
+    practical examples.
+
+If you are interested in placing any of these speeches at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
 a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
+
+Ah, one more thing, starting now I only do talks in English.
+Not Russian any more, sorry.
 
 Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
 feel free to import it (to Google Calendar or iCal) and stay
