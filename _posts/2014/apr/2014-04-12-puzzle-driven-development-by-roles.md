@@ -150,6 +150,8 @@ SRS immediately - if I have enough time. However, it's not always
 possible. I can submit a bug and wait for its resolution; but, I don't
 want to keep my customers waiting.
 
+{% youtube LmSaC_OjIbQ %}
+
 This is where puzzle driven development
 helps me. Instead of submitting bug reports, I add
 "[TBD](http://en.wikipedia.org/wiki/To_be_announced)" puzzles in

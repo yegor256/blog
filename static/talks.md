@@ -95,7 +95,7 @@ This is what I'm going to speak about in the nearest future:
     The Java programming language is growing, getting new features every
     new version. Some of them are coming from functional programming paradigm,
     some from procedural one. How does it affect the object-orientation of
-    Java? Do we loose the OO spirit or we gain it? Do we need it in the first
+    Java? Do we lose the OO spirit or we gain it? Do we need it in the first
     place, if everything works just fine without it? I'll try to analyze
     the changes Java introduced over the last years, since its version 1.6,
     and find out which of them are making the language better or worse.
@@ -126,16 +126,12 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
-Nothing yet...
-
-<!--
 <div class="talk-event">&nbsp;</div>
-<img src="https://knect365.imgix.net/uploads/payment-png-23bd6dafb92ef0ae50b4f48efdb047f1.png" class="future-talk" alt="Payments International 2018"/><br/>
-The Next Big Thing: Beyond Blockchain – the Future of Cryptocurrency<br/>
-[Payments International 2018](https://finance.knect365.com/payments-international/speakers/yegor-bugayenko)<br/>
-London, UK<br/>
-26 November.
--->
+<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="future-talk" alt="SECON 2019"/><br/>
+Правильно ли мы тестируем<br/>
+[SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
+Penza, Russia<br/>
+19-20 April.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
