@@ -111,6 +111,16 @@ This is what I'm going to speak about in the nearest future:
     demonstrate that it's not true and will illustrate my thoughts with
     practical examples.
 
+  * **Reversive Decentralized Deployment: Zold Cryptocurrency Example**.
+    A traditional deployment scenario includes a central point of control,
+    which sends updates to server nodes. In our Zold cryptocurrency project
+    we were forced to create a different and reversive deployment model,
+    where distributed and anonymous servers pull updates from an open
+    public repository and restart themselves. The biggest problems we had
+    to solve were related to error tracking and resolving of exceptional
+    situations. In the presentation I will demonstrate how it works and we
+    will deploy a new version right on the stage.
+
 If you are interested in placing any of these speeches at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
