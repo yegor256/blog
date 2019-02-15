@@ -127,6 +127,13 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
+<img src="/images/2019/jpoint.png" class="future-talk" alt="JPoint 2019"/><br/>
+Software testing pitfalls<br/>
+[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/)<br/>
+Moscow, Russia<br/>
+6 April.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="future-talk" alt="SECON 2019"/><br/>
 Правильно ли мы тестируем<br/>
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
