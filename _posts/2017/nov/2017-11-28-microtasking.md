@@ -94,6 +94,8 @@ to take a _micro_-scope and get into the task to manage it from the inside,
 annoying its performers, whom we are supposed to trust. The micromanagement
 we do is _inevitable_, because the scope is not broken down.
 
+{% youtube tHeXxLdGqqI %}
+
 Scope decomposition was invented mostly in order to solve this very problem:
 to make the project more manageable. We need small tasks in the scope in order
 to be able to delegate them and never go inside in order to check what's going on
@@ -112,6 +114,8 @@ came down to 30 minutes.
 When tasks are bigger, we lose the manageability and simply get back to
 macro-tasking. When tasks are smaller, the context switching overhead
 becomes too annoying.
+
+{% youtube 1rmZN3r5SWg %}
 
 In our experience, a senior programmer, if fully dedicated to a project, completes
 6-10 tasks a day. This means that they spend 3-5 hours working, while

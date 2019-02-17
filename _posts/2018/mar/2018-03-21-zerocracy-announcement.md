@@ -65,6 +65,8 @@ do what they say. If they don't obey, violence helps. Scientists [think](https:/
 that humans are also very hierarchical creatures---we feel discomfort
 if we don't know who the boss is, who to submit to.
 
+{% youtube GozQCUH2D0I %}
+
 Thanks to this hierarchical instinct, just like lions, wolves, and monkeys,
 we manage our projects using force.
 We, unlike the animals, don't use physical violence anymore, at least not in the software business, but

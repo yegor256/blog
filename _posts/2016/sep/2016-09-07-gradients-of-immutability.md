@@ -165,3 +165,6 @@ that could change them. All encapsulated objects are `final`.
 This is the only quality that differentiates mutable objects from
 immutable ones. The latter are always loyal to the entities they
 encapsulate and represent. For all the rest ... it depends.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think, is it an immutable Java object:<br><br>final class Book {<br>  private final Path p;<br>  public String content() {<br>    return new String(Files.readAllBytes(this.p));<br>  }<br>}</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1097056700517863424?ref_src=twsrc%5Etfw">February 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

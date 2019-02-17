@@ -80,6 +80,8 @@ A good manager, on the other hand, is
 [_declarative_](https://en.wikipedia.org/wiki/Declarative_programming). A good manager
 declares what needs to be done, never telling me how I must achieve it.
 
+{% youtube 0Jte_LGR5Zk %}
+
 By the way, there is---surprisingly---a lot in common between management and
 object-oriented programming :) Good object-oriented programming is
 [also declarative]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}),
