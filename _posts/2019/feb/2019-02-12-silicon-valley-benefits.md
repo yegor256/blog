@@ -62,7 +62,7 @@ realize that you either become a millionaire ASAP or your life is wasted.
 For some this can be depressing, but for others it's a great push forward.
 I've experienced both.
 
-## Is is Easy Going
+## It is Easy Going
 
 Either it's a cultural thing for the whole of the US or something specific
 to the West Coast: They don't tend to make long-term, tight connections.
