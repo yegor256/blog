@@ -284,6 +284,8 @@ day that my code is buggy and needs improvements, my quality goes up.
 When nobody cares what I do or how good my results are, my quality
 goes _down_, no matter how self-motivated I am.
 
+{% youtube KUUzUb9arNg %}
+
 Meetings promote group achievements and
 [discourage]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
 individual ones. At the
