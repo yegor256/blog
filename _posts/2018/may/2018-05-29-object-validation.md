@@ -125,3 +125,6 @@ Ruby is less powerful than those languages, that's why we have to validate "manu
 Thus, to summarize, validating in constructors is _not_ a bad idea, provided
 the validations are _not touching the objects_ but only confirm that they are
 good enough to work with later.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How an ideal Java class BookInFile should react when this happens:<br><br>Book book = new BookInFile(null /* file name */);<a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> <a href="https://twitter.com/hashtag/java?src=hash&amp;ref_src=twsrc%5Etfw">#java</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1099590296105639936?ref_src=twsrc%5Etfw">February 24, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
