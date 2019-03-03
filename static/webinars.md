@@ -39,9 +39,17 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-<!-- {% webinar 13-02-2019 42 bVzEPOZ_mDU A practical example of making an object-oriented HTTP server in Java %} -->
+{% webinar 06-03-2019 43 xh6PSEmWcmg Adding thread-safety to existing objects, in Ruby %}
 
-<a href="https://www.youtube.com/watch?v=bVzEPOZ_mDU"><img src="https://i.ytimg.com/vi/bVzEPOZ_mDU/mqdefault.jpg" class="wnr" alt="Webinar no.41 by Yegor Bugayenko"/></a>
+<a href="https://www.youtube.com/watch?v=xh6PSEmWcmg"><img src="https://i.ytimg.com/vi/xh6PSEmWcmg/mqdefault.jpg" class="wnr" alt="Webinar no.43 by Yegor Bugayenko"/></a>
+March 06, 2019<br/>
+&#35;43: **Adding thread-safety to existing objects, in Ruby**<br/>
+Thread-safety is a quality some objects in OOP may possess, but some may
+not need that. It's a good practice to add thread-safety (unless you really
+need something very specific and fast) via decorators. Here we demonstrate
+how this can be done in Ruby.
+
+<a href="https://www.youtube.com/watch?v=bVzEPOZ_mDU"><img src="https://i.ytimg.com/vi/bVzEPOZ_mDU/mqdefault.jpg" class="wnr" alt="Webinar no.42 by Yegor Bugayenko"/></a>
 February 13, 2019<br/>
 &#35;42: **A practical example of making an object-oriented HTTP server in Java**<br/>
 Most web frameworks hide the details of HTTP requests processing
