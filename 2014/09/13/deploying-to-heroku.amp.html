@@ -81,6 +81,8 @@ including <a href="https://www.yegor256.com/2014/08/26/publish-to-rubygems.html"
 <a href="https://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html">CloudBees</a>
 and <a href="https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html">Maven Central</a>.</p>
 
+
+
 <p>This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
 all I do is create one message in a GitHub ticket. I just say
@@ -92,13 +94,9 @@ a free hosted DevOps assistant.</p>
 
 
 
-<h2 id="create-heroku-project">Create Heroku Project</h2>
-
 <p>Create a new project at <a href="http://www.heroku.com">Heroku.com</a>.</p>
 
 <p>Then install their <a href="https://toolbelt.heroku.com/">command line tool-belt</a>.</p>
-
-<h2 id="authenticate-at-heroku">Authenticate at Heroku</h2>
 
 <p>You should authenticate your public SSH key at Heroku, using
 their command line tool-belt. The process is explained
@@ -108,8 +106,6 @@ and enter your login credentials. As a result, you will get
 your existing key (located at <code>~/.ssh/id_rsa.pub</code>) authenticated by Heroku.</p>
 
 <p>If you didn’t have the key before, it will be created automatically.</p>
-
-<h2 id="encrypt-ssh-key">Encrypt SSH Key</h2>
 
 <p>Now, encrypt <code>id_rsa</code> and <code>id_rsa.pub</code> (they are in the <code>~/.ssh</code> directory)
 with a <a href="https://github.com/yegor256/rultor-remote">rultor remote</a>:</p>
@@ -124,8 +120,6 @@ $ rultor encrypt -p me/test id_rsa.pub</pre>
 Add them to the root directory of your project,
 commit and push. These files contain your secret information,
 but only the Rultor server can decrypt them.</p>
-
-<h2 id="create-rultor-configuration">Create Rultor Configuration</h2>
 
 <p>Create a <code>.rultor.yml</code> file in the root directory of your project
 (<a href="http://doc.rultor.com/reference.html">reference page</a>
@@ -150,8 +144,6 @@ release:
 
 <p>You can compare your file with live Rultor
 <a href="https://github.com/aintshy/hub/blob/master/.rultor.yml">configuration of aintshy/hub</a>.</p>
-
-<h2 id="run-it">Run It!</h2>
 
 
 

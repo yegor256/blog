@@ -209,6 +209,12 @@ that could change them. All encapsulated objects are <code>final</code>.</p>
 immutable ones. The latter are always loyal to the entities they
 encapsulate and represent. For all the rest … it depends.</p>
 
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">What do you think, is it an immutable Java object:<br><br>final class Book {<br>  private final Path p;<br>  public String content() {<br>    return new String(Files.readAllBytes(this.p));<br>  }<br>}</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1097056700517863424?ref_src=twsrc%5Etfw">February 17, 2019</a>
+</blockquote>
+
+
+
     </article>
   </body>
 </html>
