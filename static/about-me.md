@@ -79,13 +79,13 @@ subscribers).
 
 <form class="unprintable" action="https://www.mailanes.com/subscribe?list=1" method="POST"><fieldset id="form">
   <input type="hidden" name="redirect" value="https://www.yegor256.com/subscribed.html"/>
-  <label for="email">Your email</label>
+  <label for="email">Your email:</label>
   <input id="email" class="field field-text" tabindex="1" name="email" size="25" maxlength="255" type="email" required="required"/>
-  <label for="reason">Who are you and why are you interested?</label>
+  <label for="reason">Who are you and why are you interested:</label>
   <textarea id="reason" style="width:100%;" name="reason" tabindex="2" class="field field-text" rows="6" required="required"></textarea>
   <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field" tabindex="3" type="submit">Subscribe</button>
-  <span class="note">3697+ happy subscribers and counting...</span>
+  <span class="note">3865+ happy subscribers and counting...</span>
 </fieldset></form>
 
 By the way, this is what some people think about me
