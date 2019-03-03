@@ -22,6 +22,8 @@ including [RubyGems](https://www.yegor256.com/2014/08/26/publish-to-rubygems.htm
 [CloudBees](https://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html)
 and [Maven Central](https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html).
 
+{% badge /images/2014/09/heroku-logo.svg 100 http://www.heroku.com %}
+
 This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
 all I do is create one message in a GitHub ticket. I just say
