@@ -25,11 +25,12 @@ jb_picture:
 It is a very common problem in project management---how to make team
 members more responsible and avoid [micro
 management](http://en.wikipedia.org/wiki/Micromanagement)?
-
 We start with creating plans, drawing Gantt charts, announcing milestones,
 motivating everybody and promising big bonuses on success.
 
 <!--more-->
+
+{% jb_picture_body %}
 
 ## Excuses
 
@@ -80,11 +81,9 @@ and how to handle problems. Needless to say, this management style ruins the
 team and causes good people to leave even faster.
 
 However, in order to keep the project on track and meet all milestones,
-responsibility **must be** on the shoulders of the team members. They should be
+responsibility _must be_ on the shoulders of the team members. They should be
 responsible for their own tasks and report back to the project manager when they
 are finished with their jobs.
-
-{% jb_picture_body %}
 
 Implementation problems should be solved by team members on their own. So, how
 do we accomplish this in [XDSD](https://www.xdsd.org)?
