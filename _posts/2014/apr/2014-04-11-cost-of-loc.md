@@ -30,7 +30,7 @@ and discuss some very interesting numbers.
 
 <!--more-->
 
-{% youtube qRZYJGYdrwk %}
+{% jb_picture_body %}
 
 ## Project #1: Traditionally Co-located
 
@@ -46,8 +46,6 @@ non-empty and non-comment lines of code, using
 [`cloc.pl`](http://cloc.sourceforge.net/).
 
 It was a commercial project, so I can't disclose its name.
-
-{% jb_picture_body %}
 
 The team was co-located in one
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
@@ -93,6 +91,8 @@ so I can measure how many new lines (or changed lines) were introduced by both
 teams in, say, a three-month period.
 
 Now, let's see the numbers.
+
+{% youtube qRZYJGYdrwk %}
 
 The first project (the one that was co-located) was paying approximately
 &euro;50,000 annually to a good developer, which was about $5,600 per month or
