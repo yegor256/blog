@@ -33,13 +33,9 @@ a free hosted DevOps assistant.
 
 <!--more-->
 
-## Create Heroku Project
-
 Create a new project at [Heroku.com](http://www.heroku.com).
 
 Then install their [command line tool-belt](https://toolbelt.heroku.com/).
-
-## Authenticate at Heroku
 
 You should authenticate your public SSH key at Heroku, using
 their command line tool-belt. The process is explained
@@ -49,8 +45,6 @@ and enter your login credentials. As a result, you will get
 your existing key (located at `~/.ssh/id_rsa.pub`) authenticated by Heroku.
 
 If you didn't have the key before, it will be created automatically.
-
-## Encrypt SSH Key
 
 Now, encrypt `id_rsa` and `id_rsa.pub` (they are in the `~/.ssh` directory)
 with a [rultor remote](https://github.com/yegor256/rultor-remote):
@@ -67,8 +61,6 @@ You will get two new files `id_rsa.asc` and `id_rsa.pub.asc`.
 Add them to the root directory of your project,
 commit and push. These files contain your secret information,
 but only the Rultor server can decrypt them.
-
-## Create Rultor Configuration
 
 Create a `.rultor.yml` file in the root directory of your project
 ([reference page](http://doc.rultor.com/reference.html)
@@ -95,8 +87,6 @@ release:
 
 You can compare your file with live Rultor
 [configuration of aintshy/hub](https://github.com/aintshy/hub/blob/master/.rultor.yml).
-
-## Run It!
 
 {% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
