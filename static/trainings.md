@@ -26,7 +26,7 @@ project management.
 Usually, it's a one full-day **6-hours** course, split into two parts by
 three hours each. There could be from four to sixteen people in the room.
 
-The cost: **$500/hour** (plus travel and accomodation expenses; I currently reside in Moscow).
+The cost: **$600/hour** (plus travel and accomodation expenses; I currently reside in Moscow).
 
 Text me in [Telegram](https://t.me/yegor256) or [email](mailto:trainings@yegor256.com) when ready.
 
