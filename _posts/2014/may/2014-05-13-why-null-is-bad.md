@@ -294,7 +294,8 @@ an object has to take care of the caching of its own results---this is what lazy
 Caching is not something an employee does in the office, does he?
 
 The solution? Don't use lazy loading in such a primitive way,
-as in the example above. Instead, move this caching problem to
+as in the example above. Instead, [move]({% pst 2017/oct/2017-10-17-lazy-loading-caching-sticky-cactoos %})
+this caching problem to
 another layer of your application.
 
 For example, in Java, you can use aspect-oriented programming aspects.
