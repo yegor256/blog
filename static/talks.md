@@ -121,6 +121,26 @@ This is what I'm going to speak about in the nearest future:
     situations. In the presentation I will demonstrate how it works and we
     will deploy a new version right on the stage.
 
+  * **Five Trends We Are Afraid Of**.
+    Programming languages, frameworks, paradigms, deployment models,
+    hardware and software configurations change very often and fast. However, there
+    are a few other things that also change, and which scare us. First, it's the
+    inevitable trend of working out of office and even out of company, in
+    distributed temporary projects -- most of us are not ready for that and
+    don't know how to do it. Second, the attention to the quality of code we were
+    paying ten years ago is not what the future demands from us -- programmers
+    become a very expensive component of any project and they must think about
+    the maintainability mess they used to leave behind. Third, the world of open source
+    grows quickly and staying out of it is not an option anymore, however many
+    of us don't know how to deal with it. Fourth, we are getting closer to customers
+    and this is what many of us are not ready for, since we used to work from
+    behind an army of product owners, project managers, and customer relationship
+    managers -- this will be changed in the future and we must be ready. Fifth,
+    the quickly growing arsenal of cloud services makes it very important for
+    programmers to understand DevOps and know how to use not only frameworks
+    and libraries, but also hosted services. These five trends are important to
+    consider and get ourselves ready for them.
+
 If you are interested in placing any of these speeches at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
