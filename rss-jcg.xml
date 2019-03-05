@@ -466,7 +466,7 @@ another source of data, in the form of an iterator. I hope this example will hel
       <item>
         <title>Software Quality Award, 2015</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;I’m a big fan of rules and discipline in software development; as an example, see
 &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;Are You a Hacker or a Designer?&lt;/a&gt;.
@@ -1222,7 +1222,7 @@ a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
 how it all happened, in &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects/issues/80&quot;&gt;GitHub issue #80&lt;/a&gt;:&lt;/p&gt;
 
-&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2014/08/github-ticket-80.jpg&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;/images/2014/08/github-ticket-80.jpg&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you see, I gave a command to &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;,
 and it released a new version to Maven central. I didn’t do anything else.&lt;/p&gt;

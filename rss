@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-03-05T11:49:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Want to Live in Silicon Valley</title><link href="https://www.yegor256.com/2019/02/12/silicon-valley-benefits.html" rel="alternate" type="text/html" title="Why I Want to Live in Silicon Valley" /><published>2019-02-12T00:00:00+00:00</published><updated>2019-02-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/12/silicon-valley-benefits</id><content type="html" xml:base="https://www.yegor256.com/2019/02/12/silicon-valley-benefits.html">&lt;p&gt;You remember my blog post about
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-03-05T15:43:32+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Why I Want to Live in Silicon Valley</title><link href="https://www.yegor256.com/2019/02/12/silicon-valley-benefits.html" rel="alternate" type="text/html" title="Why I Want to Live in Silicon Valley" /><published>2019-02-12T00:00:00+00:00</published><updated>2019-02-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/12/silicon-valley-benefits</id><content type="html" xml:base="https://www.yegor256.com/2019/02/12/silicon-valley-benefits.html">&lt;p&gt;You remember my blog post about
 &lt;a href=&quot;/2018/12/18/silicon-valley-criticism.html&quot;&gt;&lt;em&gt;Why I Don’t Want to Live in Silicon Valley&lt;/em&gt;&lt;/a&gt;,
 don’t you? Read it first if you haven’t already. The gist of it is
 that Silicon Valley is a place with a lot of troubles. No one should want
@@ -266,7 +266,7 @@ a 25% discount off of your first year.
 Simply &lt;a href=&quot;mailto:support@cloudrepo.io&quot;&gt;shoot them an email&lt;/a&gt; when your account is created
 and they’ll take care of you (don’t forget to mention me, to get the discount).&lt;/p&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.cloudrepo.io&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2019/02/cloudrepo.png&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.cloudrepo.io&quot;&gt;&lt;img src=&quot;/images/2019/02/cloudrepo.png&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Assuming you have created an account with
 CloudRepo and &lt;a href=&quot;https://www.cloudrepo.io/docs/maven.html#pre-requisites&quot;&gt;setup both a user and maven repository&lt;/a&gt;,
@@ -481,7 +481,7 @@ but, obviously, we can’t claim an exact factor.&lt;/p&gt;
 and everybody else. Let’s take a look at the salary report from PayScale
 (I took this screenshot &lt;a href=&quot;https://www.payscale.com/research/US/Job=Computer_Programmer/Salary&quot;&gt;from here&lt;/a&gt;):&lt;/p&gt;
 
-&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://www.yegor256.com/images/2019/01/payscale.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;/images/2019/01/payscale.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;According to this report, the worst programmer gets $36K, while the best
 one gets $100K, which confirms the 3:1 ratio. It’s far from 10:1, but if
