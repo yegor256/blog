@@ -97,17 +97,15 @@ Ready?
 
 <div style="clean:both;"/>
 <img src="/images/trainings/martin-reichard.png" style="width:92px;height:92px;float:left;margin-right:.5em;margin-bottom:.5em;"/>
-March 2017 (12 people):
 "We really liked your workshop. It was awesome! You did
 a great job, and cool with how much energy you approached it.
 I think everyone learned a lot, I got a very positive
-feedback from everyone I spoke to,"<br/>
----[Martin Reichard](https://in.linkedin.com/pub/martin-reichard/35/43b/721),
-[Lotum.de](https://www.lotum.de).
+feedback from everyone I spoke to."<br/>
+---[Martin Reichard](https://in.linkedin.com/pub/martin-reichard/35/43b/721), [Lotum.de](https://www.lotum.de)<br/>
+March 2017, 12 people
 
 <div style="clean:both;"/>
 <img src="/images/trainings/alexander-tokmashev.png" style="width:92px;height:92px;float:left;margin-right:.5em;margin-bottom:.5em;"/>
-January 2019 (38 people):
 "Большинству тренинг понравился. Некоторые услышали Ваши идеи впервые и отнеслись к ним настороженно.
 В любом случае все получили возможность услышать альтернативную точку зрения на практики ООП.
 Понравилась Ваша манера подачи материала, все очень конкретно и на примерах.
@@ -115,5 +113,7 @@ January 2019 (38 people):
 уклончиво отвечает, что надо смотреть по ситуации и т.п. В отличие от таких лекторов
 у Вас все конкретно, если с чем-то не сталкивались или не согласны, то так и говорите.
 Большое спасибо за тренинг!"<br/>
----Александр Токмашев, [Код Безопасности](https://www.securitycode.ru/)
+---Александр Токмашев, [Код Безопасности](https://www.securitycode.ru/)<br/>
+January 2019, 38 people
+
 
