@@ -89,7 +89,7 @@ We don't allow anyone to retrieve `t` anymore. All they can do is
 convert temperature to text. If and when we decide to change `t` to Celsius,
 we will do it just once and in one place: in the class `Temperature`.
 
-{% quote Any data elements that escape objects are naked and lead to maintainability problems %}
+{% quote Any data elements that escape objects are naked and lead to maintainability problems. %}
 
 If we need other functions in the future, like math operations or conversion
 to Celsius, we add more methods to class `Temperature`. But we never
@@ -105,3 +105,6 @@ The question is how we can work entirely without naked data, right? Eventually
 we have to let objects exchange data, don't we? Yes, that's true. But not entirely.
 I'll explain that in
 [my next post]({% pst 2016/dec/2016-12-20-can-objects-be-friends %}).
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Has this Java class done enough to encapsulate the price? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class Book {<br>  private int price;<br>  public int getPrice() {<br>    return this.price;<br>  }<br>}</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1104652461430706177?ref_src=twsrc%5Etfw">March 10, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
