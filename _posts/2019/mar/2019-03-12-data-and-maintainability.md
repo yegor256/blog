@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Data Visibility Hurts Maintainability"
-date: 2019-02-28
+date: 2019-03-12
 place: Moscow, Russia
 tags: oop
 description: |
