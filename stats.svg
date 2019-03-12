@@ -471,9 +471,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '362.6,230.0 369.8,230.0 369.8,212.8 362.6,212.8 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M362.6,230.0 L362.6,212.9 L369.7,212.9 L369.7,230.0 L362.6,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '372.1,230.0 379.3,230.0 379.3,204.7 372.1,204.7 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '372.1,230.0 379.3,230.0 379.3,204.1 372.1,204.1 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M372.1,230.0 L372.1,204.8 L379.2,204.8 L379.2,230.0 L372.1,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M372.1,230.0 L372.1,204.2 L379.2,204.2 L379.2,230.0 L372.1,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '381.6,230.0 388.8,230.0 388.8,197.8 381.6,197.8 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M381.6,230.0 L381.6,197.9 L388.7,197.9 L388.7,230.0 L381.6,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -552,9 +552,12 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '618.3,230.0 625.7,230.0 625.7,169.4 618.3,169.4 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M618.3,230.0 L618.3,169.5 L625.6,169.5 L625.6,230.0 L618.3,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '628.0,230.0 635.3,230.0 635.3,184.4 628.0,184.4 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '628.0,230.0 635.0,230.0 635.0,184.4 628.0,184.4 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M628.0,230.0 L628.0,184.5 L635.2,184.5 L635.2,230.0 L628.0,230.0 Z  '/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M628.0,230.0 L628.0,184.5 L634.9,184.5 L634.9,230.0 L628.0,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(129, 179,  65)' points = '637.1,230.0 643.7,230.0 643.7,220.9 637.1,220.9 '/>
+	</g>
+	<path stroke='rgb(129, 179,  65)'  d='M637.1,230.0 L637.1,221.0 L643.6,221.0 L643.6,230.0 L637.1,230.0 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(129, 179,  65)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
