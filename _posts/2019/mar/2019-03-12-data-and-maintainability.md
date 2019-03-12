@@ -121,7 +121,7 @@ So, how about we create a programming language, which will not allow global
 variables? This will solve the problem. Programmers will have no technical
 ability to define them and their scopes will inevitably be smaller.
 
-I believe that objects [were invented]({ pst 2017/dec/2017-12-12-alan-kay-was-wrong })
+I believe that objects [were invented]({% pst 2017/dec/2017-12-12-alan-kay-was-wrong %})
 exactly to do that:
 to _force_ programmers to keep their scopes of visibility smaller. Well, actually,
 functions and sub-routines were invented for that too, but with a less
