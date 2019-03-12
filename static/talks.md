@@ -164,6 +164,12 @@ Moscow, Russia<br/>
 6 April.
 
 <div class="talk-event">&nbsp;</div>
+Микротаскинг или как обмануть начальника<br/>
+[StartupSamara](https://startupsamara.timepad.ru/event/926814/)<br/>
+Samara, Russia<br/>
+13 April.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="future-talk" alt="SECON 2019"/><br/>
 Правильно ли мы тестируем<br/>
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
