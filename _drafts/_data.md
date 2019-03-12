@@ -85,7 +85,7 @@ to read a 10-line block of code, instead of two 3-line blocks.
 I need to understand the entire method `print()` before I can start making any modifications.
 I need to understand the lifetime algorithm of that poor `i` and why,
 for example, it gets decremented by 10 instead of being reassigned to zero---this is
-the surprise previous programmers left for me. Maybe they were not aware about
+the surprise previous programmers left for me. Maybe they were not aware of
 the existence of `for` loops?
 
 It's obvious that the first snippet is better than the second one.
@@ -196,7 +196,7 @@ switch the paradigm from procedures and variables to objects and methods.
 methods and classes and said: "Use them, they are more convenient
 than variables, ... or maybe not, sometimes, ... I don't know"
 (I'm not sure it's his quote, but I believe that it's very close to what he
-had in mind). Read [his book](http://amzn.to/2uMlANB), you will see how many pages are dedicated to
+had in mind). Read [his book](http://amzn.to/2uMlANB), and you will see how many pages are dedicated to
 the philosophy of object orientation and how many to the technicalities of
 operators and statements.
 
@@ -227,7 +227,7 @@ private:
 }
 {% endhighlight %}
 
-And now here is the code of the `print()`:
+And now here is the code of `print()`:
 
 {% highlight cpp %}
 void print() {
