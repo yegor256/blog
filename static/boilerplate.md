@@ -40,10 +40,10 @@ Position:<br/>
 CEO
 
 Headshot (JPEG, 256x256):<br/>
-https://www.yegor256.com/images/face-256x256.jpg
+[https://www.yegor256.com/images/face-256x256.jpg](https://www.yegor256.com/images/face-256x256.jpg)
 
 Headshot (JPEG, 1024x1024):<br/>
-https://www.yegor256.com/images/face-1024x1024.jpg
+[https://www.yegor256.com/images/face-1024x1024.jpg](https://www.yegor256.com/images/face-1024x1024.jpg)
 
 Best speeches:
 
@@ -67,11 +67,14 @@ Address:<br/>
 555 Bryant Str, Ste 470,<br/>
 Palo Alto, CA 94301, USA.
 
-Phone:<br/>
+Phone/WhatsApp:<br/>
 +1 408.692.4742 (USA)
 
 Email:<br/>
 yegor256@gmail.com
+
+Telegram:<br/>
+[@yegor256](https://t.me/yegor256)
 
 Кратко:<br/>
 Основатель Zerocracy и автор книги Elegant Objects.
