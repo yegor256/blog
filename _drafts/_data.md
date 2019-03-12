@@ -21,13 +21,13 @@ jb_picture:
 
 I've been writing [so much](/tags/oop.html) about object-oriented programming and its
 [pitfalls]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %}),
-claiming that most of the design patterns and good practices, which we are accustomed to,
+claiming that most of the design patterns and "good practices" which we are accustomed to
 are actually [wrong and hurtful]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}),
 that I totally forgot to explain the bigger picture problem.
 Someone [asked](https://www.yegor256.com/2016/11/21/naked-data.html#comment-3879044054)
 me some time ago in the [blog post]({% pst 2016/nov/2016-11-21-naked-data %})
-about "naked" data: What is the problem we are solving and why exactly maintainability
-suffers if we don't _encapsulate_ our data enough? Here is the answer.
+about "naked" data: What is the problem we are solving and why exactly does maintainability
+suffer if we don't _encapsulate_ our data enough? Here is the answer.
 
 <!--more-->
 
@@ -39,14 +39,14 @@ my book entirely dedicated to the problem of modern object-oriented programming
 and found out that maintainability is directly mentioned there:
 "The main goal I'm trying to achieve with this writing is to
 increase the _maintainability_ of your code," and then it also explains
-that it is "the time required for me to understand your code." You
+that maintainability is "the time required for me to understand your code." You
 [can't argue with that](https://softwareengineering.stackexchange.com/questions/141005),
-but the question remains: how lack of "true" object-orientation and proper encapsulation
-may hurt readability?
+but the question remains: how does the lack of "true" object-orientation and proper encapsulation
+hurt readability?
 
 I don't know the exact answer, but here is my own version, derived from
 my years of coding and suffering: _smaller scope_ is the key success factor of
-better maintainability, and lack of encapsulation leads to a larger one. You know what
+better maintainability, and lack of encapsulation leads to a larger scope. You know what
 [scope of visibility](https://en.wikipedia.org/wiki/Scope_%28computer_science%29)
 is, right? Let's take this C code as an example:
 
@@ -78,28 +78,28 @@ void print() {
 }
 {% endhighlight %}
 
-Now, the scope of visibility of `i` is ten lines of code. The code works as good
+Now, the scope of visibility of `i` is ten lines of code. The code works as well
 as in the first snippet, but its maintainability is lower, because in order
 to understand what's going on and how to modify it, I need more time. I need
-to read a 10-lines block of code, instead of two 3-line blocks.
+to read a 10-line block of code, instead of two 3-line blocks.
 I need to understand the entire method `print()` before I can start making any modifications.
 I need to understand the lifetime algorithm of that poor `i` and why,
 for example, it gets decremented by 10 instead of being reassigned to zero---this is
-the surprise previous programmers left for me. Maybe they were not aware about
-the `for` loop existence?
+the surprise previous programmers left for me. Maybe they were not aware of
+the existence of `for` loops?
 
 It's obvious that the first snippet is better than the second one.
 The question is how do we _make_ programmers write code the way the first
 snippet is written and make the scope of each variable and function smaller?
 We can teach them, write books for them, convince them, train them, or maybe
-even punish for larger scope and less readable code, but if the
+even punish them for larger scope and less readable code, but if the
 programming language itself doesn't prevent these large scopes from happening,
 nothing will really help. It's better to invent a programming language or
-an entire programming paradigm to make it harder or impossible to grow the scope.
+an entire programming paradigm to make it harder, or impossible, to grow the scope.
 
 For example, the largest scope you can imagine in C/C++, Java, Ruby and many other
 modern languages is the [global]({% pst 2018/jul/2018-07-03-global-variables %})
-one, for example like here:
+one, for example here:
 
 {% highlight c %}
 int i = 0;
@@ -113,19 +113,19 @@ void print() {
 Now the variable `i` is visible not only inside the function `print()` but
 in <del>many</del> all other places of the application we develop. The scope
 of visibility of `i` is the size of the entire code base. Needless to say that
-it makes the code of function `print()` [very unreadable]({% pst 2018/jul/2018-07-03-global-variables %}).
+makes the code of function `print()` [very unreadable]({% pst 2018/jul/2018-07-03-global-variables %}).
 I simply can't know what value to expect in `i` when the execution of `print()` starts---I
 have to go through the entire code base to find it out. If it's a small app, maybe
 I will manage, but if it's a large piece of software, I will have big troubles.
-So, how about we create a programming language, which will not have global
+So, how about we create a programming language, which will not allow global
 variables? This will solve the problem. Programmers will have no technical
 ability to define them and their scopes will inevitably be smaller.
 
 I believe that objects [were invented]({ pst 2017/dec/2017-12-12-alan-kay-was-wrong })
 exactly to do that:
-to _force_ programmers keep their scopes of visibility smaller. Well, actually,
+to _force_ programmers to keep their scopes of visibility smaller. Well, actually,
 functions and sub-routines were invented for that too, but with a less
-stronger emphasis on the "force" part, since they could co-exist with code
+strong emphasis on the "force" part, since they could co-exist with code
 parts that were not decomposed yet. To the contrary, objects were supposed to be first-class
 citizens of an object world, communicating with objects only.
 
@@ -165,7 +165,7 @@ void print() {
 
 What changed? Not much. Instead of a plain "scalar" variable `i` we have
 an "object," which stores an integer value inside and provides a few methods
-to access it and modify. Did it help us minimize the scope. Not at all. Moreover,
+to access it and modify it. Did it help us minimize the scope? Not at all. Moreover,
 the length of `print()` is now even a few lines longer. But now we have
 an object and can call our code object-oriented!
 
@@ -176,19 +176,19 @@ know that its `v` is used as a step counter and that it gets multiplied by
 something before printing some text. `Idx` is a data holder, while the real
 logic is outside of it.
 
-Maintainability problem is not solved, the scope
+The maintainability problem is not solved, the scope
 is not smaller, the complexity of the code is not reduced. Moreover, it is
-increased, because now, in order to understand how `print()` works I have
+increased, because now, in order to understand how `print()` works, I have
 to know what is inside the `Idx`. The object paradigm in this particular
 example made a promise to take part of the problem and let me never worry about it,
-but in reality only made the problem larger, by giving me back two problems:
+but in reality it only made the problem larger, by giving me back two problems:
 `print()` and `Idx`.
 
 {% badge /images/2019/03/bjarne-stroustrup-book.jpg 96 http://amzn.to/2uMlANB %}
 
-Why thanks to C++? Because C++ added object-orientation on top of C procedural
-programming, never even thinking about prohibiting some of them, to _enforce_
-programmers write objects they way they are supposed to be written: as black
+Why is this thanks to C++? Because C++ added object-orientation on top of C procedural
+programming ideas, never even thinking about prohibiting some of them, to _force_
+programmers to write objects the way they are supposed to be written: as black
 boxes that encapsulate everything they need and never allow anyone from the
 outside to even _know_ what's inside! C++ didn't even make an attempt to
 switch the paradigm from procedures and variables to objects and methods.
@@ -196,12 +196,12 @@ switch the paradigm from procedures and variables to objects and methods.
 methods and classes and said: "Use them, they are more convenient
 than variables, ... or maybe not, sometimes, ... I don't know"
 (I'm not sure it's his quote, but I believe that it's very close to what he
-had in mind). Read [his book](http://amzn.to/2uMlANB), you will see how many pages are dedicated to
+had in mind). Read [his book](http://amzn.to/2uMlANB), and you will see how many pages are dedicated to
 the philosophy of object orientation and how many to the technicalities of
 operators and statements.
 
-A proper object-oriented solution would look differently and would involve
-true encapsulation, where data never "escapes" the borders of its owners. First,
+A proper object-oriented solution would look different and would involve
+true encapsulation, where data never "escapes" the borders of its owner. First,
 here is how I would design `Idx`... well, I would rename it first and call it
 `Line`:
 
@@ -227,7 +227,7 @@ private:
 }
 {% endhighlight %}
 
-And now here is the code of the `print()`:
+And now here is the code of `print()`:
 
 {% highlight cpp %}
 void print() {
@@ -239,19 +239,19 @@ void print() {
 {% endhighlight %}
 
 As you see, `print()` doesn't have any access to the internal data of `Line`.
-All `print()` can do is asking the `Line` to move forward and print itself. How exactly
-this logic is implemeted inside the `Line`---nobody knows and nobody wants to know.
+All `print()` can do is ask the `Line` to move forward and print itself. How exactly
+this logic is implemented inside the `Line`---nobody knows and nobody wants to know.
 Since we don't have any [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 in the `Line`, we can't fetch the data out of it.
 
 Since we can't get the data out, we can't build any logic in the `print()`. We
 simply have nothing to work with, no data, no integers, no numbers. We can only
-deal with objects, which don't trust us their internals. We can only _politely_ ask
+deal with objects, which don't trust us with their internals. We can only _politely_ ask
 them to do something for us. The scope of `print()` is pretty small now and
 very well _isolated_ from the internals of the `Line`. Proper encapsulation
 helped us achieve that: by not exposing the internals of the `Line` we made
-it impossible for anyone to invite them into their own scope. The `print()` can't
-do anything with the data encapsulated by the `Line`, technically.
+it impossible for anyone to invite themselves into its own scope. The `print()` simply can't
+do anything with the data encapsulated by the `Line`.
 
 Thus, the more visible and accessible the data is,
 the lower the maintainability.
