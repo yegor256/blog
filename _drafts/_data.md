@@ -240,7 +240,7 @@ void print() {
 
 As you see, `print()` doesn't have any access to the internal data of `Line`.
 All `print()` can do is ask the `Line` to move forward and print itself. How exactly
-this logic is implemeted inside the `Line`---nobody knows and nobody wants to know.
+this logic is implemented inside the `Line`---nobody knows and nobody wants to know.
 Since we don't have any [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 in the `Line`, we can't fetch the data out of it.
 
