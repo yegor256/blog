@@ -159,9 +159,9 @@ informed about everything I do publicly.
 <div class="talk-event">&nbsp;</div>
 <img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="future-talk" alt="CodeFest 2019"/><br/>
 Five Trends We Are Afraid Of<br/>
-[CodeFest](https://2019.codefest.ru/)<br/>
+[CodeFest](https://2019.codefest.ru/lecture/1515)<br/>
 Novosibirsk, Russia<br/>
-31 March.
+30 March.
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/jpoint.png" class="future-talk" alt="JPoint 2019"/><br/>
