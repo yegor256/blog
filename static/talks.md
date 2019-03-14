@@ -183,6 +183,13 @@ Samara, Russia<br/>
 Penza, Russia<br/>
 19-20 April.
 
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/appsconf.png" class="future-talk" alt="AppsConf 2019"/><br/>
+Opening Keynote<br/>
+[AppsConf'2019](http://appsconf.ru/moscow/2019)<br/>
+Moscow, Russia<br/>
+22 April.
+
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
 This is a very opinionated and subjective list of conferences
