@@ -91,7 +91,7 @@ This is what I'm going to speak about in the nearest future:
     Why it's happening? I will attempt to analyze and demonstrate by example
     what's wrong with it.
 
-  * **Is Java Getting Better?**.
+  * **Is Java Getting Better?**
     The Java programming language is growing, getting new features every
     new version. Some of them are coming from functional programming paradigm,
     some from procedural one. How does it affect the object-orientation of
