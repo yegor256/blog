@@ -171,6 +171,7 @@ Moscow, Russia<br/>
 6 April.
 
 <div class="talk-event">&nbsp;</div>
+<img src="/images/andreea/yegor-is-presenting.png" class="future-talk" alt="Samara 2019"/><br/>
 Микротаскинг или как обмануть начальника<br/>
 [StartupSamara](https://startupsamara.timepad.ru/event/926814/)<br/>
 Samara, Russia<br/>
