@@ -77,7 +77,56 @@ follow me [on Twitter](https://www.twitter.com/yegor256) and
 [Lanyrd](http://lanyrd.com/profile/yegor256/)
 for the latest news. I'm also seen [somewhere else](/seen.html) sometimes.
 
-This is what I'm going to speak about in the nearest future:
+Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
+feel free to import it (to Google Calendar or iCal) and stay
+informed about everything I do publicly.
+
+## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="future-talk" alt="CodeFest 2019"/><br/>
+Five Trends We Are Afraid Of<br/>
+[CodeFest](https://2019.codefest.ru/lecture/1515)<br/>
+Novosibirsk, Russia<br/>
+30 March.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/jpoint.png" class="future-talk" alt="JPoint 2019"/><br/>
+Software testing pitfalls<br/>
+[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/)<br/>
+Moscow, Russia<br/>
+6 April.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/andreea/yegor-is-presenting.png" class="future-talk" alt="Samara 2019"/><br/>
+Микротаскинг или как обмануть начальника<br/>
+[StartupSamara](https://startupsamara.timepad.ru/event/926814/)<br/>
+Samara, Russia<br/>
+13 April.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="future-talk" alt="SECON 2019"/><br/>
+Правильно ли мы тестируем<br/>
+[SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
+Penza, Russia<br/>
+19-20 April.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/appsconf.png" class="future-talk" alt="AppsConf 2019"/><br/>
+Opening Keynote<br/>
+[AppsConf'2019](http://appsconf.ru/moscow/2019)<br/>
+Moscow, Russia<br/>
+22 April.
+
+If you are interested in placing me at _your event_,
+please [email](mailto:event@yegor256.com). It's free.
+You will just have to pay for business-class airfare,
+a premium suite in a 5-star hotel, and a limo.
+OK, I'm kidding about the limo.
+Ah, one more thing, starting now I only do talks in English.
+Not Russian any more, sorry.
+These are the topics I'm interested to speak about and they are
+pretty fresh (I haven't presented them before, as of yet):
 
   * **The Biggest Mistake of an Honest Tester**.
     Most of us programmers, testers, and their managers, believe that testing
@@ -140,56 +189,6 @@ This is what I'm going to speak about in the nearest future:
     programmers to understand DevOps and know how to use not only frameworks
     and libraries, but also hosted services. These five trends are important to
     consider and get ourselves ready for them.
-
-If you are interested in placing any of these speeches at _your event_,
-please [email](mailto:event@yegor256.com). It's free.
-You will just have to pay for business-class airfare,
-a premium suite in a 5-star hotel, and a limo.
-OK, I'm kidding about the limo.
-
-Ah, one more thing, starting now I only do talks in English.
-Not Russian any more, sorry.
-
-Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
-feel free to import it (to Google Calendar or iCal) and stay
-informed about everything I do publicly.
-
-## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="future-talk" alt="CodeFest 2019"/><br/>
-Five Trends We Are Afraid Of<br/>
-[CodeFest](https://2019.codefest.ru/lecture/1515)<br/>
-Novosibirsk, Russia<br/>
-30 March.
-
-<div class="talk-event">&nbsp;</div>
-<img src="/images/2019/jpoint.png" class="future-talk" alt="JPoint 2019"/><br/>
-Software testing pitfalls<br/>
-[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/)<br/>
-Moscow, Russia<br/>
-6 April.
-
-<div class="talk-event">&nbsp;</div>
-<img src="/images/andreea/yegor-is-presenting.png" class="future-talk" alt="Samara 2019"/><br/>
-Микротаскинг или как обмануть начальника<br/>
-[StartupSamara](https://startupsamara.timepad.ru/event/926814/)<br/>
-Samara, Russia<br/>
-13 April.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="future-talk" alt="SECON 2019"/><br/>
-Правильно ли мы тестируем<br/>
-[SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
-Penza, Russia<br/>
-19-20 April.
-
-<div class="talk-event">&nbsp;</div>
-<img src="/images/2019/appsconf.png" class="future-talk" alt="AppsConf 2019"/><br/>
-Opening Keynote<br/>
-[AppsConf'2019](http://appsconf.ru/moscow/2019)<br/>
-Moscow, Russia<br/>
-22 April.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
