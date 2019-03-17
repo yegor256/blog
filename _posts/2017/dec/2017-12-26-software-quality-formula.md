@@ -81,3 +81,5 @@ during development. After a fixed period of 90 days, add customer-reported defec
 to internal defects and calculate the efficiency of internal removal. If the development
 team found 90 defects and customers reported 10 defects, then DRE is of course 90%."
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you measure the <a href="https://twitter.com/hashtag/quality?src=hash&amp;ref_src=twsrc%5Etfw">#quality</a> of your software product?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1107257289864556546?ref_src=twsrc%5Etfw">March 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
