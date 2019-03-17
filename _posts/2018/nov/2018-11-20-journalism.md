@@ -63,6 +63,8 @@ the IEEE Software editor thinks that it's something everybody is already using.
 
 Ironic, huh?
 
+{% quote If you want to be published, say what everybody else is saying. %}
+
 Finally, I submitted that very same article to the blog section of the Communications of the ACM
 and it was [published](https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext) there,
 maybe thanks to the objectivity of Lawrence Fisher, their editor.
