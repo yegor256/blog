@@ -68,6 +68,8 @@ are probably the best two of them. Managers invent [nice words]({% pst 2018/aug/
 for these things, but in reality it's still the same carrot-and-stick, only with no predictability and
 no explicit [rules]({% pst 2015/oct/2015-10-13-competition-without-rules %}).
 
+{% youtube ezE0hRH9BnQ %}
+
 However, if you think that you can control _professional_ programmers
 using the methods explained in my blog posts above, you are mistaken.
 We are way smarter than you. We know how to pretend to be working, while
