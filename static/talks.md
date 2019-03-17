@@ -140,6 +140,16 @@ pretty fresh (I haven't presented them before, as of yet):
     Why it's happening? I will attempt to analyze and demonstrate by example
     what's wrong with it.
 
+  * **Are You Sure You Are Not a Micromanager?**
+    Do you know what micromanagement is? It's when your manager is telling
+    you exactly what you have to do right now in order to achieve the results
+    he or she wants. The micromanager doesn't trust you and that's
+    why wants and needs to control every step you make. It's annoying and
+    unproductive, but it's inevitable unless you have small tasks and
+    a transparent and unambiguous system of rewards and punishment. The question
+    is how you can define an obvious and transparent motivational system.
+    A number of options will be suggested.
+
   * **Is Java Getting Better?**
     The Java programming language is growing, getting new features every
     new version. Some of them are coming from functional programming paradigm,
@@ -189,6 +199,16 @@ pretty fresh (I haven't presented them before, as of yet):
     programmers to understand DevOps and know how to use not only frameworks
     and libraries, but also hosted services. These five trends are important to
     consider and get ourselves ready for them.
+
+  * **Weak Management Needs Pay Equality**.
+    The average salary of American workers is growing 1% every year, while
+    the pay gap between similar jobs is decreasing. What do I think about
+    this trend? Does it sound like people are getting more every year and
+    it's good? Not at all. This trend is completely against what a good management should
+    fighting for: unequal pay for unequal contribution. A strong manager wants to work
+    with free people, who get what they deserve because of their work, not
+    because of their place in the company. Meritocracy is yet another name
+    for the movement we are leading now in the industry of software development.
 
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
