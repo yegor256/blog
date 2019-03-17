@@ -22,7 +22,8 @@ jb_picture:
 How do you design a web application in Java? You install Spring, read
 the manual, create [controllers]({% pst 2015/mar/2015-03-09-objects-end-with-er %}),
 some views, add some [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}), and it
-works. What would you do if there would be no Spring (and no Ruby on Rails
+works. What would you do if there would be no
+[Spring](https://spring.io/) (and no Ruby on Rails
 in Ruby, and no Symphony in PHP, and no ... etc.)? Let's try to create
 a web application from scratch, starting from a pure Java SDK and ending
 with a fully functionable web app, covered by unit tests. I recorded

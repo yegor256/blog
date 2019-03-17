@@ -56,9 +56,10 @@ we are going to solve? Basically, there are two problems:
 
 To overcome them both, in [Zold](https://github.com/zold-io/zold),
 a Ruby command line application, I decided to pass `log` as a variable
-to all classes that need any logging. In Ruby it's easier that in Java,
-because they have optional parameters. Look at this class, for example
-(it's a simplified version, of course):
+to all classes that need any logging. In Ruby it's easier than in Java,
+because they have [optional](https://stackoverflow.com/questions/35747905)
+parameters. Look at [this class](https://github.com/zold-io/zold/blob/0.26.17/lib/zold/commands/list.rb),
+for example (it's a simplified version, of course):
 
 {% highlight ruby %}
 class Zold::List
