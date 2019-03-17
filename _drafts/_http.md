@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "How to Create a Java Web Framework from Scratch the Right Object-Oriented Way"
+title: "How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way"
 date: 2019-02-28
 place: Moscow, Russia
 tags: java oop
 description: |
-  ...
+  Most of us are used to data transfer objects, which
+  are the corner stone of modern web frameworks; however,
+  they are not object-oriented design.
 keywords:
   - java web framework
   - java http framework
@@ -18,7 +20,8 @@ jb_picture:
 ---
 
 How do you design a web application in Java? You install Spring, read
-the manual, create controllers, some views, add some annotations, and it
+the manual, create [controllers]({% pst 2015/mar/2015-03-09-objects-end-with-er %}),
+some views, add some [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}), and it
 works. What would you do if there would be no Spring (and no Ruby on Rails
 in Ruby, and no Symphony in PHP, and no ... etc.)? Let's try to create
 a web application from scratch, starting from a pure Java SDK and ending
@@ -36,7 +39,7 @@ server socket, listen to incoming connections, read everything they
 have to say (HTTP requests) and return back the information any
 web browser will like (HTTP responses). You know how
 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) works, right?
-If you don't, here is a quick reminder.
+If you don't, here is a quick reminder:
 
 A web browser sends a request to the server and the request looks
 like this (it's a plain text piece of data):
@@ -57,9 +60,9 @@ Content-Length: 26
 <html>Hello, world!</html>
 {% endhighlight %}
 
-That's it. It's a very simple and I would say primitive protocol. The implementation
+That's it. It's a very simple and, I would say, primitive protocol. The implementation
 of a web server in Java is not so complex too. Here it is, in a very
-primitive form:
+simplistic form:
 
 {% highlight java %}
 import java.io.IOException;
@@ -102,19 +105,205 @@ of HTTP requests into HTTP responses. There is nothing serious about OOP
 in it, though. It's pretty procedural, but it works. Now we should focus
 on a more important question: how to add more features to the web app
 and make it possible to process different pages, render larger content,
-and handle errors. The `request` variable should be somehow converted to the
-`response` one.
+and handle errors. The `request` variable in the snippet above
+should be somehow converted to the `response` one.
 
-The easiest way would be 1) to convert the request into a DTO with all
-the details inside, then 2) send it to a "controller" that knows what to
+The easiest way would be 1) to convert the request into a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %})
+with all the details inside, then 2) send it to a "controller" that knows what to
 do with the data from the DTO, and then 3) receive a response DTO from
 the controller, take the data out and render the response. This is how
-Spring and <del>most</del> all other frameworks do it. We won't follow this
-path, we will try to do it DTO-free and purely object-oriented.
+Spring and <del>most</del> all other frameworks do it. However, we won't follow this
+path, we will try to do it DTO-free and [purely]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
+object-oriented.
 
 I have to say that there could be multiple designs, all in OOP style. I'll
-show you now only one of the options. You know our Takes framework, which
-was born a few years ago---it has its own design, also object-oriented. But they
-one I'm going to suggest now seems to be a better one. You may come up
+show you now only one of the options. You most definitely are aware of
+our [Takes](https://www.takes.org) framework, which
+was born a few years ago---it has its own design, also object-oriented. But the
+one I'm going to suggest now seems to be better. You may come up
 with something else too, don't hesitate to post your ideas in the comments
 below or even create a GitHub repo and share your thoughts right there.
+
+I'm suggesting to introduce two interfaces: `Resource` and `Output`. The `Resource`
+is the server side entity, which mutates depending on the request parameters
+that are coming in. For example, when all we know about the request is that
+it is `GET /`, it is one resource. But if we also know that the
+request has, for example, `Accept: text/plain`, we can mutate the request
+and create a new one, which delivers plain text. Here is the interface:
+
+{% highlight java %}
+interface Resource {
+  Resource refine(String name, String value);
+}
+{% endhighlight %}
+
+Here is how we create it and mutate:
+
+{% highlight java %}
+Resource r = new DefaultResource()
+  .refine("X-Method", "GET")
+  .refine("X-Query", "/")
+  .refine("Accept", "text/plain");
+{% endhighlight %}
+
+Pay attention, that each next call to `.refine()` returns a new instance
+of interface `Resource`. All of them are immutable, just like objects
+[have to be]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
+Thanks to this design we don't separate [data]({% pst 2016/nov/2016-11-21-naked-data %})
+from their processor. The resource is the data and the processor. Each resource
+knows what to do with the data, and receives only the data it is supposed
+to receive. Technically, we just implement _request dispatching_, but in
+an object-oriented way.
+
+Then, we should convert the resource to the response. We should give the
+resource an ability to render itself to the response. We don't want the
+[data]({% pst 2016/nov/2016-11-21-naked-data %}), in form of some DTO,
+to escape the resource. We want the resource
+[to print]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}) the
+response. How about addition an additional method `print()` to the resource:
+
+{% highlight java %}
+interface Resource {
+  Resource refine(String name, String value);
+  void print(Output output);
+}
+{% endhighlight %}
+
+And then the interface `Output`:
+
+{% highlight java %}
+interface Output {
+  void print(String name, String value);
+}
+{% endhighlight %}
+
+Here is a primitive implementation of `Output`:
+
+{% highlight java %}
+public class StringBuilderOutput implements Output {
+  private final StringBuilder buffer;
+  StringBuilderOutput(StringBuilder buf) {
+    this.buffer = buf;
+  }
+  @Override
+  public void print(String name, String value) {
+    if (this.buffer.length() == 0) {
+      this.buffer.append("HTTP/1.1 200 OK\r\n");
+    }
+    if (name.equals("X-Body")) {
+      this.buffer.append("\r\n").append(value);
+    } else {
+      this.buffer.append(name).append(": ").append(value).append("\r\n");
+    }
+  }
+}
+{% endhighlight %}
+
+To build an HTTP response we can do this:
+
+{% highlight java %}
+StringBuilder builder = new StringBuilder();
+Output output = new StringBuilderOutput(builder);
+output.print("Content-Type", "text/plain");
+output.print("Content-Length", "13");
+output.print("X-Body", "Hello, world!");
+System.out.println(builder.toString());
+{% endhighlight %}
+
+Now, let's create a class, which will take an incoming request `String`
+and produce a response String`, using an instance of `Resource` as a
+_dispatcher_:
+
+{% highlight java %}
+public class Session {
+  private final Resource resource;
+  Session(Resource res) {
+    this.resource = res;
+  }
+  String response(String request) throws IOException {
+    Map<String, String> pairs = new HashMap<>();
+    String[] lines = request.split("\r\n");
+    for (int idx = 1; idx < lines.length; ++idx) {
+      String[] parts = lines[idx].split(":");
+      pairs.put(parts[0].trim(), parts[1].trim());
+      if (lines[idx].empty()) {
+        break;
+      }
+    }
+    String[] parts = lines[0].split(" ");
+    pairs.put("X-Method", parts[0]);
+    pairs.put("X-Query", parts[1]);
+    pairs.put("X-Protocol", parts[2]);
+    App.Resource res = this.resource;
+    for (Map.Entry<String, String> pair : pairs.entrySet()) {
+      res = res.refine(pair.getKey(), pair.getValue());
+    }
+    StringBuilder buf = new StringBuilder();
+    res.print(new StringBuilderOutput(buf));
+    return buf.toString();
+  }
+}
+{% endhighlight %}
+
+First, we parse the request, breaking its header into lines and ignoring
+the body of the request. You can modify the code to parse the body
+and pass it into the `refine()` method do, using `X-Body` as as the key. At
+the moment the code above doesn't do that. But you get the idea. The parsing
+part of the snippet prepares the pairs it can find in the request and passes them one by one
+to the encapsulated resource, mutating it until it gets to the final form.
+A simple resource that always returns a text may look like this:
+
+{% highlight java %}
+class TextResource implements Resource {
+  private final String body;
+  public TextResource(String text) {
+    this.body = text;
+  }
+  @Override
+  public Resource refine(String name, String value) {
+    return this;
+  }
+  @Override
+  public void print(Output output) {
+    output.print("Content-Type", "text/plain");
+    output.print("Content-Length", Integer.toString(this.body.length()));
+    output.print("X-Body", this.body);
+  }
+}
+{% endhighlight %}
+
+A resource that pays attention to the query string and dispatches
+the request to other resources, depending on the path in the query,
+may look like this:
+
+{% highlight java %}
+new Resource() {
+  @Override
+  public Resource refine(String name, String value) {
+    if (name.equals("X-Query")) {
+      if (value.equals("/")) {
+        return new TextResource("Hello, world!");
+      } else if (value.equals("/balance")) {
+        return new TextResource("256");
+      } else if (value.equals("/id")) {
+        return new TextResource("yegor");
+      } else {
+        return new TextResource("Not found!");
+      }
+    } else {
+      return this;
+    }
+  }
+  @Override
+  public void print(final Output output) {
+    throws IllegalStateException("This shouldn't happen");
+  }
+}
+{% endhighlight %}
+
+I hope you got the idea. The code above is rather sketchy, the majority
+of use cases are not implemented, but you can do it yourself, if you are
+interested. The code is in the [yegor256/jpages](https://github.com/yegor256/jpages)
+repository. Don't hesitate to contribute with a pull request and make this
+small framework real.
+

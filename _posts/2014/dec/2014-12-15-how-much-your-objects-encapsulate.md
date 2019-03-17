@@ -81,7 +81,7 @@ class Time {
 
 This class has two constructors. One of them is the main one, and one is
 supplementary. We're interested in the main one, which implements
-the [*encapsulation*]({% pst 2016/nov/2016-11-21-naked-data %}) of arguments.
+the [_encapsulation_]({% pst 2016/nov/2016-11-21-naked-data %}) of arguments.
 
 {% youtube 9yjtsCK6Wdk %}
 
