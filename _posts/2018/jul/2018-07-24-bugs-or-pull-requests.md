@@ -41,6 +41,8 @@ If the Code Base Is Bad, Why Don't You Report Bugs?
 
 If the Code Base Is Good, Where Are Your Pull Requests?
 
+{% youtube _ppWQCCT8zE %}
+
 There is only one metric on our projects, which separates good programmers
 from bad ones: the amount of money they are making.
 You can make money contributing to the project either by
