@@ -50,7 +50,7 @@ we are going to solve? Basically, there are two problems:
   * Second, when you decide to show a selected part of the log to your
     end-user, you will have to do a lot of coding, in order to separate
     what belongs to the user and what does not, especially in a multi-threaded
-    envirinonment. You are lucky if it's Java and you have thread groups,
+    environment. You are lucky if it's Java and you have thread groups,
     but in Ruby, for example, there is no such thing and you will have to
     find some workaround.
 
@@ -97,7 +97,7 @@ capture everything that `Zold::List` sends out. Then I can check what's there.
 
 Am I saying obvious things here? If so, why do we
 [still have]({% pst 2014/may/2014-05-23-avoid-java-static-logger %}) static
-loggers everythere in Java, Ruby, PHP, C#, etc?
+loggers everywhere in Java, Ruby, PHP, C#, etc?
 Anyway, I recommend you use an injectable logging dependency instead.
 
 And yeah, by the say, I'm sure you noticed the change in the name. It's not
