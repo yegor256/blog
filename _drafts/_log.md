@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: oop
 description: |
   Traditionally in Java and many other languages we
-  use static loggers, which are in essense global variables
+  use static loggers, which are in essence global variables
   or singletons; there is a better way to log.
 keywords:
   - static logger
@@ -37,20 +37,20 @@ differently, and since then I'm much happier than I was before.
 Well, if your application is simple and has almost no unit or integration
 tests, you will be doing just fine with a static logger, which in essence
 is a global variable. However, as we [discussed before]({% pst 2018/jul/2018-07-03-global-variables %}),
-global variables are evil. What may wrong if we use a static logger?
-In other words, as one of my friend used to say, what exactly is the problem
+global variables are evil. What can go wrong if we use a static logger?
+Or, in other words, as one of my friends used to say, what exactly is the problem
 we are going to solve? Basically, there are two problems:
 
-  * First, with a single global logger you will have hard time
+  * First, with a single global logger you will have a hard time
     writing a unit test to check whether your app is actually logging
-    things right. Even if you intercept the log stream, there will be
+    things correctly. Even if you intercept the log stream, there will be
     a lot of noise, coming from other threads and other tests. It's not
-    an unsolveable problem, but its resolving adds complexity to your tests.
+    an unsolvable problem, but its solution adds complexity to your tests.
 
   * Second, when you decide to show a selected part of the log to your
-    end-user, you will have to do a lot of coding, in order to separate
-    what's there belongs to the user and what is not, especially in a multi-threaded
-    envirinonment. You are lucky if it's Java and you have thread groups,
+    end-user, you will have to do a lot of coding just in order to separate
+    what belongs to the user and what does not, especially in a multi-threaded
+    environment. You're lucky if it's Java and you have thread groups,
     but in Ruby, for example, there is no such thing and you will have to
     find some workaround.
 
@@ -79,7 +79,7 @@ end
 
 This class is supposed to list all wallets in the current directory and print
 their balances to the log, which _in some cases_ will be the console. However,
-when this class is being called from a web application, the destination of the
+when this class is called from a web application, the destination of the
 print is a temporary file, which is later rendered on the web page. In unit
 tests it can be something else, which has to capture everything that is sent
 to the log and then delivered to the unit test.
@@ -87,18 +87,18 @@ to the log and then delivered to the unit test.
 As you see, the default value of the `log` is `Log::NULL`, which is the
 constant I had to define myself, as a default logger, which doesn't log
 anything anywhere. By default, this class will log nothing. It will quietly
-check all the balances of all wallets and print nothing. Well, it will print,
+check all the balances of all the wallets and print nothing. Well, it will print,
 but nobody will see that.
 
 In a unit test I create an object with a few methods like `debug()`, `info()`,
 etc. and pass it to the instance of class `Zold::List`, which I'm testing.
 In other words, it's a fake/mock version of the logger, which I use to
-capture everything that `Zold::List` sends out. Then, I can check what's there.
+capture everything that `Zold::List` sends out. Then I can check what's there.
 
 Am I saying obvious things here? If so, why do we
 [still have]({% pst 2014/may/2014-05-23-avoid-java-static-logger %}) static
-loggers everythere in Java, Ruby, PHP, C#, etc?
-Anyway, I recommend to use an injectable logging dependency instead.
+loggers everywhere in Java, Ruby, PHP, C#, etc?
+Anyway, I recommend you use an injectable logging dependency instead.
 
 And yeah, by the say, I'm sure you noticed the change in the name. It's not
 a `logger` anymore, it's `log`. I'm sure you know
