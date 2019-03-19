@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Logging Without a Static Logger"
-date: 2019-03-28
+date: 2019-03-19
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - java static logger
   - java logger
   - ruby logger
-image: /images/2019/03/...
+image: /images/2019/03/the-square.jpg
 jb_picture:
-  caption:
+  caption: The Square (2017) by Ruben Östlund
 ---
 
 How do you organize logging in your applications? I mean web applications
