@@ -38,19 +38,19 @@ Well, if your application is simple and has almost no unit or integration
 tests, you will be doing just fine with a static logger, which in essence
 is a global variable. However, as we [discussed before]({% pst 2018/jul/2018-07-03-global-variables %}),
 global variables are evil. What can go wrong if we use a static logger?
-Or, in other words, as one of my friend used to say, what exactly is the problem
+Or, in other words, as one of my friends used to say, what exactly is the problem
 we are going to solve? Basically, there are two problems:
 
   * First, with a single global logger you will have a hard time
     writing a unit test to check whether your app is actually logging
-    things right. Even if you intercept the log stream, there will be
+    things correctly. Even if you intercept the log stream, there will be
     a lot of noise, coming from other threads and other tests. It's not
     an unsolvable problem, but its solution adds complexity to your tests.
 
   * Second, when you decide to show a selected part of the log to your
-    end-user, you will have to do a lot of coding, in order to separate
+    end-user, you will have to do a lot of coding just in order to separate
     what belongs to the user and what does not, especially in a multi-threaded
-    environment. You are lucky if it's Java and you have thread groups,
+    environment. You're lucky if it's Java and you have thread groups,
     but in Ruby, for example, there is no such thing and you will have to
     find some workaround.
 
