@@ -95,7 +95,7 @@ Novosibirsk, Russia<br/>
 Software testing pitfalls<br/>
 [JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/)<br/>
 Moscow, Russia<br/>
-6 April.
+5 April.
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/andreea/yegor-is-presenting.png" class="future-talk" alt="Samara 2019"/><br/>
@@ -109,7 +109,7 @@ Samara, Russia<br/>
 Правильно ли мы тестируем<br/>
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
 Penza, Russia<br/>
-19-20 April.
+19 April.
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/appsconf.png" class="future-talk" alt="AppsConf 2019"/><br/>
