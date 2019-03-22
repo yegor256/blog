@@ -18,6 +18,12 @@ keywords:
 image: /images/2014/12/arizona-dream-car-shop.png
 jb_picture:
   caption: Arizona Dream (1992) by Emir Kusturica
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "Using Independent Technical Reviews to Ensure Project Success"
+    date: 2019-03-22
+    url: https://cacm.acm.org/blogs/blog-cacm/235642-using-independent-technical-reviews-to-ensure-project-success/fulltext
 ---
 
 Do you have a team of brilliant and enthusiastic programmers? Of course! You've carefully
