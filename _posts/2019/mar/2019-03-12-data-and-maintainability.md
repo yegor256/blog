@@ -260,3 +260,5 @@ The very idea of object-oriented programming is based on encapsulation, which
 doesn't mean just restricting the ability to modify object attributes from the
 outside, but also prohibiting everyone from reading those attributes.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What is wrong with this Java object? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> <a href="https://twitter.com/hashtag/java?src=hash&amp;ref_src=twsrc%5Etfw">#java</a><br><br>final class Time {<br>  int getHours();<br>  int getMinutes();<br>  int getSeconds();<br>}</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1109750701285142533?ref_src=twsrc%5Etfw">March 24, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
