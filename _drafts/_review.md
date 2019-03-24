@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "How to Review a Software Project"
-date: 2018-07-12
+date: 2019-04-01
 place: Moscow, Russia
-tags: management
+tags: architect
 description: |
   They ask you to review a project; how do you do
   that, what do you pay attention to, how your
@@ -19,9 +19,11 @@ jb_picture:
   caption:
 ---
 
-A few years ago I wrote about [independent technical reviews]({% pst 2014/dec/2014-12-18-independent-technical-reviews %})
+A few years ago I wrote about
+[independent technical reviews]({% pst 2014/dec/2014-12-18-independent-technical-reviews %})
 any software project must regularly go through in order
-to make sure everything is under control. I even [said recently]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
+to make sure everything is under control. I even
+[said recently]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
 that there could be no excuse for not doing them. Moreover, the more
 we trust programmers, the higher the necessity to review their projects regularly.
 Here is a short summary of what a report from a reviewer must include.
@@ -46,13 +48,13 @@ Basically, it's a list of questions a reviewer must answer.
 When all answers are collected, the report is ready.
 Most important questions are at the top.
 
-  * The release procedure is documented and automated?
+  * The release procedure is documented, automated, and works?
   * Releases happen frequently, at least once a week?
   * How big is the technical debt (things the "eventually" should be fixed)?
   * The delivery pipeline is strong enough to reject mistakes?
   * How clean is the code? How many [anti-patterns]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})?
   * Bugs and features are registered as [tickets]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})?
-  * The code base is covered by unit tests?
+  * The code base is covered by unit tests, and coverage is visible?
   * "Work for Hire" agreements are signed with all developers?
   * Key architectural technical decisions are documented?
   * Static analysis is in place and is [mandatory]({% pst 2018/jan/2018-01-16-educational-aspect-of-static-analysis %}) for new changes?
@@ -61,16 +63,18 @@ Most important questions are at the top.
   * Programming metrics are collected and reviewed regularly?
   * The source code repository is under customer's ownership and control?
   * Requirements documentation is short and up to date?
-  * Code coverage metric is under control?
   * Key classes, methods and functions have in-code documentation?
   * The source code repository is garbage free?
-  * User interfaces are documented?
+  * UI/UX interfaces are documented?
   * Production logs are visible and regularly reviewed?
   * How responsive the team is to the tickets?
   * Revision control system has a clear history of documented changes?
 
-Maybe I forgot something?
-Please post your comments below and I will update the list.
+Essentially, this is a very short compilation of the most important things
+you can find in [CMMI](https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration).
+They require this and a large list of other things on top of that. But a small
+project doesn't need everything they ask you to have. My list is shorter
+and, I'm sure, will be just enough for most of you.
 
 By the way, you can see the reports volunteers create for the participants
 of my [Software Quality Award](/award.html). They analyze open source projects
