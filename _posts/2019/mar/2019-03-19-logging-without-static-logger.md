@@ -100,7 +100,7 @@ Am I saying obvious things here? If so, why do we
 loggers everywhere in Java, Ruby, PHP, C#, etc?
 Anyway, I recommend you use an injectable logging dependency instead.
 
-And yeah, by the say, I'm sure you noticed the change in the name. It's not
+And yeah, by the way, I'm sure you noticed the change in the name. It's not
 a `logger` anymore, it's `log`. I'm sure you know
 [why]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).
 
