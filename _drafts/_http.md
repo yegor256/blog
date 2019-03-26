@@ -26,7 +26,7 @@ works. What would you do if there were no
 [Spring](https://spring.io/) (and no Ruby on Rails
 in Ruby, and no Symphony in PHP, and no ... etc.)? Let's try to create
 a web application from scratch, starting from a pure Java SDK and ending
-with a fully functionable web app, covered by unit tests. I recorded
+with a fully functional web app, covered by unit tests. I recorded
 a [webinar no.42](https://www.youtube.com/watch?v=bVzEPOZ_mDU)
 about it just a few weeks ago, but this article should explain it
 all in even more detail.
@@ -107,7 +107,7 @@ in it though. It's pretty procedural, but it works. Now we should focus
 on a more important question: How do we add more features to the web app
 and make it possible to process different pages, render larger content,
 and handle errors? The `request` variable in the snippet above
-should be somehow converted to the `response` one.
+should be somehow converted to a `response`.
 
 The easiest way would be 1) to convert the request into a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %})
 with all the details inside, then 2) send it to a "controller" that knows what to
@@ -249,7 +249,7 @@ public class Session {
 First, we parse the request, breaking its header into lines and ignoring
 the body of the request. You can modify the code to parse the body
 and pass it into the `refine()` method too, using `X-Body` as the key. At
-the moment the code above doesn't do that. But you get the idea. The parsing
+the moment, the code above doesn't do that. But you get the idea. The parsing
 part of the snippet prepares the pairs it can find in the request and passes them one by one
 to the encapsulated resource, mutating it until it gets to the final form.
 A simple resource that always returns text might look like this:
