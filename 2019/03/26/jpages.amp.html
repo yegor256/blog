@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way</title>
+    <link rel="canonical" href="https://www.yegor256.com/2019/03/26/jpages.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2019/03/26/jpages.html"
+        },
+        "headline": "How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2019/03/breakfast-at-tiffanys.jpg",
+          "height": 1080,
+          "width": 1920
+        },
+        "datePublished": "2019-03-26",
+        "dateModified": "2019-03-26",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Most of us are used to data transfer objects, which
+are the corner stone of modern web frameworks; however,
+they are not object-oriented design.
+",
+        "keywords": ["java web framework", "java http framework", "oop web framework", "java web oop", "oop java web"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2019/03/26/jpages.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>26 March 2019</p>
+      <h1>How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way</h1>
+      <p>How do you design a web application in Java? You install Spring, read
+the manual, create <a href="/2015/03/09/objects-end-with-er.html">controllers</a>,
+create some views, add some <a href="/2016/04/12/java-annotations-are-evil.html">annotations</a>, and it
+works. What would you do if there were no
+<a href="https://spring.io/">Spring</a> (and no Ruby on Rails
+in Ruby, and no Symphony in PHP, and no … etc.)? Let’s try to create
+a web application from scratch, starting from a pure Java SDK and ending
+with a fully functional web app, covered by unit tests. I recorded
+a <a href="https://www.youtube.com/watch?v=bVzEPOZ_mDU">webinar no.42</a>
+about it just a few weeks ago, but this article should explain it
+all in even more detail.</p>
+
+
+
+<amp-img src="/images/2019/03/breakfast-at-tiffanys.jpg" alt="Breakfast at Tiffany's (1961) by Blake Edwards" height="1080" width="1920" layout="responsive"></amp-img>
+
+<p>First of all we have to create an HTTP server, which will open a
+server socket, listen to incoming connections, read everything they
+have to say (HTTP requests) and return the information any
+web browser would like (HTTP responses). You know how
+<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> works, right?
+If you don’t, here is a quick reminder:</p>
+
+<p>A web browser sends a request to the server and the request looks
+like this (it’s a plain text piece of data):</p>
+
+<pre>GET /index.html HTTP/1.1
+Host: www.example.com</pre>
+
+<p>The server has to read this text, prepare the answer (which has to be the
+HTML page readable by the browser) and return it like this:</p>
+
+<pre>HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 26
+
+&lt;html&gt;Hello, world!&lt;/html&gt;</pre>
+
+<p>That’s it. It’s a very simple and, I would say, primitive protocol. The implementation
+of a web server in Java is not so complex either. Here it is, in a very
+simplistic form:</p>
+
+<pre>import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketTimeoutException;
+import java.util.Arrays;
+public class Main {
+  public static void main(String... argv) {
+    try (ServerSocket server = new ServerSocket(8080)) {
+      server.setSoTimeout(1000);
+      while (true) {
+        try (Socket socket = server.accept()) {
+          try (InputStream input = socket.getInputStream();
+            OutputStream output = socket.getOutputStream()) {
+            byte[] buffer = new byte[10000];
+            int total = input.read(buffer);
+            String request = new String(Arrays.copyOfRange(buffer, 0, total));
+            String response = "HTTP/1.1 200 OK\r\n\r\nHello, world!";
+            output.write(response.getBytes());
+          }
+        } catch (SocketTimeoutException ex) {
+          if (Thread.currentThread().isInterrupted()) {
+              break;
+          }
+        }
+      }
+    }
+  }
+}</pre>
+
+<p>Try to run it, it should work. You should be able to open the <code>http://localhost:8080</code>
+page in your browser and see the <code>Hello, world!</code> text.</p>
+
+<p>It’s not yet a web app, but just a skeleton, which does simple dispatching
+of HTTP requests into HTTP responses. There is no serious OOP
+in it though. It’s pretty procedural, but it works. Now we should focus
+on a more important question: How do we add more features to the web app
+and make it possible to process different pages, render larger content,
+and handle errors? The <code>request</code> variable in the snippet above
+should be somehow converted to a <code>response</code>.</p>
+
+<p>The easiest way would be 1) to convert the request into a <a href="/2016/07/06/data-transfer-object.html">DTO</a>
+with all the details inside, then 2) send it to a “controller” that knows what to
+do with the data from the DTO, and then 3) receive a response DTO from
+the controller, take the data out and render the response. This is how
+Spring and <del>most</del> all other frameworks do it. However, we won’t follow this
+path, we will try to do it DTO-free and <a href="/2014/11/20/seven-virtues-of-good-object.html">purely</a>
+object-oriented.</p>
+
+<p>I have to say that there could be multiple designs, all in an OOP style. I’ll
+show you now only one of those options. You’re no doubt aware of
+our <a href="https://www.takes.org">Takes</a> framework, which
+was born a few years ago—it has its own design, also object-oriented. But the
+one I’m going to suggest now seems to be better. You might come up
+with something else too, so don’t hesitate to post your ideas in the comments
+below or even create a GitHub repo and share your thoughts right there.</p>
+
+<p>I suggest we introduce two interfaces: <code>Resource</code> and <code>Output</code>. The <code>Resource</code>
+is the server side entity, which mutates depending on the request parameters
+that are coming in. For example, when all we know about the request is that
+it is <code>GET /</code>, it is one resource. But if we also know that the
+request has, for example, <code>Accept: text/plain</code>, we can mutate the request
+and create a new one, which delivers plain text. Here is the interface:</p>
+
+<pre>interface Resource {
+  Resource refine(String name, String value);
+}</pre>
+
+<p>Here is how we create it and mutate:</p>
+
+<pre>Resource r = new DefaultResource()
+  .refine("X-Method", "GET")
+  .refine("X-Query", "/")
+  .refine("Accept", "text/plain");</pre>
+
+<p>Pay attention: each call to <code>.refine()</code> returns a new instance
+of interface <code>Resource</code>. All of them are immutable, just like objects
+<a href="/2014/06/09/objects-should-be-immutable.html">have to be</a>.
+Thanks to this design we don’t separate <a href="/2016/11/21/naked-data.html">data</a>
+from their processor. The resource is the data and the processor. Each resource
+knows what to do with the data, and receives only the data it is supposed
+to receive. Technically, we just implement <em>request dispatching</em>, but in
+an object-oriented way.</p>
+
+<p>Then, we need to convert the resource to the response. We give the
+resource the ability to render itself to the response. We don’t want the
+<a href="/2016/11/21/naked-data.html">data</a>, in form of some DTO,
+to escape the resource. We want the resource
+<a href="/2016/04/05/printers-instead-of-getters.html">to print</a> the
+response. How about giving an additional method <code>print()</code> to the resource:</p>
+
+<pre>interface Resource {
+  Resource refine(String name, String value);
+  void print(Output output);
+}</pre>
+
+<p>And then the interface <code>Output</code> looks like this:</p>
+
+<pre>interface Output {
+  void print(String name, String value);
+}</pre>
+
+<p>Here is a primitive implementation of <code>Output</code>:</p>
+
+<pre>public class StringBuilderOutput implements Output {
+  private final StringBuilder buffer;
+  StringBuilderOutput(StringBuilder buf) {
+    this.buffer = buf;
+  }
+  @Override
+  public void print(String name, String value) {
+    if (this.buffer.length() == 0) {
+      this.buffer.append("HTTP/1.1 200 OK\r\n");
+    }
+    if (name.equals("X-Body")) {
+      this.buffer.append("\r\n").append(value);
+    } else {
+      this.buffer.append(name).append(": ").append(value).append("\r\n");
+    }
+  }
+}</pre>
+
+<p>To build an HTTP response we can do this:</p>
+
+<pre>StringBuilder builder = new StringBuilder();
+Output output = new StringBuilderOutput(builder);
+output.print("Content-Type", "text/plain");
+output.print("Content-Length", "13");
+output.print("X-Body", "Hello, world!");
+System.out.println(builder.toString());</pre>
+
+<p>Now let’s create a class which will take an incoming request <code>String</code>
+and produce a response <code>String</code>, using an instance of <code>Resource</code> as a
+<em>dispatcher</em>:</p>
+
+<pre>public class Session {
+  private final Resource resource;
+  Session(Resource res) {
+    this.resource = res;
+  }
+  String response(String request) throws IOException {
+    Map&lt;String, String&gt; pairs = new HashMap&lt;&gt;();
+    String[] lines = request.split("\r\n");
+    for (int idx = 1; idx &lt; lines.length; ++idx) {
+      String[] parts = lines[idx].split(":");
+      pairs.put(parts[0].trim(), parts[1].trim());
+      if (lines[idx].empty()) {
+        break;
+      }
+    }
+    String[] parts = lines[0].split(" ");
+    pairs.put("X-Method", parts[0]);
+    pairs.put("X-Query", parts[1]);
+    pairs.put("X-Protocol", parts[2]);
+    App.Resource res = this.resource;
+    for (Map.Entry&lt;String, String&gt; pair : pairs.entrySet()) {
+      res = res.refine(pair.getKey(), pair.getValue());
+    }
+    StringBuilder buf = new StringBuilder();
+    res.print(new StringBuilderOutput(buf));
+    return buf.toString();
+  }
+}</pre>
+
+<p>First, we parse the request, breaking its header into lines and ignoring
+the body of the request. You can modify the code to parse the body
+and pass it into the <code>refine()</code> method too, using <code>X-Body</code> as the key. At
+the moment, the code above doesn’t do that. But you get the idea. The parsing
+part of the snippet prepares the pairs it can find in the request and passes them one by one
+to the encapsulated resource, mutating it until it gets to the final form.
+A simple resource that always returns text might look like this:</p>
+
+<pre>class TextResource implements Resource {
+  private final String body;
+  public TextResource(String text) {
+    this.body = text;
+  }
+  @Override
+  public Resource refine(String name, String value) {
+    return this;
+  }
+  @Override
+  public void print(Output output) {
+    output.print("Content-Type", "text/plain");
+    output.print("Content-Length", Integer.toString(this.body.length()));
+    output.print("X-Body", this.body);
+  }
+}</pre>
+
+<p>A resource that pays attention to the query string and dispatches
+the request to other resources, depending on the path in the query,
+might look like this:</p>
+
+<pre>new Resource() {
+  @Override
+  public Resource refine(String name, String value) {
+    if (name.equals("X-Query")) {
+      if (value.equals("/")) {
+        return new TextResource("Hello, world!");
+      } else if (value.equals("/balance")) {
+        return new TextResource("256");
+      } else if (value.equals("/id")) {
+        return new TextResource("yegor");
+      } else {
+        return new TextResource("Not found!");
+      }
+    } else {
+      return this;
+    }
+  }
+  @Override
+  public void print(final Output output) {
+    throws IllegalStateException("This shouldn't happen");
+  }
+}</pre>
+
+<p>I hope you got the idea. The code above is rather sketchy, and the majority
+of use cases are not implemented, but you can do that yourself, if you are
+interested. The code is in the <a href="https://github.com/yegor256/jpages">yegor256/jpages</a>
+repository. Don’t hesitate to contribute with a pull request and make this
+small framework real.</p>
+
+    </article>
+  </body>
+</html>
