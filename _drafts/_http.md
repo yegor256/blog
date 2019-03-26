@@ -21,24 +21,24 @@ jb_picture:
 
 How do you design a web application in Java? You install Spring, read
 the manual, create [controllers]({% pst 2015/mar/2015-03-09-objects-end-with-er %}),
-some views, add some [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}), and it
-works. What would you do if there would be no
+create some views, add some [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}), and it
+works. What would you do if there were no
 [Spring](https://spring.io/) (and no Ruby on Rails
 in Ruby, and no Symphony in PHP, and no ... etc.)? Let's try to create
 a web application from scratch, starting from a pure Java SDK and ending
-with a fully functionable web app, covered by unit tests. I recorded
+with a fully functional web app, covered by unit tests. I recorded
 a [webinar no.42](https://www.youtube.com/watch?v=bVzEPOZ_mDU)
 about it just a few weeks ago, but this article should explain it
-all even in more details.
+all in even more detail.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-First of all we have to create a HTTP server, which will open a
+First of all we have to create an HTTP server, which will open a
 server socket, listen to incoming connections, read everything they
-have to say (HTTP requests) and return back the information any
-web browser will like (HTTP responses). You know how
+have to say (HTTP requests) and return the information any
+web browser would like (HTTP responses). You know how
 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) works, right?
 If you don't, here is a quick reminder:
 
@@ -51,7 +51,7 @@ Host: www.example.com
 {% endhighlight %}
 
 The server has to read this text, prepare the answer (which has to be the
-HTML page readable by the browser) and return it back like this:
+HTML page readable by the browser) and return it like this:
 
 {% highlight text %}
 HTTP/1.1 200 OK
@@ -62,7 +62,7 @@ Content-Length: 26
 {% endhighlight %}
 
 That's it. It's a very simple and, I would say, primitive protocol. The implementation
-of a web server in Java is not so complex too. Here it is, in a very
+of a web server in Java is not so complex either. Here it is, in a very
 simplistic form:
 
 {% highlight java %}
@@ -99,15 +99,15 @@ public class Main {
 {% endhighlight %}
 
 Try to run it, it should work. You should be able to open the `http://localhost:8080`
-page in your browser and see `Hello, world!` text.
+page in your browser and see the `Hello, world!` text.
 
-It's not yet a web app, but a skeleton, which does a simple dispatching
-of HTTP requests into HTTP responses. There is nothing serious about OOP
-in it, though. It's pretty procedural, but it works. Now we should focus
-on a more important question: how to add more features to the web app
+It's not yet a web app, but just a skeleton, which does simple dispatching
+of HTTP requests into HTTP responses. There is no serious OOP
+in it though. It's pretty procedural, but it works. Now we should focus
+on a more important question: How do we add more features to the web app
 and make it possible to process different pages, render larger content,
-and handle errors. The `request` variable in the snippet above
-should be somehow converted to the `response` one.
+and handle errors? The `request` variable in the snippet above
+should be somehow converted to a `response`.
 
 The easiest way would be 1) to convert the request into a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %})
 with all the details inside, then 2) send it to a "controller" that knows what to
@@ -117,15 +117,15 @@ Spring and <del>most</del> all other frameworks do it. However, we won't follow 
 path, we will try to do it DTO-free and [purely]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 object-oriented.
 
-I have to say that there could be multiple designs, all in OOP style. I'll
-show you now only one of the options. You most definitely are aware of
+I have to say that there could be multiple designs, all in an OOP style. I'll
+show you now only one of those options. You're no doubt aware of
 our [Takes](https://www.takes.org) framework, which
 was born a few years ago---it has its own design, also object-oriented. But the
-one I'm going to suggest now seems to be better. You may come up
-with something else too, don't hesitate to post your ideas in the comments
+one I'm going to suggest now seems to be better. You might come up
+with something else too, so don't hesitate to post your ideas in the comments
 below or even create a GitHub repo and share your thoughts right there.
 
-I'm suggesting to introduce two interfaces: `Resource` and `Output`. The `Resource`
+I suggest we introduce two interfaces: `Resource` and `Output`. The `Resource`
 is the server side entity, which mutates depending on the request parameters
 that are coming in. For example, when all we know about the request is that
 it is `GET /`, it is one resource. But if we also know that the
@@ -147,7 +147,7 @@ Resource r = new DefaultResource()
   .refine("Accept", "text/plain");
 {% endhighlight %}
 
-Pay attention, that each next call to `.refine()` returns a new instance
+Pay attention: each call to `.refine()` returns a new instance
 of interface `Resource`. All of them are immutable, just like objects
 [have to be]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}).
 Thanks to this design we don't separate [data]({% pst 2016/nov/2016-11-21-naked-data %})
@@ -156,12 +156,12 @@ knows what to do with the data, and receives only the data it is supposed
 to receive. Technically, we just implement _request dispatching_, but in
 an object-oriented way.
 
-Then, we should convert the resource to the response. We should give the
-resource an ability to render itself to the response. We don't want the
+Then, we need to convert the resource to the response. We give the
+resource the ability to render itself to the response. We don't want the
 [data]({% pst 2016/nov/2016-11-21-naked-data %}), in form of some DTO,
 to escape the resource. We want the resource
 [to print]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}) the
-response. How about addition an additional method `print()` to the resource:
+response. How about giving an additional method `print()` to the resource:
 
 {% highlight java %}
 interface Resource {
@@ -170,7 +170,7 @@ interface Resource {
 }
 {% endhighlight %}
 
-And then the interface `Output`:
+And then the interface `Output` looks like this:
 
 {% highlight java %}
 interface Output {
@@ -211,8 +211,8 @@ output.print("X-Body", "Hello, world!");
 System.out.println(builder.toString());
 {% endhighlight %}
 
-Now, let's create a class, which will take an incoming request `String`
-and produce a response String`, using an instance of `Resource` as a
+Now let's create a class which will take an incoming request `String`
+and produce a response `String`, using an instance of `Resource` as a
 _dispatcher_:
 
 {% highlight java %}
@@ -248,11 +248,11 @@ public class Session {
 
 First, we parse the request, breaking its header into lines and ignoring
 the body of the request. You can modify the code to parse the body
-and pass it into the `refine()` method do, using `X-Body` as as the key. At
-the moment the code above doesn't do that. But you get the idea. The parsing
+and pass it into the `refine()` method too, using `X-Body` as the key. At
+the moment, the code above doesn't do that. But you get the idea. The parsing
 part of the snippet prepares the pairs it can find in the request and passes them one by one
 to the encapsulated resource, mutating it until it gets to the final form.
-A simple resource that always returns a text may look like this:
+A simple resource that always returns text might look like this:
 
 {% highlight java %}
 class TextResource implements Resource {
@@ -275,7 +275,7 @@ class TextResource implements Resource {
 
 A resource that pays attention to the query string and dispatches
 the request to other resources, depending on the path in the query,
-may look like this:
+might look like this:
 
 {% highlight java %}
 new Resource() {
@@ -302,9 +302,8 @@ new Resource() {
 }
 {% endhighlight %}
 
-I hope you got the idea. The code above is rather sketchy, the majority
-of use cases are not implemented, but you can do it yourself, if you are
+I hope you got the idea. The code above is rather sketchy, and the majority
+of use cases are not implemented, but you can do that yourself, if you are
 interested. The code is in the [yegor256/jpages](https://github.com/yegor256/jpages)
 repository. Don't hesitate to contribute with a pull request and make this
 small framework real.
-
