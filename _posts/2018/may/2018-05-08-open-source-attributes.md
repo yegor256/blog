@@ -73,6 +73,8 @@ A few bad examples:
 [`rzwitserloot/lombok`](https://github.com/rzwitserloot/lombok/blob/master/README), and
 [`junit4/blob`](https://github.com/junit-team/junit4/blob/master/README.md) (don't be like these guys).
 
+{% quote Only if and when we get interested will we investigate further and deeper. %}
+
 No matter how rich you've made your website, Javadoc, Wiki, mailing
 list, and Twitter, the README is the place where we expect
 to see everything. Only if and when we get interested will we investigate
@@ -95,6 +97,8 @@ and customized tests. My obvious suggestion was to use open source tools,
 which would do the hard work for us. We would only have to integrate them.
 It was an awesome idea, until some of us decided to check the licenses of
 those tools.
+
+{% quote I'm suggesting you think about the license before publishing the product. %}
 
 That was the moment I realized that I was so wrong for not paying attention
 to what licenses say. [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License),
@@ -172,6 +176,8 @@ they make a repository look as if it's being "actively maintained," especially
 if those badges are green. They don't really deliver any valuable information.
 They mostly say: "Our author has very good taste, see how perfectly
 our colors match!"
+
+{% quote I add Travis badges to all projects of mine, right after I create a new repository. %}
 
 Jokes aside, it's not so easy to add all those badges. Each badge will take you
 some time, to integrate a third party system, to make sure the numbers
