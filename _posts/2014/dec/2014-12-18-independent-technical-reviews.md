@@ -52,6 +52,8 @@ reconciliation of their results and your quality expectations is one
 of the key factors that will guarantee technical success for your
 startup. Below I summarize my experience with organizing such technical reviews.
 
+{% youtube DLk_5BmgTVk %}
+
 An independent review is when you ask someone outside of your team
 to look at your source code and other technical resources
 and give you an objective opinion about them.
@@ -96,6 +98,8 @@ This payment schedule will help you focus your reviewer on the main
 objective of the review process---finding and reporting issues. There
 are no other goals. The only thing you're interested in is knowing what
 the issues with your current technical solution are. That's what you're paying for.
+
+{% youtube oiNI2jF46h0 %}
 
 **Hire the Best and Pay Well**.
 My experience tells me that the position of an independent reviewer is a very
