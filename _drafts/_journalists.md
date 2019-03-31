@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Get Your Startup Covered in TechCrunch"
+title: "Stop Pitching, Beg Them!"
 date: 2019-04-05
 place: Novosibirsk, Russia
 tags: mood sarcasm
@@ -49,7 +49,7 @@ And you don't want their families to starve, do you?
 
 Be merciful. They are only humans.
 
-They are starving and you are coming to them pitching your startup
+They are starving and you are coming with a press release pitching your startup
 idea, which is going to save the world and make you a billionaire. Do you think
 they will be glad to help you out? Never. They will only feel jealousy and expect you to pay, double.
 Instead, you need to present yourself as someone whose starving is even worse. They have
@@ -79,7 +79,7 @@ subtle in your self-humiliation. Here is what you do:
     is so cruel??" You got the idea. Just keep pretending that you
     are very interested in all the garbage they publish. They perfectly
     realize that the stuff they write worth nothing, however, when they see you
-    so deeply interested in their articles, they will understand that your
+    so deeply interested in their prose, they will understand that your
     life situation is even worse than theirs. Here comes the mercifullness!
 
   * **Quote Them**.
