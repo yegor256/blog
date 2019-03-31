@@ -115,3 +115,5 @@ some data, and returns _data_. Not an object, but data, also known as a
 direct data manipulations are what break encapsulation and make
 object-oriented code procedural and unmaintainable.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How would you improve this Java class? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class BooksDAO {<br>  Book find(int id);<br>  void save(Book book);<br>}</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1112302435782021120?ref_src=twsrc%5Etfw">March 31, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
