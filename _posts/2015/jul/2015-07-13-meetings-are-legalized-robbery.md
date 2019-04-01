@@ -14,6 +14,8 @@ keywords:
   - why meetings suck
   - meetings in software team
   - how to organize meetings
+translated:
+  - Russian: https://habr.com/ru/post/445774/
 image: /images/2015/07/heat.jpg
 jb_picture:
   caption: Heat (1995) by Michael Mann
