@@ -613,6 +613,7 @@ bathroom
 bay
 bazaar
 bcba
+BDMSummit
 be
 beach
 beans
@@ -783,6 +784,7 @@ bookkeeping
 booklets
 bookmarks
 books
+BooksDAO
 bookshelf
 boom
 boost
@@ -1263,6 +1265,7 @@ clueless
 clumsy
 clusterer
 clutters
+CMMI
 CNAME
 CNN
 co
@@ -1405,6 +1408,7 @@ competitive
 competitor
 competitors
 compilable
+compilation
 compile
 compile-time
 compiled
@@ -1855,6 +1859,7 @@ dead
 dead-end
 deadline
 deadlines
+deadly
 deaf
 deal
 dealing
@@ -3033,6 +3038,7 @@ fortran
 fortune
 forty
 forty-foot
+forum
 forward
 forwarded
 found
@@ -3702,6 +3708,7 @@ improving
 improvise
 in
 in-budget
+in-code
 in-docker
 in-file
 in-house
@@ -4177,6 +4184,7 @@ key
 keynote
 keyword
 keywords
+kharkiv
 khRFR
 kick
 kicked
@@ -4226,6 +4234,7 @@ kudos
 KULouuKS
 kunst
 kw
+kyiv
 la
 label
 labeled
@@ -5705,6 +5714,7 @@ plus
 pluses
 PM
 PMBOK
+PMCon
 PMD
 PMI
 PMIS
@@ -6489,6 +6499,7 @@ responses
 responsibilities
 responsibility
 responsible
+responsive
 responsiveness
 rest
 restart
@@ -6544,6 +6555,7 @@ reviewer's
 reviewers
 reviewing
 reviews
+revision
 revoke
 revolution
 revolver

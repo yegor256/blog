@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-03-26T10:29:38+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way</title><link href="https://www.yegor256.com/2019/03/26/jpages.html" rel="alternate" type="text/html" title="How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way" /><published>2019-03-26T00:00:00+00:00</published><updated>2019-03-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/03/26/jpages</id><content type="html" xml:base="https://www.yegor256.com/2019/03/26/jpages.html">&lt;p&gt;How do you design a web application in Java? You install Spring, read
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-04-02T05:31:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Project Review Checklist</title><link href="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html" rel="alternate" type="text/html" title="Software Project Review Checklist" /><published>2019-04-02T00:00:00+00:00</published><updated>2019-04-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/02/software-project-review-checklist</id><content type="html" xml:base="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html">&lt;p&gt;A few years ago I wrote about the
+&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;independent technical reviews&lt;/a&gt;
+any software project must regularly go through in order
+to make sure everything is under control. I even
+&lt;a href=&quot;/2017/11/21/trust-pay-lose.html&quot;&gt;said recently&lt;/a&gt;
+that there is no excuse for not doing them. Moreover, the more
+we trust programmers, the higher the necessity to review their projects regularly.
+Here is a short summary of what a report from a reviewer must include.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The People vs. Larry Flynt (1996) by Milos Forman&quot; src=&quot;/images/2019/04/the-people-vs-larry-flynt.jpg&quot; longdesc=&quot;#27c80f36&quot; /&gt;&lt;figcaption id=&quot;27c80f36&quot;&gt;The People vs. Larry Flynt (1996) by Milos Forman&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I tried to touch on this subject in a few recent talks:
+&lt;a href=&quot;https://youtu.be/oiNI2jF46h0&quot;&gt;Make Customers Trust You&lt;/a&gt; at &lt;a href=&quot;http://bdmsummit.com/yegor-bugayenko-2017s/&quot;&gt;BDMSummit 2017&lt;/a&gt;,
+&lt;a href=&quot;https://youtu.be/Rip_04Bv3Jk&quot;&gt;How to Be Honest and Keep a Client&lt;/a&gt; at &lt;a href=&quot;http://pmcon.dev-pro.net/&quot;&gt;PMCon Kharkiv 2017&lt;/a&gt;,
+and
+&lt;a href=&quot;https://www.youtube.com/watch?v=DLk_5BmgTVk&quot;&gt;How to Avoid Outsourcing Disaster&lt;/a&gt; at &lt;a href=&quot;http://outsourceforum.org/&quot;&gt;Kyiv Outsourcing Forum 2017&lt;/a&gt;.
+Also, there are a number of blog posts along the same lines, including
+&lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;Seven Deadly Sins of a Software Project&lt;/a&gt;,
+&lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;How to Avoid a Software Outsourcing Disaster&lt;/a&gt;,
+and
+&lt;a href=&quot;/2015/06/15/software-outsourcing-survival-guide.html&quot;&gt;Software Outsourcing Survival Guide&lt;/a&gt;.
+Here, finally, is a more or less complete list of things a good report must include.&lt;/p&gt;
+
+&lt;p&gt;Basically it’s a list of questions a reviewer must answer.
+When all the answers are collected, the report is ready.
+The most important questions are at the top.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Is the release procedure documented, automated, and does it work?&lt;/li&gt;
+  &lt;li&gt;Do releases happen frequently, at least once a week?&lt;/li&gt;
+  &lt;li&gt;How big is the technical debt (the things that “eventually” should be fixed)?&lt;/li&gt;
+  &lt;li&gt;Is the delivery pipeline strong enough to reject mistakes?&lt;/li&gt;
+  &lt;li&gt;How clean is the code? How many &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;anti-patterns&lt;/a&gt; appear?&lt;/li&gt;
+  &lt;li&gt;Are all bugs and features registered as &lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;tickets&lt;/a&gt;?&lt;/li&gt;
+  &lt;li&gt;Is the code base covered by unit tests, and is coverage visible?&lt;/li&gt;
+  &lt;li&gt;Are “Work for Hire” agreements signed with all developers?&lt;/li&gt;
+  &lt;li&gt;Are key architectural technical decisions documented?&lt;/li&gt;
+  &lt;li&gt;Is static analysis in place and &lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;mandatory&lt;/a&gt; for new changes?&lt;/li&gt;
+  &lt;li&gt;Is continuous integration in place, and are its reports taken into account?&lt;/li&gt;
+  &lt;li&gt;Is master branch &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;read-only&lt;/a&gt;?&lt;/li&gt;
+  &lt;li&gt;Are programming metrics collected and regularly reviewed?&lt;/li&gt;
+  &lt;li&gt;Is the source code repository under the customer’s ownership and control?&lt;/li&gt;
+  &lt;li&gt;Is the requirements documentation short and up to date?&lt;/li&gt;
+  &lt;li&gt;Do key classes, methods and functions have in-code documentation?&lt;/li&gt;
+  &lt;li&gt;Is the source code repository garbage free?&lt;/li&gt;
+  &lt;li&gt;Are UI/UX interfaces documented?&lt;/li&gt;
+  &lt;li&gt;Are the production logs visible and regularly reviewed?&lt;/li&gt;
+  &lt;li&gt;How responsive is the team to the tickets?&lt;/li&gt;
+  &lt;li&gt;Does the revision control system have a clear history of documented changes?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Essentially, this is a very short compilation of the most important things that
+you can find in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration&quot;&gt;CMMI&lt;/a&gt;.
+They require all this, and a large list of other things on top. But a small
+project doesn’t need everything that they ask you to have. My list is shorter
+and, I’m sure, will be just enough for most of you.&lt;/p&gt;
+
+&lt;p&gt;By the way, you can see the reports volunteers create for the participants
+of my &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. They analyze open source projects
+and briefly report the problems they find. I believe that they are trying to answer
+exactly the same set of questions.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">A few years ago I wrote about the independent technical reviews any software project must regularly go through in order to make sure everything is under control. I even said recently that there is no excuse for not doing them. Moreover, the more we trust programmers, the higher the necessity to review their projects regularly. Here is a short summary of what a report from a reviewer must include.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/the-people-vs-larry-flynt.jpg" /></entry><entry><title type="html">How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way</title><link href="https://www.yegor256.com/2019/03/26/jpages.html" rel="alternate" type="text/html" title="How to Create a Java Web Framework from Scratch, the Right Object-Oriented Way" /><published>2019-03-26T00:00:00+00:00</published><updated>2019-03-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/03/26/jpages</id><content type="html" xml:base="https://www.yegor256.com/2019/03/26/jpages.html">&lt;p&gt;How do you design a web application in Java? You install Spring, read
 the manual, create &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;controllers&lt;/a&gt;,
 create some views, add some &lt;a href=&quot;/2016/04/12/java-annotations-are-evil.html&quot;&gt;annotations&lt;/a&gt;, and it
 works. What would you do if there were no
@@ -1263,89 +1325,4 @@ to control the quality of decisions the architect makes via regular reviews.&lt;
 &lt;p&gt;Do you have such reviews in your project? If not, why not?&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Imagine, you are a software architect and your manager tells you that your design decisions from now on will be regularly reviewed by another programmer, who they just contracted for that. What will be your answer?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1089398576793436160?ref_src=twsrc%5Etfw&quot;&gt;January 27, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">You most probably know what I think about the architect role on a software project—it’s that of a dictator who makes all technical decisions and who bears the entire responsibility for the final result. I wrote about it and even gave a talk Who is a Software Architect? at BuildStuff in 2016. However, the obvious question you may ask is: What happens if the architect is wrong? Does it mean the entire project is at risk of failure? And isn’t it better to make the whole team responsible for the result, instead of having one single point of failure?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/the-color-of-money.jpg" /></entry><entry><title type="html">Hazardous Enthusiasm</title><link href="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html" rel="alternate" type="text/html" title="Hazardous Enthusiasm" /><published>2019-01-01T00:00:00+00:00</published><updated>2019-01-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/01/hazardous-enthusiasm</id><content type="html" xml:base="https://www.yegor256.com/2019/01/01/hazardous-enthusiasm.html">&lt;p&gt;On a daily basis I deal with many programmers who contribute to my
-&lt;a href=&quot;/2017/05/30/why-contribute-to-open-source.html&quot;&gt;open source&lt;/a&gt;
-projects, either as volunteers or for money via &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt;
-(and my software projects are &lt;a href=&quot;/2015/12/22/why-dont-you-contribute-to-open-source.html&quot;&gt;all&lt;/a&gt;
-open source). Over the years I have realized
-that there is a pattern in their behavior, which I need to be &lt;del&gt;scared&lt;/del&gt; aware of.
-I call it “hazardous enthusiasm.” Here are the symptoms.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Thin Red Line (1998) by Terrence Malick&quot; src=&quot;/images/2019/01/the-thin-red-line.jpg&quot; longdesc=&quot;#4a7672ec&quot; /&gt;&lt;figcaption id=&quot;4a7672ec&quot;&gt;The Thin Red Line (1998) by Terrence Malick&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;A new developer joins the project. He is full of energy,
-talks a lot, spends a lot of time on the project, submits
-new tickets, and suggests improvements. He looks like a great candidate
-and we all are happy to see him on board. He is a godsend!&lt;/p&gt;
-
-&lt;p&gt;Then, when things become clearer for him, he starts criticizing the architecture.
-He &lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;approaches&lt;/a&gt;
-me in Telegram and asks me whether I realize that the architecture
-is a total mess and that if we don’t change it immediately the project will
-be dead in a few &lt;del&gt;days&lt;/del&gt; weeks. I attempt to assure him that I understand,
-but… He immediately suggests an improvement: We have to re-do it all from
-scratch or at least get rid of that collection of objects and replace it with
-a singleton and a very nice &lt;a href=&quot;/2014/12/01/orm-offensive-anti-pattern.html&quot;&gt;ORM&lt;/a&gt;
-library he’s been using for a year, and it’s
-just great, blah blah blah… OK? Let’s do it? Why not?&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=gMJNz9AWbQE&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/gMJNz9AWbQE/mqdefault.jpg&quot; alt=&quot;YouTube video #gMJNz9AWbQE&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M1: Your enthusiasm may only harm the project if you can't deliver it incrementally;
-        27 December 2018.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;I have very little to say and instead ask him to submit a ticket. I try to assure him
-that I will investigate the possibilities as soon as I can. I also try
-to remind him, in a very polite way, that I’m an
-&lt;a href=&quot;/2014/10/12/who-is-software-architect.html&quot;&gt;architect&lt;/a&gt; here and, even though
-his ideas sound great, I can’t accept them all at once.
-Then he goes: “Let me show you!”&lt;/p&gt;
-
-&lt;p&gt;In a few days I get a giant pull request with a lot of changes
-that look interesting but that go completely against almost every principle
-I’ve managed to embed into the existing architecture. What do I do? I feel sorry
-for him. I have to reject the pull request and I try to explain why.
-But there is no reasonable explanation. I’m just a bad guy who doesn’t like
-innovative ideas.&lt;/p&gt;
-
-&lt;p&gt;What happens next? Well, he disappears.&lt;/p&gt;
-
-&lt;p&gt;I’ve seen this happen many times, with various people. Were they all
-incompetent programmers? I don’t think so. They were great, from a technical point of view.
-But they all lacked the very important skill which, I believe, distinguishes
-a professional software engineer from a guy who merely learned how to write Java code:
-&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;microtasking&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;They simply don’t know how to break their changes into smaller pieces and deliver them incrementally.
-&lt;/aside&gt;
-
-&lt;p&gt;They simply don’t know how to break their changes, which in most cases are
-by no means useless, into smaller pieces and deliver them incrementally. They want to
-push everything they have in mind in one large chunk. Of course,
-they fail. Because there is a bad guy in front of them: me, the architect.&lt;/p&gt;
-
-&lt;p&gt;What makes their cases fatal is the enthusiasm. If they were less
-aggressive and eager to do the right thing, they would survive. But they can’t
-wait and they don’t want to apply half-measures. They want to fix the world
-in one huge pull request.&lt;/p&gt;
-
-&lt;p&gt;Why can’t I just accept their changes and let them fix the code the way
-they want, you may ask? Because I know that even though they may look like
-good programmers, they would be lousy architects, exactly because they lack
-the skill of &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;microtasking&lt;/a&gt;.
-If I accept what they suggest, I will simply transfer
-my architect’s &lt;a href=&quot;/2015/05/11/software-architect-responsibilities.html&quot;&gt;responsibilities&lt;/a&gt;
-to them. It will be their architecture from
-now on. And what’s wrong with that? Well, their lack of that skill. They won’t be able
-to be architects, because they can’t manage changes, can’t deliver them incrementally,
-and can’t understand the dynamics of collaborative work with the source code.&lt;/p&gt;
-
-&lt;p&gt;They are &lt;a href=&quot;/2014/10/26/hacker-vs-programmer-mentality.html&quot;&gt;hackers&lt;/a&gt;,
-not designers or &lt;a href=&quot;/2018/06/26/are-you-an-architect.html&quot;&gt;architects&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Honestly, I feel sorry when I lose them.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">On a daily basis I deal with many programmers who contribute to my open source projects, either as volunteers or for money via Zerocracy (and my software projects are all open source). Over the years I have realized that there is a pattern in their behavior, which I need to be scared aware of. I call it “hazardous enthusiasm.” Here are the symptoms.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/the-thin-red-line.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">You most probably know what I think about the architect role on a software project—it’s that of a dictator who makes all technical decisions and who bears the entire responsibility for the final result. I wrote about it and even gave a talk Who is a Software Architect? at BuildStuff in 2016. However, the obvious question you may ask is: What happens if the architect is wrong? Does it mean the entire project is at risk of failure? And isn’t it better to make the whole team responsible for the result, instead of having one single point of failure?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/the-color-of-money.jpg" /></entry></feed>
