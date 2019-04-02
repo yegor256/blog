@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How to Review a Software Project"
-date: 2019-04-01
+title: "Software Project Review Checklist"
+date: 2019-04-02
 place: Moscow, Russia
 tags: architect
 description: |
@@ -14,9 +14,9 @@ keywords:
   - independent project review
   - independent review of software project
   - independent quality review
-image: /images/2018/07/
+image: /images/2019/04/the-people-vs-larry-flynt.jpg
 jb_picture:
-  caption:
+  caption: The People vs. Larry Flynt (1996) by Milos Forman
 ---
 
 A few years ago I wrote about the
