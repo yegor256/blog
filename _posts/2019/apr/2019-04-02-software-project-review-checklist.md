@@ -58,17 +58,17 @@ The most important questions are at the top.
   * Are "Work for Hire" agreements signed with all developers?
   * Are key architectural technical decisions documented?
   * Is static analysis in place and [mandatory]({% pst 2018/jan/2018-01-16-educational-aspect-of-static-analysis %}) for new changes?
-  * Is continuous integration in place, and are its reports taken into account?
+  * Is [CI]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) in place, and are its reports taken into account?
   * Is master branch [read-only]({% pst 2014/jul/2014-07-21-read-only-master-branch %})?
   * Are programming metrics collected and regularly reviewed?
-  * Is the source code repository under the customer's ownership and control?
-  * Is the requirements documentation short and up to date?
+  * Is the source code repository under the customer's ownership?
+  * Is the requirements documentation [short and up to date]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})?
   * Do key classes, methods and functions have in-code documentation?
   * Is the source code repository garbage free?
   * Are UI/UX interfaces documented?
   * Are the production logs visible and regularly reviewed?
   * How responsive is the team to the tickets?
-  * Does the revision control system have a clear history of documented changes?
+  * Does Git have a clear history of documented changes?
 
 Essentially, this is a very short compilation of the most important things that
 you can find in the [CMMI](https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration).
