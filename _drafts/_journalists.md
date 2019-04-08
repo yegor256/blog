@@ -89,7 +89,7 @@ subtle in your self-humiliation. Here is what you do:
     (Well, be careful with too much flattery.)
 
   * **Ask Them Questions**.
-    Demonstrate them that you are interested in their opinions by asking
+    Demonstrate to them that you are interested in their opinions by asking
     questions directly, from time to time, in Facebook Messenger, for example. Of course,
     your questions must be about their articles. For example, "Do you still
     believe that..." and then something mention something they said a few months ago. It doesn't
