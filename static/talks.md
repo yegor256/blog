@@ -84,20 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="future-talk" alt="CodeFest 2019"/><br/>
-Five Trends We Are Afraid Of<br/>
-[CodeFest](https://2019.codefest.ru/lecture/1515)<br/>
-Novosibirsk, Russia<br/>
-30 March.
-
-<div class="talk-event">&nbsp;</div>
-<img src="/images/2019/jpoint.png" class="future-talk" alt="JPoint 2019"/><br/>
-Software testing pitfalls<br/>
-[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/)<br/>
-Moscow, Russia<br/>
-5 April.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/andreea/yegor-is-presenting.png" class="future-talk" alt="Samara 2019"/><br/>
 Микротаскинг или как обмануть начальника<br/>
 [StartupSamara](https://startupsamara.timepad.ru/event/926814/)<br/>
@@ -224,6 +210,20 @@ and
 <span id="total_countries">?</span> countries.
 
 ### 2018
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="past-talk" alt="CodeFest 2019"/><br/>
+Five Trends We Are Afraid Of;
+[CodeFest](https://2019.codefest.ru/lecture/1515);
+Novosibirsk, Russia;
+30 March.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/jpoint.png" class="future-talk" alt="JPoint 2019"/><br/>
+Software testing pitfalls;
+[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
+Moscow, Russia;
+5 April.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
