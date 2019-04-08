@@ -92,7 +92,7 @@ subtle in your self-humiliation. Here is what you do:
     Demonstrate to them that you are interested in their opinions by asking
     questions directly, from time to time, in Facebook Messenger, for example. Of course,
     your questions must be about their articles. For example, "Do you still
-    believe that..." and then something mention something they said a few months ago. It doesn't
+    believe that..." and then mention something they said a few months ago. It doesn't
     matter what you ask and, of course, you don't care about their answers,
     but keep asking, regularly. Your goal is to make them remember your
     avatar and to ensure they connect it in their minds with someone desperately and
