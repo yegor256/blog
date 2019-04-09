@@ -6,8 +6,8 @@ place: Novosibirsk, Russia
 tags: mood sarcasm
 description: |
   You need press coverage for your startup? I can tell
-  you that it's not so difficult to get, if you are
-  ready to do what I'm suggesting.
+  you that it's not that difficult to get, if you are
+  ready to do what I suggest.
 keywords:
   - journalism
   - journalist
@@ -19,10 +19,10 @@ jb_picture:
   caption:
 ---
 
-You want your startup to be visible in TechCrunch, right? But you don't have
-$15-20K per month to bribe a reputable PR firm to get you there? No worries,
-this blog post will give you a set of simple instructions of how you can
-get the attention of those tech journalists, who are currently busy
+You want your startup to be visible on TechCrunch, right? But you don't have
+$15-20K per month to bribe a reputable PR firm to get you there? No worries.
+This blog post will give you a set of simple instructions on how you can
+get the attention of those tech journalists who are currently busy
 writing about Musk's and Zuckerberg's innovative ideas. They will
 definitely write about your baby, I promise you. Just do what I say.
 
@@ -34,25 +34,25 @@ First of all, you have to remember that they are just writers. They are not prog
 designers, or artificial intelligence experts. Even when they write about that stuff
 they actually have no idea. The don't know what machine learning is,
 can't really tell the difference between Blockchain and Bitcoin,
-and even barely remember what they were saying in their articles just a
+and barely remember what they were saying in their articles just a
 few months ago. You have to understand and forgive them.
-They are being paid per word count, after all.
+They are being paid for the word count, after all.
 
 Second, you have to remember that they not only don't care about your startup,
-but also about the entire industry. They just need money
+they don't care about the entire industry. They just need money
 to feed their families. And there are two places to find that money:
-1) sound topics about Google, equality, or billion-dollar divorse (they all dream about
+1) sound topics like Google, equality, or billion-dollar divorce (they all dream about
 putting them together in one title), or 2) your bank account. Thus,
 if you can't tell them a mind-blowing sexual harassment story and you are not ready
 to pay, writing about your startup won't help them feed their families.
 And you don't want their families to starve, do you?
 
-Be merciful. They are only humans.
+Be merciful. They are only human.
 
 They are starving and you are coming with a press release pitching your startup
 idea, which is going to save the world and make you a billionaire. Do you think
-they will be glad to help you out? Never. They will only feel jealousy and expect you to pay, double.
-Instead, you need to present yourself as someone whose starving is even worse. They have
+they will be glad to help you out? Never. They will only feel jealous and expect you to pay---double.
+Instead, you need to present yourself as someone whose starvation is even worse. They have
 to feel pity for you. That's how they won't have a chance to refuse. _They_ must
 be merciful.
 
@@ -64,70 +64,70 @@ But not directly and explicitly, of course. You have to be pretty
 subtle in your self-humiliation. Here is what you do:
 
   * **Follow Them**.
-    Find them on Facebook, Twitter, Instagram, and everywhere else
+    Find them on Facebook, Twitter, Instagram, and anywhere else
     you can find them. Become their follower. Or even better, follow
     and unfollow them every week. They will see that you keep coming back
     in a desperate attempt to catch their attention.
     Their souls will melt.
 
   * **Re-tweet Them**.
-    Not just that. You should _comment_ every single tweet they make
-    (especially those about their vacations, parties, and puppies they hug).
+    Not just that. You should _comment_ on every single tweet they write
+    (especially those about their vacations, parties, and the puppies they hug).
     The best way, of course, is to ask questions. They publish an article
     about Zuckerberg's new innovative idea of blocking another group
     of white supremacists on Facebook, and you ask them: "How come the world
     is so cruel??" You got the idea. Just keep pretending that you
-    are very interested in all the garbage they publish. They perfectly
-    realize that the stuff they write worth nothing, however, when they see you
-    so deeply interested in their prose, they will understand that your
-    life situation is even worse than theirs. Here comes the mercifullness!
+    are totally interested in all the garbage they publish. They realize perfectly
+    that the stuff they write is worth nothing. When they see you
+    so deeply interested in their prose, however, they will understand that your
+    life situation is even worse than theirs. Here comes the mercifulness!
 
   * **Quote Them**.
-    Find an article they wrote before and write your own piece somewhere
-    on your blog or just Medium. Then, email them a link, saying that their quote
-    inspired you so much that you can't stop thinking about it
-    (well, be careful with too much flattering).
+    Find an article they wrote previously and write your own piece somewhere
+    on your blog or just on Medium. Then, email them a link, saying that their quote
+    inspired you so much that you can't stop thinking about it.
+    (Well, be careful with too much flattery.)
 
-  * **Ask Them**.
-    Demonstrate them that you are interested in their opinions by asking
-    questions directly, time to time, in Facebook Messenger, for example. Of course,
+  * **Ask Them Questions**.
+    Demonstrate to them that you are interested in their opinions by asking
+    questions directly, from time to time, in Facebook Messenger, for example. Of course,
     your questions must be about their articles. For example, "Do you still
-    believe that..." and then something they said a few months ago. It doesn't
+    believe that..." and then mention something they said a few months ago. It doesn't
     matter what you ask and, of course, you don't care about their answers,
     but keep asking, regularly. Your goal is to make them remember your
     avatar and to ensure they connect it in their minds with someone desperately and
-    uncoditionally in love with them.
+    unconditionally in love with them.
 
-  * **Buy Them Coffee**.
-    If they are in the same city with you, a personal meeting with a cup
+  * **(Don't) Buy Them Coffee**.
+    If they are in the same city with you, a personal meeting over a cup
     of coffee will definitely help. I would not recommend you paying for their
     coffee, though. Maybe I'm wrong, but I think that this gesture will
-    give them a wrong idea that you have money. Instead, be cheap. Pay only
+    give them the wrong idea that you have money. Instead, be cheap. Pay only
     for your own coffee. And, of course, don't tell them much about your
     startup, better ask them about their families, ski weekends, and about
-    how much they hate Trump. Remember, they care about your startup, not.
+    how much they hate Trump. Remember, they care about your startup, not at all.
 
   * **Beg!**.
-    In about six months of preparation you are ready to shoot. They already remember
+    After about six months of preparation you are ready to shoot. They already remember
     your avatar (or maybe even your face, if you are lucky),
     they know that you have no self-respect and no money,
     they feel guilty for not giving you anything back for everything you've
-    done for them up to date, and they feel their absolute dominant
-    position above you. Voilá, you've done a great job! Now you say something like:
+    done for them so far, and they feel their absolute dominant
+    position above you. Voilá! You've done a great job. Now you say something like:
     "I feel so bad about asking this, but maybe you can help me out
-    and say a few words about my startup in one of your articles, pretty please!?"
-    Who they can refuse?
+    and say a few words about my startup in one of your articles, pretty please?!"
+    How can they refuse?
 
 Got the strategy?
 
-You can invent some other tricks, if you got the idea: you have to show them
+You can invent some other tricks, if you get the idea: you have to show them
 that they are much more important that your startup. They are the experts,
-they know what is the future of machine learning, they change the world
-by their articles, they are kings, while you are just yet another startup
+they know what the future of machine learning is, they change the world
+with their articles, they are kings, while you are yet another startup
 founder, who is ready to do anything just to get a chance to
 <del>kiss their feet</del> be mentioned in one of their future articles.
 
-Try it and let me know how it works.
+Try it, and let me know how it works.
 
-PS. I tried too, but I can't get further than the first step. It seems
+PS. I tried too, but I can't seem to get further than the first step. It seems
 that there is something wrong with me.
