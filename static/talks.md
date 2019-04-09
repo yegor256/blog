@@ -207,6 +207,8 @@ Novosibirsk, Russia;
 30 March;
 [slides](https://www.slideshare.net/YegorBugayenko/five-trends-we-are-afraid-of).
 
+### 2019
+
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
 Panel Discussion about Blockchain;
