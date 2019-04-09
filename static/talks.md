@@ -166,26 +166,6 @@ pretty fresh (I haven't presented them before, as of yet):
     situations. In the presentation I will demonstrate how it works and we
     will deploy a new version right on the stage.
 
-  * **Five Trends We Are Afraid Of**.
-    Programming languages, frameworks, paradigms, deployment models,
-    hardware and software configurations change very often and fast. However, there
-    are a few other things that also change, and which scare us. First, it's the
-    inevitable trend of working out of office and even out of company, in
-    distributed temporary projects -- most of us are not ready for that and
-    don't know how to do it. Second, the attention to the quality of code we were
-    paying ten years ago is not what the future demands from us -- programmers
-    become a very expensive component of any project and they must think about
-    the maintainability mess they used to leave behind. Third, the world of open source
-    grows quickly and staying out of it is not an option anymore, however many
-    of us don't know how to deal with it. Fourth, we are getting closer to customers
-    and this is what many of us are not ready for, since we used to work from
-    behind an army of product owners, project managers, and customer relationship
-    managers -- this will be changed in the future and we must be ready. Fifth,
-    the quickly growing arsenal of cloud services makes it very important for
-    programmers to understand DevOps and know how to use not only frameworks
-    and libraries, but also hosted services. These five trends are important to
-    consider and get ourselves ready for them.
-
   * **Weak Management Needs Pay Equality**.
     The average salary of American workers is growing 1% every year, while
     the pay gap between similar jobs is decreasing. What do I think about
@@ -212,18 +192,20 @@ and
 ### 2018
 
 <div class="talk-event">&nbsp;</div>
+<img src="/images/2019/jpoint.png" class="past-talk" alt="JPoint 2019"/><br/>
+Software testing pitfalls;
+[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
+Moscow, Russia;
+5 April;
+[slides](https://www.slideshare.net/YegorBugayenko/software-testing-pitfalls).
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="past-talk" alt="CodeFest 2019"/><br/>
 Five Trends We Are Afraid Of;
 [CodeFest](https://2019.codefest.ru/lecture/1515);
 Novosibirsk, Russia;
-30 March.
-
-<div class="talk-event">&nbsp;</div>
-<img src="/images/2019/jpoint.png" class="future-talk" alt="JPoint 2019"/><br/>
-Software testing pitfalls;
-[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
-Moscow, Russia;
-5 April.
+30 March;
+[slides](https://www.slideshare.net/YegorBugayenko/five-trends-we-are-afraid-of).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
