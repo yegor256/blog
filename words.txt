@@ -415,6 +415,7 @@ article
 articles
 artifact
 artifacts
+artificial
 artistic
 artists
 as
@@ -709,6 +710,7 @@ bill
 billed
 billing
 billion
+billion-dollar
 billionaire
 billionaires
 billions
@@ -745,6 +747,8 @@ blindly
 bloat
 bloch
 block
+blockchain
+blocking
 blocks
 blog
 blog's
@@ -848,6 +852,7 @@ breathe
 brevity
 brian
 brian-lives-outdoors
+bribe
 brick-and-mortar
 bridge
 brief
@@ -2035,6 +2040,7 @@ desk
 desk-to-desk
 desks
 desktop
+desperate
 desperately
 despise
 despite
@@ -2260,6 +2266,7 @@ dolls
 DOM
 domain
 domains
+dominant
 dominate
 dominating
 domination
@@ -2963,6 +2970,7 @@ flip
 flirt
 flirtation
 flirting
+float
 floor
 flourish
 flow
@@ -2984,6 +2992,7 @@ folder
 folklore
 follow
 followed
+follower
 followers
 following
 follows
@@ -3010,6 +3019,7 @@ foremost
 foresee
 forever
 forget
+forgive
 forgot
 forgotten
 fork
@@ -3180,6 +3190,7 @@ gentlemen
 geographic
 gerard
 german
+gesture
 get
 gethours
 getminutes
@@ -3577,6 +3588,7 @@ httprequest
 https
 hub
 hudson
+hug
 huge
 huh
 human
@@ -3844,6 +3856,7 @@ inspection
 inspector
 inspiration
 inspire
+inspired
 inspiring
 instability
 instagram
@@ -3882,6 +3895,7 @@ integration
 integrations
 intel
 intellectual
+intelligence
 intelligent
 intellij
 intend
@@ -4207,6 +4221,7 @@ kindness
 kinds
 king
 kingdom
+kings
 kiss
 kissed
 kitchen
@@ -4693,6 +4708,7 @@ meetings
 meets
 meetup
 meetups
+melt
 member
 members
 membership
@@ -4713,6 +4729,8 @@ mentoring
 menu
 menus
 mercedes-benz
+merciful
+mercifulness
 mere
 merely
 merge
@@ -4798,6 +4816,7 @@ millionaires
 millions
 milliseconds
 mind
+mind-blowing
 mind-shifting
 mindedness
 minds
@@ -4977,6 +4996,7 @@ munich
 mush
 music
 musk
+musk's
 muslim
 muslims
 must
@@ -5672,8 +5692,10 @@ piracy
 pirate
 pit
 pitch
+pitching
 pitfall
 pitfalls
+pity
 pivetta
 pixelmator
 pizza
@@ -6088,6 +6110,7 @@ punishes
 punishing
 punishment
 punishments
+puppies
 purchase
 purchased
 pure
@@ -6201,6 +6224,7 @@ re-phrase
 re-read
 re-throw
 re-throwing
+re-tweet
 re-tweeted
 re-used
 re-work
@@ -6220,10 +6244,13 @@ readable
 readallbytes
 reader
 readers
+readfloat
 readiness
 reading
+readint
 README
 reads
+readstring
 ready
 real
 real-life
@@ -6555,7 +6582,6 @@ reviewer's
 reviewers
 reviewing
 reviews
-revision
 revoke
 revolution
 revolver
@@ -6820,6 +6846,7 @@ self-discipline
 self-documented
 self-esteem
 self-explainable
+self-humiliation
 self-improvement
 self-managing
 self-motivated
@@ -7060,6 +7087,7 @@ skeleton
 skeptical
 sketch
 sketchy
+ski
 skiing
 skill
 skilled
@@ -7189,6 +7217,7 @@ sorting
 sorts
 soul
 soulless
+souls
 sound
 soundcloud
 sounds
@@ -7334,6 +7363,8 @@ starts
 startup
 startups
 starvation
+starve
+starving
 state
 stated
 stateful
@@ -7547,6 +7578,7 @@ supportive
 supports
 suppose
 supposed
+supremacists
 supreme
 suprise
 sur
@@ -7664,6 +7696,7 @@ teared
 tearing
 tech
 tech-savvy
+techcrunch
 technical
 technically
 technically-savvy
@@ -8052,6 +8085,7 @@ unclear
 uncomfortable
 uncompromising
 unconditional
+unconditionally
 uncovered
 under
 under-estimating
@@ -8081,6 +8115,7 @@ unfair
 unfinished
 unfixable
 unfocused
+unfollow
 unforgivable
 unfortunate
 unfortunately
@@ -8634,3 +8669,4 @@ zones
 zoo
 zoom
 zuckerberg
+zuckerberg's
