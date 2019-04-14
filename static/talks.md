@@ -84,13 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/andreea/yegor-is-presenting.png" class="future-talk" alt="Samara 2019"/><br/>
-Микротаскинг или как обмануть начальника<br/>
-[StartupSamara](https://startupsamara.timepad.ru/event/926814/)<br/>
-Samara, Russia<br/>
-13 April.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="future-talk" alt="SECON 2019"/><br/>
 Правильно ли мы тестируем<br/>
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
@@ -99,10 +92,17 @@ Penza, Russia<br/>
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/appsconf.png" class="future-talk" alt="AppsConf 2019"/><br/>
-Opening Keynote<br/>
+Another Five Trends We Are Afraid Of<br/>
 [AppsConf'2019](http://appsconf.ru/moscow/2019)<br/>
 Moscow, Russia<br/>
 22 April.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/appsconf.png" class="future-talk" alt="QAConf 2019"/><br/>
+Closing Keynote<br/>
+[QAConf'2019](http://qualityconf.ru/2019)<br/>
+Moscow, Russia<br/>
+7 June.
 
 If you are interested in placing me at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
@@ -189,10 +189,17 @@ Statistically speaking, I've been speaking in
 and
 <span id="total_countries">?</span> countries.
 
-### 2018
+### 2019
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/jpoint.png" class="past-talk" alt="JPoint 2019"/><br/>
+<img src="/images/andreea/yegor-is-presenting.png" class="past-talk" alt="Samara 2019"/>
+Микротаскинг или как обмануть начальника;
+[StartupSamara](https://startupsamara.timepad.ru/event/926814/);
+Samara, Russia;
+13 April.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/jpoint.png" class="past-talk" alt="JPoint 2019"/>
 Software testing pitfalls;
 [JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
 Moscow, Russia;
@@ -200,14 +207,14 @@ Moscow, Russia;
 [slides](https://www.slideshare.net/YegorBugayenko/software-testing-pitfalls).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="past-talk" alt="CodeFest 2019"/><br/>
+<img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="past-talk" alt="CodeFest 2019"/>
 Five Trends We Are Afraid Of;
 [CodeFest](https://2019.codefest.ru/lecture/1515);
 Novosibirsk, Russia;
 30 March;
 [slides](https://www.slideshare.net/YegorBugayenko/five-trends-we-are-afraid-of).
 
-### 2019
+### 2018
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
