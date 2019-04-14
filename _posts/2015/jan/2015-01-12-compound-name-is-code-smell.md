@@ -92,3 +92,6 @@ by you know who :)
 
 PS. Also, [redundant variables]({% pst 2015/sep/2015-09-01-redundant-variables-are-evil %})
 are evil as well.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think about function and variable naming in this Ruby code?<br><br>def total_words_in_file(file_name) {<br>  text_file_content = <a href="https://t.co/u2RHVnNqB3">https://t.co/u2RHVnNqB3</a>(file_name)<br>  return text_file_content.split(&#39; &#39;).count<br>}</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1117419548582531074?ref_src=twsrc%5Etfw">April 14, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
