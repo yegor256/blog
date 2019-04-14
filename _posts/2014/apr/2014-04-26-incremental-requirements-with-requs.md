@@ -2,7 +2,7 @@
 layout: post
 title: Incremental Requirements With Requs
 date: 2014-04-26
-tags: requs xdsd requirements
+tags: requs xdsd specs
 description: |
   Requirements engineering can be done incrementally
   with Requs open source controlled natural language
