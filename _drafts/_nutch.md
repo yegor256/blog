@@ -42,7 +42,7 @@ I'll be talking about Nutch 1.15. There is a later version 2+, but I didn't
 manage to make it work. If you know how, leave your comment below.
 
 I'd recommend you read [this tutorial](https://examples.javacodegeeks.com/enterprise-java/apache-hadoop/apache-hadoop-nutch-tutorial/)
-first, to understand how Nutch works from the comamnd line. Well,
+first, to understand how Nutch works from the command line. Well,
 it helped me anyway.
 
 Now, let's see how we can use Nutch without the command line.
@@ -257,7 +257,7 @@ to do is to set the system property for the unit test:
 Actually, one more thing we have to do: copy the contents of the directory `conf`
 from their binary distribution to our `src/main/resources` directory. There
 are many files, including the most important `nutch-default.xml`. They all
-have to be avaiable on classpath, otherwise Nutch will complain in so
+have to be available on classpath, otherwise Nutch will complain in so
 many places and won't be able to load the `Configuration`.
 
 You can see how it all works together in this
