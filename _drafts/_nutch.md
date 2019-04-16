@@ -24,14 +24,14 @@ jb_picture:
 
 [Apache Nutch](https://nutch.apache.org/)
 is an open source framework written in Java. Its purpose
-is to help us crawl as set of websites (or the entire Internet), fetch
+is to help us crawl a set of websites (or the entire Internet), fetch
 the content, and prepare it for indexing by, say, Solr. A pretty useful
-framework, if you ask me, however it is designed to be used <del>only</del>
+framework if you ask me, however it is designed to be used <del>only</del>
 mostly from the command line. You download the archive, unzip it, and run
 the binary file. It crawls and you get the data. However, I've got a project
 where this crawling had to be embedded into my own Java app. I realized
-that there is an absolute absence of any documentation for that. That's why
-this blog post, it explains how you can use Nutch from Java, not from
+that there is a complete absence of any documentation for that. Hence
+this blog post. It explains how you can use Nutch from Java, not from
 the command line.
 
 <!--more-->
@@ -39,15 +39,15 @@ the command line.
 {% jb_picture_body %}
 
 I'll be talking about Nutch 1.15. There is a later version 2+, but I didn't
-manage to make it work. If you know how, leave you comment below.
+manage to make it work. If you know how, leave your comment below.
 
-I'd recommend you reading [this tutorial](https://examples.javacodegeeks.com/enterprise-java/apache-hadoop/apache-hadoop-nutch-tutorial/)
+I'd recommend you read [this tutorial](https://examples.javacodegeeks.com/enterprise-java/apache-hadoop/apache-hadoop-nutch-tutorial/)
 first, to understand how Nutch works from the comamnd line. Well,
-it did help me.
+it helped me anyway.
 
 Now, let's see how we can use Nutch without the command line.
 First, you need these dependencies in your `pom.xml`
-(Nutch is using [Apache Hadoop](https://hadoop.apache.org/), that's why the
+(Nutch uses [Apache Hadoop](https://hadoop.apache.org/), that's why we need the
 second dependency):
 
 {% highlight xml %}
@@ -91,7 +91,7 @@ import org.apache.nutch.tools.FileDumper;
 public class Main {
   public static void main(String... args) throws Exception {
     // Create a default configuration object, which will read
-    // the content of nutch-default.xml file from the classpath
+    // the content of nutch-default.xml file from the classpath,
     // parse it and take its entire content as the default
     // configuration. Funny, but this interface is from Hadoop:
     Configuration conf = NutchConfiguration.create();
@@ -106,10 +106,10 @@ public class Main {
     // its default JAR package, unfortunately.
     conf.set("plugin.folders", System.getProperty("nutch.plugins.dir"));
     // First, we need to have a directory where everything will
-    // happen. I assume you are with Maven, that's why let's use
+    // happen. I assume you are familiar with Maven, so let's use
     // its default temporary directory "target":
     Path home = new Path("target");
-    // Next, we have to create a file with a list URLs Nutch will
+    // Next, we have to create a file with a list of URLs Nutch will
     // start crawling from:
     String[] urls = { "http://www.zerocracy.com" };
     final Path targets = new Path(home, "urls");
@@ -130,7 +130,7 @@ public class Main {
     // will bring new web pages to the database. The more increments
     // you run, the deeper Nutch will go into the Internet. Five here
     // is a very small number. If you really want to crawl deeper,
-    // you will need hundreds of increments. I guess, I haven't tried.
+    // you will need hundreds of increments. I guess, anyway. I haven't tried it.
     for (int idx = 0; idx < 5; ++idx) {
       this.cycle(home, conf);
     }
@@ -190,12 +190,12 @@ there is one tricky part. Nutch, in order to work, needs a number
 of plugins, which are standalone JAR packages, which it doesn't include
 in its default JAR. They exist in its
 [binary distribution](https://nutch.apache.org/downloads.html) and they
-are pretty heavy (over 250Mb in Nutch 1.15). Nutch expects you to download
+are pretty heavy (over 250MB in Nutch 1.15). Nutch expects you to download
 the entire distribution, unpack, and run the binary `nutch` they provide,
 which will work with the provided plugins.
 
-What can we do, since we are in Java, not in command line? Here is what
-I'm suggesting:
+What can we do, now that we are in Java, not in the command line? Here is what
+I suggest:
 
 {% highlight xml %}
 <project>
@@ -254,7 +254,7 @@ to do is to set the system property for the unit test:
 </project>
 {% endhighlight %}
 
-One more thing we have to do: copy the content of the directory `conf`
+Actually, one more thing we have to do: copy the contents of the directory `conf`
 from their binary distribution to our `src/main/resources` directory. There
 are many files, including the most important `nutch-default.xml`. They all
 have to be avaiable on classpath, otherwise Nutch will complain in so
@@ -264,5 +264,5 @@ You can see how it all works together in this
 GitHub repository I created to illustrate the example:
 [yegor256/nutch-in-java](https://github.com/yegor256/nutch-in-java).
 
-If any questions or suggestions, feel free to submit a pull request
+If you have any questions or suggestions, feel free to submit a pull request
 or comment here.
