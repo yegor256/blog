@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Use Nutch From Java, Not From the Command Line"
-date: 2019-04-18
+date: 2019-04-17
 place: Moscow, Russia
 tags: java
 description: |
@@ -15,9 +15,6 @@ keywords:
   - java nutch
   - nutch without comand line
   - nutch apache
-image: /images/2019/03/...
-jb_picture:
-  caption:
 ---
 
 {% badge https://upload.wikimedia.org/wikipedia/commons/8/89/Nutch_logo.svg 92 https://nutch.apache.org/ %}
@@ -35,8 +32,6 @@ this blog post. It explains how you can use Nutch from Java, not from
 the command line.
 
 <!--more-->
-
-{% jb_picture_body %}
 
 I'll be talking about Nutch 1.15. There is a later version 2+, but I didn't
 manage to make it work. If you know how, leave your comment below.
