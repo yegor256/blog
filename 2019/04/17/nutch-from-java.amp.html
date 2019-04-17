@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How to Use Nutch From Java, Not From the Command Line</title>
+    <link rel="canonical" href="https://www.yegor256.com/2019/04/17/nutch-from-java.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2019/04/17/nutch-from-java.html"
+        },
+        "headline": "How to Use Nutch From Java, Not From the Command Line",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2019-04-17",
+        "dateModified": "2019-04-17",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Nutch is an open source framework for crawling
+web content, however it is designed primarily to
+be used from the command line; here I explain how
+to use it from inside Java.
+",
+        "keywords": ["nutch", "nutch in java", "java nutch", "nutch without comand line", "nutch apache"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2019/04/17/nutch-from-java.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>17 April 2019</p>
+      <h1>How to Use Nutch From Java, Not From the Command Line</h1>
+      
+
+<p><a href="https://nutch.apache.org/">Apache Nutch</a>
+is an open source framework written in Java. Its purpose
+is to help us crawl a set of websites (or the entire Internet), fetch
+the content, and prepare it for indexing by, say, Solr. A pretty useful
+framework if you ask me, however it is designed to be used <del>only</del>
+mostly from the command line. You download the archive, unzip it, and run
+the binary file. It crawls and you get the data. However, I’ve got a project
+where this crawling had to be embedded into my own Java app. I realized
+that there is a complete absence of any documentation for that. Hence
+this blog post. It explains how you can use Nutch from Java, not from
+the command line.</p>
+
+
+
+<p>I’ll be talking about Nutch 1.15. There is a later version 2+, but I didn’t
+manage to make it work. If you know how, leave your comment below.</p>
+
+<p>I’d recommend you read <a href="https://examples.javacodegeeks.com/enterprise-java/apache-hadoop/apache-hadoop-nutch-tutorial/">this tutorial</a>
+first, to understand how Nutch works from the command line. Well,
+it helped me anyway.</p>
+
+<p>Now, let’s see how we can use Nutch without the command line.
+First, you need these dependencies in your <code>pom.xml</code>
+(Nutch uses <a href="https://hadoop.apache.org/">Apache Hadoop</a>, that’s why we need the
+second dependency):</p>
+
+<pre>&lt;project&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.nutch&lt;/groupId&gt;
+      &lt;artifactId&gt;nutch&lt;/artifactId&gt;
+      &lt;version&gt;1.15&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;
+      &lt;artifactId&gt;hadoop-common&lt;/artifactId&gt;
+      &lt;version&gt;2.7.2&lt;/version&gt;
+    &lt;/dependency&gt;
+    [...]
+  &lt;/dependencies&gt;
+  [...]
+&lt;/project&gt;</pre>
+
+<p>Next, this is your Java code, which does all the work:</p>
+
+<pre>import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+import org.apache.commons.io.FileUtils;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.nutch.crawl.CrawlDb;
+import org.apache.nutch.crawl.Generator;
+import org.apache.nutch.crawl.Injector;
+import org.apache.nutch.fetcher.Fetcher;
+import org.apache.nutch.parse.ParseSegment;
+import org.apache.nutch.tools.FileDumper;
+public class Main {
+  public static void main(String... args) throws Exception {
+    // Create a default configuration object, which will read
+    // the content of nutch-default.xml file from the classpath,
+    // parse it and take its entire content as the default
+    // configuration. Funny, but this interface is from Hadoop:
+    Configuration conf = NutchConfiguration.create();
+    // Now it's possible to reset some configuration parameters
+    // by using this set() method. This one is mandatory, if you
+    // don't set it the crawling won't work. The value is used
+    // as User-Agent HTTP header.
+    conf.set("http.agent.name", "me, myself, and I");
+    // This one is also mandatory and we will discuss its
+    // value below. You need to point Nutch to the directory
+    // with compiled plugins and this collection is NOT in
+    // its default JAR package, unfortunately.
+    conf.set("plugin.folders", System.getProperty("nutch.plugins.dir"));
+    // First, we need to have a directory where everything will
+    // happen. I assume you are familiar with Maven, so let's use
+    // its default temporary directory "target":
+    Path home = new Path("target");
+    // Next, we have to create a file with a list of URLs Nutch will
+    // start crawling from:
+    String[] urls = { "http://www.zerocracy.com" };
+    final Path targets = new Path(home, "urls");
+    Files.createDirectory(Paths.get(targets.toString()));
+    Files.write(
+      Paths.get(targets.toString(), "list-of-urls.txt"),
+      String.join("\n", urls).getBytes()
+    );
+    // Next, we have to point Nutch to the directory with the
+    // text file and let it "inject" our URLs into its database:
+    new Injector(conf).inject(
+      new Path(home, "crawldb"), // the directory with its database
+      new Path(home, "urls"), // the directory with text files with URLs
+      true, true // no idea what this is
+    );
+    // Now, it's time to do a few cycles of fetching, parsing, and
+    // updating. This is how Nutch works, in increments. Each increment
+    // will bring new web pages to the database. The more increments
+    // you run, the deeper Nutch will go into the Internet. Five here
+    // is a very small number. If you really want to crawl deeper,
+    // you will need hundreds of increments. I guess, anyway. I haven't tried it.
+    for (int idx = 0; idx &lt; 5; ++idx) {
+      this.cycle(home, conf);
+    }
+    // Now it's time to dump what is fetched to a new directory,
+    // which will contain HTML pages and all other files when
+    // finished.
+    Files.createDirectory(Paths.get(new Path(home, "dump").toString()));
+    new FileDumper().dump(
+      new File(new Path(home, "dump").toString()), // where to dump
+      new File(new Path(home, "segments").toString()),
+      null, true, false, true
+    );
+  }
+  private void cycle(Path home, Configuration conf) {
+    // This is the directory with "segments". Each fetching cycle
+    // will produce its own collection of files. Each collection
+    // is called a segment.
+    final Path segments = new Path(home, "segments");
+    // First, we generate a list of target URLs to fetch from:
+    new Generator(conf).generate(
+      new Path(home, "crawldb"),
+      new Path(home, "segments"),
+      1, 1000L, System.currentTimeMillis()
+    );
+    // Then, we get the path of the current segment:
+    final Path sgmt = Batch.segment(segments);
+    // Then, we fetch, parse and update:
+    new Fetcher(conf).fetch(sgmt, 10);
+    new ParseSegment(conf).parse(sgmt);
+    new CrawlDb(conf).update(
+      new Path(home, "crawldb"),
+      Files.list(Paths.get(segments.toString()))
+          .map(p -&gt; new Path(p.toString()))
+          .toArray(Path[]::new),
+      true, true
+    );
+  }
+  private static Path segment(final Path dir) throws IOException {
+    // Get the path of the most recent segment in the list,
+    // sorted by the date/time of their creation.
+    final List&lt;Path&gt; list = Files.list(Paths.get(dir.toString()))
+      .map(p -&gt; new Path(p.toString()))
+      .sorted(Comparator.comparing(Path::toString))
+      .collect(Collectors.toList());
+    return list.get(list.size() - 1);
+  }
+}</pre>
+
+<p>Pay attention that <code>Path</code> here is not the
+<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><code>Path</code></a> from JDK.
+It’s the <a href="https://hadoop.apache.org/docs/r2.7.2/api/org/apache/hadoop/fs/Path.html"><code>Path</code></a> from Hadoop.
+Don’t ask me why.</p>
+
+<p>This seems to be a pretty straight-forward algorithm, however
+there is one tricky part. Nutch, in order to work, needs a number
+of plugins, which are standalone JAR packages, which it doesn’t include
+in its default JAR. They exist in its
+<a href="https://nutch.apache.org/downloads.html">binary distribution</a> and they
+are pretty heavy (over 250MB in Nutch 1.15). Nutch expects you to download
+the entire distribution, unpack, and run the binary <code>nutch</code> they provide,
+which will work with the provided plugins.</p>
+
+<p>What can we do, now that we are in Java, not in the command line? Here is what
+I suggest:</p>
+
+<pre>&lt;project&gt;
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;com.googlecode.maven-download-plugin&lt;/groupId&gt;
+        &lt;artifactId&gt;download-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.4.1&lt;/version&gt;
+        &lt;executions&gt;
+          &lt;execution&gt;
+            &lt;id&gt;download-nutch&lt;/id&gt;
+            &lt;phase&gt;generate-resources&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;wget&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+              &lt;url&gt;http://artfiles.org/apache.org/nutch/1.15/apache-nutch-1.15-bin.zip&lt;/url&gt;
+              &lt;unpack&gt;true&lt;/unpack&gt;
+              &lt;outputDirectory&gt;${project.build.directory}&lt;/outputDirectory&gt;
+              &lt;overwrite&gt;false&lt;/overwrite&gt;
+            &lt;/configuration&gt;
+          &lt;/execution&gt;
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+  [...]
+&lt;/project&gt;</pre>
+
+<p>This Maven plugin will download the entire binary distribution of Nutch
+and will unpack it to <code>target/apache-nutch-1.15</code>. The plugins will be
+in <code>target/apache-nutch-1.15/plugins</code>. The only thing we still need
+to do is to set the system property for the unit test:</p>
+
+<pre>&lt;project&gt;
+  &lt;build&gt;
+    &lt;pluginManagement&gt;
+      &lt;plugins&gt;
+        &lt;plugin&gt;
+          &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+          &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+          &lt;configuration&gt;
+            &lt;systemPropertyVariables&gt;
+              &lt;nutch.plugins.dir&gt;${project.build.directory}/apache-nutch-1.15/plugins&lt;/nutch.plugins.dir&gt;
+            &lt;/systemPropertyVariables&gt;
+          &lt;/configuration&gt;
+        &lt;/plugin&gt;
+      &lt;/plugins&gt;
+    &lt;/pluginManagement&gt;
+    [...]
+  &lt;/build&gt;
+  [...]
+&lt;/project&gt;</pre>
+
+<p>Actually, one more thing we have to do: copy the contents of the directory <code>conf</code>
+from their binary distribution to our <code>src/main/resources</code> directory. There
+are many files, including the most important <code>nutch-default.xml</code>. They all
+have to be available on classpath, otherwise Nutch will complain in so
+many places and won’t be able to load the <code>Configuration</code>.</p>
+
+<p>You can see how it all works together in this
+GitHub repository I created to illustrate the example:
+<a href="https://github.com/yegor256/nutch-in-java">yegor256/nutch-in-java</a>.</p>
+
+<p>If you have any questions or suggestions, feel free to submit a pull request
+or comment here.</p>
+
+    </article>
+  </body>
+</html>
