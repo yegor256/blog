@@ -162,3 +162,6 @@ class RqUser implements Scalar<String> {
 
 But aside from that, these examples perfectly demonstrate the principle
 of "parsing objects" suggested above.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How would you refactor this Ruby code?<br><br>book = JSON.parse(json)[&#39;books&#39;][3]<a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> <a href="https://twitter.com/hashtag/oop?src=hash&amp;ref_src=twsrc%5Etfw">#oop</a> <a href="https://twitter.com/hashtag/ruby?src=hash&amp;ref_src=twsrc%5Etfw">#ruby</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1119841190051024896?ref_src=twsrc%5Etfw">April 21, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
