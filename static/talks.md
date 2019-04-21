@@ -84,13 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="future-talk" alt="SECON 2019"/><br/>
-Правильно ли мы тестируем<br/>
-[SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem)<br/>
-Penza, Russia<br/>
-19 April.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/2019/appsconf.png" class="future-talk" alt="AppsConf 2019"/><br/>
 Another Five Trends We Are Afraid Of<br/>
 [AppsConf'2019](http://appsconf.ru/moscow/2019)<br/>
@@ -192,11 +185,19 @@ and
 ### 2019
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>;
+Правильно ли мы тестируем;
+[SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
+Penza, Russia;
+19 April.
+
+<div class="talk-event">&nbsp;</div>
 <img src="/images/andreea/yegor-is-presenting.png" class="past-talk" alt="Samara 2019"/>
 Микротаскинг или как обмануть начальника;
 [StartupSamara](https://startupsamara.timepad.ru/event/926814/);
 Samara, Russia;
-13 April.
+13 April;
+[видео](https://youtu.be/VLaGrUsCbYo).
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/jpoint.png" class="past-talk" alt="JPoint 2019"/>
@@ -204,7 +205,8 @@ Software testing pitfalls;
 [JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
 Moscow, Russia;
 5 April;
-[slides](https://www.slideshare.net/YegorBugayenko/software-testing-pitfalls).
+[slides](https://www.slideshare.net/YegorBugayenko/software-testing-pitfalls),
+[видео](https://www.youtube.com/watch?v=9ynzUGZjKFk).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="past-talk" alt="CodeFest 2019"/>
