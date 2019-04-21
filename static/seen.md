@@ -26,6 +26,10 @@ with Egor Tolstoy:
 with Sergey Pavlovich:
 [video](https://www.youtube.com/watch?v=3-TJ-XhEUV4) (in Russian).
 
+9 Oct 2018:
+[SDCast](https://sdcast.ksdaemon.ru/):
+[audio](https://sdcast.ksdaemon.ru/2018/10/sdcast-87/) (in Russian).
+
 5 Sep 2018:
 [FrontEnd Weekend](http://www.frontendweekend.ml)
 with Andrey Smirnov:
