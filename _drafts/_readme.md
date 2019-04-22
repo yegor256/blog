@@ -157,12 +157,12 @@ we don't care about you. Focus on us and our needs. Tell us how it works
 and call it a README. No philosophy, no prose. Use your blog and Twitter
 for those.
 
-## How to contribute?
+## How to contribute
 
 Start it with a section header "How to contribute" and explain briefly
 what needs to be done in order to create a pull request to your repo. Imagine
-that you are talking to a junior developer who doesn't even know what is
-Java and Maven (if your project is using them). You should explain how
+that you are talking to a junior developer who doesn't even know what
+Java and Maven are (if your project is using them). You should explain how
 to install the right tools, how to build the project, how to make changes,
 how to run it in a hot-reload mode (when I'm making changes and see them
 on the screen immediately), how to create the fork, and what to expect
@@ -177,17 +177,17 @@ how to run the app locally, how to run the build, how to run a single
 unit test and what to do if it doesn't work. It's pretty compact and, I believe,
 easy to understand.
 
-You don't want your potential contributor to walk away. That's why, this
+You don't want your potential contributor to walk away. That's why this
 part of the entire README is the most important one. Make sure you address
-your text to a junior programmer, not yourself. As they say, you grandma
+your text to a junior programmer, not yourself. As they say, your grandma
 should be able to understand you here.
 
 And don't teach us. We are not interested in becoming experts in the
 frameworks you are using or in Docker, which is required in order to
 run your stuff. We just want to run your stuff, make some changes,
 get a new release, and walk away. So, please, don't tell me "first, you
-have to learn Docker." No, I don't. If I would, I'd have done it myself before.
-Tell me how to use in _this specific case_ and spare me of any learnings.
+have to learn Docker." No, I don't. If I did, I'd have done it myself already.
+Tell me how to use it in _this specific case_, and spare me all the rest.
 
 ## Downloads and Releases
 
@@ -199,13 +199,13 @@ in the README.
 ## License
 
 GitHub automatically finds your `LICENSE.txt` file in the root directory
-of your repository and undersands the license. Just create that file
+of your repository and understands the license. Just create that file
 and don't say anything in the README about the license, it's just pure noise.
-If I want to know what is the license, I know where to click.
+If I want to know what the license is, I know where to click.
 
 ## Changelog
 
-This is something from pre-GitHub time. I would recommend you relying
+This is something from pre-GitHub time. I would recommend you rely
 on the "releases" tab and keep everything you want to tell us there.
 Some old projects maintain changelogs, like this one in
 [rubocop-hq/rubocop](https://github.com/rubocop-hq/rubocop/blob/master/CHANGELOG.md),
@@ -214,17 +214,17 @@ for example. I don't think it's a good idea.
 ## Contributors vs. Acknowledgements
 
 GitHub has a special tab in each repository, which is called "contributors."
-There is absolutely no reason to reproduce the list of them in the README file.
-However, there is one reason: to help them promote themselves. In such a case,
-I would recommend creating a section (with a header) called "Acknowledgements,"
+There is absolutely no reason to reproduce the list in the README file.
+However, there is one reason: to help the contributors promote themselves. In such a case,
+I would recommend creating a section (with a heading) called "Acknowledgements,"
 which should list the most active contributors, with their blog URLs,
 Twitter accounts, and so on.
 
-If you don't have anyone to acknowlege, don't make a noise by telling us
-who are the contributors. We know them, GitHub tells us.
+If you don't have anyone to acknowledge, don't make a noise by telling us
+who the contributors are. We know them, GitHub tells us.
 
 PS. Here is a short list of READMEs I like, which are not mine
 (if you think that yours is good too, [email](maito:readme-review@yegor256.com)
-it to me, I will review and add to this list):
+it to me, I will review it and perhaps add it to this list):
 
-  * _the list is now empty_ :(
+  * _the list is empty at the moment_ :(
