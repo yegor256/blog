@@ -53,7 +53,7 @@ than 100px in height.
 
 ## Badges
 
-You need them, as I [said ealier]({% pst 2018/may/2018-05-08-open-source-attributes %}).
+You need them, as I [said earlier]({% pst 2018/may/2018-05-08-open-source-attributes %}).
 But the question is how to position them inside the README.
 You should put no more than fives badges in a line. Then separate the
 lines with an empty line. See how it's done in
