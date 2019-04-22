@@ -6,7 +6,7 @@ place: Samara, Russia
 tags: specs
 description: |
   The README document is the most important piece of
-  documentation your project may have; how to design
+  documentation your project can have; how to design
   it right is a big question; here is my cheat-sheet.
 keywords:
   - README
@@ -20,24 +20,24 @@ jb_picture:
 ---
 
 Some time ago I wrote a blog post
-[_An Open Code Base Is Not Yet an Open Source Project_]({% pst 2018/may/2018-05-08-open-source-attributes %}),
+[_An Open Code Base Is Not Yet an Open Source Project_]({% pst 2018/may/2018-05-08-open-source-attributes %})
 where I suggested a few important qualities of a good open
 source repository/project. One of them was the well-written README
 file. Here I will try to give a few hints on how to create
-a good README file and what mistakes to avoid. Hope you find it
+a good README file and what mistakes to avoid. I hope you find it
 helpful.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-I'm listing everything you need to have in the README, in the order
-those elements should show up there:
+I will list everything you need to have in the README, in the order
+those elements should show up:
 
 ## Title and Description
 
-What for? The title is already in the URL of your repo and the description
-of the project is in the GitHub subtitle. Why repeating itself again? Instead,
+Why include these? The title is already in the URL of your repo and the description
+of the project is in the GitHub subtitle. Why repeat yourself? Instead,
 start with a logo and a list of badges right after it:
 
 {% highlight markdown %}
@@ -49,33 +49,33 @@ start with a logo and a list of badges right after it:
 Pay attention to the empty line after the logo. Don't forget to specify
 the size of the image in the `height` attribute. You can skip the `width`,
 since just one dimension is enough for the HTML. Don't make it larger
-than 100px by the height.
+than 100px in height.
 
 ## Badges
 
 You need them, as I [said ealier]({% pst 2018/may/2018-05-08-open-source-attributes %}).
 But the question is how to position them inside the README.
-You should put no more than fives badges in a line. You split
-their lines with an empty lines. See how it's done in
+You should put no more than fives badges in a line. Then separate the
+lines with an empty line. See how it's done in
 our [zold-io/zold](https://github.com/zold-io/zold) repo.
 
-You should group them somehow in the lines, using some logic. I'm groupping
+You should group them somehow in the lines, using some logic. I group them
 by the level of technical details. The first line is about CI, code coverage,
 code quality. The second line is more about management, etc. It's up to you,
 but make sure all badges that stay in the same line are of the same height!
-If some badge has a different height than everybody else, give it its own
+If some badge has a different height than everything else, give it its own
 line, but never put two badges of a different height on the same line!
 
 Also, remember that only in a few very specific cases (like badges, for example)
-you are allowed to make lines longer than 80 characters. Treat your README
-document as a piece of source code. Mkae it properly and elegantly formatted.
+are you allowed to make lines longer than 80 characters. Treat your README
+document as a piece of source code. Make it properly and elegantly formatted.
 The width of the line is one of those formatting rules that will make
 your document look better. Eighty characters. That's it.
 
 ## What is it?
 
 Your first paragraph after the badges should explain what the product is
-about. Pay attention, the paragraph, not a page of text. You should put
+about. Pay attention: a _paragraph_, not a page of text. You should put
 the description of the product in one single paragraph. No bullets here,
 no new lines, no indentations. Just a plain simple piece of text:
 
@@ -88,20 +88,20 @@ fundamental principles: 1) not a single `null`, 2) not a single `public` `static
 or reflection.
 {% endhighlight %}
 
-Pay attention, no headers up to now. Just a logo, a few lines with badges
-and a plain text with the description of the product. You may and should
+Pay attention, there are no headings yet. Just a logo, a few lines with badges
+and some plain text with the description of the product. You may, and should,
 use [markdown](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
-here and point the reader to the relevant blog posts or YouTube
-videos or somewhere else, but make sure you fit your entire idea into
+here and point the reader to any relevant blog posts or YouTube
+videos or anything else, but make sure you fit your entire idea into
 a single paragraph.
 
 ## How to use it?
 
-Then, again without any headers, you just right to the point of how I can
-use your baby, being a complete newbie to this repo. I just opened this
+Then, again without any headings, you just get right to the point of how I can
+use your baby, as a complete newbie to this repo. I just opened this
 page because a friend of mine told me that it's great and I want to understand
-is it worth it or I should close it right now. You have my attention for another
-60 seconds. Tell me _how to try_! Something like this:
+if it's worth it or I whether I should close it right now. You have my attention for another
+60 seconds. Tell me _how to try it_! Something like this:
 
 {% highlight markdown %}
 First, you install it:
@@ -121,36 +121,36 @@ our [Telegram chat](https://t.me/zold_io).
 {% endhighlight %}
 
 Pay attention to the formatting. I don't indent anything and I use triple-apostrophe
-for code samples formatting. You should do the same. Separate text blocks with
+for code-sample formatting. You should do the same. Separate text blocks with
 a [_single_]({% pst 2014/nov/2014-11-03-empty-line-code-smell %}) empty line.
 
 ## Use cases
 
 Here starts the body of your README. The exact content depends on your specific
-business case and the nature of your product. However, no matter what is the
+business case and the nature of your product. However, no matter what the
 product, there are a few recommendations.
 
-First, don't replace automatically generated JavaDocs
-(or whatever you have in your language) by README. The README is not a
-user documentation for everything you have inside your repo. There are
-other places in your repo for that. What you can do here is explaining a few most
-interesting use cases. See how we did it in
+First, don't replace automatically generated Javadocs
+(or whatever you have in your language) with the README. The README is not
+user documentation for everything you have in your repo. There are
+other places in for that. What you can do here is explain a few of the most
+interesting use cases. See how we did it in the
 [yegor256/takes](https://github.com/yegor256/takes) project.
 
 Second, start each use case with a header of the second level (`##` in Markdown),
 and try to avoid third-level headers (`###`). Do I need to say that
 the fourth level is absolutely prohibited? And, of course, again, no indenting.
 Always start your text lines from the far left position, no matter
-whether it's a paragraph with text or a section header.
+whether it's a paragraph of text or a section header.
 
 Third, keep in mind that you will change your
 product very soon and you don't want to always remember where in the
 README file you have to change what. You want your README to stay
 as short as possible and as high-level as possible. That's why, if you can,
-avoid specific details and better redirect the reader to the relevant
+avoid specific details and instead redirect the reader to the relevant
 parts of the _automatically_ generated documentation.
 
-Fourth, use as less words as you can. Nobody is interested in reading
+Fourth, use as few words as you can. Nobody is interested in reading
 your prose for more than a few seconds and only in order to understand
 how to use your product or how to make some changes. Don't focus on yourself,
 we don't care about you. Focus on us and our needs. Tell us how it works
