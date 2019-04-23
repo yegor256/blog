@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elegant READMEs"
-date: 2019-04-29
+date: 2019-04-23
 place: Samara, Russia
 tags: specs
 description: |
@@ -14,9 +14,9 @@ keywords:
   - documentation
   - open source README
   - how to design README
-image: /images/2019/03/...
+image: /images/2019/04/life-of-pi.jpg
 jb_picture:
-  caption:
+  caption: Life of Pi (2012) by Ang Lee
 ---
 
 Some time ago I wrote a blog post
