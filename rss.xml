@@ -1,4 +1,208 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-04-21T14:27:19+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Use Nutch From Java, Not From the Command Line</title><link href="https://www.yegor256.com/2019/04/17/nutch-from-java.html" rel="alternate" type="text/html" title="How to Use Nutch From Java, Not From the Command Line" /><published>2019-04-17T00:00:00+00:00</published><updated>2019-04-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/17/nutch-from-java</id><content type="html" xml:base="https://www.yegor256.com/2019/04/17/nutch-from-java.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://nutch.apache.org/&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/8/89/Nutch_logo.svg&quot; style=&quot;width:92px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-04-23T13:22:06+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Elegant READMEs</title><link href="https://www.yegor256.com/2019/04/23/elegant-readme.html" rel="alternate" type="text/html" title="Elegant READMEs" /><published>2019-04-23T00:00:00+00:00</published><updated>2019-04-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/23/elegant-readme</id><content type="html" xml:base="https://www.yegor256.com/2019/04/23/elegant-readme.html">&lt;p&gt;Some time ago I wrote a blog post
+&lt;a href=&quot;/2018/05/08/open-source-attributes.html&quot;&gt;&lt;em&gt;An Open Code Base Is Not Yet an Open Source Project&lt;/em&gt;&lt;/a&gt;
+where I suggested a few important qualities of a good open
+source repository/project. One of them was the well-written README
+file. Here I will try to give a few hints on how to create
+a good README file and what mistakes to avoid. I hope you find it
+helpful.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Life of Pi (2012) by Ang Lee&quot; src=&quot;/images/2019/04/life-of-pi.jpg&quot; longdesc=&quot;#2a0870e6&quot; /&gt;&lt;figcaption id=&quot;2a0870e6&quot;&gt;Life of Pi (2012) by Ang Lee&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I will list everything you need to have in the README, in the order
+those elements should show up:&lt;/p&gt;
+
+&lt;h2 id=&quot;title-and-description&quot;&gt;Title and Description&lt;/h2&gt;
+
+&lt;p&gt;Why include these? The title is already in the URL of your repo and the description
+of the project is in the GitHub subtitle. Why repeat yourself? Instead,
+start with a logo and a list of badges right after it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;img src=&amp;quot;http://www.takes.org/logo.png&amp;quot; height=&amp;quot;64px&amp;quot;/&amp;gt;
+
+[![Build Status](https://travis-ci.org/zold-io/zold.svg?branch=master)](https://travis-ci.org/zold-io/zold)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pay attention to the empty line after the logo. Don’t forget to specify
+the size of the image in the &lt;code&gt;height&lt;/code&gt; attribute. You can skip the &lt;code&gt;width&lt;/code&gt;,
+since just one dimension is enough for the HTML. Don’t make it larger
+than 100px in height.&lt;/p&gt;
+
+&lt;h2 id=&quot;badges&quot;&gt;Badges&lt;/h2&gt;
+
+&lt;p&gt;You need them, as I &lt;a href=&quot;/2018/05/08/open-source-attributes.html&quot;&gt;said earlier&lt;/a&gt;.
+But the question is how to position them inside the README.
+You should put no more than fives badges in a line. Then separate the
+lines with an empty line. See how it’s done in
+our &lt;a href=&quot;https://github.com/zold-io/zold&quot;&gt;zold-io/zold&lt;/a&gt; repo.&lt;/p&gt;
+
+&lt;p&gt;You should group them somehow in the lines, using some logic. I group them
+by the level of technical details. The first line is about CI, code coverage,
+code quality. The second line is more about management, etc. It’s up to you,
+but make sure all badges that stay in the same line are of the same height!
+If some badge has a different height than everything else, give it its own
+line, but never put two badges of a different height on the same line!&lt;/p&gt;
+
+&lt;p&gt;Also, remember that only in a few very specific cases (like badges, for example)
+are you allowed to make lines longer than 80 characters. Treat your README
+document as a piece of source code. Make it properly and elegantly formatted.
+The width of the line is one of those formatting rules that will make
+your document look better. Eighty characters. That’s it.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h2&gt;
+
+&lt;p&gt;Your first paragraph after the badges should explain what the product is
+about. Pay attention: a &lt;em&gt;paragraph&lt;/em&gt;, not a page of text. You should put
+the description of the product in one single paragraph. No bullets here,
+no new lines, no indentations. Just a plain simple piece of text:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;**Takes** is a [true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
+and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html)
+Java7 web development framework. Its key benefits, comparing to all others, include four
+fundamental principles: 1) not a single `null`, 2) not a single `public` `static` method,
+3) not a single mutable class, and 4) not a single `instanceof` keyword, type casting,
+or reflection.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pay attention, there are no headings yet. Just a logo, a few lines with badges
+and some plain text with the description of the product. You may, and should,
+use &lt;a href=&quot;https://help.github.com/en/articles/basic-writing-and-formatting-syntax&quot;&gt;markdown&lt;/a&gt;
+here and point the reader to any relevant blog posts or YouTube
+videos or anything else, but make sure you fit your entire idea into
+a single paragraph.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-use-it&quot;&gt;How to use it?&lt;/h2&gt;
+
+&lt;p&gt;Then, again without any headings, you just get right to the point of how I can
+use your baby, as a complete newbie to this repo. I just opened this
+page because a friend of mine told me that it’s great and I want to understand
+if it’s worth it or I whether I should close it right now. You have my attention for another
+60 seconds. Tell me &lt;em&gt;how to try it&lt;/em&gt;! Something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;First, you install it:
+
+```
+$ gem install zold
+```
+
+Then, you run it and follow the instructions:
+
+```
+$ zold --help
+```
+
+It should be clear what to do. If not, ask us in
+our [Telegram chat](https://t.me/zold_io).&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pay attention to the formatting. I don’t indent anything and I use triple-apostrophe
+for code-sample formatting. You should do the same. Separate text blocks with
+a &lt;a href=&quot;/2014/11/03/empty-line-code-smell.html&quot;&gt;&lt;em&gt;single&lt;/em&gt;&lt;/a&gt; empty line.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-cases&quot;&gt;Use cases&lt;/h2&gt;
+
+&lt;p&gt;Here starts the body of your README. The exact content depends on your specific
+business case and the nature of your product. However, no matter what the
+product, there are a few recommendations.&lt;/p&gt;
+
+&lt;p&gt;First, don’t replace automatically generated Javadocs
+(or whatever you have in your language) with the README. The README is not
+user documentation for everything you have in your repo. There are
+other places in for that. What you can do here is explain a few of the most
+interesting use cases. See how we did it in the
+&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; project.&lt;/p&gt;
+
+&lt;p&gt;Second, start each use case with a header of the second level (&lt;code&gt;##&lt;/code&gt; in Markdown),
+and try to avoid third-level headers (&lt;code&gt;###&lt;/code&gt;). Do I need to say that
+the fourth level is absolutely prohibited? And, of course, again, no indenting.
+Always start your text lines from the far left position, no matter
+whether it’s a paragraph of text or a section header.&lt;/p&gt;
+
+&lt;p&gt;Third, keep in mind that you will change your
+product very soon and you don’t want to always remember where in the
+README file you have to change what. You want your README to stay
+as short as possible and as high-level as possible. That’s why, if you can,
+avoid specific details and instead redirect the reader to the relevant
+parts of the &lt;em&gt;automatically&lt;/em&gt; generated documentation.&lt;/p&gt;
+
+&lt;p&gt;Fourth, use as few words as you can. Nobody is interested in reading
+your prose for more than a few seconds and only in order to understand
+how to use your product or how to make some changes. Don’t focus on yourself,
+we don’t care about you. Focus on us and our needs. Tell us how it works
+and call it a README. No philosophy, no prose. Use your blog and Twitter
+for those.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-contribute&quot;&gt;How to contribute&lt;/h2&gt;
+
+&lt;p&gt;Start it with a section header “How to contribute” and explain briefly
+what needs to be done in order to create a pull request to your repo. Imagine
+that you are talking to a junior developer who doesn’t even know what
+Java and Maven are (if your project is using them). You should explain how
+to install the right tools, how to build the project, how to make changes,
+how to run it in a hot-reload mode (when I’m making changes and see them
+on the screen immediately), how to create the fork, and what to expect
+when the fork is submitted.&lt;/p&gt;
+
+&lt;p&gt;Don’t be too verbose. Actually, be as compact as you can. Always, where possible,
+redirect the reader to the documentation of those tools or some blog posts,
+which explain better. See how it’s done in the README of &lt;a href=&quot;https://github.com/zold-io/wts.zold.io#how-to-contribute&quot;&gt;zold-io/wts.zold.io&lt;/a&gt;,
+a web app written in Ruby. The short piece of text at the bottom of the page
+explains what you have to install (providing links to the installation tutorials),
+how to run the app locally, how to run the build, how to run a single
+unit test and what to do if it doesn’t work. It’s pretty compact and, I believe,
+easy to understand.&lt;/p&gt;
+
+&lt;p&gt;You don’t want your potential contributor to walk away. That’s why this
+part of the entire README is the most important one. Make sure you address
+your text to a junior programmer, not yourself. As they say, your grandma
+should be able to understand you here.&lt;/p&gt;
+
+&lt;p&gt;And don’t teach us. We are not interested in becoming experts in the
+frameworks you are using or in Docker, which is required in order to
+run your stuff. We just want to run your stuff, make some changes,
+get a new release, and walk away. So, please, don’t tell me “first, you
+have to learn Docker.” No, I don’t. If I did, I’d have done it myself already.
+Tell me how to use it in &lt;em&gt;this specific case&lt;/em&gt;, and spare me all the rest.&lt;/p&gt;
+
+&lt;h2 id=&quot;downloads-and-releases&quot;&gt;Downloads and Releases&lt;/h2&gt;
+
+&lt;p&gt;GitHub has a special tab “releases” for that. No need to repeat it in the
+README. Just make sure your “releases” tab contains enough information
+and enough binary artifacts to download. Don’t say a word about them
+in the README.&lt;/p&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;GitHub automatically finds your &lt;code&gt;LICENSE.txt&lt;/code&gt; file in the root directory
+of your repository and understands the license. Just create that file
+and don’t say anything in the README about the license, it’s just pure noise.
+If I want to know what the license is, I know where to click.&lt;/p&gt;
+
+&lt;h2 id=&quot;changelog&quot;&gt;Changelog&lt;/h2&gt;
+
+&lt;p&gt;This is something from pre-GitHub time. I would recommend you rely
+on the “releases” tab and keep everything you want to tell us there.
+Some old projects maintain changelogs, like this one in
+&lt;a href=&quot;https://github.com/rubocop-hq/rubocop/blob/master/CHANGELOG.md&quot;&gt;rubocop-hq/rubocop&lt;/a&gt;,
+for example. I don’t think it’s a good idea.&lt;/p&gt;
+
+&lt;h2 id=&quot;contributors-vs-acknowledgements&quot;&gt;Contributors vs. Acknowledgements&lt;/h2&gt;
+
+&lt;p&gt;GitHub has a special tab in each repository, which is called “contributors.”
+There is absolutely no reason to reproduce the list in the README file.
+However, there is one reason: to help the contributors promote themselves. In such a case,
+I would recommend creating a section (with a heading) called “Acknowledgements,”
+which should list the most active contributors, with their blog URLs,
+Twitter accounts, and so on.&lt;/p&gt;
+
+&lt;p&gt;If you don’t have anyone to acknowledge, don’t make a noise by telling us
+who the contributors are. We know them, GitHub tells us.&lt;/p&gt;
+
+&lt;p&gt;PS. Here is a short list of READMEs I like, which are not mine
+(if you think that yours is good too, &lt;a href=&quot;maito:readme-review@yegor256.com&quot;&gt;email&lt;/a&gt;
+it to me, I will review it and perhaps add it to this list):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;the list is empty at the moment&lt;/em&gt; :(&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="specs" /><summary type="html">Some time ago I wrote a blog post An Open Code Base Is Not Yet an Open Source Project where I suggested a few important qualities of a good open source repository/project. One of them was the well-written README file. Here I will try to give a few hints on how to create a good README file and what mistakes to avoid. I hope you find it helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/life-of-pi.jpg" /></entry><entry><title type="html">How to Use Nutch From Java, Not From the Command Line</title><link href="https://www.yegor256.com/2019/04/17/nutch-from-java.html" rel="alternate" type="text/html" title="How to Use Nutch From Java, Not From the Command Line" /><published>2019-04-17T00:00:00+00:00</published><updated>2019-04-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/17/nutch-from-java</id><content type="html" xml:base="https://www.yegor256.com/2019/04/17/nutch-from-java.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://nutch.apache.org/&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/8/89/Nutch_logo.svg&quot; style=&quot;width:92px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://nutch.apache.org/&quot;&gt;Apache Nutch&lt;/a&gt;
 is an open source framework written in Java. Its purpose
@@ -1355,85 +1559,4 @@ CloudRepo with Rultor by executing the &lt;code&gt;@rultor deploy&lt;/code&gt; c
 Wait for the response and Rultor will &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;take care&lt;/a&gt;
 of all the rest.&lt;/p&gt;
 
-&lt;p&gt;That’s it!&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><category term="maven" /><category term="java" /><summary type="html">In my previous article, I described how to set up a private Maven repository in Amazon S3 and deploy there via Rultor. This is a great solution if you’re familiar with managing Amazon Web Services (AWS), S3, and AWS Identity and Access Management (IAM). However, if you’re not comfortable administering an AWS account and all the related permissions, you may want to store your Apache Maven Artifacts in some cloud based repository manager instead. Here is how you make Rultor deploy your Maven dependencies to CloudRepo. I wrote this blog post together with Chris Shellenbarger, their founder.</summary></entry><entry><title type="html">My Recipe Against Dependency Hell</title><link href="https://www.yegor256.com/2019/01/29/dependency-hell.html" rel="alternate" type="text/html" title="My Recipe Against Dependency Hell" /><published>2019-01-29T00:00:00+00:00</published><updated>2019-01-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/01/29/dependency-hell</id><content type="html" xml:base="https://www.yegor256.com/2019/01/29/dependency-hell.html">&lt;p&gt;Do you specify exact versions of your dependencies? I mean, when your
-software package depends on another one, do you write down, in your &lt;code&gt;pom.xml&lt;/code&gt;,
-&lt;code&gt;Gruntfile&lt;/code&gt;, &lt;code&gt;Gemfile&lt;/code&gt;, or what have you, its version as &lt;code&gt;1.13.5&lt;/code&gt; or just
-&lt;code&gt;1.+&lt;/code&gt;? I always &lt;a href=&quot;https://twitter.com/yegor256/status/1059856548112068608&quot;&gt;thought&lt;/a&gt;
-that it was better to use exact version numbers,
-to avoid the so called &lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_hell&quot;&gt;dependency hell&lt;/a&gt;,
-and &lt;a href=&quot;https://blog.danlew.net/2015/09/09/dont-use-dynamic-versions-for-your-dependencies/&quot;&gt;I was not alone&lt;/a&gt;.
-However, very soon I &lt;a href=&quot;https://twitter.com/yegor256/status/1060538705260265474&quot;&gt;realized&lt;/a&gt;
-that dynamic versions, like &lt;code&gt;1.+&lt;/code&gt;, give more flexibility.
-Just a few weeks ago I realized that neither approach
-is right and found myself a hybrid formula. No suprise, I again saw that
-&lt;a href=&quot;https://brock.io/post/repeatable_android_builds/&quot;&gt;I wasn’t alone&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Sin noticias de Dios (2001) by Agustín Díaz Yanes&quot; src=&quot;/images/2019/01/sin-noticias-de-dios.jpg&quot; longdesc=&quot;#9005641b&quot; /&gt;&lt;figcaption id=&quot;9005641b&quot;&gt;Sin noticias de Dios (2001) by Agustín Díaz Yanes&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;First, let me explain what’s wrong with fixed dependencies.&lt;/p&gt;
-
-&lt;p&gt;Say I create a library X, which depends on, for example, a logging
-facility, which is a third-party library, not mine. Thus my library X has
-a &lt;em&gt;dependency&lt;/em&gt;. The logging library has a version number, such as
-&lt;code&gt;1.13.5&lt;/code&gt;. I put this text into the &lt;code&gt;pom.xml&lt;/code&gt; file of X:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.example&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;log-me&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.13.5&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Many advocates of fixed dependencies argue that it’s very important
-to stick to the version &lt;code&gt;1.13.5&lt;/code&gt;, instead of using a more flexible dynamic
-one: &lt;code&gt;1.13)&lt;/code&gt; (i.e. any version, provided it is &lt;code&gt;1.13&lt;/code&gt; or newer).
-Why? Because future versions may introduce something that
-will break the build of X. They may change interfaces, rename classes or methods,
-or delete something that I’m using. You never know what the authors of this
-&lt;code&gt;log-me&lt;/code&gt; library might do. That’s why it’s better to hard-wire ourselves to &lt;code&gt;1.13.5&lt;/code&gt; and
-call it a day.&lt;/p&gt;
-
-&lt;p&gt;This is true.&lt;/p&gt;
-
-&lt;p&gt;But.&lt;/p&gt;
-
-&lt;p&gt;What if the library X is used by another library Y, which also depends on
-&lt;code&gt;log-me&lt;/code&gt; but needs version &lt;code&gt;1.14.1&lt;/code&gt;. Boom! There will be a conflict
-in library Y: Maven, the package manager, won’t be able to decide
-which version to use. It will be necessary to resolve the conflict somehow.
-In the case of Maven it’s resolvable, in the case of, for example,
-&lt;a href=&quot;https://github.com/ruby/rake&quot;&gt;Rake&lt;/a&gt;, it’s not (to my knowledge).&lt;/p&gt;
-
-&lt;p&gt;To resolve this problem, library Y will have to explicitly say which version
-has to be used. But it can’t be sure that &lt;code&gt;1.14.1&lt;/code&gt; will work correctly with
-library X. To confirm that it does, it would have to be tested by the authors of library
-X. So the best the creators of library Y can do is to try it and hope
-for the best. With other build tools, like Rake, the authors will have no choice,
-but to ask the authors of library X to upgrade to &lt;code&gt;1.14.1&lt;/code&gt; and release
-a new version. Then, library Y will be able to use library X.&lt;/p&gt;
-
-&lt;p&gt;This problem would not exist if library X depended on &lt;code&gt;1.13&lt;/code&gt; instead.
-But, as I mentioned above, in that case its authors would be planting a time bomb—eventually
-one of the future versions will definitely break the build.&lt;/p&gt;
-
-&lt;p&gt;So what is the solution?&lt;/p&gt;
-
-&lt;p&gt;Here is my formula: If you trust the authors of the library, use dynamic versioning;
-if you don’t, use a fixed version.&lt;/p&gt;
-
-&lt;p&gt;What I mean is, do you trust that they are professional enough to think about
-backward compatibility and to follow the principles of &lt;a href=&quot;https://semver.org/&quot;&gt;semantic versioning&lt;/a&gt;?
-If they are careful enough to not delete or modify something
-that may affect future versions without also changing the major number of the version,
-then you can trust them. How do you know who to trust? I don’t trust anyone, except
-my own libraries and a very small number of other libraries which I have reviewed in GitHub and checked
-the quality of their repositories.&lt;/p&gt;
-
-&lt;p&gt;Of course, you can’t fully trust anyone, but this is the formula I
-have for myself now. You can see how it works in this
-&lt;a href=&quot;https://github.com/zold-io/zold/blob/master/zold.gemspec&quot;&gt;Gemfile&lt;/a&gt;, for example.
-Pay attention to the version numbers. Those that start with &lt;code&gt;~&amp;gt;&lt;/code&gt; or &lt;code&gt;&amp;gt;=&lt;/code&gt; are dynamic,
-while others are fixed. It’s a hybrid approach, but it works for me.&lt;/p&gt;
-
-&lt;p&gt;Maybe it will help you too.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html">Do you specify exact versions of your dependencies? I mean, when your software package depends on another one, do you write down, in your pom.xml, Gruntfile, Gemfile, or what have you, its version as 1.13.5 or just 1.+? I always thought that it was better to use exact version numbers, to avoid the so called dependency hell, and I was not alone. However, very soon I realized that dynamic versions, like 1.+, give more flexibility. Just a few weeks ago I realized that neither approach is right and found myself a hybrid formula. No suprise, I again saw that I wasn’t alone.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/01/sin-noticias-de-dios.jpg" /></entry></feed>
+&lt;p&gt;That’s it!&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><category term="maven" /><category term="java" /><summary type="html">In my previous article, I described how to set up a private Maven repository in Amazon S3 and deploy there via Rultor. This is a great solution if you’re familiar with managing Amazon Web Services (AWS), S3, and AWS Identity and Access Management (IAM). However, if you’re not comfortable administering an AWS account and all the related permissions, you may want to store your Apache Maven Artifacts in some cloud based repository manager instead. Here is how you make Rultor deploy your Maven dependencies to CloudRepo. I wrote this blog post together with Chris Shellenbarger, their founder.</summary></entry></feed>

@@ -55,6 +55,8 @@ achievement
 achievements
 achieves
 achieving
+acknowledge
+acknowledgements
 ACM
 acquire
 acquires
@@ -1104,6 +1106,7 @@ chances
 change
 changed
 changelog
+changelogs
 changes
 changeset
 changing
@@ -1301,6 +1304,7 @@ code-auto-complete
 code-free
 code-intensive
 code-rich
+code-sample
 code-writing
 codeahead
 coder
@@ -3286,6 +3290,7 @@ graduation
 graham
 grammarly
 grandchildren
+grandma
 grant
 graph
 graphic
@@ -3442,6 +3447,7 @@ he's
 head
 head-hunt
 header
+headers
 heading
 headless
 headline
@@ -3572,6 +3578,7 @@ Hosted-CI
 hosting
 hosts
 hot
+hot-reload
 hotel
 hour
 hour-and-a-half
@@ -3775,8 +3782,10 @@ incubator
 incurred
 indeed
 indefinitely
+indent
 indentation
 indented
+indenting
 independent
 independently
 indexing
@@ -4057,6 +4066,7 @@ jaspan
 java
 javabeans
 javadoc
+javadocs
 javalobby
 javaone
 javaoneconf
@@ -5851,6 +5861,7 @@ pre-configuration
 pre-configured
 pre-defined
 pre-flight
+pre-github
 pre-installed
 pre-java
 pre-merge
@@ -6259,6 +6270,7 @@ readiness
 reading
 readint
 README
+READMEs
 reads
 readstring
 ready
@@ -6669,6 +6681,7 @@ royalties
 RSS
 rubensson
 rubocop
+rubocop-hq
 ruby
 ruby's
 rubygems
@@ -7525,6 +7538,7 @@ subset
 substantial
 substitute
 substitution
+subtitle
 subtitles
 subtle
 subtyping
@@ -7644,6 +7658,7 @@ systematically
 systems
 t-shirt
 t-shirts
+tab
 table
 tables
 taboo
@@ -7810,6 +7825,7 @@ think
 thinking
 thinks
 third
+third-level
 third-party
 third-world
 thirty
@@ -8001,6 +8017,7 @@ triggered
 triggers
 trimmed
 trio
+triple-apostrophe
 tripled
 tripod
 trolling
@@ -8037,6 +8054,7 @@ turning
 turnover
 turns
 tutorial
+tutorials
 tuytschaevers
 TV
 tweet
@@ -8216,6 +8234,7 @@ urgent
 urgently
 URI
 URL
+URLs
 us
 USA
 usability
@@ -8478,6 +8497,7 @@ well-managed
 well-organized
 well-paid
 well-prepared
+well-written
 went
 wercker
 were
@@ -8606,6 +8626,7 @@ written
 wrong
 wrote
 WSDL
+wts
 wulf
 WWII
 www
@@ -8675,6 +8696,7 @@ zi
 zillow
 ziyavuddin
 zold
+zold-io
 zombie
 zombies
 zone
