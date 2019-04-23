@@ -40,7 +40,7 @@ Why include these? The title is already in the URL of your repo and the descript
 of the project is in the GitHub subtitle. Why repeat yourself? Instead,
 start with a logo and a list of badges right after it:
 
-{% highlight markdown %}
+{% highlight text %}
 <img src="http://www.takes.org/logo.png" height="64px"/>
 
 [![Build Status](https://travis-ci.org/zold-io/zold.svg?branch=master)](https://travis-ci.org/zold-io/zold)
@@ -79,7 +79,7 @@ about. Pay attention: a _paragraph_, not a page of text. You should put
 the description of the product in one single paragraph. No bullets here,
 no new lines, no indentations. Just a plain simple piece of text:
 
-{% highlight markdown %}
+{% highlight text %}
 **Takes** is a [true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
 and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html)
 Java7 web development framework. Its key benefits, comparing to all others, include four
@@ -103,7 +103,7 @@ page because a friend of mine told me that it's great and I want to understand
 if it's worth it or I whether I should close it right now. You have my attention for another
 60 seconds. Tell me _how to try it_! Something like this:
 
-{% highlight markdown %}
+{% highlight text %}
 First, you install it:
 
 ```
