@@ -84,13 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/appsconf.png" class="future-talk" alt="AppsConf 2019"/><br/>
-Another Five Trends We Are Afraid Of<br/>
-[AppsConf'2019](http://appsconf.ru/moscow/2019)<br/>
-Moscow, Russia<br/>
-22 April.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/2019/appsconf.png" class="future-talk" alt="QAConf 2019"/><br/>
 Closing Keynote<br/>
 [QAConf'2019](http://qualityconf.ru/2019)<br/>
@@ -185,7 +178,14 @@ and
 ### 2019
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>;
+<img src="/images/2019/appsconf.png" class="past-talk" alt="AppsConf 2019"/>
+Another Five Trends We Are Afraid Of;
+[AppsConf'2019](http://appsconf.ru/moscow/2019);
+Moscow, Russia;
+22 April.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>
 Правильно ли мы тестируем;
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
 Penza, Russia;
@@ -193,7 +193,7 @@ Penza, Russia;
 [slides](https://www.slideshare.net/YegorBugayenko/typical-pitfalls-in-testing).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>;
+<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>
 Is Java Getting Better?
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
 Penza, Russia;
@@ -201,7 +201,7 @@ Penza, Russia;
 [slides](https://www.slideshare.net/YegorBugayenko/is-java-getting-better).
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/andreea/yegor-is-presenting.png" class="past-talk" alt="Samara 2019"/>
+<img src="https://i.ytimg.com/vi/VLaGrUsCbYo/mqdefault.jpg" class="past-talk" alt="Samara 2019"/>
 Микротаскинг или как обмануть начальника;
 [StartupSamara](https://startupsamara.timepad.ru/event/926814/);
 Samara, Russia;
@@ -209,7 +209,7 @@ Samara, Russia;
 [видео](https://youtu.be/VLaGrUsCbYo).
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/jpoint.png" class="past-talk" alt="JPoint 2019"/>
+<img src="https://i.ytimg.com/vi/9ynzUGZjKFk/mqdefault.jpg" class="past-talk" alt="JPoint 2019"/>
 Software testing pitfalls;
 [JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
 Moscow, Russia;
