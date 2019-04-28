@@ -104,3 +104,5 @@ And yeah, by the way, I'm sure you noticed the change in the name. It's not
 a `logger` anymore, it's `log`. I'm sure you know
 [why]({% pst 2015/mar/2015-03-09-objects-end-with-er %}).
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How do you log a message from an object of class Book? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1122381490480930817?ref_src=twsrc%5Etfw">April 28, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
