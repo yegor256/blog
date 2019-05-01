@@ -89,6 +89,8 @@ the efforts being invested into the product.
 For HoC it doesn't matter how big the absolute size of the code base,
 but only how big your relative contribution to it.
 
+{% youtube hTs_R0dFoFM %}
+
 Let's say, you have 300K lines of code and 95% of them were copy-pasted from some
 third-party libraries (by the way, it is a very common and terrible practice---to keep third-party code inside your own repository). The amount of lines
 of code will be big, but the actual custom code part will be relatively small. Thus,
