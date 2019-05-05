@@ -5,14 +5,16 @@ date: 2019-05-07
 place: Moscow, Russia
 tags: management
 description: |
-  ...
+  Risk-driven development means regularly and pro-actively
+  identifying risks and building plans according to their
+  probabilities and possible impacts; 0rsk automates it fully.
 keywords:
   - cause-risk-effect
   - risk management
   - risk driven development
   - software risks
   - risk analysis
-image: /images/2019/03/...
+image: /images/2019/05/...
 jb_picture:
   caption:
 ---
