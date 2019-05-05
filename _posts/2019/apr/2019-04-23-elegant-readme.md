@@ -100,7 +100,7 @@ a single paragraph.
 Then, again without any headings, you just get right to the point of how I can
 use your baby, as a complete newbie to this repo. I just opened this
 page because a friend of mine told me that it's great and I want to understand
-if it's worth it or I whether I should close it right now. You have my attention for another
+if it's worth it or whether I should close it right now. You have my attention for another
 60 seconds. Tell me _how to try it_! Something like this:
 
 {% highlight text %}
@@ -133,7 +133,7 @@ product, there are a few recommendations.
 First, don't replace automatically generated Javadocs
 (or whatever you have in your language) with the README. The README is not
 user documentation for everything you have in your repo. There are
-other places in for that. What you can do here is explain a few of the most
+other places for that. What you can do here is explain a few of the most
 interesting use cases. See how we did it in the
 [yegor256/takes](https://github.com/yegor256/takes) project.
 
