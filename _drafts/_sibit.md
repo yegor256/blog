@@ -23,7 +23,7 @@ jb_picture:
 {% badge https://github.com/yegor256/sibit/raw/master/logo.png 64 https://github.com/yegor256/sibit %}
 
 [Bitcoin](https://www.bitcoin.org) was a big technical mystery for me. All the articles I'd read
-about it sounded extremely complex and absolutely indigestable. Until
+about it sounded extremely complex and absolutely indigestible. Until
 I got stuck with a task: I had to integrate [Zold](https://www.zold.io), our
 experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study
 the architecture of Bitcoin and I found this short and simple
@@ -65,13 +65,13 @@ $ sibit create c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
 You give it to someone who wants to send you a payment. A transaction in Bitcoin is not what
 you're used to thinking about when you imagine a bank transaction. A Bitcoin
 [transaction](https://en.bitcoin.it/wiki/Transaction)
-has a number of _input_ and _ouput_ addresses. Say, three inputs of 10 BTC each
-and two ouputs of 25 BTC and 5 BTC. The sum of all inputs must be equal to the
+has a number of _input_ and _output_ addresses. Say, three inputs of 10 BTC each
+and two outputs of 25 BTC and 5 BTC. The sum of all inputs must be equal to the
 sum of all outputs.
 
 Thus, in one transaction you can move a lot of digital money between addresses.
 You can take a hundred input addresses and send them to another hundred
-ouput addresses. This is what surprised me a bit when I discovered it. The
+output addresses. This is what surprised me a bit when I discovered it. The
 transactions could be pretty large in size. And the sizes matter. They are
 calculated in bytes. A transaction with one input and one output will consume
 [about](https://bitcoin.stackexchange.com/questions/1195/) 220 bytes.
@@ -84,7 +84,7 @@ database (there are
 and see how many transactions had your address as their outputs (your inputs). Then you
 deduct any transactions that were your outputs and someone else's inputs. You get
 the balance. There are many public and free web services which can do this
-work for you. You don't need to seach the entire database yourself,
+work for you. You don't need to search the entire database yourself,
 just use [Blockchain API](https://www.blockchain.com/api/blockchain_api)
 (for example) and they will provide you with the information
 about any Bitcoin address. Try this address, for example:
@@ -99,7 +99,7 @@ which is 0.2 BTC. Click [here](https://www.blockchain.com/btc/address/1MUhYhaBqz
 and you will
 see the inputs and outputs of this address. There is only one transaction
 that mentioned this address. That transaction had a single input and two
-outputs. One of its ouputs was mine. I got 0.2 bitcoins and they are still
+outputs. One of its outputs was mine. I got 0.2 bitcoins and they are still
 here, since there are no transactions which _move_ them somewhere else.
 
 Thus, simply put, the Blockchain database is a large list of transactions
