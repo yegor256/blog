@@ -43,7 +43,7 @@ c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
 {% endhighlight %}
 
 How did I generate it? It's random. You can generate one too. Install
-[Sibit](https://github.com/yegor256/sibit), my Ruby gem and run
+[Sibit](https://github.com/yegor256/sibit), my Ruby gem, and run the following
 (it's a command line tool):
 
 {% highlight text %}
@@ -51,7 +51,7 @@ $ sibit generate
 c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
 {% endhighlight %}
 
-Every time you call `sibit generate`, you will get a new private key. It is
+Every time you call `sibit generate` you will get a new private key. It is
 just a random piece of text (well, a large hex number).
 Then, you create an [address](https://en.bitcoin.it/wiki/Address)
 from your private key. Each private key has exactly one address.
