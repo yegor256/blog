@@ -15,9 +15,6 @@ keywords:
   - how bitcoin works
   - bitcoin
   - blockchain how works
-image: /images/2019/05/...
-jb_picture:
-  caption:
 ---
 
 {% badge https://github.com/yegor256/sibit/raw/master/logo.png 64 https://github.com/yegor256/sibit %}
