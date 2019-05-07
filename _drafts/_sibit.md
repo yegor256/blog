@@ -5,9 +5,9 @@ date: 2019-05-05
 place: Moscow, Russia
 tags: crypto
 description: |
-  Bitcoin, despite all the mistery around Blockchain,
+  Bitcoin, despite all the mystery around Blockchain,
   is not so technically complex; here is a quick
-  summary of how it works and how you can use it,
+  summary of how it works and how you can use it
   from the command line.
 keywords:
   - bitcoin
@@ -22,14 +22,14 @@ jb_picture:
 
 {% badge https://github.com/yegor256/sibit/raw/master/logo.png 64 https://github.com/yegor256/sibit %}
 
-[Bitcoin](https://www.bitcoin.org) was a big technical mistery for me. All the articles I've read
-about it sounded extremely complex and absolutely undigestable. Until
+[Bitcoin](https://www.bitcoin.org) was a big technical mystery for me. All the articles I'd read
+about it sounded extremely complex and absolutely indigestible. Until
 I got stuck with a task: I had to integrate [Zold](https://www.zold.io), our
 experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study
-the architecture of Bitcoin and found this short and simple
-[video](https://www.youtube.com/watch?v=IV9pRBq5A4g) (highly recommend you
-watching it). I managed to implement the integration and understand how
-Blockchain works. Here is my short summary, I hope it will be helpful.
+the architecture of Bitcoin and I found this short and simple
+[video](https://www.youtube.com/watch?v=IV9pRBq5A4g) (I highly recommend you
+watch it). I managed to implement the integration and understand how
+Blockchain works. Here is my short summary. I hope it will be helpful.
 
 <!--more-->
 
@@ -42,16 +42,16 @@ which is a short piece of text, for example:
 c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
 {% endhighlight %}
 
-How did I generate it? It's random. You can generate it too. Install
-[Sibit](https://github.com/yegor256/sibit), my Ruby gem and run
-(it is a command line tool):
+How did I generate it? It's random. You can generate one too. Install
+[Sibit](https://github.com/yegor256/sibit), my Ruby gem, and run the following
+(it's a command line tool):
 
 {% highlight text %}
 $ sibit generate
 c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
 {% endhighlight %}
 
-Every time you call `sibit generate`, you will get a new private key. It is
+Every time you call `sibit generate` you will get a new private key. It is
 just a random piece of text (well, a large hex number).
 Then, you create an [address](https://en.bitcoin.it/wiki/Address)
 from your private key. Each private key has exactly one address.
@@ -63,30 +63,30 @@ $ sibit create c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
 {% endhighlight %}
 
 You give it to someone who wants to send you a payment. A transaction in Bitcoin is not what
-you used to think of, when you imagine a bank transaction. A Bitcoin
+you're used to thinking about when you imagine a bank transaction. A Bitcoin
 [transaction](https://en.bitcoin.it/wiki/Transaction)
-has a number of _input_ and _ouput_ addresses. Say, three inputs by 10 BTC each
-and two ouputs by 25 BTC and 5 BTC. The sum of all inputs must be equal to the
+has a number of _input_ and _output_ addresses. Say, three inputs of 10 BTC each
+and two outputs of 25 BTC and 5 BTC. The sum of all inputs must be equal to the
 sum of all outputs.
 
 Thus, in one transaction you can move a lot of digital money between addresses.
-You can take a hundred of input addresses and send them to another hundred
-of ouput addresses. This is what surprised me a bit, when I found it out. Their
-transactions could be pretty large in size. And their sizes matter. They are
+You can take a hundred input addresses and send them to another hundred
+output addresses. This is what surprised me a bit when I discovered it. The
+transactions could be pretty large in size. And the sizes matter. They are
 calculated in bytes. A transaction with one input and one output will consume
 [about](https://bitcoin.stackexchange.com/questions/1195/) 220 bytes.
 Keep this number in mind, we will get back to it soon.
 
 As you can imagine already, in order to calculate how much money you have
-_on_ your address, you just go through all transactions in the entire
+_on_ your address you just go through all the transactions in the entire
 database (there are
-[over 400 millions](https://www.blockchain.com/en/charts/n-transactions-total) already)
+[over 400 million](https://www.blockchain.com/en/charts/n-transactions-total) already)
 and see how many transactions had your address as their outputs (your inputs). Then you
-deduct transactions that were your outputs and someone else's inputs. You get
-the balance. There are many public and free web services, which can do this
-work for you. You don't need to seach the entire database yourself,
+deduct any transactions that were your outputs and someone else's inputs. You get
+the balance. There are many public and free web services which can do this
+work for you. You don't need to search the entire database yourself,
 just use [Blockchain API](https://www.blockchain.com/api/blockchain_api)
-(for example) and they will provide you the information
+(for example) and they will provide you with the information
 about any Bitcoin address. Try this address, for example:
 
 {% highlight text %}
@@ -99,8 +99,8 @@ which is 0.2 BTC. Click [here](https://www.blockchain.com/btc/address/1MUhYhaBqz
 and you will
 see the inputs and outputs of this address. There is only one transaction
 that mentioned this address. That transaction had a single input and two
-outputs. One of its ouputs were mine. I got 0.2 bitcoins and they are still
-here, since there are no transactions which would _move_ them somewhere else.
+outputs. One of its outputs was mine. I got 0.2 bitcoins and they are still
+here, since there are no transactions which _move_ them somewhere else.
 
 Thus, simply put, the Blockchain database is a large list of transactions
 with inputs and outputs in each of them. Once a new transaction gets into
@@ -108,18 +108,18 @@ this database, the balance of a few addresses change. The database only
 grows and no previous transactions can be deleted or modified. Thus, once
 your transaction gets in, the money is moved from address to address.
 
-To create a transaction you need to know all input addresses, they private keys,
-and all output addresses. You need multiple inputs in case you want to send
-an amount that is bigger than what you have in a single address. What is
-called a [wallet](https://www.bitcoin.com/bitcoin-wallet-directory)
-in Bitcoin is a software, like [Electrum](https://electrum.org/), that keeps track of all your
+To create a transaction you need to know all the input addresses, their private keys,
+and all the output addresses. You need multiple inputs if you want to send
+an amount that is larger than you have in a single address. There is something
+known as a [wallet](https://www.bitcoin.com/bitcoin-wallet-directory)
+in Bitcoin, which is a piece of software, like [Electrum](https://electrum.org/), which keeps track of all your
 addresses and knows how to create a transaction, combining a number of
-addresses, using them as inputs. That's all.
+addresses and using them as inputs. That's all.
 
 So, you know the inputs, you specify the outputs and you are expected to leave a small amount
-unspent. Say, your inputs have 10,000 satoshi and you specify an output
+unspent. Let's say your inputs have 10,000 satoshi and you specify an output
 for 8,000. You leave the residual 2,000 unspent. They are called
-[miner fee](https://en.bitcoin.it/wiki/Miner_fees).
+[miner fees](https://en.bitcoin.it/wiki/Miner_fees).
 You send your transaction to all Bitcoin nodes, they place it in their
 memory pool, and attempt to combine a few thousand transactions in a
 [block](https://en.bitcoin.it/wiki/Block).
@@ -133,7 +133,7 @@ Is it possible to pay nothing?
 [Yes](https://bitcointalk.org/index.php?topic=245552). However, the smaller the
 fee you leave in your transaction, the lower the chances that your
 transaction will go into the next block. Each miner wants to make the maximum
-out of each block and puts the most "generous" transactions to the block,
+out of each block and puts the most "generous" transactions in the block,
 when trying to [mine](https://en.bitcoin.it/wiki/Mining) it.
 
 The fee depends on the size of the transaction in bytes. Since any transaction
@@ -147,12 +147,12 @@ To send your transaction to all Bitcoin nodes you have two options. The first
 one is to start your own [full node](https://en.bitcoin.it/wiki/Full_node),
 which will communicate with
 [other nodes](https://en.wikipedia.org/wiki/Bitcoin_network)
-through Bitcoin [protocol](https://en.bitcoin.it/wiki/Protocol_documentation).
-The second option is to use one of HTTP relays, where you
+through the Bitcoin [protocol](https://en.bitcoin.it/wiki/Protocol_documentation).
+The second option is to use one of the HTTP relays, where you
 just post your transaction in a POST HTTP request and the relay sends it to all
 Bitcoin nodes; [this is](https://www.blockchain.com/btc/pushtx) one of them.
 
-[Sibit](https://github.com/yegor256/sibit) automates this process, you just say:
+[Sibit](https://github.com/yegor256/sibit) automates this process. You just say:
 
 {% highlight text %}
 $ sibit pay 200000 L \
@@ -164,15 +164,15 @@ $ sibit pay 200000 L \
 Here, the first argument is the amount you are sending. The second one
 is the fee you want to leave untouched. I made it easier for you, to help
 you avoid calculations. Just say `S`, `M`, `L` or `XL` and the fee will be calculated
-more or less correctly. Then, the third argument is a list of addresses
+more or less correctly. The third argument is a list of addresses
 and their private keys, separated by a colon.
 The fourth argument is the target address ([Sibit](https://github.com/yegor256/sibit)
-makes it possible to send only to one address). The last argument is the
+makes it possible to send to only one address). The last argument is the
 address where the [change](https://en.bitcoin.it/wiki/Change) will be sent.
 
 If you have 50,000 satoshi in your inputs and you want to send 15,000 satoshi
-to your friend, you have to find a place where the other 35,000 will be
-sent, well, minus the miner fee. You just provide your own address and
+to a friend, you have to find a place where the other 35,000 will be
+sent---well, minus the miner fee. You just provide your own address and
 the change will arrive there.
 
 This is pretty much all you need to know about Bitcoin and Blockchain,
