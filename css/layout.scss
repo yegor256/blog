@@ -39,15 +39,15 @@
   font-weight: normal;
 }
 %main-font-bold {
-  /* Because it doesn't work anyway. Something is wrong with this Cambria in the bold style */
-  /*font-family: $main-font;*/
+  // Because it doesn't work anyway. Something is wrong with this Cambria in the bold style
+  //font-family: $main-font;
   font-style: normal;
-  /*font-weight: bold;*/
+  //font-weight: bold;
 }
 %main-font-italic {
-  /*font-family: $main-font;*/
+  //font-family: $main-font;
   font-style: italic;
-  /*font-weight: normal;*/
+  //font-weight: normal;
 }
 
 %desktop-only {
