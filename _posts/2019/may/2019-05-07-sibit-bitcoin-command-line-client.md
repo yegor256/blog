@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sibit Demonstrates How Bitcoin Works"
-date: 2019-05-05
+date: 2019-05-07
 place: Moscow, Russia
 tags: crypto
 description: |

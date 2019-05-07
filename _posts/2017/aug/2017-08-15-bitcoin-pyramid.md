@@ -3,7 +3,7 @@ layout: post
 title: "Bitcoin Is Not a Pyramid. Coinbase&nbsp;Is."
 date: 2017-08-15
 place: Odessa, Ukraine
-tags: economics
+tags: crypto
 description: |
   Why the police are still closing their eyes
   on what Coinbase is doing, I simply can't understand.
