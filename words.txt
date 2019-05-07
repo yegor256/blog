@@ -98,6 +98,7 @@ additional
 additionally
 address
 addressed
+addresses
 addressing
 adds
 adept
@@ -507,7 +508,6 @@ audio
 audit
 augmented
 august
-aunt
 australia
 auth
 authenticate
@@ -634,7 +634,6 @@ became
 because
 beck
 beck's
-becky
 become
 becomes
 becoming
@@ -1341,6 +1340,7 @@ collectors
 collects
 collisions
 colloquy
+colon
 color
 colorizejs
 colors
@@ -2646,6 +2646,7 @@ events
 eventual
 eventually
 ever
+evergreen
 every
 everybody
 everybody's
@@ -3793,6 +3794,7 @@ indian
 indicates
 indicator
 indicators
+indigestible
 indisputable
 individual
 individualism
@@ -4209,11 +4211,13 @@ keep
 keepers
 keeping
 keeps
+kempf
 kent
 kept
 kernel
 key
 keynote
+keys
 keyword
 keywords
 kharkiv
@@ -4842,6 +4846,7 @@ mindset
 mindsets
 mine
 minecraft
+miner
 minimize
 minimum
 minister
@@ -5032,6 +5037,7 @@ my
 myers
 myself
 MySQL
+mystery
 myth
 mythical
 myths
@@ -5156,6 +5162,7 @@ NOLO
 non-
 non-ambiguous
 non-behavioral
+non-blockchain
 non-comment
 non-compete
 non-complete
@@ -6752,6 +6759,7 @@ satisfied
 satisfies
 satisfy
 satisfying
+satoshi
 saturday
 save
 saved
@@ -7038,6 +7046,7 @@ shutdown
 shuts
 shutting
 shy
+sibit
 sick
 side
 side-effect
@@ -7245,6 +7254,7 @@ soulless
 souls
 sound
 soundcloud
+sounded
 sounds
 soup
 source
@@ -8205,6 +8215,7 @@ unsubscribed
 unsuccessful
 untestable
 until
+untouched
 untraceable
 unusual
 unwilling
@@ -8549,6 +8560,7 @@ wikis
 wild
 wild-wild
 will
+william
 willing
 willingness
 willis

@@ -104,9 +104,9 @@ Tests that are called unit tests but are really integration tests
 since there is no isolation between the system-under-test and the
 tests.</p>
 
-<p name="happy"><strong>Happy Path</strong> (aka Success Against All Odds<sup>3</sup>, Liar<sup>3</sup>).
-The tests stay on happy paths (i.e. expected results) without testing
-for boundaries and exceptions.</p>
+<p name="happy"><strong>Happy Path</strong>.
+The tests stay on happy paths (i.e. expected results, e.g. 18 years old) 
+without testing for boundaries and exceptions (e.g. -2 years old).</p>
 
 <p name="poke"><strong>Slow Poke</strong><sup>3</sup>.
 A unit test that runs incredibly slow. When developers kick it off, they
@@ -202,7 +202,7 @@ Afraid of getting too close to the class they are trying to test, these tests
 act at a distance, separated by countless layers of abstraction
 and thousands of lines of code from the logic they are checking.</p>
 
-<p name="becky"><strong>Aunt Becky</strong> (aka “I’m always right!”).
+<p name="liar"><strong>The Liar</strong><sup>4</sup> (aka <a href="https://youtu.be/1Z_h55jMe-M?t=1059">Evergreen Tests</a>, Success Against All Odds<sup>3</sup>).
 A test doesn’t validate any behaviour and passes in every scenario. Any new bug introduced
 in the code will never be discovered by this test. It was probably created after the
 implementation was finished, so the author of this test couldn’t know whether the test
@@ -217,6 +217,8 @@ actually tests something.</p>
 <a href="https://amzn.to/2DpkFc6"><em>Mastering Software Testing with JUnit 5</em></a> by Boni Garcia</li>
   <li>
 <a href="http://archive.is/3acB#selection-119.0-119.17"><em>TDD Anti-Patterns</em></a> by James Carr</li>
+  <li>
+<a href="https://www.digitaltapestry.net/testify/manual/AntiPatterns.html"><em>Anti-Patterns</em></a> by William E. Kempf</li>
 </ol>
 
     </article>

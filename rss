@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-04-23T13:22:06+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Elegant READMEs</title><link href="https://www.yegor256.com/2019/04/23/elegant-readme.html" rel="alternate" type="text/html" title="Elegant READMEs" /><published>2019-04-23T00:00:00+00:00</published><updated>2019-04-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/23/elegant-readme</id><content type="html" xml:base="https://www.yegor256.com/2019/04/23/elegant-readme.html">&lt;p&gt;Some time ago I wrote a blog post
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-05-07T10:13:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; was a big technical mystery for me. All the articles I’d read
+about it sounded extremely complex and absolutely indigestible. Until
+I got stuck with a task: I had to integrate &lt;a href=&quot;https://www.zold.io&quot;&gt;Zold&lt;/a&gt;, our
+experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study
+the architecture of Bitcoin and I found this short and simple
+&lt;a href=&quot;https://www.youtube.com/watch?v=IV9pRBq5A4g&quot;&gt;video&lt;/a&gt; (I highly recommend you
+watch it). I managed to implement the integration and understand how
+Blockchain works. Here is my short summary. I hope it will be helpful.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Invention of Lying (2009) by Ricky Gervais et al.&quot; src=&quot;/images/2019/05/the-invention-of-lying.jpg&quot; longdesc=&quot;#c8bec95b&quot; /&gt;&lt;figcaption id=&quot;c8bec95b&quot;&gt;The Invention of Lying (2009) by Ricky Gervais et al.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, there is a &lt;a href=&quot;https://en.bitcoin.it/wiki/Private_key&quot;&gt;private key&lt;/a&gt;,
+which is a short piece of text, for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;How did I generate it? It’s random. You can generate one too. Install
+&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;Sibit&lt;/a&gt;, my Ruby gem, and run the following
+(it’s a command line tool):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit generate
+c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Every time you call &lt;code&gt;sibit generate&lt;/code&gt; you will get a new private key. It is
+just a random piece of text (well, a large hex number).
+Then, you create an &lt;a href=&quot;https://en.bitcoin.it/wiki/Address&quot;&gt;address&lt;/a&gt;
+from your private key. Each private key has exactly one address.
+Here is how you create it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit create c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
+1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You give it to someone who wants to send you a payment. A transaction in Bitcoin is not what
+you’re used to thinking about when you imagine a bank transaction. A Bitcoin
+&lt;a href=&quot;https://en.bitcoin.it/wiki/Transaction&quot;&gt;transaction&lt;/a&gt;
+has a number of &lt;em&gt;input&lt;/em&gt; and &lt;em&gt;output&lt;/em&gt; addresses. Say, three inputs of 10 BTC each
+and two outputs of 25 BTC and 5 BTC. The sum of all inputs must be equal to the
+sum of all outputs.&lt;/p&gt;
+
+&lt;p&gt;Thus, in one transaction you can move a lot of digital money between addresses.
+You can take a hundred input addresses and send them to another hundred
+output addresses. This is what surprised me a bit when I discovered it. The
+transactions could be pretty large in size. And the sizes matter. They are
+calculated in bytes. A transaction with one input and one output will consume
+&lt;a href=&quot;https://bitcoin.stackexchange.com/questions/1195/&quot;&gt;about&lt;/a&gt; 220 bytes.
+Keep this number in mind, we will get back to it soon.&lt;/p&gt;
+
+&lt;p&gt;As you can imagine already, in order to calculate how much money you have
+&lt;em&gt;on&lt;/em&gt; your address you just go through all the transactions in the entire
+database (there are
+&lt;a href=&quot;https://www.blockchain.com/en/charts/n-transactions-total&quot;&gt;over 400 million&lt;/a&gt; already)
+and see how many transactions had your address as their outputs (your inputs). Then you
+deduct any transactions that were your outputs and someone else’s inputs. You get
+the balance. There are many public and free web services which can do this
+work for you. You don’t need to search the entire database yourself,
+just use &lt;a href=&quot;https://www.blockchain.com/api/blockchain_api&quot;&gt;Blockchain API&lt;/a&gt;
+(for example) and they will provide you with the information
+about any Bitcoin address. Try this address, for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit balance 1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY
+20000000&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It is in &lt;a href=&quot;https://en.bitcoin.it/wiki/Satoshi_%28unit%29&quot;&gt;satoshi&lt;/a&gt;,
+which is 0.2 BTC. Click &lt;a href=&quot;https://www.blockchain.com/btc/address/1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY&quot;&gt;here&lt;/a&gt;
+and you will
+see the inputs and outputs of this address. There is only one transaction
+that mentioned this address. That transaction had a single input and two
+outputs. One of its outputs was mine. I got 0.2 bitcoins and they are still
+here, since there are no transactions which &lt;em&gt;move&lt;/em&gt; them somewhere else.&lt;/p&gt;
+
+&lt;p&gt;Thus, simply put, the Blockchain database is a large list of transactions
+with inputs and outputs in each of them. Once a new transaction gets into
+this database, the balance of a few addresses change. The database only
+grows and no previous transactions can be deleted or modified. Thus, once
+your transaction gets in, the money is moved from address to address.&lt;/p&gt;
+
+&lt;p&gt;To create a transaction you need to know all the input addresses, their private keys,
+and all the output addresses. You need multiple inputs if you want to send
+an amount that is larger than you have in a single address. There is something
+known as a &lt;a href=&quot;https://www.bitcoin.com/bitcoin-wallet-directory&quot;&gt;wallet&lt;/a&gt;
+in Bitcoin, which is a piece of software, like &lt;a href=&quot;https://electrum.org/&quot;&gt;Electrum&lt;/a&gt;, which keeps track of all your
+addresses and knows how to create a transaction, combining a number of
+addresses and using them as inputs. That’s all.&lt;/p&gt;
+
+&lt;p&gt;So, you know the inputs, you specify the outputs and you are expected to leave a small amount
+unspent. Let’s say your inputs have 10,000 satoshi and you specify an output
+for 8,000. You leave the residual 2,000 unspent. They are called
+&lt;a href=&quot;https://en.bitcoin.it/wiki/Miner_fees&quot;&gt;miner fees&lt;/a&gt;.
+You send your transaction to all Bitcoin nodes, they place it in their
+memory pool, and attempt to combine a few thousand transactions in a
+&lt;a href=&quot;https://en.bitcoin.it/wiki/Block&quot;&gt;block&lt;/a&gt;.
+They all attempt together and only one of them manages to do it,
+&lt;a href=&quot;https://bitcoin.stackexchange.com/questions/8823&quot;&gt;approximately&lt;/a&gt;
+once every ten minutes. Once a winner manages to &lt;a href=&quot;https://en.bitcoin.it/wiki/Mining&quot;&gt;solve&lt;/a&gt;
+a block, it wins that 2,000 you left untouched in your transaction. Every transaction in the
+block pays that winner some small fee.&lt;/p&gt;
+
+&lt;p&gt;Is it possible to pay nothing?
+&lt;a href=&quot;https://bitcointalk.org/index.php?topic=245552&quot;&gt;Yes&lt;/a&gt;. However, the smaller the
+fee you leave in your transaction, the lower the chances that your
+transaction will go into the next block. Each miner wants to make the maximum
+out of each block and puts the most “generous” transactions in the block,
+when trying to &lt;a href=&quot;https://en.bitcoin.it/wiki/Mining&quot;&gt;mine&lt;/a&gt; it.&lt;/p&gt;
+
+&lt;p&gt;The fee depends on the size of the transaction in bytes. Since any transaction
+may include many inputs and outputs, its size is the only thing that matters.
+For example, the fee I paid in
+&lt;a href=&quot;https://www.blockchain.com/btc/tx/eede4bb2ad4e3c21a09cf238a282b08daab66937c726dce8fe07ab55793c4c51&quot;&gt;this transaction&lt;/a&gt;
+was 8,971 satoshi, which is approximately 40 satoshi per byte, since
+my transaction included 225 bytes.&lt;/p&gt;
+
+&lt;p&gt;To send your transaction to all Bitcoin nodes you have two options. The first
+one is to start your own &lt;a href=&quot;https://en.bitcoin.it/wiki/Full_node&quot;&gt;full node&lt;/a&gt;,
+which will communicate with
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Bitcoin_network&quot;&gt;other nodes&lt;/a&gt;
+through the Bitcoin &lt;a href=&quot;https://en.bitcoin.it/wiki/Protocol_documentation&quot;&gt;protocol&lt;/a&gt;.
+The second option is to use one of the HTTP relays, where you
+just post your transaction in a POST HTTP request and the relay sends it to all
+Bitcoin nodes; &lt;a href=&quot;https://www.blockchain.com/btc/pushtx&quot;&gt;this is&lt;/a&gt; one of them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;Sibit&lt;/a&gt; automates this process. You just say:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit pay 200000 L \
+  1K3J...se1TYe:c93a36feb3...e55108bde32477cbabac5f \
+  153dF1xKyVX5X8brBDroaqKkPmcB8kLtDB \
+  1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the first argument is the amount you are sending. The second one
+is the fee you want to leave untouched. I made it easier for you, to help
+you avoid calculations. Just say &lt;code&gt;S&lt;/code&gt;, &lt;code&gt;M&lt;/code&gt;, &lt;code&gt;L&lt;/code&gt; or &lt;code&gt;XL&lt;/code&gt; and the fee will be calculated
+more or less correctly. The third argument is a list of addresses
+and their private keys, separated by a colon.
+The fourth argument is the target address (&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;Sibit&lt;/a&gt;
+makes it possible to send to only one address). The last argument is the
+address where the &lt;a href=&quot;https://en.bitcoin.it/wiki/Change&quot;&gt;change&lt;/a&gt; will be sent.&lt;/p&gt;
+
+&lt;p&gt;If you have 50,000 satoshi in your inputs and you want to send 15,000 satoshi
+to a friend, you have to find a place where the other 35,000 will be
+sent—well, minus the miner fee. You just provide your own address and
+the change will arrive there.&lt;/p&gt;
+
+&lt;p&gt;This is pretty much all you need to know about Bitcoin and Blockchain,
+in order to use it. What did I miss?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="crypto" /><summary type="html">Bitcoin was a big technical mystery for me. All the articles I’d read about it sounded extremely complex and absolutely indigestible. Until I got stuck with a task: I had to integrate Zold, our experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study the architecture of Bitcoin and I found this short and simple video (I highly recommend you watch it). I managed to implement the integration and understand how Blockchain works. Here is my short summary. I hope it will be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-invention-of-lying.jpg" /></entry><entry><title type="html">Elegant READMEs</title><link href="https://www.yegor256.com/2019/04/23/elegant-readme.html" rel="alternate" type="text/html" title="Elegant READMEs" /><published>2019-04-23T00:00:00+00:00</published><updated>2019-04-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/23/elegant-readme</id><content type="html" xml:base="https://www.yegor256.com/2019/04/23/elegant-readme.html">&lt;p&gt;Some time ago I wrote a blog post
 &lt;a href=&quot;/2018/05/08/open-source-attributes.html&quot;&gt;&lt;em&gt;An Open Code Base Is Not Yet an Open Source Project&lt;/em&gt;&lt;/a&gt;
 where I suggested a few important qualities of a good open
 source repository/project. One of them was the well-written README
@@ -75,7 +221,7 @@ a single paragraph.&lt;/p&gt;
 &lt;p&gt;Then, again without any headings, you just get right to the point of how I can
 use your baby, as a complete newbie to this repo. I just opened this
 page because a friend of mine told me that it’s great and I want to understand
-if it’s worth it or I whether I should close it right now. You have my attention for another
+if it’s worth it or whether I should close it right now. You have my attention for another
 60 seconds. Tell me &lt;em&gt;how to try it&lt;/em&gt;! Something like this:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;First, you install it:
@@ -106,7 +252,7 @@ product, there are a few recommendations.&lt;/p&gt;
 &lt;p&gt;First, don’t replace automatically generated Javadocs
 (or whatever you have in your language) with the README. The README is not
 user documentation for everything you have in your repo. There are
-other places in for that. What you can do here is explain a few of the most
+other places for that. What you can do here is explain a few of the most
 interesting use cases. See how we did it in the
 &lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; project.&lt;/p&gt;
 
@@ -971,7 +1117,10 @@ Anyway, I recommend you use an injectable logging dependency instead.&lt;/p&gt;
 
 &lt;p&gt;And yeah, by the way, I’m sure you noticed the change in the name. It’s not
 a &lt;code&gt;logger&lt;/code&gt; anymore, it’s &lt;code&gt;log&lt;/code&gt;. I’m sure you know
-&lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;why&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">How do you organize logging in your applications? I mean web applications or command line apps, or even mobile apps. I bet you have some global variable or a singleton, known as Logger, which has a few methods like info(), error(), and debug(). You configure it when the app starts, or it configures itself via something like log4j.properties, and logs everything to the console or a file, or even a database. I was doing exactly that, or something very similar, for many years, until I finally realized how wrong this approach was. In one of my recent Ruby applications I did it all differently, and since then I’m much happier than I was before.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/the-square.jpg" /></entry><entry><title type="html">How Data Visibility Hurts Maintainability</title><link href="https://www.yegor256.com/2019/03/12/data-and-maintainability.html" rel="alternate" type="text/html" title="How Data Visibility Hurts Maintainability" /><published>2019-03-12T00:00:00+00:00</published><updated>2019-03-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/03/12/data-and-maintainability</id><content type="html" xml:base="https://www.yegor256.com/2019/03/12/data-and-maintainability.html">&lt;p&gt;I’ve been writing &lt;a href=&quot;/tags/oop.html&quot;&gt;so much&lt;/a&gt; about object-oriented programming and its
+&lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;why&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How do you log a message from an object of class Book? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1122381490480930817?ref_src=twsrc%5Etfw&quot;&gt;April 28, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">How do you organize logging in your applications? I mean web applications or command line apps, or even mobile apps. I bet you have some global variable or a singleton, known as Logger, which has a few methods like info(), error(), and debug(). You configure it when the app starts, or it configures itself via something like log4j.properties, and logs everything to the console or a file, or even a database. I was doing exactly that, or something very similar, for many years, until I finally realized how wrong this approach was. In one of my recent Ruby applications I did it all differently, and since then I’m much happier than I was before.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/the-square.jpg" /></entry><entry><title type="html">How Data Visibility Hurts Maintainability</title><link href="https://www.yegor256.com/2019/03/12/data-and-maintainability.html" rel="alternate" type="text/html" title="How Data Visibility Hurts Maintainability" /><published>2019-03-12T00:00:00+00:00</published><updated>2019-03-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/03/12/data-and-maintainability</id><content type="html" xml:base="https://www.yegor256.com/2019/03/12/data-and-maintainability.html">&lt;p&gt;I’ve been writing &lt;a href=&quot;/tags/oop.html&quot;&gt;so much&lt;/a&gt; about object-oriented programming and its
 &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;pitfalls&lt;/a&gt;,
 claiming that most of the design patterns and “good practices” which we are accustomed to
 are actually &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;wrong and hurtful&lt;/a&gt;,
@@ -1426,137 +1575,4 @@ cache, you can call &lt;code&gt;zache.clean()&lt;/code&gt; and all expired keys 
 &lt;p&gt;Also, Zache, of course, is thread-safe.&lt;/p&gt;
 
 &lt;p&gt;The gem is in this &lt;a href=&quot;https://github.com/yegor256/zache&quot;&gt;GitHub repository&lt;/a&gt;.
-Feel free to report bugs, if you find them, or help us with additional features.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">A month ago I stumbled upon a problem: I wasn’t able to find a Ruby gem which would do in-memory caching with the capability to expire on timeout. After some quick research I decided to implement my own and called it Zache (as in “zero cache,” since there is no back end). Here is how it works:</summary></entry><entry><title type="html">How to Deploy Maven Artifacts to CloudRepo via Rultor</title><link href="https://www.yegor256.com/2019/02/03/cloudrepo.html" rel="alternate" type="text/html" title="How to Deploy Maven Artifacts to CloudRepo via Rultor" /><published>2019-02-03T00:00:00+00:00</published><updated>2019-02-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/03/cloudrepo</id><content type="html" xml:base="https://www.yegor256.com/2019/02/03/cloudrepo.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.rultor.com&quot;&gt;&lt;img src=&quot;http://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;In my &lt;a href=&quot;/2015/09/07/maven-repository-amazon-s3.html&quot;&gt;previous article&lt;/a&gt;,
-I described how to
-set up a private Maven repository in Amazon S3 and deploy there via &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;.
-This is a great solution if you’re familiar with managing Amazon Web Services (AWS),
-&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;S3&lt;/a&gt;, and &lt;a href=&quot;https://aws.amazon.com/iam/&quot;&gt;AWS Identity and Access Management (IAM)&lt;/a&gt;.
-However, if you’re not comfortable administering an AWS account and
-all the related permissions, you may want to store your Apache Maven Artifacts
-in some cloud based repository manager instead.
-Here is how you make Rultor deploy your Maven dependencies to &lt;a href=&quot;https://www.cloudrepo.io/&quot;&gt;CloudRepo&lt;/a&gt;.
-I wrote this blog post together with &lt;a href=&quot;https://www.linkedin.com/in/chrisshellenbarger&quot;&gt;Chris Shellenbarger&lt;/a&gt;,
-their founder.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Both repository managers and S3 will allow your build tools
-to store and retrieve your software libraries in a remote
-repository or bucket.
-However, repository managers take care of a lot of the work
-that you’d have to manage yourself with the S3 solution.&lt;/p&gt;
-
-&lt;p&gt;While AWS is quite robust and can be configured to do everything
-a repository manager can, there are use cases that work directly
-out of the box when you choose a fully managed solution, like:
-User/Group Administration, Maven Specific Views, Webhooks, Notifications,
-Access and Audit Logs, Fully Managed Security, etc.
-Simply put, they are not just storages of JAR files, but Maven repositories
-in cloud.&lt;/p&gt;
-
-&lt;p&gt;A fully managed, cloud hosted solution will cost you a monthly subscription
-fee of some sort. At the moment of writing they charge $9 per month
-&lt;a href=&quot;https://www.cloudrepo.io/pricing.html&quot;&gt;and up&lt;/a&gt;. They are free for open source,
-but I don’t see why you would need them if you can use
-&lt;a href=&quot;/2014/08/19/how-to-release-to-maven-central.html&quot;&gt;Maven Central&lt;/a&gt;.
-The good news is that they are offering a special discount for my readers:
-the first 90 days are free, versus the standard 14. This is effectively
-a 25% discount off of your first year.
-Simply &lt;a href=&quot;mailto:support@cloudrepo.io&quot;&gt;shoot them an email&lt;/a&gt; when your account is created
-and they’ll take care of you (don’t forget to mention me, to get the discount).&lt;/p&gt;
-
-&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.cloudrepo.io&quot;&gt;&lt;img src=&quot;/images/2019/02/cloudrepo.png&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Assuming you have created an account with
-CloudRepo and &lt;a href=&quot;https://www.cloudrepo.io/docs/maven.html#pre-requisites&quot;&gt;setup both a user and maven repository&lt;/a&gt;,
-deploying to CloudRepo requires two steps on the client side:
-1) Configure a &lt;code&gt;settings.xml&lt;/code&gt; file with credentials, and
-2) Add your repository to your &lt;code&gt;pom.xml&lt;/code&gt; file’s &lt;code&gt;&amp;lt;distributionManagement&amp;gt;&lt;/code&gt; section.&lt;/p&gt;
-
-&lt;p&gt;The default location for the &lt;code&gt;settings.xml&lt;/code&gt; file is in your
-&lt;code&gt;~/.m2&lt;/code&gt; directory.  Edit this file and ensure that you have
-a &lt;code&gt;&amp;lt;server&amp;gt;&lt;/code&gt; entry as seen below:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;settings&amp;gt;
-  &amp;lt;servers&amp;gt;
-    &amp;lt;server&amp;gt;
-      &amp;lt;id&amp;gt;io.cloudrepo&amp;lt;/id&amp;gt;
-      &amp;lt;username&amp;gt;yegor256@gmail.com&amp;lt;/username&amp;gt;
-      &amp;lt;password&amp;gt;my-secret&amp;lt;/password&amp;gt;
-    &amp;lt;/server&amp;gt;
-  &amp;lt;/servers&amp;gt;
-&amp;lt;/settings&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;By declaring a &lt;code&gt;server&lt;/code&gt; and specifying an &lt;code&gt;id&lt;/code&gt;, you can reference the &lt;code&gt;id&lt;/code&gt;
-from within your Maven POM files.  When Maven attempts to
-authenticate against a server it will look for a corresponding
-key in the &lt;code&gt;settings.xml&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;p&gt;If you’re worried about storing your password in plaintext
-on your filesystem, check how Maven &lt;a href=&quot;https://maven.apache.org/guides/mini/guide-encryption.html&quot;&gt;recommends&lt;/a&gt;
-fixing that.&lt;/p&gt;
-
-&lt;p&gt;Now that your credentials have been set, you must
-point your &lt;a href=&quot;https://maven.apache.org/guides/introduction/introduction-to-the-pom.html&quot;&gt;&lt;code&gt;pom.xml&lt;/code&gt;&lt;/a&gt;
-at your CloudRepo repository.
-Add a new &lt;code&gt;&amp;lt;repository&amp;gt;&lt;/code&gt; element to the &lt;code&gt;&amp;lt;distributionManagement&amp;gt;&lt;/code&gt; (to upload them) section of your &lt;code&gt;pom.xml&lt;/code&gt;
-and to the &lt;code&gt;&amp;lt;repositories&amp;gt;&lt;/code&gt; (to download them):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;project&amp;gt;
-  [...]
-  &amp;lt;repositories&amp;gt;
-    &amp;lt;repository&amp;gt;
-      &amp;lt;id&amp;gt;io.cloudrepo&amp;lt;/id&amp;gt;
-      &amp;lt;url&amp;gt;https://[your-org-name].mycloudrepo.io/repositories/[your-repository-name]&amp;lt;/url&amp;gt;
-    &amp;lt;/repository&amp;gt;
-  &amp;lt;/repositories&amp;gt;
-  [...]
-  &amp;lt;distributionManagement&amp;gt;
-    &amp;lt;repository&amp;gt;
-      &amp;lt;id&amp;gt;io.cloudrepo&amp;lt;/id&amp;gt;
-      &amp;lt;name&amp;gt;CloudRepo Maven Repository&amp;lt;/name&amp;gt;
-      &amp;lt;url&amp;gt;https://[your-org-name].mycloudrepo.io/repositories/[your-repository-name]&amp;lt;/url&amp;gt;
-    &amp;lt;/repository&amp;gt;
-  &amp;lt;/distributionManagement&amp;gt;
-&amp;lt;/project&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once you have a build working in your local environment, you need to
-deploy it to production with Rultor.
-First, you’ll need to store your credentials in Git so that Rultor
-can access them at build and deploy time.   However, it
-is very important to &lt;em&gt;never&lt;/em&gt; store your credentials in plaintext in version control
-(substitute the name of your GitHub project with &lt;code&gt;my/project&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ gem install rultor
-$ rultor encrypt -p my/project settings.xml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This creates an encrypted version of your settings file with
-the name &lt;code&gt;settings.xml.asc&lt;/code&gt;.  Add this file to the root directory
-of your project, then commit and push. It is safe.
-Only Rultor has the keys to decrypt this file so even if your source
-code is exposed to others, your credentials will be kept safe.&lt;/p&gt;
-
-&lt;p&gt;To enable Rultor, add a &lt;code&gt;.rultor.yml&lt;/code&gt; file to the root directory
-of your project with the following contents:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-yaml&quot;&gt;decrypt:
-  settings.xml: &quot;repo/settings.xml.asc&quot;
-deploy:
-  script: |
-    mvn clean deploy --settings ../settings.xml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For more information on the &lt;code&gt;.rultor.yml&lt;/code&gt; file,
-check the &lt;a href=&quot;http://doc.rultor.com/reference.html&quot;&gt;Rultor Reference Page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now that everything is configured you should be able to deploy to
-CloudRepo with Rultor by executing the &lt;code&gt;@rultor deploy&lt;/code&gt; command.
-Wait for the response and Rultor will &lt;a href=&quot;/2014/07/24/rultor-automated-merging.html&quot;&gt;take care&lt;/a&gt;
-of all the rest.&lt;/p&gt;
-
-&lt;p&gt;That’s it!&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><category term="maven" /><category term="java" /><summary type="html">In my previous article, I described how to set up a private Maven repository in Amazon S3 and deploy there via Rultor. This is a great solution if you’re familiar with managing Amazon Web Services (AWS), S3, and AWS Identity and Access Management (IAM). However, if you’re not comfortable administering an AWS account and all the related permissions, you may want to store your Apache Maven Artifacts in some cloud based repository manager instead. Here is how you make Rultor deploy your Maven dependencies to CloudRepo. I wrote this blog post together with Chris Shellenbarger, their founder.</summary></entry></feed>
+Feel free to report bugs, if you find them, or help us with additional features.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">A month ago I stumbled upon a problem: I wasn’t able to find a Ruby gem which would do in-memory caching with the capability to expire on timeout. After some quick research I decided to implement my own and called it Zache (as in “zero cache,” since there is no back end). Here is how it works:</summary></entry></feed>
