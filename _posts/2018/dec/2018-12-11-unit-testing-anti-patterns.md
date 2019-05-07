@@ -53,9 +53,9 @@ since there is no isolation between the system-under-test and the
 tests.
 
 {:name='happy'}
-**Happy Path** (aka Success Against All Odds<sup>3</sup>, Liar<sup>3</sup>).
-The tests stay on happy paths (i.e. expected results) without testing
-for boundaries and exceptions.
+**Happy Path**.
+The tests stay on happy paths (i.e. expected results, e.g. 18 years old) 
+without testing for boundaries and exceptions (e.g. -2 years old). 
 
 {:name='poke'}
 **Slow Poke**<sup>3</sup>.
@@ -168,8 +168,8 @@ Afraid of getting too close to the class they are trying to test, these tests
 act at a distance, separated by countless layers of abstraction
 and thousands of lines of code from the logic they are checking.
 
-{:name='becky'}
-**Aunt Becky** (aka "I'm always right!").
+{:name='liar'}
+**The Liar**<sup>4</sup> (aka [Evergreen Tests](https://youtu.be/1Z_h55jMe-M?t=1059), Success Against All Odds<sup>3</sup>).
 A test doesn't validate any behaviour and passes in every scenario. Any new bug introduced
 in the code will never be discovered by this test. It was probably created after the
 implementation was finished, so the author of this test couldn't know whether the test
@@ -180,3 +180,4 @@ Useful links:
   1. [_Spock: Up and Running_](https://amzn.to/2BaAKRB) by Rob Fletcher
   2. [_Mastering Software Testing with JUnit 5_](https://amzn.to/2DpkFc6) by Boni Garcia
   3. [_TDD Anti-Patterns_](http://archive.is/3acB#selection-119.0-119.17) by James Carr
+  4. [_Anti-Patterns_](https://www.digitaltapestry.net/testify/manual/AntiPatterns.html) by William E. Kempf
