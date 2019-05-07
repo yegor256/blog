@@ -15,6 +15,9 @@ keywords:
   - how bitcoin works
   - bitcoin
   - blockchain how works
+image: /images/2019/05/the-invention-of-lying.jpg
+jb_picture:
+  caption: The Invention of Lying (2009) by Ricky Gervais et al.
 ---
 
 {% badge https://github.com/yegor256/sibit/raw/master/logo.png 64 https://github.com/yegor256/sibit %}
