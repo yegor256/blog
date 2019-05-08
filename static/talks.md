@@ -85,10 +85,17 @@ informed about everything I do publicly.
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/appsconf.png" class="future-talk" alt="QAConf 2019"/><br/>
-Closing Keynote<br/>
+Can Distributed Teams Deliver Quality?<br/>
 [QAConf'2019](http://qualityconf.ru/2019)<br/>
 Moscow, Russia<br/>
-7 June.
+27 May.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/trainings/yegor-bugayenko-training-4.jpg" class="future-talk" alt="QAConf 2019"/><br/>
+Как программисту стать тим-лидом<br/>
+[DevLeads Meetup](t.me/devleadschat)<br/>
+Moscow, Russia<br/>
+28 May.
 
 If you are interested in placing me at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
