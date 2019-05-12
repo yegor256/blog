@@ -618,7 +618,7 @@ good, and how it could be better:
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
   * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
   * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
-  * [Koray Tugay](http://www.tugay.biz/2016/09/notes-on-elegant-objects-volume-1.html)
+  * [Koray Tugay](http://www.tugay.biz/2016/09/notes-on-elegant-objects-volume-1.html) (mostly negative)
   * [Anderson Dorow](https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1)
   * [Enrique Pablo Molinari](http://www.copypasteisforword.com/notes/elegant-objects)
   * [Tomasz Dziurko](http://tomaszdziurko.com/2017/07/lobotomy-to-your-object-oriented-thinking-elegant-objects-book-review/)
@@ -630,7 +630,6 @@ good, and how it could be better:
   * [Alexey Nikitin](http://www.nikialeksey.com/2018/01/30/elegant-objects-vol1-review.html) (in Russian)
   * [Manu Pijierro](https://medium.com/@mpijierro/review-del-libro-elegants-objects-vol-1-c0fbc5a0359e) (in Spanish)
   * [Felix Roth](https://thinkingsideways.net/reviews/2019/02/10/elegant-objects-review.html)
-  * [Koray Tugay](http://www.tugay.biz/2016/09/notes-on-elegant-objects-volume-1.html)
 
 Jun 17, 2016:
 I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)
