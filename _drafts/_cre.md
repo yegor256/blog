@@ -31,7 +31,7 @@ prevented? This is what that chapter and
 [_Risk Management Tricks of the Trade for Project Managers_](https://amzn.to/2V5b0wp)
 (yet another great book by the same author) are dedicated to. What I learned
 from these books, and from my multi-year [experience](http://www.technoparkcorp.com/process/risk/risk/)
-of identifying, analysing and dealing with risks, is that the best
+of identifying, analyzing and dealing with risks, is that the best
 format for specifying them consists of three parts: cause, risk, and effect.
 
 <!--more-->
@@ -188,7 +188,7 @@ C1 → R1:7 → E1
           → E3
 {% endhighlight %}
 
-I assigned 7 and 2 to the risks above. It was my _expert judgement_. No math here.
+I assigned 7 and 2 to the risks above. It was my _expert judgment_. No math here.
 I just took a look at the risks and made my personal decision,
 as an owner/manager of the project.
 
@@ -252,7 +252,7 @@ two options for me in each _positive_ line of my _Risk List_:
     of the effect. Take a look at the effect `E1`. As discussed above, it will
     be wise to do two things. First, create integration tests and configure
     the CI to send me an email when the API is changed. Second, regularly
-    check the repo for consitency and minimize the amount of time the repo
+    check the repo for consistency and minimize the amount of time the repo
     will stay out of sync with the API, right after the API is changed.
 
 Well, there are other options like _accepting_ (do nothing and just wait)
