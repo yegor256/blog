@@ -113,7 +113,7 @@ and create a similar API for other users, right? Thus, risk #2 has
 an additional effect:
 
 {% highlight text %}
-Effect #3: There will an opportunity to create a similar API
+Effect #3: There will be an opportunity to create a similar API
 {% endhighlight %}
 
 This is a _positive_ effect, while the effects we had before were _negative_ ones.
@@ -269,10 +269,10 @@ There are two options for a _good_ risk (E1/R2/E3) too:
 
   * **Enhance**.
     I may do something to increase the positive impact of the effect `E3`. For
-    example, I may prepare a similar API and make it market ready. When
+    example, I may prepare a similar API and make it market ready. When the
     Blockchain API dies, I immediately launch mine and start promoting it
     with "Hey, those guys are dead, switch here now!" I'm kidding, but you
-    got the idea.
+    get the idea.
 
 So, simply put, we can have a plan attached either to a risk or to an effect.
 We can either do something with the probability or with the impact. Well, we
@@ -294,7 +294,7 @@ P3→E1: Check the repo for compliance with API (weekly)
 The first two are one-time actions, which I have to perform ASAP. Once
 completed they will lower the impact of `E1`. The plan `P3` should
 be performed every week, in order to lower the impact of `E1` too.
-Here is how my Risk List looks together with the plans:
+Here is how my Risk List looks, together with the plans:
 
 {% highlight text %}
 C1 → R1:7 → E1↓:3 ⇢ 7×3 = 21
@@ -306,7 +306,7 @@ C1 → R2:2 → E3↑:3 ⇢ 2×3 =  6
 {% endhighlight %}
 
 Make sense?
-I hope so. I definitely recommend you reading
+I hope so. I definitely recommend you read
 [_Risk Management Tricks of the Trade for Project Managers_](https://amzn.to/2V5b0wp).
 It explains it all in much more detail and it's fun to read.
 
