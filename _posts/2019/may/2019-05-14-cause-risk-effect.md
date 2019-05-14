@@ -14,9 +14,9 @@ keywords:
   - risk driven development
   - software risks
   - risk analysis
-image: /images/2019/05/...
+image: /images/2019/05/the-departed.jpg
 jb_picture:
-  caption:
+  caption: The Departed (2006) by Martin Scorsese
 ---
 
 {% badge https://www.0rsk.com/logo.svg 64 http://www.0rsk.com %}
