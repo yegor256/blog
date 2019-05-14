@@ -1,6 +1,6 @@
 ---
 layout: static
-title: "Trainings"
+title: "Get a Training"
 description: |
   I can do an on-site training for your team, helping
   you guys get better in object-oriented programming,
