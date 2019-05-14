@@ -1,4 +1,331 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-05-07T10:13:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-05-14T05:56:47+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">0rsk.com: Cause + Risk + Effect</title><link href="https://www.yegor256.com/2019/05/14/cause-risk-effect.html" rel="alternate" type="text/html" title="0rsk.com: Cause + Risk + Effect" /><published>2019-05-14T00:00:00+00:00</published><updated>2019-05-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/14/cause-risk-effect</id><content type="html" xml:base="https://www.yegor256.com/2019/05/14/cause-risk-effect.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.0rsk.com&quot;&gt;&lt;img src=&quot;https://www.0rsk.com/logo.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;“A project manager’s work should not focus on dealing with problems;
+it should focus on preventing them,”—this is how
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Rita_Mulcahy&quot;&gt;Rita Mulcahy&lt;/a&gt; started
+a chapter about Risk Management in her great book
+&lt;a href=&quot;http://amzn.to/266pAYB&quot;&gt;&lt;em&gt;PMP Exam Prep&lt;/em&gt;&lt;/a&gt;. Sounds smart, but how does
+a project manager know about the problems which are supposed to be
+prevented? This is what that chapter and
+&lt;a href=&quot;https://amzn.to/2V5b0wp&quot;&gt;&lt;em&gt;Risk Management Tricks of the Trade for Project Managers&lt;/em&gt;&lt;/a&gt;
+(yet another great book by the same author) are dedicated to. What I learned
+from these books, and from my multi-year &lt;a href=&quot;http://www.technoparkcorp.com/process/risk/risk/&quot;&gt;experience&lt;/a&gt;
+of identifying, analyzing and dealing with risks, is that the best
+format for specifying them consists of three parts: cause, risk, and effect.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Departed (2006) by Martin Scorsese&quot; src=&quot;/images/2019/05/the-departed.jpg&quot; longdesc=&quot;#93f6e7fe&quot; /&gt;&lt;figcaption id=&quot;93f6e7fe&quot;&gt;The Departed (2006) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s start with a simple example. I developed &lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;Sibit&lt;/a&gt;,
+a simple Ruby gem, just &lt;a href=&quot;https://youtu.be/jeflGHMpfDc&quot;&gt;a few weeks ago&lt;/a&gt;,
+which is a command line &lt;a href=&quot;https://bitcointalk.org/index.php?topic=5130324&quot;&gt;Bitcoin client&lt;/a&gt;.
+You can check your Bitcoin address balance with it, and send a payment to another address, in just
+a single command line call. It works just fine, but it does all its operations
+via the &lt;a href=&quot;https://www.blockchain.com/api&quot;&gt;Blockchain API&lt;/a&gt; over HTTP.&lt;/p&gt;
+
+&lt;p&gt;This means that if one day the API gets changed, the gem will stop working. It’s
+a &lt;em&gt;risk&lt;/em&gt;. It not yet an &lt;em&gt;issue&lt;/em&gt;, since now the API works exactly as the gem expects it
+to work, but it’s a very much &lt;em&gt;anticipated&lt;/em&gt; problem. When it happens, the
+gem will stop working, its users will not understand why and will simply
+stop using it. They will also think of me as the creator of some garbage that
+is not maintained well and doesn’t work. Not really good for my reputation, right?&lt;/p&gt;
+
+&lt;p&gt;Just like Rita Mulcahy suggested above, I shouldn’t just wait until
+a very disappointed user emails me. I should &lt;em&gt;pro-actively&lt;/em&gt; deal with this risk somehow.
+How? Well, I can do a few things. First, I can create a few integration tests
+to check whether the API still supports the protocol I’m expecting, and
+make sure my CI runs the build, say, once a day. Once the build goes
+red, I should get an email and react accordingly by fixing the gem before
+its users notice the problem. Second, I can manually check the repo every
+week, for example, to make sure it’s still in a good shape and works against
+the API.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s turn this story into formal risk management. I took the titles
+of the subsections below from the
+&lt;a href=&quot;https://www.pmi.org/pmbok-guide-standards&quot;&gt;PMBOK&lt;/a&gt;
+Risk Management chapter.&lt;/p&gt;
+
+&lt;h2 id=&quot;identify-risks&quot;&gt;Identify Risks&lt;/h2&gt;
+
+&lt;p&gt;First, we &lt;em&gt;identify&lt;/em&gt; the risk. It will consist of &lt;em&gt;three&lt;/em&gt; parts:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;Cause #1: Sibit works by using the Blockchain API
+Risk #1: The API may be changed without notice
+Effect #1: Users will be disappointed&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;em&gt;cause&lt;/em&gt; is something that we have and which is a fact. The &lt;em&gt;risk&lt;/em&gt; is the
+anticipated &lt;em&gt;event&lt;/em&gt;, which may happen or may not. The &lt;em&gt;effect&lt;/em&gt; is
+what will happen if the risk occurs. Why do we need to split it in
+three parts? Technically, if we put them together, here is how it will sound:
+“Since Sibit uses the Blockchain API and the API may be changed without notice
+users will be disappointed.” But it’s better to clearly
+define cause/risk/effect components, because, guess what … we may
+have different combinations of risks, effects and causes.
+For example, how about identifying an additional risk for an existing cause:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;Risk #2: The API may go out of the market&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It’s a different risk from the one we had before. The API will not change,
+but will disappear entirely from the market. Is it possible? Pretty much.
+What will be the effect of this risk? The same—users will be disappointed,
+since Sibit, my Ruby gem, will stop working. Maybe there will be some
+other effects? Well, let’s think. If the entire API is shut down, I will
+have to spend a decent amount of time on finding a new one, studying it,
+understanding how it works, and making a lot of changes in my gem in order
+to make it understand the new API. I may even fail to do so, if the new API
+has a significantly different design. In other words, the effect of
+risk #2 will be something like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;Effect #2: It will take time to connect to a new API&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;On the other hand, the moment the API gets out of the market,
+there will be an &lt;em&gt;opportunity&lt;/em&gt; on the market for a similar API. If we know
+about it at the right moment of time, we could &lt;em&gt;exploit&lt;/em&gt; that opportunity
+and create a similar API for other users, right? Thus, risk #2 has
+an additional effect:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;Effect #3: There will be an opportunity to create a similar API&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is a &lt;em&gt;positive&lt;/em&gt; effect, while the effects we had before were &lt;em&gt;negative&lt;/em&gt; ones.
+The job of a project manager is not only to identify negative effects, but
+to find a similar amount of positive effects for most risks and causes.&lt;/p&gt;
+
+&lt;p&gt;To summarize, this is what we have now:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;C1 → R1 → E1
+   → R2 → E2
+        → E3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Get the diagram? The cause &lt;code&gt;C1&lt;/code&gt; leads to the risks &lt;code&gt;R1&lt;/code&gt; and &lt;code&gt;R2&lt;/code&gt;, which have
+a number of effects each: &lt;code&gt;E1&lt;/code&gt;, &lt;code&gt;E2&lt;/code&gt;, and &lt;code&gt;E3&lt;/code&gt;. In order to be able to define
+such a multi-level diagram and avoid duplication of text
+we need to split each anticipated event into three parts.&lt;/p&gt;
+
+&lt;p&gt;There are some rules I learned for myself about those three parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Does&lt;/strong&gt;.
+The cause should always sound like a statement in
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Present_tense&quot;&gt;the present tense&lt;/a&gt;,
+since it states a fact that exists right now, e.g.
+“we use Hibernate,”
+“Java 6 is not supported anymore,”
+“70% of our users are on Android,”
+“payments are sent via PayPal,”
+“GitHub is the sole maintainer of our repository,”
+and so on.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;May&lt;/strong&gt;.
+The Risk statement should use the word “may”,
+since it is something that hasn’t happened yet, but is only anticipated, e.g.
+“we may lose the customer,”
+“the architect may quit,”
+“Apple Store may delay in reviewing our app,”
+“the investor may pull out,”
+etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Will&lt;/strong&gt;.
+The Effect should be in
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Future_tense&quot;&gt;the future tense&lt;/a&gt;, explicitly
+stating the outcome we will experience in the future if the risk occurs, e.g.
+“we will go bankrupt,”
+“we will have to rewrite the entire module,”
+“we will spend another $10,000 for hardware,”
+and so on.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Needless to say, the shorter the statements the better. A properly
+defined cause, risk, and effect should include up to 20 words each. Longer
+statements mean only one thing: the author is not clear about what’s going on
+and needs to spend more time investigating the situation.&lt;/p&gt;
+
+&lt;h2 id=&quot;qualitative-analysis&quot;&gt;Qualitative Analysis&lt;/h2&gt;
+
+&lt;p&gt;Not all risks and effects are equally likely, as you can see. It is very
+unlikely that the entire Blockchain API will die, but it’s very likely
+that it may change its HTTP protocol. It would be silly to pay
+equal attention to all risks, since some of them are &lt;em&gt;primary&lt;/em&gt;, while
+others are &lt;em&gt;secondary&lt;/em&gt;. How do we know which one is which? We assign
+numbers. Here is how.&lt;/p&gt;
+
+&lt;p&gt;First, we analyze all risks and assign a &lt;em&gt;probability&lt;/em&gt; to each of them,
+where 1 means that the risk will most likely never occur and 9
+means that the risk will undoubtedly happen:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;C1 → R1:7 → E1
+   → R2:2 → E2
+          → E3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I assigned 7 and 2 to the risks above. It was my &lt;em&gt;expert judgment&lt;/em&gt;. No math here.
+I just took a look at the risks and made my personal decision,
+as an owner/manager of the project.&lt;/p&gt;
+
+&lt;p&gt;Then, we assign an &lt;em&gt;impact&lt;/em&gt; to each effect, again within the &lt;code&gt;[1..9]&lt;/code&gt; range.
+Here, 1 means that the consequences we are expecting won’t hurt anyone
+and won’t really help anyone either, while 9 means that the effect is crucial
+(either in a negative or a positive way):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;C1 → R1:7 → E1↓:3
+   → R2:2 → E2↓:8
+          → E3↑:3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Again, I chose the numbers according to my expert judgement. Changing the gem
+according to a slightly changed API is one thing (the impact is 3), while
+re-writing it for an entirely new API is a completely different amount
+of work (hence the impact is 8).&lt;/p&gt;
+
+&lt;p&gt;The final step is to multiply them: probability × impact. We will get this
+list of risks:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;C1 → R1:7 → E1↓:3 ⇢ 7×3 = 21
+C1 → R2:2 → E2↓:8 ⇢ 2×8 = 16
+C1 → R2:2 → E3↑:3 ⇢ 2×3 =  6&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can now see what is what in our list. Even though the consequences of the
+second line in the list are more serious, the probability is lower and,
+in the overall map of the risks, this line is less important.&lt;/p&gt;
+
+&lt;p&gt;What we just did is called qualitative risk analysis: we determined
+which risks are more important and need to be addressed immediately, and
+which are less important and can simply be ignored for a while.&lt;/p&gt;
+
+&lt;h2 id=&quot;quantitative-analysis&quot;&gt;Quantitative Analysis&lt;/h2&gt;
+
+&lt;p&gt;I will skip this section. I don’t think it’s important or feasible
+for a small software project. According to Rita Mulcahy:
+“As a project manager, you should always do qualitative risk analysis
+but quantitative risk analysis is not required for all projects or for all
+risks and may be skipped in favor of moving on to risk response planning.”&lt;/p&gt;
+
+&lt;h2 id=&quot;plan-risk-responses&quot;&gt;Plan Risk Responses&lt;/h2&gt;
+
+&lt;p&gt;Now it’s time to put my &lt;em&gt;response plans&lt;/em&gt; in place. There are basically
+two options for me in each &lt;em&gt;positive&lt;/em&gt; line of my &lt;em&gt;Risk List&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Avoid&lt;/strong&gt;.
+I can do something to lower the probability of the risk. Take risk &lt;code&gt;R2&lt;/code&gt;—can
+I do something to make sure the Blockchain API stays on the market for
+longer and doesn’t die? Well, I can tweet about it, promote it, or maybe
+even donate some money to it. But I doubt any of that will really help.
+So &lt;em&gt;avoiding&lt;/em&gt; is not the right strategy here. I simply can’t lower the probability, no matter what I do.
+If the Risk &lt;code&gt;R2&lt;/code&gt; has to occur, it will occur. The same it true about
+the Risk &lt;code&gt;R1&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mitigate&lt;/strong&gt;.
+The second possible risk response &lt;em&gt;strategy&lt;/em&gt; is &lt;em&gt;mitigation&lt;/em&gt; of the impact
+of the effect. Take a look at the effect &lt;code&gt;E1&lt;/code&gt;. As discussed above, it will
+be wise to do two things. First, create integration tests and configure
+the CI to send me an email when the API is changed. Second, regularly
+check the repo for consistency and minimize the amount of time the repo
+will stay out of sync with the API, right after the API is changed.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Well, there are other options like &lt;em&gt;accepting&lt;/em&gt; (do nothing and just wait)
+or &lt;em&gt;transferring&lt;/em&gt; (find a scape goat to blame when things go south), but they
+are less practical.&lt;/p&gt;
+
+&lt;p&gt;There are two options for a &lt;em&gt;good&lt;/em&gt; risk (E1/R2/E3) too:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Exploit&lt;/strong&gt;.
+I may do something to expedite the quick death of Blockchain API,
+thus making the risk &lt;code&gt;R2&lt;/code&gt; happen faster, right? Well, this may sound
+like a joke in this case, but very often we may choose to push things
+forward with a positive risk. This strategy is called &lt;em&gt;exploiting&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Enhance&lt;/strong&gt;.
+I may do something to increase the positive impact of the effect &lt;code&gt;E3&lt;/code&gt;. For
+example, I may prepare a similar API and make it market ready. When the
+Blockchain API dies, I immediately launch mine and start promoting it
+with “Hey, those guys are dead, switch here now!” I’m kidding, but you
+get the idea.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, simply put, we can have a plan attached either to a risk or to an effect.
+We can either do something with the probability or with the impact. Well, we
+can do something with the cause too. For example, I can eliminate the entire
+list of risks if I just delete my gem and kill the project, right? There will
+be no trouble anymore. No frustrated users, no risks, no opportunities. This
+may also be a solution in some cases (though not in this one).&lt;/p&gt;
+
+&lt;p&gt;The bottom line is that a plan may be attached to either a cause, a risk,
+or an effect. I would define three plans, all mitigating the impact
+of &lt;code&gt;E1&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;P1→E1: Create integration tests (once)
+P2→E1: Configure CI (once)
+P3→E1: Check the repo for compliance with API (weekly)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The first two are one-time actions, which I have to perform ASAP. Once
+completed they will lower the impact of &lt;code&gt;E1&lt;/code&gt;. The plan &lt;code&gt;P3&lt;/code&gt; should
+be performed every week, in order to lower the impact of &lt;code&gt;E1&lt;/code&gt; too.
+Here is how my Risk List looks, together with the plans:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;C1 → R1:7 → E1↓:3 ⇢ 7×3 = 21
+  P1, P2, P3
+C1 → R2:2 → E2↓:8 ⇢ 2×8 = 16
+  No plans
+C1 → R2:2 → E3↑:3 ⇢ 2×3 =  6
+  No plans&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Make sense?
+I hope so. I definitely recommend you read
+&lt;a href=&quot;https://amzn.to/2V5b0wp&quot;&gt;&lt;em&gt;Risk Management Tricks of the Trade for Project Managers&lt;/em&gt;&lt;/a&gt;.
+It explains it all in much more detail and it’s fun to read.&lt;/p&gt;
+
+&lt;p&gt;I created a simple web project, which makes it possible to put exactly
+this type of risk structure in writing: &lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk.com&lt;/a&gt;
+(it’s in the &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;Zerocracy&lt;/a&gt; product family, that’s why
+the name starts with zero). You just
+login there, create a new project, and “add” your risks. Try it out.
+Then, when the risks are registered, you attach response plans to them.
+The interface is pretty intuitive, so you should have no issues. If there are any
+difficulties, don’t hesitate to &lt;a href=&quot;https://github.com/yegor256/0rsk/issues&quot;&gt;submit an issue&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;implement-risk-responses&quot;&gt;Implement Risk Responses&lt;/h2&gt;
+
+&lt;p&gt;Now it’s time to do what was planned, to &lt;em&gt;implement&lt;/em&gt; the plans. &lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk&lt;/a&gt; turns
+plans into &lt;em&gt;tasks&lt;/em&gt;, when the time comes. The tasks are explicit instructions
+for you, the project manager. Then you do them yourself or delegate to your
+project members.&lt;/p&gt;
+
+&lt;p&gt;In the near future &lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk&lt;/a&gt; &lt;a href=&quot;https://github.com/yegor256/0rsk/issues/21&quot;&gt;will integrate&lt;/a&gt;
+with GitHub and other task trackers, to drop new tasks there and monitor
+their execution. Stay tuned, there will be more features soon.&lt;/p&gt;
+
+&lt;p&gt;There is also a Telegram integration. Every time a new plan has to be executed,
+&lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk&lt;/a&gt; pings me in Telegram, reminding that it’s time to work on that. Try
+it out, the bot is here: &lt;a href=&quot;https://t.me/zerorsk_bot&quot;&gt;@zerorsk_bot&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Honestly, I find this risk-driven way of managing my scope of work very
+productive and results focused. First, I identify what the most important
+situations are in my project (which could be people, resources, bank accounts,
+software products, assets, etc), then I think about risks and I do this regularly,
+creating a few new risks every day, together with effects. Then, I plan
+what I can do in order to minimize their probabilities and react to their
+impacts. Finally, the Telegram bot starts telling me what to do every day.&lt;/p&gt;
+
+&lt;p&gt;Thanks to all of this, I don’t miss the overall scope—it is defined by the
+cause-risk-effect-plan structure in my &lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk&lt;/a&gt; project—and I stay
+focused on what matters, every day.&lt;/p&gt;
+
+&lt;p&gt;Now I don’t react to problems, I prevent them, just like Rita Mulcahy suggested.&lt;/p&gt;
+
+&lt;p&gt;You can do too, &lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk&lt;/a&gt; is free for all.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">“A project manager’s work should not focus on dealing with problems; it should focus on preventing them,”—this is how Rita Mulcahy started a chapter about Risk Management in her great book PMP Exam Prep. Sounds smart, but how does a project manager know about the problems which are supposed to be prevented? This is what that chapter and Risk Management Tricks of the Trade for Project Managers (yet another great book by the same author) are dedicated to. What I learned from these books, and from my multi-year experience of identifying, analyzing and dealing with risks, is that the best format for specifying them consists of three parts: cause, risk, and effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-departed.jpg" /></entry><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; was a big technical mystery for me. All the articles I’d read
 about it sounded extremely complex and absolutely indigestible. Until
@@ -706,7 +1033,10 @@ founder, who is ready to do anything just to get a chance to
 &lt;p&gt;Try it, and let me know how it works.&lt;/p&gt;
 
 &lt;p&gt;PS. I tried too, but I can’t seem to get further than the first step. It seems
-that there is something wrong with me.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary type="html">You want your startup to be visible on TechCrunch, right? But you don’t have $15-20K per month to bribe a reputable PR firm to get you there? No worries. This blog post will give you a set of simple instructions on how you can get the attention of those tech journalists who are currently busy writing about Musk’s and Zuckerberg’s innovative ideas. They will definitely write about your baby, I promise you. Just do what I say.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/mon-roi.jpg" /></entry><entry><title type="html">Software Project Review Checklist</title><link href="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html" rel="alternate" type="text/html" title="Software Project Review Checklist" /><published>2019-04-02T00:00:00+00:00</published><updated>2019-04-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/02/software-project-review-checklist</id><content type="html" xml:base="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html">&lt;p&gt;A few years ago I wrote about the
+that there is something wrong with me.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think is important to have in order to get your startup covered in a major magazine like &lt;a href=&quot;https://twitter.com/hashtag/TechCrunch?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#TechCrunch&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/hashtag/Wired?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#Wired&lt;/a&gt;? &lt;a href=&quot;https://twitter.com/hashtag/journalism?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#journalism&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1127460981578391555?ref_src=twsrc%5Etfw&quot;&gt;May 12, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary type="html">You want your startup to be visible on TechCrunch, right? But you don’t have $15-20K per month to bribe a reputable PR firm to get you there? No worries. This blog post will give you a set of simple instructions on how you can get the attention of those tech journalists who are currently busy writing about Musk’s and Zuckerberg’s innovative ideas. They will definitely write about your baby, I promise you. Just do what I say.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/mon-roi.jpg" /></entry><entry><title type="html">Software Project Review Checklist</title><link href="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html" rel="alternate" type="text/html" title="Software Project Review Checklist" /><published>2019-04-02T00:00:00+00:00</published><updated>2019-04-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/02/software-project-review-checklist</id><content type="html" xml:base="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html">&lt;p&gt;A few years ago I wrote about the
 &lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;independent technical reviews&lt;/a&gt;
 any software project must regularly go through in order
 to make sure everything is under control. I even
@@ -1537,42 +1867,4 @@ somewhere else. Then come back again. You can’t stay there for an entire year,
 start missing it very soon if you stay somewhere else for too long.
 If you can afford to live in different countries, I would recommend trying
 Silicon Valley for a change. It’s definitely an exceptional experience. Both
-good and bad.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">You remember my blog post about Why I Don’t Want to Live in Silicon Valley, don’t you? Read it first if you haven’t already. The gist of it is that Silicon Valley is a place with a lot of troubles. No one should want to live there, according to that previous post, right? That is what many of my readers concluded, but they were wrong. Despite the problems, the place is definitely unique and there are a lot of reasons why you may want to consider it as a great place to live, for a few years at least, especially if you are in the tech business.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/02/gostya-iz-budushego.jpg" /></entry><entry><title type="html">Zache: A Simple Ruby In-Memory Cache</title><link href="https://www.yegor256.com/2019/02/05/zache.html" rel="alternate" type="text/html" title="Zache: A Simple Ruby In-Memory Cache" /><published>2019-02-05T00:00:00+00:00</published><updated>2019-02-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/02/05/zache</id><content type="html" xml:base="https://www.yegor256.com/2019/02/05/zache.html">&lt;p&gt;A month ago I stumbled upon a problem: I wasn’t able to find a Ruby
-gem which would do in-memory caching with the capability to expire
-on timeout. After some quick research I decided to implement my own and called
-it Zache (as in “zero cache,” since there is no back end). Here is how it works:&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;First, you create the cache:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;zache&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;zache&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Zache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then you fetch the value by the key, also providing the block which will
-be executed if the key is absent or expired:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;lifetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;# Something very slow and expensive, which&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;# we only want to execute once every 15 seconds.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, &lt;code&gt;:x&lt;/code&gt; is the key and &lt;code&gt;15&lt;/code&gt; is the number of seconds it will stay
-in the cache, until it expires.&lt;/p&gt;
-
-&lt;p&gt;It’s important to notice that the key won’t be deleted from the cache
-automatically. It will stay there until the next call to &lt;code&gt;get(:x)&lt;/code&gt;. Only at
-that moment will it be marked as “expired.” In order to clean up the
-cache, you can call &lt;code&gt;zache.clean()&lt;/code&gt; and all expired keys will be deleted.&lt;/p&gt;
-
-&lt;p&gt;You can do it regularly in a separate thread, for example, every minute:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;sleep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;zache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clean&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Also, Zache, of course, is thread-safe.&lt;/p&gt;
-
-&lt;p&gt;The gem is in this &lt;a href=&quot;https://github.com/yegor256/zache&quot;&gt;GitHub repository&lt;/a&gt;.
-Feel free to report bugs, if you find them, or help us with additional features.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">A month ago I stumbled upon a problem: I wasn’t able to find a Ruby gem which would do in-memory caching with the capability to expire on timeout. After some quick research I decided to implement my own and called it Zache (as in “zero cache,” since there is no back end). Here is how it works:</summary></entry></feed>
+good and bad.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">You remember my blog post about Why I Don’t Want to Live in Silicon Valley, don’t you? Read it first if you haven’t already. The gist of it is that Silicon Valley is a place with a lot of troubles. No one should want to live there, according to that previous post, right? That is what many of my readers concluded, but they were wrong. Despite the problems, the place is definitely unique and there are a lot of reasons why you may want to consider it as a great place to live, for a few years at least, especially if you are in the tech business.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/02/gostya-iz-budushego.jpg" /></entry></feed>
