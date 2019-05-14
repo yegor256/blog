@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "0rsk.com: Cause + Risk + Effect"
-date: 2019-05-07
+date: 2019-05-14
 place: Moscow, Russia
 tags: management
 description: |
