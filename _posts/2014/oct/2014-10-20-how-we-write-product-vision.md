@@ -49,7 +49,7 @@ you need more words, something is wrong with your understanding of the
 product under development. If you can answer them in 20 words, your
 product will conquer the world.
 
-{% quote An eventual invention of a cancer vaccine will make millions of people healthier, but will also make thousands of oncologists jobless %}
+{% quote An eventual invention of a cancer vaccine will make millions of people healthier, but will also make thousands of oncologists jobless. %}
 
 By the way, don't confuse a Product Statement with a [Mission](https://en.wikipedia.org/wiki/Mission_statement),
 which is a much broader declaration of an overall goal of your business. You
@@ -116,7 +116,7 @@ These questions have no answers in the Product Vision document,
 but it's clear that a user will have four main features available. All other
 features will be similar to those.
 
-{% quote If you can't fit all features into 2-3 lines, reconsider your understanding of the product %}
+{% quote If you can't fit all features into 2-3 lines, reconsider your understanding of the product. %}
 
 Twitter is a multi-billion dollar business with a multi-million dollar
 product. However, we managed to explain its key features in just two
@@ -145,7 +145,7 @@ Mean time to recover must be less than 2 hours.
 DB must be scalable up to 5Tb without cost increases.
 {% endhighlight %}
 
-{% quote It's better to say nothing than set false or ambiguous goals %}
+{% quote It's better to say nothing than set false or ambiguous goals. %}
 
 It is also very important to keep requirements
 [measurable]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}) (like each of these examples).
@@ -227,7 +227,7 @@ a client by over-simplifying their "great" business idea. "Really?
 I am ready to pay $250,000 for something awesome and you're telling
 me that you've only got ten lines for it? Huh?"
 
-{% quote Don't allow your client to force you to bloat the Product Vision %}
+{% quote Don't allow your client to force you to bloat the Product Vision. %}
 
 To work around this situation, split the client's documentation into two parts.
 The first part will fit into the Product Vision document; the second one
