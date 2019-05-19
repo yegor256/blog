@@ -29,8 +29,6 @@ list them all here.
 Let me know if you want to see something else added here, and I'll be happy to
 oblige.
 
-{% youtube 9yjtsCK6Wdk %}
-
 All of the listed mistakes are related to object-oriented programming in general
 and to Java in particular.
 
