@@ -168,3 +168,6 @@ families, invite them over for dinner at your house, give them birthday
 gifts---all those tricks. They will save you a lot of money.
 
 Did I forget anything?
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Does your employer allow you to attend job interviews? <a href="https://twitter.com/hashtag/career?src=hash&amp;ref_src=twsrc%5Etfw">#career</a> <a href="https://twitter.com/hashtag/management?src=hash&amp;ref_src=twsrc%5Etfw">#management</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1129995374976880641?ref_src=twsrc%5Etfw">May 19, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

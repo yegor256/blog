@@ -27,6 +27,10 @@ Volume 1:<br/>
 
 <!--more-->
 
+May 13, 2019:
+Русское издание [вышло](https://www.piter.com/collection/new/product/nash-kod-remeslo-professiya-iskusstvo)
+в издательстве Питер. Вот анонс на [Habr](https://habr.com/ru/company/piter/blog/451576/).
+
 Jan 12, 2019:
 This is a short list of reviews I've managed to find (feel free
 to add yours, via a [pull request](https://github.com/yegor256/blog)):

@@ -65,6 +65,9 @@ Volume 2:<br/>
 
 <!--more-->
 
+May 3, 2019:
+We started to translate it to French.
+
 October 12, 2018:
 I started to work on the 3rd volume. It will be suggest how to refactor
 the legacy code in order to make it more object-oriented. I will try to make
