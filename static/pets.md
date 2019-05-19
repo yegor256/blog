@@ -197,6 +197,16 @@ you all gain better social visibility of your mutual idea.
 <br/>
 Founded 28-Aug-2018.
 
+{% badge //www.0rsk.com/logo.svg 70 http://www.0rsk.com %}
+
+[0rsk](https://www.0rsk.com) is a free online risk management tool,
+to help you identify risks, record them in Cause+Risk+Effect format,
+analyze their probabilities and impacts, create response plans
+and stay informed about the most current agenda of thigs you have
+to do in order to implement those plans.
+<br/>
+Founded 12-Apr-2019.
+
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
 [qulice](https://github.com/teamed/qulice),
