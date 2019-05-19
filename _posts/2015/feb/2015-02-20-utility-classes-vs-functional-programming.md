@@ -76,7 +76,7 @@ it's up to you to decide. Let's see what the difference is.
 There are basically two different approaches: declarative and imperative.
 
 [Imperative programming](http://en.wikipedia.org/wiki/Imperative_programming)
-is focused on describing **how** a program operates
+is focused on describing _how_ a program operates
 in terms of statements that change a program state. We just saw an example
 of imperative programming above. Here is another (this is pure imperative/procedural
 programming that has nothing to do with
@@ -93,7 +93,7 @@ public class MyMath {
 {% endhighlight %}
 
 [Declarative programming](http://en.wikipedia.org/wiki/Declarative_programming)
-focuses on **what** the program should accomplish without prescribing
+focuses on _what_ the program should accomplish without prescribing
 how to do it in terms of sequences of actions to be taken. This is how
 the same code would look in Lisp, a functional programming language:
 
@@ -129,19 +129,19 @@ the buyer, the packager, and the consumer.
 
 Imagine you're a buyer and want to purchase a gift for your (girl|boy)friend. The first
 option is to visit a shop, pay $50, let them package that perfume for you,
-and then deliver it to the friend (and get a kiss in return). This is an **imperative** style.
+and then deliver it to the friend (and get a kiss in return). This is an _imperative_ style.
 
 The second option is to visit a shop, pay $50, and get a gift card. You then
 present this card to the friend (and get a kiss in return). When he or she decides to convert it
 to perfume, he or she will visit the shop and get it. This
-is a **declarative** style.
+is a _declarative_ style.
 
 See the difference?
 
 In the first case, which is imperative, you force the packager (a beauty shop)
 to find that perfume in stock, package it, and present it to you as
 a ready-to-be-used product. In the second scenario, which is declarative,
-you're just getting a **promise** from the shop that eventually, when it's
+you're just getting a _promise_ from the shop that eventually, when it's
 necessary, the staff will find the perfume in stock, package it, and provide it to
 those who need it. If your friend never visits the shop with that gift card,
 the perfume will remain in stock.

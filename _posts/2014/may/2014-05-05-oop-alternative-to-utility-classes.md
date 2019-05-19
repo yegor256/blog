@@ -34,8 +34,6 @@ from JDK7 are perfect examples of utility classes.
 This design idea is very popular in the Java world (as well as C#, Ruby, etc.)
 because utility classes provide common functionality used everywhere.
 
-{% youtube psrp3TtaYYI %}
-
 Here, we want to follow the
 [DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and avoid
 duplication. Therefore, we place common code blocks into utility classes and
@@ -63,6 +61,8 @@ There have been many discussions of this subject; to name a few:
 [Avoiding Utility Classes](https://github.com/marshallward/marshallward.org/blob/master/content/avoid_util_classes.rst) by Marshal Ward,
 [Kill That Util Class!](http://www.jroller.com/DhavalDalal/entry/kill_that_util_class) by Dhaval Dalal,
 [Helper Classes Are A Code Smell](http://www.robbagby.com/posts/helper-classes-are-a-code-smell/) by Rob Bagby.
+
+{% youtube psrp3TtaYYI %}
 
 Additionally, there are a few questions on StackExchange about utility classes:
 [If a “Utilities” class is evil, where do I put my generic code?](http://stackoverflow.com/questions/3339929/if-a-utilities-class-is-evil-where-do-i-put-my-generic-code),
