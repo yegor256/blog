@@ -52,6 +52,8 @@ gem will stop working, its users will not understand why and will simply
 stop using it. They will also think of me as the creator of some garbage that
 is not maintained well and doesn't work. Not really good for my reputation, right?
 
+{% youtube WlI6IZ6M7vY %}
+
 Just like Rita Mulcahy suggested above, I shouldn't just wait until
 a very disappointed user emails me. I should _pro-actively_ deal with this risk somehow.
 How? Well, I can do a few things. First, I can create a few integration tests
