@@ -178,11 +178,13 @@ and
 ### 2019
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/appsconf.png" class="past-talk" alt="AppsConf 2019"/>
+<img src="https://i.ytimg.com/vi/i84uvEWDeMc/mqdefault.jpg" class="past-talk" alt="AppsConf 2019"/>
 Another Five Trends We Are Afraid Of;
 [AppsConf'2019](http://appsconf.ru/moscow/2019);
 Moscow, Russia;
-22 April.
+22 April;
+[видео](https://youtu.be/i84uvEWDeMc).
+
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>
