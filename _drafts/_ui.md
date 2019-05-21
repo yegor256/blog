@@ -19,7 +19,7 @@ jb_picture:
   caption:
 ---
 
-We all know what happens, when a programmer decides how a web site
+We all know what happens when a programmer decides how a web site
 or a mobile app should look. It ends up looking ugly. And why is that? I don't know exactly,
 but my best bet is on the [left-brained nature](https://www.linkedin.com/pulse/left-brain-vs-right-brain-developers-warren-gwartney/)
 of programmers, who mostly are rigid and logical mathematicians. UI design, to the contrary,
@@ -27,10 +27,10 @@ requires creativity and intuition, which reside in the right side of our brain.
 Some [recent studies](https://www.fastcompany.com/3029364/this-is-your-brain-on-code-according-to-functional-mri-imaging)
 are skeptical about that, but my personal experience tells me that you should never expect
 a programmer to make a user interface right.
-Moreover, I am, after all, a programmer: No matter what I draw, it's either
+Moreover, *I'm* one of those programmers: No matter what I draw, it's either
 [black-and-white](/paintings.html), or ugly.
 But I still have to design my [pet projects](/pets.html).
-Here is the top list of lessons I learned for myself, which help me survive
+Here is a list of the top lessons I learned for myself, which help me survive
 with my left-sided brain.
 
 <!--more-->
@@ -38,17 +38,17 @@ with my left-sided brain.
 {% jb_picture_body %}
 
 **Leaders**.
-I look at what big and famous companies are doing. I check the websites
+I look at the things that big and famous companies are doing. I check the websites
 I'm using every day to see what is "good" in modern web design:
 [stackoverflow](https://stackoverflow.com),
 [github](https://github.com),
 [apple](https://www.apple.com),
 [amazon](https://www.amazon.com),
 [craigslist](https://www.craigslist.org/) (no kidding), etc.
-I actually pay attention to less than ten websites.
-They make buttons flat? I do them flat. They make fonts larger? I make
+I actually pay attention to fewer than ten websites.
+They make buttons flat? I make them flat. They make fonts larger? I make
 fonts larger. They make the background white, I make it white too.
-I just copy them. They know it better anyway.
+I just copy them. They know better anyway.
 
 **Frameworks**.
 There are [many](https://github.com/troxler/awesome-css-frameworks) of them for
@@ -80,7 +80,7 @@ are always enough for any web app.
 **Bold, Italic, Underscore, and All Caps**.
 It's simple---don't use them. Never. Well,
 [as little as possible](https://practicaltypography.com/bold-or-italic.html).
-You definitely don't use them in order to make a visual element more visible. You've got
+You definitely shouldn't use them in order to make a visual element more visible. You've got
 fonts for that. If you want your caption to catch the eye, make the
 font larger. But don't use italic, bold, or, God forbid, all caps. I use
 them sometimes, very rarely, but only in order to
@@ -124,7 +124,7 @@ wrong with a website, statically analyzing it. This is similar to what
 does for our Java code. I rely on their recommendations, always.
 Sometimes they sound too strict, but they tell me what the expectations are
 of those who know web design way better than I do.  In HTML5,
-for example, we are supposed to have `<thead>` in our `<table>`, or `alt` attribute
+for example, we are supposed to have `<thead>` in our `<table>`, or the `alt` attribute
 in all `<img>` elements. I always try to follow these and other rules.
 
 **Responsive**.
