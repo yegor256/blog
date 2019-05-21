@@ -735,6 +735,7 @@ bitcoins
 bits
 bjarne
 black
+black-and-white
 blackberry
 blacked
 blacks
@@ -777,6 +778,7 @@ bobby
 bodies
 body
 bodyguards
+bold
 bomb
 bonds
 boni
@@ -831,6 +833,7 @@ bozhidar
 braces
 bracket
 brackets
+brain
 brainbench
 brains
 brainstorming
@@ -1005,6 +1008,8 @@ capers
 capital
 capitalism
 capitalists
+caps
+caption
 capture
 captured
 car
@@ -1073,6 +1078,7 @@ celebrations
 celsius
 cent
 center
+centering
 central
 centralized
 cents
@@ -1409,6 +1415,7 @@ comparing
 comparison
 compassion
 compatibility
+compatible
 compensated
 compensation
 compete
@@ -1648,6 +1655,7 @@ cookies
 cooking
 cooks
 cool
+coolors
 cooperate
 cooperation
 coordinates
@@ -3083,6 +3091,7 @@ fragility
 frame
 frames
 framework
+framework's
 frameworks
 francisco
 francs
@@ -3311,6 +3320,7 @@ greed
 greedy
 green
 GreenHouseCI
+grids
 griggs
 grocery
 grooming
@@ -3975,6 +3985,7 @@ introduction
 introductory
 intros
 introverts
+intuition
 intuitive
 invalid
 invalidate
@@ -4044,6 +4055,7 @@ it
 it'll
 it's
 italian
+italic
 item
 items
 iterate
@@ -4359,6 +4371,8 @@ leaves
 leaving
 led
 left
+left-brained
+left-sided
 leftist
 leftovers
 leg
@@ -4850,6 +4864,7 @@ mindsets
 mine
 minecraft
 miner
+minimalistic
 minimize
 minimum
 minister
@@ -4948,6 +4963,7 @@ monolithic
 monopoly
 monorepo
 monorepos
+monospace
 monster
 monsters
 month
@@ -5002,6 +5018,7 @@ much
 mulcahy
 multi
 multi-billion-dollar
+multi-column
 multi-factor
 multi-million-dollar
 multi-national
@@ -6230,6 +6247,7 @@ rapists
 rapportive
 rare
 rarely
+raster-graphics
 rasterized
 rate
 rate-setting
@@ -6533,6 +6551,7 @@ reserved
 reserves
 reservoir
 reset
+reside
 resignation
 resilience
 resist
@@ -6757,6 +6776,7 @@ sandler
 sandwich
 sane
 sanitizer
+sans-serif
 sarah
 sarcasm
 sarcastic
@@ -6922,6 +6942,7 @@ sennheiser
 sense
 sensitive
 sent
+sentence
 sentences
 sentry
 sep
@@ -6944,6 +6965,7 @@ serialization
 serialized
 serializers
 series
+serif
 serious
 seriously
 servant
@@ -7275,6 +7297,7 @@ space
 spaces
 spaceship
 spaceships
+spacing
 spacious
 spaghetti
 spam
@@ -7657,6 +7680,7 @@ switch
 switched
 switching
 symbol
+symbols
 sympathy
 symphony
 symptom
@@ -7681,6 +7705,7 @@ tab
 table
 tables
 taboo
+tabular
 tacit
 tackles
 tagged
@@ -8148,6 +8173,7 @@ underlying
 undermined
 underpaid
 underpay
+underscore
 understand
 understandable
 understanding
