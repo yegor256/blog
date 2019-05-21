@@ -14,9 +14,9 @@ keywords:
   - ui programmer
   - simple ui
   - ui principles
-image: /images/2019/05/
+image: /images/2019/05/big-eyes.jpg
 jb_picture:
-  caption:
+  caption: Big Eyes (2014) by Tim Burton
 ---
 
 We all know what happens when a programmer decides how a web site
