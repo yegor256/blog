@@ -177,7 +177,7 @@ actually tests something.
 
 {"name='Guardian'}
 **Guardian**.
-A test that asserts that something **doesn't** happen. For example, `CachableTest` verifies zero interaction with `HttpClient`. It creates a dangrous situation, because it's hard to make a test fail (because removing `when` clause and even removing all logic won't make a test fail) and thus, hard to verify whether a test is not a liar<sup>4</sup>.
+A test that asserts that something **doesn't** happen. For example, `CachableTest` verifies zero interaction with `HttpClient`. It creates a dangerous situation, because it's hard to make a test fail (because removing `when` clause and even removing all logic won't make a test fail) and thus, hard to verify whether a test is not a liar<sup>4</sup>.
 
 Useful links:
 
