@@ -57,6 +57,9 @@ https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q
 Twitter:<br/>
 [yegor256](https://twitter.com/yegor256)
 
+Instagram:<br/>
+[yegor256](https://instagram.com/yegor256)
+
 Facebook:<br/>
 [yegor256](https://www.facebook.com/yegor256)
 
