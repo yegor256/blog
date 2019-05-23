@@ -90,6 +90,13 @@ Can Distributed Teams Deliver Quality?<br/>
 Moscow, Russia<br/>
 27 May.
 
+<div class="talk-event">&nbsp;</div>
+<img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="future-talk" alt="QAFest 2019"/><br/>
+Quality Assurance vs. Testing<br/>
+[QA Fest](http://qafest.com/en/)<br/>
+Kyiv, Ukraine<br/>
+20-21 September.
+
 If you are interested in placing me at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
