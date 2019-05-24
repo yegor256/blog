@@ -227,4 +227,4 @@ PS. Here is a short list of READMEs I like, which are not mine
 (if you think that yours is good too, [email](maito:readme-review@yegor256.com)
 it to me, I will review it and perhaps add it to this list):
 
-  * _the list is empty at the moment_ :(
+  * [rugk/offline-qr-code](https://github.com/rugk/offline-qr-code)
