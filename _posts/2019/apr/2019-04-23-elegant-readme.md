@@ -228,3 +228,4 @@ PS. Here is a short list of READMEs I like, which are not mine
 it to me, I will review it and perhaps add it to this list):
 
   * [rugk/offline-qr-code](https://github.com/rugk/offline-qr-code)
+  * [Vatavuk/verano-http](https://github.com/Vatavuk/verano-http)
