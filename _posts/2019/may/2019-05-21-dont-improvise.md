@@ -137,3 +137,6 @@ To summarize, I would suggest: don't improvise, don't try to be
 creative, don't think that you understand what is beautiful and what's not.
 You don't. Me neither. Just be as _minimalistic_ and _traditional_ as possible
 and you will do yourself and your users a big favor.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How to make a UI look yummy? <a href="https://twitter.com/hashtag/graphicdesigning?src=hash&amp;ref_src=twsrc%5Etfw">#graphicdesigning</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1132522579674173441?ref_src=twsrc%5Etfw">May 26, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
