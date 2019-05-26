@@ -60,7 +60,8 @@ order):
 
 **README**.
 I'm sure you host your product on GitHub. (If not, what's wrong with you?)
-There must be a `README.md` file in the root directory that
+There must be a [`README`]({% pst 2019/apr/2019-04-23-elegant-readme %})
+file in the root directory that
 explains what the product is all about and how we should use it.
 A few good examples:
 [`leejarvis/slop`](https://github.com/leejarvis/slop/blob/master/README.md),
@@ -79,7 +80,8 @@ No matter how rich you've made your website, Javadoc, Wiki, mailing
 list, and Twitter, the README is the place where we expect
 to see everything. Only if and when we get interested will we investigate
 further and deeper. Read the README files in other projects and copy
-their best ideas. README is your showcase, it must shine.
+their best ideas.
+[README]({% pst 2019/apr/2019-04-23-elegant-readme %}) is your showcase, it must shine.
 
 **License**.
 Most of us don't pay attention to [this bureaucracy](https://en.wikipedia.org/wiki/Software_license).

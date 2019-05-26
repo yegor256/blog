@@ -1,38 +1,141 @@
 ---
 layout: post
-title: "Agile Principle no.5"
-date: 2018-04-20
+title: "Trust Them to Get the Job Done, Not!"
+date: 2019-05-28
 place: Moscow, Russia
-tags: management zerocracy agile
+tags: management agile
 description: |
-  ...
+  Treating programmers binary as either trustable or not is a typical
+  mistake of a weak manager, which leads to fear and chaos
+  in a team.
 keywords:
   - agile
-  - agile
-  - lazy and calm
-  - zerocracy
-  -
-image: /images/2018/04/
+  - punishment
+  - rewards
+  - bonuses
+  - trust
+image: /images/2018/05/
 jb_picture:
   caption:
 ---
 
-[Here](http://agilemanifesto.org/principles.html) it is:
-"Build projects around motivated individuals.
+There are [twelve]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
+principles in [Agile Manifesto](http://agilemanifesto.org/principles.html).
+The fifth one says: "Build projects around motivated individuals.
 Give them the environment and support they need,
 and trust them to get the job done."
-First, I found myself totally disagreeing with it.
-Then, after a few minutes of thinking I realized that it is absolutely
-in line with what [Zerocracy](https://www.zerocracy.com) is preaching.
-Let me show you.
+I disagree. Strongly. This formula suggests treating people binary: they
+are either motivated and trusted or ... what? They have to be let go?
+This mindset is very typical, according to my observations, and leads
+to [poor management]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) and project failures.
+Instead, our people management must be more _iterative_ and much _less rigit_.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-First, why I though that I'm against it. Because of this part:
-"trust them to get the job done." I believe that trust, if it's
-a replacement of control, is an obvious sign of management weakness.
-I [wrote]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) about it recently.
-The more you trust, the more you eventually lose.
+Just a few days ago I posted a [quote](https://www.instagram.com/p/Bx6gJAngsT5/) from
+[_Code Ahead_](/code-ahead.html), my recent book about
+software engineering, on Instagram. I've got an interesting and very typical
+response from one of my readers (polished a bit):
+
+> Why should I get punished at the first place;
+  if my mistake is unforgiven they should fire me, and I believe this
+  is less humiliating than get punished and stay with them.
+
+This is what I hear almost always when I start talking about rewards and
+punishment in a software team. I hear that it is _humiliating_ and
+programmers should _never_ be punished. Instead, as [Samir](https://www.instagram.com/samir.bouazza.2017/)
+suggested, they should be fired when they make
+an _unforgiven_ mistake. Thus, we either trust them 100% or, when a mistake
+happens, we ... fire the bloody bastard, he was useless anyway!
+
+Well, maybe this is part of a human nature: First we love, then we hate, and
+[the stronger we love, the stronger we hate](https://drhurd.com/2018/04/29/stronger-love-stronger-hate/).
+But what these emotions have to do with professional
+[project management]({% pst 2016/may/2016-05-24-who-is-project-manager %})?
+
+As [William Edwards Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming)
+suggested many years ago, a good management is always about a simple
+[Plan-Do-Check-Act](https://en.wikipedia.org/wiki/PDCA) cycle.
+No matter what and who we manage, we have to _plan_ first,
+let us and our people _do_ the work, then _check_ how the results look like, comparing
+them with our plans, and finally _act_ according to the findings, correcting
+the plans. Then, we go back to the planning part and the cycle starts
+over again:
+
+{% figure https://upload.wikimedia.org/wikipedia/commons/4/42/PDCA-Multi-Loop.png 600 %}
+
+We all know that this is how software has to be developed. Many years ago
+we all realized that a [Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model),
+where everything was planned upfront
+and then implemented according to the plans, which didn't change during the
+course of the project, was a bad idea. A much better idea is to deliver
+the software [incrementally](https://en.wikipedia.org/wiki/Incremental_build_model),
+making changes to the plans and specifications
+after each iteration. This [guarantees](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
+higher quality, faster reaction to mistakes,
+and a much better predictability. It's obvious, right?
+
+Why don't we do the same with people? Why do we motivate them upfront
+and then trust them ... until they become _untrustable_. Can't we reguarly check
+how they are performing and correct our _trust_ accordingly? Why they are
+either "great" for us or "useless"? Why can't we grade them after each
+iteration, according to both mistakes _and_ achievements they make?
+
+Let's see how the formula Agile is suggesting can be applied to the
+PDCA continuum:
+
+  * Plan: Find individuals and motivate them
+  * Do: Trust them and they get the job done
+  * Check: &mdash;
+  * Act: &mdash;
+
+It seems that two important pieces are missing. We don't check whether
+we can still trust them, whether they are still motivated, whether they are
+interested in getting the job done, and whether it's time to
+[replace]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %})
+some of them.
+
+Why so? What are we afraid of?
+
+Moreover, why programmers feel it humiliating when their results are being
+regularly checked, leading to micro rewards and penalties, while at the same
+time they find it totally OK to be fired for a single "unforgiven" mistake?
+
+I have an answer.
+
+Because their managers are [weak and stupid]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %}),
+in most cases. They simply
+don't know how to reward and penalize programmers incrementally. They don't
+know how to measure the progress of people, incrementally. Their control instruments
+are based on guilt and fear: They put programmers together,
+<del>brain wash</del> [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
+them, and then make them scared of making an unforgiven mistake.
+
+What exactly is that mistake, nobody really knows---it's
+a personal decision of a manager. It could be a broken unit test,
+a missed [meeting]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}),
+a rude email, or drinking in the office. The scale is
+very wide and at which point the programmer will be fired, nobody
+knows. Even the manager can't explain it. The decision in most cases is
+[emotional and personal]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
+
+You know that a very typical mistake in scope management is treating
+large tasks with 0/100 completeness rule: they are either "not even started"
+or "fully complete," and nothing in the middle. You can do that with
+[small tasks]({% pst 2017/nov/2017-11-28-microtasking %}),
+but never with large ones, because it will lead to lack of control
+and much higher risk of more expensive failures. You must break your scope
+into smaller pieces and then apply the 0/100 rule.
+
+The same is true about people. You can't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
+them 0/100: either you trust
+them fully or you fire them. This is too risky. You have to _decompose_
+their trust and their motivation into smaller pieces and deliver your
+satisfaction and frustration incrementally. How do you do that? Via
+[micro-bonuses]({% pst 2018/jan/2018-01-09-micro-budgeting %}) and
+[micro-penalties]({% pst 2018/jan/2018-01-09-micro-budgeting %}).
+
+How else?
 
