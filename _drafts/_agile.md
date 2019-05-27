@@ -78,12 +78,13 @@ higher quality, faster reaction to mistakes,
 and a much better predictability. It's obvious, right?
 
 Why don't we do the same with people? Why do we motivate them upfront
-and then trust them ... until they become _untrustable_. Can't we reguarly check
+and then trust them ... until they turn out to be completely _untrustworthy_?
+Can't we regularly check
 how they are performing and correct our _trust_ accordingly? Why are they
 either "great" for us or "useless"? Why can't we grade them after each
 iteration, according to both mistakes _and_ achievements they make?
 
-Let's see how the formula Agile is suggesting can be applied to the
+Let's see how the formula that Agile suggests can be applied to the
 PDCA continuum:
 
   * Plan: Find individuals and motivate them
@@ -110,7 +111,7 @@ in most cases. They simply
 don't know how to reward and penalize programmers incrementally. They don't
 know how to measure the progress of people, incrementally. Their control instruments
 are based on guilt and fear: They put programmers together,
-<del>brain wash</del> [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
+<del>brainwash</del> [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
 them, and then make them scared of making an unforgivable mistake.
 
 What exactly is that mistake, nobody really knows---it's
