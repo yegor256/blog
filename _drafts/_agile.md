@@ -5,7 +5,7 @@ date: 2019-05-28
 place: Moscow, Russia
 tags: management agile
 description: |
-  Treating programmers binary as either trustable or not is a typical
+  Treating programmers in a binary way as either trustable or not is a typical
   mistake of a weak manager, which leads to fear and chaos
   in a team.
 keywords:
@@ -20,15 +20,15 @@ jb_picture:
 ---
 
 There are [twelve]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
-principles in [Agile Manifesto](http://agilemanifesto.org/principles.html).
+principles in the [Agile Manifesto](http://agilemanifesto.org/principles.html).
 The fifth one says: "Build projects around motivated individuals.
 Give them the environment and support they need,
 and trust them to get the job done."
-I disagree. Strongly. This formula suggests treating people binary: they
+I disagree. Strongly. This formula suggests treating people in a binary way: they
 are either motivated and trusted or ... what? They have to be let go?
 This mindset is very typical, according to my observations, and leads
 to [poor management]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) and project failures.
-Instead, our people management must be more _iterative_ and much _less rigit_.
+Instead, our people management must be more _iterative_ and much _less rigid_.
 
 <!--more-->
 
@@ -39,9 +39,9 @@ Just a few days ago I posted a [quote](https://www.instagram.com/p/Bx6gJAngsT5/)
 software engineering, on Instagram. I've got an interesting and very typical
 response from one of my readers (polished a bit):
 
-> Why should I get punished at the first place;
+> Why should I get punished in the first place;
   if my mistake is unforgiven they should fire me, and I believe this
-  is less humiliating than get punished and stay with them.
+  is less humiliating than getting punished and then staying with them.
 
 This is what I hear almost always when I start talking about rewards and
 punishment in a software team. I hear that it is _humiliating_ and
@@ -50,16 +50,16 @@ suggested, they should be fired when they make
 an _unforgiven_ mistake. Thus, we either trust them 100% or, when a mistake
 happens, we ... fire the bloody bastard, he was useless anyway!
 
-Well, maybe this is part of a human nature: First we love, then we hate, and
+Well, maybe this is part of human nature: First we love, then we hate, and
 [the stronger we love, the stronger we hate](https://drhurd.com/2018/04/29/stronger-love-stronger-hate/).
-But what these emotions have to do with professional
+But what do these emotions have to do with professional
 [project management]({% pst 2016/may/2016-05-24-who-is-project-manager %})?
 
 As [William Edwards Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming)
-suggested many years ago, a good management is always about a simple
+suggested many years ago, good management is always about a simple
 [Plan-Do-Check-Act](https://en.wikipedia.org/wiki/PDCA) cycle.
 No matter what and who we manage, we have to _plan_ first,
-let us and our people _do_ the work, then _check_ how the results look like, comparing
+let ourselves and our people _do_ the work, then _check_ what the results look like, comparing
 them with our plans, and finally _act_ according to the findings, correcting
 the plans. Then, we go back to the planning part and the cycle starts
 over again:
@@ -79,7 +79,7 @@ and a much better predictability. It's obvious, right?
 
 Why don't we do the same with people? Why do we motivate them upfront
 and then trust them ... until they become _untrustable_. Can't we reguarly check
-how they are performing and correct our _trust_ accordingly? Why they are
+how they are performing and correct our _trust_ accordingly? Why are they
 either "great" for us or "useless"? Why can't we grade them after each
 iteration, according to both mistakes _and_ achievements they make?
 
@@ -99,7 +99,7 @@ some of them.
 
 Why so? What are we afraid of?
 
-Moreover, why programmers feel it humiliating when their results are being
+Moreover, why do programmers feel it humiliating when their results are being
 regularly checked, leading to micro rewards and penalties, while at the same
 time they find it totally OK to be fired for a single "unforgiven" mistake?
 
@@ -111,7 +111,7 @@ don't know how to reward and penalize programmers incrementally. They don't
 know how to measure the progress of people, incrementally. Their control instruments
 are based on guilt and fear: They put programmers together,
 <del>brain wash</del> [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
-them, and then make them scared of making an unforgiven mistake.
+them, and then make them scared of making an unforgivable mistake.
 
 What exactly is that mistake, nobody really knows---it's
 a personal decision of a manager. It could be a broken unit test,
@@ -132,10 +132,9 @@ into smaller pieces and then apply the 0/100 rule.
 The same is true about people. You can't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %})
 them 0/100: either you trust
 them fully or you fire them. This is too risky. You have to _decompose_
-their trust and their motivation into smaller pieces and deliver your
+their trustworthiness and their motivation into smaller pieces and deliver your
 satisfaction and frustration incrementally. How do you do that? Via
 [micro-bonuses]({% pst 2018/jan/2018-01-09-micro-budgeting %}) and
 [micro-penalties]({% pst 2018/jan/2018-01-09-micro-budgeting %}).
 
 How else?
-
