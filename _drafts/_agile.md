@@ -28,7 +28,7 @@ I disagree. Strongly. This formula suggests treating people in a binary way: the
 are either motivated and trusted or ... what? They have to be let go?
 This mindset is very typical, according to my observations, and leads
 to [poor management]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) and project failures.
-Instead, our people management must be more _iterative_ and much _less rigid_.
+Instead, our people management must be more _iterative_ and much less _rigid_.
 
 <!--more-->
 
@@ -100,7 +100,7 @@ some of them.
 
 Why so? What are we afraid of?
 
-Moreover, why do programmers feel it humiliating when their results are being
+Moreover, why do programmers find it humiliating when their results are being
 regularly checked, leading to micro rewards and penalties, while at the same
 time they find it totally OK to be fired for a single "unforgiven" mistake?
 
@@ -114,16 +114,16 @@ are based on guilt and fear: They put programmers together,
 <del>brainwash</del> [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
 them, and then make them scared of making an unforgivable mistake.
 
-What exactly is that mistake, nobody really knows---it's
+What exactly that mistake is, nobody really knows---it's
 a personal decision of a manager. It could be a broken unit test,
 a missed [meeting]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}),
 a rude email, or drinking in the office. The scale is
 very wide and at which point the programmer will be fired, nobody
-knows. Even the manager can't explain it. The decision in most cases is
+knows either. Even the manager can't explain it. The decision in most cases is
 [emotional and personal]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 
 You know that a very typical mistake in scope management is treating
-large tasks with 0/100 completeness rule: they are either "not even started"
+large tasks with the 0/100 completeness rule: they are either "not even started"
 or "fully complete," and nothing in the middle. You can do that with
 [small tasks]({% pst 2017/nov/2017-11-28-microtasking %}),
 but never with large ones, because it will lead to lack of control
