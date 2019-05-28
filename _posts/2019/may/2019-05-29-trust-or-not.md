@@ -14,9 +14,9 @@ keywords:
   - rewards
   - bonuses
   - trust
-image: /images/2018/05/
+image: /images/2019/05/metro-manila.jpg
 jb_picture:
-  caption:
+  caption: Metro Manila (2013) by Sean Ellis
 ---
 
 There are [twelve]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
