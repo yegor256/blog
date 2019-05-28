@@ -84,13 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/appsconf.png" class="future-talk" alt="QAConf 2019"/><br/>
-Can Distributed Teams Deliver Quality?<br/>
-[QAConf'2019](http://qualityconf.ru/2019)<br/>
-Moscow, Russia<br/>
-27 May.
-
-<div class="talk-event">&nbsp;</div>
 <img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="future-talk" alt="QAFest 2019"/><br/>
 Quality Assurance vs. Testing<br/>
 [QA Fest](http://qafest.com/en/)<br/>
@@ -183,6 +176,13 @@ and
 <span id="total_countries">?</span> countries.
 
 ### 2019
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/appsconf.png" class="past-talk" alt="QAConf 2019"/>
+Can Distributed Teams Deliver Quality?
+[QAConf'2019](http://qualityconf.ru/2019);
+Moscow, Russia;
+27 May.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/i84uvEWDeMc/mqdefault.jpg" class="past-talk" alt="AppsConf 2019"/>
