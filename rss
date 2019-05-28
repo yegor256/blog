@@ -1,4 +1,127 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-05-21T08:52:01+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Please, Don’t Improvise</title><link href="https://www.yegor256.com/2019/05/21/dont-improvise.html" rel="alternate" type="text/html" title="Please, Don't Improvise" /><published>2019-05-21T00:00:00+00:00</published><updated>2019-05-21T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/21/dont-improvise</id><content type="html" xml:base="https://www.yegor256.com/2019/05/21/dont-improvise.html">&lt;p&gt;We all know what happens when a programmer decides how a web site
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-05-28T06:14:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Trust Them to Get the Job Done, Not!</title><link href="https://www.yegor256.com/2019/05/28/trust-or-not.html" rel="alternate" type="text/html" title="Trust Them to Get the Job Done, Not!" /><published>2019-05-28T00:00:00+00:00</published><updated>2019-05-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/28/trust-or-not</id><content type="html" xml:base="https://www.yegor256.com/2019/05/28/trust-or-not.html">&lt;p&gt;There are &lt;a href=&quot;/2016/07/11/mistakes-in-agile-manifesto.html&quot;&gt;twelve&lt;/a&gt;
+principles in the &lt;a href=&quot;http://agilemanifesto.org/principles.html&quot;&gt;Agile Manifesto&lt;/a&gt;.
+The fifth one says: “Build projects around motivated individuals.
+Give them the environment and support they need,
+and trust them to get the job done.”
+I disagree. Strongly. This formula suggests treating people in a binary way: they
+are either motivated and trusted or … what? They have to be let go?
+This mindset is very typical, according to my observations, and leads
+to &lt;a href=&quot;/2017/11/21/trust-pay-lose.html&quot;&gt;poor management&lt;/a&gt; and project failures.
+Instead, our people management must be more &lt;em&gt;iterative&lt;/em&gt; and much less &lt;em&gt;rigid&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Metro Manila (2013) by Sean Ellis&quot; src=&quot;/images/2019/05/metro-manila.jpg&quot; longdesc=&quot;#14b89672&quot; /&gt;&lt;figcaption id=&quot;14b89672&quot;&gt;Metro Manila (2013) by Sean Ellis&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Just a few days ago I posted a &lt;a href=&quot;https://www.instagram.com/p/Bx6gJAngsT5/&quot;&gt;quote&lt;/a&gt; from
+&lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt;, my recent book about
+software engineering, on Instagram. I’ve got an interesting and very typical
+response from one of my readers (polished a bit):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Why should I get punished in the first place;
+  if my mistake is unforgiven they should fire me, and I believe this
+  is less humiliating than getting punished and then staying with them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is what I hear almost always when I start talking about rewards and
+punishment in a software team. I hear that it is &lt;em&gt;humiliating&lt;/em&gt; and
+programmers should &lt;em&gt;never&lt;/em&gt; be punished. Instead, as &lt;a href=&quot;https://www.instagram.com/samir.bouazza.2017/&quot;&gt;Samir&lt;/a&gt;
+suggested, they should be fired when they make
+an &lt;em&gt;unforgiven&lt;/em&gt; mistake. Thus, we either trust them 100% or, when a mistake
+happens, we … fire the bloody bastard, he was useless anyway!&lt;/p&gt;
+
+&lt;p&gt;Well, maybe this is part of human nature: First we love, then we hate, and
+&lt;a href=&quot;https://drhurd.com/2018/04/29/stronger-love-stronger-hate/&quot;&gt;the stronger we love, the stronger we hate&lt;/a&gt;.
+But what do these emotions have to do with professional
+&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project management&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;As &lt;a href=&quot;https://en.wikipedia.org/wiki/W._Edwards_Deming&quot;&gt;William Edwards Deming&lt;/a&gt;
+suggested many years ago, good management is always about a simple
+&lt;a href=&quot;https://en.wikipedia.org/wiki/PDCA&quot;&gt;Plan-Do-Check-Act&lt;/a&gt; cycle.
+No matter what and who we manage, we have to &lt;em&gt;plan&lt;/em&gt; first,
+let ourselves and our people &lt;em&gt;do&lt;/em&gt; the work, then &lt;em&gt;check&lt;/em&gt; what the results look like, comparing
+them with our plans, and finally &lt;em&gt;act&lt;/em&gt; according to the findings, correcting
+the plans. Then, we go back to the planning part and the cycle starts
+over again:&lt;/p&gt;
+
+&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/PDCA-Multi-Loop.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;We all know that this is how software has to be developed. Many years ago
+we all realized that a &lt;a href=&quot;https://en.wikipedia.org/wiki/Waterfall_model&quot;&gt;Waterfall model&lt;/a&gt;,
+where everything was planned upfront
+and then implemented according to the plans, which didn’t change during the
+course of the project, was a bad idea. A much better idea is to deliver
+the software &lt;a href=&quot;https://en.wikipedia.org/wiki/Incremental_build_model&quot;&gt;incrementally&lt;/a&gt;,
+making changes to the plans and specifications
+after each iteration. This &lt;a href=&quot;https://en.wikipedia.org/wiki/Iterative_and_incremental_development&quot;&gt;guarantees&lt;/a&gt;
+higher quality, faster reaction to mistakes,
+and a much better predictability. It’s obvious, right?&lt;/p&gt;
+
+&lt;p&gt;Why don’t we do the same with people? Why do we motivate them upfront
+and then trust them … until they turn out to be completely &lt;em&gt;untrustworthy&lt;/em&gt;?
+Can’t we regularly check
+how they are performing and correct our &lt;em&gt;trust&lt;/em&gt; accordingly? Why are they
+either “great” for us or “useless”? Why can’t we grade them after each
+iteration, according to both mistakes &lt;em&gt;and&lt;/em&gt; achievements they make?&lt;/p&gt;
+
+&lt;p&gt;Let’s see how the formula that Agile suggests can be applied to the
+PDCA continuum:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Plan: Find individuals and motivate them&lt;/li&gt;
+  &lt;li&gt;Do: Trust them and they get the job done&lt;/li&gt;
+  &lt;li&gt;Check: —&lt;/li&gt;
+  &lt;li&gt;Act: —&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It seems that two important pieces are missing. We don’t check whether
+we can still trust them, whether they are still motivated, whether they are
+interested in getting the job done, and whether it’s time to
+&lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;replace&lt;/a&gt;
+some of them.&lt;/p&gt;
+
+&lt;p&gt;Why so? What are we afraid of?&lt;/p&gt;
+
+&lt;p&gt;Moreover, why do programmers find it humiliating when their results are being
+regularly checked, leading to micro rewards and penalties, while at the same
+time they find it totally OK to be fired for a single “unforgiven” mistake?&lt;/p&gt;
+
+&lt;p&gt;I have an answer.&lt;/p&gt;
+
+&lt;p&gt;Because their managers are &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;weak and stupid&lt;/a&gt;,
+in most cases. They simply
+don’t know how to reward and penalize programmers incrementally. They don’t
+know how to measure the progress of people, incrementally. Their control instruments
+are based on guilt and fear: They put programmers together,
+&lt;del&gt;brainwash&lt;/del&gt; &lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;motivate&lt;/a&gt;
+them, and then make them scared of making an unforgivable mistake.&lt;/p&gt;
+
+&lt;p&gt;What exactly that mistake is, nobody really knows—it’s
+a personal decision of a manager. It could be a broken unit test,
+a missed &lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;meeting&lt;/a&gt;,
+a rude email, or drinking in the office. The scale is
+very wide and at which point the programmer will be fired, nobody
+knows either. Even the manager can’t explain it. The decision in most cases is
+&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;emotional and personal&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You know that a very typical mistake in scope management is treating
+large tasks with the 0/100 completeness rule: they are either “not even started”
+or “fully complete,” and nothing in the middle. You can do that with
+&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;small tasks&lt;/a&gt;,
+but never with large ones, because it will lead to lack of control
+and much higher risk of more expensive failures. You must break your scope
+into smaller pieces and then apply the 0/100 rule.&lt;/p&gt;
+
+&lt;p&gt;The same is true about people. You can’t &lt;a href=&quot;/2017/11/21/trust-pay-lose.html&quot;&gt;trust&lt;/a&gt;
+them 0/100: either you trust
+them fully or you fire them. This is too risky. You have to &lt;em&gt;decompose&lt;/em&gt;
+their trustworthiness and their motivation into smaller pieces and deliver your
+satisfaction and frustration incrementally. How do you do that? Via
+&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;micro-bonuses&lt;/a&gt; and
+&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;micro-penalties&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How else?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="agile" /><summary type="html">There are twelve principles in the Agile Manifesto. The fifth one says: “Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.” I disagree. Strongly. This formula suggests treating people in a binary way: they are either motivated and trusted or … what? They have to be let go? This mindset is very typical, according to my observations, and leads to poor management and project failures. Instead, our people management must be more iterative and much less rigid.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/metro-manila.jpg" /></entry><entry><title type="html">Please, Don’t Improvise</title><link href="https://www.yegor256.com/2019/05/21/dont-improvise.html" rel="alternate" type="text/html" title="Please, Don't Improvise" /><published>2019-05-21T00:00:00+00:00</published><updated>2019-05-21T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/21/dont-improvise</id><content type="html" xml:base="https://www.yegor256.com/2019/05/21/dont-improvise.html">&lt;p&gt;We all know what happens when a programmer decides how a web site
 or a mobile app should look. It ends up looking ugly. And why is that? I don’t know exactly,
 but my best bet is on the &lt;a href=&quot;https://www.linkedin.com/pulse/left-brain-vs-right-brain-developers-warren-gwartney/&quot;&gt;left-brained nature&lt;/a&gt;
 of programmers, who mostly are rigid and logical mathematicians. UI design, to the contrary,
@@ -115,7 +238,10 @@ Always.&lt;/p&gt;
 &lt;p&gt;To summarize, I would suggest: don’t improvise, don’t try to be
 creative, don’t think that you understand what is beautiful and what’s not.
 You don’t. Me neither. Just be as &lt;em&gt;minimalistic&lt;/em&gt; and &lt;em&gt;traditional&lt;/em&gt; as possible
-and you will do yourself and your users a big favor.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="graphics" /><summary type="html">We all know what happens when a programmer decides how a web site or a mobile app should look. It ends up looking ugly. And why is that? I don’t know exactly, but my best bet is on the left-brained nature of programmers, who mostly are rigid and logical mathematicians. UI design, to the contrary, requires creativity and intuition, which reside in the right side of our brain. Some recent studies are skeptical about that, but my personal experience tells me that you should never expect a programmer to make a user interface right. Moreover, I’m one of those programmers: No matter what I draw, it’s either black-and-white, or ugly. But I still have to design my pet projects. Here is a list of the top lessons I learned for myself, which help me survive with my left-sided brain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/big-eyes.jpg" /></entry><entry><title type="html">0rsk.com: Cause + Risk + Effect</title><link href="https://www.yegor256.com/2019/05/14/cause-risk-effect.html" rel="alternate" type="text/html" title="0rsk.com: Cause + Risk + Effect" /><published>2019-05-14T00:00:00+00:00</published><updated>2019-05-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/14/cause-risk-effect</id><content type="html" xml:base="https://www.yegor256.com/2019/05/14/cause-risk-effect.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.0rsk.com&quot;&gt;&lt;img src=&quot;https://www.0rsk.com/logo.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+and you will do yourself and your users a big favor.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How to make a UI look yummy? &lt;a href=&quot;https://twitter.com/hashtag/graphicdesigning?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#graphicdesigning&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1132522579674173441?ref_src=twsrc%5Etfw&quot;&gt;May 26, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="graphics" /><summary type="html">We all know what happens when a programmer decides how a web site or a mobile app should look. It ends up looking ugly. And why is that? I don’t know exactly, but my best bet is on the left-brained nature of programmers, who mostly are rigid and logical mathematicians. UI design, to the contrary, requires creativity and intuition, which reside in the right side of our brain. Some recent studies are skeptical about that, but my personal experience tells me that you should never expect a programmer to make a user interface right. Moreover, I’m one of those programmers: No matter what I draw, it’s either black-and-white, or ugly. But I still have to design my pet projects. Here is a list of the top lessons I learned for myself, which help me survive with my left-sided brain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/big-eyes.jpg" /></entry><entry><title type="html">0rsk.com: Cause + Risk + Effect</title><link href="https://www.yegor256.com/2019/05/14/cause-risk-effect.html" rel="alternate" type="text/html" title="0rsk.com: Cause + Risk + Effect" /><published>2019-05-14T00:00:00+00:00</published><updated>2019-05-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/14/cause-risk-effect</id><content type="html" xml:base="https://www.yegor256.com/2019/05/14/cause-risk-effect.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.0rsk.com&quot;&gt;&lt;img src=&quot;https://www.0rsk.com/logo.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;“A project manager’s work should not focus on dealing with problems;
 it should focus on preventing them,”—this is how
@@ -799,7 +925,8 @@ who the contributors are. We know them, GitHub tells us.&lt;/p&gt;
 it to me, I will review it and perhaps add it to this list):&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;the list is empty at the moment&lt;/em&gt; :(&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rugk/offline-qr-code&quot;&gt;rugk/offline-qr-code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Vatavuk/verano-http&quot;&gt;Vatavuk/verano-http&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="specs" /><summary type="html">Some time ago I wrote a blog post An Open Code Base Is Not Yet an Open Source Project where I suggested a few important qualities of a good open source repository/project. One of them was the well-written README file. Here I will try to give a few hints on how to create a good README file and what mistakes to avoid. I hope you find it helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/life-of-pi.jpg" /></entry><entry><title type="html">How to Use Nutch From Java, Not From the Command Line</title><link href="https://www.yegor256.com/2019/04/17/nutch-from-java.html" rel="alternate" type="text/html" title="How to Use Nutch From Java, Not From the Command Line" /><published>2019-04-17T00:00:00+00:00</published><updated>2019-04-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/17/nutch-from-java</id><content type="html" xml:base="https://www.yegor256.com/2019/04/17/nutch-from-java.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://nutch.apache.org/&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/8/89/Nutch_logo.svg&quot; style=&quot;width:92px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://nutch.apache.org/&quot;&gt;Apache Nutch&lt;/a&gt;
@@ -1575,232 +1702,4 @@ a &lt;code&gt;logger&lt;/code&gt; anymore, it’s &lt;code&gt;log&lt;/code&gt;. 
 &lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;why&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How do you log a message from an object of class Book? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1122381490480930817?ref_src=twsrc%5Etfw&quot;&gt;April 28, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">How do you organize logging in your applications? I mean web applications or command line apps, or even mobile apps. I bet you have some global variable or a singleton, known as Logger, which has a few methods like info(), error(), and debug(). You configure it when the app starts, or it configures itself via something like log4j.properties, and logs everything to the console or a file, or even a database. I was doing exactly that, or something very similar, for many years, until I finally realized how wrong this approach was. In one of my recent Ruby applications I did it all differently, and since then I’m much happier than I was before.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/the-square.jpg" /></entry><entry><title type="html">How Data Visibility Hurts Maintainability</title><link href="https://www.yegor256.com/2019/03/12/data-and-maintainability.html" rel="alternate" type="text/html" title="How Data Visibility Hurts Maintainability" /><published>2019-03-12T00:00:00+00:00</published><updated>2019-03-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/03/12/data-and-maintainability</id><content type="html" xml:base="https://www.yegor256.com/2019/03/12/data-and-maintainability.html">&lt;p&gt;I’ve been writing &lt;a href=&quot;/tags/oop.html&quot;&gt;so much&lt;/a&gt; about object-oriented programming and its
-&lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;pitfalls&lt;/a&gt;,
-claiming that most of the design patterns and “good practices” which we are accustomed to
-are actually &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;wrong and hurtful&lt;/a&gt;,
-that I totally forgot to explain the bigger picture problem.
-Someone &lt;a href=&quot;https://www.yegor256.com/2016/11/21/naked-data.html#comment-3879044054&quot;&gt;asked&lt;/a&gt;
-me some time ago in the &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;blog post&lt;/a&gt;
-about “naked” data: What is the problem we are solving and why exactly does maintainability
-suffer if we don’t &lt;em&gt;encapsulate&lt;/em&gt; our data enough? Here is the answer.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Taboo (2017) by Tom Hardy, et al.&quot; src=&quot;/images/2019/03/taboo.jpg&quot; longdesc=&quot;#ef452fbf&quot; /&gt;&lt;figcaption id=&quot;ef452fbf&quot;&gt;Taboo (2017) by Tom Hardy, et al.&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I re-read the first few pages of &lt;a href=&quot;/elegant-objects.html&quot;&gt;&lt;em&gt;Elegant Objects, Volume 1&lt;/em&gt;&lt;/a&gt;,
-my book entirely dedicated to the problem of modern object-oriented programming
-&lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;flaws&lt;/a&gt;,
-and found out that maintainability is directly mentioned there:
-“The main goal I’m trying to achieve with this writing is to
-increase the &lt;em&gt;maintainability&lt;/em&gt; of your code,” and then it also explains
-that maintainability is “the time required for me to understand your code.” You
-&lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/141005&quot;&gt;can’t argue with that&lt;/a&gt;,
-but the question remains: how does the lack of “true” object-orientation and proper encapsulation
-hurt readability?&lt;/p&gt;
-
-&lt;p&gt;I don’t know the exact answer, but here is my own version, derived from
-my years of coding and suffering: &lt;em&gt;smaller scope&lt;/em&gt; is the key success factor of
-better maintainability, and lack of encapsulation leads to a larger scope. You know what
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Scope_%28computer_science%29&quot;&gt;scope of visibility&lt;/a&gt;
-is, right? Let’s take this C code as an example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * 2 = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * 3 = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are two variables &lt;code&gt;i&lt;/code&gt;, visible in two different &lt;code&gt;for&lt;/code&gt; loops, two
-different scopes of visibility. The &lt;em&gt;size&lt;/em&gt; of each scope is three lines of code.
-How about this code, doing exactly the same:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * 2 = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * 3 = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, the scope of visibility of &lt;code&gt;i&lt;/code&gt; is ten lines of code. The code works as well
-as in the first snippet, but its maintainability is lower, because in order
-to understand what’s going on and how to modify it, I need more time. I need
-to read a 10-line block of code, instead of two 3-line blocks.
-I need to understand the entire method &lt;code&gt;print()&lt;/code&gt; before I can start making any modifications.
-I need to understand the lifetime algorithm of that poor &lt;code&gt;i&lt;/code&gt; and why,
-for example, it gets decremented by 10 instead of being reassigned to zero—this is
-the surprise previous programmers left for me. Maybe they were not aware of
-the existence of &lt;code&gt;for&lt;/code&gt; loops?&lt;/p&gt;
-
-&lt;p&gt;It’s obvious that the first snippet is better than the second one.
-The question is how do we &lt;em&gt;make&lt;/em&gt; programmers write code the way the first
-snippet is written and make the scope of each variable and function smaller?
-We can teach them, write books for them, convince them, train them, or maybe
-even punish them for larger scope and less readable code, but if the
-programming language itself doesn’t prevent these large scopes from happening,
-nothing will really help. It’s better to invent a programming language or
-an entire programming paradigm to make it harder, or impossible, to grow the scope.&lt;/p&gt;
-
-&lt;p&gt;For example, the largest scope you can imagine in C/C++, Java, Ruby and many other
-modern languages is the &lt;a href=&quot;/2018/07/03/global-variables.html&quot;&gt;global&lt;/a&gt;
-one, for example here:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * 2 = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now the variable &lt;code&gt;i&lt;/code&gt; is visible not only inside the function &lt;code&gt;print()&lt;/code&gt; but
-in &lt;del&gt;many&lt;/del&gt; all other places of the application we develop. The scope
-of visibility of &lt;code&gt;i&lt;/code&gt; is the size of the entire code base. Needless to say that
-makes the code of function &lt;code&gt;print()&lt;/code&gt; &lt;a href=&quot;/2018/07/03/global-variables.html&quot;&gt;very unreadable&lt;/a&gt;.
-I simply can’t know what value to expect in &lt;code&gt;i&lt;/code&gt; when the execution of &lt;code&gt;print()&lt;/code&gt; starts—I
-have to go through the entire code base to find it out. If it’s a small app, maybe
-I will manage, but if it’s a large piece of software, I will have big troubles.
-So, how about we create a programming language, which will not allow global
-variables? This will solve the problem. Programmers will have no technical
-ability to define them and their scopes will inevitably be smaller.&lt;/p&gt;
-
-&lt;p&gt;I believe that objects &lt;a href=&quot;/2017/12/12/alan-kay-was-wrong.html&quot;&gt;were invented&lt;/a&gt;
-exactly to do that:
-to &lt;em&gt;force&lt;/em&gt; programmers to keep their scopes of visibility smaller. Well, actually,
-functions and sub-routines were invented for that too, but with a less
-strong emphasis on the “force” part, since they could co-exist with code
-parts that were not decomposed yet. To the contrary, objects were supposed to be first-class
-citizens of an object world, communicating with objects only.&lt;/p&gt;
-
-&lt;p&gt;They were.&lt;/p&gt;
-
-&lt;p&gt;But then C++ showed up and ruined everything.&lt;/p&gt;
-
-&lt;p&gt;Let’s try to introduce an object to our C snippet, the way
-&lt;del&gt;most&lt;/del&gt; some C++ programmers would do it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Idx&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And then:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Idx&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * 2 = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * 3 = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;What changed? Not much. Instead of a plain “scalar” variable &lt;code&gt;i&lt;/code&gt; we have
-an “object,” which stores an integer value inside and provides a few methods
-to access it and modify it. Did it help us minimize the scope? Not at all. Moreover,
-the length of &lt;code&gt;print()&lt;/code&gt; is now even a few lines longer. But now we have
-an object and can call our code object-oriented!&lt;/p&gt;
-
-&lt;p&gt;This is how most of the “objects” are used nowadays, mostly thanks to C++: they are just data holders,
-while the real users of the data are still outside of them. The object &lt;code&gt;Idx&lt;/code&gt;
-doesn’t know anything about the real purpose of the data it holds. It doesn’t
-know that its &lt;code&gt;v&lt;/code&gt; is used as a step counter and that it gets multiplied by
-something before printing some text. &lt;code&gt;Idx&lt;/code&gt; is a data holder, while the real
-logic is outside of it.&lt;/p&gt;
-
-&lt;p&gt;The maintainability problem is not solved, the scope
-is not smaller, the complexity of the code is not reduced. Moreover, it is
-increased, because now, in order to understand how &lt;code&gt;print()&lt;/code&gt; works, I have
-to know what is inside the &lt;code&gt;Idx&lt;/code&gt;. The object paradigm in this particular
-example made a promise to take part of the problem and let me never worry about it,
-but in reality it only made the problem larger, by giving me back two problems:
-&lt;code&gt;print()&lt;/code&gt; and &lt;code&gt;Idx&lt;/code&gt;.&lt;/p&gt;
-
-&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://amzn.to/2uMlANB&quot;&gt;&lt;img src=&quot;/images/2019/03/bjarne-stroustrup-book.jpg&quot; style=&quot;width:96px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Why is this thanks to C++? Because C++ added object-orientation on top of C procedural
-programming ideas, never even thinking about prohibiting some of them, to &lt;em&gt;force&lt;/em&gt;
-programmers to write objects the way they are supposed to be written: as black
-boxes that encapsulate everything they need and never allow anyone from the
-outside to even &lt;em&gt;know&lt;/em&gt; what’s inside! C++ didn’t even make an attempt to
-switch the paradigm from procedures and variables to objects and methods.
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Bjarne_Stroustrup&quot;&gt;Bjarne Stroustrup&lt;/a&gt;, the creator of C++, just gave programmers
-methods and classes and said: “Use them, they are more convenient
-than variables, … or maybe not, sometimes, … I don’t know”
-(I’m not sure it’s his quote, but I believe that it’s very close to what he
-had in mind). Read &lt;a href=&quot;http://amzn.to/2uMlANB&quot;&gt;his book&lt;/a&gt;, and you will see how many pages are dedicated to
-the philosophy of object orientation and how many to the technicalities of
-operators and statements.&lt;/p&gt;
-
-&lt;p&gt;A proper object-oriented solution would look different and would involve
-true encapsulation, where data never “escapes” the borders of its owner. First,
-here is how I would design &lt;code&gt;Idx&lt;/code&gt;… well, I would rename it first and call it
-&lt;code&gt;Line&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Line&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d * %d = %d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And now here is the code of &lt;code&gt;print()&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Line&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Line&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;As you see, &lt;code&gt;print()&lt;/code&gt; doesn’t have any access to the internal data of &lt;code&gt;Line&lt;/code&gt;.
-All &lt;code&gt;print()&lt;/code&gt; can do is ask the &lt;code&gt;Line&lt;/code&gt; to move forward and print itself. How exactly
-this logic is implemented inside the &lt;code&gt;Line&lt;/code&gt;—nobody knows and nobody wants to know.
-Since we don’t have any &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt;
-in the &lt;code&gt;Line&lt;/code&gt;, we can’t fetch the data out of it.&lt;/p&gt;
-
-&lt;p&gt;Since we can’t get the data out, we can’t build any logic in the &lt;code&gt;print()&lt;/code&gt;. We
-simply have nothing to work with, no data, no integers, no numbers. We can only
-deal with objects, which don’t trust us with their internals. We can only &lt;em&gt;politely&lt;/em&gt; ask
-them to do something for us. The scope of &lt;code&gt;print()&lt;/code&gt; is pretty small now and
-very well &lt;em&gt;isolated&lt;/em&gt; from the internals of the &lt;code&gt;Line&lt;/code&gt;. Proper encapsulation
-helped us achieve that: by not exposing the internals of the &lt;code&gt;Line&lt;/code&gt; we made
-it impossible for anyone to invite themselves into its own scope. The &lt;code&gt;print()&lt;/code&gt; simply can’t
-do anything with the data encapsulated by the &lt;code&gt;Line&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thus, the more visible and accessible the data is,
-the lower the maintainability.&lt;/p&gt;
-
-&lt;p&gt;The very idea of object-oriented programming is based on encapsulation, which
-doesn’t mean just restricting the ability to modify object attributes from the
-outside, but also prohibiting everyone from reading those attributes.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What is wrong with this Java object? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/java?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#java&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;final class Time {&lt;br /&gt;  int getHours();&lt;br /&gt;  int getMinutes();&lt;br /&gt;  int getSeconds();&lt;br /&gt;}&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1109750701285142533?ref_src=twsrc%5Etfw&quot;&gt;March 24, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">I’ve been writing so much about object-oriented programming and its pitfalls, claiming that most of the design patterns and “good practices” which we are accustomed to are actually wrong and hurtful, that I totally forgot to explain the bigger picture problem. Someone asked me some time ago in the blog post about “naked” data: What is the problem we are solving and why exactly does maintainability suffer if we don’t encapsulate our data enough? Here is the answer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/taboo.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">How do you organize logging in your applications? I mean web applications or command line apps, or even mobile apps. I bet you have some global variable or a singleton, known as Logger, which has a few methods like info(), error(), and debug(). You configure it when the app starts, or it configures itself via something like log4j.properties, and logs everything to the console or a file, or even a database. I was doing exactly that, or something very similar, for many years, until I finally realized how wrong this approach was. In one of my recent Ruby applications I did it all differently, and since then I’m much happier than I was before.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/the-square.jpg" /></entry></feed>

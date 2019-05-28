@@ -611,6 +611,7 @@ basics
 basil
 basis
 bass
+bastard
 bat
 batchelder
 bathroom
@@ -1443,6 +1444,7 @@ complaints
 complete
 completed
 completely
+completeness
 completes
 completing
 completion
@@ -1991,6 +1993,7 @@ demand-generated
 demanding
 demands
 demeter
+deming
 democracy
 democratic
 demonstrate
@@ -2425,6 +2428,7 @@ educate
 educated
 education
 educational
+edwards
 EE
 effect
 effective
@@ -3307,6 +3311,7 @@ grant
 graph
 graphic
 graphical
+graphicdesigning
 graphics
 graphs
 grave
@@ -4060,6 +4065,7 @@ item
 items
 iterate
 iterating
+iteration
 iterative
 iterator
 iterators
@@ -4807,6 +4813,7 @@ meyers
 michael
 michael's
 micro
+micro-bonuses
 micro-manage
 micro-managed
 micro-management
@@ -4814,6 +4821,7 @@ micro-manager
 micro-managers
 micro-manages
 micro-payments
+micro-penalties
 micro-step
 micro-tasking
 micro-tasks
@@ -5319,6 +5327,7 @@ offices
 official
 officially
 offline
+offline-qr-code
 offset
 offshore
 often
@@ -5618,6 +5627,7 @@ payroll
 pays
 payscale
 PBS
+PDCA
 PDD
 PDF
 PDU
@@ -5631,6 +5641,7 @@ peer
 peers
 peet's
 pen
+penalize
 penalties
 penalty
 penetrate
@@ -5754,6 +5765,7 @@ placing
 plain
 plaintiff
 plan
+plan-do-check-act
 planet
 planned
 planning
@@ -5812,6 +5824,7 @@ polemic
 police
 policies
 policy
+polished
 polisher
 polite
 politely
@@ -6721,6 +6734,7 @@ ruby's
 rubygems
 rubymine
 rude
+rugk
 ruin
 ruined
 ruining
@@ -6767,6 +6781,7 @@ sally
 salt
 sam
 same
+samir
 sample
 samples
 samsung
@@ -8044,6 +8059,7 @@ travel
 traversing
 travis
 treat
+treating
 treatment
 treats
 trees
@@ -8078,6 +8094,7 @@ trump
 trust
 trusted
 trusts
+trustworthiness
 trustworthy
 truth
 truthfully
@@ -8193,6 +8210,7 @@ unfixable
 unfocused
 unfollow
 unforgivable
+unforgiven
 unfortunate
 unfortunately
 unhappy
@@ -8253,6 +8271,7 @@ untestable
 until
 untouched
 untraceable
+untrustworthy
 unusual
 unwilling
 unwise
@@ -8362,6 +8381,7 @@ venture
 ventures
 venue
 venues
+verano-http
 verb
 verbal
 verbose
@@ -8484,6 +8504,7 @@ watch
 watched
 watching
 water
+waterfall
 watson
 way
 ways
@@ -8730,6 +8751,7 @@ yours
 yourself
 youtube
 ypshenychka
+yummy
 zache
 ZCE
 zen
