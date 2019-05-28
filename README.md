@@ -3,6 +3,7 @@
 [![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/blog)](http://www.rultor.com/p/yegor256/blog)
 
 [![Availability at SixNines](http://www.sixnines.io/b/3ba1652f)](http://www.sixnines.io/h/3ba1652f)
+[![Hits-of-Code](https://hitsofcode.com/github/yegor256/blog)](https://hitsofcode.com/view/github/yegor256/blog)
 
 This is my blog: [www.yegor256.com](https://www.yegor256.com)
 
