@@ -354,3 +354,6 @@ Now I don't react to problems, I prevent them, just like Rita Mulcahy suggested.
 
 You can do too, [0rsk](https://www.0rsk.com) is free for all.
 
+P.S. There is a curated list of causes, risks, and effects, where you can
+pick your the one most revelant to your case: [yegor256/awesome-risks](https://github.com/yegor256/awesome-risks).
+You can even add your ideas there.
