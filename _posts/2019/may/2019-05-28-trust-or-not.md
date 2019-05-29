@@ -114,6 +114,8 @@ are based on guilt and fear: They put programmers together,
 <del>brainwash</del> [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
 them, and then make them scared of making an unforgivable mistake.
 
+{% youtube KPbKqTXfZwA %}
+
 What exactly that mistake is, nobody really knows---it's
 a personal decision of a manager. It could be a broken unit test,
 a missed [meeting]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}),
