@@ -17,7 +17,7 @@ keywords:
   - apache maven
 ---
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 In my [previous article]({% pst 2015/sep/2015-09-07-maven-repository-amazon-s3 %}),
 I described how to
@@ -147,7 +147,7 @@ deploy:
 ```
 
 For more information on the `.rultor.yml` file,
-check the [Rultor Reference Page](http://doc.rultor.com/reference.html).
+check the [Rultor Reference Page](https://doc.rultor.com/reference.html).
 
 Now that everything is configured you should be able to deploy to
 CloudRepo with Rultor by executing the `@rultor deploy` command.

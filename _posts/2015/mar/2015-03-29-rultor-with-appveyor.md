@@ -25,7 +25,7 @@ explain how Rultor works and what it's for:
 [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 and [Master Branch Must Be Read-Only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 The problem is that Rultor is running all scripts inside Docker containers
 and Docker can't build Windows projects. The only and the best logical solution

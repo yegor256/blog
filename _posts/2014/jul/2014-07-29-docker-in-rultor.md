@@ -16,7 +16,7 @@ keywords:
   - unit tests in docker
 ---
 
-{% badge http://doc.rultor.com/images/docker-logo.png 100 http://www.docker.io %}
+{% badge https://doc.rultor.com/images/docker-logo.png 100 http://www.docker.io %}
 
 [Docker](http://www.docker.io) is a command line tool that
 can run a shell command in a virtual Linux, inside an isolated file system.
@@ -27,7 +27,7 @@ Docker containers. Take this Maven project for example:
 $ sudo docker run -i -t ubuntu mvn clean test
 {% endhighlight %}
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 This command will start a new Ubuntu system and execute
 `mvn clean test` inside it. [Rultor.com](http://www.rultor.com), our
@@ -109,7 +109,7 @@ Pushing tag for rev [c5ad7718fc0e] on {https://registry-1.docker.io/v1/repositor
 {% endhighlight %}
 
 The last step is to configure Rultor to use this image in
-all builds. To do this, I will edit [`.rultor.yml`](http://doc.rultor.com/reference.html)
+all builds. To do this, I will edit [`.rultor.yml`](https://doc.rultor.com/reference.html)
 in the root directory of my GitHub repository:
 
 {% highlight text %}

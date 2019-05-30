@@ -18,7 +18,7 @@ keywords:
   - continuous delivery pre-flight builds
 ---
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 You get a GitHub pull request. You review it. It looks correct---it's time
 to merge it into `master`. You post a comment in it, asking
@@ -69,10 +69,10 @@ A combination of these three features is what differs
 
 ## How Rultor Merges
 
-Once Rultor finds a [merge command](http://doc.rultor.com/basics.html)
+Once Rultor finds a [merge command](https://doc.rultor.com/basics.html)
 in one of your GitHub pull requests, it does exactly this:
 
- 1. Reads the [`.rultor.yml`](http://doc.rultor.com/reference.html)
+ 1. Reads the [`.rultor.yml`](https://doc.rultor.com/reference.html)
     YAML configuration file from the root directory of your repository.
 
  2. Gets automated build execution command from it, for example `bundle test`.

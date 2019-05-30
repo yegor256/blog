@@ -18,7 +18,7 @@ keywords:
 
 {% badge /images/2014/07/travis-logo.png 100 http://www.travis-ci.org %}
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 [Rultor](http://www.rultor.com) is a coding team assistant.
 [Travis](http://travis-ci.org) is a hosted
@@ -98,7 +98,7 @@ released to RubyGems and a new version to set is 1.5:
 
 {% figure /images/2014/07/rultor-jekyll-4.png 600 %}
 
-Rultor executed a simple script, [pre-configured](http://doc.rultor.com/basics.html#release) in its
+Rultor executed a simple script, [pre-configured](https://doc.rultor.com/basics.html#release) in its
 [`.rultor.yml`](https://github.com/yegor256/jekyll-github-deploy/blob/master/.rultor.yml):
 
 {% highlight text %}
@@ -174,7 +174,7 @@ In this particular example, [Maven CloudBees  Plugin](https://wiki.cloudbees.com
 needed API key, secret and web application name. These three parameters are kept secure
 and can't be revealed in an "[open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})" way.
 
-So, there is [a mechanism](http://doc.rultor.com/reference.html#assets)
+So, there is [a mechanism](https://doc.rultor.com/reference.html#assets)
 that configures Rultor accordingly through its
 [`.rultor.yml`](https://github.com/yegor256/s3auth/blob/master/.rultor.yml)
 file (pay attention to the first few lines):

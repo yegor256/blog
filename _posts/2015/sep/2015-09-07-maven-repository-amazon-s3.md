@@ -150,7 +150,7 @@ providing secure credentials. I recommend you use
 
 ## Configure Rultor
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Another recommendation is to configure rultor.com for deployment of your
 artifacts to S3 automatically.
@@ -170,7 +170,7 @@ of your project, then commit and push. The file contains your secret information
 but only the Rultor server can decrypt it.
 
 Create a `.rultor.yml` file in the root directory of your project
-(The Rultor [reference page](http://doc.rultor.com/reference.html)
+(The Rultor [reference page](https://doc.rultor.com/reference.html)
 explains this format in greater detail):
 
 {% highlight text %}
@@ -183,7 +183,7 @@ deploy:
 
 Now it's time to see how it all works together. Create a new ticket in the
 GitHub issue tracker and post something like this into it
-(read more about [Rultor commands](http://doc.rultor.com/basics.html)):
+(read more about [Rultor commands](https://doc.rultor.com/basics.html)):
 
 {% highlight text %}
 @rultor deploy

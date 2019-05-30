@@ -18,7 +18,7 @@ jb_picture:
   caption: Charlie and the Chocolate Factory (2005) by Tim Burton
 ---
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 When I explain how [Rultor](http://www.rultor.com) automates deployment/release processes,
 very often I hear something like:

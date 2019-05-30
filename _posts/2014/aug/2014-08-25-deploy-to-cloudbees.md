@@ -181,7 +181,7 @@ Otherwise, add this plugin to your `pom.xml`:
 ## Configure Rultor
 
 Create a `.rultor.yml` file in the root directory of your project
-(this [reference page](http://doc.rultor.com/reference.html)
+(this [reference page](https://doc.rultor.com/reference.html)
 explains this format in detail):
 
 {% highlight text %}
@@ -199,11 +199,11 @@ You can compare your file with live Rultor
 
 ## Run It!
 
-{% badge http://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it
-(read more about [Rultor commands](http://doc.rultor.com/basics.html)):
+(read more about [Rultor commands](https://doc.rultor.com/basics.html)):
 
 {% highlight text %}
 @rultor release, tag is `0.1`
