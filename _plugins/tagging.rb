@@ -53,7 +53,7 @@ module Yegor
       self.content = data.delete('content') || ''
       self.data = data
       @title = data['tag']
-      super(site, base, dir[-1, 1] == '/' ? dir : '/' + dir, name)
+      super(site, base, dir[-1, 1] == '/' ? dir : '/' + dir, name + '.html')
       data['tag'] ||= basename
     end
 
