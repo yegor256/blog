@@ -87,3 +87,6 @@ preemptive actions.
 Don't trust us programmers. We are smart, lazy and spoiled.
 
 You will lose.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What if your boss tells you that they want to audit your work?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1137815699953520640?ref_src=twsrc%5Etfw">June 9, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
