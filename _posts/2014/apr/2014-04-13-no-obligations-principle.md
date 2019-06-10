@@ -45,7 +45,7 @@ Then everybody begins working and we start hearing excuses:
 
 With excuses, team members transfer responsibility back to the project
 [manager]({% pst 2015/sep/2015-09-22-micromanagement %}).
-There was a very famous article "[Management Time: Who's Got the Monkey?](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1)"
+There was a very famous article [_Management Time: Who's Got the Monkey?_](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1)
 published in the Harvard Business Review about this very subject.
 
 I recommend that you read it. Its authors present problems as monkeys sitting on
