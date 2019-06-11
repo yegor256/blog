@@ -90,6 +90,13 @@ Quality Assurance vs. Testing<br/>
 Kyiv, Ukraine<br/>
 20-21 September.
 
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/teamlead-conf.png" class="future-talk" alt="Saint Teamlead Conf 2019"/><br/>
+Are You Sure You Are Not a Micromanager?<br/>
+[Saint Teamlead Conf](https://teamleadconf.ru/spb/2019)<br/>
+St. Petersburg, Russia<br/>
+23-24 September.
+
 If you are interested in placing me at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,

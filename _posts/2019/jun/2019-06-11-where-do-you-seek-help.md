@@ -14,9 +14,9 @@ keywords:
   - stackoverflow
   - management
   - freelance
-image: /images/2019/06/...
+image: /images/2019/06/the-tribe.jpg
 jb_picture:
-  caption:
+  caption: The Tribe (2014) by Myroslav Slaboshpytskyi
 ---
 
 Just a few days ago a friend of mine, who is not a developer but a
@@ -58,7 +58,7 @@ busy and competent.
 
 Are you a slave?
 
-Now, to the contrary, someone who is paid [for the results delivered]
+Now, to the contrary, someone who is paid [for the results delivered](https://www.zerocracy.com)
 has a completely
 [different]({% pst 2018/apr/2018-04-17-how-to-be-lazy %}) mindset.
 Why would StackOverflow be a _last resort_ for a freelancer,
