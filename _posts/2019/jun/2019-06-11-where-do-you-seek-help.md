@@ -56,6 +56,8 @@ Thus, a good slave doesn't do that. A good slave does everything
 possible to [_look_]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %})
 busy and competent.
 
+{% youtube _4pk5GNUySg %}
+
 Are you a slave?
 
 Now, to the contrary, someone who is paid [for the results delivered](https://www.zerocracy.com)
