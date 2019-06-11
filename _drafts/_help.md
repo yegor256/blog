@@ -22,8 +22,8 @@ jb_picture:
 Just a few days ago a friend of mine, who is not a developer but a
 co-founder of a software startup, asked me to help his programmers with
 a technical problem they got stuck with. I said "Why not?" and asked
-them what's going on. They told me that their PostgreSQL server was running
-slow because it was doing this and that and when they restarted it,
+them what was going on. They told me that their PostgreSQL server was running
+slow because it was doing this and that, and when they restarted it
 it was repeating this and that... Long story short, I had no idea what they were talking about,
 even though I was a user of PostgreSQL for many years. My first reaction was:
 "Have you posted a question on StackOverflow yet?" They answered:
@@ -47,7 +47,7 @@ This is the mentality of someone who is paid
 or in front of the computer, not for the results they deliver. It is only logical
 that if they are paid for _being programmers_, seeking help at StackOverflow
 is a declaration of incompetence. You do it once, you will be excused, you do
-it twice, your boss will [start wondering({% pst 2015/sep/2015-09-22-micromanagement %})
+it twice, your boss will [start wondering({% pst 2015/sep/2015-09-22-micromanagement %})]
 whether you are the right resource
 to be spending money on. But if you do it regularly---you will
 [definitely]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})
@@ -98,7 +98,7 @@ However, if you are a freelancer, stop being embarrassed for not knowing somethi
 
 Your job is [not]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 _to know_ or _to be smart_. Your jobs is to find solutions
-and fix problems. How you do that, it's your _own business_. It's not the
+and fix problems. How you do that is your _own business_. It's not the
 business of your boss, your [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
 or your product owner.
 
