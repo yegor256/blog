@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-06-11T06:45:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Where Do You Seek Help First?</title><link href="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html" rel="alternate" type="text/html" title="Where Do You Seek Help First?" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/11/where-do-you-seek-help</id><content type="html" xml:base="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html">&lt;p&gt;Just a few days ago a friend of mine, who is not a developer but a
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-06-11T18:45:49+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Where Do You Seek Help First?</title><link href="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html" rel="alternate" type="text/html" title="Where Do You Seek Help First?" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/11/where-do-you-seek-help</id><content type="html" xml:base="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html">&lt;p&gt;Just a few days ago a friend of mine, who is not a developer but a
 co-founder of a software startup, asked me to help his programmers with
 a technical problem they got stuck with. I said “Why not?” and asked
 them what was going on. They told me that their PostgreSQL server was running
@@ -34,6 +34,14 @@ be &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;fired&lt
 Thus, a good slave doesn’t do that. A good slave does everything
 possible to &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;&lt;em&gt;look&lt;/em&gt;&lt;/a&gt;
 busy and competent.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=_4pk5GNUySg&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/_4pk5GNUySg/mqdefault.jpg&quot; alt=&quot;YouTube video #_4pk5GNUySg&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M91: Full-timers want to look smart, freelancers want to deliver results;
+        11 June 2019.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;Are you a slave?&lt;/p&gt;
 
