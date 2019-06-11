@@ -1138,7 +1138,7 @@ No. I’m saying that you should &lt;em&gt;never&lt;/em&gt; have them near your 
       <item>
         <title>Deployment Script vs. Rultor</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.rultor.com&quot;&gt;&lt;img src=&quot;http://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.rultor.com&quot;&gt;&lt;img src=&quot;https://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;When I explain how &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; automates deployment/release processes,
 very often I hear something like:&lt;/p&gt;

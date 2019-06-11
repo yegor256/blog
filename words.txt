@@ -553,6 +553,7 @@ aware
 away
 AWeber
 awesome
+awesome-risks
 aws
 axes
 axioms
@@ -1809,6 +1810,7 @@ cumulative
 cunning
 cup
 cups
+curated
 curators
 cured
 curiosity
@@ -2480,6 +2482,7 @@ email
 emailed
 emails
 embarrass
+embarrassed
 embarrassing
 embarrassment
 embed
@@ -4813,6 +4816,7 @@ meyers
 michael
 michael's
 micro
+micro-
 micro-bonuses
 micro-manage
 micro-managed
@@ -5411,6 +5415,7 @@ oracle
 orange
 orchestrated
 order
+ordered
 ordering
 orders
 ordinary
@@ -6597,6 +6602,7 @@ responsive
 responsiveness
 rest
 restart
+restarted
 restarts
 restaurant
 RESTful
@@ -6641,6 +6647,7 @@ reveal
 revealed
 revealing
 reveals
+revelant
 revenue
 review
 reviewed
@@ -6898,6 +6905,7 @@ see
 seed
 seedramp
 seeing
+seek
 seeking
 seeks
 seem
@@ -8650,6 +8658,7 @@ women's
 won't
 wonder
 wonderful
+wondering
 wood
 word
 word-counting

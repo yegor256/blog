@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-05-28T06:14:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Trust Them to Get the Job Done, Not!</title><link href="https://www.yegor256.com/2019/05/28/trust-or-not.html" rel="alternate" type="text/html" title="Trust Them to Get the Job Done, Not!" /><published>2019-05-28T00:00:00+00:00</published><updated>2019-05-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/28/trust-or-not</id><content type="html" xml:base="https://www.yegor256.com/2019/05/28/trust-or-not.html">&lt;p&gt;There are &lt;a href=&quot;/2016/07/11/mistakes-in-agile-manifesto.html&quot;&gt;twelve&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-06-11T06:45:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Where Do You Seek Help First?</title><link href="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html" rel="alternate" type="text/html" title="Where Do You Seek Help First?" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/11/where-do-you-seek-help</id><content type="html" xml:base="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html">&lt;p&gt;Just a few days ago a friend of mine, who is not a developer but a
+co-founder of a software startup, asked me to help his programmers with
+a technical problem they got stuck with. I said “Why not?” and asked
+them what was going on. They told me that their PostgreSQL server was running
+slow because it was doing this and that, and when they restarted it
+it was repeating this and that… Long story short, I had no idea what they were talking about,
+even though I was a user of PostgreSQL for many years. My first reaction was:
+“Have you posted a question on StackOverflow yet?” They answered:
+“We still &lt;em&gt;hope&lt;/em&gt; that that won’t be necessary.” I replied, surprised: “Huh?”&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Tribe (2014) by Myroslav Slaboshpytskyi&quot; src=&quot;/images/2019/06/the-tribe.jpg&quot; longdesc=&quot;#80dd8b8a&quot; /&gt;&lt;figcaption id=&quot;80dd8b8a&quot;&gt;The Tribe (2014) by Myroslav Slaboshpytskyi&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Why was &lt;a href=&quot;https://stackoverflow.com&quot;&gt;StackOverflow&lt;/a&gt; their last resort? They didn’t explain, but I believe
+I know the answer: they would feel ashamed. For them StackOverflow is a place
+for losers who can’t solve problems by themselves. It is a place
+for those who are not worth the money their &lt;del&gt;owners&lt;/del&gt; bosses pay
+them. It is a place where lazy programmers ask questions and expect answers
+instead of working hard in their offices and resolving everything on their own.&lt;/p&gt;
+
+&lt;p&gt;This is the mentality of a &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;slave&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is the mentality of someone who is paid
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;for the time&lt;/a&gt; they spend in the office
+or in front of the computer, not for the results they deliver. It is only logical
+that if they are paid for &lt;em&gt;being programmers&lt;/em&gt;, seeking help at StackOverflow
+is a declaration of incompetence. You do it once, you will be excused, you do
+it twice, your boss will &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;start wondering&lt;/a&gt;
+whether you are the right resource
+to be spending money on. But if you do it regularly—you will
+&lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;definitely&lt;/a&gt;
+be &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;fired&lt;/a&gt;.
+Thus, a good slave doesn’t do that. A good slave does everything
+possible to &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;&lt;em&gt;look&lt;/em&gt;&lt;/a&gt;
+busy and competent.&lt;/p&gt;
+
+&lt;p&gt;Are you a slave?&lt;/p&gt;
+
+&lt;p&gt;Now, to the contrary, someone who is paid &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;for the results delivered&lt;/a&gt;
+has a completely
+&lt;a href=&quot;/2018/04/17/how-to-be-lazy.html&quot;&gt;different&lt;/a&gt; mindset.
+Why would StackOverflow be a &lt;em&gt;last resort&lt;/em&gt; for a freelancer,
+who is paid for the problems they manage to solve, no matter how much time they
+spend on them nor where they seek help? Moreover, the
+&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;faster&lt;/a&gt; such a freelancer
+can &lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;find help&lt;/a&gt;,
+the better an engineer he or she is.&lt;/p&gt;
+
+&lt;p&gt;In the story above, my friend had the right mindset. The moment he found
+out that his team couldn’t solve the problem, he came to me, and a few other
+people. He was not a software developer, that’s why he didn’t know about
+StackOverflow. But he was seeking help everywhere &lt;em&gt;around&lt;/em&gt; his team, while
+his &lt;del&gt;slaves&lt;/del&gt; programmers were trying to find a solution by themselves.&lt;/p&gt;
+
+&lt;p&gt;Maybe that’s why he is a co-founder and they are his employees?&lt;/p&gt;
+
+&lt;p&gt;Now, here is my short list of places &lt;em&gt;you&lt;/em&gt; should
+seek help when you don’t know what to do with your PostgreSQL and you have no time.
+The list is ordered. The places where you &lt;em&gt;start&lt;/em&gt; are at the top,
+the last resort is at the bottom:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search in Google&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Post to StackOverflow&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Read books&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ask friends&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Keep trying&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let me emphasize again: it depends on who you are. If you are a slave on
+a payroll and feel happy about that, you should not listen to the advice in this
+blog post. It will only ruin your &lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;career&lt;/a&gt;.
+However, if you are a freelancer, stop being embarrassed for not knowing something!&lt;/p&gt;
+
+&lt;p&gt;Your job is &lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;not&lt;/a&gt;
+&lt;em&gt;to know&lt;/em&gt; or &lt;em&gt;to be smart&lt;/em&gt;. Your jobs is to find solutions
+and fix problems. How you do that is your &lt;em&gt;own business&lt;/em&gt;. It’s not the
+business of your boss, your &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project manager&lt;/a&gt;,
+or your product owner.&lt;/p&gt;
+
+&lt;p&gt;Each &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;(micro-)task&lt;/a&gt;
+you resolve has a &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;budget&lt;/a&gt;
+and you are &lt;a href=&quot;/2014/04/15/definition-of-done.html&quot;&gt;fully responsible&lt;/a&gt; for
+it while it is assigned to you. You solve it the way &lt;em&gt;you&lt;/em&gt; want it to be solved.&lt;/p&gt;
+
+&lt;p&gt;Don’t be ashamed of asking for help, just like my friend was not ashamed
+of telling me that his team couldn’t fix the PostgreSQL issue. He was thinking
+about his business results, not about what I would think about him and his
+team. He didn’t care about that. He needed the bloody PostgreSQL to work!&lt;/p&gt;
+
+&lt;p&gt;Do the same. Be a business man, not a slave.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Just a few days ago a friend of mine, who is not a developer but a co-founder of a software startup, asked me to help his programmers with a technical problem they got stuck with. I said “Why not?” and asked them what was going on. They told me that their PostgreSQL server was running slow because it was doing this and that, and when they restarted it it was repeating this and that… Long story short, I had no idea what they were talking about, even though I was a user of PostgreSQL for many years. My first reaction was: “Have you posted a question on StackOverflow yet?” They answered: “We still hope that that won’t be necessary.” I replied, surprised: “Huh?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/the-tribe.jpg" /></entry><entry><title type="html">Trust Them to Get the Job Done, Not!</title><link href="https://www.yegor256.com/2019/05/28/trust-or-not.html" rel="alternate" type="text/html" title="Trust Them to Get the Job Done, Not!" /><published>2019-05-28T00:00:00+00:00</published><updated>2019-05-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/28/trust-or-not</id><content type="html" xml:base="https://www.yegor256.com/2019/05/28/trust-or-not.html">&lt;p&gt;There are &lt;a href=&quot;/2016/07/11/mistakes-in-agile-manifesto.html&quot;&gt;twelve&lt;/a&gt;
 principles in the &lt;a href=&quot;http://agilemanifesto.org/principles.html&quot;&gt;Agile Manifesto&lt;/a&gt;.
 The fifth one says: “Build projects around motivated individuals.
 Give them the environment and support they need,
@@ -96,6 +197,14 @@ know how to measure the progress of people, incrementally. Their control instrum
 are based on guilt and fear: They put programmers together,
 &lt;del&gt;brainwash&lt;/del&gt; &lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;motivate&lt;/a&gt;
 them, and then make them scared of making an unforgivable mistake.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=KPbKqTXfZwA&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/KPbKqTXfZwA/mqdefault.jpg&quot; alt=&quot;YouTube video #KPbKqTXfZwA&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M89: Deliver your trust continuously, not discrete;
+        29 May 2019.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;What exactly that mistake is, nobody really knows—it’s
 a personal decision of a manager. It could be a broken unit test,
@@ -576,7 +685,11 @@ focused on what matters, every day.&lt;/p&gt;
 
 &lt;p&gt;Now I don’t react to problems, I prevent them, just like Rita Mulcahy suggested.&lt;/p&gt;
 
-&lt;p&gt;You can do too, &lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk&lt;/a&gt; is free for all.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">“A project manager’s work should not focus on dealing with problems; it should focus on preventing them,”—this is how Rita Mulcahy started a chapter about Risk Management in her great book PMP Exam Prep. Sounds smart, but how does a project manager know about the problems which are supposed to be prevented? This is what that chapter and Risk Management Tricks of the Trade for Project Managers (yet another great book by the same author) are dedicated to. What I learned from these books, and from my multi-year experience of identifying, analyzing and dealing with risks, is that the best format for specifying them consists of three parts: cause, risk, and effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-departed.jpg" /></entry><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+&lt;p&gt;You can do too, &lt;a href=&quot;https://www.0rsk.com&quot;&gt;0rsk&lt;/a&gt; is free for all.&lt;/p&gt;
+
+&lt;p&gt;P.S. There is a curated list of causes, risks, and effects, where you can
+pick your the one most revelant to your case: &lt;a href=&quot;https://github.com/yegor256/awesome-risks&quot;&gt;yegor256/awesome-risks&lt;/a&gt;.
+You can even add your ideas there.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">“A project manager’s work should not focus on dealing with problems; it should focus on preventing them,”—this is how Rita Mulcahy started a chapter about Risk Management in her great book PMP Exam Prep. Sounds smart, but how does a project manager know about the problems which are supposed to be prevented? This is what that chapter and Risk Management Tricks of the Trade for Project Managers (yet another great book by the same author) are dedicated to. What I learned from these books, and from my multi-year experience of identifying, analyzing and dealing with risks, is that the best format for specifying them consists of three parts: cause, risk, and effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-departed.jpg" /></entry><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; was a big technical mystery for me. All the articles I’d read
 about it sounded extremely complex and absolutely indigestible. Until
@@ -1613,93 +1726,4 @@ might look like this:&lt;/p&gt;
 of use cases are not implemented, but you can do that yourself, if you are
 interested. The code is in the &lt;a href=&quot;https://github.com/yegor256/jpages&quot;&gt;yegor256/jpages&lt;/a&gt;
 repository. Don’t hesitate to contribute with a pull request and make this
-small framework real.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">How do you design a web application in Java? You install Spring, read the manual, create controllers, create some views, add some annotations, and it works. What would you do if there were no Spring (and no Ruby on Rails in Ruby, and no Symphony in PHP, and no … etc.)? Let’s try to create a web application from scratch, starting from a pure Java SDK and ending with a fully functional web app, covered by unit tests. I recorded a webinar no.42 about it just a few weeks ago, but this article should explain it all in even more detail.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/breakfast-at-tiffanys.jpg" /></entry><entry><title type="html">Logging Without a Static Logger</title><link href="https://www.yegor256.com/2019/03/19/logging-without-static-logger.html" rel="alternate" type="text/html" title="Logging Without a Static Logger" /><published>2019-03-19T00:00:00+00:00</published><updated>2019-03-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/03/19/logging-without-static-logger</id><content type="html" xml:base="https://www.yegor256.com/2019/03/19/logging-without-static-logger.html">&lt;p&gt;How do you organize logging in your applications? I mean web applications
-or command line apps, or even mobile apps. I bet you have some global
-variable or a singleton, known as &lt;code&gt;Logger&lt;/code&gt;, which has a few methods
-like &lt;code&gt;info()&lt;/code&gt;, &lt;code&gt;error()&lt;/code&gt;, and &lt;code&gt;debug()&lt;/code&gt;. You configure it when the app
-starts, or it configures itself via something like &lt;code&gt;log4j.properties&lt;/code&gt;,
-and logs everything to the console or a file, or even a database. I was
-doing exactly that, or &lt;a href=&quot;/2014/05/23/avoid-java-static-logger.html&quot;&gt;something very similar&lt;/a&gt;,
-for many years, until I finally realized how wrong
-this approach was. In one of my recent Ruby applications I did it all
-differently, and since then I’m much happier than I was before.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Square (2017) by Ruben Östlund&quot; src=&quot;/images/2019/03/the-square.jpg&quot; longdesc=&quot;#1b0abaf5&quot; /&gt;&lt;figcaption id=&quot;1b0abaf5&quot;&gt;The Square (2017) by Ruben Östlund&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Well, if your application is simple and has almost no unit or integration
-tests, you will be doing just fine with a static logger, which in essence
-is a global variable. However, as we &lt;a href=&quot;/2018/07/03/global-variables.html&quot;&gt;discussed before&lt;/a&gt;,
-global variables are evil. What can go wrong if we use a static logger?
-Or, in other words, as one of my friends used to say, what exactly is the problem
-we are going to solve? Basically, there are two problems:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;First, with a single global logger you will have a hard time
-writing a unit test to check whether your app is actually logging
-things correctly. Even if you intercept the log stream, there will be
-a lot of noise, coming from other threads and other tests. It’s not
-an unsolvable problem, but its solution adds complexity to your tests.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Second, when you decide to show a selected part of the log to your
-end-user, you will have to do a lot of coding just in order to separate
-what belongs to the user and what does not, especially in a multi-threaded
-environment. You’re lucky if it’s Java and you have thread groups,
-but in Ruby, for example, there is no such thing and you will have to
-find some workaround.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To overcome them both, in &lt;a href=&quot;https://github.com/zold-io/zold&quot;&gt;Zold&lt;/a&gt;,
-a Ruby command line application, I decided to pass &lt;code&gt;log&lt;/code&gt; as a variable
-to all classes that need any logging. In Ruby it’s easier than in Java,
-because they have &lt;a href=&quot;https://stackoverflow.com/questions/35747905&quot;&gt;optional&lt;/a&gt;
-parameters. Look at &lt;a href=&quot;https://github.com/zold-io/zold/blob/0.26.17/lib/zold/commands/list.rb&quot;&gt;this class&lt;/a&gt;,
-for example (it’s a simplified version, of course):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Zold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;List&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;wallets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;vi&quot;&gt;@wallets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wallets&lt;/span&gt;
-    &lt;span class=&quot;vi&quot;&gt;@log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;
-    &lt;span class=&quot;vi&quot;&gt;@wallets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@wallets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wallet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wallet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;balance&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This class is supposed to list all wallets in the current directory and print
-their balances to the log, which &lt;em&gt;in some cases&lt;/em&gt; will be the console. However,
-when this class is called from a web application, the destination of the
-print is a temporary file, which is later rendered on the web page. In unit
-tests it can be something else, which has to capture everything that is sent
-to the log and then delivered to the unit test.&lt;/p&gt;
-
-&lt;p&gt;As you see, the default value of the &lt;code&gt;log&lt;/code&gt; is &lt;code&gt;Log::NULL&lt;/code&gt;, which is the
-constant I had to define myself, as a default logger, which doesn’t log
-anything anywhere. By default, this class will log nothing. It will quietly
-check all the balances of all the wallets and print nothing. Well, it will print,
-but nobody will see that.&lt;/p&gt;
-
-&lt;p&gt;In a unit test I create an object with a few methods like &lt;code&gt;debug()&lt;/code&gt;, &lt;code&gt;info()&lt;/code&gt;,
-etc. and pass it to the instance of class &lt;code&gt;Zold::List&lt;/code&gt;, which I’m testing.
-In other words, it’s a fake/mock version of the logger, which I use to
-capture everything that &lt;code&gt;Zold::List&lt;/code&gt; sends out. Then I can check what’s there.&lt;/p&gt;
-
-&lt;p&gt;Am I saying obvious things here? If so, why do we
-&lt;a href=&quot;/2014/05/23/avoid-java-static-logger.html&quot;&gt;still have&lt;/a&gt; static
-loggers everywhere in Java, Ruby, PHP, C#, etc?
-Anyway, I recommend you use an injectable logging dependency instead.&lt;/p&gt;
-
-&lt;p&gt;And yeah, by the way, I’m sure you noticed the change in the name. It’s not
-a &lt;code&gt;logger&lt;/code&gt; anymore, it’s &lt;code&gt;log&lt;/code&gt;. I’m sure you know
-&lt;a href=&quot;/2015/03/09/objects-end-with-er.html&quot;&gt;why&lt;/a&gt;.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How do you log a message from an object of class Book? &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1122381490480930817?ref_src=twsrc%5Etfw&quot;&gt;April 28, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">How do you organize logging in your applications? I mean web applications or command line apps, or even mobile apps. I bet you have some global variable or a singleton, known as Logger, which has a few methods like info(), error(), and debug(). You configure it when the app starts, or it configures itself via something like log4j.properties, and logs everything to the console or a file, or even a database. I was doing exactly that, or something very similar, for many years, until I finally realized how wrong this approach was. In one of my recent Ruby applications I did it all differently, and since then I’m much happier than I was before.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/the-square.jpg" /></entry></feed>
+small framework real.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><category term="oop" /><summary type="html">How do you design a web application in Java? You install Spring, read the manual, create controllers, create some views, add some annotations, and it works. What would you do if there were no Spring (and no Ruby on Rails in Ruby, and no Symphony in PHP, and no … etc.)? Let’s try to create a web application from scratch, starting from a pure Java SDK and ending with a fully functional web app, covered by unit tests. I recorded a webinar no.42 about it just a few weeks ago, but this article should explain it all in even more detail.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/03/breakfast-at-tiffanys.jpg" /></entry></feed>
