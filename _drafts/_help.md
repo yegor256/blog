@@ -47,7 +47,7 @@ This is the mentality of someone who is paid
 or in front of the computer, not for the results they deliver. It is only logical
 that if they are paid for _being programmers_, seeking help at StackOverflow
 is a declaration of incompetence. You do it once, you will be excused, you do
-it twice, your boss will [start wondering({% pst 2015/sep/2015-09-22-micromanagement %})]
+it twice, your boss will [start wondering]({% pst 2015/sep/2015-09-22-micromanagement %})
 whether you are the right resource
 to be spending money on. But if you do it regularly---you will
 [definitely]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})
