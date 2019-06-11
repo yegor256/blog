@@ -31,11 +31,11 @@ I'm the author of a few patent applications, including
 and
 [Method for Software Cost Estimating Using Scope Champions](https://www.google.com/patents/US20100042968).
 I'm a certified Project Management Professional
-([PMP&reg;](http://www.pmi.org/Certification/Project-Management-Professional-PMP.aspx)).
+([PMP&reg;](/pdf/certifications/PMP-Jun07.pdf)).
 Besides that, I'm a proud holder of
-[RUP](http://www-03.ibm.com/certify/certs/38008003.shtml),
-[PRINCE2 Foundation](https://www.prince2.com/usa),
-[MCP](https://www.mcpvirtualbusinesscard.com/Profile.aspx?ID=df72ca54-8fc9-439a-870c-1b938bd762cf),
+[RUP 7](/pdf/certifications/RUP-Feb07.pdf),
+[PRINCE2 Foundation](/pdf/certifications/PRINCE2-Jun08.pdf),
+[MCP](/pdf/certifications/MCP-Oct07.pdf),
 and
 [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
@@ -51,11 +51,11 @@ Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books 
 about software engineering, and a detailed description of
 [my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
 I'm an Oracle Certified Master and Java EE 6 Enterprise Architect
-([OCMEA](http://en.wikipedia.org/wiki/Sun_Certified_Enterprise_Architect)).
+([OCMEA](/pdf/certifications/OCMJEA-Feb11.pdf)).
 Besides that, I'm a proud holder of
-[ZCE](http://www.zend.com/en/yellow-pages/ZEND007965),
-[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965), and
-[OCUP](http://www.omg.org/uml-certification/) certifications.
+[ZCE](/pdf/certifications/PHP5-Jul08.pdf),
+[ZFCE](/pdf/certifications/ZFCE-Oct09.pdf), and
+[OCUP](/pdf/certifications/OCUP-Sep08.pdf) certifications.
 I've also written a book series about object-oriented programming,
 called [Elegant Objects](/elegant-objects.html), plus
 [a few other books](/books.html),
@@ -121,6 +121,8 @@ Here is my SO flair:
 </a>
 
 This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`).
+
+Full list of my [certifications]().
 
 BTW, if you wonder why 256, the answer is simple---this is my FIDOnet node ID back from 1995.
 I was [2:464/256](http://nodehist.fidonet.org.ua/?address=2%3A464%2F256) over there, and this
