@@ -27,7 +27,7 @@ slow because it was doing this and that and when they restarted it,
 it was repeating this and that... Long story short, I had no idea what they were talking about,
 even though I was a user of PostgreSQL for many years. My first reaction was:
 "Have you posted a question on StackOverflow yet?" They answered:
-"We still _hope_ that that won't be necessary." I replied, suprised: "Huh?"
+"We still _hope_ that that won't be necessary." I replied, surprised: "Huh?"
 
 <!--more-->
 
