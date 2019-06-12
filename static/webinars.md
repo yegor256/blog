@@ -39,10 +39,10 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-{% webinar 05-06-2019 44 SoXV_scCMNY Logging, the Object-Oriented Way %}
+{% webinar 12-06-2019 44 SoXV_scCMNY Logging, the Object-Oriented Way %}
 
 <a href="https://www.youtube.com/watch?v=SoXV_scCMNY"><img src="https://i.ytimg.com/vi/SoXV_scCMNY/mqdefault.jpg" class="wnr" alt="Webinar no.44 by Yegor Bugayenko"/></a>
-June 5, 2019<br/>
+June 12, 2019<br/>
 &#35;44: **Logging, the Object-Oriented Way**<br/>
 How do you log events from your objects? Do you use static loggers? Do
 you use static methods? If you do, you are doing it wrong. There is
