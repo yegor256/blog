@@ -84,6 +84,8 @@ print is a temporary file, which is later rendered on the web page. In unit
 tests it can be something else, which has to capture everything that is sent
 to the log and then delivered to the unit test.
 
+{% youtube SoXV_scCMNY %}
+
 As you see, the default value of the `log` is `Log::NULL`, which is the
 constant I had to define myself, as a default logger, which doesn't log
 anything anywhere. By default, this class will log nothing. It will quietly

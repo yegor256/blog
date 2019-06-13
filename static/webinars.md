@@ -39,7 +39,12 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-{% webinar 12-06-2019 44 SoXV_scCMNY Logging, the Object-Oriented Way %}
+{% webinar 03-07-2019 45 _d3AmqeGcMU How Much Immutability Is Enough %}
+
+<a href="https://www.youtube.com/watch?v=_d3AmqeGcMU"><img src="https://i.ytimg.com/vi/_d3AmqeGcMU/mqdefault.jpg" class="wnr" alt="Webinar no.44 by Yegor Bugayenko"/></a>
+Jule 3, 2019<br/>
+&#35;45: **How Much Immutability Is Enough**<br/>
+Immutability is a virtue in object-oriented programming, but very often it is being confused with constants. Those are different things. Immutable objects are not constants and there are a lot of possibilities to make an object immutable but still ready to accept changes.
 
 <a href="https://www.youtube.com/watch?v=SoXV_scCMNY"><img src="https://i.ytimg.com/vi/SoXV_scCMNY/mqdefault.jpg" class="wnr" alt="Webinar no.44 by Yegor Bugayenko"/></a>
 June 12, 2019<br/>
