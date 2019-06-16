@@ -141,3 +141,6 @@ satisfaction and frustration incrementally. How do you do that? Via
 [micro-penalties]({% pst 2018/jan/2018-01-09-micro-budgeting %}).
 
 How else?
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How to not hire a bad programmer? <a href="https://twitter.com/hashtag/management?src=hash&amp;ref_src=twsrc%5Etfw">#management</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1140200517555146753?ref_src=twsrc%5Etfw">June 16, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
