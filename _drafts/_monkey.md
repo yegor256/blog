@@ -79,7 +79,7 @@ They still worried _less_ than she did.
 
 That's why they were not calling her every minute asking for the videos
 they needed. That's why they didn't plan it all properly upfront and instead left
-it till the last moment. That's why she was the only one worring.
+it till the last moment. That's why she was the only one worrying.
 
 By "worry" I mean two things that go together: reward and punishment---even though some people
 prefer to call them consequences. No matter what you call them, there are
