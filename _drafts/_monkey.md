@@ -21,9 +21,9 @@ jb_picture:
 
 Remember the famous article
 [_Who's Got the Monkey?_](http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1)
-The gist of it is simple: good managers always makes their subordinates
+The gist of it is simple: good managers always make their subordinates
 responsible for their own results. When they attempt to send the monkey back
-to the manager's shoulders by making excuses, the manager has to be on alert and
+to the manager's shoulders by making excuses, the manager has to be on the alert and
 not accept the monkey, always keeping workers fully accountable and responsible
 for what they are doing. It's a terrific principle, but it doesn't work for most
 managers. Here is why. Let me tell you a story.
@@ -32,9 +32,9 @@ managers. Here is why. Let me tell you a story.
 
 {% jb_picture_body %}
 
-I was having a dinner yesterday with a friend of mine, long after work hours,
-when she suddenly exclaimed, "Damn, I forgot it!" and she ran away. When she
-came back in half an hour I wondered what had happened. She said that her marketing
+I was having dinner yesterday with a friend of mine, long after work hours,
+when she suddenly exclaimed, "Damn, I forgot something!" and she ran away. When she
+came back half an hour later I asked what had happened. She said that her marketing
 team of two guys were at an expo in another country and had asked her
 to help them upload some videos to their YouTube channel. They needed
 those videos for the upcoming conference next morning and she was the only
@@ -50,7 +50,7 @@ Here is what happened in "monkey" terms:
 
 She _delegated_ the expo job and gave them the monkey (the responsibility). They
 asked her to help them and sent the monkey _back_ to her. She was sitting
-with the monkey on her shoulders while having a dinner with me. It was only
+with the monkey on her shoulders while having dinner with me. It was only
 a matter of luck that she even remembered it. If she hadn't, the expo
 job would have failed. Who would've been guilty? She would. They'd have the perfect
 excuse: "We asked you for help and you forgot, don't blame us!"
@@ -100,8 +100,8 @@ The job of a _leader_ is to decompose a larger objective into smaller ones
 and delegate them to subordinates. An objective means the _consequences_
 those subordinates will have to face when they either fail or succeed. However, what
 happens in most cases? Leaders decompose and delegate the scope of the work, but forget
-to decompose and delegate the consequences. Monthly salaries are _not_ the
-right way to delegate consequences. Moreover, it is exactly the wrong way, because
+to decompose and delegate the consequences. A monthly salary is _not_ the
+right way to delegate consequences. Moreover, it is a particularly bad way, because
 it sends a [false message]({% pst 2019/may/2019-05-28-trust-or-not %}) to subordinates:
 you are doing great until I fire you, and there is nothing in the middle.
 
@@ -113,8 +113,8 @@ subordinates more hurtful to them than the mistakes they make are
 hurtful to the project. The same is true about the rewards.
 
 Of course it's impossible to put the blame for the entire business failure
-on a single employee, as well as it's impossible to reward a single
-employee for an overall success of the company. But it's necessary to make
+on a single employee, just like it's impossible to reward a single
+employee for the overall success of the company. But it's necessary to make
 all team members win and lose _proportionally_.
 
 Otherwise, it's not a team.
