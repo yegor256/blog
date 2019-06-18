@@ -199,7 +199,6 @@ Moscow, Russia;
 22 April;
 [видео](https://youtu.be/i84uvEWDeMc).
 
-
 <div class="talk-event">&nbsp;</div>
 <img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>
 Правильно ли мы тестируем;
@@ -234,11 +233,12 @@ Moscow, Russia;
 [видео](https://www.youtube.com/watch?v=9ynzUGZjKFk).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.codefest.ru/assets/frontend/2019/dist/assets/img/logo--on-white.svg" class="past-talk" alt="CodeFest 2019"/>
+<img src="https://i.ytimg.com/vi/smThHyduuY0/mqdefault.jpg" class="past-talk" alt="CodeFest 2019"/>
 Five Trends We Are Afraid Of;
 [CodeFest](https://2019.codefest.ru/lecture/1515);
 Novosibirsk, Russia;
 30 March;
+[видео](https://www.youtube.com/watch?v=smThHyduuY0),
 [slides](https://www.slideshare.net/YegorBugayenko/five-trends-we-are-afraid-of).
 
 ### 2018
