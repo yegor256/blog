@@ -39,6 +39,7 @@ according
 accordingly
 account
 accountability
+accountable
 accounts
 accuracy
 accurate
@@ -1291,6 +1292,7 @@ co-developers
 co-discoverer
 co-found
 co-founder
+co-founder's
 co-founders
 co-located
 co-locating
@@ -2367,6 +2369,7 @@ duarte
 dude
 due
 dues
+duh
 dull
 dumb
 dumber
@@ -2695,6 +2698,7 @@ excessive
 exchange
 excited
 excitement
+exclaimed
 excluded
 excludes
 exclusively
@@ -3387,6 +3391,7 @@ hackers
 hacking
 hacks
 had
+hadn't
 hadoop
 hair
 haircut
@@ -5579,6 +5584,7 @@ participated
 participating
 participation
 particular
+particularly
 parties
 partner
 partners
@@ -6477,6 +6483,7 @@ remained
 remaining
 remains
 remember
+remembered
 remembers
 remind
 reminded
@@ -8288,6 +8295,7 @@ up
 up-time
 up-votes
 upbringing
+upcoming
 update
 updated
 updates
@@ -8681,6 +8689,7 @@ works
 workshop
 world
 worlds
+worried
 worries
 worry
 worrying
@@ -8688,6 +8697,7 @@ worse
 worst
 worth
 would
+would've
 wouldn't
 wow
 wrap
