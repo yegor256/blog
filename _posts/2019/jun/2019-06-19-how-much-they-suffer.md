@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Much Do They Suffer?"
-date: 2019-06-18
+date: 2019-06-19
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - rewards
   - punishments
   - management
-image: /images/2019/06/...
+image: /images/2019/06/moonrise-kingdom.jpg
 jb_picture:
-  caption:
+  caption: Moonrise Kingdom (2012) by Wes Anderson
 ---
 
 Remember the famous article
