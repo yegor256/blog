@@ -97,6 +97,13 @@ Are You Sure You Are Not a Micromanager?<br/>
 St. Petersburg, Russia<br/>
 23-24 September.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
+Something about software development...<br/>
+[HackConf](https://www.hackconf.bg/en/)<br/>
+Sofia, Bulgaria<br/>
+11-13 October.
+
 If you are interested in placing me at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
