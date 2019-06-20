@@ -161,6 +161,15 @@ for a raise, either, because they will feel bad about even starting such a negot
 You must be the "parent," and they will be the "kids." It's a good old model.
 It works.
 
+**Train them right**.
+Do not train them to use the latest technologies. Train
+strictly for the topics needed to do their work now. Never allow
+them to pass any certifications or good training courses as all of that
+could potentially raise their market value---that
+is not in your interest. Train them inside their workplace and your
+systems only, control what they learn. All this will ensure
+that they will not become too advanced and too demanded outside of your enterprise.
+
 **Be a friend**.
 This is the last and most powerful technique. You have to be a friend
 to your programmers. It's very difficult to negotiate money with a friend---they
