@@ -201,19 +201,21 @@ Moscow, Russia;
 [видео](https://youtu.be/i84uvEWDeMc).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>
+<img src="https://i.ytimg.com/vi/H0calDDfHL8/mqdefault.jpg" class="past-talk" alt="SECON 2019"/>
 Правильно ли мы тестируем;
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
 Penza, Russia;
 19 April;
+[видео](https://www.youtube.com/watch?v=H0calDDfHL8);
 [slides](https://www.slideshare.net/YegorBugayenko/typical-pitfalls-in-testing).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://2019.secon.ru/assets/logo-735a1e292c4df7e3065a0d9cd6fce7e6ce0e45443738777070d79539a0cd893b.png" class="past-talk" alt="SECON 2019"/>
+<img src="https://i.ytimg.com/vi/vZtI1M2Uwco/mqdefault.jpg" class="past-talk" alt="SECON 2019"/>
 Is Java Getting Better?
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
 Penza, Russia;
 19 April,
+[видео](https://www.youtube.com/watch?v=vZtI1M2Uwco),
 [slides](https://www.slideshare.net/YegorBugayenko/is-java-getting-better).
 
 <div class="talk-event">&nbsp;</div>
