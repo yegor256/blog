@@ -185,11 +185,12 @@ and
 ### 2019
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/appsconf.png" class="past-talk" alt="QAConf 2019"/>
+<img src="https://i.ytimg.com/vi/s7QCH17lQlY/mqdefault.jpg" class="past-talk" alt="QualityConf 2019"/>
 Can Distributed Teams Deliver Quality?
-[QAConf'2019](http://qualityconf.ru/2019);
+[QualityConf'2019](http://qualityconf.ru/2019);
 Moscow, Russia;
-27 May.
+27 May;
+[видео](https://youtu.be/s7QCH17lQlY).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/i84uvEWDeMc/mqdefault.jpg" class="past-talk" alt="AppsConf 2019"/>
