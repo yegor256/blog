@@ -80,12 +80,14 @@ the description of the product in one single paragraph. No bullets here,
 no new lines, no indentations. Just a plain simple piece of text:
 
 {% highlight text %}
-**Takes** is a [true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
+**Takes** is a
+[true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
 and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html)
-Java7 web development framework. Its key benefits, comparing to all others, include four
-fundamental principles: 1) not a single `null`, 2) not a single `public` `static` method,
-3) not a single mutable class, and 4) not a single `instanceof` keyword, type casting,
-or reflection.
+Java7 web development framework. Its key benefits,
+comparing to all others, include four fundamental principles:
+1) not a single `null`, 2) not a single `public` `static`
+method, 3) not a single mutable class, and 4) not
+a single `instanceof` keyword, type casting, or reflection.
 {% endhighlight %}
 
 Pay attention, there are no headings yet. Just a logo, a few lines with badges
