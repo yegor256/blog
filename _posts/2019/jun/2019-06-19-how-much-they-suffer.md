@@ -57,6 +57,8 @@ excuse: "We asked you for help and you forgot, don't blame us!"
 
 I've seen many similar stories, haven't you?
 
+{% quote Professional employees should always do everything possible to send monkeys back to their bosses. %}
+
 To be honest, professional employees should
 [always]({% pst 2018/apr/2018-04-17-how-to-be-lazy %}) do everything possible to
 send monkeys back to their bosses. Only those
@@ -95,6 +97,8 @@ amounts, she told me that the bonuses are much smaller than the salary,
 clearly demonstrate our priorities: salary first, results second.
 
 This is what was wrong.
+
+{% quote Leaders decompose and delegate the scope of the work, but forget to decompose and delegate the consequences. %}
 
 The job of a _leader_ is to decompose a larger objective into smaller ones
 and delegate them to subordinates. An objective means the _consequences_
