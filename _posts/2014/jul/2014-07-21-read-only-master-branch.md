@@ -170,3 +170,6 @@ the script we were talking about above. It is available as a free cloud service.
 
 ps. A short version of this article is also published at
 [devops.com](http://devops.com/blogs/continuous-integration-doesnt-work/)
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Are you allowed to PUSH to the master/develop/trunk of your Version Control System (VCS)? <a href="https://twitter.com/hashtag/devops?src=hash&amp;ref_src=twsrc%5Etfw">#devops</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1142730754167889920?ref_src=twsrc%5Etfw">June 23, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
