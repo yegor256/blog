@@ -10,8 +10,9 @@ This is my blog: [www.yegor256.com](https://www.yegor256.com)
 This book explains how it's built and maintained: [256 Bloghacks](https://www.yegor256.com/256-bloghacks.html)
 
 You are welcome to submit corrections to this blog. In order to do that,
-you will need [Ruby](https://www.ruby-lang.org/en/) 2.3+ and
-[Bundler](https://bundler.io/) installed. Then, run this:
+you will need [Ruby](https://www.ruby-lang.org/en/) 2.3+,
+[Bundler](https://bundler.io/),
+and [PlantUML](http://plantuml.com/) installed. Then, run this:
 
 ```bash
 $ bundle update
