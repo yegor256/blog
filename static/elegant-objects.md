@@ -65,8 +65,14 @@ Volume 2:<br/>
 
 <!--more-->
 
+June 23, 2019:
+We started translating to Portuguese.
+
 May 3, 2019:
 We started to translate it to French.
+
+November 7, 2018:
+We started translating the first volume to Farsi.
 
 October 12, 2018:
 I started to work on the 3rd volume. It will be suggest how to refactor
