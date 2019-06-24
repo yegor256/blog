@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: ruby
 description: |
   When you need your Ruby object to be thread-safe, you
-  may simply decorate it with SyncEm decorator without
+  may simply decorate it with a SyncEm decorator without
   re-writing a single line of code.
 keywords:
   - ruby threads
@@ -22,8 +22,8 @@ It was also said that it's very important to make sure objects are thread-safe
 ([in Ruby]({% pst 2018/nov/2018-11-06-ruby-threads %}) and
 [in Java]({% pst 2018/mar/2018-03-27-how-to-test-thread-safety %})),
 especially in web apps, which are multi-threaded (well, in most
-cases). Here is [SyncEm](https://github.com/yegor256/syncem),
-a primitive Ruby gem which makes it all possible with a single decorator.
+cases anyway). Here is [SyncEm](https://github.com/yegor256/syncem),
+a primitive Ruby gem which makes the above possible with a single decorator.
 
 <!--more-->
 
@@ -47,7 +47,7 @@ Front.run!
 {% endhighlight %}
 
 In order to count visits it uses class `Visits`, which may be
-defined this way (it keeps the counter in a file)
+defined this way (it keeps the counter in a file):
 
 {% highlight ruby %}
 class Visits
@@ -62,9 +62,9 @@ class Visits
 end
 {% endhighlight %}
 
-It is not thread-safe. Try to run this app and you will see that the counter
-will not always return consecutive numbers, if you make many concurrent
-HTTP requests to the front page of it.
+It is not thread-safe. Try to run this app and you will see that,
+if you make many concurrent HTTP requests to the front page,
+the counter will not always return consecutive numbers.
 
 To make it thread-safe you can use [SyncEm](https://github.com/yegor256/syncem),
 a small Ruby gem, which I created just a few months ago. Here is how:
@@ -87,7 +87,8 @@ synchronized with a single encapsulated semaphore:
 SyncEm.new(Visits.new)
 {% endhighlight %}
 
-This mechanism may only work in Ruby or similar [interpreted](https://en.wikipedia.org/wiki/Interpreted_language) languages.
+This mechanism will only work in Ruby or similar
+[interpreted](https://en.wikipedia.org/wiki/Interpreted_language) languages.
 I would not be able to do the same in Java or C++. But in Ruby, Python,
 PHP, JavaScript and many others, similar decorators may be very useful.
 
