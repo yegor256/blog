@@ -99,7 +99,7 @@ St. Petersburg, Russia<br/>
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
-Something about software development...<br/>
+The Biggest Mistake of an Honest Tester<br/>
 [HackConf](https://www.hackconf.bg/en/)<br/>
 Sofia, Bulgaria<br/>
 11-13 October.
