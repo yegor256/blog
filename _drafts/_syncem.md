@@ -17,12 +17,12 @@ keywords:
 ---
 
 I wrote some time ago about thread-safety in OOP and how it can
-be achieved by [decorators]({% pst 2017/jan/2017-01-17-synchronized-decorators %}).
+be achieved with [decorators]({% pst 2017/jan/2017-01-17-synchronized-decorators %}).
 It was also said that it's very important to make sure objects are thread-safe
 ([in Ruby]({% pst 2018/nov/2018-11-06-ruby-threads %}) and
 [in Java]({% pst 2018/mar/2018-03-27-how-to-test-thread-safety %})),
 especially in web apps, which are multi-threaded (well, in most
-cases anyway). Here is [SyncEm](https://github.com/yegor256/syncem),
+cases anyway). Well, here is [SyncEm](https://github.com/yegor256/syncem),
 a primitive Ruby gem which makes the above possible with a single decorator.
 
 <!--more-->
