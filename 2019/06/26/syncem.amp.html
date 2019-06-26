@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>SyncEm: Thread-Safe Decorators in Ruby</title>
+    <link rel="canonical" href="https://www.yegor256.com/2019/06/26/syncem.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2019/06/26/syncem.html"
+        },
+        "headline": "SyncEm: Thread-Safe Decorators in Ruby",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2019-06-26",
+        "dateModified": "2019-06-26",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "When you need your Ruby object to be thread-safe, you
+may simply decorate it with a SyncEm decorator without
+re-writing a single line of code.
+",
+        "keywords": ["ruby threads", "ruby thread-safety", "ruby concurrency", "test thread safety ruby", "ruby tests"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2019/06/26/syncem.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>26 June 2019</p>
+      <h1>SyncEm: Thread-Safe Decorators in Ruby</h1>
+      <p>I wrote some time ago about thread-safety in OOP and how it can
+be achieved with <a href="/2017/01/17/synchronized-decorators.html">decorators</a>.
+It was also said that it’s very important to make sure objects are thread-safe
+(<a href="/2018/11/06/ruby-threads.html">in Ruby</a> and
+<a href="/2018/03/27/how-to-test-thread-safety.html">in Java</a>),
+especially in web apps, which are multi-threaded (well, in most
+cases anyway). Well, here is <a href="https://github.com/yegor256/syncem">SyncEm</a>,
+a primitive Ruby gem which makes the above possible with a single decorator.</p>
+
+
+
+<p>Look at this simple Ruby web app, which increments the internal counter
+on every web click:</p>
+
+<pre>require 'sinatra'
+class Front &lt; Sinatra::Base
+  configure do
+    set(:visits, Visits.new)
+  end
+  before '/*' do
+    settings.visits.increment
+  end
+  get '/' do
+    "Your visit is no.#{settings.visits.total}"
+  end
+end
+Front.run!</pre>
+
+<p>In order to count visits it uses class <code>Visits</code>, which may be
+defined this way (it keeps the counter in a file):</p>
+
+<pre>class Visits
+  def increment
+    idx = IO.read('idx.txt').to_i + 1
+    IO.write('idx.txt', idx.to_s)
+    idx.to_s
+  end
+  def total
+    IO.read('idx.txt').to_i
+  end
+end</pre>
+
+<p>It is not thread-safe. Try to run this app and you will see that,
+if you make many concurrent HTTP requests to the front page,
+the counter will not always return consecutive numbers.</p>
+
+<p>To make it thread-safe you can use <a href="https://github.com/yegor256/syncem">SyncEm</a>,
+a small Ruby gem, which I created just a few months ago. Here is how:</p>
+
+<pre>require 'syncem'
+class Front &lt; Sinatra::Base
+  configure do
+    set(:visits, SyncEm.new(Visits.new))
+  end
+  # Same as above
+end</pre>
+
+<p>Here we just <em>decorate</em> the object with a thread-safe decorator, which
+intercepts all calls to all methods of an object and make them all
+synchronized with a single encapsulated semaphore:</p>
+
+<pre>SyncEm.new(Visits.new)</pre>
+
+<p>This mechanism will only work in Ruby or similar
+<a href="https://en.wikipedia.org/wiki/Interpreted_language">interpreted</a> languages.
+I would not be able to do the same in Java or C++. But in Ruby, Python,
+PHP, JavaScript and many others, similar decorators may be very useful.</p>
+
+<p>I’m using it in <a href="https://github.com/zold-io/wts.zold.io">this web app</a>, for example.</p>
+
+    </article>
+  </body>
+</html>

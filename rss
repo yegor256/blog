@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-06-19T05:51:53+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How Much Do They Suffer?</title><link href="https://www.yegor256.com/2019/06/19/how-much-they-suffer.html" rel="alternate" type="text/html" title="How Much Do They Suffer?" /><published>2019-06-19T00:00:00+00:00</published><updated>2019-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/19/how-much-they-suffer</id><content type="html" xml:base="https://www.yegor256.com/2019/06/19/how-much-they-suffer.html">&lt;p&gt;Remember the famous article
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-06-26T17:32:09+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SyncEm: Thread-Safe Decorators in Ruby</title><link href="https://www.yegor256.com/2019/06/26/syncem.html" rel="alternate" type="text/html" title="SyncEm: Thread-Safe Decorators in Ruby" /><published>2019-06-26T00:00:00+00:00</published><updated>2019-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/26/syncem</id><content type="html" xml:base="https://www.yegor256.com/2019/06/26/syncem.html">&lt;p&gt;I wrote some time ago about thread-safety in OOP and how it can
+be achieved with &lt;a href=&quot;/2017/01/17/synchronized-decorators.html&quot;&gt;decorators&lt;/a&gt;.
+It was also said that it’s very important to make sure objects are thread-safe
+(&lt;a href=&quot;/2018/11/06/ruby-threads.html&quot;&gt;in Ruby&lt;/a&gt; and
+&lt;a href=&quot;/2018/03/27/how-to-test-thread-safety.html&quot;&gt;in Java&lt;/a&gt;),
+especially in web apps, which are multi-threaded (well, in most
+cases anyway). Well, here is &lt;a href=&quot;https://github.com/yegor256/syncem&quot;&gt;SyncEm&lt;/a&gt;,
+a primitive Ruby gem which makes the above possible with a single decorator.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Look at this simple Ruby web app, which increments the internal counter
+on every web click:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sinatra&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:visits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/*&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;increment&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;Your visit is no.&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In order to count visits it uses class &lt;code&gt;Visits&lt;/code&gt;, which may be
+defined this way (it keeps the counter in a file):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Visits&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;total&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It is not thread-safe. Try to run this app and you will see that,
+if you make many concurrent HTTP requests to the front page,
+the counter will not always return consecutive numbers.&lt;/p&gt;
+
+&lt;p&gt;To make it thread-safe you can use &lt;a href=&quot;https://github.com/yegor256/syncem&quot;&gt;SyncEm&lt;/a&gt;,
+a small Ruby gem, which I created just a few months ago. Here is how:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;syncem&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:visits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SyncEm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Same as above&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here we just &lt;em&gt;decorate&lt;/em&gt; the object with a thread-safe decorator, which
+intercepts all calls to all methods of an object and make them all
+synchronized with a single encapsulated semaphore:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncEm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This mechanism will only work in Ruby or similar
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Interpreted_language&quot;&gt;interpreted&lt;/a&gt; languages.
+I would not be able to do the same in Java or C++. But in Ruby, Python,
+PHP, JavaScript and many others, similar decorators may be very useful.&lt;/p&gt;
+
+&lt;p&gt;I’m using it in &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;this web app&lt;/a&gt;, for example.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">I wrote some time ago about thread-safety in OOP and how it can be achieved with decorators. It was also said that it’s very important to make sure objects are thread-safe (in Ruby and in Java), especially in web apps, which are multi-threaded (well, in most cases anyway). Well, here is SyncEm, a primitive Ruby gem which makes the above possible with a single decorator.</summary></entry><entry><title type="html">How Much Do They Suffer?</title><link href="https://www.yegor256.com/2019/06/19/how-much-they-suffer.html" rel="alternate" type="text/html" title="How Much Do They Suffer?" /><published>2019-06-19T00:00:00+00:00</published><updated>2019-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/19/how-much-they-suffer</id><content type="html" xml:base="https://www.yegor256.com/2019/06/19/how-much-they-suffer.html">&lt;p&gt;Remember the famous article
 &lt;a href=&quot;http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1&quot;&gt;&lt;em&gt;Who’s Got the Monkey?&lt;/em&gt;&lt;/a&gt;
 The gist of it is simple: good managers always make their subordinates
 responsible for their own results. When they attempt to send the monkey back
@@ -38,6 +106,9 @@ excuse: “We asked you for help and you forgot, don’t blame us!”&lt;/p&gt;
 
 &lt;p&gt;I’ve seen many similar stories, haven’t you?&lt;/p&gt;
 
+&lt;aside class=&quot;quote&quot;&gt;Professional employees should always do everything possible to send monkeys back to their bosses.
+&lt;/aside&gt;
+
 &lt;p&gt;To be honest, professional employees should
 &lt;a href=&quot;/2018/04/17/how-to-be-lazy.html&quot;&gt;always&lt;/a&gt; do everything possible to
 send monkeys back to their bosses. Only those
@@ -76,6 +147,9 @@ amounts, she told me that the bonuses are much smaller than the salary,
 clearly demonstrate our priorities: salary first, results second.&lt;/p&gt;
 
 &lt;p&gt;This is what was wrong.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Leaders decompose and delegate the scope of the work, but forget to decompose and delegate the consequences.
+&lt;/aside&gt;
 
 &lt;p&gt;The job of a &lt;em&gt;leader&lt;/em&gt; is to decompose a larger objective into smaller ones
 and delegate them to subordinates. An objective means the &lt;em&gt;consequences&lt;/em&gt;
@@ -190,6 +264,9 @@ the last resort is at the bottom:&lt;/p&gt;
 a payroll and feel happy about that, you should not listen to the advice in this
 blog post. It will only ruin your &lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;career&lt;/a&gt;.
 However, if you are a freelancer, stop being embarrassed for not knowing something!&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Your job is not to know or to be smart. Your jobs is to find solutions and fix problems.
+&lt;/aside&gt;
 
 &lt;p&gt;Your job is &lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;not&lt;/a&gt;
 &lt;em&gt;to know&lt;/em&gt; or &lt;em&gt;to be smart&lt;/em&gt;. Your jobs is to find solutions
@@ -1004,12 +1081,14 @@ about. Pay attention: a &lt;em&gt;paragraph&lt;/em&gt;, not a page of text. You 
 the description of the product in one single paragraph. No bullets here,
 no new lines, no indentations. Just a plain simple piece of text:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;**Takes** is a [true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;**Takes** is a
+[true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
 and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html)
-Java7 web development framework. Its key benefits, comparing to all others, include four
-fundamental principles: 1) not a single `null`, 2) not a single `public` `static` method,
-3) not a single mutable class, and 4) not a single `instanceof` keyword, type casting,
-or reflection.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+Java7 web development framework. Its key benefits,
+comparing to all others, include four fundamental principles:
+1) not a single `null`, 2) not a single `public` `static`
+method, 3) not a single mutable class, and 4) not
+a single `instanceof` keyword, type casting, or reflection.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Pay attention, there are no headings yet. Just a logo, a few lines with badges
 and some plain text with the description of the product. You may, and should,
@@ -1512,66 +1591,4 @@ founder, who is ready to do anything just to get a chance to
 that there is something wrong with me.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think is important to have in order to get your startup covered in a major magazine like &lt;a href=&quot;https://twitter.com/hashtag/TechCrunch?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#TechCrunch&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/hashtag/Wired?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#Wired&lt;/a&gt;? &lt;a href=&quot;https://twitter.com/hashtag/journalism?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#journalism&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1127460981578391555?ref_src=twsrc%5Etfw&quot;&gt;May 12, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary type="html">You want your startup to be visible on TechCrunch, right? But you don’t have $15-20K per month to bribe a reputable PR firm to get you there? No worries. This blog post will give you a set of simple instructions on how you can get the attention of those tech journalists who are currently busy writing about Musk’s and Zuckerberg’s innovative ideas. They will definitely write about your baby, I promise you. Just do what I say.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/mon-roi.jpg" /></entry><entry><title type="html">Software Project Review Checklist</title><link href="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html" rel="alternate" type="text/html" title="Software Project Review Checklist" /><published>2019-04-02T00:00:00+00:00</published><updated>2019-04-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/02/software-project-review-checklist</id><content type="html" xml:base="https://www.yegor256.com/2019/04/02/software-project-review-checklist.html">&lt;p&gt;A few years ago I wrote about the
-&lt;a href=&quot;/2014/12/18/independent-technical-reviews.html&quot;&gt;independent technical reviews&lt;/a&gt;
-any software project must regularly go through in order
-to make sure everything is under control. I even
-&lt;a href=&quot;/2017/11/21/trust-pay-lose.html&quot;&gt;said recently&lt;/a&gt;
-that there is no excuse for not doing them. Moreover, the more
-we trust programmers, the higher the necessity to review their projects regularly.
-Here is a short summary of what a report from a reviewer must include.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The People vs. Larry Flynt (1996) by Milos Forman&quot; src=&quot;/images/2019/04/the-people-vs-larry-flynt.jpg&quot; longdesc=&quot;#27c80f36&quot; /&gt;&lt;figcaption id=&quot;27c80f36&quot;&gt;The People vs. Larry Flynt (1996) by Milos Forman&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I tried to touch on this subject in a few recent talks:
-&lt;a href=&quot;https://youtu.be/oiNI2jF46h0&quot;&gt;Make Customers Trust You&lt;/a&gt; at &lt;a href=&quot;http://bdmsummit.com/yegor-bugayenko-2017s/&quot;&gt;BDMSummit 2017&lt;/a&gt;,
-&lt;a href=&quot;https://youtu.be/Rip_04Bv3Jk&quot;&gt;How to Be Honest and Keep a Client&lt;/a&gt; at &lt;a href=&quot;http://pmcon.dev-pro.net/&quot;&gt;PMCon Kharkiv 2017&lt;/a&gt;,
-and
-&lt;a href=&quot;https://www.youtube.com/watch?v=DLk_5BmgTVk&quot;&gt;How to Avoid Outsourcing Disaster&lt;/a&gt; at &lt;a href=&quot;http://outsourceforum.org/&quot;&gt;Kyiv Outsourcing Forum 2017&lt;/a&gt;.
-Also, there are a number of blog posts along the same lines, including
-&lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;Seven Deadly Sins of a Software Project&lt;/a&gt;,
-&lt;a href=&quot;/2015/05/21/avoid-software-outsourcing-disaster.html&quot;&gt;How to Avoid a Software Outsourcing Disaster&lt;/a&gt;,
-and
-&lt;a href=&quot;/2015/06/15/software-outsourcing-survival-guide.html&quot;&gt;Software Outsourcing Survival Guide&lt;/a&gt;.
-Here, finally, is a more or less complete list of things a good report must include.&lt;/p&gt;
-
-&lt;p&gt;Basically it’s a list of questions a reviewer must answer.
-When all the answers are collected, the report is ready.
-The most important questions are at the top.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Is the release procedure documented, automated, and does it work?&lt;/li&gt;
-  &lt;li&gt;Do releases happen frequently, at least once a week?&lt;/li&gt;
-  &lt;li&gt;How big is the technical debt (the things that “eventually” should be fixed)?&lt;/li&gt;
-  &lt;li&gt;Is the delivery pipeline strong enough to reject mistakes?&lt;/li&gt;
-  &lt;li&gt;How clean is the code? How many &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;anti-patterns&lt;/a&gt; appear?&lt;/li&gt;
-  &lt;li&gt;Are all bugs and features registered as &lt;a href=&quot;/2014/11/24/principles-of-bug-tracking.html&quot;&gt;tickets&lt;/a&gt;?&lt;/li&gt;
-  &lt;li&gt;Is the code base covered by unit tests, and is coverage visible?&lt;/li&gt;
-  &lt;li&gt;Are “Work for Hire” agreements signed with all developers?&lt;/li&gt;
-  &lt;li&gt;Are key architectural technical decisions documented?&lt;/li&gt;
-  &lt;li&gt;Is static analysis in place and &lt;a href=&quot;/2018/01/16/educational-aspect-of-static-analysis.html&quot;&gt;mandatory&lt;/a&gt; for new changes?&lt;/li&gt;
-  &lt;li&gt;Is &lt;a href=&quot;/2014/10/08/continuous-integration-is-dead.html&quot;&gt;CI&lt;/a&gt; in place, and are its reports taken into account?&lt;/li&gt;
-  &lt;li&gt;Is master branch &lt;a href=&quot;/2014/07/21/read-only-master-branch.html&quot;&gt;read-only&lt;/a&gt;?&lt;/li&gt;
-  &lt;li&gt;Are programming metrics collected and regularly reviewed?&lt;/li&gt;
-  &lt;li&gt;Is the source code repository under the customer’s ownership?&lt;/li&gt;
-  &lt;li&gt;Is the requirements documentation &lt;a href=&quot;/2015/11/10/ten-mistakes-in-specs.html&quot;&gt;short and up to date&lt;/a&gt;?&lt;/li&gt;
-  &lt;li&gt;Do key classes, methods and functions have in-code documentation?&lt;/li&gt;
-  &lt;li&gt;Is the source code repository garbage free?&lt;/li&gt;
-  &lt;li&gt;Are UI/UX interfaces documented?&lt;/li&gt;
-  &lt;li&gt;Are the production logs visible and regularly reviewed?&lt;/li&gt;
-  &lt;li&gt;How responsive is the team to the tickets?&lt;/li&gt;
-  &lt;li&gt;Does Git have a clear history of documented changes?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Essentially, this is a very short compilation of the most important things that
-you can find in the &lt;a href=&quot;https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration&quot;&gt;CMMI&lt;/a&gt;.
-They require all this, and a large list of other things on top. But a small
-project doesn’t need everything that they ask you to have. My list is shorter
-and, I’m sure, will be just enough for most of you.&lt;/p&gt;
-
-&lt;p&gt;By the way, you can see the reports volunteers create for the participants
-of my &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. They analyze open source projects
-and briefly report the problems they find. I believe that they are trying to answer
-exactly the same set of questions.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">A few years ago I wrote about the independent technical reviews any software project must regularly go through in order to make sure everything is under control. I even said recently that there is no excuse for not doing them. Moreover, the more we trust programmers, the higher the necessity to review their projects regularly. Here is a short summary of what a report from a reviewer must include.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/the-people-vs-larry-flynt.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary type="html">You want your startup to be visible on TechCrunch, right? But you don’t have $15-20K per month to bribe a reputable PR firm to get you there? No worries. This blog post will give you a set of simple instructions on how you can get the attention of those tech journalists who are currently busy writing about Musk’s and Zuckerberg’s innovative ideas. They will definitely write about your baby, I promise you. Just do what I say.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/mon-roi.jpg" /></entry></feed>
