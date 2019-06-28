@@ -182,6 +182,8 @@ should speak for itself, and it should be easy enough for a stranger (the
 reviewer) to understand how it works. If this is not the case, there is
 something wrong that should be fixed.
 
+{% youtube TxYi7J0vKC8 %}
+
 **Treat Any Question as a Bug**.
 Don't expect a review to produce any bugs in functionality, like
 "I click this button and the system crashes." This will happen rarely, if ever.
@@ -214,6 +216,8 @@ could help him understand how your system works, and more importantly,
 where and how it breaks, is very useful. Don't limit the reviewer to the
 source code only---this is simply not enough! Let him see the big
 picture, and you will get a much more detailed and professional report.
+
+{% youtube GlBf5-g4nGk %}
 
 **Track How Inconsistencies Are Resolved**.
 Once you get a report from the reviewer, make sure that the most important
