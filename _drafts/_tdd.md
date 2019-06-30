@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "TDD Misbeliefs"
-date: 2017-01-10
+date: 2019-07-02
 place: Minsk, Belarus
 tags: testing
 description: |
-  Test-driven development is a very obvious and at the same
+  Test-driven development is a very obvious and at the same time
   very unclear territory in modern software development;
   what is the truth?
 keywords:
@@ -14,16 +14,19 @@ keywords:
   - test driven development
   - unit testing
   - automated testing
-image: /images/2017/02/...
+image: /images/2019/07/...
 jb_picture:
   caption:
 ---
 
 While I was working with the
-[previous article about TDD]({% pst 2017/mar/2017-03-24-tdd-that-works %})
+[previous article]({% pst 2017/mar/2017-03-24-tdd-that-works %}) about
+Test-Driven Development (TDD)
 I've read many blog posts and a few books on this very subject and found
-out that I either strongly agree with them or strongly disagree. There
-is nothing in the middle. Let me share the most interesting.
+out that I disagree with a few of them, which are pretty important.
+It seems that most sofware experts simply misunderstand how software
+development works. Maybe because they are not really programmers, but
+book writers and conference speakers?
 
 <!--more-->
 
@@ -40,14 +43,14 @@ in [The Cycles Of TDD](http://blog.cleancoder.com/uncle-bob/2014/12/17/TheCycles
 
 <span class="red">I disagree</span>.
 This statement goes against the very philosophy of testing: "a passing test
-is a _bad_ test." Unfortunately, a traditional understanding of testing
-is quite the opposite: tests must pass to make us happy. Thus, if we
+is a _weak_ test." Unfortunately, a traditional understanding of testing
+is quite the opposite: tests _must pass_ to make us happy. Thus, if we
 keep thinking about how to make our future tests pass we will shoot
 ourselves in the foot: tests will pass and the code quality will go down.
 Instead, we must design our code the way that it's easy to break with
 the future tests. The code must help its tests to break it! Because
 a test that is easy to make "red" is a good test. A test that is always
-"green" is a useless test. Uncle Bob, I'm sure you are aware of that.
+"green" is a useless test. Uncle Bob, I'm sure, is aware of that.
 
 
 <!-- ************************************************************** -->
@@ -66,7 +69,7 @@ passes. I disagree that refactoring is a responsibility of the person
 who fixes the test. If the code needs refactoring, it's a _bug_, just
 like any other bug, either functional or design. It has to be reported,
 assigned and paid for. We must not do any code modifications, no matter
-how good our intentions are, if they are not required and paid. Refactoring
+how good our intentions are, if they are not required _and paid_. Refactoring
 after fixing the test is a frivoulus violation of management and coordination
 structure in a project.
 
@@ -147,5 +150,3 @@ for just code."
 I will keep updating this post. If you know a "good" article about TDD,
 please send it [my way](mailto:tdd@yegor256.com); maybe I'll find
 something interesting to quote from it.
-
-
