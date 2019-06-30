@@ -157,3 +157,5 @@ be very incremental. Very occasionally it might not be possible to blame the pro
 and put the ticket on pause until all your complaints are addressed.
 I can't imagine such a situation though. If you can, please let me know.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The source code is too complex, you have to modify it, and you can&#39;t understand how it works. Whose fault is it? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1145222618854887424?ref_src=twsrc%5Etfw">June 30, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
