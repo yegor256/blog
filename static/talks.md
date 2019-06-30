@@ -87,21 +87,21 @@ informed about everything I do publicly.
 <img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="future-talk" alt="QAFest 2019"/><br/>
 Quality Assurance vs. Testing<br/>
 [QA Fest](http://qafest.com/en/)<br/>
-Kyiv, Ukraine<br/>
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
 20-21 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/teamlead-conf.png" class="future-talk" alt="Saint Teamlead Conf 2019"/><br/>
 Are You Sure You Are Not a Micromanager?<br/>
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019)<br/>
-St. Petersburg, Russia<br/>
+<span class="city">St. Petersburg</span>, <span class="country">Russia</span><br/>
 23-24 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
 [HackConf](https://www.hackconf.bg/en/)<br/>
-Sofia, Bulgaria<br/>
+<span class="city">Sofia</span>, <span class="country">Bulgaria</span><br/>
 11-13 October.
 
 If you are interested in placing me at _your event_,
@@ -185,9 +185,9 @@ so why shouldn't we rate them, right? The best grade is
 <span class="red">**F-**</span>.
 
 Statistically speaking, I've been speaking in
-<span id="total_cities">?</span> cities
+<span id="total-cities">?</span> cities
 and
-<span id="total_countries">?</span> countries.
+<span id="total-countries">?</span> countries.
 
 ### 2019
 
@@ -195,7 +195,7 @@ and
 <img src="https://i.ytimg.com/vi/s7QCH17lQlY/mqdefault.jpg" class="past-talk" alt="QualityConf 2019"/>
 Can Distributed Teams Deliver Quality?
 [QualityConf'2019](http://qualityconf.ru/2019);
-Moscow, Russia;
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
 27 May;
 [видео](https://youtu.be/s7QCH17lQlY).
 
@@ -203,7 +203,7 @@ Moscow, Russia;
 <img src="https://i.ytimg.com/vi/i84uvEWDeMc/mqdefault.jpg" class="past-talk" alt="AppsConf 2019"/>
 Another Five Trends We Are Afraid Of;
 [AppsConf'2019](http://appsconf.ru/moscow/2019);
-Moscow, Russia;
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
 22 April;
 [видео](https://youtu.be/i84uvEWDeMc).
 
@@ -211,7 +211,7 @@ Moscow, Russia;
 <img src="https://i.ytimg.com/vi/H0calDDfHL8/mqdefault.jpg" class="past-talk" alt="SECON 2019"/>
 Правильно ли мы тестируем;
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
-Penza, Russia;
+<span class="city">Penza</span>, <span class="country">Russia</span>;
 19 April;
 [видео](https://www.youtube.com/watch?v=H0calDDfHL8);
 [slides](https://www.slideshare.net/YegorBugayenko/typical-pitfalls-in-testing).
@@ -220,7 +220,7 @@ Penza, Russia;
 <img src="https://i.ytimg.com/vi/vZtI1M2Uwco/mqdefault.jpg" class="past-talk" alt="SECON 2019"/>
 Is Java Getting Better?
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
-Penza, Russia;
+<span class="city">Penza</span>, <span class="country">Russia</span>;
 19 April,
 [видео](https://www.youtube.com/watch?v=vZtI1M2Uwco),
 [slides](https://www.slideshare.net/YegorBugayenko/is-java-getting-better).
@@ -229,7 +229,7 @@ Penza, Russia;
 <img src="https://i.ytimg.com/vi/VLaGrUsCbYo/mqdefault.jpg" class="past-talk" alt="Samara 2019"/>
 Микротаскинг или как обмануть начальника;
 [StartupSamara](https://startupsamara.timepad.ru/event/926814/);
-Samara, Russia;
+<span class="city">Samara</span>, <span class="country">Russia</span>;
 13 April;
 [видео](https://youtu.be/VLaGrUsCbYo).
 
@@ -237,7 +237,7 @@ Samara, Russia;
 <img src="https://i.ytimg.com/vi/9ynzUGZjKFk/mqdefault.jpg" class="past-talk" alt="JPoint 2019"/>
 Software testing pitfalls;
 [JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
-Moscow, Russia;
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
 5 April;
 [slides](https://www.slideshare.net/YegorBugayenko/software-testing-pitfalls),
 [видео](https://www.youtube.com/watch?v=9ynzUGZjKFk).
@@ -246,7 +246,7 @@ Moscow, Russia;
 <img src="https://i.ytimg.com/vi/smThHyduuY0/mqdefault.jpg" class="past-talk" alt="CodeFest 2019"/>
 Five Trends We Are Afraid Of;
 [CodeFest](https://2019.codefest.ru/lecture/1515);
-Novosibirsk, Russia;
+<span class="city">Novosibirsk</span>, <span class="country">Russia</span>;
 30 March;
 [видео](https://www.youtube.com/watch?v=smThHyduuY0),
 [slides](https://www.slideshare.net/YegorBugayenko/five-trends-we-are-afraid-of).
