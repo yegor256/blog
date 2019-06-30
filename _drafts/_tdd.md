@@ -24,7 +24,7 @@ While I was working with a
 Test-Driven Development (TDD)
 I read many blog posts and a few books on the subject and found
 out that I disagree with a few of them; even some that are pretty important.
-It seems that most sofware experts simply misunderstand how software
+It seems that most software experts simply misunderstand how software
 development works. Maybe because they are not really programmers, but
 instead book authors and conference speakers?
 
