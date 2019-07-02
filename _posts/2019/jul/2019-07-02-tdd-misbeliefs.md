@@ -14,9 +14,9 @@ keywords:
   - test driven development
   - unit testing
   - automated testing
-image: /images/2019/07/...
+image: /images/2019/07/la-venus-a-la-fourrure.jpg
 jb_picture:
-  caption:
+  caption: La Vénus à la fourrure (2013) by Roman Polanski
 ---
 
 While I was working with a
