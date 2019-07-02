@@ -1317,6 +1317,7 @@ code-free
 code-intensive
 code-rich
 code-sample
+code-to-test
 code-writing
 codeahead
 coder
@@ -1711,6 +1712,7 @@ counter-intuitive
 counter-productive
 countermeasure
 countermeasures
+counterpart
 counterproductive
 counters
 counting
@@ -2107,6 +2109,7 @@ devop
 devops
 devopsdays
 devoxx
+dhh
 DI
 diagnose
 diagnosed
@@ -2272,8 +2275,10 @@ DNS
 do
 doable
 doberman
+doc
 docker
 docs
+doctor
 doctrine
 document
 document's
@@ -3134,6 +3139,7 @@ friend-making
 friendly
 friends
 friendship
+frivolous
 from
 front
 front-end
@@ -4089,6 +4095,7 @@ jack
 jaguar
 jail
 james
+jamesshore
 jamon
 jan
 january
@@ -4247,6 +4254,7 @@ keeping
 keeps
 kempf
 kent
+kentbeck
 kept
 kernel
 key
@@ -6200,6 +6208,7 @@ purely
 purest
 purpose
 purposes
+pursuant
 pursue
 pursued
 push
@@ -6393,6 +6402,7 @@ recruitment
 rectangle
 rectangles
 red
+red-green-refactor
 reddit
 redefine
 redesign
@@ -7087,6 +7097,7 @@ shooting
 shoots
 shop
 shops
+shore
 short
 short-list
 short-term
@@ -7227,6 +7238,7 @@ slope
 slot
 slow
 slower
+slowing
 slowly
 slows
 small
@@ -7513,6 +7525,7 @@ sticks
 sticky
 stigma
 still
+stink
 stock
 stockholm
 stocks
@@ -8128,6 +8141,7 @@ try-with-resource
 try-with-resources
 trying
 TS
+TSA
 tu
 TUG
 tumblr
@@ -8199,6 +8213,7 @@ unchecked
 uncle
 uncle's
 unclear
+unclebobmartin
 uncomfortable
 uncompromising
 unconditional
@@ -8300,6 +8315,7 @@ untrustworthy
 unusual
 unwilling
 unwise
+unwritten
 unzip
 up
 up-time
@@ -8783,6 +8799,7 @@ yourself
 youtube
 ypshenychka
 yummy
+yummy-scented
 zache
 ZCE
 zen

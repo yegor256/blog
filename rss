@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-06-26T17:32:09+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SyncEm: Thread-Safe Decorators in Ruby</title><link href="https://www.yegor256.com/2019/06/26/syncem.html" rel="alternate" type="text/html" title="SyncEm: Thread-Safe Decorators in Ruby" /><published>2019-06-26T00:00:00+00:00</published><updated>2019-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/26/syncem</id><content type="html" xml:base="https://www.yegor256.com/2019/06/26/syncem.html">&lt;p&gt;I wrote some time ago about thread-safety in OOP and how it can
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-07-02T08:35:44+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">TDD Misbeliefs</title><link href="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html" rel="alternate" type="text/html" title="TDD Misbeliefs" /><published>2019-07-02T00:00:00+00:00</published><updated>2019-07-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/02/tdd-misbeliefs</id><content type="html" xml:base="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html">&lt;p&gt;While I was working with a
+&lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;previous article&lt;/a&gt; about
+Test-Driven Development (TDD)
+I read many blog posts and a few books on the subject and found
+out that I disagree with a few of them; even some that are pretty important.
+It seems that most software experts simply misunderstand how software
+development works. Maybe because they are not really programmers, but
+are instead book authors and conference speakers.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;La Vénus à la fourrure (2013) by Roman Polanski&quot; src=&quot;/images/2019/07/la-venus-a-la-fourrure.jpg&quot; longdesc=&quot;#4ef642ba&quot; /&gt;&lt;figcaption id=&quot;4ef642ba&quot;&gt;La Vénus à la fourrure (2013) by Roman Polanski&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;!-- ************************************************************** --&gt;
+&lt;p&gt;Robert Martin
+(&lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;@unclebobmartin&lt;/a&gt;)
+in &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html&quot;&gt;The Cycles Of TDD&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If the changes you make to the production code, pursuant to a test,
+  make that test pass, but would not make other unwritten tests pass,
+  then you are likely making the production code too specific.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
+This statement goes against the very philosophy of testing: “a passing test
+is a &lt;em&gt;weak&lt;/em&gt; test.” Unfortunately, a traditional understanding of testing
+is quite the opposite: tests &lt;em&gt;must pass&lt;/em&gt; to make us happy. Thus, if we
+keep thinking about how to make our future tests pass we will shoot
+ourselves in the foot: tests will pass and the code quality will go down.
+Instead, we must design our code in a way that makes it easy to break with
+the future tests. The code must help its tests to break it! Because
+a test that is easy to make “red” is a good test. A test that is always
+“green” is a useless test. Uncle Bob, I’m sure, is aware of that.&lt;/p&gt;
+
+&lt;!-- ************************************************************** --&gt;
+&lt;p&gt;James Shore
+(&lt;a href=&quot;https://twitter.com/jamesshore&quot;&gt;@jamesshore&lt;/a&gt;)
+in &lt;a href=&quot;http://www.jamesshore.com/Blog/Red-Green-Refactor.html&quot;&gt;Red-Green-Refactor&lt;/a&gt;
+(Nov 2005):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You’ll run through several cycles very quickly, then find yourself
+  slowing down and spending more time on refactoring.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
+I have nothing against the first two steps: 1) the test is “red” because
+it doesn’t pass, and 2) the test is “green” when the code is fixed and
+passes. I disagree that refactoring is a responsibility of the person
+who fixes the test. If the code needs refactoring, it’s a &lt;em&gt;bug&lt;/em&gt;, just
+like any other bug, either functional or design. It has to be reported,
+assigned and paid for. We must not do any code modifications, no matter
+how good our intentions are, if they are not required &lt;em&gt;and paid for&lt;/em&gt;. Refactoring
+after fixing the test is a frivolous violation of management and coordination
+structure in a project.&lt;/p&gt;
+
+&lt;!-- ************************************************************** --&gt;
+&lt;p&gt;Robert Martin
+(&lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;@unclebobmartin&lt;/a&gt;)
+in &lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/30/When-tdd-does-not-work.html&quot;&gt;When TDD doesn’t work&lt;/a&gt;
+(April 2014):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You don’t have to write tests for Test Doubles because
+  the actual unit tests and the production code are
+  the tests for those pieces of code.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
+Test Doubles (also known as
+&lt;a href=&quot;/2014/09/23/built-in-fake-objects.html&quot;&gt;fake objects&lt;/a&gt;)
+are the tools that help us find our where the code is broken. If the tool
+is unreliable, how can we test our code against it? This reminds me of an old
+joke where a patient comes to the doctor and says “Help me doc, my body hurts anywhere
+I touch it with my finger!”, and the doctor answers
+“It’s just your finger — it’s broken!” A very similar situation occurs here:
+If we test our production objects with broken Test Doubles, they will all look
+broken.&lt;/p&gt;
+
+&lt;!-- ************************************************************** --&gt;
+&lt;p&gt;David Heinemeier Hansson
+(&lt;a href=&quot;https://twitter.com/dhh&quot;&gt;@dhh&lt;/a&gt;)
+in &lt;a href=&quot;https://signalvnoise.com/posts/3159-testing-like-the-tsa&quot;&gt;Testing like the TSA&lt;/a&gt;
+(April 2012):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Code-to-test ratios above 1:2 is a smell, above 1:3 is a stink.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
+I don’t know exactly what units of measurement were used to compare the
+“code” and the “test”, but I can only assume Lines-of-Code. I was curious and
+decided to calculate this ratio in a few projects of mine. First, I tried
+&lt;a href=&quot;https://github.com/jcabi/jcabi-github&quot;&gt;jcabi-github&lt;/a&gt;,
+an immutable GitHub Java API client. The numbers were:
+9.8K LoC in production classes,
+6.2K in built-in fake classes, and
+16.2K in test classes.
+Thus, the ratio was 9.8 to 22.4, which meant 1:2.3. Somewhere between
+a “smell” and a “stink”, according to David. Then I calculated the ratio
+for a few other projects of mine:
+&lt;a href=&quot;https://github.com/jcabi/jcabi-http&quot;&gt;jcabi-http&lt;/a&gt; (1:1),
+&lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;xembly&lt;/a&gt; (1:0.92),
+&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;takes&lt;/a&gt; (1:0.91), and
+&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt; (1:0.6). It seems that the higher
+the ratio the higher my &lt;em&gt;confidence&lt;/em&gt; in the product’s quality. Thus, I don’t think that
+it’s a smell or a stink. Instead, in a yummy-scented product the amount
+of test code is a few times larger than its production counterpart.&lt;/p&gt;
+
+&lt;!-- ************************************************************** --&gt;
+&lt;p&gt;Kent Beck
+(&lt;a href=&quot;https://twitter.com/kentbeck&quot;&gt;@kentbeck&lt;/a&gt;)
+in
+&lt;a href=&quot;http://stackoverflow.com/questions/153234/how-deep-are-your-unit-tests/153565#153565&quot;&gt;How deep are your unit tests?&lt;/a&gt;
+(Sep 2008):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I get paid for code that works, not for tests.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
+Tests are not a separate product which either we are paid for or not.
+Tests are part of the code. An instrument of its development, maintenance
+and validation. Tests are similar to, say, file names. We don’t write
+our code naming all the files &lt;code&gt;1.java&lt;/code&gt;, &lt;code&gt;2.java&lt;/code&gt;, &lt;code&gt;234.java&lt;/code&gt;, and then
+say: “Now you pay me so that I can rename them properly.” That would be weird,
+right? That’s how the statement “I’m not paid for writing tests” sounds
+to me: weird. Do we really have to be paid to name files correctly? We just
+do it, because it’s convenient for us. Because proper self-descriptive
+file names make our code more readable and maintainable. It’s impossible to
+imagine a modern maintainable code base without tests. I would actually
+suggest changing that phrase to: “I get paid for code that is tested, not
+just for code.”&lt;/p&gt;
+
+&lt;p&gt;I will keep updating this post. If you know a “good” article about TDD,
+please send it &lt;a href=&quot;mailto:tdd@yegor256.com&quot;&gt;my way&lt;/a&gt;; maybe I’ll find
+something interesting to quote from it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">While I was working with a previous article about Test-Driven Development (TDD) I read many blog posts and a few books on the subject and found out that I disagree with a few of them; even some that are pretty important. It seems that most software experts simply misunderstand how software development works. Maybe because they are not really programmers, but are instead book authors and conference speakers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/la-venus-a-la-fourrure.jpg" /></entry><entry><title type="html">SyncEm: Thread-Safe Decorators in Ruby</title><link href="https://www.yegor256.com/2019/06/26/syncem.html" rel="alternate" type="text/html" title="SyncEm: Thread-Safe Decorators in Ruby" /><published>2019-06-26T00:00:00+00:00</published><updated>2019-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/26/syncem</id><content type="html" xml:base="https://www.yegor256.com/2019/06/26/syncem.html">&lt;p&gt;I wrote some time ago about thread-safety in OOP and how it can
 be achieved with &lt;a href=&quot;/2017/01/17/synchronized-decorators.html&quot;&gt;decorators&lt;/a&gt;.
 It was also said that it’s very important to make sure objects are thread-safe
 (&lt;a href=&quot;/2018/11/06/ruby-threads.html&quot;&gt;in Ruby&lt;/a&gt; and
@@ -1465,130 +1602,4 @@ GitHub repository I created to illustrate the example:
 &lt;a href=&quot;https://github.com/yegor256/nutch-in-java&quot;&gt;yegor256/nutch-in-java&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you have any questions or suggestions, feel free to submit a pull request
-or comment here.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><summary type="html">Apache Nutch is an open source framework written in Java. Its purpose is to help us crawl a set of websites (or the entire Internet), fetch the content, and prepare it for indexing by, say, Solr. A pretty useful framework if you ask me, however it is designed to be used only mostly from the command line. You download the archive, unzip it, and run the binary file. It crawls and you get the data. However, I’ve got a project where this crawling had to be embedded into my own Java app. I realized that there is a complete absence of any documentation for that. Hence this blog post. It explains how you can use Nutch from Java, not from the command line.</summary></entry><entry><title type="html">Stop Pitching, Beg Them!</title><link href="https://www.yegor256.com/2019/04/09/beg-them.html" rel="alternate" type="text/html" title="Stop Pitching, Beg Them!" /><published>2019-04-09T00:00:00+00:00</published><updated>2019-04-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/09/beg-them</id><content type="html" xml:base="https://www.yegor256.com/2019/04/09/beg-them.html">&lt;p&gt;You want your startup to be visible on TechCrunch, right? But you don’t have
-$15-20K per month to bribe a reputable PR firm to get you there? No worries.
-This blog post will give you a set of simple instructions on how you can
-get the attention of those tech journalists who are currently busy
-writing about Musk’s and Zuckerberg’s innovative ideas. They will
-definitely write about your baby, I promise you. Just do what I say.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Mon Roi (2015) by Maïwenn&quot; src=&quot;/images/2019/04/mon-roi.jpg&quot; longdesc=&quot;#97a16f5c&quot; /&gt;&lt;figcaption id=&quot;97a16f5c&quot;&gt;Mon Roi (2015) by Maïwenn&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;First of all, you have to remember that they are just writers. They are not programmers,
-designers, or artificial intelligence experts. Even when they write about that stuff
-they actually have no idea. The don’t know what machine learning is,
-can’t really tell the difference between Blockchain and Bitcoin,
-and barely remember what they were saying in their articles just a
-few months ago. You have to understand and forgive them.
-They are being paid for the word count, after all.&lt;/p&gt;
-
-&lt;p&gt;Second, you have to remember that they not only don’t care about your startup,
-they don’t care about the entire industry. They just need money
-to feed their families. And there are two places to find that money:
-1) sound topics like Google, equality, or billion-dollar divorce (they all dream about
-putting them together in one title), or 2) your bank account. Thus,
-if you can’t tell them a mind-blowing sexual harassment story and you are not ready
-to pay, writing about your startup won’t help them feed their families.
-And you don’t want their families to starve, do you?&lt;/p&gt;
-
-&lt;p&gt;Be merciful. They are only human.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;If you can’t tell them a mind-blowing sexual harassment story and you are not ready to pay, writing about your startup won’t help them feed their families.
-&lt;/aside&gt;
-
-&lt;p&gt;They are starving and you are coming with a press release pitching your startup
-idea, which is going to save the world and make you a billionaire. Do you think
-they will be glad to help you out? Never. They will only feel jealous and expect you to pay—double.
-Instead, you need to present yourself as someone whose starvation is even worse. They have
-to feel pity for you. That’s how they won’t have a chance to refuse. &lt;em&gt;They&lt;/em&gt; must
-be merciful.&lt;/p&gt;
-
-&lt;p&gt;How do you do that?&lt;/p&gt;
-
-&lt;p&gt;You beg.&lt;/p&gt;
-
-&lt;p&gt;But not directly and explicitly, of course. You have to be pretty
-subtle in your self-humiliation. Here is what you do:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Follow Them&lt;/strong&gt;.
-Find them on Facebook, Twitter, Instagram, and anywhere else
-you can find them. Become their follower. Or even better, follow
-and unfollow them every week. They will see that you keep coming back
-in a desperate attempt to catch their attention.
-Their souls will melt.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Re-tweet Them&lt;/strong&gt;.
-Not just that. You should &lt;em&gt;comment&lt;/em&gt; on every single tweet they write
-(especially those about their vacations, parties, and the puppies they hug).
-The best way, of course, is to ask questions. They publish an article
-about Zuckerberg’s new innovative idea of blocking another group
-of white supremacists on Facebook, and you ask them: “How come the world
-is so cruel??” You got the idea. Just keep pretending that you
-are totally interested in all the garbage they publish. They realize perfectly
-that the stuff they write is worth nothing. When they see you
-so deeply interested in their prose, however, they will understand that your
-life situation is even worse than theirs. Here comes the mercifulness!&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Quote Them&lt;/strong&gt;.
-Find an article they wrote previously and write your own piece somewhere
-on your blog or just on Medium. Then, email them a link, saying that their quote
-inspired you so much that you can’t stop thinking about it.
-(Well, be careful with too much flattery.)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Ask Them Questions&lt;/strong&gt;.
-Demonstrate to them that you are interested in their opinions by asking
-questions directly, from time to time, in Facebook Messenger, for example. Of course,
-your questions must be about their articles. For example, “Do you still
-believe that…” and then mention something they said a few months ago. It doesn’t
-matter what you ask and, of course, you don’t care about their answers,
-but keep asking, regularly. Your goal is to make them remember your
-avatar and to ensure they connect it in their minds with someone desperately and
-unconditionally in love with them.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;(Don’t) Buy Them Coffee&lt;/strong&gt;.
-If they are in the same city with you, a personal meeting over a cup
-of coffee will definitely help. I would not recommend you paying for their
-coffee, though. Maybe I’m wrong, but I think that this gesture will
-give them the wrong idea that you have money. Instead, be cheap. Pay only
-for your own coffee. And, of course, don’t tell them much about your
-startup, better ask them about their families, ski weekends, and about
-how much they hate Trump. Remember, they care about your startup, not at all.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Beg!&lt;/strong&gt;.
-After about six months of preparation you are ready to shoot. They already remember
-your avatar (or maybe even your face, if you are lucky),
-they know that you have no self-respect and no money,
-they feel guilty for not giving you anything back for everything you’ve
-done for them so far, and they feel their absolute dominant
-position above you. Voilá! You’ve done a great job. Now you say something like:
-“I feel so bad about asking this, but maybe you can help me out
-and say a few words about my startup in one of your articles, pretty please?!”
-How can they refuse?&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Got the strategy?&lt;/p&gt;
-
-&lt;p&gt;You can invent some other tricks, if you get the idea: you have to show them
-that they are much more important that your startup. They are the experts,
-they know what the future of machine learning is, they change the world
-with their articles, they are kings, while you are yet another startup
-founder, who is ready to do anything just to get a chance to
-&lt;del&gt;kiss their feet&lt;/del&gt; be mentioned in one of their future articles.&lt;/p&gt;
-
-&lt;p&gt;Try it, and let me know how it works.&lt;/p&gt;
-
-&lt;p&gt;PS. I tried too, but I can’t seem to get further than the first step. It seems
-that there is something wrong with me.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you think is important to have in order to get your startup covered in a major magazine like &lt;a href=&quot;https://twitter.com/hashtag/TechCrunch?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#TechCrunch&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/hashtag/Wired?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#Wired&lt;/a&gt;? &lt;a href=&quot;https://twitter.com/hashtag/journalism?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#journalism&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1127460981578391555?ref_src=twsrc%5Etfw&quot;&gt;May 12, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="sarcasm" /><summary type="html">You want your startup to be visible on TechCrunch, right? But you don’t have $15-20K per month to bribe a reputable PR firm to get you there? No worries. This blog post will give you a set of simple instructions on how you can get the attention of those tech journalists who are currently busy writing about Musk’s and Zuckerberg’s innovative ideas. They will definitely write about your baby, I promise you. Just do what I say.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/mon-roi.jpg" /></entry></feed>
+or comment here.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><summary type="html">Apache Nutch is an open source framework written in Java. Its purpose is to help us crawl a set of websites (or the entire Internet), fetch the content, and prepare it for indexing by, say, Solr. A pretty useful framework if you ask me, however it is designed to be used only mostly from the command line. You download the archive, unzip it, and run the binary file. It crawls and you get the data. However, I’ve got a project where this crawling had to be embedded into my own Java app. I realized that there is a complete absence of any documentation for that. Hence this blog post. It explains how you can use Nutch from Java, not from the command line.</summary></entry></feed>
