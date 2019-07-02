@@ -26,7 +26,7 @@ I read many blog posts and a few books on the subject and found
 out that I disagree with a few of them; even some that are pretty important.
 It seems that most software experts simply misunderstand how software
 development works. Maybe because they are not really programmers, but
-instead book authors and conference speakers?
+are instead book authors and conference speakers.
 
 <!--more-->
 
@@ -106,7 +106,7 @@ in [Testing like the TSA](https://signalvnoise.com/posts/3159-testing-like-the-t
 <span class="red">I disagree</span>.
 I don't know exactly what units of measurement were used to compare the
 "code" and the "test", but I can only assume Lines-of-Code. I was curious and
-decided to calculate this ration in a few projects of mine. First, I tried
+decided to calculate this ratio in a few projects of mine. First, I tried
 [jcabi-github](https://github.com/jcabi/jcabi-github),
 an immutable GitHub Java API client. The numbers were:
 9.8K LoC in production classes,
@@ -118,9 +118,9 @@ for a few other projects of mine:
 [jcabi-http](https://github.com/jcabi/jcabi-http) (1:1),
 [xembly](https://github.com/yegor256/xembly) (1:0.92),
 [takes](https://github.com/yegor256/takes) (1:0.91), and
-[rultor](https://github.com/yegor256/rultor) (1:0.6). It looks that the higher
+[rultor](https://github.com/yegor256/rultor) (1:0.6). It seems that the higher
 the ratio the higher my _confidence_ in the product's quality. Thus, I don't think that
-it's a smell or a stink. Instead, in a yummy scented product the amount
+it's a smell or a stink. Instead, in a yummy-scented product the amount
 of test code is a few times larger than its production counterpart.
 
 
@@ -134,12 +134,12 @@ in
 > I get paid for code that works, not for tests.
 
 <span class="red">I disagree</span>.
-Tests are not a separate product which either we are are paid for or not.
+Tests are not a separate product which either we are paid for or not.
 Tests are part of the code. An instrument of its development, maintenance
 and validation. Tests are similar to, say, file names. We don't write
 our code naming all the files `1.java`, `2.java`, `234.java`, and then
 say: "Now you pay me so that I can rename them properly." That would be weird,
-right? That's how that statement "I'm not paid for writing tests" sounds
+right? That's how the statement "I'm not paid for writing tests" sounds
 to me: weird. Do we really have to be paid to name files correctly? We just
 do it, because it's convenient for us. Because proper self-descriptive
 file names make our code more readable and maintainable. It's impossible to
