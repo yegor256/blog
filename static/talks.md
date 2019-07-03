@@ -64,8 +64,8 @@ script: |
     $('#past-talks-total').text($('img.past-talk').length);
   });
   $(function() {
-    $('#total-cities').text($('span.city').length);
-    $('#total-countries').text($('span.country').length);
+    $('#total-cities').text($.unique($('span.city')).length);
+    $('#total-countries').text($.unique($('span.country')).length);
   });
 ---
 
