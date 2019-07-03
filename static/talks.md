@@ -104,6 +104,8 @@ The Biggest Mistake of an Honest Tester<br/>
 <span class="city">Sofia</span>, <span class="country">Bulgaria</span><br/>
 11-13 October.
 
+<hr/>
+
 If you are interested in placing me at _your event_,
 please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
