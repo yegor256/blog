@@ -21,7 +21,7 @@ CEO at Zerocracy and author of Elegant Objects.
 Short bio:<br/>
 Yegor is a CEO of Zerocracy,
 an author of Elegant Objects book series about OOP,
-and a hands-on Java developer.
+and a hands-on Java/Ruby developer.
 
 Full bio:<br/>
 Yegor Bugayenko is a founder and CEO of Zerocracy, which replaces annoying bosses with AI bots;
@@ -29,8 +29,8 @@ an OOP fundamentalist;
 an author of "Elegant Objects" book series;
 a provocative blogger at yegor256.com;
 a creator of Zold, a non-Blockchain cryptocurrency for fast micro-payments;
-a hands-on Java programmer;
-a creator of Cactoos, Takes Framework, JCabi, and Rultor;
+a hands-on Java and Ruby programmer;
+a creator of Cactoos, Takes, JCabi, and Rultor;
 a philanthropist donating four thousand dollars annually to an open source award.
 
 Employer:<br/>
@@ -79,21 +79,23 @@ yegor256@gmail.com
 Telegram:<br/>
 [@yegor256](https://t.me/yegor256)
 
+<hr/>
+
 Кратко:<br/>
 Основатель Zerocracy и автор книги Elegant Objects.
 
-Short bio:<br/>
+Краткое описание:<br/>
 Егор &mdash; CEO и основатель Zerocracy,
 автор Elegant Objects, серии книг об ООП,
-и программист на Java.
+и программист на Java и Ruby.
 
-Full bio:<br/>
+Полное описание:<br/>
 Егор Бугаенко &mdash; основатель и CEO компании Zerocracy, разрабатывающей AI роботов для управления программистами;
 ООП-фундаменталист;
 автор "Elegant Objects" &mdash; серии книг об объектно-ориентированном программировании;
 создатель криптовалюты Zold для быстрых микроплатежей;
 провокационный блогер на yegor256.com;
-пишущий Java программист;
-создатель Cactoos, Takes Framework, JCabi и Rultor;
+пишущий Java и Ruby программист;
+создатель Cactoos, Takes, JCabi и Rultor;
 филантроп, жертвующий ежегодно несколько тысяч долларов номинантам его собственной премии за самый качественный программный проект.
 
