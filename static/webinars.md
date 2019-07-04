@@ -39,9 +39,14 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-{% webinar 03-07-2019 45 _d3AmqeGcMU How Much Immutability Is Enough %}
+{% webinar 07-08-2019 46 oNtTAF0UjjA Xembly, an imperative language for XML manipulations %}
 
-<a href="https://www.youtube.com/watch?v=_d3AmqeGcMU"><img src="https://i.ytimg.com/vi/_d3AmqeGcMU/mqdefault.jpg" class="wnr" alt="Webinar no.44 by Yegor Bugayenko"/></a>
+<a href="https://www.youtube.com/watch?v=oNtTAF0UjjA"><img src="https://i.ytimg.com/vi/oNtTAF0UjjA/mqdefault.jpg" class="wnr" alt="Webinar no.46 by Yegor Bugayenko"/></a>
+August 7, 2019<br/>
+&#35;46: **Xembly, an imperative language for XML manipulations**<br/>
+Xembly is an "Assembly for XML", an imperative language for building and modifying XML documents. I'm using it in many Java projects where I need to build or modify XML pages. Here is a live demonstration of its features.
+
+<a href="https://www.youtube.com/watch?v=_d3AmqeGcMU"><img src="https://i.ytimg.com/vi/_d3AmqeGcMU/mqdefault.jpg" class="wnr" alt="Webinar no.45 by Yegor Bugayenko"/></a>
 Jule 3, 2019<br/>
 &#35;45: **How Much Immutability Is Enough**<br/>
 Immutability is a virtue in object-oriented programming, but very often it is being confused with constants. Those are different things. Immutable objects are not constants and there are a lot of possibilities to make an object immutable but still ready to accept changes.
