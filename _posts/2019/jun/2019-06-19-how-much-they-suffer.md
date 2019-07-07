@@ -123,3 +123,5 @@ all team members win and lose _proportionally_.
 
 Otherwise, it's not a team.
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What will your boss do if you miss a deadline? <a href="https://twitter.com/hashtag/xdsd?src=hash&amp;ref_src=twsrc%5Etfw">#xdsd</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1147796639983263744?ref_src=twsrc%5Etfw">July 7, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
