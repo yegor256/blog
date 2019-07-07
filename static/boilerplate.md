@@ -66,7 +66,10 @@ Facebook:<br/>
 LinkedIn:<br/>
 [yegor256](https://www.linkedin.com/in/yegor256)
 
-Address:<br/>
+Current location (to travel from):<br/>
+Moscow, Russia
+
+Postal address:<br/>
 555 Bryant Str, Ste 470,<br/>
 Palo Alto, CA 94301, USA.
 
