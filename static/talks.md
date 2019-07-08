@@ -84,6 +84,13 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F64904410%2F177770519432%2F1%2Foriginal.20190705-020420?w=800&auto=compress&rect=722%2C331%2C1218%2C609&s=45e69d009ea44fa2fbc9dbdbc5dac49c" class="future-talk" alt="ProgBlog"/><br/>
+IT-карьера в США и России<br/>
+[ProgBlog Meetup](https://www.eventbrite.com/e/progblog-meetup-it--tickets-64765274680)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+15 August.
+
+<div class="talk-event">&nbsp;</div>
 <img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="future-talk" alt="QAFest 2019"/><br/>
 Quality Assurance vs. Testing<br/>
 [QA Fest](http://qafest.com/en/)<br/>
