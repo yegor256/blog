@@ -84,7 +84,7 @@ making them be _sellers_ of their results. You've got the resources (money), whi
 you are ready to release if your people provide you what you need. Obviously,
 you don't need them [_to work_]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}),
 you need their _results_, such as a list of emails, a new
-feature, a bug fix, a new document, or maybe a new UI mockup.
+feature, a bug fix, a new document, or maybe a new UI mock-up.
 
 You, as a pragmatic and smart project manager, define what the project
 needs from its participants, you put a _price tag_ on each need, and let programmers
