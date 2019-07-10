@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Inversive Management"
-date: 2019-07-02
+date: 2019-07-10
 place: Moscow, Russia
 tags: testing
 description: |
@@ -10,13 +10,13 @@ description: |
   be truly responsible for their results.
 keywords:
   - management
-  - reversive management
+  - inversive management
   - software management
   - programming
   - manage programmers
-image: /images/2019/07/...
+image: /images/2019/07/the-gambler.jpg
 jb_picture:
-  caption:
+  caption: The Gambler (2014) by Rupert Wyatt
 ---
 
 If you are a [manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})
@@ -27,7 +27,7 @@ to _your_ plans, achieving _your_ objectives, to _your_ quality standards,
 and within the borders of _your_ requirements and expectations? Some of you
 may say that these are _our_ objectives, _our_ mutual plans, _our_ quality
 standards, and _our_ requirements. This may be true, but initially they are still only yours.
-How do you make them theirs? There are two ways: a traditional one and an inversive
+How do you make them theirs? There are two ways: a traditional one and an _inversive_
 one.
 
 <!--more-->
@@ -86,6 +86,8 @@ you don't need them [_to work_]({% pst 2015/jul/2015-07-21-hourly-pay-modern-sla
 you need their _results_, such as a list of emails, a new
 feature, a bug fix, a new document, or maybe a new UI mock-up.
 
+{% quote This is the cure for all management problems: make them chase you. %}
+
 You, as a pragmatic and smart project manager, define what the project
 needs from its participants, you put a _price tag_ on each need, and let programmers
 worry about how they deliver, how they solve their own problems, and
@@ -98,8 +100,8 @@ code or administering a database. However, if you don't do it,
 you will be [managed]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %})
 by your programmers, not the other way around. You will
 have to constantly chase them and literally beg for results. They will
-be relaxed, you will be worried. They will get paid, you will be punished
+be relaxed, you will be worried. They will get paid, you will be
+[punished]({% pst 2019/jun/2019-06-19-how-much-they-suffer %})
 for their mistakes.
 
 I suggest you _invert_ the situation and let _them_ worry.
-
