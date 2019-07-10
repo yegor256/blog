@@ -101,5 +101,5 @@ have to constantly chase them and literally beg for results. They will
 be relaxed, you will be worried. They will get paid, you will be punished
 for their mistakes.
 
-I suggesting you _invert_ the situation and let _them_ worry.
+I suggest you _invert_ the situation and let _them_ worry.
 
