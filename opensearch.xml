@@ -2,7 +2,7 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>yegor256</ShortName>
   <Description>Search yegor256.com</Description>
-  <Tags>programming oop agile java</Tags>
+  <Tags>programming oop management zerocracy agile java ruby</Tags>
   <Contact>me@yegor256.com</Contact>
   <Url type="application/atom+xml" template="https://www.yegor256.com/opensearch.html?q={searchTerms}&amp;format=atom"/>
   <Url type="application/rss+xml" template="https://www.yegor256.com/opensearch.html?q={searchTerms}&amp;format=rss"/>
@@ -10,7 +10,7 @@
   <LongName>Yegor's Blog About Computers</LongName>
   <Image height="128" width="128" type="image/png">https://www.yegor256.com/favicon.ico</Image>
   <Developer>Yegor Bugayenko</Developer>
-  <Attribution>Copyright 2014-2018, Yegor Bugayenko, All Rights Reserved</Attribution>
+  <Attribution>Copyright 2014-2019, Yegor Bugayenko, All Rights Reserved</Attribution>
   <Query role="example" searchTerms="java"/>
   <SyndicationRight>open</SyndicationRight>
   <AdultContent>false</AdultContent>

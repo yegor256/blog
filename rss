@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-07-04T09:58:46+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">TDD Misbeliefs</title><link href="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html" rel="alternate" type="text/html" title="TDD Misbeliefs" /><published>2019-07-02T00:00:00+00:00</published><updated>2019-07-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/02/tdd-misbeliefs</id><content type="html" xml:base="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html">&lt;p&gt;While I was working with a
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-07-10T06:39:05+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Inversive Management</title><link href="https://www.yegor256.com/2019/07/10/inversive-management.html" rel="alternate" type="text/html" title="Inversive Management" /><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/10/inversive-management</id><content type="html" xml:base="https://www.yegor256.com/2019/07/10/inversive-management.html">&lt;p&gt;If you are a &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;manager&lt;/a&gt;
+in a software team, your job
+is to make your people get things done. This is obvious. The question though is
+how exactly you make it happen. How do you make them do what &lt;em&gt;you&lt;/em&gt; want, according
+to &lt;em&gt;your&lt;/em&gt; plans, achieving &lt;em&gt;your&lt;/em&gt; objectives, to &lt;em&gt;your&lt;/em&gt; quality standards,
+and within the borders of &lt;em&gt;your&lt;/em&gt; requirements and expectations? Some of you
+may say that these are &lt;em&gt;our&lt;/em&gt; objectives, &lt;em&gt;our&lt;/em&gt; mutual plans, &lt;em&gt;our&lt;/em&gt; quality
+standards, and &lt;em&gt;our&lt;/em&gt; requirements. This may be true, but initially they are still only yours.
+How do you make them theirs? There are two ways: a traditional one and an &lt;em&gt;inversive&lt;/em&gt;
+one.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Gambler (2014) by Rupert Wyatt&quot; src=&quot;/images/2019/07/the-gambler.jpg&quot; longdesc=&quot;#dfa9af9a&quot; /&gt;&lt;figcaption id=&quot;dfa9af9a&quot;&gt;The Gambler (2014) by Rupert Wyatt&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is how it works, over and over again. First you hire them, and all of them are experts.
+Well, most of them. At least this is what their resumes say. Then you sit together and define a plan.
+It looks doable and you &lt;a href=&quot;/2019/05/28/trust-or-not.html&quot;&gt;trust&lt;/a&gt; them.
+They start working and soon enough you realize that some of them
+are lagging behind the promises made in the plan. You start &lt;del&gt;begging&lt;/del&gt; asking them
+to correct, to improve, to be more effective, to be more responsive,
+to commit, and to say focused. You may even hire an Agile coach to train them.
+They improve, but not for long.&lt;/p&gt;
+
+&lt;p&gt;You have “to stay on top of things” and never miss anything, if you want the project to succeed.
+You have to &lt;em&gt;care&lt;/em&gt;. You have to be in the office all the time.
+You know, from your experience, that without your permanent attention
+people don’t do what they are supposed to do. Eventually you start believing,
+together with &lt;a href=&quot;https://en.wikipedia.org/wiki/Peter_Drucker&quot;&gt;Peter Drucker&lt;/a&gt;,
+that “management is art” since you never know exactly how you have to
+&lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;support&lt;/a&gt; each of them,
+because every person is a Universe and must be taken care of, individually.&lt;/p&gt;
+
+&lt;p&gt;This is traditional management and it’s all about &lt;em&gt;you&lt;/em&gt;.
+You have to &lt;em&gt;care&lt;/em&gt;, you have to &lt;em&gt;worry&lt;/em&gt;, you have to &lt;em&gt;be there&lt;/em&gt; to make
+things happen, and you have to &lt;em&gt;chase&lt;/em&gt; them. You &lt;em&gt;need&lt;/em&gt; their results
+and they may provide them… if they feel like it. If you don’t
+&lt;em&gt;collect&lt;/em&gt; the results, you most probably won’t get anything, or very little.&lt;/p&gt;
+
+&lt;p&gt;There is, however, a better alternative, which looks
+like &lt;em&gt;inversive management&lt;/em&gt; to me. Here is a practical example. I hired
+a researcher a few days ago. She was supposed to find and build me a list
+of the most influential Twitter accounts of tech journalists. Here is how
+she suggested I structure our contract: “You pay me $5 per hour.”
+This would be traditional management. She works and I
+chase her, asking how is it going, is it a good quality list, is it big
+enough, are there any problems with finding the right people, and so on.
+I would have to worry about this small project.&lt;/p&gt;
+
+&lt;p&gt;Here is what I suggested instead: “I pay you $40 when the list is complete.”
+Now she has to chase me, to deliver the list to me and to collect the payment.
+She has to convince me that the list is good, long enough, and of
+good quality. She has to worry about the deadline, about the requirements,
+and about all the other problems related to the work. They’re all her troubles.&lt;/p&gt;
+
+&lt;p&gt;I made her chase me.&lt;/p&gt;
+
+&lt;p&gt;This, I believe, is the cure for all management problems:
+&lt;strong&gt;make them chase you&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;How do you do that? Just like I did—you turn yourself into a &lt;em&gt;buyer&lt;/em&gt;
+making them be &lt;em&gt;sellers&lt;/em&gt; of their results. You’ve got the resources (money), which
+you are ready to release if your people provide you what you need. Obviously,
+you don’t need them &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;&lt;em&gt;to work&lt;/em&gt;&lt;/a&gt;,
+you need their &lt;em&gt;results&lt;/em&gt;, such as a list of emails, a new
+feature, a bug fix, a new document, or maybe a new UI mock-up.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;This is the cure for all management problems: make them chase you.
+&lt;/aside&gt;
+
+&lt;p&gt;You, as a pragmatic and smart project manager, define what the project
+needs from its participants, you put a &lt;em&gt;price tag&lt;/em&gt; on each need, and let programmers
+worry about how they deliver, how they solve their own problems, and
+how to convince you that their results are good enough to be paid for.&lt;/p&gt;
+
+&lt;p&gt;Of course, it’s easy to put a price tag on a simple gig, like building
+a list of Twitter accounts. It’s much
+more difficult to do the same for a complex task, like writing source
+code or administering a database. However, if you don’t do it,
+you will be &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;managed&lt;/a&gt;
+by your programmers, not the other way around. You will
+have to constantly chase them and literally beg for results. They will
+be relaxed, you will be worried. They will get paid, you will be
+&lt;a href=&quot;/2019/06/19/how-much-they-suffer.html&quot;&gt;punished&lt;/a&gt;
+for their mistakes.&lt;/p&gt;
+
+&lt;p&gt;I suggest you &lt;em&gt;invert&lt;/em&gt; the situation and let &lt;em&gt;them&lt;/em&gt; worry.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">If you are a manager in a software team, your job is to make your people get things done. This is obvious. The question though is how exactly you make it happen. How do you make them do what you want, according to your plans, achieving your objectives, to your quality standards, and within the borders of your requirements and expectations? Some of you may say that these are our objectives, our mutual plans, our quality standards, and our requirements. This may be true, but initially they are still only yours. How do you make them theirs? There are two ways: a traditional one and an inversive one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/the-gambler.jpg" /></entry><entry><title type="html">TDD Misbeliefs</title><link href="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html" rel="alternate" type="text/html" title="TDD Misbeliefs" /><published>2019-07-02T00:00:00+00:00</published><updated>2019-07-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/02/tdd-misbeliefs</id><content type="html" xml:base="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html">&lt;p&gt;While I was working with a
 &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;previous article&lt;/a&gt; about
 Test-Driven Development (TDD)
 I read many blog posts and a few books on the subject and found
@@ -309,7 +395,10 @@ on a single employee, just like it’s impossible to reward a single
 employee for the overall success of the company. But it’s necessary to make
 all team members win and lose &lt;em&gt;proportionally&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Otherwise, it’s not a team.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Remember the famous article Who’s Got the Monkey? The gist of it is simple: good managers always make their subordinates responsible for their own results. When they attempt to send the monkey back to the manager’s shoulders by making excuses, the manager has to be on the alert and not accept the monkey, always keeping workers fully accountable and responsible for what they are doing. It’s a terrific principle, but it doesn’t work for most managers. Here is why. Let me tell you a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/moonrise-kingdom.jpg" /></entry><entry><title type="html">Where Do You Seek Help First?</title><link href="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html" rel="alternate" type="text/html" title="Where Do You Seek Help First?" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/11/where-do-you-seek-help</id><content type="html" xml:base="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html">&lt;p&gt;Just a few days ago a friend of mine, who is not a developer but a
+&lt;p&gt;Otherwise, it’s not a team.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What will your boss do if you miss a deadline? &lt;a href=&quot;https://twitter.com/hashtag/xdsd?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#xdsd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1147796639983263744?ref_src=twsrc%5Etfw&quot;&gt;July 7, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Remember the famous article Who’s Got the Monkey? The gist of it is simple: good managers always make their subordinates responsible for their own results. When they attempt to send the monkey back to the manager’s shoulders by making excuses, the manager has to be on the alert and not accept the monkey, always keeping workers fully accountable and responsible for what they are doing. It’s a terrific principle, but it doesn’t work for most managers. Here is why. Let me tell you a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/moonrise-kingdom.jpg" /></entry><entry><title type="html">Where Do You Seek Help First?</title><link href="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html" rel="alternate" type="text/html" title="Where Do You Seek Help First?" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/11/where-do-you-seek-help</id><content type="html" xml:base="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html">&lt;p&gt;Just a few days ago a friend of mine, who is not a developer but a
 co-founder of a software startup, asked me to help his programmers with
 a technical problem they got stuck with. I said “Why not?” and asked
 them what was going on. They told me that their PostgreSQL server was running
@@ -1367,239 +1456,4 @@ it to me, I will review it and perhaps add it to this list):&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/rugk/offline-qr-code&quot;&gt;rugk/offline-qr-code&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/Vatavuk/verano-http&quot;&gt;Vatavuk/verano-http&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="specs" /><summary type="html">Some time ago I wrote a blog post An Open Code Base Is Not Yet an Open Source Project where I suggested a few important qualities of a good open source repository/project. One of them was the well-written README file. Here I will try to give a few hints on how to create a good README file and what mistakes to avoid. I hope you find it helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/life-of-pi.jpg" /></entry><entry><title type="html">How to Use Nutch From Java, Not From the Command Line</title><link href="https://www.yegor256.com/2019/04/17/nutch-from-java.html" rel="alternate" type="text/html" title="How to Use Nutch From Java, Not From the Command Line" /><published>2019-04-17T00:00:00+00:00</published><updated>2019-04-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/17/nutch-from-java</id><content type="html" xml:base="https://www.yegor256.com/2019/04/17/nutch-from-java.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://nutch.apache.org/&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/8/89/Nutch_logo.svg&quot; style=&quot;width:92px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://nutch.apache.org/&quot;&gt;Apache Nutch&lt;/a&gt;
-is an open source framework written in Java. Its purpose
-is to help us crawl a set of websites (or the entire Internet), fetch
-the content, and prepare it for indexing by, say, Solr. A pretty useful
-framework if you ask me, however it is designed to be used &lt;del&gt;only&lt;/del&gt;
-mostly from the command line. You download the archive, unzip it, and run
-the binary file. It crawls and you get the data. However, I’ve got a project
-where this crawling had to be embedded into my own Java app. I realized
-that there is a complete absence of any documentation for that. Hence
-this blog post. It explains how you can use Nutch from Java, not from
-the command line.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;I’ll be talking about Nutch 1.15. There is a later version 2+, but I didn’t
-manage to make it work. If you know how, leave your comment below.&lt;/p&gt;
-
-&lt;p&gt;I’d recommend you read &lt;a href=&quot;https://examples.javacodegeeks.com/enterprise-java/apache-hadoop/apache-hadoop-nutch-tutorial/&quot;&gt;this tutorial&lt;/a&gt;
-first, to understand how Nutch works from the command line. Well,
-it helped me anyway.&lt;/p&gt;
-
-&lt;p&gt;Now, let’s see how we can use Nutch without the command line.
-First, you need these dependencies in your &lt;code&gt;pom.xml&lt;/code&gt;
-(Nutch uses &lt;a href=&quot;https://hadoop.apache.org/&quot;&gt;Apache Hadoop&lt;/a&gt;, that’s why we need the
-second dependency):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.apache.nutch&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;nutch&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.15&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.apache.hadoop&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;hadoop-common&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.7.2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-    [...]
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Next, this is your Java code, which does all the work:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.io.IOException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.nio.file.Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.nio.file.Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Comparator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.stream.Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.commons.io.FileUtils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.hadoop.conf.Configuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.nutch.crawl.CrawlDb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.nutch.crawl.Generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.nutch.crawl.Injector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.nutch.fetcher.Fetcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.nutch.parse.ParseSegment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.apache.nutch.tools.FileDumper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Create a default configuration object, which will read&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// the content of nutch-default.xml file from the classpath,&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// parse it and take its entire content as the default&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// configuration. Funny, but this interface is from Hadoop:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NutchConfiguration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Now it&amp;#39;s possible to reset some configuration parameters&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// by using this set() method. This one is mandatory, if you&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// don&amp;#39;t set it the crawling won&amp;#39;t work. The value is used&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// as User-Agent HTTP header.&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http.agent.name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;me, myself, and I&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// This one is also mandatory and we will discuss its&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// value below. You need to point Nutch to the directory&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// with compiled plugins and this collection is NOT in&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// its default JAR package, unfortunately.&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;plugin.folders&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProperty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;nutch.plugins.dir&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// First, we need to have a directory where everything will&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// happen. I assume you are familiar with Maven, so let&amp;#39;s use&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// its default temporary directory &amp;quot;target&amp;quot;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;home&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;target&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Next, we have to create a file with a list of URLs Nutch will&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// start crawling from:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;http://www.zerocracy.com&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targets&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;urls&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createDirectory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()));&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;list-of-urls.txt&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBytes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Next, we have to point Nutch to the directory with the&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// text file and let it &amp;quot;inject&amp;quot; our URLs into its database:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Injector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;inject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;crawldb&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// the directory with its database&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;urls&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// the directory with text files with URLs&lt;/span&gt;
-      &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// no idea what this is&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Now, it&amp;#39;s time to do a few cycles of fetching, parsing, and&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// updating. This is how Nutch works, in increments. Each increment&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// will bring new web pages to the database. The more increments&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// you run, the deeper Nutch will go into the Internet. Five here&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// is a very small number. If you really want to crawl deeper,&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// you will need hundreds of increments. I guess, anyway. I haven&amp;#39;t tried it.&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cycle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Now it&amp;#39;s time to dump what is fetched to a new directory,&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// which will contain HTML pages and all other files when&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// finished.&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createDirectory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;dump&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()));&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FileDumper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;dump&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;dump&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()),&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// where to dump&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;segments&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()),&lt;/span&gt;
-      &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cycle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Configuration&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// This is the directory with &amp;quot;segments&amp;quot;. Each fetching cycle&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// will produce its own collection of files. Each collection&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// is called a segment.&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;segments&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// First, we generate a list of target URLs to fetch from:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;crawldb&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;segments&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Then, we get the path of the current segment:&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sgmt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Batch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;segments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Then, we fetch, parse and update:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Fetcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sgmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ParseSegment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sgmt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CrawlDb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;crawldb&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;segments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
-          &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]::&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
-      &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Get the path of the most recent segment in the list,&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// sorted by the date/time of their creation.&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Comparator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;comparing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pay attention that &lt;code&gt;Path&lt;/code&gt; here is not the
-&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html&quot;&gt;&lt;code&gt;Path&lt;/code&gt;&lt;/a&gt; from JDK.
-It’s the &lt;a href=&quot;https://hadoop.apache.org/docs/r2.7.2/api/org/apache/hadoop/fs/Path.html&quot;&gt;&lt;code&gt;Path&lt;/code&gt;&lt;/a&gt; from Hadoop.
-Don’t ask me why.&lt;/p&gt;
-
-&lt;p&gt;This seems to be a pretty straight-forward algorithm, however
-there is one tricky part. Nutch, in order to work, needs a number
-of plugins, which are standalone JAR packages, which it doesn’t include
-in its default JAR. They exist in its
-&lt;a href=&quot;https://nutch.apache.org/downloads.html&quot;&gt;binary distribution&lt;/a&gt; and they
-are pretty heavy (over 250MB in Nutch 1.15). Nutch expects you to download
-the entire distribution, unpack, and run the binary &lt;code&gt;nutch&lt;/code&gt; they provide,
-which will work with the provided plugins.&lt;/p&gt;
-
-&lt;p&gt;What can we do, now that we are in Java, not in the command line? Here is what
-I suggest:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.googlecode.maven-download-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;download-maven-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.4.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;executions&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;execution&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;download-nutch&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;phase&amp;gt;&lt;/span&gt;generate-resources&lt;span class=&quot;nt&quot;&gt;&amp;lt;/phase&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;goals&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;wget&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/goals&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;http://artfiles.org/apache.org/nutch/1.15/apache-nutch-1.15-bin.zip&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;unpack&amp;gt;&lt;/span&gt;true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/unpack&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;outputDirectory&amp;gt;&lt;/span&gt;${project.build.directory}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/outputDirectory&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;overwrite&amp;gt;&lt;/span&gt;false&lt;span class=&quot;nt&quot;&gt;&amp;lt;/overwrite&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/execution&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/executions&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This Maven plugin will download the entire binary distribution of Nutch
-and will unpack it to &lt;code&gt;target/apache-nutch-1.15&lt;/code&gt;. The plugins will be
-in &lt;code&gt;target/apache-nutch-1.15/plugins&lt;/code&gt;. The only thing we still need
-to do is to set the system property for the unit test:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;pluginManagement&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.apache.maven.plugins&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-surefire-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;systemPropertyVariables&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;nutch.plugins.dir&amp;gt;&lt;/span&gt;${project.build.directory}/apache-nutch-1.15/plugins&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nutch.plugins.dir&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/systemPropertyVariables&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/pluginManagement&amp;gt;&lt;/span&gt;
-    [...]
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Actually, one more thing we have to do: copy the contents of the directory &lt;code&gt;conf&lt;/code&gt;
-from their binary distribution to our &lt;code&gt;src/main/resources&lt;/code&gt; directory. There
-are many files, including the most important &lt;code&gt;nutch-default.xml&lt;/code&gt;. They all
-have to be available on classpath, otherwise Nutch will complain in so
-many places and won’t be able to load the &lt;code&gt;Configuration&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;You can see how it all works together in this
-GitHub repository I created to illustrate the example:
-&lt;a href=&quot;https://github.com/yegor256/nutch-in-java&quot;&gt;yegor256/nutch-in-java&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you have any questions or suggestions, feel free to submit a pull request
-or comment here.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="java" /><summary type="html">Apache Nutch is an open source framework written in Java. Its purpose is to help us crawl a set of websites (or the entire Internet), fetch the content, and prepare it for indexing by, say, Solr. A pretty useful framework if you ask me, however it is designed to be used only mostly from the command line. You download the archive, unzip it, and run the binary file. It crawls and you get the data. However, I’ve got a project where this crawling had to be embedded into my own Java app. I realized that there is a complete absence of any documentation for that. Hence this blog post. It explains how you can use Nutch from Java, not from the command line.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="specs" /><summary type="html">Some time ago I wrote a blog post An Open Code Base Is Not Yet an Open Source Project where I suggested a few important qualities of a good open source repository/project. One of them was the well-written README file. Here I will try to give a few hints on how to create a good README file and what mistakes to avoid. I hope you find it helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/life-of-pi.jpg" /></entry></feed>
