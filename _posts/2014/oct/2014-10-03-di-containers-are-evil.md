@@ -43,8 +43,6 @@ of application execution. Remember: ideal objects
 [must be immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 and [may not contain setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
 
-{% youtube oV6Utb5Jows %}
-
 Instead, let's talk about "constructor injection"
 (like in [Google Guice](https://github.com/google/guice/wiki/Injections#constructor-injection))
 and its use with dependency injection **containers**.
@@ -167,6 +165,8 @@ public class App {
 The injection automatically finds out that in order to instantiate
 a `Budget` it has to provide an argument for its constructor. It will
 use an instance of class `Postgres`, which we instantiated in the injector.
+
+{% youtube oV6Utb5Jows %}
 
 This is the right and recommended way to use Guice. There are
 a few even darker patterns, though, which are possible but not recommended. For example,
