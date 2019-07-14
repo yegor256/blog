@@ -25,8 +25,8 @@ downtime, backups and system administrators.
 [DynamoDB](http://aws.amazon.com/dynamodb/) is one of the steps towards this
 future.
 
-<blockquote class="twitter-tweet" lang="en"><p>This looks cool - jcabi-dynamo - a <a href="https://twitter.com/search?q=%23Java&amp;src=hash">#Java</a> Object layer atop the <a href="https://twitter.com/search?q=%23DynamoDB&amp;src=hash">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/search?q=%23aws&amp;src=hash">#aws</a></p>---Jeff Barr (@jeffbarr) <a href="https://twitter.com/jeffbarr/statuses/380813867971915777">September 19, 2013</a></blockquote>
-<script async='' src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">This looks cool - jcabi-dynamo - a <a href="https://twitter.com/hashtag/Java?src=hash&amp;ref_src=twsrc%5Etfw">#Java</a> Object layer atop the <a href="https://twitter.com/hashtag/DynamoDB?src=hash&amp;ref_src=twsrc%5Etfw">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/hashtag/aws?src=hash&amp;ref_src=twsrc%5Etfw">#aws</a></p>&mdash; Jeff Barr ☁️ (@jeffbarr) <a href="https://twitter.com/jeffbarr/status/380813867971915777?ref_src=twsrc%5Etfw">September 19, 2013</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <!--more-->
 
