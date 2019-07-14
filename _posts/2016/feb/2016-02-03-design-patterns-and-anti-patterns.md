@@ -41,8 +41,6 @@ Good one!
 [<span class='green'>Bridge</span>](https://en.wikipedia.org/wiki/Bridge_pattern).
 Good one!
 
-{% youtube WSgP85kr6eU %}
-
 [<span class='red'>Builder</span>](https://en.wikipedia.org/wiki/Builder_pattern).
 Terrible concept, since it encourages us to create and
 use big, complex objects. If you need a builder, there
@@ -64,6 +62,8 @@ It's just [a shame]({% pst 2016/jul/2016-07-06-data-transfer-object %}).
 [<span class='green'>Decorator</span>](https://en.wikipedia.org/wiki/Decorator_pattern).
 My [favorite]({% pst 2015/feb/2015-02-26-composable-decorators %}) one.
 I highly recommend you use it.
+
+{% youtube WSgP85kr6eU %}
 
 [<span class='red'>Facade</span>](https://en.wikipedia.org/wiki/Facade_pattern).
 Bad idea. In OOP, we need objects and only objects,
