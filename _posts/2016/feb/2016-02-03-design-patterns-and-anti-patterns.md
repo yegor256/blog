@@ -136,6 +136,8 @@ The idea is good, but the name is bad, since it
 A much better one would be "Source" and "Target." The Source
 generates events and the Target listens to them.
 
+{% youtube DEqcn4-freM %}
+
 [<span class='red'>ORM</span>](https://en.wikipedia.org/wiki/Object-relational_mapping).
 It's terrible and "offensive"; check
 [this]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}) out.
