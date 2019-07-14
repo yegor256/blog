@@ -32,8 +32,6 @@ I love or hate each one. Follow me, in alphabetic order.
 
 {% jb_picture_body %}
 
-{% youtube WSgP85kr6eU %}
-
 [<span class='green'>Abstract Factory</span>](https://en.wikipedia.org/wiki/Abstract_factory_pattern).
 It's OK.
 
@@ -42,6 +40,8 @@ Good one!
 
 [<span class='green'>Bridge</span>](https://en.wikipedia.org/wiki/Bridge_pattern).
 Good one!
+
+{% youtube WSgP85kr6eU %}
 
 [<span class='red'>Builder</span>](https://en.wikipedia.org/wiki/Builder_pattern).
 Terrible concept, since it encourages us to create and
