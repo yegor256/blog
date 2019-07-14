@@ -147,6 +147,9 @@ imagine a modern maintainable code base without tests. I would actually
 suggest changing that phrase to: "I get paid for code that is tested, not
 just for code."
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you do if a customer says: &quot;I won&#39;t pay for unit tests&quot;? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1150321038674354176?ref_src=twsrc%5Etfw">July 14, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 I will keep updating this post. If you know a "good" article about TDD,
 please send it [my way](mailto:tdd@yegor256.com); maybe I'll find
 something interesting to quote from it.
