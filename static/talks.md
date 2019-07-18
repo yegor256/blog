@@ -105,6 +105,13 @@ Are You Sure You Are Not a Micromanager?<br/>
 23-24 September.
 
 <div class="talk-event">&nbsp;</div>
+<img src="/images/2019/devopsconf.png" class="future-talk" alt="DevOpsConf 2019"/><br/>
+Reversive Decentralized Deployment: Zold Cryptocurrency Example<br/>
+[DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+30 September.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
 [HackConf](https://www.hackconf.bg/en/)<br/>
