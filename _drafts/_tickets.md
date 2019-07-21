@@ -1,28 +1,28 @@
 ---
 layout: post
 title: "25 Rules of Ticketing"
-date: 2018-01-10
+date: 2019-07-23
 place: Moscow, Russia
 tags: management
 description: |
   ...
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - tickets
+  - management by tickets
+  - micro tasking
+  - tasks and tickets
+  - ticketing
 image: /images/2017/12/
 jb_picture:
   caption:
 ---
 
 I wrote [Five Principles of Bug Tracking]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})
-three years ago. This blog post is a refinement of the point
+three years ago. This new blog post is a refinement of the point
 I tried to deliver back then. Here is a list of my best practices, habits,
 principles, and recommendations for those who manage their software
-development projects using ticket tracking systems.
-I'm planning to update this page regularly.
+development projects using ticket tracking systems, like [JIRA](https://www.atlassian.com/software/jira),
+[GitHub](https://github.com), or what have you.
 
 <!--more-->
 
@@ -37,10 +37,10 @@ what is broken, not how it should be fixed;
 here is [why]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}#5-report-when-it-is-broken).
 
 Never start discussions, always report problems;
-if something is not clear&mdash;it's a bug in documentation, it is broken.
+if something is not clear&mdash;it's a bug in the documentation.
 
 Never re-open tickets;
-always start a new one even if the same problem re-appears.
+always start a new one, even if the same problem re-appears.
 
 Always link a new ticket to an existing one, if they are relevant.
 

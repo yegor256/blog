@@ -113,3 +113,5 @@ their work, we need to break them down into smaller ones.
 
 That's it. Forget about singletons; never use them. Turn them into dependencies
 and pass them from object to object through the operator `new`.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you use Singletons in your code? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1152983961674702848?ref_src=twsrc%5Etfw">July 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
