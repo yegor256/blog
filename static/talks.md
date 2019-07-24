@@ -130,18 +130,6 @@ Not Russian any more, sorry.
 These are the topics I'm interested to speak about and they are
 pretty fresh (I haven't presented them before, as of yet):
 
-  * **The Biggest Mistake of an Honest Tester**.
-    Most of us programmers, testers, and their managers, believe that testing
-    is needed in order to make the software better. This is true. However,
-    many of us also believe that the job of a tester is to verify the software
-    and confirm that it's ready for end-users. Testing departments in most
-    software companies do exactly that---they go through their test scenarios,
-    validate that the functionality is still there and give the green light
-    for deployment. This kind of thinking is absolutely wrong, according to many
-    authors of software testing books. However, it still dominates the market.
-    Why it's happening? I will attempt to analyze and demonstrate by example
-    what's wrong with it.
-
   * **Are You Sure You Are Not a Micromanager?**
     Do you know what micromanagement is? It's when your manager is telling
     you exactly what you have to do right now in order to achieve the results
@@ -160,17 +148,6 @@ pretty fresh (I haven't presented them before, as of yet):
     place, if everything works just fine without it? I'll try to analyze
     the changes Java introduced over the last years, since its version 1.6,
     and find out which of them are making the language better or worse.
-
-  * **Can Distributed Teams Deliver Quality?**
-    It is a well known trend: software teams are becoming more distributed.
-    Programmers work from home, communicate remotely, contribute via
-    pull requests, and chat in Slack. How does it affect the quality
-    of software? Can those distributed teams compete with co-located ones?
-    Many managers think that it's impossible, because real quality
-    is achievable only when people know each other personally and have
-    direct face-to-face contacts on a daily basis. How true is that? I will
-    demonstrate that it's not true and will illustrate my thoughts with
-    practical examples.
 
   * **Reversive Decentralized Deployment: Zold Cryptocurrency Example**.
     A traditional deployment scenario includes a central point of control,
