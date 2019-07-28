@@ -100,8 +100,9 @@ learn the software I use, download its source code, read its documentation,
 until I _understand_ what's going on. Then, I get back to my part of the code,
 fix it with a full understanding, and call it a day. I sometimes even
 write a blog post about it, like
-this one [about Nutch]({% pst 2019/apr/2019-04-17-nutch-from-java %}) or
-this one [about Liquibase]({% pst 2014/jul/2014-07-20-liquibase-in-maven %}).
+this one about [Nutch]({% pst 2019/apr/2019-04-17-nutch-from-java %}),
+this one about [Liquibase]({% pst 2014/jul/2014-07-20-liquibase-in-maven %}),
+or this one about [CasperJS]({% pst 2014/jun/2014-06-21-casperjs-with-maven %}).
 My depression completely goes away. I don't hate myself anymore, don't hate
 my job, and don't hate the developers of those "stupid" libraries. I even
 help their projects with my blog posts.
