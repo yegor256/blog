@@ -155,3 +155,5 @@ Of course, when the project fails you find a new one, with a
 [bigger salary]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 and a new group of extremely talented people,
 and become very responsible again. Nice, huh?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A good manager, first of all, must be ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1155407856025460737?ref_src=twsrc%5Etfw">July 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
