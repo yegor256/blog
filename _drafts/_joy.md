@@ -44,8 +44,8 @@ most of this picture. According to him, they only knew how HTTP servers worked,
 caring very little about the rest. Most of them didn't even know what HTTP was,
 as long as the PHP code did what it was intended to.
 
-I remembered that interview and started asking similar questions to people I was interviewing
-later, being a CTO of my own company and an architect in a few other projects.
+I remembered that interview, and started asking similar questions to people I was interviewing
+later, being a CTO of my own company and an architect on a few other projects.
 His conclusions were confirmed. Indeed, most programmers don't understand how, for example,
 DNS works nor what it's for. Moreover, they feel just fine without this information.
 Does it mean they are bad programmers?
@@ -54,7 +54,7 @@ Let me tell you another story, which just happened to me a few days ago. I was
 solving a pretty complex technical problem, trying to integrate software
 I hadn't had a chance to use before with another piece of software I also hadn't
 seen before. It took three full days of work. Now I'm looking back at this
-short journey and realizing that I went though a few particular phases, which are always
+short journey and realizing that I went through a few particular phases, which are always
 the same for me when I start working with something new:
 
   * **Enthusiasm**.
@@ -74,7 +74,7 @@ the same for me when I start working with something new:
     Obviously, most of my assumptions are wrong. I start googling
     and stackoverflowing. The answers I get (if I get any) are not helping
     much, since the big picture is still missing and the best I can do
-    is to patch my code to make it work, according to the pieces of advice
+    is patch my code to make it work, according to the pieces of advice
     I'm getting from random sources. But I keep staying in the dark
     and the overall design concept is still not clear. And I'm still hoping
     to solve it all without reading the full Developers Manual manuscript.
