@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-07-10T06:39:05+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Inversive Management</title><link href="https://www.yegor256.com/2019/07/10/inversive-management.html" rel="alternate" type="text/html" title="Inversive Management" /><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/10/inversive-management</id><content type="html" xml:base="https://www.yegor256.com/2019/07/10/inversive-management.html">&lt;p&gt;If you are a &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;manager&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-07-30T13:08:06+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Joy of Programming</title><link href="https://www.yegor256.com/2019/07/30/joy-of-programming.html" rel="alternate" type="text/html" title="The Joy of Programming" /><published>2019-07-30T00:00:00+00:00</published><updated>2019-07-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/30/joy-of-programming</id><content type="html" xml:base="https://www.yegor256.com/2019/07/30/joy-of-programming.html">&lt;p&gt;Yesterday I was working with a slide deck for one of my future talks about
+Java and object-oriented programming and got stuck at finding convincing
+arguments for the &lt;em&gt;transparency of logic&lt;/em&gt;. I was going to say that it is
+important for programmers to be able to understand how everything they do
+works, even if they don’t see it or never want to see it. But then I realized
+that maybe not everybody thinks that way. Maybe some programmers prefer
+to stay in the dark about the majority of things,
+as long as the code in front of them “just works.” Hence this blog post,
+to ask you which side you are on.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Boardwalk Empire (2010–2014) by Terence Winter&quot; src=&quot;/images/2019/07/boardwalk-empire.jpg&quot; longdesc=&quot;#9be5155f&quot; /&gt;&lt;figcaption id=&quot;9be5155f&quot;&gt;Boardwalk Empire (2010–2014) by Terence Winter&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Many years ago I was at a job interview as a candidate. They were looking for
+a web architect and I was talking to their CTO. He asked me to explain what
+happens behind the scenes when we enter a new URL in a web browser and hit “Enter”.
+I drew him a small diagram with a domain registrar, a few DNS servers,
+a load balancer, a few HTTP servers, a few databases, and a few IP relays in the
+middle. I believe he was impressed by the answer (even though they didn’t hire me back then)
+and told me that the majority of web developers didn’t understand
+most of this picture. According to him, they only knew how HTTP servers worked,
+caring very little about the rest. Most of them didn’t even know what HTTP was,
+as long as the PHP code did what it was intended to.&lt;/p&gt;
+
+&lt;p&gt;I remembered that interview, and started asking similar questions to people I was interviewing
+later, being a CTO of my own company and an architect on a few other projects.
+His conclusions were confirmed. Indeed, most programmers don’t understand how, for example,
+DNS works nor what it’s for. Moreover, they feel just fine without this information.
+Does it mean they are bad programmers?&lt;/p&gt;
+
+&lt;p&gt;Let me tell you another story, which just happened to me a few days ago. I was
+solving a pretty complex technical problem, trying to integrate software
+I hadn’t had a chance to use before with another piece of software I also hadn’t
+seen before. It took three full days of work. Now I’m looking back at this
+short journey and realizing that I went through a few particular phases, which are always
+the same for me when I start working with something new:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Enthusiasm&lt;/strong&gt;.
+Here I start quickly, usually from a Quick Start one-pager of the
+new library I’m going to use. I skim through the documentation, ignore
+the majority of it, since it doesn’t make any sense, and quickly
+copy-paste what they recommend. It all seems easy and I’m expecting
+the code to work in a few minutes. And usually it does.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Guessing&lt;/strong&gt;.
+I start making changes to the simple code I just copy-pasted and I make
+some assumptions about the logic behind it. I don’t know how the products
+I’m using are designed, but I need to rely on something. So, I rely
+on what I can &lt;em&gt;guess&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Frustration&lt;/strong&gt;.
+Obviously, most of my assumptions are wrong. I start googling
+and stackoverflowing. The answers I get (if I get any) are not helping
+much, since the big picture is still missing and the best I can do
+is patch my code to make it work, according to the pieces of advice
+I’m getting from random sources. But I keep staying in the dark
+and the overall design concept is still not clear. And I’m still hoping
+to solve it all without reading the full Developers Manual manuscript.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Depression&lt;/strong&gt;.
+Very soon I realize that I’m just a monkey trying to start an aircraft.
+Maybe it will fly and maybe I will even manage to land it. But I’m still
+a monkey and it’s very depressing. I have no joy in doing this. I hate
+myself for being stupid. I hate those library creators for making it
+so not obvious to use. And I hate my job.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I believe these four phases are very common for all of us software engineers.
+However, what happens afterwards distinguishes good programmers from bad ones. To be
+honest, I belong to both categories, depending on the situation. What
+do I do when I’m being a bad programmer? I make it all work and call it a day, still
+with no idea what is going on inside nor why exactly it works this way
+and doesn’t work the way I tried before. My depression doesn’t go anywhere.
+It only escalates. I still hate myself, but my software works. I move
+on to the next problem, waiting for the weekend to come.&lt;/p&gt;
+
+&lt;p&gt;What do I do when I’m a good programmer? I dive deeper into the problem,
+learn the software I use, download its source code, read its documentation,
+until I &lt;em&gt;understand&lt;/em&gt; what’s going on. Then, I get back to my part of the code,
+fix it with a full understanding, and call it a day. I sometimes even
+write a blog post about it, like
+this one for &lt;a href=&quot;/2019/04/17/nutch-from-java.html&quot;&gt;Nutch&lt;/a&gt;,
+this one about &lt;a href=&quot;/2014/07/20/liquibase-in-maven.html&quot;&gt;Liquibase&lt;/a&gt;,
+or this one about &lt;a href=&quot;/2014/06/21/casperjs-with-maven.html&quot;&gt;CasperJS&lt;/a&gt;.
+My depression completely goes away. I don’t hate myself anymore, don’t hate
+my job, and don’t hate the developers of those “stupid” libraries. I even
+help their projects with my blog posts.&lt;/p&gt;
+
+&lt;p&gt;How do I decide which way to choose: to behave like a bad programmer
+or like a good one? You may think it depends on the time/budget I have
+for the job at hand, but you would be wrong. It totally depends on my
+&lt;em&gt;readiness&lt;/em&gt; to live in depression.&lt;/p&gt;
+
+&lt;p&gt;Some time ago I told myself that I won’t do it anymore. I don’t want to be
+a &lt;em&gt;monkey&lt;/em&gt; flying an aircraft. I want to be a &lt;em&gt;pilot&lt;/em&gt;. Of course, the learning
+curve will be longer, but the result is … joy. I do enjoy my work when I clearly
+and transparently see the logic of every line of code I write. I know exactly
+why I write them, what they do, and what will happen if I change them. I don’t
+know all the details, of course, I know where to click in order to find those
+details. This is what makes my work fun for me: the transparency of my
+coding logic.&lt;/p&gt;
+
+&lt;p&gt;I truly enjoy being in charge of everything my code does. I love to feel that it
+does exactly what I want it to do. You may say I’m a control freak—maybe so.
+But this is where I’ve been getting most of the fun, over the last 30 years of coding:
+seeing computers do what I want. If some libraries try to take this away from me, putting
+me in the passenger’s seat, I will do everything I can to get back in the
+driving seat. I want to know what’s going on and I want this to happen according
+to my will. I want to enjoy my work.&lt;/p&gt;
+
+&lt;p&gt;Now, back to my conference talk. I’m going to show this piece of code in one of my slides
+(this is how &lt;a href=&quot;https://spring.io/&quot;&gt;Spring Framework&lt;/a&gt; is supposed to be used):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@Controller&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/hello&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Model&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addAttribute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;index&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then I will ask a question: Do you know who is making an instance of the &lt;code&gt;HelloController&lt;/code&gt;
+class and how that instance is being used? Who is calling its methods, why
+and when? Moreover, do you know how to modify that behavior? My point
+at the conference will be that a good framework must make it easier for
+its users to understand its &lt;em&gt;internals&lt;/em&gt;. Because good programmers do want
+to know what’s inside. Bad programmers, on the other hand, are OK with
+being aircraft-flying monkeys.&lt;/p&gt;
+
+&lt;p&gt;What about you?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">Yesterday I was working with a slide deck for one of my future talks about Java and object-oriented programming and got stuck at finding convincing arguments for the transparency of logic. I was going to say that it is important for programmers to be able to understand how everything they do works, even if they don’t see it or never want to see it. But then I realized that maybe not everybody thinks that way. Maybe some programmers prefer to stay in the dark about the majority of things, as long as the code in front of them “just works.” Hence this blog post, to ask you which side you are on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/boardwalk-empire.jpg" /></entry><entry><title type="html">Inversive Management</title><link href="https://www.yegor256.com/2019/07/10/inversive-management.html" rel="alternate" type="text/html" title="Inversive Management" /><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/10/inversive-management</id><content type="html" xml:base="https://www.yegor256.com/2019/07/10/inversive-management.html">&lt;p&gt;If you are a &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;manager&lt;/a&gt;
 in a software team, your job
 is to make your people get things done. This is obvious. The question though is
 how exactly you make it happen. How do you make them do what &lt;em&gt;you&lt;/em&gt; want, according
@@ -19,7 +156,7 @@ It looks doable and you &lt;a href=&quot;/2019/05/28/trust-or-not.html&quot;&gt;
 They start working and soon enough you realize that some of them
 are lagging behind the promises made in the plan. You start &lt;del&gt;begging&lt;/del&gt; asking them
 to correct, to improve, to be more effective, to be more responsive,
-to commit, and to say focused. You may even hire an Agile coach to train them.
+to commit, and to stay focused. You may even hire an Agile coach to train them.
 They improve, but not for long.&lt;/p&gt;
 
 &lt;p&gt;You have “to stay on top of things” and never miss anything, if you want the project to succeed.
@@ -218,6 +355,9 @@ file names make our code more readable and maintainable. It’s impossible to
 imagine a modern maintainable code base without tests. I would actually
 suggest changing that phrase to: “I get paid for code that is tested, not
 just for code.”&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you do if a customer says: &amp;quot;I won&amp;#39;t pay for unit tests&amp;quot;? &lt;a href=&quot;https://twitter.com/hashtag/codeahead?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#codeahead&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1150321038674354176?ref_src=twsrc%5Etfw&quot;&gt;July 14, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;I will keep updating this post. If you know a “good” article about TDD,
 please send it &lt;a href=&quot;mailto:tdd@yegor256.com&quot;&gt;my way&lt;/a&gt;; maybe I’ll find
@@ -1103,7 +1243,7 @@ focused on what matters, every day.&lt;/p&gt;
 
 &lt;p&gt;P.S. There is a curated list of causes, risks, and effects, where you can
 pick your the one most revelant to your case: &lt;a href=&quot;https://github.com/yegor256/awesome-risks&quot;&gt;yegor256/awesome-risks&lt;/a&gt;.
-You can even add your ideas there.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">“A project manager’s work should not focus on dealing with problems; it should focus on preventing them,”—this is how Rita Mulcahy started a chapter about Risk Management in her great book PMP Exam Prep. Sounds smart, but how does a project manager know about the problems which are supposed to be prevented? This is what that chapter and Risk Management Tricks of the Trade for Project Managers (yet another great book by the same author) are dedicated to. What I learned from these books, and from my multi-year experience of identifying, analyzing and dealing with risks, is that the best format for specifying them consists of three parts: cause, risk, and effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-departed.jpg" /></entry><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+You can even add your ideas there.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">“A project manager’s work should not focus on dealing with problems; it should focus on preventing them,”—this is how Rita Mulcahy started a chapter about Risk Management in her great book PMP Exam Prep. Sounds smart, but how does a project manager know about the problems which are supposed to be prevented? This is what that chapter and Risk Management Tricks of the Trade for Project Managers (yet another great book by the same author) are dedicated to. What I learned from these books, and from my multi-year experience of identifying, analyzing and dealing with risks, is that the best format for specifying them consists of three parts: cause, risk, and effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-departed.jpg" /></entry><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; was a big technical mystery for me. All the articles I’d read
 about it sounded extremely complex and absolutely indigestible. Until
@@ -1249,211 +1389,4 @@ sent—well, minus the miner fee. You just provide your own address and
 the change will arrive there.&lt;/p&gt;
 
 &lt;p&gt;This is pretty much all you need to know about Bitcoin and Blockchain,
-in order to use it. What did I miss?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="crypto" /><summary type="html">Bitcoin was a big technical mystery for me. All the articles I’d read about it sounded extremely complex and absolutely indigestible. Until I got stuck with a task: I had to integrate Zold, our experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study the architecture of Bitcoin and I found this short and simple video (I highly recommend you watch it). I managed to implement the integration and understand how Blockchain works. Here is my short summary. I hope it will be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-invention-of-lying.jpg" /></entry><entry><title type="html">Elegant READMEs</title><link href="https://www.yegor256.com/2019/04/23/elegant-readme.html" rel="alternate" type="text/html" title="Elegant READMEs" /><published>2019-04-23T00:00:00+00:00</published><updated>2019-04-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/04/23/elegant-readme</id><content type="html" xml:base="https://www.yegor256.com/2019/04/23/elegant-readme.html">&lt;p&gt;Some time ago I wrote a blog post
-&lt;a href=&quot;/2018/05/08/open-source-attributes.html&quot;&gt;&lt;em&gt;An Open Code Base Is Not Yet an Open Source Project&lt;/em&gt;&lt;/a&gt;
-where I suggested a few important qualities of a good open
-source repository/project. One of them was the well-written README
-file. Here I will try to give a few hints on how to create
-a good README file and what mistakes to avoid. I hope you find it
-helpful.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Life of Pi (2012) by Ang Lee&quot; src=&quot;/images/2019/04/life-of-pi.jpg&quot; longdesc=&quot;#2a0870e6&quot; /&gt;&lt;figcaption id=&quot;2a0870e6&quot;&gt;Life of Pi (2012) by Ang Lee&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I will list everything you need to have in the README, in the order
-those elements should show up:&lt;/p&gt;
-
-&lt;h2 id=&quot;title-and-description&quot;&gt;Title and Description&lt;/h2&gt;
-
-&lt;p&gt;Why include these? The title is already in the URL of your repo and the description
-of the project is in the GitHub subtitle. Why repeat yourself? Instead,
-start with a logo and a list of badges right after it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;img src=&amp;quot;http://www.takes.org/logo.png&amp;quot; height=&amp;quot;64px&amp;quot;/&amp;gt;
-
-[![Build Status](https://travis-ci.org/zold-io/zold.svg?branch=master)](https://travis-ci.org/zold-io/zold)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pay attention to the empty line after the logo. Don’t forget to specify
-the size of the image in the &lt;code&gt;height&lt;/code&gt; attribute. You can skip the &lt;code&gt;width&lt;/code&gt;,
-since just one dimension is enough for the HTML. Don’t make it larger
-than 100px in height.&lt;/p&gt;
-
-&lt;h2 id=&quot;badges&quot;&gt;Badges&lt;/h2&gt;
-
-&lt;p&gt;You need them, as I &lt;a href=&quot;/2018/05/08/open-source-attributes.html&quot;&gt;said earlier&lt;/a&gt;.
-But the question is how to position them inside the README.
-You should put no more than fives badges in a line. Then separate the
-lines with an empty line. See how it’s done in
-our &lt;a href=&quot;https://github.com/zold-io/zold&quot;&gt;zold-io/zold&lt;/a&gt; repo.&lt;/p&gt;
-
-&lt;p&gt;You should group them somehow in the lines, using some logic. I group them
-by the level of technical details. The first line is about CI, code coverage,
-code quality. The second line is more about management, etc. It’s up to you,
-but make sure all badges that stay in the same line are of the same height!
-If some badge has a different height than everything else, give it its own
-line, but never put two badges of a different height on the same line!&lt;/p&gt;
-
-&lt;p&gt;Also, remember that only in a few very specific cases (like badges, for example)
-are you allowed to make lines longer than 80 characters. Treat your README
-document as a piece of source code. Make it properly and elegantly formatted.
-The width of the line is one of those formatting rules that will make
-your document look better. Eighty characters. That’s it.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-it&quot;&gt;What is it?&lt;/h2&gt;
-
-&lt;p&gt;Your first paragraph after the badges should explain what the product is
-about. Pay attention: a &lt;em&gt;paragraph&lt;/em&gt;, not a page of text. You should put
-the description of the product in one single paragraph. No bullets here,
-no new lines, no indentations. Just a plain simple piece of text:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;**Takes** is a
-[true object-oriented](http://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
-and [immutable](http://www.yegor256.com/2014/06/09/objects-should-be-immutable.html)
-Java7 web development framework. Its key benefits,
-comparing to all others, include four fundamental principles:
-1) not a single `null`, 2) not a single `public` `static`
-method, 3) not a single mutable class, and 4) not
-a single `instanceof` keyword, type casting, or reflection.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pay attention, there are no headings yet. Just a logo, a few lines with badges
-and some plain text with the description of the product. You may, and should,
-use &lt;a href=&quot;https://help.github.com/en/articles/basic-writing-and-formatting-syntax&quot;&gt;markdown&lt;/a&gt;
-here and point the reader to any relevant blog posts or YouTube
-videos or anything else, but make sure you fit your entire idea into
-a single paragraph.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-use-it&quot;&gt;How to use it?&lt;/h2&gt;
-
-&lt;p&gt;Then, again without any headings, you just get right to the point of how I can
-use your baby, as a complete newbie to this repo. I just opened this
-page because a friend of mine told me that it’s great and I want to understand
-if it’s worth it or whether I should close it right now. You have my attention for another
-60 seconds. Tell me &lt;em&gt;how to try it&lt;/em&gt;! Something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;First, you install it:
-
-```
-$ gem install zold
-```
-
-Then, you run it and follow the instructions:
-
-```
-$ zold --help
-```
-
-It should be clear what to do. If not, ask us in
-our [Telegram chat](https://t.me/zold_io).&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pay attention to the formatting. I don’t indent anything and I use triple-apostrophe
-for code-sample formatting. You should do the same. Separate text blocks with
-a &lt;a href=&quot;/2014/11/03/empty-line-code-smell.html&quot;&gt;&lt;em&gt;single&lt;/em&gt;&lt;/a&gt; empty line.&lt;/p&gt;
-
-&lt;h2 id=&quot;use-cases&quot;&gt;Use cases&lt;/h2&gt;
-
-&lt;p&gt;Here starts the body of your README. The exact content depends on your specific
-business case and the nature of your product. However, no matter what the
-product, there are a few recommendations.&lt;/p&gt;
-
-&lt;p&gt;First, don’t replace automatically generated Javadocs
-(or whatever you have in your language) with the README. The README is not
-user documentation for everything you have in your repo. There are
-other places for that. What you can do here is explain a few of the most
-interesting use cases. See how we did it in the
-&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;yegor256/takes&lt;/a&gt; project.&lt;/p&gt;
-
-&lt;p&gt;Second, start each use case with a header of the second level (&lt;code&gt;##&lt;/code&gt; in Markdown),
-and try to avoid third-level headers (&lt;code&gt;###&lt;/code&gt;). Do I need to say that
-the fourth level is absolutely prohibited? And, of course, again, no indenting.
-Always start your text lines from the far left position, no matter
-whether it’s a paragraph of text or a section header.&lt;/p&gt;
-
-&lt;p&gt;Third, keep in mind that you will change your
-product very soon and you don’t want to always remember where in the
-README file you have to change what. You want your README to stay
-as short as possible and as high-level as possible. That’s why, if you can,
-avoid specific details and instead redirect the reader to the relevant
-parts of the &lt;em&gt;automatically&lt;/em&gt; generated documentation.&lt;/p&gt;
-
-&lt;p&gt;Fourth, use as few words as you can. Nobody is interested in reading
-your prose for more than a few seconds and only in order to understand
-how to use your product or how to make some changes. Don’t focus on yourself,
-we don’t care about you. Focus on us and our needs. Tell us how it works
-and call it a README. No philosophy, no prose. Use your blog and Twitter
-for those.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-contribute&quot;&gt;How to contribute&lt;/h2&gt;
-
-&lt;p&gt;Start it with a section header “How to contribute” and explain briefly
-what needs to be done in order to create a pull request to your repo. Imagine
-that you are talking to a junior developer who doesn’t even know what
-Java and Maven are (if your project is using them). You should explain how
-to install the right tools, how to build the project, how to make changes,
-how to run it in a hot-reload mode (when I’m making changes and see them
-on the screen immediately), how to create the fork, and what to expect
-when the fork is submitted.&lt;/p&gt;
-
-&lt;p&gt;Don’t be too verbose. Actually, be as compact as you can. Always, where possible,
-redirect the reader to the documentation of those tools or some blog posts,
-which explain better. See how it’s done in the README of &lt;a href=&quot;https://github.com/zold-io/wts.zold.io#how-to-contribute&quot;&gt;zold-io/wts.zold.io&lt;/a&gt;,
-a web app written in Ruby. The short piece of text at the bottom of the page
-explains what you have to install (providing links to the installation tutorials),
-how to run the app locally, how to run the build, how to run a single
-unit test and what to do if it doesn’t work. It’s pretty compact and, I believe,
-easy to understand.&lt;/p&gt;
-
-&lt;p&gt;You don’t want your potential contributor to walk away. That’s why this
-part of the entire README is the most important one. Make sure you address
-your text to a junior programmer, not yourself. As they say, your grandma
-should be able to understand you here.&lt;/p&gt;
-
-&lt;p&gt;And don’t teach us. We are not interested in becoming experts in the
-frameworks you are using or in Docker, which is required in order to
-run your stuff. We just want to run your stuff, make some changes,
-get a new release, and walk away. So, please, don’t tell me “first, you
-have to learn Docker.” No, I don’t. If I did, I’d have done it myself already.
-Tell me how to use it in &lt;em&gt;this specific case&lt;/em&gt;, and spare me all the rest.&lt;/p&gt;
-
-&lt;h2 id=&quot;downloads-and-releases&quot;&gt;Downloads and Releases&lt;/h2&gt;
-
-&lt;p&gt;GitHub has a special tab “releases” for that. No need to repeat it in the
-README. Just make sure your “releases” tab contains enough information
-and enough binary artifacts to download. Don’t say a word about them
-in the README.&lt;/p&gt;
-
-&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;GitHub automatically finds your &lt;code&gt;LICENSE.txt&lt;/code&gt; file in the root directory
-of your repository and understands the license. Just create that file
-and don’t say anything in the README about the license, it’s just pure noise.
-If I want to know what the license is, I know where to click.&lt;/p&gt;
-
-&lt;h2 id=&quot;changelog&quot;&gt;Changelog&lt;/h2&gt;
-
-&lt;p&gt;This is something from pre-GitHub time. I would recommend you rely
-on the “releases” tab and keep everything you want to tell us there.
-Some old projects maintain changelogs, like this one in
-&lt;a href=&quot;https://github.com/rubocop-hq/rubocop/blob/master/CHANGELOG.md&quot;&gt;rubocop-hq/rubocop&lt;/a&gt;,
-for example. I don’t think it’s a good idea.&lt;/p&gt;
-
-&lt;h2 id=&quot;contributors-vs-acknowledgements&quot;&gt;Contributors vs. Acknowledgements&lt;/h2&gt;
-
-&lt;p&gt;GitHub has a special tab in each repository, which is called “contributors.”
-There is absolutely no reason to reproduce the list in the README file.
-However, there is one reason: to help the contributors promote themselves. In such a case,
-I would recommend creating a section (with a heading) called “Acknowledgements,”
-which should list the most active contributors, with their blog URLs,
-Twitter accounts, and so on.&lt;/p&gt;
-
-&lt;p&gt;If you don’t have anyone to acknowledge, don’t make a noise by telling us
-who the contributors are. We know them, GitHub tells us.&lt;/p&gt;
-
-&lt;p&gt;PS. Here is a short list of READMEs I like, which are not mine
-(if you think that yours is good too, &lt;a href=&quot;maito:readme-review@yegor256.com&quot;&gt;email&lt;/a&gt;
-it to me, I will review it and perhaps add it to this list):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rugk/offline-qr-code&quot;&gt;rugk/offline-qr-code&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/Vatavuk/verano-http&quot;&gt;Vatavuk/verano-http&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="specs" /><summary type="html">Some time ago I wrote a blog post An Open Code Base Is Not Yet an Open Source Project where I suggested a few important qualities of a good open source repository/project. One of them was the well-written README file. Here I will try to give a few hints on how to create a good README file and what mistakes to avoid. I hope you find it helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/04/life-of-pi.jpg" /></entry></feed>
+in order to use it. What did I miss?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="crypto" /><summary type="html">Bitcoin was a big technical mystery for me. All the articles I’d read about it sounded extremely complex and absolutely indigestible. Until I got stuck with a task: I had to integrate Zold, our experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study the architecture of Bitcoin and I found this short and simple video (I highly recommend you watch it). I managed to implement the integration and understand how Blockchain works. Here is my short summary. I hope it will be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-invention-of-lying.jpg" /></entry></feed>

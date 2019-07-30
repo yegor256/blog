@@ -99,8 +99,6 @@ of application execution. Remember: ideal objects
 <a href="/2014/06/09/objects-should-be-immutable.html">must be immutable</a>
 and <a href="/2014/09/16/getters-and-setters-are-evil.html">may not contain setters</a>.</p>
 
-
-
 <p>Instead, let’s talk about “constructor injection”
 (like in <a href="https://github.com/google/guice/wiki/Injections#constructor-injection">Google Guice</a>)
 and its use with dependency injection <strong>containers</strong>.
@@ -211,6 +209,8 @@ like we did before. Instead, we should use the injector we just created:</p>
 <p>The injection automatically finds out that in order to instantiate
 a <code>Budget</code> it has to provide an argument for its constructor. It will
 use an instance of class <code>Postgres</code>, which we instantiated in the injector.</p>
+
+
 
 <p>This is the right and recommended way to use Guice. There are
 a few even darker patterns, though, which are possible but not recommended. For example,
