@@ -14,9 +14,9 @@ keywords:
   - spring framework
   - depression programmer
   - programmer depression
-image: /images/2019/07/
+image: /images/2019/07/boardwalk-empire.jpg
 jb_picture:
-  caption:
+  caption: Boardwalk Empire (2010–2014) by Terence Winter
 ---
 
 Yesterday I was working with a slide deck for one of my future talks about
@@ -152,5 +152,3 @@ to know what's inside. Bad programmers, on the other hand, are OK with
 being aircraft-flying monkeys.
 
 What about you?
-
-
