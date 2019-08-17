@@ -39,7 +39,7 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-{% webinar 07-08-2019 46 oNtTAF0UjjA Xembly, an imperative language for XML manipulations %}
+<!-- {% webinar 07-08-2019 46 oNtTAF0UjjA Xembly, an imperative language for XML manipulations %} -->
 
 <a href="https://www.youtube.com/watch?v=oNtTAF0UjjA"><img src="https://i.ytimg.com/vi/oNtTAF0UjjA/mqdefault.jpg" class="wnr" alt="Webinar no.46 by Yegor Bugayenko"/></a>
 August 7, 2019<br/>
