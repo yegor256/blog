@@ -15,7 +15,6 @@ abstract
 abstraction
 abstractions
 abuse
-abusers
 abusing
 abusive
 academic
@@ -44,7 +43,6 @@ accounts
 accuracy
 accurate
 accurately
-accusation
 accusations
 accuse
 accused
@@ -121,7 +119,6 @@ adore
 adults
 advance
 advanced
-advances
 advantage
 advantages
 advice
@@ -172,7 +169,6 @@ ahead
 AI-powered
 aim
 aiming
-aims
 aintshy
 air
 airbnb
@@ -183,7 +179,6 @@ AJAX
 aka
 al
 alan
-alcohol
 alert
 alerts
 alexey
@@ -223,7 +218,6 @@ alternative
 alternatively
 alternatives
 although
-altman
 alto
 altogether
 altruism
@@ -265,7 +259,6 @@ anarchy
 ancestors
 ancient
 and
-anders
 andreea
 android
 andronache
@@ -297,7 +290,6 @@ annoying
 annoys
 annual
 annually
-anomalous
 anonymous
 another
 answer
@@ -307,11 +299,9 @@ answers
 anthony
 anti-
 anti-depressant
-anti-gay
 anti-OOP
 anti-pattern
 anti-patterns
-anti-semitic
 anti-social
 anticipated
 antiquated
@@ -345,7 +335,6 @@ apple
 apples
 applicability
 applicable
-applicant
 applicants
 application
 application-centric
@@ -482,8 +471,6 @@ attached
 attaches
 attachment
 attachments
-attack
-attacked
 attempt
 attempted
 attempts
@@ -678,8 +665,6 @@ bench
 beneficial
 benefit
 benefits
-benevolence
-benner
 berlin
 bernie
 bertrand
@@ -711,7 +696,6 @@ big-time
 bigger
 biggest
 bigotry
-bigots
 bike
 bill
 billed
@@ -744,7 +728,6 @@ black-and-white
 blackberry
 blacked
 blacks
-blacks'
 blah
 blame
 blamed
@@ -768,7 +751,6 @@ blogosphere
 blogspot
 blood
 bloody
-blouses
 BLS
 blue
 bluff
@@ -794,7 +776,6 @@ book's
 booked
 bookinfile
 bookkeeping
-booklets
 bookmarks
 books
 BooksDAO
@@ -832,7 +813,6 @@ bout
 bowling
 box
 boxes
-boys
 bozhanov
 bozhidar
 braces
@@ -889,7 +869,6 @@ browsers
 browsing
 bruce
 brutti
-bruvik
 BSc
 BSD
 BTC
@@ -996,10 +975,7 @@ campaigns
 can
 can't
 cancel
-canceled
 cancellable
-cancellation
-cancels
 cancer
 candidate
 candidate's
@@ -1048,7 +1024,6 @@ CasperJS
 cassandra
 cast
 casting
-castrates
 casual
 cat
 catalogs
@@ -1139,7 +1114,6 @@ charges
 charging
 charisma
 charismatic
-charity
 charles
 charm
 chars
@@ -1151,7 +1125,6 @@ chatbots
 chats
 chatter
 chatterbot
-chauvinism
 che
 cheap
 cheaper
@@ -1174,7 +1147,6 @@ cheering
 cheerleader
 cheerleaders
 chef
-chess
 chevrolet
 chew
 chicken
@@ -1197,7 +1169,6 @@ chose
 chosen
 chris
 chris's
-christians
 christmas
 chrome
 chronological
@@ -1213,7 +1184,6 @@ circumstances
 cities
 citing
 citizen
-citizens
 city
 civil
 civilization
@@ -1294,7 +1264,6 @@ CNAME
 CNN
 co
 co-developers
-co-discoverer
 co-found
 co-founder
 co-founder's
@@ -1388,7 +1357,6 @@ commas
 comment
 comments
 commercial
-commies
 commission
 commit
 commitment
@@ -1408,9 +1376,6 @@ communication
 communications
 communicative
 communicator
-communism
-communist
-communists
 communities
 community
 compact
@@ -1639,7 +1604,6 @@ controller
 controllers
 controlling
 controls
-controversial
 convenience
 convenient
 convention
@@ -1699,7 +1663,6 @@ correctly
 correctness
 correlated
 correspond
-corresponding
 corrupted
 corruption
 cortege
@@ -1774,12 +1737,10 @@ credentials
 credible
 credit
 crew
-cried
 crime
 crimen
 crimes
 criminal
-criminals
 cripple
 criteria
 criterion
@@ -1849,12 +1810,10 @@ cute
 cutting
 cutting-edge
 CV
-cybersecurity
 cycle
 cycles
 cycling
 d-s
-dad
 dagger
 daily
 damage
@@ -1882,8 +1841,6 @@ date
 DATFlock
 dating
 daughter
-dave
-dave's
 david
 day
 day-to-day
@@ -1910,7 +1867,6 @@ dear
 death
 debate
 debates
-debating
 debt
 debts
 debug
@@ -2061,7 +2017,6 @@ deserialized
 deserve
 deserved
 deserves
-deserving
 design
 design-patterns
 design-wise
@@ -2087,7 +2042,6 @@ destabilized
 destination
 destroy
 destroyed
-destroying
 destroys
 destruct
 destructive
@@ -2173,7 +2127,6 @@ directories
 directory
 dirt
 dirty
-disabilities
 disable
 disabled
 disadvantage
@@ -2278,7 +2231,6 @@ divide
 dividends
 divorce
 divorces
-DNA
 DNS
 do
 doable
@@ -2305,7 +2257,6 @@ doing
 dollar
 dollars
 dollars-per-hour
-dolls
 DOM
 domain
 domains
@@ -2323,7 +2274,6 @@ doodling
 doomed
 door
 doors
-doris
 dorks
 dot
 dotscale
@@ -2388,7 +2338,6 @@ dude
 due
 dues
 duh
-dull
 dumb
 dumber
 dummies
@@ -2471,7 +2420,6 @@ ehrenreich
 eight
 eighth
 einstein
-einstein's
 either
 el
 elastic
@@ -2487,7 +2435,6 @@ elements
 elevator
 eleven
 eleven-page
-eleventh
 eliciting
 eligible
 eliminating
@@ -2843,13 +2790,11 @@ failure-resilient
 failures
 fair
 fairly
-faithfulness
 fake
 fakes
 fall
 fallacy
 fallback
-fallen
 falling
 falls
 false
@@ -2910,7 +2855,6 @@ felt
 female
 females
 feminist
-feminists
 fetch
 fetches
 fetching
@@ -2977,7 +2921,6 @@ finishes
 fire
 fire-fighting
 fired
-firefighters
 firefighting
 firefox
 firing
@@ -2985,11 +2928,9 @@ firm
 firm's
 first
 firstitem
-fischer
 fish
 fisher
 fishy
-fist
 fit
 fits
 fitting
@@ -3018,9 +2959,6 @@ flexible
 flies
 flight
 flip
-flirt
-flirtation
-flirting
 float
 floor
 flourish
@@ -3222,7 +3160,6 @@ geeks
 gem
 gemfile
 gender
-genderless
 general
 generalize
 generally
@@ -3239,8 +3176,6 @@ generics
 generous
 genetically
 gentle
-gentleman
-gentlemen
 geographic
 gerard
 german
@@ -3314,7 +3249,6 @@ google
 google-killer
 googled
 googling
-GOP
 gosling
 got
 gotten
@@ -3396,7 +3330,6 @@ guilt
 guilt-driven
 guilty
 gulp
-gun
 gunshots
 gunslingers
 gurus
@@ -3453,7 +3386,6 @@ happens
 happier
 happiness
 happy
-harassers
 harassment
 harassment-free
 hard
@@ -3530,12 +3462,9 @@ helping
 helps
 hen
 hence
-henry
 her
 here
 here's
-heresies
-heritage
 hero
 hero-driven
 heroes
@@ -3600,13 +3529,11 @@ homeless
 homepage
 homework
 homogeneous
-homosexuals
 honest
 honestly
 honesty
 honor
 honored
-honors
 hood
 hook
 hooligans
@@ -3675,7 +3602,6 @@ hurts
 hybrid
 hyperlinear
 hypotheses
-hysteria
 hysterical
 i'd
 i'll
@@ -3717,7 +3643,6 @@ ignore
 ignored
 ignores
 ignoring
-ill-advised
 illegal
 illinois
 illness
@@ -3730,7 +3655,6 @@ illustrative
 image
 images
 imaginary
-imagination
 imaginative
 imagine
 imitate
@@ -3765,7 +3689,6 @@ important
 importantly
 importers
 imports
-impose
 impossible
 impractical
 impress
@@ -3794,18 +3717,15 @@ in-project
 inability
 inadequacy
 inapplicable
-inappropriate
 inbox
 inc
 incapable
-incautious
 incident
 incl
 include
 included
 includes
 including
-inclusiveness
 income
 incoming
 incomparably
@@ -3827,7 +3747,6 @@ incremental
 incrementally
 incremented
 increments
-incubator
 incurred
 indeed
 indefinitely
@@ -3852,13 +3771,11 @@ indivisible
 industry
 ineffective
 inefficient
-inequalities
 inequality
 inevitable
 inevitably
 inexpensive
 infamous
-inferior
 infinite
 infinity
 influence
@@ -3993,8 +3910,6 @@ interior
 internal
 internally
 internals
-international
-internationalist
 internet
 interpretation
 interpreted
@@ -4164,7 +4079,6 @@ JEEConf
 jeff
 jeff's
 jeffbarr
-jefferson
 jekyll
 jenkins
 jeopardize
@@ -4172,9 +4086,6 @@ JEP
 jerry
 jersey
 jetbrains
-jew
-jewish
-jews
 jez
 JFokus
 jgd
@@ -4201,7 +4112,6 @@ joking
 joKX
 jon
 jones
-jong-un
 jose
 joseph
 joshua
@@ -4250,14 +4160,11 @@ justifications
 justified
 justify
 JVM
-kalanick
 kanban
 kapralov
 karachi
 karl
-kasparov
 katakuris
-katie
 kawasaki
 kay
 kay's
@@ -4280,7 +4187,6 @@ keywords
 kharkiv
 khRFR
 kick
-kicked
 kicks
 kid
 kidding
@@ -4292,7 +4198,6 @@ killers
 killing
 kilograms
 kilos
-kim
 kimmel
 kind
 kindle
@@ -4302,12 +4207,9 @@ king
 kingdom
 kings
 kiss
-kissed
 kitchen
 kitties
-KKK
 knew
-knife
 knocking
 know
 knowing
@@ -4326,7 +4228,6 @@ kuban
 kube
 kudos
 KULouuKS
-kunst
 kw
 kyiv
 la
@@ -4380,7 +4281,6 @@ launched
 launching
 law
 law-abiding
-lawmaker's
 lawrence
 laws
 lawsuit
@@ -4434,7 +4334,6 @@ length
 lengthy
 leone
 less
-lessing
 lesson
 lessons
 let
@@ -4450,7 +4349,6 @@ lexer
 liability
 liao
 liar
-liberals
 libraries
 library
 license
@@ -4641,7 +4539,6 @@ makes
 making
 mal-functional
 male
-male-dominated
 males
 mallory
 malm
@@ -4649,7 +4546,6 @@ mam
 mambo-jambo
 mammals
 man
-man's
 man-month
 manage
 manageability
@@ -4685,7 +4581,6 @@ manuscript
 many
 many-hour-long
 map
-maple
 mapping
 mar
 march
@@ -4706,13 +4601,11 @@ marketing
 marriage
 married
 marry
-marrying
 mars
 marshalled
 marshalling
 martian
 martin
-masculine
 mask
 massage
 massive
@@ -4750,7 +4643,6 @@ mayonnaise
 mayonnaise-free
 mb
 mcbride
-mcclure
 mcconnell
 mccullough
 mcdonald's
@@ -4918,7 +4810,6 @@ minimize
 minimum
 minister
 minor
-minority
 minus
 minuses
 minute
@@ -5024,8 +4915,6 @@ mood
 morale
 more
 moreover
-mormon
-mormons
 morning
 moron
 moronic
@@ -5044,7 +4933,6 @@ motivation
 motivational
 motivator
 motives
-motor
 motto
 mount
 mountain
@@ -5060,7 +4948,6 @@ moving
 movo
 mozilla
 mph
-MRM
 MS
 MS-DOS
 MSc
@@ -5075,7 +4962,6 @@ multi-national
 multi-page
 multi-release
 multi-resolution
-multi-server
 multi-step
 multi-threaded
 multi-threading
@@ -5090,8 +4976,6 @@ mush
 music
 musk
 musk's
-muslim
-muslims
 must
 must-have
 must-read
@@ -5140,7 +5024,6 @@ naturally
 nature
 navigate
 nazi
-nazis
 nbsp
 NCC
 nd
@@ -5219,7 +5102,6 @@ no-server
 no-tests-upfront
 noaltruism
 noam
-nobel
 noble
 nobodies
 nobody
@@ -5235,7 +5117,6 @@ non-behavioral
 non-blockchain
 non-comment
 non-compete
-non-complete
 non-completion
 non-compromising
 non-descriptive
@@ -5480,14 +5361,12 @@ originated
 originates
 origins
 ORM
-orthodox
 orthogonal
 OS
 oscar
 oslo
 OSS
 OSSRH
-ostracize
 OSX
 other
 other's
@@ -5560,7 +5439,6 @@ owning
 owns
 paas
 pace
-pacifistic
 pacino
 pack
 packagable
@@ -5582,7 +5460,6 @@ pairs
 pakistan
 palo
 panel
-panic
 pantone
 pants
 paper
@@ -5693,7 +5570,6 @@ penalty
 penetrate
 pennies
 pens
-pensions
 pentad
 people
 people's
@@ -5766,7 +5642,6 @@ phrase
 physical
 physically
 physicians
-physics
 pick
 picked
 picks
@@ -5785,7 +5660,6 @@ pin
 pinaf
 ping
 pings
-pink
 pinpoint
 pint
 pinterest
@@ -5822,7 +5696,6 @@ platform
 platform-specific
 platforms
 play
-playboy
 played
 player
 player'
@@ -5855,7 +5728,6 @@ PO
 pocket
 podcast
 poems
-poetry
 point
 pointer
 pointers
@@ -5881,7 +5753,6 @@ politicians
 politics
 pollute
 polluters
-polunin
 polygamous
 polymorphic
 polymorphism
@@ -5897,7 +5768,6 @@ popular
 popularity
 populate
 population
-porn
 port
 portable
 portfolio
@@ -6006,7 +5876,6 @@ presenteeism
 presenter
 presenting
 presents
-president
 presidents
 press
 pressman
@@ -6059,7 +5928,6 @@ pro
 pro-active
 pro-actively
 pro-data
-pro-life
 proactive
 probabilities
 probability
@@ -6158,7 +6026,6 @@ proposing
 proprietary
 pros
 prose
-prosecuted
 prospect
 prospective
 prospects
@@ -6167,7 +6034,6 @@ protected
 protecting
 protection
 protections
-protectors
 protects
 protest
 protocol
@@ -6238,7 +6104,6 @@ pushes
 pushing
 pushover
 put
-putin
 puts
 putting
 puzzle
@@ -6282,7 +6147,6 @@ quote
 quotes
 quoting
 race
-racial
 racism
 racist
 rack
@@ -6305,8 +6169,6 @@ ranked
 ranking
 rant
 rapidly
-rapist
-rapists
 rapportive
 rare
 rarely
@@ -6334,7 +6196,6 @@ re-do
 re-estimated
 re-format
 re-iterate
-re-phrase
 re-read
 re-throw
 re-throwing
@@ -6581,7 +6442,6 @@ representatives
 represented
 representing
 represents
-repression
 reproduce
 reproduced
 reproduces
@@ -6815,7 +6675,6 @@ rusty
 ruthless
 rutracker
 s-class
-sacca
 sacred
 sacrifice
 sacrificed
@@ -6834,7 +6693,6 @@ salary
 sales
 sally
 salt
-sam
 same
 samir
 sample
@@ -6847,7 +6705,6 @@ sandwich
 sane
 sanitizer
 sans-serif
-sarah
 sarcasm
 sarcastic
 SASS
@@ -6876,7 +6733,6 @@ scalable
 scale
 scam
 scandal
-scandals
 scans
 scare
 scared
@@ -6895,7 +6751,6 @@ scheme
 schemes
 schlossberg
 school
-schoolmate
 schools
 science
 scientific
@@ -6924,7 +6779,6 @@ scroll
 scrolling
 SCRUM
 scrutinizer
-sculpture
 SDK
 SDK-s
 SE
@@ -6949,7 +6803,6 @@ sector
 sectors
 secure
 security
-seduce
 see
 seed
 seedramp
@@ -6971,12 +6824,10 @@ selected
 selection
 selects
 self
-self-appointed
 self-confidence
 self-descriptive
 self-discipline
 self-documented
-self-esteem
 self-explainable
 self-humiliation
 self-improvement
@@ -7031,7 +6882,6 @@ sequencer
 sequential
 sequentially
 seratch
-sergei
 sergey
 sergio
 serialization
@@ -7072,9 +6922,7 @@ severe
 severely
 severity
 sex
-sexes
 sexier
-sexist
 sexual
 sexy
 SF
@@ -7130,7 +6978,6 @@ shortage
 shorten
 shorter
 shortest
-shorts
 shot
 should
 shoulders
@@ -7177,7 +7024,6 @@ silly
 silver
 similar
 similarly
-simon
 simple
 simplecov
 simpler
@@ -7236,7 +7082,6 @@ skinparam
 skip
 skipped
 skipping
-skirts
 skype
 skyrocket
 skyrocketing
@@ -7302,7 +7147,6 @@ so-called
 social
 socialism
 socially
-societies
 society
 sociocratic
 sociopath
@@ -7318,7 +7162,6 @@ softness
 software
 solanolabs
 sold
-soldiers
 sole
 solely
 solicits
@@ -7414,7 +7257,6 @@ spend
 spending
 spends
 spent
-sphere
 spin-wait
 spirit
 splash
@@ -7716,7 +7558,6 @@ suppliers
 supply
 support
 supported
-supporter
 supporters
 supporting
 supportive
@@ -7728,7 +7569,6 @@ supreme
 suprise
 sur
 sure
-surgeons
 surpasses
 surprise
 surprised
@@ -7778,7 +7618,6 @@ systematic
 systematically
 systems
 t-shirt
-t-shirts
 tab
 table
 tables
@@ -7816,9 +7655,7 @@ tasked
 tasks
 taste
 tasteful
-tasteless
 tasty
-taught
 tax
 taxes
 taxi
@@ -7829,7 +7666,6 @@ TDD
 tea
 teach
 teacher
-teachers
 teaching
 team
 team's
@@ -7967,9 +7803,6 @@ thread-safe
 thread-safety
 threads
 threat
-threaten
-threatened
-threatening
 threatens
 threats
 three
@@ -8150,7 +7983,6 @@ trolling
 trotsky
 trouble
 troublemaker
-troublemakers
 troubles
 troubling
 true
@@ -8491,7 +8323,6 @@ view
 viewed
 views
 vigilant
-vigilantes
 villages
 villain
 vim
@@ -8519,7 +8350,6 @@ visitors
 visual
 visually
 vivian
-vJUG
 VLC
 vocabulary
 voice
@@ -8576,7 +8406,6 @@ watched
 watching
 water
 waterfall
-watson
 way
 ways
 wc
@@ -8586,13 +8415,11 @@ we'll
 we're
 we've
 weak
-weaker
 weakest
 weakness
 weaknesses
 wealth
 wealthy
-weapon
 weapons
 wear
 wearing
@@ -8663,7 +8490,6 @@ whine
 whispering
 white
 white-box
-whites'
 who
 who're
 who's
@@ -8714,21 +8540,16 @@ within
 without
 woke
 wolves
-woman
-woman's
 women
-women's
 won
 won't
 wonder
-wonderful
 wondering
 wood
 word
 word-counting
 wordpress
 words
-wore
 work
 work-from-home
 workaholic
@@ -8792,7 +8613,6 @@ XSD
 XSL
 XSL's
 XSLT
-y-combinator
 yahoo
 YAML
 YAY
