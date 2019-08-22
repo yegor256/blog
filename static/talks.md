@@ -111,6 +111,13 @@ The Biggest Mistake of an Honest Tester<br/>
 <span class="city">Sofia</span>, <span class="country">Bulgaria</span><br/>
 11-13 October.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.testcon.lt/wp-content/uploads/2018/05/TestCon-LOGO-pagrindinis_preview-min-e1525260818147.png" class="future-talk" alt="TestCon 2019"/><br/>
+The Biggest Mistake of an Honest Tester<br/>
+[TestCon Europe](https://www.testcon.lt/)<br/>
+<span class="city">Vilnius</span>, <span class="country">Lithuania</span><br/>
+17-18 October.
+
 <hr/>
 
 If you are interested in placing me at _your event_,
