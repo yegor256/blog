@@ -25,6 +25,11 @@ and published by myself outside of this blog
 
 Find me at [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ) too.
 
+[Why Programmers Should Curb Their Enthusiasm, and Thinking About Computational Thinking](https://cacm.acm.org/magazines/2019/9/238957-why-programmers-should-curb-their-enthusiasm-and-thinking-about-computational-thinking/fulltext)<br/>
+Communications of the ACM, Volume 62, Number 9<br/>
+September 2019<br/>
+[PDF](/pdf/2019/enthusiasm.pdf)
+
 [Discovering Bugs, or Ensuring Success?](https://cacm.acm.org/magazines/2018/9/230562-discovering-bugs-or-ensuring-success/fulltext)<br/>
 Communications of the ACM, Volume 61, Number 9<br/>
 August 2018<br/>
