@@ -16,6 +16,11 @@ keywords:
   - software engineers conferences
 ---
 
+29 Aug 2019:
+[IBF](https://www.youtube.com/channel/UC3z88nnyz04kpF_xt6GyY-A)
+with Helmuts Meškonis:
+[video](https://www.youtube.com/watch?v=VsFEJRyRA9U).
+
 18 Dec 2018:
 [АйтиХайп](https://www.youtube.com/channel/UC25Ol81YfP1wvJG37mTdYww)
 with Egor Tolstoy:

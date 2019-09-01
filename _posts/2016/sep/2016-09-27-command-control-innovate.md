@@ -112,3 +112,5 @@ A thousand years ago, masters physically damaged their slaves;
 today they damage us [mentally]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).
 Which one is worse? Where are we heading?
 I predict serious problems in the near future.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">To create great <a href="https://twitter.com/hashtag/software?src=hash&amp;ref_src=twsrc%5Etfw">#software</a> one needs...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1168041557649326080?ref_src=twsrc%5Etfw">September 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
