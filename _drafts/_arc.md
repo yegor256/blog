@@ -19,7 +19,7 @@ jb_picture:
 
 ...
 
-Obvious: size, complexity, NULL, static, DTOs, lack of tests (integration)
+Obvious: size, complexity, duplication, NULL, static, DTOs, lack of tests (integration)
 
 <!--more-->
 
