@@ -27,7 +27,7 @@ from both sides. Readers either
 1) [strongly agree](https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-4586377932)
 with me or
 2) [accuse me](https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-2021779372)
-of having no idea what morning standups are for.
+of having no idea what morning stand-ups are for.
 
 My point was: only weak managers need such meetings to coordinate
 the team, while strong ones use more formal instruments to
@@ -82,9 +82,9 @@ However, _most_ software groups don't have such great management, for many
 reasons. Thanks to how Agile has been diminishing project management for
 years, replacing it with leadership and "team work," many of the potentially good
 managers have lost their motivation to work as such. Needless to say, talent
-among managers is as rare as it is amoung programmers, dentists, or interior designers.
+among managers is as rare as it is among programmers, dentists, or interior designers.
 Moreover, great management does not tolerate mediocrity and makes mistakes visible, which, of course,
-the majority is always against---it will do everything possible to sabbotage this.
+the majority is always against---it will do everything possible to sabotage this.
 In most software teams an attempt to manage effectively, defining objectives
 explicitly and motivating by results, will most likely lead to a dismissal
 of such a courageous manager.
@@ -135,9 +135,9 @@ goals the team is trying to achieve. Here are a few examples of such a mechanism
 In order to put such an obvious and explicit motivational system in place
 the management has to be pretty smart and strong. Moreover, it will require a lot
 of work to do and may lead to serious problems with the team, since, as was
-mentioned above, the mediocre majority will try to sabottage it.
+mentioned above, the mediocre majority will try to sabotage it.
 
-Meetings, especially morning standups, are a "perfect" substitute, because
+Meetings, especially morning stand-ups, are a "perfect" substitute, because
 they make it possible to humiliate programmers regularly, triggering their
 innate guilt emotion, which sends these or similar signals to their brains:
 
@@ -148,12 +148,12 @@ innate guilt emotion, which sends these or similar signals to their brains:
   - Be a good boy/girl, don't keep us waiting!
   - If you don't it fix now, you will be ashamed tomorrow morning!
 
-Every morning standup meeting is a refreshment of guilt every programmer
+Every morning stand-up meeting is a refreshment of guilt every programmer
 needs in order to stay "motivated" and "engaged." This is the real
-reason why they are "more effective" than digitial and formal
+reason why they are "more effective" than digital and formal
 flows of information.
 
 Maybe some time in the future we will find a way to deliver guilt
 in a small pill that every programmer will have to swallow in the morning.
-Until such a pill is invented, keep doing morning standups.
+Until such a pill is invented, keep doing morning stand-ups.
 
