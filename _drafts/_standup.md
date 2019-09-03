@@ -118,7 +118,7 @@ of someone speaking in front of a group can be (I can confirm that too as a
 [regular](/talks.html) public speaker). Guilt kicks in and the programmer
 feels that his or her actions may cause or have already caused problems to others.
 The programmer gets back to the computer and starts working hard, without
-any objectives of motivation. Just to not let <del>mommy</del> others down!
+any objectives or motivation. Except to not let <del>mommy</del> others down!
 
 To the contrary, a strong and competent management employs formal reward-and-punishment mechanisms
 in order to align the personal objectives of each team member with the business
