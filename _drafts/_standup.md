@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Daily Standup Humiliation"
+title: "Daily Stand-up Humiliation"
 date: 2019-09-03
 place: Moscow, Russia
 tags: management agile
 description: |
-  Thos software teams that practice daily standup
+  Those software teams that practice daily stand-up
   meetings demonstrate utter disrespect to their programmers
-  and absolutely management incompetence.
+  and complete management incompetence.
 keywords:
   - daily standups are evil
   - daily standup
@@ -21,14 +21,15 @@ book: code-ahead-1 1.4
 ---
 
 A few years ago I wrote a [blog post]({% pst 2015/jan/2015-01-08-morning-standup-meetings %})
-about daily stand-up meeings many software
+about the daily stand-up meetings many software
 teams are doing regularly. Since then, the article has been getting comments
-from both sides: readers either
+from both sides. Readers either
 1) [strongly agree](https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-4586377932)
 with me or
 2) [accuse me](https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-2021779372)
-of having no idea what morning standups are for. My point was:
-only weak managers need such meetings to coordinate
+of having no idea what morning stand-ups are for.
+
+My point was: only weak managers need such meetings to coordinate
 the team, while strong ones use more formal instruments to
 organize the flow of information. However, as
 [someone noted](https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-3516161968),
@@ -53,10 +54,10 @@ by email, or even via a phone call? Well,
 we should use tickets,
 [of course]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
-Why "planning for the next day" and "discussing progress" need to be done
+Why do "planning for the next day" and "discussing progress" need to be done
 personally in a standing-up circle instead of digitally? Why can't we update
-each other about the progress via an email letter, a status board,
-or an Excel spreadsheet? Why planning can't be done in a software, which
+each other about progress via an email letter, a status board,
+or an Excel spreadsheet? Why can't planning be done in a software tool, which
 the market is full of? What's wrong with registering impediments as tickets,
 prioritizing, assigning, and resolving them one by one?
 
@@ -74,23 +75,23 @@ with a weak and incompetent <del>manager</del> management.
 A strong and professional management keeps the group together and makes it achieve
 the goal through 1) _explicitly-defined_ personal objectives
 and 2) _non-ambiguous_ motivational instruments. Simply put,
-at every moment of time everybody knows what exactly they have to do in order to get
+at every moment of time everybody knows exactly what they have to do in order to get
 <del>money</del> what they are there for.
 
-However, _most_ software groups don't have such a great management, for many
+However, _most_ software groups don't have such great management, for many
 reasons. Thanks to how Agile has been diminishing project management for
-years, replacing it with leadership and "team work," many of potentially good
-managers have lost their motivation to work as ones. Needless to say that talent
-among managers is as rare as amoung programmers, dentists, or interior designers.
-Moreover, great management intolerates mediocrity and makes mistakes visible, which
-the majority is always against of---it will do everything possible to sabbotage.
+years, replacing it with leadership and "team work," many of the potentially good
+managers have lost their motivation to work as such. Needless to say, talent
+among managers is as rare as it is among programmers, dentists, or interior designers.
+Moreover, great management does not tolerate mediocrity and makes mistakes visible, which, of course,
+the majority is always against---it will do everything possible to sabotage this.
 In most software teams an attempt to manage effectively, defining objectives
 explicitly and motivating by results, will most likely lead to a dismissal
 of such a courageous manager.
 
 As a result, most programmers neither have personal objectives nor motivational instruments:
 they stay in the office [from nine till five]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
-and get a raise every few years only by switching the company. And they have
+and get a raise every few years only by switching company. And they have
 supervisors, mentors, coaches, leaders, you name it, ... instead of managers.
 
 Thus, how is it possible to keep the group together and make sure programmers
@@ -112,15 +113,15 @@ even if they don't. The emotion kicks in when the group is listening and
 an individual is speaking, even if there is no real harm done to the group by the
 speaking individual. [_Code Ahead_](/code-ahead.html) quotes a number
 of academic papers confirming that, but there is no need to have a PhD
-in psychology in order to understand how vulnerable and scary is the position
-of someone speaking in front of a group (I can confirm that too as a
+in psychology in order to understand how vulnerable and scary the position
+of someone speaking in front of a group can be (I can confirm that too as a
 [regular](/talks.html) public speaker). Guilt kicks in and the programmer
-feels that his or her actions may cause or already caused problems to others.
+feels that his or her actions may cause or have already caused problems to others.
 The programmer gets back to the computer and starts working hard, without
-any objectives of motivation. Just to not let <del>mommy</del> others down!
+any objectives or motivation. Except to not let <del>mommy</del> others down!
 
 To the contrary, a strong and competent management employs formal reward-and-punishment mechanisms
-in order to align personal objectives of each team member with the business
+in order to align the personal objectives of each team member with the business
 goals the team is trying to achieve. Here are a few examples of such a mechanism
 (rewards and punishment mixed together):
 
@@ -133,10 +134,10 @@ goals the team is trying to achieve. Here are a few examples of such a mechanism
 
 In order to put such an obvious and explicit motivational system in place
 the management has to be pretty smart and strong. Moreover, it will require a lot
-of work to do and may lead to serious problems with the team, since, as it was
-mentioned above, the mediocre majority will sabottage.
+of work to do and may lead to serious problems with the team, since, as was
+mentioned above, the mediocre majority will try to sabotage it.
 
-Meetings, especially morning standups, are a "perfect" substitute, because
+Meetings, especially morning stand-ups, are a "perfect" substitute, because
 they make it possible to humiliate programmers regularly, triggering their
 innate guilt emotion, which sends these or similar signals to their brains:
 
@@ -145,14 +146,14 @@ innate guilt emotion, which sends these or similar signals to their brains:
   - Work on this ticket, we rely on you!
   - Deploy it faster, don't let us down!
   - Be a good boy/girl, don't keep us waiting!
-  - If you don't fix now, you will be ashamed tomorrow morning!
+  - If you don't it fix now, you will be ashamed tomorrow morning!
 
-Every morning standup meeting is a refreshment of guilt every programmer
+Every morning stand-up meeting is a refreshment of guilt every programmer
 needs in order to stay "motivated" and "engaged." This is the real
-reason why they are "more effective" than digitial and formal
-flow of information.
+reason why they are "more effective" than digital and formal
+flows of information.
 
 Maybe some time in the future we will find a way to deliver guilt
-in a small pill, every programmer will have to swallow in the morning?
-Until such a pill is invented, keep doing morning standups.
+in a small pill that every programmer will have to swallow in the morning.
+Until such a pill is invented, keep doing morning stand-ups.
 
