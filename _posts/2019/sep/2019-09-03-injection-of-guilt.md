@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Daily Stand-up Humiliation"
+title: "Daily Stand-up Injection of Guilt"
 date: 2019-09-03
 place: Moscow, Russia
 tags: management agile
@@ -14,9 +14,9 @@ keywords:
   - daily stand-up meetings
   - evil daily standup
   - guilt of meetings
-image: /images/2019/09/...
+image: /images/2019/09/barfuss.jpg
 jb_picture:
-  caption:
+  caption: Barfuss (2005) by Til Schweiger
 book: code-ahead-1 1.4
 ---
 
