@@ -813,6 +813,7 @@ bout
 bowling
 box
 boxes
+boy
 bozhanov
 bozhidar
 braces
@@ -1068,6 +1069,7 @@ centuries
 century
 CEO
 CEOs
+ceremony
 certain
 certainly
 certificate
@@ -1177,6 +1179,7 @@ chunks
 CI
 ciera
 cinemas
+circle
 CircleCI
 circles
 circulating
@@ -1274,6 +1277,7 @@ co-worker
 co-workers
 co-working
 coach
+coaches
 coaching
 coad
 coarse-grained
@@ -1634,6 +1638,7 @@ cool
 coolors
 cooperate
 cooperation
+coordinate
 coordinates
 coordinating
 coordination
@@ -1693,6 +1698,7 @@ coupled
 couples
 coupling
 courage
+courageous
 course
 courses
 court
@@ -2108,9 +2114,11 @@ dig
 digest
 digestible
 digital
+digitally
 dijkstra
 dilemma
 diligence
+diminishing
 dinner
 diplomacy
 diplomat
@@ -2187,6 +2195,7 @@ disillusionment
 disk
 dislike
 disloyal
+dismissal
 disney
 disobey
 disobeying
@@ -2462,6 +2471,7 @@ emitter
 emoji
 emojis
 emoluments
+emotion
 emotional
 emotionally
 emotions
@@ -2651,6 +2661,7 @@ examine
 example
 examples
 exceeded
+excel
 excellence
 excellent
 except
@@ -2720,6 +2731,7 @@ explanation
 explanations
 explicit
 explicitly
+explicitly-defined
 explicitness
 exploit
 exploiting
@@ -3399,6 +3411,7 @@ hardmen
 hardware
 harm
 harmful
+harming
 harms
 harness
 harold
@@ -4378,6 +4391,7 @@ limited
 limiting
 limits
 line
+lined
 lines
 lines-of-code
 lining
@@ -4703,6 +4717,7 @@ mentioned
 mentioning
 mentions
 mentoring
+mentors
 menu
 menus
 mercedes-benz
@@ -4849,6 +4864,7 @@ misunderstood
 MIT
 mitigation
 mix
+mixed
 mixins
 mo
 mobile
@@ -4879,6 +4895,7 @@ mom's
 moment
 momentary
 momentum
+mommy
 monday
 monetary
 monetize
@@ -5653,6 +5670,7 @@ pieces
 piggyback
 pike
 piled-up
+pill
 pills
 pilot
 pimp
@@ -5915,6 +5933,7 @@ prior
 priorities
 prioritize
 prioritizes
+prioritizing
 priority
 prism
 privacy
@@ -6281,6 +6300,7 @@ recruit
 recruited
 recruiter
 recruiters
+recruiting
 recruitment
 rectangle
 rectangles
@@ -6314,6 +6334,7 @@ reflection
 reflection-discoverable
 reflects
 refresh
+refreshment
 refrigerator
 refund
 refunds
@@ -6568,6 +6589,7 @@ revoke
 revolution
 revolver
 reward
+reward-and-punishment
 reward-focused
 rewarded
 rewarding
@@ -6601,6 +6623,7 @@ risks
 risky
 rita
 rita's
+ritual
 road
 road-side
 roadmap
@@ -6675,6 +6698,7 @@ rusty
 ruthless
 rutracker
 s-class
+sabotage
 sacred
 sacrifice
 sacrificed
@@ -7281,6 +7305,7 @@ spouse
 spouses
 spread
 spreads
+spreadsheet
 spreadsheets
 spring
 sprint
@@ -7330,6 +7355,7 @@ standardize
 standardized
 standards
 standing
+standing-up
 standish
 standpoint
 stands
@@ -7552,6 +7578,7 @@ superb
 superior
 superstar
 supervision
+supervisors
 supplementary
 supplied
 suppliers
@@ -7586,6 +7613,7 @@ sutherland
 SV
 SVG
 SVN
+swallow
 swallowing
 swallows
 swear
@@ -7862,6 +7890,7 @@ token
 told
 tolerance
 tolerant
+tolerate
 toll-free
 tom
 tomas
@@ -7973,6 +8002,7 @@ tried
 tries
 trigger
 triggered
+triggering
 triggers
 trimmed
 trio
@@ -8193,6 +8223,7 @@ upload
 uploading
 upon
 upper
+upsets
 upside
 upvotes
 upwork

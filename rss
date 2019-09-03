@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-08-22T20:00:03+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Joy of Programming</title><link href="https://www.yegor256.com/2019/07/30/joy-of-programming.html" rel="alternate" type="text/html" title="The Joy of Programming" /><published>2019-07-30T00:00:00+00:00</published><updated>2019-07-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/30/joy-of-programming</id><content type="html" xml:base="https://www.yegor256.com/2019/07/30/joy-of-programming.html">&lt;p&gt;Yesterday I was working with a slide deck for one of my future talks about
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-09-03T06:42:49+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Daily Stand-up Injection of Guilt</title><link href="https://www.yegor256.com/2019/09/03/injection-of-guilt.html" rel="alternate" type="text/html" title="Daily Stand-up Injection of Guilt" /><published>2019-09-03T00:00:00+00:00</published><updated>2019-09-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/03/injection-of-guilt</id><content type="html" xml:base="https://www.yegor256.com/2019/09/03/injection-of-guilt.html">&lt;p&gt;A few years ago I wrote a &lt;a href=&quot;/2015/01/08/morning-standup-meetings.html&quot;&gt;blog post&lt;/a&gt;
+about the daily stand-up meetings many software
+teams are doing regularly. Since then, the article has been getting comments
+from both sides. Readers either
+1) &lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-4586377932&quot;&gt;strongly agree&lt;/a&gt;
+with me or
+2) &lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-2021779372&quot;&gt;accuse me&lt;/a&gt;
+of having no idea what morning stand-ups are for.&lt;/p&gt;
+
+&lt;p&gt;My point was: only weak managers need such meetings to coordinate
+the team, while strong ones use more formal instruments to
+organize the flow of information. However, as
+&lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-3516161968&quot;&gt;someone noted&lt;/a&gt;,
+morning meetings are not supposed to be used by managers to coordinate anyone,
+but “to discuss progress, impediments and to plan.”
+I’m not buying it.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Barfuss (2005) by Til Schweiger&quot; src=&quot;/images/2019/09/barfuss.jpg&quot; longdesc=&quot;#1be2c198&quot; /&gt;&lt;figcaption id=&quot;1be2c198&quot;&gt;Barfuss (2005) by Til Schweiger&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s put the manager aside, since many of you
+&lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-2021783252&quot;&gt;believe&lt;/a&gt;
+that “it’s a team that delivers a product,” not a manager. Even though I’m not buying this either,
+let’s imagine a team that doesn’t need a
+&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;manager&lt;/a&gt; and can perfectly
+coordinate the work on its own. Even in this case I still ask the same question:
+why do we need to stand up and talk face-to-face in order “to discuss progress
+and impediments”? Why can’t we do this in writing, in a chat,
+by email, or even via a phone call? Well,
+&lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;ideally&lt;/a&gt;
+we should use tickets,
+&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;of course&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why do “planning for the next day” and “discussing progress” need to be done
+personally in a standing-up circle instead of digitally? Why can’t we update
+each other about progress via an email letter, a status board,
+or an Excel spreadsheet? Why can’t planning be done in a software tool, which
+the market is full of? What’s wrong with registering impediments as tickets,
+prioritizing, assigning, and resolving them one by one?&lt;/p&gt;
+
+&lt;p&gt;Nothing. All of this can and should be done online. That’s what computers
+were invented for. Everybody realizes that. However, Agile adepts
+&lt;a href=&quot;https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum&quot;&gt;strongly&lt;/a&gt;
+believe in face-to-face meetings, including this daily scrum ceremony. Why?&lt;/p&gt;
+
+&lt;p&gt;As I said in
+&lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt;, my recently published book,
+the only reasonable explanation I have is that
+the group needs this ritual in order to stay &lt;em&gt;united&lt;/em&gt;. And I meant the group
+with a weak and incompetent &lt;del&gt;manager&lt;/del&gt; management.&lt;/p&gt;
+
+&lt;p&gt;A strong and professional management keeps the group together and makes it achieve
+the goal through 1) &lt;em&gt;explicitly-defined&lt;/em&gt; personal objectives
+and 2) &lt;em&gt;non-ambiguous&lt;/em&gt; motivational instruments. Simply put,
+at every moment of time everybody knows exactly what they have to do in order to get
+&lt;del&gt;money&lt;/del&gt; what they are there for.&lt;/p&gt;
+
+&lt;p&gt;However, &lt;em&gt;most&lt;/em&gt; software groups don’t have such great management, for many
+reasons. Thanks to how Agile has been diminishing project management for
+years, replacing it with leadership and “team work,” many of the potentially good
+managers have lost their motivation to work as such. Needless to say, talent
+among managers is as rare as it is among programmers, dentists, or interior designers.
+Moreover, great management does not tolerate mediocrity and makes mistakes visible, which, of course,
+the majority is always against—it will do everything possible to sabotage this.
+In most software teams an attempt to manage effectively, defining objectives
+explicitly and motivating by results, will most likely lead to a dismissal
+of such a courageous manager.&lt;/p&gt;
+
+&lt;p&gt;As a result, most programmers neither have personal objectives nor motivational instruments:
+they stay in the office &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;from nine till five&lt;/a&gt;
+and get a raise every few years only by switching company. And they have
+supervisors, mentors, coaches, leaders, you name it, … instead of managers.&lt;/p&gt;
+
+&lt;p&gt;Thus, how is it possible to keep the group together and make sure programmers
+at least pretend to be working, if they have no personal responsibilities,
+their motivation is close to zero, and they can’t be discharged because the
+cost of recruiting new ones is extremely high? Moreover, new ones will behave exactly
+the same, simply because this is the most effective behavior for them, when the management
+is weak (or absent). What instrument can be employed to &lt;em&gt;make&lt;/em&gt; them work?&lt;/p&gt;
+
+&lt;p&gt;Guilt.&lt;/p&gt;
+
+&lt;p&gt;This emotion is one of a few fundamental ones. Most people feel it after
+harming someone and will try to avoid it. Programmers, lined up every morning
+and forced to explain themselves, inevitably feel guilty: for mistakes,
+for impediments, for lack of progress, for their dress, for their accent,
+for many other things. It doesn’t matter what they feel guilty for; what is
+important is to &lt;em&gt;regularly&lt;/em&gt; make them feel ashamed of letting other people down,
+even if they don’t. The emotion kicks in when the group is listening and
+an individual is speaking, even if there is no real harm done to the group by the
+speaking individual. &lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt; quotes a number
+of academic papers confirming that, but there is no need to have a PhD
+in psychology in order to understand how vulnerable and scary the position
+of someone speaking in front of a group can be (I can confirm that too as a
+&lt;a href=&quot;/talks.html&quot;&gt;regular&lt;/a&gt; public speaker). Guilt kicks in and the programmer
+feels that his or her actions may cause or have already caused problems to others.
+The programmer gets back to the computer and starts working hard, without
+any objectives or motivation. Except to not let &lt;del&gt;mommy&lt;/del&gt; others down!&lt;/p&gt;
+
+&lt;p&gt;To the contrary, a strong and competent management employs formal reward-and-punishment mechanisms
+in order to align the personal objectives of each team member with the business
+goals the team is trying to achieve. Here are a few examples of such a mechanism
+(rewards and punishment mixed together):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For each successful deployment you get $120&lt;/li&gt;
+  &lt;li&gt;When this unit test is fixed you get $200&lt;/li&gt;
+  &lt;li&gt;Every time the server is down for 5+ minutes you lose $500&lt;/li&gt;
+  &lt;li&gt;You &lt;a href=&quot;/2016/03/01/how-we-interview-programmers.html&quot;&gt;interview&lt;/a&gt; a new Java programmer and get $100&lt;/li&gt;
+  &lt;li&gt;You get $75 for each critical bug you can find&lt;/li&gt;
+  &lt;li&gt;If you don’t fix this ticket in 3 days, you won’t be paid for it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In order to put such an obvious and explicit motivational system in place
+the management has to be pretty smart and strong. Moreover, it will require a lot
+of work to do and may lead to serious problems with the team, since, as was
+mentioned above, the mediocre majority will try to sabotage it.&lt;/p&gt;
+
+&lt;p&gt;Meetings, especially morning stand-ups, are a “perfect” substitute, because
+they make it possible to humiliate programmers regularly, triggering their
+innate guilt emotion, which sends these or similar signals to their brains:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Don’t stop working, you will disappoint &lt;del&gt;your mom&lt;/del&gt; the team!&lt;/li&gt;
+  &lt;li&gt;Don’t open Facebook, it upsets everybody!&lt;/li&gt;
+  &lt;li&gt;Work on this ticket, we rely on you!&lt;/li&gt;
+  &lt;li&gt;Deploy it faster, don’t let us down!&lt;/li&gt;
+  &lt;li&gt;Be a good boy/girl, don’t keep us waiting!&lt;/li&gt;
+  &lt;li&gt;If you don’t it fix now, you will be ashamed tomorrow morning!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Every morning stand-up meeting is a refreshment of guilt every programmer
+needs in order to stay “motivated” and “engaged.” This is the real
+reason why they are “more effective” than digital and formal
+flows of information.&lt;/p&gt;
+
+&lt;p&gt;Maybe some time in the future we will find a way to deliver guilt
+in a small pill that every programmer will have to swallow in the morning.
+Until such a pill is invented, keep doing morning stand-ups.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="agile" /><summary type="html">A few years ago I wrote a blog post about the daily stand-up meetings many software teams are doing regularly. Since then, the article has been getting comments from both sides. Readers either 1) strongly agree with me or 2) accuse me of having no idea what morning stand-ups are for. My point was: only weak managers need such meetings to coordinate the team, while strong ones use more formal instruments to organize the flow of information. However, as someone noted, morning meetings are not supposed to be used by managers to coordinate anyone, but “to discuss progress, impediments and to plan.” I’m not buying it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/barfuss.jpg" /></entry><entry><title type="html">The Joy of Programming</title><link href="https://www.yegor256.com/2019/07/30/joy-of-programming.html" rel="alternate" type="text/html" title="The Joy of Programming" /><published>2019-07-30T00:00:00+00:00</published><updated>2019-07-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/30/joy-of-programming</id><content type="html" xml:base="https://www.yegor256.com/2019/07/30/joy-of-programming.html">&lt;p&gt;Yesterday I was working with a slide deck for one of my future talks about
 Java and object-oriented programming and got stuck at finding convincing
 arguments for the &lt;em&gt;transparency of logic&lt;/em&gt;. I was going to say that it is
 important for programmers to be able to understand how everything they do
@@ -97,6 +236,9 @@ help their projects with my blog posts.&lt;/p&gt;
 or like a good one? You may think it depends on the time/budget I have
 for the job at hand, but you would be wrong. It totally depends on my
 &lt;em&gt;readiness&lt;/em&gt; to live in depression.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;I don’t want to be a monkey flying an aircraft. I want to be a pilot.
+&lt;/aside&gt;
 
 &lt;p&gt;Some time ago I told myself that I won’t do it anymore. I don’t want to be
 a &lt;em&gt;monkey&lt;/em&gt; flying an aircraft. I want to be a &lt;em&gt;pilot&lt;/em&gt;. Of course, the learning
@@ -1243,150 +1385,4 @@ focused on what matters, every day.&lt;/p&gt;
 
 &lt;p&gt;P.S. There is a curated list of causes, risks, and effects, where you can
 pick your the one most revelant to your case: &lt;a href=&quot;https://github.com/yegor256/awesome-risks&quot;&gt;yegor256/awesome-risks&lt;/a&gt;.
-You can even add your ideas there.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">“A project manager’s work should not focus on dealing with problems; it should focus on preventing them,”—this is how Rita Mulcahy started a chapter about Risk Management in her great book PMP Exam Prep. Sounds smart, but how does a project manager know about the problems which are supposed to be prevented? This is what that chapter and Risk Management Tricks of the Trade for Project Managers (yet another great book by the same author) are dedicated to. What I learned from these books, and from my multi-year experience of identifying, analyzing and dealing with risks, is that the best format for specifying them consists of three parts: cause, risk, and effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-departed.jpg" /></entry><entry><title type="html">Sibit Demonstrates How Bitcoin Works</title><link href="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html" rel="alternate" type="text/html" title="Sibit Demonstrates How Bitcoin Works" /><published>2019-05-07T00:00:00+00:00</published><updated>2019-05-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client</id><content type="html" xml:base="https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;&lt;img src=&quot;https://github.com/yegor256/sibit/raw/master/logo.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; was a big technical mystery for me. All the articles I’d read
-about it sounded extremely complex and absolutely indigestible. Until
-I got stuck with a task: I had to integrate &lt;a href=&quot;https://www.zold.io&quot;&gt;Zold&lt;/a&gt;, our
-experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study
-the architecture of Bitcoin and I found this short and simple
-&lt;a href=&quot;https://www.youtube.com/watch?v=IV9pRBq5A4g&quot;&gt;video&lt;/a&gt; (I highly recommend you
-watch it). I managed to implement the integration and understand how
-Blockchain works. Here is my short summary. I hope it will be helpful.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Invention of Lying (2009) by Ricky Gervais et al.&quot; src=&quot;/images/2019/05/the-invention-of-lying.jpg&quot; longdesc=&quot;#c8bec95b&quot; /&gt;&lt;figcaption id=&quot;c8bec95b&quot;&gt;The Invention of Lying (2009) by Ricky Gervais et al.&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;First, there is a &lt;a href=&quot;https://en.bitcoin.it/wiki/Private_key&quot;&gt;private key&lt;/a&gt;,
-which is a short piece of text, for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;How did I generate it? It’s random. You can generate one too. Install
-&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;Sibit&lt;/a&gt;, my Ruby gem, and run the following
-(it’s a command line tool):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit generate
-c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Every time you call &lt;code&gt;sibit generate&lt;/code&gt; you will get a new private key. It is
-just a random piece of text (well, a large hex number).
-Then, you create an &lt;a href=&quot;https://en.bitcoin.it/wiki/Address&quot;&gt;address&lt;/a&gt;
-from your private key. Each private key has exactly one address.
-Here is how you create it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit create c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
-1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You give it to someone who wants to send you a payment. A transaction in Bitcoin is not what
-you’re used to thinking about when you imagine a bank transaction. A Bitcoin
-&lt;a href=&quot;https://en.bitcoin.it/wiki/Transaction&quot;&gt;transaction&lt;/a&gt;
-has a number of &lt;em&gt;input&lt;/em&gt; and &lt;em&gt;output&lt;/em&gt; addresses. Say, three inputs of 10 BTC each
-and two outputs of 25 BTC and 5 BTC. The sum of all inputs must be equal to the
-sum of all outputs.&lt;/p&gt;
-
-&lt;p&gt;Thus, in one transaction you can move a lot of digital money between addresses.
-You can take a hundred input addresses and send them to another hundred
-output addresses. This is what surprised me a bit when I discovered it. The
-transactions could be pretty large in size. And the sizes matter. They are
-calculated in bytes. A transaction with one input and one output will consume
-&lt;a href=&quot;https://bitcoin.stackexchange.com/questions/1195/&quot;&gt;about&lt;/a&gt; 220 bytes.
-Keep this number in mind, we will get back to it soon.&lt;/p&gt;
-
-&lt;p&gt;As you can imagine already, in order to calculate how much money you have
-&lt;em&gt;on&lt;/em&gt; your address you just go through all the transactions in the entire
-database (there are
-&lt;a href=&quot;https://www.blockchain.com/en/charts/n-transactions-total&quot;&gt;over 400 million&lt;/a&gt; already)
-and see how many transactions had your address as their outputs (your inputs). Then you
-deduct any transactions that were your outputs and someone else’s inputs. You get
-the balance. There are many public and free web services which can do this
-work for you. You don’t need to search the entire database yourself,
-just use &lt;a href=&quot;https://www.blockchain.com/api/blockchain_api&quot;&gt;Blockchain API&lt;/a&gt;
-(for example) and they will provide you with the information
-about any Bitcoin address. Try this address, for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit balance 1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY
-20000000&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It is in &lt;a href=&quot;https://en.bitcoin.it/wiki/Satoshi_%28unit%29&quot;&gt;satoshi&lt;/a&gt;,
-which is 0.2 BTC. Click &lt;a href=&quot;https://www.blockchain.com/btc/address/1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY&quot;&gt;here&lt;/a&gt;
-and you will
-see the inputs and outputs of this address. There is only one transaction
-that mentioned this address. That transaction had a single input and two
-outputs. One of its outputs was mine. I got 0.2 bitcoins and they are still
-here, since there are no transactions which &lt;em&gt;move&lt;/em&gt; them somewhere else.&lt;/p&gt;
-
-&lt;p&gt;Thus, simply put, the Blockchain database is a large list of transactions
-with inputs and outputs in each of them. Once a new transaction gets into
-this database, the balance of a few addresses change. The database only
-grows and no previous transactions can be deleted or modified. Thus, once
-your transaction gets in, the money is moved from address to address.&lt;/p&gt;
-
-&lt;p&gt;To create a transaction you need to know all the input addresses, their private keys,
-and all the output addresses. You need multiple inputs if you want to send
-an amount that is larger than you have in a single address. There is something
-known as a &lt;a href=&quot;https://www.bitcoin.com/bitcoin-wallet-directory&quot;&gt;wallet&lt;/a&gt;
-in Bitcoin, which is a piece of software, like &lt;a href=&quot;https://electrum.org/&quot;&gt;Electrum&lt;/a&gt;, which keeps track of all your
-addresses and knows how to create a transaction, combining a number of
-addresses and using them as inputs. That’s all.&lt;/p&gt;
-
-&lt;p&gt;So, you know the inputs, you specify the outputs and you are expected to leave a small amount
-unspent. Let’s say your inputs have 10,000 satoshi and you specify an output
-for 8,000. You leave the residual 2,000 unspent. They are called
-&lt;a href=&quot;https://en.bitcoin.it/wiki/Miner_fees&quot;&gt;miner fees&lt;/a&gt;.
-You send your transaction to all Bitcoin nodes, they place it in their
-memory pool, and attempt to combine a few thousand transactions in a
-&lt;a href=&quot;https://en.bitcoin.it/wiki/Block&quot;&gt;block&lt;/a&gt;.
-They all attempt together and only one of them manages to do it,
-&lt;a href=&quot;https://bitcoin.stackexchange.com/questions/8823&quot;&gt;approximately&lt;/a&gt;
-once every ten minutes. Once a winner manages to &lt;a href=&quot;https://en.bitcoin.it/wiki/Mining&quot;&gt;solve&lt;/a&gt;
-a block, it wins that 2,000 you left untouched in your transaction. Every transaction in the
-block pays that winner some small fee.&lt;/p&gt;
-
-&lt;p&gt;Is it possible to pay nothing?
-&lt;a href=&quot;https://bitcointalk.org/index.php?topic=245552&quot;&gt;Yes&lt;/a&gt;. However, the smaller the
-fee you leave in your transaction, the lower the chances that your
-transaction will go into the next block. Each miner wants to make the maximum
-out of each block and puts the most “generous” transactions in the block,
-when trying to &lt;a href=&quot;https://en.bitcoin.it/wiki/Mining&quot;&gt;mine&lt;/a&gt; it.&lt;/p&gt;
-
-&lt;p&gt;The fee depends on the size of the transaction in bytes. Since any transaction
-may include many inputs and outputs, its size is the only thing that matters.
-For example, the fee I paid in
-&lt;a href=&quot;https://www.blockchain.com/btc/tx/eede4bb2ad4e3c21a09cf238a282b08daab66937c726dce8fe07ab55793c4c51&quot;&gt;this transaction&lt;/a&gt;
-was 8,971 satoshi, which is approximately 40 satoshi per byte, since
-my transaction included 225 bytes.&lt;/p&gt;
-
-&lt;p&gt;To send your transaction to all Bitcoin nodes you have two options. The first
-one is to start your own &lt;a href=&quot;https://en.bitcoin.it/wiki/Full_node&quot;&gt;full node&lt;/a&gt;,
-which will communicate with
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Bitcoin_network&quot;&gt;other nodes&lt;/a&gt;
-through the Bitcoin &lt;a href=&quot;https://en.bitcoin.it/wiki/Protocol_documentation&quot;&gt;protocol&lt;/a&gt;.
-The second option is to use one of the HTTP relays, where you
-just post your transaction in a POST HTTP request and the relay sends it to all
-Bitcoin nodes; &lt;a href=&quot;https://www.blockchain.com/btc/pushtx&quot;&gt;this is&lt;/a&gt; one of them.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;Sibit&lt;/a&gt; automates this process. You just say:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ sibit pay 200000 L \
-  1K3J...se1TYe:c93a36feb3...e55108bde32477cbabac5f \
-  153dF1xKyVX5X8brBDroaqKkPmcB8kLtDB \
-  1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, the first argument is the amount you are sending. The second one
-is the fee you want to leave untouched. I made it easier for you, to help
-you avoid calculations. Just say &lt;code&gt;S&lt;/code&gt;, &lt;code&gt;M&lt;/code&gt;, &lt;code&gt;L&lt;/code&gt; or &lt;code&gt;XL&lt;/code&gt; and the fee will be calculated
-more or less correctly. The third argument is a list of addresses
-and their private keys, separated by a colon.
-The fourth argument is the target address (&lt;a href=&quot;https://github.com/yegor256/sibit&quot;&gt;Sibit&lt;/a&gt;
-makes it possible to send to only one address). The last argument is the
-address where the &lt;a href=&quot;https://en.bitcoin.it/wiki/Change&quot;&gt;change&lt;/a&gt; will be sent.&lt;/p&gt;
-
-&lt;p&gt;If you have 50,000 satoshi in your inputs and you want to send 15,000 satoshi
-to a friend, you have to find a place where the other 35,000 will be
-sent—well, minus the miner fee. You just provide your own address and
-the change will arrive there.&lt;/p&gt;
-
-&lt;p&gt;This is pretty much all you need to know about Bitcoin and Blockchain,
-in order to use it. What did I miss?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="crypto" /><summary type="html">Bitcoin was a big technical mystery for me. All the articles I’d read about it sounded extremely complex and absolutely indigestible. Until I got stuck with a task: I had to integrate Zold, our experimental non-Blockchain cryptocurrency, with Bitcoin. I had to study the architecture of Bitcoin and I found this short and simple video (I highly recommend you watch it). I managed to implement the integration and understand how Blockchain works. Here is my short summary. I hope it will be helpful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-invention-of-lying.jpg" /></entry></feed>
+You can even add your ideas there.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">“A project manager’s work should not focus on dealing with problems; it should focus on preventing them,”—this is how Rita Mulcahy started a chapter about Risk Management in her great book PMP Exam Prep. Sounds smart, but how does a project manager know about the problems which are supposed to be prevented? This is what that chapter and Risk Management Tricks of the Trade for Project Managers (yet another great book by the same author) are dedicated to. What I learned from these books, and from my multi-year experience of identifying, analyzing and dealing with risks, is that the best format for specifying them consists of three parts: cause, risk, and effect.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/the-departed.jpg" /></entry></feed>
