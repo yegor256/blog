@@ -98,6 +98,13 @@ Are You Sure You Are Not a Micromanager?<br/>
 23-24 September.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://events.epam.com/images/logo-portal.svg" class="future-talk" alt="EPAM Meetup 2019"/><br/>
+What's wrong with Java and IT career in USA/Russia<br/>
+[Meetup](https://events.epam.com/events/egor-bugaenko)<br/>
+<span class="city">St. Petersburg</span>, <span class="country">Russia</span><br/>
+24 September.
+
+<div class="talk-event">&nbsp;</div>
 <img src="/images/2019/devopsconf.png" class="future-talk" alt="DevOpsConf 2019"/><br/>
 Reversive Decentralized Deployment: Zold Cryptocurrency Example<br/>
 [DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589)<br/>
