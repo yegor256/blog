@@ -132,6 +132,13 @@ The Biggest Mistake of an Honest Tester<br/>
 <span class="city">Vilnius</span>, <span class="country">Lithuania</span><br/>
 17-18 October.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://romania.voxxeddays.com/wp-content/uploads/2018/04/icon.jpg" class="future-talk" alt="Voxxed Days 2019"/><br/>
+Something about Zerocracy...<br/>
+[Voxxed Days](https://romania.voxxeddays.com/cluj-napoca/2019-10-30/)<br/>
+<span class="city">Cluj</span>, <span class="country">Romania</span><br/>
+30-31 October.
+
 <hr/>
 
 If you are interested in placing me at _your event_,
