@@ -95,7 +95,7 @@ To be published: in 2019.
 <div class="book-par"></div>
 {% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
 It is a book for junior programmers or even for someone who hasn't
-see a computer yet. It starts from the explanation of basic things
+seen a computer yet. It starts from the explanation of basic things
 and gets into details about object-oriented programming, getting you
 ready to become a professional developer, eventually.
 <br/>
