@@ -43,7 +43,7 @@ working remotely, or simply telecommuting, usually leads to four
 radical changes:
 
   * First, we replace office security cameras on the ceiling with screen
-    **monitoring** software and/or web cameras that constantly watch us.
+    _monitoring_ software and/or web cameras that constantly watch us.
     [Upwork does](https://support.upwork.com/hc/en-us/articles/211064098-Log-Time-with-the-Upwork-Desktop-App-)
     it to its thousands of <del>monkeys</del> freelancers,
     requiring them to install a background screen capture utility
@@ -52,7 +52,7 @@ radical changes:
   * Second, we replace meeting rooms with conference software
     like [Zoom](https://zoom.us/) or good old [Skype](https://www.skype.com/en/),
     and [learn](https://hbr.org/2015/03/how-to-run-a-great-virtual-meeting)
-    how to make **virtual meetings** productive. The main principle is similar to
+    how to make _virtual meetings_ productive. The main principle is similar to
     the one we use for traditional meetings: Make it fun. Otherwise we will
     switch to Facebook or PokerStars while the manager is
     still <del>acting</del> talking in her window.
@@ -60,11 +60,11 @@ radical changes:
   * Third, we replace Post-it stickies and Scrum boards with tickets and
     tasks in [Trello](https://trello.com/)
     or [any other](https://www.quora.com/What-are-the-best-alternatives-to-Trello)
-    **task tracker**.
+    _task tracker_.
     We keep everybody busy learning new tools and filling them with data.
 
   * Fourth, and most importantly, we replace office chit-chats with
-    [**Slack**](https://slack.com/) channels or [HipChat](https://www.hipchat.com/) groups.
+    [Slack](https://slack.com/) channels or [HipChat](https://www.hipchat.com/) groups.
     Instead of being in the office at 9 a.m.,
     everybody will have the ability to demonstrate the level of their
     [presenteeism](https://en.wikipedia.org/wiki/Presenteeism) using emojis.
