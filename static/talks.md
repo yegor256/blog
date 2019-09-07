@@ -91,6 +91,13 @@ Quality Assurance vs. Testing<br/>
 20-21 September.
 
 <div class="talk-event">&nbsp;</div>
+<img src="" class="future-talk" alt="RockStart Night"/><br/>
+Building Object-Oriented Java Web Framework From Scratch<br/>
+RockStart Night Meetup<br/>
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
+20 September.
+
+<div class="talk-event">&nbsp;</div>
 <img src="/images/2019/teamlead-conf.png" class="future-talk" alt="Saint Teamlead Conf 2019"/><br/>
 Are You Sure You Are Not a Micromanager?<br/>
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019)<br/>
