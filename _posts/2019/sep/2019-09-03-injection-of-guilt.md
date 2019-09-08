@@ -157,3 +157,4 @@ Maybe some time in the future we will find a way to deliver guilt
 in a small pill that every programmer will have to swallow in the morning.
 Until such a pill is invented, keep doing morning stand-ups.
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Who needs regular status meetings? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1170661449854803968?ref_src=twsrc%5Etfw">September 8, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
