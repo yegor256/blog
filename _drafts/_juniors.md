@@ -47,7 +47,7 @@ I can code in Java already? In order to learn Kotlin I need a new project, which
 I will then write in Kotlin. I will learn the language while _using_ it.
 
 My point is that in order to motivate myself to learn Kotlin you need to give me a
-goal, which I will achive _after_ I've learnt Kotlin while _using_ this new knowledge to get there.
+goal, which I will achieve _after_ I've learned Kotlin while _using_ this new knowledge to get there.
 Maybe, and most probably, your kids may need something similar: a _tangible_
 motivator. Something they will see in front of them, which will make them
 happy when they get there, after they learn those boring Java and Kotlin languages.
@@ -62,7 +62,7 @@ but you get the idea):
 
   * Can you make an online shop to sell my homemade cookies?
 
-  * Can you make an app to help me track my gym excersise results?
+  * Can you make an app to help me track my gym exercise results?
 
   * Can you win $1,000 in the next hackathon?
 
