@@ -520,7 +520,7 @@ new Txn(dbase).call(
       Post post = posts.add(
         new Date(), "How to cook an omelette"
       );
-      posts.comments().post("This is my first comment!");
+      post.comments().post("This is my first comment!");
       return post.id();
     }
   }
