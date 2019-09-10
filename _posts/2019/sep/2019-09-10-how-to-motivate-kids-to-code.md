@@ -38,6 +38,8 @@ I enjoy _building_ things. If I need to learn something new in order to make
 new things happen, I will do it and I will enjoy learning, because it leads
 to practical results: new things.
 
+{% quote Studying for the sake of learning new things is not fun at all. %}
+
 For example, [Kotlin](https://kotlinlang.org/) has been on the market for a few years already. It's
 a new programming language. I do realize that it may eventually replace
 Java and so I need to learn it. But I can't imagine myself reading documentation
