@@ -14,9 +14,9 @@ keywords:
   - kids
   - parenting for tech
   - how to raise tech kids
-image: /images/2019/09/
+image: /images/2019/09/hackers.jpg
 jb_picture:
-  caption:
+  caption: Hackers (1995) by Iain Softley
 ---
 
 I got an email a few days ago. "I'm not a programmer. I'm a mom of two
