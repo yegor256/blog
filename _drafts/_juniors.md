@@ -73,7 +73,7 @@ but you get the idea):
   * Can you make a robot which cleans the floor?
 
 Actually, that's exactly how I learned everything I know about computers.
-I started programming when I was around 10. I've always had a task in front of me and it was
+I started programming when I was around 10 years old. I've always had a task in front of me and it was
 always something interesting to do for myself and the people around me.
 In other words, I've always had my eyes on the prize.
 The majority of my projects are not alive anymore, especially the ones
