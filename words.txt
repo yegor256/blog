@@ -103,6 +103,7 @@ adds
 adept
 adepts
 adequate
+adequately
 ADHD
 adhere
 adjusts
@@ -3539,6 +3540,7 @@ holzmann
 home
 homebrew
 homeless
+homemade
 homepage
 homework
 homogeneous
@@ -5110,6 +5112,7 @@ nightmares
 nights
 nine
 nine-to-five
+nine-year-old
 nines
 nitpicker
 nl
@@ -5492,6 +5495,7 @@ parallel
 parameter
 parameters
 parent
+parenting
 parents
 paris
 parking
@@ -6775,6 +6779,7 @@ scheme
 schemes
 schlossberg
 school
+school's
 schools
 science
 scientific
@@ -7482,10 +7487,12 @@ stubborn
 stubbornness
 stubs
 stuck
+student
 studied
 studies
 studio
 study
+studying
 stuff
 stuffed
 stumble

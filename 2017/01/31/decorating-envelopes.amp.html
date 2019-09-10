@@ -126,8 +126,6 @@ it extends:</p>
 <p>As you see, this “decorator” doesn’t do anything except “just decorating.”
 It encapsulates another <code>Response</code> and passes through all method calls.</p>
 
-
-
 <p>If it’s not clear yet, I’ll explain the purpose of <code>RsHtml</code>. Let’s
 say you have text and you want to create a <code>Response</code>:</p>
 
@@ -165,6 +163,8 @@ keyword, <code>decorates</code>:</p>
 <p>Then, in order to create an object, we just call:</p>
 
 <pre>Response response = new RsHtml(text);</pre>
+
+
 
 <p>We don’t have any new methods in the decorators, just constructors.
 The only purpose for these guys is to create other objects and encapsulate
