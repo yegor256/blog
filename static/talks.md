@@ -88,7 +88,7 @@ informed about everything I do publicly.
 Quality Assurance vs. Testing<br/>
 [QA Fest](http://qafest.com/en/)<br/>
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
-20-21 September.
+20 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="" class="future-talk" alt="RockStart Night"/><br/>
@@ -102,7 +102,7 @@ Building Object-Oriented Java Web Framework From Scratch<br/>
 Are You Sure You Are Not a Micromanager?<br/>
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019)<br/>
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span><br/>
-23-24 September.
+23 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://events.epam.com/images/logo-portal.svg" class="future-talk" alt="EPAM Meetup 2019"/><br/>
@@ -123,21 +123,21 @@ Reversive Decentralized Deployment: Zold Cryptocurrency Example<br/>
 Zerocracy: an AI chatbot<br/>
 [Sphere.It](https://sphere.it/speaker/yegor-bugayenko/)<br/>
 <span class="city">Krakow</span>, <span class="country">Poland</span><br/>
-7-8 October.
+7 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
 [HackConf](https://www.hackconf.bg/en/)<br/>
 <span class="city">Sofia</span>, <span class="country">Bulgaria</span><br/>
-11-13 October.
+12 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.testcon.lt/wp-content/uploads/2018/05/TestCon-LOGO-pagrindinis_preview-min-e1525260818147.png" class="future-talk" alt="TestCon 2019"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
 [TestCon Europe](https://www.testcon.lt/)<br/>
 <span class="city">Vilnius</span>, <span class="country">Lithuania</span><br/>
-17-18 October.
+16 October.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://romania.voxxeddays.com/wp-content/uploads/2018/04/icon.jpg" class="future-talk" alt="Voxxed Days 2019"/><br/>
