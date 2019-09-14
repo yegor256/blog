@@ -18,7 +18,7 @@ keywords:
 
 5 Sep 2019:
 [ProBlog](https://www.youtube.com/channel/UC1QrUyRmSoUTPVSbHv7arcA)
-with :
+with Viktoria Borodina:
 [видео](https://www.youtube.com/watch?v=m5mPtC7LYiY) (in Russian).
 
 29 Aug 2019:

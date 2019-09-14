@@ -168,7 +168,8 @@ Now it's time to build a distributed team of programmers. First, we
 invite those who've worked on other projects and have already
 have proven their quality. Very often we invite new people,
 finding them through
-[StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %}), GitHub, Upwork, and other sources.
+[StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %}),
+GitHub, Upwork, and other sources.
 An average team size of an average project is 15-25 programmers.
 
 At this phase, we understand [any inconsistency]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %})

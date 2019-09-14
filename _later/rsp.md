@@ -5,16 +5,18 @@ date: 2016-06-20
 place: Moscow, Russia
 tags: management
 description: |
-  ...
+  This is just a placeholder...
+  This is just a placeholder...
+  This is just a placeholder...
 keywords:
   - responsibility
   - collective responsibility
   - team responsibility
   - responsibility in agile
   - agile responsibility
-image: /images/2015/03/?
+image: /images/2015/03/test
 jb_picture:
-  caption: ?
+  caption: test
 ---
 
 I've had a [presentation](https://www.youtube.com/watch?v=biE86esgFAE)
