@@ -17,6 +17,7 @@ keywords:
 image: /images/2019/05/metro-manila.jpg
 jb_picture:
   caption: Metro Manila (2013) by Sean Ellis
+book: code-ahead-1 3.1
 ---
 
 There are [twelve]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
