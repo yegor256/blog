@@ -20,7 +20,7 @@ jb_picture:
   caption: The Invention of Lying (2009) by Ricky Gervais et al.
 ---
 
-{% badge https://github.com/yegor256/sibit/raw/master/logo.svg 64 https://github.com/yegor256/sibit %}
+{% badge https://raw.githubusercontent.com/yegor256/sibit/master/logo.svg?sanitize=true 64 https://github.com/yegor256/sibit %}
 
 [Bitcoin](https://www.bitcoin.org) was a big technical mystery for me. All the articles I'd read
 about it sounded extremely complex and absolutely indigestible. Until
