@@ -41,7 +41,7 @@ Therefore, in order to be happy, we must have some issues to deal with. It's not
 cars, houses and well-paid jobs. We need to overcome the obstacles first.
 Happiness is simply impossible without a struggle being won.
 
-To be happy, we constantly need a new problem to solve, a trouble to get rid of, and an enemy
+To be happy, we constantly need a new problem to solve, a trouble to get rid of, or an enemy
 to destroy, if you wish. What kind of enemy it might be---depends.
 [Aristotle](https://en.wikipedia.org/wiki/Aristotle),
 for example, [according to](https://www.wsj.com/articles/aristotles-pursuit-of-happiness-11548950094)
@@ -54,9 +54,9 @@ health issues, annoying colleagues, or
 [cheating partners]({% pst 2018/aug/2018-08-14-seventy-percent %}).
 To be happy we need some of these things.
 
-[Bertrand Russell](https://en.wikipedia.org/wiki/Bertrand_Russell) in his book
-_The Conquest of Happiness_ [suggested](https://en.wikiquote.org/wiki/The_Conquest_of_Happiness)
-wrote that "to be without some of the things you want is an indispensable part of happiness."
+[Bertrand Russell](https://en.wikipedia.org/wiki/Bertrand_Russell), in his book
+_The Conquest of Happiness_, [suggested](https://en.wikiquote.org/wiki/The_Conquest_of_Happiness)
+that "to be without some of the things you want is an indispensable part of happiness."
 However, the modern world, and especially the tech part of it, _gives_ us almost
 anything and everything we may wish for, including the cars, houses, healthy
 food, information, electric scooters, safety, lifetime employment and retirement plans.
@@ -66,13 +66,13 @@ The key word here is "worry" not "give." Happiness doesn't really depend on
 how rich or poor we are, as studies [confirm](http://content.time.com/time/magazine/article/0,9171,2019628,00.html)
 (well, above a certain level). Instead, it depends on how _easily_ we get what we want.
 The more we _worry_ and the less life _gives_ us for free, the more happy we are ...
-provided we achieve what we wanted.
+provided we achieve what we want.
 
 [Ernest Hemingway](https://en.wikipedia.org/wiki/Ernest_Hemingway) in
 _The Garden of Eden_
 [said](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)
 that "happiness in intelligent people is the rarest thing I know."
-This is because mostly "intelligent" people nowadays possess all those things
+This is because most "intelligent" people nowadays possess all those things
 mentioned above and don't need to struggle much in order to get them.
 The smarter we are, the easier it is for us _to achieve_: find a well-paid job
 and buy a new iPhone.
@@ -96,7 +96,7 @@ Listen to what [Frank T. McAndrew](https://en.wikipedia.org/wiki/Francis_T._McAn
 [says](https://www.theguardian.com/commentisfree/2016/aug/17/psychology-happiness-contentment-humans-aspire-goals-accomplish-evolution):
 "Dissatisfaction with the present and dreams of the future are what keep us motivated,"
 meaning that happiness comes to those who
-1) are permanently disatisfied with current results and
+1) are permanently dissatisfied with current results and
 2) act to achieve more.
 
 Ergo, the recipe of happiness is: resent, overcome, repeat.
