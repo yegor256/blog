@@ -41,6 +41,8 @@ Therefore, in order to be happy, we must have some issues to deal with. It's not
 cars, houses and well-paid jobs. We need to overcome the obstacles first.
 Happiness is simply impossible without a struggle being won.
 
+{% quote To be happy, we constantly need a new problem to solve, a trouble to get rid of, or an enemy to destroy. %}
+
 To be happy, we constantly need a new problem to solve, a trouble to get rid of, or an enemy
 to destroy, if you wish. What kind of enemy it might be---depends.
 [Aristotle](https://en.wikipedia.org/wiki/Aristotle),
@@ -90,6 +92,8 @@ but in a long run we may end up with problems
 larger than unhappiness or depression---read what happened to the poor mice in the
 [Universe 25](https://curiosity.com/topics/universe-25-began-as-a-mice-paradise-but-ended-as-a-nightmare-curiosity/)
 experiment.
+
+{% quote Tech people don’t struggle enough, life doesn’t challenge us as much as we need. %}
 
 What is the solution?
 Listen to what [Frank T. McAndrew](https://en.wikipedia.org/wiki/Francis_T._McAndrew)
