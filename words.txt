@@ -7,6 +7,7 @@ able
 abnormal
 about
 above
+above-average
 absence
 absent
 absolute
@@ -389,6 +390,7 @@ argument
 argumentation
 arguments
 arises
+aristotle
 arizona
 armed
 armies
@@ -1088,6 +1090,7 @@ chaining
 chains
 chair
 chairs
+chakraborty
 challenge
 challenged
 challenges
@@ -1133,6 +1136,7 @@ cheap
 cheaper
 cheapest
 cheat
+cheating
 check
 check-in
 checkbook
@@ -1525,6 +1529,7 @@ connection
 connections
 connects
 conquer
+conquest
 cons
 consciously
 consecutive
@@ -1874,6 +1879,7 @@ dear
 death
 debate
 debates
+debika
 debt
 debts
 debug
@@ -1882,6 +1888,7 @@ dec
 decades
 december
 decent
+decently
 decide
 decided
 decides
@@ -1933,6 +1940,7 @@ defender
 defense
 defensive
 deficiencies
+deficit
 define
 defined
 defines
@@ -2215,6 +2223,8 @@ disrespected
 disrespectful
 disrespects
 disruption
+dissatisfaction
+dissatisfied
 disservice
 distance
 distasteful
@@ -2399,6 +2409,7 @@ ed
 eden
 edge
 edit
+edith
 editing
 edition
 editions
@@ -2525,6 +2536,7 @@ ending
 endpoints
 ends
 enemies
+enemy
 energetic
 energy
 enforce
@@ -2600,7 +2612,9 @@ equivalent
 ER
 ER-ending
 era
+ergo
 eric
+ernest
 error
 errors
 escalated
@@ -2987,6 +3001,7 @@ flyweight
 focus
 focused
 focusing
+foes
 fogel
 foggy
 fold
@@ -3075,6 +3090,7 @@ framework's
 frameworks
 francisco
 francs
+frank
 fraudsters
 freak
 freaks
@@ -3156,6 +3172,7 @@ gap
 gaps
 garbage
 garcia
+garden
 garr
 garry
 gas
@@ -3474,6 +3491,7 @@ helpful
 helpfulness
 helping
 helps
+hemingway
 hen
 hence
 her
@@ -3777,6 +3795,7 @@ indicates
 indicator
 indicators
 indigestible
+indispensable
 indisputable
 individual
 individualism
@@ -4658,6 +4677,7 @@ maybe
 mayonnaise
 mayonnaise-free
 mb
+mcandrew
 mcbride
 mcconnell
 mccullough
@@ -4759,6 +4779,7 @@ metrics
 mexicans
 meyer
 meyers
+mice
 michael
 michael's
 micro
@@ -4990,6 +5011,7 @@ multiple
 multiply
 multiplying
 multiton
+mumbled
 munich
 mush
 music
@@ -5106,6 +5128,7 @@ nicely-looking
 niceness
 niche
 nierstrasz
+nietzsche
 night
 nightmare
 nightmares
@@ -5233,6 +5256,7 @@ observer
 observes
 observing
 obsession
+obstacle
 obstacles
 obtain
 obvious
@@ -5618,6 +5642,7 @@ period
 periods
 perl
 permanent
+permanently
 permission
 permissions
 persisted
@@ -5803,6 +5828,7 @@ positively
 posses
 possess
 possesses
+possessions
 possibilities
 possibility
 possible
@@ -6195,6 +6221,7 @@ rapidly
 rapportive
 rare
 rarely
+rarest
 raster-graphics
 rasterized
 rate
@@ -6506,6 +6533,7 @@ reside
 resignation
 resilience
 resist
+resistance
 resists
 resolution
 resolvable
@@ -6582,6 +6610,7 @@ revealing
 reveals
 revelant
 revenue
+revenue-generating
 review
 reviewed
 reviewer
@@ -6694,6 +6723,7 @@ runtime
 runtime-retained
 RUP
 rush
+russell
 russia
 russia's
 russian
@@ -6786,6 +6816,7 @@ scientific
 scientist
 scientists
 SCM
+scooters
 scope
 scoped
 scopes
@@ -8150,6 +8181,7 @@ unforgivable
 unforgiven
 unfortunate
 unfortunately
+unhappiness
 unhappy
 unhealthy
 unicode
@@ -8688,6 +8720,7 @@ ypshenychka
 yummy
 yummy-scented
 zache
+zarathustra
 ZCE
 zen
 zend

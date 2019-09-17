@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-09-10T09:43:29+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How to Motivate Kids to Code</title><link href="https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code.html" rel="alternate" type="text/html" title="How to Motivate Kids to Code" /><published>2019-09-10T00:00:00+00:00</published><updated>2019-09-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code</id><content type="html" xml:base="https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code.html">&lt;p&gt;I got an email a few days ago. “I’m not a programmer. I’m a mom of two
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-09-17T07:54:48+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Be Unhappy to Be Happy</title><link href="https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy.html" rel="alternate" type="text/html" title="Be Unhappy to Be Happy" /><published>2019-09-17T00:00:00+00:00</published><updated>2019-09-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy</id><content type="html" xml:base="https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy.html">&lt;p&gt;At the very end of one of my &lt;a href=&quot;https://www.youtube.com/watch?v=m5mPtC7LYiY&quot;&gt;recent meetups&lt;/a&gt; I was asked a question:
+“Are you a happy person?” I mumbled something about being happy from time to time,
+but later gave this question more thought. Am I happy? Not really. Well,
+sometimes. What makes me happy? And why are &lt;a href=&quot;https://www.livescience.com/61525-why-are-people-unhappy.html&quot;&gt;so many of us&lt;/a&gt;
+unhappy so often?
+It seems that there is an answer, and a recipe for happiness.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Yip Man (2008) by Wilson Yip&quot; src=&quot;/images/2019/09/yip-man.jpg&quot; longdesc=&quot;#41b216d4&quot; /&gt;&lt;figcaption id=&quot;41b216d4&quot;&gt;Yip Man (2008) by Wilson Yip&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;“A well-paid job, house, car, family are the ultimate possessions
+of anyone’s life. But &lt;em&gt;despite&lt;/em&gt; having everything why is the happiness missing?”
+Debika Chakraborty asks &lt;a href=&quot;https://www.lifealth.com/mind-body-and-soul/happiness/why-despite-having-everything-we-are-not-happy-dc/27095/&quot;&gt;here&lt;/a&gt;.
+I think that happiness is missing not despite us having everything, but &lt;em&gt;thanks&lt;/em&gt; to that.&lt;/p&gt;
+
+&lt;p&gt;Happiness, according to &lt;a href=&quot;https://en.wikiquote.org/wiki/The_Antichrist&quot;&gt;Nietzsche&lt;/a&gt;,
+is “the feeling that power increases — that a resistance is overcome.”
+Therefore, in order to be happy, we must have some issues to deal with. It’s not enough to possess those
+cars, houses and well-paid jobs. We need to overcome the obstacles first.
+Happiness is simply impossible without a struggle being won.&lt;/p&gt;
+
+&lt;p&gt;To be happy, we constantly need a new problem to solve, a trouble to get rid of, or an enemy
+to destroy, if you wish. What kind of enemy it might be—depends.
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Aristotle&quot;&gt;Aristotle&lt;/a&gt;,
+for example, &lt;a href=&quot;https://www.wsj.com/articles/aristotles-pursuit-of-happiness-11548950094&quot;&gt;according to&lt;/a&gt;
+Edith Hall, believed that “happiness comes from a &lt;em&gt;continuous&lt;/em&gt; effort
+to become the best possible version of yourself,” which is
+the war with yourself, “the worst enemy you can meet,” as
+&lt;a href=&quot;https://www.goodreads.com/quotes/331586-but-the-worst-enemy-you-can-meet-will-always-be&quot;&gt;Zarathustra&lt;/a&gt; once said.
+On top of that, there are, of course, other foes all around us, including poverty, lack of skills,
+health issues, annoying colleagues, or
+&lt;a href=&quot;/2018/08/14/seventy-percent.html&quot;&gt;cheating partners&lt;/a&gt;.
+To be happy we need some of these things.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Bertrand_Russell&quot;&gt;Bertrand Russell&lt;/a&gt;, in his book
+&lt;em&gt;The Conquest of Happiness&lt;/em&gt;, &lt;a href=&quot;https://en.wikiquote.org/wiki/The_Conquest_of_Happiness&quot;&gt;suggested&lt;/a&gt;
+that “to be without some of the things you want is an indispensable part of happiness.”
+However, the modern world, and especially the tech part of it, &lt;em&gt;gives&lt;/em&gt; us almost
+anything and everything we may wish for, including the cars, houses, healthy
+food, information, electric scooters, safety, lifetime employment and retirement plans.
+We’ve got nothing to &lt;em&gt;worry&lt;/em&gt; about and … we are unhappy because of that.&lt;/p&gt;
+
+&lt;p&gt;The key word here is “worry” not “give.” Happiness doesn’t really depend on
+how rich or poor we are, as studies &lt;a href=&quot;http://content.time.com/time/magazine/article/0,9171,2019628,00.html&quot;&gt;confirm&lt;/a&gt;
+(well, above a certain level). Instead, it depends on how &lt;em&gt;easily&lt;/em&gt; we get what we want.
+The more we &lt;em&gt;worry&lt;/em&gt; and the less life &lt;em&gt;gives&lt;/em&gt; us for free, the more happy we are …
+provided we achieve what we want.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ernest_Hemingway&quot;&gt;Ernest Hemingway&lt;/a&gt; in
+&lt;em&gt;The Garden of Eden&lt;/em&gt;
+&lt;a href=&quot;https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know&quot;&gt;said&lt;/a&gt;
+that “happiness in intelligent people is the rarest thing I know.”
+This is because most “intelligent” people nowadays possess all those things
+mentioned above and don’t need to struggle much in order to get them.
+The smarter we are, the easier it is for us &lt;em&gt;to achieve&lt;/em&gt;: find a well-paid job
+and buy a new iPhone.&lt;/p&gt;
+
+&lt;p&gt;We &lt;del&gt;intelligent&lt;/del&gt; tech people, don’t struggle enough.&lt;/p&gt;
+
+&lt;p&gt;Life doesn’t challenge us as much as we need. We don’t even need to have special talents
+these days to be decently paid: You read &lt;a href=&quot;https://amzn.to/2O1MBIg&quot;&gt;&lt;em&gt;JavaScript in 24 Hours&lt;/em&gt;&lt;/a&gt; and a new iPhone
+is yours. The market is &lt;a href=&quot;https://fullscale.io/the-talent-shortage-of-software-developers-in-2019/&quot;&gt;in deficit&lt;/a&gt;
+now and the demand is &lt;a href=&quot;https://www.techrepublic.com/article/cio-jury-83-of-cios-struggle-to-find-tech-talent/&quot;&gt;much higher&lt;/a&gt;
+than the supply of coding hands. Moreover, most managers are
+&lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;incapable&lt;/a&gt; of
+demanding above-average performance from us. This may look like a perfect life,
+but in a long run we may end up with problems
+larger than unhappiness or depression—read what happened to the poor mice in the
+&lt;a href=&quot;https://curiosity.com/topics/universe-25-began-as-a-mice-paradise-but-ended-as-a-nightmare-curiosity/&quot;&gt;Universe 25&lt;/a&gt;
+experiment.&lt;/p&gt;
+
+&lt;p&gt;What is the solution?
+Listen to what &lt;a href=&quot;https://en.wikipedia.org/wiki/Francis_T._McAndrew&quot;&gt;Frank T. McAndrew&lt;/a&gt;
+&lt;a href=&quot;https://www.theguardian.com/commentisfree/2016/aug/17/psychology-happiness-contentment-humans-aspire-goals-accomplish-evolution&quot;&gt;says&lt;/a&gt;:
+“Dissatisfaction with the present and dreams of the future are what keep us motivated,”
+meaning that happiness comes to those who
+1) are permanently dissatisfied with current results and
+2) act to achieve more.&lt;/p&gt;
+
+&lt;p&gt;Ergo, the recipe of happiness is: resent, overcome, repeat.&lt;/p&gt;
+
+&lt;p&gt;But what to resent? Well this may be
+your laziness, your fears, your absence of Oracle certification, your
+low StackOverflow &lt;a href=&quot;/2017/02/14/stackoverflow-is-your-tool.html&quot;&gt;reputation&lt;/a&gt;,
+or no paychecks from the Apple Store (do you have
+your own revenue-generating app there?)&lt;/p&gt;
+
+&lt;p&gt;Once the obstacle is overcome, repeat.&lt;/p&gt;
+
+&lt;p&gt;Stay unhappy. To be happy.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="psychology" /><summary type="html">At the very end of one of my recent meetups I was asked a question: “Are you a happy person?” I mumbled something about being happy from time to time, but later gave this question more thought. Am I happy? Not really. Well, sometimes. What makes me happy? And why are so many of us unhappy so often? It seems that there is an answer, and a recipe for happiness.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/yip-man.jpg" /></entry><entry><title type="html">How to Motivate Kids to Code</title><link href="https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code.html" rel="alternate" type="text/html" title="How to Motivate Kids to Code" /><published>2019-09-10T00:00:00+00:00</published><updated>2019-09-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code</id><content type="html" xml:base="https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code.html">&lt;p&gt;I got an email a few days ago. “I’m not a programmer. I’m a mom of two
 kids: 9 and 14. They both seem to be interested in computers, but they
 mostly play games. What would you recommend I do to help them make
 a career in tech?” I’m not an expert in parenting, but I’m getting similar
@@ -16,6 +106,9 @@ new things” is not fun at all. I don’t enjoy the process of becoming smarter
 I enjoy &lt;em&gt;building&lt;/em&gt; things. If I need to learn something new in order to make
 new things happen, I will do it and I will enjoy learning, because it leads
 to practical results: new things.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Studying for the sake of learning new things is not fun at all.
+&lt;/aside&gt;
 
 &lt;p&gt;For example, &lt;a href=&quot;https://kotlinlang.org/&quot;&gt;Kotlin&lt;/a&gt; has been on the market for a few years already. It’s
 a new programming language. I do realize that it may eventually replace
@@ -1023,124 +1116,4 @@ satisfaction and frustration incrementally. How do you do that? Via
 &lt;p&gt;How else?&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How to not hire a bad programmer? &lt;a href=&quot;https://twitter.com/hashtag/management?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#management&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1140200517555146753?ref_src=twsrc%5Etfw&quot;&gt;June 16, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="agile" /><summary type="html">There are twelve principles in the Agile Manifesto. The fifth one says: “Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.” I disagree. Strongly. This formula suggests treating people in a binary way: they are either motivated and trusted or … what? They have to be let go? This mindset is very typical, according to my observations, and leads to poor management and project failures. Instead, our people management must be more iterative and much less rigid.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/metro-manila.jpg" /></entry><entry><title type="html">Please, Don’t Improvise</title><link href="https://www.yegor256.com/2019/05/21/dont-improvise.html" rel="alternate" type="text/html" title="Please, Don't Improvise" /><published>2019-05-21T00:00:00+00:00</published><updated>2019-05-21T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/21/dont-improvise</id><content type="html" xml:base="https://www.yegor256.com/2019/05/21/dont-improvise.html">&lt;p&gt;We all know what happens when a programmer decides how a web site
-or a mobile app should look. It ends up looking ugly. And why is that? I don’t know exactly,
-but my best bet is on the &lt;a href=&quot;https://www.linkedin.com/pulse/left-brain-vs-right-brain-developers-warren-gwartney/&quot;&gt;left-brained nature&lt;/a&gt;
-of programmers, who mostly are rigid and logical mathematicians. UI design, to the contrary,
-requires creativity and intuition, which reside in the right side of our brain.
-Some &lt;a href=&quot;https://www.fastcompany.com/3029364/this-is-your-brain-on-code-according-to-functional-mri-imaging&quot;&gt;recent studies&lt;/a&gt;
-are skeptical about that, but my personal experience tells me that you should never expect
-a programmer to make a user interface right.
-Moreover, &lt;em&gt;I’m&lt;/em&gt; one of those programmers: No matter what I draw, it’s either
-&lt;a href=&quot;/paintings.html&quot;&gt;black-and-white&lt;/a&gt;, or ugly.
-But I still have to design my &lt;a href=&quot;/pets.html&quot;&gt;pet projects&lt;/a&gt;.
-Here is a list of the top lessons I learned for myself, which help me survive
-with my left-sided brain.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Big Eyes (2014) by Tim Burton&quot; src=&quot;/images/2019/05/big-eyes.jpg&quot; longdesc=&quot;#b71ede0a&quot; /&gt;&lt;figcaption id=&quot;b71ede0a&quot;&gt;Big Eyes (2014) by Tim Burton&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Leaders&lt;/strong&gt;.
-I look at the things that big and famous companies are doing. I check the websites
-I’m using every day to see what is “good” in modern web design:
-&lt;a href=&quot;https://stackoverflow.com&quot;&gt;stackoverflow&lt;/a&gt;,
-&lt;a href=&quot;https://github.com&quot;&gt;github&lt;/a&gt;,
-&lt;a href=&quot;https://www.apple.com&quot;&gt;apple&lt;/a&gt;,
-&lt;a href=&quot;https://www.amazon.com&quot;&gt;amazon&lt;/a&gt;,
-&lt;a href=&quot;https://www.craigslist.org/&quot;&gt;craigslist&lt;/a&gt; (no kidding), etc.
-I actually pay attention to fewer than ten websites.
-They make buttons flat? I make them flat. They make fonts larger? I make
-fonts larger. They make the background white, I make it white too.
-I just copy them. They know better anyway.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Frameworks&lt;/strong&gt;.
-There are &lt;a href=&quot;https://github.com/troxler/awesome-css-frameworks&quot;&gt;many&lt;/a&gt; of them for
-the web. I tend to pick the simplest one and use it. Well, I even created my own one
-a few years ago: &lt;a href=&quot;/2015/04/13/tacit-css-framework-for-dummies.html&quot;&gt;&lt;em&gt;Tacit, a CSS Framework Without Classes&lt;/em&gt;&lt;/a&gt;.
-I always try to “design” as little as possible and follow the
-conventions forced by the framework’s authors. If they want me to have my
-buttons blue, they will be blue. I don’t try to be creative but just follow
-the rules of the frameworks I use.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Defaults&lt;/strong&gt;.
-There is always a big temptation to align the content “nicely,”
-centering it or placing it in some multi-column grids. I try not to do
-that, despite the temptation. I just don’t know how to do it right,
-which is why the content “flows” from the top to the bottom, element
-by element, aligned &lt;em&gt;left&lt;/em&gt;. Well, unless it’s a set of tabular data.
-Sometimes there is also a temptation to add or remove spacing between
-elements, either via an extra &lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt; or a &lt;code&gt;margin&lt;/code&gt;. I don’t do this.
-The elements will be placed the way my framework places them by default.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Colors&lt;/strong&gt;.
-Choosing the right colors is a huge problem for me—I don’t know how to do that right.
-I don’t know which red matches which green. That’s why I use
-&lt;a href=&quot;https://coolors.co/app&quot;&gt;Coolors&lt;/a&gt;. I just click “space” multiple times and they
-offer me a combination of five colors, which match each
-other. I find the most attractive combination and call it a day. Five colors
-are always enough for any web app.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bold, Italic, Underscore, and All Caps&lt;/strong&gt;.
-It’s simple—don’t use them. Never. Well,
-&lt;a href=&quot;https://practicaltypography.com/bold-or-italic.html&quot;&gt;as little as possible&lt;/a&gt;.
-You definitely shouldn’t use them in order to make a visual element more visible. You’ve got
-fonts for that. If you want your caption to catch the eye, make the
-font larger. But don’t use italic, bold, or, God forbid, all caps. I use
-them sometimes, very rarely, but only in order to
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Emphasis_%28typography%29&quot;&gt;emphasize&lt;/a&gt;
-a word in a sentence.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Fonts&lt;/strong&gt;.
-I try to stick to defaults, which are
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Serif&quot;&gt;Serif&lt;/a&gt;,
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Sans-serif&quot;&gt;Sans-serif&lt;/a&gt;,
-and &lt;a href=&quot;https://en.wikipedia.org/wiki/Monospaced_font&quot;&gt;Monospace&lt;/a&gt;.
-If I can’t, I use &lt;a href=&quot;https://fonts.google.com/&quot;&gt;Google Fonts&lt;/a&gt;,
-but very carefully. Of course, I use one font per system.
-Do I know which two fonts are compatible? I don’t. Do you?
-Don’t even try to make that decision right. Just one font and
-&lt;a href=&quot;https://www.quora.com/How-many-different-fonts-should-you-use-in-your-website&quot;&gt;that’s it&lt;/a&gt;.
-And I always try to make them as large as possible. This seems to be a
-&lt;a href=&quot;https://blog.marvelapp.com/body-text-small/&quot;&gt;trend&lt;/a&gt;
-now, most probably because screens are getting bigger.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Images&lt;/strong&gt;.
-I do everything I can to avoid them, to be honest. I always attempt to
-replace them with text or &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_Unicode_characters&quot;&gt;Unicode symbols&lt;/a&gt;,
-if necessary. When it’s absolutely necessary, I use
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Scalable_Vector_Graphics&quot;&gt;SVG&lt;/a&gt; vector graphics.
-PNG/JPEG raster-graphics is my last resort.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Artists&lt;/strong&gt;.
-I pay absolutely no attention to what modern web artists are doing.
-They create beautiful things, but I don’t even need to know about them.
-They only annoy me, because I can’t create anything similar. When someone
-shows me a website with new CSS tricks, I close it immediately. This is not for
-me. My CSS has to be as &lt;em&gt;short&lt;/em&gt; and &lt;em&gt;primitive&lt;/em&gt; as possible.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Compliance&lt;/strong&gt;.
-W3C has a number of validators for
-&lt;a href=&quot;https://validator.w3.org/&quot;&gt;HTML&lt;/a&gt; and
-&lt;a href=&quot;https://jigsaw.w3.org/css-validator/&quot;&gt;CSS&lt;/a&gt;, which can tell what’s
-wrong with a website, statically analyzing it. This is similar to what
-&lt;a href=&quot;http://checkstyle.sourceforge.net/&quot;&gt;Checkstyle&lt;/a&gt;
-does for our Java code. I rely on their recommendations, always.
-Sometimes they sound too strict, but they tell me what the expectations are
-of those who know web design way better than I do.  In HTML5,
-for example, we are supposed to have &lt;code&gt;&amp;lt;thead&amp;gt;&lt;/code&gt; in our &lt;code&gt;&amp;lt;table&amp;gt;&lt;/code&gt;, or the &lt;code&gt;alt&lt;/code&gt; attribute
-in all &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; elements. I always try to follow these and other rules.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Responsive&lt;/strong&gt;.
-The design has to be &lt;a href=&quot;https://en.wikipedia.org/wiki/Responsive_web_design&quot;&gt;mobile friendly&lt;/a&gt;.
-Always.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;To summarize, I would suggest: don’t improvise, don’t try to be
-creative, don’t think that you understand what is beautiful and what’s not.
-You don’t. Me neither. Just be as &lt;em&gt;minimalistic&lt;/em&gt; and &lt;em&gt;traditional&lt;/em&gt; as possible
-and you will do yourself and your users a big favor.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How to make a UI look yummy? &lt;a href=&quot;https://twitter.com/hashtag/graphicdesigning?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#graphicdesigning&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1132522579674173441?ref_src=twsrc%5Etfw&quot;&gt;May 26, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="graphics" /><summary type="html">We all know what happens when a programmer decides how a web site or a mobile app should look. It ends up looking ugly. And why is that? I don’t know exactly, but my best bet is on the left-brained nature of programmers, who mostly are rigid and logical mathematicians. UI design, to the contrary, requires creativity and intuition, which reside in the right side of our brain. Some recent studies are skeptical about that, but my personal experience tells me that you should never expect a programmer to make a user interface right. Moreover, I’m one of those programmers: No matter what I draw, it’s either black-and-white, or ugly. But I still have to design my pet projects. Here is a list of the top lessons I learned for myself, which help me survive with my left-sided brain.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/big-eyes.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="agile" /><summary type="html">There are twelve principles in the Agile Manifesto. The fifth one says: “Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.” I disagree. Strongly. This formula suggests treating people in a binary way: they are either motivated and trusted or … what? They have to be let go? This mindset is very typical, according to my observations, and leads to poor management and project failures. Instead, our people management must be more iterative and much less rigid.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/metro-manila.jpg" /></entry></feed>
