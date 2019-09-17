@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Be Unhappy to Be Happy"
-date: 2019-09-16
+date: 2019-09-17
 place: Moscow, Russia
 tags: mood psychology
 description: |
@@ -14,9 +14,9 @@ keywords:
   - how to be happy
   - recipe for happiness
   - how to be happy
-image: /images/2019/09/
+image: /images/2019/09/yip-man.jpg
 jb_picture:
-  caption:
+  caption: Yip Man (2008) by Wilson Yip
 ---
 
 At the very end of one of my [recent meetups](https://www.youtube.com/watch?v=m5mPtC7LYiY) I was asked a question:
