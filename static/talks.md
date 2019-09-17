@@ -105,7 +105,7 @@ Are You Sure You Are Not a Micromanager?<br/>
 23 September.
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://events.epam.com/images/logo-portal.svg" class="future-talk" alt="EPAM Meetup 2019"/><br/>
+<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="future-talk" alt="EPAM Meetup 2019"/><br/>
 What's wrong with Java and IT career in USA/Russia<br/>
 [Meetup](https://events.epam.com/events/egor-bugaenko)<br/>
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span><br/>
