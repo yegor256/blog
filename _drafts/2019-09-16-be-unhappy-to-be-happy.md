@@ -20,64 +20,64 @@ jb_picture:
 ---
 
 At the very end of one of my [recent meetups](https://www.youtube.com/watch?v=m5mPtC7LYiY) I was asked a question:
-"Are you a happy person?" I mumbled something about being happy time to time,
-but later gave this question more thoughts. Am I happy? Not really. Well,
-sometimes. What makes me happy and why [so many of us](https://www.livescience.com/61525-why-are-people-unhappy.html)
-are unhappy so often?
-It seems that there is an answer and a recipe for happiness.
+"Are you a happy person?" I mumbled something about being happy from time to time,
+but later gave this question more thought. Am I happy? Not really. Well,
+sometimes. What makes me happy? And why are [so many of us](https://www.livescience.com/61525-why-are-people-unhappy.html)
+unhappy so often?
+It seems that there is an answer, and a recipe for happiness.
 
 <!--more-->
 
 {% jb_picture_body %}
 
 "A well-paid job, house, car, family are the ultimate possessions
-of anyone's life. But _despite_ having everything why the happiness is missing?"
+of anyone's life. But _despite_ having everything why is the happiness missing?"
 Debika Chakraborty asks [here](https://www.lifealth.com/mind-body-and-soul/happiness/why-despite-having-everything-we-are-not-happy-dc/27095/).
-I think that happiness is missing not despite us having everything, but _thanks_ to it.
+I think that happiness is missing not despite us having everything, but _thanks_ to that.
 
 Happiness, according to [Nietzsche](https://en.wikiquote.org/wiki/The_Antichrist),
 is "the feeling that power increases --- that a resistance is overcome."
-Therefore, in order to be happy, we must have some issues to deal with. It's not enough to posess those
-cars, houses and well-paid jobs. We need to outfight the obstacles first.
+Therefore, in order to be happy, we must have some issues to deal with. It's not enough to possess those
+cars, houses and well-paid jobs. We need to overcome the obstacles first.
 Happiness is simply impossible without a struggle being won.
 
-To be happy, we constantly need a new problem to solve, a trouble to get rid of, and an enemy
-to destroy, if you wish. What kind of enemy it would be---depends.
+To be happy, we constantly need a new problem to solve, a trouble to get rid of, or an enemy
+to destroy, if you wish. What kind of enemy it might be---depends.
 [Aristotle](https://en.wikipedia.org/wiki/Aristotle),
 for example, [according to](https://www.wsj.com/articles/aristotles-pursuit-of-happiness-11548950094)
 Edith Hall, believed that "happiness comes from a _continuous_ effort
-to become the best possible version of yourself," which was
+to become the best possible version of yourself," which is
 the war with yourself, "the worst enemy you can meet," as
 [Zarathustra](https://www.goodreads.com/quotes/331586-but-the-worst-enemy-you-can-meet-will-always-be) once said.
 On top of that, there are, of course, other foes all around us, including poverty, lack of skills,
 health issues, annoying colleagues, or
 [cheating partners]({% pst 2018/aug/2018-08-14-seventy-percent %}).
-To be happy we need some of them.
+To be happy we need some of these things.
 
-[Bertrand Russell](https://en.wikipedia.org/wiki/Bertrand_Russell) in his book
-_The Conquest of Happiness_ [suggested](https://en.wikiquote.org/wiki/The_Conquest_of_Happiness)
+[Bertrand Russell](https://en.wikipedia.org/wiki/Bertrand_Russell), in his book
+_The Conquest of Happiness_, [suggested](https://en.wikiquote.org/wiki/The_Conquest_of_Happiness)
 that "to be without some of the things you want is an indispensable part of happiness."
-However, modern world, and especially the tech part of it, _gives_ us almost
-everything and anything we may wish for, including those cars, houses, healthy
+However, the modern world, and especially the tech part of it, _gives_ us almost
+anything and everything we may wish for, including the cars, houses, healthy
 food, information, electric scooters, safety, lifetime employment and retirement plans.
-We've got nothing to _worry_ about and ... we are unhappy, because of that.
+We've got nothing to _worry_ about and ... we are unhappy because of that.
 
 The key word here is "worry" not "give." Happiness doesn't really depend on
 how rich or poor we are, as studies [confirm](http://content.time.com/time/magazine/article/0,9171,2019628,00.html)
-(well, above certain level). Instead, it depends on how _easily_ we get what we want.
-The more we _worry_ and the less life _gives_ us for free, the more happy we are, ...
-provided we achieve what we wanted.
+(well, above a certain level). Instead, it depends on how _easily_ we get what we want.
+The more we _worry_ and the less life _gives_ us for free, the more happy we are ...
+provided we achieve what we want.
 
 [Ernest Hemingway](https://en.wikipedia.org/wiki/Ernest_Hemingway) in
 _The Garden of Eden_
 [said](https://www.goodreads.com/quotes/2981-happiness-in-intelligent-people-is-the-rarest-thing-i-know)
 that "happiness in intelligent people is the rarest thing I know."
-This is because mostly "intelligent" people nowadays possess all those things
+This is because most "intelligent" people nowadays possess all those things
 mentioned above and don't need to struggle much in order to get them.
 The smarter we are, the easier it is for us _to achieve_: find a well-paid job
 and buy a new iPhone.
 
-We, <del>intelligent</del> tech people, don't struggle enough.
+We <del>intelligent</del> tech people, don't struggle enough.
 
 Life doesn't challenge us as much as we need. We don't even need to have special talents
 these days to be decently paid: You read [_JavaScript in 24 Hours_](https://amzn.to/2O1MBIg) and a new iPhone
@@ -96,15 +96,15 @@ Listen to what [Frank T. McAndrew](https://en.wikipedia.org/wiki/Francis_T._McAn
 [says](https://www.theguardian.com/commentisfree/2016/aug/17/psychology-happiness-contentment-humans-aspire-goals-accomplish-evolution):
 "Dissatisfaction with the present and dreams of the future are what keep us motivated,"
 meaning that happiness comes to those who
-1) are permanently unsatisfied with current results and
+1) are permanently dissatisfied with current results and
 2) act to achieve more.
 
 Ergo, the recipe of happiness is: resent, overcome, repeat.
 
-What to resent? This may be
+But what to resent? Well this may be
 your laziness, your fears, your absence of Oracle certification, your
 low StackOverflow [reputation]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %}),
-or no paychecks from Apple Store (do you have
+or no paychecks from the Apple Store (do you have
 your own revenue-generating app there?)
 
 Once the obstacle is overcome, repeat.
