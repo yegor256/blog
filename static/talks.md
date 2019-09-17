@@ -112,6 +112,13 @@ What's wrong with Java and IT career in USA/Russia<br/>
 24 September.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="future-talk" alt="jug.msk.ru meetup"/><br/>
+Java Annotations are Evil<br/>
+[Meetup](https://jugmsk.timepad.ru/event/1065185/)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+26 September.
+
+<div class="talk-event">&nbsp;</div>
 <img src="/images/2019/devopsconf.png" class="future-talk" alt="DevOpsConf 2019"/><br/>
 Reversive Decentralized Deployment: Zold Cryptocurrency Example<br/>
 [DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589)<br/>
