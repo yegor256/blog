@@ -84,20 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="future-talk" alt="QAFest 2019"/><br/>
-Quality Assurance vs. Testing<br/>
-[QA Fest](http://qafest.com/en/)<br/>
-<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
-20 September.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="future-talk" alt="RockStart Night"/><br/>
-Building Object-Oriented Java Web Framework From Scratch<br/>
-[RockStart Night Meetup](https://www.meetup.com/Rockstar-Night-Dev-Club/events/264684775/)<br/>
-<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
-20 September.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/2019/teamlead-conf.png" class="future-talk" alt="Saint Teamlead Conf 2019"/><br/>
 Are You Sure You Are Not a Micromanager?<br/>
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019)<br/>
@@ -218,6 +204,21 @@ and
 <span id="total-countries">?</span> countries.
 
 ### 2019
+
+<div class="talk-event">&nbsp;</div>
+<img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="past-talk" alt="QAFest 2019"/>
+Quality Assurance vs. Testing;
+[QA Fest](http://qafest.com/en/);
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
+20 September;
+[slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing).
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="past-talk" alt="RockStart Night"/>
+Building Object-Oriented Java Web Framework From Scratch;
+[RockStart Night Meetup](https://www.meetup.com/Rockstar-Night-Dev-Club/events/264684775/);
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
+20 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F64904410%2F177770519432%2F1%2Foriginal.20190705-020420?w=800&auto=compress&rect=722%2C331%2C1218%2C609&s=45e69d009ea44fa2fbc9dbdbc5dac49c" class="past-talk" alt="ProgBlog"/>
