@@ -211,6 +211,7 @@ Quality Assurance vs. Testing;
 [QA Fest](http://qafest.com/en/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 20 September;
+[video](https://www.youtube.com/watch?v=jZitXMQaXvE),
 [slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing).
 
 <div class="talk-event">&nbsp;</div>
