@@ -25,7 +25,7 @@ in particular, which I asked a few years ago: How do you print an
 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date in Java?
 It managed to collect a lot of upvotes since then and 20+ answers, including
 [my own one](https://stackoverflow.com/a/14274358/187141). Seriously,
-why didn't Java, such a rich eco-system, have a built-in out-of-the-box _simple_
+why didn't Java, such a rich ecosystem, have a built-in out-of-the-box _simple_
 solution for this primitive task? I believe this is because the designers
 of the Java SDK were 1) smart enough not to create a `print()` method right in the
 class `Date`, and 2) not smart enough to give us an extendable set of classes
