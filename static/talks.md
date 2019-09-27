@@ -84,27 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/teamlead-conf.png" class="future-talk" alt="Saint Teamlead Conf 2019"/><br/>
-Are You Sure You Are Not a Micromanager?<br/>
-[Saint Teamlead Conf](https://teamleadconf.ru/spb/2019)<br/>
-<span class="city">St. Petersburg</span>, <span class="country">Russia</span><br/>
-23 September.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="future-talk" alt="EPAM Meetup 2019"/><br/>
-What's wrong with Java and IT career in USA/Russia<br/>
-[Meetup](https://events.epam.com/events/egor-bugaenko)<br/>
-<span class="city">St. Petersburg</span>, <span class="country">Russia</span><br/>
-24 September.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="future-talk" alt="jug.msk.ru meetup"/><br/>
-Java Annotations are Evil<br/>
-[Meetup](https://jugmsk.timepad.ru/event/1065185/)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-26 September.
-
-<div class="talk-event">&nbsp;</div>
 <img src="/images/2019/devopsconf.png" class="future-talk" alt="DevOpsConf 2019"/><br/>
 Reversive Decentralized Deployment: Zold Cryptocurrency Example<br/>
 [DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589)<br/>
@@ -206,6 +185,20 @@ and
 <span id="total-countries">?</span> countries.
 
 ### 2019
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/teamlead-conf.png" class="past-talk" alt="Saint Teamlead Conf 2019"/>
+Are You Sure You Are Not a Micromanager?
+[Saint Teamlead Conf](https://teamleadconf.ru/spb/2019);
+<span class="city">St. Petersburg</span>, <span class="country">Russia</span>
+23 September.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="past-talk" alt="EPAM Meetup 2019"/>
+What's wrong with Java and IT career in USA/Russia;
+[Meetup](https://events.epam.com/events/egor-bugaenko);
+<span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
+24 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="past-talk" alt="QAFest 2019"/>
