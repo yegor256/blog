@@ -124,7 +124,7 @@ if (typeof($) != 'undefined') {
           dataType: 'json',
           async: true,
           timeout: timeout,
-          url: 'https://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
+          url: ' "'
             + encodeURIComponent(url.replace('https://www.yegor256.com', ''))
             + '"',
           success: function(json) {

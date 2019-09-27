@@ -1,4 +1,266 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-09-22T11:12:50+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Be Unhappy to Be Happy</title><link href="https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy.html" rel="alternate" type="text/html" title="Be Unhappy to Be Happy" /><published>2019-09-17T00:00:00+00:00</published><updated>2019-09-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy</id><content type="html" xml:base="https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy.html">&lt;p&gt;At the very end of one of my &lt;a href=&quot;https://www.youtube.com/watch?v=m5mPtC7LYiY&quot;&gt;recent meetups&lt;/a&gt; I was asked a question:
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-09-27T12:11:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Date/Time Printing Can Be Elegant Too</title><link href="https://www.yegor256.com/2019/09/27/parsing-and-printing.html" rel="alternate" type="text/html" title="Date/Time Printing Can Be Elegant Too" /><published>2019-09-27T00:00:00+00:00</published><updated>2019-09-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/27/parsing-and-printing</id><content type="html" xml:base="https://www.yegor256.com/2019/09/27/parsing-and-printing.html">&lt;p&gt;I owe my &lt;a href=&quot;https://stackoverflow.com/users/187141/yegor256&quot;&gt;pretty high&lt;/a&gt;
+StackOverflow reputation to &lt;a href=&quot;https://stackoverflow.com/questions/3914404&quot;&gt;this question&lt;/a&gt;
+in particular, which I asked a few years ago: How do you print an
+&lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_8601&quot;&gt;ISO 8601&lt;/a&gt; date in Java?
+It managed to collect a lot of upvotes since then and 20+ answers, including
+&lt;a href=&quot;https://stackoverflow.com/a/14274358/187141&quot;&gt;my own one&lt;/a&gt;. Seriously,
+why didn’t Java, such a rich ecosystem, have a built-in out-of-the-box &lt;em&gt;simple&lt;/em&gt;
+solution for this primitive task? I believe this is because the designers
+of the Java SDK were 1) smart enough not to create a &lt;code&gt;print()&lt;/code&gt; method right in the
+class &lt;code&gt;Date&lt;/code&gt;, and 2) not smart enough to give us an extendable set of classes
+and interfaces to parse and print dates in an elegant way.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Fargo, Season 2 (2014) by Noah Hawley&quot; src=&quot;/images/2019/09/fargo-2.jpg&quot; longdesc=&quot;#5f920637&quot; /&gt;&lt;figcaption id=&quot;5f920637&quot;&gt;Fargo, Season 2 (2014) by Noah Hawley&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;There are basically three ways to split the responsibility
+of parsing and printing in JDK (to my knowledge):&lt;/p&gt;
+
+&lt;h2 id=&quot;dto--utility-class&quot;&gt;DTO + Utility Class&lt;/h2&gt;
+
+&lt;p&gt;The first one is when &lt;em&gt;something&lt;/em&gt; is responsible for printing and parsing
+while the object is just a data holder.
+There is a class &lt;code&gt;SimpleDateFormat&lt;/code&gt;, which
+has to be configured first, with the right time zone and the formatting pattern.
+Then it has to be used to print:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DateFormat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;yyyy-MM-dd&amp;#39;T&amp;#39;HH:mm&amp;#39;Z&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTimeZone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TimeZone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTimeZone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;UTC&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iso&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To parse it back, there is the method &lt;code&gt;parse()&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2007-12-03T10:15Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It’s a classic combination of a
+&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTO&lt;/a&gt;
+and a
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility class&lt;/a&gt;.
+The DTO is the &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/util/Date.html&quot;&gt;&lt;code&gt;Date&lt;/code&gt;&lt;/a&gt;
+object and the utility class is the &lt;code&gt;SimpleDateFormat&lt;/code&gt;. The date-object
+&lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;exposes&lt;/a&gt;
+all required data attributes through a number of
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt; and the utility
+class prints the date. The date-object has no influence on this process.
+It’s not actually an object, but merely a data container.
+This is not object-oriented programming at all.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-object&quot;&gt;The Object&lt;/h2&gt;
+
+&lt;p&gt;Java 8 introduced the class &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html&quot;&gt;&lt;code&gt;Instant&lt;/code&gt;&lt;/a&gt;
+with the method &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#toString--&quot;&gt;&lt;code&gt;toString()&lt;/code&gt;&lt;/a&gt;,
+which returns time in
+&lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_8601&quot;&gt;ISO-8601&lt;/a&gt; format:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iso&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To parse it back there is a static method
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-&quot;&gt;&lt;code&gt;parse()&lt;/code&gt;&lt;/a&gt;
+in the same class &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html&quot;&gt;&lt;code&gt;Instant&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Instant&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Instant&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2007-12-03T10:15:30Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This approach looks more object-oriented, but
+the problem here is that it’s impossible to modify the printing
+pattern in any way (for example, remove the milliseconds or
+change the format entirely). Moreover, the method &lt;code&gt;parse()&lt;/code&gt; is
+&lt;a href=&quot;/2017/11/14/static-factory-methods.html&quot;&gt;static&lt;/a&gt;,
+which means that there can be no polymorphism—we can’t change the
+logic of parsing either. We also can’t change the printing logic,
+since &lt;code&gt;Instant&lt;/code&gt; is a final class, not an interface.&lt;/p&gt;
+
+&lt;p&gt;This design sounds OK if all we need is ISO 8601 date/time strings.
+The moment we decide to extend it in some way, we are in trouble.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-ugly-mix&quot;&gt;The Ugly Mix&lt;/h2&gt;
+
+&lt;p&gt;There is also
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html&quot;&gt;&lt;code&gt;DateTimeFormatter&lt;/code&gt;&lt;/a&gt;
+in &lt;a href=&quot;/2017/11/07/five-new-java-features.html&quot;&gt;Java 8&lt;/a&gt;,
+which introduces the third way of dealing with date/time objects.
+To print a date to a &lt;code&gt;String&lt;/code&gt; we make an instance of the “formatter” and
+pass it to the time-object:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LocalDateTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ZoneId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;UTC&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;DateTimeFormatter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;formatter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DateTimeFormatter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ofPattern&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;yyyy-MM-dd&amp;#39;T&amp;#39;HH:mm:ss&amp;#39;Z&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iso&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;formatter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To parse back, we have to send the &lt;code&gt;formatter&lt;/code&gt; to the static method
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#parse-java.lang.CharSequence-java.time.format.DateTimeFormatter-&quot;&gt;&lt;code&gt;parse()&lt;/code&gt;&lt;/a&gt;
+together with the text to parse:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LocalDateTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2007-12-03T10:15:30Z&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;formatter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;How do they communicate, &lt;code&gt;LocalDateTime&lt;/code&gt; and &lt;code&gt;DateTimeFormatter&lt;/code&gt;?
+The time-object is a
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html&quot;&gt;&lt;code&gt;TemporalAccessor&lt;/code&gt;&lt;/a&gt;,
+with a method &lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html#get-java.time.temporal.TemporalField-&quot;&gt;&lt;code&gt;get()&lt;/code&gt;&lt;/a&gt;
+allowing anyone to extract whatever is inside. In other words, again, a
+&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTO&lt;/a&gt;.
+The formatter is still a
+&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;utility class&lt;/a&gt; (not even an interface),
+which expects the DTO to arrive, extracts what’s inside, and prints.&lt;/p&gt;
+
+&lt;p&gt;How do they parse? The method
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#parse-java.lang.CharSequence-&quot;&gt;&lt;code&gt;parse()&lt;/code&gt;&lt;/a&gt;
+reads the template, and builds and returns another
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html&quot;&gt;&lt;code&gt;TemporalAccessor&lt;/code&gt;&lt;/a&gt;
+DTO.&lt;/p&gt;
+
+&lt;p&gt;What about encapsulation? “Not this time,” JDK designers say.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-right-way&quot;&gt;The Right Way&lt;/h2&gt;
+
+&lt;p&gt;Here is how I would design it instead. First, I would make a generic
+immutable &lt;code&gt;Template&lt;/code&gt; with this interface:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It would be used like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iso&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DefaultTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;yyyy-MM-dd&amp;#39;T&amp;#39;HH:mm&amp;#39;Z&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;yyyy&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2007&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dd&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;HH&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mm&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ss&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// returns &amp;quot;2007-12-03T10:15Z&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This template internally decides how to print the data coming in,
+depending on the encapsulated pattern. Here is how the &lt;code&gt;Date&lt;/code&gt; would be
+able to print itself:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;yyyy&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dd&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;HH&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mm&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ss&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is how parsing would work
+(it’s a &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;bad idea&lt;/a&gt;
+in general to put code into the constructor, but for this experiment it’s OK):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hours&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;yyyy&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dd&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hours&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;HH&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mm&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;seconds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ss&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s say we want to print time as “13-е января 2019 года” (it’s in Russian).
+How we would do this? We don’t create a new &lt;code&gt;Template&lt;/code&gt;, we
+&lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;decorate&lt;/a&gt; the
+existing one, a few times. First, we make an instance of what we have:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DefaultTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dd-е MMMM yyyy-го года&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This one will print something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;12-е MMMM 2019-го года&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;code&gt;Date&lt;/code&gt; doesn’t send the value of &lt;code&gt;MMMM&lt;/code&gt; into it, that’s why it doesn’t
+replace the text correctly. We have to decorate it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;RussianTemplate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;RussianTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;января&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;февраля&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// etc...&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MMMM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, to get a Russian date from a &lt;code&gt;Date&lt;/code&gt; object we do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RussianTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DefaultTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dd-е MMMM yyyy-го года&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s say we want to print the date in a different time zone. We create another
+decorator, which intercepts the call with the &lt;code&gt;&quot;HH&quot;&lt;/code&gt; and deducts (or adds)
+the time difference:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TimezoneTemplate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;RussianTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;zone&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Template&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;HH&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;MM&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This code will print Moscow (UTC+3) time in Russian:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TimezoneTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RussianTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DefaultTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;dd-е MMMM yyyy-го года&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;We can decorate as much as we need, making the &lt;code&gt;Template&lt;/code&gt; as powerful
+as it needs to be. The elegance of this approach is that the class
+&lt;code&gt;Date&lt;/code&gt; is completely decoupled from the &lt;code&gt;Template&lt;/code&gt;, which makes them
+both replaceable and polymorphic.&lt;/p&gt;
+
+&lt;p&gt;Maybe someone will be interested in creating an open source
+date and time printing and parsing library for Java with these
+principles in mind?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">I owe my pretty high StackOverflow reputation to this question in particular, which I asked a few years ago: How do you print an ISO 8601 date in Java? It managed to collect a lot of upvotes since then and 20+ answers, including my own one. Seriously, why didn’t Java, such a rich ecosystem, have a built-in out-of-the-box simple solution for this primitive task? I believe this is because the designers of the Java SDK were 1) smart enough not to create a print() method right in the class Date, and 2) not smart enough to give us an extendable set of classes and interfaces to parse and print dates in an elegant way.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/fargo-2.jpg" /></entry><entry><title type="html">Be Unhappy to Be Happy</title><link href="https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy.html" rel="alternate" type="text/html" title="Be Unhappy to Be Happy" /><published>2019-09-17T00:00:00+00:00</published><updated>2019-09-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy</id><content type="html" xml:base="https://www.yegor256.com/2019/09/17/be-unhappy-to-be-happy.html">&lt;p&gt;At the very end of one of my &lt;a href=&quot;https://www.youtube.com/watch?v=m5mPtC7LYiY&quot;&gt;recent meetups&lt;/a&gt; I was asked a question:
 “Are you a happy person?” I mumbled something about being happy from time to time,
 but later gave this question more thought. Am I happy? Not really. Well,
 sometimes. What makes me happy? And why are &lt;a href=&quot;https://www.livescience.com/61525-why-are-people-unhappy.html&quot;&gt;so many of us&lt;/a&gt;
@@ -988,138 +1250,4 @@ of telling me that his team couldn’t fix the PostgreSQL issue. He was thinking
 about his business results, not about what I would think about him and his
 team. He didn’t care about that. He needed the bloody PostgreSQL to work!&lt;/p&gt;
 
-&lt;p&gt;Do the same. Be a business man, not a slave.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Just a few days ago a friend of mine, who is not a developer but a co-founder of a software startup, asked me to help his programmers with a technical problem they got stuck with. I said “Why not?” and asked them what was going on. They told me that their PostgreSQL server was running slow because it was doing this and that, and when they restarted it it was repeating this and that… Long story short, I had no idea what they were talking about, even though I was a user of PostgreSQL for many years. My first reaction was: “Have you posted a question on StackOverflow yet?” They answered: “We still hope that that won’t be necessary.” I replied, surprised: “Huh?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/the-tribe.jpg" /></entry><entry><title type="html">Trust Them to Get the Job Done, Not!</title><link href="https://www.yegor256.com/2019/05/28/trust-or-not.html" rel="alternate" type="text/html" title="Trust Them to Get the Job Done, Not!" /><published>2019-05-28T00:00:00+00:00</published><updated>2019-05-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/05/28/trust-or-not</id><content type="html" xml:base="https://www.yegor256.com/2019/05/28/trust-or-not.html">&lt;p&gt;There are &lt;a href=&quot;/2016/07/11/mistakes-in-agile-manifesto.html&quot;&gt;twelve&lt;/a&gt;
-principles in the &lt;a href=&quot;http://agilemanifesto.org/principles.html&quot;&gt;Agile Manifesto&lt;/a&gt;.
-The fifth one says: “Build projects around motivated individuals.
-Give them the environment and support they need,
-and trust them to get the job done.”
-I disagree. Strongly. This formula suggests treating people in a binary way: they
-are either motivated and trusted or … what? They have to be let go?
-This mindset is very typical, according to my observations, and leads
-to &lt;a href=&quot;/2017/11/21/trust-pay-lose.html&quot;&gt;poor management&lt;/a&gt; and project failures.
-Instead, our people management must be more &lt;em&gt;iterative&lt;/em&gt; and much less &lt;em&gt;rigid&lt;/em&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Metro Manila (2013) by Sean Ellis&quot; src=&quot;/images/2019/05/metro-manila.jpg&quot; longdesc=&quot;#14b89672&quot; /&gt;&lt;figcaption id=&quot;14b89672&quot;&gt;Metro Manila (2013) by Sean Ellis&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Just a few days ago I posted a &lt;a href=&quot;https://www.instagram.com/p/Bx6gJAngsT5/&quot;&gt;quote&lt;/a&gt; from
-&lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt;, my recent book about
-software engineering, on Instagram. I’ve got an interesting and very typical
-response from one of my readers (polished a bit):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Why should I get punished in the first place;
-  if my mistake is unforgiven they should fire me, and I believe this
-  is less humiliating than getting punished and then staying with them.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is what I hear almost always when I start talking about rewards and
-punishment in a software team. I hear that it is &lt;em&gt;humiliating&lt;/em&gt; and
-programmers should &lt;em&gt;never&lt;/em&gt; be punished. Instead, as &lt;a href=&quot;https://www.instagram.com/samir.bouazza.2017/&quot;&gt;Samir&lt;/a&gt;
-suggested, they should be fired when they make
-an &lt;em&gt;unforgiven&lt;/em&gt; mistake. Thus, we either trust them 100% or, when a mistake
-happens, we … fire the bloody bastard, he was useless anyway!&lt;/p&gt;
-
-&lt;p&gt;Well, maybe this is part of human nature: First we love, then we hate, and
-&lt;a href=&quot;https://drhurd.com/2018/04/29/stronger-love-stronger-hate/&quot;&gt;the stronger we love, the stronger we hate&lt;/a&gt;.
-But what do these emotions have to do with professional
-&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project management&lt;/a&gt;?&lt;/p&gt;
-
-&lt;p&gt;As &lt;a href=&quot;https://en.wikipedia.org/wiki/W._Edwards_Deming&quot;&gt;William Edwards Deming&lt;/a&gt;
-suggested many years ago, good management is always about a simple
-&lt;a href=&quot;https://en.wikipedia.org/wiki/PDCA&quot;&gt;Plan-Do-Check-Act&lt;/a&gt; cycle.
-No matter what and who we manage, we have to &lt;em&gt;plan&lt;/em&gt; first,
-let ourselves and our people &lt;em&gt;do&lt;/em&gt; the work, then &lt;em&gt;check&lt;/em&gt; what the results look like, comparing
-them with our plans, and finally &lt;em&gt;act&lt;/em&gt; according to the findings, correcting
-the plans. Then, we go back to the planning part and the cycle starts
-over again:&lt;/p&gt;
-
-&lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/PDCA-Multi-Loop.png&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;We all know that this is how software has to be developed. Many years ago
-we all realized that a &lt;a href=&quot;https://en.wikipedia.org/wiki/Waterfall_model&quot;&gt;Waterfall model&lt;/a&gt;,
-where everything was planned upfront
-and then implemented according to the plans, which didn’t change during the
-course of the project, was a bad idea. A much better idea is to deliver
-the software &lt;a href=&quot;https://en.wikipedia.org/wiki/Incremental_build_model&quot;&gt;incrementally&lt;/a&gt;,
-making changes to the plans and specifications
-after each iteration. This &lt;a href=&quot;https://en.wikipedia.org/wiki/Iterative_and_incremental_development&quot;&gt;guarantees&lt;/a&gt;
-higher quality, faster reaction to mistakes,
-and a much better predictability. It’s obvious, right?&lt;/p&gt;
-
-&lt;p&gt;Why don’t we do the same with people? Why do we motivate them upfront
-and then trust them … until they turn out to be completely &lt;em&gt;untrustworthy&lt;/em&gt;?
-Can’t we regularly check
-how they are performing and correct our &lt;em&gt;trust&lt;/em&gt; accordingly? Why are they
-either “great” for us or “useless”? Why can’t we grade them after each
-iteration, according to both mistakes &lt;em&gt;and&lt;/em&gt; achievements they make?&lt;/p&gt;
-
-&lt;p&gt;Let’s see how the formula that Agile suggests can be applied to the
-PDCA continuum:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Plan: Find individuals and motivate them&lt;/li&gt;
-  &lt;li&gt;Do: Trust them and they get the job done&lt;/li&gt;
-  &lt;li&gt;Check: —&lt;/li&gt;
-  &lt;li&gt;Act: —&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It seems that two important pieces are missing. We don’t check whether
-we can still trust them, whether they are still motivated, whether they are
-interested in getting the job done, and whether it’s time to
-&lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;replace&lt;/a&gt;
-some of them.&lt;/p&gt;
-
-&lt;p&gt;Why so? What are we afraid of?&lt;/p&gt;
-
-&lt;p&gt;Moreover, why do programmers find it humiliating when their results are being
-regularly checked, leading to micro rewards and penalties, while at the same
-time they find it totally OK to be fired for a single “unforgiven” mistake?&lt;/p&gt;
-
-&lt;p&gt;I have an answer.&lt;/p&gt;
-
-&lt;p&gt;Because their managers are &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;weak and stupid&lt;/a&gt;,
-in most cases. They simply
-don’t know how to reward and penalize programmers incrementally. They don’t
-know how to measure the progress of people, incrementally. Their control instruments
-are based on guilt and fear: They put programmers together,
-&lt;del&gt;brainwash&lt;/del&gt; &lt;a href=&quot;/2016/12/06/how-to-pay-programmers-less.html&quot;&gt;motivate&lt;/a&gt;
-them, and then make them scared of making an unforgivable mistake.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=KPbKqTXfZwA&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/KPbKqTXfZwA/mqdefault.jpg&quot; alt=&quot;YouTube video #KPbKqTXfZwA&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M89: Deliver your trust continuously, not discrete;
-        29 May 2019.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;What exactly that mistake is, nobody really knows—it’s
-a personal decision of a manager. It could be a broken unit test,
-a missed &lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;meeting&lt;/a&gt;,
-a rude email, or drinking in the office. The scale is
-very wide and at which point the programmer will be fired, nobody
-knows either. Even the manager can’t explain it. The decision in most cases is
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;emotional and personal&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;You know that a very typical mistake in scope management is treating
-large tasks with the 0/100 completeness rule: they are either “not even started”
-or “fully complete,” and nothing in the middle. You can do that with
-&lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;small tasks&lt;/a&gt;,
-but never with large ones, because it will lead to lack of control
-and much higher risk of more expensive failures. You must break your scope
-into smaller pieces and then apply the 0/100 rule.&lt;/p&gt;
-
-&lt;p&gt;The same is true about people. You can’t &lt;a href=&quot;/2017/11/21/trust-pay-lose.html&quot;&gt;trust&lt;/a&gt;
-them 0/100: either you trust
-them fully or you fire them. This is too risky. You have to &lt;em&gt;decompose&lt;/em&gt;
-their trustworthiness and their motivation into smaller pieces and deliver your
-satisfaction and frustration incrementally. How do you do that? Via
-&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;micro-bonuses&lt;/a&gt; and
-&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;micro-penalties&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;How else?&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How to not hire a bad programmer? &lt;a href=&quot;https://twitter.com/hashtag/management?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#management&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1140200517555146753?ref_src=twsrc%5Etfw&quot;&gt;June 16, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="agile" /><summary type="html">There are twelve principles in the Agile Manifesto. The fifth one says: “Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.” I disagree. Strongly. This formula suggests treating people in a binary way: they are either motivated and trusted or … what? They have to be let go? This mindset is very typical, according to my observations, and leads to poor management and project failures. Instead, our people management must be more iterative and much less rigid.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/05/metro-manila.jpg" /></entry></feed>
+&lt;p&gt;Do the same. Be a business man, not a slave.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Just a few days ago a friend of mine, who is not a developer but a co-founder of a software startup, asked me to help his programmers with a technical problem they got stuck with. I said “Why not?” and asked them what was going on. They told me that their PostgreSQL server was running slow because it was doing this and that, and when they restarted it it was repeating this and that… Long story short, I had no idea what they were talking about, even though I was a user of PostgreSQL for many years. My first reaction was: “Have you posted a question on StackOverflow yet?” They answered: “We still hope that that won’t be necessary.” I replied, surprised: “Huh?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/the-tribe.jpg" /></entry></feed>
