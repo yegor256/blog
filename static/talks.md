@@ -118,6 +118,7 @@ Zerocracy: an AI chatbot<br/>
 <span class="city">Krakow</span>, <span class="country">Poland</span><br/>
 7 October.
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
@@ -138,6 +139,7 @@ Something about Zerocracy...<br/>
 [Voxxed Days](https://romania.voxxeddays.com/cluj-napoca/2019-10-30/)<br/>
 <span class="city">Cluj</span>, <span class="country">Romania</span><br/>
 30-31 October.
+-->
 
 <hr/>
 
