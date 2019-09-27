@@ -14,9 +14,9 @@ keywords:
   - java print time
   - java parse time
   - java time
-image: /images/2019/09/
+image: /images/2019/09/fargo-2.jpg
 jb_picture:
-  caption: ...
+  caption: Fargo, Season 2 (2014) by Noah Hawley
 ---
 
 I owe my [pretty high](https://stackoverflow.com/users/187141/yegor256)
