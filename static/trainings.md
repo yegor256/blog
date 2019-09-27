@@ -109,3 +109,16 @@ March 2017, 12 people
 Большое спасибо за тренинг!"<br/>
 ---Александр Токмашев, [Код Безопасности](https://www.securitycode.ru/)<br/>
 January 2019, 38 people
+
+<!-- AdSense start -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+  style="display:block; text-align:center;"
+  data-ad-layout="in-article"
+  data-ad-format="fluid"
+  data-ad-client="ca-pub-5221987912049855"
+  data-ad-slot="3728135095"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- AdSense end -->
