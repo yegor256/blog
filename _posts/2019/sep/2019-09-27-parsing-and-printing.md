@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Date/Time Printing Can Be Elegant Too"
-date: 2016-09-25s
+date: 2016-09-27
 place: St.Petersburg, Russia
 tags: oop java
 description: |
