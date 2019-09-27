@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Date/Time Printing May Be Elegant Too"
+title: "Date/Time Printing Can Be Elegant Too"
 date: 2016-09-25s
 place: St.Petersburg, Russia
 tags: oop java
 description: |
-  Printing and parsing dates in Java is a territory of horror,
+  Printing and parsing dates in Java is the territory of horror,
   with dozens of libraries, which don't make life easier;
   there is an elegant solution, however.
 keywords:
@@ -25,9 +25,9 @@ in particular, which I asked a few years ago: How do you print an
 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date in Java?
 It managed to collect a lot of upvotes since then and 20+ answers, including
 [my own one](https://stackoverflow.com/a/14274358/187141). Seriously,
-why Java, such a rich eco-system, didn't have a built-in out-of-the-box _simple_
-solution for this primitive task? I believe, this is because the designers
-of Java SDK were 1) smart enough not to create `print()` method right in the
+why didn't Java, such a rich ecosystem, have a built-in out-of-the-box _simple_
+solution for this primitive task? I believe this is because the designers
+of the Java SDK were 1) smart enough not to create a `print()` method right in the
 class `Date`, and 2) not smart enough to give us an extendable set of classes
 and interfaces to parse and print dates in an elegant way.
 
@@ -44,7 +44,7 @@ The first one is when _something_ is responsible for printing and parsing
 while the object is just a data holder.
 There is a class `SimpleDateFormat`, which
 has to be configured first, with the right time zone and the formatting pattern.
-Then, it has to be used to print:
+Then it has to be used to print:
 
 {% highlight java %}
 DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
@@ -69,7 +69,7 @@ all required data attributes through a number of
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}) and the utility
 class prints the date. The date-object has no influence on this process.
 It's not actually an object, but merely a data container.
-This is not object-oriented programming, at all.
+This is not object-oriented programming at all.
 
 ## The Object
 
@@ -92,15 +92,15 @@ Instant time = Instant.parse("2007-12-03T10:15:30Z");
 
 This approach looks more object-oriented, but
 the problem here is that it's impossible to modify the printing
-pattern anyhow (for example, remove the milliseconds or
+pattern in any way (for example, remove the milliseconds or
 change the format entirely). Moreover, the method `parse()` is
 [static]({% pst 2017/nov/2017-11-14-static-factory-methods %}),
 which means that there can be no polymorphism---we can't change the
-logic of parsing anyhow. We also can't change the printing logic,
+logic of parsing either. We also can't change the printing logic,
 since `Instant` is a final class, not an interface.
 
 This design sounds OK if all we need is ISO 8601 date/time strings.
-The moment we decide to extend it anyhow, we are in trouble.
+The moment we decide to extend it in some way, we are in trouble.
 
 ## The Ugly Mix
 
@@ -131,15 +131,15 @@ How do they communicate, `LocalDateTime` and `DateTimeFormatter`?
 The time-object is a
 [`TemporalAccessor`](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html),
 with a method [`get()`](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html#get-java.time.temporal.TemporalField-)
-allowing anyone to extract whatever is inside. In other words, again a
+allowing anyone to extract whatever is inside. In other words, again, a
 [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %}).
 The formatter is still a
 [utility class]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) (not even an interface),
-which expects the DTO to arrive, extracts what's inside and prints.
+which expects the DTO to arrive, extracts what's inside, and prints.
 
 How do they parse? The method
 [`parse()`](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#parse-java.lang.CharSequence-)
-reads the template, builds and returns another
+reads the template, and builds and returns another
 [`TemporalAccessor`](https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html)
 DTO.
 
@@ -157,7 +157,7 @@ interface Template {
 }
 {% endhighlight %}
 
-It would be supposed to be used like this:
+It would be used like this:
 
 {% highlight java %}
 String iso = new DefaultTemplate("yyyy-MM-dd'T'HH:mm'Z'")
@@ -231,7 +231,7 @@ This one will print something like this:
 {% endhighlight %}
 
 The `Date` doesn't send the value of `MMMM` into it, that's why it doesn't
-replace the text right. We have to decorate it:
+replace the text correctly. We have to decorate it:
 
 {% highlight java %}
 class RussianTemplate {
@@ -270,12 +270,12 @@ String txt = time.print(
 );
 {% endhighlight %}
 
-Say, we want to print the date in a different time zone. We create another
+Let's say we want to print the date in a different time zone. We create another
 decorator, which intercepts the call with the `"HH"` and deducts (or adds)
 the time difference:
 
 {% highlight java %}
-class TimezonTemplate {
+class TimezoneTemplate {
   private final Template origin;
   private final int zone;
   RussianTemplate(Template t, int z) {
