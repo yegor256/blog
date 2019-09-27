@@ -65,6 +65,10 @@ Volume 2:<br/>
 
 <!--more-->
 
+Sep 26, 2019:
+The first volume was translated to Farsi and published in Iran.
+Thanks to Majid Abarghooei for making this happen!
+
 June 23, 2019:
 We started translating to Portuguese.
 
