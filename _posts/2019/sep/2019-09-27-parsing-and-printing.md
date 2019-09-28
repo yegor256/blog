@@ -278,9 +278,9 @@ the time difference:
 class TimezoneTemplate {
   private final Template origin;
   private final int zone;
-  RussianTemplate(Template t, int z) {
+  TimezoneTemplate(Template t, int z) {
     this.origin = t;
-    this.zone = z
+    this.zone = z;
   }
   @Override
   Template with(String key, Object value) {
