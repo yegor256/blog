@@ -198,7 +198,9 @@ Are You Sure You Are Not a Micromanager?
 What's wrong with Java and IT career in USA/Russia;
 [Meetup](https://events.epam.com/events/egor-bugaenko);
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
-24 September.
+24 September;
+[видео-1](https://www.youtube.com/watch?v=wmvLQFquHGc),
+[видео-2](https://www.youtube.com/watch?v=VslX710UpzQ).
 
 <div class="talk-event">&nbsp;</div>
 <img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="past-talk" alt="QAFest 2019"/>
