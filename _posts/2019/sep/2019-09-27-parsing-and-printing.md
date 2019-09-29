@@ -207,11 +207,11 @@ class Date {
   private final int seconds;
   Date(Template template) {
     this.year = template.read("yyyy");
-    this.month = template.with("MM");
-    this.day = template.with("dd");
-    this.hours = template.with("HH");
-    this.minutes = template.with("mm");
-    this.seconds = template.with("ss");
+    this.month = template.read("MM");
+    this.day = template.read("dd");
+    this.hours = template.read("HH");
+    this.minutes = template.read("mm");
+    this.seconds = template.read("ss");
   }
 {% endhighlight %}
 
