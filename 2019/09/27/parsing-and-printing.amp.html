@@ -244,11 +244,11 @@ in general to put code into the constructor, but for this experiment it’s OK):
   private final int seconds;
   Date(Template template) {
     this.year = template.read("yyyy");
-    this.month = template.with("MM");
-    this.day = template.with("dd");
-    this.hours = template.with("HH");
-    this.minutes = template.with("mm");
-    this.seconds = template.with("ss");
+    this.month = template.read("MM");
+    this.day = template.read("dd");
+    this.hours = template.read("HH");
+    this.minutes = template.read("mm");
+    this.seconds = template.read("ss");
   }</pre>
 
 <p>Let’s say we want to print time as “13-е января 2019 года” (it’s in Russian).
@@ -272,7 +272,7 @@ replace the text correctly. We have to decorate it:</p>
   }
   @Override
   Template with(String key, Object value) {
-    Template t = this.origin.with("MM", value);
+    Template t = this.origin.with(key, value);
     if (key.equals("MM")) {
       String name = "";
       switch (value) {
@@ -305,13 +305,13 @@ the time difference:</p>
 <pre>class TimezoneTemplate {
   private final Template origin;
   private final int zone;
-  RussianTemplate(Template t, int z) {
+  TimezoneTemplate(Template t, int z) {
     this.origin = t;
-    this.zone = z
+    this.zone = z;
   }
   @Override
   Template with(String key, Object value) {
-    Template t = this.origin.with("MM", value);
+    Template t = this.origin.with(key, value);
     if (key.equals("HH")) {
       t = t.with("MM", Integer.cast(value) + this.z);
     }
