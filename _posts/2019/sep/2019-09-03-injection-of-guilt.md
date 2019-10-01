@@ -146,7 +146,7 @@ innate guilt emotion, which sends these or similar signals to their brains:
   - Work on this ticket, we rely on you!
   - Deploy it faster, don't let us down!
   - Be a good boy/girl, don't keep us waiting!
-  - If you don't it fix now, you will be ashamed tomorrow morning!
+  - If you don't fix it now, you will be ashamed tomorrow morning!
 
 Every morning stand-up meeting is a refreshment of guilt every programmer
 needs in order to stay "motivated" and "engaged." This is the real
