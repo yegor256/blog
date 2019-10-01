@@ -84,13 +84,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/devopsconf.png" class="future-talk" alt="DevOpsConf 2019"/><br/>
-Reversive Decentralized Deployment: Zold Cryptocurrency Example<br/>
-[DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-30 September.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://sphere.it/wp-content/uploads/2019/07/data_long-1.png" class="future-talk" alt="Sphere.IT 2019"/><br/>
 Zerocracy: an AI chatbot<br/>
 [Sphere.It](https://sphere.it/speaker/yegor-bugayenko/)<br/>
@@ -185,6 +178,13 @@ and
 <span id="total-countries">?</span> countries.
 
 ### 2019
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2019/devopsconf.png" class="past-talk" alt="DevOpsConf 2019"/>
+Reversive Decentralized Deployment: Zold Cryptocurrency Example;
+[DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589);
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+30 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/teamlead-conf.png" class="past-talk" alt="Saint Teamlead Conf 2019"/>
