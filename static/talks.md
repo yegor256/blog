@@ -91,6 +91,7 @@ Zerocracy: an AI chatbot<br/>
 7 October.
 
 <!--
+CANCELLED
 <div class="talk-event">&nbsp;</div>
 <img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
@@ -98,6 +99,7 @@ The Biggest Mistake of an Honest Tester<br/>
 <span class="city">Sofia</span>, <span class="country">Bulgaria</span><br/>
 12 October.
 
+CANCELLED
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.testcon.lt/wp-content/uploads/2018/05/TestCon-LOGO-pagrindinis_preview-min-e1525260818147.png" class="future-talk" alt="TestCon 2019"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
