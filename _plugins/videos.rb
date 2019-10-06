@@ -22,33 +22,32 @@ require 'yaml'
 require 'cgi'
 
 module Yegor
-  class YoutubeBlock < Liquid::Tag
+  class VideosBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super
-      @id = markup.strip
     end
 
     def render(context)
+      return 'not implemented yet...'
       path = File.expand_path('~/secrets.yml')
       return unless File.exist?(path)
       key = YAML::safe_load(File.open(path))['youtube_api_key']
-      uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet,statistics&key=#{key}")
+      uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&myRating=like&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
       raise json['error']['message'] if json['error']
-      raise "YouTube video #{@id} not found" if json['items'].empty?
-      item = json['items'][0]
-      snippet = item['snippet']
-      puts "YouTube video #{@id} found: #{snippet['title']}"
-      "<aside class='youtube'>
-        <a href='https://www.youtube.com/watch?v=#{@id}'><div class='box'>
-        <img src='#{snippet['thumbnails']['medium']['url']}' alt='YouTube video ##{@id}'/>
-        <div class='play'><i class='icon icon-play'></i></div>
-        </div></a>
-        <div>#{CGI.escapeHTML(snippet['title'])};
-        #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}.</div></aside>"
-        # "#{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes"
+      raise 'No YouTube videos found' if json['items'].empty?
+      json['items'].each do |item|
+        put item
+        snippet = item['snippet']
+        "<p>
+          <a href='https://www.youtube.com/watch?v=#{@id}'>
+          <img src='#{snippet['thumbnails']['medium']['url']}' alt='YouTube video ##{@id}'/><br/>
+          #{CGI.escapeHTML(snippet['title'])}<br/>
+          #{Time.parse(snippet['publishedAt']).strftime('%-d %B %Y')}<br/>
+          #{item['statistics']['viewCount']} views; #{item['statistics']['likeCount']} likes</p>"
+      end
     end
   end
 end
 
-Liquid::Template.register_tag('youtube', Yegor::YoutubeBlock)
+Liquid::Template.register_tag('videos', Yegor::VideosBlock)
