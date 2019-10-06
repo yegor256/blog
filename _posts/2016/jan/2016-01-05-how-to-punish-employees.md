@@ -96,7 +96,8 @@ you but also of each other. Use their fear wisely!
 **Late-Night Phone Calls**.
 Having a [personal life](https://en.wikipedia.org/wiki/Personal_life)
 outside the office is not for everybody. It is a luxury, and
-you are not just going to give it away. He must earn it, and if he is guilty of
+you are not just going to give it away. He must earn it, and if he is
+[guilty]({% pst 2019/sep/2019-09-03-injection-of-guilt %}) of
 not completing a task on time, his private life will be ruined by your
 late-night phone calls. He must remember that. It doesn't really matter
 what exactly the calls are about. Just make them somewhere around 11 p.m.

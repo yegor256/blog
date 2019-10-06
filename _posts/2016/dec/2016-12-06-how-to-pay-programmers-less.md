@@ -118,7 +118,8 @@ of family values---they will be afraid to do that.
 **Stress them**.
 They must not feel relaxed, it's not in your favor. Make sure they
 have tight deadlines, complex problems to solve, and enough guilt on
-their shoulders. They won't ask for a raise, constantly feeling guilty
+their shoulders. They won't ask for a raise, constantly feeling
+[guilty]({% pst 2019/sep/2019-09-03-injection-of-guilt %})
 for letting you down with project goals. Try to make them responsible
 for failures as much as possible.
 

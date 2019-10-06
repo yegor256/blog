@@ -167,7 +167,9 @@ is nothing involving the team that doesn't bother you. You must show that you
 feel responsible for every problem and each task. Also, when there
 is a discussion in the office and someone is doing his own thing, paying
 no attention to the subject, you should ask, "Doesn't this concern you at all?"
-Make him feel guilty for not being careful enough---that will
+Make him feel
+[guilty]({% pst 2019/sep/2019-09-03-injection-of-guilt %})
+for not being careful enough---that will
 give you a lot of points for "being on top of all things."
 
 **Look Tired**.
