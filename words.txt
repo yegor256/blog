@@ -434,6 +434,7 @@ aspectj
 aspects
 ass
 assembling
+assembly
 assert
 assertion
 assertions

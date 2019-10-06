@@ -1,9 +1,6 @@
 https://www.yegor256.com/2017/10/24/award-2018.html
 
 
-WORK IS STILL IN PROGRESS!
-
-
 https://github.com/pmed/v8pp (C++, 5.6K LoC, 27K HoC)
 
 Warning: Project does not pass to the lines of code rule, though I still reviewed the project a bit further
