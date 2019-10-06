@@ -197,6 +197,8 @@ Statistically speaking, I've been speaking in
 and
 <span id="total-countries">?</span> countries.
 
+I was also seen at [these events](/seen.html).
+
 ### 2019
 
 <div class="talk-event">&nbsp;</div>
@@ -210,7 +212,7 @@ Reversive Decentralized Deployment: Zold Cryptocurrency Example;
 <img src="/images/2019/teamlead-conf.png" class="past-talk" alt="Saint Teamlead Conf 2019"/>
 Are You Sure You Are Not a Micromanager?
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019);
-<span class="city">St. Petersburg</span>, <span class="country">Russia</span>
+<span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
 23 September.
 
 <div class="talk-event">&nbsp;</div>
@@ -237,13 +239,6 @@ Building Object-Oriented Java Web Framework From Scratch;
 [RockStart Night Meetup](https://www.meetup.com/Rockstar-Night-Dev-Club/events/264684775/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 20 September.
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F64904410%2F177770519432%2F1%2Foriginal.20190705-020420?w=800&auto=compress&rect=722%2C331%2C1218%2C609&s=45e69d009ea44fa2fbc9dbdbc5dac49c" class="past-talk" alt="ProgBlog"/>
-IT-карьера в США и России;
-[ProgBlog Meetup](https://www.eventbrite.com/e/progblog-meetup-it--tickets-64765274680);
-<span class="city">Moscow</span>, <span class="country">Russia</span>;
-15 August.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/s7QCH17lQlY/mqdefault.jpg" class="past-talk" alt="QualityConf 2019"/>
