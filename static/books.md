@@ -35,6 +35,13 @@ Those reviews really make a difference and new readers are paying attention to t
 help me a lot if you post them. Please, make them honest and as detailed
 as you can.
 
+There are no digital books published, only paper versions, here is
+[why]({% pst 2016/nov/2016-11-09-why-no-ebooks %}). However, if you really
+want to have a PDF version and you have a good reason for it (for example,
+you are blind), you may email me a proof of purchase of the book, and I will
+send you the PDF version (rendered with your name inside, to make sure
+you don't share it with others).
+
 <div class="book-par"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 [Elegant Objects](/elegant-objects.html) (Volume 1)
