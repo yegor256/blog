@@ -64,22 +64,24 @@ script: |
     $('#past-talks-total').text($('img.past-talk').length);
   });
   $(function() {
-    $('#total-cities').text(
-      $.unique(
-        $.map(
-          $('span.city'),
-          function (v, i) { return $(v).text().toLowerCase(); }
-        )
-      ).length
+    var cities = $.unique(
+      $.map(
+        $('span.city'),
+        function (v, i) { return $(v).text().toLowerCase(); }
+      )
     );
-    $('#total-countries').text(
-      $.unique(
-        $.map(
-          $('span.country'),
-          function (v, i) { return $(v).text().toLowerCase(); }
-        )
-      ).length
+    $('#total-cities')
+      .text(cities.length);
+      .attr('title', cities.join(', '));
+    var countries = $.unique(
+      $.map(
+        $('span.country'),
+        function (v, i) { return $(v).text().toLowerCase(); }
+      )
     );
+    $('#total-countries')
+      .text(countries.length)
+      .attr('title', countries.join(', '));
   });
 ---
 
