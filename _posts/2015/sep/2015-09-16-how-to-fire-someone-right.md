@@ -3,7 +3,7 @@ layout: post
 title: "How to Fire Someone Right"
 date: 2015-09-16
 tags: management
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 description: |
   Firing can be done right---nicely and gracefully---if
   you make it professional and not personal; the article

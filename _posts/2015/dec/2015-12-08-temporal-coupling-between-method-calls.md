@@ -2,7 +2,7 @@
 layout: post
 title: "Temporal Coupling Between Method Calls"
 date: 2015-12-08
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: java oop
 description: |
   Sequential method calls inevitably mean

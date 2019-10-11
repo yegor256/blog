@@ -2,7 +2,7 @@
 layout: post
 title: "How to Set Up a Private Maven Repository in Amazon S3"
 date: 2015-09-07
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: java maven
 description: |
   Amazon S3 is a perfect place for keeping private Maven

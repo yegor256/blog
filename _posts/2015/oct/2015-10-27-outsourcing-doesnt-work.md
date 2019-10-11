@@ -99,7 +99,7 @@ the problem is not with the channel but with the motivation. Read on.
 That's why your relationship eventually falls apart." Or something like that.
 I didn't quite get what's meant by "metrics of success," but if it's
 what I think it is, they are right: Success for a software outsourcing
-shop in Kiev is one thing. Success for you, a client of this shop, is something
+shop in Kyiv is one thing. Success for you, a client of this shop, is something
 very different. Read on.
 
 **Poor Specs**.

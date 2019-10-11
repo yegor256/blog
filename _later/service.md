@@ -3,7 +3,7 @@ layout: post
 title: "Servers Is Past, Services Is Future"
 date: 2015-09-05
 tags: cloud
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 description: |
   Hosted, dedicated, virtual and other servers
   is the past. Services is the future. There

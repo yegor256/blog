@@ -2,7 +2,7 @@
 layout: post
 title: "How Do You Punish Your Employees?"
 date: 2016-01-05
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: management sarcasm
 description: |
   A sarcastic overview of different types of abusive

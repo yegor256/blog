@@ -552,7 +552,7 @@ Will be glad to visit again.
 <img src="https://i.ytimg.com/vi/oiNI2jF46h0/mqdefault.jpg" class="past-talk" alt="BDMSummit 2017 Summer"/>
 Make Customers Trust You;
 [BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 17 June 2017;
 [video](https://youtu.be/oiNI2jF46h0),
 [slides](https://www.slideshare.net/YegorBugayenko/make-customers-trust-you).
@@ -602,7 +602,7 @@ Object-oriented Mistakes in OpenJDK;
 <img src="https://i.ytimg.com/vi/CCr8hRE_TUs/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
 Object-Oriented Flavor for JUnit Tests;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 27 May 2017;
 [video](https://www.youtube.com/watch?v=CCr8hRE_TUs),
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-flavor-for-junit-tests).
@@ -617,7 +617,7 @@ Will try to attend next year.
 <img src="https://i.ytimg.com/vi/GS45LzE3LPQ/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
 How Much Do You Cost?;
 [JEEConf 2017](http://jeeconf.com/speaker/yegor-bugayenko-2/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 26 May 2017;
 [video](https://www.youtube.com/watch?v=GS45LzE3LPQ),
 [slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost).
@@ -627,7 +627,7 @@ How Much Do You Cost?;
 <img src="https://i.ytimg.com/vi/DLk_5BmgTVk/mqdefault.jpg" class="past-talk" alt="Kyiv Outsourcing Forum 2017"/>
 How to Avoid Outsourcing Disaster;
 [Kyiv Outsourcing Forum 2017](http://outsourceforum.org/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 26 May 2017;
 [video](https://www.youtube.com/watch?v=DLk_5BmgTVk),
 [slides](https://www.slideshare.net/YegorBugayenko/how-to-avoid-outsourcing-disaster).
@@ -761,7 +761,7 @@ heard anything about me, etc.
 <img src="https://i.ytimg.com/vi/qqWC3_cQHAc/mqdefault.jpg" class="past-talk" alt="JUG.ua 2017"/>
 OOP Java Puzzlers;
 [JUG.ua](https://events.epam.com/events/kyiv-jug-feb28)<br/>
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 28 February 2017;
 [видео](https://www.youtube.com/watch?v=qqWC3_cQHAc).
 
@@ -787,7 +787,7 @@ Object-Oriented Java by Example;
 <img src="https://i.ytimg.com/vi/qAxLtSYN0nw/mqdefault.jpg" class="past-talk" alt="UADevClub"/>
 Make Your Java Object-Oriented, 64 Practical Steps;
 [UADevClub](http://xpinjection.com/articles/oop-meetup-with-yegor-bugaenko-december-20th/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 20 December 2016;
 [видео](https://www.youtube.com/watch?v=qAxLtSYN0nw).
 
@@ -809,7 +809,7 @@ everybody involved. I'm sure next year they will do it better.
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
 Who Is a Software Architect?;
 BuildStuff Ukraine 2016;
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 21-22 November 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
 [video](https://www.youtube.com/watch?v=R1lA7pN60xg).
@@ -874,7 +874,7 @@ interesting, but the audience wasn't really ready.
 <img src="https://i.ytimg.com/vi/tCr9dtGdi2c/mqdefault.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
 XDSD: How Extreme Is Your Team?;
 [XP Days Ukraine](http://xpdays.com.ua/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 12 November 2016;
 [video](https://www.youtube.com/watch?v=tCr9dtGdi2c),
 [photos](https://www.facebook.com/yegor256/posts/10211115240946846).
@@ -916,7 +916,7 @@ Malmö, Sweden;
 <img src="https://i.ytimg.com/vi/4SRoLYxvIQ8/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 A Practical Example of AOP With Aspect (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 14 October 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
 [video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
@@ -932,7 +932,7 @@ the money they saved on better food.
 <img src="https://i.ytimg.com/vi/cGcCcxx4xrg/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 Java vs. OOP;
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 15 October 2016;
 [video](https://www.youtube.com/watch?v=cGcCcxx4xrg).
 
@@ -940,7 +940,7 @@ Java vs. OOP;
 <img src="https://i.ytimg.com/vi/Y-16C5yhKLo/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 Trial by Combat for OOP Honor (in Russian);
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 15 October 2016;
 [video](https://www.youtube.com/watch?v=Y-16C5yhKLo).
 
@@ -1094,7 +1094,7 @@ and forgot about content. Aside from that, it's definitely a place to see again.
 <img src="https://i.ytimg.com/vi/63tS3HNmhiE/mqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
 ORM Is an Offensive Anti-Pattern;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 21 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern),
 [photos](https://www.facebook.com/yegor256/posts/10209552490959073),
@@ -1109,7 +1109,7 @@ very positive, and I definitely will try to attend it next year.
 <img src="https://i.ytimg.com/vi/EnhRgXrHCC4/mqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
 How Immutability Helps in OOP;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 21 May 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/how-immutability-helps-in-oop),
 [photos](https://www.facebook.com/yegor256/posts/10209552490959073),
@@ -1291,8 +1291,8 @@ that the same happened to other speakers.
 <aside class="venue-rate green">B+</aside>
 <img src="https://i.ytimg.com/vi/xbovkm0tTn0/mqdefault.jpg" class="past-talk" alt="AgileEE 2016"/>
 Meetings Are a Threat to Code Quality;
-[AgileEE 2016](http://kiev2016.agileee.org/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+[AgileEE 2016](http://Kyiv2016.agileee.org/);
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 9 April 2016
 [slides](http://www.slideshare.net/YegorBugayenko/meetings-are-a-threat-to-code-quality),
 [photos](https://www.facebook.com/yegor256/posts/10209222357985955);
@@ -1367,7 +1367,7 @@ a time-wasting event for me.
 <img src="https://i.ytimg.com/vi/QMcDa2eyRBY/mqdefault.jpg" class="past-talk" alt="Kyiv DevOps Day"/>
 Need Robust Software? Make It Fragile;
 [Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 27 February 2016;
 [slides](http://www.slideshare.net/YegorBugayenko/need-robust-software-make-it-fragile),
 [photos](https://www.facebook.com/yegor256/posts/10208769445463425),
@@ -1451,7 +1451,7 @@ bad&mdash;an old Soviet-time hotel.
 <img src="https://i.ytimg.com/vi/jUil-aTImgU/mqdefault.jpg" class="past-talk" alt="BuildStuff 2015"/>
 "How Do You Talk to Your Microservice?";
 [BuildStuff 2015](http://buildstuff.com.ua/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 23 November 2015;
 [photos](https://www.facebook.com/yegor256/posts/10208100666144360),
 [slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice),
@@ -1478,7 +1478,7 @@ all the attempts of organizers to make it fun.
 <img src="https://i.ytimg.com/vi/2a2nWELIk-Y/mqdefault.jpg" class="past-talk" alt="Kyiv DevOps 2015"/>
 "Continuous Integration Is Dead";
 [Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
-<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 19 September 2015;
 [photos](https://www.facebook.com/yegor256/posts/10207965398482753),
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y).

@@ -2,7 +2,7 @@
 layout: post
 title: "Maybe DSL Is Not Such a Good Idea?"
 date: 2016-01-08
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: architecture
 description: |
   DSL is a hype for the last few years, but is it

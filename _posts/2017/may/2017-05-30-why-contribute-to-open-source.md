@@ -2,7 +2,7 @@
 layout: post
 title: "Why Do You Contribute to Open Source?"
 date: 2017-05-30
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: programming
 description: |
   Open source contribution is a very important

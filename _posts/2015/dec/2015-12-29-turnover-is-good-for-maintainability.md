@@ -2,7 +2,7 @@
 layout: post
 title: "Employee Turnover Is Good for the Maintainability of Your Code Base"
 date: 2015-12-29
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: management
 description: |
   Low turnover is a symptom of trouble, while a reasonable

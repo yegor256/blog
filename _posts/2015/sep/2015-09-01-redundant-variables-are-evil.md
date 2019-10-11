@@ -2,7 +2,7 @@
 layout: post
 title: "Redundant Variables Are Pure Evil"
 date: 2015-09-01
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: oop java
 description: |
   Despite good intentions, redundant variables actually

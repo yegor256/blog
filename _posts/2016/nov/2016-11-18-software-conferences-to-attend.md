@@ -53,14 +53,14 @@ to make the right choice and never miss their CFP deadlines.
 <tbody>
 <tr><td colspan="5" class="x-hr"></td></tr>
 <tr><td><a href="http://jeeconf.com/">JEEConf</a></td>
-  <td>Kiev</td>
+  <td>Kyiv</td>
   <td>May</td>
   <td>Jan</td>
   <td><a href="https://twitter.com/jeeconf">@jeeconf</a></td>
   </tr>
 <!--
-<tr><td><a href="http://kiev2017.agileee.org/">AgileEE</a></td>
-  <td>Kiev</td>
+<tr><td><a href="http://Kyiv2017.agileee.org/">AgileEE</a></td>
+  <td>Kyiv</td>
   <td>Apr</td>
   <td>Jan</td></tr>
 -->

@@ -25,7 +25,7 @@ image: /images/andreea/podcast.png
 [How Expensive Is Your Outsourcing Team?]({% pst 2016/jan/2016-01-19-how-expensive-is-outsourcing %})
 
 [How to Avoid Outsourcing Disaster](https://www.youtube.com/watch?v=DLk_5BmgTVk)
-at Kyiv Outsourcing Forum 2017; Kiev, Ukraine; 26 May 2017.
+at Kyiv Outsourcing Forum 2017; Kyiv, Ukraine; 26 May 2017.
 
 ## Transcript
 

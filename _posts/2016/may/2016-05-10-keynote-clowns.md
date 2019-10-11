@@ -3,7 +3,7 @@ layout: post
 title: "Keynote Clowns"
 date: 2016-05-10
 tags: mood sarcasm
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 description: |
   Almost all IT conferences are full of professional
   speakers, who, in reality, are just clowns who

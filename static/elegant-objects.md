@@ -688,7 +688,7 @@ book at the following conferences over the next few months:
 JETConf in Minsk, April 25;
 [GeeCON](http://2016.geecon.org/) in Krakow, May 11;
 [DEVit](http://devitconf.org/) in Thessaloniki, May 20; and
-[JEEConf](http://jeeconf.com/speaker/yegor-bugayenko/) in Kiev, May 21.
+[JEEConf](http://jeeconf.com/speaker/yegor-bugayenko/) in Kyiv, May 21.
 I will give away a few copies at each event to those who
 ask the most interesting questions after my presentations. Don't miss your
 chance to say hello and get a free book.

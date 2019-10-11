@@ -2,7 +2,7 @@
 layout: post
 title: "Why Don't You Contribute to Open Source?"
 date: 2015-12-22
-place: Kiev, Ukraine
+place: Kyiv, Ukraine
 tags: programming
 description: |
   An active open source contribution is a good
