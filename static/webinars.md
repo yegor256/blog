@@ -39,7 +39,12 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-<!-- {% webinar 07-08-2019 46 oNtTAF0UjjA Xembly, an imperative language for XML manipulations %} -->
+{% webinar 06-11-2019 47 6AfBsXOgx1s Aspect Oriented Programming: Pros and Cons %}
+
+<a href="https://www.youtube.com/watch?v=6AfBsXOgx1s"><img src="https://i.ytimg.com/vi/6AfBsXOgx1s/mqdefault.jpg" class="wnr" alt="Webinar no.47 by Yegor Bugayenko"/></a>
+November 6, 2019<br/>
+&#35;47: **Aspect Oriented Programming: Pros and Cons**<br/>
+AOP is a very powerful technique, which is so easily can be abused. We discuss how it works, what is it for, and how to use it responsively in order to stay object-oriented.
 
 <a href="https://www.youtube.com/watch?v=oNtTAF0UjjA"><img src="https://i.ytimg.com/vi/oNtTAF0UjjA/mqdefault.jpg" class="wnr" alt="Webinar no.46 by Yegor Bugayenko"/></a>
 August 7, 2019<br/>
