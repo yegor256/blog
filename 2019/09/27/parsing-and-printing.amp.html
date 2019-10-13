@@ -169,7 +169,9 @@ String iso = time.format(formatter);</pre>
 <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#parse-java.lang.CharSequence-java.time.format.DateTimeFormatter-"><code>parse()</code></a>
 together with the text to parse:</p>
 
-<pre>LocalDateTime time = LocalDateTime.parse("2007-12-03T10:15:30Z", formatter);</pre>
+<pre>LocalDateTime time = LocalDateTime.parse(
+  "2007-12-03T10:15:30Z", formatter
+);</pre>
 
 <p>How do they communicate, <code>LocalDateTime</code> and <code>DateTimeFormatter</code>?
 The time-object is a
