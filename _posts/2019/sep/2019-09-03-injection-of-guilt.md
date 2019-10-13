@@ -54,6 +54,8 @@ by email, or even via a phone call? Well,
 we should use tickets,
 [of course]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
+{% quote Why can’t we do this in writing, in a chat, by email, or even via a phone call? %}
+
 Why do "planning for the next day" and "discussing progress" need to be done
 personally in a standing-up circle instead of digitally? Why can't we update
 each other about progress via an email letter, a status board,
@@ -93,6 +95,8 @@ As a result, most programmers neither have personal objectives nor motivational 
 they stay in the office [from nine till five]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 and get a raise every few years only by switching company. And they have
 supervisors, mentors, coaches, leaders, you name it, ... instead of managers.
+
+{% quote Programmers, lined up every morning and forced to explain themselves, inevitably feel guilty. %}
 
 Thus, how is it possible to keep the group together and make sure programmers
 at least pretend to be working, if they have no personal responsibilities,
