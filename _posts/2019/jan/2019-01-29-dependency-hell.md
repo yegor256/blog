@@ -71,6 +71,8 @@ which version to use. It will be necessary to resolve the conflict somehow.
 In the case of Maven it's resolvable, in the case of, for example,
 [Rake](https://github.com/ruby/rake), it's not (to my knowledge).
 
+{% quote If you trust the authors of the library, use dynamic versioning; if you don’t, use a fixed version. %}
+
 To resolve this problem, library Y will have to explicitly say which version
 has to be used. But it can't be sure that `1.14.1` will work correctly with
 library X. To confirm that it does, it would have to be tested by the authors of library

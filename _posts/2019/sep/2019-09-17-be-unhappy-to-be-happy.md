@@ -115,4 +115,4 @@ Once the obstacle is overcome, repeat.
 
 Stay unhappy. To be happy.
 
-
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What makes you happy? <a href="https://twitter.com/hashtag/happiness?src=hash&amp;ref_src=twsrc%5Etfw">#happiness</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1173239049697529859?ref_src=twsrc%5Etfw">September 15, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
