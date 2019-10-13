@@ -124,7 +124,9 @@ To parse back, we have to send the `formatter` to the static method
 together with the text to parse:
 
 {% highlight java %}
-LocalDateTime time = LocalDateTime.parse("2007-12-03T10:15:30Z", formatter);
+LocalDateTime time = LocalDateTime.parse(
+  "2007-12-03T10:15:30Z", formatter
+);
 {% endhighlight %}
 
 How do they communicate, `LocalDateTime` and `DateTimeFormatter`?

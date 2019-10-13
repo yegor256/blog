@@ -43,6 +43,8 @@ to correct, to improve, to be more effective, to be more responsive,
 to commit, and to stay focused. You may even hire an Agile coach to train them.
 They improve, but not for long.
 
+{% quote Bad managers, together with Peter Drucker, believe that management is art. %}
+
 You have "to stay on top of things" and never miss anything, if you want the project to succeed.
 You have to _care_. You have to be in the office all the time.
 You know, from your experience, that without your permanent attention
