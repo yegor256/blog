@@ -106,3 +106,4 @@ breaking the promise to achieve the results.
 
 A promise made to themselves, of course.
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Your boss says you have to learn and use a new framework, you answer: <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1183280977935773696?ref_src=twsrc%5Etfw">October 13, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
