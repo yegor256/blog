@@ -193,6 +193,7 @@ class Date {
       .with("mm", this.minutes)
       .with("ss", this.seconds);
   }
+}
 {% endhighlight %}
 
 This is how parsing would work
@@ -215,6 +216,7 @@ class Date {
     this.minutes = template.read("mm");
     this.seconds = template.read("ss");
   }
+ }
 {% endhighlight %}
 
 Let's say we want to print time as "13-е января 2019 года" (it's in Russian).
