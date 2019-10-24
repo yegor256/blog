@@ -238,7 +238,8 @@ Quality Assurance vs. Testing;
 Building Object-Oriented Java Web Framework From Scratch;
 [RockStart Night Meetup](https://www.meetup.com/Rockstar-Night-Dev-Club/events/264684775/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
-20 September.
+20 September;
+[видео](https://www.youtube.com/watch?v=YXqHaZJD9R8).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/s7QCH17lQlY/mqdefault.jpg" class="past-talk" alt="QualityConf 2019"/>
