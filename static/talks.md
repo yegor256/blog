@@ -99,6 +99,8 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
+Nothing...
+
 <!--
 CANCELLED
 <div class="talk-event">&nbsp;</div>
@@ -107,31 +109,7 @@ Zerocracy: an AI chatbot<br/>
 [Sphere.It](https://sphere.it/speaker/yegor-bugayenko/)<br/>
 <span class="city">Krakow</span>, <span class="country">Poland</span><br/>
 7 October.
-
-CANCELLED
-<div class="talk-event">&nbsp;</div>
-<img src="https://hackconf-2019.s3.amazonaws.com/media/images/HC19_logo_full.max-470x172.png" class="future-talk" alt="HackConf 2019"/><br/>
-The Biggest Mistake of an Honest Tester<br/>
-[HackConf](https://www.hackconf.bg/en/)<br/>
-<span class="city">Sofia</span>, <span class="country">Bulgaria</span><br/>
-12 October.
-
-CANCELLED
-<div class="talk-event">&nbsp;</div>
-<img src="https://www.testcon.lt/wp-content/uploads/2018/05/TestCon-LOGO-pagrindinis_preview-min-e1525260818147.png" class="future-talk" alt="TestCon 2019"/><br/>
-The Biggest Mistake of an Honest Tester<br/>
-[TestCon Europe](https://www.testcon.lt/)<br/>
-<span class="city">Vilnius</span>, <span class="country">Lithuania</span><br/>
-16 October.
-
 -->
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://romania.voxxeddays.com/wp-content/uploads/2018/04/icon.jpg" class="future-talk" alt="Voxxed Days 2019"/><br/>
-Something about Zerocracy...<br/>
-[Voxxed Days](https://romania.voxxeddays.com/cluj-napoca/2019-10-30/)<br/>
-<span class="city">Cluj</span>, <span class="country">Romania</span><br/>
-30-31 October.
 
 <hr/>
 
