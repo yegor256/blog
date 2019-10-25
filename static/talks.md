@@ -189,7 +189,8 @@ Reversive Decentralized Deployment: Zold Cryptocurrency Example;
 Are You Sure You Are Not a Micromanager?
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019);
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
-23 September.
+23 September;
+[видео](https://www.youtube.com/watch?v=6DrD_FucDK4).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="past-talk" alt="EPAM Meetup 2019"/>
