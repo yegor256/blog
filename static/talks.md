@@ -64,21 +64,19 @@ script: |
     $('#past-talks-total').text($('img.past-talk').length);
   });
   $(function() {
-    var cities = $.unique(
-      $.map(
-        $('span.city'),
-        function (v, i) { return $(v).text().toLowerCase(); }
-      )
+    var cities = $.map(
+      $('span.city'),
+      function (v, i) { return $(v).text().toLowerCase(); }
     );
+    cities = $.unique(cities);
     $('#total-cities')
       .text(cities.length)
       .attr('title', cities.join(', '));
-    var countries = $.unique(
-      $.map(
-        $('span.country'),
-        function (v, i) { return $(v).text().toLowerCase(); }
-      )
+    var countries = $.map(
+      $('span.country'),
+      function (v, i) { return $(v).text().toLowerCase(); }
     );
+    countries = $.unique(countries);
     $('#total-countries')
       .text(countries.length)
       .attr('title', countries.join(', '));
