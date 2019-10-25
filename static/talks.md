@@ -182,7 +182,8 @@ I was also seen at [these events](/seen.html).
 Reversive Decentralized Deployment: Zold Cryptocurrency Example;
 [DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
-30 September.
+30 September;
+[видео](https://www.youtube.com/watch?v=0N-CevixhsA).
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2019/teamlead-conf.png" class="past-talk" alt="Saint Teamlead Conf 2019"/>
