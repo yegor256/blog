@@ -71,7 +71,7 @@ script: |
       )
     );
     $('#total-cities')
-      .text(cities.length);
+      .text(cities.length)
       .attr('title', cities.join(', '));
     var countries = $.unique(
       $.map(
