@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Evolutionary Revolution"
-date: 2019-10-15
+date: 2019-10-29
 place: Shenzhen, China
 tags: architect
 description: |
