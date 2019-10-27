@@ -224,3 +224,4 @@ an effective mechanism of self-regulation and self-improvement. Additionally, re
 meetings simply can't be that mechanism because they prevent the team from making
 difficult disciplinary decisions.
 
+<blockquote class="twitter-tweet"><p lang="et" dir="ltr">Agile is... <a href="https://twitter.com/hashtag/agile?src=hash&amp;ref_src=twsrc%5Etfw">#agile</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1188299842700939264?ref_src=twsrc%5Etfw">October 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
