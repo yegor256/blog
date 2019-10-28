@@ -63,7 +63,7 @@ because of this difference. They added a new _service layer_ on top of the good
 old [web hosting](https://en.wikipedia.org/wiki/Web_hosting_service)
 we were all used to. The idea remained the same---it's still data
 in the cloud, which we upload and download---but the SLA was different. We didn't
-need to worry anymore about disk oveflow, paying too much for unused space,
+need to worry anymore about disk overflow, paying too much for unused space,
 regular backups, SSH terminals, and many more things. They just gave us a simple API and
 a promise that the data is there and is safe.
 
