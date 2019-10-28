@@ -23,7 +23,7 @@ I've been thinking about this since 2007, somewhere around the time
 [S3](https://aws.amazon.com/s3/)
 was [launched](https://en.wikipedia.org/wiki/Amazon_Web_Services) by Amazon.
 I even tried to implement it a few times, but failed right after the
-design phase. I've even heard about a startup, which tried to do it,
+design phase. I've heard about a startup, which tried to do it too,
 but also [failed](https://en.wikipedia.org/wiki/Xeround). I'm still not sure
 whether it's possible to do, but it could definitely become a best seller in
 the market of cloud data management. Wait, you may say, what about
@@ -53,7 +53,7 @@ The first one with an FTP is a _server_, the second one is a _service_.
 
 An FTP server provider guarantees you the availability of computational resources (CPU, disk, bandwidth, etc.),
 while S3 guarantees you the availability of the data. If the disk on the
-FTP server crashes, it will be replaced in a timely manner, but the
+FTP server crashes it will be replaced in a timely manner, but the
 data will be lost. If the disk gets full, you will be able to order
 an additional server, but it's your responsibility not to forget. If the
 disk space is not used, you still pay $5 per month. And so on.
@@ -65,7 +65,7 @@ we were all used to. The idea remained the same---it's still data
 in the cloud, which we upload and download---but the SLA was different. We didn't
 need to worry anymore about disk overflow, paying too much for unused space,
 regular backups, SSH terminals, and many more things. They just gave us a simple API and
-a promise that the data is there and is safe.
+a promise that the data was there and was safe.
 
 It's 2019 now and we still don't have the same for relational data. No matter
 which provider you choose, all they do is give you a machine (or a cluster)
