@@ -519,6 +519,7 @@ auto-complete
 auto-formatting
 auto-generated
 auto-increment
+auto-scale
 auto-testing
 autocracy
 automate
@@ -550,6 +551,7 @@ awesome-risks
 aws
 axes
 axioms
+azure
 ba
 baby
 back
@@ -580,6 +582,7 @@ balances
 bald
 ball
 balls
+bandwidth
 bang
 bangalore
 bank
@@ -1266,6 +1269,7 @@ clubs
 clue
 clueless
 clumsy
+cluster
 clusterer
 clutters
 CMMI
@@ -2096,6 +2100,7 @@ diagnosis
 diagnostic
 diagram
 diagrams
+dialects
 dialog
 dictated
 dictates
@@ -2204,6 +2209,7 @@ dish
 dishes
 disillusionment
 disk
+disks
 dislike
 disloyal
 dismissal
@@ -3791,6 +3797,7 @@ indented
 indenting
 independent
 independently
+indexes
 indexing
 indian
 indicates
@@ -5583,6 +5590,7 @@ paulo
 pause
 pauses
 pay
+pay-per-data
 pay-rate
 payable
 payback
@@ -6240,6 +6248,7 @@ rbara
 rd
 RDF
 rdquo
+RDS
 re
 re-deploy
 re-design
@@ -6408,6 +6417,7 @@ related
 relating
 relation
 relational
+relational-data-in-the-cloud
 relationship
 relationships
 relative
@@ -6678,6 +6688,8 @@ roger
 ROI
 role
 roles
+rollback
+rollbacks
 rolled
 roman
 romance
@@ -6904,6 +6916,7 @@ self-respect
 self-sufficient
 selfish
 sell
+seller
 sellers
 selling
 sells
@@ -7147,7 +7160,9 @@ skipping
 skype
 skyrocket
 skyrocketing
+SLA
 slack
+SLAs
 slashes
 slave
 slave's
@@ -7199,6 +7214,7 @@ snake
 Snap-CI
 snapchat
 snapshot
+snapshots
 sneakily
 snippet
 snippets
@@ -7907,6 +7923,7 @@ time-consuming
 time-wasting
 timedlog
 timeframe
+timely
 timeofday
 timeout
 times
@@ -8243,6 +8260,7 @@ until
 untouched
 untraceable
 untrustworthy
+unused
 unusual
 unwilling
 unwise
@@ -8266,6 +8284,7 @@ upon
 upper
 upsets
 upside
+uptime
 upvotes
 upwork
 urauskas

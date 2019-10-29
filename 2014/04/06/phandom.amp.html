@@ -74,9 +74,7 @@ this article explains the rationale and the basic use case
       </p>
       <p>Yegor Bugayenko<br>6 April 2014</p>
       <h1>PhantomJS as an HTML Validator</h1>
-      
-
-<p>I created <a href="http://www.phandom.org">phandom.org</a> a few months ago,
+      <p>I created <a href="https://github.com/yegor256/phandom">phandom</a> a few months ago,
 but yesterday finally found the time to make some needed changes to it.
 So, now is a good time to
 explain how I’m using Phandom in some of my unit tests.</p>
@@ -113,7 +111,7 @@ which, the page loads. The PhantomJS engine then terminates on line 6.</p>
 JavaScript, ActionScript, etc, just as any standard Web browser would.</p>
 
 <p>So far so good, and this is the traditional way of using PhantomJS. Now, on to
-giving you an idea of how <a href="http://www.phandom.org">Phandom</a> (which stands for
+giving you an idea of how <a href="https://github.com/yegor256/phandom">Phandom</a> (which stands for
 “PhantomJS DOM”) works inside Java unit tests:</p>
 
 <p>To test this, let’s give <code>phantomjs</code> an HTML page and ask him to render it. When
@@ -141,8 +139,7 @@ public class DocumentTest {
 
 <p>When we use the above code, here is what happens. First, we get HTML <code>html</code> as a <code>String</code>
 from <code>doc</code> object, and then pass it to
-<a href="http://www.phandom.org/apidocs-0.2.1/org/phandom/Phandom.html"><code>Phandom</code></a>
-as an argument. Then,
+<code>Phandom</code> as an argument. Then,
 on line 13, we call the <code>Phandom.dom()</code> method to get an instance
 of the class <code>org.w3c.dom.Document</code>.</p>
 

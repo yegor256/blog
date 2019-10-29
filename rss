@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-10-25T03:30:15+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Date/Time Printing Can Be Elegant Too</title><link href="https://www.yegor256.com/2019/09/27/parsing-and-printing.html" rel="alternate" type="text/html" title="Date/Time Printing Can Be Elegant Too" /><published>2019-09-27T00:00:00+00:00</published><updated>2019-09-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/27/parsing-and-printing</id><content type="html" xml:base="https://www.yegor256.com/2019/09/27/parsing-and-printing.html">&lt;p&gt;I owe my &lt;a href=&quot;https://stackoverflow.com/users/187141/yegor256&quot;&gt;pretty high&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-10-29T01:35:18+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SQL as a Service</title><link href="https://www.yegor256.com/2019/10/29/sql-as-a-service.html" rel="alternate" type="text/html" title="SQL as a Service" /><published>2019-10-29T00:00:00+00:00</published><updated>2019-10-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/10/29/sql-as-a-service</id><content type="html" xml:base="https://www.yegor256.com/2019/10/29/sql-as-a-service.html">&lt;p&gt;I’ve been thinking about this since 2007, somewhere around the time
+&lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;S3&lt;/a&gt;
+was &lt;a href=&quot;https://en.wikipedia.org/wiki/Amazon_Web_Services&quot;&gt;launched&lt;/a&gt; by Amazon.
+I even tried to implement it a few times, but failed right after the
+design phase. I’ve heard about a startup, which tried to do it too,
+but also &lt;a href=&quot;https://en.wikipedia.org/wiki/Xeround&quot;&gt;failed&lt;/a&gt;. I’m still not sure
+whether it’s possible to do, but it could definitely become a best seller in
+the market of cloud data management. Wait, you may say, what about
+Google Cloud SQL, AWS RDS, Microsoft Azure, Heroku PostgreSQL,
+and &lt;a href=&quot;https://en.wikipedia.org/wiki/Cloud_database&quot;&gt;many others&lt;/a&gt;?
+They are not even close to what I mean.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;La Dolce Vita (1960) by Federico Fellini&quot; src=&quot;/images/2019/10/la-dolce-vita.jpg&quot; longdesc=&quot;#97793a6e&quot; /&gt;&lt;figcaption id=&quot;97793a6e&quot;&gt;La Dolce Vita (1960) by Federico Fellini&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let me give you an analogy. Say you want to store a piece of binary data in the cloud. I have two
+solutions for you. The first one is a hosted server
+with &lt;a href=&quot;https://en.wikipedia.org/wiki/File_Transfer_Protocol&quot;&gt;FTP&lt;/a&gt;. You pay
+me $5 per month, I give you FTP access to the server, which has a disk of 100Gb. You
+can upload your files there and download back. Works just fine.
+And I have a second option, which is &lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;AWS S3&lt;/a&gt;.
+You can also upload and download
+your data, but via their &lt;a href=&quot;https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html&quot;&gt;API&lt;/a&gt;.
+And you &lt;a href=&quot;https://aws.amazon.com/s3/pricing/&quot;&gt;pay&lt;/a&gt; for each API request,
+each byte hosted, and each byte transferred, instead of a monthly fee.
+Which one would you chose?&lt;/p&gt;
+
+&lt;p&gt;Obviously, you would go with S3. Why? What is the fundamental difference
+between these two? The key difference is in their &lt;a href=&quot;https://en.wikipedia.org/wiki/Service-level_agreement&quot;&gt;SLAs&lt;/a&gt;:
+The first one with an FTP is a &lt;em&gt;server&lt;/em&gt;, the second one is a &lt;em&gt;service&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;An FTP server provider guarantees you the availability of computational resources (CPU, disk, bandwidth, etc.),
+while S3 guarantees you the availability of the data. If the disk on the
+FTP server crashes it will be replaced in a timely manner, but the
+data will be lost. If the disk gets full, you will be able to order
+an additional server, but it’s your responsibility not to forget. If the
+disk space is not used, you still pay $5 per month. And so on.&lt;/p&gt;
+
+&lt;p&gt;AWS S3 was such a breakthrough in the market, more than ten years ago, precisely
+because of this difference. They added a new &lt;em&gt;service layer&lt;/em&gt; on top of the good
+old &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_hosting_service&quot;&gt;web hosting&lt;/a&gt;
+we were all used to. The idea remained the same—it’s still data
+in the cloud, which we upload and download—but the SLA was different. We didn’t
+need to worry anymore about disk overflow, paying too much for unused space,
+regular backups, SSH terminals, and many more things. They just gave us a simple API and
+a promise that the data was there and was safe.&lt;/p&gt;
+
+&lt;p&gt;It’s 2019 now and we still don’t have the same for relational data. No matter
+which provider you choose, all they do is give you a machine (or a cluster)
+with MySQL or PostgreSQL installed (or their own version of them) and
+charge you per hour of uptime. They still give you the “good old FTP” without
+an additional service layer on top of it.&lt;/p&gt;
+
+&lt;p&gt;This is what I would expect a &lt;em&gt;true&lt;/em&gt; relational-data-in-the-cloud SLA to sound like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Auto-scale&lt;/strong&gt;.
+Don’t make us worry about the amount of resources required to host
+the data. Just charge more for larger data sets and make sure
+our requests come back in a predictable amount of time.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pay-per-data&lt;/strong&gt;.
+Make us pay for each SQL request, each byte stored, and
+each byte transferred. How many servers and disks are required to host
+it all—that must not be of our concern.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Restricted SQL&lt;/strong&gt;.
+The majority of commands in
+&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/sql-syntax.html&quot;&gt;MySQL&lt;/a&gt; or
+&lt;a href=&quot;https://www.postgresql.org/docs/12/sql.html&quot;&gt;PostgreSQL&lt;/a&gt; dialects are
+not required by the majority of projects. Just give us
+&lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt;, and &lt;code&gt;DELETE&lt;/code&gt; and call it a day.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Indexes&lt;/strong&gt;.
+Create them automatically, using the statistics of the SQL queries
+we are making.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Schema Versioning&lt;/strong&gt;.
+Make it possible to update the schema via something similar to
+&lt;a href=&quot;https://www.liquibase.org/&quot;&gt;Liquibase&lt;/a&gt;: we create a new &lt;code&gt;ALTER TABLE&lt;/code&gt; or &lt;code&gt;CREATE TABLE&lt;/code&gt; script
+and it gets applied to the existing database.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Snapshots and Rollbacks&lt;/strong&gt;.
+Make it possible to make a snapshot of the data, apply a new schema
+version, and then rollback to one of the previously made snapshots if something
+is wrong.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Is it really so hard to implement?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pets" /><summary type="html">I’ve been thinking about this since 2007, somewhere around the time S3 was launched by Amazon. I even tried to implement it a few times, but failed right after the design phase. I’ve heard about a startup, which tried to do it too, but also failed. I’m still not sure whether it’s possible to do, but it could definitely become a best seller in the market of cloud data management. Wait, you may say, what about Google Cloud SQL, AWS RDS, Microsoft Azure, Heroku PostgreSQL, and many others? They are not even close to what I mean.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/10/la-dolce-vita.jpg" /></entry><entry><title type="html">Date/Time Printing Can Be Elegant Too</title><link href="https://www.yegor256.com/2019/09/27/parsing-and-printing.html" rel="alternate" type="text/html" title="Date/Time Printing Can Be Elegant Too" /><published>2019-09-27T00:00:00+00:00</published><updated>2019-09-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/27/parsing-and-printing</id><content type="html" xml:base="https://www.yegor256.com/2019/09/27/parsing-and-printing.html">&lt;p&gt;I owe my &lt;a href=&quot;https://stackoverflow.com/users/187141/yegor256&quot;&gt;pretty high&lt;/a&gt;
 StackOverflow reputation to &lt;a href=&quot;https://stackoverflow.com/questions/3914404&quot;&gt;this question&lt;/a&gt;
 in particular, which I asked a few years ago: How do you print an
 &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_8601&quot;&gt;ISO 8601&lt;/a&gt; date in Java?
@@ -437,6 +533,9 @@ In other words, I’ve always had my eyes on the prize.
 The majority of my projects are not alive anymore, especially the ones
 I created when I was a kid and a student (and I feel so sad about that).
 However, the outcome is obvious: I’m in the tech industry now and I can code in Java.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Your job, as their parents, is to help them identify the right goals—this is where kids usually fail.
+&lt;/aside&gt;
 
 &lt;p&gt;So don’t expect your kids to enjoy studying. Expect them to be interested
 in &lt;em&gt;building&lt;/em&gt; things and making &lt;del&gt;money&lt;/del&gt; profit. Your job, as their parents, is
@@ -1157,116 +1256,4 @@ all team members win and lose &lt;em&gt;proportionally&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Otherwise, it’s not a team.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What will your boss do if you miss a deadline? &lt;a href=&quot;https://twitter.com/hashtag/xdsd?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#xdsd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1147796639983263744?ref_src=twsrc%5Etfw&quot;&gt;July 7, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Remember the famous article Who’s Got the Monkey? The gist of it is simple: good managers always make their subordinates responsible for their own results. When they attempt to send the monkey back to the manager’s shoulders by making excuses, the manager has to be on the alert and not accept the monkey, always keeping workers fully accountable and responsible for what they are doing. It’s a terrific principle, but it doesn’t work for most managers. Here is why. Let me tell you a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/moonrise-kingdom.jpg" /></entry><entry><title type="html">Where Do You Seek Help First?</title><link href="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html" rel="alternate" type="text/html" title="Where Do You Seek Help First?" /><published>2019-06-11T00:00:00+00:00</published><updated>2019-06-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/11/where-do-you-seek-help</id><content type="html" xml:base="https://www.yegor256.com/2019/06/11/where-do-you-seek-help.html">&lt;p&gt;Just a few days ago a friend of mine, who is not a developer but a
-co-founder of a software startup, asked me to help his programmers with
-a technical problem they got stuck with. I said “Why not?” and asked
-them what was going on. They told me that their PostgreSQL server was running
-slow because it was doing this and that, and when they restarted it
-it was repeating this and that… Long story short, I had no idea what they were talking about,
-even though I was a user of PostgreSQL for many years. My first reaction was:
-“Have you posted a question on StackOverflow yet?” They answered:
-“We still &lt;em&gt;hope&lt;/em&gt; that that won’t be necessary.” I replied, surprised: “Huh?”&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Tribe (2014) by Myroslav Slaboshpytskyi&quot; src=&quot;/images/2019/06/the-tribe.jpg&quot; longdesc=&quot;#80dd8b8a&quot; /&gt;&lt;figcaption id=&quot;80dd8b8a&quot;&gt;The Tribe (2014) by Myroslav Slaboshpytskyi&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Why was &lt;a href=&quot;https://stackoverflow.com&quot;&gt;StackOverflow&lt;/a&gt; their last resort? They didn’t explain, but I believe
-I know the answer: they would feel ashamed. For them StackOverflow is a place
-for losers who can’t solve problems by themselves. It is a place
-for those who are not worth the money their &lt;del&gt;owners&lt;/del&gt; bosses pay
-them. It is a place where lazy programmers ask questions and expect answers
-instead of working hard in their offices and resolving everything on their own.&lt;/p&gt;
-
-&lt;p&gt;This is the mentality of a &lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;slave&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is the mentality of someone who is paid
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;for the time&lt;/a&gt; they spend in the office
-or in front of the computer, not for the results they deliver. It is only logical
-that if they are paid for &lt;em&gt;being programmers&lt;/em&gt;, seeking help at StackOverflow
-is a declaration of incompetence. You do it once, you will be excused, you do
-it twice, your boss will &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;start wondering&lt;/a&gt;
-whether you are the right resource
-to be spending money on. But if you do it regularly—you will
-&lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;definitely&lt;/a&gt;
-be &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;fired&lt;/a&gt;.
-Thus, a good slave doesn’t do that. A good slave does everything
-possible to &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;&lt;em&gt;look&lt;/em&gt;&lt;/a&gt;
-busy and competent.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=_4pk5GNUySg&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/_4pk5GNUySg/mqdefault.jpg&quot; alt=&quot;YouTube video #_4pk5GNUySg&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M91: Full-timers want to look smart, freelancers want to deliver results;
-        11 June 2019.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Are you a slave?&lt;/p&gt;
-
-&lt;p&gt;Now, to the contrary, someone who is paid &lt;a href=&quot;https://www.zerocracy.com&quot;&gt;for the results delivered&lt;/a&gt;
-has a completely
-&lt;a href=&quot;/2018/04/17/how-to-be-lazy.html&quot;&gt;different&lt;/a&gt; mindset.
-Why would StackOverflow be a &lt;em&gt;last resort&lt;/em&gt; for a freelancer,
-who is paid for the problems they manage to solve, no matter how much time they
-spend on them nor where they seek help? Moreover, the
-&lt;a href=&quot;/2015/01/15/how-to-cut-corners.html&quot;&gt;faster&lt;/a&gt; such a freelancer
-can &lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;find help&lt;/a&gt;,
-the better an engineer he or she is.&lt;/p&gt;
-
-&lt;p&gt;In the story above, my friend had the right mindset. The moment he found
-out that his team couldn’t solve the problem, he came to me, and a few other
-people. He was not a software developer, that’s why he didn’t know about
-StackOverflow. But he was seeking help everywhere &lt;em&gt;around&lt;/em&gt; his team, while
-his &lt;del&gt;slaves&lt;/del&gt; programmers were trying to find a solution by themselves.&lt;/p&gt;
-
-&lt;p&gt;Maybe that’s why he is a co-founder and they are his employees?&lt;/p&gt;
-
-&lt;p&gt;Now, here is my short list of places &lt;em&gt;you&lt;/em&gt; should
-seek help when you don’t know what to do with your PostgreSQL and you have no time.
-The list is ordered. The places where you &lt;em&gt;start&lt;/em&gt; are at the top,
-the last resort is at the bottom:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Search in Google&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Post to StackOverflow&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Read books&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Ask friends&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Keep trying&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Let me emphasize again: it depends on who you are. If you are a slave on
-a payroll and feel happy about that, you should not listen to the advice in this
-blog post. It will only ruin your &lt;a href=&quot;/2017/01/24/career-advice.html&quot;&gt;career&lt;/a&gt;.
-However, if you are a freelancer, stop being embarrassed for not knowing something!&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Your job is not to know or to be smart. Your jobs is to find solutions and fix problems.
-&lt;/aside&gt;
-
-&lt;p&gt;Your job is &lt;a href=&quot;/2015/02/16/it-is-not-a-school.html&quot;&gt;not&lt;/a&gt;
-&lt;em&gt;to know&lt;/em&gt; or &lt;em&gt;to be smart&lt;/em&gt;. Your jobs is to find solutions
-and fix problems. How you do that is your &lt;em&gt;own business&lt;/em&gt;. It’s not the
-business of your boss, your &lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;project manager&lt;/a&gt;,
-or your product owner.&lt;/p&gt;
-
-&lt;p&gt;Each &lt;a href=&quot;/2017/11/28/microtasking.html&quot;&gt;(micro-)task&lt;/a&gt;
-you resolve has a &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;budget&lt;/a&gt;
-and you are &lt;a href=&quot;/2014/04/15/definition-of-done.html&quot;&gt;fully responsible&lt;/a&gt; for
-it while it is assigned to you. You solve it the way &lt;em&gt;you&lt;/em&gt; want it to be solved.&lt;/p&gt;
-
-&lt;p&gt;Don’t be ashamed of asking for help, just like my friend was not ashamed
-of telling me that his team couldn’t fix the PostgreSQL issue. He was thinking
-about his business results, not about what I would think about him and his
-team. He didn’t care about that. He needed the bloody PostgreSQL to work!&lt;/p&gt;
-
-&lt;p&gt;Do the same. Be a business man, not a slave.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Just a few days ago a friend of mine, who is not a developer but a co-founder of a software startup, asked me to help his programmers with a technical problem they got stuck with. I said “Why not?” and asked them what was going on. They told me that their PostgreSQL server was running slow because it was doing this and that, and when they restarted it it was repeating this and that… Long story short, I had no idea what they were talking about, even though I was a user of PostgreSQL for many years. My first reaction was: “Have you posted a question on StackOverflow yet?” They answered: “We still hope that that won’t be necessary.” I replied, surprised: “Huh?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/the-tribe.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Remember the famous article Who’s Got the Monkey? The gist of it is simple: good managers always make their subordinates responsible for their own results. When they attempt to send the monkey back to the manager’s shoulders by making excuses, the manager has to be on the alert and not accept the monkey, always keeping workers fully accountable and responsible for what they are doing. It’s a terrific principle, but it doesn’t work for most managers. Here is why. Let me tell you a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/moonrise-kingdom.jpg" /></entry></feed>
