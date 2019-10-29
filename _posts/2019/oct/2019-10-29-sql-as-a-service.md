@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SQL as a Service"
-date: 2019-10-22
+date: 2019-10-29
 place: Shenzhen, China
 tags: pets
 description: |
@@ -14,9 +14,9 @@ keywords:
   - sql in cloud
   - sql as service
   - data in cloud
-image: /images/2019/10/
+image: /images/2019/10/la-dolce-vita.jpg
 jb_picture:
-  caption: ...
+  caption: La Dolce Vita (1960) by Federico Fellini
 ---
 
 I've been thinking about this since 2007, somewhere around the time
