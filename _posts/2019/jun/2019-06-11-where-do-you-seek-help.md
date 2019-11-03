@@ -98,10 +98,10 @@ a payroll and feel happy about that, you should not listen to the advice in this
 blog post. It will only ruin your [career]({% pst 2017/jan/2017-01-24-career-advice %}).
 However, if you are a freelancer, stop being embarrassed for not knowing something!
 
-{% quote Your job is not to know or to be smart. Your jobs is to find solutions and fix problems. %}
+{% quote Your job is not to know or to be smart. Your job is to find solutions and fix problems. %}
 
 Your job is [not]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
-_to know_ or _to be smart_. Your jobs is to find solutions
+_to know_ or _to be smart_. Your job is to find solutions
 and fix problems. How you do that is your _own business_. It's not the
 business of your boss, your [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
 or your product owner.
