@@ -10,7 +10,7 @@
 @import 'wrapper';
 
 %gray {
-  color: $gray;
+  color: gray;
 
   a,
   a:visited {
@@ -18,13 +18,13 @@
   }
 }
 
-%light-gray { color: $light-gray; }
+%light-gray { color: lightgray; }
 
 .em2 { font-size: 2em; }
 .center { text-align: center; }
-.green { color: $green; }
-.red { color: $red; }
-.orange { color: $orange; }
+.green { color: darkgreen; }
+.red { color: firebrick; }
+.orange { color: orange; }
 .gray { @extend %gray; }
 
 %clear { clear: both; }
@@ -84,8 +84,8 @@
 
 body {
   @extend %main-font;
-  background-color: $white;
-  color: $black;
+  background-color: white;
+  color: black;
   font-size: $em;
   height: 100%;
   margin: 0;
@@ -97,7 +97,7 @@ body {
 
 a,
 a:visited {
-  color: $blue;
+  color: steelblue;
   text-decoration: underline;
 }
 
@@ -114,7 +114,7 @@ del {
   text-decoration: underline;
 
   &:hover {
-    color: $gray;
+    color: gray;
   }
 }
 
@@ -161,8 +161,8 @@ del {
       padding-left: 0;
 
       li {
-        border-left: 4px solid $green;
-        color: darken($green, 25);
+        border-left: 4px solid darkgreen;
+        color: darkgreen;
         margin-bottom: $em;
         padding-left: $em;
       }
@@ -179,15 +179,15 @@ del {
 
       &.selected {
         a {
-          color: darken($green, 25);
+          color: darkgreen;
           text-decoration: none;
         }
       }
 
       &.highlighted {
         a {
-          background-color: $red;
-          color: $white;
+          background-color: firebrick;
+          color: white;
           padding: 0 .3em;
           text-decoration: none;
         }
@@ -231,7 +231,7 @@ del {
 
     .hire {
       @extend %desktop-only;
-      color: darken($green, 15);
+      color: darkgreen;
       left: 50%;
       margin-left: 45px;
       position: absolute;
@@ -241,7 +241,7 @@ del {
 
     .sub {
       @extend %desktop-only;
-      color: darken($green, 15);
+      color: darkgreen;
       margin-right: 45px;
       position: absolute;
       right: 50%;
@@ -277,7 +277,7 @@ fieldset {
 }
 
 .field-text {
-  border: 1px solid $black;
+  border: 1px solid black;
   @media all and (max-width: $width) {
     width: 100%;
   }
@@ -430,13 +430,13 @@ figure {
 
   figcaption {
     bottom: 1em;
-    color: darken($white, 30);
+    color: silver;
     font-size: .8em;
     left: .5em;
     line-height: 1em;
     max-width: 90%;
     position: absolute;
-    text-shadow: .2px .2px lighten($black, 30);
+    text-shadow: .2px .2px dimgray;
   }
 
   figcaption::before {
@@ -449,8 +449,8 @@ figure {
 }
 
 .tag {
-  background-color: $gray;
-  color: $white !important;
+  background-color: gray;
+  color: white !important;
   font-family: $code-font;
   font-size: .8 * $em;
   margin-right: .2 * $em;
@@ -467,16 +467,16 @@ figure {
   }
 
   &:visited {
-    color: $white !important;
+    color: white !important;
   }
 
   &:hover {
-    background-color: $black;
+    background-color: black;
   }
 }
 
 .note {
-  color: $gray;
+  color: gray;
   font-size: .8 * $em;
   line-height: $em;
   margin-top: 0;
@@ -499,9 +499,9 @@ figure {
 // see 2015-11-03-chatbot-better-than-ui-for-microservices
 .bullet {
   @extend %main-font-bold;
-  background-color: $white;
+  background-color: white;
   border-radius: 50%;
-  color: lighten($orange, 25);
+  color: sandybrown;
   display: inline-block;
   font-size: .8em;
   height: 1em;

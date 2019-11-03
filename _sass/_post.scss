@@ -23,7 +23,7 @@
     }
 
     .play {
-      color: $white;
+      color: white;
       height: 100%;
       line-height: 1em;
       padding-top: 21%;
@@ -54,9 +54,9 @@
     position: relative;
 
     .count {
-      background-color: $white;
-      border: 1px solid $gray;
-      color: $gray;
+      background-color: white;
+      border: 1px solid gray;
+      color: gray;
       display: none;
       font-family: $code-font;
       font-size: .6 * $em;
@@ -69,9 +69,9 @@
 
     .icon {
       $size: 1.2;
-      border: 1px solid $gray;
+      border: 1px solid gray;
       border-radius: 50%;
-      color: $gray;
+      color: gray;
       display: inline-block;
       height: $size * $em;
       line-height: $size * $em;
@@ -83,8 +83,8 @@
       width: $size * $em;
 
       &:hover {
-        background-color: $gray;
-        color: $white;
+        background-color: gray;
+        color: white;
       }
     }
   }
@@ -93,7 +93,7 @@
 .quote {
   @extend %desktop-only;
   @extend %unprintable;
-  border-left: 4px solid $green;
+  border-left: 4px solid darkgreen;
   float: right;
   font-size: 1.6 * $em;
   line-height: 1.6 * $em;
