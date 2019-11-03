@@ -117,7 +117,13 @@ Score: 2/10
 
 
 
+
+
+
 The rest is done by myself:
+
+
+
 
 
 
@@ -129,18 +135,25 @@ Would be great to see this one next year.
 
 
 
+
+
+
 CrocInc/sql-boot
 
 CLOC: 4925 (just 2528 in Kotlin)
 HoC: 146K
 Age: Over 1 year
-+ CI
++ CI + Rultor
 + Code coverage
 + Issues and PRs
 + Unit and integration tests
+- how release procedure is automated? where is the script?
 - Why malewicz is in the same repo? Seems like a wrong allocation of repositories (or cheating?)
+- generators, visitors, DTOs (or I'm wrong?)
 
-Score: 7/10
+The project is good, but rather small and it seems to be a combination of two projects.
+
+Score: 5/10
 
 
 
@@ -175,7 +188,11 @@ Age: over 1 year
 - Some classes look very similar to DTOs
 - Many "protected" methods, which mean lack of encapsulation
 
+The project is rather small.
+
 Score: 5/10
+
+
 
 
 
@@ -211,6 +228,7 @@ Age: over 1 year
 - I can't find how release process is automated
 
 Score: 3/10
+
 
 
 
@@ -373,6 +391,9 @@ It's too small
 
 
 
+
+
+
 vm-mishchenko/ngx-wall
 
 CLOC: 23K (8K in TypeScript)
@@ -430,16 +451,5 @@ Age: Over 1 year
 - global functions
 
 Score: 4/10
-
-
-
-
-
-
-
-
-
-
-
 
 

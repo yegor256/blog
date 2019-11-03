@@ -37,6 +37,22 @@ Submission to 2020 [is open]({% pst 2019/nov/2019-11-03-award-2020 %}).
 
 <hr/>
 
+<img src="//www.yegor256.com/images/award/2019/winner-fabriciofx.png"
+  style="height:45px;" alt='badge'/>
+&nbsp;
+<img src="//www.yegor256.com/images/award/2019/winner-proshin-roman.png"
+  style="height:45px;" alt='badge'/>
+
+[`@`](https://github.com/driver733) and [`@proshin-roman`](https://github.com/proshin-roman)
+were the winners in 2018 with
+[`cactoos-jdbc`](https://github.com/fabriciofx/cactoos-jdbc) (**$1,024**)
+and
+[`finapi-java-client`](https://github.com/proshin-roman/finapi-java-client) (**$1,024**)
+projects.
+[More details]({% pst 2018/sep/2018-09-30-award-2019 %}).
+
+<hr/>
+
 <img src="//www.yegor256.com/images/award/2018/winner-driver733.png"
   style="height:45px;" alt='badge'/>
 &nbsp;
