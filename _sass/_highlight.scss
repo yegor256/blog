@@ -10,7 +10,7 @@ pre {
 }
 
 code {
-  background-color: $light-gray;
+  background-color: lightgray;
   border-radius: 3px;
   font-size: 90%;
   line-height: $em;
@@ -18,7 +18,7 @@ code {
 }
 
 .highlight {
-  border-left: 3px solid $light-gray;
+  border-left: 3px solid lightgray;
   margin-left: 2 * $em;
   padding-left: .5 * $em !important;
 
@@ -36,7 +36,7 @@ code {
   }
 
   .c1 {
-    color: $dark-gray;
+    color: dimgray;
   }
 }
 

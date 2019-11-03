@@ -18,8 +18,6 @@
   }
 }
 
-%light-gray { color: lightgray; }
-
 .em2 { font-size: 2em; }
 .center { text-align: center; }
 .green { color: darkgreen; }
@@ -382,7 +380,7 @@ sub {
 hr {
   @extend %clear;
   border: 0;
-  border-top: 1px solid $light-gray;
+  border-top: 1px solid lightgray;
   height: 0;
   margin-top: 2 * $em;
   text-align: left;
@@ -402,7 +400,7 @@ hr {
 
 blockquote {
   @extend %main-font-italic;
-  border-left: 3px solid $light-gray;
+  border-left: 3px solid lightgray;
   margin-left: 1.5 * $em;
   padding-left: .5 * $em !important;
   position: relative;
