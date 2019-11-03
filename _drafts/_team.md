@@ -22,13 +22,13 @@ jb_picture:
 Here is the question I keep hearing almost every time I [speak](/talks.html) at
 a conference about object-oriented programming and my
 [non-traditional]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %})
-understanding of it: "How do I convince the whole team to start doing everything very differently?"
+understanding of it: "How do I convince the whole team to start doing everything so differently?"
 (asked [here](https://www.yegor256.com/2016/06/27/singletons-must-die.html#comment-4637223953)
 just recently). Indeed, it's easy to change your coding habits
 and your software design if you are alone. What do you do if you are a member
-of a larger team where everybody is very happy with Spring Framework
+of a larger team where everybody is very happy with the Spring Framework
 and procedural programming? How do you change _their_ coding habits?
-Even a better question is: How not to be fired while doing it?
+An even better question is: How do I not get fired while doing it?
 
 <!--more-->
 
@@ -39,21 +39,21 @@ TL;DR You can't win alone, you need a gang; assemble it.
 I remember a few years ago I joined a Java team as an architect and my boss
 told me that the team had very talented programmers, but they needed
 some help. He also told me that the architecture was great, but it needed
-to be improved to become ever greater. And he also told me that I was there
-to make changes which they were looking forward to.
+to be improved to become even better. And he also told me that I was there
+to make changes, which they were looking forward to.
 
 In just a few weeks I realized that the reality was very different. Most of those
 30 programmers were actually junior and could barely tell the difference
 between an object method and a static one. I also found out that there
-were no architecture at all, but a collection of `.java` files created by
+weas no architecture at all, just a collection of `.java` files created by
 different people at different times. And, of course, it became obvious
-that no matter how hard I try, my ideas wouldn't be accepted, simply
+that no matter how hard I tried, my ideas wouldn't be accepted, simply
 because they sounded too scary to those "talented" people.
 
-Seriously, if I would be one of those programmers, sitting there for a few
+Seriously, if I had been one of those programmers, sitting there for a few
 years, writing some Java code and collecting paychecks
 [twice a month]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}), would
-I be glad to meet some guy telling me that I was very wrong for the last
+I be glad to meet some guy telling me that I had been very wrong for the last
 few years and now it's time to re-write everything? No matter how much
 sense this guy would be making, I would simply sabotage him to protect myself.
 No matter how much we declare the value of individualism and independent
@@ -68,12 +68,12 @@ and [setters]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}),
 and [everything else]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}) we,
 [real OOP programmers](https://www.elegantobjects.org), hate so much.
 But I had to do something about it,
-this is what I was paid for. However, just telling them that starting today we
-get rid of Spring because it's [anti-OOP]({% pst 2016/dec/2016-12-13-mvc-vs-oop %})
+that is what I was paid for. However, just telling them that starting today we
+should get rid of Spring because it's [anti-OOP]({% pst 2016/dec/2016-12-13-mvc-vs-oop %})
 would mean only one thing for me: a termination of my contract, sooner or later.
 
 Such a _revolution_ would be a serious threat, both for programmers and for
-the product. Fisrt, it would place most programmers back to junior positions, forcing them
+the product. First, it would put most programmers back in junior positions, forcing them
 to learn new paradigms from scratch, while they want to keep
 enjoying their "senior developer" job titles and salaries. Second,
 radical architectural changes always jeopardize the stability of
@@ -86,7 +86,7 @@ This is what I did:
     I picked not the best, but the ones I believed were most interested in learning
     and growing professionally. No surprise, they were the youngest (career-wise, not by age). It was
     obvious that they didn't have enough professional mentorship and no growth
-    strategy. It was Spring, what growth we can talk about, right?
+    strategy. It was Spring, what growth can we talk about, right?
 
   * Second, I unofficially became their mentor. This is what junior and ambitious
     engineers need most: a teacher. Someone, who can show them the learning
@@ -99,22 +99,22 @@ This is what I did:
     an hour every Monday speaking in front of them and explaining why
     NULL [is bad]({% pst 2014/may/2014-05-13-why-null-is-bad %}),
     unit tests [are good]({% pst 2017/mar/2017-03-24-tdd-that-works %}),
-    and so on. Everybody were free to attend. No surprise,
-    my "students" were always attenting.
+    and so on. Everybody was free to attend. No surprise,
+    my "students" were always attending.
 
   * Fourth, I was refactoring the code base at some critical places and asking
-    my "students" to review my pull requests. These small challenging tasks gave us a good
+    my "students" to review my pull requests. These small challenging tasks gave us good
     material to debate and united our sub-team even better. My ultimate goal
-    was to assemble a gang agreeing with me. Reviewing each others code
+    was to assemble a gang who aagreed with me. Reviewing each others code
     was a perfect method for this.
 
 In just a few months it became obvious for everybody that the entire team
 was not that solid anymore. We had the mainstream majority and the true-OOP minority
-gathered around me. The status quo started to shake. The minority was
-not happy about the architecture and was not anymore afraid to say so. The
+gathered around me. The status quo started to shake. The minority were
+not happy about the architecture and were not afraid anymore to say so. The
 architecture was still bad, but it was not "our" architecture anymore. It was
 something we inherited from the past and we were committed
-to change it, ... eventually.
+to changing it ... eventually.
 
 My first and primary objective was not to fix the architecture, but to
 build a _coalition_ of supporters, and it was achieved.
@@ -124,11 +124,11 @@ direction of the entire team of 30 programmers. Others passively
 joined us later.
 
 I left that project in less than a year (I wasn't fired). However, when I was leaving, it was
-heading to the right direction: test coverage was growing, objects were
+heading in the right direction: test coverage was growing, objects were
 becoming immutable, new DTOs were not being created,
 and so on. Spring Framework was still there, though.
 
 You can do exactly the same in your team, even if your position is still
-a "junior" developer. Don't wait until your boss changes the title, start
+a "junior" developer. Don't wait until your boss changes your title, start
 mentoring people around you and building a team of supporters. When it gets
 big enough, the changes will start happening even without your will.
