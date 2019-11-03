@@ -3,6 +3,10 @@ scss_files: '**/*.scss'
 exclude: 'css/layout.scss'
 
 linters:
+  ColorVariable:
+    enabled: false
+  ColorKeyword:
+    enabled: false
   NestingDepth:
     enabled: false
   SelectorDepth:
@@ -11,7 +15,3 @@ linters:
     enabled: false
   UrlFormat:
     enabled: false
-  ColorVariable:
-    exclude:
-      - '_sass/_ico.scss'
-      - '_sass/_post.scss'
