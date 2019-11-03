@@ -2296,6 +2296,7 @@ don
 don't
 donald
 donate
+donations
 donators
 done
 doodling
@@ -7136,6 +7137,7 @@ situations
 six
 six-digit
 sixnines
+sixth
 size
 sizeable
 sizes

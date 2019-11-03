@@ -1,0 +1,455 @@
+A few reviews by @driver733:
+
+
+
+fabriciofx/cactoos-jdbc
+
++ More than one year old (first commit was made on May 8, 2018)
++ CLOC: 7K (6.5K in Java)
++ HoC = 37524
++ Static analysis (Qulice) is part of the build
++ CI (TravisCI)
++ Demo sub-project, which showcases how to use the library
++ Extremly limited usage of NULL
++ Usage of EO libraries (cactoos-matchers, etc.)
++ Good usage of interfaces (none them have no more than 3 methods)
+++ The library is OOP-based, there are many small classes and there is almost no procedural code
++ All public methods implement interface methods
++ Good README with examples
++ Deployment to Maven Central with rultor script
++ Unit-tests
++ No public static methods
++ no DTOs
++- Some classes are very large, more than 500 LoC, but they are envelopes of Java Core interfaces with many methods (eg. Connection), so it's ok.
+- No code quality badges
+- Master branch has compilation errors
+- Only 3 PRs, seems that the maintainer commits directly to the master branch
+- Only 20 issues, even though the repo has many changes
+- The commits are not linked to the tickets
+- Test coverage changes are not checked during the build
+-- The code does not go through any checks before going into the repository, because it's pushed directly to the master branch
+Summary:
+++ Code-wise the project is really good.
+- However, it's hard to track the changes, because the PRs and tickets are not used.
+-- Also, the master branch can easily be broken, because the code is pushed directly to the repository, which essentially kills
+the purpose of all the checks present.
+Score: 6/10
+A good candidate for the final
+
+
+
+
+
+laszlocsontos/relinkr/relinkr-api
+
++ More than one year old (first commit was made in April, 2018)
++ HoC = 315919
++ CI
++ Good README
++ CI build passes on master branch
++ master branch successfully builds locally as per README
++ Static analysis (Checkstyle, Findbugs)
++ Static analysis is part of the build
++ Unit tests
++ Test coverage (jacoco)
+- No code quality badges
+--- Spring Boot (not really OOP)
+-- Code is pushed directly into the master branch, PRs are not used
+-- New code does not go through any checks before going into the master branch, because PRs are not used
+- public static methods
+- Factories
+- DTOs
+- Getters and setters
+- ORM
+- Inheritance
+- Controllers
+- Test coverage changes are not checked during the build
+Summary:
+--- It's a typical Spring Boot project with DTO, MVC, ORM, etc., but what does it have to do with OOP and EO?
+-- It's hard to track the changes, because the PRs and tickets are not used.
+-- Also, the master branch can easily be broken, because the code is pushed directly to the repository, which essentially kills
+the purpose of all the checks present.
+Score: 1/10
+
+
+
+
+imrafaelmerino/json-values
+
++ CI
++ Quality badges
++ PRs are used
++ Issues are used
+--- Only 2.7K LoC
+--- A quote from the README: "json-values is functional"
+- It seems that PRs are used arbitrarily (There are 48 closed issues and 27 merged PRs)
+Summary:
+Score:
+--- It seems that it's a good library that is build with the functional paradigm in mind, but what does it have to do with OOP and EO?
+--- Only 2.7K LoC
+Score: 0/10
+The project does not meet the minimum requirements
+
+
+
+
+javaparser/javaparser
+
++ CI
++ Quality badges
++ Code coverage badge is present
++ master branch build passes
++ Issues are used
++ PRs are used
++ Unit tests
++- Huge codebase, more than 218k LoC
+- Presence of -ER, -OR classes
+- Some classes are very large, having more than 2k LoC (eg. GenericListVisitorAdapter)
+--- The GenericVisitor interface has 100 methods (!!!), which makes all of its implementors extremly large.
+- No static analysis
+-- There are more than 100 classes which have more than 300 LoC
+- public static methods
+- public static constants
+- Utility classes
+Summary:
+A very large and complex project which has many enormous classes. Not OOP at all.
+Score: 2/10
+
+
+
+
+
+
+The rest is done by myself:
+
+
+
+
+
+
+agorlov/lipid
+
+The project just started in May 15, 2019
+Aside from that, the code and the structure of the project looks pretty good.
+Would be great to see this one next year.
+
+
+
+
+
+
+CrocInc/sql-boot
+
+CLOC: 4925 (just 2528 in Kotlin)
+HoC: 146K
+Age: Over 1 year
++ CI + Rultor
++ Code coverage
++ Issues and PRs
++ Unit and integration tests
+- how release procedure is automated? where is the script?
+- Why malewicz is in the same repo? Seems like a wrong allocation of repositories (or cheating?)
+- generators, visitors, DTOs (or I'm wrong?)
+
+The project is good, but rather small and it seems to be a combination of two projects.
+
+Score: 5/10
+
+
+
+
+dernasherbrezon/jradio
+
+CLOC: 75K
+HoC: 158K
+Age: over 1 year
++ CI
+- No issues, no pull requests
+- I can't find how releases are being done, where are they automated?
+- I can't find code coverage
+- Util classes
+- Exception swallowing in some places
+- Setters and getters
+
+Score: 4/10
+
+
+
+flyimg/flyimg
+
+CLOC: 11K (but PHP code is just 2.2K)
+HoC: 47K
+Age: over 1 year
++ Release management
++ CI
++ Coverage
++ Issues, PRs
+- -ER classes like Processor, Resolver, Provider, Handler
+- Some classes look very similar to DTOs
+- Many "protected" methods, which mean lack of encapsulation
+
+The project is rather small.
+
+Score: 5/10
+
+
+
+
+
+
+Guseyn/page
+
+CLOC: 9.5K (but only 729 lines of JavaScript)
+HoC: 46K
+Age: a bit over 1 year
+
++ CI
++ Coverage
+- No release automation
+
+Anyway, it's too small.
+
+
+
+
+
+
+jacoco/jacoco
+
+CLOC: 51K (37K in Java)
+HoC: 212K
+Age: over 1 year
++ CI
++ Issues, PRs
+- Many static methods
+- NULL is used in many places
+- setters are present and in many places
+- Strange, but I can't find coverage control report
+- I can't find how release process is automated
+
+Score: 3/10
+
+
+
+
+
+
+klapuch/bulletpoint
+
+CLOC: 23K
+HoC: 153K
+Age: Over 1 year
+
++ CI
++ Issues, PRs
++ Code coverage (high: 91%)
++/- Deploy is automated, but release versioning is not
+- No traceability of commits to PRs/issues
+- No static analysis (I didn't manage to find any)
+- Some static methods in the code
+- NULL is used in some places (many)
+
+Score: 5/10
+
+
+
+
+
+
+
+maslick/radiaSlider
+
+CLOC: 8.5K (but only 627 lines of JavScript)
+HoC: 18K
+Age: Over 1 year
+
+The project is too small
+
+
+
+
+
+onqtam/doctest
+
+CLOC: 17K (10K of C/C++)
+HoC: 144K
+Age: Over 1 year
+
++ CI
++ issues, pull requests
++ static analysis
+? one huge CPP file (2.5K lines of code) -- is this how it should be in this case?
+? nullptr is in many places -- is it OK for this case?
+- some code is commented out
+- I didn't find any unit tests and test coverage
+- commit history is not traceable to issues/PRs
+
+Score: 5/10
+
+
+
+
+
+proshin-roman/finapi-java-client
+
+CLOC: 23K (10K in Java)
+HoC: 37K
+Age: Over 1 year
+
++ CI
++/- releases, but I didn't find the procedure (where is the script?)
++ no static
++ no NULLs
++ no setters/getters
++ coverage (85% at the moment)
++ issues, PRs
++ code is traceable back to issues and PRs
+
+Score: 6/10
+
+
+
+
+
+randy408/libspng
+
+CLOC: 3K
+HoC: 29K
+Age: over 1 year
+
+It's too small
+
+
+
+
+
+rectorphp/rector
+
+CLOC: 105K (PHP)
+HoC: 479K
+Age: over 1 year
+
++ CI
++ test coverage
++ PRs (a lot) and issues
+- Implementation inheritance from AbstractRector
+- "return null" in many places
+- static methods and attributes
+
+Score: 5/10
+
+
+
+
+
+retejs/rete
+
+CLOC: 8K (but only 2K of JS and TS)
+HoC: 60K
+Age: Over 1 year
+
+It's too small
+
+
+
+
+
+
+shlinkio/shlink
+
+CLOC: 17K (14K in PHP)
+HoC: 77K
+Age: Over 1 year
+
++ CI
++ PRs, issues
++ test coverage (very high, 97%)
+- release procedure is not automated (or I didn't find the script)
+- most commits are not traced back to issues/PRs
+- global functions
+- traits
+- "return null" in many places
+- abstract classes and implementation inheritance
+
+Score: 5/10
+
+
+
+
+
+
+
+ubiratansoares/blockked
+
+CLOC: 3K (2K in Kotlin)
+HoC: 8K
+Age: About 1 year old
+
+It's too small
+
+
+
+
+
+
+
+
+vm-mishchenko/ngx-wall
+
+CLOC: 23K (8K in TypeScript)
+HoC: 90K
+Age: Over 1 year
+
++ CI
+- No PRs
+- release procedure is not automated (or I didn't find it)
+- factories
+- injectors
+
+It seems to be a combination of a few projects...
+
+Score: 4/10
+
+
+
+
+
+YetiForceCompany/YetiForceCRM
+
+CLOC: 350K
+HoC:
+Age: Over 1 year
+
++ CI
++ PRs, issues
+- many commits are not traced back to issues/PRs
+- test coverage is rather low (26%)
+- how is it released? where is the script?
+- Utils with static methods
+- it's very big for a single repository
+
+Score: 4/10
+
+
+
+
+
+zestframework/Zest_Framework
+
+CLOC: 10K
+HoC: 55K
+Age: Over 1 year
+
++ CI
++ PRs, issues
+- no test coverage
+- release procedure is not automated (where is the script?)
+- no static analysis?
+- DI container inside?
+- is it MVC?
+- router
+- global functions
+
+Score: 4/10
+
+

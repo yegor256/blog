@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-10-29T01:35:18+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SQL as a Service</title><link href="https://www.yegor256.com/2019/10/29/sql-as-a-service.html" rel="alternate" type="text/html" title="SQL as a Service" /><published>2019-10-29T00:00:00+00:00</published><updated>2019-10-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/10/29/sql-as-a-service</id><content type="html" xml:base="https://www.yegor256.com/2019/10/29/sql-as-a-service.html">&lt;p&gt;I’ve been thinking about this since 2007, somewhere around the time
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-11-03T18:51:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2020</title><link href="https://www.yegor256.com/2019/11/03/award-2020.html" rel="alternate" type="text/html" title="Software Quality Award, 2020" /><published>2019-11-03T00:00:00+00:00</published><updated>2019-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/03/award-2020</id><content type="html" xml:base="https://www.yegor256.com/2019/11/03/award-2020.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is the &lt;em&gt;sixth&lt;/em&gt; year of the
+&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
+is still the same—&lt;strong&gt;$4,096&lt;/strong&gt;.
+The rules are still the same. Read on.
+Previous years are here:
+&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
+&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
+&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;,
+&lt;a href=&quot;/2017/10/24/award-2018.html&quot;&gt;2018&lt;/a&gt;,
+&lt;a href=&quot;/2018/09/30/award-2019.html&quot;&gt;2019&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Important! Starting this years rewards are given as donations
+to a Zerocracy project. This means, that you will have to have
+a project in Zerocracy, where you will get the money. You will then
+be able to get that money for yourself via micro-tasks.&lt;/p&gt;
+
+&lt;p&gt;Rules:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;One person can submit only one project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Submissions are accepted until September 1, 2020.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I will check the commit history to make sure you’re the main contributor to the project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Results will be announced October 15, 2020 on this page and by email (or maybe a bit later).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The best project will receive $4,096
+(I may split this amount among a few projects and may give away a smaller amount!).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Final decisions will be made by me and are not negotiable
+(although I may invite other people to help me make the right decision).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Winners that received any cash prizes in previous years can’t submit again.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=Z70PMGaxGhY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg&quot; alt=&quot;YouTube video #Z70PMGaxGhY&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;How to win $4096 in the next year Quality Award? (webinar #29);
+        1 November 2017.&lt;/div&gt;&lt;/aside&gt;
+
+&lt;p&gt;Each project must be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open source (in GitHub).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
+&lt;em&gt;and&lt;/em&gt; at least 16,384 &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits-of-code&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At least one year old (the age of the first commit).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Object-oriented (that’s the only thing I understand).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What doesn’t matter:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Popularity. Even if nobody is using your
+product, it is still eligible for this award. I don’t care about
+popularity; quality is the key.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Programming language. I believe that any language, used correctly,
+can be applied to design a high-quality product.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
+line arguments, it’s still eligible for the award. I don’t care about
+your marketing position; quality is all.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the sixth year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /></entry><entry><title type="html">SQL as a Service</title><link href="https://www.yegor256.com/2019/10/29/sql-as-a-service.html" rel="alternate" type="text/html" title="SQL as a Service" /><published>2019-10-29T00:00:00+00:00</published><updated>2019-10-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/10/29/sql-as-a-service</id><content type="html" xml:base="https://www.yegor256.com/2019/10/29/sql-as-a-service.html">&lt;p&gt;I’ve been thinking about this since 2007, somewhere around the time
 &lt;a href=&quot;https://aws.amazon.com/s3/&quot;&gt;S3&lt;/a&gt;
 was &lt;a href=&quot;https://en.wikipedia.org/wiki/Amazon_Web_Services&quot;&gt;launched&lt;/a&gt; by Amazon.
 I even tried to implement it a few times, but failed right after the
@@ -1147,113 +1249,4 @@ synchronized with a single encapsulated semaphore:&lt;/p&gt;
 I would not be able to do the same in Java or C++. But in Ruby, Python,
 PHP, JavaScript and many others, similar decorators may be very useful.&lt;/p&gt;
 
-&lt;p&gt;I’m using it in &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;this web app&lt;/a&gt;, for example.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">I wrote some time ago about thread-safety in OOP and how it can be achieved with decorators. It was also said that it’s very important to make sure objects are thread-safe (in Ruby and in Java), especially in web apps, which are multi-threaded (well, in most cases anyway). Well, here is SyncEm, a primitive Ruby gem which makes the above possible with a single decorator.</summary></entry><entry><title type="html">How Much Do They Suffer?</title><link href="https://www.yegor256.com/2019/06/19/how-much-they-suffer.html" rel="alternate" type="text/html" title="How Much Do They Suffer?" /><published>2019-06-19T00:00:00+00:00</published><updated>2019-06-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/19/how-much-they-suffer</id><content type="html" xml:base="https://www.yegor256.com/2019/06/19/how-much-they-suffer.html">&lt;p&gt;Remember the famous article
-&lt;a href=&quot;http://hbr.org/1999/11/management-time-whos-got-the-monkey/ar/1&quot;&gt;&lt;em&gt;Who’s Got the Monkey?&lt;/em&gt;&lt;/a&gt;
-The gist of it is simple: good managers always make their subordinates
-responsible for their own results. When they attempt to send the monkey back
-to the manager’s shoulders by making excuses, the manager has to be on the alert and
-not accept the monkey, always keeping workers fully accountable and responsible
-for what they are doing. It’s a terrific principle, but it doesn’t work for most
-managers. Here is why. Let me tell you a story.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Moonrise Kingdom (2012) by Wes Anderson&quot; src=&quot;/images/2019/06/moonrise-kingdom.jpg&quot; longdesc=&quot;#5255722e&quot; /&gt;&lt;figcaption id=&quot;5255722e&quot;&gt;Moonrise Kingdom (2012) by Wes Anderson&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I was having dinner yesterday with a friend of mine, long after work hours,
-when she suddenly exclaimed, “Damn, I forgot something!” and she ran away. When she
-came back half an hour later I asked what had happened. She said that her marketing
-team of two guys were at an expo in another country and had asked her
-to help them upload some videos to their YouTube channel. They needed
-those videos for the upcoming conference next morning and she was the only
-one who had access to the channel. I didn’t get all the technical details, but
-I asked her why she was worried about it so much. She said that if she didn’t
-help them, they would not be able to complete their expo mission properly,
-which would mean a failure for her, a co-founder of the startup. It sounded
-like this, literally:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Me: “Why do you have to worry?” Her: “It’s my startup, duh!”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Here is what happened in “monkey” terms:&lt;/p&gt;
-
-&lt;p&gt;She &lt;em&gt;delegated&lt;/em&gt; the expo job and gave them the monkey (the responsibility). They
-asked her to help them and sent the monkey &lt;em&gt;back&lt;/em&gt; to her. She was sitting
-with the monkey on her shoulders while having dinner with me. It was only
-a matter of luck that she even remembered it. If she hadn’t, the expo
-job would have failed. Who would’ve been guilty? She would. They’d have the perfect
-excuse: “We asked you for help and you forgot, don’t blame us!”&lt;/p&gt;
-
-&lt;p&gt;I’ve seen many similar stories, haven’t you?&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Professional employees should always do everything possible to send monkeys back to their bosses.
-&lt;/aside&gt;
-
-&lt;p&gt;To be honest, professional employees should
-&lt;a href=&quot;/2018/04/17/how-to-be-lazy.html&quot;&gt;always&lt;/a&gt; do everything possible to
-send monkeys back to their bosses. Only those
-&lt;a href=&quot;/2015/10/06/how-to-be-good-office-slave.html&quot;&gt;slaves&lt;/a&gt; who are junior and incompetent
-always try to do everything
-&lt;a href=&quot;/2015/01/26/happy-boss-false-objective.html&quot;&gt;the boss says&lt;/a&gt;, making no attempts
-to “fight back” and win some room for excuses. Seasoned experts
-&lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;know how&lt;/a&gt;
-to manage their &lt;del&gt;owners&lt;/del&gt; managers. Thus, those two expo guys did
-everything right. The mistake was on the co-founder’s side:&lt;/p&gt;
-
-&lt;p&gt;She didn’t make them worry &lt;em&gt;enough&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;The result of the expo was very important for her and she was expecting it.
-She hired two guys to attend the expo and bring back some leads, or whatever
-else they had to bring back. She explained to them how important it was. Obviously,
-however, it was not enough.&lt;/p&gt;
-
-&lt;p&gt;They still worried &lt;em&gt;less&lt;/em&gt; than she did.&lt;/p&gt;
-
-&lt;p&gt;That’s why they were not calling her every minute asking for the videos
-they needed. That’s why they didn’t plan it all properly upfront and instead left
-it till the last moment. That’s why she was the only one worrying.&lt;/p&gt;
-
-&lt;p&gt;By “worry” I mean two things that go together: reward and punishment—even though some people
-prefer to call them consequences. No matter what you call them, there are
-both positive and negative things that happen if you succeed or fail. My friend,
-the co-founder, knew very well what the reward would be if the expo went well,
-and what the punishment would be, for her personally, if the expo failed. However,
-she didn’t transfer these two things to her employees &lt;em&gt;proportionally&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;As she explained to me, they were getting &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;monthly salaries&lt;/a&gt;
-and some bonuses for each lead they brought back. When I asked about the absolute
-amounts, she told me that the bonuses are much smaller than the salary,
-“&lt;em&gt;of course&lt;/em&gt;.” How can we expect them to worry about the leads, if we
-clearly demonstrate our priorities: salary first, results second.&lt;/p&gt;
-
-&lt;p&gt;This is what was wrong.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Leaders decompose and delegate the scope of the work, but forget to decompose and delegate the consequences.
-&lt;/aside&gt;
-
-&lt;p&gt;The job of a &lt;em&gt;leader&lt;/em&gt; is to decompose a larger objective into smaller ones
-and delegate them to subordinates. An objective means the &lt;em&gt;consequences&lt;/em&gt;
-those subordinates will have to face when they either fail or succeed. However, what
-happens in most cases? Leaders decompose and delegate the scope of the work, but forget
-to decompose and delegate the consequences. A monthly salary is &lt;em&gt;not&lt;/em&gt; the
-right way to delegate consequences. Moreover, it is a particularly bad way, because
-it sends a &lt;a href=&quot;/2019/05/28/trust-or-not.html&quot;&gt;false message&lt;/a&gt; to subordinates:
-you are doing great until I fire you, and there is nothing in the middle.&lt;/p&gt;
-
-&lt;p&gt;Most likely they won’t be fired for the missed video. Instead they have
-a good excuse: “We asked you to help us and you forgot; where are our paychecks?”&lt;/p&gt;
-
-&lt;p&gt;Simply put, good managers know how to make the suffering of their
-subordinates more hurtful to them than the mistakes they make are
-hurtful to the project. The same is true about the rewards.&lt;/p&gt;
-
-&lt;p&gt;Of course it’s impossible to put the blame for the entire business failure
-on a single employee, just like it’s impossible to reward a single
-employee for the overall success of the company. But it’s necessary to make
-all team members win and lose &lt;em&gt;proportionally&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Otherwise, it’s not a team.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What will your boss do if you miss a deadline? &lt;a href=&quot;https://twitter.com/hashtag/xdsd?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#xdsd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1147796639983263744?ref_src=twsrc%5Etfw&quot;&gt;July 7, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Remember the famous article Who’s Got the Monkey? The gist of it is simple: good managers always make their subordinates responsible for their own results. When they attempt to send the monkey back to the manager’s shoulders by making excuses, the manager has to be on the alert and not accept the monkey, always keeping workers fully accountable and responsible for what they are doing. It’s a terrific principle, but it doesn’t work for most managers. Here is why. Let me tell you a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/06/moonrise-kingdom.jpg" /></entry></feed>
+&lt;p&gt;I’m using it in &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;this web app&lt;/a&gt;, for example.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">I wrote some time ago about thread-safety in OOP and how it can be achieved with decorators. It was also said that it’s very important to make sure objects are thread-safe (in Ruby and in Java), especially in web apps, which are multi-threaded (well, in most cases anyway). Well, here is SyncEm, a primitive Ruby gem which makes the above possible with a single decorator.</summary></entry></feed>
