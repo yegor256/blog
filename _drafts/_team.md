@@ -45,7 +45,7 @@ to make changes, which they were looking forward to.
 In just a few weeks I realized that the reality was very different. Most of those
 30 programmers were actually junior and could barely tell the difference
 between an object method and a static one. I also found out that there
-weas no architecture at all, just a collection of `.java` files created by
+was no architecture at all, just a collection of `.java` files created by
 different people at different times. And, of course, it became obvious
 that no matter how hard I tried, my ideas wouldn't be accepted, simply
 because they sounded too scary to those "talented" people.
@@ -85,7 +85,7 @@ This is what I did:
     to all of them and found out who had the highest potential. Pay attention,
     I picked not the best, but the ones I believed were most interested in learning
     and growing professionally. No surprise, they were the youngest (career-wise, not by age). It was
-    obvious that they didn't have enough professional mentorship and no growth
+    obvious that they didn't have enough professional mentoring and no growth
     strategy. It was Spring, what growth can we talk about, right?
 
   * Second, I unofficially became their mentor. This is what junior and ambitious
@@ -105,7 +105,7 @@ This is what I did:
   * Fourth, I was refactoring the code base at some critical places and asking
     my "students" to review my pull requests. These small challenging tasks gave us good
     material to debate and united our sub-team even better. My ultimate goal
-    was to assemble a gang who aagreed with me. Reviewing each others code
+    was to assemble a gang who agreed with me. Reviewing each others code
     was a perfect method for this.
 
 In just a few months it became obvious for everybody that the entire team
