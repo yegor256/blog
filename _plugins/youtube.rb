@@ -34,7 +34,8 @@ module Yegor
       key = YAML::safe_load(File.open(path))['youtube_api_key']
       uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
-      raise json['error']['message'] if json['error']
+      # raise json['error']['message'] if json['error']
+      return "<!-- YouTube video #{@id} skipped -->" if json['error']
       raise "YouTube video #{@id} not found" if json['items'].empty?
       item = json['items'][0]
       snippet = item['snippet']
