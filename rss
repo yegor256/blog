@@ -1,4 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-11-05T19:01:59+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2020</title><link href="https://www.yegor256.com/2019/11/03/award-2020.html" rel="alternate" type="text/html" title="Software Quality Award, 2020" /><published>2019-11-03T00:00:00+00:00</published><updated>2019-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/03/award-2020</id><content type="html" xml:base="https://www.yegor256.com/2019/11/03/award-2020.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-11-05T19:26:09+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Revolutionary Evolution</title><link href="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html" rel="alternate" type="text/html" title="Revolutionary Evolution" /><published>2019-11-05T00:00:00+00:00</published><updated>2019-11-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/05/revolutionary-evolution</id><content type="html" xml:base="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html">&lt;p&gt;Here is the question I keep hearing almost every time I &lt;a href=&quot;/talks.html&quot;&gt;speak&lt;/a&gt; at
+a conference about object-oriented programming and my
+&lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;non-traditional&lt;/a&gt;
+understanding of it: “How do I convince the whole team to start doing everything so differently?”
+(asked &lt;a href=&quot;https://www.yegor256.com/2016/06/27/singletons-must-die.html#comment-4637223953&quot;&gt;here&lt;/a&gt;
+just recently). Indeed, it’s easy to change your coding habits
+and your software design if you are alone. What do you do if you are a member
+of a larger team where everybody is very happy with the Spring Framework
+and procedural programming? How do you change &lt;em&gt;their&lt;/em&gt; coding habits?
+An even better question is: How do I not get fired while doing it?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;War, Inc. (2008) by Joshua Seftel&quot; src=&quot;/images/2019/11/war-inc.jpg&quot; longdesc=&quot;#1890f8f3&quot; /&gt;&lt;figcaption id=&quot;1890f8f3&quot;&gt;War, Inc. (2008) by Joshua Seftel&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;TL;DR You can’t win alone, you need a gang; assemble it.&lt;/p&gt;
+
+&lt;p&gt;I remember a few years ago I joined a Java team as an architect and my boss
+told me that the team had very talented programmers, but they needed
+some help. He also told me that the architecture was great, but it needed
+to be improved to become even better. And he also told me that I was there
+to make changes, which they were looking forward to.&lt;/p&gt;
+
+&lt;p&gt;In just a few weeks I realized that the reality was very different. Most of those
+30 programmers were actually junior and could barely tell the difference
+between an object method and a static one. I also found out that there
+was no architecture at all, just a collection of &lt;code&gt;.java&lt;/code&gt; files created by
+different people at different times. And, of course, it became obvious
+that no matter how hard I tried, my ideas wouldn’t be accepted, simply
+because they sounded too scary to those “talented” people.&lt;/p&gt;
+
+&lt;p&gt;Seriously, if I had been one of those programmers, sitting there for a few
+years, writing some Java code and collecting paychecks
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;twice a month&lt;/a&gt;, would
+I be glad to meet some guy telling me that I had been very wrong for the last
+few years and now it’s time to re-write everything? No matter how much
+sense this guy would be making, I would simply sabotage him to protect myself.
+No matter how much we declare the value of individualism and independent
+thinking, most people are very social and dependent on the community around
+them. In other words, they do what everybody else does. It’s safer.&lt;/p&gt;
+
+&lt;p&gt;Those 30 people were not any better. They were going with the flow, using
+&lt;a href=&quot;https://spring.io&quot;&gt;Spring&lt;/a&gt;, and &lt;a href=&quot;https://blog.mybatis.org/&quot;&gt;MyBatis&lt;/a&gt;,
+and &lt;a href=&quot;/2016/06/27/singletons-must-die.html&quot;&gt;Singletons&lt;/a&gt;,
+and &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters&lt;/a&gt;,
+and &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;setters&lt;/a&gt;,
+and &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;everything else&lt;/a&gt; we,
+&lt;a href=&quot;https://www.elegantobjects.org&quot;&gt;real OOP programmers&lt;/a&gt;, hate so much.
+But I had to do something about it,
+that is what I was paid for. However, just telling them that starting today we
+should get rid of Spring because it’s &lt;a href=&quot;/2016/12/13/mvc-vs-oop.html&quot;&gt;anti-OOP&lt;/a&gt;
+would mean only one thing for me: a termination of my contract, sooner or later.&lt;/p&gt;
+
+&lt;p&gt;Such a &lt;em&gt;revolution&lt;/em&gt; would be a serious threat, both for programmers and for
+the product. First, it would put most programmers back in junior positions, forcing them
+to learn new paradigms from scratch, while they want to keep
+enjoying their “senior developer” job titles and salaries. Second,
+radical architectural changes always jeopardize the stability of
+the existing software.&lt;/p&gt;
+
+&lt;p&gt;This is what I did:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;First, I picked the youngest and the most talented ones (at the same time). I talked
+to all of them and found out who had the highest potential. Pay attention,
+I picked not the best, but the ones I believed were most interested in learning
+and growing professionally. No surprise, they were the youngest (career-wise, not by age). It was
+obvious that they didn’t have enough professional mentoring and no growth
+strategy. It was Spring, what growth can we talk about, right?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Second, I unofficially became their mentor. This is what junior and ambitious
+engineers need most: a teacher. Someone, who can show them the learning
+path and the direction to new knowledge. My mentorship was simply about
+reviewing the code they wrote and telling them what was wrong, supporting
+my criticism with my own blog posts and many other articles/books I could find
+about “good” software design.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Third, I organized regular weekly lectures for the entire team. I was spending
+an hour every Monday speaking in front of them and explaining why
+NULL &lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;is bad&lt;/a&gt;,
+unit tests &lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;are good&lt;/a&gt;,
+and so on. Everybody was free to attend. No surprise,
+my “students” were always attending.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fourth, I was refactoring the code base at some critical places and asking
+my “students” to review my pull requests. These small challenging tasks gave us good
+material to debate and united our sub-team even better. My ultimate goal
+was to assemble a gang who agreed with me. Reviewing each others code
+was a perfect method for this.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In just a few months it became obvious for everybody that the entire team
+was not that solid anymore. We had the mainstream majority and the true-OOP minority
+gathered around me. The status quo started to shake. The minority were
+not happy about the architecture and were not afraid anymore to say so. The
+architecture was still bad, but it was not “our” architecture anymore. It was
+something we inherited from the past and we were committed
+to changing it … eventually.&lt;/p&gt;
+
+&lt;p&gt;My first and primary objective was not to fix the architecture, but to
+build a &lt;em&gt;coalition&lt;/em&gt; of supporters, and it was achieved.
+I didn’t manage to get the majority though.
+There were only 7 people in my gang. But this size was enough to change the
+direction of the entire team of 30 programmers. Others passively
+joined us later.&lt;/p&gt;
+
+&lt;p&gt;I left that project in less than a year (I wasn’t fired). However, when I was leaving, it was
+heading in the right direction: test coverage was growing, objects were
+becoming immutable, new DTOs were not being created,
+and so on. Spring Framework was still there, though.&lt;/p&gt;
+
+&lt;p&gt;You can do exactly the same in your team, even if your position is still
+a “junior” developer. Don’t wait until your boss changes your title, start
+mentoring people around you and building a team of supporters. When it gets
+big enough, the changes will start happening even without your will.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Here is the question I keep hearing almost every time I speak at a conference about object-oriented programming and my non-traditional understanding of it: “How do I convince the whole team to start doing everything so differently?” (asked here just recently). Indeed, it’s easy to change your coding habits and your software design if you are alone. What do you do if you are a member of a larger team where everybody is very happy with the Spring Framework and procedural programming? How do you change their coding habits? An even better question is: How do I not get fired while doing it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/11/war-inc.jpg" /></entry><entry><title type="html">Software Quality Award, 2020</title><link href="https://www.yegor256.com/2019/11/03/award-2020.html" rel="alternate" type="text/html" title="Software Quality Award, 2020" /><published>2019-11-03T00:00:00+00:00</published><updated>2019-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/03/award-2020</id><content type="html" xml:base="https://www.yegor256.com/2019/11/03/award-2020.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is the &lt;em&gt;sixth&lt;/em&gt; year of the
 &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
@@ -1184,72 +1303,4 @@ just for code.”&lt;/p&gt;
 
 &lt;p&gt;I will keep updating this post. If you know a “good” article about TDD,
 please send it &lt;a href=&quot;mailto:tdd@yegor256.com&quot;&gt;my way&lt;/a&gt;; maybe I’ll find
-something interesting to quote from it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">While I was working with a previous article about Test-Driven Development (TDD) I read many blog posts and a few books on the subject and found out that I disagree with a few of them; even some that are pretty important. It seems that most software experts simply misunderstand how software development works. Maybe because they are not really programmers, but are instead book authors and conference speakers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/la-venus-a-la-fourrure.jpg" /></entry><entry><title type="html">SyncEm: Thread-Safe Decorators in Ruby</title><link href="https://www.yegor256.com/2019/06/26/syncem.html" rel="alternate" type="text/html" title="SyncEm: Thread-Safe Decorators in Ruby" /><published>2019-06-26T00:00:00+00:00</published><updated>2019-06-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/06/26/syncem</id><content type="html" xml:base="https://www.yegor256.com/2019/06/26/syncem.html">&lt;p&gt;I wrote some time ago about thread-safety in OOP and how it can
-be achieved with &lt;a href=&quot;/2017/01/17/synchronized-decorators.html&quot;&gt;decorators&lt;/a&gt;.
-It was also said that it’s very important to make sure objects are thread-safe
-(&lt;a href=&quot;/2018/11/06/ruby-threads.html&quot;&gt;in Ruby&lt;/a&gt; and
-&lt;a href=&quot;/2018/03/27/how-to-test-thread-safety.html&quot;&gt;in Java&lt;/a&gt;),
-especially in web apps, which are multi-threaded (well, in most
-cases anyway). Well, here is &lt;a href=&quot;https://github.com/yegor256/syncem&quot;&gt;SyncEm&lt;/a&gt;,
-a primitive Ruby gem which makes the above possible with a single decorator.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Look at this simple Ruby web app, which increments the internal counter
-on every web click:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;sinatra&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:visits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/*&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;increment&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;s2&quot;&gt;&amp;quot;Your visit is no.&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;Front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In order to count visits it uses class &lt;code&gt;Visits&lt;/code&gt;, which may be
-defined this way (it keeps the counter in a file):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Visits&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;increment&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_s&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;total&lt;/span&gt;
-    &lt;span class=&quot;no&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;idx.txt&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It is not thread-safe. Try to run this app and you will see that,
-if you make many concurrent HTTP requests to the front page,
-the counter will not always return consecutive numbers.&lt;/p&gt;
-
-&lt;p&gt;To make it thread-safe you can use &lt;a href=&quot;https://github.com/yegor256/syncem&quot;&gt;SyncEm&lt;/a&gt;,
-a small Ruby gem, which I created just a few months ago. Here is how:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;syncem&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sinatra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:visits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SyncEm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;# Same as above&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here we just &lt;em&gt;decorate&lt;/em&gt; the object with a thread-safe decorator, which
-intercepts all calls to all methods of an object and make them all
-synchronized with a single encapsulated semaphore:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SyncEm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Visits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This mechanism will only work in Ruby or similar
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Interpreted_language&quot;&gt;interpreted&lt;/a&gt; languages.
-I would not be able to do the same in Java or C++. But in Ruby, Python,
-PHP, JavaScript and many others, similar decorators may be very useful.&lt;/p&gt;
-
-&lt;p&gt;I’m using it in &lt;a href=&quot;https://github.com/zold-io/wts.zold.io&quot;&gt;this web app&lt;/a&gt;, for example.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ruby" /><summary type="html">I wrote some time ago about thread-safety in OOP and how it can be achieved with decorators. It was also said that it’s very important to make sure objects are thread-safe (in Ruby and in Java), especially in web apps, which are multi-threaded (well, in most cases anyway). Well, here is SyncEm, a primitive Ruby gem which makes the above possible with a single decorator.</summary></entry></feed>
+something interesting to quote from it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">While I was working with a previous article about Test-Driven Development (TDD) I read many blog posts and a few books on the subject and found out that I disagree with a few of them; even some that are pretty important. It seems that most software experts simply misunderstand how software development works. Maybe because they are not really programmers, but are instead book authors and conference speakers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/la-venus-a-la-fourrure.jpg" /></entry></feed>

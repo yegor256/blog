@@ -433,6 +433,7 @@ aspect
 aspectj
 aspects
 ass
+assemble
 assembling
 assembly
 assert
@@ -1009,6 +1010,7 @@ cards
 care
 cared
 career
+career-wise
 careers
 careful
 carefully
@@ -1098,6 +1100,7 @@ chakraborty
 challenge
 challenged
 challenges
+challenging
 champion
 champions
 chance
@@ -1290,6 +1293,7 @@ coach
 coaches
 coaching
 coad
+coalition
 coarse-grained
 coast
 cobertura
@@ -3037,6 +3041,7 @@ force
 force-based
 forced
 forces
+forcing
 ford
 forecast
 foreign
@@ -3187,6 +3192,7 @@ garry
 gas
 gates
 gateway
+gathered
 gave
 gays
 gb
@@ -4358,6 +4364,7 @@ least
 leave
 leaves
 leaving
+lectures
 led
 left
 left-brained
@@ -4748,8 +4755,10 @@ mention
 mentioned
 mentioning
 mentions
+mentor
 mentoring
 mentors
+mentorship
 menu
 menus
 mercedes-benz
@@ -4858,6 +4867,7 @@ minimize
 minimum
 minister
 minor
+minority
 minus
 minuses
 minute
@@ -5039,6 +5049,7 @@ mutual
 MVC
 MVP
 my
+mybatis
 myers
 myself
 MySQL
@@ -5188,6 +5199,7 @@ non-professional
 non-programmer
 non-stop
 non-tech
+non-traditional
 none
 nonetheless
 nonsense
@@ -5568,6 +5580,7 @@ passing
 passion
 passionate
 passive
+passively
 passport
 password
 passwords
@@ -7539,6 +7552,7 @@ stubbornness
 stubs
 stuck
 student
+students
 studied
 studies
 studio
@@ -7558,6 +7572,7 @@ stylesheets
 styling
 sub-module
 sub-tasks
+sub-team
 subconsciously
 subject
 subjective
@@ -8075,6 +8090,7 @@ troublemaker
 troubles
 troubling
 true
+true-OOP
 truly
 trump
 trunk
@@ -8237,6 +8253,7 @@ unmarshalling
 unmitigated
 unmotivated
 unnecessary
+unofficially
 unordered
 unpacks
 unpleasant
@@ -8734,6 +8751,7 @@ you're
 you've
 young
 younger
+youngest
 your
 yourkit
 yours
