@@ -44,7 +44,7 @@ Submission to 2020 [is open]({% pst 2019/nov/2019-11-03-award-2020 %}).
   style="height:45px;" alt='badge'/>
 
 [`@fabriciofx`](https://github.com/fabriciofx) and [`@proshin-roman`](https://github.com/proshin-roman)
-were the winners in 2018 with
+were the winners in 2019 with
 [`cactoos-jdbc`](https://github.com/fabriciofx/cactoos-jdbc) (**$1,024**)
 and
 [`finapi-java-client`](https://github.com/proshin-roman/finapi-java-client) (**$1,024**)
