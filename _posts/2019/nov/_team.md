@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Evolutionary Revolution"
-date: 2019-10-29
+title: "Revolutionary Evolution"
+date: 2019-11-05
 place: Shenzhen, China
 tags: architect
 description: |
@@ -14,7 +14,7 @@ keywords:
   - how to convince
   - tech majority
   - how to gain support
-image: /images/2019/10/war-inc.jpg
+image: /images/2019/11/war-inc.jpg
 jb_picture:
   caption: War, Inc. (2008) by Joshua Seftel
 ---
