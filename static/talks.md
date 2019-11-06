@@ -97,17 +97,12 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
-Nothing...
-
-<!--
-CANCELLED
 <div class="talk-event">&nbsp;</div>
-<img src="https://sphere.it/wp-content/uploads/2019/07/data_long-1.png" class="future-talk" alt="Sphere.IT 2019"/><br/>
-Zerocracy: an AI chatbot<br/>
-[Sphere.It](https://sphere.it/speaker/yegor-bugayenko/)<br/>
-<span class="city">Krakow</span>, <span class="country">Poland</span><br/>
-7 October.
--->
+<img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
+Is Java Getting Better?<br/>
+[JavaFest](https://javafest.com.ua/)<br/>
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
+21 March.
 
 <hr/>
 
