@@ -137,7 +137,7 @@ Annotation `@Around` has one parameter, which---in this case---says that the adv
 
  1. its visibility modifier is `*` (`public`, `protected` or `private`);
 
- 2. its name is name `*` (any name);
+ 2. its name is `*` (any name);
 
  3. its arguments are `..` (any arguments); and
 
@@ -184,6 +184,7 @@ public class Foo {
   private final MethodLogger logger;
   @Loggable
   public int power(int x, int p) {
+    // Prepares the "point" object
     return this.logger.around(point);
   }
   private int power_aroundBody(int x, int p) {
