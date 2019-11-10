@@ -177,3 +177,5 @@ the change will arrive there.
 
 This is pretty much all you need to know about Bitcoin and Blockchain,
 in order to use it. What did I miss?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you understand how <a href="https://twitter.com/hashtag/Blockchain?src=hash&amp;ref_src=twsrc%5Etfw">#Blockchain</a> works?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1193419019870715904?ref_src=twsrc%5Etfw">November 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
