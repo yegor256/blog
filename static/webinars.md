@@ -39,7 +39,14 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-{% webinar 06-11-2019 47 6AfBsXOgx1s Aspect Oriented Programming: Pros and Cons %}
+3blBn65iQmU
+
+{% webinar 04-12-2019 48 3blBn65iQmU Why Private Static Literals are Evil? %}
+
+<a href="https://www.youtube.com/watch?v=3blBn65iQmU"><img src="https://i.ytimg.com/vi/3blBn65iQmU/mqdefault.jpg" class="wnr" alt="Webinar no.48 by Yegor Bugayenko"/></a>
+December 4, 2019<br/>
+&#35;48: **Why Private Static Literals are Evil?**<br/>
+The most commonly used solution for the code duplication code is private static constants, which sometimes stay in the same class, but very often reside in a special Constants utility class. This approach is very wrong and only kills your design.
 
 <a href="https://www.youtube.com/watch?v=6AfBsXOgx1s"><img src="https://i.ytimg.com/vi/6AfBsXOgx1s/mqdefault.jpg" class="wnr" alt="Webinar no.47 by Yegor Bugayenko"/></a>
 November 6, 2019<br/>
