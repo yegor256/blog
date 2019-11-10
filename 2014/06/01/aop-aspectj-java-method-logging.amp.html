@@ -191,7 +191,7 @@ anything except provide some meta-information to those who are interested in run
     <p>its visibility modifier is <code>*</code> (<code>public</code>, <code>protected</code> or <code>private</code>);</p>
   </li>
   <li>
-    <p>its name is name <code>*</code> (any name);</p>
+    <p>its name is <code>*</code> (any name);</p>
   </li>
   <li>
     <p>its arguments are <code>..</code> (any arguments); and</p>
@@ -241,6 +241,7 @@ like this after weaving:</p>
   private final MethodLogger logger;
   @Loggable
   public int power(int x, int p) {
+    // Prepares the "point" object
     return this.logger.around(point);
   }
   private int power_aroundBody(int x, int p) {
