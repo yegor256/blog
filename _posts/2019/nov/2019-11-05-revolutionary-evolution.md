@@ -50,6 +50,8 @@ different people at different times. And, of course, it became obvious
 that no matter how hard I tried, my ideas wouldn't be accepted, simply
 because they sounded too scary to those "talented" people.
 
+{% quote Most programmers do what everybody else does, it’s safer. %}
+
 Seriously, if I had been one of those programmers, sitting there for a few
 years, writing some Java code and collecting paychecks
 [twice a month]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}), would
@@ -115,6 +117,8 @@ not happy about the architecture and were not afraid anymore to say so. The
 architecture was still bad, but it was not "our" architecture anymore. It was
 something we inherited from the past and we were committed
 to changing it ... eventually.
+
+{% quote Don’t wait until your boss changes your title, start building a team of supporters. %}
 
 My first and primary objective was not to fix the architecture, but to
 build a _coalition_ of supporters, and it was achieved.
