@@ -39,8 +39,6 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-3blBn65iQmU
-
 {% webinar 04-12-2019 48 3blBn65iQmU Why Private Static Literals are Evil? %}
 
 <a href="https://www.youtube.com/watch?v=3blBn65iQmU"><img src="https://i.ytimg.com/vi/3blBn65iQmU/mqdefault.jpg" class="wnr" alt="Webinar no.48 by Yegor Bugayenko"/></a>
