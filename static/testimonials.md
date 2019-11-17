@@ -58,6 +58,10 @@ of coward/sociopath hybrid. Would be laughable if it wasn't pathetic."&mdash;[No
 hands really dirty; in other words a misleader. Go back to your
 bedroom and play with your dick."&mdash;[Martin L.](https://www.yegor256.com/2014/12/01/orm-offensive-anti-pattern.html#comment-2601044224)
 
+"Your blog makes me think of how to structure a society so
+that people who share your philosophy of management
+would never get the chance to foist it on the people who don't."&mdash;[Boris D.](https://www.yegor256.com/2019/07/10/inversive-management.html#comment-4691783834)
+
 "If I would be the one to decide what is irresponsible coding
 you would be imprisoned for a lifetime by me."&mdash;[David R.](https://www.yegor256.com/2015/11/24/imprisonment-for-irresponsible-coding.html#comment-2376244941)
 
