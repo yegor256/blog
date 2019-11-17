@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-11-10T09:25:31+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Revolutionary Evolution</title><link href="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html" rel="alternate" type="text/html" title="Revolutionary Evolution" /><published>2019-11-05T00:00:00+00:00</published><updated>2019-11-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/05/revolutionary-evolution</id><content type="html" xml:base="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html">&lt;p&gt;Here is the question I keep hearing almost every time I &lt;a href=&quot;/talks.html&quot;&gt;speak&lt;/a&gt; at
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-11-17T13:11:55+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Revolutionary Evolution</title><link href="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html" rel="alternate" type="text/html" title="Revolutionary Evolution" /><published>2019-11-05T00:00:00+00:00</published><updated>2019-11-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/05/revolutionary-evolution</id><content type="html" xml:base="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html">&lt;p&gt;Here is the question I keep hearing almost every time I &lt;a href=&quot;/talks.html&quot;&gt;speak&lt;/a&gt; at
 a conference about object-oriented programming and my
 &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;non-traditional&lt;/a&gt;
 understanding of it: “How do I convince the whole team to start doing everything so differently?”
@@ -28,6 +28,9 @@ was no architecture at all, just a collection of &lt;code&gt;.java&lt;/code&gt; 
 different people at different times. And, of course, it became obvious
 that no matter how hard I tried, my ideas wouldn’t be accepted, simply
 because they sounded too scary to those “talented” people.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Most programmers do what everybody else does, it’s safer.
+&lt;/aside&gt;
 
 &lt;p&gt;Seriously, if I had been one of those programmers, sitting there for a few
 years, writing some Java code and collecting paychecks
@@ -101,6 +104,9 @@ not happy about the architecture and were not afraid anymore to say so. The
 architecture was still bad, but it was not “our” architecture anymore. It was
 something we inherited from the past and we were committed
 to changing it … eventually.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Don’t wait until your boss changes your title, start building a team of supporters.
+&lt;/aside&gt;
 
 &lt;p&gt;My first and primary objective was not to fix the architecture, but to
 build a &lt;em&gt;coalition&lt;/em&gt; of supporters, and it was achieved.
