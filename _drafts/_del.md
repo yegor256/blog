@@ -95,7 +95,7 @@ call it a day. Later, of course, maintainability problems will show up.
 The bottom line is that there is no exact distinction between the right and
 the wrong design in this case. We just have to do our best to keep classes highly
 cohesive by decreasing the amount of methods in each of them. If there are
-just a few methods, no need to exract the `Book`, but once the amount of methods
+just a few methods, no need to extract the `Book`, but once the amount of methods
 gets bigger, the `Book` is a perfect candidate for a new entity to
 define.
 
