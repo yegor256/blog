@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: oop
 description: |
   There are two extreme cases: all methods in a single
-  large class or a big number of small classes; which
+  large class or a large number of small classes; which
   one do you prefer?
 keywords:
   - srp principle
@@ -22,8 +22,8 @@ jb_picture:
 I do both and I rarely can tell which one is better. The first option
 is shorter, while the second one is more object-oriented. The first
 option is more difficult to extend, while the second one is more
-verbose and requires more lines of code, which means higher chances
-to make mistakes. Which one do you prefer?
+verbose and requires more lines of code, which means a higher chance
+of making mistakes. Which one do you prefer?
 
 <!--more-->
 
@@ -31,7 +31,7 @@ to make mistakes. Which one do you prefer?
 
 Either one will work, of course, but the question is which design
 is more object-oriented? It seems to depend on the size of the
-object `books`. If it's small, no need to get the book first, we can
+object `books`. If it's small, there's no need to get the book first, we can
 just delete it right there:
 
 {% highlight java %}
@@ -60,8 +60,8 @@ interface Books {
 
 Is there an explicit hard line between these two? Is there
 a [strict rule]({% pst 2017/dec/2017-12-19-srp-is-hoax %})
-or maybe this "Is this class large enough already?"
-ambiguous question every time should be answered by a vote?
+or maybe the ambiguous question "Is this class large enough already?"
+should be answered every time by a vote?
 
 Let's try to give two extreme answers:
 1) never large enough, and 2) always large enough.
@@ -87,7 +87,7 @@ classes.
 
 Thus, the second option is better? Yes, it is. Smaller classes,
 higher cohesion, ... but more opportunities to lose focus and spread
-functionality among too many places. "All methods in one object"
+functionality around too many places. "All methods in one object"
 is a much more popular design, even though it's less cohesive, exactly
 because it's easier to create: just put everything in one place and
 call it a day. Later, of course, maintainability problems will show up.
@@ -95,15 +95,14 @@ call it a day. Later, of course, maintainability problems will show up.
 The bottom line is that there is no exact distinction between the right and
 the wrong design in this case. We just have to do our best to keep classes highly
 cohesive by decreasing the amount of methods in each of them. If there are
-just a few methods, no need to exract the `Book`, but once the amount of methods
-is getting bigger, the `Book` is a perfect candidate for a new entity to
+just a few methods, no need to extract the `Book`, but once the amount of methods
+gets bigger, the `Book` is a perfect candidate for a new entity to
 define.
 
 How many methods is OK?
 
-[Nobody knows](https://softwareengineering.stackexchange.com/questions/104406/)
-but I would suggest to question the cohesion of your class once you see
+[Nobody knows](https://softwareengineering.stackexchange.com/questions/104406/),
+but I would suggest you question the cohesion of your class once you see
 more than seven methods or more than four attributes. Also, start thinking
 about refactoring when any of your methods (except constructors) accepts more than
 two arguments.
-
