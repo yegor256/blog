@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "books.del(42) or books.book(42).del()?"
+title: "How Much Cohesion Is Enough?"
 date: 2019-11-19
 place: Moscow, Russia
 tags: oop
@@ -14,11 +14,12 @@ keywords:
   - separation of concerns
   - oop layers
   - oop design
-image: /images/2019/11/
+image: /images/2019/11/irreversible.jpg
 jb_picture:
-  caption: ...
+  caption: Irréversible (2002) by Gaspar Noé
 ---
 
+Which one is better: `books.del(42)` or `books.book(42).del()`?
 I do both and I rarely can tell which one is better. The first option
 is shorter, while the second one is more object-oriented. The first
 option is more difficult to extend, while the second one is more
