@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-11-17T13:11:55+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Revolutionary Evolution</title><link href="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html" rel="alternate" type="text/html" title="Revolutionary Evolution" /><published>2019-11-05T00:00:00+00:00</published><updated>2019-11-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/05/revolutionary-evolution</id><content type="html" xml:base="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html">&lt;p&gt;Here is the question I keep hearing almost every time I &lt;a href=&quot;/talks.html&quot;&gt;speak&lt;/a&gt; at
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-11-20T11:45:20+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How Much Cohesion Is Enough?</title><link href="https://www.yegor256.com/2019/11/19/how-much-cohesion-is-enough.html" rel="alternate" type="text/html" title="How Much Cohesion Is Enough?" /><published>2019-11-19T00:00:00+00:00</published><updated>2019-11-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/19/how-much-cohesion-is-enough</id><content type="html" xml:base="https://www.yegor256.com/2019/11/19/how-much-cohesion-is-enough.html">&lt;p&gt;Which one is better: &lt;code&gt;books.del(42)&lt;/code&gt; or &lt;code&gt;books.book(42).del()&lt;/code&gt;?
+I do both and I rarely can tell which one is better. The first option
+is shorter, while the second one is more object-oriented. The first
+option is more difficult to extend, while the second one is more
+verbose and requires more lines of code, which means a higher chance
+of making mistakes. Which one do you prefer?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Irréversible (2002) by Gaspar Noé&quot; src=&quot;/images/2019/11/irreversible.jpg&quot; longdesc=&quot;#3c79fdd0&quot; /&gt;&lt;figcaption id=&quot;3c79fdd0&quot;&gt;Irréversible (2002) by Gaspar Noé&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Either one will work, of course, but the question is which design
+is more object-oriented? It seems to depend on the size of the
+object &lt;code&gt;books&lt;/code&gt;. If it’s small, there’s no need to get the book first, we can
+just delete it right there:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;However, if it’s larger, it’s better to get the &lt;code&gt;book&lt;/code&gt; first:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Here!&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;rename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Here!&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Is there an explicit hard line between these two? Is there
+a &lt;a href=&quot;/2017/12/19/srp-is-hoax.html&quot;&gt;strict rule&lt;/a&gt;
+or maybe the ambiguous question “Is this class large enough already?”
+should be answered every time by a vote?&lt;/p&gt;
+
+&lt;p&gt;Let’s try to give two extreme answers:
+1) never large enough, and 2) always large enough.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a class is &lt;em&gt;never&lt;/em&gt; ready for extracting any parts of it
+and turning them into new objects, we will end up with a very big
+class, with many attributes, methods, and long lists of arguments
+in almost all of them.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If a class is &lt;em&gt;always&lt;/em&gt; good enough for extractions,
+we will end up with &lt;a href=&quot;/2017/02/28/too-many-classes.html&quot;&gt;many small classes&lt;/a&gt;,
+methods with almost no
+arguments, and … a better object-oriented design.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The common denominator is &lt;a href=&quot;https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;&lt;em&gt;cohesion&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Highly cohesive classes include attributes and methods that are related to
+each other, while non-cohesive classes include whatever their developers
+decided to add, even though some elements may not really belong together.
+The first answer will give us a class with a very low cohesion, while
+the second one will produce a large amount of highly cohesive small
+classes.&lt;/p&gt;
+
+&lt;p&gt;Thus, the second option is better? Yes, it is. Smaller classes,
+higher cohesion, … but more opportunities to lose focus and spread
+functionality around too many places. “All methods in one object”
+is a much more popular design, even though it’s less cohesive, exactly
+because it’s easier to create: just put everything in one place and
+call it a day. Later, of course, maintainability problems will show up.&lt;/p&gt;
+
+&lt;p&gt;The bottom line is that there is no exact distinction between the right and
+the wrong design in this case. We just have to do our best to keep classes highly
+cohesive by decreasing the amount of methods in each of them. If there are
+just a few methods, no need to extract the &lt;code&gt;Book&lt;/code&gt;, but once the amount of methods
+gets bigger, the &lt;code&gt;Book&lt;/code&gt; is a perfect candidate for a new entity to
+define.&lt;/p&gt;
+
+&lt;p&gt;How many methods is OK?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/104406/&quot;&gt;Nobody knows&lt;/a&gt;,
+but I would suggest you question the cohesion of your class once you see
+more than seven methods or more than four attributes. Also, start thinking
+about refactoring when any of your methods (except constructors) accepts more than
+two arguments.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Which one is better: books.del(42) or books.book(42).del()? I do both and I rarely can tell which one is better. The first option is shorter, while the second one is more object-oriented. The first option is more difficult to extend, while the second one is more verbose and requires more lines of code, which means a higher chance of making mistakes. Which one do you prefer?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/11/irreversible.jpg" /></entry><entry><title type="html">Revolutionary Evolution</title><link href="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html" rel="alternate" type="text/html" title="Revolutionary Evolution" /><published>2019-11-05T00:00:00+00:00</published><updated>2019-11-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/05/revolutionary-evolution</id><content type="html" xml:base="https://www.yegor256.com/2019/11/05/revolutionary-evolution.html">&lt;p&gt;Here is the question I keep hearing almost every time I &lt;a href=&quot;/talks.html&quot;&gt;speak&lt;/a&gt; at
 a conference about object-oriented programming and my
 &lt;a href=&quot;/2014/09/10/anti-patterns-in-oop.html&quot;&gt;non-traditional&lt;/a&gt;
 understanding of it: “How do I convince the whole team to start doing everything so differently?”
@@ -1169,144 +1257,4 @@ be relaxed, you will be worried. They will get paid, you will be
 &lt;a href=&quot;/2019/06/19/how-much-they-suffer.html&quot;&gt;punished&lt;/a&gt;
 for their mistakes.&lt;/p&gt;
 
-&lt;p&gt;I suggest you &lt;em&gt;invert&lt;/em&gt; the situation and let &lt;em&gt;them&lt;/em&gt; worry.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">If you are a manager in a software team, your job is to make your people get things done. This is obvious. The question though is how exactly you make it happen. How do you make them do what you want, according to your plans, achieving your objectives, to your quality standards, and within the borders of your requirements and expectations? Some of you may say that these are our objectives, our mutual plans, our quality standards, and our requirements. This may be true, but initially they are still only yours. How do you make them theirs? There are two ways: a traditional one and an inversive one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/the-gambler.jpg" /></entry><entry><title type="html">TDD Misbeliefs</title><link href="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html" rel="alternate" type="text/html" title="TDD Misbeliefs" /><published>2019-07-02T00:00:00+00:00</published><updated>2019-07-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/07/02/tdd-misbeliefs</id><content type="html" xml:base="https://www.yegor256.com/2019/07/02/tdd-misbeliefs.html">&lt;p&gt;While I was working with a
-&lt;a href=&quot;/2017/03/24/tdd-that-works.html&quot;&gt;previous article&lt;/a&gt; about
-Test-Driven Development (TDD)
-I read many blog posts and a few books on the subject and found
-out that I disagree with a few of them; even some that are pretty important.
-It seems that most software experts simply misunderstand how software
-development works. Maybe because they are not really programmers, but
-are instead book authors and conference speakers.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;La Vénus à la fourrure (2013) by Roman Polanski&quot; src=&quot;/images/2019/07/la-venus-a-la-fourrure.jpg&quot; longdesc=&quot;#4ef642ba&quot; /&gt;&lt;figcaption id=&quot;4ef642ba&quot;&gt;La Vénus à la fourrure (2013) by Roman Polanski&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;!-- ************************************************************** --&gt;
-&lt;p&gt;Robert Martin
-(&lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;@unclebobmartin&lt;/a&gt;)
-in &lt;a href=&quot;http://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html&quot;&gt;The Cycles Of TDD&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If the changes you make to the production code, pursuant to a test,
-  make that test pass, but would not make other unwritten tests pass,
-  then you are likely making the production code too specific.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
-This statement goes against the very philosophy of testing: “a passing test
-is a &lt;em&gt;weak&lt;/em&gt; test.” Unfortunately, a traditional understanding of testing
-is quite the opposite: tests &lt;em&gt;must pass&lt;/em&gt; to make us happy. Thus, if we
-keep thinking about how to make our future tests pass we will shoot
-ourselves in the foot: tests will pass and the code quality will go down.
-Instead, we must design our code in a way that makes it easy to break with
-the future tests. The code must help its tests to break it! Because
-a test that is easy to make “red” is a good test. A test that is always
-“green” is a useless test. Uncle Bob, I’m sure, is aware of that.&lt;/p&gt;
-
-&lt;!-- ************************************************************** --&gt;
-&lt;p&gt;James Shore
-(&lt;a href=&quot;https://twitter.com/jamesshore&quot;&gt;@jamesshore&lt;/a&gt;)
-in &lt;a href=&quot;http://www.jamesshore.com/Blog/Red-Green-Refactor.html&quot;&gt;Red-Green-Refactor&lt;/a&gt;
-(Nov 2005):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You’ll run through several cycles very quickly, then find yourself
-  slowing down and spending more time on refactoring.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
-I have nothing against the first two steps: 1) the test is “red” because
-it doesn’t pass, and 2) the test is “green” when the code is fixed and
-passes. I disagree that refactoring is a responsibility of the person
-who fixes the test. If the code needs refactoring, it’s a &lt;em&gt;bug&lt;/em&gt;, just
-like any other bug, either functional or design. It has to be reported,
-assigned and paid for. We must not do any code modifications, no matter
-how good our intentions are, if they are not required &lt;em&gt;and paid for&lt;/em&gt;. Refactoring
-after fixing the test is a frivolous violation of management and coordination
-structure in a project.&lt;/p&gt;
-
-&lt;!-- ************************************************************** --&gt;
-&lt;p&gt;Robert Martin
-(&lt;a href=&quot;https://twitter.com/unclebobmartin&quot;&gt;@unclebobmartin&lt;/a&gt;)
-in &lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2014/04/30/When-tdd-does-not-work.html&quot;&gt;When TDD doesn’t work&lt;/a&gt;
-(April 2014):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You don’t have to write tests for Test Doubles because
-  the actual unit tests and the production code are
-  the tests for those pieces of code.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
-Test Doubles (also known as
-&lt;a href=&quot;/2014/09/23/built-in-fake-objects.html&quot;&gt;fake objects&lt;/a&gt;)
-are the tools that help us find our where the code is broken. If the tool
-is unreliable, how can we test our code against it? This reminds me of an old
-joke where a patient comes to the doctor and says “Help me doc, my body hurts anywhere
-I touch it with my finger!”, and the doctor answers
-“It’s just your finger — it’s broken!” A very similar situation occurs here:
-If we test our production objects with broken Test Doubles, they will all look
-broken.&lt;/p&gt;
-
-&lt;!-- ************************************************************** --&gt;
-&lt;p&gt;David Heinemeier Hansson
-(&lt;a href=&quot;https://twitter.com/dhh&quot;&gt;@dhh&lt;/a&gt;)
-in &lt;a href=&quot;https://signalvnoise.com/posts/3159-testing-like-the-tsa&quot;&gt;Testing like the TSA&lt;/a&gt;
-(April 2012):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Code-to-test ratios above 1:2 is a smell, above 1:3 is a stink.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
-I don’t know exactly what units of measurement were used to compare the
-“code” and the “test”, but I can only assume Lines-of-Code. I was curious and
-decided to calculate this ratio in a few projects of mine. First, I tried
-&lt;a href=&quot;https://github.com/jcabi/jcabi-github&quot;&gt;jcabi-github&lt;/a&gt;,
-an immutable GitHub Java API client. The numbers were:
-9.8K LoC in production classes,
-6.2K in built-in fake classes, and
-16.2K in test classes.
-Thus, the ratio was 9.8 to 22.4, which meant 1:2.3. Somewhere between
-a “smell” and a “stink”, according to David. Then I calculated the ratio
-for a few other projects of mine:
-&lt;a href=&quot;https://github.com/jcabi/jcabi-http&quot;&gt;jcabi-http&lt;/a&gt; (1:1),
-&lt;a href=&quot;https://github.com/yegor256/xembly&quot;&gt;xembly&lt;/a&gt; (1:0.92),
-&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;takes&lt;/a&gt; (1:0.91), and
-&lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;rultor&lt;/a&gt; (1:0.6). It seems that the higher
-the ratio the higher my &lt;em&gt;confidence&lt;/em&gt; in the product’s quality. Thus, I don’t think that
-it’s a smell or a stink. Instead, in a yummy-scented product the amount
-of test code is a few times larger than its production counterpart.&lt;/p&gt;
-
-&lt;!-- ************************************************************** --&gt;
-&lt;p&gt;Kent Beck
-(&lt;a href=&quot;https://twitter.com/kentbeck&quot;&gt;@kentbeck&lt;/a&gt;)
-in
-&lt;a href=&quot;http://stackoverflow.com/questions/153234/how-deep-are-your-unit-tests/153565#153565&quot;&gt;How deep are your unit tests?&lt;/a&gt;
-(Sep 2008):&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I get paid for code that works, not for tests.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;span class=&quot;red&quot;&gt;I disagree&lt;/span&gt;.
-Tests are not a separate product which either we are paid for or not.
-Tests are part of the code. An instrument of its development, maintenance
-and validation. Tests are similar to, say, file names. We don’t write
-our code naming all the files &lt;code&gt;1.java&lt;/code&gt;, &lt;code&gt;2.java&lt;/code&gt;, &lt;code&gt;234.java&lt;/code&gt;, and then
-say: “Now you pay me so that I can rename them properly.” That would be weird,
-right? That’s how the statement “I’m not paid for writing tests” sounds
-to me: weird. Do we really have to be paid to name files correctly? We just
-do it, because it’s convenient for us. Because proper self-descriptive
-file names make our code more readable and maintainable. It’s impossible to
-imagine a modern maintainable code base without tests. I would actually
-suggest changing that phrase to: “I get paid for code that is tested, not
-just for code.”&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you do if a customer says: &amp;quot;I won&amp;#39;t pay for unit tests&amp;quot;? &lt;a href=&quot;https://twitter.com/hashtag/codeahead?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#codeahead&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1150321038674354176?ref_src=twsrc%5Etfw&quot;&gt;July 14, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;I will keep updating this post. If you know a “good” article about TDD,
-please send it &lt;a href=&quot;mailto:tdd@yegor256.com&quot;&gt;my way&lt;/a&gt;; maybe I’ll find
-something interesting to quote from it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">While I was working with a previous article about Test-Driven Development (TDD) I read many blog posts and a few books on the subject and found out that I disagree with a few of them; even some that are pretty important. It seems that most software experts simply misunderstand how software development works. Maybe because they are not really programmers, but are instead book authors and conference speakers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/la-venus-a-la-fourrure.jpg" /></entry></feed>
+&lt;p&gt;I suggest you &lt;em&gt;invert&lt;/em&gt; the situation and let &lt;em&gt;them&lt;/em&gt; worry.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">If you are a manager in a software team, your job is to make your people get things done. This is obvious. The question though is how exactly you make it happen. How do you make them do what you want, according to your plans, achieving your objectives, to your quality standards, and within the borders of your requirements and expectations? Some of you may say that these are our objectives, our mutual plans, our quality standards, and our requirements. This may be true, but initially they are still only yours. How do you make them theirs? There are two ways: a traditional one and an inversive one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/07/the-gambler.jpg" /></entry></feed>
