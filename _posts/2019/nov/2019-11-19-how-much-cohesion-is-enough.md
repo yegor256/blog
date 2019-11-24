@@ -107,3 +107,5 @@ but I would suggest you question the cohesion of your class once you see
 more than seven methods or more than four attributes. Also, start thinking
 about refactoring when any of your methods (except constructors) accepts more than
 two arguments.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Which design is better? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1198599871495835649?ref_src=twsrc%5Etfw">November 24, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
