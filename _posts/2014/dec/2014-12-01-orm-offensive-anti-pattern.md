@@ -225,7 +225,7 @@ respected publications. I can only add a few more.
 {% youtube 63tS3HNmhiE %}
 
 **SQL Is Not Hidden**.
-Users of ORM should speak SQL
+Users of ORM have to speak SQL
 (or its dialect, like [HQL](https://docs.jboss.org/hibernate/orm/3.3/reference/en/html/queryhql.html)).
 See the example above; we're calling `session.createQuery("FROM Post")` in order
 to get all posts. Even though it's not SQL, it is very similar to it. Thus,
