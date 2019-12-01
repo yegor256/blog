@@ -136,3 +136,5 @@ You can do exactly the same in your team, even if your position is still
 a "junior" developer. Don't wait until your boss changes your title, start
 mentoring people around you and building a team of supporters. When it gets
 big enough, the changes will start happening even without your will.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What is the best argument to convince a team?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1201034995336450049?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
