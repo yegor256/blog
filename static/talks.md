@@ -173,7 +173,7 @@ I was also seen at [these events](/seen.html).
 ### 2019
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/devopsconf.png" class="past-talk" alt="DevOpsConf 2019"/>
+<img src="https://i.ytimg.com/vi/0N-CevixhsA/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2019"/>
 Reversive Decentralized Deployment: Zold Cryptocurrency Example;
 [DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
@@ -181,7 +181,7 @@ Reversive Decentralized Deployment: Zold Cryptocurrency Example;
 [видео](https://www.youtube.com/watch?v=0N-CevixhsA).
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2019/teamlead-conf.png" class="past-talk" alt="Saint Teamlead Conf 2019"/>
+<img src="https://i.ytimg.com/vi/6DrD_FucDK4/mqdefault.jpg" class="past-talk" alt="Saint Teamlead Conf 2019"/>
 Are You Sure You Are Not a Micromanager?
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019);
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
@@ -189,7 +189,7 @@ Are You Sure You Are Not a Micromanager?
 [видео](https://www.youtube.com/watch?v=6DrD_FucDK4).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="past-talk" alt="EPAM Meetup 2019"/>
+<img src="https://i.ytimg.com/vi/wmvLQFquHGc/mqdefault.jpg" class="past-talk" alt="EPAM Meetup 2019"/>
 What's wrong with Java and IT career in USA/Russia;
 [Meetup](https://events.epam.com/events/egor-bugaenko);
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
@@ -198,7 +198,7 @@ What's wrong with Java and IT career in USA/Russia;
 [видео-2](https://www.youtube.com/watch?v=VslX710UpzQ).
 
 <div class="talk-event">&nbsp;</div>
-<img src="http://qafest.com/wp-content/uploads/2019/02/logo_promo.png" class="past-talk" alt="QAFest 2019"/>
+<img src="https://i.ytimg.com/vi/jZitXMQaXvE/mqdefault.jpg" class="past-talk" alt="QAFest 2019"/>
 Quality Assurance vs. Testing;
 [QA Fest](http://qafest.com/en/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
@@ -207,7 +207,7 @@ Quality Assurance vs. Testing;
 [slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.meetup.com/mu_static/en-US/logo--script.004ada05.svg" class="past-talk" alt="RockStart Night"/>
+<img src="https://i.ytimg.com/vi/YXqHaZJD9R8/mqdefault.jpg" class="past-talk" alt="RockStart Night"/>
 Building Object-Oriented Java Web Framework From Scratch;
 [RockStart Night Meetup](https://www.meetup.com/Rockstar-Night-Dev-Club/events/264684775/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
