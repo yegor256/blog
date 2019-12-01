@@ -135,21 +135,21 @@ pretty fresh (I haven't presented them before, as of yet):
     the changes Java introduced over the last years, since its version 1.6,
     and find out which of them are making the language better or worse.
 
-  * **Reversive Decentralized Deployment: Zold Cryptocurrency Example**.
-    A traditional deployment scenario includes a central point of control,
-    which sends updates to server nodes. In our Zold cryptocurrency project
-    we were forced to create a different and reversive deployment model,
-    where distributed and anonymous servers pull updates from an open
-    public repository and restart themselves. The biggest problems we had
-    to solve were related to error tracking and resolving of exceptional
-    situations. In the presentation I will demonstrate how it works and we
-    will deploy a new version right on the stage.
+  * **Decentralized Architectures: Blockchain and Beyond**.
+    We've been building software/hardware systems in a centralized manner
+    for decades, no matter whether they were mainframes with thin clients,
+    clients+server, or web 2.0 --- there was always a central place of data
+    storage and execution control. However, time changes and the new uprising
+    trend is all about systems with no central point of control. Blockchain
+    was the first solution, which most programmers still don't understand.
+    There will be many more solutions in the future, which some of us are
+    yet to design and build.
 
   * **Weak Management Needs Pay Equality**.
     The average salary of American workers is growing 1% every year, while
     the pay gap between similar jobs is decreasing. What do I think about
     this trend? Does it sound like people are getting more every year and
-    it's good? Not at all. This trend is completely against what a good management should
+    it's good? Not at all. This trend is completely against what a good management should be
     fighting for: unequal pay for unequal contribution. A strong manager wants to work
     with free people, who get what they deserve because of their work, not
     because of their place in the company. Meritocracy is yet another name
