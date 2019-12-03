@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Does Code Review Involve Testing?"
-date: 2019-12-04
+date: 2019-12-03
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - code review paid
   - how to code review
   - code review best practices
-image: /images/2019/12/
+image: /images/2019/12/why-women-kill.jpg
 jb_picture:
-  caption: ...
+  caption: Why Women Kill (2019) by Marc Cherry
 ---
 
 When you review a pull/merge request from someone, do you check out
