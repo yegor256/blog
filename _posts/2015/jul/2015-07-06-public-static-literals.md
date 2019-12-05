@@ -99,6 +99,8 @@ As you see, we encapsulate the "UTF-8" constant somewhere inside the class
 `UTF8String`, and its users have no idea how exactly this "byte array to string"
 conversion is happening.
 
+{% youtube 3blBn65iQmU %}
+
 By introducing `UTF8String`, we solved the problem of "UTF-8"
 literal duplication. But we did it in a proper object-oriented way---we encapsulated the functionality inside a class and let everybody
 instantiate its objects and use them. We resolved the problem of functionality
