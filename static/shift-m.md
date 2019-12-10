@@ -54,7 +54,7 @@ Recent episodes:
 <img src="/images/shift-m/venkat-subramaniam.png" class="guest-face" alt="Face of Venkat Subramaniam"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;42: [Self development with Venkat Subramaniam](/shift-m/2019/42.html)<br/>
-4 December 2019; 59 min.
+4 December 2019; 63 min.
 
 <img src="/images/shift-m/gordon-tredgold.png" class="guest-face" alt="Face of Gordon Tredgold"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
