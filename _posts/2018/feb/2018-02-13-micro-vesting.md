@@ -92,3 +92,5 @@ No need to [lie]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) to
 them about big-money milestones or keep them in the office
 for four years. Just let them be focused on the results they can produce and
 give them back what they deserve. Incrementally. That's it.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Does your company need your work results? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1206231040437686279?ref_src=twsrc%5Etfw">December 15, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
