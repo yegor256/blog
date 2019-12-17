@@ -104,7 +104,7 @@ understand you much faster.
 
 **Don't Use Colors**.
 Or let me put it this way: Don't abuse colors. And in order to avoid abusing
-them, you be better off staying away from colors in the first place. If you need
+them, you are better off staying away from colors in the first place. If you need
 to use colors, there must be something wrong with your diagram. It's probably
 too complex; that's why you need to use colors. Simplify it by grouping elements.
 
