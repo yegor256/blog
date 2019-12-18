@@ -97,7 +97,9 @@ a,
 a:visited {
   color: steelblue;
   text-decoration: underline;
+  // scss-lint:disable PropertySpelling
   text-decoration-thickness: 1px;
+  // scss-lint:enable PropertySpelling
 }
 
 body a,
