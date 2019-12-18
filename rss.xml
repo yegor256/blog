@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-12-10T11:07:06+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Does Code Review Involve Testing?</title><link href="https://www.yegor256.com/2019/12/03/testing-in-code-review.html" rel="alternate" type="text/html" title="Does Code Review Involve Testing?" /><published>2019-12-03T00:00:00+00:00</published><updated>2019-12-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/03/testing-in-code-review</id><content type="html" xml:base="https://www.yegor256.com/2019/12/03/testing-in-code-review.html">&lt;p&gt;When you review a pull/merge request from someone, do you check out
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-12-18T19:11:02+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Does Code Review Involve Testing?</title><link href="https://www.yegor256.com/2019/12/03/testing-in-code-review.html" rel="alternate" type="text/html" title="Does Code Review Involve Testing?" /><published>2019-12-03T00:00:00+00:00</published><updated>2019-12-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/03/testing-in-code-review</id><content type="html" xml:base="https://www.yegor256.com/2019/12/03/testing-in-code-review.html">&lt;p&gt;When you review a pull/merge request from someone, do you check out
 the branch and run the build? I usually don’t, but
 &lt;a href=&quot;https://exceptionnotfound.net/should-code-review-include-manual-testing-depends-2/&quot;&gt;some people do&lt;/a&gt;.
 Their obvious reason is: running a build, or even testing the product manually,
@@ -47,6 +47,9 @@ to watch &lt;a href=&quot;https://www.youtube.com/watch?v=jZitXMQaXvE&quot;&gt;t
 
 &lt;p&gt;Now, where is the place for a code reviewer in this conflict?&lt;/p&gt;
 
+&lt;aside class=&quot;quote&quot;&gt;The objective of a merge pipeline is to protect the code repository from programmers.
+&lt;/aside&gt;
+
 &lt;p&gt;I believe code review is part of the merge pipeline, together with unit
 tests, static analyzers, linters, coverage control tools, mutation
 testers, and everything else the project may want to put in there, in order
@@ -81,6 +84,9 @@ operation. Moreover, a bug found after running the build locally is very
 difficult to explain in the code review format. The discussion with the
 author of the branch will take longer, which means more time to complete
 the code review, which means lower effectiveness of the code reviewer.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;An effective, responsible and greedy code reviewer doesn’t explain to the author of the code what is wrong.
+&lt;/aside&gt;
 
 &lt;p&gt;My point is that smart code reviewers don’t do that, because it’s not efficient.
 Pay attention, not because they don’t care, but because they know a better
