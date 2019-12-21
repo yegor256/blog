@@ -105,7 +105,7 @@ reveal the defect in the motivational system and make it necessary for
 the business to fix it somehow. Either by introducing measurable KPIs,
 or by making requirements more strict and demanding, or maybe by checking
 the quality of work more attentively. Something will be done immediately,
-in order to save the business from bankcrupcy. And the measures which will
+in order to save the business from bankruptcy. And the measures which will
 be taken will help the project to survive and become _stronger_.
 
 Thus, by letting the team pay us less than we deserve, we kill the team.
