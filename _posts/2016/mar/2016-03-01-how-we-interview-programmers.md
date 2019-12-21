@@ -22,7 +22,8 @@ jb_picture:
 {% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 At [Zerocracy](https://www.zerocracy.com), we've been getting
-about 10 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %}) every day from programmers who want to work
+about 10 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
+every day from programmers who want to work
 with us. We don't do video or online
 [coding interviews]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}). We don't
 ask you to solve any puzzles or demonstrate your
