@@ -172,8 +172,8 @@ This is the right and recommended way to use Guice. There are
 a few even darker patterns, though, which are possible but not recommended. For example,
 you can make your injector a
 [singleton]({% pst 2016/jun/2016-06-27-singletons-must-die %}) and use it right inside the `Budget` class.
-These mechanisms are considered wrong even by DI container makers, however, so let's ignore
-them and focus on the recommended scenario.
+However, these mechanisms are considered wrong even by DI container makers.
+Let's ignore them and focus on the recommended scenario.
 
 ## What Is This For?
 
