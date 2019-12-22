@@ -68,7 +68,7 @@ _An Evaluation of the Conceptual Weaknesses in Transformational and Charismatic 
 
 No matter what we call it, a transactional management or
 an inspirational leadership, team work is always about an _exchange_ of
-values: 1) team members give their time and skills, and 2) the team pays them back,
+value: 1) team members give their time and skills, and 2) the team pays them back,
 either with cash, or appreciation, or a good office atmosphere.
 
 There are two possible extreme attitudes: 1) the _altruistic_ one, when programmers
@@ -113,7 +113,7 @@ On the other hand, by letting the team pay us more than we deserve,
 we help the team understand its issues faster and, because of that, become
 stronger and survive.
 
-If you are a manager, I have a suggestion to you. Fire those who are ready
+If you are a manager I have a suggestion for you. Fire those who are ready
 to work overtime without any compensation. They are the trouble makers. Instead,
 work with those who are not afraid of putting their own interests on the
 table and demanding what's theirs. They will make you stronger, ... if you manage
