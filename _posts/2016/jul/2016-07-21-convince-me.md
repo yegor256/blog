@@ -119,3 +119,5 @@ To summarize, an architect must be an absolute technical _dictator_
 during the project and must not have to convince anyone. If that's not the case,
 the entire project faces big risks, simply because the responsibility
 will be "leaking."
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The <a href="https://twitter.com/hashtag/architect?src=hash&amp;ref_src=twsrc%5Etfw">#architect</a> tells you to rewrite the code his way. Your response is...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1208813613152161794?ref_src=twsrc%5Etfw">December 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
