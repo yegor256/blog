@@ -26,7 +26,7 @@ is a natural technique of composing objects in OOP
 [Java EE6 CDI](http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html),
 [Dagger](http://square.github.io/dagger/) and other
 [DI frameworks](https://en.wikipedia.org/wiki/Dependency_injection)
-turn it into an **anti-pattern**.
+turn it into an _anti-pattern_.
 
 <!--more-->
 
@@ -45,7 +45,7 @@ and [may not contain setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are
 
 Instead, let's talk about "constructor injection"
 (like in [Google Guice](https://github.com/google/guice/wiki/Injections#constructor-injection))
-and its use with dependency injection **containers**.
+and its use with dependency injection _containers_.
 I'll try to show why I consider these containers a redundancy, at least.
 
 ## What is Dependency Injection?
@@ -177,7 +177,7 @@ Let's ignore them and focus on the recommended scenario.
 
 ## What Is This For?
 
-Let me reiterate and summarize the scenarios of **incorrect usage** of dependency
+Let me reiterate and summarize the scenarios of _incorrect usage_ of dependency
 injection containers:
 
  * Field injection
@@ -194,7 +194,7 @@ Why can't we use plain old `new` in the main class of the application?
 
 The container we created simply adds more lines to the code base,
 or even more files, if we use XML. And it doesn't add anything, except
-an additional **complexity**. We should always remember this
+an additional _complexity_. We should always remember this
 if we have the question: "What database is used as an argument of a Budget?"
 
 ## The Right Way
