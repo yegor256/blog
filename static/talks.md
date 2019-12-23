@@ -173,6 +173,14 @@ I was also seen at [these events](/seen.html).
 ### 2019
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/w3yJUtgr-yA/mqdefault.jpg" class="past-talk" alt="ProductFest 2019"/>
+On Requirements Management;
+[ProductFest](https://productfest.ru/moscow/2019);
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+9 December;
+[видео](https://www.youtube.com/watch?v=w3yJUtgr-yA).
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/0N-CevixhsA/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2019"/>
 Reversive Decentralized Deployment: Zold Cryptocurrency Example;
 [DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589);
