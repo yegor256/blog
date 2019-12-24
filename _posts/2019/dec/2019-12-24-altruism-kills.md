@@ -44,7 +44,8 @@ against the perceived inputs and outcomes of others."
 In other words, we feel motivated to contribute only when we
 know that we take back an _equal_ amount of benefits.
 
-You may say that transactional management is in the past and modern
+You may say that [transactional management](https://en.wikipedia.org/wiki/Transactional_leadership)
+is in the past and modern
 teams are all about _transformational laissez-faire leadership_, where
 we don't do primitive piecework trade, but rather
 share common goals, <del>kiss</del> inspire each other, and
@@ -55,16 +56,16 @@ but about sharing and helping.
 I don't buy this.
 
 By the way, neither do Anders Skogstad et al. in their article
-_The Destructiveness of Laissez-Faire Leadership Behavior_
+[_The Destructiveness of Laissez-Faire Leadership Behavior_](https://www.researchgate.net/publication/6547331_The_Destructiveness_of_Laissez-Faire_Leadership_Behavior)
 where they call it a counterproductive leadership style
 associated with a stressful environment characterized
 by high levels of role stress and interpersonal conflicts;
 nor do Abdul Qayyum Chaudhry et al. in their study
-_Impact of Transactional and Laissez Faire Leadership Style on Motivation_, where
-they confirm that workers are more motivated in those banks
+[_Impact of Transactional and Laissez Faire Leadership Style on Motivation_](https://www.semanticscholar.org/paper/Impact-of-Transactional-and-Laissez-Faire-Style-on-Chaudhry-Javed/d7b2d986581910b5e1ce44899353cb1a2cb656a9),
+where they confirm that workers are more motivated in those banks
 where transaction leadership style is used.
 Neither does Gary Yukl in his critical article
-_An Evaluation of the Conceptual Weaknesses in Transformational and Charismatic Leadership Theories_.
+[_An Evaluation of the Conceptual Weaknesses in Transformational and Charismatic Leadership Theories_](https://www.semanticscholar.org/paper/An-evaluation-of-conceptual-weaknesses-in-and-Yukl/15adc8f497ed75ef4468e2b202864b5443d3f9d3).
 
 No matter what we call it, a transactional management or
 an inspirational leadership, team work is always about an _exchange_ of
