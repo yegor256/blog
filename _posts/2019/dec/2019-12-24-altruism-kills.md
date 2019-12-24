@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Altruism Kills!"
-date: 2019-12-15
+date: 2019-12-24
 place: Kyiv, Ukraine
 tags: management
 description: |
@@ -15,9 +15,9 @@ keywords:
   - management
   - software team management
 book: code-ahead-1 3
-image: /images/2019/12/
+image: /images/2019/12/love-liza.jpg
 jb_picture:
-  caption: ...
+  caption: Love Liza (2002) by Todd Louiso
 ---
 
 Altruism means selflessly giving others more than you take back, while egoism means
