@@ -82,7 +82,7 @@ is a natural technique of composing objects in OOP
 <a href="http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html">Java EE6 CDI</a>,
 <a href="http://square.github.io/dagger/">Dagger</a> and other
 <a href="https://en.wikipedia.org/wiki/Dependency_injection">DI frameworks</a>
-turn it into an <strong>anti-pattern</strong>.</p>
+turn it into an <em>anti-pattern</em>.</p>
 
 
 
@@ -101,7 +101,7 @@ and <a href="/2014/09/16/getters-and-setters-are-evil.html">may not contain sett
 
 <p>Instead, let’s talk about “constructor injection”
 (like in <a href="https://github.com/google/guice/wiki/Injections#constructor-injection">Google Guice</a>)
-and its use with dependency injection <strong>containers</strong>.
+and its use with dependency injection <em>containers</em>.
 I’ll try to show why I consider these containers a redundancy, at least.</p>
 
 <h2 id="what-is-dependency-injection">What is Dependency Injection?</h2>
@@ -216,12 +216,12 @@ use an instance of class <code>Postgres</code>, which we instantiated in the inj
 a few even darker patterns, though, which are possible but not recommended. For example,
 you can make your injector a
 <a href="/2016/06/27/singletons-must-die.html">singleton</a> and use it right inside the <code>Budget</code> class.
-These mechanisms are considered wrong even by DI container makers, however, so let’s ignore
-them and focus on the recommended scenario.</p>
+However, these mechanisms are considered wrong even by DI container makers.
+Let’s ignore them and focus on the recommended scenario.</p>
 
 <h2 id="what-is-this-for">What Is This For?</h2>
 
-<p>Let me reiterate and summarize the scenarios of <strong>incorrect usage</strong> of dependency
+<p>Let me reiterate and summarize the scenarios of <em>incorrect usage</em> of dependency
 injection containers:</p>
 
 <ul>
@@ -245,7 +245,7 @@ Why can’t we use plain old <code>new</code> in the main class of the applicati
 
 <p>The container we created simply adds more lines to the code base,
 or even more files, if we use XML. And it doesn’t add anything, except
-an additional <strong>complexity</strong>. We should always remember this
+an additional <em>complexity</em>. We should always remember this
 if we have the question: “What database is used as an argument of a Budget?”</p>
 
 <h2 id="the-right-way">The Right Way</h2>

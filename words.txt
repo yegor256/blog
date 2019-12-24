@@ -1,5 +1,6 @@
 a-ha
 abandon
+abdul
 abide
 abilities
 ability
@@ -83,6 +84,7 @@ actually
 ad
 adage
 adam
+adams
 adapt
 adaptability
 adapter
@@ -224,6 +226,7 @@ alto
 altogether
 altruism
 altruistic
+altruistically
 always
 am
 amateur
@@ -261,6 +264,7 @@ anarchy
 ancestors
 ancient
 and
+anders
 andreea
 android
 andronache
@@ -467,6 +471,7 @@ asylum
 at
 ate
 atlantic
+atmosphere
 atom
 atomic
 atomicity
@@ -485,8 +490,10 @@ attended
 attendees
 attending
 attention
+attentively
 attitude
 attitude-changing
+attitudes
 attorneys
 attract
 attracted
@@ -588,6 +595,7 @@ bang
 bangalore
 bank
 bankrupt
+bankruptcy
 banks
 bar
 barbara
@@ -1121,6 +1129,7 @@ chapters
 character
 characteristic
 characteristics
+characterized
 characters
 charge
 charges
@@ -1138,6 +1147,7 @@ chatbots
 chats
 chatter
 chatterbot
+chaudhry
 che
 cheap
 cheaper
@@ -1486,6 +1496,7 @@ concentrating
 concentration
 concept
 concepts
+conceptual
 conceptually
 concern
 concerned
@@ -2110,6 +2121,7 @@ diagram
 diagrams
 dialects
 dialog
+dichotomy
 dictated
 dictates
 dictator
@@ -2452,7 +2464,9 @@ efficient
 effort
 efforts
 ego
+egoism
 egoistic
+egoistically
 egoists
 ehcache
 ehrenreich
@@ -2665,6 +2679,7 @@ euro
 europe
 european
 evaluate
+evaluation
 evangelist
 evans
 eve
@@ -2836,6 +2851,7 @@ failure-ready
 failure-resilient
 failures
 fair
+faire
 fairly
 fake
 fakes
@@ -3197,6 +3213,7 @@ garcia
 garden
 garr
 garry
+gary
 gas
 gates
 gateway
@@ -3899,6 +3916,7 @@ inspection
 inspections
 inspector
 inspiration
+inspirational
 inspire
 inspired
 inspiring
@@ -3970,6 +3988,7 @@ internal
 internally
 internals
 internet
+interpersonal
 interpretation
 interpreted
 interpreter
@@ -4255,6 +4274,7 @@ kill
 killer
 killers
 killing
+kills
 kilograms
 kilos
 kimmel
@@ -4279,6 +4299,7 @@ knows
 knuth
 korean
 kotlin
+KPIs
 krakow
 kristina
 krubner
@@ -4302,6 +4323,7 @@ ladies
 lady
 lag
 lagging
+laissez
 laissez-faire
 lake
 lambda
@@ -5732,6 +5754,7 @@ picture
 pictures
 piece
 pieces
+piecework
 piggyback
 pike
 piled-up
@@ -6115,6 +6138,7 @@ prose
 prospect
 prospective
 prospects
+prosperity
 protect
 protected
 protecting
@@ -6201,6 +6225,7 @@ pyramid
 python
 python's
 QA
+qayyum
 QCon
 qualities
 quality
@@ -6942,6 +6967,8 @@ self-regulation
 self-respect
 self-sufficient
 selfish
+selfishly
+selflessly
 sell
 seller
 sellers
@@ -7186,6 +7213,7 @@ skinparam
 skip
 skipped
 skipping
+skogstad
 skype
 skyrocket
 skyrocketing
@@ -7418,6 +7446,7 @@ stacking
 stackoverflow
 stackoverflowing
 stacks
+stacy
 staff
 staffing
 stage
@@ -7692,6 +7721,7 @@ surprisingly
 surrogate
 survival
 survive
+survives
 suspect
 suspicions
 suspicious
@@ -7879,6 +7909,7 @@ them
 themselves
 then
 theoretical
+theories
 theory
 thePMP
 there
@@ -8047,12 +8078,14 @@ trainspotting
 trait
 traits
 transaction
+transactional
 transactions
 transfer
 transferred
 transferring
 transform
 transformation
+transformational
 transformations
 transformed
 transforms
@@ -8772,6 +8805,7 @@ yours
 yourself
 youtube
 ypshenychka
+yukl
 yummy
 yummy-scented
 zache
