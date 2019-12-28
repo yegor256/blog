@@ -98,6 +98,13 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
+<img src="http://teamleadconf.ru/i/teamleadconf/moscow/2020/logo/i-logo.svg" class="future-talk" alt="TeamLeadConf 2020"/><br/>
+My experience of 1000 interviews<br/>
+[TeamLeadConf](http://teamleadconf.ru/moscow/2020)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+10-11 February.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
 Is Java Getting Better?<br/>
 [JavaFest](https://javafest.com.ua/)<br/>
