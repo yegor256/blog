@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-12-24T11:02:02+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Altruism Kills!</title><link href="https://www.yegor256.com/2019/12/24/altruism-kills.html" rel="alternate" type="text/html" title="Altruism Kills!" /><published>2019-12-24T00:00:00+00:00</published><updated>2019-12-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/24/altruism-kills</id><content type="html" xml:base="https://www.yegor256.com/2019/12/24/altruism-kills.html">&lt;p&gt;Altruism means selflessly giving others more than you take back, while egoism means
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-12-29T05:42:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Altruism Kills!</title><link href="https://www.yegor256.com/2019/12/24/altruism-kills.html" rel="alternate" type="text/html" title="Altruism Kills!" /><published>2019-12-24T00:00:00+00:00</published><updated>2019-12-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/24/altruism-kills</id><content type="html" xml:base="https://www.yegor256.com/2019/12/24/altruism-kills.html">&lt;p&gt;Altruism means selflessly giving others more than you take back, while egoism means
 selfishly taking more than you return. Modern theories of management
 and social life tell us that altruism means prosperity for the society
 and success to the project. In my book
@@ -21,6 +21,9 @@ they bring to a job and the outcomes that they receive from it
 against the perceived inputs and outcomes of others.”
 In other words, we feel motivated to contribute only when we
 know that we take back an &lt;em&gt;equal&lt;/em&gt; amount of benefits.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Modern leadership is not about giving and taking, but about sharing and helping? I don’t buy this.
+&lt;/aside&gt;
 
 &lt;p&gt;You may say that &lt;a href=&quot;https://en.wikipedia.org/wiki/Transactional_leadership&quot;&gt;transactional management&lt;/a&gt;
 is in the past and modern
@@ -67,6 +70,9 @@ software design.&lt;/p&gt;
 Theory) won’t contribute properly. If the team doesn’t reward correctly, it’s
 a defect in the system. Just like a bug in source code, this defect in
 the motivational system can either be 1) concealed (Fail Safe) or 2) revealed (Fail Fast).&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;Encouraging team members to contribute altruistically means concealing management defects
+&lt;/aside&gt;
 
 &lt;p&gt;Encouraging team members to contribute altruistically means concealing the defect.
 Programmers will keep working, slowly losing their motivation over a long
