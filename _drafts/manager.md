@@ -44,8 +44,8 @@ for a while, comes back to me with a plan of achiving this goal. A good one
 _tells_ me what is next, instead of asking. All I need to do is to approve
 or reject the plan proposed.
 
-Good ones don't sit and wait until I come to them and say what exactly
-needs to be done. Good solders build their own plans by themselves and
+Good ones don't sit and passively wait until I come to them and say what exactly
+needs to be done. Good solders pro-actively build their own plans by themselves and
 do everything to convince me that they make sense.
 
 Bad ones, instead, ask me "What's next?" and it sounds very annoying.
@@ -55,4 +55,4 @@ why such a question is a terrible mistake, or simply get rid of them.
 By the way, I [googled](https://www.google.com/search?q=questions+you+never+ask+your+boss)
 "questions you never ask your boss" and found
 a lot of articles, which suggest to prohibit many different questions. I'm not
-surprised, but none of them mention the question I'm talking about.
+surprised, none of them mention the question I'm talking about.
