@@ -52,7 +52,13 @@ Bad ones, instead, ask me "What's next?" and it sounds very annoying.
 It's absolutely no fun to work with these people and I either try to explain them
 why such a question is a terrible mistake, or simply get rid of them.
 
-By the way, I [googled](https://www.google.com/search?q=questions+you+never+ask+your+boss)
+Moreover, if the boss starts telling you what to do, you must realize that this
+the moment where the credit is lost. You've already been classified
+as a bad soldier, a looser, an under-achiever. Your chances to recover are very
+low. You must not allow this to happen. Act pro-actively, don't wait until
+it's too late and the boss starts assigning tasks to you.
+
+P.S. By the way, I [googled](https://www.google.com/search?q=questions+you+never+ask+your+boss)
 "questions you never ask your boss" and found
 a lot of articles, which suggest to prohibit many different questions. I'm not
 surprised, none of them mention the question I'm talking about.
