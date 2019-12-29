@@ -131,3 +131,4 @@ as much as you can and deliver as little as possible. This is how you teach
 your manager to manage projects and help the business understand and fix
 problems faster.
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What is your relationship with the employer? <a href="https://twitter.com/hashtag/altruism?src=hash&amp;ref_src=twsrc%5Etfw">#altruism</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1211161804367376384?ref_src=twsrc%5Etfw">December 29, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
