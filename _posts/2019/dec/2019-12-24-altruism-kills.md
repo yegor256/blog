@@ -44,6 +44,8 @@ against the perceived inputs and outcomes of others."
 In other words, we feel motivated to contribute only when we
 know that we take back an _equal_ amount of benefits.
 
+{% quote Modern leadership is not about giving and taking, but about sharing and helping? I don’t buy this. %}
+
 You may say that [transactional management](https://en.wikipedia.org/wiki/Transactional_leadership)
 is in the past and modern
 teams are all about _transformational laissez-faire leadership_, where
