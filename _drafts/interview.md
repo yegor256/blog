@@ -34,7 +34,7 @@ Can we do the same after a short interview with a programmer? I believe we can.
 {% jb_picture_body %}
 
 I decided to read what others are saying about the art of interviewing and
-how they suggest we detect the talented amoung all the other regular
+how they suggest we detect the talented among all the other regular
 software writers.
 [Jeff Attwood](https://blog.codinghorror.com/on-interviewing-programmers/)
 suggests paying attention to the person's passion, communication skills,
@@ -91,7 +91,7 @@ people with no ear for music, they _don't hear_ anything wrong!
 When I interview programmers, I don't pay attention to how much they know
 about Java, how well they understand OOP, or how many projects they've
 managed to complete to date. And, of course, I don't care
-how potentially likeable they are. Instead, I pay attention to how much they _hate_
+how potentially likable they are. Instead, I pay attention to how much they _hate_
 to see what doesn't look right. I check how _intolerant to chaos_ they are.
 This is what my Java test is for.
 
