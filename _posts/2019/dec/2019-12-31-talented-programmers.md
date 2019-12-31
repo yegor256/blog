@@ -14,7 +14,7 @@ keywords:
   - programming talent
   - how talented are you
   - talent
-image: /images/2014/04/goodfellas-paulie-talking.png
+image: /images/2019/12/goodfellas.jpg
 jb_picture:
   caption: Goodfellas (1990) by Martin Scorsese
 ---
