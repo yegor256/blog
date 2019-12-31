@@ -19,7 +19,7 @@ jb_picture:
   caption: Goodfellas (1990) by Martin Scorsese
 ---
 
-Talented programmers---who are they? I'm not talking about those who are
+I'm not talking about those who are
 famous, well-paid, or the authors of big and popular products.
 They are not necessarily talented, even though their _results_ are outstanding.
 Talent is something some of us have as God's gift.
