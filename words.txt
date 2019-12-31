@@ -305,6 +305,7 @@ answers
 anthony
 anti-
 anti-depressant
+anti-depressants
 anti-OOP
 anti-pattern
 anti-patterns
@@ -503,6 +504,7 @@ attribute
 attributed
 attributes
 attunement
+attwood
 atwood
 auctioning
 audience
@@ -1187,6 +1189,7 @@ chitchats
 chocolate
 choice
 choices
+choir
 choose
 choosing
 chose
@@ -1321,6 +1324,7 @@ code-sample
 code-to-test
 code-writing
 codeahead
+codebases
 coder
 coders
 codes
@@ -2089,6 +2093,7 @@ destructors
 detail
 detailed
 details
+detect
 detected
 detection
 determine
@@ -2325,6 +2330,7 @@ doomed
 door
 doors
 dorks
+dose
 dot
 dotscale
 double
@@ -2741,6 +2747,7 @@ exercise
 exercised
 exerts
 exhaustive
+exhibit
 exist
 existed
 existence
@@ -2855,6 +2862,7 @@ faire
 fairly
 fake
 fakes
+faking
 fall
 fallacy
 fallback
@@ -3297,6 +3305,7 @@ goal
 goal-oriented
 goals
 god
+god's
 godaddy
 godsend
 goebbels
@@ -3449,6 +3458,7 @@ handy
 hang
 hanging
 hansson
+haoyi
 happen
 happened
 happening
@@ -4004,6 +4014,7 @@ interviews
 into
 intolerable
 intolerance
+intolerant
 intrigue
 intriguing
 intrinsic
@@ -4066,6 +4077,7 @@ IPO
 IPv
 IRC
 ironic
+irrationality
 irrelevant
 irresponsible
 irreversible
@@ -4448,6 +4460,7 @@ light
 light-weight
 lighter
 lightweight
+likable
 like
 liked
 likely
@@ -4679,6 +4692,7 @@ marked
 marker
 markers
 market
+market's
 market-ready
 marketable
 marketers
@@ -5068,6 +5082,7 @@ mumbled
 munich
 mush
 music
+musician
 musk
 musk's
 must
@@ -5708,6 +5723,7 @@ persistence
 persisting
 persists
 person
+person's
 personal
 personality
 personally
@@ -5834,6 +5850,7 @@ PO
 pocket
 podcast
 poems
+poetry
 point
 pointer
 pointers
@@ -6021,6 +6038,7 @@ prints
 prior
 priorities
 prioritize
+prioritized
 prioritizes
 prioritizing
 priority
@@ -7171,6 +7189,7 @@ sin
 sinatra
 since
 sincerely
+sing
 singer
 singing
 single
@@ -7401,6 +7420,7 @@ spock
 spoil
 spoiled
 spoke
+spolsky
 sponsor
 sponsor's
 sponsored
@@ -7585,6 +7605,7 @@ stronger
 strongest
 strongly
 stroustrup
+structural
 structure
 structured
 structures

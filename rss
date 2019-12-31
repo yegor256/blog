@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-12-29T05:42:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Altruism Kills!</title><link href="https://www.yegor256.com/2019/12/24/altruism-kills.html" rel="alternate" type="text/html" title="Altruism Kills!" /><published>2019-12-24T00:00:00+00:00</published><updated>2019-12-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/24/altruism-kills</id><content type="html" xml:base="https://www.yegor256.com/2019/12/24/altruism-kills.html">&lt;p&gt;Altruism means selflessly giving others more than you take back, while egoism means
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-12-31T03:18:20+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Talented Programmers, Who Are They?</title><link href="https://www.yegor256.com/2019/12/31/talented-programmers.html" rel="alternate" type="text/html" title="Talented Programmers, Who Are They?" /><published>2019-12-31T00:00:00+00:00</published><updated>2019-12-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/31/talented-programmers</id><content type="html" xml:base="https://www.yegor256.com/2019/12/31/talented-programmers.html">&lt;p&gt;Talented programmers—who are they? I’m not talking about those who are
+famous, well-paid, or the authors of big and popular products.
+They are not necessarily talented, even though their &lt;em&gt;results&lt;/em&gt; are outstanding.
+Talent is something some of us have as God’s gift.
+Very few of us… otherwise it would not be called a talent.
+We all know what talent looks like in music, sport,
+poetry, or the art of acting. We can tell right off the bat who’s got it and
+who is faking it, no matter how hard they try.
+Can we do the same after a short interview with a programmer? I believe we can.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Goodfellas (1990) by Martin Scorsese&quot; src=&quot;/images/2019/12/goodfellas.jpg&quot; longdesc=&quot;#91530686&quot; /&gt;&lt;figcaption id=&quot;91530686&quot;&gt;Goodfellas (1990) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I decided to read what others are saying about the art of interviewing and
+how they suggest we detect the talented among all the other regular
+software writers.
+&lt;a href=&quot;https://blog.codinghorror.com/on-interviewing-programmers/&quot;&gt;Jeff Attwood&lt;/a&gt;
+suggests paying attention to the person’s passion, communication skills,
+personal attitude, and the ability to work in a team.
+&lt;a href=&quot;https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30/&quot;&gt;Joel Spolsky&lt;/a&gt;
+suggests hiring those who are smart and can get things done.
+&lt;a href=&quot;http://www.lihaoyi.com/post/HowtoconductagoodProgrammingInterview.html&quot;&gt;Haoyi&lt;/a&gt;
+gives very detailed instructions for the interviewer with the focus being
+on the candidate’s ability to write code, discuss problems, reason
+about constraints, and be a person we would enjoy working with.&lt;/p&gt;
+
+&lt;p&gt;All of these make sense, but it’s not about talent.
+It’s about finding a person who can effectively write and maintain
+spaghetti code and be &lt;em&gt;happy&lt;/em&gt; about it (maybe with just a little
+dose of anti-depressants).&lt;/p&gt;
+
+&lt;p&gt;Imagine yourself recruiting yet another singer for a choir, which consists
+of people who have no ear for music. Would you need talent? I doubt a talented
+person would be able to sing in that choir. Well, maybe for a while, if you pay well enough. Just like any
+other team in any other industry, most software groups
+consist of &lt;em&gt;average&lt;/em&gt; code writers, not talented programmers. Modern programming, especially in big
+projects, is not about talented individuals, it’s about the team work of mediocre
+coders. That’s why all interview gurus teach us how to find yet
+another coder: properly educated, trained, skilled, and ready
+to write yet another pack of Spring controllers. And, of course, enjoy it.&lt;/p&gt;
+
+&lt;p&gt;But sing? No.&lt;/p&gt;
+
+&lt;p&gt;So, what exactly is talent?&lt;/p&gt;
+
+&lt;p&gt;It’s an innate need to &lt;em&gt;structure&lt;/em&gt; things.&lt;/p&gt;
+
+&lt;p&gt;Just like a musician, a talented programmer &lt;em&gt;physically&lt;/em&gt; can’t tolerate
+what &lt;em&gt;sounds&lt;/em&gt; wrong: ambiguity, inconsistency, chaos, irrationality, and
+lack of logic. A talented programmer &lt;em&gt;feels&lt;/em&gt; these things, while a mediocre
+one says “Whatever works!” and gets on with it.&lt;/p&gt;
+
+&lt;p&gt;Let me explain by example. Over the last five years I’ve been using the same
+&lt;a href=&quot;https://github.com/yegor256/quiz/blob/master/Parser.java&quot;&gt;simple piece of Java code&lt;/a&gt;
+to interview everybody who is interested in working with me.
+I ask them to review it and find what’s wrong. Try it now. You have five minutes.&lt;/p&gt;
+
+&lt;p&gt;How many issues did you find? Here are the
+&lt;a href=&quot;https://github.com/yegor256/quiz/wiki/java-answers&quot;&gt;answers&lt;/a&gt;. There is
+a prioritized list of defects I expect candidates to find. The most important
+are at the top—they are about &lt;em&gt;structural&lt;/em&gt; problems in the code. Mediocre
+developers are used to working with bad code and can easily put up with it.
+The class name is &lt;code&gt;Parser&lt;/code&gt;, but it has &lt;code&gt;get&lt;/code&gt; and &lt;code&gt;save&lt;/code&gt; methods? Who cares,
+as long as it works! The pair of methods is not &lt;code&gt;get&lt;/code&gt; and &lt;code&gt;set&lt;/code&gt;, but &lt;code&gt;get&lt;/code&gt; and …
+all of a sudden &lt;code&gt;save&lt;/code&gt;? Who cares, it works anyway! And so on. Mediocre
+programmers don’t feel &lt;em&gt;annoyed&lt;/em&gt; when they meet inconsistencies. Just like
+people with no ear for music, they &lt;em&gt;don’t hear&lt;/em&gt; anything wrong!&lt;/p&gt;
+
+&lt;p&gt;When I interview programmers, I don’t pay attention to how much they know
+about Java, how well they understand OOP, or how many projects they’ve
+managed to complete to date. And, of course, I don’t care
+how potentially likable they are. Instead, I pay attention to how much they &lt;em&gt;hate&lt;/em&gt;
+to see what doesn’t look right. I check how &lt;em&gt;intolerant to chaos&lt;/em&gt; they are.
+This is what my Java test is for.&lt;/p&gt;
+
+&lt;p&gt;To be honest, very few of them exhibit these qualities.&lt;/p&gt;
+
+&lt;p&gt;And that’s because very few projects (and project managers) need these qualities.
+Most processes and codebases are poorly structured.
+Any sign of intolerance of that structure, or honest attempts to introduce some discipline,
+only annoys mediocre programmers, who are always in the majority.
+A talented programmer constantly demanding discipline and
+consistency looks like a crazy
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Obsessive%E2%80%93compulsive_disorder&quot;&gt;OCD patient&lt;/a&gt;.
+Nobody understands what’s wrong and simply ignores him/her, at best.
+Moreover, bad coding practices coming from popular frameworks
+and poor management principles are encouraged by Agile and its coaches.
+They train us to have no ear for high quality in programming.&lt;/p&gt;
+
+&lt;p&gt;The market’s demand now is mediocrity, not talent.&lt;/p&gt;
+
+&lt;p&gt;Thus, don’t worry if you feel that you don’t have much of
+a talent—in most projects you will be far better off without it.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Talented programmers—who are they? I’m not talking about those who are famous, well-paid, or the authors of big and popular products. They are not necessarily talented, even though their results are outstanding. Talent is something some of us have as God’s gift. Very few of us… otherwise it would not be called a talent. We all know what talent looks like in music, sport, poetry, or the art of acting. We can tell right off the bat who’s got it and who is faking it, no matter how hard they try. Can we do the same after a short interview with a programmer? I believe we can.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/12/goodfellas.jpg" /></entry><entry><title type="html">Altruism Kills!</title><link href="https://www.yegor256.com/2019/12/24/altruism-kills.html" rel="alternate" type="text/html" title="Altruism Kills!" /><published>2019-12-24T00:00:00+00:00</published><updated>2019-12-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/24/altruism-kills</id><content type="html" xml:base="https://www.yegor256.com/2019/12/24/altruism-kills.html">&lt;p&gt;Altruism means selflessly giving others more than you take back, while egoism means
 selfishly taking more than you return. Modern theories of management
 and social life tell us that altruism means prosperity for the society
 and success to the project. In my book
@@ -109,7 +204,10 @@ learn something.&lt;/p&gt;
 &lt;p&gt;If you are a programmer, I guess you already understand what to do. Demand
 as much as you can and deliver as little as possible. This is how you teach
 your manager to manage projects and help the business understand and fix
-problems faster.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Altruism means selflessly giving others more than you take back, while egoism means selfishly taking more than you return. Modern theories of management and social life tell us that altruism means prosperity for the society and success to the project. In my book Code Ahead I claim the opposite: altruism hurts the society and kills projects. I truly believe that any group activity eventually collapses if it encourages altruistic behavior among its members, be it a project, a company, or a family. This is why one of the core principles of Zerocracy is #NoAltruism.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/12/love-liza.jpg" /></entry><entry><title type="html">Does Code Review Involve Testing?</title><link href="https://www.yegor256.com/2019/12/03/testing-in-code-review.html" rel="alternate" type="text/html" title="Does Code Review Involve Testing?" /><published>2019-12-03T00:00:00+00:00</published><updated>2019-12-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/03/testing-in-code-review</id><content type="html" xml:base="https://www.yegor256.com/2019/12/03/testing-in-code-review.html">&lt;p&gt;When you review a pull/merge request from someone, do you check out
+problems faster.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What is your relationship with the employer? &lt;a href=&quot;https://twitter.com/hashtag/altruism?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#altruism&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1211161804367376384?ref_src=twsrc%5Etfw&quot;&gt;December 29, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Altruism means selflessly giving others more than you take back, while egoism means selfishly taking more than you return. Modern theories of management and social life tell us that altruism means prosperity for the society and success to the project. In my book Code Ahead I claim the opposite: altruism hurts the society and kills projects. I truly believe that any group activity eventually collapses if it encourages altruistic behavior among its members, be it a project, a company, or a family. This is why one of the core principles of Zerocracy is #NoAltruism.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/12/love-liza.jpg" /></entry><entry><title type="html">Does Code Review Involve Testing?</title><link href="https://www.yegor256.com/2019/12/03/testing-in-code-review.html" rel="alternate" type="text/html" title="Does Code Review Involve Testing?" /><published>2019-12-03T00:00:00+00:00</published><updated>2019-12-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/03/testing-in-code-review</id><content type="html" xml:base="https://www.yegor256.com/2019/12/03/testing-in-code-review.html">&lt;p&gt;When you review a pull/merge request from someone, do you check out
 the branch and run the build? I usually don’t, but
 &lt;a href=&quot;https://exceptionnotfound.net/should-code-review-include-manual-testing-depends-2/&quot;&gt;some people do&lt;/a&gt;.
 Their obvious reason is: running a build, or even testing the product manually,
@@ -1108,152 +1206,4 @@ breaking the promise to achieve the results.&lt;/p&gt;
 &lt;p&gt;A promise made to themselves, of course.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Your boss says you have to learn and use a new framework, you answer: &lt;a href=&quot;https://twitter.com/hashtag/motivation?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#motivation&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1183280977935773696?ref_src=twsrc%5Etfw&quot;&gt;October 13, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">I got an email a few days ago. “I’m not a programmer. I’m a mom of two kids: 9 and 14. They both seem to be interested in computers, but they mostly play games. What would you recommend I do to help them make a career in tech?” I’m not an expert in parenting, but I’m getting similar requests rather often. It’s great to see that some people realize the difference between playing GTA and Java coding. It’s very sad to see that they don’t know how to motivate their kids. I don’t know either, but I can try to make a guess.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/hackers.jpg" /></entry><entry><title type="html">Daily Stand-up Injection of Guilt</title><link href="https://www.yegor256.com/2019/09/03/injection-of-guilt.html" rel="alternate" type="text/html" title="Daily Stand-up Injection of Guilt" /><published>2019-09-03T00:00:00+00:00</published><updated>2019-09-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/03/injection-of-guilt</id><content type="html" xml:base="https://www.yegor256.com/2019/09/03/injection-of-guilt.html">&lt;p&gt;A few years ago I wrote a &lt;a href=&quot;/2015/01/08/morning-standup-meetings.html&quot;&gt;blog post&lt;/a&gt;
-about the daily stand-up meetings many software
-teams are doing regularly. Since then, the article has been getting comments
-from both sides. Readers either
-1) &lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-4586377932&quot;&gt;strongly agree&lt;/a&gt;
-with me or
-2) &lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-2021779372&quot;&gt;accuse me&lt;/a&gt;
-of having no idea what morning stand-ups are for.&lt;/p&gt;
-
-&lt;p&gt;My point was: only weak managers need such meetings to coordinate
-the team, while strong ones use more formal instruments to
-organize the flow of information. However, as
-&lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-3516161968&quot;&gt;someone noted&lt;/a&gt;,
-morning meetings are not supposed to be used by managers to coordinate anyone,
-but “to discuss progress, impediments and to plan.”
-I’m not buying it.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Barfuss (2005) by Til Schweiger&quot; src=&quot;/images/2019/09/barfuss.jpg&quot; longdesc=&quot;#1be2c198&quot; /&gt;&lt;figcaption id=&quot;1be2c198&quot;&gt;Barfuss (2005) by Til Schweiger&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let’s put the manager aside, since many of you
-&lt;a href=&quot;https://www.yegor256.com/2015/01/08/morning-standup-meetings.html#comment-2021783252&quot;&gt;believe&lt;/a&gt;
-that “it’s a team that delivers a product,” not a manager. Even though I’m not buying this either,
-let’s imagine a team that doesn’t need a
-&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;manager&lt;/a&gt; and can perfectly
-coordinate the work on its own. Even in this case I still ask the same question:
-why do we need to stand up and talk face-to-face in order “to discuss progress
-and impediments”? Why can’t we do this in writing, in a chat,
-by email, or even via a phone call? Well,
-&lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;ideally&lt;/a&gt;
-we should use tickets,
-&lt;a href=&quot;/2014/10/07/stop-chatting-start-coding.html&quot;&gt;of course&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Why can’t we do this in writing, in a chat, by email, or even via a phone call?
-&lt;/aside&gt;
-
-&lt;p&gt;Why do “planning for the next day” and “discussing progress” need to be done
-personally in a standing-up circle instead of digitally? Why can’t we update
-each other about progress via an email letter, a status board,
-or an Excel spreadsheet? Why can’t planning be done in a software tool, which
-the market is full of? What’s wrong with registering impediments as tickets,
-prioritizing, assigning, and resolving them one by one?&lt;/p&gt;
-
-&lt;p&gt;Nothing. All of this can and should be done online. That’s what computers
-were invented for. Everybody realizes that. However, Agile adepts
-&lt;a href=&quot;https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum&quot;&gt;strongly&lt;/a&gt;
-believe in face-to-face meetings, including this daily scrum ceremony. Why?&lt;/p&gt;
-
-&lt;p&gt;As I said in
-&lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt;, my recently published book,
-the only reasonable explanation I have is that
-the group needs this ritual in order to stay &lt;em&gt;united&lt;/em&gt;. And I meant the group
-with a weak and incompetent &lt;del&gt;manager&lt;/del&gt; management.&lt;/p&gt;
-
-&lt;p&gt;A strong and professional management keeps the group together and makes it achieve
-the goal through 1) &lt;em&gt;explicitly-defined&lt;/em&gt; personal objectives
-and 2) &lt;em&gt;non-ambiguous&lt;/em&gt; motivational instruments. Simply put,
-at every moment of time everybody knows exactly what they have to do in order to get
-&lt;del&gt;money&lt;/del&gt; what they are there for.&lt;/p&gt;
-
-&lt;p&gt;However, &lt;em&gt;most&lt;/em&gt; software groups don’t have such great management, for many
-reasons. Thanks to how Agile has been diminishing project management for
-years, replacing it with leadership and “team work,” many of the potentially good
-managers have lost their motivation to work as such. Needless to say, talent
-among managers is as rare as it is among programmers, dentists, or interior designers.
-Moreover, great management does not tolerate mediocrity and makes mistakes visible, which, of course,
-the majority is always against—it will do everything possible to sabotage this.
-In most software teams an attempt to manage effectively, defining objectives
-explicitly and motivating by results, will most likely lead to a dismissal
-of such a courageous manager.&lt;/p&gt;
-
-&lt;p&gt;As a result, most programmers neither have personal objectives nor motivational instruments:
-they stay in the office &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;from nine till five&lt;/a&gt;
-and get a raise every few years only by switching company. And they have
-supervisors, mentors, coaches, leaders, you name it, … instead of managers.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Programmers, lined up every morning and forced to explain themselves, inevitably feel guilty.
-&lt;/aside&gt;
-
-&lt;p&gt;Thus, how is it possible to keep the group together and make sure programmers
-at least pretend to be working, if they have no personal responsibilities,
-their motivation is close to zero, and they can’t be discharged because the
-cost of recruiting new ones is extremely high? Moreover, new ones will behave exactly
-the same, simply because this is the most effective behavior for them, when the management
-is weak (or absent). What instrument can be employed to &lt;em&gt;make&lt;/em&gt; them work?&lt;/p&gt;
-
-&lt;p&gt;Guilt.&lt;/p&gt;
-
-&lt;p&gt;This emotion is one of a few fundamental ones. Most people feel it after
-harming someone and will try to avoid it. Programmers, lined up every morning
-and forced to explain themselves, inevitably feel guilty: for mistakes,
-for impediments, for lack of progress, for their dress, for their accent,
-for many other things. It doesn’t matter what they feel guilty for; what is
-important is to &lt;em&gt;regularly&lt;/em&gt; make them feel ashamed of letting other people down,
-even if they don’t. The emotion kicks in when the group is listening and
-an individual is speaking, even if there is no real harm done to the group by the
-speaking individual. &lt;a href=&quot;/code-ahead.html&quot;&gt;&lt;em&gt;Code Ahead&lt;/em&gt;&lt;/a&gt; quotes a number
-of academic papers confirming that, but there is no need to have a PhD
-in psychology in order to understand how vulnerable and scary the position
-of someone speaking in front of a group can be (I can confirm that too as a
-&lt;a href=&quot;/talks.html&quot;&gt;regular&lt;/a&gt; public speaker). Guilt kicks in and the programmer
-feels that his or her actions may cause or have already caused problems to others.
-The programmer gets back to the computer and starts working hard, without
-any objectives or motivation. Except to not let &lt;del&gt;mommy&lt;/del&gt; others down!&lt;/p&gt;
-
-&lt;p&gt;To the contrary, a strong and competent management employs formal reward-and-punishment mechanisms
-in order to align the personal objectives of each team member with the business
-goals the team is trying to achieve. Here are a few examples of such a mechanism
-(rewards and punishment mixed together):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For each successful deployment you get $120&lt;/li&gt;
-  &lt;li&gt;When this unit test is fixed you get $200&lt;/li&gt;
-  &lt;li&gt;Every time the server is down for 5+ minutes you lose $500&lt;/li&gt;
-  &lt;li&gt;You &lt;a href=&quot;/2016/03/01/how-we-interview-programmers.html&quot;&gt;interview&lt;/a&gt; a new Java programmer and get $100&lt;/li&gt;
-  &lt;li&gt;You get $75 for each critical bug you can find&lt;/li&gt;
-  &lt;li&gt;If you don’t fix this ticket in 3 days, you won’t be paid for it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In order to put such an obvious and explicit motivational system in place
-the management has to be pretty smart and strong. Moreover, it will require a lot
-of work to do and may lead to serious problems with the team, since, as was
-mentioned above, the mediocre majority will try to sabotage it.&lt;/p&gt;
-
-&lt;p&gt;Meetings, especially morning stand-ups, are a “perfect” substitute, because
-they make it possible to humiliate programmers regularly, triggering their
-innate guilt emotion, which sends these or similar signals to their brains:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Don’t stop working, you will disappoint &lt;del&gt;your mom&lt;/del&gt; the team!&lt;/li&gt;
-  &lt;li&gt;Don’t open Facebook, it upsets everybody!&lt;/li&gt;
-  &lt;li&gt;Work on this ticket, we rely on you!&lt;/li&gt;
-  &lt;li&gt;Deploy it faster, don’t let us down!&lt;/li&gt;
-  &lt;li&gt;Be a good boy/girl, don’t keep us waiting!&lt;/li&gt;
-  &lt;li&gt;If you don’t fix it now, you will be ashamed tomorrow morning!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Every morning stand-up meeting is a refreshment of guilt every programmer
-needs in order to stay “motivated” and “engaged.” This is the real
-reason why they are “more effective” than digital and formal
-flows of information.&lt;/p&gt;
-
-&lt;p&gt;Maybe some time in the future we will find a way to deliver guilt
-in a small pill that every programmer will have to swallow in the morning.
-Until such a pill is invented, keep doing morning stand-ups.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Who needs regular status meetings? &lt;a href=&quot;https://twitter.com/hashtag/codeahead?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#codeahead&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1170661449854803968?ref_src=twsrc%5Etfw&quot;&gt;September 8, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="agile" /><summary type="html">A few years ago I wrote a blog post about the daily stand-up meetings many software teams are doing regularly. Since then, the article has been getting comments from both sides. Readers either 1) strongly agree with me or 2) accuse me of having no idea what morning stand-ups are for. My point was: only weak managers need such meetings to coordinate the team, while strong ones use more formal instruments to organize the flow of information. However, as someone noted, morning meetings are not supposed to be used by managers to coordinate anyone, but “to discuss progress, impediments and to plan.” I’m not buying it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/barfuss.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">I got an email a few days ago. “I’m not a programmer. I’m a mom of two kids: 9 and 14. They both seem to be interested in computers, but they mostly play games. What would you recommend I do to help them make a career in tech?” I’m not an expert in parenting, but I’m getting similar requests rather often. It’s great to see that some people realize the difference between playing GTA and Java coding. It’s very sad to see that they don’t know how to motivate their kids. I don’t know either, but I can try to make a guess.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/hackers.jpg" /></entry></feed>
