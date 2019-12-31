@@ -87,8 +87,7 @@ script: |
 
 Here is where I'll be speaking soon.
 I update this list very often, but
-follow me [on Twitter](https://www.twitter.com/yegor256) and
-[Lanyrd](http://lanyrd.com/profile/yegor256/)
+follow me [on Twitter](https://www.twitter.com/yegor256)
 for the latest news. I'm also seen [somewhere else](/seen.html) sometimes.
 
 Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
