@@ -51,6 +51,8 @@ It's about finding a person who can effectively write and maintain
 spaghetti code and be _happy_ about it (maybe with just a little
 dose of anti-depressants).
 
+{% quote What exactly is talent? It's an innate need to structure things. %}
+
 Imagine yourself recruiting yet another singer for a choir, which consists
 of people who have no ear for music. Would you need talent? I doubt a talented
 person would be able to sing in that choir. Well, maybe for a while, if you pay well enough. Just like any
