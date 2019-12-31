@@ -96,8 +96,6 @@ of a task are clear---and you understand them fully---deliver the result to the 
 After the author closes the task, the
 [project manager]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) pays you.
 
-{% picture /images/2014/04/goodfellas-paulie-talking.png 0 Goodfellas (1990) by Martin Scorsese %}
-
 We're very strict about this principle---no informal communications.
 However, it doesn't mean that we are not interested in your opinions and
 constructive criticism. Rather, we encourage everyone to submit their

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Talented Programmers, Who Are They?"
-date: 2019-12-30
+date: 2019-12-31
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - programming talent
   - how talented are you
   - talent
-image: /images/2019/12/
+image: /images/2014/04/goodfellas-paulie-talking.png
 jb_picture:
-  caption: ...
+  caption: Goodfellas (1990) by Martin Scorsese
 ---
 
 Talented programmers---who are they? I'm not talking about those who are
@@ -113,3 +113,5 @@ The market's demand now is mediocrity, not talent.
 
 Thus, don't worry if you feel that you don't have much of
 a talent---in most projects you will be far better off without it.
+
+Unfortunately.
