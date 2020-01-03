@@ -52,7 +52,7 @@ gets the rewards: bonuses, a promotion, a raise, and so on.
 
 If you see the issues around you, both technical and managerial, and you
 know how to fix them---great! This means that you are already ahead
-of many others, who decided to put up with the routine and just wait
+of many others who decided to put up with the routine and just wait
 for the next paycheck. Use this situation in your own favor: contribute and succeed.
 
 Those who complain about the system are the ones who are expecting
