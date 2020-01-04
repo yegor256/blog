@@ -60,5 +60,5 @@ it's too late and the boss starts assigning tasks to you.
 
 P.S. By the way, I [googled](https://www.google.com/search?q=questions+you+never+ask+your+boss)
 "questions you never ask your boss" and found
-a lot of articles which prohibit many different questions. I'm wasn't
+a lot of articles which prohibit many different questions. I wasn't
 surprised to find that none of them mention the question I'm talking about.
