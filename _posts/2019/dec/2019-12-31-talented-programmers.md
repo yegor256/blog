@@ -90,6 +90,8 @@ all of a sudden `save`? Who cares, it works anyway! And so on. Mediocre
 programmers don't feel _annoyed_ when they meet inconsistencies. Just like
 people with no ear for music, they _don't hear_ anything wrong!
 
+{% quote A talented programmer constantly demanding discipline and consistency looks like a crazy OCD patient. }
+
 When I interview programmers, I don't pay attention to how much they know
 about Java, how well they understand OOP, or how many projects they've
 managed to complete to date. And, of course, I don't care
@@ -117,3 +119,5 @@ Thus, don't worry if you feel that you don't have much of
 a talent---in most projects you will be far better off without it.
 
 Unfortunately.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you think you have a <a href="https://twitter.com/hashtag/talent?src=hash&amp;ref_src=twsrc%5Etfw">#talent</a> for programming?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1213642929845293058?ref_src=twsrc%5Etfw">January 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

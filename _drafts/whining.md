@@ -1,0 +1,66 @@
+---
+layout: post
+title: "The Art of Whining"
+date: 2019-12-20
+place: Shenzhen, China
+tags: management career
+description: |
+  If the system around you is messy and chaotic, it's a great opportunity
+  for you to fix it and earn the rewards for doing this; this is
+  you build your career up.
+keywords:
+  - management issues
+  - enterprise management
+  - management chaos
+  - career
+  - career advice
+image: /images/2019/10/
+jb_picture:
+  caption: ...
+---
+
+Being a yet another software developer in a large enterprise is a pain. You are surrounded
+by legacy code, inconsistent architecture, low quality standards (if they ever exist),
+lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of
+that, the management is very chaotic: no strict plans, no task
+management, no objective metrics, no quality control, and no light at the
+end of the tunnel. You feel like a cog in the machine: arrive at nine,
+leave at five, be quiet, and paychecks will keep coming.
+If you are talented and ambitious, sooner or later, you will
+start thinking about a <del>suicide</del> resignation. But, hold on!
+
+<!--more-->
+
+{% jb_picture_body %}
+
+Try to think differently!
+
+Look at it from a different perspective. Imagine what would be if everything would
+look totally different: the architecture is clean, the code is perfect,
+the documentation is outstanding, the team is full of genius experts,
+the management is transparent, the plans are up to date, the metrics are
+obvious and regularly collected, and the quality is under tight control.
+This would be the end of the tunnel! There would be no room for improvement
+anymore, since everything would already be perfect. How would you feel yourself?
+It seems that exactly this scenario would give you the feeling of being
+a cog in the well-oiled machine.
+
+If you want to make a career and you have the energy for it,
+the first scenario is a much better place to be: such an imperfect system _needs_
+improvements. Of course, the one who makes them,
+gets the rewards: bonuses, a promotion, a raise, and so on.
+
+If you see the issues around you, both technical and management, and you
+know how to fix them---great! This means that you already are ahead
+of many others, who decided to put up with the routine and just wait
+for the next paycheck. Use this situation in your own favor: contribute and succeed.
+
+Those who complain about the system are the ones who are looking
+forward to being those cogs in the machine. They don't see themselves as
+system changers. They expect to play by the rules and expect the system to take care of them.
+Don't be like that. This is not how you build your career up. This is only
+how you spend another few years with no fun.
+
+Instead, embrace the chaos!
+
+Be thankful for its existence---your career can grow because of it.

@@ -86,6 +86,8 @@ The first answer will give us a class with a very low cohesion, while
 the second one will produce a large amount of highly cohesive small
 classes.
 
+{% quote You question the cohesion of your class once you see more than seven methods or more than four attributes. }
+
 Thus, the second option is better? Yes, it is. Smaller classes,
 higher cohesion, ... but more opportunities to lose focus and spread
 functionality around too many places. "All methods in one object"
