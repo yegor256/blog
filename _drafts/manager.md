@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 There are good and bad soldiers in any team. The job of a manager is to
-understand which is which. Then promote the good ones and discharge the bad ones.
+understand which is which. Then to promote the good ones and discharge the bad ones.
 There is one simple indicator I use to make this segregation. It's a simple
 question I either hear from my people or don't. Those who ask it
 are the bad soldiers. Their attitude and their behavior require immediate
@@ -38,7 +38,7 @@ What's wrong with that, you may wonder. Let me explain by a counter example.
 A good soldier behaves differently. A good one wants to do interesting things,
 wants to work with the most challenging problems, wants to resolve complex
 issues, and wants to do what he/she wants to do!
-A good one cares and doesn't want to do what's not important or not interesting.
+A good soldier cares and doesn't want to do what's not important or not interesting.
 A good one asks "What is our ultimate goal?" and then, after getting my answer and thinking
 for a while, comes back to me with a plan for achieving this goal. A good one
 _tells_ me what is next, instead of asking. All I need to do is to approve
