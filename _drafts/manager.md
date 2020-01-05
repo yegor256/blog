@@ -14,9 +14,9 @@ keywords:
   - management chaos
   - career
   - career advice
-image: /images/2019/10/
+image: /images/2020/01/broadchurch.jpg
 jb_picture:
-  caption: ...
+  caption: Broadchurch (2013) by Chris Chibnall
 ---
 
 There are good and bad soldiers in any team. The job of a manager is to
