@@ -101,7 +101,7 @@ informed about everything I do publicly.
 My experience of 1000 interviews<br/>
 [TeamLeadConf](http://teamleadconf.ru/moscow/2020)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-10-11 February.
+10 February.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
@@ -117,8 +117,6 @@ please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
 a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
-Ah, one more thing, starting now I only do talks in English.
-Not Russian any more, sorry.
 These are the topics I'm interested to speak about and they are
 pretty fresh (I haven't presented them before, as of yet):
 
