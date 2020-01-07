@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Embrace the Chaos!"
-date: 2019-12-20
+date: 2020-01-07
 place: Shenzhen, China
 tags: management career
 description: |
