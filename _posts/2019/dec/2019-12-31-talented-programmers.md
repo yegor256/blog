@@ -90,7 +90,7 @@ all of a sudden `save`? Who cares, it works anyway! And so on. Mediocre
 programmers don't feel _annoyed_ when they meet inconsistencies. Just like
 people with no ear for music, they _don't hear_ anything wrong!
 
-{% quote A talented programmer constantly demanding discipline and consistency looks like a crazy OCD patient. }
+{% quote A talented programmer constantly demanding discipline and consistency looks like a crazy OCD patient. %}
 
 When I interview programmers, I don't pay attention to how much they know
 about Java, how well they understand OOP, or how many projects they've
