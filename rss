@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2019-12-31T06:23:21+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Talented Programmers, Who Are They?</title><link href="https://www.yegor256.com/2019/12/31/talented-programmers.html" rel="alternate" type="text/html" title="Talented Programmers, Who Are They?" /><published>2019-12-31T00:00:00+00:00</published><updated>2019-12-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/31/talented-programmers</id><content type="html" xml:base="https://www.yegor256.com/2019/12/31/talented-programmers.html">&lt;p&gt;I’m not talking about those who are
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-01-07T02:21:17+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Embrace the Chaos!</title><link href="https://www.yegor256.com/2020/01/07/embrace-the-chaos.html" rel="alternate" type="text/html" title="Embrace the Chaos!" /><published>2020-01-07T00:00:00+00:00</published><updated>2020-01-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/01/07/embrace-the-chaos</id><content type="html" xml:base="https://www.yegor256.com/2020/01/07/embrace-the-chaos.html">&lt;p&gt;Being just yet another software developer in a large enterprise is a pain. You are surrounded
+by legacy code, inconsistent architecture, low quality standards (assuming they even exist),
+lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of
+that, the management is very chaotic: no strict plans, no task
+management, no objective metrics, no quality control, and no light at the
+end of the tunnel. You feel like a cog in the machine: arrive at nine,
+leave at five, be quiet, and paychecks will keep coming.
+If you are talented and ambitious, sooner or later you will
+start thinking about &lt;del&gt;suicide&lt;/del&gt; resignation. But hold on!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Life Is Too Short (2011-2013) by Warwick Davis, et al.&quot; src=&quot;/images/2020/01/life-is-too-short.jpg&quot; longdesc=&quot;#c5d5a104&quot; /&gt;&lt;figcaption id=&quot;c5d5a104&quot;&gt;Life Is Too Short (2011-2013) by Warwick Davis, et al.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Try to think differently!&lt;/p&gt;
+
+&lt;p&gt;Look at it from a different perspective. Imagine what it would look like if everything was
+totally different: the architecture is clean, the code is perfect,
+the documentation is outstanding, the team is full of experts,
+the management is transparent, the plans are up to date, the metrics are
+obvious and regularly collected, and the quality is under tight control.
+This would be the end of the tunnel! There would be no room for improvement
+anymore, since everything is already perfect. How would you feel now?
+It seems that it’s exactly this scenario that would give you the feeling of being
+merely a cog in a well-oiled machine.&lt;/p&gt;
+
+&lt;p&gt;If you want to make a career and you have the energy for it,
+the first scenario is a much better place to be: such an imperfect system &lt;em&gt;needs&lt;/em&gt;
+improvements. And, of course, the one who makes them
+gets the rewards: bonuses, a promotion, a raise, and so on.&lt;/p&gt;
+
+&lt;p&gt;If you see the issues around you, both technical and managerial, and you
+know how to fix them—great! This means that you are already ahead
+of many others who decided to put up with the routine and just wait
+for the next paycheck. Use this situation in your own favor: contribute and succeed.&lt;/p&gt;
+
+&lt;p&gt;Those who complain about the system are the ones who are expecting
+to be nothing more than those cogs in the machine. They don’t see themselves as
+system changers. They expect to play by the rules and expect the system to take care of them.
+Don’t be like that. This is not how you build your career up. This is only
+how you spend another few years with no fun.&lt;/p&gt;
+
+&lt;p&gt;Instead, embrace the chaos!&lt;/p&gt;
+
+&lt;p&gt;Be thankful for its existence—your career can grow because of it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">Being just yet another software developer in a large enterprise is a pain. You are surrounded by legacy code, inconsistent architecture, low quality standards (assuming they even exist), lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of that, the management is very chaotic: no strict plans, no task management, no objective metrics, no quality control, and no light at the end of the tunnel. You feel like a cog in the machine: arrive at nine, leave at five, be quiet, and paychecks will keep coming. If you are talented and ambitious, sooner or later you will start thinking about suicide resignation. But hold on!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/life-is-too-short.jpg" /></entry><entry><title type="html">Talented Programmers, Who Are They?</title><link href="https://www.yegor256.com/2019/12/31/talented-programmers.html" rel="alternate" type="text/html" title="Talented Programmers, Who Are They?" /><published>2019-12-31T00:00:00+00:00</published><updated>2019-12-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/31/talented-programmers</id><content type="html" xml:base="https://www.yegor256.com/2019/12/31/talented-programmers.html">&lt;p&gt;I’m not talking about those who are
 famous, well-paid, or the authors of big and popular products.
 They are not necessarily talented, even though their &lt;em&gt;results&lt;/em&gt; are outstanding.
 Talent is something some of us have as God’s gift.
@@ -70,6 +114,9 @@ all of a sudden &lt;code&gt;save&lt;/code&gt;? Who cares, it works anyway! And s
 programmers don’t feel &lt;em&gt;annoyed&lt;/em&gt; when they meet inconsistencies. Just like
 people with no ear for music, they &lt;em&gt;don’t hear&lt;/em&gt; anything wrong!&lt;/p&gt;
 
+&lt;aside class=&quot;quote&quot;&gt;A talented programmer constantly demanding discipline and consistency looks like a crazy OCD patient.
+&lt;/aside&gt;
+
 &lt;p&gt;When I interview programmers, I don’t pay attention to how much they know
 about Java, how well they understand OOP, or how many projects they’ve
 managed to complete to date. And, of course, I don’t care
@@ -96,7 +143,10 @@ They train us to have no ear for high quality in programming.&lt;/p&gt;
 &lt;p&gt;Thus, don’t worry if you feel that you don’t have much of
 a talent—in most projects you will be far better off without it.&lt;/p&gt;
 
-&lt;p&gt;Unfortunately.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">I’m not talking about those who are famous, well-paid, or the authors of big and popular products. They are not necessarily talented, even though their results are outstanding. Talent is something some of us have as God’s gift. Very few of us… otherwise it would not be called a talent. We all know what talent looks like in music, sport, poetry, or the art of acting. We can tell right off the bat who’s got it and who is faking it, no matter how hard they try. Can we do the same after a short interview with a programmer? I believe we can.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/12/goodfellas.jpg" /></entry><entry><title type="html">Altruism Kills!</title><link href="https://www.yegor256.com/2019/12/24/altruism-kills.html" rel="alternate" type="text/html" title="Altruism Kills!" /><published>2019-12-24T00:00:00+00:00</published><updated>2019-12-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/24/altruism-kills</id><content type="html" xml:base="https://www.yegor256.com/2019/12/24/altruism-kills.html">&lt;p&gt;Altruism means selflessly giving others more than you take back, while egoism means
+&lt;p&gt;Unfortunately.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do you think you have a &lt;a href=&quot;https://twitter.com/hashtag/talent?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#talent&lt;/a&gt; for programming?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1213642929845293058?ref_src=twsrc%5Etfw&quot;&gt;January 5, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">I’m not talking about those who are famous, well-paid, or the authors of big and popular products. They are not necessarily talented, even though their results are outstanding. Talent is something some of us have as God’s gift. Very few of us… otherwise it would not be called a talent. We all know what talent looks like in music, sport, poetry, or the art of acting. We can tell right off the bat who’s got it and who is faking it, no matter how hard they try. Can we do the same after a short interview with a programmer? I believe we can.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/12/goodfellas.jpg" /></entry><entry><title type="html">Altruism Kills!</title><link href="https://www.yegor256.com/2019/12/24/altruism-kills.html" rel="alternate" type="text/html" title="Altruism Kills!" /><published>2019-12-24T00:00:00+00:00</published><updated>2019-12-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/24/altruism-kills</id><content type="html" xml:base="https://www.yegor256.com/2019/12/24/altruism-kills.html">&lt;p&gt;Altruism means selflessly giving others more than you take back, while egoism means
 selfishly taking more than you return. Modern theories of management
 and social life tell us that altruism means prosperity for the society
 and success to the project. In my book
@@ -388,6 +438,9 @@ decided to add, even though some elements may not really belong together.
 The first answer will give us a class with a very low cohesion, while
 the second one will produce a large amount of highly cohesive small
 classes.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;You question the cohesion of your class once you see more than seven methods or more than four attributes.
+&lt;/aside&gt;
 
 &lt;p&gt;Thus, the second option is better? Yes, it is. Smaller classes,
 higher cohesion, … but more opportunities to lose focus and spread
@@ -1106,107 +1159,4 @@ your own revenue-generating app there?)&lt;/p&gt;
 &lt;p&gt;Stay unhappy. To be happy.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What makes you happy? &lt;a href=&quot;https://twitter.com/hashtag/happiness?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#happiness&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1173239049697529859?ref_src=twsrc%5Etfw&quot;&gt;September 15, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="psychology" /><summary type="html">At the very end of one of my recent meetups I was asked a question: “Are you a happy person?” I mumbled something about being happy from time to time, but later gave this question more thought. Am I happy? Not really. Well, sometimes. What makes me happy? And why are so many of us unhappy so often? It seems that there is an answer, and a recipe for happiness.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/yip-man.jpg" /></entry><entry><title type="html">How to Motivate Kids to Code</title><link href="https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code.html" rel="alternate" type="text/html" title="How to Motivate Kids to Code" /><published>2019-09-10T00:00:00+00:00</published><updated>2019-09-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code</id><content type="html" xml:base="https://www.yegor256.com/2019/09/10/how-to-motivate-kids-to-code.html">&lt;p&gt;I got an email a few days ago. “I’m not a programmer. I’m a mom of two
-kids: 9 and 14. They both seem to be interested in computers, but they
-mostly play games. What would you recommend I do to help them make
-a career in tech?” I’m not an expert in parenting, but I’m getting similar
-requests rather often. It’s great to see that &lt;em&gt;some&lt;/em&gt; people realize
-the difference between playing GTA and Java coding. It’s very sad to see
-that they don’t know how to motivate their kids. I don’t know either,
-but I can try to make a guess.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Hackers (1995) by Iain Softley&quot; src=&quot;/images/2019/09/hackers.jpg&quot; longdesc=&quot;#e5752167&quot; /&gt;&lt;figcaption id=&quot;e5752167&quot;&gt;Hackers (1995) by Iain Softley&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I can’t speak for everyone, but for me studying for the sake of “learning
-new things” is not fun at all. I don’t enjoy the process of becoming smarter.
-I enjoy &lt;em&gt;building&lt;/em&gt; things. If I need to learn something new in order to make
-new things happen, I will do it and I will enjoy learning, because it leads
-to practical results: new things.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Studying for the sake of learning new things is not fun at all.
-&lt;/aside&gt;
-
-&lt;p&gt;For example, &lt;a href=&quot;https://kotlinlang.org/&quot;&gt;Kotlin&lt;/a&gt; has been on the market for a few years already. It’s
-a new programming language. I do realize that it may eventually replace
-Java and so I need to learn it. But I can’t imagine myself reading documentation
-and studying it for days. It’s super boring. Because it leads nowhere.
-Well, it leads to me knowing how to code in Kotlin, but what’s the point if
-I can code in Java already? In order to learn Kotlin I need a new project, which
-I will then write in Kotlin. I will learn the language while &lt;em&gt;using&lt;/em&gt; it.&lt;/p&gt;
-
-&lt;p&gt;My point is that in order to motivate myself to learn Kotlin you need to give me a
-goal, which I will achieve &lt;em&gt;after&lt;/em&gt; I’ve learned Kotlin while &lt;em&gt;using&lt;/em&gt; this new knowledge to get there.
-Maybe, and most probably, your kids may need something similar: a &lt;em&gt;tangible&lt;/em&gt;
-motivator. Something they will see in front of them, which will make them
-happy when they get there, after they learn those boring Java and Kotlin languages.
-What could such a prize look like for a nine-year-old?&lt;/p&gt;
-
-&lt;p&gt;Well, how about one of these (maybe not all of them apply to all ages,
-but you get the idea):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you make an iPhone mobile game and publish it on the Apple Store?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you create a blog for me?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you make an online shop to sell my homemade cookies?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you make an app to help me track my gym exercise results?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you win $1,000 in the next hackathon?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you get an Oracle Java certificate?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you find a security breach in your school’s website?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Can you make a robot which cleans the floor?&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Actually, that’s exactly how I learned everything I know about computers.
-I started programming when I was around 10 years old. I’ve always had a task in front of me and it was
-always something interesting to do for myself and the people around me.
-In other words, I’ve always had my eyes on the prize.
-The majority of my projects are not alive anymore, especially the ones
-I created when I was a kid and a student (and I feel so sad about that).
-However, the outcome is obvious: I’m in the tech industry now and I can code in Java.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Your job, as their parents, is to help them identify the right goals—this is where kids usually fail.
-&lt;/aside&gt;
-
-&lt;p&gt;So don’t expect your kids to enjoy studying. Expect them to be interested
-in &lt;em&gt;building&lt;/em&gt; things and making &lt;del&gt;money&lt;/del&gt; profit. Your job, as their parents, is
-to help them &lt;em&gt;identify&lt;/em&gt; the right goals—this is where kids usually fail because they
-don’t have enough experience to judge what’s more achievable and which are the largest risks.
-I remember trying to create a robot which was supposed to speak like a human.
-I was 13 years old. Obviously, I needed help at that time: someone had to tell
-me that this goal was not really achievable and doing something
-simpler and more practical would be a better application of my efforts.&lt;/p&gt;
-
-&lt;p&gt;Don’t &lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;micromanage&lt;/a&gt;
-your kids by telling them what to learn, how many hours a day to study,
-which schools to attend, and which books to read. Instead, do what good
-managers do with their employees: set objectives and make sure everybody knows what
-the rewards and punishment are.&lt;/p&gt;
-
-&lt;p&gt;Something similar is what your kids need from you. Measure their progress and help
-them find adequately complex and interesting goals. On top of that, make sure
-they understand what the benefits will be when the goals are achieved and … well,
-you have to find a way to punish them for failures. Don’t punish them
-for being stupid or lazy. The only thing that deserves punishment is
-breaking the promise to achieve the results.&lt;/p&gt;
-
-&lt;p&gt;A promise made to themselves, of course.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Your boss says you have to learn and use a new framework, you answer: &lt;a href=&quot;https://twitter.com/hashtag/motivation?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#motivation&lt;/a&gt;&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1183280977935773696?ref_src=twsrc%5Etfw&quot;&gt;October 13, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">I got an email a few days ago. “I’m not a programmer. I’m a mom of two kids: 9 and 14. They both seem to be interested in computers, but they mostly play games. What would you recommend I do to help them make a career in tech?” I’m not an expert in parenting, but I’m getting similar requests rather often. It’s great to see that some people realize the difference between playing GTA and Java coding. It’s very sad to see that they don’t know how to motivate their kids. I don’t know either, but I can try to make a guess.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/hackers.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="psychology" /><summary type="html">At the very end of one of my recent meetups I was asked a question: “Are you a happy person?” I mumbled something about being happy from time to time, but later gave this question more thought. Am I happy? Not really. Well, sometimes. What makes me happy? And why are so many of us unhappy so often? It seems that there is an answer, and a recipe for happiness.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/09/yip-man.jpg" /></entry></feed>

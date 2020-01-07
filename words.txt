@@ -1119,6 +1119,7 @@ change
 changed
 changelog
 changelogs
+changers
 changes
 changeset
 changing
@@ -1332,6 +1333,8 @@ codeship
 coding
 coen
 coffee
+cog
+cogs
 cohesion
 cohesive
 coin
@@ -3754,6 +3757,7 @@ impact
 impacts
 impediments
 imperative
+imperfect
 impetus
 implement
 implementation
@@ -7740,6 +7744,7 @@ surprises
 surprising
 surprisingly
 surrogate
+surrounded
 survival
 survive
 survives
@@ -8181,6 +8186,7 @@ tumblr
 tumor
 tuned
 tunes
+tunnel
 turn
 turnarounds
 turned
@@ -8638,6 +8644,7 @@ well-developed
 well-educated
 well-known
 well-managed
+well-oiled
 well-organized
 well-paid
 well-prepared
