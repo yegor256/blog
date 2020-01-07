@@ -14,9 +14,9 @@ keywords:
   - management chaos
   - career
   - career advice
-image: /images/2019/10/
+image: /images/2020/01/life-is-too-short.jpg
 jb_picture:
-  caption: ...
+  caption: Life Is Too Short (2011-2013) by Warwick Davis, et al.
 ---
 
 Being just yet another software developer in a large enterprise is a pain. You are surrounded
