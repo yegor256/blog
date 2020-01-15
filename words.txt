@@ -1822,6 +1822,7 @@ cumulative
 cunning
 cup
 cups
+curable
 curated
 curators
 cure
@@ -6059,6 +6060,7 @@ pro-active
 pro-actively
 pro-data
 proactive
+proactively
 probabilities
 probability
 probable
@@ -6412,6 +6414,7 @@ recorded
 recording
 records
 recover
+recovery
 recruit
 recruited
 recruiter
@@ -7320,6 +7323,8 @@ softness
 software
 solanolabs
 sold
+soldier
+soldiers
 sole
 solely
 solicits
@@ -8263,6 +8268,7 @@ under-estimating
 under-funded
 under-informed
 under-performing
+underachiever
 underestimate
 undergoing
 underlying
