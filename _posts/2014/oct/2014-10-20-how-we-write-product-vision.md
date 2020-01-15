@@ -244,5 +244,5 @@ The document has to be very short and explicit.
 No lyrics, only
 [statements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %}).
 
-PS. On top of all this we place a
+PS. On top of all this we usually place a
 [Glossary]({% pst 2015/mar/2015-03-16-technical-glossaries %}).

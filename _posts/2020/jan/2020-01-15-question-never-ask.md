@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "One Question You Should Never Ask Your Boss"
-date: 2019-12-20
+date: 2020-01-15
 place: Shenzhen, China
 tags: management career
 description: |
