@@ -48,6 +48,8 @@ Good soldiers don't sit and passively wait until I come to them and say what exa
 needs to be done. Good soldiers pro-actively build their own plans by themselves and
 do everything to convince me that they make sense.
 
+{% quote Good soldiers pro-actively build their own plans and do everything to convince me that they make sense. %}
+
 Bad soldiers, on the other hand, ask me "What's next?" and it gets very annoying.
 It's absolutely no fun to work with these people and I either try to explain to them
 why such a question is a terrible mistake, or I simply get rid of them.
