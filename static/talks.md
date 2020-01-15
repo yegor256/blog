@@ -110,6 +110,13 @@ Is Java Getting Better?<br/>
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
 21 March.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
+The Biggest Mistake of an Honest Tester<br/>
+[TestConf](https://testconf.ru/)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+31 March.
+
 <hr/>
 
 If you are interested in placing me at _your event_,
