@@ -52,3 +52,5 @@ or 2) submitting pull requests (when you don't see problems).
 If none of that works for you, you are a bad programmer.
 
 Good bye.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you know many pull requests you merge into your project per week, on average?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1218800704388620288?ref_src=twsrc%5Etfw">January 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
