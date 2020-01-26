@@ -19,7 +19,8 @@ jb_picture:
   caption: "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles"
 ---
 
-Encapsulation is the core principle of object-oriented programming
+[Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29)
+is the core principle of object-oriented programming
 that makes objects solid, cohesive, trustworthy, etc. But
 what exactly is encapsulation? Does it only protect against access
 to private attributes from outside an object? I think it's much more.
