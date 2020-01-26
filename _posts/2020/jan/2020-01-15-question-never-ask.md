@@ -17,6 +17,8 @@ keywords:
 image: /images/2020/01/broadchurch.jpg
 jb_picture:
   caption: Broadchurch (2013) by Chris Chibnall
+social:
+  - hackernews: https://news.ycombinator.com/item?id=22135843
 ---
 
 There are good and bad soldiers in any team. The job of a manager is to

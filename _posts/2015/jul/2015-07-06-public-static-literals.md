@@ -67,7 +67,7 @@ a better alternative ([yet!](https://www.cactoos.org)). But in your own code, do
 static properties---ever. Even if this code may look convenient to you,
 it's a very bad design.
 
-{% quote Every time you see data duplication, start thinking about the functionality you're duplicating %}
+{% quote Every time you see data duplication, start thinking about the functionality you're duplicating. %}
 
 The reason why is very similar to
 [utility classes]({% pst 2015/feb/2015-02-26-composable-decorators %})
@@ -107,7 +107,7 @@ instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.
 
 Placing data into one shared place (`CharEncoding.UTF_8`)
-doesn't really solve the duplication problem; it actually makes it **worse**, mostly
+doesn't really solve the duplication problem; it actually makes it _worse_, mostly
 because it encourages everybody to duplicate functionality using the same
 piece of shared data.
 
