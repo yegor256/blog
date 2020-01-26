@@ -109,7 +109,7 @@ duplication, not just data duplication.
 Placing data into one shared place (`CharEncoding.UTF_8`)
 doesn't really solve the duplication problem; it actually makes it _worse_, mostly
 because it encourages everybody to duplicate functionality using the same
-piece of shared data.
+piece of [shared data]({% pst 2016/nov/2016-11-21-naked-data %}).
 
 My point here is that every time you see that you have some data duplication
 in your application, start thinking about the functionality you're duplicating.
