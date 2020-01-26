@@ -63,7 +63,7 @@ Looks convenient, right? This is what the designers of Apache Commons think
 (one of the most popular but simply _terrible_ libraries
 in the Java world). I encourage you to think differently.
 I can't tell you to stop using Apache Commons, because we just don't have
-a better alternative (yet!). But in your own code, don't use public
+a better alternative ([yet!](https://www.cactoos.org)). But in your own code, don't use public
 static properties---ever. Even if this code may look convenient to you,
 it's a very bad design.
 
