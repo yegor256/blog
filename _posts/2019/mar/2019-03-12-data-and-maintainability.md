@@ -97,7 +97,7 @@ programming language itself doesn't prevent these large scopes from happening,
 nothing will really help. It's better to invent a programming language or
 an entire programming paradigm to make it harder, or impossible, to grow the scope.
 
-For example, the largest scope you can imagine in C/C++, Java, Ruby and many other
+For example, the largest scope you can imagine in C/C++, Python, Ruby and many other
 modern languages is the [global]({% pst 2018/jul/2018-07-03-global-variables %})
 one, for example here:
 
