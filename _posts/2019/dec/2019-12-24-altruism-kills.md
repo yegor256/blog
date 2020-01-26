@@ -18,6 +18,8 @@ book: code-ahead-1 3
 image: /images/2019/12/love-liza.jpg
 jb_picture:
   caption: Love Liza (2002) by Todd Louiso
+social:
+  - reddit: https://en.reddit.com/r/programming/comments/eh24ct/altruism_kills/
 ---
 
 Altruism means selflessly giving others more than you take back, while egoism means
