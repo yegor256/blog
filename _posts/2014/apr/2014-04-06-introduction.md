@@ -2,6 +2,7 @@
 layout: post
 title: "First Post"
 date: 2014-04-06
+place: Xemxija, Malta
 description: |
   First post in my awesome blog :) The post doesn't contain
   any valuable information and is just an anchor.
