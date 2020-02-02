@@ -66,3 +66,5 @@ how you spend another few years with no fun.
 Instead, embrace the chaos!
 
 Be thankful for its existence---your career can grow because of it.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The boss doesn&#39;t lead the team, doesn&#39;t have a plan, doesn&#39;t manage you, and doesn&#39;t explain anything. What do you do?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1223864080135376897?ref_src=twsrc%5Etfw">February 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
