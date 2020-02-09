@@ -66,3 +66,5 @@ P.S. By the way, I [googled](https://www.google.com/search?q=questions+you+never
 "questions you never ask your boss" and found
 a lot of articles which prohibit many different questions. I wasn't
 surprised to find that none of them mention the question I'm talking about.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What do you do when you finish what your boss asked you to do?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1226410473354080256?ref_src=twsrc%5Etfw">February 9, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
