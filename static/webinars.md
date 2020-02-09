@@ -39,10 +39,10 @@ informed about everything I do publicly, including these webinars.
 
 ## 2019
 
-{% webinar 05-02-2020 49 eeXdDvIVu-Y What Is Cohesion in OOP? %}
+{% webinar 12-02-2020 49 eeXdDvIVu-Y What Is Cohesion in OOP? %}
 
 <a href="https://www.youtube.com/watch?v=eeXdDvIVu-Y"><img src="https://i.ytimg.com/vi/eeXdDvIVu-Y/mqdefault.jpg" class="wnr" alt="Webinar no.49 by Yegor Bugayenko"/></a>
-February 5, 2020<br/>
+February 12, 2020<br/>
 &#35;49: **What Is Cohesion in OOP?**<br/>
 There are two important metrics in OOP: cohesion and coupling. The first one is the most interesting one since it can be measured. There are many ways to measure it. We discuss which of them make sense and why we should care.
 
