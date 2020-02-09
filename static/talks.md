@@ -104,6 +104,13 @@ My experience of 1000 interviews<br/>
 10 February.
 
 <div class="talk-event">&nbsp;</div>
+<img src="http://icsa-conferences.org/2020/img/logos/ICSA2020_logo_alterada.png" class="future-talk" alt="ICSA 2020"/><br/>
+The Impact of Constructors on the Validity of Class Cohesion Metrics<br/>
+[ICSA'20](http://icsa-conferences.org/2020/index.html)<br/>
+<span class="city">Salvador</span>, <span class="country">Brazil</span><br/>
+20 March.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
 Is Java Getting Better?<br/>
 [JavaFest](https://javafest.com.ua/)<br/>
