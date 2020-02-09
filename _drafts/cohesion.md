@@ -1,0 +1,137 @@
+---
+layout: post
+title: "Object Cohesion: Why It Matters"
+date: 2020-02-11
+place: Moscow, Russia
+tags: oop
+description: |
+  Object cohesion is a quality of OOP, which will help
+  us prove many assumptions and claims made in Elegant Objects
+  books.
+keywords:
+  - class cohesion
+  - object cohesion
+  - elegant objects
+  - oop cohesion
+  - eo cohesion
+image: /images/2020/02/
+jb_picture:
+  caption: ...
+---
+
+You most probably know about [Elegant Objects](https://www.elegantobjects.org) (EO),
+an alternative object-oriented paradigm, which claims that objects must
+be immutable, have no
+[static methods]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
+never use
+[NULL]({% pst 2014/may/2014-05-13-why-null-is-bad %}) in their code,
+use [no annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}),
+and so on. We, EO adepts, claim many things, but not so many people
+believe us. Those non-believers [say](/testimonials.html)
+that we are trolls, at best. Their main argument is: everybody works differently,
+why should we listen to you? I have no answer... I had no answer, until I
+created [jPeek](https://www.jpeek.org) and started researching object _cohesion_.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+Let me explain how cohesion can help us, EO adepts, to _prove_ some of our
+assumptions.
+
+[Cohesion](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29),
+as a characteristic of software module, was invented by
+[Larry Constantine](https://en.wikipedia.org/wiki/Larry_Constantine)
+when I didn't even exist yet, in 1974.
+Here is what it means; take a look at this simple Java class:
+
+{% highlight java %}
+class Books {
+  private List<String> titles;
+  private List<Integer> prices;
+  void addTitle(String title) {
+    this.titles.add(title);
+  }
+  void addPrice(Integer price) {
+    this.prices.add(price);
+  }
+}
+{% endhighlight %}
+
+There are two attributes and two methods. The method `addTitle()` works with
+the attribute `titles`, while the method `addPrice()` works only with the
+attribute `prices`. The cohesion is _low_ in this class, because attributes
+`titles` and `prices` are not related to each other anyhow. We can easily
+break this class into two pieces without losing anything:
+
+{% highlight java %}
+class Books1 {
+  private List<String> titles;
+  void addTitle(String title) {
+    this.titles.add(title);
+  }
+}
+class Books2 {
+  private List<Integer> prices;
+  void addPrice(Integer price) {
+    this.prices.add(price);
+  }
+}
+{% endhighlight %}
+
+Now, we have two much more cohesive classes: their attributes and methods
+are related to each other. We can't break `Books1` anymore, since each
+attribute is needed by each method.
+
+Here is yet another example of a _highly_ cohesive class:
+
+{% highlight java %}
+class Books {
+  private List<String> titles;
+  void add(String title) {
+    this.titles.add(title);
+  }
+  void delete(int id) {
+    this.titles.remove(id);
+  }
+}
+{% endhighlight %}
+
+Can we break it into smaller pieces? No, we can't. We can't take any part
+of the class out. The attribute `titles` and both two methods must stay
+together. This means that the class is _highly_ cohesive.
+
+It was demonstrated long time ago that more cohesive classes are better than
+the ones with low cohesion, in terms of their error-proneness,
+for example by Victor R. Basili et al. in their study
+[A Validation of Object-Oriented Design Metrics as Quality Indicators](https://pdfs.semanticscholar.org/2bb8/c1f4eeb5e5ae353adeea0fd6933551b9e932.pdf).
+
+Now, if we can empirically prove that, for example, classes without static methods
+are on average more cohesive than their static-rich fellows, we can say
+that the claim that "static methods are evil" (postulated by Elegant Objects) is
+scientifically validated. We can take a large set of
+random Java classes and calculate their cohesion. Then, we can separate those
+with static methods from those without them. Then, we can calculate which group
+has higher average cohesion. If the group without static methods wins,
+the assumption would be valid.
+
+Of course, another random set of Java classes may produce different results,
+but this is how empirical science works: we can't prove the theorem other
+than by some experiments.
+
+I created an open source software to help me do these experiments and called
+it [jPeek.org](https://www.jpeek.org). It is a calculator of cohesion metrics
+for Java code. No surprise, there are many metrics to calculate it. At least
+thirty of them are published, while only few of them were properly implemented.
+In jPeek, thanks to its contributors, we managed to implement over a dozen of
+them.
+
+Using this tool we can empirically prove some of the key points of EO.
+For example, we can prove that
+[immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
+classes are less cohesive, annotations
+negatively affect cohesion,
+[DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}) are low-cohesive creatures,
+and many other things. Thus, cohesion will become the vehicle, which will
+drive Elegant Objects to a place where most of its claims will be scientifically
+proven. Give us a few more years and we will have very interesting results.
