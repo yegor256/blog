@@ -2307,6 +2307,7 @@ documents
 dod
 dodger
 does
+doesn
 doesn't
 dog
 dogmatic
@@ -5063,6 +5064,7 @@ mph
 MS
 MS-DOS
 MSc
+msec
 much
 mulcahy
 multi

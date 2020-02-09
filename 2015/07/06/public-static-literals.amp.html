@@ -112,7 +112,7 @@ byte[] array = text.getBytes(CharEncoding.UTF_8);</pre>
 (one of the most popular but simply <em>terrible</em> libraries
 in the Java world). I encourage you to think differently.
 I can’t tell you to stop using Apache Commons, because we just don’t have
-a better alternative (yet!). But in your own code, don’t use public
+a better alternative (<a href="https://www.cactoos.org">yet!</a>). But in your own code, don’t use public
 static properties—ever. Even if this code may look convenient to you,
 it’s a very bad design.</p>
 
@@ -152,9 +152,9 @@ instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.</p>
 
 <p>Placing data into one shared place (<code>CharEncoding.UTF_8</code>)
-doesn’t really solve the duplication problem; it actually makes it <strong>worse</strong>, mostly
+doesn’t really solve the duplication problem; it actually makes it <em>worse</em>, mostly
 because it encourages everybody to duplicate functionality using the same
-piece of shared data.</p>
+piece of <a href="/2016/11/21/naked-data.html">shared data</a>.</p>
 
 <p>My point here is that every time you see that you have some data duplication
 in your application, start thinking about the functionality you’re duplicating.
@@ -164,6 +164,12 @@ class for this code and place the data there, as a <code>private</code> property
 of duplication.</p>
 
 <p>PS. You can use a method instead of a class, but not a static literal.</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">How do you get rid of the duplication of magic numbers (it's Ruby)? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class Time<br> def hours<br> msec / (60 * 60 * 1000)<br> end<br> def days<br> msec / (24 * 60 * 60 * 1000)<br> end<br>end</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1221378774618595329?ref_src=twsrc%5Etfw">January 26, 2020</a>
+</blockquote>
+
+
 
     </article>
   </body>
