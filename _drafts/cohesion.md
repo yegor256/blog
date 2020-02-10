@@ -5,8 +5,8 @@ date: 2020-02-11
 place: Moscow, Russia
 tags: oop
 description: |
-  Object cohesion is a quality of OOP, which will help
-  us prove many assumptions and claims made in Elegant Objects
+  Object cohesion is a quality of OOP which will help
+  us prove many assumptions and claims made in the Elegant Objects
   books.
 keywords:
   - class cohesion
@@ -26,10 +26,10 @@ be immutable, have no
 never use
 [NULL]({% pst 2014/may/2014-05-13-why-null-is-bad %}) in their code,
 use [no annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}),
-and so on. We, EO adepts, claim many things, but not so many people
+and so on. We, the EO adepts, claim many things, but not so many people
 believe us. Those non-believers [say](/testimonials.html)
 that we are trolls, at best. Their main argument is: everybody works differently,
-why should we listen to you? I have no answer... I had no answer, until I
+why should we listen to you? I have no answer for them... well I had no answer, until I
 created [jPeek](https://www.jpeek.org) and started researching object _cohesion_.
 
 <!--more-->
@@ -40,7 +40,7 @@ Let me explain how cohesion can help us, EO adepts, to _prove_ some of our
 assumptions.
 
 [Cohesion](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29),
-as a characteristic of software module, was invented by
+as a characteristic of a software module, was invented by
 [Larry Constantine](https://en.wikipedia.org/wiki/Larry_Constantine)
 when I didn't even exist yet, in 1974.
 Here is what it means; take a look at this simple Java class:
@@ -61,7 +61,7 @@ class Books {
 There are two attributes and two methods. The method `addTitle()` works with
 the attribute `titles`, while the method `addPrice()` works only with the
 attribute `prices`. The cohesion is _low_ in this class, because attributes
-`titles` and `prices` are not related to each other anyhow. We can easily
+`titles` and `prices` are not related to each other in any way. We can easily
 break this class into two pieces without losing anything:
 
 {% highlight java %}
@@ -98,10 +98,10 @@ class Books {
 {% endhighlight %}
 
 Can we break it into smaller pieces? No, we can't. We can't take any part
-of the class out. The attribute `titles` and both two methods must stay
+of the class out. The attribute `titles` and both of the methods must stay
 together. This means that the class is _highly_ cohesive.
 
-It was demonstrated long time ago that more cohesive classes are better than
+It was demonstrated a long time ago that more cohesive classes are better than
 the ones with low cohesion, in terms of their error-proneness,
 for example by Victor R. Basili et al. in their study
 [A Validation of Object-Oriented Design Metrics as Quality Indicators](https://pdfs.semanticscholar.org/2bb8/c1f4eeb5e5ae353adeea0fd6933551b9e932.pdf).
@@ -111,7 +111,7 @@ are on average more cohesive than their static-rich fellows, we can say
 that the claim that "static methods are evil" (postulated by Elegant Objects) is
 scientifically validated. We can take a large set of
 random Java classes and calculate their cohesion. Then, we can separate those
-with static methods from those without them. Then, we can calculate which group
+with static methods from those without them. Next we can calculate which group
 has higher average cohesion. If the group without static methods wins,
 the assumption would be valid.
 
@@ -119,10 +119,10 @@ Of course, another random set of Java classes may produce different results,
 but this is how empirical science works: we can't prove the theorem other
 than by some experiments.
 
-I created an open source software to help me do these experiments and called
+I created an open source software library to help me do these experiments and called
 it [jPeek.org](https://www.jpeek.org). It is a calculator of cohesion metrics
-for Java code. No surprise, there are many metrics to calculate it. At least
-thirty of them are published, while only few of them were properly implemented.
+for Java code. No surprise, there are many metrics we can use to calculate it. At least
+thirty of them are published, while only a few of them were properly implemented.
 In jPeek, thanks to its contributors, we managed to implement over a dozen of
 them.
 
