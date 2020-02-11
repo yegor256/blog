@@ -117,6 +117,13 @@ The Biggest Mistake of an Honest Tester<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 31 March.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
+Something about HR...<br/>
+[HR&Technology Expo 2020](https://hr-tech.ru/)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+7-8 April.
+
 <hr/>
 
 If you are interested in placing me at _your event_,
