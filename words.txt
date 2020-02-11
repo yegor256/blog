@@ -618,6 +618,7 @@ basic
 basically
 basics
 basil
+basili
 basis
 bass
 bastard
@@ -2537,6 +2538,7 @@ emphasize
 emphasizes
 emphasizing
 empire
+empirical
 empirically
 employed
 employee
@@ -2659,6 +2661,7 @@ ergo
 eric
 ernest
 error
+error-proneness
 errors
 escalated
 escalates
@@ -2927,6 +2930,7 @@ feels
 fees
 feet
 fellow
+fellows
 felt
 female
 females
@@ -4582,6 +4586,7 @@ love
 loves
 loving
 low
+low-cohesion
 low-level
 lower
 lower-quality
@@ -5233,6 +5238,7 @@ NOLO
 non-
 non-ambiguous
 non-behavioral
+non-believers
 non-blockchain
 non-cohesive
 non-comment
@@ -5925,6 +5931,7 @@ posted
 PostgreSQL
 posting
 posts
+postulated
 potatoes
 potencier
 potential
@@ -6906,6 +6913,7 @@ school's
 schools
 science
 scientific
+scientifically
 scientist
 scientists
 SCM
@@ -7526,6 +7534,7 @@ statement
 statements
 states
 static
+static-rich
 statically
 stating
 station
@@ -7941,6 +7950,7 @@ theirs
 them
 themselves
 then
+theorem
 theoretical
 theories
 theory
@@ -8164,6 +8174,7 @@ triple-apostrophe
 tripled
 tripod
 trolling
+trolls
 trotsky
 trouble
 troublemaker
@@ -8469,6 +8480,7 @@ vector
 vedran
 vegas
 vegetarian
+vehicle
 vehicles
 velocity
 vendor
@@ -8507,6 +8519,7 @@ vice
 victim
 victimize
 victims
+victor
 video
 video-recorded
 videos
