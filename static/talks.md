@@ -97,13 +97,6 @@ informed about everything I do publicly.
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 <div class="talk-event">&nbsp;</div>
-<img src="http://teamleadconf.ru/i/teamleadconf/moscow/2020/logo/i-logo.svg" class="future-talk" alt="TeamLeadConf 2020"/><br/>
-My experience of 1000 interviews<br/>
-[TeamLeadConf](http://teamleadconf.ru/moscow/2020)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-10 February.
-
-<div class="talk-event">&nbsp;</div>
 <img src="http://icsa-conferences.org/2020/img/logos/ICSA2020_logo_alterada.png" class="future-talk" alt="ICSA 2020"/><br/>
 The Impact of Constructors on the Validity of Class Cohesion Metrics<br/>
 [ICSA'20](http://icsa-conferences.org/2020/index.html)<br/>
@@ -187,6 +180,15 @@ and
 <span id="total-countries">?</span> countries.
 
 I was also seen at [these events](/seen.html).
+
+### 2020
+
+<div class="talk-event">&nbsp;</div>
+<img src="http://teamleadconf.ru/i/teamleadconf/moscow/2020/logo/i-logo.svg" class="past-talk" alt="TeamLeadConf 2020"/><br/>
+My experience of 1000 interviews;
+[TeamLeadConf](http://teamleadconf.ru/moscow/2020);
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+10 February.
 
 ### 2019
 
