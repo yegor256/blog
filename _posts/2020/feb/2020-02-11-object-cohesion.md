@@ -14,9 +14,9 @@ keywords:
   - elegant objects
   - oop cohesion
   - eo cohesion
-image: /images/2020/02/
+image: /images/2020/02/kin-dza-dza.jpg
 jb_picture:
-  caption: ...
+  caption: Кин-дза-дза! by Георгий Данелия
 ---
 
 You most probably know about [Elegant Objects](https://www.elegantobjects.org) (EO),
