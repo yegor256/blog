@@ -202,7 +202,8 @@ I was also seen at [these events](/seen.html).
 My experience of 1000 interviews;
 [TeamLeadConf](http://teamleadconf.ru/moscow/2020);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
-10 February.
+10 February;
+[slides](https://www.slideshare.net/YegorBugayenko/my-experience-of-1000-interviews).
 
 ### 2019
 
@@ -212,7 +213,8 @@ On Requirements Management;
 [ProductFest](https://productfest.ru/moscow/2019);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 9 December;
-[видео](https://www.youtube.com/watch?v=w3yJUtgr-yA).
+[видео](https://www.youtube.com/watch?v=w3yJUtgr-yA),
+[slides](https://www.slideshare.net/YegorBugayenko/on-requirements-management-demotivate-them-right).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/0N-CevixhsA/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2019"/>
@@ -228,7 +230,8 @@ Are You Sure You Are Not a Micromanager?
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019);
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
 23 September;
-[видео](https://www.youtube.com/watch?v=6DrD_FucDK4).
+[видео](https://www.youtube.com/watch?v=6DrD_FucDK4),
+[slides](https://www.slideshare.net/YegorBugayenko/are-you-sure-you-are-not-a-micromanager-228232854).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/wmvLQFquHGc/mqdefault.jpg" class="past-talk" alt="EPAM Meetup 2019"/>
@@ -262,7 +265,8 @@ Can Distributed Teams Deliver Quality?
 [QualityConf'2019](http://qualityconf.ru/2019);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 27 May;
-[видео](https://youtu.be/s7QCH17lQlY).
+[видео](https://youtu.be/s7QCH17lQlY),
+[slides](https://www.slideshare.net/YegorBugayenko/can-distributed-teams-deliver-quality).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/i84uvEWDeMc/mqdefault.jpg" class="past-talk" alt="AppsConf 2019"/>
