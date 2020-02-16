@@ -124,6 +124,13 @@ Something about HR...<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 7-8 April.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://nastachku.ru/design/themes/nastachku_theme/media/images/red-logo.png" class="future-talk" alt="Стачка 2020"/><br/>
+Прекрасное Айти Далёко (keynote)<br/>
+[Стачка](https://nastachku.ru/)<br/>
+<span class="city">Ulyanovsk</span>, <span class="country">Russia</span><br/>
+22-24 May.
+
 <hr/>
 
 If you are interested in placing me at _your event_,
