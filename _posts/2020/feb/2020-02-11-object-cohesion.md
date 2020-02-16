@@ -137,3 +137,5 @@ negatively affect cohesion,
 and many other things. Thus cohesion will become the vehicle which will
 drive Elegant Objects to a place where most of its claims will be scientifically
 proven. Give us a few more years and we will have very interesting results.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A reviewer rejects your code and says: &quot;This class is not cohesive enough!&quot; What would you answer?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1228936961035001856?ref_src=twsrc%5Etfw">February 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
