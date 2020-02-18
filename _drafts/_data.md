@@ -128,12 +128,12 @@ There were three interfaces in the first design, while the second one
 has only one interface and two classes. I call the first one "fat" because
 it returns interfaces, which already implement the functionality we are
 looking for, and we don't need to cover them with additional decorators
-or adapters. Its hierachy of _three_ interfaces is rich enough to give
+or adapters. Its hierarchy of _three_ interfaces is rich enough to give
 us everything we need. That's why it's fat. The second one, on other hand
 is pretty _skinny_, there is only one interface, which returns us plain
 text data, which we have to parse on our own. We need to _dress them up_.
 
-It seems that the the skinny design is better, for a number of reasons:
+It seems that the skinny design is better, for a number of reasons:
 
 * **Extendability**.
   The skinny design is definitely easier to extend. In order
