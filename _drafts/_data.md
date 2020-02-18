@@ -21,8 +21,8 @@ jb_picture:
 
 It seems that type/class hierarchies in OOP may be designed in two
 extreme ways: either with full encapsulation of data in mind; or with just a few
-interfaces making raw data visible, and letting classes deal with them, parse them,
-and turn them into smaller data elements. You may be surprised, but I'm
+interfaces making raw data visible, and letting classes deal with it, parse it,
+and turn it into smaller data elements. You may be surprised, but I'm
 suggesting the second option is more elegant. It seems to me that we don't
 lose object orientation, but rather gain a lot of flexibility, reusability, testability,
 and so on.
@@ -131,7 +131,7 @@ looking for, and we don't need to cover them with additional decorators
 or adapters. Its hierarchy of _three_ interfaces is rich enough to give
 us everything we need. That's why it's fat. The second one, on other hand
 is pretty _skinny_, there is only one interface, which returns us plain
-text data, which we have to parse on our own. We need to _dress them up_.
+text data, which we have to parse on our own. We need to _dress it up_.
 
 It seems that the skinny design is better, for a number of reasons:
 
@@ -158,9 +158,9 @@ It seems that the skinny design is better, for a number of reasons:
 * **Testability**.
   Obviously, the skinny design is much easier to test, because mocking
   a single interface is a much simpler task than mocking the entire
-  hierarchy. To test the class `TxtAuthor` we just pass a fake text to
+  hierarchy. To test the class `TxtAuthor` we just pass some fake text to
   its constructor and check how it works. To test the class `PgAuthor` we
-  would need to do much more, including running a fake instance of PostgreSQL server.
+  would need to do much more, including running a fake instance of a PostgreSQL server.
 
 Everything said above is true for both 1) from-PostgreSQL data retrievals
 and 2) to-PostgreSQL data manipulations. Of course, manipulations may
