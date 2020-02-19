@@ -127,9 +127,9 @@ Something about HR...<br/>
 <div class="talk-event">&nbsp;</div>
 <img src="https://nastachku.ru/design/themes/nastachku_theme/media/images/red-logo.png" class="future-talk" alt="Стачка 2020"/><br/>
 Прекрасное Айти Далёко (keynote)<br/>
-[Стачка](https://nastachku.ru/)<br/>
+[Стачка](https://nastachku.ru/prekrasnoe-it-daleko)<br/>
 <span class="city">Ulyanovsk</span>, <span class="country">Russia</span><br/>
-22-24 May.
+23 May.
 
 <hr/>
 

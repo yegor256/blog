@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fat vs. Skinny Design"
-date: 2020-02-18
+date: 2020-02-19
 place: Moscow, Russia
 tags: oop java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - fat design
   - skinny design
   - type hierarchy
-image: /images/2020/10/
+image: /images/2020/02/owning-mahowny.jpg
 jb_picture:
-  caption: ...
+  caption: Owning Mahowny (2003) by Richard Kwietniowski
 ---
 
 It seems that type/class hierarchies in OOP may be designed in two
