@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-02-19T17:22:01+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fat vs. Skinny Design</title><link href="https://www.yegor256.com/2020/02/19/fat-skinny-design.html" rel="alternate" type="text/html" title="Fat vs. Skinny Design" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/02/19/fat-skinny-design</id><content type="html" xml:base="https://www.yegor256.com/2020/02/19/fat-skinny-design.html">&lt;p&gt;It seems that type/class hierarchies in OOP may be designed in two
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-02-19T17:50:32+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fat vs. Skinny Design</title><link href="https://www.yegor256.com/2020/02/19/fat-skinny-design.html" rel="alternate" type="text/html" title="Fat vs. Skinny Design" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/02/19/fat-skinny-design</id><content type="html" xml:base="https://www.yegor256.com/2020/02/19/fat-skinny-design.html">&lt;p&gt;It seems that type/class hierarchies in OOP may be designed in two
 extreme ways: either with full encapsulation of data in mind; or with just a few
 interfaces making raw data visible, and letting classes deal with it, parse it,
 and turn it into smaller data elements. You may be surprised, but I’m
@@ -33,7 +33,7 @@ and so on.&lt;/p&gt;
 
 &lt;p&gt;Visually, this design may look like this (in UML):&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;object data='{&quot;Message&quot;:&quot;The request contains an entity body but no Content-Type header. The inferred media type 'application/octet-stream' is not supported for this resource.&quot;}' type='image/svg+xml' style=&quot;width:75%&quot;&amp;gt;&amp;lt;/object&amp;gt;&lt;/p&gt;
+&lt;p&gt;Can't render PlantUML diagram.&lt;/p&gt;
 
 &lt;p&gt;Now, let’s compare it with an alternative design (which is much less
 &lt;em&gt;fat&lt;/em&gt; than the previous one, I would even call it &lt;em&gt;skinny&lt;/em&gt;):&lt;/p&gt;
@@ -63,7 +63,7 @@ extract the name as a &lt;code&gt;String&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;Visually in UML, it looks like this:&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;object data='{&quot;Message&quot;:&quot;The request contains an entity body but no Content-Type header. The inferred media type 'application/octet-stream' is not supported for this resource.&quot;}' type='image/svg+xml' style=&quot;width:75%&quot;&amp;gt;&amp;lt;/object&amp;gt;&lt;/p&gt;
+&lt;p&gt;Can't render PlantUML diagram.&lt;/p&gt;
 
 &lt;p&gt;There were three interfaces in the first design, while the second one
 has only one interface and two classes. I call the first one “fat” because
