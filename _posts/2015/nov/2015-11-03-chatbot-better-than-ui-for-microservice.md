@@ -63,7 +63,7 @@ What's so good about it? A few things.
 
 This is how the traditional architecture of a web system would look:
 
-{% plantuml style="width:75%" %}
+{% plant style="width:75%" %}
 skinparam componentStyle uml2
 User -> [Service]
 [Service] -> [Database]
@@ -86,7 +86,7 @@ spaghetti carbonara. You're a client, and that cute lady is a server.
 In the case of a chatbot, that's not the case anymore. Look at the
 architecture:
 
-{% plantuml style="width:75%" %}
+{% plant style="width:75%" %}
 skinparam componentStyle uml2
 User -up-> [GitHub]
 [Service] -up-> [GitHub]

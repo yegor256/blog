@@ -201,7 +201,7 @@ Instead of one method `power()` in class `Foo` now we have
 four classes working together. From now on,
 this is what happens behind the scenes on every call to `power()`:
 
-{% plantuml %}
+{% plant %}
 hide footbox
 skinparam sequence {
   ArrowFontName "Courier New"

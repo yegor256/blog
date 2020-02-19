@@ -58,7 +58,7 @@ String name = a.head().author().name();
 
 Visually, this design may look like this (in UML):
 
-{% plantuml style="width:75%" %}
+{% plant style="width:75%" %}
 allowmixing
 Interface Article
 Interface Head
@@ -110,7 +110,7 @@ String name = new TxtAuthor(author).name();
 
 Visually in UML, it looks like this:
 
-{% plantuml style="width:75%" %}
+{% plant style="width:75%" %}
 allowmixing
 Interface Article
 TxtAuthor *- TxtHead

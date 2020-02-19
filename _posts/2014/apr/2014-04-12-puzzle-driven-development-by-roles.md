@@ -177,7 +177,7 @@ together and making sure they fit. In most cases,
 I'm not creating them myself, but I'm telling everybody how they should
 be created. My work flow of artifacts is the following:
 
-{% plantuml style="width:75%" %}
+{% plant style="width:75%" %}
 [SRS] -> [UML]
 [UML] -> [Source code]
 {% endplantuml %}
