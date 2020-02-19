@@ -33,7 +33,7 @@ module Yegor
       http = Net::HTTP.new(api.host, api.port)
       http.use_ssl = true
       request = Net::HTTP::Post.new(api.request_uri, { 'Content-Type': 'application/x-www-form-urlencoded' })
-      uml = "@startuml\n" + super + "\n@enduml"
+      uml = "@startuml\n#{super}\n@enduml"
       request.set_form_data(type: 'svg', plantuml: uml)
       response = http.request(request)
       url = response.body.gsub(/^"|"$/, '')
