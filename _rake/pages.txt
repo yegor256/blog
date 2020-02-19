@@ -22,8 +22,6 @@ p/5
 p/10/index.html
 pdf
 pdf/2014/guard-article.pdf
-uml
-uml/19b92d0465e2e819ffcf88cf46c6e333.svg
 fonts
 fonts/cambria/2EAA54_0_0.woff
 images
