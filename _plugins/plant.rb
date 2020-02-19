@@ -22,11 +22,10 @@ require 'liquid'
 require 'json'
 
 module Yegor
-  class PlantBlock < Liquid::Tag
+  class PlantBlock < Liquid::Block
     def initialize(tag, markup, tokens)
       super
-      @text = markup.strip
-      @tokens = tokens.strip
+      @markup = markup.strip
     end
 
     def render(context)
@@ -34,10 +33,11 @@ module Yegor
       http = Net::HTTP.new(api.host, api.port)
       http.use_ssl = true
       request = Net::HTTP::Post.new(api.request_uri, { 'Content-Type': 'application/x-www-form-urlencoded' })
-      request.set_form_data(type: 'svg', plantuml: @text)
+      uml = "@startuml\n" + super + "\n@enduml"
+      request.set_form_data(type: 'svg', plantuml: uml)
       response = http.request(request)
       url = response.body.gsub(/^"|"$/, '')
-      "<img src=#{url} #{@tokens}/>"
+      "<img src=#{url} #{@markup}/>"
     end
   end
 end
