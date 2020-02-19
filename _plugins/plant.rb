@@ -36,6 +36,7 @@ module Yegor
       uml = "@startuml\n#{super}\n@enduml"
       request.set_form_data(type: 'svg', plantuml: uml)
       response = http.request(request)
+      return "<p>Can't render PlantUML diagram.</p>" unless response.code == '200'
       url = response.body.gsub(/^"|"$/, '')
       "<p><object data='#{url}' type='image/svg+xml' #{@markup}></object></p>"
     end
