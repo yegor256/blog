@@ -518,6 +518,7 @@ authenticate
 authenticated
 authentication
 author
+author's
 authoritarian
 authoritative
 authorities
@@ -1227,6 +1228,7 @@ clarity
 clashes
 clashing
 class
+class-set
 classes
 classic
 classical
@@ -1876,6 +1878,7 @@ darker
 dashboard
 data
 data-driven
+data-related
 database
 database-connected
 databases
@@ -2892,6 +2895,7 @@ fashion
 fast
 faster
 fastest
+fat
 fatal
 father
 fault
@@ -3174,6 +3178,7 @@ friends
 friendship
 frivolous
 from
+from-PostgreSQL
 front
 front-end
 frustrated
@@ -4589,6 +4594,7 @@ low
 low-cohesion
 low-level
 lower
+lower-level
 lower-quality
 lowered
 lowers
@@ -4966,6 +4972,7 @@ MIT
 mitigation
 mix
 mixed
+mixing
 mixins
 mo
 mobile
@@ -5404,6 +5411,7 @@ oncologists
 one
 one's
 one-hour
+one-interface
 one-man
 one-million-dollar
 one-noun
@@ -5611,6 +5619,7 @@ parmesan
 parodies
 parse
 parseable
+parsed
 parser
 parsers
 parsing
@@ -5929,6 +5938,7 @@ post-money
 post-processing
 posted
 PostgreSQL
+PostgreSQL-related
 posting
 posts
 postulated
@@ -6327,6 +6337,7 @@ rating
 ratio
 rationale
 ratios
+raw
 raymond
 rb
 rbara
@@ -6687,6 +6698,7 @@ retire
 retired
 retirement
 retires
+retrievals
 retrieve
 retrieved
 retrieves
@@ -7245,6 +7257,7 @@ skills
 skim
 skimp
 skin
+skinny
 skinparam
 skip
 skipped
@@ -8044,6 +8057,7 @@ title
 titles
 tl
 to
+to-PostgreSQL
 today
 TODO
 together
@@ -8228,6 +8242,8 @@ two
 two-year-old
 txr
 txt
+txtauthor
+txthead
 type
 types
 typescript
