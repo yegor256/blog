@@ -110,7 +110,7 @@ String name = a.head().author().name();</pre>
 
 <p>Visually, this design may look like this (in UML):</p>
 
-<p></p>
+<p>&lt;img src={“Message”:”The request contains an entity body but no Content-Type header. The inferred media type ‘application/octet-stream’ is not supported for this resource.”} style=”width:75%”/&gt;</p>
 
 <p>Now, let’s compare it with an alternative design (which is much less
 <em>fat</em> than the previous one, I would even call it <em>skinny</em>):</p>
@@ -140,7 +140,7 @@ String name = new TxtAuthor(author).name();</pre>
 
 <p>Visually in UML, it looks like this:</p>
 
-<p></p>
+<p>&lt;img src={“Message”:”The request contains an entity body but no Content-Type header. The inferred media type ‘application/octet-stream’ is not supported for this resource.”} style=”width:75%”/&gt;</p>
 
 <p>There were three interfaces in the first design, while the second one
 has only one interface and two classes. I call the first one “fat” because
