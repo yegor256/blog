@@ -37,7 +37,7 @@ module Yegor
       request.set_form_data(type: 'svg', plantuml: uml)
       response = http.request(request)
       url = response.body.gsub(/^"|"$/, '')
-      "<img src=#{url} #{@markup}/>"
+      "<p><object data='#{url}' type='image/svg+xml' #{@markup}></object></p>"
     end
   end
 end
