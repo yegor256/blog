@@ -76,7 +76,7 @@ component PostgreSQL
 PgArticle ..> PostgreSQL
 PgHead ..> PostgreSQL
 PgAuthor ..> PostgreSQL
-{% endplantuml %}
+{% endplant %}
 
 Now, let's compare it with an alternative design (which is much less
 _fat_ than the previous one, I would even call it _skinny_):
@@ -122,7 +122,7 @@ TxtAuthor : String email()
 Article <|-- SqlArticle
 component PostgreSQL
 SqlArticle ..> PostgreSQL
-{% endplantuml %}
+{% endplant %}
 
 There were three interfaces in the first design, while the second one
 has only one interface and two classes. I call the first one "fat" because

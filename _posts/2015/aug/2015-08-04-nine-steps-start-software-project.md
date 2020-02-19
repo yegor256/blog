@@ -113,7 +113,7 @@ Then, I attach a simple diagram to illustrate my decision:
 [Lucene] -down- [UI]
 [Lucene] - [Scraper]
 [Analyzer] - [Lucene]
-{% endplantuml %}
+{% endplant %}
 
 As you see, in this case, I totally _ignored_ all alternatives. I didn't even
 mention them. Again, I take full responsibility for that; I said,

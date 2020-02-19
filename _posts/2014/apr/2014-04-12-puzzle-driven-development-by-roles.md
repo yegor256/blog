@@ -180,7 +180,7 @@ be created. My work flow of artifacts is the following:
 {% plant style="width:75%" %}
 [SRS] -> [UML]
 [UML] -> [Source code]
-{% endplantuml %}
+{% endplant %}
 
 I receive [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
 from the SRS, produce UML diagrams and

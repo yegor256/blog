@@ -67,7 +67,7 @@ This is how the traditional architecture of a web system would look:
 skinparam componentStyle uml2
 User -> [Service]
 [Service] -> [Database]
-{% endplantuml %}
+{% endplant %}
 
 A user gives instructions to a service and receives responses.
 This communication happens through a **user interface** (UI)---a bunch
@@ -91,7 +91,7 @@ skinparam componentStyle uml2
 User -up-> [GitHub]
 [Service] -up-> [GitHub]
 [Database] -up-> [Service]
-{% endplantuml %}
+{% endplant %}
 
 First, a user posts a request to GitHub through a web user interface
 provided by GitHub. It is a communication **hub** for us. Then, the service

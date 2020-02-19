@@ -237,7 +237,7 @@ aspect --> foo
 deactivate aspect
 foo --> client
 deactivate foo
-{% endplantuml %}
+{% endplant %}
 
 Original functionality of method `power()` is indicated
 by the small green lifeline on the diagram.

@@ -103,7 +103,7 @@ two classes in order to log a line:
 {% plant style="width:30%" %}
 [script] -down-> [log]
 [script] -down-> [Line]
-{% endplantuml %}
+{% endplant %}
 
 To the contrary, this decomposition of responsibility is _vertical_:
 
@@ -137,7 +137,7 @@ into another:
 {% plant style="width:20%" %}
 [script] -down-> [TimedLog]
 [TimedLog] -down-> [Log]
-{% endplantuml %}
+{% endplant %}
 
 In general, I think horizontal decomposition of responsibility is a bad idea,
 while vertical is a much better one. That's because a vertically

@@ -222,7 +222,7 @@ skinparam componentStyle uml2
 Browser -right-> [Edge]
 [Edge] -right-> [Central]
 [Central] -right-> [Origin]
-{% endplantuml %}
+{% endplant %}
 
 One of edge servers receives an HTTP request. If it already has that
 `logo.svg` in its cache, it immediately returns an HTTP response with its
@@ -250,7 +250,7 @@ Browser -right-> [Edge]
 [Edge] -right-> [Central]
 [Central] -down-> [Relay]
 [Relay] -right-> [Origin]
-{% endplantuml %}
+{% endplant %}
 
 Jare.io has a "relay," which acts as an origin server for CloudFront. All
 requests that arrive to `cf.jare.io` are dispatched to the relay. The relay
