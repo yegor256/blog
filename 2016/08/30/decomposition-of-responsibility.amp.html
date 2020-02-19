@@ -146,7 +146,7 @@ to communicate with both of them when we want to log a line. Both
 objects of <code>Log</code> and <code>Line</code> are in front of us. We have to deal with
 two classes in order to log a line:</p>
 
-<p>&lt;img src={“Message”:”The request contains an entity body but no Content-Type header. The inferred media type ‘application/octet-stream’ is not supported for this resource.”} style=”width:30%”/&gt;</p>
+<p>&lt;object data='{"Message":"The request contains an entity body but no Content-Type header. The inferred media type 'application/octet-stream' is not supported for this resource."}' type='image/svg+xml' style="width:30%"&gt;&lt;/object&gt;</p>
 
 <p>To the contrary, this decomposition of responsibility is <em>vertical</em>:</p>
 
@@ -171,7 +171,7 @@ end</pre>
 into the <code>log</code> object, but the object “consists” of two objects, one wrapped
 into another:</p>
 
-<p>&lt;img src={“Message”:”The request contains an entity body but no Content-Type header. The inferred media type ‘application/octet-stream’ is not supported for this resource.”} style=”width:20%”/&gt;</p>
+<p>&lt;object data='{"Message":"The request contains an entity body but no Content-Type header. The inferred media type 'application/octet-stream' is not supported for this resource."}' type='image/svg+xml' style="width:20%"&gt;&lt;/object&gt;</p>
 
 <p>In general, I think horizontal decomposition of responsibility is a bad idea,
 while vertical is a much better one. That’s because a vertically

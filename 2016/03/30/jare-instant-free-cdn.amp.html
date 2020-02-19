@@ -258,7 +258,7 @@ through their edge nodes is to create a “distribution” and configure it.
 A distribution is basically a connector between content origin and
 edge servers:</p>
 
-<p>&lt;img src={“Message”:”The request contains an entity body but no Content-Type header. The inferred media type ‘application/octet-stream’ is not supported for this resource.”} style=”width:75%”/&gt;</p>
+<p>&lt;object data='{"Message":"The request contains an entity body but no Content-Type header. The inferred media type 'application/octet-stream' is not supported for this resource."}' type='image/svg+xml' style="width:75%"&gt;&lt;/object&gt;</p>
 
 <p>One of edge servers receives an HTTP request. If it already has that
 <code>logo.svg</code> in its cache, it immediately returns an HTTP response with its
@@ -280,7 +280,7 @@ it’s a time consuming operation.</p>
 <p>Jare.io is an extra component in that diagram, which makes your
 life easier:</p>
 
-<p>&lt;img src={“Message”:”The request contains an entity body but no Content-Type header. The inferred media type ‘application/octet-stream’ is not supported for this resource.”} style=”width:75%”/&gt;</p>
+<p>&lt;object data='{"Message":"The request contains an entity body but no Content-Type header. The inferred media type 'application/octet-stream' is not supported for this resource."}' type='image/svg+xml' style="width:75%"&gt;&lt;/object&gt;</p>
 
 <p>Jare.io has a “relay,” which acts as an origin server for CloudFront. All
 requests that arrive to <code>cf.jare.io</code> are dispatched to the relay. The relay
