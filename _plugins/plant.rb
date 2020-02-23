@@ -28,17 +28,20 @@ module Yegor
       @markup = markup.strip
     end
 
+    # This block doesn't work. I don't know why. The URL returned by
+    # www.planttext.com doesn't render.
     def render(context)
       api = URI.parse('https://www.planttext.com/api/scripting')
       http = Net::HTTP.new(api.host, api.port)
       http.use_ssl = true
       request = Net::HTTP::Post.new(api.request_uri)
       request['Content-Type'] = 'application/x-www-form-urlencoded'
-      uml = "@startuml\n#{super}\n@enduml"
+      uml = "\n@startuml\n#{super}\n@enduml\n"
       request.set_form_data(type: 'svg', plantuml: uml)
       response = http.request(request)
       return "<p>Can't render PlantUML diagram.</p>" unless response.code == '200'
       url = response.body.gsub(/^"|"$/, '')
+      puts "PlantUML SVG generated: #{url}"
       "<p><object data='#{url}' type='image/svg+xml' #{@markup}></object></p>"
     end
   end

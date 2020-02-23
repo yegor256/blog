@@ -58,7 +58,7 @@ String name = a.head().author().name();
 
 Visually, this design may look like this (in UML):
 
-{% plant style="width:75%" %}
+{% plantuml style="width:75%" %}
 allowmixing
 Interface Article
 Interface Head
@@ -76,7 +76,7 @@ component PostgreSQL
 PgArticle ..> PostgreSQL
 PgHead ..> PostgreSQL
 PgAuthor ..> PostgreSQL
-{% endplant %}
+{% endplantuml %}
 
 Now, let's compare it with an alternative design (which is much less
 _fat_ than the previous one, I would even call it _skinny_):
@@ -110,7 +110,7 @@ String name = new TxtAuthor(author).name();
 
 Visually in UML, it looks like this:
 
-{% plant style="width:75%" %}
+{% plantuml style="width:75%" %}
 allowmixing
 Interface Article
 TxtAuthor *- TxtHead
@@ -122,7 +122,7 @@ TxtAuthor : String email()
 Article <|-- SqlArticle
 component PostgreSQL
 SqlArticle ..> PostgreSQL
-{% endplant %}
+{% endplantuml %}
 
 There were three interfaces in the first design, while the second one
 has only one interface and two classes. I call the first one "fat" because

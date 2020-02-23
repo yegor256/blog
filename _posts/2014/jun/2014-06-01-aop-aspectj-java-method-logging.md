@@ -201,7 +201,7 @@ Instead of one method `power()` in class `Foo` now we have
 four classes working together. From now on,
 this is what happens behind the scenes on every call to `power()`:
 
-{% plant %}
+{% plantuml %}
 hide footbox
 skinparam sequence {
   ArrowFontName "Courier New"
@@ -237,7 +237,7 @@ aspect --> foo
 deactivate aspect
 foo --> client
 deactivate foo
-{% endplant %}
+{% endplantuml %}
 
 Original functionality of method `power()` is indicated
 by the small green lifeline on the diagram.

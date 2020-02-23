@@ -63,11 +63,11 @@ What's so good about it? A few things.
 
 This is how the traditional architecture of a web system would look:
 
-{% plant style="width:75%" %}
+{% plantuml style="width:75%" %}
 skinparam componentStyle uml2
 User -> [Service]
 [Service] -> [Database]
-{% endplant %}
+{% endplantuml %}
 
 A user gives instructions to a service and receives responses.
 This communication happens through a **user interface** (UI)---a bunch
@@ -86,12 +86,12 @@ spaghetti carbonara. You're a client, and that cute lady is a server.
 In the case of a chatbot, that's not the case anymore. Look at the
 architecture:
 
-{% plant style="width:75%" %}
+{% plantuml style="width:75%" %}
 skinparam componentStyle uml2
 User -up-> [GitHub]
 [Service] -up-> [GitHub]
 [Database] -up-> [Service]
-{% endplant %}
+{% endplantuml %}
 
 First, a user posts a request to GitHub through a web user interface
 provided by GitHub. It is a communication **hub** for us. Then, the service

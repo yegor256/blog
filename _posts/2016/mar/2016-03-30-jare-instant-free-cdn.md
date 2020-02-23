@@ -217,12 +217,12 @@ through their edge nodes is to create a "distribution" and configure it.
 A distribution is basically a connector between content origin and
 edge servers:
 
-{% plant style="width:75%" %}
+{% plantuml style="width:75%" %}
 skinparam componentStyle uml2
 Browser -right-> [Edge]
 [Edge] -right-> [Central]
 [Central] -right-> [Origin]
-{% endplant %}
+{% endplantuml %}
 
 One of edge servers receives an HTTP request. If it already has that
 `logo.svg` in its cache, it immediately returns an HTTP response with its
@@ -244,13 +244,13 @@ it's a time consuming operation.
 Jare.io is an extra component in that diagram, which makes your
 life easier:
 
-{% plant style="width:75%" %}
+{% plantuml style="width:75%" %}
 skinparam componentStyle uml2
 Browser -right-> [Edge]
 [Edge] -right-> [Central]
 [Central] -down-> [Relay]
 [Relay] -right-> [Origin]
-{% endplant %}
+{% endplantuml %}
 
 Jare.io has a "relay," which acts as an origin server for CloudFront. All
 requests that arrive to `cf.jare.io` are dispatched to the relay. The relay

@@ -177,10 +177,10 @@ together and making sure they fit. In most cases,
 I'm not creating them myself, but I'm telling everybody how they should
 be created. My work flow of artifacts is the following:
 
-{% plant style="width:75%" %}
+{% plantuml style="width:75%" %}
 [SRS] -> [UML]
 [UML] -> [Source code]
-{% endplant %}
+{% endplantuml %}
 
 I receive [requirements]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
 from the SRS, produce UML diagrams and

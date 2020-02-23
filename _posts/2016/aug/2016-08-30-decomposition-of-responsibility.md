@@ -100,10 +100,10 @@ to communicate with both of them when we want to log a line. Both
 objects of `Log` and `Line` are in front of us. We have to deal with
 two classes in order to log a line:
 
-{% plant style="width:30%" %}
+{% plantuml style="width:30%" %}
 [script] -down-> [log]
 [script] -down-> [Line]
-{% endplant %}
+{% endplantuml %}
 
 To the contrary, this decomposition of responsibility is _vertical_:
 
@@ -134,10 +134,10 @@ The responsibility is decomposed vertically. We still have one entry point
 into the `log` object, but the object "consists" of two objects, one wrapped
 into another:
 
-{% plant style="width:20%" %}
+{% plantuml style="width:20%" %}
 [script] -down-> [TimedLog]
 [TimedLog] -down-> [Log]
-{% endplant %}
+{% endplantuml %}
 
 In general, I think horizontal decomposition of responsibility is a bad idea,
 while vertical is a much better one. That's because a vertically
