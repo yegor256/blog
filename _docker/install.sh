@@ -13,11 +13,6 @@ make
 make install
 cd ..
 
-# plantuml
-wget --retry-connrefused --quiet --no-check-certificate http://img.teamed.io/yegor256/plantuml_7707-1_all.deb
-dpkg -i plantuml_7707-1_all.deb
-rm -rf plantuml_7707-1_all.deb
-
 # woff
 wget http://img.teamed.io/woff-code-latest.zip
 unzip woff-code-latest.zip -d _sfnt2woff

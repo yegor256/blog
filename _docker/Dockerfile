@@ -23,7 +23,7 @@ LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN sudo apt-get -y update
-RUN sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3cmd fontforge liblapack-dev
+RUN sudo apt-get -y install aspell aspell-en build-essential graphviz gnuplot s3cmd fontforge liblapack-dev plantuml
 
 ADD https://raw.githubusercontent.com/yegor256/blog/master/_docker/install.sh /tmp/
 RUN /bin/bash /tmp/install.sh
