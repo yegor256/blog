@@ -92,7 +92,7 @@ desc 'Check the existence of all critical pages'
 task pages: [:build] do
   File.open('_rake/pages.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
-    fail "Page/directory #{file} is not found" unless File.exist?(file)
+    fail "Page/directory #{file} is not found (try to run 'rake clean' and start over)" unless File.exist?(file)
     puts "#{file}: OK" if VERBOSE
   end
   done 'All files are in place'

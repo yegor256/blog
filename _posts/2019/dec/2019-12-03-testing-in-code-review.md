@@ -129,3 +129,5 @@ bonus for the reported bug, and the review is rejected with a very specific
 _reproducible_ reason.
 
 P.S. The idea of this blog post was suggested by [Robert Sösemann](https://twitter.com/rsoesemann).
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">You review a pull request and suspect that it doesn&#39;t work, even though the CI status is green. What do you do?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1231476701806284800?ref_src=twsrc%5Etfw">February 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
