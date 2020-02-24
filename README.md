@@ -10,6 +10,8 @@ This is my blog: [www.yegor256.com](https://www.yegor256.com)
 My book [_256 Bloghacks_](https://www.yegor256.com/256-bloghacks.html)
 explains how this blog is built and maintained.
 
+The blog is built during deployment in this [Docker image](https://github.com/yegor256/blog-image).
+
 You are welcome to submit corrections to this blog. In order to do that,
 you will need [Ruby](https://www.ruby-lang.org/en/) 2.3+,
 [Bundler](https://bundler.io/),
