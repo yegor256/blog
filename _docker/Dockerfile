@@ -32,5 +32,5 @@ RUN sudo apt-get install -y libxml2-utils
 
 RUN npm install -g cssshrink@0.0.5
 
-RUN /bin/bash -l -c "gem install --no-ri --no-rdoc jgd -v 1.6.5"
+RUN /bin/bash -l -c "gem install jgd -v 1.6.5"
 
