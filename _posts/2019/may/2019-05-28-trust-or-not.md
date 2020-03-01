@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Trust Them to Get the Job Done, Not!"
+title: "Trust Them to Get the Job Done, ... Not!"
 date: 2019-05-28
 place: Moscow, Russia
 tags: management agile
