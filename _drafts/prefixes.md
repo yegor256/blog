@@ -42,7 +42,7 @@ Any software package, module, library, or framework of a decent size has
 a large amount of classes. Well, it [has to have]({% pst 2017/feb/2017-02-28-too-many-classes %}).
 If it doesn't, there is definitely a problem with its design.
 So there's always a problem of how to name those classes. The easiest and most
-obvious approach is the one used in Java and it's flagship framework
+obvious approach is the one used in Java and its flagship framework
 [Spring](https://spring.io/):
 make class names as descriptive and as long as possible. Here are
 [some examples](https://gist.github.com/thom-nic/2c74ed4075569da0f80b):
@@ -86,7 +86,7 @@ for all classes:
 
 The only disadvantage of this approach is that newcomers may have no idea
 what the `Pt` prefix means. Indeed, it may take some time (a few minutes) to learn it. However,
-the advantage is bigger: once you learn all the prefixes that exist
+the advantage is greater: once you learn all the prefixes that exist
 in the application (and there will be just a few of them, since the amount
 of entities in the domain is pretty limited), you can immediately understand
 which part of the type hierarchy the class belongs to (this one is from
@@ -114,7 +114,7 @@ and not [`Request`](https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.h
 from [OkHttp](https://square.github.io/okhttp/).
 You know that it's the `Request` from Takes!
 
-Thus, using short prefixes instead of nouns we add clarity to the code.
+Thus, by using short prefixes instead of nouns we add clarity to the code.
 We remove the noise of repeated usage of the same noun over and over again and
 make referencing easier. Each prefix is a unique locator of a class in
 the type hierarchy.
