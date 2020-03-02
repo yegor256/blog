@@ -30,19 +30,19 @@ convention, which implies that most class names have two-letter prefixes:
 [`TkGzip`](https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/tk/TkGzip.html),
 and so on. To be honest,
 I haven't seen a single Java developer who would be comfortable with this
-convention at first sight. However, I've seen many who are in love with it
-now. This article is for those who are interested of moving from the
+convention at first sight. I have, however, seen many who are in love with it
+now. This article is for those who are interested in moving from the
 first category to the second one.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Any software package, module, library, or a framework of a decent size has
+Any software package, module, library, or framework of a decent size has
 a large amount of classes. Well, it [has to have]({% pst 2017/feb/2017-02-28-too-many-classes %}).
 If it doesn't, there is definitely a problem with its design.
-It's always a problem of how to name them. The easiest and the most
-obvious approach is the one used in Java and it's flagman framework
+So there's always a problem of how to name those classes. The easiest and most
+obvious approach is the one used in Java and it's flagship framework
 [Spring](https://spring.io/):
 make class names as descriptive and as long as possible. Here are
 [some examples](https://gist.github.com/thom-nic/2c74ed4075569da0f80b):
@@ -58,24 +58,24 @@ A much more sophisticated and time-consuming way of naming classes is
 by the [DDD paradigm](https://en.wikipedia.org/wiki/Domain-driven_design),
 which suggests using _nouns_ after _entities_ in the real world, like port, car,
 book, story, user, socket, and so on. Identifying the right entities
-is a big challenge of a software architect. A bad one would just resort
+is a big challenge for a software architect. A bad one would just resort
 to `ConnectionFactoryUtils` or `DefaultListableBeanFactory` and call it a day.
 A more professional one may spend hours or days, but will eventually come up with
 something more _domain-driven_.
 
-Let's assume you are the later one and you managed to find the right nouns.
-How many of them will be out there in your domain? A few dozens, I believe. Even
+Let's assume you are the latter and you managed to find the right nouns.
+How many of them will be out there in your domain? A few dozen, I believe. Even
 if the application is rather complex, you won't have more than 30 entities
-in its problem domain. However, as it was [mentioned above]({% pst 2017/feb/2017-02-28-too-many-classes %}),
+in its problem domain. However, as was [mentioned above]({% pst 2017/feb/2017-02-28-too-many-classes %}),
 the amount of
-classes will be much bigger, sometimes over a thousand or more. Thus, the
+classes will be much larger, sometimes over a thousand or more. Thus, the
 second problem you will face is how to name classes which are
 "entities with specifiers." For example, you have a port and also a random port
 and a TCP port, and a port already closed, and a port not yet opened, and so on.
 
 There will be nouns with _adjectives_: random port, closed port, opened port,
-TCP port, broken port, and so on. How do you name those classes? Maybe, as simple
-as it sounds: `RandomPort`, `OpenedPort`, `ClosedPort`, `TcpPort`.
+TCP port, broken port, and so on. How do you name those classes? Maybe, as simply
+as this: `RandomPort`, `OpenedPort`, `ClosedPort`, `TcpPort`.
 Maybe, but I think it's better to turn the common `Port` part into a common prefix `Pt`
 for all classes:
 
@@ -84,12 +84,12 @@ for all classes:
   * `PtClosed`
   * `PtTcp`
 
-The only disadvantage of this approach is that newcommers may have no idea
+The only disadvantage of this approach is that newcomers may have no idea
 what the `Pt` prefix means. Indeed, it may take some time (a few minutes) to learn it. However,
 the advantage is bigger: once you learn all the prefixes that exist
 in the application (and there will be just a few of them, since the amount
 of entities in the domain is pretty limited), you can immediately understand
-which part of type hierarchy the class belongs to (this one is from
+which part of the type hierarchy the class belongs to (this one is from
 [Takes](https://github.com/yegor256/takes)):
 
 {% plantuml style="width:75%" %}
@@ -103,8 +103,8 @@ Take <|-- TkGzip
 Take <|-- TkMeasured
 {% endplantuml %}
 
-Once you see the `Rq` prefix you immediately understand that you deal with
-an implementation of
+Once you see the `Rq` prefix you immediately understand that you are dealing with
+an implementation of the
 [`org.takes.Request`](https://www.javadoc.io/doc/org.takes/takes/latest/org/takes/Request.html) interface. Not the
 [`ServletRequest`](https://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html)
 from [JDK](https://en.wikipedia.org/wiki/Java_servlet),
