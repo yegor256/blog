@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prefixed Class Naming Convention"
+title: "Prefixed Naming"
 date: 2020-03-03
 place: Moscow, Russia
 tags: oop java
@@ -14,9 +14,9 @@ keywords:
   - oop naming
   - best naming in oop
   - java class names
-image: /images/2020/03/
+image: /images/2020/03/buffalo-66.jpg
 jb_picture:
-  caption: ...
+  caption: Buffalo'66 (1998) by Vincent Gallo
 ---
 
 If you look at the source code of
