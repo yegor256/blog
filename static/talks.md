@@ -128,6 +128,8 @@ The Biggest Mistake of an Honest Tester<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 31 March.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://mipt.ru/upload/medialibrary/ad1/About-mipt.jpg" class="future-talk" alt="MIPT 2020"/><br/>
 Open lecture
 in Moscow Institute of Physics and Technology (MIPT)
 about Soft Skills<br/>
