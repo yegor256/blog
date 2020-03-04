@@ -96,6 +96,15 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
+I will have a series of lectures in
+Moscow Institute of Physics and Technology (MIPT),
+"Arctic Building" Auditorium, 4th Floor,
+titled "The Pain of Object-Oriented Programming," on
+11-Mar, 18-Mar, 8-Apr, 15-Apr, 22-Apr, 6-May, 13-May, 20-May.
+Each lecture starts on 19:30 and lasts for 90 minutes. They
+all will be video-recorded and published on
+[YouTube](https://www.youtube.com/c/yegor256?sub_confirmation=1).
+
 <div class="talk-event">&nbsp;</div>
 <img src="http://icsa-conferences.org/2020/img/logos/ICSA2020_logo_alterada.png" class="future-talk" alt="ICSA 2020"/><br/>
 The Impact of Constructors on the Validity of Class Cohesion Metrics<br/>
@@ -116,6 +125,11 @@ The Biggest Mistake of an Honest Tester<br/>
 [TestConf](https://testconf.ru/)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 31 March.
+
+Open lecture
+in Moscow Institute of Physics and Technology (MIPT)
+about Soft Skills<br/>
+1 April.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
