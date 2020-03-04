@@ -92,7 +92,7 @@ of entities in the domain is pretty limited), you can immediately understand
 which part of the type hierarchy the class belongs to (this one is from
 [Takes](https://github.com/yegor256/takes)):
 
-{% plantuml style="width:75%" %}
+{% plantuml %}
 Request <|-- RqChunk
 Request <|-- RqGreedy
 Request <|-- RqMultipart
