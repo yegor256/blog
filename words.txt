@@ -109,6 +109,7 @@ adequate
 adequately
 ADHD
 adhere
+adjectives
 adjusts
 administering
 administration
@@ -744,6 +745,8 @@ bitcoin
 bitcoins
 bits
 bjarne
+bkparallel
+bksafe
 black
 black-and-white
 blackberry
@@ -2323,6 +2326,7 @@ dollars
 dollars-per-hour
 DOM
 domain
+domain-driven
 domains
 dominant
 dominate
@@ -3031,6 +3035,7 @@ fixture
 fixtures
 flag
 flags
+flagship
 flanagan
 flat
 flatter
@@ -4539,6 +4544,7 @@ locate
 located
 location
 locations
+locator
 lock
 locked
 locking
@@ -5393,6 +5399,7 @@ oh
 oil
 OK
 okay
+okhttp
 old
 old-fashioned
 old-school
@@ -6461,6 +6468,7 @@ refactoring
 refer
 reference
 references
+referencing
 referring
 refers
 refine
@@ -6807,6 +6815,9 @@ router
 routine
 row
 royalties
+rqchunk
+rqgreedy
+rqmultipart
 rsk
 RSS
 rubensson
@@ -7429,6 +7440,7 @@ specifications
 specifics
 specified
 specifier
+specifiers
 specifies
 specify
 specifying
@@ -8055,6 +8067,9 @@ tips
 tired
 title
 titles
+tkfailure
+tkgzip
+tkmeasured
 tl
 to
 to-PostgreSQL
@@ -8239,6 +8254,7 @@ twins
 twist
 twitter
 two
+two-letter
 two-year-old
 txr
 txt

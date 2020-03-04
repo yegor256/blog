@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-03-01T12:09:12+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fat vs. Skinny Design</title><link href="https://www.yegor256.com/2020/02/19/fat-skinny-design.html" rel="alternate" type="text/html" title="Fat vs. Skinny Design" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/02/19/fat-skinny-design</id><content type="html" xml:base="https://www.yegor256.com/2020/02/19/fat-skinny-design.html">&lt;p&gt;It seems that type/class hierarchies in OOP may be designed in two
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-03-04T14:22:19+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Prefixed Naming</title><link href="https://www.yegor256.com/2020/03/03/prefixed-naming.html" rel="alternate" type="text/html" title="Prefixed Naming" /><published>2020-03-03T00:00:00+00:00</published><updated>2020-03-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/03/03/prefixed-naming</id><content type="html" xml:base="https://www.yegor256.com/2020/03/03/prefixed-naming.html">&lt;p&gt;If you look at the source code of
+&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;Takes&lt;/a&gt; or
+&lt;a href=&quot;https://github.com/yegor256/cactoos&quot;&gt;Cactoos&lt;/a&gt; for the first time,
+you most probably, like many others, will be triggered by the naming
+convention, which implies that most class names have two-letter prefixes:
+&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/http/BkSafe.html&quot;&gt;&lt;code&gt;BkSafe&lt;/code&gt;&lt;/a&gt;,
+&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rq/RqFake.html&quot;&gt;&lt;code&gt;RqFake&lt;/code&gt;&lt;/a&gt;,
+&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rs/RsWithStatus.html&quot;&gt;&lt;code&gt;RsWithStatus&lt;/code&gt;&lt;/a&gt;,
+&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/tk/TkGzip.html&quot;&gt;&lt;code&gt;TkGzip&lt;/code&gt;&lt;/a&gt;,
+and so on. To be honest,
+I haven’t seen a single Java developer who would be comfortable with this
+convention at first sight. I have, however, seen many who are in love with it
+now. This article is for those who are interested in moving from the
+first category to the second one.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Buffalo&amp;#39;66 (1998) by Vincent Gallo&quot; src=&quot;/images/2020/03/buffalo-66.jpg&quot; longdesc=&quot;#453e8cc2&quot; /&gt;&lt;figcaption id=&quot;453e8cc2&quot;&gt;Buffalo&amp;#39;66 (1998) by Vincent Gallo&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Any software package, module, library, or framework of a decent size has
+a large amount of classes. Well, it &lt;a href=&quot;/2017/02/28/too-many-classes.html&quot;&gt;has to have&lt;/a&gt;.
+If it doesn’t, there is definitely a problem with its design.
+So there’s always a problem of how to name those classes. The easiest and most
+obvious approach is the one used in Java and its flagship framework
+&lt;a href=&quot;https://spring.io/&quot;&gt;Spring&lt;/a&gt;:
+make class names as descriptive and as long as possible. Here are
+&lt;a href=&quot;https://gist.github.com/thom-nic/2c74ed4075569da0f80b&quot;&gt;some examples&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;ObjectFactoryCreatingFactoryBean&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;SimpleBeanFactoryAwareAspectInstanceFactory&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;TransactionAwarePersistenceManagerFactoryProxy&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;AbstractAnnotationConfigDispatcherServletInitializer&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is garbage, isn’t it?&lt;/p&gt;
+
+&lt;p&gt;A much more sophisticated and time-consuming way of naming classes is
+by the &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-driven_design&quot;&gt;DDD paradigm&lt;/a&gt;,
+which suggests using &lt;em&gt;nouns&lt;/em&gt; after &lt;em&gt;entities&lt;/em&gt; in the real world, like port, car,
+book, story, user, socket, and so on. Identifying the right entities
+is a big challenge for a software architect. A bad one would just resort
+to &lt;code&gt;ConnectionFactoryUtils&lt;/code&gt; or &lt;code&gt;DefaultListableBeanFactory&lt;/code&gt; and call it a day.
+A more professional one may spend hours or days, but will eventually come up with
+something more &lt;em&gt;domain-driven&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s assume you are the latter and you managed to find the right nouns.
+How many of them will be out there in your domain? A few dozen, I believe. Even
+if the application is rather complex, you won’t have more than 30 entities
+in its problem domain. However, as was &lt;a href=&quot;/2017/02/28/too-many-classes.html&quot;&gt;mentioned above&lt;/a&gt;,
+the amount of
+classes will be much larger, sometimes over a thousand or more. Thus, the
+second problem you will face is how to name classes which are
+“entities with specifiers.” For example, you have a port and also a random port
+and a TCP port, and a port already closed, and a port not yet opened, and so on.&lt;/p&gt;
+
+&lt;p&gt;There will be nouns with &lt;em&gt;adjectives&lt;/em&gt;: random port, closed port, opened port,
+TCP port, broken port, and so on. How do you name those classes? Maybe, as simply
+as this: &lt;code&gt;RandomPort&lt;/code&gt;, &lt;code&gt;OpenedPort&lt;/code&gt;, &lt;code&gt;ClosedPort&lt;/code&gt;, &lt;code&gt;TcpPort&lt;/code&gt;.
+Maybe, but I think it’s better to turn the common &lt;code&gt;Port&lt;/code&gt; part into a common prefix &lt;code&gt;Pt&lt;/code&gt;
+for all classes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;PtRandom&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;PtOpened&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;PtClosed&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;PtTcp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The only disadvantage of this approach is that newcomers may have no idea
+what the &lt;code&gt;Pt&lt;/code&gt; prefix means. Indeed, it may take some time (a few minutes) to learn it. However,
+the advantage is greater: once you learn all the prefixes that exist
+in the application (and there will be just a few of them, since the amount
+of entities in the domain is pretty limited), you can immediately understand
+which part of the type hierarchy the class belongs to (this one is from
+&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;Takes&lt;/a&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/uml/c415b43f6d14c18e66db32e9d5d6e8b2.svg&quot; style=&quot;width:75%&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you see the &lt;code&gt;Rq&lt;/code&gt; prefix you immediately understand that you are dealing with
+an implementation of the
+&lt;a href=&quot;https://www.javadoc.io/doc/org.takes/takes/latest/org/takes/Request.html&quot;&gt;&lt;code&gt;org.takes.Request&lt;/code&gt;&lt;/a&gt; interface. Not the
+&lt;a href=&quot;https://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html&quot;&gt;&lt;code&gt;ServletRequest&lt;/code&gt;&lt;/a&gt;
+from &lt;a href=&quot;https://en.wikipedia.org/wiki/Java_servlet&quot;&gt;JDK&lt;/a&gt;,
+not &lt;a href=&quot;https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpRequest.html&quot;&gt;&lt;code&gt;HttpRequest&lt;/code&gt;&lt;/a&gt;
+from Spring,
+and not &lt;a href=&quot;https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.html&quot;&gt;&lt;code&gt;Request&lt;/code&gt;&lt;/a&gt;
+from &lt;a href=&quot;https://square.github.io/okhttp/&quot;&gt;OkHttp&lt;/a&gt;.
+You know that it’s the &lt;code&gt;Request&lt;/code&gt; from Takes!&lt;/p&gt;
+
+&lt;p&gt;Thus, by using short prefixes instead of nouns we add clarity to the code.
+We remove the noise of repeated usage of the same noun over and over again and
+make referencing easier. Each prefix is a unique locator of a class in
+the type hierarchy.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">If you look at the source code of Takes or Cactoos for the first time, you most probably, like many others, will be triggered by the naming convention, which implies that most class names have two-letter prefixes: BkSafe, RqFake, RsWithStatus, TkGzip, and so on. To be honest, I haven’t seen a single Java developer who would be comfortable with this convention at first sight. I have, however, seen many who are in love with it now. This article is for those who are interested in moving from the first category to the second one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/03/buffalo-66.jpg" /></entry><entry><title type="html">Fat vs. Skinny Design</title><link href="https://www.yegor256.com/2020/02/19/fat-skinny-design.html" rel="alternate" type="text/html" title="Fat vs. Skinny Design" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/02/19/fat-skinny-design</id><content type="html" xml:base="https://www.yegor256.com/2020/02/19/fat-skinny-design.html">&lt;p&gt;It seems that type/class hierarchies in OOP may be designed in two
 extreme ways: either with full encapsulation of data in mind; or with just a few
 interfaces making raw data visible, and letting classes deal with it, parse it,
 and turn it into smaller data elements. You may be surprised, but I’m
@@ -904,109 +997,4 @@ mentoring people around you and building a team of supporters. When it gets
 big enough, the changes will start happening even without your will.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What is the best argument to convince a team?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1201034995336450049?ref_src=twsrc%5Etfw&quot;&gt;December 1, 2019&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Here is the question I keep hearing almost every time I speak at a conference about object-oriented programming and my non-traditional understanding of it: “How do I convince the whole team to start doing everything so differently?” (asked here just recently). Indeed, it’s easy to change your coding habits and your software design if you are alone. What do you do if you are a member of a larger team where everybody is very happy with the Spring Framework and procedural programming? How do you change their coding habits? An even better question is: How do I not get fired while doing it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/11/war-inc.jpg" /></entry><entry><title type="html">Software Quality Award, 2020</title><link href="https://www.yegor256.com/2019/11/03/award-2020.html" rel="alternate" type="text/html" title="Software Quality Award, 2020" /><published>2019-11-03T00:00:00+00:00</published><updated>2019-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/11/03/award-2020</id><content type="html" xml:base="https://www.yegor256.com/2019/11/03/award-2020.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the &lt;em&gt;sixth&lt;/em&gt; year of the
-&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
-is still the same—&lt;strong&gt;$4,096&lt;/strong&gt;.
-The rules are still the same. Read on.
-Previous years are here:
-&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
-&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
-&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;,
-&lt;a href=&quot;/2017/10/24/award-2018.html&quot;&gt;2018&lt;/a&gt;,
-&lt;a href=&quot;/2018/09/30/award-2019.html&quot;&gt;2019&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Here is &lt;a href=&quot;https://docs.google.com/forms/d/1d7-zopzlhDFkVEhxOOYFePCmRbycLGM9O9NFWVDhMaU&quot;&gt;&lt;strong&gt;the form&lt;/strong&gt;&lt;/a&gt;
-to fill out.&lt;/p&gt;
-
-&lt;p&gt;Important! Starting this years rewards are given as donations
-to a Zerocracy project. This means, that you will have to have
-a project in Zerocracy, where you will get the money. You will then
-be able to get that money for yourself via micro-tasks.&lt;/p&gt;
-
-&lt;p&gt;Rules:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;One person can submit only one project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Submissions are accepted until September 1, 2020.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I will check the commit history to make sure you’re the main contributor to the project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Results will be announced October 15, 2020 on this page and by email (or maybe a bit later).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The best project will receive $4,096
-(I may split this amount among a few projects and may give away a smaller amount!).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Final decisions will be made by me and are not negotiable
-(although I may invite other people to help me make the right decision).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Winners that received any cash prizes in previous years can’t submit again.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=Z70PMGaxGhY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg&quot; alt=&quot;YouTube video #Z70PMGaxGhY&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;How to win $4096 in the next year Quality Award? (webinar #29);
-        1 November 2017.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Each project must be:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Open source (in GitHub).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
-&lt;em&gt;and&lt;/em&gt; at least 16,384 &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits-of-code&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At least one year old (the age of the first commit).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Object-oriented (that’s the only thing I understand).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What doesn’t matter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Popularity. Even if nobody is using your
-product, it is still eligible for this award. I don’t care about
-popularity; quality is the key.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Programming language. I believe that any language, used correctly,
-can be applied to design a high-quality product.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
-line arguments, it’s still eligible for the award. I don’t care about
-your marketing position; quality is all.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the sixth year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="architect" /><summary type="html">Here is the question I keep hearing almost every time I speak at a conference about object-oriented programming and my non-traditional understanding of it: “How do I convince the whole team to start doing everything so differently?” (asked here just recently). Indeed, it’s easy to change your coding habits and your software design if you are alone. What do you do if you are a member of a larger team where everybody is very happy with the Spring Framework and procedural programming? How do you change their coding habits? An even better question is: How do I not get fired while doing it?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/11/war-inc.jpg" /></entry></feed>
