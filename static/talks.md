@@ -136,6 +136,13 @@ about Soft Skills<br/>
 1 April.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
+Decentralized Architectures: Blockchain and Beyond<br/>
+[Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
+<span class="city">St.Petersburg</span>, <span class="country">Russia</span><br/>
+6-7 April.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
 Something about HR...<br/>
 [HR&Technology Expo 2020](https://hr-tech.ru/)<br/>
