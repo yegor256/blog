@@ -223,11 +223,12 @@ I was also seen at [these events](/seen.html).
 ### 2020
 
 <div class="talk-event">&nbsp;</div>
-<img src="http://teamleadconf.ru/i/teamleadconf/moscow/2020/logo/i-logo.svg" class="past-talk" alt="TeamLeadConf 2020"/><br/>
+<img src="https://i.ytimg.com/vi/jiJxA37hmsQ/mqdefault.jpg" class="past-talk" alt="TeamLeadConf 2020"/><br/>
 My experience of 1000 interviews;
 [TeamLeadConf](http://teamleadconf.ru/moscow/2020);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 10 February;
+[видео](https://www.youtube.com/watch?v=jiJxA37hmsQ),
 [slides](https://www.slideshare.net/YegorBugayenko/my-experience-of-1000-interviews).
 
 ### 2019
