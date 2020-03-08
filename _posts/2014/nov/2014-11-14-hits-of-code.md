@@ -135,3 +135,5 @@ can be used for estimations of team size, project budget, development
 schedule and so forth. Obviously, LoC can't be the only metric, but in
 combination with others it may greatly help in estimating, planning
 and tracking.
+
+PS. Try [hitsofcode.com](https://hitsofcode.com/).
