@@ -156,6 +156,13 @@ Something about HR...<br/>
 <span class="city">Ulyanovsk</span>, <span class="country">Russia</span><br/>
 23 May.
 
+<div class="talk-event">&nbsp;</div>
+<img src="https://static.tildacdn.com/tild3232-6131-4838-b663-313466346463/hero_hero.svg" class="future-talk" alt="Мир, Труд, Мобайл 2020"/><br/>
+Opening keynote...<br/>
+[Мир, Труд, Мобайл](http://springbreak.ru/)<br/>
+<span class="city">Kazan</span>, <span class="country">Russia</span><br/>
+30-31 May.
+
 <hr/>
 
 If you are interested in placing me at _your event_,
