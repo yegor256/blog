@@ -136,6 +136,13 @@ about Soft Skills<br/>
 1 April.
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://static.tildacdn.com/tild3764-3932-4635-a163-333134346163/BreakPoint_.png" class="future-talk" alt="Breakpoint Forum 2020"/><br/>
+Soft Skills of the Future<br/>
+[Breakpoint Forum](https://forumbreakpoint.net/)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+4 April.
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
 Decentralized Architectures: Blockchain and Beyond<br/>
 [Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
