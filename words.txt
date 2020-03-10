@@ -3610,6 +3610,7 @@ history
 hit
 hits
 hits-of-code
+hitsofcode
 hitter
 HN
 hobbies
