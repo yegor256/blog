@@ -107,12 +107,14 @@ Each lecture starts on 19:30 and lasts for 90 minutes. They
 all will be video-recorded and published on
 [YouTube](https://www.youtube.com/c/yegor256?sub_confirmation=1).
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="http://icsa-conferences.org/2020/img/logos/ICSA2020_logo_alterada.png" class="future-talk" alt="ICSA 2020"/><br/>
 The Impact of Constructors on the Validity of Class Cohesion Metrics<br/>
 [ICSA'20](http://icsa-conferences.org/2020/index.html)<br/>
 <span class="city">Salvador</span>, <span class="country">Brazil</span><br/>
 20 March.
+-->
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
