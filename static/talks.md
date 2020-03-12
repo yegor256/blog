@@ -150,13 +150,6 @@ Decentralized Architectures: Blockchain and Beyond<br/>
 6-7 April.
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
-Something about HR...<br/>
-[HR&Technology Expo 2020](https://hr-tech.ru/)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-7-8 April.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://nastachku.ru/design/themes/nastachku_theme/media/images/red-logo.png" class="future-talk" alt="Стачка 2020"/><br/>
 Прекрасное Айти Далёко (keynote)<br/>
 [Стачка](https://nastachku.ru/prekrasnoe-it-daleko)<br/>
@@ -169,6 +162,13 @@ Opening keynote...<br/>
 [Мир, Труд, Мобайл](http://springbreak.ru/)<br/>
 <span class="city">Kazan</span>, <span class="country">Russia</span><br/>
 30-31 May.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
+Something about HR...<br/>
+[HR&Technology Expo 2020](https://hr-tech.ru/)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+29-30 September.
 
 <hr/>
 
