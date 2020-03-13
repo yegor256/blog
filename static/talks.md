@@ -138,13 +138,6 @@ Soft Skills of the Future<br/>
 4 April.
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
-Decentralized Architectures: Blockchain and Beyond<br/>
-[Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
-<span class="city">St.Petersburg</span>, <span class="country">Russia</span><br/>
-6-7 April.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://nastachku.ru/design/themes/nastachku_theme/media/images/red-logo.png" class="future-talk" alt="Стачка 2020"/><br/>
 Прекрасное Айти Далёко (keynote)<br/>
 [Стачка](https://nastachku.ru/prekrasnoe-it-daleko)<br/>
@@ -164,6 +157,13 @@ Is Java Getting Better?<br/>
 [JavaFest](https://javafest.com.ua/)<br/>
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
 5 June.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
+Decentralized Architectures: Blockchain and Beyond<br/>
+[Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
+<span class="city">St.Petersburg</span>, <span class="country">Russia</span><br/>
+August.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
