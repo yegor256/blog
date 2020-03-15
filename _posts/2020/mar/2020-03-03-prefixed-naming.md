@@ -118,3 +118,5 @@ Thus, by using short prefixes instead of nouns we add clarity to the code.
 We remove the noise of repeated usage of the same noun over and over again and
 make referencing easier. Each prefix is a unique locator of a class in
 the type hierarchy.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Which class name you would use: SynchronizedDatabaseConnection or SncConn?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1239065472491978752?ref_src=twsrc%5Etfw">March 15, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
