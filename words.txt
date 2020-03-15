@@ -745,8 +745,6 @@ bitcoin
 bitcoins
 bits
 bjarne
-bkparallel
-bksafe
 black
 black-and-white
 blackberry
@@ -4545,7 +4543,6 @@ locate
 located
 location
 locations
-locator
 lock
 locked
 locking
@@ -5400,7 +5397,6 @@ oh
 oil
 OK
 okay
-okhttp
 old
 old-fashioned
 old-school
@@ -6469,7 +6465,6 @@ refactoring
 refer
 reference
 references
-referencing
 referring
 refers
 refine
@@ -6816,9 +6811,6 @@ router
 routine
 row
 royalties
-rqchunk
-rqgreedy
-rqmultipart
 rsk
 RSS
 rubensson
@@ -7333,6 +7325,7 @@ Snap-CI
 snapchat
 snapshot
 snapshots
+sncconn
 sneakily
 snippet
 snippets
@@ -7820,6 +7813,7 @@ syncem
 synchronization
 synchronize
 synchronized
+synchronizeddatabaseconnection
 synergy
 synonyms
 syntactic
@@ -8068,9 +8062,6 @@ tips
 tired
 title
 titles
-tkfailure
-tkgzip
-tkmeasured
 tl
 to
 to-PostgreSQL
