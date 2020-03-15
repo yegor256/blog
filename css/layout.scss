@@ -119,18 +119,6 @@ del {
   }
 }
 
-.teamed-banner {
-  @extend %unprintable;
-  @extend %desktop-only;
-  margin-bottom: 2 * $em;
-  margin-top: 2 * $em;
-  width: 100%;
-
-  img {
-    width: 100%;
-  }
-}
-
 .header-toggle {
   cursor: pointer;
   display: inline-block;
@@ -340,7 +328,7 @@ h2 {
 
 .front {
   margin-bottom: 4 * $em;
-  margin-top: 2 * $em;
+  margin-top: 4 * $em;
 }
 
 .pagination {
