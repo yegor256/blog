@@ -116,12 +116,14 @@ The Impact of Constructors on the Validity of Class Cohesion Metrics<br/>
 20 March.
 -->
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://mipt.ru/upload/medialibrary/ad1/About-mipt.jpg" class="future-talk" alt="MIPT 2020"/><br/>
 Open lecture
 in Moscow Institute of Physics and Technology (MIPT)
 about Soft Skills<br/>
 1 April.
+-->
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3764-3932-4635-a163-333134346163/BreakPoint_.png" class="future-talk" alt="Breakpoint Forum 2020"/><br/>
