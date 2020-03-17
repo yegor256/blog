@@ -117,13 +117,6 @@ The Impact of Constructors on the Validity of Class Cohesion Metrics<br/>
 -->
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
-The Biggest Mistake of an Honest Tester<br/>
-[TestConf](https://testconf.ru/)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-31 March.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://mipt.ru/upload/medialibrary/ad1/About-mipt.jpg" class="future-talk" alt="MIPT 2020"/><br/>
 Open lecture
 in Moscow Institute of Physics and Technology (MIPT)
@@ -164,6 +157,13 @@ Decentralized Architectures: Blockchain and Beyond<br/>
 [Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
 <span class="city">St.Petersburg</span>, <span class="country">Russia</span><br/>
 August.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
+The Biggest Mistake of an Honest Tester<br/>
+[TestConf](https://testconf.ru/)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+15-17 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
