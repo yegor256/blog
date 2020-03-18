@@ -98,7 +98,7 @@ informed about everything I do publicly.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://mipt.ru/upload/medialibrary/ad1/About-mipt.jpg" class="future-talk" alt="MIPT 2020"/><br/>
-I will have a series of lectures in
+<span style="color: firebrick">POSTPONED</span>: I will have a series of lectures in
 Moscow Institute of Physics and Technology (MIPT),
 "Arctic Building" Auditorium, 4th Floor,
 titled "The Pain of Object-Oriented Programming," on
