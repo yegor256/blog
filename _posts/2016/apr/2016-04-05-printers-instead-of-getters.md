@@ -199,7 +199,7 @@ itself there:
 
 {% highlight java %}
 JsonMedia media = new JsonMedia("book");
-book.print(media);
+media = book.print(media);
 JsonObject json = media.json();
 {% endhighlight %}
 
