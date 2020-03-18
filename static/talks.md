@@ -140,18 +140,18 @@ Soft Skills of the Future<br/>
 23 May.
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://static.tildacdn.com/tild3232-6131-4838-b663-313466346463/hero_hero.svg" class="future-talk" alt="Мир, Труд, Мобайл 2020"/><br/>
-Opening keynote...<br/>
-[Мир, Труд, Мобайл](http://springbreak.ru/)<br/>
-<span class="city">Kazan</span>, <span class="country">Russia</span><br/>
-30-31 May.
-
-<div class="talk-event">&nbsp;</div>
 <img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
 Is Java Getting Better?<br/>
 [JavaFest](https://javafest.com.ua/)<br/>
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
 5 June.
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://static.tildacdn.com/tild3232-6131-4838-b663-313466346463/hero_hero.svg" class="future-talk" alt="Мир, Труд, Мобайл 2020"/><br/>
+Opening keynote...<br/>
+[Мир, Труд, Мобайл](http://springbreak.ru/)<br/>
+<span class="city">Kazan</span>, <span class="country">Russia</span><br/>
+July.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
