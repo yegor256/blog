@@ -73,7 +73,7 @@ not a [`RuntimeException`](https://docs.oracle.com/javase/7/docs/api/java/lang/R
 which extends [`Throwable`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html).
 This is the second difference. I don't know of any other differences.
 
-I would recommend **not** to use assertions ... ever. Simply because I strongly
+I would recommend _not_ to use assertions ... ever. Simply because I strongly
 believe in the [Fail Fast]({% pst 2015/aug/2015-08-25-fail-fast %})
 approach. I think bugs must be visible not only
 during testing but also in production. Moreover, I believe making
@@ -81,3 +81,5 @@ bugs visible in production is very important if you want to achieve a high-quali
 
 Thus, no assertions. They are simply a flawed and outdated feature in Java
 (and some other languages).
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you use assertions? <a href="https://twitter.com/hashtag/java?src=hash&amp;ref_src=twsrc%5Etfw">#java</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1241658061183475712?ref_src=twsrc%5Etfw">March 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
