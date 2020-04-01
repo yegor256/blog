@@ -132,7 +132,7 @@ one, managed by [Zerocracy](https://www.zerocracy.com), that paid &cent;13.
 My conclusion is that this Hits-of-Code metric can be used as a tool of
 progress tracking in a software development project. Moreover, it
 can be used for estimations of team size, project budget, development
-schedule and so forth. Obviously, LoC can't be the only metric, but in
+schedule and so forth. Obviously, HoC can't be the only metric, but in
 combination with others it may greatly help in estimating, planning
 and tracking.
 
