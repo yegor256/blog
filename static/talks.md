@@ -72,7 +72,7 @@ script: |
     cities = $.unique(cities);
     $('#total-cities')
       .text(cities.length)
-      .attr('title', cities.join(', '));
+      .attr('title', cities.join('; '));
     var countries = $.map(
       $('span.country'),
       function (v, i) { return $(v).text().toLowerCase(); }
@@ -81,7 +81,7 @@ script: |
     countries = $.unique(countries);
     $('#total-countries')
       .text(countries.length)
-      .attr('title', countries.join(', '));
+      .attr('title', countries.join('; '));
   });
 ---
 
