@@ -50,3 +50,5 @@ We need a law against irresponsible coding!
 
 How about two months of imprisonment for a
 [Singleton](http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons)?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">How would you punish programmers for bad coding practices (like global variables, for example):</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1246683757576413185?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
