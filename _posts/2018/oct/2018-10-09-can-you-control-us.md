@@ -43,6 +43,8 @@ However, this is an illusion.
 
 We and our projects have to be under control in order for the projects to be completed.
 
+{% quote We have to be under control in order for the projects to be completed. %}
+
 OK, replace it with managed, organized, or (I love this word) orchestrated.
 
 The bottom line is: you control it or you lose it.
