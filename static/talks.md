@@ -68,6 +68,7 @@ script: |
       $('span.city'),
       function (v, i) { return $(v).text().toLowerCase(); }
     );
+    cities.sort();
     cities = $.unique(cities);
     $('#total-cities')
       .text(cities.length)
@@ -76,6 +77,7 @@ script: |
       $('span.country'),
       function (v, i) { return $(v).text().toLowerCase(); }
     );
+    countries.sort();
     countries = $.unique(countries);
     $('#total-countries')
       .text(countries.length)
@@ -125,12 +127,14 @@ about Soft Skills<br/>
 1 April.
 -->
 
+<!--
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3764-3932-4635-a163-333134346163/BreakPoint_.png" class="future-talk" alt="Breakpoint Forum 2020"/><br/>
 Soft Skills of the Future<br/>
 [Breakpoint Forum](https://forumbreakpoint.net/)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 4 April.
+-->
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://nastachku.ru/design/themes/nastachku_theme/media/images/red-logo.png" class="future-talk" alt="Стачка 2020"/><br/>
@@ -183,25 +187,6 @@ a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
 These are the topics I'm interested to speak about and they are
 pretty fresh (I haven't presented them before, as of yet):
-
-  * **Are You Sure You Are Not a Micromanager?**
-    Do you know what micromanagement is? It's when your manager is telling
-    you exactly what you have to do right now in order to achieve the results
-    he or she wants. The micromanager doesn't trust you and that's
-    why wants and needs to control every step you make. It's annoying and
-    unproductive, but it's inevitable unless you have small tasks and
-    a transparent and unambiguous system of rewards and punishment. The question
-    is how you can define an obvious and transparent motivational system.
-    A number of options will be suggested.
-
-  * **Is Java Getting Better?**
-    The Java programming language is growing, getting new features every
-    new version. Some of them are coming from functional programming paradigm,
-    some from procedural one. How does it affect the object-orientation of
-    Java? Do we lose the OO spirit or we gain it? Do we need it in the first
-    place, if everything works just fine without it? I'll try to analyze
-    the changes Java introduced over the last years, since its version 1.6,
-    and find out which of them are making the language better or worse.
 
   * **Decentralized Architectures: Blockchain and Beyond**.
     We've been building software/hardware systems in a centralized manner
