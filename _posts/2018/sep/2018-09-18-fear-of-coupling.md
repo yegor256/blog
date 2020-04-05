@@ -90,6 +90,8 @@ them to. Preferably I would like to write them myself. Ideally
 I would like to ensure that nobody touches them after I implement them. You get
 the sarcasm, right?
 
+{% quote Polymorphism makes sofware more fragile ... to make it more robust! %}
+
 This may sound like a joke, but I have heard this argument many times. They say
 that "it's better to be completely sure two pieces work together, instead of
 relying on the damn polymorphism and then spending hours debugging something
