@@ -57,6 +57,7 @@ to this list once they show up:
   * [Trinity Takei](https://www.trinitytakei.io/blog/book_review_256_bloghacks_by_yegor_bugayenko/)
   * [Wojciech Adam Koszek](https://www.koszek.com/books/2017/01/07/book-blog-hacks-256/)
   * [Vojtech Ruzicka](http://vojtechruzicka.com/book-review-256-bloghacks/)
+  * [Gareth Rees](https://www.garethrees.co.uk/2020/04/05/book-notes-256-bloghacks/)
 
 Feb 16, 2017:
 Added [Twitter Cards](https://dev.twitter.com/cards/types/summary-large-image) to all pages,
