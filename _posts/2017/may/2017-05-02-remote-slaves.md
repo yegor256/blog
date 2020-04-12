@@ -139,3 +139,5 @@ nonsense and put their slaves back behind closed doors; take
 [Yahoo](http://money.cnn.com/2013/02/25/technology/yahoo-work-from-home/index.html?iid=EL), and
 [Best Buy](http://money.cnn.com/2013/03/05/technology/best-buy-work-from-home/index.html)
 for example.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">After switching from in-the-office to remote work your performance ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1249367849073872900?ref_src=twsrc%5Etfw">April 12, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
