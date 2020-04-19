@@ -190,3 +190,5 @@ first one executes in O(n). This is the consequence of our procedural approach
 to data in the first script.
 
 In an object-oriented world, there is no data; there are only objects and their behavior!
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Utility classes are...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1251749635103821824?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
