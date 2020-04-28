@@ -58,6 +58,8 @@
 
 .jb_picture { @extend %unprintable; }
 
+twitter-widget { @extend %unprintable; }
+
 %unprintable {
   @media print {
     display: none !important;
