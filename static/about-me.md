@@ -122,6 +122,9 @@ Here is my SO flair:
 
 This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`).
 
+I also contributed to the development of
+[IEEE 730-2014](/pdf/ieee-730-2014.pdf) standard.
+
 Full list of my [certifications](https://github.com/yegor256/blog/tree/master/pdf/certifications).
 
 BTW, if you wonder why 256, the answer is simple---this is my FIDOnet node ID back from 1995.
