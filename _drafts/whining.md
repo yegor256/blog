@@ -5,7 +5,8 @@ date: 2019-12-20
 place: Shenzhen, China
 tags: sarcasm
 description: |
-  ...
+  To be written later... To be written later... To be written later...
+  To be written later... To be written later... To be written later...
 keywords:
   - management issues
   - enterprise management

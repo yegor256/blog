@@ -3,7 +3,7 @@ layout: post
 title: "An Open Code Base Is Not Yet an Open Source Project"
 date: 2018-05-08
 place: Dnipro, Ukraine
-tags: programming
+tags: oss
 description: |
   Making your code base visible to everyone doesn't make
   it an open source project yet; there are a number

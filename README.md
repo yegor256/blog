@@ -23,5 +23,16 @@ $ bundle exec jekyll serve
 ```
 
 In about 3-4 minutes of building you should be able to see the blog
-at `http://localhost:4000`. Make your changes and run `jekyll` again. If
-everything is fine, submit a pull request.
+at `http://localhost:4000`. Make your changes and refresh the page in the browser.
+If everything is fine, submit a pull request.
+
+If it doesn't work (for some reason), do it via Docker
+(I assume `/code/blog` is where the sources are):
+
+```bash
+$ docker run -it --rm \
+  -v "$(greadlink -f /code/blog):/b" \
+  -p 4000:4000 \
+  yegor256/blog-image \
+  'cd /b && bundle update && bundle exec jekyll serve --drafts --future'
+```

@@ -22,6 +22,10 @@ I'm Yegor Bugayenko (Russian:
 <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Буга&#x435;&#x301;нко</span>),
 a programmer, founder, investor, and philanthropist.
 
+Update: Since September 2019 I'm a Director of System Programming Laboratory
+in [Huawei](https://www.huawei.com)
+[RRI](https://career.huawei.ru/rri/).
+
 As a **founder** and CEO of [Zerocracy](https://www.zerocracy.com/),
 a software engineering and management platform with an absolutely unique
 methodology called [XDSD](https://www.xdsd.org) (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
@@ -67,6 +71,10 @@ made a few investments, but I've got no results yet :)
 As a **philanthropist**, I donate a few thousand dollars every year (started in 2015)
 to the best open source project at the time, which I pick myself out of about a hundred in
 a more or less fair [competition](/award.html).
+
+I'm also a bit of a [scientist](/papers.html):
+[Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
+[DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor).
 
 Here is [my resume](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887)
 and its longer and [boring version](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432).

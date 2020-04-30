@@ -3,7 +3,7 @@ layout: post
 title: "Why Don't You Contribute to Open Source?"
 date: 2015-12-22
 place: Kyiv, Ukraine
-tags: programming
+tags: oss
 description: |
   An active open source contribution is a good
   habit for a software developer who is passionate about

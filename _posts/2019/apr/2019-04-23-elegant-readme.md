@@ -3,7 +3,7 @@ layout: post
 title: "Elegant READMEs"
 date: 2019-04-23
 place: Samara, Russia
-tags: specs
+tags: specs oss
 description: |
   The README document is the most important piece of
   documentation your project can have; how to design

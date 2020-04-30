@@ -3,7 +3,7 @@ layout: post
 title: "Why Do You Contribute to Open Source?"
 date: 2017-05-30
 place: Kyiv, Ukraine
-tags: programming
+tags: oss
 description: |
   Open source contribution is a very important
   activity of a serious programmer, but he or she
