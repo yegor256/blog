@@ -33,9 +33,9 @@ do understand, but can't do anything about it.
 
 As David Mytton
 [noted](https://www.infoworld.com/article/3028600/whats-the-real-reason-microsoft-and-google-are-releasing-open-source.html),
-individuals release open source projects for the altruism,
+individuals release open source projects out of altruism,
 while companies have real, strategic reasons hidden behind
-the warm and fuzzy glow of open source. We don't mean using
+the warm and fuzzy glow of open source. We don't mean just using
 open source products, which is what every business
 [does](https://thenewstack.io/survey-open-source-programs-are-a-best-practice-among-large-companies/)
 nowadays, but building them so that everybody can use them, for free.
@@ -108,7 +108,7 @@ companies invest in open source:
       and
       [Kubernetes](https://github.com/kubernetes/kubernetes);
     IBM [donates](https://www.ibm.com/opensource/) to
-      [Nodejs](https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/)
+      [Node.js](https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/)
       and
       [TensorFlow](https://conferences.oreilly.com/tensorflow/tf-ca-2019/public/schedule/detail/81284);
     Amazon sponsors
@@ -116,8 +116,8 @@ companies invest in open source:
     and [so on](https://github.com/ossfriendly/open-source-supporters).
 
 Next, the question is how this helps Google and others make their
-business more profitable? For example, how is Google Cloud Platform planning
-to beat Amazon AWS, using open source as a weapon? Here is how,
+business more profitable. For example, how is Google Cloud Platform planning
+to beat Amazon AWS using open source as a weapon? Here is how,
 among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-in-oss/):
 
   * **Selling**.
@@ -144,12 +144,12 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     or [GitHub by Microsoft](https://www.theverge.com/2018/6/18/17474284/microsoft-github-acquisition-developer-reaction)
     (not really an open source story, but very close).
     Thus, for companies it's much wiser to sponsor open source and stay behind the curtain
-    than directly talking to developers through corporate media
+    rather than talking directly to developers through corporate media
     like [MSDN](https://docs.microsoft.com/en-us/) or [OPN](https://developer.oracle.com/).
 
   * **Branding**.
     Being part of open source is a direct contribution to the public
-    image of a company. Google is not anymore an
+    image of a company. Google is no longer an
     [Ad-selling monopoly](https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search),
     with [questionable reputation](https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/),
     but one of the largest software [philanthropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
@@ -190,7 +190,7 @@ to the open source territory for ages
 and [now](https://www.computerworld.com/article/3144063/open-source-has-won-and-microsoft-has-surrendered.html)
 they are fighting for it, trying to acquire the largest pieces.
 
-We, the software developers, are that territory!
+We, the software developers, are the territory!
 
 Thus, if you are a coder, make your own project now.
 Sooner or later Google will knock on the door and offer
