@@ -190,7 +190,7 @@ to the open source territory for ages
 and [now](https://www.computerworld.com/article/3144063/open-source-has-won-and-microsoft-has-surrendered.html)
 they are fighting for it, trying to acquire the largest pieces.
 
-We, the software developers, are the territory!
+We software developers are the territory!
 
 Thus, if you are a coder, make your own project now.
 Sooner or later Google will knock on the door and offer
