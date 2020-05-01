@@ -26,7 +26,7 @@ Update: Since September 2019 I'm a Director of System Programming Laboratory
 in [Huawei](https://www.huawei.com)
 [RRI](https://career.huawei.ru/rri/).
 
-As a **founder** and CEO of [Zerocracy](https://www.zerocracy.com/),
+I was a **founder** and CEO of [Zerocracy](https://www.zerocracy.com/),
 a software engineering and management platform with an absolutely unique
 methodology called [XDSD](https://www.xdsd.org) (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
 Most of the ideas behind the methodology I explained in my book [Code Ahead](/code-ahead.html).
@@ -43,7 +43,7 @@ Besides that, I'm a proud holder of
 and
 [COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
-As a **programmer**, I [write](https://github.com/yegor256)
+I am a **programmer**, I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP, and JavaScript (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
 I'm the founder and lead architect of
 [Zold](https://www.zold.io),
@@ -65,10 +65,10 @@ called [Elegant Objects](/elegant-objects.html), plus
 [a few other books](/books.html),
 and founded [a movement for better OOP](https://elegantobjects.org).
 
-As an **investor** at [SeedRamp.com](http://www.seedramp.com), I've
+I was an **investor** at [SeedRamp.com](http://www.seedramp.com), I've
 made a few investments, but I've got no results yet :)
 
-As a **philanthropist**, I donate a few thousand dollars every year (started in 2015)
+I am a **philanthropist**, I donate a few thousand dollars every year (started in 2015)
 to the best open source project at the time, which I pick myself out of about a hundred in
 a more or less fair [competition](/award.html).
 
