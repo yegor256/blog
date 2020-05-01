@@ -21,7 +21,7 @@ jb_picture:
 
 Some companies massively invest in open source software projects,
 while others still remain skeptical and stay away from this trend.
-What's in it for those philantropists, like Google, IBM or Microsoft?
+What's in it for those philanthropists, like Google, IBM or Microsoft?
 Why spend money on something that doesn't belong to them and
 is shared among all of us developers? Don't they understand that
 the code they write may be used by their competitors? It seems they
@@ -152,7 +152,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     image of a company. Google is not anymore an
     [Ad-selling monopoly](https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search),
     with [questionable reputation](https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/),
-    but one of the largest software [philantropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
+    but one of the largest software [philanthropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
     Microsoft is [catching up](https://www.businessinsider.de/international/microsoft-reputation-institute-soaring-research-2019-11/?r=US&IR=T)
     with its massive [code opening](https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/)
     and the [purchase](https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/) of GitHub.
