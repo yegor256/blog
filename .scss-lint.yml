@@ -3,6 +3,8 @@ scss_files: '**/*.scss'
 exclude: 'css/layout.scss'
 
 linters:
+  SelectorFormat:
+    enabled: false
   ColorVariable:
     enabled: false
   ColorKeyword:
