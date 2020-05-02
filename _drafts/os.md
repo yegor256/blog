@@ -5,7 +5,7 @@ date: 2020-05-01
 place: Moscow, Russia
 tags: oss
 description: |
-  Why large enterprises like Google, Microsoft, and IBM are
+  Why are large enterprises like Google, Microsoft, and IBM
   massively donating to open source projects and opening
   their own code?
 keywords:
@@ -21,8 +21,8 @@ jb_picture:
 
 Some companies massively invest in open source software projects,
 while others still remain skeptical and stay away from this trend.
-What's in it for those philantropists, like Google, IBM or Microsoft?
-Why spending money on something that doesn't belong to them and
+What's in it for those philanthropists, like Google, IBM or Microsoft?
+Why spend money on something that doesn't belong to them and
 is shared among all of us developers? Don't they understand that
 the code they write may be used by their competitors? It seems they
 do understand, but can't do anything about it.
@@ -33,9 +33,9 @@ do understand, but can't do anything about it.
 
 As David Mytton
 [noted](https://www.infoworld.com/article/3028600/whats-the-real-reason-microsoft-and-google-are-releasing-open-source.html),
-individuals release open source projects for the altruism,
+individuals release open source projects out of altruism,
 while companies have real, strategic reasons hidden behind
-the warm and fuzzy glow of open source. We don't mean using
+the warm and fuzzy glow of open source. We don't mean just using
 open source products, which is what every business
 [does](https://thenewstack.io/survey-open-source-programs-are-a-best-practice-among-large-companies/)
 nowadays, but building them so that everybody can use them, for free.
@@ -49,8 +49,8 @@ companies invest in open source:
     open their code, and even has an
     [approval procedure](https://opensource.google/docs/releasing/approval/) for it.
     It seems that others do something similar.
-    A recently published [research](https://www.infoworld.com/article/3253948/who-really-contributes-to-open-source.html)
-    demonstrated that thousands (!) of employees from
+    Some recently published [research](https://www.infoworld.com/article/3253948/who-really-contributes-to-open-source.html)
+    demonstrates that thousands (!) of employees from
     [Microsoft](https://github.com/microsoft) (4.3k visible GitHub contributors),
     [IBM](https://github.com/IBM) (2.3k),
     [Google](https://github.com/google) (1.2k),
@@ -108,7 +108,7 @@ companies invest in open source:
       and
       [Kubernetes](https://github.com/kubernetes/kubernetes);
     IBM [donates](https://www.ibm.com/opensource/) to
-      [Nodejs](https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/)
+      [Node.js](https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/)
       and
       [TensorFlow](https://conferences.oreilly.com/tensorflow/tf-ca-2019/public/schedule/detail/81284);
     Amazon sponsors
@@ -116,8 +116,8 @@ companies invest in open source:
     and [so on](https://github.com/ossfriendly/open-source-supporters).
 
 Next, the question is how this helps Google and others make their
-business more profitable? For example, how Google Cloud Platform is planning
-to beat Amazon AWS, using open source as a weapon? Here is how,
+business more profitable. For example, how is Google Cloud Platform planning
+to beat Amazon AWS using open source as a weapon? Here is how,
 among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-in-oss/):
 
   * **Selling**.
@@ -132,7 +132,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     yet another example, also runs on [Google Cloud Platform](https://cloud.google.com/tensorflow-enterprise).
 
   * **Influencing**.
-    In modern software development world open source is the key media, where
+    In the modern software development world open source is the key media, where
     programmers learn new ideas, design principles, and architectural solutions.
     They listen to open source projects, because they trust them much more
     than they trust Google, IBM or Microsoft. Tech companies are smart, but their
@@ -144,15 +144,15 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     or [GitHub by Microsoft](https://www.theverge.com/2018/6/18/17474284/microsoft-github-acquisition-developer-reaction)
     (not really an open source story, but very close).
     Thus, for companies it's much wiser to sponsor open source and stay behind the curtain
-    than directly talking to developers through corporate media
+    rather than talking directly to developers through corporate media
     like [MSDN](https://docs.microsoft.com/en-us/) or [OPN](https://developer.oracle.com/).
 
   * **Branding**.
     Being part of open source is a direct contribution to the public
-    image of a company. Google is not anymore an
+    image of a company. Google is no longer an
     [Ad-selling monopoly](https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search),
     with [questionable reputation](https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/),
-    but one of the largest software [philantropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
+    but one of the largest software [philanthropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
     Microsoft is [catching up](https://www.businessinsider.de/international/microsoft-reputation-institute-soaring-research-2019-11/?r=US&IR=T)
     with its massive [code opening](https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/)
     and the [purchase](https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/) of GitHub.
@@ -163,7 +163,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     for the best software engineers.
     When your company is involved in open source business, you
     are much more loyal and interested in staying longer with the company.
-    I can't prove this statement, but it's my personal observation.
+    I can't prove this assertion, but it's my personal observation.
 
   * **Training**.
     It's [no secret](https://www.wired.com/insights/2013/11/open-source-a-platform-for-innovation/)
@@ -173,26 +173,25 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     (they get their salaries somewhere else). It's also a
     [well-known fact](https://hackernoon.com/how-to-become-the-best-programmer-in-the-world-ef9f584c81fa)
     that in order to be a better engineer one has to work with the best.
-    Open source projects is [exactly](https://www.techrepublic.com/article/10-tips-for-becoming-a-better-programmer/)
-    the best place where
-    one meets more experienced and very often more talented programmers,
-    and learn from them. Companies, sending people there, boost
+    Open source projects are [exactly](https://www.techrepublic.com/article/10-tips-for-becoming-a-better-programmer/)
+    the best place to meet more experienced and very often more talented programmers,
+    and learn from them. Companies, by sending people there, boost
     their skills without doing any internal training programs.
 
 Thus, it seems that open source is a very powerful instrument
-in the war for tech markets and for talents. Smart companies develop their open source
+in the war for tech markets and for talent. Smart companies develop their open source
 muscles, earning reputation and acquiring our trust. I predict
-this trend not only to continue but also to escalate. We, programmers,
-are their driving force, they need us
+this trend not only to continue but also to escalate. We programmers
+are their driving force; they need us
 as users, promoters, influencers, and makers of the products.
 
 They were [not paying attention](https://hbswk.hbs.edu/item/microsoft-vs-open-source-who-will-win)
 to the open source territory for ages
 and [now](https://www.computerworld.com/article/3144063/open-source-has-won-and-microsoft-has-surrendered.html)
-they are fighting for it, trying to acquire largest pieces.
+they are fighting for it, trying to acquire the largest pieces.
 
-We, software developers, are the territory!
+We software developers are the territory!
 
 Thus, if you are a coder, make your own project now.
-Sooner or later Google will knock the door and offer
+Sooner or later Google will knock on the door and offer
 you a big check, just to do it earlier than Microsoft.
