@@ -141,28 +141,28 @@ Soft Skills of the Future<br/>
 Прекрасное Айти Далёко (keynote)<br/>
 [Стачка](https://nastachku.ru/prekrasnoe-it-daleko)<br/>
 <span class="city">Ulyanovsk</span>, <span class="country">Russia</span><br/>
-23 May.
+<del>23 May</del> some time later.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
 Is Java Getting Better?<br/>
 [JavaFest](https://javafest.com.ua/)<br/>
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
-5 June.
+<del>5 June</del> some time later.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3232-6131-4838-b663-313466346463/hero_hero.svg" class="future-talk" alt="Мир, Труд, Мобайл 2020"/><br/>
 Opening keynote...<br/>
 [Мир, Труд, Мобайл](http://springbreak.ru/)<br/>
 <span class="city">Kazan</span>, <span class="country">Russia</span><br/>
-July.
+<del>July</del> later.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
 Decentralized Architectures: Blockchain and Beyond<br/>
 [Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
 <span class="city">St.Petersburg</span>, <span class="country">Russia</span><br/>
-August.
+<del>August</del> later.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>

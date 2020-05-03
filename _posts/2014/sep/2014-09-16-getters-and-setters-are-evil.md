@@ -216,3 +216,5 @@ a terrible anti-pattern. About it, in
 
 PPPS. Here is what I'm suggesting to use instead of getters:
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}).
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Getters-and-setters is ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1256977935451422723?ref_src=twsrc%5Etfw">May 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
