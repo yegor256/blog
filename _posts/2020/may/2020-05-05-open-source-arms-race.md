@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open Source Arms Race"
-date: 2020-05-06
+date: 2020-05-05
 place: Moscow, Russia
 tags: oss
 description: |
