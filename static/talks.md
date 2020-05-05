@@ -109,6 +109,12 @@ Each lecture starts on 19:30 and lasts for 90 minutes. They
 all will be video-recorded and published on
 [YouTube](https://www.youtube.com/c/yegor256?sub_confirmation=1).
 
+<img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
+Is Java Getting Better?<br/>
+[JavaFest](https://javafest.com.ua/)<br/>
+<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
+30 May (ONLINE!).
+
 <!--
 <div class="talk-event">&nbsp;</div>
 <img src="http://icsa-conferences.org/2020/img/logos/ICSA2020_logo_alterada.png" class="future-talk" alt="ICSA 2020"/><br/>
@@ -144,12 +150,6 @@ Soft Skills of the Future<br/>
 <del>23 May</del> some time later.
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
-Is Java Getting Better?<br/>
-[JavaFest](https://javafest.com.ua/)<br/>
-<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
-<del>5 June</del> some time later.
-
 <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3232-6131-4838-b663-313466346463/hero_hero.svg" class="future-talk" alt="Мир, Труд, Мобайл 2020"/><br/>
 Opening keynote...<br/>
