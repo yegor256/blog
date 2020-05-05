@@ -14,9 +14,9 @@ keywords:
   - open source
   - why open source
   - profit open source
-image: /images/2020/05/
+image: /images/2020/05/filth.jpg
 jb_picture:
-  caption: ...
+  caption: Filth (2013) by Jon S. Baird
 ---
 
 Some companies massively invest in open source software projects,
