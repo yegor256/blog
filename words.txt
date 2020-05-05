@@ -60,8 +60,11 @@ acknowledge
 acknowledgements
 ACM
 acquire
+acquired
 acquires
+acquiring
 acquisition
+acquisitions
 acronym
 across
 act
@@ -82,6 +85,7 @@ acts
 actual
 actually
 ad
+ad-selling
 adage
 adam
 adams
@@ -300,6 +304,7 @@ annual
 annually
 anonymous
 another
+ansible
 answer
 answered
 answering
@@ -363,6 +368,7 @@ approachability
 approached
 approaches
 appropriate
+approval
 approve
 approved
 approves
@@ -639,6 +645,7 @@ beanstalk
 bear
 beard
 bears
+beat
 beaten
 beating
 beatty
@@ -803,6 +810,7 @@ books
 BooksDAO
 bookshelf
 boom
+booming
 boost
 boosted
 booster
@@ -1418,6 +1426,7 @@ communicative
 communicator
 communities
 community
+community-driven
 compact
 companies
 company
@@ -1839,6 +1848,7 @@ current
 currently
 cursing
 cursors
+curtain
 curve
 cushion
 cushioned
@@ -2301,6 +2311,7 @@ doable
 doberman
 doc
 docker
+dockercon
 docs
 doctor
 doctrine
@@ -2334,6 +2345,7 @@ don
 don't
 donald
 donate
+donates
 donations
 donators
 done
@@ -2433,6 +2445,7 @@ earliest
 early
 earn
 earned
+earning
 earns
 ears
 earth
@@ -2448,6 +2461,7 @@ eating
 ebay
 EC
 eckel
+eclipse
 ECMAScript
 eco-friendly
 eco-manager
@@ -2623,6 +2637,7 @@ entered
 entering
 enterprise
 enterprise-size
+enterprises
 enters
 entertain
 entertaining
@@ -2669,6 +2684,7 @@ ernest
 error
 error-proneness
 errors
+escalate
 escalated
 escalates
 escape
@@ -2898,6 +2914,7 @@ fashion
 fast
 faster
 fastest
+fastlane
 fat
 fatal
 father
@@ -3131,9 +3148,11 @@ forty-foot
 forum
 forward
 forwarded
+FOSDEM
 found
 foundation
 foundational
+foundations
 founded
 founder
 founder's
@@ -3218,6 +3237,7 @@ further
 furthermore
 fuss
 future
+fuzzy
 gain
 gains
 gallon
@@ -3243,6 +3263,7 @@ gary
 gas
 gates
 gateway
+gather
 gathered
 gave
 gays
@@ -3289,6 +3310,7 @@ getting
 GHz
 giang
 giant
+giants
 GIF
 gift
 gifts
@@ -3301,6 +3323,7 @@ git
 gitflow
 github
 github-based
+github-hosted
 gitlab-ci
 gitter
 give
@@ -3317,8 +3340,10 @@ globally
 glogin
 glossaries
 glossary
+glow
 gluten
 gmail
+GNOME
 go
 goal
 goal-oriented
@@ -3344,6 +3369,7 @@ good-natured
 goodness
 goodreads
 google
+google's
 google-killer
 googled
 googling
@@ -3678,6 +3704,7 @@ HTTP-native
 httpcomponents
 httprequest
 https
+huawei
 hub
 hudson
 hug
@@ -3740,6 +3767,7 @@ if
 if-then-else
 iff
 ignatyev
+ignite
 ignorance
 ignorant
 ignore
@@ -3887,7 +3915,9 @@ infinite
 infinity
 influence
 influenced
+influencers
 influences
+influencing
 influential
 info
 infoq
@@ -4323,6 +4353,7 @@ kiss
 kitchen
 kitties
 knew
+knock
 knocking
 know
 knowing
@@ -4340,6 +4371,8 @@ krubner
 kruchten
 kuban
 kube
+kubecon
+kubernetes
 kudos
 KULouuKS
 kw
@@ -4721,6 +4754,7 @@ market-ready
 marketable
 marketers
 marketing
+markets
 marriage
 married
 marry
@@ -4732,6 +4766,7 @@ martin
 mask
 massage
 massive
+massively
 master
 mastered
 mastering
@@ -5082,6 +5117,7 @@ mph
 MS
 MS-DOS
 MSc
+MSDN
 msec
 much
 mulcahy
@@ -5105,6 +5141,7 @@ multiplying
 multiton
 mumbled
 munich
+muscles
 mush
 music
 musician
@@ -5130,6 +5167,7 @@ mystery
 myth
 mythical
 myths
+mytton
 n-word
 na
 nag
@@ -5216,6 +5254,7 @@ news
 newsletter
 next
 NFRs
+nginx
 nice
 nicely
 nicely-looking
@@ -5457,6 +5496,7 @@ operator
 operators
 opinion
 opinions
+OPN
 opponent
 opportunities
 opportunity
@@ -5506,6 +5546,7 @@ ORM
 orthogonal
 OS
 oscar
+OSI
 oslo
 OSS
 OSSRH
@@ -5771,6 +5812,7 @@ phase
 phases
 phd
 phew
+philanthropists
 philippe
 philosophical
 philosophically
@@ -6159,9 +6201,11 @@ promises
 promising
 promote
 promoted
+promoters
 promotes
 promoting
 promotion
+promotional
 promotions
 prompts
 pronoun
@@ -6455,6 +6499,7 @@ reddit
 redefine
 redesign
 redev
+redhat
 redirect
 redirected
 rediscovered
@@ -6698,6 +6743,7 @@ results-based
 resume
 resumes
 retain
+retaining
 rethink
 retina
 retire
@@ -6846,6 +6892,7 @@ russia
 russia's
 russian
 russians
+rust
 rusty
 ruthless
 rutracker
@@ -7616,6 +7663,7 @@ straightforward
 strange
 stranger
 strangers
+strategic
 strategically
 strategies
 strategizing
@@ -7920,6 +7968,7 @@ tending
 tends
 tennis
 tension
+tensorflow
 term
 terminal
 terminals
@@ -8651,6 +8700,7 @@ weakness
 weaknesses
 wealth
 wealthy
+weapon
 weapons
 wear
 wearing
@@ -8765,6 +8815,7 @@ wiring
 wisdom
 wise
 wisely
+wiser
 wish
 wishes
 with
