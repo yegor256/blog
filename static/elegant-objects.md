@@ -628,6 +628,7 @@ good, and how it could be better:
   * [Ben Nadel](http://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
   * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
   * [Renaud Pradenc](http://www.renaudpradenc.com/?p=504)
+  * [Željko Vrba](http://zvrba.net/articles/eo-review.html)
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
   * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
   * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
