@@ -73,3 +73,5 @@ Now, my main question. If I understand it right,
 [Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %}) promotes group
 responsibility and discourages _individualism_. How does it go along
 with the Ringelmann Effect? Any thoughts?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">You are the most productive when ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1259373923180982272?ref_src=twsrc%5Etfw">May 10, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
