@@ -97,7 +97,7 @@ will contain practical object-oriented design patterns, just like
 those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
-To be published: in 2020.
+To be published: in 2021.
 
 <div class="book-par"></div>
 {% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
@@ -106,7 +106,7 @@ seen a computer yet. It starts from the explanation of basic things
 and gets into details about object-oriented programming, getting you
 ready to become a professional developer, eventually.
 <br/>
-To be published: March, 2020.
+To be published: June, 2020.
 
 <div class="book-par"></div>
 To be continued...
