@@ -26,8 +26,8 @@ know how computers work.
 
 May 10, 2020:
 The draft is ready! 218 pages. I will now send it to
-reviewers (I have 127 applicants) and see what they say. I'm planning
-to publish it before the end of May.
+114 reviewers (ou of 127 applicants) and see what they say. I'm planning
+to publish it before the end of June.
 
 May 12, 2019:
 I announced an invitation to help me review the book. If you are
