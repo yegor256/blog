@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "EO the Career Killer"
-date: 2020-05-12
+date: 2020-05-13
 place: Moscow, Russia
 tags: career
 description: |
@@ -13,9 +13,9 @@ keywords:
   - career advice
   - oop elegant objects
   - oop eo
-image: /images/2020/05/
+image: /images/2020/05/dog-day-afternoon.jpg
 jb_picture:
-  caption: ...
+  caption: Dog Day Afternoon (1975) by Sidney Lumet
 ---
 
 It's time to answer one of the most popular questions I hear from junior
