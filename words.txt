@@ -2179,6 +2179,7 @@ digitally
 dijkstra
 dilemma
 diligence
+diminish
 diminishing
 dinner
 diplomacy
@@ -2405,6 +2406,7 @@ drivers
 drives
 driving
 drone
+DronMDF
 drop
 dropbox
 drucker
@@ -2995,6 +2997,7 @@ filled
 filling
 fills
 film
+filrfreire
 filter
 filtered
 filtering
@@ -3100,6 +3103,7 @@ fool
 fooled
 foot
 footer
+footprint
 for
 for-each
 forbid
@@ -3457,6 +3461,7 @@ gulp
 gunshots
 gunslingers
 gurus
+guseyn
 gut
 guts
 guy
@@ -4068,6 +4073,7 @@ intolerable
 intolerance
 intolerant
 intrigue
+intrigued
 intriguing
 intrinsic
 introduce
@@ -4462,6 +4468,7 @@ least
 leave
 leaves
 leaving
+lecture
 lectures
 led
 left
@@ -4978,6 +4985,7 @@ minus
 minuses
 minute
 minutes
+MIPT
 mironiuc
 mirror
 mirrors
@@ -5498,6 +5506,7 @@ opinion
 opinions
 OPN
 opponent
+opponents
 opportunities
 opportunity
 opposing
@@ -5635,6 +5644,7 @@ pages
 paid
 pain
 painful
+painofoop
 painstaking
 painting
 pair
@@ -6662,6 +6672,7 @@ reproducible
 reproducing
 reputable
 reputation
+reputations
 REQ
 request
 requested
@@ -7023,6 +7034,7 @@ secondary
 seconds
 secret
 secrets
+sect
 section
 sections
 sector
@@ -7296,6 +7308,7 @@ sixth
 size
 sizeable
 sizes
+skapral
 skateboard
 skeet
 skeleton
@@ -7526,6 +7539,7 @@ spreads
 spreadsheet
 spreadsheets
 spring
+spring-based
 sprint
 sprints
 spy
@@ -7913,6 +7927,7 @@ tasks
 taste
 tasteful
 tasty
+taught
 tax
 taxes
 taxi
@@ -8632,6 +8647,7 @@ visually
 vivian
 VLC
 vocabulary
+vocal
 voice
 void
 voil
