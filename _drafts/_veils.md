@@ -5,7 +5,7 @@ date: 2020-05-12
 place: Moscow, Russia
 tags: oop ruby
 description: |
-  Using DTOs for high-performance data transfers
+  Using DTOs for high-performance data transfer
   between objects is very effective, but not elegant;
   veil objects are the elegant alternative.
 keywords:
@@ -22,15 +22,15 @@ jb_picture:
 Here is a new idea I discovered just a few days ago while working
 with [Codexia](https://github.com/yegor256/codexia),
 a Ruby web app. I had to fetch data rows from PostgreSQL and return
-objects to the client. It's was always a problem for me, how to do it
+objects to the client. It's always been a problem for me, how to do that
 without turning objects into DTOs. Here is the solution I found and gave
-it a name: Veil Objects.
+a name: Veil Objects.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Say, I fetch the list of projects from PostgreSQL:
+Let's say I fetch the list of projects from PostgreSQL:
 
 {% highlight ruby %}
 class Projects
@@ -40,9 +40,9 @@ class Projects
 end
 {% endhighlight %}
 
-The method `exec()` of `@pgsql` (I'm using [pgtk](https://rubygems.org/gems/pgtk) gem)
+The method `exec()` on `@pgsql` (I'm using the [pgtk](https://rubygems.org/gems/pgtk) gem)
 returns an array of [Hashes](https://ruby-doc.org/core-2.7.0/Hash.html),
-which would look like this, if we would convert it to JSON:
+which look like this, if we convert them to JSON:
 
 {% highlight text %}
 [
@@ -53,7 +53,7 @@ which would look like this, if we would convert it to JSON:
 {% endhighlight %}
 
 It would be great to make the method `fetch()` return an array
-of objects, not an array of Hashes. My class `Project` looks like this:
+of objects, not an array of Hashes. So my class `Project` looks like this:
 
 {% highlight ruby %}
 class Project
@@ -76,7 +76,7 @@ class Project
 end
 {% endhighlight %}
 
-It is perfectly designed for single-project manipulations:
+It's perfectly designed for single-project manipulations:
 
 {% highlight ruby %}
 p = Project.new(pgsql, 123)
@@ -98,7 +98,7 @@ class Projects
 end
 {% endhighlight %}
 
-This is what will kill me, performance wise:
+This is what will kill me, performance-wise:
 
 {% highlight ruby %}
 projects.fetch do |p|
@@ -106,15 +106,15 @@ projects.fetch do |p|
 end
 {% endhighlight %}
 
-This code will generate too many redundant SQL request. We will do round-trips
+This code will generate too many redundant SQL requests. We will do round-trips
 to PostgreSQL to fetch the data we had a few milliseconds ago, while
 we were doing `SELECT * FROM project`.
 
-The easiest and the most obvious solution, which many of you may suggest,
+The easiest and the most obvious solution, which many of you might suggest,
 is to encapsulate the retrieved Hash into the `Project` object. In other
 words, turn `Project` into a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
-a holder of data. Well, in this case we may
-not even need an object, but can return the Hash with the data. However,
+a holder of data. Well, in this case we might
+not even need an object, but can instead return the Hash with the data. But
 this is not how we want our object-oriented software to be designed. We want
 to deal with objects, not data structures. And, at the same time, we don't want objects to
 be stupid enough to go back to the database for the same data we had
@@ -135,23 +135,23 @@ class Projects
 end
 {% endhighlight %}
 
-This new `Veil` objects is a decorator of `Project`. It behaves like
-a `Project`, but some methods of it are re-defined: `name()` and `author()`.
-When they will be called, the calls won't reach the encapsulated `Project`.
+This new `Veil` object is a decorator of `Project`. It behaves like
+a `Project`, but some of the methods on it are re-defined: `name()` and `author()`.
+When they are called, the calls won't reach the encapsulated `Project`.
 Instead, the data stored in the `Veil` will be returned.
 
-It is called the "veil" because it acts like one: the pre-set data is
+It is called a "veil" because it acts like one: the pre-set data is
 returned only until some other method is called, which was not pre-set.
 If this happens, the veil is pierced and the `Veil` object becomes fully
 transparent, sending all method calls through.
 
-Thus, the efficiency of DTO is combined with the elegancy of OOP.
+Thus, the efficiency of DTO is combined with the elegance of OOP.
 
 I'm using these new veil objects in
 [yegor256/codexia](https://github.com/yegor256/codexia),
-you can see how.
+so you can see how they work.
 
-PS. I also create `Unpiercable` class, which acts exactly like `Veil`,
+PS. I also create an `Unpiercable` class, which acts exactly like a `Veil`,
 but can never be pierced. It is very useful, when you don't expect any
 data-modifying interactions to happen with the object and just want some
 of its methods to be pre-calculated.
