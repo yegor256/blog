@@ -151,3 +151,7 @@ I'm using these new veil objects in
 [yegor256/codexia](https://github.com/yegor256/codexia),
 you can see how.
 
+PS. I also create `Unpiercable` class, which acts exactly like `Veil`,
+but can never be pierced. It is very useful, when you don't expect any
+data-modifying interactions to happen with the object and just want some
+of its methods to be pre-calculated.
