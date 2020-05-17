@@ -178,3 +178,5 @@ understand that the best solution they can get for their money is
 the one that is the most readable, maintainable, and automated.
 
 Not the fastest.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Great programmers write code, which is ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1262034967271485441?ref_src=twsrc%5Etfw">May 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
