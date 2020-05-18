@@ -145,13 +145,13 @@ returned only until some other method is called, which was not preset.
 If this happens, the veil is pierced and the `Veil` object becomes fully
 transparent, sending all method calls through.
 
-Thus, the efficiency of DTO is combined with the elegance of OOP.
+Thus the efficiency of DTO is combined with the elegance of OOP.
 
 I'm using these new veil objects in
 [yegor256/codexia](https://github.com/yegor256/codexia),
 so you can see how they work.
 
-PS. I also create an `Unpiercable` class, which acts exactly like a `Veil`,
+P.S. I also create an `Unpiercable` class, which acts exactly like a `Veil`,
 but can never be pierced. It is very useful, when you don't expect any
 data-modifying interactions to happen with the object and just want some
 of its methods to be pre-calculated.
