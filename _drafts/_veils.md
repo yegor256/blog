@@ -136,12 +136,12 @@ end
 {% endhighlight %}
 
 This new `Veil` object is a decorator of `Project`. It behaves like
-a `Project`, but some of the methods on it are re-defined: `name()` and `author()`.
+a `Project`, but some of the methods on it are redefined: `name()` and `author()`.
 When they are called, the calls won't reach the encapsulated `Project`.
 Instead, the data stored in the `Veil` will be returned.
 
-It is called a "veil" because it acts like one: the pre-set data is
-returned only until some other method is called, which was not pre-set.
+It is called a "veil" because it acts like one: the preset data is
+returned only until some other method is called, which was not preset.
 If this happens, the veil is pierced and the `Veil` object becomes fully
 transparent, sending all method calls through.
 
