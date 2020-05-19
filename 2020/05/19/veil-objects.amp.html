@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Veil Objects to Replace DTOs</title>
+    <link rel="canonical" href="https://www.yegor256.com/2020/05/19/veil-objects.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2020/05/19/veil-objects.html"
+        },
+        "headline": "Veil Objects to Replace DTOs",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2020/05/constantine.jpg",
+          "height": 1080,
+          "width": 1920
+        },
+        "datePublished": "2020-05-19",
+        "dateModified": "2020-05-19",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Using DTOs for high-performance data transfer
+between objects is very effective, but not elegant;
+veil objects are the elegant alternative.
+",
+        "keywords": ["ruby cache", "oop ruby", "cache objects", "duck typing oop", "elegant objects"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2020/05/19/veil-objects.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>19 May 2020</p>
+      <h1>Veil Objects to Replace DTOs</h1>
+      <p>Here is a new idea I discovered just a few days ago while working
+with <a href="https://github.com/yegor256/codexia">Codexia</a>,
+a Ruby web app. I had to fetch data rows from PostgreSQL and return
+objects to the client. It’s always been a problem for me, how to do that
+without turning objects into DTOs. Here is the solution I found and gave
+a name: Veil Objects.</p>
+
+
+
+<amp-img src="/images/2020/05/constantine.jpg" alt="Constantine (2005) by Francis Lawrence" height="1080" width="1920" layout="responsive"></amp-img>
+
+<p>Let’s say I fetch the list of projects from PostgreSQL:</p>
+
+<pre>class Projects
+  def fetch
+    @pgsql.exec('SELECT * FROM project')
+  end
+end</pre>
+
+<p>The method <code>exec()</code> on <code>@pgsql</code> (I’m using the <a href="https://rubygems.org/gems/pgtk">pgtk</a> gem)
+returns an array of <a href="https://ruby-doc.org/core-2.7.0/Hash.html">Hashes</a>,
+which look like this, if we convert them to JSON:</p>
+
+<pre>[
+  {"id": 1, "name": "foo", "author": "yegor256"},
+  {"id": 2, "name": "bar", "author": "yegor256"},
+  {"id": 3, "name": "zoo", "author": "yegor256"}
+]</pre>
+
+<p>It would be great to make the method <code>fetch()</code> return an array
+of objects, not an array of Hashes. So my class <code>Project</code> looks like this:</p>
+
+<pre>class Project
+  def initialize(pgsql, id)
+    @pgsql = pgsql
+    @id = id
+  end
+  def name
+    pgsql.exec(
+      'SELECT name FROM project WHERE id=$1',
+      [@id]
+    )[0]['name']
+  end
+  def author
+    pgsql.exec(
+      'SELECT author FROM project WHERE id=$1',
+      [@id]
+    )[0]['author']
+  end
+end</pre>
+
+<p>It’s perfectly designed for single-project manipulations:</p>
+
+<pre>p = Project.new(pgsql, 123)
+name = p.name
+author = p.author</pre>
+
+<p>Two SQL requests here is not a big deal. However, if I convert
+the list of Hashes to Projects like this, I will have serious
+performance problems:</p>
+
+<pre>class Projects
+  def fetch
+    @pgsql.exec('SELECT * FROM project').map do |r|
+      Project.new(@pgsql, r['id'].to_i)
+    end
+  end
+end</pre>
+
+<p>This is what will kill me, performance-wise:</p>
+
+<pre>projects.fetch do |p|
+  puts "#{p.name} is created by #{p.author}"
+end</pre>
+
+<p>This code will generate too many redundant SQL requests. We will do round-trips
+to PostgreSQL to fetch the data we had a few milliseconds ago, while
+we were doing <code>SELECT * FROM project</code>.</p>
+
+<p>The easiest and the most obvious solution, which many of you might suggest,
+is to encapsulate the retrieved Hash into the <code>Project</code> object. In other
+words, turn <code>Project</code> into a <a href="/2016/07/06/data-transfer-object.html">DTO</a>,
+a holder of data. Well, in this case we might
+not even need an object, but can instead return the Hash with the data. But
+this is not how we want our object-oriented software to be designed. We want
+to deal with objects, not data structures. And, at the same time, we don’t want objects to
+be stupid enough to go back to the database for the same data we had
+a second ago. Here is the solution I’m proposing:</p>
+
+<pre>require 'veils'
+class Projects
+  def fetch
+    @pgsql.exec('SELECT * FROM project').map do |r|
+      Veil.new(
+        Project.new(@pgsql, r['id'].to_i),
+        name: r['name'],
+        author: r['author']
+      )
+    end
+  end
+end</pre>
+
+<p>This new <code>Veil</code> object is a decorator of <code>Project</code>. It behaves like
+a <code>Project</code>, but some of the methods on it are redefined: <code>name()</code> and <code>author()</code>.
+When they are called, the calls won’t reach the encapsulated <code>Project</code>.
+Instead, the data stored in the <code>Veil</code> will be returned.</p>
+
+<p>It is called a “veil” because it acts like one: the preset data is
+returned only until some other method is called, which was not preset.
+If this happens, the veil is pierced and the <code>Veil</code> object becomes fully
+transparent, sending all method calls through.</p>
+
+<p>Thus the efficiency of DTO is combined with the elegance of OOP.</p>
+
+<p>I’m using these new veil objects in
+<a href="https://github.com/yegor256/codexia">yegor256/codexia</a>,
+so you can see how they work.</p>
+
+<p>P.S. I also create an <code>Unpiercable</code> class, which acts exactly like a <code>Veil</code>,
+but can never be pierced. It is very useful, when you don’t expect any
+data-modifying interactions to happen with the object and just want some
+of its methods to be pre-calculated.</p>
+
+    </article>
+  </body>
+</html>

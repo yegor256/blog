@@ -1343,6 +1343,7 @@ coder
 coders
 codes
 codeship
+codexia
 coding
 coen
 coffee
@@ -1890,6 +1891,7 @@ darker
 dashboard
 data
 data-driven
+data-modifying
 data-related
 database
 database-connected
@@ -5851,6 +5853,7 @@ pictures
 piece
 pieces
 piecework
+pierced
 piggyback
 pike
 piled-up
@@ -6022,6 +6025,7 @@ pragmatic
 pray
 praying
 pre-build
+pre-calculated
 pre-configuration
 pre-configured
 pre-defined
@@ -6082,6 +6086,7 @@ presenteeism
 presenter
 presenting
 presents
+preset
 presidents
 press
 pressman
@@ -6507,6 +6512,7 @@ red
 red-green-refactor
 reddit
 redefine
+redefined
 redesign
 redev
 redhat
@@ -6869,6 +6875,7 @@ route
 router
 routine
 row
+rows
 royalties
 rsk
 RSS
@@ -8572,6 +8579,7 @@ vegas
 vegetarian
 vehicle
 vehicles
+veil
 velocity
 vendor
 venture
