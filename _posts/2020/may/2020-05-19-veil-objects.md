@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Veil Objects to Replace DTOs"
-date: 2020-05-12
+date: 2020-05-19
 place: Moscow, Russia
 tags: oop ruby
 description: |
@@ -14,9 +14,9 @@ keywords:
   - cache objects
   - duck typing oop
   - elegant objects
-image: /images/2020/05/
+image: /images/2020/05/constantine.jpg
 jb_picture:
-  caption: ...
+  caption: Constantine (2005) by Francis Lawrence
 ---
 
 Here is a new idea I discovered just a few days ago while working
