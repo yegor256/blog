@@ -135,7 +135,8 @@ class Projects
 end
 {% endhighlight %}
 
-This new `Veil` object is a decorator of `Project`. It behaves like
+This new `Veil` object from [veils gem](https://rubygems.org/gems/veils)
+is a decorator of `Project`. It behaves like
 a `Project`, but some of the methods on it are redefined: `name()` and `author()`.
 When they are called, the calls won't reach the encapsulated `Project`.
 Instead, the data stored in the `Veil` will be returned.
