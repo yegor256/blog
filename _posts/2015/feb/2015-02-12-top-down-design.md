@@ -140,3 +140,5 @@ something that provides value to my customer. I made sure it also satisfies
 my technical objectives, like proper unit test coverage and build automation.
 But the most important goal for me was to make sure my friend received
 something ... and paid me.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What from would you start making a new webservice?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1264577360449409024?ref_src=twsrc%5Etfw">May 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
