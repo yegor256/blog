@@ -119,7 +119,8 @@ By the way, I'm also an amateur artist,
 
 Just in case, my public PGP key is [23C2244F](/bin/23C2244F.asc).
 
-If you are interested, I'm [INTJ-A](/images/personality.png).
+If you are interested, my [personality type](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
+is [INTJ-A](/images/personality.png).
 
 Here is my SO flair:
 
