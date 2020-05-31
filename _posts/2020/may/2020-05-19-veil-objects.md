@@ -156,3 +156,6 @@ P.S. I also create an `Unpiercable` class, which acts exactly like a `Veil`,
 but can never be pierced. It is very useful, when you don't expect any
 data-modifying interactions to happen with the object and just want some
 of its methods to be pre-calculated.
+
+P.P.S. This is the implementation for
+[Kotlin](https://github.com/binkley/kotlin-veil).
