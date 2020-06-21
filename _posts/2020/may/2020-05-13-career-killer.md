@@ -126,3 +126,5 @@ Pick the one you like most, they are sorted from the easiest to the
 most complex actions you can take.
 
 Don't be scared, act!
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you use the principles of <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> in your project?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1274792685681901571?ref_src=twsrc%5Etfw">June 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
