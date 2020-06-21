@@ -136,4 +136,4 @@ schedule and so forth. Obviously, HoC can't be the only metric, but in
 combination with others it may greatly help in estimating, planning
 and tracking.
 
-PS. Try [hitsofcode.com](https://hitsofcode.com/).
+PS. Try [`hitsofcode.com`](https://hitsofcode.com/).

@@ -11,7 +11,7 @@ install: |
 deploy:
   script: |
     export JEKYLL_ENV=production
-    LC_ALL=en_US.UTF-8 rake
+    LC_ALL=en_US.UTF-8 bundle exec rake
     mkdir ~/.ssh
     mv ../id_rsa ../id_rsa.pub ~/.ssh
     chmod -R 600 ~/.ssh/*
