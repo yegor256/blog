@@ -22,7 +22,12 @@ keywords:
 for those who are just starting their career and don't really
 know how computers work.
 
+<a href="https://amzn.to/3hO82ch"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+
 <!--more-->
+
+Jun 22, 2020:
+It was published [on Amazon](https://www.amazon.com/dp/B08BDWYNWM).
 
 May 10, 2020:
 The draft is ready! 218 pages. I will now send it to

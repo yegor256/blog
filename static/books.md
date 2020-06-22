@@ -91,6 +91,17 @@ Published: 6 July 2018.
 <a href="https://amzn.to/2u9BbqF"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
 <div class="book-par"></div>
+{% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
+It is a book for junior programmers or even for someone who hasn't
+seen a computer yet. It starts from the explanation of basic things
+and gets into details about object-oriented programming, getting you
+ready to become a professional developer, eventually.
+<br/>
+Published: 22 June 2020.
+<br/>
+<a href="https://amzn.to/3hO82ch"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+
+<div class="book-par"></div>
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
 The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
 will contain practical object-oriented design patterns, just like
@@ -98,15 +109,6 @@ those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
 To be published: in 2021.
-
-<div class="book-par"></div>
-{% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
-It is a book for junior programmers or even for someone who hasn't
-seen a computer yet. It starts from the explanation of basic things
-and gets into details about object-oriented programming, getting you
-ready to become a professional developer, eventually.
-<br/>
-To be published: June, 2020.
 
 <div class="book-par"></div>
 To be continued...

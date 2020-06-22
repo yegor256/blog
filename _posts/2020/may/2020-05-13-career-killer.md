@@ -64,6 +64,8 @@ and ask there. You will hear many of them.
 
 Will something similar happen to you? Most probably, yes.
 
+{% quote You will suffer. You will get fired. Your career will be stuck. You will be in a big trouble. %}
+
 You will suffer. You will get fired. You will have issues finding interesting
 projects, because everything you will see written in traditional Java, Ruby, C++,
 or Python will look like garbage to you. You will be constantly annoyed that
