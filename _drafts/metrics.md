@@ -29,8 +29,8 @@ The answers,
 were all along this line: programmers are not supposed to be measured!
 I bet those who answered were programmers themselves.
 Indeed, [why](https://www.youtube.com/watch?v=sZoJ3gO4PSo)
-would a programmer be interested in being measured,
-especially with a discrete metric?
+would a programmer be interested in being measured and being
+reduced to a mere number?
 
 <!--more-->
 
@@ -127,13 +127,13 @@ Ideally you would pick a combination from this list, or even use them all togeth
 
   * **Bugs Reported**.
     Once a bug is reported and accepted by the project, the reporter
-    must get an extra point. This is how the quality of project grows:
+    must get an extra point. This is how the quality of a project grows:
     by [encouraging]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %})
     everybody to report bugs.
 
   * **Releases Published**.
     In a disciplined project new versions are released every day; in others,
-    every week or even months (or never). Every release is a stressful operation
+    every week or every few months (or never). Every release is a stressful operation
     and it only seems logical to reward programmers for them.
 
   * **Uptime**.
@@ -154,7 +154,7 @@ Ideally you would pick a combination from this list, or even use them all togeth
     sometimes even stale branches and never-good-to-merge PRs.
 
   * **Documentation Pages Published**.
-    FAQ pages, JavaDoc blocks, Wiki pages, blog posts, and so on---they help
+    FAQ pages, Javadoc blocks, Wiki pages, blog posts, and so on---they help
     the project get closer to users and to future developers by increasing
     maintainability. Of course, every piece of text must be validated
     before publishing.
@@ -177,7 +177,7 @@ leads to [cheating]({% pst 2017/nov/2017-11-21-trust-pay-lose %}).
 
 It is also worth mentioning that features,
 bugs, pull requests, and documentation pages may have different
-_complexity_, _urgency_, and _severity_, which also may be taken into account,
+_complexity_, _urgency_, and _severity_, which also should be taken into account,
 increasing or decreasing the numbers in each metric.
 
 Most of these metrics can be collected automatically, without any human
