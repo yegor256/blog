@@ -95,7 +95,8 @@ Published: 6 July 2018.
 It is a book for junior programmers or even for someone who hasn't
 seen a computer yet. It starts from the explanation of basic things
 and gets into details about object-oriented programming, getting you
-ready to become a professional developer, eventually.
+ready to become a professional developer, eventually. You may consider
+it a prequel to Elegant Objects.
 <br/>
 Published: 22 June 2020.
 <br/>
