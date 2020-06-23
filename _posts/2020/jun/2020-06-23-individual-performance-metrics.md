@@ -14,9 +14,9 @@ keywords:
   - metrics
   - performance
   - performance appraisal
-image: /images/2020/06/
+image: /images/2020/06/better-caul-saul.jpg
 jb_picture:
-  caption: ...
+  caption: Better Call Saul, Season 5 (2019) by Vince Gilligan et al.
 ---
 
 The question [was asked](https://softwareengineering.stackexchange.com/questions/26596/metric-by-which-to-hold-developers-accountable)
@@ -163,7 +163,8 @@ Ideally you would pick a combination from this list, or even use them all togeth
     Senior programmers may be mentors of more junior ones and may be
     rewarded for the rewards received by their mentees. All metrics listed
     above can work this way, rewarding or punishing mentors when their
-    students are doing better or worse.
+    students are doing better or
+    [worse]({% pst 2019/jun/2019-06-19-how-much-they-suffer %}).
 
 I can't stress this enough: each metric must have a
 [quality control]({% pst 2018/mar/2018-03-06-speed-vs-quality %}) mechanism.
@@ -174,6 +175,8 @@ Each bug must be verified by an architect: duplicates or
 bug reports are to be rejected. The same is true for every metric:
 [trust]({% pst 2019/may/2019-05-28-trust-or-not %}) without control
 leads to [cheating]({% pst 2017/nov/2017-11-21-trust-pay-lose %}).
+
+{% quote Trust without control leads to cheating. %}
 
 It is also worth mentioning that features,
 bugs, pull requests, and documentation pages may have different
