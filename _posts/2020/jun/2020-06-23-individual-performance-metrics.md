@@ -14,7 +14,7 @@ keywords:
   - metrics
   - performance
   - performance appraisal
-image: /images/2020/06/better-caul-saul.jpg
+image: /images/2020/06/better-call-saul.jpg
 jb_picture:
   caption: Better Call Saul, Season 5 (2019) by Vince Gilligan et al.
 ---
