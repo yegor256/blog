@@ -113,6 +113,7 @@ adequate
 adequately
 ADHD
 adhere
+adheres
 adjectives
 adjusts
 administering
@@ -164,6 +165,7 @@ aggregator
 aggressive
 aggressively
 agile
+agilebuddha
 AgileEE
 agility
 agnostic
@@ -177,6 +179,7 @@ ah
 ahead
 AI-powered
 aim
+aimed
 aiming
 aintshy
 air
@@ -271,6 +274,7 @@ ancestors
 ancient
 and
 anders
+anderson
 andreea
 android
 andronache
@@ -554,6 +558,7 @@ available
 avatar
 avenues
 average
+avienaash
 avoid
 avoidance
 avoided
@@ -570,6 +575,7 @@ awesome-risks
 aws
 axes
 axioms
+axosoft
 azure
 ba
 baby
@@ -679,6 +685,7 @@ behind
 behind-the-scenes
 beijing
 being
+beings
 belief
 beliefs
 believe
@@ -713,6 +720,7 @@ betterembsw
 between
 beware
 beyond
+bhuwan
 bi-sexuals
 bible
 bibrarian
@@ -849,6 +857,7 @@ bozhidar
 braces
 bracket
 brackets
+bradley
 brain
 brainbench
 brains
@@ -938,6 +947,7 @@ bullet-fast
 bullshit
 bullying
 bummer
+bump
 bunch
 bureaucracy
 bureaucratic
@@ -1313,6 +1323,7 @@ co-founder's
 co-founders
 co-located
 co-locating
+co-operation
 co-worker
 co-workers
 co-working
@@ -1442,6 +1453,7 @@ compassion
 compatibility
 compatible
 compensated
+compensates
 compensation
 compete
 competence
@@ -1615,6 +1627,7 @@ contabo
 contact
 contacted
 contacts
+contagious
 contain
 container
 containers
@@ -1830,6 +1843,7 @@ CTO's
 CTOs
 cuckoo
 cuisine
+culbert
 cultural
 culture
 cumbersome
@@ -1886,6 +1900,7 @@ danger
 dangerous
 DAO
 DAOs
+dare
 dark
 darker
 dashboard
@@ -2569,6 +2584,7 @@ employee
 employees
 employer
 employers
+employers'
 employing
 employment
 employs
@@ -2911,6 +2927,7 @@ fan
 fancy
 fantastic
 fantastically
+FAQ
 far
 farley
 farther
@@ -3155,6 +3172,8 @@ forum
 forward
 forwarded
 FOSDEM
+fosdick
+foster
 found
 foundation
 foundational
@@ -3642,7 +3661,6 @@ history
 hit
 hits
 hits-of-code
-hitsofcode
 hitter
 HN
 hobbies
@@ -3950,6 +3968,7 @@ initialization
 initialized
 initializers
 initially
+initiative
 inject
 injectable
 injecting
@@ -4175,6 +4194,7 @@ itself
 jack
 jaguar
 jail
+jain
 james
 jamesshore
 jamon
@@ -4241,6 +4261,7 @@ jez
 JFokus
 jgd
 jigsaw
+jimi
 jimmy
 JIRA
 jive
@@ -4312,6 +4333,7 @@ justified
 justify
 JVM
 kanban
+kane
 kapralov
 karachi
 karl
@@ -4357,6 +4379,7 @@ kinds
 king
 kingdom
 kings
+kirkman
 kiss
 kitchen
 kitties
@@ -4642,6 +4665,7 @@ loving
 low
 low-cohesion
 low-level
+low-quality
 lower
 lower-level
 lower-quality
@@ -4814,6 +4838,7 @@ mcbride
 mcconnell
 mccullough
 mcdonald's
+mchugh
 md
 me
 mean
@@ -4866,6 +4891,8 @@ men
 mental
 mentality
 mentally
+mentee
+mentees
 mention
 mentioned
 mentioning
@@ -5129,8 +5156,11 @@ MS-DOS
 MSc
 MSDN
 msec
+MTBF
+MTTF
 much
 mulcahy
+muller
 multi
 multi-billion-dollar
 multi-column
@@ -5252,6 +5282,7 @@ neutrality
 neutralize
 never
 never-ending
+never-good-to-merge
 nevertheless
 new
 newbie
@@ -5609,6 +5640,7 @@ overload
 overloaded
 overloading
 overly
+overly-paid
 overly-sugared
 overrate
 overridden
@@ -5888,6 +5920,7 @@ place
 placed
 places
 placing
+plagues
 plain
 plaintiff
 plan
@@ -6365,6 +6398,7 @@ quot
 quote
 quotes
 quoting
+quovantis
 race
 racism
 racist
@@ -6486,6 +6520,7 @@ recipients
 reckon
 recognition
 recognized
+recognizing
 recommend
 recommendation
 recommendations
@@ -6520,6 +6555,7 @@ redirect
 redirected
 rediscovered
 reduce
+reduced
 redundancy
 redundant
 refactor
@@ -6831,6 +6867,7 @@ rise
 rising
 risk
 risk-driven
+risk-taking
 risks
 risky
 rita
@@ -6939,6 +6976,7 @@ samir
 sample
 samples
 samsung
+samuel
 san
 sandbox
 sandler
@@ -7022,11 +7060,13 @@ scripts
 scroll
 scrolling
 SCRUM
+scrumology
 scrutinizer
 SDK
 SDK-s
 SE
 seamless
+sean
 search
 searches
 searching
@@ -7064,6 +7104,7 @@ segregate
 segregating
 segregation
 seibel
+sel
 select
 selected
 selection
@@ -7213,6 +7254,7 @@ ship
 shippable
 shipped
 ships
+shiralige
 shoes
 shoot
 shooting
@@ -7582,6 +7624,7 @@ stages
 staging
 stakeholder
 stakeholders
+stale
 stalin
 stamp
 stamps
@@ -8209,6 +8252,7 @@ tragedy
 tragic
 train
 trained
+trainer
 training
 trainings
 trainspotting
@@ -8332,15 +8376,18 @@ typesetting
 typical
 typing
 typo
+tyranny
 tzu
 ua
 uber
 ubuntu
+UCLA
 uglier
 ugliness
 ugly
 UI
 UI-visible
+uk
 ukraine
 ultimate
 ultimately
@@ -8580,6 +8627,7 @@ vegetarian
 vehicle
 vehicles
 veil
+veils
 velocity
 vendor
 venture
@@ -8652,6 +8700,7 @@ visitor
 visitors
 visual
 visually
+vitality
 vivian
 VLC
 vocabulary
@@ -8739,6 +8788,7 @@ webinars
 webkit
 webmasters
 webpage
+webservice
 website
 websites
 websockets
@@ -8754,6 +8804,7 @@ weeks
 wei
 weight
 weird
+welch
 welcome
 welcomed
 welcomes
@@ -8961,6 +9012,7 @@ yummy-scented
 zache
 zarathustra
 ZCE
+zdo
 zen
 zend
 zero

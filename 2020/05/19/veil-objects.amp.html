@@ -177,7 +177,8 @@ class Projects
   end
 end</pre>
 
-<p>This new <code>Veil</code> object is a decorator of <code>Project</code>. It behaves like
+<p>This new <code>Veil</code> object from <a href="https://rubygems.org/gems/veils">veils gem</a>
+is a decorator of <code>Project</code>. It behaves like
 a <code>Project</code>, but some of the methods on it are redefined: <code>name()</code> and <code>author()</code>.
 When they are called, the calls won’t reach the encapsulated <code>Project</code>.
 Instead, the data stored in the <code>Veil</code> will be returned.</p>
@@ -197,6 +198,9 @@ so you can see how they work.</p>
 but can never be pierced. It is very useful, when you don’t expect any
 data-modifying interactions to happen with the object and just want some
 of its methods to be pre-calculated.</p>
+
+<p>P.P.S. This is the implementation for
+<a href="https://github.com/binkley/kotlin-veil">Kotlin</a>.</p>
 
     </article>
   </body>
