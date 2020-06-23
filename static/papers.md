@@ -23,7 +23,10 @@ This is basically everything that was written
 and published by myself outside of this blog
 (in chronological order):
 
-Find me at [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ) too.
+Find me in
+[Scopus](https://www.scopus.com/authid/detail.uri?authorId=30367443600),
+[Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ)
+and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 
 [The Impact of Constructors on the Validity of Class Cohesion Metrics](http://icsa-conferences.org/2020/index.html),
 IEEE International Conference on Software Architecture, Brazil,

@@ -73,6 +73,7 @@ to the best open source project at the time, which I pick myself out of about a 
 a more or less fair [competition](/award.html).
 
 I'm also a bit of a [scientist](/papers.html):
+[Scopus](https://www.scopus.com/authid/detail.uri?authorId=30367443600),
 [Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
 [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor).
 
