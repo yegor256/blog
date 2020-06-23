@@ -25,86 +25,86 @@ and published by myself outside of this blog
 
 Find me at [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ) too.
 
-[The Impact of Constructors on the Validity of Class Cohesion Metrics](http://icsa-conferences.org/2020/index.html)<br/>
-IEEE International Conference on Software Architecture, Brazil<br/>
-March 2020<br/>
+[The Impact of Constructors on the Validity of Class Cohesion Metrics](http://icsa-conferences.org/2020/index.html),
+IEEE International Conference on Software Architecture, Brazil,
+March 2020,
 [PDF](/pdf/2020/icsa20.pdf)
 
-[Why Programmers Should Curb Their Enthusiasm, and Thinking About Computational Thinking](https://cacm.acm.org/magazines/2019/9/238957-why-programmers-should-curb-their-enthusiasm-and-thinking-about-computational-thinking/fulltext)<br/>
-Communications of the ACM, Volume 62, Number 9<br/>
-September 2019<br/>
+[Why Programmers Should Curb Their Enthusiasm, and Thinking About Computational Thinking](https://cacm.acm.org/magazines/2019/9/238957-why-programmers-should-curb-their-enthusiasm-and-thinking-about-computational-thinking/fulltext),
+Communications of the ACM, Volume 62, Number 9,
+September 2019,
 [PDF](/pdf/2019/enthusiasm.pdf)
 
-[Discovering Bugs, or Ensuring Success?](https://cacm.acm.org/magazines/2018/9/230562-discovering-bugs-or-ensuring-success/fulltext)<br/>
-Communications of the ACM, Volume 61, Number 9<br/>
-August 2018<br/>
+[Discovering Bugs, or Ensuring Success?](https://cacm.acm.org/magazines/2018/9/230562-discovering-bugs-or-ensuring-success/fulltext),
+Communications of the ACM, Volume 61, Number 9,
+August 2018,
 [PDF](/pdf/2018/discovering-bugs.pdf)
 
-[We are Done with 'Hacking'](https://cacm.acm.org/magazines/2018/7/229044-we-are-done-with-hacking/fulltext)<br/>
-Communications of the ACM, Volume 61, Number 7<br/>
-July 2018<br/>
+[We are Done with 'Hacking'](https://cacm.acm.org/magazines/2018/7/229044-we-are-done-with-hacking/fulltext),
+Communications of the ACM, Volume 61, Number 7,
+July 2018,
 [PDF](/pdf/2018/we-are-done-with-hacking.pdf)
 
-[Method and Software of NetBout](https://www.google.com/patents/US20120117164)<br/>
-US patent application 12/943,022<br/>
+[Method and Software of NetBout](https://www.google.com/patents/US20120117164),
+US patent application 12/943,022,
 November 2010
 
-[How to Prevent SVN Conflicts in Distributed Agile PHP Projects](https://www.phparch.com/magazine/2010-2/august/)<br/>
-php|Architect<br/>
-August 2010<br/>
+[How to Prevent SVN Conflicts in Distributed Agile PHP Projects](https://www.phparch.com/magazine/2010-2/august/),
+php|Architect,
+August 2010,
 [PDF](/pdf/2010/phpArchitect-conflicts.pdf)
 
-[Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)<br/>
-US patent application 12/840,306<br/>
+[Puzzle Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476),
+US patent application 12/840,306,
 July 2010
 
-[phpRack — Integration Testing Framework](https://www.phparch.com/magazine/2010-2/june/)<br/>
-php|Architect<br/>
-June 2010<br/>
+[phpRack — Integration Testing Framework](https://www.phparch.com/magazine/2010-2/june/),
+php|Architect,
+June 2010,
 [PDF](/pdf/2010/phpArchitect-phpRack.pdf)
 
-[FaZend Object Relational Mapping](https://www.phparch.com/magazine/2010-2/february/)<br/>
-php|Architect<br/>
-February 2010<br/>
+[FaZend Object Relational Mapping](https://www.phparch.com/magazine/2010-2/february/),
+php|Architect,
+February 2010,
 [PDF](/pdf/2010/phpArchitect-fazend-orm.pdf)
 
-[Project Management Robot Method and Software](https://www.google.com/patents/US20110196798)<br/>
-US patent application 12/703,202<br/>
+[Project Management Robot Method and Software](https://www.google.com/patents/US20110196798),
+US patent application 12/703,202,
 February 2010
 
-[Quality of Process Control in Software Projects](http://www.iwsm-mensura.org/2009)<br/>
-IWSM/Mensura, Amsterdam<br/>
-November 2009<br/>
+[Quality of Process Control in Software Projects](http://www.iwsm-mensura.org/2009),
+IWSM/Mensura, Amsterdam,
+November 2009,
 [PDF](/pdf/2009/IWSM09-article.pdf)
 
-[Quality of Code Can be Planned and Controlled](http://www.iaria.org/conferences2009/ProgramVALID09.html)<br/>
-The First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009)<br/>
-Porto, Portugal<br/>
-September 2009<br/>
+[Quality of Code Can be Planned and Controlled](http://www.iaria.org/conferences2009/ProgramVALID09.html),
+The First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009),
+Porto, Portugal,
+September 2009,
 [PDF](/pdf/2009/VALID09-article.pdf)
 
-[Competitive Risk Identification Method for Distributed Teams](http://seafood.ethz.ch/2009/Files/flyer09.pdf)<br/>
-3rd International Conference on Software Engineering Approaches For Offshore and Outsourced Development (SEAFOOD 2009)<br/>
-ETH Zurich, Switzerland<br/>
-July 2009<br/>
+[Competitive Risk Identification Method for Distributed Teams](http://seafood.ethz.ch/2009/Files/flyer09.pdf),
+3rd International Conference on Software Engineering Approaches For Offshore and Outsourced Development (SEAFOOD 2009),
+ETH Zurich, Switzerland,
+July 2009,
 [PDF](/pdf/2009/SEAFOOD09-article.pdf)
 
-[Method for Software Cost Estimating w/Scope Champions](http://www.springer.com/us/book/9783642021510)<br/>
-10th International Conference, PROFES 2009<br/>
-Oulu, Finland<br/>
+[Method for Software Cost Estimating w/Scope Champions](http://www.springer.com/us/book/9783642021510),
+10th International Conference, PROFES 2009,
+Oulu, Finland,
 June 2009
 
-[Method and software for the measurement of quality of process](https://www.google.com/patents/US20100114638)<br/>
-US patent application 12/264,370<br/>
+[Method and software for the measurement of quality of process](https://www.google.com/patents/US20100114638),
+US patent application 12/264,370,
 November 2008
 
-[Method for software cost estimating using scope champions](https://www.google.com/patents/US20100042968)<br/>
-US patent application 12/193,010<br/>
+[Method for software cost estimating using scope champions](https://www.google.com/patents/US20100042968),
+US patent application 12/193,010,
 August 2008
 
-[The Interactive Databases Approach to the User Interface Modeling](http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98)<br/>
-KRDB, Seattle<br/>
-May 1998<br/>
+[The Interactive Databases Approach to the User Interface Modeling](http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98),
+KRDB, Seattle,
+May 1998,
 [PDF](/pdf/1998/KRDB98-article.pdf)
 
 I published something even earlier, but can't
