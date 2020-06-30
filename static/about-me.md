@@ -51,6 +51,7 @@ I'm the founder and lead architect of
 [Takes](http://www.takes.org),
 [Rultor](http://www.rultor.com),
 and [a few others](/pets.html).
+You can sponsor me on [GitHub](https://github.com/sponsors/yegor256).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering, and a detailed description of
 [my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
