@@ -49,7 +49,8 @@ problem. We want to keep `t` secret, and that's a good desire.
 
 Now, we want to have the ability to print temperature in Fahrenheit. The most
 obvious approach would be to introduce another method, `toFahrenheitString()`,
-or add a Boolean flag to the object, which will change the behavior
+or add a Boolean [flag]({% pst 2016/apr/2016-04-19-object-must-not-be-configurable %})
+to the object, which will change the behavior
 of method `toString()`, right? Either one of these solutions is better than adding
 a method `getT()`, but neither one is perfect.
 
