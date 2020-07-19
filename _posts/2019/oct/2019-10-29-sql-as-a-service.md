@@ -45,7 +45,7 @@ You can also upload and download
 your data, but via their [API](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html).
 And you [pay](https://aws.amazon.com/s3/pricing/) for each API request,
 each byte hosted, and each byte transferred, instead of a monthly fee.
-Which one would you chose?
+Which one would you choose?
 
 Obviously, you would go with S3. Why? What is the fundamental difference
 between these two? The key difference is in their [SLAs](https://en.wikipedia.org/wiki/Service-level_agreement):
