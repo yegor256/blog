@@ -205,3 +205,5 @@ and the worst ... [quickly]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right
 find the way out.
 
 Which one are you?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Is there a metric to measure programmers&#39; performance objectively?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1284853509540712455?ref_src=twsrc%5Etfw">July 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
