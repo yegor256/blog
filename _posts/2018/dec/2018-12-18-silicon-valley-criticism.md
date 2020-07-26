@@ -51,7 +51,8 @@ cost-efficient.
 
 Maybe this is how it should be, if a country wants its people to work instead
 of having fun and carelessly enjoying life. Americans *do* work. Don't get me wrong,
-it's good. This is what I love in the Valley---it's very focused on results.
+it's good. This is what [I love]({% pst 2019/feb/2019-02-12-silicon-valley-benefits %})
+in the Valley---it's very focused on results.
 But the price you pay---the ugliness of everything around you---seems too high for me.
 
 ## It is Insanely Correct ... Not
