@@ -230,3 +230,4 @@ I can't understand how in such a conservative environment new technologies
 and business ideas are able to show up and grow, like Airbnb, Uber, Tesla,
 or ... WhatsApp. Do you have an answer?
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Would you like to live and work in Silicon Valley?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1287287132516757506?ref_src=twsrc%5Etfw">July 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
