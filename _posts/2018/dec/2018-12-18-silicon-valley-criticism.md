@@ -19,7 +19,9 @@ jb_picture:
 ---
 
 Silicon Valley is a great place to be ... or maybe not. I've spent five years there,
-from 2011 till 2016. I did enjoy some parts of it, but others were not enjoyable
+from 2011 till 2016. I
+[did enjoy]({% pst 2019/feb/2019-02-12-silicon-valley-benefits %})
+some parts of it, but others were not enjoyable
 at all. Here is a quick summary of what's wrong with this territory. I can't speak about
 the rest of the United States since, even though I've seen some other places, I've
 never lived there for more than a month. Long story short, the territory
