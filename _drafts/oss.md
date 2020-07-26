@@ -1,0 +1,122 @@
+---
+layout: post
+title: "Open Source Etiquette"
+date: 2020-07-28
+place: Moscow, Russia
+tags: oss
+description: |
+  Demonstrating respect to others in the world of
+  software development means a few simple but rather hard
+  to follow principles.
+keywords:
+  - etiquette
+  - github etiquette
+  - github etiquette rules
+  - online etiquette
+  - etiquette online
+image: /images/2020/07/
+jb_picture:
+  caption: ...
+---
+
+Here is a short list of common cortesy rules in open source
+software development. Actually, not only there, but they are most
+visible when you do GitHub-based coding. I strongly believe than
+sooner or later all programming will be open source and these rules
+will apply to everybody. Thus, starting following them now, no matter
+whether you are an active Apache contributor or a happy owner
+of "Java for Dummies" book, will make sense.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+In no particular order:
+
+**Make Small [Pull Requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)**.
+A recent [research](https://www.researchgate.net/publication/325730783_Modern_code_review_a_case_study_at_google)
+made by Caitlin Sadowski et al. from Google and University of Zurich
+demonstrated that there is a strong correlation between change size
+and review quality: larger changes (pull requests) negatively affect quality.
+According to this article, Google developers
+are strongly encouraged to make small, incremental changes.
+Aside from [Google](https://google.github.io/eng-practices/review/developer/small-cls.html),
+many others explicitly say the same:
+[Microsoft](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Contributing/PullRequests.html#keep-pull-requests-small),
+[Zalando](https://engineering.zalando.com/posts/2017/10/a-plea-for-small-pull-requests.html),
+[Atlassian](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests),
+and
+[OpenSource.com](https://opensource.com/article/18/6/anatomy-perfect-pull-request).
+
+**[Markdown](https://guides.github.com/features/mastering-markdown/) Your Texts [Nicely](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)**.
+I didn't manage to find any scientific research on this, maybe because it's
+obvious: the text "why f is nil?" is much easier to read than "why `f` is `nil`?"
+Rich text formatting not only make the text look nicer, but also helps
+readers digest the content faster and with more pleasure. After you learn Markdown,
+I'd suggest reading this blog post of Aaron Stannard from PetaBridge:
+[How to Use Github Professionally](https://petabridge.com/blog/use-github-professionally/).
+
+**Say Please, Thanks, and Sorry**.
+[According](https://nypost.com/2014/02/15/popes-advice-to-couples-say-please-thanks-and-sorry/)
+to Pope Francis, the recipe for success lies in saying three simple words.
+He didn't mean open source developers, but the advice perfectly applies to
+us programmers. There are tons of articles written about online etiquette, all
+of them are basically about the same:
+ask nicely, be greatful, and be ready to admit a mistake. I would recommend
+[15 rules for communicating at GitHub](https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/)
+by Ben Balter, a Senior Product Manager at GitHub.
+
+**Make Descriptive [Commits](https://git-scm.com/docs/git-commit)**.
+The style of formatting Git (I'm sure you are using it) commit messages is usually
+very specific in each project. However, there are some similarities and
+common rules. I would recommend these blog posts:
+[How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) by Chris Beams,
+[Some tips on commit etiquette](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) by Jeremy Gunter,
+and
+[https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html](A Note About Git Commit Messages) by Tim Pope.
+Also, check this out:
+[conventionalcommits.org](https://www.conventionalcommits.org/)
+and
+[50/72 Formatting](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting).
+
+**Have an [Avatar](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile)**.
+The [study](https://academic.oup.com/jcmc/article/11/1/153/4616661) of
+Kristine L. Nowak et al. from University of Connecticut,
+demostrates that users with avatars, especially feminine and anthropomorphic,
+are more likely to catch attention than those who have
+no profile pictures (or have default ones provided by GitHub).
+Of course, not only the avatar matters, but many other things your
+GitHub profile must have: description, email, pinned repositories, etc.
+Use this profile as an example: [@m0nica](https://github.com/m0nica).
+
+**Stay Online**.
+Offline communications are much cheaper than online tickets:
+just shout out the question in the office and get an answer immediately.
+No need to write those long tickets, formulating questions in English, waiting
+for the assignee to post an answer, and so on. However, offline talks
+hurt the project, for [so many reasons]({% pst 2016/aug/2016-08-23-communication-maturity %}).
+Every time you move from
+GitHub issue to a Slack chat to discuss the problem: you are doing a bad
+favor to the project and all its participants. Remember that.
+
+**Report Nicely**.
+Just like in Git commits, bug reporting rules differ from project to project,
+but basic principles remain [the same]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}).
+Just google for "[how to write a bug report](https://www.google.com/search?q=how+to+write+a+bug+report)"
+and listen to what those bloggers say. Your bug reports demonstrate
+[who you are]({% pst 2018/jan/2018-01-23-sociotech-skills %})
+even better than your code. You may practice by submitting questions
+to StackOverflow: the community there will punish you for all mistakes,
+quickly training your reporting skills.
+
+**Make Elegant READMEs**.
+I wrote about this [before]({% pst 2019/apr/2019-04-23-elegant-readme %}):
+the importance of a perfectly written and formatted
+`README` file in an open source project is difficult to overemphasize.
+Writing good code is important, but presenting it is part of online
+etiquette: high-quality documentation means respect to the users
+of your products.
+
+This seems to be it. If you do all of these, you will demonstrate
+respect to other developers and they will respect you back.
+Did I forget anything important?

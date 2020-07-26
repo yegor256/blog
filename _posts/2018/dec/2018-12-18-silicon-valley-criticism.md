@@ -57,7 +57,7 @@ But the price you pay---the ugliness of everything around you---seems too high f
 
 ## It is Insanely Correct ... Not
 
-You have to expect Social Justice Warriors to be everywhere:
+You have to expect [SJWs](https://en.wikipedia.org/wiki/Social_justice_warrior) to be everywhere:
 among your co-workers, gym buddies, close friends, employers, and employees.
 You have to be constantly on the alert. You can't say "blacks" or "chicks," you have
 to remember that they are "Afro-Americans" and "ladies." You can't joke about
@@ -67,7 +67,7 @@ you may never resolve.
 
 What's funny is that <del>almost</del> every single white male I've met there was a racist, but
 not publicly of course. They all claimed to be tolerant but in a private
-conversation were often whispering the n-word into my ear, while
+conversation were often whispering the [n-word](https://en.wikipedia.org/wiki/Nigger) into my ear, while
 speaking about the race problem. They always had a handful of racist jokes
 when talking about their house keepers, who were all Mexicans.
 
