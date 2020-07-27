@@ -19,13 +19,13 @@ jb_picture:
   caption: ...
 ---
 
-Here is a short list of common cortesy rules in open source
-software development. Actually, not only there, but they are most
-visible when you do GitHub-based coding. I strongly believe than
+Here is a short list of common courtesy rules for open source
+software development. Actually, they apply elsewhere also, but they are most
+visible when you do GitHub-based coding. I strongly believe that
 sooner or later all programming will be open source and these rules
-will apply to everybody. Thus, starting following them now, no matter
+will apply to everybody. Consequently, it makes sense to start following them now,
 whether you are an active Apache contributor or a happy owner
-of "Java for Dummies" book, will make sense.
+of the "Java for Dummies" book.
 
 <!--more-->
 
@@ -34,8 +34,8 @@ of "Java for Dummies" book, will make sense.
 In no particular order:
 
 **Make Small [Pull Requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)**.
-A recent [research](https://www.researchgate.net/publication/325730783_Modern_code_review_a_case_study_at_google)
-made by Caitlin Sadowski et al. from Google and University of Zurich
+Some recent [research](https://www.researchgate.net/publication/325730783_Modern_code_review_a_case_study_at_google)
+done by Caitlin Sadowski et al. from Google and the University of Zurich
 demonstrated that there is a strong correlation between change size
 and review quality: larger changes (pull requests) negatively affect quality.
 According to this article, Google developers
@@ -50,10 +50,10 @@ and
 
 **[Markdown](https://guides.github.com/features/mastering-markdown/) Your Texts [Nicely](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)**.
 I didn't manage to find any scientific research on this, maybe because it's
-obvious: the text "why f is nil?" is much easier to read than "why `f` is `nil`?"
-Rich text formatting not only make the text look nicer, but also helps
+obvious: the text "why is f nil?" is much easier to read than "why is `f` `nil`?"
+Rich text formatting not only makes the text look nicer, but also helps
 readers digest the content faster and with more pleasure. After you learn Markdown,
-I'd suggest reading this blog post of Aaron Stannard from PetaBridge:
+I'd suggest reading this blog post by Aaron Stannard from PetaBridge:
 [How to Use Github Professionally](https://petabridge.com/blog/use-github-professionally/).
 
 **Say Please, Thanks, and Sorry**.
@@ -61,52 +61,52 @@ I'd suggest reading this blog post of Aaron Stannard from PetaBridge:
 to Pope Francis, the recipe for success lies in saying three simple words.
 He didn't mean open source developers, but the advice perfectly applies to
 us programmers. There are tons of articles written about online etiquette, all
-of them are basically about the same:
-ask nicely, be greatful, and be ready to admit a mistake. I would recommend
+of them are basically the same:
+ask nicely, be grateful, and be ready to admit a mistake. I would recommend
 [15 rules for communicating at GitHub](https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/)
 by Ben Balter, a Senior Product Manager at GitHub.
 
 **Make Descriptive [Commits](https://git-scm.com/docs/git-commit)**.
-The style of formatting Git (I'm sure you are using it) commit messages is usually
+The style of formatting Git commit messages (I'm sure you are using Git) is usually
 very specific in each project. However, there are some similarities and
 common rules. I would recommend these blog posts:
 [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) by Chris Beams,
 [Some tips on commit etiquette](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) by Jeremy Gunter,
 and
 [https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html](A Note About Git Commit Messages) by Tim Pope.
-Also, check this out:
+Also, check these out:
 [conventionalcommits.org](https://www.conventionalcommits.org/)
 and
 [50/72 Formatting](https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting).
 
 **Have an [Avatar](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile)**.
-The [study](https://academic.oup.com/jcmc/article/11/1/153/4616661) of
+A [study](https://academic.oup.com/jcmc/article/11/1/153/4616661) by
 Kristine L. Nowak et al. from University of Connecticut,
-demostrates that users with avatars, especially feminine and anthropomorphic,
+demonstrates that users with avatars, especially feminine and anthropomorphic ones,
 are more likely to catch attention than those who have
 no profile pictures (or have default ones provided by GitHub).
-Of course, not only the avatar matters, but many other things your
-GitHub profile must have: description, email, pinned repositories, etc.
+Of course, it's not only the avatar that matters; your GitHub profile
+must also have many other things: description, email, pinned repositories, etc.
 Use this profile as an example: [@m0nica](https://github.com/m0nica).
 
 **Stay Online**.
-Offline communications are much cheaper than online tickets:
-just shout out the question in the office and get an answer immediately.
+Offline communication is much cheaper than online tickets:
+just shout out a question in the office and you get an answer immediately.
 No need to write those long tickets, formulating questions in English, waiting
-for the assignee to post an answer, and so on. However, offline talks
+for the assignee to post an answer, and so on. However, offline talk
 hurt the project, for [so many reasons]({% pst 2016/aug/2016-08-23-communication-maturity %}).
-Every time you move from
-GitHub issue to a Slack chat to discuss the problem: you are doing a bad
-favor to the project and all its participants. Remember that.
+Every time you move from a
+GitHub issue to a Slack chat to discuss the problem, you are doing a diservice
+to the project and all its participants. Remember that.
 
 **Report Nicely**.
-Just like in Git commits, bug reporting rules differ from project to project,
-but basic principles remain [the same]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}).
-Just google for "[how to write a bug report](https://www.google.com/search?q=how+to+write+a+bug+report)"
+Just like with Git commits, bug reporting rules differ from project to project,
+but the basic principles remain [the same]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}).
+Just google "[how to write a bug report](https://www.google.com/search?q=how+to+write+a+bug+report)"
 and listen to what those bloggers say. Your bug reports demonstrate
 [who you are]({% pst 2018/jan/2018-01-23-sociotech-skills %})
 even better than your code. You may practice by submitting questions
-to StackOverflow: the community there will punish you for all mistakes,
+to StackOverflow: the community there will punish you for all your mistakes,
 quickly training your reporting skills.
 
 **Make Elegant READMEs**.
@@ -118,5 +118,5 @@ etiquette: high-quality documentation means respect to the users
 of your products.
 
 This seems to be it. If you do all of these, you will demonstrate
-respect to other developers and they will respect you back.
+respect to other developers and they will respect you in return.
 Did I forget anything important?
