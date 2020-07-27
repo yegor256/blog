@@ -48,9 +48,10 @@ many others explicitly say the same:
 and
 [OpenSource.com](https://opensource.com/article/18/6/anatomy-perfect-pull-request).
 
-**[Markdown](https://guides.github.com/features/mastering-markdown/) Your Texts [Nicely](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)**.
+**Use [Nice](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
+[Markdown](https://guides.github.com/features/mastering-markdown/) in Your Docs**.
 I didn't manage to find any scientific research on this, maybe because it's
-obvious: the text "why is f nil?" is much easier to read than "why is `f` `nil`?"
+obvious: the text "why is `f` `nil`?" is much easier to read than "why is f nil?"
 Rich text formatting not only makes the text look nicer, but also helps
 readers digest the content faster and with more pleasure. After you learn Markdown,
 I'd suggest reading this blog post by Aaron Stannard from PetaBridge:
@@ -73,7 +74,7 @@ common rules. I would recommend these blog posts:
 [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) by Chris Beams,
 [Some tips on commit etiquette](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) by Jeremy Gunter,
 and
-[https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html](A Note About Git Commit Messages) by Tim Pope.
+[A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) by Tim Pope.
 Also, check these out:
 [conventionalcommits.org](https://www.conventionalcommits.org/)
 and
@@ -81,7 +82,7 @@ and
 
 **Have an [Avatar](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile)**.
 A [study](https://academic.oup.com/jcmc/article/11/1/153/4616661) by
-Kristine L. Nowak et al. from University of Connecticut,
+Kristine L. Nowak et al. from the University of Connecticut,
 demonstrates that users with avatars, especially feminine and anthropomorphic ones,
 are more likely to catch attention than those who have
 no profile pictures (or have default ones provided by GitHub).
@@ -94,9 +95,9 @@ Offline communication is much cheaper than online tickets:
 just shout out a question in the office and you get an answer immediately.
 No need to write those long tickets, formulating questions in English, waiting
 for the assignee to post an answer, and so on. However, offline talk
-hurt the project, for [so many reasons]({% pst 2016/aug/2016-08-23-communication-maturity %}).
+hurts the project, for [so many reasons]({% pst 2016/aug/2016-08-23-communication-maturity %}).
 Every time you move from a
-GitHub issue to a Slack chat to discuss the problem, you are doing a diservice
+GitHub issue to a Slack chat to discuss the problem, you are doing a disservice
 to the project and all its participants. Remember that.
 
 **Report Nicely**.
