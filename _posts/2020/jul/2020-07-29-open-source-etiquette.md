@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open Source Etiquette"
-date: 2020-07-28
+date: 2020-07-29
 place: Moscow, Russia
 tags: oss
 description: |
@@ -14,9 +14,9 @@ keywords:
   - github etiquette rules
   - online etiquette
   - etiquette online
-image: /images/2020/07/
+image: /images/2020/07/hong-kil-dong.jpg
 jb_picture:
-  caption: ...
+  caption: Hong Kil-dong (1986) by Kil-in Kim
 ---
 
 Here is a short list of common courtesy rules for open source
