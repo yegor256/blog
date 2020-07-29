@@ -1,4 +1,5 @@
 a-ha
+aaron
 abandon
 abdul
 abide
@@ -314,6 +315,7 @@ answered
 answering
 answers
 anthony
+anthropomorphic
 anti-
 anti-depressant
 anti-depressants
@@ -462,6 +464,7 @@ asset
 assets
 assign
 assigned
+assignee
 assigning
 assignment
 assigns
@@ -484,6 +487,7 @@ asylum
 at
 ate
 atlantic
+atlassian
 atmosphere
 atom
 atomic
@@ -556,6 +560,7 @@ automattic
 availability
 available
 avatar
+avatars
 avenues
 average
 avienaash
@@ -607,6 +612,7 @@ balances
 bald
 ball
 balls
+balter
 bandwidth
 bang
 bangalore
@@ -646,6 +652,7 @@ bcba
 BDMSummit
 be
 beach
+beams
 beans
 beanstalk
 bear
@@ -985,6 +992,7 @@ caching
 CACM
 cactoos
 cafe
+caitlin
 cake
 calculate
 calculated
@@ -1579,6 +1587,7 @@ congratulations
 conjoined
 connect
 connected
+connecticut
 connecting
 connection
 connections
@@ -1673,6 +1682,7 @@ controls
 convenience
 convenient
 convention
+conventionalcommits
 conventions
 conversation
 conversations
@@ -1729,6 +1739,7 @@ corrective
 correctly
 correctness
 correlated
+correlation
 correspond
 corrupted
 corruption
@@ -2731,6 +2742,7 @@ ethan
 etherium
 ethic
 ethical
+etiquette
 euro
 europe
 european
@@ -2979,6 +2991,7 @@ fellows
 felt
 female
 females
+feminine
 feminist
 fetch
 fetches
@@ -3162,6 +3175,7 @@ forms
 formula
 formulate
 formulated
+formulating
 forth
 forthcoming
 fortran
@@ -3195,6 +3209,7 @@ frames
 framework
 framework's
 frameworks
+francis
 francisco
 francs
 frank
@@ -3426,6 +3441,7 @@ graphical
 graphicdesigning
 graphics
 graphs
+grateful
 grave
 gray
 great
@@ -3481,6 +3497,7 @@ guilty
 gulp
 gunshots
 gunslingers
+gunter
 gurus
 guseyn
 gut
@@ -4254,6 +4271,7 @@ jekyll
 jenkins
 jeopardize
 JEP
+jeremy
 jerry
 jersey
 jetbrains
@@ -4326,12 +4344,12 @@ JUnit
 junkie
 just
 just-started
-justice
 justification
 justifications
 justified
 justify
 JVM
+kaicode
 kanban
 kane
 kapralov
@@ -4398,6 +4416,7 @@ kotlin
 KPIs
 krakow
 kristina
+kristine
 krubner
 kruchten
 kuban
@@ -5296,10 +5315,12 @@ newsletter
 next
 NFRs
 nginx
+nica
 nice
 nicely
 nicely-looking
 niceness
+nicer
 niche
 nierstrasz
 nietzsche
@@ -5307,6 +5328,7 @@ night
 nightmare
 nightmares
 nights
+nil
 nine
 nine-to-five
 nine-year-old
@@ -5390,6 +5412,7 @@ november
 novices
 now
 nowadays
+nowak
 nowhere
 NPM
 npmjs
@@ -5631,6 +5654,7 @@ overcome
 overcomplicated
 overconfidence
 overdue
+overemphasize
 overestimated
 overflow
 overflows
@@ -5846,6 +5870,7 @@ pescio
 pessimistic
 pet
 pet-friendly
+petabridge
 peter
 petersburg
 pets
@@ -5897,6 +5922,7 @@ pin
 pinaf
 ping
 pings
+pinned
 pinpoint
 pint
 pinterest
@@ -6003,6 +6029,7 @@ POO
 pool
 poor
 poorly
+pope
 popular
 popularity
 populate
@@ -6959,6 +6986,7 @@ sacrificed
 sad
 sadistic
 sadly
+sadowski
 safari
 safe
 safely
@@ -7314,6 +7342,7 @@ silicon
 silly
 silver
 similar
+similarities
 similarly
 simple
 simplecov
@@ -7357,6 +7386,7 @@ sixth
 size
 sizeable
 sizes
+SJWs
 skapral
 skateboard
 skeet
@@ -7645,6 +7675,7 @@ stands
 standup
 standups
 stanford
+stannard
 stapler
 starbucks
 stare
@@ -8744,7 +8775,6 @@ WAR
 warm
 warn
 warnings
-warriors
 wars
 was
 wasn't
@@ -9010,6 +9040,7 @@ yukl
 yummy
 yummy-scented
 zache
+zalando
 zarathustra
 ZCE
 zdo
@@ -9036,3 +9067,4 @@ zoo
 zoom
 zuckerberg
 zuckerberg's
+zurich

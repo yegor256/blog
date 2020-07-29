@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-06-23T05:17:29+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">To Measure or Not to Measure</title><link href="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html" rel="alternate" type="text/html" title="To Measure or Not to Measure" /><published>2020-06-23T00:00:00+00:00</published><updated>2020-06-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/06/23/individual-performance-metrics</id><content type="html" xml:base="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html">&lt;p&gt;The question &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/26596/metric-by-which-to-hold-developers-accountable&quot;&gt;was asked&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-07-29T05:53:51+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Open Source Etiquette</title><link href="https://www.yegor256.com/2020/07/29/open-source-etiquette.html" rel="alternate" type="text/html" title="Open Source Etiquette" /><published>2020-07-29T00:00:00+00:00</published><updated>2020-07-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/07/29/open-source-etiquette</id><content type="html" xml:base="https://www.yegor256.com/2020/07/29/open-source-etiquette.html">&lt;p&gt;Here is a short list of common courtesy rules for open source
+software development. Actually, they apply elsewhere also, but they are most
+visible when you do GitHub-based coding. I strongly believe that
+sooner or later all programming will be open source and these rules
+will apply to everybody. Consequently, it makes sense to start following them now,
+whether you are an active Apache contributor or a happy owner
+of the “Java for Dummies” book.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Hong Kil-dong (1986) by Kil-in Kim&quot; src=&quot;/images/2020/07/hong-kil-dong.jpg&quot; longdesc=&quot;#87cd841c&quot; /&gt;&lt;figcaption id=&quot;87cd841c&quot;&gt;Hong Kil-dong (1986) by Kil-in Kim&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;In no particular order:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make Small &lt;a href=&quot;https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests&quot;&gt;Pull Requests&lt;/a&gt;&lt;/strong&gt;.
+Some recent &lt;a href=&quot;https://www.researchgate.net/publication/325730783_Modern_code_review_a_case_study_at_google&quot;&gt;research&lt;/a&gt;
+done by Caitlin Sadowski et al. from Google and the University of Zurich
+demonstrated that there is a strong correlation between change size
+and review quality: larger changes (pull requests) negatively affect quality.
+According to this article, Google developers
+are strongly encouraged to make small, incremental changes.
+Aside from &lt;a href=&quot;https://google.github.io/eng-practices/review/developer/small-cls.html&quot;&gt;Google&lt;/a&gt;,
+many others explicitly say the same:
+&lt;a href=&quot;https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Contributing/PullRequests.html#keep-pull-requests-small&quot;&gt;Microsoft&lt;/a&gt;,
+&lt;a href=&quot;https://engineering.zalando.com/posts/2017/10/a-plea-for-small-pull-requests.html&quot;&gt;Zalando&lt;/a&gt;,
+&lt;a href=&quot;https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests&quot;&gt;Atlassian&lt;/a&gt;,
+and
+&lt;a href=&quot;https://opensource.com/article/18/6/anatomy-perfect-pull-request&quot;&gt;OpenSource.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use &lt;a href=&quot;https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax&quot;&gt;Nice&lt;/a&gt;
+&lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;Markdown&lt;/a&gt; in Your Docs&lt;/strong&gt;.
+I didn’t manage to find any scientific research on this, maybe because it’s
+obvious: the text “why is &lt;code&gt;f&lt;/code&gt; &lt;code&gt;nil&lt;/code&gt;?” is much easier to read than “why is f nil?”
+Rich text formatting not only makes the text look nicer, but also helps
+readers digest the content faster and with more pleasure. After you learn Markdown,
+I’d suggest reading this blog post by Aaron Stannard from PetaBridge:
+&lt;a href=&quot;https://petabridge.com/blog/use-github-professionally/&quot;&gt;How to Use Github Professionally&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Say Please, Thanks, and Sorry&lt;/strong&gt;.
+&lt;a href=&quot;https://nypost.com/2014/02/15/popes-advice-to-couples-say-please-thanks-and-sorry/&quot;&gt;According&lt;/a&gt;
+to Pope Francis, the recipe for success lies in saying three simple words.
+He didn’t mean open source developers, but the advice perfectly applies to
+us programmers. There are tons of articles written about online etiquette, all
+of them are basically the same:
+ask nicely, be grateful, and be ready to admit a mistake. I would recommend
+&lt;a href=&quot;https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/&quot;&gt;15 rules for communicating at GitHub&lt;/a&gt;
+by Ben Balter, a Senior Product Manager at GitHub.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make Descriptive &lt;a href=&quot;https://git-scm.com/docs/git-commit&quot;&gt;Commits&lt;/a&gt;&lt;/strong&gt;.
+The style of formatting Git commit messages (I’m sure you are using Git) is usually
+very specific in each project. However, there are some similarities and
+common rules. I would recommend these blog posts:
+&lt;a href=&quot;https://chris.beams.io/posts/git-commit/&quot;&gt;How to Write a Git Commit Message&lt;/a&gt; by Chris Beams,
+&lt;a href=&quot;https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56&quot;&gt;Some tips on commit etiquette&lt;/a&gt; by Jeremy Gunter,
+and
+&lt;a href=&quot;https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html&quot;&gt;A Note About Git Commit Messages&lt;/a&gt; by Tim Pope.
+Also, check these out:
+&lt;a href=&quot;https://www.conventionalcommits.org/&quot;&gt;conventionalcommits.org&lt;/a&gt;
+and
+&lt;a href=&quot;https://stackoverflow.com/questions/2290016/git-commit-messages-50-72-formatting&quot;&gt;50/72 Formatting&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Have an &lt;a href=&quot;https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile&quot;&gt;Avatar&lt;/a&gt;&lt;/strong&gt;.
+A &lt;a href=&quot;https://academic.oup.com/jcmc/article/11/1/153/4616661&quot;&gt;study&lt;/a&gt; by
+Kristine L. Nowak et al. from the University of Connecticut,
+demonstrates that users with avatars, especially feminine and anthropomorphic ones,
+are more likely to catch attention than those who have
+no profile pictures (or have default ones provided by GitHub).
+Of course, it’s not only the avatar that matters; your GitHub profile
+must also have many other things: description, email, pinned repositories, etc.
+Use this profile as an example: &lt;a href=&quot;https://github.com/m0nica&quot;&gt;@m0nica&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Stay Online&lt;/strong&gt;.
+Offline communication is much cheaper than online tickets:
+just shout out a question in the office and you get an answer immediately.
+No need to write those long tickets, formulating questions in English, waiting
+for the assignee to post an answer, and so on. However, offline talk
+hurts the project, for &lt;a href=&quot;/2016/08/23/communication-maturity.html&quot;&gt;so many reasons&lt;/a&gt;.
+Every time you move from a
+GitHub issue to a Slack chat to discuss the problem, you are doing a disservice
+to the project and all its participants. Remember that.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Report Nicely&lt;/strong&gt;.
+Just like with Git commits, bug reporting rules differ from project to project,
+but the basic principles remain &lt;a href=&quot;/2018/04/24/right-way-to-report-bugs.html&quot;&gt;the same&lt;/a&gt;.
+Just google “&lt;a href=&quot;https://www.google.com/search?q=how+to+write+a+bug+report&quot;&gt;how to write a bug report&lt;/a&gt;”
+and listen to what those bloggers say. Your bug reports demonstrate
+&lt;a href=&quot;/2018/01/23/sociotech-skills.html&quot;&gt;who you are&lt;/a&gt;
+even better than your code. You may practice by submitting questions
+to StackOverflow: the community there will punish you for all your mistakes,
+quickly training your reporting skills.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Make Elegant READMEs&lt;/strong&gt;.
+I wrote about this &lt;a href=&quot;/2019/04/23/elegant-readme.html&quot;&gt;before&lt;/a&gt;:
+the importance of a perfectly written and formatted
+&lt;code&gt;README&lt;/code&gt; file in an open source project is difficult to overemphasize.
+Writing good code is important, but presenting it is part of online
+etiquette: high-quality documentation means respect to the users
+of your products.&lt;/p&gt;
+
+&lt;p&gt;This seems to be it. If you do all of these, you will demonstrate
+respect to other developers and they will respect you in return.
+Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Here is a short list of common courtesy rules for open source software development. Actually, they apply elsewhere also, but they are most visible when you do GitHub-based coding. I strongly believe that sooner or later all programming will be open source and these rules will apply to everybody. Consequently, it makes sense to start following them now, whether you are an active Apache contributor or a happy owner of the “Java for Dummies” book.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" /></entry><entry><title type="html">To Measure or Not to Measure</title><link href="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html" rel="alternate" type="text/html" title="To Measure or Not to Measure" /><published>2020-06-23T00:00:00+00:00</published><updated>2020-06-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/06/23/individual-performance-metrics</id><content type="html" xml:base="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html">&lt;p&gt;The question &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/26596/metric-by-which-to-hold-developers-accountable&quot;&gt;was asked&lt;/a&gt;
 on StackExchange nine years ago (just around
 the time the site was launched): “If not
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Source_lines_of_code&quot;&gt;lines of code&lt;/a&gt;, then what is
@@ -207,7 +308,10 @@ everybody, making the best happy
 and the worst … &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;quickly&lt;/a&gt;
 find the way out.&lt;/p&gt;
 
-&lt;p&gt;Which one are you?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">The question was asked on StackExchange nine years ago (just around the time the site was launched): “If not lines of code, then what is a good metric by which to measure the effectiveness of remote programmers.” The answers, not surprisingly, were all along this line: programmers are not supposed to be measured! I bet those who answered were programmers themselves. Indeed, why would a programmer be interested in being measured and being reduced to a mere number?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/06/better-call-saul.jpg" /></entry><entry><title type="html">Veil Objects to Replace DTOs</title><link href="https://www.yegor256.com/2020/05/19/veil-objects.html" rel="alternate" type="text/html" title="Veil Objects to Replace DTOs" /><published>2020-05-19T00:00:00+00:00</published><updated>2020-05-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/19/veil-objects</id><content type="html" xml:base="https://www.yegor256.com/2020/05/19/veil-objects.html">&lt;p&gt;Here is a new idea I discovered just a few days ago while working
+&lt;p&gt;Which one are you?&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Is there a metric to measure programmers&amp;#39; performance objectively?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1284853509540712455?ref_src=twsrc%5Etfw&quot;&gt;July 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">The question was asked on StackExchange nine years ago (just around the time the site was launched): “If not lines of code, then what is a good metric by which to measure the effectiveness of remote programmers.” The answers, not surprisingly, were all along this line: programmers are not supposed to be measured! I bet those who answered were programmers themselves. Indeed, why would a programmer be interested in being measured and being reduced to a mere number?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/06/better-call-saul.jpg" /></entry><entry><title type="html">Veil Objects to Replace DTOs</title><link href="https://www.yegor256.com/2020/05/19/veil-objects.html" rel="alternate" type="text/html" title="Veil Objects to Replace DTOs" /><published>2020-05-19T00:00:00+00:00</published><updated>2020-05-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/19/veil-objects</id><content type="html" xml:base="https://www.yegor256.com/2020/05/19/veil-objects.html">&lt;p&gt;Here is a new idea I discovered just a few days ago while working
 with &lt;a href=&quot;https://github.com/yegor256/codexia&quot;&gt;Codexia&lt;/a&gt;,
 a Ruby web app. I had to fetch data rows from PostgreSQL and return
 objects to the client. It’s always been a problem for me, how to do that
@@ -893,7 +997,9 @@ never use
 use &lt;a href=&quot;/2016/04/12/java-annotations-are-evil.html&quot;&gt;no annotations&lt;/a&gt;,
 and so on. We, the EO adepts, claim many things, but not so many people
 believe us. Those non-believers &lt;a href=&quot;/testimonials.html&quot;&gt;say&lt;/a&gt;
-that we are trolls, at best. Their main argument is: everybody works differently,
+that we are trolls,
+&lt;a href=&quot;/2020/05/13/career-killer.html&quot;&gt;at best&lt;/a&gt;.
+Their main argument is: everybody works differently,
 why should we listen to you? I have no answer for them… well I had no answer, until I
 created &lt;a href=&quot;https://www.jpeek.org&quot;&gt;jPeek&lt;/a&gt; and started researching object &lt;em&gt;cohesion&lt;/em&gt;.&lt;/p&gt;
 
@@ -1096,108 +1202,4 @@ how you spend another few years with no fun.&lt;/p&gt;
 &lt;p&gt;Be thankful for its existence—your career can grow because of it.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;The boss doesn&amp;#39;t lead the team, doesn&amp;#39;t have a plan, doesn&amp;#39;t manage you, and doesn&amp;#39;t explain anything. What do you do?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1223864080135376897?ref_src=twsrc%5Etfw&quot;&gt;February 2, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">Being just yet another software developer in a large enterprise is a pain. You are surrounded by legacy code, inconsistent architecture, low quality standards (assuming they even exist), lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of that, the management is very chaotic: no strict plans, no task management, no objective metrics, no quality control, and no light at the end of the tunnel. You feel like a cog in the machine: arrive at nine, leave at five, be quiet, and paychecks will keep coming. If you are talented and ambitious, sooner or later you will start thinking about suicide resignation. But hold on!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/life-is-too-short.jpg" /></entry><entry><title type="html">Talented Programmers, Who Are They?</title><link href="https://www.yegor256.com/2019/12/31/talented-programmers.html" rel="alternate" type="text/html" title="Talented Programmers, Who Are They?" /><published>2019-12-31T00:00:00+00:00</published><updated>2019-12-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2019/12/31/talented-programmers</id><content type="html" xml:base="https://www.yegor256.com/2019/12/31/talented-programmers.html">&lt;p&gt;I’m not talking about those who are
-famous, well-paid, or the authors of big and popular products.
-They are not necessarily talented, even though their &lt;em&gt;results&lt;/em&gt; are outstanding.
-Talent is something some of us have as God’s gift.
-Very few of us… otherwise it would not be called a talent.
-We all know what talent looks like in music, sport,
-poetry, or the art of acting. We can tell right off the bat who’s got it and
-who is faking it, no matter how hard they try.
-Can we do the same after a short interview with a programmer? I believe we can.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Goodfellas (1990) by Martin Scorsese&quot; src=&quot;/images/2019/12/goodfellas.jpg&quot; longdesc=&quot;#91530686&quot; /&gt;&lt;figcaption id=&quot;91530686&quot;&gt;Goodfellas (1990) by Martin Scorsese&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I decided to read what others are saying about the art of interviewing and
-how they suggest we detect the talented among all the other regular
-software writers.
-&lt;a href=&quot;https://blog.codinghorror.com/on-interviewing-programmers/&quot;&gt;Jeff Attwood&lt;/a&gt;
-suggests paying attention to the person’s passion, communication skills,
-personal attitude, and the ability to work in a team.
-&lt;a href=&quot;https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30/&quot;&gt;Joel Spolsky&lt;/a&gt;
-suggests hiring those who are smart and can get things done.
-&lt;a href=&quot;http://www.lihaoyi.com/post/HowtoconductagoodProgrammingInterview.html&quot;&gt;Haoyi&lt;/a&gt;
-gives very detailed instructions for the interviewer with the focus being
-on the candidate’s ability to write code, discuss problems, reason
-about constraints, and be a person we would enjoy working with.&lt;/p&gt;
-
-&lt;p&gt;All of these make sense, but it’s not about talent.
-It’s about finding a person who can effectively write and maintain
-spaghetti code and be &lt;em&gt;happy&lt;/em&gt; about it (maybe with just a little
-dose of anti-depressants).&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;What exactly is talent? It’s an innate need to structure things.
-&lt;/aside&gt;
-
-&lt;p&gt;Imagine yourself recruiting yet another singer for a choir, which consists
-of people who have no ear for music. Would you need talent? I doubt a talented
-person would be able to sing in that choir. Well, maybe for a while, if you pay well enough. Just like any
-other team in any other industry, most software groups
-consist of &lt;em&gt;average&lt;/em&gt; code writers, not talented programmers. Modern programming, especially in big
-projects, is not about talented individuals, it’s about the team work of mediocre
-coders. That’s why all interview gurus teach us how to find yet
-another coder: properly educated, trained, skilled, and ready
-to write yet another pack of Spring controllers. And, of course, enjoy it.&lt;/p&gt;
-
-&lt;p&gt;But sing? No.&lt;/p&gt;
-
-&lt;p&gt;So, what exactly is talent?&lt;/p&gt;
-
-&lt;p&gt;It’s an innate need to &lt;em&gt;structure&lt;/em&gt; things.&lt;/p&gt;
-
-&lt;p&gt;Just like a musician, a talented programmer &lt;em&gt;physically&lt;/em&gt; can’t tolerate
-what &lt;em&gt;sounds&lt;/em&gt; wrong: ambiguity, inconsistency, chaos, irrationality, and
-lack of logic. A talented programmer &lt;em&gt;feels&lt;/em&gt; these things, while a mediocre
-one says “Whatever works!” and gets on with it.&lt;/p&gt;
-
-&lt;p&gt;Let me explain by example. Over the last five years I’ve been using the same
-&lt;a href=&quot;https://github.com/yegor256/quiz/blob/master/Parser.java&quot;&gt;simple piece of Java code&lt;/a&gt;
-to interview everybody who is interested in working with me.
-I ask them to review it and find what’s wrong. Try it now. You have five minutes.&lt;/p&gt;
-
-&lt;p&gt;How many issues did you find? Here are the
-&lt;a href=&quot;https://github.com/yegor256/quiz/wiki/java-answers&quot;&gt;answers&lt;/a&gt;. There is
-a prioritized list of defects I expect candidates to find. The most important
-are at the top—they are about &lt;em&gt;structural&lt;/em&gt; problems in the code. Mediocre
-developers are used to working with bad code and can easily put up with it.
-The class name is &lt;code&gt;Parser&lt;/code&gt;, but it has &lt;code&gt;get&lt;/code&gt; and &lt;code&gt;save&lt;/code&gt; methods? Who cares,
-as long as it works! The pair of methods is not &lt;code&gt;get&lt;/code&gt; and &lt;code&gt;set&lt;/code&gt;, but &lt;code&gt;get&lt;/code&gt; and …
-all of a sudden &lt;code&gt;save&lt;/code&gt;? Who cares, it works anyway! And so on. Mediocre
-programmers don’t feel &lt;em&gt;annoyed&lt;/em&gt; when they meet inconsistencies. Just like
-people with no ear for music, they &lt;em&gt;don’t hear&lt;/em&gt; anything wrong!&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;A talented programmer constantly demanding discipline and consistency looks like a crazy OCD patient.
-&lt;/aside&gt;
-
-&lt;p&gt;When I interview programmers, I don’t pay attention to how much they know
-about Java, how well they understand OOP, or how many projects they’ve
-managed to complete to date. And, of course, I don’t care
-how potentially likable they are. Instead, I pay attention to how much they &lt;em&gt;hate&lt;/em&gt;
-to see what doesn’t look right. I check how &lt;em&gt;intolerant to chaos&lt;/em&gt; they are.
-This is what my Java test is for.&lt;/p&gt;
-
-&lt;p&gt;To be honest, very few of them exhibit these qualities.&lt;/p&gt;
-
-&lt;p&gt;And that’s because very few projects (and project managers) need these qualities.
-Most processes and codebases are poorly structured.
-Any sign of intolerance of that structure, or honest attempts to introduce some discipline,
-only annoys mediocre programmers, who are always in the majority.
-A talented programmer constantly demanding discipline and
-consistency looks like a crazy
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Obsessive%E2%80%93compulsive_disorder&quot;&gt;OCD patient&lt;/a&gt;.
-Nobody understands what’s wrong and simply ignores him/her, at best.
-Moreover, bad coding practices coming from popular frameworks
-and poor management principles are encouraged by Agile and its coaches.
-They train us to have no ear for high quality in programming.&lt;/p&gt;
-
-&lt;p&gt;The market’s demand now is mediocrity, not talent.&lt;/p&gt;
-
-&lt;p&gt;Thus, don’t worry if you feel that you don’t have much of
-a talent—in most projects you will be far better off without it.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do you think you have a &lt;a href=&quot;https://twitter.com/hashtag/talent?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#talent&lt;/a&gt; for programming?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1213642929845293058?ref_src=twsrc%5Etfw&quot;&gt;January 5, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">I’m not talking about those who are famous, well-paid, or the authors of big and popular products. They are not necessarily talented, even though their results are outstanding. Talent is something some of us have as God’s gift. Very few of us… otherwise it would not be called a talent. We all know what talent looks like in music, sport, poetry, or the art of acting. We can tell right off the bat who’s got it and who is faking it, no matter how hard they try. Can we do the same after a short interview with a programmer? I believe we can.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2019/12/goodfellas.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">Being just yet another software developer in a large enterprise is a pain. You are surrounded by legacy code, inconsistent architecture, low quality standards (assuming they even exist), lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of that, the management is very chaotic: no strict plans, no task management, no objective metrics, no quality control, and no light at the end of the tunnel. You feel like a cog in the machine: arrive at nine, leave at five, be quiet, and paychecks will keep coming. If you are talented and ambitious, sooner or later you will start thinking about suicide resignation. But hold on!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/life-is-too-short.jpg" /></entry></feed>

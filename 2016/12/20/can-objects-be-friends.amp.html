@@ -103,7 +103,8 @@ problem. We want to keep <code>t</code> secret, and that’s a good desire.</p>
 
 <p>Now, we want to have the ability to print temperature in Fahrenheit. The most
 obvious approach would be to introduce another method, <code>toFahrenheitString()</code>,
-or add a Boolean flag to the object, which will change the behavior
+or add a Boolean <a href="/2016/04/19/object-must-not-be-configurable.html">flag</a>
+to the object, which will change the behavior
 of method <code>toString()</code>, right? Either one of these solutions is better than adding
 a method <code>getT()</code>, but neither one is perfect.</p>
 
