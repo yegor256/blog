@@ -95,7 +95,7 @@ subscribers).
   <textarea id="reason" style="width:100%;" name="reason" tabindex="2" class="field field-text" rows="6" required="required"></textarea>
   <label for="subscribe">&nbsp;</label>
   <button id="subscribe" class="field" tabindex="3" type="submit">Subscribe</button>
-  <span class="note">3865+ happy subscribers and counting...</span>
+  <span class="note">4865+ happy subscribers and counting...</span>
 </fieldset></form>
 
 By the way, this is what some people think about me
