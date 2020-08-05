@@ -41,6 +41,11 @@ informed about everything I do publicly, including these webinars.
 
 <!-- {% webinar 12-03-2020 49 eeXdDvIVu-Y What Is Cohesion in OOP? %} -->
 
+<a href="https://www.youtube.com/watch?v=nErn5G_JHhE"><img src="https://i.ytimg.com/vi/nErn5G_JHhE/mqdefault.jpg" class="wnr" alt="Webinar no.50 by Yegor Bugayenko"/></a>
+August 5, 2020<br/>
+&#35;50: **Veil Objects to Replace DTOs**<br/>
+We all know that DTOs (aka value objects) are evil. But what is the alternative when we need some data to be transferred temporarily? I'm suggesting Veil Objects and this webinar demonstrates how they are used.
+
 <a href="https://www.youtube.com/watch?v=eeXdDvIVu-Y"><img src="https://i.ytimg.com/vi/eeXdDvIVu-Y/mqdefault.jpg" class="wnr" alt="Webinar no.49 by Yegor Bugayenko"/></a>
 March 12, 2020<br/>
 &#35;49: **What Is Cohesion in OOP?**<br/>
