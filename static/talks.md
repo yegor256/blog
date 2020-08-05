@@ -109,12 +109,6 @@ Each lecture starts on 19:30 and lasts for 90 minutes. They
 all will be video-recorded and published on
 [YouTube](https://www.youtube.com/c/yegor256?sub_confirmation=1).
 
-<img src="https://javafest.com.ua/assets/img/java_fest_logo_50.png" class="future-talk" alt="JavaFest 2020"/><br/>
-Is Java Getting Better?<br/>
-[JavaFest](https://javafest.com.ua/)<br/>
-<span class="city">Kyiv</span>, <span class="country">Ukraine</span><br/>
-30 May (ONLINE!).
-
 <!--
 <div class="talk-event">&nbsp;</div>
 <img src="http://icsa-conferences.org/2020/img/logos/ICSA2020_logo_alterada.png" class="future-talk" alt="ICSA 2020"/><br/>
@@ -142,41 +136,29 @@ Soft Skills of the Future<br/>
 4 April.
 -->
 
-<div class="talk-event">&nbsp;</div>
-<img src="https://nastachku.ru/design/themes/nastachku_theme/media/images/red-logo.png" class="future-talk" alt="Стачка 2020"/><br/>
-Прекрасное Айти Далёко (keynote)<br/>
-[Стачка](https://nastachku.ru/prekrasnoe-it-daleko)<br/>
-<span class="city">Ulyanovsk</span>, <span class="country">Russia</span><br/>
-<del>23 May</del> some time later.
-
-<div class="talk-event">&nbsp;</div>
-<div class="talk-event">&nbsp;</div>
-<img src="https://static.tildacdn.com/tild3232-6131-4838-b663-313466346463/hero_hero.svg" class="future-talk" alt="Мир, Труд, Мобайл 2020"/><br/>
-Opening keynote...<br/>
-[Мир, Труд, Мобайл](http://springbreak.ru/)<br/>
-<span class="city">Kazan</span>, <span class="country">Russia</span><br/>
-<del>July</del> later.
-
-<div class="talk-event">&nbsp;</div>
+<!-- <div class="talk-event">&nbsp;</div>
 <img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
 Decentralized Architectures: Blockchain and Beyond<br/>
 [Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
 <span class="city">St.Petersburg</span>, <span class="country">Russia</span><br/>
 <del>August</del> later.
+-->
 
-<div class="talk-event">&nbsp;</div>
+<!-- <div class="talk-event">&nbsp;</div>
 <img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
 The Biggest Mistake of an Honest Tester<br/>
 [TestConf](https://testconf.ru/)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 15-17 September.
+-->
 
-<div class="talk-event">&nbsp;</div>
+<!-- <div class="talk-event">&nbsp;</div>
 <img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
 Something about HR...<br/>
 [HR&Technology Expo 2020](https://hr-tech.ru/)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 29-30 September.
+-->
 
 <hr/>
 
