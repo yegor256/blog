@@ -110,6 +110,8 @@ This code will generate too many redundant SQL requests. We will do round-trips
 to PostgreSQL to fetch the data we had a few milliseconds ago, while
 we were doing `SELECT * FROM project`.
 
+{% youtube nErn5G_JHhE %}
+
 The easiest and the most obvious solution, which many of you might suggest,
 is to encapsulate the retrieved Hash into the `Project` object. In other
 words, turn `Project` into a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %}),
