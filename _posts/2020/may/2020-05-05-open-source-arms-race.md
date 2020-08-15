@@ -157,6 +157,8 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     with its massive [code opening](https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/)
     and the [purchase](https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/) of GitHub.
 
+{% youtube D12gi1x6Cdw %}
+
   * **Retaining**.
     Being an active participant of a visible open source software product
     is a great [intrinsic motivator](https://opensource.com/article/19/11/why-contribute-open-source-software)
