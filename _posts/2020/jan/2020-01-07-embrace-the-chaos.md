@@ -45,7 +45,8 @@ anymore, since everything is already perfect. How would you feel now?
 It seems that it's exactly this scenario that would give you the feeling of being
 merely a cog in a well-oiled machine.
 
-If you want to make a career and you have the energy for it,
+If you want to make a [career]({% pst 2018/nov/2018-11-27-you-can-do-better %})
+and you have the energy for it,
 the first scenario is a much better place to be: such an imperfect system _needs_
 improvements. And, of course, the one who makes them
 gets the rewards: bonuses, a promotion, a raise, and so on.
@@ -65,6 +66,7 @@ how you spend another few years with no fun.
 
 Instead, embrace the chaos!
 
-Be thankful for its existence---your career can grow because of it.
+Be thankful for its existence---your
+[career]({% pst 2018/nov/2018-11-27-you-can-do-better %}) can grow because of it.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The boss doesn&#39;t lead the team, doesn&#39;t have a plan, doesn&#39;t manage you, and doesn&#39;t explain anything. What do you do?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1223864080135376897?ref_src=twsrc%5Etfw">February 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
