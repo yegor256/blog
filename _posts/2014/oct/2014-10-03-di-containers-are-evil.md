@@ -30,6 +30,8 @@ turn it into an _anti-pattern_.
 
 <!--more-->
 
+{% youtube MNxG1xcA2uA %}
+
 I'm not going to discuss obvious arguments against
 "setter injections"
 (like in [Spring IoC](http://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html))
