@@ -94,7 +94,7 @@ Theory) won't contribute properly. If the team doesn't reward correctly, it's
 a defect in the system. Just like a bug in source code, this defect in
 the motivational system can either be 1) concealed (Fail Safe) or 2) revealed (Fail Fast).
 
-{% quote Encouraging team members to contribute altruistically means concealing management defects %}
+{% quote Encouraging team members to contribute altruistically means concealing management defects. %}
 
 Encouraging team members to contribute altruistically means concealing the defect.
 Programmers will keep working, slowly losing their motivation over a long
