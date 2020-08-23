@@ -77,6 +77,8 @@ Let's try to give two extreme answers:
     methods with almost no
     arguments, and ... a better object-oriented design.
 
+{% youtube eeXdDvIVu-Y %}
+
 The common denominator is [_cohesion_](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29).
 
 Highly cohesive classes include attributes and methods that are related to
