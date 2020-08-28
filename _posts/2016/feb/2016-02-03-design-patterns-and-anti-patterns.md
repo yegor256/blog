@@ -71,7 +71,7 @@ not facades for them. This design pattern is very procedural
 in its spirit, since a facade is nothing more than a collection
 of [procedures]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}).
 
-[<span class='orange'>Factory Method</span>](https://en.wikipedia.org/wiki/Factory_method_pattern).
+[<span class='red'>Factory Method</span>](https://en.wikipedia.org/wiki/Factory_method_pattern).
 <del>This one seems OK</del>. It's [bad]({% pst 2017/nov/2017-11-14-static-factory-methods %})!
 
 [<span class='red'>Flyweight</span>](https://en.wikipedia.org/wiki/Flyweight_pattern).
