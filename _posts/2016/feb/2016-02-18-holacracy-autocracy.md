@@ -32,10 +32,10 @@ that are never doubted by subordinates and an explicitly defined hierarchy.
 {% jb_picture_body %}
 
 According to Wikipedia at the time of writing, a
-[**holacracy**](https://en.wikipedia.org/wiki/Holacracy) exists when
+[_holacracy_](https://en.wikipedia.org/wiki/Holacracy) exists when
 "authority and decision-making are distributed" while,
 on the other hand,
-[**autocracy**](https://en.wikipedia.org/wiki/Autocracy) exists when
+[_autocracy_](https://en.wikipedia.org/wiki/Autocracy) exists when
 "supreme power is concentrated in the hands of one person."
 
 When I say organization, I mean a team, a startup, a company, that
@@ -56,7 +56,7 @@ _inspire_. They don't punish, they celebrate success and mourn failure
 together with everybody. Well, that's the idea of a holacracy.
 And it actually works. I've seen it many times.
 
-{% quote The key objective of a project is to end, while an organization's objective is to survive %}
+{% quote The key objective of a project is to end, while an organization's objective is to survive. %}
 
 However, when we're talking about _project_ management, this very same approach will
 have catastrophic consequences. A project is something very different
@@ -86,7 +86,7 @@ our own ways." Having this philosophy in mind and understanding the motivation
 of everybody involved, the PM must use instruments that have nothing to do
 with what keeps the organization alive.
 
-{% quote A project will finish successfully if we value discipline, subordination, awards, punishments, and rules %}
+{% quote A project will finish successfully if we value discipline, subordination, awards, punishments, and rules. %}
 
 An organization/team/company/family will stay together for a long time if
 we value things like tolerance, respect, patience, equality, and appreciation.
@@ -98,3 +98,5 @@ To summarize my thoughts, I would say that a successful company combines
 these two approaches by being a [matrix](https://en.wikipedia.org/wiki/Matrix_management)
 organization that promotes holacracy in the team and autocracy in
 the projects it is working on.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">How does your team usually resolve conflicts?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1302490957963759617?ref_src=twsrc%5Etfw">September 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
