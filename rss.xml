@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-08-14T06:16:07+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Open Source Etiquette</title><link href="https://www.yegor256.com/2020/07/29/open-source-etiquette.html" rel="alternate" type="text/html" title="Open Source Etiquette" /><published>2020-07-29T00:00:00+00:00</published><updated>2020-07-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/07/29/open-source-etiquette</id><content type="html" xml:base="https://www.yegor256.com/2020/07/29/open-source-etiquette.html">&lt;p&gt;Here is a short list of common courtesy rules for open source
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-09-06T06:02:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Open Source Etiquette</title><link href="https://www.yegor256.com/2020/07/29/open-source-etiquette.html" rel="alternate" type="text/html" title="Open Source Etiquette" /><published>2020-07-29T00:00:00+00:00</published><updated>2020-07-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/07/29/open-source-etiquette</id><content type="html" xml:base="https://www.yegor256.com/2020/07/29/open-source-etiquette.html">&lt;p&gt;Here is a short list of common courtesy rules for open source
 software development. Actually, they apply elsewhere also, but they are most
 visible when you do GitHub-based coding. I strongly believe that
 sooner or later all programming will be open source and these rules
@@ -719,6 +719,17 @@ Microsoft is &lt;a href=&quot;https://www.businessinsider.de/international/micro
 with its massive &lt;a href=&quot;https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/&quot;&gt;code opening&lt;/a&gt;
 and the &lt;a href=&quot;https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/&quot;&gt;purchase&lt;/a&gt; of GitHub.&lt;/p&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=D12gi1x6Cdw&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/D12gi1x6Cdw/mqdefault.jpg&quot; alt=&quot;YouTube video #D12gi1x6Cdw&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M105: Open source developers inevitably have better soft and tech skills;
+        23 June 2020.&lt;/div&gt;&lt;/aside&gt;
+
+&lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Retaining&lt;/strong&gt;.
 Being an active participant of a visible open source software product
@@ -1186,7 +1197,8 @@ anymore, since everything is already perfect. How would you feel now?
 It seems that it’s exactly this scenario that would give you the feeling of being
 merely a cog in a well-oiled machine.&lt;/p&gt;
 
-&lt;p&gt;If you want to make a career and you have the energy for it,
+&lt;p&gt;If you want to make a &lt;a href=&quot;/2018/11/27/you-can-do-better.html&quot;&gt;career&lt;/a&gt;
+and you have the energy for it,
 the first scenario is a much better place to be: such an imperfect system &lt;em&gt;needs&lt;/em&gt;
 improvements. And, of course, the one who makes them
 gets the rewards: bonuses, a promotion, a raise, and so on.&lt;/p&gt;
@@ -1207,7 +1219,8 @@ how you spend another few years with no fun.&lt;/p&gt;
 
 &lt;p&gt;Instead, embrace the chaos!&lt;/p&gt;
 
-&lt;p&gt;Be thankful for its existence—your career can grow because of it.&lt;/p&gt;
+&lt;p&gt;Be thankful for its existence—your
+&lt;a href=&quot;/2018/11/27/you-can-do-better.html&quot;&gt;career&lt;/a&gt; can grow because of it.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;The boss doesn&amp;#39;t lead the team, doesn&amp;#39;t have a plan, doesn&amp;#39;t manage you, and doesn&amp;#39;t explain anything. What do you do?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1223864080135376897?ref_src=twsrc%5Etfw&quot;&gt;February 2, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">Being just yet another software developer in a large enterprise is a pain. You are surrounded by legacy code, inconsistent architecture, low quality standards (assuming they even exist), lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of that, the management is very chaotic: no strict plans, no task management, no objective metrics, no quality control, and no light at the end of the tunnel. You feel like a cog in the machine: arrive at nine, leave at five, be quiet, and paychecks will keep coming. If you are talented and ambitious, sooner or later you will start thinking about suicide resignation. But hold on!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/life-is-too-short.jpg" /></entry></feed>
