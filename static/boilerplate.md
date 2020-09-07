@@ -16,15 +16,17 @@ nospell: true
 ---
 
 Quick bio:<br/>
-CEO at Zerocracy and author of Elegant Objects.
+Lab Director in Huawei, founder of Zerocracy and author of Elegant Objects.
 
 Short bio:<br/>
-Yegor is a CEO of Zerocracy,
+Yegor is a lab director in Huawei,
+a founder of Zerocracy,
 an author of Elegant Objects book series about OOP,
 and a hands-on Java/Ruby developer.
 
 Full bio:<br/>
-Yegor Bugayenko is a founder and CEO of Zerocracy, which replaces annoying bosses with AI bots;
+Yegor Bugayenko is a Lab Director in Huawei RRI,
+a founder of Zerocracy, which replaces annoying bosses with AI bots;
 an OOP fundamentalist;
 an author of "Elegant Objects" book series;
 a provocative blogger at yegor256.com;
@@ -34,10 +36,10 @@ a creator of Cactoos, Takes, JCabi, and Rultor;
 a philanthropist donating four thousand dollars annually to an open source award.
 
 Employer:<br/>
-Zerocracy, Inc. (www.zerocracy.com)
+Huawei RRI (www.huawei.com)
 
 Position:<br/>
-CEO
+Lab Director
 
 Headshot (JPEG, 256x256):<br/>
 [https://www.yegor256.com/images/face-256x256.jpg](https://www.yegor256.com/images/face-256x256.jpg)
@@ -85,15 +87,17 @@ Telegram:<br/>
 <hr/>
 
 Кратко:<br/>
-Основатель Zerocracy и автор книги Elegant Objects.
+Директор лаборатории в Huawei, основатель Zerocracy и автор книги Elegant Objects.
 
 Краткое описание:<br/>
-Егор &mdash; CEO и основатель Zerocracy,
+Егор &mdash; директор лаборатории в Huawei,
+основатель Zerocracy,
 автор Elegant Objects, серии книг об ООП,
 и программист на Java и Ruby.
 
 Полное описание:<br/>
-Егор Бугаенко &mdash; основатель и CEO компании Zerocracy, разрабатывающей AI роботов для управления программистами;
+Егор Бугаенко &mdash; директор лаборатории в Huawei,
+основатель компании Zerocracy, разрабатывающей AI роботов для управления программистами;
 ООП-фундаменталист;
 автор "Elegant Objects" &mdash; серии книг об объектно-ориентированном программировании;
 создатель криптовалюты Zold для быстрых микроплатежей;
