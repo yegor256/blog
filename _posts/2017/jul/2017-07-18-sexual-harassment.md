@@ -65,7 +65,7 @@ that "you either go along and we go out, or you won't be hired." Of course,
 "no hire" may not hurt as much as a knife or a fist in the face, but it
 does hurt. Especially if you are a woman, a member of a minority group.
 
-I'm a <del>sexist</del> [gentleman]({% pst 2017/jul/2017-07-04-sexism %}),
+I'm a <del>sexist</del> gentleman,
 I feel bad when I see women being threatened. I want to protect them
 and I expect our system of justice to help me, just
 like it helps when we deal with physical violence.
