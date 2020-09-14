@@ -39,10 +39,10 @@ informed about everything I do publicly, including these webinars.
 
 ## 2020
 
-{% webinar 09-09-2020 51 rsWrgxm8ktU Fat and Skinny Design %}
+{% webinar 16-09-2020 51 rsWrgxm8ktU Fat and Skinny Design %}
 
 <a href="https://www.youtube.com/watch?v=rsWrgxm8ktU"><img src="https://i.ytimg.com/vi/rsWrgxm8ktU/mqdefault.jpg" class="wnr" alt="Webinar no.51 by Yegor Bugayenko"/></a>
-September 9, 2020<br/>
+September 16, 2020<br/>
 &#35;51: **Fat and Skinny Design**<br/>
 It seems that type/class hierarchies in OOP may be designed in two extreme ways: either with full encapsulation of data in mind; or with just a few interfaces making raw data visible, and letting classes deal with it, parse it, and turn it into smaller data elements. You may be surprised, but I’m suggesting the second option is more elegant.
 
