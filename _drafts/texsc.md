@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 Do you use [LaTeX](https://www.latex-project.org/)
-for your academic and technical texts? You don't?
+for your academic and technical writings? You don't?
 You should! It's the <del>most</del> only professional instrument for
 making properly formatted PDF documents.
 MS Word and Apple Pages are for <del>secretaries</del> non-tech people,
