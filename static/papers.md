@@ -32,13 +32,13 @@ The Impact of Object Immutability on Some Class Cohesion Metrics,
 13th International Conference on Computer Science and Information Technology (ICCSIT),
 Amsterdam, The Netherlands,
 October 2020,
-[PDF](/pdf/2020/iccsit20.pdf)
+[PDF](/pdf/2020/iccsit20.pdf), [LaTeX](https://github.com/yegor256/immutability-vs-cohesion)
 
 [The Impact of Object Immutability on the Java Class Size](https://www.sciencedirect.com/science/article/pii/S1877050920321281),
 Knowledge-Based and Intelligent Information & Engineering Systems,
 Verona, Italy,
 September 2020,
-[PDF](/pdf/2020/kes20.pdf)
+[PDF](/pdf/2020/kes20.pdf), [LaTeX](https://github.com/yegor256/size-vs-immutability)
 
 [The Impact of Constructors on the Validity of Class Cohesion Metrics](http://icsa-conferences.org/2020/index.html),
 IEEE International Conference on Software Architecture (ICSA),
