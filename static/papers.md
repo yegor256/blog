@@ -28,6 +28,12 @@ Find me in
 [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ)
 and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 
+[The Impact of Object Immutability on the Java Class Size](https://www.sciencedirect.com/science/article/pii/S1877050920321281),
+Part of special issue:
+Knowledge-Based and Intelligent Information & Engineering Systems,
+September 2020,
+[PDF](/pdf/2020/kes20.pdf)
+
 [The Impact of Constructors on the Validity of Class Cohesion Metrics](http://icsa-conferences.org/2020/index.html),
 IEEE International Conference on Software Architecture, Brazil,
 March 2020,

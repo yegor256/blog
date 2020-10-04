@@ -109,7 +109,6 @@ Each lecture starts on 19:30 and lasts for 90 minutes. They
 all will be video-recorded and published on
 [YouTube](https://www.youtube.com/c/yegor256?sub_confirmation=1).
 
-
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="HighLoad++ 2020"/><br/>
 Decentralized Architectures: Blockchain and Beyond<br/>
