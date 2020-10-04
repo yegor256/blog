@@ -109,40 +109,13 @@ Each lecture starts on 19:30 and lasts for 90 minutes. They
 all will be video-recorded and published on
 [YouTube](https://www.youtube.com/c/yegor256?sub_confirmation=1).
 
-<!--
-<div class="talk-event">&nbsp;</div>
-<img src="http://icsa-conferences.org/2020/img/logos/ICSA2020_logo_alterada.png" class="future-talk" alt="ICSA 2020"/><br/>
-The Impact of Constructors on the Validity of Class Cohesion Metrics<br/>
-[ICSA'20](http://icsa-conferences.org/2020/index.html)<br/>
-<span class="city">Salvador</span>, <span class="country">Brazil</span><br/>
-20 March.
--->
 
-<!--
 <div class="talk-event">&nbsp;</div>
-<img src="https://mipt.ru/upload/medialibrary/ad1/About-mipt.jpg" class="future-talk" alt="MIPT 2020"/><br/>
-Open lecture
-in Moscow Institute of Physics and Technology (MIPT)
-about Soft Skills<br/>
-1 April.
--->
-
-<!--
-<div class="talk-event">&nbsp;</div>
-<img src="https://static.tildacdn.com/tild3764-3932-4635-a163-333134346163/BreakPoint_.png" class="future-talk" alt="Breakpoint Forum 2020"/><br/>
-Soft Skills of the Future<br/>
-[Breakpoint Forum](https://forumbreakpoint.net/)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-4 April.
--->
-
-<!-- <div class="talk-event">&nbsp;</div>
-<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="Saint HighLoad++ 2020"/><br/>
+<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="HighLoad++ 2020"/><br/>
 Decentralized Architectures: Blockchain and Beyond<br/>
-[Saint HighLoad++](https://www.highload.ru/spb/2020)<br/>
-<span class="city">St.Petersburg</span>, <span class="country">Russia</span><br/>
-<del>August</del> later.
--->
+[HighLoad++](https://www.highload.ru/moscow/2020/abstracts/6620)<br/>
+<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
+9-10 November.
 
 <!-- <div class="talk-event">&nbsp;</div>
 <img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
