@@ -44,7 +44,7 @@ September 2020,
 IEEE International Conference on Software Architecture (ICSA),
 Salvador, Brazil,
 March 2020,
-[PDF](/pdf/2020/icsa20.pdf)
+[PDF](/pdf/2020/icsa20.pdf), [LaTeX](https://github.com/yegor256/ctors-vs-cohesion)
 
 [Why Programmers Should Curb Their Enthusiasm, and Thinking About Computational Thinking](https://cacm.acm.org/magazines/2019/9/238957-why-programmers-should-curb-their-enthusiasm-and-thinking-about-computational-thinking/fulltext),
 Communications of the ACM, Volume 62, Number 9,
