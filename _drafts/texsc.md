@@ -29,7 +29,8 @@ while LaTeX is serious. It's perfect in so many ways, thanks to
 (the creator of TeX) and
 [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport)
 (the author of LaTeX),
-but it lacks a very convenient feature: [spell checking](https://tex.stackexchange.com/questions/42843).
+but it lacks a very convenient feature:
+[spell checking](https://tex.stackexchange.com/questions/42843).
 The only solution I've found so far, which works perfectly for my texts is
 [GNU aspell](http://aspell.net/).
 
@@ -39,8 +40,8 @@ The only solution I've found so far, which works perfectly for my texts is
 
 [GNU aspell](http://aspell.net/) is a command line tool,
 which expects you to provide the LaTeX source code
-(indeed, it is code, not "text") as an input and prints you the list of spelling
-errors. The beauty of it is that it's able to check only the text, ignoring
+(indeed, it is code, not "text") as an input and prints you the list of found spelling
+errors. The beauty of it is that it can check only the text, ignoring
 TeX commands. For example, this is LaTeX document:
 
 {% highlight text %}
@@ -50,21 +51,22 @@ Hello, \textbf{Yegor}!
 \end{document}
 {% endhighlight %}
 
-If we would feed this text to some other spell checker or GNU aspell without the
-option `--mode=tex`, the word `textbf` would be an obvious spelling mistake. Aspell,
-however, understands it as a LaTeX command.
+If we would feed this text to some other spell checker (or GNU aspell without the
+option `--mode=tex`) the word `textbf` would be an obvious spelling mistake; aspell,
+however, understands it as a LaTeX command and ignores it.
 Moreover, aspell can understand the word `Yegor`, even though it's not
 an English word, by using a custom dictionary provided by the `--pws` option.
 
-There are a few other useful features, which I decided to aggregate
-in a small wrapper around aspell: [textsc](https://github.com/yegor256/texsc)
+There are a few other useful features in aspell. Long story short, I decided to create
+a small wrapper around aspell, to simplify the process of its configuration:
+[textsc](https://github.com/yegor256/texsc)
 (stands for "TeX Spell Checking").
 It's a command line tool, which you install and then run, for example like this
 (you can see how it's configured in the `Makefile` of
 [this paper](https://github.com/yegor256/requs-paper)):
 
 {% highlight text %}
-$ texsc --pws aspell.en.pws --ignore=code,nospell article.tex
+$ texsc --pws aspell.en.pws --ignore=code,citep article.tex
 {% endhighlight %}
 
 There is a list of arguments you can supply to `texsc`:
