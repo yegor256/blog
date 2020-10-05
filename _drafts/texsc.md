@@ -31,7 +31,7 @@ while LaTeX is serious. It's perfect in so many ways, thanks to
 (the author of LaTeX),
 but it lacks one very convenient feature:
 [spell checking](https://tex.stackexchange.com/questions/42843).
-The only solution I've found so far, which works perfectly for my documents is
+The only solution I've found so far, which works perfectly for my documents, is
 [GNU aspell](http://aspell.net/).
 
 <!--more-->
@@ -93,4 +93,4 @@ There is a list of arguments you can supply to `texsc`:
 
 I use `texsc` in all my LaTeX projects, usually as part of their
 build cycle, which I automate with [GNU make](https://www.gnu.org/software/make/).
-You can do the same, it's open source.
+You can do the same, as it's open source.
