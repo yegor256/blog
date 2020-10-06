@@ -14,9 +14,9 @@ keywords:
   - latex spelling
   - latex aspell
   - latex check spelling
-image: /images/2020/10/
+image: /images/2020/10/zero-2.jpg
 jb_picture:
-  caption: ...
+  caption: Zero 2 (2010) by Emilis Velyvis
 ---
 
 Do you use [LaTeX](https://www.latex-project.org/)
