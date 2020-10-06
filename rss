@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-10-04T15:53:18+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Open Source Etiquette</title><link href="https://www.yegor256.com/2020/07/29/open-source-etiquette.html" rel="alternate" type="text/html" title="Open Source Etiquette" /><published>2020-07-29T00:00:00+00:00</published><updated>2020-07-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/07/29/open-source-etiquette</id><content type="html" xml:base="https://www.yegor256.com/2020/07/29/open-source-etiquette.html">&lt;p&gt;Here is a short list of common courtesy rules for open source
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-10-06T06:01:16+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Spell Check Your LaTeX Writings Using GNU Aspell</title><link href="https://www.yegor256.com/2020/10/06/latex-spell-checking.html" rel="alternate" type="text/html" title="Spell Check Your LaTeX Writings Using GNU Aspell" /><published>2020-10-06T00:00:00+00:00</published><updated>2020-10-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/06/latex-spell-checking</id><content type="html" xml:base="https://www.yegor256.com/2020/10/06/latex-spell-checking.html">&lt;p&gt;Do you use &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;
+for your academic and technical writings? You don’t?
+Well you should! It’s the &lt;del&gt;most&lt;/del&gt; only professional instrument for
+making properly formatted PDF documents.
+MS Word and Apple Pages are for &lt;del&gt;secretaries&lt;/del&gt; non-tech people,
+while LaTeX is serious. It’s perfect in so many ways, thanks to
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Donald_Knuth&quot;&gt;Donald Knuth&lt;/a&gt;
+(the creator of TeX) and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Leslie_Lamport&quot;&gt;Leslie Lamport&lt;/a&gt;
+(the author of LaTeX),
+but it lacks one very convenient feature:
+&lt;a href=&quot;https://tex.stackexchange.com/questions/42843&quot;&gt;spell checking&lt;/a&gt;.
+The only solution I’ve found so far, which works perfectly for my documents, is
+&lt;a href=&quot;http://aspell.net/&quot;&gt;GNU aspell&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Zero 2 (2010) by Emilis Velyvis&quot; src=&quot;/images/2020/10/zero-2.jpg&quot; longdesc=&quot;#e03fe95c&quot; /&gt;&lt;figcaption id=&quot;e03fe95c&quot;&gt;Zero 2 (2010) by Emilis Velyvis&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aspell.net/&quot;&gt;GNU aspell&lt;/a&gt; is a command line tool
+which expects you to provide the LaTeX source code
+(indeed, it is code, not “text”) as an input and prints a list of found spelling
+errors. The beauty of it is that it checks only the text, ignoring
+TeX commands. For example, this is LaTeX document:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;\documentclass{article}
+\begin{document}
+Hello, \textbf{Yegor}!
+\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If we feed this text to some other spell checker (or GNU aspell without the
+option &lt;code&gt;--mode=tex&lt;/code&gt;) the word &lt;code&gt;textbf&lt;/code&gt; would be an obvious spelling mistake; aspell,
+however, understands it as a LaTeX command and ignores it.
+Moreover, aspell can understand the word &lt;code&gt;Yegor&lt;/code&gt;, even though it’s not
+an English word, by using a custom dictionary provided by the &lt;code&gt;--pws&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;p&gt;There are a few other useful features in aspell. Long story short, I decided to create
+a small wrapper around aspell, to simplify the process of its configuration:
+&lt;a href=&quot;https://github.com/yegor256/texsc&quot;&gt;texsc&lt;/a&gt;
+(stands for “TeX Spell Checking”).
+It’s a command line tool, which you install and then run, for example like this
+(you can see how it’s configured in the &lt;code&gt;Makefile&lt;/code&gt; of
+&lt;a href=&quot;https://github.com/yegor256/requs-paper&quot;&gt;this paper&lt;/a&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ texsc --pws aspell.en.pws --ignore=code,citep article.tex&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There is a list of arguments you can supply to &lt;code&gt;texsc&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;--pws&lt;/code&gt; is the location of a custom dictionary, where each
+line is a word aspell is supposed to ignore. It’s important to
+have the first line equal to &lt;code&gt;personal_ws-1.1 en 741 utf-8&lt;/code&gt;. Why?
+I don’t know. But if it contains something else, aspell will just
+silently ignore the file. Nice, huh?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;--ignore&lt;/code&gt; (you may have many of them) is the list of
+TeX commands, and which arguments should be ignored. A good example is the
+&lt;code&gt;\code{}&lt;/code&gt; command, which in all cases has something that is not
+an English word. You may also have commands with multiple arguments,
+in which case you say something like &lt;code&gt;--ignore=code:op&lt;/code&gt; and in the
+command &lt;code&gt;\code[foo]{bar}&lt;/code&gt; both &lt;code&gt;foo&lt;/code&gt; and &lt;code&gt;bar&lt;/code&gt; will be ignored.
+The &lt;code&gt;:op&lt;/code&gt; suffix means that an optional (&lt;code&gt;o&lt;/code&gt;) argument is ignored and then
+a mandatory one (&lt;code&gt;p&lt;/code&gt;). Something like &lt;code&gt;:oppp&lt;/code&gt; would tell aspell
+to ignore one optional and then three mandatory arguments.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;--min-word-length&lt;/code&gt; is the minimum length of word to pay attention to.
+I use the number &lt;code&gt;3&lt;/code&gt; and this is the default value. Shorter words (one or two characters)
+are not important and don’t need to be spell-checked.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I use &lt;code&gt;texsc&lt;/code&gt; in all my LaTeX projects, usually as part of their
+build cycle, which I automate with &lt;a href=&quot;https://www.gnu.org/software/make/&quot;&gt;GNU make&lt;/a&gt;.
+You can do the same, as it’s open source.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html">Do you use LaTeX for your academic and technical writings? You don’t? Well you should! It’s the most only professional instrument for making properly formatted PDF documents. MS Word and Apple Pages are for secretaries non-tech people, while LaTeX is serious. It’s perfect in so many ways, thanks to Donald Knuth (the creator of TeX) and Leslie Lamport (the author of LaTeX), but it lacks one very convenient feature: spell checking. The only solution I’ve found so far, which works perfectly for my documents, is GNU aspell.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/zero-2.jpg" /></entry><entry><title type="html">Open Source Etiquette</title><link href="https://www.yegor256.com/2020/07/29/open-source-etiquette.html" rel="alternate" type="text/html" title="Open Source Etiquette" /><published>2020-07-29T00:00:00+00:00</published><updated>2020-07-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/07/29/open-source-etiquette</id><content type="html" xml:base="https://www.yegor256.com/2020/07/29/open-source-etiquette.html">&lt;p&gt;Here is a short list of common courtesy rules for open source
 software development. Actually, they apply elsewhere also, but they are most
 visible when you do GitHub-based coding. I strongly believe that
 sooner or later all programming will be open source and these rules
@@ -1171,56 +1247,4 @@ a lot of articles which prohibit many different questions. I wasn’t
 surprised to find that none of them mention the question I’m talking about.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you do when you finish what your boss asked you to do?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1226410473354080256?ref_src=twsrc%5Etfw&quot;&gt;February 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">There are good and bad soldiers in any team. The job of a manager is to understand which is which. Then to promote the good ones and discharge the bad ones. There is one simple indicator I use to make this segregation. It’s a simple question I either hear from my people or don’t. Those who ask it are the bad soldiers. Their attitude and their behavior require immediate corrective actions. Some of them are curable, while others are not. This question tells me everything, if it’s being asked. I immediately understand that I am dealing with a loser if I hear it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/broadchurch.jpg" /></entry><entry><title type="html">Embrace the Chaos!</title><link href="https://www.yegor256.com/2020/01/07/embrace-the-chaos.html" rel="alternate" type="text/html" title="Embrace the Chaos!" /><published>2020-01-07T00:00:00+00:00</published><updated>2020-01-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/01/07/embrace-the-chaos</id><content type="html" xml:base="https://www.yegor256.com/2020/01/07/embrace-the-chaos.html">&lt;p&gt;Being just yet another software developer in a large enterprise is a pain. You are surrounded
-by legacy code, inconsistent architecture, low quality standards (assuming they even exist),
-lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of
-that, the management is very chaotic: no strict plans, no task
-management, no objective metrics, no quality control, and no light at the
-end of the tunnel. You feel like a cog in the machine: arrive at nine,
-leave at five, be quiet, and paychecks will keep coming.
-If you are talented and ambitious, sooner or later you will
-start thinking about &lt;del&gt;suicide&lt;/del&gt; resignation. But hold on!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Life Is Too Short (2011-2013) by Warwick Davis, et al.&quot; src=&quot;/images/2020/01/life-is-too-short.jpg&quot; longdesc=&quot;#c5d5a104&quot; /&gt;&lt;figcaption id=&quot;c5d5a104&quot;&gt;Life Is Too Short (2011-2013) by Warwick Davis, et al.&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Try to think differently!&lt;/p&gt;
-
-&lt;p&gt;Look at it from a different perspective. Imagine what it would look like if everything was
-totally different: the architecture is clean, the code is perfect,
-the documentation is outstanding, the team is full of experts,
-the management is transparent, the plans are up to date, the metrics are
-obvious and regularly collected, and the quality is under tight control.
-This would be the end of the tunnel! There would be no room for improvement
-anymore, since everything is already perfect. How would you feel now?
-It seems that it’s exactly this scenario that would give you the feeling of being
-merely a cog in a well-oiled machine.&lt;/p&gt;
-
-&lt;p&gt;If you want to make a &lt;a href=&quot;/2018/11/27/you-can-do-better.html&quot;&gt;career&lt;/a&gt;
-and you have the energy for it,
-the first scenario is a much better place to be: such an imperfect system &lt;em&gt;needs&lt;/em&gt;
-improvements. And, of course, the one who makes them
-gets the rewards: bonuses, a promotion, a raise, and so on.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Be thankful for the existence of the chaos—your career can grow because of it.
-&lt;/aside&gt;
-
-&lt;p&gt;If you see the issues around you, both technical and managerial, and you
-know how to fix them—great! This means that you are already ahead
-of many others who decided to put up with the routine and just wait
-for the next paycheck. Use this situation in your own favor: contribute and succeed.&lt;/p&gt;
-
-&lt;p&gt;Those who complain about the system are the ones who are expecting
-to be nothing more than those cogs in the machine. They don’t see themselves as
-system changers. They expect to play by the rules and expect the system to take care of them.
-Don’t be like that. This is not how you build your career up. This is only
-how you spend another few years with no fun.&lt;/p&gt;
-
-&lt;p&gt;Instead, embrace the chaos!&lt;/p&gt;
-
-&lt;p&gt;Be thankful for its existence—your
-&lt;a href=&quot;/2018/11/27/you-can-do-better.html&quot;&gt;career&lt;/a&gt; can grow because of it.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;The boss doesn&amp;#39;t lead the team, doesn&amp;#39;t have a plan, doesn&amp;#39;t manage you, and doesn&amp;#39;t explain anything. What do you do?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1223864080135376897?ref_src=twsrc%5Etfw&quot;&gt;February 2, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">Being just yet another software developer in a large enterprise is a pain. You are surrounded by legacy code, inconsistent architecture, low quality standards (assuming they even exist), lack of coding discipline, broken or dirty unit tests, mediocre programmers, and so on. On top of that, the management is very chaotic: no strict plans, no task management, no objective metrics, no quality control, and no light at the end of the tunnel. You feel like a cog in the machine: arrive at nine, leave at five, be quiet, and paychecks will keep coming. If you are talented and ambitious, sooner or later you will start thinking about suicide resignation. But hold on!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/life-is-too-short.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">There are good and bad soldiers in any team. The job of a manager is to understand which is which. Then to promote the good ones and discharge the bad ones. There is one simple indicator I use to make this segregation. It’s a simple question I either hear from my people or don’t. Those who ask it are the bad soldiers. Their attitude and their behavior require immediate corrective actions. Some of them are curable, while others are not. This question tells me everything, if it’s being asked. I immediately understand that I am dealing with a loser if I hear it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/broadchurch.jpg" /></entry></feed>

@@ -460,6 +460,7 @@ asleep
 aspect
 aspectj
 aspects
+aspell
 ass
 assemble
 assembling
@@ -2217,6 +2218,7 @@ dictated
 dictates
 dictator
 dictatorship
+dictionary
 did
 didn't
 die
@@ -3436,6 +3438,7 @@ glow
 gluten
 gmail
 GNOME
+GNU
 go
 goal
 goal-oriented
@@ -4530,6 +4533,7 @@ laissez-faire
 lake
 lambda
 lamp
+lamport
 land
 landed
 lane
@@ -4619,6 +4623,7 @@ lending
 length
 lengthy
 leone
+leslie
 less
 lessing
 lesson
@@ -7235,6 +7240,7 @@ second
 secondary
 seconds
 secret
+secretaries
 secrets
 sect
 section
@@ -7719,7 +7725,10 @@ speeches
 speechhacks
 speechless
 speed
+spell
+spell-checked
 spellcheckworker
+spelling
 spend
 spending
 spends
@@ -9125,6 +9134,7 @@ writer
 writers
 writes
 writing
+writings
 written
 wrong
 wrote
