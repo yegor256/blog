@@ -170,6 +170,8 @@ have to be moved to lower-level classes/interfaces. This only demonstrates
 that it's not always possible to make skinny design with a single interface,
 like in the example above. Sometimes we simply _have_ to make it more fat.
 
+{% youtube rsWrgxm8ktU %}
+
 However, there is one serious concern related to the skinny design: it lets
 the raw [naked]({% pst 2016/nov/2016-11-21-naked-data %})
 data jump out of `SqlArticle`, which is against the very idea

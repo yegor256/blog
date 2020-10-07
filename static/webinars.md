@@ -39,7 +39,7 @@ informed about everything I do publicly, including these webinars.
 
 ## 2020
 
-{% webinar 07-10-2020 51 rsWrgxm8ktU Fat and Skinny Design %}
+<!-- {% webinar 07-10-2020 51 rsWrgxm8ktU Fat and Skinny Design %} -->
 
 <a href="https://www.youtube.com/watch?v=rsWrgxm8ktU"><img src="https://i.ytimg.com/vi/rsWrgxm8ktU/mqdefault.jpg" class="wnr" alt="Webinar no.51 by Yegor Bugayenko"/></a>
 Oct 7, 2020<br/>
