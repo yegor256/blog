@@ -83,7 +83,7 @@ to review what your outsourcing partner is developing. Do such reviews
 regularly and systematically. Don't be afraid to offend your programmers.
 Honestly explain the reviewer's concerns to them. If they are professionals, they
 will understand and respect your business objectives.
-You can also show them this article :)
+You can also show them this article.
 
 **Automate and Control Deployment**.
 Ask your
