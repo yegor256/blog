@@ -42,7 +42,7 @@ to develop the software for you? I can tell you why.
 
 Because you don't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) me.
 
-{% quote Any software, no matter how big or good it is, always needs more and more improvements and bug fixes %}
+{% quote Any software, no matter how big or good it is, always needs more and more improvements and bug fixes. %}
 
 And obviously you have good reasons for that, simply because we both
 know that a software product is something that can stay in development forever
