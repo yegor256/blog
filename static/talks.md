@@ -180,6 +180,14 @@ I was also seen at [these events](/seen.html).
 ### 2020
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="past-talk" alt="TestCon 2020"/><br/>
+Testing and Testers;
+[TestConf]();
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+16 September;
+[видео](https://www.youtube.com/watch?v=aYXuK2do6FA).
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/jiJxA37hmsQ/mqdefault.jpg" class="past-talk" alt="TeamLeadConf 2020"/><br/>
 My experience of 1000 interviews;
 [TeamLeadConf](http://teamleadconf.ru/moscow/2020);
