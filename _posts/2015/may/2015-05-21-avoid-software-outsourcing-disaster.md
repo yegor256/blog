@@ -55,7 +55,7 @@ He said, according to [Military Strategy Classics of Ancient China](http://amzn.
 p.239:
 
 > When information from below reaches up high, and the concerns
-of up high penetrate to below, this is the most ideal situation
+of up high penetrate to below, this is the most ideal situation.
 
 Let me demonstrate a few practical examples of software outsourcing
 disasters and explain how they can be avoided if you follow said
@@ -70,7 +70,7 @@ and month after month; the backlog always has something, and you simply
 can't finish this. You're starting to see this project in your nightmares,
 and Prozac doesn't help anymore. How does this sound? Familiar?
 
-{% quote Let's forget about these beautiful promises and focus on the ugly reality — you're on your own %}
+{% quote Let's forget about these beautiful promises and focus on the ugly reality — you're on your own. %}
 
 I hope you do realize that no matter what kind of contract you signed with
 your software outsourcing partner, how many schedules you've baselined,
@@ -140,7 +140,7 @@ are _aligned_ with yours. If the milestone is missed, you will suffer
 and they understand exactly how. Besides that, they see how your
 suffering will be transferred to their shoulders too.
 
-{% quote You're losing respect and they're starting to treat you like a cash cow %}
+{% quote You're losing respect and they're starting to treat you like a cash cow. %}
 
 Stop asking them to finish everything ASAP. Stop calling them twice a day
 and yelling for an hour about their poor performance. Stop using language
@@ -174,7 +174,7 @@ is growing, and you don't see any reasonable way out of this. The only
 advice you're getting from your friends is to re-do it all from scratch with
 a new web development team. How does this sound? I bet it's familiar.
 
-{% quote We encourage project sponsors to be pessimistic and negative about our quality %}
+{% quote We encourage project sponsors to be pessimistic and negative about our quality. %}
 
 I believe the root cause of this dead-end situation is a _fear_
 of [conflict]({% pst 2017/jan/2017-01-03-how-much-you-love-conflicts %}).
@@ -220,7 +220,7 @@ longer working, etc. You call again, express your frustration, make
 strong accusations, restructure milestones, redefine features, reset
 priorities, and in a few days start over. Been there, done that? Sound familiar?
 
-{% quote The team is afraid of you, and in order to keep you on board as a paying customer, has to lie to you %}
+{% quote The team is afraid of you, and in order to keep you on board as a paying customer, has to lie to you. %}
 
 In my experience, this unpredictability and unreliability of a software
 outsourcing team is in most cases caused by a project sponsor himself or herself.
@@ -237,7 +237,7 @@ When you hear any of the above, question yourself---Do you
 encourage them to tell the truth? Do you _reward_ them for bringing you
 _bad_ but honest news?
 
-{% quote If you reward your team when they make you happy with good news, you are training them to lie to you %}
+{% quote If you reward your team when they make you happy with good news, you are training them to lie to you. %}
 
 Once again citing the fundamental principle mentioned above, I would recommend
 you make sure your reasoning for awards and punishments is transparent to

@@ -22,7 +22,7 @@ you get into your account. Then, wherever you go in the site,
 you always see your photo at the top right corner of the page. Facebook
 remembers you and doesn't ask for the password again and again. This works
 thanks to [HTTP cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
-and is called **cookie-based authentication**. Even though this mechanism
+and is called _cookie-based authentication_. Even though this mechanism
 often causes some security problems, it is very popular and simple.
 Here is how [Takes](http://www.takes.org) makes it possible in a few lines of code.
 
