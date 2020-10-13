@@ -2261,6 +2261,7 @@ directions
 directive
 directives
 directly
+director
 directories
 directory
 dirt
@@ -2539,6 +2540,7 @@ ECMAScript
 eco-friendly
 eco-manager
 eco-titles
+economy
 ecosystem
 ed
 eden
@@ -3302,10 +3304,12 @@ frustrates
 frustrating
 frustration
 FTP
+fuel
 fulfilling
 full
 full-hearted
 full-purpose
+full-speed
 full-time
 fully
 fun
@@ -4286,6 +4290,7 @@ jack
 jaguar
 jail
 jain
+jake
 james
 jamesshore
 jamon
@@ -5006,6 +5011,7 @@ memorize
 memory
 memory-representing
 men
+mendel
 mental
 mentality
 mentally
@@ -5379,6 +5385,7 @@ neck
 ned
 need
 needed
+needing
 needless
 needs
 negative
@@ -6056,6 +6063,7 @@ pity
 pivetta
 pixelmator
 pizza
+pizzas
 place
 placed
 places
@@ -6515,6 +6523,7 @@ python's
 QA
 qayyum
 QCon
+qualified
 qualities
 quality
 quanta

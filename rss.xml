@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-10-06T06:01:16+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Spell Check Your LaTeX Writings Using GNU Aspell</title><link href="https://www.yegor256.com/2020/10/06/latex-spell-checking.html" rel="alternate" type="text/html" title="Spell Check Your LaTeX Writings Using GNU Aspell" /><published>2020-10-06T00:00:00+00:00</published><updated>2020-10-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/06/latex-spell-checking</id><content type="html" xml:base="https://www.yegor256.com/2020/10/06/latex-spell-checking.html">&lt;p&gt;Do you use &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-10-13T18:17:33+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Lack of Problem Is the Problem</title><link href="https://www.yegor256.com/2020/10/13/lack-of-problem.html" rel="alternate" type="text/html" title="Lack of Problem Is the Problem" /><published>2020-10-13T00:00:00+00:00</published><updated>2020-10-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/13/lack-of-problem</id><content type="html" xml:base="https://www.yegor256.com/2020/10/13/lack-of-problem.html">&lt;p&gt;Do you know the most typical mistake startup founders make
+when they pitch their ideas to investors? According to
+&lt;a href=&quot;https://medium.com/@jakemendel/b3a884c54ab4&quot;&gt;Jake Mendel&lt;/a&gt;
+from Silicon Valley Bank, they often focus on the solution they propose
+instead of the problem they are trying to solve. Inability to identify
+the problem is the common cause of startup failures. However, it’s not only them.
+Look at your project and try to answer
+“What’s wrong with the world now?” and then “How is this product fixing it?”&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Le retour du héros (2018) by Laurent Tirard&quot; src=&quot;/images/2020/10/le-retour-du-heros.jpg&quot; longdesc=&quot;#30e66a8a&quot; /&gt;&lt;figcaption id=&quot;30e66a8a&quot;&gt;Le retour du héros (2018) by Laurent Tirard&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Something has to be wrong. Otherwise the project doesn’t make sense.
+Neither for its founders, nor for its programmers and users.&lt;/p&gt;
+
+&lt;p&gt;Open the README file in your repository and read its first paragraph.
+Does it answer the question? Does it identify the problem? Is it obvious
+to your users what exactly you are solving? It should be.&lt;/p&gt;
+
+&lt;p&gt;You may say, “startup founders are looking for money, that’s why they need
+this problem statement to impress investors, but we already have
+the budget and don’t need to impress anyone, we just need
+to create yet another version of our mobile app so that our users
+continue ordering pizzas and our director keeps paying us,”
+and you would be right about not needing the money. You will
+get the money no matter what, whether your README file has a properly
+formulated problem statement or even if no such file exists.
+Who am I kidding? In most cases, even if we don’t have a repository
+we will still be paid well!&lt;/p&gt;
+
+&lt;p&gt;This is true, but I think that money is not the fuel of
+the software economy &lt;del&gt;anymore&lt;/del&gt;. It’s people. Not just people, but
+&lt;em&gt;motivated&lt;/em&gt; people—this is what software teams are now fighting for.
+Getting a budget for a project, especially if you are
+in a big enterprise (where all interesting projects will be eventually),
+is not difficult. A much bigger task is to acquire and retain a team that is
+able and willing to deliver results.&lt;/p&gt;
+
+&lt;p&gt;First, you pitch to investors. Then, you pitch to programmers.
+The second pitch is more difficult than the first one. Highly
+qualified software experts motivated to work full-speed
+for your project—is the new capital in this modern economy.&lt;/p&gt;
+
+&lt;p&gt;How do we acquire and retain them? We formulate the problem. We make
+sure the problem is new, big, ambitious, challenging, and noble.
+If we can do that, they will join and will stay … motivated.&lt;/p&gt;
+
+&lt;p&gt;I would even say that the primary responsibility of a team leader
+is keeping an eye on the problem statement and making sure it’s
+good enough for the team. When something goes wrong with
+morale, discipline, or performance—these are the symptoms of
+a defective problem statement. In most cases. And the only person responsible
+is the team leader, who has to fix it by opening
+the README file and specifying, in the first paragraph, what is wrong
+with the world right now and how our product is going to fix it.&lt;/p&gt;
+
+&lt;p&gt;Do it now.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Do you know the most typical mistake startup founders make when they pitch their ideas to investors? According to Jake Mendel from Silicon Valley Bank, they often focus on the solution they propose instead of the problem they are trying to solve. Inability to identify the problem is the common cause of startup failures. However, it’s not only them. Look at your project and try to answer “What’s wrong with the world now?” and then “How is this product fixing it?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" /></entry><entry><title type="html">Spell Check Your LaTeX Writings Using GNU Aspell</title><link href="https://www.yegor256.com/2020/10/06/latex-spell-checking.html" rel="alternate" type="text/html" title="Spell Check Your LaTeX Writings Using GNU Aspell" /><published>2020-10-06T00:00:00+00:00</published><updated>2020-10-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/06/latex-spell-checking</id><content type="html" xml:base="https://www.yegor256.com/2020/10/06/latex-spell-checking.html">&lt;p&gt;Do you use &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;
 for your academic and technical writings? You don’t?
 Well you should! It’s the &lt;del&gt;most&lt;/del&gt; only professional instrument for
 making properly formatted PDF documents.
@@ -1063,6 +1120,14 @@ have to be moved to lower-level classes/interfaces. This only demonstrates
 that it’s not always possible to make skinny design with a single interface,
 like in the example above. Sometimes we simply &lt;em&gt;have&lt;/em&gt; to make it more fat.&lt;/p&gt;
 
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=rsWrgxm8ktU&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/rsWrgxm8ktU/mqdefault.jpg&quot; alt=&quot;YouTube video #rsWrgxm8ktU&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;Fat and Skinny Design (Webinar #51);
+        7 October 2020.&lt;/div&gt;&lt;/aside&gt;
+
 &lt;p&gt;However, there is one serious concern related to the skinny design: it lets
 the raw &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;naked&lt;/a&gt;
 data jump out of &lt;code&gt;SqlArticle&lt;/code&gt;, which is against the very idea
@@ -1199,52 +1264,4 @@ drive Elegant Objects to a place where most of its claims will be scientifically
 proven. Give us a few more years and we will have very interesting results.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;A reviewer rejects your code and says: &amp;quot;This class is not cohesive enough!&amp;quot; What would you answer?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1228936961035001856?ref_src=twsrc%5Etfw&quot;&gt;February 16, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You most probably know about Elegant Objects (EO), an alternative object-oriented paradigm, which claims that objects must be immutable, have no static methods, never use NULL in their code, use no annotations, and so on. We, the EO adepts, claim many things, but not so many people believe us. Those non-believers say that we are trolls, at best. Their main argument is: everybody works differently, why should we listen to you? I have no answer for them… well I had no answer, until I created jPeek and started researching object cohesion.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/02/kin-dza-dza.jpg" /></entry><entry><title type="html">One Question You Should Never Ask Your Boss</title><link href="https://www.yegor256.com/2020/01/15/question-never-ask.html" rel="alternate" type="text/html" title="One Question You Should Never Ask Your Boss" /><published>2020-01-15T00:00:00+00:00</published><updated>2020-01-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/01/15/question-never-ask</id><content type="html" xml:base="https://www.yegor256.com/2020/01/15/question-never-ask.html">&lt;p&gt;There are good and bad soldiers in any team. The job of a manager is to
-understand which is which. Then to promote the good ones and discharge the bad ones.
-There is one simple indicator I use to make this segregation. It’s a simple
-question I either hear from my people or don’t. Those who ask it
-are the bad soldiers. Their attitude and their behavior require immediate
-corrective actions. Some of them are curable, while others are not. This
-question tells me everything, if it’s being asked. I immediately understand
-that I am dealing with a loser if I hear it.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Broadchurch (2013) by Chris Chibnall&quot; src=&quot;/images/2020/01/broadchurch.jpg&quot; longdesc=&quot;#7bd6e061&quot; /&gt;&lt;figcaption id=&quot;7bd6e061&quot;&gt;Broadchurch (2013) by Chris Chibnall&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;The question is: “What should I do next?”&lt;/p&gt;
-
-&lt;p&gt;What’s wrong with that, you may wonder. Let me explain by a counter example.
-A good soldier behaves differently. A good one wants to do interesting things,
-wants to work with the most challenging problems, wants to resolve complex
-issues, and wants to do what he/she wants to do!
-A good soldier cares and doesn’t want to do what’s not important or not interesting.
-A good one asks “What is our ultimate goal?” and then, after getting my answer and thinking
-for a while, comes back to me with a plan for achieving this goal. A good one
-&lt;em&gt;tells&lt;/em&gt; me what is next, instead of asking. All I need to do is to approve
-or reject the plan proposed.&lt;/p&gt;
-
-&lt;p&gt;Good soldiers don’t sit and passively wait until I come to them and say what exactly
-needs to be done. Good soldiers pro-actively build their own plans by themselves and
-do everything to convince me that they make sense.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Good soldiers pro-actively build their own plans and do everything to convince me that they make sense.
-&lt;/aside&gt;
-
-&lt;p&gt;Bad soldiers, on the other hand, ask me “What’s next?” and it gets very annoying.
-It’s absolutely no fun to work with these people and I either try to explain to them
-why such a question is a terrible mistake, or I simply get rid of them.&lt;/p&gt;
-
-&lt;p&gt;Moreover, if the boss starts telling you what to do, you must realize that this
-is the moment where the credit is lost. You’ve already been classified
-as a bad soldier, a loser, an underachiever. Your chances of recovery are very
-low. You must not allow this to happen. Act proactively; don’t wait until
-it’s too late and the boss starts assigning tasks to you.&lt;/p&gt;
-
-&lt;p&gt;P.S. By the way, I &lt;a href=&quot;https://www.google.com/search?q=questions+you+never+ask+your+boss&quot;&gt;googled&lt;/a&gt;
-“questions you never ask your boss” and found
-a lot of articles which prohibit many different questions. I wasn’t
-surprised to find that none of them mention the question I’m talking about.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What do you do when you finish what your boss asked you to do?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1226410473354080256?ref_src=twsrc%5Etfw&quot;&gt;February 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="career" /><summary type="html">There are good and bad soldiers in any team. The job of a manager is to understand which is which. Then to promote the good ones and discharge the bad ones. There is one simple indicator I use to make this segregation. It’s a simple question I either hear from my people or don’t. Those who ask it are the bad soldiers. Their attitude and their behavior require immediate corrective actions. Some of them are curable, while others are not. This question tells me everything, if it’s being asked. I immediately understand that I am dealing with a loser if I hear it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/01/broadchurch.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You most probably know about Elegant Objects (EO), an alternative object-oriented paradigm, which claims that objects must be immutable, have no static methods, never use NULL in their code, use no annotations, and so on. We, the EO adepts, claim many things, but not so many people believe us. Those non-believers say that we are trolls, at best. Their main argument is: everybody works differently, why should we listen to you? I have no answer for them… well I had no answer, until I created jPeek and started researching object cohesion.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/02/kin-dza-dza.jpg" /></entry></feed>
