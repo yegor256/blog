@@ -14,9 +14,9 @@ keywords:
   - problem statement
   - team spirit
   - management by objectives
-image: /images/2020/10/
+image: /images/2020/10/le-retour-du-heros.jpg
 jb_picture:
-  caption: ...
+  caption: Le retour du héros (2018) by Laurent Tirard
 ---
 
 Do you know the most typical mistake startup founders make
