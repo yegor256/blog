@@ -17,6 +17,11 @@ description: |
           You can learn more about OOP from my recently published
           book <a href="/elegant-objects.html">Elegant Objects</a> too.
         </p>
+      {% elsif page.title == 'management' %}
+        <h1>{{ page.posts.size }} Posts About Management</h1>
+        <p>
+          <img alt="Code Ahead logo" src="/images/books/code-ahead/mushroom.svg" style="height:150px;float:right;margin-left:1em"/>
+        </p>
       {% elsif page.title == 'java' %}
         <h1>{{ page.posts.size }} Posts About Java&trade;</h1>
         <p>
