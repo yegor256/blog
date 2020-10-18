@@ -1,0 +1,494 @@
+All following reviews is done by @iakunin.
+
+
+# Checklist
+
+- CI
+- Code-coverage (> 85%)
+- Issues
+- PRs
+- Traceability of commits to PRs/issues
+- Unit tests
+- Integration tests
+- Automated releases
+- Static analysis
+
+
+- NULL References
+- Utility Classes
+- Mutable Objects
+- Getters and Setters
+- DTO
+- ORM
+- Singletons
+- MVC
+- DI-container
+- Static Methods
+- Abstract classes and implementation inheritance
+- Exception swallowing in some places
+- -ER classes like Processor, Resolver, Provider, Handler
+- Protected methods (means lack of encapsulation)
+- Big classes (more than 300 LoC)
+
+
+
+
+#1 https://github.com/btraceio/btrace
+
+CLOC: 44K (43K in Java)
+HoC: 433K
+Age: Over 1 year
+
+
++ CI: TravisCI with green build on master
+- Code-coverage: pretty low - about 30%
+- Issues: using only for bug-reporting
+- PRs (just direct pushing to master-branch)
+- No traceability of commits to PRs/issues
+- No unit-tests
+-+ Integration tests (just one BTraceFunctionalTests)
++ Automated releases (automated deploy to bintray via TravisCI)
+-+ Static analysis (just only google-code-style-checker and linter: that's not enough)
+
+
+- NULL References: 1281 occurences in *.java files
+- Utility Classes: org.openjdk.btrace.agent.Main, org.openjdk.btrace.client.JpsUtils
+- Mutable Objects: org.openjdk.btrace.instr.Location
+- Getters and Setters: org.openjdk.btrace.instr.Location
+- DTO: org.openjdk.btrace.instr.Location
++ (ORM): there is no ORM in this project
+- Singletons: org.openjdk.btrace.instr.ClassCache
++ MVC: there is no signs of MVC
++ DI-container: no DI-container
+- Static Methods: many of them
+- Abstract classes and implementation inheritance: many of them
+- Exception swallowing in some places:  org/openjdk/btrace/instr/Preprocessor.java:162
+- -ER classes: *Listner, *Handler
+- Protected methods (means lack of encapsulation): org.openjdk.btrace.instr.SynchronizedInstrumentor
+- Big classes (more than 300 LoC): org.openjdk.btrace.agent.Main (899 LoC), org.openjdk.btrace.instr.BTraceProbePersisted (823 LoC)
+
+
+
+
+
+#2 https://github.com/catalyst-team/catalyst
+
+CLOC: 44K (36K in Python)
+HoC: 262K
+Age: Over 1 year
+
+
+-+ CI: some builds are red on master branch (means there is no merge-checks on PRs)
+- Code-coverage: couldn't find any
+- Issues: using only for bug-reporting
++ PRs
++ Traceability of commits to PRs/issues: most of the commits are traceable to PRs
+- Unit tests: coundn't find any
++ Integration tests
+-+ Automated releases: automated only publishing Docker to Docker Hub; but pushing to PyPI is commented
++ Static analysis
+
+
+- NULL References (None in python): 1356 occurences in *.py files
+- Utility Classes: catalyst/data/utils.py, catalyst/dl/utils
+- -ER classes: there are many of them (Sampler, Reader, Loader, etc.)
+- Big classes (more than 300 LoC): many
+- Abstract classes and implementation inheritance: many
+- Static Methods: many
++ ORM: no
++ MVC: no
+- Exception swallowing: in some places
+- Mutable Objects: many of them
+- Getters and Setters: many of them
+- DTO: some of them in catalyst/data/dataset/torch.py
++ Singletons: coundn't find any
++ DI-container: no
+
+
+
+#3 https://github.com/decorators-squad/eo-yaml
+
+
+CLOC: 12K (11K in Java)
+HoC: 43K
+Age: Over 1 year
+
+
++ CI
++ Code-coverage: 93% - very good coverage 
++ Issues
++ PRs
++ Unit tests
++ Integration tests
++ Automated releases: using Rultor
++ Static analysis
+-+ Traceability of commits to PRs/issues: episodically
+
+
+- NULL References: exist
+- Utility Classes: com.amihaiemil.eoyaml.Yaml
++ Getters and Setters: no any
++ DTO: no any
++ ORM: no
++ MVC: no
++ Mutable Objects: no
++ Singletons: no
++ DI-container: no
+- Static Methods: com.amihaiemil.eoyaml.extensions.MergedYamlMapping, com.amihaiemil.eoyaml.Yaml
+? Abstract classes and implementation inheritance: there are some abstract classes, however I cannot consider this as `implementation inheritance` - could be com.amihaiemil.eoyaml.BaseYamlNode done via decorators?
++ Exception swallowing: no
+- -ER classes: *Builder, *Printer
++ Protected methods: no
+- Big classes (more than 300 LoC): com.amihaiemil.eoyaml.RtYamlPrinter, com.amihaiemil.eoyaml.YamlMapping
+
+
+This is really good candidate for championship.
+
+
+
+
+#4 https://github.com/hdouss/jeometry
+
+
+CLOC: 12K (11K in Java)
+HoC: 45K
+Age: Over 1 year
+
+
++ CI
++ Code-coverage: 97%
++ Issues
++ PRs
++ Traceability of commits to PRs/issues
++ Unit tests
++ Integration tests
++ Automated releases
++ Static analysis: Qulice
+
+
++ NULL References: absolute absence
++ Utility Classes: absolute absence
+-+ Static Methods: only private static methods
+- Getters and Setters: setters here com.jeometry.render.awt.AbstractAwtPaint and here com.jeometry.render.awt.AwtDrawableSurface
+- Mutable Objects: com.jeometry.render.awt.AbstractAwtPaint; com.jeometry.render.awt.AwtDrawableSurface extends from a mutable object 
+- Abstract classes and implementation inheritance: com.jeometry.render.awt.AwtDrawableSurface; com.aljebra.matrix.FixedMatrix neither final, nor abstract (could be inhereted)
+- Protected methods (means lack of encapsulation): com.jeometry.render.awt.AbstractAwtPaint
++ DTO: no
++ Singletons: no
++ ORM: no
++ MVC: no
++ DI-container: no
++ Exception swallowing: no
++ -ER classes like Processor, Resolver, Provider, Handler: no
++ Big classes (more than 300 LoC): no
+
+
+Another good candidate for championship.
+
+
+
+
+#5 https://github.com/scalikejdbc/scalikejdbc
+
+
+CLOC: 26K (23K in Scala)
+HoC: 129K
+Age: Over 1 year
+
+
++ CI
+- Code-coverage: couldn't find any info
+- Automated releases: seems that release are done manually
++ Issues
++ PRs
+- Traceability of commits to PRs/issues: no
++ Unit tests
++ Integration tests
+- There are some commented test-cases without link to corresponding issue (to fix it)
+- Static analysis: couldn't find any info
+
+
+- Big classes (more than 300 LoC): many of them
+- NULL References: exist
+- Bad design: scalikejdbc.DBConnectionAttributesWiredResultSet has 195! public methods
+- Utility Classes: for example - scalikejdbc.Binders
+- Mutable Objects: for example - scalikejdbc.DBConnection
+- Getters and Setters: src/main/scala/scalikejdbc/ConnectionPoolContext.scala
+- DTO: src/main/scala/scalikejdbc/ConnectionPoolContext.scala
++ ORM: no
++ MVC: no
+- Static Methods: Scala's `object`s could be considered as static methods
++ Singletons: couldn't find any
++ DI-container: no
+- Exception swallowing in some places
+- Protected methods (means lack of encapsulation)
+- Abstract classes and implementation inheritance
+- Factories
+- -ER classes: *Binder, *Provider, *Executor
+
+
+
+
+
+#6 igorwojda/android-showcase
+
+
+CLOC: 37050 (2289 in Kotlin) - see https://api.codetabs.com/v1/loc/?github=igorwojda/android-showcase
+    https://s.mail.ru/3pPC/56XDJnohA
+HoC: 53K
+Age: Over 1 year
+
+
+Project is too small: just 2289 LoC in Kotlin (should be at least 4096)
+
+
+
+
+
+
+#7 https://github.com/crocinc/sql-boot
+
+
+CLOC: 4163 (2617 in Kotlin) - see https://api.codetabs.com/v1/loc/?github=crocinc/sql-boot
+    https://s.mail.ru/3kNi/hbveT9oD3
+HoC: 149K
+Age: Over 1 year
+
+
+Project is too small: just 2617 LoC in Kotlin (should be at least 4096)
+
+
+
+
+
+
+#8 https://github.com/javascript-obfuscator/javascript-obfuscator
+
+
+CLOC: 174K (38K in TypeScript) 
+HoC: 1843K
+Age: Over 1 year
+
+
++ CI
++ Code-coverage: 97%
++ Static analysis: eslint with redundant config (.eslintrc.js)
++ Issues
++ PRs
+- Traceability of commits to PRs/issues: no
++ Integration tests
++ Unit tests
+- Automated releases: couldn't find any scripts
+
+
+- Big classes (more than 300 LoC): src/node/NodeFactory.ts
+- Protected methods (means lack of encapsulation): a lot of them
+- NULL References: a lot of them
+- Static Methods: exist
+- Utility Classes: src/utils/*.ts
++ ORM: no
++ Exception swallowing: no
+- Factories: src/node/NodeFactory.ts
+- -ER classes: *Appender, *Analyzer, *Sanitizer, *Helper
+- Existence of helpers classes: src/custom-code-helpers/*
+- DI-container: exist (https://github.com/inversify/InversifyJS)
+- Abstract classes and implementation inheritance: src/analyzers/calls-graph-analyzer/callee-data-extractors/AbstractCalleeDataExtractor.ts
++ MVC: couldn't find any signs
++ Singletons: couldn't find any
+- Mutable Objects: for example, BlockStatementDeadCodeInjectionNode.initialize, ObjectExpressionVariableDeclarationHostNode.initialize
++ DTO: couldn't find any
+- Getters and Setters: exist
+
+
+
+
+
+
+#9 https://github.com/reinterpretcat/vrp
+
+
+
+CLOC: 57K (30K in Rust) 
+HoC: 160K
+Age: Over 1 year
+
+
++ CI
++ Code-coverage: 85%
+- Issues: just only 1 opened and 5 closed
+- PRs: just only 1 closed
+- Traceability of commits to PRs/issues: absolute absence
++ Automated releases
++ Unit tests
++ Integration tests
++ Static analysis: rust-clippy and rustfmt
++ NULL References: NULL is not exist in Rust
+
+
+- Big classes (more than 300 LoC): exist
++ Protected methods (means lack of encapsulation): formally, there are no protected methods in Rust
+- Static Methods: exist
+- Utility Classes: exist (vrp-core/src/utils)
++ ORM: no
++ MVC: no
+- Factories exist
+- -ER classes: RouteModifier, Builder, SkipBestJobMapReducer
++ Singletons: couldn't find any
++ DI-container: couldn't find any
+- Exception swallowing in some places (failure: Callback in convert_to_pragmatic function)
+- Getters and Setters: yes
+- DTO: IdDimension, ValueDimension
+- Mutable Objects: ValueDimension
++ Abstract classes and implementation inheritance: couldn't find any
+
+
+
+
+#10 https://github.com/z7zmey/php-parser
+
+CLOC: 116K (107K in Rust) 
+HoC: 847K
+Age: Over 1 year
+
+
++ CI
+- Code-coverage: just only 55% (< 85%)
++ Issues
++ PRs
+- Traceability of commits to PRs/issues: some commits are without link to PR/issue
++ Unit tests
++ Integration tests
+- Static analysis: CodeClimate with very low result (D)
+- Automated releases: cannot find any info (or, maybe, Golang doesn't need any)
+
+
+- Big classes (more than 300 LoC): many of them
+- Design problems: php7/php7.go and php5/php5.go contains about 8K LoC
+- NULL References: many of them
+- -ER classes: walker, dumper, scanner
+- Static Methods: for example, `version.Compare` (or maybe, I'm wrong?)
+- Utility Classes: version/version.go (or maybe, I'm wrong?)
++ MVC: no
++ ORM: no
++ DI-container: couldn't find any
++ Singletons: couldn't find any
++ Protected methods: couldn't find any
++ Abstract classes and implementation inheritance: couldn't find any
+- Mutable Objects: many of them
+- Getters and Setters: many of them
++ DTO: couldn't find any
++ Exception swallowing: couldn't find any
+
+
+
+
+#11 https://github.com/stiffstream/restinio
+
+
+CLOC: 66K (24K in C++) 
+HoC: 222K
+Age: Over 1 year
+
+
++ CI
+- Code-coverage: couldn't find any
+- Issues: seems that it used only for bug-reports (or I'm wrong?)
+- PRs: pushing directly to master-branch (without PRs)
+- Traceability of commits to PRs/issues: not traceable at all (34 of 38 last commits has no link to issue)
+- Unit tests: seems that there are only integration tests (or I'm wrong?)
++ Integration tests
+- Automated releases: cannot find any info
+- Static analysis: cannot find any info
+
+
+- NULL References: only in tests
+- Static Methods: exists
+- Utility Classes: dev/restinio/utils, dev/restinio/helpers
+- Big classes (more than 300 LoC): many
+- Mutable Objects: dev/restinio/websocket/impl/ws_protocol_validator.hpp
+- Getters and Setters:  dev/restinio/websocket/impl/ws_protocol_validator.hpp::set_validation_state
++ ORM: no
++ MVC: no
++ DI-container: no
++ DTO: couldn't find any
++ Singletons: couldn't find any
++ Abstract classes and implementation inheritance: couldn't find any
++ Protected methods: couldn't find any
+- Exception swallowing in some places: just logging without rethrowing in many places
+- -ER classes: parser, enabler
+
+
+
+
+
+#12 https://github.com/nesbox/tic-80
+
+
+CLOC: 69K (27K in C) 
+HoC: 635K
+Age: Over 1 year
+
+
+
++ CI
+- Code-coverage: couldn't find any info
+- Issues: seems that they are used as a bug-tracker only
+- PRs: many commits directly to master branch
+- Traceability of commits to PRs/issues: very few commits have link to the issue
+- Unit tests: cannot find any
+- Integration tests: cannot find any
+- Automated releases: cannot find any info (seems that is done manually)
+- Static analysis: cannot find any info
+
+
+- NULL References: couple of nulls in project
+- Utility Classes: src/system/baremetalpi/utils.cpp, src/system/n3ds/utils.c
+- Mutable Objects: mutability exists
+- Getters and Setters: direct access to stucture members
+- DTO: structures
++ ORM: no
++ MVC: no
++ Singletons: no
++ DI-container: no
+- Static Methods: there are no classic objects - just public functions and data-structures
+- Abstract classes and implementation inheritance: no classes at all
+- Protected methods: no classes at all
+- Big classes (more than 300 LoC): many big c-files
+- Exception swallowing in some places: src/system/sdl/main.c:1778
+
+As far as I can see, this project has nothing in common with OOP.
+
+
+
+
+
+#13 https://github.com/pixelpusher/liveprinter
+
+
+CLOC: 43K (9K in JavaScript) 
+HoC: 507K
+Age: Over 1 year
+
+
+
+- CI: nope
+- Code-coverage: nope
+- PRs: direct pushing to master branch
+- Traceability of commits to PRs/issues: nope
++ Issues
+- Tests: there are dir `testing`, but I cannot figure out how to run them
+- Automated releases: nope
+- Static analysis: nope
+
+- Getters and Setters: liveprinter/UM/Job.py:40
+- NULL References: liveprinter/AutoDetectBaudJob.py:39
+- Mutable Objects: many
+- Singletons: liveprinter/UM/JobQueue.py:96
+- Utility Classes: js/util
+- Exception swallowing in some places
+- Big classes (more than 300 LoC): both *.js and *.py files
+- -ER classes: Scheduler, Parser, etc.
+- Static Methods: static JS-functions
+
+As far as I can see, this project has nothing in common with OOP.
+
