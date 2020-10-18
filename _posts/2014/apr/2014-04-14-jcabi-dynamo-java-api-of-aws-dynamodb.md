@@ -2,7 +2,7 @@
 layout: post
 title: "Object-Oriented DynamoDB API"
 date: 2014-04-14
-tags: dynamodb aws java jcabi
+tags: aws java jcabi
 description: |
   I created jcabi-dynamo a few months ago to make AWS SDK more object oriented;
   the article explains why jcabi-dynamo is better than bare Amazon SDK

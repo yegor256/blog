@@ -2,7 +2,7 @@
 layout: post
 title: "DynamoDB Local Maven Plugin"
 date: 2014-05-01
-tags: dynamodb maven aws java
+tags: maven aws java
 description: |
   jcabi-dynamodb-maven-plugin is a Maven plugin for DynamoDB
   Local running locally and acting as a stub of DynamoDB server,

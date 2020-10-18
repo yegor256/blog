@@ -3,7 +3,7 @@ layout: post
 title: "DynamoDB + Rake + Maven + Rack::Test"
 date: 2017-06-13
 place: Odessa, Ukraine
-tags: testing ruby
+tags: testing ruby aws
 description: |
   The article explains how DynamoDB Local can be
   used in Rake integration testing; a practical
