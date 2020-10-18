@@ -20,7 +20,9 @@ jb_picture:
 ---
 
 We live in the era of organic food, eco-friendly toilets, zero-emission cars,
-and harassment-free offices. Our management practices have to keep up---they
+and
+[harassment-free]({% pst 2017/jul/2017-07-18-sexual-harassment %})
+offices. Our management practices have to keep up---they
 must be zero-stress, conflict-free, and idiot-friendly. If you're still
 stuck in the old carrot-and-stick, mediocrity-intolerant, primitive mentality,
 these recipes will open your eyes.
@@ -56,7 +58,8 @@ You have to learn how to count and pay attention to the numbers.
 and [others](https://techcrunch.com/2017/04/01/krablr-releases-first-diversity-report/)
 already do. Diversity, equality, and tolerance: these metrics are
 [quickly replacing](https://www.youtube.com/watch?v=iKcWu0tsiZM)
-outdated performance and productivity appraisals.
+outdated performance and productivity
+[appraisals]({% pst 2020/jun/2020-06-23-individual-performance-metrics %}).
 
 **Be Reward-Focused**.
 [Trotsky](https://en.wikipedia.org/wiki/Leon_Trotsky)
