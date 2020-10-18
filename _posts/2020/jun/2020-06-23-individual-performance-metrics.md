@@ -17,6 +17,12 @@ keywords:
 image: /images/2020/06/better-call-saul.jpg
 jb_picture:
   caption: Better Call Saul, Season 5 (2019) by Vince Gilligan et al.
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "Measuring Up: How to Properly Measure Your Programmers"
+    date: 2020-10-16
+    url: https://cacm.acm.org/blogs/blog-cacm/248067-measuring-up-how-to-properly-measure-your-programmers/fulltext
 ---
 
 The question [was asked](https://softwareengineering.stackexchange.com/questions/26596/metric-by-which-to-hold-developers-accountable)
