@@ -47,7 +47,7 @@ offend creative people. Well, all people.
 
 We avoid explicitness in performance appraisals.
 
-And this is totally wrong!
+And this is [totally wrong]({% pst 2020/jun/2020-06-23-individual-performance-metrics %})!
 
 This is a _mistake_, and it causes big problems!
 

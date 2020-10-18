@@ -156,4 +156,14 @@ Of course, when the project fails you find a new one, with a
 and a new group of extremely talented people,
 and become very responsible again. Nice, huh?
 
+**Be Democratic** (added on 19-Oct-2020).
+If in doubt, always call a
+[meeting]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %})
+and ask _everybody_ to
+[vote]({% pst 2019/jan/2019-01-15-what-if-architect-is-wrong %}).
+This is the only right way today to make technical decisions without
+offending anyone. Our civilization is built on
+[democratic principles]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}),
+why software projects can't utilize the same idea, right?
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A good manager, first of all, must be ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1155407856025460737?ref_src=twsrc%5Etfw">July 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
