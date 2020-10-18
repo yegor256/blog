@@ -1,0 +1,768 @@
+altiore/lorder.ui by @fellahi-ali
+
+
+
+btraceio/btrace by @iakunin
+
+CLOC: 44K (43K in Java)
+HoC: 433K
+Age: Over 1 year
++ CI: TravisCI with green build on master
+- Code-coverage: pretty low - about 30%
+- Issues: using only for bug-reporting
+- PRs (just direct pushing to master-branch)
+- No traceability of commits to PRs/issues
+- No unit-tests
+-+ Integration tests (just one BTraceFunctionalTests)
++ Automated releases (automated deploy to bintray via TravisCI)
+-+ Static analysis (just only google-code-style-checker and linter: that's not enough)
+- NULL References: 1281 occurences in *.java files
+- Utility Classes: org.openjdk.btrace.agent.Main, org.openjdk.btrace.client.JpsUtils
+- Mutable Objects: org.openjdk.btrace.instr.Location
+- Getters and Setters: org.openjdk.btrace.instr.Location
+- DTO: org.openjdk.btrace.instr.Location
++ (ORM): there is no ORM in this project
+- Singletons: org.openjdk.btrace.instr.ClassCache
++ MVC: there is no signs of MVC
++ DI-container: no DI-container
+- Static Methods: many of them
+- Abstract classes and implementation inheritance: many of them
+- Exception swallowing in some places:  org/openjdk/btrace/instr/Preprocessor.java:162
+- -ER classes: *Listner, *Handler
+- Protected methods (means lack of encapsulation): org.openjdk.btrace.instr.SynchronizedInstrumentor
+- Big classes (more than 300 LoC): org.openjdk.btrace.agent.Main (899 LoC), org.openjdk.btrace.instr.BTraceProbePersisted (823 LoC)
+
+
+
+catalyst-team/catalyst by @iakunin
+
+CLOC: 44K (36K in Python)
+HoC: 262K
+Age: Over 1 year
+-+ CI: some builds are red on master branch (means there is no merge-checks on PRs)
+- Code-coverage: couldn't find any
+- Issues: using only for bug-reporting
++ PRs
++ Traceability of commits to PRs/issues: most of the commits are traceable to PRs
+- Unit tests: coundn't find any
++ Integration tests
+-+ Automated releases: automated only publishing Docker to Docker Hub; but pushing to PyPI is commented
++ Static analysis
+- NULL References (None in python): 1356 occurences in *.py files
+- Utility Classes: catalyst/data/utils.py, catalyst/dl/utils
+- -ER classes: there are many of them (Sampler, Reader, Loader, etc.)
+- Big classes (more than 300 LoC): many
+- Abstract classes and implementation inheritance: many
+- Static Methods: many
++ ORM: no
++ MVC: no
+- Exception swallowing: in some places
+- Mutable Objects: many of them
+- Getters and Setters: many of them
+- DTO: some of them in catalyst/data/dataset/torch.py
++ Singletons: coundn't find any
++ DI-container: no
+
+
+
+coderaiser/cloudcmd by @razzwan
+
+### Repository view
+- [x] More than one year old (first commit was made on May 6, 2012)
+- [x] CLOC: 15844 (12574 in JavaScript)
+- [x] CI (GitHub actions)
+- [x] Awesome demo site with usage description https://cloudcmd.io/
+- [x] Block with short project history http://blog.cloudcmd.io/
+- [x] Descriptive good README with examples
+- [x] CODE_OF_CONDUCT.md description is present
+- [x] CONTRIBUTING.md is present
+- [x] 235 closed and 11 opened issues
+- [x] 48 PRs with 20 contributors
+### Code quality
+- [x] Simple, clear small enough files
+- [x] Master branch has no compilation errors
+- [ ] messed file structure (not all files located logically, some of them unexpected location - for example fonts located out of client, but never used enywhere else)
+- [x] tests is present
+- [x] tests are passed out of the box (after build only) strange that the tests require build -0.5
+- [ ] Code contain hardcoded string variables, which better move to constants or to config file (such as urls, hardcoded config names)
+- [ ] no systematic with module.exports (sometime exports on the top of file, sometime in the middle)
+- [x] Code quality badge is present
+### Summary:
+* Code-wise the project is good enough  +4
+* Perfect demo site with usage examples +1
+* Good activiti and 20 contributor +1
+* However, it's hard to start contribute this project, because of messed file structure withoutd description and hardcoded string variables
+Score: 7/10
+A good candidate for the final
+
+
+
+crocinc/sql-boot by @iakunin
+
+CLOC: 4163 (2617 in Kotlin) - see https://api.codetabs.com/v1/loc/?github=crocinc/sql-boot
+    https://s.mail.ru/3kNi/hbveT9oD3
+HoC: 149K
+Age: Over 1 year
+Project is too small: just 2617 LoC in Kotlin (should be at least 4096)
+
+
+
+cybercog/laravel-love by @ziyavakhobov
+
+- PHP Code lines: 10 930
+- Total Code lines: 11 714
+- First commit: 6 Sep 2016
+Good:
+- Good documentation and examples.
+- Clear code comments.
+- MIT Licence used.
+- Code written in OOP style
+- tests exists, but could not find actual coverange in %.
+- Automated build and deployment.
+- Class namings are clear and orginized
+- PhpStan used as a static analyzer
+Bad:
+- Project is based on laravel. Laravel have lot's of OOP anti patterns.
+- Lots of getters and setters are used in classes.
+- Lots of utility classes used.
+- Lost of isset, instanceof and null check used.
+- Some classes have public static methods.
+- Reacterable and Reactable are traits and they are used in lots of parts of the project. The trait is an anti-pattern.
+
+
+
+decorators-squad/eo-yaml by @iakunin
+
+CLOC: 12K (11K in Java)
+HoC: 43K
+Age: Over 1 year
++ CI
++ Code-coverage: 93% - very good coverage
++ Issues
++ PRs
++ Unit tests
++ Integration tests
++ Automated releases: using Rultor
++ Static analysis
+-+ Traceability of commits to PRs/issues: episodically
+- NULL References: exist
+- Utility Classes: com.amihaiemil.eoyaml.Yaml
++ Getters and Setters: no any
++ DTO: no any
++ ORM: no
++ MVC: no
++ Mutable Objects: no
++ Singletons: no
++ DI-container: no
+- Static Methods: com.amihaiemil.eoyaml.extensions.MergedYamlMapping, com.amihaiemil.eoyaml.Yaml
+? Abstract classes and implementation inheritance: there are some abstract classes, however I cannot consider this as `implementation inheritance` - could be com.amihaiemil.eoyaml.BaseYamlNode done via decorators?
++ Exception swallowing: no
+- -ER classes: *Builder, *Printer
++ Protected methods: no
+- Big classes (more than 300 LoC): com.amihaiemil.eoyaml.RtYamlPrinter, com.amihaiemil.eoyaml.YamlMapping
+This is really good candidate for championship.
+
+
+
+embox/embox by @fellahi-ali
+
+waiting...
+
+
+flyimg/flyimg by @ziyavakhobov
+
+- PHP Code lines: 2 330
+- Total Code lines: 11 681
+- First commit: 8 Mar 2016
+Good:
+- Great documentation with examples.
+- Clear code comments.
+- MIT Licence.
+- Github issues linked to commits and well orginized.
+- Code written in OOP style
+- Classes are small except ImageProcessor class. May be need to split to smaller classes. No god objects found.
+- 98% test coverage.
+- Automated build and deployment. Docker containers and composer configured.
+- Class namings are clear and orginized
+- No static methods found.
+- No null check and null return.
+Bad:
+- Project is based on symfony silex. Silex have lot's of OOP anti patterns.
+- Some getters and setters are used in classes. Because it is Silex.
+- Lots of utility classes used.
+- Some classes are mutable.
+- Couldn't find any static analyzers.
+
+
+
+gentee/gentee by @fellahi-ali
+
+waiting...
+
+
+
+gulpjs/gulp by @razzwan
+
+### Repository view
+- [x] More than one year old (first commit was made on Jun 30, 2013)
+- [x] CLOC: 5290 (399 in JavaScript)
+- [x] CI (azure-pipelines-steps, travis)
+- [x] Awesome demo site with usage description https://gulpjs.com/
+- [x] Descriptive good README with examples
+- [ ] CODE_OF_CONDUCT.md description is NOT present
+- [x] CONTRIBUTING.md is present
+- [x] 1786 closed and 21 opened issues
+- [x] 636 PRs with 241 contributors
+### Code quality
+- [x] Simple, clear small enough files
+- [x] Master branch has no compilation errors
+- [x] tests is present
+- [x] tests are passed out of the box (after build only) strange that the tests require build -0.5
+- [ ] Code quality badge is NOT present
+- [ ] Most part of package is documentation, but it is also can be as a advantage
+### Summary:
+* Code-wise the project is good enough +4
+* Perfect demo site with usage examples +1
+* Good activiti and 241 contributor +1
+* Easy start to contribute +1
+* Very laconic, but rather an advantage
+Score: 9.5/10
+A perfect candidate for the final
+
+
+
+hdouss/jeometry by @iakunin
+
+CLOC: 12K (11K in Java)
+HoC: 45K
+Age: Over 1 year
++ CI
++ Code-coverage: 97%
++ Issues
++ PRs
++ Traceability of commits to PRs/issues
++ Unit tests
++ Integration tests
++ Automated releases
++ Static analysis: Qulice
++ NULL References: absolute absence
++ Utility Classes: absolute absence
+-+ Static Methods: only private static methods
+- Getters and Setters: setters here com.jeometry.render.awt.AbstractAwtPaint and here com.jeometry.render.awt.AwtDrawableSurface
+- Mutable Objects: com.jeometry.render.awt.AbstractAwtPaint; com.jeometry.render.awt.AwtDrawableSurface extends from a mutable object
+- Abstract classes and implementation inheritance: com.jeometry.render.awt.AwtDrawableSurface; com.aljebra.matrix.FixedMatrix neither final, nor abstract (could be inhereted)
+- Protected methods (means lack of encapsulation): com.jeometry.render.awt.AbstractAwtPaint
++ DTO: no
++ Singletons: no
++ ORM: no
++ MVC: no
++ DI-container: no
++ Exception swallowing: no
++ -ER classes like Processor, Resolver, Provider, Handler: no
++ Big classes (more than 300 LoC): no
+Another good candidate for championship.
+
+
+
+igorwojda/android-showcase by @iakunin
+
+CLOC: 37050 (2289 in Kotlin) - see https://api.codetabs.com/v1/loc/?github=igorwojda/android-showcase
+    https://s.mail.ru/3pPC/56XDJnohA
+HoC: 53K
+Age: Over 1 year
+Project is too small: just 2289 LoC in Kotlin (should be at least 4096)
+
+
+
+imrafaelmerino/json-values by @fellahi-ali
+
+Age: > 1 year (first commit: 2019-07-09)
+CLoC: 47K (28K in Java)
+HoC: 670K
++ CI: Travis + CircleCI
++ Release/Deployment: automated with Travis + Maven
++ Static analysis: sonarqube
++ README: Very well
++ Examples: provided in the README and as test cases
+++ API Documentation: very well documented
++ Quality Badges: sonarcloud
+++ Unit tests: yes, looks very well tested!
++ Integration tests (nothing to integrate with)
++ Build status: passing
++ Coverage check: codecov (77%)
++ PRs to master branch: yes
++ Commits with tickets: yes
++- Mix of FP and OOP
+++ NULL refrences: no Nulls
+--- Interfaces: very limited, some are very huge, and with a lot of default methods that are overriden in many places
+++ Immutable objects: yes, all objects are immutable
+-- Public static methods: almost all implementations of 'jsonvalues.JsValue' have factory methods and private Ctor
++ No utility classes
+- Public static properties: in many places
+- Enums: very little
+--- Implementation Inheritance: a lot of default methods of interfaces are overriden in many classes,
+some abstract classes have a lot non-final methods and some of them are overriden
+and even some classes have impl inheritance like in 'jsonvalues.Lens.java' class.
+-- Anti-Patterns: SINGELTONs (very limited), Static Factory Methods (every where)
+Summary:
+    In general this project is well organised and managed, the code is well designed but more in a functional style.
+Score: 6/10
+
+
+
+javascript-obfuscator/javascript-obfuscator by @iakunin
+
+CLOC: 174K (38K in TypeScript)
+HoC: 1843K
+Age: Over 1 year
++ CI
++ Code-coverage: 97%
++ Static analysis: eslint with redundant config (.eslintrc.js)
++ Issues
++ PRs
+- Traceability of commits to PRs/issues: no
++ Integration tests
++ Unit tests
+- Automated releases: couldn't find any scripts
+- Big classes (more than 300 LoC): src/node/NodeFactory.ts
+- Protected methods (means lack of encapsulation): a lot of them
+- NULL References: a lot of them
+- Static Methods: exist
+- Utility Classes: src/utils/*.ts
++ ORM: no
++ Exception swallowing: no
+- Factories: src/node/NodeFactory.ts
+- -ER classes: *Appender, *Analyzer, *Sanitizer, *Helper
+- Existence of helpers classes: src/custom-code-helpers/*
+- DI-container: exist (https://github.com/inversify/InversifyJS)
+- Abstract classes and implementation inheritance: src/analyzers/calls-graph-analyzer/callee-data-extractors/AbstractCalleeDataExtractor.ts
++ MVC: couldn't find any signs
++ Singletons: couldn't find any
+- Mutable Objects: for example, BlockStatementDeadCodeInjectionNode.initialize, ObjectExpressionVariableDeclarationHostNode.initialize
++ DTO: couldn't find any
+- Getters and Setters: exist
+
+
+
+mcjtymods/rftoolscontrol by @fellahi-ali
+
+Age: > 1 year (first commit: 2016-08-26)
+CLoC: 19K (18K in Java)
+HoC: 32K
+-- No CI/CD
+- Build status unknown
+- No Coverage check
+- No Quality checks
+-- No Static analysis
+--- README: very poor
+--- PRs to master not used
+--- Commits/tickets: No, commits are not traceable to tickets!
+---- No Unit tests
+--- Many OOP principles are violated
+    - Implementation Inheritance
+    - Many big classes with public static methods
+    - Setters & Getters
+--- Extensive usage of annotations
++ Some usage of interfaces
+Summary:
+    Too bad for a Code Quality competition
+Score: 0/10
+
+
+
+nesbox/tic-80 by @iakunin
+
+CLOC: 69K (27K in C)
+HoC: 635K
+Age: Over 1 year
++ CI
+- Code-coverage: couldn't find any info
+- Issues: seems that they are used as a bug-tracker only
+- PRs: many commits directly to master branch
+- Traceability of commits to PRs/issues: very few commits have link to the issue
+- Unit tests: cannot find any
+- Integration tests: cannot find any
+- Automated releases: cannot find any info (seems that is done manually)
+- Static analysis: cannot find any info
+- NULL References: couple of nulls in project
+- Utility Classes: src/system/baremetalpi/utils.cpp, src/system/n3ds/utils.c
+- Mutable Objects: mutability exists
+- Getters and Setters: direct access to stucture members
+- DTO: structures
++ ORM: no
++ MVC: no
++ Singletons: no
++ DI-container: no
+- Static Methods: there are no classic objects - just public functions and data-structures
+- Abstract classes and implementation inheritance: no classes at all
+- Protected methods: no classes at all
+- Big classes (more than 300 LoC): many big c-files
+- Exception swallowing in some places: src/system/sdl/main.c:1778
+As far as I can see, this project has nothing in common with OOP.
+
+
+
+onqtam/doctest by @fellahi-ali
+
+Age: > 1 year (first commit: 2019-07-09)
+CLoC: 21K (10K in Java)
+HoC: 147K
+++ CI: Travis + AppVeyor + GitHub Actions
+++ Build status: passing on master & dev branches
++ Release/Deployment: automated
++ Static analysis: part of the build
++++ Coverage check: coveralls.io (95%)
++ Quality Badges: yes (lgtm.com)
++ README: excellent & very informative
++ Examples: yes (in /examples dir)
++ API Documentation: yes, good documentation provided as markdown and html files, in /doc dir
++ Unit tests: looks tested very well (95% coverage), but coulden't find the tests code
+- PRs to master branch: no, (push directly to master)
+- Commits with tickets: sometimes
+--- Not really OOP: one .cpp file of 3500 lines of code!!!, pure procedural (even though there are some classes)
+Summary:
+    It looks a very good project in term of management and usefulness, but it has nothing to do with an OOP competition!
+Score: 4/10
+
+
+
+openfeign/feign by @fellahi-ali
+
+Age: > 1 year (first commit: 2012-03-18)
+CLoC: 31K (24K in Java)
+HoC: 90K
++ CI: Travis
++ Release/Deployment: automated & well documentted
+- Static analysis: not part of the build (there is a checkstyle.xml config in the repo under /codequality but I can't find how the ckeck is run)
++ Build status: passing
+- Coverage check: no
+- Quality badges: no
++ PRs to master branch: yes
++ Commits with tickets: yes (sometimes)
++ README: Very well, with exapmles
++ Examples: provided in the README and as separate project under /example-github
++- API Documentation: acceptable, some parts of the API are not well documented
++ Unit tests: yes, a lot but without coverage reports we couldn't know how good they are!
++- NULL refrences: in few places although very limited
+--- Interfaces with static and default methods
++ Immutable objects, except few cases
+- Public static methods: in few places (Builders & Utils)
+- Implementation Inheritance: very limited
+- Anti-Patterns: Builders, Static Factory Methods
+Summary:
+    Although the code is not perfect OOP, but generally this project looks good!
+Score: 6/10
+
+
+
+pixelpusher/liveprinter by @iakunin
+
+CLOC: 43K (9K in JavaScript)
+HoC: 507K
+Age: Over 1 year
+- CI: nope
+- Code-coverage: nope
+- PRs: direct pushing to master branch
+- Traceability of commits to PRs/issues: nope
++ Issues
+- Tests: there are dir `testing`, but I cannot figure out how to run them
+- Automated releases: nope
+- Static analysis: nope
+- Getters and Setters: liveprinter/UM/Job.py:40
+- NULL References: liveprinter/AutoDetectBaudJob.py:39
+- Mutable Objects: many
+- Singletons: liveprinter/UM/JobQueue.py:96
+- Utility Classes: js/util
+- Exception swallowing in some places
+- Big classes (more than 300 LoC): both *.js and *.py files
+- -ER classes: Scheduler, Parser, etc.
+- Static Methods: static JS-functions
+As far as I can see, this project has nothing in common with OOP.
+
+
+
+pmed/v8pp by @fellahi-ali
+
+waiting...
+
+
+
+reactos/reactos by @fellahi-ali
+
+waiting...
+
+
+
+reinterpretcat/vrp by @iakunin
+
+CLOC: 57K (30K in Rust)
+HoC: 160K
+Age: Over 1 year
++ CI
++ Code-coverage: 85%
+- Issues: just only 1 opened and 5 closed
+- PRs: just only 1 closed
+- Traceability of commits to PRs/issues: absolute absence
++ Automated releases
++ Unit tests
++ Integration tests
++ Static analysis: rust-clippy and rustfmt
++ NULL References: NULL is not exist in Rust
+- Big classes (more than 300 LoC): exist
++ Protected methods (means lack of encapsulation): formally, there are no protected methods in Rust
+- Static Methods: exist
+- Utility Classes: exist (vrp-core/src/utils)
++ ORM: no
++ MVC: no
+- Factories exist
+- -ER classes: RouteModifier, Builder, SkipBestJobMapReducer
++ Singletons: couldn't find any
++ DI-container: couldn't find any
+- Exception swallowing in some places (failure: Callback in convert_to_pragmatic function)
+- Getters and Setters: yes
+- DTO: IdDimension, ValueDimension
+- Mutable Objects: ValueDimension
++ Abstract classes and implementation inheritance: couldn't find any
+
+
+
+scalikejdbc/scalikejdbc by @iakunin
+
+CLOC: 26K (23K in Scala)
+HoC: 129K
+Age: Over 1 year
++ CI
+- Code-coverage: couldn't find any info
+- Automated releases: seems that release are done manually
++ Issues
++ PRs
+- Traceability of commits to PRs/issues: no
++ Unit tests
++ Integration tests
+- There are some commented test-cases without link to corresponding issue (to fix it)
+- Static analysis: couldn't find any info
+- Big classes (more than 300 LoC): many of them
+- NULL References: exist
+- Bad design: scalikejdbc.DBConnectionAttributesWiredResultSet has 195! public methods
+- Utility Classes: for example - scalikejdbc.Binders
+- Mutable Objects: for example - scalikejdbc.DBConnection
+- Getters and Setters: src/main/scala/scalikejdbc/ConnectionPoolContext.scala
+- DTO: src/main/scala/scalikejdbc/ConnectionPoolContext.scala
++ ORM: no
++ MVC: no
+- Static Methods: Scala's `object`s could be considered as static methods
++ Singletons: couldn't find any
++ DI-container: no
+- Exception swallowing in some places
+- Protected methods (means lack of encapsulation)
+- Abstract classes and implementation inheritance
+- Factories
+- -ER classes: *Binder, *Provider, *Executor
+
+
+
+scommons/scommons-react-native by @fellahi-ali
+
+
+
+stiffstream/restinio by @iakunin
+
+CLOC: 66K (24K in C++)
+HoC: 222K
+Age: Over 1 year
++ CI
+- Code-coverage: couldn't find any
+- Issues: seems that it used only for bug-reports (or I'm wrong?)
+- PRs: pushing directly to master-branch (without PRs)
+- Traceability of commits to PRs/issues: not traceable at all (34 of 38 last commits has no link to issue)
+- Unit tests: seems that there are only integration tests (or I'm wrong?)
++ Integration tests
+- Automated releases: cannot find any info
+- Static analysis: cannot find any info
+- NULL References: only in tests
+- Static Methods: exists
+- Utility Classes: dev/restinio/utils, dev/restinio/helpers
+- Big classes (more than 300 LoC): many
+- Mutable Objects: dev/restinio/websocket/impl/ws_protocol_validator.hpp
+- Getters and Setters:  dev/restinio/websocket/impl/ws_protocol_validator.hpp::set_validation_state
++ ORM: no
++ MVC: no
++ DI-container: no
++ DTO: couldn't find any
++ Singletons: couldn't find any
++ Abstract classes and implementation inheritance: couldn't find any
++ Protected methods: couldn't find any
+- Exception swallowing in some places: just logging without rethrowing in many places
+- -ER classes: parser, enabler
+
+
+
+traccar/traccar by @fellahi-ali
+
+Age: > 1 year (first commit: 2010-04-11)
+CLoC: 74K (67K in Java)
+HoC: 350K
++ CI: GitHub Actions + Gradle
++ Packaging automated with shell scripts
+- Releases are available at GitHub but couldn't find how it's automated!
++ Static analysis: part of the build (with checkstyle gradle plugin)
++ README: good enough with product description and useful links.
+- No Badges for build status, qulaity check, coverage check
+- Build status not reported
+- No Coverage check
+- No Quality checks
+--- PRs to master: not used by the main contributer (pushing directly to master branch)
+--- Commits/tickets: No, commits are not traceable to tickets!
+-+ Unit tests present, but mixed with integration tests and no coverage reports!
+--- Integration tests mixed with unit tests!!!
+---- OOP & EO principles violated in different ways:
+    -- Implementation inheritance everywhere with mothod overriding
+    -- Usage of instanceof and type casting
+    -- Lack of encapsulation
+    --- Very limitted usage of interfaces
+    --- NULLs in many places
+    --- Getters and setters also
+    -- Some util classes
+    -- Public static methods
+    - Public static leterals
+    --- DTOs
+    --- Many Object(er) (Handler, Manager, Provider....)
+-- Usage of DI container (Google Guice)
+Summary:
+    Even this project is a good product and looks popular & successful, but it violate many principles of OOP and EO and it's not a good candidate for a Code Quality competition
+Score: 4/10
+
+
+
+tyvik/geopuzzle by @fellahi-ali
+
+waiting...
+
+
+
+victorx64/devrating by @fellahi-ali
+
+Age: > 1 year (first commit: 2019-07-25)
+CLoC: 8K (7.3K C#)
+HoC: 129K
++ CI: GitHub Actions
+++ Release/Deployment automated to NuGet and GitHub Packages
+++ Static analysis is part ofthe build with dotnet-sonarscanner (sonarqube.org)
++ Build status: passing
++ Coverage check/badge with sonarcloud (80.7%)
+++ Multiple Quality checks/badges: with sonarcloud (quality gate, maintainability, reliability, bugs, technical debt, code smell, vulrenabilites, duplication)
++ HoC badge
+++ Code get to master through PRs, and passes by 5 different checks!
+++ All Commits are traceable back to tickets
+++ Good README file with clear description and usage instructions
++++ Excellent project structure, any stranger can understand and navigate the code quickly (happened to me even I don't have a lot of experience in .Net/C#)
++++ Domain types named following the EO style
++++ All interfaces are small (avg: 3 methods)
++++ All public methods implements some interface
++++ No public statics (except at the entry point)
++++ All objects are immutable, (no setters at all)
++++ No NULLs at all - you feel safe when you read the code :)
++++ Usage of NullObject pattern when needed
++++ Usage of SQL speaking objects
++++ Usage of decorator pattern
++++ Well written Unit & Integration tests
++++ No usage of anti-patterns
+++- The code is very clear and self explanatory, no need for explicit comments, but sometimes the 'Why' comments are helpful for strangers
+Summary:
+    I think I found a winner :)
+    Short, it's an elegant implementation of Elegant Objects principles.
+Score: 10/10
+
+
+
+wentout/mnemonica by @razzwan
+
+### Repository view
+- [x] More than one year old (first commit was made on Aug 25, 2019)
+- [x] CLOC: 11776 (8079 in JavaScript, 2759 in TypeScript)
+- [x] CI (travis)
+- [ ] No demo site
+- [x] Descriptive good README with examples
+- [ ] CODE_OF_CONDUCT.md description is NOT present
+- [ ] CONTRIBUTING.md is present
+- [ ] no issues
+- [x] 115 PRs with 2 contributors
+### Code quality
+- [x] Good, simple, clear folder structure
+- [x] Simple, clear small enough files
+- [x] Master branch has no compilation errors
+- [x] tests is present
+- [x] tests are passed out of the box (after build only) strange that the tests require build -0.5
+- [ ] Code quality badge is NOT present
+- [ ] A lot of commented code
+- [ ] Huge README.md file, but complicated to understand what the reason of this project
+### Summary:
+* Code-wise the project is good enough +3
+* has potential yet to be revealed, but perhups exists +1
+* Repository have not clear description -1
+* Have no badges -1
+Score: 4.8/10
+I would say, that this is good candidat for the next competition, not current one. Has potential to be revealed
+
+
+
+yuriykulikov/alarmclock by @fellahi-ali
+
+Age: > 1 year (first commit: 2008-10-21)
+CLoC: 17K (6.7K Kotlin, 2.5K in Java)
+HoC: 120K
++ CI: Travis
+- Packaging/Release not automated
+- No static analysis
++- Simple README with only a description of the app
++ Build is passing
++- Coverage check with codecov (71%)
++ Quality check with codacy
++ Bages for build, quality check and coverage
+--- PRs to master: not used (pushing directly to master branch)
+--- Commits/tickets: No, commits are not traceable to tickets!
+++ Unit & Integration (Android) tests
++++ Usage of Immutable objects
++++ Code is almost clean of NULLs
++- Usage of interfaces but limited!
++- Usage of Kotlin high level functions (not OOP)
+-- Usage of a DI container (Koin)
+- Some big classes that I think influenced by Android architecture
+- Some -ER objects (Handler, Presenter)
+Summary:
+    Even though the code is highly influenced and inherit a lot of bad OOP practices of Android architecture,
+    but it looks that the maintainers are doing good job trying to make the code as 'OOPish' and clean as possible.
+Score: 6/10
+
+
+
+z7zmey/php-parser by @iakunin
+
+CLOC: 116K (107K in Rust)
+HoC: 847K
+Age: Over 1 year
++ CI
+- Code-coverage: just only 55% (< 85%)
++ Issues
++ PRs
+- Traceability of commits to PRs/issues: some commits are without link to PR/issue
++ Unit tests
++ Integration tests
+- Static analysis: CodeClimate with very low result (D)
+- Automated releases: cannot find any info (or, maybe, Golang doesn't need any)
+- Big classes (more than 300 LoC): many of them
+- Design problems: php7/php7.go and php5/php5.go contains about 8K LoC
+- NULL References: many of them
+- -ER classes: walker, dumper, scanner
+- Static Methods: for example, `version.Compare` (or maybe, I'm wrong?)
+- Utility Classes: version/version.go (or maybe, I'm wrong?)
++ MVC: no
++ ORM: no
++ DI-container: couldn't find any
++ Singletons: couldn't find any
++ Protected methods: couldn't find any
++ Abstract classes and implementation inheritance: couldn't find any
+- Mutable Objects: many of them
+- Getters and Setters: many of them
++ DTO: couldn't find any
++ Exception swallowing: couldn't find any
