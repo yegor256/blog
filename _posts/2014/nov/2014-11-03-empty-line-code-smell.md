@@ -2,7 +2,7 @@
 layout: post
 title: "An Empty Line is a Code Smell"
 date: 2014-11-03
-tags: design
+tags: quality
 description: |
   An empty line inside your method body is an indicator
   of a lack of cohesion in its design and a good motivator
