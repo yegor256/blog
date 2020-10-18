@@ -68,7 +68,9 @@ are reading the mood of our
 [manager]({% pst 2015/sep/2015-09-22-micromanagement %}). Our fear becomes a guide for us.
 
 Competition is _inevitable_ in a group, especially if the group consists
-of creative people. Creativity is all about competition. Each of us
+of creative people. Creativity is all about
+competition, as was [demonstrated](https://voxeu.org/article/effects-competition-creative-production)
+by Daniel P. Gross. Each of us
 wants to be better than the others, and this is what drives _innovation_.
 But if the team has no rules, even a minor competition seriously
 and negatively affects their motivation.
