@@ -109,3 +109,5 @@ but for [different reasons]({% pst 2014/may/2014-05-05-oop-alternative-to-utilit
 
 P.S. Now I think that the reasons in this article are applicable to _all_ private
 methods, not only static ones.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In OOP, private static methods are...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1317719171480825856?ref_src=twsrc%5Etfw">October 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
