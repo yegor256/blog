@@ -2,7 +2,7 @@
 layout: post
 title: "XML+XSLT in a Browser"
 date: 2014-06-25
-tags: xslt java restful
+tags: xml java restful
 description: |
   XML+XSLT is a useful combination for web interfaces
   and RESTful API-s at the same time. This article explains

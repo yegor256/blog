@@ -2,7 +2,7 @@
 layout: post
 title: "RESTful API and a Web Site in the Same URL"
 date: 2014-09-09
-tags: restful xslt xml
+tags: restful xml
 description: |
   The way RESTful API-s are designed perfectly
   fits into the concept of web browsing, with a few
