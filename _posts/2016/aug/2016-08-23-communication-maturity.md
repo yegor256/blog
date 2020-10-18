@@ -22,7 +22,7 @@ jb_picture:
 Each software team organizes its communications in its own
 specific way. Some use Slack, Trello, or GitHub; others just sit together
 in the same room. There are many methods and tools. I believe
-it's possible to rank them by the amount of **damage** they cause
+it's possible to rank them by the amount of _damage_ they cause
 to your project. This is the list of all of them I'm aware of at the moment.
 
 <!--more-->
@@ -35,7 +35,7 @@ the bigger the risk of [losing information]({% pst 2014/oct/2014-10-07-stop-chat
 And lost information is the first source of trouble in any project.
 
 Here is the list; it starts with the most damaging communication means
-and goes down to the most **mature** and professional ones, which cause the
+and goes down to the most _mature_ and professional ones, which cause the
 least amount of trouble:
 
   * **Coffee Breaks**.
