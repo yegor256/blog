@@ -32,7 +32,7 @@ the data out of an object, right? Nope. Wrong.
 {% jb_picture_body %}
 
 I'm suggesting to use "printers" instead. Instead of exposing
-data via getters, an object will have a functionality of **printing**
+data via getters, an object will have a functionality of _printing_
 itself to some media.
 
 Let's say this is our class:
@@ -87,9 +87,9 @@ are many examples in Java, where getters are being actively used.
 
 {% youtube _Q0cNykXB04 %}
 
-This is **not** because they are so effective. This is because we're so
-[**procedural**]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
-in our way of thinking. We **don't trust** our objects. We only trust
+This is _not_ because they are so effective. This is because we're so
+[_procedural_]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %})
+in our way of thinking. We _don't trust_ our objects. We only trust
 the data they store. We don't want this `Book` object to generate the XML. We
 want it to give us the data. We will build the XML. The `Book` is too stupid
 to do that job. We're way smarter!
