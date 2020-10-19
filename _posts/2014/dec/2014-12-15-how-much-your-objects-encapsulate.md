@@ -50,7 +50,7 @@ that the object of this class, after being constructed, will represent
 a web page. The second class accepts no arguments, which tells us
 that the object of it will represent... the Universe.
 
-{% quote In order to understand what real-life entity an object represents, look at its constructor %}
+{% quote In order to understand what real-life entity an object represents, look at its constructor. %}
 
 I think this principle is applicable to all classes in
 object-oriented programming---in order to understand what
@@ -60,7 +60,9 @@ a real-life entity accessed and managed by the object.
 
 Of course, I'm talking about
 [good objects]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
-which are immutable and
+which are
+[immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
+and
 [don't have setters and getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
 
 Pay attention that I'm talking about arguments encapsulated by the object. The
