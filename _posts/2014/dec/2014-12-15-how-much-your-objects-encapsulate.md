@@ -114,4 +114,4 @@ in this case, we don't need it to encapsulate anything.
 
 I believe that objects representing the Universe are not good objects,
 mostly because there is only one Universe; why do we need many
-representatives of it? :)
+representatives of it?
