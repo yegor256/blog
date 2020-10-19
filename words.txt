@@ -1680,6 +1680,7 @@ continents
 contingency
 continually
 continue
+continued
 continues
 continuous
 continuously
@@ -1943,6 +1944,7 @@ dance
 dancing
 danger
 dangerous
+daniel
 DAO
 DAOs
 dare
@@ -3519,6 +3521,7 @@ grocery
 grooming
 groove
 groovy
+gross
 ground
 grounded
 group
