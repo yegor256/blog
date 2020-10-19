@@ -180,9 +180,9 @@ I was also seen at [these events](/seen.html).
 ### 2020
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="past-talk" alt="TestCon 2020"/><br/>
+<img src="https://i.ytimg.com/vi/aYXuK2do6FA/mqdefault.jpg" class="past-talk" alt="TestCon 2020"/><br/>
 Testing and Testers;
-[TestConf]();
+[TestCon](https://testconf.ru/schedule/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 16 September;
 [видео](https://www.youtube.com/watch?v=aYXuK2do6FA).
