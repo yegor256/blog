@@ -40,7 +40,7 @@ and found out that maintainability is directly mentioned there:
 "The main goal I'm trying to achieve with this writing is to
 increase the _maintainability_ of your code," and then it also explains
 that maintainability is "the time required for me to understand your code." You
-[can't argue with that](https://softwareengineering.stackexchange.com/questions/141005),
+[can argue with that](https://softwareengineering.stackexchange.com/questions/141005),
 but the question remains: how does the lack of "true" object-orientation and proper encapsulation
 hurt readability?
 
