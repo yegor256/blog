@@ -39,7 +39,12 @@ informed about everything I do publicly, including these webinars.
 
 ## 2020
 
-<!-- {% webinar 07-10-2020 51 rsWrgxm8ktU Fat and Skinny Design %} -->
+{% webinar 04-11-2020 52 4ZWHs1mloUw RAII in Java %}
+
+<a href="https://www.youtube.com/watch?v=4ZWHs1mloUw"><img src="https://i.ytimg.com/vi/4ZWHs1mloUw/mqdefault.jpg" class="wnr" alt="Webinar no.52 by Yegor Bugayenko"/></a>
+Nov 4, 2020<br/>
+&#35;52: **RAII in Java**<br/>
+Resource Acquisition Is Initialization (RAII) is a design idea introduced in C++ by Bjarne Stroustrup for exception-safe resource management. Thanks to garbage collection Java doesn’t have this feature, but we can implement something similar, using try-with-resources. Let's see how exactly.
 
 <a href="https://www.youtube.com/watch?v=rsWrgxm8ktU"><img src="https://i.ytimg.com/vi/rsWrgxm8ktU/mqdefault.jpg" class="wnr" alt="Webinar no.51 by Yegor Bugayenko"/></a>
 Oct 7, 2020<br/>
