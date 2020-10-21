@@ -1,6 +1,28 @@
 altiore/lorder.ui by @fellahi-ali
 
-waiting...
+Age: > 1 year (first commit: 2018-06-10)
+CLoC: 62K (31K TypeScript)
+HoC: 406K
++ CI: GitHub Actions
+++ Release/Deployment automated with GitHub Actions
+++ Static analysis + linting part of the build
++ Build status: passing on master branch
+-- No Coverage check/badge  
+++ Code get to master through PRs
+-- There are only few (5) tickets 
+-- Commits are not traceable back to tickets
++- README file good enough with project description and usage instructions (in Russian)
+-- All readable texts: Readme, commit messages and comments are in Russian which makes it very hard to contribute, audit or review unless you use translation tools, or you speek Russian :) 
+-+ Weird directory names with '@' & '#' prefix, I don't know if its some 'React' app convention or what? 
++- Lot of interfaces in src/@types, but most are relatively big, and lot of them are just disguised DTOs! not real abstract behavior.
++- Lot of usage of enums
+--- Lot of usage of top level functions (i.e: public static methods) in src/@utils 
+---- No Unit/Integration tests: I couldn't find them (except two simple test cases!)
+--- All objects I could find are just DTOs that implements some interface not really OOP!
+--- Rest of the code is written in a functional style plus React/UI related stuff (components, hooks, styles)   
+Summary:
+	Not so good for an OOP/EO competition!
+Score: 3/10
 
 
 btraceio/btrace by @iakunin
@@ -167,7 +189,25 @@ This is really good candidate for championship.
 
 embox/embox by @fellahi-ali
 
-waiting...
+Age: > 1 year (first commit: 2018-12-02)
+CLoC: 243K (153K in C, 53K C++)
+HoC: 2015K
++ CI: Travis CI 
+- Release/Deployment: not automated (or I couldn't find the scripts)
+- Static analysis configured with 'coverity' but the last scan done was back in 2016!!!
++ Build status: passing on master
+-- No Coverage check/badge  
+++ Code get to master through PRs
++- Good usage of Issues/Tickets, but they are not referenced in commit messages
+++ Good README file with useful links, documentation links and usage instructions
+++- Unit & Integration tests: yes! but as there is no coverage report we can be sure how good they are!
+++ Well structured code
+--+ All the code is written in plain procedural C, So no OOP code to check!
+
+Summary:
+    Despite this is a good project! it's not suitable for an OOP/EO competition!
+
+Score: 2/10
 
 
 flyimg/flyimg by @ziyavakhobov
@@ -198,7 +238,28 @@ Bad:
 
 gentee/gentee by @fellahi-ali
 
-waiting...
+Age: > 1 year (first commit: 2018-01-14)
+CLoC: 15K (12K in Go)
+HoC: 53K
++ CI: Travis
++ Build status: passing
+- Release/Deployment: not automated! or I couldn't find the scripts
+++ Static analysis: with goreportcard.com, (A+ score)
+-- No Coverage check 
+--- No PRs at all! Only the owner contribute to the project and pushes directly to master 
+-- Commits to tickets: not used! (only 5 closed issues!) 
+++ Good README with links to documentation and usage instructions 
++ Usage Examples provided as code snippets
++- Few Unit tests
+-- NULLs: a lot of 'nil' refs
+-- A lot of big files with procedural code
+-- No Interfaces
+-- Mutability used in many places, beside the fact that Go structs are mutable by design
+
+Summary: 
+    Although the code is a well written idiomatic GO, this project is not suitable for an OOP/EO competition 
+
+Score: 2/10
 
 
 
@@ -484,13 +545,57 @@ As far as I can see, this project has nothing in common with OOP.
 
 pmed/v8pp by @fellahi-ali
 
-waiting...
+Age: > 1 year (first commit: 2013-06-26)
+CLoC: 7K (4.5 C++)
+HoC: 29K
+++ CI: Travis & Appveyor
+++ Build status: passing for Travis and Appveyor
+-- Release/Deployment: not automated! or I couldn't find the scripts 
+-- Static analysis: no!
+-- Coverage check: no! 
+-- PRs to master branch are not used by main contributor (he has only two closed PRs sine 2016)
+-- Commits are not traceable back to tickets
++ Good README file with examples
++ Usage Examples in Readme and as code snippets
+++ Very clear and intuitive project directory/files structure 
+++ Unit tests
+-- Project description states "v8pp uses heavy template metaprogramming"
+-- Most of the code is procedural using template, structs and functions
+-- Only very few classes, that are rather big
+-- No interfaces   
+-- NULLs
+-- Mutability
+
+Summary: 
+    Although the code looks well written & organized, but it's not so good from OOP & EO perspective
+
+Score: 3/10
 
 
 
 reactos/reactos by @fellahi-ali
 
-waiting...
+Age: > 1 year (first commit: 1996-01-23)
+CLoC: 8,115K (C)
+HoC: 78,084K
++ CI: GitHub Actions 
+++ Release/Deployment automated GitHub Actions
+-- Static analysis with 'coverity' but the last scan done was back in 2019!!!
+-- The build is failing
+-- No Coverage check/badge   
++ PRs to master branch are used
++- Issues are tracked using JIRA 
++- Not all commits are traceable back to tickets
++ Good README file with useful links and usage instructions
+? Unit & Integration tests: there are some test here and there!
+-- Directories structure is very hard to navigate
+-- As any low level software, most of the code is written procedural C
+-- There is some OOP code in C++ but with a lot of NULLs and mutability
+
+Summary: 
+    Too bad for an OOP/EO code quality competition
+
+Score: 1/10
 
 
 
@@ -564,6 +669,33 @@ Age: Over 1 year
 
 scommons/scommons-react-native by @fellahi-ali
 
+Age: > 1 year (first commit: 2019-01-15)
+CLoC: 18K (6.7 Scala)
+HoC: 34K
++ CI: Travis
++ Build status: passing
++ Release/Deployment: automated to Sonatype repos
+? Static analysis: I couldn't find any, maybe I miss something!
++ Coverage check with coveralls.io (97%)
+- No PRs to master branch! 
++- Some (recent) commits are traceable to tickets
++ Good README file with usage instructions a& links to samples and demo apps
++ Examples & demo apps provided in the repo
++ Unit tests
+- No integration tests
+- NULLs in few places 
++- Usage of Interfaces (aka: traits) but all are implemented by Objects (SINGLETONs) and no Classes (is this really OOP???) 
+- I could meet just two Classes, the rest of code is implemented using Objects  
+- Mutability in few places
+- Getters and setters: in few places
+- UC & Static methods: Scala Objects that doesn't implement any trait can considered as UC
+- Anti-Patterns: SINGLETONs (Scala objects)
+
+Summary: 
+    I don't know if is the Scala way of doing OOP? 
+    But for sure this is not David West's Obj. Thinking nor Yegor's EO way :)  
+
+Score: 3/10
 
 
 stiffstream/restinio by @iakunin
@@ -637,7 +769,29 @@ Score: 4/10
 
 tyvik/geopuzzle by @fellahi-ali
 
-waiting...
+Age: > 1 year (first commit: 2017-01-09)
+CLoC: 28K (20K JSON, 3.7K Python)
+HoC: 117K
++ CI: CircleCI
++ Build status: PASSED
+++ Release/Deployment: automated with CircleCI & Docker
++ Static analysis: part of the build with 'pylint'
++ Coverage check+badge: with codecov.io (64%) 
+++ Quality Badges: lgtm.com with A+ score
+++ PRs to master branch are used by the author
+-- Commits are not traceable to tickets
++ Good README file with installation/usage instructions
+++ Unit & Integration tests
+-- NULLs (aka: None) in many places 
+-- Impl. inheritance of django base classes
+-- Mutability
+-- Usage of Utility/Static methods (ex: /maps/converter.py)
+-- Anti-Patterns: MVC (Django MTV), DTOs, ORM (django.db)
+
+Summary:
+    As many typical web frameworks based projects, this one also violate several OOP & EO principles!  
+    thus it's not so good for a code quality competition  
+Score: 4/10
 
 
 
