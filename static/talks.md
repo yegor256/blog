@@ -114,7 +114,7 @@ all will be video-recorded and published on
 Decentralized Architectures: Blockchain and Beyond<br/>
 [HighLoad++](https://www.highload.ru/moscow/2020/abstracts/6620)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-9-10 November.
+17-18 Feb.
 
 <!-- <div class="talk-event">&nbsp;</div>
 <img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
