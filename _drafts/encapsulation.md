@@ -96,13 +96,13 @@ class Temperature {
 
 Now the class `Temperature` doesn't allow us to read its attribute `t`.
 Instead, we can only _tell_ it to prepare a string presentation of the temperature
-and return that back to us. Maybe not exacly a classic example of the "tell" paradigm,
+and return that back to us. Maybe not exactly a classic example of the "tell" paradigm,
 since some data is coming back, but now it looks much better than before. The beauty
 of this refactoring is less [coupling]({% pst 2018/sep/2018-09-18-fear-of-coupling %})
 between the client and the object. With
 the getter (or direct access to the attribute via dot notation), the client
 was able to retrieve the numeric value of the temperature and recalculate it
-in Farenheit, assuming that it was in Celcius. With the `String` being
+in Fahrenheit, assuming that it was in Celsius. With the `String` being
 returned the client would not do this. The string would only be used as a final
 product, not modifiable. Or maybe not?
 
@@ -119,12 +119,12 @@ How does it look now? Isn't this a violation of encapsulation?
 The result of `toString()` is not treated
 as it is supposed to be treated. Not as a solid string, but as data with
 some internal structure, which is _known_ to the client. The _knowledge_ the
-client posseses about the output is the key problem here. The client knows too
+client possesses about the output is the key problem here. The client knows too
 much and uses this knowledge for its own benefit: to deconstruct the
 data and manipulate the result.
 
 Can we really prohibit the client from doing this? There is no such feature
-in any programming language, to my knowlege. When the output of the method
+in any programming language, to my knowledge. When the output of the method
 is delivered to the client, the client is allowed to do whatever is needed
 with it. This is that lack of respect to encapsulation, if I correctly
 understood Dr. West. And we are not even discussing
