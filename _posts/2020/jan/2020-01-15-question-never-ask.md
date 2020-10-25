@@ -46,15 +46,17 @@ for a while, comes back to me with a plan for achieving this goal. A good one
 _tells_ me what is next, instead of asking. All I need to do is to approve
 or reject the plan proposed.
 
+{% quote Good soldiers pro-actively build their own plans and do everything to convince me that they make sense. %}
+
 Good soldiers don't sit and passively wait until I come to them and say what exactly
 needs to be done. Good soldiers pro-actively build their own plans by themselves and
 do everything to convince me that they make sense.
 
-{% quote Good soldiers pro-actively build their own plans and do everything to convince me that they make sense. %}
-
 Bad soldiers, on the other hand, ask me "What's next?" and it gets very annoying.
 It's absolutely no fun to work with these people and I either try to explain to them
 why such a question is a terrible mistake, or I simply get rid of them.
+
+{% video CmUzNPqCF4s %}
 
 Moreover, if the boss starts telling you what to do, you must realize that this
 is the moment where the credit is lost. You've already been classified
