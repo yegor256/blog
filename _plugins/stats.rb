@@ -96,6 +96,13 @@ module Jekyll
         words += all
         months[m] += all.length
       end
+      years = months.keys.map { |m| m[0..4].to_i }.uniq
+      (years.min .. years.max).each do |y|
+        (1..12).each do |m|
+          txt = format("%4d-%02d", y, m)
+          months[txt] = 0 if months[txt].nil?
+        end
+      end
       File.write(
         File.join(site.config['source'], '_temp/stats/words.txt'),
         words.sort{ |a,b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
