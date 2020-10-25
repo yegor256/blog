@@ -56,7 +56,7 @@ Bad soldiers, on the other hand, ask me "What's next?" and it gets very annoying
 It's absolutely no fun to work with these people and I either try to explain to them
 why such a question is a terrible mistake, or I simply get rid of them.
 
-{% video CmUzNPqCF4s %}
+{% youtube CmUzNPqCF4s %}
 
 Moreover, if the boss starts telling you what to do, you must realize that this
 is the moment where the credit is lost. You've already been classified

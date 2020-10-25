@@ -83,7 +83,7 @@ Finally, take a look at the method `sum()` one more time. How about these bugs:
 
 I'm sure you can find many more.
 
-{% video ZdHCrsQsoMI %}
+{% youtube ZdHCrsQsoMI %}
 
 BTW, Glenford J. Myers said something very similar in his book
 "[The Art of Software Testing](http://amzn.to/1Y3qAbN)," which I

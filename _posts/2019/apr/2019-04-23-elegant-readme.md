@@ -59,7 +59,7 @@ You should put no more than fives badges in a line. Then separate the
 lines with an empty line. See how it's done in
 our [zold-io/zold](https://github.com/zold-io/zold) repo.
 
-{% video Qxvk9z0tEP8 %}
+{% youtube Qxvk9z0tEP8 %}
 
 You should group them somehow in the lines, using some logic. I group them
 by the level of technical details. The first line is about CI, code coverage,

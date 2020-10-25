@@ -34,7 +34,7 @@ Software is part of my life. It actually _is_ my _life_, not just part of it. I 
 at this MacBook for much more time every day than I drive, talk, or listen
 to the radio.
 
-{% video kPmbRkSWYnY %}
+{% youtube kPmbRkSWYnY %}
 
 Code is the _territory_ where I
 [interfere]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
