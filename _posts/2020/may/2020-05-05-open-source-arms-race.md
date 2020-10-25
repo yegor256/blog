@@ -137,7 +137,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     They listen to open source projects, because they trust them much more
     than they trust Google, IBM or Microsoft. Tech companies are smart, but their
     decisions are based on monetary reasons, while open source projects
-    are much more free to do what is right, instead of what is profitable.
+    are much freer to do what is right, instead of what is profitable.
     And programmers usually get very skeptical when open projects are acquired
     by large enterprises, like
     [Java by Oracle](https://www.reddit.com/r/linux/comments/2e2c1o/what_do_we_hate_oracle_for/)
