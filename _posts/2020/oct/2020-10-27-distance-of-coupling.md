@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New Metric: the Distance of Coupling"
-date: 2020-10-20
+date: 2020-10-27
 place: Moscow, Russia
 tags: oop
 description: |
