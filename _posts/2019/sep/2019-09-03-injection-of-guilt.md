@@ -81,7 +81,9 @@ at every moment of time everybody knows exactly what they have to do in order to
 <del>money</del> what they are there for.
 
 However, _most_ software groups don't have such great management, for many
-reasons. Thanks to how Agile has been diminishing project management for
+reasons. Thanks to how
+[Agile]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
+has been diminishing project management for
 years, replacing it with leadership and "team work," many of the potentially good
 managers have lost their motivation to work as such. Needless to say, talent
 among managers is as rare as it is among programmers, dentists, or interior designers.
