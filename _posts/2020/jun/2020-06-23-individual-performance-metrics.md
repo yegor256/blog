@@ -97,6 +97,8 @@ need an official name for this chaos, to avoid confusion. Agile is the name.
 Managers are [not in charge]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %})
 anymore, programmers are. And it's sad.
 
+{% video jjeW1hTtRh0 %}
+
 However, not everybody believes in this anarchy. Some experts think that metrics
 are actually helpful. Bradley Kirkman et al.
 [claim](https://hbr.org/2016/03/teamwork-works-best-when-top-performers-are-rewarded) that
