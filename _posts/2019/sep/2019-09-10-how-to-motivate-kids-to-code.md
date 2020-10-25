@@ -59,19 +59,12 @@ Well, how about one of these (maybe not all of them apply to all ages,
 but you get the idea):
 
   * Can you make an iPhone mobile game and publish it on the Apple Store?
-
   * Can you create a blog for me?
-
   * Can you make an online shop to sell my homemade cookies?
-
   * Can you make an app to help me track my gym exercise results?
-
   * Can you win $1,000 in the next hackathon?
-
   * Can you get an Oracle Java certificate?
-
   * Can you find a security breach in your school's website?
-
   * Can you make a robot which cleans the floor?
 
 Actually, that's exactly how I learned everything I know about computers.
