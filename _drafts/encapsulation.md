@@ -14,9 +14,9 @@ keywords:
   - coupling distance
   - distance between objects
   - java coupling distance
-image: /images/2020/10/
+image: /images/2020/10/chacun-sa-vie.jpg
 jb_picture:
-  caption: ...
+  caption: Chacun sa vie (2017) by Claude Lelouch
 ---
 
 [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29),
