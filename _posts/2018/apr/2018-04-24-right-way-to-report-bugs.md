@@ -67,6 +67,8 @@ Insist that it was a very important problem and you deserve to be paid.
 If they still don't pay, forget it and move on.
 You must not look like it offends you somehow.
 
+{% video Hrk_Jorc5z4 %}
+
 **Show efforts**.
 The bug description must look "rich," clearly demonstrating that
 you invested a lot of effort in its creation. If there is just a single line,
