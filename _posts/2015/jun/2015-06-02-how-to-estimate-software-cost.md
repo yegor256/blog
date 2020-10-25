@@ -55,6 +55,8 @@ few million dollars, and even then you will be behind YouTube. Simply because
 it's a never-ending process. Any software, no matter how big or good it is,
 always needs more and more improvements and bug fixes.
 
+{% video lgScAwsYWCc %}
+
 Thus, when you ask me how much it will cost to create a system similar
 to YouTube, according to your specifications, my honest and accurate answer
 should be: "_All of your money, and it won't be enough._" Will you
