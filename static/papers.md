@@ -28,6 +28,11 @@ Find me in
 [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ)
 and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 
+[Bringing Industry Back to Conferences, and Paying for Results](https://cacm.acm.org/magazines/2020/11/248192-bringing-industry-back-to-conferences-and-paying-for-results/fulltext),
+Communications of the ACM, Volume 63, Number 11,
+November 2020,
+[PDF](/pdf/2020/cacm-oct.pdf)
+
 The Impact of Object Immutability on Some Class Cohesion Metrics,
 13th International Conference on Computer Science and Information Technology (ICCSIT),
 Amsterdam, The Netherlands,
