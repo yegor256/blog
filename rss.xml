@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-10-25T08:42:24+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Lack of Problem Is the Problem</title><link href="https://www.yegor256.com/2020/10/13/lack-of-problem.html" rel="alternate" type="text/html" title="Lack of Problem Is the Problem" /><published>2020-10-13T00:00:00+00:00</published><updated>2020-10-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/13/lack-of-problem</id><content type="html" xml:base="https://www.yegor256.com/2020/10/13/lack-of-problem.html">&lt;p&gt;Do you know the most typical mistake startup founders make
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-10-27T06:49:03+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">New Metric: the Distance of Coupling</title><link href="https://www.yegor256.com/2020/10/27/distance-of-coupling.html" rel="alternate" type="text/html" title="New Metric: the Distance of Coupling" /><published>2020-10-27T00:00:00+00:00</published><updated>2020-10-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/27/distance-of-coupling</id><content type="html" xml:base="https://www.yegor256.com/2020/10/27/distance-of-coupling.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29&quot;&gt;Encapsulation&lt;/a&gt;,
+as you know, is one of the
+&lt;a href=&quot;https://www.indeed.com/career-advice/career-development/what-is-object-oriented-programming&quot;&gt;four key principles&lt;/a&gt;
+in &lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;object-oriented programming&lt;/a&gt;.
+Encapsulation, according to &lt;a href=&quot;https://amzn.to/3o7RnDZ&quot;&gt;Grady Booch et al.&lt;/a&gt;,
+is “the process of hiding all the secrets of an object
+that do not contribute to its essential characteristics.”
+Practically speaking, it’s about those &lt;code&gt;private&lt;/code&gt;
+attributes that we use in Java and C++: they are not visible to the users of
+our objects, that’s why they can’t be modified or even read.
+Booch et al. believe that the purpose of encapsulation is
+“to provide explicit barriers among different abstractions,”
+which leads to “a clear separation of concerns.”
+However, does it really work as planned? Do we really have
+explicit barriers between objects? Let’s see.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Chacun sa vie (2017) by Claude Lelouch&quot; src=&quot;/images/2020/10/chacun-sa-vie.jpg&quot; longdesc=&quot;#b30cec40&quot; /&gt;&lt;figcaption id=&quot;b30cec40&quot;&gt;Chacun sa vie (2017) by Claude Lelouch&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;First, I’m not the first and not the only one asking this question.
+&lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;David West&lt;/a&gt; much earlier said that “in most ways,
+encapsulation is a discipline more than a real barrier,” and
+that “seldom is the integrity of an object protected in any absolute sense”.
+In practice, “it is up to the user of an object to respect that object’s encapsulation.’’
+Indeed, let’s take a look at the class &lt;code&gt;Temperature&lt;/code&gt; from my blog post
+about &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;naked data&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Can we say that the attribute &lt;code&gt;t&lt;/code&gt; is truly &lt;em&gt;encapsulated&lt;/em&gt;?
+Technically, it is: it’s impossible
+to modify it directly via the dot notation.
+Simply put, we can’t do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And we can’t even do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;However, we can do exactly the same via the
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getter&lt;/a&gt; &lt;code&gt;getT()&lt;/code&gt;
+and the setter &lt;code&gt;setT()&lt;/code&gt;.
+Thus, the designer of the class &lt;code&gt;Temperature&lt;/code&gt; gives us the ability to access
+its attribute, but indirectly, through
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters and setters&lt;/a&gt;.
+I would say
+that the principle of encapsulation is being violated here, and, I’m sure,
+&lt;a href=&quot;https://www.infoworld.com/article/2072302/more-on-getters-and-setters.html&quot;&gt;Allen Holub&lt;/a&gt;
+would agree with me. What is the solution? The &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;article&lt;/a&gt;
+about naked data
+proposed the use of the &lt;a href=&quot;http://media.pragprog.com/articles/jan_03_enbug.pdf&quot;&gt;TellDontAsk principle&lt;/a&gt;
+and that we should get rid of the getter:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d F&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now the class &lt;code&gt;Temperature&lt;/code&gt; doesn’t allow us to read its attribute &lt;code&gt;t&lt;/code&gt;.
+Instead, we can only &lt;em&gt;tell&lt;/em&gt; it to prepare a string presentation of the temperature
+and return that back to us. Maybe not exactly a classic example of the “tell” paradigm,
+since some data is coming back, but now it looks much better than before. The beauty
+of this refactoring is less &lt;a href=&quot;/2018/09/18/fear-of-coupling.html&quot;&gt;coupling&lt;/a&gt;
+between the client and the object. With
+the getter (or direct access to the attribute via dot notation), the client
+was able to retrieve the numeric value of the temperature and recalculate it
+in Fahrenheit, assuming that it was in Celsius. With the &lt;code&gt;String&lt;/code&gt; being
+returned the client would not do this. The string would only be used as a final
+product, not modifiable. Or maybe not?&lt;/p&gt;
+
+&lt;p&gt;What if the client does this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;How does it look now? Isn’t this a violation of encapsulation?
+The result of &lt;code&gt;toString()&lt;/code&gt; is not treated
+as it is supposed to be treated. Not as a solid string, but as data with
+some internal structure, which is &lt;em&gt;known&lt;/em&gt; to the client. The &lt;em&gt;knowledge&lt;/em&gt; the
+client possesses about the output is the key problem here. The client knows too
+much and uses this knowledge for its own benefit: to deconstruct the
+data and manipulate the result.&lt;/p&gt;
+
+&lt;p&gt;Can we really prohibit the client from doing this? There is no such feature
+in any programming language, to my knowledge. When the output of the method
+is delivered to the client, the client is allowed to do whatever is needed
+with it. This is that lack of respect to encapsulation, if I correctly
+understood Dr. West. And we are not even discussing
+the &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/reflect/&quot;&gt;Reflection API&lt;/a&gt;, which
+would allow us to take the &lt;code&gt;t&lt;/code&gt; out of &lt;code&gt;Temperature&lt;/code&gt; without even calling any methods.&lt;/p&gt;
+
+&lt;p&gt;Thus, encapsulation is &lt;em&gt;not&lt;/em&gt; an explicit barrier. It exists for as long as we have
+the desire to respect it. If we don’t, nothing can stop us from abusing an
+object in any way we want. And even &lt;code&gt;private&lt;/code&gt; attribute modifiers won’t help.
+Moreover, they will only create an illusion of encapsulation, while in reality
+everyone is able to do whatever they feel is suitable for their business case.&lt;/p&gt;
+
+&lt;p&gt;I have a proposal, though, which may help us make
+encapsulation more explicit.&lt;/p&gt;
+
+&lt;p&gt;What if we had the ability to control what’s happening with the data
+and objects &lt;em&gt;after&lt;/em&gt; we return them to clients? What if we could prevent the client
+from doing a &lt;code&gt;split()&lt;/code&gt; on the output of the &lt;code&gt;toString()&lt;/code&gt; method? We could do this at compile time, I think,
+by going through all the code and checking how &lt;em&gt;far&lt;/em&gt; the moments of interaction with our
+objects are from the places where they were returned. In the example above,
+the &lt;em&gt;distance&lt;/em&gt; is two: 1) first, we do the &lt;code&gt;split&lt;/code&gt;, 2) second, we do the &lt;code&gt;parseInt()&lt;/code&gt;.
+Larger applications will have bigger numbers, of course.&lt;/p&gt;
+
+&lt;p&gt;It seems that we can use this distance number as a metric for coupling between objects
+in the entire app. The larger the number (or the mean of all numbers), the
+worse the design: in good design we are not supposed to take something
+out of a method and then do some complex processing. We are, according to
+the TellDontAsk principle mentioned above, supposed to let our objects do the work and only
+return a quick summary of it. The distance metric will tell us exactly that:
+how many times, and by how much, we violated the principle of loose coupling.&lt;/p&gt;
+
+&lt;p&gt;Would you be interested in creating such an analyzer for, say, Java code?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Encapsulation, as you know, is one of the four key principles in object-oriented programming. Encapsulation, according to Grady Booch et al., is “the process of hiding all the secrets of an object that do not contribute to its essential characteristics.” Practically speaking, it’s about those private attributes that we use in Java and C++: they are not visible to the users of our objects, that’s why they can’t be modified or even read. Booch et al. believe that the purpose of encapsulation is “to provide explicit barriers among different abstractions,” which leads to “a clear separation of concerns.” However, does it really work as planned? Do we really have explicit barriers between objects? Let’s see.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" /></entry><entry><title type="html">Lack of Problem Is the Problem</title><link href="https://www.yegor256.com/2020/10/13/lack-of-problem.html" rel="alternate" type="text/html" title="Lack of Problem Is the Problem" /><published>2020-10-13T00:00:00+00:00</published><updated>2020-10-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/13/lack-of-problem</id><content type="html" xml:base="https://www.yegor256.com/2020/10/13/lack-of-problem.html">&lt;p&gt;Do you know the most typical mistake startup founders make
 when they pitch their ideas to investors? According to
 &lt;a href=&quot;https://medium.com/@jakemendel/b3a884c54ab4&quot;&gt;Jake Mendel&lt;/a&gt;
 from Silicon Valley Bank, they often focus on the solution they propose
@@ -1156,120 +1283,4 @@ one-interface skinny designs. They will all be fat to some extent. My suggestion
 is to try to make designs less fat, letting interface users
 dress them up however they like. This suggestion is very close to
 what I said earlier about &lt;a href=&quot;/2016/04/26/why-inputstream-design-is-wrong.html&quot;&gt;smart classes&lt;/a&gt;,
-but this time the principle is broader.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">It seems that type/class hierarchies in OOP may be designed in two extreme ways: either with full encapsulation of data in mind; or with just a few interfaces making raw data visible, and letting classes deal with it, parse it, and turn it into smaller data elements. You may be surprised, but I’m suggesting the second option is more elegant. It seems to me that we don’t lose object orientation, but rather gain a lot of flexibility, reusability, testability, and so on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/02/owning-mahowny.jpg" /></entry><entry><title type="html">Object Cohesion: Why It Matters</title><link href="https://www.yegor256.com/2020/02/11/object-cohesion.html" rel="alternate" type="text/html" title="Object Cohesion: Why It Matters" /><published>2020-02-11T00:00:00+00:00</published><updated>2020-02-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/02/11/object-cohesion</id><content type="html" xml:base="https://www.yegor256.com/2020/02/11/object-cohesion.html">&lt;p&gt;You most probably know about &lt;a href=&quot;https://www.elegantobjects.org&quot;&gt;Elegant Objects&lt;/a&gt; (EO),
-an alternative object-oriented paradigm, which claims that objects must
-be immutable, have no
-&lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;static methods&lt;/a&gt;,
-never use
-&lt;a href=&quot;/2014/05/13/why-null-is-bad.html&quot;&gt;NULL&lt;/a&gt; in their code,
-use &lt;a href=&quot;/2016/04/12/java-annotations-are-evil.html&quot;&gt;no annotations&lt;/a&gt;,
-and so on. We, the EO adepts, claim many things, but not so many people
-believe us. Those non-believers &lt;a href=&quot;/testimonials.html&quot;&gt;say&lt;/a&gt;
-that we are trolls,
-&lt;a href=&quot;/2020/05/13/career-killer.html&quot;&gt;at best&lt;/a&gt;.
-Their main argument is: everybody works differently,
-why should we listen to you? I have no answer for them… well I had no answer, until I
-created &lt;a href=&quot;https://www.jpeek.org&quot;&gt;jPeek&lt;/a&gt; and started researching object &lt;em&gt;cohesion&lt;/em&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Кин-дза-дза! by Георгий Данелия&quot; src=&quot;/images/2020/02/kin-dza-dza.jpg&quot; longdesc=&quot;#62ef486d&quot; /&gt;&lt;figcaption id=&quot;62ef486d&quot;&gt;Кин-дза-дза! by Георгий Данелия&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let me explain how cohesion can help us, EO adepts, to &lt;em&gt;prove&lt;/em&gt; some of our
-assumptions.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;Cohesion&lt;/a&gt;,
-as a characteristic of a software module, was invented by
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Larry_Constantine&quot;&gt;Larry Constantine&lt;/a&gt;
-when I didn’t even exist yet, in 1974.
-Here is what it means; take a look at this simple Java class:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addPrice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There are two attributes and two methods. The method &lt;code&gt;addTitle()&lt;/code&gt; works with
-the attribute &lt;code&gt;titles&lt;/code&gt;, while the method &lt;code&gt;addPrice()&lt;/code&gt; works only with the
-attribute &lt;code&gt;prices&lt;/code&gt;. The cohesion is &lt;em&gt;low&lt;/em&gt; in this class, because the attributes
-&lt;code&gt;titles&lt;/code&gt; and &lt;code&gt;prices&lt;/code&gt; are not related to each other in any way. We can easily
-break this class into two pieces without losing anything:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addPrice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;prices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, we have two much more cohesive classes: their attributes and methods
-are related to each other. We can’t break &lt;code&gt;Books1&lt;/code&gt; anymore, since each
-attribute is needed by each method.&lt;/p&gt;
-
-&lt;p&gt;Here is yet another example of a &lt;em&gt;highly&lt;/em&gt; cohesive class:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Can we break it into smaller pieces? No, we can’t. We can’t take any part
-of the class out. The attribute &lt;code&gt;titles&lt;/code&gt; and both of the methods must stay
-together. This means that the class is &lt;em&gt;highly&lt;/em&gt; cohesive.&lt;/p&gt;
-
-&lt;p&gt;It was demonstrated a long time ago that more cohesive classes are better,
-in terms of their error-proneness, than the ones with low cohesion,
-for example by Victor R. Basili et al. in their study
-&lt;a href=&quot;https://pdfs.semanticscholar.org/2bb8/c1f4eeb5e5ae353adeea0fd6933551b9e932.pdf&quot;&gt;A Validation of Object-Oriented Design Metrics as Quality Indicators&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now, if we can empirically prove that, for example, classes without static methods
-are, on average, more cohesive than their static-rich fellows, we can say
-that the claim that “static methods are evil” (postulated by Elegant Objects) is
-scientifically validated. We can take a large set of
-random Java classes and calculate their cohesion. Then, we can separate those
-with static methods from those without them. Next, we can calculate which group
-has higher average cohesion. If the group without static methods wins,
-the assumption would be valid.&lt;/p&gt;
-
-&lt;p&gt;Of course, another random set of Java classes may produce different results,
-but this is how empirical science works: we can’t prove the theorem other
-than by some experiments.&lt;/p&gt;
-
-&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://www.jpeek.org&quot;&gt;&lt;img src=&quot;https://www.jpeek.org/logo.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;I created an open source software library to help me do these experiments and called
-it &lt;a href=&quot;https://www.jpeek.org&quot;&gt;jPeek.org&lt;/a&gt;. It is a calculator of cohesion metrics
-for Java code. No surprise, there are many metrics we can use to calculate cohesion. At least
-&lt;a href=&quot;http://www.math.md/files/csjm/v25-n1/v25-n1-%28pp44-74%29.pdf&quot;&gt;thirty&lt;/a&gt;
-of them are published, while only a few of them were properly implemented.
-In jPeek, thanks to its contributors, we managed to implement over a dozen.&lt;/p&gt;
-
-&lt;p&gt;Using this tool we can empirically prove some of the key points of EO.
-For example, we can prove that
-&lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;
-classes are less cohesive, annotations
-negatively affect cohesion,
-&lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTOs&lt;/a&gt; are low-cohesion creatures,
-and many other things. Thus cohesion will become the vehicle which will
-drive Elegant Objects to a place where most of its claims will be scientifically
-proven. Give us a few more years and we will have very interesting results.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;A reviewer rejects your code and says: &amp;quot;This class is not cohesive enough!&amp;quot; What would you answer?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1228936961035001856?ref_src=twsrc%5Etfw&quot;&gt;February 16, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">You most probably know about Elegant Objects (EO), an alternative object-oriented paradigm, which claims that objects must be immutable, have no static methods, never use NULL in their code, use no annotations, and so on. We, the EO adepts, claim many things, but not so many people believe us. Those non-believers say that we are trolls, at best. Their main argument is: everybody works differently, why should we listen to you? I have no answer for them… well I had no answer, until I created jPeek and started researching object cohesion.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/02/kin-dza-dza.jpg" /></entry></feed>
+but this time the principle is broader.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">It seems that type/class hierarchies in OOP may be designed in two extreme ways: either with full encapsulation of data in mind; or with just a few interfaces making raw data visible, and letting classes deal with it, parse it, and turn it into smaller data elements. You may be surprised, but I’m suggesting the second option is more elegant. It seems to me that we don’t lose object orientation, but rather gain a lot of flexibility, reusability, testability, and so on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/02/owning-mahowny.jpg" /></entry></feed>

@@ -639,6 +639,8 @@ barely
 bargaining
 barker
 barr
+barrier
+barriers
 barry
 base
 baseball
@@ -803,11 +805,13 @@ blocking
 blocks
 blog
 blog's
+blog-cacm
 blogger
 bloggers
 blogging
 bloghacks
 blogosphere
+blogs
 blogspot
 blood
 bloody
@@ -831,6 +835,7 @@ bonds
 boni
 bonus
 bonuses
+booch
 book
 book's
 booked
@@ -1007,7 +1012,7 @@ bytes
 cache
 cached
 caching
-CACM
+cacm
 cactoos
 cafe
 caitlin
@@ -2022,6 +2027,7 @@ decoder
 decompose
 decomposed
 decomposition
+deconstruct
 decorate
 decorated
 decorating
@@ -3314,6 +3320,7 @@ full-hearted
 full-purpose
 full-speed
 full-time
+fulltext
 fully
 fun
 function
@@ -3493,6 +3500,7 @@ gradual
 gradually
 graduated
 graduation
+grady
 graham
 grammarly
 grandchildren
@@ -4140,6 +4148,7 @@ integrates
 integrating
 integration
 integrations
+integrity
 intel
 intellectual
 intelligence
@@ -4320,6 +4329,7 @@ javdoc
 JAX-RS
 JAX-WS
 JAXB
+jb
 jcabi
 jcabi-aspects
 jcabi-beanstalk-maven-plugin
@@ -4403,6 +4413,7 @@ JPA
 jpages
 jpeek
 JPEG
+jpg
 JPoint
 jq
 jquery
@@ -5208,6 +5219,7 @@ mom
 mom's
 moment
 momentary
+moments
 momentum
 mommy
 monday
@@ -6204,6 +6216,7 @@ PPPS
 PPS
 PR
 practical
+practically
 practice
 practiced
 practices
@@ -6878,6 +6891,7 @@ reproduces
 reproducibility
 reproducible
 reproducing
+republished
 reputable
 reputation
 reputations
@@ -7280,6 +7294,7 @@ segregating
 segregation
 seibel
 sel
+seldom
 select
 selected
 selection
@@ -7652,6 +7667,7 @@ solely
 solicits
 solid
 solo
+solondz
 solr
 solution
 solutions
@@ -8205,6 +8221,7 @@ technology
 telecommuting
 telegram
 tell
+telldontask
 telling
 tells
 temperature
@@ -8375,6 +8392,7 @@ tl
 to
 to-PostgreSQL
 today
+todd
 TODO
 together
 toilets
@@ -8481,6 +8499,7 @@ travel
 traversing
 travis
 treat
+treated
 treating
 treatment
 treats
