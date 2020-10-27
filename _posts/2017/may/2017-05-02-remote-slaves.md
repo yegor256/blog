@@ -1,4 +1,4 @@
----
+https://cacm.acm.org/blogs/blog-cacm/245277-the-remote-revolution-has-to-be-driven-by-output-not-salaries/fulltext---
 layout: post
 title: "A Remote Slave Is Still a Slave"
 date: 2017-05-02
@@ -17,6 +17,12 @@ keywords:
 image: /images/2017/05/happiness.jpg
 jb_picture:
   caption: Happiness (1998) by Todd Solondz
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "The Remote Revolution Has to be Driven by Output, Not Salaries"
+    date: 2020-05-29
+    url: https://cacm.acm.org/blogs/blog-cacm/245277-the-remote-revolution-has-to-be-driven-by-output-not-salaries/fulltext
 ---
 
 Working remotely is definitely a trend, according to the
