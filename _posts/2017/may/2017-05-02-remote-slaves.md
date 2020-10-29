@@ -1,4 +1,3 @@
-https://cacm.acm.org/blogs/blog-cacm/245277-the-remote-revolution-has-to-be-driven-by-output-not-salaries/fulltext---
 layout: post
 title: "A Remote Slave Is Still a Slave"
 date: 2017-05-02
