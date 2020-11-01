@@ -131,7 +131,7 @@ results, that's all.
 They may say that the information is already
 available in the tracking system, but you can say that you prefer
 to get it by email, since it's faster and more convenient for you.
-Moreover, how much will such a daily report cost to them? Five
+Moreover, how much will such a daily report cost them? Five
 minutes every day, right? Not a big deal.
 
 Don't tell them about the guilt part, of course.
