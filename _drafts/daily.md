@@ -5,13 +5,15 @@ date: 2020-11-00
 place: Moscow, Russia
 tags: management
 description: |
-  ...
+  Why do we Agile teams need those famous daily
+  standup meetings? I believe, daily reports may
+  serve the very same purpose, but better.
 keywords:
   - daily reports
-  - daily reports
-  - daily reports
-  - daily reports
-  - daily reports
+  - daily standups
+  - daily scrum
+  - daily morning stand-up
+  - daily agile
 image: /images/2020/11/
 jb_picture:
   caption: ...
