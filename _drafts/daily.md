@@ -86,7 +86,7 @@ realise that everybody in your team is lazy and does as little as they
 can do or nothing at all?
 
 Sounds weird and has nothing to do with your reality? Really?
-Look at this Twitter poll.
+Look at [this](https://twitter.com/yegor256/status/1322877629024948226) Twitter poll.
 
 So, what do you do with the team, if you can't really fire anyone
 and you can't motivate them in any way: they are paid regardless. How do you
@@ -136,7 +136,7 @@ Don't tell them about the guilt part, of course.
 Let it be your secret.
 
 The bottom line is that in the absence of proper management, both morning standups and
-evening daily reports are the best tools to manage people. What else you can use
+evening daily reports are the best tools to manage people. What else can you use
 to connect their performance directly with guilt mechanisms in
 their brains?
 
