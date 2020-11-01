@@ -21,7 +21,7 @@ HoC: 406K
 --- All objects I could find are just DTOs that implements some interface not really OOP!
 --- Rest of the code is written in a functional style plus React/UI related stuff (components, hooks, styles)
 Summary:
-	Not so good for an OOP/EO competition!
+Not so good for an OOP/EO competition!
 Score: 3/10
 
 
@@ -124,7 +124,7 @@ A good candidate for the final
 crocinc/sql-boot by @iakunin
 
 CLOC: 4163 (2617 in Kotlin) - see https://api.codetabs.com/v1/loc/?github=crocinc/sql-boot
-    https://s.mail.ru/3kNi/hbveT9oD3
+https://s.mail.ru/3kNi/hbveT9oD3
 HoC: 149K
 Age: Over 1 year
 Project is too small: just 2617 LoC in Kotlin (should be at least 4096)
@@ -205,7 +205,7 @@ HoC: 2015K
 ++ Well structured code
 --+ All the code is written in plain procedural C, So no OOP code to check!
 Summary:
-    Despite this is a good project! it's not suitable for an OOP/EO competition!
+Despite this is a good project! it's not suitable for an OOP/EO competition!
 Score: 2/10
 
 
@@ -256,7 +256,7 @@ HoC: 53K
 -- No Interfaces
 -- Mutability used in many places, beside the fact that Go structs are mutable by design
 Summary:
-    Although the code is a well written idiomatic GO, this project is not suitable for an OOP/EO competition
+Although the code is a well written idiomatic GO, this project is not suitable for an OOP/EO competition
 Score: 2/10
 
 
@@ -327,7 +327,7 @@ Another good candidate for championship.
 igorwojda/android-showcase by @iakunin
 
 CLOC: 37050 (2289 in Kotlin) - see https://api.codetabs.com/v1/loc/?github=igorwojda/android-showcase
-    https://s.mail.ru/3pPC/56XDJnohA
+https://s.mail.ru/3pPC/56XDJnohA
 HoC: 53K
 Age: Over 1 year
 Project is too small: just 2289 LoC in Kotlin (should be at least 4096)
@@ -365,7 +365,7 @@ some abstract classes have a lot non-final methods and some of them are override
 and even some classes have impl inheritance like in 'jsonvalues.Lens.java' class.
 -- Anti-Patterns: SINGELTONs (very limited), Static Factory Methods (every where)
 Summary:
-    In general this project is well organised and managed, the code is well designed but more in a functional style.
+In general this project is well organised and managed, the code is well designed but more in a functional style.
 Score: 6/10
 
 
@@ -419,13 +419,13 @@ HoC: 32K
 --- Commits/tickets: No, commits are not traceable to tickets!
 ---- No Unit tests
 --- Many OOP principles are violated
-    - Implementation Inheritance
-    - Many big classes with public static methods
-    - Setters & Getters
+- Implementation Inheritance
+- Many big classes with public static methods
+- Setters & Getters
 --- Extensive usage of annotations
 + Some usage of interfaces
 Summary:
-    Too bad for a Code Quality competition
+Too bad for a Code Quality competition
 Score: 0/10
 
 
@@ -481,7 +481,7 @@ HoC: 147K
 - Commits with tickets: sometimes
 --- Not really OOP: one .cpp file of 3500 lines of code!!!, pure procedural (even though there are some classes)
 Summary:
-    It looks a very good project in term of management and usefulness, but it has nothing to do with an OOP competition!
+It looks a very good project in term of management and usefulness, but it has nothing to do with an OOP competition!
 Score: 4/10
 
 
@@ -510,7 +510,7 @@ HoC: 90K
 - Implementation Inheritance: very limited
 - Anti-Patterns: Builders, Static Factory Methods
 Summary:
-    Although the code is not perfect OOP, but generally this project looks good!
+Although the code is not perfect OOP, but generally this project looks good!
 Score: 6/10
 
 
@@ -564,7 +564,7 @@ HoC: 29K
 -- NULLs
 -- Mutability
 Summary:
-    Although the code looks well written & organized, but it's not so good from OOP & EO perspective
+Although the code looks well written & organized, but it's not so good from OOP & EO perspective
 Score: 3/10
 
 
@@ -588,7 +588,7 @@ HoC: 78,084K
 -- As any low level software, most of the code is written procedural C
 -- There is some OOP code in C++ but with a lot of NULLs and mutability
 Summary:
-    Too bad for an OOP/EO code quality competition
+Too bad for an OOP/EO code quality competition
 Score: 1/10
 
 
@@ -685,8 +685,8 @@ HoC: 34K
 - UC & Static methods: Scala Objects that doesn't implement any trait can considered as UC
 - Anti-Patterns: SINGLETONs (Scala objects)
 Summary:
-    I don't know if is the Scala way of doing OOP?
-    But for sure this is not David West's Obj. Thinking nor Yegor's EO way :)
+I don't know if is the Scala way of doing OOP?
+But for sure this is not David West's Obj. Thinking nor Yegor's EO way :)
 Score: 3/10
 
 
@@ -742,20 +742,20 @@ HoC: 350K
 -+ Unit tests present, but mixed with integration tests and no coverage reports!
 --- Integration tests mixed with unit tests!!!
 ---- OOP & EO principles violated in different ways:
-    -- Implementation inheritance everywhere with mothod overriding
-    -- Usage of instanceof and type casting
-    -- Lack of encapsulation
-    --- Very limitted usage of interfaces
-    --- NULLs in many places
-    --- Getters and setters also
-    -- Some util classes
-    -- Public static methods
-    - Public static leterals
-    --- DTOs
-    --- Many Object(er) (Handler, Manager, Provider....)
+-- Implementation inheritance everywhere with mothod overriding
+-- Usage of instanceof and type casting
+-- Lack of encapsulation
+--- Very limitted usage of interfaces
+--- NULLs in many places
+--- Getters and setters also
+-- Some util classes
+-- Public static methods
+- Public static leterals
+--- DTOs
+--- Many Object(er) (Handler, Manager, Provider....)
 -- Usage of DI container (Google Guice)
 Summary:
-    Even this project is a good product and looks popular & successful, but it violate many principles of OOP and EO and it's not a good candidate for a Code Quality competition
+Even this project is a good product and looks popular & successful, but it violate many principles of OOP and EO and it's not a good candidate for a Code Quality competition
 Score: 4/10
 
 
@@ -781,8 +781,8 @@ HoC: 117K
 -- Usage of Utility/Static methods (ex: /maps/converter.py)
 -- Anti-Patterns: MVC (Django MTV), DTOs, ORM (django.db)
 Summary:
-    As many typical web frameworks based projects, this one also violate several OOP & EO principles!
-    thus it's not so good for a code quality competition
+As many typical web frameworks based projects, this one also violate several OOP & EO principles!
+thus it's not so good for a code quality competition
 Score: 4/10
 
 
@@ -816,8 +816,8 @@ HoC: 129K
 +++ No usage of anti-patterns
 ++- The code is very clear and self explanatory, no need for explicit comments, but sometimes the 'Why' comments are helpful for strangers
 Summary:
-    I think I found a winner :)
-    Short, it's an elegant implementation of Elegant Objects principles.
+I think I found a winner :)
+Short, it's an elegant implementation of Elegant Objects principles.
 Score: 10/10
 
 
@@ -849,7 +849,7 @@ wentout/mnemonica by @razzwan
 * Repository have not clear description -1
 * Have no badges -1
 Score: 4.8/10
-I would say, that this is good candidat for the next competition, not current one. Has potential to be revealed
+I would say, that this is good candidate for the next competition, not current one. Has potential to be revealed
 
 
 
@@ -877,8 +877,8 @@ HoC: 120K
 - Some big classes that I think influenced by Android architecture
 - Some -ER objects (Handler, Presenter)
 Summary:
-    Even though the code is highly influenced and inherit a lot of bad OOP practices of Android architecture,
-    but it looks that the maintainers are doing good job trying to make the code as 'OOPish' and clean as possible.
+Even though the code is highly influenced and inherit a lot of bad OOP practices of Android architecture,
+but it looks that the maintainers are doing good job trying to make the code as 'OOPish' and clean as possible.
 Score: 6/10
 
 
