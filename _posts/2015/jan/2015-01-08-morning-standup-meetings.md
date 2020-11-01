@@ -136,6 +136,8 @@ This is
 [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}).
 Daily stand-ups are the perfect tool for a micro-manager.
 
+{% youtube ues5Dks37zI %}
+
 **A Good Manager Delegates Responsibility**.
 Ideal management involves four steps:
 1) Breaking a complex task into smaller sub-tasks;
