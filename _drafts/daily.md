@@ -50,7 +50,7 @@ the best of them.
 Is this how your team works? I doubt it. I was kidding.
 
 Most probably it works like this:
-1) some people ocassionaly commit some code
+1) some people occasionally commit some code
 while others barely touch the keyboard spending most of their "work time"
 sitting in
 [meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %})
@@ -122,7 +122,7 @@ their goals. It may be a fine-grained control mechanism, but there
 is nothing wrong with
 [control]({% pst 2018/oct/2018-10-09-can-you-control-us %}),
 in any management paradigm. Thus,
-if they go to your superviser and complain about your actions,
+if they go to your supervisor and complain about your actions,
 you have a perfect explanation: you just want to know about their
 results, that's all.
 
