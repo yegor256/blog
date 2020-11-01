@@ -34,8 +34,9 @@ do we really need types in order to strongly enforce typing?
 
 {% jb_picture_body %}
 
-Say, this is the place where we expect an object of
-Java interface (another name for types) `Book` to arrive:
+Say, this is the place where we expect an instance of
+Java [interface](https://docs.oracle.com/javase/tutorial/java/concepts/interface.html)
+`Book` to arrive:
 
 {% highlight java %}
 void print(Book b) {
@@ -45,7 +46,7 @@ void print(Book b) {
 }
 {% endhighlight %}
 
-The type `Book` would look like this:
+The type `Book` may look like this:
 
 {% highlight java %}
 interface Book {
@@ -54,10 +55,10 @@ interface Book {
 {% endhighlight %}
 
 If an object that doesn't `implement` the interface `Book` is passed
-to the method `print()`, the compiler during compile-time will complain
+to the method `print()`, the compiler at compile-time will complain
 with the "type mismatch" error. It will be hard for a programmer to make
-a mistake and pass an object of type `Car` to the method `print()`. It will
-still be possible, during dynamic type casting:
+a mistake and pass an object of type, say, `Car` to the method `print()`.
+However, it will still be possible, via dynamic type casting:
 
 {% highlight java %}
 Car car = new Car("Mercedes-Benz G63");
@@ -66,12 +67,14 @@ print(Book.class.cast(car)); // Here!
 
 This code will compile without issues, but in runtime the
 [`ClassCastException`](https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html)
-will be thrown, since it's impossible to cast `Car` to `Book`.
+will be thrown, since it won't be
+impossible to cast `Car` to `Book`.
 
-This is beauty of strong typing: it prevents errors. However, it increases
+The beauty of strong typing is that it prevents errors. However, it increases
 the complexity of code: you need to create types first, you need to declare them
 in all your functions, you need type casting, which is hard to debug, and so on.
-Weak typing adepts complain about this a lot and create languages like Ruby,
+Weak typing [adepts](https://softwareengineering.stackexchange.com/questions/38002)
+complain about this a lot and create languages like Ruby,
 which don't have types at all, for example:
 
 {% highlight ruby %}
@@ -87,7 +90,9 @@ incoming `b` has such a method. If it does, everything works just fine,
 if it doesn't, a runtime error [`NoMethodError`](https://ruby-doc.org/core-2.5.0/NoMethodError.html)
 is raised.
 
-Now, there is an idea: what if we combine the simpicity and brevity
+So far so good.
+
+However, here is the idea: what if we combine the simpicity and brevity
 of dynamic typing with the safetiness of strong typing by getting
 rid of types all together and letting the compiler infer type
 information from the code that works with objects? Here is our
@@ -101,12 +106,12 @@ void print(Book b) {
 }
 {% endhighlight %}
 
-During compile type it's already obvious that `b` must have
-_at least_ one method `isbn()`. No need to ask the programmer to define
-the type `Book` explicitly and say in the signature of the method `print()`
+Think about this: at compile time it's already obvious that `b` must have
+_at least_ one method `isbn()`. No need to force programmers to define
+the type `Book` explicitly and mention in the signature of the method `print()`
 that only books are welcome: this knowledge can easily be infered from
 the body of the method `print()`! The compiler may look at all statements
-in the method `print()` and clearly understand what exactly will be done
+in the method `print()` and clearly _understand_ what exactly will be done
 with the object `b`. This information should be enough to visualize
 the "type" of the incoming object. No need to ask the programmer to
 do this explicitly and spend another five lines of code in a new file
@@ -119,7 +124,3 @@ pseudo-object-oriented languages. But it is possible in
 [EO](https://www.eolang.org)!
 
 WDYT?
-
-
-
-
