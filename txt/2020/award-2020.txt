@@ -96,7 +96,7 @@ coderaiser/cloudcmd by @razzwan
 - [x] CLOC: 15844 (12574 in JavaScript)
 - [x] CI (GitHub actions)
 - [x] Awesome demo site with usage description https://cloudcmd.io/
-- [x] Block with short project history http://blog.cloudcmd.io/
+- [x] Blog with short project history http://blog.cloudcmd.io/
 - [x] Descriptive good README with examples
 - [x] CODE_OF_CONDUCT.md description is present
 - [x] CONTRIBUTING.md is present
