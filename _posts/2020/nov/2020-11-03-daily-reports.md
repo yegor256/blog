@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Daily Reports"
-date: 2020-11-00
+title: "The Pain of Daily Reports"
+date: 2020-11-03
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - daily scrum
   - daily morning stand-up
   - daily agile
-image: /images/2020/11/
+image: /images/2020/11/norsemen.jpg
 jb_picture:
-  caption: ...
+  caption: Norsemen (2017) by Jon Iver Helgaker et al.
 ---
 
 A few days ago I asked
