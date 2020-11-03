@@ -1208,6 +1208,7 @@ chatbots
 chats
 chatter
 chatterbot
+chatting
 chaudhry
 che
 cheap
@@ -1590,6 +1591,7 @@ concurrent
 condition
 conditions
 conduct
+conducted
 conducting
 conference
 conferences
@@ -1685,7 +1687,6 @@ continents
 contingency
 continually
 continue
-continued
 continues
 continuous
 continuously
@@ -2683,6 +2684,7 @@ end-user
 end-users
 endeavor
 endeavors
+ended
 ending
 endpoints
 ends
@@ -2807,6 +2809,7 @@ evangelist
 evans
 eve
 even
+evening
 event
 events
 eventual
@@ -3565,6 +3568,7 @@ guidelines
 guides
 guilt
 guilt-driven
+guilt-triggering
 guilty
 gulp
 gun
@@ -3634,6 +3638,7 @@ hard
 hard-coded
 hard-to-understand
 hard-wire
+hard-workers
 hard-working
 harder
 hardly
@@ -4474,6 +4479,7 @@ kentbeck
 kept
 kernel
 key
+keyboard
 keynote
 keys
 keyword
@@ -6155,6 +6161,7 @@ political
 politically
 politicians
 politics
+poll
 pollute
 polluters
 polunin
@@ -6665,6 +6672,7 @@ ready
 real
 real-life
 real-world
+realise
 realistic
 reality
 realize
@@ -7304,6 +7312,7 @@ self-appointed
 self-confidence
 self-descriptive
 self-discipline
+self-disciplined
 self-documented
 self-esteem
 self-explainable
@@ -8072,6 +8081,7 @@ superb
 superior
 superstar
 supervision
+supervisor
 supervisors
 supplementary
 supplied
@@ -9171,6 +9181,7 @@ written
 wrong
 wrote
 WSDL
+WTF
 wts
 wulf
 WWII
