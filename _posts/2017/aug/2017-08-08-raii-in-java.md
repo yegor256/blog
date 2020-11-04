@@ -122,6 +122,8 @@ an instance of class `Permit` and it immediately acquires a new permit
 at the semaphore. Then we exit the method `print()`, either by exception
 or in the normal way, and the method `Permit.finalize()` releases the permit.
 
+{% youtube 4ZWHs1mloUw %}
+
 Elegant, isn't it? Yes, it is, but it won't work in Java.
 
 It won't work because, unlike C++, Java doesn't destroy objects when
