@@ -17,6 +17,12 @@ keywords:
 image: /images/2019/09/yip-man.jpg
 jb_picture:
   caption: Yip Man (2008) by Wilson Yip
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "Here’s Why Resentment is the Key to Happiness"
+    date: 2020-11-06
+    url: https://cacm.acm.org/blogs/blog-cacm/248514-heres-why-resentment-is-the-key-to-happiness/fulltext
 ---
 
 At the very end of one of my [recent meetups](https://www.youtube.com/watch?v=m5mPtC7LYiY) I was asked a question:
