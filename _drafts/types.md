@@ -95,7 +95,7 @@ So far so good.
 However, here is the idea: what if we combine the simplicity and brevity
 of dynamic typing with the safety of strong typing by getting
 rid of types all together and letting the compiler infer type
-information from the code that works with objects? Here is our
+information from the code that works with the objects? Here is our
 code again:
 
 {% highlight java %}
