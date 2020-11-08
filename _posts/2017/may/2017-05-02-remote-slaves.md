@@ -1,3 +1,4 @@
+---
 layout: post
 title: "A Remote Slave Is Still a Slave"
 date: 2017-05-02
