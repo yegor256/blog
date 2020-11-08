@@ -92,7 +92,7 @@ is raised.
 
 So far so good.
 
-However, here is the idea: what if we combine the simpicity and brevity
+However, here is the idea: what if we combine the simplicity and brevity
 of dynamic typing with the safety of strong typing by getting
 rid of types all together and letting the compiler infer type
 information from the code that works with objects? Here is our
@@ -109,7 +109,7 @@ void print(Book b) {
 Think about this: at compile time it's already obvious that `b` must have
 _at least_ one method `isbn()`. No need to force programmers to define
 the type `Book` explicitly and mention in the signature of the method `print()`
-that only books are welcome: this knowledge can easily be infered from
+that only books are welcome: this knowledge can easily be inferred from
 the body of the method `print()`! The compiler may look at all statements
 in the method `print()` and clearly _understand_ what exactly will be done
 with the object `b`. This information should be enough to visualize
