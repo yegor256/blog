@@ -169,6 +169,8 @@ an instance of class <code>Permit</code> and it immediately acquires a new permi
 at the semaphore. Then we exit the method <code>print()</code>, either by exception
 or in the normal way, and the method <code>Permit.finalize()</code> releases the permit.</p>
 
+
+
 <p>Elegant, isn’t it? Yes, it is, but it won’t work in Java.</p>
 
 <p>It won’t work because, unlike C++, Java doesn’t destroy objects when

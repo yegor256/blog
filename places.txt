@@ -1,5 +1,5 @@
-Unknown: 126 (36.10%)
-Moscow, Russia: 91 (26.07%)
+Unknown: 125 (35.82%)
+Moscow, Russia: 92 (26.36%)
 Palo Alto, CA: 41 (11.75%)
 Odessa, Ukraine: 28 (8.02%)
 Kyiv, Ukraine: 14 (4.01%)

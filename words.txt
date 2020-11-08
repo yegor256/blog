@@ -805,13 +805,11 @@ blocking
 blocks
 blog
 blog's
-blog-cacm
 blogger
 bloggers
 blogging
 bloghacks
 blogosphere
-blogs
 blogspot
 blood
 bloody
@@ -3323,7 +3321,6 @@ full-hearted
 full-purpose
 full-speed
 full-time
-fulltext
 fully
 fun
 function
@@ -4334,7 +4331,6 @@ javdoc
 JAX-RS
 JAX-WS
 JAXB
-jb
 jcabi
 jcabi-aspects
 jcabi-beanstalk-maven-plugin
@@ -4418,7 +4414,6 @@ JPA
 jpages
 jpeek
 JPEG
-jpg
 JPoint
 jq
 jquery
@@ -6899,7 +6894,6 @@ reproduces
 reproducibility
 reproducible
 reproducing
-republished
 reputable
 reputation
 reputations
@@ -7676,7 +7670,6 @@ solely
 solicits
 solid
 solo
-solondz
 solr
 solution
 solutions
@@ -8402,7 +8395,6 @@ tl
 to
 to-PostgreSQL
 today
-todd
 TODO
 together
 toilets
