@@ -16,6 +16,11 @@ keywords:
   - software engineers conferences
 ---
 
+15 Apr 2020:
+[IT-Beard](https://www.youtube.com/channel/UCeObZv89Stb2xLtjLJ0De3Q)
+with IT-Beard:
+[видео](https://www.youtube.com/watch?v=Dic_VlZ_vn8).
+
 5 Sep 2019:
 [ProBlog](https://www.youtube.com/channel/UC1QrUyRmSoUTPVSbHv7arcA)
 with Viktoria Borodina:
