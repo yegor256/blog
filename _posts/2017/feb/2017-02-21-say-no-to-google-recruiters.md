@@ -131,3 +131,5 @@ to provide formal and standard screening for everybody, beginning with
 those same warm and flattering initial promises.
 
 I'm sorry, recruiters, no more standard interviews for me.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What would be your first question if Google recruiter approaches you with a job interview offer?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1325426779729907717?ref_src=twsrc%5Etfw">November 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
