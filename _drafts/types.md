@@ -25,7 +25,7 @@ language as one in which "whenever an object is passed from
 a calling function to a called function, its type must be
 compatible with the type declared in the called function."
 Strong [type checking](https://en.wikipedia.org/wiki/Type_system),
-without doubts, decreases the amount of
+without doubt, decreases the amount of
 [type errors](https://en.wikipedia.org/wiki/Type_system#Type_errors),
 which leads to higher quality. However, the question is:
 do we really need types in order to strongly enforce typing?
@@ -34,7 +34,7 @@ do we really need types in order to strongly enforce typing?
 
 {% jb_picture_body %}
 
-Say, this is the place where we expect an instance of
+For example, this is a place where we expect an instance of
 Java [interface](https://docs.oracle.com/javase/tutorial/java/concepts/interface.html)
 `Book` to arrive:
 
@@ -55,7 +55,7 @@ interface Book {
 {% endhighlight %}
 
 If an object that doesn't `implement` the interface `Book` is passed
-to the method `print()`, the compiler at compile-time will complain
+to the method `print()`, the compiler will complain
 with the "type mismatch" error. It will be hard for a programmer to make
 a mistake and pass an object of type, say, `Car` to the method `print()`.
 However, it will still be possible, via dynamic type casting:
@@ -65,15 +65,15 @@ Car car = new Car("Mercedes-Benz G63");
 print(Book.class.cast(car)); // Here!
 {% endhighlight %}
 
-This code will compile without issues, but in runtime the
+This code will compile without issues, but at runtime the
 [`ClassCastException`](https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html)
 will be thrown, since it won't be
-impossible to cast `Car` to `Book`.
+possible to cast `Car` to `Book`.
 
 The beauty of strong typing is that it prevents errors. However, it increases
 the complexity of code: you need to create types first, you need to declare them
 in all your functions, you need type casting, which is hard to debug, and so on.
-Weak typing [adepts](https://softwareengineering.stackexchange.com/questions/38002)
+Weak typing [proponents](https://softwareengineering.stackexchange.com/questions/38002)
 complain about this a lot and create languages like Ruby,
 which don't have types at all, for example:
 
@@ -92,10 +92,10 @@ is raised.
 
 So far so good.
 
-However, here is the idea: what if we combine the simpicity and brevity
-of dynamic typing with the safetiness of strong typing by getting
+However, here is the idea: what if we combine the simplicity and brevity
+of dynamic typing with the safety of strong typing by getting
 rid of types all together and letting the compiler infer type
-information from the code that works with objects? Here is our
+information from the code that works with the objects? Here is our
 code again:
 
 {% highlight java %}
@@ -109,7 +109,7 @@ void print(Book b) {
 Think about this: at compile time it's already obvious that `b` must have
 _at least_ one method `isbn()`. No need to force programmers to define
 the type `Book` explicitly and mention in the signature of the method `print()`
-that only books are welcome: this knowledge can easily be infered from
+that only books are welcome: this knowledge can easily be inferred from
 the body of the method `print()`! The compiler may look at all statements
 in the method `print()` and clearly _understand_ what exactly will be done
 with the object `b`. This information should be enough to visualize
