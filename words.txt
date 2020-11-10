@@ -4043,6 +4043,7 @@ inevitably
 inexpensive
 infamous
 inferior
+inferred
 infinite
 infinity
 influence
@@ -7963,6 +7964,7 @@ strong
 stronger
 strongest
 strongly
+strongly-typed
 stroustrup
 structural
 structure
@@ -8914,6 +8916,7 @@ visit
 visitor
 visitors
 visual
+visualize
 visually
 vitality
 vivian
@@ -8978,6 +8981,7 @@ watson
 way
 ways
 wc
+WDYT
 we
 we'd
 we'll
@@ -9249,6 +9253,7 @@ zerocrat
 zerorsk
 ZFCE
 zi
+zilles
 zillow
 ziyavakhobov
 ziyavuddin

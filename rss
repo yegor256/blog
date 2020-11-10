@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-08T13:17:24+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Pain of Daily Reports</title><link href="https://www.yegor256.com/2020/11/03/daily-reports.html" rel="alternate" type="text/html" title="The Pain of Daily Reports" /><published>2020-11-03T00:00:00+00:00</published><updated>2020-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/03/daily-reports</id><content type="html" xml:base="https://www.yegor256.com/2020/11/03/daily-reports.html">&lt;p&gt;A few days ago I asked
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-10T06:59:42+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Strong Typing without Types</title><link href="https://www.yegor256.com/2020/11/10/typing-without-types.html" rel="alternate" type="text/html" title="Strong Typing without Types" /><published>2020-11-10T00:00:00+00:00</published><updated>2020-11-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/10/typing-without-types</id><content type="html" xml:base="https://www.yegor256.com/2020/11/10/typing-without-types.html">&lt;p&gt;In 1974, Liskov and Zilles &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/942572.807045&quot;&gt;defined&lt;/a&gt;
+a &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot;&gt;strongly-typed&lt;/a&gt;
+language as one in which “whenever an object is passed from
+a calling function to a called function, its type must be
+compatible with the type declared in the called function.”
+Strong &lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system&quot;&gt;type checking&lt;/a&gt;,
+without doubt, decreases the amount of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system#Type_errors&quot;&gt;type errors&lt;/a&gt;,
+which leads to higher quality. However, the question is:
+do we really need types in order to strongly enforce typing?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Redirected (2014) by Emilis Velyvis&quot; src=&quot;/images/2020/11/redirected.jpg&quot; longdesc=&quot;#8b769c87&quot; /&gt;&lt;figcaption id=&quot;8b769c87&quot;&gt;Redirected (2014) by Emilis Velyvis&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;For example, this is a place where we expect an instance of
+Java &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/java/concepts/interface.html&quot;&gt;interface&lt;/a&gt;
+&lt;code&gt;Book&lt;/code&gt; to arrive:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;The ISBN is: %s%n&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The type &lt;code&gt;Book&lt;/code&gt; may look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If an object that doesn’t &lt;code&gt;implement&lt;/code&gt; the interface &lt;code&gt;Book&lt;/code&gt; is passed
+to the method &lt;code&gt;print()&lt;/code&gt;, the compiler will complain
+with the “type mismatch” error. It will be hard for a programmer to make
+a mistake and pass an object of type, say, &lt;code&gt;Car&lt;/code&gt; to the method &lt;code&gt;print()&lt;/code&gt;.
+However, it will still be possible, via dynamic type casting:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Mercedes-Benz G63&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Here!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This code will compile without issues, but at runtime the
+&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html&quot;&gt;&lt;code&gt;ClassCastException&lt;/code&gt;&lt;/a&gt;
+will be thrown, since it won’t be
+possible to cast &lt;code&gt;Car&lt;/code&gt; to &lt;code&gt;Book&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The beauty of strong typing is that it prevents errors. However, it increases
+the complexity of code: you need to create types first, you need to declare them
+in all your functions, you need type casting, which is hard to debug, and so on.
+Weak typing &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/38002&quot;&gt;proponents&lt;/a&gt;
+complain about this a lot and create languages like Ruby,
+which don’t have types at all, for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;This is ISBN: %s&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the function &lt;code&gt;print()&lt;/code&gt; doesn’t expect &lt;code&gt;b&lt;/code&gt; to be of any
+particular type. Whatever comes in—is fine. Later, when it’s
+time to call &lt;code&gt;.isbn&lt;/code&gt; the runtime checks whether the
+incoming &lt;code&gt;b&lt;/code&gt; has such a method. If it does, everything works just fine,
+if it doesn’t, a runtime error &lt;a href=&quot;https://ruby-doc.org/core-2.5.0/NoMethodError.html&quot;&gt;&lt;code&gt;NoMethodError&lt;/code&gt;&lt;/a&gt;
+is raised.&lt;/p&gt;
+
+&lt;p&gt;So far so good.&lt;/p&gt;
+
+&lt;p&gt;However, here is the idea: what if we combine the simplicity and brevity
+of dynamic typing with the safety of strong typing by getting
+rid of types all together and letting the compiler infer type
+information from the code that works with the objects? Here is our
+code again:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;The ISBN is: %s%n&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Think about this: at compile time it’s already obvious that &lt;code&gt;b&lt;/code&gt; must have
+&lt;em&gt;at least&lt;/em&gt; one method &lt;code&gt;isbn()&lt;/code&gt;. No need to force programmers to define
+the type &lt;code&gt;Book&lt;/code&gt; explicitly and mention in the signature of the method &lt;code&gt;print()&lt;/code&gt;
+that only books are welcome: this knowledge can easily be inferred from
+the body of the method &lt;code&gt;print()&lt;/code&gt;! The compiler may look at all statements
+in the method &lt;code&gt;print()&lt;/code&gt; and clearly &lt;em&gt;understand&lt;/em&gt; what exactly will be done
+with the object &lt;code&gt;b&lt;/code&gt;. This information should be enough to visualize
+the “type” of the incoming object. No need to ask the programmer to
+do this explicitly and spend another five lines of code in a new file
+to declare the type &lt;code&gt;Book&lt;/code&gt;. The compiler can do this job for us.&lt;/p&gt;
+
+&lt;p&gt;Of course, to make this work we must prohibit
+&lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;type casting&lt;/a&gt;
+of any kind, which is not possible in Java, C++, C# and other
+pseudo-object-oriented languages. But it is possible in
+&lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;WDYT?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">In 1974, Liskov and Zilles defined a strongly-typed language as one in which “whenever an object is passed from a calling function to a called function, its type must be compatible with the type declared in the called function.” Strong type checking, without doubt, decreases the amount of type errors, which leads to higher quality. However, the question is: do we really need types in order to strongly enforce typing?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/redirected.jpg" /></entry><entry><title type="html">The Pain of Daily Reports</title><link href="https://www.yegor256.com/2020/11/03/daily-reports.html" rel="alternate" type="text/html" title="The Pain of Daily Reports" /><published>2020-11-03T00:00:00+00:00</published><updated>2020-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/03/daily-reports</id><content type="html" xml:base="https://www.yegor256.com/2020/11/03/daily-reports.html">&lt;p&gt;A few days ago I asked
 &lt;a href=&quot;https://twitter.com/intent/follow?screen_name=yegor256&quot;&gt;my Twitter&lt;/a&gt;
 followers to vote in a
 &lt;a href=&quot;https://twitter.com/yegor256/status/1318899898364866560&quot;&gt;simple poll&lt;/a&gt;.
@@ -1160,100 +1254,4 @@ they are fighting for it, trying to acquire the largest pieces.&lt;/p&gt;
 
 &lt;p&gt;Thus, if you are a coder, make your own project now.
 Sooner or later Google will knock on the door and offer
-you a big check, just to do it earlier than Microsoft.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Some companies massively invest in open source software projects, while others still remain skeptical and stay away from this trend. What’s in it for those philanthropists, like Google, IBM or Microsoft? Why spend money on something that doesn’t belong to them and is shared among all of us developers? Don’t they understand that the code they write may be used by their competitors? It seems they do understand, but can’t do anything about it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/filth.jpg" /></entry><entry><title type="html">Prefixed Naming</title><link href="https://www.yegor256.com/2020/03/03/prefixed-naming.html" rel="alternate" type="text/html" title="Prefixed Naming" /><published>2020-03-03T00:00:00+00:00</published><updated>2020-03-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/03/03/prefixed-naming</id><content type="html" xml:base="https://www.yegor256.com/2020/03/03/prefixed-naming.html">&lt;p&gt;If you look at the source code of
-&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;Takes&lt;/a&gt; or
-&lt;a href=&quot;https://github.com/yegor256/cactoos&quot;&gt;Cactoos&lt;/a&gt; for the first time,
-you most probably, like many others, will be triggered by the naming
-convention, which implies that most class names have two-letter prefixes:
-&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/http/BkSafe.html&quot;&gt;&lt;code&gt;BkSafe&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rq/RqFake.html&quot;&gt;&lt;code&gt;RqFake&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rs/RsWithStatus.html&quot;&gt;&lt;code&gt;RsWithStatus&lt;/code&gt;&lt;/a&gt;,
-&lt;a href=&quot;https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/tk/TkGzip.html&quot;&gt;&lt;code&gt;TkGzip&lt;/code&gt;&lt;/a&gt;,
-and so on. To be honest,
-I haven’t seen a single Java developer who would be comfortable with this
-convention at first sight. I have, however, seen many who are in love with it
-now. This article is for those who are interested in moving from the
-first category to the second one.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Buffalo&amp;#39;66 (1998) by Vincent Gallo&quot; src=&quot;/images/2020/03/buffalo-66.jpg&quot; longdesc=&quot;#453e8cc2&quot; /&gt;&lt;figcaption id=&quot;453e8cc2&quot;&gt;Buffalo&amp;#39;66 (1998) by Vincent Gallo&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Any software package, module, library, or framework of a decent size has
-a large amount of classes. Well, it &lt;a href=&quot;/2017/02/28/too-many-classes.html&quot;&gt;has to have&lt;/a&gt;.
-If it doesn’t, there is definitely a problem with its design.
-So there’s always a problem of how to name those classes. The easiest and most
-obvious approach is the one used in Java and its flagship framework
-&lt;a href=&quot;https://spring.io/&quot;&gt;Spring&lt;/a&gt;:
-make class names as descriptive and as long as possible. Here are
-&lt;a href=&quot;https://gist.github.com/thom-nic/2c74ed4075569da0f80b&quot;&gt;some examples&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;ObjectFactoryCreatingFactoryBean&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;SimpleBeanFactoryAwareAspectInstanceFactory&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;TransactionAwarePersistenceManagerFactoryProxy&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;AbstractAnnotationConfigDispatcherServletInitializer&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is garbage, isn’t it?&lt;/p&gt;
-
-&lt;p&gt;A much more sophisticated and time-consuming way of naming classes is
-by the &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-driven_design&quot;&gt;DDD paradigm&lt;/a&gt;,
-which suggests using &lt;em&gt;nouns&lt;/em&gt; after &lt;em&gt;entities&lt;/em&gt; in the real world, like port, car,
-book, story, user, socket, and so on. Identifying the right entities
-is a big challenge for a software architect. A bad one would just resort
-to &lt;code&gt;ConnectionFactoryUtils&lt;/code&gt; or &lt;code&gt;DefaultListableBeanFactory&lt;/code&gt; and call it a day.
-A more professional one may spend hours or days, but will eventually come up with
-something more &lt;em&gt;domain-driven&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let’s assume you are the latter and you managed to find the right nouns.
-How many of them will be out there in your domain? A few dozen, I believe. Even
-if the application is rather complex, you won’t have more than 30 entities
-in its problem domain. However, as was &lt;a href=&quot;/2017/02/28/too-many-classes.html&quot;&gt;mentioned above&lt;/a&gt;,
-the amount of
-classes will be much larger, sometimes over a thousand or more. Thus, the
-second problem you will face is how to name classes which are
-“entities with specifiers.” For example, you have a port and also a random port
-and a TCP port, and a port already closed, and a port not yet opened, and so on.&lt;/p&gt;
-
-&lt;p&gt;There will be nouns with &lt;em&gt;adjectives&lt;/em&gt;: random port, closed port, opened port,
-TCP port, broken port, and so on. How do you name those classes? Maybe, as simply
-as this: &lt;code&gt;RandomPort&lt;/code&gt;, &lt;code&gt;OpenedPort&lt;/code&gt;, &lt;code&gt;ClosedPort&lt;/code&gt;, &lt;code&gt;TcpPort&lt;/code&gt;.
-Maybe, but I think it’s better to turn the common &lt;code&gt;Port&lt;/code&gt; part into a common prefix &lt;code&gt;Pt&lt;/code&gt;
-for all classes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;PtRandom&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;PtOpened&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;PtClosed&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;PtTcp&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The only disadvantage of this approach is that newcomers may have no idea
-what the &lt;code&gt;Pt&lt;/code&gt; prefix means. Indeed, it may take some time (a few minutes) to learn it. However,
-the advantage is greater: once you learn all the prefixes that exist
-in the application (and there will be just a few of them, since the amount
-of entities in the domain is pretty limited), you can immediately understand
-which part of the type hierarchy the class belongs to (this one is from
-&lt;a href=&quot;https://github.com/yegor256/takes&quot;&gt;Takes&lt;/a&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/uml/c415b43f6d14c18e66db32e9d5d6e8b2.svg&quot; alt=&quot;PlantUML SVG diagram&quot; class=&quot;plantuml&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Once you see the &lt;code&gt;Rq&lt;/code&gt; prefix you immediately understand that you are dealing with
-an implementation of the
-&lt;a href=&quot;https://www.javadoc.io/doc/org.takes/takes/latest/org/takes/Request.html&quot;&gt;&lt;code&gt;org.takes.Request&lt;/code&gt;&lt;/a&gt; interface. Not the
-&lt;a href=&quot;https://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html&quot;&gt;&lt;code&gt;ServletRequest&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;https://en.wikipedia.org/wiki/Java_servlet&quot;&gt;JDK&lt;/a&gt;,
-not &lt;a href=&quot;https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpRequest.html&quot;&gt;&lt;code&gt;HttpRequest&lt;/code&gt;&lt;/a&gt;
-from Spring,
-and not &lt;a href=&quot;https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.html&quot;&gt;&lt;code&gt;Request&lt;/code&gt;&lt;/a&gt;
-from &lt;a href=&quot;https://square.github.io/okhttp/&quot;&gt;OkHttp&lt;/a&gt;.
-You know that it’s the &lt;code&gt;Request&lt;/code&gt; from Takes!&lt;/p&gt;
-
-&lt;p&gt;Thus, by using short prefixes instead of nouns we add clarity to the code.
-We remove the noise of repeated usage of the same noun over and over again and
-make referencing easier. Each prefix is a unique locator of a class in
-the type hierarchy.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Which class name you would use: SynchronizedDatabaseConnection or SncConn?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1239065472491978752?ref_src=twsrc%5Etfw&quot;&gt;March 15, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">If you look at the source code of Takes or Cactoos for the first time, you most probably, like many others, will be triggered by the naming convention, which implies that most class names have two-letter prefixes: BkSafe, RqFake, RsWithStatus, TkGzip, and so on. To be honest, I haven’t seen a single Java developer who would be comfortable with this convention at first sight. I have, however, seen many who are in love with it now. This article is for those who are interested in moving from the first category to the second one.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/03/buffalo-66.jpg" /></entry></feed>
+you a big check, just to do it earlier than Microsoft.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Some companies massively invest in open source software projects, while others still remain skeptical and stay away from this trend. What’s in it for those philanthropists, like Google, IBM or Microsoft? Why spend money on something that doesn’t belong to them and is shared among all of us developers? Don’t they understand that the code they write may be used by their competitors? It seems they do understand, but can’t do anything about it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/filth.jpg" /></entry></feed>
