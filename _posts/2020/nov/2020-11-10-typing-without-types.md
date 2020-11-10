@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Strong Typing without Types"
-date: 2020-11-00
+date: 2020-11-10
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - strong typing
   - strong vs weak typing
   - type system oop
-image: /images/2020/11/
+image: /images/2020/11/redirected.jpg
 jb_picture:
-  caption: ...
+  caption: Redirected (2014) by Emilis Velyvis
 ---
 
 In 1974, Liskov and Zilles [defined](https://dl.acm.org/doi/abs/10.1145/942572.807045)
