@@ -17,6 +17,8 @@ keywords:
 image: /images/2020/11/redirected.jpg
 jb_picture:
   caption: Redirected (2014) by Emilis Velyvis
+translated:
+  - Ukrainian: https://serge3ling.github.io/yegor256-strong-typing-no-types/
 ---
 
 In 1974, Liskov and Zilles [defined](https://dl.acm.org/doi/abs/10.1145/942572.807045)
