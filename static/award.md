@@ -33,7 +33,26 @@ value quality above everything else.
 <!--more-->
 
 <span class="green">ATTENTION</span>:
-Submission to 2020 [is open]({% pst 2019/nov/2019-11-03-award-2020 %}).
+Submission to 2021 [is open]({% pst 2020/nov/2020-11-15-award-2021 %}).
+
+<hr/>
+
+<img src="//www.yegor256.com/images/award/2020/winner-amihaiemil.png" style="height:45px;" alt='winner'/>
+&nbsp;
+<img src="//www.yegor256.com/images/award/2020/winner-hdouss.png" style="height:45px;" alt='winner'/>
+&nbsp;
+<img src="//www.yegor256.com/images/award/2020/winner-victorx64.png" style="height:45px;" alt='winner'/>
+
+[`@amihaiemil`](https://github.com/amihaiemil),
+[`@hdouss`](https://github.com/hdouss),
+and [`@victorx64`](https://github.com/victorx64)
+were the winners in 2020 with
+[`decorators-squad/eo-yaml`](https://github.com/decorators-squad/eo-yaml) (**$1,024**),
+[`hdouss/jeometry`](https://github.com/hdouss/jeometry) (**1,024**),
+and
+[`victorx64/devrating`](https://github.com/victorx64/devrating) (**$1,024**)
+projects.
+[More details]({% pst 2019/sep/2019-11-03-award-2020 %}).
 
 <hr/>
 
