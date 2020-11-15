@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Objects without Methods"
-date: 2020-11-00
+title: "In EO Objects Don't Have Methods"
+date: 2020-11-17
 place: Moscow, Russia
 tags: oop
 description: |
@@ -9,9 +9,9 @@ description: |
 keywords:
   - methods in oop
   - object oriented programming
-  - oop
+  - oop and eo
   - eolang
-  - oop design
+  - eo design
 image: /images/2020/11/
 jb_picture:
   caption: ...
@@ -19,18 +19,48 @@ jb_picture:
 
 What do you think an object is, in OOP? No matter what language you are
 programming with, you will most probably agree with Bruce Eckel,
-the author of [Effective Java], who said that "each object has a state
+the author of [Effective Java](https://amzn.to/35xigKf), who said that "each object has a state
 and operations that you can ask it to perform," or
-Benjamin Evans, the author of [Java in a Nutshell], who claimed that it is
+Benjamin Evans, the author of [Java in a Nutshell](https://amzn.to/35uKVPU), who claimed that it is
 "a collection of data fields that hold values and methods that operate on those values."
-What if I tell you that an object may have no "operations"
+However, hold on... What if I tell you that an object may have no "operations"
 and still be a perfect "equivalent of the quanta from which the universe
 is constructed," as David West suggested in his great book
-[Object Thinking]?
+[Object Thinking](https://amzn.to/3kuXHlL)?
 
 <!--more-->
 
 {% jb_picture_body %}
+
+In [EO](https://www.eolang.org),
+our experimental programming language, we made an attempt to re-define
+OOP and its objects. There are two types of _things_ in EO: atoms and objects.
+Atom is a lowest level language primitive, which can't be expressed by
+other atoms. For example, an object that represents an arithmetic
+addition of other two objects, is an atom:
+
+{% highlight text %}
+add 5 y > x
+{% endhighlight %}
+
+This code makes a copy of an abstract object `add` with two
+specific arguments: `5` and `y`. The name of a new object would
+be `x`.
+
+This is how a Fibonacci number would look in EO:
+
+{% highlight text %}
+[n] > fibo
+  if > 𝜑
+    less n 2
+    n
+    add
+      fibo (sub n 1)
+      fibo (sub n 2)
+{% endhighlight %}
+
+This code creates a new abstract object named `fibo` with the
+only attribute named
 
 What "operations" are for? We discussed
 [earlier]({% pst 2018/aug/2018-08-22-builders-and-manipulators %})
