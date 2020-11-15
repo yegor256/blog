@@ -52,7 +52,7 @@ were the winners in 2020 with
 and
 [`victorx64/devrating`](https://github.com/victorx64/devrating) (**$1,024**)
 projects.
-[More details]({% pst 2019/sep/2019-11-03-award-2020 %}).
+[More details]({% pst 2019/ nov/2019-11-03-award-2020 %}).
 
 <hr/>
 
