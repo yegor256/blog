@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-10T06:59:42+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Strong Typing without Types</title><link href="https://www.yegor256.com/2020/11/10/typing-without-types.html" rel="alternate" type="text/html" title="Strong Typing without Types" /><published>2020-11-10T00:00:00+00:00</published><updated>2020-11-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/10/typing-without-types</id><content type="html" xml:base="https://www.yegor256.com/2020/11/10/typing-without-types.html">&lt;p&gt;In 1974, Liskov and Zilles &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/942572.807045&quot;&gt;defined&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-15T20:00:46+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is the &lt;em&gt;seventh&lt;/em&gt; year of the
+&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
+is still the same—&lt;strong&gt;$4,096&lt;/strong&gt;.
+The rules are still the same. Read on.
+Previous years are here:
+&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
+&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
+&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;,
+&lt;a href=&quot;/2017/10/24/award-2018.html&quot;&gt;2018&lt;/a&gt;,
+&lt;a href=&quot;/2018/09/30/award-2019.html&quot;&gt;2019&lt;/a&gt;,
+&lt;a href=&quot;/2019/11/03/award-2020.html&quot;&gt;2019&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Here is &lt;a href=&quot;https://docs.google.com/forms/d/1mf0IGryvAhUnIbbhemXPSbIXxE21e190MyQdKuEY_zw&quot;&gt;&lt;strong&gt;the form&lt;/strong&gt;&lt;/a&gt;
+to fill out.&lt;/p&gt;
+
+&lt;p&gt;Rules:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;One person can submit only one project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Submissions are accepted until September 1, 2021.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I will check the commit history to make sure you’re the main contributor to the project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Results will be announced October 15, 2021 on this page and by email (or maybe a bit later).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The best project will receive $4,096
+(I may split this amount among a few projects and may give away a smaller amount!).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Final decisions will be made by me and are not negotiable
+(although I may invite other people to help me make the right decision).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Winners that received any cash prizes in previous years can’t submit again.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=Z70PMGaxGhY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg&quot; alt=&quot;YouTube video #Z70PMGaxGhY&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;How to win $4096 in the next year Quality Award? (webinar #29);
+        1 November 2017.&lt;/div&gt;&lt;/aside&gt;
+
+&lt;p&gt;Each project must be:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open source (in GitHub).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
+&lt;em&gt;and&lt;/em&gt; at least 16,384 &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits-of-code&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At least one year old (the age of the first commit).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Object-oriented (that’s the only thing I understand).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What doesn’t matter:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Popularity. Even if nobody is using your
+product, it is still eligible for this award. I don’t care about
+popularity; quality is the key.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Programming language. I believe that any language, used correctly,
+can be applied to design a high-quality product.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
+line arguments, it’s still eligible for the award. I don’t care about
+your marketing position; quality is all.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the seventh year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019, 2019.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /></entry><entry><title type="html">Strong Typing without Types</title><link href="https://www.yegor256.com/2020/11/10/typing-without-types.html" rel="alternate" type="text/html" title="Strong Typing without Types" /><published>2020-11-10T00:00:00+00:00</published><updated>2020-11-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/10/typing-without-types</id><content type="html" xml:base="https://www.yegor256.com/2020/11/10/typing-without-types.html">&lt;p&gt;In 1974, Liskov and Zilles &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/942572.807045&quot;&gt;defined&lt;/a&gt;
 a &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot;&gt;strongly-typed&lt;/a&gt;
 language as one in which “whenever an object is passed from
 a calling function to a called function, its type must be
@@ -1052,206 +1153,4 @@ most complex actions you can take.&lt;/p&gt;
 &lt;p&gt;Don’t be scared, act!&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do you use the principles of &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; in your project?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1274792685681901571?ref_src=twsrc%5Etfw&quot;&gt;June 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">It’s time to answer one of the most popular questions I hear from junior programmers when they meet me at a software conference or online: What is the point of studying Elegant Objects (the new object-oriented paradigm I’ve been preaching for the last five years) if almost nobody is using it on real projects? Why swim against the current and learn something that may only harm my career, even if it does seem like a sound technical concept? Where is the profit in making myself an outsider? These are good questions; thanks for asking them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/dog-day-afternoon.jpg" /></entry><entry><title type="html">Open Source Arms Race</title><link href="https://www.yegor256.com/2020/05/05/open-source-arms-race.html" rel="alternate" type="text/html" title="Open Source Arms Race" /><published>2020-05-05T00:00:00+00:00</published><updated>2020-05-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/05/open-source-arms-race</id><content type="html" xml:base="https://www.yegor256.com/2020/05/05/open-source-arms-race.html">&lt;p&gt;Some companies massively invest in open source software projects,
-while others still remain skeptical and stay away from this trend.
-What’s in it for those philanthropists, like Google, IBM or Microsoft?
-Why spend money on something that doesn’t belong to them and
-is shared among all of us developers? Don’t they understand that
-the code they write may be used by their competitors? It seems they
-do understand, but can’t do anything about it.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Filth (2013) by Jon S. Baird&quot; src=&quot;/images/2020/05/filth.jpg&quot; longdesc=&quot;#37854d19&quot; /&gt;&lt;figcaption id=&quot;37854d19&quot;&gt;Filth (2013) by Jon S. Baird&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;As David Mytton
-&lt;a href=&quot;https://www.infoworld.com/article/3028600/whats-the-real-reason-microsoft-and-google-are-releasing-open-source.html&quot;&gt;noted&lt;/a&gt;,
-individuals release open source projects out of altruism,
-while companies have real, strategic reasons hidden behind
-the warm and fuzzy glow of open source. We don’t mean just using
-open source products, which is what every business
-&lt;a href=&quot;https://thenewstack.io/survey-open-source-programs-are-a-best-practice-among-large-companies/&quot;&gt;does&lt;/a&gt;
-nowadays, but building them so that everybody can use them, for free.&lt;/p&gt;
-
-&lt;p&gt;First, let’s see exactly how,
-among &lt;a href=&quot;https://opensource.com/article/19/4/ways-support-sustain-open-source&quot;&gt;other methods&lt;/a&gt;,
-companies invest in open source:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Committers&lt;/strong&gt;.
-Google, for example, encourages its employees to
-open their code, and even has an
-&lt;a href=&quot;https://opensource.google/docs/releasing/approval/&quot;&gt;approval procedure&lt;/a&gt; for it.
-It seems that others do something similar.
-Some recently published &lt;a href=&quot;https://www.infoworld.com/article/3253948/who-really-contributes-to-open-source.html&quot;&gt;research&lt;/a&gt;
-demonstrates that thousands (!) of employees from
-&lt;a href=&quot;https://github.com/microsoft&quot;&gt;Microsoft&lt;/a&gt; (4.3k visible GitHub contributors),
-&lt;a href=&quot;https://github.com/IBM&quot;&gt;IBM&lt;/a&gt; (2.3k),
-&lt;a href=&quot;https://github.com/google&quot;&gt;Google&lt;/a&gt; (1.2k),
-and
-&lt;a href=&quot;https://www.zdnet.com/article/its-an-open-source-world-78-percent-of-companies-run-open-source-software/&quot;&gt;others&lt;/a&gt;
-actively contribute to their GitHub-hosted repositories.
-In other words, being paid by Google these people write
-code that doesn’t belong to Google.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Events&lt;/strong&gt;.
-Aside from
-&lt;a href=&quot;https://cloud.withgoogle.com/next/sf/&quot;&gt;Google Cloud Next&lt;/a&gt;,
-&lt;a href=&quot;https://reinvent.awsevents.com/&quot;&gt;AWS re:Invent&lt;/a&gt;, and
-&lt;a href=&quot;https://www.microsoft.com/en-us/ignite&quot;&gt;Microsoft Ignite&lt;/a&gt;,
-which are pure promotional events, tech giants sponsor
-community-driven conferences, like
-&lt;a href=&quot;https://docker.events.cube365.net/docker/dockercon/&quot;&gt;DockerCon&lt;/a&gt;,
-&lt;a href=&quot;https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/&quot;&gt;KubeCon&lt;/a&gt;,
-&lt;a href=&quot;https://fosdem.org/2020/&quot;&gt;FOSDEM&lt;/a&gt;,
-and so on.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Foundations&lt;/strong&gt;.
-&lt;a href=&quot;http://www.apache.org/foundation/thanks&quot;&gt;Apache&lt;/a&gt;,
-&lt;a href=&quot;https://www.linuxfoundation.org/membership/members/&quot;&gt;Linux&lt;/a&gt;,
-&lt;a href=&quot;https://www.eclipse.org/membership/exploreMembership.php#allmembers&quot;&gt;Eclipse&lt;/a&gt;,
-&lt;a href=&quot;https://www.gnome.org/foundation/&quot;&gt;GNOME&lt;/a&gt;,
-&lt;a href=&quot;https://opensource.org/sponsors&quot;&gt;OSI&lt;/a&gt;
-and &lt;a href=&quot;https://opensource.com/resources/organizations&quot;&gt;others&lt;/a&gt;
-are sponsored by Google, IBM, Huawei, Microsoft, Oracle, and others.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Acquisitions&lt;/strong&gt;.
-They &lt;a href=&quot;https://techcrunch.com/2019/01/12/how-open-source-software-took-over-the-world/&quot;&gt;acquire&lt;/a&gt;
-startups that make open source products,
-e.g.
-&lt;a href=&quot;https://github.com/RedHatOfficial&quot;&gt;RedHat&lt;/a&gt;
-  (acquired by IBM for &lt;a href=&quot;https://www.technologyreview.com/the-download/612353/ibms-34-billion-purchase-of-red-hat-is-a-mega-bet-on-a-coding-revolution/?via=indexdotco&quot;&gt;$32b&lt;/a&gt;),
-&lt;a href=&quot;https://github.com/mongodb/mongo&quot;&gt;MongoDB&lt;/a&gt;
-  (&lt;a href=&quot;https://www.marketwatch.com/story/mongodb-shares-rally-above-already-elevated-ipo-price-2017-10-19&quot;&gt;$4b&lt;/a&gt;),
-&lt;a href=&quot;https://github.com/docker&quot;&gt;Docker&lt;/a&gt;
-  (&lt;a href=&quot;https://venturebeat.com/2015/06/13/docker-now-valued-at-1b-paid-someone-799-for-its-logo-on-99designs/&quot;&gt;$1b&lt;/a&gt;),
-&lt;a href=&quot;https://github.com/elastic&quot;&gt;Elastic&lt;/a&gt;
-  (&lt;a href=&quot;https://techcrunch.com/2018/10/05/search-company-elastic-pops-90-on-nyse-after-raising-252m-at-a-2-5b-market-cap-in-its-ipo/&quot;&gt;$6b&lt;/a&gt;),
-&lt;a href=&quot;https://github.com/ansible/ansible&quot;&gt;Ansible&lt;/a&gt;
-  (&lt;a href=&quot;http://venturebeat.com/2015/10/15/source-red-hat-is-buying-ansible-for-more-than-100m/&quot;&gt;$100m&lt;/a&gt;),
-&lt;a href=&quot;https://github.com/mysql&quot;&gt;MySQL&lt;/a&gt;
-  (&lt;a href=&quot;https://techcrunch.com/2008/01/16/sun-picks-up-mysql-for-1-billion-open-source-is-a-legitimate-business-model/&quot;&gt;$1b&lt;/a&gt;),
-&lt;a href=&quot;https://github.com/nginx/nginx&quot;&gt;Nginx&lt;/a&gt;
-  (&lt;a href=&quot;https://techcrunch.com/2019/03/11/f5-acquires-nginx-for-670m-to-move-into-open-source-multi-cloud-services/&quot;&gt;$670m&lt;/a&gt;),
-and &lt;a href=&quot;https://index.co/market/open-source/acquisitions&quot;&gt;so on&lt;/a&gt;.
-The market is &lt;a href=&quot;https://a16z.com/2019/10/04/commercializing-open-source/&quot;&gt;booming&lt;/a&gt;, by the way.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Donations&lt;/strong&gt;.
-Google, for example, &lt;a href=&quot;https://opensource.google/docs/growing/funding/&quot;&gt;donates&lt;/a&gt; to
-  &lt;a href=&quot;https://github.com/fastlane/fastlane&quot;&gt;Fastlane&lt;/a&gt;
-  and
-  &lt;a href=&quot;https://github.com/kubernetes/kubernetes&quot;&gt;Kubernetes&lt;/a&gt;;
-IBM &lt;a href=&quot;https://www.ibm.com/opensource/&quot;&gt;donates&lt;/a&gt; to
-  &lt;a href=&quot;https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/&quot;&gt;Node.js&lt;/a&gt;
-  and
-  &lt;a href=&quot;https://conferences.oreilly.com/tensorflow/tf-ca-2019/public/schedule/detail/81284&quot;&gt;TensorFlow&lt;/a&gt;;
-Amazon sponsors
-  &lt;a href=&quot;https://aws.amazon.com/blogs/opensource/aws-sponsorship-of-the-rust-project/&quot;&gt;Rust&lt;/a&gt;;
-and &lt;a href=&quot;https://github.com/ossfriendly/open-source-supporters&quot;&gt;so on&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Next, the question is how this helps Google and others make their
-business more profitable. For example, how is Google Cloud Platform planning
-to beat Amazon AWS using open source as a weapon? Here is how,
-among &lt;a href=&quot;https://simplabs.com/blog/2019/11/11/why-companies-invest-in-oss/&quot;&gt;other reasons&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Selling&lt;/strong&gt;.
-The products they sponsor gather large communities of users,
-who know how to work with them. Some of those users are decision-making
-people. For example, &lt;a href=&quot;https://cloud.google.com/kubernetes-engine/&quot;&gt;Google’s Container Engine&lt;/a&gt;
-is a hosted version of
-&lt;a href=&quot;https://github.com/kubernetes/kubernetes&quot;&gt;Kubernetes&lt;/a&gt;, an open source product.
-Kubernetes users, when they need
-a hosted version of it, will most likely become Google customers.
-&lt;a href=&quot;https://github.com/tensorflow/tensorflow&quot;&gt;TensorFlow&lt;/a&gt;,
-yet another example, also runs on &lt;a href=&quot;https://cloud.google.com/tensorflow-enterprise&quot;&gt;Google Cloud Platform&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Influencing&lt;/strong&gt;.
-In the modern software development world open source is the key media, where
-programmers learn new ideas, design principles, and architectural solutions.
-They listen to open source projects, because they trust them much more
-than they trust Google, IBM or Microsoft. Tech companies are smart, but their
-decisions are based on monetary reasons, while open source projects
-are much freer to do what is right, instead of what is profitable.
-And programmers usually get very skeptical when open projects are acquired
-by large enterprises, like
-&lt;a href=&quot;https://www.reddit.com/r/linux/comments/2e2c1o/what_do_we_hate_oracle_for/&quot;&gt;Java by Oracle&lt;/a&gt;
-or &lt;a href=&quot;https://www.theverge.com/2018/6/18/17474284/microsoft-github-acquisition-developer-reaction&quot;&gt;GitHub by Microsoft&lt;/a&gt;
-(not really an open source story, but very close).
-Thus, for companies it’s much wiser to sponsor open source and stay behind the curtain
-rather than talking directly to developers through corporate media
-like &lt;a href=&quot;https://docs.microsoft.com/en-us/&quot;&gt;MSDN&lt;/a&gt; or &lt;a href=&quot;https://developer.oracle.com/&quot;&gt;OPN&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Branding&lt;/strong&gt;.
-Being part of open source is a direct contribution to the public
-image of a company. Google is no longer an
-&lt;a href=&quot;https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search&quot;&gt;Ad-selling monopoly&lt;/a&gt;,
-with &lt;a href=&quot;https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/&quot;&gt;questionable reputation&lt;/a&gt;,
-but one of the largest software &lt;a href=&quot;https://ssir.org/articles/entry/open_source_software_is_philanthropy&quot;&gt;philanthropists&lt;/a&gt;.
-Microsoft is &lt;a href=&quot;https://www.businessinsider.de/international/microsoft-reputation-institute-soaring-research-2019-11/?r=US&amp;amp;IR=T&quot;&gt;catching up&lt;/a&gt;
-with its massive &lt;a href=&quot;https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/&quot;&gt;code opening&lt;/a&gt;
-and the &lt;a href=&quot;https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/&quot;&gt;purchase&lt;/a&gt; of GitHub.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=D12gi1x6Cdw&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/D12gi1x6Cdw/mqdefault.jpg&quot; alt=&quot;YouTube video #D12gi1x6Cdw&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M105: Open source developers inevitably have better soft and tech skills;
-        23 June 2020.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Retaining&lt;/strong&gt;.
-Being an active participant of a visible open source software product
-is a great &lt;a href=&quot;https://opensource.com/article/19/11/why-contribute-open-source-software&quot;&gt;intrinsic motivator&lt;/a&gt;
-for the best software engineers.
-When your company is involved in open source business, you
-are much more loyal and interested in staying longer with the company.
-I can’t prove this assertion, but it’s my personal observation.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Training&lt;/strong&gt;.
-It’s &lt;a href=&quot;https://www.wired.com/insights/2013/11/open-source-a-platform-for-innovation/&quot;&gt;no secret&lt;/a&gt;
-that the &lt;a href=&quot;https://www.techrepublic.com/article/the-best-open-source-innovations-of-the-last-decade/&quot;&gt;best technologies&lt;/a&gt;
-nowadays are being created
-in open source projects by people contributing for free
-(they get their salaries somewhere else). It’s also a
-&lt;a href=&quot;https://hackernoon.com/how-to-become-the-best-programmer-in-the-world-ef9f584c81fa&quot;&gt;well-known fact&lt;/a&gt;
-that in order to be a better engineer one has to work with the best.
-Open source projects are &lt;a href=&quot;https://www.techrepublic.com/article/10-tips-for-becoming-a-better-programmer/&quot;&gt;exactly&lt;/a&gt;
-the best place to meet more experienced and very often more talented programmers,
-and learn from them. Companies, by sending people there, boost
-their skills without doing any internal training programs.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thus, it seems that open source is a very powerful instrument
-in the war for tech markets and for talent. Smart companies develop their open source
-muscles, earning reputation and acquiring our trust. I predict
-this trend not only to continue but also to escalate. We programmers
-are their driving force; they need us
-as users, promoters, influencers, and makers of the products.&lt;/p&gt;
-
-&lt;p&gt;They were &lt;a href=&quot;https://hbswk.hbs.edu/item/microsoft-vs-open-source-who-will-win&quot;&gt;not paying attention&lt;/a&gt;
-to the open source territory for ages
-and &lt;a href=&quot;https://www.computerworld.com/article/3144063/open-source-has-won-and-microsoft-has-surrendered.html&quot;&gt;now&lt;/a&gt;
-they are fighting for it, trying to acquire the largest pieces.&lt;/p&gt;
-
-&lt;p&gt;We software developers are the territory!&lt;/p&gt;
-
-&lt;p&gt;Thus, if you are a coder, make your own project now.
-Sooner or later Google will knock on the door and offer
-you a big check, just to do it earlier than Microsoft.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Some companies massively invest in open source software projects, while others still remain skeptical and stay away from this trend. What’s in it for those philanthropists, like Google, IBM or Microsoft? Why spend money on something that doesn’t belong to them and is shared among all of us developers? Don’t they understand that the code they write may be used by their competitors? It seems they do understand, but can’t do anything about it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/filth.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">It’s time to answer one of the most popular questions I hear from junior programmers when they meet me at a software conference or online: What is the point of studying Elegant Objects (the new object-oriented paradigm I’ve been preaching for the last five years) if almost nobody is using it on real projects? Why swim against the current and learn something that may only harm my career, even if it does seem like a sound technical concept? Where is the profit in making myself an outsider? These are good questions; thanks for asking them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/dog-day-afternoon.jpg" /></entry></feed>
