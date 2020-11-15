@@ -37,11 +37,11 @@ Submission to 2021 [is open]({% pst 2020/nov/2020-11-15-award-2021 %}).
 
 <hr/>
 
-<img src="//www.yegor256.com/images/award/2020/winner-amihaiemil.png" style="height:45px;" alt='winner'/>
+<img src="/images/award/2020/winner-amihaiemil.png" style="height:45px;" alt='winner'/>
 &nbsp;
-<img src="//www.yegor256.com/images/award/2020/winner-hdouss.png" style="height:45px;" alt='winner'/>
+<img src="/images/award/2020/winner-hdouss.png" style="height:45px;" alt='winner'/>
 &nbsp;
-<img src="//www.yegor256.com/images/award/2020/winner-victorx64.png" style="height:45px;" alt='winner'/>
+<img src="/images/award/2020/winner-victorx64.png" style="height:45px;" alt='winner'/>
 
 [`@amihaiemil`](https://github.com/amihaiemil),
 [`@hdouss`](https://github.com/hdouss),
@@ -56,10 +56,10 @@ projects.
 
 <hr/>
 
-<img src="//www.yegor256.com/images/award/2019/winner-fabriciofx.png"
+<img src="/images/award/2019/winner-fabriciofx.png"
   style="height:45px;" alt='badge'/>
 &nbsp;
-<img src="//www.yegor256.com/images/award/2019/winner-proshin-roman.png"
+<img src="/images/award/2019/winner-proshin-roman.png"
   style="height:45px;" alt='badge'/>
 
 [`@fabriciofx`](https://github.com/fabriciofx) and [`@proshin-roman`](https://github.com/proshin-roman)
@@ -72,10 +72,10 @@ projects.
 
 <hr/>
 
-<img src="//www.yegor256.com/images/award/2018/winner-driver733.png"
+<img src="/images/award/2018/winner-driver733.png"
   style="height:45px;" alt='badge'/>
 &nbsp;
-<img src="//www.yegor256.com/images/award/2018/winner-dgroup.png"
+<img src="/images/award/2018/winner-dgroup.png"
   style="height:45px;" alt='badge'/>
 
 [`@driver733`](https://github.com/driver733) and [`@dgroup`](https://github.com/dgroup)
@@ -88,10 +88,10 @@ projects.
 
 <hr/>
 
-<img src="//www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png"
+<img src="/images/award/2017/winner-itcraftsmanpl.png"
   style="width:203px;height:45px;" alt='badge'/>
 &nbsp;
-<img src="//www.yegor256.com/images/award/2017/winner-mafagafogigante.png"
+<img src="/images/award/2017/winner-mafagafogigante.png"
   style="width:203px;height:45px;" alt='badge'/>
 
 [`@itcraftsmanpl`](https://github.com/itcraftsmanpl) and [`@mafagafogigante`](https://github.com/mafagafogigante)
@@ -103,10 +103,10 @@ received a cash prize of **$1,024** each.
 
 <hr/>
 
-<img src="//www.yegor256.com/images/award/2016/winner-pholser.png"
+<img src="/images/award/2016/winner-pholser.png"
   style="width:203px;height:45px;" alt='badge'/>
 &nbsp;
-<img src="//www.yegor256.com/images/award/2016/winner-sils.png"
+<img src="/images/award/2016/winner-sils.png"
   style="width:203px;height:45px;" alt='badge'/>
 
 [`@pholser`](https://github.com/pholser) and [`@sils`](https://github.com/sils) were the winners in 2016
@@ -117,7 +117,7 @@ received a cash prize of **$2,048** each.
 
 <hr/>
 
-<img src="//www.yegor256.com/images/award/2015/winner.png"
+<img src="/images/award/2015/winner.png"
   style="width:203px;height:45px;" alt='badge'/>
 
 [`@gvlasov`](https://github.com/gvlasov) was a winner in 2015
