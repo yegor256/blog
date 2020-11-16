@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-15T20:00:46+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-16T08:51:32+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is the &lt;em&gt;seventh&lt;/em&gt; year of the
 &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
@@ -240,6 +240,14 @@ gets through, just because nobody wants to offend its author
 or the review takes too long with no chances to see code improvements,
 simply because the author doesn’t care.
 I can continue, if you like.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=Yj1VFGK9vqc&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/Yj1VFGK9vqc/mqdefault.jpg&quot; alt=&quot;YouTube video #Yj1VFGK9vqc&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M143: Daily reports are a perfect guilt-triggering instrument for a lazy team;
+        12 November 2020.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;Sound familiar?&lt;/p&gt;
 
