@@ -51,6 +51,11 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/david-west.png" class="guest-face" alt="Face of David M. West"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;43: [Management and computer science with David M. West](/shift-m/2020/43.html)<br/>
+8 November 2020; 79 min.
+
 <img src="/images/shift-m/venkat-subramaniam.png" class="guest-face" alt="Face of Venkat Subramaniam"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;42: [Self development with Venkat Subramaniam](/shift-m/2019/42.html)<br/>
