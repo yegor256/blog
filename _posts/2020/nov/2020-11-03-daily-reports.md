@@ -67,6 +67,8 @@ or the review takes too long with no chances to see code improvements,
 simply because the author doesn't care.
 I can continue, if you like.
 
+{% youtube Yj1VFGK9vqc %}
+
 Sound familiar?
 
 In this situation, which is much more popular than the previous
