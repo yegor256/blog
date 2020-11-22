@@ -6,6 +6,7 @@ description: |
   and properly organized open source project;
   don't hesitate to submit your application now.
 permalink: award.html
+tags: quality
 image: /images/andreea/quality-award.png
 keywords:
   - best open source projects

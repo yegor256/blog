@@ -3,7 +3,7 @@ layout: post
 title: "Don't Aim for Quality, Aim for Speed"
 date: 2018-03-06
 place: Moscow, Russia
-tags: management
+tags: management quality
 description: |
   When project scope is perfectly decomposed and management
   rules are clear and strict, speed of delivery

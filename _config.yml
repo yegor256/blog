@@ -8,15 +8,14 @@ description: "Yegor Bugayenko"
 copyright: "(c) Yegor Bugayenko, 2014-2020"
 encoding: utf-8
 timezone: America/San_Francisco
+
+highlighter: rouge
 markdown: kramdown
-highlighter: pygments
-redcarpet:
-  extensions:
-    - no_intra_emphasis
-    - fenced_code_blocks
-    - autolink
-    - tables
-    - with_toc_data
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
 permalink: :year/:month/:day/:title.html
 paginate: 16
 paginate_path: "p/:num"

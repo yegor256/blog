@@ -9,3 +9,4 @@ _newsletters/send.sh
 gnuplot/
 css/_icons.scss
 _gnuplot/**/*.svg
+.jekyll-cache/

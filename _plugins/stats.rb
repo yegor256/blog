@@ -100,9 +100,10 @@ module Jekyll
       (years.min .. years.max).each do |y|
         (1..12).each do |m|
           txt = format("%4d-%02d", y, m)
-          months[txt] = 0 if months[txt].nil?
+          months[txt] = 0 if !months.key?(txt)
         end
       end
+      months = months.sort_by { |k, v| k }.to_h
       File.write(
         File.join(site.config['source'], '_temp/stats/words.txt'),
         words.sort{ |a,b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
