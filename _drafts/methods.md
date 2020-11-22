@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "In EO Objects Don't Have Methods"
+title: "Objects Without Methods"
 date: 2020-11-17
 place: Moscow, Russia
 tags: oop
@@ -43,147 +43,92 @@ addition of other two objects, is an atom:
 add 5 y > x
 {% endhighlight %}
 
-This code makes a copy of an abstract object `add` with two
-specific arguments: `5` and `y`. The name of a new object would
-be `x`.
-
-This is how a Fibonacci number would look in EO:
+In a more traditional Java-like infix notation
+this code would look like this:
 
 {% highlight text %}
-[n] > fibo
-  if > 𝜑
-    less n 2
-    n
-    add
-      fibo (sub n 1)
-      fibo (sub n 2)
+x = add(5, y)
 {% endhighlight %}
 
-This code creates a new abstract object named `fibo` with the
-only attribute named
+The atom is `add` and its two specific
+arguments are `5` and `y`. The name of a new atom being
+created is `x`. Once we ask this newly created atom to do anything,
+it gets what's in `y`, add `5` and start behaving
+like a summary of them. Until then, it stays quiet.
 
-What "operations" are for? We discussed
-[earlier]({% pst 2018/aug/2018-08-22-builders-and-manipulators %})
-that there are two types of
-them: builders and manipulators. We may either ask a project to "build" something
-for us (some other object) or "manipulate" existing objects and return
-`void`. However, no matter whan an object does for us, it may either
-do it all now in [imperative]({% pst 2015/mar/2015-03-09-objects-end-with-er %})
-way, or prepare the execution and return
-an object, which is ready to do the operation later. Functional programmers
-know what I'm talking about, but here is an example for OOP people.
+Atoms are provided by EO runtime. For example,
+`add`, `sub`, `mul`,  and `div` for arithmetic operations;
+`if` and `for` for forking and iterating;
+`less`, `and`, `eq`, `or` for logical operations, and so on.
+For a while you can understand atoms as low-level
+functions with arguments. But they don't calculate
+the result immediately, but only when the result is needed.
+Saying `add(5, file)` won't lead to reading the content
+of the file and adding 5 to it immediately. Only when the
+created atom is dealt with, the file reading will happen.
 
-Say, it's a Java class, representing a text file:
+Next, on top of these atoms objects can be created, by a programmer.
+For example, this is an object that represents a circle:
 
-{% highlight java %}
-class Semaphore {
-  private final Path path;
-  Semaphore(Path p) {
-    this.path = p;
-  }
-  /**
-   * Check, whether the file exists and return
-   * TRUE if it does. No matter what, the file
-   * will also be removed in this method.
-   */
-  boolean checkAndRemove() {
-    boolean exists = Files.exist(this.path);
-    Files.deleteIfExists(this.path);
-    return exists;
-  }
-}
+{% highlight text %}
+[r] > circle
+  mul 2 3.14 r > length
+  mul 3.14 r r > square
 {% endhighlight %}
 
-This is imperative programming. Everything happens in the
-method `checkAndRemove()` right when it's called. Even though
-this may look intuitive---the computer does the work for us
-when it's being instructed to---imperative style of programming
-makes is hard to [compose]({% pst 2015/feb/2015-02-26-composable-decorators %})
-objects. A better declarative alternative of the same functionality
-would look like this
-(I'm using [functional interface](https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html)
-`Scalar` from our awesome
-[Cactoos](https://www.cactoos.org) library):
+The first line creates an "abstract" object named `circle`. It is abstract,
+because one of its attributes `r` is "free". It's not specified
+in this object and that's why the object can't be used as is, it has
+to be copied with `r` specified. For example, this is the circle `c`
+with the radius 30:
 
-{% highlight java %}
-import org.cactoos.Scalar;
-class Semaphore {
-  private final Path path;
-  Semaphore(Path p) {
-    this.path = p;
-  }
-  Scalar<Boolean> checkAndRemove() {
-    return () -> { // A Scalar is created
-      boolean exists = Files.exist(this.path);
-      Files.deleteIfExists(this.path);
-      return exists;
-    };
-  }
-}
+{% highlight text %}
+circle 30 > c
 {% endhighlight %}
 
-Now, when you call method `checkAndRemove()`, it doesn't really do anything aside
-from creating a new object of class `Scalar` and defining its body.
-No actual operations are performed with the file system;
-they will be performed later, when you touch the "scalar" created:
+The object `circle` has three attributes. The first one is `r`, which is free.
+The other two are `length` and `square`. They are "bounded," since their
+atoms already defined: `mul` in both cases. To get the square of the
+circle `c` we do this:
 
-{% highlight java %}
-Semaphor sem = new Semaphore(Paths.get("/tmp/a.txt"));
-Scalar<Boolean> exists = sem.checkAndRemove();
-// Maybe some other code happens here...
-if (exists.get()) { // File operations happen here!
-  // Do something
-}
+{% highlight text %}
+c.square > s
 {% endhighlight %}
 
-Moreover, if the method `Scalar#get()` is never called, the file will never be checked
-and deleted.
+It looks like a method call, but it's not. We don't call a method, we just
+take an `square` object from the object `c`. It's not created for us
+at the moment we do `c.square`! It has already been there sitting and waiting
+for us to take it. It was created right when the object `c` was built.
 
-Now, the new idea.
+This is the difference between methods in Java and attributes in EO.
+In Java, every method is a procedure to be executed right once it's
+called. This method calling (or message sending, according to early OOP adepts)
+mechanism was inherited from C functions,
+which itself we inherited from ALGOL procedures, I believe.
+EO does it differently. No method calling. Just taking attributes out
+of objects and giving them to other objects, until control is
+given to the the entire co
 
-What if we disallow objects to have imperative methods at all? What if we
-allow them to only have "places" like `checkAndRemove()`, which construct
-new `Scalar` objects. I'm talking about all objects! The code would look like this:
+In the example above, the object `s` is not a calculated number.
+It's an atom `mul` that encapsulates `3.14`, `30`, and `30` (the radius). The
+result of the calculation is not yet known. If we don't do anythin
+with `s`, the CPU will never do the calculation. However, if we decide
+to, say, print the number to the console, the caculation will happen:
 
-{% highlight java %}
-Scalar<Boolean> checkAndRemove() {
-  return () -> {
-    Scalar<Boolean> exists = Files.exist(this.path);
-    Scalar<Boolean> deleted = Files.deleteIfExists(this.path);
-    return exists;
-  };
-}
+{% highlight text %}
+stdout
+  sprintf
+    "The square of circle with radius %d is %d"
+    r
+    s
 {% endhighlight %}
 
-However, this code won't work. The file will never be deleted. I'm sure you understand
-why: the `deleted.get()` is never called and that's why the file deletion won't
-ever happen. To solve this, we will need to "join" the objects in a logical
-conjunction (I'm using [`And`](https://javadoc.io/doc/org.cactoos/cactoos/0.47/org/cactoos/scalar/And.html)
-from [Cactoos](https://www.cactoos.org)):
+Here, the atom `sprintf` constructs the string, encapsulating
+three attributes: the text, `r`, and `s`. By the way,
+it's possible to use either vertical or horizonal notation
+for constructing objects. The code above may be written like this:
 
-{% highlight java %}
-Scalar<Boolean> checkAndRemove() {
-  return new And<>(
-    Files.exist(this.path),
-    Files.delete(this.path)
-  );
-}
+{% highlight text %}
+stdout (sprintf "Radius is %d, square is %d" r s)
 {% endhighlight %}
-
-Now everything is correct. The result of `checkAndRemove()` will return `TRUE` only
-if the file exists. In this case, the file will be deleted. If the file is
-absent, the result will be `FALSE` and the deletion won't be attempted.
-
-Imagine how your Java code would look if _all_ methods are allowed to return only
-instances of `Scalar`? The entire application will be busy contructing objects
-
-
-
-
-
-
-
-
-
-
 
