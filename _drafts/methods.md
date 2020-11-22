@@ -5,7 +5,9 @@ date: 2020-11-17
 place: Moscow, Russia
 tags: oop
 description: |
-  ...
+  There are no methods in EO programming language, while
+  objects have attributes, which are other objects, created
+  together with the parent object.
 keywords:
   - methods in oop
   - object oriented programming
@@ -36,14 +38,14 @@ In [EO](https://www.eolang.org),
 our experimental programming language, we made an attempt to re-define
 OOP and its objects. There are two types of _things_ in EO: atoms and objects.
 Atom is a lowest level language primitive, which can't be expressed by
-other atoms. For example, an object that represents an arithmetic
-addition of other two objects, is an atom:
+other atoms. For example, an arithmetic addition of other two objects is an atom
+(stay with me, this is EO syntax, you will get used to it):
 
 {% highlight text %}
 add 5 y > x
 {% endhighlight %}
 
-In a more traditional Java-like infix notation
+In a more traditional Java-like [infix notation](https://en.wikipedia.org/wiki/Infix_notation)
 this code would look like this:
 
 {% highlight text %}
@@ -51,29 +53,30 @@ x = add(5, y)
 {% endhighlight %}
 
 The atom is `add` and its two specific
-arguments are `5` and `y`. The name of a new atom being
+arguments are `5` and `y`. This statement creates a new atom, using
+the existing one and specifying its arguments. The name of a new atom being
 created is `x`. Once we ask this newly created atom to do anything,
-it gets what's in `y`, add `5` and start behaving
+it gets what's in `y`, adds `5`, and starts behaving
 like a summary of them. Until then, it stays quiet.
+EO is a declarative language.
 
-Atoms are provided by EO runtime. For example,
+Atoms are provided by the EO runtime. For example,
 `add`, `sub`, `mul`,  and `div` for arithmetic operations;
 `if` and `for` for forking and iterating;
 `less`, `and`, `eq`, `or` for logical operations, and so on.
-For a while you can understand atoms as low-level
-functions with arguments. But they don't calculate
-the result immediately, but only when the result is needed.
+Atoms may resemble low-level functions with arguments.
+However, they don't calculate results immediately, but only when needed.
 Saying `add(5, file)` won't lead to reading the content
 of the file and adding 5 to it immediately. Only when the
-created atom is dealt with, the file reading will happen.
+created atom is dealt with, the file reading happens.
 
-Next, on top of these atoms objects can be created, by a programmer.
+Next, on top of these atoms, objects can be created by a programmer.
 For example, this is an object that represents a circle:
 
 {% highlight text %}
 [r] > circle
-  mul 2 3.14 r > length
-  mul 3.14 r r > square
+  mul 2 3.14 r > perimeter
+  mul 3.14 r r > area
 {% endhighlight %}
 
 The first line creates an "abstract" object named `circle`. It is abstract,
@@ -87,48 +90,64 @@ circle 30 > c
 {% endhighlight %}
 
 The object `circle` has three attributes. The first one is `r`, which is free.
-The other two are `length` and `square`. They are "bounded," since their
-atoms already defined: `mul` in both cases. To get the square of the
+The other two are `perimeter` and `area`. They are "bounded," since their
+atoms are already defined: `mul` in both cases. To get the area of the
 circle `c` we do this:
 
 {% highlight text %}
-c.square > s
+c.area > a
 {% endhighlight %}
 
 It looks like a method call, but it's not. We don't call a method, we just
-take an `square` object from the object `c`. It's not created for us
-at the moment we do `c.square`! It has already been there sitting and waiting
+take an `area` object from the object `c`. It's not created for us
+at the moment we do `c.area`! It has already been there sitting and waiting
 for us to take it. It was created right when the object `c` was built.
 
 This is the difference between methods in Java and attributes in EO.
 In Java, every method is a procedure to be executed right once it's
-called. This method calling (or message sending, according to early OOP adepts)
+called. This method calling (or message sending, according to
+[early OOP adepts]({% pst 2017/dec/2017-12-12-alan-kay-was-wrong %}))
 mechanism was inherited from C functions,
 which itself we inherited from ALGOL procedures, I believe.
 EO does it differently. No method calling. Just taking attributes out
 of objects and giving them to other objects, until control is
-given to the the entire co
+passed to them and it gets down to the level of atoms.
 
 In the example above, the object `s` is not a calculated number.
 It's an atom `mul` that encapsulates `3.14`, `30`, and `30` (the radius). The
-result of the calculation is not yet known. If we don't do anythin
-with `s`, the CPU will never do the calculation. However, if we decide
+result of the calculation is not yet known. If we don't do anything
+with `a`, the CPU will never do the calculation. However, if we decide
 to, say, print the number to the console, the caculation will happen:
 
 {% highlight text %}
 stdout
   sprintf
-    "The square of circle with radius %d is %d"
+    "Radius is %d, Area is %d"
     r
-    s
+    a
 {% endhighlight %}
 
-Here, the atom `sprintf` constructs the string, encapsulating
+Here, the atom `sprintf` constructs the string, which encapsulates
 three attributes: the text, `r`, and `s`. By the way,
 it's possible to use either vertical or horizonal notation
 for constructing objects. The code above may be written like this:
 
 {% highlight text %}
-stdout (sprintf "Radius is %d, square is %d" r s)
+stdout (sprintf "Radius is %d, Area is %d" r s)
 {% endhighlight %}
+
+The atom `stdout` encapsulates the string constructed by `sprintf`
+and stays quiet. It doesn't print anything! Only when someone
+at some point will try to "touch" this object, taking one of
+its attributes out, the atom `stdout` will drop the line to the
+console.
+
+There are no attributes in `stdout`, `sprintf`, `mul`, and most
+other atoms, except one: [𝜑](https://en.wikipedia.org/wiki/Phi).
+Any object or atom has this specific attribute, also known as
+the "body" of an object. Once someone attempts to touch `stdout.𝜑`,
+the console will see the string.
+
+Thus, we have objects, but we don't have methods.
+There are only attributes representing other objects.
 
