@@ -216,3 +216,5 @@ by his or her own personality and the entire idea of project management will
 be ruined.
 
 This is my understanding of project management.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Who should be blamed for a project failure?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1330458691343163392?ref_src=twsrc%5Etfw">November 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
