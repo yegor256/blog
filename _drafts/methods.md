@@ -129,7 +129,7 @@ stdout
 
 Here, the atom `sprintf` constructs the string, which encapsulates
 three attributes: the text, `r`, and `s`. By the way,
-it's possible to use either vertical or horizonal notation
+it's possible to use either vertical or horizontal notation
 for constructing objects. The code above may be written like this:
 
 {% highlight text %}
