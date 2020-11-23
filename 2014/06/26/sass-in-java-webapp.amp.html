@@ -78,8 +78,8 @@ in a Java web application. Read how below.
 language for writing <a href="http://www.w3.org/Style/CSS/Overview.en.html">CSS</a>
 style sheets. This is how I’m using SASS in my Maven projects.</p>
 
-<p>First, I change the extensions of <code>.css</code> files to
-<code>.scss</code> and move them from <code>src/main/webapp/css</code> to <code>src/main/scss</code>.</p>
+<p>First, I change the extensions of <code class="highlighter-rouge">.css</code> files to
+<code class="highlighter-rouge">.scss</code> and move them from <code class="highlighter-rouge">src/main/webapp/css</code> to <code class="highlighter-rouge">src/main/scss</code>.</p>
 
 <p>Then, I configure the <a href="https://github.com/Jasig/sass-maven-plugin">sass-maven-plugin</a>
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
@@ -104,8 +104,8 @@ style sheets. This is how I’m using SASS in my Maven projects.</p>
 
 
 
-<p>The SASS compiler will compile <code>.scss</code> files from
-<code>src/main/scss</code> and place <code>.css</code> files into <code>target/css</code>.</p>
+<p>The SASS compiler will compile <code class="highlighter-rouge">.scss</code> files from
+<code class="highlighter-rouge">src/main/scss</code> and place <code class="highlighter-rouge">.css</code> files into <code class="highlighter-rouge">target/css</code>.</p>
 
 <p>Then, I configure the <a href="https://github.com/samaxes/minify-maven-plugin">minify-maven-plugin</a>
 to compress/minify the style sheets produced by the SASS compiler:</p>
@@ -136,11 +136,11 @@ to compress/minify the style sheets produced by the SASS compiler:</p>
   &lt;/executions&gt;
 &lt;/plugin&gt;</pre>
 
-<p>Minified <code>.css</code> files will be placed into <code>target/css-min</code>.</p>
+<p>Minified <code class="highlighter-rouge">.css</code> files will be placed into <code class="highlighter-rouge">target/css-min</code>.</p>
 
 <p>The final step is to configure the
 <a href="http://maven.apache.org/plugins/maven-war-plugin/">maven-war-plugin</a>
-to pick up <code>.css</code> files and package them into the final WAR archive:</p>
+to pick up <code class="highlighter-rouge">.css</code> files and package them into the final WAR archive:</p>
 
 <pre>&lt;plugin&gt;
   &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;

@@ -78,7 +78,7 @@ annoying mistake.
       <p>There is a very typical mistake in pre-Java7 “try/finally” scenario,
 which I keep seeing in so many code reviews. I just have to write about it.
 Java7 introduced a solution, but it doesn’t cover all situations.
-Sometimes we need to deal with non-<code>AutoCloseable</code> resources. Let’s
+Sometimes we need to deal with non-<code class="highlighter-rouge">AutoCloseable</code> resources. Let’s
 open and close them correctly, please.</p>
 
 
@@ -101,7 +101,7 @@ try {
 
 
 
-<p>I already wrote about <a href="/2014/05/13/why-null-is-bad.html"><code>null</code></a>
+<p>I already wrote about <a href="/2014/05/13/why-null-is-bad.html"><code class="highlighter-rouge">null</code></a>
 and its evil nature. Here it comes again. If you just follow the rule
 of “not using NULL anywhere ever,” this code would need an immediate
 refactoring. Its correct version will look like this:</p>
@@ -115,11 +115,11 @@ try {
   input.close();
 }</pre>
 
-<p>There is no <code>null</code> anymore and it’s very clean. Isn’t it?</p>
+<p>There is no <code class="highlighter-rouge">null</code> anymore and it’s very clean. Isn’t it?</p>
 
-<p>There are situations when opening the resource itself throws <code>IOException</code>
-and we can’t put it outside of <code>try/catch</code>. In that case, we have to have
-<strong>two</strong> <code>try/catch</code> blocks:</p>
+<p>There are situations when opening the resource itself throws <code class="highlighter-rouge">IOException</code>
+and we can’t put it outside of <code class="highlighter-rouge">try/catch</code>. In that case, we have to have
+<strong>two</strong> <code class="highlighter-rouge">try/catch</code> blocks:</p>
 
 <pre>final InputStream input;
 try {
@@ -135,14 +135,14 @@ try {
   input.close();
 }</pre>
 
-<p>But there should be no <code>null</code>, never!</p>
+<p>But there should be no <code class="highlighter-rouge">null</code>, never!</p>
 
-<p>The presence of <code>null</code> in Java code is a clear indicator of code smell. Something
-is not right if you have to use <code>null</code>. The only place where the presence of <code>null</code>
+<p>The presence of <code class="highlighter-rouge">null</code> in Java code is a clear indicator of code smell. Something
+is not right if you have to use <code class="highlighter-rouge">null</code>. The only place where the presence of <code class="highlighter-rouge">null</code>
 is justified is where we’re using third-party APIs or JDK. They may return
-<code>null</code> sometimes because… well, their design is bad. We have
-no other option but to do <code>if(x==null)</code>. But that’s it. No other places
-are good for <code>null</code>.</p>
+<code class="highlighter-rouge">null</code> sometimes because… well, their design is bad. We have
+no other option but to do <code class="highlighter-rouge">if(x==null)</code>. But that’s it. No other places
+are good for <code class="highlighter-rouge">null</code>.</p>
 
 
     </article>

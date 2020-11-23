@@ -99,7 +99,7 @@ and where this misconception is coming from.</p>
 <amp-img src="/images/2015/02/color-me-kubrick.png" alt="Color Me Kubrick (2005) by Brian W. Cook" height="680" width="1200" layout="responsive"></amp-img>
 
 <p>Here is a typical example of a utility class
-<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html"><code>Math</code></a> from Java 1.0:</p>
+<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html"><code class="highlighter-rouge">Math</code></a> from Java 1.0:</p>
 
 <pre>public class Math {
   public static double abs(double a);
@@ -113,12 +113,12 @@ value of a floating point number:</p>
 
 
 
-<p>What’s wrong with it? We need a function, and we get it from class <code>Math</code>.
+<p>What’s wrong with it? We need a function, and we get it from class <code class="highlighter-rouge">Math</code>.
 The class has many useful functions inside it that can be used for many typical
 mathematical operations, like calculating maximum, minimum, sine, cosine, etc.
 It is a very popular concept; just look at any commercial or open source product.
 These utility classes are used everywhere since Java was invented (this
-<code>Math</code> class was introduced in Java’s first version). Well, technically
+<code class="highlighter-rouge">Math</code> class was introduced in Java’s first version). Well, technically
 there is nothing wrong. The code will work. But it is not object-oriented
 programming. Instead, it is imperative and procedural. Do we care? Well,
 it’s up to you to decide. Let’s see what the difference is.</p>
@@ -154,7 +154,7 @@ the same code would look in Lisp, a functional programming language:</p>
 <p>There are <a href="http://en.wikipedia.org/wiki/Comparison_of_programming_paradigms">many definitions</a>
 of the difference between imperative and declarative styles, but I will try to
 give my own. There are basically three roles interacting in the scenario
-with this <code>f</code> function/method: a <em>buyer</em>, a <em>packager</em> of the result,
+with this <code class="highlighter-rouge">f</code> function/method: a <em>buyer</em>, a <em>packager</em> of the result,
 and a <em>consumer</em> of the result. Let’s say I call this function like this:</p>
 
 <pre>public void foo() {
@@ -166,8 +166,8 @@ private double calc(double a, double b) {
   return x;
 }</pre>
 
-<p>Here, method <code>calc()</code> is a buyer, method <code>Math.f()</code> is a packager of the result,
-and method <code>foo()</code> is a consumer. No matter which programming style is used,
+<p>Here, method <code class="highlighter-rouge">calc()</code> is a buyer, method <code class="highlighter-rouge">Math.f()</code> is a packager of the result,
+and method <code class="highlighter-rouge">foo()</code> is a consumer. No matter which programming style is used,
 there are always these three guys participating in the process:
 the buyer, the packager, and the consumer.</p>
 
@@ -201,18 +201,18 @@ becomes a product!</p>
 product ready to be used (imperative) or a voucher for the product, which
 can later be converted into a real product (declarative).</p>
 
-<p>Utility classes, like <code>Math</code> from JDK or <code>StringUtils</code> from Apache Commons,
+<p>Utility classes, like <code class="highlighter-rouge">Math</code> from JDK or <code class="highlighter-rouge">StringUtils</code> from Apache Commons,
 return products ready to be used immediately, while functions in Lisp
 and other functional languages return “vouchers.” For example, if you
-call the <code>max</code> function in Lisp, the actual maximum between two numbers
+call the <code class="highlighter-rouge">max</code> function in Lisp, the actual maximum between two numbers
 will only be calculated when you actually start using it:</p>
 
 <pre>(let (x (max 1 5))
   (print "X equals to " x))</pre>
 
-<p>Until this <code>print</code> actually starts to output characters to the
-screen, the function <code>max</code> won’t be called. This <code>x</code> is a “voucher” returned
-to you when you attempted to “buy” a maximum between <code>1</code> and <code>5</code>.</p>
+<p>Until this <code class="highlighter-rouge">print</code> actually starts to output characters to the
+screen, the function <code class="highlighter-rouge">max</code> won’t be called. This <code class="highlighter-rouge">x</code> is a “voucher” returned
+to you when you attempted to “buy” a maximum between <code class="highlighter-rouge">1</code> and <code class="highlighter-rouge">5</code>.</p>
 
 <p>Note, however, that nesting Java static functions one into another doesn’t
 make them declarative. The code is still imperative, because its execution
@@ -234,7 +234,7 @@ classes and functional programming.</p>
 
 <pre>(defun foo (x) (x 5))</pre>
 
-<p>Then, later, you can call that <code>x</code>:</p>
+<p>Then, later, you can call that <code class="highlighter-rouge">x</code>:</p>
 
 <pre>(defun bar (x) (+ x 1)) // defining function bar
 (print (foo bar)) // passing bar as an argument to foo</pre>
@@ -262,7 +262,7 @@ a few very practical reasons (BTW, I am an OOP fundamentalist):</p>
     <p><strong>Testability</strong>.
 Calls to static methods in utility classes are hard-coded dependencies that
 can never be broken for testing purposes. If your class is calling
-<code>FileUtils.readFile()</code>, I will never be able to test it without using
+<code class="highlighter-rouge">FileUtils.readFile()</code>, I will never be able to test it without using
 a real file on disk.</p>
   </li>
   <li>
@@ -271,16 +271,16 @@ Utility classes, due to their imperative nature, are much less efficient
 than their <a href="/2014/05/05/oop-alternative-to-utility-classes.html">declarative alternatives</a>.
 They simply do all calculations right here and now, taking processor
 resources even when it’s not yet necessary. Instead of returning a promise
-to break down a string into chunks, <code>StringUtils.split()</code> breaks it down
+to break down a string into chunks, <code class="highlighter-rouge">StringUtils.split()</code> breaks it down
 right now. And it breaks it down into all possible chunks, even if only
 the first one is required by the “buyer.”</p>
   </li>
   <li>
     <p><strong>Readability</strong>.
-Utility classes tend to be huge (try to read the source code of <code>StringUtils</code>
-or <code>FileUtils</code> from Apache Commons). The entire idea of separation of concerns,
+Utility classes tend to be huge (try to read the source code of <code class="highlighter-rouge">StringUtils</code>
+or <code class="highlighter-rouge">FileUtils</code> from Apache Commons). The entire idea of separation of concerns,
 which makes OOP so beautiful, is absent in utility classes. They just
-put all possible procedures into one huge <code>.java</code> file, which becomes
+put all possible procedures into one huge <code class="highlighter-rouge">.java</code> file, which becomes
 absolutely unmaintainable when it surpasses a dozen static methods.</p>
   </li>
 </ul>

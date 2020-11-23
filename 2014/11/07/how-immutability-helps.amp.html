@@ -79,7 +79,7 @@ mutability causes scope creep and tight coupling.
 <a href="/2014/09/16/getters-and-setters-are-evil.html">Getters/Setters. Evil. Period.</a>
 <a href="/2014/06/09/objects-should-be-immutable.html">Objects Should Be Immutable</a>, and
 <a href="/2014/10/03/di-containers-are-evil.html">Dependency Injection Containers are Code Polluters</a>,
-I universally labeled all mutable objects with “setters” (object methods starting with <code>set</code>) evil.
+I universally labeled all mutable objects with “setters” (object methods starting with <code class="highlighter-rouge">set</code>) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn’t convincing enough for many of you—I received a few requests
 asking to provide more specific and practical examples.</p>
@@ -128,28 +128,28 @@ dealing with a monster
 <a href="/2016/09/20/oop-without-classes.html">class</a> that can do everything for you, including
 sending your MIME message via SMTP, creating the message, configuring
 its parameters, adding MIME parts to it, etc. The
-<a href="http://svn.apache.org/viewvc/commons/proper/email/tags/EMAIL_1_3_3/src/main/java/org/apache/commons/mail/Email.java?revision=1609295&amp;view=co"><code>Email</code></a>
+<a href="http://svn.apache.org/viewvc/commons/proper/email/tags/EMAIL_1_3_3/src/main/java/org/apache/commons/mail/Email.java?revision=1609295&amp;view=co"><code class="highlighter-rouge">Email</code></a>
 class from commons-email is really a huge class—33 private properties, over
 a hundred methods, about two thousands lines of code. First, you configure
-the class through a bunch of setters and then you ask it to <code>send()</code>
+the class through a bunch of setters and then you ask it to <code class="highlighter-rouge">send()</code>
 an email for you.</p>
 
 
 
-<p>In the second example, we have seven objects instantiated via seven <code>new</code> calls.
-<code>Postman</code> is responsible for packaging a MIME message; <code>SMTP</code> is
-responsible for sending it via SMTP; stamps (<code>StSender</code>, <code>StRecipient</code>,
-and <code>StSubject</code>) are responsible for configuring the MIME message before
-delivery; enclosure <code>EnPlain</code> is responsible for creating a MIME part
+<p>In the second example, we have seven objects instantiated via seven <code class="highlighter-rouge">new</code> calls.
+<code class="highlighter-rouge">Postman</code> is responsible for packaging a MIME message; <code class="highlighter-rouge">SMTP</code> is
+responsible for sending it via SMTP; stamps (<code class="highlighter-rouge">StSender</code>, <code class="highlighter-rouge">StRecipient</code>,
+and <code class="highlighter-rouge">StSubject</code>) are responsible for configuring the MIME message before
+delivery; enclosure <code class="highlighter-rouge">EnPlain</code> is responsible for creating a MIME part
 for the message we’re going to send. We construct these seven objects,
-encapsulating one into another, and then we ask the postman to <code>send()</code>
+encapsulating one into another, and then we ask the postman to <code class="highlighter-rouge">send()</code>
 the envelope for us.</p>
 
 <h2 id="whats-wrong-with-a-mutable-email">What’s Wrong With a Mutable Email?</h2>
 
-<p>From a user perspective, there is almost nothing wrong. <code>Email</code> is a powerful
+<p>From a user perspective, there is almost nothing wrong. <code class="highlighter-rouge">Email</code> is a powerful
 class with multiple controls—just hit the right one and the job
-gets done. However, from a developer perspective <code>Email</code> class is a nightmare. Mostly
+gets done. However, from a developer perspective <code class="highlighter-rouge">Email</code> class is a nightmare. Mostly
 because the class is very big and difficult to maintain.</p>
 
 <p><em>Because the class is so big</em>,
@@ -167,7 +167,7 @@ such a “class” you say—“screw it, it’s almost Saturday.”</p>
 
 <p><em>Because the class is so big</em>,
 there is no data hiding or encapsulation any more—33 variables are accessible by over 100 methods. What is hidden?
-This <code>Email.java</code> file in reality is a big, procedural 2000-line script, called
+This <code class="highlighter-rouge">Email.java</code> file in reality is a big, procedural 2000-line script, called
 a “class” by mistake. Nothing is hidden, once you cross the border of the
 class by calling one of its methods. After that, you have full access to
 all the data you may need. Why is this bad? Well, why do we need
@@ -177,16 +177,16 @@ in the first place? In order to protect one programmer from another, aka
 While I’m busy changing the subject of the MIME message, I want to be
 sure that I’m not interfered with by some other method’s activity, that is
 changing a sender and touching my subject by mistake. Encapsulation helps
-us narrow down the scope of the problem, while this <code>Email</code> class
+us narrow down the scope of the problem, while this <code class="highlighter-rouge">Email</code> class
 is doing exactly the opposite.</p>
 
 <p><em>Because the class is so big</em>,
 its unit testing is even more complicated than the class itself. Why? Because
 of multiple inter-dependencies between its methods and properties. In order to
-test <code>setCharset()</code> you have to prepare the entire object by calling a few other
-methods, then you have to call <code>send()</code> to make sure the message being
+test <code class="highlighter-rouge">setCharset()</code> you have to prepare the entire object by calling a few other
+methods, then you have to call <code class="highlighter-rouge">send()</code> to make sure the message being
 sent actually uses the encoding you specified. Thus, in order to test
-a one-line method <code>setCharset()</code> you run the entire integration testing
+a one-line method <code class="highlighter-rouge">setCharset()</code> you run the entire integration testing
 scenario of sending a full MIME message through SMTP. Obviously, if something
 gets changed in one of the methods, almost every test method will be
 affected. In other words, tests are very fragile, unreliable and over-complicated.</p>
@@ -218,7 +218,7 @@ want, we will do it without limits.</p>
 
 <p>Let me put it this way—_mutable classes tend to grow in size and lose cohesiveness_.</p>
 
-<p>If commons-email authors made this <code>Email</code> class immutable
+<p>If commons-email authors made this <code class="highlighter-rouge">Email</code> class immutable
 in the beginning, they wouldn’t have been able to add so many methods into it
 and encapsulate so many properties. They wouldn’t be able to turn
 it into a monster. Why? Because an immutable object only accepts a state
@@ -236,10 +236,10 @@ arguments of a constructor and you’re done.</p>
 
 <p>When I was designing <a href="https://github.com/jcabi/jcabi-email">jcabi-email</a>
 I started with a small and simple class:
-<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java"><code>Postman</code></a>.
+<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java"><code class="highlighter-rouge">Postman</code></a>.
 Well, it is an interface,
 since I never make <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>-less
-classes. So, <code>Postman</code> is… a post man.
+classes. So, <code class="highlighter-rouge">Postman</code> is… a post man.
 He is delivering messages to other people. First, I created a default
 version of it (I omit the ctor, for the sake of brevity):</p>
 
@@ -261,13 +261,13 @@ class Postman.Default implements Postman {
 }</pre>
 
 <p>Good start, it works. What now? Well, the
-<a href="http://docs.oracle.com/javaee/7/api/javax/jms/Message.html"><code>Message</code></a>
+<a href="http://docs.oracle.com/javaee/7/api/javax/jms/Message.html"><code class="highlighter-rouge">Message</code></a>
 is difficult to construct.
 It is a complex class from JDK that requires some manipulations before it
 can become a nice HTML email. So I created an envelope, which will build
 this complex object for me (pay attention, both
-<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java"><code>Postman</code></a> and
-<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java"><code>Envelope</code></a>
+<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java"><code class="highlighter-rouge">Postman</code></a> and
+<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java"><code class="highlighter-rouge">Envelope</code></a>
 are immutable and annotated with
 <a href="http://aspects.jcabi.com/apidocs-0.20/com/jcabi/aspects/Immutable.html">@Immutable</a> from
 <a href="http://aspects.jcabi.com/annotation-immutable.html">jcabi-aspects</a>):</p>
@@ -277,7 +277,7 @@ interface Envelope {
   Message unwrap();
 }</pre>
 
-<p>I also refactor the <code>Postman</code> to accept an envelope, not a message:</p>
+<p>I also refactor the <code class="highlighter-rouge">Postman</code> to accept an envelope, not a message:</p>
 
 <pre>@Immutable
 interface Postman {
@@ -285,7 +285,7 @@ interface Postman {
 }</pre>
 
 <p>So far, so good. Now let’s try to create a simple implementation of
-<code>Envelope</code>:</p>
+<code class="highlighter-rouge">Envelope</code>:</p>
 
 <pre>@Immutable
 class MIME implements Envelope {
@@ -299,8 +299,8 @@ class MIME implements Envelope {
 
 <p>It works, but it does nothing useful yet. It only creates an absolutely
 empty MIME message and returns it. How about adding a subject to it
-and both <code>To:</code> and <code>From:</code> addresses (pay attention,
-<a href="http://email.jcabi.com/apidocs-1.10/com/jcabi/email/Envelope.Mime.html"><code>MIME</code></a> class is
+and both <code class="highlighter-rouge">To:</code> and <code class="highlighter-rouge">From:</code> addresses (pay attention,
+<a href="http://email.jcabi.com/apidocs-1.10/com/jcabi/email/Envelope.Mime.html"><code class="highlighter-rouge">MIME</code></a> class is
 also immutable):</p>
 
 <pre>@Immutable
@@ -331,21 +331,21 @@ class Envelope.MIME implements Envelope {
 }</pre>
 
 <p>Looks correct and it works. But it is still too primitive. How about
-<code>CC:</code> and <code>BCC:</code>? What about email text? How about PDF enclosures?
-What if I want to specify the encoding of the message? What about <code>Reply-To</code>?</p>
+<code class="highlighter-rouge">CC:</code> and <code class="highlighter-rouge">BCC:</code>? What about email text? How about PDF enclosures?
+What if I want to specify the encoding of the message? What about <code class="highlighter-rouge">Reply-To</code>?</p>
 
 <p>Can I add all these parameters to the constructor? Remember, the
-class is immutable and I can’t introduce the <code>setReplyTo()</code> method. I have to
-pass the <code>replyTo</code> argument into its constructor. It’s impossible, because
+class is immutable and I can’t introduce the <code class="highlighter-rouge">setReplyTo()</code> method. I have to
+pass the <code class="highlighter-rouge">replyTo</code> argument into its constructor. It’s impossible, because
 the constructor will have too many arguments, and nobody will be able to use it.</p>
 
 <p>So, what do I do?</p>
 
 <p>Well, I started to think: how can we break the concept of an “envelope”
 into smaller concepts—and this what I invented. Like a real-life envelope,
-my <code>MIME</code> object will have stamps. Stamps will be responsible
-for configuring an object <code>Message</code> (again,
-<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java"><code>Stamp</code></a> is immutable,
+my <code class="highlighter-rouge">MIME</code> object will have stamps. Stamps will be responsible
+for configuring an object <code class="highlighter-rouge">Message</code> (again,
+<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java"><code class="highlighter-rouge">Stamp</code></a> is immutable,
 as well as all its implementers):</p>
 
 <pre>@Immutable
@@ -354,7 +354,7 @@ interface Stamp {
 }</pre>
 
 <p>Now, I can simplify my
-<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java"><code>MIME</code></a> class to the following:</p>
+<a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java"><code class="highlighter-rouge">MIME</code></a> class to the following:</p>
 
 <pre>@Immutable
 class Envelope.MIME implements Envelope {
@@ -374,19 +374,19 @@ class Envelope.MIME implements Envelope {
   }
 }</pre>
 
-<p>Now, I will create stamps for the subject, for <code>To:</code>, for <code>From:</code>,
-for <code>CC:</code>, for <code>BCC:</code>, etc. As many stamps as I like. The class <code>MIME</code>
+<p>Now, I will create stamps for the subject, for <code class="highlighter-rouge">To:</code>, for <code class="highlighter-rouge">From:</code>,
+for <code class="highlighter-rouge">CC:</code>, for <code class="highlighter-rouge">BCC:</code>, etc. As many stamps as I like. The class <code class="highlighter-rouge">MIME</code>
 will stay the same—small, cohesive, readable, solid, etc.</p>
 
 <p>What is important here is why I made the decision to refactor while
 the class was relatively small. Indeed, I started to worry about these
-stamp classes when my <code>MIME</code> class was just 25 lines in size.</p>
+stamp classes when my <code class="highlighter-rouge">MIME</code> class was just 25 lines in size.</p>
 
 <p>That is exactly the point of this article—_immutability forces you to design small and cohesive objects_.</p>
 
 <p>Without immutability, I would have gone the same direction as commons-email. My
-<code>MIME</code> class would grow in size and sooner or later would become
-as big as <code>Email</code> from commons-email. The only thing that stopped me
+<code class="highlighter-rouge">MIME</code> class would grow in size and sooner or later would become
+as big as <code class="highlighter-rouge">Email</code> from commons-email. The only thing that stopped me
 was the necessity to refactor it, because I wasn’t able to pass all
 arguments through a constructor.</p>
 

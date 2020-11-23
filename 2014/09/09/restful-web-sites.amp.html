@@ -79,7 +79,7 @@ minimal alterations
 about a repository you should make a GET request to
 <a href="https://api.github.com/repos/yegor256/rultor">api.github.com/repos/yegor256/rultor</a>.
 In response, you will get a JSON document with all the details of the
-<code>yegor256/rultor</code> repository. Try it, the URL doesn’t require any authentication.</p>
+<code class="highlighter-rouge">yegor256/rultor</code> repository. Try it, the URL doesn’t require any authentication.</p>
 
 <p>To open the same repository in a nice HTML+CSS page, you should use
 a different URL: <a href="https://github.com/yegor256/rultor">github.com/yegor256/rultor</a>.
@@ -131,8 +131,8 @@ only supported by some of them. For example, Internet Explorer 8 doesn’t
 support XSLT at all.</p>
   </li>
   <li>
-    <p>Browsers support only <code>GET</code> and <code>POST</code> HTTP methods, while
-traditional RESTful API-s exploit also, at least, <code>PUT</code> and <code>DELETE</code>.</p>
+    <p>Browsers support only <code class="highlighter-rouge">GET</code> and <code class="highlighter-rouge">POST</code> HTTP methods, while
+traditional RESTful API-s exploit also, at least, <code class="highlighter-rouge">PUT</code> and <code class="highlighter-rouge">DELETE</code>.</p>
   </li>
 </ol>
 
@@ -144,7 +144,7 @@ more serious. Let’s discuss them.</p>
 
 <p>XSLT is not supported by some browsers. How do we solve this?</p>
 
-<p>I think that the best approach is to parse the <code>User-Agent</code> HTTP header
+<p>I think that the best approach is to parse the <code class="highlighter-rouge">User-Agent</code> HTTP header
 in every request and make a guess, whether this particular version
 of the browser supports XSLT or not. It’s not so difficult to do,
 since this compatibility information is public.</p>
@@ -155,19 +155,19 @@ and we already have the XSL attached to it. All we need to do is to apply
 the latter to the former and obtain an HTML page. Then, we return the HTML to
 the browser.</p>
 
-<p>Besides that, we can also pay attention to the <code>Accept</code> header. If it is
-set to <code>application/xml</code> or <code>text/xml</code>, we return XML, no matter what
-<code>User-Agent</code> is saying. This means, basically, that some API client
+<p>Besides that, we can also pay attention to the <code class="highlighter-rouge">Accept</code> header. If it is
+set to <code class="highlighter-rouge">application/xml</code> or <code class="highlighter-rouge">text/xml</code>, we return XML, no matter what
+<code class="highlighter-rouge">User-Agent</code> is saying. This means, basically, that some API client
 is talking to us, not a browser. And this client is not interested in HTML,
 but in pure data in XML format.</p>
 
 <h2 id="post-instead-of-put">POST Instead of PUT</h2>
 
-<p>There is no workaround for this. Browsers don’t know anything about <code>PUT</code> or <code>DELETE</code>.
+<p>There is no workaround for this. Browsers don’t know anything about <code class="highlighter-rouge">PUT</code> or <code class="highlighter-rouge">DELETE</code>.
 So, we should also forget them in our RESTful API-s. We should design
-our API using only two methods: <code>GET</code> and <code>POST</code>. Is this even possible?
+our API using only two methods: <code class="highlighter-rouge">GET</code> and <code class="highlighter-rouge">POST</code>. Is this even possible?
 Yes. Why not? It won’t look as fancy as with all six methods (some API-s
-also use <code>OPTIONS</code> and <code>HEAD</code>), but it will work.</p>
+also use <code class="highlighter-rouge">OPTIONS</code> and <code class="highlighter-rouge">HEAD</code>), but it will work.</p>
 
 <h2 id="what-do-we-gain">What Do We Gain?</h2>
 

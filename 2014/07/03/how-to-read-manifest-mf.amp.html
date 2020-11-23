@@ -78,8 +78,8 @@ jcabi-manifests  library makes this process easier.
       
 
 <p>Every Java package (JAR, WAR, EAR, etc.) has
-a <a href="http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html"><code>MANIFEST.MF</code></a>
-file in the <code>META-INF</code> directory. The file contains a list of attributes,
+a <a href="http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html"><code class="highlighter-rouge">MANIFEST.MF</code></a>
+file in the <code class="highlighter-rouge">META-INF</code> directory. The file contains a list of attributes,
 which describe this particular package. For example:</p>
 
 <pre>Manifest-Version: 1.0
@@ -87,8 +87,8 @@ Created-By: 1.7.0_06 (Oracle Corporation)
 Main-Class: MyPackage.MyClass</pre>
 
 <p>When your application has multiple JAR dependencies, you have multiple
-<code>MANIFEST.MF</code> files in your class path. All of them have the same location:
-<code>META-INF/MANIFEST.MF</code>. Very often it is necessary to go through all of
+<code class="highlighter-rouge">MANIFEST.MF</code> files in your class path. All of them have the same location:
+<code class="highlighter-rouge">META-INF/MANIFEST.MF</code>. Very often it is necessary to go through all of
 them in runtime and find the attribute by its name.</p>
 
 <p><a href="http://manifests.jcabi.com">jcabi-manifests</a> makes it possible with a one-liner:</p>
@@ -104,11 +104,11 @@ files, and how it works on a low level.</p>
 <h2 id="package-versioning">Package Versioning</h2>
 
 <p>When you package a library or even a web application,
-it is a good practice to add an attribute to its <code>MANIFEST.MF</code>
+it is a good practice to add an attribute to its <code class="highlighter-rouge">MANIFEST.MF</code>
 with the package version name and build number. In Maven,
-<a href="http://maven.apache.org/plugins/maven-jar-plugin/"><code>maven-jar-plugin</code></a>
+<a href="http://maven.apache.org/plugins/maven-jar-plugin/"><code class="highlighter-rouge">maven-jar-plugin</code></a>
 can help you (almost the same configuration for
-<a href="http://maven.apache.org/plugins/maven-war-plugin/"><code>maven-war-plugin</code></a>):</p>
+<a href="http://maven.apache.org/plugins/maven-war-plugin/"><code class="highlighter-rouge">maven-war-plugin</code></a>):</p>
 
 <pre>&lt;plugin&gt;
   &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
@@ -122,8 +122,8 @@ can help you (almost the same configuration for
   &lt;/configuration&gt;
 &lt;/plugin&gt;</pre>
 
-<p><code>buildnumber-maven-plugin</code>
-will help you to get <code>${buildNumber}</code> from Git, SVN or Mercurial:</p>
+<p><code class="highlighter-rouge">buildnumber-maven-plugin</code>
+will help you to get <code class="highlighter-rouge">${buildNumber}</code> from Git, SVN or Mercurial:</p>
 
 <pre>&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
@@ -137,7 +137,7 @@ will help you to get <code>${buildNumber}</code> from Git, SVN or Mercurial:</p>
   &lt;/executions&gt;
 &lt;/plugin&gt;</pre>
 
-<p>After all these manipulations, <code>MANIFEST.MF</code>, in your JAR will
+<p>After all these manipulations, <code class="highlighter-rouge">MANIFEST.MF</code>, in your JAR will
 contain these two extra lines (on top of all others added there by Maven by default):</p>
 
 <pre>Foo-Version: 1.0-SNAPSHOT
@@ -148,7 +148,7 @@ understand which version of the product he is working with at any given moment.<
 
 <p>Look at <a href="http://www.stateful.co">stateful.co</a>, for example. At the bottom
 of its front page, you see the version number and Git hash. They are
-retrieved from <code>MANIFEST.MF</code> of the deployed WAR package, on every page click.</p>
+retrieved from <code class="highlighter-rouge">MANIFEST.MF</code> of the deployed WAR package, on every page click.</p>
 
 <h2 id="credentials">Credentials</h2>
 
@@ -159,7 +159,7 @@ credentials right into the JAR/WAR archive during the
 <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a>/delivery cycle.</p>
 
 <p>For example, you can encode your PostgreSQL connection
-details right into <code>MANIFEST.MF</code>:</p>
+details right into <code class="highlighter-rouge">MANIFEST.MF</code>:</p>
 
 <pre>&lt;plugin&gt;
   &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
@@ -173,11 +173,11 @@ details right into <code>MANIFEST.MF</code>:</p>
 &lt;/plugin&gt;</pre>
 
 <p>Afterwards, you can retrieve them in
-runtime using <a href="http://manifests.jcabi.com"><code>jcabi-manifests</code></a>:</p>
+runtime using <a href="http://manifests.jcabi.com"><code class="highlighter-rouge">jcabi-manifests</code></a>:</p>
 
 <pre>String url = Manifests.read("Pgsql");</pre>
 
-<p>If you know of any other useful purposes for <code>MANIFEST.MF</code>, let me know :)</p>
+<p>If you know of any other useful purposes for <code class="highlighter-rouge">MANIFEST.MF</code>, let me know :)</p>
 
 
     </article>

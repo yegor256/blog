@@ -183,7 +183,7 @@ git ftp push --user ".." \
   ftp://ftp.example.com/</pre>
 
 <p>Obviously, running this script on my MacBook (without virtualization) would
-cause a lot of trouble. Well, I don’t even have <code>apt-get</code> here :)</p>
+cause a lot of trouble. Well, I don’t even have <code class="highlighter-rouge">apt-get</code> here :)</p>
 
 <p>Thus, the first benefit that Rultor gives you is an isolation
 of your deployment script in its own virtual environment. We have this
@@ -191,7 +191,7 @@ mostly thanks to Docker.</p>
 
 <h2 id="visibility-of-logs">Visibility of Logs</h2>
 
-<p>Traditionally, we keep deployment scripts in some <code>~/deploy</code> directory
+<p>Traditionally, we keep deployment scripts in some <code class="highlighter-rouge">~/deploy</code> directory
 and run them with a magic set of parameters. In a small project, you
 do this yourself and this directory is on your own laptop. In a bigger
 project, there is a “deployment” server, that has that magic directory
@@ -205,7 +205,7 @@ with magic parameters. Logs are usually lost and problem tracking
 is very difficult or impossible.</p>
 
 <p>Rultor offers something different. With Rultor, there is no SSH access
-to deployment scripts any more. All scripts stay in the <code>.rultor.yml</code> configuration
+to deployment scripts any more. All scripts stay in the <code class="highlighter-rouge">.rultor.yml</code> configuration
 file, and you start them by posting messages in your issue tracking system
 (for example GitHub, JIRA or Trac). Rultor runs the script and publishes
 its full log right to your ticket. The log stays with your project forever.
@@ -232,13 +232,13 @@ code that information right into the source code.
 We aren’t even going to discuss this case, that’s how bad it is.</p>
 
 <p>But let’s say you separate your DB credentials from the source code. You will
-have something like a <code>db.properties</code> or <code>db.ini</code> file, which will be attached
+have something like a <code class="highlighter-rouge">db.properties</code> or <code class="highlighter-rouge">db.ini</code> file, which will be attached
 to the application right before deployment. You can also keep that file
 directly in the production server, which is even better, but not always
 possible, especially with PaaS deployments, for example.</p>
 
 <p>A similar problem exists with deployments of artifacts to repositories. Say,
-you’re regularly deploying to RubyGems.org. Your <code>~/.gem/credentials</code> will
+you’re regularly deploying to RubyGems.org. Your <code class="highlighter-rouge">~/.gem/credentials</code> will
 contain your secret API key.</p>
 
 <p>So, very often, your deployment scripts are accompanied by some files
@@ -262,7 +262,7 @@ to use the scripts he/she has to be able to open files with credentials.</p>
 
 <p>Rultor solves this problem by offering an on-the-fly GPG decryption of your
 sensitive data, right before they are used by your deployment scripts. In
-the <code>.rultor.yml</code> configuration file you just say:</p>
+the <code class="highlighter-rouge">.rultor.yml</code> configuration file you just say:</p>
 
 <pre>decrypt:
   db.ini: "repo/db.ini.asc"
@@ -270,8 +270,8 @@ deploy:
   script:
     ftp put db.ini production</pre>
 
-<p>Then, you encrypt your <code>db.ini</code> using a Rultor GPG key, and fearlessly
-commit <code>db.ini.asc</code> to the repository. Nobody will be able to open and read
+<p>Then, you encrypt your <code class="highlighter-rouge">db.ini</code> using a Rultor GPG key, and fearlessly
+commit <code class="highlighter-rouge">db.ini.asc</code> to the repository. Nobody will be able to open and read
 that file, except the Rultor server itself, right before running the
 deployment script.</p>
 

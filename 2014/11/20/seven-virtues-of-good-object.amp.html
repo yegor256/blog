@@ -120,7 +120,7 @@ Ruby expresses this concept much better than Java or C++:</p>
 
 <pre>photo = File.new('/tmp/photo.png')</pre>
 
-<p>The object <code>photo</code> is constructed by the class <code>File</code> (<code>new</code> is an entry point to the class).
+<p>The object <code class="highlighter-rouge">photo</code> is constructed by the class <code class="highlighter-rouge">File</code> (<code class="highlighter-rouge">new</code> is an entry point to the class).
 Once constructed, the object is acting on its own. It shouldn’t know who constructed it
 and how many more brothers and sisters it has in the class. Yes, I mean
 that <a href="https://en.wikipedia.org/wiki/Reflection_%28computer_programming%29">reflection</a>
@@ -148,7 +148,7 @@ such a creature, there is—obviously—no object.</p>
 <pre>photo = File.new('/tmp/photo.png')
 puts photo.width()</pre>
 
-<p>In this example, I’m asking <code>File</code> to construct a new object <code>photo</code>, which will
+<p>In this example, I’m asking <code class="highlighter-rouge">File</code> to construct a new object <code class="highlighter-rouge">photo</code>, which will
 be a representative of a real file on disk. You may say that a file
 is also something virtual and exists only when the computer is turned on.
 I would agree and refine the definition of “real life” as follows: It is
@@ -186,7 +186,7 @@ we need, we should not be interested in his class of origin, his sex, or his rel
 
 <p>For example, I need to show a photo on the screen.
 I want that photo to be read from a file in PNG format. I’m
-contracting an object from class <code>DataFile</code> and asking him to give me
+contracting an object from class <code class="highlighter-rouge">DataFile</code> and asking him to give me
 the binary content of that image.</p>
 
 <p>But wait, do I care where exactly the content will come from—the file on disk, or
@@ -198,9 +198,9 @@ would look like this:</p>
   byte[] read();
 }</pre>
 
-<p>Now, any object from any class (not just <code>DataFile</code>) can work for me.
+<p>Now, any object from any class (not just <code class="highlighter-rouge">DataFile</code>) can work for me.
 All he has to do, in order to be eligible, is to obey
-the contract—by implementing the interface <code>Binary</code>.</p>
+the contract—by implementing the interface <code class="highlighter-rouge">Binary</code>.</p>
 
 <p>The rule here is simple: every public method in a good object should
 implement his counterpart from an interface. If your object has
@@ -229,7 +229,7 @@ of a bad object, which may have clones:</p>
   }
 }</pre>
 
-<p>I can create a few instances of class <code>HTTPStatus</code>, and all of them will be
+<p>I can create a few instances of class <code class="highlighter-rouge">HTTPStatus</code>, and all of them will be
 equal to each other:</p>
 
 <pre>first = new HTTPStatus();
@@ -269,7 +269,7 @@ final class HTTPStatus implements Status {
   }
 }</pre>
 
-<p>Even though the method <code>read()</code> may return different values, the
+<p>Even though the method <code class="highlighter-rouge">read()</code> may return different values, the
 object is immutable. He points to a certain web page and will
 never point anywhere else. He will never change his encapsulated state, and he will
 never betray the URL he represents.</p>
@@ -291,7 +291,7 @@ In a nutshell, immutable objects are better because:</p>
 <p>Of course, a good object doesn’t have
 <a href="/2014/09/16/getters-and-setters-are-evil.html">setters</a>, which
 may change his state and force him to betray the URL. In other words,
-introducing a <code>setURL()</code> method would be a terrible mistake in class <code>HTTPStatus</code>.</p>
+introducing a <code class="highlighter-rouge">setURL()</code> method would be a terrible mistake in class <code class="highlighter-rouge">HTTPStatus</code>.</p>
 
 <p>Besides all that, immutable objects will force you to make
 more cohesive, solid, and understandable designs, as this article
@@ -300,7 +300,7 @@ explains: <a href="/2014/11/07/how-immutability-helps.html">How Immutability Hel
 <h2 id="5-his-class-doesnt-have-anything-static">5. His Class Doesn’t Have Anything Static</h2>
 
 <p>A static method implements a behavior of a class, not an object. Let’s say
-we have class <code>File</code>, and his children have method <code>size()</code>:</p>
+we have class <code class="highlighter-rouge">File</code>, and his children have method <code class="highlighter-rouge">size()</code>:</p>
 
 <pre>final class File implements Measurable {
   @Override
@@ -309,8 +309,8 @@ we have class <code>File</code>, and his children have method <code>size()</code
   }
 }</pre>
 
-<p>So far, so good; the method <code>size()</code> is there because of the contract <code>Measurable</code>,
-and every object of class <code>File</code> will be able to measure his size. A terrible
+<p>So far, so good; the method <code class="highlighter-rouge">size()</code> is there because of the contract <code class="highlighter-rouge">Measurable</code>,
+and every object of class <code class="highlighter-rouge">File</code> will be able to measure his size. A terrible
 mistake would be to design this class with a static method instead
 (this design is also known as
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">a utility class</a>
@@ -325,7 +325,7 @@ class File {
 
 <p>This design runs completely against the object-oriented paradigm. Why?
 Because static methods turn object-oriented programming into “class-oriented” programming.
-This method, <code>size()</code>, exposes the behavior of the class, not of his objects. What’s
+This method, <code class="highlighter-rouge">size()</code>, exposes the behavior of the class, not of his objects. What’s
 wrong with this, you may ask? Why can’t we have both objects and classes
 as first-class citizens in our code? Why can’t both of them have methods and properties?</p>
 
@@ -383,14 +383,14 @@ They are terrible names that lead to terrible design.</p>
 
 <p>In general, avoid names that end with “-er”—most of them are bad.</p>
 
-<p>“What is the alternative of a <code>FileReader</code>?” I hear you asking. What would
-be a better name? Let’s see. We already have <code>File</code>, which is a representative
+<p>“What is the alternative of a <code class="highlighter-rouge">FileReader</code>?” I hear you asking. What would
+be a better name? Let’s see. We already have <code class="highlighter-rouge">File</code>, which is a representative
 of a real-world file on disk. This representative is not powerful enough for us,
 because he doesn’t know how to read the content of the file. We want to create
 a more powerful one that will have that ability. What would we call him?
 Remember, the name should say what he is, not what he does. What is he? He
-is a file that has data; not just a file, like <code>File</code>, but a more sophisticated
-one, with data. So how about <code>FileWithData</code> or simply <code>DataFile</code>?</p>
+is a file that has data; not just a file, like <code class="highlighter-rouge">File</code>, but a more sophisticated
+one, with data. So how about <code class="highlighter-rouge">FileWithData</code> or simply <code class="highlighter-rouge">DataFile</code>?</p>
 
 <p>The same logic should be applicable to all other names.
 Always think about <strong>what it is</strong> rather than what it does. Give your
@@ -402,22 +402,22 @@ objects real, meaningful names instead of job titles.</p>
 
 
 
-<p>A good object comes from either a final or abstract class. A <code>final</code> class is one that
+<p>A good object comes from either a final or abstract class. A <code class="highlighter-rouge">final</code> class is one that
 can’t be extended via <a href="/2016/09/13/inheritance-is-procedural.html">inheritance</a>.
-An <code>abstract</code> class is one that
+An <code class="highlighter-rouge">abstract</code> class is one that
 can’t have instances. Simply put, a class should either say, “You can never break
 me; I’m a black box for you” or “I’m broken already; fix me first and then use.”</p>
 
 <p>There is nothing in between. A final class is a black box that you can’t modify
 by any means. He works as he works, and you either use him or throw him away. You can’t
 create another class that will inherit his properties. This is not allowed
-because of that <code>final</code> modifier. The only way to extend such a final class
-is through decoration of his children. Let’s say I have the class <code>HTTPStatus</code> (see
+because of that <code class="highlighter-rouge">final</code> modifier. The only way to extend such a final class
+is through decoration of his children. Let’s say I have the class <code class="highlighter-rouge">HTTPStatus</code> (see
 above), and I don’t like him. Well, I like him, but he’s not powerful enough
 for me. I want him to
 <a href="/2015/12/01/rethrow-exceptions.html">throw</a>
 an exception if HTTP status is over 400. I want
-his method, <code>read()</code>, to do more that it does now. A traditional way would be
+his method, <code class="highlighter-rouge">read()</code>, to do more that it does now. A traditional way would be
 to extend the class and overwrite his method:</p>
 
 <pre>class OnlyValidStatus extends HTTPStatus {
@@ -436,7 +436,7 @@ to extend the class and overwrite his method:</p>
 
 <p>Why is this wrong? It is very wrong because we risk breaking
 the logic of the entire parent class by overriding one of his methods. Remember,
-once we override the method <code>read()</code> in the child class, all methods from the
+once we override the method <code class="highlighter-rouge">read()</code> in the child class, all methods from the
 parent class start to use his new version. We’re literally injecting
 a new “piece of implementation” right into the class. Philosophically
 speaking, this is an offense.</p>
@@ -462,21 +462,21 @@ and decorate him with your own implementation (a.k.a.
 
 <p>Make sure that this class is implementing the same
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>
-as the original one: <code>Status</code>. The instance of <code>HTTPStatus</code> will
+as the original one: <code class="highlighter-rouge">Status</code>. The instance of <code class="highlighter-rouge">HTTPStatus</code> will
 be passed into him through the constructor and encapsulated. Then every
 call will be intercepted and implemented in a different way, if necessary.
 In this design, we treat the original object as a black box and never
 touch his internal logic.</p>
 
-<p>If you don’t use that <code>final</code> keyword, anyone (including yourself) will
-be able to extend the class and… offend him :( So a class without <code>final</code>
+<p>If you don’t use that <code class="highlighter-rouge">final</code> keyword, anyone (including yourself) will
+be able to extend the class and… offend him :( So a class without <code class="highlighter-rouge">final</code>
 is a bad design.</p>
 
 <p>An abstract class is the exact opposite case—he tells us that
 he is incomplete and we can’t use him “as is.” We have to inject
 our custom implementation logic into him, but only into the places he allows
-us to touch. These places are explicitly marked as <code>abstract</code> methods.
-For example, our <code>HTTPStatus</code> may look like this:</p>
+us to touch. These places are explicitly marked as <code class="highlighter-rouge">abstract</code> methods.
+For example, our <code class="highlighter-rouge">HTTPStatus</code> may look like this:</p>
 
 <pre>abstract class ValidatedHTTPStatus implements Status {
   @Override
@@ -492,16 +492,16 @@ For example, our <code>HTTPStatus</code> may look like this:</p>
 
 <p>As you see, the class doesn’t know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through
-overriding the method <code>isValid()</code>. We’re not going to offend him with
-this inheritance, since he defended all other methods with <code>final</code> (pay
+overriding the method <code class="highlighter-rouge">isValid()</code>. We’re not going to offend him with
+this inheritance, since he defended all other methods with <code class="highlighter-rouge">final</code> (pay
 attention to the modifiers of his methods). Thus, the class is ready
 for our offense and is perfectly guarded against it.</p>
 
-<p>To summarize, your class should either be <code>final</code> or <code>abstract</code>—nothing in between.</p>
+<p>To summarize, your class should either be <code class="highlighter-rouge">final</code> or <code class="highlighter-rouge">abstract</code>—nothing in between.</p>
 
 <p>Update (April 2017): If you also agree that
 <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a> is evil,
-all your classes must be <code>final</code>.</p>
+all your classes must be <code class="highlighter-rouge">final</code>.</p>
 
     </article>
   </body>

@@ -128,9 +128,9 @@ the more expressive, bright, and readable your code is.</p>
 <p>Unfortunately, Java and many other languages are not designed with
 this concept in mind. Packages, modules, and namespaces don’t really help,
 and we usually end up with names like
-<a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/method/annotation/AbstractCooKyivalueMethodArgumentResolver.html"><code>AbstractCooKyivalueMethodArgumentResolver</code></a> (Spring)
+<a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/method/annotation/AbstractCooKyivalueMethodArgumentResolver.html"><code class="highlighter-rouge">AbstractCooKyivalueMethodArgumentResolver</code></a> (Spring)
 or
-<a href="https://hadoop.apache.org/docs/r3.0.0-alpha1/api/org/apache/hadoop/mapreduce/lib/input/CombineFileRecordReaderWrapper.html"><code>CombineFileRecordReaderWrapper</code></a> (Hadoop).
+<a href="https://hadoop.apache.org/docs/r3.0.0-alpha1/api/org/apache/hadoop/mapreduce/lib/input/CombineFileRecordReaderWrapper.html"><code class="highlighter-rouge">CombineFileRecordReaderWrapper</code></a> (Hadoop).
 We’re trying to pack as many semantics into class names as possible so
 their users won’t doubt for a second. Then we’re trying to put as many
 methods into one class as possible to make life easier for users; they will
@@ -143,9 +143,9 @@ names must be nouns, and their method names must be just one word. Here is
 what I do in my code to make that happen:</p>
 
 <p><strong>Interfaces are nouns</strong>.
-For example, <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>,
-<a href="http://static.javadoc.io/com.jcabi.incubator/xembly/0.22/org/xembly/Directive.html"><code>Directive</code></a>, or
-<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/model/Domain.java"><code>Domain</code></a>.
+For example, <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code class="highlighter-rouge">Request</code></a>,
+<a href="http://static.javadoc.io/com.jcabi.incubator/xembly/0.22/org/xembly/Directive.html"><code class="highlighter-rouge">Directive</code></a>, or
+<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/model/Domain.java"><code class="highlighter-rouge">Domain</code></a>.
 There are no exceptions. Types (also known as
 <a href="https://docs.oracle.com/javase/tutorial/java/concepts/interface.html">interfaces</a> in Java)
 are the core part of my vocabulary; they have to be nouns.</p>
@@ -155,36 +155,36 @@ My classes <a href="/2014/11/20/seven-virtues-of-good-object.html">always</a>
 implement interfaces. Thanks to that, I can say they always <em>are</em>
 requests, directives, or domains. And I always want their users to remember that.
 Prefixes help. For example,
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqBuffered.html"><code>RqBuffered</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqBuffered.html"><code class="highlighter-rouge">RqBuffered</code></a>
 is a buffered request,
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqSimple.html"><code>RqSimple</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqSimple.html"><code class="highlighter-rouge">RqSimple</code></a>
 is a simple request,
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqLive.html"><code>RqLive</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqLive.html"><code class="highlighter-rouge">RqLive</code></a>
 is a request that represents a “live” HTTP connection,
 and
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithHeader.html"><code>RqWithHeader</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithHeader.html"><code class="highlighter-rouge">RqWithHeader</code></a>
 is a request with an extra header.</p>
 
 <p>An alternative approach is to use the type name as the central part of the
 class name and add a prefix that explains implementation details.
 For example,
-<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyDomain.java"><code>DyDomain</code></a>
+<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyDomain.java"><code class="highlighter-rouge">DyDomain</code></a>
 is a domain that persists its data in DynamoDB.
-Once you know what that <code>Dy</code> prefix is for, you can easily understand what
-<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyUser.java"><code>DyUser</code></a>
+Once you know what that <code class="highlighter-rouge">Dy</code> prefix is for, you can easily understand what
+<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyUser.java"><code class="highlighter-rouge">DyUser</code></a>
 and
-<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyBase.java"><code>DyBase</code></a>
+<a href="https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/dynamo/DyBase.java"><code class="highlighter-rouge">DyBase</code></a>
 are about.</p>
 
 <p>In a medium-sized application or a library, there will be as many as 10 to 15
 prefixes you will have to remember, no more. For example, in the
 <a href="http://www.takes.org">Takes Framework</a>, there are 24,000 lines of code,
-410 Java files, and 10 prefixes: <code>Bc</code>, <code>Cc</code>, <code>Tk</code>, <code>Rq</code>, <code>Rs</code>, <code>Fb</code>,
-<code>Fk</code>, <code>Hm</code>, <code>Ps</code>, and <code>Xe</code>. Not so difficult to remember what they mean, right?</p>
+410 Java files, and 10 prefixes: <code class="highlighter-rouge">Bc</code>, <code class="highlighter-rouge">Cc</code>, <code class="highlighter-rouge">Tk</code>, <code class="highlighter-rouge">Rq</code>, <code class="highlighter-rouge">Rs</code>, <code class="highlighter-rouge">Fb</code>,
+<code class="highlighter-rouge">Fk</code>, <code class="highlighter-rouge">Hm</code>, <code class="highlighter-rouge">Ps</code>, and <code class="highlighter-rouge">Xe</code>. Not so difficult to remember what they mean, right?</p>
 
 <p>Among all <a href="http://static.javadoc.io/org.takes/takes/1.1/allclasses-frame.html">240 classes</a>,
 the longest name is
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithDefaultHeader.html"><code>RqWithDefaultHeader</code></a>.</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithDefaultHeader.html"><code class="highlighter-rouge">RqWithDefaultHeader</code></a>.</p>
 
 <p>I find this approach to class naming rather convenient. I used it
 in these open source projects (in GitHub):

@@ -97,7 +97,7 @@ JSON API. Its design is relatively simple. There are tables, which basically
 are collections of data structures, or in AWS terminology, “items.”</p>
 
 <p>Every item has a mandatory “hash,” an optional “range” and a number of other
-optional attributes. For instance, take the example table <code>depts</code>:</p>
+optional attributes. For instance, take the example table <code class="highlighter-rouge">depts</code>:</p>
 
 <pre>+------+--------+---------------------------+
 | dept | worker | Attributes                |
@@ -113,7 +113,7 @@ RESTful calls to Java methods. The SDK works fine, but is designed in a pure
 <a href="http://en.wikipedia.org/wiki/Procedural_programming">procedural</a> style.</p>
 
 <p>Let’s say we want to add a new item to the table above. RESTful call
-<a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html"><code>putItem</code></a>
+<a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html"><code class="highlighter-rouge">putItem</code></a>
 looks like (in essence):</p>
 
 <pre>putItem:
@@ -162,13 +162,13 @@ Item item = table.put(
 <p>My code is not only shorter, but it also employs
 <a href="/2016/11/21/naked-data.html">encapsulation</a> and separates
 responsibilities of classes.
-<a href="http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html"><code>Table</code></a>
+<a href="http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html"><code class="highlighter-rouge">Table</code></a>
 class (actually it is an interface internally implemented by a class)
 encapsulates information about the table, while
-<a href="http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html"><code>Item</code></a>
+<a href="http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html"><code class="highlighter-rouge">Item</code></a>
 encapsulates item details.</p>
 
-<p>We can pass an <code>item</code> as an argument to another method and all DynamoDB related
+<p>We can pass an <code class="highlighter-rouge">item</code> as an argument to another method and all DynamoDB related
 implementation details will be hidden from it. For example, somewhere later in
 the code:</p>
 
@@ -178,7 +178,7 @@ the code:</p>
 
 <p>In this script, we don’t know anything about DynamoDB or how to deal with its
 RESTful API. We interact solely with an instance of
-<a href="http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html"><code>Item</code></a> class.</p>
+<a href="http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html"><code class="highlighter-rouge">Item</code></a> class.</p>
 
 <p>By the way, all public entities in <a href="http://dynamo.jcabi.com">jcabi-dynamo</a> are
 Java interfaces. Thanks to that, you can test and mock the library completely

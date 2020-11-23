@@ -93,7 +93,7 @@ almost impossible to maintain.</p>
 
 <h2 id="object-hierarchy">Object Hierarchy</h2>
 
-<p>Take the <code>Region</code> interface from <a href="http://dynamo.jcabi.com">jcabi-dynamo</a> as an example
+<p>Take the <code class="highlighter-rouge">Region</code> interface from <a href="http://dynamo.jcabi.com">jcabi-dynamo</a> as an example
 (this snippet and all others in this article are simplified, for the
 sake of brevity):</p>
 
@@ -101,7 +101,7 @@ sake of brevity):</p>
   Table table(String name);
 }</pre>
 
-<p>Its <code>table()</code> method returns an instance of the <code>Table</code> interface, which
+<p>Its <code class="highlighter-rouge">table()</code> method returns an instance of the <code class="highlighter-rouge">Table</code> interface, which
 has its own methods:</p>
 
 <pre>public interface Table {
@@ -110,9 +110,9 @@ has its own methods:</p>
   Region region();
 }</pre>
 
-<p>Interface <code>Frame</code>, returned by the <code>frame()</code> method, also has its
+<p>Interface <code class="highlighter-rouge">Frame</code>, returned by the <code class="highlighter-rouge">frame()</code> method, also has its
 own methods. And so on.
-In order to create a properly mocked instance of interface <code>Region</code>,
+In order to create a properly mocked instance of interface <code class="highlighter-rouge">Region</code>,
 one would normally create a dozen other mock objects. With <a href="http://mockito.org">Mockito</a>
 it will look like this:</p>
 
@@ -159,8 +159,8 @@ Your class may look similar to this:</p>
 
 <p>You can imagine how difficult it will be to unit test this class,
 using Mockito, for example. First, we have
-to mock the <code>Region</code> interface. Then, we have to mock a <code>Table</code> interface and make sure
-it is returned by the <code>table()</code> method. Then, we have to mock a <code>Frame</code> interface, etc.</p>
+to mock the <code class="highlighter-rouge">Region</code> interface. Then, we have to mock a <code class="highlighter-rouge">Table</code> interface and make sure
+it is returned by the <code class="highlighter-rouge">table()</code> method. Then, we have to mock a <code class="highlighter-rouge">Frame</code> interface, etc.</p>
 
 
 
@@ -177,14 +177,14 @@ which will look very similar to what we have already written.</p>
 <p>The solution is to create fake classes and ship them
 together with real classes. This is what <a href="http://dynamo.jcabi.com">jcabi-dynamo</a>
 is doing. Just look at its <a href="http://dynamo.jcabi.com/apidocs-0.16.1/index.html">JavaDoc</a>.
-There is a package called <code>com.jcabi.dynamo.mock</code> that contains
+There is a package called <code class="highlighter-rouge">com.jcabi.dynamo.mock</code> that contains
 only fake classes, suitable only for unit testing.</p>
 
 <p>Even though their sole purpose is to optimize unit testing, we
 <a href="/2014/08/19/how-to-release-to-maven-central.html">ship them</a>
 together with production code, in the same JAR package.</p>
 
-<p>This is what a test will look like, when a fake class <code>MkRegion</code> is used:</p>
+<p>This is what a test will look like, when a fake class <code class="highlighter-rouge">MkRegion</code> is used:</p>
 
 <pre>public class EmployeeTest {
   public void canFetchSalaryFromDynamoDb() {
@@ -205,16 +205,16 @@ together with production code, in the same JAR package.</p>
 }</pre>
 
 <p>This test looks obvious to me. First, we create a fake DynamoDB region,
-which works on top of <code>H2Data</code> storage (in-memory H2 database). The storage
-will be ready for a single <code>employees</code> table with a hash key <code>name</code> and
-a single <code>salary</code> attribute.</p>
+which works on top of <code class="highlighter-rouge">H2Data</code> storage (in-memory H2 database). The storage
+will be ready for a single <code class="highlighter-rouge">employees</code> table with a hash key <code class="highlighter-rouge">name</code> and
+a single <code class="highlighter-rouge">salary</code> attribute.</p>
 
 
 
-<p>Then, we put a record into the table, with a hash <code>Jeff</code> and a salary
-<code>50000</code>.</p>
+<p>Then, we put a record into the table, with a hash <code class="highlighter-rouge">Jeff</code> and a salary
+<code class="highlighter-rouge">50000</code>.</p>
 
-<p>Finally, we create an instance of class <code>Employee</code> and check how it
+<p>Finally, we create an instance of class <code class="highlighter-rouge">Employee</code> and check how it
 fetches the salary from DynamoDB.</p>
 
 <p>I’m currently doing the same thing in almost every open source library I’m working with.

@@ -112,7 +112,7 @@ supposed to read a text somewhere and return it:</p>
   }
 }</pre>
 
-<p>And now the decorator, which is another implementation of <code>Text</code> that
+<p>And now the decorator, which is another implementation of <code class="highlighter-rouge">Text</code> that
 removes all unprintable characters from the text:</p>
 
 <pre>final class PrintableText implements Text {
@@ -134,13 +134,13 @@ removes all unprintable characters from the text:</p>
 );
 String content = text.read();</pre>
 
-<p>As you can see, the <code>PrintableText</code> doesn’t read the text from the file. It doesn’t
+<p>As you can see, the <code class="highlighter-rouge">PrintableText</code> doesn’t read the text from the file. It doesn’t
 really care where the text is coming from. It <em>delegates</em> text reading to
-the encapsulated instance of <code>Text</code>. How this encapsulated object will
-deal with the text and where it will get it doesn’t concern <code>PrintableText</code>.</p>
+the encapsulated instance of <code class="highlighter-rouge">Text</code>. How this encapsulated object will
+deal with the text and where it will get it doesn’t concern <code class="highlighter-rouge">PrintableText</code>.</p>
 
 <p>Let’s <a href="/2016/04/19/object-must-not-be-configurable.html">continue</a>
-and try to create an implementation of <code>Text</code>
+and try to create an implementation of <code class="highlighter-rouge">Text</code>
 that will capitalize all letters in the text:</p>
 
 <pre>final class AllCapsText implements Text {
@@ -154,7 +154,7 @@ that will capitalize all letters in the text:</p>
   }
 }</pre>
 
-<p>How about a <code>Text</code> that trims the input:</p>
+<p>How about a <code class="highlighter-rouge">Text</code> that trims the input:</p>
 
 <pre>final class TrimmedText implements Text {
   private final Text origin;
@@ -186,19 +186,19 @@ to be <em>declarative</em>. Here is what I do:</p>
 );
 String content = text.read();</pre>
 
-<p>First, I create an instance of <code>Text</code>, <em>composing</em> multiple decorators into
-a single object. I declaratively define the behavior of <code>text</code> without
-actually executing anything. Until method <code>read()</code> is called, the file is not touched
-and the processing of the text is not started. The object <code>text</code> is just
+<p>First, I create an instance of <code class="highlighter-rouge">Text</code>, <em>composing</em> multiple decorators into
+a single object. I declaratively define the behavior of <code class="highlighter-rouge">text</code> without
+actually executing anything. Until method <code class="highlighter-rouge">read()</code> is called, the file is not touched
+and the processing of the text is not started. The object <code class="highlighter-rouge">text</code> is just
 a composition of decorators, not an executable <em>procedure</em>. Check out this
 article about declarative and imperative styles of programming:
 <a href="/2015/02/20/utility-classes-vs-functional-programming.html">Utility Classes Have Nothing to Do With Functional Programming</a>.</p>
 
 <p>This design is much more flexible and reusable than a more traditional one,
-where the <code>Text</code> object is smart enough to perform all said operations. For
-example, class <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"><code>String</code></a>
+where the <code class="highlighter-rouge">Text</code> object is smart enough to perform all said operations. For
+example, class <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"><code class="highlighter-rouge">String</code></a>
 from Java is a good example of a bad design. It has
-more than 20 <em>utility methods</em> that should have been provided as decorators instead: <code>trim()</code>, <code>toUpperCase()</code>, <code>substring()</code>, <code>split()</code>, and many others, for example.
+more than 20 <em>utility methods</em> that should have been provided as decorators instead: <code class="highlighter-rouge">trim()</code>, <code class="highlighter-rouge">toUpperCase()</code>, <code class="highlighter-rouge">substring()</code>, <code class="highlighter-rouge">split()</code>, and many others, for example.
 When I want to trim my string, uppercase it, and then split it into pieces,
 here is what my code will look like:</p>
 

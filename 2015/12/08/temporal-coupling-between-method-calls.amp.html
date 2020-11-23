@@ -100,14 +100,14 @@ a look at this example.</p>
   }
 }</pre>
 
-<p>What do you think about that? I believe it’s clear what <code>names()</code> is doing—creating a list of names. In order to avoid duplication, there is a supplementary
-<em>procedure</em>, <code>append()</code>, which converts an item to lowercase and adds it to the
+<p>What do you think about that? I believe it’s clear what <code class="highlighter-rouge">names()</code> is doing—creating a list of names. In order to avoid duplication, there is a supplementary
+<em>procedure</em>, <code class="highlighter-rouge">append()</code>, which converts an item to lowercase and adds it to the
 list.</p>
 
 <p>This is poor design.</p>
 
 <p>It is a <strong>procedural</strong> design, and there is <strong>temporal coupling</strong> between
-lines in method <code>names()</code>.</p>
+lines in method <code class="highlighter-rouge">names()</code>.</p>
 
 <p>Let me first show you a better (though not the best!) design,
 then I will try to explain its benefits:</p>
@@ -129,8 +129,8 @@ then I will try to explain its benefits:</p>
   }
 }</pre>
 
-<p>An ideal design for method <code>with()</code> would create a new instance of
-<code>List</code>, populate it through <code>addAll(list)</code>, then <code>add(item)</code> to it, and
+<p>An ideal design for method <code class="highlighter-rouge">with()</code> would create a new instance of
+<code class="highlighter-rouge">List</code>, populate it through <code class="highlighter-rouge">addAll(list)</code>, then <code class="highlighter-rouge">add(item)</code> to it, and
 finally return. That would be perfectly
 <a href="https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html">immutable</a>,
 but slow.</p>
@@ -143,7 +143,7 @@ Foo.append(list, "Walter");
 return list;</pre>
 
 <p>It looks perfectly clean, doesn’t it? Instantiate a list, append two items to it, and
-return it. Yes, it is clean—for now. Because we remember what <code>append()</code> is
+return it. Yes, it is clean—for now. Because we remember what <code class="highlighter-rouge">append()</code> is
 doing. In a few months, we’ll get back to this code, and it will look like this:</p>
 
 <pre>List&lt;String&gt; list = new LinkedList();
@@ -153,12 +153,12 @@ Foo.append(list, "Walter");
 // 10 more lines here
 return list;</pre>
 
-<p>Is it so clear now that <code>append()</code> is actually adding <code>"Jeff"</code> to <code>list</code>? What
+<p>Is it so clear now that <code class="highlighter-rouge">append()</code> is actually adding <code class="highlighter-rouge">"Jeff"</code> to <code class="highlighter-rouge">list</code>? What
 will happen if I remove that line? Will it affect the result being
 returned in the last line? I don’t know. I need to <strong>check</strong> the body of method
-<code>append()</code> to make sure.</p>
+<code class="highlighter-rouge">append()</code> to make sure.</p>
 
-<p>Also, how about returning <code>list</code> first and calling <code>append()</code> afterwards? This
+<p>Also, how about returning <code class="highlighter-rouge">list</code> first and calling <code class="highlighter-rouge">append()</code> afterwards? This
 is what possible “refactoring” may do to our code:</p>
 
 <pre>List&lt;String&gt; list = new LinkedList();
@@ -171,9 +171,9 @@ Foo.append(list, "Jeff");
 // 10 more lines here
 return list;</pre>
 
-<p>First of all, we return <code>list</code> too early, when it is not ready. But did anyone
-tell me that these two calls to <code>append()</code> must happen before <code>return list</code>?
-Second, we changed the order of <code>append()</code> calls. Again, did anyone tell me
+<p>First of all, we return <code class="highlighter-rouge">list</code> too early, when it is not ready. But did anyone
+tell me that these two calls to <code class="highlighter-rouge">append()</code> must happen before <code class="highlighter-rouge">return list</code>?
+Second, we changed the order of <code class="highlighter-rouge">append()</code> calls. Again, did anyone tell me
 that it’s important to call them in that particular order?</p>
 
 <p>Nobody. Nowhere. This is called <strong>temporal coupling</strong>.</p>
@@ -192,12 +192,12 @@ the order, and our compiler won’t be able to catch us.</p>
   "Walter"
 );</pre>
 
-<p>It just <strong>returns</strong> a list, which is constructed by a few calls to the <code>with()</code>
+<p>It just <strong>returns</strong> a list, which is constructed by a few calls to the <code class="highlighter-rouge">with()</code>
 method. It is a single line instead of four.</p>
 
 <p>As <a href="/2015/08/18/multiple-return-statements-in-oop.html">discussed before</a>,
 an ideal method in OOP must have just a single statement, and this statement is
-<code>return</code>.</p>
+<code class="highlighter-rouge">return</code>.</p>
 
 <p>The same is true about validation. For example, this code is bad:</p>
 

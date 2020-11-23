@@ -92,23 +92,23 @@ Encapsulation leads to the absence of <em>naked</em> data on all levels and in a
 t = 85;
 printf("The temperature is %d F", t);</pre>
 
-<p>Here <code>t</code> is the data, which is publicly accessible by the code around it.
+<p>Here <code class="highlighter-rouge">t</code> is the data, which is publicly accessible by the code around it.
 Anyone can modify it or read it.</p>
 
 <p>Why is that bad? For one reason: tight and hidden coupling.</p>
 
-<p>The code around <code>t</code> inevitably makes a lot of assumptions about the data. For
-example, both lines after <code>int t</code> decided that the temperature is in Fahrenheit.
+<p>The code around <code class="highlighter-rouge">t</code> inevitably makes a lot of assumptions about the data. For
+example, both lines after <code class="highlighter-rouge">int t</code> decided that the temperature is in Fahrenheit.
 At the moment of writing, this may be true, but this assumption couples the
-code with the data. If tomorrow we change <code>t</code> to Celsius, the code won’t know
+code with the data. If tomorrow we change <code class="highlighter-rouge">t</code> to Celsius, the code won’t know
 about this change. That’s why I call this coupling <em>hidden</em>.</p>
 
 
 
-<p>If we change the type of <code>t</code> from <code>int</code> to, say, <code>double</code>, the <code>printf</code>
+<p>If we change the type of <code class="highlighter-rouge">t</code> from <code class="highlighter-rouge">int</code> to, say, <code class="highlighter-rouge">double</code>, the <code class="highlighter-rouge">printf</code>
 line won’t print anything after the decimal point. Again, the coupling is
 there, but it’s hidden. Later on, we simply won’t be able to find all the places in our
-code where we made these or other assumptions about <code>t</code>.</p>
+code where we made these or other assumptions about <code class="highlighter-rouge">t</code>.</p>
 
 <p>This will seriously affect maintainability.</p>
 
@@ -121,10 +121,10 @@ code where we made these or other assumptions about <code>t</code>.</p>
 }</pre>
 
 <p>It looks like an object, but the data is still naked. Anyone can retrieve
-<code>t</code> from the object and decide whether it’s Fahrenheit or Celsius, whether
+<code class="highlighter-rouge">t</code> from the object and decide whether it’s Fahrenheit or Celsius, whether
 it has digits after the dot or not, etc. This is not encapsulation yet!</p>
 
-<p>The only way to encapsulate <code>t</code> is to make sure nobody can touch
+<p>The only way to encapsulate <code class="highlighter-rouge">t</code> is to make sure nobody can touch
 it either directly or by retrieving it from an object. How do we do that?
 Just stop exposing data and start exposing functionality. Here is how,
 for example:</p>
@@ -136,15 +136,15 @@ for example:</p>
   }
 }</pre>
 
-<p>We don’t allow anyone to retrieve <code>t</code> anymore. All they can do is
-convert temperature to text. If and when we decide to change <code>t</code> to Celsius,
-we will do it just once and in one place: in the class <code>Temperature</code>.</p>
+<p>We don’t allow anyone to retrieve <code class="highlighter-rouge">t</code> anymore. All they can do is
+convert temperature to text. If and when we decide to change <code class="highlighter-rouge">t</code> to Celsius,
+we will do it just once and in one place: in the class <code class="highlighter-rouge">Temperature</code>.</p>
 
 
 
 <p>If we need other functions in the future, like math operations or conversion
-to Celsius, we add more methods to class <code>Temperature</code>. But we never
-let anyone touch or know about <code>t</code>.</p>
+to Celsius, we add more methods to class <code class="highlighter-rouge">Temperature</code>. But we never
+let anyone touch or know about <code class="highlighter-rouge">t</code>.</p>
 
 <p>This idea is close to
 “<a href="/2016/04/05/printers-instead-of-getters.html">printers instead of getters</a>,”

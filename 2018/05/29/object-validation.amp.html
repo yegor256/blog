@@ -110,10 +110,10 @@ so to speak? Here is what I think.</p>
 
 <ul>
   <li>
-    <p>Pass <code>nil</code> to the ctor instead of a file name;</p>
+    <p>Pass <code class="highlighter-rouge">nil</code> to the ctor instead of a file name;</p>
   </li>
   <li>
-    <p>Pass something else, which is not <code>String</code>;</p>
+    <p>Pass something else, which is not <code class="highlighter-rouge">String</code>;</p>
   </li>
   <li>
     <p>Pass a file that doesn’t exist;</p>
@@ -147,8 +147,8 @@ Why did I do it this way? Why not put all of them into the constructor?</p>
 while with the other two—its runtime behavior. You remember that an
 <a href="/2016/07/14/who-is-object.html">object</a> is a representative of
 a set of other objects it encapsulates, called attributes. The object of
-class <code>Users</code> can’t <em>represent</em> <code>nil</code> or a number. It can only represent
-a file with a name of type <code>String</code>. On the other hand, what that file
+class <code class="highlighter-rouge">Users</code> can’t <em>represent</em> <code class="highlighter-rouge">nil</code> or a number. It can only represent
+a file with a name of type <code class="highlighter-rouge">String</code>. On the other hand, what that file
 contains and whether it really is a file—doesn’t make the state invalid.
 It only causes trouble for the behavior.</p>
 
@@ -157,24 +157,24 @@ two phases of interaction with the encapsulated object: <em>connecting</em> and 
 
 
 
-<p>First, we encapsulate the <code>file</code> and want to be sure that it really is
+<p>First, we encapsulate the <code class="highlighter-rouge">file</code> and want to be sure that it really is
 a file. We are not yet talking to it, we don’t want it to work for us yet,
 we just want to make sure it really <em>is</em> an object that we will be able to talk
-to in the near future. If it’s <code>nil</code> or a <code>float</code>, we will have problems
+to in the near future. If it’s <code class="highlighter-rouge">nil</code> or a <code class="highlighter-rouge">float</code>, we will have problems
 in the future, for sure. That’s why we raise an exception from the constructor.</p>
 
 <p>Then the second phase is talking, where we delegate control to the object
 and expect it to behave correctly. At this phase we may have other validation
 procedures, in order to make sure our interaction will go smoothly.
 It’s important to mention that these validations are very situational.
-We may call <code>names()</code> multiple times and every time have a different
+We may call <code class="highlighter-rouge">names()</code> multiple times and every time have a different
 situation with the file on disc. To begin with it may not exist, while in a few seconds
 it will be ready and available for reading.</p>
 
 <p>Ideally, a programming language should provide instruments for the first
 type of validations, for example with <a href="https://en.wikipedia.org/wiki/Strong_and_weak_typing">strict typing</a>.
 In Java, for example,
-we would not need to check the type of <code>file</code>, the compiler would catch
+we would not need to check the type of <code class="highlighter-rouge">file</code>, the compiler would catch
 that error earlier. In Kotlin we would be able to get rid of the NULL
 check, thanks to their <a href="https://kotlinlang.org/docs/reference/null-safety.html">Null Safety</a> feature.
 Ruby is less powerful than those languages, that’s why we have to validate “manually.”</p>

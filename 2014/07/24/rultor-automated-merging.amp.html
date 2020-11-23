@@ -78,9 +78,9 @@ passing them through a full testing cycle
       
 
 <p>You get a GitHub pull request. You review it. It looks correct—it’s time
-to merge it into <code>master</code>. You post a comment in it, asking
+to merge it into <code class="highlighter-rouge">master</code>. You post a comment in it, asking
 <a href="https://github.com/rultor">@rultor</a> to test and merge. Rultor starts a new
-<a href="http://www.docker.io">Docker</a> container, merges the pull request into <code>master</code>, runs all tests and, if
+<a href="http://www.docker.io">Docker</a> container, merges the pull request into <code class="highlighter-rouge">master</code>, runs all tests and, if
 everything looks clean—merges, pushes, and closes the request.</p>
 
 <p>Then, you ask <a href="https://github.com/rultor">@rultor</a> to deploy the current version
@@ -137,23 +137,23 @@ in one of your GitHub pull requests, it does exactly this:</p>
 
 <ol>
   <li>
-    <p>Reads the <a href="https://doc.rultor.com/reference.html"><code>.rultor.yml</code></a>
+    <p>Reads the <a href="https://doc.rultor.com/reference.html"><code class="highlighter-rouge">.rultor.yml</code></a>
 YAML configuration file from the root directory of your repository.</p>
   </li>
   <li>
-    <p>Gets automated build execution command from it, for example <code>bundle test</code>.</p>
+    <p>Gets automated build execution command from it, for example <code class="highlighter-rouge">bundle test</code>.</p>
   </li>
   <li>
     <p>Checks out your repository into a temporary directory on one of its servers.</p>
   </li>
   <li>
-    <p>Merges pull request into <code>master</code> branch.</p>
+    <p>Merges pull request into <code class="highlighter-rouge">master</code> branch.</p>
   </li>
   <li>
-    <p>Starts a new Docker container and runs <code>bundle test</code> in it.</p>
+    <p>Starts a new Docker container and runs <code class="highlighter-rouge">bundle test</code> in it.</p>
   </li>
   <li>
-    <p>If everything is fine, pushes modified <code>master</code> branch to GitHub.</p>
+    <p>If everything is fine, pushes modified <code class="highlighter-rouge">master</code> branch to GitHub.</p>
   </li>
   <li>
     <p>Reports back to you, in the GitHub pull request.</p>

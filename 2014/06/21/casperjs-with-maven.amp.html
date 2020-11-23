@@ -89,7 +89,7 @@ to requests sent by a regular web browser.</p>
 
 <p>This is a sample CasperJS test, which makes an HTTP request to a home page
 of a running WAR application and asserts that the response has
-<code>200</code> HTTP status code:</p>
+<code class="highlighter-rouge">200</code> HTTP status code:</p>
 
 <pre>casper.test.begin(
   'home page can be rendered',
@@ -108,7 +108,7 @@ of a running WAR application and asserts that the response has
   }
 );</pre>
 
-<p>I keep this test in the <code>src/test/casperjs/home-page.js</code> file.
+<p>I keep this test in the <code class="highlighter-rouge">src/test/casperjs/home-page.js</code> file.
 Let’s see how CasperJS can be executed automatically on every Maven build.</p>
 
 <p>Here is the test scenario, implemented with a combination of Maven plugins:</p>
@@ -147,7 +147,7 @@ It is a platform-specific binary. Thanks to <a href="https://github.com/klieber"
 we have an off-the-shelf Maven plugin:
 <a href="https://github.com/klieber/phantomjs-maven-plugin">phantomjs-maven-plugin</a>
 that understands what the current platform is and downloads the appropriate
-binary automatically, placing it into the <code>target</code> directory.</p>
+binary automatically, placing it into the <code class="highlighter-rouge">target</code> directory.</p>
 
 <pre>&lt;plugin&gt;
   &lt;groupId&gt;com.github.klieber&lt;/groupId&gt;
@@ -165,13 +165,13 @@ binary automatically, placing it into the <code>target</code> directory.</p>
 &lt;/plugin&gt;</pre>
 
 <p>The exact name of the downloaded binary is stored in the
-<code>${phantomjs.binary}</code> Maven property.</p>
+<code class="highlighter-rouge">${phantomjs.binary}</code> Maven property.</p>
 
 <h2 id="2-install-casperjs">2. Install CasperJS</h2>
 
 <p>Unfortunately, there is no similar plugin for the CasperJS installation
 (at least I haven’t found any as of yet). That’s why I’m using plain
-old <code>git</code> (you should have it installed on your build machine).</p>
+old <code class="highlighter-rouge">git</code> (you should have it installed on your build machine).</p>
 
 <pre>&lt;plugin&gt;
   &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
@@ -203,7 +203,7 @@ The port has to be available on the build machine. I want to be able
 to run multiple Maven builds in parallel, so that’s why I get a random port on every build.</p>
 
 <p>In other examples, you may see people using fixed port numbers,
-like <code>5555</code> or something similar. This is a very bad practice.
+like <code class="highlighter-rouge">5555</code> or something similar. This is a very bad practice.
 Always reserve a new random port when you need it.</p>
 
 <pre>&lt;plugin&gt;
@@ -224,7 +224,7 @@ Always reserve a new random port when you need it.</p>
   &lt;/executions&gt;
 &lt;/plugin&gt;</pre>
 
-<p>The plugin reserves a port and sets it value to the <code>${tomcat.port}</code> Maven property.</p>
+<p>The plugin reserves a port and sets it value to the <code class="highlighter-rouge">${tomcat.port}</code> Maven property.</p>
 
 <h2 id="4-start-tomcat">4. Start Tomcat</h2>
 
@@ -253,14 +253,14 @@ that starts a real Tomcat7 server and configures it to serve on the port reserve
   &lt;/executions&gt;
 &lt;/plugin&gt;</pre>
 
-<p>Due to the option <code>fork</code> being set to <code>true</code>, Tomcat7 continues
+<p>Due to the option <code class="highlighter-rouge">fork</code> being set to <code class="highlighter-rouge">true</code>, Tomcat7 continues
 to run when the plugin execution finishes. That’s exactly what I need.</p>
 
 <h2 id="5-run-casperjs">5. Run CasperJS</h2>
 
 <p>Now, it’s time to run CasperJS. Even though there are some
 plugins exist for this, I’m using plain old
-<code>exec-maven-plugin</code>,
+<code class="highlighter-rouge">exec-maven-plugin</code>,
 mostly because it is more configurable.</p>
 
 <pre>&lt;plugin&gt;
@@ -294,7 +294,7 @@ mostly because it is more configurable.</p>
   &lt;/executions&gt;
 &lt;/plugin&gt;</pre>
 
-<p>The environment variable <code>PHANTOMJS_EXECUTABLE</code> is the undocumented
+<p>The environment variable <code class="highlighter-rouge">PHANTOMJS_EXECUTABLE</code> is the undocumented
 feature that makes this whole scenario possible. It configures
 the location of the PhantomJS executable, which was downloaded a few steps above.</p>
 
@@ -323,7 +323,7 @@ a look at <a href="http://www.stateful.co">stateful.co</a>. It is a Java
 Web application hosted at <a href="http://www.cloudbees.com">CloudBees</a>.
 Its source code is open and available in <a href="https://github.com/sttc/stateful">GitHub</a>.</p>
 
-<p>Its <a href="https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml"><code>pom.xml</code></a>
+<p>Its <a href="https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml"><code class="highlighter-rouge">pom.xml</code></a>
 contains exactly the same configurations explained above, but joined together.</p>
 
 <p>If you have any questions, please don’t hesitate to ask below.</p>

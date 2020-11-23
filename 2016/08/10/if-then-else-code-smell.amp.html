@@ -86,11 +86,11 @@ illustrates the problem. So it’s time to demonstrate it and explain.</p>
 <amp-img src="/images/2016/08/fargo.jpg" alt="Fargo (1996) by Coen Brothers" height="650" width="1200" layout="responsive"></amp-img>
 
 <p>Take a look at the class
-<a href="https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java"><code>DyTalk</code></a>
+<a href="https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java"><code class="highlighter-rouge">DyTalk</code></a>
 from
 <a href="https://github.com/yegor256/rultor">yegor256/rultor</a>
 and its method
-<a href="https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java#L127-L169"><code>modify()</code></a>.
+<a href="https://github.com/yegor256/rultor/blob/1.61.9/src/main/java/com/rultor/dynamo/DyTalk.java#L127-L169"><code class="highlighter-rouge">modify()</code></a>.
 In a nutshell, it prevents you from saving any data to the DynamoDB if there were no
 modifications of the XML document. It’s a valid case, and it has to be
 validated, but the way it’s implemented is simply wrong. This is
@@ -123,8 +123,8 @@ Instead, there should be a decorator, which would look like this:</p>
 }</pre>
 
 <p>Now, if and when we need our talk to be more clever in situations where
-the list of directives is empty, we decorate it with <code>QuickTalk</code>.
-The benefits are obvious: the <code>DyTalk</code> class is smaller and therefore
+the list of directives is empty, we decorate it with <code class="highlighter-rouge">QuickTalk</code>.
+The benefits are obvious: the <code class="highlighter-rouge">DyTalk</code> class is smaller and therefore
 more cohesive.</p>
 
 

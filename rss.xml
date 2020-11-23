@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-16T08:51:32+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-23T08:24:43+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is the &lt;em&gt;seventh&lt;/em&gt; year of the
 &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
@@ -10,7 +10,7 @@ Previous years are here:
 &lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;,
 &lt;a href=&quot;/2017/10/24/award-2018.html&quot;&gt;2018&lt;/a&gt;,
 &lt;a href=&quot;/2018/09/30/award-2019.html&quot;&gt;2019&lt;/a&gt;,
-&lt;a href=&quot;/2019/11/03/award-2020.html&quot;&gt;2019&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;/2019/11/03/award-2020.html&quot;&gt;2020&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -66,7 +66,7 @@ to fill out.&lt;/p&gt;
     &lt;p&gt;Open source (in GitHub).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
+    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
 &lt;em&gt;and&lt;/em&gt; at least 16,384 &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits-of-code&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -99,7 +99,7 @@ your marketing position; quality is all.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the seventh year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019, 2019.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /></entry><entry><title type="html">Strong Typing without Types</title><link href="https://www.yegor256.com/2020/11/10/typing-without-types.html" rel="alternate" type="text/html" title="Strong Typing without Types" /><published>2020-11-10T00:00:00+00:00</published><updated>2020-11-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/10/typing-without-types</id><content type="html" xml:base="https://www.yegor256.com/2020/11/10/typing-without-types.html">&lt;p&gt;In 1974, Liskov and Zilles &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/942572.807045&quot;&gt;defined&lt;/a&gt;
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the seventh year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019, 2020.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /><media:content medium="image" url="https://www.yegor256.com/images/andreea/quality-award.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Strong Typing without Types</title><link href="https://www.yegor256.com/2020/11/10/typing-without-types.html" rel="alternate" type="text/html" title="Strong Typing without Types" /><published>2020-11-10T00:00:00+00:00</published><updated>2020-11-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/10/typing-without-types</id><content type="html" xml:base="https://www.yegor256.com/2020/11/10/typing-without-types.html">&lt;p&gt;In 1974, Liskov and Zilles &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/942572.807045&quot;&gt;defined&lt;/a&gt;
 a &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot;&gt;strongly-typed&lt;/a&gt;
 language as one in which “whenever an object is passed from
 a calling function to a called function, its type must be
@@ -116,33 +116,33 @@ do we really need types in order to strongly enforce typing?&lt;/p&gt;
 
 &lt;p&gt;For example, this is a place where we expect an instance of
 Java &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/java/concepts/interface.html&quot;&gt;interface&lt;/a&gt;
-&lt;code&gt;Book&lt;/code&gt; to arrive:&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; to arrive:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;The ISBN is: %s%n&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;The ISBN is: %s%n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The type &lt;code&gt;Book&lt;/code&gt; may look like this:&lt;/p&gt;
+&lt;p&gt;The type &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; may look like this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;If an object that doesn’t &lt;code&gt;implement&lt;/code&gt; the interface &lt;code&gt;Book&lt;/code&gt; is passed
-to the method &lt;code&gt;print()&lt;/code&gt;, the compiler will complain
+&lt;p&gt;If an object that doesn’t &lt;code class=&quot;highlighter-rouge&quot;&gt;implement&lt;/code&gt; the interface &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; is passed
+to the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;, the compiler will complain
 with the “type mismatch” error. It will be hard for a programmer to make
-a mistake and pass an object of type, say, &lt;code&gt;Car&lt;/code&gt; to the method &lt;code&gt;print()&lt;/code&gt;.
+a mistake and pass an object of type, say, &lt;code class=&quot;highlighter-rouge&quot;&gt;Car&lt;/code&gt; to the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;.
 However, it will still be possible, via dynamic type casting:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Mercedes-Benz G63&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Here!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mercedes-Benz G63&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Here!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This code will compile without issues, but at runtime the
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html&quot;&gt;&lt;code&gt;ClassCastException&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClassCastException&lt;/code&gt;&lt;/a&gt;
 will be thrown, since it won’t be
-possible to cast &lt;code&gt;Car&lt;/code&gt; to &lt;code&gt;Book&lt;/code&gt;.&lt;/p&gt;
+possible to cast &lt;code class=&quot;highlighter-rouge&quot;&gt;Car&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;The beauty of strong typing is that it prevents errors. However, it increases
 the complexity of code: you need to create types first, you need to declare them
@@ -151,15 +151,15 @@ Weak typing &lt;a href=&quot;https://softwareengineering.stackexchange.com/quest
 complain about this a lot and create languages like Ruby,
 which don’t have types at all, for example:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;This is ISBN: %s&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;This is ISBN: %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Here, the function &lt;code&gt;print()&lt;/code&gt; doesn’t expect &lt;code&gt;b&lt;/code&gt; to be of any
+&lt;p&gt;Here, the function &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; doesn’t expect &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; to be of any
 particular type. Whatever comes in—is fine. Later, when it’s
-time to call &lt;code&gt;.isbn&lt;/code&gt; the runtime checks whether the
-incoming &lt;code&gt;b&lt;/code&gt; has such a method. If it does, everything works just fine,
-if it doesn’t, a runtime error &lt;a href=&quot;https://ruby-doc.org/core-2.5.0/NoMethodError.html&quot;&gt;&lt;code&gt;NoMethodError&lt;/code&gt;&lt;/a&gt;
+time to call &lt;code class=&quot;highlighter-rouge&quot;&gt;.isbn&lt;/code&gt; the runtime checks whether the
+incoming &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; has such a method. If it does, everything works just fine,
+if it doesn’t, a runtime error &lt;a href=&quot;https://ruby-doc.org/core-2.5.0/NoMethodError.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NoMethodError&lt;/code&gt;&lt;/a&gt;
 is raised.&lt;/p&gt;
 
 &lt;p&gt;So far so good.&lt;/p&gt;
@@ -170,22 +170,22 @@ rid of types all together and letting the compiler infer type
 information from the code that works with the objects? Here is our
 code again:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;quot;The ISBN is: %s%n&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;The ISBN is: %s%n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Think about this: at compile time it’s already obvious that &lt;code&gt;b&lt;/code&gt; must have
-&lt;em&gt;at least&lt;/em&gt; one method &lt;code&gt;isbn()&lt;/code&gt;. No need to force programmers to define
-the type &lt;code&gt;Book&lt;/code&gt; explicitly and mention in the signature of the method &lt;code&gt;print()&lt;/code&gt;
+&lt;p&gt;Think about this: at compile time it’s already obvious that &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; must have
+&lt;em&gt;at least&lt;/em&gt; one method &lt;code class=&quot;highlighter-rouge&quot;&gt;isbn()&lt;/code&gt;. No need to force programmers to define
+the type &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; explicitly and mention in the signature of the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;
 that only books are welcome: this knowledge can easily be inferred from
-the body of the method &lt;code&gt;print()&lt;/code&gt;! The compiler may look at all statements
-in the method &lt;code&gt;print()&lt;/code&gt; and clearly &lt;em&gt;understand&lt;/em&gt; what exactly will be done
-with the object &lt;code&gt;b&lt;/code&gt;. This information should be enough to visualize
+the body of the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;! The compiler may look at all statements
+in the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; and clearly &lt;em&gt;understand&lt;/em&gt; what exactly will be done
+with the object &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;. This information should be enough to visualize
 the “type” of the incoming object. No need to ask the programmer to
 do this explicitly and spend another five lines of code in a new file
-to declare the type &lt;code&gt;Book&lt;/code&gt;. The compiler can do this job for us.&lt;/p&gt;
+to declare the type &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt;. The compiler can do this job for us.&lt;/p&gt;
 
 &lt;p&gt;Of course, to make this work we must prohibit
 &lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;type casting&lt;/a&gt;
@@ -193,7 +193,7 @@ of any kind, which is not possible in Java, C++, C# and other
 pseudo-object-oriented languages. But it is possible in
 &lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;!&lt;/p&gt;
 
-&lt;p&gt;WDYT?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">In 1974, Liskov and Zilles defined a strongly-typed language as one in which “whenever an object is passed from a calling function to a called function, its type must be compatible with the type declared in the called function.” Strong type checking, without doubt, decreases the amount of type errors, which leads to higher quality. However, the question is: do we really need types in order to strongly enforce typing?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/redirected.jpg" /></entry><entry><title type="html">The Pain of Daily Reports</title><link href="https://www.yegor256.com/2020/11/03/daily-reports.html" rel="alternate" type="text/html" title="The Pain of Daily Reports" /><published>2020-11-03T00:00:00+00:00</published><updated>2020-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/03/daily-reports</id><content type="html" xml:base="https://www.yegor256.com/2020/11/03/daily-reports.html">&lt;p&gt;A few days ago I asked
+&lt;p&gt;WDYT?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">In 1974, Liskov and Zilles defined a strongly-typed language as one in which “whenever an object is passed from a calling function to a called function, its type must be compatible with the type declared in the called function.” Strong type checking, without doubt, decreases the amount of type errors, which leads to higher quality. However, the question is: do we really need types in order to strongly enforce typing?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/redirected.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/redirected.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Pain of Daily Reports</title><link href="https://www.yegor256.com/2020/11/03/daily-reports.html" rel="alternate" type="text/html" title="The Pain of Daily Reports" /><published>2020-11-03T00:00:00+00:00</published><updated>2020-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/03/daily-reports</id><content type="html" xml:base="https://www.yegor256.com/2020/11/03/daily-reports.html">&lt;p&gt;A few days ago I asked
 &lt;a href=&quot;https://twitter.com/intent/follow?screen_name=yegor256&quot;&gt;my Twitter&lt;/a&gt;
 followers to vote in a
 &lt;a href=&quot;https://twitter.com/yegor256/status/1318899898364866560&quot;&gt;simple poll&lt;/a&gt;.
@@ -322,14 +322,14 @@ Let it be your secret.&lt;/p&gt;
 &lt;p&gt;The bottom line is that in the absence of proper management, both morning standups and
 evening daily reports are the best tools to manage people. What else can you use
 to connect their performance directly with guilt mechanisms in
-their brains?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">A few days ago I asked my Twitter followers to vote in a simple poll. They did, screaming in comments that only a stupid incompetent manager would ask programmers to send daily reports, while everything they do can easily be tracked in tickets, Git history, and so on. Indeed, why on earth would a sane manager ask software engineers, already very busy with coding, to spend time on writing these ridiculous reporting emails? Let me try to give you a good reason.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/norsemen.jpg" /></entry><entry><title type="html">New Metric: the Distance of Coupling</title><link href="https://www.yegor256.com/2020/10/27/distance-of-coupling.html" rel="alternate" type="text/html" title="New Metric: the Distance of Coupling" /><published>2020-10-27T00:00:00+00:00</published><updated>2020-10-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/27/distance-of-coupling</id><content type="html" xml:base="https://www.yegor256.com/2020/10/27/distance-of-coupling.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29&quot;&gt;Encapsulation&lt;/a&gt;,
+their brains?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">A few days ago I asked my Twitter followers to vote in a simple poll. They did, screaming in comments that only a stupid incompetent manager would ask programmers to send daily reports, while everything they do can easily be tracked in tickets, Git history, and so on. Indeed, why on earth would a sane manager ask software engineers, already very busy with coding, to spend time on writing these ridiculous reporting emails? Let me try to give you a good reason.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/norsemen.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/norsemen.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">New Metric: the Distance of Coupling</title><link href="https://www.yegor256.com/2020/10/27/distance-of-coupling.html" rel="alternate" type="text/html" title="New Metric: the Distance of Coupling" /><published>2020-10-27T00:00:00+00:00</published><updated>2020-10-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/27/distance-of-coupling</id><content type="html" xml:base="https://www.yegor256.com/2020/10/27/distance-of-coupling.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29&quot;&gt;Encapsulation&lt;/a&gt;,
 as you know, is one of the
 &lt;a href=&quot;https://www.indeed.com/career-advice/career-development/what-is-object-oriented-programming&quot;&gt;four key principles&lt;/a&gt;
 in &lt;a href=&quot;https://en.wikipedia.org/wiki/Object-oriented_programming&quot;&gt;object-oriented programming&lt;/a&gt;.
 Encapsulation, according to &lt;a href=&quot;https://amzn.to/3o7RnDZ&quot;&gt;Grady Booch et al.&lt;/a&gt;,
 is “the process of hiding all the secrets of an object
 that do not contribute to its essential characteristics.”
-Practically speaking, it’s about those &lt;code&gt;private&lt;/code&gt;
+Practically speaking, it’s about those &lt;code class=&quot;highlighter-rouge&quot;&gt;private&lt;/code&gt;
 attributes that we use in Java and C++: they are not visible to the users of
 our objects, that’s why they can’t be modified or even read.
 Booch et al. believe that the purpose of encapsulation is
@@ -347,31 +347,31 @@ explicit barriers between objects? Let’s see.&lt;/p&gt;
 encapsulation is a discipline more than a real barrier,” and
 that “seldom is the integrity of an object protected in any absolute sense”.
 In practice, “it is up to the user of an object to respect that object’s encapsulation.’’
-Indeed, let’s take a look at the class &lt;code&gt;Temperature&lt;/code&gt; from my blog post
+Indeed, let’s take a look at the class &lt;code class=&quot;highlighter-rouge&quot;&gt;Temperature&lt;/code&gt; from my blog post
 about &lt;a href=&quot;/2016/11/21/naked-data.html&quot;&gt;naked data&lt;/a&gt;:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Can we say that the attribute &lt;code&gt;t&lt;/code&gt; is truly &lt;em&gt;encapsulated&lt;/em&gt;?
+&lt;p&gt;Can we say that the attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;t&lt;/code&gt; is truly &lt;em&gt;encapsulated&lt;/em&gt;?
 Technically, it is: it’s impossible
 to modify it directly via the dot notation.
 Simply put, we can’t do this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;And we can’t even do this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;However, we can do exactly the same via the
-&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getter&lt;/a&gt; &lt;code&gt;getT()&lt;/code&gt;
-and the setter &lt;code&gt;setT()&lt;/code&gt;.
-Thus, the designer of the class &lt;code&gt;Temperature&lt;/code&gt; gives us the ability to access
+&lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getter&lt;/a&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;getT()&lt;/code&gt;
+and the setter &lt;code class=&quot;highlighter-rouge&quot;&gt;setT()&lt;/code&gt;.
+Thus, the designer of the class &lt;code class=&quot;highlighter-rouge&quot;&gt;Temperature&lt;/code&gt; gives us the ability to access
 its attribute, but indirectly, through
 &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;getters and setters&lt;/a&gt;.
 I would say
@@ -382,14 +382,14 @@ about naked data
 proposed the use of the &lt;a href=&quot;http://media.pragprog.com/articles/jan_03_enbug.pdf&quot;&gt;TellDontAsk principle&lt;/a&gt;
 and that we should get rid of the getter:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d F&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d F&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now the class &lt;code&gt;Temperature&lt;/code&gt; doesn’t allow us to read its attribute &lt;code&gt;t&lt;/code&gt;.
+&lt;p&gt;Now the class &lt;code class=&quot;highlighter-rouge&quot;&gt;Temperature&lt;/code&gt; doesn’t allow us to read its attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;t&lt;/code&gt;.
 Instead, we can only &lt;em&gt;tell&lt;/em&gt; it to prepare a string presentation of the temperature
 and return that back to us. Maybe not exactly a classic example of the “tell” paradigm,
 since some data is coming back, but now it looks much better than before. The beauty
@@ -397,19 +397,19 @@ of this refactoring is less &lt;a href=&quot;/2018/09/18/fear-of-coupling.html&q
 between the client and the object. With
 the getter (or direct access to the attribute via dot notation), the client
 was able to retrieve the numeric value of the temperature and recalculate it
-in Fahrenheit, assuming that it was in Celsius. With the &lt;code&gt;String&lt;/code&gt; being
+in Fahrenheit, assuming that it was in Celsius. With the &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; being
 returned the client would not do this. The string would only be used as a final
 product, not modifiable. Or maybe not?&lt;/p&gt;
 
 &lt;p&gt;What if the client does this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Temperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Temperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Integer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;How does it look now? Isn’t this a violation of encapsulation?
-The result of &lt;code&gt;toString()&lt;/code&gt; is not treated
+The result of &lt;code class=&quot;highlighter-rouge&quot;&gt;toString()&lt;/code&gt; is not treated
 as it is supposed to be treated. Not as a solid string, but as data with
 some internal structure, which is &lt;em&gt;known&lt;/em&gt; to the client. The &lt;em&gt;knowledge&lt;/em&gt; the
 client possesses about the output is the key problem here. The client knows too
@@ -422,11 +422,11 @@ is delivered to the client, the client is allowed to do whatever is needed
 with it. This is that lack of respect to encapsulation, if I correctly
 understood Dr. West. And we are not even discussing
 the &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/reflect/&quot;&gt;Reflection API&lt;/a&gt;, which
-would allow us to take the &lt;code&gt;t&lt;/code&gt; out of &lt;code&gt;Temperature&lt;/code&gt; without even calling any methods.&lt;/p&gt;
+would allow us to take the &lt;code class=&quot;highlighter-rouge&quot;&gt;t&lt;/code&gt; out of &lt;code class=&quot;highlighter-rouge&quot;&gt;Temperature&lt;/code&gt; without even calling any methods.&lt;/p&gt;
 
 &lt;p&gt;Thus, encapsulation is &lt;em&gt;not&lt;/em&gt; an explicit barrier. It exists for as long as we have
 the desire to respect it. If we don’t, nothing can stop us from abusing an
-object in any way we want. And even &lt;code&gt;private&lt;/code&gt; attribute modifiers won’t help.
+object in any way we want. And even &lt;code class=&quot;highlighter-rouge&quot;&gt;private&lt;/code&gt; attribute modifiers won’t help.
 Moreover, they will only create an illusion of encapsulation, while in reality
 everyone is able to do whatever they feel is suitable for their business case.&lt;/p&gt;
 
@@ -435,10 +435,10 @@ encapsulation more explicit.&lt;/p&gt;
 
 &lt;p&gt;What if we had the ability to control what’s happening with the data
 and objects &lt;em&gt;after&lt;/em&gt; we return them to clients? What if we could prevent the client
-from doing a &lt;code&gt;split()&lt;/code&gt; on the output of the &lt;code&gt;toString()&lt;/code&gt; method? We could do this at compile time, I think,
+from doing a &lt;code class=&quot;highlighter-rouge&quot;&gt;split()&lt;/code&gt; on the output of the &lt;code class=&quot;highlighter-rouge&quot;&gt;toString()&lt;/code&gt; method? We could do this at compile time, I think,
 by going through all the code and checking how &lt;em&gt;far&lt;/em&gt; the moments of interaction with our
 objects are from the places where they were returned. In the example above,
-the &lt;em&gt;distance&lt;/em&gt; is two: 1) first, we do the &lt;code&gt;split&lt;/code&gt;, 2) second, we do the &lt;code&gt;parseInt()&lt;/code&gt;.
+the &lt;em&gt;distance&lt;/em&gt; is two: 1) first, we do the &lt;code class=&quot;highlighter-rouge&quot;&gt;split&lt;/code&gt;, 2) second, we do the &lt;code class=&quot;highlighter-rouge&quot;&gt;parseInt()&lt;/code&gt;.
 Larger applications will have bigger numbers, of course.&lt;/p&gt;
 
 &lt;p&gt;It seems that we can use this distance number as a metric for coupling between objects
@@ -449,7 +449,7 @@ the TellDontAsk principle mentioned above, supposed to let our objects do the wo
 return a quick summary of it. The distance metric will tell us exactly that:
 how many times, and by how much, we violated the principle of loose coupling.&lt;/p&gt;
 
-&lt;p&gt;Would you be interested in creating such an analyzer for, say, Java code?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Encapsulation, as you know, is one of the four key principles in object-oriented programming. Encapsulation, according to Grady Booch et al., is “the process of hiding all the secrets of an object that do not contribute to its essential characteristics.” Practically speaking, it’s about those private attributes that we use in Java and C++: they are not visible to the users of our objects, that’s why they can’t be modified or even read. Booch et al. believe that the purpose of encapsulation is “to provide explicit barriers among different abstractions,” which leads to “a clear separation of concerns.” However, does it really work as planned? Do we really have explicit barriers between objects? Let’s see.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" /></entry><entry><title type="html">Lack of Problem Is the Problem</title><link href="https://www.yegor256.com/2020/10/13/lack-of-problem.html" rel="alternate" type="text/html" title="Lack of Problem Is the Problem" /><published>2020-10-13T00:00:00+00:00</published><updated>2020-10-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/13/lack-of-problem</id><content type="html" xml:base="https://www.yegor256.com/2020/10/13/lack-of-problem.html">&lt;p&gt;Do you know the most typical mistake startup founders make
+&lt;p&gt;Would you be interested in creating such an analyzer for, say, Java code?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Encapsulation, as you know, is one of the four key principles in object-oriented programming. Encapsulation, according to Grady Booch et al., is “the process of hiding all the secrets of an object that do not contribute to its essential characteristics.” Practically speaking, it’s about those private attributes that we use in Java and C++: they are not visible to the users of our objects, that’s why they can’t be modified or even read. Booch et al. believe that the purpose of encapsulation is “to provide explicit barriers among different abstractions,” which leads to “a clear separation of concerns.” However, does it really work as planned? Do we really have explicit barriers between objects? Let’s see.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lack of Problem Is the Problem</title><link href="https://www.yegor256.com/2020/10/13/lack-of-problem.html" rel="alternate" type="text/html" title="Lack of Problem Is the Problem" /><published>2020-10-13T00:00:00+00:00</published><updated>2020-10-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/13/lack-of-problem</id><content type="html" xml:base="https://www.yegor256.com/2020/10/13/lack-of-problem.html">&lt;p&gt;Do you know the most typical mistake startup founders make
 when they pitch their ideas to investors? According to
 &lt;a href=&quot;https://medium.com/@jakemendel/b3a884c54ab4&quot;&gt;Jake Mendel&lt;/a&gt;
 from Silicon Valley Bank, they often focus on the solution they propose
@@ -506,7 +506,7 @@ is the team leader, who has to fix it by opening
 the README file and specifying, in the first paragraph, what is wrong
 with the world right now and how our product is going to fix it.&lt;/p&gt;
 
-&lt;p&gt;Do it now.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Do you know the most typical mistake startup founders make when they pitch their ideas to investors? According to Jake Mendel from Silicon Valley Bank, they often focus on the solution they propose instead of the problem they are trying to solve. Inability to identify the problem is the common cause of startup failures. However, it’s not only them. Look at your project and try to answer “What’s wrong with the world now?” and then “How is this product fixing it?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" /></entry><entry><title type="html">Spell Check Your LaTeX Writings Using GNU Aspell</title><link href="https://www.yegor256.com/2020/10/06/latex-spell-checking.html" rel="alternate" type="text/html" title="Spell Check Your LaTeX Writings Using GNU Aspell" /><published>2020-10-06T00:00:00+00:00</published><updated>2020-10-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/06/latex-spell-checking</id><content type="html" xml:base="https://www.yegor256.com/2020/10/06/latex-spell-checking.html">&lt;p&gt;Do you use &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;
+&lt;p&gt;Do it now.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Do you know the most typical mistake startup founders make when they pitch their ideas to investors? According to Jake Mendel from Silicon Valley Bank, they often focus on the solution they propose instead of the problem they are trying to solve. Inability to identify the problem is the common cause of startup failures. However, it’s not only them. Look at your project and try to answer “What’s wrong with the world now?” and then “How is this product fixing it?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Spell Check Your LaTeX Writings Using GNU Aspell</title><link href="https://www.yegor256.com/2020/10/06/latex-spell-checking.html" rel="alternate" type="text/html" title="Spell Check Your LaTeX Writings Using GNU Aspell" /><published>2020-10-06T00:00:00+00:00</published><updated>2020-10-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/06/latex-spell-checking</id><content type="html" xml:base="https://www.yegor256.com/2020/10/06/latex-spell-checking.html">&lt;p&gt;Do you use &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;
 for your academic and technical writings? You don’t?
 Well you should! It’s the &lt;del&gt;most&lt;/del&gt; only professional instrument for
 making properly formatted PDF documents.
@@ -531,58 +531,58 @@ which expects you to provide the LaTeX source code
 errors. The beauty of it is that it checks only the text, ignoring
 TeX commands. For example, this is LaTeX document:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;\documentclass{article}
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;\documentclass{article}
 \begin{document}
 Hello, \textbf{Yegor}!
 \end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If we feed this text to some other spell checker (or GNU aspell without the
-option &lt;code&gt;--mode=tex&lt;/code&gt;) the word &lt;code&gt;textbf&lt;/code&gt; would be an obvious spelling mistake; aspell,
+option &lt;code class=&quot;highlighter-rouge&quot;&gt;--mode=tex&lt;/code&gt;) the word &lt;code class=&quot;highlighter-rouge&quot;&gt;textbf&lt;/code&gt; would be an obvious spelling mistake; aspell,
 however, understands it as a LaTeX command and ignores it.
-Moreover, aspell can understand the word &lt;code&gt;Yegor&lt;/code&gt;, even though it’s not
-an English word, by using a custom dictionary provided by the &lt;code&gt;--pws&lt;/code&gt; option.&lt;/p&gt;
+Moreover, aspell can understand the word &lt;code class=&quot;highlighter-rouge&quot;&gt;Yegor&lt;/code&gt;, even though it’s not
+an English word, by using a custom dictionary provided by the &lt;code class=&quot;highlighter-rouge&quot;&gt;--pws&lt;/code&gt; option.&lt;/p&gt;
 
 &lt;p&gt;There are a few other useful features in aspell. Long story short, I decided to create
 a small wrapper around aspell, to simplify the process of its configuration:
 &lt;a href=&quot;https://github.com/yegor256/texsc&quot;&gt;texsc&lt;/a&gt;
 (stands for “TeX Spell Checking”).
 It’s a command line tool, which you install and then run, for example like this
-(you can see how it’s configured in the &lt;code&gt;Makefile&lt;/code&gt; of
+(you can see how it’s configured in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile&lt;/code&gt; of
 &lt;a href=&quot;https://github.com/yegor256/requs-paper&quot;&gt;this paper&lt;/a&gt;):&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;$ texsc --pws aspell.en.pws --ignore=code,citep article.tex&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ texsc --pws aspell.en.pws --ignore=code,citep article.tex&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;There is a list of arguments you can supply to &lt;code&gt;texsc&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;There is a list of arguments you can supply to &lt;code class=&quot;highlighter-rouge&quot;&gt;texsc&lt;/code&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;--pws&lt;/code&gt; is the location of a custom dictionary, where each
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--pws&lt;/code&gt; is the location of a custom dictionary, where each
 line is a word aspell is supposed to ignore. It’s important to
-have the first line equal to &lt;code&gt;personal_ws-1.1 en 741 utf-8&lt;/code&gt;. Why?
+have the first line equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;personal_ws-1.1 en 741 utf-8&lt;/code&gt;. Why?
 I don’t know. But if it contains something else, aspell will just
 silently ignore the file. Nice, huh?&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;--ignore&lt;/code&gt; (you may have many of them) is the list of
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--ignore&lt;/code&gt; (you may have many of them) is the list of
 TeX commands, and which arguments should be ignored. A good example is the
-&lt;code&gt;\code{}&lt;/code&gt; command, which in all cases has something that is not
+&lt;code class=&quot;highlighter-rouge&quot;&gt;\code{}&lt;/code&gt; command, which in all cases has something that is not
 an English word. You may also have commands with multiple arguments,
-in which case you say something like &lt;code&gt;--ignore=code:op&lt;/code&gt; and in the
-command &lt;code&gt;\code[foo]{bar}&lt;/code&gt; both &lt;code&gt;foo&lt;/code&gt; and &lt;code&gt;bar&lt;/code&gt; will be ignored.
-The &lt;code&gt;:op&lt;/code&gt; suffix means that an optional (&lt;code&gt;o&lt;/code&gt;) argument is ignored and then
-a mandatory one (&lt;code&gt;p&lt;/code&gt;). Something like &lt;code&gt;:oppp&lt;/code&gt; would tell aspell
+in which case you say something like &lt;code class=&quot;highlighter-rouge&quot;&gt;--ignore=code:op&lt;/code&gt; and in the
+command &lt;code class=&quot;highlighter-rouge&quot;&gt;\code[foo]{bar}&lt;/code&gt; both &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; will be ignored.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;:op&lt;/code&gt; suffix means that an optional (&lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt;) argument is ignored and then
+a mandatory one (&lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt;). Something like &lt;code class=&quot;highlighter-rouge&quot;&gt;:oppp&lt;/code&gt; would tell aspell
 to ignore one optional and then three mandatory arguments.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code&gt;--min-word-length&lt;/code&gt; is the minimum length of word to pay attention to.
-I use the number &lt;code&gt;3&lt;/code&gt; and this is the default value. Shorter words (one or two characters)
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--min-word-length&lt;/code&gt; is the minimum length of word to pay attention to.
+I use the number &lt;code class=&quot;highlighter-rouge&quot;&gt;3&lt;/code&gt; and this is the default value. Shorter words (one or two characters)
 are not important and don’t need to be spell-checked.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I use &lt;code&gt;texsc&lt;/code&gt; in all my LaTeX projects, usually as part of their
+&lt;p&gt;I use &lt;code class=&quot;highlighter-rouge&quot;&gt;texsc&lt;/code&gt; in all my LaTeX projects, usually as part of their
 build cycle, which I automate with &lt;a href=&quot;https://www.gnu.org/software/make/&quot;&gt;GNU make&lt;/a&gt;.
-You can do the same, as it’s open source.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html">Do you use LaTeX for your academic and technical writings? You don’t? Well you should! It’s the most only professional instrument for making properly formatted PDF documents. MS Word and Apple Pages are for secretaries non-tech people, while LaTeX is serious. It’s perfect in so many ways, thanks to Donald Knuth (the creator of TeX) and Leslie Lamport (the author of LaTeX), but it lacks one very convenient feature: spell checking. The only solution I’ve found so far, which works perfectly for my documents, is GNU aspell.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/zero-2.jpg" /></entry><entry><title type="html">Open Source Etiquette</title><link href="https://www.yegor256.com/2020/07/29/open-source-etiquette.html" rel="alternate" type="text/html" title="Open Source Etiquette" /><published>2020-07-29T00:00:00+00:00</published><updated>2020-07-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/07/29/open-source-etiquette</id><content type="html" xml:base="https://www.yegor256.com/2020/07/29/open-source-etiquette.html">&lt;p&gt;Here is a short list of common courtesy rules for open source
+You can do the same, as it’s open source.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html">Do you use LaTeX for your academic and technical writings? You don’t? Well you should! It’s the most only professional instrument for making properly formatted PDF documents. MS Word and Apple Pages are for secretaries non-tech people, while LaTeX is serious. It’s perfect in so many ways, thanks to Donald Knuth (the creator of TeX) and Leslie Lamport (the author of LaTeX), but it lacks one very convenient feature: spell checking. The only solution I’ve found so far, which works perfectly for my documents, is GNU aspell.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/zero-2.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/zero-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Open Source Etiquette</title><link href="https://www.yegor256.com/2020/07/29/open-source-etiquette.html" rel="alternate" type="text/html" title="Open Source Etiquette" /><published>2020-07-29T00:00:00+00:00</published><updated>2020-07-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/07/29/open-source-etiquette</id><content type="html" xml:base="https://www.yegor256.com/2020/07/29/open-source-etiquette.html">&lt;p&gt;Here is a short list of common courtesy rules for open source
 software development. Actually, they apply elsewhere also, but they are most
 visible when you do GitHub-based coding. I strongly believe that
 sooner or later all programming will be open source and these rules
@@ -614,7 +614,7 @@ and
 &lt;p&gt;&lt;strong&gt;Use &lt;a href=&quot;https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax&quot;&gt;Nice&lt;/a&gt;
 &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;Markdown&lt;/a&gt; in Your Docs&lt;/strong&gt;.
 I didn’t manage to find any scientific research on this, maybe because it’s
-obvious: the text “why is &lt;code&gt;f&lt;/code&gt; &lt;code&gt;nil&lt;/code&gt;?” is much easier to read than “why is f nil?”
+obvious: the text “why is &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;?” is much easier to read than “why is f nil?”
 Rich text formatting not only makes the text look nicer, but also helps
 readers digest the content faster and with more pleasure. After you learn Markdown,
 I’d suggest reading this blog post by Aaron Stannard from PetaBridge:
@@ -676,14 +676,14 @@ quickly training your reporting skills.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Make Elegant READMEs&lt;/strong&gt;.
 I wrote about this &lt;a href=&quot;/2019/04/23/elegant-readme.html&quot;&gt;before&lt;/a&gt;:
 the importance of a perfectly written and formatted
-&lt;code&gt;README&lt;/code&gt; file in an open source project is difficult to overemphasize.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;README&lt;/code&gt; file in an open source project is difficult to overemphasize.
 Writing good code is important, but presenting it is part of online
 etiquette: high-quality documentation means respect to the users
 of your products.&lt;/p&gt;
 
 &lt;p&gt;This seems to be it. If you do all of these, you will demonstrate
 respect to other developers and they will respect you in return.
-Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Here is a short list of common courtesy rules for open source software development. Actually, they apply elsewhere also, but they are most visible when you do GitHub-based coding. I strongly believe that sooner or later all programming will be open source and these rules will apply to everybody. Consequently, it makes sense to start following them now, whether you are an active Apache contributor or a happy owner of the “Java for Dummies” book.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" /></entry><entry><title type="html">To Measure or Not to Measure</title><link href="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html" rel="alternate" type="text/html" title="To Measure or Not to Measure" /><published>2020-06-23T00:00:00+00:00</published><updated>2020-06-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/06/23/individual-performance-metrics</id><content type="html" xml:base="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html">&lt;p&gt;The question &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/26596/metric-by-which-to-hold-developers-accountable&quot;&gt;was asked&lt;/a&gt;
+Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Here is a short list of common courtesy rules for open source software development. Actually, they apply elsewhere also, but they are most visible when you do GitHub-based coding. I strongly believe that sooner or later all programming will be open source and these rules will apply to everybody. Consequently, it makes sense to start following them now, whether you are an active Apache contributor or a happy owner of the “Java for Dummies” book.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">To Measure or Not to Measure</title><link href="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html" rel="alternate" type="text/html" title="To Measure or Not to Measure" /><published>2020-06-23T00:00:00+00:00</published><updated>2020-06-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/06/23/individual-performance-metrics</id><content type="html" xml:base="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html">&lt;p&gt;The question &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/26596/metric-by-which-to-hold-developers-accountable&quot;&gt;was asked&lt;/a&gt;
 on StackExchange nine years ago (just around
 the time the site was launched): “If not
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Source_lines_of_code&quot;&gt;lines of code&lt;/a&gt;, then what is
@@ -903,7 +903,7 @@ find the way out.&lt;/p&gt;
 &lt;p&gt;Which one are you?&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Is there a metric to measure programmers&amp;#39; performance objectively?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1284853509540712455?ref_src=twsrc%5Etfw&quot;&gt;July 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">The question was asked on StackExchange nine years ago (just around the time the site was launched): “If not lines of code, then what is a good metric by which to measure the effectiveness of remote programmers.” The answers, not surprisingly, were all along this line: programmers are not supposed to be measured! I bet those who answered were programmers themselves. Indeed, why would a programmer be interested in being measured and being reduced to a mere number?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/06/better-call-saul.jpg" /></entry><entry><title type="html">Veil Objects to Replace DTOs</title><link href="https://www.yegor256.com/2020/05/19/veil-objects.html" rel="alternate" type="text/html" title="Veil Objects to Replace DTOs" /><published>2020-05-19T00:00:00+00:00</published><updated>2020-05-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/19/veil-objects</id><content type="html" xml:base="https://www.yegor256.com/2020/05/19/veil-objects.html">&lt;p&gt;Here is a new idea I discovered just a few days ago while working
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">The question was asked on StackExchange nine years ago (just around the time the site was launched): “If not lines of code, then what is a good metric by which to measure the effectiveness of remote programmers.” The answers, not surprisingly, were all along this line: programmers are not supposed to be measured! I bet those who answered were programmers themselves. Indeed, why would a programmer be interested in being measured and being reduced to a mere number?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/06/better-call-saul.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/06/better-call-saul.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Veil Objects to Replace DTOs</title><link href="https://www.yegor256.com/2020/05/19/veil-objects.html" rel="alternate" type="text/html" title="Veil Objects to Replace DTOs" /><published>2020-05-19T00:00:00+00:00</published><updated>2020-05-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/19/veil-objects</id><content type="html" xml:base="https://www.yegor256.com/2020/05/19/veil-objects.html">&lt;p&gt;Here is a new idea I discovered just a few days ago while working
 with &lt;a href=&quot;https://github.com/yegor256/codexia&quot;&gt;Codexia&lt;/a&gt;,
 a Ruby web app. I had to fetch data rows from PostgreSQL and return
 objects to the client. It’s always been a problem for me, how to do that
@@ -916,71 +916,71 @@ a name: Veil Objects.&lt;/p&gt;
 
 &lt;p&gt;Let’s say I fetch the list of projects from PostgreSQL:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Projects&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Projects&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;
-    &lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;SELECT * FROM project&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'SELECT * FROM project'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The method &lt;code&gt;exec()&lt;/code&gt; on &lt;code&gt;@pgsql&lt;/code&gt; (I’m using the &lt;a href=&quot;https://rubygems.org/gems/pgtk&quot;&gt;pgtk&lt;/a&gt; gem)
+&lt;p&gt;The method &lt;code class=&quot;highlighter-rouge&quot;&gt;exec()&lt;/code&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;@pgsql&lt;/code&gt; (I’m using the &lt;a href=&quot;https://rubygems.org/gems/pgtk&quot;&gt;pgtk&lt;/a&gt; gem)
 returns an array of &lt;a href=&quot;https://ruby-doc.org/core-2.7.0/Hash.html&quot;&gt;Hashes&lt;/a&gt;,
 which look like this, if we convert them to JSON:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;span&gt;&lt;/span&gt;[
-  {&amp;quot;id&amp;quot;: 1, &amp;quot;name&amp;quot;: &amp;quot;foo&amp;quot;, &amp;quot;author&amp;quot;: &amp;quot;yegor256&amp;quot;},
-  {&amp;quot;id&amp;quot;: 2, &amp;quot;name&amp;quot;: &amp;quot;bar&amp;quot;, &amp;quot;author&amp;quot;: &amp;quot;yegor256&amp;quot;},
-  {&amp;quot;id&amp;quot;: 3, &amp;quot;name&amp;quot;: &amp;quot;zoo&amp;quot;, &amp;quot;author&amp;quot;: &amp;quot;yegor256&amp;quot;}
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[
+  {&quot;id&quot;: 1, &quot;name&quot;: &quot;foo&quot;, &quot;author&quot;: &quot;yegor256&quot;},
+  {&quot;id&quot;: 2, &quot;name&quot;: &quot;bar&quot;, &quot;author&quot;: &quot;yegor256&quot;},
+  {&quot;id&quot;: 3, &quot;name&quot;: &quot;zoo&quot;, &quot;author&quot;: &quot;yegor256&quot;}
 ]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;It would be great to make the method &lt;code&gt;fetch()&lt;/code&gt; return an array
-of objects, not an array of Hashes. So my class &lt;code&gt;Project&lt;/code&gt; looks like this:&lt;/p&gt;
+&lt;p&gt;It would be great to make the method &lt;code class=&quot;highlighter-rouge&quot;&gt;fetch()&lt;/code&gt; return an array
+of objects, not an array of Hashes. So my class &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt; looks like this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Project&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Project&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;
     &lt;span class=&quot;vi&quot;&gt;@id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s1&quot;&gt;&amp;#39;SELECT name FROM project WHERE id=$1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;'SELECT name FROM project WHERE id=$1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;author&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;s1&quot;&gt;&amp;#39;SELECT author FROM project WHERE id=$1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;'SELECT author FROM project WHERE id=$1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'author'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;It’s perfectly designed for single-project manipulations:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;author&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Two SQL requests here is not a big deal. However, if I convert
 the list of Hashes to Projects like this, I will have serious
 performance problems:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Projects&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Projects&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;
-    &lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;SELECT * FROM project&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'SELECT * FROM project'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is what will kill me, performance-wise:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;projects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetch&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is created by &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;projects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; is created by &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This code will generate too many redundant SQL requests. We will do round-trips
 to PostgreSQL to fetch the data we had a few milliseconds ago, while
-we were doing &lt;code&gt;SELECT * FROM project&lt;/code&gt;.&lt;/p&gt;
+we were doing &lt;code class=&quot;highlighter-rouge&quot;&gt;SELECT * FROM project&lt;/code&gt;.&lt;/p&gt;
 
 &lt;aside class=&quot;youtube&quot;&gt;
         &lt;a href=&quot;https://www.youtube.com/watch?v=nErn5G_JHhE&quot;&gt;&lt;div class=&quot;box&quot;&gt;
@@ -991,8 +991,8 @@ we were doing &lt;code&gt;SELECT * FROM project&lt;/code&gt;.&lt;/p&gt;
         5 August 2020.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;The easiest and the most obvious solution, which many of you might suggest,
-is to encapsulate the retrieved Hash into the &lt;code&gt;Project&lt;/code&gt; object. In other
-words, turn &lt;code&gt;Project&lt;/code&gt; into a &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTO&lt;/a&gt;,
+is to encapsulate the retrieved Hash into the &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt; object. In other
+words, turn &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt; into a &lt;a href=&quot;/2016/07/06/data-transfer-object.html&quot;&gt;DTO&lt;/a&gt;,
 a holder of data. Well, in this case we might
 not even need an object, but can instead return the Hash with the data. But
 this is not how we want our object-oriented software to be designed. We want
@@ -1000,28 +1000,28 @@ to deal with objects, not data structures. And, at the same time, we don’t wan
 be stupid enough to go back to the database for the same data we had
 a second ago. Here is the solution I’m proposing:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;veils&amp;#39;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'veils'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Projects&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;
-    &lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;SELECT * FROM project&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-      &lt;span class=&quot;no&quot;&gt;Veil&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;no&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;ss&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'SELECT * FROM project'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;no&quot;&gt;Veil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;no&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@pgsql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;name: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;ss&quot;&gt;author: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'author'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This new &lt;code&gt;Veil&lt;/code&gt; object from &lt;a href=&quot;https://rubygems.org/gems/veils&quot;&gt;veils gem&lt;/a&gt;
-is a decorator of &lt;code&gt;Project&lt;/code&gt;. It behaves like
-a &lt;code&gt;Project&lt;/code&gt;, but some of the methods on it are redefined: &lt;code&gt;name()&lt;/code&gt; and &lt;code&gt;author()&lt;/code&gt;.
-When they are called, the calls won’t reach the encapsulated &lt;code&gt;Project&lt;/code&gt;.
-Instead, the data stored in the &lt;code&gt;Veil&lt;/code&gt; will be returned.&lt;/p&gt;
+&lt;p&gt;This new &lt;code class=&quot;highlighter-rouge&quot;&gt;Veil&lt;/code&gt; object from &lt;a href=&quot;https://rubygems.org/gems/veils&quot;&gt;veils gem&lt;/a&gt;
+is a decorator of &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt;. It behaves like
+a &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt;, but some of the methods on it are redefined: &lt;code class=&quot;highlighter-rouge&quot;&gt;name()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;author()&lt;/code&gt;.
+When they are called, the calls won’t reach the encapsulated &lt;code class=&quot;highlighter-rouge&quot;&gt;Project&lt;/code&gt;.
+Instead, the data stored in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Veil&lt;/code&gt; will be returned.&lt;/p&gt;
 
 &lt;p&gt;It is called a “veil” because it acts like one: the preset data is
 returned only until some other method is called, which was not preset.
-If this happens, the veil is pierced and the &lt;code&gt;Veil&lt;/code&gt; object becomes fully
+If this happens, the veil is pierced and the &lt;code class=&quot;highlighter-rouge&quot;&gt;Veil&lt;/code&gt; object becomes fully
 transparent, sending all method calls through.&lt;/p&gt;
 
 &lt;p&gt;Thus the efficiency of DTO is combined with the elegance of OOP.&lt;/p&gt;
@@ -1030,13 +1030,13 @@ transparent, sending all method calls through.&lt;/p&gt;
 &lt;a href=&quot;https://github.com/yegor256/codexia&quot;&gt;yegor256/codexia&lt;/a&gt;,
 so you can see how they work.&lt;/p&gt;
 
-&lt;p&gt;P.S. I also create an &lt;code&gt;Unpiercable&lt;/code&gt; class, which acts exactly like a &lt;code&gt;Veil&lt;/code&gt;,
+&lt;p&gt;P.S. I also create an &lt;code class=&quot;highlighter-rouge&quot;&gt;Unpiercable&lt;/code&gt; class, which acts exactly like a &lt;code class=&quot;highlighter-rouge&quot;&gt;Veil&lt;/code&gt;,
 but can never be pierced. It is very useful, when you don’t expect any
 data-modifying interactions to happen with the object and just want some
 of its methods to be pre-calculated.&lt;/p&gt;
 
 &lt;p&gt;P.P.S. This is the implementation for
-&lt;a href=&quot;https://github.com/binkley/kotlin-veil&quot;&gt;Kotlin&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="ruby" /><summary type="html">Here is a new idea I discovered just a few days ago while working with Codexia, a Ruby web app. I had to fetch data rows from PostgreSQL and return objects to the client. It’s always been a problem for me, how to do that without turning objects into DTOs. Here is the solution I found and gave a name: Veil Objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/constantine.jpg" /></entry><entry><title type="html">EO the Career Killer</title><link href="https://www.yegor256.com/2020/05/13/career-killer.html" rel="alternate" type="text/html" title="EO the Career Killer" /><published>2020-05-13T00:00:00+00:00</published><updated>2020-05-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/13/career-killer</id><content type="html" xml:base="https://www.yegor256.com/2020/05/13/career-killer.html">&lt;p&gt;It’s time to answer one of the most popular questions I hear from junior
+&lt;a href=&quot;https://github.com/binkley/kotlin-veil&quot;&gt;Kotlin&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="ruby" /><summary type="html">Here is a new idea I discovered just a few days ago while working with Codexia, a Ruby web app. I had to fetch data rows from PostgreSQL and return objects to the client. It’s always been a problem for me, how to do that without turning objects into DTOs. Here is the solution I found and gave a name: Veil Objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/constantine.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/05/constantine.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">EO the Career Killer</title><link href="https://www.yegor256.com/2020/05/13/career-killer.html" rel="alternate" type="text/html" title="EO the Career Killer" /><published>2020-05-13T00:00:00+00:00</published><updated>2020-05-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/13/career-killer</id><content type="html" xml:base="https://www.yegor256.com/2020/05/13/career-killer.html">&lt;p&gt;It’s time to answer one of the most popular questions I hear from junior
 programmers when they meet me at a software conference or online: What is
 the point of studying &lt;a href=&quot;https://www.elegantobjects.org&quot;&gt;Elegant Objects&lt;/a&gt;
 (the new object-oriented paradigm I’ve been preaching for the last five years)
@@ -1161,4 +1161,4 @@ most complex actions you can take.&lt;/p&gt;
 &lt;p&gt;Don’t be scared, act!&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do you use the principles of &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; in your project?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1274792685681901571?ref_src=twsrc%5Etfw&quot;&gt;June 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">It’s time to answer one of the most popular questions I hear from junior programmers when they meet me at a software conference or online: What is the point of studying Elegant Objects (the new object-oriented paradigm I’ve been preaching for the last five years) if almost nobody is using it on real projects? Why swim against the current and learn something that may only harm my career, even if it does seem like a sound technical concept? Where is the profit in making myself an outsider? These are good questions; thanks for asking them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/dog-day-afternoon.jpg" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">It’s time to answer one of the most popular questions I hear from junior programmers when they meet me at a software conference or online: What is the point of studying Elegant Objects (the new object-oriented paradigm I’ve been preaching for the last five years) if almost nobody is using it on real projects? Why swim against the current and learn something that may only harm my career, even if it does seem like a sound technical concept? Where is the profit in making myself an outsider? These are good questions; thanks for asking them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/dog-day-afternoon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/05/dog-day-afternoon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

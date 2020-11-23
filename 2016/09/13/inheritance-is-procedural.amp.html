@@ -91,7 +91,7 @@ I interviewed <a href="http://davewest.us/">David West</a>
 (the author of <a href="http://amzn.to/266oJr4">Object Thinking</a>, my favorite book about OOP)
 a few weeks ago, and he said that inheritance should not exist in
 object-oriented programming at all (<a href="https://www.youtube.com/watch?v=s-hdZZzMCac">full video</a>).
-Maybe Dr. West is right and we should totally forget <code>extends</code> keyword in Java,
+Maybe Dr. West is right and we should totally forget <code class="highlighter-rouge">extends</code> keyword in Java,
 for example.</p>
 
 
@@ -115,7 +115,7 @@ is what inheritance inventors in <a href="https://en.wikipedia.org/wiki/Simula">
 <a href="https://en.wikipedia.org/wiki/Subtyping">subtyping</a>.
 It perfectly fits into OOP and actually enables
 <a href="https://en.wikipedia.org/wiki/Polymorphism_%28computer_science%29">polymorphism</a>:
-An object of class <code>Article</code> inherits all characteristics of objects in class <code>Manuscript</code>
+An object of class <code class="highlighter-rouge">Article</code> inherits all characteristics of objects in class <code class="highlighter-rouge">Manuscript</code>
 and adds its own. For example, it <em>inherits</em> an ability to print itself
 and <em>adds</em> an ability to submit itself to a conference:</p>
 
@@ -128,7 +128,7 @@ interface Article extends Manuscript {
 
 <p>This is <em>subtyping</em>, and it’s a perfect technique; whenever a
 manuscript is required, we can provide an article and nobody will
-notice anything, because type <code>Article</code> is a subtype of type <code>Manuscript</code>
+notice anything, because type <code class="highlighter-rouge">Article</code> is a subtype of type <code class="highlighter-rouge">Manuscript</code>
 (<a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov substitution principle</a>).</p>
 
 <p>But what does <em>copying</em> methods and attributes from a parent class to a child
@@ -155,8 +155,8 @@ class Article extends Manuscript {
   }
 }</pre>
 
-<p>Class <code>Article</code> <em>copies</em> method <code>print()</code> and attribute <code>body</code>
-from class <code>Manuscript</code>, as if it’s not a
+<p>Class <code class="highlighter-rouge">Article</code> <em>copies</em> method <code class="highlighter-rouge">print()</code> and attribute <code class="highlighter-rouge">body</code>
+from class <code class="highlighter-rouge">Manuscript</code>, as if it’s not a
 <a href="/2014/11/20/seven-virtues-of-good-object.html">living organism</a>, but rather a dead
 one from which we can inherit its parts, “money, properties, or a title.”</p>
 

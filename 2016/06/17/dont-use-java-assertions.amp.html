@@ -94,7 +94,7 @@ is our code:</p>
   }
 }</pre>
 
-<p>Save this code to <code>Main.java</code> and compile:</p>
+<p>Save this code to <code class="highlighter-rouge">Main.java</code> and compile:</p>
 
 <pre>$ javac Main.java</pre>
 
@@ -104,7 +104,7 @@ is our code:</p>
 Hello, world!</pre>
 
 <p>The assertion wasn’t triggered. It was ignored. Now run it with an
-<code>-enableassertions</code> flag:</p>
+<code class="highlighter-rouge">-enableassertions</code> flag:</p>
 
 <pre>$ java -enableassertions Main
 Exception in thread "main" java.lang.AssertionError: There is a problem
@@ -114,10 +114,10 @@ Exception in thread "main" java.lang.AssertionError: There is a problem
 will always be thrown, while assertions are not enabled by default. They are
 supposed to be turned on during testing and turned off in production.
 The assertion caused the runtime exception
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html"><code>AssertionError</code></a>. But hold on; it’s
-not a <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html"><code>RuntimeException</code></a>. It extends
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html"><code>Error</code></a> class,
-which extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html"><code>Throwable</code></a>.
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html"><code class="highlighter-rouge">AssertionError</code></a>. But hold on; it’s
+not a <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html"><code class="highlighter-rouge">RuntimeException</code></a>. It extends
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html"><code class="highlighter-rouge">Error</code></a> class,
+which extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html"><code class="highlighter-rouge">Throwable</code></a>.
 This is the second difference. I don’t know of any other differences.</p>
 
 <p>I would recommend <em>not</em> to use assertions … ever. Simply because I strongly

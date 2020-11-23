@@ -111,7 +111,7 @@ front page:</p>
 <pre>String html = new Page("http://www.google.com").html();</pre>
 
 <p>Everything is fine until we start making this class more powerful.
-Let’s say we want to configure the encoding. We don’t always want to use <code>"UTF-8"</code>.
+Let’s say we want to configure the encoding. We don’t always want to use <code class="highlighter-rouge">"UTF-8"</code>.
 We want it to be configurable. Here is what we do:</p>
 
 <pre>class Page {
@@ -131,7 +131,7 @@ We want it to be configurable. Here is what we do:</p>
 
 <p>Done, the encoding is encapsulated and configurable. Now, let’s say we
 want to change the behavior of the class for the situation of an empty
-page. If an empty page is loaded, we want to return <code>"&lt;html/&gt;"</code>. But not
+page. If an empty page is loaded, we want to return <code class="highlighter-rouge">"<span class="nt">&lt;html/&gt;</span>"</code>. But not
 always. We want this to be configurable. Here is what we do:</p>
 
 <pre>class Page {
@@ -197,7 +197,7 @@ supported on the current platform:</p>
 }</pre>
 
 <p>The class is growing and becoming more and more powerful! Now it’s time
-to introduce a new class, which we will call <code>PageSettings</code>:</p>
+to introduce a new class, which we will call <code class="highlighter-rouge">PageSettings</code>:</p>
 
 <pre>class Page {
   private final String uri;
@@ -226,17 +226,17 @@ to introduce a new class, which we will call <code>PageSettings</code>:</p>
   }
 }</pre>
 
-<p>Class <code>PageSettings</code> is basically a holder of parameters, without any
+<p>Class <code class="highlighter-rouge">PageSettings</code> is basically a holder of parameters, without any
 behavior. It has getters, which give us access to the parameters:
-<code>isEncodeAnyway()</code>, <code>isAlwaysHtml()</code>, and <code>getEncoding()</code>. If we keep
+<code class="highlighter-rouge">isEncodeAnyway()</code>, <code class="highlighter-rouge">isAlwaysHtml()</code>, and <code class="highlighter-rouge">getEncoding()</code>. If we keep
 going in this direction, there could be a few dozen configuration settings
 in that class. This may look very convenient and
 is a very typical pattern in Java world. For example,
 look at
-<a href="https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html"><code>JobConf</code></a>
+<a href="https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapred/JobConf.html"><code class="highlighter-rouge">JobConf</code></a>
 from Hadoop.
-This is how we will call our highly configurable <code>Page</code>
-(I’m assuming <code>PageSettings</code> is immutable):</p>
+This is how we will call our highly configurable <code class="highlighter-rouge">Page</code>
+(I’m assuming <code class="highlighter-rouge">PageSettings</code> is immutable):</p>
 
 <pre>String html = new Page(
   "http://www.google.com",
@@ -260,8 +260,8 @@ Or, more technically, encapsulated properties must not be used to
 change the behavior of an object.</p>
 
 <p>Object properties are there only to coordinate the location
-of a real-world entity, which the object is representing. The <code>uri</code> is the
-coordinate, while the <code>alwaysHtml</code> boolean property is a behavior changing
+of a real-world entity, which the object is representing. The <code class="highlighter-rouge">uri</code> is the
+coordinate, while the <code class="highlighter-rouge">alwaysHtml</code> boolean property is a behavior changing
 trigger. See the difference?</p>
 
 <p>So, what should we do instead? What is the right design? We must
@@ -276,7 +276,7 @@ String html = new AlwaysTextPage(
   page
 ).html();</pre>
 
-<p>Here is how our <code>DefaultPage</code> would look (yes, I had to change
+<p>Here is how our <code class="highlighter-rouge">DefaultPage</code> would look (yes, I had to change
 its design a bit):</p>
 
 <pre>class DefaultPage implements Page {
@@ -292,8 +292,8 @@ its design a bit):</p>
   }
 }</pre>
 
-<p>As you see, I’m making it implement interface <code>Page</code>.
-Now <code>TextPage</code> decorator, which converts an array of bytes to a text using
+<p>As you see, I’m making it implement interface <code class="highlighter-rouge">Page</code>.
+Now <code class="highlighter-rouge">TextPage</code> decorator, which converts an array of bytes to a text using
 provided encoding:</p>
 
 <pre>class TextPage {
@@ -311,7 +311,7 @@ provided encoding:</p>
   }
 }</pre>
 
-<p>Now the <code>NeverEmptyPage</code>:</p>
+<p>Now the <code class="highlighter-rouge">NeverEmptyPage</code>:</p>
 
 <pre>class NeverEmptyPage implements Page {
   private final Page origin;
@@ -328,7 +328,7 @@ provided encoding:</p>
   }
 }</pre>
 
-<p>And finally the <code>AlwaysTextPage</code>:</p>
+<p>And finally the <code class="highlighter-rouge">AlwaysTextPage</code>:</p>
 
 <pre>class AlwaysTextPage {
   private final TextPage origin;
@@ -348,8 +348,8 @@ provided encoding:</p>
   }
 }</pre>
 
-<p>You may say that <code>AlwaysTextPage</code> will make two calls to the encapsulated
-<code>origin</code>, in case of an unsupported encoding, which will lead to a duplicated
+<p>You may say that <code class="highlighter-rouge">AlwaysTextPage</code> will make two calls to the encapsulated
+<code class="highlighter-rouge">origin</code>, in case of an unsupported encoding, which will lead to a duplicated
 HTTP request. That’s true and this is by design. We don’t want this
 duplicated HTTP roundtrip to happen. Let’s introduce one more class,
 which will cache the page fetched (
@@ -371,7 +371,7 @@ which will cache the page fetched (
   }
 }</pre>
 
-<p>Now, our code should look like this (pay attention, I’m now using <code>OncePage</code>):</p>
+<p>Now, our code should look like this (pay attention, I’m now using <code class="highlighter-rouge">OncePage</code>):</p>
 
 <pre>Page page = new NeverEmptyPage(
   new OncePage(

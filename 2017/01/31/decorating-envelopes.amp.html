@@ -80,7 +80,7 @@ ability to do it more succinctly.
 interface by making an instance of another class. Sound weird? Let me show
 you an example. There are many classes of that kind in the
 <a href="http://www.takes.org">Takes Framework</a>,
-and they all are named like <code>*Wrap</code>. It’s a convenient design concept that,
+and they all are named like <code class="highlighter-rouge">*Wrap</code>. It’s a convenient design concept that,
 unfortunately, looks rather verbose in Java. It would be great to have something
 shorter, like in <a href="http://www.eolang.org">EO</a> for example.</p>
 
@@ -89,7 +89,7 @@ shorter, like in <a href="http://www.eolang.org">EO</a> for example.</p>
 <amp-img src="/images/2017/01/north-by-northwest.jpg" alt="North by Northwest (1959) by Alfred Hitchcock" height="717" width="1280" layout="responsive"></amp-img>
 
 <p>Take a look at
-<a href="https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java"><code>RsHtml</code></a>
+<a href="https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java"><code class="highlighter-rouge">RsHtml</code></a>
 from <a href="http://www.takes.org">Takes Framework</a>. Its design looks
 like this (a simplified version with only one primary constructor):</p>
 
@@ -105,7 +105,7 @@ like this (a simplified version with only one primary constructor):</p>
 }</pre>
 
 <p>Now, let’s take a look at that
-<a href="https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsWrap.java"><code>RsWrap</code></a>
+<a href="https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsWrap.java"><code class="highlighter-rouge">RsWrap</code></a>
 it extends:</p>
 
 <pre>public class RsWrap implements Response {
@@ -124,10 +124,10 @@ it extends:</p>
 }</pre>
 
 <p>As you see, this “decorator” doesn’t do anything except “just decorating.”
-It encapsulates another <code>Response</code> and passes through all method calls.</p>
+It encapsulates another <code class="highlighter-rouge">Response</code> and passes through all method calls.</p>
 
-<p>If it’s not clear yet, I’ll explain the purpose of <code>RsHtml</code>. Let’s
-say you have text and you want to create a <code>Response</code>:</p>
+<p>If it’s not clear yet, I’ll explain the purpose of <code class="highlighter-rouge">RsHtml</code>. Let’s
+say you have text and you want to create a <code class="highlighter-rouge">Response</code>:</p>
 
 <pre>String text = // you have it already
 Response response = new RsWithType(
@@ -137,17 +137,17 @@ Response response = new RsWithType(
 
 <p>Instead of doing this
 <a href="/2015/02/26/composable-decorators.html">composition of decorators</a>
-over and over again in many places, you use <code>RsHtml</code>:</p>
+over and over again in many places, you use <code class="highlighter-rouge">RsHtml</code>:</p>
 
 <pre>String text = // you have it already
 Response response = new RsHtml(text);</pre>
 
-<p>It is very convenient, but that <code>RsWrap</code> is very verbose. There are too many
+<p>It is very convenient, but that <code class="highlighter-rouge">RsWrap</code> is very verbose. There are too many
 lines that don’t do anything special; they just forward all method
-calls to the encapsulated <code>Response</code>.</p>
+calls to the encapsulated <code class="highlighter-rouge">Response</code>.</p>
 
 <p>How about we introduce a new concept, “decorators,” with a new
-keyword, <code>decorates</code>:</p>
+keyword, <code class="highlighter-rouge">decorates</code>:</p>
 
 <pre>class RsHtml decorates Response {
   RsHtml(final String text) {

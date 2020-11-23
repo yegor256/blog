@@ -78,13 +78,13 @@ and maintain; this principle may improve them.
       <p>Many articles and books have already been written about unit testing patterns
 and anti-patterns. I want to add one more recommendation which, I believe,
 can help us make our tests, <em>and</em> our production code, more <em>object-oriented</em>.
-Here it is: a test method must contain nothing but a single <code>assert</code>.</p>
+Here it is: a test method must contain nothing but a single <code class="highlighter-rouge">assert</code>.</p>
 
 
 
 <amp-img src="/images/2017/05/bullet.jpg" alt="Bullet (1996) by Julien Temple" height="924" width="1670" layout="responsive"></amp-img>
 
-<p>Look at this test method from <code>RandomStreamTest</code> from OpenJDK 8,
+<p>Look at this test method from <code class="highlighter-rouge">RandomStreamTest</code> from OpenJDK 8,
 created by Brian Goetz:</p>
 
 <pre>@Test
@@ -102,7 +102,7 @@ public void testIntStream() {
 
 <p>There are two parts in this method: the algorithm and the assertion. The
 algorithm prepares two arrays of integers and the assertion compares them
-and throws <code>AssertionError</code> if they are not equal.</p>
+and throws <code class="highlighter-rouge">AssertionError</code> if they are not equal.</p>
 
 
 
@@ -147,10 +147,10 @@ public void testIntStream() {
   );
 }</pre>
 
-<p>As you can see, there is only one “statement” in this method: <code>assertEquals()</code>.</p>
+<p>As you can see, there is only one “statement” in this method: <code class="highlighter-rouge">assertEquals()</code>.</p>
 
 <p><a href="http://hamcrest.org/">Hamcrest</a> with its
-<a href="http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/org/hamcrest/MatcherAssert.html"><code>assertThat()</code></a>
+<a href="http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/org/hamcrest/MatcherAssert.html"><code class="highlighter-rouge">assertThat()</code></a>
 and its
 <a href="http://hamcrest.org/JavaHamcrest/javadoc/2.0.0.0/allclasses-frame.html">collection</a>
 of basic matchers is a perfect instrument to make our
@@ -165,17 +165,17 @@ agree to follow it:</p>
   <li>
     <p><strong>Reusability</strong>. The classes we will have to create for test
 assertions will be reusable in other test methods and test cases.
-Just as, in the example above, <code>ArrayFromRandom</code> could be used
+Just as, in the example above, <code class="highlighter-rouge">ArrayFromRandom</code> could be used
 somewhere else. Similarly, Hamcrest matchers may and will constitute
 a library of reusable test components.</p>
   </li>
   <li>
     <p><strong>Brevity</strong>. Since it will be rather difficult to create a long
-test method when it only has a single <code>assert</code>, you and your fellow programmers
+test method when it only has a single <code class="highlighter-rouge">assert</code>, you and your fellow programmers
 will inevitably write shorter and more readable code.</p>
   </li>
   <li>
-    <p><strong>Readability</strong>. With a single <code>assert</code> it will always be obvious
+    <p><strong>Readability</strong>. With a single <code class="highlighter-rouge">assert</code> it will always be obvious
 what the intent of the test method is. It will start with the intent
 declaration while all other lower level details will be indented.</p>
   </li>
@@ -185,7 +185,7 @@ declaration while all other lower level details will be indented.</p>
 production code if test methods have no place for algorithmic code. You
 inevitably will create
 <a href="/2014/06/09/objects-should-be-immutable.html">immutable objects</a>
-to make them testable with a single <code>assert</code>.</p>
+to make them testable with a single <code class="highlighter-rouge">assert</code>.</p>
   </li>
 </ul>
 

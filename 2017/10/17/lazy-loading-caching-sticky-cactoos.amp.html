@@ -98,7 +98,7 @@ System.out.println(enc.asString());</pre>
 <p>Now let’s implement it, in a very primitive way, with one
 <a href="/2015/05/28/one-primary-constructor.html">primary</a>
 constructor. The encryption mechanism
-will just add <code>+1</code> to each byte in the incoming data, and will assume that
+will just add <code class="highlighter-rouge">+1</code> to each byte in the incoming data, and will assume that
 the encryption won’t break anything (a very stupid
 assumption, but for the sake of this example it will work):</p>
 
@@ -119,13 +119,13 @@ assumption, but for the sake of this example it will work):</p>
 }</pre>
 
 <p>Looks correct so far? I <a href="https://github.com/yegor256/blog/tree/master/_samples/2017/10/sticky">tested it</a>
-and it works. If the input is <code>"Hello, world!"</code>,
-the output will be <code>"Ifmmp-!xpsme\""</code>.</p>
+and it works. If the input is <code class="highlighter-rouge">"Hello, world!"</code>,
+the output will be <code class="highlighter-rouge">"Ifmmp-!xpsme\""</code>.</p>
 
 <p>Next, let’s say that we want our class to accept an
-<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code>InputStream</code></a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code class="highlighter-rouge">InputStream</code></a>
 as well as a
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code>String</code></a>.
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code class="highlighter-rouge">String</code></a>.
 We want to call it like this, for example:</p>
 
 <pre>Encrypted enc = new Encrypted2(
@@ -211,7 +211,7 @@ trust me. Unfortunately, lazy loading and NULL references always come together i
 <a href="https://stackoverflow.com/a/2192271/187141">classic examples</a>.
 However there is a better way to implement it.
 Let’s refactor our class, this time using
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html"><code>Scalar</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html"><code class="highlighter-rouge">Scalar</code></a>
 from
 <a href="http://www.cactoos.org">Cactoos</a>:</p>
 
@@ -257,7 +257,7 @@ of room for
 <a href="/2014/11/07/how-immutability-helps.html">improvement</a>:
 we can add more constructors which will accept
 other sources of data, for example
-<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html"><code>File</code></a> or a byte array.</p>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html"><code class="highlighter-rouge">File</code></a> or a byte array.</p>
 
 
 
@@ -268,10 +268,10 @@ Java 8). Until we touch that attribute, it’s not loaded. Once we need
 to work with it, the function gets executed and we have the result.</p>
 
 <p>There is one problem with this code though. It will read the input stream
-every time we call <code>asString()</code>, which will obviously not work, since only
+every time we call <code class="highlighter-rouge">asString()</code>, which will obviously not work, since only
 the first time will the stream have the data. On every subsequent call the stream
-will simply be empty. Thus, we need to make sure that <code>this.text.value()</code>
-executes the encapsulated <code>Scalar</code> only once. All later calls must return the
+will simply be empty. Thus, we need to make sure that <code class="highlighter-rouge">this.text.value()</code>
+executes the encapsulated <code class="highlighter-rouge">Scalar</code> only once. All later calls must return the
 previously calculated value. So we need to <em>cache</em> it. Here is how:</p>
 
 <pre>class Encrypted5 implements Encrypted {
@@ -284,18 +284,18 @@ previously calculated value. So we need to <em>cache</em> it. Here is how:</p>
   }
   // same as above in Encrypted4</pre>
 
-<p>This <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html"><code>StickyScalar</code></a>
-will make sure that only the first call to its method <code>value()</code>
-will go through to the encapsulated <code>Scalar</code>. All other calls will receive
+<p>This <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html"><code class="highlighter-rouge">StickyScalar</code></a>
+will make sure that only the first call to its method <code class="highlighter-rouge">value()</code>
+will go through to the encapsulated <code class="highlighter-rouge">Scalar</code>. All other calls will receive
 the result of the first call.</p>
 
 <p>The last problem to solve is about concurrency. The code we have above is not
-thread safe. If I create an instance of <code>Encrypted5</code> and pass it to two threads,
-which call <code>asString()</code> simultaneously, the result will be unpredictable,
+thread safe. If I create an instance of <code class="highlighter-rouge">Encrypted5</code> and pass it to two threads,
+which call <code class="highlighter-rouge">asString()</code> simultaneously, the result will be unpredictable,
 simply because
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html"><code>StickyScalar</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html"><code class="highlighter-rouge">StickyScalar</code></a>
 is not thread-safe. There is another primitive to help us out though, called
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html"><code>SyncScalar</code></a>:</p>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html"><code class="highlighter-rouge">SyncScalar</code></a>:</p>
 
 <pre>class Encrypted5 implements Encrypted {
   private final IoCheckedScalar&lt;String&gt; text;

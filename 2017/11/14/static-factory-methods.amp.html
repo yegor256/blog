@@ -153,7 +153,7 @@ color object with a constructor:</p>
 
 <pre>Color tomato = Color.makeFromPalette(255, 99, 71);</pre>
 
-<p>It seems that <code>makeFromPalette()</code> is semantically richer than just <code>new Color()</code>,
+<p>It seems that <code class="highlighter-rouge">makeFromPalette()</code> is semantically richer than just <code class="highlighter-rouge">new Color()</code>,
 right? Well, yes. Who knows what those three numbers mean if we just pass
 them to the constructor. But the word “palette” helps us figure everything
 out immediately.</p>
@@ -203,7 +203,7 @@ it possible to solve this very problem:</p>
 // ... sometime later
 Color red = Color.makeFromPalette(255, 99, 71);</pre>
 
-<p>Then somewhere inside the <code>Color</code> we keep a private static <code>Map</code> with all the
+<p>Then somewhere inside the <code class="highlighter-rouge">Color</code> we keep a private static <code class="highlighter-rouge">Map</code> with all the
 objects already instantiated:</p>
 
 <pre>class Color {
@@ -222,13 +222,13 @@ objects already instantiated:</p>
 }</pre>
 
 <p>It is very effective performance-wise. With a small object like our
-<code>Color</code> the problem may not be so obvious, but when objects are bigger, their
+<code class="highlighter-rouge">Color</code> the problem may not be so obvious, but when objects are bigger, their
 instantiation and garbage collection may waste a lot of time.</p>
 
 <p>True.</p>
 
 <p>However, there is an object-oriented way to solve this problem. We just
-introduce a new class <code>Palette</code>, which becomes a store of colors:</p>
+introduce a new class <code class="highlighter-rouge">Palette</code>, which becomes a store of colors:</p>
 
 <pre>class Palette {
   private final Map&lt;Integer, Color&gt; colors =
@@ -241,7 +241,7 @@ introduce a new class <code>Palette</code>, which becomes a store of colors:</p>
   }
 }</pre>
 
-<p>Now, we make an instance of <code>Palette</code> once and ask it to return a color
+<p>Now, we make an instance of <code class="highlighter-rouge">Palette</code> once and ask it to return a color
 to us every time we need it:</p>
 
 <pre>Color tomato = palette.take(255, 99, 71);
@@ -252,7 +252,7 @@ Color red = palette.take(255, 99, 71);</pre>
 
 <h2 id="they-can-subtype">They Can Subtype</h2>
 
-<p>Let’s say our class <code>Color</code> has a method <code>lighter()</code>, which is supposed
+<p>Let’s say our class <code class="highlighter-rouge">Color</code> has a method <code class="highlighter-rouge">lighter()</code>, which is supposed
 to shift the color to the next available lighter one:</p>
 
 <pre>class Color {
@@ -284,7 +284,7 @@ through a set of available
 }</pre>
 
 <p>Then, we create a static factory method, which will decide
-which <code>Color</code> implementation is the most suitable for us:</p>
+which <code class="highlighter-rouge">Color</code> implementation is the most suitable for us:</p>
 
 <pre>class Color {
   private final String code;
@@ -297,26 +297,26 @@ which <code>Color</code> implementation is the most suitable for us:</p>
 }</pre>
 
 <p>If the <a href="https://www.pantone.com/color-finder/19-1664-TPX">true red</a> color
-is requested, we return an instance of <code>PantoneColor</code>. In all other cases it’s
-just a standard <code>RGBColor</code>. The decision is made by the static factory
+is requested, we return an instance of <code class="highlighter-rouge">PantoneColor</code>. In all other cases it’s
+just a standard <code class="highlighter-rouge">RGBColor</code>. The decision is made by the static factory
 method. This is how we will call it:</p>
 
 <pre>Color color = Color.make(0xBF1932);</pre>
 
 <p>It would not be possible to do the same “forking” with a constructor, since
 it can only return the class it is declared in. A static method has all the
-necessary freedom to return any subtype of <code>Color</code>.</p>
+necessary freedom to return any subtype of <code class="highlighter-rouge">Color</code>.</p>
 
 <p>True.</p>
 
 <p>However, in an object-oriented world we can and must do it all differently.
-First, we would make <code>Color</code> an interface:</p>
+First, we would make <code class="highlighter-rouge">Color</code> an interface:</p>
 
 <pre>interface Color {
   Color lighter();
 }</pre>
 
-<p>Next, we would move this decision making process to its own class <code>Colors</code>, just
+<p>Next, we would move this decision making process to its own class <code class="highlighter-rouge">Colors</code>, just
 like we did in the previous example:</p>
 
 <pre>class Colors {
@@ -328,8 +328,8 @@ like we did in the previous example:</p>
   }
 }</pre>
 
-<p>And we would use an instance of class <code>Colors</code> instead of a static faсtory
-method inside <code>Color</code>:</p>
+<p>And we would use an instance of class <code class="highlighter-rouge">Colors</code> instead of a static faсtory
+method inside <code class="highlighter-rouge">Color</code>:</p>
 
 <pre>colors.make(0xBF1932);</pre>
 
@@ -337,14 +337,14 @@ method inside <code>Color</code>:</p>
 
 <p>However, this is still not really an object-oriented way of thinking, because
 we’re taking the decision-making away from the object it belongs to. Either
-through a static factory method <code>make()</code> or a new class <code>Colors</code>—it doesn’t
+through a static factory method <code class="highlighter-rouge">make()</code> or a new class <code class="highlighter-rouge">Colors</code>—it doesn’t
 really matter how—we tear our objects into two pieces. The first
 piece is the object itself and the second one is the decision
 making algorithm that stays somewhere else.</p>
 
 <p>A much more object-oriented design would be to put the logic into an
-object of class <code>PantoneColor</code> which would decorate
-the original <code>RGBColor</code>:</p>
+object of class <code class="highlighter-rouge">PantoneColor</code> which would decorate
+the original <code class="highlighter-rouge">RGBColor</code>:</p>
 
 <pre>class PantoneColor {
   private final Color origin;
@@ -363,13 +363,13 @@ the original <code>RGBColor</code>:</p>
   }
 )</pre>
 
-<p>Then, we make an instance of <code>RGBColor</code> and decorate it with <code>PantoneColor</code>:</p>
+<p>Then, we make an instance of <code class="highlighter-rouge">RGBColor</code> and decorate it with <code class="highlighter-rouge">PantoneColor</code>:</p>
 
 <pre>Color red = new PantoneColor(
   new RGBColor(0xBF1932)
 );</pre>
 
-<p>We ask <code>red</code> to return a lighter color and it returns the one from
+<p>We ask <code class="highlighter-rouge">red</code> to return a lighter color and it returns the one from
 the Pantone palette, not the one that is merely lighter in RGB coordinates:</p>
 
 <pre>Color lighter = red.lighter(); // 0xD12631</pre>

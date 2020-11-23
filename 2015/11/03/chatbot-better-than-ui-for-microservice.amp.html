@@ -94,7 +94,7 @@ GitHub ticket:</p>
 
 <p>Let’s see what’s going on here, and then we’ll discuss
 how it’s designed inside. Essentially, I’m <strong>talking</strong> to a chatbot here.
-The name of the chatbot is <code>@rultor</code> (I wrote about it
+The name of the chatbot is <code class="highlighter-rouge">@rultor</code> (I wrote about it
 <a href="/2014/07/24/rultor-automated-merging.html">last year</a>).
 At <span class="bullet">1</span>, I’m asking the chatbot to release
 a new version of the <a href="https://github.com/jcabi/jcabi-http">jcabi-http</a> library.
@@ -120,7 +120,7 @@ communicate with it is by talking with its chatbot.</p>
 
 <p>This is how the traditional architecture of a web system would look:</p>
 
-<p></p>
+<p><object data="/uml/eee0d1bcdb7b9318e937e99e04e39ff7.svg" type="image/svg+xml" class="plantuml"></object></p>
 
 <p>A user gives instructions to a service and receives responses.
 This communication happens through a <strong>user interface</strong> (UI)—a bunch
@@ -139,7 +139,7 @@ spaghetti carbonara. You’re a client, and that cute lady is a server.</p>
 <p>In the case of a chatbot, that’s not the case anymore. Look at the
 architecture:</p>
 
-<p></p>
+<p><object data="/uml/d103661ebf8494340e260442970bf4af.svg" type="image/svg+xml" class="plantuml"></object></p>
 
 <p>First, a user posts a request to GitHub through a web user interface
 provided by GitHub. It is a communication <strong>hub</strong> for us. Then, the service

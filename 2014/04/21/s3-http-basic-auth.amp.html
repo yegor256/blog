@@ -93,8 +93,8 @@ hosting static content, such as images, JavaScript files, video and audio
 content.</p>
 
 <p>When using the hosting, you need to change the CNAME record in your DNS so that
-it points to <code>www.example.com.aws.amazon.com</code>. After changing the DNS entry,
-your static website is available at <code>www.example.com</code> just as it would be
+it points to <code class="highlighter-rouge">www.example.com.aws.amazon.com</code>. After changing the DNS entry,
+your static website is available at <code class="highlighter-rouge">www.example.com</code> just as it would be
 normally.</p>
 
 <p>When using Amazon S3, though, it is not possible to protect your website because
@@ -122,7 +122,7 @@ who you are, please authenticate yourself.”</p>
 <p>The browser shows its native login screen and prompts for a user name and
 password. After entering the login credentials, they are concatenated,
 <a href="http://en.wikipedia.org/wiki/Base64">Base64</a> encoded, and added to the next
-request in <code>Authorization</code> HTTP header.</p>
+request in <code class="highlighter-rouge">Authorization</code> HTTP header.</p>
 
 
 
@@ -132,14 +132,14 @@ this time, the HTTP request contains a header:</p>
 <pre>Authorization: Basic am9lOnNlY3JldA==</pre>
 
 <p>The above is just an example. In the example, the Base64 encoded part means
-<code>joe:secret</code>, where <code>joe</code> is the user name and <code>secret</code> the password entered by
+<code class="highlighter-rouge">joe:secret</code>, where <code class="highlighter-rouge">joe</code> is the user name and <code class="highlighter-rouge">secret</code> the password entered by
 the user.</p>
 
 <p>This time the server has authentication information and can make a decision
 whether this user is authenticated (his password matches the server’s records)
 and authorized (he has permission to access the request webpage).</p>
 
-<h2 id="s3authcom"><code>s3auth.com</code></h2>
+<h2 id="s3authcom"><code class="highlighter-rouge">s3auth.com</code></h2>
 
 <p>Since Amazon doesn’t provide this feature, I decided to create a simple web
 service, <a href="http://www.s3auth.com">s3auth.com</a>, which stays in front of my Amazon
@@ -147,12 +147,12 @@ S3 buckets and implements the HTTP-native authentication and authorization
 mechanism.</p>
 
 <p>Instead of making my objects public, though, I make them private and point my
-CNAME record to <code>relay.s3auth.com</code>. HTTP requests from Web browsers then arrive
+CNAME record to <code class="highlighter-rouge">relay.s3auth.com</code>. HTTP requests from Web browsers then arrive
 at my server, connect to Amazon S3, retrieve my objects and deliver them back in
 HTTP responses.</p>
 
 <p>The server implements authentication and authorization using a special file
-<code>.htpasswd</code> in the root of my bucket. The format of the <code>.htpasswd</code> file is
+<code class="highlighter-rouge">.htpasswd</code> in the root of my bucket. The format of the <code class="highlighter-rouge">.htpasswd</code> file is
 identical to the one used by
 <a href="http://httpd.apache.org/docs/2.2/programs/htpasswd.html">Apache HTTP Server</a>—one user
 per line. Every line has the name of a user and a hash version of his password.</p>
@@ -177,13 +177,13 @@ days, the server seems to work properly and is stable.</p>
 <h2 id="extra-features">Extra Features</h2>
 
 <p>Besides authentication and authorization, the
-<a href="http://www.s3auth.com">s3auth.com</a> server can render lists of pages—just like Apache HTTP Server. If you have a collection of objects in your bucket—but the <code>index.html</code> file is missing—Amazon S3 delivers a “page
+<a href="http://www.s3auth.com">s3auth.com</a> server can render lists of pages—just like Apache HTTP Server. If you have a collection of objects in your bucket—but the <code class="highlighter-rouge">index.html</code> file is missing—Amazon S3 delivers a “page
 not found” result. Conversely, my server displays a list of objects in the
-bucket, when no <code>index.html</code> is present, and makes it possible to navigate up or
+bucket, when no <code class="highlighter-rouge">index.html</code> is present, and makes it possible to navigate up or
 down one folder.</p>
 
 <p>When your bucket has the versioning feature turned on, you are able to list all
-versions of any object in the browser. To do this, just add <code>?all-versions</code> to
+versions of any object in the browser. To do this, just add <code class="highlighter-rouge">?all-versions</code> to
 the end of the URL to display the list. Next, click a version to have
 <a href="http://www.s3auth.com">s3auth.com</a> retrieve and render it.</p>
 

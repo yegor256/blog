@@ -75,14 +75,14 @@ practice, so use objects instead.
       </p>
       <p>Yegor Bugayenko<br>6 July 2015</p>
       <h1>Public Static Literals ... Are Not a Solution for Data Duplication</h1>
-      <p>I have a <code>new String(array,"UTF-8")</code> in one place and exactly
+      <p>I have a <code class="highlighter-rouge">new String(array,"UTF-8")</code> in one place and exactly
 the same code in another place in my app. Actually, I may have
-it in many places. And every time, I have to use that <code>"UTF-8"</code> constant
-in order to create a <code>String</code> from a byte array. It would be very
+it in many places. And every time, I have to use that <code class="highlighter-rouge">"UTF-8"</code> constant
+in order to create a <code class="highlighter-rouge">String</code> from a byte array. It would be very
 convenient to define it once somewhere and reuse it, just like Apache Commons
-is doing; see <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/CharEncoding.html#UTF_8"><code>CharEncoding.UTF_8</code></a>
+is doing; see <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/CharEncoding.html#UTF_8"><code class="highlighter-rouge">CharEncoding.UTF_8</code></a>
 (There are many other static literals there).
-These guys are setting a bad example! <code>public</code> <code>static</code>
+These guys are setting a bad example! <code class="highlighter-rouge">public</code> <code class="highlighter-rouge">static</code>
 “properties” are as bad as
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>.</p>
 
@@ -98,12 +98,12 @@ public class CharEncoding {
   // some other methods and properties
 }</pre>
 
-<p>Now, when I need to create a <code>String</code> from a byte array, I use this:</p>
+<p>Now, when I need to create a <code class="highlighter-rouge">String</code> from a byte array, I use this:</p>
 
 <pre>import org.apache.commons.lang3.CharEncoding;
 String text = new String(array, CharEncoding.UTF_8);</pre>
 
-<p>Let’s say I want to convert a <code>String</code> into a byte array:</p>
+<p>Let’s say I want to convert a <code class="highlighter-rouge">String</code> into a byte array:</p>
 
 <pre>import org.apache.commons.lang3.CharEncoding;
 byte[] array = text.getBytes(CharEncoding.UTF_8);</pre>
@@ -122,36 +122,36 @@ it’s a very bad design.</p>
 <a href="/2015/02/26/composable-decorators.html">utility classes</a>
 with public static
 methods—they are unbreakable hard-coded dependencies. Once you
-use that <code>CharEncoding.UTF_8</code>, your object starts to depend on this
+use that <code class="highlighter-rouge">CharEncoding.UTF_8</code>, your object starts to depend on this
 data, and its user (the user of your object) can’t break this dependency. You may say that
-this is your intention, in the case of a <code>"UTF-8"</code> constant—to make
+this is your intention, in the case of a <code class="highlighter-rouge">"UTF-8"</code> constant—to make
 sure that Unicode is specifically and exclusively being used. In this particular
 example, this may be true, but look at it from a more global perspective.</p>
 
 <p>Let me show you the alternative I have in mind before we continue.
 Here is what I’m suggesting instead to convert a byte array
-into a <code>String</code>:</p>
+into a <code class="highlighter-rouge">String</code>:</p>
 
 <pre>String text = new UTF8String(array);</pre>
 
-<p>It’s pseudo-code, since Java designers made class <code>String</code> final and we
-can’t really extend it and create <code>UTF8String</code>, but you get the idea. In the real
+<p>It’s pseudo-code, since Java designers made class <code class="highlighter-rouge">String</code> final and we
+can’t really extend it and create <code class="highlighter-rouge">UTF8String</code>, but you get the idea. In the real
 world, this would look like this:</p>
 
 <pre>String text = new UTF8String(array).toString();</pre>
 
 <p>As you see, we encapsulate the “UTF-8” constant somewhere inside the class
-<code>UTF8String</code>, and its users have no idea how exactly this “byte array to string”
+<code class="highlighter-rouge">UTF8String</code>, and its users have no idea how exactly this “byte array to string”
 conversion is happening.</p>
 
 
 
-<p>By introducing <code>UTF8String</code>, we solved the problem of “UTF-8”
+<p>By introducing <code class="highlighter-rouge">UTF8String</code>, we solved the problem of “UTF-8”
 literal duplication. But we did it in a proper object-oriented way—we encapsulated the functionality inside a class and let everybody
 instantiate its objects and use them. We resolved the problem of functionality
 duplication, not just data duplication.</p>
 
-<p>Placing data into one shared place (<code>CharEncoding.UTF_8</code>)
+<p>Placing data into one shared place (<code class="highlighter-rouge">CharEncoding.UTF_8</code>)
 doesn’t really solve the duplication problem; it actually makes it <em>worse</em>, mostly
 because it encourages everybody to duplicate functionality using the same
 piece of <a href="/2016/11/21/naked-data.html">shared data</a>.</p>
@@ -159,8 +159,8 @@ piece of <a href="/2016/11/21/naked-data.html">shared data</a>.</p>
 <p>My point here is that every time you see that you have some data duplication
 in your application, start thinking about the functionality you’re duplicating.
 You will easily find the code that is repeated again and again. Make a new
-class for this code and place the data there, as a <code>private</code> property (or private
-<code>static</code> property). That’s how you will improve your design and truly get rid
+class for this code and place the data there, as a <code class="highlighter-rouge">private</code> property (or private
+<code class="highlighter-rouge">static</code> property). That’s how you will improve your design and truly get rid
 of duplication.</p>
 
 <p>PS. You can use a method instead of a class, but not a static literal.</p>

@@ -121,7 +121,7 @@ int main() {
 }</pre>
 
 <p>But let’s be professional and not forget about build automation and unit
-testing. Here is a simple <code>Makefile</code> that does them both:</p>
+testing. Here is a simple <code class="highlighter-rouge">Makefile</code> that does them both:</p>
 
 <pre>all: wc test
 wc: wc.c
@@ -130,7 +130,7 @@ test: wc
   echo '' | ./wc | grep '0'
   echo 'Hello, world! How are you?' | ./wc | grep '5'</pre>
 
-<p>Now I run <code>make</code> from a command line and get this output:</p>
+<p>Now I run <code class="highlighter-rouge">make</code> from a command line and get this output:</p>
 
 <pre>$ make
 echo '' | ./wc | grep '0'
@@ -151,7 +151,7 @@ sure that it works if I don’t ship tests together with it? What will my friend
 think about me releasing anything without tests? This would be
 a total embarrassment.</p>
 
-<p>Okay, let’s release <code>Makefile</code> first and <code>wc.c</code> next. But what will my
+<p>Okay, let’s release <code class="highlighter-rouge">Makefile</code> first and <code class="highlighter-rouge">wc.c</code> next. But what will my
 friend do with a couple of tests and no product in hand? This first
 release will be absolutely pointless, and I won’t get my $100.</p>
 
@@ -159,7 +159,7 @@ release will be absolutely pointless, and I won’t get my $100.</p>
 
 <p>Now we’re getting to the point of this article. What I’m trying to say
 is that every new increment must add some value to the product as it
-is perceived by the customer, not by us programmers. The <code>Makefile</code> is
+is perceived by the customer, not by us programmers. The <code class="highlighter-rouge">Makefile</code> is
 definitely a valuable artifact, but it provides no value to my friend.
 He doesn’t need it, but I need it.</p>
 
@@ -172,7 +172,7 @@ int main() {
   return 0;
 }</pre>
 
-<p>And I will modify the <code>Makefile</code> accordingly. I will disable the first test
+<p>And I will modify the <code class="highlighter-rouge">Makefile</code> accordingly. I will disable the first test
 to make sure the build passes.</p>
 
 <p>Does my tool work? Yes, it does. Does it count words? Yes, it does for

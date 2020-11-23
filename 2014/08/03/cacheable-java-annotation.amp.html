@@ -97,7 +97,7 @@ public class Page {
   }
 }</pre>
 
-<p>The result of <code>load()</code> method will be cached in memory for five minutes.</p>
+<p>The result of <code class="highlighter-rouge">load()</code> method will be cached in memory for five minutes.</p>
 
 
 
@@ -112,13 +112,13 @@ explains how “aspect weaving” works (I highly recommend that you read it fir
 as “method coordinates” and values as their results. Method coordinates consist
 of the object, an owner of the method and a method name with parameter types.</p>
 
-<p>In the example above, right after the method <code>load()</code>
+<p>In the example above, right after the method <code class="highlighter-rouge">load()</code>
 finishes, the map gets a new entry (simplified example, of course):</p>
 
 <pre>key: [page, "load()"]
 value: "&lt;html&gt;...&lt;/html&gt;"</pre>
 
-<p>Every consecutive call to <code>load()</code> will be intercepted by the aspect
+<p>Every consecutive call to <code class="highlighter-rouge">load()</code> will be intercepted by the aspect
 from <a href="http://aspects.jcabi.com">jcabi-aspects</a> and resolved immediately
 with a value from the cache map. The method will not get any control until
 the end of its lifetime, which is five minutes in the example above.</p>
@@ -141,17 +141,17 @@ public class Employees {
 }</pre>
 
 <p>It’s obvious that the number of employees in the database
-will be different after <code>add()</code> method execution and the
-result of <code>size()</code> should be invalidated in cache. This invalidation
-operation is called “flushing” and <code>@Cacheable.FlushBefore</code> triggers it.</p>
+will be different after <code class="highlighter-rouge">add()</code> method execution and the
+result of <code class="highlighter-rouge">size()</code> should be invalidated in cache. This invalidation
+operation is called “flushing” and <code class="highlighter-rouge">@Cacheable.FlushBefore</code> triggers it.</p>
 
-<p>Actually, every call to <code>add()</code> invalidates all cached methods
-in this class, not only <code>size()</code>.</p>
+<p>Actually, every call to <code class="highlighter-rouge">add()</code> invalidates all cached methods
+in this class, not only <code class="highlighter-rouge">size()</code>.</p>
 
-<p>There is also <code>@Cacheable.FlushAfter</code>. The difference is that
-<code>FlushBefore</code> guarantees that cache is already invalidated
-when the method <code>add()</code> starts.
-<code>FlushAfter</code> invalidates cache after method <code>add()</code> finishes. This small difference makes a big one, sometimes.</p>
+<p>There is also <code class="highlighter-rouge">@Cacheable.FlushAfter</code>. The difference is that
+<code class="highlighter-rouge">FlushBefore</code> guarantees that cache is already invalidated
+when the method <code class="highlighter-rouge">add()</code> starts.
+<code class="highlighter-rouge">FlushAfter</code> invalidates cache after method <code class="highlighter-rouge">add()</code> finishes. This small difference makes a big one, sometimes.</p>
 
 <p>This article explains <a href="http://aspects.jcabi.com/example-weaving.html">how to add jcabi-aspects to your project</a>.</p>
 

@@ -102,9 +102,9 @@ The object is not solid any more, since its behavior is not defined entirely by 
 methods—some of its functionality stays elsewhere. Why is it bad? Let’s
 see in a few examples.</p>
 
-<h2 id="inject"><code>@Inject</code></h2>
+<h2 id="inject"><code class="highlighter-rouge">@Inject</code></h2>
 
-<p>Say we annotate a property with <code>@Inject</code>:</p>
+<p>Say we annotate a property with <code class="highlighter-rouge">@Inject</code>:</p>
 
 <pre>import javax.inject.Inject;
 public class Books {
@@ -126,12 +126,12 @@ public class Books {
   }
 );</pre>
 
-<p>Now we’re making an instance of class <code>Books</code> via the container:</p>
+<p>Now we’re making an instance of class <code class="highlighter-rouge">Books</code> via the container:</p>
 
 <pre>Books books = injector.getInstance(Books.class);</pre>
 
-<p>The class <code>Books</code> has no idea how and who will inject an instance
-of class <code>DB</code> into it. This will happen behind the scenes and outside
+<p>The class <code class="highlighter-rouge">Books</code> has no idea how and who will inject an instance
+of class <code class="highlighter-rouge">DB</code> into it. This will happen behind the scenes and outside
 of its control. The injection will do it. It may look convenient,
 but this attitude causes a lot of damage to the entire code base. The
 control is lost (not inverted, but lost!). The object is not in charge
@@ -164,12 +164,12 @@ Annotations by themselves are not the key motivator, but they help us
 and encourage us by tearing objects apart and keeping parts in different
 places. They are containers, sessions, managers, controllers, etc.</p>
 
-<h2 id="xmlelement"><code>@XmlElement</code></h2>
+<h2 id="xmlelement"><code class="highlighter-rouge">@XmlElement</code></h2>
 
 <p>This is how JAXB
 <a href="/2015/03/26/jaxb-vs-xembly.html">works</a>, when you want to convert your
 <a href="https://en.wikipedia.org/wiki/Plain_Old_Java_Object">POJO</a> to XML. First,
-you attach the <code>@XmlElement</code> annotation to the getter:</p>
+you attach the <code class="highlighter-rouge">@XmlElement</code> annotation to the getter:</p>
 
 <pre>import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -186,7 +186,7 @@ public class Book {
 }</pre>
 
 <p>Then, you create a marshaller and ask it to convert an instance of class
-<code>Book</code> into XML:</p>
+<code class="highlighter-rouge">Book</code> into XML:</p>
 
 <pre>final Book book = new Book("0132350882", "Clean Code");
 final JAXBContext ctx = JAXBContext.newInstance(Book.class);
@@ -195,8 +195,8 @@ marshaller.marshal(book, System.out);</pre>
 
 
 
-<p>Who is creating the XML? Not the <code>book</code>. Someone else, outside of the
-class <code>Book</code>. This is very wrong. Instead, this is how this should have
+<p>Who is creating the XML? Not the <code class="highlighter-rouge">book</code>. Someone else, outside of the
+class <code class="highlighter-rouge">Book</code>. This is very wrong. Instead, this is how this should have
 been done. First, the class that has no idea about XML:</p>
 
 <pre>class DefaultBook implements Book {
@@ -238,15 +238,15 @@ the book in XML we do the following:</p>
   new DefaultBook("Elegant Objects")
 ).toXML();</pre>
 
-<p>The XML printing functionality is inside <code>XmlBook</code>. If you don’t like the
-decorator idea, you can move the <code>toXML()</code> method to the <code>DefaultBook</code> class. It’s
+<p>The XML printing functionality is inside <code class="highlighter-rouge">XmlBook</code>. If you don’t like the
+decorator idea, you can move the <code class="highlighter-rouge">toXML()</code> method to the <code class="highlighter-rouge">DefaultBook</code> class. It’s
 not important. What is important is that the functionality always stays
 where it belongs—inside the object. Only the object knows how
 to
 <a href="/2016/04/05/printers-instead-of-getters.html">print itself</a>
 to the XML. Nobody else!</p>
 
-<h2 id="retryonfailure"><code>@RetryOnFailure</code></h2>
+<h2 id="retryonfailure"><code class="highlighter-rouge">@RetryOnFailure</code></h2>
 
 <p>Here is an example
 (from <a href="/2014/08/15/retry-java-method-on-exception.html">my own library</a>):</p>
@@ -284,12 +284,12 @@ that technically turns our code into something like this:</p>
 sure you get the idea. <a href="http://www.eclipse.org/aspectj/">AspectJ</a>,
 the <a href="http://en.wikipedia.org/wiki/Aspect-oriented_programming">AOP</a>
 engine, uses
-<a href="http://aspects.jcabi.com/annotation-retryonfailure.html"><code>@RetryOnFailure</code></a>
+<a href="http://aspects.jcabi.com/annotation-retryonfailure.html"><code class="highlighter-rouge">@RetryOnFailure</code></a>
 annotation as a signal, informing us that the class
 has to be wrapped into another one. This is happening behind the scenes. We don’t
 see that supplementary class, which implements the retrying algorithm.
 But the bytecode produced by the AspectJ weaver contains a modified
-version of class <code>Foo</code>.</p>
+version of class <code class="highlighter-rouge">Foo</code>.</p>
 
 
 
@@ -305,7 +305,7 @@ must see the entire composition process.</p>
 
 <pre>Foo foo = new FooThatRetries(new Foo());</pre>
 
-<p>And then, the implementation of <code>FooThatRetries</code>:</p>
+<p>And then, the implementation of <code class="highlighter-rouge">FooThatRetries</code>:</p>
 
 <pre>class FooThatRetries implements Foo {
   private final Foo origin;
@@ -324,7 +324,7 @@ must see the entire composition process.</p>
   }
 }</pre>
 
-<p>And now, the implementation of <code>Retry</code>:</p>
+<p>And now, the implementation of <code class="highlighter-rouge">Retry</code>:</p>
 
 <pre>class Retry {
   public &lt;T&gt; T eval(Retry.Algorithm&lt;T&gt; algo) {
@@ -360,7 +360,7 @@ do yourself a big favor.</p>
 <p>There should not be any “configurations” in <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.
 We can’t configure our
 objects if they are real objects. We can only instantiate them. And the
-best method of instantiation is operator <code>new</code>. This operator is the key
+best method of instantiation is operator <code class="highlighter-rouge">new</code>. This operator is the key
 instrument for an OOP developer. Taking it away from us and giving us
 “configuration mechanisms” is an unforgivable
 <a href="/2015/11/24/imprisonment-for-irresponsible-coding.html">crime</a>.</p>

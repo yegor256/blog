@@ -92,7 +92,7 @@ do we really need types in order to strongly enforce typing?</p>
 
 <p>For example, this is a place where we expect an instance of
 Java <a href="https://docs.oracle.com/javase/tutorial/java/concepts/interface.html">interface</a>
-<code>Book</code> to arrive:</p>
+<code class="highlighter-rouge">Book</code> to arrive:</p>
 
 <pre>void print(Book b) {
   System.out.printf(
@@ -100,25 +100,25 @@ Java <a href="https://docs.oracle.com/javase/tutorial/java/concepts/interface.ht
   );
 }</pre>
 
-<p>The type <code>Book</code> may look like this:</p>
+<p>The type <code class="highlighter-rouge">Book</code> may look like this:</p>
 
 <pre>interface Book {
   String isbn();
 }</pre>
 
-<p>If an object that doesn’t <code>implement</code> the interface <code>Book</code> is passed
-to the method <code>print()</code>, the compiler will complain
+<p>If an object that doesn’t <code class="highlighter-rouge">implement</code> the interface <code class="highlighter-rouge">Book</code> is passed
+to the method <code class="highlighter-rouge">print()</code>, the compiler will complain
 with the “type mismatch” error. It will be hard for a programmer to make
-a mistake and pass an object of type, say, <code>Car</code> to the method <code>print()</code>.
+a mistake and pass an object of type, say, <code class="highlighter-rouge">Car</code> to the method <code class="highlighter-rouge">print()</code>.
 However, it will still be possible, via dynamic type casting:</p>
 
 <pre>Car car = new Car("Mercedes-Benz G63");
 print(Book.class.cast(car)); // Here!</pre>
 
 <p>This code will compile without issues, but at runtime the
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html"><code>ClassCastException</code></a>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html"><code class="highlighter-rouge">ClassCastException</code></a>
 will be thrown, since it won’t be
-possible to cast <code>Car</code> to <code>Book</code>.</p>
+possible to cast <code class="highlighter-rouge">Car</code> to <code class="highlighter-rouge">Book</code>.</p>
 
 <p>The beauty of strong typing is that it prevents errors. However, it increases
 the complexity of code: you need to create types first, you need to declare them
@@ -131,11 +131,11 @@ which don’t have types at all, for example:</p>
   puts(format("This is ISBN: %s", b.isbn))
 end</pre>
 
-<p>Here, the function <code>print()</code> doesn’t expect <code>b</code> to be of any
+<p>Here, the function <code class="highlighter-rouge">print()</code> doesn’t expect <code class="highlighter-rouge">b</code> to be of any
 particular type. Whatever comes in—is fine. Later, when it’s
-time to call <code>.isbn</code> the runtime checks whether the
-incoming <code>b</code> has such a method. If it does, everything works just fine,
-if it doesn’t, a runtime error <a href="https://ruby-doc.org/core-2.5.0/NoMethodError.html"><code>NoMethodError</code></a>
+time to call <code class="highlighter-rouge">.isbn</code> the runtime checks whether the
+incoming <code class="highlighter-rouge">b</code> has such a method. If it does, everything works just fine,
+if it doesn’t, a runtime error <a href="https://ruby-doc.org/core-2.5.0/NoMethodError.html"><code class="highlighter-rouge">NoMethodError</code></a>
 is raised.</p>
 
 <p>So far so good.</p>
@@ -152,16 +152,16 @@ code again:</p>
   );
 }</pre>
 
-<p>Think about this: at compile time it’s already obvious that <code>b</code> must have
-<em>at least</em> one method <code>isbn()</code>. No need to force programmers to define
-the type <code>Book</code> explicitly and mention in the signature of the method <code>print()</code>
+<p>Think about this: at compile time it’s already obvious that <code class="highlighter-rouge">b</code> must have
+<em>at least</em> one method <code class="highlighter-rouge">isbn()</code>. No need to force programmers to define
+the type <code class="highlighter-rouge">Book</code> explicitly and mention in the signature of the method <code class="highlighter-rouge">print()</code>
 that only books are welcome: this knowledge can easily be inferred from
-the body of the method <code>print()</code>! The compiler may look at all statements
-in the method <code>print()</code> and clearly <em>understand</em> what exactly will be done
-with the object <code>b</code>. This information should be enough to visualize
+the body of the method <code class="highlighter-rouge">print()</code>! The compiler may look at all statements
+in the method <code class="highlighter-rouge">print()</code> and clearly <em>understand</em> what exactly will be done
+with the object <code class="highlighter-rouge">b</code>. This information should be enough to visualize
 the “type” of the incoming object. No need to ask the programmer to
 do this explicitly and spend another five lines of code in a new file
-to declare the type <code>Book</code>. The compiler can do this job for us.</p>
+to declare the type <code class="highlighter-rouge">Book</code>. The compiler can do this job for us.</p>
 
 <p>Of course, to make this work we must prohibit
 <a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>

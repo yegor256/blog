@@ -81,9 +81,9 @@ I was surprised by the number of comments saying that I badly misunderstood
 the idea. Most of those comments stated that an immutable object must always behave
 the same way—that is what immutability is about. What kind of immutability
 is it, if a method returns different results each time we call it?
-This is not how well-known immutable classes behave. Take, for example, <code>String</code>, <code>BigInteger</code>,
-<code>Locale</code>, <code>URI</code>, <code>URL</code>, <code>Inet4Address</code>, <code>UUID</code>, or wrapper classes for primitives, like <code>Double</code> and
-<code>Integer</code>. Other comments argued against
+This is not how well-known immutable classes behave. Take, for example, <code class="highlighter-rouge">String</code>, <code class="highlighter-rouge">BigInteger</code>,
+<code class="highlighter-rouge">Locale</code>, <code class="highlighter-rouge">URI</code>, <code class="highlighter-rouge">URL</code>, <code class="highlighter-rouge">Inet4Address</code>, <code class="highlighter-rouge">UUID</code>, or wrapper classes for primitives, like <code class="highlighter-rouge">Double</code> and
+<code class="highlighter-rouge">Integer</code>. Other comments argued against
 <a href="/2014/11/20/seven-virtues-of-good-object.html">the very definition</a>
 of an immutable object as a representative of a mutable real-world entity. How
 could an immutable object represent a mutable entity? Huh?</p>
@@ -98,10 +98,10 @@ could an immutable object represent a mutable entity? Huh?</p>
 <a href="/2016/07/14/who-is-object.html">object</a>.
 First, here is a quick answer. How can an immutable object represent a mutable entity?
 Look at an immutable class,
-<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html"><code>File</code></a>,
-and its methods, for example <code>length()</code> and <code>delete()</code>. The class is immutable, according
+<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html"><code class="highlighter-rouge">File</code></a>,
+and its methods, for example <code class="highlighter-rouge">length()</code> and <code class="highlighter-rouge">delete()</code>. The class is immutable, according
 to Oracle documentation, and its methods may return different values each time
-we call them. An object of class <code>File</code>, being perfectly immutable,
+we call them. An object of class <code class="highlighter-rouge">File</code>, being perfectly immutable,
 represents a mutable real-world entity, a file on disk.</p>
 
 
@@ -131,7 +131,7 @@ class Page {
   }
 }</pre>
 
-<p>What is the “state” in this class? That’s right, <code>this.uri</code> is the state. It
+<p>What is the “state” in this class? That’s right, <code class="highlighter-rouge">this.uri</code> is the state. It
 uniquely identifies every object of this class, and it is not modifiable. Thus,
 the class makes only immutable objects. And each object represents a
 mutable entity of the real world, a web page with a URI.</p>
@@ -152,16 +152,16 @@ an immutable object is a data structure that never changes.</p>
 a real-world entity inside the object’s living environment (a computer program).
 It does encapsulate some data, which helps to locate the entity in the real world. The encapsulated
 data is the <strong>coordinates</strong> of the entity being represented. In the case
-of <code>String</code> or <code>URL</code>, the coordinates are the same as the
+of <code class="highlighter-rouge">String</code> or <code class="highlighter-rouge">URL</code>, the coordinates are the same as the
 entity itself, but this is just an isolated incident, not a generic rule.</p>
 
 
 
 <p>An immutable object is not a data structure that doesn’t change, even
-though <code>String</code>, <code>BigInteger</code>, and <code>URL</code> look like one. An object is immutable
+though <code class="highlighter-rouge">String</code>, <code class="highlighter-rouge">BigInteger</code>, and <code class="highlighter-rouge">URL</code> look like one. An object is immutable
 if and only if it doesn’t change the coordinates of the real-world entity
-it represents. In the <code>Page</code> class above, this means that an object of
-the class, once instantiated, will never change <code>this.uri</code>. It will
+it represents. In the <code class="highlighter-rouge">Page</code> class above, this means that an object of
+the class, once instantiated, will never change <code class="highlighter-rouge">this.uri</code>. It will
 always point to the same web page, no matter what.</p>
 
 <p>And the object doesn’t guarantee anything about the behavior of that web page. The page

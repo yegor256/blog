@@ -94,8 +94,8 @@ A simple requirements document in Requs may look similar to:</p>
 Employee has name and salary.
 UC1 where Employee gets raise: "TBD."</pre>
 
-<p>This Software Requirements Specification (SRS) defines two types (<code>Department</code>
-and <code>Employee</code>) and one method <code>UC</code> (aka “use case”).</p>
+<p>This Software Requirements Specification (SRS) defines two types (<code class="highlighter-rouge">Department</code>
+and <code class="highlighter-rouge">Employee</code>) and one method <code class="highlighter-rouge">UC</code> (aka “use case”).</p>
 
 
 
@@ -171,8 +171,8 @@ Requs files.</p>
 
 <p>The SRS document is generated automatically on every
 <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a>
-build cycle. It is compiled from pieces called <code>.req</code> files, which are usually
-located in the <code>src/main/requs</code> directory in a project repository.</p>
+build cycle. It is compiled from pieces called <code class="highlighter-rouge">.req</code> files, which are usually
+located in the <code class="highlighter-rouge">src/main/requs</code> directory in a project repository.</p>
 
 <p>My job, as a system analyst, is to make changes to some of these files and
 submit a pull request for review.</p>
@@ -190,7 +190,7 @@ submit a pull request for review.</p>
 </ul>
 
 <p>It doesn’t really matter which files I edit because Requs automatically composes
-together all files with the <code>req</code> extension. I can even add new files to the
+together all files with the <code class="highlighter-rouge">req</code> extension. I can even add new files to the
 directory—they will be picked up. Likewise, I can also add sub-
 directories with files.</p>
 
@@ -210,12 +210,12 @@ and <a href="http://maven.apache.org/download.cgi">Maven</a>.</p>
 
 <pre>mvn clean requs:compile</pre>
 
-<p>After entering the commands, I expect to see the <code>BUILD SUCCESS</code> message. If
+<p>After entering the commands, I expect to see the <code class="highlighter-rouge">BUILD SUCCESS</code> message. If
 not, there are some errors and I should fix them. My pull request won’t be
 merged and I won’t be able to close the task if Requs can’t compile the files.</p>
 
 <p>Once compiled, I can open the SRS in Firefox. It is in
-<code>target/requs/index.xml</code>. Even though it is an XML file, Firefox
+<code class="highlighter-rouge">target/requs/index.xml</code>. Even though it is an XML file, Firefox
 can open it as a webpage. Other browsers won’t work. Well, Google Chrome
 will work, but only with this
 <a href="http://stackoverflow.com/questions/3828898/can-chrome-be-made-to-perform-an-xsl-transform-on-a-local-file">small trick</a>.</p>
@@ -235,7 +235,7 @@ The pull request will be updated automatically, so I don’t need to create a ne
 one.</p>
 
 <p>Once the pull request is clean enough for the reviewer, he will merge it into
-the <code>master</code> branch.</p>
+the <code class="highlighter-rouge">master</code> branch.</p>
 
 <h2 id="close-and-get-paid">Close and Get Paid</h2>
 

@@ -114,14 +114,14 @@ the easiest one.</p>
 
 <p>When I open the source code of <a href="http://www.cactoos.org">Cactoos</a>
 in IntelliJ IDEA, using my
-custom <a href="/bin/settings.jar"><code>settings.jar</code></a>, I see something like this:</p>
+custom <a href="/bin/settings.jar"><code class="highlighter-rouge">settings.jar</code></a>, I see something like this:</p>
 
 
 
 <p>When I open the source code of, say,
 <a href="https://github.com/spring-projects/spring-boot">Spring Boot</a>,
 I see something like this
-(it’s <a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java"><code>o.s.b.ImageBanner</code></a>
+(it’s <a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/ImageBanner.java"><code class="highlighter-rouge">o.s.b.ImageBanner</code></a>
 randomly picked out of a thousand other classes that look very similar):</p>
 
 
@@ -142,7 +142,7 @@ They are obvious indicators of redundant complexity. Programmers tend
 to add them to their methods in order to simplify things.</p>
 
 <p>This is a method from the <a href="https://github.com/apache/maven">Apache Maven</a> code base
-(class <a href="https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java"><code>RepositoryUtils</code></a>
+(class <a href="https://github.com/apache/maven/blob/maven-3.5.3/maven-core/src/main/java/org/apache/maven/RepositoryUtils.java"><code class="highlighter-rouge">RepositoryUtils</code></a>
 picked at random, but almost all other classes are formatted the same way):</p>
 
 
@@ -161,15 +161,15 @@ for methods. I <a href="/2015/01/12/compound-name-is-code-smell.html">believe</a
 that longer “compound” names are an indicator of unnecessary code complexity.</p>
 
 <p>For example, I found this method
-<code>registerServletContainerInitializerToDriveServletContextInitializers</code> (69 characters!)
-in the <a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java"><code>o.s.b.w.e.u.UndertowServletWebServerFactory</code></a>
+<code class="highlighter-rouge">registerServletContainerInitializerToDriveServletContextInitializers</code> (69 characters!)
+in the <a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/web/embedded/undertow/UndertowServletWebServerFactory.java"><code class="highlighter-rouge">o.s.b.w.e.u.UndertowServletWebServerFactory</code></a>
 class in Spring Boot.
-I wonder why the author skipped the <code>couldYouPlease</code> prefix
-and the <code>otherwiseThrowAnException</code> suffix.</p>
+I wonder why the author skipped the <code class="highlighter-rouge">couldYouPlease</code> prefix
+and the <code class="highlighter-rouge">otherwiseThrowAnException</code> suffix.</p>
 
 <p>Jokes aside, such long method names clearly demonstrate that the code
-is too complex and can’t be explained with a simple <code>register</code> or even
-<code>registerContainer</code>. It seems that there are many different containers,
+is too complex and can’t be explained with a simple <code class="highlighter-rouge">register</code> or even
+<code class="highlighter-rouge">registerContainer</code>. It seems that there are many different containers,
 initializers, servlets, and other creatures that need to be registered
 somehow. When I join a project and see a method with this name I’m getting
 ready for big trouble.</p>
@@ -204,29 +204,29 @@ when you don’t know what to do, testing-wise.</p>
 <h2 id="remove-multiple-returns">Remove Multiple Returns</h2>
 
 <p>I <a href="/2015/08/18/multiple-return-statements-in-oop.html">wrote earlier</a>
-that the presence of multiple <code>return</code> statements in a single method is not something
+that the presence of multiple <code class="highlighter-rouge">return</code> statements in a single method is not something
 object-oriented programming should encourage. Instead, a method must
 always have a single exit point, just like those functions in
 functional programming.</p>
 
 <p>Look at this method from the
-<a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java"><code>o.s.b.c.p.b.Binder</code></a>
+<a href="https://github.com/spring-projects/spring-boot/blob/v2.0.0.RELEASE/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/context/properties/bind/Binder.java"><code class="highlighter-rouge">o.s.b.c.p.b.Binder</code></a>
 class from Spring Boot (there are many similar examples there, I picked this one randomly):</p>
 
 
 
-<p>There are five <code>return</code> statements in such a small method. For object-oriented
+<p>There are five <code class="highlighter-rouge">return</code> statements in such a small method. For object-oriented
 code that’s too much. It’s OK for procedural code, which I also write
 sometimes. For example, <a href="https://github.com/zerocracy/farm/blob/master/src/main/resources/com/zerocracy/stk/pm/in/orders/start_order_if_assigned_in_github.groovy">this Groovy script</a>
-of ours has five <code>return</code> keywords too:</p>
+of ours has five <code class="highlighter-rouge">return</code> keywords too:</p>
 
 
 
 <p>But this is Groovy and it’s not a class. It’s just a procedure, a script.</p>
 
-<p>Refactoring and removing multiple <code>return</code> statements definitely helps
+<p>Refactoring and removing multiple <code class="highlighter-rouge">return</code> statements definitely helps
 make code cleaner. Mostly because without them it’s necessary to use
-deeper nesting of <code>if/then/else</code> statements and then the code starts to look
+deeper nesting of <code class="highlighter-rouge">if/then/else</code> statements and then the code starts to look
 ugly, unless you break it down into smaller pieces.</p>
 
 <h2 id="get-rid-of-nulls">Get Rid of NULLs</h2>
@@ -234,16 +234,16 @@ ugly, unless you break it down into smaller pieces.</p>
 <p>NULLs <a href="/2014/05/13/why-null-is-bad.html">are evil</a>,
 it’s a well-known fact. However, they are still everywhere. For example,
 there are 4,100 Java files in Spring Boot v2.0.0.RELEASE and 243K LoC,
-which include the <code>null</code> keyword 7,055 times. This means approximately one <code>null</code>
+which include the <code class="highlighter-rouge">null</code> keyword 7,055 times. This means approximately one <code class="highlighter-rouge">null</code>
 for every 35 lines.</p>
 
 <p>To the contrary, <a href="http://www.takes.org">Takes Framework</a>, which I founded a few years ago,
-has 771 Java files, 154K LoC, and 58 <code>null</code> keywords. Which is roughly
-one <code>null</code> per 2,700 lines. See the difference?</p>
+has 771 Java files, 154K LoC, and 58 <code class="highlighter-rouge">null</code> keywords. Which is roughly
+one <code class="highlighter-rouge">null</code> per 2,700 lines. See the difference?</p>
 
 <p>The code gets cleaner when you remove NULLs, but it’s not so easy to do.
 Sometimes it’s even impossible. That’s why we still have those 58 cases
-of <code>null</code> in Takes. We simply can’t remove them, because they are coming
+of <code class="highlighter-rouge">null</code> in Takes. We simply can’t remove them, because they are coming
 from the JDK.</p>
 
 <h2 id="make-objects-immutable">Make Objects Immutable</h2>
@@ -268,12 +268,12 @@ code.</p>
 if you are a procedural programmer. If your
 code is object-oriented, they
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">must go away</a>. In Spring Boot there
-are 7,482 <code>static</code> keywords, which means one for every 32 lines of code.
-To the contrary, in Takes we have 310 <code>static</code>-s, which is
+are 7,482 <code class="highlighter-rouge">static</code> keywords, which means one for every 32 lines of code.
+To the contrary, in Takes we have 310 <code class="highlighter-rouge">static</code>-s, which is
 one every 496 lines.</p>
 
 <p>Compare these numbers with the statistics about NULL and you will see
-that getting rid of <code>static</code> is a more complex task.</p>
+that getting rid of <code class="highlighter-rouge">static</code> is a more complex task.</p>
 
 <h2 id="apply-static-analysis">Apply Static Analysis</h2>
 
@@ -296,7 +296,7 @@ just to collect “opinions” about their code. I’m using them as guides
 for refactoring.</p>
 
 <p>Check out this video, which demonstrates the amount of complaints Qulice
-gives for the <code>spring-boot-project/spring-boot</code> sub-module in Spring Boot
+gives for the <code class="highlighter-rouge">spring-boot-project/spring-boot</code> sub-module in Spring Boot
 (the video has no end, since I lost my patience in waiting):</p>
 
 

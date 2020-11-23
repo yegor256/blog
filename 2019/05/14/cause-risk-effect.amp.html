@@ -176,8 +176,8 @@ to find a similar amount of positive effects for most risks and causes.</p>
    → R2 → E2
         → E3</pre>
 
-<p>Get the diagram? The cause <code>C1</code> leads to the risks <code>R1</code> and <code>R2</code>, which have
-a number of effects each: <code>E1</code>, <code>E2</code>, and <code>E3</code>. In order to be able to define
+<p>Get the diagram? The cause <code class="highlighter-rouge">C1</code> leads to the risks <code class="highlighter-rouge">R1</code> and <code class="highlighter-rouge">R2</code>, which have
+a number of effects each: <code class="highlighter-rouge">E1</code>, <code class="highlighter-rouge">E2</code>, and <code class="highlighter-rouge">E3</code>. In order to be able to define
 such a multi-level diagram and avoid duplication of text
 we need to split each anticipated event into three parts.</p>
 
@@ -244,7 +244,7 @@ means that the risk will undoubtedly happen:</p>
 I just took a look at the risks and made my personal decision,
 as an owner/manager of the project.</p>
 
-<p>Then, we assign an <em>impact</em> to each effect, again within the <code>[1..9]</code> range.
+<p>Then, we assign an <em>impact</em> to each effect, again within the <code class="highlighter-rouge">[1..9]</code> range.
 Here, 1 means that the consequences we are expecting won’t hurt anyone
 and won’t really help anyone either, while 9 means that the effect is crucial
 (either in a negative or a positive way):</p>
@@ -289,18 +289,18 @@ two options for me in each <em>positive</em> line of my <em>Risk List</em>:</p>
 <ul>
   <li>
     <p><strong>Avoid</strong>.
-I can do something to lower the probability of the risk. Take risk <code>R2</code>—can
+I can do something to lower the probability of the risk. Take risk <code class="highlighter-rouge">R2</code>—can
 I do something to make sure the Blockchain API stays on the market for
 longer and doesn’t die? Well, I can tweet about it, promote it, or maybe
 even donate some money to it. But I doubt any of that will really help.
 So <em>avoiding</em> is not the right strategy here. I simply can’t lower the probability, no matter what I do.
-If the Risk <code>R2</code> has to occur, it will occur. The same it true about
-the Risk <code>R1</code>.</p>
+If the Risk <code class="highlighter-rouge">R2</code> has to occur, it will occur. The same it true about
+the Risk <code class="highlighter-rouge">R1</code>.</p>
   </li>
   <li>
     <p><strong>Mitigate</strong>.
 The second possible risk response <em>strategy</em> is <em>mitigation</em> of the impact
-of the effect. Take a look at the effect <code>E1</code>. As discussed above, it will
+of the effect. Take a look at the effect <code class="highlighter-rouge">E1</code>. As discussed above, it will
 be wise to do two things. First, create integration tests and configure
 the CI to send me an email when the API is changed. Second, regularly
 check the repo for consistency and minimize the amount of time the repo
@@ -318,13 +318,13 @@ are less practical.</p>
   <li>
     <p><strong>Exploit</strong>.
 I may do something to expedite the quick death of Blockchain API,
-thus making the risk <code>R2</code> happen faster, right? Well, this may sound
+thus making the risk <code class="highlighter-rouge">R2</code> happen faster, right? Well, this may sound
 like a joke in this case, but very often we may choose to push things
 forward with a positive risk. This strategy is called <em>exploiting</em>.</p>
   </li>
   <li>
     <p><strong>Enhance</strong>.
-I may do something to increase the positive impact of the effect <code>E3</code>. For
+I may do something to increase the positive impact of the effect <code class="highlighter-rouge">E3</code>. For
 example, I may prepare a similar API and make it market ready. When the
 Blockchain API dies, I immediately launch mine and start promoting it
 with “Hey, those guys are dead, switch here now!” I’m kidding, but you
@@ -341,15 +341,15 @@ may also be a solution in some cases (though not in this one).</p>
 
 <p>The bottom line is that a plan may be attached to either a cause, a risk,
 or an effect. I would define three plans, all mitigating the impact
-of <code>E1</code>:</p>
+of <code class="highlighter-rouge">E1</code>:</p>
 
 <pre>P1→E1: Create integration tests (once)
 P2→E1: Configure CI (once)
 P3→E1: Check the repo for compliance with API (weekly)</pre>
 
 <p>The first two are one-time actions, which I have to perform ASAP. Once
-completed they will lower the impact of <code>E1</code>. The plan <code>P3</code> should
-be performed every week, in order to lower the impact of <code>E1</code> too.
+completed they will lower the impact of <code class="highlighter-rouge">E1</code>. The plan <code class="highlighter-rouge">P3</code> should
+be performed every week, in order to lower the impact of <code class="highlighter-rouge">E1</code> too.
 Here is how my Risk List looks, together with the plans:</p>
 
 <pre>C1 → R1:7 → E1↓:3 ⇢ 7×3 = 21

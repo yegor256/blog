@@ -79,9 +79,9 @@ simple principle.
 which I’m trying to follow in my code:
 it’s a <em>verb</em> if it <em>manipulates</em>, it’s a <em>noun</em> if it <em>builds</em>.
 That’s it. Nothing in between. Methods like
-<code>saveFile()</code> or <code>getTitle()</code> don’t fit and must be renamed and refactored.
-Moreover, methods that “manipulate” must always return <code>void</code>,
-for example <code>print()</code> or <code>save()</code>. Let me explain.</p>
+<code class="highlighter-rouge">saveFile()</code> or <code class="highlighter-rouge">getTitle()</code> don’t fit and must be renamed and refactored.
+Moreover, methods that “manipulate” must always return <code class="highlighter-rouge">void</code>,
+for example <code class="highlighter-rouge">print()</code> or <code class="highlighter-rouge">save()</code>. Let me explain.</p>
 
 
 
@@ -112,7 +112,7 @@ how to do the job we want them to do. Instead, we must let <em>them</em> decide
 whether the book will be found, constructed, or maybe taken from a memory cache.
 When we query, we have to say what result we are looking for and let
 the object make the decision about the way this result is going to be built.
-A much more appropriate name for this method would be <code>book()</code>:</p>
+A much more appropriate name for this method would be <code class="highlighter-rouge">book()</code>:</p>
 
 <pre>interface Bookshelf {
   Book book(String title);
@@ -120,8 +120,8 @@ A much more appropriate name for this method would be <code>book()</code>:</p>
 
 <p>The rule of thumb is: a builder is always a noun. If the method returns
 something, it has to be a noun. Preferably its name should explain what
-the method returns. If it’s a book, name it <code>book()</code>. If it’s a file, call
-the method <code>file()</code>, etc. Here are a few good builder examples:</p>
+the method returns. If it’s a book, name it <code class="highlighter-rouge">book()</code>. If it’s a file, call
+the method <code class="highlighter-rouge">file()</code>, etc. Here are a few good builder examples:</p>
 
 <pre>interface Foo {
   float speed(Actor actor);
@@ -151,7 +151,7 @@ side-effects.</p>
 work for us, modifying the entities, which the object encapsulates. They are
 the opposite to builders, because they actually make changes to the world
 abstracted by the object.
-For example, we ask the <code>Bookshelf</code> to add a new book to itself:</p>
+For example, we ask the <code class="highlighter-rouge">Bookshelf</code> to add a new book to itself:</p>
 
 <pre>interface Bookshelf {
   void add(Book book);
@@ -161,7 +161,7 @@ For example, we ask the <code>Bookshelf</code> to add a new book to itself:</p>
 modified, we don’t know. But we know that since the name of the method
 is a verb, there will be modifications.</p>
 
-<p>Also, manipulators must not return anything. It’s always <code>void</code> that we see
+<p>Also, manipulators must not return anything. It’s always <code class="highlighter-rouge">void</code> that we see
 as the type of their response. This is needed mostly in order to separate the imperative
 part of the code from the declarative part. We either receive objects
 or tell them what to do. We must not mix those activities in one method.</p>

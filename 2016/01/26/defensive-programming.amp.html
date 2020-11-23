@@ -107,15 +107,15 @@ I’m suggesting you use <em>validating decorators</em> instead.</p>
 <p>Pretty <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive</a>, right?
 If we remove these validations, the code
 will be much shorter, but it will crash with rather confusing messages
-if <code>NULL</code> is provided by the client. Moreover, if the file already exists,
-our <code>Report</code> will silently overwrite it. Pretty dangerous, right?</p>
+if <code class="highlighter-rouge">NULL</code> is provided by the client. Moreover, if the file already exists,
+our <code class="highlighter-rouge">Report</code> will silently overwrite it. Pretty dangerous, right?</p>
 
 <p>Yes, we must protect ourselves, and we must be defensive.</p>
 
 <p>But not this way, not by bloating the class with validations that
 have nothing to do with its core functionality. Instead, we should
 use decorators to do the validation. Here is how. First,
-there must be an interface <code>Report</code>:</p>
+there must be an interface <code class="highlighter-rouge">Report</code>:</p>
 
 <pre>interface Report {
   void export(File file);
@@ -162,7 +162,7 @@ report.export(file);</pre>
 <p>What do we achieve with this approach?
 First and foremost: smaller objects.
 And smaller objects always mean higher <em>maintainability</em>.
-Our <code>DefaultReport</code> class will always remain small, no matter
+Our <code class="highlighter-rouge">DefaultReport</code> class will always remain small, no matter
 how many validations we may invent in the future. The
 more things we need to validate, the more validating decorators
 we will create. All of them will be small and cohesive. And we’ll

@@ -107,9 +107,9 @@ Front.run!</pre>
 <pre>$ gem install sinatra
 $ ruby server.rb</pre>
 
-<p>Then, open <code>http://localhost:4567</code> and you will see the counter. Refresh
+<p>Then, open <code class="highlighter-rouge">http://localhost:4567</code> and you will see the counter. Refresh
 the page and the counter will increment. Try again. It works. The counter
-is in the file <code>idx.txt</code> and it’s essentially
+is in the file <code class="highlighter-rouge">idx.txt</code> and it’s essentially
 a <a href="/2018/07/03/global-variables.html">global variable</a>,
 which we increment on every HTTP request.</p>
 
@@ -155,7 +155,7 @@ consecutive numbers? Let’s try:</p>
 end</pre>
 
 <p>Here we make a thousand requests and put all the returned numbers into an
-array. Then we <code>uniq</code> the array and <code>count</code> its elements. If there is
+array. Then we <code class="highlighter-rouge">uniq</code> the array and <code class="highlighter-rouge">count</code> its elements. If there is
 a thousand of them—everything worked fine, we received a correct list
 of consecutive, unique numbers. I just tested it, and it works.</p>
 
@@ -185,10 +185,10 @@ def test_works
 end</pre>
 
 <p>First of all, we keep the list of numbers in a
-<a href="http://ruby-concurrency.github.io/concurrent-ruby/master/Concurrent/Set.html"><code>Concurrent::Set</code></a>, which
-is a thread-safe version of Ruby <a href="http://ruby-doc.org/stdlib-2.4.0/libdoc/set/rdoc/Set.html"><code>Set</code></a>.
+<a href="http://ruby-concurrency.github.io/concurrent-ruby/master/Concurrent/Set.html"><code class="highlighter-rouge">Concurrent::Set</code></a>, which
+is a thread-safe version of Ruby <a href="http://ruby-doc.org/stdlib-2.4.0/libdoc/set/rdoc/Set.html"><code class="highlighter-rouge">Set</code></a>.
 Second, we start five background threads, each of which makes 200 HTTP requests.
-They all run in parallel and we wait for them to finish by calling <code>join</code> on
+They all run in parallel and we wait for them to finish by calling <code class="highlighter-rouge">join</code> on
 each of them. Finally, we take the numbers out of the Set and validate
 the correctness of the list.</p>
 
@@ -217,7 +217,7 @@ def test_works
   Front.stop!
 end</pre>
 
-<p>That’s it. This single line with <code>Threads.new()</code> replaces all other lines,
+<p>That’s it. This single line with <code class="highlighter-rouge">Threads.new()</code> replaces all other lines,
 where we have to create threads, make sure they start at the same time,
 and then collect their results and make sure their stack traces are visible
 in the console if they crash (by default, the error log of a background

@@ -89,7 +89,7 @@ should dislike MVC as much as I do. Here is why.</p>
 
 <p>This is how MVC architecture looks:</p>
 
-<p></p>
+<p><object data="/uml/45d05ab3bd9a93ad88ec209352b62f60.svg" type="image/svg+xml" class="plantuml"></object></p>
 
 <p>Controller is <em>in charge</em>, taking care of the data received from Model
 and injecting it into View—and this is exactly the problem. The data escapes
@@ -109,10 +109,10 @@ code is in charge of the data. Take this C++ code, for example:</p>
   printf("The speed is %d mph", s); // view
 }</pre>
 
-<p>The function <code>print_speed()</code> is the controller. It gets the data <code>s</code> from
-the model <code>load_from_engine()</code> and renders it via the view <code>printf()</code>. Only
+<p>The function <code class="highlighter-rouge">print_speed()</code> is the controller. It gets the data <code class="highlighter-rouge">s</code> from
+the model <code class="highlighter-rouge">load_from_engine()</code> and renders it via the view <code class="highlighter-rouge">printf()</code>. Only
 the controller knows that the data is in miles per hour. The engine
-returns <code>int</code> without any properties. The controller simply assumed that
+returns <code class="highlighter-rouge">int</code> without any properties. The controller simply assumed that
 that data is in mph. If we want to create a similar controller somewhere
 else, we will have to make a similar assumption again and again. That’s what the
 “naked data” problem is about, and it leads to serious maintainability issues.</p>
@@ -127,9 +127,9 @@ else, we will have to make a similar assumption again and again. That’s what t
   )
 );</pre>
 
-<p>Here, <code>SpeedFromEngine.speed()</code>
-returns speed in mph, as an integer; <code>FormattedSpeed.speed()</code> returns
-<code>"%d mph"</code>; and finally, <code>PrintedSpeed.to_str()</code> returns the full text of the
+<p>Here, <code class="highlighter-rouge">SpeedFromEngine.speed()</code>
+returns speed in mph, as an integer; <code class="highlighter-rouge">FormattedSpeed.speed()</code> returns
+<code class="highlighter-rouge">"%d mph"</code>; and finally, <code class="highlighter-rouge">PrintedSpeed.to_str()</code> returns the full text of the
 message. We can call them “model, view, and controller,” but in reality they
 are just objects decorating each other. It’s still the same entity—the speed.
 But it gets more complex and intelligent by being decorated.</p>

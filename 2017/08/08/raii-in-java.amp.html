@@ -91,7 +91,7 @@ but we can implement something similar, using
 
 <p>The problem RAII is solving is obvious; have a look at this code
 (I’m sure you know what
-<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html"><code>Semaphore</code></a>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html"><code class="highlighter-rouge">Semaphore</code></a>
 is and how it works in Java):</p>
 
 <pre>class Foo {
@@ -107,14 +107,14 @@ is and how it works in Java):</p>
 }</pre>
 
 <p>The code is rather primitive and doesn’t do anything useful, but you
-most probably get the idea: the method <code>print()</code>, if being called from
+most probably get the idea: the method <code class="highlighter-rouge">print()</code>, if being called from
 multiple parallel threads, will allow only five of them to print
 in parallel. Sometimes it will not allow some of them to print and will
-throw an exception if <code>x</code> is bigger than <code>1000</code>.</p>
+throw an exception if <code class="highlighter-rouge">x</code> is bigger than <code class="highlighter-rouge">1000</code>.</p>
 
 <p>The problem with this code is—<a href="https://en.wikipedia.org/wiki/Resource_leak">resource leakage</a>.
-Each <code>print()</code> call
-with <code>x</code> larger than <code>1000</code> will take one permit from the semaphore and
+Each <code class="highlighter-rouge">print()</code> call
+with <code class="highlighter-rouge">x</code> larger than <code class="highlighter-rouge">1000</code> will take one permit from the semaphore and
 won’t return it. In five calls with exceptions
 the semaphore will be empty and all other threads won’t print anything.</p>
 
@@ -136,8 +136,8 @@ the semaphore will be empty and all other threads won’t print anything.</p>
 <p>We must release the permit before we throw the exception.</p>
 
 <p>However, there is another problem that shows up: code duplication. We release
-the permit in two places. If we add more <code>throw</code> instructions we will
-also have to add more <code>sem.release()</code> calls.</p>
+the permit in two places. If we add more <code class="highlighter-rouge">throw</code> instructions we will
+also have to add more <code class="highlighter-rouge">sem.release()</code> calls.</p>
 
 <p>A very elegant solution was introduced in C++ and is called RAII. This
 is how it would look in Java:</p>
@@ -164,18 +164,18 @@ class Foo {
   }
 }</pre>
 
-<p>See how beautiful the code is inside method <code>Foo.print()</code>. We just create
-an instance of class <code>Permit</code> and it immediately acquires a new permit
-at the semaphore. Then we exit the method <code>print()</code>, either by exception
-or in the normal way, and the method <code>Permit.finalize()</code> releases the permit.</p>
+<p>See how beautiful the code is inside method <code class="highlighter-rouge">Foo.print()</code>. We just create
+an instance of class <code class="highlighter-rouge">Permit</code> and it immediately acquires a new permit
+at the semaphore. Then we exit the method <code class="highlighter-rouge">print()</code>, either by exception
+or in the normal way, and the method <code class="highlighter-rouge">Permit.finalize()</code> releases the permit.</p>
 
 
 
 <p>Elegant, isn’t it? Yes, it is, but it won’t work in Java.</p>
 
 <p>It won’t work because, unlike C++, Java doesn’t destroy objects when
-their scope of visibility is closed. The object of class <code>Permit</code> won’t
-be destroyed when we exit the method <code>print()</code>. It will be destroyed
+their scope of visibility is closed. The object of class <code class="highlighter-rouge">Permit</code> won’t
+be destroyed when we exit the method <code class="highlighter-rouge">print()</code>. It will be destroyed
 <em>eventually</em> but we don’t know when exactly. Most likely it will be
 destroyed way after all permits in the semaphore got acquired and we
 get blocked.</p>
@@ -209,16 +209,16 @@ class Foo {
   }
 }</pre>
 
-<p>Pay attention to the <code>try</code> block and to the
-<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code>Closeable</code></a> interface
-that the class <code>Permit</code> now implements. The object <code>p</code> will be “closed”
-when the <code>try</code> block exits. It may exit either at the end, or
-by the <code>return</code> or <code>throw</code> statements. In either case <code>Permit.close()</code>
+<p>Pay attention to the <code class="highlighter-rouge">try</code> block and to the
+<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code class="highlighter-rouge">Closeable</code></a> interface
+that the class <code class="highlighter-rouge">Permit</code> now implements. The object <code class="highlighter-rouge">p</code> will be “closed”
+when the <code class="highlighter-rouge">try</code> block exits. It may exit either at the end, or
+by the <code class="highlighter-rouge">return</code> or <code class="highlighter-rouge">throw</code> statements. In either case <code class="highlighter-rouge">Permit.close()</code>
 will be called: this is how
 <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a>
 works in Java.</p>
 
-<p>I introduced method <code>acquire()</code> and moved <code>sem.acquire()</code> out of the <code>Permit</code> constructor because I
+<p>I introduced method <code class="highlighter-rouge">acquire()</code> and moved <code class="highlighter-rouge">sem.acquire()</code> out of the <code class="highlighter-rouge">Permit</code> constructor because I
 <a href="/2015/05/07/ctors-must-be-code-free.html">believe</a>
 that constructors must be code-free.</p>
 
@@ -226,7 +226,7 @@ that constructors must be code-free.</p>
 deal with resources that may <a href="https://en.wikipedia.org/wiki/Resource_leak">leak</a>.
 Even though Java doesn’t have it out of the box we can implement it
 via <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> and
-<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code>Closeable</code></a>.</p>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code class="highlighter-rouge">Closeable</code></a>.</p>
 
 
     </article>

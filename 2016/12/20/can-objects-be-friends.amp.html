@@ -97,16 +97,16 @@ while allowing objects to interact.</p>
 }</pre>
 
 <p>It represents a temperature. The only behavior it exposes is printing
-the temperature in Celsius. We don’t want to expose <code>t</code>, because
+the temperature in Celsius. We don’t want to expose <code class="highlighter-rouge">t</code>, because
 that will lead to the “<a href="/2016/11/21/naked-data.html">naked data</a>”
-problem. We want to keep <code>t</code> secret, and that’s a good desire.</p>
+problem. We want to keep <code class="highlighter-rouge">t</code> secret, and that’s a good desire.</p>
 
 <p>Now, we want to have the ability to print temperature in Fahrenheit. The most
-obvious approach would be to introduce another method, <code>toFahrenheitString()</code>,
+obvious approach would be to introduce another method, <code class="highlighter-rouge">toFahrenheitString()</code>,
 or add a Boolean <a href="/2016/04/19/object-must-not-be-configurable.html">flag</a>
 to the object, which will change the behavior
-of method <code>toString()</code>, right? Either one of these solutions is better than adding
-a method <code>getT()</code>, but neither one is perfect.</p>
+of method <code class="highlighter-rouge">toString()</code>, right? Either one of these solutions is better than adding
+a method <code class="highlighter-rouge">getT()</code>, but neither one is perfect.</p>
 
 <p>What if we create this decorator:</p>
 
@@ -126,8 +126,8 @@ a method <code>getT()</code>, but neither one is perfect.</p>
 );</pre>
 
 <p>The only problem is that it won’t compile in Java, because class
-<code>TempFahrenheit</code> is not allowed to access private <code>t</code> in class <code>TempCelsius</code>.
-And if we make <code>t</code> public, everybody will be able to read it directly, and we’ll have
+<code class="highlighter-rouge">TempFahrenheit</code> is not allowed to access private <code class="highlighter-rouge">t</code> in class <code class="highlighter-rouge">TempCelsius</code>.
+And if we make <code class="highlighter-rouge">t</code> public, everybody will be able to read it directly, and we’ll have
 that “naked data” problem—a severe violation of encapsulation.</p>
 
 <p>However, if we allow that access <em>only</em> to one class, everything will be fine.
@@ -141,16 +141,16 @@ Something like this (won’t work in Java; it’s just a concept):</p>
   }
 }</pre>
 
-<p>Since this <code>trust</code> keyword is placed into the class that allows access,
+<p>Since this <code class="highlighter-rouge">trust</code> keyword is placed into the class that allows access,
 we won’t have the “naked data” problem—we will always know exactly which
-objects posses knowledge about <code>t</code>. When we change
-something about <code>t</code>, we know exactly where to update the code.</p>
+objects posses knowledge about <code class="highlighter-rouge">t</code>. When we change
+something about <code class="highlighter-rouge">t</code>, we know exactly where to update the code.</p>
 
 <p>What do you think?</p>
 
 <p>P.S. After discussing this idea below in comments I
 <a href="https://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632">started</a> to think
-that we don’t need that <code>trust</code> keyword at all. Instead, we should just
+that we don’t need that <code class="highlighter-rouge">trust</code> keyword at all. Instead, we should just
 give all decorators access to all private attributes of an object.</p>
 
     </article>

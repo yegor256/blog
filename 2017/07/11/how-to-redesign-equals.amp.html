@@ -76,9 +76,9 @@ it and make more object-oriented.
       <p>Yegor Bugayenko<br>11 July 2017</p>
       <h1>How I Would Re-design equals()</h1>
       <p>I want to rant a bit about Java design, in particular about the methods
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29"><code>Object.equals()</code></a>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29"><code class="highlighter-rouge">Object.equals()</code></a>
 and
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29"><code>Comparable.compareTo()</code></a>.
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29"><code class="highlighter-rouge">Comparable.compareTo()</code></a>.
 I’ve hated them for years, because, no matter how hard
 I try to like them, the code inside looks ugly. Now I know what exactly
 is wrong and how I would design this “object-to-object comparing” mechanism
@@ -88,7 +88,7 @@ is wrong and how I would design this “object-to-object comparing” mechanism
 
 <amp-img src="/images/2017/07/lultimo-capodanno.jpg" alt="L'ultimo capodanno (1998) by Marco Risi" height="542" width="1280" layout="responsive"></amp-img>
 
-<p>Say we have a <del>simple</del> primitive class <code>Weight</code>, objects of which
+<p>Say we have a <del>simple</del> primitive class <code class="highlighter-rouge">Weight</code>, objects of which
 represent the weight of something in kilos:</p>
 
 <pre>class Weight {
@@ -120,11 +120,11 @@ represent the weight of something in kilos:</p>
 
 <p>The ugly part here is, first of all, the
 <a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>
-with <code>instanceof</code>. The second problem
+with <code class="highlighter-rouge">instanceof</code>. The second problem
 is that we touch the internals of the incoming object. This design makes
-polymorphic behavior of the <code>Weight</code> impossible. We simply can’t pass
-anything else to the <code>equals()</code> method, besides an instance of the
-class <code>Weight</code>. We can’t turn it into an interface and introduce
+polymorphic behavior of the <code class="highlighter-rouge">Weight</code> impossible. We simply can’t pass
+anything else to the <code class="highlighter-rouge">equals()</code> method, besides an instance of the
+class <code class="highlighter-rouge">Weight</code>. We can’t turn it into an interface and introduce
 multiple implementations of it:</p>
 
 <pre>interface Weight {
@@ -154,13 +154,13 @@ to do the actual comparison.</p>
 are talking about, is about comparing two digital values. Either we
 compare a weight with a weight, text with text, or a user with a user—our
 CPUs can only compare numbers. Thus, we introduce a new interface
-<code>Digitizable</code>:</p>
+<code class="highlighter-rouge">Digitizable</code>:</p>
 
 <pre>interface Digitizable {
   byte[] digits();
 }</pre>
 
-<p>Next, we introduce a new class <code>Comparison</code>, which <em>is</em> the comparison of
+<p>Next, we introduce a new class <code class="highlighter-rouge">Comparison</code>, which <em>is</em> the comparison of
 two streams of bytes (I’m not sure the code is perfect, I tested it
 <a href="https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals">here</a>,
 feel free to improve and contribute with a pull request):</p>
@@ -195,7 +195,7 @@ feel free to improve and contribute with a pull request):</p>
   }
 }</pre>
 
-<p>Now, we need <code>Weight</code> to implement <code>Digitizable</code>:</p>
+<p>Now, we need <code class="highlighter-rouge">Weight</code> to implement <code class="highlighter-rouge">Digitizable</code>:</p>
 
 <pre>class Weight implements Digitizable {
   private int kilos;
@@ -215,13 +215,13 @@ feel free to improve and contribute with a pull request):</p>
   new Weight(400), new Weight(500)
 ).value();</pre>
 
-<p>This <code>v</code> will either be <code>-1</code>, <code>0</code>, or <code>1</code>. In this particular case it will be <code>-1</code>,
-because <code>400</code> is less than <code>500</code>.</p>
+<p>This <code class="highlighter-rouge">v</code> will either be <code class="highlighter-rouge">-1</code>, <code class="highlighter-rouge">0</code>, or <code class="highlighter-rouge">1</code>. In this particular case it will be <code class="highlighter-rouge">-1</code>,
+because <code class="highlighter-rouge">400</code> is less than <code class="highlighter-rouge">500</code>.</p>
 
 <p>No more violation of encapsulation, no more type casting, no more
-ugly code inside those <code>equals()</code> and <code>compareTo()</code> methods.
-The class <code>Comparison</code> will work with all possible types. All our objects
-need to do in order to become comparable is to implement <code>Digitizable</code> and
+ugly code inside those <code class="highlighter-rouge">equals()</code> and <code class="highlighter-rouge">compareTo()</code> methods.
+The class <code class="highlighter-rouge">Comparison</code> will work with all possible types. All our objects
+need to do in order to become comparable is to implement <code class="highlighter-rouge">Digitizable</code> and
 “provide” their bytes for inspection/comparison.</p>
 
 <p>This approach is actually very close to the

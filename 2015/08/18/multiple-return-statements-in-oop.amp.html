@@ -77,12 +77,12 @@ but a return statement.
       <h1>Why Many Return Statements Are a Bad Idea in OOP</h1>
       <p>This <a href="http://programmers.stackexchange.com/questions/118703">debate</a>
 is very old, but I have something to say too. The question
-is whether a method may have multiple <code>return</code> statements or always
+is whether a method may have multiple <code class="highlighter-rouge">return</code> statements or always
 just one. The answer may surprise you: In a pure object-oriented
-world, a method <em>must</em> have a <em>single</em> <code>return</code> statement and <em>nothing</em> else.
-Yes, just a <code>return</code> statement and that’s it. No other operators
-or statements. Just <code>return</code>. All arguments in favor of multiple
-<code>return</code> statements go against the very idea of object-oriented programming.</p>
+world, a method <em>must</em> have a <em>single</em> <code class="highlighter-rouge">return</code> statement and <em>nothing</em> else.
+Yes, just a <code class="highlighter-rouge">return</code> statement and that’s it. No other operators
+or statements. Just <code class="highlighter-rouge">return</code>. All arguments in favor of multiple
+<code class="highlighter-rouge">return</code> statements go against the very idea of object-oriented programming.</p>
 
 
 
@@ -95,8 +95,8 @@ or statements. Just <code>return</code>. All arguments in favor of multiple
   return b;
 }</pre>
 
-<p>The code above has two <code>return</code> statements, and it is shorter than this one
-with a single <code>return</code>:</p>
+<p>The code above has two <code class="highlighter-rouge">return</code> statements, and it is shorter than this one
+with a single <code class="highlighter-rouge">return</code>:</p>
 
 <pre>public int max(int a, int b) {
   int m;
@@ -119,23 +119,23 @@ with a single <code>return</code>:</p>
   );
 }</pre>
 
-<p>What do you think now? There are no statements or operators. No <code>if</code> and no <code>&gt;</code>.
-Instead, there are <em>objects</em> of class <code>If</code> and <code>GreaterThan</code>.</p>
+<p>What do you think now? There are no statements or operators. No <code class="highlighter-rouge">if</code> and no <code class="highlighter-rouge">&gt;</code>.
+Instead, there are <em>objects</em> of class <code class="highlighter-rouge">If</code> and <code class="highlighter-rouge">GreaterThan</code>.</p>
 
 <p>This is a pure and clean object-oriented approach.</p>
 
 <p>However, Java doesn’t have that. Java (and many other pseudo OOP languages)
-gives us operators like <code>if</code>, <code>else</code>, <code>switch</code>, <code>for</code>, <code>while</code>, etc. instead
+gives us operators like <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">else</code>, <code class="highlighter-rouge">switch</code>, <code class="highlighter-rouge">for</code>, <code class="highlighter-rouge">while</code>, etc. instead
 of giving built-in classes, which would do the same. Because of that, we continue
 to think in terms of procedures and keep talking about whether
-two <code>return</code> statements are better than one.</p>
+two <code class="highlighter-rouge">return</code> statements are better than one.</p>
 
 <p>If your code is truly object-oriented, you won’t be able to have more than
-one <code>return</code>. Moreover, you will have nothing except a <code>return</code> in each method.
+one <code class="highlighter-rouge">return</code>. Moreover, you will have nothing except a <code class="highlighter-rouge">return</code> in each method.
 Actually, you will have only two operators in the entire
-software—<code>new</code> and <code>return</code>. That’s it.</p>
+software—<code class="highlighter-rouge">new</code> and <code class="highlighter-rouge">return</code>. That’s it.</p>
 
-<p>Until we’re there, let’s stick with just one <code>return</code> and at least try to look
+<p>Until we’re there, let’s stick with just one <code class="highlighter-rouge">return</code> and at least try to look
 like pure <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.</p>
 
     </article>

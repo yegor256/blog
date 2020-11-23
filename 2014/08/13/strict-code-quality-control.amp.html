@@ -113,7 +113,7 @@ so much on code quality?</p>
 <p>If you join one of our teams as a Java developer, you will
 develop your code <a href="/2014/07/21/read-only-master-branch.html">in branches</a>
 and, then, <a href="/2014/07/24/rultor-automated-merging.html">Rultor will merge</a>
-your changes into <code>master</code>. Before actually merging, though, <a href="http://www.rultor.com">Rultor</a> will run an
+your changes into <code class="highlighter-rouge">master</code>. Before actually merging, though, <a href="http://www.rultor.com">Rultor</a> will run an
 automated build script to make sure that your branch doesn’t break it.</p>
 
 
@@ -171,7 +171,7 @@ this approach is good for the project and for them, as Java engineers.</p>
 
 <p>Let’s take one simple rule as an example. Here is a piece of Java
 code that Qulice would complain about
-(due to the <a href="http://checkstyle.sourceforge.net/config_design.html#DesignForExtension"><code>DesignForExtension</code></a> rule from Checkstyle):</p>
+(due to the <a href="http://checkstyle.sourceforge.net/config_design.html#DesignForExtension"><code class="highlighter-rouge">DesignForExtension</code></a> rule from Checkstyle):</p>
 
 <pre>public class Employee {
   public String name() {
@@ -179,8 +179,8 @@ code that Qulice would complain about
   }
 }</pre>
 
-<p>What is wrong with this code? Method <code>name()</code> is not final and can be overridden
-by a class that extends <code>Employee</code>. Design-wise this is wrong, since a child
+<p>What is wrong with this code? Method <code class="highlighter-rouge">name()</code> is not final and can be overridden
+by a class that extends <code class="highlighter-rouge">Employee</code>. Design-wise this is wrong, since a child
 class is allowed to break a super class, overriding its method.</p>
 
 <p>What is the right design? This one:</p>

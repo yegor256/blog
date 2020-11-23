@@ -101,23 +101,23 @@ be thread-safe, while all of them have to provide synchronized decorators.</p>
 This term refers to whether
 an object of this class will operate without mistakes when used by multiple
 threads at the same time. Let’s say we have two threads working with
-the same object, <code>position</code>, and calling its method <code>increment()</code> at
+the same object, <code class="highlighter-rouge">position</code>, and calling its method <code class="highlighter-rouge">increment()</code> at
 exactly the same moment in time.</p>
 
-<p>We expect the <code>number</code> integer to be equal to 2 when both threads
+<p>We expect the <code class="highlighter-rouge">number</code> integer to be equal to 2 when both threads
 finish up, because each of them will increment it once, right?
 However, most likely this won’t happen.</p>
 
 
 
-<p>Let’s see what will happen. In both threads, <code>before</code>
-will equal <code>0</code> when they start. Then <code>after</code> will be set to <code>1</code>. Then, both threads
-will do <code>this.number = 1</code> and we will end up with <code>1</code> in <code>number</code> instead
-of the expected <code>2</code>. See the problem? Classes with such a flaw in their
+<p>Let’s see what will happen. In both threads, <code class="highlighter-rouge">before</code>
+will equal <code class="highlighter-rouge">0</code> when they start. Then <code class="highlighter-rouge">after</code> will be set to <code class="highlighter-rouge">1</code>. Then, both threads
+will do <code class="highlighter-rouge">this.number = 1</code> and we will end up with <code class="highlighter-rouge">1</code> in <code class="highlighter-rouge">number</code> instead
+of the expected <code class="highlighter-rouge">2</code>. See the problem? Classes with such a flaw in their
 design are <strong>not thread-safe</strong>.</p>
 
 <p>The simplest and most obvious solution is to make our method
-<a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html"><code>synchronized</code></a>.
+<a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html"><code class="highlighter-rouge">synchronized</code></a>.
 That will guarantee that no matter how many threads call it
 at the same time, they will all go sequentially, not in parallel: one
 thread after another. Of course, it will take longer, but it will prevent
@@ -159,8 +159,8 @@ which would look like this:</p>
   }
 }</pre>
 
-<p>Now, when we need our <code>position</code> object to be thread-safe, we decorate
-it with <code>SyncPosition</code>:</p>
+<p>Now, when we need our <code class="highlighter-rouge">position</code> object to be thread-safe, we decorate
+it with <code class="highlighter-rouge">SyncPosition</code>:</p>
 
 <pre>Position position = new SyncPosition(
   new SimplePosition()

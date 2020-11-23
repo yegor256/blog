@@ -106,50 +106,50 @@ Hello, \textbf{Yegor}!
 \end{document}</pre>
 
 <p>If we feed this text to some other spell checker (or GNU aspell without the
-option <code>--mode=tex</code>) the word <code>textbf</code> would be an obvious spelling mistake; aspell,
+option <code class="highlighter-rouge">--mode=tex</code>) the word <code class="highlighter-rouge">textbf</code> would be an obvious spelling mistake; aspell,
 however, understands it as a LaTeX command and ignores it.
-Moreover, aspell can understand the word <code>Yegor</code>, even though it’s not
-an English word, by using a custom dictionary provided by the <code>--pws</code> option.</p>
+Moreover, aspell can understand the word <code class="highlighter-rouge">Yegor</code>, even though it’s not
+an English word, by using a custom dictionary provided by the <code class="highlighter-rouge">--pws</code> option.</p>
 
 <p>There are a few other useful features in aspell. Long story short, I decided to create
 a small wrapper around aspell, to simplify the process of its configuration:
 <a href="https://github.com/yegor256/texsc">texsc</a>
 (stands for “TeX Spell Checking”).
 It’s a command line tool, which you install and then run, for example like this
-(you can see how it’s configured in the <code>Makefile</code> of
+(you can see how it’s configured in the <code class="highlighter-rouge">Makefile</code> of
 <a href="https://github.com/yegor256/requs-paper">this paper</a>):</p>
 
 <pre>$ texsc --pws aspell.en.pws --ignore=code,citep article.tex</pre>
 
-<p>There is a list of arguments you can supply to <code>texsc</code>:</p>
+<p>There is a list of arguments you can supply to <code class="highlighter-rouge">texsc</code>:</p>
 
 <ul>
   <li>
-    <p><code>--pws</code> is the location of a custom dictionary, where each
+    <p><code class="highlighter-rouge">--pws</code> is the location of a custom dictionary, where each
 line is a word aspell is supposed to ignore. It’s important to
-have the first line equal to <code>personal_ws-1.1 en 741 utf-8</code>. Why?
+have the first line equal to <code class="highlighter-rouge">personal_ws-1.1 en 741 utf-8</code>. Why?
 I don’t know. But if it contains something else, aspell will just
 silently ignore the file. Nice, huh?</p>
   </li>
   <li>
-    <p><code>--ignore</code> (you may have many of them) is the list of
+    <p><code class="highlighter-rouge">--ignore</code> (you may have many of them) is the list of
 TeX commands, and which arguments should be ignored. A good example is the
-<code>\code{}</code> command, which in all cases has something that is not
+<code class="highlighter-rouge">\code{}</code> command, which in all cases has something that is not
 an English word. You may also have commands with multiple arguments,
-in which case you say something like <code>--ignore=code:op</code> and in the
-command <code>\code[foo]{bar}</code> both <code>foo</code> and <code>bar</code> will be ignored.
-The <code>:op</code> suffix means that an optional (<code>o</code>) argument is ignored and then
-a mandatory one (<code>p</code>). Something like <code>:oppp</code> would tell aspell
+in which case you say something like <code class="highlighter-rouge">--ignore=code:op</code> and in the
+command <code class="highlighter-rouge">\code[foo]{bar}</code> both <code class="highlighter-rouge">foo</code> and <code class="highlighter-rouge">bar</code> will be ignored.
+The <code class="highlighter-rouge">:op</code> suffix means that an optional (<code class="highlighter-rouge">o</code>) argument is ignored and then
+a mandatory one (<code class="highlighter-rouge">p</code>). Something like <code class="highlighter-rouge">:oppp</code> would tell aspell
 to ignore one optional and then three mandatory arguments.</p>
   </li>
   <li>
-    <p><code>--min-word-length</code> is the minimum length of word to pay attention to.
-I use the number <code>3</code> and this is the default value. Shorter words (one or two characters)
+    <p><code class="highlighter-rouge">--min-word-length</code> is the minimum length of word to pay attention to.
+I use the number <code class="highlighter-rouge">3</code> and this is the default value. Shorter words (one or two characters)
 are not important and don’t need to be spell-checked.</p>
   </li>
 </ul>
 
-<p>I use <code>texsc</code> in all my LaTeX projects, usually as part of their
+<p>I use <code class="highlighter-rouge">texsc</code> in all my LaTeX projects, usually as part of their
 build cycle, which I automate with <a href="https://www.gnu.org/software/make/">GNU make</a>.
 You can do the same, as it’s open source.</p>
 

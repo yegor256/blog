@@ -98,7 +98,7 @@ in <a href="http://www.takes.org">Takes framework</a>.</p>
 
 <p>First, I got a token from my AppVeyor account (at the time
 of writing it was <a href="https://ci.appveyor.com/api-token">here</a>). I created
-a text file <code>curl-appveyor.cfg</code> with this content (it’s not my real token inside,
+a text file <code class="highlighter-rouge">curl-appveyor.cfg</code> with this content (it’s not my real token inside,
 just an example):</p>
 
 <pre>--silent
@@ -106,13 +106,13 @@ just an example):</p>
 --header "Content-Type: application/json"
 --header "Accept: application/json"</pre>
 
-<p>Then, I encrypted this file, using <a href="https://github.com/yegor256/rultor-remote"><code>rultor</code></a>
+<p>Then, I encrypted this file, using <a href="https://github.com/yegor256/rultor-remote"><code class="highlighter-rouge">rultor</code></a>
 command line tool:</p>
 
 <pre>$ rultor encrypt -p yegor256/takes curl-appveyor.cfg</pre>
 
 <p>The file I created was called
-<a href="https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc"><code>curl-appveyor.cfg.asc</code></a>.
+<a href="https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc"><code class="highlighter-rouge">curl-appveyor.cfg.asc</code></a>.
 I committed and pushed into <a href="https://github.com/yegor256/takes">yegor256/takes</a>
 GitHub repository.</p>
 
@@ -121,7 +121,7 @@ $ git commit -am 'CURL config for Appveyor'
 $ git push origin master</pre>
 
 <p>Then, I configured AppVeyor “pinging” from Docker script.
-This is what I did in <a href="https://github.com/yegor256/takes/blob/master/.rultor.yml"><code>.rultor.yml</code></a>:</p>
+This is what I did in <a href="https://github.com/yegor256/takes/blob/master/.rultor.yml"><code class="highlighter-rouge">.rultor.yml</code></a>:</p>
 
 <pre>decrypt:
   curl-appveyor.cfg: "repo/curl-appveyor.cfg.asc"
@@ -147,16 +147,16 @@ merge:
     mvn clean install</pre>
 
 <p>There is no magic here, it’s very simple. First, I start a new build
-using <code>/api/builds</code> end-point of
+using <code class="highlighter-rouge">/api/builds</code> end-point of
 <a href="http://www.appveyor.com/docs/api/projects-builds#start-build-of-pull-request-github-only">AppVeyor REST API</a>.
-<code>${pull_id}</code> is an environment variable that is coming from Rultor,
+<code class="highlighter-rouge">${pull_id}</code> is an environment variable that is coming from Rultor,
 it contains an integer number of current pull request.</p>
 
 <p>I’m using <a href="http://stedolan.github.io/jq/">jq</a>
 in order to parse AppVeyor JSON output.</p>
 
-<p>Once the build is started, I’m getting its unique <code>version</code> and start
-looping to check its status. I’m waiting for <code>success</code> or <code>failed</code>. Anything
+<p>Once the build is started, I’m getting its unique <code class="highlighter-rouge">version</code> and start
+looping to check its status. I’m waiting for <code class="highlighter-rouge">success</code> or <code class="highlighter-rouge">failed</code>. Anything
 else will mean that the build is still in progress and I should keep looping.</p>
 
 <p>You can see how it works in this pull request, for example:

@@ -91,7 +91,7 @@ how we can still call programming object-oriented when it has
 
 <p>First, here’s how they work in a nutshell. Let’s use
 <a href="http://phrogz.net/programmingruby/tut_modules.html">Ruby modules</a>
-as a sample implementation. Say that we have a class <code>Book</code>:</p>
+as a sample implementation. Say that we have a class <code class="highlighter-rouge">Book</code>:</p>
 
 <pre>class Book
   def initialize(title)
@@ -99,10 +99,10 @@ as a sample implementation. Say that we have a class <code>Book</code>:</p>
   end
 end</pre>
 
-<p>Now, we want class <code>Book</code> to use a static method (a procedure) that
+<p>Now, we want class <code class="highlighter-rouge">Book</code> to use a static method (a procedure) that
 does something useful. We may either define it in a
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility class</a>
-and let <code>Book</code> call it:</p>
+and let <code class="highlighter-rouge">Book</code> call it:</p>
 
 <pre>class TextUtils
   def self.caps(text)
@@ -115,7 +115,7 @@ class Book
   end
 end</pre>
 
-<p>Or we may make it even more “convenient” and <code>extend</code> our module
+<p>Or we may make it even more “convenient” and <code class="highlighter-rouge">extend</code> our module
 in order to access its methods directly:</p>
 
 <pre>module TextModule
@@ -138,13 +138,13 @@ and static methods. Moreover, if we forget
 <a href="/2014/11/20/seven-virtues-of-good-object.html">OOP purity</a>
 for a minute, this approach actually looks less readable to me, even though it has
 fewer characters; it’s difficult to understand where the method
-<code>caps()</code> is coming from when it’s called just like <code>#{caps(@title)}</code> instead
-of <code>#{TextUtils.caps(@title)}</code>. Don’t you think?</p>
+<code class="highlighter-rouge">caps()</code> is coming from when it’s called just like <code class="highlighter-rouge">#{caps(@title)}</code> instead
+of <code class="highlighter-rouge">#{TextUtils.caps(@title)}</code>. Don’t you think?</p>
 
-<p>Mixins start to play their role better when we <code>include</code> them. We can
+<p>Mixins start to play their role better when we <code class="highlighter-rouge">include</code> them. We can
 combine them to construct the behavior of the class we’re looking for. Let’s
-create two mixins. The first one will be called <code>PlainMixin</code> and will print the title
-of the book the way it is, and the second one will be called <code>CapsMixin</code> and will
+create two mixins. The first one will be called <code class="highlighter-rouge">PlainMixin</code> and will print the title
+of the book the way it is, and the second one will be called <code class="highlighter-rouge">CapsMixin</code> and will
 capitalize what’s already printed:</p>
 
 <pre>module CapsMixin
@@ -167,9 +167,9 @@ class Book
   end
 end</pre>
 
-<p>Calling <code>Book</code> without the included mixin will print its title the way
-it is. Once we add the <code>include</code> statement, the behavior of <code>to_s</code> is
-overridden and method <code>print</code> produces a different result. We can
+<p>Calling <code class="highlighter-rouge">Book</code> without the included mixin will print its title the way
+it is. Once we add the <code class="highlighter-rouge">include</code> statement, the behavior of <code class="highlighter-rouge">to_s</code> is
+overridden and method <code class="highlighter-rouge">print</code> produces a different result. We can
 combine mixins to produce the required functionality. For example,
 we can add one more, which will
 <a href="http://stackoverflow.com/a/25136035/187141">abbreviate</a> the title to 16 characters:</p>
@@ -190,7 +190,7 @@ class Book
 end</pre>
 
 <p>I’m sure you already understand that they both have access to
-the private attribute <code>@title</code> of class <code>Book</code>. They actually have
+the private attribute <code class="highlighter-rouge">@title</code> of class <code class="highlighter-rouge">Book</code>. They actually have
 full access to <em>everything</em> in the class. They literally are
 “pieces of code” that we <em>inject</em> into the class to make it more
 powerful and complex. What’s wrong with this approach?</p>
@@ -204,8 +204,8 @@ tear objects apart and place pieces of functionality in places
 where objects don’t see them.</p>
 
 <p>In the case of mixins, the functionality is
-in the Ruby <code>modules</code>, which make assumptions about the internal structure
-of <code>Book</code> and further assume that the programmer will still understand what’s in <code>Book</code> after
+in the Ruby <code class="highlighter-rouge">modules</code>, which make assumptions about the internal structure
+of <code class="highlighter-rouge">Book</code> and further assume that the programmer will still understand what’s in <code class="highlighter-rouge">Book</code> after
 the internal structure changes. Such assumptions completely violate
 the very idea of
 <a href="/2016/11/21/naked-data.html">encapsulation</a>.</p>

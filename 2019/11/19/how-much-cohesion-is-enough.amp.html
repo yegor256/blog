@@ -75,7 +75,7 @@ one do you prefer?
       </p>
       <p>Yegor Bugayenko<br>19 November 2019</p>
       <h1>How Much Cohesion Is Enough?</h1>
-      <p>Which one is better: <code>books.del(42)</code> or <code>books.book(42).del()</code>?
+      <p>Which one is better: <code class="highlighter-rouge">books.del(42)</code> or <code class="highlighter-rouge">books.book(42).del()</code>?
 I do both and I rarely can tell which one is better. The first option
 is shorter, while the second one is more object-oriented. The first
 option is more difficult to extend, while the second one is more
@@ -88,7 +88,7 @@ of making mistakes. Which one do you prefer?</p>
 
 <p>Either one will work, of course, but the question is which design
 is more object-oriented? It seems to depend on the size of the
-object <code>books</code>. If it’s small, there’s no need to get the book first, we can
+object <code class="highlighter-rouge">books</code>. If it’s small, there’s no need to get the book first, we can
 just delete it right there:</p>
 
 <pre>interface Books {
@@ -97,7 +97,7 @@ just delete it right there:</p>
   void rename(int id, String title);
 }</pre>
 
-<p>However, if it’s larger, it’s better to get the <code>book</code> first:</p>
+<p>However, if it’s larger, it’s better to get the <code class="highlighter-rouge">book</code> first:</p>
 
 <pre>interface Book {
   void delete(); // Here!
@@ -157,8 +157,8 @@ call it a day. Later, of course, maintainability problems will show up.</p>
 <p>The bottom line is that there is no exact distinction between the right and
 the wrong design in this case. We just have to do our best to keep classes highly
 cohesive by decreasing the amount of methods in each of them. If there are
-just a few methods, no need to extract the <code>Book</code>, but once the amount of methods
-gets bigger, the <code>Book</code> is a perfect candidate for a new entity to
+just a few methods, no need to extract the <code class="highlighter-rouge">Book</code>, but once the amount of methods
+gets bigger, the <code class="highlighter-rouge">Book</code> is a perfect candidate for a new entity to
 define.</p>
 
 <p>How many methods is OK?</p>

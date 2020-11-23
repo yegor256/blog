@@ -75,7 +75,7 @@ this article tries to explain why you should give up this bad habit.
       </p>
       <p>Yegor Bugayenko<br>13 May 2014</p>
       <h1>Why NULL is Bad?</h1>
-      <p>A simple example of <code>NULL</code> usage in Java:</p>
+      <p>A simple example of <code class="highlighter-rouge">NULL</code> usage in Java:</p>
 
 <pre>public Employee getByName(String name) {
   int id = database.find(name);
@@ -89,8 +89,8 @@ this article tries to explain why you should give up this bad habit.
 
 
 
-<p>It may return <code>NULL</code> instead of an object—that’s what is wrong.
-<code>NULL</code> is a terrible practice in an object-oriented paradigm and should be avoided at
+<p>It may return <code class="highlighter-rouge">NULL</code> instead of an object—that’s what is wrong.
+<code class="highlighter-rouge">NULL</code> is a terrible practice in an object-oriented paradigm and should be avoided at
 <a href="/2016/03/22/try-finally-if-not-null.html">all costs</a>.
 There have been a number of opinions about this published already, including
 <a href="http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare">Null References, The Billion Dollar Mistake</a>
@@ -99,9 +99,9 @@ presentation by Tony Hoare and the entire
 book by David West.</p>
 
 <p>Here, I’ll try to summarize all the arguments and show examples of
-how <code>NULL</code> usage can be avoided and replaced with proper object-oriented constructs.</p>
+how <code class="highlighter-rouge">NULL</code> usage can be avoided and replaced with proper object-oriented constructs.</p>
 
-<p>Basically, there are two possible alternatives to <code>NULL</code>.</p>
+<p>Basically, there are two possible alternatives to <code class="highlighter-rouge">NULL</code>.</p>
 
 <p>The first one is <strong><a href="http://en.wikipedia.org/wiki/Null_Object_pattern">Null Object</a></strong>
 design <a href="/2016/02/03/design-patterns-and-anti-patterns.html">pattern</a>
@@ -127,7 +127,7 @@ by throwing an <strong>Exception</strong> when you can’t return an
   return Employee(id);
 }</pre>
 
-<p>Now, let’s see the arguments against <code>NULL</code>.</p>
+<p>Now, let’s see the arguments against <code class="highlighter-rouge">NULL</code>.</p>
 
 <p>Besides Tony Hoare’s presentation and David West’s book
 mentioned above, I read these publications before writing this post:
@@ -139,8 +139,8 @@ mentioned above, I read these publications before writing this post:
 <h2 id="ad-hoc-error-handling">Ad-hoc Error Handling</h2>
 
 <p>Every time you get an object as an input you must
-check whether it is <code>NULL</code> or a valid object reference.
-If you forget to check, a <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html"><code>NullPointerException</code></a> (NPE)
+check whether it is <code class="highlighter-rouge">NULL</code> or a valid object reference.
+If you forget to check, a <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html"><code class="highlighter-rouge">NullPointerException</code></a> (NPE)
 may break execution in runtime. Thus, your logic becomes
 polluted with multiple checks and if/then/else forks:</p>
 
@@ -163,25 +163,25 @@ error handler and our code becomes much cleaner and shorter:</p>
 
 <pre>dept.getByName("Jeffrey").transferTo(dept2);</pre>
 
-<p>Consider <code>NULL</code> references an inheritance of procedural programming,
+<p>Consider <code class="highlighter-rouge">NULL</code> references an inheritance of procedural programming,
 and use 1) Null Objects or 2) Exceptions instead.</p>
 
 <h2 id="ambiguous-semantic">Ambiguous Semantic</h2>
 
 <p>In order to explicitly convey its meaning, the function
-<code>getByName()</code> has to be named <code>getByNameOrNullIfNotFound()</code>.
+<code class="highlighter-rouge">getByName()</code> has to be named <code class="highlighter-rouge">getByNameOrNullIfNotFound()</code>.
 The same should happen with every function that returns an
-object or <code>NULL</code>. Otherwise, ambiguity is inevitable for a code reader.
+object or <code class="highlighter-rouge">NULL</code>. Otherwise, ambiguity is inevitable for a code reader.
 Thus, to keep semantic unambiguous, you should give longer names to functions.</p>
 
 <p>To get rid of this ambiguity, always return a real object,
 a null object or
 <a href="/2015/12/01/rethrow-exceptions.html">throw</a> an exception.</p>
 
-<p>Some may argue that we sometimes have to return <code>NULL</code>,
-for the sake of performance. For example, method <code>get()</code> of
-interface <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html"><code>Map</code></a>
-in Java returns <code>NULL</code> when there is no such item in the map:</p>
+<p>Some may argue that we sometimes have to return <code class="highlighter-rouge">NULL</code>,
+for the sake of performance. For example, method <code class="highlighter-rouge">get()</code> of
+interface <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html"><code class="highlighter-rouge">Map</code></a>
+in Java returns <code class="highlighter-rouge">NULL</code> when there is no such item in the map:</p>
 
 <pre>Employee employee = employees.get("Jeffrey");
 if (employee == null) {
@@ -189,8 +189,8 @@ if (employee == null) {
 }
 return employee;</pre>
 
-<p>This code searches the map only once due to the usage of <code>NULL</code> in <code>Map</code>.
-If we would refactor <code>Map</code> so that its method <code>get()</code> will throw
+<p>This code searches the map only once due to the usage of <code class="highlighter-rouge">NULL</code> in <code class="highlighter-rouge">Map</code>.
+If we would refactor <code class="highlighter-rouge">Map</code> so that its method <code class="highlighter-rouge">get()</code> will throw
 an exception if nothing is found, our code will look like this:</p>
 
 <pre>if (!employees.containsKey("Jeffrey")) { // first search
@@ -200,9 +200,9 @@ return employees.get("Jeffrey"); // second search</pre>
 
 <p>Obviously, this is method is twice as slow as the first one. What to do?</p>
 
-<p>The <code>Map</code> interface (no offense to its authors) has a design flaw.
-Its method <code>get()</code> should have been returning an
-<a href="/2015/04/30/iterating-adapter.html"><code>Iterator</code></a>
+<p>The <code class="highlighter-rouge">Map</code> interface (no offense to its authors) has a design flaw.
+Its method <code class="highlighter-rouge">get()</code> should have been returning an
+<a href="/2015/04/30/iterating-adapter.html"><code class="highlighter-rouge">Iterator</code></a>
 so that our code would look like:</p>
 
 <pre>Iterator found = Map.search("Jeffrey");
@@ -216,9 +216,9 @@ return found.next();</pre>
 
 <h2 id="computer-thinking-vs-object-thinking">Computer Thinking vs. Object Thinking</h2>
 
-<p>Statement <code>if (employee == null)</code> is understood by someone who
+<p>Statement <code class="highlighter-rouge">if (employee == null)</code> is understood by someone who
 knows that an object in Java is a pointer to a data structure and
-that <code>NULL</code> is a pointer to nothing (<code>0x00000000</code>, in Intel x86 processors).</p>
+that <code class="highlighter-rouge">NULL</code> is a pointer to nothing (<code class="highlighter-rouge">0x00000000</code>, in Intel x86 processors).</p>
 
 <p>However, if you start thinking as an object, this statement
 makes much less sense. This is how our code looks from an object point of view:</p>
@@ -298,7 +298,7 @@ with immutability in mind. This means that an object gets
 all necessary knowledge during its instantiating and never
 changes its state during the entire life-cycle.</p>
 
-<p>Very often, <code>NULL</code> values are used in <a href="/2017/10/17/lazy-loading-caching-sticky-cactoos.html">lazy loading</a>,
+<p>Very often, <code class="highlighter-rouge">NULL</code> values are used in <a href="/2017/10/17/lazy-loading-caching-sticky-cactoos.html">lazy loading</a>,
 to make objects incomplete and mutable. For example:</p>
 
 <pre>public class Department {
@@ -314,7 +314,7 @@ to make objects incomplete and mutable. For example:</p>
 <p>This technology, although widely used, is an anti-pattern in
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.
 Mostly because it makes an object responsible for performance problems
-of the computational platform, which is something an <code>Employee</code> object should not be aware of.</p>
+of the computational platform, which is something an <code class="highlighter-rouge">Employee</code> object should not be aware of.</p>
 
 <p>Instead of managing a state and exposing its business-relevant behavior,
 an object has to take care of the caching of its own results—this is what lazy loading is about.</p>
@@ -328,7 +328,7 @@ another layer of your application.</p>
 
 <p>For example, in Java, you can use aspect-oriented programming aspects.
 For example, <a href="http://aspects.jcabi.com">jcabi-aspects</a> has
-<a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>@Cacheable</code></a>
+<a href="http://aspects.jcabi.com/annotation-cacheable.html"><code class="highlighter-rouge">@Cacheable</code></a>
 annotation that caches the value returned by a method:</p>
 
 <pre>import com.jcabi.aspects.Cacheable;
@@ -340,7 +340,7 @@ public class Department {
 }</pre>
 
 <p>I hope this analysis was convincing enough that you will
-stop <code>NULL</code>-ing your code :)</p>
+stop <code class="highlighter-rouge">NULL</code>-ing your code :)</p>
 
     </article>
   </body>

@@ -123,12 +123,12 @@ from a plain old object <a href="/2015/02/26/composable-decorators.html">composi
   }
 }</pre>
 
-<p>The object <code>data</code> is called a “dependency.”</p>
+<p>The object <code class="highlighter-rouge">data</code> is called a “dependency.”</p>
 
-<p>A <code>Budget</code> doesn’t know what kind of database it is working with. All it
+<p>A <code class="highlighter-rouge">Budget</code> doesn’t know what kind of database it is working with. All it
 needs from the database is its ability to fetch a cell, using an
-arbitrary SQL query, via method <code>cell()</code>. We can instantiate a <code>Budget</code> with a PostgreSQL
-implementation of the <code>DB</code> interface, for example:</p>
+arbitrary SQL query, via method <code class="highlighter-rouge">cell()</code>. We can instantiate a <code class="highlighter-rouge">Budget</code> with a PostgreSQL
+implementation of the <code class="highlighter-rouge">DB</code> interface, for example:</p>
 
 <pre>public class App {
   public static void main(String... args) {
@@ -139,10 +139,10 @@ implementation of the <code>DB</code> interface, for example:</p>
   }
 }</pre>
 
-<p>In other words, we’re “injecting” a dependency into a new object <code>budget</code>.</p>
+<p>In other words, we’re “injecting” a dependency into a new object <code class="highlighter-rouge">budget</code>.</p>
 
 <p>An alternative to this “dependency injection” approach would be
-to let <code>Budget</code> decide what database it wants to work with:</p>
+to let <code class="highlighter-rouge">Budget</code> decide what database it wants to work with:</p>
 
 <pre>public class Budget {
   private final DB db =
@@ -179,7 +179,7 @@ public class Budget {
 }</pre>
 
 <p>Pay attention: the constructor is annotated with
-<a href="http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html"><code>@Inject</code></a>.</p>
+<a href="http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html"><code class="highlighter-rouge">@Inject</code></a>.</p>
 
 <p>Then, we’re supposed to configure a container
 somewhere, when the application starts:</p>
@@ -197,7 +197,7 @@ somewhere, when the application starts:</p>
 
 <p>Some frameworks even allow us to configure the injector in an XML file.</p>
 
-<p>From now on, we are not allowed to instantiate <code>Budget</code> through the <code>new</code> operator,
+<p>From now on, we are not allowed to instantiate <code class="highlighter-rouge">Budget</code> through the <code class="highlighter-rouge">new</code> operator,
 like we did before. Instead, we should use the injector we just created:</p>
 
 <pre>public class App {
@@ -209,15 +209,15 @@ like we did before. Instead, we should use the injector we just created:</p>
 }</pre>
 
 <p>The injection automatically finds out that in order to instantiate
-a <code>Budget</code> it has to provide an argument for its constructor. It will
-use an instance of class <code>Postgres</code>, which we instantiated in the injector.</p>
+a <code class="highlighter-rouge">Budget</code> it has to provide an argument for its constructor. It will
+use an instance of class <code class="highlighter-rouge">Postgres</code>, which we instantiated in the injector.</p>
 
 
 
 <p>This is the right and recommended way to use Guice. There are
 a few even darker patterns, though, which are possible but not recommended. For example,
 you can make your injector a
-<a href="/2016/06/27/singletons-must-die.html">singleton</a> and use it right inside the <code>Budget</code> class.
+<a href="/2016/06/27/singletons-must-die.html">singleton</a> and use it right inside the <code class="highlighter-rouge">Budget</code> class.
 However, these mechanisms are considered wrong even by DI container makers.
 Let’s ignore them and focus on the recommended scenario.</p>
 
@@ -243,7 +243,7 @@ injection containers:</p>
 
 <p>If we put all of them aside, all we have left is the constructor
 injection explained above. And how does that help us? Why do we need it?
-Why can’t we use plain old <code>new</code> in the main class of the application?</p>
+Why can’t we use plain old <code class="highlighter-rouge">new</code> in the main class of the application?</p>
 
 <p>The container we created simply adds more lines to the code base,
 or even more files, if we use XML. And it doesn’t add anything, except
@@ -252,10 +252,10 @@ if we have the question: “What database is used as an argument of a Budget?”
 
 <h2 id="the-right-way">The Right Way</h2>
 
-<p>Now, let me show you a real life example of using <code>new</code> to construct
+<p>Now, let me show you a real life example of using <code class="highlighter-rouge">new</code> to construct
 an application. This is how we create a “thinking engine” in
 <a href="http://www.rultor.com">rultor.com</a> (full class is in
-<a href="https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java"><code>Agents.java</code></a>):</p>
+<a href="https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java"><code class="highlighter-rouge">Agents.java</code></a>):</p>
 
 
 

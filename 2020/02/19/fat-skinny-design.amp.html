@@ -110,7 +110,7 @@ String name = a.head().author().name();</pre>
 
 <p>Visually, this design may look like this (in UML):</p>
 
-<p></p>
+<p><object data="/uml/b9cc42a8e5ed92f94f4362cfd328fb0d.svg" type="image/svg+xml" class="plantuml"></object></p>
 
 <p>Now, let’s compare it with an alternative design (which is much less
 <em>fat</em> than the previous one, I would even call it <em>skinny</em>):</p>
@@ -130,8 +130,8 @@ class TxtAuthor {
 }</pre>
 
 <p>Here, in order to obtain the name of the author we have to extract
-the head as a <code>String</code>, extract the author as a <code>String</code>, and then
-extract the name as a <code>String</code>:</p>
+the head as a <code class="highlighter-rouge">String</code>, extract the author as a <code class="highlighter-rouge">String</code>, and then
+extract the name as a <code class="highlighter-rouge">String</code>:</p>
 
 <pre>Article a = new PgArticle();
 String head = a.head();
@@ -140,7 +140,7 @@ String name = new TxtAuthor(author).name();</pre>
 
 <p>Visually in UML, it looks like this:</p>
 
-<p></p>
+<p><object data="/uml/930f06f36724929287c1ee82fd95c77b.svg" type="image/svg+xml" class="plantuml"></object></p>
 
 <p>There were three interfaces in the first design, while the second one
 has only one interface and two classes. I call the first one “fat” because
@@ -158,7 +158,7 @@ text data, which we have to parse on our own. We need to <em>dress it up</em>.</
     <p><strong>Extendability</strong>.
 The skinny design is definitely easier to extend. In order
 to extract some new information from the author we just need to add a new
-method to the class <code>TxtAuthor</code>. We don’t need to re-design the entire hierarchy
+method to the class <code class="highlighter-rouge">TxtAuthor</code>. We don’t need to re-design the entire hierarchy
 of interfaces and to modify all their implementations. We deal with pure data,
 which is managed and parsed later, in decorators, adapters, and other
 supplementary <a href="/2016/04/26/why-inputstream-design-is-wrong.html">smart</a> classes.</p>
@@ -166,14 +166,14 @@ supplementary <a href="/2016/04/26/why-inputstream-design-is-wrong.html">smart</
   <li>
     <p><strong>Cohesion</strong>.
 The skinny design is definitely more cohesive, since everything that is
-related to the management of PostgreSQL data stays in one class <code>SqlArticle</code>. To the contrary,
+related to the management of PostgreSQL data stays in one class <code class="highlighter-rouge">SqlArticle</code>. To the contrary,
 the fat design spreads the functionality among many classes and, thanks to that,
 makes the entire class-set more difficult to maintain.</p>
   </li>
   <li>
     <p><strong>Reusability</strong>.
-Class <code>TxtAuthor</code> can definitely be used in any other place, where
-parsing of an author’s information is required, while class <code>PgAuthor</code> is
+Class <code class="highlighter-rouge">TxtAuthor</code> can definitely be used in any other place, where
+parsing of an author’s information is required, while class <code class="highlighter-rouge">PgAuthor</code> is
 only suitable for one particular case: fetching and parsing
 PostgreSQL-related data.</p>
   </li>
@@ -181,15 +181,15 @@ PostgreSQL-related data.</p>
     <p><strong>Testability</strong>.
 Obviously, the skinny design is much easier to test, because mocking
 a single interface is a much simpler task than mocking the entire
-hierarchy. To test the class <code>TxtAuthor</code> we just pass some fake text to
-its constructor and check how it works. To test the class <code>PgAuthor</code> we
+hierarchy. To test the class <code class="highlighter-rouge">TxtAuthor</code> we just pass some fake text to
+its constructor and check how it works. To test the class <code class="highlighter-rouge">PgAuthor</code> we
 would need to do much more, including running a fake instance of a PostgreSQL server.</p>
   </li>
 </ul>
 
 <p>Everything said above is true for both 1) from-PostgreSQL data retrievals
 and 2) to-PostgreSQL data manipulations. Of course, manipulations may
-require many methods to exist in <code>SqlArticle</code>, which will make the skinny
+require many methods to exist in <code class="highlighter-rouge">SqlArticle</code>, which will make the skinny
 design look ugly, and it will become obvious that some of these methods
 have to be moved to lower-level classes/interfaces. This only demonstrates
 that it’s not always possible to make skinny design with a single interface,
@@ -199,17 +199,17 @@ like in the example above. Sometimes we simply <em>have</em> to make it more fat
 
 <p>However, there is one serious concern related to the skinny design: it lets
 the raw <a href="/2016/11/21/naked-data.html">naked</a>
-data jump out of <code>SqlArticle</code>, which is against the very idea
+data jump out of <code class="highlighter-rouge">SqlArticle</code>, which is against the very idea
 of object-oriented programming, as
 <a href="/2016/11/21/naked-data.html">we know</a>. Indeed, if we let
-<code>TxtHead</code> do the parsing, we may lose some interesting PostgreSQL-related
-context, which is available only inside <code>SqlArticle</code>. We don’t want
+<code class="highlighter-rouge">TxtHead</code> do the parsing, we may lose some interesting PostgreSQL-related
+context, which is available only inside <code class="highlighter-rouge">SqlArticle</code>. We don’t want
 complex data parsing to happen far away from the place where the data
 is born. We want everything data-related to happen where the data lives:
-inside <code>SqlArticle</code>.</p>
+inside <code class="highlighter-rouge">SqlArticle</code>.</p>
 
 <p>This is a valid concern, but letting PostgreSQL-related information (like connection
-settings) move from <code>PgArticle</code> to <code>PgHead</code> and then to <code>PgAuthor</code> is an even
+settings) move from <code class="highlighter-rouge">PgArticle</code> to <code class="highlighter-rouge">PgHead</code> and then to <code class="highlighter-rouge">PgAuthor</code> is an even
 larger violation of the data encapsulation principle.</p>
 
 <p>In real-life situations, of course, it’s not possible to imagine pure

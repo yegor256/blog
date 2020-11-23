@@ -96,7 +96,7 @@ coming in from some data source, they are all numbers between zero and one:</p>
 <pre>Iterable&lt;Double&gt; probes;</pre>
 
 <p>Now, we need to show only the first 10 of them, ignoring zeros and ones,
-and re-scaling them to <code>(0..100)</code>. Sounds like an easy task, right? There
+and re-scaling them to <code class="highlighter-rouge">(0..100)</code>. Sounds like an easy task, right? There
 are three ways to do it: procedural, object-oriented, and the Java 8 way. Let’s
 start with the procedural way:</p>
 
@@ -130,9 +130,9 @@ which is supposed to offer a
 functional way to do the same. Let’s try to use it.</p>
 
 <p>First, we need to create an instance of
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html"><code>Stream</code></a>,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html"><code class="highlighter-rouge">Stream</code></a>,
 which
-<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code>Iterable</code></a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code class="highlighter-rouge">Iterable</code></a>
 <a href="https://stackoverflow.com/questions/23114015/">doesn’t</a>
 let us obtain directly. Then we use the stream API to do the job:</p>
 
@@ -145,9 +145,9 @@ let us obtain directly. Then we use the stream API to do the job:</p>
     )
   );</pre>
 
-<p>This will work, but will say <code>Probe #0</code> for all probes, because <code>forEach()</code>
-doesn’t work with indexes. There is no such thing as <code>forEachWithIndex()</code>
-in the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html"><code>Stream</code></a>
+<p>This will work, but will say <code class="highlighter-rouge">Probe #0</code> for all probes, because <code class="highlighter-rouge">forEach()</code>
+doesn’t work with indexes. There is no such thing as <code class="highlighter-rouge">forEachWithIndex()</code>
+in the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html"><code class="highlighter-rouge">Stream</code></a>
 interface as of Java 8 (and Java 9
 <a href="http://download.java.net/java/jdk9/docs/api/java/util/stream/Stream.html">too</a>).
 Here is a <a href="https://stackoverflow.com/a/18552071/187141">workaround</a> with
@@ -166,19 +166,19 @@ StreamSupport.stream(probes.spliterator(), false)
   );</pre>
 
 <p>“What’s wrong with that?” you may ask. First, see how easily we got into
-trouble when we didn’t find the right method in the <code>Stream</code> interface. We
+trouble when we didn’t find the right method in the <code class="highlighter-rouge">Stream</code> interface. We
 immediately fell off the “streaming” paradigm and got back to the
 good old procedural global variable (the counter). Second, we don’t
-really see what’s going on inside those <code>filter()</code>, <code>limit()</code>, and <code>forEach()</code>
+really see what’s going on inside those <code class="highlighter-rouge">filter()</code>, <code class="highlighter-rouge">limit()</code>, and <code class="highlighter-rouge">forEach()</code>
 methods. How exactly do they work? The documentation says that this
-approach is “declarative” and each method in the <code>Stream</code> interface returns
+approach is “declarative” and each method in the <code class="highlighter-rouge">Stream</code> interface returns
 an instance of some class. What classes are they? We have no idea by
 just looking at this code.</p>
 
 
 
 <p>These two problems are connected. The biggest issue with this streaming API
-is the very interface <code>Stream</code>—it’s huge. At the time of writing
+is the very interface <code class="highlighter-rouge">Stream</code>—it’s huge. At the time of writing
 there are 43 methods. Forty three, in a single interface! This is against
 each and every
 <a href="/2014/11/20/seven-virtues-of-good-object.html">principle</a>
@@ -209,23 +209,23 @@ is how I would do it with <a href="http://www.cactoos.org">Cactoos</a>, which is
 ).value();</pre>
 
 <p>Let’s see what’s going on here. First,
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html"><code>Filtered</code></a>
-decorates our iterable <code>probes</code> to take certain items out of it.
-Notice that <code>Filtered</code> implements <code>Iterable</code>. Then
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html"><code>Limited</code></a>,
-also being an <code>Iterable</code>, takes only the first ten items out. Then
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html"><code>Mapped</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html"><code class="highlighter-rouge">Filtered</code></a>
+decorates our iterable <code class="highlighter-rouge">probes</code> to take certain items out of it.
+Notice that <code class="highlighter-rouge">Filtered</code> implements <code class="highlighter-rouge">Iterable</code>. Then
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html"><code class="highlighter-rouge">Limited</code></a>,
+also being an <code class="highlighter-rouge">Iterable</code>, takes only the first ten items out. Then
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html"><code class="highlighter-rouge">Mapped</code></a>
 converts each probe into an instance of
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html"><code>Scalar&lt;Boolean&gt;</code></a>,
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html"><code class="highlighter-rouge">Scalar&lt;Boolean&gt;</code></a>,
 which does the line printing.</p>
 
-<p>Finally, the instance of <code>And</code> goes through the list of “scalars” and ask
-each of them to return <code>boolean</code>. They print the line and return <code>true</code>. Since
-it’s <code>true</code>, <code>And</code> makes the next attempt with the next scalar. Finally,
-its method <code>value()</code> returns <code>true</code>.</p>
+<p>Finally, the instance of <code class="highlighter-rouge">And</code> goes through the list of “scalars” and ask
+each of them to return <code class="highlighter-rouge">boolean</code>. They print the line and return <code class="highlighter-rouge">true</code>. Since
+it’s <code class="highlighter-rouge">true</code>, <code class="highlighter-rouge">And</code> makes the next attempt with the next scalar. Finally,
+its method <code class="highlighter-rouge">value()</code> returns <code class="highlighter-rouge">true</code>.</p>
 
 <p>But wait, there are no indexes. Let’s add them. In order to do that we
-just use another class, called <code>AndWithIndex</code>:</p>
+just use another class, called <code class="highlighter-rouge">AndWithIndex</code>:</p>
 
 <pre>new AndWithIndex(
   new Mapped&lt;Double, Func&lt;Integer, Boolean&gt;&gt;(
@@ -245,15 +245,15 @@ just use another class, called <code>AndWithIndex</code>:</p>
   )
 ).value();</pre>
 
-<p>Instead of <code>Scalar&lt;Boolean&gt;</code> we now map our probes to
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html"><code>Func&lt;Integer, Boolean&gt;</code></a>
+<p>Instead of <code class="highlighter-rouge">Scalar&lt;Boolean&gt;</code> we now map our probes to
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html"><code class="highlighter-rouge">Func&lt;Integer, Boolean&gt;</code></a>
 to let them accept the index.</p>
 
 <p>The beauty of this approach is that all classes and interfaces are small
 and that’s why they’re very composable. To make an iterable of probes limited
-we decorate it with <code>Limited</code>; to make it filtered we decorate it with
-<code>Filtered</code>; to do something else we create a new decorator and use it. We’re
-not stuck to one single interface like <code>Stream</code>.</p>
+we decorate it with <code class="highlighter-rouge">Limited</code>; to make it filtered we decorate it with
+<code class="highlighter-rouge">Filtered</code>; to do something else we create a new decorator and use it. We’re
+not stuck to one single interface like <code class="highlighter-rouge">Stream</code>.</p>
 
 <p>The bottom line is that decorators are an object-oriented instrument to
 modify the behavior of collections, while streams is something else which
@@ -261,7 +261,7 @@ I can’t even find the name for.</p>
 
 <p>P.S. By the way, this is how the same algorithm can be implemented
 with the help of Guava’s
-<a href="https://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Iterables.html"><code>Iterables</code></a>:</p>
+<a href="https://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Iterables.html"><code class="highlighter-rouge">Iterables</code></a>:</p>
 
 <pre>Iterable&lt;Double&gt; ready = Iterables.limit(
   Iterables.filter(

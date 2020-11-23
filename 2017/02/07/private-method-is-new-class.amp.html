@@ -118,9 +118,9 @@ it is to introduce a private static method:</p>
 
 <p>Looks much better now. But what will happen if we have another class
 that needs the exact same functionality? We will have to copy and paste
-this private static method <code>encoded()</code> into it, right?</p>
+this private static method <code class="highlighter-rouge">encoded()</code> into it, right?</p>
 
-<p>A better alternative would be to introduce a new class <code>Encoded</code> that
+<p>A better alternative would be to introduce a new class <code class="highlighter-rouge">Encoded</code> that
 implements the functionality we want to share:</p>
 
 <pre>class Encoded {
@@ -145,7 +145,7 @@ implements the functionality we want to share:</p>
 }</pre>
 
 <p>Now this functionality is 1) reusable, and 2) testable. We can easily
-use this class <code>Encoded</code> in many other places, and we can create a unit
+use this class <code class="highlighter-rouge">Encoded</code> in many other places, and we can create a unit
 test for it. We were not able to do that with the private static method before.</p>
 
 <p>See the point? The rule of thumb I’ve already figured for myself is that

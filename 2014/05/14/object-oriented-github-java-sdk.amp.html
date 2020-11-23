@@ -115,12 +115,12 @@ Issue issue = issues.get(123);
 User author = new Issue.Smart(issue).author();
 System.out.println(author.name());</pre>
 
-<p>Needless to say, <code>GitHub</code>, <code>Repos</code>, <code>Repo</code>, <code>Issues</code>, <code>Issue</code>,
-and <code>User</code> are interfaces. Classes that implement them are not visible in the library.</p>
+<p>Needless to say, <code class="highlighter-rouge">GitHub</code>, <code class="highlighter-rouge">Repos</code>, <code class="highlighter-rouge">Repo</code>, <code class="highlighter-rouge">Issues</code>, <code class="highlighter-rouge">Issue</code>,
+and <code class="highlighter-rouge">User</code> are interfaces. Classes that implement them are not visible in the library.</p>
 
 <h2 id="mock-engine">Mock Engine</h2>
 
-<p><code>MkGitHub</code> class is a mock version of a GitHub server. It behaves
+<p><code class="highlighter-rouge">MkGitHub</code> class is a mock version of a GitHub server. It behaves
 almost exactly the same as a real server and is the perfect
 instrument for unit testing. For example, say that you’re
 testing a method that is supposed to post a new issue to GitHub
@@ -146,12 +146,12 @@ mocking via <a href="https://code.google.com/p/mockito/">Mockito</a> or a simila
 
 <h2 id="extensible">Extensible</h2>
 
-<p>It is based on JSR-353 and uses <code>jcabi-http</code> for HTTP request
+<p>It is based on JSR-353 and uses <code class="highlighter-rouge">jcabi-http</code> for HTTP request
 processing. This combination makes it highly customizable and extensible,
 when some GitHub feature is not covered by the library (and there are many of them).</p>
 
-<p>For example, you want to get the value of <code>hireable</code> attribute of a <code>User</code>.
-Class <code>User.Smart</code> doesn’t have a method for it. So, here is how you would get it:</p>
+<p>For example, you want to get the value of <code class="highlighter-rouge">hireable</code> attribute of a <code class="highlighter-rouge">User</code>.
+Class <code class="highlighter-rouge">User.Smart</code> doesn’t have a method for it. So, here is how you would get it:</p>
 
 <pre>User user = // get it somewhere
 // name() method exists in User.Smart, let's use it
@@ -159,16 +159,16 @@ System.out.println(new User.Smart(user).name());
 // there is no hireable() method there
 System.out.println(user.json().getString("hireable"));</pre>
 
-<p>We’re using method <code>json()</code> that returns an instance of
-<a href="http://docs.oracle.com/javaee/7/api/javax/json/JsonObject.html"><code>JsonObject</code></a>
+<p>We’re using method <code class="highlighter-rouge">json()</code> that returns an instance of
+<a href="http://docs.oracle.com/javaee/7/api/javax/json/JsonObject.html"><code class="highlighter-rouge">JsonObject</code></a>
 from JSR-353 (part of Java7).</p>
 
 <p>No other library allows such direct access to JSON objects
 returned by the GitHub server.</p>
 
 <p>Let’s see another example. Say, you want to use some feature
-from GitHub that is not covered by the API. You get a <code>Request</code>
-object from <code>GitHub</code> interface and directly access the HTTP entry point of the server:</p>
+from GitHub that is not covered by the API. You get a <code class="highlighter-rouge">Request</code>
+object from <code class="highlighter-rouge">GitHub</code> interface and directly access the HTTP entry point of the server:</p>
 
 <pre>GitHub github = new RtGitHub(oauthKey);
 int found = github.entry()
@@ -184,7 +184,7 @@ int found = github.entry()
 <h2 id="immutable">Immutable</h2>
 
 <p>All classes are truly immutable and annotated with
-<a href="http://aspects.jcabi.com/annotation-immutable.html"><code>@Immutable</code></a>.
+<a href="http://aspects.jcabi.com/annotation-immutable.html"><code class="highlighter-rouge">@Immutable</code></a>.
 This may sound like a minor benefit, but it was very important for me.
 I’m using this annotation in all my projects to ensure my classes are truly immutable.</p>
 

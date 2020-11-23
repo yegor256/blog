@@ -76,10 +76,10 @@ many consider them a terrible practice to be avoided.
       <p>Yegor Bugayenko<br>5 May 2014</p>
       <h1>OOP Alternative to Utility Classes</h1>
       <p>A utility class (aka helper class) is a “structure” that has only static methods
-and encapsulates no state. <code>StringUtils</code>, <code>IOUtils</code>, <code>FileUtils</code> from
-<a href="http://commons.apache.org/">Apache Commons</a>; <code>Iterables</code> and <code>Iterators</code> from
+and encapsulates no state. <code class="highlighter-rouge">StringUtils</code>, <code class="highlighter-rouge">IOUtils</code>, <code class="highlighter-rouge">FileUtils</code> from
+<a href="http://commons.apache.org/">Apache Commons</a>; <code class="highlighter-rouge">Iterables</code> and <code class="highlighter-rouge">Iterators</code> from
 <a href="https://code.google.com/p/guava-libraries/">Guava</a>, and
-<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html"><code>Files</code></a>
+<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html"><code class="highlighter-rouge">Files</code></a>
 from JDK7 are perfect examples of utility classes.</p>
 
 
@@ -132,7 +132,7 @@ I’ll show by example how these creatures can be replaced with proper
 
 <p>Say, for instance, you want to read a text file, split it into lines, trim every
 line and then save the results in another file. This is can be done with
-<a href="http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html"><code>FileUtils</code></a>
+<a href="http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html"><code class="highlighter-rouge">FileUtils</code></a>
 from Apache Commons:</p>
 
 <pre>void transform(File in, File out) {
@@ -194,18 +194,18 @@ in an object-oriented manner:</p>
   dest.addAll(src);
 }</pre>
 
-<p><code>FileLines</code> implements <code>Collection&lt;String&gt;</code> and encapsulates  all file reading
-and writing operations. An instance of <code>FileLines</code> behaves exactly as a
+<p><code class="highlighter-rouge">FileLines</code> implements <code class="highlighter-rouge">Collection&lt;String&gt;</code> and encapsulates  all file reading
+and writing operations. An instance of <code class="highlighter-rouge">FileLines</code> behaves exactly as a
 collection of strings and hides all I/O operations. When we iterate it—a
-file is being read. When we <code>addAll()</code> to it—a file is being written.</p>
+file is being read. When we <code class="highlighter-rouge">addAll()</code> to it—a file is being written.</p>
 
-<p><code>Trimmed</code> also implements <code>Collection&lt;String&gt;</code> and encapsulates a collection of
+<p><code class="highlighter-rouge">Trimmed</code> also implements <code class="highlighter-rouge">Collection&lt;String&gt;</code> and encapsulates a collection of
 strings (<a href="http://en.wikipedia.org/wiki/Decorator_pattern">Decorator pattern</a>).
 Every time the next line is retrieved, it gets trimmed.</p>
 
 <p>All classes taking
-participation in the snippet are rather small: <code>Trimmed</code>, <code>FileLines</code>, and
-<code>UnicodeFile</code>.
+participation in the snippet are rather small: <code class="highlighter-rouge">Trimmed</code>, <code class="highlighter-rouge">FileLines</code>, and
+<code class="highlighter-rouge">UnicodeFile</code>.
 Each of them is responsible for its own single feature, thus following perfectly
 the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>.</p>
 
@@ -213,14 +213,14 @@ the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">singl
 
 <p>On our side, as users of the library, this may be not so important, but for
 their developers it is an imperative.
-It is much easier to develop, maintain and unit-test class <code>FileLines</code> rather
-than using a <code>readLines()</code> method in a 80+ methods and 3000 lines utility class
-<code>FileUtils</code>. Seriously, look at
+It is much easier to develop, maintain and unit-test class <code class="highlighter-rouge">FileLines</code> rather
+than using a <code class="highlighter-rouge">readLines()</code> method in a 80+ methods and 3000 lines utility class
+<code class="highlighter-rouge">FileUtils</code>. Seriously, look at
 <a href="https://github.com/apache/commons-io/blob/commons-io-2.5/src/main/java/org/apache/commons/io/FileUtils.java">its source code</a>.</p>
 
-<p>An object-oriented approach enables lazy execution. The <code>in</code> file is not read
-until its data is required. If we fail to open <code>out</code> due to some I/O error, the
-first file won’t even be touched. The whole show starts only after we call <code>addAll()</code>.</p>
+<p>An object-oriented approach enables lazy execution. The <code class="highlighter-rouge">in</code> file is not read
+until its data is required. If we fail to open <code class="highlighter-rouge">out</code> due to some I/O error, the
+first file won’t even be touched. The whole show starts only after we call <code class="highlighter-rouge">addAll()</code>.</p>
 
 <p>All lines in the second snippet, except the last one, instantiate and compose
 smaller objects into bigger ones. This object composition is rather cheap for

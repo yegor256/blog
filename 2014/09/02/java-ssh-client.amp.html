@@ -76,7 +76,7 @@ object-oriented and convenient
       <p>Yegor Bugayenko<br>2 September 2014</p>
       <h1>Simple Java SSH Client</h1>
       <p>An execution of a shell command via SSH can be done in
-Java, in just a few lines, using <a href="http://ssh.jcabi.com"><code>jcabi-ssh</code></a>:</p>
+Java, in just a few lines, using <a href="http://ssh.jcabi.com"><code class="highlighter-rouge">jcabi-ssh</code></a>:</p>
 
 <pre>String hello = new Shell.Plain(
   new SSH(
@@ -85,8 +85,8 @@ Java, in just a few lines, using <a href="http://ssh.jcabi.com"><code>jcabi-ssh<
   )
 ).exec("echo 'Hello, world!'");</pre>
 
-<p><a href="http://ssh.jcabi.com"><code>jcabi-ssh</code></a> is
-a convenient wrapper of <a href="http://www.jcraft.com/jsch/"><code>JSch</code></a>,
+<p><a href="http://ssh.jcabi.com"><code class="highlighter-rouge">jcabi-ssh</code></a> is
+a convenient wrapper of <a href="http://www.jcraft.com/jsch/"><code class="highlighter-rouge">JSch</code></a>,
 a well-known pure Java implementation of SSH2.</p>
 
 
@@ -106,7 +106,7 @@ new Shell.Safe(shell).exec(
   Logger.stream(Level.WARNING, this)
 );</pre>
 
-<p>Class <code>SSH</code>, which implements interface <code>Shell</code>, has only one method, <code>exec</code>.
+<p>Class <code class="highlighter-rouge">SSH</code>, which implements interface <code class="highlighter-rouge">Shell</code>, has only one method, <code class="highlighter-rouge">exec</code>.
 This method accepts four arguments:</p>
 
 <pre>interface Shell {
@@ -123,12 +123,12 @@ simple commands.</p>
 
 <h2 id="shellsafe">Shell.Safe</h2>
 
-<p><code>Shell.Safe</code>
-<a href="/2017/01/31/decorating-envelopes.html">decorates</a> an instance of <code>Shell</code> and
+<p><code class="highlighter-rouge">Shell.Safe</code>
+<a href="/2017/01/31/decorating-envelopes.html">decorates</a> an instance of <code class="highlighter-rouge">Shell</code> and
 <a href="/2015/12/01/rethrow-exceptions.html">throws</a> an exception
-if the <code>exec</code> exit code is not equal to zero. This may be very useful when
+if the <code class="highlighter-rouge">exec</code> exit code is not equal to zero. This may be very useful when
 you want to make sure that your command executed successfully, but don’t
-want to duplicate <code>if/throw</code> in many places of your code.</p>
+want to duplicate <code class="highlighter-rouge">if/throw</code> in many places of your code.</p>
 
 <pre>Shell ssh = new Shell.Safe(
   new SSH(
@@ -139,9 +139,9 @@ want to duplicate <code>if/throw</code> in many places of your code.</p>
 
 <h2 id="shellverbose">Shell.Verbose</h2>
 
-<p><code>Shell.Verbose</code> decorates an instance of <code>Shell</code> and copies
-<code>stdout</code> and <code>stderr</code> to the slf4j logging facility (using
-<a href="http://log.jcabi.com"><code>jcabi-log</code></a>). Of course, you can combine
+<p><code class="highlighter-rouge">Shell.Verbose</code> decorates an instance of <code class="highlighter-rouge">Shell</code> and copies
+<code class="highlighter-rouge">stdout</code> and <code class="highlighter-rouge">stderr</code> to the slf4j logging facility (using
+<a href="http://log.jcabi.com"><code class="highlighter-rouge">jcabi-log</code></a>). Of course, you can combine
 decorators, for example:</p>
 
 <pre>Shell ssh = new Shell.Verbose(
@@ -155,18 +155,18 @@ decorators, for example:</p>
 
 <h2 id="shellplain">Shell.Plain</h2>
 
-<p><code>Shell.Plain</code> is a wrapper of <code>Shell</code> that introduces a new <code>exec</code> method
+<p><code class="highlighter-rouge">Shell.Plain</code> is a wrapper of <code class="highlighter-rouge">Shell</code> that introduces a new <code class="highlighter-rouge">exec</code> method
 with only one argument, a command to execute. It also doesn’t return an
-exit code, but <code>stdout</code> instead. This should be very convenient when you want
+exit code, but <code class="highlighter-rouge">stdout</code> instead. This should be very convenient when you want
 to execute a simple command and just get its output
-(I’m combining it with <code>Shell.Safe</code> for safety):</p>
+(I’m combining it with <code class="highlighter-rouge">Shell.Safe</code> for safety):</p>
 
 <pre>String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");</pre>
 
 <h2 id="download">Download</h2>
 
 <p>You need a single dependency
-<a href="http://repo1.maven.org/maven2/com/jcabi/jcabi-ssh"><code>jcabi-ssh.jar</code></a>
+<a href="http://repo1.maven.org/maven2/com/jcabi/jcabi-ssh"><code class="highlighter-rouge">jcabi-ssh.jar</code></a>
 in your Maven project
 (get its latest version in <a href="http://search.maven.org/">Maven Central</a>):</p>
 

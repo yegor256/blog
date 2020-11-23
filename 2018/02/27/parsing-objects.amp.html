@@ -98,8 +98,8 @@ book in the library, arriving in JSON:</p>
   "author: "David West"
 }</pre>
 
-<p>Also, there is an object of class <code>Library</code>, which expects an object of type
-<code>Book</code> to be given to its method <code>register()</code>:</p>
+<p>Also, there is an object of class <code class="highlighter-rouge">Library</code>, which expects an object of type
+<code class="highlighter-rouge">Book</code> to be given to its method <code class="highlighter-rouge">register()</code>:</p>
 
 <pre>class Library {
   public void register(Book book) {
@@ -107,7 +107,7 @@ book in the library, arriving in JSON:</p>
   }
 }</pre>
 
-<p>Say also, type <code>Book</code> has a simple method <code>isbn()</code>:</p>
+<p>Say also, type <code class="highlighter-rouge">Book</code> has a simple method <code class="highlighter-rouge">isbn()</code>:</p>
 
 <pre>interface Book {
   String isbn();
@@ -117,7 +117,7 @@ book in the library, arriving in JSON:</p>
 (I’m using <a href="/2015/03/22/takes-java-web-framework.html">Takes</a>
 and <a href="/2017/06/22/object-oriented-input-output-in-cactoos.html">Cactoos</a>),
 which is accepting
-a POST <a href="https://www.ietf.org/rfc/rfc2045.txt"><code>multipart/form-data</code></a>
+a POST <a href="https://www.ietf.org/rfc/rfc2045.txt"><code class="highlighter-rouge">multipart/form-data</code></a>
 request and registering the book in the library:</p>
 
 <pre>public class TkUpload implements Take {
@@ -150,7 +150,7 @@ the DTO may encapsulate it, but that’s not what DTOs are usually for.</p>
 <p>Third, the code above is rather procedural and has a lot of
 <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>.</p>
 
-<p>A better design would be to hide this parsing inside a new class <code>JsonBook</code>:</p>
+<p>A better design would be to hide this parsing inside a new class <code class="highlighter-rouge">JsonBook</code>:</p>
 
 <pre>class JsonBook implements Book {
   private final String json;
@@ -186,14 +186,14 @@ the DTO may encapsulate it, but that’s not what DTOs are usually for.</p>
 <p>Isn’t that more elegant?</p>
 
 <p>Here are some examples from my projects:
-<a href="https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java"><code>RqUser</code></a>
+<a href="https://github.com/zerocracy/farm/blob/0.21/src/main/java/com/zerocracy/tk/RqUser.java"><code class="highlighter-rouge">RqUser</code></a>
 from <a href="https://github.com/zerocracy/farm/">zerocracy/farm</a> and
-<a href="https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java"><code>RqUser</code></a>
+<a href="https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java"><code class="highlighter-rouge">RqUser</code></a>
 from <a href="https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare/tk/RqUser.java">yegor256/jare</a>.</p>
 
-<p>As you can see from the examples above, sometimes we can’t use <code>implements</code>
-because some primitives in Java are not interfaces but <code>final</code> classes:
-<code>String</code> is a “perfect” example. That’s why I have to do this:</p>
+<p>As you can see from the examples above, sometimes we can’t use <code class="highlighter-rouge">implements</code>
+because some primitives in Java are not interfaces but <code class="highlighter-rouge">final</code> classes:
+<code class="highlighter-rouge">String</code> is a “perfect” example. That’s why I have to do this:</p>
 
 <pre>class RqUser implements Scalar&lt;String&gt; {
   @Override

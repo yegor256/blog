@@ -94,15 +94,15 @@ misunderstood and overcomplicated all too often.</p>
 <pre>print(book.title());</pre>
 
 <p>It is very straight forward: we retrieve the title from the book and
-simply give it to the <code>print()</code> procedure, or whatever else it might be. <em>We</em> are in charge,
+simply give it to the <code class="highlighter-rouge">print()</code> procedure, or whatever else it might be. <em>We</em> are in charge,
 the <em>control</em> is in our hands.</p>
 
 <p>In contrast to this, here is the <em>inversion</em>:</p>
 
 <pre>print(book);</pre>
 
-<p>We give the entire book to the procedure <code>print()</code> and
-it calls <code>title()</code> when it feels like it. That is, we <em>delegate</em> control.</p>
+<p>We give the entire book to the procedure <code class="highlighter-rouge">print()</code> and
+it calls <code class="highlighter-rouge">title()</code> when it feels like it. That is, we <em>delegate</em> control.</p>
 
 <p>This is pretty much everything you need to know about IoC.</p>
 
@@ -111,8 +111,8 @@ it calls <code>title()</code> when it feels like it. That is, we <em>delegate</e
 <p>Does it have anything to do with
 <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> containers?
 Well, of course, we <em>could</em> put the book into a container, inject the entire
-container into <code>print()</code>, let it retrieve the book from the container and
-then call <code>title()</code>. But that’s not what IoC is really about—it’s merely
+container into <code class="highlighter-rouge">print()</code>, let it retrieve the book from the container and
+then call <code class="highlighter-rouge">title()</code>. But that’s not what IoC is really about—it’s merely
 one of its
 <a href="/2014/10/03/di-containers-are-evil.html">perverted</a> usage scenarios.</p>
 
@@ -122,7 +122,7 @@ and <a href="/2016/12/20/can-objects-be-friends.html">object friends</a>:
 we must <em>not</em> deal with <em>data</em>, but instead only with
 <a href="https://en.wikipedia.org/wiki/Object_composition">object composition</a>. In the
 given example the design would be even better if we got rid of the
-<code>print()</code> procedure altogether and replaced it with an object:</p>
+<code class="highlighter-rouge">print()</code> procedure altogether and replaced it with an object:</p>
 
 <pre>new PrintedBook(book);</pre>
 

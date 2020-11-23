@@ -140,12 +140,12 @@ are many examples in Java, where getters are being actively used.</p>
 <p>This is <em>not</em> because they are so effective. This is because we’re so
 <a href="/2015/02/20/utility-classes-vs-functional-programming.html"><em>procedural</em></a>
 in our way of thinking. We <em>don’t trust</em> our objects. We only trust
-the data they store. We don’t want this <code>Book</code> object to generate the XML. We
-want it to give us the data. We will build the XML. The <code>Book</code> is too stupid
+the data they store. We don’t want this <code class="highlighter-rouge">Book</code> object to generate the XML. We
+want it to give us the data. We will build the XML. The <code class="highlighter-rouge">Book</code> is too stupid
 to do that job. We’re way smarter!</p>
 
 <p>I’m suggesting to stop thinking this way. Instead, let’s try to give
-this poor <code>Book</code> a chance, and equip it with a “printer”:</p>
+this poor <code class="highlighter-rouge">Book</code> a chance, and equip it with a “printer”:</p>
 
 <pre>public class Book {
   private final String isbn =
@@ -208,10 +208,10 @@ that represents the media where the data will be printed to:</p>
 
 <p>Again, it’s a very primitive design of that
 <a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>
-<code>Media</code> class, but you got
-the idea—the <code>media</code> accepts the data.
+<code class="highlighter-rouge">Media</code> class, but you got
+the idea—the <code class="highlighter-rouge">media</code> accepts the data.
 Now, we want to print our object to JSON
-(this design is not really perfect, since <code>JsonObjectBuilder</code> is not immutable,
+(this design is not really perfect, since <code class="highlighter-rouge">JsonObjectBuilder</code> is not immutable,
 even though it looks like one…):</p>
 
 <pre>class JsonMedia implements Media {
@@ -236,7 +236,7 @@ even though it looks like one…):</p>
   }
 }</pre>
 
-<p>Now, we make an instance of <code>JsonMedia</code> and ask our book to print
+<p>Now, we make an instance of <code class="highlighter-rouge">JsonMedia</code> and ask our book to print
 itself there:</p>
 
 <pre>JsonMedia media = new JsonMedia("book");
@@ -245,7 +245,7 @@ JsonObject json = media.json();</pre>
 
 <p>Voilà! The JSON object is ready and the book has no idea about what
 exactly what printed just now. We need to print the book to XML? We
-create <code>XmlMedia</code>, which will print the book to XML. The <code>Book</code> class
+create <code class="highlighter-rouge">XmlMedia</code>, which will print the book to XML. The <code class="highlighter-rouge">Book</code> class
 stays small, while the complexity of “media” objects is unlimited.</p>
 
 <p>My point here is simple—no

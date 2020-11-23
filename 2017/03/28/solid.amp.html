@@ -130,9 +130,9 @@ which was introduced by
 <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a> in 1987.
 This one is the most innocent part in the SOLID pentad. In simple words, it states
 that if your method expects a
-<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html"><code>Collection,</code></a>
+<a href="http://docs.oracle.com/javase/7/docs/api/java/util/Collection.html"><code class="highlighter-rouge">Collection,</code></a>
 an
-<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html"><code>ArrayList</code></a>
+<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html"><code class="highlighter-rouge">ArrayList</code></a>
 will work.</p>
 
 <p>It is also known as <a href="https://en.wikipedia.org/wiki/Subtyping">subtyping</a> and is
@@ -151,15 +151,15 @@ to somehow fill the gap between “SO” and “ID.”</p>
 he was working at Xerox.</p>
 
 <p>The <a href="https://en.wikipedia.org/wiki/Interface_segregation_principle">Interface Segregation Principle</a>
-states that you must not declare <code>List x</code> if you only need <code>Collection x</code>
-or even <code>Iterable x.</code> I can’t agree more. Let’s see the next one.</p>
+states that you must not declare <code class="highlighter-rouge">List x</code> if you only need <code class="highlighter-rouge">Collection x</code>
+or even <code class="highlighter-rouge">Iterable x.</code> I can’t agree more. Let’s see the next one.</p>
 
 <p>The <a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">Dependency Inversion Principle</a>
-means that instead of <code>ArrayList x,</code> you must
-declare <code>List x</code> and let the provider of the object decide whether
+means that instead of <code class="highlighter-rouge">ArrayList x,</code> you must
+declare <code class="highlighter-rouge">List x</code> and let the provider of the object decide whether
 it is
-<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html"><code>ArrayList</code></a> or
-<a href="http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html"><code>LinkedList.</code></a>
+<a href="http://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html"><code class="highlighter-rouge">ArrayList</code></a> or
+<a href="http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html"><code class="highlighter-rouge">LinkedList.</code></a>
 This one also sounds reasonable to me.</p>
 
 <p>However, how is all this different from the good old

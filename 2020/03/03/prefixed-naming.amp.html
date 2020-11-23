@@ -80,10 +80,10 @@ an effective naming convention.
 <a href="https://github.com/yegor256/cactoos">Cactoos</a> for the first time,
 you most probably, like many others, will be triggered by the naming
 convention, which implies that most class names have two-letter prefixes:
-<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/http/BkSafe.html"><code>BkSafe</code></a>,
-<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rq/RqFake.html"><code>RqFake</code></a>,
-<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rs/RsWithStatus.html"><code>RsWithStatus</code></a>,
-<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/tk/TkGzip.html"><code>TkGzip</code></a>,
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/http/BkSafe.html"><code class="highlighter-rouge">BkSafe</code></a>,
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rq/RqFake.html"><code class="highlighter-rouge">RqFake</code></a>,
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rs/RsWithStatus.html"><code class="highlighter-rouge">RsWithStatus</code></a>,
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/tk/TkGzip.html"><code class="highlighter-rouge">TkGzip</code></a>,
 and so on. To be honest,
 I haven’t seen a single Java developer who would be comfortable with this
 convention at first sight. I have, however, seen many who are in love with it
@@ -104,10 +104,10 @@ make class names as descriptive and as long as possible. Here are
 <a href="https://gist.github.com/thom-nic/2c74ed4075569da0f80b">some examples</a>:</p>
 
 <ul>
-  <li><code>ObjectFactoryCreatingFactoryBean</code></li>
-  <li><code>SimpleBeanFactoryAwareAspectInstanceFactory</code></li>
-  <li><code>TransactionAwarePersistenceManagerFactoryProxy</code></li>
-  <li><code>AbstractAnnotationConfigDispatcherServletInitializer</code></li>
+  <li><code class="highlighter-rouge">ObjectFactoryCreatingFactoryBean</code></li>
+  <li><code class="highlighter-rouge">SimpleBeanFactoryAwareAspectInstanceFactory</code></li>
+  <li><code class="highlighter-rouge">TransactionAwarePersistenceManagerFactoryProxy</code></li>
+  <li><code class="highlighter-rouge">AbstractAnnotationConfigDispatcherServletInitializer</code></li>
 </ul>
 
 <p>This is garbage, isn’t it?</p>
@@ -117,7 +117,7 @@ by the <a href="https://en.wikipedia.org/wiki/Domain-driven_design">DDD paradigm
 which suggests using <em>nouns</em> after <em>entities</em> in the real world, like port, car,
 book, story, user, socket, and so on. Identifying the right entities
 is a big challenge for a software architect. A bad one would just resort
-to <code>ConnectionFactoryUtils</code> or <code>DefaultListableBeanFactory</code> and call it a day.
+to <code class="highlighter-rouge">ConnectionFactoryUtils</code> or <code class="highlighter-rouge">DefaultListableBeanFactory</code> and call it a day.
 A more professional one may spend hours or days, but will eventually come up with
 something more <em>domain-driven</em>.</p>
 
@@ -133,37 +133,37 @@ and a TCP port, and a port already closed, and a port not yet opened, and so on.
 
 <p>There will be nouns with <em>adjectives</em>: random port, closed port, opened port,
 TCP port, broken port, and so on. How do you name those classes? Maybe, as simply
-as this: <code>RandomPort</code>, <code>OpenedPort</code>, <code>ClosedPort</code>, <code>TcpPort</code>.
-Maybe, but I think it’s better to turn the common <code>Port</code> part into a common prefix <code>Pt</code>
+as this: <code class="highlighter-rouge">RandomPort</code>, <code class="highlighter-rouge">OpenedPort</code>, <code class="highlighter-rouge">ClosedPort</code>, <code class="highlighter-rouge">TcpPort</code>.
+Maybe, but I think it’s better to turn the common <code class="highlighter-rouge">Port</code> part into a common prefix <code class="highlighter-rouge">Pt</code>
 for all classes:</p>
 
 <ul>
-  <li><code>PtRandom</code></li>
-  <li><code>PtOpened</code></li>
-  <li><code>PtClosed</code></li>
-  <li><code>PtTcp</code></li>
+  <li><code class="highlighter-rouge">PtRandom</code></li>
+  <li><code class="highlighter-rouge">PtOpened</code></li>
+  <li><code class="highlighter-rouge">PtClosed</code></li>
+  <li><code class="highlighter-rouge">PtTcp</code></li>
 </ul>
 
 <p>The only disadvantage of this approach is that newcomers may have no idea
-what the <code>Pt</code> prefix means. Indeed, it may take some time (a few minutes) to learn it. However,
+what the <code class="highlighter-rouge">Pt</code> prefix means. Indeed, it may take some time (a few minutes) to learn it. However,
 the advantage is greater: once you learn all the prefixes that exist
 in the application (and there will be just a few of them, since the amount
 of entities in the domain is pretty limited), you can immediately understand
 which part of the type hierarchy the class belongs to (this one is from
 <a href="https://github.com/yegor256/takes">Takes</a>):</p>
 
-<p></p>
+<p><object data="/uml/c415b43f6d14c18e66db32e9d5d6e8b2.svg" type="image/svg+xml" class="plantuml"></object></p>
 
-<p>Once you see the <code>Rq</code> prefix you immediately understand that you are dealing with
+<p>Once you see the <code class="highlighter-rouge">Rq</code> prefix you immediately understand that you are dealing with
 an implementation of the
-<a href="https://www.javadoc.io/doc/org.takes/takes/latest/org/takes/Request.html"><code>org.takes.Request</code></a> interface. Not the
-<a href="https://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html"><code>ServletRequest</code></a>
+<a href="https://www.javadoc.io/doc/org.takes/takes/latest/org/takes/Request.html"><code class="highlighter-rouge">org.takes.Request</code></a> interface. Not the
+<a href="https://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html"><code class="highlighter-rouge">ServletRequest</code></a>
 from <a href="https://en.wikipedia.org/wiki/Java_servlet">JDK</a>,
-not <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpRequest.html"><code>HttpRequest</code></a>
+not <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpRequest.html"><code class="highlighter-rouge">HttpRequest</code></a>
 from Spring,
-and not <a href="https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.html"><code>Request</code></a>
+and not <a href="https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.html"><code class="highlighter-rouge">Request</code></a>
 from <a href="https://square.github.io/okhttp/">OkHttp</a>.
-You know that it’s the <code>Request</code> from Takes!</p>
+You know that it’s the <code class="highlighter-rouge">Request</code> from Takes!</p>
 
 <p>Thus, by using short prefixes instead of nouns we add clarity to the code.
 We remove the noise of repeated usage of the same noun over and over again and

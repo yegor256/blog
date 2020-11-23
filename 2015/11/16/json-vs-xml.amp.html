@@ -147,8 +147,8 @@ JSON or any other simple data format, like
     <p><strong>XPath</strong>.
   To get data like the year of publication from the document above, I just
   send an <a href="http://www.w3.org/TR/xpath20/">XPath</a>
-  query: <code>/book/published/year/text()</code>. However, there has to be
-  an XPath processor that understands my request and returns <code>2004</code>.
+  query: <code class="highlighter-rouge">/book/published/year/text()</code>. However, there has to be
+  an XPath processor that understands my request and returns <code class="highlighter-rouge">2004</code>.
   The beauty of this is that XPath <a href="http://www.xml.com/pub/a/2002/03/20/xpath2.html">2.0</a>
   is a very powerful query engine
   with its own functions, predicates, axes, etc. You can literally put
@@ -159,7 +159,7 @@ JSON or any other simple data format, like
   <li>
     <p><strong>Attributes and Namespaces</strong>.
   You can attach metadata to your data, just like it’s done above
-  with the <code>id</code> attribute. The data stays inside elements, just like the
+  with the <code class="highlighter-rouge">id</code> attribute. The data stays inside elements, just like the
   name of the book author, for example, while metadata (data about data)
   can and should be placed into attributes. This significantly helps in organizing
   and structuring information. On top of that, both elements and attributes
@@ -172,8 +172,8 @@ JSON or any other simple data format, like
   When you create an XML document in one place, modify it a few times somewhere
   else, and then transfer it to yet another place, you want to make sure its
   structure is not broken by any of these actions. One of them may
-  use <code>&lt;year&gt;</code> to store the publication date while another uses
-  <code>&lt;date&gt;</code> with ISO-8601. To avoid that mess in structure, create a supplementary
+  use <code class="highlighter-rouge">&lt;year&gt;</code> to store the publication date while another uses
+  <code class="highlighter-rouge">&lt;date&gt;</code> with ISO-8601. To avoid that mess in structure, create a supplementary
   document, which is called <a href="http://www.w3.org/XML/Schema">XML Schema</a>,
   and ship it together with the main document.
   Everyone who wants to work with the main document will first <strong>validate</strong>

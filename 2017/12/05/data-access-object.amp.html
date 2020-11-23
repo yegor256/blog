@@ -102,9 +102,9 @@ is terrible.</p>
   // Other methods here ...
 }</pre>
 
-<p>The idea is simple—method <code>find()</code> creates
+<p>The idea is simple—method <code class="highlighter-rouge">find()</code> creates
 a <a href="/2016/07/06/data-transfer-object.html">DTO</a>
-<code>Book</code>, someone else injects new data into it and calls <code>update()</code>:</p>
+<code class="highlighter-rouge">Book</code>, someone else injects new data into it and calls <code class="highlighter-rouge">update()</code>:</p>
 
 <pre>BookDAO dao = BookDAOFactory.getBookDAO();
 Book book = dao.find(123);
@@ -114,7 +114,7 @@ dao.update(book);</pre>
 <p>What is wrong, you ask? Everything that was wrong with
 <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM</a>,
 but instead of a “session” we have this DAO. The problem remains the
-same: the <code>book</code> is not an object, but a data container. I quote
+same: the <code class="highlighter-rouge">book</code> is not an object, but a data container. I quote
 my own three-year-old statement from the <a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM article</a>,
 with a slight change in the name:
 “DAO, instead of encapsulating database interaction inside an object,
@@ -125,7 +125,7 @@ For more details, please check that article.</p>
 <a href="/pets.html">pet projects</a>, but they
 don’t return or accept DTOs. Instead, they return objects and sometimes accept
 operations on them. Here are a few examples. Look at this
-<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java"><code>Pipes</code></a>
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java"><code class="highlighter-rouge">Pipes</code></a>
 interface from
 <a href="/2016/03/15/wring-dispatcher-github-notifications.html">Wring.io</a>:</p>
 
@@ -134,25 +134,25 @@ interface from
   Pipe pipe(long number);
 }</pre>
 
-<p>Its method <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L55"><code>add()</code></a>
+<p>Its method <a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L55"><code class="highlighter-rouge">add()</code></a>
 creates a new item in the “collection” and method
-<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L62"><code>pipe()</code></a>
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L62"><code class="highlighter-rouge">pipe()</code></a>
 returns a single object from the collection. The
-<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java"><code>Pipe</code></a>
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java"><code class="highlighter-rouge">Pipe</code></a>
 is not a DTO, it is
 a normal object that is fully capable of doing all necessary database
 operations, without any help from a DAO. For example, there is
-<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java#L63"><code>Pipe.status(String)</code></a>
-method to update its status. I’m not going to use <code>Pipes</code> for that, I just do
-<code>pipe.status("Hello, world!")</code>.</p>
+<a href="https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipe.java#L63"><code class="highlighter-rouge">Pipe.status(String)</code></a>
+method to update its status. I’m not going to use <code class="highlighter-rouge">Pipes</code> for that, I just do
+<code class="highlighter-rouge">pipe.status("Hello, world!")</code>.</p>
 
 <p>Here is yet another example from
 <a href="/2016/03/30/jare-instant-free-cdn.html">Jare.io</a>: interface
-<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Base.java"><code>Base</code></a>
+<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Base.java"><code class="highlighter-rouge">Base</code></a>
 which returns a list of objects of type
-<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java"><code>Domain</code></a>.
+<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java"><code class="highlighter-rouge">Domain</code></a>.
 Then, when we want to delete a domain, we just call
-<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java#L54"><code>domain.delete()</code></a>.
+<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/model/Domain.java#L54"><code class="highlighter-rouge">domain.delete()</code></a>.
 The domain is fully capable of doing all necessary database manipulations.</p>
 
 <p>The problem with DAO is right in its name, I believe. It says that we are

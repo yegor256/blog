@@ -103,7 +103,7 @@ use the library to make an HTTP request and validate its output:</p>
 <p>This convenient <a href="https://en.wikipedia.org/wiki/Method_chaining">method chaining</a>
 makes the code short and obvious, right?
 Yes, it does, on the surface. But the <em>internal</em> design of the library’s
-classes, including <a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html"><code>JdkRequest</code></a>,
+classes, including <a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html"><code class="highlighter-rouge">JdkRequest</code></a>,
 which is the one you see,
 is very far from being elegant. The biggest problem is that
 they are rather big and it’s <del>difficult</del> impossible
@@ -111,32 +111,32 @@ to extend them without making them even bigger.</p>
 
 
 
-<p>For example, right now <a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html"><code>JdkRequest</code></a>
+<p>For example, right now <a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html"><code class="highlighter-rouge">JdkRequest</code></a>
 has the methods
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#method%28java.lang.String%29"><code>method()</code></a>,
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#fetch%28%29"><code>fetch()</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#method%28java.lang.String%29"><code class="highlighter-rouge">method()</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#fetch%28%29"><code class="highlighter-rouge">fetch()</code></a>,
 and a few others. What happens when new functionality is required?
 The only way to add to it would be to make the class bigger, by adding new methods,
 which is how we jeopardize its maintainability.
 <a href="https://github.com/jcabi/jcabi-http/pull/142/files">Here</a>,
 for example, we added
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#multipartBody%28%29"><code>multipartBody()</code></a>
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#multipartBody%28%29"><code class="highlighter-rouge">multipartBody()</code></a>
 and <a href="https://github.com/jcabi/jcabi-http/pull/99/files">here</a> we added
 <a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#timeout%28int,%20int%29">timeout()</a>.</p>
 
 <p>I always feel scared when I get a new feature request in jcabi-http.
 I understand that it most probably means adding new methods to
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html"><code>Request</code></a>,
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html"><code>Response</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html"><code class="highlighter-rouge">Request</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html"><code class="highlighter-rouge">Response</code></a>,
 and other already bloated interfaces and classes.</p>
 
 <p>I actually tried to do something in the library in order to solve this problem
 but it wasn’t easy. Look at this
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29"><code>.as(RestResponse.class)</code></a>
-method call. What it does is decorate a <code>Response</code> with
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html"><code>RestResponse</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29"><code class="highlighter-rouge">.as(RestResponse.class)</code></a>
+method call. What it does is decorate a <code class="highlighter-rouge">Response</code> with
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html"><code class="highlighter-rouge">RestResponse</code></a>,
 in order to make it method-richer. I just didn’t want to make
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html"><code>Response</code></a>
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html"><code class="highlighter-rouge">Response</code></a>
 contain 50+ methods, like many other libraries do. Here is what it
 does (this is pseudo-code):</p>
 
@@ -152,16 +152,16 @@ class RestResponse implements Response {
   // Additional 14 methods
 }</pre>
 
-<p>As you see, instead of adding all possible methods to <code>Response</code> I
+<p>As you see, instead of adding all possible methods to <code class="highlighter-rouge">Response</code> I
 placed them in supplementary decorators
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html"><code>RestResponse</code></a>,
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html"><code>JsonResponse</code></a>,
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html"><code>XmlResponse</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html"><code class="highlighter-rouge">RestResponse</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html"><code class="highlighter-rouge">JsonResponse</code></a>,
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html"><code class="highlighter-rouge">XmlResponse</code></a>,
 and
 <a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/package-frame.html">others</a>.
 It helps, but in order to write these decorators with the central
-object of type <code>Response</code> we have to use that “ugly” method
-<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29"><code>as()</code></a>,
+object of type <code class="highlighter-rouge">Response</code> we have to use that “ugly” method
+<a href="http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29"><code class="highlighter-rouge">as()</code></a>,
 which depends heavily on Reflection and
 <a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>.</p>
 

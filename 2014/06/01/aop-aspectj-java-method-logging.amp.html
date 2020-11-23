@@ -108,21 +108,21 @@ instrument that doesn’t change the way code works, but gives
 marks to certain elements (methods, classes or variables).
 In other words, annotations are just markers attached to the code
 that can be seen and read. Some annotations are designed to be
-seen at compile time only—they don’t exist in <code>.class</code> files after
+seen at compile time only—they don’t exist in <code class="highlighter-rouge">.class</code> files after
 compilation. Others remain visible after compilation and can
 be accessed in runtime.</p>
 
 
 
 <p>For example,
-<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html"><code>@Override</code></a> is of
-the first type (its retention type is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE"><code>SOURCE</code></a>), while <a href="http://junit.sourceforge.net/javadoc/org/junit/Test.html"><code>@Test</code></a> from JUnit is of the second type (retention type is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME"><code>RUNTIME</code></a>).
-<a href="http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html"><code>@Loggable</code></a>—the one I’m using in the script above—is an annotation of the second type,
+<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html"><code class="highlighter-rouge">@Override</code></a> is of
+the first type (its retention type is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE"><code class="highlighter-rouge">SOURCE</code></a>), while <a href="http://junit.sourceforge.net/javadoc/org/junit/Test.html"><code class="highlighter-rouge">@Test</code></a> from JUnit is of the second type (retention type is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME"><code class="highlighter-rouge">RUNTIME</code></a>).
+<a href="http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html"><code class="highlighter-rouge">@Loggable</code></a>—the one I’m using in the script above—is an annotation of the second type,
 from <a href="http://aspects.jcabi.com">jcabi-aspects</a>.
-It stays with the byte-code in the <code>.class</code> file after compilation.</p>
+It stays with the byte-code in the <code class="highlighter-rouge">.class</code> file after compilation.</p>
 
 <p>Again, it is important to understand that even though
-method <code>power()</code> is annotated and compiled, it doesn’t
+method <code class="highlighter-rouge">power()</code> is annotated and compiled, it doesn’t
 send anything to slf4j so far. It just contains
 a marker saying “please, log my execution.”</p>
 
@@ -132,11 +132,11 @@ a marker saying “please, log my execution.”</p>
 is a useful technique that enables adding executable blocks
 to the source code without explicitly changing it. In our example,
 we don’t want to log method execution inside the class. Instead,
-we want some other class to intercept every call to method <code>power()</code>,
+we want some other class to intercept every call to method <code class="highlighter-rouge">power()</code>,
 measure its execution time and send this information to slf4j.</p>
 
-<p>We want that interceptor to understand our <code>@Loggable</code> annotation
-and log every call to that specific method <code>power()</code>. And, of course,
+<p>We want that interceptor to understand our <code class="highlighter-rouge">@Loggable</code> annotation
+and log every call to that specific method <code class="highlighter-rouge">power()</code>. And, of course,
 the same interceptor should be used for other methods where
 we’ll place the same annotation in the future.</p>
 
@@ -159,7 +159,7 @@ implements the desired functionality.</p>
 let’s see how <a href="http://aspects.jcabi.com">jcabi-aspects</a>
 implements them using <a href="http://eclipse.org/aspectj/">AspectJ</a>
 (it’s a simplified example, full code you can find in
-<a href="https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java"><code>MethodLogger.java</code></a>):</p>
+<a href="https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java"><code class="highlighter-rouge">MethodLogger.java</code></a>):</p>
 
 <pre>@Aspect
 public class MethodLogger {
@@ -179,39 +179,39 @@ public class MethodLogger {
 }</pre>
 
 <p>This is an <strong>aspect</strong> with a single <strong>around advice</strong>
-<code>around()</code> inside. The aspect is annotated with <code>@Aspect</code>
-and advice is annotated with <code>@Around</code>. As discussed above,
-these annotations are just markers in <code>.class</code> files. They don’t do
+<code class="highlighter-rouge">around()</code> inside. The aspect is annotated with <code class="highlighter-rouge">@Aspect</code>
+and advice is annotated with <code class="highlighter-rouge">@Around</code>. As discussed above,
+these annotations are just markers in <code class="highlighter-rouge">.class</code> files. They don’t do
 anything except provide some meta-information to those who are interested in runtime.</p>
 
-<p>Annotation <code>@Around</code> has one parameter, which—in this case—says that the advice should be applied to a method if:</p>
+<p>Annotation <code class="highlighter-rouge">@Around</code> has one parameter, which—in this case—says that the advice should be applied to a method if:</p>
 
 <ol>
   <li>
-    <p>its visibility modifier is <code>*</code> (<code>public</code>, <code>protected</code> or <code>private</code>);</p>
+    <p>its visibility modifier is <code class="highlighter-rouge">*</code> (<code class="highlighter-rouge">public</code>, <code class="highlighter-rouge">protected</code> or <code class="highlighter-rouge">private</code>);</p>
   </li>
   <li>
-    <p>its name is <code>*</code> (any name);</p>
+    <p>its name is <code class="highlighter-rouge">*</code> (any name);</p>
   </li>
   <li>
-    <p>its arguments are <code>..</code> (any arguments); and</p>
+    <p>its arguments are <code class="highlighter-rouge">..</code> (any arguments); and</p>
   </li>
   <li>
-    <p>it is annotated with <code>@Loggable</code></p>
+    <p>it is annotated with <code class="highlighter-rouge">@Loggable</code></p>
   </li>
 </ol>
 
 <p>When a call to an annotated method is to be intercepted,
-method <code>around()</code> executes before executing the actual method.
-When a call to method <code>power()</code> is to be intercepted, method <code>around()</code>
-receives an instance of class <code>ProceedingJoinPoint</code> and must return an
-object, which will be used as a result of method <code>power()</code>.</p>
+method <code class="highlighter-rouge">around()</code> executes before executing the actual method.
+When a call to method <code class="highlighter-rouge">power()</code> is to be intercepted, method <code class="highlighter-rouge">around()</code>
+receives an instance of class <code class="highlighter-rouge">ProceedingJoinPoint</code> and must return an
+object, which will be used as a result of method <code class="highlighter-rouge">power()</code>.</p>
 
-<p>In order to call the original method, <code>power()</code>, the advice has
-to call <code>proceed()</code> of the <strong>join point</strong> object.</p>
+<p>In order to call the original method, <code class="highlighter-rouge">power()</code>, the advice has
+to call <code class="highlighter-rouge">proceed()</code> of the <strong>join point</strong> object.</p>
 
 <p>We compile this aspect and make it available in classpath
-together with our main file <code>Foo.class</code>. So far so good,
+together with our main file <code class="highlighter-rouge">Foo.class</code>. So far so good,
 but we need to take one last step in order to put
 our aspect into action—we should <strong>apply</strong> our advice.</p>
 
@@ -219,22 +219,22 @@ our aspect into action—we should <strong>apply</strong> our advice.</p>
 
 <p>Aspect weaving is the name of the advice applying process.
 Aspect weaver modifies original code by injecting calls to aspects.
-AspectJ does exactly that. We give it two binary Java classes <code>Foo.class</code>
-and <code>MethodLogger.class</code>; it gives back three—modified
-<code>Foo.class</code>, <code>Foo$AjcClosure1.class</code> and unmodified <code>MethodLogger.class</code>.</p>
+AspectJ does exactly that. We give it two binary Java classes <code class="highlighter-rouge">Foo.class</code>
+and <code class="highlighter-rouge">MethodLogger.class</code>; it gives back three—modified
+<code class="highlighter-rouge">Foo.class</code>, <code class="highlighter-rouge">Foo$AjcClosure1.class</code> and unmodified <code class="highlighter-rouge">MethodLogger.class</code>.</p>
 
 
 
 <p>In order to understand which advice should be applied to which methods,
-AspectJ weaver is using annotations from <code>.class</code> files.
+AspectJ weaver is using annotations from <code class="highlighter-rouge">.class</code> files.
 Also, it uses <a href="http://docs.oracle.com/javase/tutorial/reflect/">reflection</a>
 to browse all classes on classpath. It analyzes which methods satisfy
-the conditions from the <code>@Around</code> annotation.
-Of course, it finds our method <code>power()</code>.</p>
+the conditions from the <code class="highlighter-rouge">@Around</code> annotation.
+Of course, it finds our method <code class="highlighter-rouge">power()</code>.</p>
 
-<p>So, there are two steps. First, we compile our <code>.java</code> files using
-<code>javac</code> and get two files. Then, AspectJ weaves/modifies them and
-creates its own extra class. Our <code>Foo</code> class looks something
+<p>So, there are two steps. First, we compile our <code class="highlighter-rouge">.java</code> files using
+<code class="highlighter-rouge">javac</code> and get two files. Then, AspectJ weaves/modifies them and
+creates its own extra class. Our <code class="highlighter-rouge">Foo</code> class looks something
 like this after weaving:</p>
 
 <pre>public class Foo {
@@ -250,16 +250,16 @@ like this after weaving:</p>
 }</pre>
 
 <p>AspectJ weaver moves our original functionality to a new method,
-<code>power_aroundBody()</code>, and redirects all <code>power()</code> calls
-to the aspect class <code>MethodLogger</code>.</p>
+<code class="highlighter-rouge">power_aroundBody()</code>, and redirects all <code class="highlighter-rouge">power()</code> calls
+to the aspect class <code class="highlighter-rouge">MethodLogger</code>.</p>
 
-<p>Instead of one method <code>power()</code> in class <code>Foo</code> now we have
+<p>Instead of one method <code class="highlighter-rouge">power()</code> in class <code class="highlighter-rouge">Foo</code> now we have
 four classes working together. From now on,
-this is what happens behind the scenes on every call to <code>power()</code>:</p>
+this is what happens behind the scenes on every call to <code class="highlighter-rouge">power()</code>:</p>
 
-<p></p>
+<p><object data="/uml/52d3d016f2264bbf660a23d5bbe84203.svg" type="image/svg+xml" class="plantuml"></object></p>
 
-<p>Original functionality of method <code>power()</code> is indicated
+<p>Original functionality of method <code class="highlighter-rouge">power()</code> is indicated
 by the small green lifeline on the diagram.</p>
 
 <p>As you see, the aspect weaving process connects together classes
@@ -270,7 +270,7 @@ compiled Java binaries with attached annotations.</p>
 <h1 id="jcabi-aspects">jcabi-aspects</h1>
 
 <p><a href="http://aspects.jcabi.com">jcabi-aspects</a> is a JAR library
-that contains <code>Loggable</code> annotation and <code>MethodLogger</code>
+that contains <code class="highlighter-rouge">Loggable</code> annotation and <code class="highlighter-rouge">MethodLogger</code>
 aspect (btw, there are <a href="http://aspects.jcabi.com">many more</a>
 aspects and annotations). You don’t need to write your own
 aspect for method logging. Just add a few dependencies to
@@ -307,11 +307,11 @@ for aspect weaving
 &lt;/project&gt;</pre>
 
 <p>Since this weaving procedure takes a lot of configuration effort,
-I created a convenient Maven plugin with an <code>ajc</code> goal, which does
+I created a convenient Maven plugin with an <code class="highlighter-rouge">ajc</code> goal, which does
 the entire aspect weaving job. You can use AspectJ directly, but
 I recommend that you use <a href="http://plugin.jcabi.com">jcabi-maven-plugin</a>.</p>
 
-<p>That’s it. Now you can use <a href="http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html"><code>@com.jcabi.aspects.Loggable</code></a>
+<p>That’s it. Now you can use <a href="http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html"><code class="highlighter-rouge">@com.jcabi.aspects.Loggable</code></a>
 annotation and your methods will be logged through slf4j.</p>
 
 <p>If something doesn’t work as explained, don’t hesitate to

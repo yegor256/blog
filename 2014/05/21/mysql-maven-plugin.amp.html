@@ -88,12 +88,12 @@ to the one you have in production environment.</p>
 
 <p>I’ve created my own Maven plugin, <a href="http://mysql.jcabi.com">jcabi-mysql-maven-plugin</a>,
 that does exactly two things: starts a MySQL server on
-<code>pre-integration-test</code> phase and shuts it down on
-<code>post-integration-test</code>.</p>
+<code class="highlighter-rouge">pre-integration-test</code> phase and shuts it down on
+<code class="highlighter-rouge">post-integration-test</code>.</p>
 
 
 
-<p>This is how you configure it in <code>pom.xml</code>
+<p>This is how you configure it in <code class="highlighter-rouge">pom.xml</code>
 (see also its full <a href="http://mysql.jcabi.com/usage.html">usage instructions</a>):</p>
 
 <pre>&lt;project&gt;
@@ -184,7 +184,7 @@ at what each does.</p>
 
 <ol>
   <li>
-    <p><strong><code>build-helper-maven-plugin</code></strong>
+    <p><strong><code class="highlighter-rouge">build-helper-maven-plugin</code></strong>
 is reserving a temporary random TCP port, which will be used by MySQL server.
 We don’t want to start a server on its default 3306 port,
 because there could be another server already running there.
@@ -195,14 +195,14 @@ you’re developing locally, but in
 environment this can be a problem. That’s why we’re reserving a TCP port first.</p>
   </li>
   <li>
-    <p><a href="http://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html"><strong><code>maven-dependency-plugin</code></strong></a>
+    <p><a href="http://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html"><strong><code class="highlighter-rouge">maven-dependency-plugin</code></strong></a>
 is downloading a MySQL distribution in a zip archive (rather big file, over 300Mb for Linux), and unpacks it.
 This archive contains exactly the same files as you would use
 for a traditional MySQL installation. When the archive is unpacked,
 it is ready to start serving SQL requests as a normal MySQL server.</p>
   </li>
   <li>
-    <p><a href="http://mysql.jcabi.com"><strong><code>jcabi-mysql-maven-plugin</code></strong></a>
+    <p><a href="http://mysql.jcabi.com"><strong><code class="highlighter-rouge">jcabi-mysql-maven-plugin</code></strong></a>
 starts a server, binding it to a TCP port reserved randomly.
 The main responsibility of my Maven plugin is to make sure
 that MySQL server starts correctly on every platform (Mac OS, Linux, Windows)
@@ -210,13 +210,13 @@ and stops when it’s not needed any more. All the rest is done by
 the MySQL distribution itself.</p>
   </li>
   <li>
-    <p><strong><code>maven-failsafe-plugin</code></strong>
-is running unit tests on <code>integration-test</code> phase. Its main difference from
+    <p><strong><code class="highlighter-rouge">maven-failsafe-plugin</code></strong>
+is running unit tests on <code class="highlighter-rouge">integration-test</code> phase. Its main difference from
 maven-surefire-plugin is that it doesn’t fail a build when some tests fail.
-Instead, it saves all failures into supplementary files in <code>target</code>
-directory and allows the build continue. Later, when we call its <code>verify</code>
+Instead, it saves all failures into supplementary files in <code class="highlighter-rouge">target</code>
+directory and allows the build continue. Later, when we call its <code class="highlighter-rouge">verify</code>
 goal, it will fail a build if there were any errors during its
-<code>integration-test</code> goal execution.</p>
+<code class="highlighter-rouge">integration-test</code> goal execution.</p>
   </li>
 </ol>
 
@@ -230,7 +230,7 @@ maven-failsafe-plugin:integration-test
 jcabi-mysql-maven-plugin:stop
 maven-failsafe-plugin:verify</pre>
 
-<p>Run <code>mvn clean install</code> and see how it works. If it doesn’t work
+<p>Run <code class="highlighter-rouge">mvn clean install</code> and see how it works. If it doesn’t work
 for some reason, don’t hesitate
 <a href="https://github.com/jcabi/jcabi-mysql-maven-plugin/issues">to report an issue to GitHub</a>.</p>
 
@@ -256,15 +256,15 @@ is capable of serving transactions (I’m using <a href="http://jdbc.jcabi.com">
   }
 }</pre>
 
-<p>If you’re using Hibernate, just create a <code>db.properties</code>
-file in <code>src/test/resources</code> directory.
+<p>If you’re using Hibernate, just create a <code class="highlighter-rouge">db.properties</code>
+file in <code class="highlighter-rouge">src/test/resources</code> directory.
 In that file you would do something like:</p>
 
 <pre>hibernate.connection.url=jdbc:mysql://localhost:${mysql.port}/root
 hibernate.connection.username=root
 hibernate.connection.password=root</pre>
 
-<p>Maven will replace that <code>${mysql.port}</code> with the number of
+<p>Maven will replace that <code class="highlighter-rouge">${mysql.port}</code> with the number of
 reserved TCP port, during resources copying. This operation
 is called “resources filtering,” and you can read about it
 <a href="http://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html">here</a>.</p>

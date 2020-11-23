@@ -80,11 +80,11 @@ So, now is a good time to
 explain how I’m using Phandom in some of my unit tests.</p>
 
 <p>Before I get started, though, I should say a few words about
-<a href="http://phantomjs.org/"><code>phantomjs</code></a>, which is a
+<a href="http://phantomjs.org/"><code class="highlighter-rouge">phantomjs</code></a>, which is a
 JavaScript interface for WebKit. WebKit, on the other hand, is a web browser without
 a user interface. WebKit is a C++ library that enables manipulation of
 HTML content, through DOM calls. For example, this is a simple JavaScript
-located code in <code>example.js</code>:</p>
+located code in <code class="highlighter-rouge">example.js</code>:</p>
 
 <pre>var page = require('webpage').create();
 page.open(
@@ -95,13 +95,13 @@ page.open(
   }
 );</pre>
 
-<p>We run <code>phantomjs</code> from the command line with the following code:</p>
+<p>We run <code class="highlighter-rouge">phantomjs</code> from the command line with the following code:</p>
 
 <pre>$ phantomjs example.js</pre>
 
-<p>PhantomJS creates a <code>page</code> object (provided by
+<p>PhantomJS creates a <code class="highlighter-rouge">page</code> object (provided by
 <a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a> module
-inside <code>phantomjs</code>), and then asks it to <code>open()</code> a Web page. The object
+inside <code class="highlighter-rouge">phantomjs</code>), and then asks it to <code class="highlighter-rouge">open()</code> a Web page. The object
 communicates with WebKit and converts this call into DOM instructions. After
 which, the page loads. The PhantomJS engine then terminates on line 6.</p>
 
@@ -114,8 +114,8 @@ JavaScript, ActionScript, etc, just as any standard Web browser would.</p>
 giving you an idea of how <a href="https://github.com/yegor256/phandom">Phandom</a> (which stands for
 “PhantomJS DOM”) works inside Java unit tests:</p>
 
-<p>To test this, let’s give <code>phantomjs</code> an HTML page and ask him to render it. When
-the page is ready, we’ll ask <code>phantomjs</code> to show us how this HTML looks in WebKit.
+<p>To test this, let’s give <code class="highlighter-rouge">phantomjs</code> an HTML page and ask him to render it. When
+the page is ready, we’ll ask <code class="highlighter-rouge">phantomjs</code> to show us how this HTML looks in WebKit.
 If we see the elements we need and desire,—we’re good to go. Let’s use
 the following example:</p>
 
@@ -137,21 +137,21 @@ public class DocumentTest {
   }
 }</pre>
 
-<p>When we use the above code, here is what happens. First, we get HTML <code>html</code> as a <code>String</code>
-from <code>doc</code> object, and then pass it to
-<code>Phandom</code> as an argument. Then,
-on line 13, we call the <code>Phandom.dom()</code> method to get an instance
-of the class <code>org.w3c.dom.Document</code>.</p>
+<p>When we use the above code, here is what happens. First, we get HTML <code class="highlighter-rouge">html</code> as a <code class="highlighter-rouge">String</code>
+from <code class="highlighter-rouge">doc</code> object, and then pass it to
+<code class="highlighter-rouge">Phandom</code> as an argument. Then,
+on line 13, we call the <code class="highlighter-rouge">Phandom.dom()</code> method to get an instance
+of the class <code class="highlighter-rouge">org.w3c.dom.Document</code>.</p>
 
-<p>If our HTML contains any broken JavaScript code, method <code>dom()</code> produces a runtime
+<p>If our HTML contains any broken JavaScript code, method <code class="highlighter-rouge">dom()</code> produces a runtime
 exception and the unit test fail. If HTML is clean and WebKit is able to
 render it without problems, the test passes.</p>
 
 <p>I’m using this mechanism in a few different projects,and it works quite well. Therefore, I highly recommend it.</p>
 
-<p>Of course, you shouldn’t forget that you must have <code>phantomjs</code> installed on your
+<p>Of course, you shouldn’t forget that you must have <code class="highlighter-rouge">phantomjs</code> installed on your
 build machine. In order to avoid unit test failures when
-<code>phantomjs</code> is not available or present, I’ve created the following supplementary method:</p>
+<code class="highlighter-rouge">phantomjs</code> is not available or present, I’ve created the following supplementary method:</p>
 
 <pre>public class DocumentTest {
   @Test

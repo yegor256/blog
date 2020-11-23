@@ -107,7 +107,7 @@ An object of this class would be <em>responsible</em> for too many things.
 We have to extract some functionality out of it and put that
 into another object(s). We have to <em>decompose</em> its responsibility.
 No matter where we put it, this is how the
-<code>Log</code> class will look after the extraction:</p>
+<code class="highlighter-rouge">Log</code> class will look after the extraction:</p>
 
 <pre>class Log
   def initialize(path)
@@ -136,17 +136,17 @@ vertical. This one is <em>horizontal</em>:</p>
   end
 end</pre>
 
-<p>In order to use <code>Log</code> and <code>Line</code> together, we have to do this:</p>
+<p>In order to use <code class="highlighter-rouge">Log</code> and <code class="highlighter-rouge">Line</code> together, we have to do this:</p>
 
 <pre>log.put(Line.new("Hello, world"))</pre>
 
 <p>See why it’s horizontal? Because this script sees them
 both. They both are on the same level of visibility. We will always have
 to communicate with both of them when we want to log a line. Both
-objects of <code>Log</code> and <code>Line</code> are in front of us. We have to deal with
+objects of <code class="highlighter-rouge">Log</code> and <code class="highlighter-rouge">Line</code> are in front of us. We have to deal with
 two classes in order to log a line:</p>
 
-<p></p>
+<p><object data="/uml/653125b6c32d12b7325dba52054c09ca.svg" type="image/svg+xml" class="plantuml"></object></p>
 
 <p>To the contrary, this decomposition of responsibility is <em>vertical</em>:</p>
 
@@ -159,7 +159,7 @@ two classes in order to log a line:</p>
   end
 end</pre>
 
-<p>Class <code>TimedLog</code> is a decorator, and this is how we use them together:</p>
+<p>Class <code class="highlighter-rouge">TimedLog</code> is a decorator, and this is how we use them together:</p>
 
 <pre>log = TimedLog.new(log)</pre>
 
@@ -168,10 +168,10 @@ end</pre>
 <pre>log.put("Hello, world")</pre>
 
 <p>The responsibility is decomposed vertically. We still have one entry point
-into the <code>log</code> object, but the object “consists” of two objects, one wrapped
+into the <code class="highlighter-rouge">log</code> object, but the object “consists” of two objects, one wrapped
 into another:</p>
 
-<p></p>
+<p><object data="/uml/cad4de541e1ab10d3d9d751c661fe63f.svg" type="image/svg+xml" class="plantuml"></object></p>
 
 <p>In general, I think horizontal decomposition of responsibility is a bad idea,
 while vertical is a much better one. That’s because a vertically

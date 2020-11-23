@@ -86,7 +86,7 @@ and <a href="https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central
 <p>This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
 all I do is create one message in a GitHub ticket. I just say
-<code>@rultor release 0.1.4</code> and version 0.1.4 gets deployed
+<code class="highlighter-rouge">@rultor release 0.1.4</code> and version 0.1.4 gets deployed
 to Heroku. See GitHub ticket <a href="https://github.com/aintshy/hub/issues/5">#5</a>.</p>
 
 <p>You can do the same, with the help of <a href="http://www.rultor.com">Rultor.com</a>,
@@ -101,27 +101,27 @@ a free hosted DevOps assistant.</p>
 <p>You should authenticate your public SSH key at Heroku, using
 their command line tool-belt. The process is explained
 <a href="https://devcenter.heroku.com/articles/authentication">here</a>,
-but it is not much of a process. You just run <code>heroku login</code>
+but it is not much of a process. You just run <code class="highlighter-rouge">heroku login</code>
 and enter your login credentials. As a result, you will get
-your existing key (located at <code>~/.ssh/id_rsa.pub</code>) authenticated by Heroku.</p>
+your existing key (located at <code class="highlighter-rouge">~/.ssh/id_rsa.pub</code>) authenticated by Heroku.</p>
 
 <p>If you didn’t have the key before, it will be created automatically.</p>
 
-<p>Now, encrypt <code>id_rsa</code> and <code>id_rsa.pub</code> (they are in the <code>~/.ssh</code> directory)
+<p>Now, encrypt <code class="highlighter-rouge">id_rsa</code> and <code class="highlighter-rouge">id_rsa.pub</code> (they are in the <code class="highlighter-rouge">~/.ssh</code> directory)
 with a <a href="https://github.com/yegor256/rultor-remote">rultor remote</a>:</p>
 
 <pre>$ gem install rultor
 $ rultor encrypt -p me/test id_rsa
 $ rultor encrypt -p me/test id_rsa.pub</pre>
 
-<p>Instead of <code>me/test</code> use the name of your GitHub project.</p>
+<p>Instead of <code class="highlighter-rouge">me/test</code> use the name of your GitHub project.</p>
 
-<p>You will get two new files <code>id_rsa.asc</code> and <code>id_rsa.pub.asc</code>.
+<p>You will get two new files <code class="highlighter-rouge">id_rsa.asc</code> and <code class="highlighter-rouge">id_rsa.pub.asc</code>.
 Add them to the root directory of your project,
 commit and push. These files contain your secret information,
 but only the Rultor server can decrypt them.</p>
 
-<p>Create a <code>.rultor.yml</code> file in the root directory of your project
+<p>Create a <code class="highlighter-rouge">.rultor.yml</code> file in the root directory of your project
 (<a href="https://doc.rultor.com/reference.html">reference page</a>
 explains this format in detail):</p>
 
@@ -163,7 +163,7 @@ submit a ticket to the
 I will try to help you.</p>
 
 <p>PS. I would also recommend to versionalize artifacts
-through <code>MANIFEST.MF</code> and use
+through <code class="highlighter-rouge">MANIFEST.MF</code> and use
 <a href="/2014/07/03/how-to-read-manifest-mf.html">jcabi-manifests</a>
 to read them later.</p>
 

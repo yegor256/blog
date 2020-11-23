@@ -125,8 +125,8 @@ how an object (its class, to be exact) would look:</p>
 
 <pre>new Wire(stream).send(1);</pre>
 
-<p>Looks nice, right? I don’t need to worry about that <code>IOException</code> when I’m
-calling <code>send(1)</code>. It will be handled internally, and if it occurs, the stacktrace
+<p>Looks nice, right? I don’t need to worry about that <code class="highlighter-rouge">IOException</code> when I’m
+calling <code class="highlighter-rouge">send(1)</code>. It will be handled internally, and if it occurs, the stacktrace
 will be logged. But this is a totally wrong way of thinking, and it’s inherited
 from languages without exceptions, like C.</p>
 
@@ -134,7 +134,7 @@ from languages without exceptions, like C.</p>
 
 <p>Exceptions were invented to simplify our design by moving the entire
 error handling code away from the main logic. Moreover, we’re not just moving it away but
-also concentrating it in one place—in the <code>main()</code> method, the entry
+also concentrating it in one place—in the <code class="highlighter-rouge">main()</code> method, the entry
 point of the entire app.</p>
 
 <p>The primary purpose of an exception is to collect as much information as possible
@@ -156,7 +156,7 @@ doing something behind the scenes, hiding potentially important information.</p>
 
 <p>If you’re hiding that from me, I can’t promise my user that I will be honest
 with him and openly report a problem when it occurs. I simply can’t
-trust your <code>send()</code> method anymore, and my user will not trust me.</p>
+trust your <code class="highlighter-rouge">send()</code> method anymore, and my user will not trust me.</p>
 
 <p>By catching exceptions without re-throwing them, you’re basically breaking the
 chain of trust between objects.</p>
@@ -170,12 +170,12 @@ For example, Java has checked and un-checked exceptions, while there should only
 be checked ones in my opinion (the ones you must catch or declare
 as throwable). Also, Java allows multiple exception types to be declared
 as throwable in a single method—yet another mistake; stick to declaring just
-one type. Also, there is a generic <code>Exception</code> class at the top of the hierarchy,
+one type. Also, there is a generic <code class="highlighter-rouge">Exception</code> class at the top of the hierarchy,
 which is also wrong in my opinion. Besides that, some built-in classes don’t
-allow any checked exceptions to be thrown, like <code>Runnable.run()</code>. There
+allow any checked exceptions to be thrown, like <code class="highlighter-rouge">Runnable.run()</code>. There
 are many other problems with exceptions in Java.</p>
 
-<p>But try to keep this principle in mind and your code will be cleaner: <code>catch</code> only if you have no other choice.</p>
+<p>But try to keep this principle in mind and your code will be cleaner: <code class="highlighter-rouge">catch</code> only if you have no other choice.</p>
 
 <p>P.S. Here is how the class should look:</p>
 

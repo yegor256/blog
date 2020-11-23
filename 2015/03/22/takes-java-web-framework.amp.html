@@ -85,7 +85,7 @@ framework. I put a few basic principles into its foundation: 1) No
 2) no public <a href="/2014/05/05/oop-alternative-to-utility-classes.html">static</a> methods, 3) no
 <a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>
 classes, and 4) no class casting, reflection,
-and <a href="/2015/04/02/class-casting-is-anti-pattern.html"><code>instanceof</code></a>
+and <a href="/2015/04/02/class-casting-is-anti-pattern.html"><code class="highlighter-rouge">instanceof</code></a>
 operators. These four basic principles should guarantee
 clean code and transparent architecture. That’s how the
 <a href="http://www.takes.org">Takes</a> framework was born.
@@ -106,7 +106,7 @@ components, in simple terms.</p>
 a new <a href="http://en.wikipedia.org/wiki/Network_socket">network socket</a>,
 that accepts connections on a certain <a href="http://en.wikipedia.org/wiki/Port_%28computer_networking%29">TCP port</a>.
 Usually it is 80, but I’m going to use 8080 for testing purposes.
-This is done in Java with the <a href="http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html"><code>ServerSocket</code></a> class:</p>
+This is done in Java with the <a href="http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html"><code class="highlighter-rouge">ServerSocket</code></a> class:</p>
 
 <pre>import java.net.ServerSocket;
 public class Foo {
@@ -117,24 +117,24 @@ public class Foo {
 }</pre>
 
 <p>That’s enough to start a web server. Now, the socket is ready and listening
-on port 8080. When someone opens <code>http://localhost:8080</code> in their browser,
+on port 8080. When someone opens <code class="highlighter-rouge">http://localhost:8080</code> in their browser,
 the connection will be established and the browser will spin its waiting
 wheel forever. Compile this snippet and try. We just built a simple web
 server without the use of any frameworks. We’re not doing anything with
 incoming connections yet, but we’re not rejecting them either. All of them
-are being lined up inside that <code>server</code> object. It’s being done in a background
-thread; that’s why we need to put that <code>while(true)</code> in afterward. Without this endless pause,
+are being lined up inside that <code class="highlighter-rouge">server</code> object. It’s being done in a background
+thread; that’s why we need to put that <code class="highlighter-rouge">while(true)</code> in afterward. Without this endless pause,
 the app will finish its execution immediately and the server socket will
 shut down.</p>
 
 <p>The next step is to accept the incoming connections. In Java, that’s done through
-a blocking call to the <code>accept()</code> method:</p>
+a blocking call to the <code class="highlighter-rouge">accept()</code> method:</p>
 
 <pre>final Socket socket = server.accept();</pre>
 
 <p>The method is blocking its thread and waiting until a new connection arrives. As
-soon as that happens, it returns an instance of <code>Socket</code>. In order to accept
-the next connection, we should call <code>accept()</code> again. So basically, our
+soon as that happens, it returns an instance of <code class="highlighter-rouge">Socket</code>. In order to accept
+the next connection, we should call <code class="highlighter-rouge">accept()</code> again. So basically, our
 web server should work like this:</p>
 
 <pre>public class Foo {
@@ -183,7 +183,7 @@ Accept-Encoding: gzip, deflate, sdch
 Accept-Language: en-US,en;q=0.8,ru;q=0.6,uk;q=0.4</pre>
 
 <p>The client (the Google Chrome browser, for example) passes this text into the
-connection established. It connects to port 8080 at <code>localhost</code>, and as soon
+connection established. It connects to port 8080 at <code class="highlighter-rouge">localhost</code>, and as soon
 as the connection is ready, it immediately sends this text into it, then waits
 for a response.</p>
 
@@ -191,7 +191,7 @@ for a response.</p>
 request. If our server is very primitive, we can basically ignore all the
 information in the request and just return “Hello, world!” to all requests
 (I’m using
-<a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html"><code>IOUtils</code></a>
+<a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html"><code class="highlighter-rouge">IOUtils</code></a>
 for simplicity):</p>
 
 <pre>import java.net.Socket;
@@ -212,7 +212,7 @@ public class Foo {
 }</pre>
 
 <p>That’s it. The server is ready. Try to compile and run it. Point your browser
-to <code>http://localhost:8080</code>, and you will see <code>Hello, world!</code>:</p>
+to <code class="highlighter-rouge">http://localhost:8080</code>, and you will see <code class="highlighter-rouge">Hello, world!</code>:</p>
 
 <pre>$ javac -cp commons-io.jar Foo.java
 $ java -cp commons-io.jar:. Foo &amp;
@@ -239,7 +239,7 @@ framework was built.</p>
 <p>Routing/dispatching is combined with response printing in Takes. All you
 need to do to create a working web application is to create a single
 class that implements
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Take.html"><code>Take</code></a> interface:</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Take.html"><code class="highlighter-rouge">Take</code></a> interface:</p>
 
 <pre>import org.takes.Request;
 import org.takes.Take;
@@ -260,20 +260,20 @@ public class Foo {
   }
 }</pre>
 
-<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code>FtBasic</code></a>
+<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code class="highlighter-rouge">FtBasic</code></a>
 class does the exact same socket manipulations explained
 above. It starts a server socket on port 8080 and dispatches all incoming
-connections through an instance of <code>TkFoo</code> that we are giving to its constructor.
+connections through an instance of <code class="highlighter-rouge">TkFoo</code> that we are giving to its constructor.
 It does this dispatching in an endless cycle, checking every second whether
 it’s time to stop with an instance of
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html"><code>Exit</code></a>.
-Obviously, <code>Exit.NEVER</code> always responds with, “Don’t stop, please.”</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html"><code class="highlighter-rouge">Exit</code></a>.
+Obviously, <code class="highlighter-rouge">Exit.NEVER</code> always responds with, “Don’t stop, please.”</p>
 
 <h2 id="http-request">HTTP Request</h2>
 
-<p>Now let’s see what’s inside the HTTP request arriving at <code>TkFoo</code> and what
+<p>Now let’s see what’s inside the HTTP request arriving at <code class="highlighter-rouge">TkFoo</code> and what
 we can get out of it. This is how the
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code class="highlighter-rouge">Request</code></a>
 interface is defined in <a href="http://www.takes.org">Takes</a>:</p>
 
 <pre>public interface Request {
@@ -285,38 +285,38 @@ interface is defined in <a href="http://www.takes.org">Takes</a>:</p>
 contains all lines that go before the empty line that starts
 a body, according to HTTP specification in
 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html">RFC 2616</a>. There are many useful
-decorators for <code>Request</code> in the framework. For example, <code>RqMethod</code> will
+decorators for <code class="highlighter-rouge">Request</code> in the framework. For example, <code class="highlighter-rouge">RqMethod</code> will
 help you get the method name from the first line of the header:</p>
 
 <pre>final String method = new RqMethod(request).method();</pre>
 
-<p><code>RqHref</code> will help extract the query part and parse it. For example,
+<p><code class="highlighter-rouge">RqHref</code> will help extract the query part and parse it. For example,
 this is the request:</p>
 
 <pre>GET /user?id=123 HTTP/1.1
 Host: www.example.com</pre>
 
-<p>This code will extract that <code>123</code>:</p>
+<p>This code will extract that <code class="highlighter-rouge">123</code>:</p>
 
 <pre>final int id = Integer.parseInt(
   new RqHref(request).href().param("id").get(0)
 );</pre>
 
-<p><code>RqPrint</code> can get the entire request or its body printed as a <code>String</code>:</p>
+<p><code class="highlighter-rouge">RqPrint</code> can get the entire request or its body printed as a <code class="highlighter-rouge">String</code>:</p>
 
 <pre>final String body = new RqPrint(request).printBody();</pre>
 
-<p>The idea here is to keep the <code>Request</code> interface simple and provide
+<p>The idea here is to keep the <code class="highlighter-rouge">Request</code> interface simple and provide
 this request parsing functionality to its decorators. This approach helps the
 framework keep classes small and cohesive. Each decorator is very
 small and solid, doing exactly one thing. All of these decorators
-are in the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/package-summary.html"><code>org.takes.rq</code></a> package.
-As you already probably understand, the <code>Rq</code> prefix stands for <code>Request</code>.</p>
+are in the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/package-summary.html"><code class="highlighter-rouge">org.takes.rq</code></a> package.
+As you already probably understand, the <code class="highlighter-rouge">Rq</code> prefix stands for <code class="highlighter-rouge">Request</code>.</p>
 
 <h2 id="first-real-web-app">First Real Web App</h2>
 
 <p>Let’s create our first real web application, which will do something
-useful. I would recommend starting with an <code>Entry</code> class, which is
+useful. I would recommend starting with an <code class="highlighter-rouge">Entry</code> class, which is
 required by Java to start an app from the command line:</p>
 
 <pre>import org.takes.http.Exit;
@@ -327,18 +327,18 @@ public final class Entry {
   }
 }</pre>
 
-<p>This class contains just a single <code>main()</code> static method that will be
+<p>This class contains just a single <code class="highlighter-rouge">main()</code> static method that will be
 called by JVM when the app starts from the command line. As you see, it
-instantiates <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html"><code>FtCli</code></a>,
-giving it an instance of class <code>TkApp</code> and command
-line arguments. We’ll create the <code>TkApp</code> class in a second. <code>FtCli</code>
+instantiates <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html"><code class="highlighter-rouge">FtCli</code></a>,
+giving it an instance of class <code class="highlighter-rouge">TkApp</code> and command
+line arguments. We’ll create the <code class="highlighter-rouge">TkApp</code> class in a second. <code class="highlighter-rouge">FtCli</code>
 (translates to “front-end with command line interface”) makes an instance
-of the same <code>FtBasic</code>, wrapping it into a few useful decorators and configuring
-it according to command line arguments. For example, <code>--port=8080</code> will
-be converted into a <code>8080</code> port number and passed as a second argument of
-the <code>FtBasic</code> constructor.</p>
+of the same <code class="highlighter-rouge">FtBasic</code>, wrapping it into a few useful decorators and configuring
+it according to command line arguments. For example, <code class="highlighter-rouge">--port=8080</code> will
+be converted into a <code class="highlighter-rouge">8080</code> port number and passed as a second argument of
+the <code class="highlighter-rouge">FtBasic</code> constructor.</p>
 
-<p>The web application itself is called <code>TkApp</code> and extends <code>TsWrap</code>:</p>
+<p>The web application itself is called <code class="highlighter-rouge">TkApp</code> and extends <code class="highlighter-rouge">TsWrap</code>:</p>
 
 <pre>import org.takes.Take;
 import org.takes.facets.fork.FkRegex;
@@ -358,9 +358,9 @@ final class TkApp extends TkWrap {
   }
 }</pre>
 
-<p>We’ll discuss this <code>TkFork</code> class in a minute.</p>
+<p>We’ll discuss this <code class="highlighter-rouge">TkFork</code> class in a minute.</p>
 
-<p>If you’re using Maven, this is the <code>pom.xml</code> you should start with:</p>
+<p>If you’re using Maven, this is the <code class="highlighter-rouge">pom.xml</code> you should start with:</p>
 
 <pre>&lt;?xml version="1.0"?&gt;
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -398,8 +398,8 @@ final class TkApp extends TkWrap {
   &lt;/build&gt;
 &lt;/project&gt;</pre>
 
-<p>Running <code>mvn clean package</code> should build a <code>foo.jar</code> file in <code>target</code> directory
-and a collection of all JAR dependencies in <code>target/deps</code>. Now you
+<p>Running <code class="highlighter-rouge">mvn clean package</code> should build a <code class="highlighter-rouge">foo.jar</code> file in <code class="highlighter-rouge">target</code> directory
+and a collection of all JAR dependencies in <code class="highlighter-rouge">target/deps</code>. Now you
 can run the app from the command line:</p>
 
 <pre>$ mvn clean package
@@ -407,34 +407,34 @@ $ java -Dfile.encoding=UTF-8 \
   -cp ./target/foo.jar:./target/deps/* foo.Entry --port=8080</pre>
 
 <p>The application is ready, and you can deploy it to, say, Heroku. Just
-create a <code>Procfile</code> file in the root of the repository and push the repo
-to Heroku. This is what <code>Procfile</code> should look like:</p>
+create a <code class="highlighter-rouge">Procfile</code> file in the root of the repository and push the repo
+to Heroku. This is what <code class="highlighter-rouge">Procfile</code> should look like:</p>
 
 <pre>web: java -Dfile.encoding=UTF-8 \
   -cp target/foo.jar:target/deps/* \
   foo.Entry --port=${PORT}</pre>
 
-<h2 id="tkfork"><code>TkFork</code></h2>
+<h2 id="tkfork"><code class="highlighter-rouge">TkFork</code></h2>
 
-<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/TkFork.html"><code>TkFork</code></a>
+<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/TkFork.html"><code class="highlighter-rouge">TkFork</code></a>
 class seems to be one of the core elements of the framework. It
 helps route an incoming HTTP request to the right <em>take</em>. Its logic is very
 simple, and there are just a few lines of code inside it. It encapsulates
 a collection of “forks,” which are instances of the
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html"><code>Fork</code></a> interface:</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html"><code class="highlighter-rouge">Fork</code></a> interface:</p>
 
 <pre>public interface Fork {
   Iterator&lt;Response&gt; route(Request req) throws IOException;
 }</pre>
 
-<p>Its only <code>route()</code> method either returns an empty iterator or an iterator
-with a single <code>Response</code>. <code>TkFork</code> goes through all forks, calling their
-<code>route()</code> methods until one of them returns a response. Once that happens,
-<code>TkFork</code> returns this response to the caller, which is
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code>FtBasic</code></a>.</p>
+<p>Its only <code class="highlighter-rouge">route()</code> method either returns an empty iterator or an iterator
+with a single <code class="highlighter-rouge">Response</code>. <code class="highlighter-rouge">TkFork</code> goes through all forks, calling their
+<code class="highlighter-rouge">route()</code> methods until one of them returns a response. Once that happens,
+<code class="highlighter-rouge">TkFork</code> returns this response to the caller, which is
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code class="highlighter-rouge">FtBasic</code></a>.</p>
 
 <p>Let’s create a simple fork ourselves now. For example, we want to show
-the status of the application when the <code>/status</code> URL is requested. Here is
+the status of the application when the <code class="highlighter-rouge">/status</code> URL is requested. Here is
 the code:</p>
 
 <pre>final class TkApp extends TkWrap {
@@ -455,13 +455,13 @@ the code:</p>
 }</pre>
 
 <p>I believe the logic here is clear. We either return an empty iterator
-or an iterator with an instance of <code>TkStatus</code> inside. If an empty
-iterator is returned, <code>TkFork</code> will try to find another fork in the
-collection that actually gets an instance of <code>Response</code>.
+or an iterator with an instance of <code class="highlighter-rouge">TkStatus</code> inside. If an empty
+iterator is returned, <code class="highlighter-rouge">TkFork</code> will try to find another fork in the
+collection that actually gets an instance of <code class="highlighter-rouge">Response</code>.
 By the way, if nothing is found and all forks return empty iterators,
-<code>TkFork</code> will throw a “Page not found” exception.</p>
+<code class="highlighter-rouge">TkFork</code> will throw a “Page not found” exception.</p>
 
-<p>This exact logic is implemented by an out-of-the-box fork called <code>FkRegex</code>,
+<p>This exact logic is implemented by an out-of-the-box fork called <code class="highlighter-rouge">FkRegex</code>,
 which attempts to match a request URI path with the regular expression
 provided:</p>
 
@@ -473,7 +473,7 @@ provided:</p>
   }
 }</pre>
 
-<p>We can compose a multi-level structure of <code>TkFork</code> classes; for example:</p>
+<p>We can compose a multi-level structure of <code class="highlighter-rouge">TkFork</code> classes; for example:</p>
 
 <pre>final class TkApp extends TsWrap {
   private static Take make() {
@@ -489,15 +489,15 @@ provided:</p>
   }
 }</pre>
 
-<p>Again, I believe it’s obvious. The instance of <code>FkRegex</code> will ask an
-encapsulated instance of <code>TkFork</code> to return a response, and it will try to
-fetch it from one that <code>FkParams</code> encapsulated. If the HTTP query is
-<code>/status?f=xml</code>, an instance of <code>TkStatusXML</code> will be returned.</p>
+<p>Again, I believe it’s obvious. The instance of <code class="highlighter-rouge">FkRegex</code> will ask an
+encapsulated instance of <code class="highlighter-rouge">TkFork</code> to return a response, and it will try to
+fetch it from one that <code class="highlighter-rouge">FkParams</code> encapsulated. If the HTTP query is
+<code class="highlighter-rouge">/status?f=xml</code>, an instance of <code class="highlighter-rouge">TkStatusXML</code> will be returned.</p>
 
 <h2 id="http-response">HTTP Response</h2>
 
 <p>Now let’s discuss the structure of the HTTP response and its object-oriented
-abstraction, <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html"><code>Response</code></a>.
+abstraction, <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html"><code class="highlighter-rouge">Response</code></a>.
 This is how the interface looks:</p>
 
 <pre>public interface Response {
@@ -505,7 +505,7 @@ This is how the interface looks:</p>
   InputStream body() throws IOException;
 }</pre>
 
-<p>Looks very similar to the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>,
+<p>Looks very similar to the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code class="highlighter-rouge">Request</code></a>,
 doesn’t it? Well, it’s identical, mostly because the structure of the HTTP request and
 response is almost identical. The only difference is the first line.</p>
 
@@ -527,13 +527,13 @@ that contains an HTML page, you compose them like this:</p>
   }
 }</pre>
 
-<p>In this example, the decorator <code>RsWithBody</code>
+<p>In this example, the decorator <code class="highlighter-rouge">RsWithBody</code>
 creates a response with a body but with no headers at all. Then,
-<code>RsWithType</code> adds the header <code>Content-Type: text/html</code> to it. Then, <code>RsWithStatus</code>
-makes sure the first line of the response contains <code>HTTP/1.1 200 OK</code>.</p>
+<code class="highlighter-rouge">RsWithType</code> adds the header <code class="highlighter-rouge">Content-Type: text/html</code> to it. Then, <code class="highlighter-rouge">RsWithStatus</code>
+makes sure the first line of the response contains <code class="highlighter-rouge">HTTP/1.1 200 OK</code>.</p>
 
 <p>You can create your own decorators that can reuse existing ones. Take a look
-at how it’s done in <a href="https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java"><code>RsPage</code></a>
+at how it’s done in <a href="https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java"><code class="highlighter-rouge">RsPage</code></a>
 from rultor.com.</p>
 
 <h2 id="how-about-templates">How About Templates?</h2>
@@ -541,7 +541,7 @@ from rultor.com.</p>
 <p>Returning simple “Hello, world” pages is not a big problem, as we can see. But
 what about more complex output like HTML pages, <a href="/2015/11/16/json-vs-xml.html">XML</a>
 documents, JSON
-data sets, etc? There are a few convenient <code>Response</code> decorators that
+data sets, etc? There are a few convenient <code class="highlighter-rouge">Response</code> decorators that
 enable all of that. Let’s start with <a href="http://velocity.apache.org">Velocity</a>,
 a simple templating engine. Well, it’s not that simple. It’s rather powerful,
 but I would suggest to use it in simple situations only. Here is how it
@@ -555,10 +555,10 @@ works:</p>
   }
 }</pre>
 
-<p>The <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html"><code>RsVelocity</code></a> constructor
+<p>The <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html"><code class="highlighter-rouge">RsVelocity</code></a> constructor
 accepts a single argument that has to be a Velocity template. Then, you call
-the <code>with()</code> method, injecting data into the Velocity context. When it’s time
-to render the HTTP response, <code>RsVelocity</code> will “evaluate” the template
+the <code class="highlighter-rouge">with()</code> method, injecting data into the Velocity context. When it’s time
+to render the HTTP response, <code class="highlighter-rouge">RsVelocity</code> will “evaluate” the template
 against the context configured. Again, I would recommend you use
 this templating approach only for simple outputs.</p>
 
@@ -568,7 +568,7 @@ in combination with Xembly. I explained this idea in a few previous posts:
 and <a href="/2014/09/09/restful-web-sites.html">RESTful API and a Web Site in the Same URL</a>.
 It is simple and powerful—Java generates XML output and the XSLT
 processor transforms it into HTML documents. This is how we separate
-representation from data. The XSL stylesheet is a “view” and <code>TkIndex</code> is a “controller,”
+representation from data. The XSL stylesheet is a “view” and <code class="highlighter-rouge">TkIndex</code> is a “controller,”
 in terms of <a href="/2016/12/13/mvc-vs-oop.html">MVC</a>.</p>
 
 <p>I’ll write a separate article about templating with Xembly and XSL very soon.</p>
@@ -582,13 +582,13 @@ and submit your pull requests.</p>
 
 <p>Now, a question that comes up is what to do with persistent entities, like databases,
 in-memory structures, network connections, etc. My suggestion is to
-initialize them inside the <code>Entry</code> class and pass them as arguments into
-the <code>TkApp</code> constructor. Then, the <code>TkApp</code> will pass them into the
+initialize them inside the <code class="highlighter-rouge">Entry</code> class and pass them as arguments into
+the <code class="highlighter-rouge">TkApp</code> constructor. Then, the <code class="highlighter-rouge">TkApp</code> will pass them into the
 constructors of custom <em>takes</em>.</p>
 
 <p>For example, we have a PostgreSQL database that contains
 some table data that we need to render. Here is how I would
-initialize a connection to it in the <code>Entry</code> class (I’m using
+initialize a connection to it in the <code class="highlighter-rouge">Entry</code> class (I’m using
 a <a href="http://www.jolbox.com/">BoneCP</a> connection pool):</p>
 
 <pre>public final class Entry {
@@ -605,8 +605,8 @@ a <a href="http://www.jolbox.com/">BoneCP</a> connection pool):</p>
   }
 }</pre>
 
-<p>Now, the constructor of <code>TkApp</code> must accept a single argument of type
-<code>java.sql.Source</code>:</p>
+<p>Now, the constructor of <code class="highlighter-rouge">TkApp</code> must accept a single argument of type
+<code class="highlighter-rouge">java.sql.Source</code>:</p>
 
 <pre>final class TkApp extends TkWrap {
   TkApp(final Source source) {
@@ -619,10 +619,10 @@ a <a href="http://www.jolbox.com/">BoneCP</a> connection pool):</p>
   }
 }</pre>
 
-<p>Class <code>TkIndex</code> also accepts a single argument of class <code>Source</code>. I believe
-you know what to do with it inside <code>TkIndex</code> in order to fetch the SQL
+<p>Class <code class="highlighter-rouge">TkIndex</code> also accepts a single argument of class <code class="highlighter-rouge">Source</code>. I believe
+you know what to do with it inside <code class="highlighter-rouge">TkIndex</code> in order to fetch the SQL
 table data and convert it into HTML. The point here is that the dependency
-must be injected into the application (instance of class <code>TkApp</code>) at the
+must be injected into the application (instance of class <code class="highlighter-rouge">TkApp</code>) at the
 moment of its instantiation. This is a pure and clean dependency injection
 mechanism, which is absolutely container-free. Read more about it in
 <a href="/2014/10/03/di-containers-are-evil.html">Dependency Injection Containers Are Code Polluters</a>.</p>
@@ -631,7 +631,7 @@ mechanism, which is absolutely container-free. Read more about it in
 
 <p>Since every class is immutable and all dependencies are injected only
 through constructors, unit testing is extremely easy. Let’s say we want
-to test <code>TkStatus</code>, which is supposed to return an HTML response
+to test <code class="highlighter-rouge">TkStatus</code>, which is supposed to return an HTML response
 (I’m using <a href="http://junit.org/">JUnit 4</a> and <a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
 
 <pre>import org.junit.Test;
@@ -671,9 +671,9 @@ test HTTP server and test its behavior via a real TCP socket; for example
   }
 }</pre>
 
-<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtRemote.html"><code>FtRemote</code></a>
+<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtRemote.html"><code class="highlighter-rouge">FtRemote</code></a>
 starts a test web server at a random TCP port and calls the
-<code>exec()</code> method at the provided instance of <code>FtRemote.Script</code>. The first
+<code class="highlighter-rouge">exec()</code> method at the provided instance of <code class="highlighter-rouge">FtRemote.Script</code>. The first
 argument of this method is a URI of the just-started web server homepage.</p>
 
 <p>The architecture of Takes framework is very modular and composable. Any
@@ -688,9 +688,9 @@ to capture the reality and put it on film. Each capture is called a <em>take</em
 
 <p>In other words, a <em>take</em> is like a snapshot of the reality.</p>
 
-<p>The same applies to this framework. Each instance of <code>Take</code> represents
+<p>The same applies to this framework. Each instance of <code class="highlighter-rouge">Take</code> represents
 a reality at one particular moment in time. This reality is then sent to the
-user in the form of a <code>Response</code>.</p>
+user in the form of a <code class="highlighter-rouge">Response</code>.</p>
 
 <p>PS. There are a few words about authentication:
 <a href="/2015/05/18/cookie-based-authentication.html">How Cookie-Based Authentication Works in the Takes Framework</a>.</p>

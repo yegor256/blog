@@ -148,16 +148,16 @@ public class Main {
   }
 }</pre>
 
-<p>Try to run it, it should work. You should be able to open the <code>http://localhost:8080</code>
-page in your browser and see the <code>Hello, world!</code> text.</p>
+<p>Try to run it, it should work. You should be able to open the <code class="highlighter-rouge">http://localhost:8080</code>
+page in your browser and see the <code class="highlighter-rouge">Hello, world!</code> text.</p>
 
 <p>It’s not yet a web app, but just a skeleton, which does simple dispatching
 of HTTP requests into HTTP responses. There is no serious OOP
 in it though. It’s pretty procedural, but it works. Now we should focus
 on a more important question: How do we add more features to the web app
 and make it possible to process different pages, render larger content,
-and handle errors? The <code>request</code> variable in the snippet above
-should be somehow converted to a <code>response</code>.</p>
+and handle errors? The <code class="highlighter-rouge">request</code> variable in the snippet above
+should be somehow converted to a <code class="highlighter-rouge">response</code>.</p>
 
 
 
@@ -179,11 +179,11 @@ below or even create a GitHub repo and share your thoughts right there.</p>
 
 
 
-<p>I suggest we introduce two interfaces: <code>Resource</code> and <code>Output</code>. The <code>Resource</code>
+<p>I suggest we introduce two interfaces: <code class="highlighter-rouge">Resource</code> and <code class="highlighter-rouge">Output</code>. The <code class="highlighter-rouge">Resource</code>
 is the server side entity, which mutates depending on the request parameters
 that are coming in. For example, when all we know about the request is that
-it is <code>GET /</code>, it is one resource. But if we also know that the
-request has, for example, <code>Accept: text/plain</code>, we can mutate the request
+it is <code class="highlighter-rouge">GET /</code>, it is one resource. But if we also know that the
+request has, for example, <code class="highlighter-rouge">Accept: text/plain</code>, we can mutate the request
 and create a new one, which delivers plain text. Here is the interface:</p>
 
 <pre>interface Resource {
@@ -197,8 +197,8 @@ and create a new one, which delivers plain text. Here is the interface:</p>
   .refine("X-Query", "/")
   .refine("Accept", "text/plain");</pre>
 
-<p>Pay attention: each call to <code>.refine()</code> returns a new instance
-of interface <code>Resource</code>. All of them are immutable, just like objects
+<p>Pay attention: each call to <code class="highlighter-rouge">.refine()</code> returns a new instance
+of interface <code class="highlighter-rouge">Resource</code>. All of them are immutable, just like objects
 <a href="/2014/06/09/objects-should-be-immutable.html">have to be</a>.
 Thanks to this design we don’t separate <a href="/2016/11/21/naked-data.html">data</a>
 from their processor. The resource is the data and the processor. Each resource
@@ -211,20 +211,20 @@ resource the ability to render itself to the response. We don’t want the
 <a href="/2016/11/21/naked-data.html">data</a>, in form of some DTO,
 to escape the resource. We want the resource
 <a href="/2016/04/05/printers-instead-of-getters.html">to print</a> the
-response. How about giving an additional method <code>print()</code> to the resource:</p>
+response. How about giving an additional method <code class="highlighter-rouge">print()</code> to the resource:</p>
 
 <pre>interface Resource {
   Resource refine(String name, String value);
   void print(Output output);
 }</pre>
 
-<p>And then the interface <code>Output</code> looks like this:</p>
+<p>And then the interface <code class="highlighter-rouge">Output</code> looks like this:</p>
 
 <pre>interface Output {
   void print(String name, String value);
 }</pre>
 
-<p>Here is a primitive implementation of <code>Output</code>:</p>
+<p>Here is a primitive implementation of <code class="highlighter-rouge">Output</code>:</p>
 
 <pre>public class StringBuilderOutput implements Output {
   private final StringBuilder buffer;
@@ -253,8 +253,8 @@ output.print("Content-Length", "13");
 output.print("X-Body", "Hello, world!");
 System.out.println(builder.toString());</pre>
 
-<p>Now let’s create a class which will take an incoming request <code>String</code>
-and produce a response <code>String</code>, using an instance of <code>Resource</code> as a
+<p>Now let’s create a class which will take an incoming request <code class="highlighter-rouge">String</code>
+and produce a response <code class="highlighter-rouge">String</code>, using an instance of <code class="highlighter-rouge">Resource</code> as a
 <em>dispatcher</em>:</p>
 
 <pre>public class Session {
@@ -288,7 +288,7 @@ and produce a response <code>String</code>, using an instance of <code>Resource<
 
 <p>First, we parse the request, breaking its header into lines and ignoring
 the body of the request. You can modify the code to parse the body
-and pass it into the <code>refine()</code> method too, using <code>X-Body</code> as the key. At
+and pass it into the <code class="highlighter-rouge">refine()</code> method too, using <code class="highlighter-rouge">X-Body</code> as the key. At
 the moment, the code above doesn’t do that. But you get the idea. The parsing
 part of the snippet prepares the pairs it can find in the request and passes them one by one
 to the encapsulated resource, mutating it until it gets to the final form.

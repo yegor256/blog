@@ -80,7 +80,7 @@ the same objects and preparing the data to run the test,
 I feel disappointed in my design. Long test methods with a lot of code
 duplication just don’t look right. To simplify and shorten them,
 there are basically two options, at least in Java: 1) private properties
-initialized through <code>@Before</code> and <code>@BeforeClass</code>, and 2)
+initialized through <code class="highlighter-rouge">@Before</code> and <code class="highlighter-rouge">@BeforeClass</code>, and 2)
 <a href="/2017/02/07/private-method-is-new-class.html">private static methods</a>.
 They both look anti-OOP to me, and I think there is an
 alternative. Let me explain.</p>
@@ -116,10 +116,10 @@ alternative. Let me explain.</p>
   }
 }</pre>
 
-<p>I think it’s obvious what this test is doing. First, in <code>prepare()</code>,
-it creates a “test fixture” of type <code>Folder</code>. That is used in all three
-tests as an argument for the <code>Metrics</code> constructor. The real class being
-tested here is <code>Metrics</code> while <code>this.folder</code> is something we need
+<p>I think it’s obvious what this test is doing. First, in <code class="highlighter-rouge">prepare()</code>,
+it creates a “test fixture” of type <code class="highlighter-rouge">Folder</code>. That is used in all three
+tests as an argument for the <code class="highlighter-rouge">Metrics</code> constructor. The real class being
+tested here is <code class="highlighter-rouge">Metrics</code> while <code class="highlighter-rouge">this.folder</code> is something we need
 in order to test it.</p>
 
 
@@ -128,11 +128,11 @@ in order to test it.</p>
 <strong>coupling</strong> between test methods. Test methods (and all tests in general)
 must be perfectly isolated from each other. This means that changing
 one test must not affect any others. In this example, that is not the case.
-When I want to change the <code>countsWords()</code> test, I have to change the internals
-of <code>before()</code>, which will affect the other method in the test “class.”</p>
+When I want to change the <code class="highlighter-rouge">countsWords()</code> test, I have to change the internals
+of <code class="highlighter-rouge">before()</code>, which will affect the other method in the test “class.”</p>
 
 <p>With all due respect to JUnit, the idea of creating test fixtures in
-<code>@Before</code> and <code>@After</code> is wrong, mostly because it encourages
+<code class="highlighter-rouge">@Before</code> and <code class="highlighter-rouge">@After</code> is wrong, mostly because it encourages
 developers to couple test methods.</p>
 
 <p>Here is how we can improve our test and isolate test methods:</p>
@@ -180,14 +180,14 @@ developers to couple test methods.</p>
 <p>Does it look better now? We’re not there yet, but now our test
 methods are perfectly isolated. If I want to change one of them,
 I’m not going to affect the others because I pass all configuration
-parameters to a private static utility (!) method <code>folder()</code>.</p>
+parameters to a private static utility (!) method <code class="highlighter-rouge">folder()</code>.</p>
 
 <p>A utility method, huh? Yes,
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">it smells</a>.</p>
 
 <p>The main issue with this design, even though it is way better than
 the previous one, is that it doesn’t prevent code duplication between
-test “classes.” If I need a similar test fixture of type <code>Folder</code> in
+test “classes.” If I need a similar test fixture of type <code class="highlighter-rouge">Folder</code> in
 another test case, I will have to move this static method there. Or
 even worse, I will have to create a utility class.
 Yes, there is <a href="/2015/02/20/utility-classes-vs-functional-programming.html">nothing worse</a>
@@ -196,8 +196,8 @@ in object-oriented programming than utility classes.</p>
 <p>A much better design would be to use
 “<a href="/2014/09/23/built-in-fake-objects.html">fake</a>” objects
 instead of private static utilities. Here is how. First, we create a fake class
-and place it into <code>src/main/java</code>. This class can be used in tests
-and also in production code, if necessary (<code>Fk</code> for “fake”):</p>
+and place it into <code class="highlighter-rouge">src/main/java</code>. This class can be used in tests
+and also in production code, if necessary (<code class="highlighter-rouge">Fk</code> for “fake”):</p>
 
 <pre>public final class FkFolder implements Folder, Closeable {
   private final File dir;

@@ -100,7 +100,7 @@ first, to understand how Nutch works from the command line. Well,
 it helped me anyway.</p>
 
 <p>Now, let’s see how we can use Nutch without the command line.
-First, you need these dependencies in your <code>pom.xml</code>
+First, you need these dependencies in your <code class="highlighter-rouge">pom.xml</code>
 (Nutch uses <a href="https://hadoop.apache.org/">Apache Hadoop</a>, that’s why we need the
 second dependency):</p>
 
@@ -230,9 +230,9 @@ public class Main {
   }
 }</pre>
 
-<p>Pay attention that <code>Path</code> here is not the
-<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><code>Path</code></a> from JDK.
-It’s the <a href="https://hadoop.apache.org/docs/r2.7.2/api/org/apache/hadoop/fs/Path.html"><code>Path</code></a> from Hadoop.
+<p>Pay attention that <code class="highlighter-rouge">Path</code> here is not the
+<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><code class="highlighter-rouge">Path</code></a> from JDK.
+It’s the <a href="https://hadoop.apache.org/docs/r2.7.2/api/org/apache/hadoop/fs/Path.html"><code class="highlighter-rouge">Path</code></a> from Hadoop.
 Don’t ask me why.</p>
 
 <p>This seems to be a pretty straight-forward algorithm, however
@@ -241,7 +241,7 @@ of plugins, which are standalone JAR packages, which it doesn’t include
 in its default JAR. They exist in its
 <a href="https://nutch.apache.org/downloads.html">binary distribution</a> and they
 are pretty heavy (over 250MB in Nutch 1.15). Nutch expects you to download
-the entire distribution, unpack, and run the binary <code>nutch</code> they provide,
+the entire distribution, unpack, and run the binary <code class="highlighter-rouge">nutch</code> they provide,
 which will work with the provided plugins.</p>
 
 <p>What can we do, now that we are in Java, not in the command line? Here is what
@@ -276,8 +276,8 @@ I suggest:</p>
 &lt;/project&gt;</pre>
 
 <p>This Maven plugin will download the entire binary distribution of Nutch
-and will unpack it to <code>target/apache-nutch-1.15</code>. The plugins will be
-in <code>target/apache-nutch-1.15/plugins</code>. The only thing we still need
+and will unpack it to <code class="highlighter-rouge">target/apache-nutch-1.15</code>. The plugins will be
+in <code class="highlighter-rouge">target/apache-nutch-1.15/plugins</code>. The only thing we still need
 to do is to set the system property for the unit test:</p>
 
 <pre>&lt;project&gt;
@@ -300,11 +300,11 @@ to do is to set the system property for the unit test:</p>
   [...]
 &lt;/project&gt;</pre>
 
-<p>Actually, one more thing we have to do: copy the contents of the directory <code>conf</code>
-from their binary distribution to our <code>src/main/resources</code> directory. There
-are many files, including the most important <code>nutch-default.xml</code>. They all
+<p>Actually, one more thing we have to do: copy the contents of the directory <code class="highlighter-rouge">conf</code>
+from their binary distribution to our <code class="highlighter-rouge">src/main/resources</code> directory. There
+are many files, including the most important <code class="highlighter-rouge">nutch-default.xml</code>. They all
 have to be available on classpath, otherwise Nutch will complain in so
-many places and won’t be able to load the <code>Configuration</code>.</p>
+many places and won’t be able to load the <code class="highlighter-rouge">Configuration</code>.</p>
 
 <p>You can see how it all works together in this
 GitHub repository I created to illustrate the example:

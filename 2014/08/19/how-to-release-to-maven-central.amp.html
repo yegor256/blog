@@ -99,7 +99,7 @@ strongly recommend moving there.</p>
 
 
 
-<p>Make sure your <code>pom.xml</code> contains all elements required by Sonatype,
+<p>Make sure your <code class="highlighter-rouge">pom.xml</code> contains all elements required by Sonatype,
 explained in <a href="http://central.sonatype.org/pages/requirements.html">Central Sync Requirements</a>.
 We will deploy to Sonatype, and they will synchronize all JAR (and not only)
 artifacts to Maven Central.</p>
@@ -107,7 +107,7 @@ artifacts to Maven Central.</p>
 <h2 id="register-a-project-with-sonatype">Register a Project With Sonatype</h2>
 
 <p>Create an account in <a href="https://issues.sonatype.org/">Sonatype JIRA</a>
-and raise a ticket, asking to approve your <code>groupId</code>. This
+and raise a ticket, asking to approve your <code class="highlighter-rouge">groupId</code>. This
 <a href="http://central.sonatype.org/pages/ossrh-guide.html">OSSRH Guide</a>
 explains this step in more detail.</p>
 
@@ -118,11 +118,11 @@ explains this step in more detail.</p>
 article.</p>
 
 <p>When this step is done, you should have two files:
-<code>pubring.gpg</code> and <code>secring.gpg</code>.</p>
+<code class="highlighter-rouge">pubring.gpg</code> and <code class="highlighter-rouge">secring.gpg</code>.</p>
 
 <h2 id="create-settingsxml">Create settings.xml</h2>
 
-<p>Create <code>settings.xml</code>, next to the two <code>.gpg</code> files created in the previous step:</p>
+<p>Create <code class="highlighter-rouge">settings.xml</code>, next to the two <code class="highlighter-rouge">.gpg</code> files created in the previous step:</p>
 
 <pre>&lt;settings&gt;
   &lt;profiles&gt;
@@ -144,7 +144,7 @@ article.</p>
   &lt;/servers&gt;
 &lt;/settings&gt;</pre>
 
-<p>In this example, <code>9A105525</code> is the ID of your public key, and <code>my-secret</code>
+<p>In this example, <code class="highlighter-rouge">9A105525</code> is the ID of your public key, and <code class="highlighter-rouge">my-secret</code>
 is the pass phrase you have used while generating the keys.</p>
 
 <h2 id="encrypt-security-assets">Encrypt Security Assets</h2>
@@ -156,10 +156,10 @@ $ rultor encrypt -p me/test pubring.gpg
 $ rultor encrypt -p me/test secring.gpg
 $ rultor encrypt -p me/test settings.xml</pre>
 
-<p>Instead of <code>me/test</code> you should use the name of your GitHub project.</p>
+<p>Instead of <code class="highlighter-rouge">me/test</code> you should use the name of your GitHub project.</p>
 
-<p>You will get three new files: <code>pubring.gpg.asc</code>, <code>secring.gpg.asc</code>
-and <code>settings.xml.asc</code>. Add them to the root directory of your project,
+<p>You will get three new files: <code class="highlighter-rouge">pubring.gpg.asc</code>, <code class="highlighter-rouge">secring.gpg.asc</code>
+and <code class="highlighter-rouge">settings.xml.asc</code>. Add them to the root directory of your project,
 commit and push. The files contain your secret information,
 but only the Rultor server can decrypt them.</p>
 
@@ -170,7 +170,7 @@ a parent pom for your project. This will make many further steps
 unnecessary. If you’re using jcabi-parent, skip this step.</p>
 
 <p>However, if you don’t use jcabi-parent, you should add these two repositories
-to your <code>pom.xml</code>:</p>
+to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;project&gt;
   [...]
@@ -191,7 +191,7 @@ to your <code>pom.xml</code>:</p>
 <p>Again, I’d recommend using <a href="http://parent.jcabi.com">jcabi-parent</a>,
 which configures this plugin automatically. If you’re using it, skip this step.</p>
 
-<p>Otherwise, add this plugin to your <code>pom.xml</code>:</p>
+<p>Otherwise, add this plugin to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;project&gt;
   [..]
@@ -221,7 +221,7 @@ which configures this plugin automatically. If you’re using it, skip this step
 <p>Once again, I recommend using <a href="/2015/02/05/jcabi-parent-maven-pom.html">http://parent.jcabi.com</a>. It
 configures all required plugins out-of-the-box. If you’re using it, skip this step.</p>
 
-<p>Otherwise, add this plugin to your <code>pom.xml</code>:</p>
+<p>Otherwise, add this plugin to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;project&gt;
   [..]
@@ -246,7 +246,7 @@ configures all required plugins out-of-the-box. If you’re using it, skip this 
 <p>Yes, you’re right, <a href="/2015/02/05/jcabi-parent-maven-pom.html">http://parent.jcabi.com</a> will help
 you here as well. If you’re using it, skip this step too.</p>
 
-<p>Otherwise, add these four plugins to your <code>pom.xml</code>:</p>
+<p>Otherwise, add these four plugins to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;project&gt;
   [..]
@@ -310,7 +310,7 @@ you here as well. If you’re using it, skip this step too.</p>
 
 <h2 id="create-rultor-configuration">Create Rultor Configuration</h2>
 
-<p>Create a <code>.rultor.yml</code> file in the root directory of your project
+<p>Create a <code class="highlighter-rouge">.rultor.yml</code> file in the root directory of your project
 (<a href="https://doc.rultor.com/reference.html">reference page</a>
 explains this format in details):</p>
 

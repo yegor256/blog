@@ -86,7 +86,7 @@ Docker containers. Take this Maven project for example:</p>
 
 
 <p>This command will start a new Ubuntu system and execute
-<code>mvn clean test</code> inside it. <a href="http://www.rultor.com">Rultor.com</a>, our
+<code class="highlighter-rouge">mvn clean test</code> inside it. <a href="http://www.rultor.com">Rultor.com</a>, our
 virtual assistant, does exactly that with our builds, when we
 deploy, package, test and merge them.</p>
 
@@ -123,8 +123,8 @@ I prepare a working environment for my application, I make
 an image out of it and push it to the hub.</p>
 
 <p>Let’s say, I want my Maven build to be executed in a container
-with a pre-installed <code>graphviz</code> package (in order to enable <code>dot</code> command line tool).
-First, I would start a plain vanilla Ubuntu container, and install <code>graphviz</code> inside it:</p>
+with a pre-installed <code class="highlighter-rouge">graphviz</code> package (in order to enable <code class="highlighter-rouge">dot</code> command line tool).
+First, I would start a plain vanilla Ubuntu container, and install <code class="highlighter-rouge">graphviz</code> inside it:</p>
 
 <pre>$ sudo docker run -i -t ubuntu /bin/bash
 root@215d2696e8ad:/# sudo apt-get install -y graphviz
@@ -139,15 +139,15 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 215d2696e8ad        ubuntu:14.04        /bin/bash           About a minute ago   Exited (0) 3 seconds ago                       high_mccarthy</pre>
 
 <p>I have a container that stopped a few seconds ago. Container’s
-ID is <code>215d2696e8ad</code>. Now, I want to make it reusable for all
+ID is <code class="highlighter-rouge">215d2696e8ad</code>. Now, I want to make it reusable for all
 further tests in Rultor.com. I have to create an image from it:</p>
 
 <pre>$ sudo docker commit 215d2696e8ad yegor256/beta
 c5ad7718fc0e20fe4bf2c8a9bfade4db8617a25366ca5b64be2e1e8aa0de6e52</pre>
 
-<p>I just made my new commit to a new image <code>yegor256/beta</code>.
+<p>I just made my new commit to a new image <code class="highlighter-rouge">yegor256/beta</code>.
 This image can be reused right now. I can create a new container
-from this image and it will have <code>graphviz</code> installed inside!</p>
+from this image and it will have <code class="highlighter-rouge">graphviz</code> installed inside!</p>
 
 <p>Now it’s time to share my image at Docker hub, in order to make it available for Rultor:</p>
 
@@ -165,19 +165,19 @@ c5ad7718fc0e: Image successfully pushed
 Pushing tag for rev [c5ad7718fc0e] on {https://registry-1.docker.io/v1/repositories/yegor256/beta/tags/latest}</pre>
 
 <p>The last step is to configure Rultor to use this image in
-all builds. To do this, I will edit <a href="https://doc.rultor.com/reference.html"><code>.rultor.yml</code></a>
+all builds. To do this, I will edit <a href="https://doc.rultor.com/reference.html"><code class="highlighter-rouge">.rultor.yml</code></a>
 in the root directory of my GitHub repository:</p>
 
 <pre>docker:
   image: yegor256/beta</pre>
 
 <p>That’s it. From now on, Rultor will use my custom Docker image with
-pre-installed <code>graphviz</code>, in every build (merge, release, deploy, etc.)</p>
+pre-installed <code class="highlighter-rouge">graphviz</code>, in every build (merge, release, deploy, etc.)</p>
 
 <p>Moreover, if and when I want to add something else to the image,
 it’s easy to do. Say, I want to install Ruby into my build image.
 I start a container from the image and install it (pay attention,
-I’m starting a container not from <code>ubuntu</code> image, as I did before, but from <code>yegor256/beta</code>):</p>
+I’m starting a container not from <code class="highlighter-rouge">ubuntu</code> image, as I did before, but from <code class="highlighter-rouge">yegor256/beta</code>):</p>
 
 <pre>$ sudo docker run -i -t yegor256/beta /bin/bash
 root@7e0fbd9806c9:/# sudo apt-get install -y ruby
@@ -194,7 +194,7 @@ CONTAINER ID        IMAGE                  COMMAND             CREATED          
 
 <p>You can now see that I have two containers. The first one is the one
 I am using right now; it contains Ruby. The second one is the one
-I was using before and it contains <code>graphviz</code>.</p>
+I was using before and it contains <code class="highlighter-rouge">graphviz</code>.</p>
 
 <p>Now I have to commit again and push:</p>
 
@@ -241,7 +241,7 @@ If the code is not zero, we fail the build and report to the user.</p>
 <p>As you can see, Maven starts immediately. We don’t worry
 about the internals of the container. We just start an application inside it.</p>
 
-<p>Furthermore, thanks to the <code>--rm</code> option, the container gets
+<p>Furthermore, thanks to the <code class="highlighter-rouge">--rm</code> option, the container gets
 destroyed immediately after Maven execution is finished.</p>
 
 <p>This is what application-centric is about.</p>

@@ -81,7 +81,7 @@ I assume you keep public artifacts in
 <a href="/2014/08/19/how-to-release-to-maven-central.html">Maven Central</a> because
 you want them to be available to everybody. Private artifacts
 are those you don’t want visible to anyone except members
-of your team. Thus, you want to deploy your <code>.jar</code> files there
+of your team. Thus, you want to deploy your <code class="highlighter-rouge">.jar</code> files there
 and make sure they are visible only by your team. Here is how we do
 this in all <a href="https://www.zerocracy.com">our</a> Java projects.</p>
 
@@ -90,16 +90,16 @@ this in all <a href="https://www.zerocracy.com">our</a> Java projects.</p>
 <h2 id="create-an-s3-bucket">Create an S3 Bucket</h2>
 
 <p>First, you create a new S3 bucket. I would recommend you name it using
-your project domain and a prefix. For example, with <code>repo.teamed.io</code>,
-<code>repo</code> is a prefix and <code>teamed.io</code> is the domain.</p>
+your project domain and a prefix. For example, with <code class="highlighter-rouge">repo.teamed.io</code>,
+<code class="highlighter-rouge">repo</code> is a prefix and <code class="highlighter-rouge">teamed.io</code> is the domain.</p>
 
 <p>There’s no need to configure any permissions for this bucket. Just create it
 through the <a href="https://console.aws.amazon.com/console/home">Amazon S3 console</a>.</p>
 
 <h2 id="create-an-iam-user">Create an IAM User</h2>
 
-<p>Create a new IAM user. I recommend you name it like <code>teamed-maven</code>
-if your project name is <code>teamed</code>.</p>
+<p>Create a new IAM user. I recommend you name it like <code class="highlighter-rouge">teamed-maven</code>
+if your project name is <code class="highlighter-rouge">teamed</code>.</p>
 
 <p>Add a new “inline policy” to the user:</p>
 
@@ -116,7 +116,7 @@ if your project name is <code>teamed</code>.</p>
   ]
 }</pre>
 
-<p>Here, <code>repo.teamed.io</code> is the name of the S3 bucket you
+<p>Here, <code class="highlighter-rouge">repo.teamed.io</code> is the name of the S3 bucket you
 created a minute ago.</p>
 
 <p>Make sure you have an “access key” for this new user. It must look similar
@@ -127,10 +127,10 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
 
 <p>The key is 20 characters (all caps), and the secret is 40 characters.</p>
 
-<h2 id="extend-settingsxml">Extend <code>settings.xml</code>
+<h2 id="extend-settingsxml">Extend <code class="highlighter-rouge">settings.xml</code>
 </h2>
 
-<p>Add this configuration to your <code>~/.m2/settings.xml</code> file:</p>
+<p>Add this configuration to your <code class="highlighter-rouge">~/.m2/settings.xml</code> file:</p>
 
 <pre>&lt;settings&gt;
   &lt;servers&gt;
@@ -144,10 +144,10 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
   [...]
 &lt;/settings&gt;</pre>
 
-<h2 id="configure-pomxml">Configure <code>pom.xml</code>
+<h2 id="configure-pomxml">Configure <code class="highlighter-rouge">pom.xml</code>
 </h2>
 
-<p>Add this configuration to <code>pom.xml</code>:</p>
+<p>Add this configuration to <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;project&gt;
   &lt;distributionManagement&gt;
@@ -170,7 +170,7 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
 &lt;/project&gt;</pre>
 
 <p>Then, configure <a href="https://github.com/jcaddel/maven-s3-wagon">S3 Wagon</a>,
-also in <code>pom.xml</code>:</p>
+also in <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;project&gt;
   &lt;build&gt;
@@ -190,7 +190,7 @@ Maven from the command line:</p>
 
 <pre>$ mvn clean deploy</pre>
 
-<h2 id="configure-s3authcom">Configure <code>s3auth.com</code>
+<h2 id="configure-s3authcom">Configure <code class="highlighter-rouge">s3auth.com</code>
 </h2>
 
 <p>Now you want to see these artifacts in your browser, in a secure mode, by
@@ -205,19 +205,19 @@ providing secure credentials. I recommend you use
 <p>Another recommendation is to configure rultor.com for deployment of your
 artifacts to S3 automatically.</p>
 
-<p>First, encrypt your <code>settings.xml</code> with this
+<p>First, encrypt your <code class="highlighter-rouge">settings.xml</code> with this
 <a href="https://github.com/yegor256/rultor-remote">Rultor remote</a>:</p>
 
 <pre>$ gem install rultor
 $ rultor encrypt -p me/test settings.xml</pre>
 
-<p>Instead of <code>me/test</code>, you should use the name of your GitHub project.</p>
+<p>Instead of <code class="highlighter-rouge">me/test</code>, you should use the name of your GitHub project.</p>
 
-<p>As a result, you will get a new file named <code>settings.xml.asc</code>. Add it to the root directory
+<p>As a result, you will get a new file named <code class="highlighter-rouge">settings.xml.asc</code>. Add it to the root directory
 of your project, then commit and push. The file contains your secret information,
 but only the Rultor server can decrypt it.</p>
 
-<p>Create a <code>.rultor.yml</code> file in the root directory of your project
+<p>Create a <code class="highlighter-rouge">.rultor.yml</code> file in the root directory of your project
 (The Rultor <a href="https://doc.rultor.com/reference.html">reference page</a>
 explains this format in greater detail):</p>
 

@@ -109,14 +109,14 @@ Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com</pre>
 
 <p>Since the response status code is 303, the browser goes to the page
-specified in the <code>Location</code> header and opens the front page of the site. This
+specified in the <code class="highlighter-rouge">Location</code> header and opens the front page of the site. This
 is what it sends to the server:</p>
 
 <pre>GET / HTTP/1.1
 Host: www.facebook.com
 Cookie: user=me@yegor256.com</pre>
 
-<p>The server gets my email from the <code>Cookie</code>
+<p>The server gets my email from the <code class="highlighter-rouge">Cookie</code>
 header and understands that it’s me again! No need to ask for the
 password once more. The server trusts the information from the cookie.
 That’s it. That’s what cookie-based authentication is all about.</p>
@@ -124,14 +124,14 @@ That’s it. That’s what cookie-based authentication is all about.</p>
 <h2 id="wait--what-about-security">Wait … What About Security?</h2>
 
 <p>Right, what about security? If the server trusts any browser request with
-a user email in the <code>Cookie</code> header, anyone would be able to send my email
+a user email in the <code class="highlighter-rouge">Cookie</code> header, anyone would be able to send my email
 from another place and get access to my account.</p>
 
 <p>The first step to prevent this is to encrypt the email with a secret
 encryption key, known only to the server. Nobody except the server itself
 will be able to encrypt it the same way the server needs to decrypt it.
 The response would look like this, using an example of encryption
-by <a href="https://en.wikipedia.org/wiki/XOR_cipher">XOR cipher</a> with <code>bamboo</code> as a secret key:</p>
+by <a href="https://en.wikipedia.org/wiki/XOR_cipher">XOR cipher</a> with <code class="highlighter-rouge">bamboo</code> as a secret key:</p>
 
 <pre>HTTP/1.1 303 See Other
 Location: www.facebook.com
@@ -148,7 +148,7 @@ person into my account. This type of attack is called
 <a href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle</a> (MITM).
 To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
-SSL encryption. That’s done by an extra flag in the <code>Set-Cookie</code> header:</p>
+SSL encryption. That’s done by an extra flag in the <code class="highlighter-rouge">Set-Cookie</code> header:</p>
 
 <pre>HTTP/1.1 303 See Other
 Location: www.facebook.com
@@ -162,7 +162,7 @@ if your entire HTML rendering is done wrong), and this code will gain access
 to the cookie. Then, the code will send the cookie somewhere else so
 the attacker can collect it. This type of attack is called
 <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting</a> (XSS).
-To prevent this, there is another flag for the <code>Set-Cookie</code> header, called <code>HttpOnly</code>:</p>
+To prevent this, there is another flag for the <code class="highlighter-rouge">Set-Cookie</code> header, called <code class="highlighter-rouge">HttpOnly</code>:</p>
 
 <pre>HTTP/1.1 303 See Other
 Location: www.facebook.com
@@ -179,9 +179,9 @@ have access to it.</p>
 <em>takes</em>, which receive requests and produce responses
 (<a href="/2015/03/22/takes-java-web-framework.html">this article</a>
 explains the framework in more detail). When the request comes in,
-we should find the authentication cookie in the <code>Cookie</code> header and translate
+we should find the authentication cookie in the <code class="highlighter-rouge">Cookie</code> header and translate
 it to the user credentials. When the response goes out, we should add the
-<code>Set-Cookie</code> header to it with the encrypted user credentials. That’s it. Just
+<code class="highlighter-rouge">Set-Cookie</code> header to it with the encrypted user credentials. That’s it. Just
 these two steps.</p>
 
 <p>Let’s say we have an account page that is supposed to show the current user’s
@@ -201,34 +201,34 @@ balance:</p>
   }
 }</pre>
 
-<p>Right after the <code>request</code> comes in, we should retrieve the identity of
+<p>Right after the <code class="highlighter-rouge">request</code> comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
-reusable, we have the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/TkAuth.html"><code>TkAuth</code></a>
+reusable, we have the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/TkAuth.html"><code class="highlighter-rouge">TkAuth</code></a>
 decorator, which wraps an existing <em>take</em>,
-decodes an incoming cookie, and adds a new <code>TkAuth</code>
+decodes an incoming cookie, and adds a new <code class="highlighter-rouge">TkAuth</code>
 header to the request with the user’s identification information:</p>
 
 <pre>final Codec codec = new CcHex(new CcXOR(new CcPlain()));
 final Pass pass = new PsCookie(codec);
 new TkAuth(new TkAccount(), pass);</pre>
 
-<p>Again, when <code>TkAuth</code> receives a request with an authenticating cookie inside,
-it asks <code>pass</code> to decode the cookie and return either a
-valid <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Identity.html"><code>Identity</code></a>
-or <code>Identity.ANONYMOUS</code>.</p>
+<p>Again, when <code class="highlighter-rouge">TkAuth</code> receives a request with an authenticating cookie inside,
+it asks <code class="highlighter-rouge">pass</code> to decode the cookie and return either a
+valid <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Identity.html"><code class="highlighter-rouge">Identity</code></a>
+or <code class="highlighter-rouge">Identity.ANONYMOUS</code>.</p>
 
-<p>Then, when the response goes back to the browser, <code>TkAuth</code> asks <code>pass</code>
-to encode the identity back into a string and adds <code>Set-Cookie</code> to the response.</p>
+<p>Then, when the response goes back to the browser, <code class="highlighter-rouge">TkAuth</code> asks <code class="highlighter-rouge">pass</code>
+to encode the identity back into a string and adds <code class="highlighter-rouge">Set-Cookie</code> to the response.</p>
 
-<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsCookie.html"><code>PsCookie</code></a>
+<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsCookie.html"><code class="highlighter-rouge">PsCookie</code></a>
 uses an instance of
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/codecs/Codec.html"><code>Codec</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/codecs/Codec.html"><code class="highlighter-rouge">Codec</code></a>
 in order to do these backward and forward encoding operations.</p>
 
-<p>When our <code>TkAccount</code> <em>take</em> wants to retrieve a currently authenticated
+<p>When our <code class="highlighter-rouge">TkAccount</code> <em>take</em> wants to retrieve a currently authenticated
 user identity from the request, it can use
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/RqAuth.html"><code>RqAuth</code></a>,
-a utility decorator of <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code>Request</code></a>:</p>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/RqAuth.html"><code class="highlighter-rouge">RqAuth</code></a>,
+a utility decorator of <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code class="highlighter-rouge">Request</code></a>:</p>
 
 <pre>final class TkAccount implements Take {
   @Override
@@ -238,8 +238,8 @@ a utility decorator of <a href="http://static.javadoc.io/org.takes/takes/1.1/org
   }
 }</pre>
 
-<p>The <code>RqAuth</code> decorator uses the header, added by <code>PsCookie</code>, in order
-to authenticate the user and create an <code>Identity</code> object.</p>
+<p>The <code class="highlighter-rouge">RqAuth</code> decorator uses the header, added by <code class="highlighter-rouge">PsCookie</code>, in order
+to authenticate the user and create an <code class="highlighter-rouge">Identity</code> object.</p>
 
 <h2 id="how-is-it-composable">How Is It Composable?</h2>
 
@@ -256,11 +256,11 @@ want to skip authentication during integration testing. Here is how:</p>
   )
 );</pre>
 
-<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsChain.html"><code>PsChain</code></a>
-implements <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Pass.html"><code>Pass</code></a>
+<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsChain.html"><code class="highlighter-rouge">PsChain</code></a>
+implements <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Pass.html"><code class="highlighter-rouge">Pass</code></a>
 and attempts to authenticate the user by asking all encapsulated passes,
 one by one. The first one in the chain is
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsFake.html"><code>PsFake</code></a>.
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsFake.html"><code class="highlighter-rouge">PsFake</code></a>.
 Using a single boolean argument in its constructor, it makes a decision whether
 to return a fake identity or return nothing. With just a single boolean
 trigger, we can switch off the entire authentication mechanism in the app.</p>
@@ -285,16 +285,16 @@ trigger, we can switch off the entire authentication mechanism in the app.</p>
   )
 );</pre>
 
-<p>When a user clicks on the login link on your site, the browser goes to <code>facebook.com</code>,
-where his or her identity is verified. Then, Facebook returns a <code>302</code> redirection
-response with a <code>Location</code> header set to the URL we provide in the login link.
-The link must include something like this: <code>?PsByFlag=PsFacebook</code>. This will
-tell <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsByFlag.html"><code>PsByFlag</code></a>
+<p>When a user clicks on the login link on your site, the browser goes to <code class="highlighter-rouge">facebook.com</code>,
+where his or her identity is verified. Then, Facebook returns a <code class="highlighter-rouge">302</code> redirection
+response with a <code class="highlighter-rouge">Location</code> header set to the URL we provide in the login link.
+The link must include something like this: <code class="highlighter-rouge">?PsByFlag=PsFacebook</code>. This will
+tell <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsByFlag.html"><code class="highlighter-rouge">PsByFlag</code></a>
 that this request authenticates a user.</p>
 
-<p><code>PsByFlag</code> will iterate through all encapsulated “pairs” and try to find the
+<p><code class="highlighter-rouge">PsByFlag</code> will iterate through all encapsulated “pairs” and try to find the
 right one.
-<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/social/PsFacebook.html"><code>PsFacebook</code></a>
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/social/PsFacebook.html"><code class="highlighter-rouge">PsFacebook</code></a>
 will be the first and the right one. It will connect to the Facebook API using the
 provided credentials and will retrieve all possible information about the user.</p>
 
@@ -322,11 +322,11 @@ provided credentials and will retrieve all possible information about the user.<
   )
 );</pre>
 
-<p>Now, we can add <code>?PsByFlag=PsLogout</code> to any link on the site and it will
+<p>Now, we can add <code class="highlighter-rouge">?PsByFlag=PsLogout</code> to any link on the site and it will
 log the current user out.</p>
 
 <p>You can see how all this works in a real application by checking out the
-<a href="https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java"><code>TkAppAuth</code></a>
+<a href="https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java"><code class="highlighter-rouge">TkAppAuth</code></a>
 class in <a href="http://www.rultor.com">Rultor</a>.</p>
 
     </article>

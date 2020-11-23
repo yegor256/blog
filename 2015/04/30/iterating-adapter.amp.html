@@ -91,7 +91,7 @@ another source of data, in the form of an iterator. I hope this example will hel
   byte[] read();
 }</pre>
 
-<p>When we call <code>read()</code>, it returns a new array of bytes that were retrieved
+<p>When we call <code class="highlighter-rouge">read()</code>, it returns a new array of bytes that were retrieved
 from somewhere. If there is nothing to retrieve, the array will be empty. Now,
 we want to create an <em>adapter</em> that would consume the bytes and let
 us iterate them:</p>
@@ -132,8 +132,8 @@ us iterate them:</p>
 <p>There is no way to make it
 <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a> because the iterating process
 is outside the scope of the iterator. Even if we declare our methods
-as <code>synchronized</code>, this won’t guarantee that two threads won’t conflict
-when they both call <code>hasNext()</code> and <code>next()</code>. So don’t bother with it and
+as <code class="highlighter-rouge">synchronized</code>, this won’t guarantee that two threads won’t conflict
+when they both call <code class="highlighter-rouge">hasNext()</code> and <code class="highlighter-rouge">next()</code>. So don’t bother with it and
 just document the iterator as not thread-safe, then let its users
 synchronize one level higher when necessary.</p>
 

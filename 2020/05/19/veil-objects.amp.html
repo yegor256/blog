@@ -94,7 +94,7 @@ a name: Veil Objects.</p>
   end
 end</pre>
 
-<p>The method <code>exec()</code> on <code>@pgsql</code> (I’m using the <a href="https://rubygems.org/gems/pgtk">pgtk</a> gem)
+<p>The method <code class="highlighter-rouge">exec()</code> on <code class="highlighter-rouge">@pgsql</code> (I’m using the <a href="https://rubygems.org/gems/pgtk">pgtk</a> gem)
 returns an array of <a href="https://ruby-doc.org/core-2.7.0/Hash.html">Hashes</a>,
 which look like this, if we convert them to JSON:</p>
 
@@ -104,8 +104,8 @@ which look like this, if we convert them to JSON:</p>
   {"id": 3, "name": "zoo", "author": "yegor256"}
 ]</pre>
 
-<p>It would be great to make the method <code>fetch()</code> return an array
-of objects, not an array of Hashes. So my class <code>Project</code> looks like this:</p>
+<p>It would be great to make the method <code class="highlighter-rouge">fetch()</code> return an array
+of objects, not an array of Hashes. So my class <code class="highlighter-rouge">Project</code> looks like this:</p>
 
 <pre>class Project
   def initialize(pgsql, id)
@@ -152,13 +152,13 @@ end</pre>
 
 <p>This code will generate too many redundant SQL requests. We will do round-trips
 to PostgreSQL to fetch the data we had a few milliseconds ago, while
-we were doing <code>SELECT * FROM project</code>.</p>
+we were doing <code class="highlighter-rouge">SELECT * FROM project</code>.</p>
 
 
 
 <p>The easiest and the most obvious solution, which many of you might suggest,
-is to encapsulate the retrieved Hash into the <code>Project</code> object. In other
-words, turn <code>Project</code> into a <a href="/2016/07/06/data-transfer-object.html">DTO</a>,
+is to encapsulate the retrieved Hash into the <code class="highlighter-rouge">Project</code> object. In other
+words, turn <code class="highlighter-rouge">Project</code> into a <a href="/2016/07/06/data-transfer-object.html">DTO</a>,
 a holder of data. Well, in this case we might
 not even need an object, but can instead return the Hash with the data. But
 this is not how we want our object-oriented software to be designed. We want
@@ -179,15 +179,15 @@ class Projects
   end
 end</pre>
 
-<p>This new <code>Veil</code> object from <a href="https://rubygems.org/gems/veils">veils gem</a>
-is a decorator of <code>Project</code>. It behaves like
-a <code>Project</code>, but some of the methods on it are redefined: <code>name()</code> and <code>author()</code>.
-When they are called, the calls won’t reach the encapsulated <code>Project</code>.
-Instead, the data stored in the <code>Veil</code> will be returned.</p>
+<p>This new <code class="highlighter-rouge">Veil</code> object from <a href="https://rubygems.org/gems/veils">veils gem</a>
+is a decorator of <code class="highlighter-rouge">Project</code>. It behaves like
+a <code class="highlighter-rouge">Project</code>, but some of the methods on it are redefined: <code class="highlighter-rouge">name()</code> and <code class="highlighter-rouge">author()</code>.
+When they are called, the calls won’t reach the encapsulated <code class="highlighter-rouge">Project</code>.
+Instead, the data stored in the <code class="highlighter-rouge">Veil</code> will be returned.</p>
 
 <p>It is called a “veil” because it acts like one: the preset data is
 returned only until some other method is called, which was not preset.
-If this happens, the veil is pierced and the <code>Veil</code> object becomes fully
+If this happens, the veil is pierced and the <code class="highlighter-rouge">Veil</code> object becomes fully
 transparent, sending all method calls through.</p>
 
 <p>Thus the efficiency of DTO is combined with the elegance of OOP.</p>
@@ -196,7 +196,7 @@ transparent, sending all method calls through.</p>
 <a href="https://github.com/yegor256/codexia">yegor256/codexia</a>,
 so you can see how they work.</p>
 
-<p>P.S. I also create an <code>Unpiercable</code> class, which acts exactly like a <code>Veil</code>,
+<p>P.S. I also create an <code class="highlighter-rouge">Unpiercable</code> class, which acts exactly like a <code class="highlighter-rouge">Veil</code>,
 but can never be pierced. It is very useful, when you don’t expect any
 data-modifying interactions to happen with the object and just want some
 of its methods to be pre-calculated.</p>

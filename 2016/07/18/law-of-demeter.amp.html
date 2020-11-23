@@ -79,8 +79,8 @@ to the law of one dot.
 <a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a> (LoD). Someone
 asked me recently what I think about it. And not just what I think, but
 how it is possible to keep objects small and obey the LoD. According to the
-law, we’re not allowed to do something like <code>book.pages().last().text()</code>.
-Instead, we’re supposed to go with <code>book.textOfLastPage()</code>.
+law, we’re not allowed to do something like <code class="highlighter-rouge">book.pages().last().text()</code>.
+Instead, we’re supposed to go with <code class="highlighter-rouge">book.textOfLastPage()</code>.
 It puzzled me, because I strongly disagree. I believe the first construct
 is perfectly valid in OOP. So I’ve done some research to find out
 whether this law is really a law. What I found out is that the law is
@@ -113,13 +113,13 @@ Section 3 in that PDF document):</p>
   }
 }</pre>
 
-<p>All four calls to four different <code>hello()</code> methods are legal, according
+<p>All four calls to four different <code class="highlighter-rouge">hello()</code> methods are legal, according
 to the LoD. So what would be illegal, I ask myself? No surprise;
-the answer is this: <code>a.x.hello()</code>. That would be illegal. Directly
+the answer is this: <code class="highlighter-rouge">a.x.hello()</code>. That would be illegal. Directly
 accessing the attribute from another object and then talking to it
 is not allowed by the law.</p>
 
-<p>But we don’t do that anyway. We’re talking about <code>book.pages().last().text()</code>.
+<p>But we don’t do that anyway. We’re talking about <code class="highlighter-rouge">book.pages().last().text()</code>.
 In this chain of method calls, we’re not accessing any attributes. We’re
 asking our objects to build new objects for us. What does the law say about
 that? Let me read it and quote:</p>
@@ -128,9 +128,9 @@ that? Let me read it and quote:</p>
   <p>Objects created by M, or by functions or methods that M calls, are considered as arguments of M</p>
 </blockquote>
 
-<p>In other words, the object <code>Pages</code> that method call <code>book.pages()</code> returns
+<p>In other words, the object <code class="highlighter-rouge">Pages</code> that method call <code class="highlighter-rouge">book.pages()</code> returns
 is a perfectly valid object that can be used. Then, we can call method
-<code>last()</code> on it and get an object <code>Page</code>, and then call method <code>text()</code>, etc. This
+<code class="highlighter-rouge">last()</code> on it and get an object <code class="highlighter-rouge">Page</code>, and then call method <code class="highlighter-rouge">text()</code>, etc. This
 is a perfectly valid scenario that doesn’t violate the law at all, just
 as I expected.</p>
 

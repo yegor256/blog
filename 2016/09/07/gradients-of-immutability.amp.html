@@ -114,7 +114,7 @@ to the encapsulated entity and always returns the same text
 objects. Such a class is very close to a
 <a href="https://en.wikipedia.org/wiki/Pure_function">pure function</a>,
 which means that no matter how many times we instantiate it with
-the same initial values, the result of <code>title()</code> will be the same.</p>
+the same initial values, the result of <code class="highlighter-rouge">title()</code> will be the same.</p>
 
 <h2 id="not-a-constant">Not a Constant</h2>
 
@@ -133,7 +133,7 @@ the same initial values, the result of <code>title()</code> will be the same.</p
 }</pre>
 
 <p>The object is still immutable, but it is not a pure
-function anymore because of the method <code>title()</code>—it returns different values if we call it
+function anymore because of the method <code class="highlighter-rouge">title()</code>—it returns different values if we call it
 multiple times with at least a one-minute interval. The object
 is immutable; it’s just not a constant anymore.</p>
 
@@ -159,9 +159,9 @@ is immutable; it’s just not a constant anymore.</p>
 }</pre>
 
 <p>This <em>immutable</em> object keeps the book title in a file. It’s not a constant,
-because its method <code>title()</code> may return different values on every
+because its method <code class="highlighter-rouge">title()</code> may return different values on every
 second call. Moreover, the represented entity (the file) is not a constant.
-We can’t say whether it’s mutable or immutable, as we don’t know how <code>Files.write()</code>
+We can’t say whether it’s mutable or immutable, as we don’t know how <code class="highlighter-rouge">Files.write()</code>
 is implemented. But we know for sure that it’s not a constant, because it
 accepts change requests.</p>
 
@@ -170,7 +170,7 @@ accepts change requests.</p>
 <p>An immutable object may not only represent but even
 encapsulate a mutable one. Just like in the
 previous example, a mutable file was encapsulated. Even though it
-was represented by the immutable class <code>Path</code>, the real file on disk
+was represented by the immutable class <code class="highlighter-rouge">Path</code>, the real file on disk
 was mutable. We can do the same, but in memory:</p>
 
 <pre>class Book {
@@ -203,7 +203,7 @@ and flexibility. In OOP, we may have many more forms of immutability.</p>
 <p>What is common among all these examples is that our objects are
 <em>loyal</em> to the entities they encapsulate. There are no
 <a href="/2014/09/16/getters-and-setters-are-evil.html">setters</a>
-that could change them. All encapsulated objects are <code>final</code>.</p>
+that could change them. All encapsulated objects are <code class="highlighter-rouge">final</code>.</p>
 
 <p>This is the only quality that differentiates mutable objects from
 immutable ones. The latter are always loyal to the entities they

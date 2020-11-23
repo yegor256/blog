@@ -115,7 +115,7 @@ is, right? Let’s take this C code as an example:</p>
   }
 }</pre>
 
-<p>There are two variables <code>i</code>, visible in two different <code>for</code> loops, two
+<p>There are two variables <code class="highlighter-rouge">i</code>, visible in two different <code class="highlighter-rouge">for</code> loops, two
 different scopes of visibility. The <em>size</em> of each scope is three lines of code.
 How about this code, doing exactly the same:</p>
 
@@ -130,15 +130,15 @@ How about this code, doing exactly the same:</p>
   }
 }</pre>
 
-<p>Now, the scope of visibility of <code>i</code> is ten lines of code. The code works as well
+<p>Now, the scope of visibility of <code class="highlighter-rouge">i</code> is ten lines of code. The code works as well
 as in the first snippet, but its maintainability is lower, because in order
 to understand what’s going on and how to modify it, I need more time. I need
 to read a 10-line block of code, instead of two 3-line blocks.
-I need to understand the entire method <code>print()</code> before I can start making any modifications.
-I need to understand the lifetime algorithm of that poor <code>i</code> and why,
+I need to understand the entire method <code class="highlighter-rouge">print()</code> before I can start making any modifications.
+I need to understand the lifetime algorithm of that poor <code class="highlighter-rouge">i</code> and why,
 for example, it gets decremented by 10 instead of being reassigned to zero—this is
 the surprise previous programmers left for me. Maybe they were not aware of
-the existence of <code>for</code> loops?</p>
+the existence of <code class="highlighter-rouge">for</code> loops?</p>
 
 <p>It’s obvious that the first snippet is better than the second one.
 The question is how do we <em>make</em> programmers write code the way the first
@@ -162,11 +162,11 @@ void print() {
   }
 }</pre>
 
-<p>Now the variable <code>i</code> is visible not only inside the function <code>print()</code> but
+<p>Now the variable <code class="highlighter-rouge">i</code> is visible not only inside the function <code class="highlighter-rouge">print()</code> but
 in <del>many</del> all other places of the application we develop. The scope
-of visibility of <code>i</code> is the size of the entire code base. Needless to say that
-makes the code of function <code>print()</code> <a href="/2018/07/03/global-variables.html">very unreadable</a>.
-I simply can’t know what value to expect in <code>i</code> when the execution of <code>print()</code> starts—I
+of visibility of <code class="highlighter-rouge">i</code> is the size of the entire code base. Needless to say that
+makes the code of function <code class="highlighter-rouge">print()</code> <a href="/2018/07/03/global-variables.html">very unreadable</a>.
+I simply can’t know what value to expect in <code class="highlighter-rouge">i</code> when the execution of <code class="highlighter-rouge">print()</code> starts—I
 have to go through the entire code base to find it out. If it’s a small app, maybe
 I will manage, but if it’s a large piece of software, I will have big troubles.
 So, how about we create a programming language, which will not allow global
@@ -213,26 +213,26 @@ private:
   }
 }</pre>
 
-<p>What changed? Not much. Instead of a plain “scalar” variable <code>i</code> we have
+<p>What changed? Not much. Instead of a plain “scalar” variable <code class="highlighter-rouge">i</code> we have
 an “object,” which stores an integer value inside and provides a few methods
 to access it and modify it. Did it help us minimize the scope? Not at all. Moreover,
-the length of <code>print()</code> is now even a few lines longer. But now we have
+the length of <code class="highlighter-rouge">print()</code> is now even a few lines longer. But now we have
 an object and can call our code object-oriented!</p>
 
 <p>This is how most of the “objects” are used nowadays, mostly thanks to C++: they are just data holders,
-while the real users of the data are still outside of them. The object <code>Idx</code>
+while the real users of the data are still outside of them. The object <code class="highlighter-rouge">Idx</code>
 doesn’t know anything about the real purpose of the data it holds. It doesn’t
-know that its <code>v</code> is used as a step counter and that it gets multiplied by
-something before printing some text. <code>Idx</code> is a data holder, while the real
+know that its <code class="highlighter-rouge">v</code> is used as a step counter and that it gets multiplied by
+something before printing some text. <code class="highlighter-rouge">Idx</code> is a data holder, while the real
 logic is outside of it.</p>
 
 <p>The maintainability problem is not solved, the scope
 is not smaller, the complexity of the code is not reduced. Moreover, it is
-increased, because now, in order to understand how <code>print()</code> works, I have
-to know what is inside the <code>Idx</code>. The object paradigm in this particular
+increased, because now, in order to understand how <code class="highlighter-rouge">print()</code> works, I have
+to know what is inside the <code class="highlighter-rouge">Idx</code>. The object paradigm in this particular
 example made a promise to take part of the problem and let me never worry about it,
 but in reality it only made the problem larger, by giving me back two problems:
-<code>print()</code> and <code>Idx</code>.</p>
+<code class="highlighter-rouge">print()</code> and <code class="highlighter-rouge">Idx</code>.</p>
 
 
 
@@ -252,8 +252,8 @@ operators and statements.</p>
 
 <p>A proper object-oriented solution would look different and would involve
 true encapsulation, where data never “escapes” the borders of its owner. First,
-here is how I would design <code>Idx</code>… well, I would rename it first and call it
-<code>Line</code>:</p>
+here is how I would design <code class="highlighter-rouge">Idx</code>… well, I would rename it first and call it
+<code class="highlighter-rouge">Line</code>:</p>
 
 <pre>class Line {
 public:
@@ -275,7 +275,7 @@ private:
   int v = 0;
 }</pre>
 
-<p>And now here is the code of <code>print()</code>:</p>
+<p>And now here is the code of <code class="highlighter-rouge">print()</code>:</p>
 
 <pre>void print() {
   Line a(2);
@@ -284,20 +284,20 @@ private:
   while (b.next()) { b.print(); }
 }</pre>
 
-<p>As you see, <code>print()</code> doesn’t have any access to the internal data of <code>Line</code>.
-All <code>print()</code> can do is ask the <code>Line</code> to move forward and print itself. How exactly
-this logic is implemented inside the <code>Line</code>—nobody knows and nobody wants to know.
+<p>As you see, <code class="highlighter-rouge">print()</code> doesn’t have any access to the internal data of <code class="highlighter-rouge">Line</code>.
+All <code class="highlighter-rouge">print()</code> can do is ask the <code class="highlighter-rouge">Line</code> to move forward and print itself. How exactly
+this logic is implemented inside the <code class="highlighter-rouge">Line</code>—nobody knows and nobody wants to know.
 Since we don’t have any <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>
-in the <code>Line</code>, we can’t fetch the data out of it.</p>
+in the <code class="highlighter-rouge">Line</code>, we can’t fetch the data out of it.</p>
 
-<p>Since we can’t get the data out, we can’t build any logic in the <code>print()</code>. We
+<p>Since we can’t get the data out, we can’t build any logic in the <code class="highlighter-rouge">print()</code>. We
 simply have nothing to work with, no data, no integers, no numbers. We can only
 deal with objects, which don’t trust us with their internals. We can only <em>politely</em> ask
-them to do something for us. The scope of <code>print()</code> is pretty small now and
-very well <em>isolated</em> from the internals of the <code>Line</code>. Proper encapsulation
-helped us achieve that: by not exposing the internals of the <code>Line</code> we made
-it impossible for anyone to invite themselves into its own scope. The <code>print()</code> simply can’t
-do anything with the data encapsulated by the <code>Line</code>.</p>
+them to do something for us. The scope of <code class="highlighter-rouge">print()</code> is pretty small now and
+very well <em>isolated</em> from the internals of the <code class="highlighter-rouge">Line</code>. Proper encapsulation
+helped us achieve that: by not exposing the internals of the <code class="highlighter-rouge">Line</code> we made
+it impossible for anyone to invite themselves into its own scope. The <code class="highlighter-rouge">print()</code> simply can’t
+do anything with the data encapsulated by the <code class="highlighter-rouge">Line</code>.</p>
 
 <p>Thus, the more visible and accessible the data is,
 the lower the maintainability.</p>

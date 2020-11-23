@@ -77,9 +77,9 @@ or singletons; there is a better way to log.
       <h1>Logging Without a Static Logger</h1>
       <p>How do you organize logging in your applications? I mean web applications
 or command line apps, or even mobile apps. I bet you have some global
-variable or a singleton, known as <code>Logger</code>, which has a few methods
-like <code>info()</code>, <code>error()</code>, and <code>debug()</code>. You configure it when the app
-starts, or it configures itself via something like <code>log4j.properties</code>,
+variable or a singleton, known as <code class="highlighter-rouge">Logger</code>, which has a few methods
+like <code class="highlighter-rouge">info()</code>, <code class="highlighter-rouge">error()</code>, and <code class="highlighter-rouge">debug()</code>. You configure it when the app
+starts, or it configures itself via something like <code class="highlighter-rouge">log4j.properties</code>,
 and logs everything to the console or a file, or even a database. I was
 doing exactly that, or <a href="/2014/05/23/avoid-java-static-logger.html">something very similar</a>,
 for many years, until I finally realized how wrong
@@ -116,7 +116,7 @@ find some workaround.</p>
 </ul>
 
 <p>To overcome them both, in <a href="https://github.com/zold-io/zold">Zold</a>,
-a Ruby command line application, I decided to pass <code>log</code> as a variable
+a Ruby command line application, I decided to pass <code class="highlighter-rouge">log</code> as a variable
 to all classes that need any logging. In Ruby it’s easier than in Java,
 because they have <a href="https://stackoverflow.com/questions/35747905">optional</a>
 parameters. Look at <a href="https://github.com/zold-io/zold/blob/0.26.17/lib/zold/commands/list.rb">this class</a>,
@@ -145,16 +145,16 @@ to the log and then delivered to the unit test.</p>
 
 
 
-<p>As you see, the default value of the <code>log</code> is <code>Log::NULL</code>, which is the
+<p>As you see, the default value of the <code class="highlighter-rouge">log</code> is <code class="highlighter-rouge">Log::NULL</code>, which is the
 constant I had to define myself, as a default logger, which doesn’t log
 anything anywhere. By default, this class will log nothing. It will quietly
 check all the balances of all the wallets and print nothing. Well, it will print,
 but nobody will see that.</p>
 
-<p>In a unit test I create an object with a few methods like <code>debug()</code>, <code>info()</code>,
-etc. and pass it to the instance of class <code>Zold::List</code>, which I’m testing.
+<p>In a unit test I create an object with a few methods like <code class="highlighter-rouge">debug()</code>, <code class="highlighter-rouge">info()</code>,
+etc. and pass it to the instance of class <code class="highlighter-rouge">Zold::List</code>, which I’m testing.
 In other words, it’s a fake/mock version of the logger, which I use to
-capture everything that <code>Zold::List</code> sends out. Then I can check what’s there.</p>
+capture everything that <code class="highlighter-rouge">Zold::List</code> sends out. Then I can check what’s there.</p>
 
 <p>Am I saying obvious things here? If so, why do we
 <a href="/2014/05/23/avoid-java-static-logger.html">still have</a> static
@@ -162,7 +162,7 @@ loggers everywhere in Java, Ruby, PHP, C#, etc?
 Anyway, I recommend you use an injectable logging dependency instead.</p>
 
 <p>And yeah, by the way, I’m sure you noticed the change in the name. It’s not
-a <code>logger</code> anymore, it’s <code>log</code>. I’m sure you know
+a <code class="highlighter-rouge">logger</code> anymore, it’s <code class="highlighter-rouge">log</code>. I’m sure you know
 <a href="/2015/03/09/objects-end-with-er.html">why</a>.</p>
 
 <blockquote class="twitter-tweet" data-lang="en">

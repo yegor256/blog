@@ -98,7 +98,7 @@ So I decided to create one—<a href="http://www.stateful.co">stateful.co</a>.</
 <amp-img src="/images/2014/12/van-damme-split.png" alt="No Retreat, No Surrender (1986) by Corey Yuen" height="982" width="1920" layout="responsive"></amp-img>
 
 <p>Here is a practical example. I have a Java web app that is hosted
-at Heroku. There are three servers (a.k.a. “dynos”) running the same <code>.war</code>
+at Heroku. There are three servers (a.k.a. “dynos”) running the same <code class="highlighter-rouge">.war</code>
 application. Why three? Because the web traffic is rather active, and one
 server is not powerful enough. So I have to have three of them. They all
 run exactly the same applications.</p>
@@ -115,8 +115,8 @@ Item item = table.frame()
 String salary = item.get("salary");
 item.put("salary", this.recalculate(salary));</pre>
 
-<p>The logic is obvious here. First, I retrieve an item from the table <code>posts</code>,
-then read its <code>salary</code>, and then modify it according to my recalculation
+<p>The logic is obvious here. First, I retrieve an item from the table <code class="highlighter-rouge">posts</code>,
+then read its <code class="highlighter-rouge">salary</code>, and then modify it according to my recalculation
 algorithm. The problem is that another module may start to do the same while
 I’m recalculating. It will read the same initial value from the table
 and will start exactly the same recalculation. Then it will save a new
@@ -151,7 +151,7 @@ new Atomic(lock).call(
   }
 );</pre>
 
-<p>As you see, I wrap that critical transaction into <code>Callable</code>, which will
+<p>As you see, I wrap that critical transaction into <code class="highlighter-rouge">Callable</code>, which will
 be executed in isolation. This approach, obviously, doesn’t
 guarantee atomicity of transaction—if part of the transaction fails,
 there won’t be any automatic rollbacks and the DynamoDB table will be left
@@ -161,7 +161,7 @@ in a “broken” state.</p>
 use any type of resources, including NoSQL tables, files, S3 objects,
 embedded software, etc.</p>
 
-<p>I should not forget to add this dependency to my <code>pom.xml</code>:</p>
+<p>I should not forget to add this dependency to my <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;dependency&gt;
   &lt;groupId&gt;co.stateful&lt;/groupId&gt;

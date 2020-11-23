@@ -208,7 +208,7 @@ class Words implements Iterable&lt;String&gt; {
   }
 }</pre>
 
-<p>What do you think now? Writing a test for the <code>Words</code> class is a pretty
+<p>What do you think now? Writing a test for the <code class="highlighter-rouge">Words</code> class is a pretty
 trivial task:</p>
 
 <pre>import org.junit.Test;
@@ -225,7 +225,7 @@ public class WordsTest {
 }</pre>
 
 <p>How much time did that take? Less than a minute. We don’t need to create
-a temporary file and load it with data, because class <code>Words</code> doesn’t do
+a temporary file and load it with data, because class <code class="highlighter-rouge">Words</code> doesn’t do
 anything with files. It just parses the incoming string and finds the unique
 words in it. Now it’s easy to fix, since the test is small and we can
 easily create more tests; for example:</p>
@@ -262,9 +262,9 @@ them from reappearing.</p>
 and algorithmic—when the code is all
 about <em>how</em> the goal should be achieved instead of <em>what</em> the goal is.
 See the examples above again. The first static method is all about
-how we read the file, parse it, and find words. It’s even named <code>readWords()</code> (a <em>verb</em>).
+how we read the file, parse it, and find words. It’s even named <code class="highlighter-rouge">readWords()</code> (a <em>verb</em>).
 To the contrary, the second example is about what will be achieved. It’s either
-the <code>Text</code> of the file or <code>Words</code> of the text (both are <em>nouns</em>).</p>
+the <code class="highlighter-rouge">Text</code> of the file or <code class="highlighter-rouge">Words</code> of the text (both are <em>nouns</em>).</p>
 
 <p>I believe there is no place for debugging in clean object-oriented
 programming. Only unit testing!</p>

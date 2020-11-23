@@ -144,7 +144,7 @@ this document is more suitable for machine parsing instead of reading by a human
 It’s up to the requester on how to render the data or to not render it at all.</p>
 
 <p>Its second line <a href="http://www.w3.org/TR/xml-stylesheet/">associates</a>
-the document with the XSL stylesheet <code>/xsl/index.xsl</code> that
+the document with the XSL stylesheet <code class="highlighter-rouge">/xsl/index.xsl</code> that
 is loaded by the browser separately:</p>
 
 <pre>&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;</pre>
@@ -156,10 +156,10 @@ jQuery and an SVG logo:</p>
 
 
 
-<p><code>index.xsl</code> includes <code>layout.xsl</code>, that’s why it is loaded right after.</p>
+<p><code class="highlighter-rouge">index.xsl</code> includes <code class="highlighter-rouge">layout.xsl</code>, that’s why it is loaded right after.</p>
 
-<p>Let’s consider an example of <code>index.xsl</code> (in reality
-it is much more complex, check <a href="https://github.com/sttc/stateful/blob/master/src/main/webapp/xsl/layout.xsl"><code>layout.xsl</code></a>.
+<p>Let’s consider an example of <code class="highlighter-rouge">index.xsl</code> (in reality
+it is much more complex, check <a href="https://github.com/sttc/stateful/blob/master/src/main/webapp/xsl/layout.xsl"><code class="highlighter-rouge">layout.xsl</code></a>.
 For example:</p>
 
 <pre>&lt;xsl:stylesheet version="2.0"
@@ -240,7 +240,7 @@ done by Julian Reschke. Besides that, XSLT 2.0 is
 <a href="http://stackoverflow.com/questions/6282340/which-browsers-support-xslt-2-0-already">not supported</a> at all.</p>
 
 <p>There is a workaround, though. We can understand which browser
-is making a request (via its <a href="http://en.wikipedia.org/wiki/User_agent"><code>User-Agent</code></a> HTTP header)
+is making a request (via its <a href="http://en.wikipedia.org/wiki/User_agent"><code class="highlighter-rouge">User-Agent</code></a> HTTP header)
 and transform XML into HTML on the server side. Thus, for modern browsers that support XSL,
 we will deliver XML and for all others—HTML.</p>
 

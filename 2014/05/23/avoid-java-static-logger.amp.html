@@ -76,7 +76,7 @@ easily be eliminated by using jcabi-log
       <p>Yegor Bugayenko<br>23 May 2014</p>
       <h1>Get Rid of Java Static Loggers</h1>
       <p>This is a very common practice in Java
-(using <a href="http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html"><code>LoggerFactory</code></a>
+(using <a href="http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html"><code class="highlighter-rouge">LoggerFactory</code></a>
 from <a href="http://www.slf4j.org/">slf4j</a>):</p>
 
 <pre>import org.slf4j.LoggerFactory;
@@ -95,7 +95,7 @@ public class Foo {
 
 
 
-<p>This static <code>LOGGER</code> property has to be declared in every class
+<p>This static <code class="highlighter-rouge">LOGGER</code> property has to be declared in every class
 where logging is required. Just a few lines of code, but
 this is pure noise, as I see it.</p>
 
@@ -103,7 +103,7 @@ this is pure noise, as I see it.</p>
 
 <p>To make life easier, I created a library about two years
 ago, <a href="http://log.jcabi.com">jcabi-log</a>, which has a convenient
-utility class <a href="http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html"><code>Logger</code></a>
+utility class <a href="http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html"><code class="highlighter-rouge">Logger</code></a>
 (yes, I know that <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes are evil</a>).</p>
 
 <pre>import com.jcabi.log.Logger;
@@ -118,8 +118,8 @@ public class Foo {
 the same—sends a single log line to the SLF4J
 logging facility. Besides, it check automatically whether a given logging
 level is enabled (for performance optimization) and formats the
-given string using <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html"><code>Formatter</code></a>
-(same as <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,+java.lang.Object...%29"><code>String.format()</code></a>).</p>
+given string using <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html"><code class="highlighter-rouge">Formatter</code></a>
+(same as <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,+java.lang.Object...%29"><code class="highlighter-rouge">String.format()</code></a>).</p>
 
 <p>For convenience, there are also a number of “<a href="http://log.jcabi.com/decors.html">decors</a>”
 implemented in the library.</p>

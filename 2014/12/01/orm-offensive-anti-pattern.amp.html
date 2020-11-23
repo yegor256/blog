@@ -102,7 +102,7 @@ in almost every language; for example:
 In Java, the ORM design is even standardized as <a href="https://en.wikipedia.org/wiki/Java_Persistence_API">JPA</a>.</p>
 
 <p>First, let’s see how ORM works, by example. Let’s use Java, PostgreSQL, and Hibernate.
-Let’s say we have a single table in the database, called <code>post</code>:</p>
+Let’s say we have a single table in the database, called <code class="highlighter-rouge">post</code>:</p>
 
 <pre>+-----+------------+--------------------------+
 | id  | date       | title                    |
@@ -116,7 +116,7 @@ Let’s say we have a single table in the database, called <code>post</code>:</p
 
 <p>Now we want to CRUD-manipulate this table from our Java app (CRUD
 stands for create, read, update, and delete). First, we should create
-a <code>Post</code> class (I’m sorry it’s so long, but that’s the best I can do):</p>
+a <code class="highlighter-rouge">Post</code> class (I’m sorry it’s so long, but that’s the best I can do):</p>
 
 <pre>@Entity
 @Table(name = "post")
@@ -152,7 +152,7 @@ public class Post {
   .buildSessionFactory();</pre>
 
 <p>This factory will give us “sessions” every time we want to manipulate
-with <code>Post</code> objects. Every manipulation with the session should be wrapped
+with <code class="highlighter-rouge">Post</code> objects. Every manipulation with the session should be wrapped
 in this code block:</p>
 
 <pre>Session session = factory.openSession();
@@ -176,16 +176,16 @@ for (Post post : (List&lt;Post&gt;) posts){
 
 <p>I think it’s clear what’s going on here. Hibernate is a big, powerful
 engine that makes a connection to the database, executes necessary SQL
-<code>SELECT</code> requests, and retrieves the data. Then it makes instances
-of class <code>Post</code> and stuffs them with the data.
+<code class="highlighter-rouge">SELECT</code> requests, and retrieves the data. Then it makes instances
+of class <code class="highlighter-rouge">Post</code> and stuffs them with the data.
 When the object comes to us, it is filled with data, and we should
-use getters to take them out, like we’re using <code>getTitle()</code> above.</p>
+use getters to take them out, like we’re using <code class="highlighter-rouge">getTitle()</code> above.</p>
 
 
 
 <p>When we want to do a reverse operation and send an object to the
 database, we do all of the same but in reverse order. We make an instance
-of class <code>Post</code>, stuff it with the data, and ask Hibernate to save it:</p>
+of class <code class="highlighter-rouge">Post</code>, stuff it with the data, and ask Hibernate to save it:</p>
 
 <pre>Post post = new Post();
 post.setDate(new Date());
@@ -260,7 +260,7 @@ respected publications. I can only add a few more.</p>
 <p><strong>SQL Is Not Hidden</strong>.
 Users of ORM have to speak SQL
 (or its dialect, like <a href="https://docs.jboss.org/hibernate/orm/3.3/reference/en/html/queryhql.html">HQL</a>).
-See the example above; we’re calling <code>session.createQuery("FROM Post")</code> in order
+See the example above; we’re calling <code class="highlighter-rouge">session.createQuery("FROM Post")</code> in order
 to get all posts. Even though it’s not SQL, it is very similar to it. Thus,
 the relational model is not encapsulated inside objects. Instead, it is exposed
 to the entire application. Everybody, with each object, inevitably has to
@@ -269,12 +269,12 @@ ORM doesn’t hide and wrap the SQL but pollutes the entire application with it.
 
 <p><strong>Difficult to Test</strong>.
 When some object is working with a list of posts, it needs to deal with an
-instance of <code>SessionFactory</code>. How can we
+instance of <code class="highlighter-rouge">SessionFactory</code>. How can we
 <a href="/2014/09/23/built-in-fake-objects.html">mock</a> this dependency? We have to
 create a mock of it? How complex is this task? Look at the code above, and you
 will realize how verbose and cumbersome that unit test will be. Instead,
 we can write integration tests and connect the entire application to a test
-version of PostgreSQL. In that case, there is no need to mock <code>SessionFactory</code>,
+version of PostgreSQL. In that case, there is no need to mock <code class="highlighter-rouge">SessionFactory</code>,
 but such tests will be rather slow, and even more important, our
 having-nothing-to-do-with-the-database objects will be tested against
 the database instance. A terrible design.</p>
@@ -288,13 +288,13 @@ violating the very idea of <a href="/2014/11/20/seven-virtues-of-good-object.htm
 
 
 <p>What is the alternative? Let me show it to you by example. Let’s try to design that
-class, <code>Post</code>, my way. We’ll have to break it down into two classes: <code>Post</code>
-and <code>Posts</code>, singular and plural. I already mentioned in one of my previous
+class, <code class="highlighter-rouge">Post</code>, my way. We’ll have to break it down into two classes: <code class="highlighter-rouge">Post</code>
+and <code class="highlighter-rouge">Posts</code>, singular and plural. I already mentioned in one of my previous
 <a href="/2014/11/20/seven-virtues-of-good-object.html">articles</a> that
 a good object is always an abstraction of a real-life entity. Here is how
 this principle works in practice. We have two entities: database table
-and table row. That’s why we’ll make two classes; <code>Posts</code> will represent the
-table, and <code>Post</code> will represent the row.</p>
+and table row. That’s why we’ll make two classes; <code class="highlighter-rouge">Posts</code> will represent the
+table, and <code class="highlighter-rouge">Post</code> will represent the row.</p>
 
 <p>As I also mentioned in that <a href="/2014/11/20/seven-virtues-of-good-object.html">article</a>,
 every object should work by contract
@@ -302,14 +302,14 @@ and implement an interface. Let’s start our design with two
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a>.
 Of course, our objects will be
 <a href="/2014/12/22/immutable-objects-not-dumb.html">immutable</a>.
-Here is how <code>Posts</code> would look:</p>
+Here is how <code class="highlighter-rouge">Posts</code> would look:</p>
 
 <pre>interface Posts {
   Iterable&lt;Post&gt; iterate();
   Post add(Date date, String title);
 }</pre>
 
-<p>This is how a single <code>Post</code> would look:</p>
+<p>This is how a single <code class="highlighter-rouge">Post</code> would look:</p>
 
 <pre>interface Post {
   int id();
@@ -333,7 +333,7 @@ posts.add(new Date(), "How to cook an omelette");</pre>
 and they perfectly hide their implementation details. There are no transactions,
 sessions, or factories. We don’t even know whether these objects are actually
 talking to the PostgreSQL or if they keep all the data in text files. All
-we need from <code>Posts</code> is an ability to list all posts for us and to create
+we need from <code class="highlighter-rouge">Posts</code> is an ability to list all posts for us and to create
 a new one. Implementation details are perfectly hidden inside. Now let’s
 see how we can implement these two classes.</p>
 
@@ -343,8 +343,8 @@ see how we can implement these two classes.</p>
 but you can use something else like <a href="http://www.jooq.org">jOOQ</a>,
 or just plain JDBC if you like. It doesn’t
 really matter. What matters is that your database interactions are hidden
-inside objects. Let’s start with <code>Posts</code> and implement it in class
-<code>PgPosts</code> (“pg” stands for PostgreSQL):</p>
+inside objects. Let’s start with <code class="highlighter-rouge">Posts</code> and implement it in class
+<code class="highlighter-rouge">PgPosts</code> (“pg” stands for PostgreSQL):</p>
 
 <pre>final class PgPosts implements Posts {
   private final Source dbase;
@@ -380,7 +380,7 @@ inside objects. Let’s start with <code>Posts</code> and implement it in class
   }
 }</pre>
 
-<p>Next, let’s implement the <code>Post</code> interface in class <code>PgPost</code>:</p>
+<p>Next, let’s implement the <code class="highlighter-rouge">Post</code> interface in class <code class="highlighter-rouge">PgPost</code>:</p>
 
 <pre>final class PgPost implements Post {
   private final Source dbase;
@@ -427,12 +427,12 @@ above—SQL-speaking objects.</p>
 
 <p>I can hear you screaming, “What about performance?” In that script
 a few lines above, we’re making many redundant round trips to the database.
-First, we retrieve post IDs with <code>SELECT id</code> and then, in order to get their titles,
-we make an extra <code>SELECT title</code> call for each post. This is inefficient, or simply
+First, we retrieve post IDs with <code class="highlighter-rouge">SELECT id</code> and then, in order to get their titles,
+we make an extra <code class="highlighter-rouge">SELECT title</code> call for each post. This is inefficient, or simply
 put, too slow.</p>
 
 <p>No worries; this is object-oriented programming, which means it is flexible! Let’s create
-a decorator of <code>PgPost</code> that will accept all data in its constructor
+a decorator of <code class="highlighter-rouge">PgPost</code> that will accept all data in its constructor
 and cache it internally, forever:</p>
 
 <pre>final class ConstPost implements Post {
@@ -456,10 +456,10 @@ and cache it internally, forever:</p>
 }</pre>
 
 <p>Pay attention: This decorator doesn’t know anything about PostgreSQL or
-JDBC. It just decorates an object of type <code>Post</code> and pre-caches the date
+JDBC. It just decorates an object of type <code class="highlighter-rouge">Post</code> and pre-caches the date
 and title. As usual, this decorator is also immutable.</p>
 
-<p>Now let’s create another implementation of <code>Posts</code> that will return
+<p>Now let’s create another implementation of <code class="highlighter-rouge">Posts</code> that will return
 the “constant” objects:</p>
 
 <pre>final class ConstPgPosts implements Posts {
@@ -487,7 +487,7 @@ the “constant” objects:</p>
   }
 }</pre>
 
-<p>Now all posts returned by <code>iterate()</code> of this new class are pre-equipped with dates and titles
+<p>Now all posts returned by <code class="highlighter-rouge">iterate()</code> of this new class are pre-equipped with dates and titles
 fetched in one round trip to the database.</p>
 
 <p>Using <a href="/2015/02/26/composable-decorators.html">decorators</a>
@@ -500,7 +500,7 @@ new classes that stay cohesive and solid, because they are small.</p>
 <h2 id="what-about-transactions">What About Transactions?</h2>
 
 <p>Every object should deal with its own transactions and encapsulate
-them the same way as <code>SELECT</code> or <code>INSERT</code> queries. This will lead to
+them the same way as <code class="highlighter-rouge">SELECT</code> or <code class="highlighter-rouge">INSERT</code> queries. This will lead to
 nested transactions, which is perfectly fine provided the database
 server supports them. If there is no such support, create a session-wide
 transaction object that will accept a “callable” class. For example:</p>

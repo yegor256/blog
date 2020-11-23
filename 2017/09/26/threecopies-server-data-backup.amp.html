@@ -115,15 +115,15 @@ I created <a href="http://www.threecopies.com">ThreeCopies</a>.</p>
 <p>It’s a very simple hosted executor of bash scripts, which you edit
 through a web interface. Then one of our servers starts a Docker
 container (<a href="https://hub.docker.com/r/yegor256/threecopies/">yegor256/threecopies</a> is the image, here is the
-<a href="https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile"><code>Dockerfile</code></a>)
+<a href="https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile"><code class="highlighter-rouge">Dockerfile</code></a>)
 and runs your script inside.</p>
 
 <p>The script starts every hour, every day and every week.
 Hence the name: “three copies.” It’s good practice for data backup
 to create separate copies with different regularities. Also, you might want to put
 different data into different copies. To help your script understand which
-copy is running at any particular time we pass the <code>$period</code> environment variable into it, with
-the value of either <code>hour</code>, <code>day</code>, or <code>week</code>.</p>
+copy is running at any particular time we pass the <code class="highlighter-rouge">$period</code> environment variable into it, with
+the value of either <code class="highlighter-rouge">hour</code>, <code class="highlighter-rouge">day</code>, or <code class="highlighter-rouge">week</code>.</p>
 
 <p>How your script pulls the data, packages it, and archives it, depends on the
 data. I created a short cheat sheet for most common scenarios. This is how

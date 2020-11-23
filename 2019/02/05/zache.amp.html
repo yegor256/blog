@@ -95,13 +95,13 @@ be executed if the key is absent or expired:</p>
   # we only want to execute once every 15 seconds.
 end</pre>
 
-<p>Here, <code>:x</code> is the key and <code>15</code> is the number of seconds it will stay
+<p>Here, <code class="highlighter-rouge">:x</code> is the key and <code class="highlighter-rouge">15</code> is the number of seconds it will stay
 in the cache, until it expires.</p>
 
 <p>It’s important to notice that the key won’t be deleted from the cache
-automatically. It will stay there until the next call to <code>get(:x)</code>. Only at
+automatically. It will stay there until the next call to <code class="highlighter-rouge">get(:x)</code>. Only at
 that moment will it be marked as “expired.” In order to clean up the
-cache, you can call <code>zache.clean()</code> and all expired keys will be deleted.</p>
+cache, you can call <code class="highlighter-rouge">zache.clean()</code> and all expired keys will be deleted.</p>
 
 <p>You can do it regularly in a separate thread, for example, every minute:</p>
 

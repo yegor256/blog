@@ -95,9 +95,9 @@ This is how a web server starts according to <a href="http://sinatrarb.com/intro
 
 <pre>App.start!</pre>
 
-<p>Here <code>start!</code> is a static method of the <code>App</code> class, which you have to declare
+<p>Here <code class="highlighter-rouge">start!</code> is a static method of the <code class="highlighter-rouge">App</code> class, which you have to declare
 as a child of their default parent
-<a href="https://github.com/sinatra/sinatra/blob/v2.0.3/lib/sinatra/base.rb#L893-L1896"><code>Sinatra::Base</code></a>.
+<a href="https://github.com/sinatra/sinatra/blob/v2.0.3/lib/sinatra/base.rb#L893-L1896"><code class="highlighter-rouge">Sinatra::Base</code></a>.
 To tell the app which TCP port to listen to you have to preconfigure it:</p>
 
 <pre>require 'sinatra/base'
@@ -119,10 +119,10 @@ Because Sinatra is designed with the assumption that only one server may exist i
 
 
 <p>Can this really be fixed? Let’s take a look at <a href="https://github.com/sinatra/sinatra/">their code</a>.
-Class <code>Sinatra::Base</code> is essentially a <a href="/2016/06/27/singletons-must-die.html">Singleton</a>,
+Class <code class="highlighter-rouge">Sinatra::Base</code> is essentially a <a href="/2016/06/27/singletons-must-die.html">Singleton</a>,
 which is not supposed to have more than one instance.
-When we call <code>App.set(:port, 8080)</code>, the value <code>8080</code> is saved into an attribute of a single instance.
-The number <code>8080</code> becomes available for all methods of <code>Sinatra::Base</code>, no matter what instance
+When we call <code class="highlighter-rouge">App.set(:port, 8080)</code>, the value <code class="highlighter-rouge">8080</code> is saved into an attribute of a single instance.
+The number <code class="highlighter-rouge">8080</code> becomes available for all methods of <code class="highlighter-rouge">Sinatra::Base</code>, no matter what instance
 they are called from.</p>
 
 <p>They are not using <a href="https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/globalvars.html">true</a>
@@ -133,7 +133,7 @@ Why exactly they are bad and what the
 
 
 <p>Technically speaking, their design is “globally scoped.”
-<code>Sinatra::Base</code> treats the entire application as its scope of visibility.
+<code class="highlighter-rouge">Sinatra::Base</code> treats the entire application as its scope of visibility.
 No matter who calls it, everything is visible, including what was created
 in previous calls and in previously instantiated objects.
 This “class” is a giant bag of global variables.</p>

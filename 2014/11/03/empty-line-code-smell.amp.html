@@ -117,7 +117,7 @@ and its functional decomposition should be done by language constructs
 
 <p>This method first loads the content of the file. Second, it
 counts how many lines match the regular expression provided. So why does
-method <code>grep</code> smell? Because it does two things instead of one—it loads and it greps.</p>
+method <code class="highlighter-rouge">grep</code> smell? Because it does two things instead of one—it loads and it greps.</p>
 
 <p>If we make a rule, to avoid empty lines in method bodies, the method
 will have to be refactored in order to preserve the “separation of concerns”
@@ -173,7 +173,7 @@ definitely begging for refactoring:</p>
   font-weight: bold;
 }</pre>
 
-<p>The empty line here is telling us (screaming at us, actually) that this <code>.container</code>
+<p>The empty line here is telling us (screaming at us, actually) that this <code class="highlighter-rouge">.container</code>
 class is too complex and has to be decomposed into two classes:</p>
 
 <pre>.wide {
@@ -196,7 +196,7 @@ methods and a properly designed method must have up to ten instructions
 Empty lines inside methods encourage us to break this awesome rule and
 turn them into multi-page poems.</p>
 
-<p>Of course, it’s easier to just click <code>enter</code> a few times and continue to
+<p>Of course, it’s easier to just click <code class="highlighter-rouge">enter</code> a few times and continue to
 code right in the same method, instead of thinking and refactoring first.
 This laziness will eventually lead to code that is hardly maintainable
 at all.</p>

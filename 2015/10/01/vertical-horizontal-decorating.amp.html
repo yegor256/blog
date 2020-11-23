@@ -127,19 +127,19 @@ The first approach is <strong>vertical</strong> (I just made this name up):</p>
   }
 );</pre>
 
-<p>See the difference? The first approach decorates <code>ArrayNumbers</code> “vertically,”
-adding functionality through the composable decorators <code>Positive</code>, <code>Odds</code>,
-<code>Unique</code>, and <code>Sorted</code>.</p>
+<p>See the difference? The first approach decorates <code class="highlighter-rouge">ArrayNumbers</code> “vertically,”
+adding functionality through the composable decorators <code class="highlighter-rouge">Positive</code>, <code class="highlighter-rouge">Odds</code>,
+<code class="highlighter-rouge">Unique</code>, and <code class="highlighter-rouge">Sorted</code>.</p>
 
-<p>The second approach introduces the new interface <code>Diff</code>, which implements
+<p>The second approach introduces the new interface <code class="highlighter-rouge">Diff</code>, which implements
 the core functionality of iterating numbers through instances of
-<code>Positive</code>, <code>Odds</code>, <code>Unique</code>, and <code>Sorted</code>:</p>
+<code class="highlighter-rouge">Positive</code>, <code class="highlighter-rouge">Odds</code>, <code class="highlighter-rouge">Unique</code>, and <code class="highlighter-rouge">Sorted</code>:</p>
 
 <pre>interface Diff {
   Iterable&lt;Integer&gt; apply(Iterable&lt;Integer&gt; origin);
 }</pre>
 
-<p>For the user of <code>numbers</code>, both approaches are the same. The difference is
+<p>For the user of <code class="highlighter-rouge">numbers</code>, both approaches are the same. The difference is
 only in the design. Which one is better and when? It seems that
 vertical decorating is easier to implement and is more suitable for
 smaller objects that expose just a few methods.</p>

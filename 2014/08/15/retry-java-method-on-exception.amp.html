@@ -80,7 +80,7 @@ throwing an exception
 <p>If you have a method that fails occasionally and
 you want to retry it a few times before
 <a href="/2015/12/01/rethrow-exceptions.html">throwing</a>
-an exception. <a href="http://aspects.jcabi.com/annotation-retryonfailure.html"><code>@RetryOnFailure</code></a> from
+an exception. <a href="http://aspects.jcabi.com/annotation-retryonfailure.html"><code class="highlighter-rouge">@RetryOnFailure</code></a> from
 <a href="http://aspects.jcabi.com">jcabi-aspects</a> can help.
 For example, if you’re downloading the following web page:</p>
 
@@ -103,7 +103,7 @@ explains how <a href="http://aspects.jcabi.com">jcabi-aspects</a>
 works with binary weaving. This mechanism integrates AspectJ with
 your code.</p>
 
-<p>When method <code>load()</code> from the example above is called, this is what
+<p>When method <code class="highlighter-rouge">load()</code> from the example above is called, this is what
 is happening behind the scene (pseudo-code):</p>
 
 <pre>while (attempts++ &lt; 3) {
@@ -120,7 +120,7 @@ is happening behind the scene (pseudo-code):</p>
 
 <ul>
   <li>
-    <p>Executing <a href="/2014/08/18/fluent-jdbc-decorator.html">JDBC</a> <code>SELECT</code> statements</p>
+    <p>Executing <a href="/2014/08/18/fluent-jdbc-decorator.html">JDBC</a> <code class="highlighter-rouge">SELECT</code> statements</p>
   </li>
   <li>
     <p>Loading data from HTTP, <a href="/2014/05/26/amazon-s3-java-oop-adapter.html">S3</a>, FTP, etc resources</p>

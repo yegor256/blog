@@ -100,13 +100,13 @@ very useful, without doubt:</p>
     <p><a href="http://openjdk.java.net/projects/jigsaw/spec/">JSR 376</a>: Module System a.k.a. <a href="http://openjdk.java.net/projects/jigsaw/">Jigsaw</a></p>
   </li>
   <li>
-    <p><a href="http://openjdk.java.net/jeps/222">JEP 222</a>: <a href="http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html"><code>jshell</code></a></p>
+    <p><a href="http://openjdk.java.net/jeps/222">JEP 222</a>: <a href="http://jakubdziworski.github.io/java/2016/07/31/jshell-getting-started-examples.html"><code class="highlighter-rouge">jshell</code></a></p>
   </li>
   <li>
     <p><a href="http://openjdk.java.net/jeps/238">JEP 238</a>: Multi-release JARs</p>
   </li>
   <li>
-    <p><a href="http://openjdk.java.net/jeps/282">JEP 282</a>: <a href="https://blog.idrsolutions.com/2017/05/java-9-jlink-explained-in-5-minutes/"><code>jlink</code></a></p>
+    <p><a href="http://openjdk.java.net/jeps/282">JEP 282</a>: <a href="https://blog.idrsolutions.com/2017/05/java-9-jlink-explained-in-5-minutes/"><code class="highlighter-rouge">jlink</code></a></p>
   </li>
   <li>
     <p><a href="http://openjdk.java.net/jeps/158">JEP 158</a>: Unified logging</p>
@@ -249,7 +249,7 @@ introduced this JEP. Needless to say that this is completely against the
 very spirit of object-oriented programming. Objects must be created by
 constructors, not static methods, no matter what Joshua Bloch
 <a href="http://amzn.to/2crH5tW">says</a>. Static methods make the moment of operator
-<code>new</code> usage invisible for us and that’s why the code is way less
+<code class="highlighter-rouge">new</code> usage invisible for us and that’s why the code is way less
 maintainable—we simply don’t know exactly what class is instantiated and
 what the real arguments of its ctor are.</p>
 
@@ -259,11 +259,11 @@ what the real arguments of its ctor are.</p>
 
 <p>This is OOP.</p>
 
-<p><strong>New methods in <code>InputStream</code></strong>.
+<p><strong>New methods in <code class="highlighter-rouge">InputStream</code></strong>.
 Three new methods were added to the
 already <a href="/2016/04/26/why-inputstream-design-is-wrong.html">over bloated</a> class
-<a href="http://download.java.net/java/jdk9/docs/api/java/io/InputStream.html"><code>InputStream</code></a>:
-<code>transferTo()</code>, <code>readNBytes()</code>, and <code>readAllBytes()</code>.
+<a href="http://download.java.net/java/jdk9/docs/api/java/io/InputStream.html"><code class="highlighter-rouge">InputStream</code></a>:
+<code class="highlighter-rouge">transferTo()</code>, <code class="highlighter-rouge">readNBytes()</code>, and <code class="highlighter-rouge">readAllBytes()</code>.
 Now we are supposed to do this, when we want input stream to
 copy to an output stream:</p>
 
@@ -275,10 +275,10 @@ make their interfaces big. Just because they need more functionality. I guess th
 is part of the famous <a href="/2017/03/28/solid.html">SOLID</a>
 and is many years old. What’s wrong with you, Oracle?
 What will the next step be? In Java 10 we will also have
-<code>saveToFile()</code> and <code>printToConsole()</code>? How about <code>emailToAFriend()</code>?</p>
+<code class="highlighter-rouge">saveToFile()</code> and <code class="highlighter-rouge">printToConsole()</code>? How about <code class="highlighter-rouge">emailToAFriend()</code>?</p>
 
 <p>This is how you would do the same with the
-<a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.4/org/apache/commons/io/IOUtils.html"><code>IOUtils</code></a>
+<a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.4/org/apache/commons/io/IOUtils.html"><code class="highlighter-rouge">IOUtils</code></a>
 utility class from
 <a href="https://commons.apache.org/proper/commons-io/">commons-io</a>:</p>
 

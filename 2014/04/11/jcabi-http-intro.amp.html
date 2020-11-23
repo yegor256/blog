@@ -131,20 +131,20 @@ knowledge, none of the existing libraries enable this type of fluency.</p>
 and highly extensible at the same time. In <a href="http://http.jcabi.com/">jcabi-http</a>,
 there are five interfaces extended by 20 classes.</p>
 
-<p><a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Request.html"><code>Request</code></a>
+<p><a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Request.html"><code class="highlighter-rouge">Request</code></a>
 is an interface, as well as
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Response.html"><code>Response</code></a>,
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestURI.html"><code>RequestURI</code></a>,
+<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/Response.html"><code class="highlighter-rouge">Response</code></a>,
+<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestURI.html"><code class="highlighter-rouge">RequestURI</code></a>,
 and
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestBody.html"><code>RequestBody</code></a>
+<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/RequestBody.html"><code class="highlighter-rouge">RequestBody</code></a>
 exposed by it.</p>
 
 <p>Use of interfaces makes the library highly extensible. For example, we have
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/JdkRequest.html"><code>JdkRequest</code></a>
+<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/JdkRequest.html"><code class="highlighter-rouge">JdkRequest</code></a>
 and
-<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/ApacheRequest.html"><code>ApacheRequest</code></a>,
+<a href="http://http.jcabi.com/apidocs-1.3/com/jcabi/http/request/ApacheRequest.html"><code class="highlighter-rouge">ApacheRequest</code></a>,
 which make actual HTTP calls to the server using two completely
-different technologies: (JDK <code>HttpURLConnection</code> and Apache HTTP Client, respectively).
+different technologies: (JDK <code class="highlighter-rouge">HttpURLConnection</code> and Apache HTTP Client, respectively).
 In the future, it will be possible to introduce new implementations without breaking existing code.</p>
 
 <p>Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:</p>
@@ -172,7 +172,7 @@ can fetch XML and retrieve a string value from its element:</p>
   .as(XmlResponse.class)
   .xml().xpath("/root/name/text()").get(0);</pre>
 
-<p>Basically, the response produced by <code>fetch()</code> is decorated by <code>XmlResponse</code>. This then exposes the <code>xml()</code> method that returns an instance of the <a href="http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code>XML</code></a> interface.</p>
+<p>Basically, the response produced by <code class="highlighter-rouge">fetch()</code> is decorated by <code class="highlighter-rouge">XmlResponse</code>. This then exposes the <code class="highlighter-rouge">xml()</code> method that returns an instance of the <a href="http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code class="highlighter-rouge">XML</code></a> interface.</p>
 
 <p>The same can be done with JSON through the Java JSON API
 (<a href="https://jcp.org/en/jsr/detail?id=353">JSR-353</a>).</p>
@@ -182,8 +182,8 @@ can fetch XML and retrieve a string value from its element:</p>
 <h2 id="immutable">Immutable</h2>
 
 <p>The last requirement, but certainly not the least important, is that I need all interfaces of the
-library to be annotated with <a href="http://aspects.jcabi.com/annotation-immutable.html"><code>@Immutable</code></a>.
-This is important because I need to be able to encapsulate an instance of <code>Request</code> in other immutable classes.</p>
+library to be annotated with <a href="http://aspects.jcabi.com/annotation-immutable.html"><code class="highlighter-rouge">@Immutable</code></a>.
+This is important because I need to be able to encapsulate an instance of <code class="highlighter-rouge">Request</code> in other immutable classes.</p>
 
 <p>ps. A short summary of this article was published at
 <a href="http://java.dzone.com/articles/jcabi-http-fluent-java-http">JavaLobby</a></p>

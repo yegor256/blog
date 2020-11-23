@@ -106,7 +106,7 @@ and <a href="http://www.appveyor.com">AppVeyor</a>.</p>
 
 
 <p>The idea is simple and obvious. Every time you make a new commit
-to the <code>master</code> branch (or <code>/trunk</code> in Subversion), a continuous integration
+to the <code class="highlighter-rouge">master</code> branch (or <code class="highlighter-rouge">/trunk</code> in Subversion), a continuous integration
 server (or service) attempts to build the entire product. “Build” means
 compile, unit test, integration test, quality analysis,
 <a href="/2014/06/21/casperjs-with-maven.html">etc.</a></p>
@@ -198,7 +198,7 @@ their changes are so massive that merging becomes very difficult and
 sometimes impossible.</p>
 
 <p>As a result you get a lot of throw-away code, written by someone
-but never committed to <code>master</code>, because of that fear factor.</p>
+but never committed to <code class="highlighter-rouge">master</code>, because of that fear factor.</p>
 
 <h2 id="ok-what-is-the-solution">OK, What Is The Solution?</h2>
 
@@ -206,12 +206,12 @@ but never committed to <code>master</code>, because of that fear factor.</p>
 <a href="/2014/07/21/read-only-master-branch.html">read-only master branch</a>.</p>
 
 <p>It is simple—prohibit anyone from merging anything
-into <code>master</code> and create a script that anyone can call. The script will
+into <code class="highlighter-rouge">master</code> and create a script that anyone can call. The script will
 merge, test, and commit. The script will not make any exceptions.
 If any branch breaks at even one unit test, the entire branch will be rejected.</p>
 
 <p>In other words: raise the red flag <strong>before</strong> the code
-gets into <code>master</code>.</p>
+gets into <code class="highlighter-rouge">master</code>.</p>
 
 <p>This solves all problems.</p>
 

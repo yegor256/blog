@@ -111,7 +111,7 @@ store in the database:</p>
 <pre>Book book = api.loadBookById(123);
 database.saveNewBook(book);</pre>
 
-<p>I guess this is what will happen inside the <code>loadBookById()</code> method:</p>
+<p>I guess this is what will happen inside the <code class="highlighter-rouge">loadBookById()</code> method:</p>
 
 <pre>Book loadBookById(int id) {
   JsonObject json = /* Load it from RESTful API */
@@ -123,7 +123,7 @@ database.saveNewBook(book);</pre>
 }</pre>
 
 <p>Am I right? I bet I am. It already looks disgusting to me. Anyway, let’s
-continue. This is what will most likely happen in the <code>saveNewBook()</code> method
+continue. This is what will most likely happen in the <code class="highlighter-rouge">saveNewBook()</code> method
 (I’m using pure JDBC):</p>
 
 <pre>void saveNewBook(Book book) {
@@ -136,9 +136,9 @@ continue. This is what will most likely happen in the <code>saveNewBook()</code>
   stmt.execute();
 }</pre>
 
-<p>This <code>Book</code> is a classic example of a data transfer object design pattern.
+<p>This <code class="highlighter-rouge">Book</code> is a classic example of a data transfer object design pattern.
 All it does is transfer
-data between two pieces of code, two procedures. The object <code>book</code> is pretty
+data between two pieces of code, two procedures. The object <code class="highlighter-rouge">book</code> is pretty
 dumb. All it knows how to do is … nothing. It doesn’t do anything. It is
 actually not an object at all but rather a passive and anemic data structure.</p>
 
@@ -148,7 +148,7 @@ good to me:</p>
 <pre>Book book = api.bookById(123);
 book.save(database);</pre>
 
-<p>This is what happens in <code>bookById()</code>:</p>
+<p>This is what happens in <code class="highlighter-rouge">bookById()</code>:</p>
 
 <pre>Book bookById(int id) {
   return new JsonBook(
@@ -156,7 +156,7 @@ book.save(database);</pre>
   );
 }</pre>
 
-<p>This is what happens in <code>Book.save()</code>:</p>
+<p>This is what happens in <code class="highlighter-rouge">Book.save()</code>:</p>
 
 <pre>void save(Database db) {
   JsonObject json = /* Load it from RESTful API */
@@ -168,7 +168,7 @@ book.save(database);</pre>
 }</pre>
 
 <p>What happens if there are many more parameters of the book in JSON that won’t
-fit nicely as parameters into a single <code>createBook()</code> method? How about this:</p>
+fit nicely as parameters into a single <code class="highlighter-rouge">createBook()</code> method? How about this:</p>
 
 <pre>void save(Database db) {
   db.create()
@@ -179,7 +179,7 @@ fit nicely as parameters into a single <code>createBook()</code> method? How abo
 }</pre>
 
 <p>There are many other options. But the main point is that the data
-<em>never</em> escapes the object <code>book</code>. Once the object is instantiated, the
+<em>never</em> escapes the object <code class="highlighter-rouge">book</code>. Once the object is instantiated, the
 data is not visible or accessible by anyone else. We may only
 ask our object to save itself or to
 <a href="/2016/04/05/printers-instead-of-getters.html">print</a>

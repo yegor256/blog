@@ -99,7 +99,7 @@ It is very convenient to use when you don’t need a full-scale
 (like Hibernate), but want just to select, insert, or update
 a few rows in a relational database.</p>
 
-<p>Every instance of <code>JdbcSession</code> is a “transaction” in a database.
+<p>Every instance of <code class="highlighter-rouge">JdbcSession</code> is a “transaction” in a database.
 You start it by instantiating the class with a single parameter—data source.</p>
 
 <p>You can obtain the data source from your connection pool. There are many
@@ -116,10 +116,10 @@ private static DataSource source() {
   return src;
 }</pre>
 
-<p>Be sure to pay attention to the <code>@Cacheable</code> annotation.
+<p>Be sure to pay attention to the <code class="highlighter-rouge">@Cacheable</code> annotation.
 <a href="/2014/08/03/cacheable-java-annotation.html">This post</a>
 explains how it can help you to cache Java method results for some time.
-Setting the <code>forever</code> attribute to <code>true</code> means that we don’t want this
+Setting the <code class="highlighter-rouge">forever</code> attribute to <code class="highlighter-rouge">true</code> means that we don’t want this
 method to be called more than once. Instead, we want the connection pool
 to be created just once, and every second call should return its
 existing instance (kind of like a
@@ -131,7 +131,7 @@ can <a href="http://jdbc.jcabi.com/example-insert.html">insert</a>,
 delete a row. You can also
 <a href="http://jdbc.jcabi.com/example-execute.html">execute any SQL statement</a>.</p>
 
-<p>By default, <code>JdbcSession</code> closes the JDBC connection right after the
+<p>By default, <code class="highlighter-rouge">JdbcSession</code> closes the JDBC connection right after the
 first select/update/insert operation. Simply put, it is designed
 to be used mainly for single atomic transactions. However, it is
 possible to leave the connection open and continue, for example:</p>
@@ -149,7 +149,7 @@ possible to leave the connection open and continue, for example:</p>
   .commit();</pre>
 
 <p>In this example we’re executing three SQL statements one by one, leaving
-connection (and transaction) open until <code>commit()</code> is called.</p>
+connection (and transaction) open until <code class="highlighter-rouge">commit()</code> is called.</p>
 
 
     </article>

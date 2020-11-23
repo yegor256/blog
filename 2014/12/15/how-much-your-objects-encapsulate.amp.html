@@ -80,8 +80,8 @@ level of abstraction it too high.
 <pre>new HTTP("http://www.google.com").read();
 new HTTP().read("http://www.google.com");</pre>
 
-<p>What is the difference? The first class <code>HTTP</code> encapsulates a URL,
-while the second one expects it as an argument of method <code>read()</code>. Technically,
+<p>What is the difference? The first class <code class="highlighter-rouge">HTTP</code> encapsulates a URL,
+while the second one expects it as an argument of method <code class="highlighter-rouge">read()</code>. Technically,
 both objects do exactly the same thing: they read the content of the Google home page.
 Which one is the right design? Usually I hate to say this, but in
 this case I have to—it depends.</p>
@@ -157,7 +157,7 @@ the Universe. For example, we may have this:</p>
 }</pre>
 
 <p>This is not an elegant design, but it demonstrates when it may be
-necessary to represent the entire Universe. An object of this <code>HTTP</code> class can read
+necessary to represent the entire Universe. An object of this <code class="highlighter-rouge">HTTP</code> class can read
 any web page from the entire web (it is almost as big as the Universe, isn’t it?),
 and it can check whether the entire web is accessible by it. Obviously,
 in this case, we don’t need it to encapsulate anything.</p>

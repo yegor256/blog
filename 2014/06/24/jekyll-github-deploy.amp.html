@@ -92,17 +92,17 @@ the trick. Here is
 <ol>
   <li>
     <p>It clones your existing repository from the current
-directory to a temporary one (guessing the URL of the repo from <code>.git/config</code> file).</p>
+directory to a temporary one (guessing the URL of the repo from <code class="highlighter-rouge">.git/config</code> file).</p>
   </li>
   <li>
-    <p>Runs <code>jekyll build</code> in that temporary directory,
+    <p>Runs <code class="highlighter-rouge">jekyll build</code> in that temporary directory,
 which saves the output in another temporary directory.</p>
   </li>
   <li>
-    <p>Checks out <code>gh-pages</code> branch or creates one if it doesn’t exist.</p>
+    <p>Checks out <code class="highlighter-rouge">gh-pages</code> branch or creates one if it doesn’t exist.</p>
   </li>
   <li>
-    <p>Copies the content of the site built by <code>jekyll build</code> into the branch, thus overwriting existing files, commits and pushes to GitHub.</p>
+    <p>Copies the content of the site built by <code class="highlighter-rouge">jekyll build</code> into the branch, thus overwriting existing files, commits and pushes to GitHub.</p>
   </li>
   <li>
     <p>Cleans up all temporary directories.</p>
@@ -110,15 +110,15 @@ which saves the output in another temporary directory.</p>
 </ol>
 
 <p>Using this gem is very easy. Just install it with
-<code>gem install jgd</code> and then run in the root directory of your Jekyll blog.</p>
+<code class="highlighter-rouge">gem install jgd</code> and then run in the root directory of your Jekyll blog.</p>
 
 <p>What is important is that your Jekyll site files be
 located in the root directory of the repository. Just
 as they do on <a href="/2014/04/06/introduction.html">this blog</a>;
 see <a href="https://github.com/yegor256/blog">its sources in GitHub</a>.</p>
 
-<p>You can easily integrate <code>jgd</code> with Travis. See
-<a href="https://github.com/yegor256/blog/blob/master/.travis.yml"><code>.travis.yml</code></a> of this blog.</p>
+<p>You can easily integrate <code class="highlighter-rouge">jgd</code> with Travis. See
+<a href="https://github.com/yegor256/blog/blob/master/.travis.yml"><code class="highlighter-rouge">.travis.yml</code></a> of this blog.</p>
 
 <p>Full documentation about the gem is located
 <a href="https://github.com/yegor256/jekyll-github-deploy">here</a>.</p>

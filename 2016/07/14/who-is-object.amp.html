@@ -135,10 +135,10 @@ Let’s say that in that language we define an object:</p>
   engine: e
 }</pre>
 
-<p>Here, <code>vin</code> and <code>engine</code> are attributes of object <code>c</code> (it’s a car; let’s
+<p>Here, <code class="highlighter-rouge">vin</code> and <code class="highlighter-rouge">engine</code> are attributes of object <code class="highlighter-rouge">c</code> (it’s a car; let’s
 forget about classes for now to focus strictly on objects). Thus, there is
 a simple object that has two attributes. The first one is car’s VIN, and the
-second one is its engine. The VIN is an object <code>v</code>, while the engine is <code>e</code>.
+second one is its engine. The VIN is an object <code class="highlighter-rouge">v</code>, while the engine is <code class="highlighter-rouge">e</code>.
 To make it easier to understand, this is how a similar object would
 look in Java:</p>
 
@@ -149,20 +149,20 @@ Car c = new Car(v, e);</pre>
 <p>I’m not entirely sure about JVM, but in C++ such an object will take
 exactly 25 bytes in memory (assuming it’s 64-bit x86 architecture). The
 first 17 bytes will be taken by the array of chars and another 8 bytes
-by a pointer to the block in memory with object <code>e</code>.
+by a pointer to the block in memory with object <code class="highlighter-rouge">e</code>.
 That’s how the C++ compiler understands objects and translates them to
 the x86 architecture. In C++, objects are just data structures with
 clearly defined allocation of data attributes.</p>
 
-<p>In that example, attributes <code>vin</code> and <code>engine</code> are not equal:
-<code>vin</code> is “data,” while <code>engine</code> is a “pointer” to another object.
+<p>In that example, attributes <code class="highlighter-rouge">vin</code> and <code class="highlighter-rouge">engine</code> are not equal:
+<code class="highlighter-rouge">vin</code> is “data,” while <code class="highlighter-rouge">engine</code> is a “pointer” to another object.
 I intentionally made it this way in order to demonstrate that calling
-an object a box with data is possible only with <code>vin</code>. Only when
+an object a box with data is possible only with <code class="highlighter-rouge">vin</code>. Only when
 the data are located right “inside” the object can we say that the
-object is actually a box for the data. With <code>engine</code>, it isn’t
+object is actually a box for the data. With <code class="highlighter-rouge">engine</code>, it isn’t
 really true because there is no data technically <em>inside</em> the object. Instead, there is a
 <em>pointer</em> to another object. If our object would only have an
-<code>engine</code> attribute, it would take just 8 bytes in memory, with none of them
+<code class="highlighter-rouge">engine</code> attribute, it would take just 8 bytes in memory, with none of them
 actually occupied by “data.”</p>
 
 
@@ -175,7 +175,7 @@ x86 architecture. It just <em>knows</em> somehow what attributes belong to an ob
 <p>Thus, in our language, objects are no longer boxes with data both technically
 and conceptually. They know where the data is, but they don’t
 <em>contain</em> the data. They <em>represent</em> the data, as well as other objects and entities.
-Indeed, the object <code>c</code> in our imaginary language represents two other objects:
+Indeed, the object <code class="highlighter-rouge">c</code> in our imaginary language represents two other objects:
 a VIN and an engine.</p>
 
 <p>To summarize, we have to understand that even though a mechanical

@@ -111,9 +111,9 @@ int id = books.add(title);
 assert books.title(id).equals(title);</pre>
 
 <p>The class seems to be thread-safe, since we are using the thread-safe
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code>ConcurrentHashMap</code></a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code class="highlighter-rouge">ConcurrentHashMap</code></a>
 instead of a more primitive and non-thread-safe
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code>HashMap</code></a>,
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code class="highlighter-rouge">HashMap</code></a>,
 right? Let’s try to test it:</p>
 
 <pre>class BooksTest {
@@ -152,10 +152,10 @@ same manipulation from a few parallel threads (I’m using
 }</pre>
 
 <p>First, I create a pool of threads via
-<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html"><code>Executors</code></a>.
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html"><code class="highlighter-rouge">Executors</code></a>.
 Then I submit ten objects of type
-<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html"><code>Callable</code></a> via
-<code>submit()</code>. Each of them will add a new
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html"><code class="highlighter-rouge">Callable</code></a> via
+<code class="highlighter-rouge">submit()</code>. Each of them will add a new
 unique book to the bookshelf. All of them will be executed, in some
 unpredictable order, by some of those ten threads from the pool.</p>
 
@@ -163,17 +163,17 @@ unpredictable order, by some of those ten threads from the pool.</p>
 
 <p>Then I fetch the results of their executors through the list of objects
 of type
-<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html"><code>Future</code></a>.
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html"><code class="highlighter-rouge">Future</code></a>.
 Finally, I calculate the amount of unique book IDs
 created. If the number is 10, there were no conflicts. I’m using the
-<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Set.html"><code>Set</code></a>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Set.html"><code class="highlighter-rouge">Set</code></a>
 collection in order to make sure the list of IDs contains only
 unique elements.</p>
 
 <p>The test passes on my laptop. However, it’s not strong enough. The problem
-here is that it’s not really testing the <code>Books</code> from multiple parallel threads.
-The time that passes between our calls to <code>submit()</code> is large enough to finish
-the execution of <code>books.add()</code>. That’s why in reality only one thread
+here is that it’s not really testing the <code class="highlighter-rouge">Books</code> from multiple parallel threads.
+The time that passes between our calls to <code class="highlighter-rouge">submit()</code> is large enough to finish
+the execution of <code class="highlighter-rouge">books.add()</code>. That’s why in reality only one thread
 will run at the same time. We can check that by modifying the code a bit:</p>
 
 <pre>AtomicBoolean running = new AtomicBoolean();
@@ -199,13 +199,13 @@ for (int t = 0; t &lt; threads; ++t) {
 assertThat(overlaps.get(), greaterThan(0));</pre>
 
 <p>With this code I’m trying to see how often threads overlap each other and
-do something in parallel. This never happens and <code>overlaps</code> is equal to zero.
+do something in parallel. This never happens and <code class="highlighter-rouge">overlaps</code> is equal to zero.
 Thus our test is not really testing anything yet. It just adds ten
 books to the bookshelf one by one. If I increase the amount of threads to
 1000, they start to overlap sometimes. But we want them to overlap even
 when there’s a small number of them.
 To solve that we need to use
-<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html"><code>CountDownLatch</code></a>:</p>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html"><code class="highlighter-rouge">CountDownLatch</code></a>:</p>
 
 <pre>CountDownLatch latch = new CountDownLatch(1);
 AtomicBoolean running = new AtomicBoolean();
@@ -237,16 +237,16 @@ for (Future&lt;Integer&gt; f : futures) {
 assertThat(overlaps.get(), greaterThan(0));</pre>
 
 <p>Now each thread, before touching the books, waits for the permission
-given by <code>latch</code>. When we submit them all via <code>submit()</code> they stay on hold
-and wait. Then we release the latch with <code>countDown()</code> and they all start
-to go, simultaneously. Now, on my laptop, <code>overlaps</code> is equal to 3-5 even when <code>threads</code>
+given by <code class="highlighter-rouge">latch</code>. When we submit them all via <code class="highlighter-rouge">submit()</code> they stay on hold
+and wait. Then we release the latch with <code class="highlighter-rouge">countDown()</code> and they all start
+to go, simultaneously. Now, on my laptop, <code class="highlighter-rouge">overlaps</code> is equal to 3-5 even when <code class="highlighter-rouge">threads</code>
 is 10.</p>
 
-<p>And that last <code>assertThat()</code> crashes now! I’m not getting 10 book IDs,
+<p>And that last <code class="highlighter-rouge">assertThat()</code> crashes now! I’m not getting 10 book IDs,
 as I was before. It’s 7-9, but never 10. The class, apparently, is not thread-safe!</p>
 
 <p>But before we fix the class, let’s make our test simpler. Let’s use
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html"><code>RunInThreads</code></a>
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html"><code class="highlighter-rouge">RunInThreads</code></a>
 from <a href="http://www.cactoos.org">Cactoos</a>, which does exactly the same as we’ve done above,
 but under the hood:</p>
 
@@ -269,19 +269,19 @@ but under the hood:</p>
 
 
 
-<p>The first argument of <code>assertThat()</code> is an instance of
-<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html"><code>Func</code></a>
+<p>The first argument of <code class="highlighter-rouge">assertThat()</code> is an instance of
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html"><code class="highlighter-rouge">Func</code></a>
 (a functional interface), accepting an
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html"><code>AtomicInteger</code></a>
-(the first argument of <code>RunsInThreads</code>) and returning <code>Boolean</code>. This function will
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html"><code class="highlighter-rouge">AtomicInteger</code></a>
+(the first argument of <code class="highlighter-rouge">RunsInThreads</code>) and returning <code class="highlighter-rouge">Boolean</code>. This function will
 be executed on 10 parallel thread, using the same latch-based approach
 as demonstrated above.</p>
 
-<p>This <code>RunInThreads</code> seems to be compact and convenient, I’m using it
+<p>This <code class="highlighter-rouge">RunInThreads</code> seems to be compact and convenient, I’m using it
 in a few projects already.</p>
 
-<p>By the way, in order to make <code>Books</code> thread-safe we just need to add
-<code>synchronized</code> to its method <code>add()</code>. Or maybe you can suggest a better
+<p>By the way, in order to make <code class="highlighter-rouge">Books</code> thread-safe we just need to add
+<code class="highlighter-rouge">synchronized</code> to its method <code class="highlighter-rouge">add()</code>. Or maybe you can suggest a better
 solution?</p>
 
 <p>P.S. I learned all this from <a href="http://amzn.to/2c7sVS1">Java Concurrency in Practice</a>

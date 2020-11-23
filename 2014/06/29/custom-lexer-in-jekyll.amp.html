@@ -106,7 +106,7 @@ class RequsLexer(RegexLexer):
   def analyse_text(text):
     return shebang_matches(text, r'requs')</pre>
 
-<p>Then, I packaged it for <a href="https://pypi.python.org/pypi/setuptools"><code>easy_install</code></a>
+<p>Then, I packaged it for <a href="https://pypi.python.org/pypi/setuptools"><code class="highlighter-rouge">easy_install</code></a>
 and installed locally:</p>
 
 <pre>$ easy_install src/requs_pygment
@@ -118,7 +118,7 @@ Installed /Library/Python/2.7/site-packages/requs_pygment-0.1-py2.7.egg
 Processing dependencies for requs-pygment==0.1
 Finished processing dependencies for requs-pygment==0.1</pre>
 
-<p>It’s done. Now I run <code>jekyll build</code> and my syntax
+<p>It’s done. Now I run <code class="highlighter-rouge">jekyll build</code> and my syntax
 is highlighted according to the custom rules I specified in the lexer.</p>
 
 

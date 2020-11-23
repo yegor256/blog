@@ -83,8 +83,8 @@ It managed to collect a lot of upvotes since then and 20+ answers, including
 <a href="https://stackoverflow.com/a/14274358/187141">my own one</a>. Seriously,
 why didn’t Java, such a rich ecosystem, have a built-in out-of-the-box <em>simple</em>
 solution for this primitive task? I believe this is because the designers
-of the Java SDK were 1) smart enough not to create a <code>print()</code> method right in the
-class <code>Date</code>, and 2) not smart enough to give us an extendable set of classes
+of the Java SDK were 1) smart enough not to create a <code class="highlighter-rouge">print()</code> method right in the
+class <code class="highlighter-rouge">Date</code>, and 2) not smart enough to give us an extendable set of classes
 and interfaces to parse and print dates in an elegant way.</p>
 
 
@@ -98,7 +98,7 @@ of parsing and printing in JDK (to my knowledge):</p>
 
 <p>The first one is when <em>something</em> is responsible for printing and parsing
 while the object is just a data holder.
-There is a class <code>SimpleDateFormat</code>, which
+There is a class <code class="highlighter-rouge">SimpleDateFormat</code>, which
 has to be configured first, with the right time zone and the formatting pattern.
 Then it has to be used to print:</p>
 
@@ -106,7 +106,7 @@ Then it has to be used to print:</p>
 df.setTimeZone(TimeZone.getTimeZone("UTC"));
 String iso = df.format(new Date());</pre>
 
-<p>To parse it back, there is the method <code>parse()</code>:</p>
+<p>To parse it back, there is the method <code class="highlighter-rouge">parse()</code>:</p>
 
 <pre>Date date = df.parse("2007-12-03T10:15Z");</pre>
 
@@ -114,8 +114,8 @@ String iso = df.format(new Date());</pre>
 <a href="/2016/07/06/data-transfer-object.html">DTO</a>
 and a
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility class</a>.
-The DTO is the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html"><code>Date</code></a>
-object and the utility class is the <code>SimpleDateFormat</code>. The date-object
+The DTO is the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Date.html"><code class="highlighter-rouge">Date</code></a>
+object and the utility class is the <code class="highlighter-rouge">SimpleDateFormat</code>. The date-object
 <a href="/2016/11/21/naked-data.html">exposes</a>
 all required data attributes through a number of
 <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a> and the utility
@@ -125,27 +125,27 @@ This is not object-oriented programming at all.</p>
 
 <h2 id="the-object">The Object</h2>
 
-<p>Java 8 introduced the class <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html"><code>Instant</code></a>
-with the method <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#toString--"><code>toString()</code></a>,
+<p>Java 8 introduced the class <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html"><code class="highlighter-rouge">Instant</code></a>
+with the method <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#toString--"><code class="highlighter-rouge">toString()</code></a>,
 which returns time in
 <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format:</p>
 
 <pre>String iso = Instant.now().toString();</pre>
 
 <p>To parse it back there is a static method
-<a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-"><code>parse()</code></a>
-in the same class <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html"><code>Instant</code></a>:</p>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-"><code class="highlighter-rouge">parse()</code></a>
+in the same class <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html"><code class="highlighter-rouge">Instant</code></a>:</p>
 
 <pre>Instant time = Instant.parse("2007-12-03T10:15:30Z");</pre>
 
 <p>This approach looks more object-oriented, but
 the problem here is that it’s impossible to modify the printing
 pattern in any way (for example, remove the milliseconds or
-change the format entirely). Moreover, the method <code>parse()</code> is
+change the format entirely). Moreover, the method <code class="highlighter-rouge">parse()</code> is
 <a href="/2017/11/14/static-factory-methods.html">static</a>,
 which means that there can be no polymorphism—we can’t change the
 logic of parsing either. We also can’t change the printing logic,
-since <code>Instant</code> is a final class, not an interface.</p>
+since <code class="highlighter-rouge">Instant</code> is a final class, not an interface.</p>
 
 <p>This design sounds OK if all we need is ISO 8601 date/time strings.
 The moment we decide to extend it in some way, we are in trouble.</p>
@@ -153,10 +153,10 @@ The moment we decide to extend it in some way, we are in trouble.</p>
 <h2 id="the-ugly-mix">The Ugly Mix</h2>
 
 <p>There is also
-<a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html"><code>DateTimeFormatter</code></a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html"><code class="highlighter-rouge">DateTimeFormatter</code></a>
 in <a href="/2017/11/07/five-new-java-features.html">Java 8</a>,
 which introduces the third way of dealing with date/time objects.
-To print a date to a <code>String</code> we make an instance of the “formatter” and
+To print a date to a <code class="highlighter-rouge">String</code> we make an instance of the “formatter” and
 pass it to the time-object:</p>
 
 <pre>LocalDateTime date = LocalDateTime.now(ZoneId.of("UTC"));
@@ -165,18 +165,18 @@ DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
 );
 String iso = time.format(formatter);</pre>
 
-<p>To parse back, we have to send the <code>formatter</code> to the static method
-<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#parse-java.lang.CharSequence-java.time.format.DateTimeFormatter-"><code>parse()</code></a>
+<p>To parse back, we have to send the <code class="highlighter-rouge">formatter</code> to the static method
+<a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#parse-java.lang.CharSequence-java.time.format.DateTimeFormatter-"><code class="highlighter-rouge">parse()</code></a>
 together with the text to parse:</p>
 
 <pre>LocalDateTime time = LocalDateTime.parse(
   "2007-12-03T10:15:30Z", formatter
 );</pre>
 
-<p>How do they communicate, <code>LocalDateTime</code> and <code>DateTimeFormatter</code>?
+<p>How do they communicate, <code class="highlighter-rouge">LocalDateTime</code> and <code class="highlighter-rouge">DateTimeFormatter</code>?
 The time-object is a
-<a href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html"><code>TemporalAccessor</code></a>,
-with a method <a href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html#get-java.time.temporal.TemporalField-"><code>get()</code></a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html"><code class="highlighter-rouge">TemporalAccessor</code></a>,
+with a method <a href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html#get-java.time.temporal.TemporalField-"><code class="highlighter-rouge">get()</code></a>
 allowing anyone to extract whatever is inside. In other words, again, a
 <a href="/2016/07/06/data-transfer-object.html">DTO</a>.
 The formatter is still a
@@ -184,9 +184,9 @@ The formatter is still a
 which expects the DTO to arrive, extracts what’s inside, and prints.</p>
 
 <p>How do they parse? The method
-<a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#parse-java.lang.CharSequence-"><code>parse()</code></a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#parse-java.lang.CharSequence-"><code class="highlighter-rouge">parse()</code></a>
 reads the template, and builds and returns another
-<a href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html"><code>TemporalAccessor</code></a>
+<a href="https://docs.oracle.com/javase/8/docs/api/java/time/temporal/TemporalAccessor.html"><code class="highlighter-rouge">TemporalAccessor</code></a>
 DTO.</p>
 
 <p>What about encapsulation? “Not this time,” JDK designers say.</p>
@@ -194,7 +194,7 @@ DTO.</p>
 <h2 id="the-right-way">The Right Way</h2>
 
 <p>Here is how I would design it instead. First, I would make a generic
-immutable <code>Template</code> with this interface:</p>
+immutable <code class="highlighter-rouge">Template</code> with this interface:</p>
 
 <pre>interface Template {
   Template with(String key, Object value);
@@ -213,7 +213,7 @@ immutable <code>Template</code> with this interface:</p>
   .toString(); // returns "2007-12-03T10:15Z"</pre>
 
 <p>This template internally decides how to print the data coming in,
-depending on the encapsulated pattern. Here is how the <code>Date</code> would be
+depending on the encapsulated pattern. Here is how the <code class="highlighter-rouge">Date</code> would be
 able to print itself:</p>
 
 <pre>class Date {
@@ -256,7 +256,7 @@ in general to put code into the constructor, but for this experiment it’s OK):
 }</pre>
 
 <p>Let’s say we want to print time as “13-е января 2019 года” (it’s in Russian).
-How we would do this? We don’t create a new <code>Template</code>, we
+How we would do this? We don’t create a new <code class="highlighter-rouge">Template</code>, we
 <a href="/2015/02/26/composable-decorators.html">decorate</a> the
 existing one, a few times. First, we make an instance of what we have:</p>
 
@@ -266,7 +266,7 @@ existing one, a few times. First, we make an instance of what we have:</p>
 
 <pre>12-е MMMM 2019-го года</pre>
 
-<p>The <code>Date</code> doesn’t send the value of <code>MMMM</code> into it, that’s why it doesn’t
+<p>The <code class="highlighter-rouge">Date</code> doesn’t send the value of <code class="highlighter-rouge">MMMM</code> into it, that’s why it doesn’t
 replace the text correctly. We have to decorate it:</p>
 
 <pre>class RussianTemplate {
@@ -294,7 +294,7 @@ replace the text correctly. We have to decorate it:</p>
   }
 }</pre>
 
-<p>Now, to get a Russian date from a <code>Date</code> object we do this:</p>
+<p>Now, to get a Russian date from a <code class="highlighter-rouge">Date</code> object we do this:</p>
 
 <pre>String txt = time.print(
   new RussianTemplate(
@@ -303,7 +303,7 @@ replace the text correctly. We have to decorate it:</p>
 );</pre>
 
 <p>Let’s say we want to print the date in a different time zone. We create another
-decorator, which intercepts the call with the <code>"HH"</code> and deducts (or adds)
+decorator, which intercepts the call with the <code class="highlighter-rouge">"HH"</code> and deducts (or adds)
 the time difference:</p>
 
 <pre>class TimezoneTemplate {
@@ -334,9 +334,9 @@ the time difference:</p>
   )
 );</pre>
 
-<p>We can decorate as much as we need, making the <code>Template</code> as powerful
+<p>We can decorate as much as we need, making the <code class="highlighter-rouge">Template</code> as powerful
 as it needs to be. The elegance of this approach is that the class
-<code>Date</code> is completely decoupled from the <code>Template</code>, which makes them
+<code class="highlighter-rouge">Date</code> is completely decoupled from the <code class="highlighter-rouge">Template</code>, which makes them
 both replaceable and polymorphic.</p>
 
 <p>Maybe someone will be interested in creating an open source

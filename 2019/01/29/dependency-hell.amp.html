@@ -76,14 +76,14 @@ right one until I found a formula for myself.
       <p>Yegor Bugayenko<br>29 January 2019</p>
       <h1>My Recipe Against Dependency Hell</h1>
       <p>Do you specify exact versions of your dependencies? I mean, when your
-software package depends on another one, do you write down, in your <code>pom.xml</code>,
-<code>Gruntfile</code>, <code>Gemfile</code>, or what have you, its version as <code>1.13.5</code> or just
-<code>1.+</code>? I always <a href="https://twitter.com/yegor256/status/1059856548112068608">thought</a>
+software package depends on another one, do you write down, in your <code class="highlighter-rouge">pom.xml</code>,
+<code class="highlighter-rouge">Gruntfile</code>, <code class="highlighter-rouge">Gemfile</code>, or what have you, its version as <code class="highlighter-rouge">1.13.5</code> or just
+<code class="highlighter-rouge">1.+</code>? I always <a href="https://twitter.com/yegor256/status/1059856548112068608">thought</a>
 that it was better to use exact version numbers,
 to avoid the so called <a href="https://en.wikipedia.org/wiki/Dependency_hell">dependency hell</a>,
 and <a href="https://blog.danlew.net/2015/09/09/dont-use-dynamic-versions-for-your-dependencies/">I was not alone</a>.
 However, very soon I <a href="https://twitter.com/yegor256/status/1060538705260265474">realized</a>
-that dynamic versions, like <code>1.+</code>, give more flexibility.
+that dynamic versions, like <code class="highlighter-rouge">1.+</code>, give more flexibility.
 Just a few weeks ago I realized that neither approach
 is right and found myself a hybrid formula. No suprise, I again saw that
 <a href="https://brock.io/post/repeatable_android_builds/">I wasn’t alone</a>.</p>
@@ -97,7 +97,7 @@ is right and found myself a hybrid formula. No suprise, I again saw that
 <p>Say I create a library X, which depends on, for example, a logging
 facility, which is a third-party library, not mine. Thus my library X has
 a <em>dependency</em>. The logging library has a version number, such as
-<code>1.13.5</code>. I put this text into the <code>pom.xml</code> file of X:</p>
+<code class="highlighter-rouge">1.13.5</code>. I put this text into the <code class="highlighter-rouge">pom.xml</code> file of X:</p>
 
 <pre>&lt;dependency&gt;
   &lt;groupId&gt;com.example&lt;/groupId&gt;
@@ -106,12 +106,12 @@ a <em>dependency</em>. The logging library has a version number, such as
 &lt;/dependency&gt;</pre>
 
 <p>Many advocates of fixed dependencies argue that it’s very important
-to stick to the version <code>1.13.5</code>, instead of using a more flexible dynamic
-one: <code>1.13)</code> (i.e. any version, provided it is <code>1.13</code> or newer).
+to stick to the version <code class="highlighter-rouge">1.13.5</code>, instead of using a more flexible dynamic
+one: <code class="highlighter-rouge">1.13)</code> (i.e. any version, provided it is <code class="highlighter-rouge">1.13</code> or newer).
 Why? Because future versions may introduce something that
 will break the build of X. They may change interfaces, rename classes or methods,
 or delete something that I’m using. You never know what the authors of this
-<code>log-me</code> library might do. That’s why it’s better to hard-wire ourselves to <code>1.13.5</code> and
+<code class="highlighter-rouge">log-me</code> library might do. That’s why it’s better to hard-wire ourselves to <code class="highlighter-rouge">1.13.5</code> and
 call it a day.</p>
 
 <p>This is true.</p>
@@ -119,7 +119,7 @@ call it a day.</p>
 <p>But.</p>
 
 <p>What if the library X is used by another library Y, which also depends on
-<code>log-me</code> but needs version <code>1.14.1</code>. Boom! There will be a conflict
+<code class="highlighter-rouge">log-me</code> but needs version <code class="highlighter-rouge">1.14.1</code>. Boom! There will be a conflict
 in library Y: Maven, the package manager, won’t be able to decide
 which version to use. It will be necessary to resolve the conflict somehow.
 In the case of Maven it’s resolvable, in the case of, for example,
@@ -128,14 +128,14 @@ In the case of Maven it’s resolvable, in the case of, for example,
 
 
 <p>To resolve this problem, library Y will have to explicitly say which version
-has to be used. But it can’t be sure that <code>1.14.1</code> will work correctly with
+has to be used. But it can’t be sure that <code class="highlighter-rouge">1.14.1</code> will work correctly with
 library X. To confirm that it does, it would have to be tested by the authors of library
 X. So the best the creators of library Y can do is to try it and hope
 for the best. With other build tools, like Rake, the authors will have no choice,
-but to ask the authors of library X to upgrade to <code>1.14.1</code> and release
+but to ask the authors of library X to upgrade to <code class="highlighter-rouge">1.14.1</code> and release
 a new version. Then, library Y will be able to use library X.</p>
 
-<p>This problem would not exist if library X depended on <code>1.13</code> instead.
+<p>This problem would not exist if library X depended on <code class="highlighter-rouge">1.13</code> instead.
 But, as I mentioned above, in that case its authors would be planting a time bomb—eventually
 one of the future versions will definitely break the build.</p>
 
@@ -155,7 +155,7 @@ the quality of their repositories.</p>
 <p>Of course, you can’t fully trust anyone, but this is the formula I
 have for myself now. You can see how it works in this
 <a href="https://github.com/zold-io/zold/blob/master/zold.gemspec">Gemfile</a>, for example.
-Pay attention to the version numbers. Those that start with <code>~&gt;</code> or <code>&gt;=</code> are dynamic,
+Pay attention to the version numbers. Those that start with <code class="highlighter-rouge">~&gt;</code> or <code class="highlighter-rouge">&gt;=</code> are dynamic,
 while others are fixed. It’s a hybrid approach, but it works for me.</p>
 
 <p>Maybe it will help you too.</p>

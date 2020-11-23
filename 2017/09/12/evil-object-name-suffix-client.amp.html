@@ -80,7 +80,7 @@ about “-ER” suffixes in object and class
 names. We agreed that they were evil and must be avoided if we want
 our code to be truly object-oriented and our objects to be objects instead
 of collections of procedures. Now I’m ready to introduce a new evil suffix:
-<code>Client</code>.</p>
+<code class="highlighter-rouge">Client</code>.</p>
 
 
 
@@ -88,7 +88,7 @@ of collections of procedures. Now I’m ready to introduce a new evil suffix:
 
 <p>Let me give an example first. This is what an object with such a suffix may look like
 (it’s a pseudo-code version of the
-<a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html"><code>AmazonS3Client</code></a>
+<a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html"><code class="highlighter-rouge">AmazonS3Client</code></a>
 from <a href="https://aws.amazon.com/sdk-for-java/">AWS Java SDK</a>):</p>
 
 <pre>class AmazonS3Client {
@@ -114,10 +114,10 @@ That’s why it’s not as maintainable as it should be, for two reasons:</p>
   Since the client is an abstraction of a server, it inevitably has to
   represent the server’s <em>entire</em> functionality. When the functionality
   is rather limited there is no issue. Take
-  <a href="https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/HttpClient.html"><code>HttpClient</code></a>
+  <a href="https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/HttpClient.html"><code class="highlighter-rouge">HttpClient</code></a>
   from <a href="https://hc.apache.org/">Apache HttpComponents</a> as an example.
   However, when the server is more complex, the size of the client also
-  grows. There are over 160 (!) methods in <code>AmazonS3Client</code> at the time of writing, while
+  grows. There are over 160 (!) methods in <code class="highlighter-rouge">AmazonS3Client</code> at the time of writing, while
   it started with only a few dozen just a few <del>years</del> hundred versions ago.</p>
   </li>
   <li>
@@ -144,10 +144,10 @@ That’s why it’s not as maintainable as it should be, for two reasons:</p>
   return, they all look like
   <a href="/2016/07/14/who-is-object.html">objects</a>, but in reality they are just
   data structures:
-  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/S3Object.html"><code>S3Object</code></a>,
-  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html"><code>ObjectMetadata</code></a>,
-  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/BucketPolicy.html"><code>BucketPolicy</code></a>,
-  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/PutObjectResult.html"><code>PutObjectResult</code></a>, etc.
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/S3Object.html"><code class="highlighter-rouge">S3Object</code></a>,
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html"><code class="highlighter-rouge">ObjectMetadata</code></a>,
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/BucketPolicy.html"><code class="highlighter-rouge">BucketPolicy</code></a>,
+  <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/PutObjectResult.html"><code class="highlighter-rouge">PutObjectResult</code></a>, etc.
   They are all <a href="/2016/07/06/data-transfer-object.html">Data Transfer Objects</a>
   with only
   <a href="/2014/09/16/getters-and-setters-are-evil.html">getters and setters</a>
@@ -192,7 +192,7 @@ That’s why it’s not as maintainable as it should be, for two reasons:</p>
 
 <p>The right design would be to replace “clients” with client-side objects
 that represent <em>entities</em> of the server side, not the entire server. For example, with the S3 SDK,
-that could be <code>Bucket</code>, <code>Object</code>, <code>Version</code>, <code>Policy</code>, etc. Each of them
+that could be <code class="highlighter-rouge">Bucket</code>, <code class="highlighter-rouge">Object</code>, <code class="highlighter-rouge">Version</code>, <code class="highlighter-rouge">Policy</code>, etc. Each of them
 exposes the functionality of real
 <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html">buckets</a>,
 <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingObjects.html">objects</a> and
@@ -203,7 +203,7 @@ which the AWS S3 can expose.</p>
 
 <p>Of course, we will need a high-level object that somehow represents the
 entire API/server, but it should be small. For example, in the S3 SDK example
-it could be called <code>Region</code>, which means the entire
+it could be called <code class="highlighter-rouge">Region</code>, which means the entire
 <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">AWS region</a> with buckets.
 Then we could retrieve a bucket from it and won’t need a region anymore. Then,
 to list objects in the bucket we ask the bucket to do it for us. No need to communicate

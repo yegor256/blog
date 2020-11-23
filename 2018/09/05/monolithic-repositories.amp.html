@@ -107,7 +107,7 @@ function main() {
   });
 }</pre>
 
-<p>Pretty obvious, isn’t it? Just a single <code>main.js</code> file which does everything we need.
+<p>Pretty obvious, isn’t it? Just a single <code class="highlighter-rouge">main.js</code> file which does everything we need.
 We simply add it to the HTML and it works:</p>
 
 <pre>&lt;html&gt;
@@ -141,7 +141,7 @@ $.fn.colorize = function() {
   return this;
 }</pre>
 
-<p>The <code>main.js</code> will look like this:</p>
+<p>The <code class="highlighter-rouge">main.js</code> will look like this:</p>
 
 <pre>// main.js
 function main() {
@@ -182,15 +182,15 @@ Here is what I did:</p>
   <li>Did some research of jQuery plugins, studied a few examples;</li>
   <li>Found out that most of them used <a href="https://gulpjs.com/">Gulp</a>, which I’ve never heard of;</li>
   <li>Decided to use <a href="https://www.npmjs.com/">npm</a> for JavaScript packaging (what else, right?);</li>
-  <li>Created <a href="https://github.com/yegor256/colorizejs/blob/master/package.json"><code>package.json</code></a> for npm;</li>
-  <li>Renamed GitHub repo to <code>colorizejs</code> when I found out that npm package
-<a href="https://www.npmjs.com/package/colorize"><code>colorize</code></a> already exists;</li>
-  <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.travis.yml"><code>.travis.yml</code></a> for <a href="https://travis-ci.org/">Travis</a>;</li>
+  <li>Created <a href="https://github.com/yegor256/colorizejs/blob/master/package.json"><code class="highlighter-rouge">package.json</code></a> for npm;</li>
+  <li>Renamed GitHub repo to <code class="highlighter-rouge">colorizejs</code> when I found out that npm package
+<a href="https://www.npmjs.com/package/colorize"><code class="highlighter-rouge">colorize</code></a> already exists;</li>
+  <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.travis.yml"><code class="highlighter-rouge">.travis.yml</code></a> for <a href="https://travis-ci.org/">Travis</a>;</li>
   <li>Created a <a href="https://github.com/yegor256/colorizejs/blob/master/README.md">README.md</a> and explained how to use it and install it;</li>
   <li>Decided to use the MIT license and created <a href="https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt">LICENSE.txt</a>;</li>
   <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.pdd">PDD</a> for
 <a href="/2017/04/05/pdd-in-action.html">puzzles</a> automated collection;</li>
-  <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.rultor.yml"><code>.rultor.yml</code></a> for
+  <li>Configured <a href="https://github.com/yegor256/colorizejs/blob/master/.rultor.yml"><code class="highlighter-rouge">.rultor.yml</code></a> for
 <a href="/2014/07/24/rultor-automated-merging.html">Rultor</a>;</li>
   <li>Tried to create a unit test and failed miserably (after a full hour of research),
 since I’ve had almost no experience in JS unit testing;</li>
@@ -323,7 +323,7 @@ words, smaller repositories look more beautiful than larger ones.</p>
   <li>
     <p><strong>Short Names</strong>.
 Each repository, inevitably, will have its own namespace. For example, in the
-JS repository I just created, I only have two files: <code>colorizejs.js</code> and <code>test-colorizejs.js</code>.
+JS repository I just created, I only have two files: <code class="highlighter-rouge">colorizejs.js</code> and <code class="highlighter-rouge">test-colorizejs.js</code>.
 I don’t really care about the naming inside them, since the namespace
 is very small. <del>I can even use global variables.</del>
 Shorter names and smaller namespaces mean better maintainability.</p>

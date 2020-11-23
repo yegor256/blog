@@ -91,8 +91,8 @@ through RESTful API, and then download it again (either through HTTP or the API.
 that wraps their RESTful API. However, this SDK is not object-oriented
 at all. It is purely imperative and procedural—it just mirrors the API.</p>
 
-<p>For example, in order to download an existing object <code>doc.txt</code>
-from bucket <code>test-1</code>, you have to do something like this:</p>
+<p>For example, in order to download an existing object <code class="highlighter-rouge">doc.txt</code>
+from bucket <code class="highlighter-rouge">test-1</code>, you have to do something like this:</p>
 
 <pre>AWSCredentials creds = new BasicAWSCredentials(key, secret);
 AmazonS3 aws = new AmazonS3Client(creds);
@@ -126,12 +126,12 @@ String content = new Ocket.Text(ocket).read();</pre>
 a collection of procedures to be called in order to
 get its properties (as with AWS SDK). Rather, it is a Java object
 with certain behaviors. I called them “ockets” (similar to “buckets”),
-in order to avoid clashes with <code>java.lang.Object</code>.</p>
+in order to avoid clashes with <code class="highlighter-rouge">java.lang.Object</code>.</p>
 
-<p><a href="http://s3.jcabi.com/apidocs-0.5/com/jcabi/s3/Ocket.html"><code>Ocket</code></a> is
+<p><a href="http://s3.jcabi.com/apidocs-0.5/com/jcabi/s3/Ocket.html"><code class="highlighter-rouge">Ocket</code></a> is
 an interface, that exposes the behavior of a real AWS S3 object:
 read, write, check existence. There is also a convenient decorator
-<code>Ocket.Text</code> that simplifies working with binary objects:</p>
+<code class="highlighter-rouge">Ocket.Text</code> that simplifies working with binary objects:</p>
 
 <pre>Ocket.Text ocket = new Ocket.Text(ocket_from_s3);
 if (ocket.exists()) {
@@ -152,13 +152,13 @@ as interfaces, they can easily be extended through encapsulation
 
 <p>For example, you want your code to retry S3 object read operations
 a few times before giving up and
-<a href="/2015/12/01/rethrow-exceptions.html">throwing</a> an <code>IOException</code>
+<a href="/2015/12/01/rethrow-exceptions.html">throwing</a> an <code class="highlighter-rouge">IOException</code>
 (by the way, this is a very good practice when working with web services).
 So, you want all your S3 reading operations to be redone a few times
 if first attempts fail.</p>
 
-<p>You define a new decorator class, say, <code>RetryingOcket</code>,
-which encapsulates an original <code>Ocket</code>:</p>
+<p>You define a new decorator class, say, <code class="highlighter-rouge">RetryingOcket</code>,
+which encapsulates an original <code class="highlighter-rouge">Ocket</code>:</p>
 
 <pre>public RetryingOcket implements Ocket {
   private final Ocket origin;
@@ -181,17 +181,17 @@ which encapsulates an original <code>Ocket</code>:</p>
   // same for other methods
 }</pre>
 
-<p>Now, everywhere where <code>Ocket</code> is expected you send
-an instance of <code>RetryingOcket</code> that wraps your original object:</p>
+<p>Now, everywhere where <code class="highlighter-rouge">Ocket</code> is expected you send
+an instance of <code class="highlighter-rouge">RetryingOcket</code> that wraps your original object:</p>
 
 <pre>foo.process(new RetryingOcket(ocket));</pre>
 
-<p>Method <code>foo.process()</code> won’t see a difference, since
-it is the same <code>Ocket</code> interface it is expecting.</p>
+<p>Method <code class="highlighter-rouge">foo.process()</code> won’t see a difference, since
+it is the same <code class="highlighter-rouge">Ocket</code> interface it is expecting.</p>
 
 <p>By the way, this retry functionality is implemented
 out-of-the-box in <a href="http://s3.jcabi.com">jcabi-s3</a>,
-in <a href="http://s3.jcabi.com/apidocs-0.5/com/jcabi/s3/retry/package-summary.html"><code>com.jcabi.s3.retry</code></a> package.</p>
+in <a href="http://s3.jcabi.com/apidocs-0.5/com/jcabi/s3/retry/package-summary.html"><code class="highlighter-rouge">com.jcabi.s3.retry</code></a> package.</p>
 
 <h2 id="easy-mocking">Easy Mocking</h2>
 
@@ -199,7 +199,7 @@ in <a href="http://s3.jcabi.com/apidocs-0.5/com/jcabi/s3/retry/package-summary.h
 <a href="http://s3.jcabi.com">jcabi-s3</a> are interfaces, they are
 very easy to mock. For example, your class expects an
 S3 object, reads its data and calculates the MD5
-hash (I’m using <a href="http://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/digest/DigestUtils.html"><code>DigestUtils</code></a>
+hash (I’m using <a href="http://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/digest/DigestUtils.html"><code class="highlighter-rouge">DigestUtils</code></a>
 from <a href="http://commons.apache.org/proper/commons-codec/">commons-codec</a>):</p>
 
 <pre>import com.jcabi.s3.Ocket;
@@ -242,7 +242,7 @@ public class S3Md5HashTest {
 <h2 id="immutability">Immutability</h2>
 
 <p>All classes in <a href="http://s3.jcabi.com">jcabi-s3</a> are
-annotated with <a href="http://aspects.jcabi.com/annotation-immutable.html"><code>@Immutable</code></a>
+annotated with <a href="http://aspects.jcabi.com/annotation-immutable.html"><code class="highlighter-rouge">@Immutable</code></a>
 and are truly immutable.</p>
 
 <p>The library ships as a JAR dependency in

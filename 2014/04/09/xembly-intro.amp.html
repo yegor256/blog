@@ -114,9 +114,9 @@ use the following:</p>
   [...]
 &lt;/accounts&gt;</pre>
 
-<p>The above code represents a list of accounts. Each account has its own <code>id</code> and several
-child elements. In our example, we need to find the account belonging to <code>Jeffrey</code>
-and increase its balance by <code>500</code>. How would we do this?</p>
+<p>The above code represents a list of accounts. Each account has its own <code class="highlighter-rouge">id</code> and several
+child elements. In our example, we need to find the account belonging to <code class="highlighter-rouge">Jeffrey</code>
+and increase its balance by <code class="highlighter-rouge">500</code>. How would we do this?</p>
 
 <p>Well, there are a few possible solutions:</p>
 
@@ -136,7 +136,7 @@ a document. Perhaps, it is this shortcoming that makes XML unpopular with some.<
 It is an imperative language with a few simple directives and resembles <a href="http://en.wikipedia.org/wiki/Assembly_language">Assembly</a>
 in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.</p>
 
-<p>Let’s create a simple example. Say, for instance, we want to add a new account number <code>36</code>
+<p>Let’s create a simple example. Say, for instance, we want to add a new account number <code class="highlighter-rouge">36</code>
 to our list document. The code would look like:</p>
 
 <pre>XPATH '/accounts';
@@ -148,22 +148,22 @@ UP;
 ADD 'balance';
 SET '3400';</pre>
 
-<p>The above should be intuitively clear, but I’ll explain just in case. First, the <code>XPATH</code> directive points us
+<p>The above should be intuitively clear, but I’ll explain just in case. First, the <code class="highlighter-rouge">XPATH</code> directive points us
 to the element found by the “/accounts” XPath query. This will be our root element. We assume here that
 it exists in the document. Therefore, if it is absent, our Xembly script will
 fail with a runtime exception.</p>
 
-<p>Next, the <code>ADD</code> directive on line 2 creates a new XML element without any children
-or attributes. Then, the <code>ATTR</code> directive sets an attribute for this element. The code then adds
-the new child element <code>name</code> and sets its text value to <code>"Donny"</code> using the <code>SET</code> directive. Finally, we move our pointer back to <code>account</code> element using <code>UP</code>, add the <code>balance</code> child element and set its value to <code>"3400"</code>.</p>
+<p>Next, the <code class="highlighter-rouge">ADD</code> directive on line 2 creates a new XML element without any children
+or attributes. Then, the <code class="highlighter-rouge">ATTR</code> directive sets an attribute for this element. The code then adds
+the new child element <code class="highlighter-rouge">name</code> and sets its text value to <code class="highlighter-rouge">"Donny"</code> using the <code class="highlighter-rouge">SET</code> directive. Finally, we move our pointer back to <code class="highlighter-rouge">account</code> element using <code class="highlighter-rouge">UP</code>, add the <code class="highlighter-rouge">balance</code> child element and set its value to <code class="highlighter-rouge">"3400"</code>.</p>
 
 <p>Our balance changing task can be expressed in Xembly with the following code:</p>
 
 <pre>XPATH '/accounts/account[name="Jeffrey"]/balance';
 XSET '. + 500';</pre>
 
-<p>The <code>XSET</code> directive sets the element text value, similar to <code>SET</code>, but
-calculates it beforehand using the provided XPath expression <code>. + 500</code>.</p>
+<p>The <code class="highlighter-rouge">XSET</code> directive sets the element text value, similar to <code class="highlighter-rouge">SET</code>, but
+calculates it beforehand using the provided XPath expression <code class="highlighter-rouge">. + 500</code>.</p>
 
 <p>Xembly performs all manipulations through DOM. Consequently, Xembly can be
 implemented inside any language that has a built-in DOM implementation.</p>
@@ -179,11 +179,11 @@ implemented inside any language that has a built-in DOM implementation.</p>
   .add("balance").set("3400");
 new Xembler(directives).apply(document);</pre>
 
-<p>In this snippet, I’m using a supplementary script builder, <code>Directives</code>, which
+<p>In this snippet, I’m using a supplementary script builder, <code class="highlighter-rouge">Directives</code>, which
 enables generation of directives in a
-<a href="/2018/03/13/fluent-interfaces.html">fluent</a> way. Then, I use <code>Xembler</code> class,
+<a href="/2018/03/13/fluent-interfaces.html">fluent</a> way. Then, I use <code class="highlighter-rouge">Xembler</code> class,
 which is similar to “assembler,” to apply all specified directives
-to the <code>document</code> object of class <code>org.w3c.dom.Document</code>.</p>
+to the <code class="highlighter-rouge">document</code> object of class <code class="highlighter-rouge">org.w3c.dom.Document</code>.</p>
 
 <p>Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:</p>
 

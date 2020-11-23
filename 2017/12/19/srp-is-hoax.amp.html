@@ -95,7 +95,7 @@ back in 1974. Now let’s see it by example and analyze how we can
 improve a class, with the SRP in mind, and whether it will become
 <a href="/2014/11/20/seven-virtues-of-good-object.html">more object-oriented</a>.</p>
 
-<p>Let’s try the class <a href="https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java"><code>AwsOcket</code></a>
+<p>Let’s try the class <a href="https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java"><code class="highlighter-rouge">AwsOcket</code></a>
 from <a href="http://s3.jcabi.com">jcabi-s3</a> (I’ve simplified the code):</p>
 
 <pre>class AwsOcket {
@@ -113,7 +113,7 @@ Right? It’s not a good design and it must be changed.</p>
 
 <p>In order to change it and make it responsible for just one thing we must introduce
 a getter, which will return an AWS client and then create three new classes:
-<code>ExistenceChecker</code>, <code>ContentReader</code>, and <code>ContentWriter</code>. They will check,
+<code class="highlighter-rouge">ExistenceChecker</code>, <code class="highlighter-rouge">ContentReader</code>, and <code class="highlighter-rouge">ContentWriter</code>. They will check,
 read, and write. Now, in order to read the content and print it to the
 console I’m currently doing this:</p>
 
@@ -128,7 +128,7 @@ console I’m currently doing this:</p>
 }</pre>
 
 <p>Aside from the fact that these checkers, readers, and writers are not really
-classes, but pure holders of procedures, the usage of this <code>ocket</code> turns
+classes, but pure holders of procedures, the usage of this <code class="highlighter-rouge">ocket</code> turns
 into a nightmare. We can’t really know anymore what will happen with it
 when we pass it somewhere. We can’t, for example, guarantee that the content
 that is coming from it is decrypted or decoded on the fly. We simply can’t

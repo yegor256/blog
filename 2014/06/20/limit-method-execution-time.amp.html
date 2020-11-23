@@ -99,14 +99,14 @@ I recommend you read <a href="/2014/06/01/aop-aspectj-java-method-logging.html">
 which explains how AOP aspects work together with
 <a href="/2016/04/12/java-annotations-are-evil.html">Java annotations</a>.</p>
 
-<p>Due to <a href="http://aspects.jcabi.com/annotation-timeable.html"><code>@Timeable</code></a>
-annotation and class weaving, every call to a method <code>load()</code>
+<p>Due to <a href="http://aspects.jcabi.com/annotation-timeable.html"><code class="highlighter-rouge">@Timeable</code></a>
+annotation and class weaving, every call to a method <code class="highlighter-rouge">load()</code>
 is intercepted by an aspect from <a href="http://aspects.jcabi.com">jcabi-aspects</a>.
 That aspect starts a new thread that monitors the execution of a method
 every second, checking whether it is still running.</p>
 
 <p>If the method runs for over five seconds, the thread
-calls <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupt%28%29"><code>interrupt()</code></a>
+calls <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupt%28%29"><code class="highlighter-rouge">interrupt()</code></a>
 on the method’s thread.</p>
 
 <p>Despite a very common expectation that a thread should be terminated
@@ -116,20 +116,20 @@ explains the mechanism in more detail. Let’s discuss it briefly:</p>
 
 <ol>
   <li>
-    <p><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupt%28%29"><code>interrupt()</code></a>
+    <p><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupt%28%29"><code class="highlighter-rouge">interrupt()</code></a>
     sets a marker in a thread;</p>
   </li>
   <li>
-    <p>The thread checks <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupt%28%29"><code>interrupted()</code></a>
+    <p>The thread checks <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupt%28%29"><code class="highlighter-rouge">interrupted()</code></a>
     as often as it can;</p>
   </li>
   <li>
     <p>If the marker is set, the thread stops and throws
-    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html"><code>InterruptedException</code></a></p>
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html"><code class="highlighter-rouge">InterruptedException</code></a></p>
   </li>
 </ol>
 
-<p>This method will <strong>not</strong> react to <code>interrupt()</code> call and will work until JVM is killed (very bad design):</p>
+<p>This method will <strong>not</strong> react to <code class="highlighter-rouge">interrupt()</code> call and will work until JVM is killed (very bad design):</p>
 
 <pre>public void work() {
   while (true) {
@@ -152,13 +152,13 @@ sensitive to interruption requests:</p>
 <p>In other words, your method can only stop itself. Nothing else can do it.
 The thread it is running in can’t be terminated by another thread. The best
 thing that the other thread can do is to send your thread a “message”
-(through <code>interrupt()</code> method) that it’s time to stop. If your thread
+(through <code class="highlighter-rouge">interrupt()</code> method) that it’s time to stop. If your thread
 ignores the message, nobody can do anything.</p>
 
 <p>Most I/O operations in JDK are designed this way. They check the
 interruption status of their threads while waiting for I/O resources.</p>
 
-<p>Thus, use <code>@Timeable</code> annotation, but keep in mind that there could
+<p>Thus, use <code class="highlighter-rouge">@Timeable</code> annotation, but keep in mind that there could
 be situations when a thread can’t be interrupted.</p>
 
     </article>

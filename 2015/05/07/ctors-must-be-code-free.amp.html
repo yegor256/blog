@@ -107,7 +107,7 @@ un-extensible.</p>
 
 <p>What’s wrong with this? It’s faster, right? It splits the name into
 parts only once and encapsulates them. Then, no matter how many times we
-call the <code>first()</code> method, it will return the same value and won’t need
+call the <code class="highlighter-rouge">first()</code> method, it will return the same value and won’t need
 to do the splitting again. However, this is flawed thinking! Let me show
 you the right way and explain:</p>
 
@@ -132,14 +132,14 @@ though it looks like an object. The second example is a true object.</p>
 
 
 
-<p>In the first example, we are abusing the <code>new</code> operator and turning it into
+<p>In the first example, we are abusing the <code class="highlighter-rouge">new</code> operator and turning it into
 a static method, which does all calculations for us <em>right here and now</em>.
 This is what <em>imperative</em> programming is about. In imperative programming,
 we do all calculations right now and return fully ready results. In declarative
 programming, we are instead trying to delay calculations for
 as long as possible.</p>
 
-<p>Let’s try to use our <code>EnglishName</code> class:</p>
+<p>Let’s try to use our <code class="highlighter-rouge">EnglishName</code> class:</p>
 
 <pre>final Name name = new EnglishName(
   new NameInPostgreSQL(/*...*/)
@@ -154,21 +154,21 @@ if (/* something goes wrong */) {
 }</pre>
 
 <p>In the first line of this snippet, we are just making an instance of an object
-and labeling it <code>name</code>. We don’t want to go to the database yet and fetch
+and labeling it <code class="highlighter-rouge">name</code>. We don’t want to go to the database yet and fetch
 the full name from there, split it into parts, and encapsulate them
-inside <code>name</code>. We just want to create an instance of an object. Such a parsing
+inside <code class="highlighter-rouge">name</code>. We just want to create an instance of an object. Such a parsing
 behavior would be a side effect for us and, in this case,
 will slow down the application.
-As you see, we may only need <code>name.first()</code> if something goes wrong and
+As you see, we may only need <code class="highlighter-rouge">name.first()</code> if something goes wrong and
 we need to construct an exception object.</p>
 
 <p>My point is that having <strong>any</strong> computations done inside a constructor is a bad
 practice and must be avoided because they are side effects and are not
 requested by the object owner.</p>
 
-<p>What about performance during the re-use of <code>name</code>, you may ask. If we make an
-instance of <code>EnglishName</code> and then call <code>name.first()</code> five times, we’ll
-end up with five calls to the <code>String.split()</code> method.</p>
+<p>What about performance during the re-use of <code class="highlighter-rouge">name</code>, you may ask. If we make an
+instance of <code class="highlighter-rouge">EnglishName</code> and then call <code class="highlighter-rouge">name.first()</code> five times, we’ll
+end up with five calls to the <code class="highlighter-rouge">String.split()</code> method.</p>
 
 <p>To solve that, we create another class,
 a <a href="/2015/02/26/composable-decorators.html">composable decorator</a>,
@@ -186,7 +186,7 @@ which will help us solve this “re-use” problem:</p>
   }
 }</pre>
 
-<p>I’m using the <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code>Cacheable</code></a>
+<p>I’m using the <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code class="highlighter-rouge">Cacheable</code></a>
 annotation from <a href="http://aspects.jcabi.com/">jcabi-aspects</a>, but you can use any other
 caching tools available in Java (or other languages), like
 <a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava Cache</a>:</p>
@@ -212,7 +212,7 @@ caching tools available in Java (or other languages), like
   }
 }</pre>
 
-<p>But please don’t make <code>CachedName</code> mutable and lazily
+<p>But please don’t make <code class="highlighter-rouge">CachedName</code> mutable and lazily
 loaded—it’s an anti-pattern, which I’ve discussed before in
 <a href="/2014/06/09/objects-should-be-immutable.html">Objects Should Be Immutable</a>.</p>
 

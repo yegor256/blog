@@ -85,7 +85,7 @@ method is used widely in <a href="https://www.xdsd.org">XDSD</a> methodology. Th
 
 <p>Let’s review the method with an example. Say, for instance, you are a programmer
 and have been tasked to design and implement a Java class. This is the formal
-task description: “class <code>DBWriter</code> has to extend <code>java.io.Writer</code> abstract
+task description: “class <code class="highlighter-rouge">DBWriter</code> has to extend <code class="highlighter-rouge">java.io.Writer</code> abstract
 class and save all incoming data into the database.”</p>
 
 
@@ -120,7 +120,7 @@ public class DBWriterTest {
   }
 }</pre>
 
-<p>In the above test, we define the expected behavior of the class. The test fails to compile because there are two missing classes: <code>DataBridge</code> and <code>DBWriter</code>. Let’s implement the bridge first:</p>
+<p>In the above test, we define the expected behavior of the class. The test fails to compile because there are two missing classes: <code class="highlighter-rouge">DataBridge</code> and <code class="highlighter-rouge">DBWriter</code>. Let’s implement the bridge first:</p>
 
 <pre>import java.io.IOException;
 public interface DataBridge {
@@ -151,7 +151,7 @@ public class DBWriter implements Writer {
 }</pre>
 
 <p>Using the above code, we solve the problem. In the example, we successfully
-designed, implemented and tested the required <code>DBWriter</code> class. Subsequently,
+designed, implemented and tested the required <code class="highlighter-rouge">DBWriter</code> class. Subsequently,
 the class can now immediately can be used “as is” by other classes.</p>
 
 
@@ -179,7 +179,7 @@ refine and correct our assumptions. Here is the first puzzle we need to add:</p>
   void insert(String text) throws IOException;
 }</pre>
 
-<p>The puzzle has three elements: <code>@todo</code> tag, <code>#123</code> locator and a comment.
+<p>The puzzle has three elements: <code class="highlighter-rouge">@todo</code> tag, <code class="highlighter-rouge">#123</code> locator and a comment.
 Locator displays the following: “The puzzle was created while working with
 ticket #123.”</p>
 
@@ -199,7 +199,7 @@ architectural decision is right. Actually, the design is very primitive at the
 moment and very likely to be incorrect. To refine it and refactor, we require
 more information from the task specifier.</p>
 
-<p>The task is finished. Now, you can reintegrate your branch into <code>master</code> and
+<p>The task is finished. Now, you can reintegrate your branch into <code class="highlighter-rouge">master</code> and
 return the ticket to whoever assigned it to you. His task now is to find other
 people who will be able to resolve the puzzles we just created.</p>
 
@@ -207,16 +207,16 @@ people who will be able to resolve the puzzles we just created.</p>
 other people. Consequently, our simple one-hour task can potentially generate
 hundreds of other tasks, which may take days or even years to complete.
 Nevertheless, your goal of working with your specific task is to finish it as
-soon as possible and reintegrate your branch into <code>master</code>.</p>
+soon as possible and reintegrate your branch into <code class="highlighter-rouge">master</code>.</p>
 
 <h2 id="best-practices">Best Practices</h2>
 
 <p>There are a few simple rules that help you to place puzzles correctly.</p>
 
-<p>First, you should put your <code>@todo</code> annotations at the point where your code hits
+<p>First, you should put your <code class="highlighter-rouge">@todo</code> annotations at the point where your code hits
 a stub. For example, in a unit test. You’re implementing a test and it fails
 because the class has not yet been implemented. You skip the test with the
-<code>@Ignore</code> annotation and add a <code>@todo</code> puzzle to its JavaDoc.</p>
+<code class="highlighter-rouge">@Ignore</code> annotation and add a <code class="highlighter-rouge">@todo</code> puzzle to its JavaDoc.</p>
 
 <p>Second, your puzzle should remain as near as possible to the code element that
 is hitting the stub. Say that you have a unit test that has three test methods.

@@ -96,13 +96,13 @@ purposes of testing. You need to start it before your integration
 tests and stop it afterwards.</p>
 
 <p>To make things simpler
-I suggest you use <a href="http://dynamodb.jcabi.com/"><code>jcabi-dynamodb-maven-plugin</code></a>,
+I suggest you use <a href="http://dynamodb.jcabi.com/"><code class="highlighter-rouge">jcabi-dynamodb-maven-plugin</code></a>,
 a <a href="https://maven.apache.org/">Maven</a> plugin that I
 <a href="/2014/05/01/dynamodb-local-maven-plugin.html">made</a> a few years ago.
 You will need to add
-<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml"><code>pom.xml</code></a> to your
+<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml"><code class="highlighter-rouge">pom.xml</code></a> to your
 repository and start/stop Maven from a
-<a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile"><code>Rakefile</code></a>,
+<a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile"><code class="highlighter-rouge">Rakefile</code></a>,
 just like I’m doing <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50-L67">here</a>:</p>
 
 <pre>task :dynamo do
@@ -119,27 +119,27 @@ just like I’m doing <a href="https://github.com/yegor256/sixnines/blob/0.17/Ra
   end
 end</pre>
 
-<p>First, I’m removing <code>dynamodb-local/target</code>, the directory where Maven keeps
+<p>First, I’m removing <code class="highlighter-rouge">dynamodb-local/target</code>, the directory where Maven keeps
 its temporary files, to make sure we always start from scratch.</p>
 
-<p>Then, I’m starting <code>mvn install</code>, using <code>Process.spawn</code>, as a background
-process with <code>pid</code> as its process ID (this won’t work in Windows, only Linux/Mac).
+<p>Then, I’m starting <code class="highlighter-rouge">mvn install</code>, using <code class="highlighter-rouge">Process.spawn</code>, as a background
+process with <code class="highlighter-rouge">pid</code> as its process ID (this won’t work in Windows, only Linux/Mac).
 Then I immediately register an
-<a href="https://ruby-doc.org/core-2.2.3/Kernel.html#method-i-at_exit"><code>at_exit</code></a>
+<a href="https://ruby-doc.org/core-2.2.3/Kernel.html#method-i-at_exit"><code class="highlighter-rouge">at_exit</code></a>
 Ruby hook, which will be executed if Ruby dies for any reason. I’m sure
 it’s obvious why I have to do that—in order to avoid garbage running
 in the background after Rake is finished or terminated.</p>
 
-<p>Pay attention, I’m using <code>kill -TERM</code> instead of <code>kill -KILL</code>, in order to
+<p>Pay attention, I’m using <code class="highlighter-rouge">kill -TERM</code> instead of <code class="highlighter-rouge">kill -KILL</code>, in order to
 give Maven a chance to wrap everything up, terminate DynamoDB Local correctly,
 close its TCP port and exit.</p>
 
 <h2 id="how-to-check-that-its-running">How to check that it’s running</h2>
 
-<p>Next I’m checking the status of <code>sn-endpoints</code>, one of the tables in the
+<p>Next I’m checking the status of <code class="highlighter-rouge">sn-endpoints</code>, one of the tables in the
 DynamoDB Local. It has to be there if the server is up and running. It will
-be created by <code>jcabi-dynamodb-maven-plugin</code> according to
-<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/tables/sn-endpoints.json"><code>sn-endpoints.json</code></a>,
+be created by <code class="highlighter-rouge">jcabi-dynamodb-maven-plugin</code> according to
+<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/tables/sn-endpoints.json"><code class="highlighter-rouge">sn-endpoints.json</code></a>,
 its JSON configuration.</p>
 
 <p>Most probably the table won’t be ready immediately though, since it takes time to
@@ -153,20 +153,20 @@ It takes about 12-15 seconds on my MacBook, which means 2-3 attempts/exceptions.
 <p>My classes need to know how to connect to the server during integration tests.
 In production they need to connect to AWS, in testing they have to
 know about the DynamoDB Local instance I just started. This is what I have in my class
-<a href="https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb"><code>Dynamo</code></a>,
+<a href="https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb"><code class="highlighter-rouge">Dynamo</code></a>,
 which is responsible for the very connection with DynamoDB. Its decision
-on where to connect is based on the environment variable <code>RACK_ENV</code>, which
-is set to <code>"test"</code> in
-<a href="https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb#L25"><code>test__helper.rb</code></a>,
+on where to connect is based on the environment variable <code class="highlighter-rouge">RACK_ENV</code>, which
+is set to <code class="highlighter-rouge">"test"</code> in
+<a href="https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb#L25"><code class="highlighter-rouge">test__helper.rb</code></a>,
 which is included by
-<a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L39"><code>rake/testtask</code></a>
+<a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L39"><code class="highlighter-rouge">rake/testtask</code></a>
 in front of all other tests, thanks to the double underscore in its name.</p>
 
-<p>If the environment variable is set to <code>"test"</code>,
-<code>Dynamo</code> takes the connectivity parameters from the YAML file
-<a href="https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb#L37"><code>dynamodb-local/target/dynamo.yml</code></a>
+<p>If the environment variable is set to <code class="highlighter-rouge">"test"</code>,
+<code class="highlighter-rouge">Dynamo</code> takes the connectivity parameters from the YAML file
+<a href="https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb#L37"><code class="highlighter-rouge">dynamodb-local/target/dynamo.yml</code></a>
 created by
-<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L79-L100"><code>maven-resources-plugin:copy-resources</code></a>.
+<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L79-L100"><code class="highlighter-rouge">maven-resources-plugin:copy-resources</code></a>.
 The TCP port of the DynamoDB Local database will be
 <a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/config/dynamo.yml">there</a>,
 as well as the DynamoDB authentication key and secret.</p>
@@ -204,19 +204,19 @@ Also, see how it works <a href="https://travis-ci.org/yegor256/sixnines">in Trav
 In a nutshell:</p>
 
 <ul>
-  <li>You call <code>rake</code> in the command line and Rake starts;</li>
-  <li>Rake attempts to run the <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L32"><code>default</code></a> task,
-which depends on <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L36"><code>test</code></a>;</li>
-  <li>Rake attempts to run <code>test</code>, which depends on
-<a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50"><code>dynamo</code></a>;</li>
-  <li>Rake, inside <code>test</code> task, runs <code>mvn install</code> in the background
-with this <a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml"><code>pom.xml</code></a>;</li>
+  <li>You call <code class="highlighter-rouge">rake</code> in the command line and Rake starts;</li>
+  <li>Rake attempts to run the <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L32"><code class="highlighter-rouge">default</code></a> task,
+which depends on <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L36"><code class="highlighter-rouge">test</code></a>;</li>
+  <li>Rake attempts to run <code class="highlighter-rouge">test</code>, which depends on
+<a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50"><code class="highlighter-rouge">dynamo</code></a>;</li>
+  <li>Rake, inside <code class="highlighter-rouge">test</code> task, runs <code class="highlighter-rouge">mvn install</code> in the background
+with this <a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml"><code class="highlighter-rouge">pom.xml</code></a>;</li>
   <li>Maven <a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L38-L60">unpacks</a>
 DynamoDB Local installation package;</li>
   <li>Maven <a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L61-L78">reserves</a>
-a random TCP port and stores its value into <code>${dynamo.port}</code>;</li>
+a random TCP port and stores its value into <code class="highlighter-rouge">${dynamo.port}</code>;</li>
   <li>Maven <a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L79-L100">saves</a>
-<code>${dynamo.port}</code> and key/secret pair info;</li>
+<code class="highlighter-rouge">${dynamo.port}</code> and key/secret pair info;</li>
   <li>Maven <a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/pom.xml#L101-L128">starts</a>
 DynamoDB Local, binding it to the reserved TCP port;</li>
   <li>Rake <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L57-L65">waits</a>
@@ -224,14 +224,14 @@ for DynamoDB Local availability on the reserved port;</li>
   <li>Rake <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L38-L39">imports</a>
 all <a href="https://github.com/yegor256/sixnines/tree/0.17/test">test classes</a> starting from
 <a href="https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb">test__helper.rb</a>;</li>
-  <li>Environment variable <code>RACK_ENV</code> is <a href="https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb#L25">set</a>
-to <code>"test"</code>;</li>
+  <li>Environment variable <code class="highlighter-rouge">RACK_ENV</code> is <a href="https://github.com/yegor256/sixnines/blob/0.17/test/test__helper.rb#L25">set</a>
+to <code class="highlighter-rouge">"test"</code>;</li>
   <li>Rack::Test <a href="https://github.com/yegor256/sixnines/blob/0.17/test/test_sixnines.rb#L145">attempts</a>
 to dispatch a web page;</li>
   <li>
-<a href="https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb"><code>Dynamo</code></a>
+<a href="https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb"><code class="highlighter-rouge">Dynamo</code></a>
 <a href="https://github.com/yegor256/sixnines/blob/0.17/objects/dynamo.rb#L37-L39">loads</a> YAML config from
-<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/config/dynamo.yml"><code>dynamo.yml</code></a>
+<a href="https://github.com/yegor256/sixnines/blob/0.17/dynamodb-local/config/dynamo.yml"><code class="highlighter-rouge">dynamo.yml</code></a>
 and connects to DynamoDB Local;</li>
   <li>Rake stops;</li>
   <li>Ruby <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L53-L56">terminates</a>

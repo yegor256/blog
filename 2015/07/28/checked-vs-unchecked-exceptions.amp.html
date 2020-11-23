@@ -101,7 +101,7 @@ we’ll discuss the differences. So, my understanding first.</p>
 <p>When everything goes right, the method just saves the data and returns control.
 When something is wrong, it
 <a href="/2015/12/01/rethrow-exceptions.html">throws</a>
-<code>Exception</code> and we have to do something
+<code class="highlighter-rouge">Exception</code> and we have to do something
 about it:</p>
 
 <pre>try {
@@ -110,28 +110,28 @@ about it:</p>
   System.out.println("Sorry, we can't save right now.");
 }</pre>
 
-<p>When a method says it <code>throws</code> an exception, I understand that the
+<p>When a method says it <code class="highlighter-rouge">throws</code> an exception, I understand that the
 method is not <strong>safe</strong>. It may fail sometimes, and it’s my responsibility to
 either 1) handle this failure or 2) declare myself as <strong>unsafe</strong> too.</p>
 
 <p>I know each method is designed with a
 <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>
-in mind. This is a guarantee to me that if method <code>save()</code> fails, it means
+in mind. This is a guarantee to me that if method <code class="highlighter-rouge">save()</code> fails, it means
 the entire saving operation can’t be completed. If I need to know what
 the cause of this failure was, I will <a href="https://en.wikipedia.org/wiki/Exception_chaining">un-chain</a>
 the exception—traverse the stack of chained exceptions and stack traces
-encapsulated in <code>ex</code>.</p>
+encapsulated in <code class="highlighter-rouge">ex</code>.</p>
 
 <p>I never use exceptions for flow control, which means I <strong>never recover</strong>
 situations where exceptions are thrown. When an exception occurs, I let it float up to the
 highest level of the application. Sometimes I
 <a href="/2015/12/01/rethrow-exceptions.html">rethrow</a>
 it in order to add more semantic information to the chain. That’s why it doesn’t matter
-to me what the cause of the exception thrown by <code>save()</code> was. I just know
+to me what the cause of the exception thrown by <code class="highlighter-rouge">save()</code> was. I just know
 the method failed. That’s enough for me. Always.</p>
 
 <p>For the same reason, I don’t need to differentiate between different exception
-types. I just don’t need that type of hierarchy. <code>Exception</code> is enough for me.
+types. I just don’t need that type of hierarchy. <code class="highlighter-rouge">Exception</code> is enough for me.
 Again, that’s because I don’t use exceptions for flow control.</p>
 
 <p>That’s how I understand exceptions.</p>
@@ -141,8 +141,8 @@ Again, that’s because I don’t use exceptions for flow control.</p>
 <ul>
   <li>Always use checked exceptions.</li>
   <li>Never throw/use unchecked exceptions.</li>
-  <li>Use only <code>Exception</code>, without any sub-types.</li>
-  <li>Always declare one exception type in the <code>throws</code> block.</li>
+  <li>Use only <code class="highlighter-rouge">Exception</code>, without any sub-types.</li>
+  <li>Always declare one exception type in the <code class="highlighter-rouge">throws</code> block.</li>
   <li>Never catch without rethrowing; read <a href="/2015/07/09/catch-if-cant-otherwise.html">more about that here</a>.</li>
 </ul>
 
@@ -159,7 +159,7 @@ in JavaDoc but not in the method signature.</p>
 <p>I don’t understand the logic here, and I’m sure Java designers don’t
 understand it either. How and why are some exceptions important while
 others are not? Why do some of them deserve a proper API position
-in the <code>throws</code> block of the method signature while others don’t? What is the criteria?</p>
+in the <code class="highlighter-rouge">throws</code> block of the method signature while others don’t? What is the criteria?</p>
 
 <p>I have an answer here, though. By introducing checked and unchecked exceptions, Java
 developers tried to solve the problem of methods that are too complex and messy. When
@@ -188,29 +188,29 @@ languages understand
 <h2 id="checked-exceptions-are-too-noisy">Checked Exceptions Are Too Noisy</h2>
 
 <p>Another common argument against checked exceptions is that they make our
-code more verbose. We have to put <code>try/catch</code> everywhere instead of
+code more verbose. We have to put <code class="highlighter-rouge">try/catch</code> everywhere instead of
 staying focused on the main logic. Bozhidar Bozhanov even
 <a href="http://techblog.bozho.net/checked-and-unchecked-exceptions-in-java/">suggests</a>
 a technical solution for this verbosity problem.</p>
 
 <p>Again, I don’t understand this logic. If I want to do something when method
-<code>save()</code> fails, I catch the exception and handle the situation somehow.
-If I don’t want to do that, I just say my method also <code>throws</code> and pay no
+<code class="highlighter-rouge">save()</code> fails, I catch the exception and handle the situation somehow.
+If I don’t want to do that, I just say my method also <code class="highlighter-rouge">throws</code> and pay no
 attention to exception handling. What is the problem? Where is the verbosity
 coming from?</p>
 
 <p>I have an answer here, too. It’s coming from the existence of unchecked
 exceptions. We simply can’t always ignore failure, because the interfaces
 we’re using don’t allow us to do this. That’s all. For example, class
-<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html"><code>Runnable</code></a>,
+<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html"><code class="highlighter-rouge">Runnable</code></a>,
 which is widely used for multi-thread programming, has
-method <code>run()</code> that is not supposed to throw anything. That’s why we always have
+method <code class="highlighter-rouge">run()</code> that is not supposed to throw anything. That’s why we always have
 to catch everything inside the method and rethrow checked
 exceptions as unchecked.</p>
 
 <p>If all methods in all Java
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a> would be declared either as
-“safe” (<code>throws</code> nothing) or “unsafe” (<code>throws Exception</code>), everything would
+“safe” (<code class="highlighter-rouge">throws</code> nothing) or “unsafe” (<code class="highlighter-rouge">throws Exception</code>), everything would
 become logical and clear. If you want to stay “safe,” take responsibility
 for failure handling. Otherwise, be “unsafe” and let your users worry about
 safety.</p>
@@ -220,22 +220,22 @@ safety.</p>
 <h2 id="inappropriately-exposed-implementation-details">Inappropriately Exposed Implementation Details</h2>
 
 <p><a href="http://www.ibm.com/developerworks/library/j-jtp05254/">Some say</a>
-the ability to put a checked exception into <code>throws</code> in the method
+the ability to put a checked exception into <code class="highlighter-rouge">throws</code> in the method
 signature instead of catching it here and rethrowing a new type
 encourages us to have too many irrelevant exception types in method
-signatures. For example, our method <code>save()</code> may declare that it
-may throw <code>OutOfMemoryException</code>, even though it seems to have
+signatures. For example, our method <code class="highlighter-rouge">save()</code> may declare that it
+may throw <code class="highlighter-rouge">OutOfMemoryException</code>, even though it seems to have
 nothing to do with memory allocation. But it does allocate some memory, right?
 So such a memory overflow may happen during a file saving operation.</p>
 
 <p>Yet again, I don’t get the logic of this argument.
 If all exceptions are checked, and we don’t have multiple exception types,
-we just throw <code>Exception</code> everywhere, and that’s it. Why do we need to care
+we just throw <code class="highlighter-rouge">Exception</code> everywhere, and that’s it. Why do we need to care
 about the exception type in the first place? If we don’t use exceptions to control
 flow, we won’t do this.</p>
 
 <p>If we really want to make our application memory overflow-resistant, we will
-introduce some memory manager, which will have something like the <code>bigEnough()</code>
+introduce some memory manager, which will have something like the <code class="highlighter-rouge">bigEnough()</code>
 method, which will tell us whether our heap is big enough for the next
 operation. Using exceptions in such situations is a totally inappropriate approach
 to exception management in OOP.</p>
@@ -266,8 +266,8 @@ after the exception:</p>
     Data#write()
       File#save() &lt;-- Boom, there's a failure here, so we go up</pre>
 
-<p>We can start this chain again, but we don’t go back after <code>throw</code>. In other
-words, we don’t <strong>do</strong> anything in the <code>catch</code> block. We only report the problem
+<p>We can start this chain again, but we don’t go back after <code class="highlighter-rouge">throw</code>. In other
+words, we don’t <strong>do</strong> anything in the <code class="highlighter-rouge">catch</code> block. We only report the problem
 and wrap up execution. We never “recover!”</p>
 
 <hr>

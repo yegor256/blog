@@ -88,8 +88,8 @@ of a build automation scenario.</p>
 <p>Let’s assume you’re using MySQL (PostgreSQL or any other
 database configuration will be very similar.)</p>
 
-<p>Add <code>liquibase-maven-plugin</code>
-to your <a href="http://maven.apache.org/pom.html"><code>pom.xml</code></a> (get its latest
+<p>Add <code class="highlighter-rouge">liquibase-maven-plugin</code>
+to your <a href="http://maven.apache.org/pom.html"><code class="highlighter-rouge">pom.xml</code></a> (get its latest
 version in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
 <pre>&lt;project&gt;
@@ -114,10 +114,10 @@ version in <a href="http://search.maven.org/">Maven Central</a>):</p>
   &lt;/build&gt;
 &lt;/project&gt;</pre>
 
-<p>To check that it works, run <code>mvn liquibase:help</code>.</p>
+<p>To check that it works, run <code class="highlighter-rouge">mvn liquibase:help</code>.</p>
 
 <p>I would recommend you keep database credentials
-in <a href="http://maven.apache.org/settings.html"><code>settings.xml</code></a>
+in <a href="http://maven.apache.org/settings.html"><code class="highlighter-rouge">settings.xml</code></a>
 and  in their respective profiles. For example:</p>
 
 <pre>&lt;settings&gt;
@@ -142,7 +142,7 @@ and  in their respective profiles. For example:</p>
 &lt;/settings&gt;</pre>
 
 <p>When you run Maven, don’t forget to turn
-on one of the profiles. For example: <code>mvn -Pproduction</code>.</p>
+on one of the profiles. For example: <code class="highlighter-rouge">mvn -Pproduction</code>.</p>
 
 <h2 id="initial-schema">Initial Schema</h2>
 
@@ -155,7 +155,7 @@ changes from this point.</p>
 
 <p>Maven plugin doesn’t support it, so you will have to run
 Liquibase directly. But, it’s not that difficult. First,
-run <code>mvn liquibase:help</code> in order to download all artifacts.
+run <code class="highlighter-rouge">mvn liquibase:help</code> in order to download all artifacts.
 Then, replace placeholders with your actual credentials:</p>
 
 <pre>$ java -jar \
@@ -166,11 +166,11 @@ Then, replace placeholders with your actual credentials:</p>
   generateChangeLog &gt; src/main/liquibase/2014/000-initial-schema.xml</pre>
 
 <p>Liquibase will analyze your current database schema
-and copy its own schema into <code>src/main/liquibase/2014/000-initial-schema.xml</code>.</p>
+and copy its own schema into <code class="highlighter-rouge">src/main/liquibase/2014/000-initial-schema.xml</code>.</p>
 
 <h2 id="master-changeset">Master Changeset</h2>
 
-<p>Now, create XML master changeset and save it to <code>src/main/liquibase/master.xml</code>:</p>
+<p>Now, create XML master changeset and save it to <code class="highlighter-rouge">src/main/liquibase/master.xml</code>:</p>
 
 <pre>&lt;databaseChangeLog
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
@@ -181,8 +181,8 @@ and copy its own schema into <code>src/main/liquibase/2014/000-initial-schema.xm
 &lt;/databaseChangeLog&gt;</pre>
 
 <p>It is an entry point for Liquibase. It starts from this file
-and loads all other changesets available in <code>src/main/liquibase/2014</code>.
-They should be either <code>.xml</code> or <code>.sql</code>. I recommend that you use
+and loads all other changesets available in <code class="highlighter-rouge">src/main/liquibase/2014</code>.
+They should be either <code class="highlighter-rouge">.xml</code> or <code class="highlighter-rouge">.sql</code>. I recommend that you use
 XML mostly because it is easier to maintain and works faster.</p>
 
 <h2 id="incremental-changesets">Incremental Changesets</h2>
@@ -200,18 +200,18 @@ XML mostly because it is easier to maintain and works faster.</p>
   &lt;/changeSet&gt;
 &lt;/databaseChangeLog&gt;</pre>
 
-<p>We save this file in <code>src/main/liquibase/2014/002-add-user-address.xml</code>.
+<p>We save this file in <code class="highlighter-rouge">src/main/liquibase/2014/002-add-user-address.xml</code>.
 In big projects, you can name your files by the names of the tickets
-they are produced in. For example, <code>045-3432.xml</code>, which means changeset
+they are produced in. For example, <code class="highlighter-rouge">045-3432.xml</code>, which means changeset
 number 45 coming from ticket #3432.</p>
 
 <p>The important thing is to have this numeric prefix in front of file names,
 in order to sort them correctly. We want changes to be applied in their
 correct chronological order.</p>
 
-<p>That’s it. We’re ready to run <code>mvn liquibase:update -Pproduction</code> and
+<p>That’s it. We’re ready to run <code class="highlighter-rouge">mvn liquibase:update -Pproduction</code> and
 our production database will be updated—a new column will be
-added to the <code>user</code> table.</p>
+added to the <code class="highlighter-rouge">user</code> table.</p>
 
 <p>Also, see how <a href="/2014/05/21/mysql-maven-plugin.html">MySQL Maven Plugin</a>
 can help you to automate integration testing of database-connected classes.</p>

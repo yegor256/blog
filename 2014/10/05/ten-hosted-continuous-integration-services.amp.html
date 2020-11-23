@@ -269,10 +269,10 @@ them in the list with ☺ emoji.</p>
 
 
 <p><a href="http://www.shippable.com"><strong>Shippable</strong></a> was easy to configure
-since it understands <code>.travis.yml</code> out of the box.
+since it understands <code class="highlighter-rouge">.travis.yml</code> out of the box.
 The user interface is easy to navigate since it doesn’t
 have “settings” page at all (or I didn’t find it). Everything is
-configured via <code>shippable.yml</code> file in the repository. The service
+configured via <code class="highlighter-rouge">shippable.yml</code> file in the repository. The service
 looks stable and robust, no complains so far. What is especially
 cool about them is that they allow you to build in a Docker container.</p>
 
@@ -321,7 +321,7 @@ system, which I generally appreciate. As a downside, they
 <span class="strike">don’t have any Maven pre-installed</span>
 have an old version of Maven, but this was solved easily with a short
 custom script that downloads and unpacks the latest Maven. Another downside is
-that they are not configurable through a file (like <code>.travis.yml</code>)—you should do everything through a UI. They also support
+that they are not configurable through a file (like <code class="highlighter-rouge">.travis.yml</code>)—you should do everything through a UI. They also support
 <a href="https://semaphoreapp.com/docs/caching-between-builds.html">caching between builds</a>.</p>
 
 
@@ -335,7 +335,7 @@ may help in small and medium size projects we’re mostly working with,
 but they look “cool.” There is also a very unfortunate limitation of
 2Gb RAM per build—some of my Java projects fail because of that.
 Besides that, they don’t give full access to the build server, for example
-we can’t modify anything in <code>/etc</code>—it is a show-stopper for us.</p>
+we can’t modify anything in <code class="highlighter-rouge">/etc</code>—it is a show-stopper for us.</p>
 
 <p><a href="https://codeship.com"><strong>Codeship</strong></a> works fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
@@ -433,7 +433,7 @@ built there.<br>
 integrated with GitHub and will build pull requests before they are merged.
 Build status will be visible in GitHub. A pretty convenient feature.<br>
 <sup>5</sup> Logs compression is a critical feature, at least for me. Most
-of my logs are from Maven and without <code>col -b</code> they look too long and unreadable.<br>
+of my logs are from Maven and without <code class="highlighter-rouge">col -b</code> they look too long and unreadable.<br>
 <sup>6</sup> Looks like Docker containers must be supported by all of them,
 but unfortunately it’s not the case. Ideally, all builds should run
 in containers.</p>

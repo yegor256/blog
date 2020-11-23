@@ -114,10 +114,10 @@ Here is what it means; take a look at this simple Java class:</p>
   }
 }</pre>
 
-<p>There are two attributes and two methods. The method <code>addTitle()</code> works with
-the attribute <code>titles</code>, while the method <code>addPrice()</code> works only with the
-attribute <code>prices</code>. The cohesion is <em>low</em> in this class, because the attributes
-<code>titles</code> and <code>prices</code> are not related to each other in any way. We can easily
+<p>There are two attributes and two methods. The method <code class="highlighter-rouge">addTitle()</code> works with
+the attribute <code class="highlighter-rouge">titles</code>, while the method <code class="highlighter-rouge">addPrice()</code> works only with the
+attribute <code class="highlighter-rouge">prices</code>. The cohesion is <em>low</em> in this class, because the attributes
+<code class="highlighter-rouge">titles</code> and <code class="highlighter-rouge">prices</code> are not related to each other in any way. We can easily
 break this class into two pieces without losing anything:</p>
 
 <pre>class Books1 {
@@ -134,7 +134,7 @@ class Books2 {
 }</pre>
 
 <p>Now, we have two much more cohesive classes: their attributes and methods
-are related to each other. We can’t break <code>Books1</code> anymore, since each
+are related to each other. We can’t break <code class="highlighter-rouge">Books1</code> anymore, since each
 attribute is needed by each method.</p>
 
 <p>Here is yet another example of a <em>highly</em> cohesive class:</p>
@@ -150,7 +150,7 @@ attribute is needed by each method.</p>
 }</pre>
 
 <p>Can we break it into smaller pieces? No, we can’t. We can’t take any part
-of the class out. The attribute <code>titles</code> and both of the methods must stay
+of the class out. The attribute <code class="highlighter-rouge">titles</code> and both of the methods must stay
 together. This means that the class is <em>highly</em> cohesive.</p>
 
 <p>It was demonstrated a long time ago that more cohesive classes are better,

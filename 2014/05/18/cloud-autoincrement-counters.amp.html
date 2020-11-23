@@ -93,11 +93,11 @@ highly reliable and rather powerful. I’m using it in many web systems.</p>
 +------+----------------------------+</pre>
 
 <p>Every time you add a new item to the table, a new value
-of <code>id</code> has to be set. And this has to be done with concurrency in mind.
+of <code class="highlighter-rouge">id</code> has to be set. And this has to be done with concurrency in mind.
 SQL databases like PostgreSQL, Oracle, MySQL and others support
 auto-increment features. When you add a new record to the table,
 the value of the primary key is omitted and the server retrieves
-the next one automatically. If a number of <code>INSERT</code> requests
+the next one automatically. If a number of <code class="highlighter-rouge">INSERT</code> requests
 arrive at the same time the server guarantees that the numbers won’t be duplicated.</p>
 
 <p>However, DynamoDB doesn’t have this feature. Instead,
@@ -106,7 +106,7 @@ and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Wor
 which are very similar features. Still, they’re not exactly the same.</p>
 
 <p>In case of an atomic counter, you should create a supplementary
-table and keep the latest value of <code>id</code> in it.</p>
+table and keep the latest value of <code class="highlighter-rouge">id</code> in it.</p>
 
 <p>In case of conditional updates, you should
 <a href="/2014/08/15/retry-java-method-on-exception.html">retry</a>
@@ -122,7 +122,7 @@ It provides a simple atomic counter feature through its RESTful API.</p>
 
 <p>First, you create a counter with a unique name. Then,
 you set its initial value (it is zero by default). And, that’s it.
-Every time you need to obtain a new value for <code>id</code> column in
+Every time you need to obtain a new value for <code class="highlighter-rouge">id</code> column in
 DynamoDB table, you make an HTTP request to <a href="http://www.stateful.co">stateful.co</a>
 asking to
 increment your counter by one and return its next value.</p>
@@ -153,7 +153,7 @@ Counter counter = counters.get("foo");
 long value = counter.incrementAndGet(1L);
 System.out.println("new value: " + value);</pre>
 
-<p>You can review authentication parameters for <code>RtSttc</code>
+<p>You can review authentication parameters for <code class="highlighter-rouge">RtSttc</code>
 constructor at <a href="http://www.stateful.co">stateful.co</a>.</p>
 
 <p>The service is absolutely free of charge.</p>

@@ -115,16 +115,16 @@ XML column.</p>
 |    |               | &lt;/talk&gt;                              |
 +----+---------------+--------------------------------------+</pre>
 
-<p>Once a user posts <code>@rultor status</code> into a GitHub ticket, Rultor
+<p>Once a user posts <code class="highlighter-rouge">@rultor status</code> into a GitHub ticket, Rultor
 has to answer with a full status report about the current talk. In order
 to create such a text answer (a regular user would not appreciate an XML response),
-we have to fetch that <code>xml</code> column from the necessary DynamoDB record and convert
+we have to fetch that <code class="highlighter-rouge">xml</code> column from the necessary DynamoDB record and convert
 it to plain English text.</p>
 
 <p>Here is how we’re doing that with the help of
 <a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>
 and its class,
-<a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html"><code>XSLDocument</code></a>.</p>
+<a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html"><code class="highlighter-rouge">XSLDocument</code></a>.</p>
 
 <pre>final String xml = // comes from DynamoDB
 final XSL xsl = new XSLDocument(
@@ -132,7 +132,7 @@ final XSL xsl = new XSLDocument(
 );
 final String text = xsl.applyTo(xml);</pre>
 
-<p>That’s it. Now let’s see what’s there in that <code>status.xsl</code> file
+<p>That’s it. Now let’s see what’s there in that <code class="highlighter-rouge">status.xsl</code> file
 (this is just a skeleton of it; the full version is <a href="https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl">here</a>):</p>
 
 <pre>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -150,7 +150,7 @@ final String text = xsl.applyTo(xml);</pre>
 &lt;/xsl:stylesheet&gt;</pre>
 
 <p>It is good practice to create XSL documents only once per application
-run. We have a static utility method <a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29"><code>XSLDocument.make()</code></a> for this:</p>
+run. We have a static utility method <a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29"><code class="highlighter-rouge">XSLDocument.make()</code></a> for this:</p>
 
 <pre>final class Foo {
   private static final XSL STYLESHEET = XSLDocument.make(
@@ -179,8 +179,8 @@ these two Maven Saxon dependencies:</p>
   &lt;scope&gt;runtime&lt;/scope&gt;
 &lt;/dependency&gt;</pre>
 
-<p>All you need to do to start using <code>jcabi-xml</code> for XSL transformations is
-add this dependency to your <code>pom.xml</code>:</p>
+<p>All you need to do to start using <code class="highlighter-rouge">jcabi-xml</code> for XSL transformations is
+add this dependency to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
 <pre>&lt;dependency&gt;
   &lt;groupId&gt;com.jcabi&lt;/groupId&gt;

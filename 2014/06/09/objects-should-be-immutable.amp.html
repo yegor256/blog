@@ -80,21 +80,21 @@ have to be immutable,  i.e. never modify their encapsulated state
 modified after it is created.
 In Java, a good example of an
 immutable <a href="/2016/07/14/who-is-object.html">object</a>
-is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"><code>String</code></a>.
+is <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html"><code class="highlighter-rouge">String</code></a>.
 Once created, we can’t modify its state. We can request that it creates
 new strings, but its own state will never change.</p>
 
 
 
 <p>However, there are not so many immutable classes in JDK. Take,
-for example, class <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code>Date</code></a>.
-It is possible to modify its state using <code>setTime()</code>.</p>
+for example, class <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code class="highlighter-rouge">Date</code></a>.
+It is possible to modify its state using <code class="highlighter-rouge">setTime()</code>.</p>
 
 
 
 <p>I don’t know why the JDK designers decided to make these two
 very similar classes differently. However, I believe that the design
-of a mutable <code>Date</code> has many flaws, while the immutable <code>String</code>
+of a mutable <code class="highlighter-rouge">Date</code> has many flaws, while the immutable <code class="highlighter-rouge">String</code>
 is much more in the spirit of the object-oriented paradigm.</p>
 
 <p>Moreover, I think that <strong>all classes should be immutable in
@@ -172,7 +172,7 @@ is also used for the second one.</p>
 <p>We have to remember that the second request should always stay
 together and be executed after the first one.</p>
 
-<p>If <code>Request</code> class were immutable, the first snippet wouldn’t
+<p>If <code class="highlighter-rouge">Request</code> class were immutable, the first snippet wouldn’t
 work in the first place, and would have been rewritten like:</p>
 
 <pre>final Request request = new Request("");
@@ -200,7 +200,7 @@ because it doesn’t have
 
 <h2 id="avoiding-side-effects">Avoiding Side Effects</h2>
 
-<p>Let’s try to use our <code>Request</code> class in a new method (now it is mutable):</p>
+<p>Let’s try to use our <code class="highlighter-rouge">Request</code> class in a new method (now it is mutable):</p>
 
 <pre>public String post(Request request) {
   request.method("POST");
@@ -215,8 +215,8 @@ request.method("GET");
 String first = this.post(request);
 String second = request.fetch();</pre>
 
-<p>Method <code>post()</code> has a “side effect”—it makes changes
-to the mutable object <code>request</code>. These changes are not really
+<p>Method <code class="highlighter-rouge">post()</code> has a “side effect”—it makes changes
+to the mutable object <code class="highlighter-rouge">request</code>. These changes are not really
 expected in this case. We expect it to make a POST request and
 return its body. We don’t want to read its documentation just
 to find out that behind the scene it also modifies
@@ -224,14 +224,14 @@ the request we’re passing to it as an argument.</p>
 
 <p>Needless to say, such side effects lead to bugs and
 maintainability issues. It would be much better
-to work with an immutable <code>Request</code>:</p>
+to work with an immutable <code class="highlighter-rouge">Request</code>:</p>
 
 <pre>public String post(Request request) {
   return request.method("POST").fetch();
 }</pre>
 
 <p>In this case, we may not have any side effects.
-Nobody can modify our <code>request</code> object, no matter where
+Nobody can modify our <code class="highlighter-rouge">request</code> object, no matter where
 it is used and how deep through the call stack it is passed by method calls:</p>
 
 <pre>Request request = new Request("http://localhost").method("GET");
@@ -243,7 +243,7 @@ String second = request.fetch();</pre>
 <h2 id="avoiding-identity-mutability">Avoiding Identity Mutability</h2>
 
 <p>Very often, we want objects to be identical if their internal
-states are the same. <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code>Date</code></a>
+states are the same. <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code class="highlighter-rouge">Date</code></a>
 class is a good example:</p>
 
 <pre>Date first = new Date(1L);
@@ -253,7 +253,7 @@ assert first.equals(second); // true</pre>
 <p>There are two different objects; however, they are equal
 to each other because their encapsulated states are the same.
 This is made possible through their custom overloaded
-implementation of <code>equals()</code> and <code>hashCode()</code> methods.</p>
+implementation of <code class="highlighter-rouge">equals()</code> and <code class="highlighter-rouge">hashCode()</code> methods.</p>
 
 <p>The consequence of this convenient approach being used
 with mutable objects is that every time we modify
@@ -273,19 +273,19 @@ map.put(date, "hello, world!");
 date.setTime(12345L);
 assert map.containsKey(date); // false</pre>
 
-<p>When modifying the state of <code>date</code> object, we’re not expecting
+<p>When modifying the state of <code class="highlighter-rouge">date</code> object, we’re not expecting
 it to change its identity. We’re not expecting to lose an entry
 in the map just because the state of its key is changed. However,
 this is exactly what is happening in the example above.</p>
 
 
 
-<p>When we add an object to the map, its <code>hashCode()</code> returns one value.
-This value is used by <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html"><code>HashMap</code></a>
+<p>When we add an object to the map, its <code class="highlighter-rouge">hashCode()</code> returns one value.
+This value is used by <a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html"><code class="highlighter-rouge">HashMap</code></a>
 to place the entry into the internal hash table.
-When we call <code>containsKey()</code> hash code of the object is
+When we call <code class="highlighter-rouge">containsKey()</code> hash code of the object is
 different (because it is based on its internal state) and
-<code>HashMap</code> can’t find it in the internal hash table.</p>
+<code class="highlighter-rouge">HashMap</code> can’t find it in the internal hash table.</p>
 
 <p>It is a very annoying and difficult to debug
 side effects of mutable objects. Immutable objects avoid it completely.</p>
@@ -306,11 +306,11 @@ side effects of mutable objects. Immutable objects avoid it completely.</p>
   }
 }</pre>
 
-<p>It is obvious that an object of class <code>Stack</code> will be left
+<p>It is obvious that an object of class <code class="highlighter-rouge">Stack</code> will be left
 in a broken state if it
 <a href="/2015/12/01/rethrow-exceptions.html">throws</a>
 a runtime exception on overflow.
-Its <code>size</code> property will be incremented, while <code>items</code> won’t get a new element.</p>
+Its <code class="highlighter-rouge">size</code> property will be incremented, while <code class="highlighter-rouge">items</code> won’t get a new element.</p>
 
 
 
@@ -335,15 +335,15 @@ Very often, I hear people say that immutability is a
 fancy feature, while absolutely impractical in real
 enterprise systems. As a counter-argument, I can only show
 some examples of real-life applications that contain only immutable Java objects:
-<a href="http://http.jcabi.com"><code>jcabi-http</code></a>,
-<a href="/2014/04/24/java-xml-parsing-and-traversing.html"><code>jcabi-xml</code></a>,
-<a href="/2014/05/14/object-oriented-github-java-sdk.html"><code>jcabi-github</code></a>,
-<a href="/2014/05/26/amazon-s3-java-oop-adapter.html"><code>jcabi-s3</code></a>,
-<a href="/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html"><code>jcabi-dynamo</code></a>,
-<a href="/2014/04/29/w3c-java-validators.html"><code>jcabi-w3c</code></a>,
-<a href="/2014/08/18/fluent-jdbc-decorator.html"><code>jcabi-jdbc</code></a>,
-<a href="http://simpledb.jcabi.com"><code>jcabi-simpledb</code></a>,
-<a href="/2014/09/02/java-ssh-client.html"><code>jcabi-ssh</code></a>.
+<a href="http://http.jcabi.com"><code class="highlighter-rouge">jcabi-http</code></a>,
+<a href="/2014/04/24/java-xml-parsing-and-traversing.html"><code class="highlighter-rouge">jcabi-xml</code></a>,
+<a href="/2014/05/14/object-oriented-github-java-sdk.html"><code class="highlighter-rouge">jcabi-github</code></a>,
+<a href="/2014/05/26/amazon-s3-java-oop-adapter.html"><code class="highlighter-rouge">jcabi-s3</code></a>,
+<a href="/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html"><code class="highlighter-rouge">jcabi-dynamo</code></a>,
+<a href="/2014/04/29/w3c-java-validators.html"><code class="highlighter-rouge">jcabi-w3c</code></a>,
+<a href="/2014/08/18/fluent-jdbc-decorator.html"><code class="highlighter-rouge">jcabi-jdbc</code></a>,
+<a href="http://simpledb.jcabi.com"><code class="highlighter-rouge">jcabi-simpledb</code></a>,
+<a href="/2014/09/02/java-ssh-client.html"><code class="highlighter-rouge">jcabi-ssh</code></a>.
 The above are all Java libraries that work solely with immutable
 classes/objects. <a href="https://github.com/netbout/netbout">netbout.com</a>
 and <a href="/2014/12/04/synchronization-between-nodes.html">stateful.co</a> are
