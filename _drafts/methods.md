@@ -113,8 +113,8 @@ EO does it differently. There is no method calling. It just takes attributes out
 of objects and gives them to other objects, until control is
 passed to them and it gets down to the level of atoms.
 
-In the example above, the object `s` is not a calculated number.
-It's an atom `mul` that encapsulates `3.14`, `30`, and `30` (the radius). The
+In the example above, the object `a` is not a calculated number.
+It's an atom `mul` that encapsulates `3.14` and `30` (the radius). The
 result of the calculation is not yet known. If we don't do anything
 with `a`, the CPU will never do the calculation. However, if we decide
 to, say, print the number to the console, the calculation will happen:
