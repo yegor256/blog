@@ -143,7 +143,7 @@ its attributes out, the atom `stdout` will drop the line to the
 console.
 
 There are no attributes in `stdout`, `sprintf`, `mul`, and most
-other atoms, except one: [𝜑](https://en.wikipedia.org/wiki/Phi).
+other atoms, except one: 𝜑.
 Any object or atom has this specific attribute, also known as
 the "body" of an object. Once someone attempts to touch `stdout.𝜑`,
 the console will see the string.
