@@ -128,12 +128,12 @@ stdout
 {% endhighlight %}
 
 Here, the atom `sprintf` constructs the string, which encapsulates
-three attributes: the text, `r`, and `s`. By the way,
+three attributes: the text, `r`, and `a`. By the way,
 it's possible to use either vertical or horizontal notation
 for constructing objects. The code above may be written like this:
 
 {% highlight text %}
-stdout (sprintf "Radius is %d, Area is %d" r s)
+stdout (sprintf "Radius is %d, Area is %d" r a)
 {% endhighlight %}
 
 The atom `stdout` encapsulates the string constructed by `sprintf`
