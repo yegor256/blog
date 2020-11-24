@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-24T18:45:41+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Objects Without Methods</title><link href="https://www.yegor256.com/2020/11/24/objects-without-methods.html" rel="alternate" type="text/html" title="Objects Without Methods" /><published>2020-11-24T00:00:00+00:00</published><updated>2020-11-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/24/objects-without-methods</id><content type="html" xml:base="https://www.yegor256.com/2020/11/24/objects-without-methods.html">&lt;p&gt;What do you think an object is in OOP? No matter what language you are
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-24T19:11:40+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Objects Without Methods</title><link href="https://www.yegor256.com/2020/11/24/objects-without-methods.html" rel="alternate" type="text/html" title="Objects Without Methods" /><published>2020-11-24T00:00:00+00:00</published><updated>2020-11-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/24/objects-without-methods</id><content type="html" xml:base="https://www.yegor256.com/2020/11/24/objects-without-methods.html">&lt;p&gt;What do you think an object is in OOP? No matter what language you are
 programming with, you will most probably agree with Bruce Eckel,
 the author of &lt;a href=&quot;https://amzn.to/35xigKf&quot;&gt;Effective Java&lt;/a&gt;, who said that “each object has a state
 and operations that you can ask it to perform,” or
@@ -95,11 +95,11 @@ to, say, print the number to the console, the calculation will happen:&lt;/p&gt;
     a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here, the atom &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt; constructs the string, which encapsulates
-three attributes: the text, &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;. By the way,
+three attributes: the text, &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;. By the way,
 it’s possible to use either vertical or horizontal notation
 for constructing objects. The code above may be written like this:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout (sprintf &quot;Radius is %d, Area is %d&quot; r s)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout (sprintf &quot;Radius is %d, Area is %d&quot; r a)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The atom &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; encapsulates the string constructed by &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;
 and stays quiet. It doesn’t print anything! Only when someone
@@ -108,7 +108,7 @@ its attributes out, the atom &lt;code class=&quot;highlighter-rouge&quot;&gt;std
 console.&lt;/p&gt;
 
 &lt;p&gt;There are no attributes in &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt;, and most
-other atoms, except one: &lt;a href=&quot;https://en.wikipedia.org/wiki/Phi&quot;&gt;𝜑&lt;/a&gt;.
+other atoms, except one: 𝜑.
 Any object or atom has this specific attribute, also known as
 the “body” of an object. Once someone attempts to touch &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout.𝜑&lt;/code&gt;,
 the console will see the string.&lt;/p&gt;

@@ -172,11 +172,11 @@ to, say, print the number to the console, the calculation will happen:</p>
     a</pre>
 
 <p>Here, the atom <code class="highlighter-rouge">sprintf</code> constructs the string, which encapsulates
-three attributes: the text, <code class="highlighter-rouge">r</code>, and <code class="highlighter-rouge">s</code>. By the way,
+three attributes: the text, <code class="highlighter-rouge">r</code>, and <code class="highlighter-rouge">a</code>. By the way,
 it’s possible to use either vertical or horizontal notation
 for constructing objects. The code above may be written like this:</p>
 
-<pre>stdout (sprintf "Radius is %d, Area is %d" r s)</pre>
+<pre>stdout (sprintf "Radius is %d, Area is %d" r a)</pre>
 
 <p>The atom <code class="highlighter-rouge">stdout</code> encapsulates the string constructed by <code class="highlighter-rouge">sprintf</code>
 and stays quiet. It doesn’t print anything! Only when someone
@@ -185,7 +185,7 @@ its attributes out, the atom <code class="highlighter-rouge">stdout</code> will 
 console.</p>
 
 <p>There are no attributes in <code class="highlighter-rouge">stdout</code>, <code class="highlighter-rouge">sprintf</code>, <code class="highlighter-rouge">mul</code>, and most
-other atoms, except one: <a href="https://en.wikipedia.org/wiki/Phi">𝜑</a>.
+other atoms, except one: 𝜑.
 Any object or atom has this specific attribute, also known as
 the “body” of an object. Once someone attempts to touch <code class="highlighter-rouge">stdout.𝜑</code>,
 the console will see the string.</p>
