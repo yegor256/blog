@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Objects Without Methods"
-date: 2020-11-17
+date: 2020-11-24
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - oop and eo
   - eolang
   - eo design
-image: /images/2020/11/
+image: /images/2020/11/the-ballad-of-buster-scruggs.jpg
 jb_picture:
-  caption: ...
+  caption: The Ballad of Buster Scruggs (2018) by Coen brothers
 ---
 
 What do you think an object is in OOP? No matter what language you are
