@@ -21,7 +21,7 @@ jb_picture:
 
 What do you think an object is in OOP? No matter what language you are
 programming with, you will most probably agree with Bruce Eckel,
-the author of [Effective Java](https://amzn.to/35xigKf), who said that "each object has a state
+the author of [Thinking in Java](https://amzn.to/3pRHv1Q), who said that "each object has a state
 and operations that you can ask it to perform," or
 Benjamin Evans, the author of [Java in a Nutshell](https://amzn.to/35uKVPU), who claimed that it is
 "a collection of data fields that hold values and methods that operate on those values."
