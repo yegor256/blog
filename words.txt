@@ -419,6 +419,7 @@ argumentation
 arguments
 arises
 aristotle
+arithmetic
 arizona
 armed
 armies
@@ -502,6 +503,7 @@ atmosphere
 atom
 atomic
 atomicity
+atoms
 atop
 attach
 attached
@@ -723,6 +725,7 @@ beneficial
 benefit
 benefits
 benevolence
+benjamin
 benner
 berlin
 bernie
@@ -6625,6 +6628,7 @@ RDF
 rdquo
 RDS
 re
+re-define
 re-deploy
 re-design
 re-designed

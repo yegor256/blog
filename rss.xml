@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-23T08:24:43+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-11-24T18:45:41+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Objects Without Methods</title><link href="https://www.yegor256.com/2020/11/24/objects-without-methods.html" rel="alternate" type="text/html" title="Objects Without Methods" /><published>2020-11-24T00:00:00+00:00</published><updated>2020-11-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/24/objects-without-methods</id><content type="html" xml:base="https://www.yegor256.com/2020/11/24/objects-without-methods.html">&lt;p&gt;What do you think an object is in OOP? No matter what language you are
+programming with, you will most probably agree with Bruce Eckel,
+the author of &lt;a href=&quot;https://amzn.to/35xigKf&quot;&gt;Effective Java&lt;/a&gt;, who said that “each object has a state
+and operations that you can ask it to perform,” or
+Benjamin Evans, the author of &lt;a href=&quot;https://amzn.to/35uKVPU&quot;&gt;Java in a Nutshell&lt;/a&gt;, who claimed that it is
+“a collection of data fields that hold values and methods that operate on those values.”
+However, hold on… What if I told you that an object may have no “operations”
+and still be a perfect “equivalent of the quanta from which the universe
+is constructed,” as David West suggested in his great book
+&lt;a href=&quot;https://amzn.to/3kuXHlL&quot;&gt;Object Thinking&lt;/a&gt;?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Ballad of Buster Scruggs (2018) by Coen brothers&quot; src=&quot;/images/2020/11/the-ballad-of-buster-scruggs.jpg&quot; longdesc=&quot;#3de3bf2f&quot; /&gt;&lt;figcaption id=&quot;3de3bf2f&quot;&gt;The Ballad of Buster Scruggs (2018) by Coen brothers&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;In &lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;,
+our experimental programming language, we made an attempt to re-define
+OOP and its objects. There are two types of &lt;em&gt;things&lt;/em&gt; in EO: atoms and objects.
+An atom is the lowest level language primitive, which can’t be expressed by
+other atoms. For example, an arithmetic addition of two other objects is an atom
+(stay with me, this is EO syntax, you will get used to it):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;add 5 y &amp;gt; x&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In a more traditional Java-like &lt;a href=&quot;https://en.wikipedia.org/wiki/Infix_notation&quot;&gt;infix notation&lt;/a&gt;
+this code would look like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;x = add(5, y)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The atom is &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; and its two specific
+arguments are &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;. This statement creates a new atom, using
+the existing one and specifying its arguments. The name of the new atom being
+created is &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;. Once we ask this newly created atom to do anything,
+it gets what’s in &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;, adds &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt;, and starts behaving
+like a summary of them. Until then, it stays quiet.
+EO is a declarative language.&lt;/p&gt;
+
+&lt;p&gt;Atoms are provided by the EO runtime. For example,
+&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sub&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt;,  and &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt; are for arithmetic operations;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; are for forking and iterating;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;eq&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt; are for logical operations, and so on.
+Atoms may resemble low-level functions with arguments.
+However, they don’t calculate results immediately, but only when needed.
+Saying &lt;code class=&quot;highlighter-rouge&quot;&gt;add(5, file)&lt;/code&gt; won’t lead to reading the content
+of the file and adding 5 to it immediately. Only when the
+created atom is dealt with will the file reading happen.&lt;/p&gt;
+
+&lt;p&gt;Next, on top of these atoms, objects can be created by a programmer.
+For example, this is an object that represents a circle:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[r] &amp;gt; circle
+  mul 2 3.14 r &amp;gt; perimeter
+  mul 3.14 r r &amp;gt; area&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The first line creates an “abstract” object named &lt;code class=&quot;highlighter-rouge&quot;&gt;circle&lt;/code&gt;. It is abstract,
+because one of its attributes &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; is “free”. It’s not specified
+in this object and that’s why the object can’t be used as is, it has
+to be copied with &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; specified. For example, this is the circle &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;
+with the radius 30:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;circle 30 &amp;gt; c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The object &lt;code class=&quot;highlighter-rouge&quot;&gt;circle&lt;/code&gt; has three attributes. The first one is &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;, which is free.
+The other two are &lt;code class=&quot;highlighter-rouge&quot;&gt;perimeter&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt;. They are “bounded,” since their
+atoms are already defined: &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt; in both cases. To get the area of the
+circle &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; we do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;c.area &amp;gt; a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It looks like a method call, but it’s not. We don’t call a method, we just
+take an &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt; object from the object &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;. It’s not created for us
+at the moment we do &lt;code class=&quot;highlighter-rouge&quot;&gt;c.area&lt;/code&gt;! It has already been there sitting and waiting
+for us to take it. It was created right when the object &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; was built.&lt;/p&gt;
+
+&lt;p&gt;This is the difference between methods in Java and attributes in EO.
+In Java, every method is a procedure to be executed as soon as it’s
+called. This method calling (or message sending, according to
+&lt;a href=&quot;/2017/12/12/alan-kay-was-wrong.html&quot;&gt;early OOP adepts&lt;/a&gt;)
+mechanism was inherited from C functions,
+which itself we inherited from ALGOL procedures, I believe.
+EO does it differently. There is no method calling. It just takes attributes out
+of objects and gives them to other objects, until control is
+passed to them and it gets down to the level of atoms.&lt;/p&gt;
+
+&lt;p&gt;In the example above, the object &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; is not a calculated number.
+It’s an atom &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt; that encapsulates &lt;code class=&quot;highlighter-rouge&quot;&gt;3.14&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;30&lt;/code&gt; (the radius). The
+result of the calculation is not yet known. If we don’t do anything
+with &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;, the CPU will never do the calculation. However, if we decide
+to, say, print the number to the console, the calculation will happen:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout
+  sprintf
+    &quot;Radius is %d, Area is %d&quot;
+    r
+    a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the atom &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt; constructs the string, which encapsulates
+three attributes: the text, &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;s&lt;/code&gt;. By the way,
+it’s possible to use either vertical or horizontal notation
+for constructing objects. The code above may be written like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout (sprintf &quot;Radius is %d, Area is %d&quot; r s)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The atom &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; encapsulates the string constructed by &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;
+and stays quiet. It doesn’t print anything! Only when someone
+at some point tries to “touch” this object, taking one of
+its attributes out, the atom &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; will drop the line to the
+console.&lt;/p&gt;
+
+&lt;p&gt;There are no attributes in &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt;, and most
+other atoms, except one: &lt;a href=&quot;https://en.wikipedia.org/wiki/Phi&quot;&gt;𝜑&lt;/a&gt;.
+Any object or atom has this specific attribute, also known as
+the “body” of an object. Once someone attempts to touch &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout.𝜑&lt;/code&gt;,
+the console will see the string.&lt;/p&gt;
+
+&lt;p&gt;Thus, we have objects, but we don’t have methods.
+There are only attributes representing other objects.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">What do you think an object is in OOP? No matter what language you are programming with, you will most probably agree with Bruce Eckel, the author of Effective Java, who said that “each object has a state and operations that you can ask it to perform,” or Benjamin Evans, the author of Java in a Nutshell, who claimed that it is “a collection of data fields that hold values and methods that operate on those values.” However, hold on… What if I told you that an object may have no “operations” and still be a perfect “equivalent of the quanta from which the universe is constructed,” as David West suggested in his great book Object Thinking?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;This is the &lt;em&gt;seventh&lt;/em&gt; year of the
 &lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
@@ -1036,129 +1152,4 @@ data-modifying interactions to happen with the object and just want some
 of its methods to be pre-calculated.&lt;/p&gt;
 
 &lt;p&gt;P.P.S. This is the implementation for
-&lt;a href=&quot;https://github.com/binkley/kotlin-veil&quot;&gt;Kotlin&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="ruby" /><summary type="html">Here is a new idea I discovered just a few days ago while working with Codexia, a Ruby web app. I had to fetch data rows from PostgreSQL and return objects to the client. It’s always been a problem for me, how to do that without turning objects into DTOs. Here is the solution I found and gave a name: Veil Objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/constantine.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/05/constantine.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">EO the Career Killer</title><link href="https://www.yegor256.com/2020/05/13/career-killer.html" rel="alternate" type="text/html" title="EO the Career Killer" /><published>2020-05-13T00:00:00+00:00</published><updated>2020-05-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/05/13/career-killer</id><content type="html" xml:base="https://www.yegor256.com/2020/05/13/career-killer.html">&lt;p&gt;It’s time to answer one of the most popular questions I hear from junior
-programmers when they meet me at a software conference or online: What is
-the point of studying &lt;a href=&quot;https://www.elegantobjects.org&quot;&gt;Elegant Objects&lt;/a&gt;
-(the new object-oriented paradigm I’ve been preaching for the last five years)
-if almost nobody is using it on real projects?
-Why swim against the current and learn something that may only harm
-my career, even if it does seem like a sound technical concept? Where is the
-profit in making myself an outsider? These are good questions; thanks for asking them!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Dog Day Afternoon (1975) by Sidney Lumet&quot; src=&quot;/images/2020/05/dog-day-afternoon.jpg&quot; longdesc=&quot;#f456fa6c&quot; /&gt;&lt;figcaption id=&quot;f456fa6c&quot;&gt;Dog Day Afternoon (1975) by Sidney Lumet&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let me quote one of the emails I received recently, after
-the first lecture in &lt;a href=&quot;https://youtu.be/aLaDDoT2v54&quot;&gt;MIPT&lt;/a&gt; about OOP:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Recently I have seen the first part of your lecture called “Pain of OOP”
-and was very intrigued by the average age of the visitors. How do you think,
-will it be hard for them to find a job when the courses are over?
-Won’t that leave a “footprint” in their minds that almost everything they
-will see as junior software engineers will be totally against what you
-taught them? Or do they have to accept that as it is, taking into
-account that, as juniors, they will have no right to even
-propose changes to the architecture?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Indeed, the question makes a lot of sense. &lt;a href=&quot;https://www.elegantobjects.org&quot;&gt;Elegant Objects&lt;/a&gt;
-is a very alternative concept, provoking you, a junior programmer, to renounce everything
-you’ve learned to date &lt;a href=&quot;/2016/08/15/what-is-wrong-object-oriented-programming.html&quot;&gt;about OOP&lt;/a&gt;
-and to start thinking differently. It sounds
-interesting while you are sitting in a room listening to my lecture, but it
-&lt;del&gt;may&lt;/del&gt; will &lt;a href=&quot;/2019/11/05/revolutionary-evolution.html&quot;&gt;hurt&lt;/a&gt;
-you once you attend your first job interview.&lt;/p&gt;
-
-&lt;p&gt;I’ve heard stories of people failing job interviews just after saying my
-name and claiming that they agree with my OOP ideas. That was enough to
-tell their interviewers that they wouldn’t be able to work normally in a traditional
-Java team, which uses a good old semi-procedural Spring-based Java
-coding style.&lt;/p&gt;
-
-&lt;p&gt;I’ve even heard stories of programmers being fired after their attempts to teach
-the team a “better OOP,” ultimately ruining their reputations. If you want
-to hear those stories, just join our Telegram group &lt;a href=&quot;https://t.me/elegantobjects&quot;&gt;@elegantobjects&lt;/a&gt;
-and ask there. You will hear many of them.&lt;/p&gt;
-
-&lt;p&gt;Will something similar happen to you? Most probably, yes.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;You will suffer. You will get fired. Your career will be stuck. You will be in a big trouble.
-&lt;/aside&gt;
-
-&lt;p&gt;You will suffer. You will get fired. You will have issues finding interesting
-projects, because everything you will see written in traditional Java, Ruby, C++,
-or Python will look like garbage to you. You will be constantly annoyed that
-people around you don’t understand you. Your career will be stuck. You
-won’t be able to get a promotion, because your thinking will be toxic—people
-will be afraid of your technical ideas—they will sound too extreme
-for them. You will be very tempted to go back to the good old procedural
-nightmare, but won’t be able to do it anymore. You will be in a big trouble.&lt;/p&gt;
-
-&lt;p&gt;This is exactly what was happening to me before I started writing this blog
-and publishing &lt;a href=&quot;/books.html&quot;&gt;my books&lt;/a&gt;: I was alone, on my own, in front of those who were
-ready to criticize my ideas just for the fun of it. However, once I gave my concept
-a name and started getting followers around it, everything changed. I was
-not a crazy programmer any more, I became a member of a new &lt;a href=&quot;https://www.elegantobjects.org&quot;&gt;tech sect&lt;/a&gt;,
-which, of course, had its pros and cons, but … it was &lt;em&gt;organized&lt;/em&gt;!&lt;/p&gt;
-
-&lt;p&gt;It became much more difficult for my opponents to diminish the value of my
-words, because no longer was I just yet another regular programmer with crazy ideas.
-I was a book author, who managed to structure his thoughts, publish the book,
-and even to get some readers and positive reviews. I was still wrong (as far
-as they were concerned), but now I was &lt;em&gt;respected&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’m suggesting you do the same. Don’t merely listen to my videos,
-follow my blog, or read my books, but also become an active participant!
-Once they see you as a vocal member of an organized group of engineers,
-they will treat you completely differently.
-You will still be wrong, in their eyes, but you will be respected and your career will
-go just fine. You will have all the rights to “propose changes to the
-architecture.” It’s easy to shut up a young programmer, but it’s much
-more difficult to shut up a young programmer who is a speaker and a book
-writer, and a member of a professional community.&lt;/p&gt;
-
-&lt;p&gt;This is how you can truly join our community:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Add your name to &lt;a href=&quot;https://www.elegantobjects.org&quot;&gt;elegantobjects.org&lt;/a&gt;;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Join two Telegram groups:
-&lt;a href=&quot;https://t.me/elegantobjects&quot;&gt;@elegantobjects&lt;/a&gt; (for professionals)
-and
-&lt;a href=&quot;https://t.me/painofoop&quot;&gt;@painofoop&lt;/a&gt; (for juniors);&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Write a blog about OOP, like &lt;a href=&quot;https://www.pragmaticobjects.com/&quot;&gt;@skapral&lt;/a&gt;
-and &lt;a href=&quot;https://blog.g4s8.wtf/&quot;&gt;@g4s8&lt;/a&gt; are doing;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Create an open source framework or a library in the EO style
-and make it popular on GitHub
-(join our &lt;a href=&quot;https://t.me/elegantobjects&quot;&gt;Telegram group&lt;/a&gt; to get help);&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Speak at our &lt;a href=&quot;https://www.meetup.com/Object-Thinking/&quot;&gt;Object Thinking meetup&lt;/a&gt;,
-like &lt;a href=&quot;https://youtu.be/Z61mvuzLtbg&quot;&gt;@driver773&lt;/a&gt;,
-&lt;a href=&quot;https://youtu.be/Ptz6kJ3NXGI&quot;&gt;@guseyn&lt;/a&gt; and
-&lt;a href=&quot;https://youtu.be/EbmJoolbQZw&quot;&gt;@DronMDF&lt;/a&gt; already did;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Make a speech about EO at some software conference or a meetup,
-like &lt;a href=&quot;https://www.youtube.com/watch?v=LlkptvKK6Mw&quot;&gt;@filrfreire&lt;/a&gt; did;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Publish a book (I will be more than happy to help you).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pick the one you like most, they are sorted from the easiest to the
-most complex actions you can take.&lt;/p&gt;
-
-&lt;p&gt;Don’t be scared, act!&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do you use the principles of &lt;a href=&quot;https://twitter.com/hashtag/elegantobjects?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#elegantobjects&lt;/a&gt; in your project?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1274792685681901571?ref_src=twsrc%5Etfw&quot;&gt;June 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">It’s time to answer one of the most popular questions I hear from junior programmers when they meet me at a software conference or online: What is the point of studying Elegant Objects (the new object-oriented paradigm I’ve been preaching for the last five years) if almost nobody is using it on real projects? Why swim against the current and learn something that may only harm my career, even if it does seem like a sound technical concept? Where is the profit in making myself an outsider? These are good questions; thanks for asking them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/dog-day-afternoon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/05/dog-day-afternoon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;a href=&quot;https://github.com/binkley/kotlin-veil&quot;&gt;Kotlin&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="ruby" /><summary type="html">Here is a new idea I discovered just a few days ago while working with Codexia, a Ruby web app. I had to fetch data rows from PostgreSQL and return objects to the client. It’s always been a problem for me, how to do that without turning objects into DTOs. Here is the solution I found and gave a name: Veil Objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/05/constantine.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/05/constantine.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
