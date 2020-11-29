@@ -37,28 +37,15 @@ keywords:
               </time>
             </li>
             <li itemprop="wordCount">
-              {{ post.content | count_words }} words
+              {{ content | number_of_words | append: ' words' }}
             </li>
             <li>
-              {% capture time %}{{ post.content | reading_time }}{% endcapture %}
-              {% if time == '1' %}
-                a minute
-              {% else %}
-                {% case time %}
-                  {% when '2' %}
-                    two
-                  {% when '3' %}
-                    three
-                  {% when '4' %}
-                    four
-                  {% when '5' %}
-                    five
-                  {% else %}
-                    {{ time }}
-                {% endcase %}
-                minutes
-              {% endif %}
-              to read
+              {% capture words %}
+              {{ content | number_of_words | minus: 180 }}
+              {% endcapture %}
+              {% unless words contains '-' %}
+              {{ words | plus: 180 | divided_by: 180 | append: ' minutes to read' }}
+              {% endunless %}
             </li>
             <li>
               <i class="icon icon-comments"></i>
