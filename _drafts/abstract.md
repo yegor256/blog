@@ -30,15 +30,15 @@ exist in functional programming: declaring a function is
 abstraction,
 while calling it with specific arguments is
 [application](https://en.wikipedia.org/wiki/Apply).
-The question is: why abstraction in OOP requires classes,
+The [question is]({% pst 2016/sep/2016-09-20-oop-without-classes %}):
+why OOP needs classes _and_ objects,
 while FP survives with just functions?
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Let's get straight to the point. This is an _abstract_ object in
-[EO](https://www.eolang.org):
+This is an _abstract_ object in [EO](https://www.eolang.org):
 
 {% highlight text %}
 [id db] > book
@@ -47,17 +47,18 @@ Let's get straight to the point. This is an _abstract_ object in
     id
 {% endhighlight %}
 
-The name of the object is `book`. It has three attributes: `id`, `db`, and `title`.
+The name of the object is `book`. It has three
+[attributes]({% pst 2020/nov/2020-11-24-objects-without-methods %}): `id`, `db`, and `title`.
 The first two are "free": they are not bound to any objects yet. The third
 one `title` is bound already to the copy of the object `db.query`. The object
 `book` is abstract because it has some free attributes---it's not specific
 enough to refer to a specific entity in the real world.
 
-The construct `db.query` is taking an abstract object `query` from the object
+The construct `db.query` takes an abstract object `query` from the object
 bound to the attribute `db` and makes a copy of it, specifying two
 arguments: the SQL string and the `id`. The process of copying an abstract
 object is called "application," since it's very similar to applying
-a function in FP.
+arguments to a function in FP.
 
 The right way to use abstract `book` is to make a copy of it, specifying
 the arguments:
@@ -75,13 +76,13 @@ formula:
 b ↤ book(42, mysql)
 {% endhighlight %}
 
-In order to get the title of the object `b` and name it `t`, we just do:
+In order to get the `title` of `b` and name it `t`, we just do:
 
 {% highlight text %}
 b.title > t
 {% endhighlight %}
 
-Or we can put it all together in one line:
+We can also put it all together in one line:
 
 {% highlight text %}
 (book 42 mysql).title > t
@@ -105,10 +106,10 @@ x 42 > b
 {% endhighlight %}
 
 Even though the syntax of EO makes it possible to say `book.title`,
-it will lead to compile-time (or runtime) error: It's prohibited to touch
+it will lead to compile-time error: It's prohibited to touch
 free attributes of an abstract object or attributes that depend
-on other free attributes. However, let's say, we add a new attribute to the
-`book`, in order to print it's ID to the console:
+on other free attributes. However, let's say, we add a new attribute `print` to the
+`book`, in order to print it's `id` to the console:
 
 {% highlight text %}
 [id db] > book
@@ -123,7 +124,7 @@ on other free attributes. However, let's say, we add a new attribute to the
 
 The attribute `print` doesn't need `db` attribute to be bound, since it
 doesn't use it. It's possible to copy the `book` with just `id` and
-then call `print` (assuming with are in EO interactive console):
+then call `print` (assuming it's happening in EO interactive console):
 
 {% highlight text %}
 $ book 42:id > x
@@ -132,8 +133,6 @@ $ x.print
 The book ID is 42
 {% endhighlight %}
 
-We [started thinking]({% pst 2016/sep/2016-09-20-oop-without-classes %})
-in this direction a few years ago, now it's implemented in EO programming language.
 By the way, do you know any other languages with abstract objects or
 EO is the first one to introduce this design?
 
