@@ -3,7 +3,7 @@ layout: post
 title: "Objects Without Methods"
 date: 2020-11-24
 place: Moscow, Russia
-tags: oop
+tags: oop eolang
 description: |
   There are no methods in EO programming language, while
   objects have attributes, which are other objects, created

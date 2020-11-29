@@ -75,7 +75,8 @@ I think the difference is obvious.
 
 In the first example, you're
 dealing with a monster
-[class]({% pst 2016/sep/2016-09-20-oop-without-classes %}) that can do everything for you, including
+[class]({% pst 2016/sep/2016-09-20-oop-without-classes %})
+that can do everything for you, including
 sending your MIME message via SMTP, creating the message, configuring
 its parameters, adding MIME parts to it, etc. The
 [`Email`](http://svn.apache.org/viewvc/commons/proper/email/tags/EMAIL_1_3_3/src/main/java/org/apache/commons/mail/Email.java?revision=1609295&view=co)
