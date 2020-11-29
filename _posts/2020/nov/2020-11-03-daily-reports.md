@@ -144,3 +144,4 @@ evening daily reports are the best tools to manage people. What else can you use
 to connect their performance directly with guilt mechanisms in
 their brains?
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Your team leader is asking you to email him every day with a summary of your daily results. Your reaction:</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1318899898364866560?ref_src=twsrc%5Etfw">October 21, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
