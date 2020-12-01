@@ -68,7 +68,7 @@ book 42 mysql > b
 {% endhighlight %}
 
 Here, `42` is the `id`, `mysql` is the `db` and `b` is
-a new object---a copy of the `book`. In λ-calculus, which is foundational
+a new object---a copy of the `book`. In 𝜑-calculus, which is foundational
 to the EO programming language, this would be written as the following
 formula:
 
