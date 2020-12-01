@@ -88,7 +88,7 @@ We can also put it all together in one line:
 (book 42 mysql).title > t
 {% endhighlight %}
 
-It's possible to apply some arguments to an astract object leaving
+It's possible to apply some arguments to an abstract object leaving
 other attributes still free. For example, this would make
 another abstract object, still requiring the `id` to be specified
 in order to become a _closed_ object:
