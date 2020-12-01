@@ -50,7 +50,7 @@ This is an _abstract_ object in [EO](https://www.eolang.org):
 The name of the object is `book`. It has three
 [attributes]({% pst 2020/nov/2020-11-24-objects-without-methods %}): `id`, `db`, and `title`.
 The first two are "free": they are not bound to any objects yet. The third
-one `title` is bound already a copy of the object `db.query`. The object
+one `title` is bound already to a copy of the object `db.query`. The object
 `book` is abstract because it has some free attributes---it's not specific
 enough to refer to a specific entity in the real world.
 
