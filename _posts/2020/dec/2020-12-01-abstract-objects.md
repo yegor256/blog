@@ -14,9 +14,9 @@ keywords:
   - eolang objects
   - eolang
   - eo design
-image: /images/2020/12/
+image: /images/2020/12/the-irishman.jpg
 jb_picture:
-  caption: ...
+  caption: The Irishman (2019) by Martin Scorsese
 ---
 
 How do you create objects in your object-oriented language?
