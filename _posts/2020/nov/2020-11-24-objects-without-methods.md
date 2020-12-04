@@ -17,6 +17,8 @@ keywords:
 image: /images/2020/11/the-ballad-of-buster-scruggs.jpg
 jb_picture:
   caption: The Ballad of Buster Scruggs (2018) by Coen brothers
+translated:
+  - Ukrainian: https://serge3ling.github.io/yegor256/objects-without-methods/
 ---
 
 What do you think an object is in OOP? No matter what language you are
