@@ -37,9 +37,17 @@ Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj5
 feel free to import it (to Google Calendar or iCal) and stay
 informed about everything I do publicly, including these webinars.
 
-## 2020
+## 2021
 
-{% webinar 02-12-2020 53 4u83tJkqQgU RAII in Java %}
+{% webinar 06-01-2021 54 I9xyZVSo-HY How to Make a DSL with ANTLR4 %}
+
+<a href="https://www.youtube.com/watch?v=I9xyZVSo-HY"><img src="https://i.ytimg.com/vi/I9xyZVSo-HY/mqdefault.jpg" class="wnr" alt="Webinar no.53 by Yegor Bugayenko"/></a>
+Jan 6, 2021<br/>
+&#35;54: **How to Make a DSL with ANTLR4**<br/>
+You can create your own Domain Specific Language (DSL) using ANTLR4 library in Java.
+Here we discuss how this can be done and create a new DSL in less than an hour.
+
+## 2020
 
 <a href="https://www.youtube.com/watch?v=4u83tJkqQgU"><img src="https://i.ytimg.com/vi/4u83tJkqQgU/mqdefault.jpg" class="wnr" alt="Webinar no.53 by Yegor Bugayenko"/></a>
 Dec 2, 2020<br/>
