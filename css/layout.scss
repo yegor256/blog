@@ -327,6 +327,14 @@ h2 {
     display: inline;
     margin-right: .5 * $em;
     white-space: nowrap;
+
+    &.has-poll {
+      /* nothing yet */
+    }
+
+    &.tags {
+      /* nothing yet */
+    }
   }
 }
 
