@@ -209,3 +209,5 @@ start missing it very soon if you stay somewhere else for too long.
 If you can afford to live in different countries, I would recommend trying
 Silicon Valley for a change. It's definitely an exceptional experience. Both
 good and bad.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What do your friends, who live and work there, tell you about <a href="https://twitter.com/hashtag/SiliconValley?src=hash&amp;ref_src=twsrc%5Etfw">#SiliconValley</a>?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1335586177152405506?ref_src=twsrc%5Etfw">December 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
