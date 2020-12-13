@@ -197,3 +197,5 @@ We software developers are the territory!
 Thus, if you are a coder, make your own project now.
 Sooner or later Google will knock on the door and offer
 you a big check, just to do it earlier than Microsoft.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Why don&#39;t you have your own super popular <a href="https://twitter.com/hashtag/opensource?src=hash&amp;ref_src=twsrc%5Etfw">#opensource</a> product yet?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1338048990907076609?ref_src=twsrc%5Etfw">December 13, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
