@@ -17,6 +17,8 @@ keywords:
 image: /images/2020/12/the-irishman.jpg
 jb_picture:
   caption: The Irishman (2019) by Martin Scorsese
+translated:
+  - Ukrainian: https://serge3ling.github.io/yegor256/202012-abstract-objects/
 ---
 
 How do you create objects in your object-oriented language?
