@@ -17,6 +17,12 @@ keywords:
 image: /images/2020/05/filth.jpg
 jb_picture:
   caption: Filth (2013) by Jon S. Baird
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "The Year-Round Joys and Benefits of Open Source Software"
+    date: 2020-12-11
+    url: https://cacm.acm.org/blogs/blog-cacm/249265-the-year-round-joys-and-benefits-of-open-source-software/fulltext
 ---
 
 Some companies massively invest in open source software projects,
