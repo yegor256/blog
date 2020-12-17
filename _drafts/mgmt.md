@@ -19,15 +19,15 @@ jb_picture:
   caption:
 ---
 
-We are in trouble. On one hand, most managers are weak and incompetent.
+We are in trouble. On the one hand, most managers are weak and incompetent.
 Their mistakes destroy our [motivation]({% pst 2017/sep/2017-09-19-what-motivates-me %}),
 decrease productivity, and lead to business failures.
 As a result, many of us believe that managers are evil.
-On the other hand, there is a new idea that self-managing organizations is
-the future. Its adepts are trying to convience us that chaos is
+On the other hand, there is a new idea that self-managing organizations are
+the future. Its proponents are trying to convince us that chaos is
 better than management mistakes. They want us to believe that subordination,
 hierarchy, [control]({% pst 2016/sep/2016-09-27-command-control-innovate %}),
-and order are new bad words to be prohibited in a respected society.
+and order are new bad words to be prohibited in a respectful society.
 We must stop them!
 
 <!--more-->
@@ -42,7 +42,7 @@ post-bureaucratic, humanistic, democratic, and even
 [says](https://jorgdesign.springeropen.com/articles/10.1186/s41469-019-0062-9)
 that self-management is "an _ideal_ type of organizational form."
 The idea is trendy, especially after the publication
-of the [Reinventing Organizations](https://amzn.to/3mgxt7k) by Frederic Laloux.
+of [Reinventing Organizations](https://amzn.to/3mgxt7k) by Frederic Laloux.
 However, "calling it a novel phenomenon is utter nonsense,"
 [according](https://corporate-rebels.com/reinventing-the-wheel/) to
 [Joost Minnaar](https://twitter.com/joost_minnaar)---the idea has been known for decades.
@@ -50,7 +50,7 @@ However, "calling it a novel phenomenon is utter nonsense,"
 My first question is: what exactly was wrong with
 bureaucratic, un-humanistic, and non-democratic management?
 [James R. Barker](https://en.wikipedia.org/wiki/James_R._Barker)
-made it clear [long time ago](https://www.jstor.org/stable/pdf/2393374.pdf):
+made it clear [a long time ago](https://www.jstor.org/stable/pdf/2393374.pdf):
 "workers in a self-managing team will experience day-to-day work life in vastly
 different ways than workers in a traditional management system. Instead
 of being told what to do by a supervisor, self-managing workers must
@@ -59,24 +59,25 @@ responsibility for those actions."
 
 Sounds [very attractive](https://medium.com/culturati/2f23c298c79b).
 Nobody tells us what to do anymore! We just look around,
-gather information, synthesize more information, and "act!" (whatever it means).
-Of course, we must not forget that money somehow arrives to our bank accounts
+gather information, synthesize more information, and "act!" (whatever that means).
+Of course, we must not forget that money somehow arrives in our bank accounts
 every two weeks---this component of the old un-humanistic bureaucratic management model
 we don't want to get rid of, I believe. Right, Mr. Barker?
 
 Seriously, who in a self-managing organization makes these decisions:
 
   * An employee asks for a raise
-  * An employ gets lazy and must be fired
-  * An employ needs a budget for a new project
+  * An employee gets lazy and must be fired
+  * An employee needs a budget for a new project
   * A project must be terminated
   * A new employee needs to be hired
 
-Simply put, who and how resolves monetary and performance appraisal conflicts?
+Simply put, who resolves monetary and performance appraisal conflicts, and how?
 All together by "raising their thumb"
-as [Generative Decision Making](https://medium.com/percolab-droplets/generative-decision-making-process-cf0b131c5ac4) suggests? Thumbs-raising will work for low-caliber questions like which
-kind of coffee we should order for the office next week or what is the
-best color for our new t-shirts. However, more important strategic decisions
+as [Generative Decision Making](https://medium.com/percolab-droplets/generative-decision-making-process-cf0b131c5ac4) suggests?
+Thumb-raising will work for low-caliber questions like which
+kind of coffee we should order for the office next week or what the
+best color is for our new t-shirts. However, more important strategic decisions
 may only be made by those who are ready to pay for mistakes: managers.
 
 In a traditional hierarchical organization, everybody has a manager, who
@@ -94,8 +95,8 @@ there is one idea I do share with them: managers are evil.
 Pay attention: managers, not management! There is a big difference.
 
 Let's get back to the problem definition once again: We don't like being
-told what to do. However, is this really the very problem or there is something deeper
-that we are missing? Let's see, what are the most popular issues with management people
+told what to do. However, is this really the problem or is there something deeper
+that we are missing? Let's see, what are the most popular issues with management that people
 complain about (I got them from
 [Inc](https://www.inc.com/marcel-schwantes/8-mistakes-managers-make-according-to-their-employees.html)
 and
@@ -104,7 +105,7 @@ and
   * They micromanage
   * They don't listen
   * They don't value us
-  * They provide feedback
+  * They don't provide feedback
   * They don't motivate
   * They don't set goals
   * They don't delegate
@@ -123,19 +124,19 @@ delivering anything, and they resort to micromanagement.
 The root cause always is the same: appraisal mistakes.
 
 What can we do to fix this?
-We should take appraisal job away from managers! This is how we solve the problem.
+We should take the appraisal job away from managers! This is how we solve the problem.
 People must not decide whose performance is better, because they can't do it
-right and this leads to all other problems. If managers stop appraising us,
+right and this leads to all the other problems. If managers stop appraising us,
 they will turn into leaders, mentors, teachers, experts, gurus, decision makers,
 and everybody else, who we don't hate. We hate _appraisers_, because they make
 mistakes about our performance and kill our motivation. We won't hate them
-at all, if there will be a _system_, which is based on
+at all, if there is a _system_, which is based on
 [_metrics_]({% pst 2020/jun/2020-06-23-individual-performance-metrics %}),
 which judge our results.
 
 What self-managing adepts are offering is to destroy the entire management
 system and replace it with chaos (or something very close to it).
-They seem to not understand where is the real problem. They just don't like
+They seem to not understand where the real problem is. They just don't like
 "being told what to do" and to fix this they suggest getting rid
 of what our civilization has been building for thousands of years:
 responsibility delegation through subordination (aka "management").
