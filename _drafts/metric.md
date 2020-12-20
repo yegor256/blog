@@ -97,7 +97,8 @@ someone, who you don't respect due to his/her bad results and lack
 of skills, is appreciated more than yourself by your boss ---
 you get jealous and quit.
 
-Teal gluten-free managers can't objectively evaluate your performance.
+Teal [gluten-free]({% pst 2017/jun/2017-06-06-gluten-free-management %})
+managers can't objectively evaluate your performance.
 They will always judge you irrationally and emotionally. They simply
 don't collect any data during the year (because it's a bad idea,
 [remember]({% pst 2020/jun/2020-06-23-individual-performance-metrics %})!)
@@ -126,7 +127,7 @@ decreases, you are getting out of their circle---it's dangerous.
 
 This metric will help you understand your position in the team before
 the end of the year, when it's too late. Just see how often the boss
-is texting to Jeff and you will know where you are standing. No matter
+is texting Jeff and you will know where you are standing. No matter
 what Jeff is working on, what is the quality of his code, what is the
 value of his contribution---these things are less important than the
 traffic of messages your common boss is sending to him.
