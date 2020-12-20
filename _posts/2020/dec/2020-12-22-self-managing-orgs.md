@@ -14,9 +14,9 @@ keywords:
   - self-managing organizations
   - self-management
   - management
-image: /images/2020/12/
+image: /images/2020/12/loro.jpg
 jb_picture:
-  caption:
+  caption: Loro (2018) by Paolo Sorrentino
 ---
 
 We are in trouble. On the one hand, most managers are weak and incompetent.
