@@ -357,3 +357,5 @@ You can do too, [0rsk](https://www.0rsk.com) is free for all.
 P.S. There is a curated list of causes, risks, and effects, where you can
 pick your the one most revelant to your case: [yegor256/awesome-risks](https://github.com/yegor256/awesome-risks).
 You can even add your ideas there.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you have a formal Risk List in your project?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1340641674595328000?ref_src=twsrc%5Etfw">December 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
