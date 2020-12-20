@@ -102,8 +102,8 @@ managers can't objectively evaluate your performance.
 They will always judge you irrationally and emotionally. They simply
 don't collect any data during the year (because it's a bad idea,
 [remember]({% pst 2020/jun/2020-06-23-individual-performance-metrics %})!)
-and they only thing they have in front of the when it's time to make
-a decision is their feelings about yourself.
+and the only thing they have in front of them when it's time to make
+a decision---is their feelings about yourself!
 
 I think that it's still possible to survive in this
 [mess]({% pst 2020/jan/2020-01-07-embrace-the-chaos %}) though. We just
