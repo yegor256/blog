@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Self-Managing vs. Manager-Free Organizations"
-date: 2020-12-15
+date: 2020-12-22
 place: Moscow, Russia
 tags: management
 description: |
