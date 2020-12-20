@@ -131,6 +131,8 @@ understood Dr. West. And we are not even discussing
 the [Reflection API](https://docs.oracle.com/javase/tutorial/reflect/), which
 would allow us to take the `t` out of `Temperature` without even calling any methods.
 
+{% quote Encapsulation is not an explicit barrier, it exists for as long as we have the desire to respect it. %}
+
 Thus, encapsulation is _not_ an explicit barrier. It exists for as long as we have
 the desire to respect it. If we don't, nothing can stop us from abusing an
 object in any way we want. And even `private` attribute modifiers won't help.
