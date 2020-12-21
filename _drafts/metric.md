@@ -65,7 +65,7 @@ management, or humane management, or just love and peace):
     the performance of creative people! <del>Go back to your cage!</del>"
 
   * When the time comes, they make their monetary decisions based on their personal
-    emotional and irrational judgement of yourself and your results.
+    emotional and irrational judgment of yourself and your results.
     You just get a smaller bonus by the end of the year than Jeff, your
     less experienced but more vocal and friendly co-worker.
     Why? Just because. Take it or leave it.
@@ -92,7 +92,7 @@ But the question remains, how to behave in order to get the biggest
 bonus by the end of the year. I would even say that a more important question
 is how to not get yourself hugely frustrated when your bonus is smaller
 than Jeff's, who was obviously less productive, according to your personal
-judgement. This actually is the key problem: jealousy. If you see
+judgment. This actually is the key problem: jealousy. If you see
 that someone, who you don't respect due to his/her bad results and lack
 of skills, is appreciated more than yourself by your boss ---
 you get jealous and quit.
@@ -132,7 +132,7 @@ what Jeff is working on, what the quality of his code is, what the
 value of his contribution is---these things are less important than the
 traffic of messages your mutual boss is sending to him.
 
-Am I being too saracstic? Not really. This is the new reality
+Am I being too sarcastic? Not really. This is the new reality
 the proponents of self-managing teams are pushing us towards:
 Objectivity and honesty is being replaced with adulation and grovelling.
 Take it or leave it.
