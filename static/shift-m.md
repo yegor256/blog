@@ -53,7 +53,7 @@ Recent episodes:
 
 <img src="/images/shift-m/allen-holub.png" class="guest-face" alt="Face of Allen Holub"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
-&#35;44: [Motivation, estimates, and Agile with Allen Holub](/shift-m/2020/44.html)<br/>\
+&#35;44: [Motivation, estimates, and Agile with Allen Holub](/shift-m/2020/44.html)<br/>
 22 December 2020; 64 min.
 
 <img src="/images/shift-m/david-west.png" class="guest-face" alt="Face of David M. West"/>
