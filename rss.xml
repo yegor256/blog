@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-12-06T20:39:50+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Abstract Objects</title><link href="https://www.yegor256.com/2020/12/01/abstract-objects.html" rel="alternate" type="text/html" title="Abstract Objects" /><published>2020-12-01T00:00:00+00:00</published><updated>2020-12-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/01/abstract-objects</id><content type="html" xml:base="https://www.yegor256.com/2020/12/01/abstract-objects.html">&lt;p&gt;How do you create objects in your object-oriented language?
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-12-22T06:13:40+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Self-Managing vs. Manager-Free Organizations</title><link href="https://www.yegor256.com/2020/12/22/self-managing-orgs.html" rel="alternate" type="text/html" title="Self-Managing vs. Manager-Free Organizations" /><published>2020-12-22T00:00:00+00:00</published><updated>2020-12-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/22/self-managing-orgs</id><content type="html" xml:base="https://www.yegor256.com/2020/12/22/self-managing-orgs.html">&lt;p&gt;We are in trouble. On the one hand, most managers are weak and incompetent.
+Their mistakes destroy our &lt;a href=&quot;/2017/09/19/what-motivates-me.html&quot;&gt;motivation&lt;/a&gt;,
+decrease productivity, and lead to business failures.
+As a result, many of us believe that managers are evil.
+On the other hand, there is a new idea that self-managing organizations are
+the future. Its proponents are trying to convince us that chaos is
+better than management mistakes. They want us to believe that subordination,
+hierarchy, &lt;a href=&quot;/2016/09/27/command-control-innovate.html&quot;&gt;control&lt;/a&gt;,
+and order are new bad words to be prohibited in a respectful society.
+We must stop them!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Loro (2018) by Paolo Sorrentino&quot; src=&quot;/images/2020/12/loro.jpg&quot; longdesc=&quot;#21fff271&quot; /&gt;&lt;figcaption id=&quot;21fff271&quot;&gt;Loro (2018) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Self-managing organization are, as some researchers
+&lt;a href=&quot;https://www.sciencedirect.com/science/article/abs/pii/S0191308517300059&quot;&gt;believe&lt;/a&gt;,
+post-bureaucratic, humanistic, democratic, and even
+&lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;holacratic&lt;/a&gt;.
+&lt;a href=&quot;https://frankmartela.com/about-the-author/&quot;&gt;Frank Martela&lt;/a&gt;
+&lt;a href=&quot;https://jorgdesign.springeropen.com/articles/10.1186/s41469-019-0062-9&quot;&gt;says&lt;/a&gt;
+that self-management is “an &lt;em&gt;ideal&lt;/em&gt; type of organizational form.”
+The idea is trendy, especially after the publication
+of &lt;a href=&quot;https://amzn.to/3mgxt7k&quot;&gt;Reinventing Organizations&lt;/a&gt; by Frederic Laloux.
+However, “calling it a novel phenomenon is utter nonsense,”
+&lt;a href=&quot;https://corporate-rebels.com/reinventing-the-wheel/&quot;&gt;according&lt;/a&gt; to
+&lt;a href=&quot;https://twitter.com/joost_minnaar&quot;&gt;Joost Minnaar&lt;/a&gt;—the idea has been known for decades.&lt;/p&gt;
+
+&lt;p&gt;My first question is: what exactly was wrong with
+bureaucratic, un-humanistic, and non-democratic management?
+&lt;a href=&quot;https://en.wikipedia.org/wiki/James_R._Barker&quot;&gt;James R. Barker&lt;/a&gt;
+made it clear &lt;a href=&quot;https://www.jstor.org/stable/pdf/2393374.pdf&quot;&gt;a long time ago&lt;/a&gt;:
+“workers in a self-managing team will experience day-to-day work life in vastly
+different ways than workers in a traditional management system. Instead
+of being told what to do by a supervisor, self-managing workers must
+gather and synthesize information, act on it, and take collective
+responsibility for those actions.”&lt;/p&gt;
+
+&lt;p&gt;Sounds &lt;a href=&quot;https://medium.com/culturati/2f23c298c79b&quot;&gt;very attractive&lt;/a&gt;.
+Nobody tells us what to do anymore! We just look around,
+gather information, synthesize more information, and “act!” (whatever that means).
+Of course, we must not forget that money somehow arrives in our bank accounts
+every two weeks—this component of the old un-humanistic bureaucratic management model
+we don’t want to get rid of, I believe. Right, Mr. Barker?&lt;/p&gt;
+
+&lt;p&gt;Seriously, who in a self-managing organization makes these decisions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An employee asks for a raise&lt;/li&gt;
+  &lt;li&gt;An employee gets lazy and must be fired&lt;/li&gt;
+  &lt;li&gt;An employee needs a budget for a new project&lt;/li&gt;
+  &lt;li&gt;A project must be terminated&lt;/li&gt;
+  &lt;li&gt;A new employee needs to be hired&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Simply put, who resolves monetary and performance appraisal conflicts, and how?
+All together by “raising their thumb”
+as &lt;a href=&quot;https://medium.com/percolab-droplets/generative-decision-making-process-cf0b131c5ac4&quot;&gt;Generative Decision Making&lt;/a&gt; suggests?
+Thumb-raising will work for low-caliber questions like which
+kind of coffee we should order for the office next week or what the
+best color is for our new t-shirts. However, more important strategic decisions
+may only be made by those who are ready to pay for mistakes: managers.&lt;/p&gt;
+
+&lt;p&gt;In a traditional hierarchical organization, everybody has a manager, who
+is responsible for answering these questions. This is what managers are for:
+to concentrate authority and responsibility. This is what levels of management
+are for: to decompose larger authority and responsibility into
+smaller pieces, delegating them to lower-level personnel. I believe, I don’t need
+to explain this essential wisdom: it’s the fundamentals of management.
+Right, &lt;a href=&quot;https://en.wikipedia.org/wiki/Peter_Drucker&quot;&gt;Mr. Drucker&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;However, despite the feeling that self-management adepts are not practitioners but
+liberal propagandists (trying to declare freedom to everybody without giving
+any practically possible scenarios),
+there is one idea I do share with them: managers are evil.
+Pay attention: managers, not management! There is a big difference.&lt;/p&gt;
+
+&lt;p&gt;Let’s get back to the problem definition once again: We don’t like being
+told what to do. However, is this really the problem or is there something deeper
+that we are missing? Let’s see, what are the most popular issues with management that people
+complain about (I got them from
+&lt;a href=&quot;https://www.inc.com/marcel-schwantes/8-mistakes-managers-make-according-to-their-employees.html&quot;&gt;Inc&lt;/a&gt;
+and
+&lt;a href=&quot;https://www.monster.co.uk/advertise-a-job/hr-resources/workforce-management-and-planning/management-skills/what-are-the-most-common-management-mistakes/&quot;&gt;Monster&lt;/a&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They micromanage&lt;/li&gt;
+  &lt;li&gt;They don’t listen&lt;/li&gt;
+  &lt;li&gt;They don’t value us&lt;/li&gt;
+  &lt;li&gt;They don’t provide feedback&lt;/li&gt;
+  &lt;li&gt;They don’t motivate&lt;/li&gt;
+  &lt;li&gt;They don’t set goals&lt;/li&gt;
+  &lt;li&gt;They don’t delegate&lt;/li&gt;
+  &lt;li&gt;They don’t explain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The list may be much longer, but I think that the root cause of all of them
+is the same: managers make &lt;em&gt;appraisal mistakes&lt;/em&gt;. As all other people, managers
+can’t always be objective. Instead, they are very biased and subjective. We say that they
+don’t listen. This is our perception. They do listen, but they don’t
+appraise us right, based on the information we deliver. They do listen, but they
+don’t call us genius. What do we say? They don’t listen! They don’t motivate, we say, but
+in reality they just don’t give us what we think we deserve. They don’t value us?
+The same story: we just feel unappreciated. We feel they micromanage? They just
+don’t appreciate the results we deliver without micromanagement, we stop
+delivering anything, and they resort to micromanagement.
+The root cause always is the same: appraisal mistakes.&lt;/p&gt;
+
+&lt;p&gt;What can we do to fix this?
+We should take the appraisal job away from managers! This is how we solve the problem.
+People must not decide whose performance is better, because they can’t do it
+right and this leads to all the other problems. If managers stop appraising us,
+they will turn into leaders, mentors, teachers, experts, gurus, decision makers,
+and everybody else, who we don’t hate. We hate &lt;em&gt;appraisers&lt;/em&gt;, because they make
+mistakes about our performance and kill our motivation. We won’t hate them
+at all, if there is a &lt;em&gt;system&lt;/em&gt;, which is based on
+&lt;a href=&quot;/2020/06/23/individual-performance-metrics.html&quot;&gt;&lt;em&gt;metrics&lt;/em&gt;&lt;/a&gt;,
+which judge our results.&lt;/p&gt;
+
+&lt;p&gt;What self-managing adepts are offering is to destroy the entire management
+system and replace it with chaos (or something very close to it).
+They seem to not understand where the real problem is. They just don’t like
+“being told what to do” and to fix this they suggest getting rid
+of what our civilization has been building for thousands of years:
+responsibility delegation through subordination (aka “management”).
+They meet incompetent management that doesn’t appreciate them enough and
+start crying and blaming everybody with the word “manager” in their job titles.
+In other words, to cure the tumor they want to kill the patient.&lt;/p&gt;
+
+&lt;p&gt;Let me reiterate: The evolution of management is needed! We are not happy
+with what we have now: most managers are incompetent. However, the solution is not
+self-managing but manager-less organizations. We need objective metrics,
+automated &lt;a href=&quot;/2018/03/21/zerocracy-announcement.html&quot;&gt;tools&lt;/a&gt; (maybe with AI) to replace
+&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;managers&lt;/a&gt;
+as our appraisers.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">We are in trouble. On the one hand, most managers are weak and incompetent. Their mistakes destroy our motivation, decrease productivity, and lead to business failures. As a result, many of us believe that managers are evil. On the other hand, there is a new idea that self-managing organizations are the future. Its proponents are trying to convince us that chaos is better than management mistakes. They want us to believe that subordination, hierarchy, control, and order are new bad words to be prohibited in a respectful society. We must stop them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/loro.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/loro.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Abstract Objects</title><link href="https://www.yegor256.com/2020/12/01/abstract-objects.html" rel="alternate" type="text/html" title="Abstract Objects" /><published>2020-12-01T00:00:00+00:00</published><updated>2020-12-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/01/abstract-objects</id><content type="html" xml:base="https://www.yegor256.com/2020/12/01/abstract-objects.html">&lt;p&gt;How do you create objects in your object-oriented language?
 Let’s take something classic, like C++, Java, or C#. First you define
 a class, and then you make an instance of it. The first step is known
 as &lt;a href=&quot;https://en.wikipedia.org/wiki/Abstraction_%28computer_science%29&quot;&gt;abstraction&lt;/a&gt;,
@@ -643,6 +777,9 @@ understood Dr. West. And we are not even discussing
 the &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/reflect/&quot;&gt;Reflection API&lt;/a&gt;, which
 would allow us to take the &lt;code class=&quot;highlighter-rouge&quot;&gt;t&lt;/code&gt; out of &lt;code class=&quot;highlighter-rouge&quot;&gt;Temperature&lt;/code&gt; without even calling any methods.&lt;/p&gt;
 
+&lt;aside class=&quot;quote&quot;&gt;Encapsulation is not an explicit barrier, it exists for as long as we have the desire to respect it.
+&lt;/aside&gt;
+
 &lt;p&gt;Thus, encapsulation is &lt;em&gt;not&lt;/em&gt; an explicit barrier. It exists for as long as we have
 the desire to respect it. If we don’t, nothing can stop us from abusing an
 object in any way we want. And even &lt;code class=&quot;highlighter-rouge&quot;&gt;private&lt;/code&gt; attribute modifiers won’t help.
@@ -905,224 +1042,4 @@ of your products.&lt;/p&gt;
 
 &lt;p&gt;This seems to be it. If you do all of these, you will demonstrate
 respect to other developers and they will respect you in return.
-Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Here is a short list of common courtesy rules for open source software development. Actually, they apply elsewhere also, but they are most visible when you do GitHub-based coding. I strongly believe that sooner or later all programming will be open source and these rules will apply to everybody. Consequently, it makes sense to start following them now, whether you are an active Apache contributor or a happy owner of the “Java for Dummies” book.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">To Measure or Not to Measure</title><link href="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html" rel="alternate" type="text/html" title="To Measure or Not to Measure" /><published>2020-06-23T00:00:00+00:00</published><updated>2020-06-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/06/23/individual-performance-metrics</id><content type="html" xml:base="https://www.yegor256.com/2020/06/23/individual-performance-metrics.html">&lt;p&gt;The question &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/26596/metric-by-which-to-hold-developers-accountable&quot;&gt;was asked&lt;/a&gt;
-on StackExchange nine years ago (just around
-the time the site was launched): “If not
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Source_lines_of_code&quot;&gt;lines of code&lt;/a&gt;, then what is
-a good metric by which to measure the effectiveness of remote programmers.”
-The answers,
-&lt;a href=&quot;https://www.youtube.com/watch?v=OOAMNOso46g&quot;&gt;not surprisingly&lt;/a&gt;,
-were all along this line: programmers are not supposed to be measured!
-I bet those who answered were programmers themselves.
-Indeed, &lt;a href=&quot;https://www.youtube.com/watch?v=sZoJ3gO4PSo&quot;&gt;why&lt;/a&gt;
-would a programmer be interested in being measured and being
-reduced to a mere number?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Better Call Saul, Season 5 (2019) by Vince Gilligan et al.&quot; src=&quot;/images/2020/06/better-call-saul.jpg&quot; longdesc=&quot;#02f3fa00&quot; /&gt;&lt;figcaption id=&quot;02f3fa00&quot;&gt;Better Call Saul, Season 5 (2019) by Vince Gilligan et al.&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;First, let’s see why putting a metric on a programmer
-may be considered bad practice (my opinion: these are merely excuses
-from overly-paid programmers/managers who are just trying to keep their jobs, doing
-&lt;del&gt;nothing&lt;/del&gt; whatever they want, and wasting employers’ money):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Individual performance metrics are against the spirit of Scrum,”
-&lt;a href=&quot;https://www.scrum.org/forum/scrum-forum/13381/individual-performance-scrum-enviornment&quot;&gt;says&lt;/a&gt;
-&lt;a href=&quot;https://www.scrum.org/user/186863&quot;&gt;Selçuk Özdoğan&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“A hero mindset, if left unchecked, plagues the team spirit,”
-&lt;a href=&quot;https://medium.com/unboxing-product-management/how-to-reward-individual-performance-in-agile-teams-21dd7bc1a4e2&quot;&gt;says&lt;/a&gt;
-Bhuwan Jain, a Product Manager at &lt;a href=&quot;https://www.quovantis.com/&quot;&gt;Quovantis&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Performance reviews destroy morale and kill teamwork,”
-&lt;a href=&quot;https://www.wsj.com/articles/SB122426318874844933&quot;&gt;says&lt;/a&gt;
-&lt;a href=&quot;https://www.anderson.ucla.edu/faculty-and-research/management-and-organizations/faculty/culbert&quot;&gt;Samuel A. Culbert&lt;/a&gt;,
-a professor of management at the
-&lt;a href=&quot;https://www.anderson.ucla.edu/&quot;&gt;UCLA Anderson School of Management&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Individual rewards foster competition in an environment
-where co-operation is essential for success,”
-&lt;a href=&quot;http://www.agilebuddha.com/agile/metrics-to-build-great-agile-teams-measure-influence-not-control/&quot;&gt;says&lt;/a&gt;
-&lt;a href=&quot;http://www.agilebuddha.com/author/admin/&quot;&gt;Avienaash Shiralige&lt;/a&gt;,
-an Agile Coach at &lt;a href=&quot;http://www.agilebuddha.com/&quot;&gt;AgileBuddha&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Individual metrics discourage team collaboration,”
-&lt;a href=&quot;https://www.infoq.com/articles/not-destroy-team-metrics/&quot;&gt;says&lt;/a&gt;
-Sean McHugh, a Scrum Master at &lt;a href=&quot;https://www.axosoft.com/&quot;&gt;Axosoft&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Performance reviews are harmful and completely unnecessary,”
-&lt;a href=&quot;https://scrumology.com/performance-evaluations-and-scrum/&quot;&gt;says&lt;/a&gt;
-Kane Mar, a co-founder and principal consultant for
-&lt;a href=&quot;https://scrumology.com/&quot;&gt;Scrumology&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Performance metrics discourage initiative, innovation and risk-taking,”
-&lt;a href=&quot;https://aeon.co/ideas/against-metrics-how-measuring-performance-by-numbers-backfires&quot;&gt;says&lt;/a&gt;
-&lt;a href=&quot;https://press.princeton.edu/our-authors/muller-jerry-z&quot;&gt;Jerry Z Muller&lt;/a&gt;,
-author of
-&lt;a href=&quot;https://press.princeton.edu/books/hardcover/9780691174952/the-tyranny-of-metrics&quot;&gt;The Tyranny of Metrics&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;“Human beings cannot, by their nature, be reduced to a number,”
-&lt;a href=&quot;https://resources.collab.net/blogs/measuring-individual-performance-can-a-person-be-reduced-to-a-number&quot;&gt;says&lt;/a&gt;
-&lt;a href=&quot;https://www.scrumalliance.org/community/profile/jfosdick&quot;&gt;Jimi Fosdick&lt;/a&gt;,
-a certified Scrum Trainer.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How do you like that? “Keep paying me, but don’t expect me to give
-you anything back! And don’t you dare check my performance!”—this
-is what I hear and I’m not surprised. What’s happening is called
-the &lt;a href=&quot;https://hbr.org/2016/10/the-performance-management-revolution&quot;&gt;performance management revolution&lt;/a&gt;
-and the gist of it is this: modern management is so weak that we desperately
-need an official name for this chaos, to avoid confusion. Agile is the name.&lt;/p&gt;
-
-&lt;p&gt;Managers are &lt;a href=&quot;/2017/08/01/how-to-manage-a-manager.html&quot;&gt;not in charge&lt;/a&gt;
-anymore, programmers are. And it’s sad.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=jjeW1hTtRh0&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/jjeW1hTtRh0/mqdefault.jpg&quot; alt=&quot;YouTube video #jjeW1hTtRh0&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M114: The performance of programmers can be measured, with the right metrics;
-        27 July 2020.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;However, not everybody believes in this anarchy. Some experts think that metrics
-are actually helpful. Bradley Kirkman et al.
-&lt;a href=&quot;https://hbr.org/2016/03/teamwork-works-best-when-top-performers-are-rewarded&quot;&gt;claim&lt;/a&gt; that
-“recognizing a single team member seems to have a positive and contagious
-effect on all the other members in the team,”
-and the famous &lt;a href=&quot;https://en.wikipedia.org/wiki/Vitality_curve&quot;&gt;Vitality Curve&lt;/a&gt;
-suggested by &lt;a href=&quot;https://en.wikipedia.org/wiki/Jack_Welch&quot;&gt;Jack Welch&lt;/a&gt;
-in 2001 is still with us.&lt;/p&gt;
-
-&lt;p&gt;I believe the all the negativity aimed at metrics is caused by their
-incorrect usage. Indeed, if the only performance metric of
-software engineers, for example, is the amount of hours they stay in the office,
-that will suggest only bad things about &lt;em&gt;all&lt;/em&gt; metrics. Such metrics do hurt, no doubt about that.
-But the absence of &lt;em&gt;good&lt;/em&gt; metrics hurts even more.
-How to chose them—is the real question. Let me suggest a few,
-instead of the famous and incorrect LoC.
-Ideally you would pick a combination from this list, or even use them all together:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Features Delivered&lt;/strong&gt;.
-Add a “feature” label to a ticket (or a GitHub issue) and then count
-the amount of tickets closed by a programmer with this label attached.
-Of course, each ticket must be closed by a product manager, not
-by the programmer.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Pull Requests Merged&lt;/strong&gt;.
-Each pull request has to be peer reviewed to make sure it makes sense
-and adheres to the quality standard of the project. Pull requests that
-are too small or too big must be rejected.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Bugs Fixed&lt;/strong&gt;.
-Bugs work the same way as features, but are usually smaller. The more
-bugs a programmers closes, the better. Of course, closing must be done
-by product managers or other programmers who reported the bugs.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Bugs Reported&lt;/strong&gt;.
-Once a bug is reported and accepted by the project, the reporter
-must get an extra point. This is how the quality of a project grows:
-by &lt;a href=&quot;/2018/07/24/bugs-or-pull-requests.html&quot;&gt;encouraging&lt;/a&gt;
-everybody to report bugs.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Releases Published&lt;/strong&gt;.
-In a disciplined project new versions are released every day; in others,
-every week or every few months (or never). Every release is a stressful operation
-and it only seems logical to reward programmers for them.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Uptime&lt;/strong&gt;.
-There is a set of DevOps metrics that demonstrate the quality of
-service in production, including
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Mean_time_between_failures&quot;&gt;MTBF&lt;/a&gt;,
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Mean_time_between_failures#Variations_of_MTBF&quot;&gt;MTTF&lt;/a&gt;,
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Failure_rate&quot;&gt;failure rate&lt;/a&gt;,
-and so on. The longer the uptime, the better the programmers
-and their product.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Cost of Pull Request&lt;/strong&gt;.
-The less time it takes to merge a pull request submitted by a programmer,
-the better the programmer, I believe. The faster their PRs
-go through peer reviews and quality control, the better. Junior
-programmers usually submit overly large or complex PRs, causing a lot
-of trouble during peer review. They also cause merge conflicts and
-sometimes even stale branches and never-good-to-merge PRs.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Documentation Pages Published&lt;/strong&gt;.
-FAQ pages, Javadoc blocks, Wiki pages, blog posts, and so on—they help
-the project get closer to users and to future developers by increasing
-maintainability. Of course, every piece of text must be validated
-before publishing.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Mentee Results&lt;/strong&gt;.
-Senior programmers may be mentors of more junior ones and may be
-rewarded for the rewards received by their mentees. All metrics listed
-above can work this way, rewarding or punishing mentors when their
-students are doing better or
-&lt;a href=&quot;/2019/06/19/how-much-they-suffer.html&quot;&gt;worse&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I can’t stress this enough: each metric must have a
-&lt;a href=&quot;/2018/03/06/speed-vs-quality.html&quot;&gt;quality control&lt;/a&gt; mechanism.
-Just measuring bugs reported without checking the quality of them would lead to cheating:
-programmers will report whatever they like, just to bump the numbers up.
-Each bug must be verified by an architect: duplicates or
-&lt;a href=&quot;/2018/04/24/right-way-to-report-bugs.html&quot;&gt;low-quality&lt;/a&gt;
-bug reports are to be rejected. The same is true for every metric:
-&lt;a href=&quot;/2019/05/28/trust-or-not.html&quot;&gt;trust&lt;/a&gt; without control
-leads to &lt;a href=&quot;/2017/11/21/trust-pay-lose.html&quot;&gt;cheating&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Trust without control leads to cheating.
-&lt;/aside&gt;
-
-&lt;p&gt;It is also worth mentioning that features,
-bugs, pull requests, and documentation pages may have different
-&lt;em&gt;complexity&lt;/em&gt;, &lt;em&gt;urgency&lt;/em&gt;, and &lt;em&gt;severity&lt;/em&gt;, which also should be taken into account,
-increasing or decreasing the numbers in each metric.&lt;/p&gt;
-
-&lt;p&gt;Most of these metrics can be collected automatically, without any human
-interaction, for example via the GitHub API.&lt;/p&gt;
-
-&lt;p&gt;In an ideal world of &lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;ideal management&lt;/a&gt;,
-the project compensates
-the work of its programmers according to the metrics collected. Instead of
-salaries, programmers get
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;money&lt;/a&gt;
-for features, bugs, documentation pages,
-and so on. How far your project is from this
-&lt;a href=&quot;/2014/04/17/how-xdsd-is-different.html&quot;&gt;utopia&lt;/a&gt;—is the indicator
-of your professionalism as a project manager. &lt;a href=&quot;/2017/06/06/gluten-free-management.html&quot;&gt;Lousy&lt;/a&gt;
-managers don’t measure
-anything and make everybody “happy” by keeping wages high and control low …
-until the project runs out of money. On the other hand, exceptionally
-good managers let metrics
-&lt;a href=&quot;/2015/10/13/competition-without-rules.html&quot;&gt;control&lt;/a&gt;
-everybody, making the best happy
-and the worst … &lt;a href=&quot;/2015/09/16/how-to-fire-someone-right.html&quot;&gt;quickly&lt;/a&gt;
-find the way out.&lt;/p&gt;
-
-&lt;p&gt;Which one are you?&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Is there a metric to measure programmers&amp;#39; performance objectively?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1284853509540712455?ref_src=twsrc%5Etfw&quot;&gt;July 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">The question was asked on StackExchange nine years ago (just around the time the site was launched): “If not lines of code, then what is a good metric by which to measure the effectiveness of remote programmers.” The answers, not surprisingly, were all along this line: programmers are not supposed to be measured! I bet those who answered were programmers themselves. Indeed, why would a programmer be interested in being measured and being reduced to a mere number?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/06/better-call-saul.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/06/better-call-saul.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+Did I forget anything important?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html">Here is a short list of common courtesy rules for open source software development. Actually, they apply elsewhere also, but they are most visible when you do GitHub-based coding. I strongly believe that sooner or later all programming will be open source and these rules will apply to everybody. Consequently, it makes sense to start following them now, whether you are an active Apache contributor or a happy owner of the “Java for Dummies” book.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/07/hong-kil-dong.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

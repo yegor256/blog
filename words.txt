@@ -181,6 +181,7 @@ agreements
 agrees
 ah
 ahead
+AI
 AI-powered
 aim
 aimed
@@ -373,7 +374,10 @@ applies
 apply
 applying
 appointment
+appraisal
 appraisals
+appraise
+appraisers
 appraising
 appreciate
 appreciated
@@ -748,6 +752,7 @@ beware
 beyond
 bhuwan
 bi-sexuals
+biased
 bible
 bibrarian
 bicycle
@@ -1570,6 +1575,7 @@ conceal
 concealed
 concealing
 conceals
+concentrate
 concentrated
 concentrating
 concentration
@@ -1885,6 +1891,7 @@ CRUD
 cruel
 cruisecontrol
 cry
+crying
 cryptic
 crypto-electronic-whatever-product
 cryptocurrency
@@ -2828,6 +2835,7 @@ everywhere
 evidence
 evil
 evils
+evolution
 exact
 exactly
 exaggerate
@@ -3284,6 +3292,7 @@ frank
 fraudsters
 freak
 freaks
+frederic
 fredrik
 free
 freedom
@@ -3338,6 +3347,7 @@ fundamental
 fundamentalism
 fundamentalist
 fundamentally
+fundamentals
 funded
 funding
 funds
@@ -3397,12 +3407,14 @@ generates
 generating
 generating-ssh-keys
 generation
+generative
 generator
 generators
 generic
 generics
 generous
 genetically
+genius
 gentle
 gentleman
 geographic
@@ -3767,6 +3779,7 @@ hobbies
 hobby
 hoc
 holacracy
+holacratic
 hold
 holder
 holders
@@ -3840,6 +3853,7 @@ huh
 human
 human-like
 human-readable
+humanistic
 humans
 humble
 humbly
@@ -4406,6 +4420,7 @@ joKX
 jon
 jones
 jong-un
+joost
 jose
 joseph
 joshua
@@ -4557,6 +4572,7 @@ lagging
 laissez
 laissez-faire
 lake
+laloux
 lambda
 lamp
 lamport
@@ -4667,6 +4683,7 @@ lexer
 liability
 liao
 liar
+liberal
 liberals
 libraries
 library
@@ -4801,6 +4818,7 @@ love
 loves
 loving
 low
+low-caliber
 low-cohesion
 low-level
 low-quality
@@ -4883,6 +4901,7 @@ managees
 management
 manager
 manager's
+manager-less
 managerial
 managers
 manages
@@ -4936,6 +4955,7 @@ marrying
 mars
 marshalled
 marshalling
+martela
 martian
 martin
 masculine
@@ -5153,6 +5173,7 @@ minimalistic
 minimize
 minimum
 minister
+minnaar
 minor
 minority
 minus
@@ -5300,6 +5321,7 @@ moving
 movo
 mozilla
 mph
+mr
 MRM
 MS
 MS-DOS
@@ -5498,6 +5520,7 @@ non-compete
 non-complete
 non-completion
 non-compromising
+non-democratic
 non-descriptive
 non-disclosure
 non-disputable
@@ -5976,6 +5999,7 @@ perceive
 perceived
 percent
 percentage
+perception
 perdita
 perfect
 perfection
@@ -6006,6 +6030,7 @@ person's
 personal
 personality
 personally
+personnel
 perspective
 persuasive
 pescio
@@ -6022,6 +6047,7 @@ PhantomJS
 phase
 phases
 phd
+phenomenon
 phew
 philanthropists
 philippe
@@ -6200,6 +6226,7 @@ possibility
 possible
 possibly
 post
+post-bureaucratic
 post-it
 post-merge
 post-money
@@ -6437,12 +6464,14 @@ pronoun
 proof
 proof-of-concept
 propaganda
+propagandists
 proper
 properly
 properties
 property
 prophesy
 prophet
+proponents
 proportionally
 proposal
 proposals
@@ -6592,6 +6621,7 @@ rails
 raise
 raised
 raises
+raising
 rake
 RAM
 ran
@@ -6790,6 +6820,7 @@ rehearse
 ReHTTP
 reich
 reinagel
+reinventing
 reiterate
 reiterates
 reject
@@ -7318,6 +7349,7 @@ self-esteem
 self-explainable
 self-humiliation
 self-improvement
+self-management
 self-managing
 self-motivated
 self-motivation
@@ -8149,6 +8181,7 @@ synergy
 synonyms
 syntactic
 syntax
+synthesize
 system
 system-level
 system-under-test
@@ -8156,6 +8189,7 @@ systematic
 systematically
 systems
 t-shirt
+t-shirts
 tab
 table
 tables
@@ -8206,6 +8240,7 @@ TDD
 tea
 teach
 teacher
+teachers
 teaching
 team
 team's
@@ -8367,6 +8402,7 @@ throwing
 thrown
 throws
 thumb
+thumb-raising
 thumbs
 thursday
 thus
@@ -8519,6 +8555,7 @@ trello
 trenches
 trend
 trends
+trendy
 triangle
 trick
 tricks
@@ -8619,6 +8656,7 @@ UML
 un-asked
 un-extensible
 un-finished
+un-humanistic
 un-organized
 un-preventable
 un-testable
@@ -8628,6 +8666,7 @@ unambiguously
 unannounced
 unanswered
 unappetizing
+unappreciated
 unaware
 unbeatable
 unbiased
@@ -8804,6 +8843,7 @@ utilizes
 utils
 utopia
 utopian
+utter
 UX
 vacation
 vacations
@@ -8839,6 +8879,7 @@ varies
 variety
 various
 vast
+vastly
 vatavuk
 VC
 VCS
