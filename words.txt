@@ -129,6 +129,7 @@ adobe
 adopt
 adorable
 adore
+adulation
 adults
 advance
 advanced
@@ -1021,6 +1022,7 @@ caching
 CACM
 cactoos
 cafe
+cage
 caitlin
 cake
 calculate
@@ -2977,6 +2979,7 @@ factoring
 factors
 factory
 facts
+factual
 fading
 fail
 failed
@@ -3466,6 +3469,7 @@ glossaries
 glossary
 glow
 gluten
+gluten-free
 gmail
 GNOME
 GNU
@@ -3554,6 +3558,7 @@ group's
 grouped
 grouping
 groups
+grovelling
 grow
 growable
 growing
@@ -3849,10 +3854,12 @@ hub
 hudson
 hug
 huge
+hugely
 huh
 human
 human-like
 human-readable
+humane
 humanistic
 humans
 humble
@@ -4285,7 +4292,9 @@ IPO
 IPv
 IRC
 ironic
+irrational
 irrationality
+irrationally
 irrelevant
 irresponsible
 irreversible
@@ -4508,6 +4517,7 @@ kid
 kidding
 kids
 kill
+killed
 killer
 killers
 killing
@@ -4605,6 +4615,7 @@ latter
 laugh
 laughed
 laughing
+laughs
 launch
 launched
 launching
@@ -5348,6 +5359,7 @@ multi-threaded
 multi-threading
 multi-tier
 multi-year
+multiculturalism
 multiple
 multiply
 multiplying
@@ -5495,6 +5507,7 @@ nitpicker
 nl
 no
 no-guests
+no-management
 no-server
 no-tests-upfront
 noaltruism
@@ -5761,6 +5774,7 @@ organized
 organizers
 organizes
 organizing
+orgs
 orientation
 oriented
 original
@@ -6641,6 +6655,7 @@ rarely
 rarest
 raster-graphics
 rasterized
+rat
 rate
 rate-setting
 rates
@@ -8242,6 +8257,7 @@ teach
 teacher
 teachers
 teaching
+teal
 team
 team's
 team-building
@@ -8325,6 +8341,7 @@ tex
 texas
 text
 texted
+texting
 textmate
 texts
 th
