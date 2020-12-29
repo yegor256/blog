@@ -14,9 +14,9 @@ keywords:
   - teal organization
   - management metrics
   - performance management
-image: /images/2020/12/
+image: /images/2020/12/bonnie-and-clyde.jpg
 jb_picture:
-  caption:
+  caption: Bonnie and Clyde (1967) by Arthur Penn
 ---
 
 You got into a company that believes in
