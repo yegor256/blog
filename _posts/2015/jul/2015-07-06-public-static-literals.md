@@ -120,4 +120,7 @@ of duplication.
 
 PS. You can use a method instead of a class, but not a static literal.
 
+PPS. You can also use enums, but only
+[this way](https://www.g4s8.wtf/posts/2020-12-26-enum-objects/#comment-5205846133).
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How do you get rid of the duplication of magic numbers (it&#39;s Ruby)? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class Time<br> def hours<br> msec / (60 * 60 * 1000)<br> end<br> def days<br> msec / (24 * 60 * 60 * 1000)<br> end<br>end</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1221378774618595329?ref_src=twsrc%5Etfw">January 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
