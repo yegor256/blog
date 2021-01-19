@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2020-12-29T19:28:28+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Put a Number on Your Boss’s Emotions</title><link href="https://www.yegor256.com/2020/12/29/metric-for-emotions.html" rel="alternate" type="text/html" title="Put a Number on Your Boss’s Emotions" /><published>2020-12-29T00:00:00+00:00</published><updated>2020-12-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/29/metric-for-emotions</id><content type="html" xml:base="https://www.yegor256.com/2020/12/29/metric-for-emotions.html">&lt;p&gt;You got into a company that believes in
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-01-19T09:15:44+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Put a Number on Your Boss’s Emotions</title><link href="https://www.yegor256.com/2020/12/29/metric-for-emotions.html" rel="alternate" type="text/html" title="Put a Number on Your Boss’s Emotions" /><published>2020-12-29T00:00:00+00:00</published><updated>2020-12-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/29/metric-for-emotions</id><content type="html" xml:base="https://www.yegor256.com/2020/12/29/metric-for-emotions.html">&lt;p&gt;You got into a company that believes in
 &lt;a href=&quot;/2015/10/13/competition-without-rules.html&quot;&gt;democratic&lt;/a&gt;
 values, doesn’t &lt;a href=&quot;/2020/06/23/individual-performance-metrics.html&quot;&gt;measure&lt;/a&gt;
 performance, doesn’t judge, doesn’t
@@ -85,6 +85,9 @@ judgment. This actually is the key problem: jealousy. If you see
 that someone, who you don’t respect due to his/her bad results and lack
 of skills, is appreciated more than yourself by your boss —
 you get jealous and quit.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;When they can’t objectively evaluate your performance, they judge you irrationally and emotionally.
+&lt;/aside&gt;
 
 &lt;p&gt;Teal &lt;a href=&quot;/2017/06/06/gluten-free-management.html&quot;&gt;gluten-free&lt;/a&gt;
 managers can’t objectively evaluate your performance.
