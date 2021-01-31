@@ -21,12 +21,14 @@ jb_picture:
 
 You have an objective, a budget, and a team. You are
 a manager and you want the project to be done. You get your team together
-in a meeting room to discuss the _plan_. You tell them what needs to
+in a [meeting room]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %})
+to discuss the _plan_. You tell them what needs to
 be done and ask them how fast they can do it. Then, you do the motivational dancing
 and <del>beg</del> ask them to commit. They nod and get back
 to their cubicles. Of course, in a few
 months of "hard work" all milestones are missed and you get back to the planning
-meeting. And, yes, you pay their salaries anyway.
+meeting. And, yes, you pay their salaries
+[anyway]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 
 <!--more-->
 
@@ -42,9 +44,10 @@ Those times are over. Well, not everywhere, but in software development---for su
 The suffering part is gone and the formula has evolved to:
 "If you don't do what I say, I feel sad."
 You simply can't make them suffer anymore.
-The only instrument that is left in your hands is guilt.
+The only instrument that is left in your hands is
+[guilt]({% pst 2019/sep/2019-09-03-injection-of-guilt %}).
 However, it doesn't work well with professionals.
-<del>Unfortunately.</del>
+[<del>Unfortunately</del>]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
 And because of that the traditional idea of planning doesn't work either.
 No matter how you plan, you can't get an honest committment from the
