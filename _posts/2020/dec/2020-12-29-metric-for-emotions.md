@@ -140,4 +140,4 @@ Objectivity and honesty is being replaced with adulation and grovelling.
 Take it or leave it.
 
 
-
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">How do you know that your boss appreciates your work more than others?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1355972734614974464?ref_src=twsrc%5Etfw">January 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
