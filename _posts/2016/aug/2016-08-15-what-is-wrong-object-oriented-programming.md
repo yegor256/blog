@@ -29,7 +29,7 @@ jb_picture:
 Recently, I was trying to convince a few of my readers that
 [a better understanding of an object]({% pst 2016/jul/2016-07-14-who-is-object %})
 in OOP would help us solve many problems in existing pseudo-object-oriented languages.
-Then, suddenly, the question came up: "**What problems?**"
+Then, suddenly, the question came up: "_What problems?_"
 I was puzzled. I thought it was obvious that the vast majority of modern software
 written in modern OO languages is unmaintainable and simply a mess.
 So I Googled a bit, and this is what I found (in chronological order).
