@@ -77,7 +77,7 @@ is a perfectly valid object that can be used. Then, we can call method
 is a perfectly valid scenario that doesn't violate the law at all, just
 as I expected.
 
-{% quote So the bottom line is that the Law of Demeter is not against method chaining at all %}
+{% quote So the bottom line is that the Law of Demeter is not against method chaining at all. %}
 
 So where does this common understanding of the law come from? Why does
 [Wikipedia](https://en.wikipedia.org/wiki/Law_of_Demeter)
