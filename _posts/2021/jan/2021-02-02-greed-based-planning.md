@@ -43,11 +43,13 @@ The basic principle was: "If you don't do what I say, you suffer."
 Those times are over. Well, not everywhere, but in software development---for sure.
 The suffering part is gone and the formula has evolved to:
 "If you don't do what I say, I feel sad."
-You simply can't make them suffer anymore.
+You simply can't make them [suffer]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}) anymore.
 The only instrument that is left in your hands is
 [guilt]({% pst 2019/sep/2019-09-03-injection-of-guilt %}).
 However, it doesn't work well with professionals.
 [<del>Unfortunately</del>]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
+
+{% youtube vaFPNdNaOAY %}
 
 And because of that the traditional idea of planning doesn't work either.
 No matter how you plan, you can't get an honest commitment from the
@@ -65,6 +67,8 @@ their decisions: "I'm going to do these 12 tasks and earn $5,000."
 Then, using this information you create the plan and calculate the
 timeline of the project. They tell you what they _want_ to earn
 and you _know_ what results you will get.
+
+{% quote You identify the points of reward and observe the intentions of the team to earn them. %}
 
 Thus, instead of making plans and making the team deliver according
 to them, you identify the points of reward and observe the
