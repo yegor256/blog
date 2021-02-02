@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Greed-Based Planning"
-date: 2021-02-12
+date: 2021-02-02
 place: Moscow, Russia
 tags: management
 description: |
@@ -14,9 +14,9 @@ keywords:
   - plans in agile
   - agile planning
   - planning greed
-image: /images/2021/02/
+image: /images/2021/02/undercover.jpg
 jb_picture:
-  caption:
+  caption: Undercover (2019-) by Netflix
 ---
 
 You have an objective, a budget, and a team. You are
