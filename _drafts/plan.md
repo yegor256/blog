@@ -35,8 +35,8 @@ meeting. And, yes, you pay their salaries
 {% jb_picture_body %}
 
 This top-down management formula (boss says, everybody nods) was inherited
-from the times and industries where staff was easily replacable
-and vitaly dependent on the employer's will.
+from the times and industries where staff was easily replaceable
+and vitally dependent on the employer's will.
 Call it the time of slavery, if you will.
 The basic principle was: "If you don't do what I say, you suffer."
 
@@ -50,7 +50,7 @@ However, it doesn't work well with professionals.
 [<del>Unfortunately</del>]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
 And because of that the traditional idea of planning doesn't work either.
-No matter how you plan, you can't get an honest committment from the
+No matter how you plan, you can't get an honest commitment from the
 team, that's why your plans will always be wishes instead of plans.
 
 I suggest a better formula: "If you do what I say, you benefit."
