@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-01-19T09:15:44+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Put a Number on Your Boss’s Emotions</title><link href="https://www.yegor256.com/2020/12/29/metric-for-emotions.html" rel="alternate" type="text/html" title="Put a Number on Your Boss’s Emotions" /><published>2020-12-29T00:00:00+00:00</published><updated>2020-12-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/29/metric-for-emotions</id><content type="html" xml:base="https://www.yegor256.com/2020/12/29/metric-for-emotions.html">&lt;p&gt;You got into a company that believes in
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-02-02T20:11:45+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Greed-Based Planning</title><link href="https://www.yegor256.com/2021/02/02/greed-based-planning.html" rel="alternate" type="text/html" title="Greed-Based Planning" /><published>2021-02-02T00:00:00+00:00</published><updated>2021-02-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/02/02/greed-based-planning</id><content type="html" xml:base="https://www.yegor256.com/2021/02/02/greed-based-planning.html">&lt;p&gt;You have an objective, a budget, and a team. You are
+a manager and you want the project to be done. You get your team together
+in a &lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;meeting room&lt;/a&gt;
+to discuss the &lt;em&gt;plan&lt;/em&gt;. You tell them what needs to
+be done and ask them how fast they can do it. Then, you do the motivational dance
+and &lt;del&gt;beg&lt;/del&gt; ask them to commit. They nod and go back
+to their cubicles. Of course, after a few
+months of “hard work” all the milestones are missed and you get back to the planning
+meeting. And, yes, you pay their salaries
+&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;anyway&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Undercover (2019-) by Netflix&quot; src=&quot;/images/2021/02/undercover.jpg&quot; longdesc=&quot;#37fc4133&quot; /&gt;&lt;figcaption id=&quot;37fc4133&quot;&gt;Undercover (2019-) by Netflix&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;This top-down management formula (boss says, everybody nods) was inherited
+from the times and industries where staff was easily replaceable
+and vitally dependent on the employer’s will.
+Call it the time of slavery, if you will.
+The basic principle was: “If you don’t do what I say, you suffer.”&lt;/p&gt;
+
+&lt;p&gt;Those times are over. Well, not everywhere, but in software development—for sure.
+The suffering part is gone and the formula has evolved to:
+“If you don’t do what I say, I feel sad.”
+You simply can’t make them &lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;suffer&lt;/a&gt; anymore.
+The only instrument that is left in your hands is
+&lt;a href=&quot;/2019/09/03/injection-of-guilt.html&quot;&gt;guilt&lt;/a&gt;.
+However, it doesn’t work well with professionals.
+&lt;a href=&quot;/2016/09/27/command-control-innovate.html&quot;&gt;&lt;del&gt;Unfortunately&lt;/del&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=vaFPNdNaOAY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/vaFPNdNaOAY/mqdefault.jpg&quot; alt=&quot;YouTube video #vaFPNdNaOAY&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M160: Traditional top-down planning doesn&amp;#39;t work, try better alternative;
+        1 February 2021.&lt;/div&gt;&lt;/aside&gt;
+
+&lt;p&gt;And because of that the traditional idea of planning doesn’t work either.
+No matter how you plan, you can’t get an honest commitment from the
+team, that’s why your plans will always be wishes instead of plans.&lt;/p&gt;
+
+&lt;p&gt;I suggest a better formula: “If you do what I say, you benefit.”
+Here is how it works: you identify expected deliverables, their quality acceptance criteria,
+put reward tags on each one (money, points, promotion,
+free vacation, or maybe cookies), and ask your programmers:
+“How much do you want to earn?”&lt;/p&gt;
+
+&lt;p&gt;They will do their own planning, having in mind their own time resources,
+putting together all the sophisticated motivational pieces, and then make
+their decisions: “I’m going to do these 12 tasks and earn $5,000.”
+Then, using this information you create the plan and calculate the
+timeline of the project. They tell you what they &lt;em&gt;want&lt;/em&gt; to earn
+and you &lt;em&gt;know&lt;/em&gt; what results you will get.&lt;/p&gt;
+
+&lt;aside class=&quot;quote&quot;&gt;You identify the points of reward and observe the intentions of the team to earn them.
+&lt;/aside&gt;
+
+&lt;p&gt;Thus, instead of making plans and making the team deliver according
+to them, you identify the points of reward and observe the
+intentions of the team to earn them. Your plan will be the derivative
+of people’s &lt;del&gt;greed&lt;/del&gt; ambition.&lt;/p&gt;
+
+&lt;p&gt;Of course, this may be easier said than done: Spoiled and lazy
+programmers, who are in the overwhelming majority, most likely
+will refuse to work for awards. My advice is not to convince
+them too much. Just offer the awards on top of the salary they are
+getting already. Rewards don’t need to be large. What’s important is
+the shift in the decision making process. The decision to complete
+the work has to be made by the programmer, not you. The decision
+has to be based on their own selfish reasons.&lt;/p&gt;
+
+&lt;p&gt;What’s left for you is just to put their decisions into one
+document and see when the project will be completed and how
+many bonuses you have to prepare to pay at the end.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">You have an objective, a budget, and a team. You are a manager and you want the project to be done. You get your team together in a meeting room to discuss the plan. You tell them what needs to be done and ask them how fast they can do it. Then, you do the motivational dance and beg ask them to commit. They nod and go back to their cubicles. Of course, after a few months of “hard work” all the milestones are missed and you get back to the planning meeting. And, yes, you pay their salaries anyway.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/02/undercover.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/02/undercover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Put a Number on Your Boss’s Emotions</title><link href="https://www.yegor256.com/2020/12/29/metric-for-emotions.html" rel="alternate" type="text/html" title="Put a Number on Your Boss’s Emotions" /><published>2020-12-29T00:00:00+00:00</published><updated>2020-12-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/29/metric-for-emotions</id><content type="html" xml:base="https://www.yegor256.com/2020/12/29/metric-for-emotions.html">&lt;p&gt;You got into a company that believes in
 &lt;a href=&quot;/2015/10/13/competition-without-rules.html&quot;&gt;democratic&lt;/a&gt;
 values, doesn’t &lt;a href=&quot;/2020/06/23/individual-performance-metrics.html&quot;&gt;measure&lt;/a&gt;
 performance, doesn’t judge, doesn’t
@@ -127,7 +201,10 @@ traffic of messages your mutual boss is sending to him.&lt;/p&gt;
 &lt;p&gt;Am I being too sarcastic? Not really. This is the new reality
 the proponents of self-managing teams are pushing us towards:
 Objectivity and honesty is being replaced with adulation and grovelling.
-Take it or leave it.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="sarcasm" /><summary type="html">You got into a company that believes in democratic values, doesn’t measure performance, doesn’t judge, doesn’t control, doesn’t force, and doesn’t blame; however, at the end of the year they tell you that your performance was not as high as expected. Why? “Just work better, my friend, we count on you!” Bad luck, you are in a teal self-managing organization. They’ve already killed the management, but still didn’t dare to kill the managers. They don’t know how to measure, but still have people who are supposed to do it regularly, in order to distribute monetary rewards. What do you do before you quit? Here is a survival recipe.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Self-Managing vs. Manager-Free Organizations</title><link href="https://www.yegor256.com/2020/12/22/self-managing-orgs.html" rel="alternate" type="text/html" title="Self-Managing vs. Manager-Free Organizations" /><published>2020-12-22T00:00:00+00:00</published><updated>2020-12-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/22/self-managing-orgs</id><content type="html" xml:base="https://www.yegor256.com/2020/12/22/self-managing-orgs.html">&lt;p&gt;We are in trouble. On the one hand, most managers are weak and incompetent.
+Take it or leave it.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How do you know that your boss appreciates your work more than others?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1355972734614974464?ref_src=twsrc%5Etfw&quot;&gt;January 31, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="sarcasm" /><summary type="html">You got into a company that believes in democratic values, doesn’t measure performance, doesn’t judge, doesn’t control, doesn’t force, and doesn’t blame; however, at the end of the year they tell you that your performance was not as high as expected. Why? “Just work better, my friend, we count on you!” Bad luck, you are in a teal self-managing organization. They’ve already killed the management, but still didn’t dare to kill the managers. They don’t know how to measure, but still have people who are supposed to do it regularly, in order to distribute monetary rewards. What do you do before you quit? Here is a survival recipe.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Self-Managing vs. Manager-Free Organizations</title><link href="https://www.yegor256.com/2020/12/22/self-managing-orgs.html" rel="alternate" type="text/html" title="Self-Managing vs. Manager-Free Organizations" /><published>2020-12-22T00:00:00+00:00</published><updated>2020-12-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/22/self-managing-orgs</id><content type="html" xml:base="https://www.yegor256.com/2020/12/22/self-managing-orgs.html">&lt;p&gt;We are in trouble. On the one hand, most managers are weak and incompetent.
 Their mistakes destroy our &lt;a href=&quot;/2017/09/19/what-motivates-me.html&quot;&gt;motivation&lt;/a&gt;,
 decrease productivity, and lead to business failures.
 As a result, many of us believe that managers are evil.
@@ -994,80 +1071,4 @@ is the team leader, who has to fix it by opening
 the README file and specifying, in the first paragraph, what is wrong
 with the world right now and how our product is going to fix it.&lt;/p&gt;
 
-&lt;p&gt;Do it now.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Do you know the most typical mistake startup founders make when they pitch their ideas to investors? According to Jake Mendel from Silicon Valley Bank, they often focus on the solution they propose instead of the problem they are trying to solve. Inability to identify the problem is the common cause of startup failures. However, it’s not only them. Look at your project and try to answer “What’s wrong with the world now?” and then “How is this product fixing it?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Spell Check Your LaTeX Writings Using GNU Aspell</title><link href="https://www.yegor256.com/2020/10/06/latex-spell-checking.html" rel="alternate" type="text/html" title="Spell Check Your LaTeX Writings Using GNU Aspell" /><published>2020-10-06T00:00:00+00:00</published><updated>2020-10-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/06/latex-spell-checking</id><content type="html" xml:base="https://www.yegor256.com/2020/10/06/latex-spell-checking.html">&lt;p&gt;Do you use &lt;a href=&quot;https://www.latex-project.org/&quot;&gt;LaTeX&lt;/a&gt;
-for your academic and technical writings? You don’t?
-Well you should! It’s the &lt;del&gt;most&lt;/del&gt; only professional instrument for
-making properly formatted PDF documents.
-MS Word and Apple Pages are for &lt;del&gt;secretaries&lt;/del&gt; non-tech people,
-while LaTeX is serious. It’s perfect in so many ways, thanks to
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Donald_Knuth&quot;&gt;Donald Knuth&lt;/a&gt;
-(the creator of TeX) and
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Leslie_Lamport&quot;&gt;Leslie Lamport&lt;/a&gt;
-(the author of LaTeX),
-but it lacks one very convenient feature:
-&lt;a href=&quot;https://tex.stackexchange.com/questions/42843&quot;&gt;spell checking&lt;/a&gt;.
-The only solution I’ve found so far, which works perfectly for my documents, is
-&lt;a href=&quot;http://aspell.net/&quot;&gt;GNU aspell&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Zero 2 (2010) by Emilis Velyvis&quot; src=&quot;/images/2020/10/zero-2.jpg&quot; longdesc=&quot;#e03fe95c&quot; /&gt;&lt;figcaption id=&quot;e03fe95c&quot;&gt;Zero 2 (2010) by Emilis Velyvis&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://aspell.net/&quot;&gt;GNU aspell&lt;/a&gt; is a command line tool
-which expects you to provide the LaTeX source code
-(indeed, it is code, not “text”) as an input and prints a list of found spelling
-errors. The beauty of it is that it checks only the text, ignoring
-TeX commands. For example, this is LaTeX document:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;\documentclass{article}
-\begin{document}
-Hello, \textbf{Yegor}!
-\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If we feed this text to some other spell checker (or GNU aspell without the
-option &lt;code class=&quot;highlighter-rouge&quot;&gt;--mode=tex&lt;/code&gt;) the word &lt;code class=&quot;highlighter-rouge&quot;&gt;textbf&lt;/code&gt; would be an obvious spelling mistake; aspell,
-however, understands it as a LaTeX command and ignores it.
-Moreover, aspell can understand the word &lt;code class=&quot;highlighter-rouge&quot;&gt;Yegor&lt;/code&gt;, even though it’s not
-an English word, by using a custom dictionary provided by the &lt;code class=&quot;highlighter-rouge&quot;&gt;--pws&lt;/code&gt; option.&lt;/p&gt;
-
-&lt;p&gt;There are a few other useful features in aspell. Long story short, I decided to create
-a small wrapper around aspell, to simplify the process of its configuration:
-&lt;a href=&quot;https://github.com/yegor256/texsc&quot;&gt;texsc&lt;/a&gt;
-(stands for “TeX Spell Checking”).
-It’s a command line tool, which you install and then run, for example like this
-(you can see how it’s configured in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile&lt;/code&gt; of
-&lt;a href=&quot;https://github.com/yegor256/requs-paper&quot;&gt;this paper&lt;/a&gt;):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ texsc --pws aspell.en.pws --ignore=code,citep article.tex&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;There is a list of arguments you can supply to &lt;code class=&quot;highlighter-rouge&quot;&gt;texsc&lt;/code&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--pws&lt;/code&gt; is the location of a custom dictionary, where each
-line is a word aspell is supposed to ignore. It’s important to
-have the first line equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;personal_ws-1.1 en 741 utf-8&lt;/code&gt;. Why?
-I don’t know. But if it contains something else, aspell will just
-silently ignore the file. Nice, huh?&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--ignore&lt;/code&gt; (you may have many of them) is the list of
-TeX commands, and which arguments should be ignored. A good example is the
-&lt;code class=&quot;highlighter-rouge&quot;&gt;\code{}&lt;/code&gt; command, which in all cases has something that is not
-an English word. You may also have commands with multiple arguments,
-in which case you say something like &lt;code class=&quot;highlighter-rouge&quot;&gt;--ignore=code:op&lt;/code&gt; and in the
-command &lt;code class=&quot;highlighter-rouge&quot;&gt;\code[foo]{bar}&lt;/code&gt; both &lt;code class=&quot;highlighter-rouge&quot;&gt;foo&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;bar&lt;/code&gt; will be ignored.
-The &lt;code class=&quot;highlighter-rouge&quot;&gt;:op&lt;/code&gt; suffix means that an optional (&lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt;) argument is ignored and then
-a mandatory one (&lt;code class=&quot;highlighter-rouge&quot;&gt;p&lt;/code&gt;). Something like &lt;code class=&quot;highlighter-rouge&quot;&gt;:oppp&lt;/code&gt; would tell aspell
-to ignore one optional and then three mandatory arguments.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--min-word-length&lt;/code&gt; is the minimum length of word to pay attention to.
-I use the number &lt;code class=&quot;highlighter-rouge&quot;&gt;3&lt;/code&gt; and this is the default value. Shorter words (one or two characters)
-are not important and don’t need to be spell-checked.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I use &lt;code class=&quot;highlighter-rouge&quot;&gt;texsc&lt;/code&gt; in all my LaTeX projects, usually as part of their
-build cycle, which I automate with &lt;a href=&quot;https://www.gnu.org/software/make/&quot;&gt;GNU make&lt;/a&gt;.
-You can do the same, as it’s open source.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html">Do you use LaTeX for your academic and technical writings? You don’t? Well you should! It’s the most only professional instrument for making properly formatted PDF documents. MS Word and Apple Pages are for secretaries non-tech people, while LaTeX is serious. It’s perfect in so many ways, thanks to Donald Knuth (the creator of TeX) and Leslie Lamport (the author of LaTeX), but it lacks one very convenient feature: spell checking. The only solution I’ve found so far, which works perfectly for my documents, is GNU aspell.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/zero-2.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/zero-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Do it now.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Do you know the most typical mistake startup founders make when they pitch their ideas to investors? According to Jake Mendel from Silicon Valley Bank, they often focus on the solution they propose instead of the problem they are trying to solve. Inability to identify the problem is the common cause of startup failures. However, it’s not only them. Look at your project and try to answer “What’s wrong with the world now?” and then “How is this product fixing it?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
