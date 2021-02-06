@@ -8,7 +8,6 @@ description: |
   Do we really manage risks in software projects or
   we just let them happen? Do we understand what Risk List
   is for and how to work with it without fear?
-  David is one of the best experts in this area, without any doubts.
 keywords:
   - podcast
   - project management podcast
