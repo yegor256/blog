@@ -39,7 +39,12 @@ informed about everything I do publicly, including these webinars.
 
 ## 2021
 
-{% webinar 06-01-2021 54 I9xyZVSo-HY How to Make a DSL with ANTLR4 %}
+{% webinar 10-02-2021 55 fJvUTlPHSvU Encapsulation Is Dead, Let's Use Distance of Coupling Instead %}
+
+<a href="https://www.youtube.com/watch?v=fJvUTlPHSvU"><img src="https://i.ytimg.com/vi/fJvUTlPHSvU/mqdefault.jpg" class="wnr" alt="Webinar no.55 by Yegor Bugayenko"/></a>
+Feb 10, 2021<br/>
+&#35;55: **Encapsulation Is Dead, Let's Use Distance of Coupling Instead**<br/>
+Encapsulation is one of four fundamental principles in object-oriented programming. However, as we practitioners know, it doesn't really work. Getters and setters don't really help, but only make the code more complex. It is suggested to use a different approach to enforce decoupling: distance of coupling metric.
 
 <a href="https://www.youtube.com/watch?v=I9xyZVSo-HY"><img src="https://i.ytimg.com/vi/I9xyZVSo-HY/mqdefault.jpg" class="wnr" alt="Webinar no.53 by Yegor Bugayenko"/></a>
 Jan 6, 2021<br/>
