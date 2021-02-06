@@ -54,7 +54,7 @@ Recent episodes:
 <img src="/images/shift-m/david-hillson.png" class="guest-face" alt="Face of David Hillson"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;45: [Shift-M/45: Risk Management with David Hillson, the Risk Doctor](/shift-m/2020/45.html)<br/>
-6 February 2021; 64 min.
+6 February 2021; 65 min.
 
 <img src="/images/shift-m/allen-holub.png" class="guest-face" alt="Face of Allen Holub"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
