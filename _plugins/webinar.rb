@@ -27,7 +27,7 @@ module Yegor
       date = Time.parse(@date)
       url = 'http://www.google.com/calendar/event' +
         '?action=TEMPLATE' +
-        '&dates=' + URI.escape(date.strftime('%Y%m%dT190000Z') + '/' + date.strftime('%Y%m%dT200000Z')) +
+        '&dates=' + URI.escape(date.strftime('%Y%m%dT170000Z') + '/' + date.strftime('%Y%m%dT190000Z')) +
         '&sprop=' + URI.escape('website:https://www.youtube.com/watch?v=#{@id}') +
         '&text=' + URI.escape("#{@title} (webinar ##{@number})") +
         '&location=' + URI.escape('YouTube Live') +
