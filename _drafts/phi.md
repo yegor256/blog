@@ -21,7 +21,7 @@ jb_picture:
 
 There are three things in EOLANG (and the 𝜑-calculus which we
 based it on): data, atoms, and objects. There is a dataization
-function, which puts all three together in order to make EO
+function, which puts all three together in order to make an EO
 program alive. Here is how it works together with Java,
 for example.
 
