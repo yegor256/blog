@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-02-06T11:22:54+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Greed-Based Planning</title><link href="https://www.yegor256.com/2021/02/02/greed-based-planning.html" rel="alternate" type="text/html" title="Greed-Based Planning" /><published>2021-02-02T00:00:00+00:00</published><updated>2021-02-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/02/02/greed-based-planning</id><content type="html" xml:base="https://www.yegor256.com/2021/02/02/greed-based-planning.html">&lt;p&gt;You have an objective, a budget, and a team. You are
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-02-10T06:48:39+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Dataization</title><link href="https://www.yegor256.com/2021/02/10/dataization.html" rel="alternate" type="text/html" title="Dataization" /><published>2021-02-10T00:00:00+00:00</published><updated>2021-02-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/02/10/dataization</id><content type="html" xml:base="https://www.yegor256.com/2021/02/10/dataization.html">&lt;p&gt;There are three things in EOLANG (and the 𝜑-calculus which we
+based it on): data, atoms, and objects. There is a dataization
+function, which puts all three together in order to make an EO
+program alive. Here is how it works together with Java,
+for example.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Space Force (2020) by Steve Carell and Greg Daniels&quot; src=&quot;/images/2021/02/space-force.jpg&quot; longdesc=&quot;#6c25ba32&quot; /&gt;&lt;figcaption id=&quot;6c25ba32&quot;&gt;Space Force (2020) by Steve Carell and Greg Daniels&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s say we are making an online shop where items are
+being shipped to different countries and we must calculate
+shipment costs based on the customer’s location. We create
+an &lt;a href=&quot;/2020/12/01/abstract-objects.html&quot;&gt;abstract object&lt;/a&gt;
+that represents shipment costs:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[customer] &amp;gt; cost-of-shipment
+  if. &amp;gt; @
+    customer.country.eq &quot;US&quot;
+    9.99
+    24.99&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then, let’s say we have an abstract object &lt;code class=&quot;highlighter-rouge&quot;&gt;customer-in-mysql&lt;/code&gt;,
+which represents the customer’s information in the MySQL database. To
+make a specific customer &lt;code class=&quot;highlighter-rouge&quot;&gt;jeff&lt;/code&gt; we make a copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;customer-in-mysql&lt;/code&gt;,
+specifying the ID of the customer as &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;customer-in-mysql 42 &amp;gt; jeff&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The closed object &lt;code class=&quot;highlighter-rouge&quot;&gt;jeff&lt;/code&gt; is the customer we are looking for.
+We assume that it has the &lt;code class=&quot;highlighter-rouge&quot;&gt;country&lt;/code&gt; child object, which is needed by
+the &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, we make a copy of the &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt; and then
+add it to the product price in order to calculate how
+much a customer has to pay:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cost-of-shipment jeff &amp;gt; x
+
+x.add product.price &amp;gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, the &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; is a new object, a copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt;. Then,
+we take the child abstract object &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; from it and make a copy,
+giving &lt;code class=&quot;highlighter-rouge&quot;&gt;product.price&lt;/code&gt; object to it as an attribute. We name the created copy
+as &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt;. Then, we print the total price:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout &amp;gt; app
+  sprintf
+    &quot;Your total is %f&quot; total&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;All these manipulations don’t make the number print yet. They
+are all object declarations. We’ve declared one abstract object
+&lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt; and a few closed objects: &lt;code class=&quot;highlighter-rouge&quot;&gt;jeff&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt; and
+&lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now the most interesting part, which we call &lt;em&gt;dataization&lt;/em&gt;. It’s a process
+of turning an object into data. The data is something that doesn’t have
+any child objects and is the simplest element of the computing platform,
+where EOLANG software is being compiled. You may think that in the example
+above &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;US&quot;&lt;/code&gt; are data. They are not. They are also objects
+and we can write this, for example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;42.add 5 &amp;gt; z
+
+&quot;US&quot;.length &amp;gt; len&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The data behind these objects is not visible for us at the level of
+EOLANG program. The data is inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt; object. Only the runtime
+of the specific platform can dig it out through the dataization
+mechanism. If you compile the EOLANG code to Java, you will get
+a class &lt;code class=&quot;highlighter-rouge&quot;&gt;EOapp&lt;/code&gt; (derived from the &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; object), which can be dataized
+like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;import org.eolang.phi.Data;
+EOapp app = new EOapp();
+Boolean data = new Dataized(app).take(Boolean.class);&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The method &lt;code class=&quot;highlighter-rouge&quot;&gt;take()&lt;/code&gt; will take the object &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; and will try to ask it
+to turn itself as data. The object &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; will redirect this request
+to the object &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;, which will ask the object &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt; the same thing:
+what data do you have? The object &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt; is the object &lt;code class=&quot;highlighter-rouge&quot;&gt;x.add&lt;/code&gt;.
+If we look at what &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; is, we’ll see that it’s a copy of our own
+abstract object &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt;, which doesn’t have the child object &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;!
+However, it does have a child object &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt;, which is a “catch-all” object:
+the request to get &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; will land there.&lt;/p&gt;
+
+&lt;p&gt;The object bound to the attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt; is the copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;if. &amp;gt; @
+  customer.country.eq &quot;US&quot;
+  9.99
+  24.99&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It will take the &lt;code class=&quot;highlighter-rouge&quot;&gt;customer.country.eq&lt;/code&gt;, dataize it in order to get
+boolean data, and then, depending on this data, return either &lt;code class=&quot;highlighter-rouge&quot;&gt;9.99&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;24.99&lt;/code&gt;.
+Either one of them has the attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;, which will be used to
+construct a new object, with an argument &lt;code class=&quot;highlighter-rouge&quot;&gt;product.price&lt;/code&gt;. The result
+will be used by the &lt;code class=&quot;highlighter-rouge&quot;&gt;Dataized&lt;/code&gt; Java class in order to continue the process
+of dataization. Finally, the sum of two numbers will be dataized to a
+Java floating-point number.&lt;/p&gt;
+
+&lt;p&gt;The dataization of &lt;code class=&quot;highlighter-rouge&quot;&gt;customer.country.eq&lt;/code&gt; is happening inside
+the runtime and is not visible at the level of EOLANG. The object
+&lt;code class=&quot;highlighter-rouge&quot;&gt;eq&lt;/code&gt; is called an &lt;em&gt;atom&lt;/em&gt;, since it’s an atomic element of the language—it
+has to be implemented in Java, not in EOLANG. There are other atoms
+in the example above: &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;length&lt;/code&gt;.
+They all are implemented in Java.&lt;/p&gt;
+
+&lt;p&gt;Thus, we construct objects first, either through &lt;em&gt;abstraction&lt;/em&gt; (declaring new
+abstract objects) or through &lt;em&gt;application&lt;/em&gt; (making copies of abstract
+objects). Next, we dataize one of the objects and the entire composition
+of objects starts to “live,” trying to turn itself into data.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">There are three things in EOLANG (and the 𝜑-calculus which we based it on): data, atoms, and objects. There is a dataization function, which puts all three together in order to make an EO program alive. Here is how it works together with Java, for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/02/space-force.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/02/space-force.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Greed-Based Planning</title><link href="https://www.yegor256.com/2021/02/02/greed-based-planning.html" rel="alternate" type="text/html" title="Greed-Based Planning" /><published>2021-02-02T00:00:00+00:00</published><updated>2021-02-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/02/02/greed-based-planning</id><content type="html" xml:base="https://www.yegor256.com/2021/02/02/greed-based-planning.html">&lt;p&gt;You have an objective, a budget, and a team. You are
 a manager and you want the project to be done. You get your team together
 in a &lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;meeting room&lt;/a&gt;
 to discuss the &lt;em&gt;plan&lt;/em&gt;. You tell them what needs to
@@ -1011,64 +1122,4 @@ the TellDontAsk principle mentioned above, supposed to let our objects do the wo
 return a quick summary of it. The distance metric will tell us exactly that:
 how many times, and by how much, we violated the principle of loose coupling.&lt;/p&gt;
 
-&lt;p&gt;Would you be interested in creating such an analyzer for, say, Java code?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Encapsulation, as you know, is one of the four key principles in object-oriented programming. Encapsulation, according to Grady Booch et al., is “the process of hiding all the secrets of an object that do not contribute to its essential characteristics.” Practically speaking, it’s about those private attributes that we use in Java and C++: they are not visible to the users of our objects, that’s why they can’t be modified or even read. Booch et al. believe that the purpose of encapsulation is “to provide explicit barriers among different abstractions,” which leads to “a clear separation of concerns.” However, does it really work as planned? Do we really have explicit barriers between objects? Let’s see.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Lack of Problem Is the Problem</title><link href="https://www.yegor256.com/2020/10/13/lack-of-problem.html" rel="alternate" type="text/html" title="Lack of Problem Is the Problem" /><published>2020-10-13T00:00:00+00:00</published><updated>2020-10-13T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/10/13/lack-of-problem</id><content type="html" xml:base="https://www.yegor256.com/2020/10/13/lack-of-problem.html">&lt;p&gt;Do you know the most typical mistake startup founders make
-when they pitch their ideas to investors? According to
-&lt;a href=&quot;https://medium.com/@jakemendel/b3a884c54ab4&quot;&gt;Jake Mendel&lt;/a&gt;
-from Silicon Valley Bank, they often focus on the solution they propose
-instead of the problem they are trying to solve. Inability to identify
-the problem is the common cause of startup failures. However, it’s not only them.
-Look at your project and try to answer
-“What’s wrong with the world now?” and then “How is this product fixing it?”&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Le retour du héros (2018) by Laurent Tirard&quot; src=&quot;/images/2020/10/le-retour-du-heros.jpg&quot; longdesc=&quot;#30e66a8a&quot; /&gt;&lt;figcaption id=&quot;30e66a8a&quot;&gt;Le retour du héros (2018) by Laurent Tirard&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Something has to be wrong. Otherwise the project doesn’t make sense.
-Neither for its founders, nor for its programmers and users.&lt;/p&gt;
-
-&lt;p&gt;Open the README file in your repository and read its first paragraph.
-Does it answer the question? Does it identify the problem? Is it obvious
-to your users what exactly you are solving? It should be.&lt;/p&gt;
-
-&lt;p&gt;You may say, “startup founders are looking for money, that’s why they need
-this problem statement to impress investors, but we already have
-the budget and don’t need to impress anyone, we just need
-to create yet another version of our mobile app so that our users
-continue ordering pizzas and our director keeps paying us,”
-and you would be right about not needing the money. You will
-get the money no matter what, whether your README file has a properly
-formulated problem statement or even if no such file exists.
-Who am I kidding? In most cases, even if we don’t have a repository
-we will still be paid well!&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;The primary responsibility of a team leader is keeping an eye on the problem statement and making sure it’s good enough for the team.
-&lt;/aside&gt;
-
-&lt;p&gt;This is true, but I think that money is not the fuel of
-the software economy &lt;del&gt;anymore&lt;/del&gt;. It’s people. Not just people, but
-&lt;em&gt;motivated&lt;/em&gt; people—this is what software teams are now fighting for.
-Getting a budget for a project, especially if you are
-in a big enterprise (where all interesting projects will be eventually),
-is not difficult. A much bigger task is to acquire and retain a team that is
-able and willing to deliver results.&lt;/p&gt;
-
-&lt;p&gt;First, you pitch to investors. Then, you pitch to programmers.
-The second pitch is more difficult than the first one. Highly
-qualified software experts motivated to work full-speed
-for your project—is the new capital in this modern economy.&lt;/p&gt;
-
-&lt;p&gt;How do we acquire and retain them? We formulate the problem. We make
-sure the problem is new, big, ambitious, challenging, and noble.
-If we can do that, they will join and will stay … motivated.&lt;/p&gt;
-
-&lt;p&gt;I would even say that the primary responsibility of a team leader
-is keeping an eye on the problem statement and making sure it’s
-good enough for the team. When something goes wrong with
-morale, discipline, or performance—these are the symptoms of
-a defective problem statement. In most cases. And the only person responsible
-is the team leader, who has to fix it by opening
-the README file and specifying, in the first paragraph, what is wrong
-with the world right now and how our product is going to fix it.&lt;/p&gt;
-
-&lt;p&gt;Do it now.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Do you know the most typical mistake startup founders make when they pitch their ideas to investors? According to Jake Mendel from Silicon Valley Bank, they often focus on the solution they propose instead of the problem they are trying to solve. Inability to identify the problem is the common cause of startup failures. However, it’s not only them. Look at your project and try to answer “What’s wrong with the world now?” and then “How is this product fixing it?”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/le-retour-du-heros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Would you be interested in creating such an analyzer for, say, Java code?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Encapsulation, as you know, is one of the four key principles in object-oriented programming. Encapsulation, according to Grady Booch et al., is “the process of hiding all the secrets of an object that do not contribute to its essential characteristics.” Practically speaking, it’s about those private attributes that we use in Java and C++: they are not visible to the users of our objects, that’s why they can’t be modified or even read. Booch et al. believe that the purpose of encapsulation is “to provide explicit barriers among different abstractions,” which leads to “a clear separation of concerns.” However, does it really work as planned? Do we really have explicit barriers between objects? Let’s see.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/10/chacun-sa-vie.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
