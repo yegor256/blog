@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dataization"
-date: 2021-02-12
+date: 2021-02-10
 place: Moscow, Russia
 tags: oop eolang
 description: |
@@ -14,9 +14,9 @@ keywords:
   - oop research
   - oop research topics
   - oop research subjects
-image: /images/2021/02/
+image: /images/2021/02/space-force.jpg
 jb_picture:
-  caption:
+  caption: Space Force (2020) by Steve Carell and Greg Daniels
 ---
 
 There are three things in EOLANG (and the 𝜑-calculus which we
@@ -126,7 +126,7 @@ if. > @
   24.99
 {% endhighlight %}
 
-It will take the `customer.country.eq`, dataize it in order to get 
+It will take the `customer.country.eq`, dataize it in order to get
 boolean data, and then, depending on this data, return either `9.99` or `24.99`.
 Either one of them has the attribute `add`, which will be used to
 construct a new object, with an argument `product.price`. The result
