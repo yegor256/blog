@@ -17,6 +17,12 @@ keywords:
 image: /images/2017/11/godfather.jpg
 jb_picture:
   caption: The Godfather (1972) by Francis Ford Coppola
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "Project Managers Shouldn't Trust Their Programmers. Do This Instead"
+    date: 2021-01-11
+    url: https://cacm.acm.org/blogs/blog-cacm/249819-project-managers-shouldnt-trust-their-programmers-do-this-instead/fulltext
 buffer:
   - "I trusted them for over a year, now they've quit and I'm left with nothing!"
   - "Don't trust us programmers. We are smart, lazy and spoiled"
