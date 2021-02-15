@@ -108,7 +108,7 @@ scientific research says. Rewards will motivate
 the most cunning to take advantage of the most hard
 working and good-natured. Team spirit will suffer, big time.
 
-{% quote Fair competition leads to a better cumulative result %}
+{% quote Fair competition leads to a better cumulative result. %}
 
 On the other hand, if you have that "[ground rules]({% pst 2015/oct/2015-10-13-competition-without-rules %})" document and you
 strictly follow it, giving monetary rewards to your workers will
