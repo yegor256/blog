@@ -1,0 +1,99 @@
+---
+layout: post
+title: "Imposters to Win!"
+date: 2020-12-15
+place: Moscow, Russia
+tags: sarcasm
+description: |
+  In the time of no-management smart people know
+  how to deal with their opponets: make them
+  feel sorry for doubting your opinion.
+keywords:
+  - management
+  - psychology
+  - imposter
+  - office fights
+  - office politics
+image: /images/2021/02/
+jb_picture:
+  caption:
+---
+
+The time of objectivism is fading out. 
+Meritocracy is now a rude word. 
+Metrics in management will soon be considered as a harasment.
+Productivity is already a false objective.
+It's time to start taking an advantage of this era of nonsense.
+The era of imposters is coming!
+Don't miss the opportunity to become a great imposter.
+Here is a quick summary of key techniques to make you highly successful in any argument
+you may have in your flat democratic organizations of the future without
+any skills, knowledge, education, or real achievements.
+Just pure love and emotions.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+**Trust Me!**
+Don't even try to prove anything by numbers.
+This is an outdated technique.
+They will only treat you like a weird person, at best.
+Rationality is not a sign of professionalism nowadays.
+Instead, you should hit them with a straight "trust me" and expect no answer back.
+What can they reply to that anyway?
+Can they really say that they don't trust you?
+Such a toxic behavior no serious organization will tolerate!
+We are supposed to trust each other since we are in one team.
+Not only in one team!
+We have to trust everybody in the world---this is what good human beings do!
+Thus, no numbers, no facts, no proofs---just pure simple "trust me" and you will be the king of any argument.
+
+**I Know What I'm Doing!**
+They still think that you are not convincing enough with your "Trust Me"?
+Bad for them.
+Tell them that you worked five years in Oracle and also four years in Intel.
+This automatically means that you are right.
+Can they argue back with "We don't care where you worked before"?
+This is harsh, they won't do this.
+They must respect their colleagues!
+Especially those who worked in Oracle and Intel before.
+
+**Do You Think I'm Stupid?!**
+If they continue arguing, ask this question, looking them right in the eye.
+What do they answer?
+They will appologise.
+The smartest of them will beg for forgiveness and then run away from the meeting room.
+This question doesn't have a right answer.
+No matter what they say, you win.
+If they start with "No", your point is proven.
+If they start with "Yes"... they won't start with "Yes".
+They are good and kind people.
+
+**I Will Quit If You Keep Talking Like This!**
+This is your last line.
+After it they won't have anything in their hands.
+They will have to stop right there.
+And they will be afraid to get into a fight with you ever again.
+Your position will be solid for many month forward.
+Especially in a big company, where retention rate is the most important indicator of success.
+If you quit because of an agrument---your opponent will lose a lot of karma points.
+"I will quit" is the most powerful weapon in your arsenal.
+However, use it carefully, only after you massage them with the other three tactics.
+
+Your ultimate goal in your career of a great imposter should be
+the situation where nobody is arguing with you. They must be
+scared of verifying your results, questioning your conclusions,
+validating your points, and even asking you difficult questions.
+They must know that by doing so they immediately will become
+"toxic and negative people"---your team doesn't appreciate such
+behavior.
+
+They must understand that real experts are very fragile and can easily
+be offended. They must learn the lesson: 
+doubting an opinion of an expert is simply rude.
+The best they can do with you, an expert, is to tell you how
+great you are and how much they respect your contribution. Anything
+aside from that you must treat as an offense and react immediately.
+
+That's how you tame them.
