@@ -6,8 +6,8 @@ place: Moscow, Russia
 tags: sarcasm
 description: |
   In the time of no-management smart people know
-  how to deal with their opponets: make them
-  feel sorry for doubting your opinion.
+  how to deal with their opponents: make them
+  feel sorry for arguing and doubting.
 keywords:
   - management
   - psychology
@@ -20,12 +20,13 @@ jb_picture:
 ---
 
 The time of objectivism is fading out. 
-Meritocracy is now a rude word. 
-Metrics in management will soon be considered as a harasment.
-Productivity is already a false objective.
+[Meritocracy]({% pst 2018/jan/2018-01-09-micro-budgeting %}) is now a rude word.
+[Metrics]({% pst 2020/jun/2020-06-23-individual-performance-metrics %}) 
+in management will soon be considered as a harasment.
+Productivity is [already]({% pst 2020/dec/2020-12-22-allen-holub %}) a false objective.
 It's time to start taking an advantage of this era of nonsense.
 The era of imposters is coming!
-Don't miss the opportunity to become a great imposter.
+Don't miss the opportunity to become a great one.
 Here is a quick summary of key techniques to make you highly successful in any argument
 you may have in your flat democratic organizations of the future without
 any skills, knowledge, education, or real achievements.
