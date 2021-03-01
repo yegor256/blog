@@ -63,7 +63,7 @@ Especially those who worked in Oracle and Intel.
 **Do You Think I'm Stupid?!**
 If they continue arguing, ask this question, looking them right in the eye.
 What do they answer?
-They will appologise.
+They will apologize.
 The smartest of them will beg for forgiveness and then run away from the meeting room.
 This question doesn't have a right answer.
 No matter what they say, you win.
