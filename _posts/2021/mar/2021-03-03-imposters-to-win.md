@@ -14,9 +14,9 @@ keywords:
   - imposter
   - office fights
   - office politics
-image: /images/2021/02/
+image: /images/2021/03/the-kominsky-method.jpg
 jb_picture:
-  caption:
+  caption: The Kominsky Method (2018-) by Chuck Lorre
 ---
 
 The time of objectivity is fading out. 
