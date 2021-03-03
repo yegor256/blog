@@ -2460,6 +2460,7 @@ doubles
 doubling
 doubt
 doubted
+doubting
 doubts
 down
 down-to-earth
@@ -3242,6 +3243,7 @@ foresee
 forever
 forget
 forgive
+forgiveness
 forgot
 forgotten
 fork
@@ -3985,6 +3987,8 @@ importers
 imports
 impose
 impossible
+imposter
+imposters
 impractical
 impress
 impressed
@@ -4497,6 +4501,7 @@ kane
 kapralov
 karachi
 karl
+karma
 kasparov
 katakuris
 katie
@@ -6492,6 +6497,7 @@ prompts
 pronoun
 proof
 proof-of-concept
+proofs
 propaganda
 propagandists
 proper
@@ -6678,6 +6684,7 @@ rather
 rating
 ratio
 rationale
+rationality
 ratios
 raw
 raymond
@@ -7046,6 +7053,7 @@ resume
 resumes
 retain
 retaining
+retention
 rethink
 retina
 retire
@@ -8228,6 +8236,7 @@ taboo
 tabular
 tacit
 tackles
+tactics
 tag
 tagged
 tags
@@ -8246,6 +8255,7 @@ talks
 tallinn
 tamarine
 tambi
+tame
 taming
 tan
 tandem
@@ -8943,6 +8953,7 @@ verification
 verified
 verifiers
 verify
+verifying
 version
 versionalize
 versionalizes
