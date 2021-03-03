@@ -23,7 +23,7 @@ The time of objectivity is fading out.
 [Meritocracy]({% pst 2018/jan/2018-01-09-micro-budgeting %}) is now a rude word.
 [Metrics]({% pst 2020/jun/2020-06-23-individual-performance-metrics %}) 
 in management will soon be considered as harassment.
-Productivity is [already]({% pst 2020/dec/2020-12-22-allen-holub %}) a false objective.
+Productivity is [already](/shift-m/2020/44.html) a false objective.
 It's time to start taking advantage of this era of nonsense.
 The era of imposters is coming!
 Don't miss the opportunity to become a great one.
