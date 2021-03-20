@@ -46,8 +46,6 @@ May 12, 2021<br/>
 &#35;56: **Inheritance vs. Composition in Object-Oriented Programming**<br/>
 Implementation Inheritance is a mechanism of code reuse, which is very popular in OOP code. However, many practitioners believe that composition is a better and cleaner alternative.
 
-{% webinar 10-02-2021 55 fJvUTlPHSvU Encapsulation Is Dead, Let's Use Distance of Coupling Instead %}
-
 <a href="https://www.youtube.com/watch?v=fJvUTlPHSvU"><img src="https://i.ytimg.com/vi/fJvUTlPHSvU/mqdefault.jpg" class="wnr" alt="Webinar no.55 by Yegor Bugayenko"/></a>
 Feb 10, 2021<br/>
 &#35;55: **Encapsulation Is Dead, Let's Use Distance of Coupling Instead**<br/>
