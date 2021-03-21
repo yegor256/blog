@@ -36,7 +36,7 @@ Just pure love and emotions.
 
 {% jb_picture_body %}
 
-**Trust Me!**
+**"Trust Me!"**
 Don't even try to prove anything by numbers.
 This is an outdated technique.
 They will only treat you like a weird person, at best.
@@ -50,7 +50,7 @@ And not just in the same team!
 We have to trust everybody in the world---this is what good human beings do!
 Thus, no numbers, no facts, no proofs---just a pure and simple "trust me" and you will be the king of any argument.
 
-**I Know What I'm Doing!**
+**"I Know What I'm Doing!"**
 Do they still think that you are not convincing enough with your "Trust Me"?
 That won't help them.
 Tell them that you worked five years in Oracle and also four years in Intel.
@@ -60,7 +60,7 @@ That's too harsh, they won't do it.
 They must respect their colleagues!
 Especially those who worked in Oracle and Intel.
 
-**Do You Think I'm Stupid?!**
+**"Do You Think I'm Stupid?!"**
 If they continue arguing, ask this question, looking them right in the eye.
 What do they answer?
 They will apologize.
@@ -71,7 +71,7 @@ If they start with "No", your point is proven.
 If they start with "Yes"... well they won't start with "Yes".
 They are good and kind people.
 
-**I Will Quit If You Keep Talking Like This!**
+**"I Will Quit If You Keep Talking Like This!"**
 This is your last line.
 After it they won't have anything in their hands.
 They will have to stop right there.
