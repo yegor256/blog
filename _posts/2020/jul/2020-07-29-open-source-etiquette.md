@@ -121,3 +121,5 @@ of your products.
 This seems to be it. If you do all of these, you will demonstrate
 respect to other developers and they will respect you in return.
 Did I forget anything important?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What does it take to be an active and successful <a href="https://twitter.com/hashtag/opensource?src=hash&amp;ref_src=twsrc%5Etfw">#opensource</a> contributor?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1373522225471557633?ref_src=twsrc%5Etfw">March 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -78,7 +78,7 @@ from overly-paid programmers/managers who are just trying to keep their jobs, do
 
   * "Performance metrics discourage initiative, innovation and risk-taking,"
     [says](https://aeon.co/ideas/against-metrics-how-measuring-performance-by-numbers-backfires)
-    [Jerry Z Muller](https://press.princeton.edu/our-authors/muller-jerry-z),
+    [Jerry Z. Muller](https://press.princeton.edu/our-authors/muller-jerry-z),
     author of
     [The Tyranny of Metrics](https://press.princeton.edu/books/hardcover/9780691174952/the-tyranny-of-metrics).
 
