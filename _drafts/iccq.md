@@ -27,10 +27,11 @@ and
 The difference is [huge](https://redmonk.com/kfitzpatrick/2019/01/29/tech-industry-events-vs-academic-conferences/).
 My understanding is that professional conferences are for _practitioners_, 
 while academic ones are for _researchers_.
-ICCQ, which we organized this year, is an academic one.
+ICCQ, which we organized this year, was an academic one.
 I haven't had any expertise in organizing such things, and had to go through it all for the first time.
 Here is a more or less detailed description of the journey.
-Feel free to repeat it for yourself and make a similar conference.
+Feel free to learn from it and make a better conference yourself.
+We will try to make a better one next year, [ICCQ 2022](https://www.iccq.ru/2022.html).
 
 <!--more-->
 
@@ -39,12 +40,12 @@ Feel free to repeat it for yourself and make a similar conference.
 **Idea**<br/>
 As I said in [my opening speech](https://www.youtube.com/watch?v=65baOBHeVMI), 
 the purpose of a new event was to 
-help Russian computer society better connect with their worldwide
-colleagues. Besides having a good intention I knew where to get a reliable sponsor.
-The rest was just implementation.
+help Russian computer science research society better connect with their worldwide
+colleagues. Besides having a good intention I knew where to get a supportive and reliable sponsor.
+The rest was just a matter of implementation.
 
 **Name**<br/>
-There are many options to chose from, but it seemed
+There were many options to chose from, but it seemed
 that the de-facto standard was a few letters, all-caps, like
 [SPLASH](https://conf.researchr.org/series/splash), 
 [ICSE](http://www.icse-conferences.org/), 
@@ -54,26 +55,31 @@ that the de-facto standard was a few letters, all-caps, like
 There are expections like [EuroSys](https://2021.eurosys.org/)
 or [EuroS&P](https://www.ieee-security.org/TC/EuroSP2021/) but
 this naming convention is much less popular.
-We picked ICCQ, which was not yet actively used in Google and the website
-with `.ru` extension was available. Initially, we aimed for `.org`,
-but since the event is supposed to be always Russia-based, `.ru`
+We picked ICCQ, which was not yet actively used in Google and 
+[the domain](https://www.iccq.ru)
+with the `.ru` extension was available. Initially, we aimed for `.org`,
+but since the event was supposed to be _always_ Russia-based, the `.ru`
 seemed to be a perfect choice.
 
 **Subject**<br/>
 Many conferences aim at many topics, maybe in order to 
-attract more papers. We decided to behave completely differently:
+attract more papers. We decided to behave in an opposite manner:
 we picked a single topic of _code quality_ and decided to reject all papers, 
 which would not be relevant to it.
 We didn't even publish the list of topics, like many other
 events do. We just said that we are about code quality and 
-how to make it better.
+how to increase it.
 
 **Organizers**<br/>
 [Organizers](https://www.iccq.ru/2021.html#organizers) were the people who I needed most of all.
 They were not supposed to write papers or make speeches, but without
 them I would not be able to make the conference. Not all of them
-stayed with us for a whole year, some of them joined and quick, some
-moved to the PC later.
+stayed with us for a whole year, some of them joined and quit, some
+moved to the PC later. But I'm very thankful to 
+[Sergey Belov](https://www.linkedin.com/in/sebelov/),
+[Sergey Prokhorov](https://scholar.google.ru/citations?user=sZlMj_wAAAAJ),
+and 
+[Jeff Zhu](https://www.linkedin.com/in/jeff-zhu-36ab702/)---they helped a lot!
 
 **Dates**<br/>
 We picked a date of the event about eight months ahead of us
@@ -84,7 +90,7 @@ We also set three important dates:
 2) "author notification"---two months after the submission,
 3) "camera-ready copies"---one month after author notification.
 This timeline seems doable, but pretty tight. Next year we'll give
-our PC more time for reviews: two months is definitely not enough
+our PC more time for reviewing: two months is definitely not enough
 for a bigger event.
 
 **Website**<br/>
@@ -93,9 +99,10 @@ the sources of our website are [here](https://github.com/yegor256/iccq.github.io
 We knew that most conferences use some hosted site builders, like
 [conf.researchr.org](https://conf.researchr.org/), but we decided to swim against the
 current and build the site the way we believed was right. No surprise,
-we've got many of complaints about that from people who we were trying to 
+we've got many complaints about that from people who we were trying to 
 invite into our team, as partners or co-organizers. They were all starting
-the discussion with "You need to do you website right." Nevertheless,
+the discussion with "You need to do your website right if you want
+your conference to be a success." Nevertheless,
 the original design of the website survived. By the way, some of the content
 we copied with some modifications from [SPLASH(https://conf.researchr.org/series/splash) website.
 
@@ -103,18 +110,28 @@ we copied with some modifications from [SPLASH(https://conf.researchr.org/series
 We were lucky to have a very famous Russian University on our side
 right from the start: [HSE](https://www.hse.ru/). We knew people from there
 and they were not against hosting the event and putting their name on our website.
+My biggest thanks to 
+[Sergey Zykov](https://scholar.google.com/citations?user=68uxw-AAAAAJ&hl=en), 
+[Sergey Avdoshin](https://www.hse.ru/en/staff/avdoshin), 
+and 
+[Ivan Arzhantsev](https://www.hse.ru/en/staff/arjantsev).
 
 **Venue**<br/>
-HSE also were not against hosting the event physically on premise.
+HSE also was not against hosting the event physically, on their premises.
 The event was not going to be big (up to 100 people attending).
 We agreed with HSE that they would give us a big class room on Saturday. 
 They didn't mind.
+However, later, due to the COVID-19 epidemic situation, we decied to make
+the event fully online. Moving to online didn't cause any problems to 
+us, as it seems. Moreover, we [decided](https://twitter.com/iccq_ru/status/1381107697693696000)
+that the next event, ICCQ 2022, will also be online, no matter what will
+be the situation with the virus.
 
 **Partners**<br/>
 We figured that in addition to HSE it would be good to have a few other sponsors,
 mostly to make us look more serious and reputable (as much as it's possible
 for a young conference). We had good contact with a few Russian
-education organizations and they all agreed: 
+education organizations and they all agreed to join: 
 [MIPT](https://mipt.ru/english/), 
 [MSU](https://www.msu.ru/), and 
 [ISP RAS](https://www.ispras.ru/en/). 
@@ -128,8 +145,8 @@ And we also contacted two biggest non-for-profit Russian media organizations:
 and
 [SECR](https://2021.secrus.org/?lang=en).
 They also agreed.
-Of course, it was much harder than it sounds. Some of organizations didn't reply
-to us, some of them rejected. It was a long process that took about two months
+Of course, it was much harder than it sounds. Some organizations didn't even reply
+to us, some of them rejected our invitations. It was a long process that took about two months
 of negotiations. We even created [this web page](https://www.iccq.ru/partnership.html) 
 to explain them why we want them to join us.
 
@@ -139,7 +156,8 @@ of people who would review the papers and decide which of them deserve to be
 published. First, we invited a few people who we personally knew. Then, we decided to try to keep
 the PC as diverse as possible in terms of country of origin. We didn't want to 
 see there only people living in Russia. We wanted to build a truly international
-PC and also truly professional. Because of this plan, the only option for us was cold calling---we didn't
+PC and also truly professional, whatever this means. 
+Because of this plan, the only option for us was cold calling---we didn't
 know so many people from different places. 
 We've sent about 400 invitation emails to people who participated in similar conferences worldwide.
 As you can see on the website: [30 of them](https://www.iccq.ru/2021.html#pc) 
@@ -160,14 +178,15 @@ They gave us their own "Record Number" and ISBN for the Proceedings.
 We decided that a good conference must have a good keynote speaker---it is someone
 who doesn't write a paper and doesn't go through a normal review process.
 It must be someone known by the community, in order to make the conference
-even more interesting for attendees. We decided to invite Anders Møller. We personally
+even more interesting for attendees. We decided to invite 
+[Anders Møller](https://cs.au.dk/~amoeller/). We personally
 knew him by [his book](https://cs.au.dk/~amoeller/spa/spa.pdf) recently published online.
 We invited and he agreed! [His speech](https://www.youtube.com/watch?v=oDdrzXkInnA) 
 was definitely <del>one of</del> the best at the conference.
 
 **Twitter**<br/>
 We decided to be present at just one social network, since it is the most 
-popular among tech people (proof?) and the easiest to maintain:
+popular among tech people and the easiest to maintain:
 [@iccq_ru](https://twitter.com/intent/follow?screen_name=iccq_ru). We
 tried to post there what's going on with the preparation of the event, almost
 every week. Some of our authors and PC members followed us.
@@ -175,8 +194,9 @@ every week. Some of our authors and PC members followed us.
 **Registration**<br/>
 We thought that the event would be on-site, in the class room of HSE. That's why
 we created a page at [Meetup](https://www.meetup.com/iccq-ru/events/273816665/) and
-collected over 170 registrations. Unfortunately, due to COVID-19, we had to make the
-conference fully online.
+collected over 170 registrations. Unfortunately, due to COVID-19, we 
+[had to make](https://twitter.com/iccq_ru/status/1358281073625563145)
+the conference fully online.
 
 **Steering**<br/>
 We didn't know what exactly it was for, but we saw other events doing this.
@@ -189,7 +209,8 @@ the CEO of SberCloud.
 **EasyChair**<br/>
 There has to be some website to collect papers from authors. We decided to use
 [EasyChair](https://www.easychair.org),
-since it's pretty popular and not so expensive as some others.
+since it's pretty popular and not so expensive as 
+[some others](https://academia.stackexchange.com/questions/2557/conference-management-software-preferably-open-source-with-custom-fields).
 
 **CFP**<br/>
 When everything was ready, there was a question (the biggest one!): how to 
@@ -214,32 +235,39 @@ our banners into
 [Communications of the ACM](https://cacm.acm.org/)
 and 
 [IEEE Computer](https://ieeexplore.ieee.org/document/9187479).
+We also ran some paid ads on Twitter.
 
 **Waiting**<br/>
 We were waiting for a few months with almost no result. Some papers
 were coming but their quality was obviously pretty low. We were
 very nervous, to say the least. We didn't have any backup plan.
 If there would be no good papers, I was prepared to call it all off
-and admit failure.
+and admit the failure (and monetary losses).
 
 **Extension**<br/>
 When the deadline arrived, it was obvious that we didn't manage to
-collect enough papers. We decided to give our authors another two weeks:
+collect enough papers. We 
+[decided](https://twitter.com/iccq_ru/status/1335476843491766272) 
+to give our authors another two weeks:
 the deadline was extended till Dec 18.
-It was worth it! A few very good papers arrived last and we phew-ed.
+It was worth it! A few very good papers arrived last and we 
+[phew-ed](https://twitter.com/iccq_ru/status/1340562074884333569).
 
 **Invited Talk**<br/>
 To make the conference even stronger, we decided to invite someone
 who we knew and respected. Just like we did with the Keynote talk, 
 but this time with a full paper to publish too.
-We invited Veselin Raychev, the CTO of [Snyk](https://snyk.io/). He wrote a survey
-paper for us and we promised him that it will be fast-track reviewed.
+We invited [Veselin Raychev](https://www.sri.inf.ethz.ch/people/veselin), 
+CTO of [Snyk](https://snyk.io/). He wrote 
+a [survey paper](https://ieeexplore.ieee.org/document/9392977) 
+for us and we promised him that it will be fast-track reviewed.
 Without such a promise he would probably not submit it to us, since
-we are too young and small, but since we guaranteed publication, he agreed.
+we are too young and small. But since we sort of guaranteed the publication, he agreed.
 This is how, I believe, invited talks work.
 
 **Desk Reject**<br/>
-We decided to reject six papers before even sending them to the PC
+We [decided](https://twitter.com/iccq_ru/status/1343967427105841152) 
+to reject six papers before even sending them to the PC
 for review. The most popular reason was: out of scope. Some papers
 were about something completely irrelevant. One paper was even auto-generated,
 with some very funny typos inside.
@@ -263,7 +291,8 @@ less instantly. Others were not giving us anything and about ten of them
 were not even answering my email reminders. We had just seven weeks between
 the submission deadline (remember, we extended it by two weeks) and the
 day of the final decision. We were not sure that we would be able 
-to collect all necessary reviews and that's why we started asking most active reviewers
+to collect all necessary reviews and that's why we 
+[asked](https://twitter.com/iccq_ru/status/1355741062430654466) most active reviewers
 to review more than just two papers. Surprisingly, most of them agreed to help
 us. The bottom line, we managed to collect at least three reviews per
 paper, while some papers got five reviews. Because most reviewers performed
@@ -271,10 +300,11 @@ their duties on time. Only three reviewers never provided us anything,
 without any explanation. 10%. Is is how it should be?
 
 **Accept**<br/>
-This was a very tough moment: all papers are ranked and we had to pick some number
-of them for the final publication. The question was: how many out of total 17?
-Having a conference with a small number of articles is probably not a good
-indicator of our work result. On the other hand, publishing something that
+This was a very tough moment: all papers were ranked and we had to pick some number
+of them for the final publication (and reject all others). 
+The question was: how many out of total 17?
+We were thinking: Having a conference with a small number of published articles is probably not a good
+indicator of success. On the other hand, publishing something that
 was explicitly rejected by reviewers would be at least unfair to other
 authors and to reviewers. We had a very intense discussion inside and decided
 to accept just six papers. Why six? Because the average rank of each of them
@@ -283,12 +313,15 @@ was positive. All papers with negative ranks were rejected.
 **Copyright Transfer**<br/>
 In order to publish our papers in IEEE Xplore, which is very important for
 all authors, we had to transfer the ownership of all texts to IEEE: this is 
-the requirement of IEEE. We build a small online form for that and asked
-all accepted authors to fill it up. They did.
+the requirement of IEEE. We build a small [online form](https://www.iccq.ru/ecf.html?id=1) 
+for that and asked all accepted authors to fill it up
+(the sources of the HTML form are 
+[here](https://raw.githubusercontent.com/yegor256/iccq.github.io/master/pages/ecf.md)). They did.
 
 **YouTube**<br/>
-I created a new YouTube channel, verified it, and created a new live
-stream.
+I created a new [YouTube channel](https://www.youtube.com/channel/UC_W-pjp6HWJGjK2sayFrnag), 
+[verified](https://support.google.com/youtube/answer/171664?hl=en) it,
+and [scheduled](https://www.youtube.com/watch?v=Qf6InatV2h4) a new live stream.
 
 **Agenda**<br/>
 We put all talks on the timeline and published conference agenda.
@@ -299,8 +332,11 @@ events.
 
 **Welcome Notes**<br/>
 We asked our Steering Committee Chair and Program Committee Chair 
-to write short one page welcome notes. They did. I also wrote mine,
-on behalf of Organizers.
+to write short one page welcome notes. They did
+([here](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9392940) 
+and 
+[here](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9392979)). 
+I also wrote mine, on behalf of Organizers: here.
 
 **Final PDFs**<br/>
 We asked all accepted authors to send us so-called "camera-ready copies,"
@@ -311,46 +347,67 @@ and all papers look very similar, formatting wise.
 
 **Proceedings**<br/>
 Then, we had to design the book, binding together all welcome notes
-and papers. I did it myself this time and you can see the sources here.
+and papers. I did it myself this time and you can see the sources 
+[here](https://github.com/yegor256/iccq.github.io/tree/master/proceedings/2021).
 
 **Xplore**<br/>
 Then, we packaged the entire ZIP archive and 
 [uploaded](https://mft.ieee.org/conferences_events/ConfPubFileUploadUI/)
 to IEEE. We didn't get any response back. Just crossed fingers
-and started waiting.
+and started waiting. You can see how the package was rendered in 
+LaTeX, [here](https://github.com/yegor256/iccq.github.io/tree/master/proceedings/2021). I designed
+a collection of scripts (bash + Ruby), which generate all PDFs and
+the required 
+[package-list](https://ieeemce.org/planning-basics/ieee-conference-publications/submitting-proceedings-ieee-xplore/) 
+file for IEEE.
 
 {% badge https://www.iccq.ru/images/2021/proceedings.png 150 %}
 
 **Prints**<br/>
 We found a printing company here in Moscow and ordered them to print
 us 100 copies of the proceedings, 
-in B5 format (100g/m paper, mate cover). We paid around $10 per a copy
-and it took about a week. By the way, we were explicitly told by
+in [B5 format](https://en.wikipedia.org/wiki/Paper_size) 
+([100g/m<sup>2</sup> paper](https://en.wikipedia.org/wiki/Grammage), 
+mate cover). We paid around $10 per a copy
+and it took about a week to print them all. By the way, we were explicitly told by
 IEEE that we are not allowed to sell our Proceedings anyhow or even 
-give them away for free, unless it only for PC members, authors,
+give them away for free, unless it's only for PC members, authors,
 and people closely related to the organization of the event. That's
 why we printed such a limited number of copies.
 
 **Zoom**<br/>
 On the day of the event, we started our planned Zoom meeting and
-connected it to YouTube live stream. I clicked "Record" and in six hours
-there was a 2Gb video file with all presentations.
+connected it to YouTube live stream, 
+[here is how](https://support.zoom.us/hc/en-us/articles/360028478292-Live-streaming-meetings-or-webinars-on-YouTube). 
+I clicked "Record" and in six hours there was a 2Gb video file with all presentations.
+I was also asking all speakers to click "Record" on their side too
+and then send me the files Zoom created, in order to have the highest
+quality of the video/audio possible.
 
 **Video Publishing**<br/>
-I asked a friend of mine to edit this large video file, cutting it into 11
+I asked a friend of mine to edit the created large video file, cutting it into 11
 pieces: three short welcome speeches, one 45-minutes keynote, one invited talk,
 and six half-hour sessions. Then, I published 
 [all 11 files](https://www.youtube.com/playlist?list=PLsFvzjUuF8yr-2nCkuw_4lRrBv9mReznb) 
 to YouTube. 
 I also had to create their front images and some text descriptions.
 
+{% badge /images/2021/04/iccq-box.png 150 %}
+
 **Gifts**<br/>
 We packaged our Proceedings in customly made boxes together with
-small chocolate bars, ICCQ stickers, and tourist books about Moscow.
+small chocolate bars, stickers, and a tourist guide book about Moscow.
 We sent them to each author, each PC member, and each partner (about 60 boxes). 
 What's left will be used during the year as promotional materials
 to advertise our future events and invite new PC members and authors.
 
-Done.
+**Published**<br/>
+We got an email from IEEE notifying us that all papers were
+published in IEEE Xplore, [here](https://ieeexplore.ieee.org/xpl/conhome/9392909/proceeding).
+
+Mission complete!
+
+P.S. If you decide to organize your own event, don't hesitate
+to let me know, maybe I will be able to help you somehow.
 
 
