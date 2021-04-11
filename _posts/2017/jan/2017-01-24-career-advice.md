@@ -230,3 +230,4 @@ Be a normal person---that's the point.
 
 Did I miss anything important?
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Who do you work for?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1381130741749256192?ref_src=twsrc%5Etfw">April 11, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
