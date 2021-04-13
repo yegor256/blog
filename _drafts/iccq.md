@@ -241,7 +241,7 @@ We also ran some paid ads on Twitter.
 We were waiting for a few months with almost no result. Some papers
 were coming but their quality was obviously pretty low. We were
 very nervous, to say the least. We didn't have any backup plan.
-If there were be no good papers, I was prepared to call it all off
+If there were no good papers, I was prepared to call it all off
 and admit failure (and accept the monetary losses).
 
 **Extension**<br/>
