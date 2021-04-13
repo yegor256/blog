@@ -368,7 +368,7 @@ We found a printing company here in Moscow and ordered them to print
 us 100 copies of the proceedings, 
 in [B5 format](https://en.wikipedia.org/wiki/Paper_size) 
 ([100g/m<sup>2</sup> paper](https://en.wikipedia.org/wiki/Grammage), 
-mate cover). We paid around $10 per copy
+matte cover). We paid around $10 per copy
 and it took about a week to print them all. By the way, we were explicitly told by
 IEEE that we are not allowed to sell our Proceedings at all or even 
 give them away for free, unless it's only for PC members, authors,
