@@ -336,7 +336,8 @@ to write short one-page welcome notes. They did
 ([here](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9392940) 
 and 
 [here](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9392979)). 
-I also wrote mine, on behalf of the Organizers: here.
+I also wrote mine, on behalf of the Organizers: 
+[here](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9392943).
 
 **Final PDFs**<br/>
 We asked all accepted authors to send us so-called "camera-ready copies,"
