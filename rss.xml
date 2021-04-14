@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-04-14T12:32:03+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How We Organized the First ICCQ</title><link href="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html" rel="alternate" type="text/html" title="How We Organized the First ICCQ" /><published>2021-04-14T00:00:00+00:00</published><updated>2021-04-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/04/14/how-we-organized-iccq</id><content type="html" xml:base="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html">&lt;p&gt;First, let me clarify what kind of conference we are talking about. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-04-14T12:47:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How We Organized the First ICCQ</title><link href="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html" rel="alternate" type="text/html" title="How We Organized the First ICCQ" /><published>2021-04-14T00:00:00+00:00</published><updated>2021-04-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/04/14/how-we-organized-iccq</id><content type="html" xml:base="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html">&lt;p&gt;First, let me clarify what kind of conference we are talking about. 
 There are two types:
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Professional_conference&quot;&gt;professional&lt;/a&gt;
 and
@@ -83,7 +83,8 @@ invite into our team, as partners or co-organizers. They were all starting
 the discussion with “You need to do your website right if you want
 your conference to be a success.” Nevertheless,
 the original design of the website survived. By the way, some of the content
-we copied with some modifications from the [SPLASH(https://conf.researchr.org/series/splash) website.&lt;/p&gt;
+we copied with some modifications from the 
+&lt;a href=&quot;https://conf.researchr.org/series/splash&quot;&gt;SPLASH&lt;/a&gt; website.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Host&lt;/strong&gt;&lt;br /&gt;
 We were lucky to have a very famous Russian University on our side
@@ -341,7 +342,7 @@ the required
 &lt;a href=&quot;https://ieeemce.org/planning-basics/ieee-conference-publications/submitting-proceedings-ieee-xplore/&quot;&gt;package-list&lt;/a&gt; 
 file for IEEE.&lt;/p&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.iccq.ru/images/2021/proceedings.png&quot; style=&quot;width:150px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.iccq.ru/images/2021/proceedings.png&quot; style=&quot;width:200px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Prints&lt;/strong&gt;&lt;br /&gt;
 We found a printing company here in Moscow and ordered them to print
@@ -372,7 +373,7 @@ and six half-hour sessions. Then I published
 to YouTube. 
 I also had to create their front images and some text descriptions.&lt;/p&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/04/iccq-box.png&quot; style=&quot;width:150px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/04/iccq-box.png&quot; style=&quot;width:250px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Gifts&lt;/strong&gt;&lt;br /&gt;
 We packaged our Proceedings in custom-made boxes together with
