@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How We Organized the First ICCQ"
-date: 2021-03-15
+date: 2021-04-14
 place: Moscow, Russia
 tags: science
 description: |
@@ -14,9 +14,9 @@ keywords:
   - conference
   - how to organize conference
   - conference
-image: /images/2021/03/
+image: /images/2021/04/glow.jpg
 jb_picture:
-  caption:
+  caption: GLOW, Season 1 (2017) by Liz Flahive and Carly Mensch
 ---
 
 First, let me clarify what kind of conference we are talking about. 
