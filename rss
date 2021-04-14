@@ -1,4 +1,394 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-03-19T09:13:21+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Imposters to Win!</title><link href="https://www.yegor256.com/2021/03/03/imposters-to-win.html" rel="alternate" type="text/html" title="Imposters to Win!" /><published>2021-03-03T00:00:00+00:00</published><updated>2021-03-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/03/03/imposters-to-win</id><content type="html" xml:base="https://www.yegor256.com/2021/03/03/imposters-to-win.html">&lt;p&gt;The time of objectivity is fading out. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-04-14T12:32:03+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How We Organized the First ICCQ</title><link href="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html" rel="alternate" type="text/html" title="How We Organized the First ICCQ" /><published>2021-04-14T00:00:00+00:00</published><updated>2021-04-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/04/14/how-we-organized-iccq</id><content type="html" xml:base="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html">&lt;p&gt;First, let me clarify what kind of conference we are talking about. 
+There are two types:
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Professional_conference&quot;&gt;professional&lt;/a&gt;
+and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Academic_conference&quot;&gt;academic&lt;/a&gt;.
+The difference is &lt;a href=&quot;https://redmonk.com/kfitzpatrick/2019/01/29/tech-industry-events-vs-academic-conferences/&quot;&gt;huge&lt;/a&gt;.
+My understanding is that professional conferences are for &lt;em&gt;practitioners&lt;/em&gt;, 
+while academic ones are for &lt;em&gt;researchers&lt;/em&gt;.
+ICCQ, which we organized this year, was an academic conference.
+I haven’t had any expertise in organizing such things, and had to go through it all for the first time.
+Here is a more or less detailed description of the journey.
+Feel free to learn from it and make a better conference yourself.
+We will try to make a better one next year, &lt;a href=&quot;https://www.iccq.ru/2022.html&quot;&gt;ICCQ 2022&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;GLOW, Season 1 (2017) by Liz Flahive and Carly Mensch&quot; src=&quot;/images/2021/04/glow.jpg&quot; longdesc=&quot;#842e29ce&quot; /&gt;&lt;figcaption id=&quot;842e29ce&quot;&gt;GLOW, Season 1 (2017) by Liz Flahive and Carly Mensch&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Idea&lt;/strong&gt;&lt;br /&gt;
+As I said in &lt;a href=&quot;https://www.youtube.com/watch?v=65baOBHeVMI&quot;&gt;my opening speech&lt;/a&gt;, 
+the purpose of the new event was to 
+help the Russian computer science research community better connect with their worldwide
+colleagues. Besides having a good intention I also knew where to get a supportive and reliable sponsor.
+The rest was just a matter of implementation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;br /&gt;
+There were many options to chose from, but it seemed
+that the de-facto standard was a few letters, all-caps, like
+&lt;a href=&quot;https://conf.researchr.org/series/splash&quot;&gt;SPLASH&lt;/a&gt;, 
+&lt;a href=&quot;http://www.icse-conferences.org/&quot;&gt;ICSE&lt;/a&gt;, 
+&lt;a href=&quot;https://pldi21.sigplan.org/&quot;&gt;PLDI&lt;/a&gt;, 
+&lt;a href=&quot;https://www.hillside.net/plop/2020/&quot;&gt;PLOP&lt;/a&gt;, 
+&lt;a href=&quot;https://www.guide2research.com/topconf/&quot;&gt;etc.&lt;/a&gt; 
+There are expections like &lt;a href=&quot;https://2021.eurosys.org/&quot;&gt;EuroSys&lt;/a&gt;
+or &lt;a href=&quot;https://www.ieee-security.org/TC/EuroSP2021/&quot;&gt;EuroS&amp;amp;P&lt;/a&gt; but
+this naming convention is much less popular.
+We picked ICCQ, which was not yet actively used in Google and 
+&lt;a href=&quot;https://www.iccq.ru&quot;&gt;the domain&lt;/a&gt;
+with the &lt;code class=&quot;highlighter-rouge&quot;&gt;.ru&lt;/code&gt; extension was available. Initially, we aimed for &lt;code class=&quot;highlighter-rouge&quot;&gt;.org&lt;/code&gt;,
+but since the event was supposed to &lt;em&gt;always&lt;/em&gt; be Russia-based, the &lt;code class=&quot;highlighter-rouge&quot;&gt;.ru&lt;/code&gt;
+seemed to be a perfect choice.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Subject&lt;/strong&gt;&lt;br /&gt;
+Many conferences aim at many topics, maybe in order to 
+attract more papers. We decided to behave in the opposite manner:
+we picked a single topic of &lt;em&gt;code quality&lt;/em&gt; and decided to reject all papers, 
+which would not be relevant to it.
+We didn’t even publish the list of topics, like many other
+events do. We just said that we are about code quality and 
+how to increase it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Organizers&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.iccq.ru/2021.html#organizers&quot;&gt;Organizers&lt;/a&gt; were the people who I needed most of all.
+They were not supposed to write papers or make speeches, but without
+them I would not be able to make the conference. Not all of them
+stayed with us for a whole year, some of them joined and quit, some
+moved to the Progam Committee (PC) later. But I’m very thankful to 
+&lt;a href=&quot;https://www.linkedin.com/in/sebelov/&quot;&gt;Sergey Belov&lt;/a&gt;,
+&lt;a href=&quot;https://scholar.google.ru/citations?user=sZlMj_wAAAAJ&quot;&gt;Sergey Prokhorov&lt;/a&gt;,
+and 
+&lt;a href=&quot;https://www.linkedin.com/in/jeff-zhu-36ab702/&quot;&gt;Jeff Zhu&lt;/a&gt;—they helped a lot!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Dates&lt;/strong&gt;&lt;br /&gt;
+We picked a date for the event about eight months ahead of us
+and very soon realized that it was a mistake: too close.
+It should have been &lt;em&gt;at least&lt;/em&gt; one year ahead of us. We had to re-schedule.
+We also set three important dates: 
+1) “submission deadline”—four months before the event, 
+2) “author notification”—two months after the submission,
+3) “camera-ready copies”—one month after author notification.
+This timeline seems doable, but pretty tight. Next year we’ll give
+our PC more time for reviewing: two months is definitely not enough
+for a large event.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Website&lt;/strong&gt;&lt;br /&gt;
+We made it on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; with &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;:
+the source for our website is &lt;a href=&quot;https://github.com/yegor256/iccq.github.io&quot;&gt;here&lt;/a&gt;.
+We knew that most conferences use some hosted site builders, like
+&lt;a href=&quot;https://conf.researchr.org/&quot;&gt;conf.researchr.org&lt;/a&gt;, but we decided to swim against the
+current and build the site the way we believed was right. No surprise,
+we’ve got many complaints about that from people who we were trying to 
+invite into our team, as partners or co-organizers. They were all starting
+the discussion with “You need to do your website right if you want
+your conference to be a success.” Nevertheless,
+the original design of the website survived. By the way, some of the content
+we copied with some modifications from the [SPLASH(https://conf.researchr.org/series/splash) website.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Host&lt;/strong&gt;&lt;br /&gt;
+We were lucky to have a very famous Russian University on our side
+right from the start: &lt;a href=&quot;https://www.hse.ru/&quot;&gt;HSE&lt;/a&gt;. We knew people from there
+and they were not against hosting the event and putting their name on our website.
+My biggest thanks go to 
+&lt;a href=&quot;https://scholar.google.com/citations?user=68uxw-AAAAAJ&amp;amp;hl=en&quot;&gt;Sergey Zykov&lt;/a&gt;, 
+&lt;a href=&quot;https://www.hse.ru/en/staff/avdoshin&quot;&gt;Sergey Avdoshin&lt;/a&gt;, 
+and 
+&lt;a href=&quot;https://www.hse.ru/en/staff/arjantsev&quot;&gt;Ivan Arzhantsev&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Venue&lt;/strong&gt;&lt;br /&gt;
+HSE was also not against hosting the event physically, on their premises.
+The event was not going to be big (up to 100 people attending).
+We agreed with HSE that they would give us a big classroom on Saturday. 
+They didn’t mind.
+However, later, due to the COVID-19 epidemic situation, we decided to make
+the event fully online. Moving to online didn’t cause any problems for 
+us, it seems. Moreover, we &lt;a href=&quot;https://twitter.com/iccq_ru/status/1381107697693696000&quot;&gt;decided&lt;/a&gt;
+that the next event, ICCQ 2022, will also be online, no matter what
+the situation will be with the virus.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Partners&lt;/strong&gt;&lt;br /&gt;
+We figured that in addition to HSE it would be good to have a few other sponsors,
+mostly to make us look more serious and reputable (as much as it’s possible
+for a young conference). We had good contacts with a few Russian
+education organizations and they all agreed to join: 
+&lt;a href=&quot;https://mipt.ru/english/&quot;&gt;MIPT&lt;/a&gt;, 
+&lt;a href=&quot;https://www.msu.ru/&quot;&gt;MSU&lt;/a&gt;, and 
+&lt;a href=&quot;https://www.ispras.ru/en/&quot;&gt;ISP RAS&lt;/a&gt;. 
+We contacted industry companies, and they also agreed:
+&lt;a href=&quot;https://sbercloud.ru/&quot;&gt;SberCloud&lt;/a&gt;,
+&lt;a href=&quot;https://yandex.com/company/&quot;&gt;Yandex&lt;/a&gt;,
+and
+&lt;a href=&quot;https://www.kaspersky.com/&quot;&gt;Kaspersky&lt;/a&gt;.
+And we also contacted two of the biggest not-for-profit Russian media organizations:
+&lt;a href=&quot;https://russoft.org/en/&quot;&gt;RUSSOFT&lt;/a&gt;
+and
+&lt;a href=&quot;https://2021.secrus.org/?lang=en&quot;&gt;SECR&lt;/a&gt;.
+They also agreed.
+Of course, it was much harder than it sounds. Some organizations didn’t even reply
+to us, some of them rejected our invitations. It was a long process that took about two months
+of negotiations. We even created &lt;a href=&quot;https://www.iccq.ru/partnership.html&quot;&gt;this web page&lt;/a&gt; 
+to explain to them why we wanted them to join us.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PC&lt;/strong&gt;&lt;br /&gt;
+This was one of the most challenging parts: how to get together a Program Committee
+of people who would review the papers and decide which of them deserve to be
+published. First, we invited a few people who we knew personally. Then we decided to try and keep
+the PC as diverse as possible in terms of country of origin. We didn’t want to 
+have only people who were living in Russia. We wanted to build a truly international
+PC and also a truly professional one, whatever that means. 
+Because of this plan, the only option for us was cold calling—we didn’t
+know so many people from different places. 
+We sent about 400 invitation emails to people who had participated in similar conferences worldwide.
+As you can see on the website: &lt;a href=&quot;https://www.iccq.ru/2021.html#pc&quot;&gt;30 of them&lt;/a&gt; 
+agreed to join us.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IEEE&lt;/strong&gt;&lt;br /&gt;
+This was the biggest challenge: to get a 
+&lt;a href=&quot;https://www.computer.org/conferences/organize-a-conference/sponsorship-options&quot;&gt;technical sponsorship&lt;/a&gt; 
+from IEEE.
+Our friends from IEEE Russia Section C Chapter helped us, and
+&lt;a href=&quot;https://conferences.ieee.org/conferences_events/conferences/conferencedetails/51190&quot;&gt;we got it&lt;/a&gt;.
+If you want to know more details about this step, &lt;a href=&quot;https://t.me/yegor256&quot;&gt;tg me&lt;/a&gt;, 
+I will try to explain.
+It took about three weeks, and they accepted our request.
+They gave us their own “Record Number” and ISBN for the Proceedings.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Keynote&lt;/strong&gt;&lt;br /&gt;
+We decided that a good conference must have a good keynote speaker—it is someone
+who doesn’t write a paper and doesn’t go through a normal review process.
+It must be someone known by the community, in order to make the conference
+even more interesting for attendees. We decided to invite 
+&lt;a href=&quot;https://cs.au.dk/~amoeller/&quot;&gt;Anders Møller&lt;/a&gt;. We personally
+knew him from &lt;a href=&quot;https://cs.au.dk/~amoeller/spa/spa.pdf&quot;&gt;his book&lt;/a&gt; recently published online.
+We invited him and he agreed! &lt;a href=&quot;https://www.youtube.com/watch?v=oDdrzXkInnA&quot;&gt;His speech&lt;/a&gt; 
+was definitely &lt;del&gt;one of&lt;/del&gt; the best at the conference.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Twitter&lt;/strong&gt;&lt;br /&gt;
+We decided to be present on just one social network, since it is the most 
+popular among tech people and the easiest to maintain:
+&lt;a href=&quot;https://twitter.com/intent/follow?screen_name=iccq_ru&quot;&gt;@iccq_ru&lt;/a&gt;. We
+tried to post what was going on with the preparation of the event, almost
+every week. Some of our authors and PC members followed us.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Registration&lt;/strong&gt;&lt;br /&gt;
+We initially thought that the event would be on-site, in the classroom at HSE. That’s why
+we created a &lt;a href=&quot;https://www.meetup.com/iccq-ru/events/273816665/&quot;&gt;Meetup&lt;/a&gt; page and
+collected over 170 registrations. Unfortunately, due to COVID-19, we 
+&lt;a href=&quot;https://twitter.com/iccq_ru/status/1358281073625563145&quot;&gt;had to make&lt;/a&gt;
+the conference fully online.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Steering&lt;/strong&gt;&lt;br /&gt;
+We didn’t know what exactly this was for, but we saw other events doing this.
+we formed a Steering Committee of two people from our two most important partners:
+&lt;a href=&quot;https://www.huaweicloud.com/intl/en-us/news/building-a-smart-future-with-full-stack-innovation-for-the-cloud.html&quot;&gt;Zhang Yuxin&lt;/a&gt;, 
+the CTO of Huawei Cloud and 
+&lt;a href=&quot;https://www.sberbank.ru/en/press_center/all/article?newsID=ef3e1c1b-fc7f-4eb5-9d36-db23e2ed42fc&amp;amp;blockID=1539&amp;amp;regionID=77&amp;amp;lang=en&amp;amp;type=NEWS&quot;&gt;Yevgeny Kolbin&lt;/a&gt;, 
+the CEO of SberCloud.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EasyChair&lt;/strong&gt;&lt;br /&gt;
+There has to be some website to collect papers from authors. We decided to use
+&lt;a href=&quot;https://www.easychair.org&quot;&gt;EasyChair&lt;/a&gt;,
+since it’s pretty popular and not as expensive as 
+&lt;a href=&quot;https://academia.stackexchange.com/questions/2557/conference-management-software-preferably-open-source-with-custom-fields&quot;&gt;some others&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CFP&lt;/strong&gt;&lt;br /&gt;
+When everything was ready, there was one remaining question (the biggest one!): how to 
+collect the papers from authors. We had to find a way to promote the conference so that
+researchers decided to submit their work results to us. Aside from using our 
+own existing Twitter/Facebook/Telegram channels, there were two options: 
+call-for-papers (CFP) distribution, and paid ads. 
+We made &lt;a href=&quot;https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Ficcq.github.io&amp;amp;target=cfp%2F2021%2Fcfp.tex&amp;amp;command=pdflatex&amp;amp;trackId=1617526368363&quot;&gt;PDF&lt;/a&gt; and 
+&lt;a href=&quot;https://raw.githubusercontent.com/yegor256/iccq.github.io/master/cfp/2021/cfp.txt&quot;&gt;TXT&lt;/a&gt; versions 
+of it and then posted to a few places: 
+&lt;a href=&quot;http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=112792&quot;&gt;WikiCFP&lt;/a&gt;,
+&lt;a href=&quot;https://www.call4paper.com/detail/event/PGNZHDXH27553174&quot;&gt;call4paper&lt;/a&gt;,
+&lt;a href=&quot;https://allconferencecfpalerts.com/cfp/view.php?eno=22113&quot;&gt;AllConferenceCfpAlerts&lt;/a&gt;,
+&lt;a href=&quot;https://listserv.acm.org/scripts/wa-acmlpx.exe?A2=ind2009&amp;amp;L=SEWORLD&amp;amp;P=R5608&quot;&gt;SEWORLD&lt;/a&gt;,
+&lt;a href=&quot;http://lists.seas.upenn.edu/pipermail/types-announce/2020/009182.html&quot;&gt;types-announce&lt;/a&gt;,
+and
+&lt;a href=&quot;https://research.cs.wisc.edu/dbworld/messages/2020-09/1600852058.html&quot;&gt;DBWORLD&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ads&lt;/strong&gt;&lt;br /&gt;
+We were lucky enough to have a decent budget for paid ads. We placed
+our banners into 
+&lt;a href=&quot;https://cacm.acm.org/&quot;&gt;Communications of the ACM&lt;/a&gt;
+and 
+&lt;a href=&quot;https://ieeexplore.ieee.org/document/9187479&quot;&gt;IEEE Computer&lt;/a&gt;.
+We also ran some paid ads on Twitter.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Waiting&lt;/strong&gt;&lt;br /&gt;
+We were waiting for a few months with almost no result. Some papers
+were coming but their quality was obviously pretty low. We were
+very nervous, to say the least. We didn’t have any backup plan.
+If there were no good papers, I was prepared to call it all off
+and admit failure (and accept the monetary losses).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Extension&lt;/strong&gt;&lt;br /&gt;
+When the deadline arrived, it was obvious that we hadn’t managed to
+collect enough papers. We 
+&lt;a href=&quot;https://twitter.com/iccq_ru/status/1335476843491766272&quot;&gt;decided&lt;/a&gt; 
+to give our authors another two weeks:
+the deadline was extended to December 18th.
+It was worth it! A few very good papers arrived last and we 
+&lt;a href=&quot;https://twitter.com/iccq_ru/status/1340562074884333569&quot;&gt;phew-ed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Invited Talk&lt;/strong&gt;&lt;br /&gt;
+To make the conference even stronger, we decided to invite someone
+who we knew and respected. Just like we did with the Keynote talk, 
+but this time with a full paper to publish too.
+We invited &lt;a href=&quot;https://www.sri.inf.ethz.ch/people/veselin&quot;&gt;Veselin Raychev&lt;/a&gt;, 
+CTO of &lt;a href=&quot;https://snyk.io/&quot;&gt;Snyk&lt;/a&gt;. He wrote 
+a &lt;a href=&quot;https://ieeexplore.ieee.org/document/9392977&quot;&gt;survey paper&lt;/a&gt; 
+for us and we promised him that it would be fast-track reviewed.
+Without such a promise he would probably not have submitted it to us, since
+we are too young and small. But since we sort of guaranteed the publication, he agreed.
+This is how, I believe, invited talks work.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Desk Reject&lt;/strong&gt;&lt;br /&gt;
+We &lt;a href=&quot;https://twitter.com/iccq_ru/status/1343967427105841152&quot;&gt;decided&lt;/a&gt; 
+to reject six papers before even sending them to the PC
+for review. The most popular reason was: out of scope. Some papers
+were about something completely irrelevant. One paper was even auto-generated,
+along with some very funny typos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bidding&lt;/strong&gt;&lt;br /&gt;
+We missed this step, because I didn’t know about it. I would actually
+skip it again, in the next conference, but most events do a bidding process,
+as I’ve been told. They ask all PC members to go through the list of
+all submissions and pick those they want to review. Mostly they will
+probably pay attention to the subject, maybe to the quality of paper. In the end,
+the distribution of papers among PC members is not randomized.
+I don’t like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reviews&lt;/strong&gt;&lt;br /&gt;
+I went to EasyChair dashboard and clicked “assign papers to reviewers
+automatically” and the system did it for me. We’ve had 17 papers and
+30 reviewers. I configured EasyChair to assign at least three reviewers
+for each paper. Do the math: most reviewers got two papers, while some of them
+just one. However, only about ten reviewers provided their reviews more or
+less instantly. Others were not giving us anything and about ten of them
+were not even answering my email reminders. We had just seven weeks between
+the submission deadline (remember, we extended it by two weeks) and the
+day of the final decision. We were not sure that we would be able 
+to collect all necessary reviews and that’s why we 
+&lt;a href=&quot;https://twitter.com/iccq_ru/status/1355741062430654466&quot;&gt;asked&lt;/a&gt; most active reviewers
+to review more than just two papers. Surprisingly, most of them agreed to help
+us. The bottom line: we managed to collect at least three reviews per
+paper, while some papers got five reviews. Because most reviewers performed
+their duties on time. Only three reviewers never provided us anything,
+without any explanation. 10%. Is this how it should be?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Acceptance&lt;/strong&gt;&lt;br /&gt;
+This was a very tough moment: all papers were ranked and we had to pick some number
+of them for the final publication (and reject all the others). 
+The question was: how many out of a total of 17?
+We were thinking: Having a conference with a small number of published articles is probably not a good
+indicator of success. On the other hand, publishing something that
+was explicitly rejected by reviewers would be at least unfair to other
+authors, and to the reviewers. We had a very intense discussion and decided
+to accept just six papers. Why six? Because the average rank of each of them
+was positive. All papers with negative ranks were rejected.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Copyright Transfer&lt;/strong&gt;&lt;br /&gt;
+In order to publish our papers in IEEE Xplore, which is very important for
+all authors, we had to transfer the ownership of all texts to IEEE: this is 
+the requirement of IEEE. We built a small &lt;a href=&quot;https://www.iccq.ru/ecf.html?id=1&quot;&gt;online form&lt;/a&gt; 
+for that and asked all accepted authors to fill it in
+(the source for the HTML form is 
+&lt;a href=&quot;https://raw.githubusercontent.com/yegor256/iccq.github.io/master/pages/ecf.md&quot;&gt;here&lt;/a&gt;). They did.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;YouTube&lt;/strong&gt;&lt;br /&gt;
+I created a new &lt;a href=&quot;https://www.youtube.com/channel/UC_W-pjp6HWJGjK2sayFrnag&quot;&gt;YouTube channel&lt;/a&gt;, 
+&lt;a href=&quot;https://support.google.com/youtube/answer/171664?hl=en&quot;&gt;verified&lt;/a&gt; it,
+and &lt;a href=&quot;https://www.youtube.com/watch?v=Qf6InatV2h4&quot;&gt;scheduled&lt;/a&gt; a new live stream.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Agenda&lt;/strong&gt;&lt;br /&gt;
+We put all talks on the timeline and published the conference agenda.
+Then I created Google Calendar events for all sessions and invited
+all speakers to their events. I also scheduled a Zoom meeting
+for the day of the event and shared the link via the Google Calendar
+events.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Welcome Notes&lt;/strong&gt;&lt;br /&gt;
+We asked our Steering Committee Chair and Program Committee Chair 
+to write short one-page welcome notes. They did
+(&lt;a href=&quot;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=9392940&quot;&gt;here&lt;/a&gt; 
+and 
+&lt;a href=&quot;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=9392979&quot;&gt;here&lt;/a&gt;). 
+I also wrote mine, on behalf of the Organizers: 
+&lt;a href=&quot;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=9392943&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Final PDFs&lt;/strong&gt;&lt;br /&gt;
+We asked all accepted authors to send us so-called “camera-ready copies,”
+which were basically their original papers, but formatted exactly 
+according to our requirements. Lucky for us, all authors were using
+LaTeX, so we just gave them a few configuration lines for the source
+and all the papers look very similar, formatting-wise.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proceedings&lt;/strong&gt;&lt;br /&gt;
+Then, we had to design the book, binding together all welcome notes
+and papers. I did it myself this time and you can see the sources 
+&lt;a href=&quot;https://github.com/yegor256/iccq.github.io/tree/master/proceedings/2021&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Xplore&lt;/strong&gt;&lt;br /&gt;
+Next we packaged the entire ZIP archive and 
+&lt;a href=&quot;https://mft.ieee.org/conferences_events/ConfPubFileUploadUI/&quot;&gt;uploaded&lt;/a&gt;
+it to IEEE. We didn’t get any response back. We just crossed our fingers
+and started waiting. You can see how the package was rendered in 
+LaTeX, &lt;a href=&quot;https://github.com/yegor256/iccq.github.io/tree/master/proceedings/2021&quot;&gt;here&lt;/a&gt;. I designed
+a collection of scripts (bash + Ruby), which generate all PDFs and
+the required 
+&lt;a href=&quot;https://ieeemce.org/planning-basics/ieee-conference-publications/submitting-proceedings-ieee-xplore/&quot;&gt;package-list&lt;/a&gt; 
+file for IEEE.&lt;/p&gt;
+
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;https://www.iccq.ru/images/2021/proceedings.png&quot; style=&quot;width:150px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Prints&lt;/strong&gt;&lt;br /&gt;
+We found a printing company here in Moscow and ordered them to print
+us 100 copies of the proceedings, 
+in &lt;a href=&quot;https://en.wikipedia.org/wiki/Paper_size&quot;&gt;B5 format&lt;/a&gt; 
+(&lt;a href=&quot;https://en.wikipedia.org/wiki/Grammage&quot;&gt;100g/m&lt;sup&gt;2&lt;/sup&gt; paper&lt;/a&gt;, 
+matte cover). We paid around $10 per copy
+and it took about a week to print them all. By the way, we were explicitly told by
+IEEE that we are not allowed to sell our Proceedings at all or even 
+give them away for free, unless it’s only for PC members, authors,
+and people closely related to the organization of the event. That’s
+why we printed such a limited number of copies.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Zoom&lt;/strong&gt;&lt;br /&gt;
+On the day of the event, we started our planned Zoom meeting and
+connected it to the YouTube live stream, 
+&lt;a href=&quot;https://support.zoom.us/hc/en-us/articles/360028478292-Live-streaming-meetings-or-webinars-on-YouTube&quot;&gt;here is how&lt;/a&gt;. 
+I clicked “Record” and in six hours there was a 2Gb video file with all presentations.
+I also asked all speakers to click “Record” on their side too
+and then send me the files Zoom created, in order to have the highest
+quality of the video/audio possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Video Publishing&lt;/strong&gt;&lt;br /&gt;
+I asked a friend of mine to edit the large video file, cutting it into 11
+pieces: three short welcome speeches, one 45-minute keynote, one invited talk,
+and six half-hour sessions. Then I published 
+&lt;a href=&quot;https://www.youtube.com/playlist?list=PLsFvzjUuF8yr-2nCkuw_4lRrBv9mReznb&quot;&gt;all 11 files&lt;/a&gt; 
+to YouTube. 
+I also had to create their front images and some text descriptions.&lt;/p&gt;
+
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/04/iccq-box.png&quot; style=&quot;width:150px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Gifts&lt;/strong&gt;&lt;br /&gt;
+We packaged our Proceedings in custom-made boxes together with
+small chocolate bars, stickers, and a tourist guide book about Moscow.
+We sent them to each author, each PC member, and each partner (about 60 boxes). 
+What’s left will be used during the year as promotional materials
+to advertise our future events and invite new PC members and authors.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Published&lt;/strong&gt;&lt;br /&gt;
+We got an email from IEEE notifying us that all papers were
+published in IEEE Xplore, &lt;a href=&quot;https://ieeexplore.ieee.org/xpl/conhome/9392909/proceeding&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mission complete!&lt;/p&gt;
+
+&lt;p&gt;P.S. If you decide to organize your own event, don’t hesitate
+to let me know, maybe I will be able to help you somehow.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html">First, let me clarify what kind of conference we are talking about. There are two types: professional and academic. The difference is huge. My understanding is that professional conferences are for practitioners, while academic ones are for researchers. ICCQ, which we organized this year, was an academic conference. I haven’t had any expertise in organizing such things, and had to go through it all for the first time. Here is a more or less detailed description of the journey. Feel free to learn from it and make a better conference yourself. We will try to make a better one next year, ICCQ 2022.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/04/glow.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/04/glow.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Imposters to Win!</title><link href="https://www.yegor256.com/2021/03/03/imposters-to-win.html" rel="alternate" type="text/html" title="Imposters to Win!" /><published>2021-03-03T00:00:00+00:00</published><updated>2021-03-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/03/03/imposters-to-win</id><content type="html" xml:base="https://www.yegor256.com/2021/03/03/imposters-to-win.html">&lt;p&gt;The time of objectivity is fading out. 
 &lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;Meritocracy&lt;/a&gt; is now a rude word.
 &lt;a href=&quot;/2020/06/23/individual-performance-metrics.html&quot;&gt;Metrics&lt;/a&gt; 
 in management will soon be considered as harassment.
@@ -15,7 +405,7 @@ Just pure love and emotions.&lt;/p&gt;
 
 &lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Kominsky Method (2018-) by Chuck Lorre&quot; src=&quot;/images/2021/03/the-kominsky-method.jpg&quot; longdesc=&quot;#89fd0ee4&quot; /&gt;&lt;figcaption id=&quot;89fd0ee4&quot;&gt;The Kominsky Method (2018-) by Chuck Lorre&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Trust Me!&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;“Trust Me!”&lt;/strong&gt;
 Don’t even try to prove anything by numbers.
 This is an outdated technique.
 They will only treat you like a weird person, at best.
@@ -29,7 +419,7 @@ And not just in the same team!
 We have to trust everybody in the world—this is what good human beings do!
 Thus, no numbers, no facts, no proofs—just a pure and simple “trust me” and you will be the king of any argument.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I Know What I’m Doing!&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;“I Know What I’m Doing!”&lt;/strong&gt;
 Do they still think that you are not convincing enough with your “Trust Me”?
 That won’t help them.
 Tell them that you worked five years in Oracle and also four years in Intel.
@@ -39,7 +429,7 @@ That’s too harsh, they won’t do it.
 They must respect their colleagues!
 Especially those who worked in Oracle and Intel.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Do You Think I’m Stupid?!&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;“Do You Think I’m Stupid?!”&lt;/strong&gt;
 If they continue arguing, ask this question, looking them right in the eye.
 What do they answer?
 They will apologize.
@@ -50,7 +440,7 @@ If they start with “No”, your point is proven.
 If they start with “Yes”… well they won’t start with “Yes”.
 They are good and kind people.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I Will Quit If You Keep Talking Like This!&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;“I Will Quit If You Keep Talking Like This!”&lt;/strong&gt;
 This is your last line.
 After it they won’t have anything in their hands.
 They will have to stop right there.
@@ -938,136 +1328,4 @@ of any kind, which is not possible in Java, C++, C# and other
 pseudo-object-oriented languages. But it is possible in
 &lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;!&lt;/p&gt;
 
-&lt;p&gt;WDYT?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">In 1974, Liskov and Zilles defined a strongly-typed language as one in which “whenever an object is passed from a calling function to a called function, its type must be compatible with the type declared in the called function.” Strong type checking, without doubt, decreases the amount of type errors, which leads to higher quality. However, the question is: do we really need types in order to strongly enforce typing?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/redirected.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/redirected.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Pain of Daily Reports</title><link href="https://www.yegor256.com/2020/11/03/daily-reports.html" rel="alternate" type="text/html" title="The Pain of Daily Reports" /><published>2020-11-03T00:00:00+00:00</published><updated>2020-11-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/03/daily-reports</id><content type="html" xml:base="https://www.yegor256.com/2020/11/03/daily-reports.html">&lt;p&gt;A few days ago I asked
-&lt;a href=&quot;https://twitter.com/intent/follow?screen_name=yegor256&quot;&gt;my Twitter&lt;/a&gt;
-followers to vote in a
-&lt;a href=&quot;https://twitter.com/yegor256/status/1318899898364866560&quot;&gt;simple poll&lt;/a&gt;.
-They did, screaming in comments that only a &lt;del&gt;stupid&lt;/del&gt;
-incompetent manager would ask programmers to send daily reports,
-while everything they do can easily be tracked in tickets, Git history, and so on.
-Indeed, why on earth would a sane manager ask software engineers, already very busy with coding,
-to spend time on writing these ridiculous reporting emails?
-Let me try to give you a good reason.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Norsemen (2017) by Jon Iver Helgaker et al.&quot; src=&quot;/images/2020/11/norsemen.jpg&quot; longdesc=&quot;#e2cead6d&quot; /&gt;&lt;figcaption id=&quot;e2cead6d&quot;&gt;Norsemen (2017) by Jon Iver Helgaker et al.&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;I’m sure that in your team
-1) every contribution programmers make goes to the source code,
-2) each pull request passes a mandatory and strict review process,
-and 3) everybody is paid
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;only&lt;/a&gt;
-according to the amount of results they contribute.
-Of course, thanks to such an objective and fair process, all programmers
-are self-disciplined and self-motivated. They know what they work for,
-how to achieve better results, and exactly what needs
-to be done in order to help the project move forward: all metrics are
-right in front of you, and them. By the end
-of the month you just open the dashboard, see the numbers and
-&lt;a href=&quot;/2014/09/24/why-monetary-awards-dont-work.html&quot;&gt;reward&lt;/a&gt;
-the best of them.&lt;/p&gt;
-
-&lt;p&gt;Is this how your team works? I doubt it. I was kidding.&lt;/p&gt;
-
-&lt;p&gt;Most probably it works like this:
-1) some people occasionally commit some code
-while others barely touch the keyboard spending most of their “work time”
-sitting in
-&lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;meetings&lt;/a&gt;
-and chatting online,
-2) everybody gets paid
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;regularly&lt;/a&gt;,
-no matter how much they contribute
-and those who don’t do anything get as much as the hard-workers, or even more,
-3) code reviews are hardly mandatory and very often dirty code
-gets through, just because nobody wants to offend its author
-or the review takes too long with no chances to see code improvements,
-simply because the author doesn’t care.
-I can continue, if you like.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=Yj1VFGK9vqc&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/Yj1VFGK9vqc/mqdefault.jpg&quot; alt=&quot;YouTube video #Yj1VFGK9vqc&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M143: Daily reports are a perfect guilt-triggering instrument for a lazy team;
-        12 November 2020.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Sound familiar?&lt;/p&gt;
-
-&lt;p&gt;In this situation, which is much more popular than the previous
-story, how do you, being a
-&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;manager&lt;/a&gt;,
-make people actually work? I’m talking about
-those people who don’t work simply because it would be stupid to work
-when nobody can control the output and can’t really punish anyone for its
-absence. How do you &lt;em&gt;enforce&lt;/em&gt; the discipline in such a team?&lt;/p&gt;
-
-&lt;p&gt;You can, of course, go to the tracking system and check how many
-tickets were closed by Jeff during the day. You can also read the
-Git history and find out how many lines of code Jeff wrote. Or you can
-monitor the dashboard every day to see what tasks assigned
-to Jeff were resolved during the week. You can do all that. The question
-is—what do you do when you find out that Jeff doesn’t do anything? Or that he
-does much less than everybody else? An even bigger question is: what do you do when you
-realise that everybody in your team is lazy and does as little as they
-can do or nothing at all?&lt;/p&gt;
-
-&lt;p&gt;Sounds weird and has nothing to do with your reality? Really?
-Look at &lt;a href=&quot;https://twitter.com/yegor256/status/1322877629024948226&quot;&gt;this&lt;/a&gt; Twitter poll.&lt;/p&gt;
-
-&lt;p&gt;So, what do you do with the team, if you can’t really fire anyone
-and you can’t motivate them in any way: they are paid regardless. How do you
-discipline them?&lt;/p&gt;
-
-&lt;p&gt;The only possible instrument is &lt;em&gt;guilt&lt;/em&gt;.
-I &lt;a href=&quot;/2019/09/03/injection-of-guilt.html&quot;&gt;wrote&lt;/a&gt; about this before.
-You have to find a way to make them feel guilty when they get
-lazy and deliver less than they could. The most popular way to do
-that is &lt;a href=&quot;/2015/01/08/morning-standup-meetings.html&quot;&gt;daily standups&lt;/a&gt;.
-You line them up every morning and make them
-feel uncomfortable reporting the progress. It works and works well
-in so many teams over the world, thanks to the popularity of Agile.
-Without these guilt-triggering standups I don’t know where the tech
-industry would be.&lt;/p&gt;
-
-&lt;p&gt;Yet another instrument of the same kind is &lt;em&gt;daily reports&lt;/em&gt;. You make your programmers
-summarize their work during the day and email you. To make the feeling of guilt
-even stronger, ask them to CC a few other people, like their colleagues,
-maybe an HR person, maybe someone from another team. Make this list
-mandatory. It will be very hard to say in the email that the day
-ended and no results were achieved. They will have to make something
-up and eventually will start actually doing something.&lt;/p&gt;
-
-&lt;p&gt;Some of them will complain that it’s
-&lt;a href=&quot;/2015/09/22/micromanagement.html&quot;&gt;micromanagement&lt;/a&gt;.
-Tell them that you are not interested in how they spend their days, but only
-in knowing the results they delivered. Ask them to report only tangible
-and visible things, like “ticket closed,” “document created,”
-or “the experiment conducted.” In my opinion, this daily reporting
-is not micromanagement at all, since you don’t tell them how to achieve
-their goals. It may be a fine-grained control mechanism, but there
-is nothing wrong with
-&lt;a href=&quot;/2018/10/09/can-you-control-us.html&quot;&gt;control&lt;/a&gt;,
-in any management paradigm. Thus,
-if they go to your supervisor and complain about your actions,
-you have a perfect explanation: you just want to know about their
-results, that’s all.&lt;/p&gt;
-
-&lt;p&gt;They may say that the information is already
-available in the tracking system, but you can say that you prefer
-to get it by email, since it’s faster and more convenient for you.
-Moreover, how much will such a daily report cost them? Five
-minutes every day, right? Not a big deal.&lt;/p&gt;
-
-&lt;p&gt;Don’t tell them about the guilt part, of course.
-Let it be your secret.&lt;/p&gt;
-
-&lt;p&gt;The bottom line is that in the absence of proper management, both morning standups and
-evening daily reports are the best tools to manage people. What else can you use
-to connect their performance directly with guilt mechanisms in
-their brains?&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Your team leader is asking you to email him every day with a summary of your daily results. Your reaction:&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1318899898364866560?ref_src=twsrc%5Etfw&quot;&gt;October 21, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">A few days ago I asked my Twitter followers to vote in a simple poll. They did, screaming in comments that only a stupid incompetent manager would ask programmers to send daily reports, while everything they do can easily be tracked in tickets, Git history, and so on. Indeed, why on earth would a sane manager ask software engineers, already very busy with coding, to spend time on writing these ridiculous reporting emails? Let me try to give you a good reason.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/norsemen.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/norsemen.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;WDYT?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">In 1974, Liskov and Zilles defined a strongly-typed language as one in which “whenever an object is passed from a calling function to a called function, its type must be compatible with the type declared in the called function.” Strong type checking, without doubt, decreases the amount of type errors, which leads to higher quality. However, the question is: do we really need types in order to strongly enforce typing?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/redirected.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/redirected.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

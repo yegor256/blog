@@ -436,9 +436,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '323.5,230.0 327.9,230.0 327.9,195.9 323.5,195.9 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M323.5,230.0 L323.5,196.0 L327.8,196.0 L327.8,230.0 L323.5,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '329.3,230.0 333.8,230.0 333.8,151.5 329.3,151.5 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '329.3,230.0 333.8,230.0 333.8,151.4 329.3,151.4 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M329.3,230.0 L329.3,151.6 L333.7,151.6 L333.7,230.0 L329.3,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M329.3,230.0 L329.3,151.5 L333.7,151.5 L333.7,230.0 L329.3,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '335.2,230.0 339.5,230.0 339.5,179.8 335.2,179.8 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M335.2,230.0 L335.2,179.9 L339.4,179.9 L339.4,230.0 L335.2,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -502,9 +502,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '450.7,230.0 455.2,230.0 455.2,191.7 450.7,191.7 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M450.7,230.0 L450.7,191.8 L455.1,191.8 L455.1,230.0 L450.7,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '456.6,230.0 461.0,230.0 461.0,165.4 456.6,165.4 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '456.6,230.0 461.0,230.0 461.0,165.3 456.6,165.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M456.6,230.0 L456.6,165.5 L460.9,165.5 L460.9,230.0 L456.6,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M456.6,230.0 L456.6,165.4 L460.9,165.4 L460.9,230.0 L456.6,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '462.3,230.0 466.8,230.0 466.8,130.7 462.3,130.7 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M462.3,230.0 L462.3,130.8 L466.7,130.8 L466.7,230.0 L462.3,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -556,9 +556,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '566.5,230.0 571.0,230.0 571.0,207.0 566.5,207.0 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M566.5,230.0 L566.5,207.1 L570.9,207.1 L570.9,230.0 L566.5,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '572.3,230.0 576.8,230.0 576.8,215.6 572.3,215.6 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '572.3,230.0 576.8,230.0 576.8,215.3 572.3,215.3 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M572.3,230.0 L572.3,215.7 L576.7,215.7 L576.7,230.0 L572.3,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M572.3,230.0 L572.3,215.4 L576.7,215.4 L576.7,230.0 L572.3,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '589.8,230.0 594.3,230.0 594.3,198.9 589.8,198.9 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M589.8,230.0 L589.8,199.0 L594.2,199.0 L594.2,230.0 L589.8,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -573,7 +573,10 @@
 	<path stroke='rgb(129, 179,  65)'  d='M613.1,230.0 L613.1,213.6 L617.4,213.6 L617.4,230.0 L613.1,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '618.7,230.0 623.0,230.0 623.0,216.8 618.7,216.8 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M618.7,230.0 L618.7,216.9 L622.9,216.9 L622.9,230.0 L618.7,230.0 Z  '/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M618.7,230.0 L618.7,216.9 L622.9,216.9 L622.9,230.0 L618.7,230.0 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(129, 179,  65)' points = '624.4,230.0 628.8,230.0 628.8,174.0 624.4,174.0 '/>
+	</g>
+	<path stroke='rgb(129, 179,  65)'  d='M624.4,230.0 L624.4,174.1 L628.7,174.1 L628.7,230.0 L624.4,230.0 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(129, 179,  65)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
