@@ -104,7 +104,8 @@ invite into our team, as partners or co-organizers. They were all starting
 the discussion with "You need to do your website right if you want
 your conference to be a success." Nevertheless,
 the original design of the website survived. By the way, some of the content
-we copied with some modifications from the [SPLASH(https://conf.researchr.org/series/splash) website.
+we copied with some modifications from the 
+[SPLASH](https://conf.researchr.org/series/splash) website.
 
 **Host**<br/>
 We were lucky to have a very famous Russian University on our side
