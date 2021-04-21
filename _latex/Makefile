@@ -1,6 +1,6 @@
 all: resume.pdf resume-boring.pdf
 
-%.pdf: %.tex header.tex
+%.pdf: %.tex yb.cls
 	latexmk -pdf $<
 
 clean:
