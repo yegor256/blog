@@ -14,6 +14,7 @@
     }%
   \endgroup\makeatother
 \RequirePackage{graphicx}
+\RequirePackage{svg}
 \RequirePackage{microtype}
 \RequirePackage{libertine}
 \RequirePackage[absolute]{textpos}
@@ -23,15 +24,26 @@
 \RequirePackage{lastpage}
 \RequirePackage{everypage}
 \AddEverypageHook{%
-  \begin{textblock}{2}[0,0](0,0){
+  \begin{textblock}{2}(0,0){
     \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
   }\end{textblock}
+  \ifnum\value{page}=1
+    \begin{textblock}{2}[0,1](0,16){
+      \begin{center}
+        \includesvg[width=0.5\textwidth]{../images/icon-white.svg}
+      \end{center}
+    }\end{textblock}
+  \else\fi
 }
 \RequirePackage{fancyhdr}
   \pagestyle{fancy}
   \renewcommand{\headrulewidth}{0pt}
   \fancyhf{}
-  \fancyfoot[C]{{\color{gray} [ page \thepage{} of \pageref{LastPage} ]}}
+  \fancyfoot[C]{{
+    \ifnum\value{page}=1\else
+      \color{gray} page \thepage{} of \pageref{LastPage}
+    \fi
+  }}
 
 \AtBeginDocument{%
   \setlength{\topskip}{0mm}
