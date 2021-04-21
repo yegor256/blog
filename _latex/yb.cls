@@ -45,6 +45,8 @@
     \fi
   }}
 
+\newcommand\nospell[1]{#1}
+
 \AtBeginDocument{%
   \setlength{\topskip}{0mm}
   \setlength{\parindent}{0pt}

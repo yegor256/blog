@@ -10,3 +10,4 @@ clean:
 
 %.pdf: %.tex yb.cls
 	latexmk -pdf $<
+	texsc $<
