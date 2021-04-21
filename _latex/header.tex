@@ -18,26 +18,32 @@
   \TPGrid{16}{16}
 \usepackage[top=2\TPVertModule, bottom=2\TPVertModule, left=3\TPHorizModule, right=2\TPHorizModule]{geometry}
 \usepackage{tikz}
+\usepackage{lastpage}
+\usepackage{everypage}
+\AddEverypageHook{%
+  \begin{textblock}{2}[0,0](0,0){
+    \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
+  }\end{textblock}
+}
 \usepackage{fancyhdr}
   \pagestyle{fancy}
   \renewcommand{\headrulewidth}{0pt}
   \fancyhf{}
-  \rhead{
-    \begin{textblock}{1}[0,0](0,0){
-      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
-    }\end{textblock}
-  }
+  \fancyfoot[C]{{\color{gray} [ page \thepage{} of \pageref{LastPage} ]}}
 
 \begin{document}
 \setlength{\topskip}{0mm}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt}
-\raggedright
+\tolerance=2000
 \raggedbottom
 \large
-\interfootnotelinepenalty=10000
+% \interfootnotelinepenalty=10000
 
 \begin{textblock}{2.4}[1,0](14,1.5){
   \includegraphics[width=\textwidth]{../images/face-1200x1200.jpg}
 }\end{textblock}
 
+\section*{\Large Yeg\'or Bugay\'enko}
+
+\endinput
