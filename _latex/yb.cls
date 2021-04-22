@@ -21,20 +21,6 @@
   \TPGrid{16}{16}
 \RequirePackage[top=2\TPVertModule, bottom=2\TPVertModule, left=3\TPHorizModule, right=2\TPHorizModule]{geometry}
 \RequirePackage{tikz}
-\RequirePackage{lastpage}
-\RequirePackage{everypage}
-\AddEverypageHook{%
-  \begin{textblock}{2}(0,0){
-    \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
-  }\end{textblock}
-  \ifnum\value{page}=1
-    \begin{textblock}{2}[0,1](0,16){
-      \begin{center}
-        \includesvg[width=0.5\textwidth]{../images/icon-white.svg}
-      \end{center}
-    }\end{textblock}
-  \else\fi
-}
 \RequirePackage{fancyhdr}
   \pagestyle{fancy}
   \renewcommand{\headrulewidth}{0pt}
@@ -44,6 +30,18 @@
       \color{gray} page \thepage{} of \pageref{LastPage}
     \fi
   }}
+  \fancyfoot[C]{
+    \begin{textblock}{2}(0,0){
+      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
+    }\end{textblock}
+    \ifnum\value{page}=1
+      \begin{textblock}{2}[0,1](0,16){
+        \begin{center}
+          \includesvg[width=0.5\textwidth]{../images/icon-white.svg}
+        \end{center}
+      }\end{textblock}
+    \else\fi
+  }
 
 \newcommand\nospell[1]{#1}
 
