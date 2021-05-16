@@ -112,7 +112,7 @@ all will be video-recorded and published on
 <div class="talk-event">&nbsp;</div>
 <img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="HighLoad++ 2020"/><br/>
 Decentralized Architectures: Blockchain and Beyond<br/>
-[HighLoad++](https://www.highload.ru/moscow/2020/abstracts/6620)<br/>
+[HighLoad++](https://www.highload.ru/spring/2021/abstracts/6620)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
 17 May.
 
