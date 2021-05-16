@@ -1,0 +1,228 @@
+---
+layout: post
+title: "Recruiters"
+date: 2021-04-15
+place: Moscow, Russia
+tags: career
+description: |
+  Good recruiters are very effective because they know
+  how to work with people. What exactly does it mean?
+  Here is my take, as a programmer.
+keywords:
+  - ...
+  - ...
+  - ...
+  - ...
+  - ...
+image: /images/2021/04/
+jb_picture:
+  caption:
+style: |-
+  .right-wrong { }
+  .right-wrong tr th { border-bottom: 1px solid gray; font-weight: normal; }
+  .right-wrong tr th:after { content: ":"; }
+  .right-wrong tr td { width: 50%; vertical-align: top; }
+  .right-wrong tr td:nth-child(1) { color: firebrick; }
+  .right-wrong tr td:nth-child(2) { color: seagreen; }
+  .right-wrong tr *:nth-child(1) { padding-right: 1em; }
+  .right-wrong tr *:nth-child(2) { padding-left: 1em; }
+---
+
+Recruiters, you know what I think about you, don't you? 
+Read [this]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
+and [this]({% pst 2015/sep/2015-09-29-mayonnaise %}), 
+to get the full picture. You are still here because we still
+don't have good tools and we still enjoy being enslaved. One day
+this will be over and you will stop exploiting our drawbacks,
+will lose your "Senior Recruiter" jobs, and start doing something 
+useful and meaningful. However, until this day comes, here is some
+advice I would give you, to help you be a 
+<del>less annoying</del> better head hunter.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+Recruitment is very much like dating. And you, like it or not,
+are a match maker. Just like those marriage brokers organize
+dates and help people fall in love, you help me break up with
+the company I'm married to and fall in love with a new one.
+
+The best date happens when people research each other beforehand.
+You too, should come prepared.
+When I get an email from a recruiter that
+starts with a description of the job, I delete it.
+Instead, it should start from an explanation of why you approaches me: 
+What do you know about me? Did you read my code on GitHub? Who did you
+hear about me from? Did you watch any of my talks on YouTube? Do you
+know what language I'm coding with? Make me interested in you
+by demonstrating how are you interested in me.
+
+## It's Not About You
+
+You are my match maker, not my date. Remember this. I'm not interested
+in a date with you. I want to have a date with people who I will work for.
+In most cases, you are a temporary person, who will disappear once I'm
+hired. That's why, you will do yourself a big favor if you position yourself
+the right way. Compare these two:
+
+{:.right-wrong}
+| Jeff | Amy |
+| --- | --- |
+| Hello, I've got a database of 5,000 single ladies. I can help you find your soul mate! | Hey, I know Silva, she seems to be a perfect match for you, how about I introduce you two? |
+
+Jeff is trying to sell himself. He has the database! He knows the ladies!
+I should talk to him! He is my new friend! No, not really, this is not
+what I want. I don't want you, Jeff. Sorry. I'm not interested in knowing
+or dating you. Delete.
+
+Amy, on the other hand, puts Silva in front. This is who I want to know: Silva!
+Amy is just a temporary <del>middleman</del> middlewoman. She is not even trying
+to sell herself, even though, I'm sure, she also has a database of ladies, and so on.
+She is no different than Jeff, but she presents herself right: "I'm here
+just to introduce you to Silva, that's it!" Amy, I like you, I will reply.
+
+How about these two:
+
+{:.right-wrong}
+| Jeff | Amy |
+| --- | --- |
+| Hi, we're looking for a Java developer, to join our new project for online payments, can you send your updated CV? | Hey, I showed your profile to our Java tech lead, he is very interested in talking to you, may I introduce? |
+
+Which message do you think has higher chances of being answered? I bet, Jeff's
+email will be replied only by those who don't care much where to work. 
+For them seeing a new job opportunity in the Inbox is enough to click "Reply". 
+Does your company need those people?
+
+## Do You Understand the Market?
+
+Dating, just like head hunting, is about finding the right people.
+First finding, and then reaching. It's not a problem to approach just 
+a Java developer and schedule an interview. Most probably you, as a recruiter,
+are not paid per the interview you arrange. You are paid per "a placement"
+you make---when the developer is actually hired. They will be hired only
+when they are a good match. So, your first task is to find those who 
+potentially are a good match. You have to research the market and create
+a _map of talents_. 
+
+I would start with a list of key people on the market,
+who are the most visible and the best, whatever it means. If your hiring
+focus is small enough (this is how it should be), you will identify
+just a few dozens of key people. Then, starting from them, you go down
+on the map and see where they work, who works in their teams, where
+did they work before, and so on. Check the conferences and workshops
+where people present their ideas and achivements. Check their GitHub
+accounts and see who else is committing to their projects. Do whatever
+it takes, but make the map. Maybe even pay a private detective to collect
+the data you can't find in Internet: who do they drink beer with, where
+do they spend their vacations, who do they sleep with, etc. 
+I'm kidding here, but you get the idea: you need to know the market!
+
+Then, once you know your target market, the best way would be to make 
+_it approach you_. Think about this: 
+best people are hardly reading job boards, 
+don't post their CVs anywhere, 
+don't make their LinkedIn pages "open for hiring offers," 
+and usually don't reply to recruiters (for various reasons).
+Simply put, they have better things to do than talking to you.
+It's hard to approach them. Sometimes even impossible.
+
+But you can make them come to you, if you do something that will be
+interesting for them. For example, if you organize a competition for new
+open source projects with a prize fund of $1M. It's very likely that
+the best people will come to you to compete for this money. There you will
+have a chance to talk to them. You don't have a million dollars to give away
+just to hire the best people? Sad. Maybe you can organize a workshop
+where people meet to discuss Java and invite those who you want to 
+approach. There are many options. Just give them something they are
+interested in and they will come to you.
+
+## Formal Emails Get Deleted
+
+If you don't have a million dollars and you don't have time to
+make a good conference for them, you have to do cold calls. Well, more like
+cold emails and cold LinkedIn messages. I suggest you to sound
+_short_ and _informal_. Compare these two:
+
+{:.right-wrong}
+| Jeff | Amy |
+| --- | --- |
+| Dear Sarah,<br/><br/>My name is Jeff, I'm a recruiter in ACME Inc. We have a new interesting project, which needs senior Java developers. The requirements for this position you can find in the attached document.<br/><br/>Please, send me your updated CV if you are interested.<br/><br/>Sincerely Yours,<br/>Jeffrey Lebowski<br/>ACME Inc.<br/>Palo Alto, CA | Sarah, we've never met before but I showed your GitHub to our Head of Dev and she asked me to email you. Her team is making a new payment platform and they lack expertise in big data. How about you two talk?<br/><br/>BR,<br/>Amy |
+
+Jeff's message is just wrong, on so many levels: it explicitly says that Jeff is
+a recruiter (nobody likes recruiters!), it doesn't say anything about why
+Jeff is approaching Sarah, and it's too formal and official. To me the letter
+seems to be a template-based, while only the name of the recepient is
+replaced (which is not always the case---I'm getting many emails that
+start with `Hello, %NAME%`).
+
+The message from Amy is much better: there is nothing in it that tells me
+that Amy is a recruiter! Maybe she is a programmer from the team? Maybe she
+is a CEO of the company? I don't know. And I don't want to imagine her
+being a recruiter. I imagine her being a member of the team, who
+is really interested in my stuff on GitHub. She is someone who studied
+my work and got interested. She is already my friend. That's why I reply.
+
+## Cut Corners for Me
+
+The biggest disadvantage of Jeff's email and the advantage of Amy's is
+in the way they present the hiring process to me, the candidate. Jeff
+is sending me requirements and right from the start makes it look very long
+and official. I immediately imagine a series of interviews, a bunch of
+forms to fill up, a month-long journey full of stress. Do I want to 
+start it if my current job is more or less OK? No, I don't. On the other
+hand, Amy right from the first message suggested to connect me with the
+hiring manager, who is already interested in me. Maybe there will be
+a full official process of hiring. Most likely! But I already have the
+key person on my side: the Head of Dev. The rest will be just formalities.
+
+Try to put yourself into my shoes. I don't know your team, I don't know
+the project, I'm scared of changes, and I'm not sure I should do it.
+It's easier for me to stay where I am. Also remember that for most people
+changing jobs is very similar to betrayal: they quit the team that 
+relies of them. You are the person who turns them into traitors. Try to 
+make this journey of stress and treachery look simple for them:
+
+{:.right-wrong}
+| Jeff | Amy |
+| --- | --- |
+| Bob,<br/><br/>Send me your updated CV and we take it from there.<br/><br/>Sincerely,<br/>Jeff | Bob,<br/><br/>Let me take a look at your CV. Here is how we do usually do this: first, you have an interview with the Head of Dev; then, our chief arhitect talks to you; finally, our HR guys will have a quick call with you; and in about a week we give an offer. The entire process usually takes up to a month. How does it sound for you? Ready to start a trip? :)<br/><br/>BR,<br/>Amy |
+
+I believe it's obvious that Amy is doing a much better job of helping
+Bob understand what he has to be prepared for. We are scared of things
+we don't understand or don't know. You don't want your candidates to be
+scared of you. You want them to feel comfortable.
+
+The best way to attract us candidates is to show that you are ready
+to simplify the hiring process specially for us. Well, for me only. Not for everybody.
+For example:
+
+{:.right-wrong}
+| Jeff | Amy |
+| --- | --- |
+| Bob,<br/><br/>Send me your updated CV and I'll get the ball rolling. There will be two online interviews and then we will invite you to the office for the final one. Before we start, I kindly ask you sign the attached form about personal data disclosure. It's just a formality.<br/><br/>Yours,<br/>Jeff | Bob,<br/><br/>I need your CV and then I think I can optimize our hiring process a bit: instead of three interviews there will be just two. How does it sound?<br/><br/>BR,<br/>Amy |
+
+Smells like a sales trick? It is.
+
+## Don't Loose the Intrigue
+
+Best companies, I believe, try to find a job position for a person, instead
+of finding a person for a position. In other words, they invite
+the best people and then let them decide what's the best
+application of their skills and expertise. That's why the least specific
+you are about your "requirements," the better. Just "we have problems
+with big data" is more than enough for a job description. The rest
+of it you will explain later, on the first interview. You don't tell
+your requirements to someone you just cought sights with in a bar, do you?
+The same here. Remember, recruiting is dating---you have to keep the intrigue up.
+
+H
+
+
+
+
+
+
+
+
+

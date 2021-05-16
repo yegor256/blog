@@ -1,3 +1,10 @@
+article {
+  p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
 .youtube {
   @extend %desktop-only;
   @extend %unprintable;

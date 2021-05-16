@@ -5,7 +5,8 @@ date: 2021-04-15
 place: Moscow, Russia
 tags: management
 description: |
-  ...
+  Measuring individual performance is a very complex
+  task, especially in R&D teams: here is how we do it.
 keywords:
   - measuring individual performance
   - ...
@@ -30,7 +31,7 @@ performance can indeed be measured, even if people's work involves creativity,
 and results are hard to predict. We designed a system of 
 Calibrated Achievement Points (CAP), which are rewarded to those who deliver 
 visible and tangible results of different kinds. The article explains how 
-CAP work and summarizes the results of the experiment.
+CAPs work and summarizes the results of the experiment.
 
 <!--more-->
 

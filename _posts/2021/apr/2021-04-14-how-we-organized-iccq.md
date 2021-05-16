@@ -168,7 +168,8 @@ agreed to join us.
 This was the biggest challenge: to get a 
 [technical sponsorship](https://www.computer.org/conferences/organize-a-conference/sponsorship-options) 
 from IEEE.
-Our friends from IEEE Russia Section C Chapter helped us, and
+Our friends from IEEE Russia Section C Chapter helped us
+(using [this form](https://www.ieee.org/conferences/organizers/conf-app.html)), and
 [we got it](https://conferences.ieee.org/conferences_events/conferences/conferencedetails/51190).
 If you want to know more details about this step, [tg me](https://t.me/yegor256), 
 I will try to explain.

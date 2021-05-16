@@ -24,43 +24,45 @@ keywords:
   {% else %}
     <div class="wrapper">
       <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
-        <header>
-          <h1>
-            <a href="{{ post.url }}">
-              <span itemprop="name headline mainEntityOfPage">{{ post.title }}</span>
+        <article>
+          <header>
+            <h1>
+              <a href="{{ post.url }}">
+                <span itemprop="name headline mainEntityOfPage">{{ post.title }}</span>
+              </a>
+            </h1>
+            <ul class="subline">
+              <li>
+                <time itemprop="datePublished dateModified" datetime="{{ post.date | date_to_xmlschema }}">
+                  {{ post.date | date: "%-d %B %Y" }}
+                </time>
+              </li>
+              <li itemprop="wordCount">
+                {{ post.content | number_of_words | append: ' words' }}
+              </li>
+              <li>
+                {% capture words %}
+                {{ post.content | number_of_words | minus: 180 }}
+                {% endcapture %}
+                {% unless words contains '-' %}
+                {{ words | plus: 180 | divided_by: 180 | append: ' minutes to read' }}
+                {% endunless %}
+              </li>
+              <li>
+                <i class="icon icon-comments"></i>
+                <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
+              </li>
+            </ul>
+          </header>
+          <div class="main" itemprop="description">
+            {{ post.excerpt }}
+          </div>
+          <p>
+            <a href="{{ post.url }}" itemprop="url">
+              Continue...
             </a>
-          </h1>
-          <ul class="subline">
-            <li>
-              <time itemprop="datePublished dateModified" datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: "%-d %B %Y" }}
-              </time>
-            </li>
-            <li itemprop="wordCount">
-              {{ post.content | number_of_words | append: ' words' }}
-            </li>
-            <li>
-              {% capture words %}
-              {{ post.content | number_of_words | minus: 180 }}
-              {% endcapture %}
-              {% unless words contains '-' %}
-              {{ words | plus: 180 | divided_by: 180 | append: ' minutes to read' }}
-              {% endunless %}
-            </li>
-            <li>
-              <i class="icon icon-comments"></i>
-              <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
-            </li>
-          </ul>
-        </header>
-        <div class="main" itemprop="description">
-          {{ post.excerpt }}
-        </div>
-        <p>
-          <a href="{{ post.url }}" itemprop="url">
-            Continue...
-          </a>
-        </p>
+          </p>
+        </article>
       </section>
     </div>
   {% endif %}
