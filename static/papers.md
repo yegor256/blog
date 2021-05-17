@@ -28,6 +28,12 @@ Find me in
 [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ)
 and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 
+By the way, I'm an organizer of 
+[ICCQ'21](https://www.iccq.ru/2021.html), 
+[ICCQ'22](https://www.iccq.ru/2022.html).
+I'm also a PC member of 
+[BCNC'21](https://2021.splashcon.org/home/bcnc-2021).
+
 [Bringing Industry Back to Conferences, and Paying for Results](https://cacm.acm.org/magazines/2020/11/248192-bringing-industry-back-to-conferences-and-paying-for-results/fulltext),
 Communications of the ACM, Volume 63, Number 11,
 November 2020,
