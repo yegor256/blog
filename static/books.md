@@ -15,8 +15,10 @@ keywords:
   - books about management
 style: |
   .book-par {
-    clear: both;
     margin-top: 1em;
+  }
+  .book-badge img {
+    border: 1px solid gray;
   }
 ---
 
@@ -42,8 +44,9 @@ you are blind), you may email me a proof of purchase of the book, and I will
 send you the PDF version (rendered with your name inside, to make sure
 you don't share it with others).
 
-<div class="book-par"></div>
+{: .book-badge}
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
+
 [Elegant Objects](/elegant-objects.html) (Volume 1)
 is my first book. It is about object-oriented
 programming, from an idealistic and, maybe, a bit futuristic
@@ -54,9 +57,11 @@ more solid and architecture more visible.
 Published: 22 Feb 2016.
 <br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
 
-<div class="book-par"></div>
+{: .book-badge}
 {% badge /images/books/256-bloghacks/cover.png 125 /256-bloghacks.html %}
+
 [256 Bloghacks](/256-bloghacks.html) is a book about blogging,
 disclosing all techniques, secrets and tactics I'm using at this blog.
 It contains many small and big recommendations,
@@ -67,9 +72,11 @@ in just one go.
 Published: 6 Nov 2016.
 <br/>
 <a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
 
-<div class="book-par"></div>
+{: .book-badge}
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
+
 The **2nd Volume** of [Elegant Objects](/elegant-objects.html)
 covers more object-oriented patterns and anti-patterns,
 including MVC, ORM, annotations, printers, validators, inheritance and subtyping,
@@ -78,9 +85,11 @@ dependency injection, reflection, and others.
 Published: 18 Apr 2017.
 <br/>
 <a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
 
-<div class="book-par"></div>
+{: .book-badge}
 {% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
+
 [Code Ahead](/code-ahead.html) is a novel about software engineering. In this book I
 propose a number of best practices for organizing software development
 process. What is interesting is that it is a semi-biographical fiction book, with
@@ -90,8 +99,9 @@ Published: 6 July 2018.
 <br/>
 <a href="https://amzn.to/2u9BbqF"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 
-<div class="book-par"></div>
+{: .book-badge}
 {% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
+
 It is a book for junior programmers or even for someone who hasn't
 seen a computer yet. It starts from the explanation of basic things
 and gets into details about object-oriented programming, getting you
@@ -101,18 +111,21 @@ it a prequel to Elegant Objects.
 Published: 22 June 2020.
 <br/>
 <a href="https://amzn.to/3hO82ch"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
 
-<div class="book-par"></div>
+{: .book-badge}
 {% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
+
 The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
 will contain practical object-oriented design patterns, just like
 those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
-To be published: in 2021.
+To be published: in 2022.
+{: .book-par}
 
-<div class="book-par"></div>
 To be continued...
+{: .book-par}
 
 ## How to Get a Discount
 
