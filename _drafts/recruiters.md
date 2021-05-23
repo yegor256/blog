@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Recruiters, You Are Doing It Wrong!"
+title: "A Few Tips for Recruiters"
 date: 2021-05-25
 place: Moscow, Russia
 tags: career
