@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Recruiters"
-date: 2021-04-15
+title: "Recruiters, You Are Doing It Wrong!"
+date: 2021-05-25
 place: Moscow, Russia
 tags: career
 description: |
@@ -9,18 +9,18 @@ description: |
   how to work with people. What exactly does it mean?
   Here is my take, as a programmer.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
-image: /images/2021/04/
+  - recruitment tips
+  - it recruitment tips
+  - software recruitment tips
+  - recruiters advice
+  - recruitment advice
+image: /images/2021/05/
 jb_picture:
   caption:
 style: |-
   .right-wrong { }
-  .right-wrong tr th { border-bottom: 1px solid gray; font-weight: normal; }
-  .right-wrong tr th:after { content: ":"; }
+  .right-wrong tr th { border-bottom: 1px solid gray; font-weight: normal; color: gray; }
+  .right-wrong tr th:before { content: "From: "; }
   .right-wrong tr td { width: 50%; vertical-align: top; }
   .right-wrong tr td:nth-child(1) { color: firebrick; }
   .right-wrong tr td:nth-child(2) { color: seagreen; }
@@ -28,7 +28,7 @@ style: |-
   .right-wrong tr *:nth-child(2) { padding-left: 1em; }
 ---
 
-Recruiters, you know what I think about you, don't you? 
+Recruiters, you know what we programmers think about you, don't you? 
 Read [this]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %})
 and [this]({% pst 2015/sep/2015-09-29-mayonnaise %}), 
 to get the full picture. You are still here because we still
@@ -36,32 +36,35 @@ don't have good tools and we still enjoy being enslaved. One day
 this will be over and you will stop exploiting our drawbacks,
 will lose your "Senior Recruiter" jobs, and start doing something 
 useful and meaningful. However, until this day comes, here is some
-advice I would give you, to help you be a 
-<del>less annoying</del> better head hunter.
+advice, to help you be a  <del>less annoying</del> better 
+head hunter.
 
 <!--more-->
 
 {% jb_picture_body %}
 
 Recruitment is very much like dating. And you, like it or not,
-are a match maker. Just like those marriage brokers organize
-dates and help people fall in love, you help me break up with
-the company I'm married to and fall in love with a new one.
+are a _match maker_. Just like those marriage brokers organize
+dates and help people fall in love, you help us break up with
+the company we're married to and fall in love with a new one.
 
 The best date happens when people research each other beforehand.
 You too, should come prepared.
 When I get an email from a recruiter that
-starts with a description of the job, I delete it.
-Instead, it should start from an explanation of why you approaches me: 
-What do you know about me? Did you read my code on GitHub? Who did you
-hear about me from? Did you watch any of my talks on YouTube? Do you
-know what language I'm coding with? Make me interested in you
-by demonstrating how are you interested in me.
+starts with a description of the job, I most likely just delete it.
+Instead, to catch the attention, the letter should start from 
+an explanation of why you decided to reach out: 
+Maybe you already know something about me? 
+Maybe you read my code on GitHub? 
+Maybe someone told you about me? 
+Maybe you know what language I'm coding with? 
+When you are interested in my, I will be much more interested in you,
+and the company you represent, and the job you are trying to match me with.
 
 ## It's Not About You
 
-You are my match maker, not my date. Remember this. I'm not interested
-in a date with you. I want to have a date with people who I will work for.
+It's important to remember that you are my match maker, but not my date. 
+I'm not interested in a date with you. I want to have a date with people who I will work for.
 In most cases, you are a temporary person, who will disappear once I'm
 hired. That's why, you will do yourself a big favor if you position yourself
 the right way. Compare these two:
@@ -72,15 +75,15 @@ the right way. Compare these two:
 | Hello, I've got a database of 5,000 single ladies. I can help you find your soul mate! | Hey, I know Silva, she seems to be a perfect match for you, how about I introduce you two? |
 
 Jeff is trying to sell himself. He has the database! He knows the ladies!
-I should talk to him! He is my new friend! No, not really, this is not
+I should talk to him! He is my new friend!... No, not really, this is not
 what I want. I don't want you, Jeff. Sorry. I'm not interested in knowing
 or dating you. Delete.
 
 Amy, on the other hand, puts Silva in front. This is who I want to know: Silva!
 Amy is just a temporary <del>middleman</del> middlewoman. She is not even trying
 to sell herself, even though, I'm sure, she also has a database of ladies, and so on.
-She is no different than Jeff, but she presents herself right: "I'm here
-just to introduce you to Silva, that's it!" Amy, I like you, I will reply.
+Technically speadking, she is no different than Jeff, but she presents herself right: 
+"I'm here just to introduce you to Silva, that's it!" Amy, I like you, I reply!
 
 How about these two:
 
@@ -92,29 +95,29 @@ How about these two:
 Which message do you think has higher chances of being answered? I bet, Jeff's
 email will be replied only by those who don't care much where to work. 
 For them seeing a new job opportunity in the Inbox is enough to click "Reply". 
-Does your company need those people?
+But ask yourself: does your company need those people?
 
 ## Do You Understand the Market?
 
 Dating, just like head hunting, is about finding the right people.
 First finding, and then reaching. It's not a problem to approach just 
 a Java developer and schedule an interview. Most probably you, as a recruiter,
-are not paid per the interview you arrange. You are paid per "a placement"
-you make---when the developer is actually hired. They will be hired only
-when they are a good match. So, your first task is to find those who 
+are not paid per an interview you arrange. You are paid per "a placement"
+you make---when the developer is actually hired. We will be hired only
+when they is a good match. So, your first task is to find those who 
 potentially are a good match. You have to research the market and create
 a _map of talents_. 
 
 I would start with a list of key people on the market,
 who are the most visible and the best, whatever it means. If your hiring
 focus is small enough (this is how it should be), you will identify
-just a few dozens of key people. Then, starting from them, you go down
-on the map and see where they work, who works in their teams, where
+just a few dozens of key people. Then, starting from them, you dig deeper
+and find out where they work, who works in their teams, where
 did they work before, and so on. Check the conferences and workshops
 where people present their ideas and achivements. Check their GitHub
 accounts and see who else is committing to their projects. Do whatever
 it takes, but make the map. Maybe even pay a private detective to collect
-the data you can't find in Internet: who do they drink beer with, where
+the data you can't find in the Internet: who do they drink beer with, where
 do they spend their vacations, who do they sleep with, etc. 
 I'm kidding here, but you get the idea: you need to know the market!
 
@@ -132,10 +135,10 @@ interesting for them. For example, if you organize a competition for new
 open source projects with a prize fund of $1M. It's very likely that
 the best people will come to you to compete for this money. There you will
 have a chance to talk to them. You don't have a million dollars to give away
-just to hire the best people? Sad. Maybe you can organize a workshop
+just to hire the best people? Sad... Maybe you can organize a workshop
 where people meet to discuss Java and invite those who you want to 
-approach. There are many options. Just give them something they are
-interested in and they will come to you.
+approach? There are many options. Just give them something they are
+interested in and they will know you.
 
 ## Formal Emails Get Deleted
 
@@ -179,9 +182,9 @@ key person on my side: the Head of Dev. The rest will be just formalities.
 Try to put yourself into my shoes. I don't know your team, I don't know
 the project, I'm scared of changes, and I'm not sure I should do it.
 It's easier for me to stay where I am. Also remember that for most people
-changing jobs is very similar to betrayal: they quit the team that 
-relies of them. You are the person who turns them into traitors. Try to 
-make this journey of stress and treachery look simple for them:
+changing jobs is very similar to betrayal: they quit the team, which
+relies on them. You are the person who turns them into traitors. Try to 
+make this journey of stress and treachery look simpler for them:
 
 {:.right-wrong}
 | Jeff | Amy |
@@ -216,13 +219,25 @@ of it you will explain later, on the first interview. You don't tell
 your requirements to someone you just cought sights with in a bar, do you?
 The same here. Remember, recruiting is dating---you have to keep the intrigue up.
 
-H
+Instead of saying what you need and sending the job description, briefly
+explain the problems your team is facing:
 
+{:.right-wrong}
+| Jeff | Amy |
+| --- | --- |
+| Bob,<br/><br/>We are looking for a Java developer who knows Spring Framework, MySQL, and XML. You need to have at least five years of hands-on coding experience. You need to be familiar with payment processing domain.<br/><br/>Yours,<br/>Jeff | Bob,<br/><br/>We are making a payment processing app and use Spring, MySQL, and XML. Our team lacks expertise in this new domain. We need help, both in form of advice and daily coding.<br/><br/>BR,<br/>Amy |
 
+Jeff is placing his requirements on top, which hardly sounds attractive. Just like
+in dating, such an arrogant attitude is not helpful at all. Instead, Amy is
+talking about problems she and her team are facing. It's up to Bob to decide
+whether there is a fit or not.
 
+I would suggest making your job descriptions as less demanding as possible.
+Your goal is to attract the best candidate, not to find those who 
+are ready to put up with whatever you write in the JD. Write about problems
+and issues you expect your candidates to solve. Don't focus too much on
+the expectations you have for them. Of cause you have those expectations,
+but putting them right on the table at the first date is a silly idea.
 
-
-
-
-
+That's all. Happy recruiting!
 
