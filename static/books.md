@@ -18,7 +18,7 @@ style: |
     margin-top: 1em;
   }
   .book-badge img {
-    border: 1px solid gray;
+    border: 1px solid lightgray;
   }
 ---
 
