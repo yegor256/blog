@@ -114,7 +114,7 @@ focus is small enough (this is how it should be), you will identify
 just a few dozen key people. Then, starting from them, you dig deeper
 and find out where they work, who works in their teams, where
 they worked before, and so on. Check the conferences and workshops
-where people present their ideas and achivements. Check their GitHub
+where people present their ideas and achievements. Check their GitHub
 accounts and see who else is committing to their projects. Do whatever
 it takes, but make the map. Maybe even pay a private detective to collect
 the data you can't find in the Internet: who do they drink beer with, where
@@ -155,7 +155,7 @@ _short_ and _informal_. Compare these two:
 Jeff's message is just wrong, on so many levels: it explicitly says that Jeff is
 a recruiter (nobody likes recruiters!), it doesn't say anything about why
 Jeff is approaching Sarah, and it's too formal and official. To me the letter
-seems to be template-based, while only the name of the recepient is
+seems to be template-based, while only the name of the recipient is
 replaced (which is not always the case---I'm getting many emails that
 start with `Hello, %NAME%`).
 
@@ -189,7 +189,7 @@ make this journey of stress and treachery look simpler for them:
 {:.right-wrong}
 | Jeff | Amy |
 | --- | --- |
-| Bob,<br/><br/>Send me your updated CV and we will take it from there.<br/><br/>Sincerely,<br/>Jeff | Bob,<br/><br/>Let me take a look at your CV. Here is how we usually do this: first, you have an interview with the Head of Dev; then, our chief arhitect talks to you; finally, our HR guys will have a quick call with you; and in about a week we give you an offer. The entire process usually takes up to a month. How does it sound for you? Ready to start a trip? :)<br/><br/>BR,<br/>Amy |
+| Bob,<br/><br/>Send me your updated CV and we will take it from there.<br/><br/>Sincerely,<br/>Jeff | Bob,<br/><br/>Let me take a look at your CV. Here is how we usually do this: first, you have an interview with the Head of Dev; then, our chief architect talks to you; finally, our HR guys will have a quick call with you; and in about a week we give you an offer. The entire process usually takes up to a month. How does it sound for you? Ready to start a trip? :)<br/><br/>BR,<br/>Amy |
 
 I believe it's obvious that Amy is doing a much better job of helping
 Bob understand what he has to be prepared for. We are scared of things
@@ -234,7 +234,7 @@ whether there is a fit or not.
 
 I would suggest making your job descriptions as undemanding as possible.
 Your goal is to attract the best candidate, not to find those who 
-are ready to put up with whatever you write in the job discription. Write about problems
+are ready to put up with whatever you write in the job description. Write about problems
 and issues you expect your candidates to solve. Don't focus too much on
 the expectations you have for them. Of cause you have those expectations,
 but putting them right on the table at the first date is a silly idea.
