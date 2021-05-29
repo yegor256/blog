@@ -90,7 +90,7 @@ How about these two:
 {:.right-wrong}
 | Jeff | Amy |
 | --- | --- |
-| Hi, we're looking for a Java developer. To join our new project for online payments, can you send your updated CV? | Hey, I showed your profile to our Java tech lead, he is very interested in talking to you, may I introduce you? |
+| Hi, we're looking for a Java developer to join our new project for online payments, can you send your updated CV? | Hey, I showed your profile to our Java tech lead, he is very interested in talking to you, may I introduce you? |
 
 Which message do you think has a higher chance of being answered? I bet Jeff's
 email will be replied to only by those who don't care much where they work. 
