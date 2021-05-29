@@ -104,7 +104,7 @@ First finding, and then reaching. It's not a problem to just approach
 a Java developer and schedule an interview. Most probably you, as a recruiter,
 are not paid for each interview you arrange. You are paid for "a placement"
 you make---when the developer is actually hired. We will be hired only
-when they is a good match. So, your first task is to find those who 
+when there is a good match. So, your first task is to find those who 
 potentially are a good match. You have to research the market and create
 a _map of talents_. 
 
