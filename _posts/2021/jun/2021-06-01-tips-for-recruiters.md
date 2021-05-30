@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Few Tips for Recruiters"
-date: 2021-05-25
+date: 2021-06-01
 place: Moscow, Russia
 tags: career
 description: |
@@ -14,9 +14,9 @@ keywords:
   - software recruitment tips
   - recruiters advice
   - recruitment advice
-image: /images/2021/05/
+image: /images/2021/06/the-fifth-element.jpg
 jb_picture:
-  caption:
+  caption: The Fifth Element (1997) by Luc Besson
 style: |-
   .right-wrong { }
   .right-wrong tr th { border-bottom: 1px solid gray; font-weight: normal; color: gray; }
