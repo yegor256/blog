@@ -227,3 +227,5 @@ or [IntelliJ IDEA](https://www.jetbrains.com/help/idea/generating-getters-and-se
 
 Maybe I should turn my ideas into official proposals to
 [JCP](https://jcp.org/en/participation/committee). What do you think?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Programming languages are...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1398900025145671680?ref_src=twsrc%5Etfw">May 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
