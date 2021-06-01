@@ -62,6 +62,7 @@ achieving
 acknowledge
 acknowledgements
 ACM
+ACME
 acquire
 acquired
 acquires
@@ -269,6 +270,8 @@ amount
 amounts
 amp
 amsterdam
+amy
+amy's
 an
 anal
 analogy
@@ -393,6 +396,7 @@ approach
 approachability
 approached
 approaches
+approaching
 appropriate
 approval
 approve
@@ -437,6 +441,7 @@ armies
 armstrong
 army
 around
+arrange
 arrangement
 array
 arrays
@@ -903,6 +908,7 @@ boxes
 boy
 bozhanov
 bozhidar
+BR
 braces
 bracket
 brackets
@@ -1029,6 +1035,7 @@ byte
 byte-code
 bytecode
 bytes
+CA
 cache
 cached
 caching
@@ -1965,6 +1972,7 @@ cute
 cutting
 cutting-edge
 CV
+CVs
 cybersecurity
 cycle
 cycles
@@ -2230,6 +2238,7 @@ details
 detect
 detected
 detection
+detective
 determine
 determining
 deterministic
@@ -2757,6 +2766,7 @@ enjoying
 enjoys
 enormous
 enough
+enslaved
 enslaving
 ensure
 ensured
@@ -3789,6 +3799,7 @@ hesitate
 hesitation
 hetzel
 hey
+hi
 hibernate
 hickey
 hidden
@@ -3919,6 +3930,8 @@ hundred-year
 hundreds
 hungry
 hunt
+hunter
+hunting
 hurt
 hurtful
 hurting
@@ -4447,6 +4460,7 @@ jeff
 jeff's
 jeffbarr
 jefferson
+jeffrey
 jekyll
 jenkins
 jeopardize
@@ -4587,6 +4601,7 @@ kim
 kimmel
 kind
 kindle
+kindly
 kindness
 kinds
 king
@@ -4715,6 +4730,7 @@ least
 leave
 leaves
 leaving
+lebowski
 lecture
 lectures
 led
@@ -4950,6 +4966,7 @@ maintenance
 major
 majority
 make
+maker
 makers
 makes
 making
@@ -5045,6 +5062,7 @@ matched
 matchers
 matches
 matching
+mate
 material
 materials
 mates
@@ -5214,6 +5232,7 @@ microvesting
 middle
 middleman
 middlemen
+middlewoman
 might
 migrate
 migrates
@@ -5353,6 +5372,7 @@ monster
 monsters
 month
 month's
+month-long
 monthly
 months
 mood
@@ -6202,6 +6222,7 @@ pizza
 pizzas
 place
 placed
+placement
 places
 placing
 plagues
@@ -6780,6 +6801,7 @@ re-written
 reach
 reached
 reaches
+reaching
 react
 reaction
 reactions
@@ -7182,6 +7204,7 @@ riel
 ries
 rigadevdays
 right
+right-wrong
 rights
 rigid
 ringelmann
@@ -7218,6 +7241,7 @@ roles
 rollback
 rollbacks
 rolled
+rolling
 roman
 romance
 rome
@@ -7661,6 +7685,7 @@ silently
 silicon
 siliconvalley
 silly
+silva
 silver
 similar
 similarities
@@ -8392,6 +8417,7 @@ telling
 tells
 temperature
 template
+template-based
 templates
 templating
 temporal
@@ -8638,6 +8664,7 @@ training
 trainings
 trainspotting
 trait
+traitors
 traits
 transaction
 transactional
@@ -8668,6 +8695,7 @@ traumatized
 travel
 traversing
 travis
+treachery
 treat
 treated
 treating
@@ -8691,6 +8719,7 @@ triggering
 triggers
 trimmed
 trio
+trip
 triple-apostrophe
 tripled
 tripod
@@ -8807,6 +8836,7 @@ uncompromising
 unconditional
 unconditionally
 uncovered
+undemanding
 under
 under-estimating
 under-funded
@@ -9327,6 +9357,7 @@ workplace
 workplaces
 works
 workshop
+workshops
 world
 worlds
 worldwide

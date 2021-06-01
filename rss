@@ -1,4 +1,275 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-05-31T13:04:28+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">How We Organized the First ICCQ</title><link href="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html" rel="alternate" type="text/html" title="How We Organized the First ICCQ" /><published>2021-04-14T00:00:00+00:00</published><updated>2021-04-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/04/14/how-we-organized-iccq</id><content type="html" xml:base="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html">&lt;p&gt;First, let me clarify what kind of conference we are talking about. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-06-01T05:06:17+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">A Few Tips for Recruiters</title><link href="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html" rel="alternate" type="text/html" title="A Few Tips for Recruiters" /><published>2021-06-01T00:00:00+00:00</published><updated>2021-06-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/06/01/tips-for-recruiters</id><content type="html" xml:base="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html">&lt;p&gt;Recruiters, you know what we programmers think about you, don’t you? 
+Read &lt;a href=&quot;/2017/02/21/say-no-to-google-recruiters.html&quot;&gt;this&lt;/a&gt;
+and &lt;a href=&quot;/2015/09/29/mayonnaise.html&quot;&gt;this&lt;/a&gt;, 
+to get the full picture. You are still here because we still
+don’t have good tools and we still enjoy being enslaved. One day
+this will be over and you will stop exploiting our drawbacks,
+will lose your “Senior Recruiter” jobs, and start doing something 
+useful and meaningful. However, until this day comes, here is some
+advice, to help you be a &lt;del&gt;less annoying&lt;/del&gt; better 
+head hunter.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Fifth Element (1997) by Luc Besson&quot; src=&quot;/images/2021/06/the-fifth-element.jpg&quot; longdesc=&quot;#009e7c42&quot; /&gt;&lt;figcaption id=&quot;009e7c42&quot;&gt;The Fifth Element (1997) by Luc Besson&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Recruitment is very much like dating. And you, like it or not,
+are a &lt;em&gt;match maker&lt;/em&gt;. Just like those marriage brokers organize
+dates and help people fall in love, you help us break up with
+the company we’re married to and fall in love with a new one.&lt;/p&gt;
+
+&lt;p&gt;The best date happens when people research each other beforehand.
+You too, should come prepared.
+When I get an email from a recruiter that
+starts with a description of the job, I most likely just delete it.
+Instead, to catch our attention, the letter should start with
+an explanation of why you decided to reach out: 
+Maybe you already know something about me? 
+Maybe you read my code on GitHub? 
+Maybe someone told you about me? 
+Maybe you know what language I’m coding with? 
+When you are interested in me, I will be much more interested in you,
+and the company you represent, and the job you are trying to match me with.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-not-about-you&quot;&gt;It’s Not About You&lt;/h2&gt;
+
+&lt;p&gt;It’s important to remember that you are my match maker, but not my date. 
+I’m not interested in a date with you. I want to have a date with people who I will work for.
+In most cases, you are a temporary person, who will disappear once I’m
+hired. That’s why you will do yourself a big favor if you position yourself
+the right way. Compare these two:&lt;/p&gt;
+
+&lt;table class=&quot;right-wrong&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Jeff&lt;/th&gt;
+      &lt;th&gt;Amy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hello, I’ve got a database of 5,000 single ladies. I can help you find your soul mate!&lt;/td&gt;
+      &lt;td&gt;Hey, I know Silva, she seems to be a perfect match for you, how about I introduce you two?&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Jeff is trying to sell himself. He has the database! He knows the ladies!
+I should talk to him! He is my new friend!… No, not really, this is not
+what I want. I don’t want you, Jeff. Sorry. I’m not interested in knowing
+or dating you. Delete.&lt;/p&gt;
+
+&lt;p&gt;Amy, on the other hand, puts Silva in front. This is who I want to know: Silva!
+Amy is just a temporary &lt;del&gt;middleman&lt;/del&gt; middlewoman. She is not even trying
+to sell herself, even though, I’m sure, she also has a database of ladies, and so on.
+Technically speaking, she is no different than Jeff, but she presents herself right: 
+“I’m here just to introduce you to Silva, that’s it!” Amy, I like you, I reply!&lt;/p&gt;
+
+&lt;p&gt;How about these two:&lt;/p&gt;
+
+&lt;table class=&quot;right-wrong&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Jeff&lt;/th&gt;
+      &lt;th&gt;Amy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hi, we’re looking for a Java developer to join our new project for online payments, can you send your updated CV?&lt;/td&gt;
+      &lt;td&gt;Hey, I showed your profile to our Java tech lead, he is very interested in talking to you, may I introduce you?&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Which message do you think has a higher chance of being answered? I bet Jeff’s
+email will be replied to only by those who don’t care much where they work. 
+For them, seeing a new job opportunity in their Inbox is enough to click “Reply”. 
+But ask yourself: does your company need those people?&lt;/p&gt;
+
+&lt;h2 id=&quot;do-you-understand-the-market&quot;&gt;Do You Understand the Market?&lt;/h2&gt;
+
+&lt;p&gt;Dating, just like head hunting, is about finding the right people.
+First finding, and then reaching. It’s not a problem to just approach
+a Java developer and schedule an interview. Most probably you, as a recruiter,
+are not paid for each interview you arrange. You are paid for “a placement”
+you make—when the developer is actually hired. We will be hired only
+when there is a good match. So, your first task is to find those who 
+potentially are a good match. You have to research the market and create
+a &lt;em&gt;map of talents&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I would start with a list of key people on the market,
+who are the most visible and the best, whatever that means. If your hiring
+focus is small enough (this is how it should be), you will identify
+just a few dozen key people. Then, starting from them, you dig deeper
+and find out where they work, who works in their teams, where
+they worked before, and so on. Check the conferences and workshops
+where people present their ideas and achievements. Check their GitHub
+accounts and see who else is committing to their projects. Do whatever
+it takes, but make the map. Maybe even pay a private detective to collect
+the data you can’t find in the Internet: who do they drink beer with, where
+do they spend their vacations, who do they sleep with, etc. 
+I’m kidding here, but you get the idea: you need to know the market!&lt;/p&gt;
+
+&lt;p&gt;Then, once you know your target market, the best way would be to make 
+&lt;em&gt;it approach you&lt;/em&gt;. Think about this: 
+the best people are hardly reading job boards, 
+they don’t post their CVs anywhere, 
+don’t make their LinkedIn pages “open for hiring offers,” 
+and usually don’t reply to recruiters (for various reasons).
+Simply put, they have better things to do than talk to you.
+It’s hard to approach them. Sometimes even impossible.&lt;/p&gt;
+
+&lt;p&gt;But you can make them come to you, if you do something that will be
+interesting for them. For example, if you organize a competition for new
+open source projects with a prize fund of $1M. It’s very likely that
+the best people will come to you to compete for this money. There you will
+have a chance to talk to them. You don’t have a million dollars to give away
+just to hire the best people? Sad… Maybe you can organize a workshop
+where people meet to discuss Java and invite those who you want to 
+approach? There are many options. Just give them something they are
+interested in and they will want to know you.&lt;/p&gt;
+
+&lt;h2 id=&quot;formal-emails-get-deleted&quot;&gt;Formal Emails Get Deleted&lt;/h2&gt;
+
+&lt;p&gt;If you don’t have a million dollars and you don’t have time to
+make a good conference for them, you have to do cold calls. Well, more like
+cold emails and cold LinkedIn messages. I suggest you sound
+&lt;em&gt;short&lt;/em&gt; and &lt;em&gt;informal&lt;/em&gt;. Compare these two:&lt;/p&gt;
+
+&lt;table class=&quot;right-wrong&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Jeff&lt;/th&gt;
+      &lt;th&gt;Amy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dear Sarah,&lt;br /&gt;&lt;br /&gt;My name is Jeff, I’m a recruiter in ACME Inc. We have a new interesting project that needs senior Java developers. The requirements for this position can be found in the attached document.&lt;br /&gt;&lt;br /&gt;Please, send me your updated CV if you are interested.&lt;br /&gt;&lt;br /&gt;Sincerely Yours,&lt;br /&gt;Jeffrey Lebowski&lt;br /&gt;ACME Inc.&lt;br /&gt;Palo Alto, CA&lt;/td&gt;
+      &lt;td&gt;Sarah, we’ve never met before but I showed your GitHub to our Head of Dev and she asked me to email you. Her team is making a new payment platform and they lack expertise in big data. How about you two talk?&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Jeff’s message is just wrong, on so many levels: it explicitly says that Jeff is
+a recruiter (nobody likes recruiters!), it doesn’t say anything about why
+Jeff is approaching Sarah, and it’s too formal and official. To me the letter
+seems to be template-based, while only the name of the recipient is
+replaced (which is not always the case—I’m getting many emails that
+start with &lt;code class=&quot;highlighter-rouge&quot;&gt;Hello, %NAME%&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;The message from Amy is much better: there is nothing in it that tells me
+that Amy is a recruiter! Maybe she is a programmer from the team? Maybe she
+is a CEO of the company? I don’t know. And I don’t want to imagine her
+being a recruiter. I imagine her being a member of the team, who
+is really interested in my stuff on GitHub. She is someone who studied
+my work and got interested. She is already my friend. That’s why I reply.&lt;/p&gt;
+
+&lt;h2 id=&quot;cut-corners-for-me&quot;&gt;Cut Corners for Me&lt;/h2&gt;
+
+&lt;p&gt;The biggest disadvantage of Jeff’s email and the advantage of Amy’s is
+in the way they present the hiring process to me, the candidate. Jeff
+is sending me requirements and right from the start makes it look very long
+and official. I immediately imagine a series of interviews, a bunch of
+forms to fill up, a month-long journey full of stress. Do I want to 
+start that if my current job is more or less OK? No, I don’t. On the other
+hand, Amy, right from the first message, suggested connecting me with the
+hiring manager, who is already interested in me. Maybe there will be
+a full official process of hiring. Most likely! But I already have the
+key person on my side: the Head of Dev. The rest will just be formalities.&lt;/p&gt;
+
+&lt;p&gt;Try to put yourself in my shoes. I don’t know your team, I don’t know
+the project, I’m scared of change, and I’m not sure I should do it.
+It’s easier for me to stay where I am. Also remember that for most people
+changing jobs is very similar to betrayal: they quit the team, which
+relies on them. You are the person who turns them into traitors. Try to 
+make this journey of stress and treachery look simpler for them:&lt;/p&gt;
+
+&lt;table class=&quot;right-wrong&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Jeff&lt;/th&gt;
+      &lt;th&gt;Amy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;Send me your updated CV and we will take it from there.&lt;br /&gt;&lt;br /&gt;Sincerely,&lt;br /&gt;Jeff&lt;/td&gt;
+      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;Let me take a look at your CV. Here is how we usually do this: first, you have an interview with the Head of Dev; then, our chief architect talks to you; finally, our HR guys will have a quick call with you; and in about a week we give you an offer. The entire process usually takes up to a month. How does it sound for you? Ready to start a trip? :)&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I believe it’s obvious that Amy is doing a much better job of helping
+Bob understand what he has to be prepared for. We are scared of things
+we don’t understand or don’t know. You don’t want your candidates to be
+scared of you. You want them to feel comfortable.&lt;/p&gt;
+
+&lt;p&gt;The best way to attract us candidates is to show that you are ready
+to simplify the hiring process especially for us. Well, for me only. Not for everybody.
+For example:&lt;/p&gt;
+
+&lt;table class=&quot;right-wrong&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Jeff&lt;/th&gt;
+      &lt;th&gt;Amy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;Send me your updated CV and I’ll get the ball rolling. There will be two online interviews and then we will invite you to the office for the final one. Before we start, I kindly ask you to sign the attached form about personal data disclosure. It’s just a formality.&lt;br /&gt;&lt;br /&gt;Yours,&lt;br /&gt;Jeff&lt;/td&gt;
+      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;I need your CV and then I think I can optimize our hiring process a bit: instead of three interviews there will be just two. How does that sound?&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Smells like a sales trick? It is.&lt;/p&gt;
+
+&lt;h2 id=&quot;dont-loose-the-intrigue&quot;&gt;Don’t Loose the Intrigue&lt;/h2&gt;
+
+&lt;p&gt;The best companies, I believe, try to find a job position for a person, instead
+of finding a person for a position. In other words, they invite
+the best people and then let them decide what’s the best
+application of their skills and expertise. That’s why the less specific
+you are about your “requirements,” the better. Just “we have problems
+with big data” is more than enough for a job description. The rest
+of it you will explain later, on the first interview. You don’t tell
+your requirements to someone you just caught sight of in a bar, do you?
+The same here. Remember, recruiting is dating—you have to keep the intrigue up.&lt;/p&gt;
+
+&lt;p&gt;Instead of saying what you need and sending the job description, briefly
+explain the problems your team is facing:&lt;/p&gt;
+
+&lt;table class=&quot;right-wrong&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Jeff&lt;/th&gt;
+      &lt;th&gt;Amy&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;We are looking for a Java developer who knows Spring Framework, MySQL, and XML. You need to have at least five years of hands-on coding experience. You need to be familiar with the payment processing domain.&lt;br /&gt;&lt;br /&gt;Yours,&lt;br /&gt;Jeff&lt;/td&gt;
+      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;We are making a payment processing app and use Spring, MySQL, and XML. Our team lacks expertise in this new domain. We need help, both in form of advice and daily coding.&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Jeff is placing his requirements on top, which hardly sounds attractive. Just like
+in dating, such an arrogant attitude is not helpful at all. Instead, Amy is
+talking about problems she and her team are facing. It’s up to Bob to decide
+whether there is a fit or not.&lt;/p&gt;
+
+&lt;p&gt;I would suggest making your job descriptions as undemanding as possible.
+Your goal is to attract the best candidate, not to find those who 
+are ready to put up with whatever you write in the job description. Write about problems
+and issues you expect your candidates to solve. Don’t focus too much on
+the expectations you have for them. Of cause you have those expectations,
+but putting them right on the table at the first date is a silly idea.&lt;/p&gt;
+
+&lt;p&gt;That’s all. Happy recruiting!&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">Recruiters, you know what we programmers think about you, don’t you? Read this and this, to get the full picture. You are still here because we still don’t have good tools and we still enjoy being enslaved. One day this will be over and you will stop exploiting our drawbacks, will lose your “Senior Recruiter” jobs, and start doing something useful and meaningful. However, until this day comes, here is some advice, to help you be a less annoying better head hunter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/06/the-fifth-element.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/06/the-fifth-element.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How We Organized the First ICCQ</title><link href="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html" rel="alternate" type="text/html" title="How We Organized the First ICCQ" /><published>2021-04-14T00:00:00+00:00</published><updated>2021-04-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/04/14/how-we-organized-iccq</id><content type="html" xml:base="https://www.yegor256.com/2021/04/14/how-we-organized-iccq.html">&lt;p&gt;First, let me clarify what kind of conference we are talking about. 
 There are two types:
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Professional_conference&quot;&gt;professional&lt;/a&gt;
 and
@@ -1236,98 +1507,4 @@ your marketing position; quality is all.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the seventh year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019, 2020.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /><media:content medium="image" url="https://www.yegor256.com/images/andreea/quality-award.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Strong Typing without Types</title><link href="https://www.yegor256.com/2020/11/10/typing-without-types.html" rel="alternate" type="text/html" title="Strong Typing without Types" /><published>2020-11-10T00:00:00+00:00</published><updated>2020-11-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/10/typing-without-types</id><content type="html" xml:base="https://www.yegor256.com/2020/11/10/typing-without-types.html">&lt;p&gt;In 1974, Liskov and Zilles &lt;a href=&quot;https://dl.acm.org/doi/abs/10.1145/942572.807045&quot;&gt;defined&lt;/a&gt;
-a &lt;a href=&quot;https://en.wikipedia.org/wiki/Strong_and_weak_typing&quot;&gt;strongly-typed&lt;/a&gt;
-language as one in which “whenever an object is passed from
-a calling function to a called function, its type must be
-compatible with the type declared in the called function.”
-Strong &lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system&quot;&gt;type checking&lt;/a&gt;,
-without doubt, decreases the amount of
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Type_system#Type_errors&quot;&gt;type errors&lt;/a&gt;,
-which leads to higher quality. However, the question is:
-do we really need types in order to strongly enforce typing?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Redirected (2014) by Emilis Velyvis&quot; src=&quot;/images/2020/11/redirected.jpg&quot; longdesc=&quot;#8b769c87&quot; /&gt;&lt;figcaption id=&quot;8b769c87&quot;&gt;Redirected (2014) by Emilis Velyvis&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;For example, this is a place where we expect an instance of
-Java &lt;a href=&quot;https://docs.oracle.com/javase/tutorial/java/concepts/interface.html&quot;&gt;interface&lt;/a&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; to arrive:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;The ISBN is: %s%n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The type &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; may look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If an object that doesn’t &lt;code class=&quot;highlighter-rouge&quot;&gt;implement&lt;/code&gt; the interface &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; is passed
-to the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;, the compiler will complain
-with the “type mismatch” error. It will be hard for a programmer to make
-a mistake and pass an object of type, say, &lt;code class=&quot;highlighter-rouge&quot;&gt;Car&lt;/code&gt; to the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;.
-However, it will still be possible, via dynamic type casting:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mercedes-Benz G63&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;car&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Here!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This code will compile without issues, but at runtime the
-&lt;a href=&quot;https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClassCastException&lt;/code&gt;&lt;/a&gt;
-will be thrown, since it won’t be
-possible to cast &lt;code class=&quot;highlighter-rouge&quot;&gt;Car&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The beauty of strong typing is that it prevents errors. However, it increases
-the complexity of code: you need to create types first, you need to declare them
-in all your functions, you need type casting, which is hard to debug, and so on.
-Weak typing &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/38002&quot;&gt;proponents&lt;/a&gt;
-complain about this a lot and create languages like Ruby,
-which don’t have types at all, for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;This is ISBN: %s&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, the function &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; doesn’t expect &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; to be of any
-particular type. Whatever comes in—is fine. Later, when it’s
-time to call &lt;code class=&quot;highlighter-rouge&quot;&gt;.isbn&lt;/code&gt; the runtime checks whether the
-incoming &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; has such a method. If it does, everything works just fine,
-if it doesn’t, a runtime error &lt;a href=&quot;https://ruby-doc.org/core-2.5.0/NoMethodError.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NoMethodError&lt;/code&gt;&lt;/a&gt;
-is raised.&lt;/p&gt;
-
-&lt;p&gt;So far so good.&lt;/p&gt;
-
-&lt;p&gt;However, here is the idea: what if we combine the simplicity and brevity
-of dynamic typing with the safety of strong typing by getting
-rid of types all together and letting the compiler infer type
-information from the code that works with the objects? Here is our
-code again:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;The ISBN is: %s%n&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isbn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Think about this: at compile time it’s already obvious that &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; must have
-&lt;em&gt;at least&lt;/em&gt; one method &lt;code class=&quot;highlighter-rouge&quot;&gt;isbn()&lt;/code&gt;. No need to force programmers to define
-the type &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt; explicitly and mention in the signature of the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;
-that only books are welcome: this knowledge can easily be inferred from
-the body of the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt;! The compiler may look at all statements
-in the method &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; and clearly &lt;em&gt;understand&lt;/em&gt; what exactly will be done
-with the object &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;. This information should be enough to visualize
-the “type” of the incoming object. No need to ask the programmer to
-do this explicitly and spend another five lines of code in a new file
-to declare the type &lt;code class=&quot;highlighter-rouge&quot;&gt;Book&lt;/code&gt;. The compiler can do this job for us.&lt;/p&gt;
-
-&lt;p&gt;Of course, to make this work we must prohibit
-&lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;type casting&lt;/a&gt;
-of any kind, which is not possible in Java, C++, C# and other
-pseudo-object-oriented languages. But it is possible in
-&lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;WDYT?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">In 1974, Liskov and Zilles defined a strongly-typed language as one in which “whenever an object is passed from a calling function to a called function, its type must be compatible with the type declared in the called function.” Strong type checking, without doubt, decreases the amount of type errors, which leads to higher quality. However, the question is: do we really need types in order to strongly enforce typing?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/redirected.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/redirected.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the seventh year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019, 2020.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /><media:content medium="image" url="https://www.yegor256.com/images/andreea/quality-award.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
