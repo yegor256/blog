@@ -22,7 +22,7 @@ It's a well-known problem nowadays: how can we measure the performance
 and productivity of individual contributors, which do non-routine 
 creative work? The best examples are research and development (R&D) teams, which 
 usually consist of software engineers, designers, 
-scientific researchers, architects, quality experts, product managers, and so on. 
+scientists, architects, quality experts, product managers, and so on. 
 Such professionals deliver results that are hard to get down to simple numbers. 
 Many authors argue that the very idea of measuring individual performance is toxic and may only 
 lead to negative consequences. We tried to challenge this point of view 

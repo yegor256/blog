@@ -37,7 +37,7 @@
     \ifnum\value{page}=1
       \begin{textblock}{2}[0,1](0,16){
         \begin{center}
-          \includesvg[width=0.5\textwidth]{../images/icon-white.svg}
+          \includesvg[width=0.5\textwidth]{icon-white.svg}
         \end{center}
       }\end{textblock}
     \else\fi
