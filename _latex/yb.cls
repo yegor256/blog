@@ -34,13 +34,13 @@
     \begin{textblock}{2}(0,0){
       \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
     }\end{textblock}
-    \ifnum\value{page}=1
-      \begin{textblock}{2}[0,1](0,16){
-        \begin{center}
-          \includesvg[width=0.5\textwidth]{icon-white.svg}
-        \end{center}
-      }\end{textblock}
-    \else\fi
+    % \ifnum\value{page}=1
+    %   \begin{textblock}{2}[0,1](0,16){
+    %     \begin{center}
+    %       \includesvg[width=0.5\textwidth]{icon-white.svg}
+    %     \end{center}
+    %   }\end{textblock}
+    % \else\fi
   }
 
 \newcommand\nospell[1]{#1}
