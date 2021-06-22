@@ -3,16 +3,6 @@
 \LoadClass[12pt]{article}
 \RequirePackage{xcolor}
   \definecolor{yb-blue}{RGB}{5,60,94}
-\RequirePackage[normalem]{ulem}
-\RequirePackage[hidelinks]{hyperref}
-  \makeatletter\begingroup
-    \catcode`\$=6 %
-    \catcode`\#=12 %
-    \gdef\href@split$1#$2#$3\\$4{%
-      \hyper@@link{$1}{$2}{\uline{$4}}%
-      \endgroup
-    }%
-  \endgroup\makeatother
 \RequirePackage{graphicx}
 \RequirePackage{svg}
 \RequirePackage{microtype}
@@ -42,6 +32,18 @@
     %   }\end{textblock}
     % \else\fi
   }
+
+% Replace this with \RequirePackage{href-ul}
+\RequirePackage[normalem]{ulem}
+\RequirePackage[hidelinks]{hyperref}
+  \makeatletter\begingroup
+    \catcode`\$=6 %
+    \catcode`\#=12 %
+    \gdef\href@split$1#$2#$3\\$4{%
+      \hyper@@link{$1}{$2}{\uline{$4}}%
+      \endgroup
+    }%
+  \endgroup\makeatother
 
 \newcommand\nospell[1]{#1}
 
