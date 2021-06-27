@@ -2,6 +2,8 @@ article {
   p {
     hyphens: auto;
     text-align: justify;
+    margin-top: 0.5 * $em;
+    margin-bottom: 0.5 * $em;
   }
 }
 
