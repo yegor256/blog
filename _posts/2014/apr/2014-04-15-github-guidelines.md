@@ -137,6 +137,12 @@ Be patient with the reviewer, and listen to him carefully. However, don't think
 that your reviewer is always right. If you think that your changes are valid,
 insist that someone else review them.
 
+After you make the required changes to the branch, don't forget
+to notify the reviewer in the issue by posting a message addressed to him/her.
+On every round of the review-fix cycle do the same: ask the reviewer to 
+take a look at your code again. Without such notifications your pull request
+may stay much longer in silence.
+
 ## 7. Merge
 
 When everything looks good to the reviewer, he will inform our automated
