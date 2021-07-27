@@ -28,8 +28,9 @@ style: |
 
 {% badge /images/andreea/podcast.svg 300 %}
 
-Shift-M is a weekly podcast about project management. I'm <del>recording</del> publishing
-every Monday. If you want to be a guest, please email to
+Shift-M is a <del>weekly</del> podcast about project management. 
+I'm <del>recording</del> publishing
+<del>every Monday</del> sometimes. If you want to be a guest, please email to
 [podcast@yegor256.com](mailto:podcast@yegor256.com).
 
 <!--
