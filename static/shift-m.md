@@ -51,14 +51,19 @@ If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com)
 
 Recent episodes:
 
+<img src="/images/shift-m/bjarne-stroustrup.png" class="guest-face" alt="Face of Bjarne Stroustrup"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;47: [Bjarne Stroustrup on the future of programming](/shift-m/2021/47.html)<br/>
+23 July 2021; 59 min.
+
 <img src="/images/shift-m/pim-de-morree.png" class="guest-face" alt="Face of Pim de Morree"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
-&#35;46: [Shift-M/46: Fair Management with Pim de Morree](/shift-m/2021/46.html)<br/>
+&#35;46: [Fair Management with Pim de Morree](/shift-m/2021/46.html)<br/>
 17 March 2021; 56 min.
 
 <img src="/images/shift-m/david-hillson.png" class="guest-face" alt="Face of David Hillson"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
-&#35;45: [Shift-M/45: Risk Management with David Hillson, the Risk Doctor](/shift-m/2020/45.html)<br/>
+&#35;45: [Risk Management with David Hillson, the Risk Doctor](/shift-m/2020/45.html)<br/>
 6 February 2021; 65 min.
 
 <img src="/images/shift-m/allen-holub.png" class="guest-face" alt="Face of Allen Holub"/>
