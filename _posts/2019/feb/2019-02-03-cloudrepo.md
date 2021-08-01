@@ -70,7 +70,7 @@ The default location for the `settings.xml` file is in your
 `~/.m2` directory.  Edit this file and ensure that you have
 a `<server>` entry as seen below:
 
-```xml
+{% highlight xml %}
 <settings>
   <servers>
     <server>
@@ -80,7 +80,7 @@ a `<server>` entry as seen below:
     </server>
   </servers>
 </settings>
-```
+{% endhighlight %}
 
 By declaring a `server` and specifying an `id`, you can reference the `id`
 from within your Maven POM files.  When Maven attempts to
@@ -97,7 +97,7 @@ at your CloudRepo repository.
 Add a new `<repository>` element to the `<distributionManagement>` (to upload them) section of your `pom.xml`
 and to the `<repositories>` (to download them):
 
-```xml
+{% highlight xml %}
 <project>
   [...]
   <repositories>
@@ -115,7 +115,7 @@ and to the `<repositories>` (to download them):
     </repository>
   </distributionManagement>
 </project>
-```
+{% endhighlight %}
 
 Once you have a build working in your local environment, you need to
 deploy it to production with Rultor.
@@ -124,10 +124,10 @@ can access them at build and deploy time.   However, it
 is very important to _never_ store your credentials in plaintext in version control
 (substitute the name of your GitHub project with `my/project`):
 
-```bash
+{% highlight text %}
 $ gem install rultor
 $ rultor encrypt -p my/project settings.xml
-```
+{% endhighlight %}
 
 This creates an encrypted version of your settings file with
 the name `settings.xml.asc`.  Add this file to the root directory
@@ -138,13 +138,13 @@ code is exposed to others, your credentials will be kept safe.
 To enable Rultor, add a `.rultor.yml` file to the root directory
 of your project with the following contents:
 
-```yaml
+{% highlight yaml %}
 decrypt:
   settings.xml: "repo/settings.xml.asc"
 deploy:
   script: |
     mvn clean deploy --settings ../settings.xml
-```
+{% endhighlight %}
 
 For more information on the `.rultor.yml` file,
 check the [Rultor Reference Page](https://doc.rultor.com/reference.html).

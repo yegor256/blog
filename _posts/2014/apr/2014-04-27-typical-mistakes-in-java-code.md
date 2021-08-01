@@ -55,12 +55,12 @@ For example, all of these names are terribly wrong: `IRecord`, `IfaceEmployee`, 
 Usually, interface name is the name of a real-life entity, while class name should explain its implementation details.
 If there is nothing specific to say about an implementation, name it `Default,` `Simple`, or something similar. For example:
 
-```java
+{% highlight java %}
 class SimpleUser implements User {};
 class DefaultRecord implements Record {};
 class Suffixed implements Name {};
 class Validated implements Content {};
-```
+{% endhighlight %}
 
 ## Method Names
 
@@ -68,19 +68,19 @@ Methods can either return something or return `void`. If a method returns
 something, then its name should explain *what it returns*, for example (don't
 use the `get` prefix [ever]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})):
 
-```java
+{% highlight java %}
 boolean isValid(String name);
 String content();
 int ageOf(File file);
-```
+{% endhighlight %}
 
 If it returns `void,` then its name should explain *what it does*. For example:
 
-```java
+{% highlight java %}
 void save(File file);
 void process(Work work);
 void append(File file, String line);
-```
+{% endhighlight %}
 
 You can read more about this idea in
 [Elegant Objects](/elegant-objects.html) book,
@@ -92,7 +92,7 @@ There is only one exception to the rule just mentioned---test methods for JUnit.
 Method names in JUnit tests should be created as English sentences without
 spaces. It's easier to explain by example:
 
-```java
+{% highlight java %}
 /**
  * HttpRequest can return its content in Unicode.
  * @throws Exception If test fails
@@ -100,7 +100,7 @@ spaces. It's easier to explain by example:
 @Test
 public void returnsItsContentInUnicode() throws Exception {
 }
-```
+{% endhighlight %}
 
 It's important to start the first sentence of your Javadoc with the name of the
 class you're testing followed by `can` (or `cannot`). So, your first sentence should always be
@@ -125,12 +125,12 @@ plural form, or an appropriate abbreviation. More about it in
 this post: [A Compound Name Is a Code Smell]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %}).
 For example:
 
-```java
+{% highlight java %}
 List<String> names;
 void sendThroughProxy(File file, Protocol proto);
 private File content;
 public HttpRequest request;
-```
+{% endhighlight %}
 
 Sometimes, you may have collisions between
 [constructor]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
@@ -141,31 +141,31 @@ this case, I recommend to create abbreviations by removing vowels (see how
 
 Another example:
 
-```java
+{% highlight java %}
 public class Message {
   private String recipient;
   public Message(String rcpt) {
     this.recipient = rcpt;
   }
 }
-```
+{% endhighlight %}
 
 In many cases, the best hint for a name of a variable can ascertained by reading
 its class name. Just write it with a small letter, and you should be good:
 
-```java
+{% highlight java %}
 File file;
 User user;
 Branch branch;
-```
+{% endhighlight %}
 
 However, *never* do the same for primitive types, like `Integer number` or `String string`.
 
 You can also use an adjective, when there are multiple variables with different characteristics. For instance:
 
-```
+{% highlight java %}
 String contact(String left, String right);
-```
+{% endhighlight %}
 
 ## Constructors
 
@@ -175,7 +175,7 @@ there should be only _one_ constructor that stores data in
 object variables. All other constructors should call this one with different
 arguments. For example:
 
-```java
+{% highlight java %}
 public class Server {
   private String address;
   public Server(String uri) {
@@ -185,7 +185,7 @@ public class Server {
     this(uri.toString());
   }
 }
-```
+{% endhighlight %}
 
 More about it in
 [There Can Be Only One Primary Constructor]({% pst 2015/may/2015-05-28-one-primary-constructor %}).
@@ -195,16 +195,16 @@ More about it in
 Avoid one-time variables at all costs. By "one-time" I mean variables that are
 used only once. Like in this example:
 
-```java
+{% highlight java %}
 String name = "data.txt";
 return new File(name);
-```
+{% endhighlight %}
 
 This above variable is used only once and the code should be refactored to:
 
-```java
+{% highlight java %}
 return new File("data.txt");
-```
+{% endhighlight %}
 
 Sometimes, in very rare cases---mostly because of better formatting---one-time
 variables may be used. Nevertheless, try to avoid such situations at all costs.
@@ -217,14 +217,14 @@ exceptions go out.
 
 Never use exceptions for flow control. For example this code is wrong:
 
-```java
+{% highlight java %}
 int size;
 try {
   size = this.fileSize();
 } catch (IOException ex) {
   size = 0;
 }
-```
+{% endhighlight %}
 
 Seriously, what if that `IOException` says "disk is full?" Will you still assume
 that the size of the file is zero and move on?
@@ -239,14 +239,14 @@ the same line and there are symbols after it. The second bracket is also in
 trouble because there are symbols in front of it and it is not opened on the
 same line:
 
-```
+{% highlight java %}
 final File file = new File(directory,
   "file.txt");
-```
+{% endhighlight %}
 
 Correct indentation should look like:
 
-```
+{% highlight java %}
 StringUtils.join(
   Arrays.asList(
     "first line",
@@ -257,11 +257,11 @@ StringUtils.join(
   ),
   "separator"
 );
-```
+{% endhighlight %}
 
 The second important rule of indentation says that you should put as much as possible on one line - within the limit of 80 characters. The example above is not valid since it can be compacted:
 
-```
+{% highlight java %}
 StringUtils.join(
   Arrays.asList(
     "first line", "second line",
@@ -269,7 +269,7 @@ StringUtils.join(
   ),
   "separator"
 );
-```
+{% endhighlight %}
 
 ## Redundant Constants
 
@@ -282,12 +282,12 @@ practice that leads to code pollution. Constants (as with any
 should have a meaning in a real world. What meaning do these constants have in
 the real world:
 
-```java
+{% highlight java %}
 class Document {
   private static final String D_LETTER = "D"; // bad practice
   private static final String EXTENSION = ".doc"; // good practice
 }
-```
+{% endhighlight %}
 
 Another typical mistake is to use constants in
 [unit tests]({% pst 2017/may/2017-05-17-single-statement-unit-tests %}) to avoid duplicate
@@ -302,11 +302,11 @@ why do they have to share the same input constants?
 
 This is an example of [data coupling](http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29) in a test method:
 
-```java
+{% highlight java %}
 User user = new User("Jeff");
 // maybe some other code here
 MatcherAssert.assertThat(user.name(), Matchers.equalTo("Jeff"));
-```
+{% endhighlight %}
 
 On the last line, we couple `"Jeff"` with the same string literal from the first
 line. If, a few months later, someone wants to change the value on the third

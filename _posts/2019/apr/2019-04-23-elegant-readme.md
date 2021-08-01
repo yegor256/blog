@@ -110,15 +110,15 @@ if it's worth it or whether I should close it right now. You have my attention f
 {% highlight text %}
 First, you install it:
 
-```
+{% highlight text %}
 $ gem install zold
-```
+{% endhighlight %}
 
 Then, you run it and follow the instructions:
 
-```
+{% highlight text %}
 $ zold --help
-```
+{% endhighlight %}
 
 It should be clear what to do. If not, ask us in
 our [Telegram chat](https://t.me/zold_io).
