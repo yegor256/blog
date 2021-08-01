@@ -27,7 +27,8 @@ performance, doesn't judge, doesn't
 doesn't blame; however, at the end of the year they tell you that
 your performance was not as high as expected. Why?
 "Just work better, my friend, we count on you!"
-Bad luck, you are in a teal self-managing organization. They've already
+Bad luck, you are in a teal [self-managing organization]({% pst 2020/dec/2020-12-22-self-managing-orgs %}). 
+They've already
 killed the management, but still didn't dare to kill the managers.
 They don't know how to measure, but still have people who are
 supposed to do it regularly, in order to distribute monetary rewards.

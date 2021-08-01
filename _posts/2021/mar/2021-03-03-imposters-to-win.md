@@ -28,8 +28,9 @@ It's time to start taking advantage of this era of nonsense.
 The era of imposters is coming!
 Don't miss the opportunity to become a great one.
 Here is a quick summary of key techniques to make you highly successful in any argument
-you may have in your flat democratic organizations of the future without
-any skills, knowledge, education, or real achievements.
+you may have in your 
+[flat democratic organizations of the future]({% pst 2020/dec/2020-12-22-self-managing-orgs %})
+without any skills, knowledge, education, or real achievements.
 Just pure love and emotions.
 
 <!--more-->
