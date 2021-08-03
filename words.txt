@@ -465,7 +465,6 @@ arzhantsev
 as
 asaf
 ASAP
-asc
 ascertain
 ashamed
 ashley
@@ -1775,7 +1774,6 @@ convinced
 convincing
 cook
 cooked
-cookie
 cookie-based
 cookies
 cooking
@@ -3189,7 +3187,6 @@ firing
 firm
 firm's
 first
-firstitem
 fischer
 fish
 fisher
@@ -3518,7 +3515,6 @@ glass
 glenford
 global
 globally
-glogin
 glossaries
 glossary
 glow
@@ -3904,7 +3900,6 @@ HTML
 HTTP
 HTTP-native
 httpcomponents
-httprequest
 https
 huawei
 hub
@@ -4350,7 +4345,6 @@ involves
 involving
 io
 ioc
-IOException
 iOS
 IP
 ipads
@@ -8572,7 +8566,6 @@ timedlog
 timeframe
 timeline
 timely
-timeofday
 timeout
 times
 timescale
@@ -9432,7 +9425,6 @@ yesterday
 yet
 yevgeny
 ying
-yml
 yoga
 york
 you
