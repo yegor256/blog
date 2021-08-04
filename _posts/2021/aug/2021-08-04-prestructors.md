@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Prestructors"
-date: 2021-08-03
+date: 2021-08-04
 place: Moscow, Russia
 tags: oop java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - static method ctor
   - oop
   - oop ctor
-image: /images/2021/08/
+image: /images/2021/08/huge-in-france.jpg
 jb_picture:
-  caption:
+  caption: Huge in France (2019) by Gad Elmaleh et al.
 ---
 
 Making constructors pre-process the arguments before 
