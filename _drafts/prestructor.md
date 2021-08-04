@@ -5,7 +5,7 @@ date: 2021-08-03
 place: Moscow, Russia
 tags: oop java
 description: |
-  Prestructor is a private static method or a standalone
+  Prestructor is a private static method or a stand-alone
   class that is used in constructors of other objects
   to pre-process their arguments.
 keywords:
@@ -25,7 +25,7 @@ encapsulating them seems to be
 However, very often it's necessary to do exactly that: perform some manipulations
 with the objects provided as arguments and only then assign
 them to the attributes of the constructed object. For this purpose
-I suggest using prestructors, which could be methods or standalone
+I suggest using prestructors, which could be methods or stand-alone
 objects.
 
 <!--more-->
