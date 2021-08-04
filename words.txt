@@ -6375,6 +6375,7 @@ pre-installed
 pre-java
 pre-merge
 pre-money
+pre-process
 pre-production
 preach
 preaching
@@ -6432,6 +6433,8 @@ presidents
 press
 pressman
 pressure
+prestructor
+prestructors
 presumably
 pretend
 pretended
@@ -8007,6 +8010,7 @@ stalin
 stamp
 stamps
 stand
+stand-alone
 stand-up
 stand-ups
 standalone

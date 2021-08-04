@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-08-03T04:36:50+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">A Few Tips for Recruiters</title><link href="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html" rel="alternate" type="text/html" title="A Few Tips for Recruiters" /><published>2021-06-01T00:00:00+00:00</published><updated>2021-06-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/06/01/tips-for-recruiters</id><content type="html" xml:base="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html">&lt;p&gt;Recruiters, you know what we programmers think about you, don’t you? 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-08-04T18:15:21+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Prestructors</title><link href="https://www.yegor256.com/2021/08/04/prestructors.html" rel="alternate" type="text/html" title="Prestructors" /><published>2021-08-04T00:00:00+00:00</published><updated>2021-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/08/04/prestructors</id><content type="html" xml:base="https://www.yegor256.com/2021/08/04/prestructors.html">&lt;p&gt;Making constructors pre-process the arguments before 
+encapsulating them seems to be 
+&lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;bad practice&lt;/a&gt;. 
+However, very often it’s necessary to do exactly that: perform some manipulations
+with the objects provided as arguments and only then assign
+them to the attributes of the constructed object. For this purpose
+I suggest using prestructors, which could be methods or stand-alone
+objects.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Huge in France (2019) by Gad Elmaleh et al.&quot; src=&quot;/images/2021/08/huge-in-france.jpg&quot; longdesc=&quot;#957b98b5&quot; /&gt;&lt;figcaption id=&quot;957b98b5&quot;&gt;Huge in France (2019) by Gad Elmaleh et al.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Say, this is your code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unmodifiableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The only constructor expects a list of titles, which is being
+encapsulated as &lt;code class=&quot;highlighter-rouge&quot;&gt;this.titles&lt;/code&gt; for some future use. It’s also protected against
+any accidental modifications, through the JDK decorator at
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableList-java.util.List-&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;unmodifiableList&lt;/code&gt;&lt;/a&gt;.
+So far, so good. Now, we want to make our class a bit smarter 
+and let it accept not only the &lt;code class=&quot;highlighter-rouge&quot;&gt;List&lt;/code&gt; but an array of strings:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unmodifiableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;What’s wrong with this code? Those of you who have read my earlier 
+&lt;a href=&quot;/tag/oop.html&quot;&gt;blog posts about OOP&lt;/a&gt; most definitely know the answer. First, 
+there are two primary constructors, which is another 
+&lt;a href=&quot;/2015/05/28/one-primary-constructor.html&quot;&gt;bad practice&lt;/a&gt;. 
+Second, there is code in the second constructor, which is also a 
+&lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;bad idea&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is how I usually refactor this code, to solve both mentioned problems:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unmodifiableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I call this new static method &lt;code class=&quot;highlighter-rouge&quot;&gt;toList()&lt;/code&gt; a &lt;em&gt;prestructor&lt;/em&gt;: it is used
+only at the moment of object construction and only from the
+secondary constructor.&lt;/p&gt;
+
+&lt;p&gt;An even better way to design it would be to make a new class &lt;code class=&quot;highlighter-rouge&quot;&gt;ToList&lt;/code&gt;,
+which would do exactly the same, but in a more declarative and lazy way:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unmodifiableList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Books&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ToList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ToList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;ToList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// All required methods of the List interface&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ListOf&lt;/code&gt;&lt;/a&gt;
+from &lt;a href=&quot;https://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; is a perfect example 
+of such a prestructor.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Making constructors pre-process the arguments before encapsulating them seems to be bad practice. However, very often it’s necessary to do exactly that: perform some manipulations with the objects provided as arguments and only then assign them to the attributes of the constructed object. For this purpose I suggest using prestructors, which could be methods or stand-alone objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/08/huge-in-france.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/08/huge-in-france.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A Few Tips for Recruiters</title><link href="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html" rel="alternate" type="text/html" title="A Few Tips for Recruiters" /><published>2021-06-01T00:00:00+00:00</published><updated>2021-06-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/06/01/tips-for-recruiters</id><content type="html" xml:base="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html">&lt;p&gt;Recruiters, you know what we programmers think about you, don’t you? 
 Read &lt;a href=&quot;/2017/02/21/say-no-to-google-recruiters.html&quot;&gt;this&lt;/a&gt;
 and &lt;a href=&quot;/2015/09/29/mayonnaise.html&quot;&gt;this&lt;/a&gt;, 
 to get the full picture. You are still here because we still
@@ -1411,105 +1508,4 @@ the “body” of an object. Once someone attempts to touch &lt;code class=&quot
 the console will see the string.&lt;/p&gt;
 
 &lt;p&gt;Thus, we have objects, but we don’t have methods.
-There are only attributes representing other objects.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">What do you think an object is in OOP? No matter what language you are programming with, you will most probably agree with Bruce Eckel, the author of Thinking in Java, who said that “each object has a state and operations that you can ask it to perform,” or Benjamin Evans, the author of Java in a Nutshell, who claimed that it is “a collection of data fields that hold values and methods that operate on those values.” However, hold on… What if I told you that an object may have no “operations” and still be a perfect “equivalent of the quanta from which the universe is constructed,” as David West suggested in his great book Object Thinking?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Software Quality Award, 2021</title><link href="https://www.yegor256.com/2020/11/15/award-2021.html" rel="alternate" type="text/html" title="Software Quality Award, 2021" /><published>2020-11-15T00:00:00+00:00</published><updated>2020-11-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/15/award-2021</id><content type="html" xml:base="https://www.yegor256.com/2020/11/15/award-2021.html">&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/andreea/quality-award.svg&quot; style=&quot;width:300px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is the &lt;em&gt;seventh&lt;/em&gt; year of the
-&lt;a href=&quot;/award.html&quot;&gt;Software Quality Award&lt;/a&gt;. The maximum prize
-is still the same—&lt;strong&gt;$4,096&lt;/strong&gt;.
-The rules are still the same. Read on.
-Previous years are here:
-&lt;a href=&quot;/2015/04/16/award.html&quot;&gt;2015&lt;/a&gt;,
-&lt;a href=&quot;/2015/10/17/award-2016.html&quot;&gt;2016&lt;/a&gt;,
-&lt;a href=&quot;/2016/10/23/award-2017.html&quot;&gt;2017&lt;/a&gt;,
-&lt;a href=&quot;/2017/10/24/award-2018.html&quot;&gt;2018&lt;/a&gt;,
-&lt;a href=&quot;/2018/09/30/award-2019.html&quot;&gt;2019&lt;/a&gt;,
-&lt;a href=&quot;/2019/11/03/award-2020.html&quot;&gt;2020&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Here is &lt;a href=&quot;https://docs.google.com/forms/d/1mf0IGryvAhUnIbbhemXPSbIXxE21e190MyQdKuEY_zw&quot;&gt;&lt;strong&gt;the form&lt;/strong&gt;&lt;/a&gt;
-to fill out.&lt;/p&gt;
-
-&lt;p&gt;Rules:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;One person can submit only one project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Submissions are accepted until September 1, 2021.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I will check the commit history to make sure you’re the main contributor to the project.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I reserve the right to reject any submission without explanation.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;All submissions will be published on this page (including rejected ones).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Results will be announced October 15, 2021 on this page and by email (or maybe a bit later).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The best project will receive $4,096
-(I may split this amount among a few projects and may give away a smaller amount!).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Final decisions will be made by me and are not negotiable
-(although I may invite other people to help me make the right decision).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Winners that received any cash prizes in previous years can’t submit again.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=Z70PMGaxGhY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/Z70PMGaxGhY/mqdefault.jpg&quot; alt=&quot;YouTube video #Z70PMGaxGhY&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;How to win $4096 in the next year Quality Award? (webinar #29);
-        1 November 2017.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Each project must be:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Open source (in GitHub).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At least 4,096 lines of code (&lt;a href=&quot;https://www.npmjs.com/package/cloc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cloc&lt;/code&gt;&lt;/a&gt; without any arguments)
-&lt;em&gt;and&lt;/em&gt; at least 16,384 &lt;a href=&quot;/2014/11/14/hits-of-code.html&quot;&gt;hits-of-code&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;At least one year old (the age of the first commit).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Object-oriented (that’s the only thing I understand).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best project is selected using this &lt;a href=&quot;/2015/06/08/deadly-sins-software-project.html&quot;&gt;criteria&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What doesn’t matter:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Popularity. Even if nobody is using your
-product, it is still eligible for this award. I don’t care about
-popularity; quality is the key.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Programming language. I believe that any language, used correctly,
-can be applied to design a high-quality product.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Buzz and trends. Even if your project is yet another parser of command
-line arguments, it’s still eligible for the award. I don’t care about
-your marketing position; quality is all.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By the way, if you want to sponsor this award and increase the bonus,
-&lt;a href=&quot;mailto:me@yegor256.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="award" /><summary type="html">This is the seventh year of the Software Quality Award. The maximum prize is still the same—$4,096. The rules are still the same. Read on. Previous years are here: 2015, 2016, 2017, 2018, 2019, 2020.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/andreea/quality-award.png" /><media:content medium="image" url="https://www.yegor256.com/images/andreea/quality-award.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+There are only attributes representing other objects.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">What do you think an object is in OOP? No matter what language you are programming with, you will most probably agree with Bruce Eckel, the author of Thinking in Java, who said that “each object has a state and operations that you can ask it to perform,” or Benjamin Evans, the author of Java in a Nutshell, who claimed that it is “a collection of data fields that hold values and methods that operate on those values.” However, hold on… What if I told you that an object may have no “operations” and still be a perfect “equivalent of the quanta from which the universe is constructed,” as David West suggested in his great book Object Thinking?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
