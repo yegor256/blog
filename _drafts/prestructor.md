@@ -20,12 +20,12 @@ jb_picture:
 ---
 
 Making constructors pre-process the arguments before 
-encapsulating them seems to be a 
+encapsulating them seems to be 
 [bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). 
 However, very often it's necessary to do exactly that: perform some manipulations
 with the objects provided as arguments and only then assign
 them to the attributes of the constructed object. For this purpose
-I suggest to use prestructors, which could be methods or standalone
+I suggest using prestructors, which could be methods or standalone
 objects.
 
 <!--more-->
@@ -70,9 +70,9 @@ class Books {
 
 What's wrong with this code? Those of you who have read my earlier 
 [blog posts about OOP](/tag/oop.html) most definitely know the answer. First, 
-there are two primary constructors, which is a 
+there are two primary constructors, which is another 
 [bad practice]({% pst 2015/may/2015-05-28-one-primary-constructor %}). 
-Second, there is code in the second constructor, which also is a 
+Second, there is code in the second constructor, which is also a 
 [bad idea]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
 
 Here is how I usually refactor this code, to solve both mentioned problems:
@@ -100,7 +100,7 @@ I call this new static method `toList()` a _prestructor_: it is used
 only at the moment of object construction and only from the
 secondary constructor.
 
-An even better way to design it would be making a new class `ToList`,
+An even better way to design it would be to make a new class `ToList`,
 which would do exactly the same, but in a more declarative and lazy way:
 
 {% highlight java %}
@@ -125,4 +125,3 @@ class ToList<T> implements List<T> {
 [`ListOf`](https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html)
 from [Cactoos](https://www.cactoos.org) is a perfect example 
 of such a prestructor.
-
