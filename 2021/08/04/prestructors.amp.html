@@ -163,8 +163,8 @@ which would do exactly the same, but in a more declarative and lazy way:</p>
   }
 }
 class ToList&lt;T&gt; implements List&lt;T&gt; {
-  private final String[] array;
-  ToList(String... items) {
+  private final T[] array;
+  ToList(T... items) {
     this.array = items;
   }
   // All required methods of the List interface
