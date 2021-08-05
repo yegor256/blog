@@ -114,8 +114,8 @@ class Books {
   }
 }
 class ToList<T> implements List<T> {
-  private final String[] array;
-  ToList(String... items) {
+  private final T[] array;
+  ToList(T... items) {
     this.array = items;
   }
   // All required methods of the List interface
