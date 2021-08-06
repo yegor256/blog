@@ -77,7 +77,7 @@ I'm the developer of this code, so I know what was going on: I was too lazy
 to write a proper assertion, which would look into the XML document
 and ensure that there were proper elements inside. I just printed it to the
 console, _visually_ confirmed its validity and called it a day. 
-If I had more time, this is how I would write a much better unit test
+If I'd had more time, this is how I would have written a much better unit test
 (I made the [improvements](https://github.com/polystat/polystat/issues/10) in Polystat tests just now):
 
 {% highlight java %}
