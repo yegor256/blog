@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-08-05T05:09:53+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Prestructors</title><link href="https://www.yegor256.com/2021/08/04/prestructors.html" rel="alternate" type="text/html" title="Prestructors" /><published>2021-08-04T00:00:00+00:00</published><updated>2021-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/08/04/prestructors</id><content type="html" xml:base="https://www.yegor256.com/2021/08/04/prestructors.html">&lt;p&gt;Making constructors pre-process the arguments before 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-08-08T15:00:35+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Prestructors</title><link href="https://www.yegor256.com/2021/08/04/prestructors.html" rel="alternate" type="text/html" title="Prestructors" /><published>2021-08-04T00:00:00+00:00</published><updated>2021-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/08/04/prestructors</id><content type="html" xml:base="https://www.yegor256.com/2021/08/04/prestructors.html">&lt;p&gt;Making constructors pre-process the arguments before 
 encapsulating them seems to be 
 &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;bad practice&lt;/a&gt;. 
 However, very often it’s necessary to do exactly that: perform some manipulations
@@ -114,6 +114,14 @@ head hunter.&lt;/p&gt;
 are a &lt;em&gt;match maker&lt;/em&gt;. Just like those marriage brokers organize
 dates and help people fall in love, you help us break up with
 the company we’re married to and fall in love with a new one.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=dlPk1AE2aQk&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/dlPk1AE2aQk/mqdefault.jpg&quot; alt=&quot;YouTube video #dlPk1AE2aQk&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M170: recruiters may do a better job if listen to us programmers;
+        8 June 2021.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;The best date happens when people research each other beforehand.
 You too, should come prepared.
@@ -393,6 +401,14 @@ the purpose of the new event was to
 help the Russian computer science research community better connect with their worldwide
 colleagues. Besides having a good intention I also knew where to get a supportive and reliable sponsor.
 The rest was just a matter of implementation.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=65baOBHeVMI&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/65baOBHeVMI/mqdefault.jpg&quot; alt=&quot;YouTube video #65baOBHeVMI&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;Yegor Bugayenko: Opening;
+        30 March 2021.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;br /&gt;
 There were many options to chose from, but it seemed
@@ -793,6 +809,14 @@ And not just in the same team!
 We have to trust everybody in the world—this is what good human beings do!
 Thus, no numbers, no facts, no proofs—just a pure and simple “trust me” and you will be the king of any argument.&lt;/p&gt;
 
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=ulrMXmIcC4w&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/ulrMXmIcC4w/mqdefault.jpg&quot; alt=&quot;YouTube video #ulrMXmIcC4w&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M167: Sometimes you have to be an imposter, either you like it or not;
+        20 April 2021.&lt;/div&gt;&lt;/aside&gt;
+
 &lt;p&gt;&lt;strong&gt;“I Know What I’m Doing!”&lt;/strong&gt;
 Do they still think that you are not convincing enough with your “Trust Me”?
 That won’t help them.
@@ -940,6 +964,14 @@ construct a new object, with an argument &lt;code class=&quot;highlighter-rouge&
 will be used by the &lt;code class=&quot;highlighter-rouge&quot;&gt;Dataized&lt;/code&gt; Java class in order to continue the process
 of dataization. Finally, the sum of two numbers will be dataized to a
 Java floating-point number.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=QaKIw1Bh3Oc&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/QaKIw1Bh3Oc/mqdefault.jpg&quot; alt=&quot;YouTube video #QaKIw1Bh3Oc&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;EOLANG: Basics;
+        28 January 2021.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;The dataization of &lt;code class=&quot;highlighter-rouge&quot;&gt;customer.country.eq&lt;/code&gt; is happening inside
 the runtime and is not visible at the level of EOLANG. The object
@@ -1145,6 +1177,14 @@ they pay attention to you, they start feeling that you are important,
 they will appraise you positively when the time comes. If the number
 decreases, you are getting out of their circle—it’s dangerous.&lt;/p&gt;
 
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=TmAJPeM4UlE&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/TmAJPeM4UlE/mqdefault.jpg&quot; alt=&quot;YouTube video #TmAJPeM4UlE&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M153: How managers in self-managing orgs judge your performance?;
+        21 December 2020.&lt;/div&gt;&lt;/aside&gt;
+
 &lt;p&gt;This metric will help you understand your position in the team before
 the end of the year, when it would be too late. Just see how often the boss
 is texting Jeff and you will know where you stand. No matter
@@ -1185,6 +1225,14 @@ of &lt;a href=&quot;https://amzn.to/3mgxt7k&quot;&gt;Reinventing Organizations&l
 However, “calling it a novel phenomenon is utter nonsense,”
 &lt;a href=&quot;https://corporate-rebels.com/reinventing-the-wheel/&quot;&gt;according&lt;/a&gt; to
 &lt;a href=&quot;https://twitter.com/joost_minnaar&quot;&gt;Joost Minnaar&lt;/a&gt;—the idea has been known for decades.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=WZlIb5oxDBQ&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/WZlIb5oxDBQ/mqdefault.jpg&quot; alt=&quot;YouTube video #WZlIb5oxDBQ&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M152: There is no management without personal responsibility;
+        14 December 2020.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;My first question is: what exactly was wrong with
 bureaucratic, un-humanistic, and non-democratic management?
