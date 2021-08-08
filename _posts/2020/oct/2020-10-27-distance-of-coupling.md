@@ -150,6 +150,8 @@ objects are from the places where they were returned. In the example above,
 the _distance_ is two: 1) first, we do the `split`, 2) second, we do the `parseInt()`.
 Larger applications will have bigger numbers, of course.
 
+{% youtube fJvUTlPHSvU %}
+
 It seems that we can use this distance number as a metric for coupling between objects
 in the entire app. The larger the number (or the mean of all numbers), the
 worse the design: in good design we are not supposed to take something
