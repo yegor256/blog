@@ -128,6 +128,8 @@ they pay attention to you, they start feeling that you are important,
 they will appraise you positively when the time comes. If the number
 decreases, you are getting out of their circle---it's dangerous.
 
+{% youtube TmAJPeM4UlE %}
+
 This metric will help you understand your position in the team before
 the end of the year, when it would be too late. Just see how often the boss
 is texting Jeff and you will know where you stand. No matter
