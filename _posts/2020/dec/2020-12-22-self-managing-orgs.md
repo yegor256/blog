@@ -47,6 +47,8 @@ However, "calling it a novel phenomenon is utter nonsense,"
 [according](https://corporate-rebels.com/reinventing-the-wheel/) to
 [Joost Minnaar](https://twitter.com/joost_minnaar)---the idea has been known for decades.
 
+{% youtube WZlIb5oxDBQ %}
+
 My first question is: what exactly was wrong with
 bureaucratic, un-humanistic, and non-democratic management?
 [James R. Barker](https://en.wikipedia.org/wiki/James_R._Barker)
