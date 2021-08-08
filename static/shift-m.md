@@ -26,27 +26,17 @@ style: |
   }
 ---
 
-{% badge /images/andreea/podcast.svg 300 %}
+{% badge /images/andreea/podcast.svg 200 %}
 
-Shift-M is a <del>weekly</del> podcast about project management. 
-I'm <del>recording</del> publishing
-<del>every Monday</del> sometimes. If you want to be a guest, please email to
+It's a podcast about project management and software engineering. 
+If you want to be a guest or know a good guest, please email to
 [podcast@yegor256.com](mailto:podcast@yegor256.com).
-
-<!--
-If you just
-want to join and say a few words, come into this
-[Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
--->
-
 This is the [RSS](http://feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
 Subscribe at
 [SoundCloud](https://soundcloud.com/yegor256),
 [iTunes](https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721),
 [Android](http://subscribeonandroid.com/feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss),
 [Overcast](https://overcast.fm/itunes1150826721/yegor256-podcast).
-
-If you have a good guest in mind, please [email me](mailto:podcast@yegor256.com).
 
 <!-- Already recorded but not yet published episodes: -->
 
