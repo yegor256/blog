@@ -51,6 +51,8 @@ And not just in the same team!
 We have to trust everybody in the world---this is what good human beings do!
 Thus, no numbers, no facts, no proofs---just a pure and simple "trust me" and you will be the king of any argument.
 
+{% youtube ulrMXmIcC4w %}
+
 **"I Know What I'm Doing!"**
 Do they still think that you are not convincing enough with your "Trust Me"?
 That won't help them.
