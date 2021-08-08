@@ -134,6 +134,8 @@ will be used by the `Dataized` Java class in order to continue the process
 of dataization. Finally, the sum of two numbers will be dataized to a
 Java floating-point number.
 
+{% youtube QaKIw1Bh3Oc %}
+
 The dataization of `customer.country.eq` is happening inside
 the runtime and is not visible at the level of EOLANG. The object
 `eq` is called an _atom_, since it's an atomic element of the language---it
