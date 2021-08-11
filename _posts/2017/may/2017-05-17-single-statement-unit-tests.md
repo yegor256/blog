@@ -46,11 +46,11 @@ public void testIntStream() {
 }
 {% endhighlight %}
 
+{% youtube 1bAixLaOCSA %}
+
 There are two parts in this method: the algorithm and the assertion. The
 algorithm prepares two arrays of integers and the assertion compares them
 and throws `AssertionError` if they are not equal.
-
-{% youtube 1bAixLaOCSA %}
 
 I'm saying that the first part, the algorithm, is the one we should try
 to avoid. The only thing we must have is the assertion. Here is
