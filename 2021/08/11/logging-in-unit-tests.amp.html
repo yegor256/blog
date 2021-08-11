@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Logging in Unit Tests, a Bad Practice</title>
+    <link rel="canonical" href="https://www.yegor256.com/2021/08/11/logging-in-unit-tests.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2021/08/11/logging-in-unit-tests.html"
+        },
+        "headline": "Logging in Unit Tests, a Bad Practice",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2021/08/children-of-men.jpg",
+          "height": 800,
+          "width": 1200
+        },
+        "datePublished": "2021-08-11",
+        "dateModified": "2021-08-11",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Logging inside unit tests is a common practice, but
+a dangerous one, since it takes important knowledge
+away from the repository.
+",
+        "keywords": ["logging tests", "logging in unit tests", "unit testing", "logging testing", "testing and logging"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2021/08/11/logging-in-unit-tests.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>11 August 2021</p>
+      <h1>Logging in Unit Tests, a Bad Practice</h1>
+      <p>Logging is an inevitable part of debugging. Well, at least in modern
+high-level programming languages and architectures. It wasn’t thirty 
+years ago, in Assembly, but it is now. Sometimes we trace variables, 
+but rarely. More often we just print them to console. Moreover, we don’t
+just print them using <code class="highlighter-rouge">println</code> or whatever it is we have for console
+printing; instead, we send messages to a 
+<a href="https://en.wikipedia.org/wiki/Java_logging_framework">logging framework</a>, which deals with 
+the console or any other logging destinations, like files. The beauty
+of such frameworks is that we don’t need to remove logging after debugging
+is finished—we just configure the framework to suppress all debug-level
+messages in the production environment. Some logging may happen
+inside unit tests. Do we also leave them there or maybe not?</p>
+
+
+
+<amp-img src="/images/2021/08/children-of-men.jpg" alt="Children of Men (2006) by Alfonso Cuarón" height="800" width="1200" layout="responsive"></amp-img>
+
+<p>Here is an example (it’s a simplification of a real unit test at
+<a href="https://github.com/polystat/polystat/blob/0.0.1/src/test/java/org/polystat/far/CalcTest.java">CalcTest.java</a>
+from <a href="https://www.polystat.org">Polystat</a>, a static analyzer we’re working on right now):</p>
+
+<pre>import com.jcabi.log.Logger;
+import com.jcabi.xml.XML;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
+public final class FooTest {
+  @Test
+  public void buildsSimpleXml() {
+    final XML xml = new Foo().build();
+    Logger.debug(this, "This is the XML:\n%s", xml.toString());
+    MatcherAssert.assertThat(
+      xml,
+      Matchers.notNullValue()
+    );
+  }
+}</pre>
+
+<p>This is Java and I’m using <a href="https://junit.org/junit5/">JUnit5</a>+<a href="http://hamcrest.org/">Hamcrest</a> 
+together with my own logging framework
+<a href="https://log.jcabi.com">jcabi-log</a>, which is a decorator of 
+<a href="http://www.slf4j.org/">Slf4j</a>, which uses <a href="https://logging.apache.org/log4j/2.x/">Log4j</a> to print to 
+the console.</p>
+
+<p>What is going on here? There is a class <code class="highlighter-rouge">Foo</code> with a method <code class="highlighter-rouge">build()</code>, which
+makes an XML document (I’m using <a href="https://xml.jcabi.com">jcabi-xml</a> library, which is a decorator of
+<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/package-summary.html">JDK DOM</a>). 
+Then, the unit test prints the contents of the XML document to
+the console and makes a pretty silly assertion: the document is not NULL.
+It is silly because if it were NULL, the logging statement 
+would already fail at the <code class="highlighter-rouge">.toString()</code> call.</p>
+
+<p>I’m the developer of this code, so I know what was going on: I was too lazy
+to write a proper assertion, which would look into the XML document
+and ensure that there were proper elements inside. I just printed it to the
+console, <em>visually</em> confirmed its validity and called it a day. 
+If I’d had more time, this is how I would have written a much better unit test
+(I made the <a href="https://github.com/polystat/polystat/issues/10">improvements</a> in Polystat tests just now):</p>
+
+<pre>import com.jcabi.matchers.XhtmlMatchers;
+import org.hamcrest.MatcherAssert;
+import org.junit.jupiter.api.Test;
+public final class FooTest {
+  @Test
+  public void buildsSimpleXml() {
+    MatcherAssert.assertThat(
+      XhtmlMatchers.xhtml(new Foo().build()),
+      XhtmlMatchers.hasXPath("//foo")
+    );
+  }
+}</pre>
+
+<p>Now, the XML document is built and then tested for the presence of <code class="highlighter-rouge">//foo</code> 
+<a href="https://en.wikipedia.org/wiki/XPath">XPath</a> inside it. 
+The content of the document will be printed to the console
+only in the case where the assertion fails. If the XML has the required
+XPath, there will be no console output, which means no noise for future
+developers.</p>
+
+<p>Moreover, now it’s a <em>single-statement</em> test, which by itself is 
+<a href="/2017/05/17/single-statement-unit-tests.html">good practice</a>.</p>
+
+<p>Looking back on my experience of testing and logging, 
+I believe that logging in unit tests is a bad idea. Sometimes
+inevitable, because we are lazy or simply don’t have enough time, but still bad.
+Logging helps us confirm visually the correctness of the output,
+but it takes this knowledge away from the project. Those who will work with
+the test later on won’t know what we’ve seen there. They will
+see the output at the console, but will not understand whether it <em>still</em> matches
+my expectations at the time of writing.</p>
+
+<p>I would say that every logging line in a unit test is a message from its author:
+“I know something about the data I see now, but I’m too lazy to tell you about it,
+you just have to believe me that it looks good.”</p>
+
+<p>I suggest we don’t leave such messages in our code.</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Do you print log messages from your unit tests?</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1421723724638789632?ref_src=twsrc%5Etfw">August 1, 2021</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

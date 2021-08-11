@@ -1044,6 +1044,7 @@ cafe
 cage
 caitlin
 cake
+calctest
 calculate
 calculated
 calculates
@@ -2046,6 +2047,7 @@ debika
 debt
 debts
 debug
+debug-level
 debugging
 dec
 decades
@@ -2222,6 +2224,7 @@ despise
 despite
 destabilized
 destination
+destinations
 destroy
 destroyed
 destroying
@@ -6299,6 +6302,7 @@ polunin
 polygamous
 polymorphic
 polymorphism
+polystat
 POM
 pompous
 pont
@@ -8268,6 +8272,7 @@ supportive
 supports
 suppose
 supposed
+suppress
 supremacists
 supreme
 suprise

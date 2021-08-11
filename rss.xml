@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-08-08T15:00:35+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Prestructors</title><link href="https://www.yegor256.com/2021/08/04/prestructors.html" rel="alternate" type="text/html" title="Prestructors" /><published>2021-08-04T00:00:00+00:00</published><updated>2021-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/08/04/prestructors</id><content type="html" xml:base="https://www.yegor256.com/2021/08/04/prestructors.html">&lt;p&gt;Making constructors pre-process the arguments before 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-08-11T11:53:20+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Logging in Unit Tests, a Bad Practice</title><link href="https://www.yegor256.com/2021/08/11/logging-in-unit-tests.html" rel="alternate" type="text/html" title="Logging in Unit Tests, a Bad Practice" /><published>2021-08-11T00:00:00+00:00</published><updated>2021-08-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/08/11/logging-in-unit-tests</id><content type="html" xml:base="https://www.yegor256.com/2021/08/11/logging-in-unit-tests.html">&lt;p&gt;Logging is an inevitable part of debugging. Well, at least in modern
+high-level programming languages and architectures. It wasn’t thirty 
+years ago, in Assembly, but it is now. Sometimes we trace variables, 
+but rarely. More often we just print them to console. Moreover, we don’t
+just print them using &lt;code class=&quot;highlighter-rouge&quot;&gt;println&lt;/code&gt; or whatever it is we have for console
+printing; instead, we send messages to a 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_logging_framework&quot;&gt;logging framework&lt;/a&gt;, which deals with 
+the console or any other logging destinations, like files. The beauty
+of such frameworks is that we don’t need to remove logging after debugging
+is finished—we just configure the framework to suppress all debug-level
+messages in the production environment. Some logging may happen
+inside unit tests. Do we also leave them there or maybe not?&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Children of Men (2006) by Alfonso Cuarón&quot; src=&quot;/images/2021/08/children-of-men.jpg&quot; longdesc=&quot;#739264dd&quot; /&gt;&lt;figcaption id=&quot;739264dd&quot;&gt;Children of Men (2006) by Alfonso Cuarón&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here is an example (it’s a simplification of a real unit test at
+&lt;a href=&quot;https://github.com/polystat/polystat/blob/0.0.1/src/test/java/org/polystat/far/CalcTest.java&quot;&gt;CalcTest.java&lt;/a&gt;
+from &lt;a href=&quot;https://www.polystat.org&quot;&gt;Polystat&lt;/a&gt;, a static analyzer we’re working on right now):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.jcabi.log.Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.jcabi.xml.XML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.hamcrest.MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.hamcrest.Matchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FooTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildsSimpleXml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;This is the XML:\n%s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;Matchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;notNullValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is Java and I’m using &lt;a href=&quot;https://junit.org/junit5/&quot;&gt;JUnit5&lt;/a&gt;+&lt;a href=&quot;http://hamcrest.org/&quot;&gt;Hamcrest&lt;/a&gt; 
+together with my own logging framework
+&lt;a href=&quot;https://log.jcabi.com&quot;&gt;jcabi-log&lt;/a&gt;, which is a decorator of 
+&lt;a href=&quot;http://www.slf4j.org/&quot;&gt;Slf4j&lt;/a&gt;, which uses &lt;a href=&quot;https://logging.apache.org/log4j/2.x/&quot;&gt;Log4j&lt;/a&gt; to print to 
+the console.&lt;/p&gt;
+
+&lt;p&gt;What is going on here? There is a class &lt;code class=&quot;highlighter-rouge&quot;&gt;Foo&lt;/code&gt; with a method &lt;code class=&quot;highlighter-rouge&quot;&gt;build()&lt;/code&gt;, which
+makes an XML document (I’m using &lt;a href=&quot;https://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; library, which is a decorator of
+&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/package-summary.html&quot;&gt;JDK DOM&lt;/a&gt;). 
+Then, the unit test prints the contents of the XML document to
+the console and makes a pretty silly assertion: the document is not NULL.
+It is silly because if it were NULL, the logging statement 
+would already fail at the &lt;code class=&quot;highlighter-rouge&quot;&gt;.toString()&lt;/code&gt; call.&lt;/p&gt;
+
+&lt;p&gt;I’m the developer of this code, so I know what was going on: I was too lazy
+to write a proper assertion, which would look into the XML document
+and ensure that there were proper elements inside. I just printed it to the
+console, &lt;em&gt;visually&lt;/em&gt; confirmed its validity and called it a day. 
+If I’d had more time, this is how I would have written a much better unit test
+(I made the &lt;a href=&quot;https://github.com/polystat/polystat/issues/10&quot;&gt;improvements&lt;/a&gt; in Polystat tests just now):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.jcabi.matchers.XhtmlMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.hamcrest.MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FooTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildsSimpleXml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;XhtmlMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xhtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()),&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;XhtmlMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasXPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//foo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, the XML document is built and then tested for the presence of &lt;code class=&quot;highlighter-rouge&quot;&gt;//foo&lt;/code&gt; 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/XPath&quot;&gt;XPath&lt;/a&gt; inside it. 
+The content of the document will be printed to the console
+only in the case where the assertion fails. If the XML has the required
+XPath, there will be no console output, which means no noise for future
+developers.&lt;/p&gt;
+
+&lt;p&gt;Moreover, now it’s a &lt;em&gt;single-statement&lt;/em&gt; test, which by itself is 
+&lt;a href=&quot;/2017/05/17/single-statement-unit-tests.html&quot;&gt;good practice&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Looking back on my experience of testing and logging, 
+I believe that logging in unit tests is a bad idea. Sometimes
+inevitable, because we are lazy or simply don’t have enough time, but still bad.
+Logging helps us confirm visually the correctness of the output,
+but it takes this knowledge away from the project. Those who will work with
+the test later on won’t know what we’ve seen there. They will
+see the output at the console, but will not understand whether it &lt;em&gt;still&lt;/em&gt; matches
+my expectations at the time of writing.&lt;/p&gt;
+
+&lt;p&gt;I would say that every logging line in a unit test is a message from its author:
+“I know something about the data I see now, but I’m too lazy to tell you about it,
+you just have to believe me that it looks good.”&lt;/p&gt;
+
+&lt;p&gt;I suggest we don’t leave such messages in our code.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do you print log messages from your unit tests?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1421723724638789632?ref_src=twsrc%5Etfw&quot;&gt;August 1, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Logging is an inevitable part of debugging. Well, at least in modern high-level programming languages and architectures. It wasn’t thirty years ago, in Assembly, but it is now. Sometimes we trace variables, but rarely. More often we just print them to console. Moreover, we don’t just print them using println or whatever it is we have for console printing; instead, we send messages to a logging framework, which deals with the console or any other logging destinations, like files. The beauty of such frameworks is that we don’t need to remove logging after debugging is finished—we just configure the framework to suppress all debug-level messages in the production environment. Some logging may happen inside unit tests. Do we also leave them there or maybe not?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/08/children-of-men.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/08/children-of-men.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Prestructors</title><link href="https://www.yegor256.com/2021/08/04/prestructors.html" rel="alternate" type="text/html" title="Prestructors" /><published>2021-08-04T00:00:00+00:00</published><updated>2021-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/08/04/prestructors</id><content type="html" xml:base="https://www.yegor256.com/2021/08/04/prestructors.html">&lt;p&gt;Making constructors pre-process the arguments before 
 encapsulating them seems to be 
 &lt;a href=&quot;/2015/05/07/ctors-must-be-code-free.html&quot;&gt;bad practice&lt;/a&gt;. 
 However, very often it’s necessary to do exactly that: perform some manipulations
@@ -1437,123 +1535,4 @@ $ x.print
 The book ID is 42&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;By the way, do you know any other languages with abstract objects or
-is EO the first one to introduce this design?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">How do you create objects in your object-oriented language? Let’s take something classic, like C++, Java, or C#. First you define a class, and then you make an instance of it. The first step is known as abstraction, and the second one as instantiation. A similar pair of operations exist in functional programming: declaring a function is abstraction, while calling it with specific arguments is application. The question is: why does OOP need classes and objects, while FP survives with just functions?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/the-irishman.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/the-irishman.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Objects Without Methods</title><link href="https://www.yegor256.com/2020/11/24/objects-without-methods.html" rel="alternate" type="text/html" title="Objects Without Methods" /><published>2020-11-24T00:00:00+00:00</published><updated>2020-11-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/11/24/objects-without-methods</id><content type="html" xml:base="https://www.yegor256.com/2020/11/24/objects-without-methods.html">&lt;p&gt;What do you think an object is in OOP? No matter what language you are
-programming with, you will most probably agree with Bruce Eckel,
-the author of &lt;a href=&quot;https://amzn.to/3pRHv1Q&quot;&gt;Thinking in Java&lt;/a&gt;, who said that “each object has a state
-and operations that you can ask it to perform,” or
-Benjamin Evans, the author of &lt;a href=&quot;https://amzn.to/35uKVPU&quot;&gt;Java in a Nutshell&lt;/a&gt;, who claimed that it is
-“a collection of data fields that hold values and methods that operate on those values.”
-However, hold on… What if I told you that an object may have no “operations”
-and still be a perfect “equivalent of the quanta from which the universe
-is constructed,” as David West suggested in his great book
-&lt;a href=&quot;https://amzn.to/3kuXHlL&quot;&gt;Object Thinking&lt;/a&gt;?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Ballad of Buster Scruggs (2018) by Coen brothers&quot; src=&quot;/images/2020/11/the-ballad-of-buster-scruggs.jpg&quot; longdesc=&quot;#3de3bf2f&quot; /&gt;&lt;figcaption id=&quot;3de3bf2f&quot;&gt;The Ballad of Buster Scruggs (2018) by Coen brothers&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;In &lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;,
-our experimental programming language, we made an attempt to re-define
-OOP and its objects. There are two types of &lt;em&gt;things&lt;/em&gt; in EO: atoms and objects.
-An atom is the lowest level language primitive, which can’t be expressed by
-other atoms. For example, an arithmetic addition of two other objects is an atom
-(stay with me, this is EO syntax, you will get used to it):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;add 5 y &amp;gt; x&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In a more traditional Java-like &lt;a href=&quot;https://en.wikipedia.org/wiki/Infix_notation&quot;&gt;infix notation&lt;/a&gt;
-this code would look like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;x = add(5, y)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The atom is &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; and its two specific
-arguments are &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;. This statement creates a new atom, using
-the existing one and specifying its arguments. The name of the new atom being
-created is &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;. Once we ask this newly created atom to do anything,
-it gets what’s in &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt;, adds &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt;, and starts behaving
-like a summary of them. Until then, it stays quiet.
-EO is a declarative language.&lt;/p&gt;
-
-&lt;p&gt;Atoms are provided by the EO runtime. For example,
-&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sub&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt;,  and &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt; are for arithmetic operations;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; are for forking and iterating;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;and&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;eq&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt; are for logical operations, and so on.
-Atoms may resemble low-level functions with arguments.
-However, they don’t calculate results immediately, but only when needed.
-Saying &lt;code class=&quot;highlighter-rouge&quot;&gt;add(5, file)&lt;/code&gt; won’t lead to reading the content
-of the file and adding 5 to it immediately. Only when the
-created atom is dealt with will the file reading happen.&lt;/p&gt;
-
-&lt;p&gt;Next, on top of these atoms, objects can be created by a programmer.
-For example, this is an object that represents a circle:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[r] &amp;gt; circle
-  mul 2 3.14 r &amp;gt; perimeter
-  mul 3.14 r r &amp;gt; area&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The first line creates an “abstract” object named &lt;code class=&quot;highlighter-rouge&quot;&gt;circle&lt;/code&gt;. It is abstract,
-because one of its attributes &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; is “free”. It’s not specified
-in this object and that’s why the object can’t be used as is, it has
-to be copied with &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt; specified. For example, this is the circle &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;
-with the radius 30:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;circle 30 &amp;gt; c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The object &lt;code class=&quot;highlighter-rouge&quot;&gt;circle&lt;/code&gt; has three attributes. The first one is &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;, which is free.
-The other two are &lt;code class=&quot;highlighter-rouge&quot;&gt;perimeter&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt;. They are “bounded,” since their
-atoms are already defined: &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt; in both cases. To get the area of the
-circle &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; we do this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;c.area &amp;gt; a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It looks like a method call, but it’s not. We don’t call a method, we just
-take an &lt;code class=&quot;highlighter-rouge&quot;&gt;area&lt;/code&gt; object from the object &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt;. It’s not created for us
-at the moment we do &lt;code class=&quot;highlighter-rouge&quot;&gt;c.area&lt;/code&gt;! It has already been there sitting and waiting
-for us to take it. It was created right when the object &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; was built.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;We have objects, but we don’t have methods. There are only attributes representing other objects.
-&lt;/aside&gt;
-
-&lt;p&gt;This is the difference between methods in Java and attributes in EO.
-In Java, every method is a procedure to be executed as soon as it’s
-called. This method calling (or message sending, according to
-&lt;a href=&quot;/2017/12/12/alan-kay-was-wrong.html&quot;&gt;early OOP adepts&lt;/a&gt;)
-mechanism was inherited from C functions,
-which itself we inherited from ALGOL procedures, I believe.
-EO does it differently. There is no method calling. It just takes attributes out
-of objects and gives them to other objects, until control is
-passed to them and it gets down to the level of atoms.&lt;/p&gt;
-
-&lt;p&gt;In the example above, the object &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; is not a calculated number.
-It’s an atom &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt; that encapsulates &lt;code class=&quot;highlighter-rouge&quot;&gt;3.14&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;30&lt;/code&gt; (the radius). The
-result of the calculation is not yet known. If we don’t do anything
-with &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;, the CPU will never do the calculation. However, if we decide
-to, say, print the number to the console, the calculation will happen:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout
-  sprintf
-    &quot;Radius is %d, Area is %d&quot;
-    r
-    a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, the atom &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt; constructs the string, which encapsulates
-three attributes: the text, &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;. By the way,
-it’s possible to use either vertical or horizontal notation
-for constructing objects. The code above may be written like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout (sprintf &quot;Radius is %d, Area is %d&quot; r a)&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The atom &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; encapsulates the string constructed by &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;
-and stays quiet. It doesn’t print anything! Only when someone
-at some point tries to “touch” this object, taking one of
-its attributes out, the atom &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; will drop the line to the
-console.&lt;/p&gt;
-
-&lt;p&gt;There are no attributes in &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;mul&lt;/code&gt;, and most
-other atoms, except one: 𝜑.
-Any object or atom has this specific attribute, also known as
-the “body” of an object. Once someone attempts to touch &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout.𝜑&lt;/code&gt;,
-the console will see the string.&lt;/p&gt;
-
-&lt;p&gt;Thus, we have objects, but we don’t have methods.
-There are only attributes representing other objects.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">What do you think an object is in OOP? No matter what language you are programming with, you will most probably agree with Bruce Eckel, the author of Thinking in Java, who said that “each object has a state and operations that you can ask it to perform,” or Benjamin Evans, the author of Java in a Nutshell, who claimed that it is “a collection of data fields that hold values and methods that operate on those values.” However, hold on… What if I told you that an object may have no “operations” and still be a perfect “equivalent of the quanta from which the universe is constructed,” as David West suggested in his great book Object Thinking?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/11/the-ballad-of-buster-scruggs.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+is EO the first one to introduce this design?&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">How do you create objects in your object-oriented language? Let’s take something classic, like C++, Java, or C#. First you define a class, and then you make an instance of it. The first step is known as abstraction, and the second one as instantiation. A similar pair of operations exist in functional programming: declaring a function is abstraction, while calling it with specific arguments is application. The question is: why does OOP need classes and objects, while FP survives with just functions?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/the-irishman.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/the-irishman.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
