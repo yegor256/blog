@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Logging in Unit Tests, a Bad Practice"
-date: 2021-08-03
+date: 2021-08-11
 place: Moscow, Russia
 tags: oop java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - unit testing
   - logging testing
   - testing and logging
-image: /images/2021/08/
+image: /images/2021/08/children-of-men.jpg
 jb_picture:
-  caption:
+  caption: Children of Men (2006) by Alfonso Cuarón
 ---
 
 Logging is an inevitable part of debugging. Well, at least in modern
