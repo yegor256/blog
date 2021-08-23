@@ -42,6 +42,11 @@ Subscribe at
 
 Recent episodes:
 
+<img src="/images/shift-m/jeff-atwood.png" class="guest-face" alt="Face of Jeff Atwood"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;48: [Shift-M/48: Jeff Atwood about knowledge management in software teams](/shift-m/2021/48.html)<br/>
+23 August 2021; 58 min; [video](https://youtu.be/NGdarWF6rto).
+
 <img src="/images/shift-m/bjarne-stroustrup.png" class="guest-face" alt="Face of Bjarne Stroustrup"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;47: [Bjarne Stroustrup on the future of programming](/shift-m/2021/47.html)<br/>
