@@ -99,28 +99,20 @@ body {
 
 a,
 a:visited {
-  color: steelblue;
+  color: inherit;
   text-decoration: underline;
   // scss-lint:disable PropertySpelling
   text-decoration-thickness: 1px;
   // scss-lint:enable PropertySpelling
-}
-
-body a,
-body a:visited {
-  color: inherit;
+  &.foreign {
+    &:hover {
+      color: gray;
+    }
+  }
 }
 
 del {
   text-decoration: line-through;
-}
-
-.foreign {
-  text-decoration: underline;
-
-  &:hover {
-    color: gray;
-  }
 }
 
 .header-toggle {
