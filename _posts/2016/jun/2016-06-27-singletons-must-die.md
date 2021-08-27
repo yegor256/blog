@@ -48,11 +48,11 @@ application? We simply need something like this:
 class Database {
   public static Database INSTANCE = new Database();
   private Database() {
-    // create a connection pool
+    // Create a connection pool
   }
   public java.sql.Connection connect() {
-    // Get new connection from the pool
-    // and return
+    // Get a new connection from the pool
+    // and return it
   }
 }
 {% endhighlight %}
