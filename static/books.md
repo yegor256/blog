@@ -114,7 +114,7 @@ Published: 22 June 2020.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
+{% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
 
 The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
 will contain practical object-oriented design patterns, just like
