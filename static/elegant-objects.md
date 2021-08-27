@@ -47,7 +47,7 @@ style: |
   }
 ---
 
-{% badge /images/books/elegant-objects/cover.png 160 http://goo.gl/W2WVMk %}
+{% badge /images/books/elegant-objects/cover-eo1.png 160 http://goo.gl/W2WVMk %}
 
 "Elegant Objects" is my first book. It is about object-oriented
 programming from an idealistic and, maybe, a bit of a futuristic
@@ -714,7 +714,7 @@ send me that picture and I will send you a Kindle/epub/PDF/whatever
 file **for free**. How does that sound?
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/elegant-objects/cover.png 125 http://goo.gl/W2WVMk %}
+{% badge /images/books/elegant-objects/cover-eo1.png 125 http://goo.gl/W2WVMk %}
 Feb 22, 2016:
 The book is published! It is for sale
 [on Amazon](http://goo.gl/W2WVMk).

@@ -22,10 +22,10 @@ module Yegor
       opts = book.strip.split(/\s+/, 2)
       if opts[0] == 'elegant-objects-1'
         link = 'http://amzn.to/2qFt4Tn'
-        cover = '/images/books/elegant-objects/cover.png'
+        cover = '/images/books/elegant-objects/cover-eo1.png'
       elsif opts[0] == 'elegant-objects-2'
         link = 'http://amzn.to/2pyceWc'
-        cover = '/images/books/elegant-objects/cover.png'
+        cover = '/images/books/elegant-objects/cover-eo2.png'
       elsif opts[0] == 'code-ahead-1'
         link = 'https://amzn.to/2u9BbqF'
         cover = '/images/books/code-ahead/cover.png'

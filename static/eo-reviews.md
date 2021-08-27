@@ -6,7 +6,7 @@ description: |
   'Elegant Objects', my book series about object-oriented
   programming.
 permalink: eo-reviews.html
-image: /images/books/elegant-objects/cover.png
+image: /images/books/elegant-objects/cover-eo1.png
 nospell: true
 keywords:
   - book about object-oriented programming

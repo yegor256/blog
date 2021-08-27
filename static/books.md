@@ -45,7 +45,7 @@ send you the PDF version (rendered with your name inside, to make sure
 you don't share it with others).
 
 {: .book-badge}
-{% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
+{% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
 
 [Elegant Objects](/elegant-objects.html) (Volume 1)
 is my first book. It is about object-oriented
@@ -75,7 +75,7 @@ Published: 6 Nov 2016.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/elegant-objects/cover.png 125 /elegant-objects.html %}
+{% badge /images/books/elegant-objects/cover-eo2.png 125 /elegant-objects.html %}
 
 The **2nd Volume** of [Elegant Objects](/elegant-objects.html)
 covers more object-oriented patterns and anti-patterns,
