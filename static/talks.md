@@ -98,39 +98,20 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
-<div class="talk-event">&nbsp;</div>
-<img src="https://mipt.ru/upload/medialibrary/ad1/About-mipt.jpg" class="future-talk" alt="MIPT 2020"/><br/>
-<span style="color: firebrick">POSTPONED</span>: I will have a series of lectures in
-Moscow Institute of Physics and Technology (MIPT),
-"Arctic Building" Auditorium, 4th Floor,
-titled "The Pain of Object-Oriented Programming," on
-11-Mar, 18-Mar, 8-Apr, 15-Apr, 22-Apr, 6-May, 13-May, 20-May.
-Each lecture starts on 19:30 and lasts for 90 minutes. They
-all will be video-recorded and published on
-[YouTube](https://www.youtube.com/c/yegor256?sub_confirmation=1).
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="future-talk" alt="HighLoad++ 2020"/><br/>
-Decentralized Architectures: Blockchain and Beyond<br/>
-[HighLoad++](https://www.highload.ru/spring/2021/abstracts/6620)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-17 May.
+<img src="https://code-r.ru/images/91e002d647a54145523a33296ff93f91.svg" class="future-talk" alt="code/R 2021"/><br/>
+Анализ качества кода и почему он не работает?<br/>
+[&lgt;code/R&gt;](https://code-r.ru/)<br/>
+<span class="city">Omsk</span>, <span class="country">Russia</span><br/>
+18 September.
 
-<!-- <div class="talk-event">&nbsp;</div>
-<img src="https://testconf.ru/wp-content/uploads/2019/10/testcon_moscow_2020_logo_1.png" class="future-talk" alt="TestConf 2020"/><br/>
-The Biggest Mistake of an Honest Tester<br/>
-[TestConf](https://testconf.ru/)<br/>
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2021/rubyrussia.png" class="future-talk" alt="Ruby Russia 2021"/><br/>
+Твой первый Ruby Gem<br/>
+[Ruby Russia](https://rubyrussia.club/)<br/>
 <span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-15-17 September.
--->
-
-<!-- <div class="talk-event">&nbsp;</div>
-<img src="https://static.tildacdn.com/tild3364-3730-4135-a536-356435633561/Tech2020.png" class="future-talk" alt="HR&amp;Technology Expo 2020"/><br/>
-Something about HR...<br/>
-[HR&Technology Expo 2020](https://hr-tech.ru/)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-29-30 September.
--->
+24 September.
 
 <hr/>
 
@@ -139,29 +120,6 @@ please [email](mailto:event@yegor256.com). It's free.
 You will just have to pay for business-class airfare,
 a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
-These are the topics I'm interested to speak about and they are
-pretty fresh (I haven't presented them before, as of yet):
-
-  * **Decentralized Architectures: Blockchain and Beyond**.
-    We've been building software/hardware systems in a centralized manner
-    for decades, no matter whether they were mainframes with thin clients,
-    clients+server, or web 2.0 --- there was always a central place of data
-    storage and execution control. However, time changes and the new uprising
-    trend is all about systems with no central point of control. Blockchain
-    was the first solution, which most programmers still don't understand.
-    There will be many more solutions in the future, which some of us are
-    yet to design and build.
-
-  * **Weak Management Needs Pay Equality**.
-    The average salary of American workers is growing 1% every year, while
-    the pay gap between similar jobs is decreasing. What do I think about
-    this trend? Does it sound like people are getting more every year and
-    it's good? Not at all. This trend is completely against what a good management should be
-    fighting for: unequal pay for unequal contribution. A strong manager wants to work
-    with free people, who get what they deserve because of their work, not
-    because of their place in the company. Meritocracy is yet another name
-    for the movement we are leading now in the industry of software development.
-
 ## <span id='past-talks-total'>&nbsp;</span> Past Events
 
 This is a very opinionated and subjective list of conferences
@@ -176,6 +134,16 @@ and
 <span id="total-countries">?</span> countries.
 
 I was also seen at [these events](/seen.html).
+
+### 2021
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="past-talk" alt="HighLoad++ 2020"/><br/>
+Decentralized Architectures: Blockchain and Beyond;
+[HighLoad++](https://www.highload.ru/spring/2021/abstracts/6620);
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+17 May;
+[видео]().
 
 ### 2020
 

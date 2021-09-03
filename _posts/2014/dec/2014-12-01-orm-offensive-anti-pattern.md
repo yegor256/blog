@@ -186,7 +186,7 @@ was maybe the second big mistake in
 [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}) after
 [NULL reference]({% pst 2014/may/2014-05-13-why-null-is-bad %}).
 
-{% quote ORM, instead of encapsulating database interaction inside an object, extracts it away, literally tearing a solid and cohesive living organism apart %}
+{% quote ORM, instead of encapsulating database interaction inside an object, extracts it away, literally tearing a solid and cohesive living organism apart. %}
 
 Actually, I'm not the only one saying something like this, and
 definitely not the first. A lot about
