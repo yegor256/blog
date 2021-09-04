@@ -138,7 +138,7 @@ I was also seen at [these events](/seen.html).
 ### 2021
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://www.highload.ru/i/highload/spb/2020/logo/logo.svg" class="past-talk" alt="HighLoad++ 2020"/><br/>
+<img src="https://i.ytimg.com/vi/9dydfF_B4DE/mqdefault.jpg" class="past-talk" alt="HighLoad++ 2020"/><br/>
 Decentralized Architectures: Blockchain and Beyond;
 [HighLoad++](https://www.highload.ru/spring/2021/abstracts/6620);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
