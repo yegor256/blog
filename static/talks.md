@@ -143,7 +143,7 @@ Decentralized Architectures: Blockchain and Beyond;
 [HighLoad++](https://www.highload.ru/spring/2021/abstracts/6620);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 17 May;
-[видео]().
+[видео](https://www.youtube.com/watch?v=9dydfF_B4DE).
 
 ### 2020
 
