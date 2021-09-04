@@ -102,7 +102,7 @@ informed about everything I do publicly.
 <div class="talk-event">&nbsp;</div>
 <img src="https://code-r.ru/images/91e002d647a54145523a33296ff93f91.svg" class="future-talk" alt="code/R 2021"/><br/>
 Анализ качества кода и почему он не работает?<br/>
-[&lgt;code/R&gt;](https://code-r.ru/)<br/>
+[&lt;code/R&gt;](https://code-r.ru/)<br/>
 <span class="city">Omsk</span>, <span class="country">Russia</span><br/>
 18 September.
 
