@@ -25,7 +25,7 @@ module Yegor
 
     def render(context)
       code = "$$#{@tex}$$"
-      "<img src='http://latex.codecogs.com/svg.latex?#{URI.escape(code)}' class='eqtn' alt='equation'/>"
+      "<img src='http://latex.codecogs.com/svg.latex?#{CGI.escape(code)}' class='eqtn' alt='equation'/>"
     end
   end
 end
