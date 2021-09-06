@@ -164,6 +164,9 @@ We ask each other:
 We _don't_ use status calls for reporting. This is what we have
 Monday Reports for.
 
+All decisions we make at status calls we call Meeting Minutes
+and send by email to everybody (or post in our Telegram group chat).
+
 ## Demos
 
 Almost every week we ask some artifact owner to demonstrate his or her
