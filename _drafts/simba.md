@@ -100,7 +100,7 @@ Subject: WEEK13 Dataset, Requirements, XYZ
 
 Hi all,
 
-Last week achivements:
+Last week achievements:
 - Added 100 new files to the Dataset [100%]
 - Fixed the deployment of XYZ [50%]
 - Refined the requirements [80%]
