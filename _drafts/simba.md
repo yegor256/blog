@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: management
 description: |
   Here is a quick summary of a very simple management
-  framework, which I use in my teams for the last two years.
+  framework, which I've used in my teams for the last two years.
 keywords:
   - management
   - goal setting
@@ -18,7 +18,7 @@ jb_picture:
   caption: Lion King (2019) by Jon Favreau
 ---
 
-Here is a very simple management framework, which we use in 
+Here is a very simple management framework, which we have used in 
 our teams for the last two years. We came to it experimentally,
 trying to merge some Agile principles, PMBOK ideas, and
 common sense. Our experience so far is positive, even though
@@ -42,7 +42,7 @@ four cornerstone elements of our management framework:
 ## Plan
 
 Our Plan is a very simple text document visible for everybody in the
-team, usually at Google Docs, and editable by the TC only. 
+team, usually in Google Docs, and editable by the TC only. 
 It is a primitive version of a 
 [Work Breakdown Structure (WBS)](https://en.wikipedia.org/wiki/Work_breakdown_structure)
 married with a 
@@ -89,7 +89,7 @@ is allowed to keep no more than seven artifacts under control.
 Each Monday morning, the TC sends a report by email
 to all team sponsors: a plain-text email without
 any attachments or fancy formatting. All stakeholders,
-including all team members, are being CC-ed too.
+including all team members, are CC-ed too.
 An example:
 
 {% highlight text %}
@@ -100,7 +100,7 @@ Subject: WEEK13 Dataset, Requirements, XYZ
 
 Hi all,
 
-Last week achivements:
+Last week achievements:
 - Added 100 new files to the Dataset [100%]
 - Fixed the deployment of XYZ [50%]
 - Refined the requirements [80%]
@@ -118,9 +118,9 @@ The **subject** of the email starts with the `WEEK13`, where
 13 is the number of the previous calendar week 
 in the current year. By the way, 
 there are [52 weeks](https://en.wikipedia.org/wiki/ISO_week_date) 
-in almost each year.
+in almost every year.
 The `WEEK` part makes report emails easily searchable in the inbox.
-There is also a comma-separated list of most important topics of the report,
+There is also a comma-separated list of the most important topics of the report,
 to give the reader a quick impression about the results being reported.
 
 Each **achievement** of the last week starts with a verb or a past
@@ -128,8 +128,8 @@ tense, like "fixed," "added," "refined" etc. After the verb
 the artifact is mentioned, which we contributed to. At the end 
 of each line there is a progress status, subjectively measured
 by the author of the report. There should be no more than seven
-achievement points, no matter how big is the team and how detailed
-is the Plan. The report must not tell the full story, but only 
+achievement points, no matter how big the team is nor how detailed
+the Plan. The report must not tell the full story, but only 
 highlight what's most important.
 
 Wherever possible, each achievement item must be supplemented
@@ -138,7 +138,7 @@ There has to be something traceable and verifiable: the readers
 of the report must be able to find all necessary details for
 each item without asking its owner or the author of the report.
 
-Each **task** for a new week starts with a verb in infinitive
+Each **task** for a new week starts with a verb in the infinitive
 form, like "to publish" or "to review" and then, of course,
 the artifact is mentioned. There should be no more than seven
 tasks in the list.
@@ -151,21 +151,20 @@ the team for failures, which are inevitable.
 ## Weekly Calls
 
 Every week at the same time and day, 
-we make a 30-minutes Zoom status call: everybody participates.
+we make a 30-minute Zoom status call: everybody participates.
 We look at the Plan and discuss whether our work is still on track.
 We ask each other:
 
   - Will all artifacts delivered mean success?
   - Did we break down the scope correctly?
   - What did we miss in our Plan?
-  - All owners are committed to the their dates and scopes?
+  - Are all owners committed to the their dates and scopes?
   - Are there any risks overlooked?
 
 We _don't_ use status calls for reporting. This is what we have
 Monday Reports for.
 
-All decisions we make at status calls we call Meeting Minutes
-and send by email to everybody (or post in our Telegram group chat).
+All decisions we make at status calls we call Meeting Minutes and send by email to everybody (or post in our Telegram group chat).
 
 ## Demos
 
@@ -175,9 +174,9 @@ the delivery date is approaching and an owner is ready to
 show something complete. However, demo calls are also very useful
 to collect opinions when an artifact is still in progress.
 
-It's the responsibility of a TC, to make regular demo calls weekly,
+It's the responsibility of a TC to make regular demo calls weekly,
 inviting owners of the most important artifacts.
 
-All status calls and demo calls are being recorded and posted into 
+All status calls and demo calls are recorded and posted into 
 a private list on YouTube, where all team members can watch them
 later.
