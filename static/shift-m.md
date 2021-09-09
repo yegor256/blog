@@ -42,6 +42,11 @@ Subscribe at
 
 Recent episodes:
 
+<img src="/images/shift-m/greg-young.png" class="guest-face" alt="Face of Greg Young"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;49: [Shift-M/49: Greg Young about software architecture](/shift-m/2021/49.html)<br/>
+7 September 2021; 101 min; [video](https://www.youtube.com/watch?v=JER03qMCmIk).
+
 <img src="/images/shift-m/jeff-atwood.png" class="guest-face" alt="Face of Jeff Atwood"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;48: [Shift-M/48: Jeff Atwood about knowledge management in software teams](/shift-m/2021/48.html)<br/>
