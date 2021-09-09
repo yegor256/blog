@@ -24,7 +24,7 @@ module Yegor
     end
 
     def render(context)
-      "<img src='http://latex.codecogs.com/svg.image?#{CGI.escape(@tex)}' class='eqtn' alt='equation'/>"
+      "<img src='http://latex.codecogs.com/svg.image?#{CGI.escape(@tex).gsub('+', '%20')}' class='eqtn' alt='equation'/>"
     end
   end
 end
