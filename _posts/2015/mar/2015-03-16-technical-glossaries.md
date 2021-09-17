@@ -76,7 +76,7 @@ simply because of different understandings the same term.
 A glossary is not a formality; it's a key instrument of a software architect
 and all other team members.
 
-{% quote A good engineer always remembers that if the receiver doesn't understand a message, it's the sender's fault %}
+{% quote A good engineer always remembers that if the receiver doesn't understand a message, it's the sender's fault. %}
 
 **We Prefer Working Software Over Comprehensive Documentation**.
 This is what the [Agile Manifesto]({% pst 2016/jul/2016-07-11-mistakes-in-agile-manifesto %})
