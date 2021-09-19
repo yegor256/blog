@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-09-09T05:35:14+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SIMBA: Simplified Management By Artifacts</title><link href="https://www.yegor256.com/2021/09/09/simba.html" rel="alternate" type="text/html" title="SIMBA: Simplified Management By Artifacts" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/09/09/simba</id><content type="html" xml:base="https://www.yegor256.com/2021/09/09/simba.html">&lt;p&gt;Here is a very simple management framework, which we have used in 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-09-19T07:19:07+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SIMBA: Simplified Management By Artifacts</title><link href="https://www.yegor256.com/2021/09/09/simba.html" rel="alternate" type="text/html" title="SIMBA: Simplified Management By Artifacts" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/09/09/simba</id><content type="html" xml:base="https://www.yegor256.com/2021/09/09/simba.html">&lt;p&gt;Here is a very simple management framework, which we have used in 
 our teams for the last two years. We came to it experimentally,
 trying to merge some Agile principles, 
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge&quot;&gt;PMBOK&lt;/a&gt; ideas, and
@@ -22,7 +22,7 @@ four cornerstone elements of our management framework:
 
 &lt;h2 id=&quot;plan&quot;&gt;Plan&lt;/h2&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-thinking.png&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-thinking.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;Our Plan is a very simple text document visible for everybody in the
 team, usually in Google Docs, and editable by the TC only. 
@@ -67,7 +67,7 @@ is allowed to keep no more than seven artifacts under control.&lt;/p&gt;
 
 &lt;h2 id=&quot;monday-reports&quot;&gt;Monday Reports&lt;/h2&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-writing.png&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-writing.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;Each Monday morning, the TC sends a report by email
 to all team sponsors: a plain-text email without
@@ -131,7 +131,7 @@ the team for failures, which are inevitable.&lt;/p&gt;
 
 &lt;h2 id=&quot;weekly-calls&quot;&gt;Weekly Calls&lt;/h2&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-listening.png&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-listening.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;Every week at the same time and day, 
 we make a 30-minute Zoom status call: everybody participates.
@@ -153,7 +153,7 @@ Monday Reports for.&lt;/p&gt;
 
 &lt;h2 id=&quot;demos&quot;&gt;Demos&lt;/h2&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-speaking.png&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
+&lt;figure class=&quot;badge&quot;&gt;&lt;img src=&quot;/images/2021/09/simba-speaking.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/figure&gt;
 
 &lt;p&gt;Almost every week we ask some artifact owner to demonstrate his or her
 results at a one-hour “demo” Zoom call. Usually it happens when

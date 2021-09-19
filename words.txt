@@ -2687,6 +2687,7 @@ embedded
 embrace
 embracing
 emerge
+emerging
 emitter
 emoji
 emojis
