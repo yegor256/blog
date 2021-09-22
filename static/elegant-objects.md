@@ -15,6 +15,9 @@ keywords:
   - object-oriented programming
   - object thinking
 style: |
+  .book-badge img {
+    border: 1px solid lightgray;
+  }
   .book-event {
     clear: both;
     margin-top: 2em;
@@ -47,6 +50,7 @@ style: |
   }
 ---
 
+{: .book-badge}
 {% badge /images/books/elegant-objects/cover-eo1.png 160 http://goo.gl/W2WVMk %}
 
 "Elegant Objects" is my first book. It is about object-oriented

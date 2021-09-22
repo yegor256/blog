@@ -13,8 +13,13 @@ keywords:
   - blogging secrets
   - how to promote blog
   - how to blog
+style: |
+  .book-badge img {
+    border: 1px solid lightgray;
+  }
 ---
 
+{: .book-badge}
 {% badge /images/books/256-bloghacks/cover.png 160 %}
 
 "256 Bloghacks" is a book about blogging. It says everything

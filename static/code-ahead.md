@@ -14,8 +14,13 @@ keywords:
   - software programming book
   - programming best practices
   - software maintainability
+style: |
+  .book-badge img {
+    border: 1px solid lightgray;
+  }
 ---
 
+{: .book-badge}
 {% badge /images/books/code-ahead/cover.png 160 %}
 
 "Code Ahead" will be my <del>second</del> fourth book. It will be about software engineering. It
