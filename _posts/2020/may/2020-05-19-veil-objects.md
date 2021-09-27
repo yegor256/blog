@@ -62,13 +62,13 @@ class Project
     @id = id
   end
   def name
-    pgsql.exec(
+    @pgsql.exec(
       'SELECT name FROM project WHERE id=$1',
       [@id]
     )[0]['name']
   end
   def author
-    pgsql.exec(
+    @pgsql.exec(
       'SELECT author FROM project WHERE id=$1',
       [@id]
     )[0]['author']
