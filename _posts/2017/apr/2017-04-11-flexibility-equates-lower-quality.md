@@ -3,7 +3,7 @@ layout: post
 title: "Flexibility Equates to Lower Quality"
 date: 2017-04-11
 place: Moscow, Russia
-tags: management
+tags: quality
 description: |
   The more options a programmer has to implement
   a feature in a programming language, the lower the
