@@ -2,7 +2,7 @@
 layout: post
 title: "Three Things I Expect From a Software Architect"
 date: 2015-05-11
-tags: management agile architect
+tags: architect
 description: |
   A software architect is responsible for the technical
   success of a software project and must accurately report
