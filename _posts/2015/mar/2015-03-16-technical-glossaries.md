@@ -2,7 +2,7 @@
 layout: post
 title: "Worst Technical Specifications Have No Glossaries"
 date: 2015-03-16
-tags: management agile
+tags: requirements
 description: |
   A good technical specification is built around a good
   glossary that plays the role of skeleton for the entire
