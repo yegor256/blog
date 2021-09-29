@@ -98,20 +98,7 @@ informed about everything I do publicly.
 
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
-
-<div class="talk-event">&nbsp;</div>
-<img src="https://code-r.ru/images/91e002d647a54145523a33296ff93f91.svg" class="future-talk" alt="code/R 2021"/><br/>
-Анализ качества кода и почему он не работает?<br/>
-[&lt;code/R&gt;](https://code-r.ru/)<br/>
-<span class="city">Omsk</span>, <span class="country">Russia</span><br/>
-18 September.
-
-<div class="talk-event">&nbsp;</div>
-<img src="/images/2021/rubyrussia.png" class="future-talk" alt="Ruby Russia 2021"/><br/>
-Твой первый Ruby Gem<br/>
-[Ruby Russia](https://rubyrussia.club/)<br/>
-<span class="city">Moscow</span>, <span class="country">Russia</span><br/>
-24 September.
+Nothing yet...
 
 <hr/>
 
@@ -136,6 +123,20 @@ and
 I was also seen at [these events](/seen.html).
 
 ### 2021
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://code-r.ru/images/91e002d647a54145523a33296ff93f91.svg" class="past-talk" alt="code/R 2021"/><br/>
+Анализ качества кода и почему он не работает?;
+[&lt;code/R&gt;](https://code-r.ru/);
+<span class="city">Omsk</span>, <span class="country">Russia</span>;
+18 September.
+
+<div class="talk-event">&nbsp;</div>
+<img src="/images/2021/rubyrussia.png" class="past-talk" alt="Ruby Russia 2021"/><br/>
+Твой первый Ruby Gem;
+[Ruby Russia](https://rubyrussia.club/);
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+24 September.
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/9dydfF_B4DE/mqdefault.jpg" class="past-talk" alt="HighLoad++ 2020"/><br/>
