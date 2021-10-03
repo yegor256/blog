@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Calibrated Achievement Points"
-date: 2021-06-10
+title: "Calibrated Achievement Points (CAP)"
+date: 2021-10-05
 place: Moscow, Russia
 tags: management
 description: |
