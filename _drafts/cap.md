@@ -75,8 +75,8 @@ which have stimulated the creativity of artists, athletes, and scientists for ce
 the [Nobel Prize](https://www.nobelprize.org/) is probably the most famous competition every 
 world-class researcher is dreaming of winning, while the Olympic Games and 
 World Championships are what we have for athletes, 
-and the [Oscars](https://www.oscars.org/) and the [Cannes Film Festival](https://www.festival-cannes.com/en/)
-are the competitions for the best artists in cinema，and so on.
+and the [Oscars](https://www.oscars.org/) and [Cannes Film Festival](https://www.festival-cannes.com/en/)
+are competitions for the best artists in cinema，and so on.
 
 Even though the value of competition may be well understood by
 a business, a practical application of it in an R&D department
