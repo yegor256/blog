@@ -15,6 +15,8 @@ keywords:
 nospell: true
 ---
 
+{% badge https://www.yegor256.com/images/face-1024x1024.jpg](https://www.yegor256.com/images/face-1024x1024.jpg 250 %}
+
 Quick bio:<br/>
 Lab Director in Huawei, founder of Zerocracy and author of Elegant Objects.
 
@@ -74,12 +76,6 @@ Moscow, Russia
 Postal address:<br/>
 555 Bryant Str, Ste 470,<br/>
 Palo Alto, CA 94301, USA.
-
-Phone/WhatsApp:<br/>
-+1 408.692.4742 (USA)
-
-Email:<br/>
-yegor256@gmail.com
 
 Telegram:<br/>
 [@yegor256](https://t.me/yegor256)
