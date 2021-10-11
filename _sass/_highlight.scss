@@ -13,6 +13,7 @@ code {
   background-color: lightgray;
   border-radius: 3px;
   font-size: 90%;
+  hyphens: none;
   line-height: $em;
   padding: 0 .15 * $em;
 }
