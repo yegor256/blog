@@ -61,32 +61,40 @@ To turn an EO program into a executable entity and release it to
 [Objectionary](https://www.objectionary.com), 
 one has to go through the following mandatory steps,
 assuming JVM is used as a target platform
-(the steps marked with 🌵 are implemented by
+(the steps marked with 🌵 are implemented by our
 [eo-maven-plugin](https://github.com/cqfn/eo)):
 
-  * **Parse**🌵: `.eo` ➜ `.xmir`
-  * **Optimize**🌵: `.xmir` ➜ better `.xmir`
-  * **Discover**🌵: find all foreign aliases
-  * **Pull**🌵: download foreign `.eo` objects from Objectionary
-  * **Resolve**🌵: take `.jar` artifacts from Maven Central and unpack
-  * **Place**🌵: move artifact `.class` files to `target/classes/`
-  * **Extend**🌵: mark `.eo` sources found in `.jar` as foreign
-  * ↑ Go back to **Parse** if some `.eo` files still not parsed
+  * **Assemble**🌵:
+    * **Parse**🌵: `.eo` ➜ `.xmir`
+    * **Optimize**🌵: `.xmir` ➜ better `.xmir`
+    * **Discover**🌵: find all foreign aliases
+    * **Pull**🌵: [download](https://github.com/yegor256/objectionary) foreign `.eo` objects
+    * **Resolve**🌵: [download](https://search.maven.org/) and unpack `.jar` artifacts
+    * **Place**🌵: move artifact `.class` files to `target/classes/`
+    * **Mark**🌵: mark `.eo` sources found in `.jar` as foreign
+    * ↑ Go back to **Parse** if some `.eo` files still not parsed
   * **Transpile**🌵: `.xmir` ➜ `.java`
+  * **Assemble**🌵: same as above, but for tests
   * **Compile**: `.java` ➜ `.class`
-  * **Unplace**🌵: remove foreign `.class` files from `target/classes/`
+  * **Test**: run all unit tests
+  * **Unplace**🌵: remove artifact `.class` files
   * **Unspile**🌵: remove auto-generated `.java` files
   * **Copy**🌵: copy `.eo` files to `EO-SOURCES/` inside `.jar`
   * **Deploy**: package `.jar` artifact and put it into Maven Central
-  * **Push: send a pull request to [yegor256/objectionary](https://github.com/yegor256/objectionary)
-  * **Merge**: we test and merge your pull request
+  * **Push**: send a pull request to [yegor256/objectionary](https://github.com/yegor256/objectionary)
+  * **Merge**: we test and merge the pull request
 
 It is an iterative process, which loops over and over
-again until all required `.eo` objects are parsed and their atoms are present. 
-Then, all sources are transpiled and then compiled.
+again until all required `.eo` objects are parsed and their atoms are present
+as `.class` files. 
+Then, all `.xmir` files are transpiled to `.java` and then compiled
+to `.class` binaries. Then, tested, packaged, and deployed to Maven Central. Then,
+merged to the `master` branch of [Objectionary](https://www.objectionary.com), 
+via a pull request.
 
-The process can be automated with our Maven plugin. Place `.eo` sources
-to `src/main/eo/` and add this to your `pom.xml`:
+The first part of the algorithm can be automated with 
+[our Maven plugin](https://github.com/cqfn/eo), simply by placing `.eo` sources
+to `src/main/eo/` and adding this to `pom.xml`:
 
 {% highlight xml %}
 <project>
@@ -121,7 +129,9 @@ The `register` goal will scan the `src/main/eo/` directory, find all
 `target/eo-foreigns.csv`. Then, the `assemble` goal will call
 the following goals: `parse`, `optimize`, `discover`, `pull`, and
 `resolve`. All these goals use the CSV catalog when they parse, optimize,
-pull and so on. When all of them are done, the `assemble` checks the catalog: 
+pull and so on. 
+
+When all of them are done, the `assemble` checks the catalog: 
 whether any `.eo` files still require parsing? If they do, another
 cycle starts, again with parsing. When all `.eo` files are parsed,
 the goal `transpile` is executed, which turns `.xmir` files into `.java`
@@ -138,10 +148,10 @@ Say, this is the `.eo` source code at `src/main/eo/hello.eo`:
 +alias org.eolang.io.stdout
 
 [] > hello
-  "Jeff" > name
+  "Jeff" > user
   stdout > @
     "Hello, %s!"
-    name
+    user
 {% endhighlight %}
 
 It will be parsed to this XMIR (XML Intermediate Representation):
@@ -184,12 +194,29 @@ object `user` to the line where the object was defined:
 Some XSL transformation may check for grammar or semantical errors and
 add a new element `<errors/>` if something wrong is found. Thus, if parsing
 didn't find any syntax errors, all other errors will be visible inside
-the XMIR document.
+the XMIR document, for example, like this:
+
+{% highlight xml %}
+<program>
+  <errors>
+    <error line=>The program has no package</error>
+  </errors>
+  <o name="hello" line="1">
+    <o name="user" data="string" line="2">Jeff</o>
+    <o name="@" base="stdout" line="3">
+      <o data="string" line="4">Hello, %s!</o>
+      <o base="user" line="5" ref="2"/>
+    </o>
+  </o>
+</program>
+{% endhighlight %}
+
+By the way, this is not a real error, I just made it up.
 
 ## Discover 🌵
 
 At this step we find out which objects are "foreign" ones. In our example,
-the object `user` is not foreign, since it is defined in the code we
+the object `user` is not foreign, since it's defined in the code we
 have in front of us, while the object `stdout` is not defined here and
 that's why is a foreign one.
 
@@ -202,8 +229,10 @@ into the CSV catalog and claim it to be foreign.
 ## Pull 
 
 Here we simply try to find source code `.eo` files for all foreign
-objects in Objectionary, by looking at its GitHub repository. Here is
-the [`stdout.eo`](https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo).
+objects in Objectionary, by looking at its 
+[GitHub repository](https://github.com/yegor256/objectionary). 
+For example, this is where we would find
+[`stdout.eo`](https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo).
 We find them there and pull to the local disc.
 
 Pay attention, we pull the sources. Not binaries or compiled XMIR
@@ -244,49 +273,50 @@ By the way, a program may contain a number of `+rt` meta instructions, for examp
 [text] > stdout /bool
 {% endhighlight %}
 
-Here, two runtime platforms will know where to get the missing code
+Here, three runtime platforms will know where to get the missing code
 for the `stdout` atom:
-EO-to-Java will go to [Maven Central](https://search.maven.org/) for the JAR artifact,
-EO-to-Ruby will go to [RubyGems](https://rubygems.org/) 
+EO➝Java will go to [Maven Central](https://search.maven.org/) for the JAR artifact,
+EO➝Ruby will go to [RubyGems](https://rubygems.org/) 
 trying to find the gem by the name `eo-core` and version `0.5.8`,
-while EO-to-Python will go to [PyPi](https://pypi.org/) 
+while EO➝Python will go to [PyPi](https://pypi.org/) 
 trying to find `eo-basics` package with the version `0.0.3`.
 
 ## Place 🌵
 
-Then, we place its `.class` files into the `target/classes` directory,
+Then, we place all `.class` files found in the unpacked JAR,
+into the `target/classes` directory. We do this in order 
 to help Maven Compiler Plugin find them in classpath.
 
-## Extend 🌵
+## Mark 🌵
 
 In each JAR file that arrives, we can find `.eo` sources. They are the programs
 this JAR file has had in classpath while it was built. We consider them
-as foreign objects too and add to our catalog.
+as foreign objects too and add to the CSV catalog.
 
 ## Transpile 🌵
 
 When all foreign objects, which are registered in the catalog, are downloaded,
 compiled, and optimized, we are ready to start 
 [_transpiling_](https://en.wikipedia.org/wiki/Source-to-source_compiler).
-Instead of compiling XMIR directly to bytecode, we transpile it to `.java`
-and let Java complier do the job of generating bytecode.
+Instead of compiling XMIR directly to Bytecode, we transpile it to `.java`
+and let Java complier do the job of generating Bytecode.
 
-We believe that there are a few benefits of transpiling vs. compilation:
+We believe that there are a few benefits of transpiling to Java vs. compilation to Bytecode:
 
   * Output code is easier to read and debug,
   * Optimization power of existing compilers is reused,
   * Complexity of a transpiler is lower than of a compiler,
   * Portability of the output code is higher.
 
-We already have two EO➜Java transpilers: 
+We already have two EO➝Java transpilers: 
 [canonical one](https://github.com/cqfn/eo) and 
 [the one](https://github.com/polystat/hse-transpiler) made by [HSE University](https://www.hse.ru/en/). 
-We also have EO➜Python experimental [transpiler](https://github.com/polystat/eo2py) 
+We also have EO➝Python experimental [transpiler](https://github.com/polystat/eo2py) 
 made by students of [Innopolis University](https://innopolis.university/en/). 
 Most probably, when you read this article, there are more transpilers available.
 
 Even though we believe in transpiling, it's still possible to create 
-EO➜Bytecode, EO➜LLVM, or EO➜x86 compilers. 
+EO➝Bytecode, EO➝LLVM, or EO➝x86 compilers. 
 You are more than welcome to try!
 
 ## Compile
@@ -298,8 +328,14 @@ and turns them into `.class` files.
 ## Unplace 🌵
 
 Here, we remove all `.class` files unpacked from dependencies. This is
-necessary in order to avoid getting them packaged into the 
+necessary, in order to avoid getting them packaged into the 
 final JAR.
+
+We do placing and then unplacing simply because Maven Compiler Plugin
+[doesn't allow](https://stackoverflow.com/questions/3410548) 
+us to extend classpath in runtime. If it would be possible,
+we would just download dependencies from Maven Central and add them
+to classpath, without unpacking, placing, and then unplacing.
 
 ## Unspile 🌵
 
@@ -329,7 +365,7 @@ The version at the `+rt` line is `0.0.0`. When sources are copied to the
 JAR, this text is replaced.
 
 The motivation to ship sources together with binaries is the following.
-When atom binaries are compiled from Java to bytecode, they stay
+When atom binaries are compiled from Java to Bytecode, they stay
 next to transpiled sources. They are compiled together. Moreover,
 unit tests also rely on both atom sources and auto-generated/transpiled
 sources. We want future users of the JAR to know what sources we
@@ -337,19 +373,21 @@ had in place, when the compilation was going on, to maybe let them reproduce
 it or at least know what were the surroundings around the binaries they get.
 
 From a more practical standpoint, we need these sources in the JAR
-in order to let the **Extend** step understand what objects
+in order to let the **Mark** step understand what objects
 are worth pulling next to the atoms resolved.
 
 ## Deploy
 
-Here, we package everything from `target/classes` into a JAR
-archive and [deploy]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %}) 
+Here, we package everything from `target/classes/` into a JAR
+archive and [deploy]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %})  it
 to Maven Cental.
 
 I suggest deploying sources to GitHub Pages too, to let users see
 them in Web. Also, it will be helpful later, when we make a pull 
-request to Objectionary. Check this [`.rultor.yml`](https://github.com/yegor256/eo-files/blob/master/.rultor.yml#L17-L31) 
-script in one of my EO libraries, it deploys sources.
+request to Objectionary. 
+Check this [`.rultor.yml`](https://github.com/yegor256/eo-files/blob/master/.rultor.yml#L17-L31) 
+script in one of my EO libraries, it deploys `.eo` sources to GitHub Pages,
+substituting `0.0.0` version markers in them correctly.
 
 ## Push
 
@@ -363,4 +401,15 @@ versions must be set to real numbers.
 
 ## Merge
 
-...
+When the pull request arrives, GitHub Action pre-configured in
+[yegor256/objectionary](https://github.com/yegor256/objectionary) repository
+transpiles all `.eo` sources to all known platform and run all unit tests.
+If everything is clean, we review the pull request and decide whether
+the objects suggested go along with others already present in Objectionary.
+
+Once the pull request is merged, the objects become part of the centralized
+dictionary of all objects of EO. Take a look at [this pull request](https://github.com/yegor256/objectionary/pull/2), 
+where a new object was submitted to Objectionary, after its atom was
+deployed to Maven Central.
+
+
