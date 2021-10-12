@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Calibrated Achievement Points (CAP)</title>
+    <link rel="canonical" href="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html"
+        },
+        "headline": "Calibrated Achievement Points (CAP)",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2021/10/gridlockd.jpg",
+          "height": 608,
+          "width": 1080
+        },
+        "datePublished": "2021-10-12",
+        "dateModified": "2021-10-12",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Measuring individual performance is a very complex
+task, especially in R&D teams: here is how we do it.
+",
+        "keywords": ["measuring individual performance", "performance individual", "measure creativity", "creativity rules", "creativity"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>12 October 2021</p>
+      <h1>Calibrated Achievement Points (CAP)</h1>
+      <p>It’s a well-known problem nowadays: how can we measure the performance 
+and productivity of individual contributors who do non-routine 
+creative work? The best examples are research and development (R&amp;D) teams, which 
+usually consist of software engineers, designers, 
+scientists, architects, quality experts, product managers, and so on. 
+Such professionals deliver results that are hard to get down to simple numbers. 
+Many authors argue that the very idea of measuring individual performance is toxic and may only 
+lead to negative consequences. We tried to challenge this point of view 
+and did an experiment in our team, which demonstrated that individual 
+performance can indeed be measured, even if people’s work involves creativity, 
+and results are hard to predict. We designed a system of 
+Calibrated Achievement Points (CAP), which are rewarded to those who deliver 
+visible and tangible results of different kinds. This article explains how 
+CAPs work and summarizes the results of the experiment.</p>
+
+
+
+<amp-img src="/images/2021/10/gridlockd.jpg" alt="Gridlock'd (1997) by Vondie Curtis-Hall" height="608" width="1080" layout="responsive"></amp-img>
+
+<p>“Competitions are for horses, not artists,” said 
+<a href="https://en.wikipedia.org/wiki/B%C3%A9la_Bart%C3%B3k">Béla Bartók</a>, 
+a Hungarian composer about a hundred years ago.
+Indeed, how can we measure the productivity of someone making a piece
+of art, say, a painting? By the amount of acrylic put on the canvas
+per minute? Or maybe we ask painters to compete on the size of the canvas in 
+inches—the bigger the painting, the better the painter!? Obviously, such metrics
+would be considered not only useless, but harmful. Encouraging artists
+to compete by such productivity indicators will kill the very idea of art
+and will most probably discourage most talented artists from participating.</p>
+
+<p>It seems that these days, however, there are people who would disagree with the famous composer. 
+For example, Jacob Eisenberg from University College Dublin and 
+William Forde Thompson from Macquarie University, 
+in <a href="https://www.researchgate.net/publication/233148051_The_Effects_of_Competition_on_Improvisers'_Motivation_Stress_and_Creative_Performance">their research</a>
+into how amateur musicians’ creativity changes under stress of competition, demonstrated:
+competition positively affects creativity.
+A more recent study by Daniel Gross from Duke University confirmed this finding
+and extended it with a warning: heavy competition drives us to stop creativity
+altogether.
+Anil Rathi in <a href="https://hbr.org/2014/11/to-encourage-innovation-make-it-a-competition">HBR noted</a>,
+from a business perspective, 
+that “well-managed internal competitions amplify the company’s overall creative ambience.”</p>
+
+<p>Thus, it seems that in the modern world competition and creativity go together.
+However, the positive effect of competition depends on the
+rules the team has to play by and the quality of metrics. 
+If the metrics are reasonable and well understood
+by all participants, the competition drives the creativity.</p>
+
+<p>Of course, measuring the productivity of an artist by the amount of acrylic they
+put on the canvas or the productivity of a composer by the frequency
+of pushing the piano keys would be useless and harmful.
+There are however many examples of good metrics in art, sport, and science,
+which have stimulated the creativity of artists, athletes, and scientists for centuries:
+the <a href="https://www.nobelprize.org/">Nobel Prize</a> is probably the most famous competition every 
+world-class researcher is dreaming of winning, while the Olympic Games and 
+World Championships are what we have for athletes, 
+and the <a href="https://www.oscars.org/">Oscars</a> and <a href="https://www.festival-cannes.com/en/">Cannes Film Festival</a>
+are competitions for the best artists in cinema，and so on.</p>
+
+<p>Even though the value of competition may be well understood by
+a business, a practical application of it in an R&amp;D department
+may face many obstacles. The main problem would be to answer the question
+of both employees and the management: “What are the metrics that can objectively measure
+the performance of our people, who are not athletes or actors?”</p>
+
+<p>After more than a year of experiments we found an answer and built
+a system of CAPs. We defined a list of 30+ possible achievements 
+any member of our R&amp;D team can make while working within the scope of
+our research and development. Here are some of them as an example (the “limit”
+in brackets is how many achievements of this type are possible to count in one year):</p>
+
+<ul>
+  <li>“Major Product Release”: 30 (4)
+— a software product in a major version is packaged and released to its users;</li>
+  <li>“Conference Article Accepted”: 70
+— a new research paper submitted to a computer science conference and accepted there for publishing;</li>
+  <li>“Technical Report Accepted”: 40 (4)
+— a short 2-4 page internal report about technical results is submitted to
+our review board and accepted by it;</li>
+  <li>“New Hire”: 20 (4)
+— a new employee has passed all required interviews and joined the team;</li>
+  <li>“GitHub Star”: 1
+— most of our software projects are open source, that’s why we reward new stars obtained in GitHub;</li>
+  <li>“Lecture or Seminar”: 5 (4)
+— an educational presentation made inside the department.</li>
+</ul>
+
+<p>The list is available for everybody in our internal Wiki. Each member
+of our team can decide for themselves which achievements to deliver
+in order to win in the ranking. The achievements from the list don’t replace
+the everyday work everybody is doing but are the “extra mile” anyone
+can walk in order to stand out.</p>
+
+<p>Some achievements are personal, such as a lecture or a conference article,
+while others may only be created by a team, such as a major product release
+or new GitHub stars. Individual achievements are attributed directly
+to the account of an employee, while team achievements are distributed
+equally among team members: we have seven teams in our department.</p>
+
+<p>Obviously, the levels of competence and qualification are different
+for different people. Some of them are junior programmers, while others
+are PhD degree holders with decades of experience. Publishing a 
+computer science article for a junior programmer is a much larger achievement
+(which is harder to do) than for a seasoned expert. To take this 
+imbalance into account we introduced “weights” for each person, which
+are used as denominators. For example, if Jeff, a junior programmer, with a weight of 
+10 publishes an article, he earns 7 points (we divide 70 by 10).
+At the same time, if Sarah, a PhD with a weight of 25, publishes an article,
+she earns only 2.8 points (we divide 70 by 25).</p>
+
+<p>We organized our results monitoring system with a “push” principle in mind:
+everyone is responsible for reporting their own results to our team assistant.
+We don’t “pull” the information from them, they decide for themselves
+when and what to report. The team assistant collects the data in a simple
+Excel spreadsheet and emails it to everybody once a week (there are about 50
+people in our team). The document contains the journal of all achievements
+reported to date, the ranking of every team member, and their weights.</p>
+
+<p>Since the information is publicly available weekly, we encourage every
+team member to dispute the achievements of others, if they feel like it. We don’t
+have a special auditor for the results people report. Instead, peer review
+demonstrates perfect results: when someone reports something that 
+violates our expectations of quality or fairness, almost
+immediately a concern gets raises. Most disputes, which happen every few months,
+we resolve by open discussions.</p>
+
+<p>As was noted by David Sarnoff, an American businessman and pioneer 
+of American radio and television, “competition brings out the best in products 
+and the worst in people.” The CAP system we designed helped us not only
+see the best in product by increasing the productivity and creativity of
+our people, but also decrease the amount of “worst” which inevitably
+surfaces when people compete against each other. The CAP system gives us
+the rules, which are fair and transparent enough to significantly reduce the amount
+of conflicts and of cheating.</p>
+
+    </article>
+  </body>
+</html>

@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-09-29T05:56:15+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SIMBA: Simplified Management By Artifacts</title><link href="https://www.yegor256.com/2021/09/09/simba.html" rel="alternate" type="text/html" title="SIMBA: Simplified Management By Artifacts" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/09/09/simba</id><content type="html" xml:base="https://www.yegor256.com/2021/09/09/simba.html">&lt;p&gt;Here is a very simple management framework, which we have used in 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-10-12T04:40:07+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Calibrated Achievement Points (CAP)</title><link href="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html" rel="alternate" type="text/html" title="Calibrated Achievement Points (CAP)" /><published>2021-10-12T00:00:00+00:00</published><updated>2021-10-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/10/12/calibrated-achievement-points</id><content type="html" xml:base="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html">&lt;p&gt;It’s a well-known problem nowadays: how can we measure the performance 
+and productivity of individual contributors who do non-routine 
+creative work? The best examples are research and development (R&amp;amp;D) teams, which 
+usually consist of software engineers, designers, 
+scientists, architects, quality experts, product managers, and so on. 
+Such professionals deliver results that are hard to get down to simple numbers. 
+Many authors argue that the very idea of measuring individual performance is toxic and may only 
+lead to negative consequences. We tried to challenge this point of view 
+and did an experiment in our team, which demonstrated that individual 
+performance can indeed be measured, even if people’s work involves creativity, 
+and results are hard to predict. We designed a system of 
+Calibrated Achievement Points (CAP), which are rewarded to those who deliver 
+visible and tangible results of different kinds. This article explains how 
+CAPs work and summarizes the results of the experiment.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Gridlock&amp;#39;d (1997) by Vondie Curtis-Hall&quot; src=&quot;/images/2021/10/gridlockd.jpg&quot; longdesc=&quot;#88e55448&quot; /&gt;&lt;figcaption id=&quot;88e55448&quot;&gt;Gridlock&amp;#39;d (1997) by Vondie Curtis-Hall&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;“Competitions are for horses, not artists,” said 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/B%C3%A9la_Bart%C3%B3k&quot;&gt;Béla Bartók&lt;/a&gt;, 
+a Hungarian composer about a hundred years ago.
+Indeed, how can we measure the productivity of someone making a piece
+of art, say, a painting? By the amount of acrylic put on the canvas
+per minute? Or maybe we ask painters to compete on the size of the canvas in 
+inches—the bigger the painting, the better the painter!? Obviously, such metrics
+would be considered not only useless, but harmful. Encouraging artists
+to compete by such productivity indicators will kill the very idea of art
+and will most probably discourage most talented artists from participating.&lt;/p&gt;
+
+&lt;p&gt;It seems that these days, however, there are people who would disagree with the famous composer. 
+For example, Jacob Eisenberg from University College Dublin and 
+William Forde Thompson from Macquarie University, 
+in &lt;a href=&quot;https://www.researchgate.net/publication/233148051_The_Effects_of_Competition_on_Improvisers'_Motivation_Stress_and_Creative_Performance&quot;&gt;their research&lt;/a&gt;
+into how amateur musicians’ creativity changes under stress of competition, demonstrated:
+competition positively affects creativity.
+A more recent study by Daniel Gross from Duke University confirmed this finding
+and extended it with a warning: heavy competition drives us to stop creativity
+altogether.
+Anil Rathi in &lt;a href=&quot;https://hbr.org/2014/11/to-encourage-innovation-make-it-a-competition&quot;&gt;HBR noted&lt;/a&gt;,
+from a business perspective, 
+that “well-managed internal competitions amplify the company’s overall creative ambience.”&lt;/p&gt;
+
+&lt;p&gt;Thus, it seems that in the modern world competition and creativity go together.
+However, the positive effect of competition depends on the
+rules the team has to play by and the quality of metrics. 
+If the metrics are reasonable and well understood
+by all participants, the competition drives the creativity.&lt;/p&gt;
+
+&lt;p&gt;Of course, measuring the productivity of an artist by the amount of acrylic they
+put on the canvas or the productivity of a composer by the frequency
+of pushing the piano keys would be useless and harmful.
+There are however many examples of good metrics in art, sport, and science,
+which have stimulated the creativity of artists, athletes, and scientists for centuries:
+the &lt;a href=&quot;https://www.nobelprize.org/&quot;&gt;Nobel Prize&lt;/a&gt; is probably the most famous competition every 
+world-class researcher is dreaming of winning, while the Olympic Games and 
+World Championships are what we have for athletes, 
+and the &lt;a href=&quot;https://www.oscars.org/&quot;&gt;Oscars&lt;/a&gt; and &lt;a href=&quot;https://www.festival-cannes.com/en/&quot;&gt;Cannes Film Festival&lt;/a&gt;
+are competitions for the best artists in cinema，and so on.&lt;/p&gt;
+
+&lt;p&gt;Even though the value of competition may be well understood by
+a business, a practical application of it in an R&amp;amp;D department
+may face many obstacles. The main problem would be to answer the question
+of both employees and the management: “What are the metrics that can objectively measure
+the performance of our people, who are not athletes or actors?”&lt;/p&gt;
+
+&lt;p&gt;After more than a year of experiments we found an answer and built
+a system of CAPs. We defined a list of 30+ possible achievements 
+any member of our R&amp;amp;D team can make while working within the scope of
+our research and development. Here are some of them as an example (the “limit”
+in brackets is how many achievements of this type are possible to count in one year):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Major Product Release”: 30 (4)
+— a software product in a major version is packaged and released to its users;&lt;/li&gt;
+  &lt;li&gt;“Conference Article Accepted”: 70
+— a new research paper submitted to a computer science conference and accepted there for publishing;&lt;/li&gt;
+  &lt;li&gt;“Technical Report Accepted”: 40 (4)
+— a short 2-4 page internal report about technical results is submitted to
+our review board and accepted by it;&lt;/li&gt;
+  &lt;li&gt;“New Hire”: 20 (4)
+— a new employee has passed all required interviews and joined the team;&lt;/li&gt;
+  &lt;li&gt;“GitHub Star”: 1
+— most of our software projects are open source, that’s why we reward new stars obtained in GitHub;&lt;/li&gt;
+  &lt;li&gt;“Lecture or Seminar”: 5 (4)
+— an educational presentation made inside the department.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The list is available for everybody in our internal Wiki. Each member
+of our team can decide for themselves which achievements to deliver
+in order to win in the ranking. The achievements from the list don’t replace
+the everyday work everybody is doing but are the “extra mile” anyone
+can walk in order to stand out.&lt;/p&gt;
+
+&lt;p&gt;Some achievements are personal, such as a lecture or a conference article,
+while others may only be created by a team, such as a major product release
+or new GitHub stars. Individual achievements are attributed directly
+to the account of an employee, while team achievements are distributed
+equally among team members: we have seven teams in our department.&lt;/p&gt;
+
+&lt;p&gt;Obviously, the levels of competence and qualification are different
+for different people. Some of them are junior programmers, while others
+are PhD degree holders with decades of experience. Publishing a 
+computer science article for a junior programmer is a much larger achievement
+(which is harder to do) than for a seasoned expert. To take this 
+imbalance into account we introduced “weights” for each person, which
+are used as denominators. For example, if Jeff, a junior programmer, with a weight of 
+10 publishes an article, he earns 7 points (we divide 70 by 10).
+At the same time, if Sarah, a PhD with a weight of 25, publishes an article,
+she earns only 2.8 points (we divide 70 by 25).&lt;/p&gt;
+
+&lt;p&gt;We organized our results monitoring system with a “push” principle in mind:
+everyone is responsible for reporting their own results to our team assistant.
+We don’t “pull” the information from them, they decide for themselves
+when and what to report. The team assistant collects the data in a simple
+Excel spreadsheet and emails it to everybody once a week (there are about 50
+people in our team). The document contains the journal of all achievements
+reported to date, the ranking of every team member, and their weights.&lt;/p&gt;
+
+&lt;p&gt;Since the information is publicly available weekly, we encourage every
+team member to dispute the achievements of others, if they feel like it. We don’t
+have a special auditor for the results people report. Instead, peer review
+demonstrates perfect results: when someone reports something that 
+violates our expectations of quality or fairness, almost
+immediately a concern gets raises. Most disputes, which happen every few months,
+we resolve by open discussions.&lt;/p&gt;
+
+&lt;p&gt;As was noted by David Sarnoff, an American businessman and pioneer 
+of American radio and television, “competition brings out the best in products 
+and the worst in people.” The CAP system we designed helped us not only
+see the best in product by increasing the productivity and creativity of
+our people, but also decrease the amount of “worst” which inevitably
+surfaces when people compete against each other. The CAP system gives us
+the rules, which are fair and transparent enough to significantly reduce the amount
+of conflicts and of cheating.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">It’s a well-known problem nowadays: how can we measure the performance and productivity of individual contributors who do non-routine creative work? The best examples are research and development (R&amp;amp;D) teams, which usually consist of software engineers, designers, scientists, architects, quality experts, product managers, and so on. Such professionals deliver results that are hard to get down to simple numbers. Many authors argue that the very idea of measuring individual performance is toxic and may only lead to negative consequences. We tried to challenge this point of view and did an experiment in our team, which demonstrated that individual performance can indeed be measured, even if people’s work involves creativity, and results are hard to predict. We designed a system of Calibrated Achievement Points (CAP), which are rewarded to those who deliver visible and tangible results of different kinds. This article explains how CAPs work and summarizes the results of the experiment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SIMBA: Simplified Management By Artifacts</title><link href="https://www.yegor256.com/2021/09/09/simba.html" rel="alternate" type="text/html" title="SIMBA: Simplified Management By Artifacts" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/09/09/simba</id><content type="html" xml:base="https://www.yegor256.com/2021/09/09/simba.html">&lt;p&gt;Here is a very simple management framework, which we have used in 
 our teams for the last two years. We came to it experimentally,
 trying to merge some Agile principles, 
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge&quot;&gt;PMBOK&lt;/a&gt; ideas, and
@@ -1464,146 +1598,4 @@ Objectivity and honesty is being replaced with adulation and grovelling.
 Take it or leave it.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How do you know that your boss appreciates your work more than others?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1355972734614974464?ref_src=twsrc%5Etfw&quot;&gt;January 31, 2021&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="sarcasm" /><summary type="html">You got into a company that believes in democratic values, doesn’t measure performance, doesn’t judge, doesn’t control, doesn’t force, and doesn’t blame; however, at the end of the year they tell you that your performance was not as high as expected. Why? “Just work better, my friend, we count on you!” Bad luck, you are in a teal self-managing organization. They’ve already killed the management, but still didn’t dare to kill the managers. They don’t know how to measure, but still have people who are supposed to do it regularly, in order to distribute monetary rewards. What do you do before you quit? Here is a survival recipe.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Self-Managing vs. Manager-Free Organizations</title><link href="https://www.yegor256.com/2020/12/22/self-managing-orgs.html" rel="alternate" type="text/html" title="Self-Managing vs. Manager-Free Organizations" /><published>2020-12-22T00:00:00+00:00</published><updated>2020-12-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2020/12/22/self-managing-orgs</id><content type="html" xml:base="https://www.yegor256.com/2020/12/22/self-managing-orgs.html">&lt;p&gt;We are in trouble. On the one hand, most managers are weak and incompetent.
-Their mistakes destroy our &lt;a href=&quot;/2017/09/19/what-motivates-me.html&quot;&gt;motivation&lt;/a&gt;,
-decrease productivity, and lead to business failures.
-As a result, many of us believe that managers are evil.
-On the other hand, there is a new idea that self-managing organizations are
-the future. Its proponents are trying to convince us that chaos is
-better than management mistakes. They want us to believe that subordination,
-hierarchy, &lt;a href=&quot;/2016/09/27/command-control-innovate.html&quot;&gt;control&lt;/a&gt;,
-and order are new bad words to be prohibited in a respectful society.
-We must stop them!&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Loro (2018) by Paolo Sorrentino&quot; src=&quot;/images/2020/12/loro.jpg&quot; longdesc=&quot;#21fff271&quot; /&gt;&lt;figcaption id=&quot;21fff271&quot;&gt;Loro (2018) by Paolo Sorrentino&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Self-managing organization are, as some researchers
-&lt;a href=&quot;https://www.sciencedirect.com/science/article/abs/pii/S0191308517300059&quot;&gt;believe&lt;/a&gt;,
-post-bureaucratic, humanistic, democratic, and even
-&lt;a href=&quot;/2016/02/18/holacracy-autocracy.html&quot;&gt;holacratic&lt;/a&gt;.
-&lt;a href=&quot;https://frankmartela.com/about-the-author/&quot;&gt;Frank Martela&lt;/a&gt;
-&lt;a href=&quot;https://jorgdesign.springeropen.com/articles/10.1186/s41469-019-0062-9&quot;&gt;says&lt;/a&gt;
-that self-management is “an &lt;em&gt;ideal&lt;/em&gt; type of organizational form.”
-The idea is trendy, especially after the publication
-of &lt;a href=&quot;https://amzn.to/3mgxt7k&quot;&gt;Reinventing Organizations&lt;/a&gt; by Frederic Laloux.
-However, “calling it a novel phenomenon is utter nonsense,”
-&lt;a href=&quot;https://corporate-rebels.com/reinventing-the-wheel/&quot;&gt;according&lt;/a&gt; to
-&lt;a href=&quot;https://twitter.com/joost_minnaar&quot;&gt;Joost Minnaar&lt;/a&gt;—the idea has been known for decades.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=WZlIb5oxDBQ&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/WZlIb5oxDBQ/mqdefault.jpg&quot; alt=&quot;YouTube video #WZlIb5oxDBQ&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M152: There is no management without personal responsibility;
-        14 December 2020.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;My first question is: what exactly was wrong with
-bureaucratic, un-humanistic, and non-democratic management?
-&lt;a href=&quot;https://en.wikipedia.org/wiki/James_R._Barker&quot;&gt;James R. Barker&lt;/a&gt;
-made it clear &lt;a href=&quot;https://www.jstor.org/stable/pdf/2393374.pdf&quot;&gt;a long time ago&lt;/a&gt;:
-“workers in a self-managing team will experience day-to-day work life in vastly
-different ways than workers in a traditional management system. Instead
-of being told what to do by a supervisor, self-managing workers must
-gather and synthesize information, act on it, and take collective
-responsibility for those actions.”&lt;/p&gt;
-
-&lt;p&gt;Sounds &lt;a href=&quot;https://medium.com/culturati/2f23c298c79b&quot;&gt;very attractive&lt;/a&gt;.
-Nobody tells us what to do anymore! We just look around,
-gather information, synthesize more information, and “act!” (whatever that means).
-Of course, we must not forget that money somehow arrives in our bank accounts
-every two weeks—this component of the old un-humanistic bureaucratic management model
-we don’t want to get rid of, I believe. Right, Mr. Barker?&lt;/p&gt;
-
-&lt;p&gt;Seriously, who in a self-managing organization makes these decisions:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;An employee asks for a raise&lt;/li&gt;
-  &lt;li&gt;An employee gets lazy and must be fired&lt;/li&gt;
-  &lt;li&gt;An employee needs a budget for a new project&lt;/li&gt;
-  &lt;li&gt;A project must be terminated&lt;/li&gt;
-  &lt;li&gt;A new employee needs to be hired&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Simply put, who resolves monetary and performance appraisal conflicts, and how?
-All together by “raising their thumb”
-as &lt;a href=&quot;https://medium.com/percolab-droplets/generative-decision-making-process-cf0b131c5ac4&quot;&gt;Generative Decision Making&lt;/a&gt; suggests?
-Thumb-raising will work for low-caliber questions like which
-kind of coffee we should order for the office next week or what the
-best color is for our new t-shirts. However, more important strategic decisions
-may only be made by those who are ready to pay for mistakes: managers.&lt;/p&gt;
-
-&lt;p&gt;In a traditional hierarchical organization, everybody has a manager, who
-is responsible for answering these questions. This is what managers are for:
-to concentrate authority and responsibility. This is what levels of management
-are for: to decompose larger authority and responsibility into
-smaller pieces, delegating them to lower-level personnel. I believe, I don’t need
-to explain this essential wisdom: it’s the fundamentals of management.
-Right, &lt;a href=&quot;https://en.wikipedia.org/wiki/Peter_Drucker&quot;&gt;Mr. Drucker&lt;/a&gt;?&lt;/p&gt;
-
-&lt;p&gt;However, despite the feeling that self-management adepts are not practitioners but
-liberal propagandists (trying to declare freedom to everybody without giving
-any practically possible scenarios),
-there is one idea I do share with them: managers are evil.
-Pay attention: managers, not management! There is a big difference.&lt;/p&gt;
-
-&lt;p&gt;Let’s get back to the problem definition once again: We don’t like being
-told what to do. However, is this really the problem or is there something deeper
-that we are missing? Let’s see, what are the most popular issues with management that people
-complain about (I got them from
-&lt;a href=&quot;https://www.inc.com/marcel-schwantes/8-mistakes-managers-make-according-to-their-employees.html&quot;&gt;Inc&lt;/a&gt;
-and
-&lt;a href=&quot;https://www.monster.co.uk/advertise-a-job/hr-resources/workforce-management-and-planning/management-skills/what-are-the-most-common-management-mistakes/&quot;&gt;Monster&lt;/a&gt;):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They micromanage&lt;/li&gt;
-  &lt;li&gt;They don’t listen&lt;/li&gt;
-  &lt;li&gt;They don’t value us&lt;/li&gt;
-  &lt;li&gt;They don’t provide feedback&lt;/li&gt;
-  &lt;li&gt;They don’t motivate&lt;/li&gt;
-  &lt;li&gt;They don’t set goals&lt;/li&gt;
-  &lt;li&gt;They don’t delegate&lt;/li&gt;
-  &lt;li&gt;They don’t explain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The list may be much longer, but I think that the root cause of all of them
-is the same: managers make &lt;em&gt;appraisal mistakes&lt;/em&gt;. As all other people, managers
-can’t always be objective. Instead, they are very biased and subjective. We say that they
-don’t listen. This is our perception. They do listen, but they don’t
-appraise us right, based on the information we deliver. They do listen, but they
-don’t call us genius. What do we say? They don’t listen! They don’t motivate, we say, but
-in reality they just don’t give us what we think we deserve. They don’t value us?
-The same story: we just feel unappreciated. We feel they micromanage? They just
-don’t appreciate the results we deliver without micromanagement, we stop
-delivering anything, and they resort to micromanagement.
-The root cause always is the same: appraisal mistakes.&lt;/p&gt;
-
-&lt;p&gt;What can we do to fix this?
-We should take the appraisal job away from managers! This is how we solve the problem.
-People must not decide whose performance is better, because they can’t do it
-right and this leads to all the other problems. If managers stop appraising us,
-they will turn into leaders, mentors, teachers, experts, gurus, decision makers,
-and everybody else, who we don’t hate. We hate &lt;em&gt;appraisers&lt;/em&gt;, because they make
-mistakes about our performance and kill our motivation. We won’t hate them
-at all, if there is a &lt;em&gt;system&lt;/em&gt;, which is based on
-&lt;a href=&quot;/2020/06/23/individual-performance-metrics.html&quot;&gt;&lt;em&gt;metrics&lt;/em&gt;&lt;/a&gt;,
-which judge our results.&lt;/p&gt;
-
-&lt;p&gt;What self-managing adepts are offering is to destroy the entire management
-system and replace it with chaos (or something very close to it).
-They seem to not understand where the real problem is. They just don’t like
-“being told what to do” and to fix this they suggest getting rid
-of what our civilization has been building for thousands of years:
-responsibility delegation through subordination (aka “management”).
-They meet incompetent management that doesn’t appreciate them enough and
-start crying and blaming everybody with the word “manager” in their job titles.
-In other words, to cure the tumor they want to kill the patient.&lt;/p&gt;
-
-&lt;p&gt;Let me reiterate: The evolution of management is needed! We are not happy
-with what we have now: most managers are incompetent. However, the solution is not
-self-managing but manager-less organizations. We need objective metrics,
-automated &lt;a href=&quot;/2018/03/21/zerocracy-announcement.html&quot;&gt;tools&lt;/a&gt; (maybe with AI) to replace
-&lt;a href=&quot;/2016/05/24/who-is-project-manager.html&quot;&gt;managers&lt;/a&gt;
-as our appraisers.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">We are in trouble. On the one hand, most managers are weak and incompetent. Their mistakes destroy our motivation, decrease productivity, and lead to business failures. As a result, many of us believe that managers are evil. On the other hand, there is a new idea that self-managing organizations are the future. Its proponents are trying to convince us that chaos is better than management mistakes. They want us to believe that subordination, hierarchy, control, and order are new bad words to be prohibited in a respectful society. We must stop them!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/loro.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/loro.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="sarcasm" /><summary type="html">You got into a company that believes in democratic values, doesn’t measure performance, doesn’t judge, doesn’t control, doesn’t force, and doesn’t blame; however, at the end of the year they tell you that your performance was not as high as expected. Why? “Just work better, my friend, we count on you!” Bad luck, you are in a teal self-managing organization. They’ve already killed the management, but still didn’t dare to kill the managers. They don’t know how to measure, but still have people who are supposed to do it regularly, in order to distribute monetary rewards. What do you do before you quit? Here is a survival recipe.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2020/12/bonnie-and-clyde.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

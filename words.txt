@@ -71,6 +71,7 @@ acquisition
 acquisitions
 acronym
 across
+acrylic
 act
 acted
 acting
@@ -255,6 +256,7 @@ am
 amateur
 amazon
 ambassadors
+ambience
 ambiguity
 ambiguous
 ambition
@@ -269,6 +271,7 @@ among
 amount
 amounts
 amp
+amplify
 amsterdam
 amy
 amy's
@@ -301,6 +304,7 @@ angle
 angles
 angry
 AngularJS
+anil
 animal
 animals
 animate
@@ -459,6 +463,7 @@ articles
 artifact
 artifacts
 artificial
+artist
 artistic
 artists
 arzhantsev
@@ -513,6 +518,7 @@ assure
 asylum
 at
 ate
+athletes
 atlantic
 atlassian
 atmosphere
@@ -556,6 +562,7 @@ auctioning
 audience
 audio
 audit
+auditor
 augmented
 august
 australia
@@ -663,6 +670,7 @@ barrier
 barriers
 barry
 bars
+bart
 base
 baseball
 basecamp
@@ -1014,6 +1022,7 @@ bus
 business
 business-making
 businesses
+businessman
 businessmen
 busted
 busy
@@ -1054,6 +1063,7 @@ calculations
 calculator
 calculus
 calendar
+calibrated
 california
 californian
 call
@@ -1085,6 +1095,7 @@ cancer
 candidate
 candidate's
 candidates
+cannes
 cannot
 canvas
 cap
@@ -1201,6 +1212,7 @@ challenges
 challenging
 champion
 champions
+championships
 chance
 chances
 change
@@ -1297,6 +1309,7 @@ chunk
 chunks
 CI
 ciera
+cinema
 cinemas
 circle
 CircleCI
@@ -1460,6 +1473,7 @@ collections
 collective
 collectors
 collects
+college
 collisions
 colloquy
 colon
@@ -1541,6 +1555,7 @@ competence
 competent
 competing
 competition
+competitions
 competitive
 competitor
 competitors
@@ -2168,6 +2183,7 @@ demystifying
 denial
 deniro's
 denominator
+denominators
 dentists
 deny
 department
@@ -2402,6 +2418,7 @@ dispatching
 display
 displays
 disposal
+dispute
 disputes
 disqualified
 disrespect
@@ -2552,10 +2569,12 @@ DSL
 DTO
 DTOs
 duarte
+dublin
 dude
 due
 dues
 duh
+duke
 dull
 dumb
 dumber
@@ -2648,6 +2667,7 @@ eight
 eighth
 einstein
 einstein's
+eisenberg
 either
 el
 elastic
@@ -3050,6 +3070,7 @@ failures
 fair
 faire
 fairly
+fairness
 faithfulness
 fake
 fakes
@@ -3125,6 +3146,7 @@ female
 females
 feminine
 feminist
+festival
 fetch
 fetches
 fetching
@@ -3282,6 +3304,7 @@ forced
 forces
 forcing
 ford
+forde
 forecast
 foreign
 foreigner
@@ -3745,6 +3768,7 @@ have
 haven't
 having
 hazardous
+HBR
 HD
 HDD
 HDFS
@@ -3882,6 +3906,7 @@ horizontally
 horrible
 horrid
 horror
+horses
 hospital
 host
 hostage
@@ -3934,6 +3959,7 @@ hundred
 hundred-dollar-bill
 hundred-year
 hundreds
+hungarian
 hungry
 hunt
 hunter
@@ -4006,6 +4032,7 @@ imaginary
 imagination
 imaginative
 imagine
+imbalance
 imitate
 immature
 immediate
@@ -4076,6 +4103,7 @@ inbox
 inc
 incapable
 incautious
+inches
 incident
 incl
 include
@@ -4406,6 +4434,7 @@ its
 itself
 ivan
 jack
+jacob
 jaguar
 jail
 jain
@@ -4946,6 +4975,7 @@ machine
 machines
 MacOS
 macports
+macquarie
 macro-tasking
 made
 magazine
@@ -5460,6 +5490,7 @@ muscles
 mush
 music
 musician
+musicians'
 musk
 musk's
 muslim
@@ -5640,6 +5671,7 @@ non-local
 non-native
 non-professional
 non-programmer
+non-routine
 non-stop
 non-tech
 non-traditional
@@ -5727,6 +5759,7 @@ obsession
 obstacle
 obstacles
 obtain
+obtained
 obvious
 obviously
 occasional
@@ -5777,6 +5810,7 @@ older
 oldest
 olive
 ology
+olympic
 on
 on-fly
 on-premise
@@ -5882,6 +5916,7 @@ orthodox
 orthogonal
 OS
 oscar
+oscars
 OSI
 oslo
 OSS
@@ -5980,6 +6015,8 @@ pain
 painful
 painofoop
 painstaking
+painter
+painters
 painting
 pair
 paired
@@ -6186,6 +6223,7 @@ physical
 physically
 physicians
 physics
+piano
 pick
 picked
 picks
@@ -6212,6 +6250,7 @@ pinpoint
 pint
 pinterest
 pinterests
+pioneer
 pipe
 pipeline
 pipelines
@@ -6660,6 +6699,7 @@ publicly
 publish
 published
 publisher
+publishes
 publishing
 pull
 pulling
@@ -6702,6 +6742,7 @@ python's
 QA
 qayyum
 QCon
+qualification
 qualified
 qualities
 quality
@@ -6775,6 +6816,7 @@ rate
 rate-setting
 rates
 rather
+rathi
 rating
 ratio
 rationale
@@ -7354,6 +7396,7 @@ sans-serif
 sarah
 sarcasm
 sarcastic
+sarnoff
 SASS
 sass-maven-plugin
 satisfaction
@@ -7524,6 +7567,7 @@ semi-automatically
 semi-historical
 semi-object
 semi-procedural
+seminar
 seminars
 send
 sender
@@ -8046,6 +8090,7 @@ standups
 stanford
 stannard
 stapler
+star
 starbucks
 stare
 stars
@@ -8104,6 +8149,7 @@ sticks
 sticky
 stigma
 still
+stimulated
 stink
 stock
 stockholm
@@ -8292,6 +8338,7 @@ supreme
 suprise
 sur
 sure
+surfaces
 surpasses
 surprise
 surprised
@@ -8430,6 +8477,7 @@ technologies
 technology
 telecommuting
 telegram
+television
 tell
 telldontask
 telling
@@ -8537,6 +8585,7 @@ thirty
 thirty-two
 this
 thomas
+thompson
 those
 though
 thought
@@ -9189,6 +9238,7 @@ wants
 WAR
 warm
 warn
+warning
 warnings
 wars
 was
@@ -9251,6 +9301,7 @@ weekly
 weeks
 wei
 weight
+weights
 weird
 welch
 welcome
@@ -9379,6 +9430,7 @@ works
 workshop
 workshops
 world
+world-class
 worlds
 worldwide
 worried
