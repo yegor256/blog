@@ -48,6 +48,8 @@ would be considered not only useless, but harmful. Encouraging artists
 to compete by such productivity indicators will kill the very idea of art
 and will most probably discourage most talented artists from participating.
 
+{% quote Competition positively affects creativity. %}
+
 It seems that these days, however, there are people who would disagree with the famous composer. 
 For example, Jacob Eisenberg from University College Dublin and 
 William Forde Thompson from Macquarie University, 
