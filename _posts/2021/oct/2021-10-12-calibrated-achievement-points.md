@@ -13,9 +13,9 @@ keywords:
   - measure creativity
   - creativity rules
   - creativity
-image: /images/2021/04/
+image: /images/2021/10/gridlockd.jpg
 jb_picture:
-  caption:
+  caption: Gridlock'd (1997) by Vondie Curtis-Hall
 ---
 
 It's a well-known problem nowadays: how can we measure the performance 
