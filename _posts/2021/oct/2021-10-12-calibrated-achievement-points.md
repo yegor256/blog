@@ -24,7 +24,8 @@ creative work? The best examples are research and development (R&D) teams, which
 usually consist of software engineers, designers, 
 scientists, architects, quality experts, product managers, and so on. 
 Such professionals deliver results that are hard to get down to simple numbers. 
-Many authors argue that the very idea of measuring individual performance is toxic and may only 
+Many authors [argue]({% pst 2020/jun/2020-06-23-individual-performance-metrics %})
+that the very idea of measuring individual performance is toxic and may only 
 lead to negative consequences. We tried to challenge this point of view 
 and did an experiment in our team, which demonstrated that individual 
 performance can indeed be measured, even if people's work involves creativity, 
@@ -56,7 +57,8 @@ William Forde Thompson from Macquarie University,
 in [their research](https://www.researchgate.net/publication/233148051_The_Effects_of_Competition_on_Improvisers'_Motivation_Stress_and_Creative_Performance)
 into how amateur musicians' creativity changes under stress of competition, demonstrated:
 competition positively affects creativity.
-A more recent study by Daniel Gross from Duke University confirmed this finding
+A more recent [study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3250603)
+by Daniel Gross from Duke University confirmed this finding
 and extended it with a warning: heavy competition drives us to stop creativity
 altogether.
 Anil Rathi in [HBR noted](https://hbr.org/2014/11/to-encourage-innovation-make-it-a-competition),
