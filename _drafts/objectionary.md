@@ -321,7 +321,7 @@ You are more than welcome to try!
 
 ## Compile
 
-At this step, the standard [Maver Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) 
+At this step, the standard [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) 
 finds auto-generated `.java` files in `target/generated-sources`
 and turns them into `.class` files.
 
@@ -380,7 +380,7 @@ are worth pulling next to the atoms resolved.
 
 Here, we package everything from `target/classes/` into a JAR
 archive and [deploy]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %})  it
-to Maven Cental.
+to Maven Central.
 
 I suggest deploying sources to GitHub Pages too, to let users see
 them on the Web. Also, it will be helpful later when we make a pull 
