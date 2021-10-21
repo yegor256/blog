@@ -594,6 +594,7 @@ automatically
 automating
 automation
 automattic
+autonomous
 availability
 available
 avatar
@@ -801,6 +802,7 @@ billionaires
 billions
 bills
 bin
+binaries
 binary
 binary-tree-traversing
 bind
@@ -2833,6 +2835,7 @@ environment
 environmental
 environments
 EO
+eo-maven-plugin
 eolang
 epidemic
 episode
@@ -2942,6 +2945,7 @@ exclusively
 excuse
 excused
 excuses
+executable
 execute
 executed
 executes
@@ -3747,6 +3751,7 @@ harder
 hardly
 hardmen
 hardware
+hardware-specific
 harm
 harmful
 harming
@@ -4610,6 +4615,7 @@ kent
 kentbeck
 kept
 kernel
+kernighan
 key
 keyboard
 keynote
@@ -4805,6 +4811,7 @@ lexer
 liability
 liao
 liar
+libc
 liberal
 liberals
 libraries
@@ -4920,6 +4927,7 @@ looks
 loompaland
 loop
 looping
+loops
 loose
 loosely
 lopes
@@ -5737,6 +5745,7 @@ object-oriented
 object-relational
 object-to-object
 objected-oriented
+objectionary
 objective
 objective-c
 objectively
@@ -7274,6 +7283,7 @@ risks
 risky
 rita
 rita's
+ritchie
 ritual
 road
 road-side
@@ -7633,6 +7643,7 @@ settle
 settled
 setup
 seven
+seventeen
 seventh
 several
 severe
@@ -8262,6 +8273,7 @@ subsequently
 subset
 substantial
 substitute
+substituting
 substitution
 subtitle
 subtitles
@@ -8347,6 +8359,7 @@ surprising
 surprisingly
 surrogate
 surrounded
+surroundings
 survey
 survival
 survive
@@ -8756,6 +8769,9 @@ transmit
 transparency
 transparent
 transparently
+transpile
+transpiled
+transpiles
 transport
 transsexuals
 trash
@@ -8977,7 +8993,9 @@ unmotivated
 unnecessary
 unofficially
 unordered
+unpack
 unpacks
+unplace
 unpleasant
 unpredictability
 unpredictable
@@ -8992,6 +9010,7 @@ unreliable
 unresolved
 unsafe
 unsolvable
+unspile
 unstable
 unsubscribe
 unsubscribed
@@ -9198,6 +9217,7 @@ vitally
 vivian
 vJUG
 VLC
+VMs
 vocabulary
 vocal
 voice
