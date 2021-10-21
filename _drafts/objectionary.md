@@ -22,7 +22,7 @@ jb_picture:
 {% badge /images/books/elegant-objects/cactus.svg 128 http://www.eolang.org %}
 
 Since the time of Kernighan and Ritchie we share binary code in
-libraries. You need to print a text with [`printf()`](https://en.wikipedia.org/wiki/Printf_format_string) in C++? 
+libraries. You need to print some text with [`printf()`](https://en.wikipedia.org/wiki/Printf_format_string) in C++? 
 You get [libc](https://en.wikipedia.org/wiki/Glibc) library with
 [700+](https://stackoverflow.com/a/33188344/187141) other functions inside.
 You need to copy a Java stream?
@@ -41,26 +41,26 @@ Wouldn't it be more elegant to deal with individual objects instead?
 
 {% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
 The idea is not new and not mine. 
-I got it from [Object Thinking](http://amzn.to/266oJr4) book
-by David West, where he suggested creating _Objectionary_ (page 306), 
+I got it from the book [Object Thinking](http://amzn.to/266oJr4)
+by David West, where he suggested creating an _Objectionary_ (page 306), 
 a "combination of dictionary and object factory," with the following properties:
 
   * The total number of objects is less than 2000;
   * Each object is an autonomous executable entity;
   * Every object has a unique ID and a unique "address";
   * Objects are nothing more than collections of objects;
-  * Objects require a hardware-specific VMs for execution.
+  * Objects require hardware-specific VMs for execution.
 
-17 years later (the book was published in 2004), we implemented the idea
+Seventeen years later (the book was published in 2004), we implemented the idea
 on top of [EO](https://www.eolang.org), our new programming language.
 The language is intentionally much simpler than Java or C++.
 You can read its more or less formal description 
 [here](https://www.eolang.org/eolang-paper.pdf).
 
-To turn an EO program into a executable entity and release it to 
-[Objectionary](https://www.objectionary.com), 
+To turn an EO program into an executable entity and release it to 
+the [Objectionary](https://www.objectionary.com), 
 one has to go through the following mandatory steps,
-assuming JVM is used as a target platform
+assuming the JVM is used as a target platform
 (the steps marked with 🌵 are implemented by our
 [eo-maven-plugin](https://github.com/cqfn/eo)):
 
@@ -72,7 +72,7 @@ assuming JVM is used as a target platform
     * **Resolve**🌵: [download](https://search.maven.org/) and unpack `.jar` artifacts
     * **Place**🌵: move artifact `.class` files to `target/classes/`
     * **Mark**🌵: mark `.eo` sources found in `.jar` as foreign
-    * ↑ Go back to **Parse** if some `.eo` files still not parsed
+    * ↑ Go back to **Parse** if some `.eo` files are still not parsed
   * **Transpile**🌵: `.xmir` ➜ `.java`
   * **Assemble**🌵: same as above, but for tests
   * **Compile**: `.java` ➜ `.class`
@@ -94,7 +94,7 @@ via a pull request.
 
 The first part of the algorithm can be automated with 
 [our Maven plugin](https://github.com/cqfn/eo), simply by placing `.eo` sources
-to `src/main/eo/` and adding this to `pom.xml`:
+in `src/main/eo/` and adding this to `pom.xml`:
 
 {% highlight xml %}
 <project>
@@ -125,20 +125,20 @@ to `src/main/eo/` and adding this to `pom.xml`:
 {% endhighlight %}
 
 The `register` goal will scan the `src/main/eo/` directory, find all
-`.eo` sources, and "register" then in a special CSV catalog at 
-`target/eo-foreigns.csv`. Then, the `assemble` goal will call
+`.eo` sources, and "register" them in a special CSV catalog at 
+`target/eo-foreigns.csv`. Next, the `assemble` goal will call
 the following goals: `parse`, `optimize`, `discover`, `pull`, and
 `resolve`. All these goals use the CSV catalog when they parse, optimize,
 pull and so on. 
 
-When all of them are done, the `assemble` checks the catalog: 
-whether any `.eo` files still require parsing? If they do, another
+When all of them are done, `assemble` checks the catalog: 
+do any `.eo` files still require parsing? If they do, another
 cycle starts, again with parsing. When all `.eo` files are parsed,
 the goal `transpile` is executed, which turns `.xmir` files into `.java`
-and place them into `target/generated-sources`. The rest is done by the
+and places them into `target/generated-sources`. The rest is done by the
 standard [`maven-compiler-plugin`](https://maven.apache.org/plugins/maven-compiler-plugin/).
 
-Let's discuss each step in details.
+Let's discuss each step in detail.
 
 ## Parse 🌵
 
@@ -191,7 +191,7 @@ object `user` to the line where the object was defined:
 </program>
 {% endhighlight %}
 
-Some XSL transformation may check for grammar or semantical errors and
+Some XSL transformation may check for grammar or semantic errors and
 add a new element `<errors/>` if something wrong is found. Thus, if parsing
 didn't find any syntax errors, all other errors will be visible inside
 the XMIR document, for example, like this:
@@ -215,7 +215,7 @@ By the way, this is not a real error, I just made it up.
 
 ## Discover 🌵
 
-At this step we find out which objects are "foreign" ones. In our example,
+At this step we find out which objects are "foreign". In our example,
 the object `user` is not foreign, since it's defined in the code we
 have in front of us, while the object `stdout` is not defined here and
 that's why is a foreign one.
@@ -283,19 +283,19 @@ trying to find `eo-basics` package with the version `0.0.3`.
 
 ## Place 🌵
 
-Then, we place all `.class` files found in the unpacked JAR,
+Next we place all `.class` files found in the unpacked JAR,
 into the `target/classes` directory. We do this in order 
 to help Maven Compiler Plugin find them in classpath.
 
 ## Mark 🌵
 
-In each JAR file that arrives, we can find `.eo` sources. They are the programs
+In each JAR file that arrives we can find `.eo` sources. They are the programs
 this JAR file has had in classpath while it was built. We consider them
 as foreign objects too and add to the CSV catalog.
 
 ## Transpile 🌵
 
-When all foreign objects, which are registered in the catalog, are downloaded,
+When all foreign objects which are registered in the catalog are downloaded,
 compiled, and optimized, we are ready to start 
 [_transpiling_](https://en.wikipedia.org/wiki/Source-to-source_compiler).
 Instead of compiling XMIR directly to Bytecode, we transpile it to `.java`
@@ -313,7 +313,7 @@ We already have two EO➝Java transpilers:
 [the one](https://github.com/polystat/hse-transpiler) made by [HSE University](https://www.hse.ru/en/). 
 We also have EO➝Python experimental [transpiler](https://github.com/polystat/eo2py) 
 made by students of [Innopolis University](https://innopolis.university/en/). 
-Most probably, when you read this article, there are more transpilers available.
+Most probably, when you read this article, there will be more transpilers available.
 
 Even though we believe in transpiling, it's still possible to create 
 EO➝Bytecode, EO➝LLVM, or EO➝x86 compilers. 
@@ -321,7 +321,7 @@ You are more than welcome to try!
 
 ## Compile
 
-At this step, the standard [Maver Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) 
+At this step, the standard [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) 
 finds auto-generated `.java` files in `target/generated-sources`
 and turns them into `.class` files.
 
@@ -369,8 +369,8 @@ When atom binaries are compiled from Java to Bytecode, they stay
 next to transpiled sources. They are compiled together. Moreover,
 unit tests also rely on both atom sources and auto-generated/transpiled
 sources. We want future users of the JAR to know what sources we
-had in place, when the compilation was going on, to maybe let them reproduce
-it or at least know what were the surroundings around the binaries they get.
+had in place when the compilation was going on, to maybe let them reproduce
+it or at least know what were the surroundings of the binaries they get.
 
 From a more practical standpoint, we need these sources in the JAR
 in order to let the **Mark** step understand what objects
@@ -380,10 +380,10 @@ are worth pulling next to the atoms resolved.
 
 Here, we package everything from `target/classes/` into a JAR
 archive and [deploy]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %})  it
-to Maven Cental.
+to Maven Central.
 
 I suggest deploying sources to GitHub Pages too, to let users see
-them in Web. Also, it will be helpful later, when we make a pull 
+them on the Web. Also, it will be helpful later when we make a pull 
 request to Objectionary. 
 Check this [`.rultor.yml`](https://github.com/yegor256/eo-files/blob/master/.rultor.yml#L17-L31) 
 script in one of my EO libraries, it deploys `.eo` sources to GitHub Pages,
@@ -401,11 +401,11 @@ versions must be set to real numbers.
 
 ## Merge
 
-When the pull request arrives, GitHub Action pre-configured in
+When the pull request arrives, a GitHub Action pre-configured in the
 [yegor256/objectionary](https://github.com/yegor256/objectionary) repository
-transpiles all `.eo` sources to all known platform and run all unit tests.
+transpiles all `.eo` sources to all known platforms and runs all unit tests.
 If everything is clean, we review the pull request and decide whether
-the objects suggested go along with others already present in Objectionary.
+the objects suggested go along with others already present in the Objectionary.
 
 Once the pull request is merged, the objects become part of the centralized
 dictionary of all objects of EO. Take a look at [this pull request](https://github.com/yegor256/objectionary/pull/2), 
