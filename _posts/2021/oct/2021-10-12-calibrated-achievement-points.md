@@ -71,6 +71,8 @@ rules the team has to play by and the quality of metrics.
 If the metrics are reasonable and well understood
 by all participants, the competition drives the creativity.
 
+{% youtube Qii3yrQJdHs %}
+
 Of course, measuring the productivity of an artist by the amount of acrylic they
 put on the canvas or the productivity of a composer by the frequency
 of pushing the piano keys would be useless and harmful.
