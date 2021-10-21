@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Objectionary: Dictionary and Factory for EO Objects"
-date: 2021-10-10
+date: 2021-10-21
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - oop repository
   - object repository
   - storage of objects
-image: /images/2021/10/
+image: /images/2021/10/maend-and-hons.jpg
 jb_picture:
-  caption:
+  caption: Mænd & høns (2015) by Anders Thomas Jensen
 ---
 
 {% badge /images/books/elegant-objects/cactus.svg 128 http://www.eolang.org %}
