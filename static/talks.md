@@ -96,9 +96,11 @@ Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj5
 feel free to import it (to Google Calendar or iCal) and stay
 informed about everything I do publicly.
 
+<!--
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
 
 Nothing yet...
+-->
 
 <hr/>
 
