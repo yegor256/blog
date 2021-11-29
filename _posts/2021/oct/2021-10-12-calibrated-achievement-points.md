@@ -30,7 +30,7 @@ lead to negative consequences. We tried to challenge this point of view
 and did an experiment in our team, which demonstrated that individual 
 performance can indeed be measured, even if people's work involves creativity, 
 and results are hard to predict. We designed a system of 
-Calibrated Achievement Points (CAP), which are rewarded to those who deliver 
+Calibrated Achievement Points (CAPs), which are rewarded to those who deliver 
 visible and tangible results of different kinds. This article explains how 
 CAPs work and summarizes the results of the experiment.
 
