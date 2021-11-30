@@ -63,12 +63,12 @@ I didn't give them a Syllabus at the beginning of the course. Somewhere
 in the middle of the course I wrote it up, 
 [see here](https://yegor256.github.io/ssd16/syllabus.pdf).
 
-## In Lieu of Exam
+## In Lieu of an Exam
 
 Instead of examining their knowledge I decided to ask them to create
 some software, using the knowledge they supposedly got at the lectures. It was a good decision,
 because I can't even imagine how much time an oral examination of 150 people would take and how
-subjective it would be. There was another option though: a questionaire with
+subjective it would be. There was another option though: a questionnaire with
 right and wrong answers. But still, it would take a lot of time to create
 one. Asking them to make a piece of software was a better choice, until
 I realized that I didn't know how I could _objectively_ evaluate it.
@@ -195,7 +195,7 @@ Here they are the "A++" two:
     and
     [@Denisalik](https://github.com/Denisalik)
 
-Look at the quality of repositories! 
+Look at the quality of the repositories! 
 Don't judge them much by the quality of code
 or the usefulness of the products (even though they are useful) --- the course
 was not about coding. The course was about organizing your code and 
