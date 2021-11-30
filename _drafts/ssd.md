@@ -77,7 +77,7 @@ In the [Syllabus](https://yegor256.github.io/ssd16/syllabus.pdf)
 I suggested some criteria, but they were far from being objective.
 The only objective one was the number of stars their repository
 would acquire on GitHub. By the way, all of them reached 
-the highest required number: fifteen. Some of them got more than fourty,
+the highest required number: fifteen. Some of them got more than forty,
 which, according to my plan, was the point: to show them that good software
 with a small boost (by the stars given to you by friends-and-family)
 can easily gain larger popularity.
