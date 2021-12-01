@@ -1,4 +1,254 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-10-21T11:18:59+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Objectionary: Dictionary and Factory for EO Objects</title><link href="https://www.yegor256.com/2021/10/21/objectionary.html" rel="alternate" type="text/html" title="Objectionary: Dictionary and Factory for EO Objects" /><published>2021-10-21T00:00:00+00:00</published><updated>2021-10-21T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/10/21/objectionary</id><content type="html" xml:base="https://www.yegor256.com/2021/10/21/objectionary.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.eolang.org&quot;&gt;&lt;img src=&quot;/images/books/elegant-objects/cactus.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2021-12-01T19:18:45+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Academic Teaching is Hard</title><link href="https://www.yegor256.com/2021/12/01/teaching.html" rel="alternate" type="text/html" title="Academic Teaching is Hard" /><published>2021-12-01T00:00:00+00:00</published><updated>2021-12-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/12/01/teaching</id><content type="html" xml:base="https://www.yegor256.com/2021/12/01/teaching.html">&lt;p&gt;A few months ago I got an opportunity to teach a single course for
+3rd-year BSc students at &lt;a href=&quot;https://innopolis.university/en/&quot;&gt;Innopolis University&lt;/a&gt; (Russia). 
+The title was “System Software Design.” 
+The size of the group was about 150 people and the duration was
+8 weeks. I was supposed to give them sixteen lectures, 
+two lectures per week. And I was asked to examine their knowledge
+by the end of the course. Pretty much a normal job for a university
+teacher. And you know, in my opinion, I failed most parts of it. 
+Here is what I learned.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Die Welle (2008) by Dennis Gansel&quot; src=&quot;/images/2021/11/die-welle.jpg&quot; longdesc=&quot;#2787ff7e&quot; /&gt;&lt;figcaption id=&quot;2787ff7e&quot;&gt;Die Welle (2008) by Dennis Gansel&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;By the way, all lectures were 
+&lt;a href=&quot;https://www.youtube.com/playlist?list=PLaIsQH4uc08woJKRAA7mmjs9fU0jeKjjM&quot;&gt;video recorded&lt;/a&gt; 
+and all slide decks are &lt;a href=&quot;https://github.com/yegor256/ssd16&quot;&gt;available on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;its-huge&quot;&gt;It’s Huge&lt;/h2&gt;
+
+&lt;p&gt;I’ve got &lt;a href=&quot;/talks.html&quot;&gt;a lot of experience&lt;/a&gt; 
+of giving speeches at software conferences,
+workshops, meetups, and so on. Usually, such a speech is 30-40 minutes long with
+10-15 minutes for Q&amp;amp;A at the end. Then, you just walk away and relax.&lt;/p&gt;
+
+&lt;p&gt;Here it was something completely different. First, the lecture takes 90 minutes
+with a small five-minute break in the middle. Second, I had to give two 
+lectures straight. Third, I had two lectures on Tuesday and two on Wednesday.
+Thus, I had 180+180=360 minutes of teaching every second week. 360 minutes! It’s
+similar to 10 conference speeches! Imagine how much it takes to prepare ten
+conference speeches. All my evenings and weekends were completely occupied with
+this. The lesson I’ve learned: start preparing your course long before
+the first day of it and expect to spend a lot of time on it.&lt;/p&gt;
+
+&lt;h2 id=&quot;syllabus&quot;&gt;Syllabus&lt;/h2&gt;
+
+&lt;p&gt;It seems that for some/most students, my course was not so much about learning
+something new, but about getting the “A” grade. They started bugging me right
+from the beginning of the course: how exactly will you examine our projects
+and how will the grading decision be made? I don’t blame them, I blame myself:
+I didn’t give them a Syllabus at the beginning of the course. Somewhere
+in the middle of the course I wrote it up, 
+&lt;a href=&quot;https://yegor256.github.io/ssd16/syllabus.pdf&quot;&gt;see here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-lieu-of-an-exam&quot;&gt;In Lieu of an Exam&lt;/h2&gt;
+
+&lt;p&gt;Instead of examining their knowledge I decided to ask them to create
+some software, using the knowledge they supposedly got at the lectures. It was a good decision,
+because I can’t even imagine how much time an oral examination of 150 people would take and how
+subjective it would be. There was another option though: a questionnaire with
+right and wrong answers. But still, it would take a lot of time to create
+one. Asking them to make a piece of software was a better choice, until
+I realized that I didn’t know how I could &lt;em&gt;objectively&lt;/em&gt; evaluate it.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;https://yegor256.github.io/ssd16/syllabus.pdf&quot;&gt;Syllabus&lt;/a&gt; 
+I suggested some criteria, but they were far from being objective.
+The only objective one was the number of stars their repository
+would acquire on GitHub. By the way, all of them reached 
+the highest required number: fifteen. Some of them got more than forty,
+which, according to my plan, was the point: to show them that good software
+with a small boost (by the stars given to you by friends-and-family)
+can easily gain larger popularity.&lt;/p&gt;
+
+&lt;p&gt;By the way, I’m still dreaming about a software package or a hosted service, which would
+go through any GitHub repository and make a quality analysis of it. Not the
+quality of code, but the quality of process, documentation, discipline,
+communications, etc. Such a software may use Machine Learning
+to make non-deterministic guesses about the internals of a repository. It
+may also benchmark thousands of GitHub repositories and then evaluate the
+given one against those which are the best.&lt;/p&gt;
+
+&lt;p&gt;Without such software I had to review their repositories one by one.
+Which took me an entire day. TAs did their review before me, 
+which was helpful too.&lt;/p&gt;
+
+&lt;h2 id=&quot;labs&quot;&gt;Labs&lt;/h2&gt;
+
+&lt;p&gt;There were not only lectures, but also practical tasks, called “Labs.”
+I had three Teaching Assistants (TA), each of which had one third
+of my students. The TAs were also teaching them software design, trying to 
+go along with the content I was giving at the lectures. Did it work well?
+It didn’t. And it was 100% my fault.&lt;/p&gt;
+
+&lt;p&gt;Each TA has their own ideas about software design, about software quality,
+about management, about many other things. If I wanted to do it right, 
+I would have had to “teach” the TAs first, spending
+some time for this before starting the course. Maybe I would have even had to give
+them some guidelines, explaining my expectations. This would be very
+helpful, since TAs interact with students much more than the lecturer.
+I, being a standing-up teacher, was not able to &lt;em&gt;discuss&lt;/em&gt; things
+with students: I was mostly delivering them my thoughts. TAs and Labs
+are where the discussions are happening.&lt;/p&gt;
+
+&lt;p&gt;Thus, the lesson I’ve learned: before starting teaching,
+make sure your TAs understand your content well. Very well.&lt;/p&gt;
+
+&lt;h2 id=&quot;attendance&quot;&gt;Attendance&lt;/h2&gt;
+
+&lt;p&gt;At my first lecture there were about 120 people in the room. At the last one
+there were ten. I’m not sure exactly why, but there are a few possible
+reasons. First, maybe the lectures were boring. Well, can I make them 12 times
+more fun next time? I doubt it.&lt;/p&gt;
+
+&lt;p&gt;The second possible reason is that I didn’t check their attendance. I told
+them right at the beginning of the course: “I don’t care about your physical presence here,
+I only care about the product you create in eight weeks.” 
+Maybe this was a mistake, but I still think that forcing students to attend 
+lectures is disrespectful.&lt;/p&gt;
+
+&lt;p&gt;Third, maybe most of them found it more comfortable to watch the recorded
+lectures on YouTube instead of going to the class. I was trying to publish
+videos in just a few days after each lecture. Was it a mistake? Maybe so,
+but I still believe that video content is king. By the way, each lecture
+out of sixteen published, was already watched at least a thousand times 
+&lt;a href=&quot;https://www.youtube.com/playlist?list=PLaIsQH4uc08woJKRAA7mmjs9fU0jeKjjM&quot;&gt;on YouTube&lt;/a&gt;.
+A few dozen students in the room versus a thousand people on YouTube:
+who do you think is more important?&lt;/p&gt;
+
+&lt;p&gt;Thus, if you want your class to be full each time: 
+1) entertain them,
+2) make grades depend on attendance, 
+and
+3) don’t publish videos until after the exam (or don’t record at all).
+But I won’t do either of those. I’m fine with ten people in the room,
+thousands on YouTube, and a few very interesting products created by 
+those who most probably never attended (I discuss them below).&lt;/p&gt;
+
+&lt;h2 id=&quot;best-students&quot;&gt;Best Students&lt;/h2&gt;
+
+&lt;p&gt;There were four possible grades to give: A, B, C, and D. The failing
+one was “D”, but”C” was not good either. Students formed small
+groups of up to four people. Each group created their own GitHub project
+(actually, three groups out of fifty made them in GitLab) and I reviewed them. Here is
+how I distributed my marks:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;A++ : 2
+A+  : 6
+A   : 22
+B   : 13
+C   : 4
+D   : 1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Formally speaking, I gave “A” marks to 2+6+22 people (including “A+” and “A++”) marks, but
+I felt obligated to emphasize the difference between excellent and good projects
+even through they are in the same formal “A” category: that’s why there are extra “A++” and “A+” marks. 
+Of course, there was a possibility
+to give “A” only to those who are “A+” and “A++” in my classification, shifting
+the rest of the schedule down and giving many more “C” marks, 
+but I was afraid that this would lead to a lot of complaints. 
+Put simply, I chickened out.&lt;/p&gt;
+
+&lt;p&gt;Now, to reward those who got “A++” and “A+” I’m publishing their projects here, 
+and their accounts. They may consider this blog post as my personal
+letter of recommendation for each of them. If you, dear reader, are a potential
+employer of these guys, I highly recommend them.&lt;/p&gt;
+
+&lt;p&gt;Here they are the “A++” two:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/InnoTutor&quot;&gt;&lt;strong&gt;InnoTutor&lt;/strong&gt;&lt;/a&gt; 
+&lt;br /&gt;
+by 
+&lt;a href=&quot;https://github.com/SMore-Napi&quot;&gt;@SMore-Napi&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/Dablup&quot;&gt;@Dablup&lt;/a&gt;, 
+and
+&lt;a href=&quot;https://github.com/emileyray&quot;&gt;@emileyray&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/Doctorinna&quot;&gt;&lt;strong&gt;Doctorinna&lt;/strong&gt;&lt;/a&gt; 
+&lt;br /&gt;
+by
+&lt;a href=&quot;https://github.com/DanisAlukaev&quot;&gt;@DanisAlukaev&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/ladamoroz&quot;&gt;@ladamoroz&lt;/a&gt;, 
+and
+&lt;a href=&quot;https://github.com/Denisalik&quot;&gt;@Denisalik&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Look at the quality of the repositories! 
+Don’t judge them much by the quality of code
+or the usefulness of the products (even though they are useful) — the course
+was not about coding. The course was about organizing your code and 
+making technical decisions. They, I believe, did very well, keeping in mind
+that they are students.&lt;/p&gt;
+
+&lt;p&gt;These are six “A+” repositories:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/repeating/PoputchikiInno&quot;&gt;&lt;strong&gt;PoputchikiInno&lt;/strong&gt;&lt;/a&gt;
+  &lt;br /&gt;
+  by 
+  &lt;a href=&quot;https://github.com/pierrepicaud&quot;&gt;@pierrepicaud&lt;/a&gt;,
+  &lt;a href=&quot;https://github.com/Kamil-Sabbagh&quot;&gt;@Kamil-Sabbagh&lt;/a&gt;,
+  &lt;a href=&quot;https://github.com/repeating&quot;&gt;@repeating&lt;/a&gt;,
+  and
+  &lt;a href=&quot;https://github.com/Karam19&quot;&gt;@Karam19&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/Ahuratus/Trajectory-Detection-Web-services&quot;&gt;&lt;strong&gt;Trajectory-Detection-Web-services&lt;/strong&gt;&lt;/a&gt;
+  &lt;br /&gt;
+  by 
+  &lt;a href=&quot;https://github.com/Ehsan2754&quot;&gt;@Ehsan2754&lt;/a&gt;
+  and
+  &lt;a href=&quot;https://github.com/Mr-Barry&quot;&gt;@Mr-Barry&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/yadariya/InnoBookCrossing&quot;&gt;&lt;strong&gt;InnoBookCrossing&lt;/strong&gt;&lt;/a&gt;
+  &lt;br /&gt;
+  by
+  &lt;a href=&quot;https://github.com/Fressermenschen&quot;&gt;@Fressermenschen&lt;/a&gt;,
+  &lt;a href=&quot;https://github.com/Kastrylia&quot;&gt;@Kastrylia&lt;/a&gt;,
+  &lt;a href=&quot;https://github.com/romanza705&quot;&gt;@romanza705&lt;/a&gt;,
+  and
+  &lt;a href=&quot;https://github.com/yadariya&quot;&gt;@yadariya&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/TonyDecvA180XN/Cmple&quot;&gt;&lt;strong&gt;Cmple&lt;/strong&gt;&lt;/a&gt;
+  &lt;br /&gt;
+  by 
+  &lt;a href=&quot;https://github.com/TonyDecvA180XN&quot;&gt;@TonyDecvA180XN&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://gitlab.com/amirovaldiar/kolorz-frontend&quot;&gt;&lt;strong&gt;kolorz-frontend&lt;/strong&gt;&lt;/a&gt;
+  &lt;br /&gt;
+  by
+  &lt;a href=&quot;https://gitlab.com/amirovaldiar&quot;&gt;@amirovaldiar&lt;/a&gt;,
+  &lt;a href=&quot;https://gitlab.com/ease-ln&quot;&gt;@ease-ln&lt;/a&gt;,
+  and
+  &lt;a href=&quot;https://gitlab.com/nailyavaliull1409&quot;&gt;@nailyavaliull1409&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/PictureInspector/Picture-Inspector&quot;&gt;&lt;strong&gt;Picture-Inspector&lt;/strong&gt;&lt;/a&gt;
+  &lt;br /&gt;
+  by
+  &lt;a href=&quot;https://github.com/Palandr1234&quot;&gt;@Palandr1234&lt;/a&gt;,
+  &lt;a href=&quot;https://github.com/datapaf&quot;&gt;@datapaf&lt;/a&gt;,
+  and
+  &lt;a href=&quot;https://github.com/Dinislam36&quot;&gt;@Dinislam36&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;They are also pretty good.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Big thanks to Innopolis University and personally to its Dean, 
+Prof. &lt;a href=&quot;https://scholar.google.com/citations?user=PdMO57sAAAAJ&amp;amp;hl=en&quot;&gt;Giancarlo Succi&lt;/a&gt;,
+for giving me this opportunity to realize that being a teacher is
+very hard and … fun.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html">A few months ago I got an opportunity to teach a single course for 3rd-year BSc students at Innopolis University (Russia). The title was “System Software Design.” The size of the group was about 150 people and the duration was 8 weeks. I was supposed to give them sixteen lectures, two lectures per week. And I was asked to examine their knowledge by the end of the course. Pretty much a normal job for a university teacher. And you know, in my opinion, I failed most parts of it. Here is what I learned.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/11/die-welle.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/11/die-welle.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Objectionary: Dictionary and Factory for EO Objects</title><link href="https://www.yegor256.com/2021/10/21/objectionary.html" rel="alternate" type="text/html" title="Objectionary: Dictionary and Factory for EO Objects" /><published>2021-10-21T00:00:00+00:00</published><updated>2021-10-21T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/10/21/objectionary</id><content type="html" xml:base="https://www.yegor256.com/2021/10/21/objectionary.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.eolang.org&quot;&gt;&lt;img src=&quot;/images/books/elegant-objects/cactus.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Since the time of Kernighan and Ritchie we share binary code in
 libraries. You need to print some text with &lt;a href=&quot;https://en.wikipedia.org/wiki/Printf_format_string&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;printf()&lt;/code&gt;&lt;/a&gt; in C++? 
@@ -18,8 +268,6 @@ Wouldn’t it be more elegant to deal with individual objects instead?&lt;/p&gt;
 
 &lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Mænd &amp;amp; høns (2015) by Anders Thomas Jensen&quot; src=&quot;/images/2021/10/maend-and-hons.jpg&quot; longdesc=&quot;#5f493073&quot; /&gt;&lt;figcaption id=&quot;5f493073&quot;&gt;Mænd &amp;amp; høns (2015) by Anders Thomas Jensen&lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;&lt;img src=&quot;/images/2015/04/book-object-thinking.jpg&quot; style=&quot;width:96px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
 &lt;p&gt;The idea is not new and not mine. 
 I got it from the book &lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;Object Thinking&lt;/a&gt;
 by David West, where he suggested creating an &lt;em&gt;Objectionary&lt;/em&gt; (page 306), 
@@ -32,6 +280,8 @@ a “combination of dictionary and object factory,” with the following propert
   &lt;li&gt;Objects are nothing more than collections of objects;&lt;/li&gt;
   &lt;li&gt;Objects require hardware-specific VMs for execution.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;&lt;img src=&quot;/images/2015/04/book-object-thinking.jpg&quot; style=&quot;width:96px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Seventeen years later (the book was published in 2004), we implemented the idea
 on top of &lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;, our new programming language.
@@ -383,7 +633,7 @@ the objects suggested go along with others already present in the Objectionary.&
 &lt;p&gt;Once the pull request is merged, the objects become part of the centralized
 dictionary of all objects of EO. Take a look at &lt;a href=&quot;https://github.com/yegor256/objectionary/pull/2&quot;&gt;this pull request&lt;/a&gt;, 
 where a new object was submitted to Objectionary, after its atom was
-deployed to Maven Central.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Since the time of Kernighan and Ritchie we share binary code in libraries. You need to print some text with printf() in C++? You get libc library with 700+ other functions inside. You need to copy a Java stream? You get Apache Commons IO with copy() and 140+ other methods and classes. The same happens in all languages I’m aware of, like Ruby, Python, JavaScript, PHP: you need an object, or a class, or a function, or a method—you have to add the entire library to your build. Wouldn’t it be more elegant to deal with individual objects instead?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Calibrated Achievement Points (CAP)</title><link href="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html" rel="alternate" type="text/html" title="Calibrated Achievement Points (CAP)" /><published>2021-10-12T00:00:00+00:00</published><updated>2021-10-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/10/12/calibrated-achievement-points</id><content type="html" xml:base="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html">&lt;p&gt;It’s a well-known problem nowadays: how can we measure the performance 
+deployed to Maven Central.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Since the time of Kernighan and Ritchie we share binary code in libraries. You need to print some text with printf() in C++? You get libc library with 700+ other functions inside. You need to copy a Java stream? You get Apache Commons IO with copy() and 140+ other methods and classes. The same happens in all languages I’m aware of, like Ruby, Python, JavaScript, PHP: you need an object, or a class, or a function, or a method—you have to add the entire library to your build. Wouldn’t it be more elegant to deal with individual objects instead?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Calibrated Achievement Points</title><link href="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html" rel="alternate" type="text/html" title="Calibrated Achievement Points" /><published>2021-10-12T00:00:00+00:00</published><updated>2021-10-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/10/12/calibrated-achievement-points</id><content type="html" xml:base="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html">&lt;p&gt;It’s a well-known problem nowadays: how can we measure the performance 
 and productivity of individual contributors who do non-routine 
 creative work? The best examples are research and development (R&amp;amp;D) teams, which 
 usually consist of software engineers, designers, 
@@ -395,7 +645,7 @@ lead to negative consequences. We tried to challenge this point of view
 and did an experiment in our team, which demonstrated that individual 
 performance can indeed be measured, even if people’s work involves creativity, 
 and results are hard to predict. We designed a system of 
-Calibrated Achievement Points (CAP), which are rewarded to those who deliver 
+Calibrated Achievement Points (CAPs), which are rewarded to those who deliver 
 visible and tangible results of different kinds. This article explains how 
 CAPs work and summarizes the results of the experiment.&lt;/p&gt;
 
@@ -436,6 +686,14 @@ However, the positive effect of competition depends on the
 rules the team has to play by and the quality of metrics. 
 If the metrics are reasonable and well understood
 by all participants, the competition drives the creativity.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=Qii3yrQJdHs&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/Qii3yrQJdHs/mqdefault.jpg&quot; alt=&quot;YouTube video #Qii3yrQJdHs&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M179: Calibrated Achievement Points (CAP) to measure R&amp;amp;D productivity;
+        18 October 2021.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;Of course, measuring the productivity of an artist by the amount of acrylic they
 put on the canvas or the productivity of a composer by the frequency
@@ -522,7 +780,7 @@ see the best in product by increasing the productivity and creativity of
 our people, but also decrease the amount of “worst” which inevitably
 surfaces when people compete against each other. The CAP system gives us
 the rules, which are fair and transparent enough to significantly reduce the amount
-of conflicts and of cheating.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">It’s a well-known problem nowadays: how can we measure the performance and productivity of individual contributors who do non-routine creative work? The best examples are research and development (R&amp;amp;D) teams, which usually consist of software engineers, designers, scientists, architects, quality experts, product managers, and so on. Such professionals deliver results that are hard to get down to simple numbers. Many authors argue that the very idea of measuring individual performance is toxic and may only lead to negative consequences. We tried to challenge this point of view and did an experiment in our team, which demonstrated that individual performance can indeed be measured, even if people’s work involves creativity, and results are hard to predict. We designed a system of Calibrated Achievement Points (CAP), which are rewarded to those who deliver visible and tangible results of different kinds. This article explains how CAPs work and summarizes the results of the experiment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SIMBA: Simplified Management By Artifacts</title><link href="https://www.yegor256.com/2021/09/09/simba.html" rel="alternate" type="text/html" title="SIMBA: Simplified Management By Artifacts" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/09/09/simba</id><content type="html" xml:base="https://www.yegor256.com/2021/09/09/simba.html">&lt;p&gt;Here is a very simple management framework, which we have used in 
+of conflicts and of cheating.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">It’s a well-known problem nowadays: how can we measure the performance and productivity of individual contributors who do non-routine creative work? The best examples are research and development (R&amp;amp;D) teams, which usually consist of software engineers, designers, scientists, architects, quality experts, product managers, and so on. Such professionals deliver results that are hard to get down to simple numbers. Many authors argue that the very idea of measuring individual performance is toxic and may only lead to negative consequences. We tried to challenge this point of view and did an experiment in our team, which demonstrated that individual performance can indeed be measured, even if people’s work involves creativity, and results are hard to predict. We designed a system of Calibrated Achievement Points (CAPs), which are rewarded to those who deliver visible and tangible results of different kinds. This article explains how CAPs work and summarizes the results of the experiment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SIMBA: Simplified Management By Artifacts</title><link href="https://www.yegor256.com/2021/09/09/simba.html" rel="alternate" type="text/html" title="SIMBA: Simplified Management By Artifacts" /><published>2021-09-09T00:00:00+00:00</published><updated>2021-09-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/09/09/simba</id><content type="html" xml:base="https://www.yegor256.com/2021/09/09/simba.html">&lt;p&gt;Here is a very simple management framework, which we have used in 
 our teams for the last two years. We came to it experimentally,
 trying to merge some Agile principles, 
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge&quot;&gt;PMBOK&lt;/a&gt; ideas, and
@@ -575,6 +833,14 @@ keeping the delivery status under control.
 Simply put, when an artifact is delivered on time, we &lt;em&gt;reward&lt;/em&gt;
 the owner; when the delivery is missed, we also &lt;em&gt;blame&lt;/em&gt; (I know, most of you
 don’t like this word) the owner.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=939ntzufGB0&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/939ntzufGB0/mqdefault.jpg&quot; alt=&quot;YouTube video #939ntzufGB0&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;M178: Try to focus your team on artifacts and their delivery status;
+        27 September 2021.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;Each artifact has a planned delivery date. The dates may
 change as often as necessary, but at any moment of time
@@ -1773,78 +2039,4 @@ They all are implemented in Java.&lt;/p&gt;
 &lt;p&gt;Thus, we construct objects first, either through &lt;em&gt;abstraction&lt;/em&gt; (declaring new
 abstract objects) or through &lt;em&gt;application&lt;/em&gt; (making copies of abstract
 objects). Next, we dataize one of the objects and the entire composition
-of objects starts to “live,” trying to turn itself into data.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">There are three things in EOLANG (and the 𝜑-calculus which we based it on): data, atoms, and objects. There is a dataization function, which puts all three together in order to make an EO program alive. Here is how it works together with Java, for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/02/space-force.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/02/space-force.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Greed-Based Planning</title><link href="https://www.yegor256.com/2021/02/02/greed-based-planning.html" rel="alternate" type="text/html" title="Greed-Based Planning" /><published>2021-02-02T00:00:00+00:00</published><updated>2021-02-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/02/02/greed-based-planning</id><content type="html" xml:base="https://www.yegor256.com/2021/02/02/greed-based-planning.html">&lt;p&gt;You have an objective, a budget, and a team. You are
-a manager and you want the project to be done. You get your team together
-in a &lt;a href=&quot;/2015/07/13/meetings-are-legalized-robbery.html&quot;&gt;meeting room&lt;/a&gt;
-to discuss the &lt;em&gt;plan&lt;/em&gt;. You tell them what needs to
-be done and ask them how fast they can do it. Then, you do the motivational dance
-and &lt;del&gt;beg&lt;/del&gt; ask them to commit. They nod and go back
-to their cubicles. Of course, after a few
-months of “hard work” all the milestones are missed and you get back to the planning
-meeting. And, yes, you pay their salaries
-&lt;a href=&quot;/2015/07/21/hourly-pay-modern-slavery.html&quot;&gt;anyway&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Undercover (2019-) by Netflix&quot; src=&quot;/images/2021/02/undercover.jpg&quot; longdesc=&quot;#37fc4133&quot; /&gt;&lt;figcaption id=&quot;37fc4133&quot;&gt;Undercover (2019-) by Netflix&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;This top-down management formula (boss says, everybody nods) was inherited
-from the times and industries where staff was easily replaceable
-and vitally dependent on the employer’s will.
-Call it the time of slavery, if you will.
-The basic principle was: “If you don’t do what I say, you suffer.”&lt;/p&gt;
-
-&lt;p&gt;Those times are over. Well, not everywhere, but in software development—for sure.
-The suffering part is gone and the formula has evolved to:
-“If you don’t do what I say, I feel sad.”
-You simply can’t make them &lt;a href=&quot;/2016/01/05/how-to-punish-employees.html&quot;&gt;suffer&lt;/a&gt; anymore.
-The only instrument that is left in your hands is
-&lt;a href=&quot;/2019/09/03/injection-of-guilt.html&quot;&gt;guilt&lt;/a&gt;.
-However, it doesn’t work well with professionals.
-&lt;a href=&quot;/2016/09/27/command-control-innovate.html&quot;&gt;&lt;del&gt;Unfortunately&lt;/del&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=vaFPNdNaOAY&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/vaFPNdNaOAY/mqdefault.jpg&quot; alt=&quot;YouTube video #vaFPNdNaOAY&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M160: Traditional top-down planning doesn&amp;#39;t work, try better alternative;
-        1 February 2021.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;And because of that the traditional idea of planning doesn’t work either.
-No matter how you plan, you can’t get an honest commitment from the
-team, that’s why your plans will always be wishes instead of plans.&lt;/p&gt;
-
-&lt;p&gt;I suggest a better formula: “If you do what I say, you benefit.”
-Here is how it works: you identify expected deliverables, their quality acceptance criteria,
-put reward tags on each one (money, points, promotion,
-free vacation, or maybe cookies), and ask your programmers:
-“How much do you want to earn?”&lt;/p&gt;
-
-&lt;p&gt;They will do their own planning, having in mind their own time resources,
-putting together all the sophisticated motivational pieces, and then make
-their decisions: “I’m going to do these 12 tasks and earn $5,000.”
-Then, using this information you create the plan and calculate the
-timeline of the project. They tell you what they &lt;em&gt;want&lt;/em&gt; to earn
-and you &lt;em&gt;know&lt;/em&gt; what results you will get.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;You identify the points of reward and observe the intentions of the team to earn them.
-&lt;/aside&gt;
-
-&lt;p&gt;Thus, instead of making plans and making the team deliver according
-to them, you identify the points of reward and observe the
-intentions of the team to earn them. Your plan will be the derivative
-of people’s &lt;del&gt;greed&lt;/del&gt; ambition.&lt;/p&gt;
-
-&lt;p&gt;Of course, this may be easier said than done: Spoiled and lazy
-programmers, who are in the overwhelming majority, most likely
-will refuse to work for awards. My advice is not to convince
-them too much. Just offer the awards on top of the salary they are
-getting already. Rewards don’t need to be large. What’s important is
-the shift in the decision making process. The decision to complete
-the work has to be made by the programmer, not you. The decision
-has to be based on their own selfish reasons.&lt;/p&gt;
-
-&lt;p&gt;What’s left for you is just to put their decisions into one
-document and see when the project will be completed and how
-many bonuses you have to prepare to pay at the end.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">You have an objective, a budget, and a team. You are a manager and you want the project to be done. You get your team together in a meeting room to discuss the plan. You tell them what needs to be done and ask them how fast they can do it. Then, you do the motivational dance and beg ask them to commit. They nod and go back to their cubicles. Of course, after a few months of “hard work” all the milestones are missed and you get back to the planning meeting. And, yes, you pay their salaries anyway.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/02/undercover.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/02/undercover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+of objects starts to “live,” trying to turn itself into data.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">There are three things in EOLANG (and the 𝜑-calculus which we based it on): data, atoms, and objects. There is a dataization function, which puts all three together in order to make an EO program alive. Here is how it works together with Java, for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/02/space-force.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/02/space-force.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

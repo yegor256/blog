@@ -267,6 +267,7 @@ america
 american
 americans
 AMG
+amirovaldiar
 among
 amount
 amounts
@@ -503,6 +504,7 @@ assigns
 assist
 assistance
 assistant
+assistants
 assists
 associate
 associated
@@ -538,6 +540,7 @@ attempt
 attempted
 attempts
 attend
+attendance
 attendant
 attended
 attendees
@@ -750,6 +753,7 @@ belov
 below
 ben
 bench
+benchmark
 beneficial
 benefit
 benefits
@@ -995,6 +999,7 @@ bug
 bug's
 bug-free
 bugayenko
+bugging
 buggy
 bugs
 build
@@ -1283,6 +1288,7 @@ chess
 chevrolet
 chew
 chicken
+chickened
 chicks
 chief
 child
@@ -1339,6 +1345,7 @@ classes
 classic
 classical
 classics
+classification
 classified
 classifier
 classifying
@@ -1401,6 +1408,7 @@ cluster
 clusterer
 clutters
 CMMI
+cmple
 CNAME
 CNN
 co
@@ -1998,6 +2006,7 @@ cycle
 cycles
 cycling
 d-s
+dablup
 dagger
 daily
 damage
@@ -2012,6 +2021,7 @@ dancing
 danger
 dangerous
 daniel
+danisalukaev
 DAO
 DAOs
 dare
@@ -2028,6 +2038,7 @@ databases
 dataization
 dataize
 dataized
+datapaf
 date
 dates
 DATFlock
@@ -2058,6 +2069,7 @@ deal
 dealing
 deals
 dealt
+dean
 dear
 death
 debate
@@ -2082,6 +2094,7 @@ decision
 decision-making
 decisions
 deck
+decks
 declaration
 declarative
 declare
@@ -2184,6 +2197,7 @@ demotivating
 demystifying
 denial
 deniro's
+denisalik
 denominator
 denominators
 dentists
@@ -2330,6 +2344,7 @@ dilemma
 diligence
 diminish
 diminishing
+dinislam
 dinner
 diplomacy
 diplomat
@@ -2468,6 +2483,7 @@ docker
 dockercon
 docs
 doctor
+doctorinna
 doctrine
 document
 document's
@@ -2609,6 +2625,7 @@ earning
 earns
 ears
 earth
+ease-ln
 easier
 easiest
 easily
@@ -2665,6 +2682,7 @@ egoistically
 egoists
 ehcache
 ehrenreich
+ehsan
 eight
 eighth
 einstein
@@ -2710,6 +2728,7 @@ embrace
 embracing
 emerge
 emerging
+emileyray
 emitter
 emoji
 emojis
@@ -2898,6 +2917,7 @@ evans
 eve
 even
 evening
+evenings
 event
 events
 eventual
@@ -2921,7 +2941,9 @@ exact
 exactly
 exaggerate
 exam
+examination
 examine
+examining
 example
 examples
 exceeded
@@ -3168,6 +3190,7 @@ fields
 FIFO
 fifteen
 fifth
+fifty
 fight
 fighting
 fights
@@ -3233,6 +3256,7 @@ fit
 fits
 fitting
 five
+five-minute
 fix
 fixable
 fixed
@@ -3401,6 +3425,7 @@ french
 frequency
 frequently
 fresh
+fressermenschen
 friday
 fridays
 friend
@@ -3408,6 +3433,7 @@ friend's
 friend-making
 friendly
 friends
+friends-and-family
 friendship
 frivolous
 from
@@ -3524,6 +3550,7 @@ getters
 getters-and-setters
 getting
 GHz
+giancarlo
 giang
 giant
 giants
@@ -3540,6 +3567,7 @@ gitflow
 github
 github-based
 github-hosted
+gitlab
 gitlab-ci
 gitter
 give
@@ -3602,7 +3630,9 @@ GPL
 grab
 gracefully
 grade
+grades
 gradients
+grading
 gradle
 gradual
 gradually
@@ -3663,6 +3693,7 @@ guarded
 guardian
 guava
 guess
+guesses
 guessing
 guevara
 GUI
@@ -4217,8 +4248,11 @@ inline
 inlined
 innate
 inner
+innobookcrossing
 innocence
 innocent
+innopolis
+innotutor
 innovate
 innovation
 innovations
@@ -4591,14 +4625,17 @@ justify
 JVM
 kaicode
 kalanick
+kamil-sabbagh
 kanban
 kane
 kapralov
 karachi
+karam
 karl
 karma
 kasparov
 kaspersky
+kastrylia
 katakuris
 katie
 kawasaki
@@ -4665,6 +4702,7 @@ known
 knows
 knuth
 kolbin
+kolorz-frontend
 korean
 kotlin
 KPIs
@@ -4686,10 +4724,12 @@ la
 label
 labeled
 labor
+labs
 lack
 lacked
 lacking
 lacks
+ladamoroz
 ladder
 ladies
 lady
@@ -4773,6 +4813,7 @@ leaves
 leaving
 lebowski
 lecture
+lecturer
 lectures
 led
 left
@@ -5081,6 +5122,7 @@ marketable
 marketers
 marketing
 markets
+marks
 marriage
 married
 marry
@@ -5460,6 +5502,7 @@ movo
 mozilla
 mph
 mr
+mr-barry
 MRM
 MS
 MS-DOS
@@ -5529,6 +5572,7 @@ na
 nag
 nah
 nail
+nailyavaliull
 naive
 naked
 name
@@ -5666,6 +5710,7 @@ non-completion
 non-compromising
 non-democratic
 non-descriptive
+non-deterministic
 non-disclosure
 non-disputable
 non-empty
@@ -5752,6 +5797,7 @@ objectively
 objectives
 objectivity
 objects
+obligated
 obligation
 obligations
 oblige
@@ -5890,6 +5936,7 @@ optional
 options
 or
 oracle
+oral
 orange
 orchestrated
 order
@@ -6031,6 +6078,7 @@ pair
 paired
 pairs
 pakistan
+palandr
 palo
 panel
 panic
@@ -6238,11 +6286,13 @@ picked
 picks
 picocontainer
 picture
+picture-inspector
 pictures
 piece
 pieces
 piecework
 pierced
+pierrepicaud
 piggyback
 pike
 piled-up
@@ -6375,6 +6425,7 @@ popular
 popularity
 populate
 population
+poputchikiinno
 port
 portable
 portfolio
@@ -6765,6 +6816,7 @@ question
 questionable
 questioned
 questioning
+questionnaire
 questions
 quick
 quickbooks
@@ -6838,6 +6890,7 @@ razzwan
 rb
 rbara
 rd
+rd-year
 RDF
 rdquo
 RDS
@@ -7310,6 +7363,7 @@ rolled
 rolling
 roman
 romance
+romanza
 rome
 roof
 room
@@ -7799,6 +7853,7 @@ situations
 six
 six-digit
 sixnines
+sixteen
 sixth
 size
 sizeable
@@ -7877,6 +7932,7 @@ smoking
 smooth
 smoothies
 smoothly
+SMore-Napi
 SMTP
 snake
 Snap-CI
@@ -8286,6 +8342,7 @@ success
 successes
 successful
 successfully
+succi
 succinctly
 such
 suck
@@ -8344,6 +8401,7 @@ supportive
 supports
 suppose
 supposed
+supposedly
 suppress
 supremacists
 supreme
@@ -8384,6 +8442,7 @@ swimming
 switch
 switched
 switching
+syllabus
 symbol
 symbols
 sympathy
@@ -8409,6 +8468,7 @@ systematically
 systems
 t-shirt
 t-shirts
+TA
 tab
 table
 tables
@@ -8443,6 +8503,7 @@ tangible
 tangled
 tap
 target
+TAs
 task
 tasked
 tasks
@@ -8685,6 +8746,7 @@ tomorrow
 toner
 tonight
 tons
+tonydecva
 too
 took
 tool
@@ -8747,6 +8809,7 @@ trainspotting
 trait
 traitors
 traits
+trajectory-detection-web-services
 transaction
 transactional
 transactions
@@ -8833,6 +8896,7 @@ trying
 TS
 TSA
 tu
+tuesday
 TUG
 tumblr
 tumor
@@ -9496,6 +9560,7 @@ XHTML
 xiong
 XML
 XML-to-DOM
+XN
 XPath
 xplore
 XSD
@@ -9503,6 +9568,7 @@ XSL
 XSL's
 XSLT
 y-combinator
+yadariya
 yahoo
 YAML
 yandex
