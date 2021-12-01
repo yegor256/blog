@@ -5,28 +5,28 @@ date: 2021-11-15
 place: Moscow, Russia
 tags: science
 description: |
-  Recently I've got an opportunity to be a teacher
+  Recently I had an opportunity to be a teacher
   of a computer science course for 3rd-year BSc students 
-  in one Russian university. Here is MY lessons learned.
+  in one Russian university. Here are MY lessons learned.
 keywords:
   - teaching
   - learning
   - being a teacher
   - how to teach
-  - how to be good teacher
+  - how to be a good teacher
 image: /images/2021/11/die-welle.jpg
 jb_picture:
   caption: Die Welle (2008) by Dennis Gansel
 ---
 
 A few months ago I got an opportunity to teach a single course for
-3rd-year BSc students in [Innopolis University](https://innopolis.university/en/) (Russia). 
+3rd-year BSc students at [Innopolis University](https://innopolis.university/en/) (Russia). 
 The title was "System Software Design." 
 The size of the group was about 150 people and the duration was
 8 weeks. I was supposed to give them sixteen lectures, 
 two lectures per week. And I was asked to examine their knowledge
-by the end of the course. Pretty much a normal job of a university
-teacher. You know, in my opinion, I failed most parts of it. 
+by the end of the course. Pretty much a normal job for a university
+teacher. And you know, in my opinion, I failed most parts of it. 
 Here is what I learned.
 
 <!--more-->
@@ -44,12 +44,12 @@ of giving speeches at software conferences,
 workshops, meetups, and so on. Usually, such a speech is 30-40 minutes long with
 10-15 minutes for Q&A at the end. Then, you just walk away and relax.
 
-Here, it was something completely different. First, the lecture takes 90 minutes
-with a small five-minutes break in the middle. Second, I had to give two 
+Here it was something completely different. First, the lecture takes 90 minutes
+with a small five-minute break in the middle. Second, I had to give two 
 lectures straight. Third, I had two lectures on Tuesday and two on Wednesday.
 Thus, I had 180+180=360 minutes of teaching every second week. 360 minutes! It's
 similar to 10 conference speeches! Imagine how much it takes to prepare ten
-conference speeches. All my evenings and weekends were completely occupied by
+conference speeches. All my evenings and weekends were completely occupied with
 this. The lesson I've learned: start preparing your course long before
 the first day of it and expect to spend a lot of time on it.
 
@@ -57,32 +57,32 @@ the first day of it and expect to spend a lot of time on it.
 
 It seems that for some/most students, my course was not so much about learning
 something new, but about getting the "A" grade. They started bugging me right
-from the beginning of the course: how exactly you will examine our projects
-and how the grading decision will be made? I don't blame them, I blame myself:
+from the beginning of the course: how exactly will you examine our projects
+and how will the grading decision be made? I don't blame them, I blame myself:
 I didn't give them a Syllabus at the beginning of the course. Somewhere
 in the middle of the course I wrote it up, 
 [see here](https://yegor256.github.io/ssd16/syllabus.pdf).
 
-## In Lieu of Exam
+## In Lieu of an Exam
 
 Instead of examining their knowledge I decided to ask them to create
-a software, using the knowledge they supposedly got at the lectures. It was a good decision,
+some software, using the knowledge they supposedly got at the lectures. It was a good decision,
 because I can't even imagine how much time an oral examination of 150 people would take and how
-subjective would it be. There was another option though: a questionaire with
+subjective it would be. There was another option though: a questionnaire with
 right and wrong answers. But still, it would take a lot of time to create
 one. Asking them to make a piece of software was a better choice, until
-I realized that I didin't know how can I _objectively_ evaluate it.
+I realized that I didn't know how I could _objectively_ evaluate it.
 
 In the [Syllabus](https://yegor256.github.io/ssd16/syllabus.pdf) 
 I suggested some criteria, but they were far from being objective.
 The only objective one was the number of stars their repository
 would acquire on GitHub. By the way, all of them reached 
-the highest possible number: fifteen. Some of them got more than fourty,
+the highest required number: fifteen. Some of them got more than forty,
 which, according to my plan, was the point: to show them that good software
 with a small boost (by the stars given to you by friends-and-family)
 can easily gain larger popularity.
 
-By the way, I'm still dreaming about a software or a hosted service, which would
+By the way, I'm still dreaming about a software package or a hosted service, which would
 go through any GitHub repository and make a quality analysis of it. Not the
 quality of code, but the quality of process, documentation, discipline,
 communications, etc. Such a software may use Machine Learning
@@ -90,27 +90,27 @@ to make non-deterministic guesses about the internals of a repository. It
 may also benchmark thousands of GitHub repositories and then evaluate the
 given one against those which are the best.
 
-Without such a software I had to review their repositories one by one.
-Took me an entire day. TAs did their review before me, 
+Without such software I had to review their repositories one by one.
+Which took me an entire day. TAs did their review before me, 
 which was helpful too.
 
 ## Labs
 
 There were not only lectures, but also practical tasks, called "Labs."
-I've got three Teaching Assistants (TA), each of which has had one third
-of my students. TAs were also teaching them software design, trying to 
+I had three Teaching Assistants (TA), each of which had one third
+of my students. The TAs were also teaching them software design, trying to 
 go along with the content I was giving at the lectures. Did it work well?
 It didn't. And it was 100% my fault.
 
 Each TA has their own ideas about software design, about software quality,
 about management, about many other things. If I wanted to do it right, 
-I would had to "teach" TAs first, spending
-some time for this before starting the course. Maybe I would even had to give
+I would have had to "teach" the TAs first, spending
+some time for this before starting the course. Maybe I would have even had to give
 them some guidelines, explaining my expectations. This would be very
 helpful, since TAs interact with students much more than the lecturer.
-I, being a standing up teaching, was not able to _discuss_ things
+I, being a standing-up teacher, was not able to _discuss_ things
 with students: I was mostly delivering them my thoughts. TAs and Labs
-are the places where the discussions are happening.
+are where the discussions are happening.
 
 Thus, the lesson I've learned: before starting teaching,
 make sure your TAs understand your content well. Very well.
@@ -141,15 +141,15 @@ Thus, if you want your class to be full each time:
 1) entertain them,
 2) make grades depend on attendance, 
 and
-3) don't publish videos until the exam (or don't record at all).
-But I won't do either of that. I'm fine with ten people in the room,
+3) don't publish videos until after the exam (or don't record at all).
+But I won't do either of those. I'm fine with ten people in the room,
 thousands on YouTube, and a few very interesting products created by 
 those who most probably never attended (I discuss them below).
 
 ## Best Students
 
 There were four possible grades to give: A, B, C, and D. The failing
-one was "D", while "C" was not a good one either. Students formed small
+one was "D", but"C" was not good either. Students formed small
 groups of up to four people. Each group created their own GitHub project
 (actually, three groups out of fifty made them in GitLab) and I reviewed them. Here is
 how I distributed my marks:
@@ -165,14 +165,14 @@ D   : 1
 
 Formally speaking, I gave "A" marks to 2+6+22 people (including "A+" and "A++") marks, but
 I felt obligated to emphasize the difference between excellent and good projects
-even through they are in the same formal "A" category: that's why these extra "A++" and "A+" marks. 
+even through they are in the same formal "A" category: that's why there are extra "A++" and "A+" marks. 
 Of course, there was a possibility
 to give "A" only to those who are "A+" and "A++" in my classification, shifting
 the rest of the schedule down and giving many more "C" marks, 
 but I was afraid that this would lead to a lot of complaints. 
-Simply put, I chickened out.
+Put simply, I chickened out.
 
-Now, to reward those who got "A++" and "A+" I publish their projects here 
+Now, to reward those who got "A++" and "A+" I'm publishing their projects here, 
 and their accounts. They may consider this blog post as my personal
 letter of recommendation for each of them. If you, dear reader, are a potential
 employer of these guys, I highly recommend them.
@@ -195,11 +195,11 @@ Here they are the "A++" two:
     and
     [@Denisalik](https://github.com/Denisalik)
 
-Look at the quality of repositories! 
+Look at the quality of the repositories! 
 Don't judge them much by the quality of code
-or the usefulness of the products (even though they useful) --- the course
+or the usefulness of the products (even though they are useful) --- the course
 was not about coding. The course was about organizing your code and 
-technical decisions. They, I believe, made it very well, keeping in mind
+making technical decisions. They, I believe, did very well, keeping in mind
 that they are students.
 
 These are six "A+" repositories:
@@ -258,5 +258,4 @@ Big thanks to Innopolis University and personally to its Dean,
 Prof. [Giancarlo Succi](https://scholar.google.com/citations?user=PdMO57sAAAAJ&hl=en),
 for giving me this opportunity to realize that being a teacher is
 very hard and ... fun.
-
 
