@@ -34,6 +34,9 @@ By the way, I'm an organizer of
 I'm also a PC member of 
 [BCNC'21](https://2021.splashcon.org/home/bcnc-2021).
 
+[EOLANG and phi-calculus](https://arxiv.org/abs/2111.13384),
+November 2021
+
 [Volatility metric to detect anomalies in source code repositories](https://dl.acm.org/doi/abs/10.1145/3486949.3486961),
 BCNC 2021: Proceedings of the 1st ACM SIGPLAN International Workshop on Beyond Code: No Code,
 October 2021
