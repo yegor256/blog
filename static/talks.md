@@ -138,7 +138,8 @@ I was also seen at [these events](/seen.html).
 Твой первый Ruby Gem;
 [Ruby Russia](https://rubyrussia.club/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
-24 September.
+24 September;
+[видео](https://youtu.be/RyTR9vYZj0o).
 
 <div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/9dydfF_B4DE/mqdefault.jpg" class="past-talk" alt="HighLoad++ 2020"/><br/>
