@@ -131,7 +131,8 @@ I was also seen at [these events](/seen.html).
 Анализ качества кода и почему он не работает?;
 [&lt;code/R&gt;](https://code-r.ru/);
 <span class="city">Omsk</span>, <span class="country">Russia</span>;
-18 September.
+18 September;
+[видео](https://www.youtube.com/watch?v=PJAzfQtxby4).
 
 <div class="talk-event">&nbsp;</div>
 <img src="/images/2021/rubyrussia.png" class="past-talk" alt="Ruby Russia 2021"/><br/>
