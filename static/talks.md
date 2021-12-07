@@ -127,7 +127,7 @@ I was also seen at [these events](/seen.html).
 ### 2021
 
 <div class="talk-event">&nbsp;</div>
-<img src="https://code-r.ru/images/91e002d647a54145523a33296ff93f91.svg" class="past-talk" alt="code/R 2021"/><br/>
+<img src="https://i.ytimg.com/vi/PJAzfQtxby4/mqdefault.jpg" class="past-talk" alt="code/R 2021"/><br/>
 Анализ качества кода и почему он не работает?;
 [&lt;code/R&gt;](https://code-r.ru/);
 <span class="city">Omsk</span>, <span class="country">Russia</span>;
@@ -135,7 +135,7 @@ I was also seen at [these events](/seen.html).
 [видео](https://www.youtube.com/watch?v=PJAzfQtxby4).
 
 <div class="talk-event">&nbsp;</div>
-<img src="/images/2021/rubyrussia.png" class="past-talk" alt="Ruby Russia 2021"/><br/>
+<img src="https://i.ytimg.com/vi/RyTR9vYZj0o/mqdefault.jpg" class="past-talk" alt="Ruby Russia 2021"/><br/>
 Твой первый Ruby Gem;
 [Ruby Russia](https://rubyrussia.club/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
