@@ -127,6 +127,14 @@ I was also seen at [these events](/seen.html).
 ### 2021
 
 <div class="talk-event">&nbsp;</div>
+<img src="https://d3373sevsv1jc.cloudfront.net/uploads/communities_production/community/logo/33/4e737ad5-424b-468b-ac30-d62efefaa073.png" class="past-talk" alt="EngX Z-Day 2021"/><br/>
+Code Line No. 0;
+[ENGX Z-DAY 2021](https://community-z.com/events/engx-z-day-2021);
+<span class="city">Kiev</span>, <span class="country">Ukraine</span>;
+3 December;
+[video](https://community-z.com/events/engx-z-day-2021/talks/16491).
+
+<div class="talk-event">&nbsp;</div>
 <img src="https://i.ytimg.com/vi/PJAzfQtxby4/mqdefault.jpg" class="past-talk" alt="code/R 2021"/><br/>
 Анализ качества кода и почему он не работает?;
 [&lt;code/R&gt;](https://code-r.ru/);
