@@ -157,3 +157,5 @@ our people, but also decrease the amount of "worst" which inevitably
 surfaces when people compete against each other. The CAP system gives us
 the rules, which are fair and transparent enough to significantly reduce the amount
 of conflicts and of cheating.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Competitive metrics of people&#39;s productivity lead to...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1469925208878424067?ref_src=twsrc%5Etfw">December 12, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
