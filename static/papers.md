@@ -40,12 +40,12 @@ November 2021
 [Volatility metric to detect anomalies in source code repositories](https://dl.acm.org/doi/abs/10.1145/3486949.3486961),
 BCNC 2021: Proceedings of the 1st ACM SIGPLAN International Workshop on Beyond Code: No Code,
 October 2021
-[PDF](/pdf/2021/volatility.pdf)
+[PDF](/pdf/2021/volatility.pdf), [LaTeX](https://github.com/yegor256/bcnc-2021-volatility)
 
 [Combining object-oriented paradigm and controlled natural language for requirements specification](https://dl.acm.org/doi/abs/10.1145/3486949.3486963),
 BCNC 2021: Proceedings of the 1st ACM SIGPLAN International Workshop on Beyond Code: No Code,
 October 2021
-[PDF](/pdf/2021/requs.pdf)
+[PDF](/pdf/2021/requs.pdf), [LaTeX](https://github.com/yegor256/requs-paper)
 
 [Bringing Industry Back to Conferences, and Paying for Results](https://cacm.acm.org/magazines/2020/11/248192-bringing-industry-back-to-conferences-and-paying-for-results/fulltext),
 Communications of the ACM, Volume 63, Number 11,
