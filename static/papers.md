@@ -34,6 +34,9 @@ By the way, I'm an organizer of
 I'm also a PC member of 
 [BCNC'21](https://2021.splashcon.org/home/bcnc-2021).
 
+[Reducing Programs to Objects](https://arxiv.org/abs/2112.11988),
+December 2021
+
 [EOLANG and phi-calculus](https://arxiv.org/abs/2111.13384),
 November 2021
 

@@ -19,15 +19,15 @@ jb_picture:
 
 [Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (or reflection) is 
 when your code changes itself on-fly. For example, a method of a class, when we call it,
-among other things adds a new method to the class. Java, C#, Ruby, Python, PHP, you name it---they
-all have this powerful feature. What's 
+among other things, adds a new method to the class 
+(also known as [monkey patching](https://en.wikipedia.org/wiki/Monkey_patch)). 
+Java, Python, PHP, JavaScript, you name it---they
+all have this "powerful" feature. What's 
 [wrong](https://softwareengineering.stackexchange.com/questions/193526) with it? 
 Well, it's 
 [slow](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/), 
 [dangerous](https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection),
-hard to read,
-and
-hard to debug.
+hard to read and debug.
 But all that is nothing comparing with the _coupling_ it introduces to the code.
 
 <!--more-->
@@ -35,7 +35,7 @@ But all that is nothing comparing with the _coupling_ it introduces to the code.
 {% jb_picture_body %}
 
 There are many situations when reflection can "help" you.
-Let's go through all of them and see why the coupling is
+Let's go through all of them and see why the coupling they add to the code is
 unnecessary and harmful.
 
 ## Type Checking and Casting
@@ -58,7 +58,7 @@ public int sizeOf(Iterable items) {
 }
 {% endhighlight %}
 
-I'm sure everybody would agree that this is reflection, but I believe
+I'm not sure everybody would agree that this is reflection, but I believe
 it is: we check the structure of the class in runtime and then make 
 a call to the method `size()` which doesn't exist in the `items`. It only
 shows up when we, again in runtime, make a shortcut to it in the bytecode.
