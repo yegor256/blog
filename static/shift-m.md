@@ -42,6 +42,11 @@ Subscribe at
 
 Recent episodes:
 
+<img src="/images/shift-m/andy-hunt.png" class="guest-face" alt="Face of Andy Hunt"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;50: [Shift-M/50: Andy Hunt about tech books publishing](/shift-m/2021/50.html)<br/>
+24 December 2021; 59 min; [video](https://www.youtube.com/watch?v=JER03qMCmIk).
+
 <img src="/images/shift-m/greg-young.png" class="guest-face" alt="Face of Greg Young"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;49: [Shift-M/49: Greg Young about software architecture](/shift-m/2021/49.html)<br/>
