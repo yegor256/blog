@@ -4744,6 +4744,7 @@ lamp
 lamport
 land
 landed
+lands
 lane
 lanes
 langsworth
@@ -5666,6 +5667,7 @@ nicely-looking
 niceness
 nicer
 niche
+nickname
 nierstrasz
 nietzsche
 night
@@ -8568,6 +8570,7 @@ temporarily
 temporary
 temptation
 tempted
+tempting
 ten
 tend
 tendency
@@ -9036,6 +9039,7 @@ unique
 uniquely
 unit
 unit-test
+unite
 united
 units
 universal
