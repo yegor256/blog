@@ -48,6 +48,12 @@ many others explicitly say the same:
 and
 [OpenSource.com](https://opensource.com/article/18/6/anatomy-perfect-pull-request).
 
+**Don't Unite Changes**.
+It may be tempting to put all changes you want to make into a single
+pull request, to merge them faster, having only a single review. Don't do this.
+This will only make the process more complicated and you will annoy your
+reviewers. The rule is simple: one change = one pull request.
+
 **Use [Nice](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
 [Markdown](https://guides.github.com/features/mastering-markdown/) in Your Docs**.
 I didn't manage to find any scientific research on this, maybe because it's
@@ -56,6 +62,13 @@ Rich text formatting not only makes the text look nicer, but also helps
 readers digest the content faster and with more pleasure. After you learn Markdown,
 I'd suggest reading this blog post by Aaron Stannard from PetaBridge:
 [How to Use Github Professionally](https://petabridge.com/blog/use-github-professionally/).
+
+**Address Your Comments**.
+Always, without any exceptions, start your comments (either in a pull request
+or in an issue) with GitHub nickname of the person you talk to. If you don't do this,
+the message will not reach the person's inbox and most likely will be lost.
+People who are active in GitHub receive hundreds of emails every day from from GitHub:
+they don't read them. They only read what lands into their "Notifications."
 
 **Say Please, Thanks, and Sorry**.
 [According](https://nypost.com/2014/02/15/popes-advice-to-couples-say-please-thanks-and-sorry/)
@@ -66,6 +79,14 @@ of them are basically the same:
 ask nicely, be grateful, and be ready to admit a mistake. I would recommend
 [15 rules for communicating at GitHub](https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/)
 by Ben Balter, a Senior Product Manager at GitHub.
+
+**Ping Them**.
+When you make some changes to the branch and want your pull request to be
+reviewed again: post a message explicitly asking your reviewer to take another look.
+When you submit a pull request, post a message into it addressing it to the
+architect of the project: ask them to review the PR.
+And so on. Don't expect them to watch your activity. They have other things to do.
+It's your responsibility to ping them.
 
 **Make Descriptive [Commits](https://git-scm.com/docs/git-commit)**.
 The style of formatting Git commit messages (I'm sure you are using Git) is usually
