@@ -55,7 +55,7 @@ Seventeen years later (the book was published in 2004), we implemented the idea
 on top of [EO](https://www.eolang.org), our new programming language.
 The language is intentionally much simpler than Java or C++.
 You can read its more or less formal description 
-[here](https://www.eolang.org/eolang-paper.pdf).
+[here](https://arxiv.org/abs/2111.13384).
 
 To turn an EO program into an executable entity and release it to 
 the [Objectionary](https://www.objectionary.com), 
@@ -169,7 +169,7 @@ It will be parsed to this XMIR (XML Intermediate Representation):
 {% endhighlight %}
 
 If you wonder what this XML means, read 
-[this document](https://www.eolang.org/eolang-paper.pdf):
+[this document](https://arxiv.org/abs/2111.13384):
 there is a section about XMIR.
 
 ## Optimize 🌵
