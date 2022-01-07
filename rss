@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-01-05T09:17:04+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Academic Teaching is Hard</title><link href="https://www.yegor256.com/2021/12/01/teaching.html" rel="alternate" type="text/html" title="Academic Teaching is Hard" /><published>2021-12-01T00:00:00+00:00</published><updated>2021-12-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/12/01/teaching</id><content type="html" xml:base="https://www.yegor256.com/2021/12/01/teaching.html">&lt;p&gt;A few months ago I got an opportunity to teach a single course for
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-01-07T04:26:30+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Academic Teaching is Hard</title><link href="https://www.yegor256.com/2021/12/01/teaching.html" rel="alternate" type="text/html" title="Academic Teaching is Hard" /><published>2021-12-01T00:00:00+00:00</published><updated>2021-12-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/12/01/teaching</id><content type="html" xml:base="https://www.yegor256.com/2021/12/01/teaching.html">&lt;p&gt;A few months ago I got an opportunity to teach a single course for
 3rd-year BSc students at &lt;a href=&quot;https://innopolis.university/en/&quot;&gt;Innopolis University&lt;/a&gt; (Russia). 
 The title was “System Software Design.” 
 The size of the group was about 150 people and the duration was
@@ -292,7 +292,7 @@ a “combination of dictionary and object factory,” with the following propert
 on top of &lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;, our new programming language.
 The language is intentionally much simpler than Java or C++.
 You can read its more or less formal description 
-&lt;a href=&quot;https://www.eolang.org/eolang-paper.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;https://arxiv.org/abs/2111.13384&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;To turn an EO program into an executable entity and release it to 
 the &lt;a href=&quot;https://www.objectionary.com&quot;&gt;Objectionary&lt;/a&gt;, 
@@ -405,7 +405,7 @@ standard &lt;a href=&quot;https://maven.apache.org/plugins/maven-compiler-plugin
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/program&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;If you wonder what this XML means, read 
-&lt;a href=&quot;https://www.eolang.org/eolang-paper.pdf&quot;&gt;this document&lt;/a&gt;:
+&lt;a href=&quot;https://arxiv.org/abs/2111.13384&quot;&gt;this document&lt;/a&gt;:
 there is a section about XMIR.&lt;/p&gt;
 
 &lt;h2 id=&quot;optimize-&quot;&gt;Optimize 🌵&lt;/h2&gt;
