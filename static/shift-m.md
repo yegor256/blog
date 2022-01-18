@@ -42,6 +42,11 @@ Subscribe at
 
 Recent episodes:
 
+<img src="/images/shift-m/michael-kay.png" class="guest-face" alt="Face of Michael Kay"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;51: [Michael Kay about XSLT, XML, and software business](/shift-m/2022/51.html)<br/>
+13 January 2022; 66 min; [video](https://youtu.be/2Zt9oJtFKGw).
+
 <img src="/images/shift-m/andy-hunt.png" class="guest-face" alt="Face of Andy Hunt"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;50: [Andy Hunt about tech books publishing](/shift-m/2021/50.html)<br/>
