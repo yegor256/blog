@@ -42,6 +42,11 @@ Subscribe at
 
 Recent episodes:
 
+<img src="/images/shift-m/aino-corry.png" class="guest-face" alt="Face of Aino Corry"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;52: [Aino Corry about meetings and retrospectives](/shift-m/2022/52.html)<br/>
+19 January 2022; 55 min; [video](https://youtu.be/2Zt9oJtFKGw).
+
 <img src="/images/shift-m/michael-kay.png" class="guest-face" alt="Face of Michael Kay"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;51: [Michael Kay about XSLT, XML, and software business](/shift-m/2022/51.html)<br/>
