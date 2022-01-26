@@ -19,7 +19,7 @@ jb_picture:
   caption: Blow (2001) by Ted Demme
 ---
 
-Revenue means **cash** that is coming into your bank account every month
+Revenue means _cash_ that is coming into your bank account every month
 from your customers. Not investors. Customers, those who are buying
 your products or services. You are doing everything you can
 to make sure this number grows, mostly because you use this money
@@ -39,7 +39,7 @@ first paying customers are happy by creating new features, fixing bugs, and empl
 new CRMs. They also try to acquire new
 buyers and pay for marketing, promotion, and Google AdWords. The numbers
 grow every month and ... they don't realize they are
-actually **killing** their own startup.
+actually _killing_ their own startup.
 
 {% badge http://www.seedramp.com/images/logo.svg 128 http://www.seedramp.com %}
 
@@ -62,7 +62,7 @@ get what you deserve sooner or later. In most cases, later.
 But you will get it.
 
 The concept of a [startup company](https://en.wikipedia.org/wiki/Startup_company)
-is completely different. A startup is a **wild bet** you're making on some
+is completely different. A startup is a _wild bet_ you're making on some
 crazy idea that makes "the world a better place." You're building
 a new Facebook, a Google killer, or a Snapchat replacement. Your goal
 is huge, while the investment is very small. Just a few years of work
@@ -74,7 +74,7 @@ These two strategies contradict each other:
 a traditional business vs. a startup.
 
 Customers and revenue are not the goal of a startup, but rather
-an **instrument** that helps you achieve the real goal:
+an _instrument_ that helps you achieve the real goal:
 [valuation](https://en.wikipedia.org/wiki/Business_valuation). You are
 supposed to use your revenue to convince investors
 that the prototype works and your valuation is already high enough.
@@ -82,7 +82,7 @@ Your steadily growing cash flow right now must be used as a demonstration of a f
 [customer acquisition](https://en.wikipedia.org/wiki/Customer_acquisition_management)
 model. But it is not the result by itself. It is just a tool in your hands.
 
-Your valuation is what makes you rich, **not** your revenue or your happy
+Your valuation is what makes you rich, _not_ your revenue or your happy
 customers. Of course, the revenue is important, but only as long as
 it serves the main goal---increase valuation at an extremely
 fast pace. The revenue is not the goal; it's the way to achieve it. The valuation
@@ -90,10 +90,10 @@ is the goal.
 
 Startup valuation must grow fast, ideally doubling itself every few months.
 If that's not happening, close the business and start something else. The
-valuation must **skyrocket** or you have to abandon the startup and try your
+valuation must _skyrocket_ or you have to abandon the startup and try your
 hand on another one as soon as possible.
 
-{% quote The revenue is good for you but not really good for investors %}
+{% quote The revenue is good for you but not really good for investors. %}
 
 One of the biggest mistakes a startup founder can make is to forget
 about this "skyrocketing valuation" principle and focus on making
@@ -102,7 +102,7 @@ startup and maybe turn it into a lifestyle business.
 
 Savvy investors will avoid you, mostly because they
 understand that growing revenue is just one of many other
-**elements** of a growing valuation. If you're focused on just one element,
+_elements_ of a growing valuation. If you're focused on just one element,
 you most likely won't multiply your valuation a hundred times over the
 next year. Maybe you will multiply revenue a few times, but who cares?
 The revenue is good for you but not really good for investors.
