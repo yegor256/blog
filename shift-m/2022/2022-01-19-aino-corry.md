@@ -3,7 +3,7 @@ layout: post
 title: "Shift-M/52"
 date: 2022-01-19 12:00:00
 place: Moscow, Russia
-permalink: /shift-m/2021/52.html
+permalink: /shift-m/2022/52.html
 description: |
   Aino Corry is an expert in Agile and specifically in retrospectives,
   which she described in her recently published book.
