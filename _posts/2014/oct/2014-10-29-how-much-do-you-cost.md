@@ -53,7 +53,7 @@ If you have nothing to show here, I see three possible causes.
 
 {% youtube GS45LzE3LPQ %}
 
-First, you're **too shy to share** your code because **it's crap**.
+First, you're _too shy to share_ your code because _it's crap_.
 [Obviously]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}),
 this is not a good sign. Not because your code could be bad, but because
 you're not brave enough to face this fact and improve. In our teams we
@@ -68,7 +68,7 @@ in our projects, where quality requirements are very high.
 {% quote You're not able to at least find and fix one bug in some open source product you're using? %}
 
 The second possible cause is that
-you work from nine till five, for food, **without passion**. Actually,
+you work from nine till five, for food, _without passion_. Actually,
 nobody manifests it that way. Instead, I often hear something like
 "my company doesn't pay me for open source contribution and
 at home I want to spend time with my family." In modern software
@@ -85,7 +85,7 @@ entire management model relies on [self-motivation]({% pst 2014/apr/2014-04-17-h
 
 The last possible cause is that
 you don't know what to write and where to contribute, which means
-**lack of creativity**. As I mentioned above, almost everything we're using
+_lack of creativity_. As I mentioned above, almost everything we're using
 now is open source, and these tools are full of bugs and not-yet-implemented features.
 At the same time, you don't see any areas for improvement? You don't
 know what can be done better? You're not able to at least find, report and fix
@@ -106,7 +106,7 @@ expensive countries. When I'm getting resumes from San Francisco programmers,
 their rates are $70+ per hour. The same skills and experience cost
 $15-20 in Karachi. The reason here is the cost of living---it is much higher in the US than in Pakistan.
 
-{% quote We prefer to work with people whose expenses are lower %}
+{% quote We prefer to work with people whose expenses are lower. %}
 
 However, this reason doesn't sound logical to me. If you're driving a more
 expensive car, we have to pay you a
@@ -140,7 +140,7 @@ Or maybe you're too shy to ask? Or you can't describe your questions
 in an accurate and precise format? Or maybe all your questions already
 have answers? In any case, it's sad.
 
-{% quote SO reputation is proof that you can find answers to your questions by communicating with people you don't know %}
+{% quote SO reputation is proof that you can find answers to your questions by communicating with people you don't know. %}
 
 Second, if you're not answering, you simply have nothing to say. In most cases,
 this means that you're not solving complex and unique problems.
@@ -214,14 +214,14 @@ in your entire
 [career]({% pst 2017/jan/2017-01-24-career-advice %}),
 it is for one of the following reasons:
 
-First, you're **afraid to lose**. A serious certification may cost a few hundred
+First, you're _afraid to lose_. A serious certification may cost a few hundred
 dollars (I paid over $700 for [SCEA](https://en.wikipedia.org/wiki/Oracle_Certification_Program))
 and you will not get a refund if you
 fail. If you're afraid to lose, you're afraid to fight. This means
 you'll chicken out in a real-life situation, where a complex problem
 will need to be solved.
 
-Second, you **don't invest** in your profile. This most probably means that you don't
+Second, you _don't invest_ in your profile. This most probably means that you don't
 want to change companies and prefer to find a peaceful office, where you
 can stay forever. I remember I once said to a friend of mine---"you will greatly improve your CV if you pass this certification." He
 answered with a smile---"I hope I won't need a CV any more, I like
@@ -234,7 +234,7 @@ working for, but it definitely works
 In my experience, the best
 [team players]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
 are those who work for themselves.
-Healthy **individualism** is a key success factor. If your primary objective
+Healthy _individualism_ is a key success factor. If your primary objective
 is to earn for yourself (money, reputation, skills, or knowledge)---you will be very effective in our projects. Certifications in your
 profile is an indicator of that healthy individualism we're looking for.
 
@@ -271,7 +271,7 @@ was to get to the list of speakers.
 
 Both blog articles and conference presentations make you much more
 valuable as a specialist. Mostly because these things demonstrate that some
-people **already reviewed** your work and your talent. And it was not just
+people _already reviewed_ your work and your talent. And it was not just
 a single employer, but a group of other programmers and engineers.
 This means that we also can rely on your opinions.
 
@@ -302,8 +302,8 @@ real technical decisions. VPs and CTOs spend most of their time on
 management meetings and internal
 [politics]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
-I'm much more interested in **what** you've done over the last few years than
-in **where** you've done it and what they called you while you were
+I'm much more interested in _what_ you've done over the last few years than
+in _where_ you've done it and what they called you while you were
 doing it.
 
 ## Education
