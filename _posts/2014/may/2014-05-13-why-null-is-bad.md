@@ -92,7 +92,7 @@ mentioned above, I read these publications before writing this post:
 [Clean Code](http://amzn.to/2m7LmaA) by Robert Martin,
 [Code Complete](http://amzn.to/2cs4cXW) by Steve McConnell,
 [Say "No" to "Null"](http://elegantcode.com/2010/05/01/say-no-to-null/) by John Sonmez,
-[Is returning null bad design?](http://stackoverflow.com/questions/1274792/is-returning-null-bad-design) discussion at StackOverflow.
+[Is returning null bad design?](http://stackoverflow.com/questions/1274792/is-returning-null-bad-design) discussion at Stack Overflow.
 
 ## Ad-hoc Error Handling
 

@@ -147,7 +147,7 @@ Here is what I did:
     [Rultor]({% pst 2014/jul/2014-07-24-rultor-automated-merging %});
   * Tried to create a unit test and failed miserably (after a full hour of research),
     since I've had almost no experience in JS unit testing;
-  * Posted a [question](https://stackoverflow.com/questions/51809750/) to StackOverflow;
+  * Posted a [question](https://stackoverflow.com/questions/51809750/) to Stack Overflow;
   * The question was answered by a few people only after the bounty I offered;
   * [@brian-lives-outdoors](https://github.com/brian-lives-outdoors)'s answer
     was the best and he even submitted a [pull request](https://github.com/yegor256/colorizejs/pull/2)

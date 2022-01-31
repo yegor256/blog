@@ -109,7 +109,7 @@ use them as recommendation providers, but make yourself a rule:
 [never commit]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 anything that doesn't fully pass all static analyzers.
 
-**Humiliate Yourself on StackOverflow**.
+**Humiliate Yourself on Stack Overflow**.
 Robert Sheckley [said](https://amzn.to/2ToSdws)
 that "in order to ask a question you must already know most of the answer."
 Friends, online chats, and office kitchen talks are
@@ -117,9 +117,9 @@ great places to find help... for junior programmers. Those people understand you
 no matter how stupid your questions are and that is how they spoil you. You don't
 grow while talking to them and getting their help. You degrade. Instead, you should
 ask questions where nobody knows you and will only answer if your question is perfectly
-formulated and expressed. There are many places, but StackOverflow is the best.
-Make sure every question you have goes to StackOverflow first. Then you may share the
-link with your buddies. But StackOverflow comes first.
+formulated and expressed. There are many places, but Stack Overflow is the best.
+Make sure every question you have goes to Stack Overflow first. Then you may share the
+link with your buddies. But Stack Overflow comes first.
 
 **Earn Certificates**.
 I've got some of them and I'm planning to get more, even though I'm not really

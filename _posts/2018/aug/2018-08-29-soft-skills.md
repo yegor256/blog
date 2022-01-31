@@ -100,7 +100,7 @@ when to relax. Again, I blame programmers. We have to know how to manage our
 own peace of mind.
 
 **Asking**.
-Not your friends, but StackOverflow and other public sources. The software
+Not your friends, but Stack Overflow and other public sources. The software
 development world is getting global and the knowledge your project team
 possess is just a tiny fraction of what the world knows about the problem
 you are solving. You have to know how to ask the world. This is the soft skill

@@ -26,15 +26,15 @@ them what was going on. They told me that their PostgreSQL server was running
 slow because it was doing this and that, and when they restarted it
 it was repeating this and that... Long story short, I had no idea what they were talking about,
 even though I was a user of PostgreSQL for many years. My first reaction was:
-"Have you posted a question on StackOverflow yet?" They answered:
+"Have you posted a question on Stack Overflow yet?" They answered:
 "We still _hope_ that that won't be necessary." I replied, surprised: "Huh?"
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Why was [StackOverflow](https://stackoverflow.com) their last resort? They didn't explain, but I believe
-I know the answer: they would feel ashamed. For them StackOverflow is a place
+Why was [Stack Overflow](https://stackoverflow.com) their last resort? They didn't explain, but I believe
+I know the answer: they would feel ashamed. For them Stack Overflow is a place
 for losers who can't solve problems by themselves. It is a place
 for those who are not worth the money their <del>owners</del> bosses pay
 them. It is a place where lazy programmers ask questions and expect answers
@@ -45,7 +45,7 @@ This is the mentality of a [slave]({% pst 2015/oct/2015-10-06-how-to-be-good-off
 This is the mentality of someone who is paid
 [for the time]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) they spend in the office
 or in front of the computer, not for the results they deliver. It is only logical
-that if they are paid for _being programmers_, seeking help at StackOverflow
+that if they are paid for _being programmers_, seeking help at Stack Overflow
 is a declaration of incompetence. You do it once, you will be excused, you do
 it twice, your boss will [start wondering]({% pst 2015/sep/2015-09-22-micromanagement %})
 whether you are the right resource
@@ -63,7 +63,7 @@ Are you a slave?
 Now, to the contrary, someone who is paid [for the results delivered](https://www.zerocracy.com)
 has a completely
 [different]({% pst 2018/apr/2018-04-17-how-to-be-lazy %}) mindset.
-Why would StackOverflow be a _last resort_ for a freelancer,
+Why would Stack Overflow be a _last resort_ for a freelancer,
 who is paid for the problems they manage to solve, no matter how much time they
 spend on them nor where they seek help? Moreover, the
 [faster]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}) such a freelancer
@@ -73,7 +73,7 @@ the better an engineer he or she is.
 In the story above, my friend had the right mindset. The moment he found
 out that his team couldn't solve the problem, he came to me, and a few other
 people. He was not a software developer, that's why he didn't know about
-StackOverflow. But he was seeking help everywhere _around_ his team, while
+Stack Overflow. But he was seeking help everywhere _around_ his team, while
 his <del>slaves</del> programmers were trying to find a solution by themselves.
 
 Maybe that's why he is a co-founder and they are his employees?
@@ -85,7 +85,7 @@ the last resort is at the bottom:
 
   * Search in Google
 
-  * Post to StackOverflow
+  * Post to Stack Overflow
 
   * Read books
 

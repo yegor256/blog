@@ -113,7 +113,7 @@ Ergo, the recipe of happiness is: resent, overcome, repeat.
 
 But what to resent? Well this may be
 your laziness, your fears, your absence of Oracle certification, your
-low StackOverflow [reputation]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %}),
+low Stack Overflow [reputation]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %}),
 or no paychecks from the Apple Store (do you have
 your own revenue-generating app there?)
 

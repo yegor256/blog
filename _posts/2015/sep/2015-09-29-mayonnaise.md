@@ -61,7 +61,7 @@ Well, yes and no.
 
 On one hand, there are plenty of job sites and rather powerful
 technologies for finding the right person.
-There is [StackOverflow Careers](https://careers.stackoverflow.com/),
+There is [Stack Overflow Careers](https://careers.stackoverflow.com/),
 which not only allows me to find a programmer but also see what he or she talks about and
 the quality of his or her questions and answers. There is
 [GitHub](http://www.github.com) that demonstrates the code written

@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 I owe my [pretty high](https://stackoverflow.com/users/187141/yegor256)
-StackOverflow reputation to [this question](https://stackoverflow.com/questions/3914404)
+Stack Overflow reputation to [this question](https://stackoverflow.com/questions/3914404)
 in particular, which I asked a few years ago: How do you print an
 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date in Java?
 It managed to collect a lot of upvotes since then and 20+ answers, including

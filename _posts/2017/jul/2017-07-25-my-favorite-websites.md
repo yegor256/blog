@@ -49,7 +49,7 @@ a few years ago, but didn't really like it.
 GitHub is simply the best, no doubts.
 
 <img src="/images/2017/07/sites-stackoverflow.jpg" class="env-ico" alt="icon"/><br/>
-[StackOverflow](http://stackoverflow.com/users/187141/yegor256)
+[Stack Overflow](http://stackoverflow.com/users/187141/yegor256)
 is where I learn new technologies, ask questions, answer them sometimes
 and really enjoy working with the community. When I have some free time
 I just search by

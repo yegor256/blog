@@ -111,7 +111,7 @@ way to learn these skills is _practice_. I've [said it](https://www.facebook.com
 [many times](https://www.youtube.com/watch?v=GS45LzE3LPQ),
 let me repeat it again: If you are not an
 [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
-and StackOverflow
+and Stack Overflow
 [activist]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}), you most
 likely won't have these skills.
 

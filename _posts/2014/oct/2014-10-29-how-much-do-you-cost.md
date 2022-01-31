@@ -126,9 +126,9 @@ from Karachi much stronger than the same $100 will motivate the same person,
 if she lives in San Francisco. Thus, we prefer to work with people
 whose expenses are lower. Our money will simply work better.
 
-## StackOverflow.com Reputation
+## Stack Overflow Reputation
 
-We all know what StackOverflow has but very few people (surprisingly few!)
+We all know what Stack Overflow has but very few people (surprisingly few!)
 actively contributing to it. If your profile there is empty (or you don't have
 one) I realize that you 1) don't have any questions to ask
 and 2) you have nothing to answer.
@@ -150,7 +150,7 @@ collecting your paychecks.
 Very often I hear people saying that they solve most of their problems
 by asking their colleagues sitting next to them in the
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). They say
-they simply don't need StackOverflow (or similar resources, if they exist)
+they simply don't need Stack Overflow (or similar resources, if they exist)
 because their team is so great that any questions can be answered internally.
 That's good for the team and bad for you. Why? You don't have a very important
 skill---finding an answer in a public Internet. In our projects we
@@ -164,7 +164,7 @@ because you are used to be patronized by someone senior, in your
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How much would you charge per hour, for a remote part-time consulting gig? <a href="https://twitter.com/hashtag/freelance?src=hash&amp;ref_src=twsrc%5Etfw">#freelance</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/993162626497699840?ref_src=twsrc%5Etfw">May 6, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-[StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
+[Stack Overflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
 is not just an indicator of how smart you are and how many
 upvotes you got for the
 "[best programming joke](http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke)."
@@ -186,7 +186,7 @@ Does it mean that your code was perfect? It doesn't mean any of that.
 Years of experience is a false indicator. It actually may play against you,
 in combination with other indicators mentioned above. If your CV says that
 you just started to program two years ago and your GitHub
-and StackOverflow accounts are empty---there is still a chance
+and Stack Overflow accounts are empty---there is still a chance
 you will improve. You're just in the beginning of your career. However,
 if your CV says that you're a "10-year seasoned architect" with zero
 open source contribution---this means that you're either lying about
@@ -324,16 +324,16 @@ the one I graduated from), keep this information to yourself.
 ## Rates
 
 **$100+** per hour we gladly pay to an expert who owns a few popular open source
-products; has a StackOverflow score above 20K; has certifications,
+products; has a Stack Overflow score above 20K; has certifications,
 articles, presentations, and maybe even patents.
 
 **$50+** per hour we pay to a professional programmer who has open
-source projects on his own or is an active contributor; has a StackOverflow
+source projects on his own or is an active contributor; has a Stack Overflow
 score over 5K; is writing about software development;
 possesses a few certifications.
 
 **$30+** per hour we pay to a programmer who regularly contributes to
-open source code; is present in StackOverflow; has some
+open source code; is present in Stack Overflow; has some
 certifications.
 
 **$15** per hour we pay to everybody else.

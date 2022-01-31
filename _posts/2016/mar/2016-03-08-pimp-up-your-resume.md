@@ -109,16 +109,16 @@ how can you "know Java?" You barely know a few hundred classes from it.
 That's why it's better to state specifically which parts of Java you definitely know.
 Like I said, be as low-level and specific in your skills as possible.
 
-## StackOverflow Profile
+## Stack Overflow Profile
 
 No matter what anyone [says]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}),
-[StackOverflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
+[Stack Overflow]({% pst 2017/feb/2017-02-14-stackoverflow-is-your-tool %})
 is the de-facto standard platform for asking and answering technical questions.
 Your presence there and your high rating send a clear message to your
 potential employer that you're a superstar (or a rising one). No so many
 people have 100K or more reputation points there. You must be one of them.
 
-So even if you don't have a StackOverflow profile now, create one.
+So even if you don't have a Stack Overflow profile now, create one.
 Spend one hour on it every day for a few months, answering
 [new questions](http://stackoverflow.com/?tab=interesting).
 You will earn 1,000 or more reputation points. Well, provided you have something to say.

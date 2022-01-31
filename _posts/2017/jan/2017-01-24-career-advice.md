@@ -98,7 +98,7 @@ or from your project documentation. By asking people around you, you're making
 your life easier in the short term only. In the long run, you will lack that
 important skill of knowing how to find information. You will become
 a hostage to those friends who help you. Also, don't learn from people around you;
-learn from books, StackOverflow, and open source software.
+learn from books, Stack Overflow, and open source software.
 
 {% quote You must be prepared to say "No" to your friends, your family, your habits, your wishes, your projects, colleagues, classes, methods, and lines of code. %}
 

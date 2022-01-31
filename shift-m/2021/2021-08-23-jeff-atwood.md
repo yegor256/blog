@@ -5,7 +5,7 @@ date: 2021-08-23 12:00:00
 place: Moscow, Russia
 permalink: /shift-m/2021/48.html
 description: |
-  Jeff Atwood, the co-founder of StackOverflow,
+  Jeff Atwood, the co-founder of Stack Overflow,
   the most famous software blogger, the creator of Discourse.
 keywords:
   - podcast

@@ -37,7 +37,7 @@ be "global"; but what do we do with them?
 {% jb_picture_body %}
 
 I assume you already know what a singleton is and why it's an anti-pattern.
-If not, I recommend you read this StackOverflow thread:
+If not, I recommend you read this Stack Overflow thread:
 [What is so bad about singletons?](http://stackoverflow.com/questions/137975/what-is-so-bad-about-singletons)
 
 Now that we agree it's a bad deal, what do we do if we need to, let's say,

@@ -128,7 +128,7 @@ Just google "[how to write a bug report](https://www.google.com/search?q=how+to+
 and listen to what those bloggers say. Your bug reports demonstrate
 [who you are]({% pst 2018/jan/2018-01-23-sociotech-skills %})
 even better than your code. You may practice by submitting questions
-to StackOverflow: the community there will punish you for all your mistakes,
+to Stack Overflow: the community there will punish you for all your mistakes,
 quickly training your reporting skills.
 
 **Make Elegant READMEs**.
