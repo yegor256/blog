@@ -42,6 +42,11 @@ Subscribe at
 
 Recent episodes:
 
+<img src="/images/shift-m/adam-tornhill.png" class="guest-face" alt="Face of Adam Tornhill"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
+&#35;53: [Adam Tornhill on auto-detecting technical debt hotspots](/shift-m/2022/53.html)<br/>
+26 January 2022; 57 min; [video](https://youtu.be/AG44M1DaQXw).
+
 <img src="/images/shift-m/aino-corry.png" class="guest-face" alt="Face of Aino Corry"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;52: [Aino Corry about meetings and retrospectives](/shift-m/2022/52.html)<br/>
