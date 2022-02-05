@@ -5,8 +5,9 @@ date: 2022-01-26 12:00:00
 place: Moscow, Russia
 permalink: /shift-m/2022/53.html
 description: |
-  Adam is a creator of CodeScene.com and 
-  the author of "Your Code as a Crime Scene" book.
+  Adam is a creator of CodeScene.com,
+  the author of "Your Code as a Crime Scene" book, 
+  and a programmer.
 keywords:
   - podcast
   - project management podcast

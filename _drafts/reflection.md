@@ -5,7 +5,8 @@ date: 2021-12-14
 place: Moscow, Russia
 tags: oop
 description: |
-  ...
+  Reflection in object-oriented programming languages is 
+  a powerful technique, but a very dangerous and harmful one.
 keywords:
   - reflection
   - oop reflection
