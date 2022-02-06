@@ -13,9 +13,9 @@ keywords:
   - reflection is bad
   - what is reflection
   - why reflection
-image: /images/2021/12/
+image: /images/2022/02/wheelman.jpg
 jb_picture:
-  caption:
+  caption: Wheelman (2017) by Jeremy Rush
 ---
 
 [Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (or reflection) is 
