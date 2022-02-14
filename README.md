@@ -31,7 +31,7 @@ If it doesn't work (for some reason), do it via Docker
 
 ```bash
 $ docker run -it --rm \
-  -v "$(greadlink -f /code/blog):/b" \
+  -v "$(readlink -f /code/blog):/b" \
   -p 4000:4000 --host=0.0.0.0 \
   yegor256/blog-image \
   'cd /b && bundle update && bundle exec jekyll serve --drafts --future'
