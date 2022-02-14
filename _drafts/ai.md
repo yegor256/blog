@@ -37,13 +37,13 @@ the [Financial Times](https://www.ft.com/content/65477c33-cb72-418d-b03d-b60cfc5
 [The Verge](https://www.theverge.com/2022/2/2/22914085/alphacode-ai-coding-program-automatic-deepmind-codeforce)
 and many others have already announced the victory: 
 AI [will replace programmers](https://www.bbc.com/news/business-57914432) 
-and we all are going to lose our jobs. 
+and we are all going to lose our jobs. 
 
 <!--more-->
 
 {% jb_picture_body %}
 
-I would identify five beliefs about AI and its code writing abilities,
+I would identify five beliefs about AI and its code-writing abilities,
 which, in my opinion, are fundamental fallacies:
 
   * **AI writes code (NOT!)**<br/>
@@ -65,8 +65,8 @@ which, in my opinion, are fundamental fallacies:
     It doesn't really _understand_ anything.
     Neither AlphaCode nor Codex analyze the _semantics_ of the input. Whether it
     says "draw a green line" or "save a file," the AI sees just two sequences of characters:
-    of 17 and 11 length respectively. It doesn't _know_ what "green" means nor how it's different
-    from a "file." They tokenize texts into vectors. If they used
+    of length 17 and 11 respectively. It doesn't _know_ what "green" means nor how it's different
+    from a "file." They tokenize text into vectors. If they used
     [CNL](https://en.wikipedia.org/wiki/Controlled_natural_language) it would
     be understanding, but they don't.
 
@@ -89,7 +89,7 @@ which, in my opinion, are fundamental fallacies:
     [Tabnine](https://www.tabnine.com),
     and
     [Kite](https://www.kite.com).
-    However, their work don't work with natural languages.
+    However, they don't work with natural languages.
     These are two different research problems:
     1) how to [autocomplete](https://en.wikipedia.org/wiki/Autocomplete) 
     an existing program with known
