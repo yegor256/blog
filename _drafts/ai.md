@@ -50,8 +50,8 @@ which, in my opinion, are fundamental fallacies:
     It's not true.
     Neither AlphaCode nor Codex _write_ code. Instead, they _find_ it.
     According to AlphaCode paper, "generating code that solves a specific task 
-    requires _searching_ in a huge structured space of programs
-    with a very sparse reward signal." Even though Machine Learning (ML) makes searching
+    requires _searching_ in a huge structured space of programs." 
+    Even though Machine Learning (ML) makes searching
     faster, it doesn't make it writing. As far as I understand (the paper
     is pretty vague on exact details of model training), they turn
     descriptions of programming tasks into sequences of numbers (tokenized characters!)
