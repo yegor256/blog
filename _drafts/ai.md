@@ -30,10 +30,10 @@ Earlier last year [OpenAI](https://en.wikipedia.org/wiki/OpenAI)
 ([$1B-funded](https://openai.com/blog/microsoft/) by Microsoft in 2019)
 released [Codex](https://openai.com/blog/openai-codex/)
 and published a [paper](https://arxiv.org/abs/2107.03374), claiming
-that their AI can also solve around 30% of programming tasks it was
+that their AI can also solve around 30% of the programming tasks it was
 tested with.
 [Wired](https://www.wired.com/story/ai-write-code-like-humans-bugs/),
-[Financial Times](https://www.ft.com/content/65477c33-cb72-418d-b03d-b60cfc5a8b5d),
+the [Financial Times](https://www.ft.com/content/65477c33-cb72-418d-b03d-b60cfc5a8b5d),
 [The Verge](https://www.theverge.com/2022/2/2/22914085/alphacode-ai-coding-program-automatic-deepmind-codeforce)
 and many others have already announced the victory: 
 AI [will replace programmers](https://www.bbc.com/news/business-57914432) 
@@ -49,41 +49,41 @@ which, in my opinion, are fundamental fallacies:
   * **AI writes code (NOT!)**<br/>
     It's not true.
     Neither AlphaCode nor Codex _write_ code. Instead, they _find_ it.
-    According to AlphaCode paper, "generating code that solves a specific task 
+    According to the AlphaCode paper, "generating code that solves a specific task 
     requires _searching_ in a huge structured space of programs." 
     Even though Machine Learning (ML) makes searching
     faster, it doesn't make it writing. As far as I understand (the paper
-    is pretty vague on exact details of model training), they turn
+    is pretty vague on the exact details of model training), they turn
     descriptions of programming tasks into sequences of numbers (tokenized characters!)
     and then label them with solutions found ... in GitHub or 
     [Codeforces](https://codeforces.com) open repositories.
-    Then, they ask the model to find the best solution for a vector of characters
-    at question. Saying that they write code is similar to saying that
+    Then they ask the model to find the best solution for the vector of characters
+    in question. Saying that they write code is similar to saying that
     Google draws pictures of cats when I search for a "black cat."
 
   * **AI understands requirements in a natual language (NOT!)**<br/>
     It doesn't really _understand_ anything.
-    Neither AlphaCode nor Codex analyze the _semantic_ of the input. Either it
-    says "draw a green line" or "save a file," AI sees just two sequences of characters:
-    of 17 and 11 length respectively. It doesn't _know_ what means "green" and how it's different
-    from a "file." They tokenize texts into vectors. If they would use
+    Neither AlphaCode nor Codex analyze the _semantics_ of the input. Whether it
+    says "draw a green line" or "save a file," the AI sees just two sequences of characters:
+    of 17 and 11 length respectively. It doesn't _know_ what "green" means nor how it's different
+    from a "file." They tokenize texts into vectors. If they used
     [CNL](https://en.wikipedia.org/wiki/Controlled_natural_language) it would
     be understanding, but they don't.
 
   * **AI pair-programs with a human (NOT!)**<br/>
-    We may expect AI not entirely replace us programmers, but instead help us
+    We may expect AI not to entirely replace us programmers, but instead help us
     write certain blocks of code: [Copilot](https://copilot.github.com) 
     ([released](https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/) 
     by [GitHub](https://github.com) in 2021) 
     is a notable example, [powered](https://hackernoon.com/openais-new-code-generator-github-copilot-and-codex-bb143773)
     by the same Codex. A few months ago I got an early access to Codex and played a bit with
     its features. My impression, as a programmer, was that it was neither able to
-    write an entire program nor the blocks of
-    code it produced in return to my requests fit together. They were syntactically
+    write an entire program nor did the blocks of
+    code it produced in response to my requests fit together. They were syntactically
     valid and implemented the functionality requested, but the AI was falling short in combining
-    them the way I, a human, may agree to maintain later.
+    them the way I, a human, might agree to maintain them later.
 
-  * **AI autocompletes, that's why can write (NOT!)**<br/>
+  * **AI autocompletes, that's why they can write (NOT!)**<br/>
     Indeed, there are a few products which do code autocompletion
     with the use of ML, for example [Codota](https://www.codota.com),
     [Tabnine](https://www.tabnine.com),
@@ -92,20 +92,20 @@ which, in my opinion, are fundamental fallacies:
     However, their work don't work with natural languages.
     These are two different research problems:
     1) how to [autocomplete](https://en.wikipedia.org/wiki/Autocomplete) 
-    an existing program with a known
-    functionality and already existing [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree), 
+    an existing program with known
+    functionality and an already existing [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree), 
     and 
-    2) how to turn a natural language text into an AST.
-    As far as I undersand, they don't and will never overlap.
+    2) how to turn natural language text into an AST.
+    As far as I undersand, they don't and never will overlap.
 
   * **AI just needs time to mature (NOT!)**<br/>
     [Some](https://spectrum.ieee.org/openai-wont-replace-coders) believe
     that AI will replace programmers, but "that day won't arrive any time soon."
     However, it seems to me that it's not a matter of maturity. The very 
     direction researchers of OpenAI and DeepMind are trying to pursue is a dead end.
-    ML is just not the right tool to turn an unstructured English text into a well-structured 
-    AST, which is parseable by C++ compiler. To do this we need AI to 
-    learn the semantic of the natural language and then, using 
+    ML is just not the right tool to turn unstructured English text into a well-structured 
+    AST which is parseable by C++ compiler. To do this we need the AI to 
+    learn the semantics of the natural language and then, using 
     _creativity_ and _imagination_,
     create all necessary AST elements in the right order. 
     I simply don't believe that ML is the right technology for this.
@@ -124,7 +124,7 @@ Trying to apply ML to code generating is a road to nowhere, which
 only wastes resources and ... boosts stocks of Google and Microsoft.
 
 Besides, how much good will it do to the industry if programmers write
-code mostly by finding samples in Internet, copying, and sticking them together?
+code mostly by finding samples on the Internet, copying, and sticking them together?
 Many of them already do that even without AI.
 The [analysis](https://stackoverflow.blog/2021/12/30/how-often-do-people-actually-copy-and-paste-from-stack-overflow-now-we-know/) 
 recently done by Stack Overlow demonstrates that "the higher a user's reputation, 
@@ -133,5 +133,4 @@ Is this a good tendency? Do we want AI to push it further?
 
 Will AI ever be able to write code by reading natural language requirements?
 Yes, it will. When we invent artificial creativity.
-
 
