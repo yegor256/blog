@@ -23,7 +23,7 @@ A few days ago, [DeepMind](https://deepmind.com)
 [AlphaCode](https://alphacode.deepmind.com) and self-published
 a
 [paper](https://storage.googleapis.com/deepmind-media/AlphaCode/competition_level_code_generation_with_alphacode.pdf)
-explaining how their artifical intelligence (AI) can "understand"
+explaining how their artificial intelligence (AI) can "understand"
 a programming contest task written in English and then write a Python, Java or C++ program, which
 would work in about 30% of cases.
 Earlier last year [OpenAI](https://en.wikipedia.org/wiki/OpenAI) 
@@ -61,7 +61,7 @@ which, in my opinion, are fundamental fallacies:
     in question. Saying that they write code is similar to saying that
     Google draws pictures of cats when I search for a "black cat."
 
-  * **AI understands requirements in a natual language (NOT!)**<br/>
+  * **AI understands requirements in a natural language (NOT!)**<br/>
     It doesn't really _understand_ anything.
     Neither AlphaCode nor Codex analyze the _semantics_ of the input. Whether it
     says "draw a green line" or "save a file," the AI sees just two sequences of characters:
@@ -96,7 +96,7 @@ which, in my opinion, are fundamental fallacies:
     functionality and an already existing [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree), 
     and 
     2) how to turn natural language text into an AST.
-    As far as I undersand, they don't and never will overlap.
+    As far as I understand, they don't and never will overlap.
 
   * **AI just needs time to mature (NOT!)**<br/>
     [Some](https://spectrum.ieee.org/openai-wont-replace-coders) believe
@@ -113,7 +113,7 @@ which, in my opinion, are fundamental fallacies:
 To conclude, ML will never write our code, because ... it's just not
 the right tool for the job.
 However, it may be suitable for other things, like autocompletion, 
-refactoring, bug fixing, optimization, and so on. I'm particulary interested
+refactoring, bug fixing, optimization, and so on. I'm particularly interested
 in automated refactoring: imagine a large legacy code base given to AI,
 which improves certain parts of it, making the code faster,
 safer, more readable, or shorter. Maybe it will even upgrade the code to newer frameworks, SDKs,
@@ -127,8 +127,8 @@ Besides, how much good will it do to the industry if programmers write
 code mostly by finding samples on the Internet, copying, and sticking them together?
 Many of them already do that even without AI.
 The [analysis](https://stackoverflow.blog/2021/12/30/how-often-do-people-actually-copy-and-paste-from-stack-overflow-now-we-know/) 
-recently done by Stack Overlow demonstrates that "the higher a user's reputation, 
-the less often they are copying." Less skillful programmers tend to copy.
+recently done by Stack Overflow demonstrates that "the higher a user's reputation, 
+the less often they are copying." Less skilful programmers tend to copy.
 Is this a good tendency? Do we want AI to push it further?
 
 Will AI ever be able to write code by reading natural language requirements?
