@@ -1,4 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-02-14T08:17:18+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Academic Teaching is Hard</title><link href="https://www.yegor256.com/2021/12/01/teaching.html" rel="alternate" type="text/html" title="Academic Teaching is Hard" /><published>2021-12-01T00:00:00+00:00</published><updated>2021-12-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/12/01/teaching</id><content type="html" xml:base="https://www.yegor256.com/2021/12/01/teaching.html">&lt;p&gt;A few months ago I got an opportunity to teach a single course for
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-02-16T18:15:57+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fallacies of AI Driven Coding</title><link href="https://www.yegor256.com/2022/02/16/ai-coding.html" rel="alternate" type="text/html" title="Fallacies of AI Driven Coding" /><published>2022-02-16T00:00:00+00:00</published><updated>2022-02-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/02/16/ai-coding</id><content type="html" xml:base="https://www.yegor256.com/2022/02/16/ai-coding.html">&lt;p&gt;A few days ago, &lt;a href=&quot;https://deepmind.com&quot;&gt;DeepMind&lt;/a&gt; 
+(&lt;a href=&quot;https://techcrunch.com/2014/01/26/google-deepmind/&quot;&gt;acquired&lt;/a&gt; by Google in 2014) released
+&lt;a href=&quot;https://alphacode.deepmind.com&quot;&gt;AlphaCode&lt;/a&gt; and self-published
+a
+&lt;a href=&quot;https://storage.googleapis.com/deepmind-media/AlphaCode/competition_level_code_generation_with_alphacode.pdf&quot;&gt;paper&lt;/a&gt;
+explaining how their artificial intelligence (AI) can “understand”
+a programming contest task written in English and then write a Python, Java or C++ program, which
+would work in about 30% of cases.
+Earlier last year &lt;a href=&quot;https://en.wikipedia.org/wiki/OpenAI&quot;&gt;OpenAI&lt;/a&gt; 
+(&lt;a href=&quot;https://openai.com/blog/microsoft/&quot;&gt;$1B-funded&lt;/a&gt; by Microsoft in 2019)
+released &lt;a href=&quot;https://openai.com/blog/openai-codex/&quot;&gt;Codex&lt;/a&gt;
+and published a &lt;a href=&quot;https://arxiv.org/abs/2107.03374&quot;&gt;paper&lt;/a&gt;, claiming
+that their AI can also solve around 30% of the programming tasks it was
+tested with.
+&lt;a href=&quot;https://www.wired.com/story/ai-write-code-like-humans-bugs/&quot;&gt;Wired&lt;/a&gt;,
+the &lt;a href=&quot;https://www.ft.com/content/65477c33-cb72-418d-b03d-b60cfc5a8b5d&quot;&gt;Financial Times&lt;/a&gt;,
+&lt;a href=&quot;https://www.theverge.com/2022/2/2/22914085/alphacode-ai-coding-program-automatic-deepmind-codeforce&quot;&gt;The Verge&lt;/a&gt;
+and many others have already announced the victory: 
+AI &lt;a href=&quot;https://www.bbc.com/news/business-57914432&quot;&gt;will replace programmers&lt;/a&gt; 
+and we are all going to lose our jobs.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Short Circuit (1986) by John Badham&quot; src=&quot;/images/2022/02/short-circuit.jpg&quot; longdesc=&quot;#51ce7628&quot; /&gt;&lt;figcaption id=&quot;51ce7628&quot;&gt;Short Circuit (1986) by John Badham&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;I would identify five beliefs about AI and its code-writing abilities,
+which, in my opinion, are fundamental fallacies:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AI writes code (NOT!)&lt;/strong&gt;&lt;br /&gt;
+It’s not true.
+Neither AlphaCode nor Codex &lt;em&gt;write&lt;/em&gt; code. Instead, they &lt;em&gt;find&lt;/em&gt; it.
+According to the AlphaCode paper, “generating code that solves a specific task 
+requires &lt;em&gt;searching&lt;/em&gt; in a huge structured space of programs.” 
+Even though Machine Learning (ML) makes searching
+faster, it doesn’t make it writing. As far as I understand (the paper
+is pretty vague on the exact details of model training), they turn
+descriptions of programming tasks into sequences of numbers (tokenized characters!)
+and then label them with solutions found … in GitHub or 
+&lt;a href=&quot;https://codeforces.com&quot;&gt;Codeforces&lt;/a&gt; open repositories.
+Then they ask the model to find the best solution for the vector of characters
+in question. Saying that they write code is similar to saying that
+Google draws pictures of cats when I search for a “black cat.”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AI understands requirements in a natural language (NOT!)&lt;/strong&gt;&lt;br /&gt;
+It doesn’t really &lt;em&gt;understand&lt;/em&gt; anything.
+Neither AlphaCode nor Codex analyze the &lt;em&gt;semantics&lt;/em&gt; of the input. Whether it
+says “draw a green line” or “save a file,” the AI sees just two sequences of characters:
+of length 17 and 11 respectively. It doesn’t &lt;em&gt;know&lt;/em&gt; what “green” means nor how it’s different
+from a “file.” They tokenize text into vectors. If they used
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Controlled_natural_language&quot;&gt;CNL&lt;/a&gt; it would
+be understanding, but they don’t.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AI pair-programs with a human (NOT!)&lt;/strong&gt;&lt;br /&gt;
+We may expect AI not to entirely replace us programmers, but instead help us
+write certain blocks of code: &lt;a href=&quot;https://copilot.github.com&quot;&gt;Copilot&lt;/a&gt; 
+(&lt;a href=&quot;https://github.blog/2021-06-29-introducing-github-copilot-ai-pair-programmer/&quot;&gt;released&lt;/a&gt; 
+by &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt; in 2021) 
+is a notable example, &lt;a href=&quot;https://hackernoon.com/openais-new-code-generator-github-copilot-and-codex-bb143773&quot;&gt;powered&lt;/a&gt;
+by the same Codex. A few months ago I got an early access to Codex and played a bit with
+its features. My impression, as a programmer, was that it was neither able to
+write an entire program nor did the blocks of
+code it produced in response to my requests fit together. They were syntactically
+valid and implemented the functionality requested, but the AI was falling short in combining
+them the way I, a human, might agree to maintain them later.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AI autocompletes, that’s why they can write (NOT!)&lt;/strong&gt;&lt;br /&gt;
+Indeed, there are a few products which do code autocompletion
+with the use of ML, for example &lt;a href=&quot;https://www.codota.com&quot;&gt;Codota&lt;/a&gt;,
+&lt;a href=&quot;https://www.tabnine.com&quot;&gt;Tabnine&lt;/a&gt;,
+and
+&lt;a href=&quot;https://www.kite.com&quot;&gt;Kite&lt;/a&gt;.
+However, they don’t work with natural languages.
+These are two different research problems:
+1) how to &lt;a href=&quot;https://en.wikipedia.org/wiki/Autocomplete&quot;&gt;autocomplete&lt;/a&gt; 
+an existing program with known
+functionality and an already existing &lt;a href=&quot;https://en.wikipedia.org/wiki/Abstract_syntax_tree&quot;&gt;AST&lt;/a&gt;, 
+and 
+2) how to turn natural language text into an AST.
+As far as I understand, they don’t and never will overlap.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;AI just needs time to mature (NOT!)&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://spectrum.ieee.org/openai-wont-replace-coders&quot;&gt;Some&lt;/a&gt; believe
+that AI will replace programmers, but “that day won’t arrive any time soon.”
+However, it seems to me that it’s not a matter of maturity. The very 
+direction researchers of OpenAI and DeepMind are trying to pursue is a dead end.
+ML is just not the right tool to turn unstructured English text into a well-structured 
+AST which is parseable by C++ compiler. To do this we need the AI to 
+learn the semantics of the natural language and then, using 
+&lt;em&gt;creativity&lt;/em&gt; and &lt;em&gt;imagination&lt;/em&gt;,
+create all necessary AST elements in the right order. 
+I simply don’t believe that ML is the right technology for this.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To conclude, ML will never write our code, because … it’s just not
+the right tool for the job.
+However, it may be suitable for other things, like autocompletion, 
+refactoring, bug fixing, optimization, and so on. I’m particularly interested
+in automated refactoring: imagine a large legacy code base given to AI,
+which improves certain parts of it, making the code faster,
+safer, more readable, or shorter. Maybe it will even upgrade the code to newer frameworks, SDKs,
+and dependencies. This is where ML already helps and will help more,
+improving &lt;em&gt;existing&lt;/em&gt; ASTs.&lt;/p&gt;
+
+&lt;p&gt;Trying to apply ML to code generating is a road to nowhere, which
+only wastes resources and … boosts stocks of Google and Microsoft.&lt;/p&gt;
+
+&lt;p&gt;Besides, how much good will it do to the industry if programmers write
+code mostly by finding samples on the Internet, copying, and sticking them together?
+Many of them already do that even without AI.
+The &lt;a href=&quot;https://stackoverflow.blog/2021/12/30/how-often-do-people-actually-copy-and-paste-from-stack-overflow-now-we-know/&quot;&gt;analysis&lt;/a&gt; 
+recently done by Stack Overflow demonstrates that “the higher a user’s reputation, 
+the less often they are copying.” Less skilful programmers tend to copy.
+Is this a good tendency? Do we want AI to push it further?&lt;/p&gt;
+
+&lt;p&gt;Will AI ever be able to write code by reading natural language requirements?
+Yes, it will. When we invent artificial creativity.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><summary type="html">A few days ago, DeepMind (acquired by Google in 2014) released AlphaCode and self-published a paper explaining how their artificial intelligence (AI) can “understand” a programming contest task written in English and then write a Python, Java or C++ program, which would work in about 30% of cases. Earlier last year OpenAI ($1B-funded by Microsoft in 2019) released Codex and published a paper, claiming that their AI can also solve around 30% of the programming tasks it was tested with. Wired, the Financial Times, The Verge and many others have already announced the victory: AI will replace programmers and we are all going to lose our jobs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/02/short-circuit.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/02/short-circuit.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Academic Teaching is Hard</title><link href="https://www.yegor256.com/2021/12/01/teaching.html" rel="alternate" type="text/html" title="Academic Teaching is Hard" /><published>2021-12-01T00:00:00+00:00</published><updated>2021-12-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/12/01/teaching</id><content type="html" xml:base="https://www.yegor256.com/2021/12/01/teaching.html">&lt;p&gt;A few months ago I got an opportunity to teach a single course for
 3rd-year BSc students at &lt;a href=&quot;https://innopolis.university/en/&quot;&gt;Innopolis University&lt;/a&gt; (Russia). 
 The title was “System Software Design.” 
 The size of the group was about 150 people and the duration was
@@ -1936,123 +2058,4 @@ The best they can do with you, an expert, is to tell you how
 great you are and how much they respect your contribution. Anything
 aside from that you must treat as an offense and react immediately.&lt;/p&gt;
 
-&lt;p&gt;This is how you tame them.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="sarcasm" /><summary type="html">The time of objectivity is fading out. Meritocracy is now a rude word. Metrics in management will soon be considered as harassment. Productivity is already a false objective. It’s time to start taking advantage of this era of nonsense. The era of imposters is coming! Don’t miss the opportunity to become a great one. Here is a quick summary of key techniques to make you highly successful in any argument you may have in your flat democratic organizations of the future without any skills, knowledge, education, or real achievements. Just pure love and emotions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/03/the-kominsky-method.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/03/the-kominsky-method.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dataization</title><link href="https://www.yegor256.com/2021/02/10/dataization.html" rel="alternate" type="text/html" title="Dataization" /><published>2021-02-10T00:00:00+00:00</published><updated>2021-02-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/02/10/dataization</id><content type="html" xml:base="https://www.yegor256.com/2021/02/10/dataization.html">&lt;p&gt;There are three things in EOLANG (and the 𝜑-calculus which we
-based it on): data, atoms, and objects. There is a dataization
-function, which puts all three together in order to make an EO
-program alive. Here is how it works together with Java,
-for example.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Space Force (2020) by Steve Carell and Greg Daniels&quot; src=&quot;/images/2021/02/space-force.jpg&quot; longdesc=&quot;#6c25ba32&quot; /&gt;&lt;figcaption id=&quot;6c25ba32&quot;&gt;Space Force (2020) by Steve Carell and Greg Daniels&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Let’s say we are making an online shop where items are
-being shipped to different countries and we must calculate
-shipment costs based on the customer’s location. We create
-an &lt;a href=&quot;/2020/12/01/abstract-objects.html&quot;&gt;abstract object&lt;/a&gt;
-that represents shipment costs:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[customer] &amp;gt; cost-of-shipment
-  if. &amp;gt; @
-    customer.country.eq &quot;US&quot;
-    9.99
-    24.99&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then, let’s say we have an abstract object &lt;code class=&quot;highlighter-rouge&quot;&gt;customer-in-mysql&lt;/code&gt;,
-which represents the customer’s information in the MySQL database. To
-make a specific customer &lt;code class=&quot;highlighter-rouge&quot;&gt;jeff&lt;/code&gt; we make a copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;customer-in-mysql&lt;/code&gt;,
-specifying the ID of the customer as &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;customer-in-mysql 42 &amp;gt; jeff&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The closed object &lt;code class=&quot;highlighter-rouge&quot;&gt;jeff&lt;/code&gt; is the customer we are looking for.
-We assume that it has the &lt;code class=&quot;highlighter-rouge&quot;&gt;country&lt;/code&gt; child object, which is needed by
-the &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now, we make a copy of the &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt; and then
-add it to the product price in order to calculate how
-much a customer has to pay:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cost-of-shipment jeff &amp;gt; x
-
-x.add product.price &amp;gt; total&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, the &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; is a new object, a copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt;. Then,
-we take the child abstract object &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; from it and make a copy,
-giving &lt;code class=&quot;highlighter-rouge&quot;&gt;product.price&lt;/code&gt; object to it as an attribute. We name the created copy
-as &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt;. Then, we print the total price:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;stdout &amp;gt; app
-  sprintf
-    &quot;Your total is %f&quot; total&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;All these manipulations don’t make the number print yet. They
-are all object declarations. We’ve declared one abstract object
-&lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt; and a few closed objects: &lt;code class=&quot;highlighter-rouge&quot;&gt;jeff&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt; and
-&lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now the most interesting part, which we call &lt;em&gt;dataization&lt;/em&gt;. It’s a process
-of turning an object into data. The data is something that doesn’t have
-any child objects and is the simplest element of the computing platform,
-where EOLANG software is being compiled. You may think that in the example
-above &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;US&quot;&lt;/code&gt; are data. They are not. They are also objects
-and we can write this, for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;42.add 5 &amp;gt; z
-
-&quot;US&quot;.length &amp;gt; len&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The data behind these objects is not visible for us at the level of
-EOLANG program. The data is inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;42&lt;/code&gt; object. Only the runtime
-of the specific platform can dig it out through the dataization
-mechanism. If you compile the EOLANG code to Java, you will get
-a class &lt;code class=&quot;highlighter-rouge&quot;&gt;EOapp&lt;/code&gt; (derived from the &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; object), which can be dataized
-like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;import org.eolang.phi.Data;
-EOapp app = new EOapp();
-Boolean data = new Dataized(app).take(Boolean.class);&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The method &lt;code class=&quot;highlighter-rouge&quot;&gt;take()&lt;/code&gt; will take the object &lt;code class=&quot;highlighter-rouge&quot;&gt;app&lt;/code&gt; and will try to ask it
-to turn itself as data. The object &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; will redirect this request
-to the object &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;, which will ask the object &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt; the same thing:
-what data do you have? The object &lt;code class=&quot;highlighter-rouge&quot;&gt;total&lt;/code&gt; is the object &lt;code class=&quot;highlighter-rouge&quot;&gt;x.add&lt;/code&gt;.
-If we look at what &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; is, we’ll see that it’s a copy of our own
-abstract object &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-of-shipment&lt;/code&gt;, which doesn’t have the child object &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;!
-However, it does have a child object &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt;, which is a “catch-all” object:
-the request to get &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; will land there.&lt;/p&gt;
-
-&lt;p&gt;The object bound to the attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt; is the copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;if. &amp;gt; @
-  customer.country.eq &quot;US&quot;
-  9.99
-  24.99&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It will take the &lt;code class=&quot;highlighter-rouge&quot;&gt;customer.country.eq&lt;/code&gt;, dataize it in order to get
-boolean data, and then, depending on this data, return either &lt;code class=&quot;highlighter-rouge&quot;&gt;9.99&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;24.99&lt;/code&gt;.
-Either one of them has the attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;, which will be used to
-construct a new object, with an argument &lt;code class=&quot;highlighter-rouge&quot;&gt;product.price&lt;/code&gt;. The result
-will be used by the &lt;code class=&quot;highlighter-rouge&quot;&gt;Dataized&lt;/code&gt; Java class in order to continue the process
-of dataization. Finally, the sum of two numbers will be dataized to a
-Java floating-point number.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=QaKIw1Bh3Oc&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/QaKIw1Bh3Oc/mqdefault.jpg&quot; alt=&quot;YouTube video #QaKIw1Bh3Oc&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;EOLANG: Basics;
-        28 January 2021.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;The dataization of &lt;code class=&quot;highlighter-rouge&quot;&gt;customer.country.eq&lt;/code&gt; is happening inside
-the runtime and is not visible at the level of EOLANG. The object
-&lt;code class=&quot;highlighter-rouge&quot;&gt;eq&lt;/code&gt; is called an &lt;em&gt;atom&lt;/em&gt;, since it’s an atomic element of the language—it
-has to be implemented in Java, not in EOLANG. There are other atoms
-in the example above: &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sprintf&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;length&lt;/code&gt;.
-They all are implemented in Java.&lt;/p&gt;
-
-&lt;p&gt;Thus, we construct objects first, either through &lt;em&gt;abstraction&lt;/em&gt; (declaring new
-abstract objects) or through &lt;em&gt;application&lt;/em&gt; (making copies of abstract
-objects). Next, we dataize one of the objects and the entire composition
-of objects starts to “live,” trying to turn itself into data.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="eolang" /><summary type="html">There are three things in EOLANG (and the 𝜑-calculus which we based it on): data, atoms, and objects. There is a dataization function, which puts all three together in order to make an EO program alive. Here is how it works together with Java, for example.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/02/space-force.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/02/space-force.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;This is how you tame them.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="sarcasm" /><summary type="html">The time of objectivity is fading out. Meritocracy is now a rude word. Metrics in management will soon be considered as harassment. Productivity is already a false objective. It’s time to start taking advantage of this era of nonsense. The era of imposters is coming! Don’t miss the opportunity to become a great one. Here is a quick summary of key techniques to make you highly successful in any argument you may have in your flat democratic organizations of the future without any skills, knowledge, education, or real achievements. Just pure love and emotions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/03/the-kominsky-method.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/03/the-kominsky-method.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

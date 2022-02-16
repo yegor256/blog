@@ -238,6 +238,7 @@ along
 alongside
 alpha
 alphabetic
+alphacode
 already
 also
 altcoins
@@ -518,6 +519,8 @@ assumption
 assumptions
 assurance
 assure
+AST
+ASTs
 asylum
 at
 ate
@@ -589,6 +592,9 @@ auto-generated
 auto-increment
 auto-scale
 auto-testing
+autocomplete
+autocompletes
+autocompletion
 autocracy
 automate
 automated
@@ -625,6 +631,7 @@ axes
 axioms
 axosoft
 azure
+b-funded
 ba
 baby
 back
@@ -891,6 +898,7 @@ booming
 boost
 boosted
 booster
+boosts
 boot
 bootstrap
 border
@@ -1415,6 +1423,7 @@ clutters
 CMMI
 cmple
 CNAME
+CNL
 CNN
 co
 co-developers
@@ -1453,12 +1462,15 @@ code-to-test
 code-writing
 codeahead
 codebases
+codeforces
 coder
 coders
 codes
 codeship
+codex
 codexia
 coding
+codota
 coen
 coffee
 cog
@@ -1823,6 +1835,7 @@ coordination
 coordinator
 copied
 copies
+copilot
 copy
 copy-paste
 copy-pasted
@@ -2135,6 +2148,7 @@ deem
 deep
 deeper
 deeply
+deepmind
 def
 default
 defaults
@@ -2571,6 +2585,7 @@ drawback
 drawbacks
 drawing
 drawn
+draws
 DRE
 dream
 dreaming
@@ -3111,6 +3126,7 @@ fake
 fakes
 faking
 fall
+fallacies
 fallacy
 fallback
 fallen
@@ -4704,6 +4720,7 @@ kirkman
 kiss
 kissed
 kitchen
+kite
 kitties
 KKK
 knew
@@ -5415,6 +5432,7 @@ mitigation
 mix
 mixed
 mixins
+ML
 mo
 mobile
 mock
@@ -5762,6 +5780,7 @@ not-fixed-yet
 not-for-profit
 not-so-perfect
 not-yet-implemented
+notable
 notation
 notations
 note
@@ -5921,6 +5940,7 @@ OOPSLA'
 open
 open-minded
 open-mindedness
+OpenAI
 opened
 opener
 opening
@@ -6094,6 +6114,7 @@ painter
 painters
 painting
 pair
+pair-programs
 paired
 pairs
 pakistan
@@ -6486,6 +6507,7 @@ pound
 poverty
 powder
 power
+powered
 powerful
 PPPS
 PPS
@@ -7566,6 +7588,7 @@ scrutinizer
 sculpture
 SDK
 SDK-s
+SDKs
 SE
 seamless
 sean
@@ -7634,6 +7657,7 @@ self-motivation
 self-organized
 self-organizing
 self-promotion
+self-published
 self-regulation
 self-respect
 self-sufficient
@@ -7681,6 +7705,7 @@ separation
 separator
 september
 sequencer
+sequences
 sequential
 sequentially
 seratch
@@ -7892,6 +7917,7 @@ sketch
 sketchy
 ski
 skiing
+skilful
 skill
 skilled
 skills
@@ -8485,6 +8511,7 @@ synchronizeddatabaseconnection
 synergy
 synonyms
 syntactic
+syntactically
 syntax
 synthesize
 system
@@ -8499,6 +8526,7 @@ TA
 tab
 table
 tables
+tabnine
 taboo
 tabular
 tacit
@@ -8763,6 +8791,8 @@ TODO
 together
 toilets
 token
+tokenize
+tokenized
 told
 tolerance
 tolerant
@@ -9107,6 +9137,7 @@ unsafe
 unsolvable
 unspile
 unstable
+unstructured
 unsubscribe
 unsubscribed
 unsuccessful
@@ -9162,6 +9193,7 @@ useful
 usefulness
 useless
 user
+user's
 user-targeted
 users
 uses
@@ -9223,6 +9255,7 @@ VC
 VCS
 ve
 vector
+vectors
 vedran
 vegas
 vegetarian
@@ -9242,6 +9275,7 @@ verbal
 verbose
 verbosity
 verbs
+verge
 verifiable
 verification
 verified
@@ -9270,6 +9304,7 @@ victim
 victimize
 victims
 victor
+victory
 video
 video-recorded
 videos
@@ -9435,6 +9470,7 @@ well-oiled
 well-organized
 well-paid
 well-prepared
+well-structured
 well-written
 went
 wercker
