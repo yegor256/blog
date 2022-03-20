@@ -15,7 +15,7 @@ keywords:
 nospell: true
 ---
 
-{% badge https://www.yegor256.com/images/face-1024x1024.jpg](https://www.yegor256.com/images/face-1024x1024.jpg 250 %}
+{% badge https://www.yegor256.com/images/face-1024x1024.jpg 250 %}
 
 Quick bio:<br/>
 Lab Director in Huawei, founder of Zerocracy and author of Elegant Objects.
