@@ -6,8 +6,7 @@ set -x
 unset BUNDLE_GEMFILE
 cd /tmp
 
-x=$(readlink --canonicalize-existing "$0")
-dir=$(dirname "$x")
+dir=$(dirname "$0")
 
 target=$1
 
