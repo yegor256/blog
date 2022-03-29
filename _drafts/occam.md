@@ -23,7 +23,7 @@ For each accepted explanation of a phenomenon, there may be an extremely
 large, perhaps even incomprehensible, number of possible and 
 more complex alternatives. The principle of parsimony, also known
 as [Occam's razor](https://en.wikipedia.org/wiki/Occam's_razor), 
-suggests to prefer the simpler one. For example, 
+suggests we prefer the simplest one. For example, 
 "I can't open the door and can't attend the meeting" is a description
 of a problem, which could be reduced to "I can't open the door"
 without losing any information, which might be important for those
@@ -35,10 +35,10 @@ principle to bug reports.
 {% jb_picture_body %}
 
 Let's say I design a simple imperative programming language and you submit
-a bug report to me:
+this bug report to me:
 
 {% highlight text %}
-This is my code:
+Here is my code:
 
 a := 7
 a := a + 5 - 3
@@ -49,9 +49,9 @@ It doesn't work as expected. It prints 4,
 but it should print 3.
 {% endhighlight %}
 
-Now, I have to investigate and find out, which operator is broken: 
+Now I have to investigate and find out which operator is broken: 
 maybe the addition doesn't work, or maybe
-the assignment, or the division? I don't know, and I have to
+the assignment, or the division. I don't know, and I have to
 [debug/test]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}) 
 in order to find out... Me. Not you. Why not you?
 
@@ -62,10 +62,10 @@ short as it can to be to represent the defect.
 
 Of course, you don't need to do glass-box testing of my code finding the cause
 of the bug, but on the API surface you must do your job and conclude
-that the deduction operator is broken:
+that the subtraction operator is broken:
 
 {% highlight text %}
-This is my code:
+Here is my code:
 
 a := 7
 a := a - 3
@@ -78,11 +78,11 @@ but it should print 4.
 Here, you've _reduced_ the scope of the defect to a much smaller one. 
 You did your "home work" and found out that only one 
 particular operator in my programming language is broken: the
-deduction. You saved my time and increased the chances for your
-bug report to be fixed sooner rather than later.
+subtraction. You saved my time and increased the chance of your
+bug report being fixed sooner rather than later.
 
 In general, I believe that this bug optimization work 
 must be done by reporters, not product owners.
 I would even say that this might be a valid bug rejection reason: 
-the report is not the simpler possible one.
+the report is not the simplest possible one.
 
