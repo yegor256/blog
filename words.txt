@@ -4183,6 +4183,7 @@ incomparably
 incompetence
 incompetent
 incomplete
+incomprehensible
 inconsistencies
 inconsistency
 inconsistent
@@ -4190,6 +4191,7 @@ incorporate
 incorrect
 incorrectly
 increase
+increased
 increases
 increasing
 incredibly
@@ -5855,6 +5857,7 @@ obtain
 obtained
 obvious
 obviously
+occam's
 occasional
 occasionally
 occupied
@@ -6148,6 +6151,7 @@ parseable
 parsed
 parser
 parsers
+parsimony
 parsing
 part
 part-time
@@ -6931,6 +6935,7 @@ ratios
 raw
 raychev
 raymond
+razor
 razzwan
 rb
 rbara
@@ -7198,6 +7203,7 @@ repo
 report
 reported
 reporter
+reporters
 reporting
 reports
 repos
@@ -8386,6 +8392,7 @@ substitution
 subtitle
 subtitles
 subtle
+subtraction
 subtyping
 subversion
 succeed

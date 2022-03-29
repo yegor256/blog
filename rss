@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-02-16T18:15:57+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fallacies of AI Driven Coding</title><link href="https://www.yegor256.com/2022/02/16/ai-coding.html" rel="alternate" type="text/html" title="Fallacies of AI Driven Coding" /><published>2022-02-16T00:00:00+00:00</published><updated>2022-02-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/02/16/ai-coding</id><content type="html" xml:base="https://www.yegor256.com/2022/02/16/ai-coding.html">&lt;p&gt;A few days ago, &lt;a href=&quot;https://deepmind.com&quot;&gt;DeepMind&lt;/a&gt; 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-03-29T07:48:02+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Bugs Occam’s Razor</title><link href="https://www.yegor256.com/2022/03/29/bugs-occam-razor.html" rel="alternate" type="text/html" title="Bugs Occam’s Razor" /><published>2022-03-29T00:00:00+00:00</published><updated>2022-03-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/03/29/bugs-occam-razor</id><content type="html" xml:base="https://www.yegor256.com/2022/03/29/bugs-occam-razor.html">&lt;p&gt;For each accepted explanation of a phenomenon, there may be an extremely 
+large, perhaps even incomprehensible, number of possible and 
+more complex alternatives. The principle of parsimony, also known
+as &lt;a href=&quot;https://en.wikipedia.org/wiki/Occam's_razor&quot;&gt;Occam’s razor&lt;/a&gt;, 
+suggests we prefer the simplest one. For example, 
+“I can’t open the door and can’t attend the meeting” is a description
+of a problem, which could be reduced to “I can’t open the door”
+without losing any information, which might be important for those
+who are waiting for me in the meeting room. I suggest applying the same
+principle to bug reports.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Game of Thrones (2011–2019) by David Benioff&quot; src=&quot;/images/2022/03/game-of-thrones.jpg&quot; longdesc=&quot;#605dc3e3&quot; /&gt;&lt;figcaption id=&quot;605dc3e3&quot;&gt;Game of Thrones (2011–2019) by David Benioff&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s say I design a simple imperative programming language and you submit
+this bug report to me:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Here is my code:
+
+a := 7
+a := a + 5 - 3
+a := a / 3
+print a
+
+It doesn't work as expected. It prints 4, 
+but it should print 3.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now I have to investigate and find out which operator is broken: 
+maybe the addition doesn’t work, or maybe
+the assignment, or the division. I don’t know, and I have to
+&lt;a href=&quot;/2016/02/09/are-you-still-debugging.html&quot;&gt;debug/test&lt;/a&gt; 
+in order to find out… Me. Not you. Why not you?&lt;/p&gt;
+
+&lt;p&gt;The more I work with bug reports the more I believe that 
+this must be your job as a bug reporter,
+to play with the code and do the best you can to make your snippet as
+short as it can to be to represent the defect.&lt;/p&gt;
+
+&lt;p&gt;Of course, you don’t need to do glass-box testing of my code finding the cause
+of the bug, but on the API surface you must do your job and conclude
+that the subtraction operator is broken:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Here is my code:
+
+a := 7
+a := a - 3
+print a
+
+It doesn't work as expected. It prints 7, 
+but it should print 4.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here, you’ve &lt;em&gt;reduced&lt;/em&gt; the scope of the defect to a much smaller one. 
+You did your “home work” and found out that only one 
+particular operator in my programming language is broken: the
+subtraction. You saved my time and increased the chance of your
+bug report being fixed sooner rather than later.&lt;/p&gt;
+
+&lt;p&gt;In general, I believe that this bug optimization work 
+must be done by reporters, not product owners.
+I would even say that this might be a valid bug rejection reason: 
+the report is not the simplest possible one.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">For each accepted explanation of a phenomenon, there may be an extremely large, perhaps even incomprehensible, number of possible and more complex alternatives. The principle of parsimony, also known as Occam’s razor, suggests we prefer the simplest one. For example, “I can’t open the door and can’t attend the meeting” is a description of a problem, which could be reduced to “I can’t open the door” without losing any information, which might be important for those who are waiting for me in the meeting room. I suggest applying the same principle to bug reports.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/03/game-of-thrones.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/03/game-of-thrones.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fallacies of AI Driven Coding</title><link href="https://www.yegor256.com/2022/02/16/ai-coding.html" rel="alternate" type="text/html" title="Fallacies of AI Driven Coding" /><published>2022-02-16T00:00:00+00:00</published><updated>2022-02-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/02/16/ai-coding</id><content type="html" xml:base="https://www.yegor256.com/2022/02/16/ai-coding.html">&lt;p&gt;A few days ago, &lt;a href=&quot;https://deepmind.com&quot;&gt;DeepMind&lt;/a&gt; 
 (&lt;a href=&quot;https://techcrunch.com/2014/01/26/google-deepmind/&quot;&gt;acquired&lt;/a&gt; by Google in 2014) released
 &lt;a href=&quot;https://alphacode.deepmind.com&quot;&gt;AlphaCode&lt;/a&gt; and self-published
 a
@@ -182,6 +243,14 @@ the highest required number: fifteen. Some of them got more than forty,
 which, according to my plan, was the point: to show them that good software
 with a small boost (by the stars given to you by friends-and-family)
 can easily gain larger popularity.&lt;/p&gt;
+
+&lt;aside class=&quot;youtube&quot;&gt;
+        &lt;a href=&quot;https://www.youtube.com/watch?v=8qfd93SyXpM&quot;&gt;&lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;https://i.ytimg.com/vi/8qfd93SyXpM/mqdefault.jpg&quot; alt=&quot;YouTube video #8qfd93SyXpM&quot; /&gt;
+        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;/a&gt;
+        &lt;div&gt;SSD 13/16: Test-Driven Development;
+        9 October 2021.&lt;/div&gt;&lt;/aside&gt;
 
 &lt;p&gt;By the way, I’m still dreaming about a software package or a hosted service, which would
 go through any GitHub repository and make a quality analysis of it. Not the
@@ -1971,91 +2040,4 @@ published in IEEE Xplore, &lt;a href=&quot;https://ieeexplore.ieee.org/xpl/conho
 &lt;p&gt;Mission complete!&lt;/p&gt;
 
 &lt;p&gt;P.S. If you decide to organize your own event, don’t hesitate
-to let me know, maybe I will be able to help you somehow.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html">First, let me clarify what kind of conference we are talking about. There are two types: professional and academic. The difference is huge. My understanding is that professional conferences are for practitioners, while academic ones are for researchers. ICCQ, which we organized this year, was an academic conference. I haven’t had any expertise in organizing such things, and had to go through it all for the first time. Here is a more or less detailed description of the journey. Feel free to learn from it and make a better conference yourself. We will try to make a better one next year, ICCQ 2022.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/04/glow.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/04/glow.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Imposters to Win!</title><link href="https://www.yegor256.com/2021/03/03/imposters-to-win.html" rel="alternate" type="text/html" title="Imposters to Win!" /><published>2021-03-03T00:00:00+00:00</published><updated>2021-03-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/03/03/imposters-to-win</id><content type="html" xml:base="https://www.yegor256.com/2021/03/03/imposters-to-win.html">&lt;p&gt;The time of objectivity is fading out. 
-&lt;a href=&quot;/2018/01/09/micro-budgeting.html&quot;&gt;Meritocracy&lt;/a&gt; is now a rude word.
-&lt;a href=&quot;/2020/06/23/individual-performance-metrics.html&quot;&gt;Metrics&lt;/a&gt; 
-in management will soon be considered as harassment.
-Productivity is &lt;a href=&quot;/shift-m/2020/44.html&quot;&gt;already&lt;/a&gt; a false objective.
-It’s time to start taking advantage of this era of nonsense.
-The era of imposters is coming!
-Don’t miss the opportunity to become a great one.
-Here is a quick summary of key techniques to make you highly successful in any argument
-you may have in your 
-&lt;a href=&quot;/2020/12/22/self-managing-orgs.html&quot;&gt;flat democratic organizations of the future&lt;/a&gt;
-without any skills, knowledge, education, or real achievements.
-Just pure love and emotions.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Kominsky Method (2018-) by Chuck Lorre&quot; src=&quot;/images/2021/03/the-kominsky-method.jpg&quot; longdesc=&quot;#89fd0ee4&quot; /&gt;&lt;figcaption id=&quot;89fd0ee4&quot;&gt;The Kominsky Method (2018-) by Chuck Lorre&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;“Trust Me!”&lt;/strong&gt;
-Don’t even try to prove anything by numbers.
-This is an outdated technique.
-They will only treat you like a weird person, at best.
-Rationality is not a sign of professionalism nowadays.
-Instead, you should hit them with a straight “trust me” and expect no answer back.
-How can they reply to that anyway?
-Can they really say that they don’t trust you?
-Such toxic behavior no serious organization would tolerate!
-We are supposed to trust each other since we are in the same team.
-And not just in the same team!
-We have to trust everybody in the world—this is what good human beings do!
-Thus, no numbers, no facts, no proofs—just a pure and simple “trust me” and you will be the king of any argument.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=ulrMXmIcC4w&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/ulrMXmIcC4w/mqdefault.jpg&quot; alt=&quot;YouTube video #ulrMXmIcC4w&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M167: Sometimes you have to be an imposter, either you like it or not;
-        20 April 2021.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;&lt;strong&gt;“I Know What I’m Doing!”&lt;/strong&gt;
-Do they still think that you are not convincing enough with your “Trust Me”?
-That won’t help them.
-Tell them that you worked five years in Oracle and also four years in Intel.
-This automatically means that you are right.
-Can they argue back with “We don’t care where you worked before”?
-That’s too harsh, they won’t do it.
-They must respect their colleagues!
-Especially those who worked in Oracle and Intel.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;“Do You Think I’m Stupid?!”&lt;/strong&gt;
-If they continue arguing, ask this question, looking them right in the eye.
-What do they answer?
-They will apologize.
-The smartest of them will beg for forgiveness and then run away from the meeting room.
-This question doesn’t have a right answer.
-No matter what they say, you win.
-If they start with “No”, your point is proven.
-If they start with “Yes”… well they won’t start with “Yes”.
-They are good and kind people.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;“I Will Quit If You Keep Talking Like This!”&lt;/strong&gt;
-This is your last line.
-After it they won’t have anything in their hands.
-They will have to stop right there.
-And they will be afraid to get into a fight with you ever again.
-Your position will be solid for many months ahead
-Especially in a big company, where retention rate is the most important indicator of success.
-If you quit because of an argument—your opponent will lose a lot of karma points.
-“I will quit” is the most powerful weapon in your arsenal.
-However, use it carefully, only after you massage them with the other three tactics.&lt;/p&gt;
-
-&lt;p&gt;Your ultimate goal in your career as a great imposter should be
-the situation where nobody argues with you. They must be
-scared of verifying your results, questioning your conclusions,
-validating your points, and even asking you difficult questions.
-They must know that by doing so they will immediately become
-“toxic and negative people”—your team doesn’t appreciate such
-behavior.&lt;/p&gt;
-
-&lt;p&gt;They must understand that real experts are very fragile and can easily
-be offended. They must learn the lesson: 
-doubting the opinion of an expert is simply rude.
-The best they can do with you, an expert, is to tell you how
-great you are and how much they respect your contribution. Anything
-aside from that you must treat as an offense and react immediately.&lt;/p&gt;
-
-&lt;p&gt;This is how you tame them.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="sarcasm" /><summary type="html">The time of objectivity is fading out. Meritocracy is now a rude word. Metrics in management will soon be considered as harassment. Productivity is already a false objective. It’s time to start taking advantage of this era of nonsense. The era of imposters is coming! Don’t miss the opportunity to become a great one. Here is a quick summary of key techniques to make you highly successful in any argument you may have in your flat democratic organizations of the future without any skills, knowledge, education, or real achievements. Just pure love and emotions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/03/the-kominsky-method.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/03/the-kominsky-method.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+to let me know, maybe I will be able to help you somehow.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html">First, let me clarify what kind of conference we are talking about. There are two types: professional and academic. The difference is huge. My understanding is that professional conferences are for practitioners, while academic ones are for researchers. ICCQ, which we organized this year, was an academic conference. I haven’t had any expertise in organizing such things, and had to go through it all for the first time. Here is a more or less detailed description of the journey. Feel free to learn from it and make a better conference yourself. We will try to make a better one next year, ICCQ 2022.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/04/glow.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/04/glow.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
