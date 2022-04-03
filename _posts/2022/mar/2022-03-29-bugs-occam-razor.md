@@ -55,6 +55,8 @@ the assignment, or the division. I don't know, and I have to
 [debug/test]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}) 
 in order to find out... Me. Not you. Why not you?
 
+{% youtube jiEJnLBowHc %}
+
 The more I work with bug reports the more I believe that 
 this must be your job as a bug reporter,
 to play with the code and do the best you can to make your snippet as
