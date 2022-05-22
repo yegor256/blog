@@ -88,3 +88,4 @@ must be done by reporters, not product owners.
 I would even say that this might be a valid bug rejection reason: 
 the report is not the simplest possible one.
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">If a bug report is messy or overly complex, who should clean it up before we start fixing it?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1528370540628566018?ref_src=twsrc%5Etfw">May 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

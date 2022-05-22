@@ -78,7 +78,8 @@ String msg = "Dear " + customer.name()
   + "!";
 {% endhighlight %}
 
-This one looks much more beautiful doesn't it:
+This one looks much more beautiful doesn't it
+(jSparrow even has [a rule](https://jsparrow.github.io/rules/avoid-concatenation-in-logging-statements.html) for this):
 
 {% highlight java %}
 String msg = String.format(
