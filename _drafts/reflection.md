@@ -18,9 +18,9 @@ jb_picture:
   caption: Wheelman (2017) by Jeremy Rush
 ---
 
-[Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (or reflection) is 
+[Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (or reflection) happens
 when your code changes itself on-fly. For example, a method of a class, when we call it,
-among other things, adds a new method to the class 
+among other things adds a new method to the class
 (also known as [monkey patching](https://en.wikipedia.org/wiki/Monkey_patch)). 
 Java, Python, PHP, JavaScript, you name it---they
 all have this "powerful" feature. What's 
@@ -62,7 +62,7 @@ Why this is bad, aside from the facts that
 and
 3) introduces a new point of failure since the object `items` may not be
 an instance of class `Collection`
-leading to [`MethodNotFoundException`](https://docs.oracle.com/javaee/5/api/javax/el/MethodNotFoundException.html))?
+leading to [`MethodNotFoundException`](https://docs.oracle.com/javaee/5/api/javax/el/MethodNotFoundException.html)?
 
 The biggest problem the code above causes to the entire program is the coupling
 it introduces betwen itself and its clients, for example:
@@ -152,7 +152,8 @@ How would you write a unit test for this class and for its method `print()`?
 Obivously, it's almost impossible without a refactoring of the class.
 The method `print` sends a text to the console, which we can't easily mock
 since it's "static." The right way would be making `System.out` injectable
-as a dependency, but some of us believe that reflection is a better option,
+as a dependency, but some of us
+[believe](https://stackoverflow.com/questions/34571) that reflection is a better option,
 which would allow us to test the private method `name` directly, without
 calling `print` first:
 
@@ -338,50 +339,75 @@ and assign to other objects' attributes.
 
 I've [said it earlier]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 that this very mechanism of discovering objects and _automatically_
-wiring them together is an anti-pattern. I've also [said earlier]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %})
+wiring them together is an anti-pattern. I've also
+[said earlier]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %})
 that annotations are also an anti-pattern.
-
 Neither dependency injection containers, not auto-wiring, nor annotations
 would not exist if there would be no reflection. Life would be much better
 and Java/OOP much cleaner.
 
+The users of annotated objects/classes are coupled with them, while
+this coupling is _hidden_. An annotated object can change its interface or
+modify annotations and the code will compile just fine. The problem will
+surface only later in runtime, when the expectations of other objects
+won't be satisfied.
 
 ## Serialization
 
-When programmers don't understand [object-oriented paradigm]({% pst 2016/jul/2016-07-14-who-is-object %}),
-they make [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}) instead of proper objects.
-In th
+When programmers don't understand
+[object-oriented paradigm]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}),
+they make [DTOs]({% pst 2016/jul/2016-07-06-data-transfer-object %}) instead of
+[proper objects]({% pst 2016/jul/2016-07-14-who-is-object %}).
+Then, in order to transfer a DTO over a network or save it to a file, they
+[serialize](https://en.wikipedia.org/wiki/Serialization) or
+[marshall](https://en.wikipedia.org/wiki/Marshalling_%28computer_science%29) them.
+It's usually done by a special serialization engine, which takes a DTO,
+[breaks](http://erights.org/data/serial/jhu-paper/intro.html)
+all possible encapsulation barriers,
+reads the values of all of its fields,
+and packages them into, say, a piece of JSON.
 
+In order to let the serialization engine break encapsulation barriers, a programming
+language has to have reflection. First, because some fields of a DTO may be private
+and thus accessible only through reflection.
+Second, even if a DTO is designed "right" with all necessary
+[getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
+for the private fields, still reflection is required in order to understand
+which getters are present and can be called.
 
+The attitude serialization expresses towards objects is very similar to what
+[ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}) does. They both
+don't talk to objects, but pretty "offensively" tear them apart, taking away
+what's necessary, and leaving poor objects unconscious. If in the future an
+object decides to change its structure, rename some fields, or change the types
+of returned values---other objects, which actually are coupled with the object through
+serialization, won't notice anything. They will notice, but only in runtime,
+when "invalid data format" exceptions will start floating. The developers
+of the object won't have a chance to notice that their changes to the interface
+of the object affect some other places in the code base.
 
+We can say that serialization is a "perfect" method of coupling two objects
+such that neither one will know about it.
 
+The [very idea]({% pst 2016/jul/2016-07-14-who-is-object %})
+of object-oriented programming is centered around the principle
+that an object is king. An object and only an object may decide what
+to do with the data it encapsulates. The existence of this principle and adherence
+to it helps avoid runtime errors usually caused by a simple scenario:
+A uses the data coming from B without telling B how it's being used,
+then B changes the format or semantics of the data, and A fails to understand it.
 
+Obvously, serialization in such an "abusive" way would not be possible,
+if there would be no reflection in the first place. A more careful serialization
+would be possible and would be used, not through reflection but via
+[printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
+implemented by objects.
 
+<hr/>
 
-
-
-
-
-
-
-
-
-
-What did I miss?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+To conclude, reflection introduces coupling, which is hidden. This is the
+most dangerous type of coupling, because it's hard to follow, it's hard to find,
+and it's hard to remove. Without reflection object-oriented design would be
+much cleaner and solid. I suggest you never use reflection in your programming
+language, even through this feature does exist.
 

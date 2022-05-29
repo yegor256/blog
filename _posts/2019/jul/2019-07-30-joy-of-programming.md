@@ -44,6 +44,8 @@ most of this picture. According to him, they only knew how HTTP servers worked,
 caring very little about the rest. Most of them didn't even know what HTTP was,
 as long as the PHP code did what it was intended to.
 
+{% youtube 5FckPa6aOok %}
+
 I remembered that interview, and started asking similar questions to people I was interviewing
 later, being a CTO of my own company and an architect on a few other projects.
 His conclusions were confirmed. Indeed, most programmers don't understand how, for example,
