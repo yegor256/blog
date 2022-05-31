@@ -57,10 +57,10 @@ in order to find out... Me. Not you. Why not you?
 
 {% youtube jiEJnLBowHc %}
 
-The more I work with bug reports the more I believe that 
+The more I work with bug reports, the more I believe that 
 this must be your job as a bug reporter,
 to play with the code and do the best you can to make your snippet as
-short as it can to be to represent the defect.
+short as it can be to represent the defect.
 
 Of course, you don't need to do glass-box testing of my code finding the cause
 of the bug, but on the API surface you must do your job and conclude
