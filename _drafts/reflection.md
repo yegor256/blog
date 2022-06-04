@@ -19,7 +19,7 @@ jb_picture:
 ---
 
 [Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (or reflection) happens
-when your code changes itself on-fly. For example, a method of a class, when we call it,
+when your code changes itself on the fly. For example, a method of a class, when we call it,
 among other things adds a new method to the class
 (also known as [monkey patching](https://en.wikipedia.org/wiki/Monkey_patch)). 
 Java, Python, PHP, JavaScript, you name it---they
@@ -28,7 +28,7 @@ all have this "powerful" feature. What's
 Well, it's 
 [slow](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/), 
 [dangerous](https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection),
-hard to read and debug.
+and hard to read and debug.
 But all that is nothing comparing with the _coupling_ it introduces to the code.
 
 <!--more-->
@@ -50,22 +50,22 @@ public int sizeOf(Iterable items) {
 {% endhighlight %}
 
 I'm not sure everybody would agree that this is reflection, but I believe
-it is: we check the structure of the class in runtime and then make
+it is: we check the structure of the class at runtime and then make
 a call to the method `size()` which doesn't exist in the `Iterable`. This method only
-"shows up" in runtime, when we make
+"shows up" at runtime, when we make
 a [dynamic shortcut](https://stackoverflow.com/questions/19017258)
 to it in the bytecode.
 
-Why this is bad, aside from the facts that
+Why is this bad, aside from the fact that
 1) it's [slow](http://www.buzdin.lv/2011/01/is-java-reflection-really-slow.html),
-2) more verbose and that's why [less readable](https://armedia.com/blog/instanceof-avoid-in-code/),
+2) it's more verbose and so [less readable](https://armedia.com/blog/instanceof-avoid-in-code/),
 and
-3) introduces a new point of failure since the object `items` may not be
+3) it introduces a new point of failure since the object `items` may not be
 an instance of class `Collection`
 leading to [`MethodNotFoundException`](https://docs.oracle.com/javaee/5/api/javax/el/MethodNotFoundException.html)?
 
 The biggest problem the code above causes to the entire program is the coupling
-it introduces betwen itself and its clients, for example:
+it introduces between itself and its clients, for example:
 
 {% highlight java %}
 public void calc(Iterable<?> list) {
@@ -74,11 +74,11 @@ public void calc(Iterable<?> list) {
 }
 {% endhighlight %}
 
-This method may work or it may not. It will depend on the actual class of `list`. If it will be
+This method may work or it may not. It will depend on the actual class of `list`. If it is
 `Collection`, the call to `sizeOf` will succeed. Otherwise, there will be a runtime failure.
 By looking at the method `calc` we can't tell what is the right way to handle `list` in order
-to avoid runtime failure. We need to read the body of `sizeOf` and only then may change `calc`
-somehow like this:
+to avoid runtime failure. We need to read the body of `sizeOf` and only then can we change `calc`
+something like this:
 
 {% highlight java %}
 public void calc(Iterable<?> list) {
@@ -112,8 +112,8 @@ public int sizeOf(Iterable items) {
 
 Now, `sizeOf` perfectly handles any type that's coming in, whether it's an instance
 of `Collection` or not. However, the method `calc` doesn't know about the changes made in the method `sizeOf`.
-Instead, it still believes that `sizeOf` would break if it gets anything aside from `Collection`.
-To keep them in sync we have to remember that `calc` knows too much about `sizeOf`  and
+Instead, it still believes that `sizeOf` will break if it gets anything aside from `Collection`.
+To keep them in sync we have to remember that `calc` knows too much about `sizeOf`  and will
 have to modify it when `sizeOf` changes. Thus, it's valid to say that `calc` is
 coupled with `sizeOf` and this _coupling_ is hidden:
 most probably, we will forget to modify `calc` when `sizeOf` gets a better implementation.
@@ -122,8 +122,8 @@ which we must remember to modify when the method `sizeOf` changes.
 Obvsiously, we will forget about most of them.
 
 This coupling, which is a big maintainability issue, was introduced thanks to the
-very existence of reflection in Java. If we would not be able to use `instanceof` operator
-and class casting (or would not have them), the coupling would not be possible in the first place.
+very existence of reflection in Java. If we had not been able to use `instanceof` operator
+and class casting (or did not even have them), the coupling would not be possible in the first place.
 
 ## Forceful Testing
 
@@ -149,9 +149,9 @@ class Book {
 {% endhighlight %}
 
 How would you write a unit test for this class and for its method `print()`?
-Obivously, it's almost impossible without a refactoring of the class.
-The method `print` sends a text to the console, which we can't easily mock
-since it's "static." The right way would be making `System.out` injectable
+Obviously, it's almost impossible without refactoring the class.
+The method `print` sends text to the console, which we can't easily mock
+since it's "static." The right way would be to make `System.out` injectable
 as a dependency, but some of us
 [believe](https://stackoverflow.com/questions/34571) that reflection is a better option,
 which would allow us to test the private method `name` directly, without
@@ -180,7 +180,7 @@ to do many "beautiful" things with private methods.
 The problem with this test is that it is tightly coupled with the object it
 tests: the test _knows_ too much about the class `Book`. The test knows that the
 class contains a private method `name`. The test also knows that the method `name`
-will at some moment be called by the method `print`. Instead of testing `print`
+will at some point be called by the method `print`. Instead of testing `print`
 the test tests what it's not supposed to be aware of: the internals of the class `Book`.
 
 The main purpose of a unit test is to be a "safety net" for us
@@ -191,10 +191,10 @@ I can continue modifying the code. I rely on the information from my tests. I tr
 
 I take the class `Book` and want to modify it, simply making the method `name`
 return `StringBuilder` instead of `String`. It's a pretty
-innocent modification, which may be necessary for performance consideration.
+innocent modification, which may be necessary for performance considerations.
 Before I start making any changes, I run all tests
 (it's a [good practice](https://wiki.c2.com/?TestEveryRefactoring)) and they all pass.
-Then, I make my changes expecting no tests to fail:
+Then I make my changes, expecting no tests to fail:
 
 {% highlight java %}
 class Book {
@@ -213,8 +213,8 @@ class Book {
 }
 {% endhighlight %}
 
-However, the test `BookTest` will fail, because it _expects_ my class `Book` having
-method `name` that returns `String`. If it's not my test or I wrote it long time ago,
+However, the test `BookTest` will fail, because it _expects_ my class `Book` to have
+method `name` which returns `String`. If it's not my test or I wrote it a long time ago,
 I would be frustrated to learn this fact: the test expects me to write my _private_ methods
 only one specific way. Why? What's wrong with returning `StringBuilder`? I would think
 that there is some hidden reason for this. Otherwise, why would a test demand anything
@@ -225,7 +225,7 @@ to refactor the class and make `System.out` injectable."
 
 By the way, this testing approach is
 [known]({% pst 2018/dec/2018-12-11-unit-testing-anti-patterns %})
-as "Inspector" test anti-pattern.
+as the "Inspector" test anti-pattern.
 
 What would I do next? I would have to roll back my changes and then start refactoring
 the test _and_ the class, in order to get rid of this assumption. However, changing the
@@ -236,16 +236,16 @@ most probably I will introduce some new bugs.
 
 The tests are not a "safety net" for me anymore. I can't trust them.
 I modify the code and I know that I didn't break anything.
-However, the test gives me a read signal.
+However, the test gives me a red signal.
 How can I trust it if it lies in such a simple scenario?
 
 This coupling between the unit test `BookTest` and the class `Book`
-would not happen if it would not be possible to use reflection in the first place.
-If nobody would have any ability to reach the private method anyhow,
+would not happen if it was not possible to use reflection in the first place.
+If nobody had the ability to reach the private method in any way,
 the Inspector anti-pattern in unit tests would not be possible.
 
 [Of course]({% pst 2017/feb/2017-02-07-private-method-is-new-class %}),
-life would be even better if we would not have private methods.
+life would be even better if we also didn't have private methods.
 
 ## Factories
 
@@ -256,7 +256,7 @@ may work:
 interface Operator {
   int calc(int a, int b);
 }
-// This if Factory Method:
+// This is a Factory Method:
 Operator make(String name) {
   try {
     return Class.forName("Op" + name);
@@ -270,9 +270,9 @@ The [factory method]({% pst 2017/nov/2017-11-14-static-factory-methods %})
 is `make`. It expects the name of the "operator" to be provided
 and then,
 using [`Class.forName()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#forName-java.lang.String-)
-from Java Reflection API, constructs the name of the class, finds it in the
+from the Java Reflection API, constructs the name of the class, finds it in the
 [classpath](https://docs.oracle.com/javase/tutorial/essential/environment/paths.html),
-and makes an instance of it. Say, there are two classes both implementing the
+and makes an instance of it. Now, say there are two classes both implementing the
 interface `Operator`:
 
 {% highlight java %}
@@ -283,12 +283,12 @@ class OpPlus implements Operator {
 }
 class OpMinus implements Operator {
   int calc(int a, int b) {
-    return a + b;
+    return a - b;
   }
 }
 {% endhighlight %}
 
-Then, we use them, first asking our factory method to make objects from
+Then we use them, first asking our factory method to make objects from
 operator names:
 
 {% highlight java %}
@@ -321,19 +321,19 @@ is provided out-of-the-box by JVM: I don't need to guess what happens when
 There are a few reasons why people love static factories. I don't agree with them.
 This [blog post]({% pst 2017/nov/2017-11-14-static-factory-methods %})
 explains why. Without reflection it wouldn't be possible to
-have static factories at all and the code would be more maintainable and better.
+have static factories at all and the code would be better and more maintainable.
 
 ## Annotations
 
 In Java you can attach an annotation
 (an instance of a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %})-ish interface)
 to a class (or an element of it like a method or an argument).
-Then, the information from the annotation can be read in runtime or compile time.
+The information from the annotation can then be read at runtime or compile time.
 In modern frameworks like [Spring](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html)
 this feature is frequently used in order
 to automate [objects wiring](https://stackoverflow.com/questions/19414734):
 you just attach some annotations to your classes
-and the framework will find them, instantiate, place into a
+and the framework will find them, instantiate them, place them into a
 [DI container]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}),
 and assign to other objects' attributes.
 
@@ -341,15 +341,15 @@ I've [said it earlier]({% pst 2014/oct/2014-10-03-di-containers-are-evil %})
 that this very mechanism of discovering objects and _automatically_
 wiring them together is an anti-pattern. I've also
 [said earlier]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %})
-that annotations are also an anti-pattern.
+that annotations are an anti-pattern.
 Neither dependency injection containers, not auto-wiring, nor annotations
-would not exist if there would be no reflection. Life would be much better
+would exist if there was no reflection. Life would be much better
 and Java/OOP much cleaner.
 
-The users of annotated objects/classes are coupled with them, while
+The clients of annotated objects/classes are coupled with them, and
 this coupling is _hidden_. An annotated object can change its interface or
 modify annotations and the code will compile just fine. The problem will
-surface only later in runtime, when the expectations of other objects
+surface only later at runtime, when the expectations of other objects
 won't be satisfied.
 
 ## Serialization
@@ -376,13 +376,13 @@ for the private fields, still reflection is required in order to understand
 which getters are present and can be called.
 
 The attitude serialization expresses towards objects is very similar to what
-[ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}) does. They both
-don't talk to objects, but pretty "offensively" tear them apart, taking away
-what's necessary, and leaving poor objects unconscious. If in the future an
+[ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}) does. Neither of them
+talk to objects, but instead they pretty "offensively" tear them apart, taking away
+what's necessary, and leaving the poor objects unconscious. If in the future an
 object decides to change its structure, rename some fields, or change the types
 of returned values---other objects, which actually are coupled with the object through
-serialization, won't notice anything. They will notice, but only in runtime,
-when "invalid data format" exceptions will start floating. The developers
+serialization, won't notice anything. They will notice, but only at runtime,
+when "invalid data format" exceptions start floating up. The developers
 of the object won't have a chance to notice that their changes to the interface
 of the object affect some other places in the code base.
 
@@ -398,7 +398,7 @@ A uses the data coming from B without telling B how it's being used,
 then B changes the format or semantics of the data, and A fails to understand it.
 
 Obvously, serialization in such an "abusive" way would not be possible,
-if there would be no reflection in the first place. A more careful serialization
+if there was no reflection in the first place. A more careful serialization
 would be possible and would be used, not through reflection but via
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
 implemented by objects.
@@ -408,6 +408,5 @@ implemented by objects.
 To conclude, reflection introduces coupling, which is hidden. This is the
 most dangerous type of coupling, because it's hard to follow, it's hard to find,
 and it's hard to remove. Without reflection object-oriented design would be
-much cleaner and solid. I suggest you never use reflection in your programming
-language, even through this feature does exist.
-
+much cleaner and solid. But even if this feature does exist,
+I suggest you never use reflection in your programming language.
