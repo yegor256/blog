@@ -61,7 +61,7 @@ Why is this bad, aside from the fact that
 2) it's more verbose and so [less readable](https://armedia.com/blog/instanceof-avoid-in-code/),
 and
 3) it introduces a new point of failure since the object `items` may not be
-an instance of class `Collection`
+an instance of class `Collection`,
 leading to [`MethodNotFoundException`](https://docs.oracle.com/javaee/5/api/javax/el/MethodNotFoundException.html)?
 
 The biggest problem the code above causes to the entire program is the coupling
@@ -78,7 +78,7 @@ This method may work or it may not. It will depend on the actual class of `list`
 `Collection`, the call to `sizeOf` will succeed. Otherwise, there will be a runtime failure.
 By looking at the method `calc` we can't tell what is the right way to handle `list` in order
 to avoid runtime failure. We need to read the body of `sizeOf` and only then can we change `calc`
-something like this:
+to something like this:
 
 {% highlight java %}
 public void calc(Iterable<?> list) {
@@ -115,7 +115,7 @@ of `Collection` or not. However, the method `calc` doesn't know about the change
 Instead, it still believes that `sizeOf` will break if it gets anything aside from `Collection`.
 To keep them in sync we have to remember that `calc` knows too much about `sizeOf`  and will
 have to modify it when `sizeOf` changes. Thus, it's valid to say that `calc` is
-coupled with `sizeOf` and this _coupling_ is hidden:
+coupled with `sizeOf` and this coupling is _hidden_:
 most probably, we will forget to modify `calc` when `sizeOf` gets a better implementation.
 Moreover, there could be many other places in the program similar to `calc`,
 which we must remember to modify when the method `sizeOf` changes.
