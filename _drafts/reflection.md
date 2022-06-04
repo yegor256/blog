@@ -119,7 +119,7 @@ coupled with `sizeOf` and this _coupling_ is hidden:
 most probably, we will forget to modify `calc` when `sizeOf` gets a better implementation.
 Moreover, there could be many other places in the program similar to `calc`,
 which we must remember to modify when the method `sizeOf` changes.
-Obvsiously, we will forget about most of them.
+Obviously, we will forget about most of them.
 
 This coupling, which is a big maintainability issue, was introduced thanks to the
 very existence of reflection in Java. If we had not been able to use `instanceof` operator
@@ -397,7 +397,7 @@ to it helps avoid runtime errors usually caused by a simple scenario:
 A uses the data coming from B without telling B how it's being used,
 then B changes the format or semantics of the data, and A fails to understand it.
 
-Obvously, serialization in such an "abusive" way would not be possible,
+Obviously, serialization in such an "abusive" way would not be possible,
 if there was no reflection in the first place. A more careful serialization
 would be possible and would be used, not through reflection but via
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
