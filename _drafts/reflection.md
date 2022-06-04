@@ -29,7 +29,7 @@ Well, it's
 [slow](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/), 
 [dangerous](https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection),
 and hard to read and debug.
-But all that is nothing comparing with the _coupling_ it introduces to the code.
+But all that is nothing compared with the _coupling_ it introduces to the code.
 
 <!--more-->
 
