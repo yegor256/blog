@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reflection Means Hidden Coupling"
-date: 2022-05-14
+date: 2022-06-05
 place: Moscow, Russia
 tags: oop
 description: |
