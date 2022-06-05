@@ -131,7 +131,8 @@ much more obvious. Look at this ugly code:</p>
   + " has been shipped at " + shipment.date()
   + "!";</pre>
 
-<p>This one looks much more beautiful doesn’t it:</p>
+<p>This one looks much more beautiful doesn’t it
+(jSparrow even has <a href="https://jsparrow.github.io/rules/avoid-concatenation-in-logging-statements.html">a rule</a> for this):</p>
 
 <pre>String msg = String.format(
   "Dear %1$s, your order #%2$d has been shipped at %3$tR!",

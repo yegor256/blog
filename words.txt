@@ -118,6 +118,7 @@ adequate
 adequately
 ADHD
 adhere
+adherence
 adheres
 adjectives
 adjusts
@@ -592,6 +593,7 @@ auto-generated
 auto-increment
 auto-scale
 auto-testing
+auto-wiring
 autocomplete
 autocompletes
 autocompletion
@@ -1197,6 +1199,7 @@ celebrations
 celsius
 cent
 center
+centered
 centering
 central
 centralized
@@ -3103,6 +3106,7 @@ facility
 facing
 fact
 factor
+factories
 factoring
 factors
 factory
@@ -3314,6 +3318,7 @@ flirt
 flirtation
 flirting
 float
+floating
 floating-point
 floor
 flourish
@@ -5164,6 +5169,7 @@ married
 marry
 marrying
 mars
+marshall
 marshalled
 marshalling
 martela
@@ -5634,6 +5640,7 @@ natural
 naturally
 nature
 navigate
+navigation
 nazi
 nazis
 nbsp
@@ -5837,6 +5844,7 @@ objectively
 objectives
 objectivity
 objects
+objects'
 obligated
 obligation
 obligations
@@ -5880,6 +5888,7 @@ offending
 offends
 offense
 offensive
+offensively
 offer
 offered
 offering
@@ -6189,6 +6198,7 @@ passwords
 past
 patch
 patches
+patching
 patent
 patents
 path
@@ -7080,6 +7090,7 @@ reflected
 reflecting
 reflection
 reflection-discoverable
+reflective
 reflects
 refresh
 refreshment
@@ -7719,6 +7730,7 @@ sergei
 sergey
 sergio
 serialization
+serialize
 serialized
 serializers
 series
@@ -8467,6 +8479,7 @@ supreme
 suprise
 sur
 sure
+surface
 surfaces
 surgeons
 surpasses
@@ -9050,6 +9063,7 @@ uncomfortable
 uncompromising
 unconditional
 unconditionally
+unconscious
 uncovered
 undemanding
 under
