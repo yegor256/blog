@@ -34,7 +34,7 @@ A more formal definition of the principle would be this:
 it's either one word/sentence/paragraph/page _or_ way more.
 Let's see an example. Say, I need to list my plans for tomorrow:
 
-{% highlight java %}
+{% highlight text %}
 - write a new article
 - send an email to my boss
 - cook a dinner
@@ -48,7 +48,7 @@ loss of their meaning. Thus, I have to decide whether to make them all _much_
 longer than one word or shorten them all to a single one.
 The second choice is always preferrable:
 
-{% highlight java %}
+{% highlight text %}
 - article
 - email
 - dinner
