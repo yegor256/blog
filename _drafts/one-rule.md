@@ -65,7 +65,8 @@ I mentioned that a good CV must take exactly one page.
 If it's more, it should be many more. But definitely not two
 or three pages.
 
-
+I suggest applying this principle to every piece of content
+you write: try to squeeze it into _one_.
 
 
 
