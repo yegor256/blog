@@ -14,9 +14,9 @@ keywords:
   - one-paragraph principle
   - principle of single page
   - simplicity principle
-image: /images/2022/02/...
+image: /images/2022/06/true-story.jpg
 jb_picture:
-  caption: ...
+  caption: True Story (2021) by Eric Newman
 ---
 
 When I make a slidedeck for a new presentation, invent a new domain name, think about
