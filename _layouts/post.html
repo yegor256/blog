@@ -100,7 +100,7 @@ amp: true
     </article>
   </div>
 
-  <div class="wrapper">
+  <div class="wrapper" aria-hidden="true">
     {% if page.related %}
       <div class="unprintable">
         <hr/>
@@ -113,8 +113,8 @@ amp: true
     {% endif %}
   </div>
 
-  <div class="disqus" role="complementary">
-    <p class="disqus_hint">
+  <div class="disqus" role="complementary" aria-hidden="true">
+    <p class="disqus_hint" >
       Please, use <a href="https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments">syntax highlighting</a>
       in your comments, to make them more readable.
     </p>
