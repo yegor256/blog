@@ -19,7 +19,7 @@ jb_picture:
   caption: True Story (2021) by Eric Newman
 ---
 
-When I make a slidedeck for a new presentation, invent a new domain name, think about
+When I make a slide deck for a new presentation, invent a new domain name, think about
 a name for a new Java class, itemize bullet points in an academic paper, even
 write an email---I try to follow a simple principle which helps me make
 my content more solid. Well, at least I believe it does. Maybe it will help you as well.
@@ -46,7 +46,7 @@ is just three words, as is "cook a dinner". Three might not be considered
 "way more" than one. Besides which, they could be shortened without
 loss of meaning. Thus, I have to decide whether to make them all _much_
 longer than one word or shorten them all to a single one.
-The second choice is always preferrable:
+The second choice is always preferable:
 
 {% highlight text %}
 - article
