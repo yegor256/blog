@@ -42,9 +42,9 @@ Let's see an example. Say I need to list my plans for tomorrow:
 {% endhighlight %}
 
 Do any of them need to be longer than one word? Not really. "Take a nap"
-is just three words, as is "cook a dinner". Three might not be considered
-"way more" than one. Besides which, they could be shortened without
-loss of meaning. Thus, I have to decide whether to make them all _much_
+is just three words, as is "cook a dinner". On the one hand, three might not be considered
+"way more" than one. On the other, they could be shortened without
+any loss of meaning. Thus, I have to decide whether to make them all _much_
 longer than one word or shorten them all to a single one.
 The second choice is always preferable:
 
