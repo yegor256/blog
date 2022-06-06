@@ -60,7 +60,7 @@ in an earlier post: the same principle is applicable
 to them. Variables must either be nouns without any other words around them,
 or use many more words, which is an exceptional situation.
 
-In my earlier [blog post about resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
+In another [blog post about resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
 I mentioned that a good CV must take exactly one page.
 If it's more, it should be many more. But definitely not two
 or three pages.
