@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Code and Its Tests in Different Pull Requests"
-date: 2022-06-14
+date: 2022-06-21
 place: Moscow, Russia
 tags: testing
 description: |
