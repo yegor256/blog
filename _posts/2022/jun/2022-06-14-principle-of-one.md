@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Principle of One"
-date: 2022-05-14
+date: 2022-06-14
 place: Moscow, Russia
 tags: mood
 description: |
