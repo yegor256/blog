@@ -12,8 +12,8 @@ article {
   @extend %gray;
   border-left: 4 * $px solid #e52d27;
   float: right;
-  font-size: .8em;
-  line-height: 1.2em;
+  font-size: .8 * $em;
+  line-height: 1.2 * $em;
   margin: .5 * $em -5 * $em .5 * $em $em;
   padding-left: $em;
   text-align: left;
@@ -33,7 +33,7 @@ article {
     .play {
       color: white;
       height: 100%;
-      line-height: 1em;
+      line-height: 1 * $em;
       padding-top: 21%;
       position: absolute;
       text-align: center;
@@ -42,8 +42,8 @@ article {
       width: 100%;
 
       i::before {
-        font-size: 3em;
-        line-height: 1em;
+        font-size: 3 * $em;
+        line-height: 1 * $em;
       }
     }
   }
@@ -51,7 +51,7 @@ article {
 
 .buttons {
   @extend %unprintable;
-  margin-bottom: .5em;
+  margin-bottom: .5 * $em;
 
   a,
   a:visited {
