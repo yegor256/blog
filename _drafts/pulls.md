@@ -13,9 +13,9 @@ keywords:
   - rules of pull requests
   - quality of testing
   - safety net
-image: /images/2022/06/...
+image: /images/2022/06/mafioso.jpg
 jb_picture:
-  caption: ...
+  caption: Mafioso (1962) by Alberto Lattuada
 ---
 
 I suggested this idea a few weeks ago
