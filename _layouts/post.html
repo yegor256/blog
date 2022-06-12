@@ -66,7 +66,7 @@ amp: true
       {% endif %}
       <p class="unprintable">{{ page | yb_page_tags }}</p>
       <nav class="buttons notranslate desktop-only">
-        <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
           title="Share on Facebook" class="button" rel="nofollow">
           <span class="count count-facebook">0</span>
           <i class="icon icon-facebook notranslate" aria-hidden="true"></i>
@@ -81,12 +81,12 @@ amp: true
           <span class="count count-linkedin">0</span>
           <i class="icon icon-linkedin notranslate" aria-hidden="true"></i>
         </a>
-        <a href="http://reddit.com/submit?url={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;title={{ page.title | cgi_escape }}"
+        <a href="https://reddit.com/submit?url={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;title={{ page.title | cgi_escape }}"
           title="Share on Reddit" class="button" rel="nofollow">
           <span class="count count-reddit">0</span>
           <i class="icon icon-reddit notranslate" aria-hidden="true"></i>
         </a>
-        <a href="http://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;t={{ page.title | cgi_escape }}"
+        <a href="https://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;t={{ page.title | cgi_escape }}"
           title="Share on Hacker News" class="button" rel="nofollow">
           <span class="count count-hackernews">0</span>
           <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>

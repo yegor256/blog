@@ -683,7 +683,7 @@ reviewers.
 </div>
 Mar 17, 2016:
 The book just made it into the **Top 100 Amazon Best Sellers** in the
-[Object-Oriented Design](http://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
+[Object-Oriented Design](https://www.amazon.com/gp/bestsellers/books/4013/ref=pd_zg_hrsr_b_1_5_last) category!
 There are [three reviews](http://goo.gl/W2WVMk)
 already. Many thanks to their authors! It would
 be great if you published yours&mdash;this will greatly help
@@ -752,7 +752,7 @@ so far. All reviewers said the book was worth reading.
 Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/amazon-advantage.gif 125 http://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
+{% badge /images/books/amazon-advantage.gif 125 https://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
 You can [pre-order](http://goo.gl/W2WVMk)
 the book on Amazon.com. The price is **$40.96**.

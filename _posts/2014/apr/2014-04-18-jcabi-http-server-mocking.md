@@ -120,7 +120,7 @@ the HTTP request and making an assertion that the`"User-Agent"` header was there
 and had at least one value equal to `"Myself"`.
 
 This mocking technology is used actively in unit and integration tests of
-[jcabi-github](http://github.com/jcabi/jcabi-github), which is a Java client to
+[jcabi-github](https://github.com/jcabi/jcabi-github), which is a Java client to
 GitHub API. In its development, the technology is very important in checking
 which requests are being sent to the server and validating whether they comply
 with our requirements. Here, we are using [jcabi-http](http://http.jcabi.com)
@@ -152,5 +152,5 @@ is based on it.
 {% endhighlight %}
 
 If you have any questions or suggestions, please submit them through [GitHub
-issues](http://github.com/jcabi/jcabi-http/issues).
+issues](https://github.com/jcabi/jcabi-http/issues).
 As always, bugs are welcome :)

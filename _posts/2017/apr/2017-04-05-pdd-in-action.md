@@ -45,7 +45,7 @@ and use this URL for the webhook:
 
 Now, your repository is being watched by [0pdd](http://www.0pdd.com). Every
 time you `git push` something new, it does a `git pull` and retrieves your changes
-from GitHub. Then it runs [pdd](http://github.com/yegor256/pdd), a command line tool
+from GitHub. Then it runs [pdd](https://github.com/yegor256/pdd), a command line tool
 that scans the entire code base (only the [`master`](https://help.github.com/articles/setting-the-default-branch/)
 branch) and finds all occurrences of `@todo`
 markers.
