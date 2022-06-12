@@ -1,0 +1,95 @@
+---
+layout: post
+title: "Command Line Default Options in a Linearized Plain Text"
+date: 2022-06-21
+place: Moscow, Russia
+tags: testing
+description: |
+  Where to put default configuration parameters for
+  a command line tool? It has to be a JSON or YAML
+  config file? Neither. Just plain text.
+keywords:
+  - command line
+  - configure command line
+  - default options command line
+  - cli defaults
+  - command line tool defaults
+image: /images/2022/06/...
+jb_picture:
+  caption: ...
+---
+
+[A few years ago]({% pst 2017/aug/2017-08-29-xcop %})
+I created [xcop](https://github.com/yegor256/xcop),
+a simple command line tool that
+checks the style of an XML file. It's similar to
+[Checkstyle](https://checkstyle.sourceforge.io) (for Java) and
+[Pep8](https://pypi.org/project/pep8/) (for Python),
+but for XML. It's pretty easy to use `xcop`: just run it with a few command
+line arguments and it prints the list of errors found in your XML file, if any. However,
+some of the arguments may be convenient to make defaults and instead of
+passing through the command line on every execution, store in some configuration file.
+The question what is the best format for this file:
+[YAML](https://en.wikipedia.org/wiki/YAML),
+[JSON](https://en.wikipedia.org/wiki/JSON), or
+[TOML](https://en.wikipedia.org/wiki/TOML)?
+Neither! I suggest plain text.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+Let's say, you want `xcop` to check all `*.xml` files in your repository,
+but ignore XML files in the `.idea/` directory. You aslo want to make sure
+all XML files have a licence in their preamble. This is how you would
+call `xcop`:
+
+{% highlight text %}
+$ xcop --include '*.xml' --exclude '.idea/**' \
+  --license LICENSE.txt
+{% endhighlight %}
+
+You have to use this set of arguments everywhere you call `xcop`:
+in the build script, in CI/CD pipeline, and in your laptop when you check
+that everything is correct. What some of us sometimes do is a new
+Bash file called `run_xcop.sh` with exactly this single command.
+
+I suggest a better solution. You can create `.xcop`
+plain text file in the root of the repository and put all
+required "default" command line options, one per line:
+
+{% highlight text %}
+--include *.xml
+--exclude .idea/**
+--license LICENSE.txt
+{% endhighlight %}
+
+Now, you can call the tool just like this:
+
+{% highlight text %}
+$ xcop
+{% endhighlight %}
+
+It will find the `.xcop` file and will read all lines from it, treating
+each of them as command line arguments. It will basically _concatenate_
+what is provided in the command line with what is found in the file
+with defaults.
+
+I believe, this approach is much better than YAML, JSON, XML, TOML, INI,
+and other configuration formats simply because it doesn't require us
+users to learn two formats: one for command line options, another one
+for the configuration file. We learn just one and use it interchangeably
+either when we call the tool "manually" or when we configure its
+behaviour in the file with defaults.
+
+By the way, it's possible to configure the behavior of `xcop` globally
+creating the file `~/.xcop` (in the home directory of the user). The
+defaults from this file will also be concatenated with the ones provided
+in the command line and with the ones found in the local `.xcop` file.
+
+I design my other command line tools using the same principle,
+including
+[pdd](https://github.com/yegor256/pdd),
+[texqc](https://github.com/yegor256/texqc),
+and
+[texsc](https://github.com/yegor256/texsc).
