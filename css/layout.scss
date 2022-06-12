@@ -102,7 +102,7 @@ a:visited {
   color: inherit;
   text-decoration: underline;
   // scss-lint:disable PropertySpelling
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: $px;
   // scss-lint:enable PropertySpelling
   &.foreign {
     &:hover {
@@ -146,7 +146,7 @@ del {
       padding-left: 0;
 
       li {
-        border-left: 4px solid darkgreen;
+        border-left: 4 * $px solid darkgreen;
         color: darkgreen;
         margin-bottom: $em;
         padding-left: $em;
@@ -210,15 +210,15 @@ del {
 
     .photo {
       border-radius: 50%;
-      height: 80px;
-      width: 80px;
+      height: 80 * $px;
+      width: 80 * $px;
     }
 
     .hire {
       @extend %desktop-only;
       color: darkgreen;
       left: 50%;
-      margin-left: 45px;
+      margin-left: 45 * $px;
       position: absolute;
       text-decoration: underline;
       top: 0;
@@ -227,12 +227,12 @@ del {
     .sub {
       @extend %desktop-only;
       color: darkgreen;
-      margin-right: 45px;
+      margin-right: 45 * $px;
       position: absolute;
       right: 50%;
       text-align: right;
       text-decoration: underline;
-      top: 50px;
+      top: 50 * $px;
     }
   }
 }
@@ -262,7 +262,7 @@ fieldset {
 }
 
 .field-text {
-  border: 1px solid black;
+  border: 1 * $px solid black;
   @media all and (max-width: $width) {
     width: 100%;
   }
@@ -375,7 +375,7 @@ sub {
 hr {
   @extend %clear;
   border: 0;
-  border-top: 1px solid lightgray;
+  border-top: 1 * $px solid lightgray;
   height: 0;
   margin-top: 2 * $em;
   text-align: left;
@@ -395,7 +395,7 @@ hr {
 
 blockquote {
   @extend %main-font-italic;
-  border-left: 3px solid lightgray;
+  border-left: 3 * $px solid lightgray;
   margin-left: 1.5 * $em;
   padding-left: .5 * $em !important;
   position: relative;
@@ -429,7 +429,7 @@ figure {
     line-height: 1em;
     max-width: 90%;
     position: absolute;
-    text-shadow: .2px .2px dimgray;
+    text-shadow: 0.2 * $px 0.2 * $px dimgray;
   }
 
   figcaption::before {
@@ -476,12 +476,12 @@ figure {
 }
 
 .about-badge {
-  height: 24px;
+  height: 24 * $px;
 }
 
 .gist {
   pre {
-    font-size: 12px !important;
+    font-size: 12 * $px !important;
   }
 }
 

@@ -10,7 +10,7 @@ article {
   @extend %desktop-only;
   @extend %unprintable;
   @extend %gray;
-  border-left: 4px solid #e52d27;
+  border-left: 4 * $px solid #e52d27;
   float: right;
   font-size: .8em;
   line-height: 1.2em;
@@ -63,7 +63,7 @@ article {
 
     .count {
       background-color: white;
-      border: 1px solid gray;
+      border: 1 * $px solid gray;
       color: gray;
       display: none;
       font-family: $code-font;
@@ -77,7 +77,7 @@ article {
 
     .icon {
       $size: 1.2;
-      border: 1px solid gray;
+      border: 1 * $px solid gray;
       border-radius: 50%;
       color: gray;
       display: inline-block;
@@ -101,7 +101,7 @@ article {
 .quote {
   @extend %desktop-only;
   @extend %unprintable;
-  border-left: 4px solid darkgreen;
+  border-left: 4 * $px solid darkgreen;
   float: right;
   font-size: 1.6 * $em;
   line-height: 1.6 * $em;
@@ -124,15 +124,15 @@ article {
   width: 15 * $em;
 
   .book-cover {
-    border: 1px solid lightgray;
+    border: 1 * $px solid lightgray;
     float: left;
-    height: 160px;
+    height: 160 * $px;
     margin-right: .6 * $em;
-    width: 108px;
+    width: 108 * $px;
   }
 
   .amazon-button {
-    height: 20px;
+    height: 20 * $px;
   }
 }
 

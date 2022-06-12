@@ -5,13 +5,13 @@ pre {
 
   @media all and (max-width: $width) {
     font-family: 'Ubuntu Mono';
-    letter-spacing: -1px;
+    letter-spacing: -1 * $px;
   }
 }
 
 code {
   background-color: lightgray;
-  border-radius: 3px;
+  border-radius: 3 * $px;
   font-size: 90%;
   hyphens: none;
   line-height: $em;
@@ -19,7 +19,7 @@ code {
 }
 
 .highlight {
-  border-left: 3px solid lightgray;
+  border-left: 3 * $px solid lightgray;
   margin-left: 2 * $em;
   padding-left: .5 * $em !important;
 
@@ -50,7 +50,7 @@ code {
     @extend %gray;
     @extend %desktop-only;
     min-width: 2 * $em;
-    padding-right: 2px;
+    padding-right: 2 * $px;
     text-align: right;
     width: 2 * $em;
   }
