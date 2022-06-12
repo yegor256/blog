@@ -49,7 +49,7 @@ I'm the founder and lead architect of
 [Zold](https://www.zold.io),
 [Cactoos](http://www.cactoos.org),
 [Takes](http://www.takes.org),
-[Rultor](http://www.rultor.com),
+[Rultor](https://www.rultor.com),
 and [a few others](/pets.html).
 You can sponsor me on [GitHub](https://github.com/sponsors/yegor256).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})

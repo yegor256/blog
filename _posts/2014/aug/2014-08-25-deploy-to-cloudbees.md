@@ -24,7 +24,7 @@ how it all happened, in [GitHub issue #6](https://github.com/sttc/stateful/issue
 
 {% figure /images/2014/08/github-sttc-issue-6.png 600 %}
 
-As you see, I gave a command to [Rultor](http://www.rultor.com),
+As you see, I gave a command to [Rultor](https://www.rultor.com),
 and it packaged, tested and deployed a new version to CloudBees.
 I didn't do anything else.
 
@@ -199,7 +199,7 @@ You can compare your file with live Rultor
 
 ## Run It!
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it

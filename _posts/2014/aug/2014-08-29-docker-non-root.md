@@ -17,7 +17,7 @@ keywords:
 
 Docker starts a process inside its container as a "root" user. In some
 cases, this is not convenient though. For example, `initdb` from PostgreSQL doesn't like to
-be started as root and will fail. In [rultor.com](http://www.rultor.com),
+be started as root and will fail. In [rultor.com](https://www.rultor.com),
 a DevOps team assistant,
 [we're using Docker]({% pst 2014/jul/2014-07-29-docker-in-rultor %})
 as a virtualization technology for every build we run.
@@ -48,4 +48,4 @@ su -m r -c /home/r/script.sh
 
 `script.sh` will be executed as a user `r` inside the container. And this
 `r` user will have `sudo` permissions. This is exactly what all projects,
-managing their DevOps procedures with [rultor.com](http://www.rultor.com), need.
+managing their DevOps procedures with [rultor.com](https://www.rultor.com), need.

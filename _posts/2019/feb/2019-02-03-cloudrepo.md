@@ -17,11 +17,11 @@ keywords:
   - apache maven
 ---
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 In my [previous article]({% pst 2015/sep/2015-09-07-maven-repository-amazon-s3 %}),
 I described how to
-set up a private Maven repository in Amazon S3 and deploy there via [Rultor](http://www.rultor.com).
+set up a private Maven repository in Amazon S3 and deploy there via [Rultor](https://www.rultor.com).
 This is a great solution if you're familiar with managing Amazon Web Services (AWS),
 [S3](https://aws.amazon.com/s3/), and [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/).
 However, if you're not comfortable administering an AWS account and

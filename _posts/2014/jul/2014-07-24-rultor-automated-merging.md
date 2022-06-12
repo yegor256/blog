@@ -18,7 +18,7 @@ keywords:
   - continuous delivery pre-flight builds
 ---
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 You get a GitHub pull request. You review it. It looks correct---it's time
 to merge it into `master`. You post a comment in it, asking
@@ -65,7 +65,7 @@ market:
    to talk to the tool, through human-like commands in the tickets they are working with.
 
 A combination of these three features is what differs
-[Rultor](http://www.rultor.com) from all other existing systems.
+[Rultor](https://www.rultor.com) from all other existing systems.
 
 ## How Rultor Merges
 

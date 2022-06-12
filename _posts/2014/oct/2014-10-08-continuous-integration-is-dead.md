@@ -40,7 +40,7 @@ source and commercial projects. Besides that,
 a few years ago I created a hosted
 [continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %}) service called
 [fazend.com](http://www.fazend.com),
-renamed to [rultor.com](http://www.rultor.com) in 2013.
+renamed to [rultor.com](https://www.rultor.com) in 2013.
 Currently, I'm also an active user of [Travis](http://www.travis-ci.org)
 and [AppVeyor](http://www.appveyor.com).
 
@@ -164,6 +164,6 @@ do it. All you can do is get a negative response from a merging script. Then
 you fix your errors and tell the script to try again. Nobody sees these
 attempts, and you don't need to apologize. Fear factor is gone.
 
-BTW, try to use [rultor.com](http://www.rultor.com) to enforce this
+BTW, try to use [rultor.com](https://www.rultor.com) to enforce this
 [read-only master branch]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 principle in your project.

@@ -113,7 +113,7 @@ Since that time, I used experimentally that approach in multiple
 [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 projects and a few commercial ones with PHP, Java, Ruby and JavaScript, Git and
 Subversion. In all cases, my experience was only positive, and that's why
-[rultor.com](http://www.rultor.com) was born (later about that though).
+[rultor.com](https://www.rultor.com) was born (later about that though).
 
 So, the solution is simple---prohibit anyone from merging anything
 into `master` and create a script that anyone can call. The script will
@@ -162,9 +162,9 @@ in GitHub. The only solution is to work through forks and pull requests only.
 Simply remove everybody from the list of "collaborators" and they will
 have to submit changes through pull requests.
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
-Then, start using [Rultor.com](http://www.rultor.com), which will help
+Then, start using [Rultor.com](https://www.rultor.com), which will help
 you to test, merge and push every pull request. Basically, Rultor is
 the script we were talking about above. It is available as a free cloud service.
 

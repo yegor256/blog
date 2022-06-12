@@ -27,10 +27,10 @@ Docker containers. Take this Maven project for example:
 $ sudo docker run -i -t ubuntu mvn clean test
 {% endhighlight %}
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 This command will start a new Ubuntu system and execute
-`mvn clean test` inside it. [Rultor.com](http://www.rultor.com), our
+`mvn clean test` inside it. [Rultor.com](https://www.rultor.com), our
 virtual assistant, does exactly that with our builds, when we
 deploy, package, test and merge them.
 

@@ -31,7 +31,7 @@ see how this library helps in XSL transformations.
 
 <!--more-->
 
-First, take a look at a practical example---[rultor.com](http://www.rultor.com)---a hosted DevOps assistant that
+First, take a look at a practical example---[rultor.com](https://www.rultor.com)---a hosted DevOps assistant that
 [automates]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 release, merge, and deploy operations. Rultor keeps each conversation session with an end user (a.k.a. "talk")
 in a DynamoDB record. There are multiple situations to handle

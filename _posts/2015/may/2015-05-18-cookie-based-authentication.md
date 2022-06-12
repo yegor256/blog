@@ -291,4 +291,4 @@ log the current user out.
 
 You can see how all this works in a real application by checking out the
 [`TkAppAuth`](https://github.com/yegor256/rultor/blob/master/src/main/java/com/rultor/web/TkAppAuth.java)
-class in [Rultor](http://www.rultor.com).
+class in [Rultor](https://www.rultor.com).

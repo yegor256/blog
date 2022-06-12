@@ -18,9 +18,9 @@ keywords:
 
 {% badge /images/2014/07/travis-logo.png 100 http://www.travis-ci.org %}
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
-[Rultor](http://www.rultor.com) is a coding team assistant.
+[Rultor](https://www.rultor.com) is a coding team assistant.
 [Travis](http://travis-ci.org) is a hosted
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) system.
 In this article I'll show how our open source projects are

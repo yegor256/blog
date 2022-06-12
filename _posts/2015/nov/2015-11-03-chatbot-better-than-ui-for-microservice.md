@@ -24,7 +24,7 @@ is a piece of software that talks to you in chat format.
 fully **replace** user interfaces. I don't think there is any innovation
 in this approach, but it has proved to be very effective over the last year or so.
 That's the impetus for this post.
-Here is how the [Rultor](http://www.rultor.com) chatbot works for
+Here is how the [Rultor](https://www.rultor.com) chatbot works for
 us and what its benefits are.
 
 <!--more-->

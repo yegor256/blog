@@ -25,9 +25,9 @@ interested to discuss a co-founding opportunity for you: I will pay for
 all project expenses and you will write software. We will be co-founders.
 [Email me](mailto:cofounder@yegor256.com).
 
-{% badge //doc.rultor.com/images/logo.svg 70 http://www.rultor.com %}
+{% badge //doc.rultor.com/images/logo.svg 70 https://www.rultor.com %}
 
-[Rultor.com](http://www.rultor.com) is a chat bot that helps GitHub projects automate
+[Rultor.com](https://www.rultor.com) is a chat bot that helps GitHub projects automate
 their basic DevOps procedures, including merging, deploying, and
 releasing. It is open source and non-profit. More about it at these
 articles: [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})

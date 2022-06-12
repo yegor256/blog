@@ -410,3 +410,5 @@ most dangerous type of coupling, because it's hard to follow, it's hard to find,
 and it's hard to remove. Without reflection object-oriented design would be
 much cleaner and solid. But even if this feature does exist,
 I suggest you never use reflection in your programming language.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you use reflective programming (reflection)?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1535919879886446592?ref_src=twsrc%5Etfw">June 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

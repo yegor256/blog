@@ -146,7 +146,7 @@ class AppTest < Test::Unit::TestCase
 
 Now you can run the entire test from the command line. You can see how
 [Rultor]({% pst 2014/sep/2014-09-11-deployment-script-vs-rultor %})
-runs it while releasing a new version: [full log](http://www.rultor.com/t/11705-302080694).
+runs it while releasing a new version: [full log](https://www.rultor.com/t/11705-302080694).
 Also, see how it works [in Travis](https://travis-ci.org/yegor256/sixnines).
 In a nutshell:
 

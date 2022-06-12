@@ -19,13 +19,13 @@ keywords:
 
 [AppVeyor](http://www.appveyor.com) is a great cloud
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) service that builds
-Windows projects. [Rultor](http://www.rultor.com) is a DevOps assistant, which automates
+Windows projects. [Rultor](https://www.rultor.com) is a DevOps assistant, which automates
 release, merge and deploy operations, using Docker containers. These posts
 explain how Rultor works and what it's for:
 [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 and [Master Branch Must Be Read-Only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 The problem is that Rultor is running all scripts inside Docker containers
 and Docker can't build Windows projects. The only and the best logical solution

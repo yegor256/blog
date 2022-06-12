@@ -190,7 +190,7 @@ Every bug is reported, classified, discussed, and fixed in its
 own GitHub ticket and its own Git branch. We never allow anyone
 to just commit to the `master` branch---all changes must pass through
 our [quality controls]({% pst 2014/aug/2014-08-13-strict-code-quality-control %})
-and be merged into `master` by [rultor.com](http://www.rultor.com),
+and be merged into `master` by [rultor.com](https://www.rultor.com),
 our [merging bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}).
 
 Also important to mention is that all communications with the product owner

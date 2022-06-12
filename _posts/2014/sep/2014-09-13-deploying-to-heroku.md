@@ -30,7 +30,7 @@ all I do is create one message in a GitHub ticket. I just say
 `@rultor release 0.1.4` and version 0.1.4 gets deployed
 to Heroku. See GitHub ticket [#5](https://github.com/aintshy/hub/issues/5).
 
-You can do the same, with the help of [Rultor.com](http://www.rultor.com),
+You can do the same, with the help of [Rultor.com](https://www.rultor.com),
 a free hosted DevOps assistant.
 
 <!--more-->
@@ -90,7 +90,7 @@ release:
 You can compare your file with live Rultor
 [configuration of aintshy/hub](https://github.com/aintshy/hub/blob/master/.rultor.yml).
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like this into it

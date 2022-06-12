@@ -57,7 +57,7 @@ so much on code quality?
 If you join one of our teams as a Java developer, you will
 develop your code [in branches]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
 and, then, [Rultor will merge]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
-your changes into `master`. Before actually merging, though, [Rultor](http://www.rultor.com) will run an
+your changes into `master`. Before actually merging, though, [Rultor](https://www.rultor.com) will run an
 automated build script to make sure that your branch doesn't break it.
 
 {% quote If your changes break any of Qulice's rules, your entire branch gets rejected %}

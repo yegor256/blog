@@ -63,7 +63,7 @@ and helps me stay on top of all events that are happening there.
 It's my own project and I use it every day.
 
 <img src="/images/2017/07/sites-rultor.jpg" class="env-ico" alt="icon"/><br/>
-[Rultor](http://www.rultor.com) is helping me
+[Rultor](https://www.rultor.com) is helping me
 [merge]({% pst 2014/jul/2014-07-24-rultor-automated-merging %}) pull requests,
 [deploy]({% pst 2014/sep/2014-09-11-deployment-script-vs-rultor %}) my projects to production and
 [release]({% pst 2014/aug/2014-08-19-how-to-release-to-maven-central %})

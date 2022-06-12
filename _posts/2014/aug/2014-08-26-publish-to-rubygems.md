@@ -24,7 +24,7 @@ in [GitHub issue #6](https://github.com/yegor256/jekyll-github-deploy/issues/6):
 
 {% figure /images/2014/08/github-ticket-6.jpg 600 %}
 
-As you see, I gave a command to [Rultor](http://www.rultor.com),
+As you see, I gave a command to [Rultor](https://www.rultor.com),
 and it released a new version to RubyGems. I didn't do anything else.
 
 Now let's see how you can do the same. How you can configure your project
@@ -104,7 +104,7 @@ In this example, replace `foo` with the name of your gem.
 
 ## Run It!
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in
 the GitHub issue tracker, and post something like that into it

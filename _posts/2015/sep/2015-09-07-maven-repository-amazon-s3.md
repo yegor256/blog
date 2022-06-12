@@ -150,7 +150,7 @@ providing secure credentials. I recommend you use
 
 ## Configure Rultor
 
-{% badge https://doc.rultor.com/images/logo.svg 100 http://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
 Another recommendation is to configure rultor.com for deployment of your
 artifacts to S3 automatically.

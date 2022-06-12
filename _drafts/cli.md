@@ -19,16 +19,18 @@ jb_picture:
   caption: ...
 ---
 
+{% badge https://raw.githubusercontent.com/yegor256/xcop/master/logo.svg 128 http://github.com/yegor256/xcop %}
+
 [A few years ago]({% pst 2017/aug/2017-08-29-xcop %})
 I created [xcop](https://github.com/yegor256/xcop),
 a simple command line tool that
-checks the style of an XML file. It's similar to
+can check the style of an XML file. It's similar to
 [Checkstyle](https://checkstyle.sourceforge.io) (for Java) and
 [Pep8](https://pypi.org/project/pep8/) (for Python),
 but for XML. It's pretty easy to use `xcop`: just run it with a few command
-line arguments and it prints the list of errors found in your XML file, if any. However,
+line arguments and receive the list of errors found in your XML file, if any. However,
 some of the arguments may be convenient to make defaults and instead of
-passing through the command line on every execution, store in some configuration file.
+passing through the command line on every execution, store them in some configuration file.
 The question what is the best format for this file:
 [YAML](https://en.wikipedia.org/wiki/YAML),
 [JSON](https://en.wikipedia.org/wiki/JSON), or
@@ -87,7 +89,7 @@ creating the file `~/.xcop` (in the home directory of the user). The
 defaults from this file will also be concatenated with the ones provided
 in the command line and with the ones found in the local `.xcop` file.
 
-I design my other command line tools using the same principle,
+I designed a few of my other command line tools using the same principle,
 including
 [pdd](https://github.com/yegor256/pdd),
 [texqc](https://github.com/yegor256/texqc),
