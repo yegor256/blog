@@ -194,7 +194,7 @@ del {
       height: 2.4 * $em;
       margin-left: 1 * $em;
       position: absolute;
-      top: 0.3 * $em;
+      top: .3 * $em;
       visibility: hidden;
     }
   }
@@ -429,7 +429,7 @@ figure {
     line-height: 1em;
     max-width: 90%;
     position: absolute;
-    text-shadow: 0.2 * $px 0.2 * $px dimgray;
+    text-shadow: .2 * $px .2 * $px dimgray;
   }
 
   figcaption::before {
