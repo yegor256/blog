@@ -77,7 +77,7 @@ user, read how
       <h1>How We Run as a Non-Root Inside Docker Container</h1>
       <p>Docker starts a process inside its container as a “root” user. In some
 cases, this is not convenient though. For example, <code class="highlighter-rouge">initdb</code> from PostgreSQL doesn’t like to
-be started as root and will fail. In <a href="http://www.rultor.com">rultor.com</a>,
+be started as root and will fail. In <a href="https://www.rultor.com">rultor.com</a>,
 a DevOps team assistant,
 <a href="/2014/07/29/docker-in-rultor.html">we’re using Docker</a>
 as a virtualization technology for every build we run.</p>
@@ -104,7 +104,7 @@ su -m r -c /home/r/script.sh</pre>
 
 <p><code class="highlighter-rouge">script.sh</code> will be executed as a user <code class="highlighter-rouge">r</code> inside the container. And this
 <code class="highlighter-rouge">r</code> user will have <code class="highlighter-rouge">sudo</code> permissions. This is exactly what all projects,
-managing their DevOps procedures with <a href="http://www.rultor.com">rultor.com</a>, need.</p>
+managing their DevOps procedures with <a href="https://www.rultor.com">rultor.com</a>, need.</p>
 
     </article>
   </body>

@@ -1138,9 +1138,9 @@ No. I’m saying that you should &lt;em&gt;never&lt;/em&gt; have them near your 
       <item>
         <title>Deployment Script vs. Rultor</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.rultor.com&quot;&gt;&lt;img src=&quot;https://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://www.rultor.com&quot;&gt;&lt;img src=&quot;https://doc.rultor.com/images/logo.svg&quot; style=&quot;width:100px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;p&gt;When I explain how &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; automates deployment/release processes,
+&lt;p&gt;When I explain how &lt;a href=&quot;https://www.rultor.com&quot;&gt;Rultor&lt;/a&gt; automates deployment/release processes,
 very often I hear something like:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1224,7 +1224,7 @@ how it all happened, in &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects/
 
 &lt;figure class=&quot;unprintable&quot;&gt;&lt;img src=&quot;/images/2014/08/github-ticket-80.jpg&quot; itemprop=&quot;image&quot; style=&quot;width:600px;max-width:100%;&quot; alt=&quot;The figure&quot; /&gt;&lt;/figure&gt;
 
-&lt;p&gt;As you see, I gave a command to &lt;a href=&quot;http://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;,
+&lt;p&gt;As you see, I gave a command to &lt;a href=&quot;https://www.rultor.com&quot;&gt;Rultor&lt;/a&gt;,
 and it released a new version to Maven central. I didn’t do anything else.&lt;/p&gt;
 
 &lt;p&gt;Now let’s see how you can do the same. How you can configure your project
