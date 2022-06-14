@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-06-13T18:39:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Reflection Means Hidden Coupling</title><link href="https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling.html" rel="alternate" type="text/html" title="Reflection Means Hidden Coupling" /><published>2022-06-05T00:00:00+00:00</published><updated>2022-06-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling</id><content type="html" xml:base="https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Reflective_programming&quot;&gt;Reflective programming&lt;/a&gt; (or reflection) happens
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-06-14T17:25:13+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Principle of One</title><link href="https://www.yegor256.com/2022/06/14/principle-of-one.html" rel="alternate" type="text/html" title="The Principle of One" /><published>2022-06-14T00:00:00+00:00</published><updated>2022-06-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/06/14/principle-of-one</id><content type="html" xml:base="https://www.yegor256.com/2022/06/14/principle-of-one.html">&lt;p&gt;When I make a slide deck for a new presentation, invent a new domain name, think about
+a name for a new Java class, itemize bullet points in an academic paper, even
+write an email—I try to follow a simple principle which helps me make
+my content more solid. Well, at least I believe it does. Maybe it will help you as well.
+The principle is simple: at all costs, try to squeeze the content into
+&lt;em&gt;one&lt;/em&gt; word, &lt;em&gt;one&lt;/em&gt; sentence, &lt;em&gt;one&lt;/em&gt; paragraph, or &lt;em&gt;one&lt;/em&gt; page.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;True Story (2021) by Eric Newman&quot; src=&quot;/images/2022/06/true-story.jpg&quot; longdesc=&quot;#f816eca5&quot; /&gt;&lt;figcaption id=&quot;f816eca5&quot;&gt;True Story (2021) by Eric Newman&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;A more formal definition of the principle would be this:
+it’s either one word/sentence/paragraph/page &lt;em&gt;or&lt;/em&gt; way more.
+Let’s see an example. Say I need to list my plans for tomorrow:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;- write a new article
+- send an email to my boss
+- cook a dinner
+- take a nap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Do any of them need to be longer than one word? Not really. “Take a nap”
+is just three words, as is “cook a dinner”. On the one hand, three might not be considered
+“way more” than one. On the other, they could be shortened without
+any loss of meaning. Thus, I have to decide whether to make them all &lt;em&gt;much&lt;/em&gt;
+longer than one word or shorten them all to a single one.
+The second choice is always preferable:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;- article
+- email
+- dinner
+- nap&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I wrote about &lt;a href=&quot;/2015/01/12/compound-name-is-code-smell.html&quot;&gt;compound variable names&lt;/a&gt;
+in an earlier post: the same principle is applicable
+to them. Variables must either be nouns without any other words around them,
+or use many more words, which is an exceptional situation.&lt;/p&gt;
+
+&lt;p&gt;In another &lt;a href=&quot;/2016/03/08/pimp-up-your-resume.html&quot;&gt;blog post about resumes&lt;/a&gt;
+I mentioned that a good CV must take exactly one page.
+If it’s more, it should be many more. But definitely not two
+or three pages.&lt;/p&gt;
+
+&lt;p&gt;I suggest applying this principle to every piece of content
+you write: try to squeeze it into &lt;em&gt;one&lt;/em&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html">When I make a slide deck for a new presentation, invent a new domain name, think about a name for a new Java class, itemize bullet points in an academic paper, even write an email—I try to follow a simple principle which helps me make my content more solid. Well, at least I believe it does. Maybe it will help you as well. The principle is simple: at all costs, try to squeeze the content into one word, one sentence, one paragraph, or one page.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/true-story.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/true-story.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Reflection Means Hidden Coupling</title><link href="https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling.html" rel="alternate" type="text/html" title="Reflection Means Hidden Coupling" /><published>2022-06-05T00:00:00+00:00</published><updated>2022-06-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling</id><content type="html" xml:base="https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling.html">&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Reflective_programming&quot;&gt;Reflective programming&lt;/a&gt; (or reflection) happens
 when your code changes itself on the fly. For example, a method of a class, when we call it,
 among other things adds a new method to the class
 (also known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Monkey_patch&quot;&gt;monkey patching&lt;/a&gt;). 
@@ -1749,286 +1792,4 @@ which would do exactly the same, but in a more declarative and lazy way:&lt;/p&g
 
 &lt;p&gt;&lt;a href=&quot;https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ListOf&lt;/code&gt;&lt;/a&gt;
 from &lt;a href=&quot;https://www.cactoos.org&quot;&gt;Cactoos&lt;/a&gt; is a perfect example 
-of such a prestructor.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Making constructors pre-process the arguments before encapsulating them seems to be bad practice. However, very often it’s necessary to do exactly that: perform some manipulations with the objects provided as arguments and only then assign them to the attributes of the constructed object. For this purpose I suggest using prestructors, which could be methods or stand-alone objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/08/huge-in-france.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/08/huge-in-france.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A Few Tips for Recruiters</title><link href="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html" rel="alternate" type="text/html" title="A Few Tips for Recruiters" /><published>2021-06-01T00:00:00+00:00</published><updated>2021-06-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/06/01/tips-for-recruiters</id><content type="html" xml:base="https://www.yegor256.com/2021/06/01/tips-for-recruiters.html">&lt;p&gt;Recruiters, you know what we programmers think about you, don’t you? 
-Read &lt;a href=&quot;/2017/02/21/say-no-to-google-recruiters.html&quot;&gt;this&lt;/a&gt;
-and &lt;a href=&quot;/2015/09/29/mayonnaise.html&quot;&gt;this&lt;/a&gt;, 
-to get the full picture. You are still here because we still
-don’t have good tools and we still enjoy being enslaved. One day
-this will be over and you will stop exploiting our drawbacks,
-will lose your “Senior Recruiter” jobs, and start doing something 
-useful and meaningful. However, until this day comes, here is some
-advice, to help you be a &lt;del&gt;less annoying&lt;/del&gt; better 
-head hunter.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Fifth Element (1997) by Luc Besson&quot; src=&quot;/images/2021/06/the-fifth-element.jpg&quot; longdesc=&quot;#009e7c42&quot; /&gt;&lt;figcaption id=&quot;009e7c42&quot;&gt;The Fifth Element (1997) by Luc Besson&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Recruitment is very much like dating. And you, like it or not,
-are a &lt;em&gt;match maker&lt;/em&gt;. Just like those marriage brokers organize
-dates and help people fall in love, you help us break up with
-the company we’re married to and fall in love with a new one.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=dlPk1AE2aQk&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/dlPk1AE2aQk/mqdefault.jpg&quot; alt=&quot;YouTube video #dlPk1AE2aQk&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M170: recruiters may do a better job if listen to us programmers;
-        8 June 2021.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;The best date happens when people research each other beforehand.
-You too, should come prepared.
-When I get an email from a recruiter that
-starts with a description of the job, I most likely just delete it.
-Instead, to catch our attention, the letter should start with
-an explanation of why you decided to reach out: 
-Maybe you already know something about me? 
-Maybe you read my code on GitHub? 
-Maybe someone told you about me? 
-Maybe you know what language I’m coding with? 
-When you are interested in me, I will be much more interested in you,
-and the company you represent, and the job you are trying to match me with.&lt;/p&gt;
-
-&lt;h2 id=&quot;its-not-about-you&quot;&gt;It’s Not About You&lt;/h2&gt;
-
-&lt;p&gt;It’s important to remember that you are my match maker, but not my date. 
-I’m not interested in a date with you. I want to have a date with people who I will work for.
-In most cases, you are a temporary person, who will disappear once I’m
-hired. That’s why you will do yourself a big favor if you position yourself
-the right way. Compare these two:&lt;/p&gt;
-
-&lt;table class=&quot;right-wrong&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Jeff&lt;/th&gt;
-      &lt;th&gt;Amy&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Hello, I’ve got a database of 5,000 single ladies. I can help you find your soul mate!&lt;/td&gt;
-      &lt;td&gt;Hey, I know Silva, she seems to be a perfect match for you, how about I introduce you two?&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Jeff is trying to sell himself. He has the database! He knows the ladies!
-I should talk to him! He is my new friend!… No, not really, this is not
-what I want. I don’t want you, Jeff. Sorry. I’m not interested in knowing
-or dating you. Delete.&lt;/p&gt;
-
-&lt;p&gt;Amy, on the other hand, puts Silva in front. This is who I want to know: Silva!
-Amy is just a temporary &lt;del&gt;middleman&lt;/del&gt; middlewoman. She is not even trying
-to sell herself, even though, I’m sure, she also has a database of ladies, and so on.
-Technically speaking, she is no different than Jeff, but she presents herself right: 
-“I’m here just to introduce you to Silva, that’s it!” Amy, I like you, I reply!&lt;/p&gt;
-
-&lt;p&gt;How about these two:&lt;/p&gt;
-
-&lt;table class=&quot;right-wrong&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Jeff&lt;/th&gt;
-      &lt;th&gt;Amy&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Hi, we’re looking for a Java developer to join our new project for online payments, can you send your updated CV?&lt;/td&gt;
-      &lt;td&gt;Hey, I showed your profile to our Java tech lead, he is very interested in talking to you, may I introduce you?&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Which message do you think has a higher chance of being answered? I bet Jeff’s
-email will be replied to only by those who don’t care much where they work. 
-For them, seeing a new job opportunity in their Inbox is enough to click “Reply”. 
-But ask yourself: does your company need those people?&lt;/p&gt;
-
-&lt;h2 id=&quot;do-you-understand-the-market&quot;&gt;Do You Understand the Market?&lt;/h2&gt;
-
-&lt;p&gt;Dating, just like head hunting, is about finding the right people.
-First finding, and then reaching. It’s not a problem to just approach
-a Java developer and schedule an interview. Most probably you, as a recruiter,
-are not paid for each interview you arrange. You are paid for “a placement”
-you make—when the developer is actually hired. We will be hired only
-when there is a good match. So, your first task is to find those who 
-potentially are a good match. You have to research the market and create
-a &lt;em&gt;map of talents&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I would start with a list of key people on the market,
-who are the most visible and the best, whatever that means. If your hiring
-focus is small enough (this is how it should be), you will identify
-just a few dozen key people. Then, starting from them, you dig deeper
-and find out where they work, who works in their teams, where
-they worked before, and so on. Check the conferences and workshops
-where people present their ideas and achievements. Check their GitHub
-accounts and see who else is committing to their projects. Do whatever
-it takes, but make the map. Maybe even pay a private detective to collect
-the data you can’t find in the Internet: who do they drink beer with, where
-do they spend their vacations, who do they sleep with, etc. 
-I’m kidding here, but you get the idea: you need to know the market!&lt;/p&gt;
-
-&lt;p&gt;Then, once you know your target market, the best way would be to make 
-&lt;em&gt;it approach you&lt;/em&gt;. Think about this: 
-the best people are hardly reading job boards, 
-they don’t post their CVs anywhere, 
-don’t make their LinkedIn pages “open for hiring offers,” 
-and usually don’t reply to recruiters (for various reasons).
-Simply put, they have better things to do than talk to you.
-It’s hard to approach them. Sometimes even impossible.&lt;/p&gt;
-
-&lt;p&gt;But you can make them come to you, if you do something that will be
-interesting for them. For example, if you organize a competition for new
-open source projects with a prize fund of $1M. It’s very likely that
-the best people will come to you to compete for this money. There you will
-have a chance to talk to them. You don’t have a million dollars to give away
-just to hire the best people? Sad… Maybe you can organize a workshop
-where people meet to discuss Java and invite those who you want to 
-approach? There are many options. Just give them something they are
-interested in and they will want to know you.&lt;/p&gt;
-
-&lt;h2 id=&quot;formal-emails-get-deleted&quot;&gt;Formal Emails Get Deleted&lt;/h2&gt;
-
-&lt;p&gt;If you don’t have a million dollars and you don’t have time to
-make a good conference for them, you have to do cold calls. Well, more like
-cold emails and cold LinkedIn messages. I suggest you sound
-&lt;em&gt;short&lt;/em&gt; and &lt;em&gt;informal&lt;/em&gt;. Compare these two:&lt;/p&gt;
-
-&lt;table class=&quot;right-wrong&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Jeff&lt;/th&gt;
-      &lt;th&gt;Amy&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Dear Sarah,&lt;br /&gt;&lt;br /&gt;My name is Jeff, I’m a recruiter in ACME Inc. We have a new interesting project that needs senior Java developers. The requirements for this position can be found in the attached document.&lt;br /&gt;&lt;br /&gt;Please, send me your updated CV if you are interested.&lt;br /&gt;&lt;br /&gt;Sincerely Yours,&lt;br /&gt;Jeffrey Lebowski&lt;br /&gt;ACME Inc.&lt;br /&gt;Palo Alto, CA&lt;/td&gt;
-      &lt;td&gt;Sarah, we’ve never met before but I showed your GitHub to our Head of Dev and she asked me to email you. Her team is making a new payment platform and they lack expertise in big data. How about you two talk?&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Jeff’s message is just wrong, on so many levels: it explicitly says that Jeff is
-a recruiter (nobody likes recruiters!), it doesn’t say anything about why
-Jeff is approaching Sarah, and it’s too formal and official. To me the letter
-seems to be template-based, while only the name of the recipient is
-replaced (which is not always the case—I’m getting many emails that
-start with &lt;code class=&quot;highlighter-rouge&quot;&gt;Hello, %NAME%&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;The message from Amy is much better: there is nothing in it that tells me
-that Amy is a recruiter! Maybe she is a programmer from the team? Maybe she
-is a CEO of the company? I don’t know. And I don’t want to imagine her
-being a recruiter. I imagine her being a member of the team, who
-is really interested in my stuff on GitHub. She is someone who studied
-my work and got interested. She is already my friend. That’s why I reply.&lt;/p&gt;
-
-&lt;h2 id=&quot;cut-corners-for-me&quot;&gt;Cut Corners for Me&lt;/h2&gt;
-
-&lt;p&gt;The biggest disadvantage of Jeff’s email and the advantage of Amy’s is
-in the way they present the hiring process to me, the candidate. Jeff
-is sending me requirements and right from the start makes it look very long
-and official. I immediately imagine a series of interviews, a bunch of
-forms to fill up, a month-long journey full of stress. Do I want to 
-start that if my current job is more or less OK? No, I don’t. On the other
-hand, Amy, right from the first message, suggested connecting me with the
-hiring manager, who is already interested in me. Maybe there will be
-a full official process of hiring. Most likely! But I already have the
-key person on my side: the Head of Dev. The rest will just be formalities.&lt;/p&gt;
-
-&lt;p&gt;Try to put yourself in my shoes. I don’t know your team, I don’t know
-the project, I’m scared of change, and I’m not sure I should do it.
-It’s easier for me to stay where I am. Also remember that for most people
-changing jobs is very similar to betrayal: they quit the team, which
-relies on them. You are the person who turns them into traitors. Try to 
-make this journey of stress and treachery look simpler for them:&lt;/p&gt;
-
-&lt;table class=&quot;right-wrong&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Jeff&lt;/th&gt;
-      &lt;th&gt;Amy&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;Send me your updated CV and we will take it from there.&lt;br /&gt;&lt;br /&gt;Sincerely,&lt;br /&gt;Jeff&lt;/td&gt;
-      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;Let me take a look at your CV. Here is how we usually do this: first, you have an interview with the Head of Dev; then, our chief architect talks to you; finally, our HR guys will have a quick call with you; and in about a week we give you an offer. The entire process usually takes up to a month. How does it sound for you? Ready to start a trip? :)&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;I believe it’s obvious that Amy is doing a much better job of helping
-Bob understand what he has to be prepared for. We are scared of things
-we don’t understand or don’t know. You don’t want your candidates to be
-scared of you. You want them to feel comfortable.&lt;/p&gt;
-
-&lt;p&gt;The best way to attract us candidates is to show that you are ready
-to simplify the hiring process especially for us. Well, for me only. Not for everybody.
-For example:&lt;/p&gt;
-
-&lt;table class=&quot;right-wrong&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Jeff&lt;/th&gt;
-      &lt;th&gt;Amy&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;Send me your updated CV and I’ll get the ball rolling. There will be two online interviews and then we will invite you to the office for the final one. Before we start, I kindly ask you to sign the attached form about personal data disclosure. It’s just a formality.&lt;br /&gt;&lt;br /&gt;Yours,&lt;br /&gt;Jeff&lt;/td&gt;
-      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;I need your CV and then I think I can optimize our hiring process a bit: instead of three interviews there will be just two. How does that sound?&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Smells like a sales trick? It is.&lt;/p&gt;
-
-&lt;h2 id=&quot;dont-loose-the-intrigue&quot;&gt;Don’t Loose the Intrigue&lt;/h2&gt;
-
-&lt;p&gt;The best companies, I believe, try to find a job position for a person, instead
-of finding a person for a position. In other words, they invite
-the best people and then let them decide what’s the best
-application of their skills and expertise. That’s why the less specific
-you are about your “requirements,” the better. Just “we have problems
-with big data” is more than enough for a job description. The rest
-of it you will explain later, on the first interview. You don’t tell
-your requirements to someone you just caught sight of in a bar, do you?
-The same here. Remember, recruiting is dating—you have to keep the intrigue up.&lt;/p&gt;
-
-&lt;p&gt;Instead of saying what you need and sending the job description, briefly
-explain the problems your team is facing:&lt;/p&gt;
-
-&lt;table class=&quot;right-wrong&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Jeff&lt;/th&gt;
-      &lt;th&gt;Amy&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;We are looking for a Java developer who knows Spring Framework, MySQL, and XML. You need to have at least five years of hands-on coding experience. You need to be familiar with the payment processing domain.&lt;br /&gt;&lt;br /&gt;Yours,&lt;br /&gt;Jeff&lt;/td&gt;
-      &lt;td&gt;Bob,&lt;br /&gt;&lt;br /&gt;We are making a payment processing app and use Spring, MySQL, and XML. Our team lacks expertise in this new domain. We need help, both in form of advice and daily coding.&lt;br /&gt;&lt;br /&gt;BR,&lt;br /&gt;Amy&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Jeff is placing his requirements on top, which hardly sounds attractive. Just like
-in dating, such an arrogant attitude is not helpful at all. Instead, Amy is
-talking about problems she and her team are facing. It’s up to Bob to decide
-whether there is a fit or not.&lt;/p&gt;
-
-&lt;p&gt;I would suggest making your job descriptions as undemanding as possible.
-Your goal is to attract the best candidate, not to find those who 
-are ready to put up with whatever you write in the job description. Write about problems
-and issues you expect your candidates to solve. Don’t focus too much on
-the expectations you have for them. Of cause you have those expectations,
-but putting them right on the table at the first date is a silly idea.&lt;/p&gt;
-
-&lt;p&gt;That’s all. Happy recruiting!&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;You will reply to a cold email from a recruiter if...&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1419250019333550080?ref_src=twsrc%5Etfw&quot;&gt;July 25, 2021&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html">Recruiters, you know what we programmers think about you, don’t you? Read this and this, to get the full picture. You are still here because we still don’t have good tools and we still enjoy being enslaved. One day this will be over and you will stop exploiting our drawbacks, will lose your “Senior Recruiter” jobs, and start doing something useful and meaningful. However, until this day comes, here is some advice, to help you be a less annoying better head hunter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/06/the-fifth-element.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/06/the-fifth-element.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+of such a prestructor.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Making constructors pre-process the arguments before encapsulating them seems to be bad practice. However, very often it’s necessary to do exactly that: perform some manipulations with the objects provided as arguments and only then assign them to the attributes of the constructed object. For this purpose I suggest using prestructors, which could be methods or stand-alone objects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/08/huge-in-france.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/08/huge-in-france.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

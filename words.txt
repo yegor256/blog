@@ -4499,6 +4499,7 @@ it's
 italian
 italic
 item
+itemize
 items
 iterate
 iterating
