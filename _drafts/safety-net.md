@@ -47,6 +47,8 @@ of workers who know that a mistake would most probably cost them their lives or
 a life of kid playing on the ground. The results of such a research are obvious,
 I believe.
 
+{% youtube Y0Zx_sdVG48 %}
+
 The same is true for us programmers. Modifying the source code and knowing that
 there are no automated tests in place is similar to working on the height
 without a safety net: one mistake could cost you a server downtime, a frustrated
