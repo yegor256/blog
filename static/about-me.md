@@ -105,7 +105,7 @@ I'm also visible sometimes at
 [BLOG@CACM](https://cacm.acm.org/blogs/blog-cacm/),
 [DZone](https://dzone.com/users/1023189/yegor256.html),
 [JavaCodeGeeks](https://www.javacodegeeks.com/user/yegor-bugayenko/?profiletab=posts),
-[Hacker News](https://news.ycombinator.com/user?id=yegor256a),
+[Hacker News](https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=yegor256&sort=byPopularity&type=story),
 [Reddit](https://www.reddit.com/user/yegor256),
 [Medium](https://medium.com/@yegor256),
 and
