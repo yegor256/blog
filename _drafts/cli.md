@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Command Line Default Options in a Linearized Plain Text"
+title: "Command Line Default Options in Linearized Plain Text"
 date: 2022-06-21
 place: Moscow, Russia
 tags: testing
@@ -28,14 +28,14 @@ can check the style of an XML file. It's similar to
 [Checkstyle](https://checkstyle.sourceforge.io) (for Java) and
 [Pep8](https://pypi.org/project/pep8/) (for Python),
 but for XML. It's pretty easy to use `xcop`: just run it with a few command
-line arguments and receive the list of errors found in your XML file, if any. However,
-some of the arguments may be convenient to make defaults and instead of
-passing through the command line on every execution, store them in some configuration file.
-The question what is the best format for this file:
+line arguments and it returns the list of errors found in your XML file, if any. However,
+some of the arguments may be convenient to have as defaults and instead of
+passing them through the command line on every execution, we can store them in some configuration file.
+The question is: What is the best format for this file?
 [YAML](https://en.wikipedia.org/wiki/YAML),
 [JSON](https://en.wikipedia.org/wiki/JSON), or
 [TOML](https://en.wikipedia.org/wiki/TOML)?
-Neither! I suggest plain text.
+None of the above! I suggest plain text.
 
 <!--more-->
 
@@ -52,13 +52,13 @@ $ xcop --include '*.xml' --exclude '.idea/**' \
 {% endhighlight %}
 
 You have to use this set of arguments everywhere you call `xcop`:
-in the build script, in CI/CD pipeline, and in your laptop when you check
-that everything is correct. What some of us sometimes do is a new
+in the build script, in the CI/CD pipeline, and on your laptop when you check
+that everything is correct. What some of us sometimes do is create a new
 Bash file called `run_xcop.sh` with exactly this single command.
 
-I suggest a better solution. You can create `.xcop`
+I suggest a better solution. You can create a `.xcop`
 plain text file in the root of the repository and put all
-required "default" command line options, one per line:
+the required "default" command line options there, one per line:
 
 {% highlight text %}
 --include *.xml
@@ -77,7 +77,7 @@ each of them as command line arguments. It will basically _concatenate_
 what is provided in the command line with what is found in the file
 with defaults.
 
-I believe, this approach is much better than YAML, JSON, XML, TOML, INI,
+I believe this approach is much better than YAML, JSON, XML, TOML, INI,
 and other configuration formats simply because it doesn't require us
 users to learn two formats: one for command line options, another one
 for the configuration file. We learn just one and use it interchangeably
