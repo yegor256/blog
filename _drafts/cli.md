@@ -28,22 +28,22 @@ can check the style of an XML file. It's similar to
 [Checkstyle](https://checkstyle.sourceforge.io) (for Java) and
 [Pep8](https://pypi.org/project/pep8/) (for Python),
 but for XML. It's pretty easy to use `xcop`: just run it with a few command
-line arguments and it returns the list of errors found in your XML file, if any. However,
+line arguments and it returns the list of errors found in your XML file, if there are any. However,
 some of the arguments may be convenient to have as defaults and instead of
-passing them through the command line on every execution, we can store them in some configuration file.
+passing them through the command line on every execution, we could store them in some configuration file.
 The question is: What is the best format for this file?
 [YAML](https://en.wikipedia.org/wiki/YAML),
 [JSON](https://en.wikipedia.org/wiki/JSON), or
 [TOML](https://en.wikipedia.org/wiki/TOML)?
-None of the above! I suggest plain text.
+None of them! I suggest plain text.
 
 <!--more-->
 
 {% jb_picture_body %}
 
 Let's say, you want `xcop` to check all `*.xml` files in your repository,
-but ignore XML files in the `.idea/` directory. You aslo want to make sure
-all XML files have a licence in their preamble. This is how you would
+but ignore XML files in the `.idea/` directory. You also want to make sure
+all XML files have a license in their preamble. This is how you would
 call `xcop`:
 
 {% highlight text %}
@@ -82,7 +82,7 @@ and other configuration formats simply because it doesn't require us
 users to learn two formats: one for command line options, another one
 for the configuration file. We learn just one and use it interchangeably
 either when we call the tool "manually" or when we configure its
-behaviour in the file with defaults.
+behavior in the file with defaults.
 
 By the way, it's possible to configure the behavior of `xcop` globally
 creating the file `~/.xcop` (in the home directory of the user). The
