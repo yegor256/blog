@@ -17,13 +17,13 @@ keywords:
 image: /images/2022/06/safety-net.jpg
 ---
 
-Automated tests are those tests that are usually called unit tests or integrations tests,
+Automated tests are those tests that are usually called unit tests or integration tests,
 or just any tests that are being executed _automatically_. That's the difference
 between them and manual tests. What is the purpose of automated tests?
 First and foremost, they reduce the amount of routine work: we don't
 need to remember how to test a module, the tests remember. We just click
 a button and a suite of tests, which may consist of hundreds or thousands,
-runs and reports errors, if they are found. Saving time is important,
+runs and reports errors, if any are found. Saving time is important,
 but it's not the only and, if you ask me, not the most important purpose
 of automated tests. A more important one is their role as a safety net.
 
@@ -64,9 +64,9 @@ Then, you must know that even if you accidentally forget to run them locally
 and send your branch to the trunk for merging, the automated merge pipeline
 will catch you.
 
-The more time and effort you invest into making your safety net stronger,
-the better your tests cover your code, the more _productive_ will be your
-work, the more safety you will feel in introducing new features or fixing bugs.
+The more time and effort you invest into making your safety net strong,
+that is, the better your tests cover your code, then the more _productive_ your
+work will be, the safer you will feel in introducing new features or fixing bugs.
 Simply put, you will code _faster_ and _better_. Just because you know that
 you can't break what you did yesterday.
 
@@ -84,4 +84,4 @@ fell down on the head of your customer. What do you do before you fix the bug?
 You fix the safety net. You add more automated tests, which will catch this
 bug in the future. Only then do you fix the bug.
 
-I believe that the safety net of a software project is its most valueable asset.
+I believe that the safety net of a software project is its most valuable asset.
