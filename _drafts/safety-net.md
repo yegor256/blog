@@ -17,7 +17,7 @@ keywords:
 image: /images/2022/06/safety-net.jpg
 ---
 
-Automated tests are those tests that are usually called unit tests or integration tests,
+Automated tests are the ones that are usually called unit tests or integration tests,
 or just any tests that are being executed _automatically_. That's the difference
 between them and manual tests. What is the purpose of automated tests?
 First and foremost, they reduce the amount of routine work: we don't
