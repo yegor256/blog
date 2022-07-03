@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Command Line Default Options in a Linearized Plain Text"
+title: "Command Line Default Options in Linearized Plain Text"
 date: 2022-06-21
 place: Moscow, Russia
 tags: testing
@@ -28,22 +28,22 @@ can check the style of an XML file. It's similar to
 [Checkstyle](https://checkstyle.sourceforge.io) (for Java) and
 [Pep8](https://pypi.org/project/pep8/) (for Python),
 but for XML. It's pretty easy to use `xcop`: just run it with a few command
-line arguments and receive the list of errors found in your XML file, if any. However,
-some of the arguments may be convenient to make defaults and instead of
-passing through the command line on every execution, store them in some configuration file.
-The question what is the best format for this file:
+line arguments and it returns the list of errors found in your XML file, if there are any. However,
+some of the arguments may be convenient to have as defaults and instead of
+passing them through the command line on every execution, we could store them in some configuration file.
+The question is: What is the best format for this file?
 [YAML](https://en.wikipedia.org/wiki/YAML),
 [JSON](https://en.wikipedia.org/wiki/JSON), or
 [TOML](https://en.wikipedia.org/wiki/TOML)?
-Neither! I suggest plain text.
+None of them! I suggest plain text.
 
 <!--more-->
 
 {% jb_picture_body %}
 
 Let's say, you want `xcop` to check all `*.xml` files in your repository,
-but ignore XML files in the `.idea/` directory. You aslo want to make sure
-all XML files have a licence in their preamble. This is how you would
+but ignore XML files in the `.idea/` directory. You also want to make sure
+all XML files have a license in their preamble. This is how you would
 call `xcop`:
 
 {% highlight text %}
@@ -52,13 +52,13 @@ $ xcop --include '*.xml' --exclude '.idea/**' \
 {% endhighlight %}
 
 You have to use this set of arguments everywhere you call `xcop`:
-in the build script, in CI/CD pipeline, and in your laptop when you check
-that everything is correct. What some of us sometimes do is a new
+in the build script, in the CI/CD pipeline, and on your laptop when you check
+that everything is correct. What some of us sometimes do is create a new
 Bash file called `run_xcop.sh` with exactly this single command.
 
-I suggest a better solution. You can create `.xcop`
+I suggest a better solution. You can create a `.xcop`
 plain text file in the root of the repository and put all
-required "default" command line options, one per line:
+the required "default" command line options there, one per line:
 
 {% highlight text %}
 --include *.xml
@@ -77,12 +77,12 @@ each of them as command line arguments. It will basically _concatenate_
 what is provided in the command line with what is found in the file
 with defaults.
 
-I believe, this approach is much better than YAML, JSON, XML, TOML, INI,
+I believe this approach is much better than YAML, JSON, XML, TOML, INI,
 and other configuration formats simply because it doesn't require us
 users to learn two formats: one for command line options, another one
 for the configuration file. We learn just one and use it interchangeably
 either when we call the tool "manually" or when we configure its
-behaviour in the file with defaults.
+behavior in the file with defaults.
 
 By the way, it's possible to configure the behavior of `xcop` globally
 creating the file `~/.xcop` (in the home directory of the user). The
