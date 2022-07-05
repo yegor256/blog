@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Automated Tests Are the Safety Net that Saves You"
-date: 2022-06-01
+date: 2022-07-05
 place: Moscow, Russia
 tags: testing
 description: |
