@@ -15,6 +15,8 @@ keywords:
   - testing safety
   - why unit testing
 image: /images/2022/06/safety-net.jpg
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/vrsgcu/automated_tests_are_the_safety_net_that_saves_you/
 ---
 
 Automated tests are the ones that are usually called unit tests or integration tests,
