@@ -19,7 +19,8 @@ jb_picture:
   caption: Space Force (2020) by Steve Carell and Greg Daniels
 ---
 
-There are three things in EOLANG (and the 𝜑-calculus which we
+There are three things in [EO](https://www.eolang.org)
+(and the [𝜑-calculus](https://arxiv.org/abs/2111.13384) which we
 based it on): data, atoms, and objects. There is a dataization
 function, which puts all three together in order to make an EO
 program alive. Here is how it works together with Java,
