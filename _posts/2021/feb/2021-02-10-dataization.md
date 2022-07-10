@@ -5,7 +5,7 @@ date: 2021-02-10
 place: Moscow, Russia
 tags: oop eolang
 description: |
-  Objects are purely declarative and passive entities in EOLANG,
+  Objects are purely declarative and passive entities in EO,
   which become alive when being requested to turn
   themselves into data.
 keywords:
@@ -64,7 +64,8 @@ much a customer has to pay:
 {% highlight text %}
 cost-of-shipment jeff > x
 
-x.add product.price > total
+x.add > total
+  product.price
 {% endhighlight %}
 
 Here, the `x` is a new object, a copy of `cost-of-shipment`. Then,
@@ -73,8 +74,8 @@ giving `product.price` object to it as an attribute. We name the created copy
 as `total`. Then, we print the total price:
 
 {% highlight text %}
-stdout > app
-  sprintf
+QQ.io.stdout > app
+  QQ.txt.sprintf
     "Your total is %f" total
 {% endhighlight %}
 
@@ -86,7 +87,7 @@ are all object declarations. We've declared one abstract object
 Now the most interesting part, which we call _dataization_. It's a process
 of turning an object into data. The data is something that doesn't have
 any child objects and is the simplest element of the computing platform,
-where EOLANG software is being compiled. You may think that in the example
+where EO software is being compiled. You may think that in the example
 above `42` and `"US"` are data. They are not. They are also objects
 and we can write this, for example:
 
@@ -97,9 +98,9 @@ and we can write this, for example:
 {% endhighlight %}
 
 The data behind these objects is not visible for us at the level of
-EOLANG program. The data is inside the `42` object. Only the runtime
+EO program. The data is inside the `42` object. Only the runtime
 of the specific platform can dig it out through the dataization
-mechanism. If you compile the EOLANG code to Java, you will get
+mechanism. If you compile the EO code to Java, you will get
 a class `EOapp` (derived from the `app` object), which can be dataized
 like this:
 
@@ -138,9 +139,9 @@ Java floating-point number.
 {% youtube QaKIw1Bh3Oc %}
 
 The dataization of `customer.country.eq` is happening inside
-the runtime and is not visible at the level of EOLANG. The object
+the runtime and is not visible at the level of EO. The object
 `eq` is called an _atom_, since it's an atomic element of the language---it
-has to be implemented in Java, not in EOLANG. There are other atoms
+has to be implemented in Java, not in EO. There are other atoms
 in the example above: `if`, `sprintf`, `add`, `stdout`, and `length`.
 They all are implemented in Java.
 

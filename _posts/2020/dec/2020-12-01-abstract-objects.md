@@ -5,7 +5,7 @@ date: 2020-12-01
 place: Moscow, Russia
 tags: oop eolang
 description: |
-  There are no classes in EOLANG, but there are abstract
+  There are no classes in EO, but there are abstract
   objects, which are a more flexible instrument to prototype
   other objects.
 keywords:
