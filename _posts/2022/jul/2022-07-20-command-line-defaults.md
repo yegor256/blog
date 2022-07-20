@@ -14,9 +14,9 @@ keywords:
   - default options command line
   - cli defaults
   - command line tool defaults
-image: /images/2022/06/...
+image: /images/2022/07/the-trotsky.jpg
 jb_picture:
-  caption: ...
+  caption: The Trotsky (2009) by Jacob Tierney
 ---
 
 {% badge https://raw.githubusercontent.com/yegor256/xcop/master/logo.svg 128 https://github.com/yegor256/xcop %}
