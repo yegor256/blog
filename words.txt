@@ -4275,6 +4275,7 @@ inherit
 inheritance
 inherited
 inherits
+INI
 initial
 initialization
 initialized
@@ -4381,6 +4382,7 @@ interactions
 interactively
 interacts
 intercept
+interchangeably
 interest
 interested
 interesting
@@ -6265,6 +6267,7 @@ pensions
 pentad
 people
 people's
+pep
 pepper
 per
 perceive
@@ -8696,6 +8699,8 @@ testing-wise
 tests
 tex
 texas
+texqc
+texsc
 text
 texted
 texting
@@ -8830,6 +8835,7 @@ toll-free
 tom
 tomas
 tomes
+TOML
 tomorrow
 toner
 tonight

@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-07-05T06:34:36+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Automated Tests Are the Safety Net that Saves You</title><link href="https://www.yegor256.com/2022/07/05/safety-net.html" rel="alternate" type="text/html" title="Automated Tests Are the Safety Net that Saves You" /><published>2022-07-05T00:00:00+00:00</published><updated>2022-07-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/07/05/safety-net</id><content type="html" xml:base="https://www.yegor256.com/2022/07/05/safety-net.html">&lt;p&gt;Automated tests are the ones that are usually called unit tests or integration tests,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-07-20T17:38:45+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Command Line Default Options in Linearized Plain Text</title><link href="https://www.yegor256.com/2022/07/20/command-line-defaults.html" rel="alternate" type="text/html" title="Command Line Default Options in Linearized Plain Text" /><published>2022-07-20T00:00:00+00:00</published><updated>2022-07-20T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/07/20/command-line-defaults</id><content type="html" xml:base="https://www.yegor256.com/2022/07/20/command-line-defaults.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://github.com/yegor256/xcop&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/yegor256/xcop/master/logo.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;/2017/08/29/xcop.html&quot;&gt;A few years ago&lt;/a&gt;
+I created &lt;a href=&quot;https://github.com/yegor256/xcop&quot;&gt;xcop&lt;/a&gt;,
+a simple command line tool that
+can check the style of an XML file. It’s similar to
+&lt;a href=&quot;https://checkstyle.sourceforge.io&quot;&gt;Checkstyle&lt;/a&gt; (for Java) and
+&lt;a href=&quot;https://pypi.org/project/pep8/&quot;&gt;Pep8&lt;/a&gt; (for Python),
+but for XML. It’s pretty easy to use &lt;code class=&quot;highlighter-rouge&quot;&gt;xcop&lt;/code&gt;: just run it with a few command
+line arguments and it returns the list of errors found in your XML file, if there are any. However,
+some of the arguments may be convenient to have as defaults and instead of
+passing them through the command line on every execution, we could store them in some configuration file.
+The question is: What is the best format for this file?
+&lt;a href=&quot;https://en.wikipedia.org/wiki/YAML&quot;&gt;YAML&lt;/a&gt;,
+&lt;a href=&quot;https://en.wikipedia.org/wiki/JSON&quot;&gt;JSON&lt;/a&gt;, or
+&lt;a href=&quot;https://en.wikipedia.org/wiki/TOML&quot;&gt;TOML&lt;/a&gt;?
+None of them! I suggest plain text.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;The Trotsky (2009) by Jacob Tierney&quot; src=&quot;/images/2022/07/the-trotsky.jpg&quot; longdesc=&quot;#2a549763&quot; /&gt;&lt;figcaption id=&quot;2a549763&quot;&gt;The Trotsky (2009) by Jacob Tierney&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s say, you want &lt;code class=&quot;highlighter-rouge&quot;&gt;xcop&lt;/code&gt; to check all &lt;code class=&quot;highlighter-rouge&quot;&gt;*.xml&lt;/code&gt; files in your repository,
+but ignore XML files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;.idea/&lt;/code&gt; directory. You also want to make sure
+all XML files have a license in their preamble. This is how you would
+call &lt;code class=&quot;highlighter-rouge&quot;&gt;xcop&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ xcop --include '*.xml' --exclude '.idea/**' \
+  --license LICENSE.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You have to use this set of arguments everywhere you call &lt;code class=&quot;highlighter-rouge&quot;&gt;xcop&lt;/code&gt;:
+in the build script, in the CI/CD pipeline, and on your laptop when you check
+that everything is correct. What some of us sometimes do is create a new
+Bash file called &lt;code class=&quot;highlighter-rouge&quot;&gt;run_xcop.sh&lt;/code&gt; with exactly this single command.&lt;/p&gt;
+
+&lt;p&gt;I suggest a better solution. You can create a &lt;code class=&quot;highlighter-rouge&quot;&gt;.xcop&lt;/code&gt;
+plain text file in the root of the repository and put all
+the required “default” command line options there, one per line:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;--include *.xml
+--exclude .idea/**
+--license LICENSE.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, you can call the tool just like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ xcop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It will find the &lt;code class=&quot;highlighter-rouge&quot;&gt;.xcop&lt;/code&gt; file and will read all lines from it, treating
+each of them as command line arguments. It will basically &lt;em&gt;concatenate&lt;/em&gt;
+what is provided in the command line with what is found in the file
+with defaults.&lt;/p&gt;
+
+&lt;p&gt;I believe this approach is much better than YAML, JSON, XML, TOML, INI,
+and other configuration formats simply because it doesn’t require us
+users to learn two formats: one for command line options, another one
+for the configuration file. We learn just one and use it interchangeably
+either when we call the tool “manually” or when we configure its
+behavior in the file with defaults.&lt;/p&gt;
+
+&lt;p&gt;By the way, it’s possible to configure the behavior of &lt;code class=&quot;highlighter-rouge&quot;&gt;xcop&lt;/code&gt; globally
+creating the file &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.xcop&lt;/code&gt; (in the home directory of the user). The
+defaults from this file will also be concatenated with the ones provided
+in the command line and with the ones found in the local &lt;code class=&quot;highlighter-rouge&quot;&gt;.xcop&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;I designed a few of my other command line tools using the same principle,
+including
+&lt;a href=&quot;https://github.com/yegor256/pdd&quot;&gt;pdd&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/yegor256/texqc&quot;&gt;texqc&lt;/a&gt;,
+and
+&lt;a href=&quot;https://github.com/yegor256/texsc&quot;&gt;texsc&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html">A few years ago I created xcop, a simple command line tool that can check the style of an XML file. It’s similar to Checkstyle (for Java) and Pep8 (for Python), but for XML. It’s pretty easy to use xcop: just run it with a few command line arguments and it returns the list of errors found in your XML file, if there are any. However, some of the arguments may be convenient to have as defaults and instead of passing them through the command line on every execution, we could store them in some configuration file. The question is: What is the best format for this file? YAML, JSON, or TOML? None of them! I suggest plain text.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/07/the-trotsky.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/07/the-trotsky.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Automated Tests Are the Safety Net that Saves You</title><link href="https://www.yegor256.com/2022/07/05/safety-net.html" rel="alternate" type="text/html" title="Automated Tests Are the Safety Net that Saves You" /><published>2022-07-05T00:00:00+00:00</published><updated>2022-07-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/07/05/safety-net</id><content type="html" xml:base="https://www.yegor256.com/2022/07/05/safety-net.html">&lt;p&gt;Automated tests are the ones that are usually called unit tests or integration tests,
 or just any tests that are being executed &lt;em&gt;automatically&lt;/em&gt;. That’s the difference
 between them and manual tests. What is the purpose of automated tests?
 First and foremost, they reduce the amount of routine work: we don’t
@@ -1670,102 +1739,4 @@ inviting owners of the most important artifacts.&lt;/p&gt;
 
 &lt;p&gt;All status calls and demo calls are recorded and posted into 
 a private list on YouTube, where all team members can watch them
-later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Here is a very simple management framework, which we have used in our teams for the last two years. We came to it experimentally, trying to merge some Agile principles, PMBOK ideas, and common sense. Our experience so far is positive, even though the proposed rules of work are not really about project management, but more about keeping an eye on the situation and making sure it’s not falling apart. This is the best most modern teams can afford anyway.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/09/lion-king.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/09/lion-king.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Logging in Unit Tests, a Bad Practice</title><link href="https://www.yegor256.com/2021/08/11/logging-in-unit-tests.html" rel="alternate" type="text/html" title="Logging in Unit Tests, a Bad Practice" /><published>2021-08-11T00:00:00+00:00</published><updated>2021-08-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/08/11/logging-in-unit-tests</id><content type="html" xml:base="https://www.yegor256.com/2021/08/11/logging-in-unit-tests.html">&lt;p&gt;Logging is an inevitable part of debugging. Well, at least in modern
-high-level programming languages and architectures. It wasn’t thirty 
-years ago, in Assembly, but it is now. Sometimes we trace variables, 
-but rarely. More often we just print them to console. Moreover, we don’t
-just print them using &lt;code class=&quot;highlighter-rouge&quot;&gt;println&lt;/code&gt; or whatever it is we have for console
-printing; instead, we send messages to a 
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_logging_framework&quot;&gt;logging framework&lt;/a&gt;, which deals with 
-the console or any other logging destinations, like files. The beauty
-of such frameworks is that we don’t need to remove logging after debugging
-is finished—we just configure the framework to suppress all debug-level
-messages in the production environment. Some logging may happen
-inside unit tests. Do we also leave them there or maybe not?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Children of Men (2006) by Alfonso Cuarón&quot; src=&quot;/images/2021/08/children-of-men.jpg&quot; longdesc=&quot;#739264dd&quot; /&gt;&lt;figcaption id=&quot;739264dd&quot;&gt;Children of Men (2006) by Alfonso Cuarón&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here is an example (it’s a simplification of a real unit test at
-&lt;a href=&quot;https://github.com/polystat/polystat/blob/0.0.1/src/test/java/org/polystat/far/CalcTest.java&quot;&gt;CalcTest.java&lt;/a&gt;
-from &lt;a href=&quot;https://www.polystat.org&quot;&gt;Polystat&lt;/a&gt;, a static analyzer we’re working on right now):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.jcabi.log.Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.jcabi.xml.XML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.hamcrest.MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.hamcrest.Matchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FooTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildsSimpleXml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;XML&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;Logger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;This is the XML:\n%s&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nc&quot;&gt;Matchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;notNullValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This is Java and I’m using &lt;a href=&quot;https://junit.org/junit5/&quot;&gt;JUnit5&lt;/a&gt;+&lt;a href=&quot;http://hamcrest.org/&quot;&gt;Hamcrest&lt;/a&gt; 
-together with my own logging framework
-&lt;a href=&quot;https://log.jcabi.com&quot;&gt;jcabi-log&lt;/a&gt;, which is a decorator of 
-&lt;a href=&quot;http://www.slf4j.org/&quot;&gt;Slf4j&lt;/a&gt;, which uses &lt;a href=&quot;https://logging.apache.org/log4j/2.x/&quot;&gt;Log4j&lt;/a&gt; to print to 
-the console.&lt;/p&gt;
-
-&lt;p&gt;What is going on here? There is a class &lt;code class=&quot;highlighter-rouge&quot;&gt;Foo&lt;/code&gt; with a method &lt;code class=&quot;highlighter-rouge&quot;&gt;build()&lt;/code&gt;, which
-makes an XML document (I’m using &lt;a href=&quot;https://xml.jcabi.com&quot;&gt;jcabi-xml&lt;/a&gt; library, which is a decorator of
-&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/package-summary.html&quot;&gt;JDK DOM&lt;/a&gt;). 
-Then, the unit test prints the contents of the XML document to
-the console and makes a pretty silly assertion: the document is not NULL.
-It is silly because if it were NULL, the logging statement 
-would already fail at the &lt;code class=&quot;highlighter-rouge&quot;&gt;.toString()&lt;/code&gt; call.&lt;/p&gt;
-
-&lt;p&gt;I’m the developer of this code, so I know what was going on: I was too lazy
-to write a proper assertion, which would look into the XML document
-and ensure that there were proper elements inside. I just printed it to the
-console, &lt;em&gt;visually&lt;/em&gt; confirmed its validity and called it a day. 
-If I’d had more time, this is how I would have written a much better unit test
-(I made the &lt;a href=&quot;https://github.com/polystat/polystat/issues/10&quot;&gt;improvements&lt;/a&gt; in Polystat tests just now):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;com.jcabi.matchers.XhtmlMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.hamcrest.MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.junit.jupiter.api.Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FooTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;buildsSimpleXml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;MatcherAssert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-      &lt;span class=&quot;nc&quot;&gt;XhtmlMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xhtml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()),&lt;/span&gt;
-      &lt;span class=&quot;nc&quot;&gt;XhtmlMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasXPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//foo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, the XML document is built and then tested for the presence of &lt;code class=&quot;highlighter-rouge&quot;&gt;//foo&lt;/code&gt; 
-&lt;a href=&quot;https://en.wikipedia.org/wiki/XPath&quot;&gt;XPath&lt;/a&gt; inside it. 
-The content of the document will be printed to the console
-only in the case where the assertion fails. If the XML has the required
-XPath, there will be no console output, which means no noise for future
-developers.&lt;/p&gt;
-
-&lt;p&gt;Moreover, now it’s a &lt;em&gt;single-statement&lt;/em&gt; test, which by itself is 
-&lt;a href=&quot;/2017/05/17/single-statement-unit-tests.html&quot;&gt;good practice&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Looking back on my experience of testing and logging, 
-I believe that logging in unit tests is a bad idea. Sometimes
-inevitable, because we are lazy or simply don’t have enough time, but still bad.
-Logging helps us confirm visually the correctness of the output,
-but it takes this knowledge away from the project. Those who will work with
-the test later on won’t know what we’ve seen there. They will
-see the output at the console, but will not understand whether it &lt;em&gt;still&lt;/em&gt; matches
-my expectations at the time of writing.&lt;/p&gt;
-
-&lt;p&gt;I would say that every logging line in a unit test is a message from its author:
-“I know something about the data I see now, but I’m too lazy to tell you about it,
-you just have to believe me that it looks good.”&lt;/p&gt;
-
-&lt;p&gt;I suggest we don’t leave such messages in our code.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Do you print log messages from your unit tests?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1421723724638789632?ref_src=twsrc%5Etfw&quot;&gt;August 1, 2021&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html">Logging is an inevitable part of debugging. Well, at least in modern high-level programming languages and architectures. It wasn’t thirty years ago, in Assembly, but it is now. Sometimes we trace variables, but rarely. More often we just print them to console. Moreover, we don’t just print them using println or whatever it is we have for console printing; instead, we send messages to a logging framework, which deals with the console or any other logging destinations, like files. The beauty of such frameworks is that we don’t need to remove logging after debugging is finished—we just configure the framework to suppress all debug-level messages in the production environment. Some logging may happen inside unit tests. Do we also leave them there or maybe not?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/08/children-of-men.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/08/children-of-men.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+later.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">Here is a very simple management framework, which we have used in our teams for the last two years. We came to it experimentally, trying to merge some Agile principles, PMBOK ideas, and common sense. Our experience so far is positive, even though the proposed rules of work are not really about project management, but more about keeping an eye on the situation and making sure it’s not falling apart. This is the best most modern teams can afford anyway.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/09/lion-king.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/09/lion-king.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

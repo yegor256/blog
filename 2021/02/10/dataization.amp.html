@@ -38,7 +38,7 @@
             "height": 512
           }
         },
-        "description": "Objects are purely declarative and passive entities in EOLANG,
+        "description": "Objects are purely declarative and passive entities in EO,
 which become alive when being requested to turn
 themselves into data.
 ",
@@ -75,7 +75,8 @@ themselves into data.
       </p>
       <p>Yegor Bugayenko<br>10 February 2021</p>
       <h1>Dataization</h1>
-      <p>There are three things in EOLANG (and the 𝜑-calculus which we
+      <p>There are three things in <a href="https://www.eolang.org">EO</a>
+(and the <a href="https://arxiv.org/abs/2111.13384">𝜑-calculus</a> which we
 based it on): data, atoms, and objects. There is a dataization
 function, which puts all three together in order to make an EO
 program alive. Here is how it works together with Java,
@@ -114,15 +115,16 @@ much a customer has to pay:</p>
 
 <pre>cost-of-shipment jeff &gt; x
 
-x.add product.price &gt; total</pre>
+x.add &gt; total
+  product.price</pre>
 
 <p>Here, the <code class="highlighter-rouge">x</code> is a new object, a copy of <code class="highlighter-rouge">cost-of-shipment</code>. Then,
 we take the child abstract object <code class="highlighter-rouge">add</code> from it and make a copy,
 giving <code class="highlighter-rouge">product.price</code> object to it as an attribute. We name the created copy
 as <code class="highlighter-rouge">total</code>. Then, we print the total price:</p>
 
-<pre>stdout &gt; app
-  sprintf
+<pre>QQ.io.stdout &gt; app
+  QQ.txt.sprintf
     "Your total is %f" total</pre>
 
 <p>All these manipulations don’t make the number print yet. They
@@ -133,7 +135,7 @@ are all object declarations. We’ve declared one abstract object
 <p>Now the most interesting part, which we call <em>dataization</em>. It’s a process
 of turning an object into data. The data is something that doesn’t have
 any child objects and is the simplest element of the computing platform,
-where EOLANG software is being compiled. You may think that in the example
+where EO software is being compiled. You may think that in the example
 above <code class="highlighter-rouge">42</code> and <code class="highlighter-rouge">"US"</code> are data. They are not. They are also objects
 and we can write this, for example:</p>
 
@@ -142,9 +144,9 @@ and we can write this, for example:</p>
 "US".length &gt; len</pre>
 
 <p>The data behind these objects is not visible for us at the level of
-EOLANG program. The data is inside the <code class="highlighter-rouge">42</code> object. Only the runtime
+EO program. The data is inside the <code class="highlighter-rouge">42</code> object. Only the runtime
 of the specific platform can dig it out through the dataization
-mechanism. If you compile the EOLANG code to Java, you will get
+mechanism. If you compile the EO code to Java, you will get
 a class <code class="highlighter-rouge">EOapp</code> (derived from the <code class="highlighter-rouge">app</code> object), which can be dataized
 like this:</p>
 
@@ -179,9 +181,9 @@ Java floating-point number.</p>
 
 
 <p>The dataization of <code class="highlighter-rouge">customer.country.eq</code> is happening inside
-the runtime and is not visible at the level of EOLANG. The object
+the runtime and is not visible at the level of EO. The object
 <code class="highlighter-rouge">eq</code> is called an <em>atom</em>, since it’s an atomic element of the language—it
-has to be implemented in Java, not in EOLANG. There are other atoms
+has to be implemented in Java, not in EO. There are other atoms
 in the example above: <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">sprintf</code>, <code class="highlighter-rouge">add</code>, <code class="highlighter-rouge">stdout</code>, and <code class="highlighter-rouge">length</code>.
 They all are implemented in Java.</p>
 
