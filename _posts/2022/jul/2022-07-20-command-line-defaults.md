@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Command Line Default Options in Linearized Plain Text"
-date: 2022-06-21
+date: 2022-07-20
 place: Moscow, Russia
 tags: testing
 description: |
