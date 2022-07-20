@@ -124,6 +124,16 @@ and
 
 I was also seen at [these events](/seen.html).
 
+### 2022
+
+<div class="talk-event">&nbsp;</div>
+<img src="https://i.ytimg.com/vi/KCLECWhB1-w/mqdefault.jpg" class="past-talk" alt="CIPR 2022"/>
+Готовы ли мы к роботам, а они к нам?;
+[CIPR 2022](https://cipr.ru);
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+1 June 2022;
+[видео](https://www.youtube.com/watch?v=KCLECWhB1-w).
+
 ### 2021
 
 <div class="talk-event">&nbsp;</div>
