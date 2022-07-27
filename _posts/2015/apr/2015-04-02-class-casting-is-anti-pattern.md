@@ -23,7 +23,7 @@ Type casting is a very useful technique when there is no time
 or desire to think and design objects properly. Type casting (or
 class casting) helps us work with provided objects differently,
 based on the class they belong to or the interface they implement. Class
-casting helps us **discriminate** against the poor objects and **segregate**
+casting helps us _discriminate_ against the poor objects and _segregate_
 them by their race, gender, and religion. Can this be a good practice?
 
 <!--more-->
@@ -56,7 +56,7 @@ there is no need to actually iterate them. It would be much faster to
 cast them to `Collection` and then call method `size()`. Looks logical,
 but what's wrong with this approach? I see two practical problems.
 
-First, there is a **hidden coupling** of `sizeOf()` and `Collection`. This
+First, there is a _hidden coupling_ of `sizeOf()` and `Collection`. This
 coupling is not visible to the clients of `sizeOf()`. They don't know that
 method `sizeOf()` relies on interface `Collection`. If tomorrow we decide
 to change it, `sizeOf()` won't work. And we'll be very surprised, since
@@ -64,7 +64,7 @@ its signature says nothing about this dependency. This won't happen with
 `Collection`, obviously, since it is part of the Java SDK, but with custom
 classes, this may and will happen.
 
-The second problem is an inevitably **growing complexity** of method `sizeOf()`. The
+The second problem is an inevitably _growing complexity_ of method `sizeOf()`. The
 more special types it has to treat differently, the more complex it will become.
 This if/then [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
 is inevitable, since it has to check all possible
