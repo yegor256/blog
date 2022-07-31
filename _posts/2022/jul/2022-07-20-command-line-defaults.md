@@ -61,9 +61,9 @@ plain text file in the root of the repository and put all
 the required "default" command line options there, one per line:
 
 {% highlight text %}
---include *.xml
---exclude .idea/**
---license LICENSE.txt
+--include=*.xml
+--exclude=.idea/**
+--license=LICENSE.txt
 {% endhighlight %}
 
 Now, you can call the tool just like this:
