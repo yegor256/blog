@@ -5,6 +5,8 @@
 [![Availability at SixNines](http://www.sixnines.io/b/3ba1652f)](http://www.sixnines.io/h/3ba1652f)
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/blog)](https://hitsofcode.com/view/github/yegor256/blog)
 [![My YouTube](https://img.shields.io/badge/YouTube-subscribe-active?logo=youtube)](https://www.youtube.com/c/yegor256?sub_confirmation=1)
+[![My Twitter](https://img.shields.io/badge/Twitter-follow-active?logo=twitter)](https://twitter.com/intent/follow?screen_name=yegor256)
+[![My Telegram](https://img.shields.io/badge/Telegram-subscribe-active?logo=telegram)](https://t.me/yegor256news)
 
 This is my blog: [www.yegor256.com](https://www.yegor256.com)
 
