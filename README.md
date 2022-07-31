@@ -4,6 +4,7 @@
 
 [![Availability at SixNines](http://www.sixnines.io/b/3ba1652f)](http://www.sixnines.io/h/3ba1652f)
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/blog)](https://hitsofcode.com/view/github/yegor256/blog)
+[![My YouTube](https://img.shields.io/badge/YouTube-subscribe-active?logo=youtube)](https://www.youtube.com/c/yegor256?sub_confirmation=1)
 
 This is my blog: [www.yegor256.com](https://www.yegor256.com)
 
