@@ -89,7 +89,7 @@ Train train = new TrDefault()
 
 Then I created an [`Xsline`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java)
 class (it's "XSL" + "pipeline", since in my case
-I'm managing XML documents and tranform them using XSL stylesheets). An instance
+I'm managing XML documents and transform them using XSL stylesheets). An instance
 of this class encapsulates an instance of `Train` and then passes a document
 through all its transformations:
 
