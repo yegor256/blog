@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 A few months ago I made a [small Java library](https://github.com/yegor256/xsline),
-which is worth explaining, since
+which is worth explaining since
 the design of its classes and interfaces is pretty unusual. It's very much
 object-oriented for a pretty imperative task: building a pipeline of
 document transformations. The goal was to do this in a declarative and
@@ -30,13 +30,13 @@ immutable way, and in Java. Well, as much as it's possible.
 
 {% jb_picture_body %}
 
-Let's say, you have a document and you have a collection of transformations,
+Let's say you have a document, and you have a collection of transformations,
 each of which will do something with the document. Each transformation, for example,
 is a small piece of Java code. You want to build a list
 of transformations and then pass a document through this list.
 
 First, I made an interface [`Shift`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Shift.java)
-(instead of a frequently used and boring "transformation"):
+(instead of the frequently used and boring "transformation"):
 
 {% highlight java %}
 interface Shift {
@@ -44,7 +44,7 @@ interface Shift {
 }
 {% endhighlight %}
 
-Then, I made an interface [`Train`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java)
+Then I made an interface [`Train`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java)
 (this is the name I made up for the collection
 of transformations) and its default implementation:
 
@@ -79,7 +79,7 @@ objects. That's why the
 Now, I can build a train of shifts with
 [`TrDefault`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrDefault.java),
 a simple default implementation of `Train`, assuming
-`ShiftA` and `ShiftB` already implemented:
+`ShiftA` and `ShiftB` are already implemented:
 
 {% highlight java %}
 Train train = new TrDefault()
@@ -87,9 +87,9 @@ Train train = new TrDefault()
   .with(new ShiftB());
 {% endhighlight %}
 
-Then, I created an [`Xsline`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java)
+Then I created an [`Xsline`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java)
 class (it's "XSL" + "pipeline", since in my case
-I'm managing XML documents and tranform them using XSL stylesheets). An instance
+I'm managing XML documents and transform them using XSL stylesheets). An instance
 of this class encapsulates an instance of `Train` and then passes a document
 through all its transformations:
 
@@ -121,7 +121,7 @@ Now, I have to do this:
 
 {% highlight java %}
 Train train = new TrDefault()
-  .with(new StLogged(ShiftA()))
+  .with(new StLogged(new ShiftA()))
   .with(new StLogged(new ShiftB()));
 {% endhighlight %}
 
@@ -137,7 +137,7 @@ Train train = new TrLogged(new TrDefault())
 {% endhighlight %}
 
 In my case, all shifts are doing XSL transformations, taking XSL stylesheets from
-files available in classpath. That's why, the code looks like this:
+files available in classpath. That's why the code looks like this:
 
 {% highlight java %}
 Train train = new TrLogged(new TrDefault())
@@ -145,7 +145,7 @@ Train train = new TrLogged(new TrDefault())
   .with(new StXSL("stylesheet-b.xsl")));
 {% endhighlight %}
 
-There is an obvious duplication of `new StXSL(`, but I can't simply get rid of it,
+There is an obvious duplication of `new StXSL(...)`, but I can't simply get rid of it,
 since the method `with` expects an instance of `Shift`, not a `String`. To solve this,
 I made the `Train` generic and created
 [`TrClasspath`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrClasspath.java)
@@ -183,11 +183,11 @@ Train<Shift> train = new TrClasspath<>(new TrDefault<>())
   .back();
 {% endhighlight %}
 
-Then, I decided to get rid of a duplication of `.with()` calls. Obviously, it would
-be easier to have an ability to provide a list of file names as an array of `String`
+Next I decided to get rid of the duplication of `.with()` calls. Obviously, it would
+be easier to have the ability to provide a list of file names as an array of `String`
 and build the train from it. I created a new class
 [`TrBulk`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrBulk.java),
-which does exactly this:
+which does exactly that:
 
 {% highlight java %}
 Iterable<String> names = Arrays.asList(
