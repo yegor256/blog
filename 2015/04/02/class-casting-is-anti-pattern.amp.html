@@ -79,7 +79,7 @@ of object-oriented programming.
 or desire to think and design objects properly. Type casting (or
 class casting) helps us work with provided objects differently,
 based on the class they belong to or the interface they implement. Class
-casting helps us <strong>discriminate</strong> against the poor objects and <strong>segregate</strong>
+casting helps us <em>discriminate</em> against the poor objects and <em>segregate</em>
 them by their race, gender, and religion. Can this be a good practice?</p>
 
 
@@ -110,7 +110,7 @@ there is no need to actually iterate them. It would be much faster to
 cast them to <code class="highlighter-rouge">Collection</code> and then call method <code class="highlighter-rouge">size()</code>. Looks logical,
 but what’s wrong with this approach? I see two practical problems.</p>
 
-<p>First, there is a <strong>hidden coupling</strong> of <code class="highlighter-rouge">sizeOf()</code> and <code class="highlighter-rouge">Collection</code>. This
+<p>First, there is a <em>hidden coupling</em> of <code class="highlighter-rouge">sizeOf()</code> and <code class="highlighter-rouge">Collection</code>. This
 coupling is not visible to the clients of <code class="highlighter-rouge">sizeOf()</code>. They don’t know that
 method <code class="highlighter-rouge">sizeOf()</code> relies on interface <code class="highlighter-rouge">Collection</code>. If tomorrow we decide
 to change it, <code class="highlighter-rouge">sizeOf()</code> won’t work. And we’ll be very surprised, since
@@ -118,7 +118,7 @@ its signature says nothing about this dependency. This won’t happen with
 <code class="highlighter-rouge">Collection</code>, obviously, since it is part of the Java SDK, but with custom
 classes, this may and will happen.</p>
 
-<p>The second problem is an inevitably <strong>growing complexity</strong> of method <code class="highlighter-rouge">sizeOf()</code>. The
+<p>The second problem is an inevitably <em>growing complexity</em> of method <code class="highlighter-rouge">sizeOf()</code>. The
 more special types it has to treat differently, the more complex it will become.
 This if/then <a href="/2016/08/10/if-then-else-code-smell.html">forking</a>
 is inevitable, since it has to check all possible

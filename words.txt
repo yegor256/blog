@@ -520,6 +520,7 @@ assumption
 assumptions
 assurance
 assure
+assured
 AST
 ASTs
 asylum
@@ -2719,6 +2720,7 @@ einstein's
 eisenberg
 either
 el
+elaborate
 elastic
 electric
 electrician
@@ -5173,6 +5175,7 @@ marketable
 marketers
 marketing
 markets
+marking
 marks
 marriage
 married
@@ -7015,6 +7018,7 @@ real-world
 realise
 realistic
 reality
+realization
 realize
 realized
 realizes
