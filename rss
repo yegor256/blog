@@ -1,4 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-08-04T11:50:54+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Code and Its Tests in Different Pull Requests</title><link href="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html" rel="alternate" type="text/html" title="The Code and Its Tests in Different Pull Requests" /><published>2022-08-04T00:00:00+00:00</published><updated>2022-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html">&lt;p&gt;I suggested this idea a few weeks ago
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-08-11T02:05:05+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Declarative and Immutable Pipeline of Transformations</title><link href="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html" rel="alternate" type="text/html" title="Declarative and Immutable Pipeline of Transformations" /><published>2022-08-10T00:00:00+00:00</published><updated>2022-08-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline</id><content type="html" xml:base="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html">&lt;p&gt;A few months ago I made a &lt;a href=&quot;https://github.com/yegor256/xsline&quot;&gt;small Java library&lt;/a&gt;,
+which is worth explaining since
+the design of its classes and interfaces is pretty unusual. It’s very much
+object-oriented for a pretty imperative task: building a pipeline of
+document transformations. The goal was to do this in a declarative and
+immutable way, and in Java. Well, as much as it’s possible.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Barfuss (2005) by Til Schweiger&quot; src=&quot;/images/2022/08/barfuss.jpg&quot; longdesc=&quot;#53e51a8f&quot; /&gt;&lt;figcaption id=&quot;53e51a8f&quot;&gt;Barfuss (2005) by Til Schweiger&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Let’s say you have a document, and you have a collection of transformations,
+each of which will do something with the document. Each transformation, for example,
+is a small piece of Java code. You want to build a list
+of transformations and then pass a document through this list.&lt;/p&gt;
+
+&lt;p&gt;First, I made an interface &lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Shift.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;&lt;/a&gt;
+(instead of the frequently used and boring “transformation”):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then I made an interface &lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Train&lt;/code&gt;&lt;/a&gt;
+(this is the name I made up for the collection
+of transformations) and its default implementation:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Collection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LinkedList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ah, I forgot to tell you. I’m a big fan of &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;immutable&lt;/a&gt;
+objects. That’s why the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Train&lt;/code&gt; doesn’t have a method &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;, but instead has &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt;. The difference is that
+&lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; modifies the object, while &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt; makes a new one.&lt;/p&gt;
+
+&lt;p&gt;Now, I can build a train of shifts with
+&lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrDefault.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TrDefault&lt;/code&gt;&lt;/a&gt;,
+a simple default implementation of &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&lt;/code&gt;, assuming
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ShiftA&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;ShiftB&lt;/code&gt; are already implemented:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShiftA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShiftB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then I created an &lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Xsline&lt;/code&gt;&lt;/a&gt;
+class (it’s “XSL” + “pipeline”, since in my case
+I’m managing XML documents and transform them using XSL stylesheets). An instance
+of this class encapsulates an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&lt;/code&gt; and then passes a document
+through all its transformations:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Xsline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;So far so good.&lt;/p&gt;
+
+&lt;p&gt;Now, I want all my transformations to log themselves. I created
+&lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;StLogged&lt;/code&gt;&lt;/a&gt;,
+a decorator of &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;, which encapsulates the original &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;, decorates its method &lt;code class=&quot;highlighter-rouge&quot;&gt;apply&lt;/code&gt;,
+and prints a message to the console when the transformation is completed:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StLogged&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Transformation completed!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;after&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, I have to do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StLogged&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShiftA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StLogged&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShiftB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Looks like a duplication of &lt;code class=&quot;highlighter-rouge&quot;&gt;new StLogged(&lt;/code&gt;, especially with a collection of a few dozen
+shifts. To get rid of this duplication I created a decorator for &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&lt;/code&gt;, which
+on the fly decorates shifts that it encapsulates, using
+&lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;StLogged&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrLogged&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShiftA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()))&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ShiftB&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In my case, all shifts are doing XSL transformations, taking XSL stylesheets from
+files available in classpath. That’s why the code looks like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrLogged&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StXSL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet-a.xsl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)))&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StXSL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet-b.xsl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;There is an obvious duplication of &lt;code class=&quot;highlighter-rouge&quot;&gt;new StXSL(...)&lt;/code&gt;, but I can’t simply get rid of it,
+since the method &lt;code class=&quot;highlighter-rouge&quot;&gt;with&lt;/code&gt; expects an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;Shift&lt;/code&gt;, not a &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;. To solve this,
+I made the &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&lt;/code&gt; generic and created
+&lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrClasspath.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TrClasspath&lt;/code&gt;&lt;/a&gt;
+decorator:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrClasspath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;())&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet-a.xsl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet-b.xsl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TrClasspath.with()&lt;/code&gt; accepts &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, turns it into
+&lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StXSL.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;StXSL&lt;/code&gt;&lt;/a&gt;
+and passes to &lt;code class=&quot;highlighter-rouge&quot;&gt;TrDefault.with()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pay attention to the snippet above: the &lt;code class=&quot;highlighter-rouge&quot;&gt;train&lt;/code&gt; is now of type &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&amp;lt;String&amp;gt;&lt;/code&gt;, not &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&amp;lt;Shift&amp;gt;&lt;/code&gt;,
+as would be required by &lt;code class=&quot;highlighter-rouge&quot;&gt;Xsline&lt;/code&gt;.
+The question now is: how do we get back to &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&amp;lt;Shift&amp;gt;&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Ah, I forgot to mention. I wanted to design this library with one important principle
+in mind, &lt;a href=&quot;/2014/11/20/seven-virtues-of-good-object.html&quot;&gt;suggested&lt;/a&gt;
+in 2014: all objects may only implement methods from their interfaces. That’s why,
+I couldn’t just add a method &lt;code class=&quot;highlighter-rouge&quot;&gt;getEncapsulatedTrain()&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;TrClasspath&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I introduced a new interface
+&lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Train.Temporary&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/a&gt;
+with a single method &lt;code class=&quot;highlighter-rouge&quot;&gt;back()&lt;/code&gt;
+returning &lt;code class=&quot;highlighter-rouge&quot;&gt;Train&amp;lt;T&amp;gt;&lt;/code&gt;. The class &lt;code class=&quot;highlighter-rouge&quot;&gt;TrClasspath&lt;/code&gt; implements
+it and I can do this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrClasspath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;())&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet-a.xsl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet-b.xsl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Next I decided to get rid of the duplication of &lt;code class=&quot;highlighter-rouge&quot;&gt;.with()&lt;/code&gt; calls. Obviously, it would
+be easier to have the ability to provide a list of file names as an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;
+and build the train from it. I created a new class
+&lt;a href=&quot;https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrBulk.java&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TrBulk&lt;/code&gt;&lt;/a&gt;,
+which does exactly that:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Iterable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Arrays&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&quot;stylesheet-a.xsl&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&quot;stylesheet-b.xsl&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;Train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Shift&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrBulk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrClasspath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TrDefault&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;With this design I can construct the train in almost any possible way.&lt;/p&gt;
+
+&lt;p&gt;See, for example, how we use it &lt;a href=&quot;https://github.com/objectionary/eo/blob/0.23.6/eo-parser/src/main/java/org/eolang/parser/ParsingTrain.java#L86-L103&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/objectionary/eo/blob/0.23.6/eo-maven-plugin/src/main/java/org/eolang/maven/SpyTrain.java#L49-L75&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">A few months ago I made a small Java library, which is worth explaining since the design of its classes and interfaces is pretty unusual. It’s very much object-oriented for a pretty imperative task: building a pipeline of document transformations. The goal was to do this in a declarative and immutable way, and in Java. Well, as much as it’s possible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Code and Its Tests in Different Pull Requests</title><link href="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html" rel="alternate" type="text/html" title="The Code and Its Tests in Different Pull Requests" /><published>2022-08-04T00:00:00+00:00</published><updated>2022-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html">&lt;p&gt;I suggested this idea a few weeks ago
 &lt;a href=&quot;https://twitter.com/yegor256/status/1525758255225528320&quot;&gt;on Twitter&lt;/a&gt;
 and got mostly negative reactions. That’s why I wrote this blog post, to elaborate on the
 subject in an attempt to convince you. Here is the rule I’m suggesting:
@@ -1463,154 +1625,4 @@ the objects suggested go along with others already present in the Objectionary.&
 &lt;p&gt;Once the pull request is merged, the objects become part of the centralized
 dictionary of all objects of EO. Take a look at &lt;a href=&quot;https://github.com/yegor256/objectionary/pull/2&quot;&gt;this pull request&lt;/a&gt;, 
 where a new object was submitted to Objectionary, after its atom was
-deployed to Maven Central.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Since the time of Kernighan and Ritchie we share binary code in libraries. You need to print some text with printf() in C++? You get libc library with 700+ other functions inside. You need to copy a Java stream? You get Apache Commons IO with copy() and 140+ other methods and classes. The same happens in all languages I’m aware of, like Ruby, Python, JavaScript, PHP: you need an object, or a class, or a function, or a method—you have to add the entire library to your build. Wouldn’t it be more elegant to deal with individual objects instead?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Calibrated Achievement Points</title><link href="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html" rel="alternate" type="text/html" title="Calibrated Achievement Points" /><published>2021-10-12T00:00:00+00:00</published><updated>2021-10-12T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/10/12/calibrated-achievement-points</id><content type="html" xml:base="https://www.yegor256.com/2021/10/12/calibrated-achievement-points.html">&lt;p&gt;It’s a well-known problem nowadays: how can we measure the performance 
-and productivity of individual contributors who do non-routine 
-creative work? The best examples are research and development (R&amp;amp;D) teams, which 
-usually consist of software engineers, designers, 
-scientists, architects, quality experts, product managers, and so on. 
-Such professionals deliver results that are hard to get down to simple numbers. 
-Many authors &lt;a href=&quot;/2020/06/23/individual-performance-metrics.html&quot;&gt;argue&lt;/a&gt;
-that the very idea of measuring individual performance is toxic and may only 
-lead to negative consequences. We tried to challenge this point of view 
-and did an experiment in our team, which demonstrated that individual 
-performance can indeed be measured, even if people’s work involves creativity, 
-and results are hard to predict. We designed a system of 
-Calibrated Achievement Points (CAPs), which are rewarded to those who deliver 
-visible and tangible results of different kinds. This article explains how 
-CAPs work and summarizes the results of the experiment.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Gridlock&amp;#39;d (1997) by Vondie Curtis-Hall&quot; src=&quot;/images/2021/10/gridlockd.jpg&quot; longdesc=&quot;#88e55448&quot; /&gt;&lt;figcaption id=&quot;88e55448&quot;&gt;Gridlock&amp;#39;d (1997) by Vondie Curtis-Hall&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;“Competitions are for horses, not artists,” said 
-&lt;a href=&quot;https://en.wikipedia.org/wiki/B%C3%A9la_Bart%C3%B3k&quot;&gt;Béla Bartók&lt;/a&gt;, 
-a Hungarian composer about a hundred years ago.
-Indeed, how can we measure the productivity of someone making a piece
-of art, say, a painting? By the amount of acrylic put on the canvas
-per minute? Or maybe we ask painters to compete on the size of the canvas in 
-inches—the bigger the painting, the better the painter!? Obviously, such metrics
-would be considered not only useless, but harmful. Encouraging artists
-to compete by such productivity indicators will kill the very idea of art
-and will most probably discourage most talented artists from participating.&lt;/p&gt;
-
-&lt;aside class=&quot;quote&quot;&gt;Competition positively affects creativity.
-&lt;/aside&gt;
-
-&lt;p&gt;It seems that these days, however, there are people who would disagree with the famous composer. 
-For example, Jacob Eisenberg from University College Dublin and 
-William Forde Thompson from Macquarie University, 
-in &lt;a href=&quot;https://www.researchgate.net/publication/233148051_The_Effects_of_Competition_on_Improvisers'_Motivation_Stress_and_Creative_Performance&quot;&gt;their research&lt;/a&gt;
-into how amateur musicians’ creativity changes under stress of competition, demonstrated:
-competition positively affects creativity.
-A more recent &lt;a href=&quot;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3250603&quot;&gt;study&lt;/a&gt;
-by Daniel Gross from Duke University confirmed this finding
-and extended it with a warning: heavy competition drives us to stop creativity
-altogether.
-Anil Rathi in &lt;a href=&quot;https://hbr.org/2014/11/to-encourage-innovation-make-it-a-competition&quot;&gt;HBR noted&lt;/a&gt;,
-from a business perspective, 
-that “well-managed internal competitions amplify the company’s overall creative ambience.”&lt;/p&gt;
-
-&lt;p&gt;Thus, it seems that in the modern world competition and creativity go together.
-However, the positive effect of competition depends on the
-rules the team has to play by and the quality of metrics. 
-If the metrics are reasonable and well understood
-by all participants, the competition drives the creativity.&lt;/p&gt;
-
-&lt;aside class=&quot;youtube&quot;&gt;
-        &lt;a href=&quot;https://www.youtube.com/watch?v=Qii3yrQJdHs&quot;&gt;&lt;div class=&quot;box&quot;&gt;
-        &lt;img src=&quot;https://i.ytimg.com/vi/Qii3yrQJdHs/mqdefault.jpg&quot; alt=&quot;YouTube video #Qii3yrQJdHs&quot; /&gt;
-        &lt;div class=&quot;play&quot;&gt;&lt;i class=&quot;icon icon-play&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;/a&gt;
-        &lt;div&gt;M179: Calibrated Achievement Points (CAP) to measure R&amp;amp;D productivity;
-        18 October 2021.&lt;/div&gt;&lt;/aside&gt;
-
-&lt;p&gt;Of course, measuring the productivity of an artist by the amount of acrylic they
-put on the canvas or the productivity of a composer by the frequency
-of pushing the piano keys would be useless and harmful.
-There are however many examples of good metrics in art, sport, and science,
-which have stimulated the creativity of artists, athletes, and scientists for centuries:
-the &lt;a href=&quot;https://www.nobelprize.org/&quot;&gt;Nobel Prize&lt;/a&gt; is probably the most famous competition every 
-world-class researcher is dreaming of winning, while the Olympic Games and 
-World Championships are what we have for athletes, 
-and the &lt;a href=&quot;https://www.oscars.org/&quot;&gt;Oscars&lt;/a&gt; and &lt;a href=&quot;https://www.festival-cannes.com/en/&quot;&gt;Cannes Film Festival&lt;/a&gt;
-are competitions for the best artists in cinema，and so on.&lt;/p&gt;
-
-&lt;p&gt;Even though the value of competition may be well understood by
-a business, a practical application of it in an R&amp;amp;D department
-may face many obstacles. The main problem would be to answer the question
-of both employees and the management: “What are the metrics that can objectively measure
-the performance of our people, who are not athletes or actors?”&lt;/p&gt;
-
-&lt;p&gt;After more than a year of experiments we found an answer and built
-a system of CAPs. We defined a list of 30+ possible achievements 
-any member of our R&amp;amp;D team can make while working within the scope of
-our research and development. Here are some of them as an example (the “limit”
-in brackets is how many achievements of this type are possible to count in one year):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Major Product Release”: 30 (4)
-— a software product in a major version is packaged and released to its users;&lt;/li&gt;
-  &lt;li&gt;“Conference Article Accepted”: 70
-— a new research paper submitted to a computer science conference and accepted there for publishing;&lt;/li&gt;
-  &lt;li&gt;“Technical Report Accepted”: 40 (4)
-— a short 2-4 page internal report about technical results is submitted to
-our review board and accepted by it;&lt;/li&gt;
-  &lt;li&gt;“New Hire”: 20 (4)
-— a new employee has passed all required interviews and joined the team;&lt;/li&gt;
-  &lt;li&gt;“GitHub Star”: 1
-— most of our software projects are open source, that’s why we reward new stars obtained in GitHub;&lt;/li&gt;
-  &lt;li&gt;“Lecture or Seminar”: 5 (4)
-— an educational presentation made inside the department.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The list is available for everybody in our internal Wiki. Each member
-of our team can decide for themselves which achievements to deliver
-in order to win in the ranking. The achievements from the list don’t replace
-the everyday work everybody is doing but are the “extra mile” anyone
-can walk in order to stand out.&lt;/p&gt;
-
-&lt;p&gt;Some achievements are personal, such as a lecture or a conference article,
-while others may only be created by a team, such as a major product release
-or new GitHub stars. Individual achievements are attributed directly
-to the account of an employee, while team achievements are distributed
-equally among team members: we have seven teams in our department.&lt;/p&gt;
-
-&lt;p&gt;Obviously, the levels of competence and qualification are different
-for different people. Some of them are junior programmers, while others
-are PhD degree holders with decades of experience. Publishing a 
-computer science article for a junior programmer is a much larger achievement
-(which is harder to do) than for a seasoned expert. To take this 
-imbalance into account we introduced “weights” for each person, which
-are used as denominators. For example, if Jeff, a junior programmer, with a weight of 
-10 publishes an article, he earns 7 points (we divide 70 by 10).
-At the same time, if Sarah, a PhD with a weight of 25, publishes an article,
-she earns only 2.8 points (we divide 70 by 25).&lt;/p&gt;
-
-&lt;p&gt;We organized our results monitoring system with a “push” principle in mind:
-everyone is responsible for reporting their own results to our team assistant.
-We don’t “pull” the information from them, they decide for themselves
-when and what to report. The team assistant collects the data in a simple
-Excel spreadsheet and emails it to everybody once a week (there are about 50
-people in our team). The document contains the journal of all achievements
-reported to date, the ranking of every team member, and their weights.&lt;/p&gt;
-
-&lt;p&gt;Since the information is publicly available weekly, we encourage every
-team member to dispute the achievements of others, if they feel like it. We don’t
-have a special auditor for the results people report. Instead, peer review
-demonstrates perfect results: when someone reports something that 
-violates our expectations of quality or fairness, almost
-immediately a concern gets raises. Most disputes, which happen every few months,
-we resolve by open discussions.&lt;/p&gt;
-
-&lt;p&gt;As was noted by David Sarnoff, an American businessman and pioneer 
-of American radio and television, “competition brings out the best in products 
-and the worst in people.” The CAP system we designed helped us not only
-see the best in product by increasing the productivity and creativity of
-our people, but also decrease the amount of “worst” which inevitably
-surfaces when people compete against each other. The CAP system gives us
-the rules, which are fair and transparent enough to significantly reduce the amount
-of conflicts and of cheating.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Competitive metrics of people&amp;#39;s productivity lead to...&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1469925208878424067?ref_src=twsrc%5Etfw&quot;&gt;December 12, 2021&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html">It’s a well-known problem nowadays: how can we measure the performance and productivity of individual contributors who do non-routine creative work? The best examples are research and development (R&amp;amp;D) teams, which usually consist of software engineers, designers, scientists, architects, quality experts, product managers, and so on. Such professionals deliver results that are hard to get down to simple numbers. Many authors argue that the very idea of measuring individual performance is toxic and may only lead to negative consequences. We tried to challenge this point of view and did an experiment in our team, which demonstrated that individual performance can indeed be measured, even if people’s work involves creativity, and results are hard to predict. We designed a system of Calibrated Achievement Points (CAPs), which are rewarded to those who deliver visible and tangible results of different kinds. This article explains how CAPs work and summarizes the results of the experiment.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/gridlockd.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+deployed to Maven Central.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Since the time of Kernighan and Ritchie we share binary code in libraries. You need to print some text with printf() in C++? You get libc library with 700+ other functions inside. You need to copy a Java stream? You get Apache Commons IO with copy() and 140+ other methods and classes. The same happens in all languages I’m aware of, like Ruby, Python, JavaScript, PHP: you need an object, or a class, or a function, or a method—you have to add the entire library to your build. Wouldn’t it be more elegant to deal with individual objects instead?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
