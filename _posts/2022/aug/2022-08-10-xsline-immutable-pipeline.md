@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Declarative and Immutable Pipeline of Transformations"
-date: 2022-06-14
+date: 2022-08-10
 place: Moscow, Russia
 tags: oop
 description: |
@@ -14,9 +14,9 @@ keywords:
   - pipeline of objects
   - object-oriented transformations
   - pipeline of object-oriented transformations
-image: /images/2022/06/
+image: /images/2022/08/barfuss.jpg
 jb_picture:
-  caption: ...
+  caption: Barfuss (2005) by Til Schweiger
 ---
 
 A few months ago I made a [small Java library](https://github.com/yegor256/xsline),
