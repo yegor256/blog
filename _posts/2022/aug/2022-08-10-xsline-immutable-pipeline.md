@@ -3,7 +3,7 @@ layout: post
 title: "Declarative and Immutable Pipeline of Transformations"
 date: 2022-08-10
 place: Moscow, Russia
-tags: oop
+tags: oop xml
 description: |
   Combining "strategy" objects into a pipeline is a trivial
   task if done in a mutable and imperative way; here I show
