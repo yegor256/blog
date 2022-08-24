@@ -7,7 +7,7 @@ tags: science
 description: |
   Here is a very simplified guideline for newbie academic
   writers like myself, to help you structure a paper
-  the way that it won't surprise your reviewers too much.
+  in a way that won't surprise your reviewers too much.
 keywords:
   - academic writing
   - scientific writing
@@ -20,15 +20,15 @@ jb_picture:
 ---
 
 My [first academic paper](http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98)
-was accepted and published in 1998. My recent one was rejected by SPLASH just a week ago.
+was accepted and published in 1998. My most recent one was rejected by SPLASH just a week ago.
 I'm writing two papers right now and co-authoring about ten others.
-So far, my results are very poor: way more rejections than I expect.
-The key lesson I've learned so far: papers get rejected mostly not
-because of being essentially wrong. Instead, reviewers reject them
-having no enthusiasm for decrypting a poorly structured text,
-even though it may have potentially interesting throughts.
+So far, my results are very poor: way more rejections than I expected.
+The key lesson I've learned so far: the reason most papers get rejected
+is not because they are essentially wrong. Instead, reviewers reject them
+because they have no enthusiasm for decrypting a poorly structured text,
+even though it may contain potentially interesting thoughts.
 In this blog post I suggest how to structure a [research paper](https://en.wikipedia.org/wiki/Research_paper).
-Take it with a grain of salt, though.
+Take it with a grain of salt though.
 
 <!--more-->
 
@@ -53,7 +53,7 @@ I [suggest](https://www.youtube.com/watch?v=TF8MKOfo3gI) the following rule:
 The first author in the list is you.
 The last one is your boss.
 Key contributors stay in the middle, in alphabetic order of their last names.
-Everybody else is listed in the Acknowledgements section.
+Everybody else is listed in the Acknowledgments section.
 
 ## Abstract
 
@@ -66,19 +66,19 @@ on Introduction, Results, and Discussion.
 Answer these questions in this particular order:
   * What is going on in your field of study?
   * What is wrong?
-  * Why this Problem is important?
-  * Why it's not fixed yet by others?
+  * Why is this Problem important?
+  * Why is it not fixed yet by others?
 
 Then, formulate your
 [Research Question(s)](https://en.wikipedia.org/wiki/Research_question)
 or a [Hypothesis](https://www.enago.com/academy/how-to-develop-a-good-research-hypothesis/).
 
-Then, make a disputable [Thesis Statement](https://writingcenter.unc.edu/tips-and-tools/thesis-statements/).
+Next, make a disputable [Thesis Statement](https://writingcenter.unc.edu/tips-and-tools/thesis-statements/).
 
-Then, enumerate Contributions that your article makes to science.
+Then, enumerate the Contributions that your article makes to science.
 A Contribution is something tangible, which a reader can take from your study
 and use somehow in their own studies.
-A theorem, a method, a toolkit, a dataset, or an algorithm are good examples of a Contribution.
+A theorem, a method, a toolkit, a data-set, or an algorithm are good examples of a Contribution.
 
 Finally, help your reader understand how the rest of the paper is structured and why.
 
@@ -87,7 +87,7 @@ Finally, help your reader understand how the rest of the paper is structured and
 A reader may not know much about your field of study. This section
 may help them understand your problem domain and its terminology better.
 For example, if you write about a new programming language, this section may explain
-what is compiler, grammar, front-end, back-end, AST, and so on.
+what a compiler is, and grammar, front-end, back-end, AST, and so on.
 
 Educate your readers in order to make it more comfortable for them
 to read the rest of the paper.
@@ -95,14 +95,14 @@ to read the rest of the paper.
 ## Related Work
 
 In the first paragraph, give an overview of all existing studies that
-you managed to find. Classifying them somehow.
+you managed to find. Classify them somehow.
 
-Then, write one paragraph per study. Explain what a study was about
+Then write one paragraph per study. Explain what the study was about
 and what are its key findings. Finish each paragraph with the flaws
 you found in the study. Make a claim that due to these flaws this
 study is not a solution to the Problem.
 
-Finish the section with a paragraph claiming that, to your best knowledge,
+Finish the section with a paragraph claiming that, to the best of your knowledge,
 not a single existing study solves the Problem.
 
 ## Method or Device
@@ -112,7 +112,7 @@ you either _observe_ the reality in order to discover its new laws
 (this is how [Isaac Newton](https://en.wikipedia.org/wiki/Isaac_Newton)
 discovered his [laws of motion](https://en.wikipedia.org/wiki/Newton's_laws_of_motion)),
 or _extend_ the reality with a new device
-(this is how [Thomas Edison](https://en.wikipedia.org/wiki/Thomas_Edison) invented [light bulb](https://en.wikipedia.org/wiki/Incandescent_light_bulb)).
+(this is how [Thomas Edison](https://en.wikipedia.org/wiki/Thomas_Edison) invented the [light bulb](https://en.wikipedia.org/wiki/Incandescent_light_bulb)).
 
 If you observe, algorithmically [describe](https://research.com/research/how-to-write-research-methodology) the Method.
 
@@ -120,7 +120,7 @@ If you extend, describe the Device and its usage scenarios.
 
 ## Proof
 
-Formaly prove that your Device posesses certain qualities, predicted in the Hypothesis.
+Formally prove that your Device possesses certain qualities, predicted in the Hypothesis.
 
 The section mostly consists of definitions, examples, lemmas, theorems, and proofs.
 
@@ -140,8 +140,8 @@ Informally [interpret](https://plos.org/resource/how-to-write-conclusions/) your
 Explain how your results are different from Related Work.
 
 Highlight limitations of the study. Discuss its [threats to validity](https://www.creative-wisdom.com/teaching/WBI/threat.shtml).
-Any method or any idea has their flaws. If you don't admit them, your
-readers will think that you either are concealing the issues or
+Any method or any idea has its flaws. If you don't admit them, your
+readers will think that you are either concealing the issues or
 not understanding your own domain well enough.
 
 Highlight the significance of the study.
@@ -150,13 +150,13 @@ Discuss unanswered questions and suggest topics for future studies.
 
 ## Conclusion
 
-Spend one paragraph to explain how your research question was answered
-in this paper. Imagine the reader just reads Introduction and
+Spend one paragraph explaining how your research question was answered
+in this paper. Imagine the reader just reads the Introduction and
 then immediately this Conclusion. It should read fluently.
 
-This paragraph is a shoft version of Discussion.
+This paragraph is a short version of the Discussion.
 
-## Acknowledgements
+## Acknowledgments
 
 Here, you say "many thanks to individuals and organizations that
 contributed to the research, including ..." You list them all, in
@@ -180,4 +180,3 @@ citation styles.
 Long tables, complex proofs, large figures are good candidates for placing
 into appendices. Keeping them in the main part of the paper may jeopardize
 its readability.
-
