@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Research Paper Simple Template"
-date: 2022-08-20
+date: 2022-08-24
 place: Moscow, Russia
 tags: science
 description: |
