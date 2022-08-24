@@ -1,4 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-08-11T02:05:05+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Declarative and Immutable Pipeline of Transformations</title><link href="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html" rel="alternate" type="text/html" title="Declarative and Immutable Pipeline of Transformations" /><published>2022-08-10T00:00:00+00:00</published><updated>2022-08-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline</id><content type="html" xml:base="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html">&lt;p&gt;A few months ago I made a &lt;a href=&quot;https://github.com/yegor256/xsline&quot;&gt;small Java library&lt;/a&gt;,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2022-08-24T12:59:51+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Research Paper Simple Template</title><link href="https://www.yegor256.com/2022/08/24/research-paper-template.html" rel="alternate" type="text/html" title="Research Paper Simple Template" /><published>2022-08-24T00:00:00+00:00</published><updated>2022-08-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/24/research-paper-template</id><content type="html" xml:base="https://www.yegor256.com/2022/08/24/research-paper-template.html">&lt;p&gt;My &lt;a href=&quot;http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98&quot;&gt;first academic paper&lt;/a&gt;
+was accepted and published in 1998. My most recent one was rejected by SPLASH just a week ago.
+I’m writing two papers right now and co-authoring about ten others.
+So far, my results are very poor: way more rejections than I expected.
+The key lesson I’ve learned so far: the reason most papers get rejected
+is not because they are essentially wrong. Instead, reviewers reject them
+because they have no enthusiasm for decrypting a poorly structured text,
+even though it may contain potentially interesting thoughts.
+In this blog post I suggest how to structure a &lt;a href=&quot;https://en.wikipedia.org/wiki/Research_paper&quot;&gt;research paper&lt;/a&gt;.
+Take it with a grain of salt though.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Il Camorrista (1986) by Giuseppe Tornatore&quot; src=&quot;/images/2022/08/il-camorrista.jpg&quot; longdesc=&quot;#f5448d2e&quot; /&gt;&lt;figcaption id=&quot;f5448d2e&quot;&gt;Il Camorrista (1986) by Giuseppe Tornatore&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Read &lt;a href=&quot;https://link.springer.com/book/10.1007/978-1-4471-6639-9&quot;&gt;&lt;em&gt;Writing for Computer Science&lt;/em&gt;&lt;/a&gt; by Justin Zobel.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;a href=&quot;https://www.latex-project.org&quot;&gt;LaTeX&lt;/a&gt;, either locally or in &lt;a href=&quot;https://www.overleaf.com&quot;&gt;Overleaf&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Read my personal &lt;a href=&quot;https://yegor256.github.io/latex-best-practices/main.pdf&quot;&gt;best practices&lt;/a&gt; for LaTeX.&lt;/p&gt;
+
+&lt;h2 id=&quot;title&quot;&gt;Title&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://www.nature.com/nature-index/news-blog/how-to-write-a-good-research-science-academic-paper-title&quot;&gt;title&lt;/a&gt;
+is the &lt;a href=&quot;https://www.nature.com/articles/d41586-018-02404-4&quot;&gt;key message&lt;/a&gt; of your paper.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;a href=&quot;https://blog.wordvice.com/how-to-write-the-perfect-title-for-your-research-paper/&quot;&gt;this method&lt;/a&gt; to invent it.&lt;/p&gt;
+
+&lt;h2 id=&quot;authors&quot;&gt;Authors&lt;/h2&gt;
+
+&lt;p&gt;I &lt;a href=&quot;https://www.youtube.com/watch?v=TF8MKOfo3gI&quot;&gt;suggest&lt;/a&gt; the following rule:
+The first author in the list is you.
+The last one is your boss.
+Key contributors stay in the middle, in alphabetic order of their last names.
+Everybody else is listed in the Acknowledgments section.&lt;/p&gt;
+
+&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
+
+&lt;p&gt;An &lt;a href=&quot;https://writing.wisc.edu/handbook/assignments/writing-an-abstract-for-your-research-paper/&quot;&gt;abstract&lt;/a&gt;
+is a one-paragraph version of the paper, with an emphasis
+on Introduction, Results, and Discussion.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Answer these questions in this particular order:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;What is going on in your field of study?&lt;/li&gt;
+  &lt;li&gt;What is wrong?&lt;/li&gt;
+  &lt;li&gt;Why is this Problem important?&lt;/li&gt;
+  &lt;li&gt;Why is it not fixed yet by others?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then, formulate your
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Research_question&quot;&gt;Research Question(s)&lt;/a&gt;
+or a &lt;a href=&quot;https://www.enago.com/academy/how-to-develop-a-good-research-hypothesis/&quot;&gt;Hypothesis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next, make a disputable &lt;a href=&quot;https://writingcenter.unc.edu/tips-and-tools/thesis-statements/&quot;&gt;Thesis Statement&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then, enumerate the Contributions that your article makes to science.
+A Contribution is something tangible, which a reader can take from your study
+and use somehow in their own studies.
+A theorem, a method, a toolkit, a data-set, or an algorithm are good examples of a Contribution.&lt;/p&gt;
+
+&lt;p&gt;Finally, help your reader understand how the rest of the paper is structured and why.&lt;/p&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+
+&lt;p&gt;A reader may not know much about your field of study. This section
+may help them understand your problem domain and its terminology better.
+For example, if you write about a new programming language, this section may explain
+what a compiler is, and grammar, front-end, back-end, AST, and so on.&lt;/p&gt;
+
+&lt;p&gt;Educate your readers in order to make it more comfortable for them
+to read the rest of the paper.&lt;/p&gt;
+
+&lt;h2 id=&quot;related-work&quot;&gt;Related Work&lt;/h2&gt;
+
+&lt;p&gt;In the first paragraph, give an overview of all existing studies that
+you managed to find. Classify them somehow.&lt;/p&gt;
+
+&lt;p&gt;Then write one paragraph per study. Explain what the study was about
+and what are its key findings. Finish each paragraph with the flaws
+you found in the study. Make a claim that due to these flaws this
+study is not a solution to the Problem.&lt;/p&gt;
+
+&lt;p&gt;Finish the section with a paragraph claiming that, to the best of your knowledge,
+not a single existing study solves the Problem.&lt;/p&gt;
+
+&lt;h2 id=&quot;method-or-device&quot;&gt;Method or Device&lt;/h2&gt;
+
+&lt;p&gt;There are two types of research:
+you either &lt;em&gt;observe&lt;/em&gt; the reality in order to discover its new laws
+(this is how &lt;a href=&quot;https://en.wikipedia.org/wiki/Isaac_Newton&quot;&gt;Isaac Newton&lt;/a&gt;
+discovered his &lt;a href=&quot;https://en.wikipedia.org/wiki/Newton's_laws_of_motion&quot;&gt;laws of motion&lt;/a&gt;),
+or &lt;em&gt;extend&lt;/em&gt; the reality with a new device
+(this is how &lt;a href=&quot;https://en.wikipedia.org/wiki/Thomas_Edison&quot;&gt;Thomas Edison&lt;/a&gt; invented the &lt;a href=&quot;https://en.wikipedia.org/wiki/Incandescent_light_bulb&quot;&gt;light bulb&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;If you observe, algorithmically &lt;a href=&quot;https://research.com/research/how-to-write-research-methodology&quot;&gt;describe&lt;/a&gt; the Method.&lt;/p&gt;
+
+&lt;p&gt;If you extend, describe the Device and its usage scenarios.&lt;/p&gt;
+
+&lt;h2 id=&quot;proof&quot;&gt;Proof&lt;/h2&gt;
+
+&lt;p&gt;Formally prove that your Device possesses certain qualities, predicted in the Hypothesis.&lt;/p&gt;
+
+&lt;p&gt;The section mostly consists of definitions, examples, lemmas, theorems, and proofs.&lt;/p&gt;
+
+&lt;h2 id=&quot;experimental-results&quot;&gt;Experimental Results&lt;/h2&gt;
+
+&lt;p&gt;Apply the Method, step by step, to the real data.&lt;/p&gt;
+
+&lt;p&gt;Present your findings using tables and graphs.&lt;/p&gt;
+
+&lt;p&gt;Post your input data, intermediate data, and all output data in a public
+GitHub repository. Make a reference to it.&lt;/p&gt;
+
+&lt;h2 id=&quot;discussion&quot;&gt;Discussion&lt;/h2&gt;
+
+&lt;p&gt;Informally &lt;a href=&quot;https://plos.org/resource/how-to-write-conclusions/&quot;&gt;interpret&lt;/a&gt; your results.&lt;/p&gt;
+
+&lt;p&gt;Explain how your results are different from Related Work.&lt;/p&gt;
+
+&lt;p&gt;Highlight limitations of the study. Discuss its &lt;a href=&quot;https://www.creative-wisdom.com/teaching/WBI/threat.shtml&quot;&gt;threats to validity&lt;/a&gt;.
+Any method or any idea has its flaws. If you don’t admit them, your
+readers will think that you are either concealing the issues or
+not understanding your own domain well enough.&lt;/p&gt;
+
+&lt;p&gt;Highlight the significance of the study.&lt;/p&gt;
+
+&lt;p&gt;Discuss unanswered questions and suggest topics for future studies.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Spend one paragraph explaining how your research question was answered
+in this paper. Imagine the reader just reads the Introduction and
+then immediately this Conclusion. It should read fluently.&lt;/p&gt;
+
+&lt;p&gt;This paragraph is a short version of the Discussion.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgments&quot;&gt;Acknowledgments&lt;/h2&gt;
+
+&lt;p&gt;Here, you say “many thanks to individuals and organizations that
+contributed to the research, including …” You list them all, in
+alphabetic order. You may add your bosses, colleagues, people
+who reviewed your paper, your parents, and even your dog.&lt;/p&gt;
+
+&lt;p&gt;If the research was done while you were an employee of ACME Inc.,
+say that “the research was funded by ACME Inc.”&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;a href=&quot;https://ctan.org/pkg/biblatex?lang=en&quot;&gt;BibLaTeX&lt;/a&gt; to automate citations,
+and &lt;a href=&quot;https://tex.stackexchange.com/questions/25701&quot;&gt;read this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Use either &lt;a href=&quot;https://en.wikipedia.org/wiki/APA_style&quot;&gt;APA&lt;/a&gt;
+or &lt;a href=&quot;https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf&quot;&gt;IEEE&lt;/a&gt;
+citation styles.&lt;/p&gt;
+
+&lt;h2 id=&quot;appendices&quot;&gt;Appendices&lt;/h2&gt;
+
+&lt;p&gt;Long tables, complex proofs, large figures are good candidates for placing
+into appendices. Keeping them in the main part of the paper may jeopardize
+its readability.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html">My first academic paper was accepted and published in 1998. My most recent one was rejected by SPLASH just a week ago. I’m writing two papers right now and co-authoring about ten others. So far, my results are very poor: way more rejections than I expected. The key lesson I’ve learned so far: the reason most papers get rejected is not because they are essentially wrong. Instead, reviewers reject them because they have no enthusiasm for decrypting a poorly structured text, even though it may contain potentially interesting thoughts. In this blog post I suggest how to structure a research paper. Take it with a grain of salt though.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Declarative and Immutable Pipeline of Transformations</title><link href="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html" rel="alternate" type="text/html" title="Declarative and Immutable Pipeline of Transformations" /><published>2022-08-10T00:00:00+00:00</published><updated>2022-08-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline</id><content type="html" xml:base="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html">&lt;p&gt;A few months ago I made a &lt;a href=&quot;https://github.com/yegor256/xsline&quot;&gt;small Java library&lt;/a&gt;,
 which is worth explaining since
 the design of its classes and interfaces is pretty unusual. It’s very much
 object-oriented for a pretty imperative task: building a pipeline of
@@ -160,7 +322,7 @@ which does exactly that:&lt;/p&gt;
 
 &lt;p&gt;With this design I can construct the train in almost any possible way.&lt;/p&gt;
 
-&lt;p&gt;See, for example, how we use it &lt;a href=&quot;https://github.com/objectionary/eo/blob/0.23.6/eo-parser/src/main/java/org/eolang/parser/ParsingTrain.java#L86-L103&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/objectionary/eo/blob/0.23.6/eo-maven-plugin/src/main/java/org/eolang/maven/SpyTrain.java#L49-L75&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">A few months ago I made a small Java library, which is worth explaining since the design of its classes and interfaces is pretty unusual. It’s very much object-oriented for a pretty imperative task: building a pipeline of document transformations. The goal was to do this in a declarative and immutable way, and in Java. Well, as much as it’s possible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Code and Its Tests in Different Pull Requests</title><link href="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html" rel="alternate" type="text/html" title="The Code and Its Tests in Different Pull Requests" /><published>2022-08-04T00:00:00+00:00</published><updated>2022-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html">&lt;p&gt;I suggested this idea a few weeks ago
+&lt;p&gt;See, for example, how we use it &lt;a href=&quot;https://github.com/objectionary/eo/blob/0.23.6/eo-parser/src/main/java/org/eolang/parser/ParsingTrain.java#L86-L103&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/objectionary/eo/blob/0.23.6/eo-maven-plugin/src/main/java/org/eolang/maven/SpyTrain.java#L49-L75&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="xml" /><summary type="html">A few months ago I made a small Java library, which is worth explaining since the design of its classes and interfaces is pretty unusual. It’s very much object-oriented for a pretty imperative task: building a pipeline of document transformations. The goal was to do this in a declarative and immutable way, and in Java. Well, as much as it’s possible.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Code and Its Tests in Different Pull Requests</title><link href="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html" rel="alternate" type="text/html" title="The Code and Its Tests in Different Pull Requests" /><published>2022-08-04T00:00:00+00:00</published><updated>2022-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html">&lt;p&gt;I suggested this idea a few weeks ago
 &lt;a href=&quot;https://twitter.com/yegor256/status/1525758255225528320&quot;&gt;on Twitter&lt;/a&gt;
 and got mostly negative reactions. That’s why I wrote this blog post, to elaborate on the
 subject in an attempt to convince you. Here is the rule I’m suggesting:
@@ -1240,389 +1402,4 @@ for giving me this opportunity to realize that being a teacher is
 very hard and … fun.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;What a good teacher does?&lt;/p&gt;&amp;mdash; Yegor Bugayenko (@yegor256) &lt;a href=&quot;https://twitter.com/yegor256/status/1467390909025300481?ref_src=twsrc%5Etfw&quot;&gt;December 5, 2021&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html">A few months ago I got an opportunity to teach a single course for 3rd-year BSc students at Innopolis University (Russia). The title was “System Software Design.” The size of the group was about 150 people and the duration was 8 weeks. I was supposed to give them sixteen lectures, two lectures per week. And I was asked to examine their knowledge by the end of the course. Pretty much a normal job for a university teacher. And you know, in my opinion, I failed most parts of it. Here is what I learned.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/11/die-welle.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/11/die-welle.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Objectionary: Dictionary and Factory for EO Objects</title><link href="https://www.yegor256.com/2021/10/21/objectionary.html" rel="alternate" type="text/html" title="Objectionary: Dictionary and Factory for EO Objects" /><published>2021-10-21T00:00:00+00:00</published><updated>2021-10-21T00:00:00+00:00</updated><id>https://www.yegor256.com/2021/10/21/objectionary</id><content type="html" xml:base="https://www.yegor256.com/2021/10/21/objectionary.html">&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.eolang.org&quot;&gt;&lt;img src=&quot;/images/books/elegant-objects/cactus.svg&quot; style=&quot;width:128px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Since the time of Kernighan and Ritchie we share binary code in
-libraries. You need to print some text with &lt;a href=&quot;https://en.wikipedia.org/wiki/Printf_format_string&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;printf()&lt;/code&gt;&lt;/a&gt; in C++? 
-You get &lt;a href=&quot;https://en.wikipedia.org/wiki/Glibc&quot;&gt;libc&lt;/a&gt; library with
-&lt;a href=&quot;https://stackoverflow.com/a/33188344/187141&quot;&gt;700+&lt;/a&gt; other functions inside.
-You need to copy a Java stream?
-You get &lt;a href=&quot;https://commons.apache.org/proper/commons-io/&quot;&gt;Apache Commons IO&lt;/a&gt; with 
-&lt;a href=&quot;https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#copy-java.io.InputStream-java.io.OutputStream-&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;copy()&lt;/code&gt;&lt;/a&gt; and 
-&lt;a href=&quot;https://commons.apache.org/proper/commons-io/apidocs/index.html&quot;&gt;140+&lt;/a&gt; 
-other methods and classes.
-The same happens in all languages I’m aware of, like Ruby, Python, JavaScript, PHP:
-you need an object, or a class, or a function, or a method—you have to add
-the entire library to your build. 
-Wouldn’t it be more elegant to deal with individual objects instead?&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;figure class=&quot;jb_picture&quot;&gt;&lt;img itemprop=&quot;image&quot; alt=&quot;Mænd &amp;amp; høns (2015) by Anders Thomas Jensen&quot; src=&quot;/images/2021/10/maend-and-hons.jpg&quot; longdesc=&quot;#5f493073&quot; /&gt;&lt;figcaption id=&quot;5f493073&quot;&gt;Mænd &amp;amp; høns (2015) by Anders Thomas Jensen&lt;/figcaption&gt;&lt;/figure&gt;
-
-&lt;p&gt;The idea is not new and not mine. 
-I got it from the book &lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;Object Thinking&lt;/a&gt;
-by David West, where he suggested creating an &lt;em&gt;Objectionary&lt;/em&gt; (page 306), 
-a “combination of dictionary and object factory,” with the following properties:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The total number of objects is less than 2000;&lt;/li&gt;
-  &lt;li&gt;Each object is an autonomous executable entity;&lt;/li&gt;
-  &lt;li&gt;Every object has a unique ID and a unique “address”;&lt;/li&gt;
-  &lt;li&gt;Objects are nothing more than collections of objects;&lt;/li&gt;
-  &lt;li&gt;Objects require hardware-specific VMs for execution.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://amzn.to/266oJr4&quot;&gt;&lt;img src=&quot;/images/2015/04/book-object-thinking.jpg&quot; style=&quot;width:96px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
-
-&lt;p&gt;Seventeen years later (the book was published in 2004), we implemented the idea
-on top of &lt;a href=&quot;https://www.eolang.org&quot;&gt;EO&lt;/a&gt;, our new programming language.
-The language is intentionally much simpler than Java or C++.
-You can read its more or less formal description 
-&lt;a href=&quot;https://arxiv.org/abs/2111.13384&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To turn an EO program into an executable entity and release it to 
-the &lt;a href=&quot;https://www.objectionary.com&quot;&gt;Objectionary&lt;/a&gt;, 
-one has to go through the following mandatory steps,
-assuming the JVM is used as a target platform
-(the steps marked with 🌵 are implemented by our
-&lt;a href=&quot;https://github.com/cqfn/eo&quot;&gt;eo-maven-plugin&lt;/a&gt;):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Assemble&lt;/strong&gt;🌵:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Parse&lt;/strong&gt;🌵: &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; ➜ &lt;code class=&quot;highlighter-rouge&quot;&gt;.xmir&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Optimize&lt;/strong&gt;🌵: &lt;code class=&quot;highlighter-rouge&quot;&gt;.xmir&lt;/code&gt; ➜ better &lt;code class=&quot;highlighter-rouge&quot;&gt;.xmir&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Discover&lt;/strong&gt;🌵: find all foreign aliases&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Pull&lt;/strong&gt;🌵: &lt;a href=&quot;https://github.com/yegor256/objectionary&quot;&gt;download&lt;/a&gt; foreign &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; objects&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Resolve&lt;/strong&gt;🌵: &lt;a href=&quot;https://search.maven.org/&quot;&gt;download&lt;/a&gt; and unpack &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt; artifacts&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Place&lt;/strong&gt;🌵: move artifact &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files to &lt;code class=&quot;highlighter-rouge&quot;&gt;target/classes/&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Mark&lt;/strong&gt;🌵: mark &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources found in &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt; as foreign&lt;/li&gt;
-      &lt;li&gt;↑ Go back to &lt;strong&gt;Parse&lt;/strong&gt; if some &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; files are still not parsed&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Transpile&lt;/strong&gt;🌵: &lt;code class=&quot;highlighter-rouge&quot;&gt;.xmir&lt;/code&gt; ➜ &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Assemble&lt;/strong&gt;🌵: same as above, but for tests&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Compile&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt; ➜ &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Test&lt;/strong&gt;: run all unit tests&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Unplace&lt;/strong&gt;🌵: remove artifact &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Unspile&lt;/strong&gt;🌵: remove auto-generated &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt; files&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Copy&lt;/strong&gt;🌵: copy &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; files to &lt;code class=&quot;highlighter-rouge&quot;&gt;EO-SOURCES/&lt;/code&gt; inside &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Deploy&lt;/strong&gt;: package &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt; artifact and put it into Maven Central&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Push&lt;/strong&gt;: send a pull request to &lt;a href=&quot;https://github.com/yegor256/objectionary&quot;&gt;yegor256/objectionary&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Merge&lt;/strong&gt;: we test and merge the pull request&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It is an iterative process, which loops over and over
-again until all required &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; objects are parsed and their atoms are present
-as &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files. 
-Then, all &lt;code class=&quot;highlighter-rouge&quot;&gt;.xmir&lt;/code&gt; files are transpiled to &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt; and then compiled
-to &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; binaries. Then, tested, packaged, and deployed to Maven Central. Then,
-merged to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch of &lt;a href=&quot;https://www.objectionary.com&quot;&gt;Objectionary&lt;/a&gt;, 
-via a pull request.&lt;/p&gt;
-
-&lt;p&gt;The first part of the algorithm can be automated with 
-&lt;a href=&quot;https://github.com/cqfn/eo&quot;&gt;our Maven plugin&lt;/a&gt;, simply by placing &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources
-in &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/eo/&lt;/code&gt; and adding this to &lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.eolang&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;eo-maven-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Take it from Maven Central --&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;executions&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;execution&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;goals&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;register&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;assemble&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;transpile&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;copy&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;unplace&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;unspile&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/goals&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/execution&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/executions&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
-    [...]
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
-  [...]
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;register&lt;/code&gt; goal will scan the &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/eo/&lt;/code&gt; directory, find all
-&lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources, and “register” them in a special CSV catalog at 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;target/eo-foreigns.csv&lt;/code&gt;. Next, the &lt;code class=&quot;highlighter-rouge&quot;&gt;assemble&lt;/code&gt; goal will call
-the following goals: &lt;code class=&quot;highlighter-rouge&quot;&gt;parse&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;optimize&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;discover&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;pull&lt;/code&gt;, and
-&lt;code class=&quot;highlighter-rouge&quot;&gt;resolve&lt;/code&gt;. All these goals use the CSV catalog when they parse, optimize,
-pull and so on.&lt;/p&gt;
-
-&lt;p&gt;When all of them are done, &lt;code class=&quot;highlighter-rouge&quot;&gt;assemble&lt;/code&gt; checks the catalog: 
-do any &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; files still require parsing? If they do, another
-cycle starts, again with parsing. When all &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; files are parsed,
-the goal &lt;code class=&quot;highlighter-rouge&quot;&gt;transpile&lt;/code&gt; is executed, which turns &lt;code class=&quot;highlighter-rouge&quot;&gt;.xmir&lt;/code&gt; files into &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt;
-and places them into &lt;code class=&quot;highlighter-rouge&quot;&gt;target/generated-sources&lt;/code&gt;. The rest is done by the
-standard &lt;a href=&quot;https://maven.apache.org/plugins/maven-compiler-plugin/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;maven-compiler-plugin&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let’s discuss each step in detail.&lt;/p&gt;
-
-&lt;h2 id=&quot;parse-&quot;&gt;Parse 🌵&lt;/h2&gt;
-
-&lt;p&gt;Say, this is the &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; source code at &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/eo/hello.eo&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+alias org.eolang.io.stdout
-
-[] &amp;gt; hello
-  &quot;Jeff&quot; &amp;gt; user
-  stdout &amp;gt; @
-    &quot;Hello, %s!&quot;
-    user&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;It will be parsed to this XMIR (XML Intermediate Representation):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;program&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Jeff&lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;base=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stdout&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hello, %s!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;base=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/program&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;If you wonder what this XML means, read 
-&lt;a href=&quot;https://arxiv.org/abs/2111.13384&quot;&gt;this document&lt;/a&gt;:
-there is a section about XMIR.&lt;/p&gt;
-
-&lt;h2 id=&quot;optimize-&quot;&gt;Optimize 🌵&lt;/h2&gt;
-
-&lt;p&gt;At this step the XMIR produced by the parser goes through 
-many XSL transformations, sometimes getting additional elements and attributes.
-Our example XMIR may get a new attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;@ref&lt;/code&gt;, pointing the reference to the
-object &lt;code class=&quot;highlighter-rouge&quot;&gt;user&lt;/code&gt; to the line where the object was defined:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;program&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Jeff&lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;base=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stdout&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hello, %s!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;base=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ref=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/program&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Some XSL transformation may check for grammar or semantic errors and
-add a new element &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;errors/&amp;gt;&lt;/code&gt; if something wrong is found. Thus, if parsing
-didn’t find any syntax errors, all other errors will be visible inside
-the XMIR document, for example, like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;program&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;errors&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;error&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;The&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;program&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;has&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;package&amp;lt;/error&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/errors&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hello&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Jeff&lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;base=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stdout&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;string&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hello, %s!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;o&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;base=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;user&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;line=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ref=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/o&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/program&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;By the way, this is not a real error, I just made it up.&lt;/p&gt;
-
-&lt;h2 id=&quot;discover-&quot;&gt;Discover 🌵&lt;/h2&gt;
-
-&lt;p&gt;At this step we find out which objects are “foreign”. In our example,
-the object &lt;code class=&quot;highlighter-rouge&quot;&gt;user&lt;/code&gt; is not foreign, since it’s defined in the code we
-have in front of us, while the object &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; is not defined here and
-that’s why is a foreign one.&lt;/p&gt;
-
-&lt;p&gt;Going through all &lt;code class=&quot;highlighter-rouge&quot;&gt;.xmir&lt;/code&gt; files we can easily judge which object is foreign just
-by looking at their names. Once we see the reference to &lt;code class=&quot;highlighter-rouge&quot;&gt;org.eolang.io.stdout&lt;/code&gt;,
-we check the presence of the file &lt;code class=&quot;highlighter-rouge&quot;&gt;org/eolang/io/stdout.eo&lt;/code&gt; in the directory
-with all &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources. If the file is absent, we put the object name
-into the CSV catalog and claim it to be foreign.&lt;/p&gt;
-
-&lt;h2 id=&quot;pull&quot;&gt;Pull&lt;/h2&gt;
-
-&lt;p&gt;Here we simply try to find source code &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; files for all foreign
-objects in Objectionary, by looking at its 
-&lt;a href=&quot;https://github.com/yegor256/objectionary&quot;&gt;GitHub repository&lt;/a&gt;. 
-For example, this is where we would find
-&lt;a href=&quot;https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stdout.eo&lt;/code&gt;&lt;/a&gt;.
-We find them there and pull to the local disc.&lt;/p&gt;
-
-&lt;p&gt;Pay attention, we pull the sources. Not binaries or compiled XMIR
-documents, but the sources in &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; format.&lt;/p&gt;
-
-&lt;h2 id=&quot;resolve-&quot;&gt;Resolve 🌵&lt;/h2&gt;
-
-&lt;p&gt;This is what &lt;a href=&quot;https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stdout.eo&lt;/code&gt;&lt;/a&gt;
-may look like, after the pull:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;+package org.eolang.io
-+rt jvm org.eolang:eo-runtime:0.10.2
-
-[text] &amp;gt; stdout /bool&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The object is an &lt;em&gt;atom&lt;/em&gt;. This means that even though we have its source code,
-it’t not complete without a piece of platform-specific binary code.
-An atom is an object implemented by the runtime
-platform, where the EO program is executed (also known
-as &lt;a href=&quot;https://en.wikipedia.org/wiki/Foreign_function_interface&quot;&gt;FFI mechanism&lt;/a&gt;).
-The line that starts with &lt;code class=&quot;highlighter-rouge&quot;&gt;+rt&lt;/code&gt; (runtime) explains where to get the
-runtime code. The &lt;code class=&quot;highlighter-rouge&quot;&gt;jvm&lt;/code&gt; part is the name of the runtime.&lt;/p&gt;
-
-&lt;p&gt;We go to &lt;a href=&quot;https://search.maven.org/&quot;&gt;Maven Central&lt;/a&gt;, find there the artifact 
-&lt;a href=&quot;https://search.maven.org/artifact/org.eolang/eo-runtime&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;org.eolang:eo-runtime:0.10.2&lt;/code&gt;&lt;/a&gt;,
-and unpack it (it’s a zip archive with &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files after all).&lt;/p&gt;
-
-&lt;p&gt;By the way, a program may contain a number of &lt;code class=&quot;highlighter-rouge&quot;&gt;+rt&lt;/code&gt; meta instructions, for example:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+package org.eolang.io
-+rt jvm org.eolang:eo-runtime:0.10.2
-+rt ruby eo-core:0.5.8
-+rt python eo-basics:0.0.3
-
-[text] &amp;gt; stdout /bool&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Here, three runtime platforms will know where to get the missing code
-for the &lt;code class=&quot;highlighter-rouge&quot;&gt;stdout&lt;/code&gt; atom:
-EO➝Java will go to &lt;a href=&quot;https://search.maven.org/&quot;&gt;Maven Central&lt;/a&gt; for the JAR artifact,
-EO➝Ruby will go to &lt;a href=&quot;https://rubygems.org/&quot;&gt;RubyGems&lt;/a&gt; 
-trying to find the gem by the name &lt;code class=&quot;highlighter-rouge&quot;&gt;eo-core&lt;/code&gt; and version &lt;code class=&quot;highlighter-rouge&quot;&gt;0.5.8&lt;/code&gt;,
-while EO➝Python will go to &lt;a href=&quot;https://pypi.org/&quot;&gt;PyPi&lt;/a&gt; 
-trying to find &lt;code class=&quot;highlighter-rouge&quot;&gt;eo-basics&lt;/code&gt; package with the version &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.3&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;place-&quot;&gt;Place 🌵&lt;/h2&gt;
-
-&lt;p&gt;Next we place all &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files found in the unpacked JAR,
-into the &lt;code class=&quot;highlighter-rouge&quot;&gt;target/classes&lt;/code&gt; directory. We do this in order 
-to help Maven Compiler Plugin find them in classpath.&lt;/p&gt;
-
-&lt;h2 id=&quot;mark-&quot;&gt;Mark 🌵&lt;/h2&gt;
-
-&lt;p&gt;In each JAR file that arrives we can find &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources. They are the programs
-this JAR file has had in classpath while it was built. We consider them
-as foreign objects too and add to the CSV catalog.&lt;/p&gt;
-
-&lt;h2 id=&quot;transpile-&quot;&gt;Transpile 🌵&lt;/h2&gt;
-
-&lt;p&gt;When all foreign objects which are registered in the catalog are downloaded,
-compiled, and optimized, we are ready to start 
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Source-to-source_compiler&quot;&gt;&lt;em&gt;transpiling&lt;/em&gt;&lt;/a&gt;.
-Instead of compiling XMIR directly to Bytecode, we transpile it to &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt;
-and let Java complier do the job of generating Bytecode.&lt;/p&gt;
-
-&lt;p&gt;We believe that there are a few benefits of transpiling to Java vs. compilation to Bytecode:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Output code is easier to read and debug,&lt;/li&gt;
-  &lt;li&gt;Optimization power of existing compilers is reused,&lt;/li&gt;
-  &lt;li&gt;Complexity of a transpiler is lower than of a compiler,&lt;/li&gt;
-  &lt;li&gt;Portability of the output code is higher.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We already have two EO➝Java transpilers: 
-&lt;a href=&quot;https://github.com/cqfn/eo&quot;&gt;canonical one&lt;/a&gt; and 
-&lt;a href=&quot;https://github.com/polystat/hse-transpiler&quot;&gt;the one&lt;/a&gt; made by &lt;a href=&quot;https://www.hse.ru/en/&quot;&gt;HSE University&lt;/a&gt;. 
-We also have EO➝Python experimental &lt;a href=&quot;https://github.com/polystat/eo2py&quot;&gt;transpiler&lt;/a&gt; 
-made by students of &lt;a href=&quot;https://innopolis.university/en/&quot;&gt;Innopolis University&lt;/a&gt;. 
-Most probably, when you read this article, there will be more transpilers available.&lt;/p&gt;
-
-&lt;p&gt;Even though we believe in transpiling, it’s still possible to create 
-EO➝Bytecode, EO➝LLVM, or EO➝x86 compilers. 
-You are more than welcome to try!&lt;/p&gt;
-
-&lt;h2 id=&quot;compile&quot;&gt;Compile&lt;/h2&gt;
-
-&lt;p&gt;At this step, the standard &lt;a href=&quot;https://maven.apache.org/plugins/maven-compiler-plugin/&quot;&gt;Maven Compiler Plugin&lt;/a&gt; 
-finds auto-generated &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt; files in &lt;code class=&quot;highlighter-rouge&quot;&gt;target/generated-sources&lt;/code&gt;
-and turns them into &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files.&lt;/p&gt;
-
-&lt;h2 id=&quot;unplace-&quot;&gt;Unplace 🌵&lt;/h2&gt;
-
-&lt;p&gt;Here, we remove all &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files unpacked from dependencies. This is
-necessary, in order to avoid getting them packaged into the 
-final JAR.&lt;/p&gt;
-
-&lt;p&gt;We do placing and then unplacing simply because Maven Compiler Plugin
-&lt;a href=&quot;https://stackoverflow.com/questions/3410548&quot;&gt;doesn’t allow&lt;/a&gt; 
-us to extend classpath in runtime. If it would be possible,
-we would just download dependencies from Maven Central and add them
-to classpath, without unpacking, placing, and then unplacing.&lt;/p&gt;
-
-&lt;h2 id=&quot;unspile-&quot;&gt;Unspile 🌵&lt;/h2&gt;
-
-&lt;p&gt;Here, we delete all &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files from the &lt;code class=&quot;highlighter-rouge&quot;&gt;target/classes/&lt;/code&gt; directory,
-which were auto-generated from &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt;. We don’t want to ship binaries,
-which can be generated from &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources. We only want to ship 
-atoms, which are &lt;code class=&quot;highlighter-rouge&quot;&gt;.java&lt;/code&gt; files originally.&lt;/p&gt;
-
-&lt;h2 id=&quot;copy-&quot;&gt;Copy 🌵&lt;/h2&gt;
-
-&lt;p&gt;At this step we take all &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources from &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/eo/&lt;/code&gt; and copy
-them to &lt;code class=&quot;highlighter-rouge&quot;&gt;target/classes/EO-SOURCES/&lt;/code&gt; directory. Later, they will be
-packaged together with &lt;code class=&quot;highlighter-rouge&quot;&gt;.class&lt;/code&gt; files into a &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt;, which will be
-deployed to Maven Central. While copying, we replace &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.0&lt;/code&gt; in the
-runtime version to the currently deploying version. Take a look 
-at the file &lt;a href=&quot;https://github.com/cqfn/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stdout.eo&lt;/code&gt;&lt;/a&gt;, 
-in its source repository:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;+package org.eolang.io
-+rt jvm org.eolang:eo-runtime:0.0.0
-
-[text] &amp;gt; stdout /bool&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The version at the &lt;code class=&quot;highlighter-rouge&quot;&gt;+rt&lt;/code&gt; line is &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.0&lt;/code&gt;. When sources are copied to the 
-JAR, this text is replaced.&lt;/p&gt;
-
-&lt;p&gt;The motivation to ship sources together with binaries is the following.
-When atom binaries are compiled from Java to Bytecode, they stay
-next to transpiled sources. They are compiled together. Moreover,
-unit tests also rely on both atom sources and auto-generated/transpiled
-sources. We want future users of the JAR to know what sources we
-had in place when the compilation was going on, to maybe let them reproduce
-it or at least know what were the surroundings of the binaries they get.&lt;/p&gt;
-
-&lt;p&gt;From a more practical standpoint, we need these sources in the JAR
-in order to let the &lt;strong&gt;Mark&lt;/strong&gt; step understand what objects
-are worth pulling next to the atoms resolved.&lt;/p&gt;
-
-&lt;h2 id=&quot;deploy&quot;&gt;Deploy&lt;/h2&gt;
-
-&lt;p&gt;Here, we package everything from &lt;code class=&quot;highlighter-rouge&quot;&gt;target/classes/&lt;/code&gt; into a JAR
-archive and &lt;a href=&quot;/2014/08/19/how-to-release-to-maven-central.html&quot;&gt;deploy&lt;/a&gt;  it
-to Maven Central.&lt;/p&gt;
-
-&lt;p&gt;I suggest deploying sources to GitHub Pages too, to let users see
-them on the Web. Also, it will be helpful later when we make a pull 
-request to Objectionary. 
-Check this &lt;a href=&quot;https://github.com/yegor256/eo-files/blob/master/.rultor.yml#L17-L31&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.rultor.yml&lt;/code&gt;&lt;/a&gt; 
-script in one of my EO libraries, it deploys &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources to GitHub Pages,
-substituting &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.0&lt;/code&gt; version markers in them correctly.&lt;/p&gt;
-
-&lt;h2 id=&quot;push&quot;&gt;Push&lt;/h2&gt;
-
-&lt;p&gt;When the deployment is finished and Maven Central updates its CDN servers,
-it’s time to submit a pull request to &lt;a href=&quot;https://github.com/yegor256/objectionary&quot;&gt;yegor256/objectionary&lt;/a&gt;.
-The &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources of objects go into &lt;code class=&quot;highlighter-rouge&quot;&gt;objects/&lt;/code&gt; and their unit tests
-go into &lt;code class=&quot;highlighter-rouge&quot;&gt;tests/&lt;/code&gt;. Basically, we just copy &lt;code class=&quot;highlighter-rouge&quot;&gt;src/main/eo/&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;src/test/eo&lt;/code&gt;
-over there. But, stop… one important detail. In the sources, as was said earlier,
-we have &lt;code class=&quot;highlighter-rouge&quot;&gt;+rt&lt;/code&gt; versions set to &lt;code class=&quot;highlighter-rouge&quot;&gt;0.0.0&lt;/code&gt;. Here, when we copy to Objectionary,
-versions must be set to real numbers.&lt;/p&gt;
-
-&lt;h2 id=&quot;merge&quot;&gt;Merge&lt;/h2&gt;
-
-&lt;p&gt;When the pull request arrives, a GitHub Action pre-configured in the
-&lt;a href=&quot;https://github.com/yegor256/objectionary&quot;&gt;yegor256/objectionary&lt;/a&gt; repository
-transpiles all &lt;code class=&quot;highlighter-rouge&quot;&gt;.eo&lt;/code&gt; sources to all known platforms and runs all unit tests.
-If everything is clean, we review the pull request and decide whether
-the objects suggested go along with others already present in the Objectionary.&lt;/p&gt;
-
-&lt;p&gt;Once the pull request is merged, the objects become part of the centralized
-dictionary of all objects of EO. Take a look at &lt;a href=&quot;https://github.com/yegor256/objectionary/pull/2&quot;&gt;this pull request&lt;/a&gt;, 
-where a new object was submitted to Objectionary, after its atom was
-deployed to Maven Central.&lt;/p&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html">Since the time of Kernighan and Ritchie we share binary code in libraries. You need to print some text with printf() in C++? You get libc library with 700+ other functions inside. You need to copy a Java stream? You get Apache Commons IO with copy() and 140+ other methods and classes. The same happens in all languages I’m aware of, like Ruby, Python, JavaScript, PHP: you need an object, or a class, or a function, or a method—you have to add the entire library to your build. Wouldn’t it be more elegant to deal with individual objects instead?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/10/maend-and-hons.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html">A few months ago I got an opportunity to teach a single course for 3rd-year BSc students at Innopolis University (Russia). The title was “System Software Design.” The size of the group was about 150 people and the duration was 8 weeks. I was supposed to give them sixteen lectures, two lectures per week. And I was asked to examine their knowledge by the end of the course. Pretty much a normal job for a university teacher. And you know, in my opinion, I failed most parts of it. Here is what I learned.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2021/11/die-welle.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2021/11/die-welle.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

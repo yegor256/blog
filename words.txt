@@ -61,6 +61,7 @@ achieves
 achieving
 acknowledge
 acknowledgements
+acknowledgments
 ACM
 ACME
 acquire
@@ -211,6 +212,7 @@ alexey
 algorithm
 algorithm-writing
 algorithmic
+algorithmically
 algorithms
 aliases
 align
@@ -362,6 +364,7 @@ anything
 anyway
 anywhere
 AOP
+APA
 apache
 apart
 apartment
@@ -377,6 +380,7 @@ appearance
 appeared
 appearing
 appears
+appendices
 apple
 apples
 applicability
@@ -794,6 +798,7 @@ beyond
 bhuwan
 bi-sexuals
 biased
+biblatex
 bible
 bibrarian
 bicycle
@@ -1028,6 +1033,7 @@ buildstuff
 built
 built-in
 bukharov
+bulb
 bullet
 bullet-fast
 bullshit
@@ -1342,6 +1348,8 @@ CircleCI
 circles
 circulating
 circumstances
+citation
+citations
 cities
 citing
 citizen
@@ -1367,6 +1375,7 @@ classics
 classification
 classified
 classifier
+classify
 classifying
 classmate
 classpath
@@ -1432,6 +1441,7 @@ CNAME
 CNL
 CNN
 co
+co-authoring
 co-developers
 co-discoverer
 co-found
@@ -1794,6 +1804,7 @@ contributed
 contributes
 contributing
 contribution
+contributions
 contributor
 contributors
 control
@@ -2058,6 +2069,7 @@ data
 data-driven
 data-modifying
 data-related
+data-set
 database
 database-connected
 databases
@@ -2148,6 +2160,7 @@ decreasing
 decrements
 decrypt
 decrypted
+decrypting
 dedicate
 dedicated
 deem
@@ -2318,6 +2331,7 @@ developers
 developers'
 developing
 development
+device
 devil
 devious
 devop
@@ -2463,6 +2477,7 @@ dispatching
 display
 displays
 disposal
+disputable
 dispute
 disputes
 disqualified
@@ -2679,6 +2694,7 @@ ecosystem
 ed
 eden
 edge
+edison
 edit
 editable
 edith
@@ -2876,6 +2892,7 @@ entries
 entropy
 entrusting
 entry
+enumerate
 enumeration
 enumerations
 enumerator
@@ -3331,6 +3348,7 @@ flow
 flowers
 flows
 fluent
+fluently
 flushing
 fly
 flyer
@@ -3679,6 +3697,8 @@ graduated
 graduation
 grady
 graham
+grain
+grammar
 grammarly
 grandchildren
 grandma
@@ -4049,6 +4069,7 @@ hurts
 hybrid
 hyperlinear
 hypotheses
+hypothesis
 hysteria
 hysterical
 i'd
@@ -4262,6 +4283,7 @@ info
 infoq
 inform
 informal
+informally
 information
 informational
 informative
@@ -4394,6 +4416,7 @@ interface
 interfaces
 interfere
 interior
+intermediate
 internal
 internally
 internals
@@ -4401,6 +4424,7 @@ international
 internationalist
 internet
 interpersonal
+interpret
 interpretation
 interpreted
 interpreter
@@ -4489,6 +4513,7 @@ irresponsible
 irreversible
 irritate
 is
+isaac
 ISBN
 isn't
 ISO
@@ -4672,6 +4697,7 @@ justification
 justifications
 justified
 justify
+justin
 JVM
 kaicode
 kalanick
@@ -4882,6 +4908,7 @@ legalized
 legally
 legible
 legit
+lemmas
 len
 lending
 length
@@ -5533,6 +5560,7 @@ most
 mostly
 mother
 mothers
+motion
 motionless
 motivate
 motivated
@@ -5713,6 +5741,7 @@ newly
 newrelic
 news
 newsletter
+newton
 next
 NFRs
 nginx
@@ -6087,6 +6116,7 @@ overflow
 overflows
 overhead
 overlap
+overleaf
 overload
 overloaded
 overloading
@@ -7882,6 +7912,7 @@ signals
 signature
 signatures
 signed
+significance
 significant
 significantly
 signing
@@ -8725,6 +8756,7 @@ them
 themselves
 then
 theorem
+theorems
 theoretical
 theories
 theory
@@ -8735,6 +8767,7 @@ thereby
 therefore
 thermometer
 these
+thesis
 they
 they'd
 they'll
@@ -8849,6 +8882,7 @@ too
 took
 tool
 tool-belt
+toolkit
 tools
 top
 top-down
@@ -9742,6 +9776,7 @@ zillow
 ZIP
 ziyavakhobov
 ziyavuddin
+zobel
 zold
 zold-io
 zombie
