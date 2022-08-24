@@ -150,7 +150,7 @@ Discuss unanswered questions and suggest topics for future studies.
 
 ## Conclusion
 
-Spend one paragraph to explain how your research question was answered
+Spend one paragraph explaining how your research question was answered
 in this paper. Imagine the reader just reads the Introduction and
 then immediately this Conclusion. It should read fluently.
 
