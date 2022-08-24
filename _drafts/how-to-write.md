@@ -26,7 +26,7 @@ So far, my results are very poor: way more rejections than I expected.
 The key lesson I've learned so far: the reason most papers get rejected
 is not because they are essentially wrong. Instead, reviewers reject them
 because they have no enthusiasm for decrypting a poorly structured text,
-even though it may contain potentially interesting throughts.
+even though it may contain potentially interesting thoughts.
 In this blog post I suggest how to structure a [research paper](https://en.wikipedia.org/wiki/Research_paper).
 Take it with a grain of salt though.
 
@@ -53,7 +53,7 @@ I [suggest](https://www.youtube.com/watch?v=TF8MKOfo3gI) the following rule:
 The first author in the list is you.
 The last one is your boss.
 Key contributors stay in the middle, in alphabetic order of their last names.
-Everybody else is listed in the Acknowledgements section.
+Everybody else is listed in the Acknowledgments section.
 
 ## Abstract
 
@@ -78,7 +78,7 @@ Next, make a disputable [Thesis Statement](https://writingcenter.unc.edu/tips-an
 Then, enumerate the Contributions that your article makes to science.
 A Contribution is something tangible, which a reader can take from your study
 and use somehow in their own studies.
-A theorem, a method, a toolkit, a dataset, or an algorithm are good examples of a Contribution.
+A theorem, a method, a toolkit, a data-set, or an algorithm are good examples of a Contribution.
 
 Finally, help your reader understand how the rest of the paper is structured and why.
 
@@ -120,7 +120,7 @@ If you extend, describe the Device and its usage scenarios.
 
 ## Proof
 
-Formaly prove that your Device posesses certain qualities, predicted in the Hypothesis.
+Formally prove that your Device possesses certain qualities, predicted in the Hypothesis.
 
 The section mostly consists of definitions, examples, lemmas, theorems, and proofs.
 
@@ -154,9 +154,9 @@ Spend one paragraph to explain how your research question was answered
 in this paper. Imagine the reader just reads the Introduction and
 then immediately this Conclusion. It should read fluently.
 
-This paragraph is a shoft version of the Discussion.
+This paragraph is a short version of the Discussion.
 
-## Acknowledgements
+## Acknowledgments
 
 Here, you say "many thanks to individuals and organizations that
 contributed to the research, including ..." You list them all, in
