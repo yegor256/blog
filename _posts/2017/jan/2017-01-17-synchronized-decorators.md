@@ -35,7 +35,7 @@ be thread-safe, while all of them have to provide synchronized decorators.
 Let's start with an example (it's
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), by the way):
 
-{% highlight java %}
+```java
 class Position {
   private int number = 0;
   @Override
@@ -45,7 +45,7 @@ class Position {
     this.number = after;
   }
 }
-{% endhighlight %}
+```
 
 What do you think---is it [thread-safe](https://en.wikipedia.org/wiki/Thread_safety)?
 This term refers to whether
@@ -73,7 +73,7 @@ at the same time, they will all go sequentially, not in parallel: one
 thread after another. Of course, it will take longer, but it will prevent
 that mistake from happening:
 
-{% highlight java %}
+```java
 class Position {
   private int number = 0;
   @Override
@@ -83,7 +83,7 @@ class Position {
     this.number = after;
   }
 }
-{% endhighlight %}
+```
 
 A class that guarantees it won't break no matter how many threads
 are working with it is called **thread-safe**.
@@ -100,7 +100,7 @@ I think the right approach is to have two classes. The first one
 is not thread-safe, while the other one is a **synchronized decorator**,
 which would look like this:
 
-{% highlight java %}
+```java
 class SyncPosition implements Position {
   private final Position origin;
   SyncPosition(Position pos) {
@@ -111,22 +111,22 @@ class SyncPosition implements Position {
     this.origin.increment();
   }
 }
-{% endhighlight %}
+```
 
 Now, when we need our `position` object to be thread-safe, we decorate
 it with `SyncPosition`:
 
-{% highlight java %}
+```java
 Position position = new SyncPosition(
   new SimplePosition()
 );
-{% endhighlight %}
+```
 
 When we need a plain simple position, without any thread safety, we do this:
 
-{% highlight java %}
+```java
 Position position = new SimplePosition();
-{% endhighlight %}
+```
 
 Making class functionality both rich _and_ thread-safe is, in my opinion,
 a violation of that famous

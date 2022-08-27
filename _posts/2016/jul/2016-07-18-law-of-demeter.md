@@ -46,7 +46,7 @@ Section 3 in that PDF document):
 
 Say it's a Java class:
 
-{% highlight java %}
+```java
 class C {
   private B b;
   void m(A a) {
@@ -56,7 +56,7 @@ class C {
     new Z().hello();
   }
 }
-{% endhighlight %}
+```
 
 All four calls to four different `hello()` methods are legal, according
 to the LoD. So what would be illegal, I ask myself? No surprise;

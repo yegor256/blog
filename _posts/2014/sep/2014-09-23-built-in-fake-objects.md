@@ -41,22 +41,22 @@ Take the `Region` interface from [jcabi-dynamo](http://dynamo.jcabi.com) as an e
 (this snippet and all others in this article are simplified, for the
 sake of brevity):
 
-{% highlight java %}
+```java
 public interface Region {
   Table table(String name);
 }
-{% endhighlight %}
+```
 
 Its `table()` method returns an instance of the `Table` interface, which
 has its own methods:
 
-{% highlight java %}
+```java
 public interface Table {
   Frame frame();
   Item put(Attributes attrs);
   Region region();
 }
-{% endhighlight %}
+```
 
 Interface `Frame`, returned by the `frame()` method, also has its
 own methods. And so on.
@@ -64,7 +64,7 @@ In order to create a properly mocked instance of interface `Region`,
 one would normally create a dozen other mock objects. With [Mockito](http://mockito.org)
 it will look like this:
 
-{% highlight java %}
+```java
 public void testMe() {
   // many more lines here...
   Frame frame = Mockito.mock(Frame.class);
@@ -74,7 +74,7 @@ public void testMe() {
   Region region = Mockito.mock(Region.class);
   Mockito.doReturn(table).when(region).table(Mockito.anyString());
 }
-{% endhighlight %}
+```
 
 And all of this is just a
 [scaffolding]({% pst 2015/may/2015-05-25-unit-test-scaffolding %})
@@ -86,7 +86,7 @@ Let's say, you're developing a project that uses jcabi-dynamo for
 managing data in [DynamoDB](https://aws.amazon.com/dynamodb/).
 Your class may look similar to this:
 
-{% highlight java %}
+```java
 public class Employee {
   private final String name;
   private final Region region;
@@ -107,7 +107,7 @@ public class Employee {
     );
   }
 }
-{% endhighlight %}
+```
 
 You can imagine how difficult it will be to unit test this class,
 using Mockito, for example. First, we have
@@ -138,7 +138,7 @@ together with production code, in the same JAR package.
 
 This is what a test will look like, when a fake class `MkRegion` is used:
 
-{% highlight java %}
+```java
 public class EmployeeTest {
   public void canFetchSalaryFromDynamoDb() {
     Region region = new MkRegion(
@@ -156,7 +156,7 @@ public class EmployeeTest {
     assertThat(emp.salary(), equalTo(50000));
   }
 }
-{% endhighlight %}
+```
 
 This test looks obvious to me. First, we create a fake DynamoDB region,
 which works on top of `H2Data` storage (in-memory H2 database). The storage

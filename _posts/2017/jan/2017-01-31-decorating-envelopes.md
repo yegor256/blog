@@ -37,7 +37,7 @@ Take a look at
 from [Takes Framework](http://www.takes.org). Its design looks
 like this (a simplified version with only one primary constructor):
 
-{% highlight java %}
+```java
 class RsHtml extends RsWrap {
   RsHtml(final String text) {
     super(
@@ -48,13 +48,13 @@ class RsHtml extends RsWrap {
     );
   }
 }
-{% endhighlight %}
+```
 
 Now, let's take a look at that
 [`RsWrap`](https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsWrap.java)
 it extends:
 
-{% highlight java %}
+```java
 public class RsWrap implements Response {
   private final Response origin;
   public RsWrap(final Response res) {
@@ -69,7 +69,7 @@ public class RsWrap implements Response {
     return this.origin.body();
   }
 }
-{% endhighlight %}
+```
 
 As you see, this "decorator" doesn't do anything except "just decorating."
 It encapsulates another `Response` and passes through all method calls.
@@ -77,22 +77,22 @@ It encapsulates another `Response` and passes through all method calls.
 If it's not clear yet, I'll explain the purpose of `RsHtml`. Let's
 say you have text and you want to create a `Response`:
 
-{% highlight java %}
+```java
 String text = // you have it already
 Response response = new RsWithType(
   new RsWithStatus(text, HttpURLConnection.HTTP_OK),
   "text/html"
 );
-{% endhighlight %}
+```
 
 Instead of doing this
 [composition of decorators]({% pst 2015/feb/2015-02-26-composable-decorators %})
 over and over again in many places, you use `RsHtml`:
 
-{% highlight java %}
+```java
 String text = // you have it already
 Response response = new RsHtml(text);
-{% endhighlight %}
+```
 
 It is very convenient, but that `RsWrap` is very verbose. There are too many
 lines that don't do anything special; they just forward all method
@@ -101,7 +101,7 @@ calls to the encapsulated `Response`.
 How about we introduce a new concept, "decorators," with a new
 keyword, `decorates`:
 
-{% highlight java %}
+```java
 class RsHtml decorates Response {
   RsHtml(final String text) {
     this(
@@ -112,13 +112,13 @@ class RsHtml decorates Response {
     )
   }
 }
-{% endhighlight %}
+```
 
 Then, in order to create an object, we just call:
 
-{% highlight java %}
+```java
 Response response = new RsHtml(text);
-{% endhighlight %}
+```
 
 {% youtube Wcy53ZSF78o %}
 

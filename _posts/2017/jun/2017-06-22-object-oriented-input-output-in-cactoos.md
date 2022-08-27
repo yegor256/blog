@@ -47,24 +47,24 @@ Let's say you want to read a file. This is how you would do it with the static m
 [`Files`](https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html)
 in JDK7:
 
-{% highlight java %}
+```java
 byte[] content = Files.readAllBytes(
   new File("/tmp/photo.jpg").toPath()
 );
-{% endhighlight %}
+```
 
 This code is very imperative---it reads the file content right here and now,
 placing it into the array.
 
 This is how you do it with [Cactoos](https://github.com/yegor256/cactoos):
 
-{% highlight java %}
+```java
 Bytes source = new InputAsBytes(
   new FileAsInput(
     new File("/tmp/photo.jpg")
   )
 );
-{% endhighlight %}
+```
 
 Pay attention---there are no method calls yet. Just three constructors
 of three classes that compose a bigger object. The object `source` is of type
@@ -72,9 +72,9 @@ of three classes that compose a bigger object. The object `source` is of type
 and represents the content of the file. To get that content
 out of it we call its method `asBytes()`:
 
-{% highlight java %}
+```java
 bytes[] content = source.asBytes();
-{% endhighlight %}
+```
 
 This is the moment when the file system is touched. This approach, as you
 can see, is absolutely declarative and thanks to that possesses all the
@@ -84,7 +84,7 @@ Here is another example. Say you want to write some text into a file. Here
 is how you do it in Cactoos. First you need the
 [`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html):
 
-{% highlight java %}
+```java
 Input input = new BytesAsInput(
   new TextAsBytes(
     new StringAsText(
@@ -92,15 +92,15 @@ Input input = new BytesAsInput(
     )
   )
 );
-{% endhighlight %}
+```
 
 Then you need the [`Output`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html):
 
-{% highlight java %}
+```java
 Output output = new FileAsOutput(
   new File("/tmp/hello.txt")
 );
-{% endhighlight %}
+```
 
 Now, we want to copy the input to the output. There is no "copy" operation
 in _pure_ OOP. Moreover, there must be no operations at all. Just objects. We
@@ -115,9 +115,9 @@ from [Apache Commons](https://commons.apache.org/) does, but encapsulated. So we
 [`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html)
 that will copy if you _touch_ it:
 
-{% highlight java %}
+```java
 Input tee = new TeeInput(input, output);
-{% endhighlight %}
+```
 
 Now, we have to "touch" it. And we have to touch every single byte of it,
 in order to make sure they all are copied. If we just `read()` the first
@@ -129,20 +129,20 @@ It encapsulates an
 [`Input`](http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html)
 and behaves like its length in bytes:
 
-{% highlight java %}
+```java
 Scalar<Long> length = new LengthOfInput(tee);
-{% endhighlight %}
+```
 
 Then we take the value out of it and the file writing operation takes place:
 
-{% highlight java %}
+```java
 long len = length.value();
-{% endhighlight %}
+```
 
 Thus, the entire operation of writing the string to the file will
 look like this:
 
-{% highlight java %}
+```java
 new LengthOfInput(
   new TeeInput(
     new BytesAsInput(
@@ -157,17 +157,17 @@ new LengthOfInput(
     )
   )
 ).value(); // happens here
-{% endhighlight %}
+```
 
 This is its procedural alternative from
 [JDK7](https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte[],%20java.nio.file.OpenOption...%29):
 
-{% highlight java %}
+```java
 Files.write(
   new File("/tmp/hello.txt").toPath(),
   "Hello, world!".getBytes()
 );
-{% endhighlight %}
+```
 
 "Why is object-oriented better, even though it's longer?" I hear you ask.
 Because it perfectly **decouples** concepts, while the procedural one keeps
@@ -177,7 +177,7 @@ Let's say, you are designing a class that is supposed
 to encrypt some text and save it to a file. Here is how you would
 design it the procedural way (not a real encryption, of course):
 
-{% highlight java %}
+```java
 class Encoder {
   private final File target;
   Encoder(final File file) {
@@ -190,7 +190,7 @@ class Encoder {
     );
   }
 }
-{% endhighlight %}
+```
 
 Works fine, but what will happen when you decide to extend it to also write to
 an [`OutputStream`](https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html)?
@@ -200,7 +200,7 @@ That's because the design is not object-oriented.
 This is how you would do the same design, in an object-oriented way,
 with [Cactoos](http://www.cactoos.org):
 
-{% highlight java %}
+```java
 class Encoder {
   private final Output target;
   Encoder(final File file) {
@@ -224,20 +224,20 @@ class Encoder {
     ).value();
   }
 }
-{% endhighlight %}
+```
 
 What do we do with this design if we want
 [`OutputStream`](https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html)
 to be accepted? We just add one
 [secondary]({% pst 2015/may/2015-05-28-one-primary-constructor %}) constructor:
 
-{% highlight java %}
+```java
 class Encoder {
   Encoder(final OutputStream stream) {
     this(new OutputStreamAsOutput(stream));
   }
 }
-{% endhighlight %}
+```
 
 Done. That's how easy and elegant it is.
 

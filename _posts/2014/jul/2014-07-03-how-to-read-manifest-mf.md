@@ -24,11 +24,11 @@ a [`MANIFEST.MF`](http://docs.oracle.com/javase/tutorial/deployment/jar/manifest
 file in the `META-INF` directory. The file contains a list of attributes,
 which describe this particular package. For example:
 
-{% highlight text %}
+```text
 Manifest-Version: 1.0
 Created-By: 1.7.0_06 (Oracle Corporation)
 Main-Class: MyPackage.MyClass
-{% endhighlight %}
+```
 
 When your application has multiple JAR dependencies, you have multiple
 `MANIFEST.MF` files in your class path. All of them have the same location:
@@ -37,10 +37,10 @@ them in runtime and find the attribute by its name.
 
 [jcabi-manifests](http://manifests.jcabi.com) makes it possible with a one-liner:
 
-{% highlight java %}
+```java
 import com.jcabi.manifests.Manifests;
 String created = Manifests.read("Created-By");
-{% endhighlight %}
+```
 
 <!--more-->
 
@@ -56,7 +56,7 @@ with the package version name and build number. In Maven,
 can help you (almost the same configuration for
 [`maven-war-plugin`](http://maven.apache.org/plugins/maven-war-plugin/)):
 
-{% highlight xml %}
+```xml
 <plugin>
   <artifactId>maven-jar-plugin</artifactId>
   <configuration>
@@ -68,12 +68,12 @@ can help you (almost the same configuration for
     </archive>
   </configuration>
 </plugin>
-{% endhighlight %}
+```
 
 `buildnumber-maven-plugin`
 will help you to get `${buildNumber}` from Git, SVN or Mercurial:
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>buildnumber-maven-plugin</artifactId>
@@ -85,15 +85,15 @@ will help you to get `${buildNumber}` from Git, SVN or Mercurial:
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 After all these manipulations, `MANIFEST.MF`, in your JAR will
 contain these two extra lines (on top of all others added there by Maven by default):
 
-{% highlight text %}
+```text
 Foo-Version: 1.0-SNAPSHOT
 Foo-Hash: 7ef4ac3
-{% endhighlight %}
+```
 
 In runtime, you can show these values to the user to help him
 understand which version of the product he is working with at any given moment.
@@ -113,7 +113,7 @@ credentials right into the JAR/WAR archive during the
 For example, you can encode your PostgreSQL connection
 details right into `MANIFEST.MF`:
 
-{% highlight xml %}
+```xml
 <plugin>
   <artifactId>maven-war-plugin</artifactId>
   <configuration>
@@ -124,14 +124,14 @@ details right into `MANIFEST.MF`:
     </archive>
   </configuration>
 </plugin>
-{% endhighlight %}
+```
 
 Afterwards, you can retrieve them in
 runtime using [`jcabi-manifests`](http://manifests.jcabi.com):
 
-{% highlight java %}
+```java
 String url = Manifests.read("Pgsql");
-{% endhighlight %}
+```
 
 If you know of any other useful purposes for `MANIFEST.MF`, let me know :)
 

@@ -38,24 +38,24 @@ _better_.
 Say we have a <del>simple</del> primitive class `Weight`, objects of which
 represent the weight of something in kilos:
 
-{% highlight java %}
+```java
 class Weight {
   private int kilos;
   Weight(int k) {
     this.kilos = k;
   }
 }
-{% endhighlight %}
+```
 
 Next, we want two objects of the same weight to be equal to each other:
 
-{% highlight java %}
+```java
 new Weight(15).equals(new Weight(15));
-{% endhighlight %}
+```
 
 Here is how such a method may look:
 
-{% highlight java %}
+```java
 class Weight {
   private int kilos;
   Weight(int k) {
@@ -69,7 +69,7 @@ class Weight {
     return weight.kilos == this.kilos;
   }
 }
-{% endhighlight %}
+```
 
 The ugly part here is, first of all, the
 [type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
@@ -80,15 +80,15 @@ anything else to the `equals()` method, besides an instance of the
 class `Weight`. We can't turn it into an interface and introduce
 multiple implementations of it:
 
-{% highlight java %}
+```java
 interface Weight {
   boolean equals(Object obj);
 }
-{% endhighlight %}
+```
 
 This code will not work:
 
-{% highlight java %}
+```java
 class DefaultWeight implements Weight {
   // attribute and ctor skipped
   public boolean equals(Object obj) {
@@ -99,7 +99,7 @@ class DefaultWeight implements Weight {
     return weight.kilos == this.kilos; // error here!
   }
 }
-{% endhighlight %}
+```
 
 The problem is that one object decides for the other whether they are
 equal. This inevitably leads to a necessity to touch private attributes in order
@@ -113,18 +113,18 @@ compare a weight with a weight, text with text, or a user with a user---our
 CPUs can only compare numbers. Thus, we introduce a new interface
 `Digitizable`:
 
-{% highlight java %}
+```java
 interface Digitizable {
   byte[] digits();
 }
-{% endhighlight %}
+```
 
 Next, we introduce a new class `Comparison`, which _is_ the comparison of
 two streams of bytes (I'm not sure the code is perfect, I tested it
 [here](https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals),
 feel free to improve and contribute with a pull request):
 
-{% highlight java %}
+```java
 class Comparison<T extends Digitizable> {
   private T lt;
   private T rt;
@@ -154,11 +154,11 @@ class Comparison<T extends Digitizable> {
     return (int) Math.signum(result);
   }
 }
-{% endhighlight %}
+```
 
 Now, we need `Weight` to implement `Digitizable`:
 
-{% highlight java %}
+```java
 class Weight implements Digitizable {
   private int kilos;
   Weight(int k) {
@@ -170,15 +170,15 @@ class Weight implements Digitizable {
       .putInt(this.kilos).array();
   }
 }
-{% endhighlight %}
+```
 
 Finally, this is how we compare them:
 
-{% highlight java %}
+```java
 int v = new Comparison<Weight>(
   new Weight(400), new Weight(500)
 ).value();
-{% endhighlight %}
+```
 
 This `v` will either be `-1`, `0`, or `1`. In this particular case it will be `-1`,
 because `400` is less than `500`.

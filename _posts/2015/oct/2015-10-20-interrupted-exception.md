@@ -31,11 +31,11 @@ simplify it.
 
 Let's start with this code:
 
-{% highlight java %}
+```java
 while (true) {
   // Nothing
 }
-{% endhighlight %}
+```
 
 What does it do? Nothing, it just spins the CPU endlessly. Can we terminate it?
 Not in Java. It will only stop when the entire JVM stops, when you hit
@@ -45,7 +45,7 @@ and everything else will just be obvious.
 
 Let's put this endless loop into a thread:
 
-{% highlight java %}
+```java
 Thread loop = new Thread(
   new Runnable() {
     @Override
@@ -57,7 +57,7 @@ Thread loop = new Thread(
 );
 loop.start();
 // Now how do we stop it?
-{% endhighlight %}
+```
 
 So, how do we stop a thread when we need it to stop?
 
@@ -66,7 +66,7 @@ There is a flag in every thread that we can set from the outside. And
 the thread may check it occasionally and stop its execution. Voluntarily!
 Here is how:
 
-{% highlight java %}
+```java
 Thread loop = new Thread(
   new Runnable() {
     @Override
@@ -82,7 +82,7 @@ Thread loop = new Thread(
 );
 loop.start();
 loop.interrupt();
-{% endhighlight %}
+```
 
 This is the only way to ask a thread to stop. There are two methods that
 are used in this example. When I call `loop.interrupt()`, a flag
@@ -113,7 +113,7 @@ if it is set. For example, this is how the method
 [`Thread.sleep()`](http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#sleep%28long%29)
 is designed (taking a very primitive approach):
 
-{% highlight java %}
+```java
 public static void sleep(long millis)
   throws InterruptedException {
   while (/* You still need to wait */) {
@@ -123,7 +123,7 @@ public static void sleep(long millis)
     // Keep waiting
   }
 }
-{% endhighlight %}
+```
 
 Why is it done this way? Why can't it just wait and never check the flag?
 Well, I believe it's done for a good reason. And the reason is the following
@@ -141,13 +141,13 @@ exception. Its design
 tells you that if you want to pause for a few milliseconds, make your
 code interruption-ready. This is how it looks in practice:
 
-{% highlight java %}
+```java
 try {
   Thread.sleep(100);
 } catch (InterruptedException ex) {
   // Stop immediately and go home
 }
-{% endhighlight %}
+```
 
 Well, you could let it float up to a higher level, where they will be
 responsible for catching it. The point is that someone will have to
@@ -164,7 +164,7 @@ it takes to wrap up what you're doing and exit.
 
 Now, look again at the code of `Thread.sleep()`:
 
-{% highlight java %}
+```java
 public static void sleep(long millis)
   throws InterruptedException {
   while (/* ... */) {
@@ -173,7 +173,7 @@ public static void sleep(long millis)
     }
   }
 }
-{% endhighlight %}
+```
 
 Remember, `Thread.interrupted()` not only returns the flag but also
 sets it to `false`. Thus, once `InterruptedException` is thrown, the
@@ -194,13 +194,13 @@ asking us to stop, and we just ignore it. That's a very bad idea.
 
 This is what most of us are doing with `InterruptedException`:
 
-{% highlight java %}
+```java
 try {
   Thread.sleep(100);
 } catch (InterruptedException ex) {
   throw new RuntimeException(ex);
 }
-{% endhighlight %}
+```
 
 It looks logical, but it doesn't guarantee that the higher level will
 actually stop everything and exit. They may just catch a runtime exception
@@ -215,14 +215,14 @@ We can't treat such a serious situation so loosely.
 
 This is what we have to do:
 
-{% highlight java %}
+```java
 try {
   Thread.sleep(100);
 } catch (InterruptedException ex) {
   Thread.currentThread().interrupt(); // Here!
   throw new RuntimeException(ex);
 }
-{% endhighlight %}
+```
 
 We're setting the flag back to `true`!
 

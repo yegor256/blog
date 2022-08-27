@@ -24,7 +24,7 @@ satisfied fully all of my requirements. Maybe, I'm too demanding. Still, this is
 how my [jcabi-http](http://http.jcabi.com/) client interacts when you make an
 HTTP request and expect a successful HTML page in return:
 
-{% highlight java %}
+```java
 String html = new JdkRequest("https://www.google.com")
   .uri().path("/users").queryParam("id", 333).back()
   .method(Request.GET)
@@ -33,7 +33,7 @@ String html = new JdkRequest("https://www.google.com")
   .as(RestResponse.class)
   .assertStatus(HttpURLConnection.HTTP_OK)
   .body();
-{% endhighlight %}
+```
 
 I designed this new client with the following requirements in mind:
 
@@ -46,7 +46,7 @@ easy to use. In most cases, I need only to make an HTTP request and parse the
 JSON response to return a value. For example, this is how I use the new client
 to return a current EUR rate:
 
-{% highlight java %}
+```java
 String uri = "http://www.getexchangerates.com/api/latest.json";
 String rate = new JdkRequest(uri)
   .header("Accept", "application/json")
@@ -54,7 +54,7 @@ String rate = new JdkRequest(uri)
   .as(JsonResponse.class)
   .json().readArray().getJsonObject(0)
   .getString("EUR");
-{% endhighlight %}
+```
 
 I assume that the above is easy to understand and maintain.
 
@@ -94,12 +94,12 @@ In the future, it will be possible to introduce new implementations without brea
 
 Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:
 
-{% highlight java %}
+```java
 String uri = "http://www.google.com";
 Response page;
 page = new JdkRequest(uri).fetch();
 page = new ApacheRequest(uri).fetch();
-{% endhighlight %}
+```
 
 ## XML and JSON Out-of-the-Box
 
@@ -113,13 +113,13 @@ output to take care of formatting issues.
 and it's possible to add more formats in the future as needed. For example, you
 can fetch XML and retrieve a string value from its element:
 
-{% highlight java %}
+```java
 String name = new JdkRequest("http://my-api.example.com")
   .header("Accept", "text/xml")
   .fetch()
   .as(XmlResponse.class)
   .xml().xpath("/root/name/text()").get(0);
-{% endhighlight %}
+```
 
 Basically, the response produced by `fetch()` is decorated by `XmlResponse`. This then exposes the `xml()` method that returns an instance of the [`XML`](http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html) interface.
 

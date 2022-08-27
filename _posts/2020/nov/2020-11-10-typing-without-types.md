@@ -40,21 +40,21 @@ For example, this is a place where we expect an instance of
 Java [interface](https://docs.oracle.com/javase/tutorial/java/concepts/interface.html)
 `Book` to arrive:
 
-{% highlight java %}
+```java
 void print(Book b) {
   System.out.printf(
     "The ISBN is: %s%n", b.isbn()
   );
 }
-{% endhighlight %}
+```
 
 The type `Book` may look like this:
 
-{% highlight java %}
+```java
 interface Book {
   String isbn();
 }
-{% endhighlight %}
+```
 
 If an object that doesn't `implement` the interface `Book` is passed
 to the method `print()`, the compiler will complain
@@ -62,10 +62,10 @@ with the "type mismatch" error. It will be hard for a programmer to make
 a mistake and pass an object of type, say, `Car` to the method `print()`.
 However, it will still be possible, via dynamic type casting:
 
-{% highlight java %}
+```java
 Car car = new Car("Mercedes-Benz G63");
 print(Book.class.cast(car)); // Here!
-{% endhighlight %}
+```
 
 This code will compile without issues, but at runtime the
 [`ClassCastException`](https://docs.oracle.com/javase/7/docs/api/java/lang/ClassCastException.html)
@@ -79,11 +79,11 @@ Weak typing [proponents](https://softwareengineering.stackexchange.com/questions
 complain about this a lot and create languages like Ruby,
 which don't have types at all, for example:
 
-{% highlight ruby %}
+```ruby
 def print(b)
   puts(format("This is ISBN: %s", b.isbn))
 end
-{% endhighlight %}
+```
 
 Here, the function `print()` doesn't expect `b` to be of any
 particular type. Whatever comes in---is fine. Later, when it's
@@ -100,13 +100,13 @@ rid of types all together and letting the compiler infer type
 information from the code that works with the objects? Here is our
 code again:
 
-{% highlight java %}
+```java
 void print(Book b) {
   System.out.printf(
     "The ISBN is: %s%n", b.isbn()
   );
 }
-{% endhighlight %}
+```
 
 Think about this: at compile time it's already obvious that `b` must have
 _at least_ one method `isbn()`. No need to force programmers to define

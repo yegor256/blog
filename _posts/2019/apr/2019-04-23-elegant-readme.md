@@ -40,11 +40,11 @@ Why include these? The title is already in the URL of your repo and the descript
 of the project is in the GitHub subtitle. Why repeat yourself? Instead,
 start with a logo and a list of badges right after it:
 
-{% highlight text %}
+```text
 <img src="http://www.takes.org/logo.png" height="64px"/>
 
 [![Build Status](https://travis-ci.org/zold-io/zold.svg?branch=master)](https://travis-ci.org/zold-io/zold)
-{% endhighlight %}
+```
 
 Pay attention to the empty line after the logo. Don't forget to specify
 the size of the image in the `height` attribute. You can skip the `width`,
@@ -81,7 +81,7 @@ about. Pay attention: a _paragraph_, not a page of text. You should put
 the description of the product in one single paragraph. No bullets here,
 no new lines, no indentations. Just a plain simple piece of text:
 
-{% highlight text %}
+```text
 **Takes** is a
 [true object-oriented](https://www.yegor256.com/2014/11/20/seven-virtues-of-good-object.html)
 and [immutable](https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html)
@@ -90,7 +90,7 @@ comparing to all others, include four fundamental principles:
 1) not a single `null`, 2) not a single `public` `static`
 method, 3) not a single mutable class, and 4) not
 a single `instanceof` keyword, type casting, or reflection.
-{% endhighlight %}
+```
 
 Pay attention, there are no headings yet. Just a logo, a few lines with badges
 and some plain text with the description of the product. You may, and should,
@@ -107,22 +107,22 @@ page because a friend of mine told me that it's great and I want to understand
 if it's worth it or whether I should close it right now. You have my attention for another
 60 seconds. Tell me _how to try it_! Something like this:
 
-{% highlight text %}
+```text
 First, you install it:
 
-{% highlight text %}
+```text
 $ gem install zold
-{% endhighlight %}
+```
 
 Then, you run it and follow the instructions:
 
-{% highlight text %}
+```text
 $ zold --help
-{% endhighlight %}
+```
 
 It should be clear what to do. If not, ask us in
 our [Telegram chat](https://t.me/zold_io).
-{% endhighlight %}
+```
 
 Pay attention to the formatting. I don't indent anything and I use triple-apostrophe
 for code-sample formatting. You should do the same. Separate text blocks with

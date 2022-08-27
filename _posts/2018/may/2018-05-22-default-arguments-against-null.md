@@ -36,12 +36,12 @@ I will suggest one more "best practice" on top of what
 
 Look at this code:
 
-{% highlight java %}
+```java
 Integer max(List<Integer> items) {
   // Calculate the maximum of all
   // items and return it.
 }
-{% endhighlight %}
+```
 
 What should this method do if the list is empty?
 Java's [`Collections.max()`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-)
@@ -63,13 +63,13 @@ An exception, if you ask me.
 
 But there is yet another approach, which is better than an exception. This one:
 
-{% highlight java %}
+```java
 Integer max(List<Integer> items, Integer def) {
   // Calculate the maximum of all
   // items and return it. Returns 'def' if the
   // list is empty.
 }
-{% endhighlight %}
+```
 
 The "default" object will be returned if the list is empty. This feature
 is implemented in Python's [`max()`](https://docs.python.org/3/library/functions.html#max) function:

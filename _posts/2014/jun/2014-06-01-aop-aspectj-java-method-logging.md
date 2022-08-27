@@ -27,21 +27,21 @@ This is how I'm doing it, with help of [AspectJ](http://eclipse.org/aspectj/),
 [jcabi-aspects](http://aspects.jcabi.com) and Java 6
 [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}):
 
-{% highlight java %}
+```java
 public class Foo {
   @Loggable
   public int power(int x, int p) {
     return Math.pow(x, p);
   }
 }
-{% endhighlight %}
+```
 
 This is what I see in log4j output:
 
-{% highlight text %}
+```text
 [INFO] com.example.Foo #power(2, 10): 1024 in 12μs
 [INFO] com.example.Foo #power(3, 3): 27 in 4μs
-{% endhighlight %}
+```
 
 Nice, isn't it? Now, let's see how it works.
 
@@ -108,7 +108,7 @@ implements them using [AspectJ](http://eclipse.org/aspectj/)
 (it's a simplified example, full code you can find in
 [`MethodLogger.java`](https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java)):
 
-{% highlight java %}
+```java
 @Aspect
 public class MethodLogger {
   @Around("execution(* *(..)) && @annotation(Loggable)")
@@ -125,7 +125,7 @@ public class MethodLogger {
     return result;
   }
 }
-{% endhighlight %}
+```
 
 This is an **aspect** with a single **around advice**
 `around()` inside. The aspect is annotated with `@Aspect`
@@ -179,7 +179,7 @@ So, there are two steps. First, we compile our `.java` files using
 creates its own extra class. Our `Foo` class looks something
 like this after weaving:
 
-{% highlight java %}
+```java
 public class Foo {
   private final MethodLogger logger;
   @Loggable
@@ -191,7 +191,7 @@ public class Foo {
     return Math.pow(x, p);
   }
 }
-{% endhighlight %}
+```
 
 AspectJ weaver moves our original functionality to a new method,
 `power_aroundBody()`, and redirects all `power()` calls
@@ -258,7 +258,7 @@ your classpath and configure [jcabi-maven-plugin](http://plugin.jcabi.com)
 for aspect weaving
 (get their latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <project>
   <dependencies>
     <dependency>
@@ -286,7 +286,7 @@ for aspect weaving
     </plugins>
   </build>
 </project>
-{% endhighlight %}
+```
 
 Since this weaving procedure takes a lot of configuration effort,
 I created a convenient Maven plugin with an `ajc` goal, which does

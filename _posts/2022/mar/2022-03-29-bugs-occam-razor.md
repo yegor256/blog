@@ -37,7 +37,7 @@ principle to bug reports.
 Let's say I design a simple imperative programming language and you submit
 this bug report to me:
 
-{% highlight text %}
+```text
 Here is my code:
 
 a := 7
@@ -47,7 +47,7 @@ print a
 
 It doesn't work as expected. It prints 4, 
 but it should print 3.
-{% endhighlight %}
+```
 
 Now I have to investigate and find out which operator is broken: 
 maybe the addition doesn't work, or maybe
@@ -66,7 +66,7 @@ Of course, you don't need to do glass-box testing of my code finding the cause
 of the bug, but on the API surface you must do your job and conclude
 that the subtraction operator is broken:
 
-{% highlight text %}
+```text
 Here is my code:
 
 a := 7
@@ -75,7 +75,7 @@ print a
 
 It doesn't work as expected. It prints 7, 
 but it should print 4.
-{% endhighlight %}
+```
 
 Here, you've _reduced_ the scope of the defect to a much smaller one. 
 You did your "home work" and found out that only one 

@@ -85,14 +85,14 @@ it may look like this:
 
 My deployment script looked like this before I started to use Rultor:
 
-{% highlight bash %}
+```bash
 #!/bin/bash
 phing test
 git ftp push --user ".." \
   --passwd ".." \
   --syncroot php/src \
   ftp://ftp.example.com/
-{% endhighlight %}
+```
 
 Just two lines. The first one is a full run of unit tests. The second one
 is an FTP deployment to the production server. Very simple. But this script
@@ -109,7 +109,7 @@ work again.
 So, here is a new script, which I'm using now.
 It is being executed inside a new Docker container, every time:
 
-{% highlight bash %}
+```bash
 #!/bin/bash
 # First, we install all prerequisites
 sudo apt-get install -y php5 php5-mysql mysql
@@ -126,7 +126,7 @@ git ftp push --user ".." \
   --passwd ".." \
   --syncroot php/src \
   ftp://ftp.example.com/
-{% endhighlight %}
+```
 
 Obviously, running this script on my MacBook (without virtualization) would
 cause a lot of trouble. Well, I don't even have `apt-get` here :)
@@ -210,13 +210,13 @@ Rultor solves this problem by offering an on-the-fly GPG decryption of your
 sensitive data, right before they are used by your deployment scripts. In
 the `.rultor.yml` configuration file you just say:
 
-{% highlight text %}
+```text
 decrypt:
   db.ini: "repo/db.ini.asc"
 deploy:
   script:
     ftp put db.ini production
-{% endhighlight %}
+```
 
 Then, you encrypt your `db.ini` using a Rultor GPG key, and fearlessly
 commit `db.ini.asc` to the repository. Nobody will be able to open and read

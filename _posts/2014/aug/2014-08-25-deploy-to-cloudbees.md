@@ -45,7 +45,7 @@ this article will have no sense after that.
 
 Add this profile to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   [..]
   <profiles>
@@ -98,7 +98,7 @@ Add this profile to your `pom.xml`:
     </profile>
   </profiles>
 </project>
-{% endhighlight %}
+```
 
 This plugin is not in Maven Central (unfortunately). That's why
 we have to specify that `<pluginRepository>`.
@@ -121,7 +121,7 @@ layer is an ideal choice.
 
 Create a `settings.xml` file (but don't commit it to your repo!):
 
-{% highlight xml %}
+```xml
 <settings>
   <profiles>
     <profile>
@@ -134,14 +134,14 @@ Create a `settings.xml` file (but don't commit it to your repo!):
     </profile>
   </profiles>
 </settings>
-{% endhighlight %}
+```
 
 Encrypt this file using [rultor remote](https://github.com/yegor256/rultor-remote):
 
-{% highlight xml %}
+```xml
 $ gem install rultor
 $ rultor encrypt -p me/test settings.xml
-{% endhighlight %}
+```
 
 Instead of `me/test` use the name of your GitHub project.
 
@@ -158,7 +158,7 @@ If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   [..]
   <build>
@@ -176,7 +176,7 @@ Otherwise, add this plugin to your `pom.xml`:
     </plugins>
   </build>
 </project>
-{% endhighlight %}
+```
 
 ## Configure Rultor
 
@@ -184,7 +184,7 @@ Create a `.rultor.yml` file in the root directory of your project
 (this [reference page](https://doc.rultor.com/reference.html)
 explains this format in detail):
 
-{% highlight text %}
+```text
 decrypt:
   settings.xml: "repo/settings.xml.asc"
 release:
@@ -192,7 +192,7 @@ release:
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean deploy --settings /home/r/settings.xml
-{% endhighlight %}
+```
 
 You can compare your file with live Rultor
 [configuration of stateful.co](https://github.com/sttc/stateful/blob/master/.rultor.yml).
@@ -205,9 +205,9 @@ Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it
 (read more about [Rultor commands](https://doc.rultor.com/basics.html)):
 
-{% highlight text %}
+```text
 @rultor release, tag is `0.1`
-{% endhighlight %}
+```
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 

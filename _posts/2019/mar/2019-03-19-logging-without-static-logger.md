@@ -61,7 +61,7 @@ because they have [optional](https://stackoverflow.com/questions/35747905)
 parameters. Look at [this class](https://github.com/zold-io/zold/blob/0.26.17/lib/zold/commands/list.rb),
 for example (it's a simplified version, of course):
 
-{% highlight ruby %}
+```ruby
 class Zold::List
   def initialize(wallets:, log: Log::NULL)
     @wallets = wallets
@@ -75,7 +75,7 @@ class Zold::List
     end
   end
 end
-{% endhighlight %}
+```
 
 This class is supposed to list all wallets in the current directory and print
 their balances to the log, which _in some cases_ will be the console. However,

@@ -61,7 +61,7 @@ Now check its sources (I assume you know how to do this).
 This is approximately what you will see
 (I assume you understand XML, if not, start learning it immediately):
 
-{% highlight xml %}
+```xml
 <?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?>
 <page date="2014-06-15T15:30:49.521Z" ip="10.168.29.135">
   <menu>home</menu>
@@ -78,7 +78,7 @@ This is approximately what you will see
   </links>
   <millis>70</millis>
 </page>
-{% endhighlight %}
+```
 
 As you see, it is a proper XML document with attributes,
 elements and data. It contains absolutely no information about how
@@ -92,9 +92,9 @@ Its second line [associates](http://www.w3.org/TR/xml-stylesheet/)
 the document with the XSL stylesheet `/xsl/index.xsl` that
 is loaded by the browser separately:
 
-{% highlight xml %}
+```xml
 <?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?>
-{% endhighlight %}
+```
 
 Open developer tools in Chrome and you will see that right
 after the page is loaded, the browser loads the XSL stylesheet
@@ -109,7 +109,7 @@ Let's consider an example of `index.xsl` (in reality
 it is much more complex, check [`layout.xsl`](https://github.com/sttc/stateful/blob/master/src/main/webapp/xsl/layout.xsl).
 For example:
 
-{% highlight xml %}
+```xml
 <xsl:stylesheet version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml">
@@ -124,7 +124,7 @@ For example:
     </html>
   </xsl:template>
 </xsl:stylesheet>
-{% endhighlight %}
+```
 
 I think it's obvious how the HTML page will look like
 after applying this XSL stylesheet to our XML document.

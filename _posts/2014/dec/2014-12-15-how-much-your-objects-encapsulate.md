@@ -21,10 +21,10 @@ jb_picture:
 
 Which line do you like more, the first or the second:
 
-{% highlight java %}
+```java
 new HTTP("http://www.google.com").read();
 new HTTP().read("http://www.google.com");
-{% endhighlight %}
+```
 
 What is the difference? The first class `HTTP` encapsulates a URL,
 while the second one expects it as an argument of method `read()`. Technically,
@@ -69,7 +69,7 @@ Pay attention that I'm talking about arguments encapsulated by the object. The
 following class doesn't represent the Universe, even though it does have
 a no-arguments constructor:
 
-{% highlight java %}
+```java
 class Time {
   private final long msec;
   public Time() {
@@ -79,7 +79,7 @@ class Time {
     this.msec = time;
   }
 }
-{% endhighlight %}
+```
 
 This class has two constructors. One of them is the main one, and one is
 supplementary. We're interested in the main one, which implements
@@ -95,7 +95,7 @@ we give to the object.
 On the other hand, sometimes we have to have an object that represents
 the Universe. For example, we may have this:
 
-{% highlight java %}
+```java
 class HTTP {
   public String read(String url) {
     // read via HTTP and return
@@ -104,7 +104,7 @@ class HTTP {
     // check whether we're online
   }
 }
-{% endhighlight %}
+```
 
 This is not an elegant design, but it demonstrates when it may be
 necessary to represent the entire Universe. An object of this `HTTP` class can read

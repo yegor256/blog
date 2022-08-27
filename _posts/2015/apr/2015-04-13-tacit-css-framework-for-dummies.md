@@ -36,7 +36,7 @@ It doesn't have a single
 CSS class and can be applied to any valid HTML5 document. For example, you
 have an HTML document:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -53,7 +53,7 @@ have an HTML document:
     </section>
   </body>
 </html>
-{% endhighlight %}
+```
 
 This is how it looks in Safari:
 
@@ -61,7 +61,7 @@ This is how it looks in Safari:
 
 Now, I add `tacit.min.css` to it:
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -80,7 +80,7 @@ Now, I add `tacit.min.css` to it:
     </section>
   </body>
 </html>
-{% endhighlight %}
+```
 
 This is how it looks in the same Safari browser:
 

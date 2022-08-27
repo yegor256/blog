@@ -52,14 +52,14 @@ puts new items into it, deletes some items sometimes, and selects them. So far,
 so good, but conflicts are inevitable. Here is an example of a typical
 interaction scenario between the web app and DynamoDB (I'm using jcabi-dynamo):
 
-{% highlight java %}
+```java
 Table table = region.table("posts");
 Item item = table.frame()
   .where("name", "Jeff")
   .iterator().next();
 String salary = item.get("salary");
 item.put("salary", this.recalculate(salary));
-{% endhighlight %}
+```
 
 The logic is obvious here. First, I retrieve an item from the table `posts`,
 then read its `salary`, and then modify it according to my recalculation
@@ -76,7 +76,7 @@ how [stateful.co](http://www.stateful.co) helps me. All I need to do is create a
 in the [stateful.co](http://www.stateful.co) web panel,
 get my authentication keys, and modify my Java code:
 
-{% highlight java %}
+```java
 Sttc sttc = new RtSttc(
   new URN("urn:github:526301"), // my GitHub ID
   "9FF3-4320-73FB-EEAC" // my secret key!
@@ -97,7 +97,7 @@ new Atomic(lock).call(
     }
   }
 );
-{% endhighlight %}
+```
 
 As you see, I wrap that critical transaction into `Callable`, which will
 be executed in isolation. This approach, obviously, doesn't
@@ -111,12 +111,12 @@ embedded software, etc.
 
 I should not forget to add this dependency to my `pom.xml`:
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>co.stateful</groupId>
   <artifactId>java-sdk</artifactId>
 </dependency>
-{% endhighlight %}
+```
 
 Of course, you can do the same; the service is absolutely free of charge.
 And you can use any other languages, not just Java. BTW, if interested,

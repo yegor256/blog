@@ -34,7 +34,7 @@ This is a very typical example of type casting (Google Guava is full
 of it, for example
 [`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111)):
 
-{% highlight java %}
+```java
 public final class Foo {
   public int sizeOf(Iterable items) {
     int size = 0;
@@ -48,7 +48,7 @@ public final class Foo {
     return size;
   }
 }
-{% endhighlight %}
+```
 
 This `sizeOf()`  method calculates the size of an iterable. However, it
 is smart enough to understand that if `items` are also instances of `Collection`,
@@ -76,7 +76,7 @@ casting and forking based on that casting.
 What is the alternative? There are a few, but the most obvious
 is method overloading (not available in semi-OOP languages like Ruby or PHP):
 
-{% highlight java %}
+```java
 public final class Foo {
   public int sizeOf(Iterable items) {
     int size = 0;
@@ -89,7 +89,7 @@ public final class Foo {
     return items.size();
   }
 }
-{% endhighlight %}
+```
 
 Isn't that more elegant?
 

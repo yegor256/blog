@@ -56,18 +56,18 @@ Micro-managers define _algorithms_ for achieving results and insist
 on them being implemented according to their will. This is what
 a micromanager would sound like:
 
-{% highlight text %}
+```text
 - Could you please stop what you're doing now
   and install Nginx on a new server? I beg you,
   don't do anything else until it's done.
-{% endhighlight %}
+```
 
 This is how a good manager would delegate a similar task:
 
-{% highlight text %}
+```text
 - Hey, the server with Nginx configured must
   be up and running by 6 p.m. I'm counting on you.
-{% endhighlight %}
+```
 
 Pay attention to how polite our micromanager is and how rude the good manager is.
 However, it's obvious that the first one is extremely annoying while

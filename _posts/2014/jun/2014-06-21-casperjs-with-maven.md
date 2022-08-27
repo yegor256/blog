@@ -33,7 +33,7 @@ This is a sample CasperJS test, which makes an HTTP request to a home page
 of a running WAR application and asserts that the response has
 `200` HTTP status code:
 
-{% highlight javascript %}
+```javascript
 casper.test.begin(
   'home page can be rendered',
   function (test) {
@@ -50,7 +50,7 @@ casper.test.begin(
     );
   }
 );
-{% endhighlight %}
+```
 
 I keep this test in the `src/test/casperjs/home-page.js` file.
 Let's see how CasperJS can be executed automatically on every Maven build.
@@ -84,7 +84,7 @@ we have an off-the-shelf Maven plugin:
 that understands what the current platform is and downloads the appropriate
 binary automatically, placing it into the `target` directory.
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>com.github.klieber</groupId>
   <artifactId>phantomjs-maven-plugin</artifactId>
@@ -99,7 +99,7 @@ binary automatically, placing it into the `target` directory.
     <version>1.9.2</version>
   </configuration>
 </plugin>
-{% endhighlight %}
+```
 
 The exact name of the downloaded binary is stored in the
 `${phantomjs.binary}` Maven property.
@@ -110,7 +110,7 @@ Unfortunately, there is no similar plugin for the CasperJS installation
 (at least I haven't found any as of yet). That's why I'm using plain
 old `git` (you should have it installed on your build machine).
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>exec-maven-plugin</artifactId>
@@ -133,7 +133,7 @@ old `git` (you should have it installed on your build machine).
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 ## 3. Reserve TCP Port
 
@@ -145,7 +145,7 @@ In other examples, you may see people using fixed port numbers,
 like `5555` or something similar. This is a very bad practice.
 Always reserve a new random port when you need it.
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>build-helper-maven-plugin</artifactId>
@@ -163,7 +163,7 @@ Always reserve a new random port when you need it.
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 The plugin reserves a port and sets it value to the `${tomcat.port}` Maven property.
 
@@ -173,7 +173,7 @@ Now, it's time to start Tomcat with the WAR package inside.
 I'm using [tomcat7-maven-plugin](http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/)
 that starts a real Tomcat7 server and configures it to serve on the port reserved above.
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>org.apache.tomcat.maven</groupId>
   <artifactId>tomcat7-maven-plugin</artifactId>
@@ -194,7 +194,7 @@ that starts a real Tomcat7 server and configures it to serve on the port reserve
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 Due to the option `fork` being set to `true`, Tomcat7 continues
 to run when the plugin execution finishes. That's exactly what I need.
@@ -206,7 +206,7 @@ plugins exist for this, I'm using plain old
 `exec-maven-plugin`,
 mostly because it is more configurable.
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>exec-maven-plugin</artifactId>
@@ -237,7 +237,7 @@ mostly because it is more configurable.
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 The environment variable `PHANTOMJS_EXECUTABLE` is the undocumented
 feature that makes this whole scenario possible. It configures
@@ -247,7 +247,7 @@ the location of the PhantomJS executable, which was downloaded a few steps above
 
 In the last step, I shut down the Tomcat server.
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>org.apache.tomcat.maven</groupId>
   <artifactId>tomcat7-maven-plugin</artifactId>
@@ -261,7 +261,7 @@ In the last step, I shut down the Tomcat server.
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 ## Real Example
 

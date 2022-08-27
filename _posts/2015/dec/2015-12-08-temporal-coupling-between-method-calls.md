@@ -33,7 +33,7 @@ a look at this example.
 
 Here is the code:
 
-{% highlight java %}
+```java
 class Foo {
   public List<String> names() {
     List<String> list = new LinkedList();
@@ -46,7 +46,7 @@ class Foo {
     list.add(item.toLowerCase());
   }
 }
-{% endhighlight %}
+```
 
 What do you think about that? I believe it's clear what `names()` is doing---creating a list of names. In order to avoid duplication, there is a supplementary
 _procedure_, `append()`, which converts an item to lowercase and adds it to the
@@ -60,7 +60,7 @@ lines in method `names()`.
 Let me first show you a better (though not the best!) design,
 then I will try to explain its benefits:
 
-{% highlight java %}
+```java
 class Foo {
   public List<String> names() {
     return Foo.with(
@@ -77,7 +77,7 @@ class Foo {
     return list;
   }
 }
-{% endhighlight %}
+```
 
 An ideal design for method `with()` would create a new instance of
 `List`, populate it through `addAll(list)`, then `add(item)` to it, and
@@ -87,25 +87,25 @@ but slow.
 
 So, what is wrong with this:
 
-{% highlight java %}
+```java
 List<String> list = new LinkedList();
 Foo.append(list, "Jeff");
 Foo.append(list, "Walter");
 return list;
-{% endhighlight %}
+```
 
 It looks perfectly clean, doesn't it? Instantiate a list, append two items to it, and
 return it. Yes, it is clean---for now. Because we remember what `append()` is
 doing. In a few months, we'll get back to this code, and it will look like this:
 
-{% highlight java %}
+```java
 List<String> list = new LinkedList();
 // 10 more lines here
 Foo.append(list, "Jeff");
 Foo.append(list, "Walter");
 // 10 more lines here
 return list;
-{% endhighlight %}
+```
 
 Is it so clear now that `append()` is actually adding `"Jeff"` to `list`? What
 will happen if I remove that line? Will it affect the result being
@@ -115,7 +115,7 @@ returned in the last line? I don't know. I need to **check** the body of method
 Also, how about returning `list` first and calling `append()` afterwards? This
 is what possible "refactoring" may do to our code:
 
-{% highlight java %}
+```java
 List<String> list = new LinkedList();
 if (/* something */) {
   return list;
@@ -125,7 +125,7 @@ Foo.append(list, "Walter");
 Foo.append(list, "Jeff");
 // 10 more lines here
 return list;
-{% endhighlight %}
+```
 
 First of all, we return `list` too early, when it is not ready. But did anyone
 tell me that these two calls to `append()` must happen before `return list`?
@@ -140,7 +140,7 @@ the order, and our compiler won't be able to catch us.
 
 To the contrary, this design doesn't have any "order":
 
-{% highlight java %}
+```java
 return Foo.with(
   Foo.with(
     new LinkedList(),
@@ -148,7 +148,7 @@ return Foo.with(
   ),
   "Walter"
 );
-{% endhighlight %}
+```
 
 It just **returns** a list, which is constructed by a few calls to the `with()`
 method. It is a single line instead of four.
@@ -159,18 +159,18 @@ an ideal method in OOP must have just a single statement, and this statement is
 
 The same is true about validation. For example, this code is bad:
 
-{% highlight java %}
+```java
 list.add("Jeff");
 Foo.checkIfListStillHasSpace(list);
 list.add("Walter");
-{% endhighlight %}
+```
 
 While this one is much better:
 
-{% highlight java %}
+```java
 list.add("Jeff");
 Foo.withEnoughSpace(list).add("Walter");
-{% endhighlight %}
+```
 
 See the difference?
 

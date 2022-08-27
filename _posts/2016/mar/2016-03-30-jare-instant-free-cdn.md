@@ -36,9 +36,9 @@ First, let me show how it works and then, if you're interested in
 the details, I will explain how it's done internally. Say you have
 this HTML:
 
-{% highlight html %}
+```html
 <img src="//www.teamed.io/image/logo.svg"/>
-{% endhighlight %}
+```
 
 I want this `logo.svg` to be delivered via a CDN. There are two steps.
 First, I register my domain at [jare.io](http://www.jare.io):
@@ -47,9 +47,9 @@ First, I register my domain at [jare.io](http://www.jare.io):
 
 Second, I change my HTML:
 
-{% highlight html %}
+```html
 <img src="//cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/>
-{% endhighlight %}
+```
 
 That's it.
 
@@ -84,7 +84,7 @@ nearest [name server](https://en.wikipedia.org/wiki/Name_server)
 and asks "what is the IP address of www.teamed.io?"
 The answer usually contains a single IP address:
 
-{% highlight text %}
+```text
 $ nslookup www.teamed.io
 Server:   172.16.0.1
 Address:  172.16.0.1#53
@@ -94,7 +94,7 @@ www.teamed.io canonical name = teamed.github.io.
 teamed.github.io  canonical name = github.map.fastly.net.
 Name: github.map.fastly.net
 Address: 199.27.79.133
-{% endhighlight %}
+```
 
 IP address of `www.teamed.io` is `199.27.79.133`, at the time of writing.
 
@@ -102,21 +102,21 @@ When the address is known, the browser opens a new socket and sends
 an [HTTP request](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_message)
 through it:
 
-{% highlight text %}
+```text
 GET /images/logo.svg HTTP/1.1
 Host: www.teamed.io
 Accept: image/*
-{% endhighlight %}
+```
 
 The server responds with an
 [HTTP response](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Response_message):
 
-{% highlight text %}
+```text
 HTTP/1.1 200 OK
 Content-Type: image/svg+xml
 
 [SVG image content goes here, over 1000 bytes]
-{% endhighlight %}
+```
 
 That is the [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
 image we're looking for. The browser renders it on the web page
@@ -130,7 +130,7 @@ of milliseconds. Try to load this image, which is located on a server
 that is hosted in Prague, Czech Republic (I'm using `curl` as suggested
 [here](https://josephscott.org/archives/2011/10/timing-details-with-curl/)):
 
-{% highlight text %}
+```text
 $ curl -w "@f.txt" -o /dev/null -s \
   http://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
     time_namelookup:  0.005
@@ -139,7 +139,7 @@ $ curl -w "@f.txt" -o /dev/null -s \
  time_starttransfer:  0.566
                     ----------
          time_total:  0.567
-{% endhighlight %}
+```
 
 I'm trying to do it from Palo Alto, California, which is about half a globe
 away from Prague. As you can see, it takes over 500ms. That's too much, especially
@@ -174,7 +174,7 @@ is the name of all edge servers responsible for delivering our content
 in AWS CloudFront, a CNAME for `djk1be5eatcae.cloudfront.net`).
 If I'm looking it up from California, I'm getting the following answer:
 
-{% highlight text %}
+```text
 $ nslookup cf.jare.io
 Server:   192.168.1.1
 Address:  192.168.1.1#53
@@ -183,14 +183,14 @@ Non-authoritative answer:
 cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
 Name: djk1be5eatcae.cloudfront.net
 Address: 54.230.141.211
-{% endhighlight %}
+```
 
 An edge server with IP address `54.230.141.211` is located in
 [San Francisco](https://db-ip.com/54.230.141.211). This
 is rather close to me, less than fifty miles. If I do the same operation
 from a server in Virginia, I get a different response:
 
-{% highlight text %}
+```text
 $ nslookup cf.jare.io
 Server:   172.16.0.23
 Address:  172.16.0.23#53
@@ -199,7 +199,7 @@ Non-authoritative answer:
 cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
 Name: djk1be5eatcae.cloudfront.net
 Address: 52.85.131.217
-{% endhighlight %}
+```
 
 An edge server with IP address `52.85.131.217` is located in
 [Washington](https://db-ip.com/52.85.131.217), which is far away from
@@ -258,9 +258,9 @@ decides what to do with them. The decision is based on the information
 from the HTTP request URI. For example, the request from the browser
 has this URI path:
 
-{% highlight text %}
+```text
 /?u=http://www.teamed.io/images/logo.svg
-{% endhighlight %}
+```
 
 Remember, the request is made to `cf.jare.io`, which is the address of
 the edge server. This exact URI arrives at `relay.jare.io`. The URI contains
@@ -273,7 +273,7 @@ it is a free and quick CDN.
 By the way, when we query the same image through jare.io (and CloudFront),
 it comes back much faster:
 
-{% highlight text %}
+```text
 $ curl -w "@f.txt" -o /dev/null -s \
   http://cf.jare.io/?u=www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
     time_namelookup:  0.005
@@ -282,7 +282,7 @@ $ curl -w "@f.txt" -o /dev/null -s \
  time_starttransfer:  0.041
                     ----------
          time_total:  0.041
-{% endhighlight %}
+```
 
 Most of the work is done by AWS CloudFront, while jare.io is just a
 relay that makes its configuration more convenient. Besides, it makes

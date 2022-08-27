@@ -71,7 +71,7 @@ How your script pulls the data, packages it, and archives it, depends on the
 data. I created a short cheat sheet for most common scenarios. This is how
 I backup the MySQL database for [thePMP](http://www.thepmp.com), for example:
 
-{% highlight bash %}
+```bash
 # I don't want to back up every hour
 if [ "${period}" == "hour" ]; then exit 0; fi
 
@@ -89,7 +89,7 @@ echo "[default]" > ~/.s3cfg
 echo "access_key=AKIAICJKH*****CVLAFA" >> ~/.s3cfg
 echo "secret_key=yQv3g3ao654Ns**********H1xQSfZlTkseA0haG" >> ~/.s3cfg
 s3cmd --no-progress put "${tgz}" "s3://backup.yegor256.com/${tgz}"
-{% endhighlight %}
+```
 
 The output of the script is available through the web interface and this
 is yet another benefit of this solution. It's easy to monitor what went

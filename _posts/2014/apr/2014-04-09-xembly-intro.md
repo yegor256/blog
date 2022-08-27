@@ -43,7 +43,7 @@ However, there can be times when XML falls short. For instance, imagine you have
 an existing document that needs to be modified just slightly. For example, let's
 use the following:
 
-{% highlight xml %}
+```xml
 <accounts>
   [...]
   <acc id='34'>
@@ -56,7 +56,7 @@ use the following:
   </acc>
   [...]
 </accounts>
-{% endhighlight %}
+```
 
 The above code represents a list of accounts. Each account has its own `id` and several
 child elements. In our example, we need to find the account belonging to `Jeffrey`
@@ -81,7 +81,7 @@ in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions o
 Let's create a simple example. Say, for instance, we want to add a new account number `36`
 to our list document. The code would look like:
 
-{% highlight asm %}
+```asm
 XPATH '/accounts';
 ADD 'account';
 ATTR 'id', '36';
@@ -90,7 +90,7 @@ SET 'Donny';
 UP;
 ADD 'balance';
 SET '3400';
-{% endhighlight %}
+```
 
 The above should be intuitively clear, but I'll explain just in case. First, the `XPATH` directive points us
 to the element found by the "/accounts" XPath query. This will be our root element. We assume here that
@@ -103,10 +103,10 @@ the new child element `name` and sets its text value to `"Donny"` using the `SET
 
 Our balance changing task can be expressed in Xembly with the following code:
 
-{% highlight asm %}
+```asm
 XPATH '/accounts/account[name="Jeffrey"]/balance';
 XSET '. + 500';
-{% endhighlight %}
+```
 
 The `XSET` directive sets the element text value, similar to `SET`, but
 calculates it beforehand using the provided XPath expression `. + 500`.
@@ -117,7 +117,7 @@ implemented inside any language that has a built-in DOM implementation.
 In the meantime, there is only one implementation of Xembly language---in Java. Here is how
 [it works]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}):
 
-{% highlight java %}
+```java
 Iterable<Directive> directives = new Directives()
   .xpath("/accounts")
   .add("account")
@@ -125,7 +125,7 @@ Iterable<Directive> directives = new Directives()
   .add("name").set("Donny").up()
   .add("balance").set("3400");
 new Xembler(directives).apply(document);
-{% endhighlight %}
+```
 
 In this snippet, I'm using a supplementary script builder, `Directives`, which
 enables generation of directives in a
@@ -135,7 +135,7 @@ to the `document` object of class `org.w3c.dom.Document`.
 
 Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:
 
-{% highlight java %}
+```java
 System.out.println(
   new Xembler(
     new Directives().add("html")
@@ -144,17 +144,17 @@ System.out.println(
       .set("Hello, world!")
   ).xml()
 );
-{% endhighlight %}
+```
 
 The above snippet produces the following output:
 
-{% highlight xml %}
+```xml
 <html>
   <head>
     <title>Hello, world!</title>
   </head>
 </html>
-{% endhighlight %}
+```
 
 For me, this appears to be more simple and compact.
 

@@ -38,7 +38,7 @@ If debugging is required, the _design is bad_.
 Let's say I'm a [bad]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 imperative procedural programmer, and this is my Java code:
 
-{% highlight java %}
+```java
 class FileUtils {
   public static Iterable<String> readWords(File f) {
     String text = new String(
@@ -52,21 +52,21 @@ class FileUtils {
     return words;
   }
 }
-{% endhighlight %}
+```
 
 This static [utility]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 method reads file content and then
 finds all the unique words in it. Pretty simple. However, if
 it doesn't work, what do we do? Let's say this is the file:
 
-{% highlight text %}
+```text
 We know what we are,
 but know not what we may be.
-{% endhighlight %}
+```
 
 From it, we get this list of words:
 
-{% highlight text %}
+```text
 "We"
 "know"
 "what"
@@ -76,7 +76,7 @@ From it, we get this list of words:
 "not"
 "may"
 "be\n"
-{% endhighlight %}
+```
 
 Now that doesn't look right to me ... so what is the next step? Either the file
 reading doesn't work correctly or the split is broken. Let's _debug_, right?
@@ -111,7 +111,7 @@ the code from the example above. Here is how I would modify it. First of all,
 I would turn it into a class, because utility static methods are a
 [bad practice]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}):
 
-{% highlight java %}
+```java
 class Words implements Iterable<String> {
   private final File file;
   Words(File src) {
@@ -130,12 +130,12 @@ class Words implements Iterable<String> {
     return words.iterator();
   }
 }
-{% endhighlight %}
+```
 
 It looks better already, but the complexity is still there. Next, I would
 break it down into smaller classes:
 
-{% highlight java %}
+```java
 class Text {
   private final File file;
   Text(File src) {
@@ -163,12 +163,12 @@ class Words implements Iterable<String> {
     return words.iterator();
   }
 }
-{% endhighlight %}
+```
 
 What do you think now? Writing a test for the `Words` class is a pretty
 trivial task:
 
-{% highlight java %}
+```java
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
@@ -181,7 +181,7 @@ public class WordsTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 How much time did that take? Less than a minute. We don't need to create
 a temporary file and load it with data, because class `Words` doesn't do
@@ -189,7 +189,7 @@ anything with files. It just parses the incoming string and finds the unique
 words in it. Now it's easy to fix, since the test is small and we can
 easily create more tests; for example:
 
-{% highlight java %}
+```java
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
@@ -209,7 +209,7 @@ public class WordsTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 My point is that debugging is necessary when the amount of time
 to write a unit test is significantly more than the time it takes to click

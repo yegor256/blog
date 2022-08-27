@@ -25,13 +25,13 @@ about **exception catching without
 [re-throwing]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})**. I'm talking about something like
 this Java code:
 
-{% highlight java %}
+```java
 try {
   stream.write(data);
 } catch (IOException ex) {
   ex.printStackTrace();
 }
-{% endhighlight %}
+```
 
 <!--more-->
 
@@ -39,13 +39,13 @@ try {
 
 Pay attention: I don't have anything against this code:
 
-{% highlight java %}
+```java
 try {
   stream.write('X');
 } catch (IOException ex) {
   throw new IllegalStateException(ex);
 }
-{% endhighlight %}
+```
 
 This is called [_exception chaining_](https://en.wikipedia.org/wiki/Exception_chaining)
 and is a perfectly valid construct.
@@ -55,7 +55,7 @@ look at the bigger picture first. We're talking about object-oriented
 programming---this means we're dealing with objects. Here is
 how an object (its class, to be exact) would look:
 
-{% highlight java %}
+```java
 final class Wire {
   private final OutputStream stream;
   Wire(final OutputStream stm) {
@@ -69,13 +69,13 @@ final class Wire {
     }
   }
 }
-{% endhighlight %}
+```
 
 Here is how I'm using this class:
 
-{% highlight java %}
+```java
 new Wire(stream).send(1);
-{% endhighlight %}
+```
 
 Looks nice, right? I don't need to worry about that `IOException` when I'm
 calling `send(1)`. It will be handled internally, and if it occurs, the stacktrace
@@ -131,7 +131,7 @@ But try to keep this principle in mind and your code will be cleaner: `catch` on
 
 P.S. Here is how the class should look:
 
-{% highlight java %}
+```java
 final class Wire {
   private final OutputStream stream;
   Wire(final OutputStream stm) {
@@ -142,5 +142,5 @@ final class Wire {
     this.stream.write(x);
   }
 }
-{% endhighlight %}
+```
 

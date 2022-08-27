@@ -37,7 +37,7 @@ can help you in unit and integration testing of your HTTP clients.
 Let me show you an example first. In the example, I'm using
 [hamcrest](https://github.com/hamcrest) for assertions.
 
-{% highlight java %}
+```java
 MkContainer container = new MkGrizzlyContainer()
   .next(new MkAnswer.Simple("hello, world!"))
   .start();
@@ -54,7 +54,7 @@ MatcherAssert.assertThat(
   query.headers().get("User-agent"),
   Matchers.hasItem("Myself")
 );
-{% endhighlight %}
+```
 
 Now, let's discover what happens here.
 
@@ -82,12 +82,12 @@ Also, I make an assertion that the body of the HTTP response contains the text
 `"hello"`. Obviously, this assertion will pass because the server will return
 `"hello, world!"` to my first request:
 
-{% highlight java %}
+```java
 new JdkRequest(container.home())
   .header("User-agent", "Myself")
   .fetch()
   .assertBody(Matchers.containsString("hello"));
-{% endhighlight %}
+```
 
 As you can see, I use `container.home()` in order to get the URL of the server.
 It is recommended that you allow the container to find the first unoccupied TCP
@@ -105,13 +105,13 @@ On line 12, I ask the stopped container to give me the first request it
 received. This mechanism is similar conceptually to the "verify" technology of
 mocking frameworks. For example, [Mockito](http://mockito.org/).
 
-{% highlight java %}
+```java
 MkQuery query = container.take();
 MatcherAssert.assertThat(
   query.headers().get("User-agent"),
   Matchers.hasItem("Myself")
 );
-{% endhighlight %}
+```
 
 An instance of
 [`MkQuery`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkQuery.html)
@@ -131,25 +131,25 @@ As with the client, you need the
 dependency
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-http</artifactId>
 </dependency>
-{% endhighlight %}
+```
 
 Besides the above, you need to add one more dependency, which is a Grizzly HTTP
 server.
 [`MkGrizzlyContainer`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkGrizzlyContainer.html)
 is based on it.
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.sun.grizzly</groupId>
   <artifactId>grizzly-servlet-webserver</artifactId>
   <scope>test</scope>
 </dependency>
-{% endhighlight %}
+```
 
 If you have any questions or suggestions, please submit them through [GitHub
 issues](https://github.com/jcabi/jcabi-http/issues).

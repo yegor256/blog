@@ -32,30 +32,30 @@ a name: Veil Objects.
 
 Let's say I fetch the list of projects from PostgreSQL:
 
-{% highlight ruby %}
+```ruby
 class Projects
   def fetch
     @pgsql.exec('SELECT * FROM project')
   end
 end
-{% endhighlight %}
+```
 
 The method `exec()` on `@pgsql` (I'm using the [pgtk](https://rubygems.org/gems/pgtk) gem)
 returns an array of [Hashes](https://ruby-doc.org/core-2.7.0/Hash.html),
 which look like this, if we convert them to JSON:
 
-{% highlight text %}
+```text
 [
   {"id": 1, "name": "foo", "author": "yegor256"},
   {"id": 2, "name": "bar", "author": "yegor256"},
   {"id": 3, "name": "zoo", "author": "yegor256"}
 ]
-{% endhighlight %}
+```
 
 It would be great to make the method `fetch()` return an array
 of objects, not an array of Hashes. So my class `Project` looks like this:
 
-{% highlight ruby %}
+```ruby
 class Project
   def initialize(pgsql, id)
     @pgsql = pgsql
@@ -74,21 +74,21 @@ class Project
     )[0]['author']
   end
 end
-{% endhighlight %}
+```
 
 It's perfectly designed for single-project manipulations:
 
-{% highlight ruby %}
+```ruby
 p = Project.new(pgsql, 123)
 name = p.name
 author = p.author
-{% endhighlight %}
+```
 
 Two SQL requests here is not a big deal. However, if I convert
 the list of Hashes to Projects like this, I will have serious
 performance problems:
 
-{% highlight ruby %}
+```ruby
 class Projects
   def fetch
     @pgsql.exec('SELECT * FROM project').map do |r|
@@ -96,15 +96,15 @@ class Projects
     end
   end
 end
-{% endhighlight %}
+```
 
 This is what will kill me, performance-wise:
 
-{% highlight ruby %}
+```ruby
 projects.fetch do |p|
   puts "#{p.name} is created by #{p.author}"
 end
-{% endhighlight %}
+```
 
 This code will generate too many redundant SQL requests. We will do round-trips
 to PostgreSQL to fetch the data we had a few milliseconds ago, while
@@ -122,7 +122,7 @@ to deal with objects, not data structures. And, at the same time, we don't want 
 be stupid enough to go back to the database for the same data we had
 a second ago. Here is the solution I'm proposing:
 
-{% highlight ruby %}
+```ruby
 require 'veils'
 class Projects
   def fetch
@@ -135,7 +135,7 @@ class Projects
     end
   end
 end
-{% endhighlight %}
+```
 
 This new `Veil` object from [veils gem](https://rubygems.org/gems/veils)
 is a decorator of `Project`. It behaves like

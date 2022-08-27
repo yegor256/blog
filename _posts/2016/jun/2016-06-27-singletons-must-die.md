@@ -44,7 +44,7 @@ Now that we agree it's a bad deal, what do we do if we need to, let's say,
 have access to a database connection pool in many different places within the
 application? We simply need something like this:
 
-{% highlight java %}
+```java
 class Database {
   public static Database INSTANCE = new Database();
   private Database() {
@@ -55,12 +55,12 @@ class Database {
     // and return it
   }
 }
-{% endhighlight %}
+```
 
 Later in at, say, the JAX-RS REST method, we need to retrieve something
 from the database:
 
-{% highlight java %}
+```java
 @Path("/")
 class Index {
   @GET
@@ -72,7 +72,7 @@ class Index {
       .fetch(new SingleOutcome(String.class))
   }
 }
-{% endhighlight %}
+```
 
 In case you're not familiar with JAX-RS, it's a simple
 [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}) architecture,

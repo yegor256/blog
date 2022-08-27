@@ -29,19 +29,19 @@ or statements. Just `return`. All arguments in favor of multiple
 
 This is a classical example:
 
-{% highlight java %}
+```java
 public int max(int a, int b) {
   if (a > b) {
     return a;
   }
   return b;
 }
-{% endhighlight %}
+```
 
 The code above has two `return` statements, and it is shorter than this one
 with a single `return`:
 
-{% highlight java %}
+```java
 public int max(int a, int b) {
   int m;
   if (a > b) {
@@ -51,20 +51,20 @@ public int max(int a, int b) {
   }
   return m;
 }
-{% endhighlight %}
+```
 
 More verbose, less readable, and slower, right? Right.
 
 This is the code in a _pure_ object-oriented world:
 
-{% highlight java %}
+```java
 public int max(int a, int b) {
   return new If(
     new GreaterThan(a, b),
     a, b
   );
 }
-{% endhighlight %}
+```
 
 What do you think now? There are no statements or operators. No `if` and no `>`.
 Instead, there are _objects_ of class `If` and `GreaterThan`.

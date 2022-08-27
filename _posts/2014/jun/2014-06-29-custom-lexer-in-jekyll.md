@@ -20,17 +20,17 @@ on which I'm using Jekyll for site rendering.
 
 This is how my code blocks look in markdown pages:
 
-{% highlight text %}
+```text
 { % highlight requs %}
 User is a "human being."
 { % endhighlight %}
-{% endhighlight %}
+```
 
 I created a custom [Pygments lexer](http://pygments.org/docs/lexerdevelopment/):
 
 <!--more-->
 
-{% highlight python %}
+```python
 from pygments.lexer import RegexLexer
 from pygments.token import Punctuation, Text, Keyword, Name, String
 from pygments.util import shebang_matches
@@ -48,12 +48,12 @@ class RequsLexer(RegexLexer):
   }
   def analyse_text(text):
     return shebang_matches(text, r'requs')
-{% endhighlight %}
+```
 
 Then, I packaged it for [`easy_install`](https://pypi.python.org/pypi/setuptools)
 and installed locally:
 
-{% highlight bash %}
+```bash
 $ easy_install src/requs_pygment
 Processing requs_pygment
 Running setup.py -q bdist_egg --dist-dir ...
@@ -62,7 +62,7 @@ Adding requs-pygment 0.1 to easy-install.pth file
 Installed /Library/Python/2.7/site-packages/requs_pygment-0.1-py2.7.egg
 Processing dependencies for requs-pygment==0.1
 Finished processing dependencies for requs-pygment==0.1
-{% endhighlight %}
+```
 
 It's done. Now I run `jekyll build` and my syntax
 is highlighted according to the custom rules I specified in the lexer.

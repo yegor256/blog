@@ -35,9 +35,9 @@ misunderstood and overcomplicated all too often.
 
 Look at this code:
 
-{% highlight java %}
+```java
 print(book.title());
-{% endhighlight %}
+```
 
 It is very straight forward: we retrieve the title from the book and
 simply give it to the `print()` procedure, or whatever else it might be. _We_ are in charge,
@@ -45,9 +45,9 @@ the _control_ is in our hands.
 
 In contrast to this, here is the _inversion_:
 
-{% highlight java %}
+```java
 print(book);
-{% endhighlight %}
+```
 
 We give the entire book to the procedure `print()` and
 it calls `title()` when it feels like it. That is, we _delegate_ control.
@@ -72,9 +72,9 @@ we must _not_ deal with _data_, but instead only with
 given example the design would be even better if we got rid of the
 `print()` procedure altogether and replaced it with an object:
 
-{% highlight java %}
+```java
 new PrintedBook(book);
-{% endhighlight %}
+```
 
 That would be pure [object composition](https://en.wikipedia.org/wiki/Object_composition).
 

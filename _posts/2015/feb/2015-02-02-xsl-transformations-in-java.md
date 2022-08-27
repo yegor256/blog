@@ -42,7 +42,7 @@ XML column.
 
 This is approximately how our DynamoDB table looks:
 
-{% highlight text %}
+```text
 +----+---------------+--------------------------------------+
 | id | name          | xml                                  |
 +----+---------------+--------------------------------------+
@@ -56,7 +56,7 @@ This is approximately how our DynamoDB table looks:
 |    |               |   <daemon id="f787fe">...</daemon>   |
 |    |               | </talk>                              |
 +----+---------------+--------------------------------------+
-{% endhighlight %}
+```
 
 Once a user posts `@rultor status` into a GitHub ticket, Rultor
 has to answer with a full status report about the current talk. In order
@@ -69,18 +69,18 @@ Here is how we're doing that with the help of
 and its class,
 [`XSLDocument`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
 
-{% highlight java %}
+```java
 final String xml = // comes from DynamoDB
 final XSL xsl = new XSLDocument(
   this.getClass().getResourceAsStream("status.xsl")
 );
 final String text = xsl.applyTo(xml);
-{% endhighlight %}
+```
 
 That's it. Now let's see what's there in that `status.xsl` file
 (this is just a skeleton of it; the full version is [here](https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl)):
 
-{% highlight xml %}
+```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   version="2.0">
   <xsl:output method="text"/>
@@ -94,12 +94,12 @@ That's it. Now let's see what's there in that `status.xsl` file
     </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>
-{% endhighlight %}
+```
 
 It is good practice to create XSL documents only once per application
 run. We have a static utility method [`XSLDocument.make()`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29) for this:
 
-{% highlight java %}
+```java
 final class Foo {
   private static final XSL STYLESHEET = XSLDocument.make(
     Foo.class.getResourceAsStream("stylesheet.xsl")
@@ -108,13 +108,13 @@ final class Foo {
     return Foo.STYLESHEET.transform(xml);
   }
 }
-{% endhighlight %}
+```
 
 Pay attention to the fact we're using XSLT 2.0. Built-in Java implementation of XSLT
 doesn't support version 2.0, and in order to make it work, we're using
 these two Maven Saxon dependencies:
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>net.sourceforge.saxon</groupId>
   <artifactId>saxon</artifactId>
@@ -128,17 +128,17 @@ these two Maven Saxon dependencies:
   <classifier>xpath</classifier>
   <scope>runtime</scope>
 </dependency>
-{% endhighlight %}
+```
 
 All you need to do to start using `jcabi-xml` for XSL transformations is
 add this dependency to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-xml</artifactId>
 </dependency>
-{% endhighlight %}
+```
 
 If you have any problems or suggestions, don't hesitate to submit an issue
 to the GitHub [issue tracker](https://github.com/jcabi/jcabi-xml/issues).

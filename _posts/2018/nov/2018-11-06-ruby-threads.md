@@ -29,7 +29,7 @@ to concurrency, there are blank spots. Big time.
 
 Look at this Ruby class:
 
-{% highlight ruby %}
+```ruby
 require 'sinatra'
 class Front < Sinatra::Base
   configure do
@@ -42,15 +42,15 @@ class Front < Sinatra::Base
   end
 end
 Front.run!
-{% endhighlight %}
+```
 
 It's a simple web server. It does work---try to run it like this
 (you will need Ruby 2.3+ installed):
 
-{% highlight ruby %}
+```ruby
 $ gem install sinatra
 $ ruby server.rb
-{% endhighlight %}
+```
 
 Then, open `http://localhost:4567` and you will see the counter. Refresh
 the page and the counter will increment. Try again. It works. The counter
@@ -60,7 +60,7 @@ which we increment on every HTTP request.
 
 Let's create a unit test for it, to make sure it is automatically tested:
 
-{% highlight ruby %}
+```ruby
 require 'minitest/autorun'
 require 'net/http'
 require 'uri'
@@ -75,7 +75,7 @@ class FrontTest < Minitest::Test
     Front.stop!
   end
 end
-{% endhighlight %}
+```
 
 OK, it's not a unit test, but more like an integration test.
 First we start a web server in a background thread. Then
@@ -88,7 +88,7 @@ So far so good. Now, the question is, what will happen when many
 requests are sent to the server? Will it still return the correct,
 consecutive numbers? Let's try:
 
-{% highlight ruby %}
+```ruby
 def test_works
   front = Thread.start do
     Front.run!
@@ -101,7 +101,7 @@ def test_works
   assert_equal(1000, numbers.uniq.count)
   Front.stop!
 end
-{% endhighlight %}
+```
 
 Here we make a thousand requests and put all the returned numbers into an
 array. Then we `uniq` the array and `count` its elements. If there is
@@ -113,7 +113,7 @@ any problems. We aren't making them concurrently. They go strictly one
 after another. Let's try to use a few additional threads to simulate
 parallel execution of HTTP requests:
 
-{% highlight ruby %}
+```ruby
 require 'concurrent/set'
 def test_works
   front = Thread.start do
@@ -133,7 +133,7 @@ def test_works
   assert_equal(1000, numbers.to_a.count)
   Front.stop!
 end
-{% endhighlight %}
+```
 
 First of all, we keep the list of numbers in a
 [`Concurrent::Set`](http://ruby-concurrency.github.io/concurrent-ruby/master/Concurrent/Set.html), which
@@ -154,7 +154,7 @@ In order to make this type of testing easier I created
 [threads](https://github.com/yegor256/threads),
 a simple Ruby gem. Here is how it works:
 
-{% highlight ruby %}
+```ruby
 require 'threads'
 def test_works
   front = Thread.start do
@@ -168,7 +168,7 @@ def test_works
   assert_equal(1000, numbers.to_a.count)
   Front.stop!
 end
-{% endhighlight %}
+```
 
 That's it. This single line with `Threads.new()` replaces all other lines,
 where we have to create threads, make sure they start at the same time,

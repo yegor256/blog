@@ -29,13 +29,13 @@ Put simply, the library is a convenient wrapper for JDK-native DOM
 manipulations. That's why it is small and dependency-free. With the following
 example, you can see just how simple XML parsing can be:
 
-{% highlight java %}
+```java
 import com.jcabi.xml.XML;
 import com.jcabi.xml.XMLDocument;
 XML xml = new XMLDocument(
   "<root><a>hello</a><b>world!</b></root>"
 );
-{% endhighlight %}
+```
 
 <!--more-->
 
@@ -45,33 +45,33 @@ that can traverse the XML tree and convert it back to text.
 
 For example:
 
-{% highlight java %}
+```java
 // outputs "hello"
 System.out.println(xml.xpath("/root/a/text()").get(0));
 // outputs the entire XML document
 System.out.println(xml.toString());
-{% endhighlight %}
+```
 
 Method `xpath()` allows you to find a collection of text nodes
 or attributes in the document, and then convert them to
 a collection of strings, using [XPath query](http://en.wikipedia.org/wiki/XPath):
 
-{% highlight java %}
+```java
 // outputs "hello" and "world"
 for (String text : xml.xpath("/root/*/text()")) {
   System.out.println(text);
 }
-{% endhighlight %}
+```
 
 Method `nodes()` enables the same XPath search operation,
 but instead returns a collection of instances of `XML` interface:
 
-{% highlight java %}
+```java
 // outputs "<a>hello</a>" and "<b>world</b>"
 for (XML node : xml.nodes("/root/*"))
   System.out.println(node);
 }
-{% endhighlight %}
+```
 
 Besides XML parsing, printing and XPath traversing,
 [jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %})

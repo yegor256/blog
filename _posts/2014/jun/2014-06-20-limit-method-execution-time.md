@@ -25,14 +25,14 @@ to be thrown if the timeframe is exceeded. Here is how
 you can do it with [jcabi-aspects](http://aspects.jcabi.com)
 and [AspectJ](http://eclipse.org/aspectj/):
 
-{% highlight java %}
+```java
 public class Resource {
   @Timeable(limit = 5, unit = TimeUnit.SECONDS)
   public String load(URL url) {
     return url.openConnection().getContent();
   }
 }
-{% endhighlight %}
+```
 
 <!--more-->
 
@@ -70,18 +70,18 @@ explains the mechanism in more detail. Let's discuss it briefly:
 
 This method will **not** react to `interrupt()` call and will work until JVM is killed (very bad design):
 
-{% highlight java %}
+```java
 public void work() {
   while (true) {
     // do something
   }
 }
-{% endhighlight %}
+```
 
 This is how we should refactor it in order to make
 sensitive to interruption requests:
 
-{% highlight java %}
+```java
 public void work() {
   while (true) {
     if (Thread.interruped()) {
@@ -90,7 +90,7 @@ public void work() {
     // do something
   }
 }
-{% endhighlight %}
+```
 
 In other words, your method can only stop itself. Nothing else can do it.
 The thread it is running in can't be terminated by another thread. The best

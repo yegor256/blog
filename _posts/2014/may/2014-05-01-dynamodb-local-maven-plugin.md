@@ -46,7 +46,7 @@ Full usage details for the plugin are explained
 on [its website](http://dynamodb.jcabi.com). However, here is a simple example
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-dynamodb-maven-plugin</artifactId>
@@ -63,7 +63,7 @@ on [its website](http://dynamodb.jcabi.com). However, here is a simple example
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 The above configuration will start DynamoDB Local
 right before running integration tests, and then stop it
@@ -74,7 +74,7 @@ to use a randomly allocated port instead.
 When the DynamoDB Local server is up and running,
 we can create an integration test for it:
 
-{% highlight java %}
+```java
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
@@ -92,7 +92,7 @@ public class FooITCase {
     }
   }
 }
-{% endhighlight %}
+```
 
 Of course, there won't be any output because the server
 starts without any tables. Since the server is empty,
@@ -104,7 +104,7 @@ To avoid this type of extra hassle, in the latest version 0.6 of
 [we introduced](https://github.com/jcabi/jcabi-dynamodb-maven-plugin/issues/16)
 a new goal [`create-tables`](http://dynamodb.jcabi.com/example-create-tables.html):
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-dynamodb-maven-plugin</artifactId>
@@ -121,14 +121,14 @@ a new goal [`create-tables`](http://dynamodb.jcabi.com/example-create-tables.htm
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 The `foo.json` file used above should contain a JSON request
 that is sent to DynamoDB Local right after it is up and running.
 The request should comply with the specification
 of [`CreateTable`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html) request. For example:
 
-{% highlight json %}
+```json
 {
   "AttributeDefinitions": [
     {
@@ -148,14 +148,14 @@ of [`CreateTable`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference
   },
   "TableName": "foo"
 }
-{% endhighlight %}
+```
 
 The table will be created during the
 `pre-integration-test` phase and dropped at the
 `post-integration-test` phase. Now, we can make our
 integration test much more meaningful with the help of [jcabi-dynamo](http://dynamo.jcabi.com):
 
-{% highlight java %}
+```java
 import com.jcabi.dynamo.Attributes;
 import com.jcabi.dynamo.Conditions;
 import com.jcabi.dynamo.Credentials;
@@ -179,7 +179,7 @@ public class FooITCase {
     );
   }
 }
-{% endhighlight %}
+```
 
 The above test will put a new item into the table
 and then assert that the item is there.

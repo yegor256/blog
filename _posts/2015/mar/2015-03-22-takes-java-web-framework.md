@@ -52,7 +52,7 @@ that accepts connections on a certain [TCP port](http://en.wikipedia.org/wiki/Po
 Usually it is 80, but I'm going to use 8080 for testing purposes.
 This is done in Java with the [`ServerSocket`](http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html) class:
 
-{% highlight java %}
+```java
 import java.net.ServerSocket;
 public class Foo {
   public static void main(final String... args) throws Exception {
@@ -60,7 +60,7 @@ public class Foo {
     while (true);
   }
 }
-{% endhighlight %}
+```
 
 That's enough to start a web server. Now, the socket is ready and listening
 on port 8080. When someone opens `http://localhost:8080` in their browser,
@@ -76,16 +76,16 @@ shut down.
 The next step is to accept the incoming connections. In Java, that's done through
 a blocking call to the `accept()` method:
 
-{% highlight java %}
+```java
 final Socket socket = server.accept();
-{% endhighlight %}
+```
 
 The method is blocking its thread and waiting until a new connection arrives. As
 soon as that happens, it returns an instance of `Socket`. In order to accept
 the next connection, we should call `accept()` again. So basically, our
 web server should work like this:
 
-{% highlight java %}
+```java
 public class Foo {
   public static void main(final String... args) throws Exception {
     final ServerSocket server = new ServerSocket(8080);
@@ -98,7 +98,7 @@ public class Foo {
     }
   }
 }
-{% endhighlight %}
+```
 
 It's an endless cycle that accepts a new connection, understands it,
 creates a response, returns the response, and accepts a new connection again.
@@ -110,7 +110,7 @@ The HTTP request is coming from the input stream of the socket and looks like
 a multi-line block of text. This is what you would see if you read
 an input stream of the socket:
 
-{% highlight java %}
+```java
 final BufferedReader reader = new BufferedReader(
   new InputStreamReader(socket.getInputStream())
 );
@@ -121,11 +121,11 @@ while (true) {
   }
   System.out.println(line);
 }
-{% endhighlight %}
+```
 
 You will see something like this:
 
-{% highlight text %}
+```text
 GET / HTTP/1.1
 Host: localhost:8080
 Connection: keep-alive
@@ -134,7 +134,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36
 Accept-Encoding: gzip, deflate, sdch
 Accept-Language: en-US,en;q=0.8,ru;q=0.6,uk;q=0.4
-{% endhighlight %}
+```
 
 The client (the Google Chrome browser, for example) passes this text into the
 connection established. It connects to port 8080 at `localhost`, and as soon
@@ -148,7 +148,7 @@ information in the request and just return "Hello, world!" to all requests
 [`IOUtils`](https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html)
 for simplicity):
 
-{% highlight java %}
+```java
 import java.net.Socket;
 import java.net.ServerSocket;
 import org.apache.commons.io.IOUtils;
@@ -165,12 +165,12 @@ public class Foo {
     }
   }
 }
-{% endhighlight %}
+```
 
 That's it. The server is ready. Try to compile and run it. Point your browser
 to `http://localhost:8080`, and you will see `Hello, world!`:
 
-{% highlight bash %}
+```bash
 $ javac -cp commons-io.jar Foo.java
 $ java -cp commons-io.jar:. Foo &
 $ curl http://localhost:8080 -v
@@ -186,7 +186,7 @@ $ curl http://localhost:8080 -v
 <
 * Closing connection 0
 Hello, world!
-{% endhighlight %}
+```
 
 That's all you need to build a web server. Now let's discuss how to make
 it object-oriented and composable. Let's try to see how the [Takes](http://www.takes.org)
@@ -199,7 +199,7 @@ need to do to create a working web application is to create a single
 class that implements
 [`Take`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Take.html) interface:
 
-{% highlight java %}
+```java
 import org.takes.Request;
 import org.takes.Take;
 public final class TkFoo implements Take {
@@ -208,11 +208,11 @@ public final class TkFoo implements Take {
     return new RsText("Hello, world!");
   }
 }
-{% endhighlight %}
+```
 
 And now it's time to start a server:
 
-{% highlight java %}
+```java
 import org.takes.http.Exit;
 import org.takes.http.FtBasic;
 public class Foo {
@@ -220,7 +220,7 @@ public class Foo {
     new FtBasic(new TkFoo(), 8080).start(Exit.NEVER);
   }
 }
-{% endhighlight %}
+```
 
 This [`FtBasic`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html)
 class does the exact same socket manipulations explained
@@ -238,12 +238,12 @@ we can get out of it. This is how the
 [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html)
 interface is defined in [Takes](http://www.takes.org):
 
-{% highlight java %}
+```java
 public interface Request {
   Iterable<String> head() throws IOException;
   InputStream body() throws IOException;
 }
-{% endhighlight %}
+```
 
 The request is divided into two parts: the head and the body. The head
 contains all lines that go before the empty line that starts
@@ -252,31 +252,31 @@ a body, according to HTTP specification in
 decorators for `Request` in the framework. For example, `RqMethod` will
 help you get the method name from the first line of the header:
 
-{% highlight java %}
+```java
 final String method = new RqMethod(request).method();
-{% endhighlight %}
+```
 
 `RqHref` will help extract the query part and parse it. For example,
 this is the request:
 
-{% highlight java %}
+```java
 GET /user?id=123 HTTP/1.1
 Host: www.example.com
-{% endhighlight %}
+```
 
 This code will extract that `123`:
 
-{% highlight java %}
+```java
 final int id = Integer.parseInt(
   new RqHref(request).href().param("id").get(0)
 );
-{% endhighlight %}
+```
 
 `RqPrint` can get the entire request or its body printed as a `String`:
 
-{% highlight java %}
+```java
 final String body = new RqPrint(request).printBody();
-{% endhighlight %}
+```
 
 The idea here is to keep the `Request` interface simple and provide
 this request parsing functionality to its decorators. This approach helps the
@@ -291,7 +291,7 @@ Let's create our first real web application, which will do something
 useful. I would recommend starting with an `Entry` class, which is
 required by Java to start an app from the command line:
 
-{% highlight java %}
+```java
 import org.takes.http.Exit;
 import org.takes.http.FtCli;
 public final class Entry {
@@ -299,7 +299,7 @@ public final class Entry {
     new FtCli(new TkApp(), args).start(Exit.NEVER);
   }
 }
-{% endhighlight %}
+```
 
 This class contains just a single `main()` static method that will be
 called by JVM when the app starts from the command line. As you see, it
@@ -314,7 +314,7 @@ the `FtBasic` constructor.
 
 The web application itself is called `TkApp` and extends `TsWrap`:
 
-{% highlight java %}
+```java
 import org.takes.Take;
 import org.takes.facets.fork.FkRegex;
 import org.takes.facets.fork.TkFork;
@@ -332,13 +332,13 @@ final class TkApp extends TkWrap {
     );
   }
 }
-{% endhighlight %}
+```
 
 We'll discuss this `TkFork` class in a minute.
 
 If you're using Maven, this is the `pom.xml` you should start with:
 
-{% highlight xml %}
+```xml
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -374,27 +374,27 @@ If you're using Maven, this is the `pom.xml` you should start with:
     </plugins>
   </build>
 </project>
-{% endhighlight %}
+```
 
 Running `mvn clean package` should build a `foo.jar` file in `target` directory
 and a collection of all JAR dependencies in `target/deps`. Now you
 can run the app from the command line:
 
-{% highlight bash %}
+```bash
 $ mvn clean package
 $ java -Dfile.encoding=UTF-8 \
   -cp ./target/foo.jar:./target/deps/* foo.Entry --port=8080
-{% endhighlight %}
+```
 
 The application is ready, and you can deploy it to, say, Heroku. Just
 create a `Procfile` file in the root of the repository and push the repo
 to Heroku. This is what `Procfile` should look like:
 
-{% highlight text %}
+```text
 web: java -Dfile.encoding=UTF-8 \
   -cp target/foo.jar:target/deps/* \
   foo.Entry --port=${PORT}
-{% endhighlight %}
+```
 
 ## `TkFork`
 
@@ -405,11 +405,11 @@ simple, and there are just a few lines of code inside it. It encapsulates
 a collection of "forks," which are instances of the
 [`Fork`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html) interface:
 
-{% highlight java %}
+```java
 public interface Fork {
   Iterator<Response> route(Request req) throws IOException;
 }
-{% endhighlight %}
+```
 
 Its only `route()` method either returns an empty iterator or an iterator
 with a single `Response`. `TkFork` goes through all forks, calling their
@@ -421,7 +421,7 @@ Let's create a simple fork ourselves now. For example, we want to show
 the status of the application when the `/status` URL is requested. Here is
 the code:
 
-{% highlight java %}
+```java
 final class TkApp extends TkWrap {
   private static Take make() {
     return new TkFork(
@@ -438,7 +438,7 @@ final class TkApp extends TkWrap {
     );
   }
 }
-{% endhighlight %}
+```
 
 I believe the logic here is clear. We either return an empty iterator
 or an iterator with an instance of `TkStatus` inside. If an empty
@@ -451,7 +451,7 @@ This exact logic is implemented by an out-of-the-box fork called `FkRegex`,
 which attempts to match a request URI path with the regular expression
 provided:
 
-{% highlight java %}
+```java
 final class TkApp extends TkWrap {
   private static Take make() {
     return new TkFork(
@@ -459,11 +459,11 @@ final class TkApp extends TkWrap {
     );
   }
 }
-{% endhighlight %}
+```
 
 We can compose a multi-level structure of `TkFork` classes; for example:
 
-{% highlight java %}
+```java
 final class TkApp extends TsWrap {
   private static Take make() {
     return new TkFork(
@@ -477,7 +477,7 @@ final class TkApp extends TsWrap {
     );
   }
 }
-{% endhighlight %}
+```
 
 Again, I believe it's obvious. The instance of `FkRegex` will ask an
 encapsulated instance of `TkFork` to return a response, and it will try to
@@ -490,12 +490,12 @@ Now let's discuss the structure of the HTTP response and its object-oriented
 abstraction, [`Response`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html).
 This is how the interface looks:
 
-{% highlight java %}
+```java
 public interface Response {
   Iterable<String> head() throws IOException;
   InputStream body() throws IOException;
 }
-{% endhighlight %}
+```
 
 Looks very similar to the [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html),
 doesn't it? Well, it's identical, mostly because the structure of the HTTP request and
@@ -506,7 +506,7 @@ are [composable]({% pst 2015/feb/2015-02-26-composable-decorators %}),
 which makes them very convenient. For example, if you want to build a response
 that contains an HTML page, you compose them like this:
 
-{% highlight java %}
+```java
 final class TkIndex implements Take {
   @Override
   public Response act() {
@@ -519,7 +519,7 @@ final class TkIndex implements Take {
     );
   }
 }
-{% endhighlight %}
+```
 
 In this example, the decorator `RsWithBody`
 creates a response with a body but with no headers at all. Then,
@@ -541,7 +541,7 @@ a simple templating engine. Well, it's not that simple. It's rather powerful,
 but I would suggest to use it in simple situations only. Here is how it
 works:
 
-{% highlight java %}
+```java
 final class TkIndex implements Take {
   @Override
   public Response act() {
@@ -549,7 +549,7 @@ final class TkIndex implements Take {
       .with("name", "Jeffrey");
   }
 }
-{% endhighlight %}
+```
 
 The [`RsVelocity`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html) constructor
 accepts a single argument that has to be a Velocity template. Then, you call
@@ -587,7 +587,7 @@ some table data that we need to render. Here is how I would
 initialize a connection to it in the `Entry` class (I'm using
 a [BoneCP](http://www.jolbox.com/) connection pool):
 
-{% highlight java %}
+```java
 public final class Entry {
   public static void main(final String... args) throws Exception {
     new FtCli(new TkApp(Entry.postgres()), args).start(Exit.NEVER);
@@ -601,12 +601,12 @@ public final class Entry {
     return src;
   }
 }
-{% endhighlight %}
+```
 
 Now, the constructor of `TkApp` must accept a single argument of type
 `java.sql.Source`:
 
-{% highlight java %}
+```java
 final class TkApp extends TkWrap {
   TkApp(final Source source) {
     super(TkApp.make(source));
@@ -617,7 +617,7 @@ final class TkApp extends TkWrap {
     );
   }
 }
-{% endhighlight %}
+```
 
 Class `TkIndex` also accepts a single argument of class `Source`. I believe
 you know what to do with it inside `TkIndex` in order to fetch the SQL
@@ -634,7 +634,7 @@ through constructors, unit testing is extremely easy. Let's say we want
 to test `TkStatus`, which is supposed to return an HTML response
 (I'm using [JUnit 4](http://junit.org/) and [Hamcrest](https://github.com/hamcrest/JavaHamcrest)):
 
-{% highlight java %}
+```java
 import org.junit.Test;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -649,13 +649,13 @@ public final class TkIndexTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 Also, we can start the entire application or any individual _take_ in a
 test HTTP server and test its behavior via a real TCP socket; for example
 (I'm using [jcabi-http](http://http.jcabi.com) to make an HTTP request and check the output):
 
-{% highlight java %}
+```java
 public final class TkIndexTest {
   @Test
   public void returnsHtmlPage() throws Exception {
@@ -673,7 +673,7 @@ public final class TkIndexTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 [`FtRemote`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtRemote.html)
 starts a test web server at a random TCP port and calls the

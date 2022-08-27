@@ -35,17 +35,17 @@ is more object-oriented? It seems to depend on the size of the
 object `books`. If it's small, there's no need to get the book first, we can
 just delete it right there:
 
-{% highlight java %}
+```java
 interface Books {
   void create(String title);
   void delete(int id);
   void rename(int id, String title);
 }
-{% endhighlight %}
+```
 
 However, if it's larger, it's better to get the `book` first:
 
-{% highlight java %}
+```java
 interface Book {
   void delete(); // Here!
   void rename(String title);
@@ -57,7 +57,7 @@ interface Books {
   Book all(String query);
   Book book(int id); // Here!
 }
-{% endhighlight %}
+```
 
 Is there an explicit hard line between these two? Is there
 a [strict rule]({% pst 2017/dec/2017-12-19-srp-is-hoax %})

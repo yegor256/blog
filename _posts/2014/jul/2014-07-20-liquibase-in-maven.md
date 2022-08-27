@@ -34,7 +34,7 @@ Add `liquibase-maven-plugin`
 to your [`pom.xml`](http://maven.apache.org/pom.html) (get its latest
 version in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <project>
   [...]
   <build>
@@ -56,7 +56,7 @@ version in [Maven Central](http://search.maven.org/)):
     </plugins>
   </build>
 </project>
-{% endhighlight %}
+```
 
 To check that it works, run `mvn liquibase:help`.
 
@@ -64,7 +64,7 @@ I would recommend you keep database credentials
 in [`settings.xml`](http://maven.apache.org/settings.html)
 and  in their respective profiles. For example:
 
-{% highlight xml %}
+```xml
 <settings>
   <profiles>
     <profile>
@@ -85,7 +85,7 @@ and  in their respective profiles. For example:
     </profile>
   </profiles>
 </settings>
-{% endhighlight %}
+```
 
 When you run Maven, don't forget to turn
 on one of the profiles. For example: `mvn -Pproduction`.
@@ -104,14 +104,14 @@ Liquibase directly. But, it's not that difficult. First,
 run `mvn liquibase:help` in order to download all artifacts.
 Then, replace placeholders with your actual credentials:
 
-{% highlight bash %}
+```bash
 $ java -jar \
   ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3.1.1.jar \
   --driver=com.mysql.jdbc.Driver \
   --url=jdbc:mysql://db.example.com:3306/example \
   --username=example --password=example \
   generateChangeLog > src/main/liquibase/2014/000-initial-schema.xml
-{% endhighlight %}
+```
 
 Liquibase will analyze your current database schema
 and copy its own schema into `src/main/liquibase/2014/000-initial-schema.xml`.
@@ -120,7 +120,7 @@ and copy its own schema into `src/main/liquibase/2014/000-initial-schema.xml`.
 
 Now, create XML master changeset and save it to `src/main/liquibase/master.xml`:
 
-{% highlight xml %}
+```xml
 <databaseChangeLog
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -128,7 +128,7 @@ Now, create XML master changeset and save it to `src/main/liquibase/master.xml`:
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
   <includeAll path="src/main/liquibase/2014" />
 </databaseChangeLog>
-{% endhighlight %}
+```
 
 It is an entry point for Liquibase. It starts from this file
 and loads all other changesets available in `src/main/liquibase/2014`.
@@ -139,7 +139,7 @@ XML mostly because it is easier to maintain and works faster.
 
 Let's create a simple changeset, which adds a new column to an existing table:
 
-{% highlight xml %}
+```xml
 <databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
   xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog
@@ -150,7 +150,7 @@ Let's create a simple changeset, which adds a new column to an existing table:
     </sql>
   </changeSet>
 </databaseChangeLog>
-{% endhighlight %}
+```
 
 We save this file in `src/main/liquibase/2014/002-add-user-address.xml`.
 In big projects, you can name your files by the names of the tickets

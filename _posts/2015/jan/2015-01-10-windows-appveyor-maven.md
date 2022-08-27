@@ -36,7 +36,7 @@ This is how I managed to configure AppVeyor to build my Java Maven projects
 (this is `appveyor.yml` configuration file you're supposed to place
 in the root directory of your GitHub repository):
 
-{% highlight text %}
+```text
 version: '{build}'
 os: Windows Server 2012
 install:
@@ -59,7 +59,7 @@ test_script:
 cache:
   - C:\maven\
   - C:\Users\appveyor\.m2
-{% endhighlight %}
+```
 
 It was not that easy at all, so I decided to share. You can see
 how this configuration works in these projects:

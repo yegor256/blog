@@ -65,9 +65,9 @@ should be involved---there are only a class and its children. An
 object asks a class to create another object, and the class constructs it; that's it.
 Ruby expresses this concept much better than Java or C++:
 
-{% highlight java %}
+```java
 photo = File.new('/tmp/photo.png')
-{% endhighlight %}
+```
 
 The object `photo` is constructed by the class `File` (`new` is an entry point to the class).
 Once constructed, the object is acting on its own. It shouldn't know who constructed it
@@ -94,10 +94,10 @@ real life, even when our software is turned off. To be more precise, an object i
 real-life creature in front of all other objects. Without
 such a creature, there is---obviously---no object.
 
-{% highlight java %}
+```java
 photo = File.new('/tmp/photo.png')
 puts photo.width()
-{% endhighlight %}
+```
 
 In this example, I'm asking `File` to construct a new object `photo`, which will
 be a representative of a real file on disk. You may say that a file
@@ -145,11 +145,11 @@ an HTTP request, or maybe a document in Dropbox? Actually, I don't. All I care a
 is that some object gives me a byte array with PNG content. So my contract
 would look like this:
 
-{% highlight java %}
+```java
 interface Binary {
   byte[] read();
 }
-{% endhighlight %}
+```
 
 Now, any object from any class (not just `DataFile`) can work for me.
 All he has to do, in order to be eligible, is to obey
@@ -172,7 +172,7 @@ to be unique. If there is nothing to encapsulate, an object may
 have identical clones, which I believe is bad. Here is an example
 of a bad object, which may have clones:
 
-{% highlight java %}
+```java
 class HTTPStatus implements Status {
   private URL page = new URL("http://localhost");
   @Override
@@ -182,16 +182,16 @@ class HTTPStatus implements Status {
     ).getResponseCode();
   }
 }
-{% endhighlight %}
+```
 
 I can create a few instances of class `HTTPStatus`, and all of them will be
 equal to each other:
 
-{% highlight java %}
+```java
 first = new HTTPStatus();
 second = new HTTPStatus();
 assert first.equals(second);
-{% endhighlight %}
+```
 
 Obviously utility classes, which have only static methods,
 can't instantiate good objects. More generally, utility classes
@@ -212,7 +212,7 @@ Be aware that immutability doesn't mean that all methods always return the same 
 Instead, a good immutable object is very dynamic.
 However, he never changes his internal state. For example:
 
-{% highlight java %}
+```java
 @Immutable
 final class HTTPStatus implements Status {
   private URL page;
@@ -226,7 +226,7 @@ final class HTTPStatus implements Status {
     ).getResponseCode();
   }
 }
-{% endhighlight %}
+```
 
 Even though the method `read()` may return different values, the
 object is immutable. He points to a certain web page and will
@@ -259,14 +259,14 @@ explains: [How Immutability Helps]({% pst 2014/nov/2014-11-07-how-immutability-h
 A static method implements a behavior of a class, not an object. Let's say
 we have class `File`, and his children have method `size()`:
 
-{% highlight java %}
+```java
 final class File implements Measurable {
   @Override
   public int size() {
     // calculate the size of the file and return
   }
 }
-{% endhighlight %}
+```
 
 So far, so good; the method `size()` is there because of the contract `Measurable`,
 and every object of class `File` will be able to measure his size. A terrible
@@ -275,14 +275,14 @@ mistake would be to design this class with a static method instead
 [a utility class]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 and is very popular in Java, Ruby, and almost every OOP language):
 
-{% highlight java %}
+```java
 // TERRIBLE DESIGN, DON'T USE!
 class File {
   public static int size(String file) {
     // calculate the size of the file and return
   }
 }
-{% endhighlight %}
+```
 
 This design runs completely against the object-oriented paradigm. Why?
 Because static methods turn object-oriented programming into "class-oriented" programming.
@@ -381,7 +381,7 @@ an exception if HTTP status is over 400. I want
 his method, `read()`, to do more that it does now. A traditional way would be
 to extend the class and overwrite his method:
 
-{% highlight java %}
+```java
 class OnlyValidStatus extends HTTPStatus {
   public OnlyValidStatus(URL url) {
     super(url);
@@ -395,7 +395,7 @@ class OnlyValidStatus extends HTTPStatus {
     return code;
   }
 }
-{% endhighlight %}
+```
 
 Why is this wrong? It is very wrong because we risk breaking
 the logic of the entire parent class by overriding one of his methods. Remember,
@@ -408,7 +408,7 @@ On the other hand, to extend a final class, you have to treat him like a black b
 and decorate him with your own implementation (a.k.a.
 [Decorator Pattern](https://en.wikipedia.org/wiki/Decorator_pattern)):
 
-{% highlight java %}
+```java
 final class OnlyValidStatus implements Status {
   private final Status origin;
   public OnlyValidStatus(Status status) {
@@ -423,7 +423,7 @@ final class OnlyValidStatus implements Status {
     return code;
   }
 }
-{% endhighlight %}
+```
 
 Make sure that this class is implementing the same
 [interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
@@ -443,7 +443,7 @@ our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as `abstract` methods.
 For example, our `HTTPStatus` may look like this:
 
-{% highlight java %}
+```java
 abstract class ValidatedHTTPStatus implements Status {
   @Override
   public final int read() throws IOException {
@@ -455,7 +455,7 @@ abstract class ValidatedHTTPStatus implements Status {
   }
   protected abstract boolean isValid();
 }
-{% endhighlight %}
+```
 
 As you see, the class doesn't know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through

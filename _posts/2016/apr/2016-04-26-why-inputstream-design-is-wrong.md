@@ -37,13 +37,13 @@ created supplementary "smart" classes.
 
 This is how it looks now:
 
-{% highlight java %}
+```java
 abstract class InputStream {
   int read();
   int read(byte[] buffer, int offset, int length);
   int read(byte[] buffer);
 }
-{% endhighlight %}
+```
 
 What's wrong? It's very convenient to have the ability to read
 a single byte, an array of bytes or even an array of bytes
@@ -61,11 +61,11 @@ In the mean time, let's see what exactly is wrong with what these
 bright engineers designed for us already. Or maybe let me show
 how I would design `InputStream` and we'll compare:
 
-{% highlight java %}
+```java
 interface InputStream {
   int read(byte[] buffer, int offset, int length);
 }
-{% endhighlight %}
+```
 
 This is my design. The `InputStream` is responsible for reading
 bytes from the stream. There is one single method for this
@@ -74,7 +74,7 @@ on Twitter? Not yet. Do we need that functionality? Of course we do,
 but it doesn't mean that we will add it to the interface. Instead,
 we will create supplementary "smart" class:
 
-{% highlight java %}
+```java
 interface InputStream {
   int read(byte[] buffer, int offset, int length);
   class Smart {
@@ -95,14 +95,14 @@ interface InputStream {
     }
   }
 }
-{% endhighlight %}
+```
 
 Now, we want to read a single byte from the stream. Here is how:
 
-{% highlight java %}
+```java
 final InputStream input = new FileInputStream("/tmp/a.txt");
 final byte b = new InputStream.Smart(input).read();
-{% endhighlight %}
+```
 
 The functionality of reading a single byte is outside of `InputStream`,
 because this is not its business. The stream doesn't need to know

@@ -35,15 +35,15 @@ I created [rehttp.net](http://www.rehttp.net) to do exactly that.
 
 See, the URL I've been giving to GitHub is this one:
 
-{% highlight text %}
+```text
 http://www.0pdd.com/hook/github
-{% endhighlight %}
+```
 
 From now on a new URL has to be used:
 
-{% highlight text %}
+```text
 https://www.rehttp.net/p/http://www.0pdd.com/hook/github
-{% endhighlight %}
+```
 
 It looks very similar, but starts with `https://www.rehttp.net/p/`. GitHub sends
 all webhook PUT/POST requests to the ReHTTP server, which stores
@@ -63,9 +63,9 @@ and how many of them failed. Also, I have this cute button:
 
 And I have a URL for checking the status of the entire API:
 
-{% highlight text %}
+```text
 https://www.rehttp.net/s?u=http%3A%2F%2Fwww.0pdd.com%2Fhook%2Fgithub
-{% endhighlight %}
+```
 
 I gave this URL to [StatusCake](https://www.statuscake.com/) to
 ping it every five minutes. If and when

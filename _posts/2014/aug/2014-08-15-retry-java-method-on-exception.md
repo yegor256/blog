@@ -24,7 +24,7 @@ an exception. [`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfai
 [jcabi-aspects](http://aspects.jcabi.com) can help.
 For example, if you're downloading the following web page:
 
-{% highlight java %}
+```java
 @RetryOnFailure(
   attempts = 3,
   delay = 10,
@@ -33,7 +33,7 @@ For example, if you're downloading the following web page:
 public String load(URL url) {
   return url.openConnection().getContent();
 }
-{% endhighlight %}
+```
 
 This method call will throw an exception only after three
 failed executions with a ten seconds interval between them.
@@ -48,7 +48,7 @@ your code.
 When method `load()` from the example above is called, this is what
 is happening behind the scene (pseudo-code):
 
-{% highlight java %}
+```java
 while (attempts++ < 3) {
   try {
     return original_load(url);
@@ -57,7 +57,7 @@ while (attempts++ < 3) {
     sleep(10);
   }
 }
-{% endhighlight %}
+```
 
 This approach may be very useful in the following situations
 (based on my experience):

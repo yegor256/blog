@@ -50,7 +50,7 @@ better maintainability, and lack of encapsulation leads to a larger scope. You k
 [scope of visibility](https://en.wikipedia.org/wiki/Scope_%28computer_science%29)
 is, right? Let's take this C code as an example:
 
-{% highlight c %}
+```c
 void print() {
   for (int i = 0; i < 10; ++i) {
     printf("%d * 2 = %d", i, i * 2);
@@ -59,13 +59,13 @@ void print() {
     printf("%d * 3 = %d", i, i * 3);
   }
 }
-{% endhighlight %}
+```
 
 There are two variables `i`, visible in two different `for` loops, two
 different scopes of visibility. The _size_ of each scope is three lines of code.
 How about this code, doing exactly the same:
 
-{% highlight c %}
+```c
 void print() {
   int i = 0;
   while (++i < 10) {
@@ -76,7 +76,7 @@ void print() {
     printf("%d * 3 = %d", i, i * 3);
   }
 }
-{% endhighlight %}
+```
 
 Now, the scope of visibility of `i` is ten lines of code. The code works as well
 as in the first snippet, but its maintainability is lower, because in order
@@ -103,14 +103,14 @@ For example, the largest scope you can imagine in C/C++, Python, Ruby and many o
 modern languages is the [global]({% pst 2018/jul/2018-07-03-global-variables %})
 one, for example here:
 
-{% highlight c %}
+```c
 int i = 0;
 void print() {
   while (++i < 10) {
     printf("%d * 2 = %d", i, i * 2);
   }
 }
-{% endhighlight %}
+```
 
 Now the variable `i` is visible not only inside the function `print()` but
 in <del>many</del> all other places of the application we develop. The scope
@@ -140,7 +140,7 @@ But then C++ showed up and ruined everything.
 Let's try to introduce an object to our C snippet, the way
 <del>most</del> some C++ programmers would do it:
 
-{% highlight cpp %}
+```cpp
 class Idx {
 public:
   int get() { return v; }
@@ -148,11 +148,11 @@ public:
 private:
   int v = 0;
 }
-{% endhighlight %}
+```
 
 And then:
 
-{% highlight cpp %}
+```cpp
 void print() {
   Idx i();
   while (i.get() < 10) {
@@ -165,7 +165,7 @@ void print() {
     i.add(1);
   }
 }
-{% endhighlight %}
+```
 
 What changed? Not much. Instead of a plain "scalar" variable `i` we have
 an "object," which stores an integer value inside and provides a few methods
@@ -209,7 +209,7 @@ true encapsulation, where data never "escapes" the borders of its owner. First,
 here is how I would design `Idx`... well, I would rename it first and call it
 `Line`:
 
-{% highlight cpp %}
+```cpp
 class Line {
 public:
   Line(int m): mul(m) {};
@@ -229,18 +229,18 @@ private:
   int mul;
   int v = 0;
 }
-{% endhighlight %}
+```
 
 And now here is the code of `print()`:
 
-{% highlight cpp %}
+```cpp
 void print() {
   Line a(2);
   while (a.next()) { a.print(); }
   Line b(3);
   while (b.next()) { b.print(); }
 }
-{% endhighlight %}
+```
 
 As you see, `print()` doesn't have any access to the internal data of `Line`.
 All `print()` can do is ask the `Line` to move forward and print itself. How exactly

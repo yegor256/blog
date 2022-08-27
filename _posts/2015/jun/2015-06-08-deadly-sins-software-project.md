@@ -122,11 +122,11 @@ tests, packages, and deploys.
 An ideal solution would be to automate this procedure so
 it is possible to execute it from a command line with a single command:
 
-{% highlight bash %}
+```bash
 $ ./release.sh
 ...
 DONE (took 98.7s)
-{% endhighlight %}
+```
 
 Most projects are far from that. Their release process always
 involves some magic, where the person responsible for it

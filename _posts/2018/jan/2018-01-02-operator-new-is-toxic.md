@@ -38,7 +38,7 @@ Let's say there is a story in a file that we need to read as a UTF-8 text
 [`TextOf`](http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html)
 from [Cactoos](http://www.cactoos.org)):
 
-{% highlight java %}
+```java
 class Story {
   String text() {
     return new TextOf(
@@ -46,7 +46,7 @@ class Story {
     ).asString();
   }
 }
-{% endhighlight %}
+```
 
 It seems super simple, but the problem is obvious: class `Story` can't
 be reused. It can only read one particular file. Moreover, testing it
@@ -58,7 +58,7 @@ and `/tmp/story.txt`---they are together forever.
 To solve this we need to introduce a constructor and let `Story` accept
 the location of the content as an argument:
 
-{% highlight java %}
+```java
 class Story {
   private final File file;
   Story(File f) {
@@ -68,20 +68,20 @@ class Story {
     return new TextOf(this.file).asString();
   }
 }
-{% endhighlight %}
+```
 
 Now, each user of the `Story` has to know the name of the file:
 
-{% highlight java %}
+```java
 new Story(new File("/tmp/story.txt"));
-{% endhighlight %}
+```
 
 It's not really
 convenient, especially for those users who were using `Story` before, knowing
 nothing about the file path. To help them we introduce
 a [secondary constructor]({% pst 2015/may/2015-05-28-one-primary-constructor %}):
 
-{% highlight java %}
+```java
 class Story {
   private final File file;
   Story() { // Here!
@@ -94,14 +94,14 @@ class Story {
     return new TextOf(this.file).asString();
   }
 }
-{% endhighlight %}
+```
 
 Now we just make an instance through a no-arguments constructor, just like
 we did before:
 
-{% highlight java %}
+```java
 new Story();
-{% endhighlight %}
+```
 
 I'm sure you're well aware of this technique, which is also known
 as [dependency injection](http://martinfowler.com/articles/injection.html).
@@ -119,15 +119,15 @@ Class `TextOf` and then method `Story.text()` will throw an exception.
 However, class `TextOf` is capable of reading in any encoding, it just
 needs to have a secondary argument for its constructor:
 
-{% highlight java %}
+```java
 new TextOf(this.file, "KOI8_R").asString();
-{% endhighlight %}
+```
 
 In order to make `Story` capable of using different encodings, we need to
 introduce a few additional secondary constructors and modify its primary
 constructor:
 
-{% highlight java %}
+```java
 class Story {
   private final Text text;
   Story() {
@@ -146,7 +146,7 @@ class Story {
     return this.text.asString();
   }
 }
-{% endhighlight %}
+```
 
 It's just dependency injection, but pay attention to the locations
 of the operator `new`. They are all in the

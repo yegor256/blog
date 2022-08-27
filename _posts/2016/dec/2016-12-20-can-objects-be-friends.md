@@ -33,14 +33,14 @@ while allowing objects to interact.
 
 Say that this is our object:
 
-{% highlight java %}
+```java
 class Temperature {
   private int t;
   public String toString() {
     return String.format("%d C", this.t);
   }
 }
-{% endhighlight %}
+```
 
 It represents a temperature. The only behavior it exposes is printing
 the temperature in Celsius. We don't want to expose `t`, because
@@ -56,7 +56,7 @@ a method `getT()`, but neither one is perfect.
 
 What if we create this decorator:
 
-{% highlight java %}
+```java
 class TempFahrenheit implements Temperature {
   private TempCelsius origin;
   public String toString() {
@@ -65,15 +65,15 @@ class TempFahrenheit implements Temperature {
     );
   }
 }
-{% endhighlight %}
+```
 
 It should work just great:
 
-{% highlight java %}
+```java
 Temperature t = new TempFahrenheit(
   new TempCelsius(35)
 );
-{% endhighlight %}
+```
 
 The only problem is that it won't compile in Java, because class
 `TempFahrenheit` is not allowed to access private `t` in class `TempCelsius`.
@@ -83,7 +83,7 @@ that "naked data" problem---a severe violation of encapsulation.
 However, if we allow that access _only_ to one class, everything will be fine.
 Something like this (won't work in Java; it's just a concept):
 
-{% highlight java %}
+```java
 class TempCelsius {
   trust TempFahrenheit; // here!
   private int t;
@@ -91,7 +91,7 @@ class TempCelsius {
     return String.format("%d C", this.t);
   }
 }
-{% endhighlight %}
+```
 
 Since this `trust` keyword is placed into the class that allows access,
 we won't have the "naked data" problem---we will always know exactly which

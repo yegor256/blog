@@ -21,7 +21,7 @@ This is a very common practice in Java
 (using [`LoggerFactory`](http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html)
 from [slf4j](http://www.slf4j.org/)):
 
-{% highlight java %}
+```java
 import org.slf4j.LoggerFactory;
 public class Foo {
   private static final Logger LOGGER =
@@ -33,7 +33,7 @@ public class Foo {
     }
   }
 }
-{% endhighlight %}
+```
 
 What's wrong with it? Code duplication.
 
@@ -50,7 +50,7 @@ ago, [jcabi-log](http://log.jcabi.com), which has a convenient
 utility class [`Logger`](http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html)
 (yes, I know that [utility classes are evil]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})).
 
-{% highlight java %}
+```java
 import com.jcabi.log.Logger;
 public class Foo {
   public void save(String file) {
@@ -58,7 +58,7 @@ public class Foo {
     Logger.info(this, "file %s saved successfuly", file);
   }
 }
-{% endhighlight %}
+```
 
 This looks much cleaner to me and does exactly
 the same---sends a single log line to the SLF4J
@@ -74,9 +74,9 @@ The library ships as a JAR dependency in
 [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-log)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-log</artifactId>
 </dependency>
-{% endhighlight %}
+```

@@ -46,10 +46,10 @@ but ignore XML files in the `.idea/` directory. You also want to make sure
 all XML files have a license in their preamble. This is how you would
 call `xcop`:
 
-{% highlight text %}
+```text
 $ xcop --include '*.xml' --exclude '.idea/**' \
   --license LICENSE.txt
-{% endhighlight %}
+```
 
 You have to use this set of arguments everywhere you call `xcop`:
 in the build script, in the CI/CD pipeline, and on your laptop when you check
@@ -60,17 +60,17 @@ I suggest a better solution. You can create a `.xcop`
 plain text file in the root of the repository and put all
 the required "default" command line options there, one per line:
 
-{% highlight text %}
+```text
 --include=*.xml
 --exclude=.idea/**
 --license=LICENSE.txt
-{% endhighlight %}
+```
 
 Now, you can call the tool just like this:
 
-{% highlight text %}
+```text
 $ xcop
-{% endhighlight %}
+```
 
 It will find the `.xcop` file and will read all lines from it, treating
 each of them as command line arguments. It will basically _concatenate_

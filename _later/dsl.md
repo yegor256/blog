@@ -28,7 +28,7 @@ personal experience. Let me show you a few examples first, to
 demonstrate what bothers me most. The first example is
 from nokogiri, a Ruby library for building XML documents:
 
-{% highlight ruby %}
-{% endhighlight %}
+```ruby
+```
 
 This is another one:

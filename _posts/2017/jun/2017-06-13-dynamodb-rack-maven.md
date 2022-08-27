@@ -48,7 +48,7 @@ repository and start/stop Maven from a
 [`Rakefile`](https://github.com/yegor256/sixnines/blob/0.17/Rakefile),
 just like I'm doing [here](https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50-L67):
 
-{% highlight ruby %}
+```ruby
 task :dynamo do
   FileUtils.rm_rf('dynamodb-local/target')
   pid = Process.spawn('mvn', 'install', chdir: 'dynamodb-local')
@@ -62,7 +62,7 @@ task :dynamo do
     retry
   end
 end
-{% endhighlight %}
+```
 
 First, I'm removing `dynamodb-local/target`, the directory where Maven keeps
 its temporary files, to make sure we always start from scratch.
@@ -127,7 +127,7 @@ of HTTP calls. For example,
 I'm trying to render Jeff's user account page.
 Its HTTP response code is supposed to be 200:
 
-{% highlight java %}
+```java
 require 'test/unit'
 require 'rack/test'
 class AppTest < Test::Unit::TestCase
@@ -140,7 +140,7 @@ class AppTest < Test::Unit::TestCase
     get('/a')
     assert_equal(200, last_response.status)
   end
-{% endhighlight %}
+```
 
 ##
 

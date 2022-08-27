@@ -44,7 +44,7 @@ if your project name is `teamed`.
 
 Add a new "inline policy" to the user:
 
-{% highlight text %}
+```text
 {
   "Statement": [
     {
@@ -57,7 +57,7 @@ Add a new "inline policy" to the user:
     }
   ]
 }
-{% endhighlight %}
+```
 
 Here, `repo.teamed.io` is the name of the S3 bucket you
 created a minute ago.
@@ -65,10 +65,10 @@ created a minute ago.
 Make sure you have an "access key" for this new user. It must look similar
 to this:
 
-{% highlight text %}
+```text
 key: AKIAI9NNNJD5D7X4TUVA
 secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av
-{% endhighlight %}
+```
 
 The key is 20 characters (all caps), and the secret is 40 characters.
 
@@ -76,7 +76,7 @@ The key is 20 characters (all caps), and the secret is 40 characters.
 
 Add this configuration to your `~/.m2/settings.xml` file:
 
-{% highlight xml %}
+```xml
 <settings>
   <servers>
     <server>
@@ -88,13 +88,13 @@ Add this configuration to your `~/.m2/settings.xml` file:
   </servers>
   [...]
 </settings>
-{% endhighlight %}
+```
 
 ## Configure `pom.xml`
 
 Add this configuration to `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   <distributionManagement>
     <snapshotRepository>
@@ -114,12 +114,12 @@ Add this configuration to `pom.xml`:
   </repositories>
   [...]
 </project>
-{% endhighlight %}
+```
 
 Then, configure [S3 Wagon](https://github.com/jcaddel/maven-s3-wagon),
 also in `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   <build>
     <extensions>
@@ -132,14 +132,14 @@ also in `pom.xml`:
     [...]
   </build>
 </project>
-{% endhighlight %}
+```
 
 You're ready to go. You can deploy your artifacts just by running
 Maven from the command line:
 
-{% highlight text %}
+```text
 $ mvn clean deploy
-{% endhighlight %}
+```
 
 ## Configure `s3auth.com`
 
@@ -158,10 +158,10 @@ artifacts to S3 automatically.
 First, encrypt your `settings.xml` with this
 [Rultor remote](https://github.com/yegor256/rultor-remote):
 
-{% highlight xml %}
+```xml
 $ gem install rultor
 $ rultor encrypt -p me/test settings.xml
-{% endhighlight %}
+```
 
 Instead of `me/test`, you should use the name of your GitHub project.
 
@@ -173,21 +173,21 @@ Create a `.rultor.yml` file in the root directory of your project
 (The Rultor [reference page](https://doc.rultor.com/reference.html)
 explains this format in greater detail):
 
-{% highlight text %}
+```text
 decrypt:
   settings.xml: "repo/settings.xml.asc"
 deploy:
   script: |
     mvn clean deploy --settings ../settings.xml
-{% endhighlight %}
+```
 
 Now it's time to see how it all works together. Create a new ticket in the
 GitHub issue tracker and post something like this into it
 (read more about [Rultor commands](https://doc.rultor.com/basics.html)):
 
-{% highlight text %}
+```text
 @rultor deploy
-{% endhighlight %}
+```
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 

@@ -43,16 +43,16 @@ created [Cactoos](http://www.cactoos.org), a library of decorators, to replace
 Here is a primitive example. Let's say we have a collection of measurements
 coming in from some data source, they are all numbers between zero and one:
 
-{% highlight java %}
+```java
 Iterable<Double> probes;
-{% endhighlight %}
+```
 
 Now, we need to show only the first 10 of them, ignoring zeros and ones,
 and re-scaling them to `(0..100)`. Sounds like an easy task, right? There
 are three ways to do it: procedural, object-oriented, and the Java&nbsp;8 way. Let's
 start with the procedural way:
 
-{% highlight java %}
+```java
 int pos = 0;
 for (Double probe : probes) {
   if (probe == 0.0d || probe == 1.0d) {
@@ -65,7 +65,7 @@ for (Double probe : probes) {
     "Probe #%d: %f", pos, probe * 100.0d
   );
 }
-{% endhighlight %}
+```
 
 Why is this a procedural way? Because it's imperative. Why is it imperative?
 Because it's procedural. Nah, I'm kidding.
@@ -90,7 +90,7 @@ which
 [doesn't](https://stackoverflow.com/questions/23114015/)
 let us obtain directly. Then we use the stream API to do the job:
 
-{% highlight java %}
+```java
 StreamSupport.stream(probes.spliterator(), false)
   .filter(p -> p == 0.0d || p == 1.0d)
   .limit(10L)
@@ -99,7 +99,7 @@ StreamSupport.stream(probes.spliterator(), false)
       "Probe #%d: %f", 0, probe * 100.0d
     )
   );
-{% endhighlight %}
+```
 
 This will work, but will say `Probe #0` for all probes, because `forEach()`
 doesn't work with indexes. There is no such thing as `forEachWithIndex()`
@@ -109,7 +109,7 @@ interface as of Java&nbsp;8 (and Java&nbsp;9
 Here is a [workaround](https://stackoverflow.com/a/18552071/187141) with
 an atomic counter:
 
-{% highlight java %}
+```java
 AtomicInteger index = new AtomicInteger();
 StreamSupport.stream(probes.spliterator(), false)
   .filter(probe -> probe != 0.0d && probe != 1.0d)
@@ -121,7 +121,7 @@ StreamSupport.stream(probes.spliterator(), false)
       probe * 100.0d
     )
   );
-{% endhighlight %}
+```
 
 "What's wrong with that?" you may ask. First, see how easily we got into
 trouble when we didn't find the right method in the `Stream` interface. We
@@ -148,7 +148,7 @@ What is the object-oriented way to implement the same algorithm? Here
 is how I would do it with [Cactoos](http://www.cactoos.org), which is just a collection of
 <del>primitive</del> simple Java classes:
 
-{% highlight java %}
+```java
 new And(
   new Mapped<Double, Scalar<Boolean>>(
     new Limited<Double>(
@@ -166,7 +166,7 @@ new And(
     }
   )
 ).value();
-{% endhighlight %}
+```
 
 Let's see what's going on here. First,
 [`Filtered`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html)
@@ -187,7 +187,7 @@ its method `value()` returns `true`.
 But wait, there are no indexes. Let's add them. In order to do that we
 just use another class, called `AndWithIndex`:
 
-{% highlight java %}
+```java
 new AndWithIndex(
   new Mapped<Double, Func<Integer, Boolean>>(
     new Limited<Double>(
@@ -205,7 +205,7 @@ new AndWithIndex(
     }
   )
 ).value();
-{% endhighlight %}
+```
 
 Instead of `Scalar<Boolean>` we now map our probes to
 [`Func<Integer, Boolean>`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html)
@@ -225,7 +225,7 @@ P.S. By the way, this is how the same algorithm can be implemented
 with the help of Guava's
 [`Iterables`](https://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Iterables.html):
 
-{% highlight java %}
+```java
 Iterable<Double> ready = Iterables.limit(
   Iterables.filter(
     probes,
@@ -239,7 +239,7 @@ for (Double probe : probes) {
     "Probe #%d: %f", pos++, probe * 100.0d
   );
 }
-{% endhighlight %}
+```
 
 This is some weird combination of object-oriented and functional styles.
 

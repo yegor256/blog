@@ -43,11 +43,11 @@ with builders, which are supposed to create or find an object and then return
 it. Suppose I have a store of books and I ask it to give me a book
 by name:
 
-{% highlight java %}
+```java
 interface Bookshelf {
   Book find(String title);
 }
-{% endhighlight %}
+```
 
 It's obviously a "builder" (or a "query" in Meyer's terms). I ask for
 a book and it's given to me. The problem, though, is with the name of the method.
@@ -61,36 +61,36 @@ When we query, we have to say what result we are looking for and let
 the object make the decision about the way this result is going to be built.
 A much more appropriate name for this method would be `book()`:
 
-{% highlight java %}
+```java
 interface Bookshelf {
   Book book(String title);
 }
-{% endhighlight %}
+```
 
 The rule of thumb is: a builder is always a noun. If the method returns
 something, it has to be a noun. Preferably its name should explain what
 the method returns. If it's a book, name it `book()`. If it's a file, call
 the method `file()`, etc. Here are a few good builder examples:
 
-{% highlight java %}
+```java
 interface Foo {
   float speed(Actor actor);
   Money salary(User user);
   File database();
   Date deadline(Project project, User user);
 }
-{% endhighlight %}
+```
 
 Here, on the contrary, are a few examples of badly named builders:
 
-{% highlight java %}
+```java
 interface Foo {
   float calculateSpeed(Actor actor);
   Money getSalary(User user);
   File openDatabase();
   Date readDeadline(Project project, User user);
 }
-{% endhighlight %}
+```
 
 There is no place for a verb in a builder's name!
 
@@ -106,11 +106,11 @@ the opposite to builders, because they actually make changes to the world
 abstracted by the object.
 For example, we ask the `Bookshelf` to add a new book to itself:
 
-{% highlight java %}
+```java
 interface Bookshelf {
   void add(Book book);
 }
-{% endhighlight %}
+```
 
 The method adds the book to the storage. How exactly the storage will be
 modified, we don't know. But we know that since the name of the method

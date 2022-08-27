@@ -69,9 +69,9 @@ request in `Authorization` HTTP header.
 Now, the browser tries to make another attempt to fetch the same webpage. But,
 this time, the HTTP request contains a header:
 
-{% highlight text %}
+```text
 Authorization: Basic am9lOnNlY3JldA==
-{% endhighlight %}
+```
 
 The above is just an example. In the example, the Base64 encoded part means
 `joe:secret`, where `joe` is the user name and `secret` the password entered by

@@ -34,12 +34,12 @@ to be a good time to write a few words about them.
 Below is an example that demonstrates how you can validate
 an HTML document against W3C compliance rules:
 
-{% highlight java %}
+```java
 import com.jcabi.w3c.ValidatorBuilder;
 assert ValidatorBuilder.html()
   .validate("<html>hello, world!</html>")
   .valid();
-{% endhighlight %}
+```
 
 <!--more-->
 
@@ -47,19 +47,19 @@ The `valid()` method is a black or white indicator that
 returns `false` when the document is not valid. Additionally,
 you can obtain more information through a list of "defects" returned by the W3C server:
 
-{% highlight java %}
+```java
 Collection<Defect> defects = ValidatorBuilder.html()
   .validate("<html>hello, world!</html>")
   .errors();
-{% endhighlight %}
+```
 
 The same can be done with CSS:
 
-{% highlight java %}
+```java
 Collection<Defect> defects = ValidatorBuilder.css()
   .validate("body { font-family: Arial; }")
   .errors();
-{% endhighlight %}
+```
 
 Personally, I think it is a good practice to validate all
 of HTML pages produced by your application against W3C during
@@ -69,7 +69,7 @@ but rather of preventing bigger problems later.
 These dependencies are mandatory when using jcabi-w3c
 (get their latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-w3c</artifactId>
@@ -86,4 +86,4 @@ These dependencies are mandatory when using jcabi-w3c
   <groupId>org.hamcrest</groupId>
   <artifactId>hamcrest-core</artifactId>
 </dependency>
-{% endhighlight %}
+```

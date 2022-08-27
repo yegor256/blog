@@ -38,18 +38,18 @@ Blockchain works. Here is my short summary. I hope it will be helpful.
 First, there is a [private key](https://en.bitcoin.it/wiki/Private_key),
 which is a short piece of text, for example:
 
-{% highlight text %}
+```text
 c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
-{% endhighlight %}
+```
 
 How did I generate it? It's random. You can generate one too. Install
 [Sibit](https://github.com/yegor256/sibit), my Ruby gem, and run the following
 (it's a command line tool):
 
-{% highlight text %}
+```text
 $ sibit generate
 c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
-{% endhighlight %}
+```
 
 Every time you call `sibit generate` you will get a new private key. It is
 just a random piece of text (well, a large hex number).
@@ -57,10 +57,10 @@ Then, you create an [address](https://en.bitcoin.it/wiki/Address)
 from your private key. Each private key has exactly one address.
 Here is how you create it:
 
-{% highlight text %}
+```text
 $ sibit create c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
 1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe
-{% endhighlight %}
+```
 
 You give it to someone who wants to send you a payment. A transaction in Bitcoin is not what
 you're used to thinking about when you imagine a bank transaction. A Bitcoin
@@ -89,10 +89,10 @@ just use [Blockchain API](https://www.blockchain.com/api/blockchain_api)
 (for example) and they will provide you with the information
 about any Bitcoin address. Try this address, for example:
 
-{% highlight text %}
+```text
 $ sibit balance 1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY
 20000000
-{% endhighlight %}
+```
 
 It is in [satoshi](https://en.bitcoin.it/wiki/Satoshi_%28unit%29),
 which is 0.2 BTC. Click [here](https://www.blockchain.com/btc/address/1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY)
@@ -154,12 +154,12 @@ Bitcoin nodes; [this is](https://www.blockchain.com/btc/pushtx) one of them.
 
 [Sibit](https://github.com/yegor256/sibit) automates this process. You just say:
 
-{% highlight text %}
+```text
 $ sibit pay 200000 L \
   1K3J...se1TYe:c93a36feb3...e55108bde32477cbabac5f \
   153dF1xKyVX5X8brBDroaqKkPmcB8kLtDB \
   1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe
-{% endhighlight %}
+```
 
 Here, the first argument is the amount you are sending. The second one
 is the fee you want to leave untouched. I made it easier for you, to help

@@ -45,7 +45,7 @@ First, you need these dependencies in your `pom.xml`
 (Nutch uses [Apache Hadoop](https://hadoop.apache.org/), that's why we need the
 second dependency):
 
-{% highlight xml %}
+```xml
 <project>
   <dependencies>
     <dependency>
@@ -62,11 +62,11 @@ second dependency):
   </dependencies>
   [...]
 </project>
-{% endhighlight %}
+```
 
 Next, this is your Java code, which does all the work:
 
-{% highlight java %}
+```java
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -173,7 +173,7 @@ public class Main {
     return list.get(list.size() - 1);
   }
 }
-{% endhighlight %}
+```
 
 Pay attention that `Path` here is not the
 [`Path`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html) from JDK.
@@ -192,7 +192,7 @@ which will work with the provided plugins.
 What can we do, now that we are in Java, not in the command line? Here is what
 I suggest:
 
-{% highlight xml %}
+```xml
 <project>
   <build>
     <plugins>
@@ -220,14 +220,14 @@ I suggest:
   </build>
   [...]
 </project>
-{% endhighlight %}
+```
 
 This Maven plugin will download the entire binary distribution of Nutch
 and will unpack it to `target/apache-nutch-1.15`. The plugins will be
 in `target/apache-nutch-1.15/plugins`. The only thing we still need
 to do is to set the system property for the unit test:
 
-{% highlight xml %}
+```xml
 <project>
   <build>
     <pluginManagement>
@@ -247,7 +247,7 @@ to do is to set the system property for the unit test:
   </build>
   [...]
 </project>
-{% endhighlight %}
+```
 
 Actually, one more thing we have to do: copy the contents of the directory `conf`
 from their binary distribution to our `src/main/resources` directory. There

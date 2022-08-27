@@ -47,7 +47,7 @@ Wouldn't it be great to enable global variables in Java and get rid of
 Singletons. PHP, JavaScript, Ruby and many other languages
 have them, why doesn't Java? Look at this code:
 
-{% highlight java %}
+```java
 class User {
   private static User INSTANCE;
   private User() {}
@@ -63,27 +63,27 @@ class User {
     // return user's name
   }
 }
-{% endhighlight %}
+```
 
 Then, to access it we have to use:
 
-{% highlight java %}
+```java
 String name = User.getInstance().getName();
-{% endhighlight %}
+```
 
 This is a Singleton. See how verbose it is?
 We can simply replace it with a global variable (`global` is the keyword
 I'm suggesting we use):
 
-{% highlight java %}
+```java
 global User user;
-{% endhighlight %}
+```
 
 And then:
 
-{% highlight java %}
+```java
 user.getName();
-{% endhighlight %}
+```
 
 Much less code to write, and way easier to read!
 
@@ -97,7 +97,7 @@ It's just extra hassle. I'm suggesting we add global functions
 to Java and optional "namespaces" to group them. Take a look at this
 utility class:
 
-{% highlight java %}
+```java
 class TextUtils {
   private TextUtils() {}
   public static String trim(String text) {
@@ -107,11 +107,11 @@ class TextUtils {
     return text.trim();
   }
 }
-{% endhighlight %}
+```
 
 Now look at this global function with a namespace:
 
-{% highlight java %}
+```java
 namespace TextUtils {
   String trim(String text) {
     if (text == null) {
@@ -120,7 +120,7 @@ namespace TextUtils {
     return text.trim();
   }
 }
-{% endhighlight %}
+```
 
 My point is that since we are already using classes as collections
 of functions, let's make it more convenient. In some applications we
@@ -133,7 +133,7 @@ have to use the [Reflection API](https://docs.oracle.com/javase/tutorial/reflect
 It's not particularly difficult, but it does take a few lines
 of code, which are not so easy to read and understand:
 
-{% highlight java %}
+```java
 class Point {
   private int x;
   private int y;
@@ -142,15 +142,15 @@ Point point = new Point();
 Field field = point.getClass().getDeclaredField("x");
 field.setAccessible(true);
 int x = (int) field.get(point);
-{% endhighlight %}
+```
 
 I'm suggesting we allow any object to access any of the attributes and methods
 of another object:
 
-{% highlight java %}
+```java
 Point point = new Point();
 int x = point.x;
-{% endhighlight %}
+```
 
 Of course, if they are private, the compiler will issue a warning.
 At compile time you simply ignore the warning and move on. If you really care
@@ -174,33 +174,33 @@ should have one method with a long list of arguments. Some of them will be
 provided by the caller, others will be set to `null`. The method will
 decide what to do, for example:
 
-{% highlight java %}
+```java
 void save(File file, String encoding) {
  if (encoding == null) {
    encoding = "UTF-8";
  }
 }
-{% endhighlight %}
+```
 
 Then we just call either `save(f)` or `save(f, "UTF-16")`. The method will
 understand what we mean. We can also make it even more convenient, like it's
 done in Ruby, providing method arguments by names:
 
-{% highlight java %}
+```java
 save(file: f, encoding: "UTF-16");
-{% endhighlight %}
+```
 
 Also, when there is nothing to return, the method must return `null` by default.
 Writing `return null` is just a waste of a code line and doesn't really
 improve readability. Take a look:
 
-{% highlight java %}
+```java
 String load(File file) {
  if (file.exists()) {
    return read_the_content();
  }
 }
-{% endhighlight %}
+```
 
 It's obvious from this code that if the file exists, the method loads
 and returns its content. If not, it returns `null`, which will be a good

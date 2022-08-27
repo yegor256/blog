@@ -44,7 +44,7 @@ with nothing inside it except a large `pom.xml` with multiple pre-configured
 dependencies, profiles, and plugins. All you need to do in order to reuse them
 all in your project is define `com.jcabi:parent` as your parent POM:
 
-{% highlight xml %}
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -58,7 +58,7 @@ all in your project is define `com.jcabi:parent` as your parent POM:
   </parent>
   [...]
 </project>
-{% endhighlight %}
+```
 
 That's all you need. Now you can remove most of your custom configurations
 from `pom.xml` and rely on defaults provided by jcabi-parent. Its

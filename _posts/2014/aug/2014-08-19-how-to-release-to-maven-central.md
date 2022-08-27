@@ -67,7 +67,7 @@ When this step is done, you should have two files:
 
 Create `settings.xml`, next to the two `.gpg` files created in the previous step:
 
-{% highlight xml %}
+```xml
 <settings>
   <profiles>
     <profile>
@@ -87,7 +87,7 @@ Create `settings.xml`, next to the two `.gpg` files created in the previous step
     </server>
   </servers>
 </settings>
-{% endhighlight %}
+```
 
 In this example, `9A105525` is the ID of your public key, and `my-secret`
 is the pass phrase you have used while generating the keys.
@@ -96,12 +96,12 @@ is the pass phrase you have used while generating the keys.
 
 Now, encrypt these three files with a [rultor remote](https://github.com/yegor256/rultor-remote):
 
-{% highlight xml %}
+```xml
 $ gem install rultor
 $ rultor encrypt -p me/test pubring.gpg
 $ rultor encrypt -p me/test secring.gpg
 $ rultor encrypt -p me/test settings.xml
-{% endhighlight %}
+```
 
 Instead of `me/test` you should use the name of your GitHub project.
 
@@ -119,7 +119,7 @@ unnecessary. If you're using jcabi-parent, skip this step.
 However, if you don't use jcabi-parent, you should add these two repositories
 to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   [...]
   <distributionManagement>
@@ -133,7 +133,7 @@ to your `pom.xml`:
     </snapshotRepository>
   </distributionManagement>
 </project>
-{% endhighlight %}
+```
 
 ## Configure GPG Plugin
 
@@ -142,7 +142,7 @@ which configures this plugin automatically. If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   [..]
   <build>
@@ -165,7 +165,7 @@ Otherwise, add this plugin to your `pom.xml`:
     </plugins>
   </build>
 </project>
-{% endhighlight %}
+```
 
 ## Configure Versions Plugin
 
@@ -174,7 +174,7 @@ configures all required plugins out-of-the-box. If you're using it, skip this st
 
 Otherwise, add this plugin to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   [..]
   <build>
@@ -192,7 +192,7 @@ Otherwise, add this plugin to your `pom.xml`:
     </plugins>
   </build>
 </project>
-{% endhighlight %}
+```
 
 ## Configure Sonatype Plugin
 
@@ -201,7 +201,7 @@ you here as well. If you're using it, skip this step too.
 
 Otherwise, add these four plugins to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   [..]
   <build>
@@ -261,7 +261,7 @@ Otherwise, add these four plugins to your `pom.xml`:
     </plugins>
   </build>
 </project>
-{% endhighlight %}
+```
 
 ## Create Rultor Configuration
 
@@ -269,7 +269,7 @@ Create a `.rultor.yml` file in the root directory of your project
 ([reference page](https://doc.rultor.com/reference.html)
 explains this format in details):
 
-{% highlight text %}
+```text
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
@@ -279,7 +279,7 @@ release:
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean deploy -Pjcabi --settings /home/r/settings.xml
-{% endhighlight %}
+```
 
 You can compare your file with live Rultor
 [configuration of jcabi-aspects](https://github.com/jcabi/jcabi-aspects/blob/master/.rultor.yml).
@@ -292,9 +292,9 @@ Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it
 (read more about [Rultor commands](https://doc.rultor.com/basics.html)):
 
-{% highlight text %}
+```text
 @rultor release, tag is `0.1`
-{% endhighlight %}
+```
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 

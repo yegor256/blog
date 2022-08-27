@@ -96,7 +96,7 @@ The first part of the algorithm can be automated with
 [our Maven plugin](https://github.com/cqfn/eo), simply by placing `.eo` sources
 in `src/main/eo/` and adding this to `pom.xml`:
 
-{% highlight xml %}
+```xml
 <project>
   <build>
     <plugins>
@@ -122,7 +122,7 @@ in `src/main/eo/` and adding this to `pom.xml`:
   </build>
   [...]
 </project>
-{% endhighlight %}
+```
 
 The `register` goal will scan the `src/main/eo/` directory, find all
 `.eo` sources, and "register" them in a special CSV catalog at 
@@ -144,7 +144,7 @@ Let's discuss each step in detail.
 
 Say, this is the `.eo` source code at `src/main/eo/hello.eo`:
 
-{% highlight text %}
+```text
 +alias org.eolang.io.stdout
 
 [] > hello
@@ -152,11 +152,11 @@ Say, this is the `.eo` source code at `src/main/eo/hello.eo`:
   stdout > @
     "Hello, %s!"
     user
-{% endhighlight %}
+```
 
 It will be parsed to this XMIR (XML Intermediate Representation):
 
-{% highlight xml %}
+```xml
 <program>
   <o name="hello" line="1">
     <o name="user" data="string" line="2">Jeff</o>
@@ -166,7 +166,7 @@ It will be parsed to this XMIR (XML Intermediate Representation):
     </o>
   </o>
 </program>
-{% endhighlight %}
+```
 
 If you wonder what this XML means, read 
 [this document](https://arxiv.org/abs/2111.13384):
@@ -179,7 +179,7 @@ many XSL transformations, sometimes getting additional elements and attributes.
 Our example XMIR may get a new attribute `@ref`, pointing the reference to the
 object `user` to the line where the object was defined:
 
-{% highlight xml %}
+```xml
 <program>
   <o name="hello" line="1">
     <o name="user" data="string" line="2">Jeff</o>
@@ -189,14 +189,14 @@ object `user` to the line where the object was defined:
     </o>
   </o>
 </program>
-{% endhighlight %}
+```
 
 Some XSL transformation may check for grammar or semantic errors and
 add a new element `<errors/>` if something wrong is found. Thus, if parsing
 didn't find any syntax errors, all other errors will be visible inside
 the XMIR document, for example, like this:
 
-{% highlight xml %}
+```xml
 <program>
   <errors>
     <error line=>The program has no package</error>
@@ -209,7 +209,7 @@ the XMIR document, for example, like this:
     </o>
   </o>
 </program>
-{% endhighlight %}
+```
 
 By the way, this is not a real error, I just made it up.
 
@@ -243,12 +243,12 @@ documents, but the sources in `.eo` format.
 This is what [`stdout.eo`](https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo)
 may look like, after the pull:
 
-{% highlight xml %}
+```xml
 +package org.eolang.io
 +rt jvm org.eolang:eo-runtime:0.10.2
 
 [text] > stdout /bool
-{% endhighlight %}
+```
 
 The object is an _atom_. This means that even though we have its source code,
 it't not complete without a piece of platform-specific binary code.
@@ -264,14 +264,14 @@ and unpack it (it's a zip archive with `.class` files after all).
 
 By the way, a program may contain a number of `+rt` meta instructions, for example:
 
-{% highlight text %}
+```text
 +package org.eolang.io
 +rt jvm org.eolang:eo-runtime:0.10.2
 +rt ruby eo-core:0.5.8
 +rt python eo-basics:0.0.3
 
 [text] > stdout /bool
-{% endhighlight %}
+```
 
 Here, three runtime platforms will know where to get the missing code
 for the `stdout` atom:
@@ -354,12 +354,12 @@ runtime version to the currently deploying version. Take a look
 at the file [`stdout.eo`](https://github.com/cqfn/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo), 
 in its source repository:
 
-{% highlight text %}
+```text
 +package org.eolang.io
 +rt jvm org.eolang:eo-runtime:0.0.0
 
 [text] > stdout /bool
-{% endhighlight %}
+```
 
 The version at the `+rt` line is `0.0.0`. When sources are copied to the 
 JAR, this text is replaced.

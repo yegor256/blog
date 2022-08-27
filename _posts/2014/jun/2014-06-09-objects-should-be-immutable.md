@@ -87,13 +87,13 @@ in more details in their very famous book
 Here is an example of temporal coupling (the code makes
 two consecutive HTTP POST requests, where the second one contains HTTP body):
 
-{% highlight java %}
+```java
 Request request = new Request("http://localhost");
 request.method("POST");
 String first = request.fetch();
 request.body("text=hello");
 String second = request.fetch();
-{% endhighlight %}
+```
 
 This code works. However, you must remember that the first
 request should be configured before the second one may happen.
@@ -101,13 +101,13 @@ If we decide to remove the first request from the script, we will
 remove the second and the third line, and won't get any errors
 from the compiler:
 
-{% highlight java %}
+```java
 Request request = new Request("http://localhost");
 // request.method("POST");
 // String first = request.fetch();
 request.body("text=hello");
 String second = request.fetch();
-{% endhighlight %}
+```
 
 Now, the script is broken although it compiled without errors. This is
 what [temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %})
@@ -124,23 +124,23 @@ together and be executed after the first one.
 If `Request` class were immutable, the first snippet wouldn't
 work in the first place, and would have been rewritten like:
 
-{% highlight java %}
+```java
 final Request request = new Request("");
 String first = request.method("POST").fetch();
 String second = request.method("POST").body("text=hello").fetch();
-{% endhighlight %}
+```
 
 Now, these two requests are not coupled. We can safely remove
 the first one, and the second one will still work correctly.
 You may point out that there is a code duplication. Yes, we
 should get rid of it and re-write the code:
 
-{% highlight java %}
+```java
 final Request request = new Request("");
 final Request post = request.method("POST");
 String first = post.fetch();
 String second = post.body("text=hello").fetch();
-{% endhighlight %}
+```
 
 See, refactoring didn't break anything and we still don't have
 temporal coupling. The first request can be removed safely
@@ -155,22 +155,22 @@ because it doesn't have
 
 Let's try to use our `Request` class in a new method (now it is mutable):
 
-{% highlight java %}
+```java
 public String post(Request request) {
   request.method("POST");
   return request.fetch();
 }
-{% endhighlight %}
+```
 
 Let's try to make two requests---the first
 with GET method and the second with POST:
 
-{% highlight java %}
+```java
 Request request = new Request("http://localhost");
 request.method("GET");
 String first = this.post(request);
 String second = request.fetch();
-{% endhighlight %}
+```
 
 Method `post()` has a "side effect"---it makes changes
 to the mutable object `request`. These changes are not really
@@ -183,21 +183,21 @@ Needless to say, such side effects lead to bugs and
 maintainability issues. It would be much better
 to work with an immutable `Request`:
 
-{% highlight java %}
+```java
 public String post(Request request) {
   return request.method("POST").fetch();
 }
-{% endhighlight %}
+```
 
 In this case, we may not have any side effects.
 Nobody can modify our `request` object, no matter where
 it is used and how deep through the call stack it is passed by method calls:
 
-{% highlight java %}
+```java
 Request request = new Request("http://localhost").method("GET");
 String first = this.post(request);
 String second = request.fetch();
-{% endhighlight %}
+```
 
 This code is perfectly safe and side effect free.
 
@@ -207,11 +207,11 @@ Very often, we want objects to be identical if their internal
 states are the same. [`Date`](http://docs.oracle.com/javase/7/docs/api/java/util/Date.html)
 class is a good example:
 
-{% highlight java %}
+```java
 Date first = new Date(1L);
 Date second = new Date(1L);
 assert first.equals(second); // true
-{% endhighlight %}
+```
 
 There are two different objects; however, they are equal
 to each other because their encapsulated states are the same.
@@ -222,23 +222,23 @@ The consequence of this convenient approach being used
 with mutable objects is that every time we modify
 object's state it changes its identity:
 
-{% highlight java %}
+```java
 Date first = new Date(1L);
 Date second = new Date(1L);
 first.setTime(2L);
 assert first.equals(second); // false
-{% endhighlight %}
+```
 
 This may look natural, until you start using your
 mutable objects as keys in maps:
 
-{% highlight java %}
+```java
 Map<Date, String> map = new HashMap<>();
 Date date = new Date();
 map.put(date, "hello, world!");
 date.setTime(12345L);
 assert map.containsKey(date); // false
-{% endhighlight %}
+```
 
 When modifying the state of `date` object, we're not expecting
 it to change its identity. We're not expecting to lose an entry
@@ -261,7 +261,7 @@ side effects of mutable objects. Immutable objects avoid it completely.
 
 Here is a simple example:
 
-{% highlight java %}
+```java
 public class Stack {
   private int size;
   private String[] items;
@@ -273,7 +273,7 @@ public class Stack {
     items[size] = item;
   }
 }
-{% endhighlight %}
+```
 
 It is obvious that an object of class `Stack` will be left
 in a broken state if it

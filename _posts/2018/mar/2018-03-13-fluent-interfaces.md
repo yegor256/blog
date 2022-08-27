@@ -39,14 +39,14 @@ which I created a few years ago,
 when I thought that fluent interfaces were a good thing. Here is how you
 use the library to make an HTTP request and validate its output:
 
-{% highlight java %}
+```java
 String html = new JdkRequest("https://www.google.com")
   .method("GET")
   .fetch()
   .as(RestResponse.class)
   .assertStatus(200)
   .body();
-{% endhighlight %}
+```
 
 This convenient [method chaining](https://en.wikipedia.org/wiki/Method_chaining)
 makes the code short and obvious, right?
@@ -88,7 +88,7 @@ in order to make it method-richer. I just didn't want to make
 contain 50+ methods, like many other libraries do. Here is what it
 does (this is pseudo-code):
 
-{% highlight text %}
+```text
 class Response {
   RestResponse as() {
     return new RestResponse(this);
@@ -100,7 +100,7 @@ class RestResponse implements Response {
   // Original seven methods from Response
   // Additional 14 methods
 }
-{% endhighlight %}
+```
 
 As you see, instead of adding all possible methods to `Response` I
 placed them in supplementary decorators
@@ -142,7 +142,7 @@ I would recommend you use decorators and
 [smart objects]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
 instead. Here is how I would design jcabi-http, if I could do it now:
 
-{% highlight java %}
+```java
 String html = new BodyOfResponse(
   new ResponseAssertStatus(
     new RequestWithMethod(
@@ -152,7 +152,7 @@ String html = new BodyOfResponse(
     200
   )
 ).toString();
-{% endhighlight %}
+```
 
 This is the same code as in the first snippet above, but it is much
 more object-oriented. The obvious problem with this code, of course, is that

@@ -40,7 +40,7 @@ modifications of the XML document. It's a valid case, and it has to be
 validated, but the way it's implemented is simply wrong. This is
 how it works (an oversimplified example):
 
-{% highlight java %}
+```java
 class DyTalk implements Talk {
   void modify(Collection<Directive> dirs) {
     if (!dirs.isEmpty()) {
@@ -50,7 +50,7 @@ class DyTalk implements Talk {
     }
   }
 }
-{% endhighlight %}
+```
 
 What's wrong, you wonder? This if-then-else forking functionality doesn't really belong
 to this object---that's what's wrong. Modifying the XML document
@@ -59,7 +59,7 @@ not saving anything if the modification instructions set is empty is not
 (it's very similar to [defensive programming]({% pst 2016/jan/2016-01-26-defensive-programming %})).
 Instead, there should be a decorator, which would look like this:
 
-{% highlight java %}
+```java
 class QuickTalk implements Talk {
   private final Talk origin;
   void modify(Collection<Directive> dirs) {
@@ -68,7 +68,7 @@ class QuickTalk implements Talk {
     }
   }
 }
-{% endhighlight %}
+```
 
 Now, if and when we need our talk to be more clever in situations where
 the list of directives is empty, we decorate it with `QuickTalk`.

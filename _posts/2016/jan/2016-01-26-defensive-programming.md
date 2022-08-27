@@ -34,7 +34,7 @@ I'm suggesting you use _validating decorators_ instead.
 
 Let's take a look at this rather typical Java example:
 
-{% highlight java %}
+```java
 class Report {
   void export(File file) {
     if (file == null) {
@@ -50,7 +50,7 @@ class Report {
     // Export the report to the file
   }
 }
-{% endhighlight %}
+```
 
 Pretty [defensive](https://en.wikipedia.org/wiki/Defensive_programming), right?
 If we remove these validations, the code
@@ -65,26 +65,26 @@ have nothing to do with its core functionality. Instead, we should
 use decorators to do the validation. Here is how. First,
 there must be an interface `Report`:
 
-{% highlight java %}
+```java
 interface Report {
   void export(File file);
 }
-{% endhighlight %}
+```
 
 Then, a class that implements the core functionality:
 
-{% highlight java %}
+```java
 class DefaultReport implements Report {
   @Override
   void export(File file) {
     // Export the report to the file
   }
 }
-{% endhighlight %}
+```
 
 And, finally, a number of decorators that will protect us:
 
-{% highlight java %}
+```java
 class NoWriteOverReport implements Report {
   private final Report origin;
   NoWriteOverReport(Report rep) {
@@ -100,20 +100,20 @@ class NoWriteOverReport implements Report {
     this.origin.export(file);
   }
 }
-{% endhighlight %}
+```
 
 Now, the client has the flexibility of composing a complex object
 from decorators that perform their specific tasks. The core object
 will do the reporting, while the decorators will validate parameters:
 
-{% highlight java %}
+```java
 Report report = new NoNullReport(
   new NoWriteOverReport(
     new DefaultReport()
   )
 );
 report.export(file);
-{% endhighlight %}
+```
 
 What do we achieve with this approach?
 First and foremost: smaller objects.

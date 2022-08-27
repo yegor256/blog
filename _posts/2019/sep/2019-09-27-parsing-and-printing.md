@@ -46,17 +46,17 @@ There is a class `SimpleDateFormat`, which
 has to be configured first, with the right time zone and the formatting pattern.
 Then it has to be used to print:
 
-{% highlight java %}
+```java
 DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
 df.setTimeZone(TimeZone.getTimeZone("UTC"));
 String iso = df.format(new Date());
-{% endhighlight %}
+```
 
 To parse it back, there is the method `parse()`:
 
-{% highlight java %}
+```java
 Date date = df.parse("2007-12-03T10:15Z");
-{% endhighlight %}
+```
 
 It's a classic combination of a
 [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %})
@@ -78,17 +78,17 @@ with the method [`toString()`](https://docs.oracle.com/javase/8/docs/api/java/ti
 which returns time in
 [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format:
 
-{% highlight java %}
+```java
 String iso = Instant.now().toString();
-{% endhighlight %}
+```
 
 To parse it back there is a static method
 [`parse()`](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-)
 in the same class [`Instant`](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html):
 
-{% highlight java %}
+```java
 Instant time = Instant.parse("2007-12-03T10:15:30Z");
-{% endhighlight %}
+```
 
 This approach looks more object-oriented, but
 the problem here is that it's impossible to modify the printing
@@ -111,23 +111,23 @@ which introduces the third way of dealing with date/time objects.
 To print a date to a `String` we make an instance of the "formatter" and
 pass it to the time-object:
 
-{% highlight java %}
+```java
 LocalDateTime date = LocalDateTime.now(ZoneId.of("UTC"));
 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
   "yyyy-MM-dd'T'HH:mm:ss'Z'"
 );
 String iso = time.format(formatter);
-{% endhighlight %}
+```
 
 To parse back, we have to send the `formatter` to the static method
 [`parse()`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#parse-java.lang.CharSequence-java.time.format.DateTimeFormatter-)
 together with the text to parse:
 
-{% highlight java %}
+```java
 LocalDateTime time = LocalDateTime.parse(
   "2007-12-03T10:15:30Z", formatter
 );
-{% endhighlight %}
+```
 
 How do they communicate, `LocalDateTime` and `DateTimeFormatter`?
 The time-object is a
@@ -152,16 +152,16 @@ What about encapsulation? "Not this time," JDK designers say.
 Here is how I would design it instead. First, I would make a generic
 immutable `Template` with this interface:
 
-{% highlight java %}
+```java
 interface Template {
   Template with(String key, Object value);
   Object read(String key);
 }
-{% endhighlight %}
+```
 
 It would be used like this:
 
-{% highlight java %}
+```java
 String iso = new DefaultTemplate("yyyy-MM-dd'T'HH:mm'Z'")
   .with("yyyy", 2007)
   .with("MM", 12)
@@ -170,13 +170,13 @@ String iso = new DefaultTemplate("yyyy-MM-dd'T'HH:mm'Z'")
   .with("mm", 15)
   .with("ss", 30)
   .toString(); // returns "2007-12-03T10:15Z"
-{% endhighlight %}
+```
 
 This template internally decides how to print the data coming in,
 depending on the encapsulated pattern. Here is how the `Date` would be
 able to print itself:
 
-{% highlight java %}
+```java
 class Date {
   private final int year;
   private final int month;
@@ -194,13 +194,13 @@ class Date {
       .with("ss", this.seconds);
   }
 }
-{% endhighlight %}
+```
 
 This is how parsing would work
 (it's a [bad idea]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
 in general to put code into the constructor, but for this experiment it's OK):
 
-{% highlight java %}
+```java
 class Date {
   private final int year;
   private final int month;
@@ -217,27 +217,27 @@ class Date {
     this.seconds = template.read("ss");
   }
 }
-{% endhighlight %}
+```
 
 Let's say we want to print time as "13-е января 2019 года" (it's in Russian).
 How we would do this? We don't create a new `Template`, we
 [decorate]({% pst 2015/feb/2015-02-26-composable-decorators %}) the
 existing one, a few times. First, we make an instance of what we have:
 
-{% highlight java %}
+```java
 new DefaultTemplate("dd-е MMMM yyyy-го года")
-{% endhighlight %}
+```
 
 This one will print something like this:
 
-{% highlight text %}
+```text
 12-е MMMM 2019-го года
-{% endhighlight %}
+```
 
 The `Date` doesn't send the value of `MMMM` into it, that's why it doesn't
 replace the text correctly. We have to decorate it:
 
-{% highlight java %}
+```java
 class RussianTemplate {
   private final Template origin;
   RussianTemplate(Template t) {
@@ -262,23 +262,23 @@ class RussianTemplate {
     return t;
   }
 }
-{% endhighlight %}
+```
 
 Now, to get a Russian date from a `Date` object we do this:
 
-{% highlight java %}
+```java
 String txt = time.print(
   new RussianTemplate(
     new DefaultTemplate("dd-е MMMM yyyy-го года")
   )
 );
-{% endhighlight %}
+```
 
 Let's say we want to print the date in a different time zone. We create another
 decorator, which intercepts the call with the `"HH"` and deducts (or adds)
 the time difference:
 
-{% highlight java %}
+```java
 class TimezoneTemplate {
   private final Template origin;
   private final int zone;
@@ -295,11 +295,11 @@ class TimezoneTemplate {
     return t;
   }
 }
-{% endhighlight %}
+```
 
 This code will print Moscow (UTC+3) time in Russian:
 
-{% highlight java %}
+```java
 String txt = time.print(
   new TimezoneTemplate(
     new RussianTemplate(
@@ -308,7 +308,7 @@ String txt = time.print(
     +3
   )
 );
-{% endhighlight %}
+```
 
 We can decorate as much as we need, making the `Template` as powerful
 as it needs to be. The elegance of this approach is that the class

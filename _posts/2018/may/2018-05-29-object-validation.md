@@ -37,7 +37,7 @@ so to speak? Here is what I think.
 
 Let's start with this Ruby code:
 
-{% highlight java %}
+```java
 class Users {
   def initialize(file)
     @file = file
@@ -46,13 +46,13 @@ class Users {
     File.readlines(@file).reject(&:empty?)
   end
 }
-{% endhighlight %}
+```
 
 We can use it to read a list of users from a file:
 
-{% highlight java %}
+```java
 Users.new('all-users.txt').names
-{% endhighlight %}
+```
 
 There are a number of ways to abuse this class:
 
@@ -67,7 +67,7 @@ There are a number of ways to abuse this class:
 Do you see the difference between these four mistakes we can make?
 Let's see how our class can protect itself from each of them:
 
-{% highlight java %}
+```java
 class Users {
   def initialize(file)
     raise "File name can't be nil" if file.nil?
@@ -80,7 +80,7 @@ class Users {
     File.readlines(@file).reject(&:empty?)
   end
 }
-{% endhighlight %}
+```
 
 The first two potential mistakes were filtered out
 in the constructor, while the other two---later, in the method.

@@ -47,7 +47,7 @@ as a characteristic of a software module, was invented by
 when I didn't even exist yet, in 1974.
 Here is what it means; take a look at this simple Java class:
 
-{% highlight java %}
+```java
 class Books {
   private List<String> titles;
   private List<Integer> prices;
@@ -58,7 +58,7 @@ class Books {
     this.prices.add(price);
   }
 }
-{% endhighlight %}
+```
 
 There are two attributes and two methods. The method `addTitle()` works with
 the attribute `titles`, while the method `addPrice()` works only with the
@@ -66,7 +66,7 @@ attribute `prices`. The cohesion is _low_ in this class, because the attributes
 `titles` and `prices` are not related to each other in any way. We can easily
 break this class into two pieces without losing anything:
 
-{% highlight java %}
+```java
 class Books1 {
   private List<String> titles;
   void addTitle(String title) {
@@ -79,7 +79,7 @@ class Books2 {
     this.prices.add(price);
   }
 }
-{% endhighlight %}
+```
 
 Now, we have two much more cohesive classes: their attributes and methods
 are related to each other. We can't break `Books1` anymore, since each
@@ -87,7 +87,7 @@ attribute is needed by each method.
 
 Here is yet another example of a _highly_ cohesive class:
 
-{% highlight java %}
+```java
 class Books {
   private List<String> titles;
   void add(String title) {
@@ -97,7 +97,7 @@ class Books {
     this.titles.remove(id);
   }
 }
-{% endhighlight %}
+```
 
 Can we break it into smaller pieces? No, we can't. We can't take any part
 of the class out. The attribute `titles` and both of the methods must stay

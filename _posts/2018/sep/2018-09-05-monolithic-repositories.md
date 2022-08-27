@@ -38,7 +38,7 @@ node (using [jQuery](https://jquery.com/))
 and places part of its content on the HTML page.
 Then it colors the data according to its value.
 
-{% highlight javascript %}
+```javascript
 // main.js
 function main() {
   $.getJSON('http://b1.zold.io/', function(json) {
@@ -51,12 +51,12 @@ function main() {
     $body.css('color', color);
   });
 }
-{% endhighlight %}
+```
 
 Pretty obvious, isn't it? Just a single `main.js` file which does everything we need.
 We simply add it to the HTML and it works:
 
-{% highlight html %}
+```html
 <html>
   <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"/>
@@ -64,14 +64,14 @@ We simply add it to the HTML and it works:
   </head>
   <body onload="main();">loading...</body>
 </html>
-{% endhighlight %}
+```
 
 Now, let me refactor it. Let me break it into two pieces. The first
 piece will load the data and the second one will be a jQuery plugin to colorize
 HTML content according to the data it contains. This is how the
 plugin will look:
 
-{% highlight javascript %}
+```javascript
 // colorize.js
 $.fn.colorize = function() {
   var data = parseFloat(this.text());
@@ -89,11 +89,11 @@ $.fn.colorize = function() {
   }
   return this;
 }
-{% endhighlight %}
+```
 
 The `main.js` will look like this:
 
-{% highlight javascript %}
+```javascript
 // main.js
 function main() {
   $.getJSON('http://b1.zold.io/', function(json) {
@@ -102,12 +102,12 @@ function main() {
       .colorize({ 500: 'green', 0: 'red' });
   });
 }
-{% endhighlight %}
+```
 
 Now, instead of a single monolithic piece of code, we have two smaller pieces
 which have to be loaded together into the target HTML:
 
-{% highlight html %}
+```html
 <html>
   <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"/>
@@ -116,7 +116,7 @@ which have to be loaded together into the target HTML:
   </head>
   <body onload="main();">loading...</body>
 </html>
-{% endhighlight %}
+```
 
 Two pieces are better than one? It seems that
 [Google](https://ai.google/research/pubs/pub45424),

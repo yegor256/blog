@@ -39,14 +39,14 @@ Here, we want to follow the
 duplication. Therefore, we place common code blocks into utility classes and
 reuse them when necessary:
 
-{% highlight java %}
+```java
 // This is a terrible design, don't reuse
 public class NumberUtils {
   public static int max(int a, int b) {
     return a > b ? a : b;
   }
 }
-{% endhighlight %}
+```
 
 Indeed, this a very convenient technique!?
 
@@ -84,7 +84,7 @@ line and then save the results in another file. This is can be done with
 [`FileUtils`](http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html)
 from Apache Commons:
 
-{% highlight java %}
+```java
 void transform(File in, File out) {
   Collection<String> src = FileUtils.readLines(in, "UTF-8");
   Collection<String> dest = new ArrayList<>(src.size());
@@ -93,7 +93,7 @@ void transform(File in, File out) {
   }
   FileUtils.writeLines(out, dest, "UTF-8");
 }
-{% endhighlight %}
+```
 
 The above code may look clean; however, this is procedural programming, not
 object-oriented. We are manipulating data (bytes and bits) and explicitly
@@ -107,7 +107,7 @@ letting them manage data when and how *they* desire. Instead of calling
 supplementary static functions, we should create objects that are capable of
 exposing the behavior we are seeking:
 
-{% highlight java %}
+```java
 public class Max implements Number {
   private final int a;
   private final int b;
@@ -120,19 +120,19 @@ public class Max implements Number {
     return this.a > this.b ? this.a : this.b;
   }
 }
-{% endhighlight %}
+```
 
 This procedural call:
 
-{% highlight java %}
+```java
 int max = NumberUtils.max(10, 5);
-{% endhighlight %}
+```
 
 Will become object-oriented:
 
-{% highlight java %}
+```java
 int max = new Max(10, 5).intValue();
-{% endhighlight %}
+```
 
 Potato, potato? Not really; just read on...
 
@@ -141,7 +141,7 @@ Potato, potato? Not really; just read on...
 This is how I would design the same file-transforming functionality as above but
 in an object-oriented manner:
 
-{% highlight java %}
+```java
 void transform(File in, File out) {
   Collection<String> src = new Trimmed(
     new FileLines(new UnicodeFile(in))
@@ -151,7 +151,7 @@ void transform(File in, File out) {
   );
   dest.addAll(src);
 }
-{% endhighlight %}
+```
 
 `FileLines` implements `Collection<String>` and encapsulates  all file reading
 and writing operations. An instance of `FileLines` behaves exactly as a

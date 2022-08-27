@@ -42,13 +42,13 @@ improve a class, with the SRP in mind, and whether it will become
 Let's try the class [`AwsOcket`](https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java)
 from [jcabi-s3](http://s3.jcabi.com) (I've simplified the code):
 
-{% highlight java %}
+```java
 class AwsOcket {
   boolean exists() { /* ... */ }
   void read(final OutputStream output) { /* ... */ }
   void write(final InputStream input) { /* ... */ }
 }
-{% endhighlight %}
+```
 
 Correct me if I'm wrong, but according to SRP this class is responsible for
 too many things:
@@ -63,19 +63,19 @@ a getter, which will return an AWS client and then create three new classes:
 read, and write. Now, in order to read the content and print it to the
 console I'm currently doing this:
 
-{% highlight java %}
+```java
 if (ocket.exists()) {
   ocket.read(System.out);
 }
-{% endhighlight %}
+```
 
 Tomorrow, if I refactor the class, I will be doing this:
 
-{% highlight java %}
+```java
 if (new ExistenceChecker(ocket.aws()).exists()) {
   new ContentReader(ocket.aws()).read(System.out);
 }
-{% endhighlight %}
+```
 
 Aside from the fact that these checkers, readers, and writers are not really
 classes, but pure holders of procedures, the usage of this `ocket` turns

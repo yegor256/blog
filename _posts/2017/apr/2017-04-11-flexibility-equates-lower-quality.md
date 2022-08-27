@@ -41,31 +41,31 @@ for its ability to do anything in three different ways. This means that
 there is no one "right" way. I'm not a Perl expert; that's why I'll have you
 look at this Ruby code instead:
 
-{% highlight ruby %}
+```ruby
 if a > b
   m = 'Hello!'
 end
-{% endhighlight %}
+```
 
 We can rewrite it like this:
 
-{% highlight ruby %}
+```ruby
 m = if a > b
   'Hello!'
 end
-{% endhighlight %}
+```
 
 Or this:
 
-{% highlight ruby %}
+```ruby
 m = 'Hello!' if a > b
-{% endhighlight %}
+```
 
 And one more:
 
-{% highlight ruby %}
+```ruby
 m = a > b ? 'Hello' : nil
-{% endhighlight %}
+```
 
 Which one is "right?" Are there any Perl developers? Can you suggest
 some other way to achieve the same result?
@@ -73,17 +73,17 @@ some other way to achieve the same result?
 Not surprisingly, in Java (a stricter language than Ruby),
 there is only one way to do it:
 
-{% highlight ruby %}
+```ruby
 if (a > b) {
   m = "Hello!";
 }
-{% endhighlight %}
+```
 
 Well, I guess I'm wrong; there are two, actually. Here is the second one:
 
-{% highlight ruby %}
+```ruby
 if (a > b) m = "Hello!";
-{% endhighlight %}
+```
 
 What does this variety of options give us, as programmers? I guess the answer
 seriously depends on what we, the programmers, are doing with the code:

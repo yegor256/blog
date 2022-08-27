@@ -36,7 +36,7 @@ world!"`
 
 This is how that code would look in a unit test:
 
-{% highlight java %}
+```java
 import com.jcabi.matchers.XhtmlMatchers;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
@@ -52,7 +52,7 @@ public class FooTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 <!--more-->
 
@@ -91,11 +91,11 @@ problems even further, as it pre-defines most popular namespaces, including
 
 The following example works right out-of-the-box---without any extra configuration:
 
-{% highlight java %}
+```java
 MatcherAssert.assertThat(
   new URL("http://www.google.com").getContent(),
   XhtmlMatchers.hasXPath("//xhtml:body")
 );
-{% endhighlight %}
+```
 
 To summarize, my primary objective with the library was its simplicity of usage.

@@ -35,15 +35,15 @@ utility methods, which make our code procedural rather than object-oriented.
 First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:
 
-{% highlight java %}
+```java
 interface Text {
   String read();
 }
-{% endhighlight %}
+```
 
 Here is an implementation that reads the text from a file:
 
-{% highlight java %}
+```java
 final class TextInFile implements Text {
   private final File file;
   public TextInFile(final File src) {
@@ -56,12 +56,12 @@ final class TextInFile implements Text {
     );
   }
 }
-{% endhighlight %}
+```
 
 And now the decorator, which is another implementation of `Text` that
 removes all unprintable characters from the text:
 
-{% highlight java %}
+```java
 final class PrintableText implements Text {
   private final Text origin;
   public PrintableText(final Text text) {
@@ -73,16 +73,16 @@ final class PrintableText implements Text {
       .replaceAll("[^\p{Print}]", "");
   }
 }
-{% endhighlight %}
+```
 
 Here is how I'm using it:
 
-{% highlight java %}
+```java
 final Text text = new PrintableText(
   new TextInFile(new File("/tmp/a.txt"))
 );
 String content = text.read();
-{% endhighlight %}
+```
 
 As you can see, the `PrintableText` doesn't read the text from the file. It doesn't
 really care where the text is coming from. It _delegates_ text reading to
@@ -93,7 +93,7 @@ Let's [continue]({% pst 2016/apr/2016-04-19-object-must-not-be-configurable %})
 and try to create an implementation of `Text`
 that will capitalize all letters in the text:
 
-{% highlight java %}
+```java
 final class AllCapsText implements Text {
   private final Text origin;
   public AllCapsText(final Text text) {
@@ -104,11 +104,11 @@ final class AllCapsText implements Text {
     return this.origin.read().toUpperCase(Locale.ENGLISH);
   }
 }
-{% endhighlight %}
+```
 
 How about a `Text` that trims the input:
 
-{% highlight java %}
+```java
 final class TrimmedText implements Text {
   private final Text origin;
   public TrimmedText(final Text text) {
@@ -119,7 +119,7 @@ final class TrimmedText implements Text {
     return this.origin.read().trim();
   }
 }
-{% endhighlight %}
+```
 
 {% youtube D0dqC_3Bch8 %}
 
@@ -131,7 +131,7 @@ can play together. Let's say I want to read the text from the file,
 capitalize it, trim it, and remove all unprintable characters. And I want
 to be _declarative_. Here is what I do:
 
-{% highlight java %}
+```java
 final Text text = new AllCapsText(
   new TrimmedText(
     new PrintableText(
@@ -140,7 +140,7 @@ final Text text = new AllCapsText(
   )
 );
 String content = text.read();
-{% endhighlight %}
+```
 
 First, I create an instance of `Text`, _composing_ multiple decorators into
 a single object. I declaratively define the behavior of `text` without
@@ -158,22 +158,22 @@ more than 20 _utility methods_ that should have been provided as decorators inst
 When I want to trim my string, uppercase it, and then split it into pieces,
 here is what my code will look like:
 
-{% highlight java %}
+```java
 final String txt = "hello, world!";
 final String[] parts = txt.trim().toUpperCase().split(" ");
-{% endhighlight %}
+```
 
 This is imperative and procedural programming. Composable decorators,
 on the other hand, would make this code object-oriented and declarative. Something
 like this would be great to have in Java instead (pseudo-code):
 
-{% highlight java %}
+```java
 final String[] parts = new String.Split(
   new String.UpperCased(
     new String.Trimmed("hello, world!")
   )
 );
-{% endhighlight %}
+```
 
 To conclude, I recommend you think twice every time you add
 a new utility method to the interface/class. Try to avoid utility methods as much

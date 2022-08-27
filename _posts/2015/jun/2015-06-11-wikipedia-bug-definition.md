@@ -36,9 +36,9 @@ Functional requirements tell us _what_ the software has to do, and non-functiona
 requirements document _how_ it has to do it. For example, here is a functional
 requirement:
 
-{% highlight text %}
+```text
 The user can generate a PDF report.
-{% endhighlight %}
+```
 
 If our software doesn't generate a PDF report and crashes instead,
 that's a functional bug. If instead of a PDF report, it generates an empty
@@ -48,9 +48,9 @@ the PDF generation process, that's a functional bug.
 
 Here is an example of a non-functional requirement:
 
-{% highlight text %}
+```text
 PDF report generation must take less than 100ms.
-{% endhighlight %}
+```
 
 If our software generates a perfectly correct PDF report but it
 takes a minute, that's a non-functional bug.
@@ -65,11 +65,11 @@ However, that's not all of it.
 
 What about maintainability? I may have this kind of non-functional requirement:
 
-{% highlight text %}
+```text
 The source code of the PDF generator must be
 easy to maintain and extend for an average
 Java programmer.
-{% endhighlight %}
+```
 
 It's a rather vague requirement, but you get the idea.
 

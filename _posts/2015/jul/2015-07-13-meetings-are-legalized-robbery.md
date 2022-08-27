@@ -69,7 +69,7 @@ At the end of the document, Jeff also listed assumptions, risks, and concerns.
 For example, this is what I got back from him (it's Markdown, a very
 convenient format for simple technical documents; I highly recommend it):
 
-{% highlight text %}
+```text
 ## Tables
 user (id INT, name VARCHAR, email VARCHAR);
 payment (id INT, date DATETIME, amount INT);
@@ -87,7 +87,7 @@ order (id INT, details VARCHAR, user_id INT FK(user));
 ## Concerns
 - Would NoSQL be more suitable?
 - What is the DB server we'll use?
-{% endhighlight %}
+```
 
 I don't know how much time Jeff would have spent on this document,
 but I just created it in 10 minutes. Of course, it's a very simple schema
@@ -144,7 +144,7 @@ makes complex decisions. Now let's see what a bad architect would do.
 I first call a meeting. No, wait; I schedule it in Google Calendar.
 No, wait, wait. First of all, I create an agenda:
 
-{% highlight text %}
+```text
 1. Introduction: 10 min
 2. Problem: 15 min
   - We need a DB schema
@@ -157,7 +157,7 @@ No, wait, wait. First of all, I create an agenda:
   - Let's not forget risks
   - Ask Joe about PostgreSQL
 6. Conclusions: 10 min
-{% endhighlight %}
+```
 
 I'm sure you know what I'm talking about and you've seen these
 agendas from your "architects." Anyway, my first step is done. I've scheduled an

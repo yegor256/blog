@@ -40,7 +40,7 @@ Here is an example (it's a simplification of a real unit test at
 [CalcTest.java](https://github.com/polystat/polystat/blob/0.0.1/src/test/java/org/polystat/far/CalcTest.java)
 from [Polystat](https://www.polystat.org), a static analyzer we're working on right now):
 
-{% highlight java %}
+```java
 import com.jcabi.log.Logger;
 import com.jcabi.xml.XML;
 import org.hamcrest.MatcherAssert;
@@ -57,7 +57,7 @@ public final class FooTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 This is Java and I'm using [JUnit5](https://junit.org/junit5/)+[Hamcrest](http://hamcrest.org/) 
 together with my own logging framework
@@ -80,7 +80,7 @@ console, _visually_ confirmed its validity and called it a day.
 If I'd had more time, this is how I would have written a much better unit test
 (I made the [improvements](https://github.com/polystat/polystat/issues/10) in Polystat tests just now):
 
-{% highlight java %}
+```java
 import com.jcabi.matchers.XhtmlMatchers;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Test;
@@ -93,7 +93,7 @@ public final class FooTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 Now, the XML document is built and then tested for the presence of `//foo` 
 [XPath](https://en.wikipedia.org/wiki/XPath) inside it. 

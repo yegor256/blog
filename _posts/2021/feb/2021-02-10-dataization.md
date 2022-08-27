@@ -36,22 +36,22 @@ shipment costs based on the customer's location. We create
 an [abstract object]({% pst 2020/dec/2020-12-01-abstract-objects %})
 that represents shipment costs:
 
-{% highlight text %}
+```text
 [customer] > cost-of-shipment
   if. > @
     customer.country.eq "US"
     9.99
     24.99
-{% endhighlight %}
+```
 
 Then, let's say we have an abstract object `customer-in-mysql`,
 which represents the customer's information in the MySQL database. To
 make a specific customer `jeff` we make a copy of `customer-in-mysql`,
 specifying the ID of the customer as `42`:
 
-{% highlight text %}
+```text
 customer-in-mysql 42 > jeff
-{% endhighlight %}
+```
 
 The closed object `jeff` is the customer we are looking for.
 We assume that it has the `country` child object, which is needed by
@@ -61,23 +61,23 @@ Now, we make a copy of the `cost-of-shipment` and then
 add it to the product price in order to calculate how
 much a customer has to pay:
 
-{% highlight text %}
+```text
 cost-of-shipment jeff > x
 
 x.add > total
   product.price
-{% endhighlight %}
+```
 
 Here, the `x` is a new object, a copy of `cost-of-shipment`. Then,
 we take the child abstract object `add` from it and make a copy,
 giving `product.price` object to it as an attribute. We name the created copy
 as `total`. Then, we print the total price:
 
-{% highlight text %}
+```text
 QQ.io.stdout > app
   QQ.txt.sprintf
     "Your total is %f" total
-{% endhighlight %}
+```
 
 All these manipulations don't make the number print yet. They
 are all object declarations. We've declared one abstract object
@@ -91,11 +91,11 @@ where EO software is being compiled. You may think that in the example
 above `42` and `"US"` are data. They are not. They are also objects
 and we can write this, for example:
 
-{% highlight text %}
+```text
 42.add 5 > z
 
 "US".length > len
-{% endhighlight %}
+```
 
 The data behind these objects is not visible for us at the level of
 EO program. The data is inside the `42` object. Only the runtime
@@ -104,11 +104,11 @@ mechanism. If you compile the EO code to Java, you will get
 a class `EOapp` (derived from the `app` object), which can be dataized
 like this:
 
-{% highlight text %}
+```text
 import org.eolang.phi.Data;
 EOapp app = new EOapp();
 Boolean data = new Dataized(app).take(Boolean.class);
-{% endhighlight %}
+```
 
 The method `take()` will take the object `app` and will try to ask it
 to turn itself as data. The object `stdout` will redirect this request
@@ -121,12 +121,12 @@ the request to get `add` will land there.
 
 The object bound to the attribute `@` is the copy of `if`:
 
-{% highlight text %}
+```text
 if. > @
   customer.country.eq "US"
   9.99
   24.99
-{% endhighlight %}
+```
 
 It will take the `customer.country.eq`, dataize it in order to get
 boolean data, and then, depending on this data, return either `9.99` or `24.99`.

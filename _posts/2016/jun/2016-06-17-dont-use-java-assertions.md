@@ -32,36 +32,36 @@ in all situations and assertions should never be used. Here's why.
 Let's see what happens when an assertion is triggered. Say that this
 is our code:
 
-{% highlight java %}
+```java
 public class Main {
   public static void main(String... args) {
     assert true == false : "There is a problem";
     System.out.println("Hello, world!");
   }
 }
-{% endhighlight %}
+```
 
 Save this code to `Main.java` and compile:
 
-{% highlight bash %}
+```bash
 $ javac Main.java
-{% endhighlight %}
+```
 
 Then run it:
 
-{% highlight bash %}
+```bash
 $ java Main
 Hello, world!
-{% endhighlight %}
+```
 
 The assertion wasn't triggered. It was ignored. Now run it with an
 `-enableassertions` flag:
 
-{% highlight bash %}
+```bash
 $ java -enableassertions Main
 Exception in thread "main" java.lang.AssertionError: There is a problem
   at Main.main(Main.java:3)
-{% endhighlight %}
+```
 
 This is the first difference between exceptions and assertions. Exceptions
 will always be thrown, while assertions are not enabled by default. They are

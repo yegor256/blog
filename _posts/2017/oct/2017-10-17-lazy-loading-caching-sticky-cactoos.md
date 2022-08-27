@@ -36,13 +36,13 @@ a more object-oriented way, it will encapsulate the text and _become_ its
 encrypted form. Here is how we will use it (let's create
 [tests first]({% pst 2017/mar/2017-03-24-tdd-that-works %})):
 
-{% highlight java %}
+```java
 interface Encrypted {
   String asString() throws IOException;
 }
 Encrypted enc = new EncryptedX("Hello, world!");
 System.out.println(enc.asString());
-{% endhighlight %}
+```
 
 Now let's implement it, in a very primitive way, with one
 [primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
@@ -51,7 +51,7 @@ will just add `+1` to each byte in the incoming data, and will assume that
 the encryption won't break anything (a very stupid
 assumption, but for the sake of this example it will work):
 
-{% highlight java %}
+```java
 class Encrypted1 implements Encrypted {
   private final String text;
   Encrypted1(String txt) {
@@ -67,7 +67,7 @@ class Encrypted1 implements Encrypted {
     return new String(out);
   }
 }
-{% endhighlight %}
+```
 
 Looks correct so far? I [tested it](https://github.com/yegor256/blog/tree/master/_samples/2017/10/sticky)
 and it works. If the input is `"Hello, world!"`,
@@ -79,18 +79,18 @@ as well as a
 [`String`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html).
 We want to call it like this, for example:
 
-{% highlight java %}
+```java
 Encrypted enc = new Encrypted2(
   new FileInputStream("/tmp/hello.txt")
 );
 System.out.println(enc.toString());
-{% endhighlight %}
+```
 
 Here is the most obvious implementation, with two
 [primary]({% pst 2015/may/2015-05-28-one-primary-constructor %})
 constructors (again, the implementation is primitive, but works):
 
-{% highlight java %}
+```java
 class Encrypted2 implements Encrypted {
   private final String text;
   Encrypted2(InputStream input) throws IOException {
@@ -110,7 +110,7 @@ class Encrypted2 implements Encrypted {
   }
   // asString() is exactly the same as in Encrypted1
 }
-{% endhighlight %}
+```
 
 Technically it works, but stream reading is right inside the constructor,
 which is [bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
@@ -120,7 +120,7 @@ ones may only create new objects.
 
 Let's try to refactor and introduce lazy loading:
 
-{% highlight java %}
+```java
 class Encrypted3 implements Encrypted {
   private String text;
   private final InputStream input;
@@ -154,14 +154,14 @@ class Encrypted3 implements Encrypted {
     return new String(out);
   }
 }
-{% endhighlight %}
+```
 
 Works great, but looks ugly. The ugliest part is these two lines of course:
 
-{% highlight java %}
+```java
 this.text = null;
 this.input = null;
-{% endhighlight %}
+```
 
 They make the object
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
@@ -174,7 +174,7 @@ Let's refactor our class, this time using
 from
 [Cactoos](http://www.cactoos.org):
 
-{% highlight java %}
+```java
 class Encrypted4 implements Encrypted {
   private final IoCheckedScalar<String> text;
   Encrypted4(InputStream stream) {
@@ -208,7 +208,7 @@ class Encrypted4 implements Encrypted {
     }
     return new String(out);
   }
-{% endhighlight %}
+```
 
 Now it looks way better. First of all, there is only one primary constructor and
 two secondary ones. Second, the object is
@@ -235,7 +235,7 @@ will simply be empty. Thus, we need to make sure that `this.text.value()`
 executes the encapsulated `Scalar` only once. All later calls must return the
 previously calculated value. So we need to _cache_ it. Here is how:
 
-{% highlight java %}
+```java
 class Encrypted5 implements Encrypted {
   private final IoCheckedScalar<String> text;
   // same as above in Encrypted4
@@ -245,7 +245,7 @@ class Encrypted5 implements Encrypted {
     );
   }
   // same as above in Encrypted4
-{% endhighlight %}
+```
 
 This [`StickyScalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html)
 will make sure that only the first call to its method `value()`
@@ -260,7 +260,7 @@ simply because
 is not thread-safe. There is another primitive to help us out though, called
 [`SyncScalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html):
 
-{% highlight java %}
+```java
 class Encrypted5 implements Encrypted {
   private final IoCheckedScalar<String> text;
   // same as above in Encrypted4
@@ -272,7 +272,7 @@ class Encrypted5 implements Encrypted {
     );
   }
   // same as above in Encrypted4
-{% endhighlight %}
+```
 
 Now we're safe and the design is elegant. It includes lazy loading and caching.
 

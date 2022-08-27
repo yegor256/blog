@@ -18,8 +18,7 @@ code {
   padding: 0 .15 * $em;
 }
 
-div.highlight,
-figure.highlight {
+.highlighter-rouge pre {
   border-left: 3 * $px solid lightgray;
   margin-left: 2 * $em;
   padding-left: .5 * $em !important;

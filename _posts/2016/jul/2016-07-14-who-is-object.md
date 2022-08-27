@@ -67,12 +67,12 @@ Let's try to imagine another object-oriented language that doesn't
 store object attributes in memory. Confused? Bear with me for a minute.
 Let's say that in that language we define an object:
 
-{% highlight text %}
+```text
 c {
   vin: v,
   engine: e
 }
-{% endhighlight %}
+```
 
 Here, `vin` and `engine` are attributes of object `c` (it's a car; let's
 forget about classes for now to focus strictly on objects). Thus, there is
@@ -81,11 +81,11 @@ second one is its engine. The VIN is an object `v`, while the engine is `e`.
 To make it easier to understand, this is how a similar object would
 look in Java:
 
-{% highlight java %}
+```java
 char[] v = {'W','D','B','H',...'7','2','8','8'}; // 17 chars
 Engine e = new Engine();
 Car c = new Car(v, e);
-{% endhighlight %}
+```
 
 I'm not entirely sure about JVM, but in C++ such an object will take
 exactly 25 bytes in memory (assuming it's 64-bit x86 architecture). The

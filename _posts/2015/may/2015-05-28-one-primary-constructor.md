@@ -39,7 +39,7 @@ constructing mechanism.
 
 Here is what I mean:
 
-{% highlight java %}
+```java
 final class Cash {
   private final int cents;
   private final String currency;
@@ -55,7 +55,7 @@ final class Cash {
   }
   // methods here
 }
-{% endhighlight %}
+```
 
 There are three constructors in the class---only one is
 _primary_ and the other two are _secondary_. My definition of a
@@ -70,7 +70,7 @@ behind this rule: It helps eliminate code duplication.
 
 Without such a rule, we may have this design for our class:
 
-{% highlight java %}
+```java
 final class Cash {
   private final int cents;
   private final String currency;
@@ -88,7 +88,7 @@ final class Cash {
   }
   // methods here
 }
-{% endhighlight %}
+```
 
 There's not a lot of code here, but the duplication is massive and ugly;
 I hope you see it for yourself.

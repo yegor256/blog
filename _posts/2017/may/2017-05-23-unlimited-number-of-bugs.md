@@ -33,11 +33,11 @@ to find and fix, there are still too many left to count.
 Let's take this simple Java method that calculates a sum of two integers
 as an example:
 
-{% highlight java %}
+```java
 int sum(int a, int b) {
   return a + b;
 }
-{% endhighlight %}
+```
 
 This simple program has an _unlimited_ number of bugs.
 

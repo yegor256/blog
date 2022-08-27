@@ -45,10 +45,10 @@ Architects are _proud of complexity_, that's why. They think that
 the more complex the problem they're working with, the better an engineer
 they are. I've had this dialog many times:
 
-{% highlight text %}
+```text
 - You know, your diagram looks so complex ...
 - Oh yeah, we're solving complex problems here!
-{% endhighlight %}
+```
 
 Usually, after that, the architect smiles with an obvious feeling of satisfaction.
 Indeed, someone actually noticed how difficult his job is and appreciated

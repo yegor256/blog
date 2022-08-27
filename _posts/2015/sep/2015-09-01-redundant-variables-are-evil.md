@@ -32,16 +32,16 @@ once is redundant and must be replaced with a value.
 
 Here, variable `fileName` is redundant:
 
-{% highlight java %}
+```java
 String fileName = "test.txt";
 print("Length is " + new File(fileName).length());
-{% endhighlight %}
+```
 
 This code must look differently:
 
-{% highlight java %}
+```java
 print("Length is " + new File("test.txt").length());
-{% endhighlight %}
+```
 
 This example is very primitive, but I'm sure you've seen these
 redundant variables many times. We use them to "explain" the code---it's

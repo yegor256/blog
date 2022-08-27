@@ -37,20 +37,20 @@ First, here's how they work in a nutshell. Let's use
 [Ruby modules](http://phrogz.net/programmingruby/tut_modules.html)
 as a sample implementation. Say that we have a class `Book`:
 
-{% highlight ruby %}
+```ruby
 class Book
   def initialize(title)
     @title = title
   end
 end
-{% endhighlight %}
+```
 
 Now, we want class `Book` to use a static method (a procedure) that
 does something useful. We may either define it in a
 [utility class]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
 and let `Book` call it:
 
-{% highlight ruby %}
+```ruby
 class TextUtils
   def self.caps(text)
     text.split.map(&:capitalize).join(' ')
@@ -61,12 +61,12 @@ class Book
     puts "My title is #{TextUtils.caps(@title)}"
   end
 end
-{% endhighlight %}
+```
 
 Or we may make it even more "convenient" and `extend` our module
 in order to access its methods directly:
 
-{% highlight ruby %}
+```ruby
 module TextModule
   def caps(text)
     text.split.map(&:capitalize).join(' ')
@@ -78,7 +78,7 @@ class Book
     puts "My title is #{caps(@title)}"
   end
 end
-{% endhighlight %}
+```
 
 It seems nice---if you don't understand the
 [difference]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})
@@ -97,7 +97,7 @@ create two mixins. The first one will be called `PlainMixin` and will print the 
 of the book the way it is, and the second one will be called `CapsMixin` and will
 capitalize what's already printed:
 
-{% highlight ruby %}
+```ruby
 module CapsMixin
   def to_s
     super.to_s.split.map(&:capitalize).join(' ')
@@ -117,7 +117,7 @@ class Book
     puts "My title is #{self}"
   end
 end
-{% endhighlight %}
+```
 
 Calling `Book` without the included mixin will print its title the way
 it is. Once we add the `include` statement, the behavior of `to_s` is
@@ -126,7 +126,7 @@ combine mixins to produce the required functionality. For example,
 we can add one more, which will
 [abbreviate](http://stackoverflow.com/a/25136035/187141) the title to 16 characters:
 
-{% highlight ruby %}
+```ruby
 module AbbrMixin
   def to_s
     super.to_s.gsub(/^(.{16,}?).*$/m,'\1...')
@@ -141,7 +141,7 @@ class Book
     puts "My title is #{self}"
   end
 end
-{% endhighlight %}
+```
 
 I'm sure you already understand that they both have access to
 the private attribute `@title` of class `Book`. They actually have
@@ -172,7 +172,7 @@ The very obvious alternatives to mixins are
 Take a look at the example given in the
 [article]({% pst 2015/feb/2015-02-26-composable-decorators %}):
 
-{% highlight java %}
+```java
 Text text = new AllCapsText(
   new TrimmedText(
     new PrintableText(
@@ -180,7 +180,7 @@ Text text = new AllCapsText(
     )
   )
 );
-{% endhighlight %}
+```
 
 Doesn't it look very similar to what we were doing above with Ruby mixins?
 

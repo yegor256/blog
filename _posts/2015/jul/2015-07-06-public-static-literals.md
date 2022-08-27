@@ -37,27 +37,27 @@ These guys are setting a bad example! `public` `static`
 
 Here is what I'm talking about, specifically:
 
-{% highlight java %}
+```java
 package org.apache.commons.lang3;
 public class CharEncoding {
   public static final String UTF_8 = "UTF-8";
   // some other methods and properties
 }
-{% endhighlight %}
+```
 
 Now, when I need to create a `String` from a byte array, I use this:
 
-{% highlight java %}
+```java
 import org.apache.commons.lang3.CharEncoding;
 String text = new String(array, CharEncoding.UTF_8);
-{% endhighlight %}
+```
 
 Let's say I want to convert a `String` into a byte array:
 
-{% highlight java %}
+```java
 import org.apache.commons.lang3.CharEncoding;
 byte[] array = text.getBytes(CharEncoding.UTF_8);
-{% endhighlight %}
+```
 
 Looks convenient, right? This is what the designers of Apache Commons think
 (one of the most popular but simply _terrible_ libraries
@@ -83,17 +83,17 @@ Let me show you the alternative I have in mind before we continue.
 Here is what I'm suggesting instead to convert a byte array
 into a `String`:
 
-{% highlight java %}
+```java
 String text = new UTF8String(array);
-{% endhighlight %}
+```
 
 It's pseudo-code, since Java designers made class `String` final and we
 can't really extend it and create `UTF8String`, but you get the idea. In the real
 world, this would look like this:
 
-{% highlight java %}
+```java
 String text = new UTF8String(array).toString();
-{% endhighlight %}
+```
 
 As you see, we encapsulate the "UTF-8" constant somewhere inside the class
 `UTF8String`, and its users have no idea how exactly this "byte array to string"

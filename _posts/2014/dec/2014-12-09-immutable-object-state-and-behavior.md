@@ -51,7 +51,7 @@ knows about itself (a.k.a. "encapsulated knowledge"), and
 *behavior* is what a document can do for us on request.
 For example, this is a mutable document:
 
-{% highlight java %}
+```java
 class Document {
   private int id;
   private String title;
@@ -69,11 +69,11 @@ class Document {
     return String.format("doc #%d about '%s'", this.id, this.text);
   }
 }
-{% endhighlight %}
+```
 
 Let's try to use this mutable object:
 
-{% highlight java %}
+```java
 Document first = new Document(50);
 first.setTitle("How to grill a sandwich");
 Document second = new Document(50);
@@ -83,7 +83,7 @@ if (first.equals(second)) { // FALSE
     String.format("%s is equal to %s", first, second)
   );
 }
-{% endhighlight %}
+```
 
 Here, we're creating two objects and then modifying their encapsulated
 states. Obviously, `first.equals(second)` will return `false` because
@@ -98,9 +98,9 @@ convert itself to a string.
 In order to modify a document's title, we just call its `setTitle()`
 once again:
 
-{% highlight java %}
+```java
 first.setTitle("How to cook pasta");
-{% endhighlight %}
+```
 
 Simply put, we can reuse the object many times, modifying its
 internal state. It is fast and convenient, isn't it? Fast, yes.
@@ -116,7 +116,7 @@ immutable and mutable objects is that
 an immutable one doesn't have an identity and its state never changes.
 Here is an immutable variant of the same document:
 
-{% highlight java %}
+```java
 @Immutable
 class Document {
   private final int id;
@@ -144,14 +144,14 @@ class Document {
     );
   }
 }
-{% endhighlight %}
+```
 
 This document is immutable, and its state (`id` ad `title`) is its identity. Let's
 see how we can use this immutable class
 (by the way, I'm using [`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html) annotation
 from [jcabi-aspects](http://aspects.jcabi.com)):
 
-{% highlight java %}
+```java
 Document first = new Document(50, "How to grill a sandwich");
 Document second = new Document(50, "How to grill a sandwich");
 if (first.equals(second)) { // TRUE
@@ -159,15 +159,15 @@ if (first.equals(second)) { // TRUE
     String.format("%s is equal to %s", first, second)
   );
 }
-{% endhighlight %}
+```
 
 We can't modify a document any more. When we need to change the title,
 we have to create a new document:
 
-{% highlight java %}
+```java
 Document first = new Document(50, "How to grill a sandwich");
 first = first.title("How to cook pasta");
-{% endhighlight %}
+```
 
 Every time we want to modify its encapsulated state, we have to modify
 its identity too, because there is no identity. State is the identity.
@@ -188,7 +188,7 @@ string in one of them.
 The answer is simple. A document's title should not be part of its **state**.
 Instead, the title should be its **behavior**. For example, consider this:
 
-{% highlight java %}
+```java
 @Immutable
 class Document {
   private final int id;
@@ -211,7 +211,7 @@ class Document {
     return String.format("doc #%d about '%s'", this.id, this.title());
   }
 }
-{% endhighlight %}
+```
 
 Conceptually speaking, this document is acting as a proxy of a real-life
 document that has a title stored somewhere---in a file, for example. This is
@@ -220,13 +220,13 @@ The document exposes two features: reading the title and saving the title. Here 
 how its [interface]({% pst 2016/apr/2016-04-26-why-inputstream-design-is-wrong %})
 would look like:
 
-{% highlight java %}
+```java
 @Immutable
 interface Document {
   String title();
   void title(String text);
 }
-{% endhighlight %}
+```
 
 `title()` reads the title of the document and returns it as a `String`,
 and `title(String)` saves it back into the document. Imagine a real
@@ -290,7 +290,7 @@ Unfortunately, Java (and many other modern languages) do not allow direct
 access to computer memory. This is how we would design our class if such
 direct access was possible:
 
-{% highlight java %}
+```java
 @Immutable
 class Document {
   private final int id;
@@ -306,7 +306,7 @@ class Document {
     this.memory.write(text.getBytes());
   }
 }
-{% endhighlight %}
+```
 
 That `Memory` class would be implemented by JDK natively, and all other
 classes would be immutable. The class `Memory` would have direct access

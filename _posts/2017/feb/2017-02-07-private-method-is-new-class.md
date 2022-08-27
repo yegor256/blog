@@ -32,7 +32,7 @@ is the main difference between them, and it is crucial.
 
 Here is an example of a simple class:
 
-{% highlight java %}
+```java
 class Token {
   private String key;
   private String secret;
@@ -43,12 +43,12 @@ class Token {
       + URLEncoder.encode(secret, "UTF-8");
   }
 }
-{% endhighlight %}
+```
 
 There is an obvious code duplication, right? The easiest way to resolve
 it is to introduce a private static method:
 
-{% highlight java %}
+```java
 class Token {
   private String key;
   private String secret;
@@ -62,7 +62,7 @@ class Token {
     return URLEncoder.encode(text, "UTF-8");
   }
 }
-{% endhighlight %}
+```
 
 Looks much better now. But what will happen if we have another class
 that needs the exact same functionality? We will have to copy and paste
@@ -71,7 +71,7 @@ this private static method `encoded()` into it, right?
 A better alternative would be to introduce a new class `Encoded` that
 implements the functionality we want to share:
 
-{% highlight java %}
+```java
 class Encoded {
   private final String raw;
   @Override
@@ -79,11 +79,11 @@ class Encoded {
     return URLEncoder.encode(this.raw, "UTF-8");
   }
 }
-{% endhighlight %}
+```
 
 And then:
 
-{% highlight java %}
+```java
 class Token {
   private String key;
   private String secret;
@@ -94,7 +94,7 @@ class Token {
       + new Encoded(secret);
   }
 }
-{% endhighlight %}
+```
 
 Now this functionality is 1) reusable, and 2) testable. We can easily
 use this class `Encoded` in many other places, and we can create a unit

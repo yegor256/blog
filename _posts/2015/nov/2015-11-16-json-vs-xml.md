@@ -37,7 +37,7 @@ They are very different things with their own areas of applicability.
 Here is how a simple JSON piece of data may look
 (140 characters):
 
-{% highlight json %}
+```json
 {
   "id": 123,
   "title": "Object Thinking",
@@ -47,12 +47,12 @@ Here is how a simple JSON piece of data may look
     "year": 2004
   }
 }
-{% endhighlight %}
+```
 
 A similar document would look like this in XML
 (167 characters):
 
-{% highlight json %}
+```json
 <?xml version="1.0"?>
 <book id="123">
   <title>Object Thinking</title>
@@ -62,7 +62,7 @@ A similar document would look like this in XML
     <year>2004</year>
   </published>
 </book>
-{% endhighlight %}
+```
 
 {% quote JSON is a good data format, and it is just a data format %}
 

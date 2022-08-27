@@ -55,17 +55,17 @@ Finally, don't forget to add your private SSH key to GitHub:
 Once you have a forked our repository to your account, clone it to your
 computer, and then check out the `master` branch. For example:
 
-{% highlight bash %}
+```bash
 git clone git@github.com:yegor256/xembly.git
 git checkout master
-{% endhighlight %}
+```
 
 Now, it's time to branch (`123` is the number of the GitHub issue you're going
 to work with, and the name of the branch):
 
-{% highlight bash %}
+```bash
 git checkout -b 123
-{% endhighlight %}
+```
 
 By convention, we use the same names for the branch and issue you're working
 with.
@@ -106,10 +106,10 @@ Make any needed changes using a text editor or IDE. It's a good practice to
 commit changes as soon as you make them. Don't accumulate large numbers of
 changes too long before committing them.
 
-{% highlight bash %}
+```bash
 git commit -am '#123: the description of the changes'
 git push origin 123
-{% endhighlight %}
+```
 
 If you have questions about the scope of work, post them in the GitHub issue and
 [wait]({% pst 2016/mar/2016-03-15-wring-dispatcher-github-notifications %})

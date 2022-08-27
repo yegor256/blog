@@ -39,7 +39,7 @@ that does exactly two things: starts a MySQL server on
 This is how you configure it in `pom.xml`
 (see also its full [usage instructions](http://mysql.jcabi.com/usage.html)):
 
-{% highlight xml %}
+```xml
 <project>
   <build>
     <plugins>
@@ -122,7 +122,7 @@ This is how you configure it in `pom.xml`
   </build>
   [...]
 </project>
-{% endhighlight %}
+```
 
 There are two plugins configured above. Let's take a look
 at what each does.
@@ -160,7 +160,7 @@ goal, it will fail a build if there were any errors during its
 
 To be precise, this is the order in which Maven will execute configured goals:
 
-{% highlight text %}
+```text
 jcabi-mysql-maven-plugin:classify
 maven-dependency-plugin:unpack
 build-helper-maven-plugin:reserve-network-port
@@ -168,7 +168,7 @@ jcabi-mysql-maven-plugin:start
 maven-failsafe-plugin:integration-test
 jcabi-mysql-maven-plugin:stop
 maven-failsafe-plugin:verify
-{% endhighlight %}
+```
 
 Run `mvn clean install` and see how it works. If it doesn't work
 for some reason, don't hesitate
@@ -180,7 +180,7 @@ a table there and insert some data into it. This is just
 an example to show that MySQL server is running and
 is capable of serving transactions (I'm using [jcabi-jdbc](http://jdbc.jcabi.com)):
 
-{% highlight java %}
+```java
 public class FooITCase {
   private static final String PORT = System.getProperty("mysql.port");
   @Test
@@ -196,17 +196,17 @@ public class FooITCase {
       .execute();
   }
 }
-{% endhighlight %}
+```
 
 If you're using Hibernate, just create a `db.properties`
 file in `src/test/resources` directory.
 In that file you would do something like:
 
-{% highlight properties %}
+```properties
 hibernate.connection.url=jdbc:mysql://localhost:${mysql.port}/root
 hibernate.connection.username=root
 hibernate.connection.password=root
-{% endhighlight %}
+```
 
 Maven will replace that `${mysql.port}` with the number of
 reserved TCP port, during resources copying. This operation

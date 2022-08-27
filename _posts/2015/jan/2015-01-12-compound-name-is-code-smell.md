@@ -36,7 +36,7 @@ And a big, complex scope is an obvious code smell.
 The scope of a variable is the place where it is visible, like a method, for example. Look
 at this Ruby class:
 
-{% highlight ruby %}
+```ruby
 class CSV
   def initialize(csvFileName)
     @fileName = csvFileName
@@ -47,7 +47,7 @@ class CSV
     end
   end
 end
-{% endhighlight %}
+```
 
 The visible scope of variable `csvFileName` is method `initialize()`, which
 is a constructor of the class `CSV`. Why does it need a compound name
@@ -62,7 +62,7 @@ The same situation exists with the `csvLine` variable. It is clear that we're
 dealing with CSV lines here. The `csv` prefix is just a redundancy.
 Here is how I would refactor the class:
 
-{% highlight ruby %}
+```ruby
 class CSV
   def initialize(file)
     @file = file
@@ -73,7 +73,7 @@ class CSV
     end
   end
 end
-{% endhighlight %}
+```
 
 Now it looks clear and concise.
 

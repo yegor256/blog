@@ -136,7 +136,7 @@ to my will. I want to enjoy my work.
 Now, back to my conference talk. I'm going to show this piece of code in one of my slides
 (this is how [Spring Framework](https://spring.io/) is supposed to be used):
 
-{% highlight java %}
+```java
 @Controller
 public class HelloController {
     @GetMapping("/hello")
@@ -145,7 +145,7 @@ public class HelloController {
         return "index";
     }
 }
-{% endhighlight %}
+```
 
 Then I will ask a question: Do you know who is making an instance of the `HelloController`
 class and how that instance is being used? Who is calling its methods, why

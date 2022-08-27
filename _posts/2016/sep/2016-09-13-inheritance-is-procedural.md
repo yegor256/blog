@@ -66,14 +66,14 @@ An object of class `Article` inherits all characteristics of objects in class `M
 and adds its own. For example, it _inherits_ an ability to print itself
 and _adds_ an ability to submit itself to a conference:
 
-{% highlight java %}
+```java
 interface Manuscript {
   void print(Console console);
 }
 interface Article extends Manuscript {
   void submit(Conference cnf);
 }
-{% endhighlight %}
+```
 
 This is _subtyping_, and it's a perfect technique; whenever a
 manuscript is required, we can provide an article and nobody will
@@ -92,7 +92,7 @@ Who is dead, you ask? An object is dead if it allows other objects to
 _inherit_ its encapsulated code and data. This is implementation
 inheritance:
 
-{% highlight java %}
+```java
 class Manuscript {
   protected String body;
   void print(Console console) {
@@ -104,7 +104,7 @@ class Article extends Manuscript {
     cnf.send(this.body);
   }
 }
-{% endhighlight %}
+```
 
 Class `Article` _copies_ method `print()` and attribute `body`
 from class `Manuscript`, as if it's not a

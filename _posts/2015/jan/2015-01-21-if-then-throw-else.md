@@ -18,13 +18,13 @@ keywords:
 
 This is the code I could never understand:
 
-{% highlight java %}
+```java
 if (x < 0) {
   throw new Exception("X can't be negative");
 } else {
   System.out.println("X is positive or zero");
 }
-{% endhighlight %}
+```
 
 I have been trying to find a proper metaphor to explain its incorrectness.
 Today I finally found it.
@@ -43,13 +43,13 @@ Otherwise you should go in the right lane. Both lanes meet up
 in a while. No matter which one you choose, you will end up on the same road.
 This is what this code block does:
 
-{% highlight java %}
+```java
 if (x < 0) {
   System.out.println("X is negative");
 } else {
   System.out.println("X is positive or zero");
 }
-{% endhighlight %}
+```
 
 Now, try to imagine this sign:
 
@@ -66,16 +66,16 @@ This is how a proper sign would look:
 
 This is how a proper code block would look:
 
-{% highlight java %}
+```java
 if (x < 0) {
   throw new Exception("X can't be negative");
 }
 System.out.println("X is positive or zero");
-{% endhighlight %}
+```
 
 The same is true for loops. This is wrong:
 
-{% highlight java %}
+```java
 for (int x : numbers) {
   if (x < 0) {
     continue;
@@ -83,30 +83,30 @@ for (int x : numbers) {
     System.out.println("found positive number");
   }
 }
-{% endhighlight %}
+```
 
 While this is right:
 
-{% highlight java %}
+```java
 for (int x : numbers) {
   if (x < 0) {
     continue;
   }
   System.out.println("found positive number");
 }
-{% endhighlight %}
+```
 
 There is no road after the dead end! If you draw it, your code looks
 like this very funny snippet I found a few years ago reviewing
 sources written by some very well-paid developer in one very serious
 company:
 
-{% highlight java %}
+```java
 if (x < 0) {
   throw new Exception("X is negative");
   System.exit(1);
 }
-{% endhighlight %}
+```
 
 Don't do this.
 

@@ -26,7 +26,7 @@ First, I change the extensions of `.css` files to
 Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-plugin)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>nl.geodienstencentrum.maven</groupId>
   <artifactId>sass-maven-plugin</artifactId>
@@ -44,7 +44,7 @@ Then, I configure the [sass-maven-plugin](https://github.com/Jasig/sass-maven-pl
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 <!--more-->
 
@@ -54,7 +54,7 @@ The SASS compiler will compile `.scss` files from
 Then, I configure the [minify-maven-plugin](https://github.com/samaxes/minify-maven-plugin)
 to compress/minify the style sheets produced by the SASS compiler:
 
-{% highlight xml %}
+```xml
 <plugin>
   <groupId>com.samaxes.maven</groupId>
   <artifactId>minify-maven-plugin</artifactId>
@@ -80,7 +80,7 @@ to compress/minify the style sheets produced by the SASS compiler:
     </execution>
   </executions>
 </plugin>
-{% endhighlight %}
+```
 
 Minified `.css` files will be placed into `target/css-min`.
 
@@ -88,7 +88,7 @@ The final step is to configure the
 [maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/)
 to pick up `.css` files and package them into the final WAR archive:
 
-{% highlight xml %}
+```xml
 <plugin>
   <artifactId>maven-war-plugin</artifactId>
   <configuration>
@@ -100,6 +100,6 @@ to pick up `.css` files and package them into the final WAR archive:
     </webResources>
   </configuration>
 </plugin>
-{% endhighlight %}
+```
 
 That's it.

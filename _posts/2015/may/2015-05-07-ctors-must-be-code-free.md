@@ -33,15 +33,15 @@ un-extensible.
 
 Let's say we're making an interface that would represent a name of a person:
 
-{% highlight java %}
+```java
 interface Name {
   String first();
 }
-{% endhighlight %}
+```
 
 Pretty easy, right? Now, let's try to implement it:
 
-{% highlight java %}
+```java
 public final class EnglishName implements Name {
   private final String name;
   public EnglishName(final CharSequence text) {
@@ -52,7 +52,7 @@ public final class EnglishName implements Name {
     return this.name;
   }
 }
-{% endhighlight %}
+```
 
 What's wrong with this? It's faster, right? It splits the name into
 parts only once and encapsulates them. Then, no matter how many times we
@@ -60,7 +60,7 @@ call the `first()` method, it will return the same value and won't need
 to do the splitting again. However, this is flawed thinking! Let me show
 you the right way and explain:
 
-{% highlight java %}
+```java
 public final class EnglishName implements Name {
   private final CharSequence text;
   public EnglishName(final CharSequence txt) {
@@ -71,7 +71,7 @@ public final class EnglishName implements Name {
     return this.text.toString().split("", 2)[0];
   }
 }
-{% endhighlight %}
+```
 
 This is the right design. I can see you smiling, so let me prove my point.
 
@@ -92,7 +92,7 @@ as long as possible.
 
 Let's try to use our `EnglishName` class:
 
-{% highlight java %}
+```java
 final Name name = new EnglishName(
   new NameInPostgreSQL(/*...*/)
 );
@@ -104,7 +104,7 @@ if (/* something goes wrong */) {
     )
   );
 }
-{% endhighlight %}
+```
 
 In the first line of this snippet, we are just making an instance of an object
 and labeling it `name`. We don't want to go to the database yet and fetch
@@ -127,7 +127,7 @@ To solve that, we create another class,
 a [composable decorator]({% pst 2015/feb/2015-02-26-composable-decorators %}),
 which will help us solve this "re-use" problem:
 
-{% highlight java %}
+```java
 public final class CachedName implements Name {
   private final Name origin;
   public CachedName(final Name name) {
@@ -139,14 +139,14 @@ public final class CachedName implements Name {
     return this.origin.first();
   }
 }
-{% endhighlight %}
+```
 
 I'm using the [`Cacheable`](http://aspects.jcabi.com/annotation-cacheable.html)
 annotation from [jcabi-aspects](http://aspects.jcabi.com/), but you can use any other
 caching tools available in Java (or other languages), like
 [Guava Cache](https://code.google.com/p/guava-libraries/wiki/CachesExplained):
 
-{% highlight java %}
+```java
 public final class CachedName implements Name {
   private final Cache<Long, String> cache =
     CacheBuilder.newBuilder().build();
@@ -167,7 +167,7 @@ public final class CachedName implements Name {
     );
   }
 }
-{% endhighlight %}
+```
 
 But please don't make `CachedName` mutable and lazily
 loaded---it's an anti-pattern, which I've discussed before in
@@ -175,13 +175,13 @@ loaded---it's an anti-pattern, which I've discussed before in
 
 This is how our code will look now:
 
-{% highlight java %}
+```java
 final Name name = new CachedName(
   new EnglishName(
     new NameInPostgreSQL(/*...*/)
   )
 );
-{% endhighlight %}
+```
 
 It's a very primitive example, but I hope you get the idea.
 

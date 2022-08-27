@@ -36,23 +36,23 @@ Both are wrong.
 
 This is how the code may look:
 
-{% highlight java %}
+```java
 if (!file.exists()) {
   throw new IllegalArgumentException(
     "File doesn't exist"
   );
 }
-{% endhighlight %}
+```
 
 It may also look like this:
 
-{% highlight java %}
+```java
 try {
   Files.delete(file);
 } catch (IOException ex) {
   throw new IllegalArgumentException(ex);
 }
-{% endhighlight %}
+```
 
 Both examples demonstrate an inadequate style of handling situations that
 involve exceptions and reporting them. What's wrong here? The exception messages
@@ -61,7 +61,7 @@ from the place where they originated from.
 
 This is how they should look instead:
 
-{% highlight java %}
+```java
 if (!file.exists()) {
   throw new IllegalArgumentException(
     String.format(
@@ -70,11 +70,11 @@ if (!file.exists()) {
     )
   );
 }
-{% endhighlight %}
+```
 
 And the second example should look like this:
 
-{% highlight java %}
+```java
 try {
   Files.delete(file);
 } catch (IOException ex) {
@@ -86,7 +86,7 @@ try {
     ex
   );
 }
-{% endhighlight %}
+```
 
 See the difference? This may look like redundant code, but it's not.
 Of course, when I'm writing all this, I don't really care about
@@ -113,11 +113,11 @@ Is it possible to do it differently? Etc.
 
 Such code is literally a sign of disrespect to the client:
 
-{% highlight java %}
+```java
 throw new IllegalArgumentException(
   "File doesn't exist"
 );
-{% endhighlight %}
+```
 
 I have to be more verbose and give more details.
 

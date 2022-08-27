@@ -124,7 +124,7 @@ they won't appreciate that behavior.
 
 Here is how a properly defined time and cost constraint may sound:
 
-{% highlight text %}
+```text
 Features A, B, and D must be ready before
 the first of June, because our marketing
 campaign starts on the fifth of June. If
@@ -132,7 +132,7 @@ we don't have them ready, I will lose $25,000
 in marketing costs. If this happens, I will
 have to cut the monthly development budget
 in half.
-{% endhighlight %}
+```
 
 When the software outsourcing company, your partner, hears this definition
 of a deadline, it becomes a real partner of yours. Now its goals

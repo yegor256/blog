@@ -54,7 +54,7 @@ as an argument of an object constructor and then in a few
 test methods to check how that object behaves. Let me simplify that
 code:
 
-{% highlight java %}
+```java
 class FooTest {
   private static final String MSG = "something";
   @Before
@@ -76,7 +76,7 @@ class FooTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 This is basically what is happening in
 [`VerboseListTest`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java)
@@ -95,7 +95,7 @@ another test method. This is called coupling. And it's a bad thing.
 What do we do? Well, we can use that `"something"` string literal in
 both test methods:
 
-{% highlight java %}
+```java
 class FooTest {
   @Test
   public void simplyWorks() throws IOException {
@@ -112,7 +112,7 @@ class FooTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 As you see, I got rid of that `setUp()` method and the private static
 literal `MSG`. What do we have now? Code duplication. String `"something"`
@@ -130,7 +130,7 @@ approved the changes. So, three people made/approved that mistake, including mys
 So what is the right approach that will avoid code duplication and
 at the same time won't introduce coupling? Here it is:
 
-{% highlight java %}
+```java
 class FooTest {
   @Test
   public void simplyWorks() throws IOException {
@@ -149,7 +149,7 @@ class FooTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 These literals must be different. This is what any static analyzer is
 saying when it sees `"something"` in so many places. It questions us---why

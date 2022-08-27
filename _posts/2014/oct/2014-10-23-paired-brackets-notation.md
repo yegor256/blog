@@ -28,7 +28,7 @@ for method/function calls.
 Here is how your code will look, if you follow
 this "Paired Brackets" notation:
 
-{% highlight java %}
+```java
 new Foo( // ends the line
   Math.max(10, 40), // open/close at the same line
   String.format(
@@ -41,7 +41,7 @@ new Foo( // ends the line
     )
   ) // starts the line
 );
-{% endhighlight %}
+```
 
 <!--more-->
 

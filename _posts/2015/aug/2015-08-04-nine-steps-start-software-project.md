@@ -43,12 +43,12 @@ a prototype, a.k.a. a skeleton or a proof of concept. This is what I have
 as an input (let's say it's a piece of napkin... what else would it be
 for a Google killer, right?):
 
-{% highlight text %}
+```text
 Each page is ranked by the number of mentions in
 social networks like Twitter, LinkedIn, Facebook, etc.
 The more mentions it has, the higher the rank and the
 higher its position in the search results page.
-{% endhighlight %}
+```
 
 Seems like a doable project to me, and the requirements document is
 clear enough. It doesn't say anything about performance, but I
@@ -76,7 +76,7 @@ technical document---it has to be short; that's important.
 For each decision I made, there has to be at least one alternative
 that I considered and rejected. There are two items at the top of my list:
 
-{% highlight text %}
+```text
 Apache Lucene is a search engine. It is popular,
   mature enough, scalable, and written in Java. Alternatives
   are Solr, Sphinx, Gigablast, and many others.
@@ -84,7 +84,7 @@ Java 8 is a programming language, and JVM is a
   runtime platform. I know how they work, and the team
   has enough experience with them. Alternatives are
   Ruby, Python, Go, Scala, and tons of others.
-{% endhighlight %}
+```
 
 {% quote Each decision must be traceable to the person who made it. %}
 
@@ -100,12 +100,12 @@ choices I've made: Lucene and Java&nbsp;8.
 
 Yet another item to the list:
 
-{% highlight text %}
+```text
 Three modules make up the app: UI, scraper,
   and analyzer. They are fully decoupled and
   communicate strictly through Lucene. I don't
   see any alternatives.
-{% endhighlight %}
+```
 
 Then, I attach a simple diagram to illustrate my decision:
 
@@ -129,14 +129,14 @@ makes the entire project more maintainable and transparent.
 
 Let's add one more decision to the list:
 
-{% highlight text %}
+```text
 Takes Framework is used for UI. It helps keep our
   code truly object-oriented, testable, fast, and
   decoupled from the data model. Alternatives:
   - Spring: It is big, complex, and ugly
   - Play: Similar to Spring, big and ugly
   - Spark: Not as clear as Takes
-{% endhighlight %}
+```
 
 In this case, I documented the alternatives and gave my reasons why
 they are not good for us. As you see, the reasons are very biased; I
@@ -171,17 +171,17 @@ prove that my solution is fast and scalable. Maybe it's not, but if I believe
 it is, I have to explain why I think so. I can't be quiet about the concerns. Here
 is what I would say about performance:
 
-{% highlight text %}
+```text
 The system is as fast as the Lucene search engine, while
 Lucene is rather fast even with large amounts of data.
-{% endhighlight %}
+```
 
 And this one is about scalability:
 
-{% highlight text %}
+```text
 The bottleneck is in Lucene, and it is scalable
 vertically. Not sure about horizontal scalability.
-{% endhighlight %}
+```
 
 As you see, I'm trying to be _honest_ and tell the truth. We'll be able to
 review these statements later and decide whether I was right or wrong. But
@@ -196,13 +196,13 @@ it, but we have to document which _gaps_ were filled and why.
 
 How about these two assumptions:
 
-{% highlight text %}
+```text
 1. I assume that social platforms won't block our
    calls and will provide counters for all pages.
 2. I assume that Lucene will be enough for both
    indexing and data storage, so we won't need a
    database engine.
-{% endhighlight %}
+```
 
 I made these assumptions without proper analysis of the situation. I don't
 know whether Twitter will be happy to see millions of requests every hour
@@ -228,10 +228,10 @@ is to document what I see and move on. Remember, I have just a week of time.
 Now I list all potential problems I foresee and estimate
 their probability and impact. Let me show you an example first:
 
-{% highlight text %}
+```text
 1. Lucene may not be able to handle billions of documents [6x9]
 2. Social platforms will ban our requests [8x9]
-{% endhighlight %}
+```
 
 The first number in square brackets is the probability and the second one
 is the impact, on a 0 to 9 scale. If both numbers are nine, it's not a risk

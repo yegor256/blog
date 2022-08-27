@@ -34,12 +34,12 @@ A more formal definition of the principle would be this:
 it's either one word/sentence/paragraph/page _or_ way more.
 Let's see an example. Say I need to list my plans for tomorrow:
 
-{% highlight text %}
+```text
 - write a new article
 - send an email to my boss
 - cook a dinner
 - take a nap
-{% endhighlight %}
+```
 
 Do any of them need to be longer than one word? Not really. "Take a nap"
 is just three words, as is "cook a dinner". On the one hand, three might not be considered
@@ -48,12 +48,12 @@ any loss of meaning. Thus, I have to decide whether to make them all _much_
 longer than one word or shorten them all to a single one.
 The second choice is always preferable:
 
-{% highlight text %}
+```text
 - article
 - email
 - dinner
 - nap
-{% endhighlight %}
+```
 
 I wrote about [compound variable names]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %})
 in an earlier post: the same principle is applicable

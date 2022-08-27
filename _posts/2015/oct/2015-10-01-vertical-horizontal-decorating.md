@@ -41,16 +41,16 @@ some food for thought.
 
 Let's say I have a list of numbers:
 
-{% highlight java %}
+```java
 interface Numbers {
   Iterable<Integer> iterate();
 }
-{% endhighlight %}
+```
 
 Now I want to create a list that will only have odd, unique, positive, and sorted numbers.
 The first approach is **vertical** (I just made this name up):
 
-{% highlight java %}
+```java
 Numbers numbers = new Sorted(
   new Unique(
     new Odds(
@@ -64,11 +64,11 @@ Numbers numbers = new Sorted(
     )
   )
 );
-{% endhighlight %}
+```
 
 The second approach is **horizontal** (again, a name I made up):
 
-{% highlight java %}
+```java
 Numbers numbers = new Modified(
   new ArrayNumbers(
     new Integer[] {
@@ -82,7 +82,7 @@ Numbers numbers = new Modified(
     new Sorted(),
   }
 );
-{% endhighlight %}
+```
 
 See the difference? The first approach decorates `ArrayNumbers` "vertically,"
 adding functionality through the composable decorators `Positive`, `Odds`,
@@ -92,11 +92,11 @@ The second approach introduces the new interface `Diff`, which implements
 the core functionality of iterating numbers through instances of
 `Positive`, `Odds`, `Unique`, and `Sorted`:
 
-{% highlight java %}
+```java
 interface Diff {
   Iterable<Integer> apply(Iterable<Integer> origin);
 }
-{% endhighlight %}
+```
 
 For the user of `numbers`, both approaches are the same. The difference is
 only in the design. Which one is better and when? It seems that

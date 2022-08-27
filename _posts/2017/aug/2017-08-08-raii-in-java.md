@@ -41,7 +41,7 @@ The problem RAII is solving is obvious; have a look at this code
 [`Semaphore`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html)
 is and how it works in Java):
 
-{% highlight java %}
+```java
 class Foo {
   private Semaphore sem = new Semaphore(5);
   void print(int x) throws Exception {
@@ -53,7 +53,7 @@ class Foo {
     this.sem.release();
   }
 }
-{% endhighlight %}
+```
 
 The code is rather primitive and doesn't do anything useful, but you
 most probably get the idea: the method `print()`, if being called from
@@ -69,7 +69,7 @@ the semaphore will be empty and all other threads won't print anything.
 
 What is the solution? Here it is:
 
-{% highlight java %}
+```java
 class Foo {
   private Semaphore sem = new Semaphore(5);
   void print(int x) throws Exception {
@@ -82,7 +82,7 @@ class Foo {
     this.sem.release();
   }
 }
-{% endhighlight %}
+```
 
 We must release the permit before we throw the exception.
 
@@ -93,7 +93,7 @@ also have to add more `sem.release()` calls.
 A very elegant solution was introduced in C++ and is called RAII. This
 is how it would look in Java:
 
-{% highlight java %}
+```java
 class Permit {
   private Semaphore sem;
   Permit(Semaphore s) {
@@ -115,7 +115,7 @@ class Foo {
     System.out.printf("x = %d", x);
   }
 }
-{% endhighlight %}
+```
 
 See how beautiful the code is inside method `Foo.print()`. We just create
 an instance of class `Permit` and it immediately acquires a new permit
@@ -136,7 +136,7 @@ get blocked.
 There is a solution in Java too. It is not as elegant as the one from
 C++, but it does work. Here it is:
 
-{% highlight java %}
+```java
 class Permit implements Closeable {
   private Semaphore sem;
   Permit(Semaphore s) {
@@ -162,7 +162,7 @@ class Foo {
     }
   }
 }
-{% endhighlight %}
+```
 
 Pay attention to the `try` block and to the
 [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html) interface

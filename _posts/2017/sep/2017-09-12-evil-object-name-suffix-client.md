@@ -38,7 +38,7 @@ Let me give an example first. This is what an object with such a suffix may look
 [`AmazonS3Client`](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html)
 from [AWS Java SDK](https://aws.amazon.com/sdk-for-java/)):
 
-{% highlight java %}
+```java
 class AmazonS3Client {
   createBucket(String name);
   deleteBucket(String name);
@@ -48,7 +48,7 @@ class AmazonS3Client {
   listBuckets();
   // 160+ more methods here
 }
-{% endhighlight %}
+```
 
 All "clients" look similar: they encapsulate the destination URL
 with some access credentials and expose a number of methods, which

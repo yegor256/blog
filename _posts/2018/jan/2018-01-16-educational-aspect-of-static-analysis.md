@@ -38,7 +38,7 @@ is a fully automated uncompromising review of your pull request, mostly
 intended to spot code formatting mistakes. Say we want Java code in
 our entire repository to look like this:
 
-{% highlight java %}
+```java
 final class Doc {
   private final File file;
   public void remove() {
@@ -47,11 +47,11 @@ final class Doc {
     }
   }
 }
-{% endhighlight %}
+```
 
 However, you refactor it as part of a bigger task, and submit a pull request like this:
 
-{% highlight java %}
+```java
 class Doc {
   private File f;
   public void remove()
@@ -60,7 +60,7 @@ class Doc {
       f.delete();
   }
 }
-{% endhighlight %}
+```
 
 For some of you this may not seem like a big difference, since both code snippets
 compile without issues and work exactly the same way. However, for us,

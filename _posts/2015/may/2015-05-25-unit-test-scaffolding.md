@@ -37,7 +37,7 @@ alternative. Let me explain.
 JUnit officially suggests a
 [test fixture](http://junit.org/faq.html#atests_2):
 
-{% highlight java %}
+```java
 public final class MetricsTest {
   private File temp;
   private Folder folder;
@@ -61,7 +61,7 @@ public final class MetricsTest {
     assertEquals(4, new Metrics(this.folder).wc());
   }
 }
-{% endhighlight %}
+```
 
 I think it's obvious what this test is doing. First, in `prepare()`,
 it creates a "test fixture" of type `Folder`. That is used in all three
@@ -84,7 +84,7 @@ developers to couple test methods.
 
 Here is how we can improve our test and isolate test methods:
 
-{% highlight java %}
+```java
 public final class MetricsTest {
   @Test
   public void calculatesTotalSize() {
@@ -124,7 +124,7 @@ public final class MetricsTest {
     return folder;
   }
 }
-{% endhighlight %}
+```
 
 Does it look better now? We're not there yet, but now our test
 methods are perfectly isolated. If I want to change one of them,
@@ -148,7 +148,7 @@ instead of private static utilities. Here is how. First, we create a fake class
 and place it into `src/main/java`. This class can be used in tests
 and also in production code, if necessary (`Fk` for "fake"):
 
-{% highlight java %}
+```java
 public final class FkFolder implements Folder, Closeable {
   private final File dir;
   private final String[] parts;
@@ -173,11 +173,11 @@ public final class FkFolder implements Folder, Closeable {
     FileUtils.deleteDirectory(this.dir);
   }
 }
-{% endhighlight %}
+```
 
 Here is how our test will look now:
 
-{% highlight java %}
+```java
 public final class MetricsTest {
   @Test
   public void calculatesTotalSize() {
@@ -201,7 +201,7 @@ public final class MetricsTest {
     }
   }
 }
-{% endhighlight %}
+```
 
 What do you think? Isn't it better than what JUnit offers?
 Isn't it more reusable and extensible than utility methods?

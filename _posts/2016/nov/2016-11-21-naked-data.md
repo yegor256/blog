@@ -32,11 +32,11 @@ Encapsulation leads to the absence of _naked_ data on all levels and in all form
 
 This is what naked data is (C code):
 
-{% highlight C %}
+```C
 int t;
 t = 85;
 printf("The temperature is %d F", t);
-{% endhighlight %}
+```
 
 Here `t` is the data, which is publicly accessible by the code around it.
 Anyone can modify it or read it.
@@ -60,13 +60,13 @@ This will seriously affect maintainability.
 
 And this is not a solution, as you can imagine (Java now):
 
-{% highlight java %}
+```java
 class Temperature {
   private int t;
   public int getT() { return this.t; }
   public void setT(int t) { this.t = t; }
 }
-{% endhighlight %}
+```
 
 It looks like an object, but the data is still naked. Anyone can retrieve
 `t` from the object and decide whether it's Fahrenheit or Celsius, whether
@@ -77,14 +77,14 @@ it either directly or by retrieving it from an object. How do we do that?
 Just stop exposing data and start exposing functionality. Here is how,
 for example:
 
-{% highlight java %}
+```java
 class Temperature {
   private int t;
   public String toString() {
     return String.format("%d F", this.t);
   }
 }
-{% endhighlight %}
+```
 
 We don't allow anyone to retrieve `t` anymore. All they can do is
 convert temperature to text. If and when we decide to change `t` to Celsius,

@@ -110,10 +110,10 @@ Can a living organism have a setter?
 Can you "set" a ball to a dog? Not really.
 But that is exactly what the following piece of software is doing:
 
-{% highlight java %}
+```java
 Dog dog = new Dog();
 dog.setBall(new Ball());
-{% endhighlight %}
+```
 
 How does that sound?
 
@@ -121,17 +121,17 @@ Can you get a ball from a dog? Well, you probably can,
 if she ate it and you're doing surgery. In that case, yes, we can "get" a ball from a dog. This is what
 I'm talking about:
 
-{% highlight java %}
+```java
 Dog dog = new Dog();
 Ball ball = dog.getBall();
-{% endhighlight %}
+```
 
 Or an even more ridiculous example:
 
-{% highlight java %}
+```java
 Dog dog = new Dog();
 dog.setWeight("23kg");
-{% endhighlight %}
+```
 
 Can you imagine this transaction in the real world? :)
 
@@ -152,11 +152,11 @@ reading West's [Object Thinking](http://amzn.to/266oJr4).
 Start thinking like an object and you will immediately rename those methods.
 This is what you will probably get:
 
-{% highlight java %}
+```java
 Dog dog = new Dog();
 dog.take(new Ball());
 Ball ball = dog.give();
-{% endhighlight %}
+```
 
 Now, we're treating the dog as a real animal, who can take a ball from us
 and can give it back, when we ask. Worth mentioning is that the
@@ -168,10 +168,10 @@ from your code.
 Besides that, object thinking will lead to object immutability, like in
 the "weight of the dog" example. You would re-write that like this instead:
 
-{% highlight java %}
+```java
 Dog dog = new Dog("23kg");
 int weight = dog.weight();
-{% endhighlight %}
+```
 
 The dog is an immutable living organism, which doesn't allow anyone from
 the outside to change her weight, or size, or name, etc. She can tell, on

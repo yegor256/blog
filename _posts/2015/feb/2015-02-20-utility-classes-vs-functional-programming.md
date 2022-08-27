@@ -45,19 +45,19 @@ and where this misconception is coming from.
 Here is a typical example of a utility class
 [`Math`](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html) from Java 1.0:
 
-{% highlight java %}
+```java
 public class Math {
   public static double abs(double a);
   // a few dozens of other methods of the same style
 }
-{% endhighlight %}
+```
 
 Here is how you would use it when you want to calculate an absolute
 value of a floating point number:
 
-{% highlight java %}
+```java
 double x = Math.abs(3.1415926d);
-{% endhighlight %}
+```
 
 {% quote The code will work, but it is not object-oriented programming %}
 
@@ -82,7 +82,7 @@ of imperative programming above. Here is another (this is pure imperative/proced
 programming that has nothing to do with
 [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})):
 
-{% highlight java %}
+```java
 public class MyMath {
   public double f(double a, double b) {
     double max = Math.max(a, b);
@@ -90,16 +90,16 @@ public class MyMath {
     return x;
   }
 }
-{% endhighlight %}
+```
 
 [Declarative programming](http://en.wikipedia.org/wiki/Declarative_programming)
 focuses on _what_ the program should accomplish without prescribing
 how to do it in terms of sequences of actions to be taken. This is how
 the same code would look in Lisp, a functional programming language:
 
-{% highlight lisp %}
+```lisp
 (defun f (a b) (abs (max a b)))
-{% endhighlight %}
+```
 
 What's the catch? Just a difference in syntax? Not really.
 
@@ -109,7 +109,7 @@ give my own. There are basically three roles interacting in the scenario
 with this `f` function/method: a _buyer_, a _packager_ of the result,
 and a _consumer_ of the result. Let's say I call this function like this:
 
-{% highlight java %}
+```java
 public void foo() {
   double x = this.calc(5, -7);
   System.out.println("max+abs equals to " + x);
@@ -118,7 +118,7 @@ private double calc(double a, double b) {
   double x = Math.f(a, b);
   return x;
 }
-{% endhighlight %}
+```
 
 Here, method `calc()` is a buyer, method `Math.f()` is a packager of the result,
 and method `foo()` is a consumer. No matter which programming style is used,
@@ -161,10 +161,10 @@ and other functional languages return "vouchers." For example, if you
 call the `max` function in Lisp, the actual maximum between two numbers
 will only be calculated when you actually start using it:
 
-{% highlight lisp %}
+```lisp
 (let (x (max 1 5))
   (print "X equals to " x))
-{% endhighlight %}
+```
 
 Until this `print` actually starts to output characters to the
 screen, the function `max` won't be called. This `x` is a "voucher" returned
@@ -174,13 +174,13 @@ Note, however, that nesting Java static functions one into another doesn't
 make them declarative. The code is still imperative, because its execution
 delivers the result here and now:
 
-{% highlight java %}
+```java
 public class MyMath {
   public double f(double a, double b) {
     return Math.abs(Math.max(a, b));
   }
 }
-{% endhighlight %}
+```
 
 "Okay," you may say, "I got it, but why is declarative style better than imperative?
 What's the big deal?" I'm getting to it. Let me first show the difference
@@ -190,16 +190,16 @@ classes and functional programming.
 
 In any functional programming language, you can do this:
 
-{% highlight lisp %}
+```lisp
 (defun foo (x) (x 5))
-{% endhighlight %}
+```
 
 Then, later, you can call that `x`:
 
-{% highlight lisp %}
+```lisp
 (defun bar (x) (+ x 1)) // defining function bar
 (print (foo bar)) // passing bar as an argument to foo
-{% endhighlight %}
+```
 
 Static methods in Java are not _functions_ in terms of functional programming.
 You can't do anything like this with a static method. You can't pass a static

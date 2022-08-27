@@ -47,29 +47,29 @@ In practice, "it is up to the user of an object to respect that object's encapsu
 Indeed, let's take a look at the class `Temperature` from my blog post
 about [naked data]({% pst 2016/nov/2016-11-21-naked-data %}):
 
-{% highlight java %}
+```java
 class Temperature {
   private int t;
   public int getT() { return this.t; }
   public void setT(int t) { this.t = t; }
 }
-{% endhighlight %}
+```
 
 Can we say that the attribute `t` is truly _encapsulated_?
 Technically, it is: it's impossible
 to modify it directly via the dot notation.
 Simply put, we can't do this:
 
-{% highlight java %}
+```java
 Temperature x = new Temperature();
 x.t = 10;
-{% endhighlight %}
+```
 
 And we can't even do this:
 
-{% highlight java %}
+```java
 int y = x.t;
-{% endhighlight %}
+```
 
 However, we can do exactly the same via the
 [getter]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}) `getT()`
@@ -85,14 +85,14 @@ about naked data
 proposed the use of the [TellDontAsk principle](http://media.pragprog.com/articles/jan_03_enbug.pdf)
 and that we should get rid of the getter:
 
-{% highlight java %}
+```java
 class Temperature {
   private int t;
   public String toString() {
     return String.format("%d F", this.t);
   }
 }
-{% endhighlight %}
+```
 
 Now the class `Temperature` doesn't allow us to read its attribute `t`.
 Instead, we can only _tell_ it to prepare a string presentation of the temperature
@@ -108,12 +108,12 @@ product, not modifiable. Or maybe not?
 
 What if the client does this:
 
-{% highlight java %}
+```java
 Temperature x = new Temperature();
 String txt = x.toString();
 String[] parts = txt.split(" ");
 int t = Integer.parseInt(parts[0]);
-{% endhighlight %}
+```
 
 How does it look now? Isn't this a violation of encapsulation?
 The result of `toString()` is not treated

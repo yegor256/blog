@@ -49,7 +49,7 @@ This is _constant_; it doesn't allow any modifications
 to the encapsulated entity and always returns the same text
 (I've skipped constructors for the sake of brevity):
 
-{% highlight java %}
+```java
 class Book {
   private final String ttl;
   Book rename(String title) {
@@ -59,7 +59,7 @@ class Book {
     return this.ttl;
   }
 }
-{% endhighlight %}
+```
 
 This is what we usually have in mind when talking about immutable
 objects. Such a class is very close to a
@@ -71,7 +71,7 @@ the same initial values, the result of `title()` will be the same.
 
 Check out this one:
 
-{% highlight java %}
+```java
 class Book {
   private final String ttl;
   Book rename(String title) {
@@ -83,7 +83,7 @@ class Book {
     );
   }
 }
-{% endhighlight %}
+```
 
 The object is still immutable, but it is not a pure
 function anymore because of the method `title()`---it returns different values if we call it
@@ -94,7 +94,7 @@ is immutable; it's just not a constant anymore.
 
 How about this one:
 
-{% highlight java %}
+```java
 class Book {
   private final Path path;
   Book rename(String title) {
@@ -111,7 +111,7 @@ class Book {
     );
   }
 }
-{% endhighlight %}
+```
 
 This _immutable_ object keeps the book title in a file. It's not a constant,
 because its method `title()` may return different values on every
@@ -128,7 +128,7 @@ previous example, a mutable file was encapsulated. Even though it
 was represented by the immutable class `Path`, the real file on disk
 was mutable. We can do the same, but in memory:
 
-{% highlight java %}
+```java
 class Book {
   private final StringBuffer buffer;
   Book rename(String title) {
@@ -140,7 +140,7 @@ class Book {
     return this.buffer.toString();
   }
 }
-{% endhighlight %}
+```
 
 The object is still _immutable_. Is it
 [thread-safe]({% pst 2017/jan/2017-01-17-synchronized-decorators %})? No. Is it a constant?

@@ -105,10 +105,10 @@ of the product. It doesn't need to be detailed. Instead, it has to
 be very high-level and abstract. For example, this is how our
 interaction with a well-known product may be described in two lines:
 
-{% highlight text %}
+```text
 User can post tweets, read tweets of his friends,
   follow new friends and re-tweet their tweets.
-{% endhighlight %}
+```
 
 Is it clear for a stranger what we're talking about here? Absolutely not---what
 is a "tweet," what does it mean to "follow" and what is a "re-tweet?"
@@ -137,13 +137,13 @@ requirements. Any product may have hundreds of
 as well as hundreds of features. However, a Product Vision document
 must be focused on the most important ones. Consider some examples:
 
-{% highlight text %}
+```text
 Any web page must open in less than 300ms.
 Total cost of ownership must be less than $5000/mo.
 Mobile app must be tailored for 10+ popular screen sizes.
 Mean time to recover must be less than 2 hours.
 DB must be scalable up to 5Tb without cost increases.
-{% endhighlight %}
+```
 
 {% quote It's better to say nothing than set false or ambiguous goals. %}
 
@@ -187,7 +187,7 @@ If you can't keep it
 Here is an example of a very simple Product Vision
 for a Facebook killer:
 
-{% highlight text %}
+```text
 Statement
   Facebook doesn't allow users to purchase "likes",
   our social network will have this.
@@ -214,7 +214,7 @@ Quality Requirements
   Test coverage must be over 80%.
   Development pipeline must be fully automated.
   Interfaces must include web site and iOS/Android app.
-{% endhighlight %}
+```
 
 ## Diplomacy
 

@@ -37,7 +37,7 @@ at all. It is purely imperative and procedural---it just mirrors the API.
 For example, in order to download an existing object `doc.txt`
 from bucket `test-1`, you have to do something like this:
 
-{% highlight java %}
+```java
 AWSCredentials creds = new BasicAWSCredentials(key, secret);
 AmazonS3 aws = new AmazonS3Client(creds);
 S3Object obj = aws.getObject(
@@ -46,7 +46,7 @@ S3Object obj = aws.getObject(
 InputStream input = obj.getObjectContent();
 String content = IOUtils.toString(input, "UTF-8");
 input.close();
-{% endhighlight %}
+```
 
 {% badge http://img.jcabi.com/logo-square.svg 64 %}
 
@@ -56,12 +56,12 @@ disadvantages. To overcome them all, I designed
 object-oriented adapter for Amazon SDK. This is how the same
 object-reading task can be accomplished with [jcabi-s3](http://s3.jcabi.com):
 
-{% highlight java %}
+```java
 Region region = new Region.Simple(key, secret);
 Bucket bucket = region.bucket("test-1");
 Ocket ocket = bucket.ocket("doc.txt");
 String content = new Ocket.Text(ocket).read();
-{% endhighlight %}
+```
 
 Why is this approach better? Well, there are a number of obvious advantages.
 
@@ -80,14 +80,14 @@ an interface, that exposes the behavior of a real AWS S3 object:
 read, write, check existence. There is also a convenient decorator
 `Ocket.Text` that simplifies working with binary objects:
 
-{% highlight java %}
+```java
 Ocket.Text ocket = new Ocket.Text(ocket_from_s3);
 if (ocket.exists()) {
   System.out.print(ocket.read());
 } else {
   ocket.write("Hello, world!");
 }
-{% endhighlight %}
+```
 
 Now, you can pass an object to another class, instead of giving it
 your AWS credentials, bucket name, and object name. You simply pass
@@ -109,7 +109,7 @@ if first attempts fail.
 You define a new decorator class, say, `RetryingOcket`,
 which encapsulates an original `Ocket`:
 
-{% highlight java %}
+```java
 public RetryingOcket implements Ocket {
   private final Ocket origin;
   public RetryingOcket(Ocket ocket) {
@@ -130,14 +130,14 @@ public RetryingOcket implements Ocket {
   }
   // same for other methods
 }
-{% endhighlight %}
+```
 
 Now, everywhere where `Ocket` is expected you send
 an instance of `RetryingOcket` that wraps your original object:
 
-{% highlight java %}
+```java
 foo.process(new RetryingOcket(ocket));
-{% endhighlight %}
+```
 
 Method `foo.process()` won't see a difference, since
 it is the same `Ocket` interface it is expecting.
@@ -155,7 +155,7 @@ S3 object, reads its data and calculates the MD5
 hash (I'm using [`DigestUtils`](http://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/digest/DigestUtils.html)
 from [commons-codec](http://commons.apache.org/proper/commons-codec/)):
 
-{% highlight java %}
+```java
 import com.jcabi.s3.Ocket;
 import org.apache.commons.codec.digest.DigestUtils;
 public class S3Md5Hash {
@@ -169,12 +169,12 @@ public class S3Md5Hash {
     return DigestUtils.md5hex(baos.toByteArray());
   }
 }
-{% endhighlight %}
+```
 
 Here is how simple a unit test will look (try to create
 a unit test for a class using AWS SDK and you will see the difference):
 
-{% highlight java %}
+```java
 import com.jcabi.s3.Ocket;
 import org.junit.Test;
 public class S3Md5HashTest {
@@ -192,7 +192,7 @@ public class S3Md5HashTest {
     Assert.assertEquals(hash, "7215ee9c7d9dc229d2921a40e899ec5f");
   }
 }
-{% endhighlight %}
+```
 
 I'm using [JUnit](http://junit.org/) and [Mockito](https://code.google.com/p/mockito/) in this test.
 
@@ -206,12 +206,12 @@ The library ships as a JAR dependency in
 [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-s3)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-s3</artifactId>
 </dependency>
-{% endhighlight %}
+```
 
 As always, your comments and criticism are welcome as
 [GitHub issues](https://github.com/jcabi/jcabi-s3/issues).

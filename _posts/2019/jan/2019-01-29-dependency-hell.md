@@ -43,13 +43,13 @@ facility, which is a third-party library, not mine. Thus my library X has
 a _dependency_. The logging library has a version number, such as
 `1.13.5`. I put this text into the `pom.xml` file of X:
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.example</groupId>
   <artifactId>log-me</artifactId>
   <version>1.13.5</version>
 </dependency>
-{% endhighlight %}
+```
 
 Many advocates of fixed dependencies argue that it's very important
 to stick to the version `1.13.5`, instead of using a more flexible dynamic

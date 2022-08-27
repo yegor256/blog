@@ -36,32 +36,32 @@ Here is my take on deserialization, which should be done by---guess what---objec
 Say there is a back-end entry point, which is supposed to register a new
 book in the library, arriving in JSON:
 
-{% highlight json %}
+```json
 {
   "title": "Object Thinking",
   "isbn: "0735619654",
   "author: "David West"
 }
-{% endhighlight %}
+```
 
 Also, there is an object of class `Library`, which expects an object of type
 `Book` to be given to its method `register()`:
 
-{% highlight java %}
+```java
 class Library {
   public void register(Book book) {
     // Create a new record in the database
   }
 }
-{% endhighlight %}
+```
 
 Say also, type `Book` has a simple method `isbn()`:
 
-{% highlight java %}
+```java
 interface Book {
   String isbn();
 }
-{% endhighlight %}
+```
 
 Now, here is the HTTP entry point
 (I'm using [Takes]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
@@ -70,7 +70,7 @@ which is accepting
 a POST [`multipart/form-data`](https://www.ietf.org/rfc/rfc2045.txt)
 request and registering the book in the library:
 
-{% highlight java %}
+```java
 public class TkUpload implements Take {
   private final Library library;
   @Override
@@ -86,7 +86,7 @@ public class TkUpload implements Take {
     library.register(book);
   }
 }
-{% endhighlight %}
+```
 
 What is wrong with this? Well, a few things.
 
@@ -104,7 +104,7 @@ Third, the code above is rather procedural and has a lot of
 
 A better design would be to hide this parsing inside a new class `JsonBook`:
 
-{% highlight java %}
+```java
 class JsonBook implements Book {
   private final String json;
   JsonBook(String body) {
@@ -117,11 +117,11 @@ class JsonBook implements Book {
     ).readObject().getString("isbn");
   }
 }
-{% endhighlight %}
+```
 
 Then, the RESTful entry point will look like this:
 
-{% highlight java %}
+```java
 public class TkUpload implements Take {
   private final Library library;
   @Override
@@ -137,7 +137,7 @@ public class TkUpload implements Take {
     );
   }
 }
-{% endhighlight %}
+```
 
 Isn't that more elegant?
 
@@ -151,14 +151,14 @@ As you can see from the examples above, sometimes we can't use `implements`
 because some primitives in Java are not interfaces but `final` classes:
 `String` is a "perfect" example. That's why I have to do this:
 
-{% highlight java %}
+```java
 class RqUser implements Scalar<String> {
   @Override
   public String value() {
     // Parsing happens here and returns String
   }
 }
-{% endhighlight %}
+```
 
 But aside from that, these examples perfectly demonstrate the principle
 of "parsing objects" suggested above.

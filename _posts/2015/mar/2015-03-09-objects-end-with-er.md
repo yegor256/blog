@@ -65,10 +65,10 @@ you will get them sorted immediately, and we will never interact again.
 I will do my job just as requested, without even thinking _why_ you need
 them sorted. I would be a sorter who doesn't really care about your real intention:
 
-{% highlight java %}
+```java
 List<Apple> sorted = new Sorter().sort(apples);
 Apple biggest = sorted.get(0);
-{% endhighlight %}
+```
 
 As you see here, the real intention is to find the biggest apple in the bucket.
 
@@ -88,10 +88,10 @@ try to do my business my way. I would be a much smarter partner of yours
 than that imperative sorter. And I would become a real object that behaves
 like a sorted list of apples instead of a procedure that sorts:
 
-{% highlight java %}
+```java
 List<Apple> sorted = new Sorted(apples);
 Apple biggest = sorted.get(0);
-{% endhighlight %}
+```
 
 See the difference?
 

@@ -61,7 +61,7 @@ This definition is not mine; it's taken from
 (by the way, I highly recommend you read it). Now look at this class
 (I'm using [jcabi-http](http://http.jcabi.com) to read and write over HTTP):
 
-{% highlight java %}
+```java
 @Immutable
 class Page {
   private final URI uri;
@@ -79,7 +79,7 @@ class Page {
       .fetch();
   }
 }
-{% endhighlight %}
+```
 
 What is the "state" in this class? That's right, `this.uri` is the state. It
 uniquely identifies every object of this class, and it is not modifiable. Thus,

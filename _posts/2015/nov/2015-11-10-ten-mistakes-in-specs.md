@@ -62,10 +62,10 @@ real commercial software projects.
 
 How about this:
 
-{% highlight text %}
+```text
 UUID is set incrementally to make sure there
 are no two users with the same account number.
-{% endhighlight %}
+```
 
 What is the difference between UUID and account number? Is it the
 same thing? It seems so, right? Or maybe they are different ... it would
@@ -88,11 +88,11 @@ if I don't understand you, it's your fault.
 
 Here is how that text would look after a proper re-writing:
 
-{% highlight text %}
+```text
 UUID is user unique ID, a positive 4-bytes integer.
 UUID is set incrementally to make sure there
 are no two users with the same UUID.
-{% endhighlight %}
+```
 
 Better now?
 
@@ -103,12 +103,12 @@ use of terms and just words, without having them pre-defined in a glossary.
 
 I've seen this very recently in a product spec:
 
-{% highlight text %}
+```text
 I believe that multiple versions of the API
 must be supported. What options do we have? I'd
 suggest we go with versioned URLs. Feel free to
 post your thoughts here.
-{% endhighlight %}
+```
 
 Yes, this text exists verbatim in a requirements document. First, the
 author expresses his personal opinion about the subject. Then,
@@ -166,10 +166,10 @@ quietly implementing what the document says. But a messy document has
 nothing to do with creativity. If you want me to create, define
 the limits of that creativity and let me experiment within them; for example:
 
-{% highlight text %}
+```text
 Multiple versions of the API must be supported. How exactly
 that is done doesn't really matter.
-{% endhighlight %}
+```
 
 This is how you invite me to be creative. I realize that the user
 of the product doesn't really have any justifications or expectations
@@ -182,10 +182,10 @@ But again, let me reiterate: A specification is not a discussion board.
 
 This is how it looks:
 
-{% highlight text %}
+```text
 User must be able to scroll down through
 the list of images in the profile smoothly and fast.
-{% endhighlight %}
+```
 
 It's a typical mistake in almost every spec I've seen. Here, we mix
 together a functional requirement ("to scroll images") and
@@ -211,12 +211,12 @@ requirements separately.
 
 This is similar to a previous problem and may look like this:
 
-{% highlight text %}
+```text
 User can download a PDF report that includes a full
 list of transactions. Each transaction has ID,
 date, description, account, and full amount. The report
 also contains a summary and a link to the user account.
-{% endhighlight %}
+```
 
 It's obvious there are two things described in this
 paragraph. First is that a user can download a PDF report. Second is
@@ -233,12 +233,12 @@ Try to move part of it to a supplementary document.
 
 This is what I'm talking about:
 
-{% highlight text %}
+```text
 Credit card numbers must be encrypted.
 The app should launch in less than 2 seconds.
 Each web page must open in less than 500 milliseconds.
 User interface must be responsive.
-{% endhighlight %}
+```
 
 I can find many more examples just by opening requirement specs in
 many projects I've seen over the past few years. They all look the same.
@@ -262,11 +262,11 @@ quality requirements are complete and without ambiguity.
 
 This example illustrates a very common pitfall:
 
-{% highlight text %}
+```text
 User authenticates via Facebook login button
 and we store username, avatar, and email in the
 database.
-{% endhighlight %}
+```
 
 This is
 [micromanagement]({% pst 2015/sep/2015-09-22-micromanagement %}), and
@@ -290,10 +290,10 @@ If you really care about that because there are certain higher-level
 limitations---say so. But again, not as implementation instructions
 to us programmers, but rather as non-functional requirements like this:
 
-{% highlight text %}
+```text
 Login page must look like this (screenshot attached).
 We must store user email locally for future needs.
-{% endhighlight %}
+```
 
 The point is that I have nothing against requirements, but I'm
 strongly against implementation instructions.
@@ -302,11 +302,11 @@ strongly against implementation instructions.
 
 The text may look like:
 
-{% highlight text %}
+```text
 PDF report is generated when required. It is
 possible to download a report or save it
 in the account.
-{% endhighlight %}
+```
 
 The problem here is that there is no "actor" involved. This functionality
 is more or less clear, but it's not clear who is doing all this. Where
@@ -328,10 +328,10 @@ is not a user story. It's possible for who?
 
 How about this:
 
-{% highlight text %}
+```text
 Our primary concern is performance and an attractive
 user interface.
-{% endhighlight %}
+```
 
 This is noise. As the reader of this document, I'm neither an investor
 nor a user. I'm a programmer. I don't care what your "primary concern" is
@@ -371,11 +371,11 @@ even starting to work on a product if there is a lot of noise in its specs.
 
 This is yet another very typical mistake:
 
-{% highlight text %}
+```text
 The API will support JSON and XML. Both formats
 must fully support all data items. XML needs to
 be validated by XSD schema.
-{% endhighlight %}
+```
 
 See how messy it sounds? There are three different points of view, and
 none of them are suitable for a specification document. A spec
@@ -383,11 +383,11 @@ must describe a product as if it already exists. A spec must
 sound like a manual, a tutorial, or a reference. This text must be
 re-written like this:
 
-{% highlight text %}
+```text
 The API supports JSON and XML. Both formats
 fully support all data items. XML is validated
 by XSD schema.
-{% endhighlight %}
+```
 
 See the difference? All the "must," "need," and "will" words are just
 adding doubt to the document. For a reader of this spec,

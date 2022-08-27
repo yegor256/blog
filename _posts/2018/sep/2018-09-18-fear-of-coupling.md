@@ -35,39 +35,39 @@ It's a fair fear. Let's try to analyze where it comes from.
 As usual, let's start with a simple Java example. Here is an amount of money
 I'm going to send to a user via, say, the PayPal API:
 
-{% highlight java %}
+```java
 interface Money {
   double cents();
 }
-{% endhighlight %}
+```
 
 Now here I am, the method that sends the money:
 
-{% highlight java %}
+```java
 void send(Money m) {
   double c = m.cents();
   // Send them over via the API...
 }
-{% endhighlight %}
+```
 
 These two pieces of code are, as we call it, loosely coupled. The method
 `send()` has no idea which class is provided and how exactly the method
 `cents()` is implemented. Maybe it's a simple constant object of one dollar:
 
-{% highlight java %}
+```java
 class OneDollar implements Money {
   @Override
   double cents() {
     return 100.0d;
   }
 }
-{% endhighlight %}
+```
 
 Or maybe it's a way more complex entity that makes a network connection first,
 in order to fetch the current USD-to-EUR exchange rate, update the database,
 and then return the result of some calculation:
 
-{% highlight java %}
+```java
 class EmployeeHourlyRate implements Money {
   @Override
   double cents() {
@@ -77,7 +77,7 @@ class EmployeeHourlyRate implements Money {
     // Return the value.
   }
 }
-{% endhighlight %}
+```
 
 The method `send()` doesn't have the knowledge of what exactly is provided
 as its first argument. All it can do is hope that the method `cents()` will
@@ -139,13 +139,13 @@ we are doing ourselves and the entire project a big disservice. In the long run
 we destabilize the product, instead of making it more stable. Some even
 want to prohibit polymorphism by declaring method `send()` this way:
 
-{% highlight java %}
+```java
 void send(EmployeeHourlyRate m) {
   // Now I know that it's not some abstract Money,
   // but a very specific class EmployeeHourlyRate, which
   // was implemented by Bobby, a good friend of mine.
 }
-{% endhighlight %}
+```
 
 Here we limit the amount of mistakes our code may have, since we know Bobby,
 we've seen his code, we know how it works and which exceptions to expect.

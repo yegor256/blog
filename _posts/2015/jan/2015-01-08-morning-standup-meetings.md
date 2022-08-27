@@ -181,11 +181,11 @@ A good manager knows about this trick and prevents it by explicitly
 defining awards, penalties, and rules. When I tell you that I may fail,
 you remind me that I'm going to lose my awards and will get penalties instead:
 
-{% highlight text %}
+```text
 - I'm not sure I can meet the deadline ...
 - Sorry to hear that you're going to lose your
   $200 weekend bonus because of that :(
-{% endhighlight %}
+```
 
 Have you seen many project managers or Scrum masters saying such a thing?
 Not so many, I believe. Yes, a good manager is a rare creature. But only

@@ -33,7 +33,7 @@ they are thread-safe? Here is how I'm doing it.
 
 Let us say there is a simple in-memory bookshelf:
 
-{% highlight java %}
+```java
 class Books {
   final Map<Integer, String> map =
     new ConcurrentHashMap<>();
@@ -46,17 +46,17 @@ class Books {
     return this.map.get(id);
   }
 }
-{% endhighlight %}
+```
 
 First, we put a book there and the bookshelf returns its ID. Then we can
 read the title of the book by its ID:
 
-{% highlight java %}
+```java
 Books books = new Books();
 String title = "Elegant Objects";
 int id = books.add(title);
 assert books.title(id).equals(title);
-{% endhighlight %}
+```
 
 The class seems to be thread-safe, since we are using the thread-safe
 [`ConcurrentHashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html)
@@ -64,7 +64,7 @@ instead of a more primitive and non-thread-safe
 [`HashMap`](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html),
 right? Let's try to test it:
 
-{% highlight java %}
+```java
 class BooksTest {
   @Test
   public void addsAndRetrieves() {
@@ -74,13 +74,13 @@ class BooksTest {
     assert books.title(id).equals(title);
   }
 }
-{% endhighlight %}
+```
 
 The test passes, but it's just a one-thread test. Let's try to do the
 same manipulation from a few parallel threads (I'm using
 [Hamcrest](https://github.com/hamcrest/JavaHamcrest)):
 
-{% highlight java %}
+```java
 class BooksTest {
   @Test
   public void addsAndRetrieves() {
@@ -101,7 +101,7 @@ class BooksTest {
     assertThat(ids.size(), equalTo(threads));
   }
 }
-{% endhighlight %}
+```
 
 First, I create a pool of threads via
 [`Executors`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html).
@@ -128,7 +128,7 @@ The time that passes between our calls to `submit()` is large enough to finish
 the execution of `books.add()`. That's why in reality only one thread
 will run at the same time. We can check that by modifying the code a bit:
 
-{% highlight java %}
+```java
 AtomicBoolean running = new AtomicBoolean();
 AtomicInteger overlaps = new AtomicInteger();
 Collection<Future<Integer>> futures =
@@ -150,7 +150,7 @@ for (int t = 0; t < threads; ++t) {
   );
 }
 assertThat(overlaps.get(), greaterThan(0));
-{% endhighlight %}
+```
 
 With this code I'm trying to see how often threads overlap each other and
 do something in parallel. This never happens and `overlaps` is equal to zero.
@@ -161,7 +161,7 @@ when there's a small number of them.
 To solve that we need to use
 [`CountDownLatch`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html):
 
-{% highlight java %}
+```java
 CountDownLatch latch = new CountDownLatch(1);
 AtomicBoolean running = new AtomicBoolean();
 AtomicInteger overlaps = new AtomicInteger();
@@ -190,7 +190,7 @@ for (Future<Integer> f : futures) {
   ids.add(f.get());
 }
 assertThat(overlaps.get(), greaterThan(0));
-{% endhighlight %}
+```
 
 Now each thread, before touching the books, waits for the permission
 given by `latch`. When we submit them all via `submit()` they stay on hold
@@ -206,7 +206,7 @@ But before we fix the class, let's make our test simpler. Let's use
 from [Cactoos](http://www.cactoos.org), which does exactly the same as we've done above,
 but under the hood:
 
-{% highlight java %}
+```java
 class BooksTest {
   @Test
   public void addsAndRetrieves() {
@@ -223,7 +223,7 @@ class BooksTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 {% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
 

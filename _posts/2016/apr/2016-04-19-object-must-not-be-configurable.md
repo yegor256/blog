@@ -37,7 +37,7 @@ it from a practical perspective.
 Let's say there is a class that is supposed to read a web page and
 return its content:
 
-{% highlight java %}
+```java
 class Page {
   private final String uri;
   Page(final String address) {
@@ -50,21 +50,21 @@ class Page {
     );
   }
 }
-{% endhighlight %}
+```
 
 Looks simple and straight-forward, right? Yes, it's a rather cohesive
 and solid class. Here is how we use it to read the content of Google
 front page:
 
-{% highlight java %}
+```java
 String html = new Page("http://www.google.com").html();
-{% endhighlight %}
+```
 
 Everything is fine until we start making this class more powerful.
 Let's say we want to configure the encoding. We don't always want to use `"UTF-8"`.
 We want it to be configurable. Here is what we do:
 
-{% highlight java %}
+```java
 class Page {
   private final String uri;
   private final String encoding;
@@ -79,14 +79,14 @@ class Page {
     );
   }
 }
-{% endhighlight %}
+```
 
 Done, the encoding is encapsulated and configurable. Now, let's say we
 want to change the behavior of the class for the situation of an empty
 page. If an empty page is loaded, we want to return `"<html/>"`. But not
 always. We want this to be configurable. Here is what we do:
 
-{% highlight java %}
+```java
 class Page {
   private final String uri;
   private final String encoding;
@@ -108,7 +108,7 @@ class Page {
     return html;
   }
 }
-{% endhighlight %}
+```
 
 The class is getting bigger, huh? It's great, we're good programmers and our
 code must be complex, right? The more complex it is, the better programmers
@@ -117,7 +117,7 @@ we are! I'm being sarcastic. Definitely
 we want our class to proceed anyway, even if the encoding is not
 supported on the current platform:
 
-{% highlight java %}
+```java
 class Page {
   private final String uri;
   private final String encoding;
@@ -150,12 +150,12 @@ class Page {
     return html;
   }
 }
-{% endhighlight %}
+```
 
 The class is growing and becoming more and more powerful! Now it's time
 to introduce a new class, which we will call `PageSettings`:
 
-{% highlight java %}
+```java
 class Page {
   private final String uri;
   private final PageSettings settings;
@@ -182,7 +182,7 @@ class Page {
     return html;
   }
 }
-{% endhighlight %}
+```
 
 Class `PageSettings` is basically a holder of parameters, without any
 behavior. It has getters, which give us access to the parameters:
@@ -196,7 +196,7 @@ from Hadoop.
 This is how we will call our highly configurable `Page`
 (I'm assuming `PageSettings` is immutable):
 
-{% highlight java %}
+```java
 String html = new Page(
   "http://www.google.com",
   new PageSettings()
@@ -204,7 +204,7 @@ String html = new Page(
     .withAlwaysHtml(true)
     .withEncodeAnyway(false)
 ).html();
-{% endhighlight %}
+```
 
 However, no matter how convenient it may look at first glance,
 this approach is _very wrong_. Mostly because it encourages us
@@ -228,7 +228,7 @@ So, what should we do instead? What is the right design? We must
 use [composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %}).
 Here is how:
 
-{% highlight java %}
+```java
 Page page = new NeverEmptyPage(
   new DefaultPage("http://www.google.com")
 )
@@ -236,12 +236,12 @@ String html = new AlwaysTextPage(
   new TextPage(page, "ISO_8859_1")
   page
 ).html();
-{% endhighlight %}
+```
 
 Here is how our `DefaultPage` would look (yes, I had to change
 its design a bit):
 
-{% highlight java %}
+```java
 class DefaultPage implements Page {
   private final String uri;
   DefaultPage(final String address) {
@@ -254,13 +254,13 @@ class DefaultPage implements Page {
     );
   }
 }
-{% endhighlight %}
+```
 
 As you see, I'm making it implement interface `Page`.
 Now `TextPage` decorator, which converts an array of bytes to a text using
 provided encoding:
 
-{% highlight java %}
+```java
 class TextPage {
   private final Page origin;
   private final String encoding;
@@ -275,11 +275,11 @@ class TextPage {
     );
   }
 }
-{% endhighlight %}
+```
 
 Now the `NeverEmptyPage`:
 
-{% highlight java %}
+```java
 class NeverEmptyPage implements Page {
   private final Page origin;
   NeverEmptyPage(final Page page) {
@@ -294,11 +294,11 @@ class NeverEmptyPage implements Page {
     return bytes;
   }
 }
-{% endhighlight %}
+```
 
 And finally the `AlwaysTextPage`:
 
-{% highlight java %}
+```java
 class AlwaysTextPage {
   private final TextPage origin;
   private final Page source;
@@ -316,7 +316,7 @@ class AlwaysTextPage {
     return html;
   }
 }
-{% endhighlight %}
+```
 
 You may say that `AlwaysTextPage` will make two calls to the encapsulated
 `origin`, in case of an unsupported encoding, which will lead to a duplicated
@@ -325,7 +325,7 @@ duplicated HTTP roundtrip to happen. Let's introduce one more class,
 which will cache the page fetched (
 [not thread-safe]({% pst 2017/jan/2017-01-17-synchronized-decorators %}), but it's not important now):
 
-{% highlight java %}
+```java
 class OncePage implements Page {
   private final Page origin;
   private final AtomicReference<byte[]> cache =
@@ -341,11 +341,11 @@ class OncePage implements Page {
     return this.cache.get();
   }
 }
-{% endhighlight %}
+```
 
 Now, our code should look like this (pay attention, I'm now using `OncePage`):
 
-{% highlight java %}
+```java
 Page page = new NeverEmptyPage(
   new OncePage(
     new DefaultPage("http://www.google.com")
@@ -355,7 +355,7 @@ String html = new AlwaysTextPage(
   new TextPage(page, "ISO_8859_1")
   "UTF-8"
 ).html();
-{% endhighlight %}
+```
 
 This is probably the most code-intensive post on this site so far, but I
 hope it's readable and I managed to convey the idea. Now we have five

@@ -41,7 +41,7 @@ an object-oriented point of view.
 
 This is a class with one primary and two secondary constructors:
 
-{% highlight java %}
+```java
 class Color {
   private final int hex;
   Color(String rgb) {
@@ -54,11 +54,11 @@ class Color {
     this.hex = h;
   }
 }
-{% endhighlight %}
+```
 
 This is a similar class with three static factory methods:
 
-{% highlight java %}
+```java
 class Color {
   private final int hex;
   static Color makeFromRGB(String rgb) {
@@ -74,7 +74,7 @@ class Color {
     this.hex = h;
   }
 }
-{% endhighlight %}
+```
 
 Which one do you like better?
 
@@ -99,15 +99,15 @@ This is how you make a
 [red tomato](http://www.rapidtables.com/web/color/red-color.htm)
 color object with a constructor:
 
-{% highlight java %}
+```java
 Color tomato = new Color(255, 99, 71);
-{% endhighlight %}
+```
 
 This is how you do it with a static factory method:
 
-{% highlight java %}
+```java
 Color tomato = Color.makeFromPalette(255, 99, 71);
-{% endhighlight %}
+```
 
 It seems that `makeFromPalette()` is semantically richer than just `new Color()`,
 right? Well, yes. Who knows what those three numbers mean if we just pass
@@ -119,7 +119,7 @@ True.
 However, the right solution would be to use polymorphism and encapsulation,
 to decompose the problem into a few semantically rich classes:
 
-{% highlight java %}
+```java
 interface Color {
 }
 class HexColor implements Color {
@@ -136,13 +136,13 @@ class RGBColor implements Color {
     );
   }
 }
-{% endhighlight %}
+```
 
 Now, we use the right constructor of the right class:
 
-{% highlight java %}
+```java
 Color tomato = new RGBColor(255, 99, 71);
-{% endhighlight %}
+```
 
 See, Joshua?
 
@@ -150,27 +150,27 @@ See, Joshua?
 
 Let's say I need a red tomato color in multiple places in the application:
 
-{% highlight java %}
+```java
 Color tomato = new Color(255, 99, 71);
 // ... sometime later
 Color red = new Color(255, 99, 71);
-{% endhighlight %}
+```
 
 Two objects will be created, which is obviously inefficient, since they are
 identical. It would be better to keep the first instance somewhere in memory
 and return it when the second call arrives. Static factory methods make
 it possible to solve this very problem:
 
-{% highlight java %}
+```java
 Color tomato = Color.makeFromPalette(255, 99, 71);
 // ... sometime later
 Color red = Color.makeFromPalette(255, 99, 71);
-{% endhighlight %}
+```
 
 Then somewhere inside the `Color` we keep a private static `Map` with all the
 objects already instantiated:
 
-{% highlight java %}
+```java
 class Color {
   private static final Map<Integer, Color> CACHE =
     new HashMap<>();
@@ -185,7 +185,7 @@ class Color {
     return new Color(h);
   }
 }
-{% endhighlight %}
+```
 
 It is very effective performance-wise. With a small object like our
 `Color` the problem may not be so obvious, but when objects are bigger, their
@@ -196,7 +196,7 @@ True.
 However, there is an object-oriented way to solve this problem. We just
 introduce a new class `Palette`, which becomes a store of colors:
 
-{% highlight java %}
+```java
 class Palette {
   private final Map<Integer, Color> colors =
     new HashMap<>();
@@ -207,16 +207,16 @@ class Palette {
     );
   }
 }
-{% endhighlight %}
+```
 
 Now, we make an instance of `Palette` once and ask it to return a color
 to us every time we need it:
 
-{% highlight java %}
+```java
 Color tomato = palette.take(255, 99, 71);
 // Later we will get the same instance:
 Color red = palette.take(255, 99, 71);
-{% endhighlight %}
+```
 
 See, Joshua, no static methods, no static attributes.
 
@@ -225,7 +225,7 @@ See, Joshua, no static methods, no static attributes.
 Let's say our class `Color` has a method `lighter()`, which is supposed
 to shift the color to the next available lighter one:
 
-{% highlight java %}
+```java
 class Color {
   protected final int hex;
   Color(int h) {
@@ -235,13 +235,13 @@ class Color {
     return new Color(hex + 0x111);
   }
 }
-{% endhighlight %}
+```
 
 However, sometimes it's more desirable to pick the next lighter color
 through a set of available
 [Pantone](https://en.wikipedia.org/wiki/Pantone) colors:
 
-{% highlight java %}
+```java
 class PantoneColor extends Color {
   private final PantoneName pantone;
   PantoneColor(String name) {
@@ -255,12 +255,12 @@ class PantoneColor extends Color {
     return new PantoneColor(this.pantone.up());
   }
 }
-{% endhighlight %}
+```
 
 Then, we create a static factory method, which will decide
 which `Color` implementation is the most suitable for us:
 
-{% highlight java %}
+```java
 class Color {
   private final String code;
   static Color make(int h) {
@@ -270,16 +270,16 @@ class Color {
     return new RGBColor(h);
   }
 }
-{% endhighlight %}
+```
 
 If the [true red](https://www.pantone.com/color-finder/19-1664-TPX) color
 is requested, we return an instance of `PantoneColor`. In all other cases it's
 just a standard `RGBColor`. The decision is made by the static factory
 method. This is how we will call it:
 
-{% highlight java %}
+```java
 Color color = Color.make(0xBF1932);
-{% endhighlight %}
+```
 
 It would not be possible to do the same "forking" with a constructor, since
 it can only return the class it is declared in. A static method has all the
@@ -290,16 +290,16 @@ True.
 However, in an object-oriented world we can and must do it all differently.
 First, we would make `Color` an interface:
 
-{% highlight java %}
+```java
 interface Color {
   Color lighter();
 }
-{% endhighlight %}
+```
 
 Next, we would move this decision making process to its own class `Colors`, just
 like we did in the previous example:
 
-{% highlight java %}
+```java
 class Colors {
   Color make(int h) {
     if (h == 0xBF1932) {
@@ -308,14 +308,14 @@ class Colors {
     return new RGBColor(h);
   }
 }
-{% endhighlight %}
+```
 
 And we would use an instance of class `Colors` instead of a static faсtory
 method inside `Color`:
 
-{% highlight java %}
+```java
 colors.make(0xBF1932);
-{% endhighlight %}
+```
 
 {% youtube 9yjtsCK6Wdk %}
 
@@ -330,7 +330,7 @@ A much more object-oriented design would be to put the logic into an
 object of class `PantoneColor` which would decorate
 the original `RGBColor`:
 
-{% highlight java %}
+```java
 class PantoneColor {
   private final Color origin;
   PantoneColor(Color color) {
@@ -347,22 +347,22 @@ class PantoneColor {
     return new PantoneColor(next);
   }
 )
-{% endhighlight %}
+```
 
 Then, we make an instance of `RGBColor` and decorate it with `PantoneColor`:
 
-{% highlight java %}
+```java
 Color red = new PantoneColor(
   new RGBColor(0xBF1932)
 );
-{% endhighlight %}
+```
 
 We ask `red` to return a lighter color and it returns the one from
 the Pantone palette, not the one that is merely lighter in RGB coordinates:
 
-{% highlight java %}
+```java
 Color lighter = red.lighter(); // 0xD12631
-{% endhighlight %}
+```
 
 Of course, this example is rather primitive and needs
 [further improvement]({% pst 2016/dec/2016-12-20-can-objects-be-friends %})

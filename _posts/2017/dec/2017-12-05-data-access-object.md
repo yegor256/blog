@@ -43,24 +43,24 @@ is terrible.
 
 Here is how it [may look](https://stackoverflow.com/a/19154487/187141):
 
-{% highlight java %}
+```java
 class BookDAO {
   Book find(int id);
   void update(Book book);
   // Other methods here ...
 }
-{% endhighlight %}
+```
 
 The idea is simple---method `find()` creates
 a [DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %})
 `Book`, someone else injects new data into it and calls `update()`:
 
-{% highlight java %}
+```java
 BookDAO dao = BookDAOFactory.getBookDAO();
 Book book = dao.find(123);
 book.setTitle("Don Quixote");
 dao.update(book);
-{% endhighlight %}
+```
 
 What is wrong, you ask? Everything that was wrong with
 [ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %}),
@@ -80,12 +80,12 @@ operations on them. Here are a few examples. Look at this
 interface from
 [Wring.io]({% pst 2016/mar/2016-03-15-wring-dispatcher-github-notifications %}):
 
-{% highlight java %}
+```java
 interface Pipes {
   void add(String json);
   Pipe pipe(long number);
 }
-{% endhighlight %}
+```
 
 Its method [`add()`](https://github.com/yegor256/wring/blob/0.17.4/src/main/java/io/wring/model/Pipes.java#L55)
 creates a new item in the "collection" and method

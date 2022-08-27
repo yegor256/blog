@@ -20,12 +20,12 @@ keywords:
 This is how you fetch text from a SQL table
 with [jcabi-jdbc](http://jdbc.jcabi.com):
 
-{% highlight java %}
+```java
 String name = new JdbcSession(source)
   .sql("SELECT name FROM employee WHERE id = ?")
   .set(1234)
   .select(new SingleOutcome<String>(String.class));
-{% endhighlight %}
+```
 
 Simple and straight forward, isn't it? The library
 simplifies interaction with relational databases
@@ -48,7 +48,7 @@ You can obtain the data source from your connection pool. There are many
 implementations of connection pools. I would recommend that you use
 [BoneCP](http://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
 
-{% highlight java %}
+```java
 @Cacheable(forever = true)
 private static DataSource source() {
   BoneCPDataSource src = new BoneCPDataSource();
@@ -58,7 +58,7 @@ private static DataSource source() {
   src.setPassword("secret");
   return src;
 }
-{% endhighlight %}
+```
 
 Be sure to pay attention to the `@Cacheable` annotation.
 [This post]({% pst 2014/aug/2014-08-03-cacheable-java-annotation %})
@@ -80,7 +80,7 @@ first select/update/insert operation. Simply put, it is designed
 to be used mainly for single atomic transactions. However, it is
 possible to leave the connection open and continue, for example:
 
-{% highlight java %}
+```java
 new JdbcSession(source)
   .autocommit(false)
   .sql("START TRANSACTION")
@@ -92,7 +92,7 @@ new JdbcSession(source)
   .set("Walter Sobchak")
   .insert(Outcome.VOID)
   .commit();
-{% endhighlight %}
+```
 
 In this example we're executing three SQL statements one by one, leaving
 connection (and transaction) open until `commit()` is called.

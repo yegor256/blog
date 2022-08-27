@@ -38,17 +38,17 @@ of transformations and then pass a document through this list.
 First, I made an interface [`Shift`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Shift.java)
 (instead of the frequently used and boring "transformation"):
 
-{% highlight java %}
+```java
 interface Shift {
   Document apply(Document doc);
 }
-{% endhighlight %}
+```
 
 Then I made an interface [`Train`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java)
 (this is the name I made up for the collection
 of transformations) and its default implementation:
 
-{% highlight java %}
+```java
 interface Train {
   Train with(Shift shift);
   Iterator<Shift> iterator();
@@ -69,7 +69,7 @@ class TrDefault implements Train {
       return this.list.iterator();
   }
 }
-{% endhighlight %}
+```
 
 Ah, I forgot to tell you. I'm a big fan of [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
 objects. That's why the
@@ -81,11 +81,11 @@ Now, I can build a train of shifts with
 a simple default implementation of `Train`, assuming
 `ShiftA` and `ShiftB` are already implemented:
 
-{% highlight java %}
+```java
 Train train = new TrDefault()
   .with(new ShiftA())
   .with(new ShiftB());
-{% endhighlight %}
+```
 
 Then I created an [`Xsline`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java)
 class (it's "XSL" + "pipeline", since in my case
@@ -93,10 +93,10 @@ I'm managing XML documents and transform them using XSL stylesheets). An instanc
 of this class encapsulates an instance of `Train` and then passes a document
 through all its transformations:
 
-{% highlight java %}
+```java
 Document input = ...;
 Document output = new Xsline(train).pass(input);
-{% endhighlight %}
+```
 
 So far so good.
 
@@ -105,7 +105,7 @@ Now, I want all my transformations to log themselves. I created
 a decorator of `Shift`, which encapsulates the original `Shift`, decorates its method `apply`,
 and prints a message to the console when the transformation is completed:
 
-{% highlight java %}
+```java
 class StLogged implements Shift {
   private final Shift origin;
   @Override
@@ -115,35 +115,35 @@ class StLogged implements Shift {
     return after;
   }
 }
-{% endhighlight %}
+```
 
 Now, I have to do this:
 
-{% highlight java %}
+```java
 Train train = new TrDefault()
   .with(new StLogged(new ShiftA()))
   .with(new StLogged(new ShiftB()));
-{% endhighlight %}
+```
 
 Looks like a duplication of `new StLogged(`, especially with a collection of a few dozen
 shifts. To get rid of this duplication I created a decorator for `Train`, which
 on the fly decorates shifts that it encapsulates, using
 [`StLogged`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java):
 
-{% highlight java %}
+```java
 Train train = new TrLogged(new TrDefault())
   .with(new ShiftA()))
   .with(new ShiftB());
-{% endhighlight %}
+```
 
 In my case, all shifts are doing XSL transformations, taking XSL stylesheets from
 files available in classpath. That's why the code looks like this:
 
-{% highlight java %}
+```java
 Train train = new TrLogged(new TrDefault())
   .with(new StXSL("stylesheet-a.xsl")))
   .with(new StXSL("stylesheet-b.xsl")));
-{% endhighlight %}
+```
 
 There is an obvious duplication of `new StXSL(...)`, but I can't simply get rid of it,
 since the method `with` expects an instance of `Shift`, not a `String`. To solve this,
@@ -151,11 +151,11 @@ I made the `Train` generic and created
 [`TrClasspath`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrClasspath.java)
 decorator:
 
-{% highlight java %}
+```java
 Train<String> train = new TrClasspath<>(new TrDefault<>())
   .with("stylesheet-a.xsl"))
   .with("stylesheet-b.xsl"));
-{% endhighlight %}
+```
 
 `TrClasspath.with()` accepts `String`, turns it into
 [`StXSL`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StXSL.java)
@@ -176,12 +176,12 @@ with a single method `back()`
 returning `Train<T>`. The class `TrClasspath` implements
 it and I can do this:
 
-{% highlight java %}
+```java
 Train<Shift> train = new TrClasspath<>(new TrDefault<>())
   .with("stylesheet-a.xsl"))
   .with("stylesheet-b.xsl"))
   .back();
-{% endhighlight %}
+```
 
 Next I decided to get rid of the duplication of `.with()` calls. Obviously, it would
 be easier to have the ability to provide a list of file names as an array of `String`
@@ -189,7 +189,7 @@ and build the train from it. I created a new class
 [`TrBulk`](https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrBulk.java),
 which does exactly that:
 
-{% highlight java %}
+```java
 Iterable<String> names = Arrays.asList(
   "stylesheet-a.xsl",
   "stylesheet-b.xsl"
@@ -199,7 +199,7 @@ Train<Shift> train = new TrBulk<>(
     new TrDefault<>()
   )
 ).with(names).back();
-{% endhighlight %}
+```
 
 With this design I can construct the train in almost any possible way.
 

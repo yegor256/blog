@@ -39,12 +39,12 @@ we'll discuss the differences. So, my understanding first.
 
 Say there is a method that saves some binary data to a file:
 
-{% highlight java %}
+```java
 public void save(File file, byte[] data)
   throws Exception {
   // save data to the file
 }
-{% endhighlight %}
+```
 
 When everything goes right, the method just saves the data and returns control.
 When something is wrong, it
@@ -52,13 +52,13 @@ When something is wrong, it
 `Exception` and we have to do something
 about it:
 
-{% highlight java %}
+```java
 try {
   save(file, data);
 } catch (Exception ex) {
   System.out.println("Sorry, we can't save right now.");
 }
-{% endhighlight %}
+```
 
 When a method says it `throws` an exception, I understand that the
 method is not **safe**. It may fail sometimes, and it's my responsibility to
@@ -194,14 +194,14 @@ Joshua Bloch, in [_Effective Java_](http://amzn.to/2crH5tW),
 says to "use checked exceptions for recoverable conditions and runtime exceptions
 for programming errors." He means something like this:
 
-{% highlight java %}
+```java
 try {
   save(file, data);
 } catch (Exception ex) {
   // We can't save the file, but it's OK
   // Let's move on and do something else
 }
-{% endhighlight %}
+```
 
 How is that any different from a famous anti-pattern called
 [Don't Use Exceptions for Flow Control](http://c2.com/cgi/wiki?DontUseExceptionsForFlowControl)?
@@ -211,12 +211,12 @@ chain of calls from method to method is broken, and it's time to go up
 through the chain and stop somewhere. But we never go back again
 after the exception:
 
-{% highlight text %}
+```text
 App#run()
   Data#update()
     Data#write()
       File#save() <-- Boom, there's a failure here, so we go up
-{% endhighlight %}
+```
 
 We can start this chain again, but we don't go back after `throw`. In other
 words, we don't **do** anything in the `catch` block. We only report the problem

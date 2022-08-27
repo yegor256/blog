@@ -32,7 +32,7 @@ and many others.
 based on AOP aspects and Java6
 [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}):
 
-{% highlight java %}
+```java
 import com.jcabi.aspects.Cacheable;
 public class Page {
   @Cacheable(lifetime = 5, unit = TimeUnit.MINUTES)
@@ -40,7 +40,7 @@ public class Page {
     return new URL("http://google.com").getContent().toString();
   }
 }
-{% endhighlight %}
+```
 
 The result of `load()` method will be cached in memory for five minutes.
 
@@ -60,10 +60,10 @@ of the object, an owner of the method and a method name with parameter types.
 In the example above, right after the method `load()`
 finishes, the map gets a new entry (simplified example, of course):
 
-{% highlight text %}
+```text
 key: [page, "load()"]
 value: "<html>...</html>"
-{% endhighlight %}
+```
 
 Every consecutive call to `load()` will be intercepted by the aspect
 from [jcabi-aspects](http://aspects.jcabi.com) and resolved immediately
@@ -75,7 +75,7 @@ the end of its lifetime, which is five minutes in the example above.
 Sometimes it's necessary to have the ability to flush cache before
 the end of its lifetime. Here is a practical example:
 
-{% highlight java %}
+```java
 import com.jcabi.aspects.Cacheable;
 public class Employees {
   @Cacheable(lifetime = 1, unit = TimeUnit.HOURS)
@@ -87,7 +87,7 @@ public class Employees {
     // add a new one to MySQL
   }
 }
-{% endhighlight %}
+```
 
 It's obvious that the number of employees in the database
 will be different after `add()` method execution and the

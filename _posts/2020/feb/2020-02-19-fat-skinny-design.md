@@ -33,7 +33,7 @@ and so on.
 
 Take a look at this (let's call it _fat_ and I will explain why later):
 
-{% highlight java %}
+```java
 interface Article {
   Head head();
 }
@@ -45,16 +45,16 @@ interface Author {
   String name();
   String email();
 }
-{% endhighlight %}
+```
 
 To obtain the name of the author we do:
 
-{% highlight java %}
+```java
 // It is stored in PostgreSQL (that's why the Pg
 // prefix) and retrieves everything using SQL
 Article a = new PgArticle();
 String name = a.head().author().name();
-{% endhighlight %}
+```
 
 Visually, this design may look like this (in UML):
 
@@ -81,7 +81,7 @@ PgAuthor ..> PostgreSQL
 Now, let's compare it with an alternative design (which is much less
 _fat_ than the previous one, I would even call it _skinny_):
 
-{% highlight java %}
+```java
 interface Article {
   String head();
 }
@@ -95,18 +95,18 @@ class TxtAuthor {
   String name();
   String email();
 }
-{% endhighlight %}
+```
 
 Here, in order to obtain the name of the author we have to extract
 the head as a `String`, extract the author as a `String`, and then
 extract the name as a `String`:
 
-{% highlight java %}
+```java
 Article a = new PgArticle();
 String head = a.head();
 String author = new TxtHead(head).author();
 String name = new TxtAuthor(author).name();
-{% endhighlight %}
+```
 
 Visually in UML, it looks like this:
 

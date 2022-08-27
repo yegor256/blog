@@ -38,16 +38,16 @@ Here is what I think.
 I believe that there are two orthogonal means of interaction between objects:
 messaging and composition. Let's say, we have a point and a canvas:
 
-{% highlight java %}
+```java
 Point p = new Point(x, y);
 Canvas canvas = new Canvas();
-{% endhighlight %}
+```
 
 This is how messaging would look:
 
-{% highlight java %}
+```java
 p.printTo(canvas);
-{% endhighlight %}
+```
 
 The problem with messaging is that it keeps objects on the same
 level of abstraction. They communicate
@@ -66,9 +66,9 @@ the objects. In other words, there is no true encapsulation.
 
 On the other hand, this is how composition would look instead:
 
-{% highlight java %}
+```java
 Point p2 = new PrintedOn(p, canvas);
-{% endhighlight %}
+```
 
 Every time we need objects to communicate we create a bigger object that
 encapsulates more primitive ones, letting them interact inside. Of course,

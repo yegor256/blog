@@ -31,11 +31,11 @@ a [controlled natural language](http://en.wikipedia.org/wiki/Controlled_natural_
 that sounds like English, while at the same time is parseable by computers.
 A simple requirements document in Requs may look similar to:
 
-{% highlight text %}
+```text
 Department has employee-s.
 Employee has name and salary.
 UC1 where Employee gets raise: "TBD."
-{% endhighlight %}
+```
 
 This Software Requirements Specification (SRS) defines two types (`Department`
 and `Employee`) and one method `UC` (aka "use case").
@@ -145,9 +145,9 @@ and [Maven](http://maven.apache.org/download.cgi).
 
 Afterwards, I make the following command line call in the project directory:
 
-{% highlight bash %}
+```bash
 mvn clean requs:compile
-{% endhighlight %}
+```
 
 After entering the commands, I expect to see the `BUILD SUCCESS` message. If
 not, there are some errors and I should fix them. My pull request won't be

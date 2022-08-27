@@ -55,7 +55,7 @@ I'll try to show why I consider these containers a redundancy, at least.
 This is what dependency injection is (not really different
 from a plain old object [composition]({% pst 2015/feb/2015-02-26-composable-decorators %})):
 
-{% highlight java %}
+```java
 public class Budget {
   private final DB db;
   public Budget(DB data) {
@@ -67,7 +67,7 @@ public class Budget {
     );
   }
 }
-{% endhighlight %}
+```
 
 The object `data` is called a "dependency."
 
@@ -76,7 +76,7 @@ needs from the database is its ability to fetch a cell, using an
 arbitrary SQL query, via method `cell()`. We can instantiate a `Budget` with a PostgreSQL
 implementation of the `DB` interface, for example:
 
-{% highlight java %}
+```java
 public class App {
   public static void main(String... args) {
     Budget budget = new Budget(
@@ -85,20 +85,20 @@ public class App {
     System.out.println("Total is: " + budget.total());
   }
 }
-{% endhighlight %}
+```
 
 In other words, we're "injecting" a dependency into a new object `budget`.
 
 An alternative to this "dependency injection" approach would be
 to let `Budget` decide what database it wants to work with:
 
-{% highlight java %}
+```java
 public class Budget {
   private final DB db =
     new Postgres("jdbc:postgresql:5740/main");
   // class methods
 }
-{% endhighlight %}
+```
 
 This is very dirty and leads to 1) code duplication, 2) inability
 to reuse, and 3) inability to test, etc. No need to discuss
@@ -118,7 +118,7 @@ injection container. Here is how it works (let's use
 [Google Guice](https://github.com/google/guice)
 as an example):
 
-{% highlight java %}
+```java
 import javax.inject.Inject;
 public class Budget {
   private final DB db;
@@ -128,7 +128,7 @@ public class Budget {
   }
   // same methods as above
 }
-{% endhighlight %}
+```
 
 Pay attention: the constructor is annotated with
 [`@Inject`](http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html).
@@ -136,7 +136,7 @@ Pay attention: the constructor is annotated with
 Then, we're supposed to configure a container
 somewhere, when the application starts:
 
-{% highlight java %}
+```java
 Injector injector = Guice.createInjector(
   new AbstractModule() {
     @Override
@@ -147,14 +147,14 @@ Injector injector = Guice.createInjector(
     }
   }
 );
-{% endhighlight %}
+```
 
 Some frameworks even allow us to configure the injector in an XML file.
 
 From now on, we are not allowed to instantiate `Budget` through the `new` operator,
 like we did before. Instead, we should use the injector we just created:
 
-{% highlight java %}
+```java
 public class App {
   public static void main(String... args) {
     Injection injector = // as we just did in the previous snippet
@@ -162,7 +162,7 @@ public class App {
     System.out.println("Total is: " + budget.total());
   }
 }
-{% endhighlight %}
+```
 
 The injection automatically finds out that in order to instantiate
 a `Budget` it has to provide an argument for its constructor. It will

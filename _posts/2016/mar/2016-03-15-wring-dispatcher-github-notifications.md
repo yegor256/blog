@@ -61,12 +61,12 @@ a text. If exactly the same text is found in a notification, it
 will be ignored. To use a regular expression, I need to wrap it in slashes (for example `/[a-z]+/`).
 You may skip that property and just specify this JSON:
 
-{% highlight json %}
+```json
 {
   "class": "io.wring.agents.github.AgGithub",
   "token": "your-personal-access-token"
 }
-{% endhighlight %}
+```
 
 Then I go to my inbox and read what's there.
 

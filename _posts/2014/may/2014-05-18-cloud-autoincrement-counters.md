@@ -25,7 +25,7 @@ There is one feature that it lacks, though---auto-increment attributes.
 
 Say that you have a table with a list of messages:
 
-{% highlight text %}
+```text
 +------+----------------------------+
 | id   | Attributes                 |
 +------+----------------------------+
@@ -33,7 +33,7 @@ Say that you have a table with a list of messages:
 | 206  | author="bob", text="..."   |
 | 207  | author="alice", text="..." |
 +------+----------------------------+
-{% endhighlight %}
+```
 
 Every time you add a new item to the table, a new value
 of `id` has to be set. And this has to be done with concurrency in mind.
@@ -79,17 +79,17 @@ for [stateful.co](http://www.stateful.co). All you need to do is add
 this [java-sdk.jar](http://repo1.maven.org/maven2/co/stateful/java-sdk/)
 Maven dependency to your project:
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>co.stateful</groupId>
   <artifactId>java-sdk</artifactId>
   <version>0.6</version>
 </dependency>
-{% endhighlight %}
+```
 
 And, you can use [stateful.co](http://www.stateful.co) counters from Java code:
 
-{% highlight java %}
+```java
 Sttc sttc = new RtSttc(
   new URN("urn:github:526301"),
   "9FF3-41E0-73FB-F900"
@@ -98,7 +98,7 @@ Counters counters = sttc.counters();
 Counter counter = counters.get("foo");
 long value = counter.incrementAndGet(1L);
 System.out.println("new value: " + value);
-{% endhighlight %}
+```
 
 You can review authentication parameters for `RtSttc`
 constructor at [stateful.co](http://www.stateful.co).

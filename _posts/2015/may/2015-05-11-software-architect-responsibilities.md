@@ -47,13 +47,13 @@ is the scope status, which should be presented in
 (PBS) format. No matter how complex or how small the product is, a good architect
 should be able to create a PBS of _four to eight items_. For example:
 
-{% highlight text %}
+```text
 1. MySQL persistence [done]
 2. OAuth login [done]
 3. Input parsing in XML [75%]
 4. S3 data storage [none]
 5. UI cross-platform testing [none]
-{% endhighlight %}
+```
 
 That's the size of the report I'm expecting to receive from a good architect
 every few days. The main goal for the architect here is to make sure
@@ -78,12 +78,12 @@ of current issues the development team is facing. An issue is something
 that has already happened and we're suffering from it. Here are
 a few practical examples:
 
-{% highlight text %}
+```text
 1. MySQL is too slow for our performance requirements
 2. Java 1.6 doesn't allow us to use library X
 3. We don't have a replacement for a Ruby guy who left us
 4. Integration tests are not predictable
-{% endhighlight %}
+```
 
 Again, the list must include four to eight items (no more and no less), and the architect
 should mention the most critical issues there.
@@ -99,13 +99,13 @@ ones to the
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}). Here is an example of
 a brief risk report:
 
-{% highlight text %}
+```text
 1. Deployment platform may not support Java 8 [3/8]
 2. Library X may take more than the two weeks planned [7/3]
 3. We may lose a good Ruby developer soon [5/6]
 4. Integration tests may not be safe enough [7/2]
 5. We may fail to find an open source library [3/8]
-{% endhighlight %}
+```
 
 A project manager may require additional information about each risk, but
 that's another story. What is most important is to keep the project manager

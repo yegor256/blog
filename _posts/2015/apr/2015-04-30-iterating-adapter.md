@@ -28,28 +28,28 @@ another source of data, in the form of an iterator. I hope this example will hel
 
 Let's say we have an object of this class:
 
-{% highlight java %}
+```java
 final class Data {
   byte[] read();
 }
-{% endhighlight %}
+```
 
 When we call `read()`, it returns a new array of bytes that were retrieved
 from somewhere. If there is nothing to retrieve, the array will be empty. Now,
 we want to create an _adapter_ that would consume the bytes and let
 us iterate them:
 
-{% highlight java %}
+```java
 final class FluentData implements Iterator<Byte> {
   boolean hasNext() { /* ... */ }
   Byte next() { /* ... */ }
   void remove()  { /* ... */ }
 }
-{% endhighlight %}
+```
 
 Here is how it should look (it is not thread-safe!):
 
-{% highlight java %}
+```java
 final class FluentData implements Iterator<Byte> {
   private final Data data;
   private final Queue<Byte> buffer = new LinkedList<>();
@@ -74,7 +74,7 @@ final class FluentData implements Iterator<Byte> {
     throw new UnsupportedOperationException("It is read-only");
   }
 }
-{% endhighlight %}
+```
 
 There is no way to make it
 [thread-safe]({% pst 2017/jan/2017-01-17-synchronized-decorators %}) because the iterating process

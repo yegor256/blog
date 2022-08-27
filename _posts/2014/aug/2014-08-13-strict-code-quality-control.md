@@ -111,13 +111,13 @@ Let's take one simple rule as an example. Here is a piece of Java
 code that Qulice would complain about
 (due to the [`DesignForExtension`](http://checkstyle.sourceforge.net/config_design.html#DesignForExtension) rule from Checkstyle):
 
-{% highlight java %}
+```java
 public class Employee {
   public String name() {
     return "Jeff";
   }
 }
-{% endhighlight %}
+```
 
 What is wrong with this code? Method `name()` is not final and can be overridden
 by a class that extends `Employee`. Design-wise this is wrong, since a child
@@ -125,13 +125,13 @@ class is allowed to break a super class, overriding its method.
 
 What is the right design? This one:
 
-{% highlight java %}
+```java
 public class Employee {
   public final String name() {
     return "Jeff";
   }
 }
-{% endhighlight %}
+```
 
 Now, the method is final and can't be overridden by child classes. It is
 a much safer design (according to Checkstyle, and I agree).

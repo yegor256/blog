@@ -42,12 +42,12 @@ while FP survives with just functions?
 
 This is an _abstract_ object in [EO](https://www.eolang.org):
 
-{% highlight text %}
+```text
 [id db] > book
   db.query > title
     "SELECT title FROM book WHERE id=?"
     id
-{% endhighlight %}
+```
 
 The name of the object is `book`. It has three
 [attributes]({% pst 2020/nov/2020-11-24-objects-without-methods %}): `id`, `db`, and `title`.
@@ -65,47 +65,47 @@ arguments to a function in FP.
 The right way to use an abstract `book` is to make a copy of it, specifying
 the arguments:
 
-{% highlight text %}
+```text
 book 42 mysql > b
-{% endhighlight %}
+```
 
 Here, `42` is the `id`, `mysql` is the `db` and `b` is
 a new object---a copy of the `book`. In 𝜑-calculus, which is foundational
 to the EO programming language, this would be written as the following
 formula:
 
-{% highlight text %}
+```text
 b ↤ book(42, mysql)
-{% endhighlight %}
+```
 
 In order to get the `title` of `b` and name it `t`, we just do:
 
-{% highlight text %}
+```text
 b.title > t
-{% endhighlight %}
+```
 
 We can also put it all together in one line:
 
-{% highlight text %}
+```text
 (book 42 mysql).title > t
-{% endhighlight %}
+```
 
 It's possible to apply some arguments to an abstract object leaving
 other attributes still free. For example, this would make
 another abstract object, still requiring the `id` to be specified
 in order to become a _closed_ object:
 
-{% highlight text %}
+```text
 book mysql:db > x
-{% endhighlight %}
+```
 
 The suffix `:db` helps the compiler understand which free
 attribute should be bound to the object `mysql`.
 Later, `x` can be copied again and a closed object `b` will be created:
 
-{% highlight text %}
+```text
 x 42 > b
-{% endhighlight %}
+```
 
 Even though the syntax of EO makes it possible to say `book.title`,
 it will lead to a compile-time error: It's prohibited to touch
@@ -113,7 +113,7 @@ free attributes of an abstract object or attributes that depend
 on other free attributes. However, let's say we add a new attribute `print` to the
 `book`, in order to print it's `id` to the console we would do the following:
 
-{% highlight text %}
+```text
 [id db] > book
   stdout > print
     sprintf
@@ -122,18 +122,18 @@ on other free attributes. However, let's say we add a new attribute `print` to t
   db.query > title
     "SELECT title FROM book WHERE id=?"
     id
-{% endhighlight %}
+```
 
 The attribute `print` doesn't need the `db` attribute to be bound, since it
 doesn't use it. It's possible to copy the `book` with just `id` and
 then call `print` (assuming it's happening in an EO interactive console):
 
-{% highlight text %}
+```text
 $ book 42:id > x
 x
 $ x.print
 The book ID is 42
-{% endhighlight %}
+```
 
 By the way, do you know any other languages with abstract objects or
 is EO the first one to introduce this design?

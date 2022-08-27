@@ -31,7 +31,7 @@ Here it is: a test method must contain nothing but a single `assert`.
 Look at this test method from `RandomStreamTest` from OpenJDK&nbsp;8,
 created by Brian Goetz:
 
-{% highlight java %}
+```java
 @Test
 public void testIntStream() {
   final long seed = System.currentTimeMillis();
@@ -44,7 +44,7 @@ public void testIntStream() {
   final int[] b = r2.ints().limit(SIZE).toArray();
   assertEquals(a, b);
 }
-{% endhighlight %}
+```
 
 {% youtube 1bAixLaOCSA %}
 
@@ -56,7 +56,7 @@ I'm saying that the first part, the algorithm, is the one we should try
 to avoid. The only thing we must have is the assertion. Here is
 how I would re-design this test method:
 
-{% highlight java %}
+```java
 @Test
 public void testIntStream() {
   final long seed = System.currentTimeMillis();
@@ -80,12 +80,12 @@ private static class ArrayFromRandom {
     return a;
   }
 }
-{% endhighlight %}
+```
 
 If Java had [monikers]({% pst 2017/may/2017-05-16-monikers %})
 this code would look even more elegant:
 
-{% highlight java %}
+```java
 @Test
 public void testIntStream() {
   assertEquals(
@@ -95,7 +95,7 @@ public void testIntStream() {
     new Random(seed).ints().limit(SIZE).toArray()
   );
 }
-{% endhighlight %}
+```
 
 As you can see, there is only one "statement" in this method: `assertEquals()`.
 

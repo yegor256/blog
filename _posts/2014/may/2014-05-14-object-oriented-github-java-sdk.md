@@ -48,7 +48,7 @@ GitHub server is an object. A collection of issues is an object,
 an individual issue is an object, its author is an author, etc.
 For example, to retrieve the name of the author we use:
 
-{% highlight java %}
+```java
 GitHub github = new RtGitHub(/* credentials */);
 Repos repos = github.repos();
 Repo repo = repos.get(new Coordinates.Simple("jcabi/jcabi-github"));
@@ -56,7 +56,7 @@ Issues issues = github.issues();
 Issue issue = issues.get(123);
 User author = new Issue.Smart(issue).author();
 System.out.println(author.name());
-{% endhighlight %}
+```
 
 Needless to say, `GitHub`, `Repos`, `Repo`, `Issues`, `Issue`,
 and `User` are interfaces. Classes that implement them are not visible in the library.
@@ -69,7 +69,7 @@ instrument for unit testing. For example, say that you're
 testing a method that is supposed to post a new issue to GitHub
 and add a message into it. Here is how the unit test would look:
 
-{% highlight java %}
+```java
 public class FooTest {
   @Test
   public void createsIssueAndPostsMessage() {
@@ -84,7 +84,7 @@ public class FooTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 This is much more convenient and compact than traditional
 mocking via [Mockito](https://code.google.com/p/mockito/) or a similar framework.
@@ -98,13 +98,13 @@ when some GitHub feature is not covered by the library (and there are many of th
 For example, you want to get the value of `hireable` attribute of a `User`.
 Class `User.Smart` doesn't have a method for it. So, here is how you would get it:
 
-{% highlight java %}
+```java
 User user = // get it somewhere
 // name() method exists in User.Smart, let's use it
 System.out.println(new User.Smart(user).name());
 // there is no hireable() method there
 System.out.println(user.json().getString("hireable"));
-{% endhighlight %}
+```
 
 We're using method `json()` that returns an instance of
 [`JsonObject`](http://docs.oracle.com/javaee/7/api/javax/json/JsonObject.html)
@@ -117,7 +117,7 @@ Let's see another example. Say, you want to use some feature
 from GitHub that is not covered by the API. You get a `Request`
 object from `GitHub` interface and directly access the HTTP entry point of the server:
 
-{% highlight java %}
+```java
 GitHub github = new RtGitHub(oauthKey);
 int found = github.entry()
   .uri().path("/search/repositories").back()
@@ -126,7 +126,7 @@ int found = github.entry()
   .getJsonObject()
   .getNumber("total_count")
   .intValue();
-{% endhighlight %}
+```
 
 [jcabi-http](http://http.jcabi.com) HTTP client is used by [jcabi-github](http://github.jcabi.com).
 
@@ -145,9 +145,9 @@ supposed to be very stable.
 The library ships as a JAR dependency in [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-github)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-github</artifactId>
 </dependency>
-{% endhighlight %}
+```

@@ -35,13 +35,13 @@ Here is how it works: Let's say my website has to fetch the current exchange rat
 the euro from a database and show it on the home page. Here's how my `index.jsp`
 would look:
 
-{% highlight jsp %}
+```jsp
 <html>
   <body>
     <p>EUR/USD: <%= rates.get() %></p>
   </body>
 </html>
-{% endhighlight %}
+```
 
 In order to create HTML, the JSP engine will have to call `get()` on object
 `rates` and render what's returned through `toString()`. It's a terrible
@@ -55,17 +55,17 @@ reasons ... more about them in one of the next articles.
 Let's see how this should be done right. First, we let our model generate
 the output in XML format, for example:
 
-{% highlight xml %}
+```xml
 <?xml version="1.1"?>
 <page>
   <rate>1.1324</rate>
 </page>
-{% endhighlight %}
+```
 
 This is what the model will produce, having no knowledge of the view. Then,
 we create the view as an XSL stylesheet, which will transform XML into HTML:
 
-{% highlight xml %}
+```xml
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns="http://www.w3.org/1999/xhtml">
@@ -80,14 +80,14 @@ we create the view as an XSL stylesheet, which will transform XML into HTML:
     </html>
   </xsl:template>
 </xsl:stylesheet>
-{% endhighlight %}
+```
 
 As you see, the view doesn't know anything about the model in terms of
 implementation. All it knows is the format of XML data output produced
 by the model. Here is how you design it in the [Takes framework](http://www.takes.org).
 Let's start with a simple example:
 
-{% highlight java %}
+```java
 import org.takes.http.Exit;
 import org.takes.http.FtCli;
 public final class Entry {
@@ -95,13 +95,13 @@ public final class Entry {
     new FtCli(new TkApp(), args).start(Exit.NEVER);
   }
 }
-{% endhighlight %}
+```
 
 It's a simple web application that starts a web server
 and never ends (it waits for connections in daemon mode). To make it work,
 we should create a simple "take" named `TkApp`:
 
-{% highlight java %}
+```java
 import org.takes.Take;
 import org.takes.tk.TkWrap;
 final class TkApp extends TkWrap {
@@ -115,12 +115,12 @@ final class TkApp extends TkWrap {
     );
   }
 }
-{% endhighlight %}
+```
 
 This "take" always returns the same XML response, but it doesn't
 do any XSL transformation yet. We need to add the `RsXSLT` class to the picture:
 
-{% highlight java %}
+```java
 @Override
 public Response act() {
   return new RsXSLT(
@@ -133,7 +133,7 @@ public Response act() {
     )
   );
 }
-{% endhighlight %}
+```
 
 Excuse me for using string concatenation, which is a
 [bad practice]({% pst 2014/jun/2014-06-19-avoid-string-concatenation %});
@@ -153,7 +153,7 @@ XML documents. More about it here:
 
 Here is how our `TkApp` would look:
 
-{% highlight java %}
+```java
 @Override
 public Response act() {
   return new RsXSLT(
@@ -173,7 +173,7 @@ public Response act() {
     )
   );
 }
-{% endhighlight %}
+```
 
 The most important class here is
 [`RsXembly`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/RsXembly.html).

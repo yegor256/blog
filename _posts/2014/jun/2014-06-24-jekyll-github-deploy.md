@@ -23,9 +23,9 @@ plugins, which [are not allowed there](https://help.github.com/articles/using-je
 
 Here is how I deploy it:
 
-{% highlight bash %}
+```bash
 $ jgd
-{% endhighlight %}
+```
 
 That's it. [jgd](http://rubygems.org/gems/jgd) is my
 Ruby gem (stands for "Jekyll GitHub Deploy"), which does

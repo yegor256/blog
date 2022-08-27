@@ -35,15 +35,15 @@ Here is a prototype.
 
 Let's say we have only _types_ and _objects_. First, we define a type:
 
-{% highlight text %}
+```text
 type Book {
   void print();
 }
-{% endhighlight %}
+```
 
 Then we _create_ an object (pay attention; we don't "instantiate"):
 
-{% highlight text %}
+```text
 Book b1 = create Book("Object Thinking") {
   String title;
   Book(String t) {
@@ -53,15 +53,15 @@ Book b1 = create Book("Object Thinking") {
     print("My title: " + this.title);
   }
 }
-{% endhighlight %}
+```
 
 Then we create another object, which will behave similarly
 to the one we already have but with different constructor arguments.
 We _copy_ an existing one:
 
-{% highlight text %}
+```text
 Book b2 = copy b1("Elegant Objects");
-{% endhighlight %}
+```
 
 Libraries will deliver us objects, which we can copy.
 

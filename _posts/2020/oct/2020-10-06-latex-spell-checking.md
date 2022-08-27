@@ -44,12 +44,12 @@ which expects you to provide the LaTeX source code
 errors. The beauty of it is that it checks only the text, ignoring
 TeX commands. For example, this is LaTeX document:
 
-{% highlight text %}
+```text
 \documentclass{article}
 \begin{document}
 Hello, \textbf{Yegor}!
 \end{document}
-{% endhighlight %}
+```
 
 If we feed this text to some other spell checker (or GNU aspell without the
 option `--mode=tex`) the word `textbf` would be an obvious spelling mistake; aspell,
@@ -65,9 +65,9 @@ It's a command line tool, which you install and then run, for example like this
 (you can see how it's configured in the `Makefile` of
 [this paper](https://github.com/yegor256/requs-paper)):
 
-{% highlight text %}
+```text
 $ texsc --pws aspell.en.pws --ignore=code,citep article.tex
-{% endhighlight %}
+```
 
 There is a list of arguments you can supply to `texsc`:
 

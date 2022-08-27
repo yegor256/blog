@@ -32,7 +32,7 @@ the former is better than the latter.
 
 Let's say this is our code (it is Ruby):
 
-{% highlight ruby %}
+```ruby
 class Log
   def initialize(path)
     @file = IO.new(path, 'a')
@@ -42,7 +42,7 @@ class Log
     @file.puts line
   end
 end
-{% endhighlight %}
+```
 
 Obviously, objects of this class are doing too much.
 They save log lines to the
@@ -55,7 +55,7 @@ into another object(s). We have to _decompose_ its responsibility.
 No matter where we put it, this is how the
 `Log` class will look after the extraction:
 
-{% highlight ruby %}
+```ruby
 class Log
   def initialize(path)
     @file = IO.new(path, 'a')
@@ -64,20 +64,20 @@ class Log
     @file.puts line
   end
 end
-{% endhighlight %}
+```
 
 Now it only saves lines to the file, which is perfect. The class
 is cohesive and small. Let's make an instance of it:
 
-{% highlight ruby %}
+```ruby
 log = Log.new('/tmp/log.txt')
-{% endhighlight %}
+```
 
 Next, where do we put the lines with formatting functionality that were just extracted?
 There are two approaches to decompose responsibility: horizontal and
 vertical. This one is _horizontal_:
 
-{% highlight ruby %}
+```ruby
 class Line
   def initialize(text)
     @line = text
@@ -86,13 +86,13 @@ class Line
     Time.now.strftime("%d/%m/%Y %H:%M ") + text
   end
 end
-{% endhighlight %}
+```
 
 In order to use `Log` and `Line` together, we have to do this:
 
-{% highlight ruby %}
+```ruby
 log.put(Line.new("Hello, world"))
-{% endhighlight %}
+```
 
 See why it's horizontal? Because this script sees them
 both. They both are on the same level of visibility. We will always have
@@ -107,7 +107,7 @@ two classes in order to log a line:
 
 To the contrary, this decomposition of responsibility is _vertical_:
 
-{% highlight ruby %}
+```ruby
 class TimedLog
   def initialize(log)
     @origin = log
@@ -116,19 +116,19 @@ class TimedLog
     @origin.put(Time.now.strftime("%d/%m/%Y %H:%M ") + text)
   end
 end
-{% endhighlight %}
+```
 
 Class `TimedLog` is a decorator, and this is how we use them together:
 
-{% highlight ruby %}
+```ruby
 log = TimedLog.new(log)
-{% endhighlight %}
+```
 
 Now, we just put a line in the log:
 
-{% highlight ruby %}
+```ruby
 log.put("Hello, world")
-{% endhighlight %}
+```
 
 The responsibility is decomposed vertically. We still have one entry point
 into the `log` object, but the object "consists" of two objects, one wrapped

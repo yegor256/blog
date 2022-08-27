@@ -27,7 +27,7 @@ and its functional decomposition should be done by language constructs
 
 Look at this Java class (it does smell, doesn't it?):
 
-{% highlight java %}
+```java
 final class TextFile {
   private final File file;
   TextFile(File src) {
@@ -55,7 +55,7 @@ final class TextFile {
     return total;
   }
 }
-{% endhighlight %}
+```
 
 This method first loads the content of the file. Second, it
 counts how many lines match the regular expression provided. So why does
@@ -65,7 +65,7 @@ If we make a rule, to avoid empty lines in method bodies, the method
 will have to be refactored in order to preserve the "separation of concerns"
 introduced by that empty line:
 
-{% highlight java %}
+```java
 final class TextFile {
   private final File file;
   TextFile(File src) {
@@ -98,7 +98,7 @@ final class TextFile {
     }
   }
 }
-{% endhighlight %}
+```
 
 I believe it is obvious that this new class has methods that are
 much more cohesive and readable. Now every method is doing exactly
@@ -108,7 +108,7 @@ This idea about avoiding empty lines is also applicable to other languages,
 not just Java/C++/Ruby, etc. For example, this CSS code is
 definitely begging for refactoring:
 
-{% highlight css %}
+```css
 .container {
   width: 80%;
   margin-left: auto;
@@ -117,12 +117,12 @@ definitely begging for refactoring:
   font-size: 2em;
   font-weight: bold;
 }
-{% endhighlight %}
+```
 
 The empty line here is telling us (screaming at us, actually) that this `.container`
 class is too complex and has to be decomposed into two classes:
 
-{% highlight css %}
+```css
 .wide {
   width: 80%;
   margin-left: auto;
@@ -132,7 +132,7 @@ class is too complex and has to be decomposed into two classes:
   font-size: 2em;
   font-weight: bold;
 }
-{% endhighlight %}
+```
 
 Unfortunately, using empty lines to separate blocks of code is a very common habit.
 Moreover, very often I see empty blocks of two or even three lines, which are all

@@ -42,11 +42,11 @@ I called it Hits-of-Code (HoC) and created a small tool to help us
 calculate this number in just one line. It's a
 [Ruby gem](https://rubygems.org/gems/hoc), install it and run:
 
-{% highlight bash %}
+```bash
 $ gem install hoc
 $ hoc
 54687
-{% endhighlight %}
+```
 
 The number 54687 is a total number of Hits-of-Code in your code base. The
 principle behind this number is primitive---every time a line of code

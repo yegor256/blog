@@ -37,12 +37,12 @@ Let me show how.
 
 First, I would create an interface for the source of data:
 
-{% highlight java %}
+```java
 interface Items<T> {
   Items<T> without(int max, );
   boolean isEmpty();
 }
-{% endhighlight %}
+```
 
 I would not use the `Iterator` simply because it is
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
@@ -52,12 +52,12 @@ to throw checked `IOException`, and I'm a
 The `Items` interface is immutable and is supposed to be used like this,
 in order to read the entire set of items:
 
-{% highlight java %}
+```java
 while (!items.empty()) {
   batch = items.batch(10);
   items = items.next();
 }
-{% endhighlight %}
+```
 
 The logic is similar to database "cursors."
 The method `batch()` reads as much as it can, but not more than the
@@ -73,7 +73,7 @@ that way. I would call it by the name of the items it represents. For example,
 we want to fetch the list of payments from the database. The name of the
 class would be `Payments`:
 
-{% highlight java %}
+```java
 final class Payments implements Items<Payment> {
   private int latest; // the latest ID fetched
   Collection<Payment> batch(int max) {
@@ -86,7 +86,7 @@ final class Payments implements Items<Payment> {
     return Payments();
   }
 }
-{% endhighlight %}
+```
 
 
 

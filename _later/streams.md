@@ -45,25 +45,25 @@ right here and for once.
 
 For example, let's say we have a simple <del>collection</del> iterator of strings:
 
-{% highlight java %}
+```java
 Iterator<String> list = Arrays.asList(
   "one", "two", "", "three", "four", ""
 ).iterator();
-{% endhighlight %}
+```
 
 Now, we want to have another iterator that doesn't have empty strings.
 We want to exclude them. A good old procedural
 way to do that would be to create a new iterator and move acceptable
 items into it using a `for` loop:
 
-{% highlight java %}
+```java
 List<String> target = new LinkedList<>();
 for (String item : list) {
   if (!item.empty()) {
     target.add(item);
   }
 }
-{% endhighlight %}
+```
 
 Needless to say that this approach is imperative and not object-oriented
 at all. It's difficult to reuse, test, and maintain. Moreover, it's not
@@ -75,7 +75,7 @@ be a decorator that _encapsulates_
 the original iterator adding the filtering behavior to it. Here is how
 we would do it in Java&nbsp;7 (I omit `remove()` for the sake of brevity);
 
-{% highlight java %}
+```java
 class CleanIterator implements Iterator<String> {
   private final Iterator<String> origin;
   private final Queue<String> buf;
@@ -102,14 +102,14 @@ class CleanIterator implements Iterator<String> {
     return !this.buf.isEmpty();
   }
 }
-{% endhighlight %}
+```
 
 Now, to have an iterator that doesn't have empty strings we just decorate
 an original one with `CleanIterator`:
 
-{% highlight java %}
+```java
 Iterator<String> list = new CleanIterator(list);
-{% endhighlight %}
+```
 
 Works great, but what will happen if we need another decorator, which
 will, for example, capitalize all strings? Or filter out strings that
@@ -121,25 +121,25 @@ to create many filtering decorators, which will look very similar to each other.
 There will be tons of classes that will look like twins, except just
 a few lines. Actually, just a single line will be different. This one:
 
-{% highlight java %}
+```java
 if (!item.isEmpty()) {
-{% endhighlight %}
+```
 
 An obvious solution is a so called
 [Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern):
 we create a _general purpose_ decorator that encapsulates a "predicate" object. That
 predicate will have a single method accepting `String` and returning `boolean`:
 
-{% highlight java %}
+```java
 interface Predicate<T> {
   boolean allowed(T item);
 }
-{% endhighlight %}
+```
 
 Then, our filtering decorator will look like this (pay attention,
 it's generic now):
 
-{% highlight java %}
+```java
 class FilteringIterator<T> implements Iterator<T> {
   private final Iterator<T> origin;
   private final Predicate<T> predicate;
@@ -169,11 +169,11 @@ class FilteringIterator<T> implements Iterator<T> {
     return !this.buf.isEmpty();
   }
 }
-{% endhighlight %}
+```
 
 Now, we can use it like this (with the help of an anonymous inner class):
 
-{% highlight java %}
+```java
 Iterator<String> list = new FilteringIterator<String>(
   list,
   new Predicate<String>() {
@@ -183,7 +183,7 @@ Iterator<String> list = new FilteringIterator<String>(
     }
   }
 );
-{% endhighlight %}
+```
 
 This is how it worked in Java for years.
 You definitely know [Guava](https://github.com/google/guava),
@@ -194,12 +194,12 @@ Java&nbsp;8 simplified that syntax by allowing us to make instances
 of that "predicates", called "functional interfaces",
 in much less lines of code. Here is how our code will look in Java&nbsp;8:
 
-{% highlight java %}
+```java
 Iterator<String> list = new FilteringIterator<String>(
   list,
   item -> !item.isEmpty()
 );
-{% endhighlight %}
+```
 
 This definitely is a great optimization comparing to the code we
 had in Java before. Instead of six lines of code we have to write
@@ -239,11 +239,11 @@ What is a better alternative? What would be the right object-oriented
 design? The first option that comes to mind is an abstract class, with the
 same non-verbose syntax. How about this (this is pseudo-syntax, not Java)?:
 
-{% highlight java %}
+```java
 Iterator<String> list = new AbstractFilteringIterator<String>(list) {
   allowed(item): item -> !item.isEmpty()
 }
-{% endhighlight %}
+```
 
 Here `AbstractFilteringIterator` encapsulates the original iterator and
 lets us implement its abstract method `allowed()`. We are free to implement
@@ -270,27 +270,27 @@ and random-access ones. All of them are _not objects_.
 A much better design would be to let collections return objects with
 "iterational" behavior. Let's say, we have a list of strings:
 
-{% highlight java %}
+```java
 List<String> list = Arrays.asList(
   "one", "two", "", "three", "four", ""
 );
-{% endhighlight %}
+```
 
 Then, I want to iterate through them. First, I retrieve the first item:
 
-{% highlight java %}
+```java
 String item = list.first();
-{% endhighlight %}
+```
 
 However, it's not just a `String` any more. It has a few more methods,
 since its type is not only `String`, but also `Iterated` (I'm making this
 up, Java doesn't have it):
 
-{% highlight java %}
+```java
 item.hasNext();
 item.next();
 item.remove();
-{% endhighlight %}
+```
 
 Method names are the same as Java `Iterator` has, but they are implemented
 by the object itself. See the difference?

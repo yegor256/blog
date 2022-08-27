@@ -37,20 +37,20 @@ itself to some media.
 
 Let's say this is our class:
 
-{% highlight java %}
+```java
 public class Book {
   private final String isbn =
     "0735619654";
   private final String title =
     "Object Thinking";
 }
-{% endhighlight %}
+```
 
 We need it to be transferred into XML format. A more
 or less traditional way to do it is via getters and
 [JAXB]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %}):
 
-{% highlight java %}
+```java
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
@@ -68,7 +68,7 @@ public class Book {
     return this.title;
   }
 }
-{% endhighlight %}
+```
 
 This is a very [offensive]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
 way of treating the
@@ -97,7 +97,7 @@ to do that job. We're way smarter!
 I'm suggesting to stop thinking this way. Instead, let's try to give
 this poor `Book` a chance, and equip it with a "printer":
 
-{% highlight java %}
+```java
 public class Book {
   private final String isbn =
     "0735619654";
@@ -110,7 +110,7 @@ public class Book {
     );
   }
 }
-{% endhighlight %}
+```
 
 This isn't the [best]({% pst 2015/mar/2015-03-26-jaxb-vs-xembly %})
 implementation, but you got the idea. The object is not
@@ -119,7 +119,7 @@ can only ask it to print itself in XML format.
 
 We can add an additional printer, if another format is required:
 
-{% highlight java %}
+```java
 public class Book {
   private final String isbn =
     "0735619654";
@@ -132,7 +132,7 @@ public class Book {
     );
   }
 }
-{% endhighlight %}
+```
 
 Again, not the best implementation, but you see what I'm trying to show.
 Each time we need a new format, we create a new printer.
@@ -148,7 +148,7 @@ format and God knows what else. We can add that many printers to it, but
 the object will be big and ugly. To avoid that, introduce a new object,
 that represents the media where the data will be printed to:
 
-{% highlight java %}
+```java
 public class Book {
   private final String isbn =
     "0735619654";
@@ -160,7 +160,7 @@ public class Book {
       .with("title", this.title);
   }
 }
-{% endhighlight %}
+```
 
 Again, it's a very primitive design of that
 [immutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
@@ -170,7 +170,7 @@ Now, we want to print our object to JSON
 (this design is not really perfect, since `JsonObjectBuilder` is not immutable,
 even though it looks like one...):
 
-{% highlight java %}
+```java
 class JsonMedia implements Media {
   private final JsonObjectBuilder builder;
   JsonMedia() {
@@ -192,16 +192,16 @@ class JsonMedia implements Media {
     return this.builder.build();
   }
 }
-{% endhighlight %}
+```
 
 Now, we make an instance of `JsonMedia` and ask our book to print
 itself there:
 
-{% highlight java %}
+```java
 JsonMedia media = new JsonMedia("book");
 media = book.print(media);
 JsonObject json = media.json();
-{% endhighlight %}
+```
 
 Voilà! The JSON object is ready and the book has no idea about what
 exactly what printed just now. We need to print the book to XML? We

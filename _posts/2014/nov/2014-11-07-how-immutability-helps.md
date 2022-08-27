@@ -40,7 +40,7 @@ we get from a "pure" object-oriented and immutable approach, without getters.
 
 Here is how your code will look, if you send an email using commons-email:
 
-{% highlight java %}
+```java
 Email email = new SimpleEmail();
 email.setHostName("smtp.googlemail.com");
 email.setSmtpPort(465);
@@ -50,11 +50,11 @@ email.addTo("dude@jcabi.com");
 email.setSubject("how are you?");
 email.setMsg("Dude, how are you?");
 email.send();
-{% endhighlight %}
+```
 
 Here is how you do the same with [jcabi-email](http://email.jcabi.com):
 
-{% highlight java %}
+```java
 Postman postman = new Postman.Default(
   new SMTP("smtp.googlemail.com", 465, "user", "pwd")
 );
@@ -69,7 +69,7 @@ Envelope envelope = new Envelope.MIME(
   )
 );
 postman.send(envelope);
-{% endhighlight %}
+```
 
 I think the difference is obvious.
 
@@ -194,7 +194,7 @@ classes. So, `Postman` is... a post man.
 He is delivering messages to other people. First, I created a default
 version of it (I omit the ctor, for the sake of brevity):
 
-{% highlight java %}
+```java
 import javax.mail.Message;
 @Immutable
 class Postman.Default implements Postman {
@@ -211,7 +211,7 @@ class Postman.Default implements Postman {
     // transport.close();
   }
 }
-{% endhighlight %}
+```
 
 Good start, it works. What now? Well, the
 [`Message`](http://docs.oracle.com/javaee/7/api/javax/jms/Message.html)
@@ -225,26 +225,26 @@ are immutable and annotated with
 [@Immutable](http://aspects.jcabi.com/apidocs-0.20/com/jcabi/aspects/Immutable.html) from
 [jcabi-aspects](http://aspects.jcabi.com/annotation-immutable.html)):
 
-{% highlight java %}
+```java
 @Immutable
 interface Envelope {
   Message unwrap();
 }
-{% endhighlight %}
+```
 
 I also refactor the `Postman` to accept an envelope, not a message:
 
-{% highlight java %}
+```java
 @Immutable
 interface Postman {
   void send(Envelope env);
 }
-{% endhighlight %}
+```
 
 So far, so good. Now let's try to create a simple implementation of
 `Envelope`:
 
-{% highlight java %}
+```java
 @Immutable
 class MIME implements Envelope {
   @Override
@@ -254,7 +254,7 @@ class MIME implements Envelope {
     );
   }
 }
-{% endhighlight %}
+```
 
 It works, but it does nothing useful yet. It only creates an absolutely
 empty MIME message and returns it. How about adding a subject to it
@@ -262,7 +262,7 @@ and both `To:` and `From:` addresses (pay attention,
 [`MIME`](http://email.jcabi.com/apidocs-1.10/com/jcabi/email/Envelope.Mime.html) class is
 also immutable):
 
-{% highlight java %}
+```java
 @Immutable
 class Envelope.MIME implements Envelope {
   private final String subject;
@@ -289,7 +289,7 @@ class Envelope.MIME implements Envelope {
     return msg;
   }
 }
-{% endhighlight %}
+```
 
 Looks correct and it works. But it is still too primitive. How about
 `CC:` and `BCC:`? What about email text? How about PDF enclosures?
@@ -309,17 +309,17 @@ for configuring an object `Message` (again,
 [`Stamp`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java) is immutable,
 as well as all its implementers):
 
-{% highlight java %}
+```java
 @Immutable
 interface Stamp {
   void attach(Message message);
 }
-{% endhighlight %}
+```
 
 Now, I can simplify my
 [`MIME`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java) class to the following:
 
-{% highlight java %}
+```java
 @Immutable
 class Envelope.MIME implements Envelope {
   private final Array<Stamp> stamps;
@@ -337,7 +337,7 @@ class Envelope.MIME implements Envelope {
     return msg;
   }
 }
-{% endhighlight %}
+```
 
 Now, I will create stamps for the subject, for `To:`, for `From:`,
 for `CC:`, for `BCC:`, etc. As many stamps as I like. The class `MIME`

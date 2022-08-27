@@ -21,14 +21,14 @@ categories: jcg
 An execution of a shell command via SSH can be done in
 Java, in just a few lines, using [`jcabi-ssh`](http://ssh.jcabi.com):
 
-{% highlight java %}
+```java
 String hello = new Shell.Plain(
   new SSH(
     "ssh.example.com", 22,
     "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
   )
 ).exec("echo 'Hello, world!'");
-{% endhighlight %}
+```
 
 [`jcabi-ssh`](http://ssh.jcabi.com) is
 a convenient wrapper of [`JSch`](http://www.jcraft.com/jsch/),
@@ -39,7 +39,7 @@ a well-known pure Java implementation of SSH2.
 Here is a more complex scenario, where I upload a file via SSH
 and then read back its grepped content:
 
-{% highlight xml %}
+```xml
 Shell shell = new SSH(
   "ssh.example.com", 22,
   "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
@@ -51,19 +51,19 @@ new Shell.Safe(shell).exec(
   Logger.stream(Level.INFO, this),
   Logger.stream(Level.WARNING, this)
 );
-{% endhighlight %}
+```
 
 Class `SSH`, which implements interface `Shell`, has only one method, `exec`.
 This method accepts four arguments:
 
-{% highlight xml %}
+```xml
 interface Shell {
   int exec(
     String cmd, InputStream stdin,
     OutputStream stdout, OutputStream stderr
   );
 }
-{% endhighlight %}
+```
 
 I think it's obvious what these arguments are about.
 
@@ -79,14 +79,14 @@ if the `exec` exit code is not equal to zero. This may be very useful when
 you want to make sure that your command executed successfully, but don't
 want to duplicate `if/throw` in many places of your code.
 
-{% highlight xml %}
+```xml
 Shell ssh = new Shell.Safe(
   new SSH(
     "ssh.example.com", 22,
     "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
   )
 );
-{% endhighlight %}
+```
 
 ## Shell.Verbose
 
@@ -95,7 +95,7 @@ Shell ssh = new Shell.Safe(
 [`jcabi-log`](http://log.jcabi.com)). Of course, you can combine
 decorators, for example:
 
-{% highlight xml %}
+```xml
 Shell ssh = new Shell.Verbose(
   new Shell.Safe(
     new SSH(
@@ -104,7 +104,7 @@ Shell ssh = new Shell.Verbose(
     )
   )
 );
-{% endhighlight %}
+```
 
 ## Shell.Plain
 
@@ -114,9 +114,9 @@ exit code, but `stdout` instead. This should be very convenient when you want
 to execute a simple command and just get its output
 (I'm combining it with `Shell.Safe` for safety):
 
-{% highlight xml %}
+```xml
 String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");
-{% endhighlight %}
+```
 
 ## Download
 
@@ -125,12 +125,12 @@ You need a single dependency
 in your Maven project
 (get its latest version in [Maven Central](http://search.maven.org/)):
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.jcabi</groupId>
   <artifactId>jcabi-ssh</artifactId>
 </dependency>
-{% endhighlight %}
+```
 
 The project is in [GitHub](https://github.com/jcabi/jcabi-ssh).
 If you have any problems, just submit an issue. I'll try to help.

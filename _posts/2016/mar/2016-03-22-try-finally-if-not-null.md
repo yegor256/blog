@@ -33,7 +33,7 @@ open and close them correctly, please.
 
 This is how it looks (assuming we are in Java 6):
 
-{% highlight java %}
+```java
 InputStream input = null;
 try {
   input = url.openStream();
@@ -45,7 +45,7 @@ try {
     input.close();
   }
 }
-{% endhighlight %}
+```
 
 {% youtube o3aNJX7AP3M %}
 
@@ -54,7 +54,7 @@ and its evil nature. Here it comes again. If you just follow the rule
 of "not using NULL anywhere ever," this code would need an immediate
 refactoring. Its correct version will look like this:
 
-{% highlight java %}
+```java
 final InputStream input = url.openStream();
 try {
   // reads the stream, throws IOException
@@ -63,7 +63,7 @@ try {
 } finally {
   input.close();
 }
-{% endhighlight %}
+```
 
 There is no `null` anymore and it's very clean. Isn't it?
 
@@ -71,7 +71,7 @@ There are situations when opening the resource itself throws `IOException`
 and we can't put it outside of `try/catch`. In that case, we have to have
 **two** `try/catch` blocks:
 
-{% highlight java %}
+```java
 final InputStream input;
 try {
   input = url.openStream();
@@ -85,7 +85,7 @@ try {
 } finally {
   input.close();
 }
-{% endhighlight %}
+```
 
 But there should be no `null`, never!
 

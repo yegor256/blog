@@ -41,35 +41,35 @@ of writing it was [here](https://ci.appveyor.com/api-token)). I created
 a text file `curl-appveyor.cfg` with this content (it's not my real token inside,
 just an example):
 
-{% highlight text %}
+```text
 --silent
 --header "Authorization: Bearer 1hdmsfbs7xccb9x6g1y4"
 --header "Content-Type: application/json"
 --header "Accept: application/json"
-{% endhighlight %}
+```
 
 Then, I encrypted this file, using [`rultor`](https://github.com/yegor256/rultor-remote)
 command line tool:
 
-{% highlight bash %}
+```bash
 $ rultor encrypt -p yegor256/takes curl-appveyor.cfg
-{% endhighlight %}
+```
 
 The file I created was called
 [`curl-appveyor.cfg.asc`](https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc).
 I committed and pushed into [yegor256/takes](https://github.com/yegor256/takes)
 GitHub repository.
 
-{% highlight bash %}
+```bash
 $ git add curl-appveyor.cfg.asc
 $ git commit -am 'CURL config for Appveyor'
 $ git push origin master
-{% endhighlight %}
+```
 
 Then, I configured AppVeyor "pinging" from Docker script.
 This is what I did in [`.rultor.yml`](https://github.com/yegor256/takes/blob/master/.rultor.yml):
 
-{% highlight text %}
+```text
 decrypt:
   curl-appveyor.cfg: "repo/curl-appveyor.cfg.asc"
 merge:
@@ -92,7 +92,7 @@ merge:
       sleep 5s
     done
     mvn clean install
-{% endhighlight %}
+```
 
 There is no magic here, it's very simple. First, I start a new build
 using `/api/builds` end-point of

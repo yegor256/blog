@@ -33,7 +33,7 @@ instead for marshalling Java objects into XML documents.
 This is how JAXB marshalling works. Say you have a `Book` class that needs to be
 marshalled into an XML document. You have to create getters and annotate them:
 
-{% highlight java %}
+```java
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
@@ -53,27 +53,27 @@ public class Book {
     return this.title;
   }
 }
-{% endhighlight %}
+```
 
 Then you create a marshaller and ask it to convert an instance of class
 `Book` into XML:
 
-{% highlight java %}
+```java
 final Book book = new Book("0132350882", "Clean Code");
 final JAXBContext context = JAXBContext.newInstance(Book.class);
 final Marshaller marshaller = jaxbContext.createMarshaller();
 marshaller.marshal(book, System.out);
-{% endhighlight %}
+```
 
 You should be expecting something like this in the output:
 
-{% highlight xml %}
+```xml
 <?xml version="1.0"?>
 <book>
   <isbn>0132350882</isbn>
   <title>Clean Code</title>
 </book>
-{% endhighlight %}
+```
 
 So what's wrong with it? Pretty much the same thing that's wrong with
 object-relational mapping, which is explained in
@@ -86,7 +86,7 @@ anymore but rather a passive bag of data.
 
 An ideal approach would be to redesign our class `Book` this way:
 
-{% highlight java %}
+```java
 public class Book {
   private final String isbn;
   private final String title;
@@ -98,7 +98,7 @@ public class Book {
     // create XML document and return
   }
 }
-{% endhighlight %}
+```
 
 However, there are a few problems with this approach. First of all, there's
 massive code duplication. Building an XML document is a rather verbose
@@ -115,7 +115,7 @@ in each object would definitely be a disaster.
 an imperative language for XML constructions and manipulations. Here is
 how we can implement our `Book` object with the help of Xembly:
 
-{% highlight java %}
+```java
 import org.xembly.Directive;
 public class Book {
   private final String isbn;
@@ -132,15 +132,15 @@ public class Book {
       .up();
   }
 }
-{% endhighlight %}
+```
 
 Now, in order to build an XML document, we should use this code
 outside the object:
 
-{% highlight java %}
+```java
 final Book book = new Book("0132350882", "Clean Code");
 final String xml = new Xembler(book.toXembly()).xml();
-{% endhighlight %}
+```
 
 This [`Xembler`](http://www.xembly.org/apidocs-0.21/org/xembly/Xembler.html)
 class will convert Xembly directives into an XML document.

@@ -63,17 +63,17 @@ It moves the engine into the _parent class_, which all our entities inherit from
 This is how we were supposed to save our entity to the database in the ORM
 scenario (pseudo-code):
 
-{% highlight java %}
+```java
 book.setTitle("Java in a Nutshell");
 session.update(book);
-{% endhighlight %}
+```
 
 And this is what we do with an ActiveRecord:
 
-{% highlight java %}
+```java
 book.setTitle("Java in a Nutshell");
 book.update();
-{% endhighlight %}
+```
 
 The method `update()` is defined in book's parent class and uses
 book as a _data container_. When called, it fetches data

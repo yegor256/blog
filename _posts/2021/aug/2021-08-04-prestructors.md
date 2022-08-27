@@ -34,7 +34,7 @@ objects.
 
 Say, this is your code:
 
-{% highlight java %}
+```java
 import java.util.List;
 import java.util.Collections;
 class Books {
@@ -43,7 +43,7 @@ class Books {
     this.titles = Collections.unmodifiableList(list);
   }
 }
-{% endhighlight %}
+```
 
 The only constructor expects a list of titles, which is being
 encapsulated as `this.titles` for some future use. It's also protected against
@@ -52,7 +52,7 @@ any accidental modifications, through the JDK decorator at
 So far, so good. Now, we want to make our class a bit smarter 
 and let it accept not only the `List` but an array of strings:
 
-{% highlight java %}
+```java
 class Books {
   private List<String> titles;
   Books(List<String> list) {
@@ -66,7 +66,7 @@ class Books {
     this.titles = list;
   }
 }
-{% endhighlight %}
+```
 
 What's wrong with this code? Those of you who have read my earlier 
 [blog posts about OOP](/tag/oop.html) most definitely know the answer. First, 
@@ -77,7 +77,7 @@ Second, there is code in the second constructor, which is also a
 
 Here is how I usually refactor this code, to solve both mentioned problems:
 
-{% highlight java %}
+```java
 class Books {
   private List<String> titles;
   Books(List<String> list) {
@@ -94,7 +94,7 @@ class Books {
     return list;
   }
 }
-{% endhighlight %}
+```
 
 I call this new static method `toList()` a _prestructor_: it is used
 only at the moment of object construction and only from the
@@ -103,7 +103,7 @@ secondary constructor.
 An even better way to design it would be to make a new class `ToList`,
 which would do exactly the same, but in a more declarative and lazy way:
 
-{% highlight java %}
+```java
 class Books {
   private List<String> titles;
   Books(List<String> list) {
@@ -120,7 +120,7 @@ class ToList<T> implements List<T> {
   }
   // All required methods of the List interface
 }
-{% endhighlight %}
+```
 
 [`ListOf`](https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html)
 from [Cactoos](https://www.cactoos.org) is a perfect example 

@@ -44,7 +44,7 @@ I'll write in C, and he will pay in cash.
 
 The tool is very primitive, and it only took me a few minutes to write. Take a look at it:
 
-{% highlight c %}
+```c
 #include <stdio.h>
 #include <unistd.h>
 int main() {
@@ -64,29 +64,29 @@ int main() {
   printf("%d\n", count);
   return 0;
 }
-{% endhighlight %}
+```
 
 But let's be professional and not forget about build automation and unit
 testing. Here is a simple `Makefile` that does them both:
 
-{% highlight makefile %}
+```makefile
 all: wc test
 wc: wc.c
   gcc -o wc wc.c
 test: wc
   echo '' | ./wc | grep '0'
   echo 'Hello, world! How are you?' | ./wc | grep '5'
-{% endhighlight %}
+```
 
 Now I run `make` from a command line and get this output:
 
-{% highlight text %}
+```text
 $ make
 echo '' | ./wc | grep '0'
 0
 echo 'Hello, world! How are you?' | ./wc | grep '5'
 5
-{% endhighlight %}
+```
 
 All clean!
 
@@ -116,13 +116,13 @@ He doesn't need it, but I need it.
 Here is what I'm going to do. I'll release a skeleton of the tool, backed
 by the tests but with an absolutely dummy implementation. Look at it:
 
-{% highlight c %}
+```c
 #include <stdio.h>
 int main() {
   printf("5\n");
   return 0;
 }
-{% endhighlight %}
+```
 
 And I will modify the `Makefile` accordingly. I will disable the first test
 to make sure the build passes.

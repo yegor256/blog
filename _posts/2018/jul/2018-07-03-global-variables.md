@@ -37,16 +37,16 @@ I was recently writing a web front for [Zold](https://www.zold.io) in Ruby,
 on top of [Sinatra](http://sinatrarb.com/).
 This is how a web server starts according to [their documentation](http://sinatrarb.com/intro.html):
 
-{% highlight ruby %}
+```ruby
 App.start!
-{% endhighlight %}
+```
 
 Here `start!` is a static method of the `App` class, which you have to declare
 as a child of their default parent
 [`Sinatra::Base`](https://github.com/sinatra/sinatra/blob/v2.0.3/lib/sinatra/base.rb#L893-L1896).
 To tell the app which TCP port to listen to you have to preconfigure it:
 
-{% highlight ruby %}
+```ruby
 require 'sinatra/base'
 class App < Sinatra::Base
   get '/' do
@@ -55,7 +55,7 @@ class App < Sinatra::Base
 end
 App.set(:port, 8080)
 App.start!
-{% endhighlight %}
+```
 
 What do you do if you want to start two web servers?
 For the purpose of testing this may be a pretty logical requirement.

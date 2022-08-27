@@ -33,34 +33,34 @@ First, let's see how it works. Moreover, let's see how I believe it should work.
 Step one: The user enters an email and password and clicks "submit." The server
 receives a POST request with this information inside:
 
-{% highlight text %}
+```text
 POST / HTTP/1.1
 Host: www.facebook.com
 Content-Type: application/x-www-form-urlencoded
 
 email=me@yegor256.com&password=itisasecret
-{% endhighlight %}
+```
 
 The server matches the provided information with its records and decides what to do.
 If the information is invalid, it returns the same login page, asking you to
 enter it all again. If the information is valid, the server returns something
 like this:
 
-{% highlight text %}
+```text
 HTTP/1.1 303 See Other
 Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com
-{% endhighlight %}
+```
 
 Since the response status code is 303, the browser goes to the page
 specified in the `Location` header and opens the front page of the site. This
 is what it sends to the server:
 
-{% highlight text %}
+```text
 GET / HTTP/1.1
 Host: www.facebook.com
 Cookie: user=me@yegor256.com
-{% endhighlight %}
+```
 
 The server gets my email from the `Cookie`
 header and understands that it's me again! No need to ask for the
@@ -79,11 +79,11 @@ will be able to encrypt it the same way the server needs to decrypt it.
 The response would look like this, using an example of encryption
 by [XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher) with `bamboo` as a secret key:
 
-{% highlight text %}
+```text
 HTTP/1.1 303 See Other
 Location: www.facebook.com
 Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39
-{% endhighlight %}
+```
 
 This is not the best encryption mechanism, though; for proper encryption, it's better
 to use something stronger like [DES](https://en.wikipedia.org/wiki/Data_Encryption_Standard).
@@ -98,11 +98,11 @@ To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
 SSL encryption. That's done by an extra flag in the `Set-Cookie` header:
 
-{% highlight text %}
+```text
 HTTP/1.1 303 See Other
 Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure
-{% endhighlight %}
+```
 
 There is yet another type of attack associated with cookie-based authentication,
 based on a browser's ability to expose all cookies associated with a web page
@@ -114,11 +114,11 @@ the attacker can collect it. This type of attack is called
 [cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
 To prevent this, there is another flag for the `Set-Cookie` header, called `HttpOnly`:
 
-{% highlight text %}
+```text
 HTTP/1.1 303 See Other
 Location: www.facebook.com
 Set-Cookie: user=me@yegor256.com; Secure; HttpOnly
-{% endhighlight %}
+```
 
 The presence of this flag will tell the browser that this particular cookie can
 be transferred back to the server only through HTTP requests. JavaScript won't
@@ -139,7 +139,7 @@ these two steps.
 Let's say we have an account page that is supposed to show the current user's
 balance:
 
-{% highlight java %}
+```java
 final class TkAccount implements Take {
   private final Balances balances;
   @Override
@@ -153,7 +153,7 @@ final class TkAccount implements Take {
     );
   }
 }
-{% endhighlight %}
+```
 
 Right after the `request` comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
@@ -162,11 +162,11 @@ decorator, which wraps an existing _take_,
 decodes an incoming cookie, and adds a new `TkAuth`
 header to the request with the user's identification information:
 
-{% highlight java %}
+```java
 final Codec codec = new CcHex(new CcXOR(new CcPlain()));
 final Pass pass = new PsCookie(codec);
 new TkAuth(new TkAccount(), pass);
-{% endhighlight %}
+```
 
 Again, when `TkAuth` receives a request with an authenticating cookie inside,
 it asks `pass` to decode the cookie and return either a
@@ -186,7 +186,7 @@ user identity from the request, it can use
 [`RqAuth`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/RqAuth.html),
 a utility decorator of [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html):
 
-{% highlight java %}
+```java
 final class TkAccount implements Take {
   @Override
   public Response act(final Request request) {
@@ -194,7 +194,7 @@ final class TkAccount implements Take {
     // other manipulations with the user
   }
 }
-{% endhighlight %}
+```
 
 The `RqAuth` decorator uses the header, added by `PsCookie`, in order
 to authenticate the user and create an `Identity` object.
@@ -204,7 +204,7 @@ to authenticate the user and create an `Identity` object.
 This mechanism is indeed very extensible and "composable." Let's say we
 want to skip authentication during integration testing. Here is how:
 
-{% highlight java %}
+```java
 new TkAuth(
   take, // original application "take"
   new PsChain(
@@ -214,7 +214,7 @@ new TkAuth(
     )
   )
 );
-{% endhighlight %}
+```
 
 [`PsChain`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsChain.html)
 implements [`Pass`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Pass.html)
@@ -227,7 +227,7 @@ trigger, we can switch off the entire authentication mechanism in the app.
 
 Let's say you want to authenticate users through Facebook OAuth. Here is how:
 
-{% highlight java %}
+```java
 new TkAuth(
   take, // original application "take"
   new PsChain(
@@ -245,7 +245,7 @@ new TkAuth(
     )
   )
 );
-{% endhighlight %}
+```
 
 When a user clicks on the login link on your site, the browser goes to `facebook.com`,
 where his or her identity is verified. Then, Facebook returns a `302` redirection
@@ -262,7 +262,7 @@ provided credentials and will retrieve all possible information about the user.
 
 Here is how we can implement a logout mechanism:
 
-{% highlight java %}
+```java
 new TkAuth(
   take, // original application "take"
   new PsChain(
@@ -284,7 +284,7 @@ new TkAuth(
     )
   )
 );
-{% endhighlight %}
+```
 
 Now, we can add `?PsByFlag=PsLogout` to any link on the site and it will
 log the current user out.

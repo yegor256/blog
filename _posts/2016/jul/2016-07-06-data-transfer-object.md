@@ -55,14 +55,14 @@ Let's see a practical example. Say that this is a service that fetches
 a JSON document from some RESTful API and returns a DTO, which we can then
 store in the database:
 
-{% highlight java %}
+```java
 Book book = api.loadBookById(123);
 database.saveNewBook(book);
-{% endhighlight %}
+```
 
 I guess this is what will happen inside the `loadBookById()` method:
 
-{% highlight java %}
+```java
 Book loadBookById(int id) {
   JsonObject json = /* Load it from RESTful API */
   Book book = new Book();
@@ -71,13 +71,13 @@ Book loadBookById(int id) {
   book.setAuthor(json.getString("author"));
   return book;
 }
-{% endhighlight %}
+```
 
 Am I right? I bet I am. It already looks disgusting to me. Anyway, let's
 continue. This is what will most likely happen in the `saveNewBook()` method
 (I'm using pure JDBC):
 
-{% highlight java %}
+```java
 void saveNewBook(Book book) {
   Statement stmt = connection.prepareStatement(
     "INSERT INTO book VALUES (?, ?, ?)"
@@ -87,7 +87,7 @@ void saveNewBook(Book book) {
   stmt.setString(3, book.getAuthor());
   stmt.execute();
 }
-{% endhighlight %}
+```
 
 This `Book` is a classic example of a data transfer object design pattern.
 All it does is transfer
@@ -98,24 +98,24 @@ actually not an object at all but rather a passive and anemic data structure.
 What is the right design? There are a few. For example, this one looks
 good to me:
 
-{% highlight java %}
+```java
 Book book = api.bookById(123);
 book.save(database);
-{% endhighlight %}
+```
 
 This is what happens in `bookById()`:
 
-{% highlight java %}
+```java
 Book bookById(int id) {
   return new JsonBook(
     /* RESTful API access point */
   );
 }
-{% endhighlight %}
+```
 
 This is what happens in `Book.save()`:
 
-{% highlight java %}
+```java
 void save(Database db) {
   JsonObject json = /* Load it from RESTful API */
   db.createBook(
@@ -124,12 +124,12 @@ void save(Database db) {
     json.getString("author")
   );
 }
-{% endhighlight %}
+```
 
 What happens if there are many more parameters of the book in JSON that won't
 fit nicely as parameters into a single `createBook()` method? How about this:
 
-{% highlight java %}
+```java
 void save(Database db) {
   db.create()
     .withISBN(json.getString("isbn"))
@@ -137,7 +137,7 @@ void save(Database db) {
     .withAuthor(json.getString("author"))
     .deploy();
 }
-{% endhighlight %}
+```
 
 There are many other options. But the main point is that the data
 _never_ escapes the object `book`. Once the object is instantiated, the

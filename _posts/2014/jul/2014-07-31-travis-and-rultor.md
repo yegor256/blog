@@ -101,7 +101,7 @@ released to RubyGems and a new version to set is 1.5:
 Rultor executed a simple script, [pre-configured](https://doc.rultor.com/basics.html#release) in its
 [`.rultor.yml`](https://github.com/yegor256/jekyll-github-deploy/blob/master/.rultor.yml):
 
-{% highlight text %}
+```text
 release:
   script: |
     ./test.sh
@@ -110,7 +110,7 @@ release:
     gem build jgd.gemspec
     chmod 0600 ../rubygems.yml
     gem push *.gem --config-file ../rubygems.yml
-{% endhighlight %}
+```
 
 The script is parameterized, as you see. There is one parameter that
 is passed by Rultor into the script: `${tag}`. This parameter was
@@ -119,29 +119,29 @@ provided by myself in the GitHub issue, when I submitted a command to Rultor.
 The script tests that the gem works (integration testing) and
 clean up afterwords:
 
-{% highlight bash %}
+```bash
 $ ./test.sh
 $ rm -rf *.gem
-{% endhighlight %}
+```
 
 Then, it changes the version of itself in `jgd.gemspec` to
 the one provided in the `${tag}` (it is an environment variable),
 and builds a new `.gem`:
 
-{% highlight bash %}
+```bash
 $ sed -i "s/2.0-SNAPSHOT/${tag}/g" jgd.gemspec
 $ gem build jgd.gemspec
-{% endhighlight %}
+```
 
 Finally, it pushes a newly built `.gem` to
 [RubyGems]({% pst 2014/aug/2014-08-26-publish-to-rubygems %}),
 using login credentials from `../rubygems.yml`. This file is created by
 Rultor right before starting the script (this mechanism is discussed below):
 
-{% highlight bash %}
+```bash
 $ chmod 0600 ../rubygems.yml
 $ gem push *.gem --config-file ../rubygems.yml
-{% endhighlight %}
+```
 
 If everything works fine and RubyGems confirms successful deployment,
 Rultor reports to GitHub. This is exactly what happened in
@@ -179,12 +179,12 @@ that configures Rultor accordingly through its
 [`.rultor.yml`](https://github.com/yegor256/s3auth/blob/master/.rultor.yml)
 file (pay attention to the first few lines):
 
-{% highlight text %}
+```text
 assets:
   settings.xml: "yegor256/home#assets/s3auth/settings.xml"
   pubring.gpg: "yegor256/home#assets/pubring.gpg"
   secring.gpg: "yegor256/home#assets/secring.gpg"
-{% endhighlight %}
+```
 
 These YAML entries inform Rultor that it has to get `assets/s3auth/settings.xml`
 file from `yegor256/home` private (!) GitHub repository and put it into

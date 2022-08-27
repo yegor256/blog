@@ -29,7 +29,7 @@ buffer:
 
 A simple example of `NULL` usage in Java:
 
-{% highlight java %}
+```java
 public Employee getByName(String name) {
   int id = database.find(name);
   if (id == 0) {
@@ -37,7 +37,7 @@ public Employee getByName(String name) {
   }
   return new Employee(id);
 }
-{% endhighlight %}
+```
 
 What is wrong with this method?
 
@@ -61,7 +61,7 @@ The first one is **[Null Object](http://en.wikipedia.org/wiki/Null_Object_patter
 design [pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 (the best way is to make it a constant):
 
-{% highlight java %}
+```java
 public Employee getByName(String name) {
   int id = database.find(name);
   if (id == 0) {
@@ -69,13 +69,13 @@ public Employee getByName(String name) {
   }
   return Employee(id);
 }
-{% endhighlight %}
+```
 
 The second possible alternative is to [fail fast]({% pst 2015/aug/2015-08-25-fail-fast %})
 by throwing an **Exception** when you can't return an
 [object]({% pst 2016/jul/2016-07-14-who-is-object %}):
 
-{% highlight java %}
+```java
 public Employee getByName(String name) {
   int id = database.find(name);
   if (id == 0) {
@@ -83,7 +83,7 @@ public Employee getByName(String name) {
   }
   return Employee(id);
 }
-{% endhighlight %}
+```
 
 Now, let's see the arguments against `NULL`.
 
@@ -102,7 +102,7 @@ If you forget to check, a [`NullPointerException`](http://docs.oracle.com/javase
 may break execution in runtime. Thus, your logic becomes
 polluted with multiple checks and if/then/else forks:
 
-{% highlight java %}
+```java
 // this is a terrible design, don't reuse
 Employee employee = dept.getByName("Jeffrey");
 if (employee == null) {
@@ -111,7 +111,7 @@ if (employee == null) {
 } else {
   employee.transferTo(dept2);
 }
-{% endhighlight %}
+```
 
 This is how exceptional situations are supposed to be handled in
 [C](http://en.wikipedia.org/wiki/C_%28programming_language%29) and
@@ -121,9 +121,9 @@ primarily to get rid of these ad-hoc error handling blocks.
 In OOP, we let exceptions bubble up until they reach an application-wide
 error handler and our code becomes much cleaner and shorter:
 
-{% highlight java %}
+```java
 dept.getByName("Jeffrey").transferTo(dept2);
-{% endhighlight %}
+```
 
 Consider `NULL` references an inheritance of procedural programming,
 and use 1) Null Objects or 2) Exceptions instead.
@@ -145,24 +145,24 @@ for the sake of performance. For example, method `get()` of
 interface [`Map`](http://docs.oracle.com/javase/7/docs/api/java/util/Map.html)
 in Java returns `NULL` when there is no such item in the map:
 
-{% highlight java %}
+```java
 Employee employee = employees.get("Jeffrey");
 if (employee == null) {
   throw new EmployeeNotFoundException();
 }
 return employee;
-{% endhighlight %}
+```
 
 This code searches the map only once due to the usage of `NULL` in `Map`.
 If we would refactor `Map` so that its method `get()` will throw
 an exception if nothing is found, our code will look like this:
 
-{% highlight java %}
+```java
 if (!employees.containsKey("Jeffrey")) { // first search
   throw new EmployeeNotFoundException();
 }
 return employees.get("Jeffrey"); // second search
-{% endhighlight %}
+```
 
 Obviously, this is method is twice as slow as the first one. What to do?
 
@@ -171,13 +171,13 @@ Its method `get()` should have been returning an
 [`Iterator`]({% pst 2015/apr/2015-04-30-iterating-adapter %})
 so that our code would look like:
 
-{% highlight java %}
+```java
 Iterator found = Map.search("Jeffrey");
 if (!found.hasNext()) {
   throw new EmployeeNotFoundException();
 }
 return found.next();
-{% endhighlight %}
+```
 
 BTW, that is exactly how C++ STL
 [map::find()](http://en.cppreference.com/w/cpp/container/map/find) method is designed.
@@ -191,14 +191,14 @@ that `NULL` is a pointer to nothing (`0x00000000`, in Intel x86 processors).
 However, if you start thinking as an object, this statement
 makes much less sense. This is how our code looks from an object point of view:
 
-{% highlight text %}
+```text
 - Hello, is it a software department?
 - Yes.
 - Let me talk to your employee "Jeffrey" please.
 - Hold the line please...
 - Hello.
 - Are you NULL?
-{% endhighlight %}
+```
 
 The last question in this conversation sounds weird, doesn't it?
 
@@ -233,7 +233,7 @@ doesn't fit with the main usage scenario of the method.
 Otherwise, return a Null Object, that exposes some common
 behavior and throws exceptions on all other calls:
 
-{% highlight java %}
+```java
 public Employee getByName(String name) {
   int id = database.find(name);
   Employee employee;
@@ -255,7 +255,7 @@ public Employee getByName(String name) {
   }
   return employee;
 }
-{% endhighlight %}
+```
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -271,7 +271,7 @@ changes its state during the entire life-cycle.
 Very often, `NULL` values are used in [lazy loading]({% pst 2017/oct/2017-10-17-lazy-loading-caching-sticky-cactoos %}),
 to make objects incomplete and mutable. For example:
 
-{% highlight java %}
+```java
 public class Department {
   private Employee found = null;
   public synchronized Employee manager() {
@@ -281,7 +281,7 @@ public class Department {
     return this.found;
   }
 }
-{% endhighlight %}
+```
 
 This technology, although widely used, is an anti-pattern in
 [OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}).
@@ -303,7 +303,7 @@ For example, [jcabi-aspects](http://aspects.jcabi.com) has
 [`@Cacheable`](http://aspects.jcabi.com/annotation-cacheable.html)
 annotation that caches the value returned by a method:
 
-{% highlight java %}
+```java
 import com.jcabi.aspects.Cacheable;
 public class Department {
   @Cacheable(forever = true)
@@ -311,7 +311,7 @@ public class Department {
     return new Employee("Jacky Brown");
   }
 }
-{% endhighlight %}
+```
 
 I hope this analysis was convincing enough that you will
 stop `NULL`-ing your code :)

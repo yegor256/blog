@@ -51,11 +51,11 @@ If you didn't have the key before, it will be created automatically.
 Now, encrypt `id_rsa` and `id_rsa.pub` (they are in the `~/.ssh` directory)
 with a [rultor remote](https://github.com/yegor256/rultor-remote):
 
-{% highlight xml %}
+```xml
 $ gem install rultor
 $ rultor encrypt -p me/test id_rsa
 $ rultor encrypt -p me/test id_rsa.pub
-{% endhighlight %}
+```
 
 Instead of `me/test` use the name of your GitHub project.
 
@@ -68,7 +68,7 @@ Create a `.rultor.yml` file in the root directory of your project
 ([reference page](https://doc.rultor.com/reference.html)
 explains this format in detail):
 
-{% highlight text %}
+```text
 decrypt:
   id_rsa: "repo/id_rsa.asc"
   id_rsa.pub: "repo/id_rsa.pub.asc"
@@ -85,7 +85,7 @@ release:
       "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" \
       > ~/.ssh/config
     git push -f heroku $(git symbolic-ref --short HEAD):master
-{% endhighlight %}
+```
 
 You can compare your file with live Rultor
 [configuration of aintshy/hub](https://github.com/aintshy/hub/blob/master/.rultor.yml).
@@ -96,9 +96,9 @@ Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like this into it
 (read more about [Rultor commands](https://doc.rultor.com/basics.html)):
 
-{% highlight text %}
+```text
 @rultor release, tag is `0.1`
-{% endhighlight %}
+```
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 

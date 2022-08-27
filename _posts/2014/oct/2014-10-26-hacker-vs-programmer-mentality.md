@@ -85,9 +85,9 @@ Someone with a hacker mentality would call this
 [Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number)
 Java method an "elegant code" (would you?):
 
-{% highlight java %}
+```java
 public int f(int n) { return n>2?f(n-1)+f(n-2):n; }
-{% endhighlight %}
+```
 
 I would highlight these qualities of a good
 [hacker](https://en.wikipedia.org/wiki/Hacker_%28computer_security%29):
@@ -119,7 +119,7 @@ Someone with a designer mentality would refactor the code above
 to make it easier to read. He would call this Java function an "elegant code"
 (how about you?):
 
-{% highlight java %}
+```java
 public int fibo(final int pos) {
   final int num;
   if (pos > 2) {
@@ -129,7 +129,7 @@ public int fibo(final int pos) {
   }
   return num;
 }
-{% endhighlight %}
+```
 
 I think these qualities can be attributed to a good designer:
 

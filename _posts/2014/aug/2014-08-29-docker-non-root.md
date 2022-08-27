@@ -29,22 +29,22 @@ after it is started.
 
 First, this is how we start a new Docker container:
 
-{% highlight bash %}
+```bash
 $ sudo docker run -i -t --rm -v "$(pwd):/main" \
   yegor256/rultor /main/entry.sh
-{% endhighlight %}
+```
 
 There are two files in the current directory: `entry.sh` and `script.sh`.
 `entry.sh` is the file being executed by Docker on start,
 and it contains the following:
 
-{% highlight bash %}
+```bash
 #!/bin/bash
 adduser --disabled-password --gecos '' r
 adduser r sudo
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 su -m r -c /home/r/script.sh
-{% endhighlight %}
+```
 
 `script.sh` will be executed as a user `r` inside the container. And this
 `r` user will have `sudo` permissions. This is exactly what all projects,

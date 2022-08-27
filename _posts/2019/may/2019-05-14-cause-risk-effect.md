@@ -73,11 +73,11 @@ Risk Management chapter.
 
 First, we _identify_ the risk. It will consist of _three_ parts:
 
-{% highlight text %}
+```text
 Cause #1: Sibit works by using the Blockchain API
 Risk #1: The API may be changed without notice
 Effect #1: Users will be disappointed
-{% endhighlight %}
+```
 
 The _cause_ is something that we have and which is a fact. The _risk_ is the
 anticipated _event_, which may happen or may not. The _effect_ is
@@ -89,9 +89,9 @@ define cause/risk/effect components, because, guess what ... we may
 have different combinations of risks, effects and causes.
 For example, how about identifying an additional risk for an existing cause:
 
-{% highlight text %}
+```text
 Risk #2: The API may go out of the market
-{% endhighlight %}
+```
 
 It's a different risk from the one we had before. The API will not change,
 but will disappear entirely from the market. Is it possible? Pretty much.
@@ -104,9 +104,9 @@ to make it understand the new API. I may even fail to do so, if the new API
 has a significantly different design. In other words, the effect of
 risk #2 will be something like:
 
-{% highlight text %}
+```text
 Effect #2: It will take time to connect to a new API
-{% endhighlight %}
+```
 
 On the other hand, the moment the API gets out of the market,
 there will be an _opportunity_ on the market for a similar API. If we know
@@ -114,9 +114,9 @@ about it at the right moment of time, we could _exploit_ that opportunity
 and create a similar API for other users, right? Thus, risk #2 has
 an additional effect:
 
-{% highlight text %}
+```text
 Effect #3: There will be an opportunity to create a similar API
-{% endhighlight %}
+```
 
 This is a _positive_ effect, while the effects we had before were _negative_ ones.
 The job of a project manager is not only to identify negative effects, but
@@ -124,11 +124,11 @@ to find a similar amount of positive effects for most risks and causes.
 
 To summarize, this is what we have now:
 
-{% highlight text %}
+```text
 C1 → R1 → E1
    → R2 → E2
         → E3
-{% endhighlight %}
+```
 
 Get the diagram? The cause `C1` leads to the risks `R1` and `R2`, which have
 a number of effects each: `E1`, `E2`, and `E3`. In order to be able to define
@@ -184,11 +184,11 @@ First, we analyze all risks and assign a _probability_ to each of them,
 where 1 means that the risk will most likely never occur and 9
 means that the risk will undoubtedly happen:
 
-{% highlight text %}
+```text
 C1 → R1:7 → E1
    → R2:2 → E2
           → E3
-{% endhighlight %}
+```
 
 I assigned 7 and 2 to the risks above. It was my _expert judgment_. No math here.
 I just took a look at the risks and made my personal decision,
@@ -199,11 +199,11 @@ Here, 1 means that the consequences we are expecting won't hurt anyone
 and won't really help anyone either, while 9 means that the effect is crucial
 (either in a negative or a positive way):
 
-{% highlight text %}
+```text
 C1 → R1:7 → E1↓:3
    → R2:2 → E2↓:8
           → E3↑:3
-{% endhighlight %}
+```
 
 Again, I chose the numbers according to my expert judgement. Changing the gem
 according to a slightly changed API is one thing (the impact is 3), while
@@ -213,11 +213,11 @@ of work (hence the impact is 8).
 The final step is to multiply them: probability × impact. We will get this
 list of risks:
 
-{% highlight text %}
+```text
 C1 → R1:7 → E1↓:3 ⇢ 7×3 = 21
 C1 → R2:2 → E2↓:8 ⇢ 2×8 = 16
 C1 → R2:2 → E3↑:3 ⇢ 2×3 =  6
-{% endhighlight %}
+```
 
 You can now see what is what in our list. Even though the consequences of the
 second line in the list are more serious, the probability is lower and,
@@ -287,25 +287,25 @@ The bottom line is that a plan may be attached to either a cause, a risk,
 or an effect. I would define three plans, all mitigating the impact
 of `E1`:
 
-{% highlight text %}
+```text
 P1→E1: Create integration tests (once)
 P2→E1: Configure CI (once)
 P3→E1: Check the repo for compliance with API (weekly)
-{% endhighlight %}
+```
 
 The first two are one-time actions, which I have to perform ASAP. Once
 completed they will lower the impact of `E1`. The plan `P3` should
 be performed every week, in order to lower the impact of `E1` too.
 Here is how my Risk List looks, together with the plans:
 
-{% highlight text %}
+```text
 C1 → R1:7 → E1↓:3 ⇢ 7×3 = 21
   P1, P2, P3
 C1 → R2:2 → E2↓:8 ⇢ 2×8 = 16
   No plans
 C1 → R2:2 → E3↑:3 ⇢ 2×3 =  6
   No plans
-{% endhighlight %}
+```
 
 Make sense?
 I hope so. I definitely recommend you read

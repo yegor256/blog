@@ -52,18 +52,18 @@ see in a few examples.
 
 Say we annotate a property with `@Inject`:
 
-{% highlight java %}
+```java
 import javax.inject.Inject;
 public class Books {
   @Inject
   private final DB db;
   // some methods here, which use this.db
 }
-{% endhighlight %}
+```
 
 Then we have an injector that knows what to inject:
 
-{% highlight java %}
+```java
 Injector injector = Guice.createInjector(
   new AbstractModule() {
     @Override
@@ -74,13 +74,13 @@ Injector injector = Guice.createInjector(
     }
   }
 );
-{% endhighlight %}
+```
 
 Now we're making an instance of class `Books` via the container:
 
-{% highlight java %}
+```java
 Books books = injector.getInstance(Books.class);
-{% endhighlight %}
+```
 
 The class `Books` has no idea how and who will inject an instance
 of class `DB` into it. This will happen behind the scenes and outside
@@ -91,7 +91,7 @@ any more. It can't be responsible for what's happening to it.
 
 Instead, here is how this should be done:
 
-{% highlight java %}
+```java
 class Books {
   private final DB db;
   Books(final DB base) {
@@ -99,7 +99,7 @@ class Books {
   }
   // some methods here, which use this.db
 }
-{% endhighlight %}
+```
 
 {% youtube oV6Utb5Jows %}
 
@@ -125,7 +125,7 @@ This is how JAXB
 [POJO](https://en.wikipedia.org/wiki/Plain_Old_Java_Object) to XML. First,
 you attach the `@XmlElement` annotation to the getter:
 
-{% highlight java %}
+```java
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
@@ -139,17 +139,17 @@ public class Book {
     return this.title;
   }
 }
-{% endhighlight %}
+```
 
 Then, you create a marshaller and ask it to convert an instance of class
 `Book` into XML:
 
-{% highlight java %}
+```java
 final Book book = new Book("0132350882", "Clean Code");
 final JAXBContext ctx = JAXBContext.newInstance(Book.class);
 final Marshaller marshaller = ctx.createMarshaller();
 marshaller.marshal(book, System.out);
-{% endhighlight %}
+```
 
 {% youtube cv23Z6xpwDw %}
 
@@ -157,7 +157,7 @@ Who is creating the XML? Not the `book`. Someone else, outside of the
 class `Book`. This is very wrong. Instead, this is how this should have
 been done. First, the class that has no idea about XML:
 
-{% highlight java %}
+```java
 class DefaultBook implements Book {
   private final String title;
   DefaultBook(final String title) {
@@ -168,13 +168,13 @@ class DefaultBook implements Book {
     return this.title;
   }
 }
-{% endhighlight %}
+```
 
 Then, the
 [decorator]({% pst 2015/feb/2015-02-26-composable-decorators %})
 that prints it to the XML:
 
-{% highlight java %}
+```java
 class XmlBook implements Book{
   private final Book origin;
   XmlBook(final Book book) {
@@ -191,16 +191,16 @@ class XmlBook implements Book{
     );
   }
 }
-{% endhighlight %}
+```
 
 Now, in order to [print]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
 the book in XML we do the following:
 
-{% highlight java %}
+```java
 String xml = new XmlBook(
   new DefaultBook("Elegant Objects")
 ).toXML();
-{% endhighlight %}
+```
 
 The XML printing functionality is inside `XmlBook`. If you don't like the
 decorator idea, you can move the `toXML()` method to the `DefaultBook` class. It's
@@ -215,7 +215,7 @@ to the XML. Nobody else!
 Here is an example
 (from [my own library]({% pst 2014/aug/2014-08-15-retry-java-method-on-exception %})):
 
-{% highlight java %}
+```java
 import com.jcabi.aspects.RetryOnFailure;
 class Foo {
   @RetryOnFailure
@@ -223,13 +223,13 @@ class Foo {
     return url.openConnection().getContent();
   }
 }
-{% endhighlight %}
+```
 
 After compilation, we run a so called
 [AOP weaver]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
 that technically turns our code into something like this:
 
-{% highlight java %}
+```java
 class Foo {
   public String load(URL url) {
     while (true) {
@@ -246,7 +246,7 @@ class Foo {
     }
   }
 }
-{% endhighlight %}
+```
 
 I simplified the actual algorithm of retrying a method call on failure, but I'm
 sure you get the idea. [AspectJ](http://www.eclipse.org/aspectj/),
@@ -271,13 +271,13 @@ must see the entire composition process.
 
 A much better design would look like this (instead of annotations):
 
-{% highlight java %}
+```java
 Foo foo = new FooThatRetries(new Foo());
-{% endhighlight %}
+```
 
 And then, the implementation of `FooThatRetries`:
 
-{% highlight java %}
+```java
 class FooThatRetries implements Foo {
   private final Foo origin;
   FooThatRetries(Foo foo) {
@@ -294,11 +294,11 @@ class FooThatRetries implements Foo {
     );
   }
 }
-{% endhighlight %}
+```
 
 And now, the implementation of `Retry`:
 
-{% highlight java %}
+```java
 class Retry {
   public <T> T eval(Retry.Algorithm<T> algo) {
     while (true) {
@@ -313,7 +313,7 @@ class Retry {
     T eval();
   }
 }
-{% endhighlight %}
+```
 
 Is the code longer? Yes. Is it cleaner? A lot more. I regret that I
 didn't understand it two years ago, when I started to work with

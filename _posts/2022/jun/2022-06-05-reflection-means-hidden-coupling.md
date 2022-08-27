@@ -43,11 +43,11 @@ unnecessary and harmful.
 
 Here is the code:
 
-{% highlight java %}
+```java
 public int sizeOf(Iterable items) {
   return ((Collection) items).size();
 }
-{% endhighlight %}
+```
 
 I'm not sure everybody would agree that this is reflection, but I believe
 it is: we check the structure of the class at runtime and then make
@@ -67,12 +67,12 @@ leading to [`MethodNotFoundException`](https://docs.oracle.com/javaee/5/api/java
 The biggest problem the code above causes to the entire program is the coupling
 it introduces between itself and its clients, for example:
 
-{% highlight java %}
+```java
 public void calc(Iterable<?> list) {
   int s = sizeOf(list);
   System.out.println("The size is " + s);
 }
-{% endhighlight %}
+```
 
 This method may work or it may not. It will depend on the actual class of `list`. If it is
 `Collection`, the call to `sizeOf` will succeed. Otherwise, there will be a runtime failure.
@@ -80,7 +80,7 @@ By looking at the method `calc` we can't tell what is the right way to handle `l
 to avoid runtime failure. We need to read the body of `sizeOf` and only then can we change `calc`
 to something like this:
 
-{% highlight java %}
+```java
 public void calc(Iterable<?> list) {
   if (list instanceof Collection) {
     int s = sizeOf(list);
@@ -89,14 +89,14 @@ public void calc(Iterable<?> list) {
     System.out.println("The size is unknown");
   }
 }
-{% endhighlight %}
+```
 
 This code seems to be OK so far. However, what will happen when `sizeOf` changes its implementation
 to something like this (I took it from
 [this article]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
 about casting):
 
-{% highlight java %}
+```java
 public int sizeOf(Iterable items) {
   int size = 0;
   if (items instanceof Collection) {
@@ -108,7 +108,7 @@ public int sizeOf(Iterable items) {
   }
   return size;
 }
-{% endhighlight %}
+```
 
 Now, `sizeOf` perfectly handles any type that's coming in, whether it's an instance
 of `Collection` or not. However, the method `calc` doesn't know about the changes made in the method `sizeOf`.
@@ -129,7 +129,7 @@ and class casting (or did not even have them), the coupling would not be possibl
 
 Consider this code:
 
-{% highlight java %}
+```java
 class Book {
   private String author;
   private String title;
@@ -146,7 +146,7 @@ class Book {
     return this.title + " by " + this.author;
   }
 }
-{% endhighlight %}
+```
 
 How would you write a unit test for this class and for its method `print()`?
 Obviously, it's almost impossible without refactoring the class.
@@ -157,7 +157,7 @@ as a dependency, but some of us
 which would allow us to test the private method `name` directly, without
 calling `print` first:
 
-{% highlight java %}
+```java
 class BookTest {
   @Test
   void testNamingWorks() {
@@ -172,7 +172,7 @@ class BookTest {
     );
   }
 }
-{% endhighlight %}
+```
 
 You can also use [PowerMock](https://github.com/powermock/powermock) Java library
 to do many "beautiful" things with private methods.
@@ -196,7 +196,7 @@ Before I start making any changes, I run all tests
 (it's a [good practice](https://wiki.c2.com/?TestEveryRefactoring)) and they all pass.
 Then I make my changes, expecting no tests to fail:
 
-{% highlight java %}
+```java
 class Book {
   // ...
   public void print() {
@@ -211,7 +211,7 @@ class Book {
       .append(this.author);
   }
 }
-{% endhighlight %}
+```
 
 However, the test `BookTest` will fail, because it _expects_ my class `Book` to have
 method `name` which returns `String`. If it's not my test or I wrote it a long time ago,
@@ -252,7 +252,7 @@ life would be even better if we also didn't have private methods.
 Here is how a typical [factory]({% pst 2017/nov/2017-11-14-static-factory-methods %})
 may work:
 
-{% highlight java %}
+```java
 interface Operator {
   int calc(int a, int b);
 }
@@ -264,7 +264,7 @@ Operator make(String name) {
     throw new IllegalStateException(ex);
   }
 }
-{% endhighlight %}
+```
 
 The [factory method]({% pst 2017/nov/2017-11-14-static-factory-methods %})
 is `make`. It expects the name of the "operator" to be provided
@@ -275,7 +275,7 @@ from the Java Reflection API, constructs the name of the class, finds it in the
 and makes an instance of it. Now, say there are two classes both implementing the
 interface `Operator`:
 
-{% highlight java %}
+```java
 class OpPlus implements Operator {
   int calc(int a, int b) {
     return a + b;
@@ -286,29 +286,29 @@ class OpMinus implements Operator {
     return a - b;
   }
 }
-{% endhighlight %}
+```
 
 Then we use them, first asking our factory method to make objects from
 operator names:
 
-{% highlight java %}
+```java
 int result = make("Plus").calc(
   make("Minus").calc(15, 3),
   make("Minus").calc(8, 7)
 );
-{% endhighlight %}
+```
 
 The `result` will be 13.
 
 We would not be able to do this without reflection. We would have to do this
 instead:
 
-{% highlight java %}
+```java
 int result = new OpPlus().calc(
   new OpMinus().calc(15, 3),
   new OpMinus().calc(8, 7)
 );
-{% endhighlight %}
+```
 
 If you ask me, this code looks much more readable and maintainable.
 First of all, because in any IDE that enables
