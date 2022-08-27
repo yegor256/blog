@@ -95,31 +95,33 @@ If not, I recommend you read this Stack Overflow thread:
 have access to a database connection pool in many different places within the
 application? We simply need something like this:</p>
 
-<pre>class Database {
-  public static Database INSTANCE = new Database();
-  private Database() {
-    // Create a connection pool
-  }
-  public java.sql.Connection connect() {
-    // Get a new connection from the pool
-    // and return it
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Database</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Database</span> <span class="no">INSTANCE</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Database</span><span class="o">();</span>
+  <span class="kd">private</span> <span class="nf">Database</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Create a connection pool</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="n">java</span><span class="o">.</span><span class="na">sql</span><span class="o">.</span><span class="na">Connection</span> <span class="nf">connect</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Get a new connection from the pool</span>
+    <span class="c1">// and return it</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Later in at, say, the JAX-RS REST method, we need to retrieve something
 from the database:</p>
 
-<pre>@Path("/")
-class Index {
-  @GET
-  public String text() {
-    java.sql.Connection connection =
-      Database.INSTANCE.connect();
-    return new JdbcSession(connection)
-      .sql("SELECT text FROM table")
-      .fetch(new SingleOutcome(String.class))
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Path</span><span class="o">(</span><span class="s">"/"</span><span class="o">)</span>
+<span class="kd">class</span> <span class="nc">Index</span> <span class="o">{</span>
+  <span class="nd">@GET</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">java</span><span class="o">.</span><span class="na">sql</span><span class="o">.</span><span class="na">Connection</span> <span class="n">connection</span> <span class="o">=</span>
+      <span class="nc">Database</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">connect</span><span class="o">();</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JdbcSession</span><span class="o">(</span><span class="n">connection</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"SELECT text FROM table"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">fetch</span><span class="o">(</span><span class="k">new</span> <span class="nc">SingleOutcome</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">class</span><span class="o">))</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>In case you’re not familiar with JAX-RS, it’s a simple
 <a href="/2016/12/13/mvc-vs-oop.html">MVC</a> architecture,

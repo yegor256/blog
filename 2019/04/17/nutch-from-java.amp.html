@@ -104,131 +104,133 @@ First, you need these dependencies in your <code class="highlighter-rouge">pom.x
 (Nutch uses <a href="https://hadoop.apache.org/">Apache Hadoop</a>, that’s why we need the
 second dependency):</p>
 
-<pre>&lt;project&gt;
-  &lt;dependencies&gt;
-    &lt;dependency&gt;
-      &lt;groupId&gt;org.apache.nutch&lt;/groupId&gt;
-      &lt;artifactId&gt;nutch&lt;/artifactId&gt;
-      &lt;version&gt;1.15&lt;/version&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-      &lt;groupId&gt;org.apache.hadoop&lt;/groupId&gt;
-      &lt;artifactId&gt;hadoop-common&lt;/artifactId&gt;
-      &lt;version&gt;2.7.2&lt;/version&gt;
-    &lt;/dependency&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.apache.nutch<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>nutch<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>1.15<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.apache.hadoop<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>hadoop-common<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>2.7.2<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
     [...]
-  &lt;/dependencies&gt;
+  <span class="nt">&lt;/dependencies&gt;</span>
   [...]
-&lt;/project&gt;</pre>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>Next, this is your Java code, which does all the work:</p>
 
-<pre>import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
-import org.apache.commons.io.FileUtils;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.nutch.crawl.CrawlDb;
-import org.apache.nutch.crawl.Generator;
-import org.apache.nutch.crawl.Injector;
-import org.apache.nutch.fetcher.Fetcher;
-import org.apache.nutch.parse.ParseSegment;
-import org.apache.nutch.tools.FileDumper;
-public class Main {
-  public static void main(String... args) throws Exception {
-    // Create a default configuration object, which will read
-    // the content of nutch-default.xml file from the classpath,
-    // parse it and take its entire content as the default
-    // configuration. Funny, but this interface is from Hadoop:
-    Configuration conf = NutchConfiguration.create();
-    // Now it's possible to reset some configuration parameters
-    // by using this set() method. This one is mandatory, if you
-    // don't set it the crawling won't work. The value is used
-    // as User-Agent HTTP header.
-    conf.set("http.agent.name", "me, myself, and I");
-    // This one is also mandatory and we will discuss its
-    // value below. You need to point Nutch to the directory
-    // with compiled plugins and this collection is NOT in
-    // its default JAR package, unfortunately.
-    conf.set("plugin.folders", System.getProperty("nutch.plugins.dir"));
-    // First, we need to have a directory where everything will
-    // happen. I assume you are familiar with Maven, so let's use
-    // its default temporary directory "target":
-    Path home = new Path("target");
-    // Next, we have to create a file with a list of URLs Nutch will
-    // start crawling from:
-    String[] urls = { "http://www.zerocracy.com" };
-    final Path targets = new Path(home, "urls");
-    Files.createDirectory(Paths.get(targets.toString()));
-    Files.write(
-      Paths.get(targets.toString(), "list-of-urls.txt"),
-      String.join("\n", urls).getBytes()
-    );
-    // Next, we have to point Nutch to the directory with the
-    // text file and let it "inject" our URLs into its database:
-    new Injector(conf).inject(
-      new Path(home, "crawldb"), // the directory with its database
-      new Path(home, "urls"), // the directory with text files with URLs
-      true, true // no idea what this is
-    );
-    // Now, it's time to do a few cycles of fetching, parsing, and
-    // updating. This is how Nutch works, in increments. Each increment
-    // will bring new web pages to the database. The more increments
-    // you run, the deeper Nutch will go into the Internet. Five here
-    // is a very small number. If you really want to crawl deeper,
-    // you will need hundreds of increments. I guess, anyway. I haven't tried it.
-    for (int idx = 0; idx &lt; 5; ++idx) {
-      this.cycle(home, conf);
-    }
-    // Now it's time to dump what is fetched to a new directory,
-    // which will contain HTML pages and all other files when
-    // finished.
-    Files.createDirectory(Paths.get(new Path(home, "dump").toString()));
-    new FileDumper().dump(
-      new File(new Path(home, "dump").toString()), // where to dump
-      new File(new Path(home, "segments").toString()),
-      null, true, false, true
-    );
-  }
-  private void cycle(Path home, Configuration conf) {
-    // This is the directory with "segments". Each fetching cycle
-    // will produce its own collection of files. Each collection
-    // is called a segment.
-    final Path segments = new Path(home, "segments");
-    // First, we generate a list of target URLs to fetch from:
-    new Generator(conf).generate(
-      new Path(home, "crawldb"),
-      new Path(home, "segments"),
-      1, 1000L, System.currentTimeMillis()
-    );
-    // Then, we get the path of the current segment:
-    final Path sgmt = Batch.segment(segments);
-    // Then, we fetch, parse and update:
-    new Fetcher(conf).fetch(sgmt, 10);
-    new ParseSegment(conf).parse(sgmt);
-    new CrawlDb(conf).update(
-      new Path(home, "crawldb"),
-      Files.list(Paths.get(segments.toString()))
-          .map(p -&gt; new Path(p.toString()))
-          .toArray(Path[]::new),
-      true, true
-    );
-  }
-  private static Path segment(final Path dir) throws IOException {
-    // Get the path of the most recent segment in the list,
-    // sorted by the date/time of their creation.
-    final List&lt;Path&gt; list = Files.list(Paths.get(dir.toString()))
-      .map(p -&gt; new Path(p.toString()))
-      .sorted(Comparator.comparing(Path::toString))
-      .collect(Collectors.toList());
-    return list.get(list.size() - 1);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Paths</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Collection</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Comparator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.Collectors</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.io.FileUtils</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.hadoop.conf.Configuration</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.nutch.crawl.CrawlDb</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.nutch.crawl.Generator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.nutch.crawl.Injector</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.nutch.fetcher.Fetcher</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.nutch.parse.ParseSegment</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.nutch.tools.FileDumper</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="c1">// Create a default configuration object, which will read</span>
+    <span class="c1">// the content of nutch-default.xml file from the classpath,</span>
+    <span class="c1">// parse it and take its entire content as the default</span>
+    <span class="c1">// configuration. Funny, but this interface is from Hadoop:</span>
+    <span class="nc">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="nc">NutchConfiguration</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+    <span class="c1">// Now it's possible to reset some configuration parameters</span>
+    <span class="c1">// by using this set() method. This one is mandatory, if you</span>
+    <span class="c1">// don't set it the crawling won't work. The value is used</span>
+    <span class="c1">// as User-Agent HTTP header.</span>
+    <span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"http.agent.name"</span><span class="o">,</span> <span class="s">"me, myself, and I"</span><span class="o">);</span>
+    <span class="c1">// This one is also mandatory and we will discuss its</span>
+    <span class="c1">// value below. You need to point Nutch to the directory</span>
+    <span class="c1">// with compiled plugins and this collection is NOT in</span>
+    <span class="c1">// its default JAR package, unfortunately.</span>
+    <span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"plugin.folders"</span><span class="o">,</span> <span class="nc">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">"nutch.plugins.dir"</span><span class="o">));</span>
+    <span class="c1">// First, we need to have a directory where everything will</span>
+    <span class="c1">// happen. I assume you are familiar with Maven, so let's use</span>
+    <span class="c1">// its default temporary directory "target":</span>
+    <span class="nc">Path</span> <span class="n">home</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="s">"target"</span><span class="o">);</span>
+    <span class="c1">// Next, we have to create a file with a list of URLs Nutch will</span>
+    <span class="c1">// start crawling from:</span>
+    <span class="nc">String</span><span class="o">[]</span> <span class="n">urls</span> <span class="o">=</span> <span class="o">{</span> <span class="s">"http://www.zerocracy.com"</span> <span class="o">};</span>
+    <span class="kd">final</span> <span class="nc">Path</span> <span class="n">targets</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"urls"</span><span class="o">);</span>
+    <span class="nc">Files</span><span class="o">.</span><span class="na">createDirectory</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">targets</span><span class="o">.</span><span class="na">toString</span><span class="o">()));</span>
+    <span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span>
+      <span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">targets</span><span class="o">.</span><span class="na">toString</span><span class="o">(),</span> <span class="s">"list-of-urls.txt"</span><span class="o">),</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="s">"\n"</span><span class="o">,</span> <span class="n">urls</span><span class="o">).</span><span class="na">getBytes</span><span class="o">()</span>
+    <span class="o">);</span>
+    <span class="c1">// Next, we have to point Nutch to the directory with the</span>
+    <span class="c1">// text file and let it "inject" our URLs into its database:</span>
+    <span class="k">new</span> <span class="nf">Injector</span><span class="o">(</span><span class="n">conf</span><span class="o">).</span><span class="na">inject</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"crawldb"</span><span class="o">),</span> <span class="c1">// the directory with its database</span>
+      <span class="k">new</span> <span class="nf">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"urls"</span><span class="o">),</span> <span class="c1">// the directory with text files with URLs</span>
+      <span class="kc">true</span><span class="o">,</span> <span class="kc">true</span> <span class="c1">// no idea what this is</span>
+    <span class="o">);</span>
+    <span class="c1">// Now, it's time to do a few cycles of fetching, parsing, and</span>
+    <span class="c1">// updating. This is how Nutch works, in increments. Each increment</span>
+    <span class="c1">// will bring new web pages to the database. The more increments</span>
+    <span class="c1">// you run, the deeper Nutch will go into the Internet. Five here</span>
+    <span class="c1">// is a very small number. If you really want to crawl deeper,</span>
+    <span class="c1">// you will need hundreds of increments. I guess, anyway. I haven't tried it.</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span> <span class="o">++</span><span class="n">idx</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">cycle</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="n">conf</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="c1">// Now it's time to dump what is fetched to a new directory,</span>
+    <span class="c1">// which will contain HTML pages and all other files when</span>
+    <span class="c1">// finished.</span>
+    <span class="nc">Files</span><span class="o">.</span><span class="na">createDirectory</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"dump"</span><span class="o">).</span><span class="na">toString</span><span class="o">()));</span>
+    <span class="k">new</span> <span class="nf">FileDumper</span><span class="o">().</span><span class="na">dump</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"dump"</span><span class="o">).</span><span class="na">toString</span><span class="o">()),</span> <span class="c1">// where to dump</span>
+      <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"segments"</span><span class="o">).</span><span class="na">toString</span><span class="o">()),</span>
+      <span class="kc">null</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">cycle</span><span class="o">(</span><span class="nc">Path</span> <span class="n">home</span><span class="o">,</span> <span class="nc">Configuration</span> <span class="n">conf</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// This is the directory with "segments". Each fetching cycle</span>
+    <span class="c1">// will produce its own collection of files. Each collection</span>
+    <span class="c1">// is called a segment.</span>
+    <span class="kd">final</span> <span class="nc">Path</span> <span class="n">segments</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"segments"</span><span class="o">);</span>
+    <span class="c1">// First, we generate a list of target URLs to fetch from:</span>
+    <span class="k">new</span> <span class="nf">Generator</span><span class="o">(</span><span class="n">conf</span><span class="o">).</span><span class="na">generate</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"crawldb"</span><span class="o">),</span>
+      <span class="k">new</span> <span class="nf">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"segments"</span><span class="o">),</span>
+      <span class="mi">1</span><span class="o">,</span> <span class="mi">1000L</span><span class="o">,</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span>
+    <span class="o">);</span>
+    <span class="c1">// Then, we get the path of the current segment:</span>
+    <span class="kd">final</span> <span class="nc">Path</span> <span class="n">sgmt</span> <span class="o">=</span> <span class="nc">Batch</span><span class="o">.</span><span class="na">segment</span><span class="o">(</span><span class="n">segments</span><span class="o">);</span>
+    <span class="c1">// Then, we fetch, parse and update:</span>
+    <span class="k">new</span> <span class="nf">Fetcher</span><span class="o">(</span><span class="n">conf</span><span class="o">).</span><span class="na">fetch</span><span class="o">(</span><span class="n">sgmt</span><span class="o">,</span> <span class="mi">10</span><span class="o">);</span>
+    <span class="k">new</span> <span class="nf">ParseSegment</span><span class="o">(</span><span class="n">conf</span><span class="o">).</span><span class="na">parse</span><span class="o">(</span><span class="n">sgmt</span><span class="o">);</span>
+    <span class="k">new</span> <span class="nf">CrawlDb</span><span class="o">(</span><span class="n">conf</span><span class="o">).</span><span class="na">update</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Path</span><span class="o">(</span><span class="n">home</span><span class="o">,</span> <span class="s">"crawldb"</span><span class="o">),</span>
+      <span class="nc">Files</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">segments</span><span class="o">.</span><span class="na">toString</span><span class="o">()))</span>
+          <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">toString</span><span class="o">()))</span>
+          <span class="o">.</span><span class="na">toArray</span><span class="o">(</span><span class="nc">Path</span><span class="o">[]::</span><span class="k">new</span><span class="o">),</span>
+      <span class="kc">true</span><span class="o">,</span> <span class="kc">true</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Path</span> <span class="nf">segment</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Path</span> <span class="n">dir</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="c1">// Get the path of the most recent segment in the list,</span>
+    <span class="c1">// sorted by the date/time of their creation.</span>
+    <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Path</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">list</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">dir</span><span class="o">.</span><span class="na">toString</span><span class="o">()))</span>
+      <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nc">Path</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">toString</span><span class="o">()))</span>
+      <span class="o">.</span><span class="na">sorted</span><span class="o">(</span><span class="nc">Comparator</span><span class="o">.</span><span class="na">comparing</span><span class="o">(</span><span class="nl">Path:</span><span class="o">:</span><span class="n">toString</span><span class="o">))</span>
+      <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="nc">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">());</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pay attention that <code class="highlighter-rouge">Path</code> here is not the
 <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html"><code class="highlighter-rouge">Path</code></a> from JDK.
@@ -247,58 +249,60 @@ which will work with the provided plugins.</p>
 <p>What can we do, now that we are in Java, not in the command line? Here is what
 I suggest:</p>
 
-<pre>&lt;project&gt;
-  &lt;build&gt;
-    &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;com.googlecode.maven-download-plugin&lt;/groupId&gt;
-        &lt;artifactId&gt;download-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.4.1&lt;/version&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;id&gt;download-nutch&lt;/id&gt;
-            &lt;phase&gt;generate-resources&lt;/phase&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;wget&lt;/goal&gt;
-            &lt;/goals&gt;
-            &lt;configuration&gt;
-              &lt;url&gt;http://artfiles.org/apache.org/nutch/1.15/apache-nutch-1.15-bin.zip&lt;/url&gt;
-              &lt;unpack&gt;true&lt;/unpack&gt;
-              &lt;outputDirectory&gt;${project.build.directory}&lt;/outputDirectory&gt;
-              &lt;overwrite&gt;false&lt;/overwrite&gt;
-            &lt;/configuration&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>com.googlecode.maven-download-plugin<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>download-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.4.1<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>download-nutch<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;phase&gt;</span>generate-resources<span class="nt">&lt;/phase&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>wget<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+            <span class="nt">&lt;configuration&gt;</span>
+              <span class="nt">&lt;url&gt;</span>http://artfiles.org/apache.org/nutch/1.15/apache-nutch-1.15-bin.zip<span class="nt">&lt;/url&gt;</span>
+              <span class="nt">&lt;unpack&gt;</span>true<span class="nt">&lt;/unpack&gt;</span>
+              <span class="nt">&lt;outputDirectory&gt;</span>${project.build.directory}<span class="nt">&lt;/outputDirectory&gt;</span>
+              <span class="nt">&lt;overwrite&gt;</span>false<span class="nt">&lt;/overwrite&gt;</span>
+            <span class="nt">&lt;/configuration&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
   [...]
-&lt;/project&gt;</pre>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>This Maven plugin will download the entire binary distribution of Nutch
 and will unpack it to <code class="highlighter-rouge">target/apache-nutch-1.15</code>. The plugins will be
 in <code class="highlighter-rouge">target/apache-nutch-1.15/plugins</code>. The only thing we still need
 to do is to set the system property for the unit test:</p>
 
-<pre>&lt;project&gt;
-  &lt;build&gt;
-    &lt;pluginManagement&gt;
-      &lt;plugins&gt;
-        &lt;plugin&gt;
-          &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-          &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
-          &lt;configuration&gt;
-            &lt;systemPropertyVariables&gt;
-              &lt;nutch.plugins.dir&gt;${project.build.directory}/apache-nutch-1.15/plugins&lt;/nutch.plugins.dir&gt;
-            &lt;/systemPropertyVariables&gt;
-          &lt;/configuration&gt;
-        &lt;/plugin&gt;
-      &lt;/plugins&gt;
-    &lt;/pluginManagement&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;pluginManagement&gt;</span>
+      <span class="nt">&lt;plugins&gt;</span>
+        <span class="nt">&lt;plugin&gt;</span>
+          <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+          <span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
+          <span class="nt">&lt;configuration&gt;</span>
+            <span class="nt">&lt;systemPropertyVariables&gt;</span>
+              <span class="nt">&lt;nutch.plugins.dir&gt;</span>${project.build.directory}/apache-nutch-1.15/plugins<span class="nt">&lt;/nutch.plugins.dir&gt;</span>
+            <span class="nt">&lt;/systemPropertyVariables&gt;</span>
+          <span class="nt">&lt;/configuration&gt;</span>
+        <span class="nt">&lt;/plugin&gt;</span>
+      <span class="nt">&lt;/plugins&gt;</span>
+    <span class="nt">&lt;/pluginManagement&gt;</span>
     [...]
-  &lt;/build&gt;
+  <span class="nt">&lt;/build&gt;</span>
   [...]
-&lt;/project&gt;</pre>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>Actually, one more thing we have to do: copy the contents of the directory <code class="highlighter-rouge">conf</code>
 from their binary distribution to our <code class="highlighter-rouge">src/main/resources</code> directory. There

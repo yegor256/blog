@@ -94,14 +94,16 @@ Blockchain works. Here is my short summary. I hope it will be helpful.</p>
 <p>First, there is a <a href="https://en.bitcoin.it/wiki/Private_key">private key</a>,
 which is a short piece of text, for example:</p>
 
-<pre>c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
+</code></pre></div></div>
 
 <p>How did I generate it? It’s random. You can generate one too. Install
 <a href="https://github.com/yegor256/sibit">Sibit</a>, my Ruby gem, and run the following
 (it’s a command line tool):</p>
 
-<pre>$ sibit generate
-c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sibit generate
+c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
+</code></pre></div></div>
 
 <p>Every time you call <code class="highlighter-rouge">sibit generate</code> you will get a new private key. It is
 just a random piece of text (well, a large hex number).
@@ -109,8 +111,9 @@ Then, you create an <a href="https://en.bitcoin.it/wiki/Address">address</a>
 from your private key. Each private key has exactly one address.
 Here is how you create it:</p>
 
-<pre>$ sibit create c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
-1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sibit create c93a36feb31712c390a78b37337cb85d45d3b2f9f6e55108bde32477cbabac5f
+1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe
+</code></pre></div></div>
 
 <p>You give it to someone who wants to send you a payment. A transaction in Bitcoin is not what
 you’re used to thinking about when you imagine a bank transaction. A Bitcoin
@@ -139,8 +142,9 @@ just use <a href="https://www.blockchain.com/api/blockchain_api">Blockchain API<
 (for example) and they will provide you with the information
 about any Bitcoin address. Try this address, for example:</p>
 
-<pre>$ sibit balance 1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY
-20000000</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sibit balance 1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY
+20000000
+</code></pre></div></div>
 
 <p>It is in <a href="https://en.bitcoin.it/wiki/Satoshi_%28unit%29">satoshi</a>,
 which is 0.2 BTC. Click <a href="https://www.blockchain.com/btc/address/1MUhYhaBqzgpwL1focqJNhTymdXbyky9UY">here</a>
@@ -202,10 +206,11 @@ Bitcoin nodes; <a href="https://www.blockchain.com/btc/pushtx">this is</a> one o
 
 <p><a href="https://github.com/yegor256/sibit">Sibit</a> automates this process. You just say:</p>
 
-<pre>$ sibit pay 200000 L \
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sibit pay 200000 L \
   1K3J...se1TYe:c93a36feb3...e55108bde32477cbabac5f \
   153dF1xKyVX5X8brBDroaqKkPmcB8kLtDB \
-  1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe</pre>
+  1K3JgsdRbbUDUgTGo4gvUXUzRZjBse1TYe
+</code></pre></div></div>
 
 <p>Here, the first argument is the amount you are sending. The second one
 is the fee you want to leave untouched. I made it easier for you, to help

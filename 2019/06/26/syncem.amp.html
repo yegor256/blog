@@ -89,33 +89,35 @@ a primitive Ruby gem which makes the above possible with a single decorator.</p>
 <p>Look at this simple Ruby web app, which increments the internal counter
 on every web click:</p>
 
-<pre>require 'sinatra'
-class Front &lt; Sinatra::Base
-  configure do
-    set(:visits, Visits.new)
-  end
-  before '/*' do
-    settings.visits.increment
-  end
-  get '/' do
-    "Your visit is no.#{settings.visits.total}"
-  end
-end
-Front.run!</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'sinatra'</span>
+<span class="k">class</span> <span class="nc">Front</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">configure</span> <span class="k">do</span>
+    <span class="n">set</span><span class="p">(</span><span class="ss">:visits</span><span class="p">,</span> <span class="no">Visits</span><span class="p">.</span><span class="nf">new</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">before</span> <span class="s1">'/*'</span> <span class="k">do</span>
+    <span class="n">settings</span><span class="p">.</span><span class="nf">visits</span><span class="p">.</span><span class="nf">increment</span>
+  <span class="k">end</span>
+  <span class="n">get</span> <span class="s1">'/'</span> <span class="k">do</span>
+    <span class="s2">"Your visit is no.</span><span class="si">#{</span><span class="n">settings</span><span class="p">.</span><span class="nf">visits</span><span class="p">.</span><span class="nf">total</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="no">Front</span><span class="p">.</span><span class="nf">run!</span>
+</code></pre></div></div>
 
 <p>In order to count visits it uses class <code class="highlighter-rouge">Visits</code>, which may be
 defined this way (it keeps the counter in a file):</p>
 
-<pre>class Visits
-  def increment
-    idx = IO.read('idx.txt').to_i + 1
-    IO.write('idx.txt', idx.to_s)
-    idx.to_s
-  end
-  def total
-    IO.read('idx.txt').to_i
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Visits</span>
+  <span class="k">def</span> <span class="nf">increment</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="no">IO</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s1">'idx.txt'</span><span class="p">).</span><span class="nf">to_i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="no">IO</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s1">'idx.txt'</span><span class="p">,</span> <span class="n">idx</span><span class="p">.</span><span class="nf">to_s</span><span class="p">)</span>
+    <span class="n">idx</span><span class="p">.</span><span class="nf">to_s</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">total</span>
+    <span class="no">IO</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s1">'idx.txt'</span><span class="p">).</span><span class="nf">to_i</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>It is not thread-safe. Try to run this app and you will see that,
 if you make many concurrent HTTP requests to the front page,
@@ -124,19 +126,21 @@ the counter will not always return consecutive numbers.</p>
 <p>To make it thread-safe you can use <a href="https://github.com/yegor256/syncem">SyncEm</a>,
 a small Ruby gem, which I created just a few months ago. Here is how:</p>
 
-<pre>require 'syncem'
-class Front &lt; Sinatra::Base
-  configure do
-    set(:visits, SyncEm.new(Visits.new))
-  end
-  # Same as above
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'syncem'</span>
+<span class="k">class</span> <span class="nc">Front</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">configure</span> <span class="k">do</span>
+    <span class="n">set</span><span class="p">(</span><span class="ss">:visits</span><span class="p">,</span> <span class="no">SyncEm</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">Visits</span><span class="p">.</span><span class="nf">new</span><span class="p">))</span>
+  <span class="k">end</span>
+  <span class="c1"># Same as above</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Here we just <em>decorate</em> the object with a thread-safe decorator, which
 intercepts all calls to all methods of an object and make them all
 synchronized with a single encapsulated semaphore:</p>
 
-<pre>SyncEm.new(Visits.new)</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">SyncEm</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">Visits</span><span class="p">.</span><span class="nf">new</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>This mechanism will only work in Ruby or similar
 <a href="https://en.wikipedia.org/wiki/Interpreted_language">interpreted</a> languages.

@@ -89,11 +89,12 @@ a more object-oriented way, it will encapsulate the text and <em>become</em> its
 encrypted form. Here is how we will use it (let’s create
 <a href="/2017/03/24/tdd-that-works.html">tests first</a>):</p>
 
-<pre>interface Encrypted {
-  String asString() throws IOException;
-}
-Encrypted enc = new EncryptedX("Hello, world!");
-System.out.println(enc.asString());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="nc">Encrypted</span> <span class="n">enc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EncryptedX</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">enc</span><span class="o">.</span><span class="na">asString</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>Now let’s implement it, in a very primitive way, with one
 <a href="/2015/05/28/one-primary-constructor.html">primary</a>
@@ -102,21 +103,22 @@ will just add <code class="highlighter-rouge">+1</code> to each byte in the inco
 the encryption won’t break anything (a very stupid
 assumption, but for the sake of this example it will work):</p>
 
-<pre>class Encrypted1 implements Encrypted {
-  private final String text;
-  Encrypted1(String txt) {
-    this.text = txt;
-  }
-  @Override
-  public String asString() {
-    final byte[] in = this.text.getBytes();
-    final byte[] out = new byte[in.length];
-    for (int i = 0; i &lt; in.length; ++i) {
-      out[i] = (byte) (in[i] + 1);
-    }
-    return new String(out);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted1</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Encrypted1</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">in</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">getBytes</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">out</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="o">(</span><span class="n">in</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">out</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Looks correct so far? I <a href="https://github.com/yegor256/blog/tree/master/_samples/2017/10/sticky">tested it</a>
 and it works. If the input is <code class="highlighter-rouge">"Hello, world!"</code>,
@@ -128,34 +130,36 @@ as well as a
 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code class="highlighter-rouge">String</code></a>.
 We want to call it like this, for example:</p>
 
-<pre>Encrypted enc = new Encrypted2(
-  new FileInputStream("/tmp/hello.txt")
-);
-System.out.println(enc.toString());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Encrypted</span> <span class="n">enc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Encrypted2</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">FileInputStream</span><span class="o">(</span><span class="s">"/tmp/hello.txt"</span><span class="o">)</span>
+<span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">enc</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>Here is the most obvious implementation, with two
 <a href="/2015/05/28/one-primary-constructor.html">primary</a>
 constructors (again, the implementation is primitive, but works):</p>
 
-<pre>class Encrypted2 implements Encrypted {
-  private final String text;
-  Encrypted2(InputStream input) throws IOException {
-    ByteArrayOutputStream baos =
-      new ByteArrayOutputStream();
-    while (true) {
-      int one = input.read();
-      if (one &lt; 0) {
-        break;
-      }
-      baos.write(one);
-    }
-    this.text = new String(baos.toByteArray());
-  }
-  Encrypted2(String txt) {
-    this.text = txt;
-  }
-  // asString() is exactly the same as in Encrypted1
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted2</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Encrypted2</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">input</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span>
+      <span class="k">new</span> <span class="nf">ByteArrayOutputStream</span><span class="o">();</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">one</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">one</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted2</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// asString() is exactly the same as in Encrypted1</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Technically it works, but stream reading is right inside the constructor,
 which is <a href="/2015/05/07/ctors-must-be-code-free.html">bad practice</a>.
@@ -165,44 +169,46 @@ ones may only create new objects.</p>
 
 <p>Let’s try to refactor and introduce lazy loading:</p>
 
-<pre>class Encrypted3 implements Encrypted {
-  private String text;
-  private final InputStream input;
-  Encrypted3(InputStream stream) {
-    this.text = null;
-    this.input = stream;
-  }
-  Encrypted3(String txt) {
-    this.text = txt;
-    this.input = null;
-  }
-  @Override
-  public String asString() throws IOException {
-    if (this.text == null) {
-      ByteArrayOutputStream baos =
-        new ByteArrayOutputStream();
-      while (true) {
-        int one = input.read();
-        if (one &lt; 0) {
-          break;
-        }
-        baos.write(one);
-      }
-      this.text = new String(baos.toByteArray());
-    }
-    final byte[] in = this.text.getBytes();
-    final byte[] out = new byte[in.length];
-    for (int i = 0; i &lt; in.length; ++i) {
-      out[i] = (byte) (in[i] + 1);
-    }
-    return new String(out);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted3</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">text</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span><span class="o">;</span>
+  <span class="nc">Encrypted3</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="n">stream</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted3</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span>
+        <span class="k">new</span> <span class="nf">ByteArrayOutputStream</span><span class="o">();</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">one</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">one</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">in</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">getBytes</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">out</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="o">(</span><span class="n">in</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">out</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Works great, but looks ugly. The ugliest part is these two lines of course:</p>
 
-<pre>this.text = null;
-this.input = null;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>They make the object
 <a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>
@@ -215,39 +221,40 @@ Let’s refactor our class, this time using
 from
 <a href="http://www.cactoos.org">Cactoos</a>:</p>
 
-<pre>class Encrypted4 implements Encrypted {
-  private final IoCheckedScalar&lt;String&gt; text;
-  Encrypted4(InputStream stream) {
-    this(
-      () -&gt; {
-        ByteArrayOutputStream baos =
-          new ByteArrayOutputStream();
-        while (true) {
-          int one = stream.read();
-          if (one &lt; 0) {
-            break;
-          }
-          baos.write(one);
-        }
-        return new String(baos.toByteArray());
-      }
-    );
-  }
-  Encrypted4(String txt) {
-    this(() -&gt; txt);
-  }
-  Encrypted4(Scalar&lt;String&gt; source) {
-    this.text = new IoCheckedScalar&lt;&gt;(source);
-  }
-  @Override
-  public String asString() throws IOException {
-    final byte[] in = this.text.value().getBytes();
-    final byte[] out = new byte[in.length];
-    for (int i = 0; i &lt; in.length; ++i) {
-      out[i] = (byte) (in[i] + 1);
-    }
-    return new String(out);
-  }</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted4</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Encrypted4</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span>
+      <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span>
+          <span class="k">new</span> <span class="nf">ByteArrayOutputStream</span><span class="o">();</span>
+        <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+          <span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+          <span class="k">if</span> <span class="o">(</span><span class="n">one</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">break</span><span class="o">;</span>
+          <span class="o">}</span>
+          <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">one</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">());</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted4</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">txt</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted4</span><span class="o">(</span><span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;&gt;(</span><span class="n">source</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">in</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">value</span><span class="o">().</span><span class="na">getBytes</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">out</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="o">(</span><span class="n">in</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">out</span><span class="o">);</span>
+  <span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now it looks way better. First of all, there is only one primary constructor and
 two secondary ones. Second, the object is
@@ -274,15 +281,16 @@ will simply be empty. Thus, we need to make sure that <code class="highlighter-r
 executes the encapsulated <code class="highlighter-rouge">Scalar</code> only once. All later calls must return the
 previously calculated value. So we need to <em>cache</em> it. Here is how:</p>
 
-<pre>class Encrypted5 implements Encrypted {
-  private final IoCheckedScalar&lt;String&gt; text;
-  // same as above in Encrypted4
-  Encrypted5(Scalar&lt;String&gt; source) {
-    this.text = new IoCheckedScalar&lt;&gt;(
-      new StickyScalar&lt;&gt;(source)
-    );
-  }
-  // same as above in Encrypted4</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted5</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">text</span><span class="o">;</span>
+  <span class="c1">// same as above in Encrypted4</span>
+  <span class="nc">Encrypted5</span><span class="o">(</span><span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;&gt;(</span>
+      <span class="k">new</span> <span class="nc">StickyScalar</span><span class="o">&lt;&gt;(</span><span class="n">source</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="c1">// same as above in Encrypted4</span>
+</code></pre></div></div>
 
 <p>This <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html"><code class="highlighter-rouge">StickyScalar</code></a>
 will make sure that only the first call to its method <code class="highlighter-rouge">value()</code>
@@ -297,17 +305,18 @@ simply because
 is not thread-safe. There is another primitive to help us out though, called
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html"><code class="highlighter-rouge">SyncScalar</code></a>:</p>
 
-<pre>class Encrypted5 implements Encrypted {
-  private final IoCheckedScalar&lt;String&gt; text;
-  // same as above in Encrypted4
-  Encrypted5(Scalar&lt;String&gt; source) {
-    this.text = new IoCheckedScalar&lt;&gt;(
-      new SyncScalar&lt;&gt;(
-        new StickyScalar&lt;&gt;(source)
-      )
-    );
-  }
-  // same as above in Encrypted4</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted5</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">text</span><span class="o">;</span>
+  <span class="c1">// same as above in Encrypted4</span>
+  <span class="nc">Encrypted5</span><span class="o">(</span><span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;&gt;(</span>
+      <span class="k">new</span> <span class="nc">SyncScalar</span><span class="o">&lt;&gt;(</span>
+        <span class="k">new</span> <span class="nc">StickyScalar</span><span class="o">&lt;&gt;(</span><span class="n">source</span><span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="c1">// same as above in Encrypted4</span>
+</code></pre></div></div>
 
 <p>Now we’re safe and the design is elegant. It includes lazy loading and caching.</p>
 

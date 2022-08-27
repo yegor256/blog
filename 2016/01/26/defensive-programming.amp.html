@@ -88,21 +88,22 @@ I’m suggesting you use <em>validating decorators</em> instead.</p>
 
 <p>Let’s take a look at this rather typical Java example:</p>
 
-<pre>class Report {
-  void export(File file) {
-    if (file == null) {
-      throw new IllegalArgumentException(
-        "File is NULL; can't export."
-      );
-    }
-    if (file.exists()) {
-      throw new IllegalArgumentException(
-        "File already exists."
-      );
-    }
-    // Export the report to the file
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Report</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">export</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">file</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+        <span class="s">"File is NULL; can't export."</span>
+      <span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+        <span class="s">"File already exists."</span>
+      <span class="o">);</span>
+    <span class="o">}</span>
+    <span class="c1">// Export the report to the file</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pretty <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive</a>, right?
 If we remove these validations, the code
@@ -117,47 +118,51 @@ have nothing to do with its core functionality. Instead, we should
 use decorators to do the validation. Here is how. First,
 there must be an interface <code class="highlighter-rouge">Report</code>:</p>
 
-<pre>interface Report {
-  void export(File file);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Report</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">export</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, a class that implements the core functionality:</p>
 
-<pre>class DefaultReport implements Report {
-  @Override
-  void export(File file) {
-    // Export the report to the file
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultReport</span> <span class="kd">implements</span> <span class="nc">Report</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">export</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Export the report to the file</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And, finally, a number of decorators that will protect us:</p>
 
-<pre>class NoWriteOverReport implements Report {
-  private final Report origin;
-  NoWriteOverReport(Report rep) {
-    this.origin = rep;
-  }
-  @Override
-  void export(File file) {
-    if (file.exists()) {
-      throw new IllegalArgumentException(
-        "File already exists."
-      );
-    }
-    this.origin.export(file);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">NoWriteOverReport</span> <span class="kd">implements</span> <span class="nc">Report</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Report</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">NoWriteOverReport</span><span class="o">(</span><span class="nc">Report</span> <span class="n">rep</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">rep</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">export</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+        <span class="s">"File already exists."</span>
+      <span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">export</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, the client has the flexibility of composing a complex object
 from decorators that perform their specific tasks. The core object
 will do the reporting, while the decorators will validate parameters:</p>
 
-<pre>Report report = new NoNullReport(
-  new NoWriteOverReport(
-    new DefaultReport()
-  )
-);
-report.export(file);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Report</span> <span class="n">report</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoNullReport</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">NoWriteOverReport</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">DefaultReport</span><span class="o">()</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+<span class="n">report</span><span class="o">.</span><span class="na">export</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>What do we achieve with this approach?
 First and foremost: smaller objects.

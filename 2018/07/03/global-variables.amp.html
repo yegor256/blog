@@ -93,21 +93,23 @@ in ways which are different from what its original author expected.</p>
 on top of <a href="http://sinatrarb.com/">Sinatra</a>.
 This is how a web server starts according to <a href="http://sinatrarb.com/intro.html">their documentation</a>:</p>
 
-<pre>App.start!</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">App</span><span class="p">.</span><span class="nf">start!</span>
+</code></pre></div></div>
 
 <p>Here <code class="highlighter-rouge">start!</code> is a static method of the <code class="highlighter-rouge">App</code> class, which you have to declare
 as a child of their default parent
 <a href="https://github.com/sinatra/sinatra/blob/v2.0.3/lib/sinatra/base.rb#L893-L1896"><code class="highlighter-rouge">Sinatra::Base</code></a>.
 To tell the app which TCP port to listen to you have to preconfigure it:</p>
 
-<pre>require 'sinatra/base'
-class App &lt; Sinatra::Base
-  get '/' do
-    'Hello, world!'
-  end
-end
-App.set(:port, 8080)
-App.start!</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'sinatra/base'</span>
+<span class="k">class</span> <span class="nc">App</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">get</span> <span class="s1">'/'</span> <span class="k">do</span>
+    <span class="s1">'Hello, world!'</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="no">App</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="ss">:port</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
+<span class="no">App</span><span class="p">.</span><span class="nf">start!</span>
+</code></pre></div></div>
 
 <p>What do you do if you want to start two web servers?
 For the purpose of testing this may be a pretty logical requirement.

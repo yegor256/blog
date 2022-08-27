@@ -97,18 +97,20 @@ almost impossible to maintain.</p>
 (this snippet and all others in this article are simplified, for the
 sake of brevity):</p>
 
-<pre>public interface Region {
-  Table table(String name);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Region</span> <span class="o">{</span>
+  <span class="nc">Table</span> <span class="nf">table</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Its <code class="highlighter-rouge">table()</code> method returns an instance of the <code class="highlighter-rouge">Table</code> interface, which
 has its own methods:</p>
 
-<pre>public interface Table {
-  Frame frame();
-  Item put(Attributes attrs);
-  Region region();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Table</span> <span class="o">{</span>
+  <span class="nc">Frame</span> <span class="nf">frame</span><span class="o">();</span>
+  <span class="nc">Item</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Attributes</span> <span class="n">attrs</span><span class="o">);</span>
+  <span class="nc">Region</span> <span class="nf">region</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Interface <code class="highlighter-rouge">Frame</code>, returned by the <code class="highlighter-rouge">frame()</code> method, also has its
 own methods. And so on.
@@ -116,15 +118,16 @@ In order to create a properly mocked instance of interface <code class="highligh
 one would normally create a dozen other mock objects. With <a href="http://mockito.org">Mockito</a>
 it will look like this:</p>
 
-<pre>public void testMe() {
-  // many more lines here...
-  Frame frame = Mockito.mock(Frame.class);
-  Mockito.doReturn(...).when(frame).iterator();
-  Table table = Mockito.mock(Table.class);
-  Mockito.doReturn(frame).when(table).frame();
-  Region region = Mockito.mock(Region.class);
-  Mockito.doReturn(table).when(region).table(Mockito.anyString());
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testMe</span><span class="o">()</span> <span class="o">{</span>
+  <span class="c1">// many more lines here...</span>
+  <span class="nc">Frame</span> <span class="n">frame</span> <span class="o">=</span> <span class="nc">Mockito</span><span class="o">.</span><span class="na">mock</span><span class="o">(</span><span class="nc">Frame</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="nc">Mockito</span><span class="o">.</span><span class="na">doReturn</span><span class="o">(...).</span><span class="na">when</span><span class="o">(</span><span class="n">frame</span><span class="o">).</span><span class="na">iterator</span><span class="o">();</span>
+  <span class="nc">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="nc">Mockito</span><span class="o">.</span><span class="na">mock</span><span class="o">(</span><span class="nc">Table</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="nc">Mockito</span><span class="o">.</span><span class="na">doReturn</span><span class="o">(</span><span class="n">frame</span><span class="o">).</span><span class="na">when</span><span class="o">(</span><span class="n">table</span><span class="o">).</span><span class="na">frame</span><span class="o">();</span>
+  <span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="nc">Mockito</span><span class="o">.</span><span class="na">mock</span><span class="o">(</span><span class="nc">Region</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="nc">Mockito</span><span class="o">.</span><span class="na">doReturn</span><span class="o">(</span><span class="n">table</span><span class="o">).</span><span class="na">when</span><span class="o">(</span><span class="n">region</span><span class="o">).</span><span class="na">table</span><span class="o">(</span><span class="nc">Mockito</span><span class="o">.</span><span class="na">anyString</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And all of this is just a
 <a href="/2015/05/25/unit-test-scaffolding.html">scaffolding</a>
@@ -136,26 +139,27 @@ before the actual testing.</p>
 managing data in <a href="https://aws.amazon.com/dynamodb/">DynamoDB</a>.
 Your class may look similar to this:</p>
 
-<pre>public class Employee {
-  private final String name;
-  private final Region region;
-  public Employee(String empl, Region dynamo) {
-    this.name = empl;
-    this.region = dynamo;
-  }
-  public Integer salary() {
-    return Integer.parseInt(
-      this.region
-        .table("employees")
-        .frame()
-        .where("name", this.name)
-        .iterator()
-        .next()
-        .get("salary")
-        .getN()
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Region</span> <span class="n">region</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">empl</span><span class="o">,</span> <span class="nc">Region</span> <span class="n">dynamo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">empl</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">region</span> <span class="o">=</span> <span class="n">dynamo</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Integer</span> <span class="nf">salary</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">region</span>
+        <span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"employees"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">frame</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">iterator</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">next</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"salary"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">getN</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>You can imagine how difficult it will be to unit test this class,
 using Mockito, for example. First, we have
@@ -186,23 +190,24 @@ together with production code, in the same JAR package.</p>
 
 <p>This is what a test will look like, when a fake class <code class="highlighter-rouge">MkRegion</code> is used:</p>
 
-<pre>public class EmployeeTest {
-  public void canFetchSalaryFromDynamoDb() {
-    Region region = new MkRegion(
-      new H2Data().with(
-        "employees", new String[] {"name"},
-        new String[] {"salary"}
-      )
-    );
-    region.table("employees").put(
-      new Attributes()
-        .with("name", "Jeff")
-        .with("salary", new AttributeValue().withN(50000))
-    );
-    Employee emp = new Employee("Jeff", region);
-    assertThat(emp.salary(), equalTo(50000));
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeTest</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">canFetchSalaryFromDynamoDb</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MkRegion</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">H2Data</span><span class="o">().</span><span class="na">with</span><span class="o">(</span>
+        <span class="s">"employees"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]</span> <span class="o">{</span><span class="s">"name"</span><span class="o">},</span>
+        <span class="k">new</span> <span class="nc">String</span><span class="o">[]</span> <span class="o">{</span><span class="s">"salary"</span><span class="o">}</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+    <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"employees"</span><span class="o">).</span><span class="na">put</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Attributes</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"salary"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">().</span><span class="na">withN</span><span class="o">(</span><span class="mi">50000</span><span class="o">))</span>
+    <span class="o">);</span>
+    <span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">,</span> <span class="n">region</span><span class="o">);</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">emp</span><span class="o">.</span><span class="na">salary</span><span class="o">(),</span> <span class="n">equalTo</span><span class="o">(</span><span class="mi">50000</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This test looks obvious to me. First, we create a fake DynamoDB region,
 which works on top of <code class="highlighter-rouge">H2Data</code> storage (in-memory H2 database). The storage

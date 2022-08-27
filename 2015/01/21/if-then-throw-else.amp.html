@@ -77,11 +77,12 @@ there is an obvious optimization that is very often overlooked.
       <h1>If. Then. Throw. Else. WTF?</h1>
       <p>This is the code I could never understand:</p>
 
-<pre>if (x &lt; 0) {
-  throw new Exception("X can't be negative");
-} else {
-  System.out.println("X is positive or zero");
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"X can't be negative"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"X is positive or zero"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I have been trying to find a proper metaphor to explain its incorrectness.
 Today I finally found it.</p>
@@ -100,11 +101,12 @@ Otherwise you should go in the right lane. Both lanes meet up
 in a while. No matter which one you choose, you will end up on the same road.
 This is what this code block does:</p>
 
-<pre>if (x &lt; 0) {
-  System.out.println("X is negative");
-} else {
-  System.out.println("X is positive or zero");
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"X is negative"</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"X is positive or zero"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, try to imagine this sign:</p>
 
@@ -121,39 +123,43 @@ after the dead end sign? There is no point.</p>
 
 <p>This is how a proper code block would look:</p>
 
-<pre>if (x &lt; 0) {
-  throw new Exception("X can't be negative");
-}
-System.out.println("X is positive or zero");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"X can't be negative"</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"X is positive or zero"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>The same is true for loops. This is wrong:</p>
 
-<pre>for (int x : numbers) {
-  if (x &lt; 0) {
-    continue;
-  } else {
-    System.out.println("found positive number");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">:</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">continue</span><span class="o">;</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"found positive number"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>While this is right:</p>
 
-<pre>for (int x : numbers) {
-  if (x &lt; 0) {
-    continue;
-  }
-  System.out.println("found positive number");
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">:</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">continue</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"found positive number"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There is no road after the dead end! If you draw it, your code looks
 like this very funny snippet I found a few years ago reviewing
 sources written by some very well-paid developer in one very serious
 company:</p>
 
-<pre>if (x &lt; 0) {
-  throw new Exception("X is negative");
-  System.exit(1);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"X is negative"</span><span class="o">);</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Don’t do this.</p>
 

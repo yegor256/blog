@@ -119,12 +119,13 @@ An object of class <code class="highlighter-rouge">Article</code> inherits all c
 and adds its own. For example, it <em>inherits</em> an ability to print itself
 and <em>adds</em> an ability to submit itself to a conference:</p>
 
-<pre>interface Manuscript {
-  void print(Console console);
-}
-interface Article extends Manuscript {
-  void submit(Conference cnf);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Manuscript</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Console</span> <span class="n">console</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="kd">interface</span> <span class="nc">Article</span> <span class="kd">extends</span> <span class="nc">Manuscript</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">submit</span><span class="o">(</span><span class="nc">Conference</span> <span class="n">cnf</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is <em>subtyping</em>, and it’s a perfect technique; whenever a
 manuscript is required, we can provide an article and nobody will
@@ -143,17 +144,18 @@ Who is dead, you ask? An object is dead if it allows other objects to
 <em>inherit</em> its encapsulated code and data. This is implementation
 inheritance:</p>
 
-<pre>class Manuscript {
-  protected String body;
-  void print(Console console) {
-    console.println(this.body);
-  }
-}
-class Article extends Manuscript {
-  void submit(Conference cnf) {
-    cnf.send(this.body);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Manuscript</span> <span class="o">{</span>
+  <span class="kd">protected</span> <span class="nc">String</span> <span class="n">body</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Console</span> <span class="n">console</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">body</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Article</span> <span class="kd">extends</span> <span class="nc">Manuscript</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">submit</span><span class="o">(</span><span class="nc">Conference</span> <span class="n">cnf</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">cnf</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">body</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Class <code class="highlighter-rouge">Article</code> <em>copies</em> method <code class="highlighter-rouge">print()</code> and attribute <code class="highlighter-rouge">body</code>
 from class <code class="highlighter-rouge">Manuscript</code>, as if it’s not a

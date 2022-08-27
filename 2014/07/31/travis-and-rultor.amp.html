@@ -160,14 +160,15 @@ released to RubyGems and a new version to set is 1.5:</p>
 <p>Rultor executed a simple script, <a href="https://doc.rultor.com/basics.html#release">pre-configured</a> in its
 <a href="https://github.com/yegor256/jekyll-github-deploy/blob/master/.rultor.yml"><code class="highlighter-rouge">.rultor.yml</code></a>:</p>
 
-<pre>release:
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>release:
   script: |
     ./test.sh
     rm -rf *.gem
     sed -i "s/2.0-SNAPSHOT/${tag}/g" jgd.gemspec
     gem build jgd.gemspec
     chmod 0600 ../rubygems.yml
-    gem push *.gem --config-file ../rubygems.yml</pre>
+    gem push *.gem --config-file ../rubygems.yml
+</code></pre></div></div>
 
 <p>The script is parameterized, as you see. There is one parameter that
 is passed by Rultor into the script: <code class="highlighter-rouge">${tag}</code>. This parameter was
@@ -176,23 +177,26 @@ provided by myself in the GitHub issue, when I submitted a command to Rultor.</p
 <p>The script tests that the gem works (integration testing) and
 clean up afterwords:</p>
 
-<pre>$ ./test.sh
-$ rm -rf *.gem</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./test.sh
+<span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> <span class="k">*</span>.gem
+</code></pre></div></div>
 
 <p>Then, it changes the version of itself in <code class="highlighter-rouge">jgd.gemspec</code> to
 the one provided in the <code class="highlighter-rouge">${tag}</code> (it is an environment variable),
 and builds a new <code class="highlighter-rouge">.gem</code>:</p>
 
-<pre>$ sed -i "s/2.0-SNAPSHOT/${tag}/g" jgd.gemspec
-$ gem build jgd.gemspec</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sed</span> <span class="nt">-i</span> <span class="s2">"s/2.0-SNAPSHOT/</span><span class="k">${</span><span class="nv">tag</span><span class="k">}</span><span class="s2">/g"</span> jgd.gemspec
+<span class="nv">$ </span>gem build jgd.gemspec
+</code></pre></div></div>
 
 <p>Finally, it pushes a newly built <code class="highlighter-rouge">.gem</code> to
 <a href="/2014/08/26/publish-to-rubygems.html">RubyGems</a>,
 using login credentials from <code class="highlighter-rouge">../rubygems.yml</code>. This file is created by
 Rultor right before starting the script (this mechanism is discussed below):</p>
 
-<pre>$ chmod 0600 ../rubygems.yml
-$ gem push *.gem --config-file ../rubygems.yml</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">chmod </span>0600 ../rubygems.yml
+<span class="nv">$ </span>gem push <span class="k">*</span>.gem <span class="nt">--config-file</span> ../rubygems.yml
+</code></pre></div></div>
 
 <p>If everything works fine and RubyGems confirms successful deployment,
 Rultor reports to GitHub. This is exactly what happened in
@@ -230,10 +234,11 @@ that configures Rultor accordingly through its
 <a href="https://github.com/yegor256/s3auth/blob/master/.rultor.yml"><code class="highlighter-rouge">.rultor.yml</code></a>
 file (pay attention to the first few lines):</p>
 
-<pre>assets:
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assets:
   settings.xml: "yegor256/home#assets/s3auth/settings.xml"
   pubring.gpg: "yegor256/home#assets/pubring.gpg"
-  secring.gpg: "yegor256/home#assets/secring.gpg"</pre>
+  secring.gpg: "yegor256/home#assets/secring.gpg"
+</code></pre></div></div>
 
 <p>These YAML entries inform Rultor that it has to get <code class="highlighter-rouge">assets/s3auth/settings.xml</code>
 file from <code class="highlighter-rouge">yegor256/home</code> private (!) GitHub repository and put it into

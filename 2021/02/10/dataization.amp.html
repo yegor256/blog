@@ -92,18 +92,20 @@ shipment costs based on the customer’s location. We create
 an <a href="/2020/12/01/abstract-objects.html">abstract object</a>
 that represents shipment costs:</p>
 
-<pre>[customer] &gt; cost-of-shipment
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[customer] &gt; cost-of-shipment
   if. &gt; @
     customer.country.eq "US"
     9.99
-    24.99</pre>
+    24.99
+</code></pre></div></div>
 
 <p>Then, let’s say we have an abstract object <code class="highlighter-rouge">customer-in-mysql</code>,
 which represents the customer’s information in the MySQL database. To
 make a specific customer <code class="highlighter-rouge">jeff</code> we make a copy of <code class="highlighter-rouge">customer-in-mysql</code>,
 specifying the ID of the customer as <code class="highlighter-rouge">42</code>:</p>
 
-<pre>customer-in-mysql 42 &gt; jeff</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>customer-in-mysql 42 &gt; jeff
+</code></pre></div></div>
 
 <p>The closed object <code class="highlighter-rouge">jeff</code> is the customer we are looking for.
 We assume that it has the <code class="highlighter-rouge">country</code> child object, which is needed by
@@ -113,19 +115,21 @@ the <code class="highlighter-rouge">cost-of-shipment</code>.</p>
 add it to the product price in order to calculate how
 much a customer has to pay:</p>
 
-<pre>cost-of-shipment jeff &gt; x
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cost-of-shipment jeff &gt; x
 
 x.add &gt; total
-  product.price</pre>
+  product.price
+</code></pre></div></div>
 
 <p>Here, the <code class="highlighter-rouge">x</code> is a new object, a copy of <code class="highlighter-rouge">cost-of-shipment</code>. Then,
 we take the child abstract object <code class="highlighter-rouge">add</code> from it and make a copy,
 giving <code class="highlighter-rouge">product.price</code> object to it as an attribute. We name the created copy
 as <code class="highlighter-rouge">total</code>. Then, we print the total price:</p>
 
-<pre>QQ.io.stdout &gt; app
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>QQ.io.stdout &gt; app
   QQ.txt.sprintf
-    "Your total is %f" total</pre>
+    "Your total is %f" total
+</code></pre></div></div>
 
 <p>All these manipulations don’t make the number print yet. They
 are all object declarations. We’ve declared one abstract object
@@ -139,9 +143,10 @@ where EO software is being compiled. You may think that in the example
 above <code class="highlighter-rouge">42</code> and <code class="highlighter-rouge">"US"</code> are data. They are not. They are also objects
 and we can write this, for example:</p>
 
-<pre>42.add 5 &gt; z
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>42.add 5 &gt; z
 
-"US".length &gt; len</pre>
+"US".length &gt; len
+</code></pre></div></div>
 
 <p>The data behind these objects is not visible for us at the level of
 EO program. The data is inside the <code class="highlighter-rouge">42</code> object. Only the runtime
@@ -150,9 +155,10 @@ mechanism. If you compile the EO code to Java, you will get
 a class <code class="highlighter-rouge">EOapp</code> (derived from the <code class="highlighter-rouge">app</code> object), which can be dataized
 like this:</p>
 
-<pre>import org.eolang.phi.Data;
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import org.eolang.phi.Data;
 EOapp app = new EOapp();
-Boolean data = new Dataized(app).take(Boolean.class);</pre>
+Boolean data = new Dataized(app).take(Boolean.class);
+</code></pre></div></div>
 
 <p>The method <code class="highlighter-rouge">take()</code> will take the object <code class="highlighter-rouge">app</code> and will try to ask it
 to turn itself as data. The object <code class="highlighter-rouge">stdout</code> will redirect this request
@@ -165,10 +171,11 @@ the request to get <code class="highlighter-rouge">add</code> will land there.</
 
 <p>The object bound to the attribute <code class="highlighter-rouge">@</code> is the copy of <code class="highlighter-rouge">if</code>:</p>
 
-<pre>if. &gt; @
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if. &gt; @
   customer.country.eq "US"
   9.99
-  24.99</pre>
+  24.99
+</code></pre></div></div>
 
 <p>It will take the <code class="highlighter-rouge">customer.country.eq</code>, dataize it in order to get
 boolean data, and then, depending on this data, return either <code class="highlighter-rouge">9.99</code> or <code class="highlighter-rouge">24.99</code>.

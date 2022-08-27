@@ -105,19 +105,20 @@ repository and start/stop Maven from a
 <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile"><code class="highlighter-rouge">Rakefile</code></a>,
 just like I’m doing <a href="https://github.com/yegor256/sixnines/blob/0.17/Rakefile#L50-L67">here</a>:</p>
 
-<pre>task :dynamo do
-  FileUtils.rm_rf('dynamodb-local/target')
-  pid = Process.spawn('mvn', 'install', chdir: 'dynamodb-local')
-  at_exit do
-    `kill -TERM #{pid}`
-  end
-  begin
-    Dynamo.new.aws.describe_table(table_name: 'sn-endpoints')
-  rescue Exception =&gt; e
-    sleep(5)
-    retry
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">task</span> <span class="ss">:dynamo</span> <span class="k">do</span>
+  <span class="no">FileUtils</span><span class="p">.</span><span class="nf">rm_rf</span><span class="p">(</span><span class="s1">'dynamodb-local/target'</span><span class="p">)</span>
+  <span class="n">pid</span> <span class="o">=</span> <span class="no">Process</span><span class="p">.</span><span class="nf">spawn</span><span class="p">(</span><span class="s1">'mvn'</span><span class="p">,</span> <span class="s1">'install'</span><span class="p">,</span> <span class="ss">chdir: </span><span class="s1">'dynamodb-local'</span><span class="p">)</span>
+  <span class="nb">at_exit</span> <span class="k">do</span>
+    <span class="sb">`kill -TERM </span><span class="si">#{</span><span class="n">pid</span><span class="si">}</span><span class="sb">`</span>
+  <span class="k">end</span>
+  <span class="k">begin</span>
+    <span class="no">Dynamo</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">aws</span><span class="p">.</span><span class="nf">describe_table</span><span class="p">(</span><span class="ss">table_name: </span><span class="s1">'sn-endpoints'</span><span class="p">)</span>
+  <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">e</span>
+    <span class="nb">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">retry</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>First, I’m removing <code class="highlighter-rouge">dynamodb-local/target</code>, the directory where Maven keeps
 its temporary files, to make sure we always start from scratch.</p>
@@ -182,18 +183,19 @@ of HTTP calls. For example,
 I’m trying to render Jeff’s user account page.
 Its HTTP response code is supposed to be 200:</p>
 
-<pre>require 'test/unit'
-require 'rack/test'
-class AppTest &lt; Test::Unit::TestCase
-  include Rack::Test::Methods
-  def app
-    Sinatra::Application
-  end
-  def test_user_account
-    header('Cookie', 'sixnines=jeff')
-    get('/a')
-    assert_equal(200, last_response.status)
-  end</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">require</span> <span class="err">'</span><span class="n">test</span><span class="o">/</span><span class="n">unit</span><span class="err">'</span>
+<span class="n">require</span> <span class="err">'</span><span class="n">rack</span><span class="o">/</span><span class="n">test</span><span class="err">'</span>
+<span class="kd">class</span> <span class="nc">AppTest</span> <span class="o">&lt;</span> <span class="nl">Test:</span><span class="o">:</span><span class="nl">Unit:</span><span class="o">:</span><span class="nc">TestCase</span>
+  <span class="n">include</span> <span class="nl">Rack:</span><span class="o">:</span><span class="nl">Test:</span><span class="o">:</span><span class="nc">Methods</span>
+  <span class="n">def</span> <span class="n">app</span>
+    <span class="nl">Sinatra:</span><span class="o">:</span><span class="nc">Application</span>
+  <span class="n">end</span>
+  <span class="n">def</span> <span class="n">test_user_account</span>
+    <span class="nf">header</span><span class="o">(</span><span class="err">'</span><span class="nc">Cookie</span><span class="err">'</span><span class="o">,</span> <span class="err">'</span><span class="n">sixnines</span><span class="o">=</span><span class="n">jeff</span><span class="err">'</span><span class="o">)</span>
+    <span class="n">get</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">a</span><span class="err">'</span><span class="o">)</span>
+    <span class="n">assert_equal</span><span class="o">(</span><span class="mi">200</span><span class="o">,</span> <span class="n">last_response</span><span class="o">.</span><span class="na">status</span><span class="o">)</span>
+  <span class="n">end</span>
+</code></pre></div></div>
 
 <p>##</p>
 

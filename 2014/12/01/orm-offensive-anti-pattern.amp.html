@@ -104,13 +104,14 @@ In Java, the ORM design is even standardized as <a href="https://en.wikipedia.or
 <p>First, let’s see how ORM works, by example. Let’s use Java, PostgreSQL, and Hibernate.
 Let’s say we have a single table in the database, called <code class="highlighter-rouge">post</code>:</p>
 
-<pre>+-----+------------+--------------------------+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-----+------------+--------------------------+
 | id  | date       | title                    |
 +-----+------------+--------------------------+
 |   9 | 10/24/2014 | How to cook a sandwich   |
 |  13 | 11/03/2014 | My favorite movies       |
 |  27 | 11/17/2014 | How much I love my job   |
-+-----+------------+--------------------------+</pre>
++-----+------------+--------------------------+
+</code></pre></div></div>
 
 
 
@@ -118,61 +119,65 @@ Let’s say we have a single table in the database, called <code class="highligh
 stands for create, read, update, and delete). First, we should create
 a <code class="highlighter-rouge">Post</code> class (I’m sorry it’s so long, but that’s the best I can do):</p>
 
-<pre>@Entity
-@Table(name = "post")
-public class Post {
-  private int id;
-  private Date date;
-  private String title;
-  @Id
-  @GeneratedValue
-  public int getId() {
-    return this.id;
-  }
-  @Temporal(TemporalType.TIMESTAMP)
-  public Date getDate() {
-    return this.date;
-  }
-  public Title getTitle() {
-    return this.title;
-  }
-  public void setDate(Date when) {
-    this.date = when;
-  }
-  public void setTitle(String txt) {
-    this.title = txt;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Entity</span>
+<span class="nd">@Table</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"post"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Post</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Date</span> <span class="n">date</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nd">@Id</span>
+  <span class="nd">@GeneratedValue</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Temporal</span><span class="o">(</span><span class="nc">TemporalType</span><span class="o">.</span><span class="na">TIMESTAMP</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">getDate</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">date</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Title</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDate</span><span class="o">(</span><span class="nc">Date</span> <span class="n">when</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">date</span> <span class="o">=</span> <span class="n">when</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTitle</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Before any operation with Hibernate, we have to create a session factory:</p>
 
-<pre>SessionFactory factory = new AnnotationConfiguration()
-  .configure()
-  .addAnnotatedClass(Post.class)
-  .buildSessionFactory();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">SessionFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AnnotationConfiguration</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">configure</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">addAnnotatedClass</span><span class="o">(</span><span class="nc">Post</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">buildSessionFactory</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This factory will give us “sessions” every time we want to manipulate
 with <code class="highlighter-rouge">Post</code> objects. Every manipulation with the session should be wrapped
 in this code block:</p>
 
-<pre>Session session = factory.openSession();
-try {
-  Transaction txn = session.beginTransaction();
-  // your manipulations with the ORM, see below
-  txn.commit();
-} catch (HibernateException ex) {
-  txn.rollback();
-} finally {
-  session.close();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="nc">Transaction</span> <span class="n">txn</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">beginTransaction</span><span class="o">();</span>
+  <span class="c1">// your manipulations with the ORM, see below</span>
+  <span class="n">txn</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">HibernateException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">txn</span><span class="o">.</span><span class="na">rollback</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="n">session</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>When the session is ready, here is how we get a list of all posts
 from that database table:</p>
 
-<pre>List posts = session.createQuery("FROM Post").list();
-for (Post post : (List&lt;Post&gt;) posts){
-  System.out.println("Title: " + post.getTitle());
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span> <span class="n">posts</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"FROM Post"</span><span class="o">).</span><span class="na">list</span><span class="o">();</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Post</span> <span class="n">post</span> <span class="o">:</span> <span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;)</span> <span class="n">posts</span><span class="o">){</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Title: "</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="na">getTitle</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I think it’s clear what’s going on here. Hibernate is a big, powerful
 engine that makes a connection to the database, executes necessary SQL
@@ -187,10 +192,11 @@ use getters to take them out, like we’re using <code class="highlighter-rouge"
 database, we do all of the same but in reverse order. We make an instance
 of class <code class="highlighter-rouge">Post</code>, stuff it with the data, and ask Hibernate to save it:</p>
 
-<pre>Post post = new Post();
-post.setDate(new Date());
-post.setTitle("How to cook an omelette");
-session.save(post);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Post</span> <span class="n">post</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Post</span><span class="o">();</span>
+<span class="n">post</span><span class="o">.</span><span class="na">setDate</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">());</span>
+<span class="n">post</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"How to cook an omelette"</span><span class="o">);</span>
+<span class="n">session</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">post</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>This is how almost every ORM works. The basic principle is always the same—ORM objects are
 <a href="/2016/07/06/data-transfer-object.html">anemic envelopes</a>
@@ -304,30 +310,34 @@ Of course, our objects will be
 <a href="/2014/12/22/immutable-objects-not-dumb.html">immutable</a>.
 Here is how <code class="highlighter-rouge">Posts</code> would look:</p>
 
-<pre>interface Posts {
-  Iterable&lt;Post&gt; iterate();
-  Post add(Date date, String title);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Posts</span> <span class="o">{</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;</span> <span class="nf">iterate</span><span class="o">();</span>
+  <span class="nc">Post</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Date</span> <span class="n">date</span><span class="o">,</span> <span class="nc">String</span> <span class="n">title</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is how a single <code class="highlighter-rouge">Post</code> would look:</p>
 
-<pre>interface Post {
-  int id();
-  Date date();
-  String title();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Post</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">id</span><span class="o">();</span>
+  <span class="nc">Date</span> <span class="nf">date</span><span class="o">();</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how we will list all posts in the database table:</p>
 
-<pre>Posts posts = // we'll discuss this right now
-for (Post post : posts.iterate()){
-  System.out.println("Title: " + post.title());
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Posts</span> <span class="n">posts</span> <span class="o">=</span> <span class="c1">// we'll discuss this right now</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Post</span> <span class="n">post</span> <span class="o">:</span> <span class="n">posts</span><span class="o">.</span><span class="na">iterate</span><span class="o">()){</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Title: "</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="na">title</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how we will create a new post:</p>
 
-<pre>Posts posts = // we'll discuss this right now
-posts.add(new Date(), "How to cook an omelette");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Posts</span> <span class="n">posts</span> <span class="o">=</span> <span class="c1">// we'll discuss this right now</span>
+<span class="n">posts</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">(),</span> <span class="s">"How to cook an omelette"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>As you see, we have true objects now. They are in charge of all operations,
 and they perfectly hide their implementation details. There are no transactions,
@@ -346,77 +356,80 @@ really matter. What matters is that your database interactions are hidden
 inside objects. Let’s start with <code class="highlighter-rouge">Posts</code> and implement it in class
 <code class="highlighter-rouge">PgPosts</code> (“pg” stands for PostgreSQL):</p>
 
-<pre>final class PgPosts implements Posts {
-  private final Source dbase;
-  public PgPosts(DataSource data) {
-    this.dbase = data;
-  }
-  public Iterable&lt;Post&gt; iterate() {
-    return new JdbcSession(this.dbase)
-      .sql("SELECT id FROM post")
-      .select(
-        new ListOutcome&lt;Post&gt;(
-          new ListOutcome.Mapping&lt;Post&gt;() {
-            @Override
-            public Post map(final ResultSet rset) {
-              return new PgPost(
-                this.dbase,
-                rset.getInt(1)
-              );
-            }
-          }
-        )
-      );
-  }
-  public Post add(Date date, String title) {
-    return new PgPost(
-      this.dbase,
-      new JdbcSession(this.dbase)
-        .sql("INSERT INTO post (date, title) VALUES (?, ?)")
-        .set(new Utc(date))
-        .set(title)
-        .insert(new SingleOutcome&lt;Integer&gt;(Integer.class))
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">PgPosts</span> <span class="kd">implements</span> <span class="nc">Posts</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Source</span> <span class="n">dbase</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">PgPosts</span><span class="o">(</span><span class="nc">DataSource</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">dbase</span> <span class="o">=</span> <span class="n">data</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;</span> <span class="nf">iterate</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JdbcSession</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"SELECT id FROM post"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">select</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nc">ListOutcome</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;(</span>
+          <span class="k">new</span> <span class="nc">ListOutcome</span><span class="o">.</span><span class="na">Mapping</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="nc">Post</span> <span class="nf">map</span><span class="o">(</span><span class="kd">final</span> <span class="nc">ResultSet</span> <span class="n">rset</span><span class="o">)</span> <span class="o">{</span>
+              <span class="k">return</span> <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span>
+                <span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">,</span>
+                <span class="n">rset</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+              <span class="o">);</span>
+            <span class="o">}</span>
+          <span class="o">}</span>
+        <span class="o">)</span>
+      <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Post</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Date</span> <span class="n">date</span><span class="o">,</span> <span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">,</span>
+      <span class="k">new</span> <span class="nf">JdbcSession</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"INSERT INTO post (date, title) VALUES (?, ?)"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="k">new</span> <span class="nc">Utc</span><span class="o">(</span><span class="n">date</span><span class="o">))</span>
+        <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">title</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="k">new</span> <span class="nc">SingleOutcome</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">class</span><span class="o">))</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Next, let’s implement the <code class="highlighter-rouge">Post</code> interface in class <code class="highlighter-rouge">PgPost</code>:</p>
 
-<pre>final class PgPost implements Post {
-  private final Source dbase;
-  private final int number;
-  public PgPost(DataSource data, int id) {
-    this.dbase = data;
-    this.number = id;
-  }
-  public int id() {
-    return this.number;
-  }
-  public Date date() {
-    return new JdbcSession(this.dbase)
-      .sql("SELECT date FROM post WHERE id = ?")
-      .set(this.number)
-      .select(new SingleOutcome&lt;Utc&gt;(Utc.class));
-  }
-  public String title() {
-    return new JdbcSession(this.dbase)
-      .sql("SELECT title FROM post WHERE id = ?")
-      .set(this.number)
-      .select(new SingleOutcome&lt;String&gt;(String.class));
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">PgPost</span> <span class="kd">implements</span> <span class="nc">Post</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Source</span> <span class="n">dbase</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">number</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">PgPost</span><span class="o">(</span><span class="nc">DataSource</span> <span class="n">data</span><span class="o">,</span> <span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">dbase</span> <span class="o">=</span> <span class="n">data</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">number</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">id</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">number</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">date</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JdbcSession</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"SELECT date FROM post WHERE id = ?"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">number</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="k">new</span> <span class="nc">SingleOutcome</span><span class="o">&lt;</span><span class="nc">Utc</span><span class="o">&gt;(</span><span class="nc">Utc</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JdbcSession</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"SELECT title FROM post WHERE id = ?"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">number</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="k">new</span> <span class="nc">SingleOutcome</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;(</span><span class="nc">String</span><span class="o">.</span><span class="na">class</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is how a full database interaction scenario would look like
 using the classes we just created:</p>
 
-<pre>Posts posts = new PgPosts(dbase);
-for (Post post : posts.iterate()){
-  System.out.println("Title: " + post.title());
-}
-Post post = posts.add(
-  new Date(), "How to cook an omelette"
-);
-System.out.println("Just added post #" + post.id());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Posts</span> <span class="n">posts</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PgPosts</span><span class="o">(</span><span class="n">dbase</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Post</span> <span class="n">post</span> <span class="o">:</span> <span class="n">posts</span><span class="o">.</span><span class="na">iterate</span><span class="o">()){</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Title: "</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="na">title</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="nc">Post</span> <span class="n">post</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="na">add</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Date</span><span class="o">(),</span> <span class="s">"How to cook an omelette"</span>
+<span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Just added post #"</span> <span class="o">+</span> <span class="n">post</span><span class="o">.</span><span class="na">id</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>You can see a full practical example <a href="https://github.com/aintshy/hub/tree/0.7.2/src/main/java/com/aintshy/pgsql">here</a>.
 It’s an open source
@@ -435,25 +448,26 @@ put, too slow.</p>
 a decorator of <code class="highlighter-rouge">PgPost</code> that will accept all data in its constructor
 and cache it internally, forever:</p>
 
-<pre>final class ConstPost implements Post {
-  private final Post origin;
-  private final Date dte;
-  private final String ttl;
-  public ConstPost(Post post, Date date, String title) {
-    this.origin = post;
-    this.dte = date;
-    this.ttl = title;
-  }
-  public int id() {
-    return this.origin.id();
-  }
-  public Date date() {
-    return this.dte;
-  }
-  public String title() {
-    return this.ttl;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">ConstPost</span> <span class="kd">implements</span> <span class="nc">Post</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Post</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Date</span> <span class="n">dte</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">ttl</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">ConstPost</span><span class="o">(</span><span class="nc">Post</span> <span class="n">post</span><span class="o">,</span> <span class="nc">Date</span> <span class="n">date</span><span class="o">,</span> <span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">post</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">dte</span> <span class="o">=</span> <span class="n">date</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">ttl</span> <span class="o">=</span> <span class="n">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">id</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">id</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Date</span> <span class="nf">date</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">dte</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">ttl</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pay attention: This decorator doesn’t know anything about PostgreSQL or
 JDBC. It just decorates an object of type <code class="highlighter-rouge">Post</code> and pre-caches the date
@@ -462,30 +476,31 @@ and title. As usual, this decorator is also immutable.</p>
 <p>Now let’s create another implementation of <code class="highlighter-rouge">Posts</code> that will return
 the “constant” objects:</p>
 
-<pre>final class ConstPgPosts implements Posts {
-  // ...
-  public Iterable&lt;Post&gt; iterate() {
-    return new JdbcSession(this.dbase)
-      .sql("SELECT * FROM post")
-      .select(
-        new ListOutcome&lt;Post&gt;(
-          new ListOutcome.Mapping&lt;Post&gt;() {
-            @Override
-            public Post map(final ResultSet rset) {
-              return new ConstPost(
-                new PgPost(
-                  ConstPgPosts.this.dbase,
-                  rset.getInt(1)
-                ),
-                Utc.getTimestamp(rset, 2),
-                rset.getString(3)
-              );
-            }
-          }
-        )
-      );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">ConstPgPosts</span> <span class="kd">implements</span> <span class="nc">Posts</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+  <span class="kd">public</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;</span> <span class="nf">iterate</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JdbcSession</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"SELECT * FROM post"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">select</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nc">ListOutcome</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;(</span>
+          <span class="k">new</span> <span class="nc">ListOutcome</span><span class="o">.</span><span class="na">Mapping</span><span class="o">&lt;</span><span class="nc">Post</span><span class="o">&gt;()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="nc">Post</span> <span class="nf">map</span><span class="o">(</span><span class="kd">final</span> <span class="nc">ResultSet</span> <span class="n">rset</span><span class="o">)</span> <span class="o">{</span>
+              <span class="k">return</span> <span class="k">new</span> <span class="nf">ConstPost</span><span class="o">(</span>
+                <span class="k">new</span> <span class="nf">PgPost</span><span class="o">(</span>
+                  <span class="nc">ConstPgPosts</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">,</span>
+                  <span class="n">rset</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+                <span class="o">),</span>
+                <span class="nc">Utc</span><span class="o">.</span><span class="na">getTimestamp</span><span class="o">(</span><span class="n">rset</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span>
+                <span class="n">rset</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+              <span class="o">);</span>
+            <span class="o">}</span>
+          <span class="o">}</span>
+        <span class="o">)</span>
+      <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now all posts returned by <code class="highlighter-rouge">iterate()</code> of this new class are pre-equipped with dates and titles
 fetched in one round trip to the database.</p>
@@ -505,38 +520,40 @@ nested transactions, which is perfectly fine provided the database
 server supports them. If there is no such support, create a session-wide
 transaction object that will accept a “callable” class. For example:</p>
 
-<pre>final class Txn {
-  private final DataSource dbase;
-  public &lt;T&gt; T call(Callable&lt;T&gt; callable) {
-    JdbcSession session = new JdbcSession(this.dbase);
-    try {
-      session.sql("START TRANSACTION").exec();
-      T result = callable.call();
-      session.sql("COMMIT").exec();
-      return result;
-    } catch (Exception ex) {
-      session.sql("ROLLBACK").exec();
-      throw ex;
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Txn</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">DataSource</span> <span class="n">dbase</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">call</span><span class="o">(</span><span class="nc">Callable</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">callable</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">JdbcSession</span> <span class="n">session</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdbcSession</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dbase</span><span class="o">);</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">session</span><span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"START TRANSACTION"</span><span class="o">).</span><span class="na">exec</span><span class="o">();</span>
+      <span class="no">T</span> <span class="n">result</span> <span class="o">=</span> <span class="n">callable</span><span class="o">.</span><span class="na">call</span><span class="o">();</span>
+      <span class="n">session</span><span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"COMMIT"</span><span class="o">).</span><span class="na">exec</span><span class="o">();</span>
+      <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">session</span><span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"ROLLBACK"</span><span class="o">).</span><span class="na">exec</span><span class="o">();</span>
+      <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, when you want to wrap a few object manipulations in one
 transaction, do it like this:</p>
 
-<pre>new Txn(dbase).call(
-  new Callable&lt;Integer&gt;() {
-    @Override
-    public Integer call() {
-      Posts posts = new PgPosts(dbase);
-      Post post = posts.add(
-        new Date(), "How to cook an omelette"
-      );
-      post.comments().post("This is my first comment!");
-      return post.id();
-    }
-  }
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Txn</span><span class="o">(</span><span class="n">dbase</span><span class="o">).</span><span class="na">call</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">Callable</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Integer</span> <span class="nf">call</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">Posts</span> <span class="n">posts</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PgPosts</span><span class="o">(</span><span class="n">dbase</span><span class="o">);</span>
+      <span class="nc">Post</span> <span class="n">post</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="na">add</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">Date</span><span class="o">(),</span> <span class="s">"How to cook an omelette"</span>
+      <span class="o">);</span>
+      <span class="n">post</span><span class="o">.</span><span class="na">comments</span><span class="o">().</span><span class="na">post</span><span class="o">(</span><span class="s">"This is my first comment!"</span><span class="o">);</span>
+      <span class="k">return</span> <span class="n">post</span><span class="o">.</span><span class="na">id</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>This code will create a new post and post a comment to it. If one
 of the calls fail, the entire transaction will be rolled back.</p>

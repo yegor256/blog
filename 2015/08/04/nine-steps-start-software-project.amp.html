@@ -99,10 +99,11 @@ a prototype, a.k.a. a skeleton or a proof of concept. This is what I have
 as an input (let’s say it’s a piece of napkin… what else would it be
 for a Google killer, right?):</p>
 
-<pre>Each page is ranked by the number of mentions in
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Each page is ranked by the number of mentions in
 social networks like Twitter, LinkedIn, Facebook, etc.
 The more mentions it has, the higher the rank and the
-higher its position in the search results page.</pre>
+higher its position in the search results page.
+</code></pre></div></div>
 
 <p>Seems like a doable project to me, and the requirements document is
 clear enough. It doesn’t say anything about performance, but I
@@ -130,13 +131,14 @@ technical document—it has to be short; that’s important.</p>
 <p>For each decision I made, there has to be at least one alternative
 that I considered and rejected. There are two items at the top of my list:</p>
 
-<pre>Apache Lucene is a search engine. It is popular,
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Apache Lucene is a search engine. It is popular,
   mature enough, scalable, and written in Java. Alternatives
   are Solr, Sphinx, Gigablast, and many others.
 Java 8 is a programming language, and JVM is a
   runtime platform. I know how they work, and the team
   has enough experience with them. Alternatives are
-  Ruby, Python, Go, Scala, and tons of others.</pre>
+  Ruby, Python, Go, Scala, and tons of others.
+</code></pre></div></div>
 
 
 
@@ -152,10 +154,11 @@ choices I’ve made: Lucene and Java 8.</p>
 
 <p>Yet another item to the list:</p>
 
-<pre>Three modules make up the app: UI, scraper,
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Three modules make up the app: UI, scraper,
   and analyzer. They are fully decoupled and
   communicate strictly through Lucene. I don't
-  see any alternatives.</pre>
+  see any alternatives.
+</code></pre></div></div>
 
 <p>Then, I attach a simple diagram to illustrate my decision:</p>
 
@@ -175,12 +178,13 @@ makes the entire project more maintainable and transparent.</p>
 
 <p>Let’s add one more decision to the list:</p>
 
-<pre>Takes Framework is used for UI. It helps keep our
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Takes Framework is used for UI. It helps keep our
   code truly object-oriented, testable, fast, and
   decoupled from the data model. Alternatives:
   - Spring: It is big, complex, and ugly
   - Play: Similar to Spring, big and ugly
-  - Spark: Not as clear as Takes</pre>
+  - Spark: Not as clear as Takes
+</code></pre></div></div>
 
 <p>In this case, I documented the alternatives and gave my reasons why
 they are not good for us. As you see, the reasons are very biased; I
@@ -215,13 +219,15 @@ prove that my solution is fast and scalable. Maybe it’s not, but if I believe
 it is, I have to explain why I think so. I can’t be quiet about the concerns. Here
 is what I would say about performance:</p>
 
-<pre>The system is as fast as the Lucene search engine, while
-Lucene is rather fast even with large amounts of data.</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The system is as fast as the Lucene search engine, while
+Lucene is rather fast even with large amounts of data.
+</code></pre></div></div>
 
 <p>And this one is about scalability:</p>
 
-<pre>The bottleneck is in Lucene, and it is scalable
-vertically. Not sure about horizontal scalability.</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The bottleneck is in Lucene, and it is scalable
+vertically. Not sure about horizontal scalability.
+</code></pre></div></div>
 
 <p>As you see, I’m trying to be <em>honest</em> and tell the truth. We’ll be able to
 review these statements later and decide whether I was right or wrong. But
@@ -236,11 +242,12 @@ it, but we have to document which <em>gaps</em> were filled and why.</p>
 
 <p>How about these two assumptions:</p>
 
-<pre>1. I assume that social platforms won't block our
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. I assume that social platforms won't block our
    calls and will provide counters for all pages.
 2. I assume that Lucene will be enough for both
    indexing and data storage, so we won't need a
-   database engine.</pre>
+   database engine.
+</code></pre></div></div>
 
 <p>I made these assumptions without proper analysis of the situation. I don’t
 know whether Twitter will be happy to see millions of requests every hour
@@ -266,8 +273,9 @@ is to document what I see and move on. Remember, I have just a week of time.</p>
 <p>Now I list all potential problems I foresee and estimate
 their probability and impact. Let me show you an example first:</p>
 
-<pre>1. Lucene may not be able to handle billions of documents [6x9]
-2. Social platforms will ban our requests [8x9]</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Lucene may not be able to handle billions of documents [6x9]
+2. Social platforms will ban our requests [8x9]
+</code></pre></div></div>
 
 <p>The first number in square brackets is the probability and the second one
 is the impact, on a 0 to 9 scale. If both numbers are nine, it’s not a risk

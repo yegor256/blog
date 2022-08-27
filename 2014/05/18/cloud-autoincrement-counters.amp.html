@@ -84,13 +84,14 @@ highly reliable and rather powerful. I’m using it in many web systems.</p>
 
 <p>Say that you have a table with a list of messages:</p>
 
-<pre>+------+----------------------------+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------+----------------------------+
 | id   | Attributes                 |
 +------+----------------------------+
 | 205  | author="jeff", text="..."  |
 | 206  | author="bob", text="..."   |
 | 207  | author="alice", text="..." |
-+------+----------------------------+</pre>
++------+----------------------------+
+</code></pre></div></div>
 
 <p>Every time you add a new item to the table, a new value
 of <code class="highlighter-rouge">id</code> has to be set. And this has to be done with concurrency in mind.
@@ -136,22 +137,24 @@ for <a href="http://www.stateful.co">stateful.co</a>. All you need to do is add
 this <a href="http://repo1.maven.org/maven2/co/stateful/java-sdk/">java-sdk.jar</a>
 Maven dependency to your project:</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;co.stateful&lt;/groupId&gt;
-  &lt;artifactId&gt;java-sdk&lt;/artifactId&gt;
-  &lt;version&gt;0.6&lt;/version&gt;
-&lt;/dependency&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>co.stateful<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>java-sdk<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.6<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
 <p>And, you can use <a href="http://www.stateful.co">stateful.co</a> counters from Java code:</p>
 
-<pre>Sttc sttc = new RtSttc(
-  new URN("urn:github:526301"),
-  "9FF3-41E0-73FB-F900"
-);
-Counters counters = sttc.counters();
-Counter counter = counters.get("foo");
-long value = counter.incrementAndGet(1L);
-System.out.println("new value: " + value);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Sttc</span> <span class="n">sttc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RtSttc</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">URN</span><span class="o">(</span><span class="s">"urn:github:526301"</span><span class="o">),</span>
+  <span class="s">"9FF3-41E0-73FB-F900"</span>
+<span class="o">);</span>
+<span class="nc">Counters</span> <span class="n">counters</span> <span class="o">=</span> <span class="n">sttc</span><span class="o">.</span><span class="na">counters</span><span class="o">();</span>
+<span class="nc">Counter</span> <span class="n">counter</span> <span class="o">=</span> <span class="n">counters</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"foo"</span><span class="o">);</span>
+<span class="kt">long</span> <span class="n">value</span> <span class="o">=</span> <span class="n">counter</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"new value: "</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>You can review authentication parameters for <code class="highlighter-rouge">RtSttc</code>
 constructor at <a href="http://www.stateful.co">stateful.co</a>.</p>

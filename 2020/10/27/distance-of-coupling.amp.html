@@ -103,23 +103,26 @@ In practice, “it is up to the user of an object to respect that object’s enc
 Indeed, let’s take a look at the class <code class="highlighter-rouge">Temperature</code> from my blog post
 about <a href="/2016/11/21/naked-data.html">naked data</a>:</p>
 
-<pre>class Temperature {
-  private int t;
-  public int getT() { return this.t; }
-  public void setT(int t) { this.t = t; }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getT</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">;</span> <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setT</span><span class="o">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Can we say that the attribute <code class="highlighter-rouge">t</code> is truly <em>encapsulated</em>?
 Technically, it is: it’s impossible
 to modify it directly via the dot notation.
 Simply put, we can’t do this:</p>
 
-<pre>Temperature x = new Temperature();
-x.t = 10;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Temperature</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Temperature</span><span class="o">();</span>
+<span class="n">x</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>And we can’t even do this:</p>
 
-<pre>int y = x.t;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">t</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>However, we can do exactly the same via the
 <a href="/2014/09/16/getters-and-setters-are-evil.html">getter</a> <code class="highlighter-rouge">getT()</code>
@@ -135,12 +138,13 @@ about naked data
 proposed the use of the <a href="http://media.pragprog.com/articles/jan_03_enbug.pdf">TellDontAsk principle</a>
 and that we should get rid of the getter:</p>
 
-<pre>class Temperature {
-  private int t;
-  public String toString() {
-    return String.format("%d F", this.t);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d F"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now the class <code class="highlighter-rouge">Temperature</code> doesn’t allow us to read its attribute <code class="highlighter-rouge">t</code>.
 Instead, we can only <em>tell</em> it to prepare a string presentation of the temperature
@@ -156,10 +160,11 @@ product, not modifiable. Or maybe not?</p>
 
 <p>What if the client does this:</p>
 
-<pre>Temperature x = new Temperature();
-String txt = x.toString();
-String[] parts = txt.split(" ");
-int t = Integer.parseInt(parts[0]);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Temperature</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Temperature</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+<span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">parts</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+</code></pre></div></div>
 
 <p>How does it look now? Isn’t this a violation of encapsulation?
 The result of <code class="highlighter-rouge">toString()</code> is not treated

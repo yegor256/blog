@@ -88,22 +88,23 @@ and their <em>monikers</em>.</p>
 <p>Here is the code from Section 5.10 (<em>Algorithms</em>) of my book
 <a href="http://amzn.to/2pjciUY"><em>Elegant Objects</em></a>:</p>
 
-<pre>public class Main {
-  public static void main(String... args) {
-    final Secret secret = new Secret();
-    new Farewell(
-      new Attempts(
-        new VerboseDiff(
-          new Diff(
-            secret,
-            new Guess()
-          )
-        ), 5
-      ),
-      secret
-    ).say();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Secret</span> <span class="n">secret</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Secret</span><span class="o">();</span>
+    <span class="k">new</span> <span class="nf">Farewell</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Attempts</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">VerboseDiff</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">Diff</span><span class="o">(</span>
+            <span class="n">secret</span><span class="o">,</span>
+            <span class="k">new</span> <span class="nf">Guess</span><span class="o">()</span>
+          <span class="o">)</span>
+        <span class="o">),</span> <span class="mi">5</span>
+      <span class="o">),</span>
+      <span class="n">secret</span>
+    <span class="o">).</span><span class="na">say</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pay attention to the variable <code class="highlighter-rouge">secret</code>. It exists here because we
 need its value twice: first, as a constructor argument for the <code class="highlighter-rouge">Diff</code>, second
@@ -119,21 +120,22 @@ technically they are constants?</p>
 <p>I’m suggesting we introduce “monikers” for these values, assigning them
 through the <code class="highlighter-rouge">as</code> keyword. For example:</p>
 
-<pre>public class Main {
-  public static void main(String... args) {
-    new Farewell(
-      new Attempts(
-        new VerboseDiff(
-          new Diff(
-            new Secret() as secret,
-            new Guess()
-          )
-        ), 5
-      ),
-      secret
-    ).say();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">Farewell</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Attempts</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">VerboseDiff</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">Diff</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">Secret</span><span class="o">()</span> <span class="n">as</span> <span class="n">secret</span><span class="o">,</span>
+            <span class="k">new</span> <span class="nf">Guess</span><span class="o">()</span>
+          <span class="o">)</span>
+        <span class="o">),</span> <span class="mi">5</span>
+      <span class="o">),</span>
+      <span class="n">secret</span>
+    <span class="o">).</span><span class="na">say</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here <code class="highlighter-rouge">new Secret()</code> is the inlined value and <code class="highlighter-rouge">secret</code> is its <em>moniker</em>, which
 we use a few lines later.</p>

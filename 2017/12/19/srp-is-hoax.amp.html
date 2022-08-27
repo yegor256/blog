@@ -98,11 +98,12 @@ improve a class, with the SRP in mind, and whether it will become
 <p>Let’s try the class <a href="https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java"><code class="highlighter-rouge">AwsOcket</code></a>
 from <a href="http://s3.jcabi.com">jcabi-s3</a> (I’ve simplified the code):</p>
 
-<pre>class AwsOcket {
-  boolean exists() { /* ... */ }
-  void read(final OutputStream output) { /* ... */ }
-  void write(final InputStream input) { /* ... */ }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">AwsOcket</span> <span class="o">{</span>
+  <span class="kt">boolean</span> <span class="nf">exists</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">read</span><span class="o">(</span><span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">output</span><span class="o">)</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">write</span><span class="o">(</span><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span><span class="o">)</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Correct me if I’m wrong, but according to SRP this class is responsible for
 too many things:
@@ -117,15 +118,17 @@ a getter, which will return an AWS client and then create three new classes:
 read, and write. Now, in order to read the content and print it to the
 console I’m currently doing this:</p>
 
-<pre>if (ocket.exists()) {
-  ocket.read(System.out);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">ocket</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="n">ocket</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Tomorrow, if I refactor the class, I will be doing this:</p>
 
-<pre>if (new ExistenceChecker(ocket.aws()).exists()) {
-  new ContentReader(ocket.aws()).read(System.out);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="k">new</span> <span class="nc">ExistenceChecker</span><span class="o">(</span><span class="n">ocket</span><span class="o">.</span><span class="na">aws</span><span class="o">()).</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">new</span> <span class="nf">ContentReader</span><span class="o">(</span><span class="n">ocket</span><span class="o">.</span><span class="na">aws</span><span class="o">()).</span><span class="na">read</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Aside from the fact that these checkers, readers, and writers are not really
 classes, but pure holders of procedures, the usage of this <code class="highlighter-rouge">ocket</code> turns

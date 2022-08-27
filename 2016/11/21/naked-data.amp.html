@@ -88,9 +88,10 @@ Encapsulation leads to the absence of <em>naked</em> data on all levels and in a
 
 <p>This is what naked data is (C code):</p>
 
-<pre>int t;
+<pre><code class="language-C">int t;
 t = 85;
-printf("The temperature is %d F", t);</pre>
+printf("The temperature is %d F", t);
+</code></pre>
 
 <p>Here <code class="highlighter-rouge">t</code> is the data, which is publicly accessible by the code around it.
 Anyone can modify it or read it.</p>
@@ -114,11 +115,12 @@ code where we made these or other assumptions about <code class="highlighter-rou
 
 <p>And this is not a solution, as you can imagine (Java now):</p>
 
-<pre>class Temperature {
-  private int t;
-  public int getT() { return this.t; }
-  public void setT(int t) { this.t = t; }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getT</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">;</span> <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setT</span><span class="o">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It looks like an object, but the data is still naked. Anyone can retrieve
 <code class="highlighter-rouge">t</code> from the object and decide whether it’s Fahrenheit or Celsius, whether
@@ -129,12 +131,13 @@ it either directly or by retrieving it from an object. How do we do that?
 Just stop exposing data and start exposing functionality. Here is how,
 for example:</p>
 
-<pre>class Temperature {
-  private int t;
-  public String toString() {
-    return String.format("%d F", this.t);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d F"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>We don’t allow anyone to retrieve <code class="highlighter-rouge">t</code> anymore. All they can do is
 convert temperature to text. If and when we decide to change <code class="highlighter-rouge">t</code> to Celsius,

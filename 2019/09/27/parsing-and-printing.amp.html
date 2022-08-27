@@ -102,13 +102,15 @@ There is a class <code class="highlighter-rouge">SimpleDateFormat</code>, which
 has to be configured first, with the right time zone and the formatting pattern.
 Then it has to be used to print:</p>
 
-<pre>DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
-df.setTimeZone(TimeZone.getTimeZone("UTC"));
-String iso = df.format(new Date());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">DateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleDateFormat</span><span class="o">(</span><span class="s">"yyyy-MM-dd'T'HH:mm'Z'"</span><span class="o">);</span>
+<span class="n">df</span><span class="o">.</span><span class="na">setTimeZone</span><span class="o">(</span><span class="nc">TimeZone</span><span class="o">.</span><span class="na">getTimeZone</span><span class="o">(</span><span class="s">"UTC"</span><span class="o">));</span>
+<span class="nc">String</span> <span class="n">iso</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>To parse it back, there is the method <code class="highlighter-rouge">parse()</code>:</p>
 
-<pre>Date date = df.parse("2007-12-03T10:15Z");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Date</span> <span class="n">date</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"2007-12-03T10:15Z"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>It’s a classic combination of a
 <a href="/2016/07/06/data-transfer-object.html">DTO</a>
@@ -130,13 +132,15 @@ with the method <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Ins
 which returns time in
 <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a> format:</p>
 
-<pre>String iso = Instant.now().toString();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">iso</span> <span class="o">=</span> <span class="nc">Instant</span><span class="o">.</span><span class="na">now</span><span class="o">().</span><span class="na">toString</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>To parse it back there is a static method
 <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html#parse-java.lang.CharSequence-"><code class="highlighter-rouge">parse()</code></a>
 in the same class <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html"><code class="highlighter-rouge">Instant</code></a>:</p>
 
-<pre>Instant time = Instant.parse("2007-12-03T10:15:30Z");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Instant</span> <span class="n">time</span> <span class="o">=</span> <span class="nc">Instant</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"2007-12-03T10:15:30Z"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>This approach looks more object-oriented, but
 the problem here is that it’s impossible to modify the printing
@@ -159,19 +163,21 @@ which introduces the third way of dealing with date/time objects.
 To print a date to a <code class="highlighter-rouge">String</code> we make an instance of the “formatter” and
 pass it to the time-object:</p>
 
-<pre>LocalDateTime date = LocalDateTime.now(ZoneId.of("UTC"));
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
-  "yyyy-MM-dd'T'HH:mm:ss'Z'"
-);
-String iso = time.format(formatter);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">date</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">(</span><span class="nc">ZoneId</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"UTC"</span><span class="o">));</span>
+<span class="nc">DateTimeFormatter</span> <span class="n">formatter</span> <span class="o">=</span> <span class="nc">DateTimeFormatter</span><span class="o">.</span><span class="na">ofPattern</span><span class="o">(</span>
+  <span class="s">"yyyy-MM-dd'T'HH:mm:ss'Z'"</span>
+<span class="o">);</span>
+<span class="nc">String</span> <span class="n">iso</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">formatter</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>To parse back, we have to send the <code class="highlighter-rouge">formatter</code> to the static method
 <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html#parse-java.lang.CharSequence-java.time.format.DateTimeFormatter-"><code class="highlighter-rouge">parse()</code></a>
 together with the text to parse:</p>
 
-<pre>LocalDateTime time = LocalDateTime.parse(
-  "2007-12-03T10:15:30Z", formatter
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">LocalDateTime</span> <span class="n">time</span> <span class="o">=</span> <span class="nc">LocalDateTime</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span>
+  <span class="s">"2007-12-03T10:15:30Z"</span><span class="o">,</span> <span class="n">formatter</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>How do they communicate, <code class="highlighter-rouge">LocalDateTime</code> and <code class="highlighter-rouge">DateTimeFormatter</code>?
 The time-object is a
@@ -196,143 +202,153 @@ DTO.</p>
 <p>Here is how I would design it instead. First, I would make a generic
 immutable <code class="highlighter-rouge">Template</code> with this interface:</p>
 
-<pre>interface Template {
-  Template with(String key, Object value);
-  Object read(String key);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Template</span> <span class="o">{</span>
+  <span class="nc">Template</span> <span class="nf">with</span><span class="o">(</span><span class="nc">String</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Object</span> <span class="n">value</span><span class="o">);</span>
+  <span class="nc">Object</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">key</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It would be used like this:</p>
 
-<pre>String iso = new DefaultTemplate("yyyy-MM-dd'T'HH:mm'Z'")
-  .with("yyyy", 2007)
-  .with("MM", 12)
-  .with("dd", 03)
-  .with("HH", 10)
-  .with("mm", 15)
-  .with("ss", 30)
-  .toString(); // returns "2007-12-03T10:15Z"</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">iso</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DefaultTemplate</span><span class="o">(</span><span class="s">"yyyy-MM-dd'T'HH:mm'Z'"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"yyyy"</span><span class="o">,</span> <span class="mi">2007</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"MM"</span><span class="o">,</span> <span class="mi">12</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"dd"</span><span class="o">,</span> <span class="mo">03</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"HH"</span><span class="o">,</span> <span class="mi">10</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"mm"</span><span class="o">,</span> <span class="mi">15</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"ss"</span><span class="o">,</span> <span class="mi">30</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">toString</span><span class="o">();</span> <span class="c1">// returns "2007-12-03T10:15Z"</span>
+</code></pre></div></div>
 
 <p>This template internally decides how to print the data coming in,
 depending on the encapsulated pattern. Here is how the <code class="highlighter-rouge">Date</code> would be
 able to print itself:</p>
 
-<pre>class Date {
-  private final int year;
-  private final int month;
-  private final int day;
-  private final int hours;
-  private final int minutes;
-  private final int seconds;
-  Template print(Template template) {
-    return template
-      .with("yyyy", this.year)
-      .with("MM", this.month)
-      .with("dd", this.day)
-      .with("HH", this.hours)
-      .with("mm", this.minutes)
-      .with("ss", this.seconds);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Date</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">year</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">month</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">day</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hours</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">minutes</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">seconds</span><span class="o">;</span>
+  <span class="nc">Template</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Template</span> <span class="n">template</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">template</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"yyyy"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">year</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"MM"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">month</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"dd"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">day</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"HH"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">hours</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"mm"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">minutes</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"ss"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">seconds</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is how parsing would work
 (it’s a <a href="/2015/05/07/ctors-must-be-code-free.html">bad idea</a>
 in general to put code into the constructor, but for this experiment it’s OK):</p>
 
-<pre>class Date {
-  private final int year;
-  private final int month;
-  private final int day;
-  private final int hours;
-  private final int minutes;
-  private final int seconds;
-  Date(Template template) {
-    this.year = template.read("yyyy");
-    this.month = template.read("MM");
-    this.day = template.read("dd");
-    this.hours = template.read("HH");
-    this.minutes = template.read("mm");
-    this.seconds = template.read("ss");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Date</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">year</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">month</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">day</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hours</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">minutes</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">seconds</span><span class="o">;</span>
+  <span class="nc">Date</span><span class="o">(</span><span class="nc">Template</span> <span class="n">template</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"yyyy"</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">month</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"MM"</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">day</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"dd"</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">hours</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"HH"</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">minutes</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"mm"</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">seconds</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"ss"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Let’s say we want to print time as “13-е января 2019 года” (it’s in Russian).
 How we would do this? We don’t create a new <code class="highlighter-rouge">Template</code>, we
 <a href="/2015/02/26/composable-decorators.html">decorate</a> the
 existing one, a few times. First, we make an instance of what we have:</p>
 
-<pre>new DefaultTemplate("dd-е MMMM yyyy-го года")</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">DefaultTemplate</span><span class="o">(</span><span class="s">"dd-е MMMM yyyy-го года"</span><span class="o">)</span>
+</code></pre></div></div>
 
 <p>This one will print something like this:</p>
 
-<pre>12-е MMMM 2019-го года</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>12-е MMMM 2019-го года
+</code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">Date</code> doesn’t send the value of <code class="highlighter-rouge">MMMM</code> into it, that’s why it doesn’t
 replace the text correctly. We have to decorate it:</p>
 
-<pre>class RussianTemplate {
-  private final Template origin;
-  RussianTemplate(Template t) {
-    this.origin = t;
-  }
-  @Override
-  Template with(String key, Object value) {
-    Template t = this.origin.with(key, value);
-    if (key.equals("MM")) {
-      String name = "";
-      switch (value) {
-      case 0:
-        name = "января";
-        break;
-      case 1:
-        name = "февраля";
-        break;
-        // etc...
-      }
-      t = t.with("MMMM", name);
-    }
-    return t;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">RussianTemplate</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Template</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">RussianTemplate</span><span class="o">(</span><span class="nc">Template</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="nc">Template</span> <span class="nf">with</span><span class="o">(</span><span class="nc">String</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Object</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Template</span> <span class="n">t</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"MM"</span><span class="o">))</span> <span class="o">{</span>
+      <span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+      <span class="k">switch</span> <span class="o">(</span><span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s">"января"</span><span class="o">;</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s">"февраля"</span><span class="o">;</span>
+        <span class="k">break</span><span class="o">;</span>
+        <span class="c1">// etc...</span>
+      <span class="o">}</span>
+      <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"MMMM"</span><span class="o">,</span> <span class="n">name</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">t</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, to get a Russian date from a <code class="highlighter-rouge">Date</code> object we do this:</p>
 
-<pre>String txt = time.print(
-  new RussianTemplate(
-    new DefaultTemplate("dd-е MMMM yyyy-го года")
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="na">print</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">RussianTemplate</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">DefaultTemplate</span><span class="o">(</span><span class="s">"dd-е MMMM yyyy-го года"</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Let’s say we want to print the date in a different time zone. We create another
 decorator, which intercepts the call with the <code class="highlighter-rouge">"HH"</code> and deducts (or adds)
 the time difference:</p>
 
-<pre>class TimezoneTemplate {
-  private final Template origin;
-  private final int zone;
-  TimezoneTemplate(Template t, int z) {
-    this.origin = t;
-    this.zone = z;
-  }
-  @Override
-  Template with(String key, Object value) {
-    Template t = this.origin.with(key, value);
-    if (key.equals("HH")) {
-      t = t.with("MM", Integer.cast(value) + this.z);
-    }
-    return t;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TimezoneTemplate</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Template</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">zone</span><span class="o">;</span>
+  <span class="nc">TimezoneTemplate</span><span class="o">(</span><span class="nc">Template</span> <span class="n">t</span><span class="o">,</span> <span class="kt">int</span> <span class="n">z</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">zone</span> <span class="o">=</span> <span class="n">z</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="nc">Template</span> <span class="nf">with</span><span class="o">(</span><span class="nc">String</span> <span class="n">key</span><span class="o">,</span> <span class="nc">Object</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Template</span> <span class="n">t</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">value</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"HH"</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"MM"</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">value</span><span class="o">)</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">z</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">t</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This code will print Moscow (UTC+3) time in Russian:</p>
 
-<pre>String txt = time.print(
-  new TimezoneTemplate(
-    new RussianTemplate(
-      new DefaultTemplate("dd-е MMMM yyyy-го года")
-    ),
-    +3
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">txt</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="na">print</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TimezoneTemplate</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">RussianTemplate</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">DefaultTemplate</span><span class="o">(</span><span class="s">"dd-е MMMM yyyy-го года"</span><span class="o">)</span>
+    <span class="o">),</span>
+    <span class="o">+</span><span class="mi">3</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>We can decorate as much as we need, making the <code class="highlighter-rouge">Template</code> as powerful
 as it needs to be. The elegance of this approach is that the class

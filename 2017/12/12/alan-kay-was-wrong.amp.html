@@ -91,12 +91,14 @@ Here is what I think.</p>
 <p>I believe that there are two orthogonal means of interaction between objects:
 messaging and composition. Let’s say, we have a point and a canvas:</p>
 
-<pre>Point p = new Point(x, y);
-Canvas canvas = new Canvas();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Point</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">);</span>
+<span class="nc">Canvas</span> <span class="n">canvas</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Canvas</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This is how messaging would look:</p>
 
-<pre>p.printTo(canvas);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p</span><span class="o">.</span><span class="na">printTo</span><span class="o">(</span><span class="n">canvas</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>The problem with messaging is that it keeps objects on the same
 level of abstraction. They communicate
@@ -115,7 +117,8 @@ the objects. In other words, there is no true encapsulation.</p>
 
 <p>On the other hand, this is how composition would look instead:</p>
 
-<pre>Point p2 = new PrintedOn(p, canvas);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Point</span> <span class="n">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrintedOn</span><span class="o">(</span><span class="n">p</span><span class="o">,</span> <span class="n">canvas</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Every time we need objects to communicate we create a bigger object that
 encapsulates more primitive ones, letting them interact inside. Of course,

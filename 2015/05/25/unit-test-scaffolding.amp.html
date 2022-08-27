@@ -92,29 +92,30 @@ alternative. Let me explain.</p>
 <p>JUnit officially suggests a
 <a href="http://junit.org/faq.html#atests_2">test fixture</a>:</p>
 
-<pre>public final class MetricsTest {
-  private File temp;
-  private Folder folder;
-  @Before
-  public void prepare() {
-    this.temp = Files.createTempDirectory("test");
-    this.folder = new DiscFolder(this.temp);
-    this.folder.save("first.txt", "Hello, world!");
-    this.folder.save("second.txt", "Goodbye!");
-  }
-  @After
-  public void clean() {
-    FileUtils.deleteDirectory(this.temp);
-  }
-  @Test
-  public void calculatesTotalSize() {
-    assertEquals(22, new Metrics(this.folder).size());
-  }
-  @Test
-  public void countsWordsInFiles() {
-    assertEquals(4, new Metrics(this.folder).wc());
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">File</span> <span class="n">temp</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Folder</span> <span class="n">folder</span><span class="o">;</span>
+  <span class="nd">@Before</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">prepare</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">temp</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DiscFolder</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">temp</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">folder</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"first.txt"</span><span class="o">,</span> <span class="s">"Hello, world!"</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">folder</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"second.txt"</span><span class="o">,</span> <span class="s">"Goodbye!"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@After</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">clean</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">FileUtils</span><span class="o">.</span><span class="na">deleteDirectory</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">temp</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">calculatesTotalSize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">assertEquals</span><span class="o">(</span><span class="mi">22</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Metrics</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">folder</span><span class="o">).</span><span class="na">size</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">countsWordsInFiles</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">assertEquals</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Metrics</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">folder</span><span class="o">).</span><span class="na">wc</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I think it’s obvious what this test is doing. First, in <code class="highlighter-rouge">prepare()</code>,
 it creates a “test fixture” of type <code class="highlighter-rouge">Folder</code>. That is used in all three
@@ -137,45 +138,46 @@ developers to couple test methods.</p>
 
 <p>Here is how we can improve our test and isolate test methods:</p>
 
-<pre>public final class MetricsTest {
-  @Test
-  public void calculatesTotalSize() {
-    final File dir = Files.createTempDirectory("test-1");
-    final Folder folder = MetricsTest.folder(
-      dir,
-      "first.txt:Hello, world!",
-      "second.txt:Goodbye!"
-    );
-    try {
-      assertEquals(22, new Metrics(folder).size());
-    } finally {
-      FileUtils.deleteDirectory(dir);
-    }
-  }
-  @Test
-  public void countsWordsInFiles() {
-    final File dir = Files.createTempDirectory("test-2");
-    final Folder folder = MetricsTest.folder(
-      dir,
-      "alpha.txt:Three words here",
-      "beta.txt:two words"
-      "gamma.txt:one!"
-    );
-    try {
-      assertEquals(6, new Metrics(folder).wc());
-    } finally {
-      FileUtils.deleteDirectory(dir);
-    }
-  }
-  private static Folder folder(File dir, String... parts) {
-    Folder folder = new DiscFolder(dir);
-    for (final String part : parts) {
-      final String[] pair = part.split(":", 2);
-      this.folder.save(pair[0], pair[1]);
-    }
-    return folder;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">calculatesTotalSize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">File</span> <span class="n">dir</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"test-1"</span><span class="o">);</span>
+    <span class="kd">final</span> <span class="nc">Folder</span> <span class="n">folder</span> <span class="o">=</span> <span class="nc">MetricsTest</span><span class="o">.</span><span class="na">folder</span><span class="o">(</span>
+      <span class="n">dir</span><span class="o">,</span>
+      <span class="s">"first.txt:Hello, world!"</span><span class="o">,</span>
+      <span class="s">"second.txt:Goodbye!"</span>
+    <span class="o">);</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">assertEquals</span><span class="o">(</span><span class="mi">22</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Metrics</span><span class="o">(</span><span class="n">folder</span><span class="o">).</span><span class="na">size</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+      <span class="nc">FileUtils</span><span class="o">.</span><span class="na">deleteDirectory</span><span class="o">(</span><span class="n">dir</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">countsWordsInFiles</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">File</span> <span class="n">dir</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"test-2"</span><span class="o">);</span>
+    <span class="kd">final</span> <span class="nc">Folder</span> <span class="n">folder</span> <span class="o">=</span> <span class="nc">MetricsTest</span><span class="o">.</span><span class="na">folder</span><span class="o">(</span>
+      <span class="n">dir</span><span class="o">,</span>
+      <span class="s">"alpha.txt:Three words here"</span><span class="o">,</span>
+      <span class="s">"beta.txt:two words"</span>
+      <span class="s">"gamma.txt:one!"</span>
+    <span class="o">);</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">assertEquals</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Metrics</span><span class="o">(</span><span class="n">folder</span><span class="o">).</span><span class="na">wc</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+      <span class="nc">FileUtils</span><span class="o">.</span><span class="na">deleteDirectory</span><span class="o">(</span><span class="n">dir</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Folder</span> <span class="nf">folder</span><span class="o">(</span><span class="nc">File</span> <span class="n">dir</span><span class="o">,</span> <span class="nc">String</span><span class="o">...</span> <span class="n">parts</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Folder</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DiscFolder</span><span class="o">(</span><span class="n">dir</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">part</span> <span class="o">:</span> <span class="n">parts</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">pair</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">":"</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">folder</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">pair</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">pair</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">folder</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Does it look better now? We’re not there yet, but now our test
 methods are perfectly isolated. If I want to change one of them,
@@ -199,56 +201,58 @@ instead of private static utilities. Here is how. First, we create a fake class
 and place it into <code class="highlighter-rouge">src/main/java</code>. This class can be used in tests
 and also in production code, if necessary (<code class="highlighter-rouge">Fk</code> for “fake”):</p>
 
-<pre>public final class FkFolder implements Folder, Closeable {
-  private final File dir;
-  private final String[] parts;
-  public FkFolder(String... prts) {
-    this(Files.createTempDirectory("test-1"), parts);
-  }
-  public FkFolder(File file, String... prts) {
-    this.dir = file;
-    this.parts = parts;
-  }
-  @Override
-  public Iterable&lt;File&gt; files() {
-    final Folder folder = new DiscFolder(this.dir);
-    for (final String part : this.parts) {
-      final String[] pair = part.split(":", 2);
-      folder.save(pair[0], pair[1]);
-    }
-    return folder.files();
-  }
-  @Override
-  public void close() {
-    FileUtils.deleteDirectory(this.dir);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">FkFolder</span> <span class="kd">implements</span> <span class="nc">Folder</span><span class="o">,</span> <span class="nc">Closeable</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">dir</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">FkFolder</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">prts</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"test-1"</span><span class="o">),</span> <span class="n">parts</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nf">FkFolder</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">,</span> <span class="nc">String</span><span class="o">...</span> <span class="n">prts</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">dir</span> <span class="o">=</span> <span class="n">file</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">parts</span> <span class="o">=</span> <span class="n">parts</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">File</span><span class="o">&gt;</span> <span class="nf">files</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Folder</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DiscFolder</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dir</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">part</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">parts</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">pair</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">":"</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+      <span class="n">folder</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">pair</span><span class="o">[</span><span class="mi">0</span><span class="o">],</span> <span class="n">pair</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">folder</span><span class="o">.</span><span class="na">files</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">FileUtils</span><span class="o">.</span><span class="na">deleteDirectory</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dir</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how our test will look now:</p>
 
-<pre>public final class MetricsTest {
-  @Test
-  public void calculatesTotalSize() {
-    final String[] parts = {
-      "first.txt:Hello, world!",
-      "second.txt:Goodbye!"
-    };
-    try (final Folder folder = new FkFolder(parts)) {
-      assertEquals(22, new Metrics(folder).size());
-    }
-  }
-  @Test
-  public void countsWordsInFiles() {
-    final String[] parts = {
-      "alpha.txt:Three words here",
-      "beta.txt:two words"
-      "gamma.txt:one!"
-    };
-    try (final Folder folder = new FkFolder(parts)) {
-      assertEquals(6, new Metrics(folder).wc());
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">calculatesTotalSize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="o">{</span>
+      <span class="s">"first.txt:Hello, world!"</span><span class="o">,</span>
+      <span class="s">"second.txt:Goodbye!"</span>
+    <span class="o">};</span>
+    <span class="k">try</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">Folder</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FkFolder</span><span class="o">(</span><span class="n">parts</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">assertEquals</span><span class="o">(</span><span class="mi">22</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Metrics</span><span class="o">(</span><span class="n">folder</span><span class="o">).</span><span class="na">size</span><span class="o">());</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">countsWordsInFiles</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="o">{</span>
+      <span class="s">"alpha.txt:Three words here"</span><span class="o">,</span>
+      <span class="s">"beta.txt:two words"</span>
+      <span class="s">"gamma.txt:one!"</span>
+    <span class="o">};</span>
+    <span class="k">try</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">Folder</span> <span class="n">folder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FkFolder</span><span class="o">(</span><span class="n">parts</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">assertEquals</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Metrics</span><span class="o">(</span><span class="n">folder</span><span class="o">).</span><span class="na">wc</span><span class="o">());</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What do you think? Isn’t it better than what JUnit offers?
 Isn’t it more reusable and extensible than utility methods?</p>

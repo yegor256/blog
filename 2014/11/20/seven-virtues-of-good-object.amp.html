@@ -118,7 +118,8 @@ should be involved—there are only a class and its children. An
 object asks a class to create another object, and the class constructs it; that’s it.
 Ruby expresses this concept much better than Java or C++:</p>
 
-<pre>photo = File.new('/tmp/photo.png')</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">photo</span> <span class="o">=</span> <span class="nc">File</span><span class="o">.</span><span class="na">new</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">photo</span><span class="o">.</span><span class="na">png</span><span class="err">'</span><span class="o">)</span>
+</code></pre></div></div>
 
 <p>The object <code class="highlighter-rouge">photo</code> is constructed by the class <code class="highlighter-rouge">File</code> (<code class="highlighter-rouge">new</code> is an entry point to the class).
 Once constructed, the object is acting on its own. It shouldn’t know who constructed it
@@ -145,8 +146,9 @@ real life, even when our software is turned off. To be more precise, an object i
 real-life creature in front of all other objects. Without
 such a creature, there is—obviously—no object.</p>
 
-<pre>photo = File.new('/tmp/photo.png')
-puts photo.width()</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">photo</span> <span class="o">=</span> <span class="nc">File</span><span class="o">.</span><span class="na">new</span><span class="o">(</span><span class="err">'</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">photo</span><span class="o">.</span><span class="na">png</span><span class="err">'</span><span class="o">)</span>
+<span class="n">puts</span> <span class="n">photo</span><span class="o">.</span><span class="na">width</span><span class="o">()</span>
+</code></pre></div></div>
 
 <p>In this example, I’m asking <code class="highlighter-rouge">File</code> to construct a new object <code class="highlighter-rouge">photo</code>, which will
 be a representative of a real file on disk. You may say that a file
@@ -194,9 +196,10 @@ an HTTP request, or maybe a document in Dropbox? Actually, I don’t. All I care
 is that some object gives me a byte array with PNG content. So my contract
 would look like this:</p>
 
-<pre>interface Binary {
-  byte[] read();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Binary</span> <span class="o">{</span>
+  <span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, any object from any class (not just <code class="highlighter-rouge">DataFile</code>) can work for me.
 All he has to do, in order to be eligible, is to obey
@@ -219,22 +222,24 @@ to be unique. If there is nothing to encapsulate, an object may
 have identical clones, which I believe is bad. Here is an example
 of a bad object, which may have clones:</p>
 
-<pre>class HTTPStatus implements Status {
-  private URL page = new URL("http://localhost");
-  @Override
-  public int read() throws IOException {
-    return HttpURLConnection.class.cast(
-      this.page.openConnection()
-    ).getResponseCode();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">HTTPStatus</span> <span class="kd">implements</span> <span class="nc">Status</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="no">URL</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="s">"http://localhost"</span><span class="o">);</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">HttpURLConnection</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">page</span><span class="o">.</span><span class="na">openConnection</span><span class="o">()</span>
+    <span class="o">).</span><span class="na">getResponseCode</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I can create a few instances of class <code class="highlighter-rouge">HTTPStatus</code>, and all of them will be
 equal to each other:</p>
 
-<pre>first = new HTTPStatus();
-second = new HTTPStatus();
-assert first.equals(second);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HTTPStatus</span><span class="o">();</span>
+<span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HTTPStatus</span><span class="o">();</span>
+<span class="k">assert</span> <span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Obviously utility classes, which have only static methods,
 can’t instantiate good objects. More generally, utility classes
@@ -255,19 +260,20 @@ never change owners. :)</p>
 Instead, a good immutable object is very dynamic.
 However, he never changes his internal state. For example:</p>
 
-<pre>@Immutable
-final class HTTPStatus implements Status {
-  private URL page;
-  public HTTPStatus(URL url) {
-    this.page = url;
-  }
-  @Override
-  public int read() throws IOException {
-    return HttpURLConnection.class.cast(
-      this.page.openConnection()
-    ).getResponseCode();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">HTTPStatus</span> <span class="kd">implements</span> <span class="nc">Status</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="no">URL</span> <span class="n">page</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">HTTPStatus</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">page</span> <span class="o">=</span> <span class="n">url</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">HttpURLConnection</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">page</span><span class="o">.</span><span class="na">openConnection</span><span class="o">()</span>
+    <span class="o">).</span><span class="na">getResponseCode</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Even though the method <code class="highlighter-rouge">read()</code> may return different values, the
 object is immutable. He points to a certain web page and will
@@ -302,12 +308,13 @@ explains: <a href="/2014/11/07/how-immutability-helps.html">How Immutability Hel
 <p>A static method implements a behavior of a class, not an object. Let’s say
 we have class <code class="highlighter-rouge">File</code>, and his children have method <code class="highlighter-rouge">size()</code>:</p>
 
-<pre>final class File implements Measurable {
-  @Override
-  public int size() {
-    // calculate the size of the file and return
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">File</span> <span class="kd">implements</span> <span class="nc">Measurable</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// calculate the size of the file and return</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>So far, so good; the method <code class="highlighter-rouge">size()</code> is there because of the contract <code class="highlighter-rouge">Measurable</code>,
 and every object of class <code class="highlighter-rouge">File</code> will be able to measure his size. A terrible
@@ -316,12 +323,13 @@ mistake would be to design this class with a static method instead
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">a utility class</a>
 and is very popular in Java, Ruby, and almost every OOP language):</p>
 
-<pre>// TERRIBLE DESIGN, DON'T USE!
-class File {
-  public static int size(String file) {
-    // calculate the size of the file and return
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// TERRIBLE DESIGN, DON'T USE!</span>
+<span class="kd">class</span> <span class="nc">File</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">(</span><span class="nc">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// calculate the size of the file and return</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This design runs completely against the object-oriented paradigm. Why?
 Because static methods turn object-oriented programming into “class-oriented” programming.
@@ -420,19 +428,20 @@ an exception if HTTP status is over 400. I want
 his method, <code class="highlighter-rouge">read()</code>, to do more that it does now. A traditional way would be
 to extend the class and overwrite his method:</p>
 
-<pre>class OnlyValidStatus extends HTTPStatus {
-  public OnlyValidStatus(URL url) {
-    super(url);
-  }
-  @Override
-  public int read() throws IOException {
-    int code = super.read();
-    if (code &gt;= 400) {
-      throw new RuntimeException("Unsuccessful HTTP code");
-    }
-    return code;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OnlyValidStatus</span> <span class="kd">extends</span> <span class="nc">HTTPStatus</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nf">OnlyValidStatus</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">code</span> <span class="o">=</span> <span class="kd">super</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">code</span> <span class="o">&gt;=</span> <span class="mi">400</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"Unsuccessful HTTP code"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">code</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Why is this wrong? It is very wrong because we risk breaking
 the logic of the entire parent class by overriding one of his methods. Remember,
@@ -445,20 +454,21 @@ speaking, this is an offense.</p>
 and decorate him with your own implementation (a.k.a.
 <a href="https://en.wikipedia.org/wiki/Decorator_pattern">Decorator Pattern</a>):</p>
 
-<pre>final class OnlyValidStatus implements Status {
-  private final Status origin;
-  public OnlyValidStatus(Status status) {
-    this.origin = status;
-  }
-  @Override
-  public int read() throws IOException {
-    int code = this.origin.read();
-    if (code &gt;= 400) {
-      throw new RuntimeException("Unsuccessful HTTP code");
-    }
-    return code;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">OnlyValidStatus</span> <span class="kd">implements</span> <span class="nc">Status</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Status</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">OnlyValidStatus</span><span class="o">(</span><span class="nc">Status</span> <span class="n">status</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">status</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">code</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">code</span> <span class="o">&gt;=</span> <span class="mi">400</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"Unsuccessful HTTP code"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">code</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Make sure that this class is implementing the same
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>
@@ -478,17 +488,18 @@ our custom implementation logic into him, but only into the places he allows
 us to touch. These places are explicitly marked as <code class="highlighter-rouge">abstract</code> methods.
 For example, our <code class="highlighter-rouge">HTTPStatus</code> may look like this:</p>
 
-<pre>abstract class ValidatedHTTPStatus implements Status {
-  @Override
-  public final int read() throws IOException {
-    int code = this.origin.read();
-    if (!this.isValid()) {
-      throw new RuntimeException("Unsuccessful HTTP code");
-    }
-    return code;
-  }
-  protected abstract boolean isValid();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">ValidatedHTTPStatus</span> <span class="kd">implements</span> <span class="nc">Status</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">code</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">isValid</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"Unsuccessful HTTP code"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">code</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">isValid</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>As you see, the class doesn’t know how exactly to validate the HTTP
 code, and he expects us to inject that logic through inheritance and through

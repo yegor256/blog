@@ -88,15 +88,16 @@ the former is better than the latter.</p>
 
 <p>Let’s say this is our code (it is Ruby):</p>
 
-<pre>class Log
-  def initialize(path)
-    @file = IO.new(path, 'a')
-  end
-  def put(text)
-    line = Time.now.strftime("%d/%m/%Y %H:%M ") + text
-    @file.puts line
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Log</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="vi">@file</span> <span class="o">=</span> <span class="no">IO</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="no">Time</span><span class="p">.</span><span class="nf">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s2">"%d/%m/%Y %H:%M "</span><span class="p">)</span> <span class="o">+</span> <span class="n">text</span>
+    <span class="vi">@file</span><span class="p">.</span><span class="nf">puts</span> <span class="n">line</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Obviously, objects of this class are doing too much.
 They save log lines to the
@@ -109,36 +110,40 @@ into another object(s). We have to <em>decompose</em> its responsibility.
 No matter where we put it, this is how the
 <code class="highlighter-rouge">Log</code> class will look after the extraction:</p>
 
-<pre>class Log
-  def initialize(path)
-    @file = IO.new(path, 'a')
-  end
-  def put(line)
-    @file.puts line
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Log</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="vi">@file</span> <span class="o">=</span> <span class="no">IO</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="vi">@file</span><span class="p">.</span><span class="nf">puts</span> <span class="n">line</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Now it only saves lines to the file, which is perfect. The class
 is cohesive and small. Let’s make an instance of it:</p>
 
-<pre>log = Log.new('/tmp/log.txt')</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span> <span class="o">=</span> <span class="no">Log</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'/tmp/log.txt'</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>Next, where do we put the lines with formatting functionality that were just extracted?
 There are two approaches to decompose responsibility: horizontal and
 vertical. This one is <em>horizontal</em>:</p>
 
-<pre>class Line
-  def initialize(text)
-    @line = text
-  end
-  def to_s
-    Time.now.strftime("%d/%m/%Y %H:%M ") + text
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Line</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="vi">@line</span> <span class="o">=</span> <span class="n">text</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="no">Time</span><span class="p">.</span><span class="nf">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s2">"%d/%m/%Y %H:%M "</span><span class="p">)</span> <span class="o">+</span> <span class="n">text</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>In order to use <code class="highlighter-rouge">Log</code> and <code class="highlighter-rouge">Line</code> together, we have to do this:</p>
 
-<pre>log.put(Line.new("Hello, world"))</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="no">Line</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">))</span>
+</code></pre></div></div>
 
 <p>See why it’s horizontal? Because this script sees them
 both. They both are on the same level of visibility. We will always have
@@ -150,22 +155,25 @@ two classes in order to log a line:</p>
 
 <p>To the contrary, this decomposition of responsibility is <em>vertical</em>:</p>
 
-<pre>class TimedLog
-  def initialize(log)
-    @origin = log
-  end
-  def put(text)
-    @origin.put(Time.now.strftime("%d/%m/%Y %H:%M ") + text)
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TimedLog</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+    <span class="vi">@origin</span> <span class="o">=</span> <span class="n">log</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="vi">@origin</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="no">Time</span><span class="p">.</span><span class="nf">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s2">"%d/%m/%Y %H:%M "</span><span class="p">)</span> <span class="o">+</span> <span class="n">text</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Class <code class="highlighter-rouge">TimedLog</code> is a decorator, and this is how we use them together:</p>
 
-<pre>log = TimedLog.new(log)</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span> <span class="o">=</span> <span class="no">TimedLog</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>Now, we just put a line in the log:</p>
 
-<pre>log.put("Hello, world")</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>The responsibility is decomposed vertically. We still have one entry point
 into the <code class="highlighter-rouge">log</code> object, but the object “consists” of two objects, one wrapped

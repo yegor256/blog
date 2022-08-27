@@ -93,35 +93,37 @@ shorter, like in <a href="http://www.eolang.org">EO</a> for example.</p>
 from <a href="http://www.takes.org">Takes Framework</a>. Its design looks
 like this (a simplified version with only one primary constructor):</p>
 
-<pre>class RsHtml extends RsWrap {
-  RsHtml(final String text) {
-    super(
-      new RsWithType(
-        new RsWithStatus(text, 200),
-        "text/html"
-      )
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">RsHtml</span> <span class="kd">extends</span> <span class="nc">RsWrap</span> <span class="o">{</span>
+  <span class="nc">RsHtml</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">RsWithStatus</span><span class="o">(</span><span class="n">text</span><span class="o">,</span> <span class="mi">200</span><span class="o">),</span>
+        <span class="s">"text/html"</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, let’s take a look at that
 <a href="https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsWrap.java"><code class="highlighter-rouge">RsWrap</code></a>
 it extends:</p>
 
-<pre>public class RsWrap implements Response {
-  private final Response origin;
-  public RsWrap(final Response res) {
-    this.origin = res;
-  }
-  @Override
-  public final Iterable&lt;String&gt; head() {
-    return this.origin.head();
-  }
-  @Override
-  public final InputStream body() {
-    return this.origin.body();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RsWrap</span> <span class="kd">implements</span> <span class="nc">Response</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Response</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">RsWrap</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Response</span> <span class="n">res</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">res</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">head</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">head</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="nc">InputStream</span> <span class="nf">body</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">body</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>As you see, this “decorator” doesn’t do anything except “just decorating.”
 It encapsulates another <code class="highlighter-rouge">Response</code> and passes through all method calls.</p>
@@ -129,18 +131,20 @@ It encapsulates another <code class="highlighter-rouge">Response</code> and pass
 <p>If it’s not clear yet, I’ll explain the purpose of <code class="highlighter-rouge">RsHtml</code>. Let’s
 say you have text and you want to create a <code class="highlighter-rouge">Response</code>:</p>
 
-<pre>String text = // you have it already
-Response response = new RsWithType(
-  new RsWithStatus(text, HttpURLConnection.HTTP_OK),
-  "text/html"
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="c1">// you have it already</span>
+<span class="nc">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RsWithType</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">RsWithStatus</span><span class="o">(</span><span class="n">text</span><span class="o">,</span> <span class="nc">HttpURLConnection</span><span class="o">.</span><span class="na">HTTP_OK</span><span class="o">),</span>
+  <span class="s">"text/html"</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Instead of doing this
 <a href="/2015/02/26/composable-decorators.html">composition of decorators</a>
 over and over again in many places, you use <code class="highlighter-rouge">RsHtml</code>:</p>
 
-<pre>String text = // you have it already
-Response response = new RsHtml(text);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="c1">// you have it already</span>
+<span class="nc">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RsHtml</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>It is very convenient, but that <code class="highlighter-rouge">RsWrap</code> is very verbose. There are too many
 lines that don’t do anything special; they just forward all method
@@ -149,20 +153,22 @@ calls to the encapsulated <code class="highlighter-rouge">Response</code>.</p>
 <p>How about we introduce a new concept, “decorators,” with a new
 keyword, <code class="highlighter-rouge">decorates</code>:</p>
 
-<pre>class RsHtml decorates Response {
-  RsHtml(final String text) {
-    this(
-      new RsWithType(
-        new RsWithStatus(text, 200),
-        "text/html"
-      )
-    )
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">RsHtml</span> <span class="n">decorates</span> <span class="nc">Response</span> <span class="o">{</span>
+  <span class="nc">RsHtml</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">RsWithStatus</span><span class="o">(</span><span class="n">text</span><span class="o">,</span> <span class="mi">200</span><span class="o">),</span>
+        <span class="s">"text/html"</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, in order to create an object, we just call:</p>
 
-<pre>Response response = new RsHtml(text);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RsHtml</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+</code></pre></div></div>
 
 
 

@@ -113,23 +113,24 @@ This definition is not mine; it’s taken from
 (by the way, I highly recommend you read it). Now look at this class
 (I’m using <a href="http://http.jcabi.com">jcabi-http</a> to read and write over HTTP):</p>
 
-<pre>@Immutable
-class Page {
-  private final URI uri;
-  Page(URI addr) {
-    this.uri = addr;
-  }
-  public String load() {
-    return new JdkRequest(this.uri)
-      .fetch().body();
-  }
-  public void save(String content) {
-    new JdkRequest(this.uri)
-      .method("PUT")
-      .body().set(content).back()
-      .fetch();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">URI</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="nc">Page</span><span class="o">(</span><span class="no">URI</span> <span class="n">addr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">addr</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JdkRequest</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">fetch</span><span class="o">().</span><span class="na">body</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">String</span> <span class="n">content</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">JdkRequest</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"PUT"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">body</span><span class="o">().</span><span class="na">set</span><span class="o">(</span><span class="n">content</span><span class="o">).</span><span class="na">back</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What is the “state” in this class? That’s right, <code class="highlighter-rouge">this.uri</code> is the state. It
 uniquely identifies every object of this class, and it is not modifiable. Thus,

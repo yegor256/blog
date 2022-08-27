@@ -92,27 +92,28 @@ database configuration will be very similar.)</p>
 to your <a href="http://maven.apache.org/pom.html"><code class="highlighter-rouge">pom.xml</code></a> (get its latest
 version in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;project&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   [...]
-  &lt;build&gt;
+  <span class="nt">&lt;build&gt;</span>
     [...]
-    &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.liquibase&lt;/groupId&gt;
-        &lt;artifactId&gt;liquibase-maven-plugin&lt;/artifactId&gt;
-        &lt;configuration&gt;
-          &lt;changeLogFile&gt;
+    <span class="nt">&lt;plugins&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.liquibase<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>liquibase-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;configuration&gt;</span>
+          <span class="nt">&lt;changeLogFile&gt;</span>
             ${basedir}/src/main/liquibase/master.xml
-          &lt;/changeLogFile&gt;
-          &lt;driver&gt;com.mysql.jdbc.Driver&lt;/driver&gt;
-          &lt;url&gt;jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.db}&lt;/url&gt;
-          &lt;username&gt;${mysql.login}&lt;/username&gt;
-          &lt;password&gt;${mysql.password}&lt;/password&gt;
-        &lt;/configuration&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-&lt;/project&gt;</pre>
+          <span class="nt">&lt;/changeLogFile&gt;</span>
+          <span class="nt">&lt;driver&gt;</span>com.mysql.jdbc.Driver<span class="nt">&lt;/driver&gt;</span>
+          <span class="nt">&lt;url&gt;</span>jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.db}<span class="nt">&lt;/url&gt;</span>
+          <span class="nt">&lt;username&gt;</span>${mysql.login}<span class="nt">&lt;/username&gt;</span>
+          <span class="nt">&lt;password&gt;</span>${mysql.password}<span class="nt">&lt;/password&gt;</span>
+        <span class="nt">&lt;/configuration&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>To check that it works, run <code class="highlighter-rouge">mvn liquibase:help</code>.</p>
 
@@ -120,26 +121,27 @@ version in <a href="http://search.maven.org/">Maven Central</a>):</p>
 in <a href="http://maven.apache.org/settings.html"><code class="highlighter-rouge">settings.xml</code></a>
 and  in their respective profiles. For example:</p>
 
-<pre>&lt;settings&gt;
-  &lt;profiles&gt;
-    &lt;profile&gt;
-      &lt;id&gt;production&lt;/id&gt;
-      &lt;properties&gt;
-        &lt;mysql.host&gt;db.example.com&lt;/mysql.host&gt;
-        &lt;mysql.port&gt;3306&lt;/mysql.port&gt;
-        &lt;mysql.db&gt;example&lt;/mysql.db&gt;
-      &lt;/properties&gt;
-    &lt;/profile&gt;
-    &lt;profile&gt;
-      &lt;id&gt;test&lt;/id&gt;
-      &lt;properties&gt;
-        &lt;mysql.host&gt;test-db.example.com&lt;/mysql.host&gt;
-        &lt;mysql.port&gt;3306&lt;/mysql.port&gt;
-        &lt;mysql.db&gt;example-db&lt;/mysql.db&gt;
-      &lt;/properties&gt;
-    &lt;/profile&gt;
-  &lt;/profiles&gt;
-&lt;/settings&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
+  <span class="nt">&lt;profiles&gt;</span>
+    <span class="nt">&lt;profile&gt;</span>
+      <span class="nt">&lt;id&gt;</span>production<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;mysql.host&gt;</span>db.example.com<span class="nt">&lt;/mysql.host&gt;</span>
+        <span class="nt">&lt;mysql.port&gt;</span>3306<span class="nt">&lt;/mysql.port&gt;</span>
+        <span class="nt">&lt;mysql.db&gt;</span>example<span class="nt">&lt;/mysql.db&gt;</span>
+      <span class="nt">&lt;/properties&gt;</span>
+    <span class="nt">&lt;/profile&gt;</span>
+    <span class="nt">&lt;profile&gt;</span>
+      <span class="nt">&lt;id&gt;</span>test<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;mysql.host&gt;</span>test-db.example.com<span class="nt">&lt;/mysql.host&gt;</span>
+        <span class="nt">&lt;mysql.port&gt;</span>3306<span class="nt">&lt;/mysql.port&gt;</span>
+        <span class="nt">&lt;mysql.db&gt;</span>example-db<span class="nt">&lt;/mysql.db&gt;</span>
+      <span class="nt">&lt;/properties&gt;</span>
+    <span class="nt">&lt;/profile&gt;</span>
+  <span class="nt">&lt;/profiles&gt;</span>
+<span class="nt">&lt;/settings&gt;</span>
+</code></pre></div></div>
 
 <p>When you run Maven, don’t forget to turn
 on one of the profiles. For example: <code class="highlighter-rouge">mvn -Pproduction</code>.</p>
@@ -158,12 +160,13 @@ Liquibase directly. But, it’s not that difficult. First,
 run <code class="highlighter-rouge">mvn liquibase:help</code> in order to download all artifacts.
 Then, replace placeholders with your actual credentials:</p>
 
-<pre>$ java -jar \
-  ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3.1.1.jar \
-  --driver=com.mysql.jdbc.Driver \
-  --url=jdbc:mysql://db.example.com:3306/example \
-  --username=example --password=example \
-  generateChangeLog &gt; src/main/liquibase/2014/000-initial-schema.xml</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-jar</span> <span class="se">\</span>
+  ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3.1.1.jar <span class="se">\</span>
+  <span class="nt">--driver</span><span class="o">=</span>com.mysql.jdbc.Driver <span class="se">\</span>
+  <span class="nt">--url</span><span class="o">=</span>jdbc:mysql://db.example.com:3306/example <span class="se">\</span>
+  <span class="nt">--username</span><span class="o">=</span>example <span class="nt">--password</span><span class="o">=</span>example <span class="se">\</span>
+  generateChangeLog <span class="o">&gt;</span> src/main/liquibase/2014/000-initial-schema.xml
+</code></pre></div></div>
 
 <p>Liquibase will analyze your current database schema
 and copy its own schema into <code class="highlighter-rouge">src/main/liquibase/2014/000-initial-schema.xml</code>.</p>
@@ -172,13 +175,14 @@ and copy its own schema into <code class="highlighter-rouge">src/main/liquibase/
 
 <p>Now, create XML master changeset and save it to <code class="highlighter-rouge">src/main/liquibase/master.xml</code>:</p>
 
-<pre>&lt;databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"&gt;
-  &lt;includeAll path="src/main/liquibase/2014" /&gt;
-&lt;/databaseChangeLog&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;databaseChangeLog</span>
+  <span class="na">xmlns=</span><span class="s">"http://www.liquibase.org/xml/ns/dbchangelog"</span>
+  <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;includeAll</span> <span class="na">path=</span><span class="s">"src/main/liquibase/2014"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/databaseChangeLog&gt;</span>
+</code></pre></div></div>
 
 <p>It is an entry point for Liquibase. It starts from this file
 and loads all other changesets available in <code class="highlighter-rouge">src/main/liquibase/2014</code>.
@@ -189,16 +193,17 @@ XML mostly because it is easier to maintain and works faster.</p>
 
 <p>Let’s create a simple changeset, which adds a new column to an existing table:</p>
 
-<pre>&lt;databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
-  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-  xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog
-    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'&gt;
-  &lt;changeSet id="002" author="Yegor"&gt;
-    &lt;sql&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;databaseChangeLog</span> <span class="na">xmlns=</span><span class="s">'http://www.liquibase.org/xml/ns/dbchangelog'</span>
+  <span class="na">xmlns:xsi=</span><span class="s">'http://www.w3.org/2001/XMLSchema-instance'</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">'http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;changeSet</span> <span class="na">id=</span><span class="s">"002"</span> <span class="na">author=</span><span class="s">"Yegor"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;sql&gt;</span>
       ALTER TABLE user ADD COLUMN address VARCHAR(1024);
-    &lt;/sql&gt;
-  &lt;/changeSet&gt;
-&lt;/databaseChangeLog&gt;</pre>
+    <span class="nt">&lt;/sql&gt;</span>
+  <span class="nt">&lt;/changeSet&gt;</span>
+<span class="nt">&lt;/databaseChangeLog&gt;</span>
+</code></pre></div></div>
 
 <p>We save this file in <code class="highlighter-rouge">src/main/liquibase/2014/002-add-user-address.xml</code>.
 In big projects, you can name your files by the names of the tickets

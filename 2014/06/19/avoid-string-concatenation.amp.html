@@ -76,8 +76,9 @@ this article explains why and how to avoid it to create cleaner code
       <h1>Avoid String Concatenation</h1>
       <p>This is “string concatenation,” and it is a bad practice:</p>
 
-<pre>// bad practice, don't reuse!
-String text = "Hello, " + name + "!";</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// bad practice, don't reuse!</span>
+<span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">"Hello, "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">"!"</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>Why? Some may say that it is slow, mostly because parts of
 the resulting string are copied multiple times. Indeed, on every <code class="highlighter-rouge">+</code> operator,
@@ -121,29 +122,33 @@ and modify. It is a static utility method that mirrors
 <a href="http://www.cplusplus.com/reference/cstdio/sprintf/"><code class="highlighter-rouge">sprintf()</code></a> from C.
 It allows you to build a string using a pattern and substitutors:</p>
 
-<pre>String text = String.format("Hello, %s!", name);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Hello, %s!"</span><span class="o">,</span> <span class="n">name</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>When the text is longer, the advantages of the formatter become
 much more obvious. Look at this ugly code:</p>
 
-<pre>String msg = "Dear " + customer.name()
-  + ", your order #" + order.number()
-  + " has been shipped at " + shipment.date()
-  + "!";</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">"Dear "</span> <span class="o">+</span> <span class="n">customer</span><span class="o">.</span><span class="na">name</span><span class="o">()</span>
+  <span class="o">+</span> <span class="s">", your order #"</span> <span class="o">+</span> <span class="n">order</span><span class="o">.</span><span class="na">number</span><span class="o">()</span>
+  <span class="o">+</span> <span class="s">" has been shipped at "</span> <span class="o">+</span> <span class="n">shipment</span><span class="o">.</span><span class="na">date</span><span class="o">()</span>
+  <span class="o">+</span> <span class="s">"!"</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>This one looks much more beautiful doesn’t it
 (jSparrow even has <a href="https://jsparrow.github.io/rules/avoid-concatenation-in-logging-statements.html">a rule</a> for this):</p>
 
-<pre>String msg = String.format(
-  "Dear %1$s, your order #%2$d has been shipped at %3$tR!",
-  customer.name(), order.number(), shipment.date()
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+  <span class="s">"Dear %1$s, your order #%2$d has been shipped at %3$tR!"</span><span class="o">,</span>
+  <span class="n">customer</span><span class="o">.</span><span class="na">name</span><span class="o">(),</span> <span class="n">order</span><span class="o">.</span><span class="na">number</span><span class="o">(),</span> <span class="n">shipment</span><span class="o">.</span><span class="na">date</span><span class="o">()</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Please note that I’m using argument indexes in order to make
 the pattern even more localizable. Let’s say, I want
 to translate it to Greek. This is how will it look:</p>
 
-<pre>Αγαπητέ %1$s, στις %3$tR στείλαμε την παραγγελία σου με αριθμό #%2$d!</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Αγαπητέ %1$s, στις %3$tR στείλαμε την παραγγελία σου με αριθμό #%2$d!
+</code></pre></div></div>
 
 <p>I’m changing the order of substitutions in the pattern,
 but not in the actual list of methods arguments.</p>
@@ -156,25 +161,27 @@ I would recommend that you use the utility class
 <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html"><code class="highlighter-rouge">StringUtils</code></a>
 from Apache <a href="http://commons.apache.org/proper/commons-lang/">commons-lang3</a>:</p>
 
-<pre>import org.apache.commons.lang3.StringUtils;
-String xml = StringUtils.join(
-  "&lt;?xml version='1.0'?&gt;",
-  "&lt;html&gt;&lt;body&gt;",
-  "&lt;p&gt;This is a test XHTML document,",
-  " which would look ugly,",
-  " if we would use a single line,"
-  " or string concatenation or String format().&lt;/p&gt;"
-  "&lt;/body&gt;&lt;/html&gt;"
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.apache.commons.lang3.StringUtils</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">xml</span> <span class="o">=</span> <span class="nc">StringUtils</span><span class="o">.</span><span class="na">join</span><span class="o">(</span>
+  <span class="s">"&lt;?xml version='1.0'?&gt;"</span><span class="o">,</span>
+  <span class="s">"&lt;html&gt;&lt;body&gt;"</span><span class="o">,</span>
+  <span class="s">"&lt;p&gt;This is a test XHTML document,"</span><span class="o">,</span>
+  <span class="s">" which would look ugly,"</span><span class="o">,</span>
+  <span class="s">" if we would use a single line,"</span>
+  <span class="s">" or string concatenation or String format().&lt;/p&gt;"</span>
+  <span class="s">"&lt;/body&gt;&lt;/html&gt;"</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>The need to include an additional JAR dependency
 to your classpath may be considered a downside with this method
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
-  &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.apache.commons<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>commons-lang3<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
 <h2 id="guava-joiner">Guava Joiner</h2>
 
@@ -182,24 +189,26 @@ to your classpath may be considered a downside with this method
 <a href="http://google.github.io/guava/releases/16.0/api/docs/com/google/common/base/Joiner.html"><code class="highlighter-rouge">Joiner</code></a>
 from Google <a href="https://code.google.com/p/guava-libraries/">Guava</a>:</p>
 
-<pre>import com.google.common.base.Joiner;
-String text = Joiner.on('').join(
-  "WE HAVE BUNNY.\n",
-  "GATHER ONE MILLION DOLLARS IN UNMARKED ",
-  "NON-CONSECUTIVE TWENTIES.\n",
-  "AWAIT INSTRUCTIONS.\n",
-  "NO FUNNY STUFF"
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.google.common.base.Joiner</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="nc">Joiner</span><span class="o">.</span><span class="na">on</span><span class="o">(</span><span class="err">''</span><span class="o">).</span><span class="na">join</span><span class="o">(</span>
+  <span class="s">"WE HAVE BUNNY.\n"</span><span class="o">,</span>
+  <span class="s">"GATHER ONE MILLION DOLLARS IN UNMARKED "</span><span class="o">,</span>
+  <span class="s">"NON-CONSECUTIVE TWENTIES.\n"</span><span class="o">,</span>
+  <span class="s">"AWAIT INSTRUCTIONS.\n"</span><span class="o">,</span>
+  <span class="s">"NO FUNNY STUFF"</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>It is a bit less convenient than <code class="highlighter-rouge">StringUtils</code> since you always
 have to provide a joiner (character or a string placed between text blocks).</p>
 
 <p>Again, a dependency is required in this case:</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
-  &lt;artifactId&gt;guava&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.google.guava<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>guava<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
 <p>Yes, in most cases, all of these methods work slower than
 a plain simple concatenation. However, I strongly believe

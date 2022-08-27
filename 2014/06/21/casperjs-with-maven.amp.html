@@ -91,22 +91,23 @@ to requests sent by a regular web browser.</p>
 of a running WAR application and asserts that the response has
 <code class="highlighter-rouge">200</code> HTTP status code:</p>
 
-<pre>casper.test.begin(
-  'home page can be rendered',
-  function (test) {
-    casper.start(
-      casper.cli.get('home'), // URL of home page
-      function () {
-        test.assertHttpStatus(200);
-      }
-    );
-    casper.run(
-      function () {
-        test.done();
-      }
-    );
-  }
-);</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">casper</span><span class="p">.</span><span class="nx">test</span><span class="p">.</span><span class="nx">begin</span><span class="p">(</span>
+  <span class="dl">'</span><span class="s1">home page can be rendered</span><span class="dl">'</span><span class="p">,</span>
+  <span class="kd">function</span> <span class="p">(</span><span class="nx">test</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">casper</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span>
+      <span class="nx">casper</span><span class="p">.</span><span class="nx">cli</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">home</span><span class="dl">'</span><span class="p">),</span> <span class="c1">// URL of home page</span>
+      <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">test</span><span class="p">.</span><span class="nx">assertHttpStatus</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">);</span>
+    <span class="nx">casper</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span>
+      <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">test</span><span class="p">.</span><span class="nx">done</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div></div>
 
 <p>I keep this test in the <code class="highlighter-rouge">src/test/casperjs/home-page.js</code> file.
 Let’s see how CasperJS can be executed automatically on every Maven build.</p>
@@ -149,20 +150,21 @@ we have an off-the-shelf Maven plugin:
 that understands what the current platform is and downloads the appropriate
 binary automatically, placing it into the <code class="highlighter-rouge">target</code> directory.</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;com.github.klieber&lt;/groupId&gt;
-  &lt;artifactId&gt;phantomjs-maven-plugin&lt;/artifactId&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;install&lt;/goal&gt;
-      &lt;/goals&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-  &lt;configuration&gt;
-    &lt;version&gt;1.9.2&lt;/version&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.github.klieber<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>phantomjs-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>install<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.9.2<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>The exact name of the downloaded binary is stored in the
 <code class="highlighter-rouge">${phantomjs.binary}</code> Maven property.</p>
@@ -173,28 +175,29 @@ binary automatically, placing it into the <code class="highlighter-rouge">target
 (at least I haven’t found any as of yet). That’s why I’m using plain
 old <code class="highlighter-rouge">git</code> (you should have it installed on your build machine).</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
-  &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;casperjs-install&lt;/id&gt;
-      &lt;phase&gt;pre-integration-test&lt;/phase&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;exec&lt;/goal&gt;
-      &lt;/goals&gt;
-      &lt;configuration&gt;
-        &lt;executable&gt;git&lt;/executable&gt;
-        &lt;arguments&gt;
-          &lt;argument&gt;clone&lt;/argument&gt;
-          &lt;argument&gt;--depth=1&lt;/argument&gt;
-          &lt;argument&gt;https://github.com/n1k0/casperjs.git&lt;/argument&gt;
-          &lt;argument&gt;${project.build.directory}/casperjs&lt;/argument&gt;
-        &lt;/arguments&gt;
-      &lt;/configuration&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>casperjs-install<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;phase&gt;</span>pre-integration-test<span class="nt">&lt;/phase&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>exec<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;executable&gt;</span>git<span class="nt">&lt;/executable&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>clone<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>--depth=1<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>https://github.com/n1k0/casperjs.git<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>${project.build.directory}/casperjs<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <h2 id="3-reserve-tcp-port">3. Reserve TCP Port</h2>
 
@@ -206,23 +209,24 @@ to run multiple Maven builds in parallel, so that’s why I get a random port on
 like <code class="highlighter-rouge">5555</code> or something similar. This is a very bad practice.
 Always reserve a new random port when you need it.</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
-  &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;tomcat-port&lt;/id&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;reserve-network-port&lt;/goal&gt;
-      &lt;/goals&gt;
-      &lt;configuration&gt;
-        &lt;portNames&gt;
-          &lt;portName&gt;tomcat.port&lt;/portName&gt;
-        &lt;/portNames&gt;
-      &lt;/configuration&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>build-helper-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>tomcat-port<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>reserve-network-port<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;portNames&gt;</span>
+          <span class="nt">&lt;portName&gt;</span>tomcat.port<span class="nt">&lt;/portName&gt;</span>
+        <span class="nt">&lt;/portNames&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>The plugin reserves a port and sets it value to the <code class="highlighter-rouge">${tomcat.port}</code> Maven property.</p>
 
@@ -232,26 +236,27 @@ Always reserve a new random port when you need it.</p>
 I’m using <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>
 that starts a real Tomcat7 server and configures it to serve on the port reserved above.</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
-  &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
-    &lt;path&gt;/&lt;/path&gt;
-  &lt;/configuration&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;start-tomcat&lt;/id&gt;
-      &lt;phase&gt;pre-integration-test&lt;/phase&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;run-war-only&lt;/goal&gt;
-      &lt;/goals&gt;
-      &lt;configuration&gt;
-        &lt;port&gt;${tomcat.port}&lt;/port&gt;
-        &lt;fork&gt;true&lt;/fork&gt;
-      &lt;/configuration&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.maven<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;path&gt;</span>/<span class="nt">&lt;/path&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>start-tomcat<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;phase&gt;</span>pre-integration-test<span class="nt">&lt;/phase&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>run-war-only<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;port&gt;</span>${tomcat.port}<span class="nt">&lt;/port&gt;</span>
+        <span class="nt">&lt;fork&gt;</span>true<span class="nt">&lt;/fork&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>Due to the option <code class="highlighter-rouge">fork</code> being set to <code class="highlighter-rouge">true</code>, Tomcat7 continues
 to run when the plugin execution finishes. That’s exactly what I need.</p>
@@ -263,36 +268,37 @@ plugins exist for this, I’m using plain old
 <code class="highlighter-rouge">exec-maven-plugin</code>,
 mostly because it is more configurable.</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
-  &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;casperjs-test&lt;/id&gt;
-      &lt;phase&gt;integration-test&lt;/phase&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;exec&lt;/goal&gt;
-      &lt;/goals&gt;
-      &lt;configuration&gt;
-        &lt;executable&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>exec-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>casperjs-test<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;phase&gt;</span>integration-test<span class="nt">&lt;/phase&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>exec<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;executable&gt;</span>
           ${project.build.directory}/casperjs/bin/casperjs
-        &lt;/executable&gt;
-        &lt;workingDirectory&gt;${basedir}&lt;/workingDirectory&gt;
-        &lt;arguments&gt;
-          &lt;argument&gt;test&lt;/argument&gt;
-          &lt;argument&gt;--verbose&lt;/argument&gt;
-          &lt;argument&gt;--no-colors&lt;/argument&gt;
-          &lt;argument&gt;--concise&lt;/argument&gt;
-          &lt;argument&gt;--home=http://localhost:${tomcat.port}&lt;/argument&gt;
-          &lt;argument&gt;${basedir}/src/test/casperjs&lt;/argument&gt;
-        &lt;/arguments&gt;
-        &lt;environmentVariables&gt;
-          &lt;PHANTOMJS_EXECUTABLE&gt;${phantomjs.binary}&lt;/PHANTOMJS_EXECUTABLE&gt;
-        &lt;/environmentVariables&gt;
-      &lt;/configuration&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+        <span class="nt">&lt;/executable&gt;</span>
+        <span class="nt">&lt;workingDirectory&gt;</span>${basedir}<span class="nt">&lt;/workingDirectory&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>test<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>--verbose<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>--no-colors<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>--concise<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>--home=http://localhost:${tomcat.port}<span class="nt">&lt;/argument&gt;</span>
+          <span class="nt">&lt;argument&gt;</span>${basedir}/src/test/casperjs<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+        <span class="nt">&lt;environmentVariables&gt;</span>
+          <span class="nt">&lt;PHANTOMJS_EXECUTABLE&gt;</span>${phantomjs.binary}<span class="nt">&lt;/PHANTOMJS_EXECUTABLE&gt;</span>
+        <span class="nt">&lt;/environmentVariables&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>The environment variable <code class="highlighter-rouge">PHANTOMJS_EXECUTABLE</code> is the undocumented
 feature that makes this whole scenario possible. It configures
@@ -302,19 +308,20 @@ the location of the PhantomJS executable, which was downloaded a few steps above
 
 <p>In the last step, I shut down the Tomcat server.</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
-  &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;stop-tomcat&lt;/id&gt;
-      &lt;phase&gt;post-integration-test&lt;/phase&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;shutdown&lt;/goal&gt;
-      &lt;/goals&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.apache.tomcat.maven<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>stop-tomcat<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;phase&gt;</span>post-integration-test<span class="nt">&lt;/phase&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>shutdown<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <h2 id="real-example">Real Example</h2>
 

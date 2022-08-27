@@ -96,88 +96,89 @@ that does exactly two things: starts a MySQL server on
 <p>This is how you configure it in <code class="highlighter-rouge">pom.xml</code>
 (see also its full <a href="http://mysql.jcabi.com/usage.html">usage instructions</a>):</p>
 
-<pre>&lt;project&gt;
-  &lt;build&gt;
-    &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
-        &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;reserve-network-port&lt;/goal&gt;
-            &lt;/goals&gt;
-            &lt;configuration&gt;
-              &lt;portNames&gt;
-                &lt;portName&gt;mysql.port&lt;/portName&gt;
-              &lt;/portNames&gt;
-            &lt;/configuration&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;unpack&lt;/goal&gt;
-            &lt;/goals&gt;
-            &lt;configuration&gt;
-              &lt;artifactItems&gt;
-                &lt;artifactItem&gt;
-                  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-                  &lt;artifactId&gt;mysql-dist&lt;/artifactId&gt;
-                  &lt;version&gt;5.6.14&lt;/version&gt;
-                  &lt;classifier&gt;${mysql.classifier}&lt;/classifier&gt;
-                  &lt;type&gt;zip&lt;/type&gt;
-                  &lt;overWrite&gt;false&lt;/overWrite&gt;
-                  &lt;outputDirectory&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>build-helper-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>reserve-network-port<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+            <span class="nt">&lt;configuration&gt;</span>
+              <span class="nt">&lt;portNames&gt;</span>
+                <span class="nt">&lt;portName&gt;</span>mysql.port<span class="nt">&lt;/portName&gt;</span>
+              <span class="nt">&lt;/portNames&gt;</span>
+            <span class="nt">&lt;/configuration&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-dependency-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>unpack<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+            <span class="nt">&lt;configuration&gt;</span>
+              <span class="nt">&lt;artifactItems&gt;</span>
+                <span class="nt">&lt;artifactItem&gt;</span>
+                  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+                  <span class="nt">&lt;artifactId&gt;</span>mysql-dist<span class="nt">&lt;/artifactId&gt;</span>
+                  <span class="nt">&lt;version&gt;</span>5.6.14<span class="nt">&lt;/version&gt;</span>
+                  <span class="nt">&lt;classifier&gt;</span>${mysql.classifier}<span class="nt">&lt;/classifier&gt;</span>
+                  <span class="nt">&lt;type&gt;</span>zip<span class="nt">&lt;/type&gt;</span>
+                  <span class="nt">&lt;overWrite&gt;</span>false<span class="nt">&lt;/overWrite&gt;</span>
+                  <span class="nt">&lt;outputDirectory&gt;</span>
                     ${project.build.directory}/mysql-dist
-                  &lt;/outputDirectory&gt;
-                &lt;/artifactItem&gt;
-              &lt;/artifactItems&gt;
-            &lt;/configuration&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-        &lt;artifactId&gt;jcabi-mysql-maven-plugin&lt;/artifactId&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;id&gt;mysql-test&lt;/id&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;classify&lt;/goal&gt;
-              &lt;goal&gt;start&lt;/goal&gt;
-              &lt;goal&gt;stop&lt;/goal&gt;
-            &lt;/goals&gt;
-            &lt;configuration&gt;
-              &lt;port&gt;${mysql.port}&lt;/port&gt;
-              &lt;data&gt;${project.build.directory}/mysql-data&lt;/data&gt;
-            &lt;/configuration&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-failsafe-plugin&lt;/artifactId&gt;
-        &lt;configuration&gt;
-          &lt;systemPropertyVariables&gt;
-            &lt;mysql.port&gt;${mysql.port}&lt;/mysql.port&gt;
-          &lt;/systemPropertyVariables&gt;
-        &lt;/configuration&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;integration-test&lt;/goal&gt;
-              &lt;goal&gt;verify&lt;/goal&gt;
-            &lt;/goals&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
+                  <span class="nt">&lt;/outputDirectory&gt;</span>
+                <span class="nt">&lt;/artifactItem&gt;</span>
+              <span class="nt">&lt;/artifactItems&gt;</span>
+            <span class="nt">&lt;/configuration&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>jcabi-mysql-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>mysql-test<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>classify<span class="nt">&lt;/goal&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>start<span class="nt">&lt;/goal&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>stop<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+            <span class="nt">&lt;configuration&gt;</span>
+              <span class="nt">&lt;port&gt;</span>${mysql.port}<span class="nt">&lt;/port&gt;</span>
+              <span class="nt">&lt;data&gt;</span>${project.build.directory}/mysql-data<span class="nt">&lt;/data&gt;</span>
+            <span class="nt">&lt;/configuration&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-failsafe-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;configuration&gt;</span>
+          <span class="nt">&lt;systemPropertyVariables&gt;</span>
+            <span class="nt">&lt;mysql.port&gt;</span>${mysql.port}<span class="nt">&lt;/mysql.port&gt;</span>
+          <span class="nt">&lt;/systemPropertyVariables&gt;</span>
+        <span class="nt">&lt;/configuration&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>integration-test<span class="nt">&lt;/goal&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>verify<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
   [...]
-&lt;/project&gt;</pre>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>There are two plugins configured above. Let’s take a look
 at what each does.</p>
@@ -222,13 +223,14 @@ goal, it will fail a build if there were any errors during its
 
 <p>To be precise, this is the order in which Maven will execute configured goals:</p>
 
-<pre>jcabi-mysql-maven-plugin:classify
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jcabi-mysql-maven-plugin:classify
 maven-dependency-plugin:unpack
 build-helper-maven-plugin:reserve-network-port
 jcabi-mysql-maven-plugin:start
 maven-failsafe-plugin:integration-test
 jcabi-mysql-maven-plugin:stop
-maven-failsafe-plugin:verify</pre>
+maven-failsafe-plugin:verify
+</code></pre></div></div>
 
 <p>Run <code class="highlighter-rouge">mvn clean install</code> and see how it works. If it doesn’t work
 for some reason, don’t hesitate
@@ -240,29 +242,31 @@ a table there and insert some data into it. This is just
 an example to show that MySQL server is running and
 is capable of serving transactions (I’m using <a href="http://jdbc.jcabi.com">jcabi-jdbc</a>):</p>
 
-<pre>public class FooITCase {
-  private static final String PORT = System.getProperty("mysql.port");
-  @Test
-  public void worksWithMysqlServer() {
-    Connection conn = DriverManager.getConnection(
-      String.format(
-        "jdbc:mysql://localhost:%s/root?user=root&amp;password=root",
-        FooITCase.PORT
-      )
-    );
-    new JdbcSession(conn)
-      .sql("CREATE TABLE foo (id INT PRIMARY KEY)")
-      .execute();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooITCase</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">PORT</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">"mysql.port"</span><span class="o">);</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">worksWithMysqlServer</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="nc">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+        <span class="s">"jdbc:mysql://localhost:%s/root?user=root&amp;password=root"</span><span class="o">,</span>
+        <span class="nc">FooITCase</span><span class="o">.</span><span class="na">PORT</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+    <span class="k">new</span> <span class="nf">JdbcSession</span><span class="o">(</span><span class="n">conn</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">sql</span><span class="o">(</span><span class="s">"CREATE TABLE foo (id INT PRIMARY KEY)"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>If you’re using Hibernate, just create a <code class="highlighter-rouge">db.properties</code>
 file in <code class="highlighter-rouge">src/test/resources</code> directory.
 In that file you would do something like:</p>
 
-<pre>hibernate.connection.url=jdbc:mysql://localhost:${mysql.port}/root
-hibernate.connection.username=root
-hibernate.connection.password=root</pre>
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">hibernate.connection.url</span><span class="p">=</span><span class="s">jdbc:mysql://localhost:${mysql.port}/root</span>
+<span class="py">hibernate.connection.username</span><span class="p">=</span><span class="s">root</span>
+<span class="py">hibernate.connection.password</span><span class="p">=</span><span class="s">root</span>
+</code></pre></div></div>
 
 <p>Maven will replace that <code class="highlighter-rouge">${mysql.port}</code> with the number of
 reserved TCP port, during resources copying. This operation

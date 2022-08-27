@@ -84,17 +84,19 @@ This is how I’m doing it, with help of <a href="http://eclipse.org/aspectj/">A
 <a href="http://aspects.jcabi.com">jcabi-aspects</a> and Java 6
 <a href="/2016/04/12/java-annotations-are-evil.html">annotations</a>:</p>
 
-<pre>public class Foo {
-  @Loggable
-  public int power(int x, int p) {
-    return Math.pow(x, p);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="nd">@Loggable</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">power</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">pow</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">p</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is what I see in log4j output:</p>
 
-<pre>[INFO] com.example.Foo #power(2, 10): 1024 in 12μs
-[INFO] com.example.Foo #power(3, 3): 27 in 4μs</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[INFO] com.example.Foo #power(2, 10): 1024 in 12μs
+[INFO] com.example.Foo #power(3, 3): 27 in 4μs
+</code></pre></div></div>
 
 <p>Nice, isn’t it? Now, let’s see how it works.</p>
 
@@ -161,22 +163,23 @@ implements them using <a href="http://eclipse.org/aspectj/">AspectJ</a>
 (it’s a simplified example, full code you can find in
 <a href="https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java"><code class="highlighter-rouge">MethodLogger.java</code></a>):</p>
 
-<pre>@Aspect
-public class MethodLogger {
-  @Around("execution(* *(..)) &amp;&amp; @annotation(Loggable)")
-  public Object around(ProceedingJoinPoint point) {
-    long start = System.currentTimeMillis();
-    Object result = point.proceed();
-    Logger.info(
-      "#%s(%s): %s in %[msec]s",
-      MethodSignature.class.cast(point.getSignature()).getMethod().getName(),
-      point.getArgs(),
-      result,
-      System.currentTimeMillis() - start
-    );
-    return result;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Aspect</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MethodLogger</span> <span class="o">{</span>
+  <span class="nd">@Around</span><span class="o">(</span><span class="s">"execution(* *(..)) &amp;&amp; @annotation(Loggable)"</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="nc">Object</span> <span class="nf">around</span><span class="o">(</span><span class="nc">ProceedingJoinPoint</span> <span class="n">point</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+    <span class="nc">Object</span> <span class="n">result</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="na">proceed</span><span class="o">();</span>
+    <span class="nc">Logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span>
+      <span class="s">"#%s(%s): %s in %[msec]s"</span><span class="o">,</span>
+      <span class="nc">MethodSignature</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">point</span><span class="o">.</span><span class="na">getSignature</span><span class="o">()).</span><span class="na">getMethod</span><span class="o">().</span><span class="na">getName</span><span class="o">(),</span>
+      <span class="n">point</span><span class="o">.</span><span class="na">getArgs</span><span class="o">(),</span>
+      <span class="n">result</span><span class="o">,</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">-</span> <span class="n">start</span>
+    <span class="o">);</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is an <strong>aspect</strong> with a single <strong>around advice</strong>
 <code class="highlighter-rouge">around()</code> inside. The aspect is annotated with <code class="highlighter-rouge">@Aspect</code>
@@ -237,17 +240,18 @@ Of course, it finds our method <code class="highlighter-rouge">power()</code>.</
 creates its own extra class. Our <code class="highlighter-rouge">Foo</code> class looks something
 like this after weaving:</p>
 
-<pre>public class Foo {
-  private final MethodLogger logger;
-  @Loggable
-  public int power(int x, int p) {
-    // Prepares the "point" object
-    return this.logger.around(point);
-  }
-  private int power_aroundBody(int x, int p) {
-    return Math.pow(x, p);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">MethodLogger</span> <span class="n">logger</span><span class="o">;</span>
+  <span class="nd">@Loggable</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">power</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Prepares the "point" object</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">logger</span><span class="o">.</span><span class="na">around</span><span class="o">(</span><span class="n">point</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="nf">power_aroundBody</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">pow</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">p</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>AspectJ weaver moves our original functionality to a new method,
 <code class="highlighter-rouge">power_aroundBody()</code>, and redirects all <code class="highlighter-rouge">power()</code> calls
@@ -278,33 +282,34 @@ your classpath and configure <a href="http://plugin.jcabi.com">jcabi-maven-plugi
 for aspect weaving
 (get their latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;project&gt;
-  &lt;dependencies&gt;
-    &lt;dependency&gt;
-      &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-      &lt;artifactId&gt;jcabi-aspects&lt;/artifactId&gt;
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-      &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
-      &lt;artifactId&gt;aspectjrt&lt;/artifactId&gt;
-    &lt;/dependency&gt;
-  &lt;/dependencies&gt;
-  &lt;build&gt;
-    &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-        &lt;artifactId&gt;jcabi-maven-plugin&lt;/artifactId&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;ajc&lt;/goal&gt;
-            &lt;/goals&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-&lt;/project&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>jcabi-aspects<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.aspectj<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>aspectjrt<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;/dependencies&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>jcabi-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>ajc<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>Since this weaving procedure takes a lot of configuration effort,
 I created a convenient Maven plugin with an <code class="highlighter-rouge">ajc</code> goal, which does

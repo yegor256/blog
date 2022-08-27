@@ -87,28 +87,32 @@ in all situations and assertions should never be used. Here’s why.</p>
 <p>Let’s see what happens when an assertion is triggered. Say that this
 is our code:</p>
 
-<pre>public class Main {
-  public static void main(String... args) {
-    assert true == false : "There is a problem";
-    System.out.println("Hello, world!");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">assert</span> <span class="kc">true</span> <span class="o">==</span> <span class="kc">false</span> <span class="o">:</span> <span class="s">"There is a problem"</span><span class="o">;</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Save this code to <code class="highlighter-rouge">Main.java</code> and compile:</p>
 
-<pre>$ javac Main.java</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>javac Main.java
+</code></pre></div></div>
 
 <p>Then run it:</p>
 
-<pre>$ java Main
-Hello, world!</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java Main
+Hello, world!
+</code></pre></div></div>
 
 <p>The assertion wasn’t triggered. It was ignored. Now run it with an
 <code class="highlighter-rouge">-enableassertions</code> flag:</p>
 
-<pre>$ java -enableassertions Main
-Exception in thread "main" java.lang.AssertionError: There is a problem
-  at Main.main(Main.java:3)</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-enableassertions</span> Main
+Exception <span class="k">in </span>thread <span class="s2">"main"</span> java.lang.AssertionError: There is a problem
+  at Main.main<span class="o">(</span>Main.java:3<span class="o">)</span>
+</code></pre></div></div>
 
 <p>This is the first difference between exceptions and assertions. Exceptions
 will always be thrown, while assertions are not enabled by default. They are

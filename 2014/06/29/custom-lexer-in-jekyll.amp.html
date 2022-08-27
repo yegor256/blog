@@ -80,43 +80,46 @@ on which I’m using Jekyll for site rendering.</p>
 
 <p>This is how my code blocks look in markdown pages:</p>
 
-<pre>{ % highlight requs %}
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ % highlight requs %}
 User is a "human being."
-{ % endhighlight %}</pre>
+{ % endhighlight %}
+</code></pre></div></div>
 
 <p>I created a custom <a href="http://pygments.org/docs/lexerdevelopment/">Pygments lexer</a>:</p>
 
 
 
-<pre>from pygments.lexer import RegexLexer
-from pygments.token import Punctuation, Text, Keyword, Name, String
-from pygments.util import shebang_matches
-class RequsLexer(RegexLexer):
-  name = 'requs'
-  aliases = ['requs']
-  tokens = {
-    'root': [
-      (r'"[^"]+"', String),
-      (r'""".+"""', Text),
-      (r'\b(needs|includes|requires|when|fail|is|a|the)\s*\b', Keyword),
-      (r'([A-Z][a-z]+)+', Name),
-      (r'[,;:]', Punctuation),
-    ],
-  }
-  def analyse_text(text):
-    return shebang_matches(text, r'requs')</pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pygments.lexer</span> <span class="kn">import</span> <span class="n">RegexLexer</span>
+<span class="kn">from</span> <span class="nn">pygments.token</span> <span class="kn">import</span> <span class="n">Punctuation</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">Keyword</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">String</span>
+<span class="kn">from</span> <span class="nn">pygments.util</span> <span class="kn">import</span> <span class="n">shebang_matches</span>
+<span class="k">class</span> <span class="nc">RequsLexer</span><span class="p">(</span><span class="n">RegexLexer</span><span class="p">):</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s">'requs'</span>
+  <span class="n">aliases</span> <span class="o">=</span> <span class="p">[</span><span class="s">'requs'</span><span class="p">]</span>
+  <span class="n">tokens</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'root'</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">(</span><span class="sa">r</span><span class="s">'"[^"]+"'</span><span class="p">,</span> <span class="n">String</span><span class="p">),</span>
+      <span class="p">(</span><span class="sa">r</span><span class="s">'""".+"""'</span><span class="p">,</span> <span class="n">Text</span><span class="p">),</span>
+      <span class="p">(</span><span class="sa">r</span><span class="s">'\b(needs|includes|requires|when|fail|is|a|the)\s*\b'</span><span class="p">,</span> <span class="n">Keyword</span><span class="p">),</span>
+      <span class="p">(</span><span class="sa">r</span><span class="s">'([A-Z][a-z]+)+'</span><span class="p">,</span> <span class="n">Name</span><span class="p">),</span>
+      <span class="p">(</span><span class="sa">r</span><span class="s">'[,;:]'</span><span class="p">,</span> <span class="n">Punctuation</span><span class="p">),</span>
+    <span class="p">],</span>
+  <span class="p">}</span>
+  <span class="k">def</span> <span class="nf">analyse_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">shebang_matches</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="sa">r</span><span class="s">'requs'</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>Then, I packaged it for <a href="https://pypi.python.org/pypi/setuptools"><code class="highlighter-rouge">easy_install</code></a>
 and installed locally:</p>
 
-<pre>$ easy_install src/requs_pygment
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>easy_install src/requs_pygment
 Processing requs_pygment
-Running setup.py -q bdist_egg --dist-dir ...
-zip_safe flag not set; analyzing archive contents...
+Running setup.py <span class="nt">-q</span> bdist_egg <span class="nt">--dist-dir</span> ...
+zip_safe flag not <span class="nb">set</span><span class="p">;</span> analyzing archive contents...
 Adding requs-pygment 0.1 to easy-install.pth file
 Installed /Library/Python/2.7/site-packages/requs_pygment-0.1-py2.7.egg
-Processing dependencies for requs-pygment==0.1
-Finished processing dependencies for requs-pygment==0.1</pre>
+Processing dependencies <span class="k">for </span>requs-pygment<span class="o">==</span>0.1
+Finished processing dependencies <span class="k">for </span>requs-pygment<span class="o">==</span>0.1
+</code></pre></div></div>
 
 <p>It’s done. Now I run <code class="highlighter-rouge">jekyll build</code> and my syntax
 is highlighted according to the custom rules I specified in the lexer.</p>

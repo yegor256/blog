@@ -100,35 +100,37 @@ knows about itself (a.k.a. “encapsulated knowledge”), and
 <em>behavior</em> is what a document can do for us on request.
 For example, this is a mutable document:</p>
 
-<pre>class Document {
-  private int id;
-  private String title;
-  Document(int id) {
-    this.id = id;
-  }
-  public String getTitle() {
-    return this.title;
-  }
-  public String setTitle(String text) {
-    this.title = text;
-  }
-  @Override
-  public String toString() {
-    return String.format("doc #%d about '%s'", this.id, this.text);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">setTitle</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"doc #%d about '%s'"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Let’s try to use this mutable object:</p>
 
-<pre>Document first = new Document(50);
-first.setTitle("How to grill a sandwich");
-Document second = new Document(50);
-second.setTitle("How to grill a sandwich");
-if (first.equals(second)) { // FALSE
-  System.out.println(
-    String.format("%s is equal to %s", first, second)
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span>
+<span class="n">first</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="nc">Document</span> <span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span>
+<span class="n">second</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">))</span> <span class="o">{</span> <span class="c1">// FALSE</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s is equal to %s"</span><span class="o">,</span> <span class="n">first</span><span class="o">,</span> <span class="n">second</span><span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here, we’re creating two objects and then modifying their encapsulated
 states. Obviously, <code class="highlighter-rouge">first.equals(second)</code> will return <code class="highlighter-rouge">false</code> because
@@ -143,7 +145,8 @@ convert itself to a string.</p>
 <p>In order to modify a document’s title, we just call its <code class="highlighter-rouge">setTitle()</code>
 once again:</p>
 
-<pre>first.setTitle("How to cook pasta");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"How to cook pasta"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Simply put, we can reuse the object many times, modifying its
 internal state. It is fast and convenient, isn’t it? Fast, yes.
@@ -159,52 +162,55 @@ immutable and mutable objects is that
 an immutable one doesn’t have an identity and its state never changes.
 Here is an immutable variant of the same document:</p>
 
-<pre>@Immutable
-class Document {
-  private final int id;
-  private final String title;
-  Document(int id, String text) {
-    this.id = id;
-    this.title = text;
-  }
-  public String title() {
-    return this.title;
-  }
-  public Document title(String text) {
-    return new Document(this.id, text);
-  }
-  @Override
-  public boolean equals(Object doc) {
-    return doc instanceof Document
-      &amp;&amp; Document.class.cast(doc).id == this.id
-      &amp;&amp; Document.class.cast(doc).title.equals(this.title);
-  }
-  @Override
-  public String toString() {
-    return String.format(
-      "doc #%d about '%s'", this.id, this.text
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">,</span> <span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Document</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Document</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="n">text</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">doc</span> <span class="k">instanceof</span> <span class="nc">Document</span>
+      <span class="o">&amp;&amp;</span> <span class="nc">Document</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">doc</span><span class="o">).</span><span class="na">id</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span>
+      <span class="o">&amp;&amp;</span> <span class="nc">Document</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">doc</span><span class="o">).</span><span class="na">title</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"doc #%d about '%s'"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This document is immutable, and its state (<code class="highlighter-rouge">id</code> ad <code class="highlighter-rouge">title</code>) is its identity. Let’s
 see how we can use this immutable class
 (by the way, I’m using <a href="http://aspects.jcabi.com/annotation-immutable.html"><code class="highlighter-rouge">@Immutable</code></a> annotation
 from <a href="http://aspects.jcabi.com">jcabi-aspects</a>):</p>
 
-<pre>Document first = new Document(50, "How to grill a sandwich");
-Document second = new Document(50, "How to grill a sandwich");
-if (first.equals(second)) { // TRUE
-  System.out.println(
-    String.format("%s is equal to %s", first, second)
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">,</span> <span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="nc">Document</span> <span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">,</span> <span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">))</span> <span class="o">{</span> <span class="c1">// TRUE</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s is equal to %s"</span><span class="o">,</span> <span class="n">first</span><span class="o">,</span> <span class="n">second</span><span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>We can’t modify a document any more. When we need to change the title,
 we have to create a new document:</p>
 
-<pre>Document first = new Document(50, "How to grill a sandwich");
-first = first.title("How to cook pasta");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">,</span> <span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="s">"How to cook pasta"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Every time we want to modify its encapsulated state, we have to modify
 its identity too, because there is no identity. State is the identity.
@@ -225,28 +231,29 @@ string in one of them.</p>
 <p>The answer is simple. A document’s title should not be part of its <strong>state</strong>.
 Instead, the title should be its <strong>behavior</strong>. For example, consider this:</p>
 
-<pre>@Immutable
-class Document {
-  private final int id;
-  Document(int id) {
-    this.id = id;
-  }
-  public String title() {
-    // read title from storage
-  }
-  public void title(String text) {
-    // save text to storage
-  }
-  @Override
-  public boolean equals(Object doc) {
-    return doc instanceof Document
-      &amp;&amp; Document.class.cast(doc).id == this.id;
-  }
-  @Override
-  public String toString() {
-    return String.format("doc #%d about '%s'", this.id, this.title());
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// read title from storage</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// save text to storage</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">doc</span> <span class="k">instanceof</span> <span class="nc">Document</span>
+      <span class="o">&amp;&amp;</span> <span class="nc">Document</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">doc</span><span class="o">).</span><span class="na">id</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"doc #%d about '%s'"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Conceptually speaking, this document is acting as a proxy of a real-life
 document that has a title stored somewhere—in a file, for example. This is
@@ -255,11 +262,12 @@ The document exposes two features: reading the title and saving the title. Here 
 how its <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>
 would look like:</p>
 
-<pre>@Immutable
-interface Document {
-  String title();
-  void title(String text);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">interface</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">();</span>
+  <span class="kt">void</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">title()</code> reads the title of the document and returns it as a <code class="highlighter-rouge">String</code>,
 and <code class="highlighter-rouge">title(String)</code> saves it back into the document. Imagine a real
@@ -323,21 +331,22 @@ to a file, HTTP page, or an Amazon S3 object.</p>
 access to computer memory. This is how we would design our class if such
 direct access was possible:</p>
 
-<pre>@Immutable
-class Document {
-  private final int id;
-  private final Memory memory;
-  Document(int id) {
-    this.id = id;
-    this.memory = new Memory();
-  }
-  public String title() {
-    return new String(this.memory.read());
-  }
-  public void title(String text) {
-    this.memory.write(text.getBytes());
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Memory</span> <span class="n">memory</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">memory</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Memory</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">memory</span><span class="o">.</span><span class="na">read</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">memory</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">text</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>That <code class="highlighter-rouge">Memory</code> class would be implemented by JDK natively, and all other
 classes would be immutable. The class <code class="highlighter-rouge">Memory</code> would have direct access

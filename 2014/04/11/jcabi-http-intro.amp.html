@@ -83,14 +83,15 @@ satisfied fully all of my requirements. Maybe, I’m too demanding. Still, this 
 how my <a href="http://http.jcabi.com/">jcabi-http</a> client interacts when you make an
 HTTP request and expect a successful HTML page in return:</p>
 
-<pre>String html = new JdkRequest("https://www.google.com")
-  .uri().path("/users").queryParam("id", 333).back()
-  .method(Request.GET)
-  .header("Accept", "text/html")
-  .fetch()
-  .as(RestResponse.class)
-  .assertStatus(HttpURLConnection.HTTP_OK)
-  .body();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdkRequest</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">uri</span><span class="o">().</span><span class="na">path</span><span class="o">(</span><span class="s">"/users"</span><span class="o">).</span><span class="na">queryParam</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="mi">333</span><span class="o">).</span><span class="na">back</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="nc">Request</span><span class="o">.</span><span class="na">GET</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"text/html"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="nc">RestResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">assertStatus</span><span class="o">(</span><span class="nc">HttpURLConnection</span><span class="o">.</span><span class="na">HTTP_OK</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">body</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>I designed this new client with the following requirements in mind:</p>
 
@@ -103,13 +104,14 @@ easy to use. In most cases, I need only to make an HTTP request and parse the
 JSON response to return a value. For example, this is how I use the new client
 to return a current EUR rate:</p>
 
-<pre>String uri = "http://www.getexchangerates.com/api/latest.json";
-String rate = new JdkRequest(uri)
-  .header("Accept", "application/json")
-  .fetch()
-  .as(JsonResponse.class)
-  .json().readArray().getJsonObject(0)
-  .getString("EUR");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">uri</span> <span class="o">=</span> <span class="s">"http://www.getexchangerates.com/api/latest.json"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">rate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdkRequest</span><span class="o">(</span><span class="n">uri</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"application/json"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="nc">JsonResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">json</span><span class="o">().</span><span class="na">readArray</span><span class="o">().</span><span class="na">getJsonObject</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"EUR"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>I assume that the above is easy to understand and maintain.</p>
 
@@ -149,10 +151,11 @@ In the future, it will be possible to introduce new implementations without brea
 
 <p>Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:</p>
 
-<pre>String uri = "http://www.google.com";
-Response page;
-page = new JdkRequest(uri).fetch();
-page = new ApacheRequest(uri).fetch();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">uri</span> <span class="o">=</span> <span class="s">"http://www.google.com"</span><span class="o">;</span>
+<span class="nc">Response</span> <span class="n">page</span><span class="o">;</span>
+<span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdkRequest</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
+<span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ApacheRequest</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
+</code></pre></div></div>
 
 <h2 id="xml-and-json-out-of-the-box">XML and JSON Out-of-the-Box</h2>
 
@@ -166,11 +169,12 @@ output to take care of formatting issues.</p>
 and it’s possible to add more formats in the future as needed. For example, you
 can fetch XML and retrieve a string value from its element:</p>
 
-<pre>String name = new JdkRequest("http://my-api.example.com")
-  .header("Accept", "text/xml")
-  .fetch()
-  .as(XmlResponse.class)
-  .xml().xpath("/root/name/text()").get(0);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdkRequest</span><span class="o">(</span><span class="s">"http://my-api.example.com"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"text/xml"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="nc">XmlResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">xml</span><span class="o">().</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/root/name/text()"</span><span class="o">).</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Basically, the response produced by <code class="highlighter-rouge">fetch()</code> is decorated by <code class="highlighter-rouge">XmlResponse</code>. This then exposes the <code class="highlighter-rouge">xml()</code> method that returns an instance of the <a href="http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code class="highlighter-rouge">XML</code></a> interface.</p>
 

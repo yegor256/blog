@@ -84,23 +84,24 @@ style sheets. This is how I’m using SASS in my Maven projects.</p>
 <p>Then, I configure the <a href="https://github.com/Jasig/sass-maven-plugin">sass-maven-plugin</a>
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;nl.geodienstencentrum.maven&lt;/groupId&gt;
-  &lt;artifactId&gt;sass-maven-plugin&lt;/artifactId&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;generate-css&lt;/id&gt;
-      &lt;phase&gt;generate-resources&lt;/phase&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;update-stylesheets&lt;/goal&gt;
-      &lt;/goals&gt;
-      &lt;configuration&gt;
-        &lt;sassSourceDirectory&gt;${basedir}/src/main/scss&lt;/sassSourceDirectory&gt;
-        &lt;destination&gt;${project.build.directory}/css&lt;/destination&gt;
-      &lt;/configuration&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>nl.geodienstencentrum.maven<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>sass-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>generate-css<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;phase&gt;</span>generate-resources<span class="nt">&lt;/phase&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>update-stylesheets<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;sassSourceDirectory&gt;</span>${basedir}/src/main/scss<span class="nt">&lt;/sassSourceDirectory&gt;</span>
+        <span class="nt">&lt;destination&gt;</span>${project.build.directory}/css<span class="nt">&lt;/destination&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 
 
@@ -110,31 +111,32 @@ style sheets. This is how I’m using SASS in my Maven projects.</p>
 <p>Then, I configure the <a href="https://github.com/samaxes/minify-maven-plugin">minify-maven-plugin</a>
 to compress/minify the style sheets produced by the SASS compiler:</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;com.samaxes.maven&lt;/groupId&gt;
-  &lt;artifactId&gt;minify-maven-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
-    &lt;charset&gt;UTF-8&lt;/charset&gt;
-    &lt;nosuffix&gt;true&lt;/nosuffix&gt;
-    &lt;webappTargetDir&gt;${project.build.directory}/css-min&lt;/webappTargetDir&gt;
-  &lt;/configuration&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;id&gt;minify-css&lt;/id&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;minify&lt;/goal&gt;
-      &lt;/goals&gt;
-      &lt;configuration&gt;
-        &lt;webappSourceDir&gt;${project.build.directory}&lt;/webappSourceDir&gt;
-        &lt;cssSourceDir&gt;css&lt;/cssSourceDir&gt;
-        &lt;cssSourceIncludes&gt;
-          &lt;include&gt;*.css&lt;/include&gt;
-        &lt;/cssSourceIncludes&gt;
-        &lt;skipMerge&gt;true&lt;/skipMerge&gt;
-      &lt;/configuration&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.samaxes.maven<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>minify-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;charset&gt;</span>UTF-8<span class="nt">&lt;/charset&gt;</span>
+    <span class="nt">&lt;nosuffix&gt;</span>true<span class="nt">&lt;/nosuffix&gt;</span>
+    <span class="nt">&lt;webappTargetDir&gt;</span>${project.build.directory}/css-min<span class="nt">&lt;/webappTargetDir&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;id&gt;</span>minify-css<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>minify<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+      <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;webappSourceDir&gt;</span>${project.build.directory}<span class="nt">&lt;/webappSourceDir&gt;</span>
+        <span class="nt">&lt;cssSourceDir&gt;</span>css<span class="nt">&lt;/cssSourceDir&gt;</span>
+        <span class="nt">&lt;cssSourceIncludes&gt;</span>
+          <span class="nt">&lt;include&gt;</span>*.css<span class="nt">&lt;/include&gt;</span>
+        <span class="nt">&lt;/cssSourceIncludes&gt;</span>
+        <span class="nt">&lt;skipMerge&gt;</span>true<span class="nt">&lt;/skipMerge&gt;</span>
+      <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>Minified <code class="highlighter-rouge">.css</code> files will be placed into <code class="highlighter-rouge">target/css-min</code>.</p>
 
@@ -142,17 +144,18 @@ to compress/minify the style sheets produced by the SASS compiler:</p>
 <a href="http://maven.apache.org/plugins/maven-war-plugin/">maven-war-plugin</a>
 to pick up <code class="highlighter-rouge">.css</code> files and package them into the final WAR archive:</p>
 
-<pre>&lt;plugin&gt;
-  &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>maven-war-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
     [..other configuration options..]
-    &lt;webResources combine.children="append"&gt;
-      &lt;resource&gt;
-        &lt;directory&gt;${project.build.directory}/css-min&lt;/directory&gt;
-      &lt;/resource&gt;
-    &lt;/webResources&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;</pre>
+    <span class="nt">&lt;webResources</span> <span class="na">combine.children=</span><span class="s">"append"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;resource&gt;</span>
+        <span class="nt">&lt;directory&gt;</span>${project.build.directory}/css-min<span class="nt">&lt;/directory&gt;</span>
+      <span class="nt">&lt;/resource&gt;</span>
+    <span class="nt">&lt;/webResources&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>That’s it.</p>
 

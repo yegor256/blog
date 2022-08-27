@@ -101,18 +101,19 @@ XML so powerful.</p>
 an existing document that needs to be modified just slightly. For example, let’s
 use the following:</p>
 
-<pre>&lt;accounts&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;accounts&gt;</span>
   [...]
-  &lt;acc id='34'&gt;
-    &lt;name&gt;Jeffrey&lt;/name&gt;
-    &lt;balance&gt;305&lt;/balance&gt;
-  &lt;/acc&gt;
-  &lt;acc id='35'&gt;
-    &lt;name&gt;Walter&lt;/name&gt;
-    &lt;balance&gt;50090&lt;/balance&gt;
-  &lt;/acc&gt;
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">'34'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Jeffrey<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;balance&gt;</span>305<span class="nt">&lt;/balance&gt;</span>
+  <span class="nt">&lt;/acc&gt;</span>
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">'35'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Walter<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;balance&gt;</span>50090<span class="nt">&lt;/balance&gt;</span>
+  <span class="nt">&lt;/acc&gt;</span>
   [...]
-&lt;/accounts&gt;</pre>
+<span class="nt">&lt;/accounts&gt;</span>
+</code></pre></div></div>
 
 <p>The above code represents a list of accounts. Each account has its own <code class="highlighter-rouge">id</code> and several
 child elements. In our example, we need to find the account belonging to <code class="highlighter-rouge">Jeffrey</code>
@@ -139,14 +140,15 @@ in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions o
 <p>Let’s create a simple example. Say, for instance, we want to add a new account number <code class="highlighter-rouge">36</code>
 to our list document. The code would look like:</p>
 
-<pre>XPATH '/accounts';
+<pre><code class="language-asm">XPATH '/accounts';
 ADD 'account';
 ATTR 'id', '36';
 ADD 'name';
 SET 'Donny';
 UP;
 ADD 'balance';
-SET '3400';</pre>
+SET '3400';
+</code></pre>
 
 <p>The above should be intuitively clear, but I’ll explain just in case. First, the <code class="highlighter-rouge">XPATH</code> directive points us
 to the element found by the “/accounts” XPath query. This will be our root element. We assume here that
@@ -159,8 +161,9 @@ the new child element <code class="highlighter-rouge">name</code> and sets its t
 
 <p>Our balance changing task can be expressed in Xembly with the following code:</p>
 
-<pre>XPATH '/accounts/account[name="Jeffrey"]/balance';
-XSET '. + 500';</pre>
+<pre><code class="language-asm">XPATH '/accounts/account[name="Jeffrey"]/balance';
+XSET '. + 500';
+</code></pre>
 
 <p>The <code class="highlighter-rouge">XSET</code> directive sets the element text value, similar to <code class="highlighter-rouge">SET</code>, but
 calculates it beforehand using the provided XPath expression <code class="highlighter-rouge">. + 500</code>.</p>
@@ -171,13 +174,14 @@ implemented inside any language that has a built-in DOM implementation.</p>
 <p>In the meantime, there is only one implementation of Xembly language—in Java. Here is how
 <a href="/2015/03/26/jaxb-vs-xembly.html">it works</a>:</p>
 
-<pre>Iterable&lt;Directive&gt; directives = new Directives()
-  .xpath("/accounts")
-  .add("account")
-  .attr("id", "36")
-  .add("name").set("Donny").up()
-  .add("balance").set("3400");
-new Xembler(directives).apply(document);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Directive</span><span class="o">&gt;</span> <span class="n">directives</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Directives</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/accounts"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"account"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">attr</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"36"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">"Donny"</span><span class="o">).</span><span class="na">up</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"balance"</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">"3400"</span><span class="o">);</span>
+<span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span><span class="n">directives</span><span class="o">).</span><span class="na">apply</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>In this snippet, I’m using a supplementary script builder, <code class="highlighter-rouge">Directives</code>, which
 enables generation of directives in a
@@ -187,22 +191,24 @@ to the <code class="highlighter-rouge">document</code> object of class <code cla
 
 <p>Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:</p>
 
-<pre>System.out.println(
-  new Xembler(
-    new Directives().add("html")
-      .add("head")
-      .add("title")
-      .set("Hello, world!")
-  ).xml()
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">Directives</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="s">"html"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"head"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"title"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">)</span>
+  <span class="o">).</span><span class="na">xml</span><span class="o">()</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>The above snippet produces the following output:</p>
 
-<pre>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Hello, world!&lt;/title&gt;
-  &lt;/head&gt;
-&lt;/html&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
 
 <p>For me, this appears to be more simple and compact.</p>
 

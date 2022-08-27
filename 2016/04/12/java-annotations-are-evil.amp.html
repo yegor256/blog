@@ -106,29 +106,32 @@ see in a few examples.</p>
 
 <p>Say we annotate a property with <code class="highlighter-rouge">@Inject</code>:</p>
 
-<pre>import javax.inject.Inject;
-public class Books {
-  @Inject
-  private final DB db;
-  // some methods here, which use this.db
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.inject.Inject</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="nd">@Inject</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
+  <span class="c1">// some methods here, which use this.db</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then we have an injector that knows what to inject:</p>
 
-<pre>Injector injector = Guice.createInjector(
-  new AbstractModule() {
-    @Override
-    public void configure() {
-      this.bind(DB.class).toInstance(
-        new Postgres("jdbc:postgresql:5740/main")
-      );
-    }
-  }
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="nc">Guice</span><span class="o">.</span><span class="na">createInjector</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">AbstractModule</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="no">DB</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">toInstance</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">Postgres</span><span class="o">(</span><span class="s">"jdbc:postgresql:5740/main"</span><span class="o">)</span>
+      <span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Now we’re making an instance of class <code class="highlighter-rouge">Books</code> via the container:</p>
 
-<pre>Books books = injector.getInstance(Books.class);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="nc">Books</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>The class <code class="highlighter-rouge">Books</code> has no idea how and who will inject an instance
 of class <code class="highlighter-rouge">DB</code> into it. This will happen behind the scenes and outside
@@ -139,13 +142,14 @@ any more. It can’t be responsible for what’s happening to it.</p>
 
 <p>Instead, here is how this should be done:</p>
 
-<pre>class Books {
-  private final DB db;
-  Books(final DB base) {
-    this.db = base;
-  }
-  // some methods here, which use this.db
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="kd">final</span> <span class="no">DB</span> <span class="n">base</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">db</span> <span class="o">=</span> <span class="n">base</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// some methods here, which use this.db</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 
@@ -171,27 +175,29 @@ places. They are containers, sessions, managers, controllers, etc.</p>
 <a href="https://en.wikipedia.org/wiki/Plain_Old_Java_Object">POJO</a> to XML. First,
 you attach the <code class="highlighter-rouge">@XmlElement</code> annotation to the getter:</p>
 
-<pre>import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-@XmlRootElement
-public class Book {
-  private final String title;
-  public Book(final String title) {
-    this.title = title;
-  }
-  @XmlElement
-  public String getTitle() {
-    return this.title;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlElement</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlRootElement</span><span class="o">;</span>
+<span class="nd">@XmlRootElement</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Book</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@XmlElement</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, you create a marshaller and ask it to convert an instance of class
 <code class="highlighter-rouge">Book</code> into XML:</p>
 
-<pre>final Book book = new Book("0132350882", "Clean Code");
-final JAXBContext ctx = JAXBContext.newInstance(Book.class);
-final Marshaller marshaller = ctx.createMarshaller();
-marshaller.marshal(book, System.out);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Book</span><span class="o">(</span><span class="s">"0132350882"</span><span class="o">,</span> <span class="s">"Clean Code"</span><span class="o">);</span>
+<span class="kd">final</span> <span class="nc">JAXBContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="nc">JAXBContext</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="nc">Book</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="kd">final</span> <span class="nc">Marshaller</span> <span class="n">marshaller</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="na">createMarshaller</span><span class="o">();</span>
+<span class="n">marshaller</span><span class="o">.</span><span class="na">marshal</span><span class="o">(</span><span class="n">book</span><span class="o">,</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+</code></pre></div></div>
 
 
 
@@ -199,44 +205,47 @@ marshaller.marshal(book, System.out);</pre>
 class <code class="highlighter-rouge">Book</code>. This is very wrong. Instead, this is how this should have
 been done. First, the class that has no idea about XML:</p>
 
-<pre>class DefaultBook implements Book {
-  private final String title;
-  DefaultBook(final String title) {
-    this.title = title;
-  }
-  @Override
-  public String getTitle() {
-    return this.title;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultBook</span> <span class="kd">implements</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nc">DefaultBook</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, the
 <a href="/2015/02/26/composable-decorators.html">decorator</a>
 that prints it to the XML:</p>
 
-<pre>class XmlBook implements Book{
-  private final Book origin;
-  XmlBook(final Book book) {
-    this.origin = book;
-  }
-  @Override
-  public String getTitle() {
-    return this.origin.getTitle();
-  }
-  public String toXML() {
-    return String.format(
-      "&lt;book&gt;&lt;title&gt;%s&lt;/title&gt;&lt;/book&gt;",
-      this.getTitle()
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">XmlBook</span> <span class="kd">implements</span> <span class="nc">Book</span><span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Book</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">XmlBook</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">book</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">getTitle</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toXML</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"&lt;book&gt;&lt;title&gt;%s&lt;/title&gt;&lt;/book&gt;"</span><span class="o">,</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">getTitle</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, in order to <a href="/2016/04/05/printers-instead-of-getters.html">print</a>
 the book in XML we do the following:</p>
 
-<pre>String xml = new XmlBook(
-  new DefaultBook("Elegant Objects")
-).toXML();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XmlBook</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">DefaultBook</span><span class="o">(</span><span class="s">"Elegant Objects"</span><span class="o">)</span>
+<span class="o">).</span><span class="na">toXML</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>The XML printing functionality is inside <code class="highlighter-rouge">XmlBook</code>. If you don’t like the
 decorator idea, you can move the <code class="highlighter-rouge">toXML()</code> method to the <code class="highlighter-rouge">DefaultBook</code> class. It’s
@@ -251,34 +260,36 @@ to the XML. Nobody else!</p>
 <p>Here is an example
 (from <a href="/2014/08/15/retry-java-method-on-exception.html">my own library</a>):</p>
 
-<pre>import com.jcabi.aspects.RetryOnFailure;
-class Foo {
-  @RetryOnFailure
-  public String load(URL url) {
-    return url.openConnection().getContent();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.aspects.RetryOnFailure</span><span class="o">;</span>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="nd">@RetryOnFailure</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="na">openConnection</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>After compilation, we run a so called
 <a href="/2014/06/01/aop-aspectj-java-method-logging.html">AOP weaver</a>
 that technically turns our code into something like this:</p>
 
-<pre>class Foo {
-  public String load(URL url) {
-    while (true) {
-      try {
-        return _Foo.load(url);
-      } catch (Exception ex) {
-        // ignore it
-      }
-    }
-  }
-  class _Foo {
-    public String load(URL url) {
-      return url.openConnection().getContent();
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">_Foo</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// ignore it</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="kd">class</span> <span class="nc">_Foo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="na">openConnection</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I simplified the actual algorithm of retrying a method call on failure, but I’m
 sure you get the idea. <a href="http://www.eclipse.org/aspectj/">AspectJ</a>,
@@ -303,43 +314,46 @@ must see the entire composition process.</p>
 
 <p>A much better design would look like this (instead of annotations):</p>
 
-<pre>Foo foo = new FooThatRetries(new Foo());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FooThatRetries</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>And then, the implementation of <code class="highlighter-rouge">FooThatRetries</code>:</p>
 
-<pre>class FooThatRetries implements Foo {
-  private final Foo origin;
-  FooThatRetries(Foo foo) {
-    this.origin = foo;
-  }
-  public String load(URL url) {
-    return new Retry().eval(
-      new Retry.Algorithm&lt;String&gt;() {
-        @Override
-        public String eval() {
-          return FooThatRetries.this.load(url);
-        }
-      }
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FooThatRetries</span> <span class="kd">implements</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Foo</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">FooThatRetries</span><span class="o">(</span><span class="nc">Foo</span> <span class="n">foo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">foo</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Retry</span><span class="o">().</span><span class="na">eval</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nc">Retry</span><span class="o">.</span><span class="na">Algorithm</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">eval</span><span class="o">()</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nc">FooThatRetries</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And now, the implementation of <code class="highlighter-rouge">Retry</code>:</p>
 
-<pre>class Retry {
-  public &lt;T&gt; T eval(Retry.Algorithm&lt;T&gt; algo) {
-    while (true) {
-      try {
-        return algo.eval();
-      } catch (Exception ex) {
-        // ignore it
-      }
-    }
-  }
-  interface Algorithm&lt;T&gt; {
-    T eval();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Retry</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">eval</span><span class="o">(</span><span class="nc">Retry</span><span class="o">.</span><span class="na">Algorithm</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">algo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">algo</span><span class="o">.</span><span class="na">eval</span><span class="o">();</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// ignore it</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="kd">interface</span> <span class="nc">Algorithm</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="no">T</span> <span class="nf">eval</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Is the code longer? Yes. Is it cleaner? A lot more. I regret that I
 didn’t understand it two years ago, when I started to work with

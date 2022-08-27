@@ -91,25 +91,27 @@ is more object-oriented? It seems to depend on the size of the
 object <code class="highlighter-rouge">books</code>. If it’s small, there’s no need to get the book first, we can
 just delete it right there:</p>
 
-<pre>interface Books {
-  void create(String title);
-  void delete(int id);
-  void rename(int id, String title);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">create</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">);</span>
+  <span class="kt">void</span> <span class="nf">delete</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">);</span>
+  <span class="kt">void</span> <span class="nf">rename</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">,</span> <span class="nc">String</span> <span class="n">title</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>However, if it’s larger, it’s better to get the <code class="highlighter-rouge">book</code> first:</p>
 
-<pre>interface Book {
-  void delete(); // Here!
-  void rename(String title);
-}
-interface Books {
-  void create(String title);
-  int total();
-  Iterable&lt;Book&gt; all();
-  Book all(String query);
-  Book book(int id); // Here!
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">delete</span><span class="o">();</span> <span class="c1">// Here!</span>
+  <span class="kt">void</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="kd">interface</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">create</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">);</span>
+  <span class="kt">int</span> <span class="nf">total</span><span class="o">();</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Book</span><span class="o">&gt;</span> <span class="nf">all</span><span class="o">();</span>
+  <span class="nc">Book</span> <span class="nf">all</span><span class="o">(</span><span class="nc">String</span> <span class="n">query</span><span class="o">);</span>
+  <span class="nc">Book</span> <span class="nf">book</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">);</span> <span class="c1">// Here!</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Is there an explicit hard line between these two? Is there
 a <a href="/2017/12/19/srp-is-hoax.html">strict rule</a>

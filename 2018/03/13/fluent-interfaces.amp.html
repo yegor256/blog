@@ -93,12 +93,13 @@ which I created a few years ago,
 when I thought that fluent interfaces were a good thing. Here is how you
 use the library to make an HTTP request and validate its output:</p>
 
-<pre>String html = new JdkRequest("https://www.google.com")
-  .method("GET")
-  .fetch()
-  .as(RestResponse.class)
-  .assertStatus(200)
-  .body();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdkRequest</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"GET"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="nc">RestResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">assertStatus</span><span class="o">(</span><span class="mi">200</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">body</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This convenient <a href="https://en.wikipedia.org/wiki/Method_chaining">method chaining</a>
 makes the code short and obvious, right?
@@ -140,7 +141,7 @@ in order to make it method-richer. I just didn’t want to make
 contain 50+ methods, like many other libraries do. Here is what it
 does (this is pseudo-code):</p>
 
-<pre>class Response {
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Response {
   RestResponse as() {
     return new RestResponse(this);
   }
@@ -150,7 +151,8 @@ class RestResponse implements Response {
   private final Response origin;
   // Original seven methods from Response
   // Additional 14 methods
-}</pre>
+}
+</code></pre></div></div>
 
 <p>As you see, instead of adding all possible methods to <code class="highlighter-rouge">Response</code> I
 placed them in supplementary decorators
@@ -192,15 +194,16 @@ is the price, which is too high.</p>
 <a href="/2016/04/26/why-inputstream-design-is-wrong.html">smart objects</a>
 instead. Here is how I would design jcabi-http, if I could do it now:</p>
 
-<pre>String html = new BodyOfResponse(
-  new ResponseAssertStatus(
-    new RequestWithMethod(
-      new JdkRequest("https://www.google.com"),
-      "GET"
-    ),
-    200
-  )
-).toString();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BodyOfResponse</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">ResponseAssertStatus</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">RequestWithMethod</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">JdkRequest</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">),</span>
+      <span class="s">"GET"</span>
+    <span class="o">),</span>
+    <span class="mi">200</span>
+  <span class="o">)</span>
+<span class="o">).</span><span class="na">toString</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This is the same code as in the first snippet above, but it is much
 more object-oriented. The obvious problem with this code, of course, is that

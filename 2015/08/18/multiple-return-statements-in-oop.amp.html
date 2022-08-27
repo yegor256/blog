@@ -88,36 +88,39 @@ or statements. Just <code class="highlighter-rouge">return</code>. All arguments
 
 <p>This is a classical example:</p>
 
-<pre>public int max(int a, int b) {
-  if (a &gt; b) {
-    return a;
-  }
-  return b;
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">b</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The code above has two <code class="highlighter-rouge">return</code> statements, and it is shorter than this one
 with a single <code class="highlighter-rouge">return</code>:</p>
 
-<pre>public int max(int a, int b) {
-  int m;
-  if (a &gt; b) {
-    m = a;
-  } else {
-    m = b;
-  }
-  return m;
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">m</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">m</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>More verbose, less readable, and slower, right? Right.</p>
 
 <p>This is the code in a <em>pure</em> object-oriented world:</p>
 
-<pre>public int max(int a, int b) {
-  return new If(
-    new GreaterThan(a, b),
-    a, b
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nf">If</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">GreaterThan</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">),</span>
+    <span class="n">a</span><span class="o">,</span> <span class="n">b</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What do you think now? There are no statements or operators. No <code class="highlighter-rouge">if</code> and no <code class="highlighter-rouge">&gt;</code>.
 Instead, there are <em>objects</em> of class <code class="highlighter-rouge">If</code> and <code class="highlighter-rouge">GreaterThan</code>.</p>

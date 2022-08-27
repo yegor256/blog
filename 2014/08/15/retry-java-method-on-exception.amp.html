@@ -84,14 +84,15 @@ an exception. <a href="http://aspects.jcabi.com/annotation-retryonfailure.html">
 <a href="http://aspects.jcabi.com">jcabi-aspects</a> can help.
 For example, if you’re downloading the following web page:</p>
 
-<pre>@RetryOnFailure(
-  attempts = 3,
-  delay = 10,
-  unit = TimeUnit.SECONDS
-)
-public String load(URL url) {
-  return url.openConnection().getContent();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@RetryOnFailure</span><span class="o">(</span>
+  <span class="n">attempts</span> <span class="o">=</span> <span class="mi">3</span><span class="o">,</span>
+  <span class="n">delay</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span>
+  <span class="n">unit</span> <span class="o">=</span> <span class="nc">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span>
+<span class="o">)</span>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="na">openConnection</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This method call will throw an exception only after three
 failed executions with a ten seconds interval between them.</p>
@@ -106,14 +107,15 @@ your code.</p>
 <p>When method <code class="highlighter-rouge">load()</code> from the example above is called, this is what
 is happening behind the scene (pseudo-code):</p>
 
-<pre>while (attempts++ &lt; 3) {
-  try {
-    return original_load(url);
-  } catch (Throwable ex) {
-    log("we failed, will try again in 10 seconds");
-    sleep(10);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="o">(</span><span class="n">attempts</span><span class="o">++</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nf">original_load</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Throwable</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">log</span><span class="o">(</span><span class="s">"we failed, will try again in 10 seconds"</span><span class="o">);</span>
+    <span class="n">sleep</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This approach may be very useful in the following situations
 (based on my experience):</p>

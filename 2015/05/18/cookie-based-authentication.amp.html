@@ -93,28 +93,31 @@ Here is how <a href="http://www.takes.org">Takes</a> makes it possible in a few 
 <p>Step one: The user enters an email and password and clicks “submit.” The server
 receives a POST request with this information inside:</p>
 
-<pre>POST / HTTP/1.1
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST / HTTP/1.1
 Host: www.facebook.com
 Content-Type: application/x-www-form-urlencoded
 
-email=me@yegor256.com&amp;password=itisasecret</pre>
+email=me@yegor256.com&amp;password=itisasecret
+</code></pre></div></div>
 
 <p>The server matches the provided information with its records and decides what to do.
 If the information is invalid, it returns the same login page, asking you to
 enter it all again. If the information is valid, the server returns something
 like this:</p>
 
-<pre>HTTP/1.1 303 See Other
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 303 See Other
 Location: www.facebook.com
-Set-Cookie: user=me@yegor256.com</pre>
+Set-Cookie: user=me@yegor256.com
+</code></pre></div></div>
 
 <p>Since the response status code is 303, the browser goes to the page
 specified in the <code class="highlighter-rouge">Location</code> header and opens the front page of the site. This
 is what it sends to the server:</p>
 
-<pre>GET / HTTP/1.1
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
 Host: www.facebook.com
-Cookie: user=me@yegor256.com</pre>
+Cookie: user=me@yegor256.com
+</code></pre></div></div>
 
 <p>The server gets my email from the <code class="highlighter-rouge">Cookie</code>
 header and understands that it’s me again! No need to ask for the
@@ -133,9 +136,10 @@ will be able to encrypt it the same way the server needs to decrypt it.
 The response would look like this, using an example of encryption
 by <a href="https://en.wikipedia.org/wiki/XOR_cipher">XOR cipher</a> with <code class="highlighter-rouge">bamboo</code> as a secret key:</p>
 
-<pre>HTTP/1.1 303 See Other
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 303 See Other
 Location: www.facebook.com
-Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39</pre>
+Set-Cookie: user=b1ccafd92c568515100f5c4d104671003cfa39
+</code></pre></div></div>
 
 <p>This is not the best encryption mechanism, though; for proper encryption, it’s better
 to use something stronger like <a href="https://en.wikipedia.org/wiki/Data_Encryption_Standard">DES</a>.</p>
@@ -150,9 +154,10 @@ To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
 SSL encryption. That’s done by an extra flag in the <code class="highlighter-rouge">Set-Cookie</code> header:</p>
 
-<pre>HTTP/1.1 303 See Other
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 303 See Other
 Location: www.facebook.com
-Set-Cookie: user=me@yegor256.com; Secure</pre>
+Set-Cookie: user=me@yegor256.com; Secure
+</code></pre></div></div>
 
 <p>There is yet another type of attack associated with cookie-based authentication,
 based on a browser’s ability to expose all cookies associated with a web page
@@ -164,9 +169,10 @@ the attacker can collect it. This type of attack is called
 <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">cross-site scripting</a> (XSS).
 To prevent this, there is another flag for the <code class="highlighter-rouge">Set-Cookie</code> header, called <code class="highlighter-rouge">HttpOnly</code>:</p>
 
-<pre>HTTP/1.1 303 See Other
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 303 See Other
 Location: www.facebook.com
-Set-Cookie: user=me@yegor256.com; Secure; HttpOnly</pre>
+Set-Cookie: user=me@yegor256.com; Secure; HttpOnly
+</code></pre></div></div>
 
 <p>The presence of this flag will tell the browser that this particular cookie can
 be transferred back to the server only through HTTP requests. JavaScript won’t
@@ -187,19 +193,20 @@ these two steps.</p>
 <p>Let’s say we have an account page that is supposed to show the current user’s
 balance:</p>
 
-<pre>final class TkAccount implements Take {
-  private final Balances balances;
-  @Override
-  public Response act(final Request request) {
-    final Identity user = // get it from request
-    return RsHTML(
-      String.format(
-        "&lt;html&gt;Your balance is %s&lt;/html&gt;",
-        this.balances.retrieve(user)
-      )
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkAccount</span> <span class="kd">implements</span> <span class="nc">Take</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Balances</span> <span class="n">balances</span><span class="o">;</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Request</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Identity</span> <span class="n">user</span> <span class="o">=</span> <span class="c1">// get it from request</span>
+    <span class="k">return</span> <span class="nf">RsHTML</span><span class="o">(</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+        <span class="s">"&lt;html&gt;Your balance is %s&lt;/html&gt;"</span><span class="o">,</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">balances</span><span class="o">.</span><span class="na">retrieve</span><span class="o">(</span><span class="n">user</span><span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Right after the <code class="highlighter-rouge">request</code> comes in, we should retrieve the identity of
 the user, encoded inside an authenticating cookie. To make this mechanism
@@ -208,9 +215,10 @@ decorator, which wraps an existing <em>take</em>,
 decodes an incoming cookie, and adds a new <code class="highlighter-rouge">TkAuth</code>
 header to the request with the user’s identification information:</p>
 
-<pre>final Codec codec = new CcHex(new CcXOR(new CcPlain()));
-final Pass pass = new PsCookie(codec);
-new TkAuth(new TkAccount(), pass);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Codec</span> <span class="n">codec</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CcHex</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcXOR</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcPlain</span><span class="o">()));</span>
+<span class="kd">final</span> <span class="nc">Pass</span> <span class="n">pass</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PsCookie</span><span class="o">(</span><span class="n">codec</span><span class="o">);</span>
+<span class="k">new</span> <span class="nf">TkAuth</span><span class="o">(</span><span class="k">new</span> <span class="nc">TkAccount</span><span class="o">(),</span> <span class="n">pass</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Again, when <code class="highlighter-rouge">TkAuth</code> receives a request with an authenticating cookie inside,
 it asks <code class="highlighter-rouge">pass</code> to decode the cookie and return either a
@@ -230,13 +238,14 @@ user identity from the request, it can use
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/RqAuth.html"><code class="highlighter-rouge">RqAuth</code></a>,
 a utility decorator of <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code class="highlighter-rouge">Request</code></a>:</p>
 
-<pre>final class TkAccount implements Take {
-  @Override
-  public Response act(final Request request) {
-    final Identity user = new RqAuth(request).identity();
-    // other manipulations with the user
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkAccount</span> <span class="kd">implements</span> <span class="nc">Take</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Request</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Identity</span> <span class="n">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RqAuth</span><span class="o">(</span><span class="n">request</span><span class="o">).</span><span class="na">identity</span><span class="o">();</span>
+    <span class="c1">// other manipulations with the user</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">RqAuth</code> decorator uses the header, added by <code class="highlighter-rouge">PsCookie</code>, in order
 to authenticate the user and create an <code class="highlighter-rouge">Identity</code> object.</p>
@@ -246,15 +255,16 @@ to authenticate the user and create an <code class="highlighter-rouge">Identity<
 <p>This mechanism is indeed very extensible and “composable.” Let’s say we
 want to skip authentication during integration testing. Here is how:</p>
 
-<pre>new TkAuth(
-  take, // original application "take"
-  new PsChain(
-    new PsFake(/* if running integration tests */),
-    new PsCookie(
-      new CcHex(new CcXOR(new CcPlain()))
-    )
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">TkAuth</span><span class="o">(</span>
+  <span class="n">take</span><span class="o">,</span> <span class="c1">// original application "take"</span>
+  <span class="k">new</span> <span class="nf">PsChain</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">PsFake</span><span class="o">(</span><span class="cm">/* if running integration tests */</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nf">PsCookie</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">CcHex</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcXOR</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcPlain</span><span class="o">()))</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/PsChain.html"><code class="highlighter-rouge">PsChain</code></a>
 implements <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/auth/Pass.html"><code class="highlighter-rouge">Pass</code></a>
@@ -267,23 +277,24 @@ trigger, we can switch off the entire authentication mechanism in the app.</p>
 
 <p>Let’s say you want to authenticate users through Facebook OAuth. Here is how:</p>
 
-<pre>new TkAuth(
-  take, // original application "take"
-  new PsChain(
-    new PsByFlag(
-      new PsByFlag.Pair(
-        PsFacebook.class.getSimpleName(),
-        new PsFacebook(
-          "... Facebook API key ...",
-          "... Facebook API secret ..."
-        )
-      )
-    ),
-    new PsCookie(
-      new CcHex(new CcXOR(new CcPlain()))
-    )
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">TkAuth</span><span class="o">(</span>
+  <span class="n">take</span><span class="o">,</span> <span class="c1">// original application "take"</span>
+  <span class="k">new</span> <span class="nf">PsChain</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">PsByFlag</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nc">PsByFlag</span><span class="o">.</span><span class="na">Pair</span><span class="o">(</span>
+        <span class="nc">PsFacebook</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getSimpleName</span><span class="o">(),</span>
+        <span class="k">new</span> <span class="nf">PsFacebook</span><span class="o">(</span>
+          <span class="s">"... Facebook API key ..."</span><span class="o">,</span>
+          <span class="s">"... Facebook API secret ..."</span>
+        <span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="k">new</span> <span class="nf">PsCookie</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">CcHex</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcXOR</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcPlain</span><span class="o">()))</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>When a user clicks on the login link on your site, the browser goes to <code class="highlighter-rouge">facebook.com</code>,
 where his or her identity is verified. Then, Facebook returns a <code class="highlighter-rouge">302</code> redirection
@@ -300,27 +311,28 @@ provided credentials and will retrieve all possible information about the user.<
 
 <p>Here is how we can implement a logout mechanism:</p>
 
-<pre>new TkAuth(
-  take, // original application "take"
-  new PsChain(
-    new PsByFlag(
-      new PsByFlag.Pair(
-        PsFacebook.class.getSimpleName(),
-        new PsFacebook(
-          "... Facebook API key ...",
-          "... Facebook API secret ..."
-        )
-      ),
-      new PsByFlag.Pair(
-        PsLogout.class.getSimpleName(),
-        new PsLogout()
-      )
-    ),
-    new PsCookie(
-      new CcHex(new CcXOR(new CcPlain()))
-    )
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">TkAuth</span><span class="o">(</span>
+  <span class="n">take</span><span class="o">,</span> <span class="c1">// original application "take"</span>
+  <span class="k">new</span> <span class="nf">PsChain</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">PsByFlag</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nc">PsByFlag</span><span class="o">.</span><span class="na">Pair</span><span class="o">(</span>
+        <span class="nc">PsFacebook</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getSimpleName</span><span class="o">(),</span>
+        <span class="k">new</span> <span class="nf">PsFacebook</span><span class="o">(</span>
+          <span class="s">"... Facebook API key ..."</span><span class="o">,</span>
+          <span class="s">"... Facebook API secret ..."</span>
+        <span class="o">)</span>
+      <span class="o">),</span>
+      <span class="k">new</span> <span class="nc">PsByFlag</span><span class="o">.</span><span class="na">Pair</span><span class="o">(</span>
+        <span class="nc">PsLogout</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getSimpleName</span><span class="o">(),</span>
+        <span class="k">new</span> <span class="nf">PsLogout</span><span class="o">()</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="k">new</span> <span class="nf">PsCookie</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">CcHex</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcXOR</span><span class="o">(</span><span class="k">new</span> <span class="nc">CcPlain</span><span class="o">()))</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Now, we can add <code class="highlighter-rouge">?PsByFlag=PsLogout</code> to any link on the site and it will
 log the current user out.</p>

@@ -91,32 +91,35 @@ is wrong and how I would design this “object-to-object comparing” mechanism
 <p>Say we have a <del>simple</del> primitive class <code class="highlighter-rouge">Weight</code>, objects of which
 represent the weight of something in kilos:</p>
 
-<pre>class Weight {
-  private int kilos;
-  Weight(int k) {
-    this.kilos = k;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">kilos</span><span class="o">;</span>
+  <span class="nc">Weight</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">kilos</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Next, we want two objects of the same weight to be equal to each other:</p>
 
-<pre>new Weight(15).equals(new Weight(15));</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">15</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">15</span><span class="o">));</span>
+</code></pre></div></div>
 
 <p>Here is how such a method may look:</p>
 
-<pre>class Weight {
-  private int kilos;
-  Weight(int k) {
-    this.kilos = k;
-  }
-  public boolean equals(Object obj) {
-    if (!(obj instanceof Weight)) {
-      return false;
-    }
-    Weight weight = Weight.class.cast(obj);
-    return weight.kilos == this.kilos;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">kilos</span><span class="o">;</span>
+  <span class="nc">Weight</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">kilos</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(!(</span><span class="n">obj</span> <span class="k">instanceof</span> <span class="nc">Weight</span><span class="o">))</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="nc">Weight</span> <span class="n">weight</span> <span class="o">=</span> <span class="nc">Weight</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">weight</span><span class="o">.</span><span class="na">kilos</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">kilos</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The ugly part here is, first of all, the
 <a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>
@@ -127,22 +130,24 @@ anything else to the <code class="highlighter-rouge">equals()</code> method, bes
 class <code class="highlighter-rouge">Weight</code>. We can’t turn it into an interface and introduce
 multiple implementations of it:</p>
 
-<pre>interface Weight {
-  boolean equals(Object obj);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Weight</span> <span class="o">{</span>
+  <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This code will not work:</p>
 
-<pre>class DefaultWeight implements Weight {
-  // attribute and ctor skipped
-  public boolean equals(Object obj) {
-    if (!(obj instanceof Weight)) {
-      return false;
-    }
-    Weight weight = Weight.class.cast(obj);
-    return weight.kilos == this.kilos; // error here!
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultWeight</span> <span class="kd">implements</span> <span class="nc">Weight</span> <span class="o">{</span>
+  <span class="c1">// attribute and ctor skipped</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(!(</span><span class="n">obj</span> <span class="k">instanceof</span> <span class="nc">Weight</span><span class="o">))</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="nc">Weight</span> <span class="n">weight</span> <span class="o">=</span> <span class="nc">Weight</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">weight</span><span class="o">.</span><span class="na">kilos</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">kilos</span><span class="o">;</span> <span class="c1">// error here!</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The problem is that one object decides for the other whether they are
 equal. This inevitably leads to a necessity to touch private attributes in order
@@ -156,64 +161,68 @@ compare a weight with a weight, text with text, or a user with a user—our
 CPUs can only compare numbers. Thus, we introduce a new interface
 <code class="highlighter-rouge">Digitizable</code>:</p>
 
-<pre>interface Digitizable {
-  byte[] digits();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Digitizable</span> <span class="o">{</span>
+  <span class="kt">byte</span><span class="o">[]</span> <span class="nf">digits</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Next, we introduce a new class <code class="highlighter-rouge">Comparison</code>, which <em>is</em> the comparison of
 two streams of bytes (I’m not sure the code is perfect, I tested it
 <a href="https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals">here</a>,
 feel free to improve and contribute with a pull request):</p>
 
-<pre>class Comparison&lt;T extends Digitizable&gt; {
-  private T lt;
-  private T rt;
-  Comparison(T left, T right) {
-    this.lt = left;
-    this.rt = right;
-  }
-  int value() {
-    final byte[] left = this.lt.digits();
-    final byte[] right = this.rt.digits();
-    int result = 0;
-    int max = Math.max(left.length, right.length);
-    for (int idx = max; idx &gt; 0; --idx) {
-      byte lft = 0;
-      if (idx &lt;= left.length) {
-        lft = left[max - idx];
-      }
-      byte rht = 0;
-      if (idx &lt;= right.length) {
-        rht = right[max - idx];
-      }
-      result = lft - rht;
-      if (result != 0) {
-        break;
-      }
-    }
-    return (int) Math.signum(result);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Comparison</span><span class="o">&lt;</span><span class="no">T</span> <span class="kd">extends</span> <span class="nc">Digitizable</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="no">T</span> <span class="n">lt</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="no">T</span> <span class="n">rt</span><span class="o">;</span>
+  <span class="nc">Comparison</span><span class="o">(</span><span class="no">T</span> <span class="n">left</span><span class="o">,</span> <span class="no">T</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">lt</span> <span class="o">=</span> <span class="n">left</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">rt</span> <span class="o">=</span> <span class="n">right</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kt">int</span> <span class="nf">value</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">left</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">lt</span><span class="o">.</span><span class="na">digits</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">right</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">rt</span><span class="o">.</span><span class="na">digits</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">left</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">right</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">max</span><span class="o">;</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span> <span class="o">--</span><span class="n">idx</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kt">byte</span> <span class="n">lft</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="n">left</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">lft</span> <span class="o">=</span> <span class="n">left</span><span class="o">[</span><span class="n">max</span> <span class="o">-</span> <span class="n">idx</span><span class="o">];</span>
+      <span class="o">}</span>
+      <span class="kt">byte</span> <span class="n">rht</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">rht</span> <span class="o">=</span> <span class="n">right</span><span class="o">[</span><span class="n">max</span> <span class="o">-</span> <span class="n">idx</span><span class="o">];</span>
+      <span class="o">}</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">lft</span> <span class="o">-</span> <span class="n">rht</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">result</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="nc">Math</span><span class="o">.</span><span class="na">signum</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, we need <code class="highlighter-rouge">Weight</code> to implement <code class="highlighter-rouge">Digitizable</code>:</p>
 
-<pre>class Weight implements Digitizable {
-  private int kilos;
-  Weight(int k) {
-    this.kilos = k;
-  }
-  @Override
-  public byte[] digits() {
-    return ByteBuffer.allocate(4)
-      .putInt(this.kilos).array();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="kd">implements</span> <span class="nc">Digitizable</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">kilos</span><span class="o">;</span>
+  <span class="nc">Weight</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">kilos</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">digits</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">ByteBuffer</span><span class="o">.</span><span class="na">allocate</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">putInt</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">kilos</span><span class="o">).</span><span class="na">array</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Finally, this is how we compare them:</p>
 
-<pre>int v = new Comparison&lt;Weight&gt;(
-  new Weight(400), new Weight(500)
-).value();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Comparison</span><span class="o">&lt;</span><span class="nc">Weight</span><span class="o">&gt;(</span>
+  <span class="k">new</span> <span class="nf">Weight</span><span class="o">(</span><span class="mi">400</span><span class="o">),</span> <span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">500</span><span class="o">)</span>
+<span class="o">).</span><span class="na">value</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This <code class="highlighter-rouge">v</code> will either be <code class="highlighter-rouge">-1</code>, <code class="highlighter-rouge">0</code>, or <code class="highlighter-rouge">1</code>. In this particular case it will be <code class="highlighter-rouge">-1</code>,
 because <code class="highlighter-rouge">400</code> is less than <code class="highlighter-rouge">500</code>.</p>

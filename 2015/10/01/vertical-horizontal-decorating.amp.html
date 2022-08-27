@@ -90,42 +90,45 @@ some food for thought.</p>
 
 <p>Let’s say I have a list of numbers:</p>
 
-<pre>interface Numbers {
-  Iterable&lt;Integer&gt; iterate();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Numbers</span> <span class="o">{</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">iterate</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now I want to create a list that will only have odd, unique, positive, and sorted numbers.
 The first approach is <strong>vertical</strong> (I just made this name up):</p>
 
-<pre>Numbers numbers = new Sorted(
-  new Unique(
-    new Odds(
-      new Positive(
-        new ArrayNumbers(
-          new Integer[] {
-            -1, 78, 4, -34, 98, 4,
-          }
-        )
-      )
-    )
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Numbers</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Sorted</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Unique</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">Odds</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Positive</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">ArrayNumbers</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nc">Integer</span><span class="o">[]</span> <span class="o">{</span>
+            <span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">78</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="o">-</span><span class="mi">34</span><span class="o">,</span> <span class="mi">98</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span>
+          <span class="o">}</span>
+        <span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>The second approach is <strong>horizontal</strong> (again, a name I made up):</p>
 
-<pre>Numbers numbers = new Modified(
-  new ArrayNumbers(
-    new Integer[] {
-      -1, 78, 4, -34, 98, 4,
-    }
-  ),
-  new Diff[] {
-    new Positive(),
-    new Odds(),
-    new Unique(),
-    new Sorted(),
-  }
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Numbers</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Modified</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">ArrayNumbers</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nc">Integer</span><span class="o">[]</span> <span class="o">{</span>
+      <span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">78</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="o">-</span><span class="mi">34</span><span class="o">,</span> <span class="mi">98</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span>
+    <span class="o">}</span>
+  <span class="o">),</span>
+  <span class="k">new</span> <span class="nc">Diff</span><span class="o">[]</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">Positive</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Odds</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Unique</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Sorted</span><span class="o">(),</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>See the difference? The first approach decorates <code class="highlighter-rouge">ArrayNumbers</code> “vertically,”
 adding functionality through the composable decorators <code class="highlighter-rouge">Positive</code>, <code class="highlighter-rouge">Odds</code>,
@@ -135,9 +138,10 @@ adding functionality through the composable decorators <code class="highlighter-
 the core functionality of iterating numbers through instances of
 <code class="highlighter-rouge">Positive</code>, <code class="highlighter-rouge">Odds</code>, <code class="highlighter-rouge">Unique</code>, and <code class="highlighter-rouge">Sorted</code>:</p>
 
-<pre>interface Diff {
-  Iterable&lt;Integer&gt; apply(Iterable&lt;Integer&gt; origin);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Diff</span> <span class="o">{</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">apply</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">origin</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>For the user of <code class="highlighter-rouge">numbers</code>, both approaches are the same. The difference is
 only in the design. Which one is better and when? It seems that

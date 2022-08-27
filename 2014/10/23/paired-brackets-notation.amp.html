@@ -86,18 +86,19 @@ for method/function calls.</p>
 <p>Here is how your code will look, if you follow
 this “Paired Brackets” notation:</p>
 
-<pre>new Foo( // ends the line
-  Math.max(10, 40), // open/close at the same line
-  String.format(
-    "hello, %s",
-    new Name(
-      Arrays.asList(
-        "Jeff",
-        "Lebowski"
-      )
-    )
-  ) // starts the line
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span> <span class="c1">// ends the line</span>
+  <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">40</span><span class="o">),</span> <span class="c1">// open/close at the same line</span>
+  <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+    <span class="s">"hello, %s"</span><span class="o">,</span>
+    <span class="k">new</span> <span class="nf">Name</span><span class="o">(</span>
+      <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
+        <span class="s">"Jeff"</span><span class="o">,</span>
+        <span class="s">"Lebowski"</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span> <span class="c1">// starts the line</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 
 

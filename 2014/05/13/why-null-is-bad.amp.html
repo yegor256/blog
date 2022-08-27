@@ -77,13 +77,14 @@ this article tries to explain why you should give up this bad habit.
       <h1>Why NULL is Bad?</h1>
       <p>A simple example of <code class="highlighter-rouge">NULL</code> usage in Java:</p>
 
-<pre>public Employee getByName(String name) {
-  int id = database.find(name);
-  if (id == 0) {
-    return null;
-  }
-  return new Employee(id);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What is wrong with this method?</p>
 
@@ -107,25 +108,27 @@ how <code class="highlighter-rouge">NULL</code> usage can be avoided and replace
 design <a href="/2016/02/03/design-patterns-and-anti-patterns.html">pattern</a>
 (the best way is to make it a constant):</p>
 
-<pre>public Employee getByName(String name) {
-  int id = database.find(name);
-  if (id == 0) {
-    return Employee.NOBODY;
-  }
-  return Employee(id);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Employee</span><span class="o">.</span><span class="na">NOBODY</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The second possible alternative is to <a href="/2015/08/25/fail-fast.html">fail fast</a>
 by throwing an <strong>Exception</strong> when you can’t return an
 <a href="/2016/07/14/who-is-object.html">object</a>:</p>
 
-<pre>public Employee getByName(String name) {
-  int id = database.find(name);
-  if (id == 0) {
-    throw new EmployeeNotFoundException(name);
-  }
-  return Employee(id);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="nf">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, let’s see the arguments against <code class="highlighter-rouge">NULL</code>.</p>
 
@@ -144,14 +147,15 @@ If you forget to check, a <a href="http://docs.oracle.com/javase/7/docs/api/java
 may break execution in runtime. Thus, your logic becomes
 polluted with multiple checks and if/then/else forks:</p>
 
-<pre>// this is a terrible design, don't reuse
-Employee employee = dept.getByName("Jeffrey");
-if (employee == null) {
-  System.out.println("can't find an employee");
-  System.exit(-1);
-} else {
-  employee.transferTo(dept2);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// this is a terrible design, don't reuse</span>
+<span class="nc">Employee</span> <span class="n">employee</span> <span class="o">=</span> <span class="n">dept</span><span class="o">.</span><span class="na">getByName</span><span class="o">(</span><span class="s">"Jeffrey"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">employee</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"can't find an employee"</span><span class="o">);</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(-</span><span class="mi">1</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+  <span class="n">employee</span><span class="o">.</span><span class="na">transferTo</span><span class="o">(</span><span class="n">dept2</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is how exceptional situations are supposed to be handled in
 <a href="http://en.wikipedia.org/wiki/C_%28programming_language%29">C</a> and
@@ -161,7 +165,8 @@ primarily to get rid of these ad-hoc error handling blocks.
 In OOP, we let exceptions bubble up until they reach an application-wide
 error handler and our code becomes much cleaner and shorter:</p>
 
-<pre>dept.getByName("Jeffrey").transferTo(dept2);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dept</span><span class="o">.</span><span class="na">getByName</span><span class="o">(</span><span class="s">"Jeffrey"</span><span class="o">).</span><span class="na">transferTo</span><span class="o">(</span><span class="n">dept2</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Consider <code class="highlighter-rouge">NULL</code> references an inheritance of procedural programming,
 and use 1) Null Objects or 2) Exceptions instead.</p>
@@ -183,20 +188,22 @@ for the sake of performance. For example, method <code class="highlighter-rouge"
 interface <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html"><code class="highlighter-rouge">Map</code></a>
 in Java returns <code class="highlighter-rouge">NULL</code> when there is no such item in the map:</p>
 
-<pre>Employee employee = employees.get("Jeffrey");
-if (employee == null) {
-  throw new EmployeeNotFoundException();
-}
-return employee;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Employee</span> <span class="n">employee</span> <span class="o">=</span> <span class="n">employees</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"Jeffrey"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">employee</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">employee</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>This code searches the map only once due to the usage of <code class="highlighter-rouge">NULL</code> in <code class="highlighter-rouge">Map</code>.
 If we would refactor <code class="highlighter-rouge">Map</code> so that its method <code class="highlighter-rouge">get()</code> will throw
 an exception if nothing is found, our code will look like this:</p>
 
-<pre>if (!employees.containsKey("Jeffrey")) { // first search
-  throw new EmployeeNotFoundException();
-}
-return employees.get("Jeffrey"); // second search</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(!</span><span class="n">employees</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="s">"Jeffrey"</span><span class="o">))</span> <span class="o">{</span> <span class="c1">// first search</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">employees</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"Jeffrey"</span><span class="o">);</span> <span class="c1">// second search</span>
+</code></pre></div></div>
 
 <p>Obviously, this is method is twice as slow as the first one. What to do?</p>
 
@@ -205,11 +212,12 @@ Its method <code class="highlighter-rouge">get()</code> should have been returni
 <a href="/2015/04/30/iterating-adapter.html"><code class="highlighter-rouge">Iterator</code></a>
 so that our code would look like:</p>
 
-<pre>Iterator found = Map.search("Jeffrey");
-if (!found.hasNext()) {
-  throw new EmployeeNotFoundException();
-}
-return found.next();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterator</span> <span class="n">found</span> <span class="o">=</span> <span class="nc">Map</span><span class="o">.</span><span class="na">search</span><span class="o">(</span><span class="s">"Jeffrey"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(!</span><span class="n">found</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">EmployeeNotFoundException</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">found</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>BTW, that is exactly how C++ STL
 <a href="http://en.cppreference.com/w/cpp/container/map/find">map::find()</a> method is designed.</p>
@@ -223,12 +231,13 @@ that <code class="highlighter-rouge">NULL</code> is a pointer to nothing (<code 
 <p>However, if you start thinking as an object, this statement
 makes much less sense. This is how our code looks from an object point of view:</p>
 
-<pre>- Hello, is it a software department?
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Hello, is it a software department?
 - Yes.
 - Let me talk to your employee "Jeffrey" please.
 - Hold the line please...
 - Hello.
-- Are you NULL?</pre>
+- Are you NULL?
+</code></pre></div></div>
 
 <p>The last question in this conversation sounds weird, doesn’t it?</p>
 
@@ -263,27 +272,28 @@ doesn’t fit with the main usage scenario of the method.</p>
 <p>Otherwise, return a Null Object, that exposes some common
 behavior and throws exceptions on all other calls:</p>
 
-<pre>public Employee getByName(String name) {
-  int id = database.find(name);
-  Employee employee;
-  if (id == 0) {
-    employee = new Employee() {
-      @Override
-      public String name() {
-        return "anonymous";
-      }
-      @Override
-      public void transferTo(Department dept) {
-        throw new AnonymousEmployeeException(
-          "I can't be transferred, I'm anonymous"
-        );
-      }
-    };
-  } else {
-    employee = Employee(id);
-  }
-  return employee;
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">getByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
+  <span class="nc">Employee</span> <span class="n">employee</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">id</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">employee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="nc">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">"anonymous"</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">transferTo</span><span class="o">(</span><span class="nc">Department</span> <span class="n">dept</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nf">AnonymousEmployeeException</span><span class="o">(</span>
+          <span class="s">"I can't be transferred, I'm anonymous"</span>
+        <span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">};</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">employee</span> <span class="o">=</span> <span class="nc">Employee</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">employee</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a>
@@ -301,15 +311,16 @@ changes its state during the entire life-cycle.</p>
 <p>Very often, <code class="highlighter-rouge">NULL</code> values are used in <a href="/2017/10/17/lazy-loading-caching-sticky-cactoos.html">lazy loading</a>,
 to make objects incomplete and mutable. For example:</p>
 
-<pre>public class Department {
-  private Employee found = null;
-  public synchronized Employee manager() {
-    if (this.found == null) {
-      this.found = new Employee("Jeffrey");
-    }
-    return this.found;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Department</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">Employee</span> <span class="n">found</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kd">synchronized</span> <span class="nc">Employee</span> <span class="nf">manager</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">found</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">found</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Jeffrey"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">found</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This technology, although widely used, is an anti-pattern in
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.
@@ -331,13 +342,14 @@ For example, <a href="http://aspects.jcabi.com">jcabi-aspects</a> has
 <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code class="highlighter-rouge">@Cacheable</code></a>
 annotation that caches the value returned by a method:</p>
 
-<pre>import com.jcabi.aspects.Cacheable;
-public class Department {
-  @Cacheable(forever = true)
-  public Employee manager() {
-    return new Employee("Jacky Brown");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.aspects.Cacheable</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Department</span> <span class="o">{</span>
+  <span class="nd">@Cacheable</span><span class="o">(</span><span class="n">forever</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="nc">Employee</span> <span class="nf">manager</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Employee</span><span class="o">(</span><span class="s">"Jacky Brown"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I hope this analysis was convincing enough that you will
 stop <code class="highlighter-rouge">NULL</code>-ing your code :)</p>

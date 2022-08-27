@@ -82,9 +82,10 @@ a <a href="http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.h
 file in the <code class="highlighter-rouge">META-INF</code> directory. The file contains a list of attributes,
 which describe this particular package. For example:</p>
 
-<pre>Manifest-Version: 1.0
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Manifest-Version: 1.0
 Created-By: 1.7.0_06 (Oracle Corporation)
-Main-Class: MyPackage.MyClass</pre>
+Main-Class: MyPackage.MyClass
+</code></pre></div></div>
 
 <p>When your application has multiple JAR dependencies, you have multiple
 <code class="highlighter-rouge">MANIFEST.MF</code> files in your class path. All of them have the same location:
@@ -93,8 +94,9 @@ them in runtime and find the attribute by its name.</p>
 
 <p><a href="http://manifests.jcabi.com">jcabi-manifests</a> makes it possible with a one-liner:</p>
 
-<pre>import com.jcabi.manifests.Manifests;
-String created = Manifests.read("Created-By");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.manifests.Manifests</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">created</span> <span class="o">=</span> <span class="nc">Manifests</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"Created-By"</span><span class="o">);</span>
+</code></pre></div></div>
 
 
 
@@ -110,38 +112,41 @@ with the package version name and build number. In Maven,
 can help you (almost the same configuration for
 <a href="http://maven.apache.org/plugins/maven-war-plugin/"><code class="highlighter-rouge">maven-war-plugin</code></a>):</p>
 
-<pre>&lt;plugin&gt;
-  &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
-    &lt;archive&gt;
-      &lt;manifestEntries&gt;
-        &lt;Foo-Version&gt;${project.version}&lt;/Foo-Version&gt;
-        &lt;Foo-Hash&gt;${buildNumber}&lt;/Foo-Hash&gt;
-      &lt;/manifestEntries&gt;
-    &lt;/archive&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>maven-jar-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;archive&gt;</span>
+      <span class="nt">&lt;manifestEntries&gt;</span>
+        <span class="nt">&lt;Foo-Version&gt;</span>${project.version}<span class="nt">&lt;/Foo-Version&gt;</span>
+        <span class="nt">&lt;Foo-Hash&gt;</span>${buildNumber}<span class="nt">&lt;/Foo-Hash&gt;</span>
+      <span class="nt">&lt;/manifestEntries&gt;</span>
+    <span class="nt">&lt;/archive&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">buildnumber-maven-plugin</code>
 will help you to get <code class="highlighter-rouge">${buildNumber}</code> from Git, SVN or Mercurial:</p>
 
-<pre>&lt;plugin&gt;
-  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
-  &lt;artifactId&gt;buildnumber-maven-plugin&lt;/artifactId&gt;
-  &lt;executions&gt;
-    &lt;execution&gt;
-      &lt;goals&gt;
-        &lt;goal&gt;create&lt;/goal&gt;
-      &lt;/goals&gt;
-    &lt;/execution&gt;
-  &lt;/executions&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>buildnumber-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;executions&gt;</span>
+    <span class="nt">&lt;execution&gt;</span>
+      <span class="nt">&lt;goals&gt;</span>
+        <span class="nt">&lt;goal&gt;</span>create<span class="nt">&lt;/goal&gt;</span>
+      <span class="nt">&lt;/goals&gt;</span>
+    <span class="nt">&lt;/execution&gt;</span>
+  <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>After all these manipulations, <code class="highlighter-rouge">MANIFEST.MF</code>, in your JAR will
 contain these two extra lines (on top of all others added there by Maven by default):</p>
 
-<pre>Foo-Version: 1.0-SNAPSHOT
-Foo-Hash: 7ef4ac3</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Foo-Version: 1.0-SNAPSHOT
+Foo-Hash: 7ef4ac3
+</code></pre></div></div>
 
 <p>In runtime, you can show these values to the user to help him
 understand which version of the product he is working with at any given moment.</p>
@@ -161,21 +166,23 @@ credentials right into the JAR/WAR archive during the
 <p>For example, you can encode your PostgreSQL connection
 details right into <code class="highlighter-rouge">MANIFEST.MF</code>:</p>
 
-<pre>&lt;plugin&gt;
-  &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
-  &lt;configuration&gt;
-    &lt;archive&gt;
-      &lt;manifestEntries&gt;
-        &lt;Pgsql&gt;jdbc:postgresql://${pg.host}:${pg.port}/${pg.db}&lt;/Pgsql&gt;
-      &lt;/manifestEntries&gt;
-    &lt;/archive&gt;
-  &lt;/configuration&gt;
-&lt;/plugin&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>maven-war-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;archive&gt;</span>
+      <span class="nt">&lt;manifestEntries&gt;</span>
+        <span class="nt">&lt;Pgsql&gt;</span>jdbc:postgresql://${pg.host}:${pg.port}/${pg.db}<span class="nt">&lt;/Pgsql&gt;</span>
+      <span class="nt">&lt;/manifestEntries&gt;</span>
+    <span class="nt">&lt;/archive&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
 
 <p>Afterwards, you can retrieve them in
 runtime using <a href="http://manifests.jcabi.com"><code class="highlighter-rouge">jcabi-manifests</code></a>:</p>
 
-<pre>String url = Manifests.read("Pgsql");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">url</span> <span class="o">=</span> <span class="nc">Manifests</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"Pgsql"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>If you know of any other useful purposes for <code class="highlighter-rouge">MANIFEST.MF</code>, let me know :)</p>
 

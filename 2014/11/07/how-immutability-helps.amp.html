@@ -94,32 +94,34 @@ we get from a “pure” object-oriented and immutable approach, without getters
 
 <p>Here is how your code will look, if you send an email using commons-email:</p>
 
-<pre>Email email = new SimpleEmail();
-email.setHostName("smtp.googlemail.com");
-email.setSmtpPort(465);
-email.setAuthenticator(new DefaultAuthenticator("user", "pwd"));
-email.setFrom("yegor256@gmail.com", "Yegor Bugayenko");
-email.addTo("dude@jcabi.com");
-email.setSubject("how are you?");
-email.setMsg("Dude, how are you?");
-email.send();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Email</span> <span class="n">email</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleEmail</span><span class="o">();</span>
+<span class="n">email</span><span class="o">.</span><span class="na">setHostName</span><span class="o">(</span><span class="s">"smtp.googlemail.com"</span><span class="o">);</span>
+<span class="n">email</span><span class="o">.</span><span class="na">setSmtpPort</span><span class="o">(</span><span class="mi">465</span><span class="o">);</span>
+<span class="n">email</span><span class="o">.</span><span class="na">setAuthenticator</span><span class="o">(</span><span class="k">new</span> <span class="nc">DefaultAuthenticator</span><span class="o">(</span><span class="s">"user"</span><span class="o">,</span> <span class="s">"pwd"</span><span class="o">));</span>
+<span class="n">email</span><span class="o">.</span><span class="na">setFrom</span><span class="o">(</span><span class="s">"yegor256@gmail.com"</span><span class="o">,</span> <span class="s">"Yegor Bugayenko"</span><span class="o">);</span>
+<span class="n">email</span><span class="o">.</span><span class="na">addTo</span><span class="o">(</span><span class="s">"dude@jcabi.com"</span><span class="o">);</span>
+<span class="n">email</span><span class="o">.</span><span class="na">setSubject</span><span class="o">(</span><span class="s">"how are you?"</span><span class="o">);</span>
+<span class="n">email</span><span class="o">.</span><span class="na">setMsg</span><span class="o">(</span><span class="s">"Dude, how are you?"</span><span class="o">);</span>
+<span class="n">email</span><span class="o">.</span><span class="na">send</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Here is how you do the same with <a href="http://email.jcabi.com">jcabi-email</a>:</p>
 
-<pre>Postman postman = new Postman.Default(
-  new SMTP("smtp.googlemail.com", 465, "user", "pwd")
-);
-Envelope envelope = new Envelope.MIME(
-  new Array&lt;Stamp&gt;(
-    new StSender("Yegor Bugayenko &lt;yegor256@gmail.com&gt;"),
-    new StRecipient("dude@jcabi.com"),
-    new StSubject("how are you?")
-  ),
-  new Array&lt;Enclosure&gt;(
-    new EnPlain("Dude, how are you?")
-  )
-);
-postman.send(envelope);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Postman</span> <span class="n">postman</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Postman</span><span class="o">.</span><span class="na">Default</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">SMTP</span><span class="o">(</span><span class="s">"smtp.googlemail.com"</span><span class="o">,</span> <span class="mi">465</span><span class="o">,</span> <span class="s">"user"</span><span class="o">,</span> <span class="s">"pwd"</span><span class="o">)</span>
+<span class="o">);</span>
+<span class="nc">Envelope</span> <span class="n">envelope</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Envelope</span><span class="o">.</span><span class="na">MIME</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Stamp</span><span class="o">&gt;(</span>
+    <span class="k">new</span> <span class="nf">StSender</span><span class="o">(</span><span class="s">"Yegor Bugayenko &lt;yegor256@gmail.com&gt;"</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nf">StRecipient</span><span class="o">(</span><span class="s">"dude@jcabi.com"</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nf">StSubject</span><span class="o">(</span><span class="s">"how are you?"</span><span class="o">)</span>
+  <span class="o">),</span>
+  <span class="k">new</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Enclosure</span><span class="o">&gt;(</span>
+    <span class="k">new</span> <span class="nf">EnPlain</span><span class="o">(</span><span class="s">"Dude, how are you?"</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+<span class="n">postman</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">envelope</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>I think the difference is obvious.</p>
 
@@ -244,22 +246,23 @@ classes. So, <code class="highlighter-rouge">Postman</code> is… a post man.
 He is delivering messages to other people. First, I created a default
 version of it (I omit the ctor, for the sake of brevity):</p>
 
-<pre>import javax.mail.Message;
-@Immutable
-class Postman.Default implements Postman {
-  private final String host;
-  private final int port;
-  private final String user;
-  private final String password;
-  @Override
-  void send(Message msg) {
-    // create SMTP session
-    // create transport
-    // transport.connect(this.host, this.port, etc.)
-    // transport.send(msg)
-    // transport.close();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.mail.Message</span><span class="o">;</span>
+<span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Postman</span><span class="o">.</span><span class="na">Default</span> <span class="kd">implements</span> <span class="nc">Postman</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">host</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">port</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">user</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">password</span><span class="o">;</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">Message</span> <span class="n">msg</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// create SMTP session</span>
+    <span class="c1">// create transport</span>
+    <span class="c1">// transport.connect(this.host, this.port, etc.)</span>
+    <span class="c1">// transport.send(msg)</span>
+    <span class="c1">// transport.close();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Good start, it works. What now? Well, the
 <a href="http://docs.oracle.com/javaee/7/api/javax/jms/Message.html"><code class="highlighter-rouge">Message</code></a>
@@ -273,30 +276,33 @@ are immutable and annotated with
 <a href="http://aspects.jcabi.com/apidocs-0.20/com/jcabi/aspects/Immutable.html">@Immutable</a> from
 <a href="http://aspects.jcabi.com/annotation-immutable.html">jcabi-aspects</a>):</p>
 
-<pre>@Immutable
-interface Envelope {
-  Message unwrap();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">interface</span> <span class="nc">Envelope</span> <span class="o">{</span>
+  <span class="nc">Message</span> <span class="nf">unwrap</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I also refactor the <code class="highlighter-rouge">Postman</code> to accept an envelope, not a message:</p>
 
-<pre>@Immutable
-interface Postman {
-  void send(Envelope env);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">interface</span> <span class="nc">Postman</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="nc">Envelope</span> <span class="n">env</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>So far, so good. Now let’s try to create a simple implementation of
 <code class="highlighter-rouge">Envelope</code>:</p>
 
-<pre>@Immutable
-class MIME implements Envelope {
-  @Override
-  public Message unwrap() {
-    return new MimeMessage(
-      Session.getDefaultInstance(new Properties())
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">MIME</span> <span class="kd">implements</span> <span class="nc">Envelope</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Message</span> <span class="nf">unwrap</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">MimeMessage</span><span class="o">(</span>
+      <span class="nc">Session</span><span class="o">.</span><span class="na">getDefaultInstance</span><span class="o">(</span><span class="k">new</span> <span class="nc">Properties</span><span class="o">())</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It works, but it does nothing useful yet. It only creates an absolutely
 empty MIME message and returns it. How about adding a subject to it
@@ -304,32 +310,33 @@ and both <code class="highlighter-rouge">To:</code> and <code class="highlighter
 <a href="http://email.jcabi.com/apidocs-1.10/com/jcabi/email/Envelope.Mime.html"><code class="highlighter-rouge">MIME</code></a> class is
 also immutable):</p>
 
-<pre>@Immutable
-class Envelope.MIME implements Envelope {
-  private final String subject;
-  private final String from;
-  private final Array&lt;String&gt; to;
-  public MIME(String subj, String sender, Iterable&lt;String&gt; rcpts) {
-    this.subject = subj;
-    this.from = sender;
-    this.to = new Array&lt;String&gt;(rcpts);
-  }
-  @Override
-  public Message unwrap() {
-    Message msg = new MimeMessage(
-      Session.getDefaultInstance(new Properties())
-    );
-    msg.setSubject(this.subject);
-    msg.setFrom(new InternetAddress(this.from));
-    for (String email : this.to) {
-      msg.setRecipient(
-        Message.RecipientType.TO,
-        new InternetAddress(email)
-      );
-    }
-    return msg;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Envelope</span><span class="o">.</span><span class="na">MIME</span> <span class="kd">implements</span> <span class="nc">Envelope</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">subject</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">from</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">to</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">MIME</span><span class="o">(</span><span class="nc">String</span> <span class="n">subj</span><span class="o">,</span> <span class="nc">String</span> <span class="n">sender</span><span class="o">,</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">rcpts</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">subject</span> <span class="o">=</span> <span class="n">subj</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">from</span> <span class="o">=</span> <span class="n">sender</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">to</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;(</span><span class="n">rcpts</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Message</span> <span class="nf">unwrap</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Message</span> <span class="n">msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MimeMessage</span><span class="o">(</span>
+      <span class="nc">Session</span><span class="o">.</span><span class="na">getDefaultInstance</span><span class="o">(</span><span class="k">new</span> <span class="nc">Properties</span><span class="o">())</span>
+    <span class="o">);</span>
+    <span class="n">msg</span><span class="o">.</span><span class="na">setSubject</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">subject</span><span class="o">);</span>
+    <span class="n">msg</span><span class="o">.</span><span class="na">setFrom</span><span class="o">(</span><span class="k">new</span> <span class="nc">InternetAddress</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">from</span><span class="o">));</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">email</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">to</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">msg</span><span class="o">.</span><span class="na">setRecipient</span><span class="o">(</span>
+        <span class="nc">Message</span><span class="o">.</span><span class="na">RecipientType</span><span class="o">.</span><span class="na">TO</span><span class="o">,</span>
+        <span class="k">new</span> <span class="nf">InternetAddress</span><span class="o">(</span><span class="n">email</span><span class="o">)</span>
+      <span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">msg</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Looks correct and it works. But it is still too primitive. How about
 <code class="highlighter-rouge">CC:</code> and <code class="highlighter-rouge">BCC:</code>? What about email text? How about PDF enclosures?
@@ -349,31 +356,33 @@ for configuring an object <code class="highlighter-rouge">Message</code> (again,
 <a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Stamp.java"><code class="highlighter-rouge">Stamp</code></a> is immutable,
 as well as all its implementers):</p>
 
-<pre>@Immutable
-interface Stamp {
-  void attach(Message message);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">interface</span> <span class="nc">Stamp</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">attach</span><span class="o">(</span><span class="nc">Message</span> <span class="n">message</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, I can simplify my
 <a href="https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java"><code class="highlighter-rouge">MIME</code></a> class to the following:</p>
 
-<pre>@Immutable
-class Envelope.MIME implements Envelope {
-  private final Array&lt;Stamp&gt; stamps;
-  public MIME(Iterable&lt;Stamp&gt; stmps) {
-    this.stamps = new Array&lt;Stamp&gt;(stmps);
-  }
-  @Override
-  public Message unwrap() {
-    Message msg = new MimeMessage(
-      Session.getDefaultInstance(new Properties())
-    );
-    for (Stamp stamp : this.stamps) {
-      stamp.attach(msg);
-    }
-    return msg;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Envelope</span><span class="o">.</span><span class="na">MIME</span> <span class="kd">implements</span> <span class="nc">Envelope</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Stamp</span><span class="o">&gt;</span> <span class="n">stamps</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">MIME</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Stamp</span><span class="o">&gt;</span> <span class="n">stmps</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">stamps</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">&lt;</span><span class="nc">Stamp</span><span class="o">&gt;(</span><span class="n">stmps</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Message</span> <span class="nf">unwrap</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Message</span> <span class="n">msg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MimeMessage</span><span class="o">(</span>
+      <span class="nc">Session</span><span class="o">.</span><span class="na">getDefaultInstance</span><span class="o">(</span><span class="k">new</span> <span class="nc">Properties</span><span class="o">())</span>
+    <span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Stamp</span> <span class="n">stamp</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">stamps</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">stamp</span><span class="o">.</span><span class="na">attach</span><span class="o">(</span><span class="n">msg</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">msg</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, I will create stamps for the subject, for <code class="highlighter-rouge">To:</code>, for <code class="highlighter-rouge">From:</code>,
 for <code class="highlighter-rouge">CC:</code>, for <code class="highlighter-rouge">BCC:</code>, etc. As many stamps as I like. The class <code class="highlighter-rouge">MIME</code>

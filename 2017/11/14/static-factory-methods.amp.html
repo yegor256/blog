@@ -91,36 +91,38 @@ an object-oriented point of view.</p>
 
 <p>This is a class with one primary and two secondary constructors:</p>
 
-<pre>class Color {
-  private final int hex;
-  Color(String rgb) {
-    this(Integer.parseInt(rgb, 16));
-  }
-  Color(int red, int green, int blue) {
-    this(red &lt;&lt; 16 + green &lt;&lt; 8 + blue);
-  }
-  Color(int h) {
-    this.hex = h;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
+  <span class="nc">Color</span><span class="o">(</span><span class="nc">String</span> <span class="n">rgb</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">rgb</span><span class="o">,</span> <span class="mi">16</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Color</span><span class="o">(</span><span class="kt">int</span> <span class="n">red</span><span class="o">,</span> <span class="kt">int</span> <span class="n">green</span><span class="o">,</span> <span class="kt">int</span> <span class="n">blue</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="n">red</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">green</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">+</span> <span class="n">blue</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Color</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is a similar class with three static factory methods:</p>
 
-<pre>class Color {
-  private final int hex;
-  static Color makeFromRGB(String rgb) {
-    return new Color(Integer.parseInt(rgb, 16));
-  }
-  static Color makeFromPalette(int red, int green, int blue) {
-    return new Color(red &lt;&lt; 16 + green &lt;&lt; 8 + blue);
-  }
-  static Color makeFromHex(int h) {
-    return new Color(h);
-  }
-  private Color(int h) {
-    this.hex = h;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
+  <span class="kd">static</span> <span class="nc">Color</span> <span class="nf">makeFromRGB</span><span class="o">(</span><span class="nc">String</span> <span class="n">rgb</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">rgb</span><span class="o">,</span> <span class="mi">16</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="kd">static</span> <span class="nc">Color</span> <span class="nf">makeFromPalette</span><span class="o">(</span><span class="kt">int</span> <span class="n">red</span><span class="o">,</span> <span class="kt">int</span> <span class="n">green</span><span class="o">,</span> <span class="kt">int</span> <span class="n">blue</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="n">red</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">green</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">+</span> <span class="n">blue</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">static</span> <span class="nc">Color</span> <span class="nf">makeFromHex</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="nf">Color</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Which one do you like better?</p>
 
@@ -147,11 +149,13 @@ Let’s take them one by one.</p>
 <a href="http://www.rapidtables.com/web/color/red-color.htm">red tomato</a>
 color object with a constructor:</p>
 
-<pre>Color tomato = new Color(255, 99, 71);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>This is how you do it with a static factory method:</p>
 
-<pre>Color tomato = Color.makeFromPalette(255, 99, 71);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>It seems that <code class="highlighter-rouge">makeFromPalette()</code> is semantically richer than just <code class="highlighter-rouge">new Color()</code>,
 right? Well, yes. Who knows what those three numbers mean if we just pass
@@ -163,26 +167,28 @@ out immediately.</p>
 <p>However, the right solution would be to use polymorphism and encapsulation,
 to decompose the problem into a few semantically rich classes:</p>
 
-<pre>interface Color {
-}
-class HexColor implements Color {
-  private final int hex;
-  HexColor(int h) {
-    this.hex = h;
-  }
-}
-class RGBColor implements Color {
-  private final Color origin;
-  RGBColor(int red, int green, int blue) {
-    this.origin = new HexColor(
-      red &lt;&lt; 16 + green &lt;&lt; 8 + blue
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Color</span> <span class="o">{</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">HexColor</span> <span class="kd">implements</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
+  <span class="nc">HexColor</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">RGBColor</span> <span class="kd">implements</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Color</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">RGBColor</span><span class="o">(</span><span class="kt">int</span> <span class="n">red</span><span class="o">,</span> <span class="kt">int</span> <span class="n">green</span><span class="o">,</span> <span class="kt">int</span> <span class="n">blue</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HexColor</span><span class="o">(</span>
+      <span class="n">red</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">green</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">+</span> <span class="n">blue</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, we use the right constructor of the right class:</p>
 
-<pre>Color tomato = new RGBColor(255, 99, 71);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RGBColor</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>See, Joshua?</p>
 
@@ -190,36 +196,39 @@ class RGBColor implements Color {
 
 <p>Let’s say I need a red tomato color in multiple places in the application:</p>
 
-<pre>Color tomato = new Color(255, 99, 71);
-// ... sometime later
-Color red = new Color(255, 99, 71);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+<span class="c1">// ... sometime later</span>
+<span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Two objects will be created, which is obviously inefficient, since they are
 identical. It would be better to keep the first instance somewhere in memory
 and return it when the second call arrives. Static factory methods make
 it possible to solve this very problem:</p>
 
-<pre>Color tomato = Color.makeFromPalette(255, 99, 71);
-// ... sometime later
-Color red = Color.makeFromPalette(255, 99, 71);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+<span class="c1">// ... sometime later</span>
+<span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Then somewhere inside the <code class="highlighter-rouge">Color</code> we keep a private static <code class="highlighter-rouge">Map</code> with all the
 objects already instantiated:</p>
 
-<pre>class Color {
-  private static final Map&lt;Integer, Color&gt; CACHE =
-    new HashMap&lt;&gt;();
-  private final int hex;
-  static Color makeFromPalette(int red, int green, int blue) {
-    final int hex = red &lt;&lt; 16 + green &lt;&lt; 8 + blue;
-    return Color.CACHE.computeIfAbsent(
-      hex, h -&gt; new Color(h)
-    );
-  }
-  private Color(int h) {
-    return new Color(h);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Color</span><span class="o">&gt;</span> <span class="no">CACHE</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
+  <span class="kd">static</span> <span class="nc">Color</span> <span class="nf">makeFromPalette</span><span class="o">(</span><span class="kt">int</span> <span class="n">red</span><span class="o">,</span> <span class="kt">int</span> <span class="n">green</span><span class="o">,</span> <span class="kt">int</span> <span class="n">blue</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span> <span class="o">=</span> <span class="n">red</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">green</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">+</span> <span class="n">blue</span><span class="o">;</span>
+    <span class="k">return</span> <span class="nc">Color</span><span class="o">.</span><span class="na">CACHE</span><span class="o">.</span><span class="na">computeIfAbsent</span><span class="o">(</span>
+      <span class="n">hex</span><span class="o">,</span> <span class="n">h</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="n">h</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="nf">Color</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It is very effective performance-wise. With a small object like our
 <code class="highlighter-rouge">Color</code> the problem may not be so obvious, but when objects are bigger, their
@@ -230,23 +239,25 @@ instantiation and garbage collection may waste a lot of time.</p>
 <p>However, there is an object-oriented way to solve this problem. We just
 introduce a new class <code class="highlighter-rouge">Palette</code>, which becomes a store of colors:</p>
 
-<pre>class Palette {
-  private final Map&lt;Integer, Color&gt; colors =
-    new HashMap&lt;&gt;();
-  Color take(int red, int green, int blue) {
-    final int hex = red &lt;&lt; 16 + green &lt;&lt; 8 + blue;
-    return this.computerIfAbsent(
-      hex, h -&gt; new Color(h)
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Palette</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Color</span><span class="o">&gt;</span> <span class="n">colors</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+  <span class="nc">Color</span> <span class="nf">take</span><span class="o">(</span><span class="kt">int</span> <span class="n">red</span><span class="o">,</span> <span class="kt">int</span> <span class="n">green</span><span class="o">,</span> <span class="kt">int</span> <span class="n">blue</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span> <span class="o">=</span> <span class="n">red</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">green</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span> <span class="o">+</span> <span class="n">blue</span><span class="o">;</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">computerIfAbsent</span><span class="o">(</span>
+      <span class="n">hex</span><span class="o">,</span> <span class="n">h</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="n">h</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, we make an instance of <code class="highlighter-rouge">Palette</code> once and ask it to return a color
 to us every time we need it:</p>
 
-<pre>Color tomato = palette.take(255, 99, 71);
-// Later we will get the same instance:
-Color red = palette.take(255, 99, 71);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="n">palette</span><span class="o">.</span><span class="na">take</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+<span class="c1">// Later we will get the same instance:</span>
+<span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="n">palette</span><span class="o">.</span><span class="na">take</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>See, Joshua, no static methods, no static attributes.</p>
 
@@ -255,53 +266,57 @@ Color red = palette.take(255, 99, 71);</pre>
 <p>Let’s say our class <code class="highlighter-rouge">Color</code> has a method <code class="highlighter-rouge">lighter()</code>, which is supposed
 to shift the color to the next available lighter one:</p>
 
-<pre>class Color {
-  protected final int hex;
-  Color(int h) {
-    this.hex = h;
-  }
-  public Color lighter() {
-    return new Color(hex + 0x111);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">protected</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
+  <span class="nc">Color</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Color</span> <span class="nf">lighter</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="n">hex</span> <span class="o">+</span> <span class="mh">0x111</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>However, sometimes it’s more desirable to pick the next lighter color
 through a set of available
 <a href="https://en.wikipedia.org/wiki/Pantone">Pantone</a> colors:</p>
 
-<pre>class PantoneColor extends Color {
-  private final PantoneName pantone;
-  PantoneColor(String name) {
-    this(new PantoneName(name));
-  }
-  PantoneColor(PantoneName name) {
-    this.pantone = name;
-  }
-  @Override
-  public Color lighter() {
-    return new PantoneColor(this.pantone.up());
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PantoneColor</span> <span class="kd">extends</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">PantoneName</span> <span class="n">pantone</span><span class="o">;</span>
+  <span class="nc">PantoneColor</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">PantoneName</span><span class="o">(</span><span class="n">name</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">PantoneColor</span><span class="o">(</span><span class="nc">PantoneName</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">pantone</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Color</span> <span class="nf">lighter</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">PantoneColor</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">pantone</span><span class="o">.</span><span class="na">up</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, we create a static factory method, which will decide
 which <code class="highlighter-rouge">Color</code> implementation is the most suitable for us:</p>
 
-<pre>class Color {
-  private final String code;
-  static Color make(int h) {
-    if (h == 0xBF1932) {
-      return new PantoneColor("19-1664 TPX");
-    }
-    return new RGBColor(h);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">code</span><span class="o">;</span>
+  <span class="kd">static</span> <span class="nc">Color</span> <span class="nf">make</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">h</span> <span class="o">==</span> <span class="mh">0xBF1932</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nf">PantoneColor</span><span class="o">(</span><span class="s">"19-1664 TPX"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>If the <a href="https://www.pantone.com/color-finder/19-1664-TPX">true red</a> color
 is requested, we return an instance of <code class="highlighter-rouge">PantoneColor</code>. In all other cases it’s
 just a standard <code class="highlighter-rouge">RGBColor</code>. The decision is made by the static factory
 method. This is how we will call it:</p>
 
-<pre>Color color = Color.make(0xBF1932);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">color</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">make</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>It would not be possible to do the same “forking” with a constructor, since
 it can only return the class it is declared in. A static method has all the
@@ -312,26 +327,29 @@ necessary freedom to return any subtype of <code class="highlighter-rouge">Color
 <p>However, in an object-oriented world we can and must do it all differently.
 First, we would make <code class="highlighter-rouge">Color</code> an interface:</p>
 
-<pre>interface Color {
-  Color lighter();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Color</span> <span class="o">{</span>
+  <span class="nc">Color</span> <span class="nf">lighter</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Next, we would move this decision making process to its own class <code class="highlighter-rouge">Colors</code>, just
 like we did in the previous example:</p>
 
-<pre>class Colors {
-  Color make(int h) {
-    if (h == 0xBF1932) {
-      return new PantoneColor("19-1664-TPX");
-    }
-    return new RGBColor(h);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Colors</span> <span class="o">{</span>
+  <span class="nc">Color</span> <span class="nf">make</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">h</span> <span class="o">==</span> <span class="mh">0xBF1932</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="nf">PantoneColor</span><span class="o">(</span><span class="s">"19-1664-TPX"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And we would use an instance of class <code class="highlighter-rouge">Colors</code> instead of a static faсtory
 method inside <code class="highlighter-rouge">Color</code>:</p>
 
-<pre>colors.make(0xBF1932);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colors</span><span class="o">.</span><span class="na">make</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">);</span>
+</code></pre></div></div>
 
 
 
@@ -346,33 +364,36 @@ making algorithm that stays somewhere else.</p>
 object of class <code class="highlighter-rouge">PantoneColor</code> which would decorate
 the original <code class="highlighter-rouge">RGBColor</code>:</p>
 
-<pre>class PantoneColor {
-  private final Color origin;
-  PantoneColor(Color color) {
-    this.origin = color;
-  }
-  @Override
-  public Color lighter() {
-    final Color next;
-    if (this.origin.hex() == 0xBF1932) {
-      next = new RGBColor(0xD12631);
-    } else {
-      next = this.origin.lighter();
-    }
-    return new PantoneColor(next);
-  }
-)</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PantoneColor</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Color</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">PantoneColor</span><span class="o">(</span><span class="nc">Color</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">color</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Color</span> <span class="nf">lighter</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Color</span> <span class="n">next</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">hex</span><span class="o">()</span> <span class="o">==</span> <span class="mh">0xBF1932</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RGBColor</span><span class="o">(</span><span class="mh">0xD12631</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="n">next</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">lighter</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">PantoneColor</span><span class="o">(</span><span class="n">next</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">)</span>
+</code></pre></div></div>
 
 <p>Then, we make an instance of <code class="highlighter-rouge">RGBColor</code> and decorate it with <code class="highlighter-rouge">PantoneColor</code>:</p>
 
-<pre>Color red = new PantoneColor(
-  new RGBColor(0xBF1932)
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PantoneColor</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">RGBColor</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>We ask <code class="highlighter-rouge">red</code> to return a lighter color and it returns the one from
 the Pantone palette, not the one that is merely lighter in RGB coordinates:</p>
 
-<pre>Color lighter = red.lighter(); // 0xD12631</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">lighter</span> <span class="o">=</span> <span class="n">red</span><span class="o">.</span><span class="na">lighter</span><span class="o">();</span> <span class="c1">// 0xD12631</span>
+</code></pre></div></div>
 
 <p>Of course, this example is rather primitive and needs
 <a href="/2016/12/20/can-objects-be-friends.html">further improvement</a>

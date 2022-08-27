@@ -116,13 +116,15 @@ It moves the engine into the <em>parent class</em>, which all our entities inher
 This is how we were supposed to save our entity to the database in the ORM
 scenario (pseudo-code):</p>
 
-<pre>book.setTitle("Java in a Nutshell");
-session.update(book);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">book</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"Java in a Nutshell"</span><span class="o">);</span>
+<span class="n">session</span><span class="o">.</span><span class="na">update</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>And this is what we do with an ActiveRecord:</p>
 
-<pre>book.setTitle("Java in a Nutshell");
-book.update();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">book</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"Java in a Nutshell"</span><span class="o">);</span>
+<span class="n">book</span><span class="o">.</span><span class="na">update</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>The method <code class="highlighter-rouge">update()</code> is defined in book’s parent class and uses
 book as a <em>data container</em>. When called, it fetches data

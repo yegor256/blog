@@ -87,11 +87,12 @@ ago, I decided to put all of that XML-to-DOM parsing code into a small libraryâ€
 manipulations. Thatâ€™s why it is small and dependency-free. With the following
 example, you can see just how simple XML parsing can be:</p>
 
-<pre>import com.jcabi.xml.XML;
-import com.jcabi.xml.XMLDocument;
-XML xml = new XMLDocument(
-  "&lt;root&gt;&lt;a&gt;hello&lt;/a&gt;&lt;b&gt;world!&lt;/b&gt;&lt;/root&gt;"
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.xml.XML</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.jcabi.xml.XMLDocument</span><span class="o">;</span>
+<span class="no">XML</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLDocument</span><span class="o">(</span>
+  <span class="s">"&lt;root&gt;&lt;a&gt;hello&lt;/a&gt;&lt;b&gt;world!&lt;/b&gt;&lt;/root&gt;"</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 
 
@@ -101,27 +102,30 @@ that can traverse the XML tree and convert it back to text.</p>
 
 <p>For example:</p>
 
-<pre>// outputs "hello"
-System.out.println(xml.xpath("/root/a/text()").get(0));
-// outputs the entire XML document
-System.out.println(xml.toString());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "hello"</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">xml</span><span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/root/a/text()"</span><span class="o">).</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+<span class="c1">// outputs the entire XML document</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">xml</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>Method <code class="highlighter-rouge">xpath()</code> allows you to find a collection of text nodes
 or attributes in the document, and then convert them to
 a collection of strings, using <a href="http://en.wikipedia.org/wiki/XPath">XPath query</a>:</p>
 
-<pre>// outputs "hello" and "world"
-for (String text : xml.xpath("/root/*/text()")) {
-  System.out.println(text);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "hello" and "world"</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">text</span> <span class="o">:</span> <span class="n">xml</span><span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/root/*/text()"</span><span class="o">))</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Method <code class="highlighter-rouge">nodes()</code> enables the same XPath search operation,
 but instead returns a collection of instances of <code class="highlighter-rouge">XML</code> interface:</p>
 
-<pre>// outputs "&lt;a&gt;hello&lt;/a&gt;" and "&lt;b&gt;world&lt;/b&gt;"
-for (XML node : xml.nodes("/root/*"))
-  System.out.println(node);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "&lt;a&gt;hello&lt;/a&gt;" and "&lt;b&gt;world&lt;/b&gt;"</span>
+<span class="k">for</span> <span class="o">(</span><span class="no">XML</span> <span class="n">node</span> <span class="o">:</span> <span class="n">xml</span><span class="o">.</span><span class="na">nodes</span><span class="o">(</span><span class="s">"/root/*"</span><span class="o">))</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Besides XML parsing, printing and XPath traversing,
 <a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>

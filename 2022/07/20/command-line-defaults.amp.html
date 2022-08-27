@@ -102,8 +102,9 @@ but ignore XML files in the <code class="highlighter-rouge">.idea/</code> direct
 all XML files have a license in their preamble. This is how you would
 call <code class="highlighter-rouge">xcop</code>:</p>
 
-<pre>$ xcop --include '*.xml' --exclude '.idea/**' \
-  --license LICENSE.txt</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xcop --include '*.xml' --exclude '.idea/**' \
+  --license LICENSE.txt
+</code></pre></div></div>
 
 <p>You have to use this set of arguments everywhere you call <code class="highlighter-rouge">xcop</code>:
 in the build script, in the CI/CD pipeline, and on your laptop when you check
@@ -114,13 +115,15 @@ Bash file called <code class="highlighter-rouge">run_xcop.sh</code> with exactly
 plain text file in the root of the repository and put all
 the required “default” command line options there, one per line:</p>
 
-<pre>--include=*.xml
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--include=*.xml
 --exclude=.idea/**
---license=LICENSE.txt</pre>
+--license=LICENSE.txt
+</code></pre></div></div>
 
 <p>Now, you can call the tool just like this:</p>
 
-<pre>$ xcop</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xcop
+</code></pre></div></div>
 
 <p>It will find the <code class="highlighter-rouge">.xcop</code> file and will read all lines from it, treating
 each of them as command line arguments. It will basically <em>concatenate</em>

@@ -88,12 +88,14 @@ once is redundant and must be replaced with a value.</p>
 
 <p>Here, variable <code class="highlighter-rouge">fileName</code> is redundant:</p>
 
-<pre>String fileName = "test.txt";
-print("Length is " + new File(fileName).length());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">fileName</span> <span class="o">=</span> <span class="s">"test.txt"</span><span class="o">;</span>
+<span class="n">print</span><span class="o">(</span><span class="s">"Length is "</span> <span class="o">+</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="n">fileName</span><span class="o">).</span><span class="na">length</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>This code must look differently:</p>
 
-<pre>print("Length is " + new File("test.txt").length());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">print</span><span class="o">(</span><span class="s">"Length is "</span> <span class="o">+</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"test.txt"</span><span class="o">).</span><span class="na">length</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>This example is very primitive, but I’m sure you’ve seen these
 redundant variables many times. We use them to “explain” the code—it’s

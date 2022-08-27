@@ -160,8 +160,9 @@ with their own behavior, properties and a life cycle.</p>
 Can you “set” a ball to a dog? Not really.
 But that is exactly what the following piece of software is doing:</p>
 
-<pre>Dog dog = new Dog();
-dog.setBall(new Ball());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Dog</span><span class="o">();</span>
+<span class="n">dog</span><span class="o">.</span><span class="na">setBall</span><span class="o">(</span><span class="k">new</span> <span class="nc">Ball</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>How does that sound?</p>
 
@@ -169,13 +170,15 @@ dog.setBall(new Ball());</pre>
 if she ate it and you’re doing surgery. In that case, yes, we can “get” a ball from a dog. This is what
 I’m talking about:</p>
 
-<pre>Dog dog = new Dog();
-Ball ball = dog.getBall();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Dog</span><span class="o">();</span>
+<span class="nc">Ball</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">dog</span><span class="o">.</span><span class="na">getBall</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Or an even more ridiculous example:</p>
 
-<pre>Dog dog = new Dog();
-dog.setWeight("23kg");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Dog</span><span class="o">();</span>
+<span class="n">dog</span><span class="o">.</span><span class="na">setWeight</span><span class="o">(</span><span class="s">"23kg"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Can you imagine this transaction in the real world? :)</p>
 
@@ -198,9 +201,10 @@ reading West’s <a href="http://amzn.to/266oJr4">Object Thinking</a>.</p>
 <p>Start thinking like an object and you will immediately rename those methods.
 This is what you will probably get:</p>
 
-<pre>Dog dog = new Dog();
-dog.take(new Ball());
-Ball ball = dog.give();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Dog</span><span class="o">();</span>
+<span class="n">dog</span><span class="o">.</span><span class="na">take</span><span class="o">(</span><span class="k">new</span> <span class="nc">Ball</span><span class="o">());</span>
+<span class="nc">Ball</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">dog</span><span class="o">.</span><span class="na">give</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Now, we’re treating the dog as a real animal, who can take a ball from us
 and can give it back, when we ask. Worth mentioning is that the
@@ -212,8 +216,9 @@ from your code.</p>
 <p>Besides that, object thinking will lead to object immutability, like in
 the “weight of the dog” example. You would re-write that like this instead:</p>
 
-<pre>Dog dog = new Dog("23kg");
-int weight = dog.weight();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Dog</span><span class="o">(</span><span class="s">"23kg"</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">dog</span><span class="o">.</span><span class="na">weight</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>The dog is an immutable living organism, which doesn’t allow anyone from
 the outside to change her weight, or size, or name, etc. She can tell, on

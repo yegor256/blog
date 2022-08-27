@@ -98,86 +98,94 @@ but you can do something similar in any framework.</p>
 
 <p>First, somewhere in the global space, before the app starts:</p>
 
-<pre>require 'glogin'
-configure do
-  set :glogin, GLogin::Auth.new(
-    # You get this from GitHub, when you register your
-    # web application:
-    client_id,
-    # Make sure this value is coming from a secure
-    # place and is NOT visible in the source code:
-    client_secret,
-    # This is what you will register in GitHub as an
-    # authorization callback URL:
-    'http://www.example.com/github-callback'
-  )
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'glogin'</span>
+<span class="n">configure</span> <span class="k">do</span>
+  <span class="n">set</span> <span class="ss">:glogin</span><span class="p">,</span> <span class="no">GLogin</span><span class="o">::</span><span class="no">Auth</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+    <span class="c1"># You get this from GitHub, when you register your</span>
+    <span class="c1"># web application:</span>
+    <span class="n">client_id</span><span class="p">,</span>
+    <span class="c1"># Make sure this value is coming from a secure</span>
+    <span class="c1"># place and is NOT visible in the source code:</span>
+    <span class="n">client_secret</span><span class="p">,</span>
+    <span class="c1"># This is what you will register in GitHub as an</span>
+    <span class="c1"># authorization callback URL:</span>
+    <span class="s1">'http://www.example.com/github-callback'</span>
+  <span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Next, for all web pages we need to parse a cookie, if it exists,
 and convert it into a user:</p>
 
-<pre>require 'sinatra/cookies'
-before '/*' do
-  if cookies[:glogin]
-    begin
-      @user = GLogin::Cookie::Closed.new(
-        cookies[:glogin],
-        # This must be some long text to be used to
-        # encrypt the value in the cookie:
-        encryption_secret
-      ).to_user
-    rescue OpenSSL::Cipher::CipherError =&gt; _
-      # Nothing happens here, the user is not logged in.
-      cookies.delete(:glogin)
-    end
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'sinatra/cookies'</span>
+<span class="n">before</span> <span class="s1">'/*'</span> <span class="k">do</span>
+  <span class="k">if</span> <span class="n">cookies</span><span class="p">[</span><span class="ss">:glogin</span><span class="p">]</span>
+    <span class="k">begin</span>
+      <span class="vi">@user</span> <span class="o">=</span> <span class="no">GLogin</span><span class="o">::</span><span class="no">Cookie</span><span class="o">::</span><span class="no">Closed</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+        <span class="n">cookies</span><span class="p">[</span><span class="ss">:glogin</span><span class="p">],</span>
+        <span class="c1"># This must be some long text to be used to</span>
+        <span class="c1"># encrypt the value in the cookie:</span>
+        <span class="n">encryption_secret</span>
+      <span class="p">).</span><span class="nf">to_user</span>
+    <span class="k">rescue</span> <span class="no">OpenSSL</span><span class="o">::</span><span class="no">Cipher</span><span class="o">::</span><span class="no">CipherError</span> <span class="o">=&gt;</span> <span class="n">_</span>
+      <span class="c1"># Nothing happens here, the user is not logged in.</span>
+      <span class="n">cookies</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="ss">:glogin</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>If the <code class="highlighter-rouge">glogin</code> cookie comes in and contains valid data,
 a local variable <code class="highlighter-rouge">@user</code> will be set to something like this:</p>
 
-<pre>{ login: 'yegor256', avatar: 'http://...' }</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span> <span class="ss">login: </span><span class="s1">'yegor256'</span><span class="p">,</span> <span class="ss">avatar: </span><span class="s1">'http://...'</span> <span class="p">}</span>
+</code></pre></div></div>
 
 <p>Next, we need a URL for GitHub OAuth callback:</p>
 
-<pre>get '/github-callback' do
-  cookies[:glogin] = GLogin::Cookie::Open.new(
-    settings.glogin.user(params[:code]),
-    # The same encryption secret that we were using above:
-    encryption_secret
-  ).to_s
-  redirect to('/')
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">get</span> <span class="s1">'/github-callback'</span> <span class="k">do</span>
+  <span class="n">cookies</span><span class="p">[</span><span class="ss">:glogin</span><span class="p">]</span> <span class="o">=</span> <span class="no">GLogin</span><span class="o">::</span><span class="no">Cookie</span><span class="o">::</span><span class="no">Open</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+    <span class="n">settings</span><span class="p">.</span><span class="nf">glogin</span><span class="p">.</span><span class="nf">user</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:code</span><span class="p">]),</span>
+    <span class="c1"># The same encryption secret that we were using above:</span>
+    <span class="n">encryption_secret</span>
+  <span class="p">).</span><span class="nf">to_s</span>
+  <span class="n">redirect</span> <span class="n">to</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Finally, we need a logout URL:</p>
 
-<pre>get '/logout' do
-  cookies.delete(:glogin)
-  redirect to('/')
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">get</span> <span class="s1">'/logout'</span> <span class="k">do</span>
+  <span class="n">cookies</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="ss">:glogin</span><span class="p">)</span>
+  <span class="n">redirect</span> <span class="n">to</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>One more thing is the login URL you will need for your front page. Here
 it is:</p>
 
-<pre>settings.glogin.login_uri</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">settings</span><span class="p">.</span><span class="nf">glogin</span><span class="p">.</span><span class="nf">login_uri</span>
+</code></pre></div></div>
 
 <p>For unit testing you can just provide an empty string as a <code class="highlighter-rouge">secret</code> for
 <code class="highlighter-rouge">GLogin::Cookie::Open</code> and <code class="highlighter-rouge">GLogin::Cookie::Closed</code> and the encryption will be disabled:
 whatever comes from the cookie will be trusted. For testing
 it will be convenient to provide a user name in a query string, like this:</p>
 
-<pre>http://localhost:9292/?glogin=tester</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:9292/?glogin=tester
+</code></pre></div></div>
 
 <p>To enable that, it’s recommended you add this line (see how
 it works in <a href="https://github.com/zold-io/wts.zold.io">zold-io/wts.zold.io</a>):</p>
 
-<pre>require 'sinatra/cookies'
-before '/*' do
-  cookies[:glogin] = params[:glogin] if params[:glogin]
-  if cookies[:glogin]
-    # same as above
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'sinatra/cookies'</span>
+<span class="n">before</span> <span class="s1">'/*'</span> <span class="k">do</span>
+  <span class="n">cookies</span><span class="p">[</span><span class="ss">:glogin</span><span class="p">]</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="ss">:glogin</span><span class="p">]</span> <span class="k">if</span> <span class="n">params</span><span class="p">[</span><span class="ss">:glogin</span><span class="p">]</span>
+  <span class="k">if</span> <span class="n">cookies</span><span class="p">[</span><span class="ss">:glogin</span><span class="p">]</span>
+    <span class="c1"># same as above</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>I use this gem in
 <a href="https://github.com/yegor256/sixnines">sixnines</a>,

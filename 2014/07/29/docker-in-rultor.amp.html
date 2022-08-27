@@ -81,7 +81,8 @@ can run a shell command in a virtual Linux, inside an isolated file system.
 Every time we build our projects, we want them to run in their own
 Docker containers. Take this Maven project for example:</p>
 
-<pre>$ sudo docker run -i -t ubuntu mvn clean test</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker run <span class="nt">-i</span> <span class="nt">-t</span> ubuntu mvn clean <span class="nb">test</span>
+</code></pre></div></div>
 
 
 
@@ -126,7 +127,7 @@ an image out of it and push it to the hub.</p>
 with a pre-installed <code class="highlighter-rouge">graphviz</code> package (in order to enable <code class="highlighter-rouge">dot</code> command line tool).
 First, I would start a plain vanilla Ubuntu container, and install <code class="highlighter-rouge">graphviz</code> inside it:</p>
 
-<pre>$ sudo docker run -i -t ubuntu /bin/bash
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo docker run -i -t ubuntu /bin/bash
 root@215d2696e8ad:/# sudo apt-get install -y graphviz
 Reading package lists... Done
 Building dependency tree
@@ -136,14 +137,16 @@ The following extra packages will be installed:
 root@215d2696e8ad:/# exit
 $ sudo docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                     PORTS               NAMES
-215d2696e8ad        ubuntu:14.04        /bin/bash           About a minute ago   Exited (0) 3 seconds ago                       high_mccarthy</pre>
+215d2696e8ad        ubuntu:14.04        /bin/bash           About a minute ago   Exited (0) 3 seconds ago                       high_mccarthy
+</code></pre></div></div>
 
 <p>I have a container that stopped a few seconds ago. Container’s
 ID is <code class="highlighter-rouge">215d2696e8ad</code>. Now, I want to make it reusable for all
 further tests in Rultor.com. I have to create an image from it:</p>
 
-<pre>$ sudo docker commit 215d2696e8ad yegor256/beta
-c5ad7718fc0e20fe4bf2c8a9bfade4db8617a25366ca5b64be2e1e8aa0de6e52</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker commit 215d2696e8ad yegor256/beta
+c5ad7718fc0e20fe4bf2c8a9bfade4db8617a25366ca5b64be2e1e8aa0de6e52
+</code></pre></div></div>
 
 <p>I just made my new commit to a new image <code class="highlighter-rouge">yegor256/beta</code>.
 This image can be reused right now. I can create a new container
@@ -151,7 +154,7 @@ from this image and it will have <code class="highlighter-rouge">graphviz</code>
 
 <p>Now it’s time to share my image at Docker hub, in order to make it available for Rultor:</p>
 
-<pre>$ sudo docker push yegor256/beta
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo docker push yegor256/beta
 The push refers to a repository [yegor256/beta] (len: 1)
 Sending image list
 Pushing repository yegor256/beta (1 tags)
@@ -162,14 +165,16 @@ d7ac5e4f1812: Image already pushed, skipping
 6c37f792ddac: Image already pushed, skipping
 e54ca5efa2e9: Image already pushed, skipping
 c5ad7718fc0e: Image successfully pushed
-Pushing tag for rev [c5ad7718fc0e] on {https://registry-1.docker.io/v1/repositories/yegor256/beta/tags/latest}</pre>
+Pushing tag for rev [c5ad7718fc0e] on {https://registry-1.docker.io/v1/repositories/yegor256/beta/tags/latest}
+</code></pre></div></div>
 
 <p>The last step is to configure Rultor to use this image in
 all builds. To do this, I will edit <a href="https://doc.rultor.com/reference.html"><code class="highlighter-rouge">.rultor.yml</code></a>
 in the root directory of my GitHub repository:</p>
 
-<pre>docker:
-  image: yegor256/beta</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker:
+  image: yegor256/beta
+</code></pre></div></div>
 
 <p>That’s it. From now on, Rultor will use my custom Docker image with
 pre-installed <code class="highlighter-rouge">graphviz</code>, in every build (merge, release, deploy, etc.)</p>
@@ -179,7 +184,7 @@ it’s easy to do. Say, I want to install Ruby into my build image.
 I start a container from the image and install it (pay attention,
 I’m starting a container not from <code class="highlighter-rouge">ubuntu</code> image, as I did before, but from <code class="highlighter-rouge">yegor256/beta</code>):</p>
 
-<pre>$ sudo docker run -i -t yegor256/beta /bin/bash
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo docker run -i -t yegor256/beta /bin/bash
 root@7e0fbd9806c9:/# sudo apt-get install -y ruby
 Reading package lists... Done
 Building dependency tree
@@ -190,7 +195,8 @@ root@7e0fbd9806c9:/# exit
 $ sudo docker ps -a
 CONTAINER ID        IMAGE                  COMMAND             CREATED             STATUS                     PORTS               NAMES
 7e0fbd9806c9        yegor256/beta:latest   /bin/bash           28 seconds ago      Exited (0) 2 seconds ago                       pensive_pare
-215d2696e8ad        ubuntu:14.04           /bin/bash           10 minutes ago      Exited (0) 8 minutes ago                       high_mccarthy</pre>
+215d2696e8ad        ubuntu:14.04           /bin/bash           10 minutes ago      Exited (0) 8 minutes ago                       high_mccarthy
+</code></pre></div></div>
 
 <p>You can now see that I have two containers. The first one is the one
 I am using right now; it contains Ruby. The second one is the one
@@ -198,10 +204,11 @@ I was using before and it contains <code class="highlighter-rouge">graphviz</cod
 
 <p>Now I have to commit again and push:</p>
 
-<pre>$ sudo docker commit 7e0fbd9806c9 yegor256/beta
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker commit 7e0fbd9806c9 yegor256/beta
 6cbfb7a6b18a2182f42171f6bb5aef67c4819b5c2795edffa6a63ba78aaada2d
-$ sudo docker push yegor256/beta
-...</pre>
+<span class="nv">$ </span><span class="nb">sudo </span>docker push yegor256/beta
+...
+</code></pre></div></div>
 
 <p>Thus, this Docker hub is a very convenient feature for Rultor and similar systems.</p>
 
@@ -229,14 +236,15 @@ If the code is not zero, we fail the build and report to the user.</p>
 
 <p>This is how we run Maven build:</p>
 
-<pre>$ sudo docker run --rm -i -t yegor256/rultor mvn clean test
-[INFO] ------------------------------------------------------------------------
-[INFO] Building jcabi-github 0.13
-[INFO] ------------------------------------------------------------------------
-[INFO]
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jcabi-github ---
-[INFO]
-...</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker run <span class="nt">--rm</span> <span class="nt">-i</span> <span class="nt">-t</span> yegor256/rultor mvn clean <span class="nb">test</span>
+<span class="o">[</span>INFO] <span class="nt">------------------------------------------------------------------------</span>
+<span class="o">[</span>INFO] Building jcabi-github 0.13
+<span class="o">[</span>INFO] <span class="nt">------------------------------------------------------------------------</span>
+<span class="o">[</span>INFO]
+<span class="o">[</span>INFO] <span class="nt">---</span> maven-clean-plugin:2.5:clean <span class="o">(</span>default-clean<span class="o">)</span> @ jcabi-github <span class="nt">---</span>
+<span class="o">[</span>INFO]
+...
+</code></pre></div></div>
 
 <p>As you can see, Maven starts immediately. We don’t worry
 about the internals of the container. We just start an application inside it.</p>

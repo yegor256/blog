@@ -90,9 +90,10 @@ a <a href="http://en.wikipedia.org/wiki/Controlled_natural_language">controlled 
 that sounds like English, while at the same time is parseable by computers.
 A simple requirements document in Requs may look similar to:</p>
 
-<pre>Department has employee-s.
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Department has employee-s.
 Employee has name and salary.
-UC1 where Employee gets raise: "TBD."</pre>
+UC1 where Employee gets raise: "TBD."
+</code></pre></div></div>
 
 <p>This Software Requirements Specification (SRS) defines two types (<code class="highlighter-rouge">Department</code>
 and <code class="highlighter-rouge">Employee</code>) and one method <code class="highlighter-rouge">UC</code> (aka “use case”).</p>
@@ -208,7 +209,8 @@ and <a href="http://maven.apache.org/download.cgi">Maven</a>.</p>
 
 <p>Afterwards, I make the following command line call in the project directory:</p>
 
-<pre>mvn clean requs:compile</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn clean requs:compile
+</code></pre></div></div>
 
 <p>After entering the commands, I expect to see the <code class="highlighter-rouge">BUILD SUCCESS</code> message. If
 not, there are some errors and I should fix them. My pull request won’t be

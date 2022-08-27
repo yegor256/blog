@@ -130,10 +130,11 @@ that an object is an in-memory box with data.</p>
 store object attributes in memory. Confused? Bear with me for a minute.
 Let’s say that in that language we define an object:</p>
 
-<pre>c {
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c {
   vin: v,
   engine: e
-}</pre>
+}
+</code></pre></div></div>
 
 <p>Here, <code class="highlighter-rouge">vin</code> and <code class="highlighter-rouge">engine</code> are attributes of object <code class="highlighter-rouge">c</code> (it’s a car; let’s
 forget about classes for now to focus strictly on objects). Thus, there is
@@ -142,9 +143,10 @@ second one is its engine. The VIN is an object <code class="highlighter-rouge">v
 To make it easier to understand, this is how a similar object would
 look in Java:</p>
 
-<pre>char[] v = {'W','D','B','H',...'7','2','8','8'}; // 17 chars
-Engine e = new Engine();
-Car c = new Car(v, e);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span><span class="o">[]</span> <span class="n">v</span> <span class="o">=</span> <span class="o">{</span><span class="sc">'W'</span><span class="o">,</span><span class="sc">'D'</span><span class="o">,</span><span class="sc">'B'</span><span class="o">,</span><span class="sc">'H'</span><span class="o">,...</span><span class="sc">'7'</span><span class="o">,</span><span class="sc">'2'</span><span class="o">,</span><span class="sc">'8'</span><span class="o">,</span><span class="sc">'8'</span><span class="o">};</span> <span class="c1">// 17 chars</span>
+<span class="nc">Engine</span> <span class="n">e</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Engine</span><span class="o">();</span>
+<span class="nc">Car</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Car</span><span class="o">(</span><span class="n">v</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>I’m not entirely sure about JVM, but in C++ such an object will take
 exactly 25 bytes in memory (assuming it’s 64-bit x86 architecture). The

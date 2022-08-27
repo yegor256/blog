@@ -93,13 +93,14 @@ Let’s say there is a story in a file that we need to read as a UTF-8 text
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html"><code class="highlighter-rouge">TextOf</code></a>
 from <a href="http://www.cactoos.org">Cactoos</a>):</p>
 
-<pre>class Story {
-  String text() {
-    return new TextOf(
-      new File("/tmp/story.txt")
-    ).asString();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TextOf</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">)</span>
+    <span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It seems super simple, but the problem is obvious: class <code class="highlighter-rouge">Story</code> can’t
 be reused. It can only read one particular file. Moreover, testing it
@@ -111,42 +112,46 @@ and <code class="highlighter-rouge">/tmp/story.txt</code>—they are together fo
 <p>To solve this we need to introduce a constructor and let <code class="highlighter-rouge">Story</code> accept
 the location of the content as an argument:</p>
 
-<pre>class Story {
-  private final File file;
-  Story(File f) {
-    this.file = f;
-  }
-  String text() {
-    return new TextOf(this.file).asString();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">f</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TextOf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, each user of the <code class="highlighter-rouge">Story</code> has to know the name of the file:</p>
 
-<pre>new Story(new File("/tmp/story.txt"));</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Story</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">));</span>
+</code></pre></div></div>
 
 <p>It’s not really
 convenient, especially for those users who were using <code class="highlighter-rouge">Story</code> before, knowing
 nothing about the file path. To help them we introduce
 a <a href="/2015/05/28/one-primary-constructor.html">secondary constructor</a>:</p>
 
-<pre>class Story {
-  private final File file;
-  Story() { // Here!
-    this(new File("/tmp/story.txt"));
-  }
-  Story(File f) {
-    this.file = f;
-  }
-  String text() {
-    return new TextOf(this.file).asString();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">Story</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// Here!</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">f</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TextOf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now we just make an instance through a no-arguments constructor, just like
 we did before:</p>
 
-<pre>new Story();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Story</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>I’m sure you’re well aware of this technique, which is also known
 as <a href="http://martinfowler.com/articles/injection.html">dependency injection</a>.
@@ -164,30 +169,32 @@ Class <code class="highlighter-rouge">TextOf</code> and then method <code class=
 However, class <code class="highlighter-rouge">TextOf</code> is capable of reading in any encoding, it just
 needs to have a secondary argument for its constructor:</p>
 
-<pre>new TextOf(this.file, "KOI8_R").asString();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">TextOf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">,</span> <span class="s">"KOI8_R"</span><span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>In order to make <code class="highlighter-rouge">Story</code> capable of using different encodings, we need to
 introduce a few additional secondary constructors and modify its primary
 constructor:</p>
 
-<pre>class Story {
-  private final Text text;
-  Story() {
-    this(new File("/tmp/story.txt"));
-  }
-  Story(File f) {
-    this(f, StandardEncodings.UTF_8);
-  }
-  Story(File f, Encoding e) {
-    this(new TextOf(f, e));
-  }
-  Story(Text t) {
-    this.text = t;
-  }
-  String text() {
-    return this.text.asString();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Text</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Story</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="nc">StandardEncodings</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">,</span> <span class="nc">Encoding</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">TextOf</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="n">e</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">Text</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It’s just dependency injection, but pay attention to the locations
 of the operator <code class="highlighter-rouge">new</code>. They are all in the

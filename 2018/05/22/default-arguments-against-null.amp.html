@@ -92,10 +92,11 @@ I will suggest one more “best practice” on top of what
 
 <p>Look at this code:</p>
 
-<pre>Integer max(List&lt;Integer&gt; items) {
-  // Calculate the maximum of all
-  // items and return it.
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="nf">max</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// Calculate the maximum of all</span>
+  <span class="c1">// items and return it.</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What should this method do if the list is empty?
 Java’s <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-"><code class="highlighter-rouge">Collections.max()</code></a>
@@ -117,11 +118,12 @@ returns <code class="highlighter-rouge">NaN</code>.</p>
 
 <p>But there is yet another approach, which is better than an exception. This one:</p>
 
-<pre>Integer max(List&lt;Integer&gt; items, Integer def) {
-  // Calculate the maximum of all
-  // items and return it. Returns 'def' if the
-  // list is empty.
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="nf">max</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">,</span> <span class="nc">Integer</span> <span class="n">def</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// Calculate the maximum of all</span>
+  <span class="c1">// items and return it. Returns 'def' if the</span>
+  <span class="c1">// list is empty.</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The “default” object will be returned if the list is empty. This feature
 is implemented in Python’s <a href="https://docs.python.org/3/library/functions.html#max"><code class="highlighter-rouge">max()</code></a> function:

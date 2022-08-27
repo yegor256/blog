@@ -86,18 +86,20 @@ a user interface. WebKit is a C++ library that enables manipulation of
 HTML content, through DOM calls. For example, this is a simple JavaScript
 located code in <code class="highlighter-rouge">example.js</code>:</p>
 
-<pre>var page = require('webpage').create();
-page.open(
-  'http://google.com',
-  function() {
-    console.log('loaded!');
-    phantom.exit(0);
-  }
-);</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">page</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">webpage</span><span class="dl">'</span><span class="p">).</span><span class="nx">create</span><span class="p">();</span>
+<span class="nx">page</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span>
+  <span class="dl">'</span><span class="s1">http://google.com</span><span class="dl">'</span><span class="p">,</span>
+  <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">loaded!</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">phantom</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div></div>
 
 <p>We run <code class="highlighter-rouge">phantomjs</code> from the command line with the following code:</p>
 
-<pre>$ phantomjs example.js</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>phantomjs example.js
+</code></pre></div></div>
 
 <p>PhantomJS creates a <code class="highlighter-rouge">page</code> object (provided by
 <a href="https://github.com/ariya/phantomjs/wiki/API-Reference-WebPage">webpage</a> module
@@ -119,23 +121,24 @@ the page is ready, we’ll ask <code class="highlighter-rouge">phantomjs</code> 
 If we see the elements we need and desire,—we’re good to go. Let’s use
 the following example:</p>
 
-<pre>import com.rexsl.test.XhtmlMatchers;
-import org.hamcrest.MatcherAssert;
-import org.phandom.Phandom;
-public class DocumentTest {
-  @Test
-  public void rendersValidHtml() {
-    Document doc = new Document();
-    // This is the method we're testing. It is supposed
-    // to return a valid HTML without broken JavaScript
-    // and with all required HTML elements.
-    String html = doc.html();
-    MatcherAssert.assertThat(
-      XhtmlMatchers.xhtml(new Phandom(html).dom()),
-      XhtmlMatchers.hasXPath("//p[.='Hello, world!']")
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.rexsl.test.XhtmlMatchers</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.phandom.Phandom</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DocumentTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">rendersValidHtml</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Document</span> <span class="n">doc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">();</span>
+    <span class="c1">// This is the method we're testing. It is supposed</span>
+    <span class="c1">// to return a valid HTML without broken JavaScript</span>
+    <span class="c1">// and with all required HTML elements.</span>
+    <span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">html</span><span class="o">();</span>
+    <span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="nc">XhtmlMatchers</span><span class="o">.</span><span class="na">xhtml</span><span class="o">(</span><span class="k">new</span> <span class="nc">Phandom</span><span class="o">(</span><span class="n">html</span><span class="o">).</span><span class="na">dom</span><span class="o">()),</span>
+      <span class="nc">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">"//p[.='Hello, world!']"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>When we use the above code, here is what happens. First, we get HTML <code class="highlighter-rouge">html</code> as a <code class="highlighter-rouge">String</code>
 from <code class="highlighter-rouge">doc</code> object, and then pass it to
@@ -153,13 +156,14 @@ render it without problems, the test passes.</p>
 build machine. In order to avoid unit test failures when
 <code class="highlighter-rouge">phantomjs</code> is not available or present, I’ve created the following supplementary method:</p>
 
-<pre>public class DocumentTest {
-  @Test
-  public void rendersValidHtml() {
-    Assume.assumeTrue(Phandom.installed());
-    // the rest of the unit test method body...
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DocumentTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">rendersValidHtml</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Assume</span><span class="o">.</span><span class="na">assumeTrue</span><span class="o">(</span><span class="nc">Phandom</span><span class="o">.</span><span class="na">installed</span><span class="o">());</span>
+    <span class="c1">// the rest of the unit test method body...</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Enjoy and feel free to report any bugs or problems you encounter to:
 <a href="https://github.com/yegor256/phandom/issues">GitHub issues</a> :)</p>

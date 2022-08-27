@@ -95,35 +95,39 @@ Wouldn’t it be great to enable global variables in Java and get rid of
 Singletons. PHP, JavaScript, Ruby and many other languages
 have them, why doesn’t Java? Look at this code:</p>
 
-<pre>class User {
-  private static User INSTANCE;
-  private User() {}
-  public static User getInstance() {
-    synchronized (User.INSTANCE) {
-      if (User.INSTANCE == null) {
-        User.INSTANCE = new User();
-      }
-    }
-    return User.INSTANCE;
-  }
-  public String getName() {
-    // return user's name
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">User</span> <span class="no">INSTANCE</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nf">User</span><span class="o">()</span> <span class="o">{}</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">User</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">synchronized</span> <span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">User</span><span class="o">();</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// return user's name</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, to access it we have to use:</p>
 
-<pre>String name = User.getInstance().getName();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="nc">User</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This is a Singleton. See how verbose it is?
 We can simply replace it with a global variable (<code class="highlighter-rouge">global</code> is the keyword
 I’m suggesting we use):</p>
 
-<pre>global User user;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">global</span> <span class="nc">User</span> <span class="n">user</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>And then:</p>
 
-<pre>user.getName();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Much less code to write, and way easier to read!</p>
 
@@ -137,26 +141,28 @@ It’s just extra hassle. I’m suggesting we add global functions
 to Java and optional “namespaces” to group them. Take a look at this
 utility class:</p>
 
-<pre>class TextUtils {
-  private TextUtils() {}
-  public static String trim(String text) {
-    if (text == null) {
-      return "";
-    }
-    return text.trim();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TextUtils</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nf">TextUtils</span><span class="o">()</span> <span class="o">{}</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">trim</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">text</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="s">""</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="na">trim</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now look at this global function with a namespace:</p>
 
-<pre>namespace TextUtils {
-  String trim(String text) {
-    if (text == null) {
-      return "";
-    }
-    return text.trim();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">namespace</span> <span class="nc">TextUtils</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">trim</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">text</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="s">""</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="na">trim</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>My point is that since we are already using classes as collections
 of functions, let’s make it more convenient. In some applications we
@@ -169,20 +175,22 @@ have to use the <a href="https://docs.oracle.com/javase/tutorial/reflect/">Refle
 It’s not particularly difficult, but it does take a few lines
 of code, which are not so easy to read and understand:</p>
 
-<pre>class Point {
-  private int x;
-  private int y;
-}
-Point point = new Point();
-Field field = point.getClass().getDeclaredField("x");
-field.setAccessible(true);
-int x = (int) field.get(point);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Point</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">y</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="nc">Point</span> <span class="n">point</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">();</span>
+<span class="nc">Field</span> <span class="n">field</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getDeclaredField</span><span class="o">(</span><span class="s">"x"</span><span class="o">);</span>
+<span class="n">field</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">field</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">point</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>I’m suggesting we allow any object to access any of the attributes and methods
 of another object:</p>
 
-<pre>Point point = new Point();
-int x = point.x;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Point</span> <span class="n">point</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="na">x</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>Of course, if they are private, the compiler will issue a warning.
 At compile time you simply ignore the warning and move on. If you really care
@@ -206,27 +214,30 @@ should have one method with a long list of arguments. Some of them will be
 provided by the caller, others will be set to <code class="highlighter-rouge">null</code>. The method will
 decide what to do, for example:</p>
 
-<pre>void save(File file, String encoding) {
- if (encoding == null) {
-   encoding = "UTF-8";
- }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">,</span> <span class="nc">String</span> <span class="n">encoding</span><span class="o">)</span> <span class="o">{</span>
+ <span class="k">if</span> <span class="o">(</span><span class="n">encoding</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+   <span class="n">encoding</span> <span class="o">=</span> <span class="s">"UTF-8"</span><span class="o">;</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then we just call either <code class="highlighter-rouge">save(f)</code> or <code class="highlighter-rouge">save(f, "UTF-16")</code>. The method will
 understand what we mean. We can also make it even more convenient, like it’s
 done in Ruby, providing method arguments by names:</p>
 
-<pre>save(file: f, encoding: "UTF-16");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">save</span><span class="o">(</span><span class="nl">file:</span> <span class="n">f</span><span class="o">,</span> <span class="nl">encoding:</span> <span class="s">"UTF-16"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Also, when there is nothing to return, the method must return <code class="highlighter-rouge">null</code> by default.
 Writing <code class="highlighter-rouge">return null</code> is just a waste of a code line and doesn’t really
 improve readability. Take a look:</p>
 
-<pre>String load(File file) {
- if (file.exists()) {
-   return read_the_content();
- }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+ <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+   <span class="k">return</span> <span class="nf">read_the_content</span><span class="o">();</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It’s obvious from this code that if the file exists, the method loads
 and returns its content. If not, it returns <code class="highlighter-rouge">null</code>, which will be a good

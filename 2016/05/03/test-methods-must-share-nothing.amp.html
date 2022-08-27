@@ -109,27 +109,28 @@ as an argument of an object constructor and then in a few
 test methods to check how that object behaves. Let me simplify that
 code:</p>
 
-<pre>class FooTest {
-  private static final String MSG = "something";
-  @Before
-  public final void setUp() throws Exception {
-    this.foo = new Foo(FooTest.MSG);
-  }
-  @Test
-  public void simplyWorks() throws IOException {
-    assertThat(
-      foo.doSomething(),
-      containsString(FooTest.MSG)
-    );
-  }
-  @Test
-  public void simplyWorksAgain() throws IOException {
-    assertThat(
-      foo.doSomethingElse(),
-      containsString(FooTest.MSG)
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">MSG</span> <span class="o">=</span> <span class="s">"something"</span><span class="o">;</span>
+  <span class="nd">@Before</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="nc">FooTest</span><span class="o">.</span><span class="na">MSG</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorks</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="n">foo</span><span class="o">.</span><span class="na">doSomething</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="nc">FooTest</span><span class="o">.</span><span class="na">MSG</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorksAgain</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="n">foo</span><span class="o">.</span><span class="na">doSomethingElse</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="nc">FooTest</span><span class="o">.</span><span class="na">MSG</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is basically what is happening in
 <a href="https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java"><code class="highlighter-rouge">VerboseListTest</code></a>
@@ -148,22 +149,23 @@ another test method. This is called coupling. And it’s a bad thing.</p>
 <p>What do we do? Well, we can use that <code class="highlighter-rouge">"something"</code> string literal in
 both test methods:</p>
 
-<pre>class FooTest {
-  @Test
-  public void simplyWorks() throws IOException {
-    assertThat(
-      new Foo("something").doSomething(),
-      containsString("something")
-    );
-  }
-  @Test
-  public void simplyWorksAgain() throws IOException {
-    assertThat(
-      new Foo("something").doSomethingElse(),
-      containsString("something")
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorks</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="s">"something"</span><span class="o">).</span><span class="na">doSomething</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="s">"something"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorksAgain</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="s">"something"</span><span class="o">).</span><span class="na">doSomethingElse</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="s">"something"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>As you see, I got rid of that <code class="highlighter-rouge">setUp()</code> method and the private static
 literal <code class="highlighter-rouge">MSG</code>. What do we have now? Code duplication. String <code class="highlighter-rouge">"something"</code>
@@ -181,24 +183,25 @@ approved the changes. So, three people made/approved that mistake, including mys
 <p>So what is the right approach that will avoid code duplication and
 at the same time won’t introduce coupling? Here it is:</p>
 
-<pre>class FooTest {
-  @Test
-  public void simplyWorks() throws IOException {
-    final String msg = "something";
-    assertThat(
-      new Foo(msg).doSomething(),
-      containsString(msg)
-    );
-  }
-  @Test
-  public void simplyWorksAgain() throws IOException {
-    final String msg = "something else";
-    assertThat(
-      new Foo(msg).doSomethingElse(),
-      containsString(msg)
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorks</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">"something"</span><span class="o">;</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="n">msg</span><span class="o">).</span><span class="na">doSomething</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="n">msg</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">simplyWorksAgain</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">String</span> <span class="n">msg</span> <span class="o">=</span> <span class="s">"something else"</span><span class="o">;</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">(</span><span class="n">msg</span><span class="o">).</span><span class="na">doSomethingElse</span><span class="o">(),</span>
+      <span class="n">containsString</span><span class="o">(</span><span class="n">msg</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>These literals must be different. This is what any static analyzer is
 saying when it sees <code class="highlighter-rouge">"something"</code> in so many places. It questions us—why

@@ -122,19 +122,20 @@ because they have <a href="https://stackoverflow.com/questions/35747905">optiona
 parameters. Look at <a href="https://github.com/zold-io/zold/blob/0.26.17/lib/zold/commands/list.rb">this class</a>,
 for example (it’s a simplified version, of course):</p>
 
-<pre>class Zold::List
-  def initialize(wallets:, log: Log::NULL)
-    @wallets = wallets
-    @log = log
-  end
-  def run
-    @wallets.all.sort.each do |id|
-      @wallets.acq(id) do |wallet|
-        @log.info("#{id}: #{wallet.balance}")
-      end
-    end
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Zold::List</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">wallets</span><span class="p">:,</span> <span class="ss">log: </span><span class="no">Log</span><span class="o">::</span><span class="no">NULL</span><span class="p">)</span>
+    <span class="vi">@wallets</span> <span class="o">=</span> <span class="n">wallets</span>
+    <span class="vi">@log</span> <span class="o">=</span> <span class="n">log</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">run</span>
+    <span class="vi">@wallets</span><span class="p">.</span><span class="nf">all</span><span class="p">.</span><span class="nf">sort</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">id</span><span class="o">|</span>
+      <span class="vi">@wallets</span><span class="p">.</span><span class="nf">acq</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">wallet</span><span class="o">|</span>
+        <span class="vi">@log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="nb">id</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">wallet</span><span class="p">.</span><span class="nf">balance</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>This class is supposed to list all wallets in the current directory and print
 their balances to the log, which <em>in some cases</em> will be the console. However,

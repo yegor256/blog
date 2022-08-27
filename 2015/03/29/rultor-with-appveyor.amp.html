@@ -101,29 +101,32 @@ of writing it was <a href="https://ci.appveyor.com/api-token">here</a>). I creat
 a text file <code class="highlighter-rouge">curl-appveyor.cfg</code> with this content (it’s not my real token inside,
 just an example):</p>
 
-<pre>--silent
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--silent
 --header "Authorization: Bearer 1hdmsfbs7xccb9x6g1y4"
 --header "Content-Type: application/json"
---header "Accept: application/json"</pre>
+--header "Accept: application/json"
+</code></pre></div></div>
 
 <p>Then, I encrypted this file, using <a href="https://github.com/yegor256/rultor-remote"><code class="highlighter-rouge">rultor</code></a>
 command line tool:</p>
 
-<pre>$ rultor encrypt -p yegor256/takes curl-appveyor.cfg</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rultor encrypt <span class="nt">-p</span> yegor256/takes curl-appveyor.cfg
+</code></pre></div></div>
 
 <p>The file I created was called
 <a href="https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc"><code class="highlighter-rouge">curl-appveyor.cfg.asc</code></a>.
 I committed and pushed into <a href="https://github.com/yegor256/takes">yegor256/takes</a>
 GitHub repository.</p>
 
-<pre>$ git add curl-appveyor.cfg.asc
-$ git commit -am 'CURL config for Appveyor'
-$ git push origin master</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add curl-appveyor.cfg.asc
+<span class="nv">$ </span>git commit <span class="nt">-am</span> <span class="s1">'CURL config for Appveyor'</span>
+<span class="nv">$ </span>git push origin master
+</code></pre></div></div>
 
 <p>Then, I configured AppVeyor “pinging” from Docker script.
 This is what I did in <a href="https://github.com/yegor256/takes/blob/master/.rultor.yml"><code class="highlighter-rouge">.rultor.yml</code></a>:</p>
 
-<pre>decrypt:
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
   curl-appveyor.cfg: "repo/curl-appveyor.cfg.asc"
 merge:
   script: |-
@@ -144,7 +147,8 @@ merge:
       echo "waiting for AppVeyor build ${ver}: ${status}"
       sleep 5s
     done
-    mvn clean install</pre>
+    mvn clean install
+</code></pre></div></div>
 
 <p>There is no magic here, it’s very simple. First, I start a new build
 using <code class="highlighter-rouge">/api/builds</code> end-point of

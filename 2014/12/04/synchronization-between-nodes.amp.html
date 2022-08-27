@@ -108,12 +108,13 @@ puts new items into it, deletes some items sometimes, and selects them. So far,
 so good, but conflicts are inevitable. Here is an example of a typical
 interaction scenario between the web app and DynamoDB (I’m using jcabi-dynamo):</p>
 
-<pre>Table table = region.table("posts");
-Item item = table.frame()
-  .where("name", "Jeff")
-  .iterator().next();
-String salary = item.get("salary");
-item.put("salary", this.recalculate(salary));</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"posts"</span><span class="o">);</span>
+<span class="nc">Item</span> <span class="n">item</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="na">frame</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">iterator</span><span class="o">().</span><span class="na">next</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">salary</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"salary"</span><span class="o">);</span>
+<span class="n">item</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"salary"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">recalculate</span><span class="o">(</span><span class="n">salary</span><span class="o">));</span>
+</code></pre></div></div>
 
 <p>The logic is obvious here. First, I retrieve an item from the table <code class="highlighter-rouge">posts</code>,
 then read its <code class="highlighter-rouge">salary</code>, and then modify it according to my recalculation
@@ -130,26 +131,27 @@ how <a href="http://www.stateful.co">stateful.co</a> helps me. All I need to do 
 in the <a href="http://www.stateful.co">stateful.co</a> web panel,
 get my authentication keys, and modify my Java code:</p>
 
-<pre>Sttc sttc = new RtSttc(
-  new URN("urn:github:526301"), // my GitHub ID
-  "9FF3-4320-73FB-EEAC" // my secret key!
-);
-Locks locks = sttc.locks();
-Lock lock = locks.get("posts-table-lock");
-Table table = region.table("posts");
-Item item = table.frame()
-  .where("name", "Jeff")
-  .iterator().next();
-new Atomic(lock).call(
-  new Callable&lt;Void&gt;() {
-    @Override
-    public void call() {
-      String salary = item.get("salary");
-      item.put("salary", this.recalculate(salary));
-      return null;
-    }
-  }
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Sttc</span> <span class="n">sttc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RtSttc</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">URN</span><span class="o">(</span><span class="s">"urn:github:526301"</span><span class="o">),</span> <span class="c1">// my GitHub ID</span>
+  <span class="s">"9FF3-4320-73FB-EEAC"</span> <span class="c1">// my secret key!</span>
+<span class="o">);</span>
+<span class="nc">Locks</span> <span class="n">locks</span> <span class="o">=</span> <span class="n">sttc</span><span class="o">.</span><span class="na">locks</span><span class="o">();</span>
+<span class="nc">Lock</span> <span class="n">lock</span> <span class="o">=</span> <span class="n">locks</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"posts-table-lock"</span><span class="o">);</span>
+<span class="nc">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"posts"</span><span class="o">);</span>
+<span class="nc">Item</span> <span class="n">item</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="na">frame</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">iterator</span><span class="o">().</span><span class="na">next</span><span class="o">();</span>
+<span class="k">new</span> <span class="nf">Atomic</span><span class="o">(</span><span class="n">lock</span><span class="o">).</span><span class="na">call</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">Callable</span><span class="o">&lt;</span><span class="nc">Void</span><span class="o">&gt;()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">call</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nc">String</span> <span class="n">salary</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"salary"</span><span class="o">);</span>
+      <span class="n">item</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"salary"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">recalculate</span><span class="o">(</span><span class="n">salary</span><span class="o">));</span>
+      <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>As you see, I wrap that critical transaction into <code class="highlighter-rouge">Callable</code>, which will
 be executed in isolation. This approach, obviously, doesn’t
@@ -163,10 +165,11 @@ embedded software, etc.</p>
 
 <p>I should not forget to add this dependency to my <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;co.stateful&lt;/groupId&gt;
-  &lt;artifactId&gt;java-sdk&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>co.stateful<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>java-sdk<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
 <p>Of course, you can do the same; the service is absolutely free of charge.
 And you can use any other languages, not just Java. BTW, if interested,

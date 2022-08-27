@@ -91,70 +91,74 @@ it from a practical perspective.</p>
 <p>Let’s say there is a class that is supposed to read a web page and
 return its content:</p>
 
-<pre>class Page {
-  private final String uri;
-  Page(final String address) {
-    this.uri = address;
-  }
-  public String html() throws IOException {
-    return IOUtils.toString(
-      new URL(this.uri).openStream(),
-      "UTF-8"
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="nc">Page</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">(),</span>
+      <span class="s">"UTF-8"</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Looks simple and straight-forward, right? Yes, it’s a rather cohesive
 and solid class. Here is how we use it to read the content of Google
 front page:</p>
 
-<pre>String html = new Page("http://www.google.com").html();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Page</span><span class="o">(</span><span class="s">"http://www.google.com"</span><span class="o">).</span><span class="na">html</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Everything is fine until we start making this class more powerful.
 Let’s say we want to configure the encoding. We don’t always want to use <code class="highlighter-rouge">"UTF-8"</code>.
 We want it to be configurable. Here is what we do:</p>
 
-<pre>class Page {
-  private final String uri;
-  private final String encoding;
-  Page(final String address, final String enc) {
-    this.uri = address;
-    this.encoding = enc;
-  }
-  public String html() throws IOException {
-    return IOUtils.toString(
-      new URL(this.uri).openStream(),
-      this.encoding
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">encoding</span><span class="o">;</span>
+  <span class="nc">Page</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">(),</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Done, the encoding is encapsulated and configurable. Now, let’s say we
 want to change the behavior of the class for the situation of an empty
 page. If an empty page is loaded, we want to return <code class="highlighter-rouge">"<span class="nt">&lt;html/&gt;</span>"</code>. But not
 always. We want this to be configurable. Here is what we do:</p>
 
-<pre>class Page {
-  private final String uri;
-  private final String encoding;
-  private final boolean alwaysHtml;
-  Page(final String address, final String enc,
-    final boolean always) {
-    this.uri = address;
-    this.encoding = enc;
-    this.alwaysHtml = always;
-  }
-  public String html() throws IOException {
-    String html = IOUtils.toString(
-      new URL(this.uri).openStream(),
-      this.encoding
-    );
-    if (html.isEmpty() &amp;&amp; this.alwaysHtml) {
-      html = "&lt;html/&gt;";
-    }
-    return html;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">encoding</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">alwaysHtml</span><span class="o">;</span>
+  <span class="nc">Page</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">enc</span><span class="o">,</span>
+    <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">always</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span> <span class="o">=</span> <span class="n">always</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">(),</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
+    <span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="s">"&lt;html/&gt;"</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The class is getting bigger, huh? It’s great, we’re good programmers and our
 code must be complex, right? The more complex it is, the better programmers
@@ -163,68 +167,70 @@ we are! I’m being sarcastic. Definitely
 we want our class to proceed anyway, even if the encoding is not
 supported on the current platform:</p>
 
-<pre>class Page {
-  private final String uri;
-  private final String encoding;
-  private final boolean alwaysHtml;
-  private final boolean encodeAnyway;
-  Page(final String address, final String enc,
-    final boolean always, final boolean encode) {
-    this.uri = address;
-    this.encoding = enc;
-    this.alwaysHtml = always;
-    this.encodeAnyway = encode;
-  }
-  public String html() throws IOException,
-  UnsupportedEncodingException {
-    final byte[] bytes = IOUtils.toByteArray(
-      new URL(this.uri).openStream()
-    );
-    String html;
-    try {
-      html = new String(bytes, this.encoding);
-    } catch (UnsupportedEncodingException ex) {
-      if (!this.encodeAnyway) {
-        throw ex;
-      }
-      html = new String(bytes, "UTF-8")
-    }
-    if (html.isEmpty() &amp;&amp; this.alwaysHtml) {
-      html = "&lt;html/&gt;";
-    }
-    return html;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">encoding</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">alwaysHtml</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">encodeAnyway</span><span class="o">;</span>
+  <span class="nc">Page</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">enc</span><span class="o">,</span>
+    <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">always</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">encode</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span> <span class="o">=</span> <span class="n">always</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">encodeAnyway</span> <span class="o">=</span> <span class="n">encode</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">,</span>
+  <span class="nc">UnsupportedEncodingException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span> <span class="o">=</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
+    <span class="o">);</span>
+    <span class="nc">String</span> <span class="n">html</span><span class="o">;</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">encoding</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">UnsupportedEncodingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">encodeAnyway</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">alwaysHtml</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="s">"&lt;html/&gt;"</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The class is growing and becoming more and more powerful! Now it’s time
 to introduce a new class, which we will call <code class="highlighter-rouge">PageSettings</code>:</p>
 
-<pre>class Page {
-  private final String uri;
-  private final PageSettings settings;
-  Page(final String address, final PageSettings stts) {
-    this.uri = address;
-    this.settings = stts;
-  }
-  public String html() throws IOException {
-    final byte[] bytes = IOUtils.toByteArray(
-      new URL(this.uri).openStream()
-    );
-    String html;
-    try {
-      html = new String(bytes, this.settings.getEncoding());
-    } catch (UnsupportedEncodingException ex) {
-      if (!this.settings.isEncodeAnyway()) {
-        throw ex;
-      }
-      html = new String(bytes, "UTF-8")
-    }
-    if (html.isEmpty() &amp;&amp; this.settings.isAlwaysHtml()) {
-      html = "&lt;html/&gt;";
-    }
-    return html;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">PageSettings</span> <span class="n">settings</span><span class="o">;</span>
+  <span class="nc">Page</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">address</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">PageSettings</span> <span class="n">stts</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">settings</span> <span class="o">=</span> <span class="n">stts</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span> <span class="o">=</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
+    <span class="o">);</span>
+    <span class="nc">String</span> <span class="n">html</span><span class="o">;</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">getEncoding</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">UnsupportedEncodingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">isEncodeAnyway</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">bytes</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">)</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">html</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="o">.</span><span class="na">settings</span><span class="o">.</span><span class="na">isAlwaysHtml</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="s">"&lt;html/&gt;"</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Class <code class="highlighter-rouge">PageSettings</code> is basically a holder of parameters, without any
 behavior. It has getters, which give us access to the parameters:
@@ -238,13 +244,14 @@ from Hadoop.
 This is how we will call our highly configurable <code class="highlighter-rouge">Page</code>
 (I’m assuming <code class="highlighter-rouge">PageSettings</code> is immutable):</p>
 
-<pre>String html = new Page(
-  "http://www.google.com",
-  new PageSettings()
-    .withEncoding("ISO_8859_1")
-    .withAlwaysHtml(true)
-    .withEncodeAnyway(false)
-).html();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Page</span><span class="o">(</span>
+  <span class="s">"http://www.google.com"</span><span class="o">,</span>
+  <span class="k">new</span> <span class="nf">PageSettings</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">withEncoding</span><span class="o">(</span><span class="s">"ISO_8859_1"</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">withAlwaysHtml</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">withEncodeAnyway</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+<span class="o">).</span><span class="na">html</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>However, no matter how convenient it may look at first glance,
 this approach is <em>very wrong</em>. Mostly because it encourages us
@@ -268,85 +275,90 @@ trigger. See the difference?</p>
 use <a href="/2015/02/26/composable-decorators.html">composable decorators</a>.
 Here is how:</p>
 
-<pre>Page page = new NeverEmptyPage(
-  new DefaultPage("http://www.google.com")
-)
-String html = new AlwaysTextPage(
-  new TextPage(page, "ISO_8859_1")
-  page
-).html();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NeverEmptyPage</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">DefaultPage</span><span class="o">(</span><span class="s">"http://www.google.com"</span><span class="o">)</span>
+<span class="o">)</span>
+<span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AlwaysTextPage</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="n">page</span><span class="o">,</span> <span class="s">"ISO_8859_1"</span><span class="o">)</span>
+  <span class="n">page</span>
+<span class="o">).</span><span class="na">html</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Here is how our <code class="highlighter-rouge">DefaultPage</code> would look (yes, I had to change
 its design a bit):</p>
 
-<pre>class DefaultPage implements Page {
-  private final String uri;
-  DefaultPage(final String address) {
-    this.uri = address;
-  }
-  @Override
-  public byte[] html() throws IOException {
-    return IOUtils.toByteArray(
-      new URL(this.uri).openStream()
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultPage</span> <span class="kd">implements</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="nc">DefaultPage</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">address</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">address</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>As you see, I’m making it implement interface <code class="highlighter-rouge">Page</code>.
 Now <code class="highlighter-rouge">TextPage</code> decorator, which converts an array of bytes to a text using
 provided encoding:</p>
 
-<pre>class TextPage {
-  private final Page origin;
-  private final String encoding;
-  TextPage(final Page page, final String enc) {
-    this.origin = page;
-    this.encoding = enc;
-  }
-  public String html() throws IOException {
-    return new String(
-      this.origin.html(),
-      this.encoding
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TextPage</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Page</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">encoding</span><span class="o">;</span>
+  <span class="nc">TextPage</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Page</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">enc</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">encoding</span> <span class="o">=</span> <span class="n">enc</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">(),</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">encoding</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now the <code class="highlighter-rouge">NeverEmptyPage</code>:</p>
 
-<pre>class NeverEmptyPage implements Page {
-  private final Page origin;
-  NeverEmptyPage(final Page page) {
-    this.origin = page;
-  }
-  @Override
-  public byte[] html() throws IOException {
-    byte[] bytes = this.origin.html();
-    if (bytes.length == 0) {
-      bytes = "&lt;html/&gt;".getBytes();
-    }
-    return bytes;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">NeverEmptyPage</span> <span class="kd">implements</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Page</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">NeverEmptyPage</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">bytes</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">bytes</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">bytes</span> <span class="o">=</span> <span class="s">"&lt;html/&gt;"</span><span class="o">.</span><span class="na">getBytes</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">bytes</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And finally the <code class="highlighter-rouge">AlwaysTextPage</code>:</p>
 
-<pre>class AlwaysTextPage {
-  private final TextPage origin;
-  private final Page source;
-  AlwaysTextPage(final TextPage page, final Page src) {
-    this.origin = page;
-    this.source = src;
-  }
-  public String html() throws IOException {
-    String html;
-    try {
-      html = this.origin.html();
-    } catch (UnsupportedEncodingException ex) {
-      html = new TextPage(this.source, "UTF-8").html();
-    }
-    return html;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">AlwaysTextPage</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">TextPage</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Page</span> <span class="n">source</span><span class="o">;</span>
+  <span class="nc">AlwaysTextPage</span><span class="o">(</span><span class="kd">final</span> <span class="nc">TextPage</span> <span class="n">page</span><span class="o">,</span> <span class="kd">final</span> <span class="nc">Page</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">source</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">html</span><span class="o">;</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">UnsupportedEncodingException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TextPage</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">source</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">).</span><span class="na">html</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">html</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>You may say that <code class="highlighter-rouge">AlwaysTextPage</code> will make two calls to the encapsulated
 <code class="highlighter-rouge">origin</code>, in case of an unsupported encoding, which will lead to a duplicated
@@ -355,33 +367,35 @@ duplicated HTTP roundtrip to happen. Let’s introduce one more class,
 which will cache the page fetched (
 <a href="/2017/01/17/synchronized-decorators.html">not thread-safe</a>, but it’s not important now):</p>
 
-<pre>class OncePage implements Page {
-  private final Page origin;
-  private final AtomicReference&lt;byte[]&gt; cache =
-    new AtomicReference&lt;&gt;;
-  OncePage(final Page page) {
-    this.origin = page;
-  }
-  @Override
-  public byte[] html() throws IOException {
-    if (this.cache.get() == null) {
-      this.cache.set(this.origin.html());
-    }
-    return this.cache.get();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OncePage</span> <span class="kd">implements</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Page</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">AtomicReference</span><span class="o">&lt;</span><span class="kt">byte</span><span class="o">[]&gt;</span> <span class="n">cache</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="nc">AtomicReference</span><span class="o">&lt;&gt;;</span>
+  <span class="nc">OncePage</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Page</span> <span class="n">page</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">page</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">byte</span><span class="o">[]</span> <span class="nf">html</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">html</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, our code should look like this (pay attention, I’m now using <code class="highlighter-rouge">OncePage</code>):</p>
 
-<pre>Page page = new NeverEmptyPage(
-  new OncePage(
-    new DefaultPage("http://www.google.com")
-  )
-)
-String html = new AlwaysTextPage(
-  new TextPage(page, "ISO_8859_1")
-  "UTF-8"
-).html();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Page</span> <span class="n">page</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NeverEmptyPage</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">OncePage</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">DefaultPage</span><span class="o">(</span><span class="s">"http://www.google.com"</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">)</span>
+<span class="nc">String</span> <span class="n">html</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AlwaysTextPage</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TextPage</span><span class="o">(</span><span class="n">page</span><span class="o">,</span> <span class="s">"ISO_8859_1"</span><span class="o">)</span>
+  <span class="s">"UTF-8"</span>
+<span class="o">).</span><span class="na">html</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This is probably the most code-intensive post on this site so far, but I
 hope it’s readable and I managed to convey the idea. Now we have five

@@ -94,17 +94,18 @@ but we can implement something similar, using
 <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html"><code class="highlighter-rouge">Semaphore</code></a>
 is and how it works in Java):</p>
 
-<pre>class Foo {
-  private Semaphore sem = new Semaphore(5);
-  void print(int x) throws Exception {
-    this.sem.acquire();
-    if (x &gt; 1000) {
-      throw new Exception("Too large!");
-    }
-    System.out.printf("x = %d", x);
-    this.sem.release();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Semaphore</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">acquire</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"Too large!"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"x = %d"</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The code is rather primitive and doesn’t do anything useful, but you
 most probably get the idea: the method <code class="highlighter-rouge">print()</code>, if being called from
@@ -120,18 +121,19 @@ the semaphore will be empty and all other threads won’t print anything.</p>
 
 <p>What is the solution? Here it is:</p>
 
-<pre>class Foo {
-  private Semaphore sem = new Semaphore(5);
-  void print(int x) throws Exception {
-    this.sem.acquire();
-    if (x &gt; 1000) {
-      this.sem.release();
-      throw new Exception("Too large!");
-    }
-    System.out.printf("x = %d", x);
-    this.sem.release();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Semaphore</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">acquire</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"Too large!"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"x = %d"</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>We must release the permit before we throw the exception.</p>
 
@@ -142,27 +144,28 @@ also have to add more <code class="highlighter-rouge">sem.release()</code> calls
 <p>A very elegant solution was introduced in C++ and is called RAII. This
 is how it would look in Java:</p>
 
-<pre>class Permit {
-  private Semaphore sem;
-  Permit(Semaphore s) {
-    this.sem = s;
-    this.sem.acquire();
-  }
-  @Override
-  public void finalize() {
-    this.sem.release();
-  }
-}
-class Foo {
-  private Semaphore sem = new Semaphore(5);
-  void print(int x) throws Exception {
-    new Permit(this.sem);
-    if (x &gt; 1000) {
-      throw new Exception("Too large!");
-    }
-    System.out.printf("x = %d", x);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Permit</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span><span class="o">;</span>
+  <span class="nc">Permit</span><span class="o">(</span><span class="nc">Semaphore</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span> <span class="o">=</span> <span class="n">s</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">acquire</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">finalize</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Semaphore</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">Permit</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"Too large!"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"x = %d"</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>See how beautiful the code is inside method <code class="highlighter-rouge">Foo.print()</code>. We just create
 an instance of class <code class="highlighter-rouge">Permit</code> and it immediately acquires a new permit
@@ -183,31 +186,32 @@ get blocked.</p>
 <p>There is a solution in Java too. It is not as elegant as the one from
 C++, but it does work. Here it is:</p>
 
-<pre>class Permit implements Closeable {
-  private Semaphore sem;
-  Permit(Semaphore s) {
-    this.sem = s;
-  }
-  @Override
-  public void close() {
-    this.sem.release();
-  }
-  public Permit acquire() {
-    this.sem.acquire();
-    return this;
-  }
-}
-class Foo {
-  private Semaphore sem = new Semaphore(5);
-  void print(int x) throws Exception {
-    try (Permit p = new Permit(this.sem).acquire()) {
-      if (x &gt; 1000) {
-        throw new Exception("Too large!");
-      }
-      System.out.printf("x = %d", x);
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Permit</span> <span class="kd">implements</span> <span class="nc">Closeable</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span><span class="o">;</span>
+  <span class="nc">Permit</span><span class="o">(</span><span class="nc">Semaphore</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span> <span class="o">=</span> <span class="n">s</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Permit</span> <span class="nf">acquire</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">acquire</span><span class="o">();</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Semaphore</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">(</span><span class="nc">Permit</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Permit</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">).</span><span class="na">acquire</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="s">"Too large!"</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"x = %d"</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pay attention to the <code class="highlighter-rouge">try</code> block and to the
 <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code class="highlighter-rouge">Closeable</code></a> interface

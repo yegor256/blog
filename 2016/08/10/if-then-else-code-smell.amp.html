@@ -96,15 +96,16 @@ modifications of the XML document. It’s a valid case, and it has to be
 validated, but the way it’s implemented is simply wrong. This is
 how it works (an oversimplified example):</p>
 
-<pre>class DyTalk implements Talk {
-  void modify(Collection&lt;Directive&gt; dirs) {
-    if (!dirs.isEmpty()) {
-      // Apply the modification
-      // and save the new XML document
-      // to the DynamoDB table.
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DyTalk</span> <span class="kd">implements</span> <span class="nc">Talk</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">modify</span><span class="o">(</span><span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Directive</span><span class="o">&gt;</span> <span class="n">dirs</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="n">dirs</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+      <span class="c1">// Apply the modification</span>
+      <span class="c1">// and save the new XML document</span>
+      <span class="c1">// to the DynamoDB table.</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What’s wrong, you wonder? This if-then-else forking functionality doesn’t really belong
 to this object—that’s what’s wrong. Modifying the XML document
@@ -113,14 +114,15 @@ not saving anything if the modification instructions set is empty is not
 (it’s very similar to <a href="/2016/01/26/defensive-programming.html">defensive programming</a>).
 Instead, there should be a decorator, which would look like this:</p>
 
-<pre>class QuickTalk implements Talk {
-  private final Talk origin;
-  void modify(Collection&lt;Directive&gt; dirs) {
-    if (!dirs.isEmpty()) {
-      this.origin.modify(dirs);
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">QuickTalk</span> <span class="kd">implements</span> <span class="nc">Talk</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Talk</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">modify</span><span class="o">(</span><span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Directive</span><span class="o">&gt;</span> <span class="n">dirs</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="n">dirs</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">modify</span><span class="o">(</span><span class="n">dirs</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, if and when we need our talk to be more clever in situations where
 the list of directives is empty, we decorate it with <code class="highlighter-rouge">QuickTalk</code>.

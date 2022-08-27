@@ -87,18 +87,19 @@ Here it is: a test method must contain nothing but a single <code class="highlig
 <p>Look at this test method from <code class="highlighter-rouge">RandomStreamTest</code> from OpenJDK 8,
 created by Brian Goetz:</p>
 
-<pre>@Test
-public void testIntStream() {
-  final long seed = System.currentTimeMillis();
-  final Random r1 = new Random(seed);
-  final int[] a = new int[SIZE];
-  for (int i=0; i &lt; SIZE; i++) {
-    a[i] = r1.nextInt();
-  }
-  final Random r2 = new Random(seed);
-  final int[] b = r2.ints().limit(SIZE).toArray();
-  assertEquals(a, b);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testIntStream</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="kt">long</span> <span class="n">seed</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+  <span class="kd">final</span> <span class="nc">Random</span> <span class="n">r1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Random</span><span class="o">(</span><span class="n">seed</span><span class="o">);</span>
+  <span class="kd">final</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="no">SIZE</span><span class="o">];</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="no">SIZE</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">r1</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">final</span> <span class="nc">Random</span> <span class="n">r2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Random</span><span class="o">(</span><span class="n">seed</span><span class="o">);</span>
+  <span class="kd">final</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">b</span> <span class="o">=</span> <span class="n">r2</span><span class="o">.</span><span class="na">ints</span><span class="o">().</span><span class="na">limit</span><span class="o">(</span><span class="no">SIZE</span><span class="o">).</span><span class="na">toArray</span><span class="o">();</span>
+  <span class="n">assertEquals</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 
@@ -110,42 +111,44 @@ and throws <code class="highlighter-rouge">AssertionError</code> if they are not
 to avoid. The only thing we must have is the assertion. Here is
 how I would re-design this test method:</p>
 
-<pre>@Test
-public void testIntStream() {
-  final long seed = System.currentTimeMillis();
-  assertEquals(
-    new ArrayFromRandom(
-      new Random(seed)
-    ).toArray(SIZE),
-    new Random(seed).ints().limit(SIZE).toArray()
-  );
-}
-private static class ArrayFromRandom {
-  private final Random random;
-  ArrayFromRandom(Random r) {
-    this.random = r;
-  }
-  int[] toArray(int s) {
-    final int[] a = new int[s];
-    for (int i=0; i &lt; s; i++) {
-      a[i] = this.random.nextInt();
-    }
-    return a;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testIntStream</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="kt">long</span> <span class="n">seed</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+  <span class="n">assertEquals</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">ArrayFromRandom</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Random</span><span class="o">(</span><span class="n">seed</span><span class="o">)</span>
+    <span class="o">).</span><span class="na">toArray</span><span class="o">(</span><span class="no">SIZE</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nf">Random</span><span class="o">(</span><span class="n">seed</span><span class="o">).</span><span class="na">ints</span><span class="o">().</span><span class="na">limit</span><span class="o">(</span><span class="no">SIZE</span><span class="o">).</span><span class="na">toArray</span><span class="o">()</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">ArrayFromRandom</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Random</span> <span class="n">random</span><span class="o">;</span>
+  <span class="nc">ArrayFromRandom</span><span class="o">(</span><span class="nc">Random</span> <span class="n">r</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">random</span> <span class="o">=</span> <span class="n">r</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kt">int</span><span class="o">[]</span> <span class="nf">toArray</span><span class="o">(</span><span class="kt">int</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">s</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">random</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>If Java had <a href="/2017/05/16/monikers.html">monikers</a>
 this code would look even more elegant:</p>
 
-<pre>@Test
-public void testIntStream() {
-  assertEquals(
-    new ArrayFromRandom(
-      new Random(System.currentTimeMillis() as seed)
-    ).toArray(SIZE),
-    new Random(seed).ints().limit(SIZE).toArray()
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testIntStream</span><span class="o">()</span> <span class="o">{</span>
+  <span class="n">assertEquals</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">ArrayFromRandom</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Random</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="n">as</span> <span class="n">seed</span><span class="o">)</span>
+    <span class="o">).</span><span class="na">toArray</span><span class="o">(</span><span class="no">SIZE</span><span class="o">),</span>
+    <span class="k">new</span> <span class="nf">Random</span><span class="o">(</span><span class="n">seed</span><span class="o">).</span><span class="na">ints</span><span class="o">().</span><span class="na">limit</span><span class="o">(</span><span class="no">SIZE</span><span class="o">).</span><span class="na">toArray</span><span class="o">()</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>As you can see, there is only one “statement” in this method: <code class="highlighter-rouge">assertEquals()</code>.</p>
 

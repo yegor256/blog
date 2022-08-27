@@ -91,28 +91,30 @@ They are very different things with their own areas of applicability.</p>
 <p>Here is how a simple JSON piece of data may look
 (140 characters):</p>
 
-<pre>{
-  "id": 123,
-  "title": "Object Thinking",
-  "author": "David West",
-  "published": {
-    "by": "Microsoft Press",
-    "year": 2004
-  }
-}</pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Object Thinking"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"David West"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"published"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Microsoft Press"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2004</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p>A similar document would look like this in XML
 (167 characters):</p>
 
-<pre>&lt;?xml version="1.0"?&gt;
-&lt;book id="123"&gt;
-  &lt;title&gt;Object Thinking&lt;/title&gt;
-  &lt;author&gt;David West&lt;/author&gt;
-  &lt;published&gt;
-    &lt;by&gt;Microsoft Press&lt;/by&gt;
-    &lt;year&gt;2004&lt;/year&gt;
-  &lt;/published&gt;
-&lt;/book&gt;</pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">&lt;?xml</span><span class="w"> </span><span class="err">version=</span><span class="s2">"1.0"</span><span class="err">?&gt;</span><span class="w">
+</span><span class="err">&lt;book</span><span class="w"> </span><span class="err">id=</span><span class="s2">"123"</span><span class="err">&gt;</span><span class="w">
+  </span><span class="err">&lt;title&gt;Object</span><span class="w"> </span><span class="err">Thinking&lt;/title&gt;</span><span class="w">
+  </span><span class="err">&lt;author&gt;David</span><span class="w"> </span><span class="err">West&lt;/author&gt;</span><span class="w">
+  </span><span class="err">&lt;published&gt;</span><span class="w">
+    </span><span class="err">&lt;by&gt;Microsoft</span><span class="w"> </span><span class="err">Press&lt;/by&gt;</span><span class="w">
+    </span><span class="err">&lt;year&gt;</span><span class="mi">2004</span><span class="err">&lt;/year&gt;</span><span class="w">
+  </span><span class="err">&lt;/published&gt;</span><span class="w">
+</span><span class="err">&lt;/book&gt;</span><span class="w">
+</span></code></pre></div></div>
 
 
 

@@ -94,11 +94,12 @@ Here is how it works: Let’s say my website has to fetch the current exchange r
 the euro from a database and show it on the home page. Here’s how my <code class="highlighter-rouge">index.jsp</code>
 would look:</p>
 
-<pre>&lt;html&gt;
-  &lt;body&gt;
-    &lt;p&gt;EUR/USD: &lt;%= rates.get() %&gt;&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>EUR/USD: <span class="nt">&lt;%=</span> <span class="n">rates</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="nt">%&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
 
 <p>In order to create HTML, the JSP engine will have to call <code class="highlighter-rouge">get()</code> on object
 <code class="highlighter-rouge">rates</code> and render what’s returned through <code class="highlighter-rouge">toString()</code>. It’s a terrible
@@ -112,75 +113,80 @@ reasons … more about them in one of the next articles.</p>
 <p>Let’s see how this should be done right. First, we let our model generate
 the output in XML format, for example:</p>
 
-<pre>&lt;?xml version="1.1"?&gt;
-&lt;page&gt;
-  &lt;rate&gt;1.1324&lt;/rate&gt;
-&lt;/page&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.1"?&gt;</span>
+<span class="nt">&lt;page&gt;</span>
+  <span class="nt">&lt;rate&gt;</span>1.1324<span class="nt">&lt;/rate&gt;</span>
+<span class="nt">&lt;/page&gt;</span>
+</code></pre></div></div>
 
 <p>This is what the model will produce, having no knowledge of the view. Then,
 we create the view as an XSL stylesheet, which will transform XML into HTML:</p>
 
-<pre>&lt;xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://www.w3.org/1999/xhtml"&gt;
-  &lt;xsl:template match="page"&gt;
-    &lt;html&gt;
-      &lt;body&gt;
-        &lt;p&gt;
-          &lt;xsl:text&gt;EUR/USD: &lt;/xsl:text&gt;
-          &lt;xsl:value-of select="rate"/&gt;
-        &lt;/p&gt;
-      &lt;/body&gt;
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">"1.0"</span>
+  <span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span>
+  <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+          <span class="nt">&lt;xsl:text&gt;</span>EUR/USD: <span class="nt">&lt;/xsl:text&gt;</span>
+          <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"rate"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div></div>
 
 <p>As you see, the view doesn’t know anything about the model in terms of
 implementation. All it knows is the format of XML data output produced
 by the model. Here is how you design it in the <a href="http://www.takes.org">Takes framework</a>.
 Let’s start with a simple example:</p>
 
-<pre>import org.takes.http.Exit;
-import org.takes.http.FtCli;
-public final class Entry {
-  public static void main(final String... args) throws Exception {
-    new FtCli(new TkApp(), args).start(Exit.NEVER);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.takes.http.Exit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.http.FtCli</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Entry</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">FtCli</span><span class="o">(</span><span class="k">new</span> <span class="nc">TkApp</span><span class="o">(),</span> <span class="n">args</span><span class="o">).</span><span class="na">start</span><span class="o">(</span><span class="nc">Exit</span><span class="o">.</span><span class="na">NEVER</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It’s a simple web application that starts a web server
 and never ends (it waits for connections in daemon mode). To make it work,
 we should create a simple “take” named <code class="highlighter-rouge">TkApp</code>:</p>
 
-<pre>import org.takes.Take;
-import org.takes.tk.TkWrap;
-final class TkApp extends TkWrap {
-  @Override
-  public Response act() {
-    return new RsWithType(
-      new RsText(
-        "&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;"
-      ),
-      "application/xml"
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.takes.Take</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.tk.TkWrap</span><span class="o">;</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkApp</span> <span class="kd">extends</span> <span class="nc">TkWrap</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsText</span><span class="o">(</span>
+        <span class="s">"&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;"</span>
+      <span class="o">),</span>
+      <span class="s">"application/xml"</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This “take” always returns the same XML response, but it doesn’t
 do any XSL transformation yet. We need to add the <code class="highlighter-rouge">RsXSLT</code> class to the picture:</p>
 
-<pre>@Override
-public Response act() {
-  return new RsXSLT(
-    new RsWithType(
-      new RsText(
-        "&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;"
-        + "&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;"
-      ),
-      "application/xml"
-    )
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nf">RsXSLT</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsText</span><span class="o">(</span>
+        <span class="s">"&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;"</span>
+        <span class="o">+</span> <span class="s">"&lt;page&gt;&lt;rate&gt;1.1324&lt;/rate&gt;&lt;/page&gt;"</span>
+      <span class="o">),</span>
+      <span class="s">"application/xml"</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Excuse me for using string concatenation, which is a
 <a href="/2014/06/19/avoid-string-concatenation.html">bad practice</a>;
@@ -200,25 +206,26 @@ XML documents. More about it here:
 
 <p>Here is how our <code class="highlighter-rouge">TkApp</code> would look:</p>
 
-<pre>@Override
-public Response act() {
-  return new RsXSLT(
-    new RsWithType(
-      new RsXembly(
-        new XeChain(
-          new XeStylesheet("/xsl/index.xsl"),
-          new XeAppend(
-            "page",
-            new XeDirectives(
-              new Directives().add("rate").set("1.1324")
-            )
-          )
-        )
-      ),
-      "application/xml"
-    )
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nf">RsXSLT</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsXembly</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">XeChain</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">XeStylesheet</span><span class="o">(</span><span class="s">"/xsl/index.xsl"</span><span class="o">),</span>
+          <span class="k">new</span> <span class="nf">XeAppend</span><span class="o">(</span>
+            <span class="s">"page"</span><span class="o">,</span>
+            <span class="k">new</span> <span class="nf">XeDirectives</span><span class="o">(</span>
+              <span class="k">new</span> <span class="nf">Directives</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="s">"rate"</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">"1.1324"</span><span class="o">)</span>
+            <span class="o">)</span>
+          <span class="o">)</span>
+        <span class="o">)</span>
+      <span class="o">),</span>
+      <span class="s">"application/xml"</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The most important class here is
 <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/xe/RsXembly.html"><code class="highlighter-rouge">RsXembly</code></a>.

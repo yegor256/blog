@@ -236,13 +236,15 @@ to understand where the language is heading. Just two examples.</p>
 (<a href="http://openjdk.java.net/jeps/269">JEP 269</a>).
 Instead of introducing new constructors and allowing us to do this:</p>
 
-<pre>List&lt;Integer&gt; list = new ArrayList&lt;&gt;(1, 2, 3);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>…in Java 9 they created more
 <a href="/2017/11/14/static-factory-methods.html">static factory methods</a>
 and made us do this:</p>
 
-<pre>List&lt;Integer&gt; list = List.of(1, 2, 3);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>“Fewer constructors, more static methods!” seems to be the philosophy of those who
 introduced this JEP. Needless to say that this is completely against the
@@ -255,7 +257,8 @@ what the real arguments of its ctor are.</p>
 
 <p>By the way, with <a href="http://www.cactoos.org">Cactoos</a> you can do it the right way:</p>
 
-<pre>List&lt;Integer&gt; list = new ListOf(1, 2, 3);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ListOf</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>This is OOP.</p>
 
@@ -267,7 +270,8 @@ already <a href="/2016/04/26/why-inputstream-design-is-wrong.html">over bloated<
 Now we are supposed to do this, when we want input stream to
 copy to an output stream:</p>
 
-<pre>input.transferTo(output);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">input</span><span class="o">.</span><span class="na">transferTo</span><span class="o">(</span><span class="n">output</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>It’s one of the most typical mistakes young OOP programmers are making: they
 make their interfaces big. Just because they need more functionality. I guess the
@@ -282,14 +286,16 @@ What will the next step be? In Java 10 we will also have
 utility class from
 <a href="https://commons.apache.org/proper/commons-io/">commons-io</a>:</p>
 
-<pre>IOUtils.copy(input, output);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">IOUtils</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">input</span><span class="o">,</span> <span class="n">output</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>It’s <a href="/2014/05/05/oop-alternative-to-utility-classes.html">not perfect</a>,
 but it’s better. The most object-oriented way is to use objects, not
 utility classes and static methods. This is how it works in
 <a href="/2017/06/22/object-oriented-input-output-in-cactoos.html">Cactoos</a>:</p>
 
-<pre>new LengthOf(new TeeInput(input, output)).length();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">LengthOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">TeeInput</span><span class="o">(</span><span class="n">input</span><span class="o">,</span> <span class="n">output</span><span class="o">)).</span><span class="na">length</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This is OOP.</p>
 

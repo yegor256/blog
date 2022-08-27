@@ -103,15 +103,16 @@ Section 3 in that PDF document):</p>
 
 <p>Say it’s a Java class:</p>
 
-<pre>class C {
-  private B b;
-  void m(A a) {
-    b.hello();
-    a.hello();
-    Singleton.INSTANCE.hello();
-    new Z().hello();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">C</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="no">B</span> <span class="n">b</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">m</span><span class="o">(</span><span class="no">A</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">b</span><span class="o">.</span><span class="na">hello</span><span class="o">();</span>
+    <span class="n">a</span><span class="o">.</span><span class="na">hello</span><span class="o">();</span>
+    <span class="nc">Singleton</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">.</span><span class="na">hello</span><span class="o">();</span>
+    <span class="k">new</span> <span class="nf">Z</span><span class="o">().</span><span class="na">hello</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>All four calls to four different <code class="highlighter-rouge">hello()</code> methods are legal, according
 to the LoD. So what would be illegal, I ask myself? No surprise;

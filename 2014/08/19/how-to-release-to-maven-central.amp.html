@@ -124,25 +124,26 @@ article.</p>
 
 <p>Create <code class="highlighter-rouge">settings.xml</code>, next to the two <code class="highlighter-rouge">.gpg</code> files created in the previous step:</p>
 
-<pre>&lt;settings&gt;
-  &lt;profiles&gt;
-    &lt;profile&gt;
-      &lt;id&gt;foo&lt;/id&gt; &lt;!-- give it the name of your project --&gt;
-      &lt;properties&gt;
-        &lt;gpg.homedir&gt;/home/r&lt;/gpg.homedir&gt;
-        &lt;gpg.keyname&gt;9A105525&lt;/gpg.keyname&gt;
-        &lt;gpg.passphrase&gt;my-secret&lt;/gpg.passphrase&gt;
-      &lt;/properties&gt;
-    &lt;/profile&gt;
-  &lt;/profiles&gt;
-  &lt;servers&gt;
-    &lt;server&gt;
-      &lt;id&gt;oss.sonatype.org&lt;/id&gt;
-      &lt;username&gt;&lt;!-- Sonatype JIRA user name --&gt;&lt;/username&gt;
-      &lt;password&gt;&lt;!-- Sonatype JIRA pwd --&gt;&lt;/password&gt;
-    &lt;/server&gt;
-  &lt;/servers&gt;
-&lt;/settings&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
+  <span class="nt">&lt;profiles&gt;</span>
+    <span class="nt">&lt;profile&gt;</span>
+      <span class="nt">&lt;id&gt;</span>foo<span class="nt">&lt;/id&gt;</span> <span class="c">&lt;!-- give it the name of your project --&gt;</span>
+      <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;gpg.homedir&gt;</span>/home/r<span class="nt">&lt;/gpg.homedir&gt;</span>
+        <span class="nt">&lt;gpg.keyname&gt;</span>9A105525<span class="nt">&lt;/gpg.keyname&gt;</span>
+        <span class="nt">&lt;gpg.passphrase&gt;</span>my-secret<span class="nt">&lt;/gpg.passphrase&gt;</span>
+      <span class="nt">&lt;/properties&gt;</span>
+    <span class="nt">&lt;/profile&gt;</span>
+  <span class="nt">&lt;/profiles&gt;</span>
+  <span class="nt">&lt;servers&gt;</span>
+    <span class="nt">&lt;server&gt;</span>
+      <span class="nt">&lt;id&gt;</span>oss.sonatype.org<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;username&gt;</span><span class="c">&lt;!-- Sonatype JIRA user name --&gt;</span><span class="nt">&lt;/username&gt;</span>
+      <span class="nt">&lt;password&gt;</span><span class="c">&lt;!-- Sonatype JIRA pwd --&gt;</span><span class="nt">&lt;/password&gt;</span>
+    <span class="nt">&lt;/server&gt;</span>
+  <span class="nt">&lt;/servers&gt;</span>
+<span class="nt">&lt;/settings&gt;</span>
+</code></pre></div></div>
 
 <p>In this example, <code class="highlighter-rouge">9A105525</code> is the ID of your public key, and <code class="highlighter-rouge">my-secret</code>
 is the pass phrase you have used while generating the keys.</p>
@@ -151,10 +152,11 @@ is the pass phrase you have used while generating the keys.</p>
 
 <p>Now, encrypt these three files with a <a href="https://github.com/yegor256/rultor-remote">rultor remote</a>:</p>
 
-<pre>$ gem install rultor
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install rultor
 $ rultor encrypt -p me/test pubring.gpg
 $ rultor encrypt -p me/test secring.gpg
-$ rultor encrypt -p me/test settings.xml</pre>
+$ rultor encrypt -p me/test settings.xml
+</code></pre></div></div>
 
 <p>Instead of <code class="highlighter-rouge">me/test</code> you should use the name of your GitHub project.</p>
 
@@ -172,19 +174,20 @@ unnecessary. If you’re using jcabi-parent, skip this step.</p>
 <p>However, if you don’t use jcabi-parent, you should add these two repositories
 to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;project&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   [...]
-  &lt;distributionManagement&gt;
-    &lt;repository&gt;
-      &lt;id&gt;oss.sonatype.org&lt;/id&gt;
-      &lt;url&gt;https://oss.sonatype.org/service/local/staging/deploy/maven2/&lt;/url&gt;
-    &lt;/repository&gt;
-    &lt;snapshotRepository&gt;
-      &lt;id&gt;oss.sonatype.org&lt;/id&gt;
-      &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/url&gt;
-    &lt;/snapshotRepository&gt;
-  &lt;/distributionManagement&gt;
-&lt;/project&gt;</pre>
+  <span class="nt">&lt;distributionManagement&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+      <span class="nt">&lt;id&gt;</span>oss.sonatype.org<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;url&gt;</span>https://oss.sonatype.org/service/local/staging/deploy/maven2/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+    <span class="nt">&lt;snapshotRepository&gt;</span>
+      <span class="nt">&lt;id&gt;</span>oss.sonatype.org<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;url&gt;</span>https://oss.sonatype.org/content/repositories/snapshots<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/snapshotRepository&gt;</span>
+  <span class="nt">&lt;/distributionManagement&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <h2 id="configure-gpg-plugin">Configure GPG Plugin</h2>
 
@@ -193,28 +196,29 @@ which configures this plugin automatically. If you’re using it, skip this step
 
 <p>Otherwise, add this plugin to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;project&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   [..]
-  &lt;build&gt;
+  <span class="nt">&lt;build&gt;</span>
     [..]
-    &lt;plugins&gt;
+    <span class="nt">&lt;plugins&gt;</span>
       [..]
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-gpg-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.5&lt;/version&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;id&gt;sign-artifacts&lt;/id&gt;
-            &lt;phase&gt;verify&lt;/phase&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;sign&lt;/goal&gt;
-            &lt;/goals&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-&lt;/project&gt;</pre>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-gpg-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.5<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>sign-artifacts<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;phase&gt;</span>verify<span class="nt">&lt;/phase&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>sign<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <h2 id="configure-versions-plugin">Configure Versions Plugin</h2>
 
@@ -223,23 +227,24 @@ configures all required plugins out-of-the-box. If you’re using it, skip this 
 
 <p>Otherwise, add this plugin to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;project&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   [..]
-  &lt;build&gt;
+  <span class="nt">&lt;build&gt;</span>
     [..]
-    &lt;plugins&gt;
+    <span class="nt">&lt;plugins&gt;</span>
       [..]
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
-        &lt;artifactId&gt;versions-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;2.1&lt;/version&gt;
-        &lt;configuration&gt;
-          &lt;generateBackupPoms&gt;false&lt;/generateBackupPoms&gt;
-        &lt;/configuration&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-&lt;/project&gt;</pre>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>versions-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>2.1<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;configuration&gt;</span>
+          <span class="nt">&lt;generateBackupPoms&gt;</span>false<span class="nt">&lt;/generateBackupPoms&gt;</span>
+        <span class="nt">&lt;/configuration&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <h2 id="configure-sonatype-plugin">Configure Sonatype Plugin</h2>
 
@@ -248,65 +253,66 @@ you here as well. If you’re using it, skip this step too.</p>
 
 <p>Otherwise, add these four plugins to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;project&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   [..]
-  &lt;build&gt;
+  <span class="nt">&lt;build&gt;</span>
     [..]
-    &lt;plugins&gt;
+    <span class="nt">&lt;plugins&gt;</span>
       [..]
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-deploy-plugin&lt;/artifactId&gt;
-        &lt;configuration&gt;
-          &lt;skip&gt;true&lt;/skip&gt;
-        &lt;/configuration&gt;
-      &lt;/plugin&gt;
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-source-plugin&lt;/artifactId&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;id&gt;package-sources&lt;/id&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;jar&lt;/goal&gt;
-            &lt;/goals&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-javadoc-plugin&lt;/artifactId&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;id&gt;package-javadoc&lt;/id&gt;
-            &lt;phase&gt;package&lt;/phase&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;jar&lt;/goal&gt;
-            &lt;/goals&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.sonatype.plugins&lt;/groupId&gt;
-        &lt;artifactId&gt;nexus-staging-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.6&lt;/version&gt;
-        &lt;extensions&gt;true&lt;/extensions&gt;
-        &lt;configuration&gt;
-          &lt;serverId&gt;oss.sonatype.org&lt;/serverId&gt;
-          &lt;nexusUrl&gt;https://oss.sonatype.org/&lt;/nexusUrl&gt;
-          &lt;description&gt;${project.version}&lt;/description&gt;
-        &lt;/configuration&gt;
-        &lt;executions&gt;
-          &lt;execution&gt;
-            &lt;id&gt;deploy-to-sonatype&lt;/id&gt;
-            &lt;phase&gt;deploy&lt;/phase&gt;
-            &lt;goals&gt;
-              &lt;goal&gt;deploy&lt;/goal&gt;
-              &lt;goal&gt;release&lt;/goal&gt;
-            &lt;/goals&gt;
-          &lt;/execution&gt;
-        &lt;/executions&gt;
-      &lt;/plugin&gt;
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-&lt;/project&gt;</pre>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-deploy-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;configuration&gt;</span>
+          <span class="nt">&lt;skip&gt;</span>true<span class="nt">&lt;/skip&gt;</span>
+        <span class="nt">&lt;/configuration&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-source-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>package-sources<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>jar<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-javadoc-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>package-javadoc<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;phase&gt;</span>package<span class="nt">&lt;/phase&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>jar<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.sonatype.plugins<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>nexus-staging-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.6<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;extensions&gt;</span>true<span class="nt">&lt;/extensions&gt;</span>
+        <span class="nt">&lt;configuration&gt;</span>
+          <span class="nt">&lt;serverId&gt;</span>oss.sonatype.org<span class="nt">&lt;/serverId&gt;</span>
+          <span class="nt">&lt;nexusUrl&gt;</span>https://oss.sonatype.org/<span class="nt">&lt;/nexusUrl&gt;</span>
+          <span class="nt">&lt;description&gt;</span>${project.version}<span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;/configuration&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>deploy-to-sonatype<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;phase&gt;</span>deploy<span class="nt">&lt;/phase&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>deploy<span class="nt">&lt;/goal&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>release<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <h2 id="create-rultor-configuration">Create Rultor Configuration</h2>
 
@@ -314,7 +320,7 @@ you here as well. If you’re using it, skip this step too.</p>
 (<a href="https://doc.rultor.com/reference.html">reference page</a>
 explains this format in details):</p>
 
-<pre>decrypt:
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
   secring.gpg: "repo/secring.gpg.asc"
@@ -322,7 +328,8 @@ release:
   script: |
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
-    mvn clean deploy -Pjcabi --settings /home/r/settings.xml</pre>
+    mvn clean deploy -Pjcabi --settings /home/r/settings.xml
+</code></pre></div></div>
 
 <p>You can compare your file with live Rultor
 <a href="https://github.com/jcabi/jcabi-aspects/blob/master/.rultor.yml">configuration of jcabi-aspects</a>.</p>
@@ -335,7 +342,8 @@ release:
 GitHub issue tracker, and post something like that into it
 (read more about <a href="https://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
-<pre>@rultor release, tag is `0.1`</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@rultor release, tag is `0.1`
+</code></pre></div></div>
 
 <p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
 

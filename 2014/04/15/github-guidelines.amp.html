@@ -114,13 +114,15 @@ main development stream against accidental damage.</p>
 <p>Once you have a forked our repository to your account, clone it to your
 computer, and then check out the <code class="highlighter-rouge">master</code> branch. For example:</p>
 
-<pre>git clone git@github.com:yegor256/xembly.git
-git checkout master</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:yegor256/xembly.git
+git checkout master
+</code></pre></div></div>
 
 <p>Now, it’s time to branch (<code class="highlighter-rouge">123</code> is the number of the GitHub issue you’re going
 to work with, and the name of the branch):</p>
 
-<pre>git checkout -b 123</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> 123
+</code></pre></div></div>
 
 <p>By convention, we use the same names for the branch and issue you’re working
 with.</p>
@@ -161,8 +163,9 @@ bug, which must be reported.</p>
 commit changes as soon as you make them. Don’t accumulate large numbers of
 changes too long before committing them.</p>
 
-<pre>git commit -am '#123: the description of the changes'
-git push origin 123</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-am</span> <span class="s1">'#123: the description of the changes'</span>
+git push origin 123
+</code></pre></div></div>
 
 <p>If you have questions about the scope of work, post them in the GitHub issue and
 <a href="/2016/03/15/wring-dispatcher-github-notifications.html">wait</a>

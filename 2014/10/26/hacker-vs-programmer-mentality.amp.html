@@ -139,7 +139,8 @@ instead of paying salaries for optimizing the software.</p>
 <a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a>
 Java method an “elegant code” (would you?):</p>
 
-<pre>public int f(int n) { return n&gt;2?f(n-1)+f(n-2):n; }</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">?</span><span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">)+</span><span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="o">):</span><span class="n">n</span><span class="o">;</span> <span class="o">}</span>
+</code></pre></div></div>
 
 <p>I would highlight these qualities of a good
 <a href="https://en.wikipedia.org/wiki/Hacker_%28computer_security%29">hacker</a>:</p>
@@ -174,15 +175,16 @@ what this code does?” I almost always hear the same answer—“They will ask 
 to make it easier to read. He would call this Java function an “elegant code”
 (how about you?):</p>
 
-<pre>public int fibo(final int pos) {
-  final int num;
-  if (pos &gt; 2) {
-    num = fibo(pos - 1) + fibo(pos - 2);
-  } else {
-    num = pos;
-  }
-  return num;
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">fibo</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">pos</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="kt">int</span> <span class="n">num</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">pos</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">num</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I think these qualities can be attributed to a good designer:</p>
 

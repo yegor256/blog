@@ -87,18 +87,19 @@ a look at this example.</p>
 
 <p>Here is the code:</p>
 
-<pre>class Foo {
-  public List&lt;String&gt; names() {
-    List&lt;String&gt; list = new LinkedList();
-    Foo.append(list, "Jeff");
-    Foo.append(list, "Walter");
-    return list;
-  }
-  private static void append(
-    List&lt;String&gt; list, String item) {
-    list.add(item.toLowerCase());
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">names</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
+    <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
+    <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Walter"</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">append</span><span class="o">(</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="nc">String</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What do you think about that? I believe it’s clear what <code class="highlighter-rouge">names()</code> is doing—creating a list of names. In order to avoid duplication, there is a supplementary
 <em>procedure</em>, <code class="highlighter-rouge">append()</code>, which converts an item to lowercase and adds it to the
@@ -112,22 +113,23 @@ lines in method <code class="highlighter-rouge">names()</code>.</p>
 <p>Let me first show you a better (though not the best!) design,
 then I will try to explain its benefits:</p>
 
-<pre>class Foo {
-  public List&lt;String&gt; names() {
-    return Foo.with(
-      Foo.with(
-        new LinkedList(),
-        "Jeff"
-      ),
-      "Walter"
-    );
-  }
-  private static List&lt;String&gt; with(
-    List&lt;String&gt; list, String item) {
-    list.add(item.toLowerCase());
-    return list;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">names</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+      <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">(),</span>
+        <span class="s">"Jeff"</span>
+      <span class="o">),</span>
+      <span class="s">"Walter"</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">with</span><span class="o">(</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="nc">String</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>An ideal design for method <code class="highlighter-rouge">with()</code> would create a new instance of
 <code class="highlighter-rouge">List</code>, populate it through <code class="highlighter-rouge">addAll(list)</code>, then <code class="highlighter-rouge">add(item)</code> to it, and
@@ -137,21 +139,23 @@ but slow.</p>
 
 <p>So, what is wrong with this:</p>
 
-<pre>List&lt;String&gt; list = new LinkedList();
-Foo.append(list, "Jeff");
-Foo.append(list, "Walter");
-return list;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Walter"</span><span class="o">);</span>
+<span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>It looks perfectly clean, doesn’t it? Instantiate a list, append two items to it, and
 return it. Yes, it is clean—for now. Because we remember what <code class="highlighter-rouge">append()</code> is
 doing. In a few months, we’ll get back to this code, and it will look like this:</p>
 
-<pre>List&lt;String&gt; list = new LinkedList();
-// 10 more lines here
-Foo.append(list, "Jeff");
-Foo.append(list, "Walter");
-// 10 more lines here
-return list;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
+<span class="c1">// 10 more lines here</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Walter"</span><span class="o">);</span>
+<span class="c1">// 10 more lines here</span>
+<span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>Is it so clear now that <code class="highlighter-rouge">append()</code> is actually adding <code class="highlighter-rouge">"Jeff"</code> to <code class="highlighter-rouge">list</code>? What
 will happen if I remove that line? Will it affect the result being
@@ -161,15 +165,16 @@ returned in the last line? I don’t know. I need to <strong>check</strong> the 
 <p>Also, how about returning <code class="highlighter-rouge">list</code> first and calling <code class="highlighter-rouge">append()</code> afterwards? This
 is what possible “refactoring” may do to our code:</p>
 
-<pre>List&lt;String&gt; list = new LinkedList();
-if (/* something */) {
-  return list;
-}
-// 10 more lines here
-Foo.append(list, "Walter");
-Foo.append(list, "Jeff");
-// 10 more lines here
-return list;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
+<span class="k">if</span> <span class="o">(</span><span class="cm">/* something */</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="c1">// 10 more lines here</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Walter"</span><span class="o">);</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
+<span class="c1">// 10 more lines here</span>
+<span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>First of all, we return <code class="highlighter-rouge">list</code> too early, when it is not ready. But did anyone
 tell me that these two calls to <code class="highlighter-rouge">append()</code> must happen before <code class="highlighter-rouge">return list</code>?
@@ -184,13 +189,14 @@ the order, and our compiler won’t be able to catch us.</p>
 
 <p>To the contrary, this design doesn’t have any “order”:</p>
 
-<pre>return Foo.with(
-  Foo.with(
-    new LinkedList(),
-    "Jeff"
-  ),
-  "Walter"
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+  <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">(),</span>
+    <span class="s">"Jeff"</span>
+  <span class="o">),</span>
+  <span class="s">"Walter"</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>It just <strong>returns</strong> a list, which is constructed by a few calls to the <code class="highlighter-rouge">with()</code>
 method. It is a single line instead of four.</p>
@@ -201,14 +207,16 @@ an ideal method in OOP must have just a single statement, and this statement is
 
 <p>The same is true about validation. For example, this code is bad:</p>
 
-<pre>list.add("Jeff");
-Foo.checkIfListStillHasSpace(list);
-list.add("Walter");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">checkIfListStillHasSpace</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+<span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Walter"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>While this one is much better:</p>
 
-<pre>list.add("Jeff");
-Foo.withEnoughSpace(list).add("Walter");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
+<span class="nc">Foo</span><span class="o">.</span><span class="na">withEnoughSpace</span><span class="o">(</span><span class="n">list</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="s">"Walter"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>See the difference?</p>
 

@@ -91,11 +91,12 @@ created supplementary “smart” classes.</p>
 
 <p>This is how it looks now:</p>
 
-<pre>abstract class InputStream {
-  int read();
-  int read(byte[] buffer, int offset, int length);
-  int read(byte[] buffer);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">InputStream</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">read</span><span class="o">();</span>
+  <span class="kt">int</span> <span class="nf">read</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span><span class="o">,</span> <span class="kt">int</span> <span class="n">offset</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">);</span>
+  <span class="kt">int</span> <span class="nf">read</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What’s wrong? It’s very convenient to have the ability to read
 a single byte, an array of bytes or even an array of bytes
@@ -113,9 +114,10 @@ I hope the Oracle Java team is working on them now.</p>
 bright engineers designed for us already. Or maybe let me show
 how I would design <code class="highlighter-rouge">InputStream</code> and we’ll compare:</p>
 
-<pre>interface InputStream {
-  int read(byte[] buffer, int offset, int length);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">InputStream</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">read</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span><span class="o">,</span> <span class="kt">int</span> <span class="n">offset</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is my design. The <code class="highlighter-rouge">InputStream</code> is responsible for reading
 bytes from the stream. There is one single method for this
@@ -124,31 +126,33 @@ on Twitter? Not yet. Do we need that functionality? Of course we do,
 but it doesn’t mean that we will add it to the interface. Instead,
 we will create supplementary “smart” class:</p>
 
-<pre>interface InputStream {
-  int read(byte[] buffer, int offset, int length);
-  class Smart {
-    private final InputStream origin;
-    public Smart(InputStream stream) {
-      this.origin = stream;
-    }
-    public int read() {
-      final byte[] buffer = new byte[1];
-      final int read = this.origin.read(buffer, 0, 1);
-      final int result;
-      if (read &lt; 1) {
-        result = -1;
-      } else {
-        result = buffer[0];
-      }
-      return result;
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">InputStream</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">read</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span><span class="o">,</span> <span class="kt">int</span> <span class="n">offset</span><span class="o">,</span> <span class="kt">int</span> <span class="n">length</span><span class="o">);</span>
+  <span class="kd">class</span> <span class="nc">Smart</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">origin</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="nf">Smart</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">stream</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
+      <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">1</span><span class="o">];</span>
+      <span class="kd">final</span> <span class="kt">int</span> <span class="n">read</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+      <span class="kd">final</span> <span class="kt">int</span> <span class="n">result</span><span class="o">;</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">read</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+      <span class="o">}</span>
+      <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, we want to read a single byte from the stream. Here is how:</p>
 
-<pre>final InputStream input = new FileInputStream("/tmp/a.txt");
-final byte b = new InputStream.Smart(input).read();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="s">"/tmp/a.txt"</span><span class="o">);</span>
+<span class="kd">final</span> <span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">InputStream</span><span class="o">.</span><span class="na">Smart</span><span class="o">(</span><span class="n">input</span><span class="o">).</span><span class="na">read</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>The functionality of reading a single byte is outside of <code class="highlighter-rouge">InputStream</code>,
 because this is not its business. The stream doesn’t need to know

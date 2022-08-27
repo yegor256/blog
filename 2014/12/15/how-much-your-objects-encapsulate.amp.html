@@ -77,8 +77,9 @@ level of abstraction it too high.
       <h1>How Much Your Objects Encapsulate?</h1>
       <p>Which line do you like more, the first or the second:</p>
 
-<pre>new HTTP("http://www.google.com").read();
-new HTTP().read("http://www.google.com");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="no">HTTP</span><span class="o">(</span><span class="s">"http://www.google.com"</span><span class="o">).</span><span class="na">read</span><span class="o">();</span>
+<span class="k">new</span> <span class="nf">HTTP</span><span class="o">().</span><span class="na">read</span><span class="o">(</span><span class="s">"http://www.google.com"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>What is the difference? The first class <code class="highlighter-rouge">HTTP</code> encapsulates a URL,
 while the second one expects it as an argument of method <code class="highlighter-rouge">read()</code>. Technically,
@@ -123,15 +124,16 @@ and
 following class doesn’t represent the Universe, even though it does have
 a no-arguments constructor:</p>
 
-<pre>class Time {
-  private final long msec;
-  public Time() {
-    this(System.currentTimeMillis());
-  }
-  public Time(long time) {
-    this.msec = time;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Time</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">msec</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Time</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nf">Time</span><span class="o">(</span><span class="kt">long</span> <span class="n">time</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">msec</span> <span class="o">=</span> <span class="n">time</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This class has two constructors. One of them is the main one, and one is
 supplementary. We’re interested in the main one, which implements
@@ -147,14 +149,15 @@ we give to the object.</p>
 <p>On the other hand, sometimes we have to have an object that represents
 the Universe. For example, we may have this:</p>
 
-<pre>class HTTP {
-  public String read(String url) {
-    // read via HTTP and return
-  }
-  public boolean online() {
-    // check whether we're online
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">HTTP</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// read via HTTP and return</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">online</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// check whether we're online</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is not an elegant design, but it demonstrates when it may be
 necessary to represent the entire Universe. An object of this <code class="highlighter-rouge">HTTP</code> class can read

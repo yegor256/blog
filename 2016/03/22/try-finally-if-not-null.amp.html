@@ -87,17 +87,18 @@ open and close them correctly, please.</p>
 
 <p>This is how it looks (assuming we are in Java 6):</p>
 
-<pre>InputStream input = null;
-try {
-  input = url.openStream();
-  // reads the stream, throws IOException
-} catch (IOException ex) {
-  throw new RuntimeException(ex);
-} finally {
-  if (input != null) {
-    input.close();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
+  <span class="c1">// reads the stream, throws IOException</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">input</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 
@@ -106,14 +107,15 @@ and its evil nature. Here it comes again. If you just follow the rule
 of “not using NULL anywhere ever,” this code would need an immediate
 refactoring. Its correct version will look like this:</p>
 
-<pre>final InputStream input = url.openStream();
-try {
-  // reads the stream, throws IOException
-} catch (IOException ex) {
-  throw new RuntimeException(ex);
-} finally {
-  input.close();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="c1">// reads the stream, throws IOException</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There is no <code class="highlighter-rouge">null</code> anymore and it’s very clean. Isn’t it?</p>
 
@@ -121,19 +123,20 @@ try {
 and we can’t put it outside of <code class="highlighter-rouge">try/catch</code>. In that case, we have to have
 <strong>two</strong> <code class="highlighter-rouge">try/catch</code> blocks:</p>
 
-<pre>final InputStream input;
-try {
-  input = url.openStream();
-} catch (IOException ex) {
-  throw new RuntimeException(ex);
-}
-try {
-  // reads the stream, throws IOException
-} catch (IOException ex) {
-  throw new RuntimeException(ex);
-} finally {
-  input.close();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span><span class="o">;</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="c1">// reads the stream, throws IOException</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>But there should be no <code class="highlighter-rouge">null</code>, never!</p>
 

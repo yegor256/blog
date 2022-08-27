@@ -103,7 +103,7 @@ if your project name is <code class="highlighter-rouge">teamed</code>.</p>
 
 <p>Add a new “inline policy” to the user:</p>
 
-<pre>{
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "Statement": [
     {
       "Effect": "Allow",
@@ -114,7 +114,8 @@ if your project name is <code class="highlighter-rouge">teamed</code>.</p>
       ]
     }
   ]
-}</pre>
+}
+</code></pre></div></div>
 
 <p>Here, <code class="highlighter-rouge">repo.teamed.io</code> is the name of the S3 bucket you
 created a minute ago.</p>
@@ -122,8 +123,9 @@ created a minute ago.</p>
 <p>Make sure you have an “access key” for this new user. It must look similar
 to this:</p>
 
-<pre>key: AKIAI9NNNJD5D7X4TUVA
-secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>key: AKIAI9NNNJD5D7X4TUVA
+secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av
+</code></pre></div></div>
 
 <p>The key is 20 characters (all caps), and the secret is 40 characters.</p>
 
@@ -132,63 +134,67 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av</pre>
 
 <p>Add this configuration to your <code class="highlighter-rouge">~/.m2/settings.xml</code> file:</p>
 
-<pre>&lt;settings&gt;
-  &lt;servers&gt;
-    &lt;server&gt;
-      &lt;id&gt;repo.teamed.io&lt;/id&gt;
-      &lt;username&gt;AKIAI9NNNJD5D7X4TUVA&lt;/username&gt;
-      &lt;password&gt;t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av&lt;/password&gt;
-    &lt;/server&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
+  <span class="nt">&lt;servers&gt;</span>
+    <span class="nt">&lt;server&gt;</span>
+      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;username&gt;</span>AKIAI9NNNJD5D7X4TUVA<span class="nt">&lt;/username&gt;</span>
+      <span class="nt">&lt;password&gt;</span>t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av<span class="nt">&lt;/password&gt;</span>
+    <span class="nt">&lt;/server&gt;</span>
     [...]
-  &lt;/servers&gt;
+  <span class="nt">&lt;/servers&gt;</span>
   [...]
-&lt;/settings&gt;</pre>
+<span class="nt">&lt;/settings&gt;</span>
+</code></pre></div></div>
 
 <h2 id="configure-pomxml">Configure <code class="highlighter-rouge">pom.xml</code>
 </h2>
 
 <p>Add this configuration to <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;project&gt;
-  &lt;distributionManagement&gt;
-    &lt;snapshotRepository&gt;
-      &lt;id&gt;repo.teamed.io&lt;/id&gt;
-      &lt;url&gt;s3://repo.teamed.io/snapshot&lt;/url&gt;
-    &lt;/snapshotRepository&gt;
-    &lt;repository&gt;
-      &lt;id&gt;repo.teamed.io&lt;/id&gt;
-      &lt;url&gt;s3://repo.teamed.io/release&lt;/url&gt;
-    &lt;/repository&gt;
-  &lt;/distributionManagement&gt;
-  &lt;repositories&gt;
-    &lt;repository&gt;
-      &lt;id&gt;repo.teamed.io&lt;/id&gt;
-      &lt;url&gt;s3://repo.teamed.io/release&lt;/url&gt;
-    &lt;/repository&gt;
-  &lt;/repositories&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;distributionManagement&gt;</span>
+    <span class="nt">&lt;snapshotRepository&gt;</span>
+      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;url&gt;</span>s3://repo.teamed.io/snapshot<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/snapshotRepository&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;url&gt;</span>s3://repo.teamed.io/release<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+  <span class="nt">&lt;/distributionManagement&gt;</span>
+  <span class="nt">&lt;repositories&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+      <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;url&gt;</span>s3://repo.teamed.io/release<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+  <span class="nt">&lt;/repositories&gt;</span>
   [...]
-&lt;/project&gt;</pre>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>Then, configure <a href="https://github.com/jcaddel/maven-s3-wagon">S3 Wagon</a>,
 also in <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;project&gt;
-  &lt;build&gt;
-    &lt;extensions&gt;
-      &lt;extension&gt;
-        &lt;groupId&gt;org.kuali.maven.wagons&lt;/groupId&gt;
-        &lt;artifactId&gt;maven-s3-wagon&lt;/artifactId&gt;
-        &lt;version&gt;1.2.1&lt;/version&gt;
-      &lt;/extension&gt;
-    &lt;/extensions&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;extensions&gt;</span>
+      <span class="nt">&lt;extension&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.kuali.maven.wagons<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-s3-wagon<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.2.1<span class="nt">&lt;/version&gt;</span>
+      <span class="nt">&lt;/extension&gt;</span>
+    <span class="nt">&lt;/extensions&gt;</span>
     [...]
-  &lt;/build&gt;
-&lt;/project&gt;</pre>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>You’re ready to go. You can deploy your artifacts just by running
 Maven from the command line:</p>
 
-<pre>$ mvn clean deploy</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn clean deploy
+</code></pre></div></div>
 
 <h2 id="configure-s3authcom">Configure <code class="highlighter-rouge">s3auth.com</code>
 </h2>
@@ -208,8 +214,9 @@ artifacts to S3 automatically.</p>
 <p>First, encrypt your <code class="highlighter-rouge">settings.xml</code> with this
 <a href="https://github.com/yegor256/rultor-remote">Rultor remote</a>:</p>
 
-<pre>$ gem install rultor
-$ rultor encrypt -p me/test settings.xml</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install rultor
+$ rultor encrypt -p me/test settings.xml
+</code></pre></div></div>
 
 <p>Instead of <code class="highlighter-rouge">me/test</code>, you should use the name of your GitHub project.</p>
 
@@ -221,17 +228,19 @@ but only the Rultor server can decrypt it.</p>
 (The Rultor <a href="https://doc.rultor.com/reference.html">reference page</a>
 explains this format in greater detail):</p>
 
-<pre>decrypt:
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
   settings.xml: "repo/settings.xml.asc"
 deploy:
   script: |
-    mvn clean deploy --settings ../settings.xml</pre>
+    mvn clean deploy --settings ../settings.xml
+</code></pre></div></div>
 
 <p>Now it’s time to see how it all works together. Create a new ticket in the
 GitHub issue tracker and post something like this into it
 (read more about <a href="https://doc.rultor.com/basics.html">Rultor commands</a>):</p>
 
-<pre>@rultor deploy</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@rultor deploy
+</code></pre></div></div>
 
 <p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
 

@@ -96,10 +96,11 @@ while FP survives with just functions?</p>
 
 <p>This is an <em>abstract</em> object in <a href="https://www.eolang.org">EO</a>:</p>
 
-<pre>[id db] &gt; book
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[id db] &gt; book
   db.query &gt; title
     "SELECT title FROM book WHERE id=?"
-    id</pre>
+    id
+</code></pre></div></div>
 
 <p>The name of the object is <code class="highlighter-rouge">book</code>. It has three
 <a href="/2020/11/24/objects-without-methods.html">attributes</a>: <code class="highlighter-rouge">id</code>, <code class="highlighter-rouge">db</code>, and <code class="highlighter-rouge">title</code>.
@@ -117,35 +118,41 @@ arguments to a function in FP.</p>
 <p>The right way to use an abstract <code class="highlighter-rouge">book</code> is to make a copy of it, specifying
 the arguments:</p>
 
-<pre>book 42 mysql &gt; b</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>book 42 mysql &gt; b
+</code></pre></div></div>
 
 <p>Here, <code class="highlighter-rouge">42</code> is the <code class="highlighter-rouge">id</code>, <code class="highlighter-rouge">mysql</code> is the <code class="highlighter-rouge">db</code> and <code class="highlighter-rouge">b</code> is
 a new object—a copy of the <code class="highlighter-rouge">book</code>. In 𝜑-calculus, which is foundational
 to the EO programming language, this would be written as the following
 formula:</p>
 
-<pre>b ↤ book(42, mysql)</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>b ↤ book(42, mysql)
+</code></pre></div></div>
 
 <p>In order to get the <code class="highlighter-rouge">title</code> of <code class="highlighter-rouge">b</code> and name it <code class="highlighter-rouge">t</code>, we just do:</p>
 
-<pre>b.title &gt; t</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>b.title &gt; t
+</code></pre></div></div>
 
 <p>We can also put it all together in one line:</p>
 
-<pre>(book 42 mysql).title &gt; t</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(book 42 mysql).title &gt; t
+</code></pre></div></div>
 
 <p>It’s possible to apply some arguments to an abstract object leaving
 other attributes still free. For example, this would make
 another abstract object, still requiring the <code class="highlighter-rouge">id</code> to be specified
 in order to become a <em>closed</em> object:</p>
 
-<pre>book mysql:db &gt; x</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>book mysql:db &gt; x
+</code></pre></div></div>
 
 <p>The suffix <code class="highlighter-rouge">:db</code> helps the compiler understand which free
 attribute should be bound to the object <code class="highlighter-rouge">mysql</code>.
 Later, <code class="highlighter-rouge">x</code> can be copied again and a closed object <code class="highlighter-rouge">b</code> will be created:</p>
 
-<pre>x 42 &gt; b</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x 42 &gt; b
+</code></pre></div></div>
 
 <p>Even though the syntax of EO makes it possible to say <code class="highlighter-rouge">book.title</code>,
 it will lead to a compile-time error: It’s prohibited to touch
@@ -153,23 +160,25 @@ free attributes of an abstract object or attributes that depend
 on other free attributes. However, let’s say we add a new attribute <code class="highlighter-rouge">print</code> to the
 <code class="highlighter-rouge">book</code>, in order to print it’s <code class="highlighter-rouge">id</code> to the console we would do the following:</p>
 
-<pre>[id db] &gt; book
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[id db] &gt; book
   stdout &gt; print
     sprintf
       "The book ID is %d"
       id
   db.query &gt; title
     "SELECT title FROM book WHERE id=?"
-    id</pre>
+    id
+</code></pre></div></div>
 
 <p>The attribute <code class="highlighter-rouge">print</code> doesn’t need the <code class="highlighter-rouge">db</code> attribute to be bound, since it
 doesn’t use it. It’s possible to copy the <code class="highlighter-rouge">book</code> with just <code class="highlighter-rouge">id</code> and
 then call <code class="highlighter-rouge">print</code> (assuming it’s happening in an EO interactive console):</p>
 
-<pre>$ book 42:id &gt; x
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ book 42:id &gt; x
 x
 $ x.print
-The book ID is 42</pre>
+The book ID is 42
+</code></pre></div></div>
 
 <p>By the way, do you know any other languages with abstract objects or
 is EO the first one to introduce this design?</p>

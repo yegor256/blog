@@ -78,12 +78,13 @@ object-oriented and convenient
       <p>An execution of a shell command via SSH can be done in
 Java, in just a few lines, using <a href="http://ssh.jcabi.com"><code class="highlighter-rouge">jcabi-ssh</code></a>:</p>
 
-<pre>String hello = new Shell.Plain(
-  new SSH(
-    "ssh.example.com", 22,
-    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
-  )
-).exec("echo 'Hello, world!'");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">hello</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Shell</span><span class="o">.</span><span class="na">Plain</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">SSH</span><span class="o">(</span>
+    <span class="s">"ssh.example.com"</span><span class="o">,</span> <span class="mi">22</span><span class="o">,</span>
+    <span class="s">"yegor"</span><span class="o">,</span> <span class="s">"-----BEGIN RSA PRIVATE KEY-----..."</span>
+  <span class="o">)</span>
+<span class="o">).</span><span class="na">exec</span><span class="o">(</span><span class="s">"echo 'Hello, world!'"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p><a href="http://ssh.jcabi.com"><code class="highlighter-rouge">jcabi-ssh</code></a> is
 a convenient wrapper of <a href="http://www.jcraft.com/jsch/"><code class="highlighter-rouge">JSch</code></a>,
@@ -94,27 +95,29 @@ a well-known pure Java implementation of SSH2.</p>
 <p>Here is a more complex scenario, where I upload a file via SSH
 and then read back its grepped content:</p>
 
-<pre>Shell shell = new SSH(
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell shell = new SSH(
   "ssh.example.com", 22,
   "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
 );
 File file = new File("/tmp/data.txt");
 new Shell.Safe(shell).exec(
-  "cat &gt; d.txt &amp;&amp; grep 'some text' d.txt",
+  "cat &gt; d.txt <span class="err">&amp;&amp;</span> grep 'some text' d.txt",
   new FileInputStream(file),
   Logger.stream(Level.INFO, this),
   Logger.stream(Level.WARNING, this)
-);</pre>
+);
+</code></pre></div></div>
 
 <p>Class <code class="highlighter-rouge">SSH</code>, which implements interface <code class="highlighter-rouge">Shell</code>, has only one method, <code class="highlighter-rouge">exec</code>.
 This method accepts four arguments:</p>
 
-<pre>interface Shell {
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interface Shell {
   int exec(
     String cmd, InputStream stdin,
     OutputStream stdout, OutputStream stderr
   );
-}</pre>
+}
+</code></pre></div></div>
 
 <p>I think it’s obvious what these arguments are about.</p>
 
@@ -130,12 +133,13 @@ if the <code class="highlighter-rouge">exec</code> exit code is not equal to zer
 you want to make sure that your command executed successfully, but don’t
 want to duplicate <code class="highlighter-rouge">if/throw</code> in many places of your code.</p>
 
-<pre>Shell ssh = new Shell.Safe(
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell ssh = new Shell.Safe(
   new SSH(
     "ssh.example.com", 22,
     "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
   )
-);</pre>
+);
+</code></pre></div></div>
 
 <h2 id="shellverbose">Shell.Verbose</h2>
 
@@ -144,14 +148,15 @@ want to duplicate <code class="highlighter-rouge">if/throw</code> in many places
 <a href="http://log.jcabi.com"><code class="highlighter-rouge">jcabi-log</code></a>). Of course, you can combine
 decorators, for example:</p>
 
-<pre>Shell ssh = new Shell.Verbose(
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell ssh = new Shell.Verbose(
   new Shell.Safe(
     new SSH(
       "ssh.example.com", 22,
       "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
     )
   )
-);</pre>
+);
+</code></pre></div></div>
 
 <h2 id="shellplain">Shell.Plain</h2>
 
@@ -161,7 +166,8 @@ exit code, but <code class="highlighter-rouge">stdout</code> instead. This shoul
 to execute a simple command and just get its output
 (I’m combining it with <code class="highlighter-rouge">Shell.Safe</code> for safety):</p>
 
-<pre>String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");
+</code></pre></div></div>
 
 <h2 id="download">Download</h2>
 
@@ -170,10 +176,11 @@ to execute a simple command and just get its output
 in your Maven project
 (get its latest version in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-  &lt;artifactId&gt;jcabi-ssh&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-ssh<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
 <p>The project is in <a href="https://github.com/jcabi/jcabi-ssh">GitHub</a>.
 If you have any problems, just submit an issue. I’ll try to help.</p>

@@ -100,10 +100,11 @@ which expects you to provide the LaTeX source code
 errors. The beauty of it is that it checks only the text, ignoring
 TeX commands. For example, this is LaTeX document:</p>
 
-<pre>\documentclass{article}
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\documentclass{article}
 \begin{document}
 Hello, \textbf{Yegor}!
-\end{document}</pre>
+\end{document}
+</code></pre></div></div>
 
 <p>If we feed this text to some other spell checker (or GNU aspell without the
 option <code class="highlighter-rouge">--mode=tex</code>) the word <code class="highlighter-rouge">textbf</code> would be an obvious spelling mistake; aspell,
@@ -119,7 +120,8 @@ It’s a command line tool, which you install and then run, for example like thi
 (you can see how it’s configured in the <code class="highlighter-rouge">Makefile</code> of
 <a href="https://github.com/yegor256/requs-paper">this paper</a>):</p>
 
-<pre>$ texsc --pws aspell.en.pws --ignore=code,citep article.tex</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ texsc --pws aspell.en.pws --ignore=code,citep article.tex
+</code></pre></div></div>
 
 <p>There is a list of arguments you can supply to <code class="highlighter-rouge">texsc</code>:</p>
 

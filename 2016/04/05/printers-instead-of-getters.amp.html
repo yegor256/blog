@@ -91,34 +91,36 @@ itself to some media.</p>
 
 <p>Let’s say this is our class:</p>
 
-<pre>public class Book {
-  private final String isbn =
-    "0735619654";
-  private final String title =
-    "Object Thinking";
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
+    <span class="s">"0735619654"</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
+    <span class="s">"Object Thinking"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>We need it to be transferred into XML format. A more
 or less traditional way to do it is via getters and
 <a href="/2015/03/26/jaxb-vs-xembly.html">JAXB</a>:</p>
 
-<pre>import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-@XmlRootElement
-public class Book {
-  private final String isbn =
-    "0735619654";
-  private final String title =
-    "Object Thinking";
-  @XmlElement
-  public String getIsbn() {
-    return this.isbn;
-  }
-  @XmlElement
-  public String getTitle() {
-    return this.title;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlElement</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlRootElement</span><span class="o">;</span>
+<span class="nd">@XmlRootElement</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
+    <span class="s">"0735619654"</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
+    <span class="s">"Object Thinking"</span><span class="o">;</span>
+  <span class="nd">@XmlElement</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getIsbn</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">isbn</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@XmlElement</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is a very <a href="/2014/12/01/orm-offensive-anti-pattern.html">offensive</a>
 way of treating the
@@ -147,18 +149,19 @@ to do that job. We’re way smarter!</p>
 <p>I’m suggesting to stop thinking this way. Instead, let’s try to give
 this poor <code class="highlighter-rouge">Book</code> a chance, and equip it with a “printer”:</p>
 
-<pre>public class Book {
-  private final String isbn =
-    "0735619654";
-  private final String title =
-    "Object Thinking";
-  public String toXML() {
-    return String.format(
-      "&lt;book&gt;&lt;isbn&gt;%s&lt;/isbn&gt;&lt;title&gt;%s&lt;/title&gt;&lt;/book&gt;",
-      this.isbn, this.title
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
+    <span class="s">"0735619654"</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
+    <span class="s">"Object Thinking"</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toXML</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"&lt;book&gt;&lt;isbn&gt;%s&lt;/isbn&gt;&lt;title&gt;%s&lt;/title&gt;&lt;/book&gt;"</span><span class="o">,</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">isbn</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This isn’t the <a href="/2015/03/26/jaxb-vs-xembly.html">best</a>
 implementation, but you got the idea. The object is not
@@ -167,18 +170,19 @@ can only ask it to print itself in XML format.</p>
 
 <p>We can add an additional printer, if another format is required:</p>
 
-<pre>public class Book {
-  private final String isbn =
-    "0735619654";
-  private final String title =
-    "Object Thinking";
-  public String toJSON() {
-    return String.format(
-      "{\"isbn\":\"%s\", \"title\":\"%s\"}",
-      this.isbn, this.title
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
+    <span class="s">"0735619654"</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
+    <span class="s">"Object Thinking"</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toJSON</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"{\"isbn\":\"%s\", \"title\":\"%s\"}"</span><span class="o">,</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">isbn</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Again, not the best implementation, but you see what I’m trying to show.
 Each time we need a new format, we create a new printer.</p>
@@ -194,17 +198,18 @@ format and God knows what else. We can add that many printers to it, but
 the object will be big and ugly. To avoid that, introduce a new object,
 that represents the media where the data will be printed to:</p>
 
-<pre>public class Book {
-  private final String isbn =
-    "0735619654";
-  private final String title =
-    "Object Thinking";
-  public Media print(Media media) {
-    return media
-      .with("isbn", this.isbn)
-      .with("title", this.title);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
+    <span class="s">"0735619654"</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
+    <span class="s">"Object Thinking"</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">Media</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Media</span> <span class="n">media</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">media</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"isbn"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">isbn</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"title"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Again, it’s a very primitive design of that
 <a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>
@@ -214,34 +219,36 @@ Now, we want to print our object to JSON
 (this design is not really perfect, since <code class="highlighter-rouge">JsonObjectBuilder</code> is not immutable,
 even though it looks like one…):</p>
 
-<pre>class JsonMedia implements Media {
-  private final JsonObjectBuilder builder;
-  JsonMedia() {
-    this("book");
-  }
-  JsonMedia(String head) {
-    this(Json.createObjectBuilder().add(head));
-  }
-  JsonMedia(JsonObjectBuilder bdr) {
-    this.builder = bdr;
-  }
-  @Override
-  public Media with(String name, String value) {
-    return new JsonMedia(
-      this.builder.add(name, value)
-    );
-  }
-  public JsonObject json() {
-    return this.builder.build();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">JsonMedia</span> <span class="kd">implements</span> <span class="nc">Media</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">JsonObjectBuilder</span> <span class="n">builder</span><span class="o">;</span>
+  <span class="nc">JsonMedia</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="s">"book"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">JsonMedia</span><span class="o">(</span><span class="nc">String</span> <span class="n">head</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="nc">Json</span><span class="o">.</span><span class="na">createObjectBuilder</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">head</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">JsonMedia</span><span class="o">(</span><span class="nc">JsonObjectBuilder</span> <span class="n">bdr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">builder</span> <span class="o">=</span> <span class="n">bdr</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Media</span> <span class="nf">with</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonMedia</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">value</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">JsonObject</span> <span class="nf">json</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">build</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, we make an instance of <code class="highlighter-rouge">JsonMedia</code> and ask our book to print
 itself there:</p>
 
-<pre>JsonMedia media = new JsonMedia("book");
-media = book.print(media);
-JsonObject json = media.json();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">JsonMedia</span> <span class="n">media</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JsonMedia</span><span class="o">(</span><span class="s">"book"</span><span class="o">);</span>
+<span class="n">media</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">media</span><span class="o">);</span>
+<span class="nc">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="n">media</span><span class="o">.</span><span class="na">json</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Voilà! The JSON object is ready and the book has no idea about what
 exactly what printed just now. We need to print the book to XML? We

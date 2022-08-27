@@ -142,11 +142,12 @@ in more details in their very famous book
 <p>Here is an example of temporal coupling (the code makes
 two consecutive HTTP POST requests, where the second one contains HTTP body):</p>
 
-<pre>Request request = new Request("http://localhost");
-request.method("POST");
-String first = request.fetch();
-request.body("text=hello");
-String second = request.fetch();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">(</span><span class="s">"http://localhost"</span><span class="o">);</span>
+<span class="n">request</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">first</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+<span class="n">request</span><span class="o">.</span><span class="na">body</span><span class="o">(</span><span class="s">"text=hello"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This code works. However, you must remember that the first
 request should be configured before the second one may happen.
@@ -154,11 +155,12 @@ If we decide to remove the first request from the script, we will
 remove the second and the third line, and won’t get any errors
 from the compiler:</p>
 
-<pre>Request request = new Request("http://localhost");
-// request.method("POST");
-// String first = request.fetch();
-request.body("text=hello");
-String second = request.fetch();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">(</span><span class="s">"http://localhost"</span><span class="o">);</span>
+<span class="c1">// request.method("POST");</span>
+<span class="c1">// String first = request.fetch();</span>
+<span class="n">request</span><span class="o">.</span><span class="na">body</span><span class="o">(</span><span class="s">"text=hello"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Now, the script is broken although it compiled without errors. This is
 what <a href="/2015/12/08/temporal-coupling-between-method-calls.html">temporal coupling</a>
@@ -175,19 +177,21 @@ together and be executed after the first one.</p>
 <p>If <code class="highlighter-rouge">Request</code> class were immutable, the first snippet wouldn’t
 work in the first place, and would have been rewritten like:</p>
 
-<pre>final Request request = new Request("");
-String first = request.method("POST").fetch();
-String second = request.method("POST").body("text=hello").fetch();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">first</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">).</span><span class="na">body</span><span class="o">(</span><span class="s">"text=hello"</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Now, these two requests are not coupled. We can safely remove
 the first one, and the second one will still work correctly.
 You may point out that there is a code duplication. Yes, we
 should get rid of it and re-write the code:</p>
 
-<pre>final Request request = new Request("");
-final Request post = request.method("POST");
-String first = post.fetch();
-String second = post.body("text=hello").fetch();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
+<span class="kd">final</span> <span class="nc">Request</span> <span class="n">post</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">first</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="na">body</span><span class="o">(</span><span class="s">"text=hello"</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>See, refactoring didn’t break anything and we still don’t have
 temporal coupling. The first request can be removed safely
@@ -202,18 +206,20 @@ because it doesn’t have
 
 <p>Let’s try to use our <code class="highlighter-rouge">Request</code> class in a new method (now it is mutable):</p>
 
-<pre>public String post(Request request) {
-  request.method("POST");
-  return request.fetch();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">String</span> <span class="nf">post</span><span class="o">(</span><span class="nc">Request</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">request</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">);</span>
+  <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Let’s try to make two requests—the first
 with GET method and the second with POST:</p>
 
-<pre>Request request = new Request("http://localhost");
-request.method("GET");
-String first = this.post(request);
-String second = request.fetch();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">(</span><span class="s">"http://localhost"</span><span class="o">);</span>
+<span class="n">request</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">first</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Method <code class="highlighter-rouge">post()</code> has a “side effect”—it makes changes
 to the mutable object <code class="highlighter-rouge">request</code>. These changes are not really
@@ -226,17 +232,19 @@ the request we’re passing to it as an argument.</p>
 maintainability issues. It would be much better
 to work with an immutable <code class="highlighter-rouge">Request</code>:</p>
 
-<pre>public String post(Request request) {
-  return request.method("POST").fetch();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">String</span> <span class="nf">post</span><span class="o">(</span><span class="nc">Request</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">request</span><span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">).</span><span class="na">fetch</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>In this case, we may not have any side effects.
 Nobody can modify our <code class="highlighter-rouge">request</code> object, no matter where
 it is used and how deep through the call stack it is passed by method calls:</p>
 
-<pre>Request request = new Request("http://localhost").method("GET");
-String first = this.post(request);
-String second = request.fetch();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">(</span><span class="s">"http://localhost"</span><span class="o">).</span><span class="na">method</span><span class="o">(</span><span class="s">"GET"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">first</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">post</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This code is perfectly safe and side effect free.</p>
 
@@ -246,9 +254,10 @@ String second = request.fetch();</pre>
 states are the same. <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Date.html"><code class="highlighter-rouge">Date</code></a>
 class is a good example:</p>
 
-<pre>Date first = new Date(1L);
-Date second = new Date(1L);
-assert first.equals(second); // true</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Date</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
+<span class="nc">Date</span> <span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">);</span> <span class="c1">// true</span>
+</code></pre></div></div>
 
 <p>There are two different objects; however, they are equal
 to each other because their encapsulated states are the same.
@@ -259,19 +268,21 @@ implementation of <code class="highlighter-rouge">equals()</code> and <code clas
 with mutable objects is that every time we modify
 object’s state it changes its identity:</p>
 
-<pre>Date first = new Date(1L);
-Date second = new Date(1L);
-first.setTime(2L);
-assert first.equals(second); // false</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Date</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
+<span class="nc">Date</span> <span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
+<span class="n">first</span><span class="o">.</span><span class="na">setTime</span><span class="o">(</span><span class="mi">2L</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">);</span> <span class="c1">// false</span>
+</code></pre></div></div>
 
 <p>This may look natural, until you start using your
 mutable objects as keys in maps:</p>
 
-<pre>Map&lt;Date, String&gt; map = new HashMap&lt;&gt;();
-Date date = new Date();
-map.put(date, "hello, world!");
-date.setTime(12345L);
-assert map.containsKey(date); // false</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Date</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="nc">Date</span> <span class="n">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">();</span>
+<span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="s">"hello, world!"</span><span class="o">);</span>
+<span class="n">date</span><span class="o">.</span><span class="na">setTime</span><span class="o">(</span><span class="mi">12345L</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">map</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="n">date</span><span class="o">);</span> <span class="c1">// false</span>
+</code></pre></div></div>
 
 <p>When modifying the state of <code class="highlighter-rouge">date</code> object, we’re not expecting
 it to change its identity. We’re not expecting to lose an entry
@@ -294,17 +305,18 @@ side effects of mutable objects. Immutable objects avoid it completely.</p>
 
 <p>Here is a simple example:</p>
 
-<pre>public class Stack {
-  private int size;
-  private String[] items;
-  public void push(String item) {
-    size++;
-    if (size &gt; items.length) {
-      throw new RuntimeException("stack overflow");
-    }
-    items[size] = item;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Stack</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">size</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">items</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">push</span><span class="o">(</span><span class="nc">String</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">size</span><span class="o">++;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">size</span> <span class="o">&gt;</span> <span class="n">items</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"stack overflow"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="n">items</span><span class="o">[</span><span class="n">size</span><span class="o">]</span> <span class="o">=</span> <span class="n">item</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It is obvious that an object of class <code class="highlighter-rouge">Stack</code> will be left
 in a broken state if it

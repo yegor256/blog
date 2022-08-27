@@ -89,18 +89,20 @@ after it is started.</p>
 
 <p>First, this is how we start a new Docker container:</p>
 
-<pre>$ sudo docker run -i -t --rm -v "$(pwd):/main" \
-  yegor256/rultor /main/entry.sh</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker run <span class="nt">-i</span> <span class="nt">-t</span> <span class="nt">--rm</span> <span class="nt">-v</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">:/main"</span> <span class="se">\</span>
+  yegor256/rultor /main/entry.sh
+</code></pre></div></div>
 
 <p>There are two files in the current directory: <code class="highlighter-rouge">entry.sh</code> and <code class="highlighter-rouge">script.sh</code>.
 <code class="highlighter-rouge">entry.sh</code> is the file being executed by Docker on start,
 and it contains the following:</p>
 
-<pre>#!/bin/bash
-adduser --disabled-password --gecos '' r
-adduser r sudo
-echo '%sudo ALL=(ALL) NOPASSWD:ALL' &gt;&gt; /etc/sudoers
-su -m r -c /home/r/script.sh</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+adduser <span class="nt">--disabled-password</span> <span class="nt">--gecos</span> <span class="s1">''</span> r
+adduser r <span class="nb">sudo
+echo</span> <span class="s1">'%sudo ALL=(ALL) NOPASSWD:ALL'</span> <span class="o">&gt;&gt;</span> /etc/sudoers
+su <span class="nt">-m</span> r <span class="nt">-c</span> /home/r/script.sh
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">script.sh</code> will be executed as a user <code class="highlighter-rouge">r</code> inside the container. And this
 <code class="highlighter-rouge">r</code> user will have <code class="highlighter-rouge">sudo</code> permissions. This is exactly what all projects,

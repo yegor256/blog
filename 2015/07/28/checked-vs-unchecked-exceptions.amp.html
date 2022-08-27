@@ -93,10 +93,11 @@ we’ll discuss the differences. So, my understanding first.</p>
 
 <p>Say there is a method that saves some binary data to a file:</p>
 
-<pre>public void save(File file, byte[] data)
-  throws Exception {
-  // save data to the file
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">data</span><span class="o">)</span>
+  <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+  <span class="c1">// save data to the file</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>When everything goes right, the method just saves the data and returns control.
 When something is wrong, it
@@ -104,11 +105,12 @@ When something is wrong, it
 <code class="highlighter-rouge">Exception</code> and we have to do something
 about it:</p>
 
-<pre>try {
-  save(file, data);
-} catch (Exception ex) {
-  System.out.println("Sorry, we can't save right now.");
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="n">save</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Sorry, we can't save right now."</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>When a method says it <code class="highlighter-rouge">throws</code> an exception, I understand that the
 method is not <strong>safe</strong>. It may fail sometimes, and it’s my responsibility to
@@ -246,12 +248,13 @@ to exception management in OOP.</p>
 says to “use checked exceptions for recoverable conditions and runtime exceptions
 for programming errors.” He means something like this:</p>
 
-<pre>try {
-  save(file, data);
-} catch (Exception ex) {
-  // We can't save the file, but it's OK
-  // Let's move on and do something else
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="n">save</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// We can't save the file, but it's OK</span>
+  <span class="c1">// Let's move on and do something else</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>How is that any different from a famous anti-pattern called
 <a href="http://c2.com/cgi/wiki?DontUseExceptionsForFlowControl">Don’t Use Exceptions for Flow Control</a>?
@@ -261,10 +264,11 @@ chain of calls from method to method is broken, and it’s time to go up
 through the chain and stop somewhere. But we never go back again
 after the exception:</p>
 
-<pre>App#run()
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>App#run()
   Data#update()
     Data#write()
-      File#save() &lt;-- Boom, there's a failure here, so we go up</pre>
+      File#save() &lt;-- Boom, there's a failure here, so we go up
+</code></pre></div></div>
 
 <p>We can start this chain again, but we don’t go back after <code class="highlighter-rouge">throw</code>. In other
 words, we don’t <strong>do</strong> anything in the <code class="highlighter-rouge">catch</code> block. We only report the problem

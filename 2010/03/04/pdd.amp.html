@@ -104,51 +104,54 @@ slotted time allows. Additionally, there are a numerous unknowns:</p>
 <p>Let’s keep all these unknowns in mind as we try to solve the problem on the
 highest level of abstraction. Of course, we start with a test:</p>
 
-<pre>import org.junit.*;
-import static org.mockito.Mockito.*;
-public class DBWriterTest {
-  @Test
-  void testSavesDataIntoDatabase() throws Exception {
-    DataBridge mapper = mock(DataBridge.class);
-    Writer writer = new DBWriter(mapper);
-    try {
-      writer.write("hello, world!");
-    } finally {
-      writer.close();
-    }
-    verify(mapper).insert("hello, world!");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.junit.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">mockito</span><span class="o">.</span><span class="na">Mockito</span><span class="o">.*;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DBWriterTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kt">void</span> <span class="nf">testSavesDataIntoDatabase</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="nc">DataBridge</span> <span class="n">mapper</span> <span class="o">=</span> <span class="n">mock</span><span class="o">(</span><span class="nc">DataBridge</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="nc">Writer</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DBWriter</span><span class="o">(</span><span class="n">mapper</span><span class="o">);</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">writer</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"hello, world!"</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+      <span class="n">writer</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="n">verify</span><span class="o">(</span><span class="n">mapper</span><span class="o">).</span><span class="na">insert</span><span class="o">(</span><span class="s">"hello, world!"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>In the above test, we define the expected behavior of the class. The test fails to compile because there are two missing classes: <code class="highlighter-rouge">DataBridge</code> and <code class="highlighter-rouge">DBWriter</code>. Let’s implement the bridge first:</p>
 
-<pre>import java.io.IOException;
-public interface DataBridge {
-  void insert(String text) throws IOException;
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">DataBridge</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">insert</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Next, the writer itself:</p>
 
-<pre>import java.io.IOException;
-import java.io.Writer;
-import java.utils.Arrays;
-public class DBWriter implements Writer {
-  private DataBridge bridge;
-  public DBWriter(DataBridge brdg) {
-    this.bridge = brdg;
-  }
-  @Override
-  void flush() throws IOException {
-  }
-  @Override
-  void close() throws IOException {
-  }
-  @Override
-  void write(char[] cbuf, int off, int len) throws IOException {
-    String data = new String(Arrays.copyOfRange(cbuf, off, off + len));
-    this.bridge.insert(data);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.Writer</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.utils.Arrays</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DBWriter</span> <span class="kd">implements</span> <span class="nc">Writer</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">DataBridge</span> <span class="n">bridge</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">DBWriter</span><span class="o">(</span><span class="nc">DataBridge</span> <span class="n">brdg</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">bridge</span> <span class="o">=</span> <span class="n">brdg</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">flush</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">close</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kt">void</span> <span class="nf">write</span><span class="o">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">cbuf</span><span class="o">,</span> <span class="kt">int</span> <span class="n">off</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">copyOfRange</span><span class="o">(</span><span class="n">cbuf</span><span class="o">,</span> <span class="n">off</span><span class="o">,</span> <span class="n">off</span> <span class="o">+</span> <span class="n">len</span><span class="o">));</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">bridge</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Using the above code, we solve the problem. In the example, we successfully
 designed, implemented and tested the required <code class="highlighter-rouge">DBWriter</code> class. Subsequently,
@@ -168,16 +171,17 @@ usable by other classes.</p>
 Every puzzle is a request for refinement. We want to ask someone else to help us
 refine and correct our assumptions. Here is the first puzzle we need to add:</p>
 
-<pre>public interface DataBridge {
-  /**
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">DataBridge</span> <span class="o">{</span>
+  <span class="cm">/**
    * @todo #123 I assumed that a simple insert() method will be
    *  enough to insert data into the database. Maybe it's
    *  not true, and some sort of transaction support may be
    *  required. We should implement this interface and create
    *  an integration test with a database.
-   */
-  void insert(String text) throws IOException;
-}</pre>
+   */</span>
+  <span class="kt">void</span> <span class="nf">insert</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The puzzle has three elements: <code class="highlighter-rouge">@todo</code> tag, <code class="highlighter-rouge">#123</code> locator and a comment.
 Locator displays the following: “The puzzle was created while working with
@@ -185,14 +189,15 @@ ticket #123.”</p>
 
 <p>Let’s add one more puzzle:</p>
 
-<pre>void write(char[] cbuf, int off, int len) throws IOException {
-  // @todo #123 I assumed that the data should be sent to the database
-  //  as its received by the writer. Maybe this assumption
-  //  is wrong and we should aggregate data into blocks/chunks
-  //  and then send them to the data bridge.
-  String data = new String(Arrays.copyOfRange(cbuf, off, off + len));
-  this.bridge.insert(data);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">write</span><span class="o">(</span><span class="kt">char</span><span class="o">[]</span> <span class="n">cbuf</span><span class="o">,</span> <span class="kt">int</span> <span class="n">off</span><span class="o">,</span> <span class="kt">int</span> <span class="n">len</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="c1">// @todo #123 I assumed that the data should be sent to the database</span>
+  <span class="c1">//  as its received by the writer. Maybe this assumption</span>
+  <span class="c1">//  is wrong and we should aggregate data into blocks/chunks</span>
+  <span class="c1">//  and then send them to the data bridge.</span>
+  <span class="nc">String</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">copyOfRange</span><span class="o">(</span><span class="n">cbuf</span><span class="o">,</span> <span class="n">off</span><span class="o">,</span> <span class="n">off</span> <span class="o">+</span> <span class="n">len</span><span class="o">));</span>
+  <span class="k">this</span><span class="o">.</span><span class="na">bridge</span><span class="o">.</span><span class="na">insert</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This puzzle indicates one of our concerns because we are not sure that the
 architectural decision is right. Actually, the design is very primitive at the

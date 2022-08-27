@@ -89,26 +89,28 @@ they are thread-safe? Here is how I’m doing it.</p>
 
 <p>Let us say there is a simple in-memory bookshelf:</p>
 
-<pre>class Books {
-  final Map&lt;Integer, String&gt; map =
-    new ConcurrentHashMap&lt;&gt;();
-  int add(String title) {
-    final Integer next = this.map.size() + 1;
-    this.map.put(next, title);
-    return next;
-  }
-  String title(int id) {
-    return this.map.get(id);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="nc">ConcurrentHashMap</span><span class="o">&lt;&gt;();</span>
+  <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Integer</span> <span class="n">next</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">map</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">next</span><span class="o">,</span> <span class="n">title</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">next</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>First, we put a book there and the bookshelf returns its ID. Then we can
 read the title of the book by its ID:</p>
 
-<pre>Books books = new Books();
-String title = "Elegant Objects";
-int id = books.add(title);
-assert books.title(id).equals(title);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="s">"Elegant Objects"</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">books</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>The class seems to be thread-safe, since we are using the thread-safe
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code class="highlighter-rouge">ConcurrentHashMap</code></a>
@@ -116,40 +118,42 @@ instead of a more primitive and non-thread-safe
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code class="highlighter-rouge">HashMap</code></a>,
 right? Let’s try to test it:</p>
 
-<pre>class BooksTest {
-  @Test
-  public void addsAndRetrieves() {
-    Books books = new Books();
-    String title = "Elegant Objects";
-    int id = books.add(title);
-    assert books.title(id).equals(title);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BooksTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addsAndRetrieves</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+    <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="s">"Elegant Objects"</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+    <span class="k">assert</span> <span class="n">books</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The test passes, but it’s just a one-thread test. Let’s try to do the
 same manipulation from a few parallel threads (I’m using
 <a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
 
-<pre>class BooksTest {
-  @Test
-  public void addsAndRetrieves() {
-    Books books = new Books();
-    int threads = 10;
-    ExecutorService service =
-      Executors.newFixedThreadPool(threads);
-    Collection&lt;Future&lt;Integer&gt;&gt; futures =
-      new ArrayList&lt;&gt;(threads);
-    for (int t = 0; t &lt; threads; ++t) {
-      final String title = String.format("Book #%d", t);
-      futures.add(service.submit(() -&gt; books.add(title)));
-    }
-    Set&lt;Integer&gt; ids = new HashSet&lt;&gt;();
-    for (Future&lt;Integer&gt; f : futures) {
-      ids.add(f.get());
-    }
-    assertThat(ids.size(), equalTo(threads));
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BooksTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addsAndRetrieves</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="n">threads</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+    <span class="nc">ExecutorService</span> <span class="n">service</span> <span class="o">=</span>
+      <span class="nc">Executors</span><span class="o">.</span><span class="na">newFixedThreadPool</span><span class="o">(</span><span class="n">threads</span><span class="o">);</span>
+    <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">futures</span> <span class="o">=</span>
+      <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">threads</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">threads</span><span class="o">;</span> <span class="o">++</span><span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span>
+      <span class="n">futures</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">service</span><span class="o">.</span><span class="na">submit</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">)));</span>
+    <span class="o">}</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">ids</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">:</span> <span class="n">futures</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">ids</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">ids</span><span class="o">.</span><span class="na">size</span><span class="o">(),</span> <span class="n">equalTo</span><span class="o">(</span><span class="n">threads</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>First, I create a pool of threads via
 <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html"><code class="highlighter-rouge">Executors</code></a>.
@@ -176,27 +180,28 @@ The time that passes between our calls to <code class="highlighter-rouge">submit
 the execution of <code class="highlighter-rouge">books.add()</code>. That’s why in reality only one thread
 will run at the same time. We can check that by modifying the code a bit:</p>
 
-<pre>AtomicBoolean running = new AtomicBoolean();
-AtomicInteger overlaps = new AtomicInteger();
-Collection&lt;Future&lt;Integer&gt;&gt; futures =
-  new ArrayList&lt;&gt;(threads);
-for (int t = 0; t &lt; threads; ++t) {
-  final String title = String.format("Book #%d", t);
-  futures.add(
-    service.submit(
-      () -&gt; {
-        if (running.get()) {
-          overlaps.incrementAndGet();
-        }
-        running.set(true);
-        int id = books.add(title);
-        running.set(false);
-        return id;
-      }
-    )
-  );
-}
-assertThat(overlaps.get(), greaterThan(0));</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">AtomicBoolean</span> <span class="n">running</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicBoolean</span><span class="o">();</span>
+<span class="nc">AtomicInteger</span> <span class="n">overlaps</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">();</span>
+<span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">futures</span> <span class="o">=</span>
+  <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">threads</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">threads</span><span class="o">;</span> <span class="o">++</span><span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span>
+  <span class="n">futures</span><span class="o">.</span><span class="na">add</span><span class="o">(</span>
+    <span class="n">service</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span>
+      <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">running</span><span class="o">.</span><span class="na">get</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">overlaps</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+<span class="n">assertThat</span><span class="o">(</span><span class="n">overlaps</span><span class="o">.</span><span class="na">get</span><span class="o">(),</span> <span class="n">greaterThan</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+</code></pre></div></div>
 
 <p>With this code I’m trying to see how often threads overlap each other and
 do something in parallel. This never happens and <code class="highlighter-rouge">overlaps</code> is equal to zero.
@@ -207,34 +212,35 @@ when there’s a small number of them.
 To solve that we need to use
 <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html"><code class="highlighter-rouge">CountDownLatch</code></a>:</p>
 
-<pre>CountDownLatch latch = new CountDownLatch(1);
-AtomicBoolean running = new AtomicBoolean();
-AtomicInteger overlaps = new AtomicInteger();
-Collection&lt;Future&lt;Integer&gt;&gt; futures =
-  new ArrayList&lt;&gt;(threads);
-for (int t = 0; t &lt; threads; ++t) {
-  final String title = String.format("Book #%d", t);
-  futures.add(
-    service.submit(
-      () -&gt; {
-        latch.await();
-        if (running.get()) {
-          overlaps.incrementAndGet();
-        }
-        running.set(true);
-        int id = books.add(title);
-        running.set(false);
-        return id;
-      }
-    )
-  );
-}
-latch.countDown();
-Set&lt;Integer&gt; ids = new HashSet&lt;&gt;();
-for (Future&lt;Integer&gt; f : futures) {
-  ids.add(f.get());
-}
-assertThat(overlaps.get(), greaterThan(0));</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">CountDownLatch</span> <span class="n">latch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountDownLatch</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="nc">AtomicBoolean</span> <span class="n">running</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicBoolean</span><span class="o">();</span>
+<span class="nc">AtomicInteger</span> <span class="n">overlaps</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">();</span>
+<span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">futures</span> <span class="o">=</span>
+  <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">threads</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">threads</span><span class="o">;</span> <span class="o">++</span><span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span>
+  <span class="n">futures</span><span class="o">.</span><span class="na">add</span><span class="o">(</span>
+    <span class="n">service</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span>
+      <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">latch</span><span class="o">.</span><span class="na">await</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">running</span><span class="o">.</span><span class="na">get</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">overlaps</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+<span class="n">latch</span><span class="o">.</span><span class="na">countDown</span><span class="o">();</span>
+<span class="nc">Set</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">ids</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">:</span> <span class="n">futures</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">ids</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="n">assertThat</span><span class="o">(</span><span class="n">overlaps</span><span class="o">.</span><span class="na">get</span><span class="o">(),</span> <span class="n">greaterThan</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+</code></pre></div></div>
 
 <p>Now each thread, before touching the books, waits for the permission
 given by <code class="highlighter-rouge">latch</code>. When we submit them all via <code class="highlighter-rouge">submit()</code> they stay on hold
@@ -250,22 +256,23 @@ as I was before. It’s 7-9, but never 10. The class, apparently, is not thread-
 from <a href="http://www.cactoos.org">Cactoos</a>, which does exactly the same as we’ve done above,
 but under the hood:</p>
 
-<pre>class BooksTest {
-  @Test
-  public void addsAndRetrieves() {
-    Books books = new Books();
-    MatcherAssert.assertThat(
-      t -&gt; {
-        String title = String.format(
-          "Book #%d", t.getAndIncrement()
-        );
-        int id = books.add(title);
-        return books.title(id).equals(title);
-      },
-      new RunsInThreads&lt;&gt;(new AtomicInteger(), 10)
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BooksTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addsAndRetrieves</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+    <span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="n">t</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+          <span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">()</span>
+        <span class="o">);</span>
+        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">books</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+      <span class="o">},</span>
+      <span class="k">new</span> <span class="nc">RunsInThreads</span><span class="o">&lt;&gt;(</span><span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">(),</span> <span class="mi">10</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 

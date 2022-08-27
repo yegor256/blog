@@ -88,22 +88,24 @@ un-extensible.</p>
 
 <p>Let’s say we’re making an interface that would represent a name of a person:</p>
 
-<pre>interface Name {
-  String first();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Name</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">first</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pretty easy, right? Now, let’s try to implement it:</p>
 
-<pre>public final class EnglishName implements Name {
-  private final String name;
-  public EnglishName(final CharSequence text) {
-    this.name = text.toString().split(" ", 2)[0];
-  }
-  @Override
-  public String first() {
-    return this.name;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">EnglishName</span> <span class="kd">implements</span> <span class="nc">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">EnglishName</span><span class="o">(</span><span class="kd">final</span> <span class="nc">CharSequence</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">,</span> <span class="mi">2</span><span class="o">)[</span><span class="mi">0</span><span class="o">];</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What’s wrong with this? It’s faster, right? It splits the name into
 parts only once and encapsulates them. Then, no matter how many times we
@@ -111,16 +113,17 @@ call the <code class="highlighter-rouge">first()</code> method, it will return t
 to do the splitting again. However, this is flawed thinking! Let me show
 you the right way and explain:</p>
 
-<pre>public final class EnglishName implements Name {
-  private final CharSequence text;
-  public EnglishName(final CharSequence txt) {
-    this.text = txt;
-  }
-  @Override
-  public String first() {
-    return this.text.toString().split("", 2)[0];
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">EnglishName</span> <span class="kd">implements</span> <span class="nc">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">CharSequence</span> <span class="n">text</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">EnglishName</span><span class="o">(</span><span class="kd">final</span> <span class="nc">CharSequence</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">toString</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">""</span><span class="o">,</span> <span class="mi">2</span><span class="o">)[</span><span class="mi">0</span><span class="o">];</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is the right design. I can see you smiling, so let me prove my point.</p>
 
@@ -141,17 +144,18 @@ as long as possible.</p>
 
 <p>Let’s try to use our <code class="highlighter-rouge">EnglishName</code> class:</p>
 
-<pre>final Name name = new EnglishName(
-  new NameInPostgreSQL(/*...*/)
-);
-if (/* something goes wrong */) {
-  throw new IllegalStateException(
-    String.format(
-      "Hi, %s, we can't proceed with your application",
-      name.first()
-    )
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Name</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EnglishName</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">NameInPostgreSQL</span><span class="o">(</span><span class="cm">/*...*/</span><span class="o">)</span>
+<span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="cm">/* something goes wrong */</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span>
+    <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"Hi, %s, we can't proceed with your application"</span><span class="o">,</span>
+      <span class="n">name</span><span class="o">.</span><span class="na">first</span><span class="o">()</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>In the first line of this snippet, we are just making an instance of an object
 and labeling it <code class="highlighter-rouge">name</code>. We don’t want to go to the database yet and fetch
@@ -174,43 +178,45 @@ end up with five calls to the <code class="highlighter-rouge">String.split()</co
 a <a href="/2015/02/26/composable-decorators.html">composable decorator</a>,
 which will help us solve this “re-use” problem:</p>
 
-<pre>public final class CachedName implements Name {
-  private final Name origin;
-  public CachedName(final Name name) {
-    this.origin = name;
-  }
-  @Override
-  @Cacheable(forever = true)
-  public String first() {
-    return this.origin.first();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">CachedName</span> <span class="kd">implements</span> <span class="nc">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Name</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">CachedName</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Name</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="nd">@Cacheable</span><span class="o">(</span><span class="n">forever</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">first</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I’m using the <a href="http://aspects.jcabi.com/annotation-cacheable.html"><code class="highlighter-rouge">Cacheable</code></a>
 annotation from <a href="http://aspects.jcabi.com/">jcabi-aspects</a>, but you can use any other
 caching tools available in Java (or other languages), like
 <a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava Cache</a>:</p>
 
-<pre>public final class CachedName implements Name {
-  private final Cache&lt;Long, String&gt; cache =
-    CacheBuilder.newBuilder().build();
-  private final Name origin;
-  public CachedName(final Name name) {
-    this.origin = name;
-  }
-  @Override
-  public String first() {
-    return this.cache.get(
-      1L,
-      new Callable&lt;String&gt;() {
-        @Override
-        public String call() {
-          return CachedName.this.origin.first();
-        }
-      }
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">CachedName</span> <span class="kd">implements</span> <span class="nc">Name</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Cache</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">cache</span> <span class="o">=</span>
+    <span class="nc">CacheBuilder</span><span class="o">.</span><span class="na">newBuilder</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Name</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">CachedName</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Name</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">cache</span><span class="o">.</span><span class="na">get</span><span class="o">(</span>
+      <span class="mi">1L</span><span class="o">,</span>
+      <span class="k">new</span> <span class="nc">Callable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">call</span><span class="o">()</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nc">CachedName</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">first</span><span class="o">();</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>But please don’t make <code class="highlighter-rouge">CachedName</code> mutable and lazily
 loaded—it’s an anti-pattern, which I’ve discussed before in
@@ -218,11 +224,12 @@ loaded—it’s an anti-pattern, which I’ve discussed before in
 
 <p>This is how our code will look now:</p>
 
-<pre>final Name name = new CachedName(
-  new EnglishName(
-    new NameInPostgreSQL(/*...*/)
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Name</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CachedName</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">EnglishName</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">NameInPostgreSQL</span><span class="o">(</span><span class="cm">/*...*/</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>It’s a very primitive example, but I hope you get the idea.</p>
 

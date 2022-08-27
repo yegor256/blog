@@ -99,9 +99,10 @@ unnecessary and harmful.</p>
 
 <p>Here is the code:</p>
 
-<pre>public int sizeOf(Iterable items) {
-  return ((Collection) items).size();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="o">((</span><span class="nc">Collection</span><span class="o">)</span> <span class="n">items</span><span class="o">).</span><span class="na">size</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I’m not sure everybody would agree that this is reflection, but I believe
 it is: we check the structure of the class at runtime and then make
@@ -121,10 +122,11 @@ leading to <a href="https://docs.oracle.com/javaee/5/api/javax/el/MethodNotFound
 <p>The biggest problem the code above causes to the entire program is the coupling
 it introduces between itself and its clients, for example:</p>
 
-<pre>public void calc(Iterable&lt;?&gt; list) {
-  int s = sizeOf(list);
-  System.out.println("The size is " + s);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">calc</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sizeOf</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The size is "</span> <span class="o">+</span> <span class="n">s</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This method may work or it may not. It will depend on the actual class of <code class="highlighter-rouge">list</code>. If it is
 <code class="highlighter-rouge">Collection</code>, the call to <code class="highlighter-rouge">sizeOf</code> will succeed. Otherwise, there will be a runtime failure.
@@ -132,31 +134,33 @@ By looking at the method <code class="highlighter-rouge">calc</code> we can’t 
 to avoid runtime failure. We need to read the body of <code class="highlighter-rouge">sizeOf</code> and only then can we change <code class="highlighter-rouge">calc</code>
 to something like this:</p>
 
-<pre>public void calc(Iterable&lt;?&gt; list) {
-  if (list instanceof Collection) {
-    int s = sizeOf(list);
-    System.out.println("The size is " + s);
-  } else {
-    System.out.println("The size is unknown");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">calc</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="nc">Collection</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sizeOf</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The size is "</span> <span class="o">+</span> <span class="n">s</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The size is unknown"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This code seems to be OK so far. However, what will happen when <code class="highlighter-rouge">sizeOf</code> changes its implementation
 to something like this (I took it from
 <a href="/2015/04/02/class-casting-is-anti-pattern.html">this article</a>
 about casting):</p>
 
-<pre>public int sizeOf(Iterable items) {
-  int size = 0;
-  if (items instanceof Collection) {
-    size = ((Collection) items).size();
-  } else {
-    for (Object item : items) {
-      ++size;
-    }
-  }
-  return size;
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">items</span> <span class="k">instanceof</span> <span class="nc">Collection</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="o">((</span><span class="nc">Collection</span><span class="o">)</span> <span class="n">items</span><span class="o">).</span><span class="na">size</span><span class="o">();</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Object</span> <span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+      <span class="o">++</span><span class="n">size</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, <code class="highlighter-rouge">sizeOf</code> perfectly handles any type that’s coming in, whether it’s an instance
 of <code class="highlighter-rouge">Collection</code> or not. However, the method <code class="highlighter-rouge">calc</code> doesn’t know about the changes made in the method <code class="highlighter-rouge">sizeOf</code>.
@@ -177,22 +181,23 @@ and class casting (or did not even have them), the coupling would not be possibl
 
 <p>Consider this code:</p>
 
-<pre>class Book {
-  private String author;
-  private String title;
-  Book(String a, String t) {
-    this.author = a;
-    this.title = t;
-  }
-  public void print() {
-    System.out.println(
-      "The book is: " + this.name()
-    );
-  }
-  private String name() {
-    return this.title + " by " + this.author;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">author</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nc">Book</span><span class="o">(</span><span class="nc">String</span> <span class="n">a</span><span class="o">,</span> <span class="nc">String</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">author</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+      <span class="s">"The book is: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">" by "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">author</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>How would you write a unit test for this class and for its method <code class="highlighter-rouge">print()</code>?
 Obviously, it’s almost impossible without refactoring the class.
@@ -203,20 +208,21 @@ as a dependency, but some of us
 which would allow us to test the private method <code class="highlighter-rouge">name</code> directly, without
 calling <code class="highlighter-rouge">print</code> first:</p>
 
-<pre>class BookTest {
-  @Test
-  void testNamingWorks() {
-    Book b = new Book(
-      "David West", "Object Thinking"
-    );
-    Method m = book.getClass().getDeclaredMethod("name");
-    m.setAccessible(true);
-    assertThat(
-      (String) m.invoke(book),
-      equalTo("Object Thinking by David West")
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BookTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kt">void</span> <span class="nf">testNamingWorks</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Book</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Book</span><span class="o">(</span>
+      <span class="s">"David West"</span><span class="o">,</span> <span class="s">"Object Thinking"</span>
+    <span class="o">);</span>
+    <span class="nc">Method</span> <span class="n">m</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span>
+    <span class="n">m</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="o">(</span><span class="nc">String</span><span class="o">)</span> <span class="n">m</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">book</span><span class="o">),</span>
+      <span class="n">equalTo</span><span class="o">(</span><span class="s">"Object Thinking by David West"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>You can also use <a href="https://github.com/powermock/powermock">PowerMock</a> Java library
 to do many “beautiful” things with private methods.</p>
@@ -240,20 +246,21 @@ Before I start making any changes, I run all tests
 (it’s a <a href="https://wiki.c2.com/?TestEveryRefactoring">good practice</a>) and they all pass.
 Then I make my changes, expecting no tests to fail:</p>
 
-<pre>class Book {
-  // ...
-  public void print() {
-    System.out.println(
-      "The book is: " + this.name().toString()
-    );
-  }
-  private StringBuilder name() {
-    return new StringBuilder()
-      .append(this.title)
-      .append(" by ")
-      .append(this.author);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+      <span class="s">"The book is: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">().</span><span class="na">toString</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="nc">StringBuilder</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">StringBuilder</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" by "</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">author</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>However, the test <code class="highlighter-rouge">BookTest</code> will fail, because it <em>expects</em> my class <code class="highlighter-rouge">Book</code> to have
 method <code class="highlighter-rouge">name</code> which returns <code class="highlighter-rouge">String</code>. If it’s not my test or I wrote it a long time ago,
@@ -294,17 +301,18 @@ life would be even better if we also didn’t have private methods.</p>
 <p>Here is how a typical <a href="/2017/11/14/static-factory-methods.html">factory</a>
 may work:</p>
 
-<pre>interface Operator {
-  int calc(int a, int b);
-}
-// This is a Factory Method:
-Operator make(String name) {
-  try {
-    return Class.forName("Op" + name);
-  } catch (ClassNotFoundException ex) {
-    throw new IllegalStateException(ex);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Operator</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="c1">// This is a Factory Method:</span>
+<span class="nc">Operator</span> <span class="nf">make</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"Op"</span> <span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ClassNotFoundException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The <a href="/2017/11/14/static-factory-methods.html">factory method</a>
 is <code class="highlighter-rouge">make</code>. It expects the name of the “operator” to be provided
@@ -315,34 +323,37 @@ from the Java Reflection API, constructs the name of the class, finds it in the
 and makes an instance of it. Now, say there are two classes both implementing the
 interface <code class="highlighter-rouge">Operator</code>:</p>
 
-<pre>class OpPlus implements Operator {
-  int calc(int a, int b) {
-    return a + b;
-  }
-}
-class OpMinus implements Operator {
-  int calc(int a, int b) {
-    return a - b;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OpPlus</span> <span class="kd">implements</span> <span class="nc">Operator</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">OpMinus</span> <span class="kd">implements</span> <span class="nc">Operator</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then we use them, first asking our factory method to make objects from
 operator names:</p>
 
-<pre>int result = make("Plus").calc(
-  make("Minus").calc(15, 3),
-  make("Minus").calc(8, 7)
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">make</span><span class="o">(</span><span class="s">"Plus"</span><span class="o">).</span><span class="na">calc</span><span class="o">(</span>
+  <span class="n">make</span><span class="o">(</span><span class="s">"Minus"</span><span class="o">).</span><span class="na">calc</span><span class="o">(</span><span class="mi">15</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span>
+  <span class="n">make</span><span class="o">(</span><span class="s">"Minus"</span><span class="o">).</span><span class="na">calc</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="mi">7</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">result</code> will be 13.</p>
 
 <p>We would not be able to do this without reflection. We would have to do this
 instead:</p>
 
-<pre>int result = new OpPlus().calc(
-  new OpMinus().calc(15, 3),
-  new OpMinus().calc(8, 7)
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OpPlus</span><span class="o">().</span><span class="na">calc</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">OpMinus</span><span class="o">().</span><span class="na">calc</span><span class="o">(</span><span class="mi">15</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span>
+  <span class="k">new</span> <span class="nf">OpMinus</span><span class="o">().</span><span class="na">calc</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="mi">7</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>If you ask me, this code looks much more readable and maintainable.
 First of all, because in any IDE that enables

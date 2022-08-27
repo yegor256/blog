@@ -93,21 +93,22 @@ world!"</code></p>
 
 <p>This is how that code would look in a unit test:</p>
 
-<pre>import com.jcabi.matchers.XhtmlMatchers;
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-public class FooTest {
-  @Test
-  public void hasWelcomeMessage() {
-    MatcherAssert.assertThat(
-      new Foo().createXml(),
-      XhtmlMatchers.hasXPaths(
-        "/document[count(message)=1]",
-        "/document/message[.='hello, world!']"
-      )
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.matchers.XhtmlMatchers</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">hasWelcomeMessage</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Foo</span><span class="o">().</span><span class="na">createXml</span><span class="o">(),</span>
+      <span class="nc">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPaths</span><span class="o">(</span>
+        <span class="s">"/document[count(message)=1]"</span><span class="o">,</span>
+        <span class="s">"/document/message[.='hello, world!']"</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 
@@ -146,10 +147,11 @@ problems even further, as it pre-defines most popular namespaces, including
 
 <p>The following example works right out-of-the-box—without any extra configuration:</p>
 
-<pre>MatcherAssert.assertThat(
-  new URL("http://www.google.com").getContent(),
-  XhtmlMatchers.hasXPath("//xhtml:body")
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="s">"http://www.google.com"</span><span class="o">).</span><span class="na">getContent</span><span class="o">(),</span>
+  <span class="nc">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">"//xhtml:body"</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>To summarize, my primary objective with the library was its simplicity of usage.</p>
 

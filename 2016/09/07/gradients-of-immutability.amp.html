@@ -100,15 +100,16 @@ immutable they are and why.</p>
 to the encapsulated entity and always returns the same text
 (I’ve skipped constructors for the sake of brevity):</p>
 
-<pre>class Book {
-  private final String ttl;
-  Book rename(String title) {
-    return new Book(title);
-  }
-  String title() {
-    return this.ttl;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">ttl</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Book</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">ttl</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is what we usually have in mind when talking about immutable
 objects. Such a class is very close to a
@@ -120,17 +121,18 @@ the same initial values, the result of <code class="highlighter-rouge">title()</
 
 <p>Check out this one:</p>
 
-<pre>class Book {
-  private final String ttl;
-  Book rename(String title) {
-    return new Book(title);
-  }
-  String title() {
-    return String.format(
-      "%s (as of %tR)", this.ttl, new Date()
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">ttl</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Book</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"%s (as of %tR)"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">ttl</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The object is still immutable, but it is not a pure
 function anymore because of the method <code class="highlighter-rouge">title()</code>—it returns different values if we call it
@@ -141,22 +143,23 @@ is immutable; it’s just not a constant anymore.</p>
 
 <p>How about this one:</p>
 
-<pre>class Book {
-  private final Path path;
-  Book rename(String title) {
-    Files.write(
-      this.path,
-      title.getBytes(),
-      StandardOpenOption.CREATE
-    );
-    return this;
-  }
-  String title() {
-    return new String(
-      Files.readAllBytes(this.path)
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Path</span> <span class="n">path</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">path</span><span class="o">,</span>
+      <span class="n">title</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(),</span>
+      <span class="nc">StandardOpenOption</span><span class="o">.</span><span class="na">CREATE</span>
+    <span class="o">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span>
+      <span class="nc">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">path</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This <em>immutable</em> object keeps the book title in a file. It’s not a constant,
 because its method <code class="highlighter-rouge">title()</code> may return different values on every
@@ -173,17 +176,18 @@ previous example, a mutable file was encapsulated. Even though it
 was represented by the immutable class <code class="highlighter-rouge">Path</code>, the real file on disk
 was mutable. We can do the same, but in memory:</p>
 
-<pre>class Book {
-  private final StringBuffer buffer;
-  Book rename(String title) {
-    this.buffer.setLength(0);
-    this.buffer.append(title);
-    return this;
-  }
-  String title() {
-    return this.buffer.toString();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">StringBuffer</span> <span class="n">buffer</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">setLength</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The object is still <em>immutable</em>. Is it
 <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a>? No. Is it a constant?

@@ -93,46 +93,50 @@ utility methods, which make our code procedural rather than object-oriented.</p>
 <p>First, a practical example. Here is an interface for an object that is
 supposed to read a text somewhere and return it:</p>
 
-<pre>interface Text {
-  String read();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Text</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">read</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is an implementation that reads the text from a file:</p>
 
-<pre>final class TextInFile implements Text {
-  private final File file;
-  public TextInFile(final File src) {
-    this.file = src;
-  }
-  @Override
-  public String read() {
-    return new String(
-      Files.readAllBytes(this.file.toPath()), "UTF-8"
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TextInFile</span> <span class="kd">implements</span> <span class="nc">Text</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="kd">final</span> <span class="nc">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span>
+      <span class="nc">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">.</span><span class="na">toPath</span><span class="o">()),</span> <span class="s">"UTF-8"</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And now the decorator, which is another implementation of <code class="highlighter-rouge">Text</code> that
 removes all unprintable characters from the text:</p>
 
-<pre>final class PrintableText implements Text {
-  private final Text origin;
-  public PrintableText(final Text text) {
-    this.origin = text;
-  }
-  @Override
-  public String read() {
-    return this.origin.read()
-      .replaceAll("[^\p{Print}]", "");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">PrintableText</span> <span class="kd">implements</span> <span class="nc">Text</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Text</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">PrintableText</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Text</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[^\p{Print}]"</span><span class="o">,</span> <span class="s">""</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how I’m using it:</p>
 
-<pre>final Text text = new PrintableText(
-  new TextInFile(new File("/tmp/a.txt"))
-);
-String content = text.read();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Text</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PrintableText</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/a.txt"</span><span class="o">))</span>
+<span class="o">);</span>
+<span class="nc">String</span> <span class="n">content</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>As you can see, the <code class="highlighter-rouge">PrintableText</code> doesn’t read the text from the file. It doesn’t
 really care where the text is coming from. It <em>delegates</em> text reading to
@@ -143,29 +147,31 @@ deal with the text and where it will get it doesn’t concern <code class="highl
 and try to create an implementation of <code class="highlighter-rouge">Text</code>
 that will capitalize all letters in the text:</p>
 
-<pre>final class AllCapsText implements Text {
-  private final Text origin;
-  public AllCapsText(final Text text) {
-    this.origin = text;
-  }
-  @Override
-  public String read() {
-    return this.origin.read().toUpperCase(Locale.ENGLISH);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">AllCapsText</span> <span class="kd">implements</span> <span class="nc">Text</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Text</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">AllCapsText</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Text</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">().</span><span class="na">toUpperCase</span><span class="o">(</span><span class="nc">Locale</span><span class="o">.</span><span class="na">ENGLISH</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>How about a <code class="highlighter-rouge">Text</code> that trims the input:</p>
 
-<pre>final class TrimmedText implements Text {
-  private final Text origin;
-  public TrimmedText(final Text text) {
-    this.origin = text;
-  }
-  @Override
-  public String read() {
-    return this.origin.read().trim();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TrimmedText</span> <span class="kd">implements</span> <span class="nc">Text</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Text</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">TrimmedText</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Text</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">read</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">read</span><span class="o">().</span><span class="na">trim</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 
@@ -177,14 +183,15 @@ can play together. Let’s say I want to read the text from the file,
 capitalize it, trim it, and remove all unprintable characters. And I want
 to be <em>declarative</em>. Here is what I do:</p>
 
-<pre>final Text text = new AllCapsText(
-  new TrimmedText(
-    new PrintableText(
-      new TextInFile(new File("/tmp/a.txt"))
-    )
-  )
-);
-String content = text.read();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Text</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AllCapsText</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TrimmedText</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">PrintableText</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/a.txt"</span><span class="o">))</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+<span class="nc">String</span> <span class="n">content</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>First, I create an instance of <code class="highlighter-rouge">Text</code>, <em>composing</em> multiple decorators into
 a single object. I declaratively define the behavior of <code class="highlighter-rouge">text</code> without
@@ -202,18 +209,20 @@ more than 20 <em>utility methods</em> that should have been provided as decorato
 When I want to trim my string, uppercase it, and then split it into pieces,
 here is what my code will look like:</p>
 
-<pre>final String txt = "hello, world!";
-final String[] parts = txt.trim().toUpperCase().split(" ");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">String</span> <span class="n">txt</span> <span class="o">=</span> <span class="s">"hello, world!"</span><span class="o">;</span>
+<span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">txt</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">toUpperCase</span><span class="o">().</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>This is imperative and procedural programming. Composable decorators,
 on the other hand, would make this code object-oriented and declarative. Something
 like this would be great to have in Java instead (pseudo-code):</p>
 
-<pre>final String[] parts = new String.Split(
-  new String.UpperCased(
-    new String.Trimmed("hello, world!")
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">.</span><span class="na">Split</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">String</span><span class="o">.</span><span class="na">UpperCased</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nc">String</span><span class="o">.</span><span class="na">Trimmed</span><span class="o">(</span><span class="s">"hello, world!"</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>To conclude, I recommend you think twice every time you add
 a new utility method to the interface/class. Try to avoid utility methods as much

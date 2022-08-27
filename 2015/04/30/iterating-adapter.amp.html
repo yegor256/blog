@@ -87,47 +87,50 @@ another source of data, in the form of an iterator. I hope this example will hel
 
 <p>Let’s say we have an object of this class:</p>
 
-<pre>final class Data {
-  byte[] read();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Data</span> <span class="o">{</span>
+  <span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>When we call <code class="highlighter-rouge">read()</code>, it returns a new array of bytes that were retrieved
 from somewhere. If there is nothing to retrieve, the array will be empty. Now,
 we want to create an <em>adapter</em> that would consume the bytes and let
 us iterate them:</p>
 
-<pre>final class FluentData implements Iterator&lt;Byte&gt; {
-  boolean hasNext() { /* ... */ }
-  Byte next() { /* ... */ }
-  void remove()  { /* ... */ }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+  <span class="nc">Byte</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">remove</span><span class="o">()</span>  <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how it should look (it is not thread-safe!):</p>
 
-<pre>final class FluentData implements Iterator&lt;Byte&gt; {
-  private final Data data;
-  private final Queue&lt;Byte&gt; buffer = new LinkedList&lt;&gt;();
-  public FluentData(final Data dat) {
-    this.data = dat;
-  }
-  public boolean hasNext() {
-    if (this.buffer.isEmpty()) {
-      for (final byte item : this.data.read()) {
-        this.buffer.add(item);
-      }
-    }
-    return !this.buffer.isEmpty();
-  }
-  public Byte next() {
-    if (!this.hasNext()) {
-      throw new NoSuchElementException("Nothing left");
-    }
-    return this.buffer.poll();
-  }
-  public void remove() {
-    throw new UnsupportedOperationException("It is read-only");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Data</span> <span class="n">data</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+  <span class="kd">public</span> <span class="nf">FluentData</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Data</span> <span class="n">dat</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">data</span> <span class="o">=</span> <span class="n">dat</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kd">final</span> <span class="kt">byte</span> <span class="n">item</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">data</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="o">!</span><span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Byte</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="k">this</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">NoSuchElementException</span><span class="o">(</span><span class="s">"Nothing left"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">poll</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">UnsupportedOperationException</span><span class="o">(</span><span class="s">"It is read-only"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There is no way to make it
 <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a> because the iterating process

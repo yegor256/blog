@@ -81,11 +81,12 @@ about <strong>exception catching without
 <a href="/2015/12/01/rethrow-exceptions.html">re-throwing</a></strong>. I’m talking about something like
 this Java code:</p>
 
-<pre>try {
-  stream.write(data);
-} catch (IOException ex) {
-  ex.printStackTrace();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="n">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
 
@@ -93,11 +94,12 @@ this Java code:</p>
 
 <p>Pay attention: I don’t have anything against this code:</p>
 
-<pre>try {
-  stream.write('X');
-} catch (IOException ex) {
-  throw new IllegalStateException(ex);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="n">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="sc">'X'</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is called <a href="https://en.wikipedia.org/wiki/Exception_chaining"><em>exception chaining</em></a>
 and is a perfectly valid construct.</p>
@@ -107,23 +109,25 @@ look at the bigger picture first. We’re talking about object-oriented
 programming—this means we’re dealing with objects. Here is
 how an object (its class, to be exact) would look:</p>
 
-<pre>final class Wire {
-  private final OutputStream stream;
-  Wire(final OutputStream stm) {
-    this.stream = stm;
-  }
-  public void send(final int data) {
-    try {
-      this.stream.write(x);
-    } catch (IOException ex) {
-      ex.printStackTrace();
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Wire</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stream</span><span class="o">;</span>
+  <span class="nc">Wire</span><span class="o">(</span><span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stm</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">stream</span> <span class="o">=</span> <span class="n">stm</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how I’m using this class:</p>
 
-<pre>new Wire(stream).send(1);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Wire</span><span class="o">(</span><span class="n">stream</span><span class="o">).</span><span class="na">send</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Looks nice, right? I don’t need to worry about that <code class="highlighter-rouge">IOException</code> when I’m
 calling <code class="highlighter-rouge">send(1)</code>. It will be handled internally, and if it occurs, the stacktrace
@@ -179,16 +183,17 @@ are many other problems with exceptions in Java.</p>
 
 <p>P.S. Here is how the class should look:</p>
 
-<pre>final class Wire {
-  private final OutputStream stream;
-  Wire(final OutputStream stm) {
-    this.stream = stm;
-  }
-  public void send(final int data)
-    throws IOException {
-    this.stream.write(x);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Wire</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stream</span><span class="o">;</span>
+  <span class="nc">Wire</span><span class="o">(</span><span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stm</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">stream</span> <span class="o">=</span> <span class="n">stm</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">send</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">data</span><span class="o">)</span>
+    <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 
     </article>

@@ -111,17 +111,18 @@ I’ll try to show why I consider these containers a redundancy, at least.</p>
 <p>This is what dependency injection is (not really different
 from a plain old object <a href="/2015/02/26/composable-decorators.html">composition</a>):</p>
 
-<pre>public class Budget {
-  private final DB db;
-  public Budget(DB data) {
-    this.db = data;
-  }
-  public long total() {
-    return this.db.cell(
-      "SELECT SUM(cost) FROM ledger"
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Budget</span><span class="o">(</span><span class="no">DB</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">db</span> <span class="o">=</span> <span class="n">data</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">long</span> <span class="nf">total</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">db</span><span class="o">.</span><span class="na">cell</span><span class="o">(</span>
+      <span class="s">"SELECT SUM(cost) FROM ledger"</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The object <code class="highlighter-rouge">data</code> is called a “dependency.”</p>
 
@@ -130,25 +131,27 @@ needs from the database is its ability to fetch a cell, using an
 arbitrary SQL query, via method <code class="highlighter-rouge">cell()</code>. We can instantiate a <code class="highlighter-rouge">Budget</code> with a PostgreSQL
 implementation of the <code class="highlighter-rouge">DB</code> interface, for example:</p>
 
-<pre>public class App {
-  public static void main(String... args) {
-    Budget budget = new Budget(
-      new Postgres("jdbc:postgresql:5740/main")
-    );
-    System.out.println("Total is: " + budget.total());
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Budget</span> <span class="n">budget</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Budget</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Postgres</span><span class="o">(</span><span class="s">"jdbc:postgresql:5740/main"</span><span class="o">)</span>
+    <span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Total is: "</span> <span class="o">+</span> <span class="n">budget</span><span class="o">.</span><span class="na">total</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>In other words, we’re “injecting” a dependency into a new object <code class="highlighter-rouge">budget</code>.</p>
 
 <p>An alternative to this “dependency injection” approach would be
 to let <code class="highlighter-rouge">Budget</code> decide what database it wants to work with:</p>
 
-<pre>public class Budget {
-  private final DB db =
-    new Postgres("jdbc:postgresql:5740/main");
-  // class methods
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="nf">Postgres</span><span class="o">(</span><span class="s">"jdbc:postgresql:5740/main"</span><span class="o">);</span>
+  <span class="c1">// class methods</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is very dirty and leads to 1) code duplication, 2) inability
 to reuse, and 3) inability to test, etc. No need to discuss
@@ -168,15 +171,16 @@ injection container. Here is how it works (let’s use
 <a href="https://github.com/google/guice">Google Guice</a>
 as an example):</p>
 
-<pre>import javax.inject.Inject;
-public class Budget {
-  private final DB db;
-  @Inject
-  public Budget(DB data) {
-    this.db = data;
-  }
-  // same methods as above
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.inject.Inject</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
+  <span class="nd">@Inject</span>
+  <span class="kd">public</span> <span class="nf">Budget</span><span class="o">(</span><span class="no">DB</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">db</span> <span class="o">=</span> <span class="n">data</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// same methods as above</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pay attention: the constructor is annotated with
 <a href="http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html"><code class="highlighter-rouge">@Inject</code></a>.</p>
@@ -184,29 +188,31 @@ public class Budget {
 <p>Then, we’re supposed to configure a container
 somewhere, when the application starts:</p>
 
-<pre>Injector injector = Guice.createInjector(
-  new AbstractModule() {
-    @Override
-    public void configure() {
-      this.bind(DB.class).toInstance(
-        new Postgres("jdbc:postgresql:5740/main")
-      );
-    }
-  }
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="nc">Guice</span><span class="o">.</span><span class="na">createInjector</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">AbstractModule</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="no">DB</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">toInstance</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">Postgres</span><span class="o">(</span><span class="s">"jdbc:postgresql:5740/main"</span><span class="o">)</span>
+      <span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Some frameworks even allow us to configure the injector in an XML file.</p>
 
 <p>From now on, we are not allowed to instantiate <code class="highlighter-rouge">Budget</code> through the <code class="highlighter-rouge">new</code> operator,
 like we did before. Instead, we should use the injector we just created:</p>
 
-<pre>public class App {
-  public static void main(String... args) {
-    Injection injector = // as we just did in the previous snippet
-    Budget budget = injector.getInstance(Budget.class);
-    System.out.println("Total is: " + budget.total());
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Injection</span> <span class="n">injector</span> <span class="o">=</span> <span class="c1">// as we just did in the previous snippet</span>
+    <span class="nc">Budget</span> <span class="n">budget</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="nc">Budget</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Total is: "</span> <span class="o">+</span> <span class="n">budget</span><span class="o">.</span><span class="na">total</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The injection automatically finds out that in order to instantiate
 a <code class="highlighter-rouge">Budget</code> it has to provide an argument for its constructor. It will

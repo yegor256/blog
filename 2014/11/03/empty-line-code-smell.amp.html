@@ -87,33 +87,34 @@ and its functional decomposition should be done by language constructs
 
 <p>Look at this Java class (it does smell, doesn’t it?):</p>
 
-<pre>final class TextFile {
-  private final File file;
-  TextFile(File src) {
-    this.file = src;
-  }
-  public int grep(Pattern regex) throws IOException {
-    Collection&lt;String&gt; lines = new LinkedList&lt;&gt;();
-    try (BufferedReader reader =
-      new BufferedReader(new FileReader(this.file))) {
-      while (true) {
-        String line = reader.readLine();
-        if (line == null) {
-          break;
-        }
-        lines.add(line);
-      }
-    }
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TextFile</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">TextFile</span><span class="o">(</span><span class="nc">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="k">try</span> <span class="o">(</span><span class="nc">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span>
+      <span class="k">new</span> <span class="nf">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">)))</span> <span class="o">{</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">line</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">lines</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
 
-    int total = 0;
-    for (String line : lines) {
-      if (regex.matcher(line).matches()) {
-        ++total;
-      }
-    }
-    return total;
-  }
-}</pre>
+    <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
+        <span class="o">++</span><span class="n">total</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">total</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This method first loads the content of the file. Second, it
 counts how many lines match the regular expression provided. So why does
@@ -123,38 +124,39 @@ method <code class="highlighter-rouge">grep</code> smell? Because it does two th
 will have to be refactored in order to preserve the “separation of concerns”
 introduced by that empty line:</p>
 
-<pre>final class TextFile {
-  private final File file;
-  TextFile(File src) {
-    this.file = src;
-  }
-  public int grep(Pattern regex) throws IOException {
-    return this.count(this.lines(), regex);
-  }
-  private int count(Iterable&lt;String&gt; lines, Pattern regex) {
-    int total = 0;
-    for (String line : lines) {
-      if (regex.matcher(line).matches()) {
-        ++total;
-      }
-    }
-    return total;
-  }
-  private Iterable&lt;String&gt; lines() throws IOException {
-    Collection&lt;String&gt; lines = new LinkedList&lt;&gt;();
-    try (BufferedReader reader =
-      new BufferedReader(new FileReader(this.file))) {
-      while (true) {
-        String line = reader.readLine();
-        if (line == null) {
-          break;
-        }
-        lines.add(line);
-      }
-      return lines;
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TextFile</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">TextFile</span><span class="o">(</span><span class="nc">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">count</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">lines</span><span class="o">(),</span> <span class="n">regex</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="nf">count</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">lines</span><span class="o">,</span> <span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
+        <span class="o">++</span><span class="n">total</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">total</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">lines</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="k">try</span> <span class="o">(</span><span class="nc">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span>
+      <span class="k">new</span> <span class="nf">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">)))</span> <span class="o">{</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">line</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">lines</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="k">return</span> <span class="n">lines</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I believe it is obvious that this new class has methods that are
 much more cohesive and readable. Now every method is doing exactly
@@ -164,27 +166,29 @@ one thing, and it’s easy to understand which thing it is.</p>
 not just Java/C++/Ruby, etc. For example, this CSS code is
 definitely begging for refactoring:</p>
 
-<pre>.container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">80%</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
 
-  font-size: 2em;
-  font-weight: bold;
-}</pre>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>The empty line here is telling us (screaming at us, actually) that this <code class="highlighter-rouge">.container</code>
 class is too complex and has to be decomposed into two classes:</p>
 
-<pre>.wide {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.important {
-  font-size: 2em;
-  font-weight: bold;
-}</pre>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.wide</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">80%</span><span class="p">;</span>
+  <span class="nl">margin-left</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.important</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Unfortunately, using empty lines to separate blocks of code is a very common habit.
 Moreover, very often I see empty blocks of two or even three lines, which are all

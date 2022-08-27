@@ -89,16 +89,17 @@ And a big, complex scope is an obvious code smell.</p>
 <p>The scope of a variable is the place where it is visible, like a method, for example. Look
 at this Ruby class:</p>
 
-<pre>class CSV
-  def initialize(csvFileName)
-    @fileName = csvFileName
-  end
-  def readRecords()
-    File.readLines(@fileName).map |csvLine|
-      csvLine.split(',')
-    end
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CSV</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">csvFileName</span><span class="p">)</span>
+    <span class="vi">@fileName</span> <span class="o">=</span> <span class="n">csvFileName</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">readRecords</span><span class="p">()</span>
+    <span class="no">File</span><span class="p">.</span><span class="nf">readLines</span><span class="p">(</span><span class="vi">@fileName</span><span class="p">).</span><span class="nf">map</span> <span class="o">|</span><span class="n">csvLine</span><span class="o">|</span>
+      <span class="n">csvLine</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>The visible scope of variable <code class="highlighter-rouge">csvFileName</code> is method <code class="highlighter-rouge">initialize()</code>, which
 is a constructor of the class <code class="highlighter-rouge">CSV</code>. Why does it need a compound name
@@ -113,16 +114,17 @@ The same situation exists with the <code class="highlighter-rouge">csvLine</code
 dealing with CSV lines here. The <code class="highlighter-rouge">csv</code> prefix is just a redundancy.
 Here is how I would refactor the class:</p>
 
-<pre>class CSV
-  def initialize(file)
-    @file = file
-  end
-  def records()
-    File.readLines(@file).map |line|
-      line.split(',')
-    end
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CSV</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="vi">@file</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">records</span><span class="p">()</span>
+    <span class="no">File</span><span class="p">.</span><span class="nf">readLines</span><span class="p">(</span><span class="vi">@file</span><span class="p">).</span><span class="nf">map</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+      <span class="n">line</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Now it looks clear and concise.</p>
 

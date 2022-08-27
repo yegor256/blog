@@ -101,52 +101,55 @@ If you don’t, here is a quick reminder:</p>
 <p>A web browser sends a request to the server and the request looks
 like this (it’s a plain text piece of data):</p>
 
-<pre>GET /index.html HTTP/1.1
-Host: www.example.com</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /index.html HTTP/1.1
+Host: www.example.com
+</code></pre></div></div>
 
 <p>The server has to read this text, prepare the answer (which has to be the
 HTML page readable by the browser) and return it like this:</p>
 
-<pre>HTTP/1.1 200 OK
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
 Content-Length: 26
 
-&lt;html&gt;Hello, world!&lt;/html&gt;</pre>
+&lt;html&gt;Hello, world!&lt;/html&gt;
+</code></pre></div></div>
 
 <p>That’s it. It’s a very simple and, I would say, primitive protocol. The implementation
 of a web server in Java is not so complex either. Here it is, in a very
 simplistic form:</p>
 
-<pre>import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
-import java.util.Arrays;
-public class Main {
-  public static void main(String... argv) {
-    try (ServerSocket server = new ServerSocket(8080)) {
-      server.setSoTimeout(1000);
-      while (true) {
-        try (Socket socket = server.accept()) {
-          try (InputStream input = socket.getInputStream();
-            OutputStream output = socket.getOutputStream()) {
-            byte[] buffer = new byte[10000];
-            int total = input.read(buffer);
-            String request = new String(Arrays.copyOfRange(buffer, 0, total));
-            String response = "HTTP/1.1 200 OK\r\n\r\nHello, world!";
-            output.write(response.getBytes());
-          }
-        } catch (SocketTimeoutException ex) {
-          if (Thread.currentThread().isInterrupted()) {
-              break;
-          }
-        }
-      }
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.InputStream</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.OutputStream</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.net.ServerSocket</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.net.Socket</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.net.SocketTimeoutException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">argv</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">(</span><span class="nc">ServerSocket</span> <span class="n">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ServerSocket</span><span class="o">(</span><span class="mi">8080</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">server</span><span class="o">.</span><span class="na">setSoTimeout</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">(</span><span class="nc">Socket</span> <span class="n">socket</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="na">accept</span><span class="o">())</span> <span class="o">{</span>
+          <span class="k">try</span> <span class="o">(</span><span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
+            <span class="nc">OutputStream</span> <span class="n">output</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">())</span> <span class="o">{</span>
+            <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">10000</span><span class="o">];</span>
+            <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">);</span>
+            <span class="nc">String</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">copyOfRange</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">total</span><span class="o">));</span>
+            <span class="nc">String</span> <span class="n">response</span> <span class="o">=</span> <span class="s">"HTTP/1.1 200 OK\r\n\r\nHello, world!"</span><span class="o">;</span>
+            <span class="n">output</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+          <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SocketTimeoutException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">if</span> <span class="o">(</span><span class="nc">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">isInterrupted</span><span class="o">())</span> <span class="o">{</span>
+              <span class="k">break</span><span class="o">;</span>
+          <span class="o">}</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Try to run it, it should work. You should be able to open the <code class="highlighter-rouge">http://localhost:8080</code>
 page in your browser and see the <code class="highlighter-rouge">Hello, world!</code> text.</p>
@@ -186,16 +189,18 @@ it is <code class="highlighter-rouge">GET /</code>, it is one resource. But if w
 request has, for example, <code class="highlighter-rouge">Accept: text/plain</code>, we can mutate the request
 and create a new one, which delivers plain text. Here is the interface:</p>
 
-<pre>interface Resource {
-  Resource refine(String name, String value);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Resource</span> <span class="o">{</span>
+  <span class="nc">Resource</span> <span class="nf">refine</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">value</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how we create it and mutate:</p>
 
-<pre>Resource r = new DefaultResource()
-  .refine("X-Method", "GET")
-  .refine("X-Query", "/")
-  .refine("Accept", "text/plain");</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Resource</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DefaultResource</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">refine</span><span class="o">(</span><span class="s">"X-Method"</span><span class="o">,</span> <span class="s">"GET"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">refine</span><span class="o">(</span><span class="s">"X-Query"</span><span class="o">,</span> <span class="s">"/"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">refine</span><span class="o">(</span><span class="s">"Accept"</span><span class="o">,</span> <span class="s">"text/plain"</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Pay attention: each call to <code class="highlighter-rouge">.refine()</code> returns a new instance
 of interface <code class="highlighter-rouge">Resource</code>. All of them are immutable, just like objects
@@ -213,78 +218,83 @@ to escape the resource. We want the resource
 <a href="/2016/04/05/printers-instead-of-getters.html">to print</a> the
 response. How about giving an additional method <code class="highlighter-rouge">print()</code> to the resource:</p>
 
-<pre>interface Resource {
-  Resource refine(String name, String value);
-  void print(Output output);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Resource</span> <span class="o">{</span>
+  <span class="nc">Resource</span> <span class="nf">refine</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">value</span><span class="o">);</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Output</span> <span class="n">output</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And then the interface <code class="highlighter-rouge">Output</code> looks like this:</p>
 
-<pre>interface Output {
-  void print(String name, String value);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Output</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">value</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is a primitive implementation of <code class="highlighter-rouge">Output</code>:</p>
 
-<pre>public class StringBuilderOutput implements Output {
-  private final StringBuilder buffer;
-  StringBuilderOutput(StringBuilder buf) {
-    this.buffer = buf;
-  }
-  @Override
-  public void print(String name, String value) {
-    if (this.buffer.length() == 0) {
-      this.buffer.append("HTTP/1.1 200 OK\r\n");
-    }
-    if (name.equals("X-Body")) {
-      this.buffer.append("\r\n").append(value);
-    } else {
-      this.buffer.append(name).append(": ").append(value).append("\r\n");
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringBuilderOutput</span> <span class="kd">implements</span> <span class="nc">Output</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">StringBuilder</span> <span class="n">buffer</span><span class="o">;</span>
+  <span class="nc">StringBuilderOutput</span><span class="o">(</span><span class="nc">StringBuilder</span> <span class="n">buf</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">buffer</span> <span class="o">=</span> <span class="n">buf</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"HTTP/1.1 200 OK\r\n"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">name</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"X-Body"</span><span class="o">))</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"\r\n"</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">name</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">": "</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">value</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="s">"\r\n"</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>To build an HTTP response we can do this:</p>
 
-<pre>StringBuilder builder = new StringBuilder();
-Output output = new StringBuilderOutput(builder);
-output.print("Content-Type", "text/plain");
-output.print("Content-Length", "13");
-output.print("X-Body", "Hello, world!");
-System.out.println(builder.toString());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">StringBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
+<span class="nc">Output</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilderOutput</span><span class="o">(</span><span class="n">builder</span><span class="o">);</span>
+<span class="n">output</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Content-Type"</span><span class="o">,</span> <span class="s">"text/plain"</span><span class="o">);</span>
+<span class="n">output</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Content-Length"</span><span class="o">,</span> <span class="s">"13"</span><span class="o">);</span>
+<span class="n">output</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"X-Body"</span><span class="o">,</span> <span class="s">"Hello, world!"</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">builder</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>Now let’s create a class which will take an incoming request <code class="highlighter-rouge">String</code>
 and produce a response <code class="highlighter-rouge">String</code>, using an instance of <code class="highlighter-rouge">Resource</code> as a
 <em>dispatcher</em>:</p>
 
-<pre>public class Session {
-  private final Resource resource;
-  Session(Resource res) {
-    this.resource = res;
-  }
-  String response(String request) throws IOException {
-    Map&lt;String, String&gt; pairs = new HashMap&lt;&gt;();
-    String[] lines = request.split("\r\n");
-    for (int idx = 1; idx &lt; lines.length; ++idx) {
-      String[] parts = lines[idx].split(":");
-      pairs.put(parts[0].trim(), parts[1].trim());
-      if (lines[idx].empty()) {
-        break;
-      }
-    }
-    String[] parts = lines[0].split(" ");
-    pairs.put("X-Method", parts[0]);
-    pairs.put("X-Query", parts[1]);
-    pairs.put("X-Protocol", parts[2]);
-    App.Resource res = this.resource;
-    for (Map.Entry&lt;String, String&gt; pair : pairs.entrySet()) {
-      res = res.refine(pair.getKey(), pair.getValue());
-    }
-    StringBuilder buf = new StringBuilder();
-    res.print(new StringBuilderOutput(buf));
-    return buf.toString();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Session</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Resource</span> <span class="n">resource</span><span class="o">;</span>
+  <span class="nc">Session</span><span class="o">(</span><span class="nc">Resource</span> <span class="n">res</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">resource</span> <span class="o">=</span> <span class="n">res</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">response</span><span class="o">(</span><span class="nc">String</span> <span class="n">request</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">pairs</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">String</span><span class="o">[]</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">"\r\n"</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="n">lines</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">idx</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">lines</span><span class="o">[</span><span class="n">idx</span><span class="o">].</span><span class="na">split</span><span class="o">(</span><span class="s">":"</span><span class="o">);</span>
+      <span class="n">pairs</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">parts</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">trim</span><span class="o">(),</span> <span class="n">parts</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">trim</span><span class="o">());</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">lines</span><span class="o">[</span><span class="n">idx</span><span class="o">].</span><span class="na">empty</span><span class="o">())</span> <span class="o">{</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="n">lines</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">);</span>
+    <span class="n">pairs</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"X-Method"</span><span class="o">,</span> <span class="n">parts</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+    <span class="n">pairs</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"X-Query"</span><span class="o">,</span> <span class="n">parts</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+    <span class="n">pairs</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"X-Protocol"</span><span class="o">,</span> <span class="n">parts</span><span class="o">[</span><span class="mi">2</span><span class="o">]);</span>
+    <span class="nc">App</span><span class="o">.</span><span class="na">Resource</span> <span class="n">res</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">resource</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">pair</span> <span class="o">:</span> <span class="n">pairs</span><span class="o">.</span><span class="na">entrySet</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="na">refine</span><span class="o">(</span><span class="n">pair</span><span class="o">.</span><span class="na">getKey</span><span class="o">(),</span> <span class="n">pair</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="nc">StringBuilder</span> <span class="n">buf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
+    <span class="n">res</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="k">new</span> <span class="nc">StringBuilderOutput</span><span class="o">(</span><span class="n">buf</span><span class="o">));</span>
+    <span class="k">return</span> <span class="n">buf</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>First, we parse the request, breaking its header into lines and ignoring
 the body of the request. You can modify the code to parse the body
@@ -294,49 +304,51 @@ part of the snippet prepares the pairs it can find in the request and passes the
 to the encapsulated resource, mutating it until it gets to the final form.
 A simple resource that always returns text might look like this:</p>
 
-<pre>class TextResource implements Resource {
-  private final String body;
-  public TextResource(String text) {
-    this.body = text;
-  }
-  @Override
-  public Resource refine(String name, String value) {
-    return this;
-  }
-  @Override
-  public void print(Output output) {
-    output.print("Content-Type", "text/plain");
-    output.print("Content-Length", Integer.toString(this.body.length()));
-    output.print("X-Body", this.body);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TextResource</span> <span class="kd">implements</span> <span class="nc">Resource</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">body</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">TextResource</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">body</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Resource</span> <span class="nf">refine</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="nc">Output</span> <span class="n">output</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">output</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Content-Type"</span><span class="o">,</span> <span class="s">"text/plain"</span><span class="o">);</span>
+    <span class="n">output</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Content-Length"</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">body</span><span class="o">.</span><span class="na">length</span><span class="o">()));</span>
+    <span class="n">output</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"X-Body"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">body</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>A resource that pays attention to the query string and dispatches
 the request to other resources, depending on the path in the query,
 might look like this:</p>
 
-<pre>new Resource() {
-  @Override
-  public Resource refine(String name, String value) {
-    if (name.equals("X-Query")) {
-      if (value.equals("/")) {
-        return new TextResource("Hello, world!");
-      } else if (value.equals("/balance")) {
-        return new TextResource("256");
-      } else if (value.equals("/id")) {
-        return new TextResource("yegor");
-      } else {
-        return new TextResource("Not found!");
-      }
-    } else {
-      return this;
-    }
-  }
-  @Override
-  public void print(final Output output) {
-    throws IllegalStateException("This shouldn't happen");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Resource</span><span class="o">()</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Resource</span> <span class="nf">refine</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">name</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"X-Query"</span><span class="o">))</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"/"</span><span class="o">))</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TextResource</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"/balance"</span><span class="o">))</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TextResource</span><span class="o">(</span><span class="s">"256"</span><span class="o">);</span>
+      <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">value</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"/id"</span><span class="o">))</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TextResource</span><span class="o">(</span><span class="s">"yegor"</span><span class="o">);</span>
+      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TextResource</span><span class="o">(</span><span class="s">"Not found!"</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Output</span> <span class="n">output</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">throws</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="s">"This shouldn't happen"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I hope you got the idea. The code above is rather sketchy, and the majority
 of use cases are not implemented, but you can do that yourself, if you are

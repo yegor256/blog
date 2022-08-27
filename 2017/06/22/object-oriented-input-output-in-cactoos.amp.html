@@ -104,20 +104,22 @@ may have different names of classes and a totally different design.</p>
 <a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html"><code class="highlighter-rouge">Files</code></a>
 in JDK7:</p>
 
-<pre>byte[] content = Files.readAllBytes(
-  new File("/tmp/photo.jpg").toPath()
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">byte</span><span class="o">[]</span> <span class="n">content</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/photo.jpg"</span><span class="o">).</span><span class="na">toPath</span><span class="o">()</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>This code is very imperative—it reads the file content right here and now,
 placing it into the array.</p>
 
 <p>This is how you do it with <a href="https://github.com/yegor256/cactoos">Cactoos</a>:</p>
 
-<pre>Bytes source = new InputAsBytes(
-  new FileAsInput(
-    new File("/tmp/photo.jpg")
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Bytes</span> <span class="n">source</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">InputAsBytes</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">FileAsInput</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/photo.jpg"</span><span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Pay attention—there are no method calls yet. Just three constructors
 of three classes that compose a bigger object. The object <code class="highlighter-rouge">source</code> is of type
@@ -125,7 +127,8 @@ of three classes that compose a bigger object. The object <code class="highlight
 and represents the content of the file. To get that content
 out of it we call its method <code class="highlighter-rouge">asBytes()</code>:</p>
 
-<pre>bytes[] content = source.asBytes();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bytes</span><span class="o">[]</span> <span class="n">content</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="na">asBytes</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This is the moment when the file system is touched. This approach, as you
 can see, is absolutely declarative and thanks to that possesses all the
@@ -135,19 +138,21 @@ benefits of object orientation.</p>
 is how you do it in Cactoos. First you need the
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html"><code class="highlighter-rouge">Input</code></a>:</p>
 
-<pre>Input input = new BytesAsInput(
-  new TextAsBytes(
-    new StringAsText(
-      "Hello, world!"
-    )
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Input</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BytesAsInput</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TextAsBytes</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">StringAsText</span><span class="o">(</span>
+      <span class="s">"Hello, world!"</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Then you need the <a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Output.html"><code class="highlighter-rouge">Output</code></a>:</p>
 
-<pre>Output output = new FileAsOutput(
-  new File("/tmp/hello.txt")
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Output</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileAsOutput</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/hello.txt"</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Now, we want to copy the input to the output. There is no “copy” operation
 in <em>pure</em> OOP. Moreover, there must be no operations at all. Just objects. We
@@ -162,7 +167,8 @@ from <a href="https://commons.apache.org/">Apache Commons</a> does, but encapsul
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html"><code class="highlighter-rouge">Input</code></a>
 that will copy if you <em>touch</em> it:</p>
 
-<pre>Input tee = new TeeInput(input, output);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Input</span> <span class="n">tee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TeeInput</span><span class="o">(</span><span class="n">input</span><span class="o">,</span> <span class="n">output</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Now, we have to “touch” it. And we have to touch every single byte of it,
 in order to make sure they all are copied. If we just <code class="highlighter-rouge">read()</code> the first
@@ -174,37 +180,41 @@ It encapsulates an
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.9/org/cactoos/Input.html"><code class="highlighter-rouge">Input</code></a>
 and behaves like its length in bytes:</p>
 
-<pre>Scalar&lt;Long&gt; length = new LengthOfInput(tee);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">length</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LengthOfInput</span><span class="o">(</span><span class="n">tee</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Then we take the value out of it and the file writing operation takes place:</p>
 
-<pre>long len = length.value();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">long</span> <span class="n">len</span> <span class="o">=</span> <span class="n">length</span><span class="o">.</span><span class="na">value</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Thus, the entire operation of writing the string to the file will
 look like this:</p>
 
-<pre>new LengthOfInput(
-  new TeeInput(
-    new BytesAsInput(
-      new TextAsBytes(
-        new StringAsText(
-          "Hello, world!"
-        )
-      )
-    ),
-    new FileAsOutput(
-      new File("/tmp/hello.txt")
-    )
-  )
-).value(); // happens here</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">LengthOfInput</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TeeInput</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">BytesAsInput</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">TextAsBytes</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">StringAsText</span><span class="o">(</span>
+          <span class="s">"Hello, world!"</span>
+        <span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">),</span>
+    <span class="k">new</span> <span class="nf">FileAsOutput</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/hello.txt"</span><span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">).</span><span class="na">value</span><span class="o">();</span> <span class="c1">// happens here</span>
+</code></pre></div></div>
 
 <p>This is its procedural alternative from
 <a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte%5B%5D,%20java.nio.file.OpenOption...%29">JDK7</a>:</p>
 
-<pre>Files.write(
-  new File("/tmp/hello.txt").toPath(),
-  "Hello, world!".getBytes()
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/hello.txt"</span><span class="o">).</span><span class="na">toPath</span><span class="o">(),</span>
+  <span class="s">"Hello, world!"</span><span class="o">.</span><span class="na">getBytes</span><span class="o">()</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>“Why is object-oriented better, even though it’s longer?” I hear you ask.
 Because it perfectly <strong>decouples</strong> concepts, while the procedural one keeps
@@ -214,18 +224,19 @@ them together.</p>
 to encrypt some text and save it to a file. Here is how you would
 design it the procedural way (not a real encryption, of course):</p>
 
-<pre>class Encoder {
-  private final File target;
-  Encoder(final File file) {
-    this.target = file;
-  }
-  void encode(String text) {
-    Files.write(
-      this.target,
-      text.replaceAll("[a-z]", "*")
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encoder</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">target</span><span class="o">;</span>
+  <span class="nc">Encoder</span><span class="o">(</span><span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">target</span> <span class="o">=</span> <span class="n">file</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">encode</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">target</span><span class="o">,</span>
+      <span class="n">text</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[a-z]"</span><span class="o">,</span> <span class="s">"*"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Works fine, but what will happen when you decide to extend it to also write to
 an <a href="https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html"><code class="highlighter-rouge">OutputStream</code></a>?
@@ -235,40 +246,42 @@ That’s because the design is not object-oriented.</p>
 <p>This is how you would do the same design, in an object-oriented way,
 with <a href="http://www.cactoos.org">Cactoos</a>:</p>
 
-<pre>class Encoder {
-  private final Output target;
-  Encoder(final File file) {
-    this(new FileAsOutput(file));
-  }
-  Encoder(final Output output) {
-    this.target = output;
-  }
-  void encode(String text) {
-    new LengthOfInput(
-      new TeeInput(
-        new BytesAsInput(
-          new TextAsBytes(
-            new StringAsText(
-              text.replaceAll("[a-z]", "*")
-            )
-          )
-        ),
-        this.target
-      )
-    ).value();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encoder</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Output</span> <span class="n">target</span><span class="o">;</span>
+  <span class="nc">Encoder</span><span class="o">(</span><span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileAsOutput</span><span class="o">(</span><span class="n">file</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Encoder</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Output</span> <span class="n">output</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">target</span> <span class="o">=</span> <span class="n">output</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">encode</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">LengthOfInput</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">TeeInput</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">BytesAsInput</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">TextAsBytes</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">StringAsText</span><span class="o">(</span>
+              <span class="n">text</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s">"[a-z]"</span><span class="o">,</span> <span class="s">"*"</span><span class="o">)</span>
+            <span class="o">)</span>
+          <span class="o">)</span>
+        <span class="o">),</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">target</span>
+      <span class="o">)</span>
+    <span class="o">).</span><span class="na">value</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What do we do with this design if we want
 <a href="https://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html"><code class="highlighter-rouge">OutputStream</code></a>
 to be accepted? We just add one
 <a href="/2015/05/28/one-primary-constructor.html">secondary</a> constructor:</p>
 
-<pre>class Encoder {
-  Encoder(final OutputStream stream) {
-    this(new OutputStreamAsOutput(stream));
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encoder</span> <span class="o">{</span>
+  <span class="nc">Encoder</span><span class="o">(</span><span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">OutputStreamAsOutput</span><span class="o">(</span><span class="n">stream</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Done. That’s how easy and elegant it is.</p>
 

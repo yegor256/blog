@@ -93,25 +93,27 @@ created <a href="http://www.cactoos.org">Cactoos</a>, a library of decorators, t
 <p>Here is a primitive example. Let’s say we have a collection of measurements
 coming in from some data source, they are all numbers between zero and one:</p>
 
-<pre>Iterable&lt;Double&gt; probes;</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;</span> <span class="n">probes</span><span class="o">;</span>
+</code></pre></div></div>
 
 <p>Now, we need to show only the first 10 of them, ignoring zeros and ones,
 and re-scaling them to <code class="highlighter-rouge">(0..100)</code>. Sounds like an easy task, right? There
 are three ways to do it: procedural, object-oriented, and the Java 8 way. Let’s
 start with the procedural way:</p>
 
-<pre>int pos = 0;
-for (Double probe : probes) {
-  if (probe == 0.0d || probe == 1.0d) {
-    continue;
-  }
-  if (++pos &gt; 10) {
-    break;
-  }
-  System.out.printf(
-    "Probe #%d: %f", pos, probe * 100.0d
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Double</span> <span class="n">probe</span> <span class="o">:</span> <span class="n">probes</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">probe</span> <span class="o">==</span> <span class="mf">0.0d</span> <span class="o">||</span> <span class="n">probe</span> <span class="o">==</span> <span class="mf">1.0d</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">continue</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">if</span> <span class="o">(++</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+    <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="n">pos</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Why is this a procedural way? Because it’s imperative. Why is it imperative?
 Because it’s procedural. Nah, I’m kidding.</p>
@@ -136,14 +138,15 @@ which
 <a href="https://stackoverflow.com/questions/23114015/">doesn’t</a>
 let us obtain directly. Then we use the stream API to do the job:</p>
 
-<pre>StreamSupport.stream(probes.spliterator(), false)
-  .filter(p -&gt; p == 0.0d || p == 1.0d)
-  .limit(10L)
-  .forEach(
-    probe -&gt; System.out.printf(
-      "Probe #%d: %f", 0, probe * 100.0d
-    )
-  );</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">StreamSupport</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">probes</span><span class="o">.</span><span class="na">spliterator</span><span class="o">(),</span> <span class="kc">false</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="n">p</span> <span class="o">==</span> <span class="mf">0.0d</span> <span class="o">||</span> <span class="n">p</span> <span class="o">==</span> <span class="mf">1.0d</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">limit</span><span class="o">(</span><span class="mi">10L</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">forEach</span><span class="o">(</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+      <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</code></pre></div></div>
 
 <p>This will work, but will say <code class="highlighter-rouge">Probe #0</code> for all probes, because <code class="highlighter-rouge">forEach()</code>
 doesn’t work with indexes. There is no such thing as <code class="highlighter-rouge">forEachWithIndex()</code>
@@ -153,17 +156,18 @@ interface as of Java 8 (and Java 9
 Here is a <a href="https://stackoverflow.com/a/18552071/187141">workaround</a> with
 an atomic counter:</p>
 
-<pre>AtomicInteger index = new AtomicInteger();
-StreamSupport.stream(probes.spliterator(), false)
-  .filter(probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d)
-  .limit(10L)
-  .forEach(
-    probe -&gt; System.out.printf(
-      "Probe #%d: %f",
-      index.getAndIncrement(),
-      probe * 100.0d
-    )
-  );</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">AtomicInteger</span> <span class="n">index</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">();</span>
+<span class="nc">StreamSupport</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">probes</span><span class="o">.</span><span class="na">spliterator</span><span class="o">(),</span> <span class="kc">false</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">limit</span><span class="o">(</span><span class="mi">10L</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">forEach</span><span class="o">(</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+      <span class="s">"Probe #%d: %f"</span><span class="o">,</span>
+      <span class="n">index</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">(),</span>
+      <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</code></pre></div></div>
 
 <p>“What’s wrong with that?” you may ask. First, see how easily we got into
 trouble when we didn’t find the right method in the <code class="highlighter-rouge">Stream</code> interface. We
@@ -190,23 +194,24 @@ ones.</p>
 is how I would do it with <a href="http://www.cactoos.org">Cactoos</a>, which is just a collection of
 <del>primitive</del> simple Java classes:</p>
 
-<pre>new And(
-  new Mapped&lt;Double, Scalar&lt;Boolean&gt;&gt;(
-    new Limited&lt;Double&gt;(
-      new Filtered&lt;Double&gt;(
-        probes,
-        probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d
-      ),
-      10
-    ),
-    probe -&gt; () -&gt; {
-      System.out.printf(
-        "Probe #%d: %f", 0, probe * 100.0d
-      );
-      return true;
-    }
-  )
-).value();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">And</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">Mapped</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">,</span> <span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span>
+    <span class="k">new</span> <span class="nc">Limited</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+      <span class="k">new</span> <span class="nc">Filtered</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+        <span class="n">probes</span><span class="o">,</span>
+        <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span>
+      <span class="o">),</span>
+      <span class="mi">10</span>
+    <span class="o">),</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+        <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+      <span class="o">);</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">)</span>
+<span class="o">).</span><span class="na">value</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Let’s see what’s going on here. First,
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html"><code class="highlighter-rouge">Filtered</code></a>
@@ -227,23 +232,24 @@ its method <code class="highlighter-rouge">value()</code> returns <code class="h
 <p>But wait, there are no indexes. Let’s add them. In order to do that we
 just use another class, called <code class="highlighter-rouge">AndWithIndex</code>:</p>
 
-<pre>new AndWithIndex(
-  new Mapped&lt;Double, Func&lt;Integer, Boolean&gt;&gt;(
-    new Limited&lt;Double&gt;(
-      new Filtered&lt;Double&gt;(
-        probes,
-        probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d
-      ),
-      10
-    ),
-    probe -&gt; index -&gt; {
-      System.out.printf(
-        "Probe #%d: %f", index, probe * 100.0d
-      );
-      return true;
-    }
-  )
-).value();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">AndWithIndex</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">Mapped</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">,</span> <span class="nc">Func</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Boolean</span><span class="o">&gt;&gt;(</span>
+    <span class="k">new</span> <span class="nc">Limited</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+      <span class="k">new</span> <span class="nc">Filtered</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+        <span class="n">probes</span><span class="o">,</span>
+        <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span>
+      <span class="o">),</span>
+      <span class="mi">10</span>
+    <span class="o">),</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">index</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+        <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+      <span class="o">);</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">)</span>
+<span class="o">).</span><span class="na">value</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Instead of <code class="highlighter-rouge">Scalar&lt;Boolean&gt;</code> we now map our probes to
 <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html"><code class="highlighter-rouge">Func&lt;Integer, Boolean&gt;</code></a>
@@ -263,19 +269,20 @@ I can’t even find the name for.</p>
 with the help of Guava’s
 <a href="https://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Iterables.html"><code class="highlighter-rouge">Iterables</code></a>:</p>
 
-<pre>Iterable&lt;Double&gt; ready = Iterables.limit(
-  Iterables.filter(
-    probes,
-    probe -&gt; probe != 0.0d &amp;&amp; probe != 1.0d
-  ),
-  10
-);
-int pos = 0;
-for (Double probe : probes) {
-  System.out.printf(
-    "Probe #%d: %f", pos++, probe * 100.0d
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;</span> <span class="n">ready</span> <span class="o">=</span> <span class="nc">Iterables</span><span class="o">.</span><span class="na">limit</span><span class="o">(</span>
+  <span class="nc">Iterables</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span>
+    <span class="n">probes</span><span class="o">,</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span>
+  <span class="o">),</span>
+  <span class="mi">10</span>
+<span class="o">);</span>
+<span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Double</span> <span class="n">probe</span> <span class="o">:</span> <span class="n">probes</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+    <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="n">pos</span><span class="o">++,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is some weird combination of object-oriented and functional styles.</p>
 

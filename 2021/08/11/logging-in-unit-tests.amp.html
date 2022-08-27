@@ -96,22 +96,23 @@ inside unit tests. Do we also leave them there or maybe not?</p>
 <a href="https://github.com/polystat/polystat/blob/0.0.1/src/test/java/org/polystat/far/CalcTest.java">CalcTest.java</a>
 from <a href="https://www.polystat.org">Polystat</a>, a static analyzer we’re working on right now):</p>
 
-<pre>import com.jcabi.log.Logger;
-import com.jcabi.xml.XML;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Test;
-public final class FooTest {
-  @Test
-  public void buildsSimpleXml() {
-    final XML xml = new Foo().build();
-    Logger.debug(this, "This is the XML:\n%s", xml.toString());
-    MatcherAssert.assertThat(
-      xml,
-      Matchers.notNullValue()
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.log.Logger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.jcabi.xml.XML</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.Matchers</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">buildsSimpleXml</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="no">XML</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+    <span class="nc">Logger</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">"This is the XML:\n%s"</span><span class="o">,</span> <span class="n">xml</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+    <span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="n">xml</span><span class="o">,</span>
+      <span class="nc">Matchers</span><span class="o">.</span><span class="na">notNullValue</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This is Java and I’m using <a href="https://junit.org/junit5/">JUnit5</a>+<a href="http://hamcrest.org/">Hamcrest</a> 
 together with my own logging framework
@@ -134,18 +135,19 @@ console, <em>visually</em> confirmed its validity and called it a day.
 If I’d had more time, this is how I would have written a much better unit test
 (I made the <a href="https://github.com/polystat/polystat/issues/10">improvements</a> in Polystat tests just now):</p>
 
-<pre>import com.jcabi.matchers.XhtmlMatchers;
-import org.hamcrest.MatcherAssert;
-import org.junit.jupiter.api.Test;
-public final class FooTest {
-  @Test
-  public void buildsSimpleXml() {
-    MatcherAssert.assertThat(
-      XhtmlMatchers.xhtml(new Foo().build()),
-      XhtmlMatchers.hasXPath("//foo")
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.matchers.XhtmlMatchers</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">buildsSimpleXml</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="nc">XhtmlMatchers</span><span class="o">.</span><span class="na">xhtml</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">().</span><span class="na">build</span><span class="o">()),</span>
+      <span class="nc">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">"//foo"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, the XML document is built and then tested for the presence of <code class="highlighter-rouge">//foo</code> 
 <a href="https://en.wikipedia.org/wiki/XPath">XPath</a> inside it. 

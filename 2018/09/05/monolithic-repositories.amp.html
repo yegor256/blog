@@ -94,75 +94,80 @@ node (using <a href="https://jquery.com/">jQuery</a>)
 and places part of its content on the HTML page.
 Then it colors the data according to its value.</p>
 
-<pre>// main.js
-function main() {
-  $.getJSON('http://b1.zold.io/', function(json) {
-    var $body = $('body');
-    $body.text(json.nscore);
-    var color = 'red';
-    if (json.nscore &gt; 500) {
-      color = 'green';
-    }
-    $body.css('color', color);
-  });
-}</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.js</span>
+<span class="kd">function</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://b1.zold.io/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">$body</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">$body</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">json</span><span class="p">.</span><span class="nx">nscore</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">red</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">json</span><span class="p">.</span><span class="nx">nscore</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">color</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">green</span><span class="dl">'</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">$body</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="dl">'</span><span class="s1">color</span><span class="dl">'</span><span class="p">,</span> <span class="nx">color</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Pretty obvious, isn’t it? Just a single <code class="highlighter-rouge">main.js</code> file which does everything we need.
 We simply add it to the HTML and it works:</p>
 
-<pre>&lt;html&gt;
-  &lt;head&gt;
-    &lt;script src="https://code.jquery.com/jquery-3.3.1.min.js"/&gt;
-    &lt;script src="main.js"/&gt;
-  &lt;/head&gt;
-  &lt;body onload="main();"&gt;loading...&lt;/body&gt;
-&lt;/html&gt;</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.min.js"</span><span class="nt">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">main.js</span><span class="dl">"</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">body</span> <span class="nx">onload</span><span class="o">=</span><span class="dl">"</span><span class="s2">main();</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">loading</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></code></pre></div></div>
 
 <p>Now, let me refactor it. Let me break it into two pieces. The first
 piece will load the data and the second one will be a jQuery plugin to colorize
 HTML content according to the data it contains. This is how the
 plugin will look:</p>
 
-<pre>// colorize.js
-$.fn.colorize = function() {
-  var data = parseFloat(this.text());
-  var keys = Object.keys(colors)
-    .map(function (k) { return parseInt(k); })
-    .sort(function (a,b) { return a - b; })
-    .reverse();
-  for (i = 0; i &lt; keys.length; ++i) {
-    var max = keys[i];
-    if (data &gt;= max) {
-      this.addClass(colors[max]);
-      return;
-    }
-    this.removeClass(colors[max]);
-  }
-  return this;
-}</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// colorize.js</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">colorize</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">text</span><span class="p">());</span>
+  <span class="kd">var</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">colors</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">k</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">k</span><span class="p">);</span> <span class="p">})</span>
+    <span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span> <span class="p">})</span>
+    <span class="p">.</span><span class="nx">reverse</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">keys</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span> <span class="o">&gt;=</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="nx">colors</span><span class="p">[</span><span class="nx">max</span><span class="p">]);</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="nx">colors</span><span class="p">[</span><span class="nx">max</span><span class="p">]);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">main.js</code> will look like this:</p>
 
-<pre>// main.js
-function main() {
-  $.getJSON('http://b1.zold.io/', function(json) {
-    $('body')
-      .text(json.nscore)
-      .colorize({ 500: 'green', 0: 'red' });
-  });
-}</pre>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.js</span>
+<span class="kd">function</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://b1.zold.io/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">json</span><span class="p">.</span><span class="nx">nscore</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">colorize</span><span class="p">({</span> <span class="mi">500</span><span class="p">:</span> <span class="dl">'</span><span class="s1">green</span><span class="dl">'</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="dl">'</span><span class="s1">red</span><span class="dl">'</span> <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Now, instead of a single monolithic piece of code, we have two smaller pieces
 which have to be loaded together into the target HTML:</p>
 
-<pre>&lt;html&gt;
-  &lt;head&gt;
-    &lt;script src="https://code.jquery.com/jquery-3.3.1.min.js"/&gt;
-    &lt;script src="colorize.js"/&gt;
-    &lt;script src="main.js"/&gt;
-  &lt;/head&gt;
-  &lt;body onload="main();"&gt;loading...&lt;/body&gt;
-&lt;/html&gt;</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.min.js"</span><span class="nt">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">colorize.js</span><span class="dl">"</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">main.js</span><span class="dl">"</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span>  <span class="o">&lt;</span><span class="nx">body</span> <span class="nx">onload</span><span class="o">=</span><span class="dl">"</span><span class="s2">main();</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">loading</span><span class="p">...</span><span class="o">&lt;</span><span class="sr">/body</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/html</span><span class="err">&gt;
+</span></code></pre></div></div>
 
 <p>Two pieces are better than one? It seems that
 <a href="https://ai.google/research/pubs/pub45424">Google</a>,

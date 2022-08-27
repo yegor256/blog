@@ -93,25 +93,27 @@ is a fully automated uncompromising review of your pull request, mostly
 intended to spot code formatting mistakes. Say we want Java code in
 our entire repository to look like this:</p>
 
-<pre>final class Doc {
-  private final File file;
-  public void remove() {
-    if (this.file.exists()) {
-      this.file.delete();
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Doc</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>However, you refactor it as part of a bigger task, and submit a pull request like this:</p>
 
-<pre>class Doc {
-  private File f;
-  public void remove()
-  {
-    if (f.exists())
-      f.delete();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Doc</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">File</span> <span class="n">f</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="o">()</span>
+  <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span>
+      <span class="n">f</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>For some of you this may not seem like a big difference, since both code snippets
 compile without issues and work exactly the same way. However, for us,

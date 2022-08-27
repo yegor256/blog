@@ -129,23 +129,24 @@ the value of either <code class="highlighter-rouge">hour</code>, <code class="hi
 data. I created a short cheat sheet for most common scenarios. This is how
 I backup the MySQL database for <a href="http://www.thepmp.com">thePMP</a>, for example:</p>
 
-<pre># I don't want to back up every hour
-if [ "${period}" == "hour" ]; then exit 0; fi
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># I don't want to back up every hour</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="k">${</span><span class="nv">period</span><span class="k">}</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"hour"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then </span><span class="nb">exit </span>0<span class="p">;</span> <span class="k">fi</span>
 
-# I dump the entire database into the file
-mysqldump --lock-tables=false --host=db.thepmp.com \
-  --user=thepmp --password=********* \
-  --databases thepmp &gt; thepmp.sql
+<span class="c"># I dump the entire database into the file</span>
+mysqldump <span class="nt">--lock-tables</span><span class="o">=</span><span class="nb">false</span> <span class="nt">--host</span><span class="o">=</span>db.thepmp.com <span class="se">\</span>
+  <span class="nt">--user</span><span class="o">=</span>thepmp <span class="nt">--password</span><span class="o">=</span><span class="k">*********</span> <span class="se">\</span>
+  <span class="nt">--databases</span> thepmp <span class="o">&gt;</span> thepmp.sql
 
-# I compress the file
-tgz="$(date "+%Y-%m-%d-%H-%M").tgz"
-tar czf "${tgz}" thepmp.sql
+<span class="c"># I compress the file</span>
+<span class="nv">tgz</span><span class="o">=</span><span class="s2">"</span><span class="si">$(</span><span class="nb">date</span> <span class="s2">"+%Y-%m-%d-%H-%M"</span><span class="si">)</span><span class="s2">.tgz"</span>
+<span class="nb">tar </span>czf <span class="s2">"</span><span class="k">${</span><span class="nv">tgz</span><span class="k">}</span><span class="s2">"</span> thepmp.sql
 
-# I upload it to Amazon S3 bucket
-echo "[default]" &gt; ~/.s3cfg
-echo "access_key=AKIAICJKH*****CVLAFA" &gt;&gt; ~/.s3cfg
-echo "secret_key=yQv3g3ao654Ns**********H1xQSfZlTkseA0haG" &gt;&gt; ~/.s3cfg
-s3cmd --no-progress put "${tgz}" "s3://backup.yegor256.com/${tgz}"</pre>
+<span class="c"># I upload it to Amazon S3 bucket</span>
+<span class="nb">echo</span> <span class="s2">"[default]"</span> <span class="o">&gt;</span> ~/.s3cfg
+<span class="nb">echo</span> <span class="s2">"access_key=AKIAICJKH*****CVLAFA"</span> <span class="o">&gt;&gt;</span> ~/.s3cfg
+<span class="nb">echo</span> <span class="s2">"secret_key=yQv3g3ao654Ns**********H1xQSfZlTkseA0haG"</span> <span class="o">&gt;&gt;</span> ~/.s3cfg
+s3cmd <span class="nt">--no-progress</span> put <span class="s2">"</span><span class="k">${</span><span class="nv">tgz</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"s3://backup.yegor256.com/</span><span class="k">${</span><span class="nv">tgz</span><span class="k">}</span><span class="s2">"</span>
+</code></pre></div></div>
 
 <p>The output of the script is available through the web interface and this
 is yet another benefit of this solution. It’s easy to monitor what went

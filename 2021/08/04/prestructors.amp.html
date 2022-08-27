@@ -90,14 +90,15 @@ objects.</p>
 
 <p>Say, this is your code:</p>
 
-<pre>import java.util.List;
-import java.util.Collections;
-class Books {
-  private final List&lt;String&gt; titles;
-  Books(List&lt;String&gt; list) {
-    this.titles = Collections.unmodifiableList(list);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="o">;</span>
+<span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The only constructor expects a list of titles, which is being
 encapsulated as <code class="highlighter-rouge">this.titles</code> for some future use. It’s also protected against
@@ -106,19 +107,20 @@ any accidental modifications, through the JDK decorator at
 So far, so good. Now, we want to make our class a bit smarter 
 and let it accept not only the <code class="highlighter-rouge">List</code> but an array of strings:</p>
 
-<pre>class Books {
-  private List&lt;String&gt; titles;
-  Books(List&lt;String&gt; list) {
-    this.titles = Collections.unmodifiableList(list);
-  }
-  Books(String... array) {
-    final List&lt;String&gt; list = new ArrayList&lt;&gt;(array.length);
-    for (final String title : array) {
-      list.add(title);
-    }
-    this.titles = list;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">array</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">:</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="n">list</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What’s wrong with this code? Those of you who have read my earlier 
 <a href="/tag/oop.html">blog posts about OOP</a> most definitely know the answer. First, 
@@ -129,22 +131,23 @@ Second, there is code in the second constructor, which is also a
 
 <p>Here is how I usually refactor this code, to solve both mentioned problems:</p>
 
-<pre>class Books {
-  private List&lt;String&gt; titles;
-  Books(List&lt;String&gt; list) {
-    this.titles = Collections.unmodifiableList(list);
-  }
-  Books(String... array) {
-    this(Books.toList(array));
-  }
-  private static List&lt;String&gt; toList(String... array) {
-    final List&lt;String&gt; list = new ArrayList&lt;&gt;(array.length);
-    for (final String title : array) {
-      list.add(title);
-    }
-    return list;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="nc">Books</span><span class="o">.</span><span class="na">toList</span><span class="o">(</span><span class="n">array</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">toList</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">array</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">:</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>I call this new static method <code class="highlighter-rouge">toList()</code> a <em>prestructor</em>: it is used
 only at the moment of object construction and only from the
@@ -153,22 +156,23 @@ secondary constructor.</p>
 <p>An even better way to design it would be to make a new class <code class="highlighter-rouge">ToList</code>,
 which would do exactly the same, but in a more declarative and lazy way:</p>
 
-<pre>class Books {
-  private List&lt;String&gt; titles;
-  Books(List&lt;String&gt; list) {
-    this.titles = Collections.unmodifiableList(list);
-  }
-  Books(String... array) {
-    this(new ToList(array));
-  }
-}
-class ToList&lt;T&gt; implements List&lt;T&gt; {
-  private final T[] array;
-  ToList(T... items) {
-    this.array = items;
-  }
-  // All required methods of the List interface
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">array</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">ToList</span><span class="o">(</span><span class="n">array</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">ToList</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">T</span><span class="o">[]</span> <span class="n">array</span><span class="o">;</span>
+  <span class="nc">ToList</span><span class="o">(</span><span class="no">T</span><span class="o">...</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">array</span> <span class="o">=</span> <span class="n">items</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// All required methods of the List interface</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p><a href="https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html"><code class="highlighter-rouge">ListOf</code></a>
 from <a href="https://www.cactoos.org">Cactoos</a> is a perfect example 

@@ -91,10 +91,11 @@ to be a good time to write a few words about them.</p>
 <p>Below is an example that demonstrates how you can validate
 an HTML document against W3C compliance rules:</p>
 
-<pre>import com.jcabi.w3c.ValidatorBuilder;
-assert ValidatorBuilder.html()
-  .validate("&lt;html&gt;hello, world!&lt;/html&gt;")
-  .valid();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.w3c.ValidatorBuilder</span><span class="o">;</span>
+<span class="k">assert</span> <span class="nc">ValidatorBuilder</span><span class="o">.</span><span class="na">html</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="s">"&lt;html&gt;hello, world!&lt;/html&gt;"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">valid</span><span class="o">();</span>
+</code></pre></div></div>
 
 
 
@@ -102,15 +103,17 @@ assert ValidatorBuilder.html()
 returns <code class="highlighter-rouge">false</code> when the document is not valid. Additionally,
 you can obtain more information through a list of “defects” returned by the W3C server:</p>
 
-<pre>Collection&lt;Defect&gt; defects = ValidatorBuilder.html()
-  .validate("&lt;html&gt;hello, world!&lt;/html&gt;")
-  .errors();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Defect</span><span class="o">&gt;</span> <span class="n">defects</span> <span class="o">=</span> <span class="nc">ValidatorBuilder</span><span class="o">.</span><span class="na">html</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="s">"&lt;html&gt;hello, world!&lt;/html&gt;"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">errors</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>The same can be done with CSS:</p>
 
-<pre>Collection&lt;Defect&gt; defects = ValidatorBuilder.css()
-  .validate("body { font-family: Arial; }")
-  .errors();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Defect</span><span class="o">&gt;</span> <span class="n">defects</span> <span class="o">=</span> <span class="nc">ValidatorBuilder</span><span class="o">.</span><span class="na">css</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">validate</span><span class="o">(</span><span class="s">"body { font-family: Arial; }"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">errors</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Personally, I think it is a good practice to validate all
 of HTML pages produced by your application against W3C during
@@ -120,23 +123,23 @@ but rather of preventing bigger problems later.</p>
 <p>These dependencies are mandatory when using jcabi-w3c
 (get their latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-  &lt;artifactId&gt;jcabi-w3c&lt;/artifactId&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
-  &lt;artifactId&gt;javax.json&lt;/artifactId&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;com.sun.jersey&lt;/groupId&gt;
-  &lt;artifactId&gt;jersey-client&lt;/artifactId&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
-  &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
-
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-w3c<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.glassfish<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>javax.json<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.sun.jersey<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jersey-client<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.hamcrest<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>hamcrest-core<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
     </article>
   </body>

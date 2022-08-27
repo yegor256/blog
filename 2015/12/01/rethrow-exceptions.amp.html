@@ -91,19 +91,21 @@ Both are wrong.</p>
 
 <p>This is how the code may look:</p>
 
-<pre>if (!file.exists()) {
-  throw new IllegalArgumentException(
-    "File doesn't exist"
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+    <span class="s">"File doesn't exist"</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It may also look like this:</p>
 
-<pre>try {
-  Files.delete(file);
-} catch (IOException ex) {
-  throw new IllegalArgumentException(ex);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="nc">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Both examples demonstrate an inadequate style of handling situations that
 involve exceptions and reporting them. What’s wrong here? The exception messages
@@ -112,28 +114,30 @@ from the place where they originated from.</p>
 
 <p>This is how they should look instead:</p>
 
-<pre>if (!file.exists()) {
-  throw new IllegalArgumentException(
-    String.format(
-      "User profile file %s doesn't exist",
-      file.getAbsolutePath()
-    )
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+    <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"User profile file %s doesn't exist"</span><span class="o">,</span>
+      <span class="n">file</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">()</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And the second example should look like this:</p>
 
-<pre>try {
-  Files.delete(file);
-} catch (IOException ex) {
-  throw new IllegalArgumentException(
-    String.format(
-      "Can't delete user profile data file %s",
-      file.getAbsolutePath()
-    ),
-    ex
-  );
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="nc">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+    <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"Can't delete user profile data file %s"</span><span class="o">,</span>
+      <span class="n">file</span><span class="o">.</span><span class="na">getAbsolutePath</span><span class="o">()</span>
+    <span class="o">),</span>
+    <span class="n">ex</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>See the difference? This may look like redundant code, but it’s not.
 Of course, when I’m writing all this, I don’t really care about
@@ -160,9 +164,10 @@ Is it possible to do it differently? Etc.</p>
 
 <p>Such code is literally a sign of disrespect to the client:</p>
 
-<pre>throw new IllegalArgumentException(
-  "File doesn't exist"
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span>
+  <span class="s">"File doesn't exist"</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>I have to be more verbose and give more details.</p>
 

@@ -199,14 +199,15 @@ to my will. I want to enjoy my work.</p>
 <p>Now, back to my conference talk. I’m going to show this piece of code in one of my slides
 (this is how <a href="https://spring.io/">Spring Framework</a> is supposed to be used):</p>
 
-<pre>@Controller
-public class HelloController {
-    @GetMapping("/hello")
-    public String handle(Model model) {
-        model.addAttribute("message", "Hello World!");
-        return "index";
-    }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Controller</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span> <span class="o">{</span>
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/hello"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">handle</span><span class="o">(</span><span class="nc">Model</span> <span class="n">model</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">model</span><span class="o">.</span><span class="na">addAttribute</span><span class="o">(</span><span class="s">"message"</span><span class="o">,</span> <span class="s">"Hello World!"</span><span class="o">);</span>
+        <span class="k">return</span> <span class="s">"index"</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then I will ask a question: Do you know who is making an instance of the <code class="highlighter-rouge">HelloController</code>
 class and how that instance is being used? Who is calling its methods, why

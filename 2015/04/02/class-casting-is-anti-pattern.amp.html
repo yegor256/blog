@@ -90,19 +90,20 @@ them by their race, gender, and religion. Can this be a good practice?</p>
 of it, for example
 <a href="https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111"><code class="highlighter-rouge">Iterables.size()</code></a>):</p>
 
-<pre>public final class Foo {
-  public int sizeOf(Iterable items) {
-    int size = 0;
-    if (items instanceof Collection) {
-      size = Collection.class.cast(items).size();
-    } else {
-      for (Object item : items) {
-        ++size;
-      }
-    }
-    return size;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">items</span> <span class="k">instanceof</span> <span class="nc">Collection</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">size</span> <span class="o">=</span> <span class="nc">Collection</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">items</span><span class="o">).</span><span class="na">size</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="nc">Object</span> <span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">++</span><span class="n">size</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This <code class="highlighter-rouge">sizeOf()</code>  method calculates the size of an iterable. However, it
 is smart enough to understand that if <code class="highlighter-rouge">items</code> are also instances of <code class="highlighter-rouge">Collection</code>,
@@ -130,18 +131,19 @@ casting and forking based on that casting.</p>
 <p>What is the alternative? There are a few, but the most obvious
 is method overloading (not available in semi-OOP languages like Ruby or PHP):</p>
 
-<pre>public final class Foo {
-  public int sizeOf(Iterable items) {
-    int size = 0;
-    for (Object item : items) {
-      ++size;
-    }
-    return size;
-  }
-  public int sizeOf(Collection items) {
-    return items.size();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Object</span> <span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+      <span class="o">++</span><span class="n">size</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Collection</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">items</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Isn’t that more elegant?</p>
 

@@ -101,7 +101,7 @@ XML column.</p>
 
 <p>This is approximately how our DynamoDB table looks:</p>
 
-<pre>+----+---------------+--------------------------------------+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+----+---------------+--------------------------------------+
 | id | name          | xml                                  |
 +----+---------------+--------------------------------------+
 | 12 | jcabi-xml#54  | &lt;?xml version='1.0'?&gt;                |
@@ -113,7 +113,8 @@ XML column.</p>
 |    |               | &lt;talk public="true"&gt;                 |
 |    |               |   &lt;daemon id="f787fe"&gt;...&lt;/daemon&gt;   |
 |    |               | &lt;/talk&gt;                              |
-+----+---------------+--------------------------------------+</pre>
++----+---------------+--------------------------------------+
+</code></pre></div></div>
 
 <p>Once a user posts <code class="highlighter-rouge">@rultor status</code> into a GitHub ticket, Rultor
 has to answer with a full status report about the current talk. In order
@@ -126,66 +127,71 @@ it to plain English text.</p>
 and its class,
 <a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html"><code class="highlighter-rouge">XSLDocument</code></a>.</p>
 
-<pre>final String xml = // comes from DynamoDB
-final XSL xsl = new XSLDocument(
-  this.getClass().getResourceAsStream("status.xsl")
-);
-final String text = xsl.applyTo(xml);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">String</span> <span class="n">xml</span> <span class="o">=</span> <span class="c1">// comes from DynamoDB</span>
+<span class="kd">final</span> <span class="no">XSL</span> <span class="n">xsl</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XSLDocument</span><span class="o">(</span>
+  <span class="k">this</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">"status.xsl"</span><span class="o">)</span>
+<span class="o">);</span>
+<span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="n">xsl</span><span class="o">.</span><span class="na">applyTo</span><span class="o">(</span><span class="n">xml</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>That’s it. Now let’s see what’s there in that <code class="highlighter-rouge">status.xsl</code> file
 (this is just a skeleton of it; the full version is <a href="https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl">here</a>):</p>
 
-<pre>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  version="2.0"&gt;
-  &lt;xsl:output method="text"/&gt;
-  &lt;xsl:template match="/talk"&gt;
-    &lt;xsl:text&gt;Hi, here is your status report:&lt;/xsl:text&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;xsl:stylesheet</span> <span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span>
+  <span class="na">version=</span><span class="s">"2.0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:output</span> <span class="na">method=</span><span class="s">"text"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"/talk"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xsl:text&gt;</span>Hi, here is your status report:<span class="nt">&lt;/xsl:text&gt;</span>
     ...
-  &lt;/xsl:template&gt;
-  &lt;xsl:template match="node()|@*"&gt;
-    &lt;xsl:copy&gt;
-      &lt;xsl:apply-templates select="node()|@*"/&gt;
-    &lt;/xsl:copy&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</pre>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"node()|@*"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;xsl:copy&gt;</span>
+      <span class="nt">&lt;xsl:apply-templates</span> <span class="na">select=</span><span class="s">"node()|@*"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/xsl:copy&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div></div>
 
 <p>It is good practice to create XSL documents only once per application
 run. We have a static utility method <a href="http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29"><code class="highlighter-rouge">XSLDocument.make()</code></a> for this:</p>
 
-<pre>final class Foo {
-  private static final XSL STYLESHEET = XSLDocument.make(
-    Foo.class.getResourceAsStream("stylesheet.xsl")
-  );
-  public XML style(final XML xml) {
-    return Foo.STYLESHEET.transform(xml);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="no">XSL</span> <span class="no">STYLESHEET</span> <span class="o">=</span> <span class="nc">XSLDocument</span><span class="o">.</span><span class="na">make</span><span class="o">(</span>
+    <span class="nc">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">"stylesheet.xsl"</span><span class="o">)</span>
+  <span class="o">);</span>
+  <span class="kd">public</span> <span class="no">XML</span> <span class="nf">style</span><span class="o">(</span><span class="kd">final</span> <span class="no">XML</span> <span class="n">xml</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">STYLESHEET</span><span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="n">xml</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Pay attention to the fact we’re using XSLT 2.0. Built-in Java implementation of XSLT
 doesn’t support version 2.0, and in order to make it work, we’re using
 these two Maven Saxon dependencies:</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;net.sourceforge.saxon&lt;/groupId&gt;
-  &lt;artifactId&gt;saxon&lt;/artifactId&gt;
-  &lt;version&gt;9.1.0.8&lt;/version&gt;
-  &lt;scope&gt;runtime&lt;/scope&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;net.sourceforge.saxon&lt;/groupId&gt;
-  &lt;artifactId&gt;saxon&lt;/artifactId&gt;
-  &lt;version&gt;9.1.0.8&lt;/version&gt;
-  &lt;classifier&gt;xpath&lt;/classifier&gt;
-  &lt;scope&gt;runtime&lt;/scope&gt;
-&lt;/dependency&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>net.sourceforge.saxon<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>saxon<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>9.1.0.8<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>net.sourceforge.saxon<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>saxon<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>9.1.0.8<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;classifier&gt;</span>xpath<span class="nt">&lt;/classifier&gt;</span>
+  <span class="nt">&lt;scope&gt;</span>runtime<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
 <p>All you need to do to start using <code class="highlighter-rouge">jcabi-xml</code> for XSL transformations is
 add this dependency to your <code class="highlighter-rouge">pom.xml</code>:</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-  &lt;artifactId&gt;jcabi-xml&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-xml<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
 <p>If you have any problems or suggestions, don’t hesitate to submit an issue
 to the GitHub <a href="https://github.com/jcabi/jcabi-xml/issues">issue tracker</a>.</p>

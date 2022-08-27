@@ -91,13 +91,14 @@ obvious that we indeed do not need classes.</p>
 
 <p>Let’s say we have only <em>types</em> and <em>objects</em>. First, we define a type:</p>
 
-<pre>type Book {
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Book {
   void print();
-}</pre>
+}
+</code></pre></div></div>
 
 <p>Then we <em>create</em> an object (pay attention; we don’t “instantiate”):</p>
 
-<pre>Book b1 = create Book("Object Thinking") {
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Book b1 = create Book("Object Thinking") {
   String title;
   Book(String t) {
     this.title = t;
@@ -105,13 +106,15 @@ obvious that we indeed do not need classes.</p>
   public void print() {
     print("My title: " + this.title);
   }
-}</pre>
+}
+</code></pre></div></div>
 
 <p>Then we create another object, which will behave similarly
 to the one we already have but with different constructor arguments.
 We <em>copy</em> an existing one:</p>
 
-<pre>Book b2 = copy b1("Elegant Objects");</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Book b2 = copy b1("Elegant Objects");
+</code></pre></div></div>
 
 <p>Libraries will deliver us objects, which we can copy.</p>
 

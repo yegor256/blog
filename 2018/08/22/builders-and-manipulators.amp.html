@@ -98,9 +98,10 @@ with builders, which are supposed to create or find an object and then return
 it. Suppose I have a store of books and I ask it to give me a book
 by name:</p>
 
-<pre>interface Bookshelf {
-  Book find(String title);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Bookshelf</span> <span class="o">{</span>
+  <span class="nc">Book</span> <span class="nf">find</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It’s obviously a “builder” (or a “query” in Meyer’s terms). I ask for
 a book and it’s given to me. The problem, though, is with the name of the method.
@@ -114,30 +115,33 @@ When we query, we have to say what result we are looking for and let
 the object make the decision about the way this result is going to be built.
 A much more appropriate name for this method would be <code class="highlighter-rouge">book()</code>:</p>
 
-<pre>interface Bookshelf {
-  Book book(String title);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Bookshelf</span> <span class="o">{</span>
+  <span class="nc">Book</span> <span class="nf">book</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The rule of thumb is: a builder is always a noun. If the method returns
 something, it has to be a noun. Preferably its name should explain what
 the method returns. If it’s a book, name it <code class="highlighter-rouge">book()</code>. If it’s a file, call
 the method <code class="highlighter-rouge">file()</code>, etc. Here are a few good builder examples:</p>
 
-<pre>interface Foo {
-  float speed(Actor actor);
-  Money salary(User user);
-  File database();
-  Date deadline(Project project, User user);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kt">float</span> <span class="nf">speed</span><span class="o">(</span><span class="nc">Actor</span> <span class="n">actor</span><span class="o">);</span>
+  <span class="nc">Money</span> <span class="nf">salary</span><span class="o">(</span><span class="nc">User</span> <span class="n">user</span><span class="o">);</span>
+  <span class="nc">File</span> <span class="nf">database</span><span class="o">();</span>
+  <span class="nc">Date</span> <span class="nf">deadline</span><span class="o">(</span><span class="nc">Project</span> <span class="n">project</span><span class="o">,</span> <span class="nc">User</span> <span class="n">user</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here, on the contrary, are a few examples of badly named builders:</p>
 
-<pre>interface Foo {
-  float calculateSpeed(Actor actor);
-  Money getSalary(User user);
-  File openDatabase();
-  Date readDeadline(Project project, User user);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kt">float</span> <span class="nf">calculateSpeed</span><span class="o">(</span><span class="nc">Actor</span> <span class="n">actor</span><span class="o">);</span>
+  <span class="nc">Money</span> <span class="nf">getSalary</span><span class="o">(</span><span class="nc">User</span> <span class="n">user</span><span class="o">);</span>
+  <span class="nc">File</span> <span class="nf">openDatabase</span><span class="o">();</span>
+  <span class="nc">Date</span> <span class="nf">readDeadline</span><span class="o">(</span><span class="nc">Project</span> <span class="n">project</span><span class="o">,</span> <span class="nc">User</span> <span class="n">user</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There is no place for a verb in a builder’s name!</p>
 
@@ -153,9 +157,10 @@ the opposite to builders, because they actually make changes to the world
 abstracted by the object.
 For example, we ask the <code class="highlighter-rouge">Bookshelf</code> to add a new book to itself:</p>
 
-<pre>interface Bookshelf {
-  void add(Book book);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Bookshelf</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Book</span> <span class="n">book</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The method adds the book to the storage. How exactly the storage will be
 modified, we don’t know. But we know that since the name of the method

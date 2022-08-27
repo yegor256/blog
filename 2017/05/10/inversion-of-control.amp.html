@@ -91,7 +91,8 @@ misunderstood and overcomplicated all too often.</p>
 
 <p>Look at this code:</p>
 
-<pre>print(book.title());</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">print</span><span class="o">(</span><span class="n">book</span><span class="o">.</span><span class="na">title</span><span class="o">());</span>
+</code></pre></div></div>
 
 <p>It is very straight forward: we retrieve the title from the book and
 simply give it to the <code class="highlighter-rouge">print()</code> procedure, or whatever else it might be. <em>We</em> are in charge,
@@ -99,7 +100,8 @@ the <em>control</em> is in our hands.</p>
 
 <p>In contrast to this, here is the <em>inversion</em>:</p>
 
-<pre>print(book);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">print</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>We give the entire book to the procedure <code class="highlighter-rouge">print()</code> and
 it calls <code class="highlighter-rouge">title()</code> when it feels like it. That is, we <em>delegate</em> control.</p>
@@ -124,7 +126,8 @@ we must <em>not</em> deal with <em>data</em>, but instead only with
 given example the design would be even better if we got rid of the
 <code class="highlighter-rouge">print()</code> procedure altogether and replaced it with an object:</p>
 
-<pre>new PrintedBook(book);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">PrintedBook</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>That would be pure <a href="https://en.wikipedia.org/wiki/Object_composition">object composition</a>.</p>
 

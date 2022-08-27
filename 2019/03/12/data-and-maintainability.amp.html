@@ -106,29 +106,31 @@ better maintainability, and lack of encapsulation leads to a larger scope. You k
 <a href="https://en.wikipedia.org/wiki/Scope_%28computer_science%29">scope of visibility</a>
 is, right? Let’s take this C code as an example:</p>
 
-<pre>void print() {
-  for (int i = 0; i &lt; 10; ++i) {
-    printf("%d * 2 = %d", i, i * 2);
-  }
-  for (int i = 0; i &lt; 10; ++i) {
-    printf("%d * 3 = %d", i, i * 3);
-  }
-}</pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * 2 = %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * 3 = %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">3</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>There are two variables <code class="highlighter-rouge">i</code>, visible in two different <code class="highlighter-rouge">for</code> loops, two
 different scopes of visibility. The <em>size</em> of each scope is three lines of code.
 How about this code, doing exactly the same:</p>
 
-<pre>void print() {
-  int i = 0;
-  while (++i &lt; 10) {
-    printf("%d * 2 = %d", i, i * 2);
-  }
-  i -= 10;
-  while (++i &lt; 10) {
-    printf("%d * 3 = %d", i, i * 3);
-  }
-}</pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">++</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * 2 = %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">i</span> <span class="o">-=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">++</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * 3 = %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">3</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Now, the scope of visibility of <code class="highlighter-rouge">i</code> is ten lines of code. The code works as well
 as in the first snippet, but its maintainability is lower, because in order
@@ -155,12 +157,13 @@ an entire programming paradigm to make it harder, or impossible, to grow the sco
 modern languages is the <a href="/2018/07/03/global-variables.html">global</a>
 one, for example here:</p>
 
-<pre>int i = 0;
-void print() {
-  while (++i &lt; 10) {
-    printf("%d * 2 = %d", i, i * 2);
-  }
-}</pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">++</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * 2 = %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Now the variable <code class="highlighter-rouge">i</code> is visible not only inside the function <code class="highlighter-rouge">print()</code> but
 in <del>many</del> all other places of the application we develop. The scope
@@ -190,28 +193,30 @@ citizens of an object world, communicating with objects only.</p>
 <p>Let’s try to introduce an object to our C snippet, the way
 <del>most</del> some C++ programmers would do it:</p>
 
-<pre>class Idx {
-public:
-  int get() { return v; }
-  void add(int a) { v += a; }
-private:
-  int v = 0;
-}</pre>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Idx</span> <span class="p">{</span>
+<span class="nl">public:</span>
+  <span class="kt">int</span> <span class="n">get</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">v</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">void</span> <span class="n">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="o">+=</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span>
+<span class="nl">private:</span>
+  <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>And then:</p>
 
-<pre>void print() {
-  Idx i();
-  while (i.get() &lt; 10) {
-    printf("%d * 2 = %d", i.get(), i.get() * 2);
-    i.add(1);
-  }
-  i.add(-10);
-  while (i.get() &lt; 10) {
-    printf("%d * 3 = %d", i.get(), i.get() * 3);
-    i.add(1);
-  }
-}</pre>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Idx</span> <span class="n">i</span><span class="p">();</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * 2 = %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="n">i</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">i</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * 3 = %d"</span><span class="p">,</span> <span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">i</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">*</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">i</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>What changed? Not much. Instead of a plain “scalar” variable <code class="highlighter-rouge">i</code> we have
 an “object,” which stores an integer value inside and provides a few methods
@@ -255,34 +260,36 @@ true encapsulation, where data never “escapes” the borders of its owner. Fir
 here is how I would design <code class="highlighter-rouge">Idx</code>… well, I would rename it first and call it
 <code class="highlighter-rouge">Line</code>:</p>
 
-<pre>class Line {
-public:
-  Line(int m): mul(m) {};
-  void print() {
-    printf("%d * %d = %d", v, m, v * m);
-  }
-  bool next() {
-    bool n = true;
-    if (v &lt; 10) {
-      ++v;
-    } else {
-      n = false;
-    }
-    return n;
-  }
-private:
-  int mul;
-  int v = 0;
-}</pre>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Line</span> <span class="p">{</span>
+<span class="nl">public:</span>
+  <span class="n">Line</span><span class="p">(</span><span class="kt">int</span> <span class="n">m</span><span class="p">)</span><span class="o">:</span> <span class="n">mul</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">{};</span>
+  <span class="kt">void</span> <span class="n">print</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d * %d = %d"</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="n">m</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kt">bool</span> <span class="n">next</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">v</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+      <span class="o">++</span><span class="n">v</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">n</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nl">private:</span>
+  <span class="kt">int</span> <span class="n">mul</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>And now here is the code of <code class="highlighter-rouge">print()</code>:</p>
 
-<pre>void print() {
-  Line a(2);
-  while (a.next()) { a.print(); }
-  Line b(3);
-  while (b.next()) { b.print(); }
-}</pre>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Line</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">next</span><span class="p">())</span> <span class="p">{</span> <span class="n">a</span><span class="p">.</span><span class="n">print</span><span class="p">();</span> <span class="p">}</span>
+  <span class="n">Line</span> <span class="n">b</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">next</span><span class="p">())</span> <span class="p">{</span> <span class="n">b</span><span class="p">.</span><span class="n">print</span><span class="p">();</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>As you see, <code class="highlighter-rouge">print()</code> doesn’t have any access to the internal data of <code class="highlighter-rouge">Line</code>.
 All <code class="highlighter-rouge">print()</code> can do is ask the <code class="highlighter-rouge">Line</code> to move forward and print itself. How exactly

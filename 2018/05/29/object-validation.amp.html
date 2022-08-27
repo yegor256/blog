@@ -93,18 +93,20 @@ so to speak? Here is what I think.</p>
 
 <p>Let’s start with this Ruby code:</p>
 
-<pre>class Users {
-  def initialize(file)
-    @file = file
-  end
-  def names
-    File.readlines(@file).reject(&amp;:empty?)
-  end
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Users</span> <span class="o">{</span>
+  <span class="n">def</span> <span class="nf">initialize</span><span class="o">(</span><span class="n">file</span><span class="o">)</span>
+    <span class="nd">@file</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="n">end</span>
+  <span class="n">def</span> <span class="n">names</span>
+    <span class="nc">File</span><span class="o">.</span><span class="na">readlines</span><span class="o">(</span><span class="nd">@file</span><span class="o">).</span><span class="na">reject</span><span class="o">(&amp;:</span><span class="n">empty</span><span class="o">?)</span>
+  <span class="n">end</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>We can use it to read a list of users from a file:</p>
 
-<pre>Users.new('all-users.txt').names</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Users</span><span class="o">.</span><span class="na">new</span><span class="o">(</span><span class="err">'</span><span class="n">all</span><span class="o">-</span><span class="n">users</span><span class="o">.</span><span class="na">txt</span><span class="err">'</span><span class="o">).</span><span class="na">names</span>
+</code></pre></div></div>
 
 <p>There are a number of ways to abuse this class:</p>
 
@@ -126,18 +128,19 @@ so to speak? Here is what I think.</p>
 <p>Do you see the difference between these four mistakes we can make?
 Let’s see how our class can protect itself from each of them:</p>
 
-<pre>class Users {
-  def initialize(file)
-    raise "File name can't be nil" if file.nil?
-    raise 'Name must be a String' unless file.is_a?(String)
-    @file = file
-  end
-  def names
-    raise "#{@file} is absent" unless File.exist?(@file)
-    raise "#{@file} is not a file" unless File.file?(@file)
-    File.readlines(@file).reject(&amp;:empty?)
-  end
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Users</span> <span class="o">{</span>
+  <span class="n">def</span> <span class="nf">initialize</span><span class="o">(</span><span class="n">file</span><span class="o">)</span>
+    <span class="n">raise</span> <span class="s">"File name can't be nil"</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="na">nil</span><span class="o">?</span>
+    <span class="n">raise</span> <span class="err">'</span><span class="nc">Name</span> <span class="n">must</span> <span class="n">be</span> <span class="n">a</span> <span class="nc">String</span><span class="err">'</span> <span class="n">unless</span> <span class="n">file</span><span class="o">.</span><span class="na">is_a</span><span class="o">?(</span><span class="nc">String</span><span class="o">)</span>
+    <span class="nd">@file</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="n">end</span>
+  <span class="n">def</span> <span class="n">names</span>
+    <span class="n">raise</span> <span class="s">"#{@file} is absent"</span> <span class="n">unless</span> <span class="nc">File</span><span class="o">.</span><span class="na">exist</span><span class="o">?(</span><span class="nd">@file</span><span class="o">)</span>
+    <span class="n">raise</span> <span class="s">"#{@file} is not a file"</span> <span class="n">unless</span> <span class="nc">File</span><span class="o">.</span><span class="na">file</span><span class="o">?(</span><span class="nd">@file</span><span class="o">)</span>
+    <span class="nc">File</span><span class="o">.</span><span class="na">readlines</span><span class="o">(</span><span class="nd">@file</span><span class="o">).</span><span class="na">reject</span><span class="o">(&amp;:</span><span class="n">empty</span><span class="o">?)</span>
+  <span class="n">end</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The first two potential mistakes were filtered out
 in the constructor, while the other two—later, in the method.

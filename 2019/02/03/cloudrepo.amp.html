@@ -128,15 +128,16 @@ deploying to CloudRepo requires two steps on the client side:
 <code class="highlighter-rouge">~/.m2</code> directory.  Edit this file and ensure that you have
 a <code class="highlighter-rouge">&lt;server&gt;</code> entry as seen below:</p>
 
-<pre>&lt;settings&gt;
-  &lt;servers&gt;
-    &lt;server&gt;
-      &lt;id&gt;io.cloudrepo&lt;/id&gt;
-      &lt;username&gt;yegor256@gmail.com&lt;/username&gt;
-      &lt;password&gt;my-secret&lt;/password&gt;
-    &lt;/server&gt;
-  &lt;/servers&gt;
-&lt;/settings&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
+  <span class="nt">&lt;servers&gt;</span>
+    <span class="nt">&lt;server&gt;</span>
+      <span class="nt">&lt;id&gt;</span>io.cloudrepo<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;username&gt;</span>yegor256@gmail.com<span class="nt">&lt;/username&gt;</span>
+      <span class="nt">&lt;password&gt;</span>my-secret<span class="nt">&lt;/password&gt;</span>
+    <span class="nt">&lt;/server&gt;</span>
+  <span class="nt">&lt;/servers&gt;</span>
+<span class="nt">&lt;/settings&gt;</span>
+</code></pre></div></div>
 
 <p>By declaring a <code class="highlighter-rouge">server</code> and specifying an <code class="highlighter-rouge">id</code>, you can reference the <code class="highlighter-rouge">id</code>
 from within your Maven POM files.  When Maven attempts to
@@ -153,23 +154,24 @@ at your CloudRepo repository.
 Add a new <code class="highlighter-rouge">&lt;repository&gt;</code> element to the <code class="highlighter-rouge">&lt;distributionManagement&gt;</code> (to upload them) section of your <code class="highlighter-rouge">pom.xml</code>
 and to the <code class="highlighter-rouge">&lt;repositories&gt;</code> (to download them):</p>
 
-<pre>&lt;project&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   [...]
-  &lt;repositories&gt;
-    &lt;repository&gt;
-      &lt;id&gt;io.cloudrepo&lt;/id&gt;
-      &lt;url&gt;https://[your-org-name].mycloudrepo.io/repositories/[your-repository-name]&lt;/url&gt;
-    &lt;/repository&gt;
-  &lt;/repositories&gt;
+  <span class="nt">&lt;repositories&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+      <span class="nt">&lt;id&gt;</span>io.cloudrepo<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;url&gt;</span>https://[your-org-name].mycloudrepo.io/repositories/[your-repository-name]<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+  <span class="nt">&lt;/repositories&gt;</span>
   [...]
-  &lt;distributionManagement&gt;
-    &lt;repository&gt;
-      &lt;id&gt;io.cloudrepo&lt;/id&gt;
-      &lt;name&gt;CloudRepo Maven Repository&lt;/name&gt;
-      &lt;url&gt;https://[your-org-name].mycloudrepo.io/repositories/[your-repository-name]&lt;/url&gt;
-    &lt;/repository&gt;
-  &lt;/distributionManagement&gt;
-&lt;/project&gt;</pre>
+  <span class="nt">&lt;distributionManagement&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+      <span class="nt">&lt;id&gt;</span>io.cloudrepo<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;name&gt;</span>CloudRepo Maven Repository<span class="nt">&lt;/name&gt;</span>
+      <span class="nt">&lt;url&gt;</span>https://[your-org-name].mycloudrepo.io/repositories/[your-repository-name]<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+  <span class="nt">&lt;/distributionManagement&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>Once you have a build working in your local environment, you need to
 deploy it to production with Rultor.
@@ -178,8 +180,9 @@ can access them at build and deploy time.   However, it
 is very important to <em>never</em> store your credentials in plaintext in version control
 (substitute the name of your GitHub project with <code class="highlighter-rouge">my/project</code>):</p>
 
-<pre>$ gem install rultor
-$ rultor encrypt -p my/project settings.xml</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install rultor
+$ rultor encrypt -p my/project settings.xml
+</code></pre></div></div>
 
 <p>This creates an encrypted version of your settings file with
 the name <code class="highlighter-rouge">settings.xml.asc</code>.  Add this file to the root directory
@@ -190,11 +193,12 @@ code is exposed to others, your credentials will be kept safe.</p>
 <p>To enable Rultor, add a <code class="highlighter-rouge">.rultor.yml</code> file to the root directory
 of your project with the following contents:</p>
 
-<pre>decrypt:
-  settings.xml: "repo/settings.xml.asc"
-deploy:
-  script: |
-    mvn clean deploy --settings ../settings.xml</pre>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">decrypt</span><span class="pi">:</span>
+  <span class="na">settings.xml</span><span class="pi">:</span> <span class="s2">"</span><span class="s">repo/settings.xml.asc"</span>
+<span class="na">deploy</span><span class="pi">:</span>
+  <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">mvn clean deploy --settings ../settings.xml</span>
+</code></pre></div></div>
 
 <p>For more information on the <code class="highlighter-rouge">.rultor.yml</code> file,
 check the <a href="https://doc.rultor.com/reference.html">Rultor Reference Page</a>.</p>

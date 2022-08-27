@@ -87,9 +87,10 @@ simplify it.</p>
 
 <p>Let’s start with this code:</p>
 
-<pre>while (true) {
-  // Nothing
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// Nothing</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What does it do? Nothing, it just spins the CPU endlessly. Can we terminate it?
 Not in Java. It will only stop when the entire JVM stops, when you hit
@@ -99,17 +100,18 @@ and everything else will just be obvious.</p>
 
 <p>Let’s put this endless loop into a thread:</p>
 
-<pre>Thread loop = new Thread(
-  new Runnable() {
-    @Override
-    public void run() {
-      while (true) {
-      }
-    }
-  }
-);
-loop.start();
-// Now how do we stop it?</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Thread</span> <span class="n">loop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Thread</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Runnable</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+<span class="n">loop</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+<span class="c1">// Now how do we stop it?</span>
+</code></pre></div></div>
 
 <p>So, how do we stop a thread when we need it to stop?</p>
 
@@ -118,21 +120,22 @@ There is a flag in every thread that we can set from the outside. And
 the thread may check it occasionally and stop its execution. Voluntarily!
 Here is how:</p>
 
-<pre>Thread loop = new Thread(
-  new Runnable() {
-    @Override
-    public void run() {
-      while (true) {
-        if (Thread.interrupted()) {
-          break;
-        }
-        // Continue to do nothing
-      }
-    }
-  }
-);
-loop.start();
-loop.interrupt();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Thread</span> <span class="n">loop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Thread</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Runnable</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="nc">Thread</span><span class="o">.</span><span class="na">interrupted</span><span class="o">())</span> <span class="o">{</span>
+          <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="c1">// Continue to do nothing</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+<span class="n">loop</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+<span class="n">loop</span><span class="o">.</span><span class="na">interrupt</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>This is the only way to ask a thread to stop. There are two methods that
 are used in this example. When I call <code class="highlighter-rouge">loop.interrupt()</code>, a flag
@@ -163,15 +166,16 @@ if it is set. For example, this is how the method
 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#sleep%28long%29"><code class="highlighter-rouge">Thread.sleep()</code></a>
 is designed (taking a very primitive approach):</p>
 
-<pre>public static void sleep(long millis)
-  throws InterruptedException {
-  while (/* You still need to wait */) {
-    if (Thread.interrupted()) {
-      throw new InterruptedException();
-    }
-    // Keep waiting
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">(</span><span class="kt">long</span> <span class="n">millis</span><span class="o">)</span>
+  <span class="kd">throws</span> <span class="nc">InterruptedException</span> <span class="o">{</span>
+  <span class="k">while</span> <span class="o">(</span><span class="cm">/* You still need to wait */</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Thread</span><span class="o">.</span><span class="na">interrupted</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">InterruptedException</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="c1">// Keep waiting</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Why is it done this way? Why can’t it just wait and never check the flag?
 Well, I believe it’s done for a good reason. And the reason is the following
@@ -189,11 +193,12 @@ exception. Its design
 tells you that if you want to pause for a few milliseconds, make your
 code interruption-ready. This is how it looks in practice:</p>
 
-<pre>try {
-  Thread.sleep(100);
-} catch (InterruptedException ex) {
-  // Stop immediately and go home
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// Stop immediately and go home</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Well, you could let it float up to a higher level, where they will be
 responsible for catching it. The point is that someone will have to
@@ -210,14 +215,15 @@ it takes to wrap up what you’re doing and exit.</p>
 
 <p>Now, look again at the code of <code class="highlighter-rouge">Thread.sleep()</code>:</p>
 
-<pre>public static void sleep(long millis)
-  throws InterruptedException {
-  while (/* ... */) {
-    if (Thread.interrupted()) {
-      throw new InterruptedException();
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">(</span><span class="kt">long</span> <span class="n">millis</span><span class="o">)</span>
+  <span class="kd">throws</span> <span class="nc">InterruptedException</span> <span class="o">{</span>
+  <span class="k">while</span> <span class="o">(</span><span class="cm">/* ... */</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Thread</span><span class="o">.</span><span class="na">interrupted</span><span class="o">())</span> <span class="o">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="nf">InterruptedException</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Remember, <code class="highlighter-rouge">Thread.interrupted()</code> not only returns the flag but also
 sets it to <code class="highlighter-rouge">false</code>. Thus, once <code class="highlighter-rouge">InterruptedException</code> is thrown, the
@@ -238,11 +244,12 @@ asking us to stop, and we just ignore it. That’s a very bad idea.</p>
 
 <p>This is what most of us are doing with <code class="highlighter-rouge">InterruptedException</code>:</p>
 
-<pre>try {
-  Thread.sleep(100);
-} catch (InterruptedException ex) {
-  throw new RuntimeException(ex);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It looks logical, but it doesn’t guarantee that the higher level will
 actually stop everything and exit. They may just catch a runtime exception
@@ -257,12 +264,13 @@ We can’t treat such a serious situation so loosely.</p>
 
 <p>This is what we have to do:</p>
 
-<pre>try {
-  Thread.sleep(100);
-} catch (InterruptedException ex) {
-  Thread.currentThread().interrupt(); // Here!
-  throw new RuntimeException(ex);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">interrupt</span><span class="o">();</span> <span class="c1">// Here!</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>We’re setting the flag back to <code class="highlighter-rouge">true</code>!</p>
 

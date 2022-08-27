@@ -100,43 +100,46 @@ going to pay me $100 after the first release and the rest after the second relea
 
 <p>The tool is very primitive, and it only took me a few minutes to write. Take a look at it:</p>
 
-<pre>#include &lt;stdio.h&gt;
-#include &lt;unistd.h&gt;
-int main() {
-  char ch;
-  int count = 0;
-  while (1) {
-    if (read(STDIN_FILENO, &amp;ch, 1) &lt;= 0) {
-      break;
-    }
-    if (ch == ' ') {
-      ++count;
-    }
-  }
-  if (count &gt; 0) {
-    ++count;
-  }
-  printf("%d\n", count);
-  return 0;
-}</pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="n">ch</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">read</span><span class="p">(</span><span class="n">STDIN_FILENO</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ch</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">' '</span><span class="p">)</span> <span class="p">{</span>
+      <span class="o">++</span><span class="n">count</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">++</span><span class="n">count</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>But let’s be professional and not forget about build automation and unit
 testing. Here is a simple <code class="highlighter-rouge">Makefile</code> that does them both:</p>
 
-<pre>all: wc test
-wc: wc.c
-  gcc -o wc wc.c
-test: wc
-  echo '' | ./wc | grep '0'
-  echo 'Hello, world! How are you?' | ./wc | grep '5'</pre>
+<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">all</span><span class="o">:</span> <span class="nf">wc test</span>
+<span class="nl">wc</span><span class="o">:</span> <span class="nf">wc.c</span>
+  <span class="err">gcc</span> <span class="err">-o</span> <span class="err">wc</span> <span class="err">wc.c</span>
+<span class="nl">test</span><span class="o">:</span> <span class="nf">wc</span>
+  <span class="err">echo</span> <span class="s1">''</span> <span class="err">|</span> <span class="err">./wc</span> <span class="err">|</span> <span class="err">grep</span> <span class="s1">'0'</span>
+  <span class="err">echo</span> <span class="s1">'Hello, world! How are you?'</span> <span class="err">|</span> <span class="err">./wc</span> <span class="err">|</span> <span class="err">grep</span> <span class="s1">'5'</span>
+</code></pre></div></div>
 
 <p>Now I run <code class="highlighter-rouge">make</code> from a command line and get this output:</p>
 
-<pre>$ make
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make
 echo '' | ./wc | grep '0'
 0
 echo 'Hello, world! How are you?' | ./wc | grep '5'
-5</pre>
+5
+</code></pre></div></div>
 
 <p>All clean!</p>
 
@@ -166,11 +169,12 @@ He doesn’t need it, but I need it.</p>
 <p>Here is what I’m going to do. I’ll release a skeleton of the tool, backed
 by the tests but with an absolutely dummy implementation. Look at it:</p>
 
-<pre>#include &lt;stdio.h&gt;
-int main() {
-  printf("5\n");
-  return 0;
-}</pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"5</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>And I will modify the <code class="highlighter-rouge">Makefile</code> accordingly. I will disable the first test
 to make sure the build passes.</p>

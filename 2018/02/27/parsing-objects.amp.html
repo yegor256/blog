@@ -92,26 +92,29 @@ Here is my take on deserialization, which should be done by—guess what—objec
 <p>Say there is a back-end entry point, which is supposed to register a new
 book in the library, arriving in JSON:</p>
 
-<pre>{
-  "title": "Object Thinking",
-  "isbn: "0735619654",
-  "author: "David West"
-}</pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Object Thinking"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"isbn: "</span><span class="mi">0735619654</span><span class="s2">",
+  "</span><span class="err">author:</span><span class="w"> </span><span class="s2">"David West"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p>Also, there is an object of class <code class="highlighter-rouge">Library</code>, which expects an object of type
 <code class="highlighter-rouge">Book</code> to be given to its method <code class="highlighter-rouge">register()</code>:</p>
 
-<pre>class Library {
-  public void register(Book book) {
-    // Create a new record in the database
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Library</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">register</span><span class="o">(</span><span class="nc">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Create a new record in the database</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Say also, type <code class="highlighter-rouge">Book</code> has a simple method <code class="highlighter-rouge">isbn()</code>:</p>
 
-<pre>interface Book {
-  String isbn();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">isbn</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, here is the HTTP entry point
 (I’m using <a href="/2015/03/22/takes-java-web-framework.html">Takes</a>
@@ -120,21 +123,22 @@ which is accepting
 a POST <a href="https://www.ietf.org/rfc/rfc2045.txt"><code class="highlighter-rouge">multipart/form-data</code></a>
 request and registering the book in the library:</p>
 
-<pre>public class TkUpload implements Take {
-  private final Library library;
-  @Override
-  public Response act(Request req) {
-    String body = new RqPrint(
-      new RqMtSmart(new RqMtBase(req)).single("book")
-    ).printBody();
-    JsonObject json = Json.createReader(
-      new InputStreamOf(body)
-    ).readObject();
-    Book book = new BookDTO();
-    book.setIsbn(json.getString("isbn"));
-    library.register(book);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TkUpload</span> <span class="kd">implements</span> <span class="nc">Take</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Library</span> <span class="n">library</span><span class="o">;</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">(</span><span class="nc">Request</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">body</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RqPrint</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RqMtSmart</span><span class="o">(</span><span class="k">new</span> <span class="nc">RqMtBase</span><span class="o">(</span><span class="n">req</span><span class="o">)).</span><span class="na">single</span><span class="o">(</span><span class="s">"book"</span><span class="o">)</span>
+    <span class="o">).</span><span class="na">printBody</span><span class="o">();</span>
+    <span class="nc">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="nc">Json</span><span class="o">.</span><span class="na">createReader</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">InputStreamOf</span><span class="o">(</span><span class="n">body</span><span class="o">)</span>
+    <span class="o">).</span><span class="na">readObject</span><span class="o">();</span>
+    <span class="nc">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BookDTO</span><span class="o">();</span>
+    <span class="n">book</span><span class="o">.</span><span class="na">setIsbn</span><span class="o">(</span><span class="n">json</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"isbn"</span><span class="o">));</span>
+    <span class="n">library</span><span class="o">.</span><span class="na">register</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What is wrong with this? Well, a few things.</p>
 
@@ -152,36 +156,38 @@ the DTO may encapsulate it, but that’s not what DTOs are usually for.</p>
 
 <p>A better design would be to hide this parsing inside a new class <code class="highlighter-rouge">JsonBook</code>:</p>
 
-<pre>class JsonBook implements Book {
-  private final String json;
-  JsonBook(String body) {
-    this.json = body;
-  }
-  @Override
-  public String isbn() {
-    return Json.createReader(
-      new InputStreamOf(body)
-    ).readObject().getString("isbn");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">JsonBook</span> <span class="kd">implements</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">json</span><span class="o">;</span>
+  <span class="nc">JsonBook</span><span class="o">(</span><span class="nc">String</span> <span class="n">body</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">json</span> <span class="o">=</span> <span class="n">body</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">isbn</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Json</span><span class="o">.</span><span class="na">createReader</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">InputStreamOf</span><span class="o">(</span><span class="n">body</span><span class="o">)</span>
+    <span class="o">).</span><span class="na">readObject</span><span class="o">().</span><span class="na">getString</span><span class="o">(</span><span class="s">"isbn"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Then, the RESTful entry point will look like this:</p>
 
-<pre>public class TkUpload implements Take {
-  private final Library library;
-  @Override
-  public Response act(Request req) {
-    library.register(
-      new JsonBook(
-        new RqPrint(
-          new RqMtSmart(
-            new RqMtBase(req)
-          ).single("book")
-        ).printBody()
-      )
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TkUpload</span> <span class="kd">implements</span> <span class="nc">Take</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Library</span> <span class="n">library</span><span class="o">;</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">(</span><span class="nc">Request</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">library</span><span class="o">.</span><span class="na">register</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">JsonBook</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">RqPrint</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">RqMtSmart</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">RqMtBase</span><span class="o">(</span><span class="n">req</span><span class="o">)</span>
+          <span class="o">).</span><span class="na">single</span><span class="o">(</span><span class="s">"book"</span><span class="o">)</span>
+        <span class="o">).</span><span class="na">printBody</span><span class="o">()</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Isn’t that more elegant?</p>
 
@@ -195,12 +201,13 @@ from <a href="https://github.com/yegor256/jare/blob/0.11.2/src/main/java/io/jare
 because some primitives in Java are not interfaces but <code class="highlighter-rouge">final</code> classes:
 <code class="highlighter-rouge">String</code> is a “perfect” example. That’s why I have to do this:</p>
 
-<pre>class RqUser implements Scalar&lt;String&gt; {
-  @Override
-  public String value() {
-    // Parsing happens here and returns String
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">RqUser</span> <span class="kd">implements</span> <span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">value</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Parsing happens here and returns String</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>But aside from that, these examples perfectly demonstrate the principle
 of “parsing objects” suggested above.</p>

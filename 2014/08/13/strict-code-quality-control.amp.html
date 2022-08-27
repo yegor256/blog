@@ -173,11 +173,12 @@ this approach is good for the project and for them, as Java engineers.</p>
 code that Qulice would complain about
 (due to the <a href="http://checkstyle.sourceforge.net/config_design.html#DesignForExtension"><code class="highlighter-rouge">DesignForExtension</code></a> rule from Checkstyle):</p>
 
-<pre>public class Employee {
-  public String name() {
-    return "Jeff";
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Jeff"</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What is wrong with this code? Method <code class="highlighter-rouge">name()</code> is not final and can be overridden
 by a class that extends <code class="highlighter-rouge">Employee</code>. Design-wise this is wrong, since a child
@@ -185,11 +186,12 @@ class is allowed to break a super class, overriding its method.</p>
 
 <p>What is the right design? This one:</p>
 
-<pre>public class Employee {
-  public final String name() {
-    return "Jeff";
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">final</span> <span class="nc">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Jeff"</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, the method is final and can’t be overridden by child classes. It is
 a much safer design (according to Checkstyle, and I agree).</p>

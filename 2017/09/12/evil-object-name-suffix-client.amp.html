@@ -91,15 +91,16 @@ of collections of procedures. Now I’m ready to introduce a new evil suffix:
 <a href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html"><code class="highlighter-rouge">AmazonS3Client</code></a>
 from <a href="https://aws.amazon.com/sdk-for-java/">AWS Java SDK</a>):</p>
 
-<pre>class AmazonS3Client {
-  createBucket(String name);
-  deleteBucket(String name);
-  doesBucketExist(String name);
-  getBucketAcl(String name)
-  getBucketPolicy(String name);
-  listBuckets();
-  // 160+ more methods here
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">AmazonS3Client</span> <span class="o">{</span>
+  <span class="n">createBucket</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+  <span class="n">deleteBucket</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+  <span class="n">doesBucketExist</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+  <span class="n">getBucketAcl</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span>
+  <span class="n">getBucketPolicy</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+  <span class="n">listBuckets</span><span class="o">();</span>
+  <span class="c1">// 160+ more methods here</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>All “clients” look similar: they encapsulate the destination URL
 with some access credentials and expose a number of methods, which

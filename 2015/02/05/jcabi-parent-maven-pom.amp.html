@@ -103,19 +103,20 @@ with nothing inside it except a large <code class="highlighter-rouge">pom.xml</c
 dependencies, profiles, and plugins. All you need to do in order to reuse them
 all in your project is define <code class="highlighter-rouge">com.jcabi:parent</code> as your parent POM:</p>
 
-<pre>&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-    http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
-  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-  &lt;parent&gt;
-    &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-    &lt;artifactId&gt;parent&lt;/artifactId&gt;
-    &lt;!-- check the latest version at http://parent.jcabi.com --&gt;
-    &lt;version&gt;0.32.1&lt;/version&gt;
-  &lt;/parent&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span>
+  <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">"http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  <span class="nt">&lt;parent&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>parent<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="c">&lt;!-- check the latest version at http://parent.jcabi.com --&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.32.1<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;/parent&gt;</span>
   [...]
-&lt;/project&gt;</pre>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
 
 <p>That’s all you need. Now you can remove most of your custom configurations
 from <code class="highlighter-rouge">pom.xml</code> and rely on defaults provided by jcabi-parent. Its

@@ -89,24 +89,26 @@ and so on.</p>
 
 <p>Take a look at this (let’s call it <em>fat</em> and I will explain why later):</p>
 
-<pre>interface Article {
-  Head head();
-}
-interface Head {
-  Author author();
-  String title();
-}
-interface Author {
-  String name();
-  String email();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Article</span> <span class="o">{</span>
+  <span class="nc">Head</span> <span class="nf">head</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="kd">interface</span> <span class="nc">Head</span> <span class="o">{</span>
+  <span class="nc">Author</span> <span class="nf">author</span><span class="o">();</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="kd">interface</span> <span class="nc">Author</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">name</span><span class="o">();</span>
+  <span class="nc">String</span> <span class="nf">email</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>To obtain the name of the author we do:</p>
 
-<pre>// It is stored in PostgreSQL (that's why the Pg
-// prefix) and retrieves everything using SQL
-Article a = new PgArticle();
-String name = a.head().author().name();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// It is stored in PostgreSQL (that's why the Pg</span>
+<span class="c1">// prefix) and retrieves everything using SQL</span>
+<span class="nc">Article</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PgArticle</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">head</span><span class="o">().</span><span class="na">author</span><span class="o">().</span><span class="na">name</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Visually, this design may look like this (in UML):</p>
 
@@ -115,28 +117,30 @@ String name = a.head().author().name();</pre>
 <p>Now, let’s compare it with an alternative design (which is much less
 <em>fat</em> than the previous one, I would even call it <em>skinny</em>):</p>
 
-<pre>interface Article {
-  String head();
-}
-class TxtHead {
-  private final Article article;
-  String author();
-  String title();
-}
-class TxtAuthor {
-  private final Head head;
-  String name();
-  String email();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Article</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">head</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">TxtHead</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Article</span> <span class="n">article</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="nf">author</span><span class="o">();</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">TxtAuthor</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Head</span> <span class="n">head</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="nf">name</span><span class="o">();</span>
+  <span class="nc">String</span> <span class="nf">email</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here, in order to obtain the name of the author we have to extract
 the head as a <code class="highlighter-rouge">String</code>, extract the author as a <code class="highlighter-rouge">String</code>, and then
 extract the name as a <code class="highlighter-rouge">String</code>:</p>
 
-<pre>Article a = new PgArticle();
-String head = a.head();
-String author = new TxtHead(head).author();
-String name = new TxtAuthor(author).name();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Article</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PgArticle</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">head</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">head</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">author</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TxtHead</span><span class="o">(</span><span class="n">head</span><span class="o">).</span><span class="na">author</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TxtAuthor</span><span class="o">(</span><span class="n">author</span><span class="o">).</span><span class="na">name</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Visually in UML, it looks like this:</p>
 

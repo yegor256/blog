@@ -99,13 +99,14 @@ are collections of data structures, or in AWS terminology, “items.”</p>
 <p>Every item has a mandatory “hash,” an optional “range” and a number of other
 optional attributes. For instance, take the example table <code class="highlighter-rouge">depts</code>:</p>
 
-<pre>+------+--------+---------------------------+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------+--------+---------------------------+
 | dept | worker | Attributes                |
 +------+--------+---------------------------+
 | 205  | Jeff   | job="manager", sex="male" |
 | 205  | Bob    | age=43, city="Chicago"    |
 | 398  | Alice  | age=27, job="architect"   |
-+------+--------+---------------------------+</pre>
++------+--------+---------------------------+
+</code></pre></div></div>
 
 <p>For Java, Amazon provides an
 <a href="https://aws.amazon.com/documentation/sdkforjava/">SDK</a>, which mirrors all
@@ -116,30 +117,32 @@ RESTful calls to Java methods. The SDK works fine, but is designed in a pure
 <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html"><code class="highlighter-rouge">putItem</code></a>
 looks like (in essence):</p>
 
-<pre>putItem:
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>putItem:
   tableName: depts
   item:
     dept: 435
     worker: "William"
-    job: "programmer"</pre>
+    job: "programmer"
+</code></pre></div></div>
 
 <p>This is what the Amazon server needs to know in order to create a new item in
 the table. This is how you’re supposed to make this call through the AWS Java
 SDK:</p>
 
-<pre>PutItemRequest request = new PutItemRequest();
-request.setTableName("depts");
-Map&lt;String, AttributeValue&gt; attributes = new HashMap&lt;&gt;();
-attributes.put("dept", new AttributeValue(435));
-attributes.put("worker", new AttributeValue("William"));
-attributes.put("job", new AttributeValue("programmer));
-request.setItem(attributes);
-AmazonDynamoDB aws = // instantiate it with credentials
-try {
-  aws.putItem(request);
-} finally {
-  aws.shutdown();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PutItemRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PutItemRequest</span><span class="o">();</span>
+<span class="n">request</span><span class="o">.</span><span class="na">setTableName</span><span class="o">(</span><span class="s">"depts"</span><span class="o">);</span>
+<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">AttributeValue</span><span class="o">&gt;</span> <span class="n">attributes</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="n">attributes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"dept"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">(</span><span class="mi">435</span><span class="o">));</span>
+<span class="n">attributes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"worker"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">(</span><span class="s">"William"</span><span class="o">));</span>
+<span class="n">attributes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"job"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">(</span><span class="err">"</span><span class="n">programmer</span><span class="o">));</span>
+<span class="n">request</span><span class="o">.</span><span class="na">setItem</span><span class="o">(</span><span class="n">attributes</span><span class="o">);</span>
+<span class="nc">AmazonDynamoDB</span> <span class="n">aws</span> <span class="o">=</span> <span class="c1">// instantiate it with credentials</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">aws</span><span class="o">.</span><span class="na">putItem</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="n">aws</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The above script works fine, but there is one major drawback—it is not
 object oriented. It is a perfect example of an imperative <a href="http://en.wikipedia.org/wiki/Procedural_programming">procedural
@@ -150,14 +153,15 @@ programming</a>.</p>
 same thing, but in an
 <a href="http://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> way:</p>
 
-<pre>Region region = // instantiate it with credentials
-Table table = region.table("depts");
-Item item = table.put(
-  new Attributes()
-    .with("dept", 435)
-    .with("worker", "William")
-    .with("job", "programmer")
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="c1">// instantiate it with credentials</span>
+<span class="nc">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"depts"</span><span class="o">);</span>
+<span class="nc">Item</span> <span class="n">item</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="na">put</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Attributes</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"dept"</span><span class="o">,</span> <span class="mi">435</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"worker"</span><span class="o">,</span> <span class="s">"William"</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"job"</span><span class="o">,</span> <span class="s">"programmer"</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>My code is not only shorter, but it also employs
 <a href="/2016/11/21/naked-data.html">encapsulation</a> and separates
@@ -172,9 +176,10 @@ encapsulates item details.</p>
 implementation details will be hidden from it. For example, somewhere later in
 the code:</p>
 
-<pre>void sayHello(Item item) {
-  System.out.println("Hello, " + item.get("worker"));
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">sayHello</span><span class="o">(</span><span class="nc">Item</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, "</span> <span class="o">+</span> <span class="n">item</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"worker"</span><span class="o">));</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>In this script, we don’t know anything about DynamoDB or how to deal with its
 RESTful API. We interact solely with an instance of
@@ -190,12 +195,13 @@ and create integration tests).</p>
 were to use a bare AWS SDK. Let’s say that we want to remove all workers from
 our table who work as architects:</p>
 
-<pre>Region region = // instantiate it with credentials
-Iterator&lt;Item&gt; workers = region.table("depts").frame()
-  .where("job", Condition.equalTo("architect"));
-while (workers.hasNext()) {
-  workers.remove();
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="c1">// instantiate it with credentials</span>
+<span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Item</span><span class="o">&gt;</span> <span class="n">workers</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"depts"</span><span class="o">).</span><span class="na">frame</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"job"</span><span class="o">,</span> <span class="nc">Condition</span><span class="o">.</span><span class="na">equalTo</span><span class="o">(</span><span class="s">"architect"</span><span class="o">));</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">workers</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+  <span class="n">workers</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p><a href="http://dynamo.jcabi.com">jcabi-dynamo</a> has saved a lot of code lines in a few
 of my projects. You can see it in action at
@@ -205,11 +211,11 @@ of my projects. You can see it in action at
 Central</a>
 (get its latest versions from <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-  &lt;artifactId&gt;jcabi-dynamo&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
-
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-dynamo<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
     </article>
   </body>

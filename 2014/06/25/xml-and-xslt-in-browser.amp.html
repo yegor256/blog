@@ -118,22 +118,23 @@ Now check its sources (I assume you know how to do this).</p>
 <p>This is approximately what you will see
 (I assume you understand XML, if not, start learning it immediately):</p>
 
-<pre>&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;
-&lt;page date="2014-06-15T15:30:49.521Z" ip="10.168.29.135"&gt;
-  &lt;menu&gt;home&lt;/menu&gt;
-  &lt;documentation&gt;.. some text here ..&lt;/documentation&gt;
-  &lt;version&gt;
-    &lt;name&gt;1.4&lt;/name&gt;
-    &lt;revision&gt;5c7b5af&lt;/revision&gt;
-    &lt;date&gt;2014-05-29 07:58&lt;/date&gt;
-  &lt;/version&gt;
-  &lt;links&gt;
-    &lt;link href="..." rel="rexsl:google" type="text/xml"/&gt;
-    &lt;link href="..." rel="rexsl:github" type="text/xml"/&gt;
-    &lt;link href="..." rel="rexsl:facebook" type="text/xml"/&gt;
-  &lt;/links&gt;
-  &lt;millis&gt;70&lt;/millis&gt;
-&lt;/page&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;</span>
+<span class="nt">&lt;page</span> <span class="na">date=</span><span class="s">"2014-06-15T15:30:49.521Z"</span> <span class="na">ip=</span><span class="s">"10.168.29.135"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;menu&gt;</span>home<span class="nt">&lt;/menu&gt;</span>
+  <span class="nt">&lt;documentation&gt;</span>.. some text here ..<span class="nt">&lt;/documentation&gt;</span>
+  <span class="nt">&lt;version&gt;</span>
+    <span class="nt">&lt;name&gt;</span>1.4<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;revision&gt;</span>5c7b5af<span class="nt">&lt;/revision&gt;</span>
+    <span class="nt">&lt;date&gt;</span>2014-05-29 07:58<span class="nt">&lt;/date&gt;</span>
+  <span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;links&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"..."</span> <span class="na">rel=</span><span class="s">"rexsl:google"</span> <span class="na">type=</span><span class="s">"text/xml"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"..."</span> <span class="na">rel=</span><span class="s">"rexsl:github"</span> <span class="na">type=</span><span class="s">"text/xml"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"..."</span> <span class="na">rel=</span><span class="s">"rexsl:facebook"</span> <span class="na">type=</span><span class="s">"text/xml"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/links&gt;</span>
+  <span class="nt">&lt;millis&gt;</span>70<span class="nt">&lt;/millis&gt;</span>
+<span class="nt">&lt;/page&gt;</span>
+</code></pre></div></div>
 
 <p>As you see, it is a proper XML document with attributes,
 elements and data. It contains absolutely no information about how
@@ -147,7 +148,8 @@ It’s up to the requester on how to render the data or to not render it at all.
 the document with the XSL stylesheet <code class="highlighter-rouge">/xsl/index.xsl</code> that
 is loaded by the browser separately:</p>
 
-<pre>&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;</pre>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;</span>
+</code></pre></div></div>
 
 <p>Open developer tools in Chrome and you will see that right
 after the page is loaded, the browser loads the XSL stylesheet
@@ -162,20 +164,21 @@ jQuery and an SVG logo:</p>
 it is much more complex, check <a href="https://github.com/sttc/stateful/blob/master/src/main/webapp/xsl/layout.xsl"><code class="highlighter-rouge">layout.xsl</code></a>.
 For example:</p>
 
-<pre>&lt;xsl:stylesheet version="2.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://www.w3.org/1999/xhtml"&gt;
-  &lt;xsl:template match="page"&gt;
-    &lt;html&gt;
-      &lt;body&gt;
-        &lt;p&gt;
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">"2.0"</span>
+  <span class="na">xmlns:xsl=</span><span class="s">"http://www.w3.org/1999/XSL/Transform"</span>
+  <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
           Current version of the application is
-          &lt;xsl:value-of select="version/name"/&gt;
-        &lt;/p&gt;
-      &lt;/body&gt;
-    &lt;/html&gt;
-  &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</pre>
+          <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"version/name"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div></div>
 
 <p>I think it’s obvious how the HTML page will look like
 after applying this XSL stylesheet to our XML document.</p>

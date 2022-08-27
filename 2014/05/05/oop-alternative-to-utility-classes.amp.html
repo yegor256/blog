@@ -92,12 +92,13 @@ because utility classes provide common functionality used everywhere.</p>
 duplication. Therefore, we place common code blocks into utility classes and
 reuse them when necessary:</p>
 
-<pre>// This is a terrible design, don't reuse
-public class NumberUtils {
-  public static int max(int a, int b) {
-    return a &gt; b ? a : b;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This is a terrible design, don't reuse</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NumberUtils</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Indeed, this a very convenient technique!?</p>
 
@@ -135,14 +136,15 @@ line and then save the results in another file. This is can be done with
 <a href="http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html"><code class="highlighter-rouge">FileUtils</code></a>
 from Apache Commons:</p>
 
-<pre>void transform(File in, File out) {
-  Collection&lt;String&gt; src = FileUtils.readLines(in, "UTF-8");
-  Collection&lt;String&gt; dest = new ArrayList&lt;&gt;(src.size());
-  for (String line : src) {
-    dest.add(line.trim());
-  }
-  FileUtils.writeLines(out, dest, "UTF-8");
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="nc">File</span> <span class="n">in</span><span class="o">,</span> <span class="nc">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">src</span> <span class="o">=</span> <span class="nc">FileUtils</span><span class="o">.</span><span class="na">readLines</span><span class="o">(</span><span class="n">in</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">);</span>
+  <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">dest</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">src</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+  <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">dest</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="nc">FileUtils</span><span class="o">.</span><span class="na">writeLines</span><span class="o">(</span><span class="n">out</span><span class="o">,</span> <span class="n">dest</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>The above code may look clean; however, this is procedural programming, not
 object-oriented. We are manipulating data (bytes and bits) and explicitly
@@ -156,26 +158,29 @@ letting them manage data when and how <em>they</em> desire. Instead of calling
 supplementary static functions, we should create objects that are capable of
 exposing the behavior we are seeking:</p>
 
-<pre>public class Max implements Number {
-  private final int a;
-  private final int b;
-  public Max(int x, int y) {
-    this.a = x;
-    this.b = y;
-  }
-  @Override
-  public int intValue() {
-    return this.a &gt; this.b ? this.a : this.b;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Max</span> <span class="kd">implements</span> <span class="nc">Number</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">a</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">b</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Max</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">b</span> <span class="o">=</span> <span class="n">y</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">intValue</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">&gt;</span> <span class="k">this</span><span class="o">.</span><span class="na">b</span> <span class="o">?</span> <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">b</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This procedural call:</p>
 
-<pre>int max = NumberUtils.max(10, 5);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="nc">NumberUtils</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span>
+</code></pre></div></div>
 
 <p>Will become object-oriented:</p>
 
-<pre>int max = new Max(10, 5).intValue();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">).</span><span class="na">intValue</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Potato, potato? Not really; just read on…</p>
 
@@ -184,15 +189,16 @@ exposing the behavior we are seeking:</p>
 <p>This is how I would design the same file-transforming functionality as above but
 in an object-oriented manner:</p>
 
-<pre>void transform(File in, File out) {
-  Collection&lt;String&gt; src = new Trimmed(
-    new FileLines(new UnicodeFile(in))
-  );
-  Collection&lt;String&gt; dest = new FileLines(
-    new UnicodeFile(out)
-  );
-  dest.addAll(src);
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="nc">File</span> <span class="n">in</span><span class="o">,</span> <span class="nc">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">src</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Trimmed</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">FileLines</span><span class="o">(</span><span class="k">new</span> <span class="nc">UnicodeFile</span><span class="o">(</span><span class="n">in</span><span class="o">))</span>
+  <span class="o">);</span>
+  <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">dest</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileLines</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">UnicodeFile</span><span class="o">(</span><span class="n">out</span><span class="o">)</span>
+  <span class="o">);</span>
+  <span class="n">dest</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">src</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">FileLines</code> implements <code class="highlighter-rouge">Collection&lt;String&gt;</code> and encapsulates  all file reading
 and writing operations. An instance of <code class="highlighter-rouge">FileLines</code> behaves exactly as a

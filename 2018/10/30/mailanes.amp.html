@@ -98,12 +98,13 @@ Let’s say you go to <a href="https://www.zerocracy.com">zerocracy.com</a>, ent
 and click “Help me start!” The form on the site is configured to post that
 email directly to the Mailanes web app (see the <a href="https://www.zerocracy.com/">sources</a>):</p>
 
-<pre>&lt;form method="POST" action="https://www.mailanes.com/subscribe?list=4"&gt;
-  &lt;input type="hidden" name="source" value="www.zerocracy.com"/&gt;
-  &lt;input type="hidden" name="redirect" value="https://www.zerocracy.com/"/&gt;
-  &lt;input type="email" name="email" placeholder="Your email..." size="24"/&gt;
-  &lt;button type="submit"&gt;Help me start!&lt;/button&gt;
-&lt;/form&gt;</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"https://www.mailanes.com/subscribe?list=4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"source"</span> <span class="na">value=</span><span class="s">"www.zerocracy.com"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"redirect"</span> <span class="na">value=</span><span class="s">"https://www.zerocracy.com/"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Your email..."</span> <span class="na">size=</span><span class="s">"24"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Help me start!<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">action</code> of the form points to the <code class="highlighter-rouge">/subscribe?list=4</code> URL at the Mailanes
 server. Once submitted, the recipient will be added to list number 4 and the browser
@@ -127,9 +128,10 @@ for four days, zero hours, and zero minutes.</p>
 
 <p>At the bottom of the letter I added this:</p>
 
-<pre>Thanks,&lt;br/&gt;
-Yegor Bugayenko&lt;br/&gt;
-Click [here]({{ unsubscribe }}) if you don't want to hear from me again.</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thanks,<span class="nt">&lt;br/&gt;</span>
+Yegor Bugayenko<span class="nt">&lt;br/&gt;</span>
+Click [here]({{ unsubscribe }}) if you don't want to hear from me again.
+</code></pre></div></div>
 
 <p>The <code class="highlighter-rouge">{{ unsubscribe }}</code> will be replaced by the link to a page where
 the recipient of the email will be instantly unsubscribed. I believe it’s

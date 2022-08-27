@@ -143,12 +143,13 @@ it may look like this:</p>
 
 <p>My deployment script looked like this before I started to use Rultor:</p>
 
-<pre>#!/bin/bash
-phing test
-git ftp push --user ".." \
-  --passwd ".." \
-  --syncroot php/src \
-  ftp://ftp.example.com/</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+phing <span class="nb">test
+</span>git ftp push <span class="nt">--user</span> <span class="s2">".."</span> <span class="se">\</span>
+  <span class="nt">--passwd</span> <span class="s2">".."</span> <span class="se">\</span>
+  <span class="nt">--syncroot</span> php/src <span class="se">\</span>
+  ftp://ftp.example.com/
+</code></pre></div></div>
 
 <p>Just two lines. The first one is a full run of unit tests. The second one
 is an FTP deployment to the production server. Very simple. But this script
@@ -165,22 +166,23 @@ work again.</p>
 <p>So, here is a new script, which I’m using now.
 It is being executed inside a new Docker container, every time:</p>
 
-<pre>#!/bin/bash
-# First, we install all prerequisites
-sudo apt-get install -y php5 php5-mysql mysql
-sudo apt-get install php-pear
-sudo pear channel-discover pear.phpunit.de
-sudo pear install phpunit/PHPUnit
-sudo pear install PHP_CodeSniffer
-sudo pecl install xdebug
-sudo pear channel-discover pear.phing.info
-sudo pear install phing/phing
-# And now the same script I had before
-phing test
-git ftp push --user ".." \
-  --passwd ".." \
-  --syncroot php/src \
-  ftp://ftp.example.com/</pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># First, we install all prerequisites</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> php5 php5-mysql mysql
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>php-pear
+<span class="nb">sudo </span>pear channel-discover pear.phpunit.de
+<span class="nb">sudo </span>pear <span class="nb">install </span>phpunit/PHPUnit
+<span class="nb">sudo </span>pear <span class="nb">install </span>PHP_CodeSniffer
+<span class="nb">sudo </span>pecl <span class="nb">install </span>xdebug
+<span class="nb">sudo </span>pear channel-discover pear.phing.info
+<span class="nb">sudo </span>pear <span class="nb">install </span>phing/phing
+<span class="c"># And now the same script I had before</span>
+phing <span class="nb">test
+</span>git ftp push <span class="nt">--user</span> <span class="s2">".."</span> <span class="se">\</span>
+  <span class="nt">--passwd</span> <span class="s2">".."</span> <span class="se">\</span>
+  <span class="nt">--syncroot</span> php/src <span class="se">\</span>
+  ftp://ftp.example.com/
+</code></pre></div></div>
 
 <p>Obviously, running this script on my MacBook (without virtualization) would
 cause a lot of trouble. Well, I don’t even have <code class="highlighter-rouge">apt-get</code> here :)</p>
@@ -264,11 +266,12 @@ to use the scripts he/she has to be able to open files with credentials.</p>
 sensitive data, right before they are used by your deployment scripts. In
 the <code class="highlighter-rouge">.rultor.yml</code> configuration file you just say:</p>
 
-<pre>decrypt:
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
   db.ini: "repo/db.ini.asc"
 deploy:
   script:
-    ftp put db.ini production</pre>
+    ftp put db.ini production
+</code></pre></div></div>
 
 <p>Then, you encrypt your <code class="highlighter-rouge">db.ini</code> using a Rultor GPG key, and fearlessly
 commit <code class="highlighter-rouge">db.ini.asc</code> to the repository. Nobody will be able to open and read

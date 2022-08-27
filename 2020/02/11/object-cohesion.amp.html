@@ -103,16 +103,17 @@ as a characteristic of a software module, was invented by
 when I didn’t even exist yet, in 1974.
 Here is what it means; take a look at this simple Java class:</p>
 
-<pre>class Books {
-  private List&lt;String&gt; titles;
-  private List&lt;Integer&gt; prices;
-  void addTitle(String title) {
-    this.titles.add(title);
-  }
-  void addPrice(Integer price) {
-    this.prices.add(price);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">prices</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">addTitle</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">addPrice</span><span class="o">(</span><span class="nc">Integer</span> <span class="n">price</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">prices</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">price</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There are two attributes and two methods. The method <code class="highlighter-rouge">addTitle()</code> works with
 the attribute <code class="highlighter-rouge">titles</code>, while the method <code class="highlighter-rouge">addPrice()</code> works only with the
@@ -120,18 +121,19 @@ attribute <code class="highlighter-rouge">prices</code>. The cohesion is <em>low
 <code class="highlighter-rouge">titles</code> and <code class="highlighter-rouge">prices</code> are not related to each other in any way. We can easily
 break this class into two pieces without losing anything:</p>
 
-<pre>class Books1 {
-  private List&lt;String&gt; titles;
-  void addTitle(String title) {
-    this.titles.add(title);
-  }
-}
-class Books2 {
-  private List&lt;Integer&gt; prices;
-  void addPrice(Integer price) {
-    this.prices.add(price);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books1</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">addTitle</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Books2</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">prices</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">addPrice</span><span class="o">(</span><span class="nc">Integer</span> <span class="n">price</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">prices</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">price</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, we have two much more cohesive classes: their attributes and methods
 are related to each other. We can’t break <code class="highlighter-rouge">Books1</code> anymore, since each
@@ -139,15 +141,16 @@ attribute is needed by each method.</p>
 
 <p>Here is yet another example of a <em>highly</em> cohesive class:</p>
 
-<pre>class Books {
-  private List&lt;String&gt; titles;
-  void add(String title) {
-    this.titles.add(title);
-  }
-  void delete(int id) {
-    this.titles.remove(id);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">delete</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">titles</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Can we break it into smaller pieces? No, we can’t. We can’t take any part
 of the class out. The attribute <code class="highlighter-rouge">titles</code> and both of the methods must stay

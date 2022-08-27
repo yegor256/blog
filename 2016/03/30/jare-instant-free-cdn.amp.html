@@ -93,7 +93,8 @@ CDN that is simple to configure. It utilizes AWS CloudFront resources.</p>
 the details, I will explain how it’s done internally. Say you have
 this HTML:</p>
 
-<pre>&lt;img src="//www.teamed.io/image/logo.svg"/&gt;</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"//www.teamed.io/image/logo.svg"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
 
 <p>I want this <code class="highlighter-rouge">logo.svg</code> to be delivered via a CDN. There are two steps.
 First, I register my domain at <a href="http://www.jare.io">jare.io</a>:</p>
@@ -102,7 +103,8 @@ First, I register my domain at <a href="http://www.jare.io">jare.io</a>:</p>
 
 <p>Second, I change my HTML:</p>
 
-<pre>&lt;img src="//cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/&gt;</pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"//cf.jare.io/?u=http://www.teamed.io/images/logo.svg"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
 
 <p>That’s it.</p>
 
@@ -137,7 +139,7 @@ nearest <a href="https://en.wikipedia.org/wiki/Name_server">name server</a>
 and asks “what is the IP address of www.teamed.io?”
 The answer usually contains a single IP address:</p>
 
-<pre>$ nslookup www.teamed.io
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nslookup www.teamed.io
 Server:   172.16.0.1
 Address:  172.16.0.1#53
 
@@ -145,7 +147,8 @@ Non-authoritative answer:
 www.teamed.io canonical name = teamed.github.io.
 teamed.github.io  canonical name = github.map.fastly.net.
 Name: github.map.fastly.net
-Address: 199.27.79.133</pre>
+Address: 199.27.79.133
+</code></pre></div></div>
 
 <p>IP address of <code class="highlighter-rouge">www.teamed.io</code> is <code class="highlighter-rouge">199.27.79.133</code>, at the time of writing.</p>
 
@@ -153,17 +156,19 @@ Address: 199.27.79.133</pre>
 an <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_message">HTTP request</a>
 through it:</p>
 
-<pre>GET /images/logo.svg HTTP/1.1
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /images/logo.svg HTTP/1.1
 Host: www.teamed.io
-Accept: image/*</pre>
+Accept: image/*
+</code></pre></div></div>
 
 <p>The server responds with an
 <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Response_message">HTTP response</a>:</p>
 
-<pre>HTTP/1.1 200 OK
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
 Content-Type: image/svg+xml
 
-[SVG image content goes here, over 1000 bytes]</pre>
+[SVG image content goes here, over 1000 bytes]
+</code></pre></div></div>
 
 <p>That is the <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a>
 image we’re looking for. The browser renders it on the web page
@@ -177,14 +182,15 @@ of milliseconds. Try to load this image, which is located on a server
 that is hosted in Prague, Czech Republic (I’m using <code class="highlighter-rouge">curl</code> as suggested
 <a href="https://josephscott.org/archives/2011/10/timing-details-with-curl/">here</a>):</p>
 
-<pre>$ curl -w "@f.txt" -o /dev/null -s \
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -w "@f.txt" -o /dev/null -s \
   http://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
     time_namelookup:  0.005
        time_connect:  0.376
    time_pretransfer:  0.377
  time_starttransfer:  0.566
                     ----------
-         time_total:  0.567</pre>
+         time_total:  0.567
+</code></pre></div></div>
 
 <p>I’m trying to do it from Palo Alto, California, which is about half a globe
 away from Prague. As you can see, it takes over 500ms. That’s too much, especially
@@ -219,28 +225,30 @@ is the name of all edge servers responsible for delivering our content
 in AWS CloudFront, a CNAME for <code class="highlighter-rouge">djk1be5eatcae.cloudfront.net</code>).
 If I’m looking it up from California, I’m getting the following answer:</p>
 
-<pre>$ nslookup cf.jare.io
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nslookup cf.jare.io
 Server:   192.168.1.1
 Address:  192.168.1.1#53
 
 Non-authoritative answer:
 cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
 Name: djk1be5eatcae.cloudfront.net
-Address: 54.230.141.211</pre>
+Address: 54.230.141.211
+</code></pre></div></div>
 
 <p>An edge server with IP address <code class="highlighter-rouge">54.230.141.211</code> is located in
 <a href="https://db-ip.com/54.230.141.211">San Francisco</a>. This
 is rather close to me, less than fifty miles. If I do the same operation
 from a server in Virginia, I get a different response:</p>
 
-<pre>$ nslookup cf.jare.io
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nslookup cf.jare.io
 Server:   172.16.0.23
 Address:  172.16.0.23#53
 
 Non-authoritative answer:
 cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
 Name: djk1be5eatcae.cloudfront.net
-Address: 52.85.131.217</pre>
+Address: 52.85.131.217
+</code></pre></div></div>
 
 <p>An edge server with IP address <code class="highlighter-rouge">52.85.131.217</code> is located in
 <a href="https://db-ip.com/52.85.131.217">Washington</a>, which is far away from
@@ -288,7 +296,8 @@ decides what to do with them. The decision is based on the information
 from the HTTP request URI. For example, the request from the browser
 has this URI path:</p>
 
-<pre>/?u=http://www.teamed.io/images/logo.svg</pre>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/?u=http://www.teamed.io/images/logo.svg
+</code></pre></div></div>
 
 <p>Remember, the request is made to <code class="highlighter-rouge">cf.jare.io</code>, which is the address of
 the edge server. This exact URI arrives at <code class="highlighter-rouge">relay.jare.io</code>. The URI contains
@@ -301,14 +310,15 @@ it is a free and quick CDN.</p>
 <p>By the way, when we query the same image through jare.io (and CloudFront),
 it comes back much faster:</p>
 
-<pre>$ curl -w "@f.txt" -o /dev/null -s \
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -w "@f.txt" -o /dev/null -s \
   http://cf.jare.io/?u=www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
     time_namelookup:  0.005
        time_connect:  0.021
    time_pretransfer:  0.021
  time_starttransfer:  0.041
                     ----------
-         time_total:  0.041</pre>
+         time_total:  0.041
+</code></pre></div></div>
 
 <p>Most of the work is done by AWS CloudFront, while jare.io is just a
 relay that makes its configuration more convenient. Besides, it makes

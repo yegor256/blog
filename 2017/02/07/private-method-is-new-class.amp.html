@@ -88,33 +88,35 @@ is the main difference between them, and it is crucial.</p>
 
 <p>Here is an example of a simple class:</p>
 
-<pre>class Token {
-  private String key;
-  private String secret;
-  String encoded() {
-    return "key="
-      + URLEncoder.encode(key, "UTF-8")
-      + "&amp;secret="
-      + URLEncoder.encode(secret, "UTF-8");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Token</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">key</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">secret</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="nf">encoded</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"key="</span>
+      <span class="o">+</span> <span class="nc">URLEncoder</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">)</span>
+      <span class="o">+</span> <span class="s">"&amp;secret="</span>
+      <span class="o">+</span> <span class="nc">URLEncoder</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">secret</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There is an obvious code duplication, right? The easiest way to resolve
 it is to introduce a private static method:</p>
 
-<pre>class Token {
-  private String key;
-  private String secret;
-  String encoded() {
-    return "key="
-      + Token.encoded(key)
-      + "&amp;secret="
-      + Token.encoded(secret);
-  }
-  private static String encoded(String text) {
-    return URLEncoder.encode(text, "UTF-8");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Token</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">key</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">secret</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="nf">encoded</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"key="</span>
+      <span class="o">+</span> <span class="nc">Token</span><span class="o">.</span><span class="na">encoded</span><span class="o">(</span><span class="n">key</span><span class="o">)</span>
+      <span class="o">+</span> <span class="s">"&amp;secret="</span>
+      <span class="o">+</span> <span class="nc">Token</span><span class="o">.</span><span class="na">encoded</span><span class="o">(</span><span class="n">secret</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">encoded</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">URLEncoder</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">text</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Looks much better now. But what will happen if we have another class
 that needs the exact same functionality? We will have to copy and paste
@@ -123,26 +125,28 @@ this private static method <code class="highlighter-rouge">encoded()</code> into
 <p>A better alternative would be to introduce a new class <code class="highlighter-rouge">Encoded</code> that
 implements the functionality we want to share:</p>
 
-<pre>class Encoded {
-  private final String raw;
-  @Override
-  public String toString() {
-    return URLEncoder.encode(this.raw, "UTF-8");
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encoded</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">raw</span><span class="o">;</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">URLEncoder</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">raw</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>And then:</p>
 
-<pre>class Token {
-  private String key;
-  private String secret;
-  String encoded() {
-    return "key="
-      + new Encoded(key)
-      + "&amp;secret="
-      + new Encoded(secret);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Token</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">key</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">secret</span><span class="o">;</span>
+  <span class="nc">String</span> <span class="nf">encoded</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"key="</span>
+      <span class="o">+</span> <span class="k">new</span> <span class="nc">Encoded</span><span class="o">(</span><span class="n">key</span><span class="o">)</span>
+      <span class="o">+</span> <span class="s">"&amp;secret="</span>
+      <span class="o">+</span> <span class="k">new</span> <span class="nc">Encoded</span><span class="o">(</span><span class="n">secret</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now this functionality is 1) reusable, and 2) testable. We can easily
 use this class <code class="highlighter-rouge">Encoded</code> in many other places, and we can create a unit

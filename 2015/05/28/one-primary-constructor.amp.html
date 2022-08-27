@@ -88,21 +88,22 @@ constructing mechanism.</p>
 
 <p>Here is what I mean:</p>
 
-<pre>final class Cash {
-  private final int cents;
-  private final String currency;
-  public Cash() { // secondary
-    this(0);
-  }
-  public Cash(int cts) { // secondary
-    this(cts, "USD");
-  }
-  public Cash(int cts, String crn) { // primary
-    this.cents = cts;
-    this.currency = crn;
-  }
-  // methods here
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Cash</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">cents</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">currency</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// secondary</span>
+    <span class="k">this</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// secondary</span>
+    <span class="k">this</span><span class="o">(</span><span class="n">cts</span><span class="o">,</span> <span class="s">"USD"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">,</span> <span class="nc">String</span> <span class="n">crn</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// primary</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="n">cts</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="n">crn</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// methods here</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There are three constructors in the class—only one is
 <em>primary</em> and the other two are <em>secondary</em>. My definition of a
@@ -117,23 +118,24 @@ behind this rule: It helps eliminate code duplication.</p>
 
 <p>Without such a rule, we may have this design for our class:</p>
 
-<pre>final class Cash {
-  private final int cents;
-  private final String currency;
-  public Cash() { // primary
-    this.cents = 0;
-    this.currency = "USD";
-  }
-  public Cash(int cts) { // primary
-    this.cents = cts;
-    this.currency = "USD";
-  }
-  public Cash(int cts, String crn) { // primary
-    this.cents = cts;
-    this.currency = crn;
-  }
-  // methods here
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Cash</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">cents</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">currency</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// primary</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="s">"USD"</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// primary</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="n">cts</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="s">"USD"</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nf">Cash</span><span class="o">(</span><span class="kt">int</span> <span class="n">cts</span><span class="o">,</span> <span class="nc">String</span> <span class="n">crn</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// primary</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">cents</span> <span class="o">=</span> <span class="n">cts</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">currency</span> <span class="o">=</span> <span class="n">crn</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// methods here</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>There’s not a lot of code here, but the duplication is massive and ugly;
 I hope you see it for yourself.</p>

@@ -104,10 +104,11 @@ everything about the data and hide it, remain <a href="/2016/07/06/data-transfer
 That is exactly the principle any procedural architecture is built upon; the
 code is in charge of the data. Take this C++ code, for example:</p>
 
-<pre>void print_speed() { // controller
-  int s = load_from_engine(); // model
-  printf("The speed is %d mph", s); // view
-}</pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print_speed</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// controller</span>
+  <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">load_from_engine</span><span class="p">();</span> <span class="c1">// model</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"The speed is %d mph"</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span> <span class="c1">// view</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>The function <code class="highlighter-rouge">print_speed()</code> is the controller. It gets the data <code class="highlighter-rouge">s</code> from
 the model <code class="highlighter-rouge">load_from_engine()</code> and renders it via the view <code class="highlighter-rouge">printf()</code>. Only
@@ -119,13 +120,14 @@ else, we will have to make a similar assumption again and again. That’s what t
 
 <p>This is an object-oriented alternative to the code above (pseudo-C++):</p>
 
-<pre>printf(
-  new PrintedSpeed( // view
-    new FormattedSpeed( // controller
-      new SpeedFromEngine() // model
-    )
-  )
-);</pre>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span>
+  <span class="n">new</span> <span class="nf">PrintedSpeed</span><span class="p">(</span> <span class="c1">// view</span>
+    <span class="n">new</span> <span class="n">FormattedSpeed</span><span class="p">(</span> <span class="c1">// controller</span>
+      <span class="n">new</span> <span class="n">SpeedFromEngine</span><span class="p">()</span> <span class="c1">// model</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
 
 <p>Here, <code class="highlighter-rouge">SpeedFromEngine.speed()</code>
 returns speed in mph, as an integer; <code class="highlighter-rouge">FormattedSpeed.speed()</code> returns

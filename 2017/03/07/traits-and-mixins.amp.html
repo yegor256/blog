@@ -93,42 +93,45 @@ how we can still call programming object-oriented when it has
 <a href="http://phrogz.net/programmingruby/tut_modules.html">Ruby modules</a>
 as a sample implementation. Say that we have a class <code class="highlighter-rouge">Book</code>:</p>
 
-<pre>class Book
-  def initialize(title)
-    @title = title
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Now, we want class <code class="highlighter-rouge">Book</code> to use a static method (a procedure) that
 does something useful. We may either define it in a
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility class</a>
 and let <code class="highlighter-rouge">Book</code> call it:</p>
 
-<pre>class TextUtils
-  def self.caps(text)
-    text.split.map(&amp;:capitalize).join(' ')
-  end
-end
-class Book
-  def print
-    puts "My title is #{TextUtils.caps(@title)}"
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TextUtils</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">caps</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:capitalize</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="no">TextUtils</span><span class="p">.</span><span class="nf">caps</span><span class="p">(</span><span class="vi">@title</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Or we may make it even more “convenient” and <code class="highlighter-rouge">extend</code> our module
 in order to access its methods directly:</p>
 
-<pre>module TextModule
-  def caps(text)
-    text.split.map(&amp;:capitalize).join(' ')
-  end
-end
-class Book
-  extend TextModule
-  def print
-    puts "My title is #{caps(@title)}"
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">TextModule</span>
+  <span class="k">def</span> <span class="nf">caps</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:capitalize</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="kp">extend</span> <span class="no">TextModule</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="n">caps</span><span class="p">(</span><span class="vi">@title</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>It seems nice—if you don’t understand the
 <a href="/2014/05/05/oop-alternative-to-utility-classes.html">difference</a>
@@ -147,25 +150,26 @@ create two mixins. The first one will be called <code class="highlighter-rouge">
 of the book the way it is, and the second one will be called <code class="highlighter-rouge">CapsMixin</code> and will
 capitalize what’s already printed:</p>
 
-<pre>module CapsMixin
-  def to_s
-    super.to_s.split.map(&amp;:capitalize).join(' ')
-  end
-end
-module PlainMixin
-  def to_s
-    @title
-  end
-end
-class Book
-  def initialize(title)
-    @title = title
-  end
-  include CapsMixin, PlainMixin
-  def print
-    puts "My title is #{self}"
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">CapsMixin</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="k">super</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:capitalize</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">module</span> <span class="nn">PlainMixin</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="vi">@title</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+  <span class="kp">include</span> <span class="no">CapsMixin</span><span class="p">,</span> <span class="no">PlainMixin</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>Calling <code class="highlighter-rouge">Book</code> without the included mixin will print its title the way
 it is. Once we add the <code class="highlighter-rouge">include</code> statement, the behavior of <code class="highlighter-rouge">to_s</code> is
@@ -174,20 +178,21 @@ combine mixins to produce the required functionality. For example,
 we can add one more, which will
 <a href="http://stackoverflow.com/a/25136035/187141">abbreviate</a> the title to 16 characters:</p>
 
-<pre>module AbbrMixin
-  def to_s
-    super.to_s.gsub(/^(.{16,}?).*$/m,'\1...')
-  end
-end
-class Book
-  def initialize(title)
-    @title = title
-  end
-  include AbbrMixin, CapsMixin, PlainMixin
-  def print
-    puts "My title is #{self}"
-  end
-end</pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">AbbrMixin</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="k">super</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/^(.{16,}?).*$/m</span><span class="p">,</span><span class="s1">'\1...'</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+  <span class="kp">include</span> <span class="no">AbbrMixin</span><span class="p">,</span> <span class="no">CapsMixin</span><span class="p">,</span> <span class="no">PlainMixin</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>I’m sure you already understand that they both have access to
 the private attribute <code class="highlighter-rouge">@title</code> of class <code class="highlighter-rouge">Book</code>. They actually have
@@ -218,13 +223,14 @@ leads to nothing but unmaintainable and difficult to understand code.</p>
 Take a look at the example given in the
 <a href="/2015/02/26/composable-decorators.html">article</a>:</p>
 
-<pre>Text text = new AllCapsText(
-  new TrimmedText(
-    new PrintableText(
-      new TextInFile(new File("/tmp/a.txt"))
-    )
-  )
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Text</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AllCapsText</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TrimmedText</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">PrintableText</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/a.txt"</span><span class="o">))</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>Doesn’t it look very similar to what we were doing above with Ruby mixins?</p>
 

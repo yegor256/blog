@@ -89,12 +89,13 @@ while allowing objects to interact.</p>
 
 <p>Say that this is our object:</p>
 
-<pre>class Temperature {
-  private int t;
-  public String toString() {
-    return String.format("%d C", this.t);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d C"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It represents a temperature. The only behavior it exposes is printing
 the temperature in Celsius. We don’t want to expose <code class="highlighter-rouge">t</code>, because
@@ -110,20 +111,22 @@ a method <code class="highlighter-rouge">getT()</code>, but neither one is perfe
 
 <p>What if we create this decorator:</p>
 
-<pre>class TempFahrenheit implements Temperature {
-  private TempCelsius origin;
-  public String toString() {
-    return String.format(
-      "%d F", this.origin.t * 1.8 + 32
-    );
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TempFahrenheit</span> <span class="kd">implements</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">TempCelsius</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"%d F"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">t</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>It should work just great:</p>
 
-<pre>Temperature t = new TempFahrenheit(
-  new TempCelsius(35)
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Temperature</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TempFahrenheit</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TempCelsius</span><span class="o">(</span><span class="mi">35</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>The only problem is that it won’t compile in Java, because class
 <code class="highlighter-rouge">TempFahrenheit</code> is not allowed to access private <code class="highlighter-rouge">t</code> in class <code class="highlighter-rouge">TempCelsius</code>.
@@ -133,13 +136,14 @@ that “naked data” problem—a severe violation of encapsulation.</p>
 <p>However, if we allow that access <em>only</em> to one class, everything will be fine.
 Something like this (won’t work in Java; it’s just a concept):</p>
 
-<pre>class TempCelsius {
-  trust TempFahrenheit; // here!
-  private int t;
-  public String toString() {
-    return String.format("%d C", this.t);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TempCelsius</span> <span class="o">{</span>
+  <span class="n">trust</span> <span class="nc">TempFahrenheit</span><span class="o">;</span> <span class="c1">// here!</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d C"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Since this <code class="highlighter-rouge">trust</code> keyword is placed into the class that allows access,
 we won’t have the “naked data” problem—we will always know exactly which

@@ -79,17 +79,18 @@ easily be eliminated by using jcabi-log
 (using <a href="http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html"><code class="highlighter-rouge">LoggerFactory</code></a>
 from <a href="http://www.slf4j.org/">slf4j</a>):</p>
 
-<pre>import org.slf4j.LoggerFactory;
-public class Foo {
-  private static final Logger LOGGER =
-    LoggerFactory.getLogger(Foo.class);
-  public void save(String file) {
-    // save the file
-    if (Foo.LOGGER.isInfoEnabled()) {
-      Foo.LOGGER.info("file {} saved successfuly", file);
-    }
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Logger</span> <span class="no">LOGGER</span> <span class="o">=</span>
+    <span class="nc">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// save the file</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">LOGGER</span><span class="o">.</span><span class="na">isInfoEnabled</span><span class="o">())</span> <span class="o">{</span>
+      <span class="nc">Foo</span><span class="o">.</span><span class="na">LOGGER</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"file {} saved successfuly"</span><span class="o">,</span> <span class="n">file</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What’s wrong with it? Code duplication.</p>
 
@@ -106,13 +107,14 @@ ago, <a href="http://log.jcabi.com">jcabi-log</a>, which has a convenient
 utility class <a href="http://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html"><code class="highlighter-rouge">Logger</code></a>
 (yes, I know that <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes are evil</a>).</p>
 
-<pre>import com.jcabi.log.Logger;
-public class Foo {
-  public void save(String file) {
-    // save the file
-    Logger.info(this, "file %s saved successfuly", file);
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.log.Logger</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// save the file</span>
+    <span class="nc">Logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">"file %s saved successfuly"</span><span class="o">,</span> <span class="n">file</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>This looks much cleaner to me and does exactly
 the same—sends a single log line to the SLF4J
@@ -128,11 +130,11 @@ implemented in the library.</p>
 <a href="http://repo1.maven.org/maven2/com/jcabi/jcabi-log">Maven Central</a>
 (get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;com.jcabi&lt;/groupId&gt;
-  &lt;artifactId&gt;jcabi-log&lt;/artifactId&gt;
-&lt;/dependency&gt;</pre>
-
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-log<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
 
     </article>
   </body>

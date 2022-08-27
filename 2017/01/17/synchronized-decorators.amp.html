@@ -87,15 +87,16 @@ be thread-safe, while all of them have to provide synchronized decorators.</p>
 <p>Let’s start with an example (it’s
 <a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>, by the way):</p>
 
-<pre>class Position {
-  private int number = 0;
-  @Override
-  public void increment() {
-    int before = this.number;
-    int after = before + 1;
-    this.number = after;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Position</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">before</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">number</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">after</span> <span class="o">=</span> <span class="n">before</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">number</span> <span class="o">=</span> <span class="n">after</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>What do you think—is it <a href="https://en.wikipedia.org/wiki/Thread_safety">thread-safe</a>?
 This term refers to whether
@@ -123,15 +124,16 @@ at the same time, they will all go sequentially, not in parallel: one
 thread after another. Of course, it will take longer, but it will prevent
 that mistake from happening:</p>
 
-<pre>class Position {
-  private int number = 0;
-  @Override
-  public synchronized void increment() {
-    int before = this.number;
-    int after = before + 1;
-    this.number = after;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Position</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">before</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">number</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">after</span> <span class="o">=</span> <span class="n">before</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">number</span> <span class="o">=</span> <span class="n">after</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>A class that guarantees it won’t break no matter how many threads
 are working with it is called <strong>thread-safe</strong>.</p>
@@ -148,27 +150,30 @@ A between-threads synchronization mechanism will definitely slow us down.</p>
 is not thread-safe, while the other one is a <strong>synchronized decorator</strong>,
 which would look like this:</p>
 
-<pre>class SyncPosition implements Position {
-  private final Position origin;
-  SyncPosition(Position pos) {
-    this.origin = pos;
-  }
-  @Override
-  public synchronized void increment() {
-    this.origin.increment();
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">SyncPosition</span> <span class="kd">implements</span> <span class="nc">Position</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Position</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">SyncPosition</span><span class="o">(</span><span class="nc">Position</span> <span class="n">pos</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">pos</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kd">synchronized</span> <span class="kt">void</span> <span class="nf">increment</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">increment</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Now, when we need our <code class="highlighter-rouge">position</code> object to be thread-safe, we decorate
 it with <code class="highlighter-rouge">SyncPosition</code>:</p>
 
-<pre>Position position = new SyncPosition(
-  new SimplePosition()
-);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Position</span> <span class="n">position</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SyncPosition</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">SimplePosition</span><span class="o">()</span>
+<span class="o">);</span>
+</code></pre></div></div>
 
 <p>When we need a plain simple position, without any thread safety, we do this:</p>
 
-<pre>Position position = new SimplePosition();</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Position</span> <span class="n">position</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimplePosition</span><span class="o">();</span>
+</code></pre></div></div>
 
 <p>Making class functionality both rich <em>and</em> thread-safe is, in my opinion,
 a violation of that famous

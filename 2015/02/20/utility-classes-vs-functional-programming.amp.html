@@ -101,15 +101,17 @@ and where this misconception is coming from.</p>
 <p>Here is a typical example of a utility class
 <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html"><code class="highlighter-rouge">Math</code></a> from Java 1.0:</p>
 
-<pre>public class Math {
-  public static double abs(double a);
-  // a few dozens of other methods of the same style
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Math</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">abs</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">);</span>
+  <span class="c1">// a few dozens of other methods of the same style</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here is how you would use it when you want to calculate an absolute
 value of a floating point number:</p>
 
-<pre>double x = Math.abs(3.1415926d);</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="mf">3.1415926d</span><span class="o">);</span>
+</code></pre></div></div>
 
 
 
@@ -134,20 +136,22 @@ of imperative programming above. Here is another (this is pure imperative/proced
 programming that has nothing to do with
 <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>):</p>
 
-<pre>public class MyMath {
-  public double f(double a, double b) {
-    double max = Math.max(a, b);
-    double x = Math.abs(max);
-    return x;
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyMath</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">double</span> <span class="nf">f</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">,</span> <span class="kt">double</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">max</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">max</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p><a href="http://en.wikipedia.org/wiki/Declarative_programming">Declarative programming</a>
 focuses on <em>what</em> the program should accomplish without prescribing
 how to do it in terms of sequences of actions to be taken. This is how
 the same code would look in Lisp, a functional programming language:</p>
 
-<pre>(defun f (a b) (abs (max a b)))</pre>
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">f</span> <span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="p">(</span><span class="nb">abs</span> <span class="p">(</span><span class="nb">max</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">)))</span>
+</code></pre></div></div>
 
 <p>What’s the catch? Just a difference in syntax? Not really.</p>
 
@@ -157,14 +161,15 @@ give my own. There are basically three roles interacting in the scenario
 with this <code class="highlighter-rouge">f</code> function/method: a <em>buyer</em>, a <em>packager</em> of the result,
 and a <em>consumer</em> of the result. Let’s say I call this function like this:</p>
 
-<pre>public void foo() {
-  double x = this.calc(5, -7);
-  System.out.println("max+abs equals to " + x);
-}
-private double calc(double a, double b) {
-  double x = Math.f(a, b);
-  return x;
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">calc</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="o">-</span><span class="mi">7</span><span class="o">);</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"max+abs equals to "</span> <span class="o">+</span> <span class="n">x</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="kd">private</span> <span class="kt">double</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">,</span> <span class="kt">double</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">f</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>Here, method <code class="highlighter-rouge">calc()</code> is a buyer, method <code class="highlighter-rouge">Math.f()</code> is a packager of the result,
 and method <code class="highlighter-rouge">foo()</code> is a consumer. No matter which programming style is used,
@@ -207,8 +212,9 @@ and other functional languages return “vouchers.” For example, if you
 call the <code class="highlighter-rouge">max</code> function in Lisp, the actual maximum between two numbers
 will only be calculated when you actually start using it:</p>
 
-<pre>(let (x (max 1 5))
-  (print "X equals to " x))</pre>
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">let</span> <span class="p">(</span><span class="nv">x</span> <span class="p">(</span><span class="nb">max</span> <span class="mi">1</span> <span class="mi">5</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">print</span> <span class="s">"X equals to "</span> <span class="nv">x</span><span class="p">))</span>
+</code></pre></div></div>
 
 <p>Until this <code class="highlighter-rouge">print</code> actually starts to output characters to the
 screen, the function <code class="highlighter-rouge">max</code> won’t be called. This <code class="highlighter-rouge">x</code> is a “voucher” returned
@@ -218,11 +224,12 @@ to you when you attempted to “buy” a maximum between <code class="highlighte
 make them declarative. The code is still imperative, because its execution
 delivers the result here and now:</p>
 
-<pre>public class MyMath {
-  public double f(double a, double b) {
-    return Math.abs(Math.max(a, b));
-  }
-}</pre>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyMath</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">double</span> <span class="nf">f</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">,</span> <span class="kt">double</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <p>“Okay,” you may say, “I got it, but why is declarative style better than imperative?
 What’s the big deal?” I’m getting to it. Let me first show the difference
@@ -232,12 +239,14 @@ classes and functional programming.</p>
 
 <p>In any functional programming language, you can do this:</p>
 
-<pre>(defun foo (x) (x 5))</pre>
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">foo</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nv">x</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre></div></div>
 
 <p>Then, later, you can call that <code class="highlighter-rouge">x</code>:</p>
 
-<pre>(defun bar (x) (+ x 1)) // defining function bar
-(print (foo bar)) // passing bar as an argument to foo</pre>
+<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">bar</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="nv">x</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">//</span> <span class="nv">defining</span> <span class="k">function</span> <span class="nv">bar</span>
+<span class="p">(</span><span class="nb">print</span> <span class="p">(</span><span class="nv">foo</span> <span class="nv">bar</span><span class="p">))</span> <span class="nv">//</span> <span class="nv">passing</span> <span class="nv">bar</span> <span class="nv">as</span> <span class="nv">an</span> <span class="nv">argument</span> <span class="nv">to</span> <span class="nv">foo</span>
+</code></pre></div></div>
 
 <p>Static methods in Java are not <em>functions</em> in terms of functional programming.
 You can’t do anything like this with a static method. You can’t pass a static
