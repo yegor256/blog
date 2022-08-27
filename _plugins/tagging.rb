@@ -82,7 +82,7 @@ module Yegor
       when 'management'
         "<img src='/images/books/code-ahead/mushroom.svg' alt='Management'/>"
       when 'java'
-        "<img src='/images/java-icon.svg' alt='Java'/>"
+        "<img src='/images/java-icon-white.svg' alt='Java'/>"
       when 'zerocracy'
         "<img src='//www.0crat.com/svg/logo.svg' alt='Zerocracy'/>"
       when 'xdsd'
