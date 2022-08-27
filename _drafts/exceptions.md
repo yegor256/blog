@@ -70,7 +70,7 @@ byte[] read(String uri) {
 }
 ```
 
-Here, the exception may be thrown at three places:
+Here, the exception may be thrown in three places:
 
   * By the [constructor]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
     of [`java.net.URL`](https://docs.oracle.com/javase/7/docs/api/java/net/URL.html)
