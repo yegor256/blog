@@ -150,6 +150,10 @@ del {
         color: darkgreen;
         margin-bottom: $em;
         padding-left: $em;
+
+        strong {
+          color: firebrick;
+        }
       }
     }
   }
