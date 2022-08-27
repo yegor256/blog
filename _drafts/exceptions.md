@@ -132,9 +132,9 @@ is able to explains the situation better and provide better
 context in the rethrown exception, because it deals only with
 a single case.
 
-Thus, the rule I'm suggesting: if an exception is rethrown,
+Thus, the rule I'm suggesting: if an exception is caught,
 each originator must have its own `catch` block.
 
 Obviously, I believe that
-[groupping exceptions](https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html)
+[groupping exception types](https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html)
 in a single `catch` block is a bad practice.
