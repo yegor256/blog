@@ -5,14 +5,14 @@ date: 2022-09-15
 place: Moscow, Russia
 tags: oop java
 description: |
-  Catching multiple exceptions thrown by different originator
+  Catching multiple exceptions thrown by different originators
   in a single "catch" block is a bad practice because it
-  reduces the ability to provide context of the problem occured.
+  reduces the ability to provide context of the problem that occurred.
 keywords:
   - exceptions in oop
   - try catch errors
   - java try catch
-  - groupping exceptions
+  - grouping exceptions
   - exception types
 image: /images/2022/09/elephant.jpg
 jb_picture:
@@ -21,15 +21,15 @@ jb_picture:
 
 Sometimes we [rethrow]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}) exceptions.
 In Java we do this more often than in other languages, because it has
-[checked]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %}) ones.
-Sometimes we must catch and rethrow a few exceptions originated
+[checked]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %}) exceptions.
+Sometimes we must catch and rethrow a few exceptions that originated
 from different places in a method.
-Java&nbsp;7 introduced [groupping](https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html)
+Java&nbsp;7 introduced [grouping](https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html)
 of different types of exceptions in a single `catch` block.
-But even without the groupping, it is possible to just catch `IOException` or
+But even without the grouping, it is possible to just catch `IOException` or
 even `Exception` and provide a single `catch` block for all types and all
 originators (methods that throw).
-Recently, I realized that it's a bad practice. Here is why.
+Recently I realized that this is a bad practice. Here is why.
 
 <!--more-->
 
@@ -77,9 +77,9 @@ Here, the exception may be thrown at three places:
   * By the method [`openStream()`](https://docs.oracle.com/javase/7/docs/api/java/net/URL.html#openStream%28%29)
   * By the method [`toByteArray`](https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#toByteArray-java.io.InputStream-)
 
-No matter who throws, we catch it by the same `catch` block and rethrow
-with the same message. I believe, this is bad because the [context]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
-of the error provided by rethrowing is less focused on the issue occured.
+No matter who throws, we catch it in the same `catch` block and rethrow
+with the same message. I believe that this is bad because the [context]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
+of the error provided by rethrowing is less focused on the issue that occurred.
 
 I would suggest this refactoring
 (I don't close the input stream, which is wrong,
@@ -128,7 +128,7 @@ byte[] read(String uri) {
 This code is much longer, but at the same time more convenient to
 [debug]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}),
 test, and use in production mode. The `catch` block
-is able to explains the situation better and provide better
+is able to explain the situation better and provide better
 context in the rethrown exception, because it deals only with
 a single case.
 
@@ -136,5 +136,5 @@ Thus, the rule I'm suggesting: if an exception is caught,
 each originator must have its own `catch` block.
 
 Obviously, I believe that
-[groupping exception types](https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html)
-in a single `catch` block is a bad practice.
+[grouping exception types](https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html)
+in a single `catch` block is bad practice.
