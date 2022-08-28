@@ -78,23 +78,25 @@ module Yegor
     def tag_link(tag)
       prefix = case tag
       when 'oop'
-        "<img src='/images/books/elegant-objects/cactus.svg' alt='OOP'/>"
+        "<img src='/images/icons/cactus.svg' alt='OOP'/>"
       when 'management'
-        "<img src='/images/books/code-ahead/mushroom.svg' alt='Management'/>"
+        "<img src='/images/icons/mushroom.svg' alt='Management'/>"
       when 'java'
-        "<img src='/images/java-icon-white.svg' alt='Java'/>"
+        "<img src='/images/icons/java-white.svg' alt='Java'/>"
       when 'ruby'
-        "<img src='/images/ruby-icon.svg' alt='Ruby'/>"
+        "<img src='/images/icons/ruby-white.svg' alt='Ruby'/>"
       when 'maven'
-        "<img src='/images/maven-icon.svg' alt='Maven'/>"
+        "<img src='/images/icons/maven-white.svg' alt='Maven'/>"
+      when 'jcabi'
+        "<img src='/images/icons/jcabi-white.svg' alt='Maven'/>"
       when 'aws'
-        "<img src='/images/aws-icon.svg' alt='Amazon Web Services'/>"
+        "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
       when 'rultor'
-        "<img src='//doc.rultor.com/images/logo.svg' alt='Rultor'/>"
+        "<img src='/images/icons/rultor-white.svg' alt='Rultor'/>"
       when 'zerocracy'
-        "<img src='//www.0crat.com/svg/logo.svg' alt='Zerocracy'/>"
+        "<img src='/images/icons/zerocracy-white.svg' alt='Zerocracy'/>"
       when 'xdsd'
-        "<img src='//www.xdsd.org/images/logo.svg' alt='XDSD'/>"
+        "<img src='/images/icons/xdsd-white.svg' alt='XDSD'/>"
       else
         ""
       end
