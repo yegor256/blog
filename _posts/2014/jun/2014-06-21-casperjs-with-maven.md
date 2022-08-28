@@ -2,7 +2,7 @@
 layout: post
 title: "CasperJS Tests in Maven Build"
 date: 2014-06-21
-tags: maven casperjs phantomjs testing
+tags: maven testing
 description: |
   Practical example of running automated integration tests
   in Maven build using Tomcat, PhantomJS and CasperJS
