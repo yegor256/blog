@@ -3,7 +3,7 @@ layout: post
 title: "My Work Environment"
 date: 2017-06-27
 place: Odessa, Ukraine
-tags: tools
+tags: mood
 description: |
   Here is the full list of software and hardware tools
   I'm using in my day work, including my MacBook

@@ -3,7 +3,7 @@ layout: post
 title: "My Favorite Websites"
 date: 2017-07-25
 place: Odessa, Ukraine
-tags: tools
+tags: mood
 description: |
   Here is the full list of websites I'm using almost
   every day, either through Chrome or through their

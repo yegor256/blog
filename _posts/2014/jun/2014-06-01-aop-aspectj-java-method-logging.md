@@ -2,7 +2,7 @@
 layout: post
 title: "Java Method Logging with AOP and Annotations"
 date: 2014-06-01
-tags: aop java logging jcabi
+tags: aop java jcabi
 categories: jcg
 description: |
   For traceability and debugging purposes, it can be very

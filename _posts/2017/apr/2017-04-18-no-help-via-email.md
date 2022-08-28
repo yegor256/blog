@@ -3,7 +3,7 @@ layout: post
 title: "Why I Won't Help You Via Email"
 date: 2017-04-18
 place: Moscow, Russia
-tags: blogging
+tags: mood
 description: |
   I get a few questions every week from people
   looking for advice or insight; I don't help

@@ -3,7 +3,7 @@ layout: post
 title: "Software Conferences to Attend"
 date: 2016-11-18
 place: Vilnius, Lithuania
-tags: conferences
+tags: mood
 description: |
   This is my list of software conferences I'm trying
   to attend every year; you may be interested to

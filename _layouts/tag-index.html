@@ -37,10 +37,33 @@ description: |
         <p>
           <img alt="Maven logo" src="/images/icons/maven.svg" style="height:150px;float:right;margin-left:1em"/>
         </p>
+      {% elsif page.title == 'oss' %}
+        <h1>{{ page.posts.size }} Posts About Open Source</h1>
+        <p>
+          <img alt="GitHub logo" src="/images/icons/github.svg" style="height:150px;float:right;margin-left:1em"/>
+        </p>
+      {% elsif page.title == 'sarcasm' %}
+        <h1>{{ page.posts.size }} Sarcastic Posts (don't take them too seriously ;)</h1>
+        <!--
+        <p>
+          <img alt="Sarcasm logo" src="/images/icons/sarcasm.svg" style="height:150px;float:right;margin-left:1em"/>
+        </p>
+        -->
+      {% elsif page.title == 'mood' %}
+        <h1>{{ page.posts.size }} Posts Written for Fun</h1>
+      {% elsif page.title == 'tdd' %}
+        <h1>{{ page.posts.size }} Posts About Test Driven Development (TDD)</h1>
+      {% elsif page.title == 'xml' %}
+        <h1>{{ page.posts.size }} Posts About eXtensible Markup Language (XML)</h1>
       {% elsif page.title == 'aws' %}
         <h1>{{ page.posts.size }} Posts About Amazon&trade; Web Services</h1>
         <p>
           <img alt="AWS logo" src="/images/icons/aws.svg" style="height:150px;float:right;margin-left:1em"/>
+        </p>
+      {% elsif page.title == 'pdd' %}
+        <h1>{{ page.posts.size }} Posts About Puzzle Driven Development (PDD)</h1>
+        <p>
+          <img alt="PDD logo" src="//www.0pdd.com/images/logo.svg" style="height:150px;float:right;margin-left:1em"/>
         </p>
       {% elsif page.title == 'rultor' %}
         <h1>{{ page.posts.size }} Posts About Rultor GitHub Chatbot</h1>

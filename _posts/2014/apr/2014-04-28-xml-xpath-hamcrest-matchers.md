@@ -2,7 +2,7 @@
 layout: post
 title: "XML/XPath Matchers for Hamcrest"
 date: 2014-04-28
-tags: xml hamcrest xpath testing
+tags: xml testing
 description: |
   jcabi-matchers is a new small library that extends
   the Hamcrest arsenal with XML/XPath matchers; the article explains

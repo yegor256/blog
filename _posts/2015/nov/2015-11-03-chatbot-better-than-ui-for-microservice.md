@@ -3,7 +3,7 @@ layout: post
 title: "A Chatbot Is Better Than a UI for a Microservice"
 date: 2015-11-03
 place: Seattle, WA
-tags: java architecture
+tags: java architect
 description: |
   Chatbot is a perfect alternative to a traditional
   user interface when dealing with a microservice

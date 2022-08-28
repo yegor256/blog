@@ -3,7 +3,7 @@ layout: post
 title: "Please, Don't Improvise"
 date: 2019-05-21
 place: Moscow, Russia
-tags: graphics
+tags: mood
 description: |
   Getting a programmer to create a good looking user interface
   is an impossible mission; however there are a few simple

@@ -2,7 +2,7 @@
 layout: post
 title: "Deploying to Heroku, in One Click"
 date: 2014-09-13
-tags: rultor devops heroku java
+tags: rultor devops java
 description: |
   This tutorial explains how a Java project can be
   deployed to Heroku in just one click and

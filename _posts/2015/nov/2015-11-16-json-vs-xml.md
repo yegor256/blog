@@ -3,7 +3,7 @@ layout: post
 title: "Stop Comparing JSON and XML"
 date: 2015-11-16
 place: Palo Alto, CA
-tags: xml json
+tags: xml
 description: |
   JSON vs. XML? This comparison makes no sense, because
   the former is a simple data format while the latter is

@@ -3,7 +3,7 @@ layout: post
 title: "The Bigger Victim of Sexual Harassment"
 date: 2017-07-18
 place: Saint Petersburg, Russia
-tags: mood social
+tags: mood
 description: |
   Sexual harassment has been a hot topic in Silicon Valley
   in the last few months; what exactly is happening and

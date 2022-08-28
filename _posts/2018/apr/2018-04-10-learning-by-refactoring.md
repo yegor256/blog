@@ -3,7 +3,7 @@ layout: post
 title: "Nine Steps of Learning by Refactoring"
 date: 2018-04-10
 place: Moscow, Russia
-tags: refactoring
+tags: programming
 description: |
   The best way to learn foreign or legacy code is
   to refactor it; here is a list of nine steps I go through

@@ -2,7 +2,7 @@
 layout: post
 title: "SASS in Java Webapp"
 date: 2014-06-26
-tags: java sass
+tags: java
 description: |
   SASS, as a CSS programming language, can be used effectively
   in a Java web application. Read how below.

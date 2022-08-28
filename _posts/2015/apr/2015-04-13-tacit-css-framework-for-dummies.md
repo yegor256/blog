@@ -2,7 +2,7 @@
 layout: post
 title: "Tacit, a CSS Framework Without Classes"
 date: 2015-04-13
-tags: css html
+tags: pets
 description: |
   Tacit is an open source CSS framework without a single
   class, which makes it very easy to use and learn.

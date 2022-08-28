@@ -87,8 +87,14 @@ module Yegor
         "<img src='/images/icons/ruby-white.svg' alt='Ruby'/>"
       when 'maven'
         "<img src='/images/icons/maven-white.svg' alt='Maven'/>"
+      when 'sarcasm'
+        "<img src='/images/icons/sarcasm-white.svg' alt='Sarcasm'/>"
       when 'jcabi'
         "<img src='/images/icons/jcabi-white.svg' alt='Maven'/>"
+      when 'pdd'
+        "<img src='/images/icons/pdd-white.svg' alt='PDD'/>"
+      when 'oss'
+        "<img src='/images/icons/github-white.svg' alt='GitHub'/>"
       when 'aws'
         "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
       when 'rultor'

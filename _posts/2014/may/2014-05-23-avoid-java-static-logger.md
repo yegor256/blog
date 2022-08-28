@@ -2,7 +2,7 @@
 layout: post
 title: "Get Rid of Java Static Loggers"
 date: 2014-05-23
-tags: logging java slf4j
+tags: java jcabi
 description: |
   Using static logger is a very common practice in Java,
   which pollutes the code and is a noise, which can
