@@ -85,6 +85,8 @@ module Yegor
         "<img src='/images/java-icon-white.svg' alt='Java'/>"
       when 'ruby'
         "<img src='/images/ruby-icon.svg' alt='Ruby'/>"
+      when 'maven'
+        "<img src='/images/maven-icon.svg' alt='Maven'/>"
       when 'aws'
         "<img src='/images/aws-icon.svg' alt='Amazon Web Services'/>"
       when 'rultor'

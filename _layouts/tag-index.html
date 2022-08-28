@@ -32,6 +32,11 @@ description: |
         <p>
           <img alt="Ruby logo" src="/images/ruby-icon.svg" style="height:150px;float:right;margin-left:1em"/>
         </p>
+      {% elsif page.title == 'maven' %}
+        <h1>{{ page.posts.size }} Posts About Apache Maven&trade;</h1>
+        <p>
+          <img alt="Maven logo" src="/images/maven-icon.svg" style="height:150px;float:right;margin-left:1em"/>
+        </p>
       {% elsif page.title == 'aws' %}
         <h1>{{ page.posts.size }} Posts About Amazon&trade; Web Services</h1>
         <p>
