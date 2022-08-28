@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Don't Group Exception Catchers"
-date: 2022-09-15
+date: 2022-08-30
 place: Moscow, Russia
 tags: oop java
 description: |
@@ -14,7 +14,7 @@ keywords:
   - java try catch
   - grouping exceptions
   - exception types
-image: /images/2022/09/elephant.jpg
+image: /images/2022/08/elephant.jpg
 jb_picture:
   caption: Elephant (2003) by Gus Van Sant
 ---
