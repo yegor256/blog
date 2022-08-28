@@ -203,6 +203,7 @@ as I was before. It's 7-9, but never 10. The class, apparently, is not thread-sa
 
 But before we fix the class, let's make our test simpler. Let's use
 [`RunInThreads`](http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html)
+(renamed to just [`Threads`](https://www.javadoc.io/doc/org.cactoos/cactoos/latest/org/cactoos/experimental/Threads.html) in the recent version)
 from [Cactoos](http://www.cactoos.org), which does exactly the same as we've done above,
 but under the hood:
 
