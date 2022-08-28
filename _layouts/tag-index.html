@@ -32,6 +32,11 @@ description: |
         <p>
           <img alt="Ruby logo" src="/images/ruby-icon.svg" style="height:150px;float:right;margin-left:1em"/>
         </p>
+      {% elsif page.title == 'aws' %}
+        <h1>{{ page.posts.size }} Posts About Amazon&trade; Web Services</h1>
+        <p>
+          <img alt="AWS logo" src="/images/aws-icon.svg" style="height:150px;float:right;margin-left:1em"/>
+        </p>
       {% elsif page.title == 'rultor' %}
         <h1>{{ page.posts.size }} Posts About Rultor GitHub Chatbot</h1>
         <p>
