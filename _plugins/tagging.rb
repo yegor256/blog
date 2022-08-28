@@ -83,6 +83,8 @@ module Yegor
         "<img src='/images/books/code-ahead/mushroom.svg' alt='Management'/>"
       when 'java'
         "<img src='/images/java-icon-white.svg' alt='Java'/>"
+      when 'ruby'
+        "<img src='/images/ruby-icon.svg' alt='Ruby'/>"
       when 'rultor'
         "<img src='//doc.rultor.com/images/logo.svg' alt='Rultor'/>"
       when 'zerocracy'
