@@ -6100,6 +6100,7 @@ opening
 OpenJDK
 openly
 opensource
+openstream
 opera
 operate
 operating
@@ -6160,6 +6161,7 @@ origin
 original
 originate
 originated
+originators
 origins
 ORM
 orthodox
@@ -7490,6 +7492,7 @@ retain
 retaining
 retention
 rethink
+rethrow
 retina
 retire
 retired
@@ -9042,6 +9045,7 @@ TkStatusXML
 tl
 tmp
 to
+tobytearray
 today
 TODO
 tofahrenheitstring

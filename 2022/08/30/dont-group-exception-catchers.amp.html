@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Don't Group Exception Catchers</title>
+    <link rel="canonical" href="https://www.yegor256.com/2022/08/30/dont-group-exception-catchers.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2022/08/30/dont-group-exception-catchers.html"
+        },
+        "headline": "Don't Group Exception Catchers",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2022/08/elephant.jpg",
+          "height": 721,
+          "width": 1190
+        },
+        "datePublished": "2022-08-30",
+        "dateModified": "2022-08-30",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Catching multiple exceptions thrown by different originators
+in a single "catch" block is a bad practice because it
+reduces the ability to provide context of the problem that occurred.
+",
+        "keywords": ["exceptions in oop", "try catch errors", "java try catch", "grouping exceptions", "exception types"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2022/08/30/dont-group-exception-catchers.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>30 August 2022</p>
+      <h1>Don't Group Exception Catchers</h1>
+      <p>Sometimes we <a href="/2015/12/01/rethrow-exceptions.html">rethrow</a> exceptions.
+In Java we do this more often than in other languages, because it has
+<a href="/2015/07/28/checked-vs-unchecked-exceptions.html">checked</a> exceptions.
+Sometimes we must catch and rethrow a few exceptions that originated
+from different places in a method.
+Java 7 introduced <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping</a>
+of different types of exceptions in a single <code class="highlighter-rouge">catch</code> block.
+But even without the grouping, it is possible to just catch <code class="highlighter-rouge">IOException</code> or
+even <code class="highlighter-rouge">Exception</code> and provide a single <code class="highlighter-rouge">catch</code> block for all types and all
+originators (methods that throw).
+Recently I realized that this is a bad practice. Here is why.</p>
+
+
+
+<amp-img src="/images/2022/08/elephant.jpg" alt="Elephant (2003) by Gus Van Sant" height="721" width="1190" layout="responsive"></amp-img>
+
+<p>Consider this Java method (I’m using <a href="https://commons.apache.org/proper/commons-io/">Apache Commons IO</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It’s not perfect. Let’s rewrite it to provide more error context,
+as <a href="/2015/12/01/rethrow-exceptions.html">was suggested</a> earlier:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+        <span class="s">"Failed to read from '%s'"</span><span class="o">,</span>
+        <span class="n">uri</span>
+      <span class="o">),</span>
+      <span class="n">ex</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Here, the exception may be thrown in three places:</p>
+
+<ul>
+  <li>By the <a href="/2015/05/07/ctors-must-be-code-free.html">constructor</a>
+of <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html"><code class="highlighter-rouge">java.net.URL</code></a>
+</li>
+  <li>By the method <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html#openStream%28%29"><code class="highlighter-rouge">openStream()</code></a>
+</li>
+  <li>By the method <a href="https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#toByteArray-java.io.InputStream-"><code class="highlighter-rouge">toByteArray</code></a>
+</li>
+</ul>
+
+<p>No matter who throws, we catch it in the same <code class="highlighter-rouge">catch</code> block and rethrow
+with the same message. I believe that this is bad because the <a href="/2015/12/01/rethrow-exceptions.html">context</a>
+of the error provided by rethrowing is less focused on the issue that occurred.</p>
+
+<p>I would suggest this refactoring
+(I don’t close the input stream, which is wrong,
+but that’s a topic for a separate discussion):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
+  <span class="no">URL</span> <span class="n">url</span><span class="o">;</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="n">uri</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">MalformedURLException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+        <span class="s">"Failed to parse the URI '%s'"</span><span class="o">,</span>
+        <span class="n">uri</span>
+      <span class="o">),</span>
+      <span class="n">ex</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">InputStream</span> <span class="n">stream</span><span class="o">;</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+        <span class="s">"Failed to open the stream for '%s'"</span><span class="o">,</span>
+        <span class="n">uri</span>
+      <span class="o">),</span>
+      <span class="n">ex</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span><span class="n">stream</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+        <span class="s">"Failed to read the stream for '%s'"</span><span class="o">,</span>
+        <span class="n">uri</span>
+      <span class="o">),</span>
+      <span class="n">ex</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This code is much longer, but at the same time more convenient to
+<a href="/2016/02/09/are-you-still-debugging.html">debug</a>,
+test, and use in production mode. The <code class="highlighter-rouge">catch</code> block
+is able to explain the situation better and provide better
+context in the rethrown exception, because it deals only with
+a single case.</p>
+
+<p>Thus, the rule I’m suggesting: if an exception is caught,
+each originator must have its own <code class="highlighter-rouge">catch</code> block.</p>
+
+<p>Obviously, I believe that
+<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping exception types</a>
+in a single <code class="highlighter-rouge">catch</code> block is bad practice.</p>
+
+    </article>
+  </body>
+</html>
