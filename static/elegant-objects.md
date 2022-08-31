@@ -61,11 +61,17 @@ more solid, and architecture more visible. It is available for sale
 on [Amazon](http://goo.gl/W2WVMk) (Please don't forget to review it there!),
 ISBN: 1519166915. The changelog is [here](https://github.com/yegor256/elegantobjects).
 
-Volume 1:<br/>
+Volume 1:
+<br/>
 <a href="http://goo.gl/W2WVMk"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+<br/>
+[PDF teaser](/pdf/books/eo1-teaser.pdf)
 
-Volume 2:<br/>
+Volume 2:
+<br/>
 <a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+<br/>
+[PDF teaser](/pdf/books/eo2-teaser.pdf)
 
 <!--more-->
 
