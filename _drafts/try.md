@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: oop java
 description: |
   Large try-blocks in try/catch statements are a common
-  practice, because we try to avoid poluting the code
+  practice, because we try to avoid polluting the code
   with catch blocks; it's a bad tendency.
 keywords:
   - try catch
@@ -20,12 +20,12 @@ jb_picture:
 ---
 
 It often happens, [especially]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %})
-in Java, when a few places in the method
+in Java, that a few places in the method
 are potential exception originators. Usually, we make a large method-size
 `try` block with a single `catch` at the bottom. We catch all
-exceptions, usually even using
+the exceptions, usually even using
 [grouping](https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html).
-This helps us minimize the noise, whith is the exception catching.
+This helps us minimize the noise, which is the exception catching.
 However, such large `try` blocks jeopardize maintainability: we are unable
 to provide proper [error context]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
 inside `catch` blocks.
@@ -56,7 +56,7 @@ void grep(Path file, Pattern regex) {
 }
 ```
 
-I believe, its try/catch block is too big. The `IOException` may ony be
+I believe that its try/catch block is too big. The `IOException` may only be
 thrown by the [`readAllLines`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-)
 static method, but the block covers a few other method calls
 and statements. This code would be better:
@@ -78,12 +78,12 @@ void grep(Path file, Pattern regex) {
 }
 ```
 
-Now, the try/catch block covers exactly the place where the exception
-may originate from. Nothing else!
+Now the try/catch block covers exactly the place where the exception
+may originate. Nothing else!
 
-Why smaller try-blocks are better? Because they allow more
+Why are smaller try-blocks better? Because they allow more
 focused error reporting with more detailed context. For example, the
-second snippet may be re-written as such:
+second snippet can be re-written as follows:
 
 ```java
 void grep(Path file, Pattern regex) {
@@ -107,5 +107,5 @@ void grep(Path file, Pattern regex) {
 }
 ```
 
-Can we do the same with the first snippet? We can, but the
-error message will be inaccurate, because the block covers too much.
+Can we do the same with the first snippet? We could, but the
+error message would be inaccurate, because the block covers too much.
