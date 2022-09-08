@@ -2,6 +2,7 @@
 
 [![DevOps By Rultor.com](https://www.rultor.com/b/yegor256/blog)](https://www.rultor.com/p/yegor256/blog)
 
+[![jekyll](https://github.com/yegor256/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/yegor256/blog/actions/workflows/jekyll.yml)
 [![Availability at SixNines](http://www.sixnines.io/b/3ba1652f)](http://www.sixnines.io/h/3ba1652f)
 [![Hits-of-Code](https://hitsofcode.com/github/yegor256/blog)](https://hitsofcode.com/view/github/yegor256/blog)
 [![My YouTube](https://img.shields.io/badge/YouTube-subscribe-active?logo=youtube)](https://www.youtube.com/c/yegor256?sub_confirmation=1)
