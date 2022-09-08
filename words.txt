@@ -4269,6 +4269,7 @@ in-method-body
 in-project
 in-the-office
 inability
+inaccurate
 inadequacy
 inapplicable
 inappropriate
@@ -4376,6 +4377,7 @@ initially
 initiative
 inject
 injectable
+injected
 injecting
 injection
 injections
@@ -5447,6 +5449,7 @@ META-INF
 metaphor
 metaphors
 method
+method-size
 methodlogger
 methodnotfoundexception
 methodologies
@@ -7154,6 +7157,7 @@ read-only
 readability
 readable
 readallbytes
+readalllines
 reader
 readers
 readfile
@@ -9289,6 +9293,7 @@ un-humanistic
 un-organized
 un-preventable
 un-testable
+unable
 unacceptable
 unambiguous
 unambiguously
