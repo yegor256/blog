@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Smaller Try-Blocks Are Better"
-date: 2022-09-07
+date: 2022-09-08
 place: Moscow, Russia
 tags: oop java
 description: |
@@ -14,9 +14,9 @@ keywords:
   - exception handling oop
   - try block
   - try catch exceptions
-image: /images/2022/09/
+image: /images/2022/09/the-rum-diary.jpg
 jb_picture:
-  caption:
+  caption: The Rum Diary (2011) by Bruce Robinson
 ---
 
 It often happens, [especially]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %})
