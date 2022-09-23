@@ -165,6 +165,8 @@ Pay attention to the snippet above: the `train` is now of type `Train<String>`, 
 as would be required by `Xsline`.
 The question now is: how do we get back to `Train<Shift>`?
 
+{% youtube C6CQWzOKEJs %}
+
 Ah, I forgot to mention. I wanted to design this library with one important principle
 in mind, [suggested]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 in 2014: all objects may only implement methods from their interfaces. That's why,
