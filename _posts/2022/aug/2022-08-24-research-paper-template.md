@@ -40,6 +40,8 @@ Use [LaTeX](https://www.latex-project.org), either locally or in [Overleaf](http
 
 Read my personal [best practices](https://yegor256.github.io/latex-best-practices/main.pdf) for LaTeX.
 
+Keep the same [organisational structure](https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing) in each paragraph.
+
 ## Title
 
 The [title](https://www.nature.com/nature-index/news-blog/how-to-write-a-good-research-science-academic-paper-title)
