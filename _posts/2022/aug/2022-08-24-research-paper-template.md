@@ -80,7 +80,9 @@ A Contribution is something tangible, which a reader can take from your study
 and use somehow in their own studies.
 A theorem, a method, a toolkit, a data-set, or an algorithm are good examples of a Contribution.
 
-Finally, help your reader understand how the rest of the paper is structured and why.
+<del>Finally, help your reader understand how the rest of the paper is structured and why.</del>
+Don't do this! Instead, finish each paragraph in this Section with something along this line:
+"In Section X we will explain it."
 
 ## Background
 
