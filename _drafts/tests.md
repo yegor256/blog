@@ -1,0 +1,273 @@
+---
+layout: post
+title: "On the Layout of Tests"
+date: 2022-10-24
+place: Moscow, Russia
+tags: tests
+description: |
+  What is the right way to keep test classes in a repository?
+  There is no single canonical approach, but a few principles may help
+  you keep test files in order.
+keywords:
+  - test methods
+  - java test organization
+  - how to structure test classes
+  - test methods design
+  - layout of tests classes
+image: /images/2022/10/
+jb_picture:
+  caption:
+---
+
+I don't know what is the programming language you use, but my experience
+of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells
+me that the principle, which I will try to convince you to adhere to,
+is universal for all languages. It's about naming of unit test files.
+It may look to you like a question of a low importance, but let me try
+to demonstrate that it's not. How do you name your test files? How many
+of them you create in `src/test/java` directory? Where do you place
+a class that is used only in a test, but is not a test? To most of these
+questions the answer most of you would give is "Whatever!"
+Let's try to find a better answer.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+The main purpose of my unit tests is to help me code. They are the
+[safety net]({% pst 2022/jul/2022-07-05-safety-net %}) ---
+they catch me when I make a mistake. Let's say, I edit a few files that I
+edited a few years ago and, of course, do it wrong. Then, I run all 500 unit tests
+in the project and ... ten of them turn red. Pay attention, I don't say "fail," because,
+just like a safety net around a building, failed tests are the tests
+that _didn't_ catch a falling hammer and didn't spot a bug just introduced.
+Thus, 490 of them _failed_, but ten of them _succeeded_.
+
+## Assertions
+
+Next, I scratch my head and think --- what exactly did I do wrong? Which
+file did I break? I just changed a few dozen code lines. Where exactly was the
+mistake? In order to find out, I read the output of the tests. I expect
+the messages they printed to the console to be descriptive enough to
+help me understand the problem. I don't want to revert all my changes
+and start from scratch, right? I want to quickly jump to the line with
+the bug, fix it, run all 500 tests again, see all of them green,
+commit my changes and call it a day.
+
+Needless to say that descriptive messages of test assertions
+and proper naming of test methods are the recipe for success.
+Let's consider a simple object `Phrases`, where we add
+a few English phrases and it magically understands which
+of them are greetings (obviously, using ML).
+For such a class this this Java/JUnit5 test would be very bad:
+
+```java
+@Test
+void test1() {
+  Phrases p = new Phrases();
+  p.add("Hello, world!");
+  p.add("London is a capital of Great Britain");
+  assert(p.greetings().count() == 1);
+}
+```
+
+While this test is much better, thanks to [Hamcrest](https://www.hamcrest.org)
+assertions (how to name test methods --- is a separate
+story explained in details [here](...)):
+
+```java
+@Test
+void countsSimpleGreetings() {
+  Phrases p = new Phrases();
+  p.add("Hello, world!");
+  p.add("London is a capital of Great Britain");
+  assertThat(
+    "Total count of greetings",
+    p.greetings().count(), equalTo(1)
+  );
+}
+```
+
+The first snippet will print a pretty obscure error message, while the
+second one will help me a lot in my struggle with the bug I just made:
+The message it will print will be self-explanatory. I will quickly understand
+what is the problem.
+
+## Test Classes
+
+Descriptive messages will help me understand what is the problem.
+However, will I understand _where_ is the problem? In which Java class?  Not really.
+Is it in `Phrases.java`, or maybe in `Greetings.java`, which is returned by `Phrases.greetings()`?
+This information I can only get from the _name_ of the test class.
+If it's called `PhrasesTest.java` --- all bugs that it catches most probably
+are located in `Phrases.java`. If it's called `GreetingsTest.java` --- ... well, you get the idea.
+
+My point is that the name of a test class is not just a name. It's an instruction
+for a wondering programmer:
+"Go look into the source file, the name of which you can derive from my name,
+removing the `Test` suffix." If I try to follow this instruction and
+it leads me to nowhere, I get very frustrated, especially if the project
+is not mine. I can't get the required information from anywhere else.
+The name of the test class is my last hope.
+
+## Very Long Test Classes
+
+What if a test class gets too long? It may have a few dozen or more test methods. We don't
+want a class to be too big, right? Wrong! A test class is not a class. It's not even
+a utility class. It's a container for test scripts. It's called a class because
+Java (and many other languages) doesn't have any alternative instruments for code
+organization. Don't worry about your test classes getting extremely long. 5000 lines of code
+in a test class is not a problem at all. Again, because it's not a class, it's only
+a collection of test scripts.
+
+## Test Prerequisites (Wrong Way)
+
+Very often there are classes or functions that are not tests,
+but must be shared among tests. (I'm sure you know that sharing tests is an
+[anti-pattern]({% pst 2018/dec/2018-12-11-unit-testing-anti-patterns %}). Do you?)
+Look at how I refactored the unit test from above (it's not elegant
+at all, but bear with me for a moment!):
+
+```java
+class PhrasesTest {
+  @Test
+  void countsSimpleGreetings() {
+    Phrases p = new Phrases();
+    prepare(p);
+    assertThat(
+      "Total count of greetings",
+      p.greetings().count(), equalTo(1)
+    );
+  }
+  private static void prepare(Phrases p) {
+    p.add("Hello, world!");
+    p.add("London is a capital of Great Britain");
+  }
+}
+```
+
+Here, in private method `prepare()` I have a convenient builder
+of the object of class `Phrases`. This builder may be very helpful
+for other tests, for example for `GreetingsTest`. I don't want
+to copy it from `PhrasesTest` to `GreetingsTest`. Instead, I
+want to put it somewhere, where it can be reused. This would
+be the right place for it (`foo` is the Java
+package that all our classes belong to):
+
+```text
+src/
+  main/
+    java/
+      foo/
+        Phrases.java
+        Greetings.java
+  test/
+    java/
+      foo/
+        support/
+          FooUtils.java
+        PhrasesTest.java
+        GreetingsTest.java
+```
+
+Static method `FooUtils.prepare()` now sits in the `FooUtils` utility
+class (a terrible [anti-pattern]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %})!),
+which is in the package `foo.support`. Pay attention, not in `foo` package, but
+in the sub-package that doesn't have a counter-part in the live code block:
+there is no directory `src/main/java/foo/support`. This is a clear message
+to a programmer who would meet this repository in a few years: all classes
+that stay in `foo.support` belong to test pipeline only and are not tests by
+themselves.
+
+## Test Prerequisites (Right Way)
+
+As [you know]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
+utility classes and [private static methods]({% pst 2017/feb/2017-02-07-private-method-is-new-class %})
+are the rudiments of imperative programming. Object-oriented world has better alternatives.
+JUnit5 in particular offers a pretty elegant mechanisms for
+creating test prerequisites...
+
+...
+
+## Fake Objects (Best Way)
+
+...
+
+## Integration Tests
+
+In Maven world there are unit test classes (`Test` suffix)
+and there are integration test classes (`ITCase` suffix).
+The difference is huge. While they both are compiled at `test-compile` phase
+by the same `maven-compiler-plugin`, they are not executed together.
+Unit tests are executed at `test` phase. The build fails immediately if
+any unit test is red. It's a pretty straight forward approach, which
+is similar to other build automation engines.
+
+Integration tests are executed in four-steps (these are the names of Maven phases):
+
+```text
+pre-integration-test
+integration-test
+post-integration-test
+verify
+```
+
+First, at `pre-integration-test` phase, the resources that are needed
+for integration testing are acquired. For example, a test instance of MySQL
+database may be started. Then, at `integration-test` phase, the tests with `ITCase` are executed. The
+result of their execution is ignored for now, but only recorded to a file.
+Then, the resources are released, at `post-integration-test` phase.
+For example, the MySQL server is shut down. Finally, at `verify` phase,
+the results of the tests are verified and the build fails if
+some of them are not green.
+
+I keep `ITCase` files together with `Test` files only when they are
+integration tests for specific live classes. Very often they are not --- that's why
+they are integration tests. They may integrate and test a number of classes together.
+In this case I put them in a separate package and give them arbitrary names
+that don't match with the names of live classes:
+
+```text
+src/
+  main/
+    java/
+      foo/
+        Phrases.java
+        Greetings.java
+  test/
+    java/
+      foo/
+        it/
+          SimpleGuessingITCase.java
+        PhrasesTest.java
+        GreetingsTest.java
+        GreetingsITCase.java
+```
+
+Here, `GreetingsITCase.java` is an integration test for `Greetings.java`,
+while `SimpleGuessingITCase.java` is an integration test for no particular
+class. Obviously, the package `foo.it` only exists in tests and is not
+present in `src/main/java`.
+
+## The Rules
+
+Thus, there is the first rule:
+a test class may only have methods
+annotated with `@Test` (in case of Java).
+
+Then, there is the second rule:
+a package with tests may only have classes with `Test` or `ITCase` suffices
+that map one-to-one to live classes, and nothing else.
+
+
+
+
+
+
+
+
+
+
+
+
+
