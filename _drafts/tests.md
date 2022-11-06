@@ -14,19 +14,19 @@ keywords:
   - how to structure test classes
   - test methods design
   - layout of tests classes
-image: /images/2022/10/
+image: /images/2022/11/mimino.jpg
 jb_picture:
-  caption:
+  caption: Мимино (1977) by Георгий Данелия
 ---
 
 I don't know what is the programming language you use, but my experience
 of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells
-me that the principle, which I will try to convince you to adhere to,
-is universal for all languages. It's about naming of unit test files.
+me that the principle, which I will try to convince you to adhere to ---
+is universal for all languages. It's about naming of test files.
 It may look to you like a question of a low importance, but let me try
-to demonstrate that it's not. How do you name your test files? How many
+to demonstrate that it's not. How do you name your files with test classes? How many
 of them you create in `src/test/java` directory? Where do you place
-a class that is used only in a test, but is not a test? To most of these
+a class that is used only in a test, but is not a test by itself? To most of these
 questions the answer most of you would give is "Whatever!"
 Let's try to find a better answer.
 
@@ -37,7 +37,7 @@ Let's try to find a better answer.
 The main purpose of my unit tests is to help me code. They are the
 [safety net]({% pst 2022/jul/2022-07-05-safety-net %}) ---
 they catch me when I make a mistake. Let's say, I edit a few files that I
-edited a few years ago and, of course, do it wrong. Then, I run all 500 unit tests
+edited a few years ago and, of course, this time I do it wrong. Then, I run all 500 unit tests
 in the project and ... ten of them turn red. Pay attention, I don't say "fail," because,
 just like a safety net around a building, failed tests are the tests
 that _didn't_ catch a falling hammer and didn't spot a bug just introduced.
@@ -59,9 +59,11 @@ and proper naming of test methods are the recipe for success.
 Let's consider a simple object `Phrases`, where we add
 a few English phrases and it magically understands which
 of them are greetings (obviously, using ML).
-For such a class this this Java/JUnit5 test would be very bad:
+For such a class this Java/JUnit5 test would be very bad:
 
 ```java
+import org.junit.jupiter.api.Test;
+
 @Test
 void test1() {
   Phrases p = new Phrases();
@@ -73,9 +75,12 @@ void test1() {
 
 While this test is much better, thanks to [Hamcrest](https://www.hamcrest.org)
 assertions (how to name test methods --- is a separate
-story explained in details [here](...)):
+story explained in details [here](https://stackoverflow.com/questions/155436/)):
 
 ```java
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 @Test
 void countsSimpleGreetings() {
   Phrases p = new Phrases();
@@ -99,7 +104,7 @@ Descriptive messages will help me understand what is the problem.
 However, will I understand _where_ is the problem? In which Java class?  Not really.
 Is it in `Phrases.java`, or maybe in `Greetings.java`, which is returned by `Phrases.greetings()`?
 This information I can only get from the _name_ of the test class.
-If it's called `PhrasesTest.java` --- all bugs that it catches most probably
+If it's called `PhrasesTest.java` --- all bugs that it catches _most probably_
 are located in `Phrases.java`. If it's called `GreetingsTest.java` --- ... well, you get the idea.
 
 My point is that the name of a test class is not just a name. It's an instruction
@@ -117,7 +122,7 @@ want a class to be too big, right? Wrong! A test class is not a class. It's not 
 a utility class. It's a container for test scripts. It's called a class because
 Java (and many other languages) doesn't have any alternative instruments for code
 organization. Don't worry about your test classes getting extremely long. 5000 lines of code
-in a test class is not a problem at all. Again, because it's not a class, it's only
+in a test class is _not a problem_ at all. Again, because it's not a class, it's only
 a collection of test scripts.
 
 ## Test Prerequisites (Wrong Way)
@@ -185,13 +190,124 @@ As [you know]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
 utility classes and [private static methods]({% pst 2017/feb/2017-02-07-private-method-is-new-class %})
 are the rudiments of imperative programming. Object-oriented world has better alternatives.
 JUnit5 in particular offers a pretty elegant mechanisms for
-creating test prerequisites...
+creating test prerequisites: [test extensions](https://junit.org/junit5/docs/current/user-guide/#extensions-registration).
+Everything that a test method needs we supply through its parameters,
+which are instantiated by extensions, for example:
 
-...
+```java
+import org.junit.jupiter.api.extension.*;
+
+class PhrasesExtension implements ParameterResolver {
+  @Override
+  public boolean supportsParameter(
+    ParameterContext pctx, ExtensionContext ectx) {
+    return pctx.getParameter().getType() == Phrases.class;
+  }
+  @Override
+  public Object resolveParameter(
+    ParameterContext pctx, ExtensionContext ectx) {
+    Phrases p = new Phrases();
+    p.add("Hello, world!");
+    p.add("London is a capital of Great Britain");
+    return p;
+  }
+}
+```
+
+Then, the test will look like this:
+
+```java
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(PhrasesExtension.class)
+class PhrasesTest {
+  @Test
+  void countsSimpleGreetings(Phrases p) {
+    assertThat(
+      "Total count of greetings",
+      p.greetings().count(), equalTo(1)
+    );
+  }
+}
+```
+
+Now, the test and its prerequisites stay it two different places and are not
+as tightly coupled as they were before. Moreover, the prerequisites may be
+easily reused. The magic `@ExtendWith` annotation may be attached to other
+tests. The implementation of `PhrasesExtension` may become smarter: it
+may start paying attention not only to the type of argument of a test method,
+but also to a custom annotation attached to it (this is how
+[`@TempDir`](https://junit.org/junit5/docs/5.4.1/api/org/junit/jupiter/api/io/TempDir.html) works).
 
 ## Fake Objects (Best Way)
 
-...
+Despite the beauty of JUnit extensions, I don't think they are the best way
+to decouple prerequisites from test methods. JUnit extensions are still pretty
+coupled ... not to test methods, but to the entire test suite of a project. If you
+decide to use them somewhere else, in another project, you won't be able to do so.
+
+Also, if you decide to test your prerequisites --- you also won't be able to do
+it elegantly. You could write tests for them in the same directory, but in this case
+you will brake the principce: one test per one live class.
+
+The solution is: [fake objects]({% pst 2014/sep/2014-09-23-built-in-fake-objects %}).
+They stay together with other live objects, but have special "fake" behavior,
+for example (BTW, I [don't like factories]({% pst 2017/nov/2017-11-14-static-factory-methods %}),
+but in this case it's OK):
+
+```java
+class FactoryOfPhrases {
+  public Phrases aboutLondong() {
+    Phrases p = new Phrases();
+    p.add("Hello, world!");
+    p.add("London is a capital of Great Britain");
+    return p;
+  }
+}
+```
+
+Then, the test will look like this:
+
+```java
+class PhrasesTest {
+  @Test
+  void countsSimpleGreetings() {
+    assertThat(
+      "Total count of greetings",
+      new FactoryOfPhrases().aboutLondon()
+        .greetings().count(),
+      equalTo(1)
+    );
+  }
+}
+```
+
+Repository layout would look like this:
+
+```text
+src/
+  main/
+    java/
+      foo/
+        FactoryOfPhrases.java
+        Phrases.java
+        Greetings.java
+  test/
+    java/
+      foo/
+        FactoryOfPhrasesTest.java
+        PhrasesTest.java
+        GreetingsTest.java
+```
+
+Pay attention to the test `FactoryOfPhrasesTest`. It tests the "fake" object `FactoryOfPhrases`,
+which is part of live classes collection. The factory of phases is shipped together
+with all other classes. It can be used by other projects and not only for test
+purposes.
+
+To summarize, as a rule, I suggest keeping test classes clean: only test methods
+belong there. No attributes and of course, no static private methods. Everything
+that is a prerequisite must be a "fake" object.
 
 ## Integration Tests
 
@@ -249,7 +365,7 @@ while `SimpleGuessingITCase.java` is an integration test for no particular
 class. Obviously, the package `foo.it` only exists in tests and is not
 present in `src/main/java`.
 
-## The Rules
+<br/>
 
 Thus, there is the first rule:
 a test class may only have methods
@@ -258,16 +374,4 @@ annotated with `@Test` (in case of Java).
 Then, there is the second rule:
 a package with tests may only have classes with `Test` or `ITCase` suffices
 that map one-to-one to live classes, and nothing else.
-
-
-
-
-
-
-
-
-
-
-
-
 
