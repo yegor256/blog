@@ -35,7 +35,17 @@ and [Deployment Script vs. Rultor]({% pst 2014/sep/2014-09-11-deployment-script-
 <br/>
 Founded 5-Jun-2013.
 
-{% badge //www.sixnines.io/images/logo.svg 70 http://www.sixnines.io %}
+{% badge https://camo.githubusercontent.com/21b0e8be23deb3c2743027b82fda3af26c04ebfbb43faf5fc73c01b66607f8bf/687474703a2f2f696d672e71756c6963652e636f6d2f6c6f676f2e737667 140 https://www.qulice.com %}
+
+[Qulice](https://www.qulice.com) is a aggregate of a few popular and powerful
+style chekckers for Java, in particular Checkstyle and PMD. Qulice not only makes it
+easy to use them all in one package, but also extends them with a few dozen
+rules, which are pretty strong and rather controversial. I use Qulice in all
+Java projects of mine.
+<br/>
+Founded 22-Aug-2011.
+
+{% badge //www.sixnines.io/images/logo.svg 70 https://www.sixnines.io %}
 
 [SixNines.io](http://www.sixnines.io) is a website availability monitor
 that constantly HTTP requests your website to measure how often
@@ -45,7 +55,7 @@ a nice SVG badge, a landing page, and via JSON/XML. More about it here:
 <br/>
 Founded 10-Mar-2017.
 
-{% badge /images/pets/jare.svg 70 http://www.jare.io %}
+{% badge /images/pets/jare.svg 70 https://www.jare.io %}
 
 [Jare.io](http://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
@@ -54,7 +64,7 @@ configuring it. More about it here:
 <br/>
 Founded 2-Mar-2016.
 
-{% badge //avatars2.githubusercontent.com/u/24456188 70 http://www.0pdd.com %}
+{% badge //avatars2.githubusercontent.com/u/24456188 70 https://www.0pdd.com %}
 
 [0pdd.com](http://www.0pdd.com) is a hosted puzzles collector for GitHub projects,
 which automates and streamlines
@@ -66,7 +76,7 @@ More about it here:
 <br/>
 Founded 8-Dec-2016.
 
-{% badge /images/pets/s3auth.png 140 http://www.s3auth.com %}
+{% badge /images/pets/s3auth.png 140 https://www.s3auth.com %}
 
 [S3Auth.com](http://www.s3auth.com) is a lightweight Basic authentication
 gateway for Amazon S3 buckets. Unfortunately AWS doesn't provide such
@@ -76,7 +86,7 @@ More about it here: [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-
 <br/>
 Founded 22-Aug-2012.
 
-{% badge /images/pets/stateful.svg 70 http://www.stateful.co %}
+{% badge /images/pets/stateful.svg 70 https://www.stateful.co %}
 
 [Stateful.co](http://www.stateful.co) is a hosted set of micro-services
 that help achieve statefulness in a multi-server/node environments. In other
@@ -86,7 +96,7 @@ Still not clear? Check this out:
 <br/>
 Founded 7-May-2014.
 
-{% badge //www.takes.org/logo.png 70 http://www.takes.org %}
+{% badge //www.takes.org/logo.png 70 https://www.takes.org %}
 
 [Takes.org](http://www.takes.org) is an open source Java web framework,
 which adheres to almost all principles of object-oriented programming
@@ -96,7 +106,7 @@ More about it in this article:
 <br/>
 Founded 8-Jan-2015.
 
-{% badge /images/books/elegant-objects/cactus.svg 70 http://www.cactoos.org %}
+{% badge /images/books/elegant-objects/cactus.svg 70 https://www.cactoos.org %}
 
 [Cactoos.org](http://www.cactoos.org) is an open source Java library
 of object-oriented primitives, which are the alternatives to
@@ -106,7 +116,7 @@ More about it in this article:
 <br/>
 Founded 23-May-2017.
 
-{% badge //www.rehttp.net/images/logo.svg 70 http://www.rehttp.net %}
+{% badge //www.rehttp.net/images/logo.svg 70 https://www.rehttp.net %}
 
 [ReHTTP.net](http://www.rehttp.net) is an HTTP repeater, which stays as
 an extra layer between web apps and accumulates HTTP requests they send
@@ -116,7 +126,7 @@ More about it in this article:
 <br/>
 Founded 21-Aug-2017.
 
-{% badge //www.threecopies.com/images/logo.png 70 http://www.threecopies.com %}
+{% badge //www.threecopies.com/images/logo.png 70 https://www.threecopies.com %}
 
 [ThreeCopies.com](http://www.threecopies.com) is a hosted service
 to backup your server-side data. You create a bash script and one of our
@@ -127,7 +137,7 @@ More about it in this article:
 <br/>
 Founded 25-Jun-2017.
 
-{% badge //www.wring.io/images/logo.svg 70 http://www.wring.io %}
+{% badge //www.wring.io/images/logo.svg 70 https://www.wring.io %}
 
 [Wring.io](http://www.wring.io) is a smart inbox for GitHub (and other, in the future)
 notifications we can't parse in our email inbox, because there are too many of them.
@@ -147,7 +157,7 @@ More about it in this article:
 <br/>
 Founded 7-Apr-2015.
 
-{% badge /images/pets/jcabi.svg 70 http://www.jcabi.com %}
+{% badge /images/pets/jcabi.svg 70 https://www.jcabi.com %}
 
 [JCabi](http://www.jcabi.com) is a collection of over 20 small Java libraries,
 which were designed with object-oriented paradigm in mind, to solve some
@@ -158,7 +168,7 @@ and [jcabi-github]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}
 <br/>
 Founded 29-Apr-2012.
 
-{% badge //www.xembly.org/logo.png 70 http://www.xembly.org %}
+{% badge //www.xembly.org/logo.png 70 https://www.xembly.org %}
 
 [Xembly](http://www.xembly.org) is a language and a Java library for creating
 and modifying XML documents, which decorates DOM and makes it way easier
@@ -168,7 +178,7 @@ More about it in this article:
 <br/>
 Founded 31-Jul-2013.
 
-{% badge //www.zold.io/logo.png 70 http://www.zold.io %}
+{% badge //www.zold.io/logo.png 70 https://www.zold.io %}
 
 [Zold](http://www.zold.io) is a digital currency for fast micro payments,
 based on the proof-of-work principle, but without the Blockchain. More
@@ -177,7 +187,7 @@ There is also a [blog](https://blog.zold.io), where I regularly post some short 
 <br/>
 Founded 29-Jan-2018.
 
-{% badge //www.mailanes.com/logo.svg 70 http://www.mailanes.com %}
+{% badge //www.mailanes.com/logo.svg 70 https://www.mailanes.com %}
 
 [Mailanes](https://www.mailanes.com) is a newsletter management email delivery
 web system that does what MailChimp and similar products can do, but in
@@ -187,7 +197,7 @@ More about it in this article:
 <br/>
 Founded 27-Aug-2018.
 
-{% badge //www.soalition.com/logo.svg 70 http://www.soalition.com %}
+{% badge //www.soalition.com/logo.svg 70 https://www.soalition.com %}
 
 [Soalition](https://www.soalition.com) is a manager of social coalitions
 of online writers. You join a group as a member and start sharing your
@@ -197,7 +207,7 @@ you all gain better social visibility of your mutual idea.
 <br/>
 Founded 28-Aug-2018.
 
-{% badge //www.0rsk.com/logo.svg 70 http://www.0rsk.com %}
+{% badge //www.0rsk.com/logo.svg 70 https://www.0rsk.com %}
 
 [0rsk](https://www.0rsk.com) is a free online risk management tool,
 to help you identify risks, record them in Cause+Risk+Effect format,
@@ -209,7 +219,6 @@ Founded 12-Apr-2019.
 
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
-[qulice](https://github.com/teamed/qulice),
 [xcop](https://github.com/yegor256/xcop),
 [phpRack](http://www.phpRack.com/),
 [netbout](http://www.netbout.com),

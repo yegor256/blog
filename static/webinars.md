@@ -25,7 +25,7 @@ style: |
 
 {% badge /images/andreea/webinar.svg 200 %}
 
-On the first Wednesday of each month, at 11am PST, I organize
+On the first Wednesday of each month, at 11am PST, I _try to_ organize
 a webinar. For about an hour we talk about software
 development, object-oriented programming <del>and project management</del>
 (for project management topics listen to the [Shift-M](/shift-m.html) podcast).
@@ -33,9 +33,11 @@ Here is a full list of all webinars on [YouTube](https://www.youtube.com/playlis
 (don't forget [to subscribe](https://www.youtube.com/c/yegor256?sub_confirmation=1)
 to the channel).
 
+<!--
 Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
 feel free to import it (to Google Calendar or iCal) and stay
 informed about everything I do publicly, including these webinars.
+-->
 
 ## 2021
 

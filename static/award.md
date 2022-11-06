@@ -22,7 +22,7 @@ I'm a big fan of rules and discipline in software development; as an example, se
 [Are You a Hacker or a Designer?]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
 Also, I'm a big fan of object-oriented programming in its purest form; for example, see
 [Seven Virtues of a Good Object]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}).
-I'm also a co-founder and the CEO of [Zerocracy](https://www.zerocracy.com), a software development
+I'm also a co-founder and a retired CEO of [Zerocracy](https://www.zerocracy.com), a software development
 company through which I put my admiration of discipline and clean design into practice.
 
 I want to encourage you to share my passion&mdash;not just by reading this blog

@@ -28,9 +28,8 @@ Find me in
 [Google Scholar](http://scholar.google.ru/citations?user=cYmXh60AAAAJ)
 and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 
-By the way, I'm an organizer of 
-[ICCQ'21](https://www.iccq.ru/2021.html), 
-[ICCQ'22](https://www.iccq.ru/2022.html).
+By the way, I'm a co-organizer of
+[ICCQ](https://www.iccq.ru/).
 I'm also a PC member of 
 [BCNC'21](https://2021.splashcon.org/home/bcnc-2021).
 
