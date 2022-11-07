@@ -58,7 +58,8 @@ said in [_Producing Open Source Software_](https://amzn.to/2jyMrrF):
 attention is paid to the following basic things (in no particular
 order):
 
-**README**.
+## README
+
 I'm sure you host your product on GitHub. (If not, what's wrong with you?)
 There must be a [`README`]({% pst 2019/apr/2019-04-23-elegant-readme %})
 file in the root directory that
@@ -83,7 +84,8 @@ further and deeper. Read the README files in other projects and copy
 their best ideas.
 [README]({% pst 2019/apr/2019-04-23-elegant-readme %}) is your showcase, it must shine.
 
-**License**.
+## License
+
 Most of us don't pay attention to [this bureaucracy](https://en.wikipedia.org/wiki/Software_license).
 I didn't either, until recently.
 I thought that the moment my code is open I can forget about any
@@ -116,7 +118,8 @@ I'm suggesting you think about the license before publishing the
 product. I've used [MIT](https://en.wikipedia.org/wiki/MIT_License)
 in all my products since 2016.
 
-**Distribution**.
+## Distribution
+
 A mere collection of `.rb` files is not reusable Ruby code. Well, maybe for
 those [hackers]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
 I despise so much, it is. But for professional
@@ -155,7 +158,8 @@ are the standard and traditional way of reusing open source software (proprietar
 If your product is not available in a public repository, it's not a product;
 it's just a code base.
 
-**Javadoc**.
+## Javadoc
+
 We all hate writing documentation. And we hate libraries that are not
 documented. I usually find it boring to write Javadoc blocks for my classes,
 but I understand that without them the code I'm writing inside
@@ -172,7 +176,8 @@ so that it looks visually attractive. Maybe that's why many programmers
 still rely on Wikis or project websites. I'd recommend you stay inside
 Javadoc blocks and learn their formatting syntax.
 
-**Badges**.
+## Badges
+
 As [you can see](https://github.com/yegor256/takes), I like badges. First and foremost
 they make a repository look as if it's being "actively maintained," especially
 if those badges are green. They don't really deliver any valuable information.
@@ -186,7 +191,8 @@ some time, to integrate a third party system, to make sure the numbers
 are good enough to be proud of, and to keep it under control. If the
 repository is not being watched over, the badges will eventually start failing.
 
-**Continuous Integration**.
+## Continuous Integration
+
 In order to use your code we have to trust it, meaning that we have to
 be sure that it works, or at least passes automated tests. (Do I have to say that
 you must have tests?) How can we be sure it works? [CI]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %})
@@ -198,7 +204,8 @@ ignore their red and green signals, but they are important for us---your
 clients. I add Travis badges to all projects of mine, right after I create
 a new repository.
 
-**Contribution Guidelines**.
+## Contribution Guidelines
+
 For a regular GitHub addict it's not a problem to figure out how to
 send you a pull request. However, the majority of us, at least
 initially, will consist of active users, not contributors. We will try
@@ -222,7 +229,8 @@ Here is the text I
 and
 [`PULL_REQUEST_TEMPLATE.md`](https://github.com/yegor256/takes/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
 
-**Quality Wall**.
+## Quality Wall
+
 Finally, if you are lucky, we will use your product and will be interested
 in contributing. You will start getting our pull requests. The question is how
 fast we will ruin your code base. We will, if you don't protect yourself.
