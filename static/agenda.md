@@ -49,7 +49,7 @@ Data structures, sorting, and OOP: https://www.yegor256.com/2015/04/02/class-cas
 
 Prototype-based inheritance
 
-RxJava
+RxJava, Project Reactor, Reactive OOP
 
 Monads
 
