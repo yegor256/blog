@@ -77,7 +77,7 @@ that works means exactly what Jez Humble said in
 on page 55:
 
 > Crucially, if the build fails, the development team
-stops whatever they are doing and fixes the problem immediately
+stops whatever they are doing and fixes the problem immediately.
 
 This is what doesn't work and can't work.
 
@@ -126,7 +126,8 @@ discipline in the team. We can make it a strict rule, that our
 build is always clean and whoever breaks it gets some sort of
 a [punishment]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}).
 
-Try doing this and you will get a **fear driven development**. Programmers
+Try doing this and you will get a
+[_fear driven development_](https://wiki.c2.com/?FearDrivenDevelopment). Programmers
 will be afraid of committing anything to the repository because
 they will know that if they cause a build failure they will have to
 [apologize](http://programmers.stackexchange.com/questions/79041), at least.
