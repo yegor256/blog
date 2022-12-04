@@ -3,7 +3,7 @@ layout: post
 title: "Speaker Cheat Sheet"
 date: 2018-12-25
 place: Moscow, Russia
-tags: speaking
+tags: mood
 description: |
   I'm a regular speaker and some of my talks are successful;
   here is a list of hints and tricks; the list is far from
