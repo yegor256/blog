@@ -98,7 +98,6 @@ written in {% placescount %}.
 
 {% figure /stats.svg 600 %}
 
-Here is [my agenda](/agenda.html) for the nearest future.
 This is a full list of {{ site.posts.size }} blog posts published<span id="total_comments"></span>:
 
 <div id='sorters'>
