@@ -68,10 +68,10 @@ module Jekyll
   class AmpGenerator < Generator
     priority :low
     def generate(site)
-      if ENV['JEKYLL_ENV'] != 'production'
-        puts 'AMPs are not generated, since it is not production'
-        return
-      end
+      # if ENV['JEKYLL_ENV'] != 'production'
+      #   puts 'AMPs are not generated, since it is not production'
+      #   return
+      # end
       start = Time.now
       total = 0
       site.posts.docs.each do |doc|
