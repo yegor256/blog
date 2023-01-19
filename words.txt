@@ -2727,6 +2727,7 @@ edge
 edison
 edit
 editable
+edited
 edith
 editing
 edition
@@ -3138,6 +3139,7 @@ extendable
 extended
 extending
 extends
+extendwith
 extensible
 extension
 extensions
@@ -3171,6 +3173,8 @@ factories
 factoring
 factors
 factory
+factoryofphrases
+factoryofphrasestest
 facts
 factual
 fading
@@ -3432,6 +3436,7 @@ footer
 footest
 foothatretries
 footprint
+fooutils
 for
 for-each
 forbid
@@ -3793,6 +3798,9 @@ greed
 greedy
 green
 GreenHouseCI
+greetings
+GreetingsITCase
+greetingstest
 grep
 grids
 griggs
@@ -4605,6 +4613,7 @@ it'll
 it's
 italian
 italic
+ITCase
 item
 itemize
 items
@@ -5193,6 +5202,7 @@ made
 magazine
 magazines
 magic
+magically
 Magnum-CI
 mail
 mailanes
@@ -6492,6 +6502,9 @@ phpcs
 phpmd
 PHPUnit
 phrase
+phrases
+phrasesextension
+phrasestest
 physical
 physically
 physicians
@@ -7425,6 +7438,7 @@ requirements
 requires
 requiring
 requs
+rerun
 reschedule
 research
 researcher
@@ -7526,6 +7540,7 @@ reveals
 revelant
 revenue
 revenue-generating
+revert
 review
 reviewed
 reviewer
@@ -8095,6 +8110,7 @@ simon
 simple
 simplecov
 simpledateformat
+SimpleGuessingITCase
 simpler
 simplest
 simplicity
@@ -8625,6 +8641,7 @@ subtraction
 subtyping
 subversion
 succeed
+succeeded
 succeeds
 success
 successes
@@ -8642,6 +8659,7 @@ suffer
 suffered
 suffering
 suffers
+suffices
 sufficient
 sufficiently
 suffix
@@ -8854,6 +8872,7 @@ telldontask
 telling
 tells
 tempcelsius
+tempdir
 temperature
 tempfahrenheit
 template
@@ -8898,6 +8917,7 @@ tesla
 test
 test-and-fix-only-when-broken
 test-colorizejs
+test-compile
 test-driven
 test-per-method
 test-related
