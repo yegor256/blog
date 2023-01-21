@@ -249,7 +249,7 @@ decide to use them somewhere else, in another project, you won't be able to do s
 
 Also, if you decide to test your prerequisites, you won't be able to do
 it elegantly. Of course, you could write tests for them in the same directory, but in this case,
-you will brake the principle: one test per one live class.
+you will break the principle: one test per one live class.
 
 The solution is: [fake objects]({% pst 2014/sep/2014-09-23-built-in-fake-objects %}).
 They stay together with other live objects, but have special "fake" behavior,
@@ -258,7 +258,7 @@ but in this case, it's OK):
 
 ```java
 class FactoryOfPhrases {
-  public Phrases aboutLondong() {
+  public Phrases aboutLondon() {
     Phrases p = new Phrases();
     p.add("Hello, world!");
     p.add("London is a capital of Great Britain");
