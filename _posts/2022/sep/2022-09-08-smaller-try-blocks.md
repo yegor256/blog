@@ -17,6 +17,8 @@ keywords:
 image: /images/2022/09/the-rum-diary.jpg
 jb_picture:
   caption: The Rum Diary (2011) by Bruce Robinson
+social:
+  - reddit: https://www.reddit.com/r/programming/comments/x95aih/smaller_tryblocks_are_better/
 ---
 
 It often happens, [especially]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %})
