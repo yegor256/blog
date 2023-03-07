@@ -22,7 +22,7 @@ jb_picture:
 I don't know what programming language you use, but my experience 
 of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells 
 me that the principle, which I will try to convince you to adhere to --- 
-is universal for all languages. It's about the naming of test files. 
+is universal for all languages. It's about the naming of test files. By the way, we can use [this](https://github.com/volodya-lombrozo/test-naming-conventions) to control naming of tests in Java.
 It may look to you like a question of low importance, but let me try 
 to demonstrate that it's not. How do you name your files with test classes? How many 
 of them do you create in the src/test/java directory? Where do you place
