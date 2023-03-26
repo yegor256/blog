@@ -91,7 +91,7 @@ OK, now I that know the identity of the product owner, I need to talk to him. In
 XDSD, we don't do any meetings, phone calls, or any other type of
 [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}).
 Therefore, my only mechanism for receiving the information I
-need is with is---tickets.
+need is with his---tickets.
 
 I will submit **new** tickets, addressing them to the product owner. As there
 can be many product owners in a project, I must submit tickets that clearly
@@ -117,7 +117,7 @@ My job, as a system analyst, is to make changes to some of these files and
 submit a pull request for review.
 
 [GitHub Guidelines]({% pst 2014/apr/2014-04-15-github-guidelines %}) explains
-[how to work with GitHub. However, in short, I need to:
+how to work with GitHub. However, in short, I need to:
 
  * Clone the repository;
  * Check out its copy to my computer;
@@ -162,7 +162,7 @@ will work, but only with this
 ## Pull Request Review
 
 Once all changes are finished, I will submit a pull request. A project manager
-will the assign someone to review my pull request and I will receive feedback.
+will then assign someone to review my pull request and I will receive feedback.
 
 In most cases, there will be at least a few corrections requested by the
 reviewer. Generally speaking, my requests are reviewed by other system analysts.
