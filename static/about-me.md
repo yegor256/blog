@@ -123,7 +123,7 @@ I would recommend you watch. Also, here is my list of favorite
 By the way, I'm also an amateur artist,
 <del>check</del> buy [my paintings](/paintings.html).
 
-Just in case, my public PGP key is [23C2244F](/bin/23C2244F.asc).
+Just in case, my public PGP key is [026E65F3](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x82a1a9d03a09b8334650940fb8283801026e65f3).
 
 If you are interested, my [personality type](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
 is [INTJ-A](/images/personality.png).
