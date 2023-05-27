@@ -126,6 +126,7 @@ More about it in this article:
 <br/>
 Founded 21-Aug-2017.
 
+<!--
 {% badge //www.threecopies.com/images/logo.png 70 https://www.threecopies.com %}
 
 [ThreeCopies.com](https://www.threecopies.com) is a hosted service
@@ -136,6 +137,7 @@ More about it in this article:
 [ThreeCopies.com&mdash;Server-Side Data Backup Service]({% pst 2017/sep/2017-09-26-threecopies-server-data-backup %}).
 <br/>
 Founded 25-Jun-2017.
+-->
 
 {% badge //www.wring.io/images/logo.svg 70 https://www.wring.io %}
 
