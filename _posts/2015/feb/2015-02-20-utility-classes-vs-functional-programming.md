@@ -30,6 +30,10 @@ functional programming is based on lambda calculus, where
 a function can be assigned to a variable. Utility class methods
 are not functions in this sense. I'll decode these statements in a minute.
 
+<!--more-->
+
+{% jb_picture_body %}
+
 In Java, there are basically two valid alternatives to these ugly utility
 classes aggressively promoted by [Guava](https://code.google.com/p/guava-libraries/),
 [Apache Commons](http://commons.apache.org/), and others. The first one
@@ -37,10 +41,6 @@ is the use of traditional classes, and the second one is
 [Java&nbsp;8 lambda](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
 Now let's see why utility classes are not even close to functional programming
 and where this misconception is coming from.
-
-<!--more-->
-
-{% jb_picture_body %}
 
 Here is a typical example of a utility class
 [`Math`](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html) from Java 1.0:
