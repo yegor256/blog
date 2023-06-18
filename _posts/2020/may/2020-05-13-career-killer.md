@@ -108,7 +108,7 @@ This is how you can truly join our community:
     [@painofoop](https://t.me/painofoop) (for juniors);
 
   * Write a blog about OOP, like [@skapral](https://www.pragmaticobjects.com/)
-    and [@g4s8](https://blog.g4s8.wtf/) are doing;
+    and [@g4s8](https://g4s8.wtf/) are doing;
 
   * Create an open source framework or a library in the EO style
     and make it popular on GitHub

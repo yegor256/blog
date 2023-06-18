@@ -79,7 +79,7 @@ I'm also a bit of a [scientist](/papers.html):
 [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor).
 Occasionally I teach in
 [HSE University](https://www.hse.ru/org/persons/776430466) (Moscow, Russia) 
-and in 
+and in
 Innopolis University (Kazan, Russia).
 
 Here is [my resume](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887)

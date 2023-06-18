@@ -59,7 +59,7 @@ value of a floating point number:
 double x = Math.abs(3.1415926d);
 ```
 
-{% quote The code will work, but it is not object-oriented programming %}
+{% quote The code will work, but it is not object-oriented programming. %}
 
 What's wrong with it? We need a function, and we get it from class `Math`.
 The class has many useful functions inside it that can be used for many typical
