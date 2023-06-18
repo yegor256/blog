@@ -298,7 +298,7 @@ decide to use them somewhere else, in another project, you won’t be able to do
 
 <p>Also, if you decide to test your prerequisites, you won’t be able to do
 it elegantly. Of course, you could write tests for them in the same directory, but in this case,
-you will brake the principle: one test per one live class.</p>
+you will break the principle: one test per one live class.</p>
 
 <p>The solution is: <a href="/2014/09/23/built-in-fake-objects.html">fake objects</a>.
 They stay together with other live objects, but have special “fake” behavior,
@@ -306,7 +306,7 @@ for example (BTW, I <a href="/2017/11/14/static-factory-methods.html">don’t li
 but in this case, it’s OK):</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FactoryOfPhrases</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="nc">Phrases</span> <span class="nf">aboutLondong</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">Phrases</span> <span class="nf">aboutLondon</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Phrases</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Phrases</span><span class="o">();</span>
     <span class="n">p</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
     <span class="n">p</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"London is a capital of Great Britain"</span><span class="o">);</span>

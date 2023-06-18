@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-01-19T15:49:03+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">On the Layout of Tests</title><link href="https://www.yegor256.com/2023/01/19/layout-of-tests.html" rel="alternate" type="text/html" title="On the Layout of Tests" /><published>2023-01-19T00:00:00+00:00</published><updated>2023-01-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/01/19/layout-of-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/01/19/layout-of-tests.html"><![CDATA[<p>I don’t know what programming language you use, but my experience 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-06-18T05:53:57+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">On the Layout of Tests</title><link href="https://www.yegor256.com/2023/01/19/layout-of-tests.html" rel="alternate" type="text/html" title="On the Layout of Tests" /><published>2023-01-19T00:00:00+00:00</published><updated>2023-01-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/01/19/layout-of-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/01/19/layout-of-tests.html"><![CDATA[<p>I don’t know what programming language you use, but my experience 
 of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells 
 me that the principle, which I will try to convince you to adhere to — 
 is universal for all languages. It’s about the naming of test files. 
@@ -221,7 +221,7 @@ decide to use them somewhere else, in another project, you won’t be able to do
 
 <p>Also, if you decide to test your prerequisites, you won’t be able to do
 it elegantly. Of course, you could write tests for them in the same directory, but in this case,
-you will brake the principle: one test per one live class.</p>
+you will break the principle: one test per one live class.</p>
 
 <p>The solution is: <a href="/2014/09/23/built-in-fake-objects.html">fake objects</a>.
 They stay together with other live objects, but have special “fake” behavior,
@@ -229,7 +229,7 @@ for example (BTW, I <a href="/2017/11/14/static-factory-methods.html">don’t li
 but in this case, it’s OK):</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FactoryOfPhrases</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="nc">Phrases</span> <span class="nf">aboutLondong</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">Phrases</span> <span class="nf">aboutLondon</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">Phrases</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Phrases</span><span class="o">();</span>
     <span class="n">p</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
     <span class="n">p</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"London is a capital of Great Britain"</span><span class="o">);</span>
