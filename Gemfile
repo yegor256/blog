@@ -15,7 +15,7 @@ gem 'jekyll-sitemap', '1.4.0'
 gem 'jekyll-redirect-from', '0.16.0'
 # gem 'jekyll-related-posts'
 
-gem 'fastimage', '2.2.6'
+gem 'fastimage', '2.2.7'
 gem 'fontcustom', '2.0.0'
 gem 'jslint', '1.2.0'
 gem 'html-proofer', '3.7.5'
