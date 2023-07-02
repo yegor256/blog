@@ -9,11 +9,32 @@ on:
       - master
 jobs:
   jekyll:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 2.7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: sudo apt-get -y update --fix-missing
+      - run: sudo apt-get -y install cmake
+      - run: sudo apt-get -y install aspell aspell-en
+      - run: sudo apt-get -y install graphviz
+      - run: sudo apt-get -y install gnuplot
+      - run: sudo apt-get -y install s3cmd
+      - run: sudo apt-get -y install fontforge liblapack-dev
+      - run: sudo apt-get -y install plantuml
+      - run: sudo apt-get -y install libxml2-utils
+      - run: sudo apt-get -y install woff2
+      - run: |
+          git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
+          cd _tidy-html5/build/cmake && \
+          git checkout 5.1.25 && \
+          cmake ../.. && \
+          make && \
+          sudo make install
+      - run: npm install -g cssshrink@0.0.5
       - run: bundle update
       - run: bundle exec jekyll build
