@@ -22,8 +22,8 @@ module Yegor
       if src.index('/') == 0 && src.index('//') != 0
         @url = src
         raise "file doesn't exist: #{src}" unless
-          File.exists?('./_site' + src) ||
-          File.exists?('.' + src) ||
+          File.exist?('./_site' + src) ||
+          File.exist?('.' + src) ||
           src =~ /gnuplot/
       else
         @url = src

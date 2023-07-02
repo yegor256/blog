@@ -251,7 +251,7 @@ may look like, after the pull:
 ```
 
 The object is an _atom_. This means that even though we have its source code,
-it't not complete without a piece of platform-specific binary code.
+it's not complete without a piece of platform-specific binary code.
 An atom is an object implemented by the runtime
 platform, where the EO program is executed (also known
 as [FFI mechanism](https://en.wikipedia.org/wiki/Foreign_function_interface)).
@@ -299,7 +299,7 @@ When all foreign objects which are registered in the catalog are downloaded,
 compiled, and optimized, we are ready to start 
 [_transpiling_](https://en.wikipedia.org/wiki/Source-to-source_compiler).
 Instead of compiling XMIR directly to Bytecode, we transpile it to `.java`
-and let Java complier do the job of generating Bytecode.
+and let Java compiler do the job of generating Bytecode.
 
 We believe that there are a few benefits of transpiling to Java vs. compilation to Bytecode:
 

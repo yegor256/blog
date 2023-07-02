@@ -161,6 +161,8 @@ end
 
 desc 'Check spelling in all HTML pages'
 task spell: [:build] do
+  bad_pages = 0
+  bad_words = []
   typos = all_html().reduce(0) do |total, f|
     html = Nokogiri::HTML(File.read(f))
     html.search('//code').remove
@@ -185,17 +187,25 @@ task spell: [:build] do
     stdout = `cat "#{tmp.path}" \
       | aspell -a --lang=en_US -W 3 --ignore-case --encoding=utf-8 -p ./_rake/aspell.en.pws \
       | grep ^\\&`
+    found = 0
     if stdout.empty?
       puts "#{f}: OK (#{text.split(' ').size} words)" if VERBOSE
     else
-      puts "Typos in #{f}:"
+      lines = stdout.split("\n")
+      found = lines.size
+      words = lines.map { |t| t.split(' ')[1] }
+      bad_words += words
+      puts "#{found} typos in #{f}: #{words.join(', ')}"
       puts stdout
-      puts text
-      exit
+      puts text if VERBOSE
+      bad_pages += 1
     end
-    total + stdout.split("\n").size
+    total + found
   end
-  fail "#{typos.size} typo(s)" unless typos == 0
+  unless typos == 0
+    puts "All typos:\n  #{bad_words.uniq.join("\n  ")}"
+    fail "#{typos.size} typo(s) in #{bad_pages} pages"
+  end
   done 'No spelling errors'
 end
 

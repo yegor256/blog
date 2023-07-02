@@ -90,7 +90,7 @@ Test Doubles (also known as
 are the tools that help us find our where the code is broken. If the tool
 is unreliable, how can we test our code against it? This reminds me of an old
 joke where a patient comes to the doctor and says "Help me doc, my body hurts anywhere
-I touch it with my finger!", and the doctor answers
+I touch it with my finger!" The doctor answers
 "It's just your finger --- it's broken!" A very similar situation occurs here:
 If we test our production objects with broken Test Doubles, they will all look
 broken.
@@ -105,7 +105,7 @@ in [Testing like the TSA](https://signalvnoise.com/posts/3159-testing-like-the-t
 
 <span class="red">I disagree</span>.
 I don't know exactly what units of measurement were used to compare the
-"code" and the "test", but I can only assume Lines-of-Code. I was curious and
+"code" and the "test," but I can only assume Lines-of-Code. I was curious and
 decided to calculate this ratio in a few projects of mine. First, I tried
 [jcabi-github](https://github.com/jcabi/jcabi-github),
 an immutable GitHub Java API client. The numbers were:
@@ -113,7 +113,7 @@ an immutable GitHub Java API client. The numbers were:
 6.2K in built-in fake classes, and
 16.2K in test classes.
 Thus, the ratio was 9.8 to 22.4, which meant 1:2.3. Somewhere between
-a "smell" and a "stink", according to David. Then I calculated the ratio
+a "smell" and a "stink," according to David. Then I calculated the ratio
 for a few other projects of mine:
 [jcabi-http](https://github.com/jcabi/jcabi-http) (1:1),
 [xembly](https://github.com/yegor256/xembly) (1:0.92),
@@ -147,7 +147,7 @@ imagine a modern maintainable code base without tests. I would actually
 suggest changing that phrase to: "I get paid for code that is tested, not
 just for code."
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you do if a customer says: &quot;I won&#39;t pay for unit tests&quot;? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1150321038674354176?ref_src=twsrc%5Etfw">July 14, 2019</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you do if a customer says: &quot;I won&#39;t pay for unit tests?&quot; <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1150321038674354176?ref_src=twsrc%5Etfw">July 14, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I will keep updating this post. If you know a "good" article about TDD,

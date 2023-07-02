@@ -40,7 +40,7 @@ Use [LaTeX](https://www.latex-project.org), either locally or in [Overleaf](http
 
 Read my personal [best practices](https://yegor256.github.io/latex-best-practices/main.pdf) for LaTeX.
 
-Keep the same [organisational structure](https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing) in each paragraph.
+Keep the same [organizational structure](https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing) in each paragraph.
 
 ## Title
 

@@ -23,7 +23,7 @@ module Jekyll
         super
         @post = post.strip
         @file = "_posts/#{@post}.md"
-        raise "file #{@file} doesn't exist" unless File.exists?(@file)
+        raise "file #{@file} doesn't exist" unless File.exist?(@file)
       end
 
       def render(context)

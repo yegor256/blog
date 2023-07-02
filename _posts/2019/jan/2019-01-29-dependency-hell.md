@@ -29,7 +29,7 @@ and [I was not alone](https://blog.danlew.net/2015/09/09/dont-use-dynamic-versio
 However, very soon I [realized](https://twitter.com/yegor256/status/1060538705260265474)
 that dynamic versions, like `1.+`, give more flexibility.
 Just a few weeks ago I realized that neither approach
-is right and found myself a hybrid formula. No suprise, I again saw that
+is right and found myself a hybrid formula. No surprise, I again saw that
 [I wasn't alone](https://brock.io/post/repeatable_android_builds/).
 
 <!--more-->

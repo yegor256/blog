@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Imposters to Win!"
+title: "Impostors to Win!"
 date: 2021-03-03
 place: Moscow, Russia
 tags: sarcasm
@@ -11,7 +11,7 @@ description: |
 keywords:
   - management
   - psychology
-  - imposter
+  - impostor
   - office fights
   - office politics
 image: /images/2021/03/the-kominsky-method.jpg
@@ -25,7 +25,7 @@ The time of objectivity is fading out.
 in management will soon be considered as harassment.
 Productivity is [already](/shift-m/2020/44.html) a false objective.
 It's time to start taking advantage of this era of nonsense.
-The era of imposters is coming!
+The era of impostors is coming!
 Don't miss the opportunity to become a great one.
 Here is a quick summary of key techniques to make you highly successful in any argument
 you may have in your 
@@ -85,7 +85,7 @@ If you quit because of an argument---your opponent will lose a lot of karma poin
 "I will quit" is the most powerful weapon in your arsenal.
 However, use it carefully, only after you massage them with the other three tactics.
 
-Your ultimate goal in your career as a great imposter should be
+Your ultimate goal in your career as a great impostor should be
 the situation where nobody argues with you. They must be
 scared of verifying your results, questioning your conclusions,
 validating your points, and even asking you difficult questions.
