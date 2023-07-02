@@ -29,12 +29,23 @@ jobs:
       - run: sudo apt-get -y install libxml2-utils
       - run: sudo apt-get -y install woff2
       - run: |
-          git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
-          cd _tidy-html5/build/cmake && \
-          git checkout 5.8.0 && \
-          cmake ../.. && \
-          make && \
+          wget https://github.com/yegor256/blog-image/raw/master/woff.zip
+          unzip woff.zip -d _sfnt2woff
+          cd _sfnt2woff
+          make
+          sudo cp sfnt2woff /usr/local/bin/
+          cd ..
+          rm woff.zip
+          rm -rf _sfnt2woff
+      - run: |
+          git clone https://github.com/htacg/tidy-html5.git _tidy-html5
+          cd _tidy-html5/build/cmake
+          git checkout 5.8.0
+          cmake ../..
+          make
           sudo make install
+          cd ..
+          rm -rf _tidy-html5
       - run: npm install -g cssshrink@0.0.5
       - run: bundle update
       - run: bundle exec jekyll build
