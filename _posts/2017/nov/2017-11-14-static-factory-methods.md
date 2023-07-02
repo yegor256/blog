@@ -19,6 +19,8 @@ social:
 image: /images/2017/11/extract.jpg
 jb_picture:
   caption: Extract (2009) by Mike Judge
+translated:
+  - Ukrainian: https://serge3ling.github.io/yegor256/2017-11-14-static-factory-methods/
 buffer:
   - "I believe Joshua Bloch said it first in his very good book \"Effective Java\": static factory methods are the preferred way to instantiate objects compared with constructors. I disagree."
   - "I believe that static methods are pure evil"
