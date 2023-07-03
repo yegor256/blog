@@ -208,7 +208,7 @@ look like this:</p>
 </code></pre></div></div>
 
 <p>This is its procedural alternative from
-<a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte%5B%5D,%20java.nio.file.OpenOption...%29">JDK7</a>:</p>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte[],%20java.nio.file.OpenOption...%29">JDK7</a>:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/hello.txt"</span><span class="o">).</span><span class="na">toPath</span><span class="o">(),</span>
@@ -289,7 +289,7 @@ to be accepted? We just add one
 is encapsulated. In the procedural example the behavior of the object is
 located outside of it, in the method <code class="highlighter-rouge">encode()</code>. The file itself doesn’t know
 how to write, some outside procedure
-<a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte%5B%5D,%20java.nio.file.OpenOption...%29"><code class="highlighter-rouge">Files.write()</code></a>
+<a href="https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html#write%28java.nio.file.Path,%20byte[],%20java.nio.file.OpenOption...%29"><code class="highlighter-rouge">Files.write()</code></a>
 knows that instead.</p>
 
 <p>To the contrary, in the object-oriented design the

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-06-18T05:53:57+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">On the Layout of Tests</title><link href="https://www.yegor256.com/2023/01/19/layout-of-tests.html" rel="alternate" type="text/html" title="On the Layout of Tests" /><published>2023-01-19T00:00:00+00:00</published><updated>2023-01-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/01/19/layout-of-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/01/19/layout-of-tests.html"><![CDATA[<p>I don’t know what programming language you use, but my experience 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-07-03T13:59:30+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">On the Layout of Tests</title><link href="https://www.yegor256.com/2023/01/19/layout-of-tests.html" rel="alternate" type="text/html" title="On the Layout of Tests" /><published>2023-01-19T00:00:00+00:00</published><updated>2023-01-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/01/19/layout-of-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/01/19/layout-of-tests.html"><![CDATA[<p>I don’t know what programming language you use, but my experience 
 of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells 
 me that the principle, which I will try to convince you to adhere to — 
 is universal for all languages. It’s about the naming of test files. 
@@ -564,7 +564,7 @@ Take it with a grain of salt though.</p>
 
 <p>Read my personal <a href="https://yegor256.github.io/latex-best-practices/main.pdf">best practices</a> for LaTeX.</p>
 
-<p>Keep the same <a href="https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing">organisational structure</a> in each paragraph.</p>
+<p>Keep the same <a href="https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing">organizational structure</a> in each paragraph.</p>
 
 <h2 id="title">Title</h2>
 

@@ -2,8 +2,8 @@
 entity script--><rect fill="#FEFECE" filter="url(#f1qlq5xs6ggo67)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="58" x="21" y="8"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="16" y="13"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="16" y="34.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="38" x="31" y="30.9951">script</text><!--MD5=[9080e7e0fd16a82dbadcb6b41d2fcd39]
 entity TimedLog--><rect fill="#FEFECE" filter="url(#f1qlq5xs6ggo67)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="88" x="6" y="104"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="109"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="130.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="16" y="126.9951">TimedLog</text><!--MD5=[b3c4904b44f6c8ace2d5240b09edda39]
 entity Log--><rect fill="#FEFECE" filter="url(#f1qlq5xs6ggo67)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="27.5" y="200"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="22.5" y="205"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="22.5" y="226.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="25" x="37.5" y="222.9951">Log</text><!--MD5=[bd345351620e5c6f912e2bf4f28b1ea2]
-link script to TimedLog--><path d="M50,44.0569 C50,59.5126 50,81.8647 50,98.6731 " fill="none" id="script-&gt;TimedLog" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="50,103.6977,54,94.6977,50,98.6977,46,94.6977,50,103.6977" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f746f7e8b7aa487e77d1267718583644]
-link TimedLog to Log--><path d="M50,140.0569 C50,155.5126 50,177.8647 50,194.6731 " fill="none" id="TimedLog-&gt;Log" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="50,199.6977,54,190.6977,50,194.6977,46,190.6977,50,199.6977" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[bd20ba32e90cb3ae5151d71a6e3cf171]
+link script to TimedLog--><path d="M50,44.24 C50,59.48 50,81.81 50,98.46 " fill="none" id="script-&gt;TimedLog" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="50,103.87,54,94.87,50,98.87,46,94.87,50,103.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f746f7e8b7aa487e77d1267718583644]
+link TimedLog to Log--><path d="M50,140.24 C50,155.48 50,177.81 50,194.46 " fill="none" id="TimedLog-&gt;Log" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="50,199.87,54,190.87,50,194.87,46,190.87,50,199.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[04d5df2498692471ed79894c77ea2e95]
 @startuml
 
 [script] -down-> [TimedLog]
@@ -15,7 +15,7 @@ PlantUML version 1.2020.01(Sun Feb 16 17:40:32 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.9.1+1-Ubuntu-0ubuntu1.18.04
+Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en

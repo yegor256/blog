@@ -4251,8 +4251,8 @@ importantly
 importers
 impose
 impossible
-imposter
-imposters
+impostor
+impostors
 impractical
 impress
 impressed
@@ -6156,7 +6156,6 @@ ordinary
 oredev
 org
 organic
-organisational
 organism
 organisms
 organization
@@ -7537,7 +7536,6 @@ reveal
 revealed
 revealing
 reveals
-revelant
 revenue
 revenue-generating
 revert
@@ -8162,9 +8160,9 @@ sketch
 sketchy
 ski
 skiing
-skilful
 skill
 skilled
+skillful
 skills
 skim
 skimp
@@ -8712,7 +8710,6 @@ supposedly
 suppress
 supremacists
 supreme
-suprise
 sur
 sure
 surface
