@@ -1,11 +1,10 @@
 docker:
-  image: yegor256/blog-image:0.0.1
+  image: yegor256/blog-image:0.0.2
 assets:
   secrets.yml: "zerocracy/home#assets/blog/secrets.yml"
   id_rsa: "zerocracy/home#assets/blog/id_rsa"
   id_rsa.pub: "zerocracy/home#assets/blog/id_rsa.pub"
 install: |
-  rvm use ruby-2.7.7
   sudo bundle install --no-color "--gemfile=$(pwd)/Gemfile"
 merge:
   script: |
