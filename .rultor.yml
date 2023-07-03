@@ -1,9 +1,9 @@
 docker:
-  image: yegor256/blog-image:0.0.3
+  image: yegor256/blog-image:0.0.4
 assets:
-  secrets.yml: "zerocracy/home#assets/blog/secrets.yml"
-  id_rsa: "zerocracy/home#assets/blog/id_rsa"
-  id_rsa.pub: "zerocracy/home#assets/blog/id_rsa.pub"
+  secrets.yml: "yegor256/home#assets/blog/secrets.yml"
+  id_rsa: "yegor256/home#assets/blog/id_rsa"
+  id_rsa.pub: "yegor256/home#assets/blog/id_rsa.pub"
 install: |
   sudo bundle install --no-color "--gemfile=$(pwd)/Gemfile"
 merge:
