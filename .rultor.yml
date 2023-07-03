@@ -1,5 +1,5 @@
 docker:
-  image: yegor256/blog-image:0.0.2
+  image: yegor256/blog-image:0.0.3
 assets:
   secrets.yml: "zerocracy/home#assets/blog/secrets.yml"
   id_rsa: "zerocracy/home#assets/blog/id_rsa"
