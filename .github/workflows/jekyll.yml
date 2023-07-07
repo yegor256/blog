@@ -47,5 +47,6 @@ jobs:
           cd ..
           rm -rf _tidy-html5
       - run: npm install -g cssshrink@0.0.5
+      - run: gem install fontcustom -v 2.0.0
       - run: bundle update
       - run: bundle exec jekyll build

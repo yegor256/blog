@@ -1,5 +1,5 @@
 docker:
-  image: yegor256/blog-image:0.0.4
+  image: yegor256/blog-image:0.0.5
 assets:
   secrets.yml: "yegor256/home#assets/blog/secrets.yml"
   id_rsa: "yegor256/home#assets/blog/id_rsa"

@@ -83,7 +83,7 @@ module Jekyll
         unless key.nil?
           uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=50&key=#{key}")
           JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
-            date = Time.parse(video['snippet']['publishedAt'])
+            # date = Time.parse(video['snippet']['publishedAt'])
             id = video['snippet']['resourceId']['videoId']
             tags = JSON.parse(
               Net::HTTP.get(

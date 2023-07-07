@@ -33,7 +33,6 @@ gem 'jekyll-sitemap', '1.4.0'
 # gem 'jekyll-related-posts'
 
 gem 'fastimage', '2.2.7'
-gem 'fontcustom', '2.0.0'
 gem 'html-proofer', '3.7.5'
 gem 'jslint', '1.2.0'
 gem 'kramdown', '2.4.0'
