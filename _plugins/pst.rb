@@ -27,14 +27,14 @@ module Jekyll
         super
         @post = post.strip
         @file = "_posts/#{@post}.md"
-        raise "file #{@file} doesn't exist" unless File.exist?(@file)
+        raise "File #{@file} doesn't exist" unless File.exist?(@file)
       end
 
       def render(context)
         context.registers[:site].posts.docs.each do |p|
           return p.url if p.relative_path == @file
         end
-        raise "can't fine post with \"#{@post}\" name"
+        raise "Can't fine post with \"#{@post}\" name"
       end
     end
   end

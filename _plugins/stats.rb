@@ -109,6 +109,7 @@ module Jekyll
         months[m] += all.length
       end
       years = months.keys.map { |m| m[0..4].to_i }.uniq
+      return if years.empty?
       (years.min..years.max).each do |y|
         (1..12).each do |m|
           txt = format('%4d-%02d', y, m)

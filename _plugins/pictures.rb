@@ -25,7 +25,7 @@ module Yegor
     def initialize(src, _ctx)
       if src.index('/').zero? && src.index('//') != 0
         @url = src
-        raise "file doesn't exist: #{src}" unless
+        raise "File doesn't exist: #{src}" unless
           File.exist?("./_site#{src}") ||
           File.exist?(".#{src}") ||
           src =~ /gnuplot/

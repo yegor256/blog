@@ -35,8 +35,8 @@ module Jekyll
   # The class
   class AmpFile < StaticFile
     def initialize(site, path, html)
-      super(site, site.dest, '', path)
-      @path = path
+      super(site, site.dest, '_site', path)
+      # @path = path
       xml = Nokogiri::HTML(html)
       xml.xpath('//body//figure[@class="highlight"]').each do |f|
         f.before("<pre>#{f.xpath('pre//text()')}</pre>")
@@ -64,7 +64,7 @@ module Jekyll
     end
 
     def write(dest)
-      target = File.join(dest, @path)
+      target = path
       FileUtils.mkdir_p File.dirname(target)
       File.write(target, @html)
       true
