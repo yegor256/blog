@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,21 +21,21 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', '4.0.1'
-gem 'jekyll-feed', '0.17.0'
 gem 'jekyll-bits', '0.15'
+gem 'jekyll-feed', '0.17.0'
 gem 'jekyll-gist', '1.5.0'
 gem 'jekyll-paginate', '1.1.0'
 gem 'jekyll-plantuml', '1.4.1'
+gem 'jekyll-redirect-from', '0.16.0'
 gem 'jekyll-sass', '1.1.0'
 gem 'jekyll-sass-converter', '2.2.0'
 gem 'jekyll-sitemap', '1.4.0'
-gem 'jekyll-redirect-from', '0.16.0'
 # gem 'jekyll-related-posts'
 
 gem 'fastimage', '2.2.7'
 gem 'fontcustom', '2.0.0'
-gem 'jslint', '1.2.0'
 gem 'html-proofer', '3.7.5'
+gem 'jslint', '1.2.0'
 gem 'kramdown', '2.4.0'
 gem 'liquid', '4.0.4'
 gem 'mail', '2.8.1'

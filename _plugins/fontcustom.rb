@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,17 +30,18 @@ module Jekyll
       true
     end
   end
+
   class FontcustomGenerator < Generator
     priority :low
     safe true
     def generate(site)
-      puts %x[
+      puts `
         set -e
         #{site.config['source']}/_glyphs/compile.sh #{site.config['source']}/_temp/icons
         mkdir -p #{site.config['source']}/_site/css
-      ]
-      raise 'failed to build icon files' unless $? == 0
-      ['svg', 'ttf', 'woff', 'eot', 'css'].each do |ext|
+      `
+      raise 'failed to build icon files' unless $CHILD_STATUS == 0
+      %w[svg ttf woff eot css].each do |ext|
         site.static_files << Jekyll::FontcustomFile.new(site, site.dest, 'css', "icons.#{ext}")
       end
     end

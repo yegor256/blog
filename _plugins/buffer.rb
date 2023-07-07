@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,50 +33,48 @@ module Jekyll
       true
     end
   end
+
   class YegorBufferGenerator < Generator
     priority :low
     safe true
     def generate(site)
       home = 'https://www.yegor256.com'
-      rss = RSS::Maker.make("atom") do |maker|
-        maker.channel.author = "yegor256"
+      rss = RSS::Maker.make('atom') do |maker|
+        maker.channel.author = 'yegor256'
         maker.channel.updated = Time.now.to_s
-        maker.channel.about = "For buffer.com only"
-        maker.channel.title = "yegor256.com for buffer.com only"
+        maker.channel.about = 'For buffer.com only'
+        maker.channel.title = 'yegor256.com for buffer.com only'
         articles = []
         site.posts.docs.each do |p|
-          tags = p['tags'] ? " #{p['tags'].map {|t| "##{t}"}.join(' ')}" : ''
-          if p['buffer']
-            p['buffer'].each do |quote|
-              raise "Quote too log in #{p.url}" if quote.length > 200
-              articles << { link: home + p.url, title: quote + tags }
-            end
+          tags = p['tags'] ? " #{p['tags'].map { |t| "##{t}" }.join(' ')}" : ''
+          p['buffer']&.each do |quote|
+            raise "Quote too log in #{p.url}" if quote.length > 200
+            articles << { link: home + p.url, title: quote + tags }
           end
           months = ((Time.now - p['date']) / (30 * 24 * 60 * 60)).to_i
-          if months > 3
-            articles << {
-              link: home + p.url,
-              title: if months < 6
-                [
-                  "I wrote this #{months}-months ago:",
-                  "#{months}-months ago I wrote:",
-                  "Re-read this #{months}-months old post:"
-                ].sample
-              elsif months < 12
-                [
-                  'I wrote this almost a year ago:',
-                  'Almost a year old article:',
-                  'Re-read this year-old blog post:'
-                ].sample
-              else
-                [
-                  'I wrote this over a year ago:',
-                  'Pretty old, but still relevant:',
-                  'Over a year old, read it again:'
-                ].sample
-              end + " \"#{p['title']}\"#{tags}"
-            }
-          end
+          next unless months > 3
+          articles << {
+            link: home + p.url,
+            title: if months < 6
+                     [
+                       "I wrote this #{months}-months ago:",
+                       "#{months}-months ago I wrote:",
+                       "Re-read this #{months}-months old post:"
+                     ].sample
+                   elsif months < 12
+                     [
+                       'I wrote this almost a year ago:',
+                       'Almost a year old article:',
+                       'Re-read this year-old blog post:'
+                     ].sample
+                   else
+                     [
+                       'I wrote this over a year ago:',
+                       'Pretty old, but still relevant:',
+                       'Over a year old, read it again:'
+                     ].sample
+                   end + " \"#{p['title']}\"#{tags}"
+          }
         end
         key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
         unless key.nil?
@@ -90,7 +90,7 @@ module Jekyll
               )
             )['items'][0]['snippet']['tags']
             raise "No tags for #{id}" if tags.nil?
-            tags = tags.select{ |t| t =~ /[a-z]{3,12}/ }.take(3).map{ |t| "##{t}" }.join(' ')
+            tags = tags.select { |t| t =~ /[a-z]{3,12}/ }.take(3).map { |t| "##{t}" }.join(' ')
             articles << {
               link: "https://www.youtube.com/watch?v=#{id}",
               title: "Watch it again: \"#{video['snippet']['title']}\" #{tags}"
@@ -98,10 +98,10 @@ module Jekyll
           end
         end
         {
-          'Don\'t forget to follow me in Facebook, here is the link': 'https://www.facebook.com/yegor256',
-          'Don\'t forget to subscribe to my YouTube channel, I post videos a few times a month': 'https://www.youtube.com/c/yegor256?sub_confirmation=1',
-          'Don\'t forget to follow my Angel.co account, if you are also there': 'https://angel.co/yegor256',
-          'BTW, here is my GitHub account, don\'t hesitate to follow it': 'https://github.com/yegor256?tab=followers'
+          "Don't forget to follow me in Facebook, here is the link": 'https://www.facebook.com/yegor256',
+          "Don't forget to subscribe to my YouTube channel, I post videos a few times a month": 'https://www.youtube.com/c/yegor256?sub_confirmation=1',
+          "Don't forget to follow my Angel.co account, if you are also there": 'https://angel.co/yegor256',
+          "BTW, here is my GitHub account, don't hesitate to follow it": 'https://github.com/yegor256?tab=followers'
         }.each do |tweet, link|
           articles << { link: link, title: tweet }
         end
@@ -112,9 +112,10 @@ module Jekyll
           'yegor256/rultor': 'Rultor is a chatbot DevOps assistant to automate deployment and merge operations',
           'teamed/qulice': 'Qulice is an aggregator of Java static analyzers',
           'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives',
-          'jcabi/jcabi-http': 'jcabi-http is an object-oriented Java HTTP client',
+          'jcabi/jcabi-http': 'jcabi-http is an object-oriented Java HTTP client'
         }.each do |repo, tweet|
-          articles << { link: "https://github.com/#{repo}", title: "#{tweet}. Please, add your GitHub star, help the project:" }
+          articles << { link: "https://github.com/#{repo}",
+                        title: "#{tweet}. Please, add your GitHub star, help the project:" }
         end
         articles.shuffle.each do |a|
           maker.items.new_item do |item|

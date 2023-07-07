@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,8 +27,8 @@ module Yegor
       @text = markup.strip
     end
 
-    def render(context)
-      "<aside class='quote'>#{Kramdown::Document.new(@text).to_html.gsub(/<\/?p>/, '')}</aside>\n\n"
+    def render(_context)
+      "<aside class='quote'>#{Kramdown::Document.new(@text).to_html.gsub(%r{</?p>}, '')}</aside>\n\n"
     end
   end
 end

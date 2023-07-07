@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Jekyll plugin for generating Git hash
 #
 # Place this file in the _plugins directory and

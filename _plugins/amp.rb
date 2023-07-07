@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,14 +36,14 @@ module Jekyll
       @path = path
       xml = Nokogiri::HTML(html)
       xml.xpath('//body//figure[@class="highlight"]').each do |f|
-        f.before('<pre>' + f.xpath('pre//text()').to_s + '</pre>')
+        f.before("<pre>#{f.xpath('pre//text()')}</pre>")
       end
       xml.xpath('//body//figure[@class="jb_picture"]').each do |f|
         src = f.xpath('img/@src').to_s
         alt = f.xpath('figcaption/text()').to_s
         width, height = Jekyll.image_size(src)
-        raise "Can't calculate size of image: #{src}" if !width
-        f.before("<amp-img src='#{CGI::escapeHTML(src)}' alt='#{CGI::escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
+        raise "Can't calculate size of image: #{src}" unless width
+        f.before("<amp-img src='#{CGI.escapeHTML(src)}' alt='#{CGI.escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
       end
       xml.xpath('//comment()').remove
       xml.xpath('//@style').remove
@@ -54,9 +56,10 @@ module Jekyll
       xml.xpath('//body//svg').remove
       xml.xpath('//body//aside').remove
       @html = xml.to_html
-        .gsub(/<meta http-equiv="Content-Type" content="text\/html; charset=UTF-8">/, '')
+        .gsub(%r{<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">}, '')
       write(site.dest)
     end
+
     def write(dest)
       target = File.join(dest, @path)
       FileUtils.mkdir_p File.dirname(target)
@@ -102,9 +105,7 @@ module Jekyll
 
   def self.image_size(src)
     path = src
-    if !path.start_with?('http://') and !path.start_with?('https://')
-      path = File.join(Dir.pwd, path)
-    end
+    path = File.join(Dir.pwd, path) if !path.start_with?('http://') && !path.start_with?('https://')
     FastImage.size(path)
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,15 +25,11 @@ require 'cgi'
 
 module Yegor
   class VideosBlock < Liquid::Tag
-    def initialize(tag, markup, tokens)
-      super
-    end
-
-    def render(context)
+    def render(_context)
       return 'not implemented yet...'
       path = File.expand_path('~/secrets.yml')
       return unless File.exist?(path)
-      key = YAML::safe_load(File.open(path))['youtube_api_key']
+      key = YAML.safe_load(File.open(path))['youtube_api_key']
       uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&myRating=like&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
       raise json['error']['message'] if json['error']

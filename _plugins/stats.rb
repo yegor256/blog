@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,8 +43,9 @@ module Jekyll
       "approx. #{decimal(words.length)} words in the entire blog, \
       <a href='/words.txt'>#{decimal(words.uniq(&:downcase).length)}</a> unique ones"
     end
+
     def decimal(num)
-      num.to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
+      num.to_s.reverse.gsub(/...(?=.)/, '\&,').reverse
     end
   end
 
@@ -56,13 +59,13 @@ module Jekyll
     priority :low
     def generate(site)
       FileUtils.mkdir_p('_temp/stats')
-      sorted = Jekyll.places(site.posts.docs).sort_by{ |k,v| v }.reverse
+      sorted = Jekyll.places(site.posts.docs).sort_by { |_k, v| v }.reverse
       File.write(
         File.join(site.config['source'], '_temp/stats/places.txt'),
-        sorted.map{ |k,v| "#{k}: #{v} (#{'%.2f' % (100.0 * v/site.posts.docs.length)}%)" }.join("\n")
+        sorted.map { |k, v| "#{k}: #{v} (#{format('%.2f', (100.0 * v / site.posts.docs.length))}%)" }.join("\n")
       )
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'places.txt')
-      puts "places.txt generated"
+      puts 'places.txt generated'
     end
   end
 
@@ -70,13 +73,15 @@ module Jekyll
     priority :low
     def generate(site)
       FileUtils.mkdir_p('_temp/stats')
-      sorted = site.tags.sort_by{ |k,v| v.length }.reverse
+      sorted = site.tags.sort_by { |_k, v| v.length }.reverse
       File.write(
         File.join(site.config['source'], '_temp/stats/tags.txt'),
-        sorted.map { |k,v| "#{k}: #{v.length} (#{'%.2f' % (100.0 * v.length/site.posts.docs.length)}%)" }.join("\n")
+        sorted.map do |k, v|
+          "#{k}: #{v.length} (#{format('%.2f', (100.0 * v.length / site.posts.docs.length))}%)"
+        end.join("\n")
       )
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'tags.txt')
-      puts "tags.txt generated"
+      puts 'tags.txt generated'
     end
   end
 
@@ -90,30 +95,30 @@ module Jekyll
       words = []
       site.posts.docs.each do |doc|
         next if doc.date < min
-        m = doc.date.strftime("%Y-%m")
-        months[m] = 0 if !months.key?(m)
+        m = doc.date.strftime('%Y-%m')
+        months[m] = 0 unless months.key?(m)
         all = Jekyll.all_words(doc.content)
         words += all
         months[m] += all.length
       end
       years = months.keys.map { |m| m[0..4].to_i }.uniq
-      (years.min .. years.max).each do |y|
+      (years.min..years.max).each do |y|
         (1..12).each do |m|
-          txt = format("%4d-%02d", y, m)
-          months[txt] = 0 if !months.key?(txt)
+          txt = format('%4d-%02d', y, m)
+          months[txt] = 0 unless months.key?(txt)
         end
       end
-      months = months.sort_by { |k, v| k }.to_h
+      months = months.sort_by { |k, _v| k }.to_h
       File.write(
         File.join(site.config['source'], '_temp/stats/words.txt'),
-        words.sort{ |a,b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
+        words.sort { |a, b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
       )
       open(dat, 'w') do |f|
-        for m, c in months
+        months.each do |m, c|
           f.puts "#{m}-01T00:00 #{c}"
         end
       end
-      puts %x[
+      puts `
         set -e
         src=#{site.config['source']}
         tmp=#{File.dirname(dat)}
@@ -122,11 +127,11 @@ module Jekyll
         gnuplot stats.gpi
         mkdir -p ${src}/_site
         cp ${tmp}/stats.svg ${src}/_site/stats.svg
-      ]
-      raise 'failed to build gnuplot stats image' if !$?.exitstatus
+      `
+      raise 'failed to build gnuplot stats image' unless $CHILD_STATUS.exitstatus
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'stats.svg')
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'words.txt')
-      puts "stats.svg generated"
+      puts 'stats.svg generated'
     end
   end
 
@@ -144,7 +149,7 @@ module Jekyll
   def self.all_words(text)
     text
       .gsub(/\{% highlight .+ endhighlight %\}/m, ' ')
-      .gsub(/\[([^\]]+)\]\([^\)]+\)/, ' \1 ')
+      .gsub(/\[([^\]]+)\]\([^)]+\)/, ' \1 ')
       .gsub(/`[^`]+`/, ' ')
       .gsub(/\{% .+ %\}/, ' ')
       .gsub(/&mdash;/, ' ')
@@ -152,8 +157,8 @@ module Jekyll
       .gsub(/<[^>]+>/, ' ')
       .gsub(/[^A-Za-z'-]/, ' ')
       .split(/\s+/)
-      .select{ |w| w.length > 1 }
-      .select{ |w| /^[A-Za-z].*/ =~ w }
+      .select { |w| w.length > 1 }
+      .select { |w| /^[A-Za-z].*/ =~ w }
       .map do |w|
         if /[A-Z]{2}.*/ =~ w
           w

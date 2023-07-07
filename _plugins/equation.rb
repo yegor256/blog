@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,8 +25,9 @@ module Yegor
       @tex = markup.strip
     end
 
-    def render(context)
-      "<img src='http://latex.codecogs.com/svg.image?#{CGI.escape(@tex).gsub('+', '%20')}' class='eqtn' alt='equation'/>"
+    def render(_context)
+      "<img src='http://latex.codecogs.com/svg.image?#{CGI.escape(@tex).gsub('+',
+                                                                             '%20')}' class='eqtn' alt='equation'/>"
     end
   end
 end

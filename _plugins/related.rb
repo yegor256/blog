@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,17 +25,18 @@ module Yegor
       site = context.registers[:site]
       page['related'].map do |p|
         html(site, p)
-      end.join('')
+      end.join
     end
+
     def html(site, name)
       file = "_posts/#{name}.md"
       page = site.posts.docs.detect do |p|
         p.relative_path == file
       end
       "<p><a href='#{page.url}'><strong>" +
-        CGI::escapeHTML(page['title']) +
+        CGI.escapeHTML(page['title']) +
         '</strong></a> <br/>' +
-        CGI::escapeHTML(page['description']) +
+        CGI.escapeHTML(page['description']) +
         '</p>'
     end
   end

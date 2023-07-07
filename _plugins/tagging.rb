@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,7 +25,8 @@ module Yegor
   class Tagger < Jekyll::Generator
     safe true
     attr_accessor :site
-    @types = [:page, :feed]
+
+    @types = %i[page feed]
     class << self; attr_accessor :types, :site; end
 
     def generate(site)
@@ -34,17 +37,16 @@ module Yegor
     private
 
     def new_tag(tag, posts)
-      self.class.types.each { |type|
-        if layout = site.config["tag_#{type}_layout"]
-          data = { 'layout' => layout, 'posts' => posts.sort.reverse!, 'tag' => tag }
-          name = yield data if block_given?
-          site.pages << TagPage.new(
-            site, site.source, site.config["tag_#{type}_dir"],
-            "#{name || tag}#{site.layouts[data['layout']].ext}",
-            data
-          )
-        end
-      }
+      self.class.types.each do |type|
+        next unless layout = site.config["tag_#{type}_layout"]
+        data = { 'layout' => layout, 'posts' => posts.sort.reverse!, 'tag' => tag }
+        name = yield data if block_given?
+        site.pages << TagPage.new(
+          site, site.source, site.config["tag_#{type}_dir"],
+          "#{name || tag}#{site.layouts[data['layout']].ext}",
+          data
+        )
+      end
     end
   end
 
@@ -53,7 +55,7 @@ module Yegor
       self.content = data.delete('content') || ''
       self.data = data
       @title = data['tag']
-      super(site, base, dir[-1, 1] == '/' ? dir : '/' + dir, name + '.html')
+      super(site, base, dir[-1, 1] == '/' ? dir : "/#{dir}", "#{name}.html")
       data['tag'] ||= basename
     end
 
@@ -61,7 +63,8 @@ module Yegor
     def to_liquid
       hash = orig_to_liquid
       hash['title'] = @title
-      hash['description'] = "#{@title}: more about #{@title} in this collection of recently published articles... the list is updated every few weeks."
+      hash['description'] =
+        "#{@title}: more about #{@title} in this collection of recently published articles... the list is updated every few weeks."
       hash
     end
 
@@ -72,40 +75,40 @@ module Yegor
 
   module TaggingFilters
     def tag_cloud(tags)
-      tags.keys.sort.map{ |t| tag_link(t) }.join(' ')
+      tags.keys.sort.map { |t| tag_link(t) }.join(' ')
     end
 
     def tag_link(tag)
       prefix = case tag
-      when 'oop'
-        "<img src='/images/icons/cactus.svg' alt='OOP'/>"
-      when 'management'
-        "<img src='/images/icons/mushroom.svg' alt='Management'/>"
-      when 'java'
-        "<img src='/images/icons/java-white.svg' alt='Java'/>"
-      when 'ruby'
-        "<img src='/images/icons/ruby-white.svg' alt='Ruby'/>"
-      when 'maven'
-        "<img src='/images/icons/maven-white.svg' alt='Maven'/>"
-      when 'sarcasm'
-        "<img src='/images/icons/sarcasm-white.svg' alt='Sarcasm'/>"
-      when 'jcabi'
-        "<img src='/images/icons/jcabi-white.svg' alt='Maven'/>"
-      when 'pdd'
-        "<img src='/images/icons/pdd-white.svg' alt='PDD'/>"
-      when 'oss'
-        "<img src='/images/icons/github-white.svg' alt='GitHub'/>"
-      when 'aws'
-        "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
-      when 'rultor'
-        "<img src='/images/icons/rultor-white.svg' alt='Rultor'/>"
-      when 'zerocracy'
-        "<img src='/images/icons/zerocracy-white.svg' alt='Zerocracy'/>"
-      when 'xdsd'
-        "<img src='/images/icons/xdsd-white.svg' alt='XDSD'/>"
-      else
-        ""
-      end
+               when 'oop'
+                 "<img src='/images/icons/cactus.svg' alt='OOP'/>"
+               when 'management'
+                 "<img src='/images/icons/mushroom.svg' alt='Management'/>"
+               when 'java'
+                 "<img src='/images/icons/java-white.svg' alt='Java'/>"
+               when 'ruby'
+                 "<img src='/images/icons/ruby-white.svg' alt='Ruby'/>"
+               when 'maven'
+                 "<img src='/images/icons/maven-white.svg' alt='Maven'/>"
+               when 'sarcasm'
+                 "<img src='/images/icons/sarcasm-white.svg' alt='Sarcasm'/>"
+               when 'jcabi'
+                 "<img src='/images/icons/jcabi-white.svg' alt='Maven'/>"
+               when 'pdd'
+                 "<img src='/images/icons/pdd-white.svg' alt='PDD'/>"
+               when 'oss'
+                 "<img src='/images/icons/github-white.svg' alt='GitHub'/>"
+               when 'aws'
+                 "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
+               when 'rultor'
+                 "<img src='/images/icons/rultor-white.svg' alt='Rultor'/>"
+               when 'zerocracy'
+                 "<img src='/images/icons/zerocracy-white.svg' alt='Zerocracy'/>"
+               when 'xdsd'
+                 "<img src='/images/icons/xdsd-white.svg' alt='XDSD'/>"
+               else
+                 ''
+               end
       "<a href='#{tag_url(tag)}' class='tag notranslate'>#{prefix}#{tag}</a>"
     end
 
@@ -114,7 +117,7 @@ module Yegor
     end
 
     def yb_tagged_list(posts)
-      posts.select { |p| p['noindex'].nil? }.map{ |p| tagged(p) }.join() unless posts.nil?
+      posts.select { |p| p['noindex'].nil? }.map { |p| tagged(p) }.join unless posts.nil?
     end
 
     def tagged(post)
@@ -122,7 +125,7 @@ module Yegor
         <div><a href='#{post.url}'>#{post['title']}</a></div>
         <ul class='subline'>
           <li>
-            <time datetime='#{post['date'].xmlschema()}'>
+            <time datetime='#{post['date'].xmlschema}'>
               #{post['date'].strftime('%-d %B %Y')}
             </time>
           </li>
@@ -137,9 +140,9 @@ module Yegor
     end
 
     def yb_page_tags(page)
-      return '' unless page['tags'].kind_of?(Array)
+      return '' unless page['tags'].is_a?(Array)
       tags = page['tags'].dup.sort
-      tags.map! { |t| t.first } if tags.first.is_a?(Array)
+      tags.map!(&:first) if tags.first.is_a?(Array)
       tags.map { |t| tag_link(t) if t.is_a?(String) }
         .compact
         .join(' ')
@@ -149,4 +152,3 @@ end
 
 require 'liquid'
 Liquid::Template.register_filter(Yegor::TaggingFilters)
-

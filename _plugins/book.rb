@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,28 +22,29 @@ module Yegor
   module Filters
     def book(book)
       opts = book.strip.split(/\s+/, 2)
-      if opts[0] == 'elegant-objects-1'
+      case opts[0]
+      when 'elegant-objects-1'
         link = 'http://amzn.to/2qFt4Tn'
         cover = '/images/books/elegant-objects/cover-eo1.png'
-      elsif opts[0] == 'elegant-objects-2'
+      when 'elegant-objects-2'
         link = 'http://amzn.to/2pyceWc'
         cover = '/images/books/elegant-objects/cover-eo2.png'
-      elsif opts[0] == 'code-ahead-1'
+      when 'code-ahead-1'
         link = 'https://amzn.to/2u9BbqF'
         cover = '/images/books/code-ahead/cover.png'
-      elsif opts[0] == 'bloghacks'
+      when 'bloghacks'
         link = 'http://amzn.to/2qopIm5'
         cover = '/images/books/256-bloghacks/cover.png'
       end
       "<aside class='book'>" \
       "<a href='#{link}'>" \
       "<img src='#{cover}' class='book-cover' alt='book cover'/>" \
-      "</a>" \
-      "Read more about this subject in " \
+      '</a>' \
+      'Read more about this subject in ' \
       "<a href='#{link}'>Section&nbsp;#{opts[1]}</a><br/>" \
-      " of my book" \
+      ' of my book' \
       "<a href='#{link}'><img src='/images/books/amazon-buy-button.png' class='amazon-button' alt='Click to buy'/></a>" \
-      "</aside>"
+      '</aside>'
     end
   end
 end

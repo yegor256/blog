@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,7 +24,7 @@ module Jekyll
     safe true
     def generate(site)
       site.posts.docs.each do |doc|
-        puts "WARN: No front image in #{doc.url}" if !doc['image']
+        puts "WARN: No front image in #{doc.url}" unless doc['image']
       end
     end
   end

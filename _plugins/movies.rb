@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +28,8 @@ module Yegor
 
     def yb_movies(posts)
       with_movies(posts).map do |p|
-        "<p><a href='#{p.url}'>#{Kramdown::Document.new(p['jb_picture']['caption']).to_html.gsub(/<\/?p>/, '')}</a></p>"
+        "<p><a href='#{p.url}'>#{Kramdown::Document.new(p['jb_picture']['caption']).to_html.gsub(%r{</?p>},
+                                                                                                 '')}</a></p>"
       end
     end
 
@@ -34,10 +37,10 @@ module Yegor
 
     def with_movies(posts)
       posts
-        .select{ |p| p['jb_picture'] && p['jb_picture']['caption'] }
-        .uniq{ |p| p['jb_picture']['caption'] }
-        .sort{ |a,b| a['jb_picture']['caption'] <=> b['jb_picture']['caption'] }
-      end
+        .select { |p| p['jb_picture'] && p['jb_picture']['caption'] }
+        .uniq { |p| p['jb_picture']['caption'] }
+        .sort { |a, b| a['jb_picture']['caption'] <=> b['jb_picture']['caption'] }
+    end
   end
 end
 

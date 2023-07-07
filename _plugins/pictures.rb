@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -18,17 +20,18 @@
 
 module Yegor
   class Img
-    def initialize(src, ctx)
-      if src.index('/') == 0 && src.index('//') != 0
+    def initialize(src, _ctx)
+      if src.index('/').zero? && src.index('//') != 0
         @url = src
         raise "file doesn't exist: #{src}" unless
-          File.exist?('./_site' + src) ||
-          File.exist?('.' + src) ||
+          File.exist?("./_site#{src}") ||
+          File.exist?(".#{src}") ||
           src =~ /gnuplot/
       else
         @url = src
       end
     end
+
     def to_s
       CGI.escapeHTML(@url)
     end
@@ -46,10 +49,10 @@ module Yegor
       uri = Yegor::Img.new(@src, context).to_s
       attrs = "itemprop='image' style='width:#{@width}px;max-width:100%;' alt='The figure'"
       html = if uri.end_with?('.svg')
-        "<object data='#{uri}' type='image/svg+xml' #{attrs}></object>"
-      else
-        "<img src='#{uri}' #{attrs}/>"
-      end
+               "<object data='#{uri}' type='image/svg+xml' #{attrs}></object>"
+             else
+               "<img src='#{uri}' #{attrs}/>"
+             end
       "<figure class='unprintable'>#{html}</figure>"
     end
   end
@@ -60,17 +63,13 @@ module Yegor
       opts = markup.strip.split(/\s+/, 3)
       @src = opts[0].strip
       @width = opts[1].strip
-      if opts[2]
-        @url = opts[2].strip
-      end
+      @url = opts[2].strip if opts[2]
     end
 
     def render(context)
-      img = "<img src='#{Yegor::Img.new(@src, context)}'" +
-        " style='width:#{@width}px;max-width:100%;' alt='badge'/>"
-      if @url
-        img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"
-      end
+      img = "<img src='#{Yegor::Img.new(@src, context)}'" \
+            " style='width:#{@width}px;max-width:100%;' alt='badge'/>"
+      img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>" if @url
       html = "<figure class='badge'>#{img}</figure>\n\n"
     end
   end
@@ -81,9 +80,7 @@ module Yegor
       opts = markup.strip.split(/\s+/, 3)
       @src = opts[0].strip
       @width = opts[1].nil? ? '0' : opts[1].strip
-      if @width == '0'
-        @width = '600'
-      end
+      @width = '600' if @width == '0'
       @title = opts[2].nil? ? '' : opts[2].strip
     end
 
@@ -95,11 +92,9 @@ module Yegor
         .gsub(/</, '&lt;')
         .gsub(/>/, '&gt;')
       alt = 'picture' if alt.empty?
-      html = "<figure class='picture'><img src='#{Yegor::Img.new(@src, context)}'" +
-        " style='width:#{@width}px;max-width:100%;' alt='#{CGI.escapeHTML(alt)}'/>"
-      if @title != ''
-        html += "<figcaption>#{CGI::escapeHTML @title}</figcaption>"
-      end
+      html = "<figure class='picture'><img src='#{Yegor::Img.new(@src, context)}'" \
+             " style='width:#{@width}px;max-width:100%;' alt='#{CGI.escapeHTML(alt)}'/>"
+      html += "<figcaption>#{CGI.escapeHTML @title}</figcaption>" if @title != ''
       html += "</figure>\n\n"
     end
   end
@@ -107,4 +102,4 @@ end
 
 Liquid::Template.register_tag('figure', Yegor::FigureBlock)
 Liquid::Template.register_tag('badge', Yegor::BadgeBlock)
-Liquid::Template.register_tag("picture", Yegor::PictureBlock)
+Liquid::Template.register_tag('picture', Yegor::PictureBlock)

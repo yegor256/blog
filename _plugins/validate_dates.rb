@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Copyright (c) 2014-2023 Yegor Bugayenko
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,10 +26,8 @@ module Jekyll
       site.posts.docs.each do |post|
         prefix = post.date.strftime('_posts/%Y/%b/%Y-%m-%d-').downcase
         path = post.relative_path
-        next if path.index('_drafts/') == 0
-        if path.index(prefix) != 0
-          raise "wrong path of '#{path}', it has to start with #{prefix}"
-        end
+        next if path.index('_drafts/').zero?
+        raise "wrong path of '#{path}', it has to start with #{prefix}" if path.index(prefix) != 0
       end
     end
   end
