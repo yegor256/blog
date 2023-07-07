@@ -23,13 +23,16 @@ require 'redcarpet'
 require 'nokogiri'
 require 'fastimage'
 
+# Jekyll module
 module Jekyll
+  # The class
   class AmpPage < Page
     def initialize(site, doc)
       super(site, site.source, File.dirname(doc.relative_path), doc.basename)
     end
   end
 
+  # The class
   class AmpFile < StaticFile
     def initialize(site, path, html)
       super(site, site.dest, '', path)
@@ -68,6 +71,7 @@ module Jekyll
     end
   end
 
+  # The class
   class AmpGenerator < Generator
     priority :low
     def generate(site)

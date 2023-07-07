@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# My module
 module Yegor
+  # The class
   class Img
     def initialize(src, _ctx)
       if src.index('/').zero? && src.index('//') != 0
@@ -37,6 +39,7 @@ module Yegor
     end
   end
 
+  # The class
   class FigureBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super
@@ -57,6 +60,7 @@ module Yegor
     end
   end
 
+  # The class
   class BadgeBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super
@@ -74,6 +78,7 @@ module Yegor
     end
   end
 
+  # The class
   class PictureBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super

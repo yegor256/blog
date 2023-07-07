@@ -21,7 +21,9 @@
 require 'rss'
 require 'securerandom'
 
+# Jekyll module
 module Jekyll
+  # The class
   class YegorBufferFile < StaticFile
     def write(dest)
       target = File.join(dest, @dir, @name)
@@ -34,6 +36,7 @@ module Jekyll
     end
   end
 
+  # The class
   class YegorBufferGenerator < Generator
     priority :low
     safe true
@@ -56,24 +59,24 @@ module Jekyll
           articles << {
             link: home + p.url,
             title: if months < 6
-                     [
-                       "I wrote this #{months}-months ago:",
-                       "#{months}-months ago I wrote:",
-                       "Re-read this #{months}-months old post:"
-                     ].sample
-                   elsif months < 12
-                     [
-                       'I wrote this almost a year ago:',
-                       'Almost a year old article:',
-                       'Re-read this year-old blog post:'
-                     ].sample
-                   else
-                     [
-                       'I wrote this over a year ago:',
-                       'Pretty old, but still relevant:',
-                       'Over a year old, read it again:'
-                     ].sample
-                   end + " \"#{p['title']}\"#{tags}"
+             [
+               "I wrote this #{months}-months ago:",
+               "#{months}-months ago I wrote:",
+               "Re-read this #{months}-months old post:"
+             ].sample
+            elsif months < 12
+             [
+               'I wrote this almost a year ago:',
+               'Almost a year old article:',
+               'Re-read this year-old blog post:'
+             ].sample
+           else
+             [
+               'I wrote this over a year ago:',
+               'Pretty old, but still relevant:',
+               'Over a year old, read it again:'
+             ].sample
+           end + " \"#{p['title']}\"#{tags}"
           }
         end
         key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml

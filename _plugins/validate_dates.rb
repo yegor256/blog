@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Jekyll module
 module Jekyll
+  # The class
   class DateValidateGenerator < Generator
     priority :low
     safe true

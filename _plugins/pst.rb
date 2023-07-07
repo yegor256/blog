@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Jekyll module
 module Jekyll
+  # The class
   module Tags
     class Pst < Liquid::Tag
       def initialize(tag_name, post, tokens)

@@ -20,7 +20,9 @@
 
 require 'fileutils'
 
+# Jekyll module
 module Jekyll
+  # The class
   class StatsFile < StaticFile
     def write(dest)
       target = File.join(dest, @dir, @name)
@@ -33,6 +35,7 @@ module Jekyll
     end
   end
 
+  # The class
   class WordCountBlock < Liquid::Tag
     def render(context)
       words = []
@@ -49,12 +52,14 @@ module Jekyll
     end
   end
 
+  # The class
   class PlacesCountBlock < Liquid::Tag
     def render(context)
       "<a href='/places.txt'>#{Jekyll.places(context['site'].posts).length}</a> geographic places"
     end
   end
 
+  # The class
   class PlacesGenerator < Generator
     priority :low
     def generate(site)
@@ -69,6 +74,7 @@ module Jekyll
     end
   end
 
+  # The class
   class TagsGenerator < Generator
     priority :low
     def generate(site)
@@ -85,6 +91,7 @@ module Jekyll
     end
   end
 
+  # The class
   class AStatsGenerator < Generator
     priority :low
     def generate(site)

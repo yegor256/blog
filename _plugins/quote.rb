@@ -20,7 +20,9 @@
 
 require 'kramdown'
 
+# My module
 module Yegor
+  # The class
   class QuoteBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super

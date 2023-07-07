@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# My module
 module Yegor
+  # The class
   class RelatedBlock < Liquid::Tag
     def render(context)
       page = context.registers[:page]

@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# My module
 module Yegor
+  # Module
   module FrontFilters
     def yb_keywords(page)
       list = page['keywords']

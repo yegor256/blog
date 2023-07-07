@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Jekyll module
 module Jekyll
+  # The class
   class RssFile < StaticFile
     def write(dest)
       FileUtils.copy_file(File.join(dest, 'rss.xml'), File.join(dest, 'rss'))
@@ -26,6 +28,7 @@ module Jekyll
     end
   end
 
+  # The class
   class ExtraGenerator < Generator
     priority :low
     safe true

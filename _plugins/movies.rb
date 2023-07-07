@@ -20,7 +20,9 @@
 
 require 'kramdown'
 
+# My module
 module Yegor
+  # The class
   module MovieFilters
     def yb_movies_count(posts)
       with_movies(posts).size

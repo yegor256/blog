@@ -23,7 +23,9 @@ require 'net/http'
 require 'liquid'
 require 'json'
 
+# My module
 module Yegor
+  # The class
   class PlantBlock < Liquid::Block
     def initialize(tag, markup, tokens)
       super

@@ -19,7 +19,10 @@
 # SOFTWARE.
 
 require 'date'
+
+# My module
 module Yegor
+  # Module
   module Modified
     def modified(page)
       path = page['path']

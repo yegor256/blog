@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# My module
 module Yegor
+  # The class
   class WebinarBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super

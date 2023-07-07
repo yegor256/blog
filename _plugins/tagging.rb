@@ -21,7 +21,9 @@
 require 'nuggets/range/quantile'
 require 'erb'
 
+# My module
 module Yegor
+  # The class
   class Tagger < Jekyll::Generator
     safe true
     attr_accessor :site
@@ -50,6 +52,7 @@ module Yegor
     end
   end
 
+  # The class
   class TagPage < Jekyll::Page
     def initialize(site, base, dir, name, data = {})
       self.content = data.delete('content') || ''
@@ -73,6 +76,7 @@ module Yegor
     end
   end
 
+  # Module
   module TaggingFilters
     def tag_cloud(tags)
       tags.keys.sort.map { |t| tag_link(t) }.join(' ')

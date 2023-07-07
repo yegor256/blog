@@ -24,7 +24,9 @@ require 'uri'
 require 'yaml'
 require 'cgi'
 
+# My module
 module Yegor
+  # The class
   class YoutubeBlock < Liquid::Tag
     def initialize(tag, markup, tokens)
       super

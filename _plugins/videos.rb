@@ -23,7 +23,9 @@ require 'uri'
 require 'yaml'
 require 'cgi'
 
+# My module
 module Yegor
+  # The class
   class VideosBlock < Liquid::Tag
     def render(_context)
       return 'not implemented yet...'

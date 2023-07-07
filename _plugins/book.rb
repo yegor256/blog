@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# My module
 module Yegor
+  # Filters
   module Filters
     def book(book)
       opts = book.strip.split(/\s+/, 2)

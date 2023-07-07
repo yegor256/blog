@@ -18,7 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# Jekyll module
 module Jekyll
+  # The class
   class FontcustomFile < StaticFile
     def write(dest)
       target = File.join(dest, @dir, @name)
@@ -31,6 +33,7 @@ module Jekyll
     end
   end
 
+  # The class
   class FontcustomGenerator < Generator
     priority :low
     safe true
