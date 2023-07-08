@@ -46,6 +46,7 @@ task default: [
   :snippets,
   :orphans,
   # :ping,
+  :eslint,
   # :jslint,
   # :proofer,
   :rubocop
@@ -265,10 +266,25 @@ end
 desc 'Test all JavaScript files with JSLint'
 task :jslint do
   Dir['js/**/*.js'].each do |f|
+    puts "jslint #{f}..."
     stdout = `jslint #{f}`
     raise "jslint failed at #{f}:\n#{stdout}" unless $CHILD_STATUS.success?
   end
   done 'JSLint says JavaScript files are clean'
+end
+
+desc 'Test all JavaScript files with ESLint'
+task :eslint do
+  Dir['js/**/*.js'].each do |f|
+    puts "eslint #{f}..."
+    if f.include?('min.js')
+      puts "  skipped"
+      next
+    end
+    stdout = `eslint #{f}`
+    raise "eslint failed at #{f}:\n#{stdout}" unless $CHILD_STATUS.success?
+  end
+  done 'ESLint says JavaScript files are clean'
 end
 
 desc 'Make sure all pages have excerpts'

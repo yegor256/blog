@@ -25,33 +25,6 @@ if (typeof($) != 'undefined') {
         eurl = encodeURIComponent(url),
         border = '1px solid #ffa094',
         timeout = 5000;
-      // https://stackoverflow.com/questions/45157191/google-share-counts-are-not-showing
-      // if ($('.count-googleplus').length) {
-      //   $.ajax({
-      //     dataType: 'json',
-      //     async: true,
-      //     timeout: timeout,
-      //     url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + eurl,
-      //     success: function (data) {
-      //       if (data.GooglePlusOne !== 0) {
-      //         $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
-      //       }
-      //     },
-      //     error: function() {
-      //       $('.share .icon-googleplus').css('border', border);
-      //     }
-      //   });
-      // }
-      // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
-      // $.getJSON(
-      //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + eurl,
-      //   function(json) {
-      //     var count = json.count;
-      //     if (count > 0) {
-      //       $('.count-twitter').html(number(count)).fadeIn();
-      //     }
-      //   }
-      // );
       if ($('.count-facebook').length) {
         $.ajax({
           dataType: 'jsonp',
