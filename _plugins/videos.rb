@@ -28,7 +28,7 @@ module Yegor
   # The class
   class VideosBlock < Liquid::Tag
     def render(_context)
-      return 'not implemented yet...'
+      'not implemented yet...'
       # path = File.expand_path('~/secrets.yml')
       # return unless File.exist?(path)
       # key = YAML.safe_load(File.open(path))['youtube_api_key']

@@ -35,11 +35,7 @@ module Yegor
       page = site.posts.docs.detect do |p|
         p.relative_path == file
       end
-      "<p><a href='#{page.url}'><strong>" +
-        CGI.escapeHTML(page['title']) +
-        '</strong></a> <br/>' +
-        CGI.escapeHTML(page['description']) +
-        '</p>'
+      "<p><a href='#{page.url}'><strong>#{CGI.escapeHTML(page['title'])}</strong></a> <br/>#{CGI.escapeHTML(page['description'])}</p>"
     end
   end
 end

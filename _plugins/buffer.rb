@@ -59,27 +59,27 @@ module Jekyll
           articles << {
             link: home + p.url,
             title: if months < 6
-             [
-               "I wrote this #{months}-months ago:",
-               "#{months}-months ago I wrote:",
-               "Re-read this #{months}-months old post:"
-             ].sample
-            elsif months < 12
-             [
-               'I wrote this almost a year ago:',
-               'Almost a year old article:',
-               'Re-read this year-old blog post:'
-             ].sample
-           else
-             [
-               'I wrote this over a year ago:',
-               'Pretty old, but still relevant:',
-               'Over a year old, read it again:'
-             ].sample
-           end + " \"#{p['title']}\"#{tags}"
+                     [
+                       "I wrote this #{months}-months ago:",
+                       "#{months}-months ago I wrote:",
+                       "Re-read this #{months}-months old post:"
+                     ].sample
+                   elsif months < 12
+                     [
+                       'I wrote this almost a year ago:',
+                       'Almost a year old article:',
+                       'Re-read this year-old blog post:'
+                     ].sample
+                   else
+                     [
+                       'I wrote this over a year ago:',
+                       'Pretty old, but still relevant:',
+                       'Over a year old, read it again:'
+                     ].sample
+                   end + " \"#{p['title']}\"#{tags}"
           }
         end
-        key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
+        key = ENV.fetch('YOUTUBE_API_KEY', nil) # configured in .travis.yml
         unless key.nil?
           uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=50&key=#{key}")
           JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
@@ -93,7 +93,7 @@ module Jekyll
               )
             )['items'][0]['snippet']['tags']
             raise "No tags for #{id}" if tags.nil?
-            tags = tags.select { |t| t =~ /[a-z]{3,12}/ }.take(3).map { |t| "##{t}" }.join(' ')
+            tags = tags.grep(/[a-z]{3,12}/).take(3).map { |t| "##{t}" }.join(' ')
             articles << {
               link: "https://www.youtube.com/watch?v=#{id}",
               title: "Watch it again: \"#{video['snippet']['title']}\" #{tags}"

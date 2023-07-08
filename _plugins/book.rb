@@ -39,14 +39,14 @@ module Yegor
         cover = '/images/books/256-bloghacks/cover.png'
       end
       "<aside class='book'>" \
-      "<a href='#{link}'>" \
-      "<img src='#{cover}' class='book-cover' alt='book cover'/>" \
-      '</a>' \
-      'Read more about this subject in ' \
-      "<a href='#{link}'>Section&nbsp;#{opts[1]}</a><br/>" \
-      ' of my book' \
-      "<a href='#{link}'><img src='/images/books/amazon-buy-button.png' class='amazon-button' alt='Click to buy'/></a>" \
-      '</aside>'
+        "<a href='#{link}'>" \
+        "<img src='#{cover}' class='book-cover' alt='book cover'/>" \
+        '</a>' \
+        'Read more about this subject in ' \
+        "<a href='#{link}'>Section&nbsp;#{opts[1]}</a><br/> " \
+        'of my book' \
+        "<a href='#{link}'><img src='/images/books/amazon-buy-button.png' class='amazon-button' alt='Click to buy'/></a>" \
+        '</aside>'
     end
   end
 end

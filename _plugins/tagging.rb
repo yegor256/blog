@@ -40,7 +40,7 @@ module Yegor
 
     def new_tag(tag, posts)
       self.class.types.each do |type|
-        next unless layout = site.config["tag_#{type}_layout"]
+        next unless (layout = site.config["tag_#{type}_layout"])
         data = { 'layout' => layout, 'posts' => posts.sort.reverse!, 'tag' => tag }
         name = yield data if block_given?
         site.pages << TagPage.new(
@@ -84,35 +84,35 @@ module Yegor
 
     def tag_link(tag)
       prefix = case tag
-               when 'oop'
-                 "<img src='/images/icons/cactus.svg' alt='OOP'/>"
-               when 'management'
-                 "<img src='/images/icons/mushroom.svg' alt='Management'/>"
-               when 'java'
-                 "<img src='/images/icons/java-white.svg' alt='Java'/>"
-               when 'ruby'
-                 "<img src='/images/icons/ruby-white.svg' alt='Ruby'/>"
-               when 'maven'
-                 "<img src='/images/icons/maven-white.svg' alt='Maven'/>"
-               when 'sarcasm'
-                 "<img src='/images/icons/sarcasm-white.svg' alt='Sarcasm'/>"
-               when 'jcabi'
-                 "<img src='/images/icons/jcabi-white.svg' alt='Maven'/>"
-               when 'pdd'
-                 "<img src='/images/icons/pdd-white.svg' alt='PDD'/>"
-               when 'oss'
-                 "<img src='/images/icons/github-white.svg' alt='GitHub'/>"
-               when 'aws'
-                 "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
-               when 'rultor'
-                 "<img src='/images/icons/rultor-white.svg' alt='Rultor'/>"
-               when 'zerocracy'
-                 "<img src='/images/icons/zerocracy-white.svg' alt='Zerocracy'/>"
-               when 'xdsd'
-                 "<img src='/images/icons/xdsd-white.svg' alt='XDSD'/>"
-               else
-                 ''
-               end
+      when 'oop'
+        "<img src='/images/icons/cactus.svg' alt='OOP'/>"
+      when 'management'
+        "<img src='/images/icons/mushroom.svg' alt='Management'/>"
+      when 'java'
+        "<img src='/images/icons/java-white.svg' alt='Java'/>"
+      when 'ruby'
+        "<img src='/images/icons/ruby-white.svg' alt='Ruby'/>"
+      when 'maven'
+        "<img src='/images/icons/maven-white.svg' alt='Maven'/>"
+      when 'sarcasm'
+        "<img src='/images/icons/sarcasm-white.svg' alt='Sarcasm'/>"
+      when 'jcabi'
+        "<img src='/images/icons/jcabi-white.svg' alt='Maven'/>"
+      when 'pdd'
+        "<img src='/images/icons/pdd-white.svg' alt='PDD'/>"
+      when 'oss'
+        "<img src='/images/icons/github-white.svg' alt='GitHub'/>"
+      when 'aws'
+        "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
+      when 'rultor'
+        "<img src='/images/icons/rultor-white.svg' alt='Rultor'/>"
+      when 'zerocracy'
+        "<img src='/images/icons/zerocracy-white.svg' alt='Zerocracy'/>"
+      when 'xdsd'
+        "<img src='/images/icons/xdsd-white.svg' alt='XDSD'/>"
+      else
+        ''
+      end
       "<a href='#{tag_url(tag)}' class='tag notranslate'>#{prefix}#{tag}</a>"
     end
 
@@ -140,16 +140,14 @@ module Yegor
           #{post.content.include?('twitter-tweet') ? '<li class="has-poll" title="There is a Twitter poll inside"><i class="icon icon-twitter"></i></li>' : ''}
           #{post.content.include?('{% youtube') ? '<li class="has-youtube" title="There is a YouTube video inside"><i class="icon icon-youtube"></i></li>' : ''}
         </ul>
-      </div>".gsub(/\n/, '')
+      </div>".gsub("\n", '')
     end
 
     def yb_page_tags(page)
       return '' unless page['tags'].is_a?(Array)
       tags = page['tags'].dup.sort
       tags.map!(&:first) if tags.first.is_a?(Array)
-      tags.map { |t| tag_link(t) if t.is_a?(String) }
-        .compact
-        .join(' ')
+      tags.map { |t| tag_link(t) if t.is_a?(String) }.compact.join(' ')
     end
   end
 end

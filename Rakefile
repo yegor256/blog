@@ -44,11 +44,11 @@ task default: [
   :regex,
   :excerpts,
   :snippets,
-  :orphans
+  :orphans,
   # :ping,
   # :jslint,
   # :proofer,
-  # :rubocop,
+  :rubocop
 ]
 
 def done(msg)
@@ -60,11 +60,12 @@ def all_html
 end
 
 def all_links
-  all_html.reduce([]) do |array, f|
+  links = all_html.reduce([]) do |array, f|
     array + Nokogiri::HTML(File.read(f)).xpath(
       '//article//a/@href'
     ).to_a.map(&:to_s)
-  end.sort.map { |a| a.gsub(%r{^/}, 'https://www.yegor256.com/') }
+  end
+  links.sort.map { |a| a.gsub(%r{^/}, 'https://www.yegor256.com/') }
 end
 
 desc 'Delete _site directory'
@@ -143,7 +144,7 @@ task w3c: [:build] do
     results = validator.validate_file(file)
     if results.errors.length.positive?
       results.errors.each do |err|
-        puts err.to_s
+        puts err
       end
       raise "Page #{file} is not W3C compliant"
     end
@@ -243,14 +244,14 @@ task ping: [:build] do
   system("./_rake/ping.sh #{tmp.path} #{out.path}")
   errors = File.read(out).split("\n").reduce(0) do |cnt, p|
     code, link = p.split
-    next if link.nil?
+    next nil if link.nil?
     if code == '200'
       cnt
     else
       puts "#{link}: #{code}"
       cnt + 1
     end
-  end
+  end.compact
   raise "#{errors} broken link(s)" unless errors < 20
   done "#{links.size} links are valid, #{errors} are broken"
 end
@@ -316,8 +317,8 @@ task :snippets do
       .gsub(%r{</a>}, '')
       .gsub(%r{</code>}, "\n")
       .gsub(%r{</span>}, '')
-      .gsub(/&lt;/, '<')
-      .gsub(/&gt;/, '>')
+      .gsub('&lt;', '<')
+      .gsub('&gt;', '>')
       .split("\n")
     long = lines.reject { |s| s.length < 81 }
     raise "Too wide snippet in #{f}: #{long}" unless long.empty?
@@ -331,7 +332,7 @@ task orphans: [:build] do
   links = all_links
     .select { |a| a.start_with? 'https://www.yegor256.com/' }
     .map { |a| a.gsub(/#.*/, '') }
-  links += all_html.map { |f| f.gsub(/_site/, 'https://www.yegor256.com') }
+  links += all_html.map { |f| f.gsub('_site', 'https://www.yegor256.com') }
   counts = {}
   links
     .select { |a| a.match %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*} }

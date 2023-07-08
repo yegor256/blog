@@ -62,7 +62,7 @@ module Jekyll
       write(site.dest)
     end
 
-    def write(dest)
+    def write(_dest)
       FileUtils.mkdir_p File.dirname(path)
       File.write(path, @html)
       true

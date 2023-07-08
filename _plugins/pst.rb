@@ -20,8 +20,9 @@
 
 # Jekyll module
 module Jekyll
-  # The class
+  # The module
   module Tags
+    # The class
     class Pst < Liquid::Tag
       def initialize(tag_name, post, tokens)
         super

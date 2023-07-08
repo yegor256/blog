@@ -112,7 +112,7 @@ module Jekyll
       return if years.empty?
       (years.min..years.max).each do |y|
         (1..12).each do |m|
-          txt = format('%4d-%02d', y, m)
+          txt = format('%<year>4d-%<month>02d', year: y, month: m)
           months[txt] = 0 unless months.key?(txt)
         end
       end
@@ -121,11 +121,12 @@ module Jekyll
         File.join(site.config['source'], '_temp/stats/words.txt'),
         words.sort { |a, b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
       )
-      open(dat, 'w') do |f|
-        months.each do |m, c|
-          f.puts "#{m}-01T00:00 #{c}"
-        end
-      end
+      File.write(
+        dat,
+        months.map do |m, c|
+          "#{m}-01T00:00 #{c}"
+        end.join("\n")
+      )
       puts `
         set -e
         src=#{site.config['source']}
@@ -160,13 +161,13 @@ module Jekyll
       .gsub(/\[([^\]]+)\]\([^)]+\)/, ' \1 ')
       .gsub(/`[^`]+`/, ' ')
       .gsub(/\{% .+ %\}/, ' ')
-      .gsub(/&mdash;/, ' ')
-      .gsub(/---/, ' ')
+      .gsub('&mdash;', ' ')
+      .gsub('---', ' ')
       .gsub(/<[^>]+>/, ' ')
       .gsub(/[^A-Za-z'-]/, ' ')
       .split(/\s+/)
       .select { |w| w.length > 1 }
-      .select { |w| /^[A-Za-z].*/ =~ w }
+      .grep(/^[A-Za-z].*/)
       .map do |w|
         if /[A-Z]{2}.*/ =~ w
           w

@@ -71,10 +71,10 @@ module Yegor
     end
 
     def render(context)
-      img = "<img src='#{Yegor::Img.new(@src, context)}'" \
-            " style='width:#{@width}px;max-width:100%;' alt='badge'/>"
+      img = "<img src='#{Yegor::Img.new(@src, context)}' " \
+            "style='width:#{@width}px;max-width:100%;' alt='badge'/>"
       img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>" if @url
-      html = "<figure class='badge'>#{img}</figure>\n\n"
+      "<figure class='badge'>#{img}</figure>\n\n"
     end
   end
 
@@ -91,16 +91,16 @@ module Yegor
 
     def render(context)
       alt = @title.gsub(/[ \n\r\t]+/, ' ')
-        .gsub(/&/, '&amp;')
-        .gsub(/"/, '&quot;')
-        .gsub(/'/, '&apos;')
-        .gsub(/</, '&lt;')
-        .gsub(/>/, '&gt;')
+        .gsub('&', '&amp;')
+        .gsub('"', '&quot;')
+        .gsub("'", '&apos;')
+        .gsub('<', '&lt;')
+        .gsub('>', '&gt;')
       alt = 'picture' if alt.empty?
-      html = "<figure class='picture'><img src='#{Yegor::Img.new(@src, context)}'" \
-             " style='width:#{@width}px;max-width:100%;' alt='#{CGI.escapeHTML(alt)}'/>"
+      html = "<figure class='picture'><img src='#{Yegor::Img.new(@src, context)}' " \
+             "style='width:#{@width}px;max-width:100%;' alt='#{CGI.escapeHTML(alt)}'/>"
       html += "<figcaption>#{CGI.escapeHTML @title}</figcaption>" if @title != ''
-      html += "</figure>\n\n"
+      "#{html}</figure>\n\n"
     end
   end
 end

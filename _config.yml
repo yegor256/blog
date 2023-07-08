@@ -35,6 +35,7 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-bits
+  - jekyll-git-hash
   - jekyll-paginate
   - jekyll-plantuml
   - jekyll-sitemap
