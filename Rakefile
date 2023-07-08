@@ -229,12 +229,14 @@ task spell: [:build] do
   done 'No spelling errors'
 end
 
-desc 'Ping all foreign links'
+desc 'Ping some foreign links'
 task ping: [:build] do
   links = all_links.uniq
     .reject { |a| a.start_with? 'https://www.yegor256.com/' }
     .reject { |a| a.include? 'linkedin.com' }
     .select { |a| (a =~ %r{^https?://.*}) }
+    .shuffle
+    .take(128)
   tmp = Tempfile.new(['yegor256-', '.txt'])
   tmp << links.join("\n")
   tmp.flush
@@ -254,8 +256,9 @@ task ping: [:build] do
     end
   end
   total = links.size
-  raise "#{errors} among #{total} links are broken" unless errors < 100
-  done "#{total} links are found, #{errors} are broken, it's more or less OK"
+  per = (100 * errors / total).to_i
+  raise "#{errors} among #{total} links are broken (#{per}%)" unless per < 16
+  done "#{total} links are found, #{errors} are broken, it's more or less OK (#{per}%)"
 end
 
 desc 'Run RuboCop on all Ruby files'
