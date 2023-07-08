@@ -114,7 +114,7 @@ converting SVG into PNG.
 for editing rasterized images, like PNG, GIF, JPEG, etc.
 The icons you see at this page were created with the help of
 Pixelmator. It is a perfect alternative to
-[Adobe Photoshop](http://www.adobe.com/products/photoshop.html), if you
+[Adobe Photoshop](https://www.adobe.com/products/photoshop.html), if you
 are a programmer, not a graphic designer.
 
 <img src="/images/2017/06/env-1password.jpg" class="env-ico" alt="icon"/><br/>

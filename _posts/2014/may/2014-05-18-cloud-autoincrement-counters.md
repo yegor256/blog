@@ -76,7 +76,7 @@ clients are using a counter or how fast they request increments simultaneously.
 
 Moreover, I designed a small [Java SDK](https://github.com/sttc/java-sdk)
 for [stateful.co](http://www.stateful.co). All you need to do is add
-this [java-sdk.jar](http://repo1.maven.org/maven2/co/stateful/java-sdk/)
+this [java-sdk.jar](https://repo1.maven.org/maven2/co/stateful/java-sdk/)
 Maven dependency to your project:
 
 ```xml

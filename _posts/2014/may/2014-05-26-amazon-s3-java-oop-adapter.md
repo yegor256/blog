@@ -203,7 +203,7 @@ annotated with [`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html
 and are truly immutable.
 
 The library ships as a JAR dependency in
-[Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-s3)
+[Maven Central](https://repo1.maven.org/maven2/com/jcabi/jcabi-s3)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
 ```xml

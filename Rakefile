@@ -252,7 +252,7 @@ task ping: [:build] do
       puts "#{link}: #{code}"
       cnt + 1
     end
-  end.compact
+  end
   raise "#{errors} broken link(s)" unless errors < 20
   done "#{links.size} links are valid, #{errors} are broken"
 end
@@ -278,7 +278,7 @@ task :eslint do
   Dir['js/**/*.js'].each do |f|
     puts "eslint #{f}..."
     if f.include?('min.js')
-      puts "  skipped"
+      puts '  skipped'
       next
     end
     stdout = `eslint #{f}`

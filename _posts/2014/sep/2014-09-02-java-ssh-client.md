@@ -121,7 +121,7 @@ String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");
 ## Download
 
 You need a single dependency
-[`jcabi-ssh.jar`](http://repo1.maven.org/maven2/com/jcabi/jcabi-ssh)
+[`jcabi-ssh.jar`](https://repo1.maven.org/maven2/com/jcabi/jcabi-ssh)
 in your Maven project
 (get its latest version in [Maven Central](http://search.maven.org/)):
 

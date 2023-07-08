@@ -52,7 +52,7 @@ Albert Camus, _La Peste_, 1947. [Buy](http://amzn.to/2xiqJzB).
 
 Jerome Salinger, _The Catcher in the Rye_, 1951. [Buy](http://amzn.to/2xjhPlH).
 
-Ernest Miller Hemingway, _The Old Man and the Sea_, 1952. [Buy](http://amzn.to/2xjcJ95).
+Ernest Miller Hemingway, _The Old Man and the Sea_, 1952. [Buy](https://amzn.to/3JNDPK4).
 
 Anthony Burgess, _A Clockwork Orange_, 1962. [Buy](http://amzn.to/2xOPVPG).
 

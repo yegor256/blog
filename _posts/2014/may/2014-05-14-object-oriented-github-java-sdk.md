@@ -142,7 +142,7 @@ I'm using this annotation in all my projects to ensure my classes are truly immu
 A few days ago we released the latest [version 0.8](https://github.com/jcabi/jcabi-github/releases/tag/jcabi-0.8).
 It is a major release, that included over 1200 commits. It covers the entire GitHub API and is
 supposed to be very stable.
-The library ships as a JAR dependency in [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-github)
+The library ships as a JAR dependency in [Maven Central](https://repo1.maven.org/maven2/com/jcabi/jcabi-github)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
 ```xml

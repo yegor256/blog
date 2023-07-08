@@ -66,13 +66,13 @@ explains this approach perfectly in Chapter 7, pages 169&ndash;186.
 There are a few good tools on the market, which automate DevOps procedures.
 Some of them are open source, you can download
 and install them on your own servers. For example:
-[Jenkins](http://jenkins-ci.org/),
-[Go](http://www.thoughtworks.com/products/go-continuous-delivery), and
-[CruiseControl](http://cruisecontrol.sourceforge.net/).
+[Jenkins](https://jenkins-ci.org/),
+[Go](https://www.thoughtworks.com/products/go-continuous-delivery), and
+[CruiseControl](https://cruisecontrol.sourceforge.net/).
 Some of them are available as a service in cloud, such as:
-[Travis](http://www.travis-ci.org),
-[Shippable](http://www.shippable.com),
-[Wercker](http://wercker.com/), and
+[Travis](https://www.travis-ci.org),
+[Shippable](https://www.shippable.com),
+[Wercker](https://wercker.com/), and
 [many others]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}).
 
 ## Why Continuous Integration Doesn't Work?

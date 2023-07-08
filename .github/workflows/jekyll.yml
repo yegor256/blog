@@ -50,4 +50,4 @@ jobs:
       - run: npm install -g eslint@8.44.0
       - run: gem install fontcustom -v 2.0.0
       - run: bundle update
-      - run: bundle exec jekyll build
+      - run: bundle exec rake
