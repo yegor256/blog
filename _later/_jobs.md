@@ -119,7 +119,7 @@ Even if pay secrecy comes with good intentions, this is its unintended effect: I
 https://www.theatlantic.com/business/archive/2014/07/when-the-boss-says-dont-tell-your-coworkers-how-much-you-get-paid/374467/
 
 We created a formula for how salaries are calculated and added it to our Wiki page for everyone on the team to see
-http://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html
+https://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html
 
 https://www.forbes.com/sites/edwardlawler/2012/09/12/pay-secrecy-why-bother/
 secrecy helps them cover up their bad decision making; and with secrecy, they do not have to correct the problems or defend what they have done.

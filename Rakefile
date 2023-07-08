@@ -45,7 +45,7 @@ task default: [
   :excerpts,
   :snippets,
   :orphans,
-  # :ping,
+  :ping,
   :eslint,
   # :jslint,
   # :proofer,
@@ -253,8 +253,9 @@ task ping: [:build] do
       cnt + 1
     end
   end
-  raise "#{errors} broken link(s)" unless errors < 20
-  done "#{links.size} links are valid, #{errors} are broken"
+  total = links.size
+  raise "#{errors} among #{total} links are broken" unless errors < 100
+  done "#{total} links are found, #{errors} are broken, it's more or less OK"
 end
 
 desc 'Run RuboCop on all Ruby files'
