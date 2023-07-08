@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - master
+concurrency:
+  group: cron
+  cancel-in-progress: true
 jobs:
   jekyll:
     runs-on: ubuntu-22.04
@@ -44,7 +47,7 @@ jobs:
           cmake ../..
           make
           sudo make install
-          cd ..
+          cd ../../..
           rm -rf _tidy-html5
       - run: npm install -g cssshrink@0.0.5
       - run: npm install -g eslint@8.44.0
