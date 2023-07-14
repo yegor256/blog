@@ -813,7 +813,7 @@ Tell me what is not clear, what is missing, and what needs a more detailed
 explanation. But please **don't argue** with my ideas. I won't change
 them based on your review. For example, if I'm saying that a
 static method is a bad thing and you disagree, don't try to
-convince me, as it won't help :) This is my opinion, and this is what the
+convince me, as it won't help. This is my opinion, and this is what the
 book is about. However, I'm sure that my **explanations** and **arguments**
 have many flaws. As an early reviewer, you will help me find them.
 Again, don't argue with **what** I'm preaching, but complain about **how** I do it.

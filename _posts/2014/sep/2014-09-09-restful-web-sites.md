@@ -65,7 +65,7 @@ what problems we will face:
     So, we will have to forget about JSON and stay
     with XML only. For me, this sounds perfectly all right. Others
     don't like XML and prefer to work with JSON only.
-    Never understood them :)
+    Never understood them.
 
  2. XSLT 2.0 is not supported by all browsers. Even XSLT 1.0 is
     only supported by some of them. For example, Internet Explorer 8 doesn't

@@ -231,7 +231,7 @@ interacts with GitHub. Mistakes are less visible. Trust me, we have
 had **many of them** over the 18 months that Rultor has been in public use.
 We've had downtimes, we've had serious logical mistakes, and we've had data corruption.
 But very rarely have these problems become visible online. We merely saw them
-in our server logs. Users didn't see them. Well, mostly :)
+in our server logs. Users didn't see them. Well, mostly.
 
 ## Everything Is Traceable
 

@@ -138,7 +138,7 @@ through pull requests (most of our projects are done in
 [GitHub]({% pst 2014/apr/2014-04-15-github-guidelines %}).)
 
 We enforce this policy not because we don't trust our developers, but simply
-because we don't trust anyone :) Read this article:
+because we don't trust anyone. It's a joke, of course. Read this article:
 [Master Branch Must Be Read-Only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
 ## No Compromises About Code Quality

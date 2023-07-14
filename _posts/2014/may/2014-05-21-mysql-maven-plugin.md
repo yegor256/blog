@@ -220,4 +220,4 @@ with a real MySQL server. I'm also using the
 Maven [plugin](http://www.liquibase.org/documentation/maven/) in
 order to populate an empty server with tables required for the application.
 Nevertheless, that is a story for the
-[next post]({% pst 2014/jul/2014-07-20-liquibase-in-maven %}) :)
+[next post]({% pst 2014/jul/2014-07-20-liquibase-in-maven %}).

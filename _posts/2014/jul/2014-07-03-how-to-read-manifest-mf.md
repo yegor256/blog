@@ -133,5 +133,5 @@ runtime using [`jcabi-manifests`](http://manifests.jcabi.com):
 String url = Manifests.read("Pgsql");
 ```
 
-If you know of any other useful purposes for `MANIFEST.MF`, let me know :)
+If you know of any other useful purposes for `MANIFEST.MF`, let me know.
 

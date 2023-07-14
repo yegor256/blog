@@ -149,4 +149,4 @@ And this is right:
 
 > Hey driver, how much do you charge per mile, and do you have a map?
 
-Hope I've made my point clear :)
+Hope I've made my point clear.

@@ -52,7 +52,7 @@ Keep in mind that besides decreasing your hourly rate, a low overall score may
 affect the number of tasks you receive from us.
 
 The best developers receive most of the new tasks. So, continue reading, follow
-our principles and learn how to earn and enjoy higher rates :)
+our principles and learn how to earn and enjoy higher rates.
 
 ## Fast Delivery
 

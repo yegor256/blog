@@ -114,4 +114,4 @@ element of web design, while HTML is something that assists.
 Tacit takes a different approach. In Tacit, HTML is king while CSS is a supportive
 element that only makes data look better.
 
-Enjoy :)
+Enjoy!

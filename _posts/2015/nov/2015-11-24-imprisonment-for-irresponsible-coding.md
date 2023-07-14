@@ -46,7 +46,7 @@ me against, say, authors of Apache Hadoop?
 They created something that turns part of my life into a nightmare---much
 faster and much more severely than drunk drivers. So, where is
 the police? Why aren't they protecting me, for my tax dollars? Why
-aren't those Java guys in _jail_ yet? :)
+aren't those Java guys in _jail_ yet?
 
 We need a law against irresponsible coding!
 

@@ -116,7 +116,7 @@ the GitHub issue tracker, and post something like that into it
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 
-Enjoy :)
+Enjoy!
 
 BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to

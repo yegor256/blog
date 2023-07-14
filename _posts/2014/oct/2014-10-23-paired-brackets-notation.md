@@ -62,7 +62,7 @@ of the code help you to navigate, if you follow the notation.
 
 Those multiple closing brackets may look strange to you
 at the beginning---but give yourself some time and you will
-get used to them :)
+get used to them.
 
 ## Fluent
 

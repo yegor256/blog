@@ -124,7 +124,7 @@ convenient to copy some of those data and procedures to a new object
 in order to avoid code duplication. But this is not what objects are about. They
 are not dead; they are alive!
 
-Don't _kill_ them with inheritance :)
+Don't _kill_ them with inheritance!
 
 Thus, I think inheritance is bad because it is a _procedural_ technique for _code reuse_.
 It comes as no surprise that it introduces all the problems people have been talking about for years.

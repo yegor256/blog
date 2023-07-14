@@ -314,4 +314,4 @@ public class Department {
 ```
 
 I hope this analysis was convincing enough that you will
-stop `NULL`-ing your code :)
+stop `NULL`-ing your code.

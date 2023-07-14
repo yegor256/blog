@@ -58,7 +58,7 @@ me that they can't reproduce it. They may say that my description of
 a task is too _vague_ and nobody understands it. There may be many issues
 of that kind. My job is to do the best I can in order to *keep the ticket alive*.
 Obviously, if the bug is not reproducible, I'll be forced to close
-the ticket. However, until the ticket is closed, I'm its guardian angel. :)
+the ticket. However, until the ticket is closed, I'm its guardian angel.
 
 {% youtube 7DYr8GYzJ6Q %}
 

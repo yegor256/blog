@@ -21,7 +21,7 @@ noindex: true
 Here is an interview taken by Lisette Sutherland from
 [www.CollaborationSuperpowers.com](http://www.collaborationsuperpowers.com),
 a few hours ago,
-which I enjoyed to give :)
+which I enjoyed to give.
 
 <!--more-->
 
@@ -71,4 +71,4 @@ I answered these questions (approximately):
 
  * How do we find clients (42:29)?
 
-Enjoy :)
+Enjoy!

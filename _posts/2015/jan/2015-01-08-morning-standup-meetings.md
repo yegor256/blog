@@ -96,7 +96,7 @@ and what problems they experienced. You would have seen this information earlier
 when you needed it. You would stay informed about your project affairs
 even outside of the office. Actually, you would not need an office at all,
 but that's a subject for
-[another discussion]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) :)
+[another discussion]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 
 {% quote These morning meetings give the impression that the manager is working hard and well deserves his overblown salary. %}
 

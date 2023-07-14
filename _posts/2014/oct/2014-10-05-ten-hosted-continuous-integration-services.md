@@ -298,7 +298,7 @@ what's going on. Trying to figure it out...
 [**SolanoLabs**](http://www.solanolabs.com) looks rather immature and
 difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
-rather aggressively :)
+rather aggressively.
 
 {% badge /images/2014/10/hostedci.png 64 http://www.hosted-ci.com %}
 

@@ -67,7 +67,7 @@ called [Elegant Objects](/elegant-objects.html), plus
 and founded [a movement for better OOP](https://elegantobjects.org).
 
 I was an **investor** at [SeedRamp.com](http://www.seedramp.com), I've
-made a few investments, but I've got no results yet :)
+made a few investments, but I've got no results yet.
 
 I am a **philanthropist**, I donate a few thousand dollars every year (started in 2015)
 to the best open source project at the time, which I pick myself out of about a hundred in

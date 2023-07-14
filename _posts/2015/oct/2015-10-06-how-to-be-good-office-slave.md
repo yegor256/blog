@@ -33,7 +33,7 @@ there is always an alternative to office slavery. I'm not talking about
 starting your own business. There are people in this world who work
 for someone without doing what is described below. They do exist,
 as well as companies that don't turn their employees into slaves. I really hope
-you will eventually find one. In the meantime, this manual is for you :)
+you will eventually find one. In the meantime, this manual is for you.
 
 <!--more-->
 

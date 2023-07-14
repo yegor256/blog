@@ -133,7 +133,7 @@ Dog dog = new Dog();
 dog.setWeight("23kg");
 ```
 
-Can you imagine this transaction in the real world? :)
+Can you imagine this transaction in the real world?
 
 {% youtube F4N25kZ2zQU %}
 
@@ -160,7 +160,7 @@ Ball ball = dog.give();
 
 Now, we're treating the dog as a real animal, who can take a ball from us
 and can give it back, when we ask. Worth mentioning is that the
-dog can't give `NULL` back. Dogs simply don't know what `NULL` is :)
+dog can't give `NULL` back. Dogs simply don't know what `NULL` is.
 Object thinking immediately eliminates
 [NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 from your code.

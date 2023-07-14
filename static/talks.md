@@ -1171,7 +1171,7 @@ Fail Fast. Into User's Face;
 Even though it's a big (more than 1,000 people) and popular European conference about Java, my
 overall impression was not really positive. The venue was not
 comfortable at all (it was a cinema), there were no tables for food, and we
-were eating lunch in cinema chairs :) The number of talks and tracks was
+were eating lunch in cinema chairs. The number of talks and tracks was
 too many, and the audience was very unfocused. What seriously affected my
 impression was the way listeners left the rooms during the talks;
 check out this [tweet](https://twitter.com/yegor256/status/731113702691352576).

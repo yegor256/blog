@@ -153,4 +153,4 @@ is based on it.
 
 If you have any questions or suggestions, please submit them through [GitHub
 issues](https://github.com/jcabi/jcabi-http/issues).
-As always, bugs are welcome :)
+As always, bugs are welcome.

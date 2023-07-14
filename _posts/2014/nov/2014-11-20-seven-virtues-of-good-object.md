@@ -73,7 +73,7 @@ The object `photo` is constructed by the class `File` (`new` is an entry point t
 Once constructed, the object is acting on its own. It shouldn't know who constructed it
 and how many more brothers and sisters it has in the class. Yes, I mean
 that [reflection](https://en.wikipedia.org/wiki/Reflection_%28computer_programming%29)
-is a terrible idea, but I'll write more about it in one of the next posts :)
+is a terrible idea, but I'll write more about it in one of the next posts.
 Now, let's talk about objects and their best and worst sides.
 
 ## 1. He Exists in Real Life
@@ -207,7 +207,7 @@ A good object should never change his encapsulated
 Remember, an object is a representative of a real-life entity, and this
 entity should stay the same through the entire life of the object. In other
 words, an object should never betray those whom he represents. He should
-never change owners. :)
+never change owners.
 
 Be aware that immutability doesn't mean that all methods always return the same values.
 Instead, a good immutable object is very dynamic.
@@ -329,7 +329,7 @@ The name of an object should tell us what this object **is**, not what
 it **does**, just like we name objects in real life: book instead of
 page aggregator, cup instead of water holder, T-shirt instead of body dresser.
 There are exceptions, of course, like printer or computer, but
-they were invented just recently and by those who didn't read this article. :)
+they were invented just recently and by those who didn't read this article.
 
 For example, these names tell us who their owners are:
 an apple, a file, a series of HTTP requests, a socket, an XML document, a list of users, a regular

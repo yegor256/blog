@@ -31,7 +31,7 @@ This is the best book I've read about object-oriented
 programming, and it totally changed my understanding of it. I would
 recommend you read it a few times. But before reading, try to forget everything
 you've heard about programming in the past. Try to start from scratch. Maybe it will
-work for you too :)
+work for you too.
 
 {% badge /images/2015/04/book-pmp-rita.jpg 96 http://amzn.to/266pAYB %}
 [**PMP Exam Prep, Eighth Edition: Rita's Course in a Book for Passing the PMP Exam**](http://amzn.to/266pAYB)

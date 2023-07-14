@@ -159,4 +159,4 @@ The above snippet produces the following output:
 For me, this appears to be more simple and compact.
 
 As usual, your bug reports and suggestions are always welcomed. Please send to
-[GitHub issues](https://github.com/yegor256/xembly/issues) :)
+[GitHub issues](https://github.com/yegor256/xembly/issues).

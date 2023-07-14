@@ -148,7 +148,7 @@ guarantee, you have to do three things: 1) explain what exactly will be protecte
 2) prove that it doesn't belong to someone else, and 3) pay your dues regularly.
 It's very similar to what gangsters do when they "protect" you,
 but here we're dealing with intellectual property and there is only one
-"gangster" per country :) The concept is pretty much the same.
+"gangster" per country. The concept is pretty much the same.
 
 {% badge /images/2015/04/nolo-patent-it-yourself.jpg 96 http://amzn.to/2c5oky8 %}
 
@@ -193,7 +193,7 @@ By the way, in a few years, you will receive a patent from the USPTO and put it 
 You will then have to pay $480 more. Also, at the end of three years, you will have to pay $800 just
 to keep your guarantee alive. That escalates to $1,800 in seven years and $3,700 in 11 years
 (see the [fee schedule](http://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule)).
-Told you; just like gangsters :)
+Told you; just like gangsters.
 
 To summarize, getting a patent is the best instrument available at the moment
 in developed countries that can protect your business idea.

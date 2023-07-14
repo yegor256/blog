@@ -129,7 +129,7 @@ git ftp push --user ".." \
 ```
 
 Obviously, running this script on my MacBook (without virtualization) would
-cause a lot of trouble. Well, I don't even have `apt-get` here :)
+cause a lot of trouble. Well, I don't even have `apt-get` here.
 
 Thus, the first benefit that Rultor gives you is an isolation
 of your deployment script in its own virtual environment. We have this

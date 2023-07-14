@@ -117,4 +117,4 @@ of his point of view..."&mdash;[@heldev](https://github.com/heldev)
 
 "You're a weird individual"&mdash;[Andriy](https://www.yegor256.com/2017/12/05/data-access-object.html#comment-3650742133)
 
-Ready to add something? :) Just [email](mailto:me@yegor256.com).
+Ready to add something? Just [email](mailto:me@yegor256.com).

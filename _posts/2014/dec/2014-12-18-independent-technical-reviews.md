@@ -240,4 +240,4 @@ understand their business.
 
 If you can offer more suggestions, based on your experience, please post
 them below in the comments, and I'll add them to the list. I'm still
-thinking that I may have forgotten something important :)
+thinking that I may have forgotten something important.

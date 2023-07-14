@@ -76,7 +76,7 @@ for (XML node : xml.nodes("/root/*"))
 Besides XML parsing, printing and XPath traversing,
 [jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %})
 also provides XSD validation
-and XSL transformations. I'll write about those features in the next post :)
+and XSL transformations. I'll write about those features in the next post.
 
 PS. Also, check this:
 [XML/XPath Matchers for Hamcrest]({% pst 2014/apr/2014-04-28-xml-xpath-hamcrest-matchers %}).

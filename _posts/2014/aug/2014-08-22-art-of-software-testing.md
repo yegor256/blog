@@ -108,7 +108,7 @@ software instead of confirming that it works. Because testing is a "sadistic pro
 of breaking things. It is a "destructive process" (p.8).
 
 If you read Chapter2 very carefully and truly understand its
-underlying ideas, it may change your entire life :) This chapter should be a New Testament of
+underlying ideas, it may change your entire life. This chapter should be a New Testament of
 every tester.
 
 ## Test Completion Criteria

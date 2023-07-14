@@ -132,4 +132,4 @@ a team is financially very efficient if its results per dollar is high.
 It doesn't really matter what the value of the second metric is.
 
 P.S. I'm going to show this article to that prospect who ran away. Maybe
-he will come back :)
+he will come back.

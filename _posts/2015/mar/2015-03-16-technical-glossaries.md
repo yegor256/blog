@@ -108,4 +108,4 @@ To conclude, there is no excuse for the absence of a glossary in any
 software project. And it is the personal responsibility of a software
 architect to keep this document (or a chapter) up to date.
 
-Hope I wasn't too obvious above :)
+Hope I wasn't too obvious above.
