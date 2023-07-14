@@ -3,7 +3,7 @@ layout: static
 title: "Testimonials"
 description: |
   This is what my readers think about me and don't
-  hesitate to email me; some of them are rather harsh :)
+  hesitate to email me; some of them are rather harsh.
 permalink: testimonials.html
 keywords:
   - blog

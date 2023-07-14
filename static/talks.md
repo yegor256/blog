@@ -356,7 +356,7 @@ I'm not for the first time at this event and it seems to be pretty stable
 at its quality. It is, as they claim, not-for-profit. It happens in a cinema,
 which affects the quality, I believe. The screen is huge, the light is dim,
 the sound is not so perfect. Also, the focus of the event is not clear---it is
-just about tech in general? Anyway, I keep coming because I like the city :)
+just about tech in general? Anyway, I keep coming because I like the city.
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B-</aside>
@@ -1271,7 +1271,7 @@ It was a huge event with, I'd guess, more than 1,500 attendees. Even for my pres
 there were 150 people in the room. The location, the food, the logistics&mdash;everything was good.
 The only negative part was a total lack of focus on the
 content. Speakers were talking about everything. I didn't even understand
-why my presentation was accepted there :)
+why my presentation was accepted there.
 
 <div class="talk-event">&nbsp;</div>
 <aside class="venue-rate green">B</aside>

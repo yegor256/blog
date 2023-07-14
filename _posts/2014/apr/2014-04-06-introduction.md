@@ -4,7 +4,7 @@ title: "First Post"
 date: 2014-04-06
 place: Xemxija, Malta
 description: |
-  First post in my awesome blog :) The post doesn't contain
+  First post in my awesome blog. The post doesn't contain
   any valuable information and is just an anchor.
 keywords:
   - yegor bugayenko
@@ -24,7 +24,7 @@ quality, and will write solely about my ideas and
 views on it.
 
 Anyway, welcome to my new blog. Together, let's see how
-this works out! :)
+this works out!
 
 <!--more-->
 

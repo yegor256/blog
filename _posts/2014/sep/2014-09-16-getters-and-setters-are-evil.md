@@ -212,7 +212,7 @@ truly understand and appreciate the beautiful world of true objects.
 
 PPS. Forgot to say, yes, dependency injection via setters is also
 a terrible anti-pattern. About it, in
-[one of the next posts]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}) :)
+[one of the next posts]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
 
 PPPS. Here is what I'm suggesting to use instead of getters:
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}).
