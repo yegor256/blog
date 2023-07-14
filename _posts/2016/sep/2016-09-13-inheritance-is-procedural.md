@@ -39,7 +39,7 @@ I interviewed [David West](http://davewest.us/)
 a few weeks ago, and he said that inheritance should not exist in
 object-oriented programming at all ([full video](https://www.youtube.com/watch?v=s-hdZZzMCac)).
 Maybe Dr. West is right and we should totally forget `extends` keyword in Java,
-for example.
+for example?
 
 <!--more-->
 
