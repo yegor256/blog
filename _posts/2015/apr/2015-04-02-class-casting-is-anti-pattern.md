@@ -35,8 +35,8 @@ of it, for example
 [`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111)):
 
 ```java
-public final class Foo {
-  public int sizeOf(Iterable items) {
+class Foo {
+  int sizeOf(Iterable items) {
     int size = 0;
     if (items instanceof Collection) {
       size = Collection.class.cast(items).size();
@@ -78,15 +78,15 @@ What is the alternative? There are a few, but the most obvious
 is method overloading (not available in semi-OOP languages like Ruby or PHP):
 
 ```java
-public final class Foo {
-  public int sizeOf(Iterable items) {
+class Foo {
+  int sizeOf(Iterable items) {
     int size = 0;
     for (Object item : items) {
       ++size;
     }
     return size;
   }
-  public int sizeOf(Collection items) {
+  int sizeOf(Collection items) {
     return items.size();
   }
 }
