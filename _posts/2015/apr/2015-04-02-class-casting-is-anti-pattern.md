@@ -65,12 +65,12 @@ its signature says nothing about this dependency. This won't happen with
 obviously, since it is part of the Java SDK, but with custom
 classes, this may and will happen.
 
-The second problem is an inevitably _growing complexity_ of method `sizeOf()`. The
+The second problem is an inevitably _growing complexity_ of the `sizeOf()` method. The
 more special types it has to treat differently, the more complex it will become.
-This if/then [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
+This `if/then` [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
 is inevitable, since it has to check all possible
 types and give them special treatment. Such complexity is a result
-of a violation of the single responsibility principle. The method is not
+of a violation of the [single responsibility principle]({% pst 2017/dec/2017-12-19-srp-is-hoax %}). The method is not
 only calculating the size of `Iterable` but is also performing type
 casting and forking based on that casting.
 
