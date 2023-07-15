@@ -71,7 +71,7 @@ This `if/then` [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
 is inevitable, since it has to check all possible
 types and give them special treatment. Such complexity is a result
 of a violation of the [single responsibility principle]({% pst 2017/dec/2017-12-19-srp-is-hoax %}). The method is not
-only calculating the size of `Iterable` but is also performing type
+only calculating the size of [`Iterable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) but is also performing type
 casting and forking based on that casting.
 
 What is the alternative? There are a few, but the most obvious
@@ -96,7 +96,7 @@ Isn't that more elegant?
 
 Philosophically speaking, type casting is discrimination  against the object
 that comes into the method. The object complies with the contract provided by the
-method signature. It implements the `Iterable` interface, which
+method signature. It implements the [`Iterable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) interface, which
 [is a contract]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 and it expects equal treatment with all other objects that come into
 the same method. But the method discriminates objects by their types.
