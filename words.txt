@@ -512,6 +512,7 @@ assertionerror
 assertions
 asserts
 assertthat
+assess
 assessment
 asset
 assets
@@ -1418,6 +1419,7 @@ clients
 cliff
 climate
 clipper
+clock-watchers
 clockwise
 clone
 close
@@ -1488,6 +1490,7 @@ code-rich
 code-to-test
 code-writing
 codeahead
+codebase
 codebases
 codec
 codeforces
@@ -1498,6 +1501,7 @@ codeship
 codex
 codexia
 coding
+coding-savvy
 codota
 coen
 coffee
@@ -1570,6 +1574,7 @@ commitment
 commits
 committed
 committee
+committees
 committer
 committers
 committing
@@ -2093,6 +2098,7 @@ danisalukaev
 DAO
 DAOs
 dare
+dariusz
 dark
 dashboard
 data
@@ -2352,6 +2358,7 @@ determine
 determining
 deterministic
 detours
+detrimental
 DEV
 develop
 developed
@@ -2880,6 +2887,7 @@ enforces
 enforcing
 engage
 engaged
+engagement
 engaging
 engine
 engineer
@@ -2967,6 +2975,7 @@ ernest
 error
 error-proneness
 errors
+es
 escalate
 escalated
 escalates
@@ -2980,6 +2989,7 @@ essence
 essential
 essentially
 establish
+establishing
 estate
 estimate
 estimated
@@ -3490,6 +3500,7 @@ forname
 forth
 forthcoming
 fortran
+fortunately
 fortune
 forty
 forty-foot
@@ -3625,6 +3636,7 @@ gates
 gateway
 gather
 gathered
+gauge
 gave
 gays
 gb
@@ -4218,6 +4230,7 @@ imaginative
 imagine
 imbalance
 imitate
+immaterial
 immature
 immediate
 immediately
@@ -4694,6 +4707,7 @@ jeffbarr
 jefferson
 jeffrey
 jekyll
+jemielniak
 jenkins
 jeopardize
 JEP
@@ -7354,6 +7368,7 @@ remainder
 remained
 remaining
 remains
+remarked
 remember
 remembered
 remembers
@@ -7421,6 +7436,7 @@ reproduces
 reproducibility
 reproducible
 reproducing
+repurpose
 reputable
 reputation
 reputations
@@ -7863,6 +7879,7 @@ seen
 sees
 segregate
 segregation
+seize
 sel
 seldom
 SELECT
@@ -8139,6 +8156,7 @@ site
 sites
 sits
 sitting
+situate
 situation
 situations
 six
@@ -8450,6 +8468,7 @@ stapler
 star
 starbucks
 stare
+staring
 stars
 start
 started
@@ -9363,6 +9382,7 @@ unevenly
 unexpected
 unexplained
 unfair
+unfeasible
 unfinished
 unfixable
 unfocused
@@ -9434,6 +9454,7 @@ unstructured
 unsubscribe
 unsuccessful
 untestable
+unthinkable
 until
 untraceable
 untrustworthy
@@ -9463,6 +9484,7 @@ upper
 upsets
 upside
 uptime
+upvote
 upvotes
 upwork
 urauskas
@@ -9836,6 +9858,7 @@ wishes
 with
 within
 without
+wizardry
 woke
 wolves
 woman
@@ -9848,6 +9871,7 @@ wonder
 wonderful
 wondering
 wood
+woody
 word
 word-counting
 wordpress

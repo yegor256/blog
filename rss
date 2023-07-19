@@ -1,7 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-07-03T13:59:30+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">On the Layout of Tests</title><link href="https://www.yegor256.com/2023/01/19/layout-of-tests.html" rel="alternate" type="text/html" title="On the Layout of Tests" /><published>2023-01-19T00:00:00+00:00</published><updated>2023-01-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/01/19/layout-of-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/01/19/layout-of-tests.html"><![CDATA[<p>I don’t know what programming language you use, but my experience 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-07-19T09:56:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Just Show Up</title><link href="https://www.yegor256.com/2023/07/19/just-show-up.html" rel="alternate" type="text/html" title="Just Show Up" /><published>2023-07-19T00:00:00+00:00</published><updated>2023-07-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/07/19/just-show-up</id><content type="html" xml:base="https://www.yegor256.com/2023/07/19/just-show-up.html"><![CDATA[<p>According to a <a href="https://www.emerald.com/insight/content/doi/10.1108/09534810710760045/full/html">study</a> 
+conducted by <a href="https://www.jemielniak.org/">Dariusz Jemielniak</a> in 2007, the majority of programmers perceive 
+their own managers as highly incompetent. We don’t expect our bosses to be 
+coding-savvy—this level of technical competence is <a href="/2016/05/24/who-is-project-manager.html">not a requirement</a>
+for an average manager. Additionally, we don’t expect them to excel in 
+Gantt Chart wizardry or adhere strictly to 
+<a href="/2019/05/14/cause-risk-effect.html">risk management protocols</a>—these 
+are management practices that are not commonly observed in software teams today.
+Instead, what we do expect from them is the ability to gauge our productivity: 
+recognizing and rewarding the best performers while 
+<a href="/2015/09/16/how-to-fire-someone-right.html">taking action</a> against those who are less motivated. 
+Unfortunately, this is a management competence that they lack… or perhaps, 
+<a href="/2021/03/03/imposters-to-win.html">fortunately</a>.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Les côtelettes (2003) by Bertrand Blier" src="/images/2023/07/les-cotelettes.jpg" longdesc="#de422d8c" /><figcaption id="de422d8c">Les côtelettes (2003) by Bertrand Blier</figcaption></figure>
+
+<p>I believe that the ability to measure results objectively is what makes a competent manager. The
+recent desire of large tech companies to restrict and/or entirely prohibit remote work has
+highlighted the lack of this ability in the industry. Indeed, a manager who knows how to evaluate
+the work of the team and its individual members wouldn’t worry about whether they are co-located in
+an office or working remotely. It simply <a href="/2017/05/02/remote-slaves.html">wouldn’t matter</a>! 
+If programmers know that <a href="/2014/09/24/why-monetary-awards-dont-work.html">rewards</a> will be
+given for deliverables and that penalties will occur in their absence, they can find the best place
+to create these deliverables, be it at home, in the office, or at a coffee shop (I’m one of them).
+However, if programmers don’t have such a straightforward 
+“<a href="/2018/10/09/can-you-control-us.html">reward and punishment</a>” system, they can
+become lazy and demotivated. To get back on track, they need a manager, an office, and daily
+<a href="/2015/07/21/hourly-pay-modern-slavery.html">supervision</a>.</p>
+
+<p>Google recently <a href="https://www.cnbc.com/2023/06/08/google-to-crack-down-on-hybrid-work-asks-remote-workers-to-reconsider.html">said</a>
+that “working together in the same room makes a positive difference”…
+for Google’s <del>incompetent</del> managers, I guess. 
+They may judge productivity by the amount of time their coders spend staring at monitors. 
+They don’t need to concern themselves with establishing an objective performance evaluation system. 
+They don’t need to count the <a href="/2014/04/11/cost-of-loc.html">lines of code</a> 
+(it’s <a href="https://www.youtube.com/watch?v=9Zen0B0SNwI">nonsense</a>, because Bill Gates said so!). 
+They don’t need to break down the scope into tasks and then assess their complexity 
+(that’s unfeasible, since we programmers are <a href="/2016/09/27/command-control-innovate.html">artists</a>!). 
+They don’t need to risk damaging 
+<a href="/2015/03/02/team-morale-myths-and-reality.html">morale</a> 
+and creativity by introducing the concept of <a href="https://www.youtube.com/watch?v=yZcNHZ_FJco">productivity evaluation</a> 
+(that’s unthinkable!). 
+They can simply reward the most disciplined clock-watchers and call it a management.</p>
+
+<p>On the other hand, perhaps it’s not entirely detrimental for some of us. If the management 
+is <a href="/2017/08/01/how-to-manage-a-manager.html">incompetent</a> 
+enough to “make office attendance part of performance reviews” 
+(as <a href="https://arstechnica.com/google/2023/06/google-makes-office-attendance-part-of-performance-reviews/">Google just has</a>), 
+let’s play along and provide them with what they want: let’s attend! 
+Let’s display our <a href="/2015/10/06/how-to-be-good-office-slave.html">loyalty</a>, 
+engagement, and <a href="https://www.yegor256.com/pdf/2019/enthusiasm.pdf">enthusiasm</a>, 
+rather than our <a href="/2014/11/14/hits-of-code.html">lines of code</a> 
+and <a href="/2018/07/24/bugs-or-pull-requests.html">pull requests</a>. 
+Let’s focus on fitting into the group rather than contributing to the codebase.</p>
+
+<p>Woody Allen <a href="https://www.creativelive.com/blog/the-importance-of-showing-up/">once remarked</a> that “80 percent of success
+is showing up.” I would propose that we repurpose this as career advice for us programmers: Just Show Up. This mantra
+applies not only to office attendance, but can also be applied to many other activities throughout your 
+<a href="/2017/01/24/career-advice.html">career development</a>. 
+You should be where your boss(es) can physically see you. No, not your work—that’s immaterial. They need
+to see you in person. Here’s what you can do to truly “Just Show Up”:</p>
+
+<ul>
+  <li>Participate in all <a href="/2015/07/13/meetings-are-legalized-robbery.html">meetings</a>;</li>
+  <li>Attend all events, workshops, and team-building activities;</li>
+  <li>Situate yourself next to the boss;</li>
+  <li>Become a member of all committees;</li>
+  <li>Seize every opportunity to <a href="/2020/12/29/metric-for-emotions.html">ask questions</a>;</li>
+  <li>Be vocal in the office to ensure that your boss hears you;</li>
+  <li>Submit proposals whenever they’re requested;</li>
+  <li>Respond to all emails;</li>
+  <li>Upvote every chat message.</li>
+</ul>
+
+<p>This strategy might not necessarily make you a better programmer, 
+but it will certainly <a href="/2016/01/05/how-to-punish-employees.html">convince</a> 
+your boss that you are one.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="mood" /><category term="career" /><summary type="html"><![CDATA[Since many managers may not have the expertise to assess our technical work, the best strategy for seeming a top performer is to be visible to your manager often.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/07/les-cotelettes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/07/les-cotelettes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">On the Layout of Tests</title><link href="https://www.yegor256.com/2023/01/19/layout-of-tests.html" rel="alternate" type="text/html" title="On the Layout of Tests" /><published>2023-01-19T00:00:00+00:00</published><updated>2023-01-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/01/19/layout-of-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/01/19/layout-of-tests.html"><![CDATA[<p>I don’t know what programming language you use, but my experience 
 of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells 
-me that the principle, which I will try to convince you to adhere to — 
-is universal for all languages. It’s about the naming of test files. 
+me that the principle, which I will try to convince you to adhere 
+to—is universal for all languages. It’s about the naming of test files. 
 It may look to you like a question of low importance, but let me try 
 to demonstrate that it’s not. How do you name your files with test classes? How many 
 of them do you create in the src/test/java directory? Where do you place
@@ -14,8 +92,8 @@ So let’s try to find a better answer.</p>
 <figure class="jb_picture"><img itemprop="image" alt="Мимино (1977) by Георгий Данелия" src="/images/2022/11/mimino.jpg" longdesc="#06bd8b4f" /><figcaption id="06bd8b4f">Мимино (1977) by Георгий Данелия</figcaption></figure>
 
 <p>The primary purpose of my unit tests is to help me code. They are the 
-<a href="/2022/07/05/safety-net.html">safety net</a> — 
-they catch me when I make a mistake. For example, let’s say I go back and edit a few files that I 
+<a href="/2022/07/05/safety-net.html">safety net</a>—they 
+catch me when I make a mistake. For example, let’s say I go back and edit a few files that I 
 edited a few years ago and, of course, I do it wrong this time. Then, I run all 500 unit tests
 in the project, and … ten of them turn red. Pay attention, I don’t say “fail” because, 
 just like a safety net around a building, failed tests are the tests 
@@ -24,7 +102,7 @@ Thus, 490 of them <em>failed</em>, but ten of them <em>succeeded</em>.</p>
 
 <h2 id="assertions">Assertions</h2>
 
-<p>Next, I scratch my head and think — what exactly did I do wrong? Which 
+<p>Next, I scratch my head and think—what exactly did I do wrong? Which 
 file did I break? I just changed a few dozen code lines. Where exactly was the 
 mistake? In order to find out, I read the output of the tests. I expect 
 the messages they print to the console to be descriptive enough to 
@@ -52,7 +130,7 @@ For such a class, this Java/JUnit5 test would be very bad:</p>
 </code></pre></div></div>
 
 <p>While this test is much better, thanks to <a href="https://www.hamcrest.org">Hamcrest</a>
-assertions (how to name test methods — is a separate
+assertions (how to name test methods—is a separate
 story explained in detail <a href="https://stackoverflow.com/questions/155436/">here</a>):</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">hamcrest</span><span class="o">.</span><span class="na">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
@@ -79,15 +157,15 @@ what the problem is.</p>
 
 <p>Descriptive messages will help me understand what the problem is.
 However, will I know <em>where</em> the problem is? In which Java class? Not really.
-Is it in <code class="highlighter-rouge">Phrases.java,</code> or maybe in <code class="highlighter-rouge">Greetings.java,</code> which is returned by <code class="highlighter-rouge">Phrases.greetings()</code>?
+Is it in <code class="language-plaintext highlighter-rouge">Phrases.java,</code> or maybe in <code class="language-plaintext highlighter-rouge">Greetings.java,</code> which is returned by <code class="language-plaintext highlighter-rouge">Phrases.greetings()</code>?
 I can only get this information from the <em>name</em> of the test class.
-If it’s called <code class="highlighter-rouge">PhrasesTest.java</code> — all bugs that it catches <em>are most probably</em>
-located in <code class="highlighter-rouge">Phrases.java.</code> If it’s called <code class="highlighter-rouge">GreetingsTest.java</code> — … well, you get the idea.</p>
+If it’s called <code class="language-plaintext highlighter-rouge">PhrasesTest.java</code>—all bugs that it catches <em>are most probably</em>
+located in <code class="language-plaintext highlighter-rouge">Phrases.java.</code> If it’s called <code class="language-plaintext highlighter-rouge">GreetingsTest.java</code>—… well, you get the idea.</p>
 
 <p>My point is that the name of a test class is not just a name. It’s an instruction
 for a wondering programmer:
 “Go look into the source file, the name of which you can derive from my name,
-removing the <code class="highlighter-rouge">Test</code> suffix.” If I try to follow this instruction and
+removing the <code class="language-plaintext highlighter-rouge">Test</code> suffix.” If I try to follow this instruction and
 it leads me nowhere, I get very frustrated, especially if the project
 is not mine. I can’t get the required information from anywhere else.
 The name of the test class is my last hope.</p>
@@ -127,12 +205,12 @@ at all, but bear with me for a moment!):</p>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Here, in private method <code class="highlighter-rouge">prepare(),</code> I have a convenient builder
-of the object of class <code class="highlighter-rouge">Phrases.</code> This builder may be beneficial
-for other tests, such as <code class="highlighter-rouge">GreetingsTest.</code> I don’t want
-to copy it from <code class="highlighter-rouge">PhrasesTest</code> to <code class="highlighter-rouge">GreetingsTest.</code> Instead, I
+<p>Here, in private method <code class="language-plaintext highlighter-rouge">prepare(),</code> I have a convenient builder
+of the object of class <code class="language-plaintext highlighter-rouge">Phrases.</code> This builder may be beneficial
+for other tests, such as <code class="language-plaintext highlighter-rouge">GreetingsTest.</code> I don’t want
+to copy it from <code class="language-plaintext highlighter-rouge">PhrasesTest</code> to <code class="language-plaintext highlighter-rouge">GreetingsTest.</code> Instead, I
 want to put it somewhere where it can be reused. This would
-be the right place for it (<code class="highlighter-rouge">foo</code> is the Java
+be the right place for it (<code class="language-plaintext highlighter-rouge">foo</code> is the Java
 package that all our classes belong to):</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/
@@ -150,13 +228,13 @@ package that all our classes belong to):</p>
         GreetingsTest.java
 </code></pre></div></div>
 
-<p>Static method <code class="highlighter-rouge">FooUtils.prepare()</code> now sits in the <code class="highlighter-rouge">FooUtils</code> utility
+<p>Static method <code class="language-plaintext highlighter-rouge">FooUtils.prepare()</code> now sits in the <code class="language-plaintext highlighter-rouge">FooUtils</code> utility
 class (a terrible <a href="/2014/05/05/oop-alternative-to-utility-classes.html">anti-pattern</a>!),
-which is in the package <code class="highlighter-rouge">foo.support</code>. But, pay attention, not in the <code class="highlighter-rouge">foo</code> package, but
+which is in the package <code class="language-plaintext highlighter-rouge">foo.support</code>. But, pay attention, not in the <code class="language-plaintext highlighter-rouge">foo</code> package, but
 in the sub-package that doesn’t have a counterpart in the live code block:
-there is no directory <code class="highlighter-rouge">src/main/java/foo/support.</code> This is a clear message
+there is no directory <code class="language-plaintext highlighter-rouge">src/main/java/foo/support.</code> This is a clear message
 to a programmer who would meet this repository in a few years: all classes
-that stay in <code class="highlighter-rouge">foo.support</code> belong to the test pipeline only and are not tests by
+that stay in <code class="language-plaintext highlighter-rouge">foo.support</code> belong to the test pipeline only and are not tests by
 themselves.</p>
 
 <h2 id="test-prerequisites-right-way">Test Prerequisites (Right Way)</h2>
@@ -206,11 +284,11 @@ which are instantiated by extensions, for example:</p>
 
 <p>Now, the test and its prerequisites stay in two different places and are not
 as tightly coupled as they were before. Moreover, the prerequisites may be
-easily reused. The magic <code class="highlighter-rouge">@ExtendWith</code> annotation may be attached to other
-tests. The implementation of <code class="highlighter-rouge">PhrasesExtension</code> may become smarter: it
+easily reused. The magic <code class="language-plaintext highlighter-rouge">@ExtendWith</code> annotation may be attached to other
+tests. The implementation of <code class="language-plaintext highlighter-rouge">PhrasesExtension</code> may become smarter: it
 may start paying attention not only to the type of argument of a test method
 but also to a custom annotation attached to it (this is how
-<a href="https://junit.org/junit5/docs/5.4.1/api/org/junit/jupiter/api/io/TempDir.html"><code class="highlighter-rouge">@TempDir</code></a> works).</p>
+<a href="https://junit.org/junit5/docs/5.4.1/api/org/junit/jupiter/api/io/TempDir.html"><code class="language-plaintext highlighter-rouge">@TempDir</code></a> works).</p>
 
 <h2 id="fake-objects-best-way">Fake Objects (Best Way)</h2>
 
@@ -270,7 +348,7 @@ but in this case, it’s OK):</p>
         GreetingsTest.java
 </code></pre></div></div>
 
-<p>Pay attention to the test <code class="highlighter-rouge">FactoryOfPhrasesTest.</code> It tests the “fake” object <code class="highlighter-rouge">FactoryOfPhrases,</code>
+<p>Pay attention to the test <code class="language-plaintext highlighter-rouge">FactoryOfPhrasesTest.</code> It tests the “fake” object <code class="language-plaintext highlighter-rouge">FactoryOfPhrases,</code>
 which is part of the live classes collection. The factory of phases is shipped together
 with all other classes. Therefore, it can be used by other projects and not only for test
 purposes.</p>
@@ -281,11 +359,11 @@ that is a prerequisite must be a “fake” object.</p>
 
 <h2 id="integration-tests">Integration Tests</h2>
 
-<p>In the Maven world, there are unit test classes (<code class="highlighter-rouge">Test</code> suffix),
-and integration test classes (<code class="highlighter-rouge">ITCase</code> suffix).
-The difference is huge. While both are compiled at the <code class="highlighter-rouge">test-compile</code> phase
-by the same <code class="highlighter-rouge">maven-compiler-plugin,</code> they are not executed together.
-Instead, unit tests are executed at the <code class="highlighter-rouge">test</code> phase. The build fails immediately if
+<p>In the Maven world, there are unit test classes (<code class="language-plaintext highlighter-rouge">Test</code> suffix),
+and integration test classes (<code class="language-plaintext highlighter-rouge">ITCase</code> suffix).
+The difference is huge. While both are compiled at the <code class="language-plaintext highlighter-rouge">test-compile</code> phase
+by the same <code class="language-plaintext highlighter-rouge">maven-compiler-plugin,</code> they are not executed together.
+Instead, unit tests are executed at the <code class="language-plaintext highlighter-rouge">test</code> phase. The build fails immediately if
 any unit test is red. It’s a pretty straightforward approach, which
 is similar to other build automation engines.</p>
 
@@ -298,16 +376,16 @@ verify
 </code></pre></div></div>
 
 <p>First, the resources needed for integration testing are acquired
-at the <code class="highlighter-rouge">pre-integration-test</code> phase. For example, a test instance of MySQL 
-database may be started. Then, the tests with <code class="highlighter-rouge">ITCase</code> are executed at the ‘integration-test’ phase. The 
+at the <code class="language-plaintext highlighter-rouge">pre-integration-test</code> phase. For example, a test instance of MySQL 
+database may be started. Then, the tests with <code class="language-plaintext highlighter-rouge">ITCase</code> are executed at the ‘integration-test’ phase. The 
 result of their execution is ignored for now but only recorded in a file. 
-Then, the resources are released at the <code class="highlighter-rouge">post-integration-test</code> phase.
-For example, the MySQL server is shut down. Finally, at the <code class="highlighter-rouge">verify</code> phase, 
+Then, the resources are released at the <code class="language-plaintext highlighter-rouge">post-integration-test</code> phase.
+For example, the MySQL server is shut down. Finally, at the <code class="language-plaintext highlighter-rouge">verify</code> phase, 
 the results of the tests are verified, and the build fails if 
 some of them are not green.</p>
 
-<p>I keep <code class="highlighter-rouge">ITCase</code> files together with <code class="highlighter-rouge">Test</code> files only when they are
-integration tests for specific live classes. Very often, they are not — that’s why
+<p>I keep <code class="language-plaintext highlighter-rouge">ITCase</code> files together with <code class="language-plaintext highlighter-rouge">Test</code> files only when they are
+integration tests for specific live classes. Very often, they are not—that’s why
 they are integration tests. They may integrate and test a number of classes together.
 In this case, I put them in a separate package and gave them arbitrary names
 that don’t match with the names of live classes:</p>
@@ -328,36 +406,36 @@ that don’t match with the names of live classes:</p>
         GreetingsITCase.java
 </code></pre></div></div>
 
-<p>Here, <code class="highlighter-rouge">GreetingsITCase.java</code> is an integration test for <code class="highlighter-rouge">Greetings.java,</code>
-while <code class="highlighter-rouge">SimpleGuessingITCase.java</code> is an integration test for no particular
-class. Obviously, the package <code class="highlighter-rouge">foo.it</code> only exists in tests and is not
-present in <code class="highlighter-rouge">src/main/java.</code></p>
+<p>Here, <code class="language-plaintext highlighter-rouge">GreetingsITCase.java</code> is an integration test for <code class="language-plaintext highlighter-rouge">Greetings.java,</code>
+while <code class="language-plaintext highlighter-rouge">SimpleGuessingITCase.java</code> is an integration test for no particular
+class. Obviously, the package <code class="language-plaintext highlighter-rouge">foo.it</code> only exists in tests and is not
+present in <code class="language-plaintext highlighter-rouge">src/main/java.</code></p>
 
 <p><br /></p>
 
 <p>Thus, there is the first rule:
 a test class may only have methods
-annotated with <code class="highlighter-rouge">@Test</code> (in the case of Java).</p>
+annotated with <code class="language-plaintext highlighter-rouge">@Test</code> (in the case of Java).</p>
 
 <p>Then, there is the second rule:
-a package with tests may only have classes with <code class="highlighter-rouge">Test</code> or <code class="highlighter-rouge">ITCase</code> suffices
+a package with tests may only have classes with <code class="language-plaintext highlighter-rouge">Test</code> or <code class="language-plaintext highlighter-rouge">ITCase</code> suffices
 that map one-to-one to live classes and nothing else.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tests" /><summary type="html"><![CDATA[What is the right way to keep test classes in a repository? There is no single canonical approach, but a few principles may help you keep test files in order.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/11/mimino.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/11/mimino.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Smaller Try-Blocks Are Better</title><link href="https://www.yegor256.com/2022/09/08/smaller-try-blocks.html" rel="alternate" type="text/html" title="Smaller Try-Blocks Are Better" /><published>2022-09-08T00:00:00+00:00</published><updated>2022-09-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/09/08/smaller-try-blocks</id><content type="html" xml:base="https://www.yegor256.com/2022/09/08/smaller-try-blocks.html"><![CDATA[<p>It often happens, <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">especially</a>
 in Java, that a few places in the method
 are potential exception originators. Usually, we make a large method-size
-<code class="highlighter-rouge">try</code> block with a single <code class="highlighter-rouge">catch</code> at the bottom. We catch all
+<code class="language-plaintext highlighter-rouge">try</code> block with a single <code class="language-plaintext highlighter-rouge">catch</code> at the bottom. We catch all
 the exceptions, usually even using
 <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping</a>.
 This helps us minimize the noise, which is the exception catching.
-However, such large <code class="highlighter-rouge">try</code> blocks jeopardize maintainability: we are unable
+However, such large <code class="language-plaintext highlighter-rouge">try</code> blocks jeopardize maintainability: we are unable
 to provide proper <a href="/2015/12/01/rethrow-exceptions.html">error context</a>
-inside <code class="highlighter-rouge">catch</code> blocks.</p>
+inside <code class="language-plaintext highlighter-rouge">catch</code> blocks.</p>
 
 <!--more-->
 
 <figure class="jb_picture"><img itemprop="image" alt="The Rum Diary (2011) by Bruce Robinson" src="/images/2022/09/the-rum-diary.jpg" longdesc="#3bd6c008" /><figcaption id="3bd6c008">The Rum Diary (2011) by Bruce Robinson</figcaption></figure>
 
 <p>What do you think is wrong with this Java method
-(aside from using <code class="highlighter-rouge">System.out</code> instead of an injected dependency)?:</p>
+(aside from using <code class="language-plaintext highlighter-rouge">System.out</code> instead of an injected dependency)?:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
@@ -377,8 +455,8 @@ inside <code class="highlighter-rouge">catch</code> blocks.</p>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>I believe that its try/catch block is too big. The <code class="highlighter-rouge">IOException</code> may only be
-thrown by the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-"><code class="highlighter-rouge">readAllLines</code></a>
+<p>I believe that its try/catch block is too big. The <code class="language-plaintext highlighter-rouge">IOException</code> may only be
+thrown by the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-"><code class="language-plaintext highlighter-rouge">readAllLines</code></a>
 static method, but the block covers a few other method calls
 and statements. This code would be better:</p>
 
@@ -432,9 +510,9 @@ In Java we do this more often than in other languages, because it has
 Sometimes we must catch and rethrow a few exceptions that originated
 from different places in a method.
 Java 7 introduced <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping</a>
-of different types of exceptions in a single <code class="highlighter-rouge">catch</code> block.
-But even without the grouping, it is possible to just catch <code class="highlighter-rouge">IOException</code> or
-even <code class="highlighter-rouge">Exception</code> and provide a single <code class="highlighter-rouge">catch</code> block for all types and all
+of different types of exceptions in a single <code class="language-plaintext highlighter-rouge">catch</code> block.
+But even without the grouping, it is possible to just catch <code class="language-plaintext highlighter-rouge">IOException</code> or
+even <code class="language-plaintext highlighter-rouge">Exception</code> and provide a single <code class="language-plaintext highlighter-rouge">catch</code> block for all types and all
 originators (methods that throw).
 Recently I realized that this is a bad practice. Here is why.</p>
 
@@ -479,12 +557,12 @@ as <a href="/2015/12/01/rethrow-exceptions.html">was suggested</a> earlier:</p>
 
 <ul>
   <li>By the <a href="/2015/05/07/ctors-must-be-code-free.html">constructor</a>
-of <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html"><code class="highlighter-rouge">java.net.URL</code></a></li>
-  <li>By the method <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html#openStream%28%29"><code class="highlighter-rouge">openStream()</code></a></li>
-  <li>By the method <a href="https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#toByteArray-java.io.InputStream-"><code class="highlighter-rouge">toByteArray</code></a></li>
+of <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html"><code class="language-plaintext highlighter-rouge">java.net.URL</code></a></li>
+  <li>By the method <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html#openStream%28%29"><code class="language-plaintext highlighter-rouge">openStream()</code></a></li>
+  <li>By the method <a href="https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#toByteArray-java.io.InputStream-"><code class="language-plaintext highlighter-rouge">toByteArray</code></a></li>
 </ul>
 
-<p>No matter who throws, we catch it in the same <code class="highlighter-rouge">catch</code> block and rethrow
+<p>No matter who throws, we catch it in the same <code class="language-plaintext highlighter-rouge">catch</code> block and rethrow
 with the same message. I believe that this is bad because the <a href="/2015/12/01/rethrow-exceptions.html">context</a>
 of the error provided by rethrowing is less focused on the issue that occurred.</p>
 
@@ -533,17 +611,17 @@ but that’s a topic for a separate discussion):</p>
 
 <p>This code is much longer, but at the same time more convenient to
 <a href="/2016/02/09/are-you-still-debugging.html">debug</a>,
-test, and use in production mode. The <code class="highlighter-rouge">catch</code> block
+test, and use in production mode. The <code class="language-plaintext highlighter-rouge">catch</code> block
 is able to explain the situation better and provide better
 context in the rethrown exception, because it deals only with
 a single case.</p>
 
 <p>Thus, the rule I’m suggesting: if an exception is caught,
-each originator must have its own <code class="highlighter-rouge">catch</code> block.</p>
+each originator must have its own <code class="language-plaintext highlighter-rouge">catch</code> block.</p>
 
 <p>Obviously, I believe that
 <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping exception types</a>
-in a single <code class="highlighter-rouge">catch</code> block is bad practice.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Catching multiple exceptions thrown by different originators in a single "catch" block is a bad practice because it reduces the ability to provide context of the problem that occurred.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/elephant.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/elephant.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Research Paper Simple Template</title><link href="https://www.yegor256.com/2022/08/24/research-paper-template.html" rel="alternate" type="text/html" title="Research Paper Simple Template" /><published>2022-08-24T00:00:00+00:00</published><updated>2022-08-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/24/research-paper-template</id><content type="html" xml:base="https://www.yegor256.com/2022/08/24/research-paper-template.html"><![CDATA[<p>My <a href="http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98">first academic paper</a>
+in a single <code class="language-plaintext highlighter-rouge">catch</code> block is bad practice.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Catching multiple exceptions thrown by different originators in a single "catch" block is a bad practice because it reduces the ability to provide context of the problem that occurred.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/elephant.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/elephant.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Research Paper Simple Template</title><link href="https://www.yegor256.com/2022/08/24/research-paper-template.html" rel="alternate" type="text/html" title="Research Paper Simple Template" /><published>2022-08-24T00:00:00+00:00</published><updated>2022-08-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/24/research-paper-template</id><content type="html" xml:base="https://www.yegor256.com/2022/08/24/research-paper-template.html"><![CDATA[<p>My <a href="http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98">first academic paper</a>
 was accepted and published in 1998. My most recent one was rejected by SPLASH just a week ago.
 I’m writing two papers right now and co-authoring about ten others.
 So far, my results are very poor: way more rejections than I expected.
@@ -725,7 +803,7 @@ each of which will do something with the document. Each transformation, for exam
 is a small piece of Java code. You want to build a list
 of transformations and then pass a document through this list.</p>
 
-<p>First, I made an interface <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Shift.java"><code class="highlighter-rouge">Shift</code></a>
+<p>First, I made an interface <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Shift.java"><code class="language-plaintext highlighter-rouge">Shift</code></a>
 (instead of the frequently used and boring “transformation”):</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Shift</span> <span class="o">{</span>
@@ -733,7 +811,7 @@ of transformations and then pass a document through this list.</p>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Then I made an interface <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java"><code class="highlighter-rouge">Train</code></a>
+<p>Then I made an interface <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java"><code class="language-plaintext highlighter-rouge">Train</code></a>
 (this is the name I made up for the collection
 of transformations) and its default implementation:</p>
 
@@ -761,23 +839,23 @@ of transformations) and its default implementation:</p>
 
 <p>Ah, I forgot to tell you. I’m a big fan of <a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>
 objects. That’s why the
-<code class="highlighter-rouge">Train</code> doesn’t have a method <code class="highlighter-rouge">add</code>, but instead has <code class="highlighter-rouge">with</code>. The difference is that
-<code class="highlighter-rouge">add</code> modifies the object, while <code class="highlighter-rouge">with</code> makes a new one.</p>
+<code class="language-plaintext highlighter-rouge">Train</code> doesn’t have a method <code class="language-plaintext highlighter-rouge">add</code>, but instead has <code class="language-plaintext highlighter-rouge">with</code>. The difference is that
+<code class="language-plaintext highlighter-rouge">add</code> modifies the object, while <code class="language-plaintext highlighter-rouge">with</code> makes a new one.</p>
 
 <p>Now, I can build a train of shifts with
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrDefault.java"><code class="highlighter-rouge">TrDefault</code></a>,
-a simple default implementation of <code class="highlighter-rouge">Train</code>, assuming
-<code class="highlighter-rouge">ShiftA</code> and <code class="highlighter-rouge">ShiftB</code> are already implemented:</p>
+<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrDefault.java"><code class="language-plaintext highlighter-rouge">TrDefault</code></a>,
+a simple default implementation of <code class="language-plaintext highlighter-rouge">Train</code>, assuming
+<code class="language-plaintext highlighter-rouge">ShiftA</code> and <code class="language-plaintext highlighter-rouge">ShiftB</code> are already implemented:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrDefault</span><span class="o">()</span>
   <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftA</span><span class="o">())</span>
   <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftB</span><span class="o">());</span>
 </code></pre></div></div>
 
-<p>Then I created an <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java"><code class="highlighter-rouge">Xsline</code></a>
+<p>Then I created an <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java"><code class="language-plaintext highlighter-rouge">Xsline</code></a>
 class (it’s “XSL” + “pipeline”, since in my case
 I’m managing XML documents and transform them using XSL stylesheets). An instance
-of this class encapsulates an instance of <code class="highlighter-rouge">Train</code> and then passes a document
+of this class encapsulates an instance of <code class="language-plaintext highlighter-rouge">Train</code> and then passes a document
 through all its transformations:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">input</span> <span class="o">=</span> <span class="o">...;</span>
@@ -787,8 +865,8 @@ through all its transformations:</p>
 <p>So far so good.</p>
 
 <p>Now, I want all my transformations to log themselves. I created
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java"><code class="highlighter-rouge">StLogged</code></a>,
-a decorator of <code class="highlighter-rouge">Shift</code>, which encapsulates the original <code class="highlighter-rouge">Shift</code>, decorates its method <code class="highlighter-rouge">apply</code>,
+<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java"><code class="language-plaintext highlighter-rouge">StLogged</code></a>,
+a decorator of <code class="language-plaintext highlighter-rouge">Shift</code>, which encapsulates the original <code class="language-plaintext highlighter-rouge">Shift</code>, decorates its method <code class="language-plaintext highlighter-rouge">apply</code>,
 and prints a message to the console when the transformation is completed:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">StLogged</span> <span class="kd">implements</span> <span class="nc">Shift</span> <span class="o">{</span>
@@ -809,10 +887,10 @@ and prints a message to the console when the transformation is completed:</p>
   <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">StLogged</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftB</span><span class="o">()));</span>
 </code></pre></div></div>
 
-<p>Looks like a duplication of <code class="highlighter-rouge">new StLogged(</code>, especially with a collection of a few dozen
-shifts. To get rid of this duplication I created a decorator for <code class="highlighter-rouge">Train</code>, which
+<p>Looks like a duplication of <code class="language-plaintext highlighter-rouge">new StLogged(</code>, especially with a collection of a few dozen
+shifts. To get rid of this duplication I created a decorator for <code class="language-plaintext highlighter-rouge">Train</code>, which
 on the fly decorates shifts that it encapsulates, using
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java"><code class="highlighter-rouge">StLogged</code></a>:</p>
+<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java"><code class="language-plaintext highlighter-rouge">StLogged</code></a>:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrLogged</span><span class="o">(</span><span class="k">new</span> <span class="nc">TrDefault</span><span class="o">())</span>
   <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftA</span><span class="o">()))</span>
@@ -827,10 +905,10 @@ files available in classpath. That’s why the code looks like this:</p>
   <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">StXSL</span><span class="o">(</span><span class="s">"stylesheet-b.xsl"</span><span class="o">)));</span>
 </code></pre></div></div>
 
-<p>There is an obvious duplication of <code class="highlighter-rouge">new StXSL(...)</code>, but I can’t simply get rid of it,
-since the method <code class="highlighter-rouge">with</code> expects an instance of <code class="highlighter-rouge">Shift</code>, not a <code class="highlighter-rouge">String</code>. To solve this,
-I made the <code class="highlighter-rouge">Train</code> generic and created
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrClasspath.java"><code class="highlighter-rouge">TrClasspath</code></a>
+<p>There is an obvious duplication of <code class="language-plaintext highlighter-rouge">new StXSL(...)</code>, but I can’t simply get rid of it,
+since the method <code class="language-plaintext highlighter-rouge">with</code> expects an instance of <code class="language-plaintext highlighter-rouge">Shift</code>, not a <code class="language-plaintext highlighter-rouge">String</code>. To solve this,
+I made the <code class="language-plaintext highlighter-rouge">Train</code> generic and created
+<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrClasspath.java"><code class="language-plaintext highlighter-rouge">TrClasspath</code></a>
 decorator:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrClasspath</span><span class="o">&lt;&gt;(</span><span class="k">new</span> <span class="nc">TrDefault</span><span class="o">&lt;&gt;())</span>
@@ -838,13 +916,13 @@ decorator:</p>
   <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"stylesheet-b.xsl"</span><span class="o">));</span>
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">TrClasspath.with()</code> accepts <code class="highlighter-rouge">String</code>, turns it into
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StXSL.java"><code class="highlighter-rouge">StXSL</code></a>
-and passes to <code class="highlighter-rouge">TrDefault.with()</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">TrClasspath.with()</code> accepts <code class="language-plaintext highlighter-rouge">String</code>, turns it into
+<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StXSL.java"><code class="language-plaintext highlighter-rouge">StXSL</code></a>
+and passes to <code class="language-plaintext highlighter-rouge">TrDefault.with()</code>.</p>
 
-<p>Pay attention to the snippet above: the <code class="highlighter-rouge">train</code> is now of type <code class="highlighter-rouge">Train&lt;String&gt;</code>, not <code class="highlighter-rouge">Train&lt;Shift&gt;</code>,
-as would be required by <code class="highlighter-rouge">Xsline</code>.
-The question now is: how do we get back to <code class="highlighter-rouge">Train&lt;Shift&gt;</code>?</p>
+<p>Pay attention to the snippet above: the <code class="language-plaintext highlighter-rouge">train</code> is now of type <code class="language-plaintext highlighter-rouge">Train&lt;String&gt;</code>, not <code class="language-plaintext highlighter-rouge">Train&lt;Shift&gt;</code>,
+as would be required by <code class="language-plaintext highlighter-rouge">Xsline</code>.
+The question now is: how do we get back to <code class="language-plaintext highlighter-rouge">Train&lt;Shift&gt;</code>?</p>
 
 <aside class="youtube">
         <a href="https://www.youtube.com/watch?v=C6CQWzOKEJs"><div class="box">
@@ -857,12 +935,12 @@ The question now is: how do we get back to <code class="highlighter-rouge">Train
 <p>Ah, I forgot to mention. I wanted to design this library with one important principle
 in mind, <a href="/2014/11/20/seven-virtues-of-good-object.html">suggested</a>
 in 2014: all objects may only implement methods from their interfaces. That’s why,
-I couldn’t just add a method <code class="highlighter-rouge">getEncapsulatedTrain()</code> to <code class="highlighter-rouge">TrClasspath</code>.</p>
+I couldn’t just add a method <code class="language-plaintext highlighter-rouge">getEncapsulatedTrain()</code> to <code class="language-plaintext highlighter-rouge">TrClasspath</code>.</p>
 
 <p>I introduced a new interface
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java"><code class="highlighter-rouge">Train.Temporary&lt;T&gt;</code></a>
-with a single method <code class="highlighter-rouge">back()</code>
-returning <code class="highlighter-rouge">Train&lt;T&gt;</code>. The class <code class="highlighter-rouge">TrClasspath</code> implements
+<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java"><code class="language-plaintext highlighter-rouge">Train.Temporary&lt;T&gt;</code></a>
+with a single method <code class="language-plaintext highlighter-rouge">back()</code>
+returning <code class="language-plaintext highlighter-rouge">Train&lt;T&gt;</code>. The class <code class="language-plaintext highlighter-rouge">TrClasspath</code> implements
 it and I can do this:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span><span class="o">&lt;</span><span class="nc">Shift</span><span class="o">&gt;</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrClasspath</span><span class="o">&lt;&gt;(</span><span class="k">new</span> <span class="nc">TrDefault</span><span class="o">&lt;&gt;())</span>
@@ -871,10 +949,10 @@ it and I can do this:</p>
   <span class="o">.</span><span class="na">back</span><span class="o">();</span>
 </code></pre></div></div>
 
-<p>Next I decided to get rid of the duplication of <code class="highlighter-rouge">.with()</code> calls. Obviously, it would
-be easier to have the ability to provide a list of file names as an array of <code class="highlighter-rouge">String</code>
+<p>Next I decided to get rid of the duplication of <code class="language-plaintext highlighter-rouge">.with()</code> calls. Obviously, it would
+be easier to have the ability to provide a list of file names as an array of <code class="language-plaintext highlighter-rouge">String</code>
 and build the train from it. I created a new class
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrBulk.java"><code class="highlighter-rouge">TrBulk</code></a>,
+<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrBulk.java"><code class="language-plaintext highlighter-rouge">TrBulk</code></a>,
 which does exactly that:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
@@ -912,7 +990,7 @@ of it. First we merge the tests, which most probably will break the build, since
 the functionality that they test is not present yet. In order to avoid the broken
 state of the build we disable the new tests that we added and the tests that we modified.
 In <a href="https://junit.org/junit5/docs/current/user-guide/">JUnit 5</a>, for example, we do this with
-<a href="https://junit.org/junit5/docs/5.0.0-M2/api/org/junit/jupiter/api/Disabled.html"><code class="highlighter-rouge">@Disabled</code></a> annotation.</p>
+<a href="https://junit.org/junit5/docs/5.0.0-M2/api/org/junit/jupiter/api/Disabled.html"><code class="language-plaintext highlighter-rouge">@Disabled</code></a> annotation.</p>
 
 <p>Reviewers validate the changes you make, asking themselves these questions:
 “Do we really need this new functionality?
@@ -956,7 +1034,7 @@ a simple command line tool that
 can check the style of an XML file. It’s similar to
 <a href="https://checkstyle.sourceforge.io">Checkstyle</a> (for Java) and
 <a href="https://pypi.org/project/pep8/">Pep8</a> (for Python),
-but for XML. It’s pretty easy to use <code class="highlighter-rouge">xcop</code>: just run it with a few command
+but for XML. It’s pretty easy to use <code class="language-plaintext highlighter-rouge">xcop</code>: just run it with a few command
 line arguments and it returns the list of errors found in your XML file, if there are any. However,
 some of the arguments may be convenient to have as defaults and instead of
 passing them through the command line on every execution, we could store them in some configuration file.
@@ -970,21 +1048,21 @@ None of them! I suggest plain text.</p>
 
 <figure class="jb_picture"><img itemprop="image" alt="The Trotsky (2009) by Jacob Tierney" src="/images/2022/07/the-trotsky.jpg" longdesc="#2a549763" /><figcaption id="2a549763">The Trotsky (2009) by Jacob Tierney</figcaption></figure>
 
-<p>Let’s say, you want <code class="highlighter-rouge">xcop</code> to check all <code class="highlighter-rouge">*.xml</code> files in your repository,
-but ignore XML files in the <code class="highlighter-rouge">.idea/</code> directory. You also want to make sure
+<p>Let’s say, you want <code class="language-plaintext highlighter-rouge">xcop</code> to check all <code class="language-plaintext highlighter-rouge">*.xml</code> files in your repository,
+but ignore XML files in the <code class="language-plaintext highlighter-rouge">.idea/</code> directory. You also want to make sure
 all XML files have a license in their preamble. This is how you would
-call <code class="highlighter-rouge">xcop</code>:</p>
+call <code class="language-plaintext highlighter-rouge">xcop</code>:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xcop --include '*.xml' --exclude '.idea/**' \
   --license LICENSE.txt
 </code></pre></div></div>
 
-<p>You have to use this set of arguments everywhere you call <code class="highlighter-rouge">xcop</code>:
+<p>You have to use this set of arguments everywhere you call <code class="language-plaintext highlighter-rouge">xcop</code>:
 in the build script, in the CI/CD pipeline, and on your laptop when you check
 that everything is correct. What some of us sometimes do is create a new
-Bash file called <code class="highlighter-rouge">run_xcop.sh</code> with exactly this single command.</p>
+Bash file called <code class="language-plaintext highlighter-rouge">run_xcop.sh</code> with exactly this single command.</p>
 
-<p>I suggest a better solution. You can create a <code class="highlighter-rouge">.xcop</code>
+<p>I suggest a better solution. You can create a <code class="language-plaintext highlighter-rouge">.xcop</code>
 plain text file in the root of the repository and put all
 the required “default” command line options there, one per line:</p>
 
@@ -998,7 +1076,7 @@ the required “default” command line options there, one per line:</p>
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xcop
 </code></pre></div></div>
 
-<p>It will find the <code class="highlighter-rouge">.xcop</code> file and will read all lines from it, treating
+<p>It will find the <code class="language-plaintext highlighter-rouge">.xcop</code> file and will read all lines from it, treating
 each of them as command line arguments. It will basically <em>concatenate</em>
 what is provided in the command line with what is found in the file
 with defaults.</p>
@@ -1010,10 +1088,10 @@ for the configuration file. We learn just one and use it interchangeably
 either when we call the tool “manually” or when we configure its
 behavior in the file with defaults.</p>
 
-<p>By the way, it’s possible to configure the behavior of <code class="highlighter-rouge">xcop</code> globally
-creating the file <code class="highlighter-rouge">~/.xcop</code> (in the home directory of the user). The
+<p>By the way, it’s possible to configure the behavior of <code class="language-plaintext highlighter-rouge">xcop</code> globally
+creating the file <code class="language-plaintext highlighter-rouge">~/.xcop</code> (in the home directory of the user). The
 defaults from this file will also be concatenated with the ones provided
-in the command line and with the ones found in the local <code class="highlighter-rouge">.xcop</code> file.</p>
+in the command line and with the ones found in the local <code class="language-plaintext highlighter-rouge">.xcop</code> file.</p>
 
 <p>I designed a few of my other command line tools using the same principle,
 including
@@ -1138,387 +1216,4 @@ If it’s more, it should be many more. But definitely not two
 or three pages.</p>
 
 <p>I suggest applying this principle to every piece of content
-you write: try to squeeze it into <em>one</em>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[The principle is simple: a piece of text must either consist of a single word or many more, but nothing in the middle.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/true-story.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/true-story.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Reflection Means Hidden Coupling</title><link href="https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling.html" rel="alternate" type="text/html" title="Reflection Means Hidden Coupling" /><published>2022-06-05T00:00:00+00:00</published><updated>2022-06-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling</id><content type="html" xml:base="https://www.yegor256.com/2022/06/05/reflection-means-hidden-coupling.html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Reflective_programming">Reflective programming</a> (or reflection) happens
-when your code changes itself on the fly. For example, a method of a class, when we call it,
-among other things adds a new method to the class
-(also known as <a href="https://en.wikipedia.org/wiki/Monkey_patch">monkey patching</a>). 
-Java, Python, PHP, JavaScript, you name it—they
-all have this “powerful” feature. What’s 
-<a href="https://softwareengineering.stackexchange.com/questions/193526">wrong</a> with it? 
-Well, it’s 
-<a href="https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/">slow</a>, 
-<a href="https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection">dangerous</a>,
-and hard to read and debug.
-But all that is nothing compared with the <em>coupling</em> it introduces to the code.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Wheelman (2017) by Jeremy Rush" src="/images/2022/02/wheelman.jpg" longdesc="#18fe7bad" /><figcaption id="18fe7bad">Wheelman (2017) by Jeremy Rush</figcaption></figure>
-
-<p>There are many situations when reflection can “help” you.
-Let’s go through all of them and see why the coupling they add to the code is
-unnecessary and harmful.</p>
-
-<h2 id="type-checking-and-casting">Type Checking and Casting</h2>
-
-<p>Here is the code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">return</span> <span class="o">((</span><span class="nc">Collection</span><span class="o">)</span> <span class="n">items</span><span class="o">).</span><span class="na">size</span><span class="o">();</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>I’m not sure everybody would agree that this is reflection, but I believe
-it is: we check the structure of the class at runtime and then make
-a call to the method <code class="highlighter-rouge">size()</code> which doesn’t exist in the <code class="highlighter-rouge">Iterable</code>. This method only
-“shows up” at runtime, when we make
-a <a href="https://stackoverflow.com/questions/19017258">dynamic shortcut</a>
-to it in the bytecode.</p>
-
-<p>Why is this bad, aside from the fact that
-1) it’s <a href="http://www.buzdin.lv/2011/01/is-java-reflection-really-slow.html">slow</a>,
-2) it’s more verbose and so <a href="https://armedia.com/blog/instanceof-avoid-in-code/">less readable</a>,
-and
-3) it introduces a new point of failure since the object <code class="highlighter-rouge">items</code> may not be
-an instance of class <code class="highlighter-rouge">Collection</code>,
-leading to <a href="https://docs.oracle.com/javaee/5/api/javax/el/MethodNotFoundException.html"><code class="highlighter-rouge">MethodNotFoundException</code></a>?</p>
-
-<p>The biggest problem the code above causes to the entire program is the coupling
-it introduces between itself and its clients, for example:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">calc</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sizeOf</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
-  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The size is "</span> <span class="o">+</span> <span class="n">s</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>This method may work or it may not. It will depend on the actual class of <code class="highlighter-rouge">list</code>. If it is
-<code class="highlighter-rouge">Collection</code>, the call to <code class="highlighter-rouge">sizeOf</code> will succeed. Otherwise, there will be a runtime failure.
-By looking at the method <code class="highlighter-rouge">calc</code> we can’t tell what is the right way to handle <code class="highlighter-rouge">list</code> in order
-to avoid runtime failure. We need to read the body of <code class="highlighter-rouge">sizeOf</code> and only then can we change <code class="highlighter-rouge">calc</code>
-to something like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">calc</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">list</span> <span class="k">instanceof</span> <span class="nc">Collection</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">sizeOf</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The size is "</span> <span class="o">+</span> <span class="n">s</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The size is unknown"</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>This code seems to be OK so far. However, what will happen when <code class="highlighter-rouge">sizeOf</code> changes its implementation
-to something like this (I took it from
-<a href="/2015/04/02/class-casting-is-anti-pattern.html">this article</a>
-about casting):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">items</span> <span class="k">instanceof</span> <span class="nc">Collection</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">size</span> <span class="o">=</span> <span class="o">((</span><span class="nc">Collection</span><span class="o">)</span> <span class="n">items</span><span class="o">).</span><span class="na">size</span><span class="o">();</span>
-  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-    <span class="k">for</span> <span class="o">(</span><span class="nc">Object</span> <span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
-      <span class="o">++</span><span class="n">size</span><span class="o">;</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, <code class="highlighter-rouge">sizeOf</code> perfectly handles any type that’s coming in, whether it’s an instance
-of <code class="highlighter-rouge">Collection</code> or not. However, the method <code class="highlighter-rouge">calc</code> doesn’t know about the changes made in the method <code class="highlighter-rouge">sizeOf</code>.
-Instead, it still believes that <code class="highlighter-rouge">sizeOf</code> will break if it gets anything aside from <code class="highlighter-rouge">Collection</code>.
-To keep them in sync we have to remember that <code class="highlighter-rouge">calc</code> knows too much about <code class="highlighter-rouge">sizeOf</code>  and will
-have to modify it when <code class="highlighter-rouge">sizeOf</code> changes. Thus, it’s valid to say that <code class="highlighter-rouge">calc</code> is
-coupled with <code class="highlighter-rouge">sizeOf</code> and this coupling is <em>hidden</em>:
-most probably, we will forget to modify <code class="highlighter-rouge">calc</code> when <code class="highlighter-rouge">sizeOf</code> gets a better implementation.
-Moreover, there could be many other places in the program similar to <code class="highlighter-rouge">calc</code>,
-which we must remember to modify when the method <code class="highlighter-rouge">sizeOf</code> changes.
-Obviously, we will forget about most of them.</p>
-
-<p>This coupling, which is a big maintainability issue, was introduced thanks to the
-very existence of reflection in Java. If we had not been able to use <code class="highlighter-rouge">instanceof</code> operator
-and class casting (or did not even have them), the coupling would not be possible in the first place.</p>
-
-<h2 id="forceful-testing">Forceful Testing</h2>
-
-<p>Consider this code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="nc">String</span> <span class="n">author</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
-  <span class="nc">Book</span><span class="o">(</span><span class="nc">String</span> <span class="n">a</span><span class="o">,</span> <span class="nc">String</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">author</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
-  <span class="o">}</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-      <span class="s">"The book is: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">()</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-  <span class="kd">private</span> <span class="nc">String</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">" by "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">author</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>How would you write a unit test for this class and for its method <code class="highlighter-rouge">print()</code>?
-Obviously, it’s almost impossible without refactoring the class.
-The method <code class="highlighter-rouge">print</code> sends text to the console, which we can’t easily mock
-since it’s “static.” The right way would be to make <code class="highlighter-rouge">System.out</code> injectable
-as a dependency, but some of us
-<a href="https://stackoverflow.com/questions/34571">believe</a> that reflection is a better option,
-which would allow us to test the private method <code class="highlighter-rouge">name</code> directly, without
-calling <code class="highlighter-rouge">print</code> first:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BookTest</span> <span class="o">{</span>
-  <span class="nd">@Test</span>
-  <span class="kt">void</span> <span class="nf">testNamingWorks</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nc">Book</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Book</span><span class="o">(</span>
-      <span class="s">"David West"</span><span class="o">,</span> <span class="s">"Object Thinking"</span>
-    <span class="o">);</span>
-    <span class="nc">Method</span> <span class="n">m</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getDeclaredMethod</span><span class="o">(</span><span class="s">"name"</span><span class="o">);</span>
-    <span class="n">m</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-    <span class="n">assertThat</span><span class="o">(</span>
-      <span class="o">(</span><span class="nc">String</span><span class="o">)</span> <span class="n">m</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">book</span><span class="o">),</span>
-      <span class="n">equalTo</span><span class="o">(</span><span class="s">"Object Thinking by David West"</span><span class="o">)</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>You can also use <a href="https://github.com/powermock/powermock">PowerMock</a> Java library
-to do many “beautiful” things with private methods.</p>
-
-<p>The problem with this test is that it is tightly coupled with the object it
-tests: the test <em>knows</em> too much about the class <code class="highlighter-rouge">Book</code>. The test knows that the
-class contains a private method <code class="highlighter-rouge">name</code>. The test also knows that the method <code class="highlighter-rouge">name</code>
-will at some point be called by the method <code class="highlighter-rouge">print</code>. Instead of testing <code class="highlighter-rouge">print</code>
-the test tests what it’s not supposed to be aware of: the internals of the class <code class="highlighter-rouge">Book</code>.</p>
-
-<p>The main purpose of a unit test is to be a “safety net” for us
-programmers trying to modify the code that was written earlier or much much earlier:
-if we break anything, the tests give us a timely signal, “highlighting” the place
-where the code was broken. If nothing is highlighted and the tests are green
-I can continue modifying the code. I rely on the information from my tests. I trust them.</p>
-
-<p>I take the class <code class="highlighter-rouge">Book</code> and want to modify it, simply making the method <code class="highlighter-rouge">name</code>
-return <code class="highlighter-rouge">StringBuilder</code> instead of <code class="highlighter-rouge">String</code>. It’s a pretty
-innocent modification, which may be necessary for performance considerations.
-Before I start making any changes, I run all tests
-(it’s a <a href="https://wiki.c2.com/?TestEveryRefactoring">good practice</a>) and they all pass.
-Then I make my changes, expecting no tests to fail:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
-  <span class="c1">// ...</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
-      <span class="s">"The book is: "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">().</span><span class="na">toString</span><span class="o">()</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-  <span class="kd">private</span> <span class="nc">StringBuilder</span> <span class="nf">name</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">StringBuilder</span><span class="o">()</span>
-      <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">)</span>
-      <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">" by "</span><span class="o">)</span>
-      <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">author</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>However, the test <code class="highlighter-rouge">BookTest</code> will fail, because it <em>expects</em> my class <code class="highlighter-rouge">Book</code> to have
-method <code class="highlighter-rouge">name</code> which returns <code class="highlighter-rouge">String</code>. If it’s not my test or I wrote it a long time ago,
-I would be frustrated to learn this fact: the test expects me to write my <em>private</em> methods
-only one specific way. Why? What’s wrong with returning <code class="highlighter-rouge">StringBuilder</code>? I would think
-that there is some hidden reason for this. Otherwise, why would a test demand anything
-from a private implementation of a class? Very soon, after some investigation I would
-find out that there is no reason. It’s just an assumption the test made about the
-internals of <code class="highlighter-rouge">Book</code> and this assumption has no reasons aside from “We didn’t have time
-to refactor the class and make <code class="highlighter-rouge">System.out</code> injectable.”</p>
-
-<p>By the way, this testing approach is
-<a href="/2018/12/11/unit-testing-anti-patterns.html">known</a>
-as the “Inspector” test anti-pattern.</p>
-
-<p>What would I do next? I would have to roll back my changes and then start refactoring
-the test <em>and</em> the class, in order to get rid of this assumption. However, changing the
-test and at the same time changing main code is,
-<a href="https://twitter.com/yegor256/status/1525758255225528320">I believe</a>,
-a <a href="https://stackoverflow.com/questions/1569168">dangerous practice</a>:
-most probably I will introduce some new bugs.</p>
-
-<p>The tests are not a “safety net” for me anymore. I can’t trust them.
-I modify the code and I know that I didn’t break anything.
-However, the test gives me a red signal.
-How can I trust it if it lies in such a simple scenario?</p>
-
-<p>This coupling between the unit test <code class="highlighter-rouge">BookTest</code> and the class <code class="highlighter-rouge">Book</code>
-would not happen if it was not possible to use reflection in the first place.
-If nobody had the ability to reach the private method in any way,
-the Inspector anti-pattern in unit tests would not be possible.</p>
-
-<p><a href="/2017/02/07/private-method-is-new-class.html">Of course</a>,
-life would be even better if we also didn’t have private methods.</p>
-
-<h2 id="factories">Factories</h2>
-
-<p>Here is how a typical <a href="/2017/11/14/static-factory-methods.html">factory</a>
-may work:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Operator</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">);</span>
-<span class="o">}</span>
-<span class="c1">// This is a Factory Method:</span>
-<span class="nc">Operator</span> <span class="nf">make</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="nc">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"Op"</span> <span class="o">+</span> <span class="n">name</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ClassNotFoundException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>The <a href="/2017/11/14/static-factory-methods.html">factory method</a>
-is <code class="highlighter-rouge">make</code>. It expects the name of the “operator” to be provided
-and then,
-using <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#forName-java.lang.String-"><code class="highlighter-rouge">Class.forName()</code></a>
-from the Java Reflection API, constructs the name of the class, finds it in the
-<a href="https://docs.oracle.com/javase/tutorial/essential/environment/paths.html">classpath</a>,
-and makes an instance of it. Now, say there are two classes both implementing the
-interface <code class="highlighter-rouge">Operator</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OpPlus</span> <span class="kd">implements</span> <span class="nc">Operator</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-<span class="kd">class</span> <span class="nc">OpMinus</span> <span class="kd">implements</span> <span class="nc">Operator</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Then we use them, first asking our factory method to make objects from
-operator names:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">make</span><span class="o">(</span><span class="s">"Plus"</span><span class="o">).</span><span class="na">calc</span><span class="o">(</span>
-  <span class="n">make</span><span class="o">(</span><span class="s">"Minus"</span><span class="o">).</span><span class="na">calc</span><span class="o">(</span><span class="mi">15</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span>
-  <span class="n">make</span><span class="o">(</span><span class="s">"Minus"</span><span class="o">).</span><span class="na">calc</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="mi">7</span><span class="o">)</span>
-<span class="o">);</span>
-</code></pre></div></div>
-
-<p>The <code class="highlighter-rouge">result</code> will be 13.</p>
-
-<p>We would not be able to do this without reflection. We would have to do this
-instead:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OpPlus</span><span class="o">().</span><span class="na">calc</span><span class="o">(</span>
-  <span class="k">new</span> <span class="nf">OpMinus</span><span class="o">().</span><span class="na">calc</span><span class="o">(</span><span class="mi">15</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span>
-  <span class="k">new</span> <span class="nf">OpMinus</span><span class="o">().</span><span class="na">calc</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="mi">7</span><span class="o">)</span>
-<span class="o">);</span>
-</code></pre></div></div>
-
-<p>If you ask me, this code looks much more readable and maintainable.
-First of all, because in any IDE that enables
-<a href="https://www.jetbrains.com/help/idea/navigating-through-the-source-code.html#go_to_declaration">code navigation</a>
-it would be possible to click on <code class="highlighter-rouge">OpMinus</code> or <code class="highlighter-rouge">OpPlus</code> and immediately
-jump to the body of the class. Second, the logic of class finding
-is provided out-of-the-box by JVM: I don’t need to guess what happens when
-<code class="highlighter-rouge">make("Plus")</code> is called.</p>
-
-<p>There are a few reasons why people love static factories. I don’t agree with them.
-This <a href="/2017/11/14/static-factory-methods.html">blog post</a>
-explains why. Without reflection it wouldn’t be possible to
-have static factories at all and the code would be better and more maintainable.</p>
-
-<h2 id="annotations">Annotations</h2>
-
-<p>In Java you can attach an annotation
-(an instance of a <a href="/2016/07/06/data-transfer-object.html">DTO</a>-ish interface)
-to a class (or an element of it like a method or an argument).
-The information from the annotation can then be read at runtime or compile time.
-In modern frameworks like <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/annotation/Autowired.html">Spring</a>
-this feature is frequently used in order
-to automate <a href="https://stackoverflow.com/questions/19414734">objects wiring</a>:
-you just attach some annotations to your classes
-and the framework will find them, instantiate them, place them into a
-<a href="/2014/10/03/di-containers-are-evil.html">DI container</a>,
-and assign to other objects’ attributes.</p>
-
-<p>I’ve <a href="/2014/10/03/di-containers-are-evil.html">said it earlier</a>
-that this very mechanism of discovering objects and <em>automatically</em>
-wiring them together is an anti-pattern. I’ve also
-<a href="/2016/04/12/java-annotations-are-evil.html">said earlier</a>
-that annotations are an anti-pattern.
-Neither dependency injection containers, not auto-wiring, nor annotations
-would exist if there was no reflection. Life would be much better
-and Java/OOP much cleaner.</p>
-
-<p>The clients of annotated objects/classes are coupled with them, and
-this coupling is <em>hidden</em>. An annotated object can change its interface or
-modify annotations and the code will compile just fine. The problem will
-surface only later at runtime, when the expectations of other objects
-won’t be satisfied.</p>
-
-<h2 id="serialization">Serialization</h2>
-
-<p>When programmers don’t understand
-<a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">object-oriented paradigm</a>,
-they make <a href="/2016/07/06/data-transfer-object.html">DTOs</a> instead of
-<a href="/2016/07/14/who-is-object.html">proper objects</a>.
-Then, in order to transfer a DTO over a network or save it to a file, they
-<a href="https://en.wikipedia.org/wiki/Serialization">serialize</a> or
-<a href="https://en.wikipedia.org/wiki/Marshalling_%28computer_science%29">marshall</a> them.
-It’s usually done by a special serialization engine, which takes a DTO,
-<a href="http://erights.org/data/serial/jhu-paper/intro.html">breaks</a>
-all possible encapsulation barriers,
-reads the values of all of its fields,
-and packages them into, say, a piece of JSON.</p>
-
-<p>In order to let the serialization engine break encapsulation barriers, a programming
-language has to have reflection. First, because some fields of a DTO may be private
-and thus accessible only through reflection.
-Second, even if a DTO is designed “right” with all necessary
-<a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>
-for the private fields, still reflection is required in order to understand
-which getters are present and can be called.</p>
-
-<p>The attitude serialization expresses towards objects is very similar to what
-<a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM</a> does. Neither of them
-talk to objects, but instead they pretty “offensively” tear them apart, taking away
-what’s necessary, and leaving the poor objects unconscious. If in the future an
-object decides to change its structure, rename some fields, or change the types
-of returned values—other objects, which actually are coupled with the object through
-serialization, won’t notice anything. They will notice, but only at runtime,
-when “invalid data format” exceptions start floating up. The developers
-of the object won’t have a chance to notice that their changes to the interface
-of the object affect some other places in the code base.</p>
-
-<p>We can say that serialization is a “perfect” method of coupling two objects
-such that neither one will know about it.</p>
-
-<p>The <a href="/2016/07/14/who-is-object.html">very idea</a>
-of object-oriented programming is centered around the principle
-that an object is king. An object and only an object may decide what
-to do with the data it encapsulates. The existence of this principle and adherence
-to it helps avoid runtime errors usually caused by a simple scenario:
-A uses the data coming from B without telling B how it’s being used,
-then B changes the format or semantics of the data, and A fails to understand it.</p>
-
-<p>Obviously, serialization in such an “abusive” way would not be possible,
-if there was no reflection in the first place. A more careful serialization
-would be possible and would be used, not through reflection but via
-<a href="/2016/04/05/printers-instead-of-getters.html">printers</a>
-implemented by objects.</p>
-
-<hr />
-
-<p>To conclude, reflection introduces coupling, which is hidden. This is the
-most dangerous type of coupling, because it’s hard to follow, it’s hard to find,
-and it’s hard to remove. Without reflection object-oriented design would be
-much cleaner and solid. But even if this feature does exist,
-I suggest you never use reflection in your programming language.</p>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you use reflective programming (reflection)?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1535919879886446592?ref_src=twsrc%5Etfw">June 12, 2022</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Reflection in object-oriented programming languages like Java is a powerful technique, but a very dangerous and harmful one.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/02/wheelman.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/02/wheelman.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+you write: try to squeeze it into <em>one</em>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[The principle is simple: a piece of text must either consist of a single word or many more, but nothing in the middle.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/true-story.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/true-story.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

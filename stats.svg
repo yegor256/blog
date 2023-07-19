@@ -365,9 +365,9 @@
 	<g id="gnuplot_plot_1" ><title>gnuplot_plot_1</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '122.56,230.00 126.14,230.00 126.14,55.81 122.56,55.81 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '122.56,230.00 126.14,230.00 126.14,55.72 122.56,55.72 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M122.56,230.00 L122.56,55.82 L126.13,55.82 L126.13,230.00 L122.56,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M122.56,230.00 L122.56,55.73 L126.13,55.73 L126.13,230.00 L122.56,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '127.29,230.00 130.86,230.00 130.86,208.17 127.29,208.17 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M127.29,230.00 L127.29,208.18 L130.85,208.18 L130.85,230.00 L127.29,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -401,9 +401,9 @@
 		<polygon fill = 'rgb(129, 179,  65)' points = '174.74,230.00 178.19,230.00 178.19,158.70 174.74,158.70 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M174.74,230.00 L174.74,158.71 L178.18,158.71 L178.18,230.00 L174.74,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(129, 179,  65)' points = '179.39,230.00 182.96,230.00 182.96,160.68 179.39,160.68 '/>
+		<polygon fill = 'rgb(129, 179,  65)' points = '179.39,230.00 182.96,230.00 182.96,160.63 179.39,160.63 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M179.39,230.00 L179.39,160.69 L182.95,160.69 L182.95,230.00 L179.39,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb(129, 179,  65)'  d='M179.39,230.00 L179.39,160.64 L182.95,160.64 L182.95,230.00 L179.39,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '184.12,230.00 187.69,230.00 187.69,125.05 184.12,125.05 '/>
 	</g>
 	<path stroke='rgb(129, 179,  65)'  d='M184.12,230.00 L184.12,125.06 L187.68,125.06 L187.68,230.00 L184.12,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -640,7 +640,10 @@
 	<path stroke='rgb(129, 179,  65)'  d='M601.29,230.00 L601.29,227.70 L604.85,227.70 L604.85,230.00 L601.29,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '620.28,230.00 623.91,230.00 623.91,220.47 620.28,220.47 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M620.28,230.00 L620.28,220.48 L623.90,220.48 L623.90,230.00 L620.28,230.00 Z  '/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M620.28,230.00 L620.28,220.48 L623.90,220.48 L623.90,230.00 L620.28,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(129, 179,  65)' points = '648.52,230.00 652.09,230.00 652.09,217.22 648.52,217.22 '/>
+	</g>
+	<path stroke='rgb(129, 179,  65)'  d='M648.52,230.00 L648.52,217.23 L652.08,217.23 L652.08,230.00 L648.52,230.00 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(129, 179,  65)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>

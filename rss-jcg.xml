@@ -46,13 +46,13 @@ to get rid of them is via a private static literal. This is just wrong.&lt;/p&gt
       <item>
         <title>Why InputStream Design Is Wrong</title>
         
-          <description>&lt;p&gt;It’s not just about &lt;code class=&quot;highlighter-rouge&quot;&gt;InputSteam&lt;/code&gt;, this class is a good
+          <description>&lt;p&gt;It’s not just about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputSteam&lt;/code&gt;, this class is a good
 example of a bad design. I’m talking about three overloaded
-methods &lt;code class=&quot;highlighter-rouge&quot;&gt;read()&lt;/code&gt;. I’ve mentioned this problem in Section 2.9
+methods &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;read()&lt;/code&gt;. I’ve mentioned this problem in Section 2.9
 of &lt;a href=&quot;/elegant-objects.html&quot;&gt;Elegant Objects&lt;/a&gt;. In a few words,
 I strongly believe that interfaces must be “functionality poor.”
-&lt;code class=&quot;highlighter-rouge&quot;&gt;InputStream&lt;/code&gt; should have been an interface in the first place
-and it should have had a single method &lt;code class=&quot;highlighter-rouge&quot;&gt;read(byte[])&lt;/code&gt;. Then if
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InputStream&lt;/code&gt; should have been an interface in the first place
+and it should have had a single method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;read(byte[])&lt;/code&gt;. Then if
 its authors wanted to give us extra functionality, they should have
 created supplementary “smart” classes.&lt;/p&gt;
 
@@ -126,7 +126,7 @@ the data out of an object, right? Nope. Wrong.&lt;/p&gt;
           <description>&lt;p&gt;There is a very typical mistake in pre-Java7 “try/finally” scenario,
 which I keep seeing in so many code reviews. I just have to write about it.
 Java7 introduced a solution, but it doesn’t cover all situations.
-Sometimes we need to deal with non-&lt;code class=&quot;highlighter-rouge&quot;&gt;AutoCloseable&lt;/code&gt; resources. Let’s
+Sometimes we need to deal with non-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AutoCloseable&lt;/code&gt; resources. Let’s
 open and close them correctly, please.&lt;/p&gt;
 
 </description>
@@ -230,7 +230,7 @@ a look at this example.&lt;/p&gt;
           <description>&lt;p&gt;I keep repeating the same mistake again and again. So it’s time to
 stop and make a rule to prevent this from happening anymore. The mistake
 is not fatal, but it’s very annoying. When I look at production logs, I often see
-something like &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;File doesn't exist&quot;&lt;/code&gt;, and I ask myself:
+something like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;File doesn't exist&quot;&lt;/code&gt;, and I ask myself:
 What file? Where is it supposed to exist? What did the server try to do with it?
 What was going on a second before it crashed?
 There is no answer in the log, and it’s totally my fault.
@@ -415,7 +415,7 @@ the same objects and preparing the data to run the test,
 I feel disappointed in my design. Long test methods with a lot of code
 duplication just don’t look right. To simplify and shorten them,
 there are basically two options, at least in Java: 1) private properties
-initialized through &lt;code class=&quot;highlighter-rouge&quot;&gt;@Before&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;@BeforeClass&lt;/code&gt;, and 2)
+initialized through &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Before&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@BeforeClass&lt;/code&gt;, and 2)
 &lt;a href=&quot;/2017/02/07/private-method-is-new-class.html&quot;&gt;private static methods&lt;/a&gt;.
 They both look anti-OOP to me, and I think there is an
 alternative. Let me explain.&lt;/p&gt;
@@ -517,7 +517,7 @@ framework. I put a few basic principles into its foundation: 1) No
 2) no public &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;static&lt;/a&gt; methods, 3) no
 &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;mutable&lt;/a&gt;
 classes, and 4) no class casting, reflection,
-and &lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;instanceof&lt;/code&gt;&lt;/a&gt;
+and &lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instanceof&lt;/code&gt;&lt;/a&gt;
 operators. These four basic principles should guarantee
 clean code and transparent architecture. That’s how the
 &lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework was born.
@@ -622,20 +622,20 @@ why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let’s see what I me
 &lt;p&gt;Maven is a build automation tool mostly for Java projects. It’s a great
 tool, but it has one important drawback that has motivated the creation
 of similar tools, like Gradle and SBT. That weakness is its verbosity of configuration.
-Maven gets all project build parameters from &lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;, an XML
+Maven gets all project build parameters from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;, an XML
 file that can get very long. I’ve seen POM files of 3,000-plus lines.
 Taking into account 1) recent DSL buzz and 2) fear of XML, it’s
-only logical that many people don’t like Maven because of its &lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt; verbosity.&lt;/p&gt;
+only logical that many people don’t like Maven because of its &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt; verbosity.&lt;/p&gt;
 
 &lt;p&gt;But even if you’re an XML fan who enjoys its strictness and elegance
-(like myself), you won’t like the necessity to repeat yourself in &lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;
+(like myself), you won’t like the necessity to repeat yourself in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;
 for every project. If you’re working on multiple projects, code duplication
 will be enormous. An average Java web app uses a few dozen standard Maven plugins
 and almost the same number of pretty common dependencies, like
 JUnit, Apache Commons, Log4J, Mockito, etc. All of them have their versions
 and configurations, which have to be specified if you want to keep
 the project stable and avoid Maven warnings. Thus, once a new version
-of a plugin is released, you have to go through all &lt;code class=&quot;highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt; files in
+of a plugin is released, you have to go through all &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt; files in
 the projects you’re working on and update it there. You obviously understand
 what code duplication means. It’s a disaster. However, there is a solution.&lt;/p&gt;
 
@@ -734,9 +734,9 @@ you miss the deadline and &lt;em&gt;everybody blames you&lt;/em&gt;. Been there,
       <item>
         <title>A Compound Name Is a Code Smell</title>
         
-          <description>&lt;p&gt;Do you name variables like &lt;code class=&quot;highlighter-rouge&quot;&gt;textLength&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;table_name&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;current-user-email&lt;/code&gt;?
+          <description>&lt;p&gt;Do you name variables like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;textLength&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;table_name&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;current-user-email&lt;/code&gt;?
 All three are compound names that consist of more than one word. Even though
-they look more descriptive than &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;length&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;email&lt;/code&gt;, I would strongly
+they look more descriptive than &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;email&lt;/code&gt;, I would strongly
 recommend avoiding them. I believe a variable name that is more complex than a noun
 is a code smell. Why? Because we usually give a variable a compound name when its scope
 is so big and complex that a simple noun would sound ambiguous.
@@ -805,7 +805,7 @@ Well, yes, you’re pretty sure; why wouldn’t they? …&lt;/p&gt;
 &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;Getters/Setters. Evil. Period.&lt;/a&gt;
 &lt;a href=&quot;/2014/06/09/objects-should-be-immutable.html&quot;&gt;Objects Should Be Immutable&lt;/a&gt;, and
 &lt;a href=&quot;/2014/10/03/di-containers-are-evil.html&quot;&gt;Dependency Injection Containers are Code Polluters&lt;/a&gt;,
-I universally labeled all mutable objects with “setters” (object methods starting with &lt;code class=&quot;highlighter-rouge&quot;&gt;set&lt;/code&gt;) evil.
+I universally labeled all mutable objects with “setters” (object methods starting with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set&lt;/code&gt;) evil.
 My argumentation was based mostly on metaphors and abstract examples. Apparently,
 this wasn’t convincing enough for many of you—I received a few requests
 asking to provide more specific and practical examples.&lt;/p&gt;
@@ -1161,7 +1161,7 @@ deployment script(s).&lt;/p&gt;
 about a repository you should make a GET request to
 &lt;a href=&quot;https://api.github.com/repos/yegor256/rultor&quot;&gt;api.github.com/repos/yegor256/rultor&lt;/a&gt;.
 In response, you will get a JSON document with all the details of the
-&lt;code class=&quot;highlighter-rouge&quot;&gt;yegor256/rultor&lt;/code&gt; repository. Try it, the URL doesn’t require any authentication.&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yegor256/rultor&lt;/code&gt; repository. Try it, the URL doesn’t require any authentication.&lt;/p&gt;
 
 &lt;p&gt;To open the same repository in a nice HTML+CSS page, you should use
 a different URL: &lt;a href=&quot;https://github.com/yegor256/rultor&quot;&gt;github.com/yegor256/rultor&lt;/a&gt;.
@@ -1187,7 +1187,7 @@ the data?&lt;/p&gt;
         <title>Simple Java SSH Client</title>
         
           <description>&lt;p&gt;An execution of a shell command via SSH can be done in
-Java, in just a few lines, using &lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+Java, in just a few lines, using &lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Plain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SSH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
@@ -1197,8 +1197,8 @@ Java, in just a few lines, using &lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;
 &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;echo 'Hello, world!'&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt; is
-a convenient wrapper of &lt;a href=&quot;http://www.jcraft.com/jsch/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;JSch&lt;/code&gt;&lt;/a&gt;,
+&lt;p&gt;&lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt; is
+a convenient wrapper of &lt;a href=&quot;http://www.jcraft.com/jsch/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSch&lt;/code&gt;&lt;/a&gt;,
 a well-known pure Java implementation of SSH2.&lt;/p&gt;
 
 </description>
@@ -1240,7 +1240,7 @@ takes just a few seconds of your time.&lt;/p&gt;
 modified after it is created.
 In Java, a good example of an
 immutable &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt;
-is &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/String.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;&lt;/a&gt;.
+is &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/lang/String.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt;&lt;/a&gt;.
 Once created, we can’t modify its state. We can request that it creates
 new strings, but its own state will never change.&lt;/p&gt;
 
@@ -1288,7 +1288,7 @@ This is how I’m doing it, with help of &lt;a href=&quot;http://eclipse.org/asp
       <item>
         <title>Why NULL is Bad?</title>
         
-          <description>&lt;p&gt;A simple example of &lt;code class=&quot;highlighter-rouge&quot;&gt;NULL&lt;/code&gt; usage in Java:&lt;/p&gt;
+          <description>&lt;p&gt;A simple example of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NULL&lt;/code&gt; usage in Java:&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Employee&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
@@ -1312,10 +1312,10 @@ This is how I’m doing it, with help of &lt;a href=&quot;http://eclipse.org/asp
         <title>OOP Alternative to Utility Classes</title>
         
           <description>&lt;p&gt;A utility class (aka helper class) is a “structure” that has only static methods
-and encapsulates no state. &lt;code class=&quot;highlighter-rouge&quot;&gt;StringUtils&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;IOUtils&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;FileUtils&lt;/code&gt; from
-&lt;a href=&quot;http://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;; &lt;code class=&quot;highlighter-rouge&quot;&gt;Iterables&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Iterators&lt;/code&gt; from
+and encapsulates no state. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StringUtils&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IOUtils&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FileUtils&lt;/code&gt; from
+&lt;a href=&quot;http://commons.apache.org/&quot;&gt;Apache Commons&lt;/a&gt;; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Iterables&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Iterators&lt;/code&gt; from
 &lt;a href=&quot;https://code.google.com/p/guava-libraries/&quot;&gt;Guava&lt;/a&gt;, and
-&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Files&lt;/code&gt;&lt;/a&gt;
+&lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Files&lt;/code&gt;&lt;/a&gt;
 from JDK7 are perfect examples of utility classes.&lt;/p&gt;
 
 </description>
