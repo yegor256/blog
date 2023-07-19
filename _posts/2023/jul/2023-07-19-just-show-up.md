@@ -52,25 +52,29 @@ that "working together in the same room makes a positive difference"...
 for Google's <del>incompetent</del> managers, I guess. 
 They may judge productivity by the amount of time their coders spend staring at monitors. 
 They don't need to concern themselves with establishing an objective performance evaluation system. 
-They don't need to count the lines of code (it's nonsense, because Bill Gates said so!). 
+They don't need to count the [lines of code]({% pst 2014/apr/2014-04-11-cost-of-loc %}) 
+(it's [nonsense](https://www.youtube.com/watch?v=9Zen0B0SNwI), because Bill Gates said so!). 
 They don't need to break down the scope into tasks and then assess their complexity 
-(that's unfeasible, since we programmers are artists!). 
+(that's unfeasible, since we programmers are [artists]({% pst 2016/sep/2016-09-27-command-control-innovate %})!). 
 They don't need to risk damaging 
 [morale]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %}) 
-and creativity by introducing the concept of productivity evaluation (that's unthinkable!). 
+and creativity by introducing the concept of [productivity evaluation](https://www.youtube.com/watch?v=yZcNHZ_FJco) 
+(that's unthinkable!). 
 They can simply reward the most disciplined clock-watchers and call it a management.
 
 On the other hand, perhaps it's not entirely detrimental for some of us. If the management 
-is inept enough to "make office attendance part of performance reviews" 
+is incompetent enough to "make office attendance part of performance reviews" 
 (as [Google just has](https://arstechnica.com/google/2023/06/google-makes-office-attendance-part-of-performance-reviews/)), 
 let's play along and provide them with what they want: let's attend! 
-Let's display our loyalty, engagement, and enthusiasm, rather than our lines of code and pull requests. 
+Let's display our [loyalty]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}), 
+engagement, and [enthusiasm](https://www.yegor256.com/pdf/2019/enthusiasm.pdf), 
+rather than our lines of code and [pull requests]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}). 
 Let's focus on fitting into the group rather than contributing to the codebase.
 
 Woody Allen [once remarked](https://www.creativelive.com/blog/the-importance-of-showing-up/) that "80 percent of success
 is showing up." I would propose that we repurpose this as career advice for us programmers: Just Show Up. This mantra
 applies not only to office attendance, but can also be applied to many other activities throughout your career
-development. You should be where your boss(es) can physically see you. No, not your work – that's immaterial. They need
+development. You should be where your boss(es) can physically see you. No, not your work---that's immaterial. They need
 to see you in person. Here's what you can do to truly "Just Show Up":
 
   - Participate in all meetings, events, workshops, and team-building activities;
