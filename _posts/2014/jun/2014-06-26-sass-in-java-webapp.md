@@ -17,7 +17,7 @@ keywords:
 ---
 
 [SASS](http://sass-lang.com/) is a powerful and very popular
-language for writing [CSS](http://www.w3.org/Style/CSS/Overview.en.html)
+language for writing [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 style sheets. This is how I'm using SASS in my Maven projects.
 
 First, I change the extensions of `.css` files to

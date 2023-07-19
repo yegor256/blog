@@ -60,7 +60,7 @@ Ken Kesey, _One Flew Over the Cuckoo's Nest_, 1962. [Buy](http://amzn.to/2xOPy7K
 
 Philip Roth, _Portnoy’s Complaint_, 1969. [Buy](http://amzn.to/2xfsOeg).
 
-Венедикт Ерофеев, _Москва — Петушки_, 1970.
+Венедикт Ерофеев, _Москва---Петушки_, 1970.
 
 Братья Стругацкие, _Град обреченный_, 1972.
 

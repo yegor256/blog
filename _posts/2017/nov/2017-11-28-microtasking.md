@@ -18,7 +18,7 @@ image: /images/2017/11/carlitos-way.jpg
 jb_picture:
   caption: Carlito's Way (1993) by Brian De Palma
 buffer:
-  - "\"What are you doing now?\"—when you hear this question from your boss, be aware: you're dealing with a micromanager"
+  - "\"What are you doing now?\"---when you hear this question from your boss, be aware: you're dealing with a micromanager"
   - "The more aggressive you are, the higher the chances you win"
   - "One of the key success factors for manageability is the famous 0/100 rule, which requires any task to be either \"in progress\" or \"complete.\" There can be nothing in the middle"
   - "In our projects we break project scope into tasks of 30 minutes each. This may sound too extreme for you, but it works for us"

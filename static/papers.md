@@ -105,7 +105,7 @@ August 2010,
 US patent application 12/840,306,
 July 2010
 
-[phpRack — Integration Testing Framework](https://www.phparch.com/magazine/2010-2/june/),
+[phpRack---Integration Testing Framework](https://www.phparch.com/magazine/2010-2/june/),
 php|Architect,
 June 2010,
 [PDF](/pdf/2010/phpArchitect-phpRack.pdf)

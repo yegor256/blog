@@ -252,7 +252,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     <span class="name">Marcos Douglas B. Santos</span>
     <span class="text">I try to make all my code object-oriented. I have a blog about
     OOP, and I have over 15 years of systems development experience.
-    I was a reviewer of Bloghacks too — Yegor's last published book.</span>
+    I was a reviewer of Bloghacks too---Yegor's last published book.</span>
     <span class="votes">20 votes</span>
   </div>
   <div class="rv">

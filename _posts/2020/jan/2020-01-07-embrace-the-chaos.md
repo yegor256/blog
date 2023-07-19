@@ -51,7 +51,7 @@ the first scenario is a much better place to be: such an imperfect system _needs
 improvements. And, of course, the one who makes them
 gets the rewards: bonuses, a promotion, a raise, and so on.
 
-{% quote Be thankful for the existence of the chaos—your career can grow because of it. %}
+{% quote Be thankful for the existence of the chaos---your career can grow because of it. %}
 
 If you see the issues around you, both technical and managerial, and you
 know how to fix them---great! This means that you are already ahead

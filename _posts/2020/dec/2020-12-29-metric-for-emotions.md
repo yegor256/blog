@@ -95,8 +95,7 @@ is how to not get yourself hugely frustrated when your bonus is smaller
 than Jeff's, who was obviously less productive, according to your personal
 judgment. This actually is the key problem: jealousy. If you see
 that someone, who you don't respect due to his/her bad results and lack
-of skills, is appreciated more than yourself by your boss ---
-you get jealous and quit.
+of skills, is appreciated more than yourself by your boss---you get jealous and quit.
 
 {% quote When they can't objectively evaluate your performance, they judge you irrationally and emotionally. %}
 

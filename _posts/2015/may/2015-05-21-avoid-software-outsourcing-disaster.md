@@ -70,7 +70,7 @@ and month after month; the backlog always has something, and you simply
 can't finish this. You're starting to see this project in your nightmares,
 and Prozac doesn't help anymore. How does this sound? Familiar?
 
-{% quote Let's forget about these beautiful promises and focus on the ugly reality — you're on your own. %}
+{% quote Let's forget about these beautiful promises and focus on the ugly reality---you're on your own. %}
 
 I hope you do realize that no matter what kind of contract you signed with
 your software outsourcing partner, how many schedules you've baselined,

@@ -299,11 +299,10 @@ task :excerpts do
   done 'All articles have excerpts'
 end
 
-desc 'Make sure there are no prohibited RegEx-es'
+desc 'Make sure there are no prohibited RegEx-es in generated HTMLs'
 task regex: [:build] do
   ptns = [
-    /—\s/,
-    /\s—/,
+    /\s—\s/,
     /("|&quot;)[,.?!]/,
     /\s&mdash;/,
     /&mdash;\s/

@@ -75,7 +75,7 @@ The majority of my projects are not alive anymore, especially the ones
 I created when I was a kid and a student (and I feel so sad about that).
 However, the outcome is obvious: I'm in the tech industry now and I can code in Java.
 
-{% quote Your job, as their parents, is to help them identify the right goals—this is where kids usually fail. %}
+{% quote Your job, as their parents, is to help them identify the right goals---this is where kids usually fail. %}
 
 So don't expect your kids to enjoy studying. Expect them to be interested
 in _building_ things and making <del>money</del> profit. Your job, as their parents, is

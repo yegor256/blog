@@ -7,7 +7,7 @@ permalink: /shift-m/2020/44.html
 description: |
   What is wrong with Agile, why software projects fail,
   what motivates programmers and what holds them back,
-  why our estimates are wrong—Allen Holub answers.
+  why our estimates are wrong---Allen Holub answers.
 keywords:
   - podcast
   - project management podcast
