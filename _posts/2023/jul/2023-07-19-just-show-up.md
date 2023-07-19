@@ -5,9 +5,8 @@ date: 2023-07-19
 place: Moscow, Russia
 tags: management mood career
 description: |
-  Given that many of our managers may lack the competence to evaluate 
-  our work on a technical level, the optimal strategy to appear as 
-  a high performer is to frequently be in places where the manager can see you.
+  Since many managers may not have the expertise to assess our technical work, 
+  the best strategy for seeming a top performer is to be visible to your manager often.
 keywords:
   - just show up
   - career advice
