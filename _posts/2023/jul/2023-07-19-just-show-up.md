@@ -24,8 +24,8 @@ conducted by [Dariusz Jemielniak](https://www.jemielniak.org/) in 2007, the majo
 their own managers as highly incompetent. We don't expect our bosses to be 
 coding-savvy --- this level of technical competence is [not a requirement]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 for an average manager. Additionally, we don't expect them to excel in 
-Gantt Chart wizardry or adhere strictly to risk management protocols --- these are management 
-practices that are not commonly observed in software teams today.
+Gantt Chart wizardry or adhere strictly to [risk management protocols]({% pst 2019/may/2019-05-14-cause-risk-effect %}) 
+--- these are management practices that are not commonly observed in software teams today.
 Instead, what we do expect from them is the ability to gauge our productivity: 
 recognizing and rewarding the best performers while 
 [taking action]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) against those who are less motivated. 
