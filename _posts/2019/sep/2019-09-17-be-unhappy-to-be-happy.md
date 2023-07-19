@@ -42,7 +42,7 @@ Debika Chakraborty asks [here](https://www.lifealth.com/mind-body-and-soul/happi
 I think that happiness is missing not despite us having everything, but _thanks_ to that.
 
 Happiness, according to [Nietzsche](https://en.wikiquote.org/wiki/The_Antichrist),
-is "the feeling that power increases --- that a resistance is overcome."
+is "the feeling that power increases---that a resistance is overcome."
 Therefore, in order to be happy, we must have some issues to deal with. It's not enough to possess those
 cars, houses and well-paid jobs. We need to overcome the obstacles first.
 Happiness is simply impossible without a struggle being won.

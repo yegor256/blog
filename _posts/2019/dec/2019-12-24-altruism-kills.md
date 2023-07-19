@@ -107,7 +107,7 @@ altruism of the programmers.
 
 On the other hand, if every programmer acts egoistically and demands
 the project to pay them more than they deserve, the business will feel
-the problem very soon --- simply by running out of money. Egoistic programmers
+the problem very soon---simply by running out of money. Egoistic programmers
 reveal the defect in the motivational system and make it necessary for
 the business to fix it somehow. Either by introducing measurable KPIs,
 or by making requirements more strict and demanding, or maybe by checking

@@ -21,8 +21,8 @@ jb_picture:
 
 I don't know what programming language you use, but my experience 
 of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells 
-me that the principle, which I will try to convince you to adhere to --- 
-is universal for all languages. It's about the naming of test files. 
+me that the principle, which I will try to convince you to adhere 
+to---is universal for all languages. It's about the naming of test files. 
 It may look to you like a question of low importance, but let me try 
 to demonstrate that it's not. How do you name your files with test classes? How many 
 of them do you create in the src/test/java directory? Where do you place
@@ -35,8 +35,8 @@ So let's try to find a better answer.
 {% jb_picture_body %}
 
 The primary purpose of my unit tests is to help me code. They are the 
-[safety net]({% pst 2022/jul/2022-07-05-safety-net %}) --- 
-they catch me when I make a mistake. For example, let's say I go back and edit a few files that I 
+[safety net]({% pst 2022/jul/2022-07-05-safety-net %})---they 
+catch me when I make a mistake. For example, let's say I go back and edit a few files that I 
 edited a few years ago and, of course, I do it wrong this time. Then, I run all 500 unit tests
 in the project, and ... ten of them turn red. Pay attention, I don't say "fail" because, 
 just like a safety net around a building, failed tests are the tests 
@@ -46,7 +46,7 @@ Thus, 490 of them _failed_, but ten of them _succeeded_.
 
 ## Assertions
 
-Next, I scratch my head and think --- what exactly did I do wrong? Which 
+Next, I scratch my head and think---what exactly did I do wrong? Which 
 file did I break? I just changed a few dozen code lines. Where exactly was the 
 mistake? In order to find out, I read the output of the tests. I expect 
 the messages they print to the console to be descriptive enough to 
@@ -75,7 +75,7 @@ void test1() {
 ```
 
 While this test is much better, thanks to [Hamcrest](https://www.hamcrest.org)
-assertions (how to name test methods --- is a separate
+assertions (how to name test methods---is a separate
 story explained in detail [here](https://stackoverflow.com/questions/155436/)):
 
 ```java
@@ -105,8 +105,8 @@ Descriptive messages will help me understand what the problem is.
 However, will I know _where_ the problem is? In which Java class? Not really.
 Is it in `Phrases.java,` or maybe in `Greetings.java,` which is returned by `Phrases.greetings()`?
 I can only get this information from the _name_ of the test class.
-If it's called `PhrasesTest.java` --- all bugs that it catches _are most probably_
-located in `Phrases.java.` If it's called `GreetingsTest.java` --- ... well, you get the idea.
+If it's called `PhrasesTest.java`---all bugs that it catches _are most probably_
+located in `Phrases.java.` If it's called `GreetingsTest.java`---... well, you get the idea.
 
 My point is that the name of a test class is not just a name. It's an instruction
 for a wondering programmer:
@@ -339,7 +339,7 @@ the results of the tests are verified, and the build fails if
 some of them are not green.
 
 I keep `ITCase` files together with `Test` files only when they are
-integration tests for specific live classes. Very often, they are not --- that's why
+integration tests for specific live classes. Very often, they are not---that's why
 they are integration tests. They may integrate and test a number of classes together.
 In this case, I put them in a separate package and gave them arbitrary names
 that don't match with the names of live classes:

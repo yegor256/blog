@@ -88,13 +88,13 @@ find a problematic line, explain the problem, and suggest a solution.
 This is what code reviewers must be paid for: completed reviews.
 
 What is a completed review? Does "Everything is OK" sound like a completed
-review? For a linter --- yes; for a code reviewer --- no. This one is much better:
+review? For a linter---yes; for a code reviewer---no. This one is much better:
 "I found three problems, explained them, and they were either debated or fixed."
 This is how the job description of a code reviewer may sound: Find the three
 most critical problems, explain them, and make sure they are either fixed
 or correctly argued.
 
-How reviewers find these three problems --- that's up to them. They may
+How reviewers find these three problems---that's up to them. They may
 do visual inspections of the code or run the build. However, they will still
 be paid when they manage to find problems and make sure the author of the
 code understands them and either fixes them or explains why they are not

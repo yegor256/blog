@@ -91,7 +91,7 @@ are the tools that help us find our where the code is broken. If the tool
 is unreliable, how can we test our code against it? This reminds me of an old
 joke where a patient comes to the doctor and says "Help me doc, my body hurts anywhere
 I touch it with my finger!" The doctor answers
-"It's just your finger --- it's broken!" A very similar situation occurs here:
+"It's just your finger---it's broken!" A very similar situation occurs here:
 If we test our production objects with broken Test Doubles, they will all look
 broken.
 

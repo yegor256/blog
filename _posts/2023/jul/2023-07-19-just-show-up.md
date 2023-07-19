@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Just Show Up"
-date: 2023-07-15
+date: 2023-07-19
 place: Moscow, Russia
 tags: management mood career
 description: |
@@ -14,18 +14,19 @@ keywords:
   - good manager
   - management advice
   - remote work
-image: /images/2023/07/
+image: /images/2023/07/les-cotelettes.jpg
 jb_picture:
-  caption:
+  caption: Les côtelettes (2003) by Bertrand Blier
 ---
 
 According to a [study](https://www.emerald.com/insight/content/doi/10.1108/09534810710760045/full/html) 
 conducted by [Dariusz Jemielniak](https://www.jemielniak.org/) in 2007, the majority of programmers perceive 
 their own managers as highly incompetent. We don't expect our bosses to be 
-coding-savvy --- this level of technical competence is [not a requirement]({% pst 2016/may/2016-05-24-who-is-project-manager %})
+coding-savvy---this level of technical competence is [not a requirement]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 for an average manager. Additionally, we don't expect them to excel in 
-Gantt Chart wizardry or adhere strictly to [risk management protocols]({% pst 2019/may/2019-05-14-cause-risk-effect %}) 
---- these are management practices that are not commonly observed in software teams today.
+Gantt Chart wizardry or adhere strictly to 
+[risk management protocols]({% pst 2019/may/2019-05-14-cause-risk-effect %})---these 
+are management practices that are not commonly observed in software teams today.
 Instead, what we do expect from them is the ability to gauge our productivity: 
 recognizing and rewarding the best performers while 
 [taking action]({% pst 2015/sep/2015-09-16-how-to-fire-someone-right %}) against those who are less motivated. 
@@ -85,7 +86,7 @@ to see you in person. Here's what you can do to truly "Just Show Up":
   - Participate in all [meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}), events, workshops, and team-building activities;
   - Situate yourself next to the boss;
   - Become a member of all committees;
-  - Seize every opportunity to [ask questions]({% pst 2020/dec/2020-12-19-metric-for-emotions %});
+  - Seize every opportunity to [ask questions]({% pst 2020/dec/2020-12-29-metric-for-emotions %});
   - Be vocal in the office to ensure that your boss hears you;
   - Submit proposals whenever they're requested;
   - Respond to all emails;
