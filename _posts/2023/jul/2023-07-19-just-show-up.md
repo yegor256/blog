@@ -3,7 +3,7 @@ layout: post
 title: "Just Show Up"
 date: 2023-07-15
 place: Moscow, Russia
-tags: management
+tags: management mood career
 description: |
   Given that many of our managers may lack the competence to evaluate 
   our work on a technical level, the optimal strategy to appear as 
@@ -71,13 +71,15 @@ enough to "make office attendance part of performance reviews"
 let's play along and provide them with what they want: let's attend! 
 Let's display our [loyalty]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}), 
 engagement, and [enthusiasm](https://www.yegor256.com/pdf/2019/enthusiasm.pdf), 
-rather than our lines of code and [pull requests]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}). 
+rather than our [lines of code]({% pst 2014/nov/2014-11-14-hits-of-code %}) 
+and [pull requests]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}). 
 Let's focus on fitting into the group rather than contributing to the codebase.
 
 Woody Allen [once remarked](https://www.creativelive.com/blog/the-importance-of-showing-up/) that "80 percent of success
 is showing up." I would propose that we repurpose this as career advice for us programmers: Just Show Up. This mantra
-applies not only to office attendance, but can also be applied to many other activities throughout your career
-development. You should be where your boss(es) can physically see you. No, not your work---that's immaterial. They need
+applies not only to office attendance, but can also be applied to many other activities throughout your 
+[career development]({% pst 2017/jan/2017-01-24-career-advice %}). 
+You should be where your boss(es) can physically see you. No, not your work---that's immaterial. They need
 to see you in person. Here's what you can do to truly "Just Show Up":
 
   - Participate in all [meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}), events, workshops, and team-building activities;
@@ -90,4 +92,5 @@ to see you in person. Here's what you can do to truly "Just Show Up":
   - Upvote every chat message.
 
 This strategy might not necessarily make you a better programmer, 
-but it will certainly convince your boss that you are one.
+but it will certainly [convince]({% pst 2016/jan/2016-01-05-how-to-punish-employees %}) 
+your boss that you are one.
