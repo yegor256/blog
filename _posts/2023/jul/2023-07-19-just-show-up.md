@@ -82,7 +82,8 @@ applies not only to office attendance, but can also be applied to many other act
 You should be where your boss(es) can physically see you. No, not your work---that's immaterial. They need
 to see you in person. Here's what you can do to truly "Just Show Up":
 
-  - Participate in all [meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}), events, workshops, and team-building activities;
+  - Participate in all [meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %});
+  - Attend all events, workshops, and team-building activities;
   - Situate yourself next to the boss;
   - Become a member of all committees;
   - Seize every opportunity to [ask questions]({% pst 2020/dec/2020-12-29-metric-for-emotions %});
