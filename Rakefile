@@ -300,13 +300,16 @@ task :excerpts do
 end
 
 desc 'Make sure there are no prohibited RegEx-es'
-task :regex do
+task regex: [:build] do
   ptns = [
+    /—\s/,
+    /\s—/,
     /("|&quot;)[,.?!]/,
     /\s&mdash;/,
     /&mdash;\s/
   ]
   errors = 0
+  pages = 0
   all_html.each do |f|
     html = Nokogiri::HTML(File.read(f))
     html.search('//code').remove
@@ -319,9 +322,10 @@ task :regex do
         errors += 1
       end
     end
+    pages += 1
   end
   raise "#{errors} violations of RegEx prohibition" unless errors.zero?
-  done 'No prohibited regular expressions'
+  done "No prohibited regular expressions in #{pages} pages"
 end
 
 desc 'Make sure all snippets are compact enough'
