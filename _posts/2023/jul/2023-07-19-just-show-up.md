@@ -40,12 +40,14 @@ I believe that the ability to measure results objectively is what makes a compet
 recent desire of large tech companies to restrict and/or entirely prohibit remote work has
 highlighted the lack of this ability in the industry. Indeed, a manager who knows how to evaluate
 the work of the team and its individual members wouldn't worry about whether they are co-located in
-an office or working remotely. It simply wouldn't matter! If programmers know that rewards will be
+an office or working remotely. It simply [wouldn't matter]({% pst 2017/may/2017-05-02-remote-slaves %})! 
+If programmers know that [rewards]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}) will be
 given for deliverables and that penalties will occur in their absence, they can find the best place
 to create these deliverables, be it at home, in the office, or at a coffee shop (I'm one of them).
-However, if programmers don't have such a straightforward "reward and punishment" system, they can
+However, if programmers don't have such a straightforward 
+"[reward and punishment]({% pst 2018/oct/2018-10-09-can-you-control-us %})" system, they can
 become lazy and demotivated. To get back on track, they need a manager, an office, and daily
-supervision.
+[supervision]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 
 Google recently [said](https://www.cnbc.com/2023/06/08/google-to-crack-down-on-hybrid-work-asks-remote-workers-to-reconsider.html)
 that "working together in the same room makes a positive difference"...
@@ -63,7 +65,8 @@ and creativity by introducing the concept of [productivity evaluation](https://w
 They can simply reward the most disciplined clock-watchers and call it a management.
 
 On the other hand, perhaps it's not entirely detrimental for some of us. If the management 
-is incompetent enough to "make office attendance part of performance reviews" 
+is [incompetent]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %}) 
+enough to "make office attendance part of performance reviews" 
 (as [Google just has](https://arstechnica.com/google/2023/06/google-makes-office-attendance-part-of-performance-reviews/)), 
 let's play along and provide them with what they want: let's attend! 
 Let's display our [loyalty]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}), 
@@ -77,10 +80,10 @@ applies not only to office attendance, but can also be applied to many other act
 development. You should be where your boss(es) can physically see you. No, not your work---that's immaterial. They need
 to see you in person. Here's what you can do to truly "Just Show Up":
 
-  - Participate in all meetings, events, workshops, and team-building activities;
+  - Participate in all [meetings]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}), events, workshops, and team-building activities;
   - Situate yourself next to the boss;
   - Become a member of all committees;
-  - Seize every opportunity to ask questions;
+  - Seize every opportunity to [ask questions]({% pst 2020/dec/2020-12-19-metric-for-emotions %});
   - Be vocal in the office to ensure that your boss hears you;
   - Submit proposals whenever they're requested;
   - Respond to all emails;
