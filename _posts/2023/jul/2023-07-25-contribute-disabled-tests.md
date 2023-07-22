@@ -14,12 +14,13 @@ keywords:
   - bug report
   - bug tracking
   - puzzle driven development
-image: /images/2023/07/
+image: /images/2023/07/dead-or-alive.jpg
 jb_picture:
-  caption: ...
+  caption: Dead or Alive (1999) by Takashi Miike
 ---
 
-When you find a bug in an open-source library that you use, what do you do?
+When you find a bug in an open-source library that you use, 
+[what do you do]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %})?
 You submit a GitHub issue (or whatever ticket tracking system they use).
 In the issue, you describe the problem in the best possible way, preferably
 providing a working code example that the author of the library can run locally
@@ -33,7 +34,8 @@ in a pull request: send them the bug in the form of a disabled unit test.
 {% jb_picture_body %}
 
 Say, there is a Rust library that provides a `fibo()` function that 
-calculates a Fibonacci number, which you can use this way:
+calculates a [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_sequence), 
+which you can use this way:
 
 ```rust
 let n = 23;
@@ -45,13 +47,11 @@ You run it and it prints `17711`, which is mistakenly the 22nd Fibonacci number,
 not the 23rd. It is definitely a bug. You submit a ticket, saying something like this:
 
 ```
-I'm trying to use your library to
-calculate a Fibonacci number, but
-for some reason, I'm getting a wrong
-result: the 23rd number your library
-returns is 17711, while I'm expecting
-the number 28657. Please check
-and fix.
+I'm trying to use your library to calculate 
+a Fibonacci  number, but for some reason, I'm 
+getting a wrong result:  the 23rd number your 
+library returns is 17711, while I'm expecting 
+the number 28657. Please check and fix.
 ```
 
 They will reply "Can you prove it, please? Show us the code!" and
@@ -92,6 +92,8 @@ by the repository maintenance team. This kind of PR saves the time
 they would spend creating a unit test. Also, it saves your time for
 creating a bug report, as it will be created automatically by
 [the puzzles discovery tool]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %}).
+
+{% badge http://img.jcabi.com/logo-square.svg 48 http://http.jcabi.com %}
 
 BTW, this blog post was motivated by [this pull request](https://github.com/jcabi/jcabi-xml/pull/212) 
 in the [jcabi/jcabi-xml](https://github.com/jcabi/jcabi-xml) library, where a disabled
