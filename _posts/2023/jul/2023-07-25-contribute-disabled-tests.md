@@ -62,7 +62,8 @@ let x = fibo(23);
 assert_eq!(28657, x);
 ```
 
-Then, if they are disciplined programmers, a new unit test will be created and the
+Then, if they are [disciplined]({% pst 2017/mar/2017-03-24-tdd-that-works %}) 
+programmers, a new unit test will be created and the
 `fibo()` function will be fixed. Moreover, if they are 
 [very disciplined]({% pst 2022/aug/2022-08-04-code-and-tests-different-pull-requests %}) programmers, 
 they will submit the test in a separate pull request, disabling it. Then, in
