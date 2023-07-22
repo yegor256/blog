@@ -10,6 +10,7 @@
 [![My Telegram](https://img.shields.io/badge/Telegram-subscribe-active?logo=telegram)](https://t.me/yegor256news)
 
 This repository contains the sources of my blog: [www.yegor256.com](https://www.yegor256.com)
+(the backup URL is [this one](https://yegor256.github.io/blog)).
 
 My book [_256 Bloghacks_](https://www.yegor256.com/256-bloghacks.html)
 explains how this blog is built and maintained.
