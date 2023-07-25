@@ -16,7 +16,7 @@ keywords:
   - java http client
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
 
 In the world of Java, there are plenty of HTTP clients from which to choose.
 Nevertheless, I decided to create a new one because none of the other clients

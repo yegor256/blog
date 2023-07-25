@@ -15,7 +15,7 @@ keywords:
   - lightweight jdbc wrapper
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
 
 This is how you fetch text from a SQL table
 with [jcabi-jdbc](http://jdbc.jcabi.com):

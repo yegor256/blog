@@ -15,7 +15,7 @@ keywords:
   - java dynamodb query example
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://dynamo.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://dynamo.jcabi.com %}
 
 I'm a big fan of cloud computing in general and of
 [Amazon Web Services](http://aws.amazon.com/) in particular. I honestly believe that in a

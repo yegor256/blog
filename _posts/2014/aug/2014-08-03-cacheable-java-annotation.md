@@ -17,7 +17,7 @@ keywords:
   - "@Cacheable"
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
 
 Say, you have a method that takes time to execute and you want
 its result to be cached. There are [many solutions](http://www.coderanch.com/how-to/java/CachingStrategies),

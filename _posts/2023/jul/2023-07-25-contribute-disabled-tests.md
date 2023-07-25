@@ -94,7 +94,7 @@ they would spend creating a unit test. Also, it saves your time for
 creating a bug report, as it will be created automatically by
 [the puzzles discovery tool]({% pst 2014/apr/2014-04-12-puzzle-driven-development-by-roles %}).
 
-{% badge http://img.jcabi.com/logo-square.svg 48 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 48 https://http.jcabi.com %}
 
 BTW, this blog post was motivated by [this pull request](https://github.com/jcabi/jcabi-xml/pull/212) 
 in the [jcabi/jcabi-xml](https://github.com/jcabi/jcabi-xml) library, where a disabled

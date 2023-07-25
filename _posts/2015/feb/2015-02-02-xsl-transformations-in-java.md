@@ -15,7 +15,7 @@ keywords:
   - java xslt code example
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
 
 [XSL transformation](http://www.w3.org/TR/xslt20/)
 (XSLT) is a powerful mechanism for converting one

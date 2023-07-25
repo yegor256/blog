@@ -15,7 +15,7 @@ keywords:
   - java method re-run
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
 
 If you have a method that fails occasionally and
 you want to retry it a few times before

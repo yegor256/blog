@@ -16,7 +16,7 @@ keywords:
   - java xml parsing best practices
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://xml.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://xml.jcabi.com %}
 
 Unlike with many other modern languages, parsing XML in Java requires  more than
 one line of code. XML traversing using XPath takes even more code,  and I find

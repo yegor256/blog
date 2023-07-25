@@ -43,7 +43,7 @@ This static `LOGGER` property has to be declared in every class
 where logging is required. Just a few lines of code, but
 this is pure noise, as I see it.
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://log.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 http://log.jcabi.com %}
 
 To make life easier, I created a library about two years
 ago, [jcabi-log](http://log.jcabi.com), which has a convenient
