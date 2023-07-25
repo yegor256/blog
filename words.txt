@@ -3289,6 +3289,7 @@ few-minutes-granularity
 fewer
 FFK
 fiasco
+fibo
 fibonacci
 fiction
 field
@@ -6120,6 +6121,7 @@ op
 open
 open-minded
 open-mindedness
+open-source
 OpenAI
 opened
 opener
@@ -8133,6 +8135,7 @@ simplification
 simplified
 simplifies
 simplify
+simplifying
 simply
 simula
 simulates
@@ -9236,6 +9239,7 @@ trio
 trip
 tripled
 tripod
+trivial
 trolling
 trolls
 trotsky

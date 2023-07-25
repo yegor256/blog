@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-07-19T09:56:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Just Show Up</title><link href="https://www.yegor256.com/2023/07/19/just-show-up.html" rel="alternate" type="text/html" title="Just Show Up" /><published>2023-07-19T00:00:00+00:00</published><updated>2023-07-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/07/19/just-show-up</id><content type="html" xml:base="https://www.yegor256.com/2023/07/19/just-show-up.html"><![CDATA[<p>According to a <a href="https://www.emerald.com/insight/content/doi/10.1108/09534810710760045/full/html">study</a> 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-07-25T04:07:58+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">A Disabled Test In Lieu of a Bug Report</title><link href="https://www.yegor256.com/2023/07/25/contribute-disabled-tests.html" rel="alternate" type="text/html" title="A Disabled Test In Lieu of a Bug Report" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/07/25/contribute-disabled-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/07/25/contribute-disabled-tests.html"><![CDATA[<p>When you find a bug in an open-source library that you use, 
+<a href="/2018/07/24/bugs-or-pull-requests.html">what do you do</a>?
+You submit a GitHub issue (or whatever ticket tracking system they use).
+In the issue, you describe the problem in the best possible way, preferably
+providing a working code example that the author of the library can run locally
+to reproduce the bug. If you don’t provide them with an executable snippet of code,
+they will most likely ask you to do so, unless the bug is trivial.
+I suggest simplifying the workflow and giving them what they want right
+in a pull request: send them the bug in the form of a disabled unit test.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Dead or Alive (1999) by Takashi Miike" src="/images/2023/07/dead-or-alive.jpg" longdesc="#25bc3165" /><figcaption id="25bc3165">Dead or Alive (1999) by Takashi Miike</figcaption></figure>
+
+<p>Say, there is a Rust library that provides a <code class="language-plaintext highlighter-rouge">fibo()</code> function that 
+calculates a <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci number</a>, 
+which you can use this way:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
+<span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="nf">fibo</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="nd">println!</span><span class="p">(</span><span class="s">"The {n}th Fibonacci is {x}"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>You run it and it prints <code class="language-plaintext highlighter-rouge">17711</code>, which is mistakenly the 22nd Fibonacci number,
+not the 23rd. It is definitely a bug. You submit a ticket, saying something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I'm trying to use your library to calculate 
+a Fibonacci  number, but for some reason, I'm 
+getting a wrong result:  the 23rd number your 
+library returns is 17711, while I'm expecting 
+the number 28657. Please check and fix.
+</code></pre></div></div>
+
+<p>They will reply “Can you prove it, please? Show us the code!” and
+you will probably add this code to the ticket:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="nf">fibo</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
+<span class="nd">assert_eq!</span><span class="p">(</span><span class="mi">28657</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Then, if they are <a href="/2017/03/24/tdd-that-works.html">disciplined</a> 
+programmers, a new unit test will be created and the
+<code class="language-plaintext highlighter-rouge">fibo()</code> function will be fixed. Moreover, if they are 
+<a href="/2022/08/04/code-and-tests-different-pull-requests.html">very disciplined</a> programmers, 
+they will submit the test in a separate pull request, disabling it. Then, in
+the second pull request, they will make a fix.</p>
+
+<p>Why can’t you help them and skip the issue submission step? Just make the
+first pull request yourself, with the disabled test inside and a 
+<a href="/2010/03/04/pdd.html">“puzzle”</a> added to it:</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// @todo #42 This test is disabled because the</span>
+<span class="c1">//  fibo() function doesn't work correctly</span>
+<span class="c1">//  with this particular number, it returns</span>
+<span class="c1">//  17711 instead of 28657. Let's fix it.</span>
+<span class="nd">#[test]</span>
+<span class="nd">#[ignore]</span>
+<span class="k">fn</span> <span class="nf">calculates_23rd_fibonacci_number</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="nf">fibo</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
+  <span class="nd">assert_eq!</span><span class="p">(</span><span class="mi">28657</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Such a PR serves as both a bug report
+(this is what the text of the puzzle will be turned into, once the PR is merged)
+and a test that reproduces the problem. It will be more than welcome
+by the repository maintenance team. This kind of PR saves the time
+they would spend creating a unit test. Also, it saves your time for
+creating a bug report, as it will be created automatically by
+<a href="/2014/04/12/puzzle-driven-development-by-roles.html">the puzzles discovery tool</a>.</p>
+
+<figure class="badge"><a href="http://http.jcabi.com"><img src="http://img.jcabi.com/logo-square.svg" style="width:48px;max-width:100%;" alt="badge" /></a></figure>
+
+<p>BTW, this blog post was motivated by <a href="https://github.com/jcabi/jcabi-xml/pull/212">this pull request</a> 
+in the <a href="https://github.com/jcabi/jcabi-xml">jcabi/jcabi-xml</a> library, where a disabled
+unit test was added to the code base specifically to reproduce the bug. In addition to
+the test, a puzzle was added, which led to a <a href="https://github.com/jcabi/jcabi-xml/issues/213">new ticket</a>, 
+a <a href="https://github.com/jcabi/jcabi-xml/pull/214">new pull request</a>, 
+and finally a <a href="https://github.com/jcabi/jcabi-xml/releases/tag/0.28.0">new release</a> of the library.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pdd" /><category term="testing" /><summary type="html"><![CDATA[Instead of merely submitting bug reports, it can often be more efficient to contribute a pull request, complete with a disabled unit test and a detailed description of the problem.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/07/dead-or-alive.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/07/dead-or-alive.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Just Show Up</title><link href="https://www.yegor256.com/2023/07/19/just-show-up.html" rel="alternate" type="text/html" title="Just Show Up" /><published>2023-07-19T00:00:00+00:00</published><updated>2023-07-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/07/19/just-show-up</id><content type="html" xml:base="https://www.yegor256.com/2023/07/19/just-show-up.html"><![CDATA[<p>According to a <a href="https://www.emerald.com/insight/content/doi/10.1108/09534810710760045/full/html">study</a> 
 conducted by <a href="https://www.jemielniak.org/">Dariusz Jemielniak</a> in 2007, the majority of programmers perceive 
 their own managers as highly incompetent. We don’t expect our bosses to be 
 coding-savvy—this level of technical competence is <a href="/2016/05/24/who-is-project-manager.html">not a requirement</a>
@@ -43,6 +121,9 @@ They don’t need to risk damaging
 and creativity by introducing the concept of <a href="https://www.youtube.com/watch?v=yZcNHZ_FJco">productivity evaluation</a> 
 (that’s unthinkable!). 
 They can simply reward the most disciplined clock-watchers and call it a management.</p>
+
+<aside class="quote">Let’s focus on fitting into the group rather than contributing to the codebase.
+</aside>
 
 <p>On the other hand, perhaps it’s not entirely detrimental for some of us. If the management 
 is <a href="/2017/08/01/how-to-manage-a-manager.html">incompetent</a> 
@@ -1171,49 +1252,4 @@ fell down on the head of your customer. What do you do before you fix the bug?
 You fix the safety net. You add more automated tests, which will catch this
 bug in the future. Only then do you fix the bug.</p>
 
-<p>I believe that the safety net of a software project is its most valuable asset.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html"><![CDATA[Modifying the source code and knowing that there are no automated tests in place is similar to working at height and knowing that a single mistake could cost you your life.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/safety-net.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/safety-net.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Principle of One</title><link href="https://www.yegor256.com/2022/06/14/principle-of-one.html" rel="alternate" type="text/html" title="The Principle of One" /><published>2022-06-14T00:00:00+00:00</published><updated>2022-06-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/06/14/principle-of-one</id><content type="html" xml:base="https://www.yegor256.com/2022/06/14/principle-of-one.html"><![CDATA[<p>When I make a slide deck for a new presentation, invent a new domain name, think about
-a name for a new Java class, itemize bullet points in an academic paper, even
-write an email—I try to follow a simple principle which helps me make
-my content more solid. Well, at least I believe it does. Maybe it will help you as well.
-The principle is simple: at all costs, try to squeeze the content into
-<em>one</em> word, <em>one</em> sentence, <em>one</em> paragraph, or <em>one</em> page.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="True Story (2021) by Eric Newman" src="/images/2022/06/true-story.jpg" longdesc="#f816eca5" /><figcaption id="f816eca5">True Story (2021) by Eric Newman</figcaption></figure>
-
-<p>A more formal definition of the principle would be this:
-it’s either one word/sentence/paragraph/page <em>or</em> way more.
-Let’s see an example. Say I need to list my plans for tomorrow:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- write a new article
-- send an email to my boss
-- cook a dinner
-- take a nap
-</code></pre></div></div>
-
-<p>Do any of them need to be longer than one word? Not really. “Take a nap”
-is just three words, as is “cook a dinner”. On the one hand, three might not be considered
-“way more” than one. On the other, they could be shortened without
-any loss of meaning. Thus, I have to decide whether to make them all <em>much</em>
-longer than one word or shorten them all to a single one.
-The second choice is always preferable:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- article
-- email
-- dinner
-- nap
-</code></pre></div></div>
-
-<p>I wrote about <a href="/2015/01/12/compound-name-is-code-smell.html">compound variable names</a>
-in an earlier post: the same principle is applicable
-to them. Variables must either be nouns without any other words around them,
-or use many more words, which is an exceptional situation.</p>
-
-<p>In another <a href="/2016/03/08/pimp-up-your-resume.html">blog post about resumes</a>
-I mentioned that a good CV must take exactly one page.
-If it’s more, it should be many more. But definitely not two
-or three pages.</p>
-
-<p>I suggest applying this principle to every piece of content
-you write: try to squeeze it into <em>one</em>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[The principle is simple: a piece of text must either consist of a single word or many more, but nothing in the middle.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/true-story.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/true-story.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>I believe that the safety net of a software project is its most valuable asset.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html"><![CDATA[Modifying the source code and knowing that there are no automated tests in place is similar to working at height and knowing that a single mistake could cost you your life.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/safety-net.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/safety-net.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
