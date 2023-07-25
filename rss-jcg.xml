@@ -617,7 +617,7 @@ why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let’s see what I me
       <item>
         <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;http://img.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;https://www.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Maven is a build automation tool mostly for Java projects. It’s a great
 tool, but it has one important drawback that has motivated the creation
@@ -649,7 +649,7 @@ what code duplication means. It’s a disaster. However, there is a solution.&lt
       <item>
         <title>XSL Transformation in Java: An Easy Way</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;http://img.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;https://www.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
 (XSLT) is a powerful mechanism for converting one
