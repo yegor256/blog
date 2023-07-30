@@ -85,7 +85,7 @@ If the client is fortunate,
 
 It appears that method overloading is the root of the issue: maintaining 
 multiple implementations under a single name inevitably introduces some 
-concealed semantics in most of them. Theun, when something is obscured, it prompts 
+concealed semantics in most of them. Then, when something is obscured, it prompts 
 assumptions, which in turn lead to misunderstandings, and eventually to bugs.
 
 A better alternative would look like this:
