@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Method Overloading"
+title: "The Hidden Dangers of Method Overloading"
 date: 2023-09-01
 place: Moscow, Russia
 tags: oop
@@ -13,9 +13,9 @@ keywords:
   - overload methods
   - method overloading design
   - method overloading oop
-image: /images/2023/08/
+image: /images/2023/08/youth.jpg
 jb_picture:
-  caption: 
+  caption: Youth (2015) by Paolo Sorrentino
 ---
 
 Method overloading is a common feature in many programming languages that allows 
@@ -127,8 +127,9 @@ awareness and with explicit intent, converts 42 (the product's ID) into an insta
 of `ProductInCatalog`. This design no longer conceals any elements. There are 
 no assumptions to be made and no conditions that the code must fulfill.
 
-Do we still retain the benefits offered by method overloading? 
-Indeed, we do. There is no code duplication, and the complexity of 
-the code is reduced. Furthermore, it is now much easier to read the code
-that employs the `Cart`.
-
+Do we still preserve the advantages provided by method overloading? Indeed, we do. 
+There is no code duplication, and the complexity of the code is reduced. 
+Furthermore, the readability of the code using the `Cart` is significantly improved. 
+To summarize, I recommend avoiding method overloading, even though it will undoubtedly 
+result in a larger number of classes in the codebase. However, that is 
+[a different discussion altogether]({% pst 2017/feb/2017-02-28-too-many-classes %}).
