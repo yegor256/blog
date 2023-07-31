@@ -88,7 +88,7 @@ multiple implementations under a single name inevitably introduces some
 concealed semantics in most of them. Then, when something is obscured, it prompts 
 assumptions, which in turn lead to misunderstandings, and eventually to bugs.
 
-A better alternative would look like this:
+I believe, a better alternative looks like this:
 
 ```java
 class ProductInCatalog implements Product {
