@@ -6,7 +6,7 @@ place: Moscow, Russia
 tags: oop
 description: |
   While method overloading is purported to enhance readability, 
-  but it actually tends to diminish it.
+  it actually tends to diminish it.
 keywords:
   - method overloading
   - function overloading
