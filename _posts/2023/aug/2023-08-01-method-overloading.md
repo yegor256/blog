@@ -3,7 +3,7 @@ layout: post
 title: "The Hidden Dangers of Method Overloading"
 date: 2023-09-01
 place: Moscow, Russia
-tags: oop
+tags: oop java
 description: |
   While method overloading is purported to enhance readability, 
   it actually tends to diminish it.
