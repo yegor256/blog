@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-01T04:40:32+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Hidden Dangers of Method Overloading</title><link href="https://www.yegor256.com/2023/08/01/method-overloading.html" rel="alternate" type="text/html" title="The Hidden Dangers of Method Overloading" /><published>2023-08-01T00:00:00+00:00</published><updated>2023-08-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/01/method-overloading</id><content type="html" xml:base="https://www.yegor256.com/2023/08/01/method-overloading.html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Function_overloading">Method overloading</a> 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-01T05:40:38+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Hidden Dangers of Method Overloading</title><link href="https://www.yegor256.com/2023/08/01/method-overloading.html" rel="alternate" type="text/html" title="The Hidden Dangers of Method Overloading" /><published>2023-08-01T00:00:00+00:00</published><updated>2023-08-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/01/method-overloading</id><content type="html" xml:base="https://www.yegor256.com/2023/08/01/method-overloading.html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Function_overloading">Method overloading</a> 
 is a common feature in many programming languages that allows 
 a class to have two or more methods with the same name but different parameters.
 <a href="https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/member-overloading">According</a> 
@@ -88,15 +88,6 @@ assumptions, which in turn lead to misunderstandings, and eventually to bugs.</p
 <span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Product</span><span class="o">(</span><span class="s">"book"</span><span class="o">));</span>
 <span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">ProductInCatalog</span><span class="o">(</span><span class="mi">42</span><span class="o">));</span>
 </code></pre></div></div>
-
-<p>The constructor of <code class="language-plaintext highlighter-rouge">ProductInCatalog</code> is not code-free, 
-as <a href="/2015/05/07/ctors-must-be-code-free.html">it should be</a>, 
-however for this discussion it’s not so important. The <code class="language-plaintext highlighter-rouge">ProductInCatalog</code>
-class is an abstraction of a <code class="language-plaintext highlighter-rouge">Product</code> found in the catalog. The class
-is used by the user of the <code class="language-plaintext highlighter-rouge">Cart</code> class. The user explicitly and in his
-full awareness turns 42 (the ID of the product) into an instance of
-<code class="language-plaintext highlighter-rouge">ProductInCatalog</code>. There is nothing hidden in this design any more.
-No assumptions and no promises that the code must keep.</p>
 
 <p>The constructor of <code class="language-plaintext highlighter-rouge">ProductInCatalog</code> is not code-free,
 as <a href="/2015/05/07/ctors-must-be-code-free.html">it ideally should be</a>,
