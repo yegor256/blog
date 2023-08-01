@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-01T03:55:45+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">A Disabled Test In Lieu of a Bug Report</title><link href="https://www.yegor256.com/2023/07/25/contribute-disabled-tests.html" rel="alternate" type="text/html" title="A Disabled Test In Lieu of a Bug Report" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/07/25/contribute-disabled-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/07/25/contribute-disabled-tests.html"><![CDATA[<p>When you find a bug in an open-source library that you use, 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-01T04:40:32+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Hidden Dangers of Method Overloading</title><link href="https://www.yegor256.com/2023/08/01/method-overloading.html" rel="alternate" type="text/html" title="The Hidden Dangers of Method Overloading" /><published>2023-08-01T00:00:00+00:00</published><updated>2023-08-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/01/method-overloading</id><content type="html" xml:base="https://www.yegor256.com/2023/08/01/method-overloading.html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Function_overloading">Method overloading</a> 
+is a common feature in many programming languages that allows 
+a class to have two or more methods with the same name but different parameters.
+<a href="https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/member-overloading">According</a> 
+to Microsoft, method overloading is “one of the most important techniques 
+for <em>improving</em> usability, productivity, and readability of reusable libraries.”
+I disagree. In my opinion, method overloading may lead to less readable code and more bugs,
+because maintaining two or more implementations under the same name gives rise to 
+concealed semantics, which inevitably result in misunderstandings and functional defects.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Youth (2015) by Paolo Sorrentino" src="/images/2023/08/youth.jpg" longdesc="#62f78b0f" /><figcaption id="62f78b0f">Youth (2015) by Paolo Sorrentino</figcaption></figure>
+
+<p>Let’s start with a Java example.
+Suppose you wish to enable the addition of a product to the shopping cart, 
+having either the product ID or the <code class="language-plaintext highlighter-rouge">Product</code> object at your disposal. 
+If only the ID is provided, you’d want the shopping cart to access 
+the product catalog, locate the corresponding <code class="language-plaintext highlighter-rouge">Product</code> object, and add it. 
+This is where method overloading can prove beneficial (the <code class="language-plaintext highlighter-rouge">add()</code> method is
+defined twice with two different <a href="https://stackoverflow.com/questions/8516498">signatures</a> 
+and implementations):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Cart</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Product</span><span class="o">&gt;</span> <span class="n">products</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Catalog</span><span class="o">().</span><span class="na">findById</span><span class="o">(</span><span class="n">id</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Product</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">products</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kt">var</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Cart</span><span class="o">();</span>
+<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Product</span><span class="o">(</span><span class="s">"book"</span><span class="o">));</span>
+<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">42</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>This approach is indeed convenient for at least two reasons. First, the 
+<code class="language-plaintext highlighter-rouge">add(int)</code> method handles the conversion from <code class="language-plaintext highlighter-rouge">int</code> to <code class="language-plaintext highlighter-rouge">Product</code>, 
+which need not be repeated elsewhere—they can simply pass the product’s ID 
+to this method and let it do the work—thereby eliminating code duplication. 
+Second, because the functionality of “searching the catalog” is not exposed 
+beyond the <code class="language-plaintext highlighter-rouge">Cart</code> class, it simplifies the surrounding code. It appears that, 
+indeed, the usability and readability of the code are enhanced.</p>
+
+<p>However, the issues addressed (code duplication and complexity) are lesser 
+than the problems introduced. While the semantics of the <code class="language-plaintext highlighter-rouge">add(Product)</code> method are 
+obvious, the workings of the <code class="language-plaintext highlighter-rouge">add(int)</code> method are not clear to its users. 
+Perhaps it searches the catalog? Maybe it selects the n-th product from 
+the existing cart and re-adds it to the end of the cart? Or perhaps it searches 
+the orders previously placed by the user and extracts the n-th product from there? 
+We simply don’t know when we examine the method’s signature.</p>
+
+<aside class="quote">When something is obscured, it prompts assumptions, which in turn lead to misunderstandings, and eventually to bugs.
+</aside>
+
+<p>In order to comprehend what the <code class="language-plaintext highlighter-rouge">add(int)</code> method does, we must refer to 
+its Javadoc block, which may not be sufficiently accurate. Furthermore, 
+<a href="https://stackoverflow.com/a/913342/187141">as is often the case</a>, 
+the documentation in the Javadoc block might not be 
+in sync with the code inside the method. To put it plainly, the client 
+using the <code class="language-plaintext highlighter-rouge">add(int)</code> method invariably makes an assumption about its inner workings. 
+If the client is fortunate, 
+1) the assumption will be accurate, and 
+2) any changes subsequently made to the method won’t invalidate that assumption.</p>
+
+<p>It appears that method overloading is the root of the issue: maintaining 
+multiple implementations under a single name inevitably introduces some 
+concealed semantics in most of them. Then, when something is obscured, it prompts 
+assumptions, which in turn lead to misunderstandings, and eventually to bugs.</p>
+
+<p>I believe, a better alternative looks like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ProductInCatalog</span> <span class="kd">implements</span> <span class="nc">Product</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Product</span> <span class="n">p</span><span class="o">;</span>
+  <span class="nc">ProductInCatalog</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Catalog</span><span class="o">().</span><span class="na">findById</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="c1">// all "Product" interface's methods</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Cart</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Product</span><span class="o">&gt;</span> <span class="n">products</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Product</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">products</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kt">var</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Cart</span><span class="o">();</span>
+<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Product</span><span class="o">(</span><span class="s">"book"</span><span class="o">));</span>
+<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">ProductInCatalog</span><span class="o">(</span><span class="mi">42</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p>The constructor of <code class="language-plaintext highlighter-rouge">ProductInCatalog</code> is not code-free, 
+as <a href="/2015/05/07/ctors-must-be-code-free.html">it should be</a>, 
+however for this discussion it’s not so important. The <code class="language-plaintext highlighter-rouge">ProductInCatalog</code>
+class is an abstraction of a <code class="language-plaintext highlighter-rouge">Product</code> found in the catalog. The class
+is used by the user of the <code class="language-plaintext highlighter-rouge">Cart</code> class. The user explicitly and in his
+full awareness turns 42 (the ID of the product) into an instance of
+<code class="language-plaintext highlighter-rouge">ProductInCatalog</code>. There is nothing hidden in this design any more.
+No assumptions and no promises that the code must keep.</p>
+
+<p>The constructor of <code class="language-plaintext highlighter-rouge">ProductInCatalog</code> is not code-free,
+as <a href="/2015/05/07/ctors-must-be-code-free.html">it ideally should be</a>,
+however, this point is not so significant for our current discussion. The <code class="language-plaintext highlighter-rouge">ProductInCatalog</code>
+class serves as an abstraction of a <code class="language-plaintext highlighter-rouge">Product</code> found in the catalog. This class
+is used by the client of the <code class="language-plaintext highlighter-rouge">Cart</code> class. The client, in full 
+awareness and with explicit intent, converts 42 (the product’s ID) into an instance 
+of <code class="language-plaintext highlighter-rouge">ProductInCatalog</code>. This design no longer conceals any elements. There are 
+no assumptions to be made and no conditions that the code must fulfill.</p>
+
+<p>Do we still preserve the advantages provided by method overloading? Indeed, we do. 
+There is no code duplication, and the complexity of the code is reduced. 
+Furthermore, the readability of the code using the <code class="language-plaintext highlighter-rouge">Cart</code> is significantly improved. 
+To summarize, I recommend avoiding method overloading, even though it will undoubtedly 
+result in a larger number of classes in the codebase. However, that is 
+<a href="/2017/02/28/too-many-classes.html">a different discussion altogether</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[While method overloading is purported to enhance readability, it actually tends to diminish it and introduce bugs.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/youth.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/youth.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A Disabled Test In Lieu of a Bug Report</title><link href="https://www.yegor256.com/2023/07/25/contribute-disabled-tests.html" rel="alternate" type="text/html" title="A Disabled Test In Lieu of a Bug Report" /><published>2023-07-25T00:00:00+00:00</published><updated>2023-07-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/07/25/contribute-disabled-tests</id><content type="html" xml:base="https://www.yegor256.com/2023/07/25/contribute-disabled-tests.html"><![CDATA[<p>When you find a bug in an open-source library that you use, 
 <a href="/2018/07/24/bugs-or-pull-requests.html">what do you do</a>?
 You submit a GitHub issue (or whatever ticket tracking system they use).
 In the issue, you describe the problem in the best possible way, preferably
@@ -1179,77 +1293,4 @@ including
 <a href="https://github.com/yegor256/pdd">pdd</a>,
 <a href="https://github.com/yegor256/texqc">texqc</a>,
 and
-<a href="https://github.com/yegor256/texsc">texsc</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html"><![CDATA[Where to put default configuration parameters for a command line tool? It has to be a JSON or YAML config file? Neither. Just plain text.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/07/the-trotsky.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/07/the-trotsky.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Automated Tests Are the Safety Net that Saves You</title><link href="https://www.yegor256.com/2022/07/05/safety-net.html" rel="alternate" type="text/html" title="Automated Tests Are the Safety Net that Saves You" /><published>2022-07-05T00:00:00+00:00</published><updated>2022-07-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/07/05/safety-net</id><content type="html" xml:base="https://www.yegor256.com/2022/07/05/safety-net.html"><![CDATA[<p>Automated tests are the ones that are usually called unit tests or integration tests,
-or just any tests that are being executed <em>automatically</em>. That’s the difference
-between them and manual tests. What is the purpose of automated tests?
-First and foremost, they reduce the amount of routine work: we don’t
-need to remember how to test a module, the tests remember. We just click
-a button and a suite of tests, which may consist of hundreds or thousands,
-runs and reports errors, if any are found. Saving time is important,
-but it’s not the only and, if you ask me, not the most important purpose
-of automated tests. A more important one is their role as a safety net.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Main picture" src="/images/2022/06/safety-net.jpg" /></figure>
-
-<p>Do you know what a safety net is? Wikipedia
-<a href="https://en.wikipedia.org/wiki/Safety_net">says</a> that
-it is “a net to protect people from injury after falling from heights.”
-You most probably have seen it on buildings which are being
-constructed or reconstructed.
-The red one in the picture is the safety net.</p>
-
-<p>If construction workers accidentally fall down
-or drop their tools, they won’t die and won’t kill anyone on the ground.
-Does this knowledge help them work more effectively? I believe it does. I didn’t
-find any research on this subject, comparing the productivity
-of workers who know that there is a safety net beneath them with the productivity
-of workers who know that a mistake would most probably cost them their lives or
-the life of child playing on the ground. The results of such research are obvious though,
-I believe.</p>
-
-<aside class="youtube">
-        <a href="https://www.youtube.com/watch?v=Y0Zx_sdVG48"><div class="box">
-        <img src="https://i.ytimg.com/vi/Y0Zx_sdVG48/mqdefault.jpg" alt="YouTube video #Y0Zx_sdVG48" />
-        <div class="play"><i class="icon icon-play"></i></div>
-        </div></a>
-        <div>M199: Unit tests are the Safety Net that you can&#39;t afford to not use;
-        24 June 2022.</div></aside>
-
-<p>The same is true for us programmers. Modifying the source code and knowing that
-there are no automated tests in place is similar to working at height
-without a safety net: one mistake could cost you server downtime, a frustrated
-customer, lost money, and maybe a lost job. How high would the productivity
-of a programmer be while working like this? Do we need to do research to find out?
-Or is the answer as obvious as for construction workers?</p>
-
-<p>In order to give you enough confidence, automated tests must not only be
-written and committed to a repository, but they must be automatically executed
-before every change you try to make to the trunk. You must be able
-to run them after every change you make locally, while incrementally developing the code.
-Then, you must know that even if you accidentally forget to run them locally
-and send your branch to the trunk for merging, the automated merge pipeline
-will catch you.</p>
-
-<p>The more time and effort you invest into making your safety net strong,
-that is, the better your tests cover your code, then the more <em>productive</em> your
-work will be, the safer you will feel in introducing new features or fixing bugs.
-Simply put, you will code <em>faster</em> and <em>better</em>. Just because you know that
-you can’t break what you did yesterday.</p>
-
-<p>The first thing you do when you start a new software project is
-implement a safety net: you automate the build pipeline and you create
-a few simple automated tests. You make sure they protect you. Only then do you
-start writing code. Ask construction workers: are they allowed to start a workday
-without a safety net? Obviously not. I’m sure it’s even illegal. The same
-must be true for us programmers: coding without the safety net of automated tests
-must be illegal.</p>
-
-<p>When a bug is reported to you by your customers, this should mean
-that the safety net has a <em>hole</em>. It is not tight enough, that’s why the bug
-fell down on the head of your customer. What do you do before you fix the bug?
-You fix the safety net. You add more automated tests, which will catch this
-bug in the future. Only then do you fix the bug.</p>
-
-<p>I believe that the safety net of a software project is its most valuable asset.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html"><![CDATA[Modifying the source code and knowing that there are no automated tests in place is similar to working at height and knowing that a single mistake could cost you your life.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/safety-net.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/safety-net.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<a href="https://github.com/yegor256/texsc">texsc</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html"><![CDATA[Where to put default configuration parameters for a command line tool? It has to be a JSON or YAML config file? Neither. Just plain text.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/07/the-trotsky.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/07/the-trotsky.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

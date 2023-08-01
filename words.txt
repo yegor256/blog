@@ -1183,6 +1183,7 @@ carrot
 carrot-and-stick
 carrots
 cars
+cart
 case
 cases
 cash
@@ -1193,6 +1194,7 @@ casting
 castrates
 casual
 cat
+catalog
 catalogs
 catalysts
 catastrophic
@@ -5595,6 +5597,7 @@ mistakenly
 mistakes
 misunderstand
 misunderstanding
+misunderstandings
 misunderstands
 misunderstood
 MIT
@@ -6883,6 +6886,7 @@ produces
 producing
 product
 product's
+productincatalog
 production
 productive
 productivity
@@ -8064,6 +8068,7 @@ shoot
 shooting
 shoots
 shop
+shopping
 shops
 shore
 short
@@ -9381,6 +9386,7 @@ understood
 undertaken
 underwear
 undocumented
+undoubtedly
 unethical
 unevenly
 unexpected
