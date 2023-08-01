@@ -110,15 +110,6 @@ c.add(new Product("book"));
 c.add(new ProductInCatalog(42));
 ```
 
-The constructor of `ProductInCatalog` is not code-free, 
-as [it should be]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}), 
-however for this discussion it's not so important. The `ProductInCatalog`
-class is an abstraction of a `Product` found in the catalog. The class
-is used by the user of the `Cart` class. The user explicitly and in his
-full awareness turns 42 (the ID of the product) into an instance of
-`ProductInCatalog`. There is nothing hidden in this design any more.
-No assumptions and no promises that the code must keep.
-
 The constructor of `ProductInCatalog` is not code-free,
 as [it ideally should be]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}),
 however, this point is not so significant for our current discussion. The `ProductInCatalog`
