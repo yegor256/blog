@@ -142,6 +142,7 @@ I also contributed to the development of
 
 Full list of my [certifications](https://github.com/yegor256/blog/tree/master/pdf/certifications).
 
-BTW, if you wonder why 256, the answer is simple---this is my FIDOnet node ID back from 1995.
+BTW, if you wonder why 256, the answer is simple---this is my 
+[FIDOnet](https://en.wikipedia.org/wiki/FidoNet) node ID back from 1995.
 I was [2:464/256](http://nodehist.fidonet.org.ua/?address=2%3A464%2F256) over there, and this
 is where my network presence has started.
