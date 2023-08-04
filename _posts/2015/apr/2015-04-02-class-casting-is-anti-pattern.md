@@ -75,7 +75,8 @@ only calculating the size of [`Iterable`](https://docs.oracle.com/javase/8/docs/
 casting and forking based on that casting.
 
 What is the alternative? There are a few, but the most obvious
-is method overloading (not available in semi-OOP languages like Ruby or PHP):
+is [method overloading]({% pst 2023/aug/2023-08-01-method-overloading %})
+(not available in semi-OOP languages like Ruby or PHP):
 
 ```java
 class Foo {

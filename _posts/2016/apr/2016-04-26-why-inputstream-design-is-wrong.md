@@ -111,7 +111,8 @@ is **responsible** for is reading, not parsing or manipulating afterwards.
 
 Interfaces must be small.
 
-Obviously, method overloading in interfaces is a code smell. An interface
+Obviously, [method overloading]({% pst 2023/aug/2023-08-01-method-overloading %}) 
+in interfaces is a code smell. An interface
 with more than **three methods** is a good candidate for refactoring. If methods
 overload each other---it's serious trouble.
 
