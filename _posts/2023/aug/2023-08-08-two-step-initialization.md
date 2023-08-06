@@ -5,9 +5,9 @@ date: 2023-08-08
 place: Moscow, Russia
 tags: oop java
 description: |
-  Sometimes you may be tempted to do two-stage construction of 
-  your object, but I want to argue against it, 
-  in favor of maintaining superior code quality.
+  Sometimes you might be tempted to use a two-stage construction 
+  for your object. However, I suggest reevaluating your design 
+  principles if you feel such an inclination.
 keywords:
   - init method
   - two-step construction
@@ -19,7 +19,10 @@ jb_picture:
   caption: Нирвана (2008) by Igor Voloshin
 ---
 
-...
+At times, it might appear practical to execute additional initialization steps 
+for an object after its constructor has completed. However, I'm of the belief that 
+such requirements signal underlying design flaws. A constructor should be good enough for 
+all scenarios. If it's not, refactor the object.
 
 <!--more-->
 
@@ -52,16 +55,17 @@ var x = new Foo();
 x.init();
 ```
 
-There could be practical reasons for this _two-stage construction_, which, 
-[according to Microsoft](https://learn.microsoft.com/en-us/cpp/mfc/one-stage-and-two-stage-construction-of-objects?view=msvc-170), 
-is an "always safer" way to create objects. However, I believe that 
-every one of such reasons is an indicator of a bad design and 
-a motivation for refactoring.
+There might be practical justifications for this _two-stage construction_, 
+which, [as per Microsoft](https://learn.microsoft.com/en-us/cpp/mfc/one-stage-and-two-stage-construction-of-objects?view=msvc-170), 
+is touted as an "always safer" approach to object creation. Yet, I'm convinced 
+that each of these reasons signifies a flawed design and should 
+serve as a catalyst for refactoring.
 
-## Resource Acquisition
+## Resource Leakage
 
-Consider this class, which opens a stream in its constructor and then
-closes it in the `close()` method:
+Consider an [auto-closeable](https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html) Java class
+that opens a stream in its constructor and then 
+reasonably expects it to be closed in the `close()` method:
 
 ```java
 class Book implements Closeable {
@@ -78,8 +82,7 @@ class Book implements Closeable {
 }
 ```
 
-There is also a runtime exception that may be raised in the constructor of 
-the class. If the class is used this way, the stream will not be
+However, if the runtime exception is raised in the constructor, the stream will not be
 closed and the resource [will be leaked](https://stackoverflow.com/a/29243066/187141):
 
 ```java
@@ -90,10 +93,10 @@ try (Book b = new Book()) {
 
 The `close()` will not be called by the 
 [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) statement, 
-because the object won't be constructed and its initialization won't be finished.
-However, even though the initialization is not finished, the instance
-of the `FileInputStream` will do its work: it will open the file and ... 
-will keep it open.
+as the object will not be fully constructed and its initialization won't be completed.
+However, even if the initialization isn't finalized, the instance
+of `FileInputStream` will do part of its work: it will open the file. 
+It will never close it though.
 
 Two-steps initialization might be a solution:
 
@@ -115,8 +118,8 @@ class Book implements Closeable {
 }
 ```
 
-Now, the code may be used like this, which indeed is safer, because
-the stream will always be closed:
+Now, the code can be used in the following manner, which is indeed safer 
+because the stream will always be closed:
 
 ```java
 try (Book b = new Book()) {
@@ -155,10 +158,15 @@ try (InputStream i = new FileInputStream(new File("a.tex"))) {
 
 Now, both the stream and the book will definitely be closed.
 
-Thus, the root cause of the problem here is the mutability of the `in` attribute,
-which opens the door to resource leakage. It seams that this 
-example is [yet another]({% pst 2014/nov/2014-11-07-how-immutability-helps %}) 
-demonstration of a positive effect of object immutability.
+The root cause of the issue here stems from the [mutability]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) 
+of the `in` attribute, 
+which creates potential for resource leakage. If we were to agree upfront that 
+every object must be immutable, this problem wouldn't arise in the first place. 
+We wouldn't need a workaround like two-step initialization, because we wouldn't 
+encounter a class where an attribute might remain 
+[uninitialized]({% pst 2014/may/2014-05-13-why-null-is-bad %}). It seems that 
+this example serves as [yet another]({% pst 2014/nov/2014-11-07-how-immutability-helps %}) 
+testament to the benefits of object immutability.
 
 ## Fragile Base Class
 
@@ -169,7 +177,7 @@ class Product {
   private final String title;
   Product(String t) {
     this.title = t;
-    print();
+    this.print();
   }
   void print() {
     System.out.printf("Title: %s\n", this.title);
@@ -186,7 +194,7 @@ class Book extends Product {
     super(t);
     this.author = a;
   }
-  void print() {
+  @Override void print() {
     super.print();
     System.out.printf("Author: %s\n", this.author);
   }
@@ -206,21 +214,58 @@ Title: Object Thinking
 Author: null
 ```
 
-Why the `author` prints as `null`, while we provided the `"David West"` string in the constructor?
-Because `super()`, the constructor of the parent class, was called before `this.author`
-was initialized. The constructor of the `Product` class called its own 
-[virtual](https://en.wikipedia.org/wiki/Virtual_function) method `print()`, which was overriden
-by the derived class `Book`. A more generic name for this problem would be 
-"[fragile base class](https://en.wikipedia.org/wiki/Fragile_base_class)."
-The base class calls its own method expecting it to work as it is written. 
-However, apparently, this method is replaced by a different implementation, 
-which exposes a different and invalid behavior. The ability to make such a replacement
-of a method makes the base class fragile.
+Why does the `author` print as `null` when we provided the `"David West"` 
+string in the constructor? The reason is that `super()`, the constructor 
+of the parent class, was invoked before `this.author` was initialized. 
+The constructor of the `Product` class called its own 
+[virtual](https://en.wikipedia.org/wiki/Virtual_function) method `print()`, 
+which the derived class `Book` had overridden. This issue can be more 
+generically referred to as the "[fragile base class](https://en.wikipedia.org/wiki/Fragile_base_class)" 
+problem: the base class calls its own method, expecting it to operate as defined, 
+but this method is unexpectedly replaced by a different implementation in the derived class, 
+leading to unintended and incorrect behavior. Such potential for method 
+replacement is what renders the base class fragile.
 
-Two-phase construction may solve this problem by keeping the 
-initialization of attributes in constructors and moving "printing" into a new `init()` method.
-However, a more generic solution would be two-fold. First, keep constructors code-free, as was
-[suggested earlier]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). Second,
-avoid inheritance in favor of composition, as was also 
-[recommended already]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
+Using two-phase construction could address this issue by keeping 
+attribute initialization in the constructors while relocating the 
+"printing" functionality to a new `init()` method. However, a more comprehensive 
+solution is twofold. Firstly, maintain constructors without any code, as 
+[suggested earlier]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). 
+Secondly, opt for composition over inheritance, as has also been 
+[previously recommended]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})."
+This is how:
+
+```java
+final class Product {
+  private final String title;
+  Product(String t) {
+    this.title = t;
+  }
+  void print() {
+    System.out.printf("Title: %s\n", this.title);
+  }
+}
+final class Book {
+  private final Product product;
+  private final String author;
+  Book(String t, String a) {
+    this.product = new Product(t);
+    this.author = a;
+  }
+  void print() {
+    this.product.print();
+    System.out.printf("Author: %s\n", this.author);
+  }
+}
+```
+
+Now, both classes are marked as `final`, making it technically impossible 
+to override any of their methods. Instead of extending `Product`, the `Book` 
+class encapsulates an instance of it. The `print()` method in the `Book` 
+class oversees the printing functionality, delegating part of this responsibility to 
+`product.print()`. Such a design becomes the only viable option if we mutually 
+agree from the outset that all constructors should remain 
+[code-free]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}) and that 
+implementation inheritance is [off-limits]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
+
 
