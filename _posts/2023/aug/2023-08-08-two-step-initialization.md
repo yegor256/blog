@@ -5,29 +5,21 @@ date: 2023-08-08
 place: Moscow, Russia
 tags: oop java
 description: |
-  ...
+  Sometimes you may be tempted to do two-stage construction of 
+  your object, but I want to argue against it, 
+  in favor of maintaining superior code quality.
 keywords:
   - init method
   - two-step construction
   - initialize method
   - two-step construction
   - two-stage construction
-image: /images/2023/08/
+image: /images/2023/08/nirvana.jpg
 jb_picture:
-  caption: ...
+  caption: Нирвана (2008) by Igor Voloshin
 ---
 
-In object-oriented programming, an object is immutable if its
-state is not changed after 
-[initialization](https://en.wikipedia.org/wiki/Initialization_%28programming%29). 
-In Java, this means having `final` modifiers at all object's fields. 
-Even though it [has been demonstrated]({% pst 2014/nov/2014-11-07-how-immutability-helps %}) 
-that immutability [positively]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) 
-contributes to the quality of code, 
-we keep using "[setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})", a lot.
-However, there is yet another anti-pattern, which, in my opinion,
-is even worse than "mutators"---it is the `init()` method that
-is called on an object after the object is instantiated and initialized.
+...
 
 <!--more-->
 
@@ -134,8 +126,9 @@ try (Book b = new Book()) {
 ```
 
 Even though this may be a good workaround, a better solution would
-be to get rid of immutability of the `Book` and remove the `init()` method.
-Thus, the initialization of the stream should be done
+be to get rid of [immutability]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) 
+of the `Book` and remove the `init()` method.
+Thus, the [initialization](https://en.wikipedia.org/wiki/Initialization_%28programming%29) of the stream should be done
 outside of the `Book` object and then provided to it as an argument
 of the constructor (pay attention to the `final` modifier of the `in` field):
 
@@ -160,8 +153,74 @@ try (InputStream i = new FileInputStream(new File("a.tex"))) {
 }
 ```
 
-Both the stream and the book will definitely be closed.
+Now, both the stream and the book will definitely be closed.
+
+Thus, the root cause of the problem here is the mutability of the `in` attribute,
+which opens the door to resource leakage. It seams that this 
+example is [yet another]({% pst 2014/nov/2014-11-07-how-immutability-helps %}) 
+demonstration of a positive effect of object immutability.
 
 ## Fragile Base Class
 
-...
+Consider this parent class, with an immutable attribute `title`:
+
+```java
+class Product {
+  private final String title;
+  Product(String t) {
+    this.title = t;
+    print();
+  }
+  void print() {
+    System.out.printf("Title: %s\n", this.title);
+  }
+}
+```
+
+Now, let's extend it (again, the `author` attribute is immutable):
+
+```java
+class Book extends Product {
+  private final String author;
+  Book(String t, String a) {
+    super(t);
+    this.author = a;
+  }
+  void print() {
+    super.print();
+    System.out.printf("Author: %s\n", this.author);
+  }
+}
+```
+
+What do you think will be printed after we do the following?
+
+```java
+new Book("Object Thinking", "David West");
+```
+
+This is what:
+
+```java
+Title: Object Thinking
+Author: null
+```
+
+Why the `author` prints as `null`, while we provided the `"David West"` string in the constructor?
+Because `super()`, the constructor of the parent class, was called before `this.author`
+was initialized. The constructor of the `Product` class called its own 
+[virtual](https://en.wikipedia.org/wiki/Virtual_function) method `print()`, which was overriden
+by the derived class `Book`. A more generic name for this problem would be 
+"[fragile base class](https://en.wikipedia.org/wiki/Fragile_base_class)."
+The base class calls its own method expecting it to work as it is written. 
+However, apparently, this method is replaced by a different implementation, 
+which exposes a different and invalid behavior. The ability to make such a replacement
+of a method makes the base class fragile.
+
+Two-phase construction may solve this problem by keeping the 
+initialization of attributes in constructors and moving "printing" into a new `init()` method.
+However, a more generic solution would be two-fold. First, keep constructors code-free, as was
+[suggested earlier]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). Second,
+avoid inheritance in favor of composition, as was also 
+[recommended already]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
+
