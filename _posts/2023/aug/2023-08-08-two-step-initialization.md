@@ -234,10 +234,10 @@ attribute initialization in the constructors while relocating the
 "printing" functionality to a new `init()` method. However, this will
 only cover up the design flaw: the class is fragile.
 
-A more comprehensive solution is twofold. Firstly, maintain constructors without any code, as 
+A more comprehensive solution is twofold. Firstly, maintain constructors code-free, as 
 [suggested earlier]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). 
-Secondly, opt for composition over inheritance, as has also been 
-[previously recommended]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})."
+Secondly, opt for [composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance), 
+as has also been [previously recommended]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})."
 This is how:
 
 ```java
