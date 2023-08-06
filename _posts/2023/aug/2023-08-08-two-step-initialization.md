@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Two-Step Initialization"
+title: "Is Two-Step Initialization a Solution or a Symptom?"
 date: 2023-08-08
 place: Moscow, Russia
 tags: oop java
@@ -21,7 +21,8 @@ jb_picture:
 
 At times, it might appear practical to execute additional initialization steps 
 for an object after its constructor has completed. However, I'm of the belief that 
-such requirements signal underlying design flaws. A constructor should be good enough for 
+such requirements signal underlying design flaws, such as object mutability,
+base class fragility and unfocused abstraction. A constructor should be good enough for 
 all scenarios. If it's not, refactor the object.
 
 <!--more-->
@@ -128,9 +129,11 @@ try (Book b = new Book()) {
 }
 ```
 
-Even though this may be a good workaround, a better solution would
-be to get rid of [immutability]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) 
+Even though this may be a good workaround, it is only a cover for
+the design flaw: mutability of the attribute. A better solution would
+be to get rid of [mutability]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) 
 of the `Book` and remove the `init()` method.
+
 Thus, the [initialization](https://en.wikipedia.org/wiki/Initialization_%28programming%29) of the stream should be done
 outside of the `Book` object and then provided to it as an argument
 of the constructor (pay attention to the `final` modifier of the `in` field):
@@ -228,8 +231,10 @@ replacement is what renders the base class fragile.
 
 Using two-phase construction could address this issue by keeping 
 attribute initialization in the constructors while relocating the 
-"printing" functionality to a new `init()` method. However, a more comprehensive 
-solution is twofold. Firstly, maintain constructors without any code, as 
+"printing" functionality to a new `init()` method. However, this will
+only cover up the design flaw: the class is fragile.
+
+A more comprehensive solution is twofold. Firstly, maintain constructors without any code, as 
 [suggested earlier]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). 
 Secondly, opt for composition over inheritance, as has also been 
 [previously recommended]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %})."
@@ -268,4 +273,67 @@ agree from the outset that all constructors should remain
 [code-free]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}) and that 
 implementation inheritance is [off-limits]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).
 
+## Defaults and Configs
+
+If you've coded in Java for a sufficient amount of time, 
+you'll undoubtedly find this design approach quite familiar:
+
+```java
+class Database {
+  private String host;
+  private int port;
+  private String login;
+  private String password;
+  Database() {
+    this.host = "localhost";
+    this.port = 5432;
+    this.login = "pgsql";
+    this.password = "";
+  }
+  void init(Config cfg) {
+    this.host = cfg.getHost();
+    this.port = cfg.getPort();
+    this.login = cfg.getLogin();
+    this.password = cfg.getPassword();
+  }
+}
+```
+
+Here, the constructor assigns default values to four object attributes, while the 
+`init()` method subsequently updates them based on the values from the "configuration" 
+[DTO]({% pst 2016/jul/2016-07-06-data-transfer-object %}). 
+This method of object initialization may seem more appealing than a series of 
+[setter]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}) 
+calls, as it ensures all necessary attributes are assigned simultaneously, 
+with none overlooked. Such assurance isn't guaranteed with isolated 
+[setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}). 
+Furthermore, the DTO can be auto-populated from an XML or JSON file, which, when
+passed to the `init()` method, further streamlines the code:
+
+```java
+var db = new Database(); // first initialization step
+var cfg = loadFromXML("db-config.xml");
+db.init(cfg); // second initialization step
+```
+
+However, this merely masks the underlying design flaw: the class is too expansive. 
+It's not about the lines of code, but rather the multitude of external elements 
+it tries to abstract: the Internet address, the TCP port, the login string, the password, 
+and likely more in the future. While the `Config` DTO currently suffices 
+due to its modest size, it seems to pave the way for future expansion, 
+tempting programmers to augment it as they see fit. As the size of `Config` increases, 
+so will the number of attributes in `Database`. It's probable that they will 
+soon fall out of sync. Over time, it may become challenging to discern 
+if constructing the `Database` object readies it for operation, or if a preliminary 
+`init()` call is required. Further, will just invoking `init()` be sufficient to utilize the object fully?
+
+If we had initially agreed that our objects should not encapsulate more than 
+three attributes, as [suggested earlier]({% pst 2014/dec/2014-12-15-how-much-your-objects-encapsulate %}), 
+we would have refactored this class. The `init()` method would be removed, and all 
+necessary parameters would be passed through its 
+[primary or secondary]({% pst 2015/may/2015-05-28-one-primary-constructor %}) constructors.
+Keeping all attributes immutable would be helpful too.
+
+It seems that even the [Builder design pattern](https://en.wikipedia.org/wiki/Builder_pattern) 
+would be a better solution than the `init()` method in this particular case.
 
