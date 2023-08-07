@@ -22,8 +22,8 @@ jb_picture:
 At times, it might appear practical to execute additional initialization steps 
 for an object after its constructor has completed. However, I'm of the belief that 
 such requirements signal underlying design flaws, such as object mutability,
-base class fragility and unfocused abstraction. A constructor should be good enough for 
-all scenarios. If it's not, refactor the object.
+base class fragility, violation of layering, and unfocused abstraction. 
+A constructor should be good enough for all scenarios. If it's not, refactor the object.
 
 <!--more-->
 
@@ -337,3 +337,90 @@ Keeping all attributes immutable would be helpful too.
 It seems that even the [Builder design pattern](https://en.wikipedia.org/wiki/Builder_pattern) 
 would be a better solution than the `init()` method in this particular case.
 
+## Violation of Layering 
+
+Consider the following two Java classes, which depend on each other:
+
+```java
+class Book {
+  private final Order order;
+  private final String language;
+  Book(Order o) { 
+    this.order = o; 
+    this.language = o.language();
+  }
+}
+class Order {
+  private final Book book;
+  private final int total;
+  Order(Book b) { 
+    this.book = b; 
+    this.total = book.price() + 10;
+  }
+}
+```
+
+Clearly, instantiating either the `Book` or the `Order` is impossible, 
+as each requires the other to be instantiated first.
+Two-phase construction accompanied by 
+[attributes mutability]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %})
+and 
+[setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}) 
+may look like a solution:
+
+```java
+class Book {
+  private Order order;
+  private String language;
+  void setOrder(Order o) { this.order = o; }
+  void init() {
+    this.language = this.order.language();
+  }
+}
+class Order {
+  private Book book;
+  private int total;
+  void setBook(Book b) { this.book = b; }
+  void init() {
+    this.total = book.price() + 10;
+  }
+}
+```
+
+Now, it's possible to instantiate them:
+
+```java
+order = new Order();
+book = new Book();
+order.setBook(book);
+book.setOrder(order);
+order.init();
+book.init();
+```
+
+However, this design exhibits a significant flaw: both the `order` and `book` objects 
+remain in an incomplete state until their respective `init()` methods are invoked. 
+As the code takes shape, its original author understands the correct sequence of 
+method calls: the constructor first, followed by the setter, and only then 
+the `init()` method. However, in the future, as others modify the code, this 
+[temporal coupling]({% pst 2015/dec/2015-12-08-temporal-coupling-between-method-calls %}) 
+between method calls could be easily missed. An inadvertent call to 
+`init()` prior to the setter could result in runtime errors that are difficult to diagnose.
+
+The underlying issue here stems from a violation of the layering principle present 
+in the design of both `Book` and `Order`: they are mutually dependent. 
+If I recall correctly, Martin Fowler postulated that "a layer can only access layers beneath it." 
+In the context of our book-and-order design, there's no clear distinction of 
+these layers: it's indeterminable which is foundational to the other. 
+The difficulties in instantiation are just manifestations of this issue, 
+and two-step initialization serves more as a band-aid rather than an actual solution.
+
+I'm at a loss for how to enhance this code directly. It's likely that the entire architecture 
+needs a thorough reassessment, with the introduction of more adequate abstractions 
+in place of `Book` and `Order`.
+
+<hr/>
+
+It appears that two-step initialization doesn't truly solve problems; 
+rather, it merely masks them for a time. While you can have `init()` methods in your objects, 
+they look like flags with "I failed to design this class properly!" written on them.
