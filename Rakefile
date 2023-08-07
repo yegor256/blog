@@ -235,6 +235,8 @@ task ping: [:build] do
     .reject { |a| a.start_with? 'https://www.yegor256.com/' }
     .reject { |a| a.include? 'linkedin.com' }
     .select { |a| (a =~ %r{^https?://.*}) }
+    .reject { |a| a.start_with? 'http://localhost' }
+    .reject { |a| a.start_with? 'https://www.youtube.com/watch?v=' }
     .shuffle
     .take(128)
   tmp = Tempfile.new(['yegor256-', '.txt'])

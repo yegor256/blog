@@ -72,7 +72,7 @@ and install them on your own servers. For example:
 Some of them are available as a service in cloud, such as:
 [Travis](https://www.travis-ci.org),
 [Shippable](https://www.shippable.com),
-[Wercker](https://wercker.com/), and
+Wercker, and
 [many others]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}).
 
 ## Why Continuous Integration Doesn't Work?
