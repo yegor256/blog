@@ -35,7 +35,7 @@ module Jekyll
         context.registers[:site].posts.docs.each do |p|
           return p.url if p.relative_path == @file
         end
-        raise "Can't fine post with \"#{@post}\" name"
+        raise "Can't find post with \"#{@post}\" name"
       end
     end
   end

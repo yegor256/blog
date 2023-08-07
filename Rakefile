@@ -102,7 +102,7 @@ task :build do
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
     puts 'Building Jekyll site...'
-    system('jekyll build --trace')
+    system('jekyll build --trace --future')
     raise "Jekyll failed with #{$CHILD_STATUS}" unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
   end
