@@ -3311,6 +3311,7 @@ file
 file's
 fileasoutput
 filed
+fileinputstream
 filelines
 filename
 filereader
@@ -4392,6 +4393,7 @@ inheritance
 inherited
 inherits
 ini
+init
 initial
 initialization
 initialize
@@ -4803,6 +4805,7 @@ justifications
 justify
 justin
 JVM
+kafka
 kaicode
 kalanick
 kamil-sabbagh
