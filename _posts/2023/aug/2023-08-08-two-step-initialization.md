@@ -230,9 +230,10 @@ leading to unintended and incorrect behavior. Such potential for method
 replacement is what renders the base class fragile.
 
 Using two-phase construction could address this issue by keeping 
-attribute initialization in the constructors while relocating the 
-"printing" functionality to a new `init()` method. However, this will
-only cover up the design flaw: the class is fragile.
+attribute initialization in the constructor while relocating the 
+"printing" functionality to a new `init()` method. 
+However, this approach merely masks the underlying design flaw: 
+the class's inherent fragility.
 
 A more comprehensive solution is twofold. Firstly, maintain constructors code-free, as 
 [suggested earlier]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). 
