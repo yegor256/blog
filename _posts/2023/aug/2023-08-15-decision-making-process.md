@@ -45,7 +45,7 @@ in software teams or companies (with the most critical ones listed last):
   it both objectively and professionally is unrealistic. It's more likely 
   they'll base their judgments on personal feelings towards you.
 
-  * **Frienship**.
+  * **Friendship**.
   The decision-makers at the meeting are your colleagues. It's challenging 
   for them to provide unbiased and candid feedback since they don't want 
   to risk upsetting a friend. Very few can maintain both 
