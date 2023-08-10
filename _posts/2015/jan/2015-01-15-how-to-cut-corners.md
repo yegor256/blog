@@ -268,7 +268,7 @@ So it's payback time.
 {% quote Being a professional developer doesn't mean being able to fix any problem. %}
 
 Your "No!" will be very valuable feedback for him. It will help him
-make his next important management decisions.
+make his next important management [decisions]({% pst 2023/aug/2023-08-15-decision-making-process %}).
 
 On the other hand, if you lie just to give the impression you're a guy who
 can fix anything and yet fail in the end, you will damage not only your

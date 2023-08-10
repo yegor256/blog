@@ -24,7 +24,8 @@ We're starting a new thing, a seed fund. Its name is
 an interview, we have a one-hour conversation, you present me your
 startup idea, and we either give you cash right away or explain why we don't
 feel like it. We don't do any due diligence or background checks. The decision
-is made right there. It's something similar to angel investment, but the
+is made [right there]({% pst 2023/aug/2023-08-15-decision-making-process %}). 
+It's something similar to angel investment, but the
 amount is smaller---less than _$20K_, and decisions are faster.
 
 <!--more-->

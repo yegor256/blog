@@ -116,7 +116,8 @@ regular status update meetings, because he knows how to use effective
 [communication instruments]({% pst 2016/aug/2016-08-23-communication-maturity %}),
 like issue tracking tools,
 [emails]({% pst 2017/apr/2017-04-18-no-help-via-email %}), code reviews,
-decision-making meetings, pair programming, etc.
+[decision-making meetings]({% pst 2023/aug/2023-08-15-decision-making-process %}), 
+pair programming, etc.
 
 ## Responsibility
 

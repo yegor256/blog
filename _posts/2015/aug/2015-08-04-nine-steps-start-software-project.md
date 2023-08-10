@@ -66,8 +66,8 @@ Thus, let's assume I managed to create a piece of software and it works.
 
 ## Decisions and Alternatives
 
-First of all, I have to document my key technical decisions and their
-alternatives. [We](https://www.zerocracy.com) usually work in GitHub, and the best documentation
+First of all, I have to document my key [technical decisions]({% pst 2023/aug/2023-08-15-decision-making-process %}) 
+and their alternatives. [We](https://www.zerocracy.com) usually work in GitHub, and the best documentation
 media is the `README.md` file in the root directory of the repo. I just
 put my text there in a plain [Markdown](https://daringfireball.net/projects/markdown/)
 format. That's enough for a good

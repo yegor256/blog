@@ -50,7 +50,8 @@ Say I'm an architect who needs to design the schema for a relational
 database in a new project, and I have a team of five programmers whom I want
 to help me with this design. That's a very logical and appropriate desire,
 as a good architect always discusses all possible options with available
-team members before making a final decision. So I call a meeting? No!
+team members before making a [final decision]({% pst 2023/aug/2023-08-15-decision-making-process %}). 
+So I call a meeting? No!
 
 ## A Good Architect
 

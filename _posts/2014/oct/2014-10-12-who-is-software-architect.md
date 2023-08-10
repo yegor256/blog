@@ -26,7 +26,8 @@ Do you have a software architect in your project? Do you need one?
 Well, most [agile teams]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
 do not define such a role explicitly and
 work in a _democratic_ mode. Every important technical decision
-is discussed with the entire team, and the most voted for solution wins.
+[is discussed]({% pst 2023/aug/2023-08-15-decision-making-process %}) 
+with the entire team, and the most voted for solution wins.
 When such a team eventually decides to put a "software architect" badge
 on someone's t-shirt, the most _reputable_ programmer gets it.
 
