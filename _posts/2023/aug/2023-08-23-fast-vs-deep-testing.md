@@ -24,8 +24,7 @@ jb_picture:
 
 
 ```java
-String read(File file) throws IOException {
-    final InputStream stream = new FileInputStream(file);
+String read(InputStream file) throws IOException {
     final StringBuilder buf = new StringBuilder();
     while (true) {
         int d = stream.read();
