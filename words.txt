@@ -229,6 +229,7 @@ allconferencecfpalerts
 allen
 alliance
 allman
+allocated
 allocates
 allotment
 allotted
@@ -335,6 +336,7 @@ annoys
 annual
 annually
 anomalous
+anonymity
 ANONYMOUS
 another
 ansible
@@ -476,6 +478,7 @@ arsenal
 art
 article
 articles
+articulate
 artifact
 artifacts
 artificial
@@ -564,6 +567,7 @@ attack
 attacked
 attempt
 attempted
+attempting
 attempts
 attend
 attendance
@@ -601,12 +605,15 @@ authenticate
 authenticated
 authentication
 author
+author's
 authoritarian
 authoritative
 authorities
 authority
 authorization
 authors
+authors'
+authorship
 auto-complete
 auto-formatting
 auto-generated
@@ -632,6 +639,7 @@ available
 avatar
 avatars
 avdoshin
+avenue
 avenues
 average
 avienaash
@@ -660,6 +668,7 @@ back-stabbing
 backbone
 backed
 background
+backlash
 backlog
 backslide
 backstabbing
@@ -794,6 +803,7 @@ bernie
 bertrand
 besides
 best
+best-case
 best-use
 bestia
 bet
@@ -1141,6 +1151,7 @@ cancellable
 cancellation
 cancels
 cancer
+candid
 candidate
 candidate's
 candidates
@@ -1611,6 +1622,7 @@ comparison
 compassion
 compatibility
 compatible
+compelled
 compensated
 compensates
 compensation
@@ -1666,6 +1678,7 @@ composite
 composition
 compound
 comprehensive
+comprehensively
 compress
 compression
 compromise
@@ -1717,6 +1730,7 @@ conferences
 conferencing
 confidence
 confident
+confidential
 config
 configurable
 configuration
@@ -1760,6 +1774,7 @@ consequently
 conservative
 consider
 considered
+considering
 considers
 consist
 consistency
@@ -1956,6 +1971,7 @@ cowards
 coworkers
 cozy
 CPU
+craft
 craigslist
 crap
 crash
@@ -2004,6 +2020,7 @@ criticize
 criticized
 criticizing
 critiques
+critiquing
 CRMs
 cron
 crooks
@@ -2018,6 +2035,7 @@ crucially
 CRUD
 cruel
 cruisecontrol
+crux
 cry
 crying
 cryptic
@@ -2169,6 +2187,7 @@ decide
 decided
 decides
 decision
+decision-makers
 decision-making
 decisions
 deck
@@ -2179,6 +2198,7 @@ declare
 declared
 declares
 declaring
+declined
 decode
 decoded
 decoder
@@ -2610,6 +2630,7 @@ dose
 dosomethingelse
 dot
 double
+double-blind
 doubles
 doubling
 doubt
@@ -2633,6 +2654,7 @@ dozens
 DPI
 dr
 draft
+drafts
 dragging
 drain
 drainage
@@ -2787,6 +2809,7 @@ elegantobjects
 element
 elementary
 elements
+elevate
 elevator
 eleven
 eleven-page
@@ -2801,6 +2824,7 @@ elon
 else
 else's
 elsewhere
+elucidate
 emacs
 email
 emailed
@@ -2875,6 +2899,7 @@ endeavor
 endeavors
 ended
 ending
+endorse
 endpoints
 ends
 enemies
@@ -2897,6 +2922,7 @@ engineering
 engineers
 english
 englishname
+enhance
 enhances
 enjoy
 enjoyable
@@ -3012,6 +3038,7 @@ european
 euros
 eurosys
 evaluate
+evaluates
 evaluation
 evangelist
 evans
@@ -3675,6 +3702,7 @@ genius
 gentle
 gentleman
 gentlemen
+genuine
 geographic
 gerard
 german
@@ -3801,6 +3829,7 @@ graphicdesigning
 graphics
 graphs
 graphviz
+grasp
 grateful
 grave
 gray
@@ -4302,6 +4331,7 @@ inbox
 inc
 incapable
 incautious
+incentivized
 inches
 incl
 include
@@ -4382,12 +4412,14 @@ informational
 informative
 informed
 informing
+informs
 infrastructure
 infringe
 infringement
 ingredient
 ingredients
 inhabitants
+inherently
 inherit
 inheritance
 inherited
@@ -4786,6 +4818,7 @@ JSR-
 judge
 judging
 judgment
+judgments
 JUG
 jugru
 july
@@ -5275,6 +5308,7 @@ managerial
 managers
 manages
 managing
+mandates
 mandatory
 MANIFEST
 manifesto
@@ -6152,8 +6186,10 @@ opponent
 opponents
 opportunities
 opportunity
+opposed
 opposing
 opposite
+opposition
 oppp
 optimal
 optimization
@@ -6257,6 +6293,7 @@ overhead
 overlap
 overlaps
 overleaf
+overload
 overloaded
 overloading
 overlooked
@@ -6482,6 +6519,7 @@ personality
 personally
 personnel
 perspective
+persuade
 persuasive
 pescio
 pessimistic
@@ -6717,6 +6755,7 @@ powder
 power
 powered
 powerful
+powerpoint
 PPPS
 PPS
 PR
@@ -6801,6 +6840,7 @@ pressure
 prestructor
 prestructors
 presumably
+presume
 pretend
 pretended
 pretending
@@ -7220,6 +7260,7 @@ realize
 realized
 realizes
 realizing
+reallocation
 really
 realy
 reaper
@@ -7378,6 +7419,7 @@ remained
 remaining
 remains
 remarked
+remarks
 remember
 remembered
 remembers
@@ -7399,6 +7441,7 @@ render
 rendered
 renderer
 rendering
+renewed
 renounce
 rent
 renting
@@ -7561,6 +7604,7 @@ reveal
 revealed
 revealing
 reveals
+revenge
 revenue
 revenue-generating
 revert
@@ -7840,6 +7884,7 @@ scrolling
 SCRUM
 scrumology
 scrutinizer
+scrutiny
 scss
 sculpture
 SDK
@@ -7864,6 +7909,7 @@ seconds
 SECR
 secret
 secretaries
+secretary
 secrets
 secring
 sect
@@ -8536,6 +8582,7 @@ sticking
 sticks
 sticky
 stickyscalar
+stifling
 stigma
 still
 stimulated
@@ -8706,6 +8753,7 @@ suite
 suits
 sullivan
 sum
+summaries
 summarize
 summarizes
 summary
@@ -9053,6 +9101,7 @@ thumb-raising
 thumbs
 thursday
 thus
+thwart
 ticket
 ticketing
 tickets
@@ -9454,6 +9503,7 @@ unproductive
 unprofessional
 unreadable
 unrealistic
+unrecognized
 unregulated
 unrelated
 unreliability
@@ -9495,12 +9545,14 @@ uploading
 upon
 upper
 upsets
+upsetting
 upside
 uptime
 upvote
 upvotes
 upwork
 urauskas
+urge
 urgency
 urgent
 urgently
@@ -9598,10 +9650,12 @@ venues
 verano-http
 verb
 verbal
+verbally
 verbose
 verboselisttest
 verbosity
 verbs
+verdict
 verge
 verifiable
 verification
@@ -9669,6 +9723,7 @@ visitors
 visits
 visual
 visually
+vital
 vitality
 vitally
 vivian
@@ -9917,6 +9972,7 @@ worry
 worrying
 worse
 worst
+worst-case
 worth
 would
 would've

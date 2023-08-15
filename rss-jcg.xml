@@ -830,7 +830,8 @@ we get from a “pure” object-oriented and immutable approach, without getters
 Well, most &lt;a href=&quot;/2015/11/21/ringelmann-effect-vs-agile.html&quot;&gt;agile teams&lt;/a&gt;
 do not define such a role explicitly and
 work in a &lt;em&gt;democratic&lt;/em&gt; mode. Every important technical decision
-is discussed with the entire team, and the most voted for solution wins.
+&lt;a href=&quot;/2023/08/15/decision-making-process.html&quot;&gt;is discussed&lt;/a&gt; 
+with the entire team, and the most voted for solution wins.
 When such a team eventually decides to put a “software architect” badge
 on someone’s t-shirt, the most &lt;em&gt;reputable&lt;/em&gt; programmer gets it.&lt;/p&gt;
 

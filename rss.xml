@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-08T03:28:23+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Is Two-Step Initialization a Solution or a Symptom?</title><link href="https://www.yegor256.com/2023/08/08/two-step-initialization.html" rel="alternate" type="text/html" title="Is Two-Step Initialization a Solution or a Symptom?" /><published>2023-08-08T00:00:00+00:00</published><updated>2023-08-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/08/two-step-initialization</id><content type="html" xml:base="https://www.yegor256.com/2023/08/08/two-step-initialization.html"><![CDATA[<p>At times, it might appear practical to execute additional initialization steps 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-15T11:50:50+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Double-Blind Review Is What Makes Decisions Fair</title><link href="https://www.yegor256.com/2023/08/15/decision-making-process.html" rel="alternate" type="text/html" title="The Double-Blind Review Is What Makes Decisions Fair" /><published>2023-08-15T00:00:00+00:00</published><updated>2023-08-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/15/decision-making-process</id><content type="html" xml:base="https://www.yegor256.com/2023/08/15/decision-making-process.html"><![CDATA[<p>How does your team review ideas, project proposals, or paper drafts?
+Imagine I’m on your team and I need a budget allocated to a new project. 
+I craft a proposal, elucidate the motivation, assess the risks, develop a plan, 
+and then what? Do I create a PowerPoint presentation, present to my teammates 
+for half an hour, answer their questions for another half hour, hear their honest 
+feedback, after which they vote and a decision is made? If this is how 
+things are organized within your team, you risk stifling creativity and motivation.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Возвращение (2003) by Andrey Zvyagintsev" src="/images/2023/08/the-return.jpg" longdesc="#b5305e77" /><figcaption id="b5305e77">Возвращение (2003) by Andrey Zvyagintsev</figcaption></figure>
+
+<p>There are several problems with this fairly typical decision-making process 
+in software teams or companies (with the most critical ones listed last):</p>
+
+<ul>
+  <li>
+    <p><strong>Overload</strong>.
+  Regardless of how crucial your proposal is, many meeting attendees have their own priorities. 
+  You cannot expect them to concentrate fully on your idea or actively engage 
+  in the discussion. Furthermore, some might just be lazy by nature.</p>
+  </li>
+  <li>
+    <p><strong>Incompetence</strong>.
+  No matter how talented your teammates are, expecting them to grasp 
+  every detail of your proposal in just thirty minutes and then evaluate 
+  it both objectively and professionally is unrealistic. It’s more likely 
+  they’ll base their judgments on personal feelings towards you.</p>
+  </li>
+  <li>
+    <p><strong>Friendship</strong>.
+  The decision-makers at the meeting are your colleagues. It’s challenging 
+  for them to provide unbiased and candid feedback since they don’t want 
+  to risk upsetting a friend. Very few can maintain both 
+  honesty and friendship—it’s a rare quality.</p>
+  </li>
+  <li>
+    <p><strong>Jealousy</strong>.
+  Since you’re presenting a proposal, it inherently becomes a contest for resources. 
+  You’re seeking either a project budget or a reallocation of team efforts. 
+  This puts you in opposition to others at the meeting. Many attendees might 
+  resent your initiative, even subconsciously attempting to thwart you.</p>
+  </li>
+  <li>
+    <p><strong>Fear</strong>.
+  If you’re the one presenting today, someone else might be in your 
+  shoes tomorrow. The same individuals critiquing your idea today 
+  might face similar scrutiny tomorrow. As much as we aim for professionalism, 
+  the urge for revenge can be strong, making candid feedback risky.</p>
+  </li>
+</ul>
+
+<p>Considering these factors, it’s logical to presume that at the end of such 
+meetings—especially if the decision goes against you—you might feel frustrated. 
+You might view your team as lacking competence and feel that your talents 
+go unrecognized. Best-case scenario: you decide not to present any new proposals. 
+Worst-case: you begin seeking out a new team.</p>
+
+<p>The issue isn’t necessarily with the team (they all are more or less the same) 
+or your proposal (we all make mistakes). The crux of the problem lies in the 
+decision-making process itself. Traditional meetings might not be the best avenue. 
+Instead, I propose the following approach:</p>
+
+<ul>
+  <li>There is a review board of 10+ members and a secretary;</li>
+  <li>Proposals are submitted directly to the secretary;</li>
+  <li>The secretary randomly selects three board reviewers;</li>
+  <li>Each reviewer evaluates the proposal in writing;</li>
+  <li>Reviewers aren’t aware of the author’s identity;</li>
+  <li>They then submit their written feedback to the secretary;</li>
+  <li>A decision is made if 2+ reviewers endorse the proposal;</li>
+  <li>The secretary informs you of the verdict;</li>
+  <li>You don’t know the names of reviewers.</li>
+</ul>
+
+<p>This method introduces two vital elements that can enhance the objectivity 
+of decisions and increase proposal authors’ satisfaction: <em>anonymity</em> and <em>authorship</em>. 
+On one hand, reviewers can offer genuine feedback without fear of backlash, 
+knowing their identity remains confidential. Conversely, since their feedback 
+is documented, they’re incentivized to remain professional and objective. 
+Not knowing the author ensures decisions aren’t influenced by personal relationships.</p>
+
+<p>Moreover, this system can elevate the <em>quality of proposals</em>. As authors 
+can’t verbally elaborate during meetings, they’re compelled to articulate 
+their ideas comprehensively in writing. The standard of feedback might 
+also improve, particularly if the secretary mandates specific criteria 
+for review summaries, as opposed to vague remarks.</p>
+
+<p>A very similar review mechanism is practiced by <a href="/2021/04/14/how-we-organized-iccq.html">scientific conferences</a>. 
+When you submit a paper to one, they don’t organize a meeting where you present it in an attempt 
+to persuade them to accept your work. Instead, they ask you to 
+<a href="https://www.journals.elsevier.com/social-science-and-medicine/policies/double-blind-peer-review-guidelines">double-blind</a> 
+your paper and then they send it to a few, more or less, randomly selected reviewers. 
+When your paper is rejected (or accepted), you receive a detailed summary of the reasons, 
+along with suggestions on how to improve it. If the conference is of a high level 
+and its reviewers are doing their job correctly, you will be 
+satisfied even in the case of rejection.</p>
+
+<p>In conclusion, the suggested process can lead to superior decision 
+quality and boost the motivation of those proposing ideas. Even if some suggestions 
+are declined, they’re more likely to return to the review board with renewed proposals.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[If your team practices decision making meetings I have a better idea for you: establish a review board with the principles of anonymity and authorship.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/the-return.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/the-return.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is Two-Step Initialization a Solution or a Symptom?</title><link href="https://www.yegor256.com/2023/08/08/two-step-initialization.html" rel="alternate" type="text/html" title="Is Two-Step Initialization a Solution or a Symptom?" /><published>2023-08-08T00:00:00+00:00</published><updated>2023-08-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/08/two-step-initialization</id><content type="html" xml:base="https://www.yegor256.com/2023/08/08/two-step-initialization.html"><![CDATA[<p>At times, it might appear practical to execute additional initialization steps 
 for an object after its constructor has completed. However, I’m of the belief that 
 such requirements signal underlying design flaws, such as object mutability,
 base class fragility, violation of layering, and unfocused abstraction. 
@@ -1541,62 +1641,4 @@ which does exactly that:</p>
 
 <p>With this design I can construct the train in almost any possible way.</p>
 
-<p>See, for example, how we use it <a href="https://github.com/objectionary/eo/blob/0.23.6/eo-parser/src/main/java/org/eolang/parser/ParsingTrain.java#L86-L103">here</a> and <a href="https://github.com/objectionary/eo/blob/0.23.6/eo-maven-plugin/src/main/java/org/eolang/maven/SpyTrain.java#L49-L75">here</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="xml" /><summary type="html"><![CDATA[Combining "strategy" objects into a pipeline is a trivial task if done in a mutable and imperative way; here I show a declarative and immutable approach]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Code and Its Tests in Different Pull Requests</title><link href="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html" rel="alternate" type="text/html" title="The Code and Its Tests in Different Pull Requests" /><published>2022-08-04T00:00:00+00:00</published><updated>2022-08-04T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests</id><content type="html" xml:base="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html"><![CDATA[<p>I suggested this idea a few weeks ago
-<a href="https://twitter.com/yegor256/status/1525758255225528320">on Twitter</a>
-and got mostly negative reactions. That’s why I wrote this blog post, to elaborate on the
-subject in an attempt to convince you. Here is the rule I’m suggesting:
-always submit changes to the code separately from the changes to
-its unit tests. Simply put, in one pull request you modify the tests, maybe
-marking some of them as “disabled.” You merge this pull request and then
-make the second one, modifying the code and most probably
-removing the “disabled” markers from the tests. You don’t touch the
-body of the tests in the second pull request.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Mafioso (1962) by Alberto Lattuada" src="/images/2022/06/mafioso.jpg" longdesc="#e0369b6c" /><figcaption id="e0369b6c">Mafioso (1962) by Alberto Lattuada</figcaption></figure>
-
-<p>It may look like a contradiction of the principles of
-<a href="/2017/03/24/tdd-that-works.html">TDD</a>.
-However, to me this approach looks like an extreme application of TDD, not a violation
-of it. First we merge the tests, which most probably will break the build, since
-the functionality that they test is not present yet. In order to avoid the broken
-state of the build we disable the new tests that we added and the tests that we modified.
-In <a href="https://junit.org/junit5/docs/current/user-guide/">JUnit 5</a>, for example, we do this with
-<a href="https://junit.org/junit5/docs/5.0.0-M2/api/org/junit/jupiter/api/Disabled.html"><code class="language-plaintext highlighter-rouge">@Disabled</code></a> annotation.</p>
-
-<p>Reviewers validate the changes you make, asking themselves these questions:
-“Do we really need this new functionality?
-Does it conflict with the existing functionality?
-Does it make sense to test new functionality this particular way?”
-They don’t think about <em>how</em> the functionality will be implemented, they
-only care about the <em>requirements</em> you impose in your tests against the
-product. The reviewers act more or less as requirements engineers at this stage.
-They validate the <em>intent</em>, not the <em>realization</em> of it.</p>
-
-<p>Then, in the second pull request, you modify the code without touching the tests.
-Now, reviewers can rest assured that you haven’t changed the requirements just to make
-them more suitable for your implementation. In other words, they know that you didn’t <em>cheat</em>.
-Since you didn’t touch the tests, it’s a guarantee for reviewers that requirements
-remain stable and you only modify the implementation. Speaking business language,
-you don’t change the <em>contract</em> if/when you understand that you can’t deliver
-what was <em>promised</em>.</p>
-
-<p>Moreover, when you modify the tests only, without touching the code, it’s much
-easier for the reviewers to understand whether or not your changes truly belong to the
-problem you are supposed to be solving. We programmers tend to make a typical mistake:
-we make changes to the code, some tests fail, we fix the tests … no matter whether
-they are “our” tests or not. We simply make the tests pass regardless of <em>why</em> they fail.
-Instead of <em>listening</em> to them, we shut them up. Later, the reviewers may not understand
-why some tests were modified. Especially if a pull request is big. They will most
-probably blindly trust you and merge the pull request.</p>
-
-<p>That’s why separating tests from code is a solution. First, the tests get modified
-and the reviewers will pay attention only to the scope of tests. They will easily
-catch you if the changes are too broad and are not related to the problem you
-are solving. Then the code gets modified and reviewers don’t need to worry about
-tests at all. They don’t pay attention to them, they only review the implementation.
-They know that you can’t break the tests since the build pipeline
-won’t allow you to do this.</p>
-
-<p>What do you think now? Does it make sense?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><summary type="html"><![CDATA[Always submit changes to the code in a separate pull request from the changes to its unit tests, in another pull request.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/06/mafioso.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/06/mafioso.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>See, for example, how we use it <a href="https://github.com/objectionary/eo/blob/0.23.6/eo-parser/src/main/java/org/eolang/parser/ParsingTrain.java#L86-L103">here</a> and <a href="https://github.com/objectionary/eo/blob/0.23.6/eo-maven-plugin/src/main/java/org/eolang/maven/SpyTrain.java#L49-L75">here</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="xml" /><summary type="html"><![CDATA[Combining "strategy" objects into a pipeline is a trivial task if done in a mutable and imperative way; here I show a declarative and immutable approach]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
