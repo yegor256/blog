@@ -118,7 +118,7 @@ bugs that unit tests might miss. For instance, in our case, if we mock
 the input stream, the second test will miss the bug. Therefore, the 
 second (integration) test must be slow to be valuable.
 
-Сlassifying tests into _fast_ and _deep_ may be a solution. The first category comprises 
+Classifying tests into _fast_ and _deep_ may be a solution. The first category comprises 
 tests that mock as much as possible and take no more than 20ms to run. 
 The second category consists of tests that probe deeper to uncover elusive bugs, 
 which might be overlooked by faster tests. More often than not, unit tests 
