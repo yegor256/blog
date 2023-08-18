@@ -17,6 +17,12 @@ keywords:
 image: /images/2022/06/safety-net.jpg
 social:
   - reddit: https://www.reddit.com/r/programming/comments/vrsgcu/automated_tests_are_the_safety_net_that_saves_you/
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "Automated Tests Are the Safety Net"
+    date: 2023-08-04
+    url: https://cacm.acm.org/blogs/blog-cacm/275214-automated-tests-are-the-safety-net/fulltext
 ---
 
 Automated tests are the ones that are usually called unit tests or integration tests,

@@ -65,9 +65,16 @@ module Yegor
     alias orig_to_liquid to_liquid
     def to_liquid
       hash = orig_to_liquid
-      hash['title'] = @title
-      hash['description'] =
-        "#{@title}: more about #{@title} in this collection of recently published articles... the list is updated every few weeks."
+      count = self.data['posts'].size
+      tag = self.data['tag']
+      hash['title'] = "#{count} Blog Posts About \"#{tag}\""
+      hash['tag'] = tag
+      hash['description'] = [
+        "This collection of #{count} blog posts about \"#{tag}\"",
+        "written by #{site.config['author']['name']}",
+        'updated every few weeks',
+        'remember to bookmark it'
+      ].join(', ')
       hash
     end
 

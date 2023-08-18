@@ -33,10 +33,7 @@ layout: compress
     {% if page.style %}
       <link rel="amphtml" href="{{ site.url }}{{ page.url | replace_first:'.html','.amp.html' }}" />
     {% endif %}
-    <title>{{ page.title }}
-      {% if paginator.page > 1 %}
-        (page #{{ paginator.page }})
-      {% endif %}</title>
+    <title>{{ page.title }}{% if paginator.page > 1 %} (page #{{ paginator.page }}){% endif %}</title>
     {% if page.style %}
       <style>
         {{ page.style }}
