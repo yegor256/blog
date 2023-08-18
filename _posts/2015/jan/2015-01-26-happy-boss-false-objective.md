@@ -41,7 +41,7 @@ wants to attend an expo in Paris and also collect her paychecks;
 3) Bob, the CTO, wants to raise round A funding and collect a big paycheck; etc.
 
 The project has its own _objectives_, to achieve 1 million downloads
-in less than six months and under $300,000, for example.
+in less than six months and spend under $300,000, for example.
 This is what the project works for. This is what all of us are here for.
 
 Our personal needs may be fully satisfied
