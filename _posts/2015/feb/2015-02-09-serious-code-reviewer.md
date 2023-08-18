@@ -32,15 +32,15 @@ technique where a tester looks for defects with full access to the sources of th
 In either case, a code review is a great instrument to increase quality and
 boost team motivation.
 
+<!--more-->
+
+{% jb_picture_body %}
+
 However, it's not so simple to do them right. I would even say it's
 very easy and comfortable to do them wrong. Most code reviews
 and reviewers I've seen make similar mistakes. That's why I decided
 to summarize the four basic principles of a good reviewer as I see them.
 Hopefully you find them helpful.
-
-<!--more-->
-
-{% jb_picture_body %}
 
 ## No Fear
 
