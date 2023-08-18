@@ -65,8 +65,8 @@ module Yegor
     alias orig_to_liquid to_liquid
     def to_liquid
       hash = orig_to_liquid
-      count = self.data['posts'].size
-      tag = self.data['tag']
+      count = data['posts'].size
+      tag = data['tag']
       hash['title'] = "#{count} Blog Posts About \"#{tag}\""
       hash['tag'] = tag
       hash['description'] = [
