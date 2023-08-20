@@ -141,7 +141,7 @@ to meet Russian researchers, who challenge world-size problems.
 
 ### 2022
 
-<span class="venue-rate green">C+</span>
+<span class="venue-rate orange">C+</span>
 <img src="https://i.ytimg.com/vi/KCLECWhB1-w/mqdefault.jpg" class="past-talk" alt="CIPR 2022"/>
 **Готовы ли мы к роботам, а они к нам?**;
 [CIPR 2022](https://cipr.ru);
@@ -338,7 +338,7 @@ to meet Russian researchers, who challenge world-size problems.
 
 ### 2018
 
-<span class="venue-rate green">C</span>
+<span class="venue-rate orange">C</span>
 <img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
 **Panel Discussion about Blockchain**;
 [Blockchain Conference 2018](https://moscow.bc.events/ru);
