@@ -125,8 +125,10 @@ By the way, I'm also an amateur artist,
 
 Just in case, my public PGP key is [026E65F3](https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x82a1a9d03a09b8334650940fb8283801026e65f3).
 
+<!--
 If you are interested, my [personality type](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator)
 is [INTJ-A](/images/personality.png).
+-->
 
 Here is my SO flair:
 
@@ -135,7 +137,9 @@ Here is my SO flair:
   width="208" height="58" alt="StackExchange flair for yegor256"/>
 </a>
 
-This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`).
+<!-- 
+This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`). 
+-->
 
 I also contributed to the development of
 [IEEE 730-2014](/pdf/ieee-730-2014.pdf) standard.
