@@ -137,7 +137,6 @@ I was also seen at [these events](/seen.html)
 18 August 2023. Good local conference, with an intent to cover
 many AI topics at a pretty high level of abstraction. It was interesting
 to meet Russian researchers, who challenge world-size problems.
-
 {: .talk-event}
 
 ### 2022
