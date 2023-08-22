@@ -6,6 +6,11 @@ article {
   }
 }
 
+.jekyll-chatgpt-translate {
+  color: gray;
+  font-size: 80%;
+}
+
 .buttons {
   @extend %unprintable;
   margin-bottom: .5 * $em;

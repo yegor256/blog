@@ -46,6 +46,18 @@ amp: true
           <li><a href="mailto:translate@yegor256.com">add yours!</a></li>
         </ul>
       {% endif %}
+      {% if page.translated-cn-url %}
+        <ul class="subline">
+          <li title="The page is translated by ChatGPT to a few languages">
+            <i class="icon icon-chatgpt notranslate" aria-hidden="true"></i>
+          </li>
+          {% if page.translated-cn-url %}
+            <li title="Click to see this page translated to Chinese">
+              <a href='{{ site.url }}{{ page.translated-cn-url }}'>中文</a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
       {% if page.social %}
         <ul class="subline">
           <li>Discussed at:</li>
@@ -92,18 +104,6 @@ amp: true
           <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
         </a>
       </nav>
-      {% if page.translated-cn-url %}
-        <ul>
-          <li title="The page is translated by ChatGPT to a few languages">
-            <i class="icon icon-chatgpt notranslate" aria-hidden="true"></i>
-          </li>
-          {% if page.translated-cn-url %}
-            <li title="Click to see this page translated to Chinese">
-              <a href='{{ site.url }}{{ page.translated-cn-url }}'>中文</a>
-            </li>
-          {% endif %}
-        </ul>
-      {% endif %}
     </header>
     <article class="main" itemprop="articleBody">
       <div {% if page.nospell %} class="nospell" {% endif %}>
