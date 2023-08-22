@@ -27,7 +27,7 @@ management, no objective metrics, no quality control, and no light at the
 end of the tunnel. You feel like a cog in the machine: arrive at nine,
 leave at five, be quiet, and paychecks will keep coming.
 If you are talented and ambitious, sooner or later you will
-start thinking about <del>suicide</del> resignation. But hold on!
+start thinking about ~~suicide~~ resignation. But hold on!
 
 <!--more-->
 

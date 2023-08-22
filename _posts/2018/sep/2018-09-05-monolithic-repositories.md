@@ -19,7 +19,7 @@ jb_picture:
   caption: Funny Games (2007) by Michael Haneke
 ---
 
-We all keep our code in <del>Git</del>
+We all keep our code in ~~Git~~
 [version control](https://en.wikipedia.org/wiki/Version_control) repositories.
 The question is whether we should create a new repository for each
 new module or try to keep as much as possible in a single so called "monolithic" repo
@@ -162,7 +162,7 @@ Here is what I did:
 
 It took almost three weeks of waiting and four hours of work, just
 to move a small piece of JavaScript code to a new repository and release
-it separately. Was it worth it? Well, I think it was. But <del>many</del> most
+it separately. Was it worth it? Well, I think it was. But ~~many~~ most
 other blog post authors, who I managed to find, think that it would be better to keep
 everything in a single monolithic repo, mostly because it's better for _productivity_.
 For example,
@@ -264,7 +264,7 @@ from it are enormous. This is my short list of them:
     Each repository, inevitably, will have its own namespace. For example, in the
     JS repository I just created, I only have two files: `colorizejs.js` and `test-colorizejs.js`.
     I don't really care about the naming inside them, since the namespace
-    is very small. <del>I can even use global variables.</del>
+    is very small. ~~I can even use global variables.~~
     Shorter names and smaller namespaces mean better maintainability.
 
   * **Simple Tests**.

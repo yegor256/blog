@@ -79,7 +79,7 @@ doing something else. We know how to create an illusion that we are loyal
 to the project, while searching the market for a new job. We know how to
 organize our time such that you only get ten percent of it, if you are lucky. We know
 [how to manage]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %}) you,
-our <del>stupid</del> managers.
+our ~~stupid~~ managers.
 
 As our manager, expecting us to be under control and loyal just because you hired us with
 [monthly salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}),
@@ -99,7 +99,7 @@ This is what true commitment means for our guys: personal and
 [explicit responsibility]({% pst 2014/apr/2014-04-13-no-obligations-principle %}) for
 every single step they make. This level of commitment is incomparably better than what
 you will likely find when hiring full-time 9-to-5
-[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) <del>slaves</del> employees.
+[office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) ~~slaves~~ employees.
 
 What are they really committed to? To giving you a month's notice when they
 finally find a better place to scroll through Facebook eight hours a day?

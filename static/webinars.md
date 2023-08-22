@@ -27,7 +27,7 @@ style: |
 
 On the first Wednesday of each month, at 11am PST, I _try to_ organize
 a webinar. For about an hour we talk about software
-development, object-oriented programming <del>and project management</del>
+development, object-oriented programming ~~and project management~~
 (for project management topics listen to the [Shift-M](/shift-m.html) podcast).
 Here is a full list of all webinars on [YouTube](https://www.youtube.com/playlist?list=PLaIsQH4uc08x0H7Cu_OO72DBTNADqFXNm)
 (don't forget [to subscribe](https://www.youtube.com/c/yegor256?sub_confirmation=1)

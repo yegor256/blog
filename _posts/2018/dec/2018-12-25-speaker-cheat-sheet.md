@@ -21,7 +21,7 @@ jb_picture:
 
 I speak at [software conferences]({% pst 2016/nov/2016-11-18-software-conferences-to-attend %})
 regularly. Over the last three years I
-spoke in 30 cities and 10 countries. I recorded <del>almost</del> all of them, you can
+spoke in 30 cities and 10 countries. I recorded ~~almost~~ all of them, you can
 see them [here](/talks.html) and on my
 [YouTube channel](https://www.youtube.com/c/yegor256?sub_confirmation=1).
 My principal rule is that I never give the same speech more

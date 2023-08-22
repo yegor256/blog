@@ -23,7 +23,7 @@ keywords:
 is an open source framework written in Java. Its purpose
 is to help us crawl a set of websites (or the entire Internet), fetch
 the content, and prepare it for indexing by, say, Solr. A pretty useful
-framework if you ask me, however it is designed to be used <del>only</del>
+framework if you ask me, however it is designed to be used ~~only~~
 mostly from the command line. You download the archive, unzip it, and run
 the binary file. It crawls and you get the data. However, I've got a project
 where this crawling had to be embedded into my own Java app. I realized

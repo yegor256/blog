@@ -23,7 +23,7 @@ Most startups don't have enough cash to pay programmers as much as
 they deserve, [unfortunately]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %})
 (or maybe not). Instead of cash, startups give their early employees
 [shares of stock](https://en.wikipedia.org/wiki/Stock#Shares), which they will be able to either 1)
-sell in a few years and become <del>millionaires</del> billionaires,
+sell in a few years and become ~~millionaires~~ billionaires,
 or 2) throw away and remain nobodies. It's a
 [common practice](https://www.quora.com/Do-founders-vest/answer/Charlie-Cheever).
 The question, however, is what
@@ -53,7 +53,7 @@ to stay in the company, instead of achieving results. This vesting
 formula is perfectly aligned with the popular
 [be nice]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 paradigm and is not beneficial, either to the company or to
-its <del>slaves</del> employees.
+its ~~slaves~~ employees.
 
 Another option is [milestone-based](https://techcrunch.com/2015/12/09/milestone-based-vesting-for-startup-founders/)
 vesting, which defines a set of value milestones, each of which unlocks
@@ -70,7 +70,7 @@ not their responsibility.
 
 You may say that writing those Java classes is exactly how we make the next
 round happen, but it's far from being true, in most cases. We all know that
-investments come to those who can <del>fool</del>
+investments come to those who can ~~fool~~
 [pitch]({% pst 2016/mar/2016-03-28-unspoken-secrets-of-elevator-pitch %}) an investor,
 not to those who write the best Java code. Thus, the work programmers do
 and the "value events" the startup is aiming to reach are pretty much disconnected.

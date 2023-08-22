@@ -51,7 +51,7 @@ become lazy and demotivated. To get back on track, they need a manager, an offic
 
 Google recently [said](https://www.cnbc.com/2023/06/08/google-to-crack-down-on-hybrid-work-asks-remote-workers-to-reconsider.html)
 that "working together in the same room makes a positive difference"...
-for Google's <del>incompetent</del> managers, I guess. 
+for Google's ~~incompetent~~ managers, I guess. 
 They may judge productivity by the amount of time their coders spend staring at monitors. 
 They don't need to concern themselves with establishing an objective performance evaluation system. 
 They don't need to count the [lines of code]({% pst 2014/apr/2014-04-11-cost-of-loc %}) 

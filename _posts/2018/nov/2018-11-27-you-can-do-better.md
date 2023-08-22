@@ -27,7 +27,7 @@ and how to deal with [office slavery]({% pst 2015/oct/2015-10-06-how-to-be-good-
 Now here is a simple, plain list of recommendations for you: what you should do
 if you want to be a more successful programmer. Not a better algorithm
 designer, even though that's [important]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
-Not a funnier <del>clown</del>
+Not a funnier ~~clown~~
 [team player]({% pst 2018/aug/2018-08-29-soft-skills %}), even though that's
 also important. But a more successful software engineer, both
 [financially]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
@@ -67,7 +67,7 @@ The bigger part is turning your "working" code into a market-ready product,
 which means merging and auto-testing, compiling and packaging for multiple platforms,
 staging and acceptance testing, bug reporting, metrics collecting, A/B testing,
 stress and load testing, deploying to production, and even reporting to investors.
-Modern software development life cycle is a giant <del>mess</del> show.
+Modern software development life cycle is a giant ~~mess~~ show.
 Do you know how it all works?
 You don't? You don't care? You are not a senior developer.
 
@@ -151,7 +151,7 @@ it's painful for most of us, but this is how we grow. You need new tasks, new
 challenges, new technologies, new customers, and new bosses in order to learn
 how to survive and become stronger. Ideally, you should become a freelancer
 and forget about full-time [nine-to-five]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
-office <del>slavery</del> employment.
+office ~~slavery~~ employment.
 
 **Read Books**.
 One book per month. How does that sound? Twelve books per year. That's an easily
@@ -184,7 +184,7 @@ stay informed about the trends.
 Regularly check [Hacker News](https://news.ycombinator.com/),
 [/programming](https://en.reddit.com/r/programming/) Reddit, and, maybe,
 [Changelog](https://changelog.com/). That's pretty much all you need to read.
-A few times a week. Just <del>read</del> scroll what's hot and move on.
+A few times a week. Just ~~read~~ scroll what's hot and move on.
 Will it make you a better programmer? Unlikely. Will it help your career
 and your life? Definitely. You never know what's coming and where the
 next opportunity is. I still [feel sorry]({% pst 2017/aug/2017-08-15-bitcoin-pyramid %})

@@ -63,7 +63,7 @@ management, or humane management, or just love and peace):
     Unfortunately, there are simply no metrics, mostly because it's a very bad idea
     to put a number on a person! When and if you try to suggest some metrics,
     everybody laughs and says that "It's very difficult to measure
-    the performance of creative people! <del>Go back to your cage!</del>"
+    the performance of creative people! ~~Go back to your cage!~~"
 
   * When the time comes, they make their monetary decisions based on their personal
     emotional and irrational judgment of yourself and your results.

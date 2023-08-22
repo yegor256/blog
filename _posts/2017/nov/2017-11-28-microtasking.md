@@ -163,7 +163,7 @@ into, say, 2,500+ micro tasks:
     documentation also takes a lot of time, etc. They are simply spoiled
     by the [traditional macro-tasking]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
     where they are paid by the month and nobody
-    really controls their results. They are used to being <del>office slaves</del> lazy.
+    really controls their results. They are used to being ~~office slaves~~ lazy.
     We solve that by
     [paying by result]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
     and the lazy ones simply quit.

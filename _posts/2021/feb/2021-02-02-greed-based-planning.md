@@ -24,7 +24,7 @@ a manager and you want the project to be done. You get your team together
 in a [meeting room]({% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %})
 to discuss the _plan_. You tell them what needs to
 be done and ask them how fast they can do it. Then, you do the motivational dance
-and <del>beg</del> ask them to commit. They nod and go back
+and ~~beg~~ ask them to commit. They nod and go back
 to their cubicles. Of course, after a few
 months of "hard work" all the milestones are missed and you get back to the planning
 meeting. And, yes, you pay their salaries
@@ -47,7 +47,7 @@ You simply can't make them [suffer]({% pst 2016/jan/2016-01-05-how-to-punish-emp
 The only instrument that is left in your hands is
 [guilt]({% pst 2019/sep/2019-09-03-injection-of-guilt %}).
 However, it doesn't work well with professionals.
-[<del>Unfortunately</del>]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
+[~~Unfortunately~~]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
 {% youtube vaFPNdNaOAY %}
 
@@ -73,7 +73,7 @@ and you _know_ what results you will get.
 Thus, instead of making plans and making the team deliver according
 to them, you identify the points of reward and observe the
 intentions of the team to earn them. Your plan will be the derivative
-of people's <del>greed</del> ambition.
+of people's ~~greed~~ ambition.
 
 Of course, this may be easier said than done: Spoiled and lazy
 programmers, who are in the overwhelming majority, most likely

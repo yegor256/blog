@@ -112,7 +112,7 @@ in most cases. They simply
 don't know how to reward and penalize programmers incrementally. They don't
 know how to measure the progress of people, incrementally. Their control instruments
 are based on guilt and fear: They put programmers together,
-<del>brainwash</del> [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
+~~brainwash~~ [motivate]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
 them, and then make them scared of making an unforgivable mistake.
 
 {% youtube KPbKqTXfZwA %}

@@ -62,7 +62,7 @@ yes, exactly because of that. I am lazy and don't want to answer any questions o
 My answers will be totally wasted, if you, for example, quit the project
 tomorrow. Or if someone else joins us in a week and has
 exactly the same set of questions. Do I have to explain all over again? I'm too
-<del>old</del> lazy for that."
+~~old~~ lazy for that."
 
 He most probably thinks that I'm an [arrogant prick](/testimonials.html), but what can he do? He
 reads [my article]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})

@@ -146,7 +146,7 @@ ones.
 
 What is the object-oriented way to implement the same algorithm? Here
 is how I would do it with [Cactoos](http://www.cactoos.org), which is just a collection of
-<del>primitive</del> simple Java classes:
+~~primitive~~ simple Java classes:
 
 ```java
 new And(

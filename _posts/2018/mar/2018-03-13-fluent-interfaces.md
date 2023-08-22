@@ -54,7 +54,7 @@ Yes, it does, on the surface. But the _internal_ design of the library's
 classes, including [`JdkRequest`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html),
 which is the one you see,
 is very far from being elegant. The biggest problem is that
-they are rather big and it's <del>difficult</del> impossible
+they are rather big and it's ~~difficult~~ impossible
 to extend them without making them even bigger.
 
 {% youtube REj8pJesMVI %}

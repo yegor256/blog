@@ -78,7 +78,7 @@ However, the outcome is obvious: I'm in the tech industry now and I can code in 
 {% quote Your job, as their parents, is to help them identify the right goals---this is where kids usually fail. %}
 
 So don't expect your kids to enjoy studying. Expect them to be interested
-in _building_ things and making <del>money</del> profit. Your job, as their parents, is
+in _building_ things and making ~~money~~ profit. Your job, as their parents, is
 to help them _identify_ the right goals---this is where kids usually fail because they
 don't have enough experience to judge what's more achievable and which are the largest risks.
 I remember trying to create a robot which was supposed to speak like a human.

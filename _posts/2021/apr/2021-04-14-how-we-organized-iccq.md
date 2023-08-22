@@ -186,7 +186,7 @@ even more interesting for attendees. We decided to invite
 [Anders Møller](https://cs.au.dk/~amoeller/). We personally
 knew him from [his book](https://cs.au.dk/~amoeller/spa/spa.pdf) recently published online.
 We invited him and he agreed! [His speech](https://www.youtube.com/watch?v=oDdrzXkInnA) 
-was definitely <del>one of</del> the best at the conference.
+was definitely ~~one of~~ the best at the conference.
 
 **Twitter**<br/>
 We decided to be present on just one social network, since it is the most 

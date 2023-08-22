@@ -54,7 +54,7 @@ pitfall most of us fall for. By _others_ I mean everybody, from
 our fellow in-project co-developers sitting next to us at the same desk, to
 imaginative junior contributors who will join the project in five years after
 we're all hired by Google. All of them, across this very large time frame, must
-be able to use the <del>kitchen</del> source code without any additional help.
+be able to use the ~~kitchen~~ source code without any additional help.
 The oven has to speak their language. Not the language of its designer.
 
 How do you do that? How do you make sure the code is clear, not just clean?

@@ -65,7 +65,7 @@ That's why it's not as maintainable as it should be, for two reasons:
   from [Apache HttpComponents](https://hc.apache.org/) as an example.
   However, when the server is more complex, the size of the client also
   grows. There are over 160 (!) methods in `AmazonS3Client` at the time of writing, while
-  it started with only a few dozen just a few <del>years</del> hundred versions ago.
+  it started with only a few dozen just a few ~~years~~ hundred versions ago.
 
   * **It is data focused**.
   The very idea of a client-server relationship is about transferring

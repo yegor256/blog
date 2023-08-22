@@ -35,7 +35,7 @@ _better_.
 
 {% jb_picture_body %}
 
-Say we have a <del>simple</del> primitive class `Weight`, objects of which
+Say we have a ~~simple~~ primitive class `Weight`, objects of which
 represent the weight of something in kilos:
 
 ```java

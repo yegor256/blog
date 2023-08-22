@@ -158,7 +158,7 @@ not per hour/week/month/year. If you want me to be truly motivated you have to
 invent a payment structure where my paychecks will correspond to my results.
 I do realize that this may require you to change the entire management
 system, so I don't absolutely insist. But you have to remember that as long as
-you pay me only for my time I will try to do my best to <del>steal from you</del> use
+you pay me only for my time I will try to do my best to ~~steal from you~~ use
 it for my
 [own benefit]({% pst 2017/jan/2017-01-24-career-advice %}).
 

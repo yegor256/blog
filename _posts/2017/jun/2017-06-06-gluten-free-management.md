@@ -39,10 +39,10 @@ negativity, finger-pointing, or
 [honesty]({% pst 2015/jan/2015-01-05-how-to-be-honest-and-keep-customer %}).
 You must think positively and always find a balance somewhere between
 "you guys are good" and "you're just fantastic."
-You must be their full-hearted <del>clown</del> cheerleader!
+You must be their full-hearted ~~clown~~ cheerleader!
 Truth hurts and modern management is not about hurting people, it's about
 making them happy. You must be a permanent source of good news, funny
-stories, and smiles, shielding your <del>slaves</del> people
+stories, and smiles, shielding your ~~slaves~~ people
 from the reality and its threats.
 
 {% quote Truth hurts and modern management is not about hurting people, it's about making them happy. %}
@@ -122,7 +122,7 @@ In other words, being a
 [good slave]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 and showing your team a good example.
 Don't worry about the future, when projects fail good committers
-just commit <del>suicide</del> themselves to new projects.
+just commit ~~suicide~~ themselves to new projects.
 
 **Be a Friend**.
 Explicit and non-ambiguous work orders are not

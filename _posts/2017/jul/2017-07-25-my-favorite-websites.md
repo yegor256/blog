@@ -109,7 +109,7 @@ seem to be the best sources of news for me. I open them a few times a week.
 and [Twitter](http://www.twitter.com)
 are the social networks I'm spamming regularly. They are far from being
 perfect, but they totally dominate the market.
-I was using these guys, but they seem to be <del>dead</del> less popular now:
+I was using these guys, but they seem to be ~~dead~~ less popular now:
 LinkedIn, Google+.
 
 <img src="/images/2017/07/sites-amazon.jpg" class="env-ico" alt="icon"/><br/>

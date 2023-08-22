@@ -29,7 +29,7 @@ is bad and that
 is a
 [good idea](http://programmers.stackexchange.com/questions/65179),
 but do we really understand why?
-In <del>most</del> all articles
+In ~~most~~ all articles
 [I've found](https://www.google.com/search?q=inheritance+is+bad)
 addressing this subject, authors have said that inheritance may be harmful
 to your code, so it's better not to use it. This "better" part is what bothers me;

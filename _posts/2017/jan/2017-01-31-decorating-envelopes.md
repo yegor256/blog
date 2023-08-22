@@ -19,7 +19,7 @@ jb_picture:
   caption: North by Northwest (1959) by Alfred Hitchcock
 ---
 
-<del>Sometimes</del> Very often I need a
+~~Sometimes~~ Very often I need a
 [class]({% pst 2016/sep/2016-09-20-oop-without-classes %}) that implements an
 interface by making an instance of another class. Sound weird? Let me show
 you an example. There are many classes of that kind in the

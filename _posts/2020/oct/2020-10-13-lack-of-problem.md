@@ -53,7 +53,7 @@ we will still be paid well!
 {% quote The primary responsibility of a team leader is keeping an eye on the problem statement and making sure it’s good enough for the team. %}
 
 This is true, but I think that money is not the fuel of
-the software economy <del>anymore</del>. It's people. Not just people, but
+the software economy ~~anymore~~. It's people. Not just people, but
 _motivated_ people---this is what software teams are now fighting for.
 Getting a budget for a project, especially if you are
 in a big enterprise (where all interesting projects will be eventually),

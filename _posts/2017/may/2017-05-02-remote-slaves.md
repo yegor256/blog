@@ -37,7 +37,7 @@ every second startup and even some big companies like
 and
 [many others](https://www.forbes.com/sites/laurashin/2017/01/31/work-from-home-in-2017-the-top-100-companies-offering-remote-jobs/).
 However, in most cases, the replacement of a brick-and-mortar office with a virtual one
-doesn't help companies and their <del>slaves</del> employees
+doesn't help companies and their ~~slaves~~ employees
 become more productive.
 
 <!--more-->
@@ -51,7 +51,7 @@ radical changes:
   * First, we replace office security cameras on the ceiling with screen
     _monitoring_ software and/or web cameras that constantly watch us.
     [Upwork does](https://support.upwork.com/hc/en-us/articles/211064098-Log-Time-with-the-Upwork-Desktop-App-)
-    it to its thousands of <del>monkeys</del> freelancers,
+    it to its thousands of ~~monkeys~~ freelancers,
     requiring them to install a background screen capture utility
     and make sure it is running during their entire working time.
 
@@ -61,7 +61,7 @@ radical changes:
     how to make _virtual meetings_ productive. The main principle is similar to
     the one we use for traditional meetings: Make it fun. Otherwise we will
     switch to Facebook or PokerStars while the manager is
-    still <del>acting</del> talking in her window.
+    still ~~acting~~ talking in her window.
 
   * Third, we replace Post-it stickies and Scrum boards with tickets and
     tasks in [Trello](https://trello.com/)

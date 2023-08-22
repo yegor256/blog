@@ -54,7 +54,7 @@ In other words, you will pay for a car but we will deliver you a chair
 strictly according to the contract. Disappointed? We are very sorry.
 Next, please!
 
-If you really want a <del>car</del> software that will do what you expect
+If you really want a ~~car~~ software that will do what you expect
 it to do, you have to learn how to be a _Product Owner_. It's a new job you will
 have to occupy for the next few months or maybe years. You will occupy it
 anyway, either you like it or not. But if you do that conciously and well

@@ -65,7 +65,7 @@ gays, immigrants, homeless, women, Mexicans, and many other
 "categories." Well, you can, but be prepared to get into trouble, which
 you may never resolve.
 
-What's funny is that <del>almost</del> every single white male I've met there was a racist, but
+What's funny is that ~~almost~~ every single white male I've met there was a racist, but
 not publicly of course. They all claimed to be tolerant but in a private
 conversation were often whispering the [n-word](https://en.wikipedia.org/wiki/Nigger) into my ear, while
 speaking about the race problem. They always had a handful of racist jokes

@@ -36,7 +36,7 @@ even though I was a user of PostgreSQL for many years. My first reaction was:
 Why was [Stack Overflow](https://stackoverflow.com) their last resort? They didn't explain, but I believe
 I know the answer: they would feel ashamed. For them Stack Overflow is a place
 for losers who can't solve problems by themselves. It is a place
-for those who are not worth the money their <del>owners</del> bosses pay
+for those who are not worth the money their ~~owners~~ bosses pay
 them. It is a place where lazy programmers ask questions and expect answers
 instead of working hard in their offices and resolving everything on their own.
 
@@ -74,7 +74,7 @@ In the story above, my friend had the right mindset. The moment he found
 out that his team couldn't solve the problem, he came to me, and a few other
 people. He was not a software developer, that's why he didn't know about
 Stack Overflow. But he was seeking help everywhere _around_ his team, while
-his <del>slaves</del> programmers were trying to find a solution by themselves.
+his ~~slaves~~ programmers were trying to find a solution by themselves.
 
 Maybe that's why he is a co-founder and they are his employees?
 

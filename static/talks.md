@@ -931,7 +931,7 @@ Malmö, Sweden;
 [slides](http://www.slideshare.net/YegorBugayenko/orm-is-an-offensive-antipattern),
 [video](https://www.youtube.com/watch?v=03PXmPc7Q3g),
 [photos](https://www.facebook.com/yegor256/posts/10211092077247768).
-The event was <del>pretty</del> too big; I would say about 800 attendees, 60 speakers, six tracks, and three
+The event was ~~pretty~~ too big; I would say about 800 attendees, 60 speakers, six tracks, and three
 full days plus workshops. For that size of a conference, organizers need
 to do way more "social" work for speakers and everybody else. I made almost
 no connections there, and most people I met had the same problem. It's a typical

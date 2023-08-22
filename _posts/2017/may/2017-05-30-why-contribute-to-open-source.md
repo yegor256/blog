@@ -31,7 +31,7 @@ without demanding anything back---guys, you're doing it wrong!
 
 {% jb_picture_body %}
 
-Open source <del>almost</del> always means _free_, as in beer---nobody will
+Open source ~~almost~~ always means _free_, as in beer---nobody will
 pay you anything for your pull requests. However, it doesn't mean
 you're not allowed to make money.
 

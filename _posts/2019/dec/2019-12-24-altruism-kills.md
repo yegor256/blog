@@ -52,7 +52,7 @@ You may say that [transactional management](https://en.wikipedia.org/wiki/Transa
 is in the past and modern
 teams are all about _transformational laissez-faire leadership_, where
 we don't do primitive piecework trade, but rather
-share common goals, <del>kiss</del> inspire each other, and
+share common goals, ~~kiss~~ inspire each other, and
 contribute enthusiastically. You may say that
 modern leadership is not about giving and taking,
 but about sharing and helping.
@@ -79,7 +79,7 @@ either with cash, or appreciation, or a good office atmosphere.
 There are two possible extreme attitudes: 1) the _altruistic_ one, when programmers
 contribute and expect absolutely nothing back, and 2) an _egoistic_ one, when
 programmers don't contribute at all, but expect their salaries to grow
-every year <del>(also known as software outsourcing)</del>.
+every year ~~(also known as software outsourcing)~~.
 
 Ever heard about the Fail Fast vs Fail Safe dichotomy? It is
 [well known](http://martinfowler.com/ieeeSoftware/failFast.pdf) that

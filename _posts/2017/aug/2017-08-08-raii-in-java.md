@@ -177,7 +177,7 @@ I introduced method `acquire()` and moved `sem.acquire()` out of the `Permit` co
 [believe]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
 that constructors must be code-free.
 
-To summarize, RAII is a perfect design <del>pattern</del> approach when you
+To summarize, RAII is a perfect design ~~pattern~~ approach when you
 deal with resources that may [leak](https://en.wikipedia.org/wiki/Resource_leak).
 Even though Java doesn't have it out of the box we can implement it
 via [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) and

@@ -43,7 +43,7 @@ a new mobile app, a multi-national corporation or a bank robbery:
 "shares of stock" were invented
 (if you know who invented them and when, let me know).
 
-Say we're planning to <del>rob a bank</del> create a Facebook killer. There are three
+Say we're planning to ~~rob a bank~~ create a Facebook killer. There are three
 of us. We print three papers, each of which says: "whoever holds this paper
 has one vote and will get an equal part of the profit." How does that sound? Each of us
 has the same paper. When it's time to decide whether we use Java or PHP,

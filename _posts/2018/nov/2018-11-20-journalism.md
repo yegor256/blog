@@ -79,7 +79,7 @@ Tech journalism sucks.
 If you want to be published, say what everybody else is saying. Or else say something
 very new. I don't really know. What will I do from now on? I will keep sending my
 articles to many places. I've even created a list of journalists (over 200 magazines)
-and I <del>spam</del> send them my articles via [Mailanes]({% pst 2018/oct/2018-10-30-mailanes %}).
+and I ~~spam~~ send them my articles via [Mailanes]({% pst 2018/oct/2018-10-30-mailanes %}).
 
 It seems they don't deserve a better attitude.
 

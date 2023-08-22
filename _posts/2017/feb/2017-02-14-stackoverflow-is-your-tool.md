@@ -38,7 +38,7 @@ explain why your activity on this platform is so important to
 {% jb_picture_body %}
 
 Basically, your Stack Overflow profile demonstrates five skills you either
-have or don't. They may not be as important to an office <del>slave</del>
+have or don't. They may not be as important to an office ~~slave~~
 [worker]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}), but if you're going to work
 [remotely]({% pst 2016/aug/2016-08-05-distributed-teams-are-higher-quality %}),
 they are crucial.

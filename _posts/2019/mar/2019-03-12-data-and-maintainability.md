@@ -113,7 +113,7 @@ void print() {
 ```
 
 Now the variable `i` is visible not only inside the function `print()` but
-in <del>many</del> all other places of the application we develop. The scope
+in ~~many~~ all other places of the application we develop. The scope
 of visibility of `i` is the size of the entire code base. Needless to say that
 makes the code of function `print()` [very unreadable]({% pst 2018/jul/2018-07-03-global-variables %}).
 I simply can't know what value to expect in `i` when the execution of `print()` starts---I
@@ -138,7 +138,7 @@ They were.
 But then C++ showed up and ruined everything.
 
 Let's try to introduce an object to our C snippet, the way
-<del>most</del> some C++ programmers would do it:
+~~most~~ some C++ programmers would do it:
 
 ```cpp
 class Idx {

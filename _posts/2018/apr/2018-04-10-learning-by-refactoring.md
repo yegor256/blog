@@ -75,7 +75,7 @@ See the difference?
 The first thing I do, when I see someone else's code, is to make it "red spots free"
 for my IDE. Most of those red spots are easy to remove,
 while others will take some time to refactor.
-While doing that I learn a lot about the <del>crap</del> program I have
+While doing that I learn a lot about the ~~crap~~ program I have
 to deal with.
 
 ## Remove Empty Lines

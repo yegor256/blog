@@ -20,7 +20,7 @@ jb_picture:
 It's not a secret that our salaries are a
 [secret](https://www.forbes.com/sites/davidburkus/2016/02/02/why-do-we-keep-salaries-secret/).
 Employers don't like their employees to know and discuss each other wages.
-Moreover, <del>most</del> some of them even put restrictive
+Moreover, ~~most~~ some of them even put restrictive
 [pay gag clauses](https://www.recruiter.com/i/gag-clause/) into
 employment contracts or NDA-s. Dispite [recent efforts](https://beta.congress.gov/bill/113th-congress/senate-bill/84)
 of law makers to make that clauses illegal,

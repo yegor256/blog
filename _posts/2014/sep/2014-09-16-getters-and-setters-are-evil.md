@@ -56,7 +56,7 @@ So please. Calm down and try to understand while I try to explain.
 {% badge /images/2014/09/object-thinking-by-david-west.png 96 http://amzn.to/266oJr4 %}
 
 There are a few arguments against "accessors"
-(another name for getters <del>and setters</del>), in an object-oriented world.
+(another name for getters ~~and setters~~), in an object-oriented world.
 All of them, I think, are not strong enough. Let's briefly go
 through them.
 

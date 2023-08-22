@@ -21,7 +21,7 @@ jb_picture:
 
 Your success depends on the quality of your **elevator pitch**. Basically, your
 success doesn't depend on much of anything else. The pitch is king.
-You have to impress the <del>catcher</del> investor in just a few seconds while
+You have to impress the ~~catcher~~ investor in just a few seconds while
 the elevator is still moving (that's where you are supposed to hunt for that
 prey). It's not rocket science; you can learn a few basic
 principles and become a expert. Here they are, the principles.
@@ -138,7 +138,7 @@ in such a huge and promising market?
 Especially if you're in a public place, you must speak as if you're
 a bit deaf. Be loud. That will prove that you're absolutely
 confident in what you're saying, today and always. The investor
-will be sure you are capable of attracting <del>mates</del> customers and
+will be sure you are capable of attracting ~~mates~~ customers and
 other investors, if for no other reason than because you're not afraid of being that ugly loud
 in public. You're 100% extrovert---you must demonstrate it
 shamelessly.

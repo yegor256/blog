@@ -91,7 +91,7 @@ That it was a waste of time. For both sides.
 
 Their bureaucratic machine is designed to process hundreds of candidates
 a month. In order to fish and attract them, there is an army of
-<del>monkeys</del>
+~~monkeys~~
 [recruiters]({% pst 2015/sep/2015-09-29-mayonnaise %})
 sending warm emails to people like me.
 They have to screen candidates somehow, and they are too lazy to make this
@@ -115,7 +115,7 @@ for example.
 
 There was a clear mismatch between my profile and the expectations of
 the interviewers. I don't blame them, and I don't blame her. They
-all were just <del>slaves</del>
+all were just ~~slaves~~
 [employees]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}). I blame myself for not setting
 this all straight at the very beginning.
 

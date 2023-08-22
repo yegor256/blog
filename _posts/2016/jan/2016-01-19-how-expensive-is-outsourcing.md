@@ -48,7 +48,7 @@ and delivered. I showed him this article about
 [incremental billing]({% pst 2014/oct/2014-10-21-incremental-billing %}).
 He seemed to understand the advantages of our approach, compared to the
 [hourly salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
-being paid by <del>almost</del> everybody else in the market.
+being paid by ~~almost~~ everybody else in the market.
 
 Still, the question remained---how much?
 

@@ -25,7 +25,7 @@ buffer:
   - "Face-to-face meetings with the manager was the most annoying part of all"
 ---
 
-No secret, <del>we</del> you all have managers. Some of them are
+No secret, ~~we~~ you all have managers. Some of them are
 great, while many are simply idiots. What do you do if you happen
 to have a boss that fits perfectly into this dominating category?
 Quit and try to find a better place? This may sound like good

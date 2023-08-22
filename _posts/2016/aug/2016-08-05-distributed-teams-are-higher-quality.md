@@ -41,7 +41,7 @@ need to _make_ it high.
 {% quote Quality can be achieved only if it is controlled and enforced. %}
 
 How do software teams make high-quality code? Oh, there are many proven methods.
-First, you need a very modern office where <del>programmers</del> developers
+First, you need a very modern office where ~~programmers~~ developers
 sit on cushioned chairs, play table tennis, drink smoothies, and write
 diagrams on walls. Second, you should buy them many books. Books have to be
 everywhere in the office, and they have to be about everything from Python

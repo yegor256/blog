@@ -23,7 +23,7 @@ A few days ago I asked
 [my Twitter](https://twitter.com/intent/follow?screen_name=yegor256)
 followers to vote in a
 [simple poll](https://twitter.com/yegor256/status/1318899898364866560).
-They did, screaming in comments that only a <del>stupid</del>
+They did, screaming in comments that only a ~~stupid~~
 incompetent manager would ask programmers to send daily reports,
 while everything they do can easily be tracked in tickets, Git history, and so on.
 Indeed, why on earth would a sane manager ask software engineers, already very busy with coding,

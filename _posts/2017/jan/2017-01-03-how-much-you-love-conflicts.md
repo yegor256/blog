@@ -83,7 +83,7 @@ see _interests_, that is. Remember, the position is, "I want to see the movie" a
 "I want to use a singleton." The only thing a confrontation of
 positions can produce is a fight, and the only solution is a compromise:
 "You guys need a good [team-building party]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
-so you become friends and lose <del>balls</del> the desire to fight." That's what those
+so you become friends and lose ~~balls~~ the desire to fight." That's what those
 monkeys build: teams. They believe that when the team is "strong,"
 there will be no fights, no conflicts, no arguments, no design patterns,
 no anti-patterns, and ... no senior developers. There will be just one
@@ -113,7 +113,7 @@ super annoying to you, my Californian readers, such a family would be way
 farther from a divorce than the one that used to make compromises, especially
 if the winning party is not always the same.
 
-If your software team has a <del>moronic</del> experienced
+If your software team has a ~~moronic~~ experienced
 [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}), you will
 most likely work in this conflict resolution model. He or she will make decisions,
 and you will have to go along. I wrote about such an architect

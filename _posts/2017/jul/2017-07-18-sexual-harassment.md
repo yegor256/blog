@@ -65,7 +65,7 @@ that "you either go along and we go out, or you won't be hired." Of course,
 "no hire" may not hurt as much as a knife or a fist in the face, but it
 does hurt. Especially if you are a woman, a member of a minority group.
 
-I'm a <del>sexist</del> gentleman,
+I'm a ~~sexist~~ gentleman,
 I feel bad when I see women being threatened. I want to protect them
 and I expect our system of justice to help me, just
 like it helps when we deal with physical violence.
@@ -85,7 +85,7 @@ This fear is destroying us.
 Thanks to this fear our _masculine_ characteristics become a victim of this dangerous game
 that society is playing right now, with a noble intent to protect women against
 verbal and psychological abuse. We men are losing our self-confidence,
-our self-esteem, our <del>balls</del> courage.
+our self-esteem, our ~~balls~~ courage.
 
 This fear mentally castrates us.
 

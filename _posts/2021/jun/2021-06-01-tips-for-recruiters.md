@@ -36,7 +36,7 @@ don't have good tools and we still enjoy being enslaved. One day
 this will be over and you will stop exploiting our drawbacks,
 will lose your "Senior Recruiter" jobs, and start doing something 
 useful and meaningful. However, until this day comes, here is some
-advice, to help you be a <del>less annoying</del> better 
+advice, to help you be a ~~less annoying~~ better 
 head hunter.
 
 <!--more-->
@@ -82,7 +82,7 @@ what I want. I don't want you, Jeff. Sorry. I'm not interested in knowing
 or dating you. Delete.
 
 Amy, on the other hand, puts Silva in front. This is who I want to know: Silva!
-Amy is just a temporary <del>middleman</del> middlewoman. She is not even trying
+Amy is just a temporary ~~middleman~~ middlewoman. She is not even trying
 to sell herself, even though, I'm sure, she also has a database of ladies, and so on.
 Technically speaking, she is no different than Jeff, but she presents herself right: 
 "I'm here just to introduce you to Silva, that's it!" Amy, I like you, I reply!

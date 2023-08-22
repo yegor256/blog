@@ -43,7 +43,7 @@ serve a single isolated and one-time purpose. We don't need them to exist
 or be visible for the entire application. Instead, we just need them
 right here and for once.
 
-For example, let's say we have a simple <del>collection</del> iterator of strings:
+For example, let's say we have a simple ~~collection~~ iterator of strings:
 
 ```java
 Iterator<String> list = Arrays.asList(

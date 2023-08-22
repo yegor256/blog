@@ -29,7 +29,7 @@ are many of them, but the list below succinctly summarizes the most important on
 {% jb_picture_body %}
 
 I'll be referring to "him," but these recommendations apply equally to both female and male
-<del>slaves</del> software developers.
+~~slaves~~ software developers.
 
 **Ask a Friend**.
 The best way to find talent is through a reference. Who knows the software
@@ -86,7 +86,7 @@ than those boring documents that nobody knows how to write.
 In order to create a great software product, he must be very _excited_ about it.
 Make sure he is excited. If he is not excited, call him again. Motivate him.
 Talk to him. Explain to him your brilliant Google-killer business idea again
-and again. Until the moment he <del>screams</del> says "I'm excited." He must know what
+and again. Until the moment he ~~screams~~ says "I'm excited." He must know what
 a great value your product is producing for the entirety of civilization. And he
 must be excited. Do I have to say it one more time? Excited! Are
 you excited already? I'm excited.

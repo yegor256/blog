@@ -165,7 +165,7 @@ incomplete set of arguments. The arguments we don't provide will be set
 to `null` by default. Also, when a method has to return something, but
 there is no `return` statement, Java should return `null`. This is almost exactly how
 it works in PHP, Ruby, and many other languages. I believe
-it would be a convenient feature for Java <del>monkeys</del> developers too.
+it would be a convenient feature for Java ~~monkeys~~ developers too.
 
 We won't need to define so many methods when some of the arguments are optional.
 [Method overloading](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)

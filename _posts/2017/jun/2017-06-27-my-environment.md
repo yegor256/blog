@@ -43,7 +43,7 @@ together with
 [SLIK Sprint 150](http://amzn.to/2xy2ivL) tripod.
 
 <img src="/images/2017/06/env-intellij-idea.jpg" class="env-ico" alt="icon"/><br/>
-[IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (<del>$499</del> free)
+[IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (~~$499~~ free)
 for Java projects. I've got a free open source
 license from [JetBrains](https://www.jetbrains.com/),
 because I'm an active contributor and
@@ -90,7 +90,7 @@ Homebrew. I was using [MacPorts](https://www.macports.org/)
 in my previous MacBook, but switched to Homebrew and have no regrets.
 
 <img src="/images/2017/06/env-yourkit.jpg" class="env-ico" alt="icon"/><br/>
-[YourKit](https://www.yourkit.com/) (<del>$499</del> free)
+[YourKit](https://www.yourkit.com/) (~~$499~~ free)
 for Java profiling. I've got a free license from them, again because
 I'm a contributor to a few open source projects.
 [Email them](mailto:sales@yourkit.com)

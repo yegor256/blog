@@ -23,7 +23,7 @@ style: |
 {: .book-badge}
 {% badge /images/books/code-ahead/cover.png 160 %}
 
-"Code Ahead" will be my <del>second</del> fourth book. It will be about software engineering. It
+"Code Ahead" will be my ~~second~~ fourth book. It will be about software engineering. It
 will contain a number of best practices, which help software live longer.
 All of that principles I've learned from my practical experience.
 

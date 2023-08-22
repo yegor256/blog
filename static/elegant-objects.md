@@ -627,7 +627,7 @@ a mistake in selecting reviewers. Not all of them were as effective as
 I was expecting. This time, I will make the process different. I will put all
 of them on a list and let you vote. The best 12, elected by you,
 will get the early draft of the second volume and help me review it. To
-get onto the list, please fill out <del>this simple form</del>.
+get onto the list, please fill out ~~this simple form~~.
 
 <a name="reviews"></a>
 Aug 22, 2016:

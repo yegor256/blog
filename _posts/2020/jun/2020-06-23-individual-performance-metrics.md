@@ -45,7 +45,7 @@ reduced to a mere number?
 First, let's see why putting a metric on a programmer
 may be considered bad practice (my opinion: these are merely excuses
 from overly-paid programmers/managers who are just trying to keep their jobs, doing
-<del>nothing</del> whatever they want, and wasting employers' money):
+~~nothing~~ whatever they want, and wasting employers' money):
 
   * "Individual performance metrics are against the spirit of Scrum,"
     [says](https://www.scrum.org/forum/scrum-forum/13381/individual-performance-scrum-enviornment)

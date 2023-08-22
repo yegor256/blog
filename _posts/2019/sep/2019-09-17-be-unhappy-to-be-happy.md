@@ -85,7 +85,7 @@ mentioned above and don't need to struggle much in order to get them.
 The smarter we are, the easier it is for us _to achieve_: find a well-paid job
 and buy a new iPhone.
 
-We <del>intelligent</del> tech people, don't struggle enough.
+We ~~intelligent~~ tech people, don't struggle enough.
 
 Life doesn't challenge us as much as we need. We don't even need to have special talents
 these days to be decently paid: You read [_JavaScript in 24 Hours_](https://amzn.to/2O1MBIg) and a new iPhone
