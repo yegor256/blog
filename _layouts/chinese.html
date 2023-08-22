@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<section itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="wrapper">
+    <header>
+      <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
+    </header>
+    <article class="main" itemprop="articleBody">
+      {{ content }}
+    </article>
+  </div>
+  <div class="wrapper">
+    <footer class="footer">
+      <p>
+        &copy;
+        <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person">
+          <span itemprop="name">{{ site.author.name }}</span>
+        </span>
+        2014&ndash;<span itemprop="copyrightYear">{{ 'now' | date: "%Y" }}</span>
+      </p>
+    </footer>
+  </div>
+
+</section>

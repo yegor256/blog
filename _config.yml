@@ -40,7 +40,17 @@ plugins:
   - jekyll-plantuml
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-chatgpt-translate
   # - jekyll-related-posts
+
+chatgpt-translate:
+  threshold: 32
+  source: en
+  targets:
+    -
+      language: cn
+      layout: chinese
+      permalink: :year/:month/:day/cn/:slug.html
 
 # see https://github.com/alfanick/jekyll-related-posts
 related:
