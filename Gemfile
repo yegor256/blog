@@ -35,6 +35,7 @@ gem 'jekyll-sitemap', '1.4.0'
 # gem 'jekyll-related-posts'
 
 gem 'fastimage', '2.2.7'
+gem 'jgd', '1.13.1'
 gem 'html-proofer', '3.7.5'
 gem 'kramdown', '2.4.0'
 gem 'liquid', '4.0.4'
