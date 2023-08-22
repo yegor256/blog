@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fast Tests Help Humans, Deep Tests Help Servers"
-date: 2023-08-23
+date: 2023-08-22
 place: Kazan, Russia
 tags: testing java
 description: |
