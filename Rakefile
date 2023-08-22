@@ -58,8 +58,9 @@ end
 
 def all_html
   Dir['_site/**/*.html']
-    .reject { |f| f.end_with? '.amp.html' }
-    .reject { |f| f.start_with? '_site/chinese/' }
+    .reject { |f| f.end_with?('.amp.html') }
+    .reject { |f| f.start_with?('_site/chinese/') }
+    .reject { |f| f.start_with?('_site/russian/') }
 end
 
 def all_links
