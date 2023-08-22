@@ -46,16 +46,21 @@ amp: true
           <li><a href="mailto:translate@yegor256.com">add yours!</a></li>
         </ul>
       {% endif %}
-      {% if page.translated-cn-url %}
+      {% if page.chatgpt-model %}
         <ul class="subline">
-          <li title="The page is translated by ChatGPT to a few languages">
+          <li title="The page is translated by ChatGPT from English to a few languages">
             Translated by
             <i class="icon icon-chatgpt notranslate" aria-hidden="true"></i>
             to
           </li>
-          {% if page.translated-cn-url %}
+          {% if page.translated-zh-url %}
             <li title="Click to see this page translated to Chinese">
-              <a href='{{ site.url }}{{ page.translated-cn-url }}'>中文</a>
+              <a href='{{ site.url }}{{ page.translated-zh-url }}'>中文</a>
+            </li>
+          {% endif %}
+          {% if page.translated-ru-url %}
+            <li title="Click to see this page translated to Russian">
+              <a href='{{ site.url }}{{ page.translated-ru-url }}'>русский</a>
             </li>
           {% endif %}
         </ul>

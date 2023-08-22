@@ -146,6 +146,7 @@ module Yegor
           </li>
           #{post.content.include?('twitter-tweet') ? '<li class="has-poll" title="There is a Twitter poll inside"><i class="icon icon-twitter"></i></li>' : ''}
           #{post.content.include?('{% youtube') ? '<li class="has-youtube" title="There is a YouTube video inside"><i class="icon icon-youtube"></i></li>' : ''}
+          #{post['chatgpt-model'] ? '<li title="The article is translated to other languages by ChatGPT"><i class="icon icon-chatgpt"></i></li>' : ''}
         </ul>
       </div>".gsub("\n", '')
     end

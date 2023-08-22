@@ -52,6 +52,11 @@ keywords:
                 <i class="icon icon-comments"></i>
                 <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
               </li>
+              {% if post.chatgpt-model %}
+                <li title="This article is translated to a few languages by ChatGPT">
+                  <i class="icon icon-chatgpt"></i>
+              </li>
+              {% endif %}
             </ul>
           </header>
           <div class="main" itemprop="description">
