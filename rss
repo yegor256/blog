@@ -1,4 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-22T04:11:56+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Double-Blind Review Is What Makes Decisions Fair</title><link href="https://www.yegor256.com/2023/08/15/decision-making-process.html" rel="alternate" type="text/html" title="The Double-Blind Review Is What Makes Decisions Fair" /><published>2023-08-15T00:00:00+00:00</published><updated>2023-08-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/15/decision-making-process</id><content type="html" xml:base="https://www.yegor256.com/2023/08/15/decision-making-process.html"><![CDATA[<p>How does your team review ideas, project proposals, or paper drafts?
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-22T04:47:52+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fast Tests Help Humans, Deep Tests Help Servers</title><link href="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html" rel="alternate" type="text/html" title="Fast Tests Help Humans, Deep Tests Help Servers" /><published>2023-08-22T00:00:00+00:00</published><updated>2023-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/22/fast-vs-deep-testing</id><content type="html" xml:base="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html"><![CDATA[<p>In order to reveal errors of higher complexity, automated tests are 
+turned into integration tests that involve external resources in test 
+scenarios, instead of their mocks. While this approach improves test 
+coverage, it slows down the entire build pipeline. This compromises 
+the very idea of automated tests, which are meant to be a 
+<a href="/2022/07/05/safety-net.html">safety net</a>
+and help programmers edit code safely. Splitting the tests into “fast” 
+and “deep,” and then allowing humans to run the former while servers 
+run the latter, might be a good solution to the problem.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Inglourious Basterds (2009) by Quentin Tarantino" src="/images/2023/08/inglourious-basterds.jpg" longdesc="#98a0f5f2" /><figcaption id="98a0f5f2">Inglourious Basterds (2009) by Quentin Tarantino</figcaption></figure>
+
+<p>Consider this Java code with a simple <code class="language-plaintext highlighter-rouge">toString()</code> static method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">StringBuilder</span> <span class="n">buf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
+  <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">d</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">buf</span><span class="o">.</span><span class="na">append</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span> <span class="n">d</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">buf</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It reads the <code class="language-plaintext highlighter-rouge">stream</code> byte by byte, appends them to the buffer, and
+returns the buffer to the client. Here is the JUnit5 test that validates
+the functionality:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kt">void</span> <span class="nf">readsSomeData</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span>
+    <span class="s">"ABC"</span><span class="o">,</span>
+    <span class="n">toString</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">ByteArrayInputStream</span><span class="o">(</span>
+        <span class="k">new</span> <span class="kt">byte</span><span class="o">[]</span> <span class="o">{</span><span class="mh">0x41</span><span class="o">,</span> <span class="mh">0x42</span><span class="o">,</span> <span class="mh">0x43</span><span class="o">}</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>So far, so good. The test works, and the method seems to be correct. Moreover, the test 
+completes very quickly—just 5ms on my laptop. However, upon closer 
+inspection, we can identify a bug in the method: it doesn’t close the 
+input stream. This issue doesn’t impact the test because the input 
+stream is in memory and doesn’t hold any valuable resources that might leak. 
+However, if we introduce a new test, it will expose this problem:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kt">void</span> <span class="nf">readsFromManyFiles</span><span class="o">(</span><span class="nd">@TempDir</span> <span class="nc">Path</span> <span class="n">tmp</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="nc">Path</span> <span class="n">f</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="s">"test.txt"</span><span class="o">);</span>
+  <span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="s">"Hello, world!"</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20000</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span>
+      <span class="mi">13</span><span class="o">,</span>
+      <span class="n">toString</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">toFile</span><span class="o">())).</span><span class="na">length</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>When I run this test, I get a <code class="language-plaintext highlighter-rouge">FileNotFoundException</code> with a message saying 
+<code class="language-plaintext highlighter-rouge">Too many open files</code>. If I reduce the upper limit in the for loop to 10000, 
+the error disappears. This most definitely happens because the maximum number of open files 
+on Mac OS X <a href="https://superuser.com/a/443168">is 12,288</a>. However, on Ubuntu, 
+this limit is <a href="https://askubuntu.com/questions/1049058">set to 65536</a>. Thus, my test 
+won’t spot an error if I run it on Ubuntu. I’m sure you know how to fix this error in the toString() method.</p>
+
+<p>Obviously, the second test is much slower than the first one, taking 
+650ms on my laptop (130 times slower!). This is just an example of a test that 
+aids in bug detection but is time-consuming. Typically, integration tests 
+demonstrate such a negative impact on performance because they involve “external” 
+resources, which are slow. The file system, used by the second test, is one such external resource.</p>
+
+<p>650ms might not be problematic when there are only a few test methods in 
+a young project. However, as the number of tests increases, slow tests 
+quickly become an issue since the overall build time lengthens, frustrating 
+programmers. Automated tests, meant to assist coders, turn into a hindrance. 
+If a coder has to wait several minutes after every code change to ensure nothing broke, 
+frustration ensues. Often, the frustrated coder might remove those slow tests.</p>
+
+<aside class="quote">It’s impossible to make integration tests faster since they are inherently slow for a reason.
+</aside>
+
+<p>It goes without saying that deleting slow tests isn’t the solution. 
+So, what is? Speeding them up? Not quite. It’s almost always challenging, 
+if not impossible, to make integration tests faster since they are inherently 
+slow for a reason. The only way to speed them up is to mock those slow 
+external resources. But these resources are tested specifically to detect 
+bugs that unit tests might miss. For instance, in our case, if we mock 
+the input stream, the second test will miss the bug. Therefore, the 
+second (integration) test must be slow to be valuable.</p>
+
+<p>Classifying tests into <em>fast</em> and <em>deep</em> may be a solution. The first category comprises 
+tests that mock as much as possible and take no more than 20ms to run. 
+The second category consists of tests that probe deeper to uncover elusive bugs, 
+which might be overlooked by faster tests. More often than not, unit tests 
+fall into the first category, while integration tests fit into the second. 
+The distinction of “unit-vs-integration” is, in my view, misleading. “Fast-vs-deep” 
+is much clearer since it’s evident to which category a test belongs. 
+If a test takes under 20ms, it’s fast; if not, it’s deep.</p>
+
+<p>Once tests are designated as either fast or deep, they should be run in two 
+distinct scenarios: programmers run the fast tests during coding, 
+while servers execute the deep tests during software build and/or release phases. 
+In JUnit5, this categorization can be achieved using the @Tag annotation:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="nd">@Tag</span><span class="o">(</span><span class="s">"fast"</span><span class="o">)</span>
+<span class="kt">void</span> <span class="nf">readsSomeData</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+<span class="nd">@Test</span>
+<span class="nd">@Tag</span><span class="o">(</span><span class="s">"deep"</span><span class="o">)</span>
+<span class="kt">void</span> <span class="nf">readsFromManyFiles</span><span class="o">(</span><span class="nd">@TempDir</span> <span class="nc">Path</span> <span class="n">tmp</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>In most cases, obvious bugs will be detected by fast tests, giving programmers 
+confidence when editing the code. On the rare occasions when fast tests 
+fail to identify certain bugs, the deep tests will catch them. Only then 
+will programmers run the slow tests on their laptops.</p>
+
+<p>This is how <code class="language-plaintext highlighter-rouge">pom.xml</code> may be configured to turn “fast” tests ON, by default:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;groups&gt;</span>fast<span class="nt">&lt;/groups&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<p>In the CI environment, Maven must be started with the following flag:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn test -Dgroups=slow
+</code></pre></div></div>
+
+<p>A programmer can also run the “slow” tests on their own laptop using 
+the same command line flag. However, this will typically only be done 
+when the server issues a red signal.</p>
+
+<p>P.S. By the way, the <code class="language-plaintext highlighter-rouge">toString()</code> method has another bug that 
+isn’t detected by either the first or second test. Can you identify it? 
+Could you devise a test that would expose this bug? 
+Would you categorize this test as “fast” or “deep”?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="java" /><summary type="html"><![CDATA[Humans should run "fast" tests to catch obvious mistakes, while servers should execute "deep" tests to ensure the highest quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Double-Blind Review Is What Makes Decisions Fair</title><link href="https://www.yegor256.com/2023/08/15/decision-making-process.html" rel="alternate" type="text/html" title="The Double-Blind Review Is What Makes Decisions Fair" /><published>2023-08-15T00:00:00+00:00</published><updated>2023-08-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/15/decision-making-process</id><content type="html" xml:base="https://www.yegor256.com/2023/08/15/decision-making-process.html"><![CDATA[<p>How does your team review ideas, project proposals, or paper drafts?
 Imagine I’m on your team and I need a budget allocated to a new project. 
 I craft a proposal, elucidate the motivation, assess the risks, develop a plan, 
 and then what? Do I create a PowerPoint presentation, present to my teammates 
@@ -1460,185 +1611,4 @@ citation styles.</p>
 
 <p>Long tables, complex proofs, large figures are good candidates for placing
 into appendices. Keeping them in the main part of the paper may jeopardize
-its readability.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[Here is a very simplified guideline for newbie academic writers like myself, to help you structure a paper in a way that won't surprise your reviewers too much.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Declarative and Immutable Pipeline of Transformations</title><link href="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html" rel="alternate" type="text/html" title="Declarative and Immutable Pipeline of Transformations" /><published>2022-08-10T00:00:00+00:00</published><updated>2022-08-10T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline</id><content type="html" xml:base="https://www.yegor256.com/2022/08/10/xsline-immutable-pipeline.html"><![CDATA[<p>A few months ago I made a <a href="https://github.com/yegor256/xsline">small Java library</a>,
-which is worth explaining since
-the design of its classes and interfaces is pretty unusual. It’s very much
-object-oriented for a pretty imperative task: building a pipeline of
-document transformations. The goal was to do this in a declarative and
-immutable way, and in Java. Well, as much as it’s possible.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Barfuss (2005) by Til Schweiger" src="/images/2022/08/barfuss.jpg" longdesc="#53e51a8f" /><figcaption id="53e51a8f">Barfuss (2005) by Til Schweiger</figcaption></figure>
-
-<p>Let’s say you have a document, and you have a collection of transformations,
-each of which will do something with the document. Each transformation, for example,
-is a small piece of Java code. You want to build a list
-of transformations and then pass a document through this list.</p>
-
-<p>First, I made an interface <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Shift.java"><code class="language-plaintext highlighter-rouge">Shift</code></a>
-(instead of the frequently used and boring “transformation”):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Shift</span> <span class="o">{</span>
-  <span class="nc">Document</span> <span class="nf">apply</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Then I made an interface <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java"><code class="language-plaintext highlighter-rouge">Train</code></a>
-(this is the name I made up for the collection
-of transformations) and its default implementation:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Train</span> <span class="o">{</span>
-  <span class="nc">Train</span> <span class="nf">with</span><span class="o">(</span><span class="nc">Shift</span> <span class="n">shift</span><span class="o">);</span>
-  <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Shift</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="o">();</span>
-<span class="o">}</span>
-<span class="kd">class</span> <span class="nc">TrDefault</span> <span class="kd">implements</span> <span class="nc">Train</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Shift</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">;</span>
-  <span class="nd">@Override</span>
-  <span class="nc">Train</span> <span class="nf">with</span><span class="o">(</span><span class="nc">Shift</span> <span class="n">shift</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Shift</span><span class="o">&gt;</span> <span class="n">items</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
-    <span class="k">for</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">Shift</span> <span class="n">item</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">list</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">items</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
-    <span class="o">}</span>
-    <span class="n">items</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">shift</span><span class="o">);</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">TrDefault</span><span class="o">(</span><span class="n">items</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="nd">@Override</span>
-  <span class="kd">public</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Shift</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="o">()</span> <span class="o">{</span>
-      <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">list</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Ah, I forgot to tell you. I’m a big fan of <a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>
-objects. That’s why the
-<code class="language-plaintext highlighter-rouge">Train</code> doesn’t have a method <code class="language-plaintext highlighter-rouge">add</code>, but instead has <code class="language-plaintext highlighter-rouge">with</code>. The difference is that
-<code class="language-plaintext highlighter-rouge">add</code> modifies the object, while <code class="language-plaintext highlighter-rouge">with</code> makes a new one.</p>
-
-<p>Now, I can build a train of shifts with
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrDefault.java"><code class="language-plaintext highlighter-rouge">TrDefault</code></a>,
-a simple default implementation of <code class="language-plaintext highlighter-rouge">Train</code>, assuming
-<code class="language-plaintext highlighter-rouge">ShiftA</code> and <code class="language-plaintext highlighter-rouge">ShiftB</code> are already implemented:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrDefault</span><span class="o">()</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftA</span><span class="o">())</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftB</span><span class="o">());</span>
-</code></pre></div></div>
-
-<p>Then I created an <a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Xsline.java"><code class="language-plaintext highlighter-rouge">Xsline</code></a>
-class (it’s “XSL” + “pipeline”, since in my case
-I’m managing XML documents and transform them using XSL stylesheets). An instance
-of this class encapsulates an instance of <code class="language-plaintext highlighter-rouge">Train</code> and then passes a document
-through all its transformations:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">input</span> <span class="o">=</span> <span class="o">...;</span>
-<span class="nc">Document</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Xsline</span><span class="o">(</span><span class="n">train</span><span class="o">).</span><span class="na">pass</span><span class="o">(</span><span class="n">input</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>So far so good.</p>
-
-<p>Now, I want all my transformations to log themselves. I created
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java"><code class="language-plaintext highlighter-rouge">StLogged</code></a>,
-a decorator of <code class="language-plaintext highlighter-rouge">Shift</code>, which encapsulates the original <code class="language-plaintext highlighter-rouge">Shift</code>, decorates its method <code class="language-plaintext highlighter-rouge">apply</code>,
-and prints a message to the console when the transformation is completed:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">StLogged</span> <span class="kd">implements</span> <span class="nc">Shift</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Shift</span> <span class="n">origin</span><span class="o">;</span>
-  <span class="nd">@Override</span>
-  <span class="nc">Document</span> <span class="nf">apply</span><span class="o">(</span><span class="nc">Document</span> <span class="n">before</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nc">Document</span> <span class="n">after</span> <span class="o">=</span> <span class="n">origin</span><span class="o">.</span><span class="na">apply</span><span class="o">(</span><span class="n">before</span><span class="o">);</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Transformation completed!"</span><span class="o">);</span>
-    <span class="k">return</span> <span class="n">after</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, I have to do this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrDefault</span><span class="o">()</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">StLogged</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftA</span><span class="o">()))</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">StLogged</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftB</span><span class="o">()));</span>
-</code></pre></div></div>
-
-<p>Looks like a duplication of <code class="language-plaintext highlighter-rouge">new StLogged(</code>, especially with a collection of a few dozen
-shifts. To get rid of this duplication I created a decorator for <code class="language-plaintext highlighter-rouge">Train</code>, which
-on the fly decorates shifts that it encapsulates, using
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StLogged.java"><code class="language-plaintext highlighter-rouge">StLogged</code></a>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrLogged</span><span class="o">(</span><span class="k">new</span> <span class="nc">TrDefault</span><span class="o">())</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftA</span><span class="o">()))</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">ShiftB</span><span class="o">());</span>
-</code></pre></div></div>
-
-<p>In my case, all shifts are doing XSL transformations, taking XSL stylesheets from
-files available in classpath. That’s why the code looks like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrLogged</span><span class="o">(</span><span class="k">new</span> <span class="nc">TrDefault</span><span class="o">())</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">StXSL</span><span class="o">(</span><span class="s">"stylesheet-a.xsl"</span><span class="o">)))</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">new</span> <span class="nc">StXSL</span><span class="o">(</span><span class="s">"stylesheet-b.xsl"</span><span class="o">)));</span>
-</code></pre></div></div>
-
-<p>There is an obvious duplication of <code class="language-plaintext highlighter-rouge">new StXSL(...)</code>, but I can’t simply get rid of it,
-since the method <code class="language-plaintext highlighter-rouge">with</code> expects an instance of <code class="language-plaintext highlighter-rouge">Shift</code>, not a <code class="language-plaintext highlighter-rouge">String</code>. To solve this,
-I made the <code class="language-plaintext highlighter-rouge">Train</code> generic and created
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrClasspath.java"><code class="language-plaintext highlighter-rouge">TrClasspath</code></a>
-decorator:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrClasspath</span><span class="o">&lt;&gt;(</span><span class="k">new</span> <span class="nc">TrDefault</span><span class="o">&lt;&gt;())</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"stylesheet-a.xsl"</span><span class="o">))</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"stylesheet-b.xsl"</span><span class="o">));</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">TrClasspath.with()</code> accepts <code class="language-plaintext highlighter-rouge">String</code>, turns it into
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/StXSL.java"><code class="language-plaintext highlighter-rouge">StXSL</code></a>
-and passes to <code class="language-plaintext highlighter-rouge">TrDefault.with()</code>.</p>
-
-<p>Pay attention to the snippet above: the <code class="language-plaintext highlighter-rouge">train</code> is now of type <code class="language-plaintext highlighter-rouge">Train&lt;String&gt;</code>, not <code class="language-plaintext highlighter-rouge">Train&lt;Shift&gt;</code>,
-as would be required by <code class="language-plaintext highlighter-rouge">Xsline</code>.
-The question now is: how do we get back to <code class="language-plaintext highlighter-rouge">Train&lt;Shift&gt;</code>?</p>
-
-<aside class="youtube">
-        <a href="https://www.youtube.com/watch?v=C6CQWzOKEJs"><div class="box">
-        <img src="https://i.ytimg.com/vi/C6CQWzOKEJs/mqdefault.jpg" alt="YouTube video #C6CQWzOKEJs" />
-        <div class="play"><i class="icon icon-play"></i></div>
-        </div></a>
-        <div>Object Thinking #7: Yegor Bugayenko / Immutability + Generics;
-        22 September 2022.</div></aside>
-
-<p>Ah, I forgot to mention. I wanted to design this library with one important principle
-in mind, <a href="/2014/11/20/seven-virtues-of-good-object.html">suggested</a>
-in 2014: all objects may only implement methods from their interfaces. That’s why,
-I couldn’t just add a method <code class="language-plaintext highlighter-rouge">getEncapsulatedTrain()</code> to <code class="language-plaintext highlighter-rouge">TrClasspath</code>.</p>
-
-<p>I introduced a new interface
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/Train.java"><code class="language-plaintext highlighter-rouge">Train.Temporary&lt;T&gt;</code></a>
-with a single method <code class="language-plaintext highlighter-rouge">back()</code>
-returning <code class="language-plaintext highlighter-rouge">Train&lt;T&gt;</code>. The class <code class="language-plaintext highlighter-rouge">TrClasspath</code> implements
-it and I can do this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Train</span><span class="o">&lt;</span><span class="nc">Shift</span><span class="o">&gt;</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrClasspath</span><span class="o">&lt;&gt;(</span><span class="k">new</span> <span class="nc">TrDefault</span><span class="o">&lt;&gt;())</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"stylesheet-a.xsl"</span><span class="o">))</span>
-  <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"stylesheet-b.xsl"</span><span class="o">))</span>
-  <span class="o">.</span><span class="na">back</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>Next I decided to get rid of the duplication of <code class="language-plaintext highlighter-rouge">.with()</code> calls. Obviously, it would
-be easier to have the ability to provide a list of file names as an array of <code class="language-plaintext highlighter-rouge">String</code>
-and build the train from it. I created a new class
-<a href="https://github.com/yegor256/xsline/blob/0.5.2/src/main/java/com/yegor256/xsline/TrBulk.java"><code class="language-plaintext highlighter-rouge">TrBulk</code></a>,
-which does exactly that:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
-  <span class="s">"stylesheet-a.xsl"</span><span class="o">,</span>
-  <span class="s">"stylesheet-b.xsl"</span>
-<span class="o">);</span>
-<span class="nc">Train</span><span class="o">&lt;</span><span class="nc">Shift</span><span class="o">&gt;</span> <span class="n">train</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TrBulk</span><span class="o">&lt;&gt;(</span>
-  <span class="k">new</span> <span class="nc">TrClasspath</span><span class="o">&lt;&gt;(</span>
-    <span class="k">new</span> <span class="nc">TrDefault</span><span class="o">&lt;&gt;()</span>
-  <span class="o">)</span>
-<span class="o">).</span><span class="na">with</span><span class="o">(</span><span class="n">names</span><span class="o">).</span><span class="na">back</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>With this design I can construct the train in almost any possible way.</p>
-
-<p>See, for example, how we use it <a href="https://github.com/objectionary/eo/blob/0.23.6/eo-parser/src/main/java/org/eolang/parser/ParsingTrain.java#L86-L103">here</a> and <a href="https://github.com/objectionary/eo/blob/0.23.6/eo-maven-plugin/src/main/java/org/eolang/maven/SpyTrain.java#L49-L75">here</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="xml" /><summary type="html"><![CDATA[Combining "strategy" objects into a pipeline is a trivial task if done in a mutable and imperative way; here I show a declarative and immutable approach]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/barfuss.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+its readability.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[Here is a very simplified guideline for newbie academic writers like myself, to help you structure a paper in a way that won't surprise your reviewers too much.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

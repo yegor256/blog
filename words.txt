@@ -2393,6 +2393,7 @@ development
 device
 devil
 devious
+devise
 devop
 devops
 devopsdays
@@ -3341,6 +3342,7 @@ filed
 fileinputstream
 filelines
 filename
+filenotfoundexception
 filereader
 files
 fileutils
