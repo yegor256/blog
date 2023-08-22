@@ -2,6 +2,7 @@ docker:
   image: yegor256/blog-image:0.0.5
 assets:
   secrets.yml: "yegor256/home#assets/blog/secrets.yml"
+  chatgpt-key.txt: "yegor256/home#assets/blog/chatgpt-key.txt"
   id_rsa: "yegor256/home#assets/blog/id_rsa"
   id_rsa.pub: "yegor256/home#assets/blog/id_rsa.pub"
 install: |
@@ -20,4 +21,5 @@ deploy:
     echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
     git config --global user.email "rultor@yegor256.com"
     git config --global user.name "Rultor"
+    echo -e "chatgpt-translate:\n  api_key_file: $(pwd)/../chatgpt-key.txt" > _config-deploy.yml
     LC_ALL=en_US.UTF-8 jgd

@@ -50,7 +50,7 @@ chatgpt-translate:
     -
       language: cn
       layout: chinese
-      permalink: :year/:month/:day/cn/:slug.html
+      permalink: chinese/:year/:month/:day/:slug.html
 
 # see https://github.com/alfanick/jekyll-related-posts
 related:
