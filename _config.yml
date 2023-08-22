@@ -48,7 +48,7 @@ chatgpt-translate:
   source: en
   targets:
     -
-      language: cn
+      language: zh
       layout: chinese
       permalink: chinese/:year/:month/:day/:slug.html
 
