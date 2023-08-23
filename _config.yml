@@ -45,6 +45,7 @@ plugins:
 
 chatgpt-translate:
   threshold: 32
+  min_chars: 20
   source: en
   version: "002"
   layout: translated
