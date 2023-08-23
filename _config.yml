@@ -44,7 +44,7 @@ plugins:
   # - jekyll-related-posts
 
 chatgpt-translate:
-  threshold: 8
+  threshold: 32
   source: en
   version: "002"
   layout: translated
