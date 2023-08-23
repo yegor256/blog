@@ -46,14 +46,15 @@ plugins:
 chatgpt-translate:
   threshold: 8
   source: en
+  version: "001"
   layout: translated
   targets:
     -
       language: zh
-      permalink: chinese/:year/:month/:day/:slug.html
+      permalink: zh/:year/:month/:day/:slug.html
     -
       language: ru
-      permalink: russian/:year/:month/:day/:slug.html
+      permalink: ru/:year/:month/:day/:slug.html
 
 # see https://github.com/alfanick/jekyll-related-posts
 related:
