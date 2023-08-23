@@ -46,7 +46,7 @@ plugins:
 chatgpt-translate:
   threshold: 8
   source: en
-  version: "001"
+  version: "002"
   layout: translated
   targets:
     -
