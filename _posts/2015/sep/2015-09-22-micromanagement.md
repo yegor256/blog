@@ -50,8 +50,6 @@ of control a manager exerts over subordinates. Instead, it is all about
 _how_ the details are observed and control is exercised. A micromanager
 gives instructions while a good manager defines goals and rules.
 
-{% youtube ZVn7ufg-tk0 %}
-
 Micro-managers define _algorithms_ for achieving results and insist
 on them being implemented according to their will. This is what
 a micromanager would sound like:
@@ -68,6 +66,8 @@ This is how a good manager would delegate a similar task:
 - Hey, the server with Nginx configured must
   be up and running by 6 p.m. I'm counting on you.
 ```
+
+{% youtube ZVn7ufg-tk0 %}
 
 Pay attention to how polite our micromanager is and how rude the good manager is.
 However, it's obvious that the first one is extremely annoying while
