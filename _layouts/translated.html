@@ -9,8 +9,8 @@ layout: default
     </header>
     <article class="main" itemprop="articleBody" style="font-family: sans-serif; font-size: 0.9em; line-height: 1.2em;">
       <p style="color: #C42C00;">The following text is a <em>partial</em> translation of the
-        <a href='{{ site.url }}{{ page.translated-original-url }}'>original English article</a>,
-        performed by <a href="https://chat.openai.com/">ChatGPT</a> ({{ page.chatgpt-model }})
+        <a href='{{ site.url }}{{ page.chatgpt-translate.original-url }}'>original English article</a>,
+        performed by <a href="https://chat.openai.com/">ChatGPT</a> ({{ page.chatgpt-translate.model }})
         and <a href="https://github.com/yegor256/jekyll-chatgpt-translate">this Jekyll plugin</a>:
       </p>
       {{ content }}

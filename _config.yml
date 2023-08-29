@@ -47,7 +47,7 @@ chatgpt-translate:
   threshold: 64
   min_chars: 20
   source: en
-  version: "30"
+  version: "31"
   layout: translated
   targets:
     -

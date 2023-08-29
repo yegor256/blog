@@ -5,26 +5,29 @@ date: 2023-08-29
 place: Moscow, Russia
 tags: ai programming
 description: |
-  Robots could revolutionize tasks from code reviews, bug fixing,
-  automated refactoring, to backlog prioritization and appraising of employees.
+  Robots will likely revolutionize software engineering ranging 
+  from code reviews and bug fixing to automated refactoring, 
+  backlog prioritization, and employee appraisals.
 keywords:
   - AI for SE
   - AI for coding
   - ChatGPT for programmers
   - ChatGPT for coding
   - AI for programming
-image: /images/2023/08/
+image: /images/2023/08/blade-runner.jpg
 jb_picture:
-  caption: ...
+  caption: Blade Runner (1982) by Ridley Scott
 ---
 
-The release of ChatGPT 3.5 has changed everything for us programmers. 
+The [release](https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/) 
+of [ChatGPT](https://chat.openai.com/) 3.5 has changed everything for us programmers. 
 Even though most of us (including me) don't understand how it works, 
 some of us use it more frequently than Stack Overflow, Google, and IDE built-in features. 
-I believe this is just the beginning. Only [Microsoft](https://www.githubnext.com) 
-knows what will happen next. However, let me try to make a humble prediction too. 
-Below, I list what I believe robots (with Generative AI on board) will do in the future. 
+I believe this is just the beginning. Even though, only [Microsoft](https://www.githubnext.com) 
+knows what will happen next, let me try to make a humble prediction too. 
+Below, I list what I believe robots (with Generative AI on board) will do in the future.
 The further into the future, the lower on the list.
+I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already saying. 
 
 <!--more-->
 
@@ -53,8 +56,8 @@ The further into the future, the lower on the list.
   code in small increments, making it easy for us humans to merge their
   suggested changes. They won't change too much, so we won't feel managed by
   robots, but we will be. Slowly and incrementally, they will improve the
-  codebase, making it more readable, maintainable, and better understood by
-  other robots.
+  codebase, making it more readable, maintainable, and better understood ...
+  by other robots.
 
 **Backlog Prioritization**. They will sort tasks and tickets into their
   appropriate milestones, determining which ones are of higher priority. They
@@ -132,7 +135,8 @@ The further into the future, the lower on the list.
 
 **Appraise**. They will observe the activity of every programmer and will
   appraise their productivity. The results will be published directly to GitHub
-  issues or perhaps sent to project managers by email.
+  issues or perhaps sent to project managers by email. In the end,
+  they will decide who of us humans are more valuable to their projects.
 
 I'm thankful to ChatGPT for helping me build this list.
 
