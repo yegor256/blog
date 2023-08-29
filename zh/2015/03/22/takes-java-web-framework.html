@@ -1,0 +1,191 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite"> <head> <meta charset="utf-8"/> <meta name="description" content="Takes is a pure object-oriented and immutable Java web framework that turns the design and development of web applications into a pleasant and fun process." /> <meta name="keywords" content="" /> <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/> <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" /> <meta name="author" content="Yegor Bugayenko"> <meta name="og:site_name" content="Yegor Bugayenko"/> <meta name="og:type" content="article" /> <meta name="og:locale" content="en_US" /> <meta name="twitter:account_id" content="4503599630178231" /> <meta name="twitter:creator" content="@yegor256"/> <meta name="twitter:site" content="@yegor256"/> <meta name="twitter:title" property="og:title" content="Java Web App Architecture In Takes Framework"/> <meta name="twitter:description" property="og:description" content="Takes is a pure object-oriented and immutable Java web framework that turns the design and development of web applications into a pleasant and fun process."/> <meta name="twitter:url" property="og:url" content="https://www.yegor256.com/zh/2015/03/22/takes-java-web-framework.html"/> <meta name="telegram:channel" content="AAAAAEJFMRzsRTRxM3ec6A"/> <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" /> <link rel="shortcut icon" href="/favicon.ico?91e21ef9338"/> <link rel="apple-touch-icon" href="/favicon.ico?91e21ef9338"/> <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="https://www.yegor256.com/rss.xml"/> <link rel="stylesheet" href="/css/layout.css?91e21ef9338"/> <link rel="stylesheet" href="/css/icons.css?91e21ef9338"/> <link rel="canonical" href="https://www.yegor256.com/zh/2015/03/22/takes-java-web-framework.html" /> <title>Java Web App Architecture In Takes Framework</title> </head> <body><div class="wrapper"> <aside class="header-toggle unprintable" id="header-toggle" title="Show the menu" onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside> <header class="header" id="header"><div class="face"> <a href="/about-me.html#form" class="sub" title="Click to subscribe to my monthly newsletter"><span>Subscribe</span></a> <a href="/about-me.html" style="position:relative;"> <img src="/images/face-256x256.jpg" class="photo" alt="Yegor Bugayenko"/> </a></div><nav><ul class="menu social notranslate"> <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow" title="Follow me on Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li> <li><a href="/rss.xml" rel="nofollow" title="Subscribe to my RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow" title="My GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="My Stack Overflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow" title="Follow me on Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow" title="Follow me on Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="My LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256?sub_confirmation=1" rel="nofollow" title="My Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow" title="My Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow" title="My AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li> <li><a href="https://soundcloud.com/yegor256" rel="nofollow" title="My podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li> <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow" title="My iTunes podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li> <li><a href="https://t.me/yegor256news" rel="nofollow" title="My Telegram public channel"><i class="icon icon-telegram notranslate" aria-hidden="true"></i></a></li> <li><a href="mailto:blog@yegor256.com" rel="nofollow" title="Email me any time"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li></ul><ul class="menu"> <li><a href="/" title="Home page">Home</a></li> <li ><a href="/best.html" title="Best articles to read">12&#160;Best</a></li> <li ><a href="/contents.html" title="The contents of the entire blog">All&#160;386</a></li> <li ><a href="/teaching.html" title="My courses and lectures">Teaching</a></li> <li ><a href="/talks.html" title="Future and past conference talks">Talks</a></li> <li ><a href="/books.html" title="The books I wrote">Books</a></li> <li ><a href="/papers.html" title="My academic papers and patents">Papers</a></li> <li ><a href="/pets.html" title="My loved pet projects">Pets</a></li> <li ><a href="/award.html" title="Software quality award">Award</a></li> <li ><a href="/testimonials.html" title="What some people say about me">Testimonials</a></li> <li ><a href="/shift-m.html" title="Audio podcast about project management">Shift-M</a></li> <li ><a href="/paintings.html" title="My paintings for sale">Art</a></li> <li><a href="https://ru.yegor256.com/" title="Немного на русском языке о политике в России, Украине и мире">Политика</a></li></ul></nav><div class="search"> <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction"> <meta itemprop="target" content="https://www.google.com/search?q={q}"/> <input name="sitesearch" value="yegor256.com" type="hidden"/> <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required" onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search..." autocomplete="off"/> <input type="image" src="/images/google-search-icon.svg" class="google" title="Search via Google" alt="Search via Google"/> </form></div><div class="hot"><ul></ul></div></header></div><section itemscope="" itemtype="http://schema.org/BlogPosting"><div class="wrapper"> <header><h1 itemprop="name headline mainEntityOfPage">Java Web App Architecture In Takes Framework</h1></header> <article class="main" itemprop="articleBody" style="font-family: sans-serif; font-size: 0.9em; line-height: 1.2em;"><p style="color: #C42C00;">The following text is a <em>partial</em> translation of the <a href='https://www.yegor256.com/2015/03/22/takes-java-web-framework.html'>original English article</a>, performed by <a href="https://chat.openai.com/">ChatGPT</a> (gpt-3.5-turbo) and <a href="https://github.com/yegor256/jekyll-chatgpt-translate">this Jekyll plugin</a>:</p><p>我过去常常使用Servlets、JSP、JAX-RS、Spring框架、Play框架、JSF与Facelets，还有一点点Spark框架。以我个人的观点来说，所有这些解决方案都远远没有达到面向对象和优雅的程度。它们都充斥着静态方法、难以测试的数据结构和不可取的技巧。所以大约一个月前，我决定创建自己的Java Web框架。我在它的基础上加入了几个基本原则：1）不使用NULL，2）不使用公共静态方法，3）不使用可变类，4）不使用类转换、反射和<code class="language-plaintext highlighter-rouge">instanceof</code>运算符。这四个基本原则应该能保证代码的整洁和透明的架构。这就是<a href="http://www.takes.org">Takes</a>框架的诞生。让我们看看它是如何被创建以及如何工作的。</p><h2 id="java-web-architecture-in-a-nutshell">Java Web Architecture in a Nutshell</h2><p>这是我对网络应用程序架构及其组件的简单理解。</p><p>首先，要创建一个Web服务器，我们应该创建一个新的网络套接字，它在特定的TCP端口上接受连接。通常情况下，端口是80，但是为了测试目的，我将使用8080。在Java中，可以使用ServerSocket类来实现这一点。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import java.net.ServerSocket;
+public class Foo {
+  public static void main(final String... args) throws Exception {
+    final ServerSocket server = new ServerSocket(8080);
+    while (true);
+  }
+}
+</code></pre></div></div><p>这已经足够启动一个Web服务器了。现在，套接字已准备就绪并在端口8080上进行监听。当有人在浏览器中打开<code class="language-plaintext highlighter-rouge">http://localhost:8080</code>时，连接将建立，并且浏览器将永远旋转其等待轮。编译此代码片段并尝试。我们刚刚构建了一个简单的Web服务器，没有使用任何框架。我们还没有对传入连接进行任何处理，但也没有拒绝它们。所有这些连接都被排列在<code class="language-plaintext highlighter-rouge">server</code>对象内。这是在后台线程中完成的；这就是为什么我们需要在之后放置<code class="language-plaintext highlighter-rouge">while(true)</code>的原因。没有这个无休止的暂停，应用程序将立即完成执行，服务器套接字将关闭。</p><p>接下来的步骤是接受传入的连接。在Java中，这是通过对<code class="language-plaintext highlighter-rouge">accept()</code>方法进行阻塞调用来完成的。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>final Socket socket = server.accept();
+</code></pre></div></div><p>该方法会阻塞其线程并等待新连接的到来。一旦发生这种情况，它会返回一个<code class="language-plaintext highlighter-rouge">Socket</code>实例。为了接受下一个连接，我们应该再次调用<code class="language-plaintext highlighter-rouge">accept()</code>方法。因此，基本上，我们的Web服务器应该按照以下方式工作：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Foo {
+  public static void main(final String... args) throws Exception {
+    final ServerSocket server = new ServerSocket(8080);
+    while (true) {
+      final Socket socket = server.accept();
+      // 1. Read HTTP request from the socket
+      // 2. Prepare an HTTP response
+      // 3. Send HTTP response to the socket
+      // 4. Close the socket
+    }
+  }
+}
+</code></pre></div></div><p>这是一个无休止的循环，接受一个新的连接，理解它，创建一个响应，返回响应，然后再次接受新的连接。HTTP协议是无状态的，这意味着服务器不应该记住在任何先前的连接中发生的事情。它只关心这个特定连接中的传入HTTP请求。</p><p>HTTP 请求来自套接字的输入流，并且看起来像一个多行的文本块。如果你读取套接字的输入流，你会看到这样的内容：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>final BufferedReader reader = new BufferedReader(
+  new InputStreamReader(socket.getInputStream())
+);
+while (true) {
+  final String line = reader.readLine();
+  if (line.isEmpty()) {
+    break;
+  }
+  System.out.println(line);
+}
+</code></pre></div></div><p>你会看到像这样的东西：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8,ru;q=0.6,uk;q=0.4
+</code></pre></div></div><p>客户端（例如Google Chrome浏览器）将此文本传递到已建立的连接中。它连接到<code class="language-plaintext highlighter-rouge">localhost</code>的8080端口，并在连接准备就绪后立即将此文本发送到连接中，然后等待响应。</p><p>我们的工作是根据请求中获取的信息创建一个HTTP响应。如果我们的服务器非常基础，我们可以基本上忽略请求中的所有信息，只需将“Hello, world!”返回给所有请求（为了简单起见，我使用<a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html"><code class="language-plaintext highlighter-rouge">IOUtils</code></a>）。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import java.net.Socket;
+import java.net.ServerSocket;
+import org.apache.commons.io.IOUtils;
+public class Foo {
+  public static void main(final String... args) throws Exception {
+    final ServerSocket server = new ServerSocket(8080);
+    while (true) {
+      try (final Socket socket = server.accept()) {
+        IOUtils.copy(
+          IOUtils.toInputStream("HTTP/1.1 200 OK\r\n\r\nHello, world!"),
+          socket.getOutputStream()
+        );
+      }
+    }
+  }
+}
+</code></pre></div></div><p>就是这样。服务器已经准备好了。试着编译并运行它。将您的浏览器指向 <code class="language-plaintext highlighter-rouge">http://localhost:8080</code>，然后您将看到 <code class="language-plaintext highlighter-rouge">Hello, world!</code>。</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>javac <span class="nt">-cp</span> commons-io.jar Foo.java
+<span class="nv">$ </span>java <span class="nt">-cp</span> commons-io.jar:. Foo &amp;
+<span class="nv">$ </span>curl http://localhost:8080 <span class="nt">-v</span>
+
+<span class="k">*</span> 重新构建的URL为：http://localhost:8080/
+
+<span class="k">*</span> 连接到本地主机 <span class="o">(</span> ::1 <span class="o">)</span> 端口 8080 <span class="o">(</span> <span class="c">#0 )</span>
+
+GET / HTTP/1.1 User-Agent: curl/7.37.1 Host: localhost:8080 Accept: <span class="k">*</span>/<span class="k">*</span>
+
+获取/ HTTP/1.1 用户代理：curl/7.37.1 主机：localhost:8080 接受：<span class="k">*</span>/<span class="k">*</span>
+
+&lt; HTTP/1.1 200 OK
+
+<span class="k">*</span> 没有块，没有关闭，没有大小。假设关闭信号结束 &lt;
+
+<span class="k">*</span> Closing connection 0 Hello, world! <span class="sb">```</span>
+
+这就是构建一个网络服务器所需的全部内容。现在让我们讨论如何使它面向对象和可组合。让我们试着看看[Takes]<span class="o">(</span>http://www.takes.org<span class="o">)</span>框架是如何构建的。
+
+<span class="c">## Routing/Dispatching</span>
+
+路由/调度与Takes中的响应打印结合在一起。创建一个可工作的Web应用程序所需的只是创建一个实现[<span class="sb">`</span>Take<span class="sb">`</span><span class="o">](</span>http://static.javadoc.io/org.takes/takes/1.1/org/takes/Take.html<span class="o">)</span>接口的单个类。
+
+</code></pre></div></div><p>import org.takes.Request; import org.takes.Take; public final class TkFoo implements Take { @Override public Response route(final Request request) { return new RsText(“Hello, world!”); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+现在是时候启动服务器了：
+
+</code></pre></div></div><p>import org.takes.http.Exit; import org.takes.http.FtBasic; public class Foo { public static void main(final String… args) throws Exception { new FtBasic(new TkFoo(), 8080).start(Exit.NEVER); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+这个[`FtBasic`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html)类执行了上面解释的完全相同的套接字操作。它在端口8080上启动了一个服务器套接字，并通过我们传递给它的`TkFoo`实例来调度所有传入的连接。它以无限循环的方式进行这种调度，每秒检查一次是否该停止，使用的是一个[`Exit`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html)的实例。显然，`Exit.NEVER`总是会回答：“请不要停止。”
+
+## HTTP Request
+
+现在让我们看看到达`TkFoo`的HTTP请求中有什么，以及我们可以从中获得什么。这是[Takes](http://www.takes.org)中的[`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html)接口的定义方式。
+
+</code></pre></div></div><p>public interface Request { Iterable<String> head() throws IOException; InputStream body() throws IOException; }</String></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+请求分为两个部分：头部和正文。头部包含在正文开始的空行之前的所有行，根据HTTP规范[RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html)。在框架中有许多有用的修饰符可以用于`Request`。例如，`RqMethod`可以帮助您从头部的第一行获取方法名称。
+
+</code></pre></div></div><p>final String method = new RqMethod(request).method();</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+`RqHref` will help extract the query part and parse it. For example, this is the request:
+
+</code></pre></div></div><p>GET /user?id=123 HTTP/1.1 Host: www.example.com</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+这段代码将提取出`123`。
+
+</code></pre></div></div><p>final int id = Integer.parseInt( new RqHref(request).href().param(“id”).get(0) );</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+`RqPrint` can get the entire request or its body printed as a `String`:
+
+</code></pre></div></div><p>final String body = new RqPrint(request).printBody();</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+这里的想法是保持`Request`接口简单，并将请求解析功能提供给其装饰器。这种方法有助于框架保持类小而内聚。每个装饰器都非常小巧而可靠，只做一件事。所有这些装饰器都在[`org.takes.rq`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/package-summary.html)包中。正如你可能已经了解的那样，`Rq`前缀代表`Request`。
+
+## First Real Web App
+
+让我们创建我们的第一个真正的Web应用程序，它将会做一些有用的事情。我建议从一个`Entry`类开始，这是Java在命令行中启动应用程序所必需的。
+
+</code></pre></div></div><p>import org.takes.http.Exit; import org.takes.http.FtCli; public final class Entry { public static void main(final String… args) throws Exception { new FtCli(new TkApp(), args).start(Exit.NEVER); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+这个类只包含一个 `main()` 静态方法，当应用程序从命令行启动时，JVM 将调用该方法。如你所见，它实例化了 [`FtCli`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html)，给它一个 `TkApp` 类的实例和命令行参数。我们将在下一步创建 `TkApp` 类。`FtCli`（翻译为“带命令行界面的前端”）创建了一个相同 `FtBasic` 的实例，并将其包装成几个有用的装饰器，并根据命令行参数进行配置。例如，`--port=8080` 将被转换为 `8080` 端口号，并作为 `FtBasic` 构造函数的第二个参数传递进去。
+
+该网络应用程序本身被称为`TkApp`，并扩展了`TsWrap`。
+
+</code></pre></div></div><p>import org.takes.Take; import org.takes.facets.fork.FkRegex; import org.takes.facets.fork.TkFork; import org.takes.tk.TkWrap; import org.takes.tk.TkClasspath; final class TkApp extends TkWrap { TkApp() { super(TkApp.make()); } private static Take make() { return new TkFork( new FkRegex(“/robots.txt”, “”), new FkRegex(“/css/.*”, new TkClasspath()), new FkRegex(“/”, new TkIndex()) ); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+我们将在一分钟内讨论这个 `TkFork` 类。
+
+如果您正在使用Maven，这是您应该从头开始的`pom.xml`文件。
+
+</code></pre></div></div><p>&lt;?xml version=”1.0”?&gt;</p><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"> <modelVersion>4.0.0</modelVersion> <groupId>foo</groupId> <artifactId>foo</artifactId> <version>1.0-SNAPSHOT</version> <dependencies> <dependency> <groupId>org.takes</groupId> <artifactId>takes</artifactId> <version>0.9</version> </dependency> </dependencies> <build> <finalName>foo</finalName><plugins><plugin> <artifactId>maven-dependency-plugin</artifactId> <executions> <execution> <goals> <goal>copy-dependencies</goal> </goals> <configuration> <outputDirectory>${project.build.directory}/deps</outputDirectory> </configuration> </execution> </executions> </plugin> </plugins> </build> </project><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+运行`mvn clean package`应该在`target`目录中构建一个`foo.jar`文件，并在`target/deps`目录中收集所有的JAR依赖项。现在，您可以从命令行运行该应用程序。
+
+</code></pre></div></div><p>$ mvn clean package $ java -Dfile.encoding=UTF-8 <br /> -cp ./target/foo.jar:./target/deps/* foo.Entry –port=8080</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+应用程序已准备就绪，您可以将其部署到Heroku等平台上。只需在代码库的根目录中创建一个名为 `Procfile` 的文件，并将代码库推送到Heroku上即可。下面是 `Procfile` 的示例内容：
+
+</code></pre></div></div><p>web: java -Dfile.encoding=UTF-8 <br /> -cp target/foo.jar:target/deps/* <br /> foo.Entry –port=${PORT}</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## `TkFork`
+
+这个[`TkFork`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/TkFork.html)类似乎是框架的核心元素之一。它帮助将传入的HTTP请求路由到正确的* take*。它的逻辑非常简单，并且其中只有几行代码。它封装了一组“forks”，这些forks是[`Fork`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html)接口的实例。
+
+</code></pre></div></div><p>public interface Fork { Iterator<Response> route(Request req) throws IOException; }</Response></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+它唯一的`route()`方法要么返回一个空的迭代器，要么返回一个带有单个`Response`的迭代器。`TkFork`遍历所有分支，调用它们的`route()`方法，直到其中一个返回一个响应。一旦发生这种情况，`TkFork`将把此响应返回给调用者，即[`FtBasic`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html)。
+
+让我们现在自己创建一个简单的分支。例如，我们希望在请求 `/status` URL 时显示应用程序的状态。下面是代码：
+
+</code></pre></div></div><p>final class TkApp extends TkWrap { private static Take make() { return new TkFork( new Fork() { @Override public Iterator<Response> route(Request req) { final Collection<Response> responses = new ArrayList&lt;&gt;(1); if (new RqHref(req).href().path().equals("/status")) { responses.add(new TkStatus()); } return responses.iterator(); } } ); } }</Response></Response></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+我相信这里的逻辑很清楚。我们要么返回一个空的迭代器，要么返回一个包含`TkStatus`实例的迭代器。如果返回一个空的迭代器，`TkFork`将尝试在集合中找到另一个实际获得`Response`实例的分叉点。顺便提一下，如果没有找到任何分叉点并且所有分叉点都返回空的迭代器，`TkFork`将抛出一个"页面未找到"的异常。
+
+这个确切的逻辑是由一个开箱即用的分支`FkRegex`实现的，它尝试使用提供的正则表达式与请求的URI路径进行匹配。
+
+</code></pre></div></div><p>final class TkApp extends TkWrap { private static Take make() { return new TkFork( new FkRegex(“/status”, new TkStatus()) ); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+我们可以组合一个多级结构的`TkFork`类；例如：
+
+</code></pre></div></div><p>final class TkApp extends TsWrap { private static Take make() { return new TkFork( new FkRegex( “/status”, new TkFork( new FkParams(“f”, “json”, new TkStatusJSON()), new FkParams(“f”, “xml”, new TkStatusXML()) ) ) ); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+再次，我相信这是显而易见的。`FkRegex`的实例将会请求一个封装的`TkFork`实例返回一个响应，并且它将尝试从`FkParams`封装的其中一个获取它。如果HTTP查询是`/status?f=xml`，将返回一个`TkStatusXML`的实例。
+
+## HTTP Response
+
+现在让我们讨论HTTP响应的结构及其面向对象的抽象，[`Response`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html)。以下是接口的样式：
+
+</code></pre></div></div><p>public interface Response { Iterable<String> head() throws IOException; InputStream body() throws IOException; }</String></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+看起来和[`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html)非常相似，不是吗？嗯，基本上它们是相同的，因为HTTP请求和响应的结构几乎是相同的。唯一的区别在于第一行。
+
+有一系列有用的装饰器可帮助构建响应。它们是可组合的，这使得它们非常方便。例如，如果您想构建一个包含HTML页面的响应，可以像这样组合它们：
+
+</code></pre></div></div><p>final class TkIndex implements Take { @Override public Response act() { return new RsWithStatus( new RsWithType( new RsWithBody(“&lt;html&gt;Hello, world!&lt;/html&gt;”), “text/html” ), 200 ); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+在这个例子中，装饰器`RsWithBody`创建了一个带有正文但没有任何标头的响应。然后，`RsWithType`向其添加了标头`Content-Type: text/html`。然后，`RsWithStatus`确保响应的第一行包含`HTTP/1.1 200 OK`。
+
+您可以创建自己的装饰器，可以重复使用现有的装饰器。请参考rultor.com中的[`RsPage`](https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java)的实现方式。
+
+## How About Templates?
+
+返回简单的“Hello, world”页面并不是一个大问题，正如我们所看到的。但是，如果是像HTML页面、XML文档、JSON数据集等更复杂的输出呢？有一些方便的`Response`装饰器可以实现这一切。让我们从[Velocity](http://velocity.apache.org)开始，这是一个简单的模板引擎。嗯，它并不那么简单。它相当强大，但我建议只在简单的情况下使用它。以下是它的工作原理：
+
+</code></pre></div></div><p>final class TkIndex implements Take { @Override public Response act() { return new RsVelocity(“Hello, ${name}”) .with(“name”, “Jeffrey”); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+[`RsVelocity`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html) 构造函数接受一个参数，该参数必须是一个 Velocity 模板。然后，您调用 `with()` 方法，将数据注入到 Velocity 上下文中。当需要渲染 HTTP 响应时，`RsVelocity` 将根据配置的上下文来 "评估" 模板。再次强烈建议您只在简单输出时使用此模板方法。
+
+对于更复杂的HTML文档，我建议您使用XML / XSLT与Xembly结合使用。我在之前的几篇文章中解释了这个想法：在浏览器中使用XML + XSLT和RESTful API以及同一URL中的网站。这很简单而且功能强大- Java生成XML输出，XSLT处理器将其转换为HTML文档。这就是我们将表示与数据分离的方式。XSL样式表是一个“视图”，`TkIndex`是一个“控制器”，从MVC的角度来看。
+
+我很快会写一篇关于使用Xembly和XSL进行模板化的独立文章。
+
+与此同时，我们将为Takes创建[JSF/Facelets](http://en.wikipedia.org/wiki/Facelets)和[JSP](http://en.wikipedia.org/wiki/JavaServer_Pages)渲染的装饰器。如果您有兴趣帮助，请fork该框架并提交您的pull请求。
+
+## What About Persistence?
+
+现在，一个问题是如何处理持久实体，比如数据库、内存结构、网络连接等等。我的建议是在`Entry`类中初始化它们，并将它们作为参数传递给`TkApp`构造函数。然后，`TkApp`将把它们传递给自定义*takes*的构造函数。
+
+例如，我们有一个包含一些表数据的PostgreSQL数据库，我们需要渲染这些数据。以下是我在`Entry`类中如何初始化与其的连接（我使用的是[BoneCP](http://www.jolbox.com/)连接池）：
+
+</code></pre></div></div><p>public final class Entry { public static void main(final String… args) throws Exception { new FtCli(new TkApp(Entry.postgres()), args).start(Exit.NEVER); } private static Source postgres() { final BoneCPDataSource src = new BoneCPDataSource(); src.setDriverClass(“org.postgresql.Driver”); src.setJdbcUrl(“jdbc:postgresql://localhost/db”); src.setUser(“root”); src.setPassword(“super-secret-password”); return src; } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+现在，`TkApp`的构造函数必须接受一个类型为`java.sql.Source`的单个参数。
+
+</code></pre></div></div><p>final class TkApp extends TkWrap { TkApp(final Source source) { super(TkApp.make(source)); } private static Take make(final Source source) { return new TkFork( new FkRegex(“/”, new TkIndex(source)) ); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+类`TkIndex`还接受一个`Source`类的单个参数。我相信你知道在`TkIndex`内部如何处理它，以便获取SQL表数据并将其转换为HTML。这里的重点是依赖必须在应用程序（`TkApp`类的实例）实例化的时候注入。这是一种纯净的、无需容器的依赖注入机制。在《依赖注入容器是代码污染者》中可以了解更多相关信息。
+
+## Unit Testing
+
+由于每个类都是不可变的，并且所有的依赖关系只通过构造函数注入，因此单元测试非常简单。假设我们想要测试`TkStatus`，它应该返回一个HTML响应（我正在使用[JUnit 4](http://junit.org/)和[Hamcrest](https://github.com/hamcrest/JavaHamcrest)）。
+
+</code></pre></div></div><p>import org.junit.Test; import org.hamcrest.MatcherAssert; import org.hamcrest.Matchers; public final class TkIndexTest { @Test public void returnsHtmlPage() throws Exception { MatcherAssert.assertThat( new RsPrint( new TkStatus().act(new RqFake()) ).printBody(), Matchers.equalsTo(“&lt;html&gt;Hello, world!&lt;/html&gt;”) ); } }</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+此外，我们可以在一个测试HTTP服务器上启动整个应用程序或任何单独的"take"，并通过真实的TCP套接字测试其行为；例如（我使用[jcabi-http](http://http.jcabi.com)来发出HTTP请求并检查输出）。
+
+</code></pre></div></div><p>public final class TkIndexTest { @Test public void returnsHtmlPage() throws Exception { new FtRemote(new TkIndex()).exec( new FtRemote.Script() { @Override public void exec(final URI home) throws IOException { new JdkRequest(home) .fetch() .as(RestResponse.class) .assertStatus(HttpURLConnection.HTTP_OK) .assertBody(Matchers.containsString(“Hello, world!”)); } } ); } } ```</p><p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtRemote.html"><code class="language-plaintext highlighter-rouge">FtRemote</code></a> 在随机TCP端口启动一个测试Web服务器，并调用提供的<code class="language-plaintext highlighter-rouge">FtRemote.Script</code>实例的<code class="language-plaintext highlighter-rouge">exec()</code>方法。该方法的第一个参数是刚刚启动的Web服务器主页的URI。</p><p>Takes框架的架构非常模块化且可组合。任何单独的“take”都可以作为一个独立的组件进行测试，与框架和其他“takes”完全独立。</p><h2 id="why-the-name">Why the Name?</h2><p>这是我经常听到的问题。这个想法很简单，它起源于电影业。当拍摄一部电影时，剧组会拍摄很多“镜头”，以捕捉现实并将其记录在电影中。每个记录的称为一个“镜头”。</p><p>换句话说，一个“take”就像现实的快照。</p><p>对于这个框架也是一样的。每个<code class="language-plaintext highlighter-rouge">Take</code>实例代表着某个特定时刻的现实。然后以<code class="language-plaintext highlighter-rouge">Response</code>的形式将这个现实发送给用户。</p><p>PS. 有几句话是关于身份验证的：关于如何在Takes框架中使用基于Cookie的身份验证。</p><p>PPS. 有一些真实的网络系统，你可能有兴趣去看一下。它们都使用Takes框架，并且它们的代码是开源的：<a href="https://github.com/yegor256/rultor">rultor.com</a>，jare.io，wring.io。</p><p class="jekyll-chatgpt-translate">Translated by ChatGPT gpt-3.5-turbo/31 on 2023-08-29 at 16:03</p></article></div><div class="wrapper"> <footer class="footer"><p> &copy; <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person"> <span itemprop="name">Yegor Bugayenko</span> </span> 2014&ndash;<span itemprop="copyrightYear">2023</span></p></footer></div></section><div class="wrapper unprintable" style="text-align:center;margin-top:2em;"> <a href="https://www.sixnines.io/h/3ba1652f"> <img src="//www.sixnines.io/b/3ba1652f?style=flat" alt="sixnines availability badge" /></a> &nbsp; <a href="https://github.com/yegor256/blog/stargazers"> <img src="//img.shields.io/github/stars/yegor256/blog.svg?style=flat-square" alt="GitHub stars" /></a></div><script src="//code.jquery.com/jquery-1.9.0.min.js"></script> <script src="/js/all.js?91e21ef9338"></script> <script>var disqus_shortname = 'yegor256';</script> <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-1963507-32', 'auto'); ga('send', 'pageview'); </script> <script> Cd=document;Cr="&"+Math.random();Cp="&s=1"; Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1"; Cp+="&t="+(new Date()).getTimezoneOffset(); if(self!=top)Cp+="&f=1"; </script> <script> if(navigator.javaEnabled())Cp+="&j=1"; </script> <script> if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+ screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth); </script> <script> Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+ "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+ "' border='0' wi"+"dth='1' he"+"ight='1'/>"); </script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Person", "name": "Yegor Bugayenko", "url": "https://www.yegor256.com", "sameAs": [ "https://www.facebook.com/yegor256", "https://instagram.com/yegor256", "https://www.linkedin.com/in/yegor256", "https://twitter.com/yegor256", "https://github.com/yegor256", "https://www.pinterest.com/yegor256/" ] } </script> </body> </html>

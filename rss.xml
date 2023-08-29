@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-29T05:41:42+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fast Tests Help Humans, Deep Tests Help Servers</title><link href="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html" rel="alternate" type="text/html" title="Fast Tests Help Humans, Deep Tests Help Servers" /><published>2023-08-22T00:00:00+00:00</published><updated>2023-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/22/fast-vs-deep-testing</id><content type="html" xml:base="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html"><![CDATA[<p>In order to reveal errors of higher complexity, automated tests are 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-29T15:55:52+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Robots vs. Programmers</title><link href="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html" rel="alternate" type="text/html" title="Robots vs. Programmers" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/29/ai-for-software-engineering</id><content type="html" xml:base="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html"><![CDATA[<p>The <a href="https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/">release</a> 
+of <a href="https://chat.openai.com/">ChatGPT</a> 3.5 has changed everything for us programmers. 
+Even though most of us (including me) don’t understand how it works, 
+some of us use it more frequently than Stack Overflow, Google, and IDE built-in features. 
+I believe this is just the beginning. Even though, only <a href="https://www.githubnext.com">Microsoft</a> 
+knows what will happen next, let me try to make a humble prediction too. 
+Below, I list what I believe robots (with Generative AI on board) will do in the future.
+The further into the future, the lower on the list.
+I tried not to repeat what <a href="https://www.githubnext.com">GitHubNext</a> is already saying.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Blade Runner (1982) by Ridley Scott" src="/images/2023/08/blade-runner.jpg" longdesc="#19d07357" /><figcaption id="19d07357">Blade Runner (1982) by Ridley Scott</figcaption></figure>
+
+<p><strong>Report Bugs</strong>. They will go through the codebase, analyze the code, and maybe
+  even try to run some tests, then submit bug reports when problems are
+  obvious. They will also submit bug reports when they find code that is hard
+  to understand, improperly documented, not covered by automated tests, or has security vulnerabilities.
+  Additionally, they will report when they see that the code is not following
+  conventions or best practices. They will write their reports so nicely and
+  provide so many technical details and supplementary links that programmers
+  will prefer the reports from robots much more than reports from humans.</p>
+
+<p><strong>Review Pull Requests</strong>. They will examine the pull requests submitted to the
+  repository (either by humans or robots) and review them by making comments on
+  certain lines of code, either criticizing the quality of the code and/or
+  suggesting better alternatives. They will keep track of the suggestions made
+  earlier and will insist where necessary. In the end, the authors of the pull
+  requests won’t even know who is reviewing them: a human or a robot.</p>
+
+<p><strong>Refactor</strong>. From a huge collection of well-known micro-refactorings, they will
+  select the few most important at any given moment and will submit pull
+  requests with the changes. They won’t alter the functionality of the code or
+  make massive modifications. Instead, they will improve the quality of the
+  code in small increments, making it easy for us humans to merge their
+  suggested changes. They won’t change too much, so we won’t feel managed by
+  robots, but we will be. Slowly and incrementally, they will improve the
+  codebase, making it more readable, maintainable, and better understood …
+  by other robots.</p>
+
+<p><strong>Backlog Prioritization</strong>. They will sort tasks and tickets into their
+  appropriate milestones, determining which ones are of higher priority. They
+  will decide which bug should be fixed first and which feature request is more
+  important than others. Utilizing historical data, current team velocity, and
+  other relevant metrics, they will create a prioritized backlog that aligns
+  with both short-term objectives and long-term goals.</p>
+
+<p><strong>Refine Bug Reports</strong>. They will examine already reported bugs and refine them,
+  providing supplementary information, explaining the code to which the bug
+  refers, and suggesting code snippets that could potentially reproduce the
+  bug. They will do the work that most programmers are too lazy to do: properly
+  explain the bug in order to help its fixer.</p>
+
+<p><strong>Document Source Code</strong>. They will find places in the code that are hard to
+  comprehend, such as complex functions, large classes, and big data
+  structures. They will generate documentation blocks and then submit pull
+  requests with them. Humans will be happy to accept these, since documenting
+  someone else’s code is a routine and boring part of work. Moreover, keeping
+  the documentation in sync with the source code is one of the areas where our
+  human negligence is most visible.</p>
+
+<p><strong>Fix Bugs</strong>. According to the code they already see in the codebase and the
+  list of bugs reported in issues, they will generate some fixes and submit
+  them as new pull requests. They will explain what the fixes are doing, why
+  the improvement is made in this or that way, how critical the fix is, and
+  also suggest possible alternatives. We will simply merge them.</p>
+
+<p><strong>Formalize Requirements</strong>. They will examine the codebase and the comments
+  where we discuss it, and will derive a formal definition of the requirements
+  we implement. Then, they will formulate the requirements using Use Case
+  diagrams, Requirement Matrix, or even informal textual documents like README
+  or Wiki. They will keep these documents up to date throughout the entire
+  lifecycle of the codebase—something we humans are often too lazy to do.</p>
+
+<p><strong>Onboard</strong>: 
+  They will assist in the onboarding process of new developers, 
+  guiding them through the codebase, explaining architectural decisions, 
+  and offering personalized tutorials. They will also help us understand
+  certain code blocks by providing interactive guidance.</p>
+
+<p><strong>Analyze Technical Debt</strong>
+  They could analyze the codebase to identify areas where technical debt is 
+  accumulating and suggest steps to mitigate it before it becomes problematic.
+  They will submit tickets where the biggest debt territories will be
+  identified and improvements suggested.</p>
+
+<p><strong>Cleanup Documentation</strong>.
+  They will reformat the doc blocks that we humans write for our classes
+  and methods, and then submit pull requests with the changes. 
+  Formatting the documentation correctly, using HTML, Markdown, Doxia,
+  and many other formats, is a boring work where we humans fall short.</p>
+
+<p><strong>Suggest New Features</strong>. They will examine already implemented functionality
+  and will suggest additional features, submitting tickets. They will explain
+  the reasons behind such new feature requests, find proper justification, and
+  provide examples of how users will interact with the new functionality.</p>
+
+<p><strong>Document Architecture</strong>. They will observe the codebase and then update the
+  documentation about the architecture it implements. This is something
+  programmers usually forget to do, or simply don’t know how to do right. The
+  robots will use UML or perhaps less formal instruments to document the
+  architecture, thus making the entire product easier to maintain.</p>
+
+<p><strong>Estimate</strong>. They will estimate the complexity of every bug report or feature
+  request in staff-hours, calendar days, or maybe even in lines of code. This
+  information will help the team make planning decisions.</p>
+
+<p><strong>Predict</strong>. By examining events in a repository, they will spot anomalies in
+  our human behavior, such as changes in the mood of programmers in the
+  comments, spikes in the intensity of commits, failures in CI/CD pipelines,
+  and so on. They will be able to predict larger troubles before it’s too late.
+  They will predict and then suggest corrective and preventive actions,
+  submitting tickets with management or technical suggestions.</p>
+
+<p><strong>Appraise</strong>. They will observe the activity of every programmer and will
+  appraise their productivity. The results will be published directly to GitHub
+  issues or perhaps sent to project managers by email. In the end,
+  they will decide who of us humans are more valuable to their projects.</p>
+
+<p>I’m thankful to ChatGPT for helping me build this list.</p>
+
+<p>What do you think I missed?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="programming" /><summary type="html"><![CDATA[Robots will likely revolutionize software engineering ranging from code reviews and bug fixing to automated refactoring, backlog prioritization, and employee appraisals.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fast Tests Help Humans, Deep Tests Help Servers</title><link href="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html" rel="alternate" type="text/html" title="Fast Tests Help Humans, Deep Tests Help Servers" /><published>2023-08-22T00:00:00+00:00</published><updated>2023-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/22/fast-vs-deep-testing</id><content type="html" xml:base="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html"><![CDATA[<p>In order to reveal errors of higher complexity, automated tests are 
 turned into integration tests that involve external resources in test 
 scenarios, instead of their mocks. While this approach improves test 
 coverage, it slows down the entire build pipeline. This compromises 
@@ -1445,170 +1566,4 @@ each originator must have its own <code class="language-plaintext highlighter-ro
 
 <p>Obviously, I believe that
 <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping exception types</a>
-in a single <code class="language-plaintext highlighter-rouge">catch</code> block is bad practice.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Catching multiple exceptions thrown by different originators in a single "catch" block is a bad practice because it reduces the ability to provide context of the problem that occurred.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/elephant.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/elephant.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Research Paper Simple Template</title><link href="https://www.yegor256.com/2022/08/24/research-paper-template.html" rel="alternate" type="text/html" title="Research Paper Simple Template" /><published>2022-08-24T00:00:00+00:00</published><updated>2022-08-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/24/research-paper-template</id><content type="html" xml:base="https://www.yegor256.com/2022/08/24/research-paper-template.html"><![CDATA[<p>My <a href="http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98">first academic paper</a>
-was accepted and published in 1998. My most recent one was rejected by SPLASH just a week ago.
-I’m writing two papers right now and co-authoring about ten others.
-So far, my results are very poor: way more rejections than I expected.
-The key lesson I’ve learned so far: the reason most papers get rejected
-is not because they are essentially wrong. Instead, reviewers reject them
-because they have no enthusiasm for decrypting a poorly structured text,
-even though it may contain potentially interesting thoughts.
-In this blog post I suggest how to structure a <a href="https://en.wikipedia.org/wiki/Research_paper">research paper</a>.
-Take it with a grain of salt though.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Il Camorrista (1986) by Giuseppe Tornatore" src="/images/2022/08/il-camorrista.jpg" longdesc="#f5448d2e" /><figcaption id="f5448d2e">Il Camorrista (1986) by Giuseppe Tornatore</figcaption></figure>
-
-<p>Read <a href="https://link.springer.com/book/10.1007/978-1-4471-6639-9"><em>Writing for Computer Science</em></a> by Justin Zobel.</p>
-
-<p>Use <a href="https://www.latex-project.org">LaTeX</a>, either locally or in <a href="https://www.overleaf.com">Overleaf</a>.</p>
-
-<p>Read my personal <a href="https://yegor256.github.io/latex-best-practices/main.pdf">best practices</a> for LaTeX.</p>
-
-<p>Keep the same <a href="https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing">organizational structure</a> in each paragraph.</p>
-
-<h2 id="title">Title</h2>
-
-<p>The <a href="https://www.nature.com/nature-index/news-blog/how-to-write-a-good-research-science-academic-paper-title">title</a>
-is the <a href="https://www.nature.com/articles/d41586-018-02404-4">key message</a> of your paper.</p>
-
-<p>Use <a href="https://blog.wordvice.com/how-to-write-the-perfect-title-for-your-research-paper/">this method</a> to invent it.</p>
-
-<h2 id="authors">Authors</h2>
-
-<p>I <a href="https://www.youtube.com/watch?v=TF8MKOfo3gI">suggest</a> the following rule:
-The first author in the list is you.
-The last one is your boss.
-Key contributors stay in the middle, in alphabetic order of their last names.
-Everybody else is listed in the Acknowledgments section.</p>
-
-<h2 id="abstract">Abstract</h2>
-
-<p>An <a href="https://writing.wisc.edu/handbook/assignments/writing-an-abstract-for-your-research-paper/">abstract</a>
-is a one-paragraph version of the paper, with an emphasis
-on Introduction, Results, and Discussion.</p>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>Answer these questions in this particular order:</p>
-<ul>
-  <li>What is going on in your field of study?</li>
-  <li>What is wrong?</li>
-  <li>Why is this Problem important?</li>
-  <li>Why is it not fixed yet by others?</li>
-</ul>
-
-<p>Then, formulate your
-<a href="https://en.wikipedia.org/wiki/Research_question">Research Question(s)</a>
-or a <a href="https://www.enago.com/academy/how-to-develop-a-good-research-hypothesis/">Hypothesis</a>.</p>
-
-<p>Next, make a disputable <a href="https://writingcenter.unc.edu/tips-and-tools/thesis-statements/">Thesis Statement</a>.</p>
-
-<p>Then, enumerate the Contributions that your article makes to science.
-A Contribution is something tangible, which a reader can take from your study
-and use somehow in their own studies.
-A theorem, a method, a toolkit, a data-set, or an algorithm are good examples of a Contribution.</p>
-
-<p><del>Finally, help your reader understand how the rest of the paper is structured and why.</del>
-Don’t do this! Instead, finish each paragraph in this Section with something along this line:
-“In Section X we will explain it.”</p>
-
-<h2 id="background">Background</h2>
-
-<p>A reader may not know much about your field of study. This section
-may help them understand your problem domain and its terminology better.
-For example, if you write about a new programming language, this section may explain
-what a compiler is, and grammar, front-end, back-end, AST, and so on.</p>
-
-<p>Educate your readers in order to make it more comfortable for them
-to read the rest of the paper.</p>
-
-<h2 id="related-work">Related Work</h2>
-
-<p>In the first paragraph, give an overview of all existing studies that
-you managed to find. Classify them somehow.</p>
-
-<p>Then write one paragraph per study. Explain what the study was about
-and what are its key findings. Finish each paragraph with the flaws
-you found in the study. Make a claim that due to these flaws this
-study is not a solution to the Problem.</p>
-
-<p>Finish the section with a paragraph claiming that, to the best of your knowledge,
-not a single existing study solves the Problem.</p>
-
-<h2 id="method-or-device">Method or Device</h2>
-
-<p>There are two types of research:
-you either <em>observe</em> the reality in order to discover its new laws
-(this is how <a href="https://en.wikipedia.org/wiki/Isaac_Newton">Isaac Newton</a>
-discovered his <a href="https://en.wikipedia.org/wiki/Newton's_laws_of_motion">laws of motion</a>),
-or <em>extend</em> the reality with a new device
-(this is how <a href="https://en.wikipedia.org/wiki/Thomas_Edison">Thomas Edison</a> invented the <a href="https://en.wikipedia.org/wiki/Incandescent_light_bulb">light bulb</a>).</p>
-
-<p>If you observe, algorithmically <a href="https://research.com/research/how-to-write-research-methodology">describe</a> the Method.</p>
-
-<p>If you extend, describe the Device and its usage scenarios.</p>
-
-<h2 id="proof">Proof</h2>
-
-<p>Formally prove that your Device possesses certain qualities, predicted in the Hypothesis.</p>
-
-<p>The section mostly consists of definitions, examples, lemmas, theorems, and proofs.</p>
-
-<h2 id="experimental-results">Experimental Results</h2>
-
-<p>Apply the Method, step by step, to the real data.</p>
-
-<p>Present your findings using tables and graphs.</p>
-
-<p>Post your input data, intermediate data, and all output data in a public
-GitHub repository. Make a reference to it.</p>
-
-<h2 id="discussion">Discussion</h2>
-
-<p>Informally <a href="https://plos.org/resource/how-to-write-conclusions/">interpret</a> your results.</p>
-
-<p>Explain how your results are different from Related Work.</p>
-
-<p>Highlight limitations of the study. Discuss its <a href="https://www.creative-wisdom.com/teaching/WBI/threat.shtml">threats to validity</a>.
-Any method or any idea has its flaws. If you don’t admit them, your
-readers will think that you are either concealing the issues or
-not understanding your own domain well enough.</p>
-
-<p>Highlight the significance of the study.</p>
-
-<p>Discuss unanswered questions and suggest topics for future studies.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Spend one paragraph explaining how your research question was answered
-in this paper. Imagine the reader just reads the Introduction and
-then immediately this Conclusion. It should read fluently.</p>
-
-<p>This paragraph is a short version of the Discussion.</p>
-
-<h2 id="acknowledgments">Acknowledgments</h2>
-
-<p>Here, you say “many thanks to individuals and organizations that
-contributed to the research, including …” You list them all, in
-alphabetic order. You may add your bosses, colleagues, people
-who reviewed your paper, your parents, and even your dog.</p>
-
-<p>If the research was done while you were an employee of ACME Inc.,
-say that “the research was funded by ACME Inc.”</p>
-
-<h2 id="references">References</h2>
-
-<p>Use <a href="https://ctan.org/pkg/biblatex?lang=en">BibLaTeX</a> to automate citations,
-and <a href="https://tex.stackexchange.com/questions/25701">read this</a>.</p>
-
-<p>Use either <a href="https://en.wikipedia.org/wiki/APA_style">APA</a>
-or <a href="https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Reference-Guide.pdf">IEEE</a>
-citation styles.</p>
-
-<h2 id="appendices">Appendices</h2>
-
-<p>Long tables, complex proofs, large figures are good candidates for placing
-into appendices. Keeping them in the main part of the paper may jeopardize
-its readability.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[Here is a very simplified guideline for newbie academic writers like myself, to help you structure a paper in a way that won't surprise your reviewers too much.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/il-camorrista.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+in a single <code class="language-plaintext highlighter-rouge">catch</code> block is bad practice.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Catching multiple exceptions thrown by different originators in a single "catch" block is a bad practice because it reduces the ability to provide context of the problem that occurred.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/elephant.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/elephant.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -43,6 +43,7 @@ account
 accountability
 accountable
 accounts
+accumulating
 accuracy
 accurate
 accurately
@@ -335,6 +336,7 @@ annoying
 annoys
 annual
 annually
+anomalies
 anomalous
 anonymity
 ANONYMOUS
@@ -1311,6 +1313,7 @@ chase
 chat
 chatbot
 chatbots
+ChatGPT
 chats
 chatter
 chatterbot
@@ -1417,6 +1420,7 @@ cleaner
 cleaning
 cleanliness
 cleans
+cleanup
 clear
 cleared
 clearer
@@ -1677,6 +1681,7 @@ composing
 composite
 composition
 compound
+comprehend
 comprehensive
 comprehensively
 compress
@@ -2650,6 +2655,7 @@ downside
 downtime
 downtimes
 downtown
+doxia
 dozen
 dozens
 DPI
@@ -3410,6 +3416,7 @@ fixable
 fixed
 fixed-budget
 fixed-cost
+fixer
 fixes
 fixing
 fixture
@@ -3745,6 +3752,7 @@ gitflow
 github
 github-based
 github-hosted
+githubnext
 gitlab
 gitlab-ci
 gitter
@@ -3888,6 +3896,7 @@ guide
 guided
 guidelines
 guides
+guiding
 guilt
 guilt-driven
 guilt-triggering
@@ -4308,6 +4317,7 @@ impression
 impressive
 imprisoned
 imprisonment
+improperly
 improve
 improved
 improvement
@@ -4522,6 +4532,7 @@ intellij
 intend
 intended
 intense
+intensity
 intensive
 intensively
 intent
@@ -4532,6 +4543,7 @@ interact
 interacting
 interaction
 interactions
+interactive
 interactively
 interacts
 intercept
@@ -5541,6 +5553,7 @@ micro-managers
 micro-manages
 micro-payments
 micro-penalties
+micro-refactorings
 micro-step
 micro-tasking
 micro-tasks
@@ -5640,6 +5653,7 @@ misunderstandings
 misunderstands
 misunderstood
 MIT
+mitigate
 mitigation
 mix
 mixed
@@ -6130,6 +6144,8 @@ on-fly
 on-premise
 on-site
 on-time
+onboard
+onboarding
 once
 once-in-a-lifetime
 oncepage
@@ -6518,6 +6534,7 @@ person
 person's
 personal
 personality
+personalized
 personally
 personnel
 perspective
@@ -6879,6 +6896,7 @@ prints
 printtoconsole
 prior
 priorities
+prioritization
 prioritize
 prioritized
 prioritizes
@@ -7346,6 +7364,7 @@ reflection
 reflection-discoverable
 reflective
 reflects
+reformat
 refreshment
 refrigerator
 refund
@@ -8312,6 +8331,7 @@ snapshots
 sncconn
 sneakily
 snippet
+snippets
 snow
 snowboarding
 snyk
@@ -8436,6 +8456,7 @@ spending
 spends
 spent
 sphere
+spikes
 spin-wait
 spirit
 splash
@@ -8496,6 +8517,7 @@ stackoverflow
 stackoverflowing
 stacy
 staff
+staff-hours
 staffing
 stage
 stages
@@ -9020,6 +9042,7 @@ textmate
 textof
 textpage
 texts
+textual
 textutils
 tg
 th
@@ -9341,6 +9364,7 @@ turning
 turnover
 turns
 tutorial
+tutorials
 tuytschaevers
 TV
 tweet
@@ -9591,6 +9615,7 @@ utilization
 utilize
 utilized
 utilizes
+utilizing
 utils
 utopia
 utopian
@@ -9751,6 +9776,7 @@ vouches
 VP
 VPs
 vs
+vulnerabilities
 vulnerable
 vytautas
 wages
