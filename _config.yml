@@ -44,10 +44,10 @@ plugins:
   # - jekyll-related-posts
 
 chatgpt-translate:
-  threshold: 32
+  threshold: 64
   min_chars: 20
   source: en
-  version: "002"
+  version: "30"
   layout: translated
   targets:
     -
