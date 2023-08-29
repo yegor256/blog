@@ -1,0 +1,133 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite"> <head> <meta charset="utf-8"/> <meta name="description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS" /> <meta name="keywords" content="" /> <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/> <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" /> <meta name="author" content="Yegor Bugayenko"> <meta name="og:site_name" content="Yegor Bugayenko"/> <meta name="og:type" content="article" /> <meta name="og:locale" content="en_US" /> <meta name="twitter:account_id" content="4503599630178231" /> <meta name="twitter:creator" content="@yegor256"/> <meta name="twitter:site" content="@yegor256"/> <meta name="twitter:title" property="og:title" content="CasperJS Tests in Maven Build"/> <meta name="twitter:description" property="og:description" content="Practical example of running automated integration tests in Maven build using Tomcat, PhantomJS and CasperJS"/> <meta name="twitter:url" property="og:url" content="https://www.yegor256.com/ru/2014/06/21/casperjs-with-maven.html"/> <meta name="telegram:channel" content="AAAAAEJFMRzsRTRxM3ec6A"/> <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" /> <link rel="shortcut icon" href="/favicon.ico?89722679c17"/> <link rel="apple-touch-icon" href="/favicon.ico?89722679c17"/> <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="https://www.yegor256.com/rss.xml"/> <link rel="stylesheet" href="/css/layout.css?89722679c17"/> <link rel="stylesheet" href="/css/icons.css?89722679c17"/> <link rel="canonical" href="https://www.yegor256.com/ru/2014/06/21/casperjs-with-maven.html" /> <title>CasperJS Tests in Maven Build</title> </head> <body><div class="wrapper"> <aside class="header-toggle unprintable" id="header-toggle" title="Show the menu" onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside> <header class="header" id="header"><div class="face"> <a href="/about-me.html#form" class="sub" title="Click to subscribe to my monthly newsletter"><span>Subscribe</span></a> <a href="/about-me.html" style="position:relative;"> <img src="/images/face-256x256.jpg" class="photo" alt="Yegor Bugayenko"/> </a></div><nav><ul class="menu social notranslate"> <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow" title="Follow me on Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li> <li><a href="/rss.xml" rel="nofollow" title="Subscribe to my RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow" title="My GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="My Stack Overflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow" title="Follow me on Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow" title="Follow me on Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="My LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256?sub_confirmation=1" rel="nofollow" title="My Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow" title="My Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow" title="My AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li> <li><a href="https://soundcloud.com/yegor256" rel="nofollow" title="My podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li> <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow" title="My iTunes podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li> <li><a href="https://t.me/yegor256news" rel="nofollow" title="My Telegram public channel"><i class="icon icon-telegram notranslate" aria-hidden="true"></i></a></li> <li><a href="mailto:blog@yegor256.com" rel="nofollow" title="Email me any time"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li></ul><ul class="menu"> <li><a href="/" title="Home page">Home</a></li> <li ><a href="/best.html" title="Best articles to read">12&#160;Best</a></li> <li ><a href="/contents.html" title="The contents of the entire blog">All&#160;386</a></li> <li ><a href="/teaching.html" title="My courses and lectures">Teaching</a></li> <li ><a href="/talks.html" title="Future and past conference talks">Talks</a></li> <li ><a href="/books.html" title="The books I wrote">Books</a></li> <li ><a href="/papers.html" title="My academic papers and patents">Papers</a></li> <li ><a href="/pets.html" title="My loved pet projects">Pets</a></li> <li ><a href="/award.html" title="Software quality award">Award</a></li> <li ><a href="/testimonials.html" title="What some people say about me">Testimonials</a></li> <li ><a href="/shift-m.html" title="Audio podcast about project management">Shift-M</a></li> <li ><a href="/paintings.html" title="My paintings for sale">Art</a></li> <li><a href="https://ru.yegor256.com/" title="Немного на русском языке о политике в России, Украине и мире">Политика</a></li></ul></nav><div class="search"> <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction"> <meta itemprop="target" content="https://www.google.com/search?q={q}"/> <input name="sitesearch" value="yegor256.com" type="hidden"/> <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required" onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search..." autocomplete="off"/> <input type="image" src="/images/google-search-icon.svg" class="google" title="Search via Google" alt="Search via Google"/> </form></div><div class="hot"><ul></ul></div></header></div><section itemscope="" itemtype="http://schema.org/BlogPosting"><div class="wrapper"> <header><h1 itemprop="name headline mainEntityOfPage">CasperJS Tests in Maven Build</h1></header> <article class="main" itemprop="articleBody" style="font-family: sans-serif; font-size: 0.9em; line-height: 1.2em;"><p style="color: #C42C00;">The following text is a <em>partial</em> translation of the <a href='https://www.yegor256.com/2014/06/21/casperjs-with-maven.html'>original English article</a>, performed by <a href="https://chat.openai.com/">ChatGPT</a> (gpt-3.5-turbo) and <a href="https://github.com/yegor256/jekyll-chatgpt-translate">this Jekyll plugin</a>:</p><p>Я являюсь большим поклонником автоматизированного тестирования в общем и интеграционного тестирования в частности. Я твердо верю, что усилия, затраченные на написание тестов, являются прямыми инвестициями в качество и стабильность продукта в процессе разработки.</p><p><a href="http://casperjs.org/">CasperJS</a> - это тестовый фреймворк, работающий поверх <a href="http://phantomjs.org/">PhantomJS</a>, который является безголовым браузером. Используя CasperJS, мы можем убедиться, что наше приложение правильно отвечает на запросы, отправляемые обычным веб-браузером.</p><p>Это пример теста CasperJS, который делает HTTP-запрос на домашнюю страницу запущенного WAR-приложения и проверяет, что ответ имеет статусный код <code class="language-plaintext highlighter-rouge">200</code>.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>casper.test.begin(
+  'home page can be rendered',
+  function (test) {
+    casper.start(
+      casper.cli.get('home'), // URL of home page
+      function () {
+        test.assertHttpStatus(200);
+      }
+    );
+    casper.run(
+      function () {
+        test.done();
+      }
+    );
+  }
+);
+</code></pre></div></div><p>Я храню этот тест в файле <code class="language-plaintext highlighter-rouge">src/test/casperjs/home-page.js</code>. Посмотрим, как CasperJS может быть автоматически запущен при каждой сборке с помощью Maven.</p><p>Вот тестовый сценарий, реализованный с помощью комбинации плагинов Maven:</p><ol> <li><p>Установите PhantomJS</p></li> <li><p>Install CasperJS</p></li> <li><p>Зарезервировать случайный TCP-порт</p></li> <li><p>Запустите Tomcat на указанном TCP-порту (с WAR-файлом внутри)</p></li> <li><p>Запустите тесты CasperJS и настройте их на работу с запущенным Tomcat.</p></li> <li><p>Shutdown Tomcat</p></li> </ol><p>Я использую комбинацию плагинов. Давайте пройдем по шагам один за другим.</p><p>Кстати, я не показываю версии плагинов в приведенных ниже примерах, прежде всего потому, что большинство из них находятся в активной разработке. Проверьте их версии на <a href="http://search.maven.org/">Maven Central</a> (да, все они доступны там).</p><h2 id="1-install-phantomjs">1. Install PhantomJS</h2><p>Прежде всего, нам нужно скачать исполняемый файл PhantomJS. Это бинарный файл, зависящий от платформы. Благодаря <a href="https://github.com/klieber">Kyle Lieber</a>, у нас есть готовый плагин Maven: <a href="https://github.com/klieber/phantomjs-maven-plugin">phantomjs-maven-plugin</a>, который определяет текущую платформу и автоматически загружает соответствующий бинарный файл, помещая его в директорию <code class="language-plaintext highlighter-rouge">target</code>.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
+  &lt;groupId&gt;com.github.klieber&lt;/groupId&gt;
+  &lt;artifactId&gt;phantomjs-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;install&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+  &lt;configuration&gt;
+    &lt;version&gt;1.9.2&lt;/version&gt;
+  &lt;/configuration&gt;
+&lt;/plugin&gt;
+</code></pre></div></div><p>Точное имя загруженного двоичного файла хранится в свойстве Maven <code class="language-plaintext highlighter-rouge">${phantomjs.binary}</code>.</p><h2 id="2-install-casperjs">2. Install CasperJS</h2><p>К сожалению, для установки CasperJS нет подобного плагина (по крайней мере, я пока не нашел ни одного). Поэтому я использую простой старый <code class="language-plaintext highlighter-rouge">git</code> (он должен быть установлен на вашей сборочной машине).</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+  &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;casperjs-install&lt;/id&gt;
+      &lt;phase&gt;pre-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;exec&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;executable&gt;git&lt;/executable&gt;
+        &lt;arguments&gt;
+          &lt;argument&gt;clone&lt;/argument&gt;
+          &lt;argument&gt;--depth=1&lt;/argument&gt;
+          &lt;argument&gt;https://github.com/n1k0/casperjs.git&lt;/argument&gt;
+          &lt;argument&gt;${project.build.directory}/casperjs&lt;/argument&gt;
+        &lt;/arguments&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre></div></div><h2 id="3-reserve-tcp-port">3. Reserve TCP Port</h2><p>Мне необходимо получить случайный TCP-порт, на котором будет запущен Tomcat. Порт должен быть доступен на машине сборки. Я хочу иметь возможность запускать несколько сборок Maven параллельно, вот почему я получаю случайный порт при каждой сборке.</p><p>В других примерах вы можете видеть, как люди используют фиксированные номера портов, например, <code class="language-plaintext highlighter-rouge">5555</code> или что-то подобное. Это очень плохая практика. Всегда резервируйте новый случайный порт, когда вам он нужен.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+  &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;tomcat-port&lt;/id&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;reserve-network-port&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;portNames&gt;
+          &lt;portName&gt;tomcat.port&lt;/portName&gt;
+        &lt;/portNames&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre></div></div><p>Плагин резервирует порт и устанавливает его значение в свойство Maven <code class="language-plaintext highlighter-rouge">${tomcat.port}</code>.</p><h2 id="4-start-tomcat">4. Start Tomcat</h2><p>Теперь пришло время запустить Tomcat с пакетом WAR внутри. Я использую <a href="http://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">tomcat7-maven-plugin</a>, который запускает настоящий сервер Tomcat 7 и настраивает его для обслуживания на резервированном порту вышеуказанного.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+  &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+  &lt;configuration&gt;
+    &lt;path&gt;/&lt;/path&gt;
+  &lt;/configuration&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;start-tomcat&lt;/id&gt;
+      &lt;phase&gt;pre-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;run-war-only&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;port&gt;${tomcat.port}&lt;/port&gt;
+        &lt;fork&gt;true&lt;/fork&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre></div></div><p>Из-за установленной опции <code class="language-plaintext highlighter-rouge">fork</code> в значении <code class="language-plaintext highlighter-rouge">true</code>, Tomcat7 продолжает работу после завершения выполнения плагина. Это именно то, что мне нужно.</p><h2 id="5-run-casperjs">5. Run CasperJS</h2><p>Теперь пришло время запустить CasperJS. Несмотря на то, что существуют некоторые плагины для этого, я использую простой старый <code class="language-plaintext highlighter-rouge">exec-maven-plugin</code>, в основном потому, что он более настраиваемый.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
+  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+  &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;casperjs-test&lt;/id&gt;
+      &lt;phase&gt;integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;exec&lt;/goal&gt;
+      &lt;/goals&gt;
+      &lt;configuration&gt;
+        &lt;executable&gt;
+          ${project.build.directory}/casperjs/bin/casperjs
+        &lt;/executable&gt;
+        &lt;workingDirectory&gt;${basedir}&lt;/workingDirectory&gt;
+        &lt;arguments&gt;
+          &lt;argument&gt;test&lt;/argument&gt;
+          &lt;argument&gt;--verbose&lt;/argument&gt;
+          &lt;argument&gt;--no-colors&lt;/argument&gt;
+          &lt;argument&gt;--concise&lt;/argument&gt;
+          &lt;argument&gt;--home=http://localhost:${tomcat.port}&lt;/argument&gt;
+          &lt;argument&gt;${basedir}/src/test/casperjs&lt;/argument&gt;
+        &lt;/arguments&gt;
+        &lt;environmentVariables&gt;
+          &lt;PHANTOMJS_EXECUTABLE&gt;${phantomjs.binary}&lt;/PHANTOMJS_EXECUTABLE&gt;
+        &lt;/environmentVariables&gt;
+      &lt;/configuration&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre></div></div><p>Переменная среды <code class="language-plaintext highlighter-rouge">PHANTOMJS_EXECUTABLE</code> - это не документированная функция, которая делает возможным все это сценарий. Она настраивает расположение исполняемого файла PhantomJS, который был загружен несколько шагов выше.</p><h2 id="6-shutdown-tomcat">6. Shutdown Tomcat</h2><p>На последнем шаге я выключаю сервер Tomcat.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+  &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;id&gt;stop-tomcat&lt;/id&gt;
+      &lt;phase&gt;post-integration-test&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;shutdown&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre></div></div><h2 id="real-example">Real Example</h2><p>Если вы хотите увидеть, как все это работает на практике, взгляните на <a href="http://www.stateful.co">stateful.co</a>. Это веб-приложение на Java, размещенное на <a href="http://www.cloudbees.com">CloudBees</a>. Исходный код приложения открыт и доступен на <a href="https://github.com/sttc/stateful">GitHub</a>.</p><p>Его <a href="https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml"><code class="language-plaintext highlighter-rouge">pom.xml</code></a> содержит точно такие же настройки, которые были объяснены выше, но объединены вместе.</p><p>Если у вас есть вопросы, не стесняйтесь задавать их ниже.</p><p>PS. Также, проверьте это: PhantomJS в качестве HTML-валидатора.</p><p class="jekyll-chatgpt-translate">Translated by ChatGPT gpt-3.5-turbo/31 on 2023-08-29 at 19:16</p></article></div><div class="wrapper"> <footer class="footer"><p> &copy; <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person"> <span itemprop="name">Yegor Bugayenko</span> </span> 2014&ndash;<span itemprop="copyrightYear">2023</span></p></footer></div></section><div class="wrapper unprintable" style="text-align:center;margin-top:2em;"> <a href="https://www.sixnines.io/h/3ba1652f"> <img src="//www.sixnines.io/b/3ba1652f?style=flat" alt="sixnines availability badge" /></a> &nbsp; <a href="https://github.com/yegor256/blog/stargazers"> <img src="//img.shields.io/github/stars/yegor256/blog.svg?style=flat-square" alt="GitHub stars" /></a></div><script src="//code.jquery.com/jquery-1.9.0.min.js"></script> <script src="/js/all.js?89722679c17"></script> <script>var disqus_shortname = 'yegor256';</script> <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-1963507-32', 'auto'); ga('send', 'pageview'); </script> <script> Cd=document;Cr="&"+Math.random();Cp="&s=1"; Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1"; Cp+="&t="+(new Date()).getTimezoneOffset(); if(self!=top)Cp+="&f=1"; </script> <script> if(navigator.javaEnabled())Cp+="&j=1"; </script> <script> if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+ screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth); </script> <script> Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+ "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+ "' border='0' wi"+"dth='1' he"+"ight='1'/>"); </script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Person", "name": "Yegor Bugayenko", "url": "https://www.yegor256.com", "sameAs": [ "https://www.facebook.com/yegor256", "https://instagram.com/yegor256", "https://www.linkedin.com/in/yegor256", "https://twitter.com/yegor256", "https://github.com/yegor256", "https://www.pinterest.com/yegor256/" ] } </script> </body> </html>
