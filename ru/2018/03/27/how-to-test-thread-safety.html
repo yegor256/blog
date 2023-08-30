@@ -1,0 +1,111 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite"> <head> <meta charset="utf-8"/> <meta name="description" content="Thread-safety is a very important and critical quality of some Java objects; here is how it can be tested with the help of Cactoos RunInThreads class." /> <meta name="keywords" content="" /> <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/> <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" /> <meta name="author" content="Yegor Bugayenko"> <meta name="og:site_name" content="Yegor Bugayenko"/> <meta name="og:type" content="article" /> <meta name="og:locale" content="en_US" /> <meta name="twitter:account_id" content="4503599630178231" /> <meta name="twitter:creator" content="@yegor256"/> <meta name="twitter:site" content="@yegor256"/> <meta name="twitter:title" property="og:title" content="How I Test My Java Classes for Thread-Safety"/> <meta name="twitter:description" property="og:description" content="Thread-safety is a very important and critical quality of some Java objects; here is how it can be tested with the help of Cactoos RunInThreads class."/> <meta name="twitter:url" property="og:url" content="https://www.yegor256.com/ru/2018/03/27/how-to-test-thread-safety.html"/> <meta name="telegram:channel" content="AAAAAEJFMRzsRTRxM3ec6A"/> <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" /> <link rel="shortcut icon" href="/favicon.ico?15ff2847650"/> <link rel="apple-touch-icon" href="/favicon.ico?15ff2847650"/> <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="https://www.yegor256.com/rss.xml"/> <link rel="stylesheet" href="/css/layout.css?15ff2847650"/> <link rel="stylesheet" href="/css/icons.css?15ff2847650"/> <link rel="canonical" href="https://www.yegor256.com/ru/2018/03/27/how-to-test-thread-safety.html" /> <title>How I Test My Java Classes for Thread-Safety</title> </head> <body><div class="wrapper"> <aside class="header-toggle unprintable" id="header-toggle" title="Show the menu" onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside> <header class="header" id="header"><div class="face"> <a href="/about-me.html#form" class="sub" title="Click to subscribe to my monthly newsletter"><span>Subscribe</span></a> <a href="/about-me.html" style="position:relative;"> <img src="/images/face-256x256.jpg" class="photo" alt="Yegor Bugayenko"/> </a></div><nav><ul class="menu social notranslate"> <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow" title="Follow me on Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li> <li><a href="/rss.xml" rel="nofollow" title="Subscribe to my RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow" title="My GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="My Stack Overflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow" title="Follow me on Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow" title="Follow me on Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="My LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256?sub_confirmation=1" rel="nofollow" title="My Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow" title="My Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow" title="My AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li> <li><a href="https://soundcloud.com/yegor256" rel="nofollow" title="My podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li> <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow" title="My iTunes podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li> <li><a href="https://t.me/yegor256news" rel="nofollow" title="My Telegram public channel"><i class="icon icon-telegram notranslate" aria-hidden="true"></i></a></li> <li><a href="mailto:blog@yegor256.com" rel="nofollow" title="Email me any time"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li></ul><ul class="menu"> <li><a href="/" title="Home page">Home</a></li> <li ><a href="/best.html" title="Best articles to read">12&#160;Best</a></li> <li ><a href="/contents.html" title="The contents of the entire blog">All&#160;386</a></li> <li ><a href="/teaching.html" title="My courses and lectures">Teaching</a></li> <li ><a href="/talks.html" title="Future and past conference talks">Talks</a></li> <li ><a href="/books.html" title="The books I wrote">Books</a></li> <li ><a href="/papers.html" title="My academic papers and patents">Papers</a></li> <li ><a href="/pets.html" title="My loved pet projects">Pets</a></li> <li ><a href="/award.html" title="Software quality award">Award</a></li> <li ><a href="/testimonials.html" title="What some people say about me">Testimonials</a></li> <li ><a href="/shift-m.html" title="Audio podcast about project management">Shift-M</a></li> <li ><a href="/paintings.html" title="My paintings for sale">Art</a></li> <li><a href="https://ru.yegor256.com/" title="Немного на русском языке о политике в России, Украине и мире">Политика</a></li></ul></nav><div class="search"> <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction"> <meta itemprop="target" content="https://www.google.com/search?q={q}"/> <input name="sitesearch" value="yegor256.com" type="hidden"/> <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required" onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search..." autocomplete="off"/> <input type="image" src="/images/google-search-icon.svg" class="google" title="Search via Google" alt="Search via Google"/> </form></div><div class="hot"><ul></ul></div></header></div><section itemscope="" itemtype="http://schema.org/BlogPosting"><div class="wrapper"> <header><h1 itemprop="name headline mainEntityOfPage">How I Test My Java Classes for Thread-Safety</h1></header> <article class="main" itemprop="articleBody" style="font-family: sans-serif; font-size: 0.9em; line-height: 1.2em;"><p style="color: #C42C00;">The following text is a <em>partial</em> translation of the <a href='https://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html'>original English article</a>, performed by <a href="https://chat.openai.com/">ChatGPT</a> (gpt-3.5-turbo) and <a href="https://github.com/yegor256/jekyll-chatgpt-translate">this Jekyll plugin</a>:</p><p>Я коснулся этой проблемы в <a href="https://www.youtube.com/watch?v=rC17YwowURQ">одном из моих последних вебинаров</a>, теперь пришло время объяснить её в письменной форме. Thread-safety - это важное качество классов в языках/платформах, таких как Java, где мы часто передаем объекты между потоками. Проблемы, вызванные отсутствием thread-safety, очень сложно отлаживать, так как они случайны и практически невозможно воспроизвести намеренно. Как вы тестируете ваши объекты, чтобы убедиться, что они являются thread-safe? Вот как я это делаю.</p><p>Допустим, у нас есть простая книжная полка в памяти:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Books {
+  final Map&lt;Integer, String&gt; map =
+    new ConcurrentHashMap&lt;&gt;();
+  int add(String title) {
+    final Integer next = this.map.size() + 1;
+    this.map.put(next, title);
+    return next;
+  }
+  String title(int id) {
+    return this.map.get(id);
+  }
+}
+</code></pre></div></div><p>Сначала мы помещаем книгу туда, и книжная полка возвращает ее идентификатор. Затем мы можем прочитать заголовок книги по ее идентификатору.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Books books = new Books();
+String title = "Elegant Objects";
+int id = books.add(title);
+assert books.title(id).equals(title);
+</code></pre></div></div><p>Класс, кажется, является потокобезопасным, поскольку мы используем потокобезопасный <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code class="language-plaintext highlighter-rouge">ConcurrentHashMap</code></a>, вместо более примитивного и непотокобезопасного <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code class="language-plaintext highlighter-rouge">HashMap</code></a>, верно? Давайте попробуем протестировать это:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    String title = "Elegant Objects";
+    int id = books.add(title);
+    assert books.title(id).equals(title);
+  }
+}
+</code></pre></div></div><p>Тест проходит, но это всего лишь однопоточный тест. Давайте попробуем выполнить ту же манипуляцию из нескольких параллельных потоков (я использую <a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>).</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    int threads = 10;
+    ExecutorService service =
+      Executors.newFixedThreadPool(threads);
+    Collection&lt;Future&lt;Integer&gt;&gt; futures =
+      new ArrayList&lt;&gt;(threads);
+    for (int t = 0; t &lt; threads; ++t) {
+      final String title = String.format("Book #%d", t);
+      futures.add(service.submit(() -&gt; books.add(title)));
+    }
+    Set&lt;Integer&gt; ids = new HashSet&lt;&gt;();
+    for (Future&lt;Integer&gt; f : futures) {
+      ids.add(f.get());
+    }
+    assertThat(ids.size(), equalTo(threads));
+  }
+}
+</code></pre></div></div><p>Сначала я создаю пул потоков с помощью <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html"><code class="language-plaintext highlighter-rouge">Executors</code></a>. Затем я отправляю десять объектов типа <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html"><code class="language-plaintext highlighter-rouge">Callable</code></a> с помощью <code class="language-plaintext highlighter-rouge">submit()</code>. Каждый из них добавит новую уникальную книгу на книжную полку. Все они будут выполнены, в некотором непредсказуемом порядке, некоторыми из этих десяти потоков из пула.</p><p>Затем я получаю результаты их исполнителей через список объектов типа <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html"><code class="language-plaintext highlighter-rouge">Future</code></a>. Наконец, я вычисляю количество созданных уникальных идентификаторов книг. Если число равно 10, значит конфликтов не было. Я использую коллекцию <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Set.html"><code class="language-plaintext highlighter-rouge">Set</code></a>, чтобы убедиться, что список идентификаторов содержит только уникальные элементы.</p><p>Тест проходит на моем ноутбуке. Однако он недостаточно эффективен. Проблема здесь заключается в том, что он на самом деле не тестирует <code class="language-plaintext highlighter-rouge">Books</code> из нескольких параллельных потоков. Время, которое проходит между нашими вызовами <code class="language-plaintext highlighter-rouge">submit()</code>, достаточно велико, чтобы завершить выполнение <code class="language-plaintext highlighter-rouge">books.add()</code>. В результате на самом деле будет работать только один поток одновременно. Мы можем проверить это, немного изменив код:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AtomicBoolean running = new AtomicBoolean();
+AtomicInteger overlaps = new AtomicInteger();
+Collection&lt;Future&lt;Integer&gt;&gt; futures =
+  new ArrayList&lt;&gt;(threads);
+for (int t = 0; t &lt; threads; ++t) {
+  final String title = String.format("Book #%d", t);
+  futures.add(
+    service.submit(
+      () -&gt; {
+        if (running.get()) {
+          overlaps.incrementAndGet();
+        }
+        running.set(true);
+        int id = books.add(title);
+        running.set(false);
+        return id;
+      }
+    )
+  );
+}
+assertThat(overlaps.get(), greaterThan(0));
+</code></pre></div></div><p>С помощью этого кода я пытаюсь увидеть, как часто потоки перекрывают друг друга и выполняют что-то параллельно. Этого никогда не происходит, и <code class="language-plaintext highlighter-rouge">overlaps</code> равно нулю. Таким образом, наш тест на самом деле ничего не проверяет. Он просто по одной добавляет десять книг на полку. Если я увеличу количество потоков до 1000, они иногда начинают перекрываться. Но мы хотим, чтобы они перекрывались даже при небольшом их количестве. Чтобы решить эту проблему, нам нужно использовать <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html"><code class="language-plaintext highlighter-rouge">CountDownLatch</code></a>:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CountDownLatch latch = new CountDownLatch(1);
+AtomicBoolean running = new AtomicBoolean();
+AtomicInteger overlaps = new AtomicInteger();
+Collection&lt;Future&lt;Integer&gt;&gt; futures =
+  new ArrayList&lt;&gt;(threads);
+for (int t = 0; t &lt; threads; ++t) {
+  final String title = String.format("Book #%d", t);
+  futures.add(
+    service.submit(
+      () -&gt; {
+        latch.await();
+        if (running.get()) {
+          overlaps.incrementAndGet();
+        }
+        running.set(true);
+        int id = books.add(title);
+        running.set(false);
+        return id;
+      }
+    )
+  );
+}
+latch.countDown();
+Set&lt;Integer&gt; ids = new HashSet&lt;&gt;();
+for (Future&lt;Integer&gt; f : futures) {
+  ids.add(f.get());
+}
+assertThat(overlaps.get(), greaterThan(0));
+</code></pre></div></div><p>Теперь каждый поток, перед тем как работать с книгами, ожидает разрешения, предоставленного <code class="language-plaintext highlighter-rouge">latch</code>. Когда мы отправляем их все через <code class="language-plaintext highlighter-rouge">submit()</code>, они остаются на удержании и ждут. Затем мы освобождаем замок с помощью <code class="language-plaintext highlighter-rouge">countDown()</code>, и они все начинают работу одновременно. Теперь, на моем ноутбуке, <code class="language-plaintext highlighter-rouge">overlaps</code> равно 3-5, даже когда <code class="language-plaintext highlighter-rouge">threads</code> равно 10.</p><p>И последний <code class="language-plaintext highlighter-rouge">assertThat()</code> теперь вызывает ошибку! Я не получаю 10 идентификаторов книг, как раньше. Это 7-9, но никогда не 10. Класс, по-видимому, не является потокобезопасным!</p><p>Но перед тем, как мы исправим класс, давайте упростим наш тест. Давайте воспользуемся <a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html"><code class="language-plaintext highlighter-rouge">RunInThreads</code></a> (переименовано в <a href="https://www.javadoc.io/doc/org.cactoos/cactoos/latest/org/cactoos/experimental/Threads.html"><code class="language-plaintext highlighter-rouge">Threads</code></a> в последней версии) из <a href="http://www.cactoos.org">Cactoos</a>, который делает то же самое, что и мы сделали выше, но внутри:</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class BooksTest {
+  @Test
+  public void addsAndRetrieves() {
+    Books books = new Books();
+    MatcherAssert.assertThat(
+      t -&gt; {
+        String title = String.format(
+          "Book #%d", t.getAndIncrement()
+        );
+        int id = books.add(title);
+        return books.title(id).equals(title);
+      },
+      new RunsInThreads&lt;&gt;(new AtomicInteger(), 10)
+    );
+  }
+}
+</code></pre></div></div><p>Первый аргумент <code class="language-plaintext highlighter-rouge">assertThat()</code> - это экземпляр <a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html"><code class="language-plaintext highlighter-rouge">Func</code></a> (функциональный интерфейс), принимающий <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html"><code class="language-plaintext highlighter-rouge">AtomicInteger</code></a> (первый аргумент <code class="language-plaintext highlighter-rouge">RunsInThreads</code>) и возвращающий <code class="language-plaintext highlighter-rouge">Boolean</code>. Эта функция будет выполнена на 10 параллельных потоках, используя тот же подход на основе замков, что и показан выше.</p><p>Этот <code class="language-plaintext highlighter-rouge">RunInThreads</code> кажется компактным и удобным, я уже использую его в нескольких проектах.</p><p>Кстати, чтобы сделать <code class="language-plaintext highlighter-rouge">Books</code> потокобезопасным, нам просто нужно добавить <code class="language-plaintext highlighter-rouge">synchronized</code> к его методу <code class="language-plaintext highlighter-rouge">add()</code>. Или может быть вы можете предложить лучшее решение?</p><p>P.S. Я узнал все это из книги <a href="http://amzn.to/2c7sVS1">Java Concurrency in Practice</a> авторов Гётц и др.</p><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you create unit tests to prove that your classes are thread-safe?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1028678871187640329?ref_src=twsrc%5Etfw">August 12, 2018</a></blockquote> <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p class="jekyll-chatgpt-translate">Translated by ChatGPT gpt-3.5-turbo/33 on 2023-08-30 at 10:11</p></article></div><div class="wrapper"> <footer class="footer"><p> &copy; <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person"> <span itemprop="name">Yegor Bugayenko</span> </span> 2014&ndash;<span itemprop="copyrightYear">2023</span></p></footer></div></section><div class="wrapper unprintable" style="text-align:center;margin-top:2em;"> <a href="https://www.sixnines.io/h/3ba1652f"> <img src="//www.sixnines.io/b/3ba1652f?style=flat" alt="sixnines availability badge" /></a> &nbsp; <a href="https://github.com/yegor256/blog/stargazers"> <img src="//img.shields.io/github/stars/yegor256/blog.svg?style=flat-square" alt="GitHub stars" /></a></div><script src="//code.jquery.com/jquery-1.9.0.min.js"></script> <script src="/js/all.js?15ff2847650"></script> <script>var disqus_shortname = 'yegor256';</script> <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-1963507-32', 'auto'); ga('send', 'pageview'); </script> <script> Cd=document;Cr="&"+Math.random();Cp="&s=1"; Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1"; Cp+="&t="+(new Date()).getTimezoneOffset(); if(self!=top)Cp+="&f=1"; </script> <script> if(navigator.javaEnabled())Cp+="&j=1"; </script> <script> if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+ screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth); </script> <script> Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+ "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+ "' border='0' wi"+"dth='1' he"+"ight='1'/>"); </script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Person", "name": "Yegor Bugayenko", "url": "https://www.yegor256.com", "sameAs": [ "https://www.facebook.com/yegor256", "https://instagram.com/yegor256", "https://www.linkedin.com/in/yegor256", "https://twitter.com/yegor256", "https://github.com/yegor256", "https://www.pinterest.com/yegor256/" ] } </script> </body> </html>
