@@ -146,7 +146,6 @@ Say, this is the `.eo` source code at `src/main/eo/hello.eo`:
 
 ```text
 +alias org.eolang.io.stdout
-
 [] > hello
   "Jeff" > user
   stdout > @
@@ -246,7 +245,6 @@ may look like, after the pull:
 ```xml
 +package org.eolang.io
 +rt jvm org.eolang:eo-runtime:0.10.2
-
 [text] > stdout /bool
 ```
 
@@ -269,7 +267,6 @@ By the way, a program may contain a number of `+rt` meta instructions, for examp
 +rt jvm org.eolang:eo-runtime:0.10.2
 +rt ruby eo-core:0.5.8
 +rt python eo-basics:0.0.3
-
 [text] > stdout /bool
 ```
 
@@ -357,7 +354,6 @@ in its source repository:
 ```text
 +package org.eolang.io
 +rt jvm org.eolang:eo-runtime:0.0.0
-
 [text] > stdout /bool
 ```
 
