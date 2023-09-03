@@ -13,10 +13,16 @@ keywords:
   - AI for coding
   - ChatGPT for programmers
   - ChatGPT for coding
-  - AI for programming
+  - AI for programming  
 image: /images/2023/08/blade-runner.jpg
 jb_picture:
   caption: Blade Runner (1982) by Ridley Scott
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "How soon AI will start firing programmers?"
+    date: 2023-09-03
+    url: https://cacm.acm.org/blogs/blog-cacm/276029-how-soon-ai-will-start-firing-programmers/fulltext
 ---
 
 The [release](https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/) 
