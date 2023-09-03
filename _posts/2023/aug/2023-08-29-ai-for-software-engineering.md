@@ -140,5 +140,5 @@ I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already s
 
 I'm thankful to ChatGPT for helping me build this list.
 
-What do you think I missed?
+What do you think ~~I~~ we missed?
 
