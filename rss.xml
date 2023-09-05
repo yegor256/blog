@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-08-30T13:31:33+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Robots vs. Programmers</title><link href="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html" rel="alternate" type="text/html" title="Robots vs. Programmers" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/29/ai-for-software-engineering</id><content type="html" xml:base="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html"><![CDATA[<p>The <a href="https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/">release</a> 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-09-05T10:07:45+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Bibcop: Style Checker for BibTeX</title><link href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html" rel="alternate" type="text/html" title="Bibcop: Style Checker for BibTeX" /><published>2023-09-05T00:00:00+00:00</published><updated>2023-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files</id><content type="html" xml:base="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html"><![CDATA[<p>Almost every document you may write in 
+<a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> format will
+have a list of references at the end. Most likely, you will
+use <a href="https://www.ctan.org/pkg/bibtex">BibTeX</a> 
+or <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a> 
+to print this list of references in a nicely formatted way.
+It is also highly probable that your <code class="language-plaintext highlighter-rouge">.bib</code> file will contain
+many typographic, stylistic, and logical mistakes. I’m fairly
+certain that you won’t find the time to identify and correct them.
+As a result, the “References” section in your paper may appear sloppy.
+I suggest using the <a href="https://www.ctan.org/pkg/bibcop"><code class="language-plaintext highlighter-rouge">bibcop</code></a> 
+package, which identifies mistakes in the <code class="language-plaintext highlighter-rouge">.bib</code> file 
+and auto-fixes some of them.</p>
+
+<!--more-->
+
+<p>Here is a practical example. Let’s say, you want to 
+cite a famous paper about transformers. First, you find it in
+<a href="https://scholar.google.com/">Google Scholar</a> and click “Cite”:</p>
+
+<figure class="picture"><img src="/images/2023/09/bibcop-scholar.png" style="width:600px;max-width:100%;" alt="picture" /></figure>
+
+<p>Then, you put this “bib” item into your <code class="language-plaintext highlighter-rouge">main.bib</code> file:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@article</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">,</span>
+  <span class="n">title</span><span class="o">={</span><span class="nc">Attention</span> <span class="n">is</span> <span class="n">all</span> <span class="n">you</span> <span class="n">need</span><span class="o">},</span>
+  <span class="n">author</span><span class="o">={</span><span class="nc">Vaswani</span><span class="o">,</span> <span class="nc">Ashish</span> <span class="n">and</span> <span class="nc">Shazeer</span><span class="o">,</span> <span class="nc">Noam</span> <span class="n">and</span> 
+    <span class="nc">Parmar</span><span class="o">,</span> <span class="nc">Niki</span> <span class="n">and</span> <span class="nc">Uszkoreit</span><span class="o">,</span> <span class="nc">Jakob</span> <span class="n">and</span> <span class="nc">Jones</span><span class="o">,</span> <span class="nc">Llion</span> <span class="n">and</span> 
+    <span class="nc">Gomez</span><span class="o">,</span> <span class="nc">Aidan</span> <span class="no">N</span> <span class="n">and</span> <span class="nc">Kaiser</span><span class="o">,</span> <span class="o">{</span><span class="err">\</span><span class="no">L</span><span class="o">}</span><span class="n">ukasz</span> <span class="n">and</span> <span class="nc">Polosukhin</span><span class="o">,</span> <span class="nc">Illia</span><span class="o">},</span>
+  <span class="n">journal</span><span class="o">={</span><span class="nc">Advances</span> <span class="n">in</span> <span class="n">neural</span> <span class="n">information</span> <span class="n">processing</span> <span class="n">systems</span><span class="o">},</span>
+  <span class="n">volume</span><span class="o">={</span><span class="mi">30</span><span class="o">},</span>
+  <span class="n">year</span><span class="o">={</span><span class="mi">2017</span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Then, you write something like this in your paper:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">\</span><span class="n">documentclass</span><span class="o">{</span><span class="n">article</span><span class="o">}</span>
+<span class="err">\</span><span class="n">usepackage</span><span class="o">[</span><span class="n">maxbibnames</span><span class="o">=</span><span class="mi">9</span><span class="o">]{</span><span class="n">biblatex</span><span class="o">}</span>
+<span class="err">\</span><span class="n">addbibresource</span><span class="o">{</span><span class="n">main</span><span class="o">.</span><span class="na">bib</span><span class="o">}</span>
+<span class="err">\</span><span class="n">begin</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
+<span class="nc">Transformers</span><span class="o">~</span><span class="err">\</span><span class="n">cite</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">}</span> 
+<span class="n">changed</span> <span class="n">everything</span><span class="o">!</span>
+<span class="err">\</span><span class="n">printbibliography</span>
+<span class="err">\</span><span class="n">end</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
+</code></pre></div></div>
+
+<p>This is what you will get:</p>
+
+<figure class="picture"><img src="/images/2023/09/bibcop-before.png" style="width:600px;max-width:100%;" alt="picture" /></figure>
+
+<p>Looks more or less fine. 
+However, if you go to <a href="https://proceedings.neurips.cc/paper_files/paper/2017">the website</a> 
+of the publisher of this article, you will see that:</p>
+
+<ul>
+  <li>The name of <a href="https://proceedings.neurips.cc/">the journal</a> is typed with first letters capitalized in all major words,</li>
+  <li>The title of the paper is also capitalized,</li>
+  <li>The middle name of “Aidan N. Gomez” has a trailing dot.</li>
+</ul>
+
+<p>In other words, Google Scholar gave you the citation with a few typographic
+mistakes. While not fatal, the quality of the “References” section 
+can sometimes be seen as reflective of the quality of the paper as a whole. 
+Simply put, negligence is not forgivable when dealing with information about other authors. 
+We must be accurate down to every letter and every dot.</p>
+
+<p>By including <code class="language-plaintext highlighter-rouge">bibcop</code> package to the document, the problem may be solved.
+First, you install it (I assume, you are using <a href="https://tug.org/texlive/">TeX Live</a>):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>tlmgr <span class="nb">install </span>bibcop
+</code></pre></div></div>
+
+<p>Then, you add this to your document, right before the <code class="language-plaintext highlighter-rouge">\addbibresource</code> command:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">...</span>
+<span class="err">\</span><span class="n">usepackage</span><span class="o">{</span><span class="n">bibcop</span><span class="o">}</span>
+<span class="err">\</span><span class="n">addbibresource</span><span class="o">{</span><span class="n">main</span><span class="o">.</span><span class="na">bib</span><span class="o">}</span>
+<span class="o">...</span>
+</code></pre></div></div>
+
+<p>When you compile the document, the following warnings will be printed
+to the console, together with other logs:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package bibcop Warning: A shortened name must have 
+  a tailing dot in the 6th 'author', as in 'Knuth, Donald E.', 
+  in the 'vaswani2017attention' entry.
+Package bibcop Warning: All major words in the 'title' 
+  must be capitalized, while the 2nd word 'is' is not, 
+  in the 'vaswani2017attention' entry.
+Package bibcop Warning: A mandatory 'doi' tag for '@article' 
+  is missing among (author, journal, title, volume, year), 
+  in the 'vaswani2017attention' entry.
+Package bibcop Warning: The 'title' must be wrapped 
+  in double curled brackets, 
+  in the 'vaswani2017attention' entry.
+</code></pre></div></div>
+
+<p>You fix them all in the <code class="language-plaintext highlighter-rouge">main.bib</code> file and recompile the document:</p>
+
+<figure class="picture"><img src="/images/2023/09/bibcop-after.png" style="width:600px;max-width:100%;" alt="picture" /></figure>
+
+<p>This one looks much better to me 
+(especially with the <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a>, which 
+was not provided by Google Scholar).</p>
+
+<p>By the way, some formatting problems may be auto-fixed by bibcop.
+You can use it from the command line, assuming you have your
+<code class="language-plaintext highlighter-rouge">main.bib</code> file in the current directory:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop <span class="nt">--fix</span> <span class="nt">--in-place</span> main.bib
+</code></pre></div></div>
+
+<p>This command will make as many fixes as possible. 
+Then, you can run <code class="language-plaintext highlighter-rouge">bibcop</code> again, from the command line, 
+in order to check what style violations are still there:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop main.bib
+</code></pre></div></div>
+
+<p>This will print the same errors as you saw earlier in the LaTeX log.</p>
+
+<hr />
+
+<p><a href="https://ctan.org/pkg/bibcop">In CTAN</a>, you can find full PDF documentation.</p>
+
+<p>You are welcome to suggest additional style checkers, 
+via <a href="https://github.com/yegor256/bibcop">GitHub issues</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html"><![CDATA[By the quality of the 'References' section some people may judge the quality of your research paper; bibcop helps you keep everything clean.]]></summary></entry><entry><title type="html">Robots vs. Programmers</title><link href="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html" rel="alternate" type="text/html" title="Robots vs. Programmers" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/29/ai-for-software-engineering</id><content type="html" xml:base="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html"><![CDATA[<p>The <a href="https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/">release</a> 
 of <a href="https://chat.openai.com/">ChatGPT</a> 3.5 has changed everything for us programmers. 
 Even though most of us (including me) don’t understand how it works, 
 some of us use it more frequently than Stack Overflow, Google, and IDE built-in features. 
@@ -119,7 +246,7 @@ I tried not to repeat what <a href="https://www.githubnext.com">GitHubNext</a> i
 
 <p>I’m thankful to ChatGPT for helping me build this list.</p>
 
-<p>What do you think I missed?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="programming" /><summary type="html"><![CDATA[Robots will likely revolutionize software engineering ranging from code reviews and bug fixing to automated refactoring, backlog prioritization, and employee appraisals.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fast Tests Help Humans, Deep Tests Help Servers</title><link href="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html" rel="alternate" type="text/html" title="Fast Tests Help Humans, Deep Tests Help Servers" /><published>2023-08-22T00:00:00+00:00</published><updated>2023-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/22/fast-vs-deep-testing</id><content type="html" xml:base="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html"><![CDATA[<p>In order to reveal errors of higher complexity, automated tests are 
+<p>What do you think <del>I</del> we missed?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="programming" /><summary type="html"><![CDATA[Robots will likely revolutionize software engineering ranging from code reviews and bug fixing to automated refactoring, backlog prioritization, and employee appraisals.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fast Tests Help Humans, Deep Tests Help Servers</title><link href="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html" rel="alternate" type="text/html" title="Fast Tests Help Humans, Deep Tests Help Servers" /><published>2023-08-22T00:00:00+00:00</published><updated>2023-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/22/fast-vs-deep-testing</id><content type="html" xml:base="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html"><![CDATA[<p>In order to reveal errors of higher complexity, automated tests are 
 turned into integration tests that involve external resources in test 
 scenarios, instead of their mocks. While this approach improves test 
 coverage, it slows down the entire build pipeline. This compromises 
@@ -1449,121 +1576,4 @@ second snippet can be re-written as follows:</p>
 </code></pre></div></div>
 
 <p>Can we do the same with the first snippet? We could, but the
-error message would be inaccurate, because the block covers too much.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Large try-blocks in try/catch statements are a common practice, because we try to avoid polluting the code with catch blocks; it's a bad tendency.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/09/the-rum-diary.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/09/the-rum-diary.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Don’t Group Exception Catchers</title><link href="https://www.yegor256.com/2022/08/30/dont-group-exception-catchers.html" rel="alternate" type="text/html" title="Don’t Group Exception Catchers" /><published>2022-08-30T00:00:00+00:00</published><updated>2022-08-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/08/30/dont-group-exception-catchers</id><content type="html" xml:base="https://www.yegor256.com/2022/08/30/dont-group-exception-catchers.html"><![CDATA[<p>Sometimes we <a href="/2015/12/01/rethrow-exceptions.html">rethrow</a> exceptions.
-In Java we do this more often than in other languages, because it has
-<a href="/2015/07/28/checked-vs-unchecked-exceptions.html">checked</a> exceptions.
-Sometimes we must catch and rethrow a few exceptions that originated
-from different places in a method.
-Java 7 introduced <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping</a>
-of different types of exceptions in a single <code class="language-plaintext highlighter-rouge">catch</code> block.
-But even without the grouping, it is possible to just catch <code class="language-plaintext highlighter-rouge">IOException</code> or
-even <code class="language-plaintext highlighter-rouge">Exception</code> and provide a single <code class="language-plaintext highlighter-rouge">catch</code> block for all types and all
-originators (methods that throw).
-Recently I realized that this is a bad practice. Here is why.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Elephant (2003) by Gus Van Sant" src="/images/2022/08/elephant.jpg" longdesc="#97a81977" /><figcaption id="97a81977">Elephant (2003) by Gus Van Sant</figcaption></figure>
-
-<p>Consider this Java method (I’m using <a href="https://commons.apache.org/proper/commons-io/">Apache Commons IO</a>):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
-    <span class="o">);</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>It’s not perfect. Let’s rewrite it to provide more error context,
-as <a href="/2015/12/01/rethrow-exceptions.html">was suggested</a> earlier:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="n">uri</span><span class="o">).</span><span class="na">openStream</span><span class="o">()</span>
-    <span class="o">);</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
-      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
-        <span class="s">"Failed to read from '%s'"</span><span class="o">,</span>
-        <span class="n">uri</span>
-      <span class="o">),</span>
-      <span class="n">ex</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Here, the exception may be thrown in three places:</p>
-
-<ul>
-  <li>By the <a href="/2015/05/07/ctors-must-be-code-free.html">constructor</a>
-of <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html"><code class="language-plaintext highlighter-rouge">java.net.URL</code></a></li>
-  <li>By the method <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URL.html#openStream%28%29"><code class="language-plaintext highlighter-rouge">openStream()</code></a></li>
-  <li>By the method <a href="https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#toByteArray-java.io.InputStream-"><code class="language-plaintext highlighter-rouge">toByteArray</code></a></li>
-</ul>
-
-<p>No matter who throws, we catch it in the same <code class="language-plaintext highlighter-rouge">catch</code> block and rethrow
-with the same message. I believe that this is bad because the <a href="/2015/12/01/rethrow-exceptions.html">context</a>
-of the error provided by rethrowing is less focused on the issue that occurred.</p>
-
-<p>I would suggest this refactoring
-(I don’t close the input stream, which is wrong,
-but that’s a topic for a separate discussion):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">uri</span><span class="o">)</span> <span class="o">{</span>
-  <span class="no">URL</span> <span class="n">url</span><span class="o">;</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="no">URL</span><span class="o">(</span><span class="n">uri</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">MalformedURLException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
-      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
-        <span class="s">"Failed to parse the URI '%s'"</span><span class="o">,</span>
-        <span class="n">uri</span>
-      <span class="o">),</span>
-      <span class="n">ex</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-  <span class="nc">InputStream</span> <span class="n">stream</span><span class="o">;</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="n">stream</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
-      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
-        <span class="s">"Failed to open the stream for '%s'"</span><span class="o">,</span>
-        <span class="n">uri</span>
-      <span class="o">),</span>
-      <span class="n">ex</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="k">return</span> <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(</span><span class="n">stream</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
-      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
-        <span class="s">"Failed to read the stream for '%s'"</span><span class="o">,</span>
-        <span class="n">uri</span>
-      <span class="o">),</span>
-      <span class="n">ex</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>This code is much longer, but at the same time more convenient to
-<a href="/2016/02/09/are-you-still-debugging.html">debug</a>,
-test, and use in production mode. The <code class="language-plaintext highlighter-rouge">catch</code> block
-is able to explain the situation better and provide better
-context in the rethrown exception, because it deals only with
-a single case.</p>
-
-<p>Thus, the rule I’m suggesting: if an exception is caught,
-each originator must have its own <code class="language-plaintext highlighter-rouge">catch</code> block.</p>
-
-<p>Obviously, I believe that
-<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping exception types</a>
-in a single <code class="language-plaintext highlighter-rouge">catch</code> block is bad practice.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Catching multiple exceptions thrown by different originators in a single "catch" block is a bad practice because it reduces the ability to provide context of the problem that occurred.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/08/elephant.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/08/elephant.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+error message would be inaccurate, because the block covers too much.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Large try-blocks in try/catch statements are a common practice, because we try to avoid polluting the code with catch blocks; it's a bad tendency.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/09/the-rum-diary.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/09/the-rum-diary.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

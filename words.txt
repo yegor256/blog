@@ -102,6 +102,7 @@ adblock
 ADC
 ADD
 addall
+addbibresource
 added
 addict
 adding
@@ -617,6 +618,7 @@ authors
 authors'
 authorship
 auto-complete
+auto-fixes
 auto-formatting
 auto-generated
 auto-increment
@@ -823,9 +825,12 @@ beyond
 bhuwan
 bi-sexuals
 biased
+bib
+bibcop
 biblatex
 bible
 bibrarian
+bibtex
 bicycle
 bidding
 big
@@ -1383,6 +1388,7 @@ circulating
 circumstances
 citation
 citations
+cite
 cities
 citing
 citizen
@@ -2051,6 +2057,7 @@ css-min
 CSV
 csvfilename
 csvline
+CTAN
 CTO
 CTO's
 CTOs
@@ -6918,6 +6925,7 @@ proactive
 proactively
 probabilities
 probability
+probable
 probably
 probe
 probes
@@ -7872,6 +7880,7 @@ schema
 scheme
 schemes
 schlossberg
+scholar
 school
 school's
 schoolmate
@@ -8294,6 +8303,7 @@ slippage
 SLoC
 slogans
 slope
+sloppy
 slot
 slow
 slower
@@ -8703,6 +8713,7 @@ styles
 stylesheet
 stylesheets
 styling
+stylistic
 sub
 sub-module
 sub-tasks
@@ -9272,6 +9283,7 @@ transformation
 transformational
 transformations
 transformed
+transformers
 transforms
 translate
 translated
@@ -9391,6 +9403,7 @@ typesetting
 typical
 typing
 typo
+typographic
 typos
 tyranny
 tzu
