@@ -18,12 +18,13 @@ keywords:
 Requirements engineering is one of the most important disciplines in software
 development. Perhaps, even more important than architecture, design or coding
 itself.
-
 Joy Beatty and Karl Wiegers in
 [Software Requirements](https://www.amazon.com/dp/0735679665)
 argue that the cost of mistakes made in a
 [requirements specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
 is significantly higher than a bug in source code. I totally agree.
+
+<!--more-->
 
 In XDSD projects we specify requirements using
 [Requs](http://www.requs.org),
@@ -39,8 +40,6 @@ UC1 where Employee gets raise: "TBD."
 
 This Software Requirements Specification (SRS) defines two types (`Department`
 and `Employee`) and one method `UC` (aka "use case").
-
-<!--more-->
 
 Requs syntax is explained [here](http://www.requs.org/syntax.html).
 
