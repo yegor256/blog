@@ -60,6 +60,16 @@ description: |
         <p>
           <img alt="AWS logo" src="/images/icons/aws.svg" style="height:150px;float:right;margin-left:1em"/>
         </p>
+      {% elsif page.tag == 'latex' %}
+        <h1>{{ page.posts.size }} Posts About LaTeX</h1>
+        <p>
+          <img alt="LaTeX logo" src="/images/icons/tex.svg" style="height:64px;float:right;margin-left:1em"/>
+        </p>
+      {% elsif page.tag == 'jekyll' %}
+        <h1>{{ page.posts.size }} Posts About Jekyll</h1>
+        <p>
+          <img alt="Jekyll logo" src="/images/icons/jekyll.svg" style="height:128px;float:right;margin-left:1em"/>
+        </p>
       {% elsif page.tag == 'pdd' %}
         <h1>{{ page.posts.size }} Posts About Puzzle Driven Development (PDD)</h1>
         <p>

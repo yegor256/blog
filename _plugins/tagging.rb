@@ -115,6 +115,10 @@ module Yegor
         "<img src='/images/icons/rultor-white.svg' alt='Rultor'/>"
       when 'zerocracy'
         "<img src='/images/icons/zerocracy-white.svg' alt='Zerocracy'/>"
+      when 'latex'
+        "<img src='/images/icons/tex-white.svg' alt='LaTeX'/>"
+      when 'jekyll'
+        "<img src='/images/icons/jekyll-white.svg' alt='Jekyll'/>"
       when 'xdsd'
         "<img src='/images/icons/xdsd-white.svg' alt='XDSD'/>"
       else
