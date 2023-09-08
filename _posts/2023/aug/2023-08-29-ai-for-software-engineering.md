@@ -55,6 +55,8 @@ I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already s
   earlier and will insist where necessary. In the end, the authors of the pull
   requests won't even know who is reviewing them: a human or a robot.
 
+{% youtube gHznfuhRR60 %}
+
 **Refactor**. From a huge collection of well-known micro-refactorings, they will
   select the few most important at any given moment and will submit pull
   requests with the changes. They won't alter the functionality of the code or
