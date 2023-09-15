@@ -80,6 +80,7 @@ April 2019;
 Acrylic on canvas;
 Moscow, Russia.
 
+<!--
 {% picture /images/paintings/2019/march-2019.jpg 350 %}
 
 _III.2019_<br/>
@@ -87,6 +88,7 @@ March 2019;
 50 x 50 cm;
 Acrylic on canvas;
 Moscow, Russia.
+-->
 
 {% picture /images/paintings/2019/february-2019.jpg 350 %}
 
@@ -96,6 +98,7 @@ February 2019;
 Acrylic on canvas;
 Moscow, Russia.
 
+<!--
 {% picture /images/paintings/2019/january-2019.jpg 350 %}
 
 _I.2019_<br/>
@@ -103,6 +106,7 @@ January 2019;
 50 x 50 cm;
 Acrylic on canvas;
 Moscow, Russia.
+-->
 
 {% picture /images/paintings/2018/december-2018.jpg 350 %}
 
@@ -112,6 +116,7 @@ December 2018;
 Acrylic on canvas;
 Moscow, Russia.
 
+<!--
 {% picture /images/paintings/2018/november-2018.jpg 350 %}
 
 _XI.2018_<br/>
@@ -119,7 +124,9 @@ November 2018;
 50 x 50 cm;
 Acrylic on canvas;
 Moscow, Russia.
+-->
 
+<!--
 {% picture /images/paintings/2018/october-2018.jpg 350 %}
 
 _X.2018_<br/>
@@ -127,6 +134,7 @@ October 2018;
 50 x 50 cm;
 Acrylic on canvas;
 Moscow, Russia.
+-->
 
 {% picture /images/paintings/2018/gray-freedom.jpg 350 %}
 

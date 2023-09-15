@@ -33,8 +33,10 @@ value quality above everything else.
 
 <!--more-->
 
+<!-- 
 <span class="green">ATTENTION</span>:
 Submission to 2021 [is open]({% pst 2020/nov/2020-11-15-award-2021 %}).
+-->
 
 <hr/>
 
