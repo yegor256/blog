@@ -149,6 +149,22 @@ programmers incur the highest performance cost for using the object paradigm.
 The results of this research might assist other researchers in better
 understanding the practical usability of object-oriented programming.
 
+<hr/>
+
+You may also pick one of our open source projects, and extend it with
+a new feature, presenting this work as engineering+science:
+
+  * [rultor](https://github.com/yegor256/rultor) (Java, Docker, AWS, XSL)
+  * [qulice](https://github.com/yegor256/qulice) (Java, AST, XML)
+  * [takes](https://github.com/yegor256/takes) (Java, HTTP)
+  * [cactoos](https://github.com/yegor256/cactoos) (Java)
+  * [zold](https://github.com/zold-io/zold) (Ruby)
+  * [micromap](https://github.com/yegor256/micromap) (Rust)
+
+In each of them, there are over a hundred unresolved issues and pull requests.
+I can help you figure our how to formulate your coding contribution
+such that it would look like a diploma work.
+
 <!--
 
 [Volatility metric to detect anomalies in source code repositories](https://dl.acm.org/doi/abs/10.1145/3486949.3486961),
