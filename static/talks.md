@@ -135,10 +135,10 @@ I was also seen at [these events](/seen.html).
 **Robots vs. Programmers**;
 [AIIN 2023](https://aiconf.innopolis.ru/eng);
 <span class="city">Innopolis</span>, <span class="country">Russia</span>;
-18 August 2023. Good local conference, with an intent to cover
+18 August 2023. 
+Good local conference, with an intent to cover
 many AI topics at a pretty high level of abstraction. It was interesting
 to meet Russian researchers, who challenge world-size problems;
-18 Aug 2023;
 [video](https://www.youtube.com/watch?v=gHznfuhRR60).
 {: .talk-event}
 
