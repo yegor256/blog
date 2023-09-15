@@ -63,10 +63,10 @@ object-oriented programming.
 
 **Algorithmization of Object-Oriented Programs Written in EO**:
 [EOLANG](https://www.eolang.org), our experimental strictly object-oriented programming language,
-is very effective for modelling objects and their relationships.
+is very effective for modeling objects and their relationships.
 However, it falls short when programming algorithms and mathematics, because the code
 tends to run much slower than its procedural counterparts written in C++ or Rust. We suggest
-creating a code optimisation tool, which will identify blocks of code inside
+creating a code optimization tool, which will identify blocks of code inside
 EO programs that can be translated to Rust to enhance performance.
 Thus, we aim to develop a tool that inserts native code blocks into the original EO program,
 bridging two programming paradigms—object-oriented in EO and procedural in Rust—by
