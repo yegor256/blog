@@ -126,7 +126,7 @@ Statistically speaking, I've been speaking in
 and
 <span id="total-countries">?</span> countries
 
-I was also seen at [these events](/seen.html)
+I was also seen at [these events](/seen.html).
 
 ### 2023
 
