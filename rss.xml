@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-09-15T14:16:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Bibcop: Style Checker for BibTeX</title><link href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html" rel="alternate" type="text/html" title="Bibcop: Style Checker for BibTeX" /><published>2023-09-05T00:00:00+00:00</published><updated>2023-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files</id><content type="html" xml:base="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html"><![CDATA[<p>Almost every document you may write in 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-09-20T20:18:34+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Five Ingredients of Tech Career</title><link href="https://www.yegor256.com/2023/09/19/five-ingredients-career.html" rel="alternate" type="text/html" title="Five Ingredients of Tech Career" /><published>2023-09-19T00:00:00+00:00</published><updated>2023-09-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/19/five-ingredients-career</id><content type="html" xml:base="https://www.yegor256.com/2023/09/19/five-ingredients-career.html"><![CDATA[<p>A friend of mine recently asked me what five things he should do in order to
+grow his technical career in a big company. He is not interested in being a big
+manager, or a CEO. Rather, he wants to be a software expert, an architect, an
+owner of a technology, and eventually a “Fellow.” I’m not sure I was qualified
+to give such advice, but I did anyway. This is what I told him. Maybe this will
+also work for you.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="8½ (1963) by Federico Fellini" src="/images/2023/09/eight-and-half.jpg" longdesc="#39678366" /><figcaption id="39678366">8½ (1963) by Federico Fellini</figcaption></figure>
+
+<h2 id="boredom">Boredom</h2>
+
+<p>Stay focused on one problem for many years. I literally mean
+a “problem”—something that bothers people now but will stop bothering them
+when you solve it. Ideally, first and foremost, it should bother you
+personally. If you can’t specify in one sentence what the meaning of your
+office life is—you don’t have a problem to solve. Find one.</p>
+
+<p>A strong multi-year focus on one particular problem will most likely lead to a
+rather boring office life. People around you will be switching projects,
+accepting offers from crypto-startups, changing technologies, programming
+languages, and teams. You, unlike them, will remain focused on one thing for
+years and years. Imagine how boring it will look to them and to yourself. So be
+it. Accept it.</p>
+
+<p>Moreover, if you don’t see significant results (and you won’t for years!),
+you’ll be tempted to switch to something else, where the outcomes seem more
+promising. Don’t.</p>
+
+<p>Even when you change companies, remain loyal to the problem you chose as “yours”
+years ago. Don’t betray it. It’s yours. Your lifetime mission is to solve it.
+Who cares which company you are in? A company is just a temporary sponsor of
+your mission.</p>
+
+<h2 id="enemies">Enemies</h2>
+
+<p>The problem must be as monumental as finding a cure for cancer. Ensure it’s
+bigger than your team, your company, and even your lifespan. The
+word “ambitious” certainly fits: it must be an ambitious idea. How do you know
+it’s big and ambitious enough? Count your enemies. If you have many of
+them—which could include your bosses, colleagues, spouse, and, of course,
+your haters on Twitter—you have a solid case. Conversely, if everyone loves
+your idea and supports you, your challenge might not be big enough.</p>
+
+<p>Think about it: If it is big enough, many people have already tried to solve it.
+They failed. Naturally, they would love to see you fail too. If you don’t, it
+could dent their self-respect. It’s basic psychology.</p>
+
+<h2 id="patrons">Patrons</h2>
+
+<p>The more enemies, the better! However, you should have a few allies. I’m
+referring to high-level technical people, like a CTO, VP of Technology, Chief
+Architect, or Fellow. They might not be technically competent in your
+particular domain, but that doesn’t matter. Strive to establish an information
+channel between you and them, and periodically share updates. Keep them
+informed about your progress and occasionally seek their advice. They will
+shield you from most of the attacks your enemies might launch.</p>
+
+<h2 id="friends">Friends</h2>
+
+<p>To clarify, it’s impossible to ascend in a human hierarchy on your own, no
+matter how bright you are. You need a cadre of supporters within the
+company—individuals who back you unconditionally. A few are sufficient. They
+must be personally loyal to you. If you leave the company, they should follow
+you without hesitation.</p>
+
+<p>It would be ideal for all of these friends to be part of your team. However,
+that’s not always feasible. Similarly, it would be wonderful if all these
+friends were technically competent, but that’s not always the case. In
+contrast, loyalty doesn’t often coincide with expertise. Having a friend who is
+both loyal and intelligent is a luxury.</p>
+
+<h2 id="students">Students</h2>
+
+<p>Finally, maintain a connection with the younger generation that’s succeeding
+us—students. Engage with them, learn from them, and ensure you understand
+their needs and aspirations. They represent the industry’s future. If you treat
+them right, they will work for you with enthusiasm unmatched by any other
+employee.</p>
+
+<p>Strengthening ties with the academic world will unquestionably reinforce your
+position within your company.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html"><![CDATA[What is the recipe of success in a big technical organization? Aside from the usual butt-kissing, what may guarantee career growth?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Bibcop: Style Checker for BibTeX</title><link href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html" rel="alternate" type="text/html" title="Bibcop: Style Checker for BibTeX" /><published>2023-09-05T00:00:00+00:00</published><updated>2023-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files</id><content type="html" xml:base="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html"><![CDATA[<p>Almost every document you may write in 
 <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> format will
 have a list of references at the end. Most likely, you will
 use <a href="https://www.ctan.org/pkg/bibtex">BibTeX</a> 
@@ -1499,89 +1581,4 @@ annotated with <code class="language-plaintext highlighter-rouge">@Test</code> (
 
 <p>Then, there is the second rule:
 a package with tests may only have classes with <code class="language-plaintext highlighter-rouge">Test</code> or <code class="language-plaintext highlighter-rouge">ITCase</code> suffices
-that map one-to-one to live classes and nothing else.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tests" /><summary type="html"><![CDATA[What is the right way to keep test classes in a repository? There is no single canonical approach, but a few principles may help you keep test files in order.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/11/mimino.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/11/mimino.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Smaller Try-Blocks Are Better</title><link href="https://www.yegor256.com/2022/09/08/smaller-try-blocks.html" rel="alternate" type="text/html" title="Smaller Try-Blocks Are Better" /><published>2022-09-08T00:00:00+00:00</published><updated>2022-09-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2022/09/08/smaller-try-blocks</id><content type="html" xml:base="https://www.yegor256.com/2022/09/08/smaller-try-blocks.html"><![CDATA[<p>It often happens, <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">especially</a>
-in Java, that a few places in the method
-are potential exception originators. Usually, we make a large method-size
-<code class="language-plaintext highlighter-rouge">try</code> block with a single <code class="language-plaintext highlighter-rouge">catch</code> at the bottom. We catch all
-the exceptions, usually even using
-<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping</a>.
-This helps us minimize the noise, which is the exception catching.
-However, such large <code class="language-plaintext highlighter-rouge">try</code> blocks jeopardize maintainability: we are unable
-to provide proper <a href="/2015/12/01/rethrow-exceptions.html">error context</a>
-inside <code class="language-plaintext highlighter-rouge">catch</code> blocks.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="The Rum Diary (2011) by Bruce Robinson" src="/images/2022/09/the-rum-diary.jpg" longdesc="#3bd6c008" /><figcaption id="3bd6c008">The Rum Diary (2011) by Bruce Robinson</figcaption></figure>
-
-<p>What do you think is wrong with this Java method
-(aside from using <code class="language-plaintext highlighter-rouge">System.out</code> instead of an injected dependency)?:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.util.regex.Pattern</span><span class="o">;</span>
-
-<span class="kt">void</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Path</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readAllLines</span><span class="o">(</span><span class="n">file</span><span class="o">))</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
-      <span class="o">}</span>
-    <span class="o">}</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>I believe that its try/catch block is too big. The <code class="language-plaintext highlighter-rouge">IOException</code> may only be
-thrown by the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-"><code class="language-plaintext highlighter-rouge">readAllLines</code></a>
-static method, but the block covers a few other method calls
-and statements. This code would be better:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Path</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="nc">String</span><span class="o">[]</span> <span class="n">lines</span><span class="o">;</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readAllLines</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now the try/catch block covers exactly the place where the exception
-may originate. Nothing else!</p>
-
-<p>Why are smaller try-blocks better? Because they allow more
-focused error reporting with more detailed context. For example, the
-second snippet can be re-written as follows:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Path</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
-  <span class="nc">String</span><span class="o">[]</span> <span class="n">lines</span><span class="o">;</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readAllLines</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span>
-      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
-        <span class="s">"Failed to read all lines from %s"</span><span class="o">,</span>
-        <span class="n">file</span>
-      <span class="o">),</span>
-      <span class="n">ex</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Can we do the same with the first snippet? We could, but the
-error message would be inaccurate, because the block covers too much.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Large try-blocks in try/catch statements are a common practice, because we try to avoid polluting the code with catch blocks; it's a bad tendency.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/09/the-rum-diary.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/09/the-rum-diary.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+that map one-to-one to live classes and nothing else.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="tests" /><summary type="html"><![CDATA[What is the right way to keep test classes in a repository? There is no single canonical approach, but a few principles may help you keep test files in order.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2022/11/mimino.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2022/11/mimino.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

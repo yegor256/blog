@@ -230,6 +230,7 @@ all-versions
 allconferencecfpalerts
 allen
 alliance
+allies
 allman
 allocated
 allocates
@@ -494,6 +495,7 @@ asaf
 ASAP
 asbytes
 asc
+ascend
 ascertain
 ashamed
 ashley
@@ -507,6 +509,7 @@ aspect
 aspectj
 aspects
 aspell
+aspirations
 ass
 assemble
 assembling
@@ -568,6 +571,7 @@ attachment
 attachments
 attack
 attacked
+attacks
 attempt
 attempted
 attempting
@@ -945,6 +949,7 @@ bootstrap
 border
 borders
 bored
+boredom
 boring
 born
 borrowed
@@ -1114,6 +1119,7 @@ cachedname
 caching
 CACM
 cactoos
+cadre
 cafe
 cage
 caitlin
@@ -1534,6 +1540,7 @@ cohesion
 cohesive
 coin
 coinbase
+coincide
 coined
 coinmama
 cola
@@ -1850,6 +1857,7 @@ contradiction
 contradictory
 contradicts
 contrary
+contrast
 contrib
 contribute
 contributed
@@ -2051,6 +2059,7 @@ cry
 crying
 cryptic
 crypto-electronic-whatever-product
+crypto-startups
 cryptocurrency
 CSS
 css-min
@@ -2311,6 +2320,7 @@ denial
 deniro's
 denisalik
 denominators
+dent
 dentists
 deny
 department
@@ -4001,6 +4011,7 @@ hassle-free
 hasXPath
 hate
 hated
+haters
 hates
 have
 haven't
@@ -4403,6 +4414,7 @@ individuals
 indivisible
 industries
 industry
+industry's
 ineffective
 inefficient
 inequalities
@@ -5108,6 +5120,7 @@ lieu
 life
 lifecycle
 lifelong
+lifespan
 lifestyle
 lifetime
 light
@@ -5732,6 +5745,7 @@ month's
 month-long
 monthly
 months
+monumental
 mood
 morale
 more
@@ -6455,6 +6469,7 @@ patreon
 patriot
 patronize
 patronized
+patrons
 pattern
 patterns
 paul
@@ -6526,6 +6541,7 @@ performs
 perhaps
 perimeter
 period
+periodically
 periods
 perl
 permanent
@@ -7401,6 +7417,7 @@ rehearse
 ReHTTP
 reich
 reinagel
+reinforce
 reinventing
 reiterate
 reiterates
@@ -8127,6 +8144,7 @@ shelf
 shell
 shellenbarger
 shelly
+shield
 shielding
 shift
 shift-m
@@ -8207,6 +8225,7 @@ silva
 silver
 similar
 similarities
+similarly
 simon
 simple
 simplecov
@@ -8657,6 +8676,7 @@ strecipient
 street
 streets
 strength
+strengthening
 stress
 stressed
 stressful
@@ -8674,6 +8694,7 @@ strings
 stringutils
 stripe
 stripped
+strive
 strolling
 strong
 stronger
@@ -8752,6 +8773,7 @@ subtyping
 subversion
 succeed
 succeeded
+succeeding
 succeeds
 success
 successes
@@ -9141,6 +9163,7 @@ thwart
 ticket
 ticketing
 tickets
+ties
 TIFF
 tight
 tightly
@@ -9525,6 +9548,7 @@ unlocks
 unmaintainable
 unmanageable
 unmarshalling
+unmatched
 unmitigated
 unmodifiablelist
 unmotivated
@@ -9540,6 +9564,7 @@ unpredictability
 unpredictable
 unproductive
 unprofessional
+unquestionably
 unreadable
 unrealistic
 unrecognized
