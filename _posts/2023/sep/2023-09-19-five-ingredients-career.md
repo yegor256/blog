@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Five Ingredients of Career Success"
+title: "Five Ingredients of Tech Career"
 date: 2023-09-19
 place: Nizhny Novrogod, Russia
 tags: career
