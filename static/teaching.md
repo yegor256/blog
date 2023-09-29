@@ -40,12 +40,14 @@ Sep 2023<br/>
 **Project Management Beyond Agile**<br/>
 in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
 10 lectures: in progress...
+[videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08x_T-Aelduv3Zf0DWRx40pq)
 {: .lecture}
 
 Sep 2023<br/>
-**Quality of Code**<br/>
+**Software Quality Metrics**<br/>
 in [HSE University](https://www.hse.ru/en/) (Moscow, Russia)<br/>
 24 lectures: in progress...
+[videos][https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl]
 {: .lecture}
 
 <img src="http://img.youtube.com/vi/8FPU_N3LxqA/maxresdefault.jpg" class="lecture"/>
