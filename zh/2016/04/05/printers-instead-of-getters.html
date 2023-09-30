@@ -1,0 +1,83 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite"> <head> <meta charset="utf-8"/> <meta name="description" content="Since getters are an anti-pattern, how are we supposed to convert an object to, say, JSON or plain text? I'm suggesting to use printers." /> <meta name="keywords" content="" /> <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/> <meta name="google-site-verification" content="JEj_gQr2CPe2QKGw8XdMz0R7VboQIUbX3FlM-lwTq-8" /> <meta name="author" content="Yegor Bugayenko"> <meta name="og:site_name" content="Yegor Bugayenko"/> <meta name="og:type" content="article" /> <meta name="og:locale" content="en_US" /> <meta name="twitter:account_id" content="4503599630178231" /> <meta name="twitter:creator" content="@yegor256"/> <meta name="twitter:site" content="@yegor256"/> <meta name="twitter:title" property="og:title" content="Printers Instead of Getters"/> <meta name="twitter:description" property="og:description" content="Since getters are an anti-pattern, how are we supposed to convert an object to, say, JSON or plain text? I'm suggesting to use printers."/> <meta name="twitter:url" property="og:url" content="https://www.yegor256.com/zh/2016/04/05/printers-instead-of-getters.html"/> <meta name="telegram:channel" content="AAAAAEJFMRzsRTRxM3ec6A"/> <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="yegor256" /> <link rel="shortcut icon" href="/favicon.ico?18ddfcd095e"/> <link rel="apple-touch-icon" href="/favicon.ico?18ddfcd095e"/> <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="https://www.yegor256.com/rss.xml"/> <link rel="stylesheet" href="/css/layout.css?18ddfcd095e"/> <link rel="stylesheet" href="/css/icons.css?18ddfcd095e"/> <link rel="canonical" href="https://www.yegor256.com/zh/2016/04/05/printers-instead-of-getters.html" /> <title>Printers Instead of Getters</title> </head> <body><div class="wrapper"> <aside class="header-toggle unprintable" id="header-toggle" title="Show the menu" onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside> <header class="header" id="header"><div class="face"> <a href="/about-me.html#form" class="sub" title="Click to subscribe to my monthly newsletter"><span>Subscribe</span></a> <a href="/about-me.html" style="position:relative;"> <img src="/images/face-256x256.jpg" class="photo" alt="Yegor Bugayenko"/> </a></div><nav><ul class="menu social notranslate"> <li><a href="https://twitter.com/intent/follow?screen_name=yegor256" rel="nofollow" title="Follow me on Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li> <li><a href="/rss.xml" rel="nofollow" title="Subscribe to my RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://github.com/yegor256" rel="nofollow" title="My GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="http://stackoverflow.com/users/187141/yegor256" rel="nofollow" title="My Stack Overflow profile"><i class="icon icon-stackoverflow notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.facebook.com/yegor256" rel="nofollow" title="Follow me on Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://instagram.com/yegor256" rel="nofollow" title="Follow me on Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.linkedin.com/in/yegor256" rel="nofollow" title="My LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.youtube.com/c/yegor256?sub_confirmation=1" rel="nofollow" title="My Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://www.pinterest.com/yegor256/" rel="nofollow" title="My Pinterest boards"><i class="icon icon-pinterest notranslate" aria-hidden="true"></i></a></li> <li><a itemprop="sameAs" href="https://angel.co/yegor256" rel="nofollow" title="My AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li> <li><a href="https://soundcloud.com/yegor256" rel="nofollow" title="My podcast"><i class="icon icon-podcast notranslate" aria-hidden="true"></i></a></li> <li><a href="https://itunes.apple.com/us/podcast/yegor256-podcast/id1150826721" rel="nofollow" title="My iTunes podcast"><i class="icon icon-itunes notranslate" aria-hidden="true"></i></a></li> <li><a href="https://t.me/yegor256news" rel="nofollow" title="My Telegram public channel"><i class="icon icon-telegram notranslate" aria-hidden="true"></i></a></li> <li><a href="mailto:blog@yegor256.com" rel="nofollow" title="Email me any time"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li></ul><ul class="menu"> <li><a href="/" title="Home page">Home</a></li> <li ><a href="/best.html" title="Best articles to read">12&#160;Best</a></li> <li ><a href="/contents.html" title="The contents of the entire blog">All&#160;389</a></li> <li ><a href="/teaching.html" title="My courses and lectures">Teaching</a></li> <li ><a href="/talks.html" title="Future and past conference talks">Talks</a></li> <li ><a href="/books.html" title="The books I wrote">Books</a></li> <li ><a href="/research.html" title="My research directions and progress">Research</a></li> <li ><a href="/pets.html" title="My loved pet projects">Pets</a></li> <li ><a href="/testimonials.html" title="What some people say about me">Testimonials</a></li> <li ><a href="/shift-m.html" title="Audio podcast about project management">Shift-M</a></li> <li ><a href="/paintings.html" title="My paintings for sale">Art</a></li> <li><a href="https://ru.yegor256.com/" title="Немного на русском языке о политике в России, Украине и мире">Политика</a></li></ul></nav><div class="search"> <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction"> <meta itemprop="target" content="https://www.google.com/search?q={q}"/> <input name="sitesearch" value="yegor256.com" type="hidden"/> <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required" onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Search..." autocomplete="off"/> <input type="image" src="/images/google-search-icon.svg" class="google" title="Search via Google" alt="Search via Google"/> </form></div><div class="hot"><ul></ul></div></header></div><section itemscope="" itemtype="http://schema.org/BlogPosting"><div class="wrapper"> <header><h1 itemprop="name headline mainEntityOfPage">Printers Instead of Getters</h1></header> <article class="main" itemprop="articleBody" style="font-family: sans-serif; font-size: 0.9em; line-height: 1.2em;"><p style="color: #C42C00;">The following text is a <em>partial</em> translation of the <a href='https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html'>original English article</a>, performed by <a href="https://chat.openai.com/">ChatGPT</a> (gpt-3.5-turbo) and <a href="https://github.com/yegor256/jekyll-chatgpt-translate">this Jekyll plugin</a>:</p><p>获取器和设置器是邪恶的。无需对此争论，这是确定的。你不同意吗？我们以后再讨论。现在，假设我们想要摆脱获取器。关键问题是怎么可能？我们确实需要从对象中获取数据，对吗？不对。错了。</p><p>我建议使用“打印机”代替。对象不再通过获取器来公开数据，而是具备将自身“打印”到某种媒体的功能。</p><p>假设这是我们的类：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Book {
+  private final String isbn =
+    "0735619654";
+  private final String title =
+    "Object Thinking";
+}
+</code></pre></div></div><p>我们需要将其转换为XML格式。一个更或多或少传统的方法是通过getters和JAXB进行转换。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement
+public class Book {
+  private final String isbn =
+    "0735619654";
+  private final String title =
+    "Object Thinking";
+  @XmlElement
+  public String getIsbn() {
+    return this.isbn;
+  }
+  @XmlElement
+  public String getTitle() {
+    return this.title;
+  }
+}
+</code></pre></div></div><p>这是一种非常冒犯物体的方式。我们基本上将内部的一切都暴露给公众。它原本是一个不错的自给自足的实体物体，而我们却将其变成了一袋数据，任何人都可以通过多种方式访问。当然，我们可以访问它以进行阅读。</p><p>你可能会说，拥有这些getter方法很方便。我们都习惯了它们。如果我们想将其转换为JSON，它们会非常有帮助。如果我们想在JSP中将这个可怜的对象用作数据对象，getter方法将帮助我们。在Java中有很多例子，getter方法被广泛使用。</p><p>这不是因为它们非常有效。这是因为我们在思考方式上非常”过程化”。我们<em>不相信</em>我们的对象。我们只相信它们存储的数据。我们不希望这个<code class="language-plaintext highlighter-rouge">Book</code>对象生成XML。我们希望它给我们数据。生成XML的任务由我们来完成。<code class="language-plaintext highlighter-rouge">Book</code>对象太愚蠢了，不能胜任这项工作。我们聪明多了！</p><p>我建议停止这种思考方式。相反，让我们试着给这个可怜的<code class="language-plaintext highlighter-rouge">Book</code>一个机会，并为它配备一个”打印机”：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Book {
+  private final String isbn =
+    "0735619654";
+  private final String title =
+    "Object Thinking";
+  public String toXML() {
+    return String.format(
+      "&lt;book&gt;&lt;isbn&gt;%s&lt;/isbn&gt;&lt;title&gt;%s&lt;/title&gt;&lt;/book&gt;",
+      this.isbn, this.title
+    );
+  }
+}
+</code></pre></div></div><p>这不是最好的实现方式，但你已经有了想法。对象不再暴露其内部细节。我们无法获取它的ISBN和标题。我们只能要求它以XML格式打印自己。</p><p>如果需要另一种格式，我们可以添加一个额外的打印机。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Book {
+  private final String isbn =
+    "0735619654";
+  private final String title =
+    "Object Thinking";
+  public String toJSON() {
+    return String.format(
+      "{\"isbn\":\"%s\", \"title\":\"%s\"}",
+      this.isbn, this.title
+    );
+  }
+}
+</code></pre></div></div><p>再次強調，這不是最佳的實現方式，但您可以看到我試圖展示的內容。每次我們需要一種新的格式時，我們都會創建一個新的打印機。</p><p>也許您會說，如果有很多格式，對象會變得相當大。這是真的，但一個大的對象本來就是一個糟糕的設計。我會說，如果有不止一個打印機，這是一個問題。</p><p>那麼，如果我們需要多種格式該怎麼辦？使用”媒體”，其中打印機將能夠打印到媒體上。例如，假設我們有一個代表MySQL中一條記錄的對象。我們希望它能夠打印成XML、HTML、JSON、某種二進制格式等等。我們可以將許多打印機添加到該對象上，但對象會變得臃腫且難看。為了避免這種情況，引入一個新的對象，代表數據將要打印到的媒體：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Book {
+  private final String isbn =
+    "0735619654";
+  private final String title =
+    "Object Thinking";
+  public Media print(Media media) {
+    return media
+      .with("isbn", this.isbn)
+      .with("title", this.title);
+  }
+}
+</code></pre></div></div><p>再次强调，这是一个非常原始的不可变<code class="language-plaintext highlighter-rouge">Media</code>类的设计，但是你已经理解了——<code class="language-plaintext highlighter-rouge">media</code>接受数据。现在，我们想要将我们的对象打印为JSON（这个设计并不完美，因为<code class="language-plaintext highlighter-rouge">JsonObjectBuilder</code>并不是不可变的，尽管看起来是一个…）：</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class JsonMedia implements Media {
+  private final JsonObjectBuilder builder;
+  JsonMedia() {
+    this("book");
+  }
+  JsonMedia(String head) {
+    this(Json.createObjectBuilder().add(head));
+  }
+  JsonMedia(JsonObjectBuilder bdr) {
+    this.builder = bdr;
+  }
+  @Override
+  public Media with(String name, String value) {
+    return new JsonMedia(
+      this.builder.add(name, value)
+    );
+  }
+  public JsonObject json() {
+    return this.builder.build();
+  }
+}
+</code></pre></div></div><p>现在，我们创建一个<code class="language-plaintext highlighter-rouge">JsonMedia</code>的实例，并要求我们的书在那里打印自己。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JsonMedia media = new JsonMedia("book");
+media = book.print(media);
+JsonObject json = media.json();
+</code></pre></div></div><p>看！JSON 对象已经准备好了，而书本对于刚刚打印出来的内容一无所知。我们需要将书本打印成 XML 吗？我们创建了 <code class="language-plaintext highlighter-rouge">XmlMedia</code>，它将把书本打印成 XML。<code class="language-plaintext highlighter-rouge">Book</code> 类保持简洁，而“媒体”对象的复杂性则没有限制。</p><p>我在这里的观点很简单——没有 getter，只有打印机！</p><p class="jekyll-chatgpt-translate">Translated by ChatGPT gpt-3.5-turbo/36 on 2023-09-30 at 05:18</p></article></div><div class="wrapper"> <footer class="footer"><p> &copy; <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person"> <span itemprop="name">Yegor Bugayenko</span> </span> 2014&ndash;<span itemprop="copyrightYear">2023</span></p></footer></div></section><div class="wrapper unprintable" style="text-align:center;margin-top:2em;"> <a href="https://www.sixnines.io/h/3ba1652f"> <img src="//www.sixnines.io/b/3ba1652f?style=flat" alt="sixnines availability badge" /></a> &nbsp; <a href="https://github.com/yegor256/blog/stargazers"> <img src="//img.shields.io/github/stars/yegor256/blog.svg?style=flat-square" alt="GitHub stars" /></a></div><script src="//code.jquery.com/jquery-1.9.0.min.js"></script> <script src="/js/all.js?18ddfcd095e"></script> <script>var disqus_shortname = 'yegor256';</script> <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-1963507-32', 'auto'); ga('send', 'pageview'); </script> <script> Cd=document;Cr="&"+Math.random();Cp="&s=1"; Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1"; Cp+="&t="+(new Date()).getTimezoneOffset(); if(self!=top)Cp+="&f=1"; </script> <script> if(navigator.javaEnabled())Cp+="&j=1"; </script> <script> if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+ screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth); </script> <script> Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+ "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+ "' border='0' wi"+"dth='1' he"+"ight='1'/>"); </script> <script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Person", "name": "Yegor Bugayenko", "url": "https://www.yegor256.com", "sameAs": [ "https://www.facebook.com/yegor256", "https://instagram.com/yegor256", "https://www.linkedin.com/in/yegor256", "https://twitter.com/yegor256", "https://github.com/yegor256", "https://www.pinterest.com/yegor256/" ] } </script> </body> </html>

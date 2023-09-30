@@ -659,6 +659,7 @@ award
 award-
 awards
 aware
+awareness
 away
 AWeber
 awesome
@@ -1228,6 +1229,7 @@ catches
 catching
 categories
 categorize
+categorized
 category
 cathedral
 cats
@@ -1395,6 +1397,7 @@ circumstances
 citation
 citations
 cite
+cited
 cities
 citing
 citizen
@@ -1815,6 +1818,7 @@ constructive
 constructor
 constructors
 constructs
+consult
 consultant
 consulting
 consume
@@ -2150,6 +2154,7 @@ database
 database-connected
 databases
 datafile
+dataflow
 dataization
 dataize
 dataized
@@ -2592,6 +2597,7 @@ diversity
 divert
 divide
 dividends
+diving
 divorce
 divorces
 djk
@@ -2844,6 +2850,7 @@ eliminating
 elimination
 elite
 elliotte
+elmqvist
 elon
 else
 else's
@@ -3321,6 +3328,7 @@ feelings
 feels
 fees
 feet
+feline
 fell
 fellahi-ali
 fellow
@@ -3478,6 +3486,7 @@ flying
 flyweight
 focus
 focused
+focuses
 focusing
 foes
 fogel
@@ -3693,6 +3702,7 @@ gates
 gateway
 gather
 gathered
+gathering
 gauge
 gave
 gays
@@ -3997,6 +4007,7 @@ harming
 harms
 harness
 harold
+haroz
 harsh
 harvard
 has
@@ -4098,6 +4109,7 @@ highest
 highlight
 highlighted
 highlighting
+highlights
 highly
 highways
 him
@@ -4715,6 +4727,7 @@ jack
 jacob
 jaguar
 jail
+jaime
 jain
 jake
 james
@@ -4726,6 +4739,7 @@ japanese
 jar
 jare
 jargon
+jarosz
 JARs
 java
 javabeans
@@ -4986,6 +5000,7 @@ ladies
 lady
 lag
 lagging
+laid
 laissez
 laissez-faire
 lake
@@ -5013,6 +5028,7 @@ larkin
 larry
 las
 last
+lastly
 latch
 late
 late-night
@@ -5081,6 +5097,7 @@ legalized
 legally
 legible
 legit
+lemire
 lemmas
 len
 lending
@@ -5170,6 +5187,7 @@ litecoin
 literal
 literally
 literals
+literature
 little
 live
 lived
@@ -5221,6 +5239,8 @@ long-living
 long-term
 longer
 longest
+longevity
+longo
 look
 looked
 looking
@@ -5262,6 +5282,7 @@ lowers
 lowest
 loyal
 loyalty
+luca
 lucene
 luck
 luckily
@@ -5281,6 +5302,7 @@ macbook
 macbooks
 machine
 machines
+mack
 MacOS
 macports
 macquarie
@@ -5960,6 +5982,7 @@ night
 nightmare
 nightmares
 nights
+niklas
 nil
 nine
 nine-to-five
@@ -6049,6 +6072,7 @@ noun
 nouns
 nov
 novel
+novelty
 november
 novices
 now
@@ -6230,6 +6254,7 @@ opposing
 opposite
 opposition
 oppp
+opt
 optimal
 optimization
 optimizations
@@ -7210,6 +7235,7 @@ range
 rank
 ranked
 ranking
+rankings
 ranks
 rant
 rapidly
@@ -7449,6 +7475,7 @@ released
 releases
 releasing
 relentless
+relevance
 relevant
 reliability
 reliable
@@ -7505,6 +7532,7 @@ replacements
 replaces
 replacing
 replica
+replication
 replied
 replies
 reply
@@ -7907,6 +7935,7 @@ scientific
 scientifically
 scientist
 scientists
+scihubbot
 SCM
 scooters
 scope
@@ -8812,6 +8841,7 @@ sullivan
 sum
 summaries
 summarize
+summarized
 summarizes
 summary
 summer
@@ -8959,6 +8989,7 @@ taught
 tax
 taxes
 taxi
+taxonomy
 TBD
 TBD-s
 TC
@@ -8996,6 +9027,7 @@ technology
 tee
 teeinput
 teeinputstream
+teevan
 telecommuting
 telegram
 television
@@ -9142,6 +9174,7 @@ threatens
 threats
 three
 three-bedroom
+three-fold
 three-month
 threecopies
 threshold
@@ -9192,6 +9225,7 @@ tip
 tips
 tired
 title
+titled
 titles
 tkaccount
 tkapp
@@ -9261,6 +9295,7 @@ tower
 town
 toxic
 toXML
+toy
 trac
 trace
 traceability
@@ -9462,6 +9497,7 @@ unanswered
 unappetizing
 unappreciated
 unaware
+unawareness
 unbeatable
 unbiased
 unbreakable
@@ -9905,6 +9941,7 @@ welcomed
 welcomes
 well
 well-connected
+well-crafted
 well-defined
 well-developed
 well-educated
@@ -9993,6 +10030,7 @@ with
 within
 without
 wizardry
+wojciech
 woke
 wolves
 woman
