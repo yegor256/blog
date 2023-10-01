@@ -158,6 +158,7 @@ a new feature, presenting this work as engineering+science:
   * [qulice](https://github.com/yegor256/qulice) (Java, AST, XML)
   * [takes](https://github.com/yegor256/takes) (Java, HTTP)
   * [cactoos](https://github.com/yegor256/cactoos) (Java)
+  * [jpeek](https://github.com/yegor256/jpeek) (Java, XSL)
   * [zold](https://github.com/zold-io/zold) (Ruby)
   * [micromap](https://github.com/yegor256/micromap) (Rust)
 
