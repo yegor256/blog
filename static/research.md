@@ -13,6 +13,11 @@ keywords:
   - academic papers
   - yegor bugayenko
   - yegor256 papers
+style: |
+  p.topic strong {
+    color: #CF021B;
+    display: block;
+  }
 ---
 
 {% badge /images/andreea/academic-writing.svg 200 %}
@@ -31,7 +36,7 @@ I will help you to do the research and may also play a role of your scientific a
 
 <hr/>
 
-**Jumps Elimination in OOP**:
+**Jumps Elimination in OOP**
 Recently, we developed [DeJump](https://github.com/objectionary/dejump),
 an automated tool that modifies programs written in [EOLANG](https://www.eolang.org),
 our own object-oriented language, such that "jumping objects" (GOTO, BREAK, and CONTINUE)
@@ -42,8 +47,9 @@ source code, and it needs a few important improvements in its algorithm.
 Thus, we suggest creating the second version of the tool, with the required improvements
 and testing it with larger blocks of code, in order to demonstrate its effectiveness.
 A new research paper is expected to be written and published.
+{: .topic}
 
-**SLR of Object Models**:
+**SLR of Object Models**
 There is a famous [λ-calculus](https://en.wikipedia.org/wiki/Lambda_calculus) that underlies functional programming languages,
 like Haskell or Scala. At the same time, for object-oriented programming languages,
 more than one calculus has been introduced over the last thirty years, such as
@@ -60,8 +66,9 @@ Now, we suggest continuing this work, researching existing models,
 and publishing a full academic paper. This paper, if published in a reputable journal or conference,
 could become a significant contribution to the theoretical sector of
 object-oriented programming.
+{: .topic}
 
-**Algorithmization of Object-Oriented Programs Written in EO**:
+**Algorithmization of Object-Oriented Programs Written in EO**
 [EOLANG](https://www.eolang.org), our experimental strictly object-oriented programming language,
 is very effective for modeling objects and their relationships.
 However, it falls short when programming algorithms and mathematics, because the code
@@ -74,8 +81,9 @@ connecting them both ways through the [JNI](https://en.wikipedia.org/wiki/Java_N
 interface. The main challenge lies in pinpointing the most suitable code blocks;
 their introduction should increase the overall program performance while considering
 the additional overhead introduced by JNI roundtrips.
+{: .topic}
 
-**ChatGPT in Backlog Prioritization**:
+**ChatGPT in Backlog Prioritization**
 There is an existing open-source tool, created more than five years ago,
 that assists GitHub programmers in decomposing their tasks into smaller ones and
 automatically creating sub-tasks: [0pdd](https://www.0pdd.com). 
@@ -88,8 +96,9 @@ in the [IEEE Access journal](https://ieeexplore.ieee.org/abstract/document/10220
 Now, implementing these findings in practice and incorporating
 ChatGPT could represent a significant contribution to computer science
 and provide invaluable assistance to hundreds of GitHub programmers.
+{: .topic}
 
-**ChatGPT for GitHub Anomalies Detection**:
+**ChatGPT for GitHub Anomalies Detection**
 The quality of source code and the discipline of repository maintenance
 play a crucial role in the success of a software product. However, there is
 no automated tool on the market that appraises the quality of an entire
@@ -100,8 +109,9 @@ findings in this direction. However, we didn’t employ ChatGPT,
 as it didn't exist at that time. Now, we believe it would be beneficial
 to combine our project analysis algorithm with the capabilities of LLM,
 to generate the most effective and useful advice for software teams.
+{: .topic}
 
-**Analysis of Heap Performance in Different OSs**:
+**Analysis of Heap Performance in Different OSs**
 The heap is the primary storage for variable-sized memory blocks in modern
 operating systems and virtual machines. Allocating a slice of bytes in
 the heap and then releasing it back is a time-consuming operation,
@@ -111,8 +121,9 @@ remains unclear. We suggest studying this subject, performing experiments
 on a sufficiently large number of testing platforms, summarizing and analyzing
 the results, and then publishing a research paper. Such an analysis might assist
 creators of programming languages and compilers in making better design decisions.
+{: .topic}
 
-**Encapsulation Strategy in Design Patterns**: 
+**Encapsulation Strategy in Design Patterns**
 In object-oriented programming,
 many design patterns are recommended for use. It's commonly believed that if
 programmers adhere to these patterns in their code, the code quality will
@@ -124,8 +135,9 @@ Review (SLR) of existing literature on design patterns, aiming to either
 confirm or refute our hypothesis. The results of our research might be useful
 for compiler and programming language designers, prompting them to treat
 objects differently if they are dataless.
+{: .topic}
 
-**Study Programmers' Preferences for Object Extensions**:
+**Study Programmers' Preferences for Object Extensions**
 In object-oriented programming, additional functionality can be added to classes
 using inheritance, decoration, composition, or by simply expanding existing
 classes with new code or methods. It is commonly believed that most
@@ -136,8 +148,9 @@ among a sizeable group of programmers. We'll present them with various code
 snippets and ask them to choose a method for modifications. The findings from
 our research might offer insights to designers of new programming languages
 about programmers' perceptions of OOP.
+{: .topic}
 
-**Cost of OOP in Different Languages**:
+**Cost of OOP in Different Languages**
 [Earlier studies](https://downloads.hindawi.com/journals/sp/1999/464598.pdf) 
 by various researchers and practitioners have indicated that
 object-oriented programming features, such as encapsulation and polymorphism,
@@ -148,6 +161,7 @@ comparison to determine in which object-oriented programming language
 programmers incur the highest performance cost for using the object paradigm.
 The results of this research might assist other researchers in better
 understanding the practical usability of object-oriented programming.
+{: .topic}
 
 <hr/>
 
