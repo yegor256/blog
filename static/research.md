@@ -15,7 +15,6 @@ keywords:
   - yegor256 papers
 style: |
   p.topic strong {
-    color: #CF021B;
     display: block;
   }
 ---

@@ -18,9 +18,6 @@ style: |
   p.talk-event {
     clear: both;
   }
-  p.talk-event strong {
-    color: #CF021B;
-  }
   .future-talk {
     display: block;
     height: 50px;
