@@ -40,7 +40,7 @@ As far as I understand it, a well-crafted "Related Work" section should convey t
 Before diving in, let's clarify that the "Related Work" section 
 [is not](https://academia.stackexchange.com/questions/157842) the place 
 to explain foundational concepts like 
-[Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) or how 
+[Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) or 
 [Dataflow Architecture](https://en.wikipedia.org/wiki/Dataflow_architecture). 
 That's what the "[Background](https://scientific-publishing.webshop.elsevier.com/manuscript-preparation/what-background-study-and-how-should-it-be-written/)" section is for. 
 In "Related Work," it's assumed that the reader is already familiar with the subject matter.
