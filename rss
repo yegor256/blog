@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-10-01T07:52:12+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Related Work: A Critical Taxonomy of Prior Art</title><link href="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html" rel="alternate" type="text/html" title="Related Work: A Critical Taxonomy of Prior Art" /><published>2023-09-29T00:00:00+00:00</published><updated>2023-09-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/29/how-to-write-related-work-section</id><content type="html" xml:base="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html"><![CDATA[<p>In almost any research paper, it is mandatory to have a section titled “Related Work”
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-10-12T15:47:27+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Method Section: A Recipe for Research</title><link href="https://www.yegor256.com/2023/10/11/method-of-research.html" rel="alternate" type="text/html" title="The Method Section: A Recipe for Research" /><published>2023-10-11T00:00:00+00:00</published><updated>2023-10-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/10/11/method-of-research</id><content type="html" xml:base="https://www.yegor256.com/2023/10/11/method-of-research.html"><![CDATA[<p>Every empirical research paper must have a section titled “Method” (or “Methodology,” or “Study Design”). In this section, you describe what was done to obtain the data presented in the following “Results” section. You explain the <em>recipe</em>, which may be replicated later by another researcher, leading to the same (or very similar) results.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Underground (1995) by Emir Kusturica" src="/images/2023/10/underground.jpg" longdesc="#952f1bf5" /><figcaption id="952f1bf5">Underground (1995) by Emir Kusturica</figcaption></figure>
+
+<p>The Method section is the essence of the research. Think of it as a recipe: you
+tell the reader what ingredients you used, how you mixed them, and—most
+importantly—why.</p>
+
+<p>You start the section with a paragraph where you state the main <em>objective</em> of the
+research, then break it down into a few 
+<a href="https://en.wikipedia.org/wiki/Research_question"><em>research questions</em></a>.</p>
+
+<p>Then, you explain, paragraph by paragraph, the <em>procedures</em> of the method. In each
+step, you either collect, combine, or generate data. First, you explain what
+you do. Second, you highlight how your procedures contribute to one of the
+research questions. Third, you justify your actions by providing strong enough
+reasons for why you performed these specific manipulations with the data.</p>
+
+<p>Here is a toy sample of the Method section:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The goal of this study is to understand whether 
+cats love fruits. This leads to the following 
+research questions: 
+  RQ1: How is the color of a cat's fur related 
+  to the cat's passion for fruits? 
+  RQ2: Which fruits are preferred by cats: 
+  bananas, apples, or marakujas?
+
+First, we found 15 cats: 2 white, 3 black, 
+and 10 of mixed color. It is important for RQ1 
+that they are of different colors. We believe 
+that 15 is enough because this is a toy research.
+
+Second, we excluded 5 cats: those who were 
+younger than one year old or older than 8 years 
+old. This was motivated by RQ2; we believe that 
+young and old cats may have difficulty cracking 
+the hard cover of a marakuja.
+
+Third, we gave our cats all three fruits mentioned 
+in RQ2, left them for an hour, and observed their 
+behavior. We believe one hour is enough for a hungry
+cat to make a decision.
+
+All cat owners agreed to have their cats 
+participate in the study. 
+</code></pre></div></div>
+
+<p>At the end of the section, we mentioned that all participants in the experiment
+provided informed consent—this is important if humans (or cats) are involved,
+so don’t forget about it.</p>
+
+<p>In the “Results” section, which follows the Method, you present the data that
+were collected, combined, or generated (without giving any opinion or
+subjective interpretation of it!). Some of this data may have already been
+mentioned in the Method section, but not the most important details. For
+example, we’ve already said that we found 15 cats, but we didn’t provide their
+names, ages, or breeds—this information goes into the Results, in the form of
+a nicely formatted table. How much “results” to show in the Method and how much
+in the Results is, I believe, a matter of taste.</p>
+
+<p>In the “Discussion” section, which follows the Results, you engage in a dialogue
+with yourself, questioning the procedures of the Method. This is where
+you are allowed to have an opinion about the data collected, combined, and
+generated. For example, we may discuss whether the results of our research
+are trustworthy enough, taking into account that we only analyzed the behavior
+of just 15 cats, while in the Method, we were absolutely sure that we were doing
+the right thing. In the Discussion, you play the opposite role by doubting
+every single step of the Method, highlighting its weaknesses and limitations.</p>
+
+<hr />
+
+<p>You may find inspiration in these papers 
+(use <a href="https://scholar.google.com/">Google Scholar</a> to download their PDFs):</p>
+
+<ul>
+  <li>Melina Vidoni, <em>Evaluating Unit Testing Practices in R Packages</em>, ICSE 2021</li>
+  <li>Reem S. Alsuhaibani, et al., <em>On the Naming of Methods: A Survey of Professional Developers</em>, ICSE 2021</li>
+  <li>Anastasia Ruvimova, et al., <em>An Exploratory Study of Productivity in Software Teams</em>, ICSE 2022</li>
+</ul>
+
+<hr />
+
+<p>These opinions might also be helpful:</p>
+
+<ul>
+  <li><a href="https://research.com/research/how-to-write-research-methodology">How to Write Research Methodology</a>
+by <a href="https://scholar.google.com/citations?user=kudrpNsAAAAJ">Imed Bouchrika</a></li>
+  <li><a href="https://www.youtube.com/watch?v=SxKd66g7M1s">Writing the ‘Research Methods’…</a> (video)
+by <a href="https://soc.appstate.edu/faculty-staff/david-russell-phd">David Russell</a></li>
+  <li><a href="https://www.youtube.com/watch?v=jWPul_eifeU">How To Write Methodology…</a> (video)
+by <a href="https://scholar.google.com/citations?user=MR45-AwAAAAJ">Marek Kiczkowiak</a></li>
+</ul>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[The essence of a research paper is the Method section, which may be easier to write if you follow a few simple principles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/10/underground.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/10/underground.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Related Work: A Critical Taxonomy of Prior Art</title><link href="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html" rel="alternate" type="text/html" title="Related Work: A Critical Taxonomy of Prior Art" /><published>2023-09-29T00:00:00+00:00</published><updated>2023-09-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/29/how-to-write-related-work-section</id><content type="html" xml:base="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html"><![CDATA[<p>In almost any research paper, it is mandatory to have a section titled “Related Work”
 (<a href="https://english.stackexchange.com/questions/55898/related-work-or-related-works">or “Related Works”</a>), 
 where you refer to the results previously obtained by other
 authors or yourself. By including this section in your paper, you are not only paying
@@ -22,7 +116,7 @@ the importance of the problem you are solving. You must put these guys into
 <p>Before diving in, let’s clarify that the “Related Work” section 
 <a href="https://academia.stackexchange.com/questions/157842">is not</a> the place 
 to explain foundational concepts like 
-<a href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> or how 
+<a href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> or 
 <a href="https://en.wikipedia.org/wiki/Dataflow_architecture">Dataflow Architecture</a>. 
 That’s what the “<a href="https://scientific-publishing.webshop.elsevier.com/manuscript-preparation/what-background-study-and-how-should-it-be-written/">Background</a>” section is for. 
 In “Related Work,” it’s assumed that the reader is already familiar with the subject matter.</p>
@@ -88,6 +182,10 @@ for finding prior work. If you can’t access a PDF version of a paper, try the 
 <p>These articles and books might also be helpful:</p>
 
 <ul>
+  <li><a href="https://www.youtube.com/watch?v=tBud5yewkkc&amp;t=19s">How to write a Related Work section</a> (video) 
+by <a href="https://scholar.google.com/citations?user=cZ5pY9wAAAAJ">Simone Silvestrini</a></li>
+  <li><a href="https://www.youtube.com/watch?v=rk_jgtdJOD0">Literature Review: Step by Step Guide For Graduate Students</a> (video)
+by <a href="https://scholar.google.com/citations?user=W03REUoAAAAJ">David Stuckler</a></li>
   <li><a href="http://slowsearching.blogspot.com/2014/11/a-formula-for-academic-papers-related.html">A Formula for Academic Papers: Related Work</a> 
 by <a href="https://scholar.google.com/citations?user=F5Ik84MAAAAJ">Jaime Teevan</a></li>
   <li><a href="http://lucalongo.eu/howtowritearesearchpaper.html">How to write a research paper in science</a> 
@@ -350,7 +448,7 @@ I tried not to repeat what <a href="https://www.githubnext.com">GitHubNext</a> i
         <img src="https://i.ytimg.com/vi/gHznfuhRR60/mqdefault.jpg" alt="YouTube video #gHznfuhRR60" />
         <div class="play"><i class="icon icon-play"></i></div>
         </div></a>
-        <div>AIIN&#39;23: Robots vs. Computers, How soon will computers fire us?;
+        <div>AIIN&#39;23: Robots vs. Programmers, How soon will computers fire us?;
         7 September 2023.</div></aside>
 
 <p><strong>Refactor</strong>. From a huge collection of well-known micro-refactorings, they will
@@ -1265,85 +1363,4 @@ in the <a href="https://github.com/jcabi/jcabi-xml">jcabi/jcabi-xml</a> library,
 unit test was added to the code base specifically to reproduce the bug. In addition to
 the test, a puzzle was added, which led to a <a href="https://github.com/jcabi/jcabi-xml/issues/213">new ticket</a>, 
 a <a href="https://github.com/jcabi/jcabi-xml/pull/214">new pull request</a>, 
-and finally a <a href="https://github.com/jcabi/jcabi-xml/releases/tag/0.28.0">new release</a> of the library.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pdd" /><category term="testing" /><summary type="html"><![CDATA[Instead of merely submitting bug reports, it can often be more efficient to contribute a pull request, complete with a disabled unit test and a detailed description of the problem.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/07/dead-or-alive.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/07/dead-or-alive.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Just Show Up</title><link href="https://www.yegor256.com/2023/07/19/just-show-up.html" rel="alternate" type="text/html" title="Just Show Up" /><published>2023-07-19T00:00:00+00:00</published><updated>2023-07-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/07/19/just-show-up</id><content type="html" xml:base="https://www.yegor256.com/2023/07/19/just-show-up.html"><![CDATA[<p>According to a <a href="https://www.emerald.com/insight/content/doi/10.1108/09534810710760045/full/html">study</a> 
-conducted by <a href="https://www.jemielniak.org/">Dariusz Jemielniak</a> in 2007, the majority of programmers perceive 
-their own managers as highly incompetent. We don’t expect our bosses to be 
-coding-savvy—this level of technical competence is <a href="/2016/05/24/who-is-project-manager.html">not a requirement</a>
-for an average manager. Additionally, we don’t expect them to excel in 
-Gantt Chart wizardry or adhere strictly to 
-<a href="/2019/05/14/cause-risk-effect.html">risk management protocols</a>—these 
-are management practices that are not commonly observed in software teams today.
-Instead, what we do expect from them is the ability to gauge our productivity: 
-recognizing and rewarding the best performers while 
-<a href="/2015/09/16/how-to-fire-someone-right.html">taking action</a> against those who are less motivated. 
-Unfortunately, this is a management competence that they lack… or perhaps, 
-<a href="/2021/03/03/imposters-to-win.html">fortunately</a>.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Les côtelettes (2003) by Bertrand Blier" src="/images/2023/07/les-cotelettes.jpg" longdesc="#de422d8c" /><figcaption id="de422d8c">Les côtelettes (2003) by Bertrand Blier</figcaption></figure>
-
-<p>I believe that the ability to measure results objectively is what makes a competent manager. The
-recent desire of large tech companies to restrict and/or entirely prohibit remote work has
-highlighted the lack of this ability in the industry. Indeed, a manager who knows how to evaluate
-the work of the team and its individual members wouldn’t worry about whether they are co-located in
-an office or working remotely. It simply <a href="/2017/05/02/remote-slaves.html">wouldn’t matter</a>! 
-If programmers know that <a href="/2014/09/24/why-monetary-awards-dont-work.html">rewards</a> will be
-given for deliverables and that penalties will occur in their absence, they can find the best place
-to create these deliverables, be it at home, in the office, or at a coffee shop (I’m one of them).
-However, if programmers don’t have such a straightforward 
-“<a href="/2018/10/09/can-you-control-us.html">reward and punishment</a>” system, they can
-become lazy and demotivated. To get back on track, they need a manager, an office, and daily
-<a href="/2015/07/21/hourly-pay-modern-slavery.html">supervision</a>.</p>
-
-<p>Google recently <a href="https://www.cnbc.com/2023/06/08/google-to-crack-down-on-hybrid-work-asks-remote-workers-to-reconsider.html">said</a>
-that “working together in the same room makes a positive difference”…
-for Google’s <del>incompetent</del> managers, I guess. 
-They may judge productivity by the amount of time their coders spend staring at monitors. 
-They don’t need to concern themselves with establishing an objective performance evaluation system. 
-They don’t need to count the <a href="/2014/04/11/cost-of-loc.html">lines of code</a> 
-(it’s <a href="https://www.youtube.com/watch?v=9Zen0B0SNwI">nonsense</a>, because Bill Gates said so!). 
-They don’t need to break down the scope into tasks and then assess their complexity 
-(that’s unfeasible, since we programmers are <a href="/2016/09/27/command-control-innovate.html">artists</a>!). 
-They don’t need to risk damaging 
-<a href="/2015/03/02/team-morale-myths-and-reality.html">morale</a> 
-and creativity by introducing the concept of <a href="https://www.youtube.com/watch?v=yZcNHZ_FJco">productivity evaluation</a> 
-(that’s unthinkable!). 
-They can simply reward the most disciplined clock-watchers and call it a management.</p>
-
-<aside class="quote">Let’s focus on fitting into the group rather than contributing to the codebase.
-</aside>
-
-<p>On the other hand, perhaps it’s not entirely detrimental for some of us. If the management 
-is <a href="/2017/08/01/how-to-manage-a-manager.html">incompetent</a> 
-enough to “make office attendance part of performance reviews” 
-(as <a href="https://arstechnica.com/google/2023/06/google-makes-office-attendance-part-of-performance-reviews/">Google just has</a>), 
-let’s play along and provide them with what they want: let’s attend! 
-Let’s display our <a href="/2015/10/06/how-to-be-good-office-slave.html">loyalty</a>, 
-engagement, and <a href="https://www.yegor256.com/pdf/2019/enthusiasm.pdf">enthusiasm</a>, 
-rather than our <a href="/2014/11/14/hits-of-code.html">lines of code</a> 
-and <a href="/2018/07/24/bugs-or-pull-requests.html">pull requests</a>. 
-Let’s focus on fitting into the group rather than contributing to the codebase.</p>
-
-<p>Woody Allen <a href="https://www.creativelive.com/blog/the-importance-of-showing-up/">once remarked</a> that “80 percent of success
-is showing up.” I would propose that we repurpose this as career advice for us programmers: Just Show Up. This mantra
-applies not only to office attendance, but can also be applied to many other activities throughout your 
-<a href="/2017/01/24/career-advice.html">career development</a>. 
-You should be where your boss(es) can physically see you. No, not your work—that’s immaterial. They need
-to see you in person. Here’s what you can do to truly “Just Show Up”:</p>
-
-<ul>
-  <li>Participate in all <a href="/2015/07/13/meetings-are-legalized-robbery.html">meetings</a>;</li>
-  <li>Attend all events, workshops, and team-building activities;</li>
-  <li>Situate yourself next to the boss;</li>
-  <li>Become a member of all committees;</li>
-  <li>Seize every opportunity to <a href="/2020/12/29/metric-for-emotions.html">ask questions</a>;</li>
-  <li>Be vocal in the office to ensure that your boss hears you;</li>
-  <li>Submit proposals whenever they’re requested;</li>
-  <li>Respond to all emails;</li>
-  <li>Upvote every chat message.</li>
-</ul>
-
-<p>This strategy might not necessarily make you a better programmer, 
-but it will certainly <a href="/2016/01/05/how-to-punish-employees.html">convince</a> 
-your boss that you are one.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="mood" /><category term="career" /><summary type="html"><![CDATA[Since many managers may not have the expertise to assess our technical work, the best strategy for seeming a top performer is to be visible to your manager often.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/07/les-cotelettes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/07/les-cotelettes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+and finally a <a href="https://github.com/jcabi/jcabi-xml/releases/tag/0.28.0">new release</a> of the library.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="pdd" /><category term="testing" /><summary type="html"><![CDATA[Instead of merely submitting bug reports, it can often be more efficient to contribute a pull request, complete with a disabled unit test and a detailed description of the problem.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/07/dead-or-alive.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/07/dead-or-alive.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
