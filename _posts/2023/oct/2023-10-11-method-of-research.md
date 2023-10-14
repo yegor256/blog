@@ -111,3 +111,6 @@ These opinions might also be helpful:
     by [David Russell](https://soc.appstate.edu/faculty-staff/david-russell-phd)
   * [How To Write Methodology...](https://www.youtube.com/watch?v=jWPul_eifeU) (video)
     by [Marek Kiczkowiak](https://scholar.google.com/citations?user=MR45-AwAAAAJ)
+  * [Formulation of Research Question](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322175/)
+    by Simmi K. Ratan
+
