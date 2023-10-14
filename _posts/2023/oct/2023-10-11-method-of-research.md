@@ -45,8 +45,8 @@ Here is a toy sample of the Method section:
 The goal of this study is to understand whether 
 cats love fruits. This leads to the following 
 research questions: 
-  RQ1: How is the color of a cat's fur related 
-  to the cat's passion for fruits? 
+  RQ1: What is a correlation between the color 
+  of a cat's fur and its passion for fruits? 
   RQ2: Which fruits are preferred by cats: 
   bananas, apples, or marakujas?
 
