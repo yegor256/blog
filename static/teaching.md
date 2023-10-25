@@ -47,7 +47,7 @@ Sep 2023<br/>
 **Software Quality Metrics**<br/>
 in [HSE University](https://www.hse.ru/en/) (Moscow, Russia)<br/>
 24 lectures: in progress...
-[videos][https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl]
+[videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl)
 {: .lecture}
 
 <img src="http://img.youtube.com/vi/8FPU_N3LxqA/maxresdefault.jpg" class="lecture"/>
