@@ -40,6 +40,7 @@ Sep 2023<br/>
 **Project Management Beyond Agile**<br/>
 in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
 10 lectures: in progress...
+[slides](https://github.com/yegor256/pmba),
 [videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08x_T-Aelduv3Zf0DWRx40pq)
 {: .lecture}
 
@@ -47,6 +48,7 @@ Sep 2023<br/>
 **Software Quality Metrics**<br/>
 in [HSE University](https://www.hse.ru/en/) (Moscow, Russia)<br/>
 24 lectures: in progress...
+[slides](https://github.com/yegor256/sqm),
 [videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl)
 {: .lecture}
 
