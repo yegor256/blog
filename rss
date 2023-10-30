@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-10-12T15:47:27+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Method Section: A Recipe for Research</title><link href="https://www.yegor256.com/2023/10/11/method-of-research.html" rel="alternate" type="text/html" title="The Method Section: A Recipe for Research" /><published>2023-10-11T00:00:00+00:00</published><updated>2023-10-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/10/11/method-of-research</id><content type="html" xml:base="https://www.yegor256.com/2023/10/11/method-of-research.html"><![CDATA[<p>Every empirical research paper must have a section titled “Method” (or “Methodology,” or “Study Design”). In this section, you describe what was done to obtain the data presented in the following “Results” section. You explain the <em>recipe</em>, which may be replicated later by another researcher, leading to the same (or very similar) results.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-10-30T04:33:46+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Method Section: A Recipe for Research</title><link href="https://www.yegor256.com/2023/10/11/method-of-research.html" rel="alternate" type="text/html" title="The Method Section: A Recipe for Research" /><published>2023-10-11T00:00:00+00:00</published><updated>2023-10-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/10/11/method-of-research</id><content type="html" xml:base="https://www.yegor256.com/2023/10/11/method-of-research.html"><![CDATA[<p>Every empirical research paper must have a section titled “Method” (or “Methodology,” or “Study Design”). In this section, you describe what was done to obtain the data presented in the following “Results” section. You explain the <em>recipe</em>, which may be replicated later by another researcher, leading to the same (or very similar) results.</p>
 
 <!--more-->
 
@@ -23,8 +23,8 @@ reasons for why you performed these specific manipulations with the data.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The goal of this study is to understand whether 
 cats love fruits. This leads to the following 
 research questions: 
-  RQ1: How is the color of a cat's fur related 
-  to the cat's passion for fruits? 
+  RQ1: What is a correlation between the color 
+  of a cat's fur and its passion for fruits? 
   RQ2: Which fruits are preferred by cats: 
   bananas, apples, or marakujas?
 
@@ -92,6 +92,8 @@ by <a href="https://scholar.google.com/citations?user=kudrpNsAAAAJ">Imed Bouchri
 by <a href="https://soc.appstate.edu/faculty-staff/david-russell-phd">David Russell</a></li>
   <li><a href="https://www.youtube.com/watch?v=jWPul_eifeU">How To Write Methodology…</a> (video)
 by <a href="https://scholar.google.com/citations?user=MR45-AwAAAAJ">Marek Kiczkowiak</a></li>
+  <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322175/">Formulation of Research Question</a>
+by Simmi K. Ratan</li>
 </ul>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[The essence of a research paper is the Method section, which may be easier to write if you follow a few simple principles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/10/underground.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/10/underground.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Related Work: A Critical Taxonomy of Prior Art</title><link href="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html" rel="alternate" type="text/html" title="Related Work: A Critical Taxonomy of Prior Art" /><published>2023-09-29T00:00:00+00:00</published><updated>2023-09-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/29/how-to-write-related-work-section</id><content type="html" xml:base="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html"><![CDATA[<p>In almost any research paper, it is mandatory to have a section titled “Related Work”
 (<a href="https://english.stackexchange.com/questions/55898/related-work-or-related-works">or “Related Works”</a>), 
 where you refer to the results previously obtained by other
@@ -182,9 +184,9 @@ for finding prior work. If you can’t access a PDF version of a paper, try the 
 <p>These articles and books might also be helpful:</p>
 
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=tBud5yewkkc&amp;t=19s">How to write a Related Work section</a> (video) 
+  <li><a href="https://www.youtube.com/watch?v=tBud5yewkkc&amp;t=19s">How to write a Related Work…</a> (video) 
 by <a href="https://scholar.google.com/citations?user=cZ5pY9wAAAAJ">Simone Silvestrini</a></li>
-  <li><a href="https://www.youtube.com/watch?v=rk_jgtdJOD0">Literature Review: Step by Step Guide For Graduate Students</a> (video)
+  <li><a href="https://www.youtube.com/watch?v=rk_jgtdJOD0">Literature Review: Step by Step Guide…</a> (video)
 by <a href="https://scholar.google.com/citations?user=W03REUoAAAAJ">David Stuckler</a></li>
   <li><a href="http://slowsearching.blogspot.com/2014/11/a-formula-for-academic-papers-related.html">A Formula for Academic Papers: Related Work</a> 
 by <a href="https://scholar.google.com/citations?user=F5Ik84MAAAAJ">Jaime Teevan</a></li>

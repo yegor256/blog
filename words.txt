@@ -3570,6 +3570,7 @@ formula
 formulate
 formulated
 formulating
+formulation
 forname
 forth
 forthcoming
@@ -3858,7 +3859,6 @@ grading
 gradle
 gradual
 gradually
-graduate
 graduated
 graduation
 grady
@@ -7263,6 +7263,7 @@ RAS
 raster-graphics
 rasterized
 rat
+ratan
 rate
 rate-setting
 rates
@@ -8273,6 +8274,7 @@ silvestrini
 similar
 similarities
 similarly
+simmi
 simon
 simone
 simple
