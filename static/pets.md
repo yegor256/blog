@@ -199,7 +199,7 @@ More about it in this article:
 <br/>
 Founded 27-Aug-2018.
 
-{% badge //www.soalition.com/logo.svg 70 https://www.soalition.com %}
+<!-- {% badge //www.soalition.com/logo.svg 70 https://www.soalition.com %} -->
 
 <!--
 [Soalition](https://www.soalition.com) is a manager of social coalitions
