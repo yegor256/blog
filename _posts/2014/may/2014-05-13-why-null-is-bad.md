@@ -315,3 +315,9 @@ public class Department {
 
 I hope this analysis was convincing enough that you will
 stop `NULL`-ing your code.
+
+p.s. If you are interested in a more scientific arguments against NULL,
+read [this recently published research paper](https://ieeexplore.ieee.org/abstract/document/9392959) 
+that empirically demonstrates
+a correlation between the intensity of NULL usage and cognitive complexity ---
+the more NULL is seen in a class, the higher the complexity of its methods.
