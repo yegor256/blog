@@ -60,7 +60,8 @@ If an object that doesn't `implement` the interface `Book` is passed
 to the method `print()`, the compiler will complain
 with the "type mismatch" error. It will be hard for a programmer to make
 a mistake and pass an object of type, say, `Car` to the method `print()`.
-However, it will still be possible, via dynamic type casting:
+However, it will still be possible, via dynamic 
+[type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %}):
 
 ```java
 Car car = new Car("Mercedes-Benz G63");
