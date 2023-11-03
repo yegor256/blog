@@ -75,7 +75,8 @@ possible to cast `Car` to `Book`.
 
 The beauty of strong typing is that it prevents errors. However, it increases
 the complexity of code: you need to create types first, you need to declare them
-in all your functions, you need type casting, which is hard to debug, and so on.
+in all your functions, you need type casting, which is hard to 
+[debug]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}), and so on.
 Weak typing [proponents](https://softwareengineering.stackexchange.com/questions/38002)
 complain about this a lot and create languages like Ruby,
 which don't have types at all, for example:
