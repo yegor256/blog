@@ -113,7 +113,8 @@ void print(Book b) {
 Think about this: at compile time it's already obvious that `b` must have
 _at least_ one method `isbn()`. No need to force programmers to define
 the type `Book` explicitly and mention in the signature of the method `print()`
-that only books are welcome: this knowledge can easily be inferred from
+that only books are welcome: this knowledge can easily be 
+[inferred](https://en.wikipedia.org/wiki/Type_inference) from
 the body of the method `print()`! The compiler may look at all statements
 in the method `print()` and clearly _understand_ what exactly will be done
 with the object `b`. This information should be enough to visualize
