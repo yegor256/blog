@@ -120,7 +120,7 @@ in the method `print()` and clearly _understand_ what exactly will be done
 with the object `b`. This information should be enough to visualize
 the "type" of the incoming object. No need to ask the programmer to
 do this explicitly and spend another five lines of code in a new file
-to declare the type `Book`. The compiler can do this job for us.
+to declare the type `Book`. The compiler together with the IDE can do this job for us.
 
 Of course, to make this work we must prohibit
 [type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
