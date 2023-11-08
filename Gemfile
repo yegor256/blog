@@ -36,7 +36,7 @@ gem 'jekyll-sitemap', '1.4.0'
 
 gem 'fastimage', '2.2.7'
 gem 'html-proofer', '3.7.5'
-gem 'jgd', '1.13.1'
+gem 'jgd', '1.14.0'
 gem 'kramdown', '2.4.0'
 gem 'liquid', '4.0.4'
 gem 'mail', '2.8.1'
