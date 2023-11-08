@@ -35,7 +35,7 @@ I will help you to do the research and may also play a role of your scientific a
 
 <hr/>
 
-**Jumps Elimination in OOP**
+**Jumps Elimination in OOP** (taken!)
 Recently, we developed [DeJump](https://github.com/objectionary/dejump),
 an automated tool that modifies programs written in [EOLANG](https://www.eolang.org),
 our own object-oriented language, such that "jumping objects" (GOTO, BREAK, and CONTINUE)
@@ -48,7 +48,7 @@ and testing it with larger blocks of code, in order to demonstrate its effective
 A new research paper is expected to be written and published.
 {: .topic}
 
-**SLR of Object Models**
+**SLR of Object Models** (taken!)
 There is a famous [λ-calculus](https://en.wikipedia.org/wiki/Lambda_calculus) that underlies functional programming languages,
 like Haskell or Scala. At the same time, for object-oriented programming languages,
 more than one calculus has been introduced over the last thirty years, such as
@@ -67,7 +67,7 @@ could become a significant contribution to the theoretical sector of
 object-oriented programming.
 {: .topic}
 
-**Algorithmization of Object-Oriented Programs Written in EO**
+**Algorithmization of Object-Oriented Programs Written in EO** (taken!)
 [EOLANG](https://www.eolang.org), our experimental strictly object-oriented programming language,
 is very effective for modeling objects and their relationships.
 However, it falls short when programming algorithms and mathematics, because the code
@@ -97,7 +97,7 @@ ChatGPT could represent a significant contribution to computer science
 and provide invaluable assistance to hundreds of GitHub programmers.
 {: .topic}
 
-**ChatGPT for GitHub Anomalies Detection**
+**ChatGPT for GitHub Anomalies Detection** (taken!)
 The quality of source code and the discipline of repository maintenance
 play a crucial role in the success of a software product. However, there is
 no automated tool on the market that appraises the quality of an entire
@@ -110,7 +110,7 @@ to combine our project analysis algorithm with the capabilities of LLM,
 to generate the most effective and useful advice for software teams.
 {: .topic}
 
-**Analysis of Heap Performance in Different OSs**
+**Analysis of Heap Performance in Different OSs** (taken!)
 The heap is the primary storage for variable-sized memory blocks in modern
 operating systems and virtual machines. Allocating a slice of bytes in
 the heap and then releasing it back is a time-consuming operation,
@@ -122,7 +122,7 @@ the results, and then publishing a research paper. Such an analysis might assist
 creators of programming languages and compilers in making better design decisions.
 {: .topic}
 
-**Encapsulation Strategy in Design Patterns**
+**Encapsulation Strategy in Design Patterns** (taken!)
 In object-oriented programming,
 many design patterns are recommended for use. It's commonly believed that if
 programmers adhere to these patterns in their code, the code quality will
@@ -136,7 +136,7 @@ for compiler and programming language designers, prompting them to treat
 objects differently if they are dataless.
 {: .topic}
 
-**Study Programmers' Preferences for Object Extensions**
+**Study Programmers' Preferences for Object Extensions** (taken!)
 In object-oriented programming, additional functionality can be added to classes
 using inheritance, decoration, composition, or by simply expanding existing
 classes with new code or methods. It is commonly believed that most
@@ -149,7 +149,7 @@ our research might offer insights to designers of new programming languages
 about programmers' perceptions of OOP.
 {: .topic}
 
-**Cost of OOP in Different Languages**
+**Cost of OOP in Different Languages** (taken!)
 [Earlier studies](https://downloads.hindawi.com/journals/sp/1999/464598.pdf) 
 by various researchers and practitioners have indicated that
 object-oriented programming features, such as encapsulation and polymorphism,
@@ -163,6 +163,9 @@ understanding the practical usability of object-oriented programming.
 {: .topic}
 
 <hr/>
+
+A few more topics you can find in [objectionary/ideas](https://github.com/objectionary/ideas) repository,
+they are all related to [EOLANG](https://www.eolang.org).
 
 You may also pick one of our open source projects, and extend it with
 a new feature, presenting this work as engineering+science:
