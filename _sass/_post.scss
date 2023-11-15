@@ -4,14 +4,19 @@ article {
     margin-bottom: .75 * $em;
     margin-top: .75 * $em;
 
-    strong {
-      color: $red;
-      font-weight: bold;
+    del {
+      color: $grey;
+      text-decoration: line-through;
     }
 
     em {
       color: $orange;
       font-style: normal;
+    }
+
+    strong {
+      color: $red;
+      font-weight: bold;
     }
   }
 }
