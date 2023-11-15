@@ -5,7 +5,13 @@ article {
     margin-top: .75 * $em;
 
     strong {
-      color: #cf021b;
+      color: $red;
+      font-weight: bold;
+    }
+
+    em {
+      color: $orange;
+      font-style: normal;
     }
   }
 }

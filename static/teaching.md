@@ -17,9 +17,6 @@ style: |
     clear: both;
     margin-top: 2em;
   }
-  p.lecture strong {
-    color: #CF021B;
-  }
   p.lecture img {
     width: 192px;
     height: 108px;
