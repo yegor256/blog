@@ -12,7 +12,6 @@ jcg.html
 contents.html
 css
 css/layout.css
-css/icons.css
 js
 js/all.js
 rss-jcg.xml
