@@ -17,7 +17,7 @@ deploy:
     sudo gem install fontcustom
     _glyphs/compile.sh /tmp/icons
     git checkout gh-pages
-    for e in svg ttf woff eot css; do cp /tmp/icons/${e} css; git add css/${e} done
+    for e in svg ttf woff eot css; do cp /tmp/icons/${e} css; git add css/${e}; done
     git commit -am 'new glyphs' || echo no changes in glyphs
     git checkout master
     rvm use ruby-3.2.2
