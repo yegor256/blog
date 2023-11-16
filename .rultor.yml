@@ -25,13 +25,13 @@ deploy:
     git checkout master
     rvm default 3.2.2 && source /usr/local/rvm/scripts/rvm
 
-    # export JEKYLL_ENV=production
-    # LC_ALL=en_US.UTF-8 bundle exec rake
-    # mkdir ~/.ssh
-    # mv ../id_rsa ../id_rsa.pub ~/.ssh
-    # chmod -R 600 ~/.ssh/*
-    # echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
-    # git config --global user.email "rultor@yegor256.com"
-    # git config --global user.name "Rultor"
-    # echo -e "chatgpt-translate:\n  api_key_file: $(pwd)/../chatgpt-key.txt" > _config-deploy.yml
-    # LC_ALL=en_US.UTF-8 jgd
+    export JEKYLL_ENV=production
+    LC_ALL=en_US.UTF-8 bundle exec rake
+    mkdir ~/.ssh
+    mv ../id_rsa ../id_rsa.pub ~/.ssh
+    chmod -R 600 ~/.ssh/*
+    echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
+    git config --global user.email "rultor@yegor256.com"
+    git config --global user.name "Rultor"
+    echo -e "chatgpt-translate:\n  api_key_file: $(pwd)/../chatgpt-key.txt" > _config-deploy.yml
+    LC_ALL=en_US.UTF-8 jgd
