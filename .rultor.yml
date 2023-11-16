@@ -13,7 +13,7 @@ merge:
     LC_ALL=en_US.UTF-8 bundle exec rake
 deploy:
   script: |
-    sudo chown -R "$(whoami)" "${HOME}"
+    sudo chown -R "$(whoami)" /usr/local/rvm
     rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
     ruby -v
     gem install fontcustom
