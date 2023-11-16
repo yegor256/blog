@@ -13,11 +13,12 @@ merge:
     LC_ALL=en_US.UTF-8 bundle exec rake
 deploy:
   script: |
+    sudo chown -R "$(whoami)" "${HOME}"
     rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
     ruby -v
-    sudo gem install fontcustom
-    sudo fontcustom --version
-    sudo "$(pwd)/_glyphs/compile.sh" /tmp/icons
+    gem install fontcustom
+    fontcustom --version
+    "$(pwd)/_glyphs/compile.sh" /tmp/icons
     git checkout gh-pages
     for e in svg ttf woff eot css; do cp /tmp/icons/${e} css; git add css/${e}; done
     git commit -am 'new glyphs' || echo no changes in glyphs
