@@ -6,7 +6,7 @@ assets:
   id_rsa: "yegor256/home#assets/blog/id_rsa"
   id_rsa.pub: "yegor256/home#assets/blog/id_rsa.pub"
 install: |
-  bundle install --no-color "--gemfile=$(pwd)/Gemfile"
+  bundle install --no-color
   sudo npm install -g eslint@8.44.0
 merge:
   script: |
