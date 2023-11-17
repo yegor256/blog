@@ -15,7 +15,7 @@ link PgArticle to PgHead--><path d="M125.2,167 C125.2,167 131.86,167 134.69,167 
 link PgHead to PgAuthor--><path d="M241.15,167 C241.15,167 248.28,167 251.26,167 " fill="none" id="PgHead-PgAuthor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="264.3,167,255.3,163,259.3,167,255.3,171,264.3,167" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="259.3" x2="251.3" y1="167" y2="167"/><polygon fill="#FFFFFF" points="229.15,167,235.15,171,241.15,167,235.15,163,229.15,167" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[41f3b5951f579d58ad93301d1b20be5b]
 link PgArticle to PostgreSQL--><path d="M96.8,191.17 C117.09,208.39 144.52,231.67 164.08,248.28 " fill="none" id="PgArticle-&gt;PostgreSQL" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="168.38,251.92,164.0948,243.0523,164.5636,248.6896,158.9262,249.1585,168.38,251.92" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a8eb31a1cf8896e56e85123fbbd63176]
 link PgHead to PostgreSQL--><path d="M188.5,191.17 C188.5,207.81 188.5,230.11 188.5,246.58 " fill="none" id="PgHead-&gt;PostgreSQL" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="188.5,251.92,192.5,242.92,188.5,246.92,184.5,242.92,188.5,251.92" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[4a776ab509ad1c667b121f8a78fc4a78]
-link PgAuthor to PostgreSQL--><path d="M281.74,191.17 C260.94,208.53 232.75,232.06 212.83,248.69 " fill="none" id="PgAuthor-&gt;PostgreSQL" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="208.96,251.92,218.4308,249.2173,212.7964,248.7134,213.3003,243.0791,208.96,251.92" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[b6e21ec62c693f5f79f4a76821f8481b]
+link PgAuthor to PostgreSQL--><path d="M281.74,191.17 C260.94,208.53 232.75,232.06 212.83,248.69 " fill="none" id="PgAuthor-&gt;PostgreSQL" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="208.96,251.92,218.4308,249.2173,212.7964,248.7134,213.3003,243.0791,208.96,251.92" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[30a72809f228afe88e1cd42051a39fb5]
 @startuml
 
 allowmixing
@@ -42,7 +42,7 @@ PlantUML version 1.2020.01(Sun Feb 16 17:40:32 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Java Version: 11.0.20.1+1-post-Ubuntu-0ubuntu122.04
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en

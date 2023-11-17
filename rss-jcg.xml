@@ -7,7 +7,7 @@
     <atom:link href="https://www.yegor256.com/rss/rss-jcg.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Don't Use Java Assertions</title>
+        <title>Don&apos;t Use Java Assertions</title>
         
           <description>&lt;p&gt;There are basically two ways to validate a situation in Java and complain
 when something unexpected happens. It’s either an exception
@@ -191,7 +191,7 @@ I’m suggesting you use &lt;em&gt;validating decorators&lt;/em&gt; instead.&lt;
       </item>
     
       <item>
-        <title>Good Programmers Don't Work for Equity</title>
+        <title>Good Programmers Don&apos;t Work for Equity</title>
         
           <description>&lt;p&gt;“You’re a good programmer. I’m a great entrepreneur. This is a
 breakthrough idea. Help me build it. I don’t have cash, but I will
@@ -230,7 +230,7 @@ a look at this example.&lt;/p&gt;
           <description>&lt;p&gt;I keep repeating the same mistake again and again. So it’s time to
 stop and make a rule to prevent this from happening anymore. The mistake
 is not fatal, but it’s very annoying. When I look at production logs, I often see
-something like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;File doesn't exist&quot;&lt;/code&gt;, and I ask myself:
+something like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;File doesn&apos;t exist&quot;&lt;/code&gt;, and I ask myself:
 What file? Where is it supposed to exist? What did the server try to do with it?
 What was going on a second before it crashed?
 There is no answer in the log, and it’s totally my fault.
@@ -321,7 +321,7 @@ multiple exception types are a bad idea too.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Fools Don't Write Unit Tests</title>
+        <title>Fools Don&apos;t Write Unit Tests</title>
         
           <description>&lt;p&gt;“We don’t have time to write unit tests” or “We don’t have the
 budget for unit testing” are complaints I hear very often. Sometimes it
@@ -361,7 +361,7 @@ valid reasons for such a rejection, according to my experience.&lt;/p&gt;
       </item>
     
       <item>
-        <title>Good Programmers Write Bug-Free Code, Don't They?</title>
+        <title>Good Programmers Write Bug-Free Code, Don&apos;t They?</title>
         
           <description>&lt;p&gt;Good programmers create fewer
 &lt;a href=&quot;/2015/06/11/wikipedia-bug-definition.html&quot;&gt;bugs&lt;/a&gt;
@@ -385,7 +385,7 @@ that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p
       </item>
     
       <item>
-        <title>Wikipedia's Definition of a Software Bug Is Wrong</title>
+        <title>Wikipedia&apos;s Definition of a Software Bug Is Wrong</title>
         
           <description>&lt;p&gt;Here is what &lt;a href=&quot;https://en.wikipedia.org/wiki/Software_bug&quot;&gt;Wikipedia says&lt;/a&gt;
 at the time of this writing:&lt;/p&gt;
@@ -615,7 +615,7 @@ why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let’s see what I me
       </item>
     
       <item>
-        <title>Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
+        <title>Don&apos;t Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
         
           <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;https://www.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
@@ -695,7 +695,7 @@ for the project, not for the boss.&lt;/p&gt;
           <description>&lt;p&gt;This is the code I could never understand:&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X can't be negative&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X can&apos;t be negative&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X is positive or zero&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
@@ -1195,7 +1195,7 @@ Java, in just a few lines, using &lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;
     &lt;span class=&quot;s&quot;&gt;&quot;ssh.example.com&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;&quot;yegor&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-----BEGIN RSA PRIVATE KEY-----...&quot;&lt;/span&gt;
   &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;echo 'Hello, world!'&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;echo &apos;Hello, world!&apos;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt; is

@@ -17,7 +17,7 @@ reverse link Back to BkParallel--><path d="M476.89,73.61 C468.97,87.85 460.35,10
 reverse link Back to BkSafe--><path d="M522.49,73.61 C530.55,87.85 539.32,103.35 546.3,115.68 " fill="none" id="Back&lt;-BkSafe" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="516.28,76.85,512.52,56,528.46,69.96,516.28,76.85" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[42873614f9e10996493db6639a0de03c]
 reverse link Take to TkFailure--><path d="M751.82,69.57 C735.24,84.86 716.46,102.17 701.8,115.68 " fill="none" id="Take&lt;-TkFailure" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="747.1,64.41,766.55,56,756.59,74.7,747.1,64.41" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[c69fd2d711eb29ba80609da4b5776970]
 reverse link Take to TkGzip--><path d="M791.5,76.02 C791.5,89.58 791.5,104.04 791.5,115.68 " fill="none" id="Take&lt;-TkGzip" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="784.5,76,791.5,56,798.5,76,784.5,76" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[772b0d2d086f309cd19a1cb6469ba59f]
-reverse link Take to TkMeasured--><path d="M834.08,69.1 C852.24,84.5 872.9,102.03 889,115.68 " fill="none" id="Take&lt;-TkMeasured" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="829.35,74.27,818.62,56,838.4,63.6,829.35,74.27" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[7322d7bd580fea9398ef28d9b5efd056]
+reverse link Take to TkMeasured--><path d="M834.08,69.1 C852.24,84.5 872.9,102.03 889,115.68 " fill="none" id="Take&lt;-TkMeasured" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="829.35,74.27,818.62,56,838.4,63.6,829.35,74.27" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[6c54a1d47e10ce1b2af155151b70da6a]
 @startuml
 
 Request <|- - RqChunk
@@ -35,7 +35,7 @@ PlantUML version 1.2020.01(Sun Feb 16 17:40:32 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.19+7-post-Ubuntu-0ubuntu122.04.1
+Java Version: 11.0.20.1+1-post-Ubuntu-0ubuntu122.04
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en

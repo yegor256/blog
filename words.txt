@@ -1542,6 +1542,7 @@ codota
 coen
 coffee
 cog
+cognitive
 cogs
 cohesion
 cohesive
