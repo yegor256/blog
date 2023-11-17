@@ -6,14 +6,13 @@ assets:
   id_rsa: "yegor256/home#assets/blog/id_rsa"
   id_rsa.pub: "yegor256/home#assets/blog/id_rsa.pub"
 install: |
-  sudo bundle install --no-color "--gemfile=$(pwd)/Gemfile"
+  bundle install --no-color "--gemfile=$(pwd)/Gemfile"
   sudo npm install -g eslint@8.44.0
 merge:
   script: |
     LC_ALL=en_US.UTF-8 bundle exec rake
 deploy:
   script: |
-    sudo chown -R "$(whoami)" /usr/local/rvm
     rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
     ruby -v
     gem install fontcustom
