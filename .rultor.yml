@@ -29,7 +29,7 @@ deploy:
     fontcustom --version
     "$(pwd)/_glyphs/compile.sh" /tmp/icons
     git checkout gh-pages
+    git pull
     for e in svg ttf woff eot css; do cp /tmp/icons/icons.${e} css; git add css/icons.${e}; done
     git commit -am 'new glyphs' || echo no changes in glyphs
-    git pull
     git push origin gh-pages
