@@ -24,7 +24,7 @@ success doesn't depend on much of anything else. The pitch is king.
 You have to impress the ~~catcher~~ investor in just a few seconds while
 the elevator is still moving (that's where you are supposed to hunt for that
 prey). It's not rocket science; you can learn a few basic
-principles and become a expert. Here they are, the principles.
+principles and become an expert. Here they are, the principles.
 
 <!--more-->
 
