@@ -61,6 +61,6 @@ Let the software format paragraphs for you, deciding where their lines
 must break to form new lines. By injecting linebreaks into the body of
 a paragraph, you express distrust in the document formatting software,
 be it an HTML browser, a LaTeX compiler, or a Javadoc generator. In the end,
-it looks ugly, because we are much worse designers than the creators of LaTeX
-or browsers.
+it looks ugly, because we are [much worse designers]({% pst 2019/may/2019-05-21-dont-improvise %}) 
+than the creators of LaTeX or browsers.
 
