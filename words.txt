@@ -2218,6 +2218,7 @@ decently
 decide
 decided
 decides
+deciding
 decision
 decision-makers
 decision-making
@@ -2535,6 +2536,7 @@ discourage
 discouraged
 discourages
 discouraging
+discourse
 discover
 discovered
 discovering
@@ -2595,6 +2597,7 @@ distribute
 distributed
 distributing
 distribution
+distrust
 disturb
 disturbing
 div
@@ -2743,6 +2746,7 @@ duplicates
 duplication
 durango
 duration
+durden
 during
 duties
 dw
@@ -3065,6 +3069,7 @@ estimations
 estimator
 et
 etc
+eternal
 ethan
 etherium
 ethic
@@ -3916,6 +3921,7 @@ grown-ups
 grows
 growth
 grunt
+gt
 GTA
 guarantee
 guaranteed
@@ -5169,6 +5175,7 @@ limited
 limiting
 limits
 line
+linebreaks
 lined
 lines
 lines-of-code
@@ -5294,6 +5301,7 @@ lowers
 lowest
 loyal
 loyalty
+lt
 luca
 lucene
 luck
@@ -8039,6 +8047,7 @@ selects
 self
 self-appointed
 self-confidence
+self-contained
 self-descriptive
 self-discipline
 self-disciplined
@@ -9476,6 +9485,8 @@ txr
 txt
 txtauthor
 txthead
+tyler
+tyler's
 type
 types
 types-announce
@@ -9880,6 +9891,7 @@ vytautas
 wages
 wait
 waited
+waiter
 waiting
 waitress
 waits
