@@ -106,7 +106,7 @@ These articles and books might also be helpful:
 
   * [How to write a Related Work...](https://www.youtube.com/watch?v=tBud5yewkkc&t=19s) (video) 
     by [Simone Silvestrini](https://scholar.google.com/citations?user=cZ5pY9wAAAAJ)
-  * [Literature Review: Step by Step Guide...](https://www.youtube.com/watch?v=rk_jgtdJOD0) (video)
+  * [Literature Review: Step by Step...](https://www.youtube.com/watch?v=rk_jgtdJOD0) (video)
     by [David Stuckler](https://scholar.google.com/citations?user=W03REUoAAAAJ)
   * [A Formula for Academic Papers: Related Work](http://slowsearching.blogspot.com/2014/11/a-formula-for-academic-papers-related.html) 
     by [Jaime Teevan](https://scholar.google.com/citations?user=F5Ik84MAAAAJ)
