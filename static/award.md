@@ -34,7 +34,7 @@ value quality above everything else.
 <!--more-->
 
 At the moment, this award is closed, because I don't have a _director_, who would help me
-organize everything: collect nominatees, evaluate their projects, suggest a hot list of best candidates.
+organize everything: collect nominates, evaluate their projects, suggest a hot list of best candidates.
 I will make the final decision and give the money. If you are interested in helping 
 me and the entire community, [please email](mailto:award@yegor256.com).
 
