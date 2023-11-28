@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-11-22T09:36:24+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Avoid Soft Line Breaks Inside a Paragraph</title><link href="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html" rel="alternate" type="text/html" title="Avoid Soft Line Breaks Inside a Paragraph" /><published>2023-11-22T00:00:00+00:00</published><updated>2023-11-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap</id><content type="html" xml:base="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html"><![CDATA[<p>An email, a document, a research paper, a presentation, and even a JavaDoc code block consist of
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-11-28T14:32:39+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Be Indirect in Your Research Questionnaire to Gain More Honesty</title><link href="https://www.yegor256.com/2023/11/28/research-questionnaire.html" rel="alternate" type="text/html" title="Be Indirect in Your Research Questionnaire to Gain More Honesty" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/11/28/research-questionnaire</id><content type="html" xml:base="https://www.yegor256.com/2023/11/28/research-questionnaire.html"><![CDATA[<p>Let’s say you are conducting research to discover programmers’ opinions about
+their work environments: whether they appreciate their office spaces or not.
+Preparing a survey with a few questions is essential. Their responses will
+reveal their thoughts and feelings. After working with several student groups,
+I’ve noticed a common mistake in questionnaire design—they are <em>too obvious</em> with
+their questions, simply asking, “How do you feel about this?” There’s a more
+effective approach.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Coffee and Cigarettes (2004) by Jim Jarmusch" src="/images/2023/11/coffee-and-cigarettes.jpg" longdesc="#c7fc0345" /><figcaption id="c7fc0345">Coffee and Cigarettes (2004) by Jim Jarmusch</figcaption></figure>
+
+<p>Typically, to understand people’s thoughts and feelings, we might ask
+directly, “What do you think and feel?” This is akin to a doctor
+inquiring, “What is your disease? What kind of pill should I prescribe?” While
+straightforward, this method suits a doctor less concerned with patient
+recovery.</p>
+
+<p>Asking directly also exposes the survey’s intent. Savvy respondents may realize
+our research goals, potentially skewing results by conforming or sabotaging the
+study. Some might claim they enjoy their work environment, while others might
+express dissatisfaction. However, few will be entirely candid, feeling more
+like researchers than participants.</p>
+
+<p>Here’s an example of an ineffective survey structure:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Q1: Is your work environment comfortable?
+  - Agree
+  - Neutral
+  - Disagree
+Q2: Do you feel tired at the end of an office day?
+  - Agree
+  - Neutral
+  - Disagree
+Q3: Do you enjoy working in the office?
+  - Agree
+  - Neutral
+  - Disagree
+</code></pre></div></div>
+
+<p>A skilled doctor, rather than directly asking about diseases, inquires about
+symptoms: “How often do you urinate?” or “Are you thirsty upon waking?”
+Similarly, in empirical computer science studies, we can engage respondents
+with hypothetical scenarios.</p>
+
+<p>By asking respondents directly, we inadvertently shift our research
+<em>responsibilities</em> onto them. Our role is to determine if they enjoy their office
+space. We should observe their behavior, symptoms, and reactions to draw
+conclusions. Simply asking, “Do you feel comfortable?” suggests a lazy or
+inexperienced interviewer.</p>
+
+<p>Consider this revised questionnaire:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Q4: With a looming strict deadline, where would you 
+prefer to work on a critical software module?
+  - At home
+  - In a café
+  - In the office
+Q5: When did you last feel exhausted at the end of 
+an office day?
+  - A few days ago
+  - A few weeks ago
+  - Don't remember
+Q6: How would you rate the office coffee 
+machine's quality?
+  - Excellent
+  - It's OK
+  - Poor
+</code></pre></div></div>
+
+<p>The first two questions, Q4 and Q5, are <em>situational</em>, placing respondents in
+specific scenarios. We then <em>interpret</em> their reactions to deduce answers to our
+primary question: Do they like their work environments? This interpretation
+<em>method</em> should be clarified in the research paper.</p>
+
+<p>Question Q6, while not situational, is superior to Q1-Q3. It avoids asking
+respondents to self-diagnose, subtly probing their opinions about office coffee
+machines. The responses indirectly indicate their overall satisfaction with the
+work environment.</p>
+
+<p>In summary, avoid directly inquiring about illnesses; instead, ask about
+symptoms to discreetly pursue your research objective. This approach elicits
+more honest responses.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[When conducting a survey to ascertain people's feelings about a topic, it is more effective to use indirect questioning.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/11/coffee-and-cigarettes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/11/coffee-and-cigarettes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Avoid Soft Line Breaks Inside a Paragraph</title><link href="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html" rel="alternate" type="text/html" title="Avoid Soft Line Breaks Inside a Paragraph" /><published>2023-11-22T00:00:00+00:00</published><updated>2023-11-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap</id><content type="html" xml:base="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html"><![CDATA[<p>An email, a document, a research paper, a presentation, and even a JavaDoc code block consist of
 <em>paragraphs</em>, <a href="https://en.wikipedia.org/wiki/Paragraph">which are</a> 
 “self-contained units of discourse in writing dealing with a particular point or idea.”
 Visually, paragraphs are supposed to be separated by a vertical space that is a bit larger
@@ -1226,109 +1308,4 @@ in place of <code class="language-plaintext highlighter-rouge">Book</code> and <
 
 <p>It appears that two-step initialization doesn’t truly solve problems; 
 rather, it merely masks them for a time. While you can have <code class="language-plaintext highlighter-rouge">init()</code> methods in your objects, 
-they look like flags with “I failed to design this class properly!” written on them.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Sometimes you might be tempted to use a two-stage construction for your object. However, I suggest reevaluating your design principles if you feel such an inclination.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/nirvana.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/nirvana.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Hidden Dangers of Method Overloading</title><link href="https://www.yegor256.com/2023/08/01/method-overloading.html" rel="alternate" type="text/html" title="The Hidden Dangers of Method Overloading" /><published>2023-08-01T00:00:00+00:00</published><updated>2023-08-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/01/method-overloading</id><content type="html" xml:base="https://www.yegor256.com/2023/08/01/method-overloading.html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Function_overloading">Method overloading</a> 
-is a common feature in many programming languages that allows 
-a class to have two or more methods with the same name but different parameters.
-<a href="https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/member-overloading">According</a> 
-to Microsoft, method overloading is “one of the most important techniques 
-for <em>improving</em> usability, productivity, and readability of reusable libraries.”
-I disagree. In my opinion, method overloading may lead to less readable code and more bugs,
-because maintaining two or more implementations under the same name gives rise to 
-concealed semantics, which inevitably result in misunderstandings and functional defects.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Youth (2015) by Paolo Sorrentino" src="/images/2023/08/youth.jpg" longdesc="#62f78b0f" /><figcaption id="62f78b0f">Youth (2015) by Paolo Sorrentino</figcaption></figure>
-
-<p>Let’s start with a Java example.
-Suppose you wish to enable the addition of a product to the shopping cart, 
-having either the product ID or the <code class="language-plaintext highlighter-rouge">Product</code> object at your disposal. 
-If only the ID is provided, you’d want the shopping cart to access 
-the product catalog, locate the corresponding <code class="language-plaintext highlighter-rouge">Product</code> object, and add it. 
-This is where method overloading can prove beneficial (the <code class="language-plaintext highlighter-rouge">add()</code> method is
-defined twice with two different <a href="https://stackoverflow.com/questions/8516498">signatures</a> 
-and implementations):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Cart</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Product</span><span class="o">&gt;</span> <span class="n">products</span><span class="o">;</span>
-  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Catalog</span><span class="o">().</span><span class="na">findById</span><span class="o">(</span><span class="n">id</span><span class="o">));</span>
-  <span class="o">}</span>
-  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Product</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">products</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-<span class="kt">var</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Cart</span><span class="o">();</span>
-<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Product</span><span class="o">(</span><span class="s">"book"</span><span class="o">));</span>
-<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">42</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>This approach is indeed convenient for at least two reasons. First, the 
-<code class="language-plaintext highlighter-rouge">add(int)</code> method handles the conversion from <code class="language-plaintext highlighter-rouge">int</code> to <code class="language-plaintext highlighter-rouge">Product</code>, 
-which need not be repeated elsewhere—they can simply pass the product’s ID 
-to this method and let it do the work—thereby eliminating code duplication. 
-Second, because the functionality of “searching the catalog” is not exposed 
-beyond the <code class="language-plaintext highlighter-rouge">Cart</code> class, it simplifies the surrounding code. It appears that, 
-indeed, the usability and readability of the code are enhanced.</p>
-
-<p>However, the issues addressed (code duplication and complexity) are lesser 
-than the problems introduced. While the semantics of the <code class="language-plaintext highlighter-rouge">add(Product)</code> method are 
-obvious, the workings of the <code class="language-plaintext highlighter-rouge">add(int)</code> method are not clear to its users. 
-Perhaps it searches the catalog? Maybe it selects the n-th product from 
-the existing cart and re-adds it to the end of the cart? Or perhaps it searches 
-the orders previously placed by the user and extracts the n-th product from there? 
-We simply don’t know when we examine the method’s signature.</p>
-
-<aside class="quote">When something is obscured, it prompts assumptions, which in turn lead to misunderstandings, and eventually to bugs.
-</aside>
-
-<p>In order to comprehend what the <code class="language-plaintext highlighter-rouge">add(int)</code> method does, we must refer to 
-its Javadoc block, which may not be sufficiently accurate. Furthermore, 
-<a href="https://stackoverflow.com/a/913342/187141">as is often the case</a>, 
-the documentation in the Javadoc block might not be 
-in sync with the code inside the method. To put it plainly, the client 
-using the <code class="language-plaintext highlighter-rouge">add(int)</code> method invariably makes an assumption about its inner workings. 
-If the client is fortunate, 
-1) the assumption will be accurate, and 
-2) any changes subsequently made to the method won’t invalidate that assumption.</p>
-
-<p>It appears that method overloading is the root of the issue: maintaining 
-multiple implementations under a single name inevitably introduces some 
-concealed semantics in most of them. Then, when something is obscured, it prompts 
-assumptions, which in turn lead to misunderstandings, and eventually to bugs.</p>
-
-<p>I believe, a better alternative looks like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ProductInCatalog</span> <span class="kd">implements</span> <span class="nc">Product</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Product</span> <span class="n">p</span><span class="o">;</span>
-  <span class="nc">ProductInCatalog</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Catalog</span><span class="o">().</span><span class="na">findById</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="c1">// all "Product" interface's methods</span>
-<span class="o">}</span>
-<span class="kd">class</span> <span class="nc">Cart</span> <span class="o">{</span>
-  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Product</span><span class="o">&gt;</span> <span class="n">products</span><span class="o">;</span>
-  <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Product</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">this</span><span class="o">.</span><span class="na">products</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-<span class="kt">var</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Cart</span><span class="o">();</span>
-<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">Product</span><span class="o">(</span><span class="s">"book"</span><span class="o">));</span>
-<span class="n">c</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">ProductInCatalog</span><span class="o">(</span><span class="mi">42</span><span class="o">));</span>
-</code></pre></div></div>
-
-<p>The constructor of <code class="language-plaintext highlighter-rouge">ProductInCatalog</code> is not code-free,
-as <a href="/2015/05/07/ctors-must-be-code-free.html">it ideally should be</a>,
-however, this point is not so significant for our current discussion. The <code class="language-plaintext highlighter-rouge">ProductInCatalog</code>
-class serves as an abstraction of a <code class="language-plaintext highlighter-rouge">Product</code> found in the catalog. This class
-is used by the client of the <code class="language-plaintext highlighter-rouge">Cart</code> class. The client, in full 
-awareness and with explicit intent, converts 42 (the product’s ID) into an instance 
-of <code class="language-plaintext highlighter-rouge">ProductInCatalog</code>. This design no longer conceals any elements. There are 
-no assumptions to be made and no conditions that the code must fulfill.</p>
-
-<p>Do we still preserve the advantages provided by method overloading? Indeed, we do. 
-There is no code duplication, and the complexity of the code is reduced. 
-Furthermore, the readability of the code using the <code class="language-plaintext highlighter-rouge">Cart</code> is significantly improved. 
-To summarize, I recommend avoiding method overloading, even though it will undoubtedly 
-result in a larger number of classes in the codebase. However, that is 
-<a href="/2017/02/28/too-many-classes.html">a different discussion altogether</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[While method overloading is purported to enhance readability, it actually tends to diminish it and introduce bugs.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/youth.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/youth.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+they look like flags with “I failed to design this class properly!” written on them.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><category term="java" /><summary type="html"><![CDATA[Sometimes you might be tempted to use a two-stage construction for your object. However, I suggest reevaluating your design principles if you feel such an inclination.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/nirvana.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/nirvana.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

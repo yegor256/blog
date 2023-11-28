@@ -207,6 +207,7 @@ AJAX
 ajc
 ajcclosure
 aka
+akin
 al
 alan
 alcohol
@@ -656,6 +657,7 @@ avienaash
 avoid
 avoided
 avoiding
+avoids
 awake
 award
 award-
@@ -1413,6 +1415,7 @@ claim
 claimed
 claiming
 claims
+clarified
 clarify
 clarifying
 clarity
@@ -1775,6 +1778,7 @@ conflict-free
 conflict-provoking
 conflicting
 conflicts
+conforming
 confrontation
 confuse
 confused
@@ -2255,6 +2259,7 @@ decrypted
 decrypting
 dedicate
 dedicated
+deduce
 deem
 deep
 deeper
@@ -2541,6 +2546,7 @@ discover
 discovered
 discovering
 discovery
+discreetly
 discrete
 discriminate
 discrimination
@@ -2856,6 +2862,7 @@ eleven
 eleven-page
 eleventh
 eliciting
+elicits
 eligible
 eliminating
 elimination
@@ -4306,6 +4313,7 @@ ill-advised
 illegal
 illinois
 illness
+illnesses
 illogical
 illusion
 illustrate
@@ -4430,10 +4438,12 @@ index
 indexes
 indexing
 indian
+indicate
 indicates
 indicator
 indicators
 indigestible
+indirectly
 indispensable
 indisputable
 individual
@@ -4516,6 +4526,7 @@ innovator
 input
 inputs
 inputstream
+inquiring
 insane
 insanely
 insanity
@@ -6912,6 +6923,7 @@ prepared
 prepares
 preparing
 prequels
+prescribe
 prescribes
 presence
 present
@@ -6993,6 +7005,7 @@ probable
 probably
 probe
 probes
+probing
 probiotics
 problem
 problem's
@@ -7644,6 +7657,7 @@ respective
 respectively
 respond
 responded
+respondents
 responds
 response
 responses
@@ -7866,6 +7880,7 @@ rutracker
 ruvimova
 s-class
 sabotage
+sabotaging
 sacca
 sacred
 sacrifice
@@ -8049,6 +8064,7 @@ self-appointed
 self-confidence
 self-contained
 self-descriptive
+self-diagnose
 self-discipline
 self-disciplined
 self-documented
@@ -8324,6 +8340,7 @@ sits
 sitting
 situate
 situation
+situational
 situations
 six
 six-digit
@@ -8342,6 +8359,7 @@ skeleton
 skeptical
 sketch
 sketchy
+skewing
 ski
 skiing
 skill
@@ -8829,6 +8847,7 @@ substring
 subtitle
 subtitles
 subtle
+subtly
 subtraction
 subtyping
 subversion
@@ -8920,6 +8939,7 @@ surprising
 surprisingly
 surrounded
 survey
+survey's
 survival
 survive
 survived
@@ -9493,6 +9513,7 @@ types-announce
 typescript
 typesetting
 typical
+typically
 typing
 typo
 typographic
