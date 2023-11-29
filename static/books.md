@@ -121,7 +121,7 @@ will contain practical object-oriented design patterns, just like
 those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
-To be published: in 2022.
+To be published: in <del>2022</del> 2024.
 {: .book-par}
 
 To be continued...
