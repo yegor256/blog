@@ -167,7 +167,7 @@ other blog post authors, who I managed to find, think that it would be better to
 everything in a single monolithic repo, mostly because it's better for _productivity_.
 For example,
 [Advantages of monorepos](https://danluu.com/monorepo/) by [Dan Luu](https://twitter.com/danluu),
-[Advantages and Disadvantages of a Monolithic Repository](https://people.engr.ncsu.edu/ermurph3/papers/seip18.pdf)
+[Advantages and Disadvantages of a Monolithic Repository](https://dl.acm.org/doi/abs/10.1145/3183519.3183550)
 (a case study at Google) by Ciera Jaspan et al.,
 and
 [How Monolithic Repository in Open Source saved my Laziness](https://www.tomasvotruba.cz/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/)
