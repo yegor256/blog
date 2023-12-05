@@ -17,6 +17,9 @@ keywords:
 image: /images/2023/11/coffee-and-cigarettes.jpg
 jb_picture:
   caption: Coffee and Cigarettes (2004) by Jim Jarmusch
+style: |-
+  .down::after { content: "▼"; color: firebrick; }
+  .up::after { content: "▲"; color: seagreen; }
 ---
 
 Let's say you are conducting research to discover programmers' opinions about
@@ -104,3 +107,21 @@ work environment.
 In summary, avoid directly inquiring about illnesses; instead, ask about
 symptoms to discreetly pursue your research objective. This approach elicits
 more honest responses.
+
+When the list of questions is ready, you can draw a table in your
+research paper, listing all questions on a vertical axis and possible
+answers on the horizontal one. Under each answer you mention the 
+impact it makes to one of your research questions, for example:
+
+|   | A<sub>1</sub> | A<sub>2</sub> | A<sub>3</sub> |
+|---|---|---|---|
+| Q<sub>4</sub>: With a looming strict deadline, where would you prefer to work on a critical software module? | At home<br/>RQ1<span class="down"/> | In a café | In the office<br/>RQ1<span class="up"/> |
+|---|---|---|---|
+| Q<sub>5</sub>: When did you last feel exhausted at the end of an office day? | A few days ago<br/>RQ1<span class="down"/> | A few weeks ago | Don't remember<br/>RQ1<span class="up"/> |
+|---|---|---|---|
+| Q<sub>6</sub>: How would you rate the office coffee machine's quality? | Excellent<br/>RQ1<span class="up"/> | It's OK | Poor<br/>RQ1<span class="down"/> |
+|---|---|---|---|
+
+This table clearly explains to readers of your research, why did you
+ask these questions and how the responses provided by the 
+respondents helped you answer your research questions.

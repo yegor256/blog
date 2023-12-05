@@ -19,10 +19,21 @@ article {
       font-weight: bold;
     }
   }
+
+  table tr {
+    td,
+    th {
+      vertical-align: top;
+    }
+
+    th {
+      border-bottom: 1px solid $grey;
+    }
+  }
 }
 
 .jekyll-chatgpt-translate {
-  color: gray;
+  color: $grey;
   font-size: 80%;
 }
 
@@ -40,8 +51,8 @@ article {
 
     .count {
       background-color: white;
-      border: 1 * $px solid gray;
-      color: gray;
+      border: 1 * $px solid $grey;
+      color: $grey;
       display: none;
       font-family: $code-font;
       font-size: .6 * $em;
@@ -54,9 +65,9 @@ article {
 
     .icon {
       $size: 1.2;
-      border: 1 * $px solid gray;
+      border: 1 * $px solid $grey;
       border-radius: 50%;
-      color: gray;
+      color: $grey;
       display: inline-block;
       height: $size * $em;
       line-height: $size * $em;
@@ -68,7 +79,7 @@ article {
       width: $size * $em;
 
       &:hover {
-        background-color: gray;
+        background-color: $grey;
         color: white;
       }
     }

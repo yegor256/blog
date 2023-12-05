@@ -21,7 +21,7 @@ style: |-
   .right-wrong { }
   .right-wrong tr th { border-bottom: 1px solid gray; font-weight: normal; color: gray; }
   .right-wrong tr th:before { content: "From: "; }
-  .right-wrong tr td { width: 50%; vertical-align: top; }
+  .right-wrong tr td { width: 50%; }
   .right-wrong tr td:nth-child(1) { color: firebrick; }
   .right-wrong tr td:nth-child(2) { color: seagreen; }
   .right-wrong tr *:nth-child(1) { padding-right: 1em; }
