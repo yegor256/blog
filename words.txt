@@ -670,6 +670,7 @@ awesome
 awesome-risks
 aws
 axioms
+axis
 axosoft
 azure
 b-funded
@@ -1127,6 +1128,7 @@ caching
 CACM
 cactoos
 cadre
+caf
 cafe
 cage
 caitlin
@@ -3162,6 +3164,7 @@ executors
 exercise
 exercised
 exerts
+exhausted
 exhaustive
 exhibit
 exist
@@ -5211,6 +5214,7 @@ listener
 listeners
 listening
 listens
+listing
 listof
 lists
 litecoin
@@ -5275,6 +5279,7 @@ look
 looked
 looking
 looks
+looming
 loompaland
 loop
 looping
@@ -5332,6 +5337,7 @@ mac
 macbook
 macbooks
 machine
+machine's
 machines
 mack
 MacOS

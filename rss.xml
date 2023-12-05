@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-11-28T14:32:39+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Be Indirect in Your Research Questionnaire to Gain More Honesty</title><link href="https://www.yegor256.com/2023/11/28/research-questionnaire.html" rel="alternate" type="text/html" title="Be Indirect in Your Research Questionnaire to Gain More Honesty" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/11/28/research-questionnaire</id><content type="html" xml:base="https://www.yegor256.com/2023/11/28/research-questionnaire.html"><![CDATA[<p>Let’s say you are conducting research to discover programmers’ opinions about
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-12-05T21:18:07+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Be Indirect in Your Research Questionnaire to Gain More Honesty</title><link href="https://www.yegor256.com/2023/11/28/research-questionnaire.html" rel="alternate" type="text/html" title="Be Indirect in Your Research Questionnaire to Gain More Honesty" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/11/28/research-questionnaire</id><content type="html" xml:base="https://www.yegor256.com/2023/11/28/research-questionnaire.html"><![CDATA[<p>Let’s say you are conducting research to discover programmers’ opinions about
 their work environments: whether they appreciate their office spaces or not.
 Preparing a survey with a few questions is essential. Their responses will
 reveal their thoughts and feelings. After working with several student groups,
@@ -80,7 +80,51 @@ work environment.</p>
 
 <p>In summary, avoid directly inquiring about illnesses; instead, ask about
 symptoms to discreetly pursue your research objective. This approach elicits
-more honest responses.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[When conducting a survey to ascertain people's feelings about a topic, it is more effective to use indirect questioning.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/11/coffee-and-cigarettes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/11/coffee-and-cigarettes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Avoid Soft Line Breaks Inside a Paragraph</title><link href="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html" rel="alternate" type="text/html" title="Avoid Soft Line Breaks Inside a Paragraph" /><published>2023-11-22T00:00:00+00:00</published><updated>2023-11-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap</id><content type="html" xml:base="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html"><![CDATA[<p>An email, a document, a research paper, a presentation, and even a JavaDoc code block consist of
+more honest responses.</p>
+
+<p>When the list of questions is ready, you can draw a table in your
+research paper, listing all questions on a vertical axis and possible
+answers on the horizontal one. Under each answer you mention the 
+impact it makes to one of your research questions, for example:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>A<sub>1</sub></th>
+      <th>A<sub>2</sub></th>
+      <th>A<sub>3</sub></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Q<sub>4</sub>: With a looming strict deadline, where would you prefer to work on a critical software module?</td>
+      <td>At home<br />RQ1<span class="down"></span></td>
+      <td>In a café</td>
+      <td>In the office<br />RQ1<span class="up"></span></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Q<sub>5</sub>: When did you last feel exhausted at the end of an office day?</td>
+      <td>A few days ago<br />RQ1<span class="down"></span></td>
+      <td>A few weeks ago</td>
+      <td>Don’t remember<br />RQ1<span class="up"></span></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Q<sub>6</sub>: How would you rate the office coffee machine’s quality?</td>
+      <td>Excellent<br />RQ1<span class="up"></span></td>
+      <td>It’s OK</td>
+      <td>Poor<br />RQ1<span class="down"></span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This table clearly explains to readers of your research, why did you
+ask these questions and how the responses provided by the 
+respondents helped you answer your research questions.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[When conducting a survey to ascertain people's feelings about a topic, it is more effective to use indirect questioning.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/11/coffee-and-cigarettes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/11/coffee-and-cigarettes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Avoid Soft Line Breaks Inside a Paragraph</title><link href="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html" rel="alternate" type="text/html" title="Avoid Soft Line Breaks Inside a Paragraph" /><published>2023-11-22T00:00:00+00:00</published><updated>2023-11-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap</id><content type="html" xml:base="https://www.yegor256.com/2023/11/22/avoid-line-breaks-inside-paragrap.html"><![CDATA[<p>An email, a document, a research paper, a presentation, and even a JavaDoc code block consist of
 <em>paragraphs</em>, <a href="https://en.wikipedia.org/wiki/Paragraph">which are</a> 
 “self-contained units of discourse in writing dealing with a particular point or idea.”
 Visually, paragraphs are supposed to be separated by a vertical space that is a bit larger
