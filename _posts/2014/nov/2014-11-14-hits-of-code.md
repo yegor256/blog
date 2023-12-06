@@ -31,7 +31,7 @@ much more effort at the same time being much lighter than others
 (like a central computer, for example). Instead
 of measuring the weight of the aircraft we should measure the effort put into it... somehow.
 So, here is the idea. How about we measure the amount of times programmers
-**touch** the lines. Instead of counting the number of lines we'll count
+_touch_ the lines. Instead of counting the number of lines we'll count
 how many times they were actually modified---we can get this information
 from Git (or any other SCM). The more you touch that part
 of the aircraft---the more effort you spent on it, right?
