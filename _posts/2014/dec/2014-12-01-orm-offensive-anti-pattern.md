@@ -191,7 +191,7 @@ was maybe the second big mistake in
 Actually, I'm not the only one saying something like this, and
 definitely not the first. A lot about
 this subject has already been published by very respected authors, including
-[OrmHate](http://martinfowler.com/bliki/OrmHate.html) by Martin Fowler (not against ORM, but worth mentioning anyway),
+[OrmHate](https://martinfowler.com/bliki/OrmHate.html) by Martin Fowler (not against ORM, but worth mentioning anyway),
 [Object-Relational Mapping Is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
 [The Vietnam of Computer Science](http://blogs.tedneward.com/post/the-vietnam-of-computer-science/) by Ted Neward,
 [ORM Is an Anti-Pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss,
@@ -314,7 +314,7 @@ see how we can implement these two classes.
 
 {% youtube 03PXmPc7Q3g %}
 
-I'm going to use [jcabi-jdbc](http://jdbc.jcabi.com) as a JDBC wrapper,
+I'm going to use [jcabi-jdbc](https://jdbc.jcabi.com) as a JDBC wrapper,
 but you can use something else like [jOOQ](https://www.jooq.org),
 or just plain JDBC if you like. It doesn't
 really matter. What matters is that your database interactions are hidden

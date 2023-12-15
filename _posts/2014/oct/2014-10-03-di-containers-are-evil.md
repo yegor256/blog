@@ -18,7 +18,7 @@ keywords:
 book: elegant-objects-2 6.3
 ---
 
-While [dependency injection](http://martinfowler.com/articles/injection.html) (aka, "DI")
+While [dependency injection](https://martinfowler.com/articles/injection.html) (aka, "DI")
 is a natural technique of composing objects in OOP
 (known long before the term was [introduced by Martin Fowler](https://www.martinfowler.com/articles/injection.html)),
 [Spring IoC](https://www.spring.io),

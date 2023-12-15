@@ -24,7 +24,7 @@ social:
 book: elegant-objects-1 2.3
 ---
 
-Martin Fowler [says](http://martinfowler.com/bliki/InversionOfControl.html):
+Martin Fowler [says](https://martinfowler.com/bliki/InversionOfControl.html):
 
 > A library is essentially a set of functions that you can call,
 these days usually organized into classes.

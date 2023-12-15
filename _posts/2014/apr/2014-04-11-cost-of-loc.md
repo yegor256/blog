@@ -67,7 +67,7 @@ lines, of which about 90% was Java and the rest in XML.
 ## Maturity of Development
 
 Both projects hosted their code bases on GitHub. Both teams were developing in
-[feature branches](http://martinfowler.com/bliki/FeatureBranch.html)- even for
+[feature branches](https://martinfowler.com/bliki/FeatureBranch.html)- even for
 small fixes.
 
 Both teams used build automation,

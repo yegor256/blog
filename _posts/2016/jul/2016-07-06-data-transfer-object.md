@@ -33,7 +33,7 @@ it is just wrong. There is no excuse for what he has done.
 {% jb_picture_body %}
 
 By the way, his name, to my knowledge, was
-[Martin Fowler](http://martinfowler.com/bliki/LocalDTO.html). Maybe he
+[Martin Fowler](https://martinfowler.com/bliki/LocalDTO.html). Maybe he
 was not the sole inventor of DTO, but he made it legal and recommended
 its use. With all due respect, he was just wrong.
 

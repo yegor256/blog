@@ -71,7 +71,7 @@ becomes a specialist in his or her own part of the code, mostly because
 it's easier to work with something you're familiar with instead of jumping
 from module to module. Needless to say, strong code ownership is
 a bad practice. Collective code ownership is a much better alternative,
-as [explained](http://martinfowler.com/bliki/CodeOwnership.html) by Martin Fowler.
+as [explained](https://martinfowler.com/bliki/CodeOwnership.html) by Martin Fowler.
 
 {% quote Having strong experts on the team inevitably leads to hero-driven development %}
 

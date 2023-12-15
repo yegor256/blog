@@ -104,7 +104,7 @@ new Story();
 ```
 
 I'm sure you're well aware of this technique, which is also known
-as [dependency injection](http://martinfowler.com/articles/injection.html).
+as [dependency injection](https://martinfowler.com/articles/injection.html).
 I'm actually not saying anything new. What I want you to pay attention to here is
 the location and the amount of `new` operators in all three code snippets.
 

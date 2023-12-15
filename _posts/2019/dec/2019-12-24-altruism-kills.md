@@ -82,7 +82,7 @@ programmers don't contribute at all, but expect their salaries to grow
 every year ~~(also known as software outsourcing)~~.
 
 Ever heard about the Fail Fast vs Fail Safe dichotomy? It is
-[well known](http://martinfowler.com/ieeeSoftware/failFast.pdf) that
+[well known](https://martinfowler.com/ieeeSoftware/failFast.pdf) that
 any process survives better if it is designed to Fail Fast, revealing internal
 problems as soon as possible, instead of being Fail Safe and concealing defects
 in an attempt to survive. Even though Fail Fast feels more dangerous, it

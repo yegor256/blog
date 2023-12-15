@@ -178,7 +178,7 @@ Now it's time to create an integration test,
 which will connect to the temporary MySQL server, create
 a table there and insert some data into it. This is just
 an example to show that MySQL server is running and
-is capable of serving transactions (I'm using [jcabi-jdbc](http://jdbc.jcabi.com)):
+is capable of serving transactions (I'm using [jcabi-jdbc](https://jdbc.jcabi.com)):
 
 ```java
 public class FooITCase {

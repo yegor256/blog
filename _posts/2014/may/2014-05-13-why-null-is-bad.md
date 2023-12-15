@@ -213,7 +213,7 @@ or refuse to help if we need something "Jeffrey specific" (Null Object).
 
 ## Slow Failing
 
-Instead of [failing fast](http://martinfowler.com/ieeeSoftware/failFast.pdf),
+Instead of [failing fast](https://martinfowler.com/ieeeSoftware/failFast.pdf),
 the code above attempts to die slowly, killing others on its way.
 Instead of letting everyone know that something went wrong and that an
 exception handling should start immediately, it is hiding this failure from its client.

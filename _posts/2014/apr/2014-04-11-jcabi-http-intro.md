@@ -66,7 +66,7 @@ The new client has to be
 [fluent]({% pst 2018/mar/2018-03-13-fluent-interfaces %}),
 which means that the entire server interaction
 fits into one Java statement. Why is this important? I think that [fluent
-interface](http://martinfowler.com/bliki/FluentInterface.html) is the most
+interface](https://martinfowler.com/bliki/FluentInterface.html) is the most
 compact and expressive way to perform multiple imperative calls. To my
 knowledge, none of the existing libraries enable this type of fluency.
 
