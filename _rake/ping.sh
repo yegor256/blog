@@ -9,9 +9,9 @@ function ping_uri {
   curl --location \
     --silent \
     --output /dev/null \
-    --max-time 60 \
+    --max-time 15 \
     --fail \
-    -H 'User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)' \
+    -H 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \
     -H 'Accept: text/html,*/*' \
     -H 'Accept-Encoding: gzip, deflate' \
     -H 'Cache-Control: max-age=0' \

@@ -89,7 +89,7 @@ _terms and conditions of which my lawyer will discuss with you_."
 If we're talking about $500K, you will have no problem meeting that lawyers.
 However, if it's just $25K... To make life easier for smaller investments,
 convertible notes were invented (well, there were
-[a few other reasons](http://techcrunch.com/2012/04/07/convertible-note-seed-financings/)).
+[a few other reasons](https://techcrunch.com/2012/04/07/convertible-note-seed-financings/)).
 They are **not equity**. Investors that
 have convertible notes can't vote. They can't sell convertible notes and they
 can't get any profit from the company. So, what they are for then? I'll explain
