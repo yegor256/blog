@@ -44,11 +44,14 @@ description: |
         </p>
       {% elsif page.tag == 'sarcasm' %}
         <h1>{{ page.posts.size }} Sarcastic Posts (don't take them too seriously ;)</h1>
-        <!--
         <p>
-          <img alt="Sarcasm logo" src="/images/icons/sarcasm.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="Sarcasm logo" src="/images/icons/sarcasm.png" style="height:150px;float:right;margin-left:1em"/>
         </p>
-        -->
+      {% elsif page.tag == 'career' %}
+        <h1>{{ page.posts.size }} Posts About Career Development</h1>
+        <p>
+          <img alt="Career Development logo" src="/images/icons/career.svg" style="height:150px;float:right;margin-left:1em"/>
+        </p>
       {% elsif page.tag == 'mood' %}
         <h1>{{ page.posts.size }} Posts Written for Fun</h1>
       {% elsif page.tag == 'tdd' %}

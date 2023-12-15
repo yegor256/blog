@@ -103,6 +103,8 @@ module Yegor
         "<img src='/images/icons/maven-white.svg' alt='Maven'/>"
       when 'sarcasm'
         "<img src='/images/icons/sarcasm-white.svg' alt='Sarcasm'/>"
+      when 'career'
+        "<img src='/images/icons/career-white.svg' alt='Career'/>"
       when 'jcabi'
         "<img src='/images/icons/jcabi-white.svg' alt='Maven'/>"
       when 'pdd'

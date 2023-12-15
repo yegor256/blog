@@ -3,7 +3,7 @@ layout: post
 title: "Inversive Management"
 date: 2019-07-10
 place: Moscow, Russia
-tags: testing
+tags: management
 description: |
   It's either you or your employees who worry about the results;
   a smart and pragmatic manager knows how to make the workers
